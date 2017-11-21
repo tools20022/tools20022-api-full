@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CollateralBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the collateral held by party A and/or B.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides details about the collateral held by party A and/or B."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralBalance1", propOrder = {"heldByPartyA", "heldByPartyB"})
 public class CollateralBalance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class CollateralBalance1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "HeldByPtyA", required = true)
 	public ActiveCurrencyAndAmount getHeldByPartyA() {
 		return heldByPartyA;
 	}
@@ -184,6 +191,7 @@ public class CollateralBalance1 {
 		this.heldByPartyA = heldByPartyA;
 	}
 
+	@XmlElement(name = "HeldByPtyB", required = true)
 	public ActiveCurrencyAndAmount getHeldByPartyB() {
 		return heldByPartyB;
 	}

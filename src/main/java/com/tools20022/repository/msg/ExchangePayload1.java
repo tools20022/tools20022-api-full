@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.LaxProcessing;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * This component includes the exchanged ISO20022 documents.
@@ -53,6 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "This component includes the exchanged ISO20022 documents."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExchangePayload1", propOrder = "any")
 public class ExchangePayload1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -111,6 +117,7 @@ public class ExchangePayload1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Any", required = true)
 	public LaxProcessing getAny() {
 		return any;
 	}

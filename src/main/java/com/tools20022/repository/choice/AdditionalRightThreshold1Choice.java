@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.AdditionalRight;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of additional right threshold.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of additional right threshold."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalRightThreshold1Choice", propOrder = {"additionalRightThreshold", "additionalRightThresholdPercentage"})
 public class AdditionalRightThreshold1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -182,6 +188,7 @@ public class AdditionalRightThreshold1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlRghtThrshld", required = true)
 	public Max35Text getAdditionalRightThreshold() {
 		return additionalRightThreshold;
 	}
@@ -190,6 +197,7 @@ public class AdditionalRightThreshold1Choice {
 		this.additionalRightThreshold = additionalRightThreshold;
 	}
 
+	@XmlElement(name = "AddtlRghtThrshldPctg", required = true)
 	public PercentageRate getAdditionalRightThresholdPercentage() {
 		return additionalRightThresholdPercentage;
 	}

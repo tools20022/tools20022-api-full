@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Quantity expressed as a number and its details.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Unit4 Unit4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Unit5", propOrder = {"unitsNumber", "group1Or2Units"})
 public class Unit5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class Unit5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -187,6 +194,7 @@ public class Unit5 {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "Grp1Or2Units", required = true)
 	public UKTaxGroupUnitCode getGroup1Or2Units() {
 		return group1Or2Units;
 	}

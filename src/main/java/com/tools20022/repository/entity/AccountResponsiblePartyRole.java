@@ -35,9 +35,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
- * AccountPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -45,6 +42,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * StandingOrderResponsible}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
+ * AccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -75,6 +75,11 @@ public class AccountResponsiblePartyRole extends AccountPartyRole {
 				definition = "Party which is responsible for creating and managing an account owned by another party.";
 				subType_lazy = () -> Arrays.asList(StandingOrderResponsible.mmObject());
 				superType_lazy = () -> AccountPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountResponsiblePartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.ListTrading;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -43,28 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.NonDisclosedBid2
- * NonDisclosedBid2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NonDisclosedBid1
- * NonDisclosedBid1}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.BidResponsePrice2#mmNonDisclosedBidDetails
- * BidResponsePrice2.mmNonDisclosedBidDetails}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.ListTrading
- * ListTrading}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -83,6 +62,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading#mmSideValue
  * NonDisclosedListTrading.mmSideValue}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.ListTrading
+ * ListTrading}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.NonDisclosedBid2
+ * NonDisclosedBid2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NonDisclosedBid1
+ * NonDisclosedBid1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BidResponsePrice2#mmNonDisclosedBidDetails
+ * BidResponsePrice2.mmNonDisclosedBidDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -116,11 +117,6 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CountryCode
 	 * CountryCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
-	 * NonDisclosedListTrading}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -132,6 +128,11 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * NonDisclosedBid1.mmBidByCurrency}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
+	 * NonDisclosedListTrading}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -148,7 +149,7 @@ public class NonDisclosedListTrading extends ListTrading {
 	public static final MMBusinessAttribute mmBidByCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NonDisclosedBid2.mmBidByCurrency, NonDisclosedBid1.mmBidByCurrency);
-			elementContext_lazy = () -> NonDisclosedListTrading.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BidByCurrency";
@@ -156,6 +157,14 @@ public class NonDisclosedListTrading extends ListTrading {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NonDisclosedListTrading.class.getMethod("getBidByCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max140Text bidBySector;
@@ -169,11 +178,6 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max140Text
 	 * Max140Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
-	 * NonDisclosedListTrading}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -185,6 +189,11 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * NonDisclosedBid1.mmBidBySector}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
+	 * NonDisclosedListTrading}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -201,7 +210,7 @@ public class NonDisclosedListTrading extends ListTrading {
 	public static final MMBusinessAttribute mmBidBySector = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NonDisclosedBid2.mmBidBySector, NonDisclosedBid1.mmBidBySector);
-			elementContext_lazy = () -> NonDisclosedListTrading.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BidBySector";
@@ -209,6 +218,14 @@ public class NonDisclosedListTrading extends ListTrading {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NonDisclosedListTrading.class.getMethod("getBidBySector", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max140Text bidByIndex;
@@ -222,11 +239,6 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max140Text
 	 * Max140Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
-	 * NonDisclosedListTrading}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -238,6 +250,11 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * NonDisclosedBid1.mmBidByIndex}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
+	 * NonDisclosedListTrading}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -254,7 +271,7 @@ public class NonDisclosedListTrading extends ListTrading {
 	public static final MMBusinessAttribute mmBidByIndex = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NonDisclosedBid2.mmBidByIndex, NonDisclosedBid1.mmBidByIndex);
-			elementContext_lazy = () -> NonDisclosedListTrading.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BidByIndex";
@@ -262,6 +279,14 @@ public class NonDisclosedListTrading extends ListTrading {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NonDisclosedListTrading.class.getMethod("getBidByIndex", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number numberOfBidders;
@@ -274,11 +299,6 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
-	 * NonDisclosedListTrading}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -287,6 +307,11 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * Bid1.mmTotalNumberOfBidders}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
+	 * NonDisclosedListTrading}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -302,7 +327,7 @@ public class NonDisclosedListTrading extends ListTrading {
 	public static final MMBusinessAttribute mmNumberOfBidders = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Bid1.mmTotalNumberOfBidders);
-			elementContext_lazy = () -> NonDisclosedListTrading.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfBidders";
@@ -310,6 +335,14 @@ public class NonDisclosedListTrading extends ListTrading {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NonDisclosedListTrading.class.getMethod("getNumberOfBidders", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount sideValue;
@@ -324,11 +357,6 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
-	 * NonDisclosedListTrading}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -340,6 +368,11 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * LiquidityAndStatistics1.mmSideValue2}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
+	 * NonDisclosedListTrading}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -356,7 +389,7 @@ public class NonDisclosedListTrading extends ListTrading {
 	public static final MMBusinessAttribute mmSideValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LiquidityAndStatistics1.mmSideValue1, LiquidityAndStatistics1.mmSideValue2);
-			elementContext_lazy = () -> NonDisclosedListTrading.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SideValue";
@@ -364,6 +397,14 @@ public class NonDisclosedListTrading extends ListTrading {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NonDisclosedListTrading.class.getMethod("getSideValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -376,9 +417,16 @@ public class NonDisclosedListTrading extends ListTrading {
 				definition = "List trading by which the buy-side provides details to the sell-side information about the sector, country, index and potential market impact of the financial instrument to be bought or sold. Using this information, the sell-side firms bid for the trade.";
 				derivationElement_lazy = () -> Arrays.asList(BidResponsePrice2.mmNonDisclosedBidDetails);
 				superType_lazy = () -> ListTrading.mmObject();
-				element_lazy = () -> Arrays.asList(NonDisclosedListTrading.mmBidByCurrency, NonDisclosedListTrading.mmBidBySector, NonDisclosedListTrading.mmBidByIndex, NonDisclosedListTrading.mmNumberOfBidders,
-						NonDisclosedListTrading.mmSideValue);
+				element_lazy = () -> Arrays
+						.asList(com.tools20022.repository.entity.NonDisclosedListTrading.mmBidByCurrency, com.tools20022.repository.entity.NonDisclosedListTrading.mmBidBySector,
+								com.tools20022.repository.entity.NonDisclosedListTrading.mmBidByIndex, com.tools20022.repository.entity.NonDisclosedListTrading.mmNumberOfBidders,
+								com.tools20022.repository.entity.NonDisclosedListTrading.mmSideValue);
 				derivationComponent_lazy = () -> Arrays.asList(NonDisclosedBid2.mmObject(), NonDisclosedBid1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return NonDisclosedListTrading.class;
 			}
 		});
 		return mmObject_lazy.get();

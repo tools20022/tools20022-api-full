@@ -34,6 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * currencyIdentifierSet} =
  * {@linkplain com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode
  * ActiveOrHistoricCurrencyCode}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMDecimal#getMinInclusive
+ * minInclusive} = "0"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -70,6 +72,9 @@ public class ActiveOrHistoricCurrencyAndAmount {
 				name = "ActiveOrHistoricCurrencyAndAmount";
 				definition = "A number of monetary units specified in an active or a historic currency where the unit of currency is explicit and compliant with ISO 4217.";
 				currencyIdentifierSet_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+				minInclusive = "0";
+				totalDigits = 18;
+				fractionDigits = 5;
 			}
 		});
 		return mmObject_lazy.get();

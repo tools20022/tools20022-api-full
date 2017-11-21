@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters for contracts which obligate the buyer to receive and the seller
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Future1", propOrder = {"contractSize", "exercisePrice", "expiryDate", "futureDate", "minimumSize", "unitOfMeasure", "timeUnit"})
 public class Future1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -432,6 +438,7 @@ public class Future1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CtrctSz")
 	public BaseOneRate getContractSize() {
 		return contractSize;
 	}
@@ -440,6 +447,7 @@ public class Future1 {
 		this.contractSize = contractSize;
 	}
 
+	@XmlElement(name = "ExrcPric")
 	public Price1 getExercisePrice() {
 		return exercisePrice;
 	}
@@ -448,6 +456,7 @@ public class Future1 {
 		this.exercisePrice = exercisePrice;
 	}
 
+	@XmlElement(name = "XpryDt")
 	public ISODateTime getExpiryDate() {
 		return expiryDate;
 	}
@@ -456,6 +465,7 @@ public class Future1 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "FutrDt")
 	public ISODateTime getFutureDate() {
 		return futureDate;
 	}
@@ -464,6 +474,7 @@ public class Future1 {
 		this.futureDate = futureDate;
 	}
 
+	@XmlElement(name = "MinSz")
 	public ActiveCurrencyAndAmount getMinimumSize() {
 		return minimumSize;
 	}
@@ -472,6 +483,7 @@ public class Future1 {
 		this.minimumSize = minimumSize;
 	}
 
+	@XmlElement(name = "UnitOfMeasr")
 	public UnitOfMeasure3Code getUnitOfMeasure() {
 		return unitOfMeasure;
 	}
@@ -480,6 +492,7 @@ public class Future1 {
 		this.unitOfMeasure = unitOfMeasure;
 	}
 
+	@XmlElement(name = "TmUnit")
 	public TimeUnit1Code getTimeUnit() {
 		return timeUnit;
 	}

@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the shareholders meeting, specifying the participation
@@ -158,6 +162,11 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingNotice2", propOrder = {"meetingIdentification", "issuerMeetingIdentification", "type", "classification", "extendedClassification", "announcementDate", "attendanceRequired", "attendanceConfirmationInformation",
+		"attendanceConfirmationDeadline", "attendanceConfirmationSTPDeadline", "attendanceConfirmationMarketDeadline", "additionalDocumentationURLAddress", "resolutionProposalDeadline", "resolutionProposalMarketDeadline",
+		"resolutionProposalThreshold", "resolutionProposalThresholdPercentage", "totalNumberOfSecuritiesOutstanding", "totalNumberOfVotingRights", "proxyAppointmentNotificationAddress", "proxyNotAllowed", "proxy", "contactPersonDetails",
+		"resultPublicationDate"})
 public class MeetingNotice2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1428,6 +1437,7 @@ public class MeetingNotice2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MtgId")
 	public Max35Text getMeetingIdentification() {
 		return meetingIdentification;
 	}
@@ -1436,6 +1446,7 @@ public class MeetingNotice2 {
 		this.meetingIdentification = meetingIdentification;
 	}
 
+	@XmlElement(name = "IssrMtgId")
 	public Max35Text getIssuerMeetingIdentification() {
 		return issuerMeetingIdentification;
 	}
@@ -1444,6 +1455,7 @@ public class MeetingNotice2 {
 		this.issuerMeetingIdentification = issuerMeetingIdentification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public MeetingType2Code getType() {
 		return type;
 	}
@@ -1452,6 +1464,7 @@ public class MeetingNotice2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Clssfctn")
 	public MeetingTypeClassification1Code getClassification() {
 		return classification;
 	}
@@ -1460,6 +1473,7 @@ public class MeetingNotice2 {
 		this.classification = classification;
 	}
 
+	@XmlElement(name = "XtndedClssfctn")
 	public Extended350Code getExtendedClassification() {
 		return extendedClassification;
 	}
@@ -1468,6 +1482,7 @@ public class MeetingNotice2 {
 		this.extendedClassification = extendedClassification;
 	}
 
+	@XmlElement(name = "AnncmntDt")
 	public ISODate getAnnouncementDate() {
 		return announcementDate;
 	}
@@ -1476,6 +1491,7 @@ public class MeetingNotice2 {
 		this.announcementDate = announcementDate;
 	}
 
+	@XmlElement(name = "AttndncReqrd", required = true)
 	public YesNoIndicator getAttendanceRequired() {
 		return attendanceRequired;
 	}
@@ -1484,6 +1500,7 @@ public class MeetingNotice2 {
 		this.attendanceRequired = attendanceRequired;
 	}
 
+	@XmlElement(name = "AttndncConfInf")
 	public Max350Text getAttendanceConfirmationInformation() {
 		return attendanceConfirmationInformation;
 	}
@@ -1492,6 +1509,7 @@ public class MeetingNotice2 {
 		this.attendanceConfirmationInformation = attendanceConfirmationInformation;
 	}
 
+	@XmlElement(name = "AttndncConfDdln")
 	public DateFormat2Choice getAttendanceConfirmationDeadline() {
 		return attendanceConfirmationDeadline;
 	}
@@ -1500,6 +1518,7 @@ public class MeetingNotice2 {
 		this.attendanceConfirmationDeadline = attendanceConfirmationDeadline;
 	}
 
+	@XmlElement(name = "AttndncConfSTPDdln")
 	public DateFormat2Choice getAttendanceConfirmationSTPDeadline() {
 		return attendanceConfirmationSTPDeadline;
 	}
@@ -1508,6 +1527,7 @@ public class MeetingNotice2 {
 		this.attendanceConfirmationSTPDeadline = attendanceConfirmationSTPDeadline;
 	}
 
+	@XmlElement(name = "AttndncConfMktDdln")
 	public DateFormat2Choice getAttendanceConfirmationMarketDeadline() {
 		return attendanceConfirmationMarketDeadline;
 	}
@@ -1516,6 +1536,7 @@ public class MeetingNotice2 {
 		this.attendanceConfirmationMarketDeadline = attendanceConfirmationMarketDeadline;
 	}
 
+	@XmlElement(name = "AddtlDcmnttnURLAdr")
 	public Max256Text getAdditionalDocumentationURLAddress() {
 		return additionalDocumentationURLAddress;
 	}
@@ -1524,6 +1545,7 @@ public class MeetingNotice2 {
 		this.additionalDocumentationURLAddress = additionalDocumentationURLAddress;
 	}
 
+	@XmlElement(name = "RsltnPrpslDdln")
 	public DateFormat2Choice getResolutionProposalDeadline() {
 		return resolutionProposalDeadline;
 	}
@@ -1532,6 +1554,7 @@ public class MeetingNotice2 {
 		this.resolutionProposalDeadline = resolutionProposalDeadline;
 	}
 
+	@XmlElement(name = "RsltnPrpslMktDdln")
 	public DateFormat2Choice getResolutionProposalMarketDeadline() {
 		return resolutionProposalMarketDeadline;
 	}
@@ -1540,6 +1563,7 @@ public class MeetingNotice2 {
 		this.resolutionProposalMarketDeadline = resolutionProposalMarketDeadline;
 	}
 
+	@XmlElement(name = "RsltnPrpslThrshld")
 	public Max350Text getResolutionProposalThreshold() {
 		return resolutionProposalThreshold;
 	}
@@ -1548,6 +1572,7 @@ public class MeetingNotice2 {
 		this.resolutionProposalThreshold = resolutionProposalThreshold;
 	}
 
+	@XmlElement(name = "RsltnPrpslThrshldPctg")
 	public PercentageRate getResolutionProposalThresholdPercentage() {
 		return resolutionProposalThresholdPercentage;
 	}
@@ -1556,6 +1581,7 @@ public class MeetingNotice2 {
 		this.resolutionProposalThresholdPercentage = resolutionProposalThresholdPercentage;
 	}
 
+	@XmlElement(name = "TtlNbOfSctiesOutsdng")
 	public CurrencyAndAmount getTotalNumberOfSecuritiesOutstanding() {
 		return totalNumberOfSecuritiesOutstanding;
 	}
@@ -1564,6 +1590,7 @@ public class MeetingNotice2 {
 		this.totalNumberOfSecuritiesOutstanding = totalNumberOfSecuritiesOutstanding;
 	}
 
+	@XmlElement(name = "TtlNbOfVtngRghts")
 	public Number getTotalNumberOfVotingRights() {
 		return totalNumberOfVotingRights;
 	}
@@ -1572,6 +1599,7 @@ public class MeetingNotice2 {
 		this.totalNumberOfVotingRights = totalNumberOfVotingRights;
 	}
 
+	@XmlElement(name = "PrxyAppntmntNtfctnAdr")
 	public PostalAddress1 getProxyAppointmentNotificationAddress() {
 		return proxyAppointmentNotificationAddress;
 	}
@@ -1580,6 +1608,7 @@ public class MeetingNotice2 {
 		this.proxyAppointmentNotificationAddress = proxyAppointmentNotificationAddress;
 	}
 
+	@XmlElement(name = "PrxyNotAllwd")
 	public ProxyNotAllowedCode getProxyNotAllowed() {
 		return proxyNotAllowed;
 	}
@@ -1588,6 +1617,7 @@ public class MeetingNotice2 {
 		this.proxyNotAllowed = proxyNotAllowed;
 	}
 
+	@XmlElement(name = "Prxy")
 	public ProxyAppointmentInformation1 getProxy() {
 		return proxy;
 	}
@@ -1596,6 +1626,7 @@ public class MeetingNotice2 {
 		this.proxy = proxy;
 	}
 
+	@XmlElement(name = "CtctPrsnDtls")
 	public List<MeetingContactPerson1> getContactPersonDetails() {
 		return contactPersonDetails;
 	}
@@ -1604,6 +1635,7 @@ public class MeetingNotice2 {
 		this.contactPersonDetails = contactPersonDetails;
 	}
 
+	@XmlElement(name = "RsltPblctnDt")
 	public DateFormat3Choice getResultPublicationDate() {
 		return resultPublicationDate;
 	}

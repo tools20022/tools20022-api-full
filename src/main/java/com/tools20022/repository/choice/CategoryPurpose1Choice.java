@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the high level purpose of the instruction based on a set of
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CategoryPurpose1Choice", propOrder = {"code", "proprietary"})
 public class CategoryPurpose1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class CategoryPurpose1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public ExternalCategoryPurpose1Code getCode() {
 		return code;
 	}
@@ -191,6 +198,7 @@ public class CategoryPurpose1Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public Max35Text getProprietary() {
 		return proprietary;
 	}

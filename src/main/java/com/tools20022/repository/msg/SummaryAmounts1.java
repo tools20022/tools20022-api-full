@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides amounts taken in to account to calculate the collateral position.
@@ -92,6 +96,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides amounts taken in to account to calculate the collateral position."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SummaryAmounts1", propOrder = {"thresholdAmount", "thresholdType", "preHaircutCollateralValue", "adjustedExposure", "collateralRequired", "minimumTransferAmount", "roundingAmount", "previousExposureValue",
+		"previousCollateralValue", "totalPendingIncomingCollateral", "totalPendingOutgoingCollateral", "totalAccruedInterestAmount", "totalFees"})
 public class SummaryAmounts1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -745,6 +752,7 @@ public class SummaryAmounts1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ThrshldAmt")
 	public ActiveCurrencyAndAmount getThresholdAmount() {
 		return thresholdAmount;
 	}
@@ -753,6 +761,7 @@ public class SummaryAmounts1 {
 		this.thresholdAmount = thresholdAmount;
 	}
 
+	@XmlElement(name = "ThrshldTp")
 	public ThresholdType1Code getThresholdType() {
 		return thresholdType;
 	}
@@ -761,6 +770,7 @@ public class SummaryAmounts1 {
 		this.thresholdType = thresholdType;
 	}
 
+	@XmlElement(name = "PreHrcutCollVal")
 	public ActiveCurrencyAndAmount getPreHaircutCollateralValue() {
 		return preHaircutCollateralValue;
 	}
@@ -769,6 +779,7 @@ public class SummaryAmounts1 {
 		this.preHaircutCollateralValue = preHaircutCollateralValue;
 	}
 
+	@XmlElement(name = "AdjstdXpsr")
 	public ActiveCurrencyAndAmount getAdjustedExposure() {
 		return adjustedExposure;
 	}
@@ -777,6 +788,7 @@ public class SummaryAmounts1 {
 		this.adjustedExposure = adjustedExposure;
 	}
 
+	@XmlElement(name = "CollReqrd")
 	public ActiveCurrencyAndAmount getCollateralRequired() {
 		return collateralRequired;
 	}
@@ -785,6 +797,7 @@ public class SummaryAmounts1 {
 		this.collateralRequired = collateralRequired;
 	}
 
+	@XmlElement(name = "MinTrfAmt")
 	public ActiveCurrencyAndAmount getMinimumTransferAmount() {
 		return minimumTransferAmount;
 	}
@@ -793,6 +806,7 @@ public class SummaryAmounts1 {
 		this.minimumTransferAmount = minimumTransferAmount;
 	}
 
+	@XmlElement(name = "RndgAmt")
 	public ActiveCurrencyAndAmount getRoundingAmount() {
 		return roundingAmount;
 	}
@@ -801,6 +815,7 @@ public class SummaryAmounts1 {
 		this.roundingAmount = roundingAmount;
 	}
 
+	@XmlElement(name = "PrvsXpsrVal")
 	public ActiveCurrencyAndAmount getPreviousExposureValue() {
 		return previousExposureValue;
 	}
@@ -809,6 +824,7 @@ public class SummaryAmounts1 {
 		this.previousExposureValue = previousExposureValue;
 	}
 
+	@XmlElement(name = "PrvsCollVal")
 	public ActiveCurrencyAndAmount getPreviousCollateralValue() {
 		return previousCollateralValue;
 	}
@@ -817,6 +833,7 @@ public class SummaryAmounts1 {
 		this.previousCollateralValue = previousCollateralValue;
 	}
 
+	@XmlElement(name = "TtlPdgIncmgColl")
 	public ActiveCurrencyAndAmount getTotalPendingIncomingCollateral() {
 		return totalPendingIncomingCollateral;
 	}
@@ -825,6 +842,7 @@ public class SummaryAmounts1 {
 		this.totalPendingIncomingCollateral = totalPendingIncomingCollateral;
 	}
 
+	@XmlElement(name = "TtlPdgOutgngColl")
 	public ActiveCurrencyAndAmount getTotalPendingOutgoingCollateral() {
 		return totalPendingOutgoingCollateral;
 	}
@@ -833,6 +851,7 @@ public class SummaryAmounts1 {
 		this.totalPendingOutgoingCollateral = totalPendingOutgoingCollateral;
 	}
 
+	@XmlElement(name = "TtlAcrdIntrstAmt")
 	public ActiveCurrencyAndAmount getTotalAccruedInterestAmount() {
 		return totalAccruedInterestAmount;
 	}
@@ -841,6 +860,7 @@ public class SummaryAmounts1 {
 		this.totalAccruedInterestAmount = totalAccruedInterestAmount;
 	}
 
+	@XmlElement(name = "TtlFees")
 	public ActiveCurrencyAndAmount getTotalFees() {
 		return totalFees;
 	}

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.ObligationFulfilment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,6 +41,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Clearing#mmClearingThresholdIndicator
+ * Clearing.mmClearingThresholdIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Clearing#mmClearedIdentification
+ * Clearing.mmClearedIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Clearing#mmGuaranteedTrade
+ * Clearing.mmGuaranteedTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Clearing#mmTradePostingType
+ * Clearing.mmTradePostingType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Clearing#mmClearingSystem
+ * Clearing.mmClearingSystem}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesClearing
+ * SecuritiesClearing}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
+ * ObligationFulfilment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -68,34 +97,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradeLeg6.mmClearingDetails}</li>
  * <li>{@linkplain com.tools20022.repository.msg.TradeLeg9#mmClearingDetails
  * TradeLeg9.mmClearingDetails}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
- * ObligationFulfilment}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesClearing
- * SecuritiesClearing}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Clearing#mmClearingThresholdIndicator
- * Clearing.mmClearingThresholdIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Clearing#mmClearedIdentification
- * Clearing.mmClearedIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Clearing#mmGuaranteedTrade
- * Clearing.mmGuaranteedTrade}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Clearing#mmTradePostingType
- * Clearing.mmTradePostingType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Clearing#mmClearingSystem
- * Clearing.mmClearingSystem}</li>
  * </ul>
  * </li>
  * <li>
@@ -131,10 +132,6 @@ public class Clearing extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Clearing
-	 * Clearing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -149,6 +146,10 @@ public class Clearing extends ObligationFulfilment {
 	 * RegulatoryReporting6.mmClearingThresholdIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Clearing
+	 * Clearing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -165,7 +166,7 @@ public class Clearing extends ObligationFulfilment {
 	public static final MMBusinessAttribute mmClearingThresholdIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RegulatoryReporting1.mmClearingThresholdIndicator, RegulatoryReporting4.mmClearingThresholdIndicator, RegulatoryReporting6.mmClearingThresholdIndicator);
-			elementContext_lazy = () -> Clearing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Clearing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingThresholdIndicator";
@@ -173,6 +174,14 @@ public class Clearing extends ObligationFulfilment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Clearing.class.getMethod("getClearingThresholdIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text clearedIdentification;
@@ -185,10 +194,6 @@ public class Clearing extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Clearing
-	 * Clearing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -204,6 +209,10 @@ public class Clearing extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Clearing
+	 * Clearing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -218,7 +227,7 @@ public class Clearing extends ObligationFulfilment {
 	public static final MMBusinessAttribute mmClearedIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RegulatoryReporting1.mmClearedProductIdentification, RegulatoryReporting4.mmClearedProductIdentification, RegulatoryReporting6.mmClearedProductIdentification);
-			elementContext_lazy = () -> Clearing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Clearing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearedIdentification";
@@ -226,6 +235,14 @@ public class Clearing extends ObligationFulfilment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Clearing.class.getMethod("getClearedIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator guaranteedTrade;
@@ -240,10 +257,6 @@ public class Clearing extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Clearing
-	 * Clearing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -258,6 +271,10 @@ public class Clearing extends ObligationFulfilment {
 	 * Clearing4.mmGuaranteedTrade}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Clearing
+	 * Clearing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -274,7 +291,7 @@ public class Clearing extends ObligationFulfilment {
 	public static final MMBusinessAttribute mmGuaranteedTrade = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Clearing1.mmGuaranteedTrade, Clearing2.mmGuaranteedTrade, Clearing4.mmGuaranteedTrade);
-			elementContext_lazy = () -> Clearing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Clearing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GuaranteedTrade";
@@ -282,6 +299,14 @@ public class Clearing extends ObligationFulfilment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Clearing.class.getMethod("getGuaranteedTrade", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TradePostingCode tradePostingType;
@@ -295,10 +320,6 @@ public class Clearing extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TradePostingCode
 	 * TradePostingCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Clearing
-	 * Clearing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -323,6 +344,10 @@ public class Clearing extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Clearing
+	 * Clearing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -337,7 +362,7 @@ public class Clearing extends ObligationFulfilment {
 	public static final MMBusinessAttribute mmTradePostingType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeLeg5.mmTradePostingCode, TradeLeg6.mmTradePostingCode, TradeLeg7.mmTradePostingCode, TradeLeg8.mmTradePostingCode, TradeLeg10.mmTradePostingCode, TradeLeg9.mmTradePostingCode);
-			elementContext_lazy = () -> Clearing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Clearing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradePostingType";
@@ -345,6 +370,14 @@ public class Clearing extends ObligationFulfilment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradePostingCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Clearing.class.getMethod("getTradePostingType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ClearingSystem clearingSystem;
@@ -385,7 +418,7 @@ public class Clearing extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmClearingSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Clearing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Clearing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingSystem";
@@ -409,8 +442,14 @@ public class Clearing extends ObligationFulfilment {
 				derivationElement_lazy = () -> Arrays.asList(TradeLeg3.mmClearingDetails, TradeLeg6.mmClearingDetails, TradeLeg9.mmClearingDetails);
 				subType_lazy = () -> Arrays.asList(SecuritiesClearing.mmObject());
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(Clearing.mmClearingThresholdIndicator, Clearing.mmClearedIdentification, Clearing.mmGuaranteedTrade, Clearing.mmTradePostingType, Clearing.mmClearingSystem);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Clearing.mmClearingThresholdIndicator, com.tools20022.repository.entity.Clearing.mmClearedIdentification,
+						com.tools20022.repository.entity.Clearing.mmGuaranteedTrade, com.tools20022.repository.entity.Clearing.mmTradePostingType, com.tools20022.repository.entity.Clearing.mmClearingSystem);
 				derivationComponent_lazy = () -> Arrays.asList(Clearing3.mmObject(), Clearing1.mmObject(), Clearing2.mmObject(), Clearing4.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Clearing.class;
 			}
 		});
 		return mmObject_lazy.get();

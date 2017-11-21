@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a unit in decimal number or a face amount in currency and
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnitOrFaceAmountChoice", propOrder = {"unit", "faceAmount"})
 public class UnitOrFaceAmountChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class UnitOrFaceAmountChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Unit", required = true)
 	public DecimalNumber getUnit() {
 		return unit;
 	}
@@ -191,6 +198,7 @@ public class UnitOrFaceAmountChoice {
 		this.unit = unit;
 	}
 
+	@XmlElement(name = "FaceAmt", required = true)
 	public CurrencyAndAmount getFaceAmount() {
 		return faceAmount;
 	}

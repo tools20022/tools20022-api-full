@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CorporateActionPrice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies prices related to a corporate action option.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionPrice26}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionPrice38", propOrder = {"indicativeOrMarketPrice", "cashInLieuOfSharePrice", "cashValueForTax", "genericCashPricePaidPerProduct", "genericCashPriceReceivedPerProduct"})
 public class CorporateActionPrice38 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -399,6 +405,7 @@ public class CorporateActionPrice38 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IndctvOrMktPric")
 	public IndicativeOrMarketPrice5Choice getIndicativeOrMarketPrice() {
 		return indicativeOrMarketPrice;
 	}
@@ -407,6 +414,7 @@ public class CorporateActionPrice38 {
 		this.indicativeOrMarketPrice = indicativeOrMarketPrice;
 	}
 
+	@XmlElement(name = "CshInLieuOfShrPric")
 	public PriceFormat19Choice getCashInLieuOfSharePrice() {
 		return cashInLieuOfSharePrice;
 	}
@@ -415,6 +423,7 @@ public class CorporateActionPrice38 {
 		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
 	}
 
+	@XmlElement(name = "CshValForTax")
 	public PriceFormat29Choice getCashValueForTax() {
 		return cashValueForTax;
 	}
@@ -423,6 +432,7 @@ public class CorporateActionPrice38 {
 		this.cashValueForTax = cashValueForTax;
 	}
 
+	@XmlElement(name = "GncCshPricPdPerPdct")
 	public PriceFormat23Choice getGenericCashPricePaidPerProduct() {
 		return genericCashPricePaidPerProduct;
 	}
@@ -431,6 +441,7 @@ public class CorporateActionPrice38 {
 		this.genericCashPricePaidPerProduct = genericCashPricePaidPerProduct;
 	}
 
+	@XmlElement(name = "GncCshPricRcvdPerPdct")
 	public PriceFormat20Choice getGenericCashPriceReceivedPerProduct() {
 		return genericCashPriceReceivedPerProduct;
 	}

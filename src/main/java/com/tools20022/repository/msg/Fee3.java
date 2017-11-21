@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money associated with a service.
@@ -82,6 +86,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * Charge19}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Fee3", propOrder = {"type", "repairedStandardAmount", "repairedStandardRate", "repairedDiscountAmount", "repairedDiscountRate", "repairedRequestedAmount", "repairedRequestedRate", "commercialAgreementReference",
+		"newCommercialAgreementReferenceIndicator"})
 public class Fee3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -543,6 +550,7 @@ public class Fee3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public ChargeType5Choice getType() {
 		return type;
 	}
@@ -551,6 +559,7 @@ public class Fee3 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "RprdStdAmt")
 	public ActiveCurrencyAndAmount getRepairedStandardAmount() {
 		return repairedStandardAmount;
 	}
@@ -559,6 +568,7 @@ public class Fee3 {
 		this.repairedStandardAmount = repairedStandardAmount;
 	}
 
+	@XmlElement(name = "RprdStdRate")
 	public PercentageRate getRepairedStandardRate() {
 		return repairedStandardRate;
 	}
@@ -567,6 +577,7 @@ public class Fee3 {
 		this.repairedStandardRate = repairedStandardRate;
 	}
 
+	@XmlElement(name = "RprdDscntAmt")
 	public ActiveCurrencyAndAmount getRepairedDiscountAmount() {
 		return repairedDiscountAmount;
 	}
@@ -575,6 +586,7 @@ public class Fee3 {
 		this.repairedDiscountAmount = repairedDiscountAmount;
 	}
 
+	@XmlElement(name = "RprdDscntRate")
 	public PercentageRate getRepairedDiscountRate() {
 		return repairedDiscountRate;
 	}
@@ -583,6 +595,7 @@ public class Fee3 {
 		this.repairedDiscountRate = repairedDiscountRate;
 	}
 
+	@XmlElement(name = "RprdReqdAmt")
 	public ActiveCurrencyAndAmount getRepairedRequestedAmount() {
 		return repairedRequestedAmount;
 	}
@@ -591,6 +604,7 @@ public class Fee3 {
 		this.repairedRequestedAmount = repairedRequestedAmount;
 	}
 
+	@XmlElement(name = "RprdReqdRate")
 	public PercentageRate getRepairedRequestedRate() {
 		return repairedRequestedRate;
 	}
@@ -599,6 +613,7 @@ public class Fee3 {
 		this.repairedRequestedRate = repairedRequestedRate;
 	}
 
+	@XmlElement(name = "ComrclAgrmtRef")
 	public Max35Text getCommercialAgreementReference() {
 		return commercialAgreementReference;
 	}
@@ -607,6 +622,7 @@ public class Fee3 {
 		this.commercialAgreementReference = commercialAgreementReference;
 	}
 
+	@XmlElement(name = "NewComrclAgrmtRefInd")
 	public YesNoIndicator getNewCommercialAgreementReferenceIndicator() {
 		return newCommercialAgreementReferenceIndicator;
 	}

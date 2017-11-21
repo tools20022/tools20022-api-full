@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Return criteria for information to be returned in the report deriving from a
@@ -90,6 +94,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyDataReturnCriteria1", propOrder = {"openingDate", "closingDate", "type", "partyIdentification", "CSDOrNCB", "restrictionIdentification", "restrictedOnDate", "name", "shortName", "address", "technicalAddress",
+		"marketSpecificAttribute"})
 public class PartyDataReturnCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -631,6 +638,7 @@ public class PartyDataReturnCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OpngDt")
 	public RequestedIndicator getOpeningDate() {
 		return openingDate;
 	}
@@ -639,6 +647,7 @@ public class PartyDataReturnCriteria1 {
 		this.openingDate = openingDate;
 	}
 
+	@XmlElement(name = "ClsgDt")
 	public RequestedIndicator getClosingDate() {
 		return closingDate;
 	}
@@ -647,6 +656,7 @@ public class PartyDataReturnCriteria1 {
 		this.closingDate = closingDate;
 	}
 
+	@XmlElement(name = "Tp")
 	public RequestedIndicator getType() {
 		return type;
 	}
@@ -655,6 +665,7 @@ public class PartyDataReturnCriteria1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "PtyId")
 	public RequestedIndicator getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -663,6 +674,7 @@ public class PartyDataReturnCriteria1 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "CSDOrNCB")
 	public RequestedIndicator getCSDOrNCB() {
 		return cSDOrNCB;
 	}
@@ -671,6 +683,7 @@ public class PartyDataReturnCriteria1 {
 		this.cSDOrNCB = cSDOrNCB;
 	}
 
+	@XmlElement(name = "RstrctnId")
 	public RequestedIndicator getRestrictionIdentification() {
 		return restrictionIdentification;
 	}
@@ -679,6 +692,7 @@ public class PartyDataReturnCriteria1 {
 		this.restrictionIdentification = restrictionIdentification;
 	}
 
+	@XmlElement(name = "RstrctdOnDt")
 	public RequestedIndicator getRestrictedOnDate() {
 		return restrictedOnDate;
 	}
@@ -687,6 +701,7 @@ public class PartyDataReturnCriteria1 {
 		this.restrictedOnDate = restrictedOnDate;
 	}
 
+	@XmlElement(name = "Nm")
 	public RequestedIndicator getName() {
 		return name;
 	}
@@ -695,6 +710,7 @@ public class PartyDataReturnCriteria1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "ShrtNm")
 	public RequestedIndicator getShortName() {
 		return shortName;
 	}
@@ -703,6 +719,7 @@ public class PartyDataReturnCriteria1 {
 		this.shortName = shortName;
 	}
 
+	@XmlElement(name = "Adr")
 	public RequestedIndicator getAddress() {
 		return address;
 	}
@@ -711,6 +728,7 @@ public class PartyDataReturnCriteria1 {
 		this.address = address;
 	}
 
+	@XmlElement(name = "TechAdr")
 	public RequestedIndicator getTechnicalAddress() {
 		return technicalAddress;
 	}
@@ -719,6 +737,7 @@ public class PartyDataReturnCriteria1 {
 		this.technicalAddress = technicalAddress;
 	}
 
+	@XmlElement(name = "MktSpcfcAttr")
 	public RequestedIndicator getMarketSpecificAttribute() {
 		return marketSpecificAttribute;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Explains the status of the related request.
@@ -56,6 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Explains the status of the related request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestHandling1", propOrder = {"statusCode", "description"})
 public class RequestHandling1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +165,7 @@ public class RequestHandling1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsCd", required = true)
 	public Max4AlphaNumericText getStatusCode() {
 		return statusCode;
 	}
@@ -167,6 +174,7 @@ public class RequestHandling1 {
 		this.statusCode = statusCode;
 	}
 
+	@XmlElement(name = "Desc")
 	public Max140Text getDescription() {
 		return description;
 	}

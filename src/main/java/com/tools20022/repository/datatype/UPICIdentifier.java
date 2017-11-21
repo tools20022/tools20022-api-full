@@ -36,6 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * identificationScheme} =
  * "The Clearing House (formerly The New York Clearing House); Universal Payment Identification Code"
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[0-9]{8,17}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -72,6 +74,7 @@ public class UPICIdentifier {
 				name = "UPICIdentifier";
 				definition = "Universal Payment Identification Code (UPIC).  Identifier used by the New York Clearing House to mask confidential data, such as bank accounts and bank routing numbers. UPIC numbers remain with business customers, regardless of banking relationship changes.";
 				identificationScheme = "The Clearing House (formerly The New York Clearing House); Universal Payment Identification Code";
+				pattern = "[0-9]{8,17}";
 			}
 		});
 		return mmObject_lazy.get();

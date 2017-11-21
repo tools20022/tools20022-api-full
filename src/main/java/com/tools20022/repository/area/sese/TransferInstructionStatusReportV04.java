@@ -26,9 +26,11 @@ import com.tools20022.repository.choice.References40Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -60,9 +62,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.011.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
@@ -105,6 +104,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.011.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -128,6 +130,8 @@ import java.util.List;
  * TransferInstructionStatusReportV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferInstructionStatusReportV04", propOrder = {"messageIdentification", "counterpartyReference", "reference", "statusReport", "marketPracticeVersion", "extension"})
 public class TransferInstructionStatusReportV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +187,14 @@ public class TransferInstructionStatusReportV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInstructionStatusReportV04.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference2 counterpartyReference;
 	/**
@@ -235,6 +247,14 @@ public class TransferInstructionStatusReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInstructionStatusReportV04.class.getMethod("getCounterpartyReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected References40Choice reference;
 	/**
@@ -280,6 +300,14 @@ public class TransferInstructionStatusReportV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> References40Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInstructionStatusReportV04.class.getMethod("getReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TransferStatusAndReason3 statusReport;
@@ -331,6 +359,14 @@ public class TransferInstructionStatusReportV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> TransferStatusAndReason3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInstructionStatusReportV04.class.getMethod("getStatusReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
@@ -375,6 +411,14 @@ public class TransferInstructionStatusReportV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInstructionStatusReportV04.class.getMethod("getMarketPracticeVersion", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -427,6 +471,14 @@ public class TransferInstructionStatusReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInstructionStatusReportV04.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -441,8 +493,10 @@ public class TransferInstructionStatusReportV04 {
 				rootElement = "Document";
 				xmlTag = "TrfInstrStsRpt";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInstructionStatusReportV04.mmMessageIdentification, TransferInstructionStatusReportV04.mmCounterpartyReference, TransferInstructionStatusReportV04.mmReference,
-						TransferInstructionStatusReportV04.mmStatusReport, TransferInstructionStatusReportV04.mmMarketPracticeVersion, TransferInstructionStatusReportV04.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmCounterpartyReference, com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmReference,
+						com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmStatusReport, com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmMarketPracticeVersion,
+						com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -452,10 +506,16 @@ public class TransferInstructionStatusReportV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TransferInstructionStatusReportV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -464,6 +524,7 @@ public class TransferInstructionStatusReportV04 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CtrPtyRef")
 	public AdditionalReference2 getCounterpartyReference() {
 		return counterpartyReference;
 	}
@@ -472,6 +533,7 @@ public class TransferInstructionStatusReportV04 {
 		this.counterpartyReference = counterpartyReference;
 	}
 
+	@XmlElement(name = "Ref")
 	public References40Choice getReference() {
 		return reference;
 	}
@@ -480,6 +542,7 @@ public class TransferInstructionStatusReportV04 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "StsRpt", required = true)
 	public TransferStatusAndReason3 getStatusReport() {
 		return statusReport;
 	}
@@ -488,6 +551,7 @@ public class TransferInstructionStatusReportV04 {
 		this.statusReport = statusReport;
 	}
 
+	@XmlElement(name = "MktPrctcVrsn")
 	public MarketPracticeVersion1 getMarketPracticeVersion() {
 		return marketPracticeVersion;
 	}
@@ -496,11 +560,18 @@ public class TransferInstructionStatusReportV04 {
 		this.marketPracticeVersion = marketPracticeVersion;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.011.04.04")
+	static public class Document {
+		@XmlElement(name = "TrfInstrStsRpt", required = true)
+		public TransferInstructionStatusReportV04 messageBody;
 	}
 }

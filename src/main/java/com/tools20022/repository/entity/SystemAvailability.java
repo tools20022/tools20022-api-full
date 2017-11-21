@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.CutOff1;
 import com.tools20022.repository.msg.NettingCutOff1;
 import com.tools20022.repository.msg.SystemAvailabilityAndEvents1;
 import com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemAvailability#mmAvailableSessionPeriod
+ * SystemAvailability.mmAvailableSessionPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemAvailability#mmSystem
+ * SystemAvailability.mmSystem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemAvailability#mmClosureInformation
+ * SystemAvailability.mmClosureInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemAvailability#mmDate
+ * SystemAvailability.mmDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemAvailability#mmClosurePeriod
+ * SystemAvailability.mmClosurePeriod}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -66,24 +85,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.NettingCutOff1#mmNewCutOff
  * NettingCutOff1.mmNewCutOff}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemAvailability#mmAvailableSessionPeriod
- * SystemAvailability.mmAvailableSessionPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemAvailability#mmSystem
- * SystemAvailability.mmSystem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemAvailability#mmClosureInformation
- * SystemAvailability.mmClosureInformation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemAvailability#mmDate
- * SystemAvailability.mmDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemAvailability#mmClosurePeriod
- * SystemAvailability.mmClosurePeriod}</li>
  * </ul>
  * </li>
  * <li>
@@ -123,11 +124,6 @@ public class SystemAvailability {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.TimePeriod
 	 * TimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SystemAvailability
-	 * SystemAvailability}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -139,6 +135,11 @@ public class SystemAvailability {
 	 * SystemAvailabilityAndEvents1.mmSessionPeriod}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SystemAvailability
+	 * SystemAvailability}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -153,7 +154,7 @@ public class SystemAvailability {
 	public static final MMBusinessAssociationEnd mmAvailableSessionPeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SystemAvailabilityAndEventsDetails1.mmSessionPeriod, SystemAvailabilityAndEvents1.mmSessionPeriod);
-			elementContext_lazy = () -> SystemAvailability.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemAvailability.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AvailableSessionPeriod";
@@ -200,7 +201,7 @@ public class SystemAvailability {
 	 */
 	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SystemAvailability.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemAvailability.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
@@ -250,7 +251,7 @@ public class SystemAvailability {
 	 */
 	public static final MMBusinessAssociationEnd mmClosureInformation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SystemAvailability.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemAvailability.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosureInformation";
@@ -290,7 +291,7 @@ public class SystemAvailability {
 	 */
 	public static final MMBusinessAttribute mmDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> SystemAvailability.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemAvailability.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
@@ -298,6 +299,14 @@ public class SystemAvailability {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SystemAvailability.class.getMethod("getDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DateTimePeriod closurePeriod;
@@ -336,7 +345,7 @@ public class SystemAvailability {
 	 */
 	public static final MMBusinessAssociationEnd mmClosurePeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SystemAvailability.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemAvailability.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosurePeriod";
@@ -359,8 +368,14 @@ public class SystemAvailability {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmRelatedSystemAvailability, com.tools20022.repository.entity.System.mmAvailability,
 						com.tools20022.repository.entity.TimePeriod.mmSystemAvailability, com.tools20022.repository.entity.SystemClosureInformation.mmSystemAvailability);
 				derivationElement_lazy = () -> Arrays.asList(NettingCutOff1.mmNewCutOff);
-				element_lazy = () -> Arrays.asList(SystemAvailability.mmAvailableSessionPeriod, SystemAvailability.mmSystem, SystemAvailability.mmClosureInformation, SystemAvailability.mmDate, SystemAvailability.mmClosurePeriod);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemAvailability.mmAvailableSessionPeriod, com.tools20022.repository.entity.SystemAvailability.mmSystem,
+						com.tools20022.repository.entity.SystemAvailability.mmClosureInformation, com.tools20022.repository.entity.SystemAvailability.mmDate, com.tools20022.repository.entity.SystemAvailability.mmClosurePeriod);
 				derivationComponent_lazy = () -> Arrays.asList(CutOff1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SystemAvailability.class;
 			}
 		});
 		return mmObject_lazy.get();

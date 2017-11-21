@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies periods related to a corporate action option.
@@ -76,6 +80,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies periods related to a corporate action option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionPeriod7", propOrder = {"priceCalculationPeriod", "parallelTradingPeriod", "actionPeriod", "revocabilityPeriod", "privilegeSuspensionPeriod", "accountServicerRevocabilityPeriod",
+		"depositorySuspensionPeriodForWithdrawal"})
 public class CorporateActionPeriod7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -446,6 +453,7 @@ public class CorporateActionPeriod7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PricClctnPrd")
 	public Period3Choice getPriceCalculationPeriod() {
 		return priceCalculationPeriod;
 	}
@@ -454,6 +462,7 @@ public class CorporateActionPeriod7 {
 		this.priceCalculationPeriod = priceCalculationPeriod;
 	}
 
+	@XmlElement(name = "ParllTradgPrd")
 	public Period3Choice getParallelTradingPeriod() {
 		return parallelTradingPeriod;
 	}
@@ -462,6 +471,7 @@ public class CorporateActionPeriod7 {
 		this.parallelTradingPeriod = parallelTradingPeriod;
 	}
 
+	@XmlElement(name = "ActnPrd")
 	public Period3Choice getActionPeriod() {
 		return actionPeriod;
 	}
@@ -470,6 +480,7 @@ public class CorporateActionPeriod7 {
 		this.actionPeriod = actionPeriod;
 	}
 
+	@XmlElement(name = "RvcbltyPrd")
 	public Period3Choice getRevocabilityPeriod() {
 		return revocabilityPeriod;
 	}
@@ -478,6 +489,7 @@ public class CorporateActionPeriod7 {
 		this.revocabilityPeriod = revocabilityPeriod;
 	}
 
+	@XmlElement(name = "PrvlgSspnsnPrd")
 	public Period3Choice getPrivilegeSuspensionPeriod() {
 		return privilegeSuspensionPeriod;
 	}
@@ -486,6 +498,7 @@ public class CorporateActionPeriod7 {
 		this.privilegeSuspensionPeriod = privilegeSuspensionPeriod;
 	}
 
+	@XmlElement(name = "AcctSvcrRvcbltyPrd")
 	public Period3Choice getAccountServicerRevocabilityPeriod() {
 		return accountServicerRevocabilityPeriod;
 	}
@@ -494,6 +507,7 @@ public class CorporateActionPeriod7 {
 		this.accountServicerRevocabilityPeriod = accountServicerRevocabilityPeriod;
 	}
 
+	@XmlElement(name = "DpstrySspnsnPrdForWdrwl")
 	public Period3Choice getDepositorySuspensionPeriodForWithdrawal() {
 		return depositorySuspensionPeriodForWithdrawal;
 	}

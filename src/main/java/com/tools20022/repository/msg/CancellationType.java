@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.QuoteStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason for the cancellation.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Reason for the cancellation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancellationType", propOrder = "cancellationType")
 public class CancellationType {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -124,6 +130,7 @@ public class CancellationType {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlTp", required = true)
 	public QuoteStatus2Code getCancellationType() {
 		return cancellationType;
 	}

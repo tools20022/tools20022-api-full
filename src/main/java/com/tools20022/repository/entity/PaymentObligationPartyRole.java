@@ -37,17 +37,14 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPartyRole
- * PaymentObligation.mmPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentObligationPartyRole#mmPaymentObligation
+ * PaymentObligationPartyRole.mmPaymentObligation}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -57,12 +54,15 @@ import java.util.List;
  * UltimateCreditorRole}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentObligationPartyRole#mmPaymentObligation
- * PaymentObligationPartyRole.mmPaymentObligation}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPartyRole
+ * PaymentObligation.mmPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -121,7 +121,7 @@ public class PaymentObligationPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PaymentObligationPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentObligationPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
@@ -143,7 +143,12 @@ public class PaymentObligationPartyRole extends Role {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.mmPartyRole);
 				subType_lazy = () -> Arrays.asList(UltimateDebtorRole.mmObject(), UltimateCreditorRole.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(PaymentObligationPartyRole.mmPaymentObligation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligationPartyRole.mmPaymentObligation);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PaymentObligationPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

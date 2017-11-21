@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Contains general properties of the report and the reporting data (either one
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BulkReportBody", propOrder = {"reportHeader", "reportData"})
 public class BulkReportBody {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -157,6 +163,7 @@ public class BulkReportBody {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptHdr")
 	public ReportHeader1 getReportHeader() {
 		return reportHeader;
 	}
@@ -165,6 +172,7 @@ public class BulkReportBody {
 		this.reportHeader = reportHeader;
 	}
 
+	@XmlElement(name = "RptData", required = true)
 	public ProprietaryReportData getReportData() {
 		return reportData;
 	}

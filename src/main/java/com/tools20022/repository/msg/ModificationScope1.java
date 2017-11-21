@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Scope of the modification to be applied on an identified set of information.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ModificationScope1", propOrder = {"modificationScopeIndication", "postalAddress"})
 public class ModificationScope1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class ModificationScope1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ModScpIndctn", required = true)
 	public DataModification1Code getModificationScopeIndication() {
 		return modificationScopeIndication;
 	}
@@ -204,6 +211,7 @@ public class ModificationScope1 {
 		this.modificationScopeIndication = modificationScopeIndication;
 	}
 
+	@XmlElement(name = "PstlAdr", required = true)
 	public PostalAddress3 getPostalAddress() {
 		return postalAddress;
 	}

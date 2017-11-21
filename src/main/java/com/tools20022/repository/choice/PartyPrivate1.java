@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PersonIdentification4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the identification of a person and the identification of a
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyPrivate1", propOrder = "privateIdentification")
 public class PartyPrivate1 {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -129,6 +135,7 @@ public class PartyPrivate1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrvtId", required = true)
 	public PersonIdentification4 getPrivateIdentification() {
 		return privateIdentification;
 	}

@@ -39,6 +39,38 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemPartyRole#mmRelatedSystem
+ * SystemPartyRole.mmRelatedSystem}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole
+ * SystemMemberRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TransactionAdministrator
+ * TransactionAdministrator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SubmittingPartyRole
+ * SubmittingPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ThirdPartyRole
+ * ThirdPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TerminalManagerRole
+ * TerminalManagerRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemAdministratorRole
+ * SystemAdministratorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemReferenceDataResponsible
+ * SystemReferenceDataResponsible}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ClearingMemberRole
+ * ClearingMemberRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -81,38 +113,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.choice.SystemPartyIdentification1Choice#mmCombinedIdentification
  * SystemPartyIdentification1Choice.mmCombinedIdentification}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole
- * SystemMemberRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TransactionAdministrator
- * TransactionAdministrator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SubmittingPartyRole
- * SubmittingPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ThirdPartyRole
- * ThirdPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TerminalManagerRole
- * TerminalManagerRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemAdministratorRole
- * SystemAdministratorRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemReferenceDataResponsible
- * SystemReferenceDataResponsible}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ClearingMemberRole
- * ClearingMemberRole}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemPartyRole#mmRelatedSystem
- * SystemPartyRole.mmRelatedSystem}</li>
  * </ul>
  * </li>
  * <li>
@@ -168,7 +168,7 @@ public class SystemPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SystemPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSystem";
@@ -192,10 +192,15 @@ public class SystemPartyRole extends Role {
 				subType_lazy = () -> Arrays.asList(SystemMemberRole.mmObject(), TransactionAdministrator.mmObject(), SubmittingPartyRole.mmObject(), ThirdPartyRole.mmObject(), TerminalManagerRole.mmObject(),
 						SystemAdministratorRole.mmObject(), SystemReferenceDataResponsible.mmObject(), ClearingMemberRole.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(SystemPartyRole.mmRelatedSystem);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemPartyRole.mmRelatedSystem);
 				derivationComponent_lazy = () -> Arrays.asList(NonGuaranteedTrade1.mmObject(), NonGuaranteedTrade2.mmObject(), SystemPartyIdentification3.mmObject(), SystemPartyIdentification5.mmObject(),
 						SystemPartyIdentification1Choice.mmObject(), SystemPartyIdentification1.mmObject(), CSDOrNCB1Choice.mmObject(), SystemPartyIdentification2.mmObject(), SystemPartyIdentification4.mmObject(),
 						NonGuaranteedTrade3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SystemPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Type of charge expressed either in free format or in structured or free form.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ChargeTypeFormat2Choice", propOrder = {"unstructured", "structured"})
 public class ChargeTypeFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class ChargeTypeFormat2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ustrd", required = true)
 	public Max35Text getUnstructured() {
 		return unstructured;
 	}
@@ -184,6 +191,7 @@ public class ChargeTypeFormat2Choice {
 		this.unstructured = unstructured;
 	}
 
+	@XmlElement(name = "Strd", required = true)
 	public ChargeType4Code getStructured() {
 		return structured;
 	}

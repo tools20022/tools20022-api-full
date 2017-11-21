@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for currency exchange information. A name
@@ -62,6 +66,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyExchangeCriteria", propOrder = {"newQueryName", "searchCriteria"})
 public class CurrencyExchangeCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class CurrencyExchangeCriteria {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NewQryNm")
 	public Max35Text getNewQueryName() {
 		return newQueryName;
 	}
@@ -171,6 +178,7 @@ public class CurrencyExchangeCriteria {
 		this.newQueryName = newQueryName;
 	}
 
+	@XmlElement(name = "SchCrit", required = true)
 	public List<CurrencyExchangeSearchCriteria> getSearchCriteria() {
 		return searchCriteria;
 	}

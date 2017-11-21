@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Inquiry information for the transaction.
@@ -86,6 +90,9 @@ import java.util.List;
  * definition} = "Inquiry information for the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransaction21", propOrder = {"transactionIdentification", "transactionResponse", "action", "customerServiceProfile", "currencyConversion", "accountInformation", "accountStatementData", "currencyExchange",
+		"ICCRelatedData", "command"})
 public class ATMTransaction21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -548,6 +555,7 @@ public class ATMTransaction21 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -556,6 +564,7 @@ public class ATMTransaction21 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "TxRspn", required = true)
 	public ResponseType7 getTransactionResponse() {
 		return transactionResponse;
 	}
@@ -564,6 +573,7 @@ public class ATMTransaction21 {
 		this.transactionResponse = transactionResponse;
 	}
 
+	@XmlElement(name = "Actn")
 	public List<Action7> getAction() {
 		return action;
 	}
@@ -572,6 +582,7 @@ public class ATMTransaction21 {
 		this.action = action;
 	}
 
+	@XmlElement(name = "CstmrSvcPrfl")
 	public ATMCustomerProfile5 getCustomerServiceProfile() {
 		return customerServiceProfile;
 	}
@@ -580,6 +591,7 @@ public class ATMTransaction21 {
 		this.customerServiceProfile = customerServiceProfile;
 	}
 
+	@XmlElement(name = "CcyConvs")
 	public CurrencyConversion10 getCurrencyConversion() {
 		return currencyConversion;
 	}
@@ -588,6 +600,7 @@ public class ATMTransaction21 {
 		this.currencyConversion = currencyConversion;
 	}
 
+	@XmlElement(name = "AcctInf")
 	public List<CardAccount12> getAccountInformation() {
 		return accountInformation;
 	}
@@ -596,6 +609,7 @@ public class ATMTransaction21 {
 		this.accountInformation = accountInformation;
 	}
 
+	@XmlElement(name = "AcctStmtData")
 	public List<ATMAccountStatement1> getAccountStatementData() {
 		return accountStatementData;
 	}
@@ -604,6 +618,7 @@ public class ATMTransaction21 {
 		this.accountStatementData = accountStatementData;
 	}
 
+	@XmlElement(name = "CcyXchg")
 	public CurrencyConversion5 getCurrencyExchange() {
 		return currencyExchange;
 	}
@@ -612,6 +627,7 @@ public class ATMTransaction21 {
 		this.currencyExchange = currencyExchange;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}
@@ -620,6 +636,7 @@ public class ATMTransaction21 {
 		this.iCCRelatedData = iCCRelatedData;
 	}
 
+	@XmlElement(name = "Cmd")
 	public List<ATMCommand7> getCommand() {
 		return command;
 	}

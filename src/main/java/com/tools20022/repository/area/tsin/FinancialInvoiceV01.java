@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesInitiationLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.FinancialInvoiceISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -57,9 +59,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsin.004.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
@@ -97,6 +96,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsin.004.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -108,6 +110,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInvoiceV01", propOrder = {"invoiceHeader", "tradeAgreement", "tradeDelivery", "tradeSettlement", "lineItem"})
 public class FinancialInvoiceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -149,6 +153,14 @@ public class FinancialInvoiceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> InvoiceHeader1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInvoiceV01.class.getMethod("getInvoiceHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TradeAgreement6 tradeAgreement;
 	/**
@@ -187,6 +199,14 @@ public class FinancialInvoiceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradeAgreement6.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInvoiceV01.class.getMethod("getTradeAgreement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TradeDelivery1 tradeDelivery;
 	/**
@@ -223,6 +243,14 @@ public class FinancialInvoiceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TradeDelivery1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInvoiceV01.class.getMethod("getTradeDelivery", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TradeSettlement1 tradeSettlement;
@@ -261,6 +289,14 @@ public class FinancialInvoiceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TradeSettlement1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInvoiceV01.class.getMethod("getTradeSettlement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<LineItem10> lineItem;
@@ -301,6 +337,14 @@ public class FinancialInvoiceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> LineItem10.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInvoiceV01.class.getMethod("getLineItem", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -313,8 +357,8 @@ public class FinancialInvoiceV01 {
 				rootElement = "Document";
 				xmlTag = "FinInvc";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInvoiceV01.mmInvoiceHeader, FinancialInvoiceV01.mmTradeAgreement, FinancialInvoiceV01.mmTradeDelivery, FinancialInvoiceV01.mmTradeSettlement,
-						FinancialInvoiceV01.mmLineItem);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmInvoiceHeader, com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmTradeAgreement,
+						com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmTradeDelivery, com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmTradeSettlement, com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmLineItem);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsin";
@@ -324,10 +368,16 @@ public class FinancialInvoiceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FinancialInvoiceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InvcHdr", required = true)
 	public InvoiceHeader1 getInvoiceHeader() {
 		return invoiceHeader;
 	}
@@ -336,6 +386,7 @@ public class FinancialInvoiceV01 {
 		this.invoiceHeader = invoiceHeader;
 	}
 
+	@XmlElement(name = "TradAgrmt", required = true)
 	public TradeAgreement6 getTradeAgreement() {
 		return tradeAgreement;
 	}
@@ -344,6 +395,7 @@ public class FinancialInvoiceV01 {
 		this.tradeAgreement = tradeAgreement;
 	}
 
+	@XmlElement(name = "TradDlvry", required = true)
 	public TradeDelivery1 getTradeDelivery() {
 		return tradeDelivery;
 	}
@@ -352,6 +404,7 @@ public class FinancialInvoiceV01 {
 		this.tradeDelivery = tradeDelivery;
 	}
 
+	@XmlElement(name = "TradSttlm", required = true)
 	public TradeSettlement1 getTradeSettlement() {
 		return tradeSettlement;
 	}
@@ -360,11 +413,18 @@ public class FinancialInvoiceV01 {
 		this.tradeSettlement = tradeSettlement;
 	}
 
+	@XmlElement(name = "LineItm")
 	public List<LineItem10> getLineItem() {
 		return lineItem;
 	}
 
 	public void setLineItem(List<LineItem10> lineItem) {
 		this.lineItem = lineItem;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.004.01.01")
+	static public class Document {
+		@XmlElement(name = "FinInvc", required = true)
+		public FinancialInvoiceV01 messageBody;
 	}
 }

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide information on the group of the corrective
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorrectiveGroupInformation1", propOrder = {"messageIdentification", "messageNameIdentification", "creationDateTime"})
 public class CorrectiveGroupInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -211,6 +217,7 @@ public class CorrectiveGroupInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -219,6 +226,7 @@ public class CorrectiveGroupInformation1 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "MsgNmId", required = true)
 	public Max35Text getMessageNameIdentification() {
 		return messageNameIdentification;
 	}
@@ -227,6 +235,7 @@ public class CorrectiveGroupInformation1 {
 		this.messageNameIdentification = messageNameIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm")
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}

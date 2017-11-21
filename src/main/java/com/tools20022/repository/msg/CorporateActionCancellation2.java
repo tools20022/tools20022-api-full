@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Corporate action event cancellation status and reason.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Corporate action event cancellation status and reason."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionCancellation2", propOrder = {"cancellationReasonCode", "cancellationReason", "processingStatus"})
 public class CorporateActionCancellation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -234,6 +240,7 @@ public class CorporateActionCancellation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlRsnCd", required = true)
 	public CorporateActionCancellationReason1Code getCancellationReasonCode() {
 		return cancellationReasonCode;
 	}
@@ -242,6 +249,7 @@ public class CorporateActionCancellation2 {
 		this.cancellationReasonCode = cancellationReasonCode;
 	}
 
+	@XmlElement(name = "CxlRsn")
 	public RestrictedFINXMax140Text getCancellationReason() {
 		return cancellationReason;
 	}
@@ -250,6 +258,7 @@ public class CorporateActionCancellation2 {
 		this.cancellationReason = cancellationReason;
 	}
 
+	@XmlElement(name = "PrcgSts", required = true)
 	public CorporateActionProcessingStatus1Choice getProcessingStatus() {
 		return processingStatus;
 	}

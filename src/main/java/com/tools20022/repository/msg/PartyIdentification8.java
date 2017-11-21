@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a person, a financial institution or a non-financial
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification8", propOrder = {"name", "postalAddress", "identification", "countryOfResidence"})
 public class PartyIdentification8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -295,6 +301,7 @@ public class PartyIdentification8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max70Text getName() {
 		return name;
 	}
@@ -303,6 +310,7 @@ public class PartyIdentification8 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PstlAdr")
 	public PostalAddress1 getPostalAddress() {
 		return postalAddress;
 	}
@@ -311,6 +319,7 @@ public class PartyIdentification8 {
 		this.postalAddress = postalAddress;
 	}
 
+	@XmlElement(name = "Id")
 	public Party2Choice getIdentification() {
 		return identification;
 	}
@@ -319,6 +328,7 @@ public class PartyIdentification8 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "CtryOfRes")
 	public CountryCode getCountryOfResidence() {
 		return countryOfResidence;
 	}

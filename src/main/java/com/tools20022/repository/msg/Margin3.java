@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the calculation of the margin.
@@ -61,6 +65,8 @@ import java.util.List;
  * definition} = "Provides details on the calculation of the margin."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Margin3", propOrder = {"initialMargin", "variationMargin", "otherMargin"})
 public class Margin3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class Margin3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InitlMrgn")
 	public Amount2 getInitialMargin() {
 		return initialMargin;
 	}
@@ -226,6 +233,7 @@ public class Margin3 {
 		this.initialMargin = initialMargin;
 	}
 
+	@XmlElement(name = "VartnMrgn")
 	public List<VariationMargin3> getVariationMargin() {
 		return variationMargin;
 	}
@@ -234,6 +242,7 @@ public class Margin3 {
 		this.variationMargin = variationMargin;
 	}
 
+	@XmlElement(name = "OthrMrgn")
 	public List<Margin4> getOtherMargin() {
 		return otherMargin;
 	}

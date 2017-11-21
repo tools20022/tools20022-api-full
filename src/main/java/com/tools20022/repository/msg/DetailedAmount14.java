@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Detailed amounts associated with the total amount of transaction.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * DetailedAmount6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DetailedAmount14", propOrder = {"amount", "dateTime", "cardDataEntryMode", "ICCRelatedData", "label"})
 public class DetailedAmount14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -355,6 +361,7 @@ public class DetailedAmount14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -363,6 +370,7 @@ public class DetailedAmount14 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "DtTm", required = true)
 	public ISODateTime getDateTime() {
 		return dateTime;
 	}
@@ -371,6 +379,7 @@ public class DetailedAmount14 {
 		this.dateTime = dateTime;
 	}
 
+	@XmlElement(name = "CardDataNtryMd")
 	public CardDataReading5Code getCardDataEntryMode() {
 		return cardDataEntryMode;
 	}
@@ -379,6 +388,7 @@ public class DetailedAmount14 {
 		this.cardDataEntryMode = cardDataEntryMode;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}
@@ -387,6 +397,7 @@ public class DetailedAmount14 {
 		this.iCCRelatedData = iCCRelatedData;
 	}
 
+	@XmlElement(name = "Labl")
 	public Max140Text getLabel() {
 		return label;
 	}

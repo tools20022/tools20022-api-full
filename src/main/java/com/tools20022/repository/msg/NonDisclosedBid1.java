@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * List trading by which the buy-side provides details to the sell-side
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NonDisclosedBid1", propOrder = {"bidByCurrency", "bidBySector", "bidByIndex", "sideIndicator", "liquidity", "exchangeForPhysicalTrade"})
 public class NonDisclosedBid1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -393,6 +399,7 @@ public class NonDisclosedBid1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BidByCcy")
 	public CountryCode getBidByCurrency() {
 		return bidByCurrency;
 	}
@@ -401,6 +408,7 @@ public class NonDisclosedBid1 {
 		this.bidByCurrency = bidByCurrency;
 	}
 
+	@XmlElement(name = "BidBySctr")
 	public Max128Text getBidBySector() {
 		return bidBySector;
 	}
@@ -409,6 +417,7 @@ public class NonDisclosedBid1 {
 		this.bidBySector = bidBySector;
 	}
 
+	@XmlElement(name = "BidByIndx")
 	public Max128Text getBidByIndex() {
 		return bidByIndex;
 	}
@@ -417,6 +426,7 @@ public class NonDisclosedBid1 {
 		this.bidByIndex = bidByIndex;
 	}
 
+	@XmlElement(name = "SdInd")
 	public TrueFalseIndicator getSideIndicator() {
 		return sideIndicator;
 	}
@@ -425,6 +435,7 @@ public class NonDisclosedBid1 {
 		this.sideIndicator = sideIndicator;
 	}
 
+	@XmlElement(name = "Lqdty")
 	public Liquidity1 getLiquidity() {
 		return liquidity;
 	}
@@ -433,6 +444,7 @@ public class NonDisclosedBid1 {
 		this.liquidity = liquidity;
 	}
 
+	@XmlElement(name = "XchgForPhysTrad")
 	public ExchangeForPhysicalTradeParameters1 getExchangeForPhysicalTrade() {
 		return exchangeForPhysicalTrade;
 	}

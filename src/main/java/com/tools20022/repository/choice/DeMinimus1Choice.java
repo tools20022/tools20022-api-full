@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.DeMinimusApplicable1;
 import com.tools20022.repository.msg.DeMinimusNotApplicable1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * De minimus applicability conditions.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "De minimus applicability conditions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DeMinimus1Choice", propOrder = {"deMinimusApplicable", "deMinimusNotApplicable"})
 public class DeMinimus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class DeMinimus1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DeMnmsAplbl", required = true)
 	public DeMinimusApplicable1 getDeMinimusApplicable() {
 		return deMinimusApplicable;
 	}
@@ -188,6 +195,7 @@ public class DeMinimus1Choice {
 		this.deMinimusApplicable = deMinimusApplicable;
 	}
 
+	@XmlElement(name = "DeMnmsNotAplbl", required = true)
 	public DeMinimusNotApplicable1 getDeMinimusNotApplicable() {
 		return deMinimusNotApplicable;
 	}

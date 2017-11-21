@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.PhysicalTransferTypeCode;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,6 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmRelatedTransfer
+ * PhysicalDelivery.mmRelatedTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmRegisteredAddressIndicator
+ * PhysicalDelivery.mmRegisteredAddressIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmIssuedCertificateNumber
+ * PhysicalDelivery.mmIssuedCertificateNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmAddress
+ * PhysicalDelivery.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmType
+ * PhysicalDelivery.mmType}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -59,24 +78,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#mmRelatedDelivery
  * SecuritiesCertificate.mmRelatedDelivery}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmRelatedTransfer
- * PhysicalDelivery.mmRelatedTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmRegisteredAddressIndicator
- * PhysicalDelivery.mmRegisteredAddressIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmIssuedCertificateNumber
- * PhysicalDelivery.mmIssuedCertificateNumber}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmAddress
- * PhysicalDelivery.mmAddress}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmType
- * PhysicalDelivery.mmType}</li>
  * </ul>
  * </li>
  * <li>
@@ -134,7 +135,7 @@ public class PhysicalDelivery {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedTransfer = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PhysicalDelivery.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedTransfer";
@@ -158,11 +159,6 @@ public class PhysicalDelivery {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery
-	 * PhysicalDelivery}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -174,6 +170,11 @@ public class PhysicalDelivery {
 	 * DeliveryParameters4.mmRegisteredAddressIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery
+	 * PhysicalDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -190,7 +191,7 @@ public class PhysicalDelivery {
 	public static final MMBusinessAttribute mmRegisteredAddressIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DeliveryParameters2.mmRegisteredAddressIndicator, DeliveryParameters4.mmRegisteredAddressIndicator);
-			elementContext_lazy = () -> PhysicalDelivery.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegisteredAddressIndicator";
@@ -198,6 +199,14 @@ public class PhysicalDelivery {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PhysicalDelivery.class.getMethod("getRegisteredAddressIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesCertificate issuedCertificateNumber;
@@ -219,11 +228,6 @@ public class PhysicalDelivery {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate
 	 * SecuritiesCertificate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery
-	 * PhysicalDelivery}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -232,6 +236,11 @@ public class PhysicalDelivery {
 	 * DeliveryParameters3.mmIssuedCertificateNumber}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery
+	 * PhysicalDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -246,7 +255,7 @@ public class PhysicalDelivery {
 	public static final MMBusinessAssociationEnd mmIssuedCertificateNumber = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(DeliveryParameters3.mmIssuedCertificateNumber);
-			elementContext_lazy = () -> PhysicalDelivery.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuedCertificateNumber";
@@ -276,11 +285,6 @@ public class PhysicalDelivery {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PostalAddress
 	 * PostalAddress}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery
-	 * PhysicalDelivery}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -323,6 +327,11 @@ public class PhysicalDelivery {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery
+	 * PhysicalDelivery}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -338,7 +347,7 @@ public class PhysicalDelivery {
 			derivation_lazy = () -> Arrays.asList(DeliveryParameters3.mmAddress, SubscriptionOrder3.mmPhysicalDeliveryDetails, SubscriptionOrder5.mmPhysicalDeliveryDetails, SubscriptionOrder7.mmPhysicalDeliveryDetails,
 					SubscriptionOrder4.mmPhysicalDeliveryDetails, SubscriptionOrder6.mmPhysicalDeliveryDetails, SubscriptionOrder8.mmPhysicalDeliveryDetails, SwitchSubscriptionLegOrder2.mmPhysicalDeliveryDetails,
 					SwitchSubscriptionLegOrder3.mmPhysicalDeliveryDetails, SwitchSubscriptionLegOrder6.mmPhysicalDeliveryDetails, SubscriptionOrder15.mmPhysicalDeliveryDetails, SubscriptionOrder14.mmPhysicalDeliveryDetails);
-			elementContext_lazy = () -> PhysicalDelivery.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Address";
@@ -361,11 +370,6 @@ public class PhysicalDelivery {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PhysicalTransferTypeCode
 	 * PhysicalTransferTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery
-	 * PhysicalDelivery}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -447,6 +451,11 @@ public class PhysicalDelivery {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery
+	 * PhysicalDelivery}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -465,7 +474,7 @@ public class PhysicalDelivery {
 					DeliverInformation12.mmPhysicalTransfer, DeliverInformation13.mmPhysicalTransfer, DeliverInformation15.mmPhysicalTransfer, DeliverInformation14.mmPhysicalTransfer, ReceiveInformation15.mmPhysicalTransfer,
 					ReceiveInformation14.mmPhysicalTransfer, AggregateHoldingBalance1.mmHoldingPhysicalType, ReceiveInformation17.mmPhysicalTransfer, ReceiveInformation16.mmPhysicalTransfer, DeliverInformation16.mmPhysicalTransfer,
 					DeliverInformation17.mmPhysicalTransfer);
-			elementContext_lazy = () -> PhysicalDelivery.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -473,6 +482,14 @@ public class PhysicalDelivery {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PhysicalTransferTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PhysicalDelivery.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -485,8 +502,14 @@ public class PhysicalDelivery {
 				definition = "Parameters of a physical delivery.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PostalAddress.mmPhysicalDelivery, com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery,
 						com.tools20022.repository.entity.SecuritiesCertificate.mmRelatedDelivery);
-				element_lazy = () -> Arrays.asList(PhysicalDelivery.mmRelatedTransfer, PhysicalDelivery.mmRegisteredAddressIndicator, PhysicalDelivery.mmIssuedCertificateNumber, PhysicalDelivery.mmAddress, PhysicalDelivery.mmType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PhysicalDelivery.mmRelatedTransfer, com.tools20022.repository.entity.PhysicalDelivery.mmRegisteredAddressIndicator,
+						com.tools20022.repository.entity.PhysicalDelivery.mmIssuedCertificateNumber, com.tools20022.repository.entity.PhysicalDelivery.mmAddress, com.tools20022.repository.entity.PhysicalDelivery.mmType);
 				derivationComponent_lazy = () -> Arrays.asList(DeliveryParameters2.mmObject(), DeliveryParameters4.mmObject(), DeliveryParameters3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PhysicalDelivery.class;
 			}
 		});
 		return mmObject_lazy.get();

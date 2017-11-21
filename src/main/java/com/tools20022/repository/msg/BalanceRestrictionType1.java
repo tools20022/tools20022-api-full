@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.AccountRestriction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Type providing further information on balance restrictions.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type providing further information on balance restrictions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BalanceRestrictionType1", propOrder = {"type", "description", "processingType"})
 public class BalanceRestrictionType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -225,6 +231,7 @@ public class BalanceRestrictionType1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public GenericIdentification1 getType() {
 		return type;
 	}
@@ -233,6 +240,7 @@ public class BalanceRestrictionType1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Desc")
 	public Max140Text getDescription() {
 		return description;
 	}
@@ -241,6 +249,7 @@ public class BalanceRestrictionType1 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "PrcgTp")
 	public ProcessingType1Choice getProcessingType() {
 		return processingType;
 	}

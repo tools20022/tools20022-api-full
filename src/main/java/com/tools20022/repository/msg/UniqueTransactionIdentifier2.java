@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the unique transaction identifier (UTI) that was created at the
@@ -73,6 +77,8 @@ import java.util.List;
  * UniqueTransactionIdentifier1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UniqueTransactionIdentifier2", propOrder = {"uniqueTransactionIdentifier", "priorUniqueTransactionIdentifier"})
 public class UniqueTransactionIdentifier2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -208,6 +214,7 @@ public class UniqueTransactionIdentifier2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnqTxIdr", required = true)
 	public Max52Text getUniqueTransactionIdentifier() {
 		return uniqueTransactionIdentifier;
 	}
@@ -216,6 +223,7 @@ public class UniqueTransactionIdentifier2 {
 		this.uniqueTransactionIdentifier = uniqueTransactionIdentifier;
 	}
 
+	@XmlElement(name = "PrrUnqTxIdr")
 	public List<Max52Text> getPriorUniqueTransactionIdentifier() {
 		return priorUniqueTransactionIdentifier;
 	}

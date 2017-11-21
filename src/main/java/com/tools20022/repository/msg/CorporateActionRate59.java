@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies rates related to a corporate action option.
@@ -77,6 +81,8 @@ import java.util.List;
  * definition} = "Specifies rates related to a corporate action option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionRate59", propOrder = {"proposedRate", "oversubscriptionRate", "requestedTaxationRate", "requestedWithholdingOfForeignTax", "requestedWithholdingOfLocalTax"})
 public class CorporateActionRate59 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -342,6 +348,7 @@ public class CorporateActionRate59 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PropsdRate")
 	public PercentageRate getProposedRate() {
 		return proposedRate;
 	}
@@ -350,6 +357,7 @@ public class CorporateActionRate59 {
 		this.proposedRate = proposedRate;
 	}
 
+	@XmlElement(name = "OvrsbcptRate")
 	public RateAndAmountFormat6Choice getOversubscriptionRate() {
 		return oversubscriptionRate;
 	}
@@ -358,6 +366,7 @@ public class CorporateActionRate59 {
 		this.oversubscriptionRate = oversubscriptionRate;
 	}
 
+	@XmlElement(name = "ReqdTaxtnRate")
 	public List<RateAndAmountFormat32Choice> getRequestedTaxationRate() {
 		return requestedTaxationRate;
 	}
@@ -366,6 +375,7 @@ public class CorporateActionRate59 {
 		this.requestedTaxationRate = requestedTaxationRate;
 	}
 
+	@XmlElement(name = "ReqdWhldgOfFrgnTax")
 	public List<RateAndAmountFormat32Choice> getRequestedWithholdingOfForeignTax() {
 		return requestedWithholdingOfForeignTax;
 	}
@@ -374,6 +384,7 @@ public class CorporateActionRate59 {
 		this.requestedWithholdingOfForeignTax = requestedWithholdingOfForeignTax;
 	}
 
+	@XmlElement(name = "ReqdWhldgOfLclTax")
 	public List<RateAndAmountFormat32Choice> getRequestedWithholdingOfLocalTax() {
 		return requestedWithholdingOfLocalTax;
 	}

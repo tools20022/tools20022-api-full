@@ -69,6 +69,11 @@ public class FundAccountantRole extends InvestmentFundPartyRole {
 				definition = "Party that keeps accounting records of available assets and liabilities of a fund. It calculates dealing prices, the net asset value (NAV) of the fund, and may provide fund performance and tax data. Can be sub-contracted by the fund administrator.";
 				superType_lazy = () -> InvestmentFundPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FundAccountantRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

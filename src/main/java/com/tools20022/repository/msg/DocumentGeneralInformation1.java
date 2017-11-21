@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General information that unambiguously identifies a document, such as
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DocumentGeneralInformation1", propOrder = {"documentType", "documentNumber", "senderReceiverSequenceIdentification", "issueDate", "URL"})
 public class DocumentGeneralInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -331,6 +337,7 @@ public class DocumentGeneralInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DocTp", required = true)
 	public DocumentType4Code getDocumentType() {
 		return documentType;
 	}
@@ -339,6 +346,7 @@ public class DocumentGeneralInformation1 {
 		this.documentType = documentType;
 	}
 
+	@XmlElement(name = "DocNb", required = true)
 	public Max35Text getDocumentNumber() {
 		return documentNumber;
 	}
@@ -347,6 +355,7 @@ public class DocumentGeneralInformation1 {
 		this.documentNumber = documentNumber;
 	}
 
+	@XmlElement(name = "SndrRcvrSeqId")
 	public Max140Text getSenderReceiverSequenceIdentification() {
 		return senderReceiverSequenceIdentification;
 	}
@@ -355,6 +364,7 @@ public class DocumentGeneralInformation1 {
 		this.senderReceiverSequenceIdentification = senderReceiverSequenceIdentification;
 	}
 
+	@XmlElement(name = "IsseDt", required = true)
 	public ISODate getIssueDate() {
 		return issueDate;
 	}
@@ -363,6 +373,7 @@ public class DocumentGeneralInformation1 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "URL")
 	public Max256Text getURL() {
 		return uRL;
 	}

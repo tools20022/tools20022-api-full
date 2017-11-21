@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the reason why the instruction is in repair.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason why the instruction is in repair."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RepairReason13", propOrder = {"code", "additionalReasonInformation"})
 public class RepairReason13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class RepairReason13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public RepairReason14Choice getCode() {
 		return code;
 	}
@@ -188,6 +195,7 @@ public class RepairReason13 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "AddtlRsnInf")
 	public RestrictedFINXMax210Text getAdditionalReasonInformation() {
 		return additionalReasonInformation;
 	}

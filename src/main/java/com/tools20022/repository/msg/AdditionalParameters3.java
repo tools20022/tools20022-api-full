@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies additional parameters to the message or transaction.
@@ -92,6 +96,9 @@ import java.util.function.Supplier;
  * "Specifies additional parameters to the message or transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalParameters3", propOrder = {"partialSettlement", "previousPartialConfirmationIdentification", "accountOwnerTransactionIdentification", "accountServicerTransactionIdentification", "poolIdentification",
+		"corporateActionEventIdentification", "marketInfrastructureTransactionIdentification"})
 public class AdditionalParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -466,6 +473,7 @@ public class AdditionalParameters3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrtlSttlm")
 	public PartialSettlement1Code getPartialSettlement() {
 		return partialSettlement;
 	}
@@ -474,6 +482,7 @@ public class AdditionalParameters3 {
 		this.partialSettlement = partialSettlement;
 	}
 
+	@XmlElement(name = "PrvsPrtlConfId")
 	public Max35Text getPreviousPartialConfirmationIdentification() {
 		return previousPartialConfirmationIdentification;
 	}
@@ -482,6 +491,7 @@ public class AdditionalParameters3 {
 		this.previousPartialConfirmationIdentification = previousPartialConfirmationIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnrTxId")
 	public Max35Text getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
@@ -490,6 +500,7 @@ public class AdditionalParameters3 {
 		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrTxId")
 	public Max35Text getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
@@ -498,6 +509,7 @@ public class AdditionalParameters3 {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
 	}
 
+	@XmlElement(name = "PoolId")
 	public Max35Text getPoolIdentification() {
 		return poolIdentification;
 	}
@@ -506,6 +518,7 @@ public class AdditionalParameters3 {
 		this.poolIdentification = poolIdentification;
 	}
 
+	@XmlElement(name = "CorpActnEvtId")
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -514,6 +527,7 @@ public class AdditionalParameters3 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "MktInfrstrctrTxId")
 	public Max35Text getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}

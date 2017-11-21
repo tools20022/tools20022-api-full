@@ -38,6 +38,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.FundPromoter FundPromoter}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole
+ * InvestmentFundPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -45,16 +55,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.PriceValuation3#mmFundManagementCompany
  * PriceValuation3.mmFundManagementCompany}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole
- * InvestmentFundPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.FundPromoter FundPromoter}</li>
  * </ul>
  * </li>
  * <li>
@@ -88,6 +88,11 @@ public class FundManagerRole extends InvestmentFundPartyRole {
 				derivationElement_lazy = () -> Arrays.asList(PriceValuation3.mmFundManagementCompany);
 				subType_lazy = () -> Arrays.asList(FundPromoter.mmObject());
 				superType_lazy = () -> InvestmentFundPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FundManagerRole.class;
 			}
 		});
 		return mmObject_lazy.get();

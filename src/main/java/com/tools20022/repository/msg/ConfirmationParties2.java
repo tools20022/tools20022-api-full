@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parties used for acting parties that apply either to the whole message or to
@@ -118,6 +122,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ConfirmationParties2", propOrder = {"buyer", "borrower", "seller", "lender", "brokerOfCredit", "introducingFirm", "stepInFirm", "stepOutFirm", "clearingFirm", "executingBroker", "CMUParty", "CMUCounterparty",
+		"affirmingParty", "tradeBeneficiaryParty"})
 public class ConfirmationParties2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -837,6 +844,7 @@ public class ConfirmationParties2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Buyr")
 	public ConfirmationPartyDetails2 getBuyer() {
 		return buyer;
 	}
@@ -845,6 +853,7 @@ public class ConfirmationParties2 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Brrwr")
 	public ConfirmationPartyDetails2 getBorrower() {
 		return borrower;
 	}
@@ -853,6 +862,7 @@ public class ConfirmationParties2 {
 		this.borrower = borrower;
 	}
 
+	@XmlElement(name = "Sellr")
 	public ConfirmationPartyDetails2 getSeller() {
 		return seller;
 	}
@@ -861,6 +871,7 @@ public class ConfirmationParties2 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "Lndr")
 	public ConfirmationPartyDetails2 getLender() {
 		return lender;
 	}
@@ -869,6 +880,7 @@ public class ConfirmationParties2 {
 		this.lender = lender;
 	}
 
+	@XmlElement(name = "BrkrOfCdt")
 	public ConfirmationPartyDetails1 getBrokerOfCredit() {
 		return brokerOfCredit;
 	}
@@ -877,6 +889,7 @@ public class ConfirmationParties2 {
 		this.brokerOfCredit = brokerOfCredit;
 	}
 
+	@XmlElement(name = "IntrdcgFirm")
 	public ConfirmationPartyDetails1 getIntroducingFirm() {
 		return introducingFirm;
 	}
@@ -885,6 +898,7 @@ public class ConfirmationParties2 {
 		this.introducingFirm = introducingFirm;
 	}
 
+	@XmlElement(name = "StepInFirm")
 	public ConfirmationPartyDetails1 getStepInFirm() {
 		return stepInFirm;
 	}
@@ -893,6 +907,7 @@ public class ConfirmationParties2 {
 		this.stepInFirm = stepInFirm;
 	}
 
+	@XmlElement(name = "StepOutFirm")
 	public ConfirmationPartyDetails1 getStepOutFirm() {
 		return stepOutFirm;
 	}
@@ -901,6 +916,7 @@ public class ConfirmationParties2 {
 		this.stepOutFirm = stepOutFirm;
 	}
 
+	@XmlElement(name = "ClrFirm")
 	public ConfirmationPartyDetails5 getClearingFirm() {
 		return clearingFirm;
 	}
@@ -909,6 +925,7 @@ public class ConfirmationParties2 {
 		this.clearingFirm = clearingFirm;
 	}
 
+	@XmlElement(name = "ExctgBrkr")
 	public ConfirmationPartyDetails5 getExecutingBroker() {
 		return executingBroker;
 	}
@@ -917,6 +934,7 @@ public class ConfirmationParties2 {
 		this.executingBroker = executingBroker;
 	}
 
+	@XmlElement(name = "CMUPty")
 	public ConfirmationPartyDetails1 getCMUParty() {
 		return cMUParty;
 	}
@@ -925,6 +943,7 @@ public class ConfirmationParties2 {
 		this.cMUParty = cMUParty;
 	}
 
+	@XmlElement(name = "CMUCtrPty")
 	public ConfirmationPartyDetails1 getCMUCounterparty() {
 		return cMUCounterparty;
 	}
@@ -933,6 +952,7 @@ public class ConfirmationParties2 {
 		this.cMUCounterparty = cMUCounterparty;
 	}
 
+	@XmlElement(name = "AffrmgPty")
 	public ConfirmationPartyDetails1 getAffirmingParty() {
 		return affirmingParty;
 	}
@@ -941,6 +961,7 @@ public class ConfirmationParties2 {
 		this.affirmingParty = affirmingParty;
 	}
 
+	@XmlElement(name = "TradBnfcryPty")
 	public ConfirmationPartyDetails3 getTradeBeneficiaryParty() {
 		return tradeBeneficiaryParty;
 	}

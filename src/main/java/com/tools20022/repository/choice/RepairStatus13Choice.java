@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.RepairReason9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies whether the status is provided with a reason or not.
@@ -71,6 +75,8 @@ import java.util.List;
  * RepairStatus8Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RepairStatus13Choice", propOrder = {"noSpecifiedReason", "reason"})
 public class RepairStatus13Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class RepairStatus13Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
@@ -204,6 +211,7 @@ public class RepairStatus13Choice {
 		this.noSpecifiedReason = noSpecifiedReason;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public List<RepairReason9> getReason() {
 		return reason;
 	}

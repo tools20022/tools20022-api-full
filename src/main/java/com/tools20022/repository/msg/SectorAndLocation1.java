@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Sector;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the identification of the reported party through the sector and the
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SectorAndLocation1", propOrder = {"sector", "location"})
 public class SectorAndLocation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -211,6 +217,7 @@ public class SectorAndLocation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sctr", required = true)
 	public SNA2008SectorIdentifier getSector() {
 		return sector;
 	}
@@ -219,6 +226,7 @@ public class SectorAndLocation1 {
 		this.sector = sector;
 	}
 
+	@XmlElement(name = "Lctn", required = true)
 	public CountryCode getLocation() {
 		return location;
 	}

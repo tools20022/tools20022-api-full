@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of status.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Status16Choice", propOrder = {"proprietary", "matchingStatus", "inferredMatchingStatus", "settlementStatus", "instructionProcessingStatus"})
 public class Status16Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -329,6 +335,7 @@ public class Status16Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason2 getProprietary() {
 		return proprietary;
 	}
@@ -337,6 +344,7 @@ public class Status16Choice {
 		this.proprietary = proprietary;
 	}
 
+	@XmlElement(name = "MtchgSts", required = true)
 	public MatchingStatus22Choice getMatchingStatus() {
 		return matchingStatus;
 	}
@@ -345,6 +353,7 @@ public class Status16Choice {
 		this.matchingStatus = matchingStatus;
 	}
 
+	@XmlElement(name = "IfrrdMtchgSts", required = true)
 	public MatchingStatus22Choice getInferredMatchingStatus() {
 		return inferredMatchingStatus;
 	}
@@ -353,6 +362,7 @@ public class Status16Choice {
 		this.inferredMatchingStatus = inferredMatchingStatus;
 	}
 
+	@XmlElement(name = "SttlmSts", required = true)
 	public SettlementStatus13Choice getSettlementStatus() {
 		return settlementStatus;
 	}
@@ -361,6 +371,7 @@ public class Status16Choice {
 		this.settlementStatus = settlementStatus;
 	}
 
+	@XmlElement(name = "InstrPrcgSts", required = true)
 	public InstructionProcessingStatus17Choice getInstructionProcessingStatus() {
 		return instructionProcessingStatus;
 	}

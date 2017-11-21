@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Attribute of the certificate service to be put in the certificate extensions,
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * RelativeDistinguishedName1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RelativeDistinguishedName2", propOrder = {"attributeType", "attributeValue"})
 public class RelativeDistinguishedName2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class RelativeDistinguishedName2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AttrTp", required = true)
 	public AttributeType2Code getAttributeType() {
 		return attributeType;
 	}
@@ -187,6 +194,7 @@ public class RelativeDistinguishedName2 {
 		this.attributeType = attributeType;
 	}
 
+	@XmlElement(name = "AttrVal", required = true)
 	public Max140Text getAttributeValue() {
 		return attributeValue;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a person or an organisation.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyIdentification43}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification77", propOrder = {"name", "postalAddress", "identification", "countryOfResidence", "contactDetails"})
 public class PartyIdentification77 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -373,6 +379,7 @@ public class PartyIdentification77 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max140Text getName() {
 		return name;
 	}
@@ -381,6 +388,7 @@ public class PartyIdentification77 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PstlAdr")
 	public PostalAddress19 getPostalAddress() {
 		return postalAddress;
 	}
@@ -389,6 +397,7 @@ public class PartyIdentification77 {
 		this.postalAddress = postalAddress;
 	}
 
+	@XmlElement(name = "Id")
 	public Party11Choice getIdentification() {
 		return identification;
 	}
@@ -397,6 +406,7 @@ public class PartyIdentification77 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "CtryOfRes")
 	public CountryCode getCountryOfResidence() {
 		return countryOfResidence;
 	}
@@ -405,6 +415,7 @@ public class PartyIdentification77 {
 		this.countryOfResidence = countryOfResidence;
 	}
 
+	@XmlElement(name = "CtctDtls")
 	public ContactDetails2 getContactDetails() {
 		return contactDetails;
 	}

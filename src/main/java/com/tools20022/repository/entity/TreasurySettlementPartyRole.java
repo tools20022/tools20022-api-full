@@ -36,19 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmTreasurySettlementPartyRole
- * TreasuryTrade.mmTreasurySettlementPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasurySettlementPartyRole#mmTreasuryTrade
+ * TreasurySettlementPartyRole.mmTreasuryTrade}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SettlementPartyRole
- * SettlementPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -57,12 +52,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * TreasurySettlementSystemRole}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SettlementPartyRole
+ * SettlementPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasurySettlementPartyRole#mmTreasuryTrade
- * TreasurySettlementPartyRole.mmTreasuryTrade}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmTreasurySettlementPartyRole
+ * TreasuryTrade.mmTreasurySettlementPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -123,7 +123,7 @@ public class TreasurySettlementPartyRole extends SettlementPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmTreasuryTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TreasurySettlementPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TreasurySettlementPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TreasuryTrade";
@@ -146,7 +146,12 @@ public class TreasurySettlementPartyRole extends SettlementPartyRole {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasuryTrade.mmTreasurySettlementPartyRole);
 				subType_lazy = () -> Arrays.asList(TreasurySettlementSystemRole.mmObject());
 				superType_lazy = () -> SettlementPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(TreasurySettlementPartyRole.mmTreasuryTrade);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasurySettlementPartyRole.mmTreasuryTrade);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TreasurySettlementPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

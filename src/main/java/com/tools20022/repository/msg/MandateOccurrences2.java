@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details related to the duration of the mandate and the
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MandateOccurrences2", propOrder = {"sequenceType", "frequency", "duration", "firstCollectionDate", "finalCollectionDate"})
 public class MandateOccurrences2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -392,6 +398,7 @@ public class MandateOccurrences2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SeqTp", required = true)
 	public SequenceType2Code getSequenceType() {
 		return sequenceType;
 	}
@@ -400,6 +407,7 @@ public class MandateOccurrences2 {
 		this.sequenceType = sequenceType;
 	}
 
+	@XmlElement(name = "Frqcy")
 	public Frequency6Code getFrequency() {
 		return frequency;
 	}
@@ -408,6 +416,7 @@ public class MandateOccurrences2 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "Drtn")
 	public DatePeriodDetails1 getDuration() {
 		return duration;
 	}
@@ -416,6 +425,7 @@ public class MandateOccurrences2 {
 		this.duration = duration;
 	}
 
+	@XmlElement(name = "FrstColltnDt")
 	public ISODate getFirstCollectionDate() {
 		return firstCollectionDate;
 	}
@@ -424,6 +434,7 @@ public class MandateOccurrences2 {
 		this.firstCollectionDate = firstCollectionDate;
 	}
 
+	@XmlElement(name = "FnlColltnDt")
 	public ISODate getFinalCollectionDate() {
 		return finalCollectionDate;
 	}

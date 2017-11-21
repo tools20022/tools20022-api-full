@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Equity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Financial instrument which represents a title of ownership in a company, ie,
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Equity2", propOrder = {"preferenceToIncome", "maturityDate", "nonPaidAmount", "parValue", "votingRightsPerShare"})
 public class Equity2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -332,6 +338,7 @@ public class Equity2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrefToIncm", required = true)
 	public PreferenceToIncome4Choice getPreferenceToIncome() {
 		return preferenceToIncome;
 	}
@@ -340,6 +347,7 @@ public class Equity2 {
 		this.preferenceToIncome = preferenceToIncome;
 	}
 
+	@XmlElement(name = "MtrtyDt")
 	public ISODateTime getMaturityDate() {
 		return maturityDate;
 	}
@@ -348,6 +356,7 @@ public class Equity2 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "NonPdAmt")
 	public ActiveCurrencyAndAmount getNonPaidAmount() {
 		return nonPaidAmount;
 	}
@@ -356,6 +365,7 @@ public class Equity2 {
 		this.nonPaidAmount = nonPaidAmount;
 	}
 
+	@XmlElement(name = "ParVal")
 	public ActiveCurrencyAndAmount getParValue() {
 		return parValue;
 	}
@@ -364,6 +374,7 @@ public class Equity2 {
 		this.parValue = parValue;
 	}
 
+	@XmlElement(name = "VtngRghtsPerShr")
 	public Number getVotingRightsPerShare() {
 		return votingRightsPerShare;
 	}

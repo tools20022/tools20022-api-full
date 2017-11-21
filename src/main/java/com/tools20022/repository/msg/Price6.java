@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SourceOfPrice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the value, type and source of price.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the value, type and source of price."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Price6", propOrder = {"rateOrAmount", "type", "source"})
 public class Price6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -224,6 +230,7 @@ public class Price6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RateOrAmt", required = true)
 	public PriceRateOrAmountChoice getRateOrAmount() {
 		return rateOrAmount;
 	}
@@ -232,6 +239,7 @@ public class Price6 {
 		this.rateOrAmount = rateOrAmount;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TypeOfPrice13Code getType() {
 		return type;
 	}
@@ -240,6 +248,7 @@ public class Price6 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Src", required = true)
 	public PriceSource2Code getSource() {
 		return source;
 	}

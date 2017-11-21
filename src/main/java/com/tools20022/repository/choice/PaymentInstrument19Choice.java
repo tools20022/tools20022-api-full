@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Cheque4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of payment instruments.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentInstrument16Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstrument19Choice", propOrder = {"chequeDetails", "bankersDraftDetails"})
 public class PaymentInstrument19Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -186,6 +192,7 @@ public class PaymentInstrument19Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ChqDtls", required = true)
 	public Cheque4 getChequeDetails() {
 		return chequeDetails;
 	}
@@ -194,6 +201,7 @@ public class PaymentInstrument19Choice {
 		this.chequeDetails = chequeDetails;
 	}
 
+	@XmlElement(name = "BkrsDrftDtls", required = true)
 	public Cheque4 getBankersDraftDetails() {
 		return bankersDraftDetails;
 	}

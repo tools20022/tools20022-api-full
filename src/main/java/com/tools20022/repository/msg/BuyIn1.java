@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.BuyIn;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies elements related to the notification (or warn) sent by the central
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BuyIn1", propOrder = {"warningIndicator", "expectedBuyInDate"})
 public class BuyIn1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -192,6 +198,7 @@ public class BuyIn1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "WrngInd")
 	public YesNoIndicator getWarningIndicator() {
 		return warningIndicator;
 	}
@@ -200,6 +207,7 @@ public class BuyIn1 {
 		this.warningIndicator = warningIndicator;
 	}
 
+	@XmlElement(name = "XpctdBuyInDt", required = true)
 	public DateFormat15Choice getExpectedBuyInDate() {
 		return expectedBuyInDate;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Service provided by the ATM inside the session.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMService16}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMService18", propOrder = {"identification", "label"})
 public class ATMService18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -168,6 +174,7 @@ public class ATMService18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -176,6 +183,7 @@ public class ATMService18 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Labl")
 	public Max35Text getLabel() {
 		return label;
 	}

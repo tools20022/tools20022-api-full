@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics shared by all individual transactions included in the
@@ -99,6 +103,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GroupHeader53", propOrder = {"messageIdentification", "creationDateTime", "instructingAgent", "instructedAgent"})
 public class GroupHeader53 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -324,6 +330,7 @@ public class GroupHeader53 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -332,6 +339,7 @@ public class GroupHeader53 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -340,6 +348,7 @@ public class GroupHeader53 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "InstgAgt")
 	public BranchAndFinancialInstitutionIdentification5 getInstructingAgent() {
 		return instructingAgent;
 	}
@@ -348,6 +357,7 @@ public class GroupHeader53 {
 		this.instructingAgent = instructingAgent;
 	}
 
+	@XmlElement(name = "InstdAgt")
 	public BranchAndFinancialInstitutionIdentification5 getInstructedAgent() {
 		return instructedAgent;
 	}

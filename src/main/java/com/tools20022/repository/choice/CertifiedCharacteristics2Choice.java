@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Quantity9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics of the goods that are certified, in the context of a
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CertifiedCharacteristics1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CertifiedCharacteristics2Choice", propOrder = {"origin", "quality", "analysis", "weight", "quantity", "healthIndication", "phytosanitaryIndication"})
 public class CertifiedCharacteristics2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -481,6 +487,7 @@ public class CertifiedCharacteristics2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Orgn", required = true)
 	public CountryCode getOrigin() {
 		return origin;
 	}
@@ -489,6 +496,7 @@ public class CertifiedCharacteristics2Choice {
 		this.origin = origin;
 	}
 
+	@XmlElement(name = "Qlty", required = true)
 	public Max70Text getQuality() {
 		return quality;
 	}
@@ -497,6 +505,7 @@ public class CertifiedCharacteristics2Choice {
 		this.quality = quality;
 	}
 
+	@XmlElement(name = "Anlys", required = true)
 	public Max70Text getAnalysis() {
 		return analysis;
 	}
@@ -505,6 +514,7 @@ public class CertifiedCharacteristics2Choice {
 		this.analysis = analysis;
 	}
 
+	@XmlElement(name = "Wght", required = true)
 	public Quantity9 getWeight() {
 		return weight;
 	}
@@ -513,6 +523,7 @@ public class CertifiedCharacteristics2Choice {
 		this.weight = weight;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public Quantity9 getQuantity() {
 		return quantity;
 	}
@@ -521,6 +532,7 @@ public class CertifiedCharacteristics2Choice {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "HlthIndctn", required = true)
 	public YesNoIndicator getHealthIndication() {
 		return healthIndication;
 	}
@@ -529,6 +541,7 @@ public class CertifiedCharacteristics2Choice {
 		this.healthIndication = healthIndication;
 	}
 
+	@XmlElement(name = "PhytosntryIndctn", required = true)
 	public YesNoIndicator getPhytosanitaryIndication() {
 		return phytosanitaryIndication;
 	}

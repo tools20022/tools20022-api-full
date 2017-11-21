@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies rates related to a corporate action option.
@@ -90,6 +94,9 @@ import java.util.List;
  * definition} = "Specifies rates related to a corporate action option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionRate30", propOrder = {"additionalTax", "grossDividendRate", "netDividendRate", "indexFactor", "interestRateUsedForPayment", "maximumAllowedOversubscriptionRate", "prorationRate", "withholdingTaxRate",
+		"withholdingOfForeignTax", "taxRelatedRate", "taxableIncomePerDividendShare"})
 public class CorporateActionRate30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -659,6 +666,7 @@ public class CorporateActionRate30 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlTax")
 	public RateAndAmountFormat16Choice getAdditionalTax() {
 		return additionalTax;
 	}
@@ -667,6 +675,7 @@ public class CorporateActionRate30 {
 		this.additionalTax = additionalTax;
 	}
 
+	@XmlElement(name = "GrssDvddRate")
 	public List<GrossDividendRateFormat6Choice> getGrossDividendRate() {
 		return grossDividendRate;
 	}
@@ -675,6 +684,7 @@ public class CorporateActionRate30 {
 		this.grossDividendRate = grossDividendRate;
 	}
 
+	@XmlElement(name = "NetDvddRate")
 	public List<NetDividendRateFormat6Choice> getNetDividendRate() {
 		return netDividendRate;
 	}
@@ -683,6 +693,7 @@ public class CorporateActionRate30 {
 		this.netDividendRate = netDividendRate;
 	}
 
+	@XmlElement(name = "IndxFctr")
 	public RateAndAmountFormat16Choice getIndexFactor() {
 		return indexFactor;
 	}
@@ -691,6 +702,7 @@ public class CorporateActionRate30 {
 		this.indexFactor = indexFactor;
 	}
 
+	@XmlElement(name = "IntrstRateUsdForPmt")
 	public List<InterestRateUsedForPaymentFormat6Choice> getInterestRateUsedForPayment() {
 		return interestRateUsedForPayment;
 	}
@@ -699,6 +711,7 @@ public class CorporateActionRate30 {
 		this.interestRateUsedForPayment = interestRateUsedForPayment;
 	}
 
+	@XmlElement(name = "MaxAllwdOvrsbcptRate")
 	public RateFormat6Choice getMaximumAllowedOversubscriptionRate() {
 		return maximumAllowedOversubscriptionRate;
 	}
@@ -707,6 +720,7 @@ public class CorporateActionRate30 {
 		this.maximumAllowedOversubscriptionRate = maximumAllowedOversubscriptionRate;
 	}
 
+	@XmlElement(name = "PrratnRate")
 	public RateFormat6Choice getProrationRate() {
 		return prorationRate;
 	}
@@ -715,6 +729,7 @@ public class CorporateActionRate30 {
 		this.prorationRate = prorationRate;
 	}
 
+	@XmlElement(name = "WhldgTaxRate")
 	public RateFormat6Choice getWithholdingTaxRate() {
 		return withholdingTaxRate;
 	}
@@ -723,6 +738,7 @@ public class CorporateActionRate30 {
 		this.withholdingTaxRate = withholdingTaxRate;
 	}
 
+	@XmlElement(name = "WhldgOfFrgnTax")
 	public RateAndAmountFormat16Choice getWithholdingOfForeignTax() {
 		return withholdingOfForeignTax;
 	}
@@ -731,6 +747,7 @@ public class CorporateActionRate30 {
 		this.withholdingOfForeignTax = withholdingOfForeignTax;
 	}
 
+	@XmlElement(name = "TaxRltdRate")
 	public List<RateTypeAndAmountAndStatus10> getTaxRelatedRate() {
 		return taxRelatedRate;
 	}
@@ -739,6 +756,7 @@ public class CorporateActionRate30 {
 		this.taxRelatedRate = taxRelatedRate;
 	}
 
+	@XmlElement(name = "TaxblIncmPerDvddShr")
 	public List<RateTypeAndAmountAndStatus12> getTaxableIncomePerDividendShare() {
 		return taxableIncomePerDividendShare;
 	}

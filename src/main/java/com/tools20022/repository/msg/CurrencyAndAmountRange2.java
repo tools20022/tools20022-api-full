@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.AmountRange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Range of amount values.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Range of amount values."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyAndAmountRange2", propOrder = {"amount", "creditDebitIndicator", "currency"})
 public class CurrencyAndAmountRange2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class CurrencyAndAmountRange2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAmountRangeChoice getAmount() {
 		return amount;
 	}
@@ -236,6 +243,7 @@ public class CurrencyAndAmountRange2 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -244,6 +252,7 @@ public class CurrencyAndAmountRange2 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Ccy", required = true)
 	public ActiveOrHistoricCurrencyCode getCurrency() {
 		return currency;
 	}

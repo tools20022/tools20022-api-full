@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SystemEventInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the financial institution sending the request.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details of the financial institution sending the request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestorDetails1", propOrder = {"dateTimeStamp", "requestor"})
 public class RequestorDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -164,6 +170,7 @@ public class RequestorDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtTmStmp", required = true)
 	public ISODateTime getDateTimeStamp() {
 		return dateTimeStamp;
 	}
@@ -172,6 +179,7 @@ public class RequestorDetails1 {
 		this.dateTimeStamp = dateTimeStamp;
 	}
 
+	@XmlElement(name = "Rqstr", required = true)
 	public AnyBICIdentifier getRequestor() {
 		return requestor;
 	}

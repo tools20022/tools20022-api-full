@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies totals related to the invoice.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies totals related to the invoice."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvoiceTotals2", propOrder = {"totalTaxableAmount", "totalTaxAmount", "adjustment", "totalInvoiceAmount", "paymentDueDate"})
 public class InvoiceTotals2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -326,6 +332,7 @@ public class InvoiceTotals2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlTaxblAmt")
 	public ActiveCurrencyAndAmount getTotalTaxableAmount() {
 		return totalTaxableAmount;
 	}
@@ -334,6 +341,7 @@ public class InvoiceTotals2 {
 		this.totalTaxableAmount = totalTaxableAmount;
 	}
 
+	@XmlElement(name = "TtlTaxAmt")
 	public ActiveCurrencyAndAmount getTotalTaxAmount() {
 		return totalTaxAmount;
 	}
@@ -342,6 +350,7 @@ public class InvoiceTotals2 {
 		this.totalTaxAmount = totalTaxAmount;
 	}
 
+	@XmlElement(name = "Adjstmnt")
 	public Adjustment5 getAdjustment() {
 		return adjustment;
 	}
@@ -350,6 +359,7 @@ public class InvoiceTotals2 {
 		this.adjustment = adjustment;
 	}
 
+	@XmlElement(name = "TtlInvcAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalInvoiceAmount() {
 		return totalInvoiceAmount;
 	}
@@ -358,6 +368,7 @@ public class InvoiceTotals2 {
 		this.totalInvoiceAmount = totalInvoiceAmount;
 	}
 
+	@XmlElement(name = "PmtDueDt", required = true)
 	public ISODate getPaymentDueDate() {
 		return paymentDueDate;
 	}

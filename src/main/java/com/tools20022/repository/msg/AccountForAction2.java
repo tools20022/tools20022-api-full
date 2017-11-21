@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account to or from which a cash entry is made.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountForAction1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountForAction2", propOrder = {"identification", "name", "currency"})
 public class AccountForAction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -252,6 +258,7 @@ public class AccountForAction2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentification4Choice getIdentification() {
 		return identification;
 	}
@@ -260,6 +267,7 @@ public class AccountForAction2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max70Text getName() {
 		return name;
 	}
@@ -268,6 +276,7 @@ public class AccountForAction2 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Ccy", required = true)
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}

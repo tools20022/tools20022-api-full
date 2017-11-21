@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to identify a financial institution.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Set of elements used to identify a financial institution."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstitutionIdentification8", propOrder = {"BICFI", "clearingSystemMemberIdentification", "name", "postalAddress", "other"})
 public class FinancialInstitutionIdentification8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -347,6 +353,7 @@ public class FinancialInstitutionIdentification8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BICFI")
 	public BICFIIdentifier getBICFI() {
 		return bICFI;
 	}
@@ -355,6 +362,7 @@ public class FinancialInstitutionIdentification8 {
 		this.bICFI = bICFI;
 	}
 
+	@XmlElement(name = "ClrSysMmbId")
 	public ClearingSystemMemberIdentification2 getClearingSystemMemberIdentification() {
 		return clearingSystemMemberIdentification;
 	}
@@ -363,6 +371,7 @@ public class FinancialInstitutionIdentification8 {
 		this.clearingSystemMemberIdentification = clearingSystemMemberIdentification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max140Text getName() {
 		return name;
 	}
@@ -371,6 +380,7 @@ public class FinancialInstitutionIdentification8 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PstlAdr")
 	public PostalAddress6 getPostalAddress() {
 		return postalAddress;
 	}
@@ -379,6 +389,7 @@ public class FinancialInstitutionIdentification8 {
 		this.postalAddress = postalAddress;
 	}
 
+	@XmlElement(name = "Othr")
 	public GenericFinancialIdentification1 getOther() {
 		return other;
 	}

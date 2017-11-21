@@ -67,6 +67,11 @@ public class SchemeOwner extends InformationPartyRole {
 				definition = "Description of the owner of a code scheme, for example, International Standards Organization.";
 				superType_lazy = () -> InformationPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SchemeOwner.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

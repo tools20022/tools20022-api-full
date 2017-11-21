@@ -25,8 +25,10 @@ import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.AdditionalReference2;
 import com.tools20022.repository.msg.TransferIn2;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -43,9 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.006.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -81,6 +80,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.006.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -100,6 +102,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "sese.006.001.01", propOrder = {"previousReference", "poolReference", "relatedReference", "transferInToBeCancelled"})
 public class TransferInCancellationInstruction {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -137,6 +141,14 @@ public class TransferInCancellationInstruction {
 			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInCancellationInstruction.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference2 poolReference;
 	/**
@@ -171,6 +183,14 @@ public class TransferInCancellationInstruction {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInCancellationInstruction.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference2 relatedReference;
@@ -208,6 +228,14 @@ public class TransferInCancellationInstruction {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInCancellationInstruction.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransferIn2 transferInToBeCancelled;
 	/**
@@ -242,6 +270,14 @@ public class TransferInCancellationInstruction {
 			minOccurs = 0;
 			complexType_lazy = () -> TransferIn2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInCancellationInstruction.class.getMethod("getTransferInToBeCancelled", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -256,8 +292,9 @@ public class TransferInCancellationInstruction {
 				xmlTag = "sese.006.001.01";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
 				xmlName = "sese.006.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInCancellationInstruction.mmPreviousReference, TransferInCancellationInstruction.mmPoolReference, TransferInCancellationInstruction.mmRelatedReference,
-						TransferInCancellationInstruction.mmTransferInToBeCancelled);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInCancellationInstruction.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferInCancellationInstruction.mmPoolReference, com.tools20022.repository.area.sese.TransferInCancellationInstruction.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferInCancellationInstruction.mmTransferInToBeCancelled);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -267,10 +304,16 @@ public class TransferInCancellationInstruction {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TransferInCancellationInstruction.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference2 getPreviousReference() {
 		return previousReference;
 	}
@@ -279,6 +322,7 @@ public class TransferInCancellationInstruction {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference2 getPoolReference() {
 		return poolReference;
 	}
@@ -287,6 +331,7 @@ public class TransferInCancellationInstruction {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference2 getRelatedReference() {
 		return relatedReference;
 	}
@@ -295,11 +340,18 @@ public class TransferInCancellationInstruction {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "TrfInToBeCanc")
 	public TransferIn2 getTransferInToBeCancelled() {
 		return transferInToBeCancelled;
 	}
 
 	public void setTransferInToBeCancelled(TransferIn2 transferInToBeCancelled) {
 		this.transferInToBeCancelled = transferInToBeCancelled;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.006.01.01")
+	static public class Document {
+		@XmlElement(name = "sese.006.001.01", required = true)
+		public TransferInCancellationInstruction messageBody;
 	}
 }

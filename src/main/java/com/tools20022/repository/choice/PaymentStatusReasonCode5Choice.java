@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusJustification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason for the status of the transaction.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentStatusReasonCode5Choice", propOrder = {"unmatched", "cancelled", "suspended", "pendingFailingSettlement", "pendingSettlement", "proprietaryRejection", "proprietary"})
 public class PaymentStatusReasonCode5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -494,6 +500,7 @@ public class PaymentStatusReasonCode5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Umtchd", required = true)
 	public UnmatchedStatusReason1Code getUnmatched() {
 		return unmatched;
 	}
@@ -502,6 +509,7 @@ public class PaymentStatusReasonCode5Choice {
 		this.unmatched = unmatched;
 	}
 
+	@XmlElement(name = "Canc", required = true)
 	public CancelledStatusReason1Code getCancelled() {
 		return cancelled;
 	}
@@ -510,6 +518,7 @@ public class PaymentStatusReasonCode5Choice {
 		this.cancelled = cancelled;
 	}
 
+	@XmlElement(name = "Sspd", required = true)
 	public SuspendedStatusReason1Code getSuspended() {
 		return suspended;
 	}
@@ -518,6 +527,7 @@ public class PaymentStatusReasonCode5Choice {
 		this.suspended = suspended;
 	}
 
+	@XmlElement(name = "PdgFlngSttlm", required = true)
 	public PendingFailingSettlement1Code getPendingFailingSettlement() {
 		return pendingFailingSettlement;
 	}
@@ -526,6 +536,7 @@ public class PaymentStatusReasonCode5Choice {
 		this.pendingFailingSettlement = pendingFailingSettlement;
 	}
 
+	@XmlElement(name = "PdgSttlm", required = true)
 	public PendingSettlement2Code getPendingSettlement() {
 		return pendingSettlement;
 	}
@@ -534,6 +545,7 @@ public class PaymentStatusReasonCode5Choice {
 		this.pendingSettlement = pendingSettlement;
 	}
 
+	@XmlElement(name = "PrtryRjctn", required = true)
 	public ProprietaryStatusJustification getProprietaryRejection() {
 		return proprietaryRejection;
 	}
@@ -542,6 +554,7 @@ public class PaymentStatusReasonCode5Choice {
 		this.proprietaryRejection = proprietaryRejection;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public Max4AlphaNumericText getProprietary() {
 		return proprietary;
 	}

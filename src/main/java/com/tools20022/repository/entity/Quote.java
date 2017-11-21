@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,6 +38,54 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmMaximumQuantity
+ * Quote.mmMaximumQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmQuantity
+ * Quote.mmQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmMinimumQuantity
+ * Quote.mmMinimumQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmPartyRole
+ * Quote.mmPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmRelatedNegotiation
+ * Quote.mmRelatedNegotiation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmQuotedRate
+ * Quote.mmQuotedRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Quote#mmPreviousClosingPrice
+ * Quote.mmPreviousClosingPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmRequestedPrice
+ * Quote.mmRequestedPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmPrice Quote.mmPrice}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmMarketPrice
+ * Quote.mmMarketPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Quote#mmMidSideQuoteVariable
+ * Quote.mmMidSideQuoteVariable}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Quote#mmBidSideQuoteVariable
+ * Quote.mmBidSideQuoteVariable}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Quote#mmOfferSideQuoteVariable
+ * Quote.mmOfferSideQuoteVariable}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Quote#mmSecurityQuoteVariable
+ * Quote.mmSecurityQuoteVariable}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmQuoteSwap
+ * Quote.mmQuoteSwap}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmValidUntilDateTime
+ * Quote.mmValidUntilDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmCurrency
+ * Quote.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmStatus
+ * Quote.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmQuotedSecurity
+ * Quote.mmQuotedSecurity}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -103,54 +152,6 @@ import java.util.List;
  * SecuritiesQuoteVariable.mmRelatedQuote}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmMaximumQuantity
- * Quote.mmMaximumQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmQuantity
- * Quote.mmQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmMinimumQuantity
- * Quote.mmMinimumQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmPartyRole
- * Quote.mmPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmRelatedNegotiation
- * Quote.mmRelatedNegotiation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmQuotedRate
- * Quote.mmQuotedRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Quote#mmPreviousClosingPrice
- * Quote.mmPreviousClosingPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmRequestedPrice
- * Quote.mmRequestedPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmPrice Quote.mmPrice}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmMarketPrice
- * Quote.mmMarketPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Quote#mmMidSideQuoteVariable
- * Quote.mmMidSideQuoteVariable}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Quote#mmBidSideQuoteVariable
- * Quote.mmBidSideQuoteVariable}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Quote#mmOfferSideQuoteVariable
- * Quote.mmOfferSideQuoteVariable}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Quote#mmSecurityQuoteVariable
- * Quote.mmSecurityQuoteVariable}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmQuoteSwap
- * Quote.mmQuoteSwap}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmValidUntilDateTime
- * Quote.mmValidUntilDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmCurrency
- * Quote.mmCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmStatus
- * Quote.mmStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmQuotedSecurity
- * Quote.mmQuotedSecurity}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -189,10 +190,6 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
-	 * Quote}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -201,6 +198,10 @@ public class Quote {
 	 * QuoteSide1.mmMaximumQuantity}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
+	 * Quote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -216,7 +217,7 @@ public class Quote {
 	public static final MMBusinessAssociationEnd mmMaximumQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuoteSide1.mmMaximumQuantity);
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumQuantity";
@@ -246,10 +247,6 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
-	 * Quote}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -267,6 +264,10 @@ public class Quote {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
+	 * Quote}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -280,7 +281,7 @@ public class Quote {
 	public static final MMBusinessAssociationEnd mmQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuoteSide1.mmQuantity, MassQuote1.mmDefaultBidSize, MassQuote1.mmDefaultOfferSize, IndicationOfInterest1.mmIOIQuantity);
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
@@ -310,10 +311,6 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
-	 * Quote}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -322,6 +319,10 @@ public class Quote {
 	 * QuoteSide1.mmMinimumQuantity}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
+	 * Quote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -337,7 +338,7 @@ public class Quote {
 	public static final MMBusinessAssociationEnd mmMinimumQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuoteSide1.mmMinimumQuantity);
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumQuantity";
@@ -386,7 +387,7 @@ public class Quote {
 	 */
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
@@ -432,7 +433,7 @@ public class Quote {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedNegotiation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedNegotiation";
@@ -479,7 +480,7 @@ public class Quote {
 	 */
 	public static final MMBusinessAssociationEnd mmQuotedRate = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuotedRate";
@@ -509,10 +510,6 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
-	 * Quote}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -521,6 +518,10 @@ public class Quote {
 	 * Quote3.mmPreviousClosingPrice}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
+	 * Quote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -537,7 +538,7 @@ public class Quote {
 	public static final MMBusinessAssociationEnd mmPreviousClosingPrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Quote3.mmPreviousClosingPrice);
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreviousClosingPrice";
@@ -569,10 +570,6 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
-	 * Quote}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -580,6 +577,10 @@ public class Quote {
 	 * Quote3.mmRequestedPrice}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
+	 * Quote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -596,7 +597,7 @@ public class Quote {
 	public static final MMBusinessAssociationEnd mmRequestedPrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Quote3.mmRequestedPrice);
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedPrice";
@@ -626,10 +627,6 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
-	 * Quote}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -641,6 +638,10 @@ public class Quote {
 	 * BidResponsePrice2.mmPrice}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
+	 * Quote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -656,7 +657,7 @@ public class Quote {
 	public static final MMBusinessAssociationEnd mmPrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuoteSide1.mmPrice, BidResponsePrice1.mmPrice, BidResponsePrice2.mmPrice);
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Price";
@@ -686,10 +687,6 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
-	 * Quote}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -697,6 +694,10 @@ public class Quote {
 	 * QuoteSide1.mmMarketPrice}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
+	 * Quote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -712,7 +713,7 @@ public class Quote {
 	public static final MMBusinessAssociationEnd mmMarketPrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuoteSide1.mmMarketPrice);
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketPrice";
@@ -760,7 +761,7 @@ public class Quote {
 	 */
 	public static final MMBusinessAssociationEnd mmMidSideQuoteVariable = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MidSideQuoteVariable";
@@ -808,7 +809,7 @@ public class Quote {
 	 */
 	public static final MMBusinessAssociationEnd mmBidSideQuoteVariable = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BidSideQuoteVariable";
@@ -856,7 +857,7 @@ public class Quote {
 	 */
 	public static final MMBusinessAssociationEnd mmOfferSideQuoteVariable = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfferSideQuoteVariable";
@@ -887,10 +888,6 @@ public class Quote {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
 	 * SecuritiesQuoteVariable}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
-	 * Quote}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -899,6 +896,10 @@ public class Quote {
 	 * MassQuote1.mmQuoteSetDetails}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
+	 * Quote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -913,7 +914,7 @@ public class Quote {
 	public static final MMBusinessAssociationEnd mmSecurityQuoteVariable = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(MassQuote1.mmQuoteSetDetails);
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecurityQuoteVariable";
@@ -964,7 +965,7 @@ public class Quote {
 	 */
 	public static final MMBusinessAssociationEnd mmQuoteSwap = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuoteSwap";
@@ -986,10 +987,6 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
-	 * Quote}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1023,6 +1020,10 @@ public class Quote {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
+	 * Quote}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1037,7 +1038,7 @@ public class Quote {
 		{
 			derivation_lazy = () -> Arrays.asList(QuoteEntry2.mmValidUntilDateTime, QuoteSet2.mmValidUntilDateTime, QuoteEntry1.mmValidUntilDateTime, QuoteSet1.mmValidUntilDateTime, SingleQuote1.mmValidUntilDateTime,
 					IndicationOfInterest1.mmValidUntilDateTime, Quote3.mmValidUntilDateTime, QuoteRequest1.mmExpiryDateTime, Quote1.mmValidUntilDateTime);
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidUntilDateTime";
@@ -1045,6 +1046,14 @@ public class Quote {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Quote.class.getMethod("getValidUntilDateTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyCode currency;
@@ -1059,10 +1068,6 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
-	 * Quote}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1074,6 +1079,10 @@ public class Quote {
 	 * Quote1.mmCurrency}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
+	 * Quote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1090,7 +1099,7 @@ public class Quote {
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuoteEntry2.mmCurrency, Quote3.mmCurrency, Quote1.mmCurrency);
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
@@ -1098,6 +1107,14 @@ public class Quote {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Quote.class.getMethod("getCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected QuoteStatus status;
@@ -1135,7 +1152,7 @@ public class Quote {
 	 */
 	public static final MMBusinessAssociationEnd mmStatus = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
@@ -1164,10 +1181,6 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
-	 * Quote}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1198,6 +1211,10 @@ public class Quote {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
+	 * Quote}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1212,7 +1229,7 @@ public class Quote {
 		{
 			derivation_lazy = () -> Arrays.asList(QuoteEntry2.mmFinancialInstrumentAttributes, QuoteSet2.mmUnderlyingFinancialInstrumentAttributes, QuoteSet2.mmUnderlyingStipulations, QuoteEntry1.mmFinancialInstrumentAttributes,
 					QuoteEntry1.mmLegFinancialInstrumentAttributes, QuoteEntry1.mmLegStipulations, QuoteSet1.mmUnderlyingFinancialInstrumentAttributes, QuoteSet1.mmUnderlyingStipulations);
-			elementContext_lazy = () -> Quote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuotedSecurity";
@@ -1240,10 +1257,19 @@ public class Quote {
 						com.tools20022.repository.entity.Negotiation.mmQuote, com.tools20022.repository.entity.QuoteStatus.mmRelatedQuote, com.tools20022.repository.entity.FinancialInstrumentSwap.mmRelatedQuote,
 						com.tools20022.repository.entity.SecuritiesQuoteVariable.mmMidSide, com.tools20022.repository.entity.SecuritiesQuoteVariable.mmBidSide, com.tools20022.repository.entity.SecuritiesQuoteVariable.mmOfferSide,
 						com.tools20022.repository.entity.SecuritiesQuoteVariable.mmRelatedQuote);
-				element_lazy = () -> Arrays.asList(Quote.mmMaximumQuantity, Quote.mmQuantity, Quote.mmMinimumQuantity, Quote.mmPartyRole, Quote.mmRelatedNegotiation, Quote.mmQuotedRate, Quote.mmPreviousClosingPrice, Quote.mmRequestedPrice,
-						Quote.mmPrice, Quote.mmMarketPrice, Quote.mmMidSideQuoteVariable, Quote.mmBidSideQuoteVariable, Quote.mmOfferSideQuoteVariable, Quote.mmSecurityQuoteVariable, Quote.mmQuoteSwap, Quote.mmValidUntilDateTime,
-						Quote.mmCurrency, Quote.mmStatus, Quote.mmQuotedSecurity);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Quote.mmMaximumQuantity, com.tools20022.repository.entity.Quote.mmQuantity, com.tools20022.repository.entity.Quote.mmMinimumQuantity,
+						com.tools20022.repository.entity.Quote.mmPartyRole, com.tools20022.repository.entity.Quote.mmRelatedNegotiation, com.tools20022.repository.entity.Quote.mmQuotedRate,
+						com.tools20022.repository.entity.Quote.mmPreviousClosingPrice, com.tools20022.repository.entity.Quote.mmRequestedPrice, com.tools20022.repository.entity.Quote.mmPrice,
+						com.tools20022.repository.entity.Quote.mmMarketPrice, com.tools20022.repository.entity.Quote.mmMidSideQuoteVariable, com.tools20022.repository.entity.Quote.mmBidSideQuoteVariable,
+						com.tools20022.repository.entity.Quote.mmOfferSideQuoteVariable, com.tools20022.repository.entity.Quote.mmSecurityQuoteVariable, com.tools20022.repository.entity.Quote.mmQuoteSwap,
+						com.tools20022.repository.entity.Quote.mmValidUntilDateTime, com.tools20022.repository.entity.Quote.mmCurrency, com.tools20022.repository.entity.Quote.mmStatus,
+						com.tools20022.repository.entity.Quote.mmQuotedSecurity);
 				derivationComponent_lazy = () -> Arrays.asList(QuoteSide1.mmObject(), MassQuote1.mmObject(), BidResponsePrice1.mmObject(), BidResponsePrice2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Quote.class;
 			}
 		});
 		return mmObject_lazy.get();

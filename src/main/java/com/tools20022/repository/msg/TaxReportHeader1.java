@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines message level identification, number of individual tax reports and
@@ -78,6 +82,8 @@ import java.util.List;
  * TaxReport1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxReportHeader1", propOrder = {"messageIdentification", "numberOfTaxReports", "taxAuthority"})
 public class TaxReportHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -226,6 +232,7 @@ public class TaxReportHeader1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -234,6 +241,7 @@ public class TaxReportHeader1 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "NbOfTaxRpts")
 	public Number getNumberOfTaxReports() {
 		return numberOfTaxReports;
 	}
@@ -242,6 +250,7 @@ public class TaxReportHeader1 {
 		this.numberOfTaxReports = numberOfTaxReports;
 	}
 
+	@XmlElement(name = "TaxAuthrty")
 	public List<TaxOrganisationIdentification1> getTaxAuthority() {
 		return taxAuthority;
 	}

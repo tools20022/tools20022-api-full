@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information identifying a case.
@@ -109,6 +113,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information identifying a case."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Case", propOrder = {"identification", "creator", "reopenCaseIndication"})
 public class Case {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -262,6 +268,7 @@ public class Case {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -270,6 +277,7 @@ public class Case {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Cretr", required = true)
 	public AnyBICIdentifier getCreator() {
 		return creator;
 	}
@@ -278,6 +286,7 @@ public class Case {
 		this.creator = creator;
 	}
 
+	@XmlElement(name = "ReopCaseIndctn")
 	public YesNoIndicator getReopenCaseIndication() {
 		return reopenCaseIndication;
 	}

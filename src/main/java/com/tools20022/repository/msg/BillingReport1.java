@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Report on specific billing data.
@@ -78,6 +82,8 @@ import java.util.List;
  * definition} = "Report on specific billing data."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingReport1", propOrder = {"regulatoryData", "invoiceDate", "billingIdentification", "billingPeriod", "CSDOrNCB", "invoiceTotals", "serviceCategoryTotals"})
 public class BillingReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -422,6 +428,7 @@ public class BillingReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RgltryData", required = true)
 	public InvoiceLegalIssue1 getRegulatoryData() {
 		return regulatoryData;
 	}
@@ -430,6 +437,7 @@ public class BillingReport1 {
 		this.regulatoryData = regulatoryData;
 	}
 
+	@XmlElement(name = "InvcDt", required = true)
 	public ISODate getInvoiceDate() {
 		return invoiceDate;
 	}
@@ -438,6 +446,7 @@ public class BillingReport1 {
 		this.invoiceDate = invoiceDate;
 	}
 
+	@XmlElement(name = "BllgId", required = true)
 	public Max35Text getBillingIdentification() {
 		return billingIdentification;
 	}
@@ -446,6 +455,7 @@ public class BillingReport1 {
 		this.billingIdentification = billingIdentification;
 	}
 
+	@XmlElement(name = "BllgPrd", required = true)
 	public DatePeriodDetails getBillingPeriod() {
 		return billingPeriod;
 	}
@@ -454,6 +464,7 @@ public class BillingReport1 {
 		this.billingPeriod = billingPeriod;
 	}
 
+	@XmlElement(name = "CSDOrNCB")
 	public CSDOrNCB1Choice getCSDOrNCB() {
 		return cSDOrNCB;
 	}
@@ -462,6 +473,7 @@ public class BillingReport1 {
 		this.cSDOrNCB = cSDOrNCB;
 	}
 
+	@XmlElement(name = "InvcTtls", required = true)
 	public InvoiceTotals2 getInvoiceTotals() {
 		return invoiceTotals;
 	}
@@ -470,6 +482,7 @@ public class BillingReport1 {
 		this.invoiceTotals = invoiceTotals;
 	}
 
+	@XmlElement(name = "SvcCtgyTtls", required = true)
 	public List<ServiceCategoryTotals1> getServiceCategoryTotals() {
 		return serviceCategoryTotals;
 	}

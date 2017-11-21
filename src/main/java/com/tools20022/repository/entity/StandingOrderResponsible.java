@@ -67,6 +67,11 @@ public class StandingOrderResponsible extends AccountResponsiblePartyRole {
 				definition = "Party responsible for creating, maintaining and deleting a standing order.\r\n";
 				superType_lazy = () -> AccountResponsiblePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StandingOrderResponsible.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

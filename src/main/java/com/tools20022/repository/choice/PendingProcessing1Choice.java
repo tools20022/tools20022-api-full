@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.AwaitingAffirmationReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the Pending Processing status.
@@ -66,6 +70,8 @@ import java.util.List;
  * definition} = "Choice of format for the Pending Processing status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PendingProcessing1Choice", propOrder = {"noSpecifiedReason", "reason"})
 public class PendingProcessing1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class PendingProcessing1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
@@ -187,6 +194,7 @@ public class PendingProcessing1Choice {
 		this.noSpecifiedReason = noSpecifiedReason;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public List<AwaitingAffirmationReason1> getReason() {
 		return reason;
 	}

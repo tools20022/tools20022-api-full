@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.PlusOrMinusIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DiscretionInstructions1;
 import com.tools20022.repository.msg.OrderParameters1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -41,23 +42,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DiscretionInstructions1
- * DiscretionInstructions1}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction#mmOrderPriceStrategy
- * SecuritiesOrderExecutionInstruction.mmOrderPriceStrategy}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -81,6 +65,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * Discretion.mmScope}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Discretion#mmOffsetType
  * Discretion.mmOffsetType}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.DiscretionInstructions1
+ * DiscretionInstructions1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction#mmOrderPriceStrategy
+ * SecuritiesOrderExecutionInstruction.mmOrderPriceStrategy}</li>
  * </ul>
  * </li>
  * <li>
@@ -139,7 +140,7 @@ public class Discretion {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedOrderExecution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Discretion.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Discretion.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOrderExecution";
@@ -162,10 +163,6 @@ public class Discretion {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -174,6 +171,10 @@ public class Discretion {
 	 * DiscretionInstructions1.mmOffset}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -188,7 +189,7 @@ public class Discretion {
 	public static final MMBusinessAttribute mmOffset = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DiscretionInstructions1.mmOffset);
-			elementContext_lazy = () -> Discretion.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Discretion.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Offset";
@@ -196,6 +197,14 @@ public class Discretion {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Discretion.class.getMethod("getOffset", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PlusOrMinusIndicator offsetSign;
@@ -210,10 +219,6 @@ public class Discretion {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PlusOrMinusIndicator
 	 * PlusOrMinusIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -222,6 +227,10 @@ public class Discretion {
 	 * DiscretionInstructions1.mmOffsetSign}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -238,7 +247,7 @@ public class Discretion {
 	public static final MMBusinessAttribute mmOffsetSign = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DiscretionInstructions1.mmOffsetSign);
-			elementContext_lazy = () -> Discretion.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Discretion.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OffsetSign";
@@ -246,6 +255,14 @@ public class Discretion {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Discretion.class.getMethod("getOffsetSign", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TypeOfDiscretionPriceCode relatedPriceType;
@@ -260,10 +277,6 @@ public class Discretion {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPriceCode
 	 * TypeOfDiscretionPriceCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -272,6 +285,10 @@ public class Discretion {
 	 * DiscretionInstructions1.mmRelatedPriceType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -288,7 +305,7 @@ public class Discretion {
 	public static final MMBusinessAttribute mmRelatedPriceType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DiscretionInstructions1.mmRelatedPriceType);
-			elementContext_lazy = () -> Discretion.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Discretion.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPriceType";
@@ -296,6 +313,14 @@ public class Discretion {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfDiscretionPriceCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Discretion.class.getMethod("getRelatedPriceType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MoveTypeCode moveType;
@@ -308,10 +333,6 @@ public class Discretion {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.MoveTypeCode
 	 * MoveTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -320,6 +341,10 @@ public class Discretion {
 	 * DiscretionInstructions1.mmMoveType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -335,7 +360,7 @@ public class Discretion {
 	public static final MMBusinessAttribute mmMoveType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DiscretionInstructions1.mmMoveType);
-			elementContext_lazy = () -> Discretion.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Discretion.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MoveType";
@@ -343,6 +368,14 @@ public class Discretion {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MoveTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Discretion.class.getMethod("getMoveType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text limitType;
@@ -356,10 +389,6 @@ public class Discretion {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -368,6 +397,10 @@ public class Discretion {
 	 * DiscretionInstructions1.mmLimitType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -384,7 +417,7 @@ public class Discretion {
 	public static final MMBusinessAttribute mmLimitType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DiscretionInstructions1.mmLimitType);
-			elementContext_lazy = () -> Discretion.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Discretion.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LimitType";
@@ -392,6 +425,14 @@ public class Discretion {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Discretion.class.getMethod("getLimitType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text roundDirection;
@@ -405,10 +446,6 @@ public class Discretion {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -417,6 +454,10 @@ public class Discretion {
 	 * DiscretionInstructions1.mmRoundDirection}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -433,7 +474,7 @@ public class Discretion {
 	public static final MMBusinessAttribute mmRoundDirection = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DiscretionInstructions1.mmRoundDirection);
-			elementContext_lazy = () -> Discretion.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Discretion.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundDirection";
@@ -441,6 +482,14 @@ public class Discretion {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Discretion.class.getMethod("getRoundDirection", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PriceProtectionScopeCode scope;
@@ -455,10 +504,6 @@ public class Discretion {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PriceProtectionScopeCode
 	 * PriceProtectionScopeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -470,6 +515,10 @@ public class Discretion {
 	 * OrderParameters1.mmPriceProtectionScope}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -486,7 +535,7 @@ public class Discretion {
 	public static final MMBusinessAttribute mmScope = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DiscretionInstructions1.mmScope, OrderParameters1.mmPriceProtectionScope);
-			elementContext_lazy = () -> Discretion.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Discretion.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Scope";
@@ -494,6 +543,14 @@ public class Discretion {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceProtectionScopeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Discretion.class.getMethod("getScope", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OffsetTypeCode offsetType;
@@ -507,10 +564,6 @@ public class Discretion {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OffsetTypeCode
 	 * OffsetTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -519,6 +572,10 @@ public class Discretion {
 	 * DiscretionInstructions1.mmOffsetType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Discretion Discretion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -533,7 +590,7 @@ public class Discretion {
 	public static final MMBusinessAttribute mmOffsetType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DiscretionInstructions1.mmOffsetType);
-			elementContext_lazy = () -> Discretion.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Discretion.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OffsetType";
@@ -541,6 +598,14 @@ public class Discretion {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OffsetTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Discretion.class.getMethod("getOffsetType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -552,9 +617,15 @@ public class Discretion {
 				name = "Discretion";
 				definition = "Indicates on an order that the trader wishes to display one price in the market but will accept trades at another price.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction.mmOrderPriceStrategy);
-				element_lazy = () -> Arrays.asList(Discretion.mmRelatedOrderExecution, Discretion.mmOffset, Discretion.mmOffsetSign, Discretion.mmRelatedPriceType, Discretion.mmMoveType, Discretion.mmLimitType, Discretion.mmRoundDirection,
-						Discretion.mmScope, Discretion.mmOffsetType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Discretion.mmRelatedOrderExecution, com.tools20022.repository.entity.Discretion.mmOffset, com.tools20022.repository.entity.Discretion.mmOffsetSign,
+						com.tools20022.repository.entity.Discretion.mmRelatedPriceType, com.tools20022.repository.entity.Discretion.mmMoveType, com.tools20022.repository.entity.Discretion.mmLimitType,
+						com.tools20022.repository.entity.Discretion.mmRoundDirection, com.tools20022.repository.entity.Discretion.mmScope, com.tools20022.repository.entity.Discretion.mmOffsetType);
 				derivationComponent_lazy = () -> Arrays.asList(DiscretionInstructions1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Discretion.class;
 			}
 		});
 		return mmObject_lazy.get();

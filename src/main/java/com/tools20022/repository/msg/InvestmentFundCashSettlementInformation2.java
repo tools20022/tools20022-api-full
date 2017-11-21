@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Settlement instructions to be used to transfer cash from the Debtor to the
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentFundCashSettlementInformation2", propOrder = {"modificationScopeIndication", "subscriptionPaymentInstrument", "redemptionPaymentInstrument", "dividendPaymentInstrument", "savingsPlanPaymentInstrument"})
 public class InvestmentFundCashSettlementInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -332,6 +338,7 @@ public class InvestmentFundCashSettlementInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ModScpIndctn", required = true)
 	public DataModification2Code getModificationScopeIndication() {
 		return modificationScopeIndication;
 	}
@@ -340,6 +347,7 @@ public class InvestmentFundCashSettlementInformation2 {
 		this.modificationScopeIndication = modificationScopeIndication;
 	}
 
+	@XmlElement(name = "SbcptPmtInstrm")
 	public PaymentInstrument7 getSubscriptionPaymentInstrument() {
 		return subscriptionPaymentInstrument;
 	}
@@ -348,6 +356,7 @@ public class InvestmentFundCashSettlementInformation2 {
 		this.subscriptionPaymentInstrument = subscriptionPaymentInstrument;
 	}
 
+	@XmlElement(name = "RedPmtInstrm")
 	public PaymentInstrument6 getRedemptionPaymentInstrument() {
 		return redemptionPaymentInstrument;
 	}
@@ -356,6 +365,7 @@ public class InvestmentFundCashSettlementInformation2 {
 		this.redemptionPaymentInstrument = redemptionPaymentInstrument;
 	}
 
+	@XmlElement(name = "DvddPmtInstrm")
 	public PaymentInstrument6 getDividendPaymentInstrument() {
 		return dividendPaymentInstrument;
 	}
@@ -364,6 +374,7 @@ public class InvestmentFundCashSettlementInformation2 {
 		this.dividendPaymentInstrument = dividendPaymentInstrument;
 	}
 
+	@XmlElement(name = "SvgsPlanPmtInstrm")
 	public PaymentInstrument7 getSavingsPlanPaymentInstrument() {
 		return savingsPlanPaymentInstrument;
 	}

@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.SignatureEnvelopeReference;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General information that unambiguously identifies a document, such as
@@ -91,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * DocumentGeneralInformation2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DocumentGeneralInformation3", propOrder = {"documentType", "documentNumber", "senderReceiverSequenceIdentification", "issueDate", "URL", "linkFileHash", "attachedBinaryFile"})
 public class DocumentGeneralInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -474,6 +480,7 @@ public class DocumentGeneralInformation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DocTp", required = true)
 	public ExternalDocumentType1Code getDocumentType() {
 		return documentType;
 	}
@@ -482,6 +489,7 @@ public class DocumentGeneralInformation3 {
 		this.documentType = documentType;
 	}
 
+	@XmlElement(name = "DocNb", required = true)
 	public Max35Text getDocumentNumber() {
 		return documentNumber;
 	}
@@ -490,6 +498,7 @@ public class DocumentGeneralInformation3 {
 		this.documentNumber = documentNumber;
 	}
 
+	@XmlElement(name = "SndrRcvrSeqId")
 	public Max140Text getSenderReceiverSequenceIdentification() {
 		return senderReceiverSequenceIdentification;
 	}
@@ -498,6 +507,7 @@ public class DocumentGeneralInformation3 {
 		this.senderReceiverSequenceIdentification = senderReceiverSequenceIdentification;
 	}
 
+	@XmlElement(name = "IsseDt")
 	public ISODate getIssueDate() {
 		return issueDate;
 	}
@@ -506,6 +516,7 @@ public class DocumentGeneralInformation3 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "URL")
 	public Max256Text getURL() {
 		return uRL;
 	}
@@ -514,6 +525,7 @@ public class DocumentGeneralInformation3 {
 		this.uRL = uRL;
 	}
 
+	@XmlElement(name = "LkFileHash")
 	public SignatureEnvelopeReference getLinkFileHash() {
 		return linkFileHash;
 	}
@@ -522,6 +534,7 @@ public class DocumentGeneralInformation3 {
 		this.linkFileHash = linkFileHash;
 	}
 
+	@XmlElement(name = "AttchdBinryFile", required = true)
 	public BinaryFile1 getAttachedBinaryFile() {
 		return attachedBinaryFile;
 	}

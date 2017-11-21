@@ -29,19 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code
- * CryptographicKeyType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CryptographicKeyType2Code
- * CryptographicKeyType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code
- * CryptographicKeyType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code
- * CryptographicKeyType4Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -95,6 +82,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmMAC
  * CryptographicKeyTypeCode.mmMAC}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code
+ * CryptographicKeyType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CryptographicKeyType2Code
+ * CryptographicKeyType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code
+ * CryptographicKeyType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code
+ * CryptographicKeyType4Code}</li>
  * </ul>
  * </li>
  * <li>

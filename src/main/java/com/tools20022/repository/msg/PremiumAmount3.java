@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.PremiumCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Commercial agreement in which the buyer agrees to pay the seller an amount of
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PremiumAmount2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PremiumAmount3", propOrder = {"premiumQuote", "premiumCurrency", "amount", "decimalPlaces", "premiumSettlementDate", "payerPartyReference", "receiverPartyReference"})
 public class PremiumAmount3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -415,6 +421,7 @@ public class PremiumAmount3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrmQt", required = true)
 	public PremiumQuote1Choice getPremiumQuote() {
 		return premiumQuote;
 	}
@@ -423,6 +430,7 @@ public class PremiumAmount3 {
 		this.premiumQuote = premiumQuote;
 	}
 
+	@XmlElement(name = "PrmCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getPremiumCurrency() {
 		return premiumCurrency;
 	}
@@ -431,6 +439,7 @@ public class PremiumAmount3 {
 		this.premiumCurrency = premiumCurrency;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -439,6 +448,7 @@ public class PremiumAmount3 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "DcmlPlcs", required = true)
 	public Number getDecimalPlaces() {
 		return decimalPlaces;
 	}
@@ -447,6 +457,7 @@ public class PremiumAmount3 {
 		this.decimalPlaces = decimalPlaces;
 	}
 
+	@XmlElement(name = "PrmSttlmDt", required = true)
 	public ISODate getPremiumSettlementDate() {
 		return premiumSettlementDate;
 	}
@@ -455,6 +466,7 @@ public class PremiumAmount3 {
 		this.premiumSettlementDate = premiumSettlementDate;
 	}
 
+	@XmlElement(name = "PyerPtyRef", required = true)
 	public Max35Text getPayerPartyReference() {
 		return payerPartyReference;
 	}
@@ -463,6 +475,7 @@ public class PremiumAmount3 {
 		this.payerPartyReference = payerPartyReference;
 	}
 
+	@XmlElement(name = "RcvrPtyRef", required = true)
 	public Max35Text getReceiverPartyReference() {
 		return receiverPartyReference;
 	}

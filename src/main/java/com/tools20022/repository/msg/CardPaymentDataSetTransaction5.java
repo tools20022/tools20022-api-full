@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Card payment transaction including an authorisation response.
@@ -84,6 +88,8 @@ import java.util.List;
  * CardPaymentDataSetTransaction4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentDataSetTransaction5", propOrder = {"transactionSequenceCounter", "traceability", "environment", "transaction", "transactionResponse"})
 public class CardPaymentDataSetTransaction5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -377,6 +383,7 @@ public class CardPaymentDataSetTransaction5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxSeqCntr", required = true)
 	public Max9NumericText getTransactionSequenceCounter() {
 		return transactionSequenceCounter;
 	}
@@ -385,6 +392,7 @@ public class CardPaymentDataSetTransaction5 {
 		this.transactionSequenceCounter = transactionSequenceCounter;
 	}
 
+	@XmlElement(name = "Tracblt")
 	public List<Traceability1> getTraceability() {
 		return traceability;
 	}
@@ -393,6 +401,7 @@ public class CardPaymentDataSetTransaction5 {
 		this.traceability = traceability;
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment16 getEnvironment() {
 		return environment;
 	}
@@ -401,6 +410,7 @@ public class CardPaymentDataSetTransaction5 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransaction12 getTransaction() {
 		return transaction;
 	}
@@ -409,6 +419,7 @@ public class CardPaymentDataSetTransaction5 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "TxRspn", required = true)
 	public CardPaymentTransaction18 getTransactionResponse() {
 		return transactionResponse;
 	}

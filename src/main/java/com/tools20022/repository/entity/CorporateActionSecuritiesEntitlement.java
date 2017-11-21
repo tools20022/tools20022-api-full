@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.RenounceableStatusCode;
 import com.tools20022.repository.entity.CorporateActionEntitlement;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,6 +41,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement#mmEntitledSecuritiesQuantity
+ * CorporateActionSecuritiesEntitlement.mmEntitledSecuritiesQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement#mmRenounceableEntitlementStatusType
+ * CorporateActionSecuritiesEntitlement.mmRenounceableEntitlementStatusType}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
+ * CorporateActionEntitlement}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -76,21 +92,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.Entitlement1#mmSecuritiesDistributionDetails
  * Entitlement1.mmSecuritiesDistributionDetails}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
- * CorporateActionEntitlement}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement#mmEntitledSecuritiesQuantity
- * CorporateActionSecuritiesEntitlement.mmEntitledSecuritiesQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement#mmRenounceableEntitlementStatusType
- * CorporateActionSecuritiesEntitlement.mmRenounceableEntitlementStatusType}</li>
  * </ul>
  * </li>
  * <li>
@@ -133,11 +134,6 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement
-	 * CorporateActionSecuritiesEntitlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -213,6 +209,11 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement
+	 * CorporateActionSecuritiesEntitlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -232,7 +233,7 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 					SecuritiesOption39.mmEntitledQuantity, SecuritiesOption6.mmEntitledQuantity, SecuritiesOption12.mmEntitledQuantity, SecuritiesOption14.mmEntitledQuantity, SecuritiesOption22.mmEntitledQuantity,
 					SecuritiesOption25.mmEntitledQuantity, SecuritiesOption30.mmEntitledQuantity, SecuritiesEntitlement1.mmEntitledSecuritiesQuantity, SecuritiesOption40.mmEntitledQuantity, SecuritiesOption45.mmEntitledQuantity,
 					SecuritiesOption49.mmEntitledQuantity, SecuritiesOption57.mmEntitledQuantity, SecuritiesOption59.mmEntitledQuantity, SecuritiesOption61.mmEntitledQuantity);
-			elementContext_lazy = () -> CorporateActionSecuritiesEntitlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntitledSecuritiesQuantity";
@@ -255,11 +256,6 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.RenounceableStatusCode
 	 * RenounceableStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement
-	 * CorporateActionSecuritiesEntitlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -353,6 +349,11 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement
+	 * CorporateActionSecuritiesEntitlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -376,7 +377,7 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 					FinancialInstrumentAttributes68.mmRenounceableEntitlementStatusType, RenounceableEntitlementStatusTypeFormat3Choice.mmCode, RenounceableEntitlementStatusTypeFormat3Choice.mmProprietary,
 					FinancialInstrumentAttributes73.mmRenounceableEntitlementStatusType, CorporateAction40.mmRenounceableEntitlementStatusType, RenounceableEntitlementStatusTypeFormat4Choice.mmCode,
 					RenounceableEntitlementStatusTypeFormat4Choice.mmProprietary);
-			elementContext_lazy = () -> CorporateActionSecuritiesEntitlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RenounceableEntitlementStatusType";
@@ -384,6 +385,14 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RenounceableStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionSecuritiesEntitlement.class.getMethod("getRenounceableEntitlementStatusType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -397,9 +406,15 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesEntitlement);
 				derivationElement_lazy = () -> Arrays.asList(Entitlement1.mmSecuritiesDistributionDetails);
 				superType_lazy = () -> CorporateActionEntitlement.mmObject();
-				element_lazy = () -> Arrays.asList(CorporateActionSecuritiesEntitlement.mmEntitledSecuritiesQuantity, CorporateActionSecuritiesEntitlement.mmRenounceableEntitlementStatusType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmEntitledSecuritiesQuantity,
+						com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmRenounceableEntitlementStatusType);
 				derivationComponent_lazy = () -> Arrays.asList(RenounceableEntitlementStatusTypeFormat1Choice.mmObject(), RenounceableEntitlementStatusTypeFormat2Choice.mmObject(), SecuritiesEntitlement1.mmObject(),
 						RenounceableEntitlementStatusTypeFormat3Choice.mmObject(), RenounceableEntitlementStatusTypeFormat4Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionSecuritiesEntitlement.class;
 			}
 		});
 		return mmObject_lazy.get();

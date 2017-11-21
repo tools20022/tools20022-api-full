@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies regulatory stipulations that financial institutions must be
@@ -84,6 +88,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegulatoryStipulations1", propOrder = {"country", "stipulations"})
 public class RegulatoryStipulations1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -189,6 +195,7 @@ public class RegulatoryStipulations1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -197,6 +204,7 @@ public class RegulatoryStipulations1 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "Stiptns", required = true)
 	public List<Max350Text> getStipulations() {
 		return stipulations;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecurityAttributes2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between action to request on a security.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between action to request on a security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UpdateType7Choice", propOrder = {"add", "delete", "modify"})
 public class UpdateType7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -197,6 +203,7 @@ public class UpdateType7Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Add", required = true)
 	public SecurityAttributes2 getAdd() {
 		return add;
 	}
@@ -205,6 +212,7 @@ public class UpdateType7Choice {
 		this.add = add;
 	}
 
+	@XmlElement(name = "Del", required = true)
 	public SecurityAttributes2 getDelete() {
 		return delete;
 	}
@@ -213,6 +221,7 @@ public class UpdateType7Choice {
 		this.delete = delete;
 	}
 
+	@XmlElement(name = "Modfy", required = true)
 	public SecurityAttributes2 getModify() {
 		return modify;
 	}

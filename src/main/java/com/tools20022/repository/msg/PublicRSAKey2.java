@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.Algorithm7Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Value of the public component of a RSA key.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PublicRSAKey1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PublicRSAKey2", propOrder = {"algorithm", "publicKeyValue"})
 public class PublicRSAKey2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class PublicRSAKey2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Algo")
 	public Algorithm7Code getAlgorithm() {
 		return algorithm;
 	}
@@ -166,6 +173,7 @@ public class PublicRSAKey2 {
 		this.algorithm = algorithm;
 	}
 
+	@XmlElement(name = "PblcKeyVal", required = true)
 	public PublicRSAKey1 getPublicKeyValue() {
 		return publicKeyValue;
 	}

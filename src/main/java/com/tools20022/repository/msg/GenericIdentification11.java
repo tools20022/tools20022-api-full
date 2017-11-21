@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to an identification, eg, party identification or account
@@ -94,6 +98,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericIdentification11", propOrder = {"identification", "identificationType", "extendedIdentificationType", "issuer"})
 public class GenericIdentification11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -384,6 +390,7 @@ public class GenericIdentification11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -392,6 +399,7 @@ public class GenericIdentification11 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "IdTp", required = true)
 	public PersonIdentificationType2Code getIdentificationType() {
 		return identificationType;
 	}
@@ -400,6 +408,7 @@ public class GenericIdentification11 {
 		this.identificationType = identificationType;
 	}
 
+	@XmlElement(name = "XtndedIdTp", required = true)
 	public Extended350Code getExtendedIdentificationType() {
 		return extendedIdentificationType;
 	}
@@ -408,6 +417,7 @@ public class GenericIdentification11 {
 		this.extendedIdentificationType = extendedIdentificationType;
 	}
 
+	@XmlElement(name = "Issr")
 	public Max35Text getIssuer() {
 		return issuer;
 	}

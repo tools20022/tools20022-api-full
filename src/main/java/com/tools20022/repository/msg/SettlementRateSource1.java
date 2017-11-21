@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.RateSourceText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the components of a settlement rate source for a non delvierable
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementRateSource1", propOrder = {"rateSource", "time", "countryCode", "locationCode"})
 public class SettlementRateSource1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -253,6 +259,7 @@ public class SettlementRateSource1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RateSrc", required = true)
 	public RateSourceText getRateSource() {
 		return rateSource;
 	}
@@ -261,6 +268,7 @@ public class SettlementRateSource1 {
 		this.rateSource = rateSource;
 	}
 
+	@XmlElement(name = "Tm")
 	public Exact4NumericText getTime() {
 		return time;
 	}
@@ -269,6 +277,7 @@ public class SettlementRateSource1 {
 		this.time = time;
 	}
 
+	@XmlElement(name = "CtryCd")
 	public CountryCode getCountryCode() {
 		return countryCode;
 	}
@@ -277,6 +286,7 @@ public class SettlementRateSource1 {
 		this.countryCode = countryCode;
 	}
 
+	@XmlElement(name = "LctnCd")
 	public Exact2AlphaNumericText getLocationCode() {
 		return locationCode;
 	}

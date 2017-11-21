@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding notification general information
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNotificationSD4", propOrder = {"placeAndName", "eventStatus", "approvedDate", "matchDate", "activeUntilDate", "serviceLevelAgreementPeriod", "validationNotSupportedReason"})
 public class CorporateActionNotificationSD4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -399,6 +405,7 @@ public class CorporateActionNotificationSD4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -407,6 +414,7 @@ public class CorporateActionNotificationSD4 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "EvtSts")
 	public EventWorkflowStatus1Code getEventStatus() {
 		return eventStatus;
 	}
@@ -415,6 +423,7 @@ public class CorporateActionNotificationSD4 {
 		this.eventStatus = eventStatus;
 	}
 
+	@XmlElement(name = "ApprvdDt")
 	public ISODate getApprovedDate() {
 		return approvedDate;
 	}
@@ -423,6 +432,7 @@ public class CorporateActionNotificationSD4 {
 		this.approvedDate = approvedDate;
 	}
 
+	@XmlElement(name = "MtchDt")
 	public ISODate getMatchDate() {
 		return matchDate;
 	}
@@ -431,6 +441,7 @@ public class CorporateActionNotificationSD4 {
 		this.matchDate = matchDate;
 	}
 
+	@XmlElement(name = "ActvUntilDt")
 	public ISODateTime getActiveUntilDate() {
 		return activeUntilDate;
 	}
@@ -439,6 +450,7 @@ public class CorporateActionNotificationSD4 {
 		this.activeUntilDate = activeUntilDate;
 	}
 
+	@XmlElement(name = "SvcLvlAgrmtPrd")
 	public Period3 getServiceLevelAgreementPeriod() {
 		return serviceLevelAgreementPeriod;
 	}
@@ -447,6 +459,7 @@ public class CorporateActionNotificationSD4 {
 		this.serviceLevelAgreementPeriod = serviceLevelAgreementPeriod;
 	}
 
+	@XmlElement(name = "VldtnNotSpprtdRsn")
 	public Max4AlphaNumericText getValidationNotSupportedReason() {
 		return validationNotSupportedReason;
 	}

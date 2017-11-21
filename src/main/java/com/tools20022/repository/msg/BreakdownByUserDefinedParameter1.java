@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the cash-in and cash-out flows by a user defined parameter/s.
@@ -86,6 +90,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BreakdownByUserDefinedParameter1", propOrder = {"party", "country", "currency", "userDefined", "cashInForecast", "cashOutForecast", "netCashForecast"})
 public class BreakdownByUserDefinedParameter1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -464,6 +470,7 @@ public class BreakdownByUserDefinedParameter1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pty")
 	public PartyIdentification2Choice getParty() {
 		return party;
 	}
@@ -472,6 +479,7 @@ public class BreakdownByUserDefinedParameter1 {
 		this.party = party;
 	}
 
+	@XmlElement(name = "Ctry")
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -480,6 +488,7 @@ public class BreakdownByUserDefinedParameter1 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveOrHistoricCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -488,6 +497,7 @@ public class BreakdownByUserDefinedParameter1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "UsrDfnd")
 	public DataFormat2Choice getUserDefined() {
 		return userDefined;
 	}
@@ -496,6 +506,7 @@ public class BreakdownByUserDefinedParameter1 {
 		this.userDefined = userDefined;
 	}
 
+	@XmlElement(name = "CshInFcst")
 	public List<CashInForecast3> getCashInForecast() {
 		return cashInForecast;
 	}
@@ -504,6 +515,7 @@ public class BreakdownByUserDefinedParameter1 {
 		this.cashInForecast = cashInForecast;
 	}
 
+	@XmlElement(name = "CshOutFcst")
 	public List<CashOutForecast3> getCashOutForecast() {
 		return cashOutForecast;
 	}
@@ -512,6 +524,7 @@ public class BreakdownByUserDefinedParameter1 {
 		this.cashOutForecast = cashOutForecast;
 	}
 
+	@XmlElement(name = "NetCshFcst")
 	public List<NetCashForecast2> getNetCashForecast() {
 		return netCashForecast;
 	}

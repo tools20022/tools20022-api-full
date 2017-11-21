@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Contents of an Undertaking Amendment message.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Contents of an Undertaking Amendment message."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingAmendmentMessage1", propOrder = {"undertakingAmendmentDetails", "digitalSignature"})
 public class UndertakingAmendmentMessage1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class UndertakingAmendmentMessage1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UdrtkgAmdmntDtls", required = true)
 	public Amendment1 getUndertakingAmendmentDetails() {
 		return undertakingAmendmentDetails;
 	}
@@ -180,6 +187,7 @@ public class UndertakingAmendmentMessage1 {
 		this.undertakingAmendmentDetails = undertakingAmendmentDetails;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public PartyAndSignature2 getDigitalSignature() {
 		return digitalSignature;
 	}

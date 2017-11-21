@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters required to request a Fund Processing Passport (FPP).
@@ -75,6 +79,8 @@ import java.util.List;
  * "Parameters required to request a Fund Processing Passport (FPP)."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundParameters4", propOrder = {"financialInstrumentDetails", "fundManagementCompany", "dateFrom", "countryOfDomicile", "registeredDistributionCountry"})
 public class FundParameters4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -326,6 +332,7 @@ public class FundParameters4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmDtls")
 	public List<FinancialInstrument17> getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -334,6 +341,7 @@ public class FundParameters4 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "FndMgmtCpny")
 	public List<PartyIdentification2Choice> getFundManagementCompany() {
 		return fundManagementCompany;
 	}
@@ -342,6 +350,7 @@ public class FundParameters4 {
 		this.fundManagementCompany = fundManagementCompany;
 	}
 
+	@XmlElement(name = "DtFr")
 	public ISODate getDateFrom() {
 		return dateFrom;
 	}
@@ -350,6 +359,7 @@ public class FundParameters4 {
 		this.dateFrom = dateFrom;
 	}
 
+	@XmlElement(name = "CtryOfDmcl")
 	public CountryCode getCountryOfDomicile() {
 		return countryOfDomicile;
 	}
@@ -358,6 +368,7 @@ public class FundParameters4 {
 		this.countryOfDomicile = countryOfDomicile;
 	}
 
+	@XmlElement(name = "RegdDstrbtnCtry")
 	public CountryCode getRegisteredDistributionCountry() {
 		return registeredDistributionCountry;
 	}

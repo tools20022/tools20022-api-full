@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification86;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a short document number, a long document number or a
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DocumentNumber6Choice", propOrder = {"shortNumber", "longNumber", "proprietaryNumber"})
 public class DocumentNumber6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -208,6 +214,7 @@ public class DocumentNumber6Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ShrtNb", required = true)
 	public Exact3NumericText getShortNumber() {
 		return shortNumber;
 	}
@@ -216,6 +223,7 @@ public class DocumentNumber6Choice {
 		this.shortNumber = shortNumber;
 	}
 
+	@XmlElement(name = "LngNb", required = true)
 	public ISO20022MessageIdentificationText getLongNumber() {
 		return longNumber;
 	}
@@ -224,6 +232,7 @@ public class DocumentNumber6Choice {
 		this.longNumber = longNumber;
 	}
 
+	@XmlElement(name = "PrtryNb", required = true)
 	public GenericIdentification86 getProprietaryNumber() {
 		return proprietaryNumber;
 	}

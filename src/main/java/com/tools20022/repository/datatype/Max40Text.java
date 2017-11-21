@@ -54,6 +54,8 @@ public class Max40Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max40Text";
 				definition = "Specifies a character string with a maximum length of 40 characters.";
+				minLength = 1;
+				maxLength = 40;
 			}
 		});
 		return mmObject_lazy.get();

@@ -27,17 +27,16 @@ import com.tools20022.repository.msg.Header14;
 import com.tools20022.repository.msg.ManagementPlan4;
 import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20142015;
 import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * Terminal maintenance actions to be performed by a point of interaction (POI).
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catm.002.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
@@ -73,6 +72,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catm.002.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -96,6 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ManagementPlanReplacementV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ManagementPlanReplacementV04", propOrder = {"header", "managementPlan", "securityTrailer"})
 public class ManagementPlanReplacementV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -147,6 +151,14 @@ public class ManagementPlanReplacementV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header14.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ManagementPlanReplacementV04.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ManagementPlan4 managementPlan;
@@ -200,6 +212,14 @@ public class ManagementPlanReplacementV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> ManagementPlan4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ManagementPlanReplacementV04.class.getMethod("getManagementPlan", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType12 securityTrailer;
 	/**
@@ -251,6 +271,14 @@ public class ManagementPlanReplacementV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType12.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ManagementPlanReplacementV04.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -265,7 +293,8 @@ public class ManagementPlanReplacementV04 {
 				rootElement = "Document";
 				xmlTag = "MgmtPlanRplcmnt";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ManagementPlanReplacementV04.mmHeader, ManagementPlanReplacementV04.mmManagementPlan, ManagementPlanReplacementV04.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.ManagementPlanReplacementV04.mmHeader, com.tools20022.repository.area.catm.ManagementPlanReplacementV04.mmManagementPlan,
+						com.tools20022.repository.area.catm.ManagementPlanReplacementV04.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catm";
@@ -275,10 +304,16 @@ public class ManagementPlanReplacementV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ManagementPlanReplacementV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header14 getHeader() {
 		return header;
 	}
@@ -287,6 +322,7 @@ public class ManagementPlanReplacementV04 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "MgmtPlan", required = true)
 	public ManagementPlan4 getManagementPlan() {
 		return managementPlan;
 	}
@@ -295,11 +331,18 @@ public class ManagementPlanReplacementV04 {
 		this.managementPlan = managementPlan;
 	}
 
+	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType12 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType12 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catm.002.04.04")
+	static public class Document {
+		@XmlElement(name = "MgmtPlanRplcmnt", required = true)
+		public ManagementPlanReplacementV04 messageBody;
 	}
 }

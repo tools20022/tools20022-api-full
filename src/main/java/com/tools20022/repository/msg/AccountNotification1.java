@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements providing further details on the account notification.
@@ -104,6 +108,9 @@ import java.util.List;
  * "Set of elements providing further details on the account notification."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountNotification1", propOrder = {"identification", "electronicSequenceNumber", "legalSequenceNumber", "creationDateTime", "fromToDate", "copyDuplicateIndicator", "account", "relatedAccount", "transactionsSummary",
+		"entry", "additionalNotificationInformation"})
 public class AccountNotification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -630,6 +637,7 @@ public class AccountNotification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -638,6 +646,7 @@ public class AccountNotification1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "ElctrncSeqNb")
 	public Number getElectronicSequenceNumber() {
 		return electronicSequenceNumber;
 	}
@@ -646,6 +655,7 @@ public class AccountNotification1 {
 		this.electronicSequenceNumber = electronicSequenceNumber;
 	}
 
+	@XmlElement(name = "LglSeqNb")
 	public Number getLegalSequenceNumber() {
 		return legalSequenceNumber;
 	}
@@ -654,6 +664,7 @@ public class AccountNotification1 {
 		this.legalSequenceNumber = legalSequenceNumber;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -662,6 +673,7 @@ public class AccountNotification1 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "FrToDt")
 	public DateTimePeriodDetails getFromToDate() {
 		return fromToDate;
 	}
@@ -670,6 +682,7 @@ public class AccountNotification1 {
 		this.fromToDate = fromToDate;
 	}
 
+	@XmlElement(name = "CpyDplctInd")
 	public CopyDuplicate1Code getCopyDuplicateIndicator() {
 		return copyDuplicateIndicator;
 	}
@@ -678,6 +691,7 @@ public class AccountNotification1 {
 		this.copyDuplicateIndicator = copyDuplicateIndicator;
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CashAccount13 getAccount() {
 		return account;
 	}
@@ -686,6 +700,7 @@ public class AccountNotification1 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "RltdAcct")
 	public CashAccount7 getRelatedAccount() {
 		return relatedAccount;
 	}
@@ -694,6 +709,7 @@ public class AccountNotification1 {
 		this.relatedAccount = relatedAccount;
 	}
 
+	@XmlElement(name = "TxsSummry")
 	public TotalTransactions1 getTransactionsSummary() {
 		return transactionsSummary;
 	}
@@ -702,6 +718,7 @@ public class AccountNotification1 {
 		this.transactionsSummary = transactionsSummary;
 	}
 
+	@XmlElement(name = "Ntry")
 	public List<NotificationEntry1> getEntry() {
 		return entry;
 	}
@@ -710,6 +727,7 @@ public class AccountNotification1 {
 		this.entry = entry;
 	}
 
+	@XmlElement(name = "AddtlNtfctnInf")
 	public Max500Text getAdditionalNotificationInformation() {
 		return additionalNotificationInformation;
 	}

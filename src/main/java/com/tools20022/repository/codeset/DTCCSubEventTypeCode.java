@@ -30,21 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCSubEventType2Code
- * DTCCSubEventType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code
- * DTCCSubEventType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCSubEventType3Code
- * DTCCSubEventType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCSubEventType4Code
- * DTCCSubEventType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCSubEventType5Code
- * DTCCSubEventType5Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -183,6 +168,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DTCCSubEventTypeCode#mmDividendEquivalentPayment871M
  * DTCCSubEventTypeCode.mmDividendEquivalentPayment871M}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCSubEventType2Code
+ * DTCCSubEventType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code
+ * DTCCSubEventType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCSubEventType3Code
+ * DTCCSubEventType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCSubEventType4Code
+ * DTCCSubEventType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCSubEventType5Code
+ * DTCCSubEventType5Code}</li>
  * </ul>
  * </li>
  * <li>

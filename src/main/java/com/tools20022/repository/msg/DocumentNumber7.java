@@ -29,6 +29,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of the status being requested.
@@ -63,6 +67,8 @@ import java.util.List;
  * definition} = "Identification of the status being requested."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DocumentNumber7", propOrder = {"number", "references"})
 public class DocumentNumber7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -171,6 +177,7 @@ public class DocumentNumber7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nb", required = true)
 	public DocumentNumber2Choice getNumber() {
 		return number;
 	}
@@ -179,6 +186,7 @@ public class DocumentNumber7 {
 		this.number = number;
 	}
 
+	@XmlElement(name = "Refs", required = true)
 	public List<Identification8> getReferences() {
 		return references;
 	}

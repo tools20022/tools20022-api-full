@@ -25,6 +25,10 @@ import com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Cho
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instruction for a change to an account status and reason for the change.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Instruction for a change to an account status and reason for the change."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountStatusUpdateInstruction1", propOrder = {"updateInstruction", "updateInstructionReason"})
 public class AccountStatusUpdateInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class AccountStatusUpdateInstruction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UpdInstr", required = true)
 	public AccountStatusUpdateInstruction1Choice getUpdateInstruction() {
 		return updateInstruction;
 	}
@@ -168,6 +175,7 @@ public class AccountStatusUpdateInstruction1 {
 		this.updateInstruction = updateInstruction;
 	}
 
+	@XmlElement(name = "UpdInstrRsn")
 	public AccountStatusUpdateInstructionReason1Choice getUpdateInstructionReason() {
 		return updateInstructionReason;
 	}

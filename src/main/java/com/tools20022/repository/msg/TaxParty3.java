@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details about the entity involved in the tax paid or to be paid.
@@ -70,6 +74,8 @@ import java.util.List;
  * "Details about the entity involved in the tax paid or to be paid."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxParty3", propOrder = {"taxIdentification", "taxType", "registrationIdentification", "taxExemptionReason"})
 public class TaxParty3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -273,6 +279,7 @@ public class TaxParty3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TaxId")
 	public Max35Text getTaxIdentification() {
 		return taxIdentification;
 	}
@@ -281,6 +288,7 @@ public class TaxParty3 {
 		this.taxIdentification = taxIdentification;
 	}
 
+	@XmlElement(name = "TaxTp")
 	public Max35Text getTaxType() {
 		return taxType;
 	}
@@ -289,6 +297,7 @@ public class TaxParty3 {
 		this.taxType = taxType;
 	}
 
+	@XmlElement(name = "RegnId")
 	public Max35Text getRegistrationIdentification() {
 		return registrationIdentification;
 	}
@@ -297,6 +306,7 @@ public class TaxParty3 {
 		this.registrationIdentification = registrationIdentification;
 	}
 
+	@XmlElement(name = "TaxXmptnRsn")
 	public List<TaxExemptionReasonFormatChoice> getTaxExemptionReason() {
 		return taxExemptionReason;
 	}

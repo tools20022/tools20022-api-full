@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the quantity of a product in a trade transaction.
@@ -84,6 +88,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Quantity4", propOrder = {"unitOfMeasureCode", "otherUnitOfMeasure", "value", "factor"})
 public class Quantity4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -365,6 +371,7 @@ public class Quantity4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitOfMeasrCd", required = true)
 	public UnitOfMeasure4Code getUnitOfMeasureCode() {
 		return unitOfMeasureCode;
 	}
@@ -373,6 +380,7 @@ public class Quantity4 {
 		this.unitOfMeasureCode = unitOfMeasureCode;
 	}
 
+	@XmlElement(name = "OthrUnitOfMeasr", required = true)
 	public Max35Text getOtherUnitOfMeasure() {
 		return otherUnitOfMeasure;
 	}
@@ -381,6 +389,7 @@ public class Quantity4 {
 		this.otherUnitOfMeasure = otherUnitOfMeasure;
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public DecimalNumber getValue() {
 		return value;
 	}
@@ -389,6 +398,7 @@ public class Quantity4 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "Fctr")
 	public Max15NumericText getFactor() {
 		return factor;
 	}

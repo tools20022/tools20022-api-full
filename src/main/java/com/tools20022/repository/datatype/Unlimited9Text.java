@@ -27,6 +27,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "UNLIMITED"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -53,6 +55,8 @@ public class Unlimited9Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Unlimited9Text";
 				definition = "String of characters equal to UNLIMITED.";
+				pattern = "UNLIMITED";
+				length = 9;
 			}
 		});
 		return mmObject_lazy.get();

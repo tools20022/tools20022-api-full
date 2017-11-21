@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide further means of referencing a payment
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentIdentification2", propOrder = {"instructionIdentification", "endToEndIdentification", "transactionIdentification"})
 public class PaymentIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -255,6 +261,7 @@ public class PaymentIdentification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrId")
 	public Max35Text getInstructionIdentification() {
 		return instructionIdentification;
 	}
@@ -263,6 +270,7 @@ public class PaymentIdentification2 {
 		this.instructionIdentification = instructionIdentification;
 	}
 
+	@XmlElement(name = "EndToEndId", required = true)
 	public Max35Text getEndToEndIdentification() {
 		return endToEndIdentification;
 	}
@@ -271,6 +279,7 @@ public class PaymentIdentification2 {
 		this.endToEndIdentification = endToEndIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}

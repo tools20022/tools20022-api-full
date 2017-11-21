@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Sale context in which the transaction is performed.
@@ -93,6 +97,9 @@ import java.util.List;
  * SaleContext1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SaleContext2", propOrder = {"saleIdentification", "saleReferenceNumber", "saleReconciliationIdentification", "cashierIdentification", "shiftNumber", "purchaseOrderNumber", "invoiceNumber", "deliveryNoteNumber",
+		"sponsoredMerchant", "splitPayment", "remainingAmount", "additionalSaleData"})
 public class SaleContext2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -656,6 +663,7 @@ public class SaleContext2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SaleId")
 	public Max35Text getSaleIdentification() {
 		return saleIdentification;
 	}
@@ -664,6 +672,7 @@ public class SaleContext2 {
 		this.saleIdentification = saleIdentification;
 	}
 
+	@XmlElement(name = "SaleRefNb")
 	public Max35Text getSaleReferenceNumber() {
 		return saleReferenceNumber;
 	}
@@ -672,6 +681,7 @@ public class SaleContext2 {
 		this.saleReferenceNumber = saleReferenceNumber;
 	}
 
+	@XmlElement(name = "SaleRcncltnId")
 	public Max35Text getSaleReconciliationIdentification() {
 		return saleReconciliationIdentification;
 	}
@@ -680,6 +690,7 @@ public class SaleContext2 {
 		this.saleReconciliationIdentification = saleReconciliationIdentification;
 	}
 
+	@XmlElement(name = "CshrId")
 	public Max35Text getCashierIdentification() {
 		return cashierIdentification;
 	}
@@ -688,6 +699,7 @@ public class SaleContext2 {
 		this.cashierIdentification = cashierIdentification;
 	}
 
+	@XmlElement(name = "ShftNb")
 	public Max2NumericText getShiftNumber() {
 		return shiftNumber;
 	}
@@ -696,6 +708,7 @@ public class SaleContext2 {
 		this.shiftNumber = shiftNumber;
 	}
 
+	@XmlElement(name = "PurchsOrdrNb")
 	public Max35Text getPurchaseOrderNumber() {
 		return purchaseOrderNumber;
 	}
@@ -704,6 +717,7 @@ public class SaleContext2 {
 		this.purchaseOrderNumber = purchaseOrderNumber;
 	}
 
+	@XmlElement(name = "InvcNb")
 	public Max35Text getInvoiceNumber() {
 		return invoiceNumber;
 	}
@@ -712,6 +726,7 @@ public class SaleContext2 {
 		this.invoiceNumber = invoiceNumber;
 	}
 
+	@XmlElement(name = "DlvryNoteNb")
 	public Max35Text getDeliveryNoteNumber() {
 		return deliveryNoteNumber;
 	}
@@ -720,6 +735,7 @@ public class SaleContext2 {
 		this.deliveryNoteNumber = deliveryNoteNumber;
 	}
 
+	@XmlElement(name = "SpnsrdMrchnt")
 	public List<Organisation26> getSponsoredMerchant() {
 		return sponsoredMerchant;
 	}
@@ -728,6 +744,7 @@ public class SaleContext2 {
 		this.sponsoredMerchant = sponsoredMerchant;
 	}
 
+	@XmlElement(name = "SpltPmt")
 	public TrueFalseIndicator getSplitPayment() {
 		return splitPayment;
 	}
@@ -736,6 +753,7 @@ public class SaleContext2 {
 		this.splitPayment = splitPayment;
 	}
 
+	@XmlElement(name = "RmngAmt")
 	public ImpliedCurrencyAndAmount getRemainingAmount() {
 		return remainingAmount;
 	}
@@ -744,6 +762,7 @@ public class SaleContext2 {
 		this.remainingAmount = remainingAmount;
 	}
 
+	@XmlElement(name = "AddtlSaleData")
 	public Max70Text getAdditionalSaleData() {
 		return additionalSaleData;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the movement instructions.
@@ -73,6 +77,8 @@ import java.util.List;
  * definition} = "Details of the movement instructions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MovementInstruction1", propOrder = {"movementGeneralInformation", "underlyingSecuritiesMovementDetails", "underlyingCashMovementDetails", "proceedsMovementDetails"})
 public class MovementInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -257,6 +263,7 @@ public class MovementInstruction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MvmntGnlInf", required = true)
 	public CorporateActionMovement1 getMovementGeneralInformation() {
 		return movementGeneralInformation;
 	}
@@ -265,6 +272,7 @@ public class MovementInstruction1 {
 		this.movementGeneralInformation = movementGeneralInformation;
 	}
 
+	@XmlElement(name = "UndrlygSctiesMvmntDtls")
 	public List<UnderlyingSecurityMovement1> getUnderlyingSecuritiesMovementDetails() {
 		return underlyingSecuritiesMovementDetails;
 	}
@@ -273,6 +281,7 @@ public class MovementInstruction1 {
 		this.underlyingSecuritiesMovementDetails = underlyingSecuritiesMovementDetails;
 	}
 
+	@XmlElement(name = "UndrlygCshMvmntDtls")
 	public List<CashMovement2> getUnderlyingCashMovementDetails() {
 		return underlyingCashMovementDetails;
 	}
@@ -281,6 +290,7 @@ public class MovementInstruction1 {
 		this.underlyingCashMovementDetails = underlyingCashMovementDetails;
 	}
 
+	@XmlElement(name = "PrcdsMvmntDtls")
 	public List<ProceedsMovement1> getProceedsMovementDetails() {
 		return proceedsMovementDetails;
 	}

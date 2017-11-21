@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Statement information of an account.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMAccountStatement1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMAccountStatement2", propOrder = {"transactionDate", "valueDate", "shortText", "creditTransaction", "amount", "currency", "longText"})
 public class ATMAccountStatement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -416,6 +422,7 @@ public class ATMAccountStatement2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxDt")
 	public ISODate getTransactionDate() {
 		return transactionDate;
 	}
@@ -424,6 +431,7 @@ public class ATMAccountStatement2 {
 		this.transactionDate = transactionDate;
 	}
 
+	@XmlElement(name = "ValDt")
 	public ISODate getValueDate() {
 		return valueDate;
 	}
@@ -432,6 +440,7 @@ public class ATMAccountStatement2 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "ShrtTxt")
 	public Max70Text getShortText() {
 		return shortText;
 	}
@@ -440,6 +449,7 @@ public class ATMAccountStatement2 {
 		this.shortText = shortText;
 	}
 
+	@XmlElement(name = "CdtTx")
 	public TrueFalseIndicator getCreditTransaction() {
 		return creditTransaction;
 	}
@@ -448,6 +458,7 @@ public class ATMAccountStatement2 {
 		this.creditTransaction = creditTransaction;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -456,6 +467,7 @@ public class ATMAccountStatement2 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -464,6 +476,7 @@ public class ATMAccountStatement2 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "LngTxt")
 	public Max256Text getLongText() {
 		return longText;
 	}

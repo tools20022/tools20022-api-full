@@ -34,6 +34,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.MandatePartyRole
+ * MandatePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -99,9 +102,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountParties16.mmPowerOfAttorney}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.MandatePartyRole
- * MandatePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -135,6 +135,11 @@ public class MandateHolder extends MandatePartyRole {
 						AccountParties10.mmPowerOfAttorney, AccountParties12.mmPowerOfAttorney, AccountParties13.mmPowerOfAttorney, AccountParties14.mmPowerOfAttorney, AccountParties15.mmPowerOfAttorney, AccountParties16.mmPowerOfAttorney);
 				superType_lazy = () -> MandatePartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(PartyAndCertificate1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MandateHolder.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Configuration parameters of data exchanges.
@@ -91,6 +95,8 @@ import java.util.List;
  * ExchangeConfiguration3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExchangeConfiguration5", propOrder = {"exchangePolicy", "maximumNumber", "maximumAmount", "reTry", "timeCondition", "exchangeFailed", "exchangeDeclined"})
 public class ExchangeConfiguration5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -521,6 +527,7 @@ public class ExchangeConfiguration5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XchgPlcy", required = true)
 	public List<ExchangePolicy1Code> getExchangePolicy() {
 		return exchangePolicy;
 	}
@@ -529,6 +536,7 @@ public class ExchangeConfiguration5 {
 		this.exchangePolicy = exchangePolicy;
 	}
 
+	@XmlElement(name = "MaxNb")
 	public Number getMaximumNumber() {
 		return maximumNumber;
 	}
@@ -537,6 +545,7 @@ public class ExchangeConfiguration5 {
 		this.maximumNumber = maximumNumber;
 	}
 
+	@XmlElement(name = "MaxAmt")
 	public ImpliedCurrencyAndAmount getMaximumAmount() {
 		return maximumAmount;
 	}
@@ -545,6 +554,7 @@ public class ExchangeConfiguration5 {
 		this.maximumAmount = maximumAmount;
 	}
 
+	@XmlElement(name = "ReTry")
 	public ProcessRetry2 getReTry() {
 		return reTry;
 	}
@@ -553,6 +563,7 @@ public class ExchangeConfiguration5 {
 		this.reTry = reTry;
 	}
 
+	@XmlElement(name = "TmCond")
 	public ProcessTiming3 getTimeCondition() {
 		return timeCondition;
 	}
@@ -561,6 +572,7 @@ public class ExchangeConfiguration5 {
 		this.timeCondition = timeCondition;
 	}
 
+	@XmlElement(name = "XchgFaild")
 	public TrueFalseIndicator getExchangeFailed() {
 		return exchangeFailed;
 	}
@@ -569,6 +581,7 @@ public class ExchangeConfiguration5 {
 		this.exchangeFailed = exchangeFailed;
 	}
 
+	@XmlElement(name = "XchgDclnd")
 	public TrueFalseIndicator getExchangeDeclined() {
 		return exchangeDeclined;
 	}

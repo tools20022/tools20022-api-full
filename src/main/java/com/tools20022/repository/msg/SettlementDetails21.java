@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the settlement details.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the settlement details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementDetails21", propOrder = {"settlementAmount", "depository"})
 public class SettlementDetails21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class SettlementDetails21 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmAmt", required = true)
 	public AmountAndDirection20 getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -183,6 +190,7 @@ public class SettlementDetails21 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "Dpstry")
 	public PartyIdentification34Choice getDepository() {
 		return depository;
 	}

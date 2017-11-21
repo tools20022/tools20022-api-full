@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Maximum value used for risk containment in a system or towards counterparts.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LimitDetails3", propOrder = {"amount", "creditDebitIndicator", "status", "startDateTime"})
 public class LimitDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -276,6 +282,7 @@ public class LimitDetails3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public AmountChoice getAmount() {
 		return amount;
 	}
@@ -284,6 +291,7 @@ public class LimitDetails3 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -292,6 +300,7 @@ public class LimitDetails3 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Sts")
 	public LimitStatus1Code getStatus() {
 		return status;
 	}
@@ -300,6 +309,7 @@ public class LimitDetails3 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "StartDtTm")
 	public DateAndDateTimeChoice getStartDateTime() {
 		return startDateTime;
 	}

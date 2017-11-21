@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,6 +39,30 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountStatus#mmAccount
+ * AccountStatus.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountStatus#mmStatus
+ * AccountStatus.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountStatus#mmBlocked
+ * AccountStatus.mmBlocked}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountStatus#mmManagementStatus
+ * AccountStatus.mmManagementStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountStatus#mmEntryStatus
+ * AccountStatus.mmEntryStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountStatus#mmBalanceStatus
+ * AccountStatus.mmBalanceStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountStatus#mmBlockedReason
+ * AccountStatus.mmBlockedReason}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -112,30 +137,6 @@ import java.util.List;
  * AccountStatus2.mmOther}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AccountStatus#mmAccount
- * AccountStatus.mmAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AccountStatus#mmStatus
- * AccountStatus.mmStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AccountStatus#mmBlocked
- * AccountStatus.mmBlocked}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountStatus#mmManagementStatus
- * AccountStatus.mmManagementStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AccountStatus#mmEntryStatus
- * AccountStatus.mmEntryStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountStatus#mmBalanceStatus
- * AccountStatus.mmBalanceStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountStatus#mmBlockedReason
- * AccountStatus.mmBlockedReason}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -191,7 +192,7 @@ public class AccountStatus extends Status {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AccountStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
@@ -213,11 +214,6 @@ public class AccountStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AccountStatusCode
 	 * AccountStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountStatus AccountStatus}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -240,6 +236,11 @@ public class AccountStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountStatus AccountStatus}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -253,7 +254,7 @@ public class AccountStatus extends Status {
 	public static final MMBusinessAttribute mmStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesAccount1.mmStatus, SecuritiesAccount4.mmStatus, CustomerAccount5.mmStatus, CustomerAccountModification1.mmStatus, CustomerAccount4.mmStatus, OtherAccountStatus1.mmStatus);
-			elementContext_lazy = () -> AccountStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
@@ -261,6 +262,14 @@ public class AccountStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountStatus.class.getMethod("getStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator blocked;
@@ -274,11 +283,6 @@ public class AccountStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountStatus AccountStatus}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -290,6 +294,11 @@ public class AccountStatus extends Status {
 	 * {@linkplain com.tools20022.repository.msg.BlockedStatusReason2#mmBlocked
 	 * BlockedStatusReason2.mmBlocked}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountStatus AccountStatus}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -305,7 +314,7 @@ public class AccountStatus extends Status {
 	public static final MMBusinessAttribute mmBlocked = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Blocked1.mmBlocked, Blocked2.mmBlocked, BlockedStatusReason2.mmBlocked);
-			elementContext_lazy = () -> AccountStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Blocked";
@@ -313,6 +322,14 @@ public class AccountStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountStatus.class.getMethod("getBlocked", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AccountManagementStatusCode managementStatus;
@@ -327,11 +344,6 @@ public class AccountStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AccountManagementStatusCode
 	 * AccountManagementStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountStatus AccountStatus}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -349,6 +361,11 @@ public class AccountStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountStatus AccountStatus}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -364,7 +381,7 @@ public class AccountStatus extends Status {
 	public static final MMBusinessAttribute mmManagementStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountManagementStatusAndReason1.mmStatus, Status12Choice.mmStatus, Status14Choice.mmStatus, Status20Choice.mmStatus, Status25Choice.mmStatus);
-			elementContext_lazy = () -> AccountStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ManagementStatus";
@@ -372,6 +389,14 @@ public class AccountStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountManagementStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountStatus.class.getMethod("getManagementStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected EntryStatusCode entryStatus;
@@ -385,11 +410,6 @@ public class AccountStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.EntryStatusCode
 	 * EntryStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountStatus AccountStatus}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -429,6 +449,11 @@ public class AccountStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountStatus AccountStatus}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -443,7 +468,7 @@ public class AccountStatus extends Status {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountCashEntrySearch2.mmEntryStatus, CashAccountEntrySearch3.mmEntryStatus, AccountCashEntryDetails3.mmEntryStatus, CashEntry1.mmStatus, ReportEntry1.mmStatus, ReportEntry2.mmStatus,
 					ReportEntry3.mmStatus, ReportEntry4.mmStatus, NotificationEntry1.mmStatus, StatementEntry1.mmStatus, TransactionType1.mmStatus, CashAccountEntrySearch4.mmEntryStatus, ReportEntry7.mmStatus, ReportEntry8.mmStatus);
-			elementContext_lazy = () -> AccountStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntryStatus";
@@ -451,6 +476,14 @@ public class AccountStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EntryStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountStatus.class.getMethod("getEntryStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BalanceStatusCode balanceStatus;
@@ -464,11 +497,6 @@ public class AccountStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.BalanceStatusCode
 	 * BalanceStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountStatus AccountStatus}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -497,6 +525,11 @@ public class AccountStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountStatus AccountStatus}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -511,7 +544,7 @@ public class AccountStatus extends Status {
 		{
 			derivation_lazy = () -> Arrays.asList(CashBalanceDetails2.mmStatus, CashBalanceDetails3.mmStatus, CashBalanceDetails4.mmStatus, CashBalanceDetails5.mmStatus, CashBalanceDetails6.mmStatus, CashBalanceDetails7.mmStatus,
 					CashBalance5.mmStatus, CashBalance6.mmStatus);
-			elementContext_lazy = () -> AccountStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BalanceStatus";
@@ -519,6 +552,14 @@ public class AccountStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BalanceStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountStatus.class.getMethod("getBalanceStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ReasonBlockedCode blockedReason;
@@ -532,11 +573,6 @@ public class AccountStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ReasonBlockedCode
 	 * ReasonBlockedCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountStatus AccountStatus}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -544,6 +580,11 @@ public class AccountStatus extends Status {
 	 * {@linkplain com.tools20022.repository.msg.BlockedStatusReason2#mmReason
 	 * BlockedStatusReason2.mmReason}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountStatus AccountStatus}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -560,7 +601,7 @@ public class AccountStatus extends Status {
 	public static final MMBusinessAttribute mmBlockedReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BlockedStatusReason2.mmReason);
-			elementContext_lazy = () -> AccountStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BlockedReason";
@@ -568,6 +609,14 @@ public class AccountStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReasonBlockedCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountStatus.class.getMethod("getBlockedReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -582,12 +631,18 @@ public class AccountStatus extends Status {
 				derivationElement_lazy = () -> Arrays.asList(AccountManagementStatusAndReason2.mmStatus, AccountManagementStatusAndReason3.mmStatus, AccountManagementStatusAndReason4.mmStatus, AccountManagementStatusAndReason5.mmStatus,
 						AccountStatus2.mmOther);
 				superType_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
-				element_lazy = () -> Arrays.asList(AccountStatus.mmAccount, AccountStatus.mmStatus, AccountStatus.mmBlocked, AccountStatus.mmManagementStatus, AccountStatus.mmEntryStatus, AccountStatus.mmBalanceStatus,
-						AccountStatus.mmBlockedReason);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountStatus.mmAccount, com.tools20022.repository.entity.AccountStatus.mmStatus, com.tools20022.repository.entity.AccountStatus.mmBlocked,
+						com.tools20022.repository.entity.AccountStatus.mmManagementStatus, com.tools20022.repository.entity.AccountStatus.mmEntryStatus, com.tools20022.repository.entity.AccountStatus.mmBalanceStatus,
+						com.tools20022.repository.entity.AccountStatus.mmBlockedReason);
 				derivationComponent_lazy = () -> Arrays.asList(Blocked1.mmObject(), RejectedStatus5.mmObject(), AccountManagementStatusAndReason1.mmObject(), Status12Choice.mmObject(), AccountManagementStatusAndReason2.mmObject(),
 						AccountManagementStatusAndReason3.mmObject(), Status14Choice.mmObject(), RejectionReason16.mmObject(), AccountManagementStatusAndReason4.mmObject(), Blocked2.mmObject(), RejectionReason32.mmObject(),
 						RejectionReason33.mmObject(), Status21Choice.mmObject(), Status20Choice.mmObject(), RejectionReason31.mmObject(), AccountManagementStatusAndReason5.mmObject(), AccountStatus2.mmObject(),
 						OtherAccountStatus1.mmObject(), Status25Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountStatus.class;
 			}
 		});
 		return mmObject_lazy.get();

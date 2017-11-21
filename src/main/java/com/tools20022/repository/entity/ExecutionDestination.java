@@ -67,6 +67,11 @@ public class ExecutionDestination extends SecuritiesTradePartyRole {
 				definition = "Destination for the execution, as defined by an institution when an order is entered.";
 				superType_lazy = () -> SecuritiesTradePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ExecutionDestination.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

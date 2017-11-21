@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,70 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+ * Trade.mmTradeDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmTradeCommission
+ * Trade.mmTradeCommission}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmValueDate
+ * Trade.mmValueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmEndDate
+ * Trade.mmEndDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Trade#mmTradeRelatedIdentifications
+ * Trade.mmTradeRelatedIdentifications}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmAllocationIndicator
+ * Trade.mmAllocationIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Trade#mmCollateralisationType
+ * Trade.mmCollateralisationType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmBlockIndicator
+ * Trade.mmBlockIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmSettlementNetting
+ * Trade.mmSettlementNetting}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmTradePartyRole
+ * Trade.mmTradePartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmObligation
+ * Trade.mmObligation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmRelatedNegotiation
+ * Trade.mmRelatedNegotiation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmGoverningDocument
+ * Trade.mmGoverningDocument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmStartDate
+ * Trade.mmStartDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmSystem
+ * Trade.mmSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmAsset Trade.mmAsset}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmMarket
+ * Trade.mmMarket}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmGuarantee
+ * Trade.mmGuarantee}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmSettlement
+ * Trade.mmSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmOrder Trade.mmOrder}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmLeg Trade.mmLeg}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Trade#mmFinancialTransaction
+ * Trade.mmFinancialTransaction}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmReconciliation
+ * Trade.mmReconciliation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTrade
+ * SecuritiesTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TreasuryTrade TreasuryTrade}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade
+ * CommercialTrade}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -104,70 +169,6 @@ import java.util.List;
  * TradeDate4Choice.mmValue}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTrade
- * SecuritiesTrade}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TreasuryTrade TreasuryTrade}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade
- * CommercialTrade}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
- * Trade.mmTradeDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmTradeCommission
- * Trade.mmTradeCommission}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmValueDate
- * Trade.mmValueDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmEndDate
- * Trade.mmEndDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Trade#mmTradeRelatedIdentifications
- * Trade.mmTradeRelatedIdentifications}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmAllocationIndicator
- * Trade.mmAllocationIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Trade#mmCollateralisationType
- * Trade.mmCollateralisationType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmBlockIndicator
- * Trade.mmBlockIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmSettlementNetting
- * Trade.mmSettlementNetting}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmTradePartyRole
- * Trade.mmTradePartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmObligation
- * Trade.mmObligation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmRelatedNegotiation
- * Trade.mmRelatedNegotiation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmGoverningDocument
- * Trade.mmGoverningDocument}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmStartDate
- * Trade.mmStartDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmSystem
- * Trade.mmSystem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmAsset Trade.mmAsset}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmMarket
- * Trade.mmMarket}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmGuarantee
- * Trade.mmGuarantee}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmSettlement
- * Trade.mmSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmOrder Trade.mmOrder}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmLeg Trade.mmLeg}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Trade#mmFinancialTransaction
- * Trade.mmFinancialTransaction}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmReconciliation
- * Trade.mmReconciliation}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -198,10 +199,6 @@ public class Trade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
-	 * Trade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1174,6 +1171,10 @@ public class Trade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
+	 * Trade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1246,7 +1247,7 @@ public class Trade {
 					TransactionDetails96.mmTradeDate, TransactionDetails95.mmTradeDate, SettlementDetails118.mmTradeDate, SecuritiesTradeDetails69.mmTradeDate, SecuritiesTradeDetails70.mmTradeDate,
 					SecuritiesFinancingTransactionDetails36.mmTradeDate, TransactionDetails100.mmTradeDate, TransactionDetails99.mmTradeDate, TransactionDetails98.mmTradeDate, FixingConditions1.mmTradeDate,
 					SecuredMarketTransaction4.mmTradeDate, ForeignExchangeSwapTransaction3.mmTradeDate, OvernightIndexSwapTransaction4.mmTradeDate, UnsecuredMarketTransaction4.mmTradeDate);
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeDateTime";
@@ -1254,6 +1255,14 @@ public class Trade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Trade.class.getMethod("getTradeDateTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Commission> tradeCommission;
@@ -1274,10 +1283,6 @@ public class Trade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Commission
 	 * Commission}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
-	 * Trade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1498,6 +1503,10 @@ public class Trade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
+	 * Trade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1526,7 +1535,7 @@ public class Trade {
 					DeliverInformation12.mmCommissionDetails, DeliverInformation13.mmCommissionDetails, Order17.mmCommission, Order18.mmCommission, FundCashOutBreakdown3.mmCommissionDetails, FundCashInBreakdown3.mmCommissionDetails,
 					DeliverInformation15.mmCommissionDetails, DeliverInformation14.mmCommissionDetails, ReceiveInformation15.mmCommissionDetails, ReceiveInformation14.mmCommissionDetails, ReceiveInformation17.mmCommissionDetails,
 					ReceiveInformation16.mmCommissionDetails, DeliverInformation16.mmCommissionDetails, DeliverInformation17.mmCommissionDetails);
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeCommission";
@@ -1547,10 +1556,6 @@ public class Trade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
-	 * Trade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1634,6 +1639,10 @@ public class Trade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
+	 * Trade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1652,7 +1661,7 @@ public class Trade {
 					AmountsAndValueDate1.mmSettlementDate, TransactionDetails51.mmValueDate, TransactionDetails63.mmValueDate, TransactionDetails68.mmValueDate, TradeData11.mmCurrentSettlementDate, TradeData11.mmNewSettlementDate,
 					ForeignExchangeSwapTransaction1.mmSpotValueDate, TransactionDetails78.mmValueDate, Option10.mmValuationRate, TransactionDetails91.mmValueDate, ForeignExchangeSwapTransaction2.mmSpotValueDate,
 					RegulatoryReporting6.mmClearingTimestamp, TransactionDetails95.mmValueDate, TransactionDetails98.mmValueDate, ForeignExchangeSwapTransaction3.mmSpotValueDate);
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
@@ -1660,6 +1669,14 @@ public class Trade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Trade.class.getMethod("getValueDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime endDate;
@@ -1672,10 +1689,6 @@ public class Trade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
-	 * Trade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1697,6 +1710,10 @@ public class Trade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
+	 * Trade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1711,7 +1728,7 @@ public class Trade {
 	public static final MMBusinessAttribute mmEndDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClosingDate1Choice.mmDate, ClosingDate1Choice.mmCode, TransactionDates1.mmEndDate, TransactionDates2.mmEndDate, TradeContract1.mmMaturityDate);
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EndDate";
@@ -1719,6 +1736,14 @@ public class Trade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Trade.class.getMethod("getEndDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.TradeIdentification> tradeRelatedIdentifications;
@@ -1739,10 +1764,6 @@ public class Trade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.TradeIdentification
 	 * TradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
-	 * Trade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1796,6 +1817,10 @@ public class Trade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
+	 * Trade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1813,7 +1838,7 @@ public class Trade {
 					Cancellation4Choice.mmReferences, CounterpartySideTransactionReporting1.mmCounterpartySideUniqueTransactionIdentifier, TradingSideTransactionReporting1.mmTradingSideUniqueTransactionIdentifier,
 					Cancellation9Choice.mmReferences, Cancellation8Choice.mmReferences, Cancellation12Choice.mmReferences, Cancellation10Choice.mmReferences, GeneralInformation5.mmRelatedTradeReference,
 					TradeData12.mmLinkedReportIdentification, NetObligation1.mmCounterpartyNettingIdentification, FixingConditions1.mmRelatedReference);
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeRelatedIdentifications";
@@ -1834,10 +1859,6 @@ public class Trade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
-	 * Trade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1853,6 +1874,10 @@ public class Trade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
+	 * Trade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1866,7 +1891,7 @@ public class Trade {
 	public static final MMBusinessAttribute mmAllocationIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RegulatoryReporting1.mmAllocationIndicator, RegulatoryReporting4.mmAllocationIndicator, RegulatoryReporting6.mmAllocationIndicator);
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllocationIndicator";
@@ -1874,6 +1899,14 @@ public class Trade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Trade.class.getMethod("getAllocationIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text collateralisationType;
@@ -1886,10 +1919,6 @@ public class Trade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
-	 * Trade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1905,6 +1934,10 @@ public class Trade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
+	 * Trade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1918,7 +1951,7 @@ public class Trade {
 	public static final MMBusinessAttribute mmCollateralisationType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RegulatoryReporting1.mmCollateralisationIndicator, RegulatoryReporting4.mmCollateralisationIndicator, RegulatoryReporting6.mmCollateralisationIndicator);
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollateralisationType";
@@ -1926,6 +1959,14 @@ public class Trade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Trade.class.getMethod("getCollateralisationType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator blockIndicator;
@@ -1939,10 +1980,6 @@ public class Trade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
-	 * Trade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1961,6 +1998,10 @@ public class Trade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
+	 * Trade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1974,7 +2015,7 @@ public class Trade {
 	public static final MMBusinessAttribute mmBlockIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneralInformation1.mmBlockIndicator, GeneralInformation4.mmBlockIndicator, GeneralInformation2.mmBlockIndicator, GeneralInformation5.mmBlockIndicator);
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BlockIndicator";
@@ -1982,6 +2023,14 @@ public class Trade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Trade.class.getMethod("getBlockIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected NettingEligibleCode settlementNetting;
@@ -1996,10 +2045,6 @@ public class Trade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.NettingEligibleCode
 	 * NettingEligibleCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
-	 * Trade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2014,6 +2059,10 @@ public class Trade {
 	 * Clearing4.mmSettlementNettingEligibleCode}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
+	 * Trade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2030,7 +2079,7 @@ public class Trade {
 	public static final MMBusinessAttribute mmSettlementNetting = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Clearing1.mmSettlementNettingEligibleCode, Clearing2.mmSettlementNettingEligibleCode, Clearing4.mmSettlementNettingEligibleCode);
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementNetting";
@@ -2038,6 +2087,14 @@ public class Trade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NettingEligibleCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Trade.class.getMethod("getSettlementNetting", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TradePartyRole tradePartyRole;
@@ -2058,10 +2115,6 @@ public class Trade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.TradePartyRole
 	 * TradePartyRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
-	 * Trade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2238,6 +2291,10 @@ public class Trade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
+	 * Trade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2263,7 +2320,7 @@ public class Trade {
 					SecuredMarketTransaction2.mmTripartyAgentIdentification, SecuredMarketTransaction3.mmTripartyAgentIdentification, SwitchExecution7.mmRelatedPartyDetails, SwitchOrder7.mmRelatedPartyDetails,
 					RedemptionOrder14.mmRelatedPartyDetails, SubscriptionExecution13.mmRelatedPartyDetails, SubscriptionExecution12.mmRelatedPartyDetails, SubscriptionOrder15.mmRelatedPartyDetails, RedemptionOrder15.mmRelatedPartyDetails,
 					RedemptionExecution16.mmRelatedPartyDetails, SubscriptionOrder14.mmRelatedPartyDetails, RedemptionExecution15.mmRelatedPartyDetails, SecuredMarketTransaction4.mmTripartyAgentIdentification);
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradePartyRole";
@@ -2313,7 +2370,7 @@ public class Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Obligation";
@@ -2360,7 +2417,7 @@ public class Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedNegotiation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedNegotiation";
@@ -2390,10 +2447,6 @@ public class Trade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.MasterAgreement
 	 * MasterAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
-	 * Trade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2409,6 +2462,10 @@ public class Trade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
+	 * Trade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2422,7 +2479,7 @@ public class Trade {
 	public static final MMBusinessAssociationEnd mmGoverningDocument = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentObligation2.mmApplicableRules, CardPaymentInvoice1.mmTradeAgreement, CardPaymentInvoice2.mmTradeAgreement);
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GoverningDocument";
@@ -2444,10 +2501,6 @@ public class Trade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
-	 * Trade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2482,6 +2535,10 @@ public class Trade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
+	 * Trade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2498,7 +2555,7 @@ public class Trade {
 		{
 			derivation_lazy = () -> Arrays.asList(Order16.mmProcessingDate, Order14.mmProcessingDate, TransactionDates1.mmStartDate, TransactionDates2.mmStartDate, Order17.mmProcessingDate, Order18.mmProcessingDate,
 					OvernightIndexSwapTransaction1.mmStartDate, TradeContract1.mmStartDate, OvernightIndexSwapTransaction3.mmStartDate, TradeSettlement2.mmBillingPeriod, OvernightIndexSwapTransaction4.mmStartDate);
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StartDate";
@@ -2506,6 +2563,14 @@ public class Trade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Trade.class.getMethod("getStartDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected System system;
@@ -2544,7 +2609,7 @@ public class Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
@@ -2589,7 +2654,7 @@ public class Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmAsset = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Asset";
@@ -2616,10 +2681,6 @@ public class Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Market Market}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
-	 * Trade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2635,6 +2696,10 @@ public class Trade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
+	 * Trade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2648,7 +2713,7 @@ public class Trade {
 	public static final MMBusinessAssociationEnd mmMarket = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetPosition2.mmPlaceOfTrade, NetPosition3.mmPlaceOfTrade, FinancialItemParameters1.mmTradeMarket);
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Market";
@@ -2678,10 +2743,6 @@ public class Trade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Guarantee Guarantee}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
-	 * Trade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2690,6 +2751,10 @@ public class Trade {
 	 * FinancingAgreementItem1.mmGuarantee}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
+	 * Trade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2704,7 +2769,7 @@ public class Trade {
 	public static final MMBusinessAssociationEnd mmGuarantee = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancingAgreementItem1.mmGuarantee);
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Guarantee";
@@ -2751,7 +2816,7 @@ public class Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmSettlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Settlement";
@@ -2796,7 +2861,7 @@ public class Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Order";
@@ -2842,7 +2907,7 @@ public class Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmLeg = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Leg";
@@ -2889,7 +2954,7 @@ public class Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmFinancialTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialTransaction";
@@ -2939,7 +3004,7 @@ public class Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmReconciliation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Trade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reconciliation";
@@ -2966,10 +3031,19 @@ public class Trade {
 						com.tools20022.repository.entity.Market.mmTrade, com.tools20022.repository.entity.Order.mmTrade, com.tools20022.repository.entity.FinancialTransaction.mmTrade);
 				derivationElement_lazy = () -> Arrays.asList(TradingDateCode1Choice.mmCode, TradeDate4Choice.mmDate, TradeDate4Choice.mmValue);
 				subType_lazy = () -> Arrays.asList(SecuritiesTrade.mmObject(), TreasuryTrade.mmObject(), CommercialTrade.mmObject());
-				element_lazy = () -> Arrays.asList(Trade.mmTradeDateTime, Trade.mmTradeCommission, Trade.mmValueDate, Trade.mmEndDate, Trade.mmTradeRelatedIdentifications, Trade.mmAllocationIndicator, Trade.mmCollateralisationType,
-						Trade.mmBlockIndicator, Trade.mmSettlementNetting, Trade.mmTradePartyRole, Trade.mmObligation, Trade.mmRelatedNegotiation, Trade.mmGoverningDocument, Trade.mmStartDate, Trade.mmSystem, Trade.mmAsset, Trade.mmMarket,
-						Trade.mmGuarantee, Trade.mmSettlement, Trade.mmOrder, Trade.mmLeg, Trade.mmFinancialTransaction, Trade.mmReconciliation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.mmTradeDateTime, com.tools20022.repository.entity.Trade.mmTradeCommission, com.tools20022.repository.entity.Trade.mmValueDate,
+						com.tools20022.repository.entity.Trade.mmEndDate, com.tools20022.repository.entity.Trade.mmTradeRelatedIdentifications, com.tools20022.repository.entity.Trade.mmAllocationIndicator,
+						com.tools20022.repository.entity.Trade.mmCollateralisationType, com.tools20022.repository.entity.Trade.mmBlockIndicator, com.tools20022.repository.entity.Trade.mmSettlementNetting,
+						com.tools20022.repository.entity.Trade.mmTradePartyRole, com.tools20022.repository.entity.Trade.mmObligation, com.tools20022.repository.entity.Trade.mmRelatedNegotiation,
+						com.tools20022.repository.entity.Trade.mmGoverningDocument, com.tools20022.repository.entity.Trade.mmStartDate, com.tools20022.repository.entity.Trade.mmSystem, com.tools20022.repository.entity.Trade.mmAsset,
+						com.tools20022.repository.entity.Trade.mmMarket, com.tools20022.repository.entity.Trade.mmGuarantee, com.tools20022.repository.entity.Trade.mmSettlement, com.tools20022.repository.entity.Trade.mmOrder,
+						com.tools20022.repository.entity.Trade.mmLeg, com.tools20022.repository.entity.Trade.mmFinancialTransaction, com.tools20022.repository.entity.Trade.mmReconciliation);
 				derivationComponent_lazy = () -> Arrays.asList(DateAndDateTime1Choice.mmObject(), TradingDateCode1Choice.mmObject(), TradeDate4Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Trade.class;
 			}
 		});
 		return mmObject_lazy.get();

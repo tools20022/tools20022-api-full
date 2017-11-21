@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of a currency.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.msg.CurrencyDetails1 CurrencyDetails1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyDetails2", propOrder = {"alphaCode", "numericCode", "decimal", "name"})
 public class CurrencyDetails2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -275,6 +281,7 @@ public class CurrencyDetails2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AlphaCd")
 	public ActiveCurrencyCode getAlphaCode() {
 		return alphaCode;
 	}
@@ -283,6 +290,7 @@ public class CurrencyDetails2 {
 		this.alphaCode = alphaCode;
 	}
 
+	@XmlElement(name = "NmrcCd")
 	public Exact3NumericText getNumericCode() {
 		return numericCode;
 	}
@@ -291,6 +299,7 @@ public class CurrencyDetails2 {
 		this.numericCode = numericCode;
 	}
 
+	@XmlElement(name = "Dcml")
 	public Number getDecimal() {
 		return decimal;
 	}
@@ -299,6 +308,7 @@ public class CurrencyDetails2 {
 		this.decimal = decimal;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max35Text getName() {
 		return name;
 	}

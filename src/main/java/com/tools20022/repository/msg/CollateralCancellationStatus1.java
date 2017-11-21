@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the status (that is accept or reject) of the
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralCancellationStatus1", propOrder = {"collateralStatusCode", "additionalInformation", "rejectionDetails"})
 public class CollateralCancellationStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -251,6 +257,7 @@ public class CollateralCancellationStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CollStsCd", required = true)
 	public Status4Code getCollateralStatusCode() {
 		return collateralStatusCode;
 	}
@@ -259,6 +266,7 @@ public class CollateralCancellationStatus1 {
 		this.collateralStatusCode = collateralStatusCode;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max35Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -267,6 +275,7 @@ public class CollateralCancellationStatus1 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "RjctnDtls")
 	public RejectionStatus2 getRejectionDetails() {
 		return rejectionDetails;
 	}

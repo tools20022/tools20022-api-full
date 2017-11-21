@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique and unambiguous way to identify an organisation.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Unique and unambiguous way to identify an organisation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrganisationIdentification26", propOrder = "anyBIC")
 public class OrganisationIdentification26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -130,6 +136,7 @@ public class OrganisationIdentification26 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AnyBIC")
 	public AnyBICIdentifier getAnyBIC() {
 		return anyBIC;
 	}

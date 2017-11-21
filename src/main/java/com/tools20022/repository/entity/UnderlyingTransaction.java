@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.UnderlyingTradeTransaction1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,29 +41,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.UnderlyingTradeTransactionType1Choice
- * UnderlyingTradeTransactionType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1
- * UnderlyingTradeTransaction1}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmUnderlyingTransaction
- * Undertaking.mmUnderlyingTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmRelatedUndertaking
- * CommercialTrade.mmRelatedUndertaking}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -90,6 +68,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#mmCommercialTrade
  * UnderlyingTransaction.mmCommercialTrade}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UnderlyingTradeTransactionType1Choice
+ * UnderlyingTradeTransactionType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1
+ * UnderlyingTradeTransaction1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmUnderlyingTransaction
+ * Undertaking.mmUnderlyingTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmRelatedUndertaking
+ * CommercialTrade.mmRelatedUndertaking}</li>
  * </ul>
  * </li>
  * <li>
@@ -148,7 +149,7 @@ public class UnderlyingTransaction {
 	 */
 	public static final MMBusinessAssociationEnd mmUndertaking = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Undertaking";
@@ -171,11 +172,6 @@ public class UnderlyingTransaction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ExternalUnderlyingTradeTransactionTypeCode
 	 * ExternalUnderlyingTradeTransactionTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
-	 * UnderlyingTransaction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -191,6 +187,11 @@ public class UnderlyingTransaction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
+	 * UnderlyingTransaction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -205,7 +206,7 @@ public class UnderlyingTransaction {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingTradeTransactionType1Choice.mmCode, UnderlyingTradeTransactionType1Choice.mmProprietary, UnderlyingTradeTransaction1.mmType);
-			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -213,6 +214,14 @@ public class UnderlyingTransaction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalUnderlyingTradeTransactionTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UnderlyingTransaction.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text identification;
@@ -225,11 +234,6 @@ public class UnderlyingTransaction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
-	 * UnderlyingTransaction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -238,6 +242,11 @@ public class UnderlyingTransaction {
 	 * UnderlyingTradeTransaction1.mmIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
+	 * UnderlyingTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -252,7 +261,7 @@ public class UnderlyingTransaction {
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingTradeTransaction1.mmIdentification);
-			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -260,6 +269,14 @@ public class UnderlyingTransaction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UnderlyingTransaction.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODate issueDate;
@@ -272,11 +289,6 @@ public class UnderlyingTransaction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
-	 * UnderlyingTransaction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -285,6 +297,11 @@ public class UnderlyingTransaction {
 	 * UnderlyingTradeTransaction1.mmTransactionDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
+	 * UnderlyingTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -299,7 +316,7 @@ public class UnderlyingTransaction {
 	public static final MMBusinessAttribute mmIssueDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingTradeTransaction1.mmTransactionDate);
-			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssueDate";
@@ -307,6 +324,14 @@ public class UnderlyingTransaction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UnderlyingTransaction.class.getMethod("getIssueDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODate tenderClosingDate;
@@ -319,11 +344,6 @@ public class UnderlyingTransaction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
-	 * UnderlyingTransaction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -332,6 +352,11 @@ public class UnderlyingTransaction {
 	 * UnderlyingTradeTransaction1.mmTenderClosingDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
+	 * UnderlyingTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -346,7 +371,7 @@ public class UnderlyingTransaction {
 	public static final MMBusinessAttribute mmTenderClosingDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingTradeTransaction1.mmTenderClosingDate);
-			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TenderClosingDate";
@@ -354,6 +379,14 @@ public class UnderlyingTransaction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UnderlyingTransaction.class.getMethod("getTenderClosingDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount totalAmount;
@@ -367,11 +400,6 @@ public class UnderlyingTransaction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
-	 * UnderlyingTransaction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -380,6 +408,11 @@ public class UnderlyingTransaction {
 	 * UnderlyingTradeTransaction1.mmTransactionAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
+	 * UnderlyingTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -394,7 +427,7 @@ public class UnderlyingTransaction {
 	public static final MMBusinessAttribute mmTotalAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingTradeTransaction1.mmTransactionAmount);
-			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalAmount";
@@ -402,6 +435,14 @@ public class UnderlyingTransaction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UnderlyingTransaction.class.getMethod("getTotalAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate contractAmountPercentage;
@@ -415,11 +456,6 @@ public class UnderlyingTransaction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
-	 * UnderlyingTransaction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -428,6 +464,11 @@ public class UnderlyingTransaction {
 	 * UnderlyingTradeTransaction1.mmContractAmountPercentage}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
+	 * UnderlyingTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -443,7 +484,7 @@ public class UnderlyingTransaction {
 	public static final MMBusinessAttribute mmContractAmountPercentage = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingTradeTransaction1.mmContractAmountPercentage);
-			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ContractAmountPercentage";
@@ -451,6 +492,14 @@ public class UnderlyingTransaction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UnderlyingTransaction.class.getMethod("getContractAmountPercentage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CommercialTrade commercialTrade;
@@ -489,7 +538,7 @@ public class UnderlyingTransaction {
 	 */
 	public static final MMBusinessAssociationEnd mmCommercialTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialTrade";
@@ -510,9 +559,16 @@ public class UnderlyingTransaction {
 				name = "UnderlyingTransaction";
 				definition = "Reference information on a commercial obligation between the beneficiary and applicant for which an undertaking is issued.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Undertaking.mmUnderlyingTransaction, com.tools20022.repository.entity.CommercialTrade.mmRelatedUndertaking);
-				element_lazy = () -> Arrays.asList(UnderlyingTransaction.mmUndertaking, UnderlyingTransaction.mmType, UnderlyingTransaction.mmIdentification, UnderlyingTransaction.mmIssueDate, UnderlyingTransaction.mmTenderClosingDate,
-						UnderlyingTransaction.mmTotalAmount, UnderlyingTransaction.mmContractAmountPercentage, UnderlyingTransaction.mmCommercialTrade);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UnderlyingTransaction.mmUndertaking, com.tools20022.repository.entity.UnderlyingTransaction.mmType,
+						com.tools20022.repository.entity.UnderlyingTransaction.mmIdentification, com.tools20022.repository.entity.UnderlyingTransaction.mmIssueDate,
+						com.tools20022.repository.entity.UnderlyingTransaction.mmTenderClosingDate, com.tools20022.repository.entity.UnderlyingTransaction.mmTotalAmount,
+						com.tools20022.repository.entity.UnderlyingTransaction.mmContractAmountPercentage, com.tools20022.repository.entity.UnderlyingTransaction.mmCommercialTrade);
 				derivationComponent_lazy = () -> Arrays.asList(UnderlyingTradeTransactionType1Choice.mmObject(), UnderlyingTradeTransaction1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UnderlyingTransaction.class;
 			}
 		});
 		return mmObject_lazy.get();

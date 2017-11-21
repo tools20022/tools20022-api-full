@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money due to a party as compensation for a service.
@@ -87,6 +91,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Commission9", propOrder = {"type", "extendedType", "amount", "rate"})
 public class Commission9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -377,6 +383,7 @@ public class Commission9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public CommissionType6Code getType() {
 		return type;
 	}
@@ -385,6 +392,7 @@ public class Commission9 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XtndedTp", required = true)
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
@@ -393,6 +401,7 @@ public class Commission9 {
 		this.extendedType = extendedType;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -401,6 +410,7 @@ public class Commission9 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}

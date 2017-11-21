@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.FailedSettlementStatus1;
 import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason for the failed settlement status.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * FailedSettlementStatus1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FailedSettlementStatus2Choice", propOrder = {"reason", "dataSourceScheme", "noSpecifiedReason"})
 public class FailedSettlementStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -253,6 +259,7 @@ public class FailedSettlementStatus2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public Max350Text getReason() {
 		return reason;
 	}
@@ -261,6 +268,7 @@ public class FailedSettlementStatus2Choice {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}
@@ -269,6 +277,7 @@ public class FailedSettlementStatus2Choice {
 		this.dataSourceScheme = dataSourceScheme;
 	}
 
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}

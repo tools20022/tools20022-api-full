@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.DataModification2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Scope of the modification to be applied on an identified set of information.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ModificationScope11", propOrder = {"modificationScopeIndication", "investorProfileValidation"})
 public class ModificationScope11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class ModificationScope11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ModScpIndctn", required = true)
 	public DataModification2Code getModificationScopeIndication() {
 		return modificationScopeIndication;
 	}
@@ -180,6 +187,7 @@ public class ModificationScope11 {
 		this.modificationScopeIndication = modificationScopeIndication;
 	}
 
+	@XmlElement(name = "InvstrPrflVldtn", required = true)
 	public PartyProfileInformation1 getInvestorProfileValidation() {
 		return investorProfileValidation;
 	}

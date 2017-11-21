@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.RejectionReason3;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -54,9 +56,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.001.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementPreviousVersion
@@ -90,6 +89,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.001.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -113,6 +115,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesMessageRejection}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesMessageRejectionV02", propOrder = {"messageIdentification", "relatedReference", "reason"})
 public class SecuritiesMessageRejectionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +166,14 @@ public class SecuritiesMessageRejectionV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesMessageRejectionV02.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 relatedReference;
 	/**
@@ -207,6 +219,14 @@ public class SecuritiesMessageRejectionV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesMessageRejectionV02.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected RejectionReason3 reason;
 	/**
@@ -251,6 +271,14 @@ public class SecuritiesMessageRejectionV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> RejectionReason3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesMessageRejectionV02.class.getMethod("getReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -265,7 +293,8 @@ public class SecuritiesMessageRejectionV02 {
 				rootElement = "Document";
 				xmlTag = "SctiesMsgRjctnV02";
 				businessArea_lazy = () -> SecuritiesManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesMessageRejectionV02.mmMessageIdentification, SecuritiesMessageRejectionV02.mmRelatedReference, SecuritiesMessageRejectionV02.mmReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02.mmMessageIdentification,
+						com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02.mmRelatedReference, com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02.mmReason);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -275,10 +304,16 @@ public class SecuritiesMessageRejectionV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesMessageRejectionV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -287,6 +322,7 @@ public class SecuritiesMessageRejectionV02 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "RltdRef", required = true)
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
@@ -295,11 +331,18 @@ public class SecuritiesMessageRejectionV02 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public RejectionReason3 getReason() {
 		return reason;
 	}
 
 	public void setReason(RejectionReason3 reason) {
 		this.reason = reason;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.001.02.02")
+	static public class Document {
+		@XmlElement(name = "SctiesMsgRjctnV02", required = true)
+		public SecuritiesMessageRejectionV02 messageBody;
 	}
 }

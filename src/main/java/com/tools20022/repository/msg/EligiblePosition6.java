@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the voting entitlement.
@@ -75,6 +79,8 @@ import java.util.List;
  * EligiblePosition4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EligiblePosition6", propOrder = {"accountIdentification", "accountOwner", "holdingBalance", "rightsHolder"})
 public class EligiblePosition6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -310,6 +316,7 @@ public class EligiblePosition6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId")
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -318,6 +325,7 @@ public class EligiblePosition6 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification71 getAccountOwner() {
 		return accountOwner;
 	}
@@ -326,6 +334,7 @@ public class EligiblePosition6 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "HldgBal")
 	public List<HoldingBalance7> getHoldingBalance() {
 		return holdingBalance;
 	}
@@ -334,6 +343,7 @@ public class EligiblePosition6 {
 		this.holdingBalance = holdingBalance;
 	}
 
+	@XmlElement(name = "RghtsHldr")
 	public List<PartyIdentification71> getRightsHolder() {
 		return rightsHolder;
 	}

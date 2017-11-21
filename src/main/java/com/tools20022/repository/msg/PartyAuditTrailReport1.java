@@ -26,6 +26,10 @@ import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Report information about party reference data.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Report information about party reference data."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyAuditTrailReport1", propOrder = {"partyAuditTrailOrError", "datePeriod", "partyIdentification"})
 public class PartyAuditTrailReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -207,6 +213,7 @@ public class PartyAuditTrailReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyAudtTrlOrErr", required = true)
 	public AuditTrailOrBusinessError1Choice getPartyAuditTrailOrError() {
 		return partyAuditTrailOrError;
 	}
@@ -215,6 +222,7 @@ public class PartyAuditTrailReport1 {
 		this.partyAuditTrailOrError = partyAuditTrailOrError;
 	}
 
+	@XmlElement(name = "DtPrd")
 	public DateSearchChoice getDatePeriod() {
 		return datePeriod;
 	}
@@ -223,6 +231,7 @@ public class PartyAuditTrailReport1 {
 		this.datePeriod = datePeriod;
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public SystemPartyIdentification3 getPartyIdentification() {
 		return partyIdentification;
 	}

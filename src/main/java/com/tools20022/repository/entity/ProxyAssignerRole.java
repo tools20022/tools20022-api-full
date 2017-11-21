@@ -63,6 +63,11 @@ public class ProxyAssignerRole extends MeetingPartyRole {
 				definition = "Party entitled to appoint a proxy.";
 				superType_lazy = () -> MeetingPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ProxyAssignerRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

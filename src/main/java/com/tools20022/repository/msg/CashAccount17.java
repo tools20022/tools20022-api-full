@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the cash account.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information about the cash account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccount17", propOrder = {"accountIdentification", "paymentCurrency", "accountOwnerIdentification", "correspondentBankIdentification"})
 public class CashAccount17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -279,6 +285,7 @@ public class CashAccount17 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public CashAccountIdentification1Choice getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -287,6 +294,7 @@ public class CashAccount17 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "PmtCcy", required = true)
 	public ActiveCurrencyCode getPaymentCurrency() {
 		return paymentCurrency;
 	}
@@ -295,6 +303,7 @@ public class CashAccount17 {
 		this.paymentCurrency = paymentCurrency;
 	}
 
+	@XmlElement(name = "AcctOwnrId")
 	public PartyIdentification2Choice getAccountOwnerIdentification() {
 		return accountOwnerIdentification;
 	}
@@ -303,6 +312,7 @@ public class CashAccount17 {
 		this.accountOwnerIdentification = accountOwnerIdentification;
 	}
 
+	@XmlElement(name = "CrspdtBkId", required = true)
 	public BICIdentifier getCorrespondentBankIdentification() {
 		return correspondentBankIdentification;
 	}

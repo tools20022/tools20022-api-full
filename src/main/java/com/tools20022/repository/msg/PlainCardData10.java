@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Sensible data associated with the payment card performing the transaction.
@@ -87,6 +91,8 @@ import java.util.List;
  * PlainCardData7}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PlainCardData10", propOrder = {"PAN", "cardSequenceNumber", "effectiveDate", "expiryDate", "serviceCode", "trackData", "cardholderName"})
 public class PlainCardData10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -555,6 +561,7 @@ public class PlainCardData10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PAN", required = true)
 	public Min8Max28NumericText getPAN() {
 		return pAN;
 	}
@@ -563,6 +570,7 @@ public class PlainCardData10 {
 		this.pAN = pAN;
 	}
 
+	@XmlElement(name = "CardSeqNb")
 	public Min2Max3NumericText getCardSequenceNumber() {
 		return cardSequenceNumber;
 	}
@@ -571,6 +579,7 @@ public class PlainCardData10 {
 		this.cardSequenceNumber = cardSequenceNumber;
 	}
 
+	@XmlElement(name = "FctvDt")
 	public Max10Text getEffectiveDate() {
 		return effectiveDate;
 	}
@@ -579,6 +588,7 @@ public class PlainCardData10 {
 		this.effectiveDate = effectiveDate;
 	}
 
+	@XmlElement(name = "XpryDt")
 	public Max10Text getExpiryDate() {
 		return expiryDate;
 	}
@@ -587,6 +597,7 @@ public class PlainCardData10 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "SvcCd")
 	public Exact3NumericText getServiceCode() {
 		return serviceCode;
 	}
@@ -595,6 +606,7 @@ public class PlainCardData10 {
 		this.serviceCode = serviceCode;
 	}
 
+	@XmlElement(name = "TrckData")
 	public List<TrackData1> getTrackData() {
 		return trackData;
 	}
@@ -603,6 +615,7 @@ public class PlainCardData10 {
 		this.trackData = trackData;
 	}
 
+	@XmlElement(name = "CrdhldrNm")
 	public Max45Text getCardholderName() {
 		return cardholderName;
 	}

@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to an identification, for example, party identification
@@ -82,6 +86,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericIdentification41", propOrder = {"identification", "issuer", "schemeName"})
 public class GenericIdentification41 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -252,6 +258,7 @@ public class GenericIdentification41 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -260,6 +267,7 @@ public class GenericIdentification41 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public Max35Text getIssuer() {
 		return issuer;
 	}
@@ -268,6 +276,7 @@ public class GenericIdentification41 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "SchmeNm")
 	public Max35Text getSchemeName() {
 		return schemeName;
 	}

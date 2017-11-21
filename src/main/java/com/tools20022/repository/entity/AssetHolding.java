@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,69 +41,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts1
- * BalanceAmounts1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts2
- * BalanceAmounts2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts5
- * BalanceAmounts5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts6
- * BalanceAmounts6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts3
- * BalanceAmounts3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts4
- * BalanceAmounts4}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1
- * FinancialInstrumentAggregateBalance1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice
- * FinancialInstrumentAggregateBalance1Choice}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmAssetValue
- * Asset.mmAssetValue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmAssetHolding
- * Balance.mmAssetHolding}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedAssetHolding
- * Interest.mmRelatedAssetHolding}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCalculatedAssetValue
- * CurrencyExchange.mmCalculatedAssetValue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Collateral#mmAssetHolding
- * Collateral.mmAssetHolding}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#mmVariationMarginAssetHolding
- * Collateral.mmVariationMarginAssetHolding}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#mmSegregatedIndependentAmountAssetHolding
- * Collateral.mmSegregatedIndependentAmountAssetHolding}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.HaircutValuation#mmAssetHolding
- * HaircutValuation.mmAssetHolding}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1#mmHoldings
- * FinancialInstrumentAggregateBalance1.mmHoldings}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateHoldingBalance1#mmBalanceForFinancialInstrument
- * AggregateHoldingBalance1.mmBalanceForFinancialInstrument}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -166,6 +104,69 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts1
+ * BalanceAmounts1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts2
+ * BalanceAmounts2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts5
+ * BalanceAmounts5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts6
+ * BalanceAmounts6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts3
+ * BalanceAmounts3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts4
+ * BalanceAmounts4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1
+ * FinancialInstrumentAggregateBalance1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice
+ * FinancialInstrumentAggregateBalance1Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmAssetValue
+ * Asset.mmAssetValue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmAssetHolding
+ * Balance.mmAssetHolding}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedAssetHolding
+ * Interest.mmRelatedAssetHolding}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCalculatedAssetValue
+ * CurrencyExchange.mmCalculatedAssetValue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Collateral#mmAssetHolding
+ * Collateral.mmAssetHolding}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmVariationMarginAssetHolding
+ * Collateral.mmVariationMarginAssetHolding}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmSegregatedIndependentAmountAssetHolding
+ * Collateral.mmSegregatedIndependentAmountAssetHolding}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.HaircutValuation#mmAssetHolding
+ * HaircutValuation.mmAssetHolding}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1#mmHoldings
+ * FinancialInstrumentAggregateBalance1.mmHoldings}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AggregateHoldingBalance1#mmBalanceForFinancialInstrument
+ * AggregateHoldingBalance1.mmBalanceForFinancialInstrument}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -194,10 +195,6 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount
 	 * ActiveOrHistoricCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -312,6 +309,10 @@ public class AssetHolding {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -334,7 +335,7 @@ public class AssetHolding {
 					AggregateBalanceInformation4.mmPreviousHoldingValue, OtherTypeOfCollateral1.mmAmount, AggregateBalanceInformation5.mmHoldingValue, AggregateBalanceInformation5.mmPreviousHoldingValue,
 					FinancialInstrument37.mmAverageAcquisitionPrice, FinancialInstrument35.mmAverageAcquisitionPrice, FinancialInstrument40.mmAverageAcquisitionPrice, DebtInstrument2.mmNominalValuePerUnit,
 					FinancialInstrument48.mmAverageAcquisitionPrice, FinancialInstrument47.mmAverageAcquisitionPrice);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HoldingValue";
@@ -342,6 +343,14 @@ public class AssetHolding {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AssetHolding.class.getMethod("getHoldingValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount bookValue;
@@ -356,10 +365,6 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -556,6 +561,10 @@ public class AssetHolding {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -583,7 +592,7 @@ public class AssetHolding {
 					FinancialInstrument39.mmAverageAcquisitionPrice, FinancialInstrument39.mmTotalBookValue, OtherAmounts30.mmBookValue, OtherAmounts31.mmBookValue, Transfer31.mmAveragePrice, Transfer31.mmNewAveragePrice,
 					Transfer30.mmAveragePrice, Transfer33.mmAveragePrice, Transfer33.mmNewAveragePrice, FinancialInstrument48.mmTotalBookValue, FinancialInstrument47.mmTotalBookValue, FinancialInstrument46.mmAverageAcquisitionPrice,
 					FinancialInstrument46.mmTotalBookValue, OtherAmounts34.mmBookValue, OtherAmounts38.mmBookValue);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BookValue";
@@ -591,6 +600,14 @@ public class AssetHolding {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AssetHolding.class.getMethod("getBookValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount faceAmount;
@@ -605,10 +622,6 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -718,6 +731,10 @@ public class AssetHolding {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -741,7 +758,7 @@ public class AssetHolding {
 					FinancialInstrumentQuantitySearch1Choice.mmFaceAmount, FinancialInstrumentQuantitySearch1.mmFaceAmount, Quantity16Choice.mmOriginalAndCurrentFaceAmount, OriginalAndCurrentQuantities5.mmFaceAmount,
 					Quantity18Choice.mmOriginalAndCurrentFaceAmount, OriginalAndCurrentQuantities6.mmFaceAmount, Quantity23Choice.mmOriginalAndCurrentFaceAmount, OriginalAndCurrentQuantities7.mmFaceAmount,
 					FinancialInstrumentQuantity25Choice.mmNominalValue);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FaceAmount";
@@ -749,6 +766,14 @@ public class AssetHolding {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AssetHolding.class.getMethod("getFaceAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount amortisedFaceValue;
@@ -764,10 +789,6 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -840,6 +861,10 @@ public class AssetHolding {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -860,7 +885,7 @@ public class AssetHolding {
 					FinancialInstrumentQuantity20Choice.mmAmortisedValue, FinancialInstrumentQuantity21Choice.mmAmortisedValue, FinancialInstrumentQuantity22Choice.mmAmortisedValue, FinancialInstrumentQuantityChoice.mmAmortisedValue,
 					OtherAmounts16.mmRemainingFaceValue, FinancialInstrumentQuantitySearch1Choice.mmAmortisedValue, FinancialInstrumentQuantitySearch1.mmAmortisedValue, OriginalAndCurrentQuantities5.mmAmortisedValue,
 					OriginalAndCurrentQuantities6.mmAmortisedValue, OriginalAndCurrentQuantities7.mmAmortisedValue, FinancialInstrumentQuantity25Choice.mmMonetaryValue);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmortisedFaceValue";
@@ -868,6 +893,14 @@ public class AssetHolding {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AssetHolding.class.getMethod("getAmortisedFaceValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ActiveCurrencyAndAmount marketValue;
@@ -881,10 +914,6 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -967,6 +996,10 @@ public class AssetHolding {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -985,7 +1018,7 @@ public class AssetHolding {
 					Collateral3.mmMarketValue, Collateral6.mmMarketValue, SecuritiesCollateral2.mmMarketValue, OtherCollateral2.mmMarketValue, SecuritiesCollateral3.mmMarketValue, OtherCollateral3.mmMarketValue,
 					OtherCollateral4.mmMarketValue, SecuritiesCollateral4.mmMarketValue, FinancialInstrumentAttributes68.mmMarketPrice, OtherCollateral7.mmMarketValue, OtherCollateral6.mmMarketValue, SecuritiesCollateral6.mmMarketValue,
 					SecuritiesCollateral5.mmMarketValue, OtherCollateral5.mmMarketValue, SecuritiesCollateral7.mmMarketValue, FinancialInstrumentAttributes73.mmMarketPrice, SecuritiesCollateral8.mmMarketValue);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketValue";
@@ -993,6 +1026,14 @@ public class AssetHolding {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AssetHolding.class.getMethod("getMarketValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Balance> balance;
@@ -1029,7 +1070,7 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAssociationEnd mmBalance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Balance";
@@ -1051,10 +1092,6 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1076,6 +1113,10 @@ public class AssetHolding {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1091,7 +1132,7 @@ public class AssetHolding {
 		{
 			derivation_lazy = () -> Arrays.asList(BalanceAmounts1.mmUnrealisedGainLoss, BalanceAmounts2.mmUnrealisedGainLoss, BalanceAmounts5.mmUnrealisedGainLoss, BalanceAmounts6.mmUnrealisedGainLoss,
 					TotalPortfolioValuation1.mmUnrealisedGainOrLoss);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnrealisedGainOrLoss";
@@ -1099,6 +1140,14 @@ public class AssetHolding {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AssetHolding.class.getMethod("getUnrealisedGainOrLoss", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Asset asset;
@@ -1118,10 +1167,6 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1152,6 +1197,10 @@ public class AssetHolding {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1166,7 +1215,7 @@ public class AssetHolding {
 		{
 			derivation_lazy = () -> Arrays.asList(ProposalType1Choice.mmOtherCollateral, Collateral4.mmOtherCollateral, Collateral7.mmOtherCollateral, Collateral8.mmOtherCollateral, Collateral11.mmOtherCollateral,
 					Collateral12.mmOtherCollateral, Collateral16.mmOtherCollateral, Collateral17.mmOtherCollateral);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Asset";
@@ -1197,10 +1246,6 @@ public class AssetHolding {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.HaircutValuation
 	 * HaircutValuation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1318,6 +1363,10 @@ public class AssetHolding {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1344,7 +1393,7 @@ public class AssetHolding {
 					SecuritiesFinancingTransactionDetails33.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails32.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails30.mmSecuritiesHaircut,
 					AggregateBalanceInformation33.mmValuationHaircutDetails, Collateral14.mmHaircut, SecuritiesFinancingTransactionDetails35.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails36.mmSecuritiesHaircut,
 					Collateral18.mmHaircut);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Haircut";
@@ -1367,10 +1416,6 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1389,6 +1434,10 @@ public class AssetHolding {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1405,7 +1454,7 @@ public class AssetHolding {
 		{
 			derivation_lazy = () -> Arrays.asList(BalanceAmounts3.mmEligibleCollateralValue, TotalValueInPageAndStatement1.mmTotalEligibleCollateralValue, BalanceAmounts4.mmEligibleCollateralValue,
 					TotalValueInPageAndStatement3.mmTotalEligibleCollateralValue);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EligibleCollateralValue";
@@ -1413,6 +1462,14 @@ public class AssetHolding {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AssetHolding.class.getMethod("getEligibleCollateralValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyExchange exchangeRate;
@@ -1434,10 +1491,6 @@ public class AssetHolding {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
 	 * CurrencyExchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1492,6 +1545,10 @@ public class AssetHolding {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1509,7 +1566,7 @@ public class AssetHolding {
 			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmExchangeRate, CashCollateral1.mmExchangeRate, OtherCollateral1.mmExchangeRate, UnderlyingAttributes2.mmExchangeRate, OtherCollateral2.mmExchangeRate,
 					CashCollateral3.mmExchangeRate, OtherCollateral3.mmExchangeRate, CashCollateral4.mmExchangeRate, CashCollateral2.mmExchangeRate, OtherCollateral4.mmExchangeRate, CashCollateral5.mmExchangeRate,
 					OtherCollateral7.mmExchangeRate, OtherCollateral6.mmExchangeRate, OtherCollateral5.mmExchangeRate, AssetClassAttributes1Choice.mmForeignExchange, AssetClassAttributes1.mmForeignExchange);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangeRate";
@@ -1532,10 +1589,6 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1547,6 +1600,10 @@ public class AssetHolding {
 	 * UnderlyingAttributes2.mmCapValue}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1562,7 +1619,7 @@ public class AssetHolding {
 	public static final MMBusinessAttribute mmCapValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmCapValue, UnderlyingAttributes2.mmCapValue);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CapValue";
@@ -1570,6 +1627,14 @@ public class AssetHolding {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AssetHolding.class.getMethod("getCapValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ActiveCurrencyAndAmount riskAdjustedValue;
@@ -1584,10 +1649,6 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1654,6 +1715,10 @@ public class AssetHolding {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1672,7 +1737,7 @@ public class AssetHolding {
 					CashCollateral3.mmCollateralValue, SecuritiesCollateral3.mmCollateralValue, OtherCollateral3.mmCollateralValue, CashCollateral4.mmCollateralValue, CashCollateral2.mmCollateralValue, OtherCollateral4.mmCollateralValue,
 					SecuritiesCollateral4.mmCollateralValue, CashCollateral5.mmCollateralValue, OtherCollateral7.mmCollateralValue, OtherCollateral6.mmCollateralValue, SecuritiesCollateral6.mmCollateralValue,
 					SecuritiesCollateral5.mmCollateralValue, OtherCollateral5.mmCollateralValue, SecuritiesCollateral7.mmCollateralValue, SecuritiesCollateral8.mmCollateralValue);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RiskAdjustedValue";
@@ -1680,6 +1745,14 @@ public class AssetHolding {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AssetHolding.class.getMethod("getRiskAdjustedValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount realisedGainOrLoss;
@@ -1694,10 +1767,6 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1706,6 +1775,10 @@ public class AssetHolding {
 	 * TotalPortfolioValuation1.mmRealisedGainOrLoss}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1722,7 +1795,7 @@ public class AssetHolding {
 	public static final MMBusinessAttribute mmRealisedGainOrLoss = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmRealisedGainOrLoss);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RealisedGainOrLoss";
@@ -1730,6 +1803,14 @@ public class AssetHolding {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AssetHolding.class.getMethod("getRealisedGainOrLoss", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected UnrealisedCode unrealisedType;
@@ -1743,10 +1824,6 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.UnrealisedCode
 	 * UnrealisedCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1758,6 +1835,10 @@ public class AssetHolding {
 	 * BalanceDetails5.mmUnrealised}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1773,7 +1854,7 @@ public class AssetHolding {
 	public static final MMBusinessAttribute mmUnrealisedType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BalanceDetails6.mmUnrealised, BalanceDetails5.mmUnrealised);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnrealisedType";
@@ -1781,6 +1862,14 @@ public class AssetHolding {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnrealisedCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AssetHolding.class.getMethod("getUnrealisedType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount postHaircutValue;
@@ -1795,10 +1884,6 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1810,6 +1895,10 @@ public class AssetHolding {
 	 * Collateral6.mmPostHaircutValue}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1826,7 +1915,7 @@ public class AssetHolding {
 	public static final MMBusinessAttribute mmPostHaircutValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Collateral3.mmPostHaircutValue, Collateral6.mmPostHaircutValue);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PostHaircutValue";
@@ -1834,6 +1923,14 @@ public class AssetHolding {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AssetHolding.class.getMethod("getPostHaircutValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Interest> interest;
@@ -1853,10 +1950,6 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Interest Interest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1871,6 +1964,10 @@ public class AssetHolding {
 	 * InterestRateDerivative5.mmInflationIndex}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1887,7 +1984,7 @@ public class AssetHolding {
 	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(AssetClassAttributes1Choice.mmInterest, AssetClassAttributes1.mmInterest, InterestRateDerivative5.mmInflationIndex);
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
@@ -1934,7 +2031,7 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAssociationEnd mmCollateral = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Collateral";
@@ -1973,7 +2070,7 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAttribute mmFinancialAssetType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialAssetType";
@@ -1981,6 +2078,14 @@ public class AssetHolding {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AssetHolding.class.getMethod("getFinancialAssetType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Collateral variationMarginCollateral;
@@ -2021,7 +2126,7 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAssociationEnd mmVariationMarginCollateral = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VariationMarginCollateral";
@@ -2071,7 +2176,7 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAssociationEnd mmIndependentAmountCollateral = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndependentAmountCollateral";
@@ -2111,7 +2216,7 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAttribute mmHoldingType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HoldingType";
@@ -2119,6 +2224,14 @@ public class AssetHolding {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BlockedReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AssetHolding.class.getMethod("getHoldingType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount guaranteeAmount;
@@ -2149,7 +2262,7 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAttribute mmGuaranteeAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> AssetHolding.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GuaranteeAmount";
@@ -2157,6 +2270,14 @@ public class AssetHolding {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AssetHolding.class.getMethod("getGuaranteeAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -2171,12 +2292,21 @@ public class AssetHolding {
 						com.tools20022.repository.entity.CurrencyExchange.mmCalculatedAssetValue, com.tools20022.repository.entity.Collateral.mmAssetHolding, com.tools20022.repository.entity.Collateral.mmVariationMarginAssetHolding,
 						com.tools20022.repository.entity.Collateral.mmSegregatedIndependentAmountAssetHolding, com.tools20022.repository.entity.HaircutValuation.mmAssetHolding);
 				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentAggregateBalance1.mmHoldings, AggregateHoldingBalance1.mmBalanceForFinancialInstrument);
-				element_lazy = () -> Arrays.asList(AssetHolding.mmHoldingValue, AssetHolding.mmBookValue, AssetHolding.mmFaceAmount, AssetHolding.mmAmortisedFaceValue, AssetHolding.mmMarketValue, AssetHolding.mmBalance,
-						AssetHolding.mmUnrealisedGainOrLoss, AssetHolding.mmAsset, AssetHolding.mmHaircut, AssetHolding.mmEligibleCollateralValue, AssetHolding.mmExchangeRate, AssetHolding.mmCapValue, AssetHolding.mmRiskAdjustedValue,
-						AssetHolding.mmRealisedGainOrLoss, AssetHolding.mmUnrealisedType, AssetHolding.mmPostHaircutValue, AssetHolding.mmInterest, AssetHolding.mmCollateral, AssetHolding.mmFinancialAssetType,
-						AssetHolding.mmVariationMarginCollateral, AssetHolding.mmIndependentAmountCollateral, AssetHolding.mmHoldingType, AssetHolding.mmGuaranteeAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AssetHolding.mmHoldingValue, com.tools20022.repository.entity.AssetHolding.mmBookValue, com.tools20022.repository.entity.AssetHolding.mmFaceAmount,
+						com.tools20022.repository.entity.AssetHolding.mmAmortisedFaceValue, com.tools20022.repository.entity.AssetHolding.mmMarketValue, com.tools20022.repository.entity.AssetHolding.mmBalance,
+						com.tools20022.repository.entity.AssetHolding.mmUnrealisedGainOrLoss, com.tools20022.repository.entity.AssetHolding.mmAsset, com.tools20022.repository.entity.AssetHolding.mmHaircut,
+						com.tools20022.repository.entity.AssetHolding.mmEligibleCollateralValue, com.tools20022.repository.entity.AssetHolding.mmExchangeRate, com.tools20022.repository.entity.AssetHolding.mmCapValue,
+						com.tools20022.repository.entity.AssetHolding.mmRiskAdjustedValue, com.tools20022.repository.entity.AssetHolding.mmRealisedGainOrLoss, com.tools20022.repository.entity.AssetHolding.mmUnrealisedType,
+						com.tools20022.repository.entity.AssetHolding.mmPostHaircutValue, com.tools20022.repository.entity.AssetHolding.mmInterest, com.tools20022.repository.entity.AssetHolding.mmCollateral,
+						com.tools20022.repository.entity.AssetHolding.mmFinancialAssetType, com.tools20022.repository.entity.AssetHolding.mmVariationMarginCollateral,
+						com.tools20022.repository.entity.AssetHolding.mmIndependentAmountCollateral, com.tools20022.repository.entity.AssetHolding.mmHoldingType, com.tools20022.repository.entity.AssetHolding.mmGuaranteeAmount);
 				derivationComponent_lazy = () -> Arrays.asList(BalanceAmounts1.mmObject(), BalanceAmounts2.mmObject(), BalanceAmounts5.mmObject(), BalanceAmounts6.mmObject(), BalanceAmounts3.mmObject(), BalanceAmounts4.mmObject(),
 						FinancialInstrumentAggregateBalance1.mmObject(), FinancialInstrumentAggregateBalance1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AssetHolding.class;
 			}
 		});
 		return mmObject_lazy.get();

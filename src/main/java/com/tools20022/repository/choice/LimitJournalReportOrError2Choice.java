@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.LimitJournal1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the limit business report as either a limit report or a business
@@ -62,6 +66,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LimitJournalReportOrError2Choice", propOrder = {"limitJournal", "businessError"})
 public class LimitJournalReportOrError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class LimitJournalReportOrError2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LmtJrnl", required = true)
 	public LimitJournal1 getLimitJournal() {
 		return limitJournal;
 	}
@@ -168,6 +175,7 @@ public class LimitJournalReportOrError2Choice {
 		this.limitJournal = limitJournal;
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling3> getBusinessError() {
 		return businessError;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Diagnostic request from an acceptor.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorDiagnosticRequest5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorDiagnosticRequest6", propOrder = "environment")
 public class AcceptorDiagnosticRequest6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -144,6 +150,7 @@ public class AcceptorDiagnosticRequest6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment64 getEnvironment() {
 		return environment;
 	}

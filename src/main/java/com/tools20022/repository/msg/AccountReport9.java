@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements providing further details on the account report.
@@ -108,6 +112,9 @@ import java.util.List;
  * "Set of elements providing further details on the account report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountReport9", propOrder = {"identification", "electronicSequenceNumber", "legalSequenceNumber", "creationDateTime", "fromToDate", "copyDuplicateIndicator", "account", "relatedAccount", "interest", "balance",
+		"transactionsSummary", "entry", "additionalReportInformation"})
 public class AccountReport9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -708,6 +715,7 @@ public class AccountReport9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -716,6 +724,7 @@ public class AccountReport9 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "ElctrncSeqNb")
 	public Number getElectronicSequenceNumber() {
 		return electronicSequenceNumber;
 	}
@@ -724,6 +733,7 @@ public class AccountReport9 {
 		this.electronicSequenceNumber = electronicSequenceNumber;
 	}
 
+	@XmlElement(name = "LglSeqNb")
 	public Number getLegalSequenceNumber() {
 		return legalSequenceNumber;
 	}
@@ -732,6 +742,7 @@ public class AccountReport9 {
 		this.legalSequenceNumber = legalSequenceNumber;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -740,6 +751,7 @@ public class AccountReport9 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "FrToDt")
 	public DateTimePeriodDetails getFromToDate() {
 		return fromToDate;
 	}
@@ -748,6 +760,7 @@ public class AccountReport9 {
 		this.fromToDate = fromToDate;
 	}
 
+	@XmlElement(name = "CpyDplctInd")
 	public CopyDuplicate1Code getCopyDuplicateIndicator() {
 		return copyDuplicateIndicator;
 	}
@@ -756,6 +769,7 @@ public class AccountReport9 {
 		this.copyDuplicateIndicator = copyDuplicateIndicator;
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CashAccount13 getAccount() {
 		return account;
 	}
@@ -764,6 +778,7 @@ public class AccountReport9 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "RltdAcct")
 	public CashAccount7 getRelatedAccount() {
 		return relatedAccount;
 	}
@@ -772,6 +787,7 @@ public class AccountReport9 {
 		this.relatedAccount = relatedAccount;
 	}
 
+	@XmlElement(name = "Intrst")
 	public List<AccountInterest1> getInterest() {
 		return interest;
 	}
@@ -780,6 +796,7 @@ public class AccountReport9 {
 		this.interest = interest;
 	}
 
+	@XmlElement(name = "Bal")
 	public List<CashBalance1> getBalance() {
 		return balance;
 	}
@@ -788,6 +805,7 @@ public class AccountReport9 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "TxsSummry")
 	public TotalTransactions1 getTransactionsSummary() {
 		return transactionsSummary;
 	}
@@ -796,6 +814,7 @@ public class AccountReport9 {
 		this.transactionsSummary = transactionsSummary;
 	}
 
+	@XmlElement(name = "Ntry")
 	public List<ReportEntry1> getEntry() {
 		return entry;
 	}
@@ -804,6 +823,7 @@ public class AccountReport9 {
 		this.entry = entry;
 	}
 
+	@XmlElement(name = "AddtlRptInf")
 	public Max500Text getAdditionalReportInformation() {
 		return additionalReportInformation;
 	}

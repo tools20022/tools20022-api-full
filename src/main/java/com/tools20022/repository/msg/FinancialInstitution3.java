@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique and unambiguous identifier of a financial institution or a branch of a
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstitution3", propOrder = "financialInstitutionIdentification")
 public class FinancialInstitution3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -130,6 +136,7 @@ public class FinancialInstitution3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstnId", required = true)
 	public FinancialInstitutionIdentification5 getFinancialInstitutionIdentification() {
 		return financialInstitutionIdentification;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Parameters applied to the settlement of a security transfer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Transfer3", propOrder = {"transferReference", "transferDate", "totalUnitsNumber", "ownAccountTransferIndicator"})
 public class Transfer3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -289,6 +295,7 @@ public class Transfer3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -297,6 +304,7 @@ public class Transfer3 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "TrfDt")
 	public DateFormat1Choice getTransferDate() {
 		return transferDate;
 	}
@@ -305,6 +313,7 @@ public class Transfer3 {
 		this.transferDate = transferDate;
 	}
 
+	@XmlElement(name = "TtlUnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
@@ -313,6 +322,7 @@ public class Transfer3 {
 		this.totalUnitsNumber = totalUnitsNumber;
 	}
 
+	@XmlElement(name = "OwnAcctTrfInd", required = true)
 	public YesNoIndicator getOwnAccountTransferIndicator() {
 		return ownAccountTransferIndicator;
 	}

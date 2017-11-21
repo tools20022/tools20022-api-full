@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements that further details the information related to the type of
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTypeInformation16", propOrder = {"instructionPriority", "serviceLevel", "localInstrument", "categoryPurpose"})
 public class PaymentTypeInformation16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -297,6 +303,7 @@ public class PaymentTypeInformation16 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrPrty")
 	public Priority2Code getInstructionPriority() {
 		return instructionPriority;
 	}
@@ -305,6 +312,7 @@ public class PaymentTypeInformation16 {
 		this.instructionPriority = instructionPriority;
 	}
 
+	@XmlElement(name = "SvcLvl", required = true)
 	public ServiceLevel6 getServiceLevel() {
 		return serviceLevel;
 	}
@@ -313,6 +321,7 @@ public class PaymentTypeInformation16 {
 		this.serviceLevel = serviceLevel;
 	}
 
+	@XmlElement(name = "LclInstrm")
 	public LocalInstrument1Choice getLocalInstrument() {
 		return localInstrument;
 	}
@@ -321,6 +330,7 @@ public class PaymentTypeInformation16 {
 		this.localInstrument = localInstrument;
 	}
 
+	@XmlElement(name = "CtgyPurp")
 	public PaymentCategoryPurpose1Code getCategoryPurpose() {
 		return categoryPurpose;
 	}

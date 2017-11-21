@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Totals for the value of the holdings reported in the statement or page.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Totals for the value of the holdings reported in the statement or page."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TotalValueInPageAndStatement3", propOrder = {"totalHoldingsValueOfPage", "totalHoldingsValueOfStatement", "totalBookValueOfStatement", "totalEligibleCollateralValue"})
 public class TotalValueInPageAndStatement3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -272,6 +278,7 @@ public class TotalValueInPageAndStatement3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlHldgsValOfPg")
 	public AmountAndDirection14 getTotalHoldingsValueOfPage() {
 		return totalHoldingsValueOfPage;
 	}
@@ -280,6 +287,7 @@ public class TotalValueInPageAndStatement3 {
 		this.totalHoldingsValueOfPage = totalHoldingsValueOfPage;
 	}
 
+	@XmlElement(name = "TtlHldgsValOfStmt", required = true)
 	public AmountAndDirection14 getTotalHoldingsValueOfStatement() {
 		return totalHoldingsValueOfStatement;
 	}
@@ -288,6 +296,7 @@ public class TotalValueInPageAndStatement3 {
 		this.totalHoldingsValueOfStatement = totalHoldingsValueOfStatement;
 	}
 
+	@XmlElement(name = "TtlBookValOfStmt")
 	public AmountAndDirection14 getTotalBookValueOfStatement() {
 		return totalBookValueOfStatement;
 	}
@@ -296,6 +305,7 @@ public class TotalValueInPageAndStatement3 {
 		this.totalBookValueOfStatement = totalBookValueOfStatement;
 	}
 
+	@XmlElement(name = "TtlElgblCollVal")
 	public AmountAndDirection14 getTotalEligibleCollateralValue() {
 		return totalEligibleCollateralValue;
 	}

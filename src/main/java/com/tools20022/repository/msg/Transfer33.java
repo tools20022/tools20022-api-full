@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -138,6 +142,10 @@ import java.util.List;
  * Transfer29}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Transfer33", propOrder = {"transferConfirmationReference", "transferReference", "clientReference", "counterpartyReference", "businessFlowType", "effectiveTransferDate", "requestedSettlementDate", "effectiveSettlementDate",
+		"tradeDate", "transferOrderDateForm", "transferReason", "holdingsPlanType", "financialInstrumentDetails", "totalUnitsNumber", "unitsDetails", "averagePrice", "newAveragePrice", "averageDate", "newAverageDate", "transferCurrency",
+		"ownAccountTransferIndicator", "nonStandardSettlementInformation", "receivingAgentDetails", "deliveringAgentDetails", "transferExpensesPaymentType"})
 public class Transfer33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1514,6 +1522,7 @@ public class Transfer33 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrfConfRef", required = true)
 	public Max35Text getTransferConfirmationReference() {
 		return transferConfirmationReference;
 	}
@@ -1522,6 +1531,7 @@ public class Transfer33 {
 		this.transferConfirmationReference = transferConfirmationReference;
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -1530,6 +1540,7 @@ public class Transfer33 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public AdditionalReference7 getClientReference() {
 		return clientReference;
 	}
@@ -1538,6 +1549,7 @@ public class Transfer33 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CtrPtyRef")
 	public AdditionalReference7 getCounterpartyReference() {
 		return counterpartyReference;
 	}
@@ -1546,6 +1558,7 @@ public class Transfer33 {
 		this.counterpartyReference = counterpartyReference;
 	}
 
+	@XmlElement(name = "BizFlowTp")
 	public BusinessFlowType1Code getBusinessFlowType() {
 		return businessFlowType;
 	}
@@ -1554,6 +1567,7 @@ public class Transfer33 {
 		this.businessFlowType = businessFlowType;
 	}
 
+	@XmlElement(name = "FctvTrfDt")
 	public DateAndDateTimeChoice getEffectiveTransferDate() {
 		return effectiveTransferDate;
 	}
@@ -1562,6 +1576,7 @@ public class Transfer33 {
 		this.effectiveTransferDate = effectiveTransferDate;
 	}
 
+	@XmlElement(name = "ReqdSttlmDt")
 	public ISODate getRequestedSettlementDate() {
 		return requestedSettlementDate;
 	}
@@ -1570,6 +1585,7 @@ public class Transfer33 {
 		this.requestedSettlementDate = requestedSettlementDate;
 	}
 
+	@XmlElement(name = "FctvSttlmDt")
 	public DateAndDateTimeChoice getEffectiveSettlementDate() {
 		return effectiveSettlementDate;
 	}
@@ -1578,6 +1594,7 @@ public class Transfer33 {
 		this.effectiveSettlementDate = effectiveSettlementDate;
 	}
 
+	@XmlElement(name = "TradDt")
 	public DateAndDateTimeChoice getTradeDate() {
 		return tradeDate;
 	}
@@ -1586,6 +1603,7 @@ public class Transfer33 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "TrfOrdrDtForm")
 	public ISODate getTransferOrderDateForm() {
 		return transferOrderDateForm;
 	}
@@ -1594,6 +1612,7 @@ public class Transfer33 {
 		this.transferOrderDateForm = transferOrderDateForm;
 	}
 
+	@XmlElement(name = "TrfRsn")
 	public TransferReason1 getTransferReason() {
 		return transferReason;
 	}
@@ -1602,6 +1621,7 @@ public class Transfer33 {
 		this.transferReason = transferReason;
 	}
 
+	@XmlElement(name = "HldgsPlanTp")
 	public List<HoldingsPlanType1Code> getHoldingsPlanType() {
 		return holdingsPlanType;
 	}
@@ -1610,6 +1630,7 @@ public class Transfer33 {
 		this.holdingsPlanType = holdingsPlanType;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument49 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -1618,6 +1639,7 @@ public class Transfer33 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "TtlUnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
@@ -1626,6 +1648,7 @@ public class Transfer33 {
 		this.totalUnitsNumber = totalUnitsNumber;
 	}
 
+	@XmlElement(name = "UnitsDtls")
 	public List<Unit6> getUnitsDetails() {
 		return unitsDetails;
 	}
@@ -1634,6 +1657,7 @@ public class Transfer33 {
 		this.unitsDetails = unitsDetails;
 	}
 
+	@XmlElement(name = "AvrgPric")
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAveragePrice() {
 		return averagePrice;
 	}
@@ -1642,6 +1666,7 @@ public class Transfer33 {
 		this.averagePrice = averagePrice;
 	}
 
+	@XmlElement(name = "NewAvrgPric")
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getNewAveragePrice() {
 		return newAveragePrice;
 	}
@@ -1650,6 +1675,7 @@ public class Transfer33 {
 		this.newAveragePrice = newAveragePrice;
 	}
 
+	@XmlElement(name = "AvrgDt")
 	public ISODate getAverageDate() {
 		return averageDate;
 	}
@@ -1658,6 +1684,7 @@ public class Transfer33 {
 		this.averageDate = averageDate;
 	}
 
+	@XmlElement(name = "NewAvrgDt")
 	public ISODate getNewAverageDate() {
 		return newAverageDate;
 	}
@@ -1666,6 +1693,7 @@ public class Transfer33 {
 		this.newAverageDate = newAverageDate;
 	}
 
+	@XmlElement(name = "TrfCcy")
 	public ActiveOrHistoricCurrencyCode getTransferCurrency() {
 		return transferCurrency;
 	}
@@ -1674,6 +1702,7 @@ public class Transfer33 {
 		this.transferCurrency = transferCurrency;
 	}
 
+	@XmlElement(name = "OwnAcctTrfInd")
 	public YesNoIndicator getOwnAccountTransferIndicator() {
 		return ownAccountTransferIndicator;
 	}
@@ -1682,6 +1711,7 @@ public class Transfer33 {
 		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
 	}
 
+	@XmlElement(name = "NonStdSttlmInf")
 	public Max350Text getNonStandardSettlementInformation() {
 		return nonStandardSettlementInformation;
 	}
@@ -1690,6 +1720,7 @@ public class Transfer33 {
 		this.nonStandardSettlementInformation = nonStandardSettlementInformation;
 	}
 
+	@XmlElement(name = "RcvgAgtDtls")
 	public PartyIdentificationAndAccount125 getReceivingAgentDetails() {
 		return receivingAgentDetails;
 	}
@@ -1698,6 +1729,7 @@ public class Transfer33 {
 		this.receivingAgentDetails = receivingAgentDetails;
 	}
 
+	@XmlElement(name = "DlvrgAgtDtls")
 	public PartyIdentificationAndAccount125 getDeliveringAgentDetails() {
 		return deliveringAgentDetails;
 	}
@@ -1706,6 +1738,7 @@ public class Transfer33 {
 		this.deliveringAgentDetails = deliveringAgentDetails;
 	}
 
+	@XmlElement(name = "TrfExpnssPmtTp")
 	public ChargePaymentMethod1Choice getTransferExpensesPaymentType() {
 		return transferExpensesPaymentType;
 	}

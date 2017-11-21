@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Generic identification scheme for a document.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * GenericDocumentIdentification1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericDocumentIdentification4", propOrder = {"messageNumber", "identification"})
 public class GenericDocumentIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class GenericDocumentIdentification4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgNb")
 	public DocumentNumber5Choice getMessageNumber() {
 		return messageNumber;
 	}
@@ -186,6 +193,7 @@ public class GenericDocumentIdentification4 {
 		this.messageNumber = messageNumber;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}

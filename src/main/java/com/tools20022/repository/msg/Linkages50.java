@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.RestrictedFINMax16Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to a linked transaction.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information related to a linked transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Linkages50", propOrder = {"processingPosition", "securitiesSettlementTransactionIdentification"})
 public class Linkages50 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -200,6 +206,7 @@ public class Linkages50 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcgPos")
 	public ProcessingPosition23Choice getProcessingPosition() {
 		return processingPosition;
 	}
@@ -208,6 +215,7 @@ public class Linkages50 {
 		this.processingPosition = processingPosition;
 	}
 
+	@XmlElement(name = "SctiesSttlmTxId", required = true)
 	public RestrictedFINMax16Text getSecuritiesSettlementTransactionIdentification() {
 		return securitiesSettlementTransactionIdentification;
 	}

@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -41,6 +42,39 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmFrequency
+ * InvestmentPlan.mmFrequency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmAmount
+ * InvestmentPlan.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmAsset
+ * InvestmentPlan.mmAsset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmInstalment
+ * InvestmentPlan.mmInstalment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentPlan#mmRelatedService
+ * InvestmentPlan.mmRelatedService}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmInsurance
+ * InvestmentPlan.mmInsurance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentPlan#mmStandingOrder
+ * InvestmentPlan.mmStandingOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentPlan#mmMultiCurrency
+ * InvestmentPlan.mmMultiCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmCurrency
+ * InvestmentPlan.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmPortfolio
+ * InvestmentPlan.mmPortfolio}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentPlan#mmInvestmentPeriod
+ * InvestmentPlan.mmInvestmentPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmPlanStatus
+ * InvestmentPlan.mmPlanStatus}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -129,39 +163,6 @@ import java.util.List;
  * InvestmentPlan15.mmQuantity}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmFrequency
- * InvestmentPlan.mmFrequency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmAmount
- * InvestmentPlan.mmAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmAsset
- * InvestmentPlan.mmAsset}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmInstalment
- * InvestmentPlan.mmInstalment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentPlan#mmRelatedService
- * InvestmentPlan.mmRelatedService}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmInsurance
- * InvestmentPlan.mmInsurance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentPlan#mmStandingOrder
- * InvestmentPlan.mmStandingOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentPlan#mmMultiCurrency
- * InvestmentPlan.mmMultiCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmCurrency
- * InvestmentPlan.mmCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmPortfolio
- * InvestmentPlan.mmPortfolio}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentPlan#mmInvestmentPeriod
- * InvestmentPlan.mmInvestmentPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmPlanStatus
- * InvestmentPlan.mmPlanStatus}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -193,11 +194,6 @@ public class InvestmentPlan {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FrequencyCode
 	 * FrequencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentPlan
-	 * InvestmentPlan}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -258,6 +254,11 @@ public class InvestmentPlan {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentPlan
+	 * InvestmentPlan}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -275,7 +276,7 @@ public class InvestmentPlan {
 			derivation_lazy = () -> Arrays.asList(InvestmentPlan2.mmFrequency, InvestmentPlan2.mmExtendedFrequency, InvestmentPlan4.mmFrequency, InvestmentPlan4.mmExtendedFrequency, InvestmentPlan6.mmFrequency, InvestmentPlan5.mmFrequency,
 					InvestmentPlan5.mmExtendedFrequency, InvestmentPlan3.mmFrequency, InvestmentPlan3.mmExtendedFrequency, InvestmentPlan7.mmFrequency, InvestmentPlan9.mmFrequency, InvestmentPlan8.mmFrequency, InvestmentPlan10.mmFrequency,
 					InvestmentPlan11.mmFrequency, InvestmentPlan12.mmFrequency, InvestmentPlan13.mmFrequency, InvestmentPlan14.mmFrequency, InvestmentPlan15.mmFrequency);
-			elementContext_lazy = () -> InvestmentPlan.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Frequency";
@@ -283,6 +284,14 @@ public class InvestmentPlan {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FrequencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentPlan.class.getMethod("getFrequency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount amount;
@@ -298,11 +307,6 @@ public class InvestmentPlan {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentPlan
-	 * InvestmentPlan}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -316,6 +320,11 @@ public class InvestmentPlan {
 	 * InvestmentPlan3.mmAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentPlan
+	 * InvestmentPlan}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -332,7 +341,7 @@ public class InvestmentPlan {
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentPlan2.mmAmount, InvestmentPlan4.mmAmount, InvestmentPlan5.mmAmount, InvestmentPlan3.mmAmount);
-			elementContext_lazy = () -> InvestmentPlan.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -340,6 +349,14 @@ public class InvestmentPlan {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentPlan.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Asset asset;
@@ -360,11 +377,6 @@ public class InvestmentPlan {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentPlan
-	 * InvestmentPlan}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -373,6 +385,11 @@ public class InvestmentPlan {
 	 * InvestmentPlan2.mmSecurityDetails}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentPlan
+	 * InvestmentPlan}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -389,7 +406,7 @@ public class InvestmentPlan {
 	public static final MMBusinessAssociationEnd mmAsset = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentPlan2.mmSecurityDetails);
-			elementContext_lazy = () -> InvestmentPlan.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Asset";
@@ -419,11 +436,6 @@ public class InvestmentPlan {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Instalment
 	 * Instalment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentPlan
-	 * InvestmentPlan}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -442,6 +454,11 @@ public class InvestmentPlan {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentPlan
+	 * InvestmentPlan}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -457,7 +474,7 @@ public class InvestmentPlan {
 	public static final MMBusinessAssociationEnd mmInstalment = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentPlan12.mmInitialAmount, InvestmentPlan13.mmInitialAmount, InvestmentPlan14.mmInitialAmount, InvestmentPlan15.mmInitialAmount);
-			elementContext_lazy = () -> InvestmentPlan.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Instalment";
@@ -505,7 +522,7 @@ public class InvestmentPlan {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedService = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentPlan.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedService";
@@ -554,7 +571,7 @@ public class InvestmentPlan {
 	 */
 	public static final MMBusinessAssociationEnd mmInsurance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentPlan.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Insurance";
@@ -604,7 +621,7 @@ public class InvestmentPlan {
 	 */
 	public static final MMBusinessAssociationEnd mmStandingOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentPlan.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StandingOrder";
@@ -645,7 +662,7 @@ public class InvestmentPlan {
 	 */
 	public static final MMBusinessAttribute mmMultiCurrency = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> InvestmentPlan.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MultiCurrency";
@@ -653,6 +670,14 @@ public class InvestmentPlan {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentPlan.class.getMethod("getMultiCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyCode currency;
@@ -683,7 +708,7 @@ public class InvestmentPlan {
 	 */
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> InvestmentPlan.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
@@ -691,6 +716,14 @@ public class InvestmentPlan {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentPlan.class.getMethod("getCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Portfolio portfolio;
@@ -730,7 +763,7 @@ public class InvestmentPlan {
 	 */
 	public static final MMBusinessAssociationEnd mmPortfolio = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentPlan.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Portfolio";
@@ -779,7 +812,7 @@ public class InvestmentPlan {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentPlan.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPeriod";
@@ -802,11 +835,6 @@ public class InvestmentPlan {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PlanStatusCode
 	 * PlanStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentPlan
-	 * InvestmentPlan}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -837,6 +865,11 @@ public class InvestmentPlan {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentPlan
+	 * InvestmentPlan}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -851,7 +884,7 @@ public class InvestmentPlan {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentPlan10.mmPlanStatus, InvestmentPlan11.mmPlanStatus, PlanStatus1Choice.mmCode, InvestmentPlan12.mmPlanStatus, InvestmentPlan13.mmPlanStatus, PlanStatus2Choice.mmCode,
 					InvestmentPlan14.mmPlanStatus, InvestmentPlan15.mmPlanStatus);
-			elementContext_lazy = () -> InvestmentPlan.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlanStatus";
@@ -859,6 +892,14 @@ public class InvestmentPlan {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlanStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentPlan.class.getMethod("getPlanStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -874,11 +915,18 @@ public class InvestmentPlan {
 						com.tools20022.repository.entity.Instalment.mmInvestmentPlan, com.tools20022.repository.entity.InsuranceCertificate.mmRelatedInvestmentPlan, com.tools20022.repository.entity.Portfolio.mmInvestmentPlan);
 				derivationElement_lazy = () -> Arrays.asList(InvestmentPlan6.mmQuantity, InvestmentPlan7.mmQuantity, InvestmentPlan9.mmQuantity, InvestmentPlan8.mmQuantity, InvestmentPlan10.mmQuantity, InvestmentPlan11.mmQuantity,
 						InvestmentPlan12.mmQuantity, InvestmentPlan13.mmQuantity, InvestmentPlan14.mmQuantity, InvestmentPlan15.mmQuantity);
-				element_lazy = () -> Arrays.asList(InvestmentPlan.mmFrequency, InvestmentPlan.mmAmount, InvestmentPlan.mmAsset, InvestmentPlan.mmInstalment, InvestmentPlan.mmRelatedService, InvestmentPlan.mmInsurance,
-						InvestmentPlan.mmStandingOrder, InvestmentPlan.mmMultiCurrency, InvestmentPlan.mmCurrency, InvestmentPlan.mmPortfolio, InvestmentPlan.mmInvestmentPeriod, InvestmentPlan.mmPlanStatus);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentPlan.mmFrequency, com.tools20022.repository.entity.InvestmentPlan.mmAmount, com.tools20022.repository.entity.InvestmentPlan.mmAsset,
+						com.tools20022.repository.entity.InvestmentPlan.mmInstalment, com.tools20022.repository.entity.InvestmentPlan.mmRelatedService, com.tools20022.repository.entity.InvestmentPlan.mmInsurance,
+						com.tools20022.repository.entity.InvestmentPlan.mmStandingOrder, com.tools20022.repository.entity.InvestmentPlan.mmMultiCurrency, com.tools20022.repository.entity.InvestmentPlan.mmCurrency,
+						com.tools20022.repository.entity.InvestmentPlan.mmPortfolio, com.tools20022.repository.entity.InvestmentPlan.mmInvestmentPeriod, com.tools20022.repository.entity.InvestmentPlan.mmPlanStatus);
 				derivationComponent_lazy = () -> Arrays.asList(InvestmentPlan2.mmObject(), InvestmentPlan4.mmObject(), InvestmentPlan6.mmObject(), InvestmentPlan5.mmObject(), InvestmentPlan3.mmObject(), InvestmentPlan7.mmObject(),
 						InvestmentPlan9.mmObject(), InvestmentPlan8.mmObject(), InvestmentPlan10.mmObject(), InvestmentPlan11.mmObject(), PlanStatus1Choice.mmObject(), InvestmentPlan12.mmObject(), InvestmentPlan13.mmObject(),
 						PlanStatus2Choice.mmObject(), InvestmentPlan14.mmObject(), InvestmentPlan15.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvestmentPlan.class;
 			}
 		});
 		return mmObject_lazy.get();

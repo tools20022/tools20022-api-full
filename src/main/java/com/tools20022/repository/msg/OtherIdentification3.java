@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Other accepted financial instrument's identification than ISIN.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Other accepted financial instrument's identification than ISIN."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherIdentification3", propOrder = {"identification", "suffix", "type"})
 public class OtherIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class OtherIdentification3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public RestrictedFINXMax31Text getIdentification() {
 		return identification;
 	}
@@ -238,6 +245,7 @@ public class OtherIdentification3 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Sfx")
 	public Max16Text getSuffix() {
 		return suffix;
 	}
@@ -246,6 +254,7 @@ public class OtherIdentification3 {
 		this.suffix = suffix;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public IdentificationSource3Choice getType() {
 		return type;
 	}

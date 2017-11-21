@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Order to invest the investor's principal in an investment fund.
@@ -130,6 +134,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionBulkOrder4", propOrder = {"masterReference", "placeOfTrade", "orderDateTime", "expiryDateTime", "requestedFutureTradeDate", "cancellationRight", "extendedCancellationRight", "financialInstrumentDetails",
+		"individualOrderDetails", "requestedSettlementCurrency", "requestedNAVCurrency", "totalSettlementAmount", "cashSettlementDate", "bulkCashSettlementDetails"})
 public class SubscriptionBulkOrder4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1002,6 +1009,7 @@ public class SubscriptionBulkOrder4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -1010,6 +1018,7 @@ public class SubscriptionBulkOrder4 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public PlaceOfTradeIdentification1Choice getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -1018,6 +1027,7 @@ public class SubscriptionBulkOrder4 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "OrdrDtTm")
 	public ISODateTime getOrderDateTime() {
 		return orderDateTime;
 	}
@@ -1026,6 +1036,7 @@ public class SubscriptionBulkOrder4 {
 		this.orderDateTime = orderDateTime;
 	}
 
+	@XmlElement(name = "XpryDtTm")
 	public DateAndDateTimeChoice getExpiryDateTime() {
 		return expiryDateTime;
 	}
@@ -1034,6 +1045,7 @@ public class SubscriptionBulkOrder4 {
 		this.expiryDateTime = expiryDateTime;
 	}
 
+	@XmlElement(name = "ReqdFutrTradDt")
 	public ISODate getRequestedFutureTradeDate() {
 		return requestedFutureTradeDate;
 	}
@@ -1042,6 +1054,7 @@ public class SubscriptionBulkOrder4 {
 		this.requestedFutureTradeDate = requestedFutureTradeDate;
 	}
 
+	@XmlElement(name = "CxlRght")
 	public CancellationRight1Code getCancellationRight() {
 		return cancellationRight;
 	}
@@ -1050,6 +1063,7 @@ public class SubscriptionBulkOrder4 {
 		this.cancellationRight = cancellationRight;
 	}
 
+	@XmlElement(name = "XtndedCxlRght")
 	public Extended350Code getExtendedCancellationRight() {
 		return extendedCancellationRight;
 	}
@@ -1058,6 +1072,7 @@ public class SubscriptionBulkOrder4 {
 		this.extendedCancellationRight = extendedCancellationRight;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument10 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -1066,6 +1081,7 @@ public class SubscriptionBulkOrder4 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "IndvOrdrDtls", required = true)
 	public List<SubscriptionOrder7> getIndividualOrderDetails() {
 		return individualOrderDetails;
 	}
@@ -1074,6 +1090,7 @@ public class SubscriptionBulkOrder4 {
 		this.individualOrderDetails = individualOrderDetails;
 	}
 
+	@XmlElement(name = "ReqdSttlmCcy")
 	public ActiveCurrencyCode getRequestedSettlementCurrency() {
 		return requestedSettlementCurrency;
 	}
@@ -1082,6 +1099,7 @@ public class SubscriptionBulkOrder4 {
 		this.requestedSettlementCurrency = requestedSettlementCurrency;
 	}
 
+	@XmlElement(name = "ReqdNAVCcy")
 	public ActiveOrHistoricCurrencyCode getRequestedNAVCurrency() {
 		return requestedNAVCurrency;
 	}
@@ -1090,6 +1108,7 @@ public class SubscriptionBulkOrder4 {
 		this.requestedNAVCurrency = requestedNAVCurrency;
 	}
 
+	@XmlElement(name = "TtlSttlmAmt")
 	public ActiveCurrencyAndAmount getTotalSettlementAmount() {
 		return totalSettlementAmount;
 	}
@@ -1098,6 +1117,7 @@ public class SubscriptionBulkOrder4 {
 		this.totalSettlementAmount = totalSettlementAmount;
 	}
 
+	@XmlElement(name = "CshSttlmDt")
 	public ISODate getCashSettlementDate() {
 		return cashSettlementDate;
 	}
@@ -1106,6 +1126,7 @@ public class SubscriptionBulkOrder4 {
 		this.cashSettlementDate = cashSettlementDate;
 	}
 
+	@XmlElement(name = "BlkCshSttlmDtls")
 	public PaymentTransaction23 getBulkCashSettlementDetails() {
 		return bulkCashSettlementDetails;
 	}

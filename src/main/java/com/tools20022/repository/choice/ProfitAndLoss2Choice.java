@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.InvestmentFundOrderExecution;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between profit and loss.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ProfitAndLoss1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProfitAndLoss2Choice", propOrder = {"profit", "loss"})
 public class ProfitAndLoss2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -187,6 +193,7 @@ public class ProfitAndLoss2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prft", required = true)
 	public ActiveCurrencyAndAmount getProfit() {
 		return profit;
 	}
@@ -195,6 +202,7 @@ public class ProfitAndLoss2Choice {
 		this.profit = profit;
 	}
 
+	@XmlElement(name = "Loss", required = true)
 	public ActiveCurrencyAndAmount getLoss() {
 		return loss;
 	}

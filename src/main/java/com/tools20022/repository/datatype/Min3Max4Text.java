@@ -56,6 +56,8 @@ public class Min3Max4Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Min3Max4Text";
 				definition = "Specifies a character string with a minimum length of 3 characters, and a maximum length of4 characters.";
+				minLength = 3;
+				maxLength = 4;
 			}
 		});
 		return mmObject_lazy.get();

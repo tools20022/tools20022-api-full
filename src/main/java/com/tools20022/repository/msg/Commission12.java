@@ -36,6 +36,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money due to a party as compensation for a service.
@@ -99,6 +103,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Commission12", propOrder = {"type", "extendedType", "basis", "extendedBasis", "amount", "recipientIdentification", "commercialAgreementReference"})
 public class Commission12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -564,6 +570,7 @@ public class Commission12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public CommissionType7Code getType() {
 		return type;
 	}
@@ -572,6 +579,7 @@ public class Commission12 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XtndedTp", required = true)
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
@@ -580,6 +588,7 @@ public class Commission12 {
 		this.extendedType = extendedType;
 	}
 
+	@XmlElement(name = "Bsis")
 	public TaxationBasis4Code getBasis() {
 		return basis;
 	}
@@ -588,6 +597,7 @@ public class Commission12 {
 		this.basis = basis;
 	}
 
+	@XmlElement(name = "XtndedBsis")
 	public Extended350Code getExtendedBasis() {
 		return extendedBasis;
 	}
@@ -596,6 +606,7 @@ public class Commission12 {
 		this.extendedBasis = extendedBasis;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -604,6 +615,7 @@ public class Commission12 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification2Choice getRecipientIdentification() {
 		return recipientIdentification;
 	}
@@ -612,6 +624,7 @@ public class Commission12 {
 		this.recipientIdentification = recipientIdentification;
 	}
 
+	@XmlElement(name = "ComrclAgrmtRef")
 	public Max35Text getCommercialAgreementReference() {
 		return commercialAgreementReference;
 	}

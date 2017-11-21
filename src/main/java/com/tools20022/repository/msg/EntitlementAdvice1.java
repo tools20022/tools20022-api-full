@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the CA entitlement.
@@ -88,6 +92,8 @@ import java.util.List;
  * definition} = "Provides information about the CA entitlement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EntitlementAdvice1", propOrder = {"optionType", "optionNumber", "recordDate", "paymentDate", "accountAndDistributionDetails"})
 public class EntitlementAdvice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -352,6 +358,7 @@ public class EntitlementAdvice1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption1FormatChoice getOptionType() {
 		return optionType;
 	}
@@ -360,6 +367,7 @@ public class EntitlementAdvice1 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "OptnNb", required = true)
 	public Exact3NumericText getOptionNumber() {
 		return optionNumber;
 	}
@@ -368,6 +376,7 @@ public class EntitlementAdvice1 {
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "RcrdDt")
 	public DateFormat4Choice getRecordDate() {
 		return recordDate;
 	}
@@ -376,6 +385,7 @@ public class EntitlementAdvice1 {
 		this.recordDate = recordDate;
 	}
 
+	@XmlElement(name = "PmtDt")
 	public DateFormat4Choice getPaymentDate() {
 		return paymentDate;
 	}
@@ -384,6 +394,7 @@ public class EntitlementAdvice1 {
 		this.paymentDate = paymentDate;
 	}
 
+	@XmlElement(name = "AcctAndDstrbtnDtls", required = true)
 	public List<Entitlement1> getAccountAndDistributionDetails() {
 		return accountAndDistributionDetails;
 	}

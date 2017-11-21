@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -42,6 +43,65 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmPurpose
+ * Organisation.mmPurpose}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmRegistrationDate
+ * Organisation.mmRegistrationDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+ * Organisation.mmOrganisationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmParentOrganisation
+ * Organisation.mmParentOrganisation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmBranch
+ * Organisation.mmBranch}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmSecuritiesModification
+ * Organisation.mmSecuritiesModification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmPlaceOfOperation
+ * Organisation.mmPlaceOfOperation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmPlaceOfRegistration
+ * Organisation.mmPlaceOfRegistration}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmDescription
+ * Organisation.mmDescription}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmLegalStructure
+ * Organisation.mmLegalStructure}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmSector
+ * Organisation.mmSector}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmRelatedIndicationOfInterest
+ * Organisation.mmRelatedIndicationOfInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmStrategy
+ * Organisation.mmStrategy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationHierarchy
+ * Organisation.mmOrganisationHierarchy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmRepresentativeOfficer
+ * Organisation.mmRepresentativeOfficer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmEstablishmentDate
+ * Organisation.mmEstablishmentDate}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.FinancialInstitution
+ * FinancialInstitution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.NonFinancialInstitution
+ * NonFinancialInstitution}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Party Party}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -335,65 +395,6 @@ import java.util.List;
  * OriginalPaymentInformation7.mmCreditorAgent}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Party Party}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.FinancialInstitution
- * FinancialInstitution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.NonFinancialInstitution
- * NonFinancialInstitution}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmPurpose
- * Organisation.mmPurpose}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmRegistrationDate
- * Organisation.mmRegistrationDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
- * Organisation.mmOrganisationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmParentOrganisation
- * Organisation.mmParentOrganisation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmBranch
- * Organisation.mmBranch}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmSecuritiesModification
- * Organisation.mmSecuritiesModification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmPlaceOfOperation
- * Organisation.mmPlaceOfOperation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmPlaceOfRegistration
- * Organisation.mmPlaceOfRegistration}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmDescription
- * Organisation.mmDescription}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmLegalStructure
- * Organisation.mmLegalStructure}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmSector
- * Organisation.mmSector}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmRelatedIndicationOfInterest
- * Organisation.mmRelatedIndicationOfInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmStrategy
- * Organisation.mmStrategy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationHierarchy
- * Organisation.mmOrganisationHierarchy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmRepresentativeOfficer
- * Organisation.mmRepresentativeOfficer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmEstablishmentDate
- * Organisation.mmEstablishmentDate}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -424,10 +425,6 @@ public class Organisation extends Party {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -458,6 +455,10 @@ public class Organisation extends Party {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -481,6 +482,14 @@ public class Organisation extends Party {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Organisation.class.getMethod("getPurpose", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ISODateTime registrationDate;
 	/**
@@ -492,10 +501,6 @@ public class Organisation extends Party {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -553,6 +558,10 @@ public class Organisation extends Party {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -578,6 +587,14 @@ public class Organisation extends Party {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Organisation.class.getMethod("getRegistrationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<com.tools20022.repository.entity.OrganisationIdentification> organisationIdentification;
 	/**
@@ -599,12 +616,12 @@ public class Organisation extends Party {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} = List of 774 elements</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} = List of 774 elements</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -697,10 +714,6 @@ public class Organisation extends Party {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Organisation
 	 * Organisation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -727,6 +740,10 @@ public class Organisation extends Party {
 	 * DirectDebitMandate6.mmDebtorAgentBranch}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -820,10 +837,6 @@ public class Organisation extends Party {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Location Location}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -835,6 +848,10 @@ public class Organisation extends Party {
 	 * Organisation7.mmCountryOfOperation}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -879,10 +896,6 @@ public class Organisation extends Party {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Location Location}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -891,6 +904,10 @@ public class Organisation extends Party {
 	 * OrganisationIdentification28.mmCountryOfResidence}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -954,6 +971,14 @@ public class Organisation extends Party {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Organisation.class.getMethod("getDescription", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected LegalStructureCode legalStructure;
 	/**
@@ -992,6 +1017,14 @@ public class Organisation extends Party {
 			minOccurs = 1;
 			simpleType_lazy = () -> LegalStructureCode.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Organisation.class.getMethod("getLegalStructure", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Sector sector;
 	/**
@@ -1010,10 +1043,6 @@ public class Organisation extends Party {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Sector Sector}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1025,6 +1054,10 @@ public class Organisation extends Party {
 	 * CollateralValuation7.mmSector}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1260,10 +1293,6 @@ public class Organisation extends Party {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1272,6 +1301,10 @@ public class Organisation extends Party {
 	 * LegalOrganisation2.mmEstablishmentDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1294,6 +1327,14 @@ public class Organisation extends Party {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Organisation.class.getMethod("getEstablishmentDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1337,6 +1378,11 @@ public class Organisation extends Party {
 						Organisation17.mmObject(), SectorAndLocation1.mmObject(), Organisation18.mmObject(), Organisation19.mmObject(), LegalOrganisation2.mmObject(), DerivativePartyIdentification1Choice.mmObject(),
 						Organisation21.mmObject(), Organisation22.mmObject(), Organisation23.mmObject(), Organisation24.mmObject(), NameOrSector1Choice.mmObject(), ReportedPartyIdentification1.mmObject(), Organisation25.mmObject(),
 						Organisation26.mmObject(), OrganisationIdentification28.mmObject(), Organisation30.mmObject(), Organisation29.mmObject(), NameAndLocation1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Organisation.class;
 			}
 		});
 		return mmObject_lazy.get();

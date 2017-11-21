@@ -36,6 +36,17 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.JurisdictionStrategy#mmJurisdiction
+ * JurisdictionStrategy.mmJurisdiction}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PortfolioStrategy
+ * PortfolioStrategy}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -43,17 +54,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Jurisdiction#mmAssociatedStrategy
  * Jurisdiction.mmAssociatedStrategy}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PortfolioStrategy
- * PortfolioStrategy}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.JurisdictionStrategy#mmJurisdiction
- * JurisdictionStrategy.mmJurisdiction}</li>
  * </ul>
  * </li>
  * <li>
@@ -112,7 +112,7 @@ public class JurisdictionStrategy extends PortfolioStrategy {
 	 */
 	public static final MMBusinessAssociationEnd mmJurisdiction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> JurisdictionStrategy.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.JurisdictionStrategy.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Jurisdiction";
@@ -133,7 +133,12 @@ public class JurisdictionStrategy extends PortfolioStrategy {
 				definition = "Strategy is jurisdiction based.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Jurisdiction.mmAssociatedStrategy);
 				superType_lazy = () -> PortfolioStrategy.mmObject();
-				element_lazy = () -> Arrays.asList(JurisdictionStrategy.mmJurisdiction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.JurisdictionStrategy.mmJurisdiction);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return JurisdictionStrategy.class;
 			}
 		});
 		return mmObject_lazy.get();

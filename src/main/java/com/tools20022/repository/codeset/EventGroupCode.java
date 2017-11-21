@@ -29,15 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EventGroup1Code
- * EventGroup1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventGroup2Code
- * EventGroup2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -49,6 +40,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.EventGroupCode#mmDistribution
  * EventGroupCode.mmDistribution}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventGroup1Code
+ * EventGroup1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventGroup2Code
+ * EventGroup2Code}</li>
  * </ul>
  * </li>
  * <li>

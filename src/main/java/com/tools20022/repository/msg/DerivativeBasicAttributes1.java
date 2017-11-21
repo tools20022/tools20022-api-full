@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the derivative contract not included in the general financial
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DerivativeBasicAttributes1", propOrder = {"notionalCurrencyAndAmount", "interestIncludedInPrice"})
 public class DerivativeBasicAttributes1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class DerivativeBasicAttributes1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NtnlCcyAndAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getNotionalCurrencyAndAmount() {
 		return notionalCurrencyAndAmount;
 	}
@@ -186,6 +193,7 @@ public class DerivativeBasicAttributes1 {
 		this.notionalCurrencyAndAmount = notionalCurrencyAndAmount;
 	}
 
+	@XmlElement(name = "IntrstInclInPric")
 	public YesNoIndicator getInterestIncludedInPrice() {
 		return interestIncludedInPrice;
 	}

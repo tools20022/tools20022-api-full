@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding security that will being
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentAttributesSD4", propOrder = {"CSDDisbursedSecurityIdentification", "CSDDisbursedSecurityDescription", "CSDDisbursedFractionalSecurityIdentification"})
 public class FinancialInstrumentAttributesSD4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class FinancialInstrumentAttributesSD4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CSDDsbrsdSctyId")
 	public SecurityIdentification15 getCSDDisbursedSecurityIdentification() {
 		return cSDDisbursedSecurityIdentification;
 	}
@@ -226,6 +233,7 @@ public class FinancialInstrumentAttributesSD4 {
 		this.cSDDisbursedSecurityIdentification = cSDDisbursedSecurityIdentification;
 	}
 
+	@XmlElement(name = "CSDDsbrsdSctyDesc")
 	public Max140Text getCSDDisbursedSecurityDescription() {
 		return cSDDisbursedSecurityDescription;
 	}
@@ -234,6 +242,7 @@ public class FinancialInstrumentAttributesSD4 {
 		this.cSDDisbursedSecurityDescription = cSDDisbursedSecurityDescription;
 	}
 
+	@XmlElement(name = "CSDDsbrsdFrctnlSctyId")
 	public SecurityIdentification15 getCSDDisbursedFractionalSecurityIdentification() {
 		return cSDDisbursedFractionalSecurityIdentification;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.TimePeriod;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Particular time span specified between a start time and an end time. The time
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TimePeriodDetails1", propOrder = {"fromTime", "toTime"})
 public class TimePeriodDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class TimePeriodDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrTm", required = true)
 	public ISOTime getFromTime() {
 		return fromTime;
 	}
@@ -181,6 +188,7 @@ public class TimePeriodDetails1 {
 		this.fromTime = fromTime;
 	}
 
+	@XmlElement(name = "ToTm")
 	public ISOTime getToTime() {
 		return toTime;
 	}

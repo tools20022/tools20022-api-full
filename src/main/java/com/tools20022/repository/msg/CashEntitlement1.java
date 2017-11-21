@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CorporateActionCashEntitlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about cash entitlements.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information about cash entitlements."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashEntitlement1", propOrder = "cashAmount")
 public class CashEntitlement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -124,6 +130,7 @@ public class CashEntitlement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshAmt", required = true)
 	public ActiveCurrencyAndAmount getCashAmount() {
 		return cashAmount;
 	}

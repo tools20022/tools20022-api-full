@@ -54,6 +54,8 @@ public class Max5Text {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Max5Text";
 				definition = "Specifies a character string with a maximum length of 5 characters.";
+				minLength = 1;
+				maxLength = 5;
 			}
 		});
 		return mmObject_lazy.get();

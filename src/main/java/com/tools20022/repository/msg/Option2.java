@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Option;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * List of elements which provide the parameters of an option trade.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "List of elements which provide the parameters of an option trade. "</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Option2", propOrder = {"optionAmounts", "strikePrice", "premium", "exerciseStyle", "earliestExerciseDate", "expiryDateAndTime", "expiryLocation", "settlementType", "additionalOptionInformation"})
 public class Option2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -530,6 +536,7 @@ public class Option2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OptnAmts", required = true)
 	public AmountsAndValueDate2 getOptionAmounts() {
 		return optionAmounts;
 	}
@@ -538,6 +545,7 @@ public class Option2 {
 		this.optionAmounts = optionAmounts;
 	}
 
+	@XmlElement(name = "StrkPric", required = true)
 	public AgreedRate1 getStrikePrice() {
 		return strikePrice;
 	}
@@ -546,6 +554,7 @@ public class Option2 {
 		this.strikePrice = strikePrice;
 	}
 
+	@XmlElement(name = "Prm", required = true)
 	public PremiumAmount1 getPremium() {
 		return premium;
 	}
@@ -554,6 +563,7 @@ public class Option2 {
 		this.premium = premium;
 	}
 
+	@XmlElement(name = "ExrcStyle", required = true)
 	public OptionStyle2Code getExerciseStyle() {
 		return exerciseStyle;
 	}
@@ -562,6 +572,7 @@ public class Option2 {
 		this.exerciseStyle = exerciseStyle;
 	}
 
+	@XmlElement(name = "EarlstExrcDt")
 	public ISODate getEarliestExerciseDate() {
 		return earliestExerciseDate;
 	}
@@ -570,6 +581,7 @@ public class Option2 {
 		this.earliestExerciseDate = earliestExerciseDate;
 	}
 
+	@XmlElement(name = "XpryDtAndTm", required = true)
 	public ISODateTime getExpiryDateAndTime() {
 		return expiryDateAndTime;
 	}
@@ -578,6 +590,7 @@ public class Option2 {
 		this.expiryDateAndTime = expiryDateAndTime;
 	}
 
+	@XmlElement(name = "XpryLctn", required = true)
 	public Max4AlphaNumericText getExpiryLocation() {
 		return expiryLocation;
 	}
@@ -586,6 +599,7 @@ public class Option2 {
 		this.expiryLocation = expiryLocation;
 	}
 
+	@XmlElement(name = "SttlmTp", required = true)
 	public SettlementType1Code getSettlementType() {
 		return settlementType;
 	}
@@ -594,6 +608,7 @@ public class Option2 {
 		this.settlementType = settlementType;
 	}
 
+	@XmlElement(name = "AddtlOptnInf")
 	public Max140Text getAdditionalOptionInformation() {
 		return additionalOptionInformation;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional references linked to the order status.
@@ -78,6 +82,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Additional references linked to the order status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reference15", propOrder = {"orderMassStatusRequestIdentification", "orderStatusRequestIdentification", "orderIdentification", "hostCrossIdentification", "crossOrderIdentification", "originalCrossOrderIdentification",
+		"clientOrderIdentification", "secondaryOrderIdentification", "secondaryClientOrderIdentification"})
 public class Reference15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -478,6 +485,7 @@ public class Reference15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrMassStsReqId")
 	public Max35Text getOrderMassStatusRequestIdentification() {
 		return orderMassStatusRequestIdentification;
 	}
@@ -486,6 +494,7 @@ public class Reference15 {
 		this.orderMassStatusRequestIdentification = orderMassStatusRequestIdentification;
 	}
 
+	@XmlElement(name = "OrdrStsReqId")
 	public Max35Text getOrderStatusRequestIdentification() {
 		return orderStatusRequestIdentification;
 	}
@@ -494,6 +503,7 @@ public class Reference15 {
 		this.orderStatusRequestIdentification = orderStatusRequestIdentification;
 	}
 
+	@XmlElement(name = "OrdrId", required = true)
 	public Max35Text getOrderIdentification() {
 		return orderIdentification;
 	}
@@ -502,6 +512,7 @@ public class Reference15 {
 		this.orderIdentification = orderIdentification;
 	}
 
+	@XmlElement(name = "HstCrossId")
 	public Max35Text getHostCrossIdentification() {
 		return hostCrossIdentification;
 	}
@@ -510,6 +521,7 @@ public class Reference15 {
 		this.hostCrossIdentification = hostCrossIdentification;
 	}
 
+	@XmlElement(name = "CrossOrdrId")
 	public Max35Text getCrossOrderIdentification() {
 		return crossOrderIdentification;
 	}
@@ -518,6 +530,7 @@ public class Reference15 {
 		this.crossOrderIdentification = crossOrderIdentification;
 	}
 
+	@XmlElement(name = "OrgnlCrossOrdrId")
 	public Max35Text getOriginalCrossOrderIdentification() {
 		return originalCrossOrderIdentification;
 	}
@@ -526,6 +539,7 @@ public class Reference15 {
 		this.originalCrossOrderIdentification = originalCrossOrderIdentification;
 	}
 
+	@XmlElement(name = "ClntOrdrId")
 	public Max35Text getClientOrderIdentification() {
 		return clientOrderIdentification;
 	}
@@ -534,6 +548,7 @@ public class Reference15 {
 		this.clientOrderIdentification = clientOrderIdentification;
 	}
 
+	@XmlElement(name = "ScndryOrdrId")
 	public Max35Text getSecondaryOrderIdentification() {
 		return secondaryOrderIdentification;
 	}
@@ -542,6 +557,7 @@ public class Reference15 {
 		this.secondaryOrderIdentification = secondaryOrderIdentification;
 	}
 
+	@XmlElement(name = "ScndryClntOrdrId")
 	public Max35Text getSecondaryClientOrderIdentification() {
 		return secondaryClientOrderIdentification;
 	}

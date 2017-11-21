@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.ContentType1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General cryptographic message syntax (CMS) containing encrypted data.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContentInformationType2", propOrder = {"contentType", "envelopedData"})
 public class ContentInformationType2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +173,7 @@ public class ContentInformationType2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CnttTp", required = true)
 	public ContentType1Code getContentType() {
 		return contentType;
 	}
@@ -175,6 +182,7 @@ public class ContentInformationType2 {
 		this.contentType = contentType;
 	}
 
+	@XmlElement(name = "EnvlpdData", required = true)
 	public EnvelopedData1 getEnvelopedData() {
 		return envelopedData;
 	}

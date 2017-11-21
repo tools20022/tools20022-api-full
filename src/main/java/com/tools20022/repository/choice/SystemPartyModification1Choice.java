@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies which information are involved by a modification request for party
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemPartyModification1Choice", propOrder = {"systemParty", "partyIdentification", "partyName", "technicalAddress", "partyAddress", "systemRestriction", "marketSpecificAttribute"})
 public class SystemPartyModification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -404,6 +410,7 @@ public class SystemPartyModification1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysPty", required = true)
 	public SystemParty2 getSystemParty() {
 		return systemParty;
 	}
@@ -412,6 +419,7 @@ public class SystemPartyModification1Choice {
 		this.systemParty = systemParty;
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public SystemPartyIdentification2 getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -420,6 +428,7 @@ public class SystemPartyModification1Choice {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "PtyNm", required = true)
 	public PartyName2 getPartyName() {
 		return partyName;
 	}
@@ -428,6 +437,7 @@ public class SystemPartyModification1Choice {
 		this.partyName = partyName;
 	}
 
+	@XmlElement(name = "TechAdr", required = true)
 	public TechnicalIdentification1Choice getTechnicalAddress() {
 		return technicalAddress;
 	}
@@ -436,6 +446,7 @@ public class SystemPartyModification1Choice {
 		this.technicalAddress = technicalAddress;
 	}
 
+	@XmlElement(name = "PtyAdr", required = true)
 	public PostalAddress9 getPartyAddress() {
 		return partyAddress;
 	}
@@ -444,6 +455,7 @@ public class SystemPartyModification1Choice {
 		this.partyAddress = partyAddress;
 	}
 
+	@XmlElement(name = "SysRstrctn", required = true)
 	public SystemRestriction1 getSystemRestriction() {
 		return systemRestriction;
 	}
@@ -452,6 +464,7 @@ public class SystemPartyModification1Choice {
 		this.systemRestriction = systemRestriction;
 	}
 
+	@XmlElement(name = "MktSpcfcAttr", required = true)
 	public MarketSpecificAttribute1 getMarketSpecificAttribute() {
 		return marketSpecificAttribute;
 	}

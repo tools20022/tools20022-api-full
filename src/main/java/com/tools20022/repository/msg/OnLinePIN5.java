@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Authentication;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Encrypted personal identification number (PIN) and related information.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * OnLinePIN4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OnLinePIN5", propOrder = {"encryptedPINBlock", "PINFormat", "additionalInput"})
 public class OnLinePIN5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -236,6 +242,7 @@ public class OnLinePIN5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NcrptdPINBlck", required = true)
 	public ContentInformationType10 getEncryptedPINBlock() {
 		return encryptedPINBlock;
 	}
@@ -244,6 +251,7 @@ public class OnLinePIN5 {
 		this.encryptedPINBlock = encryptedPINBlock;
 	}
 
+	@XmlElement(name = "PINFrmt", required = true)
 	public PINFormat4Code getPINFormat() {
 		return pINFormat;
 	}
@@ -252,6 +260,7 @@ public class OnLinePIN5 {
 		this.pINFormat = pINFormat;
 	}
 
+	@XmlElement(name = "AddtlInpt")
 	public Max35Text getAdditionalInput() {
 		return additionalInput;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of each individual secured market transaction.
@@ -97,6 +101,8 @@ import java.util.List;
  * MoneyMarketTransactionStatus1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MoneyMarketTransactionStatus2", propOrder = {"uniqueTransactionIdentifier", "proprietaryTransactionIdentification", "branchIdentification", "status", "validationRule", "supplementaryData"})
 public class MoneyMarketTransactionStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -459,6 +465,7 @@ public class MoneyMarketTransactionStatus2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnqTxIdr")
 	public Max105Text getUniqueTransactionIdentifier() {
 		return uniqueTransactionIdentifier;
 	}
@@ -467,6 +474,7 @@ public class MoneyMarketTransactionStatus2 {
 		this.uniqueTransactionIdentifier = uniqueTransactionIdentifier;
 	}
 
+	@XmlElement(name = "PrtryTxId", required = true)
 	public Max105Text getProprietaryTransactionIdentification() {
 		return proprietaryTransactionIdentification;
 	}
@@ -475,6 +483,7 @@ public class MoneyMarketTransactionStatus2 {
 		this.proprietaryTransactionIdentification = proprietaryTransactionIdentification;
 	}
 
+	@XmlElement(name = "BrnchId")
 	public LEIIdentifier getBranchIdentification() {
 		return branchIdentification;
 	}
@@ -483,6 +492,7 @@ public class MoneyMarketTransactionStatus2 {
 		this.branchIdentification = branchIdentification;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public StatisticalReportingStatus2Code getStatus() {
 		return status;
 	}
@@ -491,6 +501,7 @@ public class MoneyMarketTransactionStatus2 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "VldtnRule")
 	public List<GenericValidationRuleIdentification1> getValidationRule() {
 		return validationRule;
 	}
@@ -499,6 +510,7 @@ public class MoneyMarketTransactionStatus2 {
 		this.validationRule = validationRule;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

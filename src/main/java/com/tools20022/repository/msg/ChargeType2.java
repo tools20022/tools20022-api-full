@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specification of the charge type.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specification of the charge type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ChargeType2", propOrder = {"structured", "additionalInformation"})
 public class ChargeType2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -171,6 +177,7 @@ public class ChargeType2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Strd", required = true)
 	public ChargeType7Code getStructured() {
 		return structured;
 	}
@@ -179,6 +186,7 @@ public class ChargeType2 {
 		this.structured = structured;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}

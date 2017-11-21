@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesRegistrationDeadline;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Dates determining the entitlement.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Dates determining the entitlement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EligibilityDates", propOrder = {"recordDate", "securitiesRegistrationDate", "blockingPeriod"})
 public class EligibilityDates {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -279,6 +285,7 @@ public class EligibilityDates {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RcrdDt")
 	public ISODate getRecordDate() {
 		return recordDate;
 	}
@@ -287,6 +294,7 @@ public class EligibilityDates {
 		this.recordDate = recordDate;
 	}
 
+	@XmlElement(name = "SctiesRegnDt")
 	public ISODate getSecuritiesRegistrationDate() {
 		return securitiesRegistrationDate;
 	}
@@ -295,6 +303,7 @@ public class EligibilityDates {
 		this.securitiesRegistrationDate = securitiesRegistrationDate;
 	}
 
+	@XmlElement(name = "BlckgPrd")
 	public DateTimePeriodDetails1 getBlockingPeriod() {
 		return blockingPeriod;
 	}

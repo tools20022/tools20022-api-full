@@ -31,6 +31,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Human entity, as distinguished from a corporate entity (which is sometimes
@@ -132,6 +136,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualPerson11", propOrder = {"namePrefix", "extendedNamePrefix", "givenName", "middleName", "name", "nameSuffix", "gender", "language", "birthDate", "countryOfBirth", "provinceOfBirth", "cityOfBirth", "profession",
+		"taxationCountry", "countryAndResidentialStatus", "businessFunction", "employingCompany", "modifiedPostalAddress", "modifiedCitizenship", "primaryCommunicationAddress", "secondaryCommunicationAddress", "modifiedOtherIdentification"})
 public class IndividualPerson11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1257,6 +1264,7 @@ public class IndividualPerson11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NmPrfx")
 	public NamePrefix1Code getNamePrefix() {
 		return namePrefix;
 	}
@@ -1265,6 +1273,7 @@ public class IndividualPerson11 {
 		this.namePrefix = namePrefix;
 	}
 
+	@XmlElement(name = "XtndedNmPrfx")
 	public Extended350Code getExtendedNamePrefix() {
 		return extendedNamePrefix;
 	}
@@ -1273,6 +1282,7 @@ public class IndividualPerson11 {
 		this.extendedNamePrefix = extendedNamePrefix;
 	}
 
+	@XmlElement(name = "GvnNm", required = true)
 	public Max35Text getGivenName() {
 		return givenName;
 	}
@@ -1281,6 +1291,7 @@ public class IndividualPerson11 {
 		this.givenName = givenName;
 	}
 
+	@XmlElement(name = "MddlNm")
 	public Max35Text getMiddleName() {
 		return middleName;
 	}
@@ -1289,6 +1300,7 @@ public class IndividualPerson11 {
 		this.middleName = middleName;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max350Text getName() {
 		return name;
 	}
@@ -1297,6 +1309,7 @@ public class IndividualPerson11 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "NmSfx")
 	public Max35Text getNameSuffix() {
 		return nameSuffix;
 	}
@@ -1305,6 +1318,7 @@ public class IndividualPerson11 {
 		this.nameSuffix = nameSuffix;
 	}
 
+	@XmlElement(name = "Gndr")
 	public GenderCode getGender() {
 		return gender;
 	}
@@ -1313,6 +1327,7 @@ public class IndividualPerson11 {
 		this.gender = gender;
 	}
 
+	@XmlElement(name = "Lang")
 	public LanguageCode getLanguage() {
 		return language;
 	}
@@ -1321,6 +1336,7 @@ public class IndividualPerson11 {
 		this.language = language;
 	}
 
+	@XmlElement(name = "BirthDt", required = true)
 	public ISODate getBirthDate() {
 		return birthDate;
 	}
@@ -1329,6 +1345,7 @@ public class IndividualPerson11 {
 		this.birthDate = birthDate;
 	}
 
+	@XmlElement(name = "CtryOfBirth")
 	public CountryCode getCountryOfBirth() {
 		return countryOfBirth;
 	}
@@ -1337,6 +1354,7 @@ public class IndividualPerson11 {
 		this.countryOfBirth = countryOfBirth;
 	}
 
+	@XmlElement(name = "PrvcOfBirth")
 	public Max35Text getProvinceOfBirth() {
 		return provinceOfBirth;
 	}
@@ -1345,6 +1363,7 @@ public class IndividualPerson11 {
 		this.provinceOfBirth = provinceOfBirth;
 	}
 
+	@XmlElement(name = "CityOfBirth")
 	public Max35Text getCityOfBirth() {
 		return cityOfBirth;
 	}
@@ -1353,6 +1372,7 @@ public class IndividualPerson11 {
 		this.cityOfBirth = cityOfBirth;
 	}
 
+	@XmlElement(name = "Prfssn")
 	public Max35Text getProfession() {
 		return profession;
 	}
@@ -1361,6 +1381,7 @@ public class IndividualPerson11 {
 		this.profession = profession;
 	}
 
+	@XmlElement(name = "TaxtnCtry")
 	public CountryCode getTaxationCountry() {
 		return taxationCountry;
 	}
@@ -1369,6 +1390,7 @@ public class IndividualPerson11 {
 		this.taxationCountry = taxationCountry;
 	}
 
+	@XmlElement(name = "CtryAndResdtlSts")
 	public CountryAndResidentialStatusType1 getCountryAndResidentialStatus() {
 		return countryAndResidentialStatus;
 	}
@@ -1377,6 +1399,7 @@ public class IndividualPerson11 {
 		this.countryAndResidentialStatus = countryAndResidentialStatus;
 	}
 
+	@XmlElement(name = "BizFctn")
 	public Max35Text getBusinessFunction() {
 		return businessFunction;
 	}
@@ -1385,6 +1408,7 @@ public class IndividualPerson11 {
 		this.businessFunction = businessFunction;
 	}
 
+	@XmlElement(name = "EmplngCpny")
 	public Max140Text getEmployingCompany() {
 		return employingCompany;
 	}
@@ -1393,6 +1417,7 @@ public class IndividualPerson11 {
 		this.employingCompany = employingCompany;
 	}
 
+	@XmlElement(name = "ModfdPstlAdr")
 	public List<ModificationScope1> getModifiedPostalAddress() {
 		return modifiedPostalAddress;
 	}
@@ -1401,6 +1426,7 @@ public class IndividualPerson11 {
 		this.modifiedPostalAddress = modifiedPostalAddress;
 	}
 
+	@XmlElement(name = "ModfdCtznsh")
 	public List<ModificationScope3> getModifiedCitizenship() {
 		return modifiedCitizenship;
 	}
@@ -1409,6 +1435,7 @@ public class IndividualPerson11 {
 		this.modifiedCitizenship = modifiedCitizenship;
 	}
 
+	@XmlElement(name = "PmryComAdr")
 	public CommunicationAddress3 getPrimaryCommunicationAddress() {
 		return primaryCommunicationAddress;
 	}
@@ -1417,6 +1444,7 @@ public class IndividualPerson11 {
 		this.primaryCommunicationAddress = primaryCommunicationAddress;
 	}
 
+	@XmlElement(name = "ScndryComAdr")
 	public CommunicationAddress3 getSecondaryCommunicationAddress() {
 		return secondaryCommunicationAddress;
 	}
@@ -1425,6 +1453,7 @@ public class IndividualPerson11 {
 		this.secondaryCommunicationAddress = secondaryCommunicationAddress;
 	}
 
+	@XmlElement(name = "ModfdOthrId")
 	public List<ModificationScope2> getModifiedOtherIdentification() {
 		return modifiedOtherIdentification;
 	}

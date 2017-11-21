@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides constrains on a range of business values.
@@ -58,6 +62,8 @@ import java.util.List;
  * definition} = "Provides constrains on a range of business values."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountOrPercentageRange", propOrder = {"operation", "term"})
 public class AmountOrPercentageRange {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class AmountOrPercentageRange {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Opr")
 	public Operation1Code getOperation() {
 		return operation;
 	}
@@ -166,6 +173,7 @@ public class AmountOrPercentageRange {
 		this.operation = operation;
 	}
 
+	@XmlElement(name = "Term")
 	public List<Term1> getTerm() {
 		return term;
 	}

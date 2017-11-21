@@ -37,6 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration#mmCollateralManagement
+ * CollateralInterestAdministration.mmCollateralManagement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration#mmClosingCollateralBalance
+ * CollateralInterestAdministration.mmClosingCollateralBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration#mmOpeningCollateralBalance
+ * CollateralInterestAdministration.mmOpeningCollateralBalance}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.InterestManagement
+ * InterestManagement}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -50,23 +67,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmCollateralInterestManagement
  * CollateralBalance.mmCollateralInterestManagement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.InterestManagement
- * InterestManagement}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration#mmCollateralManagement
- * CollateralInterestAdministration.mmCollateralManagement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration#mmClosingCollateralBalance
- * CollateralInterestAdministration.mmClosingCollateralBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration#mmOpeningCollateralBalance
- * CollateralInterestAdministration.mmOpeningCollateralBalance}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,7 +125,7 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 */
 	public static final MMBusinessAssociationEnd mmCollateralManagement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CollateralInterestAdministration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralInterestAdministration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralManagement";
@@ -155,11 +155,6 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CollateralBalance
 	 * CollateralBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration
-	 * CollateralInterestAdministration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -168,6 +163,11 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 * InterestResult1.mmClosingCollateralBalance}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration
+	 * CollateralInterestAdministration}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -184,7 +184,7 @@ public class CollateralInterestAdministration extends InterestManagement {
 	public static final MMBusinessAssociationEnd mmClosingCollateralBalance = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InterestResult1.mmClosingCollateralBalance);
-			elementContext_lazy = () -> CollateralInterestAdministration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralInterestAdministration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingCollateralBalance";
@@ -214,11 +214,6 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CollateralBalance
 	 * CollateralBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration
-	 * CollateralInterestAdministration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -227,6 +222,11 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 * InterestResult1.mmOpeningCollateralBalance}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration
+	 * CollateralInterestAdministration}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -243,7 +243,7 @@ public class CollateralInterestAdministration extends InterestManagement {
 	public static final MMBusinessAssociationEnd mmOpeningCollateralBalance = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InterestResult1.mmOpeningCollateralBalance);
-			elementContext_lazy = () -> CollateralInterestAdministration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralInterestAdministration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningCollateralBalance";
@@ -266,7 +266,13 @@ public class CollateralInterestAdministration extends InterestManagement {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralManagement.mmInterestManagement, com.tools20022.repository.entity.CollateralBalance.mmRelatedCollateralInterestManagement,
 						com.tools20022.repository.entity.CollateralBalance.mmCollateralInterestManagement);
 				superType_lazy = () -> InterestManagement.mmObject();
-				element_lazy = () -> Arrays.asList(CollateralInterestAdministration.mmCollateralManagement, CollateralInterestAdministration.mmClosingCollateralBalance, CollateralInterestAdministration.mmOpeningCollateralBalance);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralInterestAdministration.mmCollateralManagement, com.tools20022.repository.entity.CollateralInterestAdministration.mmClosingCollateralBalance,
+						com.tools20022.repository.entity.CollateralInterestAdministration.mmOpeningCollateralBalance);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CollateralInterestAdministration.class;
 			}
 		});
 		return mmObject_lazy.get();

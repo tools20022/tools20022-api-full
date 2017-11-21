@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.Packaging;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Physical packaging of goods for transport.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Consignment1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Consignment3", propOrder = {"totalQuantity", "totalVolume", "totalWeight"})
 public class Consignment3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -241,6 +247,7 @@ public class Consignment3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlQty")
 	public Quantity10 getTotalQuantity() {
 		return totalQuantity;
 	}
@@ -249,6 +256,7 @@ public class Consignment3 {
 		this.totalQuantity = totalQuantity;
 	}
 
+	@XmlElement(name = "TtlVol")
 	public Quantity10 getTotalVolume() {
 		return totalVolume;
 	}
@@ -257,6 +265,7 @@ public class Consignment3 {
 		this.totalVolume = totalVolume;
 	}
 
+	@XmlElement(name = "TtlWght")
 	public Quantity10 getTotalWeight() {
 		return totalWeight;
 	}

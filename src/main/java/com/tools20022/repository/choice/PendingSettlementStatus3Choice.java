@@ -31,6 +31,10 @@ import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.PendingSettlementStatus2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason for the pending settlement status.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PendingSettlementStatus2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PendingSettlementStatus3Choice", propOrder = {"reason", "extendedReason", "dataSourceScheme", "noSpecifiedReason"})
 public class PendingSettlementStatus3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -310,6 +316,7 @@ public class PendingSettlementStatus3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public PendingSettlementStatusReason2Code getReason() {
 		return reason;
 	}
@@ -318,6 +325,7 @@ public class PendingSettlementStatus3Choice {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "XtndedRsn", required = true)
 	public Extended350Code getExtendedReason() {
 		return extendedReason;
 	}
@@ -326,6 +334,7 @@ public class PendingSettlementStatus3Choice {
 		this.extendedReason = extendedReason;
 	}
 
+	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}
@@ -334,6 +343,7 @@ public class PendingSettlementStatus3Choice {
 		this.dataSourceScheme = dataSourceScheme;
 	}
 
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}

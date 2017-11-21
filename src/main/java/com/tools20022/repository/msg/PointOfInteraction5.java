@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Point of interaction (POI) performing the transaction.
@@ -91,6 +95,8 @@ import java.util.List;
  * PointOfInteraction4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PointOfInteraction5", propOrder = {"identification", "systemName", "groupIdentification", "capabilities", "timeZone", "terminalIntegration", "component"})
 public class PointOfInteraction5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -535,6 +541,7 @@ public class PointOfInteraction5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public GenericIdentification32 getIdentification() {
 		return identification;
 	}
@@ -543,6 +550,7 @@ public class PointOfInteraction5 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SysNm")
 	public Max70Text getSystemName() {
 		return systemName;
 	}
@@ -551,6 +559,7 @@ public class PointOfInteraction5 {
 		this.systemName = systemName;
 	}
 
+	@XmlElement(name = "GrpId")
 	public Max35Text getGroupIdentification() {
 		return groupIdentification;
 	}
@@ -559,6 +568,7 @@ public class PointOfInteraction5 {
 		this.groupIdentification = groupIdentification;
 	}
 
+	@XmlElement(name = "Cpblties")
 	public PointOfInteractionCapabilities6 getCapabilities() {
 		return capabilities;
 	}
@@ -567,6 +577,7 @@ public class PointOfInteraction5 {
 		this.capabilities = capabilities;
 	}
 
+	@XmlElement(name = "TmZone")
 	public Max70Text getTimeZone() {
 		return timeZone;
 	}
@@ -575,6 +586,7 @@ public class PointOfInteraction5 {
 		this.timeZone = timeZone;
 	}
 
+	@XmlElement(name = "TermnlIntgtn")
 	public LocationCategory3Code getTerminalIntegration() {
 		return terminalIntegration;
 	}
@@ -583,6 +595,7 @@ public class PointOfInteraction5 {
 		this.terminalIntegration = terminalIntegration;
 	}
 
+	@XmlElement(name = "Cmpnt")
 	public List<PointOfInteractionComponent6> getComponent() {
 		return component;
 	}

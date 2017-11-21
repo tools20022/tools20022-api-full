@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.OtherC10CommodityDeliverable2;
 import com.tools20022.repository.msg.OtherC10CommodityNonDeliverable2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines commodity attributes of a derivative where the type is other C10.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Defines commodity attributes of a derivative where the type is other C10."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AssetClassCommodityOtherC102Choice", propOrder = {"deliverable", "nonDeliverable"})
 public class AssetClassCommodityOtherC102Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class AssetClassCommodityOtherC102Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dlvrbl", required = true)
 	public OtherC10CommodityDeliverable2 getDeliverable() {
 		return deliverable;
 	}
@@ -184,6 +191,7 @@ public class AssetClassCommodityOtherC102Choice {
 		this.deliverable = deliverable;
 	}
 
+	@XmlElement(name = "NonDlvrbl", required = true)
 	public OtherC10CommodityNonDeliverable2 getNonDeliverable() {
 		return nonDeliverable;
 	}

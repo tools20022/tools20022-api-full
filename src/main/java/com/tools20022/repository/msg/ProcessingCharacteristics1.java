@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Processing characteristics linked to the instrument, ie, not to the market.
@@ -82,6 +86,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProcessingCharacteristics1", propOrder = {"amountIndicator", "unitsIndicator", "dealingCurrencyAccepted", "dealingCutOffTime", "dealingCutOffTimeFrame", "settlementCycle"})
 public class ProcessingCharacteristics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -396,6 +402,7 @@ public class ProcessingCharacteristics1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AmtInd", required = true)
 	public YesNoIndicator getAmountIndicator() {
 		return amountIndicator;
 	}
@@ -404,6 +411,7 @@ public class ProcessingCharacteristics1 {
 		this.amountIndicator = amountIndicator;
 	}
 
+	@XmlElement(name = "UnitsInd", required = true)
 	public YesNoIndicator getUnitsIndicator() {
 		return unitsIndicator;
 	}
@@ -412,6 +420,7 @@ public class ProcessingCharacteristics1 {
 		this.unitsIndicator = unitsIndicator;
 	}
 
+	@XmlElement(name = "DealgCcyAccptd", required = true)
 	public List<ActiveCurrencyCode> getDealingCurrencyAccepted() {
 		return dealingCurrencyAccepted;
 	}
@@ -420,6 +429,7 @@ public class ProcessingCharacteristics1 {
 		this.dealingCurrencyAccepted = dealingCurrencyAccepted;
 	}
 
+	@XmlElement(name = "DealgCutOffTm", required = true)
 	public ISOTime getDealingCutOffTime() {
 		return dealingCutOffTime;
 	}
@@ -428,6 +438,7 @@ public class ProcessingCharacteristics1 {
 		this.dealingCutOffTime = dealingCutOffTime;
 	}
 
+	@XmlElement(name = "DealgCutOffTmFrame", required = true)
 	public TimeFrame3Choice getDealingCutOffTimeFrame() {
 		return dealingCutOffTimeFrame;
 	}
@@ -436,6 +447,7 @@ public class ProcessingCharacteristics1 {
 		this.dealingCutOffTimeFrame = dealingCutOffTimeFrame;
 	}
 
+	@XmlElement(name = "SttlmCycl", required = true)
 	public Timeframe2Choice getSettlementCycle() {
 		return settlementCycle;
 	}

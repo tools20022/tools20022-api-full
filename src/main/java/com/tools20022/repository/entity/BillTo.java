@@ -64,6 +64,11 @@ public class BillTo extends CommercialTradePartyRole {
 				definition = "Party to be invoiced for the purchase.";
 				superType_lazy = () -> CommercialTradePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BillTo.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

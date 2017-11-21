@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -94,6 +98,9 @@ import java.util.List;
  * Transfer12}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Transfer20", propOrder = {"requestedSettlementDate", "holdingsPlanType", "financialInstrumentDetails", "quantity", "unitsDetails", "rounding", "averagePrice", "ownAccountTransferIndicator",
+		"nonStandardSettlementInformation", "receivingAgentDetails", "deliveringAgentDetails"})
 public class Transfer20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -652,6 +659,7 @@ public class Transfer20 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqdSttlmDt")
 	public ISODate getRequestedSettlementDate() {
 		return requestedSettlementDate;
 	}
@@ -660,6 +668,7 @@ public class Transfer20 {
 		this.requestedSettlementDate = requestedSettlementDate;
 	}
 
+	@XmlElement(name = "HldgsPlanTp")
 	public List<HoldingsPlanType1Code> getHoldingsPlanType() {
 		return holdingsPlanType;
 	}
@@ -668,6 +677,7 @@ public class Transfer20 {
 		this.holdingsPlanType = holdingsPlanType;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument13 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -676,6 +686,7 @@ public class Transfer20 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public Quantity13Choice getQuantity() {
 		return quantity;
 	}
@@ -684,6 +695,7 @@ public class Transfer20 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "UnitsDtls")
 	public List<Unit3> getUnitsDetails() {
 		return unitsDetails;
 	}
@@ -692,6 +704,7 @@ public class Transfer20 {
 		this.unitsDetails = unitsDetails;
 	}
 
+	@XmlElement(name = "Rndg")
 	public RoundingDirection2Code getRounding() {
 		return rounding;
 	}
@@ -700,6 +713,7 @@ public class Transfer20 {
 		this.rounding = rounding;
 	}
 
+	@XmlElement(name = "AvrgPric")
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAveragePrice() {
 		return averagePrice;
 	}
@@ -708,6 +722,7 @@ public class Transfer20 {
 		this.averagePrice = averagePrice;
 	}
 
+	@XmlElement(name = "OwnAcctTrfInd")
 	public YesNoIndicator getOwnAccountTransferIndicator() {
 		return ownAccountTransferIndicator;
 	}
@@ -716,6 +731,7 @@ public class Transfer20 {
 		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
 	}
 
+	@XmlElement(name = "NonStdSttlmInf")
 	public Max350Text getNonStandardSettlementInformation() {
 		return nonStandardSettlementInformation;
 	}
@@ -724,6 +740,7 @@ public class Transfer20 {
 		this.nonStandardSettlementInformation = nonStandardSettlementInformation;
 	}
 
+	@XmlElement(name = "RcvgAgtDtls")
 	public PartyIdentificationAndAccount93 getReceivingAgentDetails() {
 		return receivingAgentDetails;
 	}
@@ -732,6 +749,7 @@ public class Transfer20 {
 		this.receivingAgentDetails = receivingAgentDetails;
 	}
 
+	@XmlElement(name = "DlvrgAgtDtls")
 	public PartyIdentificationAndAccount93 getDeliveringAgentDetails() {
 		return deliveringAgentDetails;
 	}

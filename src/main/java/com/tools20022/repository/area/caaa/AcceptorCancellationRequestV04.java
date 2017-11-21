@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.ContentInformationType11;
 import com.tools20022.repository.msg.Header10;
 import com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20142015;
 import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The AcceptorCancellationRequest message is sent by an acceptor (or its agent)
@@ -39,9 +41,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.005.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVersion
@@ -77,6 +76,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.005.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -100,6 +102,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorCancellationRequestV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorCancellationRequestV04", propOrder = {"header", "cancellationRequest", "securityTrailer"})
 public class AcceptorCancellationRequestV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -151,6 +155,14 @@ public class AcceptorCancellationRequestV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header10.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorCancellationRequestV04.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AcceptorCancellationRequest4 cancellationRequest;
 	/**
@@ -200,6 +212,14 @@ public class AcceptorCancellationRequestV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorCancellationRequest4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorCancellationRequestV04.class.getMethod("getCancellationRequest", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ContentInformationType11 securityTrailer;
@@ -251,6 +271,14 @@ public class AcceptorCancellationRequestV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType11.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorCancellationRequestV04.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -265,7 +293,8 @@ public class AcceptorCancellationRequestV04 {
 				rootElement = "Document";
 				xmlTag = "AccptrCxlReq";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorCancellationRequestV04.mmHeader, AcceptorCancellationRequestV04.mmCancellationRequest, AcceptorCancellationRequestV04.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCancellationRequestV04.mmHeader, com.tools20022.repository.area.caaa.AcceptorCancellationRequestV04.mmCancellationRequest,
+						com.tools20022.repository.area.caaa.AcceptorCancellationRequestV04.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";
@@ -275,10 +304,16 @@ public class AcceptorCancellationRequestV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcceptorCancellationRequestV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header10 getHeader() {
 		return header;
 	}
@@ -287,6 +322,7 @@ public class AcceptorCancellationRequestV04 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "CxlReq", required = true)
 	public AcceptorCancellationRequest4 getCancellationRequest() {
 		return cancellationRequest;
 	}
@@ -295,11 +331,18 @@ public class AcceptorCancellationRequestV04 {
 		this.cancellationRequest = cancellationRequest;
 	}
 
+	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType11 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType11 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.005.04.04")
+	static public class Document {
+		@XmlElement(name = "AccptrCxlReq", required = true)
+		public AcceptorCancellationRequestV04 messageBody;
 	}
 }

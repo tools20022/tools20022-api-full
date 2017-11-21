@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * References a related message or provides another reference, such as a pool
@@ -182,6 +186,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AdditionalReference3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalReference8", propOrder = {"reference", "referenceIssuer", "messageName"})
 public class AdditionalReference8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -396,6 +402,7 @@ public class AdditionalReference8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ref", required = true)
 	public Max35Text getReference() {
 		return reference;
 	}
@@ -404,6 +411,7 @@ public class AdditionalReference8 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "RefIssr")
 	public PartyIdentification113 getReferenceIssuer() {
 		return referenceIssuer;
 	}
@@ -412,6 +420,7 @@ public class AdditionalReference8 {
 		this.referenceIssuer = referenceIssuer;
 	}
 
+	@XmlElement(name = "MsgNm")
 	public Max35Text getMessageName() {
 		return messageName;
 	}

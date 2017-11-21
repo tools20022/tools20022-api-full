@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SidePocket;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information that identifies a side pocket in investment fund orders.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information that identifies a side pocket in investment fund orders."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SidePocketInformation2", propOrder = {"sidePocketInclusionIndicator", "sidePocketIdentification", "sidePocketQuantity"})
 public class SidePocketInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class SidePocketInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SdPcktInclsnInd")
 	public YesNoIndicator getSidePocketInclusionIndicator() {
 		return sidePocketInclusionIndicator;
 	}
@@ -238,6 +245,7 @@ public class SidePocketInformation2 {
 		this.sidePocketInclusionIndicator = sidePocketInclusionIndicator;
 	}
 
+	@XmlElement(name = "SdPcktId")
 	public Max35Text getSidePocketIdentification() {
 		return sidePocketIdentification;
 	}
@@ -246,6 +254,7 @@ public class SidePocketInformation2 {
 		this.sidePocketIdentification = sidePocketIdentification;
 	}
 
+	@XmlElement(name = "SdPcktQty")
 	public SidePocketQuantityAndAmount1 getSidePocketQuantity() {
 		return sidePocketQuantity;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the data for the pending intra-balance movements.
@@ -61,6 +65,8 @@ import java.util.List;
  * definition} = "Provides the data for the pending intra-balance movements."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraBalancePending1", propOrder = {"statusAndReason", "movement"})
 public class IntraBalancePending1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class IntraBalancePending1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsAndRsn")
 	public PendingStatusAndReason1 getStatusAndReason() {
 		return statusAndReason;
 	}
@@ -180,6 +187,7 @@ public class IntraBalancePending1 {
 		this.statusAndReason = statusAndReason;
 	}
 
+	@XmlElement(name = "Mvmnt", required = true)
 	public List<IntraBalancePending2> getMovement() {
 		return movement;
 	}

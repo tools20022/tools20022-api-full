@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.TransportBySea;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related for the transportation of goods by sea.
@@ -102,6 +106,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransportBySea4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportBySea5", propOrder = {"portOfLoading", "portOfDischarge", "vesselName", "seaCarrierName", "seaCarrierCountry", "carrierAgentName", "carrierAgentCountry", "masterName", "chartererName", "ownerName", "IMONumber",
+		"voyageNumber"})
 public class TransportBySea5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -802,6 +809,7 @@ public class TransportBySea5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PortOfLoadng", required = true)
 	public Max35Text getPortOfLoading() {
 		return portOfLoading;
 	}
@@ -810,6 +818,7 @@ public class TransportBySea5 {
 		this.portOfLoading = portOfLoading;
 	}
 
+	@XmlElement(name = "PortOfDschrge", required = true)
 	public Max35Text getPortOfDischarge() {
 		return portOfDischarge;
 	}
@@ -818,6 +827,7 @@ public class TransportBySea5 {
 		this.portOfDischarge = portOfDischarge;
 	}
 
+	@XmlElement(name = "VsslNm")
 	public Max70Text getVesselName() {
 		return vesselName;
 	}
@@ -826,6 +836,7 @@ public class TransportBySea5 {
 		this.vesselName = vesselName;
 	}
 
+	@XmlElement(name = "SeaCrrierNm")
 	public Max70Text getSeaCarrierName() {
 		return seaCarrierName;
 	}
@@ -834,6 +845,7 @@ public class TransportBySea5 {
 		this.seaCarrierName = seaCarrierName;
 	}
 
+	@XmlElement(name = "SeaCrrierCtry")
 	public CountryCode getSeaCarrierCountry() {
 		return seaCarrierCountry;
 	}
@@ -842,6 +854,7 @@ public class TransportBySea5 {
 		this.seaCarrierCountry = seaCarrierCountry;
 	}
 
+	@XmlElement(name = "CrrierAgtNm")
 	public Max70Text getCarrierAgentName() {
 		return carrierAgentName;
 	}
@@ -850,6 +863,7 @@ public class TransportBySea5 {
 		this.carrierAgentName = carrierAgentName;
 	}
 
+	@XmlElement(name = "CrrierAgtCtry")
 	public CountryCode getCarrierAgentCountry() {
 		return carrierAgentCountry;
 	}
@@ -858,6 +872,7 @@ public class TransportBySea5 {
 		this.carrierAgentCountry = carrierAgentCountry;
 	}
 
+	@XmlElement(name = "MstrNm")
 	public Max70Text getMasterName() {
 		return masterName;
 	}
@@ -866,6 +881,7 @@ public class TransportBySea5 {
 		this.masterName = masterName;
 	}
 
+	@XmlElement(name = "ChrtrrNm")
 	public Max70Text getChartererName() {
 		return chartererName;
 	}
@@ -874,6 +890,7 @@ public class TransportBySea5 {
 		this.chartererName = chartererName;
 	}
 
+	@XmlElement(name = "OwnrNm")
 	public Max70Text getOwnerName() {
 		return ownerName;
 	}
@@ -882,6 +899,7 @@ public class TransportBySea5 {
 		this.ownerName = ownerName;
 	}
 
+	@XmlElement(name = "IMONb")
 	public Exact7NumericText getIMONumber() {
 		return iMONumber;
 	}
@@ -890,6 +908,7 @@ public class TransportBySea5 {
 		this.iMONumber = iMONumber;
 	}
 
+	@XmlElement(name = "VygNb")
 	public Max35Text getVoyageNumber() {
 		return voyageNumber;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics of the report.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Characteristics of the report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MovementReport1", propOrder = {"queryReference", "reportIdentification", "queryType", "activityIndicator"})
 public class MovementReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -251,6 +257,7 @@ public class MovementReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QryRef")
 	public Max35Text getQueryReference() {
 		return queryReference;
 	}
@@ -259,6 +266,7 @@ public class MovementReport1 {
 		this.queryReference = queryReference;
 	}
 
+	@XmlElement(name = "RptId")
 	public Max35Text getReportIdentification() {
 		return reportIdentification;
 	}
@@ -267,6 +275,7 @@ public class MovementReport1 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "QryTp", required = true)
 	public MovementResponseType1Code getQueryType() {
 		return queryType;
 	}
@@ -275,6 +284,7 @@ public class MovementReport1 {
 		this.queryType = queryType;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Total quantity of securities to be transferred, expressed in a number of
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Quantity13Choice", propOrder = {"totalUnitsNumber", "portfolioTransferOutRate"})
 public class Quantity13Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class Quantity13Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlUnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
@@ -188,6 +195,7 @@ public class Quantity13Choice {
 		this.totalUnitsNumber = totalUnitsNumber;
 	}
 
+	@XmlElement(name = "PrtflTrfOutRate", required = true)
 	public PercentageRate getPortfolioTransferOutRate() {
 		return portfolioTransferOutRate;
 	}

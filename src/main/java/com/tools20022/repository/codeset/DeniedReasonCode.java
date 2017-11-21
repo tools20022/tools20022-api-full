@@ -29,21 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DeniedReason4Code
- * DeniedReason4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DeniedReason3Code
- * DeniedReason3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DeniedReason5Code
- * DeniedReason5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DeniedReason1Code
- * DeniedReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DeniedReason2Code
- * DeniedReason2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -84,6 +69,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DeniedReasonCode#mmConditionalRegistrar
  * DeniedReasonCode.mmConditionalRegistrar}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeniedReason4Code
+ * DeniedReason4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeniedReason3Code
+ * DeniedReason3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeniedReason5Code
+ * DeniedReason5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeniedReason1Code
+ * DeniedReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeniedReason2Code
+ * DeniedReason2Code}</li>
  * </ul>
  * </li>
  * <li>

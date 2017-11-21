@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for a limit.
@@ -81,6 +85,8 @@ import java.util.List;
  * definition} = "Defines the criteria used to search for a limit."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LimitSearchCriteria1", propOrder = {"systemIdentification", "bilateralLimitCounterpartyIdentification", "defaultLimitType", "currentLimitType", "accountOwner", "accountIdentification"})
 public class LimitSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -386,6 +392,7 @@ public class LimitSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysId")
 	public SystemIdentificationChoice getSystemIdentification() {
 		return systemIdentification;
 	}
@@ -394,6 +401,7 @@ public class LimitSearchCriteria1 {
 		this.systemIdentification = systemIdentification;
 	}
 
+	@XmlElement(name = "BilLmtCtrPtyId")
 	public List<MemberIdentificationChoice> getBilateralLimitCounterpartyIdentification() {
 		return bilateralLimitCounterpartyIdentification;
 	}
@@ -402,6 +410,7 @@ public class LimitSearchCriteria1 {
 		this.bilateralLimitCounterpartyIdentification = bilateralLimitCounterpartyIdentification;
 	}
 
+	@XmlElement(name = "DfltLmtTp")
 	public List<LimitType1Code> getDefaultLimitType() {
 		return defaultLimitType;
 	}
@@ -410,6 +419,7 @@ public class LimitSearchCriteria1 {
 		this.defaultLimitType = defaultLimitType;
 	}
 
+	@XmlElement(name = "CurLmtTp")
 	public List<LimitType1Code> getCurrentLimitType() {
 		return currentLimitType;
 	}
@@ -418,6 +428,7 @@ public class LimitSearchCriteria1 {
 		this.currentLimitType = currentLimitType;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public BICIdentifier getAccountOwner() {
 		return accountOwner;
 	}
@@ -426,6 +437,7 @@ public class LimitSearchCriteria1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctId")
 	public AccountIdentification1Choice getAccountIdentification() {
 		return accountIdentification;
 	}

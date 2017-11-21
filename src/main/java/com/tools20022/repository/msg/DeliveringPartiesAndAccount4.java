@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Chain of parties involved in the settlement of a transaction, including
@@ -90,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DeliveringPartiesAndAccount4", propOrder = {"delivererDetails", "deliverersCustodianDetails", "deliverersIntermediaryDetails", "deliveringAgentDetails", "securitiesSettlementSystem", "placeOfSettlementDetails"})
 public class DeliveringPartiesAndAccount4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -406,6 +412,7 @@ public class DeliveringPartiesAndAccount4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DlvrrDtls")
 	public InvestmentAccount24 getDelivererDetails() {
 		return delivererDetails;
 	}
@@ -414,6 +421,7 @@ public class DeliveringPartiesAndAccount4 {
 		this.delivererDetails = delivererDetails;
 	}
 
+	@XmlElement(name = "DlvrrsCtdnDtls")
 	public PartyIdentificationAndAccount5 getDeliverersCustodianDetails() {
 		return deliverersCustodianDetails;
 	}
@@ -422,6 +430,7 @@ public class DeliveringPartiesAndAccount4 {
 		this.deliverersCustodianDetails = deliverersCustodianDetails;
 	}
 
+	@XmlElement(name = "DlvrrsIntrmyDtls")
 	public PartyIdentificationAndAccount5 getDeliverersIntermediaryDetails() {
 		return deliverersIntermediaryDetails;
 	}
@@ -430,6 +439,7 @@ public class DeliveringPartiesAndAccount4 {
 		this.deliverersIntermediaryDetails = deliverersIntermediaryDetails;
 	}
 
+	@XmlElement(name = "DlvrgAgtDtls", required = true)
 	public PartyIdentificationAndAccount4 getDeliveringAgentDetails() {
 		return deliveringAgentDetails;
 	}
@@ -438,6 +448,7 @@ public class DeliveringPartiesAndAccount4 {
 		this.deliveringAgentDetails = deliveringAgentDetails;
 	}
 
+	@XmlElement(name = "SctiesSttlmSys")
 	public Max35Text getSecuritiesSettlementSystem() {
 		return securitiesSettlementSystem;
 	}
@@ -446,6 +457,7 @@ public class DeliveringPartiesAndAccount4 {
 		this.securitiesSettlementSystem = securitiesSettlementSystem;
 	}
 
+	@XmlElement(name = "PlcOfSttlmDtls", required = true)
 	public PartyIdentification21 getPlaceOfSettlementDetails() {
 		return placeOfSettlementDetails;
 	}

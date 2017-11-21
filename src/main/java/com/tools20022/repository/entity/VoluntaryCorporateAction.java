@@ -68,6 +68,11 @@ public class VoluntaryCorporateAction extends CorporateActionEvent {
 				definition = "Participation in the corporate action is voluntary. To take part in the event, the account owner must provide its instructions.";
 				superType_lazy = () -> CorporateActionEvent.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return VoluntaryCorporateAction.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

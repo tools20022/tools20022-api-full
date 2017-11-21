@@ -24,8 +24,10 @@ import com.tools20022.repository.choice.NotificationCancellationRequestStatus1Ch
 import com.tools20022.repository.msg.CorporateActionInformation2;
 import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -42,9 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.011.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -100,6 +99,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.011.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -111,6 +113,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgentCANotificationStatusAdviceV01", propOrder = {"identification", "agentCANotificationAdviceIdentification", "agentCANotificationCancellationRequestIdentification", "corporateActionGeneralInformation",
+		"notificationCancellationRequestStatus", "notificationAdviceStatus"})
 public class AgentCANotificationStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -120,6 +125,10 @@ public class AgentCANotificationStatusAdviceV01 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01
+	 * AgentCANotificationStatusAdviceV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -133,10 +142,6 @@ public class AgentCANotificationStatusAdviceV01 {
 	 * AgentCANotificationStatusAdviceV01.mmNotificationAdviceStatus}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01
-	 * AgentCANotificationStatusAdviceV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -156,8 +161,9 @@ public class AgentCANotificationStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationCancellationRequestStatusOrNotificationAdviceStatusRule";
 			definition = "Either NotificationCancellationRequestStatus or NotificationAdviceStatus must be present but not both.";
-			messageDefinition_lazy = () -> AgentCANotificationStatusAdviceV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(AgentCANotificationStatusAdviceV01.mmNotificationCancellationRequestStatus, AgentCANotificationStatusAdviceV01.mmNotificationAdviceStatus);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmNotificationCancellationRequestStatus,
+					com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmNotificationAdviceStatus);
 		}
 	};
 	/**
@@ -167,6 +173,10 @@ public class AgentCANotificationStatusAdviceV01 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01
+	 * AgentCANotificationStatusAdviceV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -181,10 +191,6 @@ public class AgentCANotificationStatusAdviceV01 {
 	 * mmAgentCANotificationCancellationRequestIdentification}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01
-	 * AgentCANotificationStatusAdviceV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -205,8 +211,9 @@ public class AgentCANotificationStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCANotificationAdviceIDOrAgentCANotificationCancellationRequestIDRule";
 			definition = "Either AgentCANotificationAdviceIdentification or AgentCANotificationCancellationRequestIdentification must be present, but not both.";
-			messageDefinition_lazy = () -> AgentCANotificationStatusAdviceV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(AgentCANotificationStatusAdviceV01.mmAgentCANotificationAdviceIdentification, AgentCANotificationStatusAdviceV01.mmAgentCANotificationCancellationRequestIdentification);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmAgentCANotificationAdviceIdentification,
+					com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmAgentCANotificationCancellationRequestIdentification);
 		}
 	};
 	protected DocumentIdentification8 identification;
@@ -246,6 +253,14 @@ public class AgentCANotificationStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCANotificationStatusAdviceV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification8 agentCANotificationAdviceIdentification;
 	/**
@@ -283,6 +298,14 @@ public class AgentCANotificationStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCANotificationStatusAdviceV01.class.getMethod("getAgentCANotificationAdviceIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DocumentIdentification8 agentCANotificationCancellationRequestIdentification;
@@ -322,6 +345,14 @@ public class AgentCANotificationStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCANotificationStatusAdviceV01.class.getMethod("getAgentCANotificationCancellationRequestIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionInformation2 corporateActionGeneralInformation;
 	/**
@@ -356,6 +387,14 @@ public class AgentCANotificationStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCANotificationStatusAdviceV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected NotificationCancellationRequestStatus1Choice notificationCancellationRequestStatus;
@@ -395,6 +434,14 @@ public class AgentCANotificationStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> NotificationCancellationRequestStatus1Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCANotificationStatusAdviceV01.class.getMethod("getNotificationCancellationRequestStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected NotificationAdviceStatus1Choice notificationAdviceStatus;
 	/**
@@ -431,6 +478,14 @@ public class AgentCANotificationStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> NotificationAdviceStatus1Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCANotificationStatusAdviceV01.class.getMethod("getNotificationAdviceStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -440,14 +495,16 @@ public class AgentCANotificationStatusAdviceV01 {
 				name = "AgentCANotificationStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent by a CSD to an issuer (or its agent) to report the status, or change in status, of a notification advice or notification cancellation request.\r\nUsage\r\nWhen this message is used to report the status of a notification advice then the building block Agent Corporate Action Notification Advice Identification must be present.\r\nWhen this message is used to provide the status of a notification cancellation request then the building block Notification Cancellation Request Identification must be present.";
 				messageSet_lazy = () -> Arrays.asList(IssuersAgentsCommunicationISOLatestversion.mmObject());
-				xors_lazy = () -> Arrays.asList(AgentCANotificationStatusAdviceV01.mmNotificationCancellationRequestStatusOrNotificationAdviceStatusRule,
-						AgentCANotificationStatusAdviceV01.mmAgentCANotificationAdviceIDOrAgentCANotificationCancellationRequestIDRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmNotificationCancellationRequestStatusOrNotificationAdviceStatusRule,
+						com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmAgentCANotificationAdviceIDOrAgentCANotificationCancellationRequestIDRule);
 				rootElement = "Document";
 				xmlTag = "AgtCANtfctnStsAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCANotificationStatusAdviceV01.mmIdentification, AgentCANotificationStatusAdviceV01.mmAgentCANotificationAdviceIdentification,
-						AgentCANotificationStatusAdviceV01.mmAgentCANotificationCancellationRequestIdentification, AgentCANotificationStatusAdviceV01.mmCorporateActionGeneralInformation,
-						AgentCANotificationStatusAdviceV01.mmNotificationCancellationRequestStatus, AgentCANotificationStatusAdviceV01.mmNotificationAdviceStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmAgentCANotificationAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmAgentCANotificationCancellationRequestIdentification,
+						com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmNotificationCancellationRequestStatus, com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmNotificationAdviceStatus);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -457,10 +514,16 @@ public class AgentCANotificationStatusAdviceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AgentCANotificationStatusAdviceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
@@ -469,6 +532,7 @@ public class AgentCANotificationStatusAdviceV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AgtCANtfctnAdvcId", required = true)
 	public DocumentIdentification8 getAgentCANotificationAdviceIdentification() {
 		return agentCANotificationAdviceIdentification;
 	}
@@ -477,6 +541,7 @@ public class AgentCANotificationStatusAdviceV01 {
 		this.agentCANotificationAdviceIdentification = agentCANotificationAdviceIdentification;
 	}
 
+	@XmlElement(name = "AgtCANtfctnCxlReqId", required = true)
 	public DocumentIdentification8 getAgentCANotificationCancellationRequestIdentification() {
 		return agentCANotificationCancellationRequestIdentification;
 	}
@@ -485,6 +550,7 @@ public class AgentCANotificationStatusAdviceV01 {
 		this.agentCANotificationCancellationRequestIdentification = agentCANotificationCancellationRequestIdentification;
 	}
 
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation2 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
@@ -493,6 +559,7 @@ public class AgentCANotificationStatusAdviceV01 {
 		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
 	}
 
+	@XmlElement(name = "NtfctnCxlReqSts", required = true)
 	public NotificationCancellationRequestStatus1Choice getNotificationCancellationRequestStatus() {
 		return notificationCancellationRequestStatus;
 	}
@@ -501,11 +568,18 @@ public class AgentCANotificationStatusAdviceV01 {
 		this.notificationCancellationRequestStatus = notificationCancellationRequestStatus;
 	}
 
+	@XmlElement(name = "NtfctnAdvcSts", required = true)
 	public NotificationAdviceStatus1Choice getNotificationAdviceStatus() {
 		return notificationAdviceStatus;
 	}
 
 	public void setNotificationAdviceStatus(NotificationAdviceStatus1Choice notificationAdviceStatus) {
 		this.notificationAdviceStatus = notificationAdviceStatus;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.011.01.01")
+	static public class Document {
+		@XmlElement(name = "AgtCANtfctnStsAdvc", required = true)
+		public AgentCANotificationStatusAdviceV01 messageBody;
 	}
 }

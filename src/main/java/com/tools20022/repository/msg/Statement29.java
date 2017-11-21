@@ -24,6 +24,10 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics of the statement.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Characteristics of the statement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Statement29", propOrder = {"statementDateOrPeriod", "frequency", "updateType", "statementBasis", "statementType"})
 public class Statement29 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -283,6 +289,7 @@ public class Statement29 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtDtOrPrd")
 	public DateAndPeriod1Choice getStatementDateOrPeriod() {
 		return statementDateOrPeriod;
 	}
@@ -291,6 +298,7 @@ public class Statement29 {
 		this.statementDateOrPeriod = statementDateOrPeriod;
 	}
 
+	@XmlElement(name = "Frqcy")
 	public Frequency6Choice getFrequency() {
 		return frequency;
 	}
@@ -299,6 +307,7 @@ public class Statement29 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "UpdTp")
 	public UpdateType3Choice getUpdateType() {
 		return updateType;
 	}
@@ -307,6 +316,7 @@ public class Statement29 {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "StmtBsis")
 	public StatementBasis4Choice getStatementBasis() {
 		return statementBasis;
 	}
@@ -315,6 +325,7 @@ public class Statement29 {
 		this.statementBasis = statementBasis;
 	}
 
+	@XmlElement(name = "StmtTp")
 	public StatementType3Choice getStatementType() {
 		return statementType;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transfer cancellation status is in pending.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Transfer cancellation status is in pending."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferCancellationPendingStatus1", propOrder = "reason")
 public class TransferCancellationPendingStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -125,6 +131,7 @@ public class TransferCancellationPendingStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn")
 	public Max350Text getReason() {
 		return reason;
 	}

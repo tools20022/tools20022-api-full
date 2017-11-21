@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.TreasuryTradingParty;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Entity involved in an activity.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Entity involved in an activity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradePartyIdentification2", propOrder = {"role", "submittingParty", "fundInformation", "tradeParty"})
 public class TradePartyIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -288,6 +294,7 @@ public class TradePartyIdentification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Role", required = true)
 	public OptionParty1Code getRole() {
 		return role;
 	}
@@ -296,6 +303,7 @@ public class TradePartyIdentification2 {
 		this.role = role;
 	}
 
+	@XmlElement(name = "SubmitgPty", required = true)
 	public BICIdentifier getSubmittingParty() {
 		return submittingParty;
 	}
@@ -304,6 +312,7 @@ public class TradePartyIdentification2 {
 		this.submittingParty = submittingParty;
 	}
 
+	@XmlElement(name = "FndInf")
 	public FundIdentification1 getFundInformation() {
 		return fundInformation;
 	}
@@ -312,6 +321,7 @@ public class TradePartyIdentification2 {
 		this.fundInformation = fundInformation;
 	}
 
+	@XmlElement(name = "TradPty", required = true)
 	public PartyIdentification7Choice getTradeParty() {
 		return tradeParty;
 	}

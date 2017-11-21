@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies amounts in the framework of a corporate action event.
@@ -174,6 +178,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies amounts in the framework of a corporate action event."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionAmounts40", propOrder = {"grossCashAmount", "netCashAmount", "solicitationFees", "cashInLieuOfShare", "capitalGain", "interestAmount", "marketClaimAmount", "indemnityAmount",
+		"manufacturedDividendPaymentAmount", "reinvestmentAmount", "fullyFrankedAmount", "unfrankedAmount", "sundryOrOtherAmount", "taxFreeAmount", "taxDeferredAmount", "valueAddedTaxAmount", "stampDutyAmount", "taxReclaimAmount",
+		"taxCreditAmount", "additionalTaxAmount", "withholdingTaxAmount", "secondLevelTaxAmount", "fiscalStampAmount", "executingBrokerAmount", "payingAgentCommissionAmount", "localBrokerCommissionAmount", "regulatoryFeesAmount",
+		"shippingFeesAmount", "chargesAmount", "entitledAmount", "originalAmount", "accruedInterestAmount", "incomePortion", "equalisationAmount", "FATCATaxAmount", "NRATaxAmount", "backUpWithholdingTaxAmount", "taxOnIncomeAmount",
+		"transactionTax"})
 public class CorporateActionAmounts40 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -2135,6 +2145,7 @@ public class CorporateActionAmounts40 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrssCshAmt")
 	public RestrictedFINActiveCurrencyAndAmount getGrossCashAmount() {
 		return grossCashAmount;
 	}
@@ -2143,6 +2154,7 @@ public class CorporateActionAmounts40 {
 		this.grossCashAmount = grossCashAmount;
 	}
 
+	@XmlElement(name = "NetCshAmt")
 	public RestrictedFINActiveCurrencyAndAmount getNetCashAmount() {
 		return netCashAmount;
 	}
@@ -2151,6 +2163,7 @@ public class CorporateActionAmounts40 {
 		this.netCashAmount = netCashAmount;
 	}
 
+	@XmlElement(name = "SlctnFees")
 	public RestrictedFINActiveCurrencyAndAmount getSolicitationFees() {
 		return solicitationFees;
 	}
@@ -2159,6 +2172,7 @@ public class CorporateActionAmounts40 {
 		this.solicitationFees = solicitationFees;
 	}
 
+	@XmlElement(name = "CshInLieuOfShr")
 	public RestrictedFINActiveCurrencyAndAmount getCashInLieuOfShare() {
 		return cashInLieuOfShare;
 	}
@@ -2167,6 +2181,7 @@ public class CorporateActionAmounts40 {
 		this.cashInLieuOfShare = cashInLieuOfShare;
 	}
 
+	@XmlElement(name = "CptlGn")
 	public RestrictedFINActiveCurrencyAndAmount getCapitalGain() {
 		return capitalGain;
 	}
@@ -2175,6 +2190,7 @@ public class CorporateActionAmounts40 {
 		this.capitalGain = capitalGain;
 	}
 
+	@XmlElement(name = "IntrstAmt")
 	public RestrictedFINActiveCurrencyAndAmount getInterestAmount() {
 		return interestAmount;
 	}
@@ -2183,6 +2199,7 @@ public class CorporateActionAmounts40 {
 		this.interestAmount = interestAmount;
 	}
 
+	@XmlElement(name = "MktClmAmt")
 	public RestrictedFINActiveCurrencyAndAmount getMarketClaimAmount() {
 		return marketClaimAmount;
 	}
@@ -2191,6 +2208,7 @@ public class CorporateActionAmounts40 {
 		this.marketClaimAmount = marketClaimAmount;
 	}
 
+	@XmlElement(name = "IndmntyAmt")
 	public RestrictedFINActiveCurrencyAndAmount getIndemnityAmount() {
 		return indemnityAmount;
 	}
@@ -2199,6 +2217,7 @@ public class CorporateActionAmounts40 {
 		this.indemnityAmount = indemnityAmount;
 	}
 
+	@XmlElement(name = "ManfctrdDvddPmtAmt")
 	public RestrictedFINActiveCurrencyAndAmount getManufacturedDividendPaymentAmount() {
 		return manufacturedDividendPaymentAmount;
 	}
@@ -2207,6 +2226,7 @@ public class CorporateActionAmounts40 {
 		this.manufacturedDividendPaymentAmount = manufacturedDividendPaymentAmount;
 	}
 
+	@XmlElement(name = "RinvstmtAmt")
 	public RestrictedFINActiveCurrencyAndAmount getReinvestmentAmount() {
 		return reinvestmentAmount;
 	}
@@ -2215,6 +2235,7 @@ public class CorporateActionAmounts40 {
 		this.reinvestmentAmount = reinvestmentAmount;
 	}
 
+	@XmlElement(name = "FullyFrnkdAmt")
 	public RestrictedFINActiveCurrencyAndAmount getFullyFrankedAmount() {
 		return fullyFrankedAmount;
 	}
@@ -2223,6 +2244,7 @@ public class CorporateActionAmounts40 {
 		this.fullyFrankedAmount = fullyFrankedAmount;
 	}
 
+	@XmlElement(name = "UfrnkdAmt")
 	public RestrictedFINActiveCurrencyAndAmount getUnfrankedAmount() {
 		return unfrankedAmount;
 	}
@@ -2231,6 +2253,7 @@ public class CorporateActionAmounts40 {
 		this.unfrankedAmount = unfrankedAmount;
 	}
 
+	@XmlElement(name = "SndryOrOthrAmt")
 	public RestrictedFINActiveCurrencyAndAmount getSundryOrOtherAmount() {
 		return sundryOrOtherAmount;
 	}
@@ -2239,6 +2262,7 @@ public class CorporateActionAmounts40 {
 		this.sundryOrOtherAmount = sundryOrOtherAmount;
 	}
 
+	@XmlElement(name = "TaxFreeAmt")
 	public RestrictedFINActiveCurrencyAndAmount getTaxFreeAmount() {
 		return taxFreeAmount;
 	}
@@ -2247,6 +2271,7 @@ public class CorporateActionAmounts40 {
 		this.taxFreeAmount = taxFreeAmount;
 	}
 
+	@XmlElement(name = "TaxDfrrdAmt")
 	public RestrictedFINActiveCurrencyAndAmount getTaxDeferredAmount() {
 		return taxDeferredAmount;
 	}
@@ -2255,6 +2280,7 @@ public class CorporateActionAmounts40 {
 		this.taxDeferredAmount = taxDeferredAmount;
 	}
 
+	@XmlElement(name = "ValAddedTaxAmt")
 	public RestrictedFINActiveCurrencyAndAmount getValueAddedTaxAmount() {
 		return valueAddedTaxAmount;
 	}
@@ -2263,6 +2289,7 @@ public class CorporateActionAmounts40 {
 		this.valueAddedTaxAmount = valueAddedTaxAmount;
 	}
 
+	@XmlElement(name = "StmpDtyAmt")
 	public RestrictedFINActiveCurrencyAndAmount getStampDutyAmount() {
 		return stampDutyAmount;
 	}
@@ -2271,6 +2298,7 @@ public class CorporateActionAmounts40 {
 		this.stampDutyAmount = stampDutyAmount;
 	}
 
+	@XmlElement(name = "TaxRclmAmt")
 	public RestrictedFINActiveCurrencyAndAmount getTaxReclaimAmount() {
 		return taxReclaimAmount;
 	}
@@ -2279,6 +2307,7 @@ public class CorporateActionAmounts40 {
 		this.taxReclaimAmount = taxReclaimAmount;
 	}
 
+	@XmlElement(name = "TaxCdtAmt")
 	public RestrictedFINActiveCurrencyAndAmount getTaxCreditAmount() {
 		return taxCreditAmount;
 	}
@@ -2287,6 +2316,7 @@ public class CorporateActionAmounts40 {
 		this.taxCreditAmount = taxCreditAmount;
 	}
 
+	@XmlElement(name = "AddtlTaxAmt")
 	public RestrictedFINActiveCurrencyAndAmount getAdditionalTaxAmount() {
 		return additionalTaxAmount;
 	}
@@ -2295,6 +2325,7 @@ public class CorporateActionAmounts40 {
 		this.additionalTaxAmount = additionalTaxAmount;
 	}
 
+	@XmlElement(name = "WhldgTaxAmt")
 	public RestrictedFINActiveCurrencyAndAmount getWithholdingTaxAmount() {
 		return withholdingTaxAmount;
 	}
@@ -2303,6 +2334,7 @@ public class CorporateActionAmounts40 {
 		this.withholdingTaxAmount = withholdingTaxAmount;
 	}
 
+	@XmlElement(name = "ScndLvlTaxAmt")
 	public ActiveCurrencyAndAmount getSecondLevelTaxAmount() {
 		return secondLevelTaxAmount;
 	}
@@ -2311,6 +2343,7 @@ public class CorporateActionAmounts40 {
 		this.secondLevelTaxAmount = secondLevelTaxAmount;
 	}
 
+	@XmlElement(name = "FsclStmpAmt")
 	public RestrictedFINActiveCurrencyAndAmount getFiscalStampAmount() {
 		return fiscalStampAmount;
 	}
@@ -2319,6 +2352,7 @@ public class CorporateActionAmounts40 {
 		this.fiscalStampAmount = fiscalStampAmount;
 	}
 
+	@XmlElement(name = "ExctgBrkrAmt")
 	public RestrictedFINActiveCurrencyAndAmount getExecutingBrokerAmount() {
 		return executingBrokerAmount;
 	}
@@ -2327,6 +2361,7 @@ public class CorporateActionAmounts40 {
 		this.executingBrokerAmount = executingBrokerAmount;
 	}
 
+	@XmlElement(name = "PngAgtComssnAmt")
 	public RestrictedFINActiveCurrencyAndAmount getPayingAgentCommissionAmount() {
 		return payingAgentCommissionAmount;
 	}
@@ -2335,6 +2370,7 @@ public class CorporateActionAmounts40 {
 		this.payingAgentCommissionAmount = payingAgentCommissionAmount;
 	}
 
+	@XmlElement(name = "LclBrkrComssnAmt")
 	public RestrictedFINActiveCurrencyAndAmount getLocalBrokerCommissionAmount() {
 		return localBrokerCommissionAmount;
 	}
@@ -2343,6 +2379,7 @@ public class CorporateActionAmounts40 {
 		this.localBrokerCommissionAmount = localBrokerCommissionAmount;
 	}
 
+	@XmlElement(name = "RgltryFeesAmt")
 	public RestrictedFINActiveCurrencyAndAmount getRegulatoryFeesAmount() {
 		return regulatoryFeesAmount;
 	}
@@ -2351,6 +2388,7 @@ public class CorporateActionAmounts40 {
 		this.regulatoryFeesAmount = regulatoryFeesAmount;
 	}
 
+	@XmlElement(name = "ShppgFeesAmt")
 	public RestrictedFINActiveCurrencyAndAmount getShippingFeesAmount() {
 		return shippingFeesAmount;
 	}
@@ -2359,6 +2397,7 @@ public class CorporateActionAmounts40 {
 		this.shippingFeesAmount = shippingFeesAmount;
 	}
 
+	@XmlElement(name = "ChrgsAmt")
 	public RestrictedFINActiveCurrencyAndAmount getChargesAmount() {
 		return chargesAmount;
 	}
@@ -2367,6 +2406,7 @@ public class CorporateActionAmounts40 {
 		this.chargesAmount = chargesAmount;
 	}
 
+	@XmlElement(name = "EntitldAmt")
 	public RestrictedFINActiveCurrencyAndAmount getEntitledAmount() {
 		return entitledAmount;
 	}
@@ -2375,6 +2415,7 @@ public class CorporateActionAmounts40 {
 		this.entitledAmount = entitledAmount;
 	}
 
+	@XmlElement(name = "OrgnlAmt")
 	public RestrictedFINActiveCurrencyAndAmount getOriginalAmount() {
 		return originalAmount;
 	}
@@ -2383,6 +2424,7 @@ public class CorporateActionAmounts40 {
 		this.originalAmount = originalAmount;
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt")
 	public RestrictedFINActiveCurrencyAndAmount getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -2391,6 +2433,7 @@ public class CorporateActionAmounts40 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "IncmPrtn")
 	public RestrictedFINActiveCurrencyAndAmount getIncomePortion() {
 		return incomePortion;
 	}
@@ -2399,6 +2442,7 @@ public class CorporateActionAmounts40 {
 		this.incomePortion = incomePortion;
 	}
 
+	@XmlElement(name = "EqulstnAmt")
 	public RestrictedFINActiveCurrencyAndAmount getEqualisationAmount() {
 		return equalisationAmount;
 	}
@@ -2407,6 +2451,7 @@ public class CorporateActionAmounts40 {
 		this.equalisationAmount = equalisationAmount;
 	}
 
+	@XmlElement(name = "FATCATaxAmt")
 	public RestrictedFINActiveCurrencyAndAmount getFATCATaxAmount() {
 		return fATCATaxAmount;
 	}
@@ -2415,6 +2460,7 @@ public class CorporateActionAmounts40 {
 		this.fATCATaxAmount = fATCATaxAmount;
 	}
 
+	@XmlElement(name = "NRATaxAmt")
 	public RestrictedFINActiveCurrencyAndAmount getNRATaxAmount() {
 		return nRATaxAmount;
 	}
@@ -2423,6 +2469,7 @@ public class CorporateActionAmounts40 {
 		this.nRATaxAmount = nRATaxAmount;
 	}
 
+	@XmlElement(name = "BckUpWhldgTaxAmt")
 	public RestrictedFINActiveCurrencyAndAmount getBackUpWithholdingTaxAmount() {
 		return backUpWithholdingTaxAmount;
 	}
@@ -2431,6 +2478,7 @@ public class CorporateActionAmounts40 {
 		this.backUpWithholdingTaxAmount = backUpWithholdingTaxAmount;
 	}
 
+	@XmlElement(name = "TaxOnIncmAmt")
 	public RestrictedFINActiveCurrencyAndAmount getTaxOnIncomeAmount() {
 		return taxOnIncomeAmount;
 	}
@@ -2439,6 +2487,7 @@ public class CorporateActionAmounts40 {
 		this.taxOnIncomeAmount = taxOnIncomeAmount;
 	}
 
+	@XmlElement(name = "TxTax")
 	public RestrictedFINActiveCurrencyAndAmount getTransactionTax() {
 		return transactionTax;
 	}

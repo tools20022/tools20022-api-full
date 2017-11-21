@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Breakdown of cash movements into a fund as a result of investment funds
@@ -91,6 +95,8 @@ import java.util.List;
  * FundCashInBreakdown2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundCashInBreakdown3", propOrder = {"amount", "unitsNumber", "newAmountIndicator", "investmentFundTransactionInType", "originalOrderQuantityType", "chargeDetails", "commissionDetails", "settlementCurrency"})
 public class FundCashInBreakdown3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -527,6 +533,7 @@ public class FundCashInBreakdown3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt")
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -535,6 +542,7 @@ public class FundCashInBreakdown3 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "UnitsNb")
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -543,6 +551,7 @@ public class FundCashInBreakdown3 {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "NewAmtInd")
 	public YesNoIndicator getNewAmountIndicator() {
 		return newAmountIndicator;
 	}
@@ -551,6 +560,7 @@ public class FundCashInBreakdown3 {
 		this.newAmountIndicator = newAmountIndicator;
 	}
 
+	@XmlElement(name = "InvstmtFndTxInTp", required = true)
 	public InvestmentFundTransactionInType1Choice getInvestmentFundTransactionInType() {
 		return investmentFundTransactionInType;
 	}
@@ -559,6 +569,7 @@ public class FundCashInBreakdown3 {
 		this.investmentFundTransactionInType = investmentFundTransactionInType;
 	}
 
+	@XmlElement(name = "OrgnlOrdrQtyTp", required = true)
 	public QuantityType1Choice getOriginalOrderQuantityType() {
 		return originalOrderQuantityType;
 	}
@@ -567,6 +578,7 @@ public class FundCashInBreakdown3 {
 		this.originalOrderQuantityType = originalOrderQuantityType;
 	}
 
+	@XmlElement(name = "ChrgDtls")
 	public List<Charge26> getChargeDetails() {
 		return chargeDetails;
 	}
@@ -575,6 +587,7 @@ public class FundCashInBreakdown3 {
 		this.chargeDetails = chargeDetails;
 	}
 
+	@XmlElement(name = "ComssnDtls")
 	public List<Commission21> getCommissionDetails() {
 		return commissionDetails;
 	}
@@ -583,6 +596,7 @@ public class FundCashInBreakdown3 {
 		this.commissionDetails = commissionDetails;
 	}
 
+	@XmlElement(name = "SttlmCcy")
 	public ActiveCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}

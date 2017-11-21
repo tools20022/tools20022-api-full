@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the units to settle.
@@ -74,6 +78,8 @@ import java.util.List;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Unit3 Unit3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Unit6", propOrder = {"unitsNumber", "acquisitionDate", "certificateNumber", "group1Or2Units", "priceDetails"})
 public class Unit6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -360,6 +366,7 @@ public class Unit6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -368,6 +375,7 @@ public class Unit6 {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "AcqstnDt")
 	public ISODate getAcquisitionDate() {
 		return acquisitionDate;
 	}
@@ -376,6 +384,7 @@ public class Unit6 {
 		this.acquisitionDate = acquisitionDate;
 	}
 
+	@XmlElement(name = "CertNb")
 	public List<Max35Text> getCertificateNumber() {
 		return certificateNumber;
 	}
@@ -384,6 +393,7 @@ public class Unit6 {
 		this.certificateNumber = certificateNumber;
 	}
 
+	@XmlElement(name = "Grp1Or2Units")
 	public UKTaxGroupUnitCode getGroup1Or2Units() {
 		return group1Or2Units;
 	}
@@ -392,6 +402,7 @@ public class Unit6 {
 		this.group1Or2Units = group1Or2Units;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public UnitPrice21 getPriceDetails() {
 		return priceDetails;
 	}

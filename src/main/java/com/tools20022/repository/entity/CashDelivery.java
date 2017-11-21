@@ -21,6 +21,7 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.CreditInstrument;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,18 +34,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmCashDelivery
- * BankingTransaction.mmCashDelivery}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.CreditInstrument
- * CreditInstrument}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -53,6 +42,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CashDelivery#mmRelatedBankingTransaction
  * CashDelivery.mmRelatedBankingTransaction}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.CreditInstrument
+ * CreditInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmCashDelivery
+ * BankingTransaction.mmCashDelivery}</li>
  * </ul>
  * </li>
  * <li>
@@ -102,7 +103,7 @@ public class CashDelivery extends CreditInstrument {
 	 */
 	public static final MMBusinessAttribute mmCashAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CashDelivery.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAmount";
@@ -110,6 +111,14 @@ public class CashDelivery extends CreditInstrument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashDelivery.class.getMethod("getCashAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BankingTransaction relatedBankingTransaction;
@@ -148,7 +157,7 @@ public class CashDelivery extends CreditInstrument {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedBankingTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashDelivery.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedBankingTransaction";
@@ -170,7 +179,12 @@ public class CashDelivery extends CreditInstrument {
 				definition = "Amount of money representing a value paid by an agent bank to a creditor.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BankingTransaction.mmCashDelivery);
 				superType_lazy = () -> CreditInstrument.mmObject();
-				element_lazy = () -> Arrays.asList(CashDelivery.mmCashAmount, CashDelivery.mmRelatedBankingTransaction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashDelivery.mmCashAmount, com.tools20022.repository.entity.CashDelivery.mmRelatedBankingTransaction);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CashDelivery.class;
 			}
 		});
 		return mmObject_lazy.get();

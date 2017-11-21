@@ -65,6 +65,11 @@ public class OrderOriginationFirm extends SecuritiesOrderPartyRole {
 				definition = "Firm that originates or submits the original order for execution.";
 				superType_lazy = () -> SecuritiesOrderPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return OrderOriginationFirm.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

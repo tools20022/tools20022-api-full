@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides transaction type and identification information.
@@ -79,6 +83,8 @@ import java.util.function.Supplier;
  * definition} = "Provides transaction type and identification information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementTypeAndAdditionalParameters8", propOrder = {"securitiesMovementType", "payment", "commonIdentification", "corporateActionEventIdentification", "reconciliationIndicator"})
 public class SettlementTypeAndAdditionalParameters8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -355,6 +361,7 @@ public class SettlementTypeAndAdditionalParameters8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesMvmntTp")
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
@@ -363,6 +370,7 @@ public class SettlementTypeAndAdditionalParameters8 {
 		this.securitiesMovementType = securitiesMovementType;
 	}
 
+	@XmlElement(name = "Pmt")
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
@@ -371,6 +379,7 @@ public class SettlementTypeAndAdditionalParameters8 {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "CmonId")
 	public RestrictedFINXMax16Text getCommonIdentification() {
 		return commonIdentification;
 	}
@@ -379,6 +388,7 @@ public class SettlementTypeAndAdditionalParameters8 {
 		this.commonIdentification = commonIdentification;
 	}
 
+	@XmlElement(name = "CorpActnEvtId")
 	public RestrictedFINXMax16Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -387,6 +397,7 @@ public class SettlementTypeAndAdditionalParameters8 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "RcncltnInd")
 	public YesNoIndicator getReconciliationIndicator() {
 		return reconciliationIndicator;
 	}

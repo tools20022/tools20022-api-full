@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.IncentivePremium;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of cash premium paid to the security holder when voting.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice of cash premium paid to the security holder when voting."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IncentivePremiumType1Choice", propOrder = {"perSecurity", "perVote", "perAttendee"})
 public class IncentivePremiumType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -222,6 +228,7 @@ public class IncentivePremiumType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PerScty", required = true)
 	public Number getPerSecurity() {
 		return perSecurity;
 	}
@@ -230,6 +237,7 @@ public class IncentivePremiumType1Choice {
 		this.perSecurity = perSecurity;
 	}
 
+	@XmlElement(name = "PerVote", required = true)
 	public Number getPerVote() {
 		return perVote;
 	}
@@ -238,6 +246,7 @@ public class IncentivePremiumType1Choice {
 		this.perVote = perVote;
 	}
 
+	@XmlElement(name = "PerAttndee", required = true)
 	public YesNoIndicator getPerAttendee() {
 		return perAttendee;
 	}

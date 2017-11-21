@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Deposit transaction for which the service is requested.
@@ -97,6 +101,9 @@ import java.util.List;
  * {@linkplain com.tools20022.repository.msg.ATMTransaction13 ATMTransaction13}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransaction15", propOrder = {"transactionIdentification", "reconciliationIdentification", "accountData", "protectedAccountData", "totalAmount", "detailedRequestedAmount", "depositedMedia", "requestedReceipt",
+		"ICCRelatedData"})
 public class ATMTransaction15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -634,6 +641,7 @@ public class ATMTransaction15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -642,6 +650,7 @@ public class ATMTransaction15 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "RcncltnId")
 	public Max35Text getReconciliationIdentification() {
 		return reconciliationIdentification;
 	}
@@ -650,6 +659,7 @@ public class ATMTransaction15 {
 		this.reconciliationIdentification = reconciliationIdentification;
 	}
 
+	@XmlElement(name = "AcctData")
 	public CardAccount9 getAccountData() {
 		return accountData;
 	}
@@ -658,6 +668,7 @@ public class ATMTransaction15 {
 		this.accountData = accountData;
 	}
 
+	@XmlElement(name = "PrtctdAcctData")
 	public ContentInformationType10 getProtectedAccountData() {
 		return protectedAccountData;
 	}
@@ -666,6 +677,7 @@ public class ATMTransaction15 {
 		this.protectedAccountData = protectedAccountData;
 	}
 
+	@XmlElement(name = "TtlAmt")
 	public AmountAndCurrency1 getTotalAmount() {
 		return totalAmount;
 	}
@@ -674,6 +686,7 @@ public class ATMTransaction15 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "DtldReqdAmt")
 	public List<DetailedAmount16> getDetailedRequestedAmount() {
 		return detailedRequestedAmount;
 	}
@@ -682,6 +695,7 @@ public class ATMTransaction15 {
 		this.detailedRequestedAmount = detailedRequestedAmount;
 	}
 
+	@XmlElement(name = "DpstdMdia")
 	public List<ATMDepositedMedia1> getDepositedMedia() {
 		return depositedMedia;
 	}
@@ -690,6 +704,7 @@ public class ATMTransaction15 {
 		this.depositedMedia = depositedMedia;
 	}
 
+	@XmlElement(name = "ReqdRct")
 	public TrueFalseIndicator getRequestedReceipt() {
 		return requestedReceipt;
 	}
@@ -698,6 +713,7 @@ public class ATMTransaction15 {
 		this.requestedReceipt = requestedReceipt;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}

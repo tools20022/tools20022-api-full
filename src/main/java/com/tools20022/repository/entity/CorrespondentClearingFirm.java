@@ -68,6 +68,11 @@ public class CorrespondentClearingFirm extends SettlementPartyRole {
 				definition = "Firm that is going to carry the position on their books at another clearinghouse (exchanges).";
 				superType_lazy = () -> SettlementPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorrespondentClearingFirm.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

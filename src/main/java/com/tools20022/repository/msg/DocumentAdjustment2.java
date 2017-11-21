@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide information on the amount and reason of the
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DocumentAdjustment2", propOrder = {"amount", "creditDebitIndicator", "reason", "additionalInformation"})
 public class DocumentAdjustment2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -275,6 +281,7 @@ public class DocumentAdjustment2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -283,6 +290,7 @@ public class DocumentAdjustment2 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -291,6 +299,7 @@ public class DocumentAdjustment2 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Rsn")
 	public Max4Text getReason() {
 		return reason;
 	}
@@ -299,6 +308,7 @@ public class DocumentAdjustment2 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max140Text getAdditionalInformation() {
 		return additionalInformation;
 	}

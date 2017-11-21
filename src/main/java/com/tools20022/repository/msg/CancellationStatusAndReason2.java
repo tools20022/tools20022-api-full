@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status of a transfer cancellation instruction and the reason for the status.
@@ -119,6 +123,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancellationStatusAndReason2", propOrder = {"masterReference", "transferReference", "clientReference", "cancellationReference", "status", "rejected", "complete", "pending", "statusInitiator"})
 public class CancellationStatusAndReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -684,6 +690,7 @@ public class CancellationStatusAndReason2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -692,6 +699,7 @@ public class CancellationStatusAndReason2 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -700,6 +708,7 @@ public class CancellationStatusAndReason2 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -708,6 +717,7 @@ public class CancellationStatusAndReason2 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -716,6 +726,7 @@ public class CancellationStatusAndReason2 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public TransferCancellationStatus2 getStatus() {
 		return status;
 	}
@@ -724,6 +735,7 @@ public class CancellationStatusAndReason2 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public TransferCancellationRejectedStatus1 getRejected() {
 		return rejected;
 	}
@@ -732,6 +744,7 @@ public class CancellationStatusAndReason2 {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Cmplt", required = true)
 	public TransferCancellationCompleteStatusAndReason1 getComplete() {
 		return complete;
 	}
@@ -740,6 +753,7 @@ public class CancellationStatusAndReason2 {
 		this.complete = complete;
 	}
 
+	@XmlElement(name = "Pdg", required = true)
 	public TransferCancellationPendingStatus1 getPending() {
 		return pending;
 	}
@@ -748,6 +762,7 @@ public class CancellationStatusAndReason2 {
 		this.pending = pending;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification2Choice getStatusInitiator() {
 		return statusInitiator;
 	}

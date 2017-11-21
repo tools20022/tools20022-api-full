@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.CorporateActionInformationProcessingStatus1
 import com.tools20022.repository.msg.CorporateActionInformationRejectedStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the different statuses of a corporate action information
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionInformationStatus1Choice", propOrder = {"processedStatus", "rejectedStatus"})
 public class CorporateActionInformationStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -191,6 +197,7 @@ public class CorporateActionInformationStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcdSts", required = true)
 	public CorporateActionInformationProcessingStatus1 getProcessedStatus() {
 		return processedStatus;
 	}
@@ -199,6 +206,7 @@ public class CorporateActionInformationStatus1Choice {
 		this.processedStatus = processedStatus;
 	}
 
+	@XmlElement(name = "RjctdSts", required = true)
 	public CorporateActionInformationRejectedStatus1 getRejectedStatus() {
 		return rejectedStatus;
 	}

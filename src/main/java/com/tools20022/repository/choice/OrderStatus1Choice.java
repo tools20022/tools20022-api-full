@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of status.
@@ -75,6 +79,8 @@ import java.util.List;
  * definition} = "Choice of status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderStatus1Choice", propOrder = {"status", "cancelled", "conditionallyAccepted", "rejected", "suspended", "partiallySettled"})
 public class OrderStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -389,6 +395,7 @@ public class OrderStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public OrderStatus5Code getStatus() {
 		return status;
 	}
@@ -397,6 +404,7 @@ public class OrderStatus1Choice {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Canc", required = true)
 	public CancelledStatusReason1Choice getCancelled() {
 		return cancelled;
 	}
@@ -405,6 +413,7 @@ public class OrderStatus1Choice {
 		this.cancelled = cancelled;
 	}
 
+	@XmlElement(name = "CondlyAccptd", required = true)
 	public List<ConditionallyAcceptedStatusReason1Choice> getConditionallyAccepted() {
 		return conditionallyAccepted;
 	}
@@ -413,6 +422,7 @@ public class OrderStatus1Choice {
 		this.conditionallyAccepted = conditionallyAccepted;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public List<RejectedStatusReason1Choice> getRejected() {
 		return rejected;
 	}
@@ -421,6 +431,7 @@ public class OrderStatus1Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Sspd", required = true)
 	public SuspendedStatusReasonChoice getSuspended() {
 		return suspended;
 	}
@@ -429,6 +440,7 @@ public class OrderStatus1Choice {
 		this.suspended = suspended;
 	}
 
+	@XmlElement(name = "PrtlySttld", required = true)
 	public PartiallySettledStatus2 getPartiallySettled() {
 		return partiallySettled;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies aggregated details on transactions within a defined numeric range
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionsBin2", propOrder = {"numberOfTransactions", "totalNotionalAmount", "range"})
 public class TransactionsBin2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class TransactionsBin2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NbOfTxs", required = true)
 	public Number getNumberOfTransactions() {
 		return numberOfTransactions;
 	}
@@ -226,6 +233,7 @@ public class TransactionsBin2 {
 		this.numberOfTransactions = numberOfTransactions;
 	}
 
+	@XmlElement(name = "TtlNtnlAmt", required = true)
 	public DecimalNumber getTotalNotionalAmount() {
 		return totalNotionalAmount;
 	}
@@ -234,6 +242,7 @@ public class TransactionsBin2 {
 		this.totalNotionalAmount = totalNotionalAmount;
 	}
 
+	@XmlElement(name = "Rg", required = true)
 	public FromToQuantityRange2 getRange() {
 		return range;
 	}

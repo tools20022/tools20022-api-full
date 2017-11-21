@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.ProprietaryReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of status for the affirmation.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of status for the affirmation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AffirmationStatus6Choice", propOrder = {"affirmed", "unaffirmed", "proprietaryStatus"})
 public class AffirmationStatus6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -244,6 +250,7 @@ public class AffirmationStatus6Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Affrmd", required = true)
 	public ProprietaryReason1 getAffirmed() {
 		return affirmed;
 	}
@@ -252,6 +259,7 @@ public class AffirmationStatus6Choice {
 		this.affirmed = affirmed;
 	}
 
+	@XmlElement(name = "Uaffrmd", required = true)
 	public AffirmationReason1Choice getUnaffirmed() {
 		return unaffirmed;
 	}
@@ -260,6 +268,7 @@ public class AffirmationStatus6Choice {
 		this.unaffirmed = unaffirmed;
 	}
 
+	@XmlElement(name = "PrtrySts")
 	public ProprietaryStatusAndReason1 getProprietaryStatus() {
 		return proprietaryStatus;
 	}

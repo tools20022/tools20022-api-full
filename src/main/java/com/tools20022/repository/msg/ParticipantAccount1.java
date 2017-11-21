@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details from participant profile account.
@@ -90,6 +94,9 @@ import java.util.List;
  * definition} = "Details from participant profile account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ParticipantAccount1", propOrder = {"accountTypeName", "accountTypeShortName", "openingDate", "closingDate", "deletionDate", "licenseWithdrawalDocument", "accountRestrictions", "designatedAccount",
+		"liquidityPoolParticipantDetails", "limits", "arrests", "migration"})
 public class ParticipantAccount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -603,6 +610,7 @@ public class ParticipantAccount1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctTpNm", required = true)
 	public Max40Text getAccountTypeName() {
 		return accountTypeName;
 	}
@@ -611,6 +619,7 @@ public class ParticipantAccount1 {
 		this.accountTypeName = accountTypeName;
 	}
 
+	@XmlElement(name = "AcctTpShrtNm", required = true)
 	public Max140Text getAccountTypeShortName() {
 		return accountTypeShortName;
 	}
@@ -619,6 +628,7 @@ public class ParticipantAccount1 {
 		this.accountTypeShortName = accountTypeShortName;
 	}
 
+	@XmlElement(name = "OpngDt", required = true)
 	public ISODateTime getOpeningDate() {
 		return openingDate;
 	}
@@ -627,6 +637,7 @@ public class ParticipantAccount1 {
 		this.openingDate = openingDate;
 	}
 
+	@XmlElement(name = "ClsgDt")
 	public ISODateTime getClosingDate() {
 		return closingDate;
 	}
@@ -635,6 +646,7 @@ public class ParticipantAccount1 {
 		this.closingDate = closingDate;
 	}
 
+	@XmlElement(name = "DeltnDt")
 	public ISODateTime getDeletionDate() {
 		return deletionDate;
 	}
@@ -643,6 +655,7 @@ public class ParticipantAccount1 {
 		this.deletionDate = deletionDate;
 	}
 
+	@XmlElement(name = "LicWdrwlDoc")
 	public DocumentIdentification11 getLicenseWithdrawalDocument() {
 		return licenseWithdrawalDocument;
 	}
@@ -651,6 +664,7 @@ public class ParticipantAccount1 {
 		this.licenseWithdrawalDocument = licenseWithdrawalDocument;
 	}
 
+	@XmlElement(name = "AcctRstrctns")
 	public List<AccountRestrictions1> getAccountRestrictions() {
 		return accountRestrictions;
 	}
@@ -659,6 +673,7 @@ public class ParticipantAccount1 {
 		this.accountRestrictions = accountRestrictions;
 	}
 
+	@XmlElement(name = "DsgntdAcct")
 	public DefaultAccountDetails1 getDesignatedAccount() {
 		return designatedAccount;
 	}
@@ -667,6 +682,7 @@ public class ParticipantAccount1 {
 		this.designatedAccount = designatedAccount;
 	}
 
+	@XmlElement(name = "LqdtyPoolPtcptDtls")
 	public LiquidityPoolMembers1Choice getLiquidityPoolParticipantDetails() {
 		return liquidityPoolParticipantDetails;
 	}
@@ -675,6 +691,7 @@ public class ParticipantAccount1 {
 		this.liquidityPoolParticipantDetails = liquidityPoolParticipantDetails;
 	}
 
+	@XmlElement(name = "Lmts")
 	public List<AccountLimits1> getLimits() {
 		return limits;
 	}
@@ -683,6 +700,7 @@ public class ParticipantAccount1 {
 		this.limits = limits;
 	}
 
+	@XmlElement(name = "Arrsts")
 	public List<ArrestedFunds1> getArrests() {
 		return arrests;
 	}
@@ -691,6 +709,7 @@ public class ParticipantAccount1 {
 		this.arrests = arrests;
 	}
 
+	@XmlElement(name = "Mgrtn")
 	public SystemMigration1 getMigration() {
 		return migration;
 	}

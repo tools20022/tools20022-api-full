@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.MandateClassification1Choice;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -39,6 +40,41 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmPriority
+ * PaymentProcessing.mmPriority}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmServiceLevel
+ * PaymentProcessing.mmServiceLevel}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmClearingChannel
+ * PaymentProcessing.mmClearingChannel}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmLocalInstrument
+ * PaymentProcessing.mmLocalInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmCategoryPurpose
+ * PaymentProcessing.mmCategoryPurpose}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmPaymentExecution
+ * PaymentProcessing.mmPaymentExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmSequenceType
+ * PaymentProcessing.mmSequenceType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmRelatedMandate
+ * PaymentProcessing.mmRelatedMandate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmBankTransaction
+ * PaymentProcessing.mmBankTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmContactPoint
+ * PaymentProcessing.mmContactPoint}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -122,41 +158,6 @@ import java.util.List;
  * DirectDebitMandate.mmMandatePaymentType}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmPriority
- * PaymentProcessing.mmPriority}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmServiceLevel
- * PaymentProcessing.mmServiceLevel}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmClearingChannel
- * PaymentProcessing.mmClearingChannel}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmLocalInstrument
- * PaymentProcessing.mmLocalInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmCategoryPurpose
- * PaymentProcessing.mmCategoryPurpose}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmPaymentExecution
- * PaymentProcessing.mmPaymentExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmSequenceType
- * PaymentProcessing.mmSequenceType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmRelatedMandate
- * PaymentProcessing.mmRelatedMandate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmBankTransaction
- * PaymentProcessing.mmBankTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmContactPoint
- * PaymentProcessing.mmContactPoint}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -189,11 +190,6 @@ public class PaymentProcessing {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.PriorityCode
 	 * PriorityCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing
-	 * PaymentProcessing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -327,6 +323,11 @@ public class PaymentProcessing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing
+	 * PaymentProcessing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -352,7 +353,7 @@ public class PaymentProcessing {
 					DirectDebitTransactionInformation17.mmSettlementPriority, PaymentTransaction51.mmSettlementPriority, CreditTransferTransaction23.mmSettlementPriority, CreditTransferTransaction25.mmSettlementPriority,
 					PaymentTransaction65.mmSettlementPriority, DirectDebitTransactionInformation20.mmSettlementPriority, PaymentTransaction60.mmSettlementPriority, DirectDebitTransactionInformation21.mmSettlementPriority,
 					PaymentTransaction81.mmSettlementPriority, PaymentTransaction76.mmSettlementPriority);
-			elementContext_lazy = () -> PaymentProcessing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Priority";
@@ -360,6 +361,14 @@ public class PaymentProcessing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriorityCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentProcessing.class.getMethod("getPriority", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ServiceLevel serviceLevel;
@@ -381,11 +390,6 @@ public class PaymentProcessing {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.ServiceLevel
 	 * ServiceLevel}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing
-	 * PaymentProcessing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -473,6 +477,11 @@ public class PaymentProcessing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing
+	 * PaymentProcessing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -493,7 +502,7 @@ public class PaymentProcessing {
 					PaymentTypeInformation9.mmServiceLevel, PaymentTypeInformation15.mmServiceLevel, PaymentTypeInformation12.mmServiceLevel, PaymentTypeInformation18.mmServiceLevel, PaymentTypeInformation7.mmServiceLevel,
 					PaymentTypeInformation13.mmServiceLevel, PaymentTypeInformation10.mmServiceLevel, PaymentTypeInformation16.mmServiceLevel, PaymentTypeInformation8.mmServiceLevel, PaymentTypeInformation14.mmServiceLevel,
 					PaymentTypeInformation11.mmServiceLevel, PaymentTypeInformation17.mmServiceLevel, MandateTypeInformation2.mmServiceLevel);
-			elementContext_lazy = () -> PaymentProcessing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ServiceLevel";
@@ -517,11 +526,6 @@ public class PaymentProcessing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ClearingChannelCode
 	 * ClearingChannelCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing
-	 * PaymentProcessing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -576,6 +580,11 @@ public class PaymentProcessing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing
+	 * PaymentProcessing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -594,7 +603,7 @@ public class PaymentProcessing {
 					PaymentTypeInformation22.mmClearingChannel, PaymentTypeInformation25.mmClearingChannel, PaymentTypeInformation3.mmClearingChannel, PaymentTypeInformation21.mmClearingChannel, PaymentTypeInformation5.mmClearingChannel,
 					PaymentTypeInformation23.mmClearingChannel, ReturnInformation1.mmClearingChannel, ResolutionInformation1.mmClearingChannel, PaymentTypeInformation12.mmClearingChannel, PaymentTypeInformation10.mmClearingChannel,
 					PaymentTypeInformation11.mmClearingChannel, RequestDetails10.mmClearingChannel);
-			elementContext_lazy = () -> PaymentProcessing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingChannel";
@@ -602,6 +611,14 @@ public class PaymentProcessing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ClearingChannelCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentProcessing.class.getMethod("getClearingChannel", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ExternalCode localInstrument;
@@ -615,11 +632,6 @@ public class PaymentProcessing {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.ExternalCode
 	 * ExternalCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing
-	 * PaymentProcessing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -703,6 +715,11 @@ public class PaymentProcessing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing
+	 * PaymentProcessing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -723,7 +740,7 @@ public class PaymentProcessing {
 					PaymentTypeInformation5.mmLocalInstrument, PaymentTypeInformation23.mmLocalInstrument, LocalInstrument1.mmCode, PaymentTypeInformation15.mmLocalInstrument, PaymentTypeInformation12.mmLocalInstrument,
 					PaymentTypeInformation18.mmLocalInstrument, PaymentTypeInformation10.mmLocalInstrument, PaymentTypeInformation16.mmLocalInstrument, PaymentTypeInformation14.mmLocalInstrument, PaymentTypeInformation11.mmLocalInstrument,
 					PaymentTypeInformation17.mmLocalInstrument);
-			elementContext_lazy = () -> PaymentProcessing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LocalInstrument";
@@ -731,6 +748,14 @@ public class PaymentProcessing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentProcessing.class.getMethod("getLocalInstrument", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PaymentCategoryPurposeCode categoryPurpose;
@@ -745,11 +770,6 @@ public class PaymentProcessing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentCategoryPurposeCode
 	 * PaymentCategoryPurposeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing
-	 * PaymentProcessing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -882,6 +902,11 @@ public class PaymentProcessing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing
+	 * PaymentProcessing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -906,7 +931,7 @@ public class PaymentProcessing {
 					DirectDebitTransactionInformation7.mmPurpose, DirectDebitTransactionInformation6.mmPurpose, DirectDebitTransactionInformation8.mmPurpose, DirectDebitTransactionInformation17.mmPurpose,
 					DirectDebitTransactionInformation18.mmPurpose, DirectDebitTransactionInformation20.mmPurpose, DirectDebitTransactionInformation19.mmPurpose, DirectDebitTransactionInformation21.mmPurpose,
 					MandateTypeInformation2.mmCategoryPurpose, MandateClassification1Choice.mmCode, MandateClassification1Choice.mmProprietary, DirectDebitTransactionInformation22.mmPurpose);
-			elementContext_lazy = () -> PaymentProcessing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CategoryPurpose";
@@ -914,6 +939,14 @@ public class PaymentProcessing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentCategoryPurposeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentProcessing.class.getMethod("getCategoryPurpose", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PaymentExecution paymentExecution;
@@ -954,7 +987,7 @@ public class PaymentProcessing {
 	 */
 	public static final MMBusinessAssociationEnd mmPaymentExecution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PaymentProcessing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentExecution";
@@ -977,11 +1010,6 @@ public class PaymentProcessing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SequenceTypeCode
 	 * SequenceTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing
-	 * PaymentProcessing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1045,6 +1073,11 @@ public class PaymentProcessing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing
+	 * PaymentProcessing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1061,7 +1094,7 @@ public class PaymentProcessing {
 					PaymentTypeInformation4.mmSequenceType, PaymentTypeInformation22.mmSequenceType, PaymentTypeInformation25.mmSequenceType, MandateOccurrences1.mmSequenceType, MandateOccurrences2.mmSequenceType,
 					PaymentTypeInformation9.mmSequenceType, PaymentTypeInformation15.mmSequenceType, PaymentTypeInformation12.mmSequenceType, PaymentTypeInformation18.mmSequenceType, PaymentTypeInformation8.mmSequenceType,
 					PaymentTypeInformation14.mmSequenceType, PaymentTypeInformation11.mmSequenceType, PaymentTypeInformation17.mmSequenceType, MandateOccurrences3.mmSequenceType, MandateOccurrences4.mmSequenceType);
-			elementContext_lazy = () -> PaymentProcessing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SequenceType";
@@ -1069,6 +1102,14 @@ public class PaymentProcessing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SequenceTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentProcessing.class.getMethod("getSequenceType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DirectDebitMandate relatedMandate;
@@ -1108,7 +1149,7 @@ public class PaymentProcessing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedMandate = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PaymentProcessing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedMandate";
@@ -1156,7 +1197,7 @@ public class PaymentProcessing {
 	 */
 	public static final MMBusinessAssociationEnd mmBankTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PaymentProcessing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BankTransaction";
@@ -1205,7 +1246,7 @@ public class PaymentProcessing {
 	 */
 	public static final MMBusinessAssociationEnd mmContactPoint = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PaymentProcessing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ContactPoint";
@@ -1226,14 +1267,21 @@ public class PaymentProcessing {
 				definition = "Specifies how a payment must be processed, for instance through which specific clearing channel.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ContactPoint.mmRelatedPayment, com.tools20022.repository.entity.PaymentExecution.mmProcessingInstructions,
 						com.tools20022.repository.entity.BankTransaction.mmRelatedPayment, com.tools20022.repository.entity.ServiceLevel.mmPaymentProcessing, com.tools20022.repository.entity.DirectDebitMandate.mmMandatePaymentType);
-				element_lazy = () -> Arrays.asList(PaymentProcessing.mmPriority, PaymentProcessing.mmServiceLevel, PaymentProcessing.mmClearingChannel, PaymentProcessing.mmLocalInstrument, PaymentProcessing.mmCategoryPurpose,
-						PaymentProcessing.mmPaymentExecution, PaymentProcessing.mmSequenceType, PaymentProcessing.mmRelatedMandate, PaymentProcessing.mmBankTransaction, PaymentProcessing.mmContactPoint);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentProcessing.mmPriority, com.tools20022.repository.entity.PaymentProcessing.mmServiceLevel,
+						com.tools20022.repository.entity.PaymentProcessing.mmClearingChannel, com.tools20022.repository.entity.PaymentProcessing.mmLocalInstrument, com.tools20022.repository.entity.PaymentProcessing.mmCategoryPurpose,
+						com.tools20022.repository.entity.PaymentProcessing.mmPaymentExecution, com.tools20022.repository.entity.PaymentProcessing.mmSequenceType, com.tools20022.repository.entity.PaymentProcessing.mmRelatedMandate,
+						com.tools20022.repository.entity.PaymentProcessing.mmBankTransaction, com.tools20022.repository.entity.PaymentProcessing.mmContactPoint);
 				derivationComponent_lazy = () -> Arrays.asList(LocalInstrument1Choice.mmObject(), PaymentTypeInformation1.mmObject(), LocalInstrument2Choice.mmObject(), PaymentTypeInformation19.mmObject(),
 						PaymentTypeInformation2.mmObject(), PaymentTypeInformation20.mmObject(), PaymentTypeInformation24.mmObject(), PaymentTypeInformation6.mmObject(), PaymentTypeInformation4.mmObject(),
 						PaymentTypeInformation22.mmObject(), PaymentTypeInformation25.mmObject(), PaymentTypeInformation3.mmObject(), PaymentTypeInformation21.mmObject(), PaymentTypeInformation5.mmObject(),
 						PaymentTypeInformation23.mmObject(), LocalInstrument1.mmObject(), PaymentTypeInformation9.mmObject(), PaymentTypeInformation15.mmObject(), PaymentTypeInformation12.mmObject(), PaymentTypeInformation18.mmObject(),
 						PaymentTypeInformation7.mmObject(), PaymentTypeInformation13.mmObject(), PaymentTypeInformation10.mmObject(), PaymentTypeInformation16.mmObject(), PaymentTypeInformation8.mmObject(),
 						PaymentTypeInformation14.mmObject(), PaymentTypeInformation11.mmObject(), PaymentTypeInformation17.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PaymentProcessing.class;
 			}
 		});
 		return mmObject_lazy.get();

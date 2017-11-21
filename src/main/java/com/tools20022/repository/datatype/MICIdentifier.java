@@ -33,6 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} = "SWIFT; MICIdentifier"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[A-Z0-9]{4,4}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -69,6 +71,7 @@ public class MICIdentifier {
 				name = "MICIdentifier";
 				definition = "Market Identifier Code. The identification of a financial market, as stipulated in the norm ISO 10383 'Codes for exchanges and market identifications'.";
 				identificationScheme = "SWIFT; MICIdentifier";
+				pattern = "[A-Z0-9]{4,4}";
 			}
 		});
 		return mmObject_lazy.get();

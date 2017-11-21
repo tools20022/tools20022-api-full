@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Statistical data related to the price change of a security.
@@ -75,6 +79,8 @@ import java.util.List;
  * definition} = "Statistical data related to the price change of a security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ValuationStatistics2", propOrder = {"currency", "priceTypeChangeBasis", "priceChange", "yield", "byPredefinedTimePeriods", "byUserDefinedTimePeriod"})
 public class ValuationStatistics2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -380,6 +386,7 @@ public class ValuationStatistics2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy", required = true)
 	public ActiveOrHistoricCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -388,6 +395,7 @@ public class ValuationStatistics2 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "PricTpChngBsis", required = true)
 	public PriceType2 getPriceTypeChangeBasis() {
 		return priceTypeChangeBasis;
 	}
@@ -396,6 +404,7 @@ public class ValuationStatistics2 {
 		this.priceTypeChangeBasis = priceTypeChangeBasis;
 	}
 
+	@XmlElement(name = "PricChng", required = true)
 	public PriceValue2 getPriceChange() {
 		return priceChange;
 	}
@@ -404,6 +413,7 @@ public class ValuationStatistics2 {
 		this.priceChange = priceChange;
 	}
 
+	@XmlElement(name = "Yld")
 	public PercentageRate getYield() {
 		return yield;
 	}
@@ -412,6 +422,7 @@ public class ValuationStatistics2 {
 		this.yield = yield;
 	}
 
+	@XmlElement(name = "ByPrdfndTmPrds")
 	public StatisticsByPredefinedTimePeriods1 getByPredefinedTimePeriods() {
 		return byPredefinedTimePeriods;
 	}
@@ -420,6 +431,7 @@ public class ValuationStatistics2 {
 		this.byPredefinedTimePeriods = byPredefinedTimePeriods;
 	}
 
+	@XmlElement(name = "ByUsrDfndTmPrd")
 	public List<StatisticsByUserDefinedTimePeriod1> getByUserDefinedTimePeriod() {
 		return byUserDefinedTimePeriod;
 	}

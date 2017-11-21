@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies an item in the agenda of the meeting. Some resolutions are
@@ -92,6 +96,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Resolution1", propOrder = {"issuerLabel", "description", "title", "type", "forInformationOnly", "status", "submittedBySecurityHolder", "voteInstructionType", "managementRecommendation", "notifyingPartyRecommendation"})
 public class Resolution1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -588,6 +594,7 @@ public class Resolution1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IssrLabl", required = true)
 	public Max35Text getIssuerLabel() {
 		return issuerLabel;
 	}
@@ -596,6 +603,7 @@ public class Resolution1 {
 		this.issuerLabel = issuerLabel;
 	}
 
+	@XmlElement(name = "Desc")
 	public Max1025Text getDescription() {
 		return description;
 	}
@@ -604,6 +612,7 @@ public class Resolution1 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "Titl")
 	public Max350Text getTitle() {
 		return title;
 	}
@@ -612,6 +621,7 @@ public class Resolution1 {
 		this.title = title;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ResolutionType1Code getType() {
 		return type;
 	}
@@ -620,6 +630,7 @@ public class Resolution1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "ForInfOnly")
 	public YesNoIndicator getForInformationOnly() {
 		return forInformationOnly;
 	}
@@ -628,6 +639,7 @@ public class Resolution1 {
 		this.forInformationOnly = forInformationOnly;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public ResolutionStatus1Code getStatus() {
 		return status;
 	}
@@ -636,6 +648,7 @@ public class Resolution1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "SubmittdBySctyHldr")
 	public YesNoIndicator getSubmittedBySecurityHolder() {
 		return submittedBySecurityHolder;
 	}
@@ -644,6 +657,7 @@ public class Resolution1 {
 		this.submittedBySecurityHolder = submittedBySecurityHolder;
 	}
 
+	@XmlElement(name = "VoteInstrTp")
 	public List<VoteInstruction2Code> getVoteInstructionType() {
 		return voteInstructionType;
 	}
@@ -652,6 +666,7 @@ public class Resolution1 {
 		this.voteInstructionType = voteInstructionType;
 	}
 
+	@XmlElement(name = "MgmtRcmmndtn")
 	public VoteInstruction1Code getManagementRecommendation() {
 		return managementRecommendation;
 	}
@@ -660,6 +675,7 @@ public class Resolution1 {
 		this.managementRecommendation = managementRecommendation;
 	}
 
+	@XmlElement(name = "NtifngPtyRcmmndtn")
 	public VoteInstruction1Code getNotifyingPartyRecommendation() {
 		return notifyingPartyRecommendation;
 	}

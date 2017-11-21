@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Subbalances providing additional information on a specific position but that
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalBalanceInformation4", propOrder = {"subBalanceType", "quantity", "subBalanceAdditionalDetails"})
 public class AdditionalBalanceInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -225,6 +231,7 @@ public class AdditionalBalanceInformation4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SubBalTp", required = true)
 	public SubBalanceType4Choice getSubBalanceType() {
 		return subBalanceType;
 	}
@@ -233,6 +240,7 @@ public class AdditionalBalanceInformation4 {
 		this.subBalanceType = subBalanceType;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public SubBalanceQuantity2Choice getQuantity() {
 		return quantity;
 	}
@@ -241,6 +249,7 @@ public class AdditionalBalanceInformation4 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "SubBalAddtlDtls")
 	public Max140Text getSubBalanceAdditionalDetails() {
 		return subBalanceAdditionalDetails;
 	}

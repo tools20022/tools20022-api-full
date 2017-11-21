@@ -66,6 +66,11 @@ public class IndirectMember extends ThirdPartyRole {
 				definition = "Financial institution or member of a system having limited rights to the system specifications.";
 				superType_lazy = () -> ThirdPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IndirectMember.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

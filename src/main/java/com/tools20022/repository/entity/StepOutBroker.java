@@ -36,6 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Broker Broker}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -48,8 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ConfirmationParties2.mmStepOutFirm}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Broker Broker}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -80,6 +80,11 @@ public class StepOutBroker extends Broker {
 				definition = "Brokerage firm that executes an order, but gives other firms credit and some of the commission for the trade.";
 				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties4.mmStepOutFirm, ConfirmationParties2.mmStepOutFirm);
 				superType_lazy = () -> Broker.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StepOutBroker.class;
 			}
 		});
 		return mmObject_lazy.get();

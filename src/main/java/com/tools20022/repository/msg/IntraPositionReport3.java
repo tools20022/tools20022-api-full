@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics of the report.
@@ -69,6 +73,8 @@ import java.util.function.Supplier;
  * definition} = "Characteristics of the report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionReport3", propOrder = {"queryReference", "reportIdentification", "queryType", "activityIndicator"})
 public class IntraPositionReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -263,6 +269,7 @@ public class IntraPositionReport3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QryRef")
 	public Max35Text getQueryReference() {
 		return queryReference;
 	}
@@ -271,6 +278,7 @@ public class IntraPositionReport3 {
 		this.queryReference = queryReference;
 	}
 
+	@XmlElement(name = "RptId")
 	public Max35Text getReportIdentification() {
 		return reportIdentification;
 	}
@@ -279,6 +287,7 @@ public class IntraPositionReport3 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "QryTp", required = true)
 	public MovementResponseType1Code getQueryType() {
 		return queryType;
 	}
@@ -287,6 +296,7 @@ public class IntraPositionReport3 {
 		this.queryType = queryType;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}

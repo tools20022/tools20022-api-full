@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General information about the corporate action event.
@@ -94,6 +98,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionGeneralInformation86}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionGeneralInformation108", propOrder = {"corporateActionEventIdentification", "officialCorporateActionEventIdentification", "classActionNumber", "eventType", "mandatoryVoluntaryEventType",
+		"financialInstrumentIdentification"})
 public class CorporateActionGeneralInformation108 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -451,6 +458,7 @@ public class CorporateActionGeneralInformation108 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CorpActnEvtId", required = true)
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -459,6 +467,7 @@ public class CorporateActionGeneralInformation108 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "OffclCorpActnEvtId")
 	public Max35Text getOfficialCorporateActionEventIdentification() {
 		return officialCorporateActionEventIdentification;
 	}
@@ -467,6 +476,7 @@ public class CorporateActionGeneralInformation108 {
 		this.officialCorporateActionEventIdentification = officialCorporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "ClssActnNb")
 	public Max35Text getClassActionNumber() {
 		return classActionNumber;
 	}
@@ -475,6 +485,7 @@ public class CorporateActionGeneralInformation108 {
 		this.classActionNumber = classActionNumber;
 	}
 
+	@XmlElement(name = "EvtTp", required = true)
 	public CorporateActionEventType51Choice getEventType() {
 		return eventType;
 	}
@@ -483,6 +494,7 @@ public class CorporateActionGeneralInformation108 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "MndtryVlntryEvtTp", required = true)
 	public CorporateActionMandatoryVoluntary3Choice getMandatoryVoluntaryEventType() {
 		return mandatoryVoluntaryEventType;
 	}
@@ -491,6 +503,7 @@ public class CorporateActionGeneralInformation108 {
 		this.mandatoryVoluntaryEventType = mandatoryVoluntaryEventType;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification19 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}

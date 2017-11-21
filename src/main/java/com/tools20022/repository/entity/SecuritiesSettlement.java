@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Settlement;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -43,6 +44,128 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTransferOperation
+ * SecuritiesSettlement.mmTransferOperation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementDate
+ * SecuritiesSettlement.mmSettlementDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartyRole
+ * SecuritiesSettlement.mmPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementAmount
+ * SecuritiesSettlement.mmSettlementAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmHoldingsPlanType
+ * SecuritiesSettlement.mmHoldingsPlanType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesMovementType
+ * SecuritiesSettlement.mmSecuritiesMovementType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementQuantity
+ * SecuritiesSettlement.mmSettlementQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesTradeExecution
+ * SecuritiesSettlement.mmSecuritiesTradeExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmCurrencyToBuy
+ * SecuritiesSettlement.mmCurrencyToBuy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmCurrencyToSell
+ * SecuritiesSettlement.mmCurrencyToSell}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmDenominationChoice
+ * SecuritiesSettlement.mmDenominationChoice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementTransactionCondition
+ * SecuritiesSettlement.mmSettlementTransactionCondition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmBeneficialOwnershipIndicator
+ * SecuritiesSettlement.mmBeneficialOwnershipIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmMarketClientSide
+ * SecuritiesSettlement.mmMarketClientSide}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTracking
+ * SecuritiesSettlement.mmTracking}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmLetterOfGuarantee
+ * SecuritiesSettlement.mmLetterOfGuarantee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmEligibleForCollateral
+ * SecuritiesSettlement.mmEligibleForCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAccruedInterestIndicator
+ * SecuritiesSettlement.mmAccruedInterestIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPreConfirmation
+ * SecuritiesSettlement.mmPreConfirmation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesRealTimeGrossSettlement
+ * SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmBlockTrade
+ * SecuritiesSettlement.mmBlockTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementSystemMethod
+ * SecuritiesSettlement.mmSettlementSystemMethod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAutomaticBorrowing
+ * SecuritiesSettlement.mmAutomaticBorrowing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartialSettlementIndicator
+ * SecuritiesSettlement.mmPartialSettlementIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmHoldIndicator
+ * SecuritiesSettlement.mmHoldIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRequestedSafekeepingPlace
+ * SecuritiesSettlement.mmRequestedSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPairOff
+ * SecuritiesSettlement.mmPairOff}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAccruedInterest
+ * SecuritiesSettlement.mmAccruedInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesClearing
+ * SecuritiesSettlement.mmSecuritiesClearing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPayment
+ * SecuritiesSettlement.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettledAllocation
+ * SecuritiesSettlement.mmSettledAllocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRelatedForeignExchangeOperation
+ * SecuritiesSettlement.mmRelatedForeignExchangeOperation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecurity
+ * SecuritiesSettlement.mmSecurity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPosition
+ * SecuritiesSettlement.mmPosition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRollover
+ * SecuritiesSettlement.mmRollover}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTurnedQuantity
+ * SecuritiesSettlement.mmTurnedQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementReason
+ * SecuritiesSettlement.mmSettlementReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementType
+ * SecuritiesSettlement.mmSettlementType}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Settlement
+ * Settlement}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} = List of 505 elements</li>
@@ -505,128 +628,6 @@ import java.util.List;
  * SecuritiesSettlementTransactionDetails31.mmSettlementParameters}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Settlement
- * Settlement}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTransferOperation
- * SecuritiesSettlement.mmTransferOperation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementDate
- * SecuritiesSettlement.mmSettlementDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartyRole
- * SecuritiesSettlement.mmPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementAmount
- * SecuritiesSettlement.mmSettlementAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmHoldingsPlanType
- * SecuritiesSettlement.mmHoldingsPlanType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesMovementType
- * SecuritiesSettlement.mmSecuritiesMovementType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementQuantity
- * SecuritiesSettlement.mmSettlementQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesTradeExecution
- * SecuritiesSettlement.mmSecuritiesTradeExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmCurrencyToBuy
- * SecuritiesSettlement.mmCurrencyToBuy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmCurrencyToSell
- * SecuritiesSettlement.mmCurrencyToSell}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmDenominationChoice
- * SecuritiesSettlement.mmDenominationChoice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementTransactionCondition
- * SecuritiesSettlement.mmSettlementTransactionCondition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmBeneficialOwnershipIndicator
- * SecuritiesSettlement.mmBeneficialOwnershipIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmMarketClientSide
- * SecuritiesSettlement.mmMarketClientSide}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTracking
- * SecuritiesSettlement.mmTracking}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmLetterOfGuarantee
- * SecuritiesSettlement.mmLetterOfGuarantee}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmEligibleForCollateral
- * SecuritiesSettlement.mmEligibleForCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAccruedInterestIndicator
- * SecuritiesSettlement.mmAccruedInterestIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPreConfirmation
- * SecuritiesSettlement.mmPreConfirmation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesRealTimeGrossSettlement
- * SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmBlockTrade
- * SecuritiesSettlement.mmBlockTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementSystemMethod
- * SecuritiesSettlement.mmSettlementSystemMethod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAutomaticBorrowing
- * SecuritiesSettlement.mmAutomaticBorrowing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartialSettlementIndicator
- * SecuritiesSettlement.mmPartialSettlementIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmHoldIndicator
- * SecuritiesSettlement.mmHoldIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRequestedSafekeepingPlace
- * SecuritiesSettlement.mmRequestedSafekeepingPlace}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPairOff
- * SecuritiesSettlement.mmPairOff}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAccruedInterest
- * SecuritiesSettlement.mmAccruedInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesClearing
- * SecuritiesSettlement.mmSecuritiesClearing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPayment
- * SecuritiesSettlement.mmPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettledAllocation
- * SecuritiesSettlement.mmSettledAllocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRelatedForeignExchangeOperation
- * SecuritiesSettlement.mmRelatedForeignExchangeOperation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecurity
- * SecuritiesSettlement.mmSecurity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPosition
- * SecuritiesSettlement.mmPosition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRollover
- * SecuritiesSettlement.mmRollover}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTurnedQuantity
- * SecuritiesSettlement.mmTurnedQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementReason
- * SecuritiesSettlement.mmSettlementReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementType
- * SecuritiesSettlement.mmSettlementType}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -665,11 +666,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -688,6 +684,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -702,7 +703,7 @@ public class SecuritiesSettlement extends Settlement {
 		{
 			derivation_lazy = () -> Arrays.asList(Cancellation3Choice.mmCancellationByTransferInstructionDetails, Cancellation6Choice.mmCancellationByTransferInstructionDetails,
 					Cancellation7Choice.mmCancellationByTransferInstructionDetails, Cancellation11Choice.mmCancellationByTransferInstructionDetails);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferOperation";
@@ -727,11 +728,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1092,6 +1088,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1133,7 +1134,7 @@ public class SecuritiesSettlement extends Settlement {
 					UnsecuredMarketTransaction3.mmSettlementDate, SecuredMarketTransaction3.mmSettlementDate, IntraPositionDetails41.mmSettlementDate, IntraPositionDetails39.mmSettlementDate, AdditionalInformation13.mmEffectiveDate,
 					TransactionDetails95.mmEffectiveSettlementDate, IntraPositionDetails43.mmSettlementDate, IntraPositionDetails42.mmSettlementDate, AdditionalInformation14.mmEffectiveDate, TransactionDetails98.mmEffectiveSettlementDate,
 					SecuredMarketTransaction4.mmSettlementDate, UnsecuredMarketTransaction4.mmSettlementDate);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementDate";
@@ -1141,6 +1142,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getSettlementDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesSettlementPartyRole> partyRole;
@@ -1163,11 +1172,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole
 	 * SecuritiesSettlementPartyRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1924,6 +1928,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2003,7 +2012,7 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails118.mmSettlementParties, SecuritiesTradeDetails69.mmDeliveringSettlementParties, SecuritiesTradeDetails69.mmReceivingSettlementParties, TransactionDetails100.mmReceivingSettlementParties,
 					TransactionDetails100.mmDeliveringSettlementParties, TransactionDetails99.mmDeliveringSettlementParties, TransactionDetails99.mmReceivingSettlementParties, TransactionDetails98.mmDeliveringSettlementParties,
 					TransactionDetails98.mmReceivingSettlementParties);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
@@ -2025,11 +2034,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2858,6 +2862,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2930,7 +2939,7 @@ public class SecuritiesSettlement extends Settlement {
 					SecuritiesSettlementTransactionDetails29.mmSettlementAmount, SecuritiesSettlementTransactionDetails31.mmSettlementAmount, TransactionDetails100.mmSettlementAmount, TransactionDetails99.mmPostingAmount,
 					TransactionDetails98.mmPostingAmount, QuantityAndAccount57.mmPreviouslySettledAmount, QuantityAndAccount57.mmRemainingToBeSettledAmount, QuantityAndAccount62.mmPreviouslySettledAmount,
 					QuantityAndAccount62.mmRemainingToBeSettledAmount);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementAmount";
@@ -2938,6 +2947,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getSettlementAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text holdingsPlanType;
@@ -2951,11 +2968,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3031,6 +3043,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3049,7 +3066,7 @@ public class SecuritiesSettlement extends Settlement {
 					Transfer20.mmHoldingsPlanType, Transfer22.mmHoldingsPlanType, Transfer18.mmHoldingsPlanType, Transfer26.mmHoldingsPlanType, Transfer15.mmHoldingsPlanType, Transfer21.mmHoldingsPlanType, Transfer13.mmHoldingsPlanType,
 					Transfer23.mmHoldingsPlanType, Transfer11.mmHoldingsPlanType, Transfer19.mmHoldingsPlanType, Transfer27.mmHoldingsPlanType, Transfer28.mmHoldingsPlanType, Transfer29.mmHoldingsPlanType, Transfer31.mmHoldingsPlanType,
 					Transfer30.mmHoldingsPlanType, Transfer32.mmHoldingsPlanType, Transfer33.mmHoldingsPlanType);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HoldingsPlanType";
@@ -3057,6 +3074,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getHoldingsPlanType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ReceiveDeliveryCode securitiesMovementType;
@@ -3071,11 +3096,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ReceiveDeliveryCode
 	 * ReceiveDeliveryCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3502,6 +3522,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3556,7 +3581,7 @@ public class SecuritiesSettlement extends Settlement {
 					SecuritiesFinancingTransactionDetails35.mmSecuritiesMovementType, TransactionDetails96.mmSecuritiesMovementType, TransactionDetails95.mmSecuritiesMovementType,
 					TransactionTypeAndAdditionalParameters19.mmSecuritiesMovementType, SecuritiesTradeDetails69.mmSecuritiesMovementType, SecuritiesFinancingTransactionDetails36.mmSecuritiesMovementType,
 					SettlementTypeAndAdditionalParameters20.mmSecuritiesMovementType, TransactionDetails100.mmSecuritiesMovementType, TransactionDetails99.mmSecuritiesMovementType, TransactionDetails98.mmSecuritiesMovementType);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesMovementType";
@@ -3564,6 +3589,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReceiveDeliveryCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getSecuritiesMovementType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesQuantity settlementQuantity;
@@ -3584,11 +3617,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4192,6 +4220,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4251,7 +4284,7 @@ public class SecuritiesSettlement extends Settlement {
 					TransactionDetails99.mmPostingQuantity, TransactionDetails98.mmPostingQuantity, QuantityAndAccount57.mmSettledQuantity, QuantityAndAccount57.mmPreviouslySettledQuantity,
 					QuantityAndAccount57.mmRemainingToBeSettledQuantity, QuantityAndAccount58.mmSettlementQuantity, QuantityAndAccount56.mmSettlementQuantity, QuantityAndAccount61.mmSettlementQuantity,
 					QuantityAndAccount62.mmSettledQuantity, QuantityAndAccount62.mmPreviouslySettledQuantity, QuantityAndAccount62.mmRemainingToBeSettledQuantity, QuantityAndAccount60.mmSettlementQuantity);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementQuantity";
@@ -4301,7 +4334,7 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTradeExecution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTradeExecution";
@@ -4324,11 +4357,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4380,6 +4408,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4398,7 +4431,7 @@ public class SecuritiesSettlement extends Settlement {
 					CorporateActionOption30.mmCurrencyToBuy, CorporateActionOption38.mmCurrencyToBuy, CorporateActionOption47.mmCurrencyToBuy, CorporateActionOption57.mmCurrencyToBuy, CorporateActionOption58.mmCurrencyToBuy,
 					CorporateActionOption103.mmCurrencyToBuy, CorporateActionOption107.mmCurrencyToBuy, CorporateActionOption118.mmCurrencyToBuy, CorporateActionOption123.mmCurrencyToBuy, CorporateActionOption131.mmCurrencyToBuy,
 					CorporateActionOption134.mmCurrencyToBuy);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyToBuy";
@@ -4406,6 +4439,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getCurrencyToBuy", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyCode currencyToSell;
@@ -4419,11 +4460,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4475,6 +4511,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4493,7 +4534,7 @@ public class SecuritiesSettlement extends Settlement {
 					CorporateActionOption30.mmCurrencyToSell, CorporateActionOption38.mmCurrencyToSell, CorporateActionOption47.mmCurrencyToSell, CorporateActionOption57.mmCurrencyToSell, CorporateActionOption58.mmCurrencyToSell,
 					CorporateActionOption103.mmCurrencyToSell, CorporateActionOption107.mmCurrencyToSell, CorporateActionOption118.mmCurrencyToSell, CorporateActionOption123.mmCurrencyToSell, CorporateActionOption131.mmCurrencyToSell,
 					CorporateActionOption134.mmCurrencyToSell);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyToSell";
@@ -4501,6 +4542,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getCurrencyToSell", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text denominationChoice;
@@ -4514,11 +4563,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4678,6 +4722,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4703,7 +4752,7 @@ public class SecuritiesSettlement extends Settlement {
 					QuantityAndAccount47.mmDenominationChoice, QuantityAndAccount51.mmDenominationChoice, QuantityAndAccount49.mmDenominationChoice, Quantity12.mmDenominationChoice, QuantityAndAccount50.mmDenominationChoice,
 					QuantityAndAccount55.mmDenominationChoice, QuantityAndAccount54.mmDenominationChoice, QuantityAndAccount57.mmDenominationChoice, QuantityAndAccount58.mmDenominationChoice, QuantityAndAccount56.mmDenominationChoice,
 					QuantityAndAccount59.mmDenominationChoice, QuantityAndAccount60.mmDenominationChoice);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DenominationChoice";
@@ -4711,6 +4760,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getDenominationChoice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SettlementTransactionConditionCode settlementTransactionCondition;
@@ -4724,11 +4781,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionConditionCode
 	 * SettlementTransactionConditionCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5545,6 +5597,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5626,7 +5683,7 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails138.mmSettlementTransactionCondition, SettlementDetails130.mmSettlementTransactionCondition, SettlementDetails130.mmPartialSettlementIndicator, SettlementDetails131.mmSettlementTransactionCondition,
 					SettlementDetails131.mmPartialSettlementIndicator, SettlementDetails133.mmSettlementTransactionCondition, SettlementDetails133.mmPartialSettlementIndicator, SettlementDetails139.mmSettlementTransactionCondition,
 					SettlementDetails139.mmPartialSettlementIndicator);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementTransactionCondition";
@@ -5634,6 +5691,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementTransactionConditionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getSettlementTransactionCondition", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator beneficialOwnershipIndicator;
@@ -5647,11 +5712,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -6042,6 +6102,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -6081,7 +6146,7 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails119.mmBeneficialOwnership, SettlementDetails125.mmBeneficialOwnership, SettlementDetails126.mmBeneficialOwnership, SettlementDetails122.mmBeneficialOwnership, SettlementDetails127.mmBeneficialOwnership,
 					SettlementDetails121.mmBeneficialOwnership, SettlementDetails134.mmBeneficialOwnership, SettlementDetails137.mmBeneficialOwnership, SettlementDetails132.mmBeneficialOwnership, SettlementDetails138.mmBeneficialOwnership,
 					SettlementDetails130.mmBeneficialOwnership, SettlementDetails131.mmBeneficialOwnership, SettlementDetails133.mmBeneficialOwnership, SettlementDetails139.mmBeneficialOwnership);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BeneficialOwnershipIndicator";
@@ -6089,6 +6154,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getBeneficialOwnershipIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MarketClientSideCode marketClientSide;
@@ -6103,11 +6176,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.MarketClientSideCode
 	 * MarketClientSideCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -6498,6 +6566,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -6538,7 +6611,7 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails125.mmMarketClientSide, SettlementDetails126.mmMarketClientSide, SettlementDetails122.mmMarketClientSide, SettlementDetails127.mmMarketClientSide, SettlementDetails121.mmMarketClientSide,
 					SettlementDetails134.mmMarketClientSide, SettlementDetails137.mmMarketClientSide, SettlementDetails132.mmMarketClientSide, SettlementDetails138.mmMarketClientSide, SettlementDetails130.mmMarketClientSide,
 					SettlementDetails131.mmMarketClientSide, SettlementDetails133.mmMarketClientSide, SettlementDetails139.mmMarketClientSide);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketClientSide";
@@ -6546,6 +6619,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MarketClientSideCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getMarketClientSide", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator tracking;
@@ -6559,11 +6640,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -6684,6 +6760,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -6703,7 +6784,7 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails93.mmTracking, SettlementDetails97.mmTracking, SettlementDetails94.mmTracking, SettlementDetails101.mmTracking, SettlementDetails105.mmTracking, SettlementDetails106.mmTracking,
 					SettlementDetails111.mmTracking, SettlementDetails112.mmTracking, SettlementDetails113.mmTracking, SettlementDetails120.mmTracking, SettlementDetails119.mmTracking, SettlementDetails122.mmTracking,
 					SettlementDetails137.mmTracking, SettlementDetails132.mmTracking, SettlementDetails138.mmTracking);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tracking";
@@ -6711,6 +6792,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getTracking", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator letterOfGuarantee;
@@ -6725,11 +6814,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -7000,6 +7084,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -7032,7 +7121,7 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails128.mmLetterOfGuarantee, SettlementDetails120.mmLetterOfGuarantee, SettlementDetails119.mmLetterOfGuarantee, SettlementDetails126.mmLetterOfGuarantee, SettlementDetails122.mmLetterOfGuarantee,
 					SettlementDetails127.mmLetterOfGuarantee, SettlementDetails121.mmLetterOfGuarantee, SettlementDetails134.mmLetterOfGuarantee, SettlementDetails137.mmLetterOfGuarantee, SettlementDetails132.mmLetterOfGuarantee,
 					SettlementDetails138.mmLetterOfGuarantee, SettlementDetails130.mmLetterOfGuarantee, SettlementDetails133.mmLetterOfGuarantee, SettlementDetails139.mmLetterOfGuarantee);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LetterOfGuarantee";
@@ -7040,6 +7129,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getLetterOfGuarantee", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator eligibleForCollateral;
@@ -7054,11 +7151,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -7359,6 +7451,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -7399,7 +7496,7 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails119.mmEligibleForCollateral, SettlementDetails122.mmEligibleForCollateral, SettlementDetails121.mmEligibleForCollateral, CorporateActionOption134.mmEligibleForCollateralIndicator,
 					SettlementDetails134.mmEligibleForCollateral, SettlementDetails137.mmEligibleForCollateral, SettlementDetails132.mmEligibleForCollateral, SettlementDetails138.mmEligibleForCollateral,
 					SettlementDetails133.mmEligibleForCollateral);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EligibleForCollateral";
@@ -7407,6 +7504,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getEligibleForCollateral", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator accruedInterestIndicator;
@@ -7421,11 +7526,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -7507,6 +7607,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -7528,7 +7633,7 @@ public class SecuritiesSettlement extends Settlement {
 					CorporateAction17.mmAccruedInterestIndicator, AmountAndDirection38.mmAccruedInterestIndicator, AmountAndDirection40.mmAccruedInterestIndicator, AmountAndDirection46.mmAccruedInterestIndicator,
 					AmountAndDirection45.mmAccruedInterestIndicator, CorporateAction31.mmAccruedInterestIndicator, CorporateAction40.mmAccruedInterestIndicator, AmountAndDirection60.mmAccruedInterestIndicator,
 					AmountAndDirection85.mmAccruedInterestIndicator);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccruedInterestIndicator";
@@ -7536,6 +7641,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getAccruedInterestIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PreConfirmationCode preConfirmation;
@@ -7550,11 +7663,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PreConfirmationCode
 	 * PreConfirmationCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -7627,6 +7735,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -7646,7 +7759,7 @@ public class SecuritiesSettlement extends Settlement {
 					AdditionalParameters5.mmPreConfirmation, AdditionalParameters14.mmPreConfirmation, AdditionalParameters15.mmPreConfirmation, AdditionalParameters23.mmPreConfirmation, AdditionalParameters24.mmPreConfirmation,
 					AdditionalParameters22.mmPreConfirmation, AdditionalParameters26.mmPreConfirmation, AdditionalParameters28.mmPreConfirmation, AdditionalParameters27.mmPreConfirmation, AdditionalParameters29.mmPreConfirmation,
 					AdditionalParameters30.mmPreConfirmation, AdditionalParameters31.mmPreConfirmation, AdditionalParameters32.mmPreConfirmation);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreConfirmation";
@@ -7654,6 +7767,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PreConfirmationCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getPreConfirmation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator securitiesRealTimeGrossSettlement;
@@ -7668,11 +7789,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -8090,6 +8206,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -8131,7 +8252,7 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails116.mmSecuritiesRTGS, SettlementDetails128.mmSecuritiesRTGS, SettlementDetails120.mmSecuritiesRTGS, SettlementDetails119.mmSecuritiesRTGS, SettlementDetails125.mmSecuritiesRTGS,
 					SettlementDetails126.mmSecuritiesRTGS, SettlementDetails127.mmSecuritiesRTGS, SettlementDetails121.mmSecuritiesRTGS, SettlementDetails134.mmSecuritiesRTGS, SettlementDetails137.mmSecuritiesRTGS,
 					SettlementDetails132.mmSecuritiesRTGS, SettlementDetails130.mmSecuritiesRTGS, SettlementDetails131.mmSecuritiesRTGS, SettlementDetails133.mmSecuritiesRTGS, SettlementDetails139.mmSecuritiesRTGS);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesRealTimeGrossSettlement";
@@ -8139,6 +8260,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getSecuritiesRealTimeGrossSettlement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BlockTradeCode blockTrade;
@@ -8152,11 +8281,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.BlockTradeCode
 	 * BlockTradeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -8496,6 +8620,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -8529,7 +8658,7 @@ public class SecuritiesSettlement extends Settlement {
 					BlockTrade5Choice.mmCode, BlockTrade5Choice.mmProprietary, SettlementDetails116.mmBlockTrade, SettlementDetails128.mmBlockTrade, SettlementDetails120.mmBlockTrade, SettlementDetails119.mmBlockTrade,
 					SettlementDetails126.mmBlockTrade, SettlementDetails127.mmBlockTrade, SettlementDetails121.mmBlockTrade, SettlementDetails134.mmBlockTrade, SettlementDetails137.mmBlockTrade, SettlementDetails132.mmBlockTrade,
 					SettlementDetails130.mmBlockTrade, SettlementDetails133.mmBlockTrade, SettlementDetails139.mmBlockTrade);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BlockTrade";
@@ -8537,6 +8666,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BlockTradeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getBlockTrade", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SettlementSystemMethodCode settlementSystemMethod;
@@ -8551,11 +8688,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementSystemMethodCode
 	 * SettlementSystemMethodCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -8913,6 +9045,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -8957,7 +9094,7 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails126.mmSettlementSystemMethod, SettlementDetails127.mmSettlementSystemMethod, SettlementDetails121.mmSettlementSystemMethod, SettlementDetails134.mmSettlementSystemMethod,
 					SettlementDetails137.mmSettlementSystemMethod, SettlementDetails132.mmSettlementSystemMethod, SettlementDetails130.mmSettlementSystemMethod, SettlementDetails133.mmSettlementSystemMethod,
 					SettlementDetails139.mmSettlementSystemMethod);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementSystemMethod";
@@ -8965,6 +9102,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementSystemMethodCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getSettlementSystemMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AutoBorrowingCode automaticBorrowing;
@@ -8978,11 +9123,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AutoBorrowingCode
 	 * AutoBorrowingCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -9244,6 +9384,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -9274,7 +9419,7 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails110.mmAutomaticBorrowing, AutomaticBorrowing8Choice.mmCode, AutomaticBorrowing8Choice.mmProprietary, AutomaticBorrowing11Choice.mmCode, AutomaticBorrowing11Choice.mmProprietary,
 					SettlementDetails128.mmAutomaticBorrowing, SettlementDetails120.mmAutomaticBorrowing, SettlementDetails119.mmAutomaticBorrowing, SettlementDetails134.mmAutomaticBorrowing, SettlementDetails137.mmAutomaticBorrowing,
 					SettlementDetails132.mmAutomaticBorrowing);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AutomaticBorrowing";
@@ -9282,6 +9427,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AutoBorrowingCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getAutomaticBorrowing", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator partialSettlementIndicator;
@@ -9295,11 +9448,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -9396,6 +9544,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -9416,7 +9569,7 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails13.mmPartialSettlementIndicator, SettlementDetails43.mmPartialSettlementIndicator, SettlementDetails10.mmPartialSettlementIndicator, SettlementDetails29.mmPartialSettlementIndicator,
 					SettlementDetails5.mmPartialSettlementIndicator, SettlementDetails25.mmPartialSettlementIndicator, SettlementDetails14.mmPartialSettlementIndicator, SettlementDetails41.mmPartialSettlementIndicator,
 					SettlementDetails15.mmPartialSettlementIndicator, SettlementDetails34.mmPartialSettlementIndicator, RequestDetails10.mmPartialSettlementIndicator);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialSettlementIndicator";
@@ -9424,6 +9577,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getPartialSettlementIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator holdIndicator;
@@ -9437,11 +9598,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -9721,6 +9877,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -9752,7 +9913,7 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails116.mmHoldIndicator, SettlementDetails120.mmHoldIndicator, SettlementDetails119.mmHoldIndicator, SettlementDetails125.mmHoldIndicator, SettlementDetails127.mmHoldIndicator,
 					SettlementDetails121.mmHoldIndicator, SettlementDetails137.mmHoldIndicator, SettlementDetails132.mmHoldIndicator, SettlementDetails130.mmHoldIndicator, SettlementDetails131.mmHoldIndicator,
 					SettlementDetails133.mmHoldIndicator);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HoldIndicator";
@@ -9760,6 +9921,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getHoldIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SafekeepingPlace requestedSafekeepingPlace;
@@ -9798,7 +9967,7 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmRequestedSafekeepingPlace = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedSafekeepingPlace";
@@ -9848,7 +10017,7 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmPairOff = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PairOff";
@@ -9894,7 +10063,7 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmAccruedInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccruedInterest";
@@ -9941,7 +10110,7 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesClearing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesClearing";
@@ -9989,7 +10158,7 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
@@ -10037,7 +10206,7 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmSettledAllocation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettledAllocation";
@@ -10086,7 +10255,7 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedForeignExchangeOperation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedForeignExchangeOperation";
@@ -10114,11 +10283,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -10237,6 +10401,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -10263,7 +10432,7 @@ public class SecuritiesSettlement extends Settlement {
 					SecuritiesSettlementTransactionDetails27.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails28.mmFinancialInstrumentAttributes,
 					SecuritiesSettlementTransactionDetails26.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails30.mmFinancialInstrumentAttributes,
 					SecuritiesSettlementTransactionDetails29.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails31.mmFinancialInstrumentAttributes);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
@@ -10310,7 +10479,7 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmPosition = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Position";
@@ -10358,7 +10527,7 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmRollover = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rollover";
@@ -10389,11 +10558,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -10412,6 +10576,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -10428,7 +10597,7 @@ public class SecuritiesSettlement extends Settlement {
 		{
 			derivation_lazy = () -> Arrays.asList(PairedOrTurnedQuantity1Choice.mmTurnedQuantity, PairedOrTurnedQuantity2Choice.mmTurnedQuantity, PairedOrTurnedQuantity3Choice.mmTurnedQuantity,
 					PairedOrTurnedQuantity4Choice.mmTurnedQuantity);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TurnedQuantity";
@@ -10452,11 +10621,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ObligationTypeCode
 	 * ObligationTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -10475,6 +10639,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -10490,7 +10659,7 @@ public class SecuritiesSettlement extends Settlement {
 	public static final MMBusinessAttribute mmSettlementReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ObligationType1Choice.mmCode, ObligationType1Choice.mmProprietary, SettlementObligation3.mmObligationType, SettlementObligation5.mmObligationType);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementReason";
@@ -10498,6 +10667,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ObligationTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getSettlementReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DeliveryReceiptTypeCode settlementType;
@@ -10511,11 +10688,6 @@ public class SecuritiesSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptTypeCode
 	 * DeliveryReceiptTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -11086,6 +11258,11 @@ public class SecuritiesSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -11137,7 +11314,7 @@ public class SecuritiesSettlement extends Settlement {
 					TransactionTypeAndAdditionalParameters17.mmPayment, TransactionTypeAndAdditionalParameters16.mmPayment, SecuritiesFinancingTransactionDetails35.mmPayment, TransactionDetails96.mmPayment, TransactionDetails95.mmPayment,
 					TransactionTypeAndAdditionalParameters19.mmPayment, SecuritiesTradeDetails69.mmPayment, TransactionTypeAndAdditionalParameters20.mmPayment, TransactionTypeAndAdditionalParameters18.mmPayment,
 					SecuritiesFinancingTransactionDetails36.mmPayment, SettlementTypeAndAdditionalParameters20.mmPayment, TransactionDetails100.mmPayment, TransactionDetails99.mmPayment, TransactionDetails98.mmPayment);
-			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementType";
@@ -11145,6 +11322,14 @@ public class SecuritiesSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryReceiptTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlement.class.getMethod("getSettlementType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -11211,16 +11396,29 @@ public class SecuritiesSettlement extends Settlement {
 						SecuritiesSettlementTransactionDetails29.mmSettlementParameters, SecuritiesSettlementTransactionDetails31.mmSettlementTypeAndAdditionalParameters,
 						SecuritiesSettlementTransactionDetails31.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails31.mmSettlementParameters);
 				superType_lazy = () -> Settlement.mmObject();
-				element_lazy = () -> Arrays.asList(SecuritiesSettlement.mmTransferOperation, SecuritiesSettlement.mmSettlementDate, SecuritiesSettlement.mmPartyRole, SecuritiesSettlement.mmSettlementAmount,
-						SecuritiesSettlement.mmHoldingsPlanType, SecuritiesSettlement.mmSecuritiesMovementType, SecuritiesSettlement.mmSettlementQuantity, SecuritiesSettlement.mmSecuritiesTradeExecution,
-						SecuritiesSettlement.mmCurrencyToBuy, SecuritiesSettlement.mmCurrencyToSell, SecuritiesSettlement.mmDenominationChoice, SecuritiesSettlement.mmSettlementTransactionCondition,
-						SecuritiesSettlement.mmBeneficialOwnershipIndicator, SecuritiesSettlement.mmMarketClientSide, SecuritiesSettlement.mmTracking, SecuritiesSettlement.mmLetterOfGuarantee, SecuritiesSettlement.mmEligibleForCollateral,
-						SecuritiesSettlement.mmAccruedInterestIndicator, SecuritiesSettlement.mmPreConfirmation, SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement, SecuritiesSettlement.mmBlockTrade,
-						SecuritiesSettlement.mmSettlementSystemMethod, SecuritiesSettlement.mmAutomaticBorrowing, SecuritiesSettlement.mmPartialSettlementIndicator, SecuritiesSettlement.mmHoldIndicator,
-						SecuritiesSettlement.mmRequestedSafekeepingPlace, SecuritiesSettlement.mmPairOff, SecuritiesSettlement.mmAccruedInterest, SecuritiesSettlement.mmSecuritiesClearing, SecuritiesSettlement.mmPayment,
-						SecuritiesSettlement.mmSettledAllocation, SecuritiesSettlement.mmRelatedForeignExchangeOperation, SecuritiesSettlement.mmSecurity, SecuritiesSettlement.mmPosition, SecuritiesSettlement.mmRollover,
-						SecuritiesSettlement.mmTurnedQuantity, SecuritiesSettlement.mmSettlementReason, SecuritiesSettlement.mmSettlementType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlement.mmTransferOperation, com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementDate,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole, com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount, com.tools20022.repository.entity.SecuritiesSettlement.mmHoldingsPlanType,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesMovementType, com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementQuantity,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesTradeExecution, com.tools20022.repository.entity.SecuritiesSettlement.mmCurrencyToBuy,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmCurrencyToSell, com.tools20022.repository.entity.SecuritiesSettlement.mmDenominationChoice,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementTransactionCondition, com.tools20022.repository.entity.SecuritiesSettlement.mmBeneficialOwnershipIndicator,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmMarketClientSide, com.tools20022.repository.entity.SecuritiesSettlement.mmTracking, com.tools20022.repository.entity.SecuritiesSettlement.mmLetterOfGuarantee,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmEligibleForCollateral, com.tools20022.repository.entity.SecuritiesSettlement.mmAccruedInterestIndicator,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmPreConfirmation, com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmBlockTrade, com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementSystemMethod,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmAutomaticBorrowing, com.tools20022.repository.entity.SecuritiesSettlement.mmPartialSettlementIndicator,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmHoldIndicator, com.tools20022.repository.entity.SecuritiesSettlement.mmRequestedSafekeepingPlace,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmPairOff, com.tools20022.repository.entity.SecuritiesSettlement.mmAccruedInterest, com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesClearing,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmPayment, com.tools20022.repository.entity.SecuritiesSettlement.mmSettledAllocation,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmRelatedForeignExchangeOperation, com.tools20022.repository.entity.SecuritiesSettlement.mmSecurity,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmPosition, com.tools20022.repository.entity.SecuritiesSettlement.mmRollover, com.tools20022.repository.entity.SecuritiesSettlement.mmTurnedQuantity,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementReason, com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType);
 				derivationComponent_lazy = () -> ListBuilderForSecuritiesSettlement_00.addElems(new ArrayList<>());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesSettlement.class;
 			}
 		});
 		return mmObject_lazy.get();

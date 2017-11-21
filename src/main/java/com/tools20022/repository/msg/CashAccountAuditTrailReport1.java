@@ -26,6 +26,10 @@ import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Report information about cash account reference data.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Report information about cash account reference data."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccountAuditTrailReport1", propOrder = {"cashAccountAuditTrailOrError", "datePeriod", "cashAccountIdentification"})
 public class CashAccountAuditTrailReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -207,6 +213,7 @@ public class CashAccountAuditTrailReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshAcctAudtTrlOrErr", required = true)
 	public AuditTrailOrBusinessError1Choice getCashAccountAuditTrailOrError() {
 		return cashAccountAuditTrailOrError;
 	}
@@ -215,6 +222,7 @@ public class CashAccountAuditTrailReport1 {
 		this.cashAccountAuditTrailOrError = cashAccountAuditTrailOrError;
 	}
 
+	@XmlElement(name = "DtPrd")
 	public DateSearchChoice getDatePeriod() {
 		return datePeriod;
 	}
@@ -223,6 +231,7 @@ public class CashAccountAuditTrailReport1 {
 		this.datePeriod = datePeriod;
 	}
 
+	@XmlElement(name = "CshAcctId", required = true)
 	public CashAccount16 getCashAccountIdentification() {
 		return cashAccountIdentification;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.TerminalManagementSystem;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instructs the POI (Point Of Interaction) how to contact the host of the
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TMSTrigger1", propOrder = {"TMSContactLevel", "TMSIdentification", "TMSContactDateTime"})
 public class TMSTrigger1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -222,6 +228,7 @@ public class TMSTrigger1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TMSCtctLvl", required = true)
 	public TMSContactLevel1Code getTMSContactLevel() {
 		return tMSContactLevel;
 	}
@@ -230,6 +237,7 @@ public class TMSTrigger1 {
 		this.tMSContactLevel = tMSContactLevel;
 	}
 
+	@XmlElement(name = "TMSId")
 	public Max35Text getTMSIdentification() {
 		return tMSIdentification;
 	}
@@ -238,6 +246,7 @@ public class TMSTrigger1 {
 		this.tMSIdentification = tMSIdentification;
 	}
 
+	@XmlElement(name = "TMSCtctDtTm")
 	public ISODateTime getTMSContactDateTime() {
 		return tMSContactDateTime;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesConversion;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the exercise date or notice period for a call/put option.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides the exercise date or notice period for a call/put option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OptionDateOrPeriod1Choice", propOrder = {"earliestExerciseDate", "noticePeriod"})
 public class OptionDateOrPeriod1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class OptionDateOrPeriod1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EarlstExrcDt", required = true)
 	public ISODate getEarliestExerciseDate() {
 		return earliestExerciseDate;
 	}
@@ -189,6 +196,7 @@ public class OptionDateOrPeriod1Choice {
 		this.earliestExerciseDate = earliestExerciseDate;
 	}
 
+	@XmlElement(name = "NtcePrd", required = true)
 	public Number getNoticePeriod() {
 		return noticePeriod;
 	}

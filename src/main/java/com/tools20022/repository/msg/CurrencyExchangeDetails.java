@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information needed to process a currency exchange or conversion.
@@ -71,6 +75,8 @@ import java.util.function.Supplier;
  * "Information needed to process a currency exchange or conversion."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyExchangeDetails", propOrder = {"exchangeRate", "quotedCurrency", "quotationDate"})
 public class CurrencyExchangeDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -244,6 +250,7 @@ public class CurrencyExchangeDetails {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XchgRate", required = true)
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -252,6 +259,7 @@ public class CurrencyExchangeDetails {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "QtdCcy", required = true)
 	public CurrencyCode getQuotedCurrency() {
 		return quotedCurrency;
 	}
@@ -260,6 +268,7 @@ public class CurrencyExchangeDetails {
 		this.quotedCurrency = quotedCurrency;
 	}
 
+	@XmlElement(name = "QtnDt", required = true)
 	public ISODateTime getQuotationDate() {
 		return quotationDate;
 	}

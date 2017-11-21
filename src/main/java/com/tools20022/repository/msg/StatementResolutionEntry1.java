@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide information on the statement entry for the
@@ -91,6 +95,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatementResolutionEntry1", propOrder = {"originalGroupInformation", "originalStatementIdentification", "accountServicerReference", "correctedAmount", "charges", "purpose"})
 public class StatementResolutionEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -404,6 +410,7 @@ public class StatementResolutionEntry1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlGrpInf")
 	public OriginalGroupInformation3 getOriginalGroupInformation() {
 		return originalGroupInformation;
 	}
@@ -412,6 +419,7 @@ public class StatementResolutionEntry1 {
 		this.originalGroupInformation = originalGroupInformation;
 	}
 
+	@XmlElement(name = "OrgnlStmtId")
 	public Max35Text getOriginalStatementIdentification() {
 		return originalStatementIdentification;
 	}
@@ -420,6 +428,7 @@ public class StatementResolutionEntry1 {
 		this.originalStatementIdentification = originalStatementIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrRef")
 	public Max35Text getAccountServicerReference() {
 		return accountServicerReference;
 	}
@@ -428,6 +437,7 @@ public class StatementResolutionEntry1 {
 		this.accountServicerReference = accountServicerReference;
 	}
 
+	@XmlElement(name = "CrrctdAmt")
 	public ActiveOrHistoricCurrencyAndAmount getCorrectedAmount() {
 		return correctedAmount;
 	}
@@ -436,6 +446,7 @@ public class StatementResolutionEntry1 {
 		this.correctedAmount = correctedAmount;
 	}
 
+	@XmlElement(name = "Chrgs")
 	public List<ChargesInformation6> getCharges() {
 		return charges;
 	}
@@ -444,6 +455,7 @@ public class StatementResolutionEntry1 {
 		this.charges = charges;
 	}
 
+	@XmlElement(name = "Purp")
 	public Purpose2Choice getPurpose() {
 		return purpose;
 	}

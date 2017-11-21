@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecurityCertificatePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party and related security certificate.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyAndCertificate2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyAndCertificate3", propOrder = {"modificationCode", "party", "certificate"})
 public class PartyAndCertificate3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class PartyAndCertificate3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ModCd")
 	public Modification1Code getModificationCode() {
 		return modificationCode;
 	}
@@ -236,6 +243,7 @@ public class PartyAndCertificate3 {
 		this.modificationCode = modificationCode;
 	}
 
+	@XmlElement(name = "Pty", required = true)
 	public PartyIdentification43 getParty() {
 		return party;
 	}
@@ -244,6 +252,7 @@ public class PartyAndCertificate3 {
 		this.party = party;
 	}
 
+	@XmlElement(name = "Cert")
 	public Max10KBinary getCertificate() {
 		return certificate;
 	}

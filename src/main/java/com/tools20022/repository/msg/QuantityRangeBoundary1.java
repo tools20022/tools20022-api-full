@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Limit for a quantity range.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Limit for a quantity range."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuantityRangeBoundary1", propOrder = {"boundary", "included"})
 public class QuantityRangeBoundary1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +168,7 @@ public class QuantityRangeBoundary1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Bdry", required = true)
 	public DecimalNumber getBoundary() {
 		return boundary;
 	}
@@ -170,6 +177,7 @@ public class QuantityRangeBoundary1 {
 		this.boundary = boundary;
 	}
 
+	@XmlElement(name = "Incl", required = true)
 	public YesNoIndicator getIncluded() {
 		return included;
 	}

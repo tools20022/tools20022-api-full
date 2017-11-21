@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Code of the underlying bank transaction.
@@ -66,6 +70,8 @@ import java.util.function.Supplier;
  * definition} = "Code of the underlying bank transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BankTransactionCodeStructure3", propOrder = {"code", "subFamilyCode"})
 public class BankTransactionCodeStructure3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -188,6 +194,7 @@ public class BankTransactionCodeStructure3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public ExternalBankTransactionFamilyCode getCode() {
 		return code;
 	}
@@ -196,6 +203,7 @@ public class BankTransactionCodeStructure3 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "SubFmlyCd", required = true)
 	public ExternalBankTransactionSubFamilyCode getSubFamilyCode() {
 		return subFamilyCode;
 	}

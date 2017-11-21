@@ -61,6 +61,8 @@ public class Number {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Number";
 				definition = "Number of objects represented as an integer.";
+				totalDigits = 18;
+				fractionDigits = 0;
 			}
 		});
 		return mmObject_lazy.get();

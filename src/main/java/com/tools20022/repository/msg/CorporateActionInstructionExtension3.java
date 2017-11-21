@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action instruction.
@@ -104,6 +108,9 @@ import java.util.List;
  * "Provides additional information regarding corporate action instruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionInstructionExtension3", propOrder = {"placeAndName", "status", "instructionType", "serviceTypeIndicator", "protectIdentification", "protectDate", "accountTransactionProcessorRelativeBlockNumber",
+		"conditionalQuantity", "tenderBidPrice", "oddLotFlag", "acknowledgementFlag", "conditionsAcceptance", "DTCDisbursedSecurity", "DTCDisbursedSecurityDescription", "payingAgent"})
 public class CorporateActionInstructionExtension3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -777,6 +784,7 @@ public class CorporateActionInstructionExtension3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -785,6 +793,7 @@ public class CorporateActionInstructionExtension3 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "Sts")
 	public DTCInstructionStatus1Code getStatus() {
 		return status;
 	}
@@ -793,6 +802,7 @@ public class CorporateActionInstructionExtension3 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "InstrTp")
 	public DTCCorporateActionInstructionType1Code getInstructionType() {
 		return instructionType;
 	}
@@ -801,6 +811,7 @@ public class CorporateActionInstructionExtension3 {
 		this.instructionType = instructionType;
 	}
 
+	@XmlElement(name = "SvcTpInd")
 	public DTCServiceType1Code getServiceTypeIndicator() {
 		return serviceTypeIndicator;
 	}
@@ -809,6 +820,7 @@ public class CorporateActionInstructionExtension3 {
 		this.serviceTypeIndicator = serviceTypeIndicator;
 	}
 
+	@XmlElement(name = "PrtctId")
 	public Max16Text getProtectIdentification() {
 		return protectIdentification;
 	}
@@ -817,6 +829,7 @@ public class CorporateActionInstructionExtension3 {
 		this.protectIdentification = protectIdentification;
 	}
 
+	@XmlElement(name = "PrtctDt")
 	public ISODate getProtectDate() {
 		return protectDate;
 	}
@@ -825,6 +838,7 @@ public class CorporateActionInstructionExtension3 {
 		this.protectDate = protectDate;
 	}
 
+	@XmlElement(name = "AcctTxPrcrRltvBlckNb")
 	public Number getAccountTransactionProcessorRelativeBlockNumber() {
 		return accountTransactionProcessorRelativeBlockNumber;
 	}
@@ -833,6 +847,7 @@ public class CorporateActionInstructionExtension3 {
 		this.accountTransactionProcessorRelativeBlockNumber = accountTransactionProcessorRelativeBlockNumber;
 	}
 
+	@XmlElement(name = "CondlQty")
 	public RestrictedFINDecimalNumber getConditionalQuantity() {
 		return conditionalQuantity;
 	}
@@ -841,6 +856,7 @@ public class CorporateActionInstructionExtension3 {
 		this.conditionalQuantity = conditionalQuantity;
 	}
 
+	@XmlElement(name = "TndrBidPric")
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getTenderBidPrice() {
 		return tenderBidPrice;
 	}
@@ -849,6 +865,7 @@ public class CorporateActionInstructionExtension3 {
 		this.tenderBidPrice = tenderBidPrice;
 	}
 
+	@XmlElement(name = "OddLotFlg")
 	public YesNoIndicator getOddLotFlag() {
 		return oddLotFlag;
 	}
@@ -857,6 +874,7 @@ public class CorporateActionInstructionExtension3 {
 		this.oddLotFlag = oddLotFlag;
 	}
 
+	@XmlElement(name = "AckFlg")
 	public YesNoIndicator getAcknowledgementFlag() {
 		return acknowledgementFlag;
 	}
@@ -865,6 +883,7 @@ public class CorporateActionInstructionExtension3 {
 		this.acknowledgementFlag = acknowledgementFlag;
 	}
 
+	@XmlElement(name = "CondsAccptnc")
 	public List<ConditionAcceptance1> getConditionsAcceptance() {
 		return conditionsAcceptance;
 	}
@@ -873,6 +892,7 @@ public class CorporateActionInstructionExtension3 {
 		this.conditionsAcceptance = conditionsAcceptance;
 	}
 
+	@XmlElement(name = "DTCDsbrsdScty")
 	public CUSIPIdentification1 getDTCDisbursedSecurity() {
 		return dTCDisbursedSecurity;
 	}
@@ -881,6 +901,7 @@ public class CorporateActionInstructionExtension3 {
 		this.dTCDisbursedSecurity = dTCDisbursedSecurity;
 	}
 
+	@XmlElement(name = "DTCDsbrsdSctyDesc")
 	public RestrictedFINMax31Text getDTCDisbursedSecurityDescription() {
 		return dTCDisbursedSecurityDescription;
 	}
@@ -889,6 +910,7 @@ public class CorporateActionInstructionExtension3 {
 		this.dTCDisbursedSecurityDescription = dTCDisbursedSecurityDescription;
 	}
 
+	@XmlElement(name = "PngAgt")
 	public Max8Text getPayingAgent() {
 		return payingAgent;
 	}

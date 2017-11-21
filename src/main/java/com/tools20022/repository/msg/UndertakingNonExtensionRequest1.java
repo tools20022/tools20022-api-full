@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the non extension request.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details of the non extension request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingNonExtensionRequest1", propOrder = {"requestingParty", "undertakingIdentification"})
 public class UndertakingNonExtensionRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -184,6 +190,7 @@ public class UndertakingNonExtensionRequest1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RqstngPty", required = true)
 	public PartyIdentification43 getRequestingParty() {
 		return requestingParty;
 	}
@@ -192,6 +199,7 @@ public class UndertakingNonExtensionRequest1 {
 		this.requestingParty = requestingParty;
 	}
 
+	@XmlElement(name = "UdrtkgId", required = true)
 	public Undertaking9 getUndertakingIdentification() {
 		return undertakingIdentification;
 	}

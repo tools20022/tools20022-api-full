@@ -36,6 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole
+ * CardPaymentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -51,10 +55,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentTransactionResult3.mmAuthorisationEntity}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole
- * CardPaymentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -83,6 +83,11 @@ public class AuthorisationEntity extends CardPaymentPartyRole {
 				definition = "Party which has delivered or declined the authorisation.";
 				derivationElement_lazy = () -> Arrays.asList(CardPaymentTransactionResult1.mmAuthorisationEntity, CardPaymentTransactionResult2.mmAuthorisationEntity, CardPaymentTransactionResult3.mmAuthorisationEntity);
 				superType_lazy = () -> CardPaymentPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AuthorisationEntity.class;
 			}
 		});
 		return mmObject_lazy.get();

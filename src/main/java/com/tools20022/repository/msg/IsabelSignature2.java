@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the signature of an Isabel file.
@@ -66,6 +70,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelSignature2", propOrder = {"header", "record", "randomBlock"})
 public class IsabelSignature2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -233,6 +239,7 @@ public class IsabelSignature2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public IsabelSignatureHash1 getHeader() {
 		return header;
 	}
@@ -241,6 +248,7 @@ public class IsabelSignature2 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "Rcrd", required = true)
 	public List<IsabelSignatureRecord1> getRecord() {
 		return record;
 	}
@@ -249,6 +257,7 @@ public class IsabelSignature2 {
 		this.record = record;
 	}
 
+	@XmlElement(name = "RandBlck", required = true)
 	public Max64Text getRandomBlock() {
 		return randomBlock;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Response;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Card payment completion advice response from the acquirer.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransactionAdviceResponse1", propOrder = {"transactionIdentification", "response"})
 public class CardPaymentTransactionAdviceResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -205,6 +211,7 @@ public class CardPaymentTransactionAdviceResponse1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -213,6 +220,7 @@ public class CardPaymentTransactionAdviceResponse1 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "Rspn", required = true)
 	public Response1Code getResponse() {
 		return response;
 	}

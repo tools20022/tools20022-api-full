@@ -29,19 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RoutingType1Code
- * RoutingType1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.RoutingTypeCode#mmAllowed
  * RoutingTypeCode.mmAllowed}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.RoutingTypeCode#mmBlocked
  * RoutingTypeCode.mmBlocked}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RoutingType1Code
+ * RoutingType1Code}</li>
  * </ul>
  * </li>
  * <li>

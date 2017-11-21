@@ -22,6 +22,7 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,13 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PartyName#mmName
+ * PartyName.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmPartyName
- * PartyIdentificationInformation.mmPartyName}</li>
+ * {@linkplain com.tools20022.repository.entity.PartyName#mmPartyIdentification
+ * PartyName.mmPartyIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -52,14 +54,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * OrganisationName}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PartyName#mmName
- * PartyName.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PartyName#mmPartyIdentification
- * PartyName.mmPartyIdentification}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmPartyName
+ * PartyIdentificationInformation.mmPartyName}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,10 +95,6 @@ public class PartyName {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max140Text
 	 * Max140Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.PartyName
-	 * PartyName}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -424,6 +421,10 @@ public class PartyName {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.PartyName
+	 * PartyName}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -457,7 +458,7 @@ public class PartyName {
 					PartyIdentification77.mmName, LegalOrganisation2.mmName, Organisation22.mmName, Organisation23.mmName, Organisation24.mmName, PersonalInformation1.mmMaidenNameOfMother, PaymentCard18.mmCardIssuerName,
 					NameAndAddress15.mmName, Organisation25.mmCommonName, Organisation26.mmCommonName, PartyIdentification112.mmName, Organisation30.mmName, PaymentCard25.mmCardIssuerName, Organisation29.mmName,
 					MarketIdentification92.mmInstitutionName);
-			elementContext_lazy = () -> PartyName.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PartyName.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Name";
@@ -465,6 +466,14 @@ public class PartyName {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PartyName.class.getMethod("getName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentificationInformation partyIdentification;
@@ -503,7 +512,7 @@ public class PartyName {
 	 */
 	public static final MMBusinessAssociationEnd mmPartyIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PartyName.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PartyName.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyIdentification";
@@ -525,7 +534,12 @@ public class PartyName {
 				definition = "Name by which a party is known and which is usually used to identify that party.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PartyIdentificationInformation.mmPartyName);
 				subType_lazy = () -> Arrays.asList(PersonName.mmObject(), OrganisationName.mmObject());
-				element_lazy = () -> Arrays.asList(PartyName.mmName, PartyName.mmPartyIdentification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PartyName.mmName, com.tools20022.repository.entity.PartyName.mmPartyIdentification);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PartyName.class;
 			}
 		});
 		return mmObject_lazy.get();

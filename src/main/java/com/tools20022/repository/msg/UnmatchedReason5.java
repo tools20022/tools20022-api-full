@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * The status of an instruction, advice or request.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "The status of an instruction, advice or request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnmatchedReason5", propOrder = {"code", "additionalReasonInformation"})
 public class UnmatchedReason5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class UnmatchedReason5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public UnmatchedReason7Choice getCode() {
 		return code;
 	}
@@ -185,6 +192,7 @@ public class UnmatchedReason5 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "AddtlRsnInf")
 	public Max210Text getAdditionalReasonInformation() {
 		return additionalReasonInformation;
 	}

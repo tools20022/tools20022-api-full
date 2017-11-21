@@ -26,6 +26,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports either on business day information or on a business error.
@@ -71,6 +75,8 @@ import java.util.List;
  * "Reports either on business day information or on a business error."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BusinessDayInformationReport2", propOrder = {"systemIdentification", "businessError", "businessDayInformation"})
 public class BusinessDayInformationReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -263,6 +269,7 @@ public class BusinessDayInformationReport2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysId", required = true)
 	public List<SystemIdentificationChoice> getSystemIdentification() {
 		return systemIdentification;
 	}
@@ -271,6 +278,7 @@ public class BusinessDayInformationReport2 {
 		this.systemIdentification = systemIdentification;
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public ErrorHandling3 getBusinessError() {
 		return businessError;
 	}
@@ -279,6 +287,7 @@ public class BusinessDayInformationReport2 {
 		this.businessError = businessError;
 	}
 
+	@XmlElement(name = "BizDayInf", required = true)
 	public BusinessDayInformationDetails1 getBusinessDayInformation() {
 		return businessDayInformation;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Asset class specific details of a derivative.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Asset class specific details of a derivative."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AssetClassAttributes1", propOrder = {"interest", "foreignExchange"})
 public class AssetClassAttributes1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class AssetClassAttributes1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Intrst", required = true)
 	public DerivativeInterest2 getInterest() {
 		return interest;
 	}
@@ -183,6 +190,7 @@ public class AssetClassAttributes1 {
 		this.interest = interest;
 	}
 
+	@XmlElement(name = "FX", required = true)
 	public DerivativeForeignExchange2 getForeignExchange() {
 		return foreignExchange;
 	}

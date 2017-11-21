@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PlusOrMinusIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PegOrderInstructions1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -41,26 +42,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PegOrderInstructions1
- * PegOrderInstructions1}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmRelatedPegOrderInstruction
- * RoundingParameters.mmRelatedPegOrderInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters#mmPegInstructions
- * SecuritiesOrderParameters.mmPegInstructions}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -94,6 +75,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PegOrderInstructions1
+ * PegOrderInstructions1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmRelatedPegOrderInstruction
+ * RoundingParameters.mmRelatedPegOrderInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters#mmPegInstructions
+ * SecuritiesOrderParameters.mmPegInstructions}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -124,11 +125,6 @@ public class SecuritiesPegOrderInstruction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
-	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -137,6 +133,11 @@ public class SecuritiesPegOrderInstruction {
 	 * PegOrderInstructions1.mmOffset}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
+	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -151,7 +152,7 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAttribute mmOffset = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmOffset);
-			elementContext_lazy = () -> SecuritiesPegOrderInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Offset";
@@ -159,6 +160,14 @@ public class SecuritiesPegOrderInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPegOrderInstruction.class.getMethod("getOffset", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PegTypeCode priceType;
@@ -171,11 +180,6 @@ public class SecuritiesPegOrderInstruction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.PegTypeCode
 	 * PegTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
-	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -184,6 +188,11 @@ public class SecuritiesPegOrderInstruction {
 	 * PegOrderInstructions1.mmRelatedPriceType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
+	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -198,7 +207,7 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAttribute mmPriceType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmRelatedPriceType);
-			elementContext_lazy = () -> SecuritiesPegOrderInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceType";
@@ -206,6 +215,14 @@ public class SecuritiesPegOrderInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PegTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPegOrderInstruction.class.getMethod("getPriceType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MoveTypeCode moveType;
@@ -218,11 +235,6 @@ public class SecuritiesPegOrderInstruction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.MoveTypeCode
 	 * MoveTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
-	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -231,6 +243,11 @@ public class SecuritiesPegOrderInstruction {
 	 * PegOrderInstructions1.mmMoveType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
+	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -245,7 +262,7 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAttribute mmMoveType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmMoveType);
-			elementContext_lazy = () -> SecuritiesPegOrderInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MoveType";
@@ -253,6 +270,14 @@ public class SecuritiesPegOrderInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MoveTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPegOrderInstruction.class.getMethod("getMoveType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OffsetTypeCode offsetType;
@@ -266,11 +291,6 @@ public class SecuritiesPegOrderInstruction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OffsetTypeCode
 	 * OffsetTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
-	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -279,6 +299,11 @@ public class SecuritiesPegOrderInstruction {
 	 * PegOrderInstructions1.mmOffsetType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
+	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -293,7 +318,7 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAttribute mmOffsetType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmOffsetType);
-			elementContext_lazy = () -> SecuritiesPegOrderInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OffsetType";
@@ -301,6 +326,14 @@ public class SecuritiesPegOrderInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OffsetTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPegOrderInstruction.class.getMethod("getOffsetType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text limitType;
@@ -313,11 +346,6 @@ public class SecuritiesPegOrderInstruction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
-	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -326,6 +354,11 @@ public class SecuritiesPegOrderInstruction {
 	 * PegOrderInstructions1.mmLimitType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
+	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -340,7 +373,7 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAttribute mmLimitType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmLimitType);
-			elementContext_lazy = () -> SecuritiesPegOrderInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LimitType";
@@ -348,6 +381,14 @@ public class SecuritiesPegOrderInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPegOrderInstruction.class.getMethod("getLimitType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PriceProtectionScopeCode scope;
@@ -362,11 +403,6 @@ public class SecuritiesPegOrderInstruction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PriceProtectionScopeCode
 	 * PriceProtectionScopeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
-	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -375,6 +411,11 @@ public class SecuritiesPegOrderInstruction {
 	 * PegOrderInstructions1.mmScope}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
+	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -391,7 +432,7 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAttribute mmScope = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmScope);
-			elementContext_lazy = () -> SecuritiesPegOrderInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Scope";
@@ -399,6 +440,14 @@ public class SecuritiesPegOrderInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceProtectionScopeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPegOrderInstruction.class.getMethod("getScope", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PlusOrMinusIndicator offsetSign;
@@ -413,11 +462,6 @@ public class SecuritiesPegOrderInstruction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PlusOrMinusIndicator
 	 * PlusOrMinusIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
-	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -426,6 +470,11 @@ public class SecuritiesPegOrderInstruction {
 	 * PegOrderInstructions1.mmOffsetSign}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
+	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -442,7 +491,7 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAttribute mmOffsetSign = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmOffsetSign);
-			elementContext_lazy = () -> SecuritiesPegOrderInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OffsetSign";
@@ -450,6 +499,14 @@ public class SecuritiesPegOrderInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPegOrderInstruction.class.getMethod("getOffsetSign", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesOrderParameters order;
@@ -489,7 +546,7 @@ public class SecuritiesPegOrderInstruction {
 	 */
 	public static final MMBusinessAssociationEnd mmOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPegOrderInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Order";
@@ -520,11 +577,6 @@ public class SecuritiesPegOrderInstruction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.RoundingParameters
 	 * RoundingParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
-	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -533,6 +585,11 @@ public class SecuritiesPegOrderInstruction {
 	 * PegOrderInstructions1.mmRoundDirection}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
+	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -549,7 +606,7 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAssociationEnd mmRoundDirection = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmRoundDirection);
-			elementContext_lazy = () -> SecuritiesPegOrderInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDirection";
@@ -570,9 +627,17 @@ public class SecuritiesPegOrderInstruction {
 				name = "SecuritiesPegOrderInstruction";
 				definition = "Instructions specific to pegged orders, which consist in an investor buying large amounts of  the underlying asset of a derivative it holds.\r\n";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RoundingParameters.mmRelatedPegOrderInstruction, com.tools20022.repository.entity.SecuritiesOrderParameters.mmPegInstructions);
-				element_lazy = () -> Arrays.asList(SecuritiesPegOrderInstruction.mmOffset, SecuritiesPegOrderInstruction.mmPriceType, SecuritiesPegOrderInstruction.mmMoveType, SecuritiesPegOrderInstruction.mmOffsetType,
-						SecuritiesPegOrderInstruction.mmLimitType, SecuritiesPegOrderInstruction.mmScope, SecuritiesPegOrderInstruction.mmOffsetSign, SecuritiesPegOrderInstruction.mmOrder, SecuritiesPegOrderInstruction.mmRoundDirection);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmOffset, com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmPriceType,
+						com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmMoveType, com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmOffsetType,
+						com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmLimitType, com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmScope,
+						com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmOffsetSign, com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmOrder,
+						com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmRoundDirection);
 				derivationComponent_lazy = () -> Arrays.asList(PegOrderInstructions1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesPegOrderInstruction.class;
 			}
 		});
 		return mmObject_lazy.get();

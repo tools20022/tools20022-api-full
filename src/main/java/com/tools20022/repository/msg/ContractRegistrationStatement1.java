@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Statement of the journal entries for all activities related to the registered
@@ -106,6 +110,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContractRegistrationStatement1", propOrder = {"statementIdentification", "reportingParty", "registrationAgent", "reportingPeriod", "registeredContract", "transactionJournal", "supportingDocumentJournal",
+		"additionalSupportingDocumentJournal", "regulatoryRuleValidation", "totalContractTurnoverSum", "supplementaryData"})
 public class ContractRegistrationStatement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -639,6 +646,7 @@ public class ContractRegistrationStatement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtId")
 	public Max35Text getStatementIdentification() {
 		return statementIdentification;
 	}
@@ -647,6 +655,7 @@ public class ContractRegistrationStatement1 {
 		this.statementIdentification = statementIdentification;
 	}
 
+	@XmlElement(name = "RptgPty", required = true)
 	public TradeParty2 getReportingParty() {
 		return reportingParty;
 	}
@@ -655,6 +664,7 @@ public class ContractRegistrationStatement1 {
 		this.reportingParty = reportingParty;
 	}
 
+	@XmlElement(name = "RegnAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getRegistrationAgent() {
 		return registrationAgent;
 	}
@@ -663,6 +673,7 @@ public class ContractRegistrationStatement1 {
 		this.registrationAgent = registrationAgent;
 	}
 
+	@XmlElement(name = "RptgPrd", required = true)
 	public ReportingPeriod1 getReportingPeriod() {
 		return reportingPeriod;
 	}
@@ -671,6 +682,7 @@ public class ContractRegistrationStatement1 {
 		this.reportingPeriod = reportingPeriod;
 	}
 
+	@XmlElement(name = "RegdCtrct", required = true)
 	public RegisteredContract5 getRegisteredContract() {
 		return registeredContract;
 	}
@@ -679,6 +691,7 @@ public class ContractRegistrationStatement1 {
 		this.registeredContract = registeredContract;
 	}
 
+	@XmlElement(name = "TxJrnl")
 	public List<TransactionCertificate1> getTransactionJournal() {
 		return transactionJournal;
 	}
@@ -687,6 +700,7 @@ public class ContractRegistrationStatement1 {
 		this.transactionJournal = transactionJournal;
 	}
 
+	@XmlElement(name = "SpprtgDocJrnl")
 	public List<SupportingDocument1> getSupportingDocumentJournal() {
 		return supportingDocumentJournal;
 	}
@@ -695,6 +709,7 @@ public class ContractRegistrationStatement1 {
 		this.supportingDocumentJournal = supportingDocumentJournal;
 	}
 
+	@XmlElement(name = "AddtlSpprtgDocJrnl")
 	public List<SupportingDocument1> getAdditionalSupportingDocumentJournal() {
 		return additionalSupportingDocumentJournal;
 	}
@@ -703,6 +718,7 @@ public class ContractRegistrationStatement1 {
 		this.additionalSupportingDocumentJournal = additionalSupportingDocumentJournal;
 	}
 
+	@XmlElement(name = "RgltryRuleVldtn")
 	public List<GenericValidationRuleIdentification1> getRegulatoryRuleValidation() {
 		return regulatoryRuleValidation;
 	}
@@ -711,6 +727,7 @@ public class ContractRegistrationStatement1 {
 		this.regulatoryRuleValidation = regulatoryRuleValidation;
 	}
 
+	@XmlElement(name = "TtlCtrctTrnvrSum", required = true)
 	public ActiveCurrencyAndAmount getTotalContractTurnoverSum() {
 		return totalContractTurnoverSum;
 	}
@@ -719,6 +736,7 @@ public class ContractRegistrationStatement1 {
 		this.totalContractTurnoverSum = totalContractTurnoverSum;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

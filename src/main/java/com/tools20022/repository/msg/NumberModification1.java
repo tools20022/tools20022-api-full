@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max5NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the type of change to a number.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of change to a number."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NumberModification1", propOrder = {"modificationCode", "number"})
 public class NumberModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class NumberModification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ModCd")
 	public Modification1Code getModificationCode() {
 		return modificationCode;
 	}
@@ -166,6 +173,7 @@ public class NumberModification1 {
 		this.modificationCode = modificationCode;
 	}
 
+	@XmlElement(name = "Nb", required = true)
 	public Max5NumericText getNumber() {
 		return number;
 	}

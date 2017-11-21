@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information provided when the message is a copy of a previous message.
@@ -265,6 +269,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CopyInformation2", propOrder = {"copyIndicator", "originalReceiver"})
 public class CopyInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -403,6 +409,7 @@ public class CopyInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CpyInd", required = true)
 	public YesNoIndicator getCopyIndicator() {
 		return copyIndicator;
 	}
@@ -411,6 +418,7 @@ public class CopyInformation2 {
 		this.copyIndicator = copyIndicator;
 	}
 
+	@XmlElement(name = "OrgnlRcvr")
 	public BICIdentification1 getOriginalReceiver() {
 		return originalReceiver;
 	}

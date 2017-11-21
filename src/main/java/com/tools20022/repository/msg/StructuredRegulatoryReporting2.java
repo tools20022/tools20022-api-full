@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.RegulatoryReport;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information needed due to regulatory and statutory requirements.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information needed due to regulatory and statutory requirements."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StructuredRegulatoryReporting2", propOrder = {"code", "amount", "information"})
 public class StructuredRegulatoryReporting2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -238,6 +244,7 @@ public class StructuredRegulatoryReporting2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd")
 	public Max3Text getCode() {
 		return code;
 	}
@@ -246,6 +253,7 @@ public class StructuredRegulatoryReporting2 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Amt")
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -254,6 +262,7 @@ public class StructuredRegulatoryReporting2 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Inf")
 	public Max35Text getInformation() {
 		return information;
 	}

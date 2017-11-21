@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1;
 import com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a range of amount values with or without the currency.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between a range of amount values with or without the currency. "</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ActiveOrHistoricAmountRange1Choice", propOrder = {"impliedCurrencyAndAmountRange", "currencyAndAmountRange"})
 public class ActiveOrHistoricAmountRange1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class ActiveOrHistoricAmountRange1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ImpldCcyAndAmtRg", required = true)
 	public ImpliedCurrencyAndAmountRange getImpliedCurrencyAndAmountRange() {
 		return impliedCurrencyAndAmountRange;
 	}
@@ -189,6 +196,7 @@ public class ActiveOrHistoricAmountRange1Choice {
 		this.impliedCurrencyAndAmountRange = impliedCurrencyAndAmountRange;
 	}
 
+	@XmlElement(name = "CcyAndAmtRg", required = true)
 	public ActiveOrHistoricCurrencyAndAmountRange1 getCurrencyAndAmountRange() {
 		return currencyAndAmountRange;
 	}

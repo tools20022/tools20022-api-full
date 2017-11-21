@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of an entity involved in an activity.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyIdentification48}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification75", propOrder = {"identification", "LEI", "alternateIdentification", "processingDate", "processingIdentification", "additionalInformation"})
 public class PartyIdentification75 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -406,6 +412,7 @@ public class PartyIdentification75 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification44Choice getIdentification() {
 		return identification;
 	}
@@ -414,6 +421,7 @@ public class PartyIdentification75 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "LEI")
 	public LEIIdentifier getLEI() {
 		return lEI;
 	}
@@ -422,6 +430,7 @@ public class PartyIdentification75 {
 		this.lEI = lEI;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification7 getAlternateIdentification() {
 		return alternateIdentification;
 	}
@@ -430,6 +439,7 @@ public class PartyIdentification75 {
 		this.alternateIdentification = alternateIdentification;
 	}
 
+	@XmlElement(name = "PrcgDt")
 	public DateAndDateTimeChoice getProcessingDate() {
 		return processingDate;
 	}
@@ -438,6 +448,7 @@ public class PartyIdentification75 {
 		this.processingDate = processingDate;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public Max35Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -446,6 +457,7 @@ public class PartyIdentification75 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public PartyTextInformation1 getAdditionalInformation() {
 		return additionalInformation;
 	}

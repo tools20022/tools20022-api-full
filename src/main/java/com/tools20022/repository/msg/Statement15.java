@@ -37,6 +37,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics of the statement.
@@ -105,6 +109,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Statement15", propOrder = {"reportNumber", "queryReference", "statementIdentification", "statementPeriod", "frequency", "updateType", "activityIndicator"})
 public class Statement15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -484,6 +490,7 @@ public class Statement15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptNb")
 	public Number3Choice getReportNumber() {
 		return reportNumber;
 	}
@@ -492,6 +499,7 @@ public class Statement15 {
 		this.reportNumber = reportNumber;
 	}
 
+	@XmlElement(name = "QryRef")
 	public Max35Text getQueryReference() {
 		return queryReference;
 	}
@@ -500,6 +508,7 @@ public class Statement15 {
 		this.queryReference = queryReference;
 	}
 
+	@XmlElement(name = "StmtId")
 	public Max35Text getStatementIdentification() {
 		return statementIdentification;
 	}
@@ -508,6 +517,7 @@ public class Statement15 {
 		this.statementIdentification = statementIdentification;
 	}
 
+	@XmlElement(name = "StmtPrd", required = true)
 	public Period2Choice getStatementPeriod() {
 		return statementPeriod;
 	}
@@ -516,6 +526,7 @@ public class Statement15 {
 		this.statementPeriod = statementPeriod;
 	}
 
+	@XmlElement(name = "Frqcy")
 	public Frequency4Choice getFrequency() {
 		return frequency;
 	}
@@ -524,6 +535,7 @@ public class Statement15 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "UpdTp")
 	public UpdateType2Choice getUpdateType() {
 		return updateType;
 	}
@@ -532,6 +544,7 @@ public class Statement15 {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}

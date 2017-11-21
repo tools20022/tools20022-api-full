@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action general
@@ -81,6 +85,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionGeneralInformationSD3", propOrder = {"placeAndName", "securityIdentification", "recordDate", "paymentDate", "unallocatedDetails"})
 public class CorporateActionGeneralInformationSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -342,6 +348,7 @@ public class CorporateActionGeneralInformationSD3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -350,6 +357,7 @@ public class CorporateActionGeneralInformationSD3 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification15 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -358,6 +366,7 @@ public class CorporateActionGeneralInformationSD3 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "RcrdDt")
 	public ISODate getRecordDate() {
 		return recordDate;
 	}
@@ -366,6 +375,7 @@ public class CorporateActionGeneralInformationSD3 {
 		this.recordDate = recordDate;
 	}
 
+	@XmlElement(name = "PmtDt")
 	public DateFormat22Choice getPaymentDate() {
 		return paymentDate;
 	}
@@ -374,6 +384,7 @@ public class CorporateActionGeneralInformationSD3 {
 		this.paymentDate = paymentDate;
 	}
 
+	@XmlElement(name = "UallctdDtls")
 	public List<CorporateActionUnallocatedDetailsSD1> getUnallocatedDetails() {
 		return unallocatedDetails;
 	}

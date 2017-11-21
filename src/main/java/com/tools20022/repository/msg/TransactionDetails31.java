@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the details of the transaction.
@@ -93,6 +97,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionDetails31", propOrder = {"financialInstrumentIdentification", "tradeDate", "settlementDate", "settlementQuantity", "settlementAmount", "deliveringSettlementParties", "receivingSettlementParties", "investor"})
 public class TransactionDetails31 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -509,6 +515,7 @@ public class TransactionDetails31 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -517,6 +524,7 @@ public class TransactionDetails31 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "TradDt")
 	public TradeDate2Choice getTradeDate() {
 		return tradeDate;
 	}
@@ -525,6 +533,7 @@ public class TransactionDetails31 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public SettlementDate4Choice getSettlementDate() {
 		return settlementDate;
 	}
@@ -533,6 +542,7 @@ public class TransactionDetails31 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "SttlmQty", required = true)
 	public Quantity10Choice getSettlementQuantity() {
 		return settlementQuantity;
 	}
@@ -541,6 +551,7 @@ public class TransactionDetails31 {
 		this.settlementQuantity = settlementQuantity;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public AmountAndDirection12 getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -549,6 +560,7 @@ public class TransactionDetails31 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties19 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -557,6 +569,7 @@ public class TransactionDetails31 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties19 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -565,6 +578,7 @@ public class TransactionDetails31 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "Invstr")
 	public PartyIdentification60Choice getInvestor() {
 		return investor;
 	}

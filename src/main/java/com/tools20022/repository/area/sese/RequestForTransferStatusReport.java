@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.MessageAndBusinessReference1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -42,9 +44,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.009.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -71,6 +70,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.009.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -90,6 +92,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "sese.009.001.01", propOrder = "requestDetails")
 public class RequestForTransferStatusReport {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -128,6 +132,14 @@ public class RequestForTransferStatusReport {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageAndBusinessReference1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RequestForTransferStatusReport.class.getMethod("getRequestDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -142,7 +154,7 @@ public class RequestForTransferStatusReport {
 				xmlTag = "sese.009.001.01";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
 				xmlName = "sese.009.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(RequestForTransferStatusReport.mmRequestDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.RequestForTransferStatusReport.mmRequestDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -152,15 +164,27 @@ public class RequestForTransferStatusReport {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RequestForTransferStatusReport.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqDtls", required = true)
 	public List<MessageAndBusinessReference1> getRequestDetails() {
 		return requestDetails;
 	}
 
 	public void setRequestDetails(List<MessageAndBusinessReference1> requestDetails) {
 		this.requestDetails = requestDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.009.01.01")
+	static public class Document {
+		@XmlElement(name = "sese.009.001.01", required = true)
+		public RequestForTransferStatusReport messageBody;
 	}
 }

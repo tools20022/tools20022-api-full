@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the transportation of goods by road.
@@ -82,6 +86,8 @@ import java.util.List;
  * {@linkplain com.tools20022.repository.msg.TransportByRoad4 TransportByRoad4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportByRoad5", propOrder = {"placeOfReceipt", "placeOfDelivery", "roadCarrierName", "roadCarrierCountry", "carrierAgentName", "carrierAgentCountry"})
 public class TransportByRoad5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -434,6 +440,7 @@ public class TransportByRoad5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcOfRct")
 	public List<Max35Text> getPlaceOfReceipt() {
 		return placeOfReceipt;
 	}
@@ -442,6 +449,7 @@ public class TransportByRoad5 {
 		this.placeOfReceipt = placeOfReceipt;
 	}
 
+	@XmlElement(name = "PlcOfDlvry", required = true)
 	public List<Max35Text> getPlaceOfDelivery() {
 		return placeOfDelivery;
 	}
@@ -450,6 +458,7 @@ public class TransportByRoad5 {
 		this.placeOfDelivery = placeOfDelivery;
 	}
 
+	@XmlElement(name = "RoadCrrierNm")
 	public Max70Text getRoadCarrierName() {
 		return roadCarrierName;
 	}
@@ -458,6 +467,7 @@ public class TransportByRoad5 {
 		this.roadCarrierName = roadCarrierName;
 	}
 
+	@XmlElement(name = "RoadCrrierCtry")
 	public CountryCode getRoadCarrierCountry() {
 		return roadCarrierCountry;
 	}
@@ -466,6 +476,7 @@ public class TransportByRoad5 {
 		this.roadCarrierCountry = roadCarrierCountry;
 	}
 
+	@XmlElement(name = "CrrierAgtNm")
 	public Max70Text getCarrierAgentName() {
 		return carrierAgentName;
 	}
@@ -474,6 +485,7 @@ public class TransportByRoad5 {
 		this.carrierAgentName = carrierAgentName;
 	}
 
+	@XmlElement(name = "CrrierAgtCtry")
 	public CountryCode getCarrierAgentCountry() {
 		return carrierAgentCountry;
 	}

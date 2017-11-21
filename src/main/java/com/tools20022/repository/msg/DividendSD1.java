@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Dividend;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extension to specify rates of a corporate action.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Extension to specify rates of a corporate action."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DividendSD1", propOrder = {"placeAndName", "totalAnnualDividendRate", "maximumAnnualTotalDividendRate", "minimumAnnualTotalDividendRate"})
 public class DividendSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -277,6 +283,7 @@ public class DividendSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -285,6 +292,7 @@ public class DividendSD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "TtlAnlDvddRate")
 	public RateAndAmountFormat16Choice getTotalAnnualDividendRate() {
 		return totalAnnualDividendRate;
 	}
@@ -293,6 +301,7 @@ public class DividendSD1 {
 		this.totalAnnualDividendRate = totalAnnualDividendRate;
 	}
 
+	@XmlElement(name = "MaxAnlTtlDvddRate")
 	public RateAndAmountFormat16Choice getMaximumAnnualTotalDividendRate() {
 		return maximumAnnualTotalDividendRate;
 	}
@@ -301,6 +310,7 @@ public class DividendSD1 {
 		this.maximumAnnualTotalDividendRate = maximumAnnualTotalDividendRate;
 	}
 
+	@XmlElement(name = "MinAnlTtlDvddRate")
 	public RateAndAmountFormat16Choice getMinimumAnnualTotalDividendRate() {
 		return minimumAnnualTotalDividendRate;
 	}

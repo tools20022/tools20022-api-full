@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.CashAccountContract;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies target and actual dates dates related to account opening and
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountContract3", propOrder = {"targetGoLiveDate", "targetClosingDate", "goLiveDate", "closingDate", "urgencyFlag", "removalIndicator"})
 public class AccountContract3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -399,6 +405,7 @@ public class AccountContract3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrgtGoLiveDt")
 	public ISODate getTargetGoLiveDate() {
 		return targetGoLiveDate;
 	}
@@ -407,6 +414,7 @@ public class AccountContract3 {
 		this.targetGoLiveDate = targetGoLiveDate;
 	}
 
+	@XmlElement(name = "TrgtClsgDt")
 	public ISODate getTargetClosingDate() {
 		return targetClosingDate;
 	}
@@ -415,6 +423,7 @@ public class AccountContract3 {
 		this.targetClosingDate = targetClosingDate;
 	}
 
+	@XmlElement(name = "GoLiveDt")
 	public ISODate getGoLiveDate() {
 		return goLiveDate;
 	}
@@ -423,6 +432,7 @@ public class AccountContract3 {
 		this.goLiveDate = goLiveDate;
 	}
 
+	@XmlElement(name = "ClsgDt")
 	public ISODate getClosingDate() {
 		return closingDate;
 	}
@@ -431,6 +441,7 @@ public class AccountContract3 {
 		this.closingDate = closingDate;
 	}
 
+	@XmlElement(name = "UrgcyFlg")
 	public YesNoIndicator getUrgencyFlag() {
 		return urgencyFlag;
 	}
@@ -439,6 +450,7 @@ public class AccountContract3 {
 		this.urgencyFlag = urgencyFlag;
 	}
 
+	@XmlElement(name = "RmvlInd")
 	public YesNoIndicator getRemovalIndicator() {
 		return removalIndicator;
 	}

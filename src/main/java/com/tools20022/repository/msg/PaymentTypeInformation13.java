@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements that further details the information related to the type of
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTypeInformation13", propOrder = {"serviceLevel", "categoryPurpose"})
 public class PaymentTypeInformation13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -184,6 +190,7 @@ public class PaymentTypeInformation13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SvcLvl", required = true)
 	public ServiceLevel4 getServiceLevel() {
 		return serviceLevel;
 	}
@@ -192,6 +199,7 @@ public class PaymentTypeInformation13 {
 		this.serviceLevel = serviceLevel;
 	}
 
+	@XmlElement(name = "CtgyPurp")
 	public PaymentCategoryPurpose1Code getCategoryPurpose() {
 		return categoryPurpose;
 	}

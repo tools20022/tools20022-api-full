@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.Percentage;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Media item that are deposited.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Media item that are deposited."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMDepositedMedia2", propOrder = {"count", "unitValue", "currency", "codeLineFormat", "codeLine", "scannedValue", "confidenceLevel"})
 public class ATMDepositedMedia2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -386,6 +392,7 @@ public class ATMDepositedMedia2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cnt")
 	public Number getCount() {
 		return count;
 	}
@@ -394,6 +401,7 @@ public class ATMDepositedMedia2 {
 		this.count = count;
 	}
 
+	@XmlElement(name = "UnitVal")
 	public ImpliedCurrencyAndAmount getUnitValue() {
 		return unitValue;
 	}
@@ -402,6 +410,7 @@ public class ATMDepositedMedia2 {
 		this.unitValue = unitValue;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -410,6 +419,7 @@ public class ATMDepositedMedia2 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "CdLineFrmt")
 	public CheckCodeLine1Code getCodeLineFormat() {
 		return codeLineFormat;
 	}
@@ -418,6 +428,7 @@ public class ATMDepositedMedia2 {
 		this.codeLineFormat = codeLineFormat;
 	}
 
+	@XmlElement(name = "CdLine")
 	public Max70Text getCodeLine() {
 		return codeLine;
 	}
@@ -426,6 +437,7 @@ public class ATMDepositedMedia2 {
 		this.codeLine = codeLine;
 	}
 
+	@XmlElement(name = "ScnndVal")
 	public ImpliedCurrencyAndAmount getScannedValue() {
 		return scannedValue;
 	}
@@ -434,6 +446,7 @@ public class ATMDepositedMedia2 {
 		this.scannedValue = scannedValue;
 	}
 
+	@XmlElement(name = "CnfdncLvl")
 	public Percentage getConfidenceLevel() {
 		return confidenceLevel;
 	}

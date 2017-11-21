@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional references linked to the updated interest request such the
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reference20", propOrder = {"interestPaymentRequestIdentification", "interestPaymentResponseIdentification"})
 public class Reference20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class Reference20 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IntrstPmtReqId", required = true)
 	public Max35Text getInterestPaymentRequestIdentification() {
 		return interestPaymentRequestIdentification;
 	}
@@ -166,6 +173,7 @@ public class Reference20 {
 		this.interestPaymentRequestIdentification = interestPaymentRequestIdentification;
 	}
 
+	@XmlElement(name = "IntrstPmtRspnId")
 	public Max35Text getInterestPaymentResponseIdentification() {
 		return interestPaymentResponseIdentification;
 	}

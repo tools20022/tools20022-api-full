@@ -27,6 +27,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[0-9]{2}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -53,6 +55,7 @@ public class Exact2NumericText {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Exact2NumericText";
 				definition = "Specifies a numeric string with an exact length of 2 digits.";
+				pattern = "[0-9]{2}";
 			}
 		});
 		return mmObject_lazy.get();

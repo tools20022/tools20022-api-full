@@ -67,6 +67,11 @@ public class CorporateInvestor extends InvestmentAccountPartyRole {
 				definition = "Corporate that makes investment decisions in relation with its investment account. ";
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateInvestor.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

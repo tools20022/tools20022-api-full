@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information on the delegation of a maintenance action or maintenance
@@ -105,6 +109,9 @@ import java.util.List;
  * MaintenanceDelegation1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MaintenanceDelegation3", propOrder = {"delegationType", "maintenanceService", "partialDelegation", "POISubset", "delegatedAction", "delegationScopeIdentification", "delegationScopeDefinition", "certificate",
+		"POIIdentificationAssociation", "symmetricKey", "parameterDataSet"})
 public class MaintenanceDelegation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -757,6 +764,7 @@ public class MaintenanceDelegation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DlgtnTp", required = true)
 	public TerminalManagementAction3Code getDelegationType() {
 		return delegationType;
 	}
@@ -765,6 +773,7 @@ public class MaintenanceDelegation3 {
 		this.delegationType = delegationType;
 	}
 
+	@XmlElement(name = "MntncSvc", required = true)
 	public List<DataSetCategory11Code> getMaintenanceService() {
 		return maintenanceService;
 	}
@@ -773,6 +782,7 @@ public class MaintenanceDelegation3 {
 		this.maintenanceService = maintenanceService;
 	}
 
+	@XmlElement(name = "PrtlDlgtn")
 	public TrueFalseIndicator getPartialDelegation() {
 		return partialDelegation;
 	}
@@ -781,6 +791,7 @@ public class MaintenanceDelegation3 {
 		this.partialDelegation = partialDelegation;
 	}
 
+	@XmlElement(name = "POISubset")
 	public List<Max35Text> getPOISubset() {
 		return pOISubset;
 	}
@@ -789,6 +800,7 @@ public class MaintenanceDelegation3 {
 		this.pOISubset = pOISubset;
 	}
 
+	@XmlElement(name = "DlgtdActn")
 	public MaintenanceDelegateAction2 getDelegatedAction() {
 		return delegatedAction;
 	}
@@ -797,6 +809,7 @@ public class MaintenanceDelegation3 {
 		this.delegatedAction = delegatedAction;
 	}
 
+	@XmlElement(name = "DlgtnScpId")
 	public Max35Text getDelegationScopeIdentification() {
 		return delegationScopeIdentification;
 	}
@@ -805,6 +818,7 @@ public class MaintenanceDelegation3 {
 		this.delegationScopeIdentification = delegationScopeIdentification;
 	}
 
+	@XmlElement(name = "DlgtnScpDef")
 	public Max3000Binary getDelegationScopeDefinition() {
 		return delegationScopeDefinition;
 	}
@@ -813,6 +827,7 @@ public class MaintenanceDelegation3 {
 		this.delegationScopeDefinition = delegationScopeDefinition;
 	}
 
+	@XmlElement(name = "Cert")
 	public List<Max10KBinary> getCertificate() {
 		return certificate;
 	}
@@ -821,6 +836,7 @@ public class MaintenanceDelegation3 {
 		this.certificate = certificate;
 	}
 
+	@XmlElement(name = "POIIdAssoctn")
 	public List<MaintenanceIdentificationAssociation1> getPOIIdentificationAssociation() {
 		return pOIIdentificationAssociation;
 	}
@@ -829,6 +845,7 @@ public class MaintenanceDelegation3 {
 		this.pOIIdentificationAssociation = pOIIdentificationAssociation;
 	}
 
+	@XmlElement(name = "SmmtrcKey")
 	public List<KEKIdentifier5> getSymmetricKey() {
 		return symmetricKey;
 	}
@@ -837,6 +854,7 @@ public class MaintenanceDelegation3 {
 		this.symmetricKey = symmetricKey;
 	}
 
+	@XmlElement(name = "ParamDataSet")
 	public TerminalManagementDataSet19 getParameterDataSet() {
 		return parameterDataSet;
 	}

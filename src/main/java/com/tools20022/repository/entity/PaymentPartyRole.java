@@ -38,6 +38,39 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
+ * PaymentPartyRole.mmCashAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmPayment
+ * PaymentPartyRole.mmPayment}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.InstructingAgentRole
+ * InstructingAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InstructedAgentRole
+ * InstructedAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DebtorRole DebtorRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DebtorAgentRole
+ * DebtorAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CreditorRole CreditorRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.IntermediaryAgentRole
+ * IntermediaryAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CreditorAgentRole
+ * CreditorAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ForwardingAgentRole
+ * ForwardingAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InitiatingPartyRole
+ * InitiatingPartyRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -125,39 +158,6 @@ import java.util.List;
  * PaymentSearch5.mmParties}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InstructingAgentRole
- * InstructingAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InstructedAgentRole
- * InstructedAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DebtorRole DebtorRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DebtorAgentRole
- * DebtorAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CreditorRole CreditorRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.IntermediaryAgentRole
- * IntermediaryAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CreditorAgentRole
- * CreditorAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ForwardingAgentRole
- * ForwardingAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InitiatingPartyRole
- * InitiatingPartyRole}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
- * PaymentPartyRole.mmCashAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmPayment
- * PaymentPartyRole.mmPayment}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -195,13 +195,13 @@ public class PaymentPartyRole extends Role {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} = List of 503 elements</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole
 	 * PaymentPartyRole}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} = List of 503 elements</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -218,7 +218,7 @@ public class PaymentPartyRole extends Role {
 	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> ListBuilderForPaymentPartyRole_00.addElems(new ArrayList<>());
-			elementContext_lazy = () -> PaymentPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
@@ -264,7 +264,7 @@ public class PaymentPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PaymentPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
@@ -289,12 +289,17 @@ public class PaymentPartyRole extends Role {
 				subType_lazy = () -> Arrays.asList(InstructingAgentRole.mmObject(), InstructedAgentRole.mmObject(), DebtorRole.mmObject(), DebtorAgentRole.mmObject(), CreditorRole.mmObject(), IntermediaryAgentRole.mmObject(),
 						CreditorAgentRole.mmObject(), ForwardingAgentRole.mmObject(), InitiatingPartyRole.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(PaymentPartyRole.mmCashAccount, PaymentPartyRole.mmPayment);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount, com.tools20022.repository.entity.PaymentPartyRole.mmPayment);
 				derivationComponent_lazy = () -> Arrays.asList(PaymentTransactionParty.mmObject(), PaymentTransactionParty2.mmObject(), CashParties1.mmObject(), CashParties3.mmObject(), CashParties8.mmObject(), CashParties14.mmObject(),
 						CashParties2.mmObject(), CashParties5.mmObject(), CashParties10.mmObject(), CashParties12.mmObject(), CashParties4.mmObject(), CashParties7.mmObject(), CashParties13.mmObject(), CashParties17.mmObject(),
 						CashParties19.mmObject(), CashParties6.mmObject(), TransactionParty1.mmObject(), TransactionParty2.mmObject(), TransactionParties3.mmObject(), CashParties18.mmObject(), SettlementParties1.mmObject(),
 						SettlementParties9.mmObject(), SettlementParties29.mmObject(), CashParties11.mmObject(), CashParties9.mmObject(), CashParties15.mmObject(), CashParties16.mmObject(), CashParties24.mmObject(),
 						CashParties21.mmObject(), CashParties23.mmObject(), CashParties26.mmObject(), CashParties25.mmObject(), CashParties28.mmObject(), CashParties29.mmObject(), CashParties30.mmObject(), CashParties32.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PaymentPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

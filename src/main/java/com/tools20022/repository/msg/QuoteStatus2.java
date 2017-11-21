@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the status of a quote and if required, the rejection reason, and
@@ -66,6 +70,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuoteStatus2", propOrder = {"quoteStatus", "rejectionReason", "quoteSetDetails", "relatedParties"})
 public class QuoteStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -251,6 +257,7 @@ public class QuoteStatus2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QtSts", required = true)
 	public QuoteStatus1Code getQuoteStatus() {
 		return quoteStatus;
 	}
@@ -259,6 +266,7 @@ public class QuoteStatus2 {
 		this.quoteStatus = quoteStatus;
 	}
 
+	@XmlElement(name = "RjctnRsn")
 	public RejectionReason3Code getRejectionReason() {
 		return rejectionReason;
 	}
@@ -267,6 +275,7 @@ public class QuoteStatus2 {
 		this.rejectionReason = rejectionReason;
 	}
 
+	@XmlElement(name = "QtSetDtls")
 	public List<QuoteSet2> getQuoteSetDetails() {
 		return quoteSetDetails;
 	}
@@ -275,6 +284,7 @@ public class QuoteStatus2 {
 		this.quoteSetDetails = quoteSetDetails;
 	}
 
+	@XmlElement(name = "RltdPties")
 	public List<Intermediary14> getRelatedParties() {
 		return relatedParties;
 	}

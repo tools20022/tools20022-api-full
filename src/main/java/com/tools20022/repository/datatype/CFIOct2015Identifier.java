@@ -33,6 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} = "ANNA; CFIIdentifier"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[A-Z]{6,6}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -69,6 +71,7 @@ public class CFIOct2015Identifier {
 				name = "CFIOct2015Identifier";
 				definition = "Classification type of the financial instrument, as per the ISO 10962 Classification of Financial Instrument (CFI) codification, eg, common share with voting rights, fully paid, or registered.";
 				identificationScheme = "ANNA; CFIIdentifier";
+				pattern = "[A-Z]{6,6}";
 			}
 		});
 		return mmObject_lazy.get();

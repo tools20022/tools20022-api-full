@@ -30,17 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code
- * MandateAmendmentReason1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MandateCancellationReason1Code
- * MandateCancellationReason1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -61,6 +50,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.MandateReasonCode#mmIncorrectAccount
  * MandateReasonCode.mmIncorrectAccount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code
+ * MandateAmendmentReason1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MandateCancellationReason1Code
+ * MandateCancellationReason1Code}</li>
  * </ul>
  * </li>
  * <li>

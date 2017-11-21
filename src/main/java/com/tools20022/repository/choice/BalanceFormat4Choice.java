@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.SignedQuantityFormat3;
 import com.tools20022.repository.msg.SignedQuantityFormat4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between balance, eligible balance and not eligible balance formats.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between balance, eligible balance and not eligible balance formats."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BalanceFormat4Choice", propOrder = {"balance", "eligibleBalance", "notEligibleBalance", "fullPeriodUnits", "partWayPeriodUnits"})
 public class BalanceFormat4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -339,6 +345,7 @@ public class BalanceFormat4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Bal", required = true)
 	public SignedQuantityFormat3 getBalance() {
 		return balance;
 	}
@@ -347,6 +354,7 @@ public class BalanceFormat4Choice {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "ElgblBal", required = true)
 	public SignedQuantityFormat4 getEligibleBalance() {
 		return eligibleBalance;
 	}
@@ -355,6 +363,7 @@ public class BalanceFormat4Choice {
 		this.eligibleBalance = eligibleBalance;
 	}
 
+	@XmlElement(name = "NotElgblBal", required = true)
 	public SignedQuantityFormat4 getNotEligibleBalance() {
 		return notEligibleBalance;
 	}
@@ -363,6 +372,7 @@ public class BalanceFormat4Choice {
 		this.notEligibleBalance = notEligibleBalance;
 	}
 
+	@XmlElement(name = "FullPrdUnits", required = true)
 	public SignedQuantityFormat4 getFullPeriodUnits() {
 		return fullPeriodUnits;
 	}
@@ -371,6 +381,7 @@ public class BalanceFormat4Choice {
 		this.fullPeriodUnits = fullPeriodUnits;
 	}
 
+	@XmlElement(name = "PartWayPrdUnits", required = true)
 	public SignedQuantityFormat4 getPartWayPeriodUnits() {
 		return partWayPeriodUnits;
 	}

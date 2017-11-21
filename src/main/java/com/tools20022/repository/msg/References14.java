@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesTradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * References of the original instruction for which an action has been
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References14", propOrder = {"accountOwnerTransactionIdentification", "accountServicerTransactionIdentification", "marketInfrastructureTransactionIdentification", "processorTransactionIdentification", "poolIdentification"})
 public class References14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -335,6 +341,7 @@ public class References14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnrTxId")
 	public Max35Text getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
@@ -343,6 +350,7 @@ public class References14 {
 		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrTxId")
 	public Max35Text getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
@@ -351,6 +359,7 @@ public class References14 {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
 	}
 
+	@XmlElement(name = "MktInfrstrctrTxId")
 	public Max35Text getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}
@@ -359,6 +368,7 @@ public class References14 {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
 	}
 
+	@XmlElement(name = "PrcrTxId")
 	public Max35Text getProcessorTransactionIdentification() {
 		return processorTransactionIdentification;
 	}
@@ -367,6 +377,7 @@ public class References14 {
 		this.processorTransactionIdentification = processorTransactionIdentification;
 	}
 
+	@XmlElement(name = "PoolId")
 	public Max35Text getPoolIdentification() {
 		return poolIdentification;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Margin required to cover the risk because of the price fluctuations occurred
@@ -75,6 +79,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "VariationMargin2", propOrder = {"totalVariationMargin", "totalMarkToMarket", "markToMarketNetted", "markToMarketGross", "markToMarketFails", "failsHaircut"})
 public class VariationMargin2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -372,6 +378,7 @@ public class VariationMargin2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlVartnMrgn", required = true)
 	public List<TotalVariationMargin1> getTotalVariationMargin() {
 		return totalVariationMargin;
 	}
@@ -380,6 +387,7 @@ public class VariationMargin2 {
 		this.totalVariationMargin = totalVariationMargin;
 	}
 
+	@XmlElement(name = "TtlMrkToMkt", required = true)
 	public Amount2 getTotalMarkToMarket() {
 		return totalMarkToMarket;
 	}
@@ -388,6 +396,7 @@ public class VariationMargin2 {
 		this.totalMarkToMarket = totalMarkToMarket;
 	}
 
+	@XmlElement(name = "MrkToMktNetd")
 	public List<Amount2> getMarkToMarketNetted() {
 		return markToMarketNetted;
 	}
@@ -396,6 +405,7 @@ public class VariationMargin2 {
 		this.markToMarketNetted = markToMarketNetted;
 	}
 
+	@XmlElement(name = "MrkToMktGrss")
 	public List<Amount2> getMarkToMarketGross() {
 		return markToMarketGross;
 	}
@@ -404,6 +414,7 @@ public class VariationMargin2 {
 		this.markToMarketGross = markToMarketGross;
 	}
 
+	@XmlElement(name = "MrkToMktFls")
 	public List<Amount2> getMarkToMarketFails() {
 		return markToMarketFails;
 	}
@@ -412,6 +423,7 @@ public class VariationMargin2 {
 		this.markToMarketFails = markToMarketFails;
 	}
 
+	@XmlElement(name = "FlsHrcut", required = true)
 	public Amount2 getFailsHaircut() {
 		return failsHaircut;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.SecurityAttributes3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the financial instruments details or the business error.
@@ -60,6 +64,8 @@ import java.util.List;
  * "Provides the financial instruments details or the business error."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityOrBusinessError1Choice", propOrder = {"securityReport", "businessError"})
 public class SecurityOrBusinessError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -157,6 +163,7 @@ public class SecurityOrBusinessError1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctyRpt", required = true)
 	public List<SecurityAttributes3> getSecurityReport() {
 		return securityReport;
 	}
@@ -165,6 +172,7 @@ public class SecurityOrBusinessError1Choice {
 		this.securityReport = securityReport;
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public List<BusinessError1> getBusinessError() {
 		return businessError;
 	}

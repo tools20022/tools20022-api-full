@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice
 import com.tools20022.repository.datatype.ExtensiveBranchNetworkIdentifier;
 import com.tools20022.repository.datatype.SmallNetworkIdentifier;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,15 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember#mmAustralianBSBCode
- * CashClearingSystemMember.mmAustralianBSBCode}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -62,6 +54,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.AustralianBSBIdentification#mmClearingSystemMember
  * AustralianBSBIdentification.mmClearingSystemMember}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember#mmAustralianBSBCode
+ * CashClearingSystemMember.mmAustralianBSBCode}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,11 +99,6 @@ public class AustralianBSBIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ExtensiveBranchNetworkIdentifier
 	 * ExtensiveBranchNetworkIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AustralianBSBIdentification
-	 * AustralianBSBIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -116,6 +112,11 @@ public class AustralianBSBIdentification {
 	 * mmAustralianExtensiveBranchNetworkIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AustralianBSBIdentification
+	 * AustralianBSBIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -132,7 +133,7 @@ public class AustralianBSBIdentification {
 	public static final MMBusinessAttribute mmExtensiveBranchNetworkIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmAustralianExtensiveBranchNetworkIdentification, ClearingSystemMemberIdentification2Choice.mmAustralianExtensiveBranchNetworkIdentification);
-			elementContext_lazy = () -> AustralianBSBIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AustralianBSBIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExtensiveBranchNetworkIdentification";
@@ -140,6 +141,14 @@ public class AustralianBSBIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExtensiveBranchNetworkIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AustralianBSBIdentification.class.getMethod("getExtensiveBranchNetworkIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SmallNetworkIdentifier smallNetworkIdentification;
@@ -155,11 +164,6 @@ public class AustralianBSBIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.SmallNetworkIdentifier
 	 * SmallNetworkIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AustralianBSBIdentification
-	 * AustralianBSBIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -173,6 +177,11 @@ public class AustralianBSBIdentification {
 	 * mmAustralianSmallNetworkIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AustralianBSBIdentification
+	 * AustralianBSBIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -189,7 +198,7 @@ public class AustralianBSBIdentification {
 	public static final MMBusinessAttribute mmSmallNetworkIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmAustralianSmallNetworkIdentification, ClearingSystemMemberIdentification2Choice.mmAustralianSmallNetworkIdentification);
-			elementContext_lazy = () -> AustralianBSBIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AustralianBSBIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SmallNetworkIdentification";
@@ -197,6 +206,14 @@ public class AustralianBSBIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SmallNetworkIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AustralianBSBIdentification.class.getMethod("getSmallNetworkIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CashClearingSystemMember clearingSystemMemberIdentificationType;
@@ -239,7 +256,7 @@ public class AustralianBSBIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmClearingSystemMemberIdentificationType = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AustralianBSBIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AustralianBSBIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingSystemMemberIdentificationType";
@@ -281,7 +298,7 @@ public class AustralianBSBIdentification {
 	 */
 	public static final MMBusinessAttribute mmClearingSystemMember = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> AustralianBSBIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AustralianBSBIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingSystemMember";
@@ -289,6 +306,14 @@ public class AustralianBSBIdentification {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AustralianBSBIdentification.class.getMethod("getClearingSystemMember", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -300,8 +325,14 @@ public class AustralianBSBIdentification {
 				name = "AustralianBSBIdentification";
 				definition = "Australian Bank State Branch (BSB) Code - identifies Australian financial institutions on the Australian national clearing system. The code is assigned by the Australian Payments Clearing Association (APCA).";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashClearingSystemMember.mmAustralianBSBCode);
-				element_lazy = () -> Arrays.asList(AustralianBSBIdentification.mmExtensiveBranchNetworkIdentification, AustralianBSBIdentification.mmSmallNetworkIdentification,
-						AustralianBSBIdentification.mmClearingSystemMemberIdentificationType, AustralianBSBIdentification.mmClearingSystemMember);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AustralianBSBIdentification.mmExtensiveBranchNetworkIdentification,
+						com.tools20022.repository.entity.AustralianBSBIdentification.mmSmallNetworkIdentification, com.tools20022.repository.entity.AustralianBSBIdentification.mmClearingSystemMemberIdentificationType,
+						com.tools20022.repository.entity.AustralianBSBIdentification.mmClearingSystemMember);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AustralianBSBIdentification.class;
 			}
 		});
 		return mmObject_lazy.get();

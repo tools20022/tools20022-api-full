@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Quantity of the financial instrument subscribed.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Quantity of the financial instrument subscribed."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentQuantity3", propOrder = {"unitsNumber", "orderedAmount", "netAmount", "grossAmount", "executedAmount", "holdingsRedemptionRate", "settlementAmount"})
 public class FinancialInstrumentQuantity3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -445,6 +451,7 @@ public class FinancialInstrumentQuantity3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -453,6 +460,7 @@ public class FinancialInstrumentQuantity3 {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "OrdrdAmt")
 	public ActiveOrHistoricCurrencyAndAmount getOrderedAmount() {
 		return orderedAmount;
 	}
@@ -461,6 +469,7 @@ public class FinancialInstrumentQuantity3 {
 		this.orderedAmount = orderedAmount;
 	}
 
+	@XmlElement(name = "NetAmt")
 	public ActiveOrHistoricCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
@@ -469,6 +478,7 @@ public class FinancialInstrumentQuantity3 {
 		this.netAmount = netAmount;
 	}
 
+	@XmlElement(name = "GrssAmt")
 	public ActiveOrHistoricCurrencyAndAmount getGrossAmount() {
 		return grossAmount;
 	}
@@ -477,6 +487,7 @@ public class FinancialInstrumentQuantity3 {
 		this.grossAmount = grossAmount;
 	}
 
+	@XmlElement(name = "ExctdAmt")
 	public ActiveCurrencyAndAmount getExecutedAmount() {
 		return executedAmount;
 	}
@@ -485,6 +496,7 @@ public class FinancialInstrumentQuantity3 {
 		this.executedAmount = executedAmount;
 	}
 
+	@XmlElement(name = "HldgsRedRate")
 	public PercentageRate getHoldingsRedemptionRate() {
 		return holdingsRedemptionRate;
 	}
@@ -493,6 +505,7 @@ public class FinancialInstrumentQuantity3 {
 		this.holdingsRedemptionRate = holdingsRedemptionRate;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public ActiveCurrencyAndAmount getSettlementAmount() {
 		return settlementAmount;
 	}

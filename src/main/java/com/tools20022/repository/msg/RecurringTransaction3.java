@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Instalment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Financial loan (instalment) or a recurring transaction.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Financial loan (instalment) or a recurring transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RecurringTransaction3", propOrder = {"startDate", "numberOfOccurrences", "endDate", "periodUnit", "intervalDay"})
 public class RecurringTransaction3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -320,6 +326,7 @@ public class RecurringTransaction3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StartDt", required = true)
 	public ISODate getStartDate() {
 		return startDate;
 	}
@@ -328,6 +335,7 @@ public class RecurringTransaction3 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "NbOfOcrncs")
 	public Number getNumberOfOccurrences() {
 		return numberOfOccurrences;
 	}
@@ -336,6 +344,7 @@ public class RecurringTransaction3 {
 		this.numberOfOccurrences = numberOfOccurrences;
 	}
 
+	@XmlElement(name = "EndDt", required = true)
 	public ISODate getEndDate() {
 		return endDate;
 	}
@@ -344,6 +353,7 @@ public class RecurringTransaction3 {
 		this.endDate = endDate;
 	}
 
+	@XmlElement(name = "PrdUnit")
 	public Frequency3Code getPeriodUnit() {
 		return periodUnit;
 	}
@@ -352,6 +362,7 @@ public class RecurringTransaction3 {
 		this.periodUnit = periodUnit;
 	}
 
+	@XmlElement(name = "IntrvlDay")
 	public Number getIntervalDay() {
 		return intervalDay;
 	}

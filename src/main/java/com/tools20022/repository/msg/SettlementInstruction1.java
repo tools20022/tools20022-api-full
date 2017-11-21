@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details on the settlement of the instruction.
@@ -84,6 +88,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides further details on the settlement of the instruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementInstruction1", propOrder = {"settlementMethod", "settlementAccount", "clearingSystem", "instructingReimbursementAgent", "instructingReimbursementAgentAccount", "instructedReimbursementAgent",
+		"instructedReimbursementAgentAccount", "thirdReimbursementAgent", "thirdReimbursementAgentAccount"})
 public class SettlementInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -567,6 +574,7 @@ public class SettlementInstruction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmMtd", required = true)
 	public SettlementMethod1Code getSettlementMethod() {
 		return settlementMethod;
 	}
@@ -575,6 +583,7 @@ public class SettlementInstruction1 {
 		this.settlementMethod = settlementMethod;
 	}
 
+	@XmlElement(name = "SttlmAcct")
 	public CashAccount24 getSettlementAccount() {
 		return settlementAccount;
 	}
@@ -583,6 +592,7 @@ public class SettlementInstruction1 {
 		this.settlementAccount = settlementAccount;
 	}
 
+	@XmlElement(name = "ClrSys")
 	public ClearingSystemIdentification3Choice getClearingSystem() {
 		return clearingSystem;
 	}
@@ -591,6 +601,7 @@ public class SettlementInstruction1 {
 		this.clearingSystem = clearingSystem;
 	}
 
+	@XmlElement(name = "InstgRmbrsmntAgt")
 	public BranchAndFinancialInstitutionIdentification5 getInstructingReimbursementAgent() {
 		return instructingReimbursementAgent;
 	}
@@ -599,6 +610,7 @@ public class SettlementInstruction1 {
 		this.instructingReimbursementAgent = instructingReimbursementAgent;
 	}
 
+	@XmlElement(name = "InstgRmbrsmntAgtAcct")
 	public CashAccount24 getInstructingReimbursementAgentAccount() {
 		return instructingReimbursementAgentAccount;
 	}
@@ -607,6 +619,7 @@ public class SettlementInstruction1 {
 		this.instructingReimbursementAgentAccount = instructingReimbursementAgentAccount;
 	}
 
+	@XmlElement(name = "InstdRmbrsmntAgt")
 	public BranchAndFinancialInstitutionIdentification5 getInstructedReimbursementAgent() {
 		return instructedReimbursementAgent;
 	}
@@ -615,6 +628,7 @@ public class SettlementInstruction1 {
 		this.instructedReimbursementAgent = instructedReimbursementAgent;
 	}
 
+	@XmlElement(name = "InstdRmbrsmntAgtAcct")
 	public CashAccount24 getInstructedReimbursementAgentAccount() {
 		return instructedReimbursementAgentAccount;
 	}
@@ -623,6 +637,7 @@ public class SettlementInstruction1 {
 		this.instructedReimbursementAgentAccount = instructedReimbursementAgentAccount;
 	}
 
+	@XmlElement(name = "ThrdRmbrsmntAgt")
 	public BranchAndFinancialInstitutionIdentification5 getThirdReimbursementAgent() {
 		return thirdReimbursementAgent;
 	}
@@ -631,6 +646,7 @@ public class SettlementInstruction1 {
 		this.thirdReimbursementAgent = thirdReimbursementAgent;
 	}
 
+	@XmlElement(name = "ThrdRmbrsmntAgtAcct")
 	public CashAccount24 getThirdReimbursementAgentAccount() {
 		return thirdReimbursementAgentAccount;
 	}

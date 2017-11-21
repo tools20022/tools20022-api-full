@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,36 +41,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccount#mmRelatedCreditStandingOrder
- * CashAccount.mmRelatedCreditStandingOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccount#mmRelatedDebitStandingOrder
- * CashAccount.mmRelatedDebitStandingOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedStandingOrder
- * DateTimePeriod.mmRelatedStandingOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmStandingOrder
- * PaymentInstruction.mmStandingOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingOrder#mmIncludedStandingOrder
- * StandingOrder.mmIncludedStandingOrder}</li>
- * <li>{@linkplain com.tools20022.repository.entity.StandingOrder#mmLinkSet
- * StandingOrder.mmLinkSet}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashStandingOrder
- * CashStandingOrder}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -115,6 +86,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * StandingOrder.mmLinkSet}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashStandingOrder
+ * CashStandingOrder}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccount#mmRelatedCreditStandingOrder
+ * CashAccount.mmRelatedCreditStandingOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccount#mmRelatedDebitStandingOrder
+ * CashAccount.mmRelatedDebitStandingOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedStandingOrder
+ * DateTimePeriod.mmRelatedStandingOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmStandingOrder
+ * PaymentInstruction.mmStandingOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingOrder#mmIncludedStandingOrder
+ * StandingOrder.mmIncludedStandingOrder}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.StandingOrder#mmLinkSet
+ * StandingOrder.mmLinkSet}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -146,11 +147,6 @@ public class StandingOrder {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -183,6 +179,11 @@ public class StandingOrder {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -209,6 +210,14 @@ public class StandingOrder {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingOrder.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected StandingOrderTypeCode type;
 	/**
@@ -221,11 +230,6 @@ public class StandingOrder {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.StandingOrderTypeCode
 	 * StandingOrderTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -247,6 +251,11 @@ public class StandingOrder {
 	 * {@linkplain com.tools20022.repository.msg.StandingOrder2#mmExecutionType
 	 * StandingOrder2.mmExecutionType}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -272,6 +281,14 @@ public class StandingOrder {
 			minOccurs = 1;
 			simpleType_lazy = () -> StandingOrderTypeCode.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingOrder.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DateTimePeriod validityPeriod;
 	/**
@@ -291,11 +308,6 @@ public class StandingOrder {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -315,6 +327,11 @@ public class StandingOrder {
 	 * {@linkplain com.tools20022.repository.msg.StandingOrder2#mmValidityPeriod
 	 * StandingOrder2.mmValidityPeriod}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -354,11 +371,6 @@ public class StandingOrder {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -369,6 +381,11 @@ public class StandingOrder {
 	 * {@linkplain com.tools20022.repository.msg.StandingOrder2#mmLinkSetIdentification
 	 * StandingOrder2.mmLinkSetIdentification}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -395,6 +412,14 @@ public class StandingOrder {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingOrder.class.getMethod("getLinkSetIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Number standingOrderSequence;
 	/**
@@ -408,11 +433,6 @@ public class StandingOrder {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -423,6 +443,11 @@ public class StandingOrder {
 	 * {@linkplain com.tools20022.repository.msg.StandingOrder2#mmLinkSetOrderSequence
 	 * StandingOrder2.mmLinkSetOrderSequence}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -449,6 +474,14 @@ public class StandingOrder {
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingOrder.class.getMethod("getStandingOrderSequence", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CurrencyAndAmount amount;
 	/**
@@ -463,11 +496,6 @@ public class StandingOrder {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -482,6 +510,11 @@ public class StandingOrder {
 	 * <li>{@linkplain com.tools20022.repository.msg.StandingOrder2#mmAmount
 	 * StandingOrder2.mmAmount}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -508,6 +541,14 @@ public class StandingOrder {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingOrder.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CashAccount creditAccount;
 	/**
@@ -527,11 +568,6 @@ public class StandingOrder {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -539,6 +575,11 @@ public class StandingOrder {
 	 * {@linkplain com.tools20022.repository.msg.StandingOrderDetails1#mmCreditAccount
 	 * StandingOrderDetails1.mmCreditAccount}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -584,11 +625,6 @@ public class StandingOrder {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -599,6 +635,11 @@ public class StandingOrder {
 	 * {@linkplain com.tools20022.repository.msg.StandingOrder2#mmDebtorAccount
 	 * StandingOrder2.mmDebtorAccount}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -637,11 +678,6 @@ public class StandingOrder {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FrequencyCode
 	 * FrequencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -656,6 +692,11 @@ public class StandingOrder {
 	 * <li>{@linkplain com.tools20022.repository.msg.StandingOrder2#mmFrequency
 	 * StandingOrder2.mmFrequency}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.StandingOrder StandingOrder}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -681,6 +722,14 @@ public class StandingOrder {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FrequencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingOrder.class.getMethod("getFrequency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max140Text eventDescription;
@@ -723,6 +772,14 @@ public class StandingOrder {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingOrder.class.getMethod("getEventDescription", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Number day;
 	/**
@@ -760,6 +817,14 @@ public class StandingOrder {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingOrder.class.getMethod("getDay", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text timeSpecification;
@@ -799,6 +864,14 @@ public class StandingOrder {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingOrder.class.getMethod("getTimeSpecification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PaymentInstruction paymentInstructionTrigger;
@@ -966,6 +1039,11 @@ public class StandingOrder {
 						com.tools20022.repository.entity.StandingOrder.mmCreditAccount, com.tools20022.repository.entity.StandingOrder.mmDebitAccount, com.tools20022.repository.entity.StandingOrder.mmFrequency,
 						com.tools20022.repository.entity.StandingOrder.mmEventDescription, com.tools20022.repository.entity.StandingOrder.mmDay, com.tools20022.repository.entity.StandingOrder.mmTimeSpecification,
 						com.tools20022.repository.entity.StandingOrder.mmPaymentInstructionTrigger, com.tools20022.repository.entity.StandingOrder.mmIncludedStandingOrder, com.tools20022.repository.entity.StandingOrder.mmLinkSet);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StandingOrder.class;
 			}
 		});
 		return mmObject_lazy.get();

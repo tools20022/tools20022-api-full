@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines a list of party management registration and guarantee requests.
@@ -121,6 +125,9 @@ import java.util.List;
  * "Defines a list of party management registration and guarantee requests."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancingAgreementList1", propOrder = {"identifier", "date", "relatedDocument", "agreementRequestor", "agreementResponder", "guaranteeApplicant", "guaranteeBeneficiary", "guaranteeIssuer", "notificationInformation",
+		"item", "itemCount", "controlSum", "additionalInformation", "validationStatusInformation"})
 public class FinancingAgreementList1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -797,6 +804,7 @@ public class FinancingAgreementList1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Idr", required = true)
 	public Max35Text getIdentifier() {
 		return identifier;
 	}
@@ -805,6 +813,7 @@ public class FinancingAgreementList1 {
 		this.identifier = identifier;
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
@@ -813,6 +822,7 @@ public class FinancingAgreementList1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "RltdDoc")
 	public List<QualifiedDocumentInformation1> getRelatedDocument() {
 		return relatedDocument;
 	}
@@ -821,6 +831,7 @@ public class FinancingAgreementList1 {
 		this.relatedDocument = relatedDocument;
 	}
 
+	@XmlElement(name = "AgrmtRqstr", required = true)
 	public QualifiedPartyIdentification1 getAgreementRequestor() {
 		return agreementRequestor;
 	}
@@ -829,6 +840,7 @@ public class FinancingAgreementList1 {
 		this.agreementRequestor = agreementRequestor;
 	}
 
+	@XmlElement(name = "AgrmtRspndr", required = true)
 	public QualifiedPartyIdentification1 getAgreementResponder() {
 		return agreementResponder;
 	}
@@ -837,6 +849,7 @@ public class FinancingAgreementList1 {
 		this.agreementResponder = agreementResponder;
 	}
 
+	@XmlElement(name = "GrntApplcnt", required = true)
 	public QualifiedPartyIdentification1 getGuaranteeApplicant() {
 		return guaranteeApplicant;
 	}
@@ -845,6 +858,7 @@ public class FinancingAgreementList1 {
 		this.guaranteeApplicant = guaranteeApplicant;
 	}
 
+	@XmlElement(name = "GrntNbfcry", required = true)
 	public QualifiedPartyIdentification1 getGuaranteeBeneficiary() {
 		return guaranteeBeneficiary;
 	}
@@ -853,6 +867,7 @@ public class FinancingAgreementList1 {
 		this.guaranteeBeneficiary = guaranteeBeneficiary;
 	}
 
+	@XmlElement(name = "GrntIssr", required = true)
 	public QualifiedPartyIdentification1 getGuaranteeIssuer() {
 		return guaranteeIssuer;
 	}
@@ -861,6 +876,7 @@ public class FinancingAgreementList1 {
 		this.guaranteeIssuer = guaranteeIssuer;
 	}
 
+	@XmlElement(name = "NtfctnInf")
 	public List<FinancingNotificationParties1> getNotificationInformation() {
 		return notificationInformation;
 	}
@@ -869,6 +885,7 @@ public class FinancingAgreementList1 {
 		this.notificationInformation = notificationInformation;
 	}
 
+	@XmlElement(name = "Itm", required = true)
 	public List<FinancingAgreementItem1> getItem() {
 		return item;
 	}
@@ -877,6 +894,7 @@ public class FinancingAgreementList1 {
 		this.item = item;
 	}
 
+	@XmlElement(name = "ItmCnt", required = true)
 	public Max15NumericText getItemCount() {
 		return itemCount;
 	}
@@ -885,6 +903,7 @@ public class FinancingAgreementList1 {
 		this.itemCount = itemCount;
 	}
 
+	@XmlElement(name = "CtrlSum")
 	public DecimalNumber getControlSum() {
 		return controlSum;
 	}
@@ -893,6 +912,7 @@ public class FinancingAgreementList1 {
 		this.controlSum = controlSum;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max2000Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -901,6 +921,7 @@ public class FinancingAgreementList1 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "VldtnStsInf")
 	public ValidationStatusInformation1 getValidationStatusInformation() {
 		return validationStatusInformation;
 	}

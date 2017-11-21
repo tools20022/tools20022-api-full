@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.CorporateActionElection3;
 import com.tools20022.repository.msg.CorporateActionInformation1;
 import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -45,9 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.014.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -83,6 +82,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.014.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -94,6 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgentCAElectionCancellationRequestV01", propOrder = {"identification", "agentCAElectionAdviceIdentification", "corporateActionGeneralInformation", "electionDetails"})
 public class AgentCAElectionCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -134,6 +138,14 @@ public class AgentCAElectionCancellationRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAElectionCancellationRequestV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification8 agentCAElectionAdviceIdentification;
 	/**
@@ -170,6 +182,14 @@ public class AgentCAElectionCancellationRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAElectionCancellationRequestV01.class.getMethod("getAgentCAElectionAdviceIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
@@ -204,6 +224,14 @@ public class AgentCAElectionCancellationRequestV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAElectionCancellationRequestV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionElection3 electionDetails;
@@ -241,6 +269,14 @@ public class AgentCAElectionCancellationRequestV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionElection3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAElectionCancellationRequestV01.class.getMethod("getElectionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -253,8 +289,9 @@ public class AgentCAElectionCancellationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCAElctnCxlReq";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAElectionCancellationRequestV01.mmIdentification, AgentCAElectionCancellationRequestV01.mmAgentCAElectionAdviceIdentification,
-						AgentCAElectionCancellationRequestV01.mmCorporateActionGeneralInformation, AgentCAElectionCancellationRequestV01.mmElectionDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01.mmAgentCAElectionAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01.mmElectionDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -264,10 +301,16 @@ public class AgentCAElectionCancellationRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AgentCAElectionCancellationRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
@@ -276,6 +319,7 @@ public class AgentCAElectionCancellationRequestV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AgtCAElctnAdvcId", required = true)
 	public DocumentIdentification8 getAgentCAElectionAdviceIdentification() {
 		return agentCAElectionAdviceIdentification;
 	}
@@ -284,6 +328,7 @@ public class AgentCAElectionCancellationRequestV01 {
 		this.agentCAElectionAdviceIdentification = agentCAElectionAdviceIdentification;
 	}
 
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
@@ -292,11 +337,18 @@ public class AgentCAElectionCancellationRequestV01 {
 		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
 	}
 
+	@XmlElement(name = "ElctnDtls")
 	public CorporateActionElection3 getElectionDetails() {
 		return electionDetails;
 	}
 
 	public void setElectionDetails(CorporateActionElection3 electionDetails) {
 		this.electionDetails = electionDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.014.01.01")
+	static public class Document {
+		@XmlElement(name = "AgtCAElctnCxlReq", required = true)
+		public AgentCAElectionCancellationRequestV01 messageBody;
 	}
 }

@@ -26,9 +26,11 @@ import com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Cho
 import com.tools20022.repository.msg.SecuritiesMarketReportHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The FinancialInstrumentReportingReferenceDataDeltaReport message is sent by
@@ -37,9 +39,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.036.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -74,6 +73,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.036.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -85,6 +87,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentReportingReferenceDataDeltaReportV01", propOrder = {"reportHeader", "financialInstrument", "supplementaryData"})
 public class FinancialInstrumentReportingReferenceDataDeltaReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -121,6 +125,14 @@ public class FinancialInstrumentReportingReferenceDataDeltaReportV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesMarketReportHeader1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingReferenceDataDeltaReportV01.class.getMethod("getReportHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SecuritiesReferenceDeltaStatusReport2Choice> financialInstrument;
@@ -159,6 +171,14 @@ public class FinancialInstrumentReportingReferenceDataDeltaReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesReferenceDeltaStatusReport2Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingReferenceDataDeltaReportV01.class.getMethod("getFinancialInstrument", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -196,6 +216,14 @@ public class FinancialInstrumentReportingReferenceDataDeltaReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingReferenceDataDeltaReportV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -208,8 +236,9 @@ public class FinancialInstrumentReportingReferenceDataDeltaReportV01 {
 				rootElement = "Document";
 				xmlTag = "FinInstrmRptgRefDataDltaRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingReferenceDataDeltaReportV01.mmReportHeader, FinancialInstrumentReportingReferenceDataDeltaReportV01.mmFinancialInstrument,
-						FinancialInstrumentReportingReferenceDataDeltaReportV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataDeltaReportV01.mmReportHeader,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataDeltaReportV01.mmFinancialInstrument,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataDeltaReportV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -219,10 +248,16 @@ public class FinancialInstrumentReportingReferenceDataDeltaReportV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FinancialInstrumentReportingReferenceDataDeltaReportV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptHdr", required = true)
 	public SecuritiesMarketReportHeader1 getReportHeader() {
 		return reportHeader;
 	}
@@ -231,6 +266,7 @@ public class FinancialInstrumentReportingReferenceDataDeltaReportV01 {
 		this.reportHeader = reportHeader;
 	}
 
+	@XmlElement(name = "FinInstrm")
 	public List<SecuritiesReferenceDeltaStatusReport2Choice> getFinancialInstrument() {
 		return financialInstrument;
 	}
@@ -239,11 +275,18 @@ public class FinancialInstrumentReportingReferenceDataDeltaReportV01 {
 		this.financialInstrument = financialInstrument;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.036.01.01")
+	static public class Document {
+		@XmlElement(name = "FinInstrmRptgRefDataDltaRpt", required = true)
+		public FinancialInstrumentReportingReferenceDataDeltaReportV01 messageBody;
 	}
 }

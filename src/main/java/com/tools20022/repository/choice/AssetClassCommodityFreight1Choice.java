@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.FreightCommodityDry1;
 import com.tools20022.repository.msg.FreightCommodityWet1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines commodity attributes of a derivative where the type is freight.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Defines commodity attributes of a derivative where the type is freight."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AssetClassCommodityFreight1Choice", propOrder = {"dry", "wet", "containerShip"})
 public class AssetClassCommodityFreight1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -226,6 +232,7 @@ public class AssetClassCommodityFreight1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dry", required = true)
 	public FreightCommodityDry1 getDry() {
 		return dry;
 	}
@@ -234,6 +241,7 @@ public class AssetClassCommodityFreight1Choice {
 		this.dry = dry;
 	}
 
+	@XmlElement(name = "Wet", required = true)
 	public FreightCommodityWet1 getWet() {
 		return wet;
 	}
@@ -242,6 +250,7 @@ public class AssetClassCommodityFreight1Choice {
 		this.wet = wet;
 	}
 
+	@XmlElement(name = "CntnrShip", required = true)
 	public FreightCommodityContainerShip1 getContainerShip() {
 		return containerShip;
 	}

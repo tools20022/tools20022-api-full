@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party involved in the settlement chain.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyIdentificationAndAccount4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount123", propOrder = {"partyIdentification", "accountIdentification", "processingReference", "processingDate", "subAccountDetails", "contactPerson"})
 public class PartyIdentificationAndAccount123 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -420,6 +426,7 @@ public class PartyIdentificationAndAccount123 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification70Choice getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -428,6 +435,7 @@ public class PartyIdentificationAndAccount123 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "AcctId")
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -436,6 +444,7 @@ public class PartyIdentificationAndAccount123 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "PrcgRef")
 	public Max35Text getProcessingReference() {
 		return processingReference;
 	}
@@ -444,6 +453,7 @@ public class PartyIdentificationAndAccount123 {
 		this.processingReference = processingReference;
 	}
 
+	@XmlElement(name = "PrcgDt")
 	public DateAndDateTimeChoice getProcessingDate() {
 		return processingDate;
 	}
@@ -452,6 +462,7 @@ public class PartyIdentificationAndAccount123 {
 		this.processingDate = processingDate;
 	}
 
+	@XmlElement(name = "SubAcctDtls")
 	public SubAccount5 getSubAccountDetails() {
 		return subAccountDetails;
 	}
@@ -460,6 +471,7 @@ public class PartyIdentificationAndAccount123 {
 		this.subAccountDetails = subAccountDetails;
 	}
 
+	@XmlElement(name = "CtctPrsn")
 	public ContactIdentification2 getContactPerson() {
 		return contactPerson;
 	}

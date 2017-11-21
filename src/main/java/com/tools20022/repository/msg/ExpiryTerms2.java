@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Expiry;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Expiry conditions.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Expiry conditions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExpiryTerms2", propOrder = {"dateTime", "autoExtension", "condition", "openEndedIndicator"})
 public class ExpiryTerms2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -270,6 +276,7 @@ public class ExpiryTerms2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtTm")
 	public DateAndDateTimeChoice getDateTime() {
 		return dateTime;
 	}
@@ -278,6 +285,7 @@ public class ExpiryTerms2 {
 		this.dateTime = dateTime;
 	}
 
+	@XmlElement(name = "AutoXtnsn")
 	public AutoExtension1 getAutoExtension() {
 		return autoExtension;
 	}
@@ -286,6 +294,7 @@ public class ExpiryTerms2 {
 		this.autoExtension = autoExtension;
 	}
 
+	@XmlElement(name = "Cond")
 	public Max2000Text getCondition() {
 		return condition;
 	}
@@ -294,6 +303,7 @@ public class ExpiryTerms2 {
 		this.condition = condition;
 	}
 
+	@XmlElement(name = "OpnEnddInd")
 	public YesNoIndicator getOpenEndedIndicator() {
 		return openEndedIndicator;
 	}

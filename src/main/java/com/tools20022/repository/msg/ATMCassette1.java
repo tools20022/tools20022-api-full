@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information on the cassette of an ATM.
@@ -70,6 +74,8 @@ import java.util.List;
  * definition} = "Information on the cassette of an ATM."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCassette1", propOrder = {"physicalIdentification", "logicalIdentification", "type", "subType", "mediaType", "mediaCounters"})
 public class ATMCassette1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -328,6 +334,7 @@ public class ATMCassette1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PhysId")
 	public Max35Text getPhysicalIdentification() {
 		return physicalIdentification;
 	}
@@ -336,6 +343,7 @@ public class ATMCassette1 {
 		this.physicalIdentification = physicalIdentification;
 	}
 
+	@XmlElement(name = "LogclId", required = true)
 	public Max35Text getLogicalIdentification() {
 		return logicalIdentification;
 	}
@@ -344,6 +352,7 @@ public class ATMCassette1 {
 		this.logicalIdentification = logicalIdentification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ATMCassetteType1Code getType() {
 		return type;
 	}
@@ -352,6 +361,7 @@ public class ATMCassette1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "SubTp")
 	public List<ATMNoteType1Code> getSubType() {
 		return subType;
 	}
@@ -360,6 +370,7 @@ public class ATMCassette1 {
 		this.subType = subType;
 	}
 
+	@XmlElement(name = "MdiaTp")
 	public ATMMediaType1Code getMediaType() {
 		return mediaType;
 	}
@@ -368,6 +379,7 @@ public class ATMCassette1 {
 		this.mediaType = mediaType;
 	}
 
+	@XmlElement(name = "MdiaCntrs")
 	public List<ATMCassetteCounters1> getMediaCounters() {
 		return mediaCounters;
 	}

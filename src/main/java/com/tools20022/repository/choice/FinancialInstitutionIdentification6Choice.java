@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for the identification of the financial institution.
@@ -74,6 +78,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstitutionIdentification6Choice", propOrder = {"nameAndAddress", "BIC", "proprietaryIdentification"})
 public class FinancialInstitutionIdentification6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -253,6 +259,7 @@ public class FinancialInstitutionIdentification6Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress11 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -261,6 +268,7 @@ public class FinancialInstitutionIdentification6Choice {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "BIC", required = true)
 	public BICIdentifier getBIC() {
 		return bIC;
 	}
@@ -269,6 +277,7 @@ public class FinancialInstitutionIdentification6Choice {
 		this.bIC = bIC;
 	}
 
+	@XmlElement(name = "PrtryId", required = true)
 	public SimpleIdentificationInformation3 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}

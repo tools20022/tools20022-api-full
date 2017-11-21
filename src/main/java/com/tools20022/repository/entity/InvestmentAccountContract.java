@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AccountContract;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,24 +37,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentAccountContract
- * InvestmentAccount.mmInvestmentAccountContract}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#mmInvestmentAccountContract
- * InvestmentAccountService.mmInvestmentAccountContract}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ManagedAccountProduct#mmInvestmentAccountContract
- * ManagedAccountProduct.mmInvestmentAccountContract}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.AccountContract
- * AccountContract}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -72,6 +55,24 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvestmentAccountContract#mmModeledAccount
  * InvestmentAccountContract.mmModeledAccount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.AccountContract
+ * AccountContract}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentAccountContract
+ * InvestmentAccount.mmInvestmentAccountContract}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#mmInvestmentAccountContract
+ * InvestmentAccountService.mmInvestmentAccountContract}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ManagedAccountProduct#mmInvestmentAccountContract
+ * ManagedAccountProduct.mmInvestmentAccountContract}</li>
  * </ul>
  * </li>
  * <li>
@@ -105,11 +106,6 @@ public class InvestmentAccountContract extends AccountContract {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountContract
-	 * InvestmentAccountContract}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -176,6 +172,11 @@ public class InvestmentAccountContract extends AccountContract {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountContract
+	 * InvestmentAccountContract}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -195,7 +196,7 @@ public class InvestmentAccountContract extends AccountContract {
 					InvestmentAccount34.mmLetterIntentDetails, InvestmentAccount38.mmLetterIntentDetails, InvestmentAccount37.mmLetterIntentDetails, InvestmentAccount39.mmLetterIntentDetails, InvestmentAccount46.mmLetterIntentDetails,
 					InvestmentAccount47.mmLetterIntentDetails, InvestmentAccount49.mmLetterIntentDetails, InvestmentAccount51.mmLetterIntentDetails, InvestmentAccount50.mmLetterIntentDetails, InvestmentAccount61.mmLetterIntentDetails,
 					InvestmentAccount63.mmLetterIntentDetails, InvestmentAccount62.mmLetterIntentDetails);
-			elementContext_lazy = () -> InvestmentAccountContract.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LetterIntentReference";
@@ -203,6 +204,14 @@ public class InvestmentAccountContract extends AccountContract {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentAccountContract.class.getMethod("getLetterIntentReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text accumulationRightReference;
@@ -218,11 +227,6 @@ public class InvestmentAccountContract extends AccountContract {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountContract
-	 * InvestmentAccountContract}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -331,6 +335,11 @@ public class InvestmentAccountContract extends AccountContract {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountContract
+	 * InvestmentAccountContract}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -354,7 +363,7 @@ public class InvestmentAccountContract extends AccountContract {
 					InvestmentAccount47.mmAccumulationRightReference, InvestmentAccount49.mmAccumulationRightReference, InvestmentAccount51.mmAccumulationRightReference, InvestmentAccount50.mmAccumulationRightReference,
 					InvestmentAccount61.mmAccumulationRightReference, InvestmentAccount63.mmAccumulationRightReference, InvestmentAccount62.mmAccumulationRightReference, SubscriptionExecution13.mmAccumulationRightReference,
 					SubscriptionExecution12.mmAccumulationRightReference, SubscriptionOrder15.mmAccumulationRightReference, SubscriptionOrder14.mmAccumulationRightReference);
-			elementContext_lazy = () -> InvestmentAccountContract.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccumulationRightReference";
@@ -362,6 +371,14 @@ public class InvestmentAccountContract extends AccountContract {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentAccountContract.class.getMethod("getAccumulationRightReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.InvestmentAccount> investmentAccount;
@@ -400,7 +417,7 @@ public class InvestmentAccountContract extends AccountContract {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentAccountContract.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccount";
@@ -452,7 +469,7 @@ public class InvestmentAccountContract extends AccountContract {
 	 */
 	public static final MMBusinessAssociationEnd mmServices = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentAccountContract.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Services";
@@ -502,7 +519,7 @@ public class InvestmentAccountContract extends AccountContract {
 	 */
 	public static final MMBusinessAssociationEnd mmModeledAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentAccountContract.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModeledAccount";
@@ -525,8 +542,14 @@ public class InvestmentAccountContract extends AccountContract {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccount.mmInvestmentAccountContract, com.tools20022.repository.entity.InvestmentAccountService.mmInvestmentAccountContract,
 						com.tools20022.repository.entity.ManagedAccountProduct.mmInvestmentAccountContract);
 				superType_lazy = () -> AccountContract.mmObject();
-				element_lazy = () -> Arrays.asList(InvestmentAccountContract.mmLetterIntentReference, InvestmentAccountContract.mmAccumulationRightReference, InvestmentAccountContract.mmInvestmentAccount,
-						InvestmentAccountContract.mmServices, InvestmentAccountContract.mmModeledAccount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccountContract.mmLetterIntentReference, com.tools20022.repository.entity.InvestmentAccountContract.mmAccumulationRightReference,
+						com.tools20022.repository.entity.InvestmentAccountContract.mmInvestmentAccount, com.tools20022.repository.entity.InvestmentAccountContract.mmServices,
+						com.tools20022.repository.entity.InvestmentAccountContract.mmModeledAccount);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvestmentAccountContract.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the transportation of goods by air.
@@ -69,6 +73,8 @@ import java.util.List;
  * definition} = "Information related to the transportation of goods by air."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportByAir3", propOrder = {"departureAirport", "destinationAirport", "airCarrierName"})
 public class TransportByAir3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class TransportByAir3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DprtureAirprt")
 	public List<AirportName1Choice> getDepartureAirport() {
 		return departureAirport;
 	}
@@ -237,6 +244,7 @@ public class TransportByAir3 {
 		this.departureAirport = departureAirport;
 	}
 
+	@XmlElement(name = "DstnAirprt", required = true)
 	public List<AirportName1Choice> getDestinationAirport() {
 		return destinationAirport;
 	}
@@ -245,6 +253,7 @@ public class TransportByAir3 {
 		this.destinationAirport = destinationAirport;
 	}
 
+	@XmlElement(name = "AirCrrierNm")
 	public Max35Text getAirCarrierName() {
 		return airCarrierName;
 	}

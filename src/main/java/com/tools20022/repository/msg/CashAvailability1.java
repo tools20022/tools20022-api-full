@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.CashAvailability;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates when the amount of money will become available, that is can be
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CashBalanceAvailability2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAvailability1", propOrder = {"date", "amount", "creditDebitIndicator"})
 public class CashAvailability1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -258,6 +264,7 @@ public class CashAvailability1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public CashAvailabilityDate1Choice getDate() {
 		return date;
 	}
@@ -266,6 +273,7 @@ public class CashAvailability1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -274,6 +282,7 @@ public class CashAvailability1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}

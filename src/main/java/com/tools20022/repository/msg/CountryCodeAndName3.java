@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies a country by its code and its name.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies a country by its code and its name."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CountryCodeAndName3", propOrder = {"code", "name"})
 public class CountryCodeAndName3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -171,6 +177,7 @@ public class CountryCodeAndName3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public CountryCode getCode() {
 		return code;
 	}
@@ -179,6 +186,7 @@ public class CountryCodeAndName3 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max70Text getName() {
 		return name;
 	}

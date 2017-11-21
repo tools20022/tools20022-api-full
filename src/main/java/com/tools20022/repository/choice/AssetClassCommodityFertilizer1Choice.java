@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines commodity attributes of a derivative where the type is fertilizer.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Defines commodity attributes of a derivative where the type is fertilizer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AssetClassCommodityFertilizer1Choice", propOrder = {"ammonia", "diammoniumPhosphate", "potash", "sulphur", "urea", "ureaAndAmmoniumNitrate"})
 public class AssetClassCommodityFertilizer1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -381,6 +387,7 @@ public class AssetClassCommodityFertilizer1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ammn", required = true)
 	public FertilizerCommodityAmmonia1 getAmmonia() {
 		return ammonia;
 	}
@@ -389,6 +396,7 @@ public class AssetClassCommodityFertilizer1Choice {
 		this.ammonia = ammonia;
 	}
 
+	@XmlElement(name = "DmmnmPhspht", required = true)
 	public FertilizerCommodityDiammoniumPhosphate1 getDiammoniumPhosphate() {
 		return diammoniumPhosphate;
 	}
@@ -397,6 +405,7 @@ public class AssetClassCommodityFertilizer1Choice {
 		this.diammoniumPhosphate = diammoniumPhosphate;
 	}
 
+	@XmlElement(name = "Ptsh", required = true)
 	public FertilizerCommodityPotash1 getPotash() {
 		return potash;
 	}
@@ -405,6 +414,7 @@ public class AssetClassCommodityFertilizer1Choice {
 		this.potash = potash;
 	}
 
+	@XmlElement(name = "Slphr", required = true)
 	public FertilizerCommoditySulphur1 getSulphur() {
 		return sulphur;
 	}
@@ -413,6 +423,7 @@ public class AssetClassCommodityFertilizer1Choice {
 		this.sulphur = sulphur;
 	}
 
+	@XmlElement(name = "Urea", required = true)
 	public FertilizerCommodityUrea1 getUrea() {
 		return urea;
 	}
@@ -421,6 +432,7 @@ public class AssetClassCommodityFertilizer1Choice {
 		this.urea = urea;
 	}
 
+	@XmlElement(name = "UreaAndAmmnmNtrt", required = true)
 	public FertilizerCommodityUreaAndAmmoniumNitrate1 getUreaAndAmmoniumNitrate() {
 		return ureaAndAmmoniumNitrate;
 	}

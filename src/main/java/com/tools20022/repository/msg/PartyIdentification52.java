@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of an entity involved in an activity.
@@ -78,6 +82,8 @@ import java.util.function.Supplier;
  * definition} = "Identification of an entity involved in an activity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification52", propOrder = {"identification", "alternateIdentification", "processingDate", "processingIdentification", "additionalInformation"})
 public class PartyIdentification52 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -330,6 +336,7 @@ public class PartyIdentification52 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification58Choice getIdentification() {
 		return identification;
 	}
@@ -338,6 +345,7 @@ public class PartyIdentification52 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification3 getAlternateIdentification() {
 		return alternateIdentification;
 	}
@@ -346,6 +354,7 @@ public class PartyIdentification52 {
 		this.alternateIdentification = alternateIdentification;
 	}
 
+	@XmlElement(name = "PrcgDt")
 	public DateAndDateTimeChoice getProcessingDate() {
 		return processingDate;
 	}
@@ -354,6 +363,7 @@ public class PartyIdentification52 {
 		this.processingDate = processingDate;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public RestrictedFINXMax16Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -362,6 +372,7 @@ public class PartyIdentification52 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public PartyTextInformation3 getAdditionalInformation() {
 		return additionalInformation;
 	}

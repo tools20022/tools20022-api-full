@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PaymentTerms;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies an interest payment schedule, that is an amount that must be paid
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestPaymentDateRange2", propOrder = {"interestScheduleIdentification", "amount", "dueDate", "additionalInformation"})
 public class InterestPaymentDateRange2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -272,6 +278,7 @@ public class InterestPaymentDateRange2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IntrstSchdlId")
 	public Max35Text getInterestScheduleIdentification() {
 		return interestScheduleIdentification;
 	}
@@ -280,6 +287,7 @@ public class InterestPaymentDateRange2 {
 		this.interestScheduleIdentification = interestScheduleIdentification;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -288,6 +296,7 @@ public class InterestPaymentDateRange2 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "DueDt", required = true)
 	public ISODate getDueDate() {
 		return dueDate;
 	}
@@ -296,6 +305,7 @@ public class InterestPaymentDateRange2 {
 		this.dueDate = dueDate;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max1025Text getAdditionalInformation() {
 		return additionalInformation;
 	}

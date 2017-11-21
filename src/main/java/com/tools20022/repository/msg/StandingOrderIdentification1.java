@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Owner of the account.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Owner of the account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingOrderIdentification1", propOrder = {"standingOrderReference", "accountIdentification", "accountType", "accountOwner"})
 public class StandingOrderIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -286,6 +292,7 @@ public class StandingOrderIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StgOrdrRef")
 	public Max35Text getStandingOrderReference() {
 		return standingOrderReference;
 	}
@@ -294,6 +301,7 @@ public class StandingOrderIdentification1 {
 		this.standingOrderReference = standingOrderReference;
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentification1Choice getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -302,6 +310,7 @@ public class StandingOrderIdentification1 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctTp")
 	public CashAccountType2Code getAccountType() {
 		return accountType;
 	}
@@ -310,6 +319,7 @@ public class StandingOrderIdentification1 {
 		this.accountType = accountType;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public BICIdentifier getAccountOwner() {
 		return accountOwner;
 	}

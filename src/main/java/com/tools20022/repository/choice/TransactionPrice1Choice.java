@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.ProprietaryPrice1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements identifying the price information related to the underlying
@@ -67,6 +71,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionPrice1Choice", propOrder = {"dealPrice", "proprietary"})
 public class TransactionPrice1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -187,6 +193,7 @@ public class TransactionPrice1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DealPric", required = true)
 	public CurrencyAndAmount getDealPrice() {
 		return dealPrice;
 	}
@@ -195,6 +202,7 @@ public class TransactionPrice1Choice {
 		this.dealPrice = dealPrice;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public List<ProprietaryPrice1> getProprietary() {
 		return proprietary;
 	}

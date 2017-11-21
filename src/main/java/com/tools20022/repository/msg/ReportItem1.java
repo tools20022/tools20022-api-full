@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account details of the report item.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Account details of the report item."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportItem1", propOrder = {"accountIdentification", "accountLevel", "financialInstrumentIdentification", "itemDate"})
 public class ReportItem1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -272,6 +278,7 @@ public class ReportItem1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public SecuritiesAccount19 getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -280,6 +287,7 @@ public class ReportItem1 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctLvl", required = true)
 	public HoldingAccountLevel1Code getAccountLevel() {
 		return accountLevel;
 	}
@@ -288,6 +296,7 @@ public class ReportItem1 {
 		this.accountLevel = accountLevel;
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public SecurityIdentification19 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -296,6 +305,7 @@ public class ReportItem1 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "ItmDt")
 	public ISODate getItemDate() {
 		return itemDate;
 	}

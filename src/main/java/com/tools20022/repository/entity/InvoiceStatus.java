@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.InvoiceStatus#mmInvoice
+ * InvoiceStatus.mmInvoice}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmInvoiceStatus
  * Invoice.mmInvoiceStatus}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvoiceStatus#mmInvoice
- * InvoiceStatus.mmInvoice}</li>
  * </ul>
  * </li>
  * <li>
@@ -105,7 +105,7 @@ public class InvoiceStatus extends Status {
 	 */
 	public static final MMBusinessAssociationEnd mmInvoice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvoiceStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvoiceStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Invoice";
@@ -127,7 +127,12 @@ public class InvoiceStatus extends Status {
 				definition = "Status of the invoice or of the billing process.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Invoice.mmInvoiceStatus);
 				superType_lazy = () -> Status.mmObject();
-				element_lazy = () -> Arrays.asList(InvoiceStatus.mmInvoice);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvoiceStatus.mmInvoice);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvoiceStatus.class;
 			}
 		});
 		return mmObject_lazy.get();

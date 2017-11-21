@@ -39,6 +39,42 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmSecuritiesAccount
+ * CorporateActionServicing.mmSecuritiesAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmCorporateActionEventNotification
+ * CorporateActionServicing.mmCorporateActionEventNotification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmCorporateActionDistribution
+ * CorporateActionServicing.mmCorporateActionDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmCorporateActionOptionServicing
+ * CorporateActionServicing.mmCorporateActionOptionServicing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmEvent
+ * CorporateActionServicing.mmEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmCorporateActionElection
+ * CorporateActionServicing.mmCorporateActionElection}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmCorporateActionEntitlement
+ * CorporateActionServicing.mmCorporateActionEntitlement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.MeetingServicing
+ * MeetingServicing}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.FinancialService
+ * FinancialService}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -64,42 +100,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CorporateActionOptionServicing#mmRelatedServicing
  * CorporateActionOptionServicing.mmRelatedServicing}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.FinancialService
- * FinancialService}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.MeetingServicing
- * MeetingServicing}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmSecuritiesAccount
- * CorporateActionServicing.mmSecuritiesAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmCorporateActionEventNotification
- * CorporateActionServicing.mmCorporateActionEventNotification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmCorporateActionDistribution
- * CorporateActionServicing.mmCorporateActionDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmCorporateActionOptionServicing
- * CorporateActionServicing.mmCorporateActionOptionServicing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmEvent
- * CorporateActionServicing.mmEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmCorporateActionElection
- * CorporateActionServicing.mmCorporateActionElection}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmCorporateActionEntitlement
- * CorporateActionServicing.mmCorporateActionEntitlement}</li>
  * </ul>
  * </li>
  * <li>
@@ -140,11 +140,6 @@ public class CorporateActionServicing extends FinancialService {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesAccount
 	 * SecuritiesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionServicing
-	 * CorporateActionServicing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -196,6 +191,11 @@ public class CorporateActionServicing extends FinancialService {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionServicing
+	 * CorporateActionServicing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -212,7 +212,7 @@ public class CorporateActionServicing extends FinancialService {
 					CorporateActionOption26.mmSafekeepingAccount, CorporateActionOption41.mmSafekeepingAccount, CorporateActionOption50.mmSafekeepingAccount, CorporateActionOption29.mmSafekeepingAccount, Instruction1.mmAccountDetails,
 					Instruction2.mmAccountDetails, CorporateActionElection3.mmAccountDetails, CorporateActionOption8.mmSafekeepingAccount, Instruction3.mmAccountDetails, CorporateActionOption116.mmSafekeepingAccount,
 					CorporateActionOption121.mmSafekeepingAccount);
-			elementContext_lazy = () -> CorporateActionServicing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesAccount";
@@ -243,11 +243,6 @@ public class CorporateActionServicing extends FinancialService {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionNotification
 	 * CorporateActionNotification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionServicing
-	 * CorporateActionServicing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -284,6 +279,11 @@ public class CorporateActionServicing extends FinancialService {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionServicing
+	 * CorporateActionServicing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -301,7 +301,7 @@ public class CorporateActionServicing extends FinancialService {
 			derivation_lazy = () -> Arrays.asList(EventInformation1.mmLastNotificationIdentification, EventInformation2.mmLastNotificationIdentification, EventInformation3.mmLastNotificationIdentification,
 					EventInformation4.mmLastNotificationIdentification, EventInformation5.mmLastNotificationIdentification, EventInformation6.mmLastNotificationIdentification, EventInformation7.mmLastNotificationIdentification,
 					EventInformation8.mmLastNotificationIdentification, EventInformation9.mmLastNotificationIdentification, EventInformation10.mmLastNotificationIdentification);
-			elementContext_lazy = () -> CorporateActionServicing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionEventNotification";
@@ -332,11 +332,6 @@ public class CorporateActionServicing extends FinancialService {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution
 	 * CorporateActionDistribution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionServicing
-	 * CorporateActionServicing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -382,6 +377,11 @@ public class CorporateActionServicing extends FinancialService {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionServicing
+	 * CorporateActionServicing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -399,7 +399,7 @@ public class CorporateActionServicing extends FinancialService {
 			derivation_lazy = () -> Arrays.asList(CorporateAction3.mmDistributionType, CorporateAction4.mmDistributionType, CorporateAction5.mmDistributionType, CorporateAction6.mmDistributionType, CorporateAction7.mmPaymentOccurrenceType,
 					CorporateAction8.mmPaymentOccurrenceType, CorporateAction10.mmPaymentOccurrenceType, CorporateAction11.mmPaymentOccurrenceType, CorporateAction2.mmDistributionType, CorporateAction12.mmOccurrenceType,
 					CorporateAction17.mmOccurrenceType, CorporateAction31.mmOccurrenceType, CorporateAction40.mmOccurrenceType);
-			elementContext_lazy = () -> CorporateActionServicing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionDistribution";
@@ -450,7 +450,7 @@ public class CorporateActionServicing extends FinancialService {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionOptionServicing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionServicing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionOptionServicing";
@@ -480,11 +480,6 @@ public class CorporateActionServicing extends FinancialService {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent
 	 * CorporateActionEvent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionServicing
-	 * CorporateActionServicing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -493,6 +488,11 @@ public class CorporateActionServicing extends FinancialService {
 	 * CorporateActionNotificationAdvice1.mmCorporateActionDetails}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionServicing
+	 * CorporateActionServicing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -508,7 +508,7 @@ public class CorporateActionServicing extends FinancialService {
 	public static final MMBusinessAssociationEnd mmEvent = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionNotificationAdvice1.mmCorporateActionDetails);
-			elementContext_lazy = () -> CorporateActionServicing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Event";
@@ -559,7 +559,7 @@ public class CorporateActionServicing extends FinancialService {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionElection = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionServicing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionElection";
@@ -608,7 +608,7 @@ public class CorporateActionServicing extends FinancialService {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionEntitlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionServicing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionEntitlement";
@@ -633,8 +633,15 @@ public class CorporateActionServicing extends FinancialService {
 						com.tools20022.repository.entity.CorporateActionOptionServicing.mmRelatedServicing);
 				subType_lazy = () -> Arrays.asList(MeetingServicing.mmObject());
 				superType_lazy = () -> FinancialService.mmObject();
-				element_lazy = () -> Arrays.asList(CorporateActionServicing.mmSecuritiesAccount, CorporateActionServicing.mmCorporateActionEventNotification, CorporateActionServicing.mmCorporateActionDistribution,
-						CorporateActionServicing.mmCorporateActionOptionServicing, CorporateActionServicing.mmEvent, CorporateActionServicing.mmCorporateActionElection, CorporateActionServicing.mmCorporateActionEntitlement);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionServicing.mmSecuritiesAccount, com.tools20022.repository.entity.CorporateActionServicing.mmCorporateActionEventNotification,
+						com.tools20022.repository.entity.CorporateActionServicing.mmCorporateActionDistribution, com.tools20022.repository.entity.CorporateActionServicing.mmCorporateActionOptionServicing,
+						com.tools20022.repository.entity.CorporateActionServicing.mmEvent, com.tools20022.repository.entity.CorporateActionServicing.mmCorporateActionElection,
+						com.tools20022.repository.entity.CorporateActionServicing.mmCorporateActionEntitlement);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionServicing.class;
 			}
 		});
 		return mmObject_lazy.get();

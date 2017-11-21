@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.RegulatoryAuthorityRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Entity requiring the regulatory reporting information.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Entity requiring the regulatory reporting information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegulatoryAuthority2", propOrder = {"name", "country"})
 public class RegulatoryAuthority2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class RegulatoryAuthority2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max140Text getName() {
 		return name;
 	}
@@ -186,6 +193,7 @@ public class RegulatoryAuthority2 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Ctry")
 	public CountryCode getCountry() {
 		return country;
 	}

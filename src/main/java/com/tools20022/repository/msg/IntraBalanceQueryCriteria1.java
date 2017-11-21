@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria based on which information is included.
@@ -100,6 +104,9 @@ import java.util.List;
  * definition} = "Defines the criteria based on which information is included."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraBalanceQueryCriteria1", propOrder = {"references", "status", "cashAccountOwner", "cashAccount", "balanceType", "cashSubBalanceIdentification", "settlementAmount", "settledAmount", "settlementCurrency",
+		"intendedSettlementDate", "effectiveSettlementDate", "priority", "messageOriginator", "creationDateTime"})
 public class IntraBalanceQueryCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -710,6 +717,7 @@ public class IntraBalanceQueryCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Refs")
 	public List<References36Choice> getReferences() {
 		return references;
 	}
@@ -718,6 +726,7 @@ public class IntraBalanceQueryCriteria1 {
 		this.references = references;
 	}
 
+	@XmlElement(name = "Sts")
 	public IntraBalanceQueryStatus1 getStatus() {
 		return status;
 	}
@@ -726,6 +735,7 @@ public class IntraBalanceQueryCriteria1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "CshAcctOwnr")
 	public List<SystemPartyIdentification5> getCashAccountOwner() {
 		return cashAccountOwner;
 	}
@@ -734,6 +744,7 @@ public class IntraBalanceQueryCriteria1 {
 		this.cashAccountOwner = cashAccountOwner;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public List<AccountIdentificationSearchCriteria2Choice> getCashAccount() {
 		return cashAccount;
 	}
@@ -742,6 +753,7 @@ public class IntraBalanceQueryCriteria1 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "BalTp")
 	public List<IntraBalanceType1> getBalanceType() {
 		return balanceType;
 	}
@@ -750,6 +762,7 @@ public class IntraBalanceQueryCriteria1 {
 		this.balanceType = balanceType;
 	}
 
+	@XmlElement(name = "CshSubBalId")
 	public List<GenericIdentification37> getCashSubBalanceIdentification() {
 		return cashSubBalanceIdentification;
 	}
@@ -758,6 +771,7 @@ public class IntraBalanceQueryCriteria1 {
 		this.cashSubBalanceIdentification = cashSubBalanceIdentification;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public ImpliedCurrencyAmountRangeChoice getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -766,6 +780,7 @@ public class IntraBalanceQueryCriteria1 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "SttldAmt")
 	public ImpliedCurrencyAmountRangeChoice getSettledAmount() {
 		return settledAmount;
 	}
@@ -774,6 +789,7 @@ public class IntraBalanceQueryCriteria1 {
 		this.settledAmount = settledAmount;
 	}
 
+	@XmlElement(name = "SttlmCcy")
 	public List<ActiveOrHistoricCurrencyCode> getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -782,6 +798,7 @@ public class IntraBalanceQueryCriteria1 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "IntnddSttlmDt")
 	public DateAndDateTimeSearch2Choice getIntendedSettlementDate() {
 		return intendedSettlementDate;
 	}
@@ -790,6 +807,7 @@ public class IntraBalanceQueryCriteria1 {
 		this.intendedSettlementDate = intendedSettlementDate;
 	}
 
+	@XmlElement(name = "FctvSttlmDt")
 	public DateAndDateTimeSearch2Choice getEffectiveSettlementDate() {
 		return effectiveSettlementDate;
 	}
@@ -798,6 +816,7 @@ public class IntraBalanceQueryCriteria1 {
 		this.effectiveSettlementDate = effectiveSettlementDate;
 	}
 
+	@XmlElement(name = "Prty")
 	public List<PriorityNumeric1Choice> getPriority() {
 		return priority;
 	}
@@ -806,6 +825,7 @@ public class IntraBalanceQueryCriteria1 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "MsgOrgtr")
 	public List<SystemPartyIdentification5> getMessageOriginator() {
 		return messageOriginator;
 	}
@@ -814,6 +834,7 @@ public class IntraBalanceQueryCriteria1 {
 		this.messageOriginator = messageOriginator;
 	}
 
+	@XmlElement(name = "CreDtTm")
 	public DateAndDateTimeSearch2Choice getCreationDateTime() {
 		return creationDateTime;
 	}

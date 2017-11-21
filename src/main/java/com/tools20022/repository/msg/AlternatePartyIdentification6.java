@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Alternate identification for a party using an id type, a country code and an
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AlternatePartyIdentification6", propOrder = {"typeOfIdentification", "country", "alternateIdentification"})
 public class AlternatePartyIdentification6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -239,6 +245,7 @@ public class AlternatePartyIdentification6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TpOfId", required = true)
 	public IdentificationType41Choice getTypeOfIdentification() {
 		return typeOfIdentification;
 	}
@@ -247,6 +254,7 @@ public class AlternatePartyIdentification6 {
 		this.typeOfIdentification = typeOfIdentification;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -255,6 +263,7 @@ public class AlternatePartyIdentification6 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "AltrnId", required = true)
 	public Max35Text getAlternateIdentification() {
 		return alternateIdentification;
 	}

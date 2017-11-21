@@ -36,6 +36,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money for which goods or services are offered, sold, or bought.
@@ -92,6 +96,8 @@ import java.util.function.Supplier;
  * "Amount of money for which goods or services are offered, sold, or bought."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceInformation2", propOrder = {"value", "valueType", "type", "extendedType", "sourceOfPrice", "quotationDate", "yielded"})
 public class PriceInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -501,6 +507,7 @@ public class PriceInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public PriceRateOrAmountOrUnknownChoice getValue() {
 		return value;
 	}
@@ -509,6 +516,7 @@ public class PriceInformation2 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "ValTp")
 	public PriceValueType2Code getValueType() {
 		return valueType;
 	}
@@ -517,6 +525,7 @@ public class PriceInformation2 {
 		this.valueType = valueType;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TypeOfPrice11Code getType() {
 		return type;
 	}
@@ -525,6 +534,7 @@ public class PriceInformation2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XtndedTp", required = true)
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
@@ -533,6 +543,7 @@ public class PriceInformation2 {
 		this.extendedType = extendedType;
 	}
 
+	@XmlElement(name = "SrcOfPric")
 	public PriceSourceFormatChoice getSourceOfPrice() {
 		return sourceOfPrice;
 	}
@@ -541,6 +552,7 @@ public class PriceInformation2 {
 		this.sourceOfPrice = sourceOfPrice;
 	}
 
+	@XmlElement(name = "QtnDt")
 	public DateAndDateTimeChoice getQuotationDate() {
 		return quotationDate;
 	}
@@ -549,6 +561,7 @@ public class PriceInformation2 {
 		this.quotationDate = quotationDate;
 	}
 
+	@XmlElement(name = "Yldd")
 	public YesNoIndicator getYielded() {
 		return yielded;
 	}

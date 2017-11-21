@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Sensitive data associated with a payment card.
@@ -73,6 +77,8 @@ import java.util.List;
  * PlainCardData16}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PlainCardData17", propOrder = {"PAN", "track1", "track2", "track3", "additionalCardData", "entryMode"})
 public class PlainCardData17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -384,6 +390,7 @@ public class PlainCardData17 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PAN")
 	public Min8Max28NumericText getPAN() {
 		return pAN;
 	}
@@ -392,6 +399,7 @@ public class PlainCardData17 {
 		this.pAN = pAN;
 	}
 
+	@XmlElement(name = "Trck1")
 	public Max76Text getTrack1() {
 		return track1;
 	}
@@ -400,6 +408,7 @@ public class PlainCardData17 {
 		this.track1 = track1;
 	}
 
+	@XmlElement(name = "Trck2")
 	public Max37Text getTrack2() {
 		return track2;
 	}
@@ -408,6 +417,7 @@ public class PlainCardData17 {
 		this.track2 = track2;
 	}
 
+	@XmlElement(name = "Trck3")
 	public Max104Text getTrack3() {
 		return track3;
 	}
@@ -416,6 +426,7 @@ public class PlainCardData17 {
 		this.track3 = track3;
 	}
 
+	@XmlElement(name = "AddtlCardData")
 	public List<Max35Text> getAdditionalCardData() {
 		return additionalCardData;
 	}
@@ -424,6 +435,7 @@ public class PlainCardData17 {
 		this.additionalCardData = additionalCardData;
 	}
 
+	@XmlElement(name = "NtryMd")
 	public CardDataReading5Code getEntryMode() {
 		return entryMode;
 	}

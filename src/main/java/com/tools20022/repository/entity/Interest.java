@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -42,6 +43,68 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmAccruedInterestAmount
+ * Interest.mmAccruedInterestAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmInterestCalculation
+ * Interest.mmInterestCalculation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmAmount
+ * Interest.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmRate
+ * Interest.mmRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedCashProceedsDefinition
+ * Interest.mmRelatedCashProceedsDefinition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmSecuritiesFinancing
+ * Interest.mmSecuritiesFinancing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmInterestTax
+ * Interest.mmInterestTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmCreditDebitIndicator
+ * Interest.mmCreditDebitIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmCashEntry
+ * Interest.mmCashEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmPaymentDate
+ * Interest.mmPaymentDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedInterestManagement
+ * Interest.mmRelatedInterestManagement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedUndertakingAmount
+ * Interest.mmRelatedUndertakingAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedDebitCreditFacility
+ * Interest.mmRelatedDebitCreditFacility}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmSecuritiesSettlement
+ * Interest.mmSecuritiesSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmInterestName
+ * Interest.mmInterestName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedAssetHolding
+ * Interest.mmRelatedAssetHolding}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmDeposit
+ * Interest.mmDeposit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmAccountBalance
+ * Interest.mmAccountBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedAccountContract
+ * Interest.mmRelatedAccountContract}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedNetAssetValueCalculation
+ * Interest.mmRelatedNetAssetValueCalculation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmTypeOfInterest
+ * Interest.mmTypeOfInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedPaymentCard
+ * Interest.mmRelatedPaymentCard}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -265,68 +328,6 @@ import java.util.List;
  * InterestRateUsedForPaymentFormat10Choice.mmRateTypeAndAmountAndRateStatus}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmAccruedInterestAmount
- * Interest.mmAccruedInterestAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmInterestCalculation
- * Interest.mmInterestCalculation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmAmount
- * Interest.mmAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmRate
- * Interest.mmRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedCashProceedsDefinition
- * Interest.mmRelatedCashProceedsDefinition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmSecuritiesFinancing
- * Interest.mmSecuritiesFinancing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmInterestTax
- * Interest.mmInterestTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmCreditDebitIndicator
- * Interest.mmCreditDebitIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmCashEntry
- * Interest.mmCashEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmPaymentDate
- * Interest.mmPaymentDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedInterestManagement
- * Interest.mmRelatedInterestManagement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedUndertakingAmount
- * Interest.mmRelatedUndertakingAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedDebitCreditFacility
- * Interest.mmRelatedDebitCreditFacility}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmSecuritiesSettlement
- * Interest.mmSecuritiesSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmInterestName
- * Interest.mmInterestName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedAssetHolding
- * Interest.mmRelatedAssetHolding}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmDeposit
- * Interest.mmDeposit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmAccountBalance
- * Interest.mmAccountBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedAccountContract
- * Interest.mmRelatedAccountContract}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedNetAssetValueCalculation
- * Interest.mmRelatedNetAssetValueCalculation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmTypeOfInterest
- * Interest.mmTypeOfInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedPaymentCard
- * Interest.mmRelatedPaymentCard}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -358,10 +359,6 @@ public class Interest {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
-	 * Interest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -770,6 +767,10 @@ public class Interest {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
+	 * Interest}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -816,7 +817,7 @@ public class Interest {
 					SecuritiesFinancingTransactionDetails32.mmAccruedInterestAmount, SecuritiesFinancingTransactionDetails30.mmAccruedInterestAmount, OtherAmounts34.mmAccruedInterestAmount, OtherAmounts38.mmAccruedInterestAmount,
 					OtherAmounts36.mmAccruedInterestAmount, SecuritiesFinancingTransactionDetails34.mmAccruedInterestAmount, OtherAmounts33.mmAccruedInterestAmount, TransactionDetails91.mmAccruedInterestAmount,
 					TransactionDetails95.mmAccruedInterestAmount, TransactionDetails98.mmAccruedInterestAmount);
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccruedInterestAmount";
@@ -824,6 +825,14 @@ public class Interest {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Interest.class.getMethod("getAccruedInterestAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.InterestCalculation> interestCalculation;
@@ -844,10 +853,6 @@ public class Interest {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InterestCalculation
 	 * InterestCalculation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
-	 * Interest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1079,6 +1084,10 @@ public class Interest {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
+	 * Interest}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1107,7 +1116,7 @@ public class Interest {
 					RateTypeAndAmountAndStatus27.mmRateType, RateTypeAndAmountAndStatus26.mmRateType, RateTypeAndAmountAndStatus28.mmRateType, RateTypeAndAmountAndStatus29.mmRateType, InterestStatement4.mmInterestCalculation,
 					RateTypeAndAmountAndStatus32.mmRateType, RateTypeAndAmountAndStatus31.mmRateType, RateTypeAndAmountAndStatus33.mmRateType, RateTypeAndAmountAndStatus36.mmRateType, RateTypeAndAmountAndStatus35.mmRateType,
 					RateTypeAndAmountAndStatus30.mmRateType, RateTypeAndAmountAndStatus34.mmRateType, SecuritiesFinancingTransactionDetails32.mmChargesRate, SecuritiesFinancingTransactionDetails30.mmChargesRate);
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestCalculation";
@@ -1129,10 +1138,6 @@ public class Interest {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
-	 * Interest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1447,6 +1452,10 @@ public class Interest {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
+	 * Interest}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1481,7 +1490,7 @@ public class Interest {
 					InterestRateUsedForPaymentFormat9Choice.mmAmount, RateTypeAndAmountAndStatus32.mmAmount, RateTypeAndAmountAndStatus31.mmAmount, CorporateActionAmounts39.mmInterestAmount, RateTypeAndAmountAndStatus33.mmAmount,
 					CorporateActionAmounts41.mmInterestAmount, CorporateActionAmounts40.mmInterestAmount, RateTypeAndAmountAndStatus36.mmAmount, RateTypeAndAmountAndStatus35.mmAmount, RateTypeAndAmountAndStatus30.mmAmount,
 					InterestRateUsedForPaymentFormat10Choice.mmAmount, RateTypeAndAmountAndStatus34.mmAmount);
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -1489,6 +1498,14 @@ public class Interest {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Interest.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate rate;
@@ -1503,10 +1520,6 @@ public class Interest {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
-	 * Interest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1825,6 +1838,10 @@ public class Interest {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
+	 * Interest}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1863,7 +1880,7 @@ public class Interest {
 					RateDetails26.mmInterestRateUsedForPayment, CorporateActionRate82.mmInterestRateUsedForPayment, CorporateActionRate80.mmInterestRateUsedForPayment, RateDetails27.mmInterestRateUsedForPayment,
 					CorporateActionRate81.mmInterestRateUsedForPayment, CorporateActionRate83.mmInterestRateUsedForPayment, CorporateActionRate84.mmInterestRateUsedForPayment, CorporateActionRate85.mmInterestRateUsedForPayment,
 					RateDetails28.mmInterestRateUsedForPayment, RateDetails30.mmInterestRateUsedForPayment, SecuredMarketTransaction4.mmDealRate, OvernightIndexSwapTransaction4.mmFixedInterestRate, UnsecuredMarketTransaction4.mmDealRate);
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
@@ -1871,6 +1888,14 @@ public class Interest {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Interest.class.getMethod("getRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.CashProceedsDefinition> relatedCashProceedsDefinition;
@@ -1910,7 +1935,7 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCashProceedsDefinition = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCashProceedsDefinition";
@@ -1957,7 +1982,7 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesFinancing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesFinancing";
@@ -1984,10 +2009,6 @@ public class Interest {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
-	 * Interest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2007,6 +2028,10 @@ public class Interest {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
+	 * Interest}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2020,7 +2045,7 @@ public class Interest {
 	public static final MMBusinessAssociationEnd mmInterestTax = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmAccruedInterestTax, AccountInterest3.mmTax, InterestRecord1.mmTax, InterestAmount1.mmAppliedWithholdingTax, InterestAmount2.mmAppliedWithholdingTax);
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestTax";
@@ -2043,10 +2068,6 @@ public class Interest {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DebitCreditCode
 	 * DebitCreditCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
-	 * Interest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2058,6 +2079,10 @@ public class Interest {
 	 * TransactionInterest2.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
+	 * Interest}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2072,7 +2097,7 @@ public class Interest {
 	public static final MMBusinessAttribute mmCreditDebitIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionInterest1.mmCreditDebitIndicator, TransactionInterest2.mmCreditDebitIndicator);
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
@@ -2080,6 +2105,14 @@ public class Interest {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Interest.class.getMethod("getCreditDebitIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CashEntry cashEntry;
@@ -2117,7 +2150,7 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmCashEntry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashEntry";
@@ -2139,10 +2172,6 @@ public class Interest {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
-	 * Interest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2176,6 +2205,10 @@ public class Interest {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
+	 * Interest}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2190,7 +2223,7 @@ public class Interest {
 		{
 			derivation_lazy = () -> Arrays.asList(InterestAmount1.mmValueDate, InterestResult1.mmValueDate, InterestAmount2.mmValueDate, InterestStatement1.mmValueDate, InterestStatement2.mmValueDate, InterestStatement3.mmValueDate,
 					InterestPaymentDateRange1.mmExpectedDate, InterestPaymentDateRange1.mmDueDate, InterestStatement4.mmValueDate);
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentDate";
@@ -2198,6 +2231,14 @@ public class Interest {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Interest.class.getMethod("getPaymentDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InterestManagement relatedInterestManagement;
@@ -2238,7 +2279,7 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedInterestManagement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInterestManagement";
@@ -2285,7 +2326,7 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedUndertakingAmount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedUndertakingAmount";
@@ -2333,7 +2374,7 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedDebitCreditFacility = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedDebitCreditFacility";
@@ -2383,7 +2424,7 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesSettlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesSettlement";
@@ -2431,7 +2472,7 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmInterestName = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestName";
@@ -2478,7 +2519,7 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedAssetHolding = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedAssetHolding";
@@ -2524,7 +2565,7 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmDeposit = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Deposit";
@@ -2553,10 +2594,6 @@ public class Interest {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Balance Balance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
-	 * Interest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2572,6 +2609,10 @@ public class Interest {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
+	 * Interest}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2585,7 +2626,7 @@ public class Interest {
 	public static final MMBusinessAssociationEnd mmAccountBalance = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ATMTransactionAmounts4.mmDailyBalance, ATMTransactionAmounts4.mmWeeklyBalance, ATMTransactionAmounts4.mmMonthlyBalance);
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountBalance";
@@ -2633,7 +2674,7 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedAccountContract = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedAccountContract";
@@ -2683,7 +2724,7 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedNetAssetValueCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedNetAssetValueCalculation";
@@ -2706,10 +2747,6 @@ public class Interest {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestTypeCode
 	 * InterestTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
-	 * Interest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2748,6 +2785,10 @@ public class Interest {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Interest
+	 * Interest}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2763,7 +2804,7 @@ public class Interest {
 			derivation_lazy = () -> Arrays.asList(Order16.mmInterestType, Order14.mmInterestType, Order17.mmInterestType, Order18.mmInterestType, UnsecuredMarketTransaction1.mmRateType, SecuredMarketTransaction1.mmRateType,
 					UnsecuredMarketTransaction2.mmRateType, SecuredMarketTransaction2.mmRateType, UnsecuredMarketTransaction3.mmRateType, SecuredMarketTransaction3.mmRateType, SecuredMarketTransaction4.mmRateType,
 					UnsecuredMarketTransaction4.mmRateType);
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TypeOfInterest";
@@ -2771,6 +2812,14 @@ public class Interest {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InterestTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Interest.class.getMethod("getTypeOfInterest", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PaymentCard relatedPaymentCard;
@@ -2809,7 +2858,7 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPaymentCard = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Interest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPaymentCard";
@@ -2840,10 +2889,14 @@ public class Interest {
 						InterestRateUsedForPaymentFormat5Choice.mmRateTypeAndAmountAndRateStatus, InterestRateUsedForPaymentFormat6Choice.mmRateTypeAndAmountAndRateStatus,
 						InterestRateUsedForPaymentFormat8Choice.mmRateTypeAndAmountAndRateStatus, InterestRateUsedForPaymentFormat7Choice.mmRateTypeAndAmountAndRateStatus,
 						InterestRateUsedForPaymentFormat9Choice.mmRateTypeAndAmountAndRateStatus, InterestRateUsedForPaymentFormat10Choice.mmRateTypeAndAmountAndRateStatus);
-				element_lazy = () -> Arrays.asList(Interest.mmAccruedInterestAmount, Interest.mmInterestCalculation, Interest.mmAmount, Interest.mmRate, Interest.mmRelatedCashProceedsDefinition, Interest.mmSecuritiesFinancing,
-						Interest.mmInterestTax, Interest.mmCreditDebitIndicator, Interest.mmCashEntry, Interest.mmPaymentDate, Interest.mmRelatedInterestManagement, Interest.mmRelatedUndertakingAmount,
-						Interest.mmRelatedDebitCreditFacility, Interest.mmSecuritiesSettlement, Interest.mmInterestName, Interest.mmRelatedAssetHolding, Interest.mmDeposit, Interest.mmAccountBalance, Interest.mmRelatedAccountContract,
-						Interest.mmRelatedNetAssetValueCalculation, Interest.mmTypeOfInterest, Interest.mmRelatedPaymentCard);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Interest.mmAccruedInterestAmount, com.tools20022.repository.entity.Interest.mmInterestCalculation, com.tools20022.repository.entity.Interest.mmAmount,
+						com.tools20022.repository.entity.Interest.mmRate, com.tools20022.repository.entity.Interest.mmRelatedCashProceedsDefinition, com.tools20022.repository.entity.Interest.mmSecuritiesFinancing,
+						com.tools20022.repository.entity.Interest.mmInterestTax, com.tools20022.repository.entity.Interest.mmCreditDebitIndicator, com.tools20022.repository.entity.Interest.mmCashEntry,
+						com.tools20022.repository.entity.Interest.mmPaymentDate, com.tools20022.repository.entity.Interest.mmRelatedInterestManagement, com.tools20022.repository.entity.Interest.mmRelatedUndertakingAmount,
+						com.tools20022.repository.entity.Interest.mmRelatedDebitCreditFacility, com.tools20022.repository.entity.Interest.mmSecuritiesSettlement, com.tools20022.repository.entity.Interest.mmInterestName,
+						com.tools20022.repository.entity.Interest.mmRelatedAssetHolding, com.tools20022.repository.entity.Interest.mmDeposit, com.tools20022.repository.entity.Interest.mmAccountBalance,
+						com.tools20022.repository.entity.Interest.mmRelatedAccountContract, com.tools20022.repository.entity.Interest.mmRelatedNetAssetValueCalculation, com.tools20022.repository.entity.Interest.mmTypeOfInterest,
+						com.tools20022.repository.entity.Interest.mmRelatedPaymentCard);
 				derivationComponent_lazy = () -> Arrays.asList(RateTypeAndAmountAndStatus1.mmObject(), RateTypeAndAmountAndStatus3.mmObject(), InterestRateUsedForPaymentFormat2Choice.mmObject(), RateTypeAndAmountAndStatus4.mmObject(),
 						RateTypeAndAmountAndStatus5.mmObject(), RateTypeAndAmountAndStatus6.mmObject(), RateTypeAndAmountAndStatus2.mmObject(), RateTypeAndAmountAndStatus7.mmObject(), InterestRateUsedForPaymentFormat3Choice.mmObject(),
 						RateTypeAndAmountAndStatus8.mmObject(), RateTypeAndAmountAndStatus9.mmObject(), RateTypeAndAmountAndStatus10.mmObject(), RateTypeAndAmountAndStatus11.mmObject(), RateTypeAndAmountAndStatus12.mmObject(),
@@ -2857,6 +2910,11 @@ public class Interest {
 						InterestRateUsedForPaymentFormat9Choice.mmObject(), RateTypeAndAmountAndStatus32.mmObject(), RateTypeAndAmountAndStatus31.mmObject(), RateTypeAndAmountAndStatus33.mmObject(), RateTypeAndAmountAndStatus36.mmObject(),
 						RateTypeAndAmountAndStatus35.mmObject(), RateTypeAndAmountAndStatus30.mmObject(), InterestRateUsedForPaymentFormat10Choice.mmObject(), RateTypeAndAmountAndStatus34.mmObject(), InterestRateContractTerm2.mmObject(),
 						InterestRate6Choice.mmObject(), InterestRate8Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Interest.class;
 			}
 		});
 		return mmObject_lazy.get();

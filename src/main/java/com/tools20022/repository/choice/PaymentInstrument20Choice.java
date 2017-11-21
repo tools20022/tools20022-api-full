@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between types of payment instrument, that is, cheque, credit transfer,
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentInstrument12Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstrument20Choice", propOrder = {"paymentCardDetails", "creditTransferDetails", "directDebitDetails", "chequeDetails", "bankersDraftDetails", "cashAccountDetails"})
 public class PaymentInstrument20Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -431,6 +437,7 @@ public class PaymentInstrument20Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtCardDtls", required = true)
 	public PaymentCard25 getPaymentCardDetails() {
 		return paymentCardDetails;
 	}
@@ -439,6 +446,7 @@ public class PaymentInstrument20Choice {
 		this.paymentCardDetails = paymentCardDetails;
 	}
 
+	@XmlElement(name = "CdtTrfDtls", required = true)
 	public CreditTransfer8 getCreditTransferDetails() {
 		return creditTransferDetails;
 	}
@@ -447,6 +455,7 @@ public class PaymentInstrument20Choice {
 		this.creditTransferDetails = creditTransferDetails;
 	}
 
+	@XmlElement(name = "DrctDbtDtls", required = true)
 	public DirectDebitMandate6 getDirectDebitDetails() {
 		return directDebitDetails;
 	}
@@ -455,6 +464,7 @@ public class PaymentInstrument20Choice {
 		this.directDebitDetails = directDebitDetails;
 	}
 
+	@XmlElement(name = "ChqDtls", required = true)
 	public Cheque9 getChequeDetails() {
 		return chequeDetails;
 	}
@@ -463,6 +473,7 @@ public class PaymentInstrument20Choice {
 		this.chequeDetails = chequeDetails;
 	}
 
+	@XmlElement(name = "BkrsDrftDtls", required = true)
 	public Cheque9 getBankersDraftDetails() {
 		return bankersDraftDetails;
 	}
@@ -471,6 +482,7 @@ public class PaymentInstrument20Choice {
 		this.bankersDraftDetails = bankersDraftDetails;
 	}
 
+	@XmlElement(name = "CshAcctDtls", required = true)
 	public InvestmentAccount60 getCashAccountDetails() {
 		return cashAccountDetails;
 	}

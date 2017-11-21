@@ -36,6 +36,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryReportingRole#mmRelatedReportingParty
+ * RegulatoryReportingRole.mmRelatedReportingParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryReportingRole#mmRelatedRegistrationAgent
+ * RegulatoryReportingRole.mmRelatedRegistrationAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryReportingRole#mmRelatedReceivingParty
+ * RegulatoryReportingRole.mmRelatedReceivingParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryReportingRole#mmRelatedSendingParty
+ * RegulatoryReportingRole.mmRelatedSendingParty}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -52,25 +71,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.RegisteredContract#mmSendingParty
  * RegisteredContract.mmSendingParty}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryReportingRole#mmRelatedReportingParty
- * RegulatoryReportingRole.mmRelatedReportingParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryReportingRole#mmRelatedRegistrationAgent
- * RegulatoryReportingRole.mmRelatedRegistrationAgent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryReportingRole#mmRelatedReceivingParty
- * RegulatoryReportingRole.mmRelatedReceivingParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryReportingRole#mmRelatedSendingParty
- * RegulatoryReportingRole.mmRelatedSendingParty}</li>
  * </ul>
  * </li>
  * <li>
@@ -130,7 +130,7 @@ public class RegulatoryReportingRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedReportingParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RegulatoryReportingRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RegulatoryReportingRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedReportingParty";
@@ -179,7 +179,7 @@ public class RegulatoryReportingRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedRegistrationAgent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RegulatoryReportingRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RegulatoryReportingRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedRegistrationAgent";
@@ -230,7 +230,7 @@ public class RegulatoryReportingRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedReceivingParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RegulatoryReportingRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RegulatoryReportingRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedReceivingParty";
@@ -281,7 +281,7 @@ public class RegulatoryReportingRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSendingParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RegulatoryReportingRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RegulatoryReportingRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSendingParty";
@@ -304,8 +304,13 @@ public class RegulatoryReportingRole extends Role {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RegisteredContract.mmReportingParty, com.tools20022.repository.entity.RegisteredContract.mmRegistrationAgent,
 						com.tools20022.repository.entity.RegisteredContract.mmReceivingParty, com.tools20022.repository.entity.RegisteredContract.mmSendingParty);
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(RegulatoryReportingRole.mmRelatedReportingParty, RegulatoryReportingRole.mmRelatedRegistrationAgent, RegulatoryReportingRole.mmRelatedReceivingParty,
-						RegulatoryReportingRole.mmRelatedSendingParty);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RegulatoryReportingRole.mmRelatedReportingParty, com.tools20022.repository.entity.RegulatoryReportingRole.mmRelatedRegistrationAgent,
+						com.tools20022.repository.entity.RegulatoryReportingRole.mmRelatedReceivingParty, com.tools20022.repository.entity.RegulatoryReportingRole.mmRelatedSendingParty);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RegulatoryReportingRole.class;
 			}
 		});
 		return mmObject_lazy.get();

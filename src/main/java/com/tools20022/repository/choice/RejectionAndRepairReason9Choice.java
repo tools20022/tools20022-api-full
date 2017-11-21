@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the rejection or repair reason.
@@ -69,6 +73,8 @@ import java.util.function.Supplier;
  * definition} = "Choice of format for the rejection or repair reason."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RejectionAndRepairReason9Choice", propOrder = {"code", "proprietary"})
 public class RejectionAndRepairReason9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class RejectionAndRepairReason9Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public RejectionReason21Code getCode() {
 		return code;
 	}
@@ -204,6 +211,7 @@ public class RejectionAndRepairReason9Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification20 getProprietary() {
 		return proprietary;
 	}

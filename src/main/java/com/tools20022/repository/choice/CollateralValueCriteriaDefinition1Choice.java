@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CollateralValueCriteria1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Definition of the collateral value query criteria.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Definition of the collateral value query criteria."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralValueCriteriaDefinition1Choice", propOrder = {"queryName", "newCriteria"})
 public class CollateralValueCriteriaDefinition1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +168,7 @@ public class CollateralValueCriteriaDefinition1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QryNm", required = true)
 	public Max35Text getQueryName() {
 		return queryName;
 	}
@@ -170,6 +177,7 @@ public class CollateralValueCriteriaDefinition1Choice {
 		this.queryName = queryName;
 	}
 
+	@XmlElement(name = "NewCrit", required = true)
 	public CollateralValueCriteria1 getNewCriteria() {
 		return newCriteria;
 	}

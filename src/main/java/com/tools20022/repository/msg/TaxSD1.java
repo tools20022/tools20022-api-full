@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides extra tax details.
@@ -77,6 +81,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides extra tax details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxSD1", propOrder = {"placeAndName", "foreignTaxCreditAmount", "foreignTaxCreditRate", "foreignSourceAmount", "foreignSourceRate", "taxAdvantageType", "taxAdvantageAmount", "taxAdvantageRate", "sundryOrOtherRate",
+		"taxDeferredRate", "taxFreeRate"})
 public class TaxSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -562,6 +569,7 @@ public class TaxSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -570,6 +578,7 @@ public class TaxSD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "FrgnTaxCdtAmt")
 	public RestrictedFINActiveCurrencyAndAmount getForeignTaxCreditAmount() {
 		return foreignTaxCreditAmount;
 	}
@@ -578,6 +587,7 @@ public class TaxSD1 {
 		this.foreignTaxCreditAmount = foreignTaxCreditAmount;
 	}
 
+	@XmlElement(name = "FrgnTaxCdtRate")
 	public PercentageRate getForeignTaxCreditRate() {
 		return foreignTaxCreditRate;
 	}
@@ -586,6 +596,7 @@ public class TaxSD1 {
 		this.foreignTaxCreditRate = foreignTaxCreditRate;
 	}
 
+	@XmlElement(name = "FrgnSrcAmt")
 	public RestrictedFINActiveCurrencyAndAmount getForeignSourceAmount() {
 		return foreignSourceAmount;
 	}
@@ -594,6 +605,7 @@ public class TaxSD1 {
 		this.foreignSourceAmount = foreignSourceAmount;
 	}
 
+	@XmlElement(name = "FrgnSrcRate")
 	public PercentageRate getForeignSourceRate() {
 		return foreignSourceRate;
 	}
@@ -602,6 +614,7 @@ public class TaxSD1 {
 		this.foreignSourceRate = foreignSourceRate;
 	}
 
+	@XmlElement(name = "TaxAdvntgTp")
 	public TaxAdvantageType1Code getTaxAdvantageType() {
 		return taxAdvantageType;
 	}
@@ -610,6 +623,7 @@ public class TaxSD1 {
 		this.taxAdvantageType = taxAdvantageType;
 	}
 
+	@XmlElement(name = "TaxAdvntgAmt")
 	public RestrictedFINActiveCurrencyAndAmount getTaxAdvantageAmount() {
 		return taxAdvantageAmount;
 	}
@@ -618,6 +632,7 @@ public class TaxSD1 {
 		this.taxAdvantageAmount = taxAdvantageAmount;
 	}
 
+	@XmlElement(name = "TaxAdvntgRate")
 	public PercentageRate getTaxAdvantageRate() {
 		return taxAdvantageRate;
 	}
@@ -626,6 +641,7 @@ public class TaxSD1 {
 		this.taxAdvantageRate = taxAdvantageRate;
 	}
 
+	@XmlElement(name = "SndryOrOthrRate")
 	public PercentageRate getSundryOrOtherRate() {
 		return sundryOrOtherRate;
 	}
@@ -634,6 +650,7 @@ public class TaxSD1 {
 		this.sundryOrOtherRate = sundryOrOtherRate;
 	}
 
+	@XmlElement(name = "TaxDfrrdRate")
 	public PercentageRate getTaxDeferredRate() {
 		return taxDeferredRate;
 	}
@@ -642,6 +659,7 @@ public class TaxSD1 {
 		this.taxDeferredRate = taxDeferredRate;
 	}
 
+	@XmlElement(name = "TaxFreeRate")
 	public PercentageRate getTaxFreeRate() {
 		return taxFreeRate;
 	}

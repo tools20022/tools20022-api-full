@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of an attempt to buy or sell a large number of financial
@@ -67,6 +71,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Bid3", propOrder = {"bidIdentification", "clientBidIdentification", "bidResponsePriceDetails"})
 public class Bid3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -210,6 +216,7 @@ public class Bid3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BidId")
 	public Max35Text getBidIdentification() {
 		return bidIdentification;
 	}
@@ -218,6 +225,7 @@ public class Bid3 {
 		this.bidIdentification = bidIdentification;
 	}
 
+	@XmlElement(name = "ClntBidId")
 	public Max35Text getClientBidIdentification() {
 		return clientBidIdentification;
 	}
@@ -226,6 +234,7 @@ public class Bid3 {
 		this.clientBidIdentification = clientBidIdentification;
 	}
 
+	@XmlElement(name = "BidRspnPricDtls", required = true)
 	public List<BidResponsePrice2> getBidResponsePriceDetails() {
 		return bidResponsePriceDetails;
 	}

@@ -36,6 +36,53 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmNativePerson
+ * Location.mmNativePerson}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmSystem
+ * Location.mmSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmDomiciledParty
+ * Location.mmDomiciledParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Location#mmOperatingOrganisation
+ * Location.mmOperatingOrganisation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmAddress
+ * Location.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmIssuedDocument
+ * Location.mmIssuedDocument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmIncoterms
+ * Location.mmIncoterms}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Location#mmDepartureTransportParameters
+ * Location.mmDepartureTransportParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Location#mmDestinationTransportParameters
+ * Location.mmDestinationTransportParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Location#mmInsuranceCertificate
+ * Location.mmInsuranceCertificate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmParty
+ * Location.mmParty}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmRelatedExpiry
+ * Location.mmRelatedExpiry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Location#mmRelatedJurisdiction
+ * Location.mmRelatedJurisdiction}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmIdentification
+ * Location.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmTaxableParty
+ * Location.mmTaxableParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Location#mmRegisteredOrganisation
+ * Location.mmRegisteredOrganisation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmRelatedTransport
+ * Location.mmRelatedTransport}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmTimeZone
+ * Location.mmTimeZone}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -104,53 +151,6 @@ import java.util.List;
  * ProcessingCharacteristics3.mmMainFundOrderDeskLocation}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Location#mmNativePerson
- * Location.mmNativePerson}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#mmSystem
- * Location.mmSystem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#mmDomiciledParty
- * Location.mmDomiciledParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Location#mmOperatingOrganisation
- * Location.mmOperatingOrganisation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#mmAddress
- * Location.mmAddress}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#mmIssuedDocument
- * Location.mmIssuedDocument}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#mmIncoterms
- * Location.mmIncoterms}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Location#mmDepartureTransportParameters
- * Location.mmDepartureTransportParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Location#mmDestinationTransportParameters
- * Location.mmDestinationTransportParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Location#mmInsuranceCertificate
- * Location.mmInsuranceCertificate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#mmParty
- * Location.mmParty}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#mmRelatedExpiry
- * Location.mmRelatedExpiry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Location#mmRelatedJurisdiction
- * Location.mmRelatedJurisdiction}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#mmIdentification
- * Location.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#mmTaxableParty
- * Location.mmTaxableParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Location#mmRegisteredOrganisation
- * Location.mmRegisteredOrganisation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#mmRelatedTransport
- * Location.mmRelatedTransport}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#mmTimeZone
- * Location.mmTimeZone}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -203,7 +203,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmNativePerson = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NativePerson";
@@ -249,7 +249,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
@@ -295,7 +295,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmDomiciledParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DomiciledParty";
@@ -343,7 +343,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmOperatingOrganisation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OperatingOrganisation";
@@ -373,10 +373,6 @@ public class Location {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PostalAddress
 	 * PostalAddress}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Location
-	 * Location}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -398,6 +394,10 @@ public class Location {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Location
+	 * Location}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -413,7 +413,7 @@ public class Location {
 		{
 			derivation_lazy = () -> Arrays.asList(Organisation12.mmOperationalAddress, OrganisationModification1.mmOperationalAddress, InsuranceDataSet1.mmPlaceOfIssue, IndividualPerson28.mmModifiedPostalAddress,
 					IndividualPerson33.mmModifiedPostalAddress);
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Address";
@@ -458,7 +458,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmIssuedDocument = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuedDocument";
@@ -504,7 +504,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmIncoterms = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Incoterms";
@@ -550,7 +550,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmDepartureTransportParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepartureTransportParameters";
@@ -597,7 +597,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmDestinationTransportParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DestinationTransportParameters";
@@ -646,7 +646,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmInsuranceCertificate = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsuranceCertificate";
@@ -692,7 +692,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Party";
@@ -738,7 +738,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedExpiry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedExpiry";
@@ -785,7 +785,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedJurisdiction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedJurisdiction";
@@ -837,7 +837,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -882,7 +882,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmTaxableParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxableParty";
@@ -929,7 +929,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmRegisteredOrganisation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegisteredOrganisation";
@@ -977,7 +977,7 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedTransport = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedTransport";
@@ -1007,10 +1007,6 @@ public class Location {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.UTCOffset UTCOffset}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Location
-	 * Location}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1019,6 +1015,10 @@ public class Location {
 	 * MainFundOrderDeskLocation1.mmTimeZoneOffSet}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Location
+	 * Location}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1033,7 +1033,7 @@ public class Location {
 	public static final MMBusinessAssociationEnd mmTimeZone = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(MainFundOrderDeskLocation1.mmTimeZoneOffSet);
-			elementContext_lazy = () -> Location.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TimeZone";
@@ -1060,10 +1060,18 @@ public class Location {
 						com.tools20022.repository.entity.Transport.mmPlaceOfDeparture, com.tools20022.repository.entity.Transport.mmPlaceOfDestination, com.tools20022.repository.entity.Transport.mmTransitLocation,
 						com.tools20022.repository.entity.Incoterms.mmLocation);
 				derivationElement_lazy = () -> Arrays.asList(ProcessingCharacteristics3.mmMainFundOrderDeskLocation);
-				element_lazy = () -> Arrays.asList(Location.mmNativePerson, Location.mmSystem, Location.mmDomiciledParty, Location.mmOperatingOrganisation, Location.mmAddress, Location.mmIssuedDocument, Location.mmIncoterms,
-						Location.mmDepartureTransportParameters, Location.mmDestinationTransportParameters, Location.mmInsuranceCertificate, Location.mmParty, Location.mmRelatedExpiry, Location.mmRelatedJurisdiction,
-						Location.mmIdentification, Location.mmTaxableParty, Location.mmRegisteredOrganisation, Location.mmRelatedTransport, Location.mmTimeZone);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Location.mmNativePerson, com.tools20022.repository.entity.Location.mmSystem, com.tools20022.repository.entity.Location.mmDomiciledParty,
+						com.tools20022.repository.entity.Location.mmOperatingOrganisation, com.tools20022.repository.entity.Location.mmAddress, com.tools20022.repository.entity.Location.mmIssuedDocument,
+						com.tools20022.repository.entity.Location.mmIncoterms, com.tools20022.repository.entity.Location.mmDepartureTransportParameters, com.tools20022.repository.entity.Location.mmDestinationTransportParameters,
+						com.tools20022.repository.entity.Location.mmInsuranceCertificate, com.tools20022.repository.entity.Location.mmParty, com.tools20022.repository.entity.Location.mmRelatedExpiry,
+						com.tools20022.repository.entity.Location.mmRelatedJurisdiction, com.tools20022.repository.entity.Location.mmIdentification, com.tools20022.repository.entity.Location.mmTaxableParty,
+						com.tools20022.repository.entity.Location.mmRegisteredOrganisation, com.tools20022.repository.entity.Location.mmRelatedTransport, com.tools20022.repository.entity.Location.mmTimeZone);
 				derivationComponent_lazy = () -> Arrays.asList(Location1.mmObject(), AirportDescription1.mmObject(), Location2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Location.class;
 			}
 		});
 		return mmObject_lazy.get();

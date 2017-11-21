@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details for negotiating and trading a large number of securities
@@ -104,6 +108,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "List1", propOrder = {"listIdentification", "numberOfListOrders", "totalNumberOfListOrders", "immediateExecutionIndicator", "executionInstruction", "progressReportIndicator", "progressPeriodInterval",
+		"realTimeExecutionReportIndicator", "bidType", "moneyLaunderingStatus", "allowableOneSidednessPercent", "allowableOneSidednessValue", "orderDetails"})
 public class List1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -704,6 +711,7 @@ public class List1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ListId", required = true)
 	public Max35Text getListIdentification() {
 		return listIdentification;
 	}
@@ -712,6 +720,7 @@ public class List1 {
 		this.listIdentification = listIdentification;
 	}
 
+	@XmlElement(name = "NbOfListOrdrs", required = true)
 	public Number getNumberOfListOrders() {
 		return numberOfListOrders;
 	}
@@ -720,6 +729,7 @@ public class List1 {
 		this.numberOfListOrders = numberOfListOrders;
 	}
 
+	@XmlElement(name = "TtlNbOfListOrdrs", required = true)
 	public Number getTotalNumberOfListOrders() {
 		return totalNumberOfListOrders;
 	}
@@ -728,6 +738,7 @@ public class List1 {
 		this.totalNumberOfListOrders = totalNumberOfListOrders;
 	}
 
+	@XmlElement(name = "ImdtExctnInd")
 	public YesNoIndicator getImmediateExecutionIndicator() {
 		return immediateExecutionIndicator;
 	}
@@ -736,6 +747,7 @@ public class List1 {
 		this.immediateExecutionIndicator = immediateExecutionIndicator;
 	}
 
+	@XmlElement(name = "ExctnInstr")
 	public Max140Text getExecutionInstruction() {
 		return executionInstruction;
 	}
@@ -744,6 +756,7 @@ public class List1 {
 		this.executionInstruction = executionInstruction;
 	}
 
+	@XmlElement(name = "PrgrsRptInd")
 	public YesNoIndicator getProgressReportIndicator() {
 		return progressReportIndicator;
 	}
@@ -752,6 +765,7 @@ public class List1 {
 		this.progressReportIndicator = progressReportIndicator;
 	}
 
+	@XmlElement(name = "PrgrsPrdIntrvl")
 	public ISOTime getProgressPeriodInterval() {
 		return progressPeriodInterval;
 	}
@@ -760,6 +774,7 @@ public class List1 {
 		this.progressPeriodInterval = progressPeriodInterval;
 	}
 
+	@XmlElement(name = "RealTmExctnRptInd")
 	public YesNoIndicator getRealTimeExecutionReportIndicator() {
 		return realTimeExecutionReportIndicator;
 	}
@@ -768,6 +783,7 @@ public class List1 {
 		this.realTimeExecutionReportIndicator = realTimeExecutionReportIndicator;
 	}
 
+	@XmlElement(name = "BidTp")
 	public BidType1Code getBidType() {
 		return bidType;
 	}
@@ -776,6 +792,7 @@ public class List1 {
 		this.bidType = bidType;
 	}
 
+	@XmlElement(name = "MnyLndrgSts")
 	public OldMoneyLaunderingCheck1Code getMoneyLaunderingStatus() {
 		return moneyLaunderingStatus;
 	}
@@ -784,6 +801,7 @@ public class List1 {
 		this.moneyLaunderingStatus = moneyLaunderingStatus;
 	}
 
+	@XmlElement(name = "AllwblOneSddnsPct", required = true)
 	public PercentageRate getAllowableOneSidednessPercent() {
 		return allowableOneSidednessPercent;
 	}
@@ -792,6 +810,7 @@ public class List1 {
 		this.allowableOneSidednessPercent = allowableOneSidednessPercent;
 	}
 
+	@XmlElement(name = "AllwblOneSddnsVal", required = true)
 	public ActiveCurrencyAndAmount getAllowableOneSidednessValue() {
 		return allowableOneSidednessValue;
 	}
@@ -800,6 +819,7 @@ public class List1 {
 		this.allowableOneSidednessValue = allowableOneSidednessValue;
 	}
 
+	@XmlElement(name = "OrdrDtls", required = true)
 	public List<Order6> getOrderDetails() {
 		return orderDetails;
 	}

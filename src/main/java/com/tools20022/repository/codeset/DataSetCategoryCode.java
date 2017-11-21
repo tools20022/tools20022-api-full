@@ -29,33 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory2Code
- * DataSetCategory2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory3Code
- * DataSetCategory3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory1Code
- * DataSetCategory1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory5Code
- * DataSetCategory5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory6Code
- * DataSetCategory6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory4Code
- * DataSetCategory4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory7Code
- * DataSetCategory7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory9Code
- * DataSetCategory9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory10Code
- * DataSetCategory10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory8Code
- * DataSetCategory8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory11Code
- * DataSetCategory11Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -151,6 +124,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmCertificateParameters
  * DataSetCategoryCode.mmCertificateParameters}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory2Code
+ * DataSetCategory2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory3Code
+ * DataSetCategory3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory1Code
+ * DataSetCategory1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory5Code
+ * DataSetCategory5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory6Code
+ * DataSetCategory6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory4Code
+ * DataSetCategory4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory7Code
+ * DataSetCategory7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory9Code
+ * DataSetCategory9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory10Code
+ * DataSetCategory10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory8Code
+ * DataSetCategory8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DataSetCategory11Code
+ * DataSetCategory11Code}</li>
  * </ul>
  * </li>
  * <li>

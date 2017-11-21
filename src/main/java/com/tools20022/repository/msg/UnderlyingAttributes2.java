@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional details on the underlying. In securities financing deals,
@@ -103,6 +107,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnderlyingAttributes2", propOrder = {"allocationPercentage", "quantity", "settlementType", "cashAmount", "cashType", "price", "dirtyPrice", "endPrice", "startValue", "currentValue", "endValue", "adjustedQuantity",
+		"exchangeRate", "capValue"})
 public class UnderlyingAttributes2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -813,6 +820,7 @@ public class UnderlyingAttributes2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AllcnPctg")
 	public PercentageRate getAllocationPercentage() {
 		return allocationPercentage;
 	}
@@ -821,6 +829,7 @@ public class UnderlyingAttributes2 {
 		this.allocationPercentage = allocationPercentage;
 	}
 
+	@XmlElement(name = "Qty")
 	public UnitOrFaceAmountChoice getQuantity() {
 		return quantity;
 	}
@@ -829,6 +838,7 @@ public class UnderlyingAttributes2 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "SttlmTp")
 	public SettlementType2Choice getSettlementType() {
 		return settlementType;
 	}
@@ -837,6 +847,7 @@ public class UnderlyingAttributes2 {
 		this.settlementType = settlementType;
 	}
 
+	@XmlElement(name = "CshAmt")
 	public ActiveCurrencyAndAmount getCashAmount() {
 		return cashAmount;
 	}
@@ -845,6 +856,7 @@ public class UnderlyingAttributes2 {
 		this.cashAmount = cashAmount;
 	}
 
+	@XmlElement(name = "CshTp")
 	public Max35Text getCashType() {
 		return cashType;
 	}
@@ -853,6 +865,7 @@ public class UnderlyingAttributes2 {
 		this.cashType = cashType;
 	}
 
+	@XmlElement(name = "Pric")
 	public Price1 getPrice() {
 		return price;
 	}
@@ -861,6 +874,7 @@ public class UnderlyingAttributes2 {
 		this.price = price;
 	}
 
+	@XmlElement(name = "DrtyPric")
 	public Price1 getDirtyPrice() {
 		return dirtyPrice;
 	}
@@ -869,6 +883,7 @@ public class UnderlyingAttributes2 {
 		this.dirtyPrice = dirtyPrice;
 	}
 
+	@XmlElement(name = "EndPric")
 	public Price1 getEndPrice() {
 		return endPrice;
 	}
@@ -877,6 +892,7 @@ public class UnderlyingAttributes2 {
 		this.endPrice = endPrice;
 	}
 
+	@XmlElement(name = "StartVal")
 	public ActiveCurrencyAndAmount getStartValue() {
 		return startValue;
 	}
@@ -885,6 +901,7 @@ public class UnderlyingAttributes2 {
 		this.startValue = startValue;
 	}
 
+	@XmlElement(name = "CurVal")
 	public ActiveCurrencyAndAmount getCurrentValue() {
 		return currentValue;
 	}
@@ -893,6 +910,7 @@ public class UnderlyingAttributes2 {
 		this.currentValue = currentValue;
 	}
 
+	@XmlElement(name = "EndVal")
 	public ActiveCurrencyAndAmount getEndValue() {
 		return endValue;
 	}
@@ -901,6 +919,7 @@ public class UnderlyingAttributes2 {
 		this.endValue = endValue;
 	}
 
+	@XmlElement(name = "AdjstdQty")
 	public UnitOrFaceAmountChoice getAdjustedQuantity() {
 		return adjustedQuantity;
 	}
@@ -909,6 +928,7 @@ public class UnderlyingAttributes2 {
 		this.adjustedQuantity = adjustedQuantity;
 	}
 
+	@XmlElement(name = "XchgRate")
 	public PercentageRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -917,6 +937,7 @@ public class UnderlyingAttributes2 {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "CapVal")
 	public ActiveCurrencyAndAmount getCapValue() {
 		return capValue;
 	}

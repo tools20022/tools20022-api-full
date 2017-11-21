@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique identification, as assigned by the first instructing agent, to
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnderlyingGroupInformation1", propOrder = {"originalMessageIdentification", "originalMessageNameIdentification", "originalCreationDateTime", "originalMessageDeliveryChannel"})
 public class UnderlyingGroupInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -258,6 +264,7 @@ public class UnderlyingGroupInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMsgId", required = true)
 	public Max35Text getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}
@@ -266,6 +273,7 @@ public class UnderlyingGroupInformation1 {
 		this.originalMessageIdentification = originalMessageIdentification;
 	}
 
+	@XmlElement(name = "OrgnlMsgNmId", required = true)
 	public Max35Text getOriginalMessageNameIdentification() {
 		return originalMessageNameIdentification;
 	}
@@ -274,6 +282,7 @@ public class UnderlyingGroupInformation1 {
 		this.originalMessageNameIdentification = originalMessageNameIdentification;
 	}
 
+	@XmlElement(name = "OrgnlCreDtTm")
 	public ISODateTime getOriginalCreationDateTime() {
 		return originalCreationDateTime;
 	}
@@ -282,6 +291,7 @@ public class UnderlyingGroupInformation1 {
 		this.originalCreationDateTime = originalCreationDateTime;
 	}
 
+	@XmlElement(name = "OrgnlMsgDlvryChanl")
 	public Max35Text getOriginalMessageDeliveryChannel() {
 		return originalMessageDeliveryChannel;
 	}

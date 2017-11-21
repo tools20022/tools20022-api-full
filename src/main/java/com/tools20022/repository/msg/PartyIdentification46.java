@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of an entity involved in an activity.
@@ -75,6 +79,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification46", propOrder = {"identification", "processingIdentification"})
 public class PartyIdentification46 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -210,6 +216,7 @@ public class PartyIdentification46 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification44Choice getIdentification() {
 		return identification;
 	}
@@ -218,6 +225,7 @@ public class PartyIdentification46 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public Max35Text getProcessingIdentification() {
 		return processingIdentification;
 	}

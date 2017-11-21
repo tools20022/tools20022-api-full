@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.AcceptorCancellationAdvice2;
 import com.tools20022.repository.msg.ContentInformationType6;
 import com.tools20022.repository.msg.Header2;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The AcceptorCancellationAdvice message is sent by an acceptor (or its agent)
@@ -38,9 +40,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.007.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive
@@ -71,6 +70,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.007.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -94,6 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorCancellationAdviceV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorCancellationAdviceV02", propOrder = {"header", "cancellationAdvice", "securityTrailer"})
 public class AcceptorCancellationAdviceV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -139,6 +143,14 @@ public class AcceptorCancellationAdviceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorCancellationAdviceV02.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AcceptorCancellationAdvice2 cancellationAdvice;
 	/**
@@ -182,6 +194,14 @@ public class AcceptorCancellationAdviceV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorCancellationAdvice2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorCancellationAdviceV02.class.getMethod("getCancellationAdvice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ContentInformationType6 securityTrailer;
@@ -227,6 +247,14 @@ public class AcceptorCancellationAdviceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType6.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorCancellationAdviceV02.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -241,7 +269,8 @@ public class AcceptorCancellationAdviceV02 {
 				rootElement = "Document";
 				xmlTag = "AccptrCxlAdvc";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorCancellationAdviceV02.mmHeader, AcceptorCancellationAdviceV02.mmCancellationAdvice, AcceptorCancellationAdviceV02.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02.mmHeader, com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02.mmCancellationAdvice,
+						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";
@@ -251,10 +280,16 @@ public class AcceptorCancellationAdviceV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcceptorCancellationAdviceV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header2 getHeader() {
 		return header;
 	}
@@ -263,6 +298,7 @@ public class AcceptorCancellationAdviceV02 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "CxlAdvc", required = true)
 	public AcceptorCancellationAdvice2 getCancellationAdvice() {
 		return cancellationAdvice;
 	}
@@ -271,11 +307,18 @@ public class AcceptorCancellationAdviceV02 {
 		this.cancellationAdvice = cancellationAdvice;
 	}
 
+	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType6 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType6 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.007.02.02")
+	static public class Document {
+		@XmlElement(name = "AccptrCxlAdvc", required = true)
+		public AcceptorCancellationAdviceV02 messageBody;
 	}
 }

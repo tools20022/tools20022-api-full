@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide detailed information on the number of
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * NumberOfTransactionsPerStatus3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NumberOfTransactionsPerStatus5", propOrder = {"detailedNumberOfTransactions", "detailedStatus", "detailedControlSum"})
 public class NumberOfTransactionsPerStatus5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -238,6 +244,7 @@ public class NumberOfTransactionsPerStatus5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtldNbOfTxs", required = true)
 	public Max15NumericText getDetailedNumberOfTransactions() {
 		return detailedNumberOfTransactions;
 	}
@@ -246,6 +253,7 @@ public class NumberOfTransactionsPerStatus5 {
 		this.detailedNumberOfTransactions = detailedNumberOfTransactions;
 	}
 
+	@XmlElement(name = "DtldSts", required = true)
 	public ExternalPaymentTransactionStatus1Code getDetailedStatus() {
 		return detailedStatus;
 	}
@@ -254,6 +262,7 @@ public class NumberOfTransactionsPerStatus5 {
 		this.detailedStatus = detailedStatus;
 	}
 
+	@XmlElement(name = "DtldCtrlSum")
 	public DecimalNumber getDetailedControlSum() {
 		return detailedControlSum;
 	}

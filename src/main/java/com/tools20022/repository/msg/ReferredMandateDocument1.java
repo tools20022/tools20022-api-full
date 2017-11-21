@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the documents referred to in the remittance information.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ReferredDocumentInformation6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReferredMandateDocument1", propOrder = {"type", "number", "creditorReference", "relatedDate"})
 public class ReferredMandateDocument1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -303,6 +309,7 @@ public class ReferredMandateDocument1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public ReferredDocumentType4 getType() {
 		return type;
 	}
@@ -311,6 +318,7 @@ public class ReferredMandateDocument1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Nb")
 	public Max35Text getNumber() {
 		return number;
 	}
@@ -319,6 +327,7 @@ public class ReferredMandateDocument1 {
 		this.number = number;
 	}
 
+	@XmlElement(name = "CdtrRef")
 	public Max35Text getCreditorReference() {
 		return creditorReference;
 	}
@@ -327,6 +336,7 @@ public class ReferredMandateDocument1 {
 		this.creditorReference = creditorReference;
 	}
 
+	@XmlElement(name = "RltdDt")
 	public ISODate getRelatedDate() {
 		return relatedDate;
 	}

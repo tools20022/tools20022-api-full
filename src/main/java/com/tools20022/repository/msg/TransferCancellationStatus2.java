@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transfer cancellation status is accepted or sent to next party.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Transfer cancellation status is accepted or sent to next party."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferCancellationStatus2", propOrder = {"status", "reason"})
 public class TransferCancellationStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class TransferCancellationStatus2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public CancellationStatus2Code getStatus() {
 		return status;
 	}
@@ -186,6 +193,7 @@ public class TransferCancellationStatus2 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Rsn")
 	public Max350Text getReason() {
 		return reason;
 	}

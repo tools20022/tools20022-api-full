@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indetification of a cryptographic Key to use.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CryptographicKey2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CryptographicKey3", propOrder = {"identification", "additionalIdentification", "version"})
 public class CryptographicKey3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -211,6 +217,7 @@ public class CryptographicKey3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max140Text getIdentification() {
 		return identification;
 	}
@@ -219,6 +226,7 @@ public class CryptographicKey3 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AddtlId")
 	public Max35Binary getAdditionalIdentification() {
 		return additionalIdentification;
 	}
@@ -227,6 +235,7 @@ public class CryptographicKey3 {
 		this.additionalIdentification = additionalIdentification;
 	}
 
+	@XmlElement(name = "Vrsn", required = true)
 	public Exact10Text getVersion() {
 		return version;
 	}

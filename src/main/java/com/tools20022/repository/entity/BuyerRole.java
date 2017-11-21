@@ -34,6 +34,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
+ * TradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -75,9 +78,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesTransactionReport4.mmBuyer}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
- * TradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -108,6 +108,11 @@ public class BuyerRole extends TradePartyRole {
 						TradeContract1.mmBuyer, LoanContract1.mmBuyer, PartyIdentification79.mmDecisionMaker, TaxReport1.mmBuyer, TradeAgreement13.mmBuyer, SecuritiesTransactionReport4.mmBuyer);
 				superType_lazy = () -> TradePartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(PartyIdentification72.mmObject(), TaxReport1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BuyerRole.class;
 			}
 		});
 		return mmObject_lazy.get();

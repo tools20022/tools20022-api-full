@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the account.
@@ -86,6 +90,8 @@ import java.util.function.Supplier;
  * definition} = "Provides information about the account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProceedsDelivery1", propOrder = {"securitiesAccountIdentification", "cashAccountIdentification", "accountOwnerIdentification", "accountServicerIdentification"})
 public class ProceedsDelivery1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -352,6 +358,7 @@ public class ProceedsDelivery1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesAcctId", required = true)
 	public Max35Text getSecuritiesAccountIdentification() {
 		return securitiesAccountIdentification;
 	}
@@ -360,6 +367,7 @@ public class ProceedsDelivery1 {
 		this.securitiesAccountIdentification = securitiesAccountIdentification;
 	}
 
+	@XmlElement(name = "CshAcctId", required = true)
 	public CashAccountIdentification1Choice getCashAccountIdentification() {
 		return cashAccountIdentification;
 	}
@@ -368,6 +376,7 @@ public class ProceedsDelivery1 {
 		this.cashAccountIdentification = cashAccountIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnrId")
 	public PartyIdentification2Choice getAccountOwnerIdentification() {
 		return accountOwnerIdentification;
 	}
@@ -376,6 +385,7 @@ public class ProceedsDelivery1 {
 		this.accountOwnerIdentification = accountOwnerIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrId")
 	public PartyIdentification2Choice getAccountServicerIdentification() {
 		return accountServicerIdentification;
 	}

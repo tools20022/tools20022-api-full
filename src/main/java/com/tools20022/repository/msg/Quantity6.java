@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details on the quantity, account and other related information involved in a
@@ -76,6 +80,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Quantity6", propOrder = {"settlementQuantity", "denominationChoice", "certificateNumber", "quantityBreakdown"})
 public class Quantity6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -291,6 +297,7 @@ public class Quantity6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmQty", required = true)
 	public FinancialInstrumentQuantity15Choice getSettlementQuantity() {
 		return settlementQuantity;
 	}
@@ -299,6 +306,7 @@ public class Quantity6 {
 		this.settlementQuantity = settlementQuantity;
 	}
 
+	@XmlElement(name = "DnmtnChc")
 	public RestrictedFINXMax210Text getDenominationChoice() {
 		return denominationChoice;
 	}
@@ -307,6 +315,7 @@ public class Quantity6 {
 		this.denominationChoice = denominationChoice;
 	}
 
+	@XmlElement(name = "CertNb")
 	public List<SecuritiesCertificate2> getCertificateNumber() {
 		return certificateNumber;
 	}
@@ -315,6 +324,7 @@ public class Quantity6 {
 		this.certificateNumber = certificateNumber;
 	}
 
+	@XmlElement(name = "QtyBrkdwn")
 	public List<QuantityBreakdown7> getQuantityBreakdown() {
 		return quantityBreakdown;
 	}

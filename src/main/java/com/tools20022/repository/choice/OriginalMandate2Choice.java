@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Mandate1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the mandate that is being accepted.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalMandate2Choice", propOrder = {"originalMandateIdentification", "originalMandate"})
 public class OriginalMandate2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -203,6 +209,7 @@ public class OriginalMandate2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMndtId", required = true)
 	public Max35Text getOriginalMandateIdentification() {
 		return originalMandateIdentification;
 	}
@@ -211,6 +218,7 @@ public class OriginalMandate2Choice {
 		this.originalMandateIdentification = originalMandateIdentification;
 	}
 
+	@XmlElement(name = "OrgnlMndt", required = true)
 	public Mandate1 getOriginalMandate() {
 		return originalMandate;
 	}

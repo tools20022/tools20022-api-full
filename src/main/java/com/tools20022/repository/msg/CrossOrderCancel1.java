@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides original client order identification and order modification time.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides original client order identification and order modification time."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CrossOrderCancel1", propOrder = {"originalClientOrderIdentification", "originalOrderModificationTime"})
 public class CrossOrderCancel1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +173,7 @@ public class CrossOrderCancel1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlClntOrdrId", required = true)
 	public Max35Text getOriginalClientOrderIdentification() {
 		return originalClientOrderIdentification;
 	}
@@ -175,6 +182,7 @@ public class CrossOrderCancel1 {
 		this.originalClientOrderIdentification = originalClientOrderIdentification;
 	}
 
+	@XmlElement(name = "OrgnlOrdrModTm")
 	public ISODateTime getOriginalOrderModificationTime() {
 		return originalOrderModificationTime;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a payment against a commercial invoice.
@@ -72,6 +76,8 @@ import java.util.List;
  * ReportLine4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportLine6", propOrder = {"commercialDocumentReference", "adjustment", "netAmount", "breakdownByPurchaseOrder"})
 public class ReportLine6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -292,6 +298,7 @@ public class ReportLine6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ComrclDocRef", required = true)
 	public InvoiceIdentification1 getCommercialDocumentReference() {
 		return commercialDocumentReference;
 	}
@@ -300,6 +307,7 @@ public class ReportLine6 {
 		this.commercialDocumentReference = commercialDocumentReference;
 	}
 
+	@XmlElement(name = "Adjstmnt")
 	public List<Adjustment6> getAdjustment() {
 		return adjustment;
 	}
@@ -308,6 +316,7 @@ public class ReportLine6 {
 		this.adjustment = adjustment;
 	}
 
+	@XmlElement(name = "NetAmt", required = true)
 	public CurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
@@ -316,6 +325,7 @@ public class ReportLine6 {
 		this.netAmount = netAmount;
 	}
 
+	@XmlElement(name = "BrkdwnByPurchsOrdr", required = true)
 	public List<ReportLine7> getBreakdownByPurchaseOrder() {
 		return breakdownByPurchaseOrder;
 	}

@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the clearing details.
@@ -82,6 +86,8 @@ import java.util.List;
  * definition} = "Provides the clearing details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Clearing3", propOrder = {"clearingMember", "clearingSegment"})
 public class Clearing3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -202,6 +208,7 @@ public class Clearing3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClrMmb", required = true)
 	public List<PartyIdentificationAndAccount78> getClearingMember() {
 		return clearingMember;
 	}
@@ -210,6 +217,7 @@ public class Clearing3 {
 		this.clearingMember = clearingMember;
 	}
 
+	@XmlElement(name = "ClrSgmt")
 	public PartyIdentification35Choice getClearingSegment() {
 		return clearingSegment;
 	}

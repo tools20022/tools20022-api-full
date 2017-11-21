@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.RequestDetails5;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The StaticDataReport message is sent by a central system to the participant
@@ -38,9 +40,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code admi.010.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AdministrationLatestVersion
@@ -79,6 +78,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code admi.010.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -90,6 +92,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StaticDataReportV02", propOrder = {"messageIdentification", "settlementSessionIdentifier", "reportDetails", "supplementaryData"})
 public class StaticDataReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -129,6 +133,14 @@ public class StaticDataReportV02 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StaticDataReportV02.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
@@ -167,6 +179,14 @@ public class StaticDataReportV02 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StaticDataReportV02.class.getMethod("getSettlementSessionIdentifier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected RequestDetails5 reportDetails;
 	/**
@@ -200,6 +220,14 @@ public class StaticDataReportV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> RequestDetails5.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StaticDataReportV02.class.getMethod("getReportDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -238,6 +266,14 @@ public class StaticDataReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StaticDataReportV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -250,7 +286,8 @@ public class StaticDataReportV02 {
 				rootElement = "Document";
 				xmlTag = "StatcDataRpt";
 				businessArea_lazy = () -> AdministrationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(StaticDataReportV02.mmMessageIdentification, StaticDataReportV02.mmSettlementSessionIdentifier, StaticDataReportV02.mmReportDetails, StaticDataReportV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.StaticDataReportV02.mmMessageIdentification, com.tools20022.repository.area.admi.StaticDataReportV02.mmSettlementSessionIdentifier,
+						com.tools20022.repository.area.admi.StaticDataReportV02.mmReportDetails, com.tools20022.repository.area.admi.StaticDataReportV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "admi";
@@ -260,10 +297,16 @@ public class StaticDataReportV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StaticDataReportV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -272,6 +315,7 @@ public class StaticDataReportV02 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "SttlmSsnIdr")
 	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
 		return settlementSessionIdentifier;
 	}
@@ -280,6 +324,7 @@ public class StaticDataReportV02 {
 		this.settlementSessionIdentifier = settlementSessionIdentifier;
 	}
 
+	@XmlElement(name = "RptDtls", required = true)
 	public RequestDetails5 getReportDetails() {
 		return reportDetails;
 	}
@@ -288,11 +333,18 @@ public class StaticDataReportV02 {
 		this.reportDetails = reportDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:admi.010.02.02")
+	static public class Document {
+		@XmlElement(name = "StatcDataRpt", required = true)
+		public StaticDataReportV02 messageBody;
 	}
 }

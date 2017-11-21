@@ -27,6 +27,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status that is accepted under certain conditions.
@@ -74,6 +78,8 @@ import java.util.function.Supplier;
  * definition} = "Status that is accepted under certain conditions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ConditionallyAcceptedStatus1", propOrder = {"noReason", "reason", "dataSourceScheme"})
 public class ConditionallyAcceptedStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -293,6 +299,7 @@ public class ConditionallyAcceptedStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NoRsn", required = true)
 	public NoReasonCode getNoReason() {
 		return noReason;
 	}
@@ -301,6 +308,7 @@ public class ConditionallyAcceptedStatus1 {
 		this.noReason = noReason;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public ConditionallyAcceptedStatusReason1 getReason() {
 		return reason;
 	}
@@ -309,6 +317,7 @@ public class ConditionallyAcceptedStatus1 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}

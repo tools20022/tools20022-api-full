@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide information on the corrective payment
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorrectivePaymentInitiation1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorrectivePaymentInitiation2", propOrder = {"groupHeader", "paymentInformationIdentification", "instructionIdentification", "endToEndIdentification", "instructedAmount", "requestedExecutionDate", "requestedCollectionDate"})
 public class CorrectivePaymentInitiation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -514,6 +520,7 @@ public class CorrectivePaymentInitiation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr")
 	public CorrectiveGroupInformation1 getGroupHeader() {
 		return groupHeader;
 	}
@@ -522,6 +529,7 @@ public class CorrectivePaymentInitiation2 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "PmtInfId")
 	public Max35Text getPaymentInformationIdentification() {
 		return paymentInformationIdentification;
 	}
@@ -530,6 +538,7 @@ public class CorrectivePaymentInitiation2 {
 		this.paymentInformationIdentification = paymentInformationIdentification;
 	}
 
+	@XmlElement(name = "InstrId")
 	public Max35Text getInstructionIdentification() {
 		return instructionIdentification;
 	}
@@ -538,6 +547,7 @@ public class CorrectivePaymentInitiation2 {
 		this.instructionIdentification = instructionIdentification;
 	}
 
+	@XmlElement(name = "EndToEndId")
 	public Max35Text getEndToEndIdentification() {
 		return endToEndIdentification;
 	}
@@ -546,6 +556,7 @@ public class CorrectivePaymentInitiation2 {
 		this.endToEndIdentification = endToEndIdentification;
 	}
 
+	@XmlElement(name = "InstdAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getInstructedAmount() {
 		return instructedAmount;
 	}
@@ -554,6 +565,7 @@ public class CorrectivePaymentInitiation2 {
 		this.instructedAmount = instructedAmount;
 	}
 
+	@XmlElement(name = "ReqdExctnDt")
 	public DateAndDateTimeChoice getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -562,6 +574,7 @@ public class CorrectivePaymentInitiation2 {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "ReqdColltnDt")
 	public ISODate getRequestedCollectionDate() {
 		return requestedCollectionDate;
 	}

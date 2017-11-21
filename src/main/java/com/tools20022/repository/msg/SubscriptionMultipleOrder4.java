@@ -31,6 +31,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Order to invest the investor's principal in an investment fund.
@@ -126,6 +130,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionMultipleOrder4", propOrder = {"masterReference", "placeOfTrade", "orderDateTime", "expiryDateTime", "requestedFutureTradeDate", "cancellationRight", "extendedCancellationRight", "investmentAccountDetails",
+		"beneficiaryDetails", "individualOrderDetails", "totalSettlementAmount", "cashSettlementDate", "bulkCashSettlementDetails"})
 public class SubscriptionMultipleOrder4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -934,6 +941,7 @@ public class SubscriptionMultipleOrder4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -942,6 +950,7 @@ public class SubscriptionMultipleOrder4 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public PlaceOfTradeIdentification1Choice getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -950,6 +959,7 @@ public class SubscriptionMultipleOrder4 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "OrdrDtTm")
 	public ISODateTime getOrderDateTime() {
 		return orderDateTime;
 	}
@@ -958,6 +968,7 @@ public class SubscriptionMultipleOrder4 {
 		this.orderDateTime = orderDateTime;
 	}
 
+	@XmlElement(name = "XpryDtTm")
 	public DateAndDateTimeChoice getExpiryDateTime() {
 		return expiryDateTime;
 	}
@@ -966,6 +977,7 @@ public class SubscriptionMultipleOrder4 {
 		this.expiryDateTime = expiryDateTime;
 	}
 
+	@XmlElement(name = "ReqdFutrTradDt")
 	public ISODate getRequestedFutureTradeDate() {
 		return requestedFutureTradeDate;
 	}
@@ -974,6 +986,7 @@ public class SubscriptionMultipleOrder4 {
 		this.requestedFutureTradeDate = requestedFutureTradeDate;
 	}
 
+	@XmlElement(name = "CxlRght")
 	public CancellationRight1Code getCancellationRight() {
 		return cancellationRight;
 	}
@@ -982,6 +995,7 @@ public class SubscriptionMultipleOrder4 {
 		this.cancellationRight = cancellationRight;
 	}
 
+	@XmlElement(name = "XtndedCxlRght")
 	public Extended350Code getExtendedCancellationRight() {
 		return extendedCancellationRight;
 	}
@@ -990,6 +1004,7 @@ public class SubscriptionMultipleOrder4 {
 		this.extendedCancellationRight = extendedCancellationRight;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount21 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -998,6 +1013,7 @@ public class SubscriptionMultipleOrder4 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "BnfcryDtls")
 	public IndividualPerson9 getBeneficiaryDetails() {
 		return beneficiaryDetails;
 	}
@@ -1006,6 +1022,7 @@ public class SubscriptionMultipleOrder4 {
 		this.beneficiaryDetails = beneficiaryDetails;
 	}
 
+	@XmlElement(name = "IndvOrdrDtls", required = true)
 	public List<SubscriptionOrder8> getIndividualOrderDetails() {
 		return individualOrderDetails;
 	}
@@ -1014,6 +1031,7 @@ public class SubscriptionMultipleOrder4 {
 		this.individualOrderDetails = individualOrderDetails;
 	}
 
+	@XmlElement(name = "TtlSttlmAmt")
 	public ActiveCurrencyAndAmount getTotalSettlementAmount() {
 		return totalSettlementAmount;
 	}
@@ -1022,6 +1040,7 @@ public class SubscriptionMultipleOrder4 {
 		this.totalSettlementAmount = totalSettlementAmount;
 	}
 
+	@XmlElement(name = "CshSttlmDt")
 	public ISODate getCashSettlementDate() {
 		return cashSettlementDate;
 	}
@@ -1030,6 +1049,7 @@ public class SubscriptionMultipleOrder4 {
 		this.cashSettlementDate = cashSettlementDate;
 	}
 
+	@XmlElement(name = "BlkCshSttlmDtls")
 	public PaymentTransaction23 getBulkCashSettlementDetails() {
 		return bulkCashSettlementDetails;
 	}

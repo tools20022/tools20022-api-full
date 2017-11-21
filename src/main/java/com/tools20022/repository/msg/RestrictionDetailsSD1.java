@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Restriction information details.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Restriction information details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RestrictionDetailsSD1", propOrder = {"restrictionType", "fiscalDomicile", "identification"})
 public class RestrictionDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -204,6 +210,7 @@ public class RestrictionDetailsSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RstrctnTp", required = true)
 	public GenericIdentification36 getRestrictionType() {
 		return restrictionType;
 	}
@@ -212,6 +219,7 @@ public class RestrictionDetailsSD1 {
 		this.restrictionType = restrictionType;
 	}
 
+	@XmlElement(name = "FsclDmcl", required = true)
 	public CountryCode getFiscalDomicile() {
 		return fiscalDomicile;
 	}
@@ -220,6 +228,7 @@ public class RestrictionDetailsSD1 {
 		this.fiscalDomicile = fiscalDomicile;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}

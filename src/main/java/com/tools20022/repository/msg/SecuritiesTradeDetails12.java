@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the securities trade.
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details of the securities trade."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTradeDetails12", propOrder = {"tradeDate", "openingSettlementDate", "numberOfDaysAccrued", "instructionProcessingAdditionalDetails"})
 public class SecuritiesTradeDetails12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -297,6 +303,7 @@ public class SecuritiesTradeDetails12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradDt")
 	public DateAndDateTimeChoice getTradeDate() {
 		return tradeDate;
 	}
@@ -305,6 +312,7 @@ public class SecuritiesTradeDetails12 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "OpngSttlmDt", required = true)
 	public DateAndDateTimeChoice getOpeningSettlementDate() {
 		return openingSettlementDate;
 	}
@@ -313,6 +321,7 @@ public class SecuritiesTradeDetails12 {
 		this.openingSettlementDate = openingSettlementDate;
 	}
 
+	@XmlElement(name = "NbOfDaysAcrd")
 	public Max3Number getNumberOfDaysAccrued() {
 		return numberOfDaysAccrued;
 	}
@@ -321,6 +330,7 @@ public class SecuritiesTradeDetails12 {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
 	}
 
+	@XmlElement(name = "InstrPrcgAddtlDtls")
 	public RestrictedFINXMax350Text getInstructionProcessingAdditionalDetails() {
 		return instructionProcessingAdditionalDetails;
 	}

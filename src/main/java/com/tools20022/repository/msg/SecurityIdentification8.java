@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique and unambiguous identifier of a security, assigned under a formal or
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityIdentification8", propOrder = {"securityIdentification", "description"})
 public class SecurityIdentification8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class SecurityIdentification8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification10Choice getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -188,6 +195,7 @@ public class SecurityIdentification8 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "Desc", required = true)
 	public Max140Text getDescription() {
 		return description;
 	}

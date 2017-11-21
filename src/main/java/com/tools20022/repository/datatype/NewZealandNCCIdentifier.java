@@ -33,6 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} = "New Zealand Bankers Association; NewZealandNCC"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "NZ[0-9]{6,6}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -69,6 +71,7 @@ public class NewZealandNCCIdentifier {
 				name = "NewZealandNCCIdentifier";
 				definition = "New Zealand Bank/Branch Code. Identifies New Zealand institutions on the New Zealand national clearing system. The code is assigned by the New Zealand Bankers' Association (NZBA).";
 				identificationScheme = "New Zealand Bankers Association; NewZealandNCC";
+				pattern = "NZ[0-9]{6,6}";
 			}
 		});
 		return mmObject_lazy.get();

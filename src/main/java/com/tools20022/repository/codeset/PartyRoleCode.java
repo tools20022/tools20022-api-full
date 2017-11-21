@@ -29,31 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundRole1Code
- * InvestmentFundRole1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundRole3Code
- * InvestmentFundRole3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundRole2Code
- * InvestmentFundRole2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentRole1Code
- * PaymentRole1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code
- * InvestmentFundRole4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundRole5Code
- * InvestmentFundRole5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundRole6Code
- * InvestmentFundRole6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code
- * InvestmentFundRole7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InternalPartyRole1Code
- * InternalPartyRole1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRole1Code
- * PartyRole1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -143,6 +118,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyRoleCode.mmPrimeBroker}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmInternal
  * PartyRoleCode.mmInternal}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundRole1Code
+ * InvestmentFundRole1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundRole3Code
+ * InvestmentFundRole3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundRole2Code
+ * InvestmentFundRole2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentRole1Code
+ * PaymentRole1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code
+ * InvestmentFundRole4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundRole5Code
+ * InvestmentFundRole5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundRole6Code
+ * InvestmentFundRole6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code
+ * InvestmentFundRole7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InternalPartyRole1Code
+ * InternalPartyRole1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyRole1Code
+ * PartyRole1Code}</li>
  * </ul>
  * </li>
  * <li>

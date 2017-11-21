@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.ExpectedCollateral1;
 import com.tools20022.repository.msg.ExpectedCollateralMovement1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the expected collateral type and direction for the variation margin
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExpectedCollateral1Choice", propOrder = {"expectedCollateralDetails", "segregatedIndependentAmount"})
 public class ExpectedCollateral1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -225,6 +231,7 @@ public class ExpectedCollateral1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XpctdCollDtls", required = true)
 	public ExpectedCollateral1 getExpectedCollateralDetails() {
 		return expectedCollateralDetails;
 	}
@@ -233,6 +240,7 @@ public class ExpectedCollateral1Choice {
 		this.expectedCollateralDetails = expectedCollateralDetails;
 	}
 
+	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
 	public ExpectedCollateralMovement1 getSegregatedIndependentAmount() {
 		return segregatedIndependentAmount;
 	}

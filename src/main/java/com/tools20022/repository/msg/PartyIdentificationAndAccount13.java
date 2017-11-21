@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party and account information.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Party and account information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount13", propOrder = {"partyIdentification", "accountIdentification"})
 public class PartyIdentificationAndAccount13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class PartyIdentificationAndAccount13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification26Choice getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -185,6 +192,7 @@ public class PartyIdentificationAndAccount13 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "AcctId")
 	public AccountIdentification1 getAccountIdentification() {
 		return accountIdentification;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of the cancellation requests.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the details of the cancellation requests."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraBalanceCancellation2", propOrder = {"accountOwner", "cashAccount", "processingStatus", "requestReference", "statusDate", "transactionIdentification", "underlyingIntraBalance"})
 public class IntraBalanceCancellation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -425,6 +431,7 @@ public class IntraBalanceCancellation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public SystemPartyIdentification5 getAccountOwner() {
 		return accountOwner;
 	}
@@ -433,6 +440,7 @@ public class IntraBalanceCancellation2 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccount24 getCashAccount() {
 		return cashAccount;
 	}
@@ -441,6 +449,7 @@ public class IntraBalanceCancellation2 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "PrcgSts")
 	public ProcessingStatus32Choice getProcessingStatus() {
 		return processingStatus;
 	}
@@ -449,6 +458,7 @@ public class IntraBalanceCancellation2 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "ReqRef", required = true)
 	public Max35Text getRequestReference() {
 		return requestReference;
 	}
@@ -457,6 +467,7 @@ public class IntraBalanceCancellation2 {
 		this.requestReference = requestReference;
 	}
 
+	@XmlElement(name = "StsDt")
 	public ISODateTime getStatusDate() {
 		return statusDate;
 	}
@@ -465,6 +476,7 @@ public class IntraBalanceCancellation2 {
 		this.statusDate = statusDate;
 	}
 
+	@XmlElement(name = "TxId")
 	public References14 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -473,6 +485,7 @@ public class IntraBalanceCancellation2 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "UndrlygIntraBal")
 	public IntraBalance1 getUnderlyingIntraBalance() {
 		return underlyingIntraBalance;
 	}

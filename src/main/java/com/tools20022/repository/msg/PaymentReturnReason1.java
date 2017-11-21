@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details on the reason of the return of the transaction.
@@ -68,6 +72,8 @@ import java.util.List;
  * "Provides further details on the reason of the return of the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentReturnReason1", propOrder = {"originator", "reason", "additionalInformation"})
 public class PaymentReturnReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -219,6 +225,7 @@ public class PaymentReturnReason1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Orgtr")
 	public PartyIdentification43 getOriginator() {
 		return originator;
 	}
@@ -227,6 +234,7 @@ public class PaymentReturnReason1 {
 		this.originator = originator;
 	}
 
+	@XmlElement(name = "Rsn")
 	public ReturnReason5Choice getReason() {
 		return reason;
 	}
@@ -235,6 +243,7 @@ public class PaymentReturnReason1 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max105Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

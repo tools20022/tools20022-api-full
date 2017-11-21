@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides remittance information about a payment for garnishment-related
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Garnishment1", propOrder = {"type", "garnishee", "garnishmentAdministrator", "referenceNumber", "date", "remittedAmount", "familyMedicalInsuranceIndicator", "employeeTerminationIndicator"})
 public class Garnishment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -486,6 +492,7 @@ public class Garnishment1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public GarnishmentType1 getType() {
 		return type;
 	}
@@ -494,6 +501,7 @@ public class Garnishment1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Grnshee")
 	public PartyIdentification43 getGarnishee() {
 		return garnishee;
 	}
@@ -502,6 +510,7 @@ public class Garnishment1 {
 		this.garnishee = garnishee;
 	}
 
+	@XmlElement(name = "GrnshmtAdmstr")
 	public PartyIdentification43 getGarnishmentAdministrator() {
 		return garnishmentAdministrator;
 	}
@@ -510,6 +519,7 @@ public class Garnishment1 {
 		this.garnishmentAdministrator = garnishmentAdministrator;
 	}
 
+	@XmlElement(name = "RefNb")
 	public Max140Text getReferenceNumber() {
 		return referenceNumber;
 	}
@@ -518,6 +528,7 @@ public class Garnishment1 {
 		this.referenceNumber = referenceNumber;
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODate getDate() {
 		return date;
 	}
@@ -526,6 +537,7 @@ public class Garnishment1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "RmtdAmt")
 	public ActiveOrHistoricCurrencyAndAmount getRemittedAmount() {
 		return remittedAmount;
 	}
@@ -534,6 +546,7 @@ public class Garnishment1 {
 		this.remittedAmount = remittedAmount;
 	}
 
+	@XmlElement(name = "FmlyMdclInsrncInd")
 	public TrueFalseIndicator getFamilyMedicalInsuranceIndicator() {
 		return familyMedicalInsuranceIndicator;
 	}
@@ -542,6 +555,7 @@ public class Garnishment1 {
 		this.familyMedicalInsuranceIndicator = familyMedicalInsuranceIndicator;
 	}
 
+	@XmlElement(name = "MplyeeTermntnInd")
 	public TrueFalseIndicator getEmployeeTerminationIndicator() {
 		return employeeTerminationIndicator;
 	}

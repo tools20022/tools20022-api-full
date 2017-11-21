@@ -29,32 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatus1Code
- * InstructionProcessingStatus1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code
- * TransactionProcessingStatus3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code
- * TransactionProcessingStatus4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus1Code
- * TransactionProcessingStatus1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus2Code
- * TransactionProcessingStatus2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code
- * SettlementConditionModificationProcessingStatus1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code
- * IntraPositionTransactionProcessingStatus1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -162,6 +136,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmRejectedByAccountOwner
  * InstructionProcessingStatusCode.mmRejectedByAccountOwner}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatus1Code
+ * InstructionProcessingStatus1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code
+ * TransactionProcessingStatus3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code
+ * TransactionProcessingStatus4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus1Code
+ * TransactionProcessingStatus1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus2Code
+ * TransactionProcessingStatus2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code
+ * SettlementConditionModificationProcessingStatus1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code
+ * IntraPositionTransactionProcessingStatus1Code}</li>
  * </ul>
  * </li>
  * <li>

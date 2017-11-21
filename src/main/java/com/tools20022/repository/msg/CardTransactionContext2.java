@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Context of the card transaction.
@@ -101,6 +105,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransactionContext2", propOrder = {"cardPresent", "cardholderPresent", "locationCategory", "attendanceContext", "transactionEnvironment", "hostingCategory", "transactionChannel", "cardDataEntryMode",
+		"fallbackIndicator", "supportedOption", "specialConditions", "riskIndicator"})
 public class CardTransactionContext2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -708,6 +715,7 @@ public class CardTransactionContext2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CardPres")
 	public TrueFalseIndicator getCardPresent() {
 		return cardPresent;
 	}
@@ -716,6 +724,7 @@ public class CardTransactionContext2 {
 		this.cardPresent = cardPresent;
 	}
 
+	@XmlElement(name = "CrdhldrPres")
 	public TrueFalseIndicator getCardholderPresent() {
 		return cardholderPresent;
 	}
@@ -724,6 +733,7 @@ public class CardTransactionContext2 {
 		this.cardholderPresent = cardholderPresent;
 	}
 
+	@XmlElement(name = "LctnCtgy")
 	public LocationCategory2Code getLocationCategory() {
 		return locationCategory;
 	}
@@ -732,6 +742,7 @@ public class CardTransactionContext2 {
 		this.locationCategory = locationCategory;
 	}
 
+	@XmlElement(name = "AttndncCntxt")
 	public AttendanceContext1Code getAttendanceContext() {
 		return attendanceContext;
 	}
@@ -740,6 +751,7 @@ public class CardTransactionContext2 {
 		this.attendanceContext = attendanceContext;
 	}
 
+	@XmlElement(name = "TxEnvt")
 	public TransactionEnvironment2Code getTransactionEnvironment() {
 		return transactionEnvironment;
 	}
@@ -748,6 +760,7 @@ public class CardTransactionContext2 {
 		this.transactionEnvironment = transactionEnvironment;
 	}
 
+	@XmlElement(name = "HstgCtgy")
 	public TransactionEnvironment3Code getHostingCategory() {
 		return hostingCategory;
 	}
@@ -756,6 +769,7 @@ public class CardTransactionContext2 {
 		this.hostingCategory = hostingCategory;
 	}
 
+	@XmlElement(name = "TxChanl")
 	public TransactionChannel3Code getTransactionChannel() {
 		return transactionChannel;
 	}
@@ -764,6 +778,7 @@ public class CardTransactionContext2 {
 		this.transactionChannel = transactionChannel;
 	}
 
+	@XmlElement(name = "CardDataNtryMd", required = true)
 	public CardDataReading2Code getCardDataEntryMode() {
 		return cardDataEntryMode;
 	}
@@ -772,6 +787,7 @@ public class CardTransactionContext2 {
 		this.cardDataEntryMode = cardDataEntryMode;
 	}
 
+	@XmlElement(name = "FllbckInd")
 	public CardFallback1Code getFallbackIndicator() {
 		return fallbackIndicator;
 	}
@@ -780,6 +796,7 @@ public class CardTransactionContext2 {
 		this.fallbackIndicator = fallbackIndicator;
 	}
 
+	@XmlElement(name = "SpprtdOptn")
 	public List<SupportedPaymentOption1Code> getSupportedOption() {
 		return supportedOption;
 	}
@@ -788,6 +805,7 @@ public class CardTransactionContext2 {
 		this.supportedOption = supportedOption;
 	}
 
+	@XmlElement(name = "SpclConds")
 	public List<CardTransactionCondition1> getSpecialConditions() {
 		return specialConditions;
 	}
@@ -796,6 +814,7 @@ public class CardTransactionContext2 {
 		this.specialConditions = specialConditions;
 	}
 
+	@XmlElement(name = "RskInd")
 	public List<CardTransactionRiskIndicator1> getRiskIndicator() {
 		return riskIndicator;
 	}

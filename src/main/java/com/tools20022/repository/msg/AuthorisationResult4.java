@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Outcome of the authorisation, and actions to perform.
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AuthorisationResult1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AuthorisationResult4", propOrder = {"authorisationEntity", "responseToAuthorisation", "authorisationCode", "completionRequired", "TMSTrigger"})
 public class AuthorisationResult4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -428,6 +434,7 @@ public class AuthorisationResult4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AuthstnNtty")
 	public GenericIdentification70 getAuthorisationEntity() {
 		return authorisationEntity;
 	}
@@ -436,6 +443,7 @@ public class AuthorisationResult4 {
 		this.authorisationEntity = authorisationEntity;
 	}
 
+	@XmlElement(name = "RspnToAuthstn", required = true)
 	public ResponseType1 getResponseToAuthorisation() {
 		return responseToAuthorisation;
 	}
@@ -444,6 +452,7 @@ public class AuthorisationResult4 {
 		this.responseToAuthorisation = responseToAuthorisation;
 	}
 
+	@XmlElement(name = "AuthstnCd")
 	public Min6Max8Text getAuthorisationCode() {
 		return authorisationCode;
 	}
@@ -452,6 +461,7 @@ public class AuthorisationResult4 {
 		this.authorisationCode = authorisationCode;
 	}
 
+	@XmlElement(name = "CmpltnReqrd")
 	public TrueFalseIndicator getCompletionRequired() {
 		return completionRequired;
 	}
@@ -460,6 +470,7 @@ public class AuthorisationResult4 {
 		this.completionRequired = completionRequired;
 	}
 
+	@XmlElement(name = "TMSTrggr")
 	public TMSTrigger1 getTMSTrigger() {
 		return tMSTrigger;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.VoteInstructionRequest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Decision of the voting party for one resolution. Several types of decisions
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Vote4", propOrder = {"issuerLabel", "for", "against", "abstain", "withhold", "withManagement", "againstManagement", "discretionary", "noAction"})
 public class Vote4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -610,6 +616,7 @@ public class Vote4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IssrLabl", required = true)
 	public Max35Text getIssuerLabel() {
 		return issuerLabel;
 	}
@@ -618,6 +625,7 @@ public class Vote4 {
 		this.issuerLabel = issuerLabel;
 	}
 
+	@XmlElement(name = "For")
 	public Number getFor() {
 		return for_;
 	}
@@ -626,6 +634,7 @@ public class Vote4 {
 		this.for_ = for_;
 	}
 
+	@XmlElement(name = "Agnst")
 	public Number getAgainst() {
 		return against;
 	}
@@ -634,6 +643,7 @@ public class Vote4 {
 		this.against = against;
 	}
 
+	@XmlElement(name = "Abstn")
 	public Number getAbstain() {
 		return abstain;
 	}
@@ -642,6 +652,7 @@ public class Vote4 {
 		this.abstain = abstain;
 	}
 
+	@XmlElement(name = "Wthhld")
 	public Number getWithhold() {
 		return withhold;
 	}
@@ -650,6 +661,7 @@ public class Vote4 {
 		this.withhold = withhold;
 	}
 
+	@XmlElement(name = "WthMgmt")
 	public Number getWithManagement() {
 		return withManagement;
 	}
@@ -658,6 +670,7 @@ public class Vote4 {
 		this.withManagement = withManagement;
 	}
 
+	@XmlElement(name = "AgnstMgmt")
 	public Number getAgainstManagement() {
 		return againstManagement;
 	}
@@ -666,6 +679,7 @@ public class Vote4 {
 		this.againstManagement = againstManagement;
 	}
 
+	@XmlElement(name = "Dscrtnry")
 	public Number getDiscretionary() {
 		return discretionary;
 	}
@@ -674,6 +688,7 @@ public class Vote4 {
 		this.discretionary = discretionary;
 	}
 
+	@XmlElement(name = "NoActn")
 	public Number getNoAction() {
 		return noAction;
 	}

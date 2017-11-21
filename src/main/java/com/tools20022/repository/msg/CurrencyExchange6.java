@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the details of the currency exchange.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Describes the details of the currency exchange."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyExchange6", propOrder = {"sourceCurrency", "targetCurrency", "exchangeRate", "description", "unitCurrency", "comments", "quotationDate"})
 public class CurrencyExchange6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -434,6 +440,7 @@ public class CurrencyExchange6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SrcCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getSourceCurrency() {
 		return sourceCurrency;
 	}
@@ -442,6 +449,7 @@ public class CurrencyExchange6 {
 		this.sourceCurrency = sourceCurrency;
 	}
 
+	@XmlElement(name = "TrgtCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getTargetCurrency() {
 		return targetCurrency;
 	}
@@ -450,6 +458,7 @@ public class CurrencyExchange6 {
 		this.targetCurrency = targetCurrency;
 	}
 
+	@XmlElement(name = "XchgRate", required = true)
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -458,6 +467,7 @@ public class CurrencyExchange6 {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "Desc")
 	public Max40Text getDescription() {
 		return description;
 	}
@@ -466,6 +476,7 @@ public class CurrencyExchange6 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "UnitCcy")
 	public ActiveOrHistoricCurrencyCode getUnitCurrency() {
 		return unitCurrency;
 	}
@@ -474,6 +485,7 @@ public class CurrencyExchange6 {
 		this.unitCurrency = unitCurrency;
 	}
 
+	@XmlElement(name = "Cmnts")
 	public Max70Text getComments() {
 		return comments;
 	}
@@ -482,6 +494,7 @@ public class CurrencyExchange6 {
 		this.comments = comments;
 	}
 
+	@XmlElement(name = "QtnDt")
 	public ISODateTime getQuotationDate() {
 		return quotationDate;
 	}

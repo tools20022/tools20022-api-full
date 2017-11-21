@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.MessageReference;
 import com.tools20022.repository.msg.RejectionReason2;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -38,9 +40,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code admi.002.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AdministrationLatestVersion
@@ -73,6 +72,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code admi.002.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -84,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MessageRejectV01", propOrder = {"relatedReference", "reason"})
 public class MessageRejectV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -124,6 +128,14 @@ public class MessageRejectV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageReference.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MessageRejectV01.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected RejectionReason2 reason;
 	/**
@@ -160,6 +172,14 @@ public class MessageRejectV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> RejectionReason2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MessageRejectV01.class.getMethod("getReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -172,7 +192,7 @@ public class MessageRejectV01 {
 				rootElement = "Document";
 				xmlTag = "admi.002.001.01";
 				businessArea_lazy = () -> AdministrationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MessageRejectV01.mmRelatedReference, MessageRejectV01.mmReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.MessageRejectV01.mmRelatedReference, com.tools20022.repository.area.admi.MessageRejectV01.mmReason);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "admi";
@@ -182,10 +202,16 @@ public class MessageRejectV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MessageRejectV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RltdRef", required = true)
 	public MessageReference getRelatedReference() {
 		return relatedReference;
 	}
@@ -194,11 +220,18 @@ public class MessageRejectV01 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public RejectionReason2 getReason() {
 		return reason;
 	}
 
 	public void setReason(RejectionReason2 reason) {
 		this.reason = reason;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:admi.002.01.01")
+	static public class Document {
+		@XmlElement(name = "admi.002.001.01", required = true)
+		public MessageRejectV01 messageBody;
 	}
 }

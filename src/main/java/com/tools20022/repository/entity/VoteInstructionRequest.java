@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +39,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmMeetingInstruction
+ * VoteInstructionRequest.mmMeetingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmVotePerResolution
+ * VoteInstructionRequest.mmVotePerResolution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmDiscretionary
+ * VoteInstructionRequest.mmDiscretionary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmGlobalVoteInstruction
+ * VoteInstructionRequest.mmGlobalVoteInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmVoteForMeetingResolution
+ * VoteInstructionRequest.mmVoteForMeetingResolution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmVoteExecutionConfirmation
+ * VoteInstructionRequest.mmVoteExecutionConfirmation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmRelatedProxyAppointment
+ * VoteInstructionRequest.mmRelatedProxyAppointment}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -91,32 +118,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.VotingPartyAndInstruction#mmVotePerResolution
  * VotingPartyAndInstruction.mmVotePerResolution}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmMeetingInstruction
- * VoteInstructionRequest.mmMeetingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmVotePerResolution
- * VoteInstructionRequest.mmVotePerResolution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmDiscretionary
- * VoteInstructionRequest.mmDiscretionary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmGlobalVoteInstruction
- * VoteInstructionRequest.mmGlobalVoteInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmVoteForMeetingResolution
- * VoteInstructionRequest.mmVoteForMeetingResolution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmVoteExecutionConfirmation
- * VoteInstructionRequest.mmVoteExecutionConfirmation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmRelatedProxyAppointment
- * VoteInstructionRequest.mmRelatedProxyAppointment}</li>
  * </ul>
  * </li>
  * <li>
@@ -176,7 +177,7 @@ public class VoteInstructionRequest {
 	 */
 	public static final MMBusinessAssociationEnd mmMeetingInstruction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> VoteInstructionRequest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MeetingInstruction";
@@ -205,11 +206,6 @@ public class VoteInstructionRequest {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Vote Vote}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest
-	 * VoteInstructionRequest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -252,6 +248,11 @@ public class VoteInstructionRequest {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest
+	 * VoteInstructionRequest}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -268,7 +269,7 @@ public class VoteInstructionRequest {
 			derivation_lazy = () -> Arrays.asList(VoteChoice.mmVoteInstruction, VoteInstruction.mmVotePerResolution, Vote1Choice.mmVoteInstruction, VoteDetails1.mmVoteInstructionForAgendaResolution, Vote2Choice.mmVoteInstruction,
 					VoteDetails2.mmVoteInstructionForAgendaResolution, VoteInstruction1.mmVotePerResolution, DetailedInstructionStatus2.mmVotePerResolution, DetailedInstructionStatus9.mmVotePerResolution,
 					DetailedInstructionStatus10.mmVotePerResolution, Vote3Choice.mmVoteInstruction, VoteDetails3.mmVoteInstructionForAgendaResolution);
-			elementContext_lazy = () -> VoteInstructionRequest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VotePerResolution";
@@ -291,11 +292,6 @@ public class VoteInstructionRequest {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest
-	 * VoteInstructionRequest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -309,6 +305,11 @@ public class VoteInstructionRequest {
 	 * Vote8.mmDiscretionary}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest
+	 * VoteInstructionRequest}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -325,7 +326,7 @@ public class VoteInstructionRequest {
 	public static final MMBusinessAttribute mmDiscretionary = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote1.mmDiscretionary, Vote4.mmDiscretionary, Vote6.mmDiscretionary, Vote8.mmDiscretionary);
-			elementContext_lazy = () -> VoteInstructionRequest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Discretionary";
@@ -333,6 +334,14 @@ public class VoteInstructionRequest {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return VoteInstructionRequest.class.getMethod("getDiscretionary", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected VoteInstructionCode globalVoteInstruction;
@@ -346,11 +355,6 @@ public class VoteInstructionRequest {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.VoteInstructionCode
 	 * VoteInstructionCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest
-	 * VoteInstructionRequest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -369,6 +373,11 @@ public class VoteInstructionRequest {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest
+	 * VoteInstructionRequest}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -383,7 +392,7 @@ public class VoteInstructionRequest {
 	public static final MMBusinessAttribute mmGlobalVoteInstruction = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(VoteChoice.mmGlobalVoteInstruction, Vote1Choice.mmGlobalVoteInstruction, Vote2Choice.mmGlobalVoteInstruction, Vote3Choice.mmGlobalVoteInstruction);
-			elementContext_lazy = () -> VoteInstructionRequest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GlobalVoteInstruction";
@@ -391,6 +400,14 @@ public class VoteInstructionRequest {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> VoteInstructionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return VoteInstructionRequest.class.getMethod("getGlobalVoteInstruction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected VoteInstructionCode voteForMeetingResolution;
@@ -405,11 +422,6 @@ public class VoteInstructionRequest {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.VoteInstructionCode
 	 * VoteInstructionCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest
-	 * VoteInstructionRequest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -444,6 +456,11 @@ public class VoteInstructionRequest {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest
+	 * VoteInstructionRequest}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -461,7 +478,7 @@ public class VoteInstructionRequest {
 			derivation_lazy = () -> Arrays.asList(Vote3.mmVoteOption, VoteInstructionForMeetingResolution.mmVoteIndication, VoteInstruction.mmVoteInstructionForMeetingResolution, VoteInstructionForMeetingResolution1.mmVoteIndication,
 					VoteDetails1.mmVoteInstructionForMeetingResolution, VoteInstructionForMeetingResolution1Choice.mmVoteIndication, VoteDetails2.mmVoteInstructionForMeetingResolution, Vote9.mmVoteOption,
 					VoteDetails3.mmVoteInstructionForMeetingResolution, VoteInstructionForMeetingResolution2Choice.mmVoteIndication);
-			elementContext_lazy = () -> VoteInstructionRequest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteForMeetingResolution";
@@ -469,6 +486,14 @@ public class VoteInstructionRequest {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> VoteInstructionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return VoteInstructionRequest.class.getMethod("getVoteForMeetingResolution", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator voteExecutionConfirmation;
@@ -482,11 +507,6 @@ public class VoteInstructionRequest {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest
-	 * VoteInstructionRequest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -505,6 +525,11 @@ public class VoteInstructionRequest {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest
+	 * VoteInstructionRequest}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -519,7 +544,7 @@ public class VoteInstructionRequest {
 	public static final MMBusinessAttribute mmVoteExecutionConfirmation = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(VoteInstruction.mmVoteExecutionConfirmation, Instruction1.mmVoteExecutionConfirmation, Instruction2.mmVoteExecutionConfirmation, Instruction3.mmVoteExecutionConfirmation);
-			elementContext_lazy = () -> VoteInstructionRequest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteExecutionConfirmation";
@@ -527,6 +552,14 @@ public class VoteInstructionRequest {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return VoteInstructionRequest.class.getMethod("getVoteExecutionConfirmation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ProxyAppointment relatedProxyAppointment;
@@ -565,7 +598,7 @@ public class VoteInstructionRequest {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedProxyAppointment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> VoteInstructionRequest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedProxyAppointment";
@@ -588,11 +621,18 @@ public class VoteInstructionRequest {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProxyAppointment.mmVote, com.tools20022.repository.entity.InstructionForMeeting.mmVoteInstruction,
 						com.tools20022.repository.entity.Vote.mmVoteRequest);
 				derivationElement_lazy = () -> Arrays.asList(VotingPartyAndInstruction.mmVotePerResolution);
-				element_lazy = () -> Arrays.asList(VoteInstructionRequest.mmMeetingInstruction, VoteInstructionRequest.mmVotePerResolution, VoteInstructionRequest.mmDiscretionary, VoteInstructionRequest.mmGlobalVoteInstruction,
-						VoteInstructionRequest.mmVoteForMeetingResolution, VoteInstructionRequest.mmVoteExecutionConfirmation, VoteInstructionRequest.mmRelatedProxyAppointment);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.VoteInstructionRequest.mmMeetingInstruction, com.tools20022.repository.entity.VoteInstructionRequest.mmVotePerResolution,
+						com.tools20022.repository.entity.VoteInstructionRequest.mmDiscretionary, com.tools20022.repository.entity.VoteInstructionRequest.mmGlobalVoteInstruction,
+						com.tools20022.repository.entity.VoteInstructionRequest.mmVoteForMeetingResolution, com.tools20022.repository.entity.VoteInstructionRequest.mmVoteExecutionConfirmation,
+						com.tools20022.repository.entity.VoteInstructionRequest.mmRelatedProxyAppointment);
 				derivationComponent_lazy = () -> Arrays.asList(Vote3.mmObject(), VoteChoice.mmObject(), VotingPartyAndInstruction.mmObject(), VoteInstructionForMeetingResolution.mmObject(), VoteInstruction.mmObject(),
 						Vote1Choice.mmObject(), VoteInstructionForMeetingResolution1.mmObject(), VoteDetails1.mmObject(), Vote2Choice.mmObject(), VoteInstructionForMeetingResolution1Choice.mmObject(), VoteDetails2.mmObject(),
 						VoteInstruction1.mmObject(), Vote3Choice.mmObject(), Vote9.mmObject(), VoteDetails3.mmObject(), VoteInstructionForMeetingResolution2Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return VoteInstructionRequest.class;
 			}
 		});
 		return mmObject_lazy.get();

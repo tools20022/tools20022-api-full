@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instrument specific technical data to support identification.
@@ -67,6 +71,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RecordTechnicalData1", propOrder = {"receiptDateTime", "exchangeReason"})
 public class RecordTechnicalData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -182,6 +188,7 @@ public class RecordTechnicalData1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RctDtTm", required = true)
 	public ISODateTime getReceiptDateTime() {
 		return receiptDateTime;
 	}
@@ -190,6 +197,7 @@ public class RecordTechnicalData1 {
 		this.receiptDateTime = receiptDateTime;
 	}
 
+	@XmlElement(name = "XchgRsn", required = true)
 	public List<AuthorityExchangeReason1Code> getExchangeReason() {
 		return exchangeReason;
 	}

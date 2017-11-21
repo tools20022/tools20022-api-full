@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.InvestmentAccountPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Other type of party.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ExtendedParty3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExtendedParty6", propOrder = {"extendedPartyRole", "otherPartyDetails"})
 public class ExtendedParty6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -216,6 +222,7 @@ public class ExtendedParty6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XtndedPtyRole", required = true)
 	public Extended350Code getExtendedPartyRole() {
 		return extendedPartyRole;
 	}
@@ -224,6 +231,7 @@ public class ExtendedParty6 {
 		this.extendedPartyRole = extendedPartyRole;
 	}
 
+	@XmlElement(name = "OthrPtyDtls", required = true)
 	public InvestmentAccountOwnershipInformation9 getOtherPartyDetails() {
 		return otherPartyDetails;
 	}

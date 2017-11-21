@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information that locates and identifies a party.
@@ -69,6 +73,8 @@ import java.util.List;
  * definition} = "Information that locates and identifies a party."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NameAndAddress8", propOrder = {"name", "address", "alternativeIdentifier"})
 public class NameAndAddress8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -234,6 +240,7 @@ public class NameAndAddress8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max350Text getName() {
 		return name;
 	}
@@ -242,6 +249,7 @@ public class NameAndAddress8 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Adr")
 	public PostalAddress1 getAddress() {
 		return address;
 	}
@@ -250,6 +258,7 @@ public class NameAndAddress8 {
 		this.address = address;
 	}
 
+	@XmlElement(name = "AltrntvIdr")
 	public List<Max35Text> getAlternativeIdentifier() {
 		return alternativeIdentifier;
 	}

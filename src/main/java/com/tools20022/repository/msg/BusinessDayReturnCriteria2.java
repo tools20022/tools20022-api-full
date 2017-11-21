@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to report on business day information.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Defines the criteria used to report on business day information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BusinessDayReturnCriteria2", propOrder = {"systemDateIndicator", "systemStatusIndicator", "systemCurrencyIndicator", "closurePeriodIndicator", "eventIndicator", "sessionPeriodIndicator", "eventTypeIndicator"})
 public class BusinessDayReturnCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -385,6 +391,7 @@ public class BusinessDayReturnCriteria2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysDtInd")
 	public RequestedIndicator getSystemDateIndicator() {
 		return systemDateIndicator;
 	}
@@ -393,6 +400,7 @@ public class BusinessDayReturnCriteria2 {
 		this.systemDateIndicator = systemDateIndicator;
 	}
 
+	@XmlElement(name = "SysStsInd")
 	public RequestedIndicator getSystemStatusIndicator() {
 		return systemStatusIndicator;
 	}
@@ -401,6 +409,7 @@ public class BusinessDayReturnCriteria2 {
 		this.systemStatusIndicator = systemStatusIndicator;
 	}
 
+	@XmlElement(name = "SysCcyInd")
 	public RequestedIndicator getSystemCurrencyIndicator() {
 		return systemCurrencyIndicator;
 	}
@@ -409,6 +418,7 @@ public class BusinessDayReturnCriteria2 {
 		this.systemCurrencyIndicator = systemCurrencyIndicator;
 	}
 
+	@XmlElement(name = "ClsrPrdInd")
 	public RequestedIndicator getClosurePeriodIndicator() {
 		return closurePeriodIndicator;
 	}
@@ -417,6 +427,7 @@ public class BusinessDayReturnCriteria2 {
 		this.closurePeriodIndicator = closurePeriodIndicator;
 	}
 
+	@XmlElement(name = "EvtInd")
 	public RequestedIndicator getEventIndicator() {
 		return eventIndicator;
 	}
@@ -425,6 +436,7 @@ public class BusinessDayReturnCriteria2 {
 		this.eventIndicator = eventIndicator;
 	}
 
+	@XmlElement(name = "SsnPrdInd")
 	public RequestedIndicator getSessionPeriodIndicator() {
 		return sessionPeriodIndicator;
 	}
@@ -433,6 +445,7 @@ public class BusinessDayReturnCriteria2 {
 		this.sessionPeriodIndicator = sessionPeriodIndicator;
 	}
 
+	@XmlElement(name = "EvtTpInd")
 	public RequestedIndicator getEventTypeIndicator() {
 		return eventTypeIndicator;
 	}

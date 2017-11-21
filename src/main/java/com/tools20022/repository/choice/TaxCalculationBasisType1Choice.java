@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of calculation basis type.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of calculation basis type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxCalculationBasisType1Choice", propOrder = {"basis", "proprietary"})
 public class TaxCalculationBasisType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class TaxCalculationBasisType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Bsis", required = true)
 	public TaxationBasis2Code getBasis() {
 		return basis;
 	}
@@ -187,6 +194,7 @@ public class TaxCalculationBasisType1Choice {
 		this.basis = basis;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification13 getProprietary() {
 		return proprietary;
 	}

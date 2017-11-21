@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SubscriptionExecution;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Execution of a subscription order.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Execution of a subscription order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionInformation1", propOrder = {"dateOfFirstSubscription", "equityComponent", "cashComponent", "totalAmountYearToDate"})
 public class SubscriptionInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -283,6 +289,7 @@ public class SubscriptionInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtOfFrstSbcpt", required = true)
 	public ISODate getDateOfFirstSubscription() {
 		return dateOfFirstSubscription;
 	}
@@ -291,6 +298,7 @@ public class SubscriptionInformation1 {
 		this.dateOfFirstSubscription = dateOfFirstSubscription;
 	}
 
+	@XmlElement(name = "EqtyCmpnt")
 	public ActiveCurrencyAndAmount getEquityComponent() {
 		return equityComponent;
 	}
@@ -299,6 +307,7 @@ public class SubscriptionInformation1 {
 		this.equityComponent = equityComponent;
 	}
 
+	@XmlElement(name = "CshCmpnt")
 	public ActiveCurrencyAndAmount getCashComponent() {
 		return cashComponent;
 	}
@@ -307,6 +316,7 @@ public class SubscriptionInformation1 {
 		this.cashComponent = cashComponent;
 	}
 
+	@XmlElement(name = "TtlAmtYrToDt", required = true)
 	public ActiveCurrencyAndAmount getTotalAmountYearToDate() {
 		return totalAmountYearToDate;
 	}

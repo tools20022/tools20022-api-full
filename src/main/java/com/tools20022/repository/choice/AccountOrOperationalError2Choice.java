@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.ErrorHandling4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between account details or an operational error when the requested
@@ -66,6 +70,8 @@ import java.util.List;
  * AccountOrOperationalError1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountOrOperationalError2Choice", propOrder = {"accountReport", "operationalError"})
 public class AccountOrOperationalError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class AccountOrOperationalError2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctRpt", required = true)
 	public List<AccountReport17> getAccountReport() {
 		return accountReport;
 	}
@@ -188,6 +195,7 @@ public class AccountOrOperationalError2Choice {
 		this.accountReport = accountReport;
 	}
 
+	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling4> getOperationalError() {
 		return operationalError;
 	}

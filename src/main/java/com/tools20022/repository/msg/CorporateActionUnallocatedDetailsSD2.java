@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding the corporate action event.
@@ -75,6 +79,8 @@ import java.util.List;
  * CorporateActionUnallocatedDetailsSD1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionUnallocatedDetailsSD2", propOrder = {"unallocatedBalance", "unallocatedSecuritiesTransactionDetails", "unallocatedCashTransactionDetails"})
 public class CorporateActionUnallocatedDetailsSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -273,6 +279,7 @@ public class CorporateActionUnallocatedDetailsSD2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UallctdBal")
 	public CorporateActionUnallocatedBalanceSD1Choice getUnallocatedBalance() {
 		return unallocatedBalance;
 	}
@@ -281,6 +288,7 @@ public class CorporateActionUnallocatedDetailsSD2 {
 		this.unallocatedBalance = unallocatedBalance;
 	}
 
+	@XmlElement(name = "UallctdSctiesTxDtls")
 	public List<CorporateActionUnallocatedSecuritiesTransactionDetailsSD2> getUnallocatedSecuritiesTransactionDetails() {
 		return unallocatedSecuritiesTransactionDetails;
 	}
@@ -289,6 +297,7 @@ public class CorporateActionUnallocatedDetailsSD2 {
 		this.unallocatedSecuritiesTransactionDetails = unallocatedSecuritiesTransactionDetails;
 	}
 
+	@XmlElement(name = "UallctdCshTxDtls")
 	public List<CorporateActionUnallocatedCashTransactionDetailsSD2> getUnallocatedCashTransactionDetails() {
 		return unallocatedCashTransactionDetails;
 	}

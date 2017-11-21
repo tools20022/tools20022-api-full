@@ -25,8 +25,10 @@ import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.GroupHeader44;
 import com.tools20022.repository.msg.OriginalNotification3;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -44,9 +46,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.059.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -74,6 +73,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.059.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -93,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NotificationToReceiveStatusReportV02", propOrder = {"groupHeader", "originalNotificationAndStatus"})
 public class NotificationToReceiveStatusReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -129,6 +133,14 @@ public class NotificationToReceiveStatusReportV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader44.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationToReceiveStatusReportV02.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OriginalNotification3 originalNotificationAndStatus;
@@ -168,6 +180,14 @@ public class NotificationToReceiveStatusReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> OriginalNotification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationToReceiveStatusReportV02.class.getMethod("getOriginalNotificationAndStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -181,7 +201,8 @@ public class NotificationToReceiveStatusReportV02 {
 				rootElement = "Document";
 				xmlTag = "NtfctnToRcvStsRpt";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(NotificationToReceiveStatusReportV02.mmGroupHeader, NotificationToReceiveStatusReportV02.mmOriginalNotificationAndStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV02.mmGroupHeader,
+						com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV02.mmOriginalNotificationAndStatus);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -191,10 +212,16 @@ public class NotificationToReceiveStatusReportV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return NotificationToReceiveStatusReportV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader44 getGroupHeader() {
 		return groupHeader;
 	}
@@ -203,11 +230,18 @@ public class NotificationToReceiveStatusReportV02 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "OrgnlNtfctnAndSts", required = true)
 	public OriginalNotification3 getOriginalNotificationAndStatus() {
 		return originalNotificationAndStatus;
 	}
 
 	public void setOriginalNotificationAndStatus(OriginalNotification3 originalNotificationAndStatus) {
 		this.originalNotificationAndStatus = originalNotificationAndStatus;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.059.02.02")
+	static public class Document {
+		@XmlElement(name = "NtfctnToRcvStsRpt", required = true)
+		public NotificationToReceiveStatusReportV02 messageBody;
 	}
 }

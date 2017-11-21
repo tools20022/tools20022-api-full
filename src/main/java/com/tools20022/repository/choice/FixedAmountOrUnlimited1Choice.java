@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Unlimited9Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a fixed amount and an unlimited amount.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between a fixed amount and an unlimited amount."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FixedAmountOrUnlimited1Choice", propOrder = {"amount", "notLimited"})
 public class FixedAmountOrUnlimited1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +165,7 @@ public class FixedAmountOrUnlimited1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -167,6 +174,7 @@ public class FixedAmountOrUnlimited1Choice {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "NotLtd", required = true)
 	public Unlimited9Text getNotLimited() {
 		return notLimited;
 	}

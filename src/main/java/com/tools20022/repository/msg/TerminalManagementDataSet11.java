@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data set containing the acceptor parameters of a point of interaction (POI).
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TerminalManagementDataSet6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TerminalManagementDataSet11", propOrder = {"identification", "sequenceCounter", "content"})
 public class TerminalManagementDataSet11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -269,6 +275,7 @@ public class TerminalManagementDataSet11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DataSetIdentification3 getIdentification() {
 		return identification;
 	}
@@ -277,6 +284,7 @@ public class TerminalManagementDataSet11 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SeqCntr")
 	public Max9NumericText getSequenceCounter() {
 		return sequenceCounter;
 	}
@@ -285,6 +293,7 @@ public class TerminalManagementDataSet11 {
 		this.sequenceCounter = sequenceCounter;
 	}
 
+	@XmlElement(name = "Cntt", required = true)
 	public AcceptorConfigurationContent3 getContent() {
 		return content;
 	}

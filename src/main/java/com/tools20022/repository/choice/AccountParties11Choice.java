@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a party's account.
@@ -73,6 +77,8 @@ import java.util.List;
  * AccountParties9Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountParties11Choice", propOrder = {"primaryOwner", "trustee", "nominee", "jointOwner"})
 public class AccountParties11Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -317,6 +323,7 @@ public class AccountParties11Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmryOwnr", required = true)
 	public InvestmentAccountOwnershipInformation15 getPrimaryOwner() {
 		return primaryOwner;
 	}
@@ -325,6 +332,7 @@ public class AccountParties11Choice {
 		this.primaryOwner = primaryOwner;
 	}
 
+	@XmlElement(name = "Trstee", required = true)
 	public List<InvestmentAccountOwnershipInformation15> getTrustee() {
 		return trustee;
 	}
@@ -333,6 +341,7 @@ public class AccountParties11Choice {
 		this.trustee = trustee;
 	}
 
+	@XmlElement(name = "Nmnee", required = true)
 	public InvestmentAccountOwnershipInformation15 getNominee() {
 		return nominee;
 	}
@@ -341,6 +350,7 @@ public class AccountParties11Choice {
 		this.nominee = nominee;
 	}
 
+	@XmlElement(name = "JntOwnr", required = true)
 	public List<InvestmentAccountOwnershipInformation15> getJointOwner() {
 		return jointOwner;
 	}

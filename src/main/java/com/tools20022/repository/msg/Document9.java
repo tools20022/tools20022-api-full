@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.UndertakingDocument;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a document.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about a document."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Document9", propOrder = {"type", "identification", "format", "enclosure", "digitalSignature"})
 public class Document9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -326,6 +332,7 @@ public class Document9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public UndertakingDocumentType1Choice getType() {
 		return type;
 	}
@@ -334,6 +341,7 @@ public class Document9 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -342,6 +350,7 @@ public class Document9 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Frmt")
 	public DocumentFormat1Choice getFormat() {
 		return format;
 	}
@@ -350,6 +359,7 @@ public class Document9 {
 		this.format = format;
 	}
 
+	@XmlElement(name = "Nclsr", required = true)
 	public Max2MBBinary getEnclosure() {
 		return enclosure;
 	}
@@ -358,6 +368,7 @@ public class Document9 {
 		this.enclosure = enclosure;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public PartyAndSignature2 getDigitalSignature() {
 		return digitalSignature;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.TradingSession;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the conditions under which an order will be triggered/activated by
@@ -92,6 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TriggeringInstructions", propOrder = {"type", "action", "price", "priceProtectionScope", "priceDirection", "newPrice", "orderType", "newQuantity", "priceType", "triggerSecurityDetails", "tradingSessionDetails"})
 public class TriggeringInstructions {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -618,6 +624,7 @@ public class TriggeringInstructions {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public TriggerType1Code getType() {
 		return type;
 	}
@@ -626,6 +633,7 @@ public class TriggeringInstructions {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Actn")
 	public TriggerAction1Code getAction() {
 		return action;
 	}
@@ -634,6 +642,7 @@ public class TriggeringInstructions {
 		this.action = action;
 	}
 
+	@XmlElement(name = "Pric")
 	public Price1 getPrice() {
 		return price;
 	}
@@ -642,6 +651,7 @@ public class TriggeringInstructions {
 		this.price = price;
 	}
 
+	@XmlElement(name = "PricPrtcnScp")
 	public PriceProtectionScope2Code getPriceProtectionScope() {
 		return priceProtectionScope;
 	}
@@ -650,6 +660,7 @@ public class TriggeringInstructions {
 		this.priceProtectionScope = priceProtectionScope;
 	}
 
+	@XmlElement(name = "PricDrctn")
 	public DirectionIndicator getPriceDirection() {
 		return priceDirection;
 	}
@@ -658,6 +669,7 @@ public class TriggeringInstructions {
 		this.priceDirection = priceDirection;
 	}
 
+	@XmlElement(name = "NewPric")
 	public Price1 getNewPrice() {
 		return newPrice;
 	}
@@ -666,6 +678,7 @@ public class TriggeringInstructions {
 		this.newPrice = newPrice;
 	}
 
+	@XmlElement(name = "OrdrTp")
 	public OrderType2Code getOrderType() {
 		return orderType;
 	}
@@ -674,6 +687,7 @@ public class TriggeringInstructions {
 		this.orderType = orderType;
 	}
 
+	@XmlElement(name = "NewQty")
 	public FinancialInstrumentQuantityChoice getNewQuantity() {
 		return newQuantity;
 	}
@@ -682,6 +696,7 @@ public class TriggeringInstructions {
 		this.newQuantity = newQuantity;
 	}
 
+	@XmlElement(name = "PricTp")
 	public TriggerPriceType1Code getPriceType() {
 		return priceType;
 	}
@@ -690,6 +705,7 @@ public class TriggeringInstructions {
 		this.priceType = priceType;
 	}
 
+	@XmlElement(name = "TrggrSctyDtls")
 	public SecurityIdentification7 getTriggerSecurityDetails() {
 		return triggerSecurityDetails;
 	}
@@ -698,6 +714,7 @@ public class TriggeringInstructions {
 		this.triggerSecurityDetails = triggerSecurityDetails;
 	}
 
+	@XmlElement(name = "TradgSsnDtls")
 	public TradingSession1 getTradingSessionDetails() {
 		return tradingSessionDetails;
 	}

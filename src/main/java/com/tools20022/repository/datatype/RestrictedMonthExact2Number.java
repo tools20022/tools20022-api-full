@@ -28,6 +28,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMDecimal#getPattern pattern} =
+ * "[0-9]{2,2}"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMDecimal#getMinInclusive
+ * minInclusive} = "1"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMDecimal#getMaxInclusive
+ * maxInclusive} = "12"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -64,6 +70,11 @@ public class RestrictedMonthExact2Number {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RestrictedMonthExact2Number";
 				definition = "Two digit restricted list for use representing calendar months.";
+				pattern = "[0-9]{2,2}";
+				minInclusive = "1";
+				maxInclusive = "12";
+				totalDigits = 2;
+				fractionDigits = 0;
 			}
 		});
 		return mmObject_lazy.get();

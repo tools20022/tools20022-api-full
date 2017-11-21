@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies other amounts pertaining to the transaction.
@@ -102,6 +106,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * OtherAmounts8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherAmounts32", propOrder = {"accruedInterestAmount", "chargesFees", "tradeAmount", "executingBrokerAmount", "localTax", "localBrokerCommission", "other", "stampDuty", "transactionTax", "withholdingTax", "consumptionTax"})
 public class OtherAmounts32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -695,6 +701,7 @@ public class OtherAmounts32 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt")
 	public AmountAndDirection47 getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -703,6 +710,7 @@ public class OtherAmounts32 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "ChrgsFees")
 	public AmountAndDirection47 getChargesFees() {
 		return chargesFees;
 	}
@@ -711,6 +719,7 @@ public class OtherAmounts32 {
 		this.chargesFees = chargesFees;
 	}
 
+	@XmlElement(name = "TradAmt")
 	public AmountAndDirection47 getTradeAmount() {
 		return tradeAmount;
 	}
@@ -719,6 +728,7 @@ public class OtherAmounts32 {
 		this.tradeAmount = tradeAmount;
 	}
 
+	@XmlElement(name = "ExctgBrkrAmt")
 	public AmountAndDirection47 getExecutingBrokerAmount() {
 		return executingBrokerAmount;
 	}
@@ -727,6 +737,7 @@ public class OtherAmounts32 {
 		this.executingBrokerAmount = executingBrokerAmount;
 	}
 
+	@XmlElement(name = "LclTax")
 	public AmountAndDirection47 getLocalTax() {
 		return localTax;
 	}
@@ -735,6 +746,7 @@ public class OtherAmounts32 {
 		this.localTax = localTax;
 	}
 
+	@XmlElement(name = "LclBrkrComssn")
 	public AmountAndDirection47 getLocalBrokerCommission() {
 		return localBrokerCommission;
 	}
@@ -743,6 +755,7 @@ public class OtherAmounts32 {
 		this.localBrokerCommission = localBrokerCommission;
 	}
 
+	@XmlElement(name = "Othr")
 	public AmountAndDirection47 getOther() {
 		return other;
 	}
@@ -751,6 +764,7 @@ public class OtherAmounts32 {
 		this.other = other;
 	}
 
+	@XmlElement(name = "StmpDty")
 	public AmountAndDirection47 getStampDuty() {
 		return stampDuty;
 	}
@@ -759,6 +773,7 @@ public class OtherAmounts32 {
 		this.stampDuty = stampDuty;
 	}
 
+	@XmlElement(name = "TxTax")
 	public AmountAndDirection47 getTransactionTax() {
 		return transactionTax;
 	}
@@ -767,6 +782,7 @@ public class OtherAmounts32 {
 		this.transactionTax = transactionTax;
 	}
 
+	@XmlElement(name = "WhldgTax")
 	public AmountAndDirection47 getWithholdingTax() {
 		return withholdingTax;
 	}
@@ -775,6 +791,7 @@ public class OtherAmounts32 {
 		this.withholdingTax = withholdingTax;
 	}
 
+	@XmlElement(name = "CsmptnTax")
 	public AmountAndDirection47 getConsumptionTax() {
 		return consumptionTax;
 	}

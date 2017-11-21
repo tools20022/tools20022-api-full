@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cash movements into a fund as a result of investment funds transactions, eg,
@@ -85,6 +89,8 @@ import java.util.List;
  * CashInForecast3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashInForecast5", propOrder = {"cashSettlementDate", "subTotalAmount", "subTotalUnitsNumber", "exceptionalCashFlowIndicator", "cashInBreakdownDetails", "additionalBalance"})
 public class CashInForecast5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -417,6 +423,7 @@ public class CashInForecast5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshSttlmDt", required = true)
 	public ISODate getCashSettlementDate() {
 		return cashSettlementDate;
 	}
@@ -425,6 +432,7 @@ public class CashInForecast5 {
 		this.cashSettlementDate = cashSettlementDate;
 	}
 
+	@XmlElement(name = "SubTtlAmt")
 	public ActiveOrHistoricCurrencyAndAmount getSubTotalAmount() {
 		return subTotalAmount;
 	}
@@ -433,6 +441,7 @@ public class CashInForecast5 {
 		this.subTotalAmount = subTotalAmount;
 	}
 
+	@XmlElement(name = "SubTtlUnitsNb")
 	public FinancialInstrumentQuantity1 getSubTotalUnitsNumber() {
 		return subTotalUnitsNumber;
 	}
@@ -441,6 +450,7 @@ public class CashInForecast5 {
 		this.subTotalUnitsNumber = subTotalUnitsNumber;
 	}
 
+	@XmlElement(name = "XcptnlCshFlowInd")
 	public YesNoIndicator getExceptionalCashFlowIndicator() {
 		return exceptionalCashFlowIndicator;
 	}
@@ -449,6 +459,7 @@ public class CashInForecast5 {
 		this.exceptionalCashFlowIndicator = exceptionalCashFlowIndicator;
 	}
 
+	@XmlElement(name = "CshInBrkdwnDtls")
 	public List<FundCashInBreakdown3> getCashInBreakdownDetails() {
 		return cashInBreakdownDetails;
 	}
@@ -457,6 +468,7 @@ public class CashInForecast5 {
 		this.cashInBreakdownDetails = cashInBreakdownDetails;
 	}
 
+	@XmlElement(name = "AddtlBal")
 	public FundBalance1 getAdditionalBalance() {
 		return additionalBalance;
 	}

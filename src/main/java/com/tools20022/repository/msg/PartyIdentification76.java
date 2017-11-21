@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to identify a person or an organisation.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification76", propOrder = {"identification", "countryOfBranch"})
 public class PartyIdentification76 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -214,6 +220,7 @@ public class PartyIdentification76 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PersonOrOrganisation1Choice getIdentification() {
 		return identification;
 	}
@@ -222,6 +229,7 @@ public class PartyIdentification76 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "CtryOfBrnch")
 	public CountryCode getCountryOfBranch() {
 		return countryOfBranch;
 	}

@@ -34,6 +34,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.CreditInstrument
+ * CreditInstrument}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -42,9 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMAccountStatement2}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.CreditInstrument
- * CreditInstrument}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -74,6 +74,11 @@ public class AccountEntry extends CreditInstrument {
 				definition = "Amount of money debited or credited on the books of an account servicer.";
 				superType_lazy = () -> CreditInstrument.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(ATMAccountStatement2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountEntry.class;
 			}
 		});
 		return mmObject_lazy.get();

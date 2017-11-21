@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.Option3;
 import com.tools20022.repository.msg.TradeAgreement2;
 import com.tools20022.repository.msg.TradePartyIdentification4;
 import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -42,9 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code trea.010.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
  * TreasuryArchive}</li>
@@ -79,6 +78,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code trea.010.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -90,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmendForeignExchangeOptionV02", propOrder = {"tradeInformation", "tradingSideIdentification", "counterpartySideIdentification", "option"})
 public class AmendForeignExchangeOptionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -129,6 +133,14 @@ public class AmendForeignExchangeOptionV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradeAgreement2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmendForeignExchangeOptionV02.class.getMethod("getTradeInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TradePartyIdentification4 tradingSideIdentification;
 	/**
@@ -165,6 +177,14 @@ public class AmendForeignExchangeOptionV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmendForeignExchangeOptionV02.class.getMethod("getTradingSideIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TradePartyIdentification4 counterpartySideIdentification;
@@ -203,6 +223,14 @@ public class AmendForeignExchangeOptionV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmendForeignExchangeOptionV02.class.getMethod("getCounterpartySideIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Option3 option;
 	/**
@@ -240,6 +268,14 @@ public class AmendForeignExchangeOptionV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> Option3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmendForeignExchangeOptionV02.class.getMethod("getOption", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -252,8 +288,9 @@ public class AmendForeignExchangeOptionV02 {
 				rootElement = "Document";
 				xmlTag = "AmdFXOptnV02";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AmendForeignExchangeOptionV02.mmTradeInformation, AmendForeignExchangeOptionV02.mmTradingSideIdentification, AmendForeignExchangeOptionV02.mmCounterpartySideIdentification,
-						AmendForeignExchangeOptionV02.mmOption);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.AmendForeignExchangeOptionV02.mmTradeInformation,
+						com.tools20022.repository.area.trea.AmendForeignExchangeOptionV02.mmTradingSideIdentification, com.tools20022.repository.area.trea.AmendForeignExchangeOptionV02.mmCounterpartySideIdentification,
+						com.tools20022.repository.area.trea.AmendForeignExchangeOptionV02.mmOption);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "trea";
@@ -263,10 +300,16 @@ public class AmendForeignExchangeOptionV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AmendForeignExchangeOptionV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradInf", required = true)
 	public TradeAgreement2 getTradeInformation() {
 		return tradeInformation;
 	}
@@ -275,6 +318,7 @@ public class AmendForeignExchangeOptionV02 {
 		this.tradeInformation = tradeInformation;
 	}
 
+	@XmlElement(name = "TradgSdId", required = true)
 	public TradePartyIdentification4 getTradingSideIdentification() {
 		return tradingSideIdentification;
 	}
@@ -283,6 +327,7 @@ public class AmendForeignExchangeOptionV02 {
 		this.tradingSideIdentification = tradingSideIdentification;
 	}
 
+	@XmlElement(name = "CtrPtySdId", required = true)
 	public TradePartyIdentification4 getCounterpartySideIdentification() {
 		return counterpartySideIdentification;
 	}
@@ -291,11 +336,18 @@ public class AmendForeignExchangeOptionV02 {
 		this.counterpartySideIdentification = counterpartySideIdentification;
 	}
 
+	@XmlElement(name = "Optn", required = true)
 	public Option3 getOption() {
 		return option;
 	}
 
 	public void setOption(Option3 option) {
 		this.option = option;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:trea.010.02.02")
+	static public class Document {
+		@XmlElement(name = "AmdFXOptnV02", required = true)
+		public AmendForeignExchangeOptionV02 messageBody;
 	}
 }

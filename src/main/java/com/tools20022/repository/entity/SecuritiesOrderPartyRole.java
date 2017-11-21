@@ -37,17 +37,14 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSecuritiesOrderPartyRole
- * SecuritiesOrder.mmSecuritiesOrderPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderPartyRole#mmSecuritiesOrder
+ * SecuritiesOrderPartyRole.mmSecuritiesOrder}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -62,12 +59,15 @@ import java.util.List;
  * OrderOriginationTrader}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderPartyRole#mmSecuritiesOrder
- * SecuritiesOrderPartyRole.mmSecuritiesOrder}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSecuritiesOrderPartyRole
+ * SecuritiesOrder.mmSecuritiesOrderPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,7 +125,7 @@ public class SecuritiesOrderPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesOrderPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesOrder";
@@ -147,7 +147,12 @@ public class SecuritiesOrderPartyRole extends Role {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrder.mmSecuritiesOrderPartyRole);
 				subType_lazy = () -> Arrays.asList(IntroducingFirm.mmObject(), EnteringFirm.mmObject(), OrderOriginationFirm.mmObject(), SponsoringFirm.mmObject(), OrderOriginationTrader.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(SecuritiesOrderPartyRole.mmSecuritiesOrder);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrderPartyRole.mmSecuritiesOrder);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesOrderPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.CancellationStatusReason2Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationResolution#mmInvestigationCase
+ * InvestigationResolution.mmInvestigationCase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationResolution#mmInvestigationCaseReference
+ * InvestigationResolution.mmInvestigationCaseReference}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution
+ * PaymentInvestigationCaseResolution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Reassignment Reassignment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DuplicateCase DuplicateCase}
+ * </li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -55,28 +78,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmInvestigationResolution
  * InvestigationCase.mmInvestigationResolution}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution
- * PaymentInvestigationCaseResolution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Reassignment Reassignment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DuplicateCase DuplicateCase}
- * </li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationResolution#mmInvestigationCase
- * InvestigationResolution.mmInvestigationCase}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationResolution#mmInvestigationCaseReference
- * InvestigationResolution.mmInvestigationCaseReference}</li>
  * </ul>
  * </li>
  * <li>
@@ -115,11 +116,6 @@ public class InvestigationResolution {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestigationCase
 	 * InvestigationCase}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestigationResolution
-	 * InvestigationResolution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -144,6 +140,11 @@ public class InvestigationResolution {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestigationResolution
+	 * InvestigationResolution}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -158,7 +159,7 @@ public class InvestigationResolution {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestigationStatus.mmDuplicateOf, OriginalGroupInformation24.mmResolvedCase, OriginalPaymentInstruction3.mmResolvedCase, OriginalPaymentInstruction10.mmResolvedCase,
 					OriginalPaymentInstruction17.mmResolvedCase, OriginalPaymentInstruction22.mmResolvedCase);
-			elementContext_lazy = () -> InvestigationResolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationResolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestigationCase";
@@ -198,7 +199,7 @@ public class InvestigationResolution {
 	 */
 	public static final MMBusinessAttribute mmInvestigationCaseReference = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> InvestigationResolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationResolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestigationCaseReference";
@@ -206,6 +207,14 @@ public class InvestigationResolution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestigationResolution.class.getMethod("getInvestigationCaseReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -218,8 +227,13 @@ public class InvestigationResolution {
 				definition = "Specifies the actions taken as a result of an investigation.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationCase.mmInvestigationResolution);
 				subType_lazy = () -> Arrays.asList(PaymentInvestigationCaseResolution.mmObject(), Reassignment.mmObject(), DuplicateCase.mmObject());
-				element_lazy = () -> Arrays.asList(InvestigationResolution.mmInvestigationCase, InvestigationResolution.mmInvestigationCaseReference);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationResolution.mmInvestigationCase, com.tools20022.repository.entity.InvestigationResolution.mmInvestigationCaseReference);
 				derivationComponent_lazy = () -> Arrays.asList(CancellationStatusReason1Choice.mmObject(), CancellationStatusReason2Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvestigationResolution.class;
 			}
 		});
 		return mmObject_lazy.get();

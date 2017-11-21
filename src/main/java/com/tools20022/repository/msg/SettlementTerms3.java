@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the beneficiary's account information for the settlement of a
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.msg.SettlementTerms2 SettlementTerms2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementTerms3", propOrder = {"creditorAgent", "creditorAccount"})
 public class SettlementTerms3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -198,6 +204,7 @@ public class SettlementTerms3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CdtrAgt")
 	public FinancialInstitutionIdentification4Choice getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -206,6 +213,7 @@ public class SettlementTerms3 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "CdtrAcct", required = true)
 	public CashAccount24 getCreditorAccount() {
 		return creditorAccount;
 	}

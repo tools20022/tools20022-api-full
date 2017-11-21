@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment system operational information, such as opening, closure, session
@@ -66,6 +70,8 @@ import java.util.List;
  * BusinessDay2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BusinessDay4", propOrder = {"systemDate", "systemStatus", "systemInformationPerCurrency"})
 public class BusinessDay4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class BusinessDay4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysDt")
 	public ISODate getSystemDate() {
 		return systemDate;
 	}
@@ -236,6 +243,7 @@ public class BusinessDay4 {
 		this.systemDate = systemDate;
 	}
 
+	@XmlElement(name = "SysSts")
 	public SystemStatus2 getSystemStatus() {
 		return systemStatus;
 	}
@@ -244,6 +252,7 @@ public class BusinessDay4 {
 		this.systemStatus = systemStatus;
 	}
 
+	@XmlElement(name = "SysInfPerCcy")
 	public List<SystemAvailabilityAndEvents1> getSystemInformationPerCurrency() {
 		return systemInformationPerCurrency;
 	}

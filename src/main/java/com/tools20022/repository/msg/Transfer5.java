@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -90,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Transfer5", propOrder = {"masterReference", "transferReference", "clientReference", "transferDate", "totalUnitsNumber", "ownAccountTransferIndicator", "nonStandardSettlementInformation"})
 public class Transfer5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -453,6 +459,7 @@ public class Transfer5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -461,6 +468,7 @@ public class Transfer5 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -469,6 +477,7 @@ public class Transfer5 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -477,6 +486,7 @@ public class Transfer5 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "TrfDt")
 	public DateFormat1Choice getTransferDate() {
 		return transferDate;
 	}
@@ -485,6 +495,7 @@ public class Transfer5 {
 		this.transferDate = transferDate;
 	}
 
+	@XmlElement(name = "TtlUnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
@@ -493,6 +504,7 @@ public class Transfer5 {
 		this.totalUnitsNumber = totalUnitsNumber;
 	}
 
+	@XmlElement(name = "OwnAcctTrfInd")
 	public YesNoIndicator getOwnAccountTransferIndicator() {
 		return ownAccountTransferIndicator;
 	}
@@ -501,6 +513,7 @@ public class Transfer5 {
 		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
 	}
 
+	@XmlElement(name = "NonStdSttlmInf")
 	public Max350Text getNonStandardSettlementInformation() {
 		return nonStandardSettlementInformation;
 	}

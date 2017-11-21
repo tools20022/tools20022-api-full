@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Summation of the call amounts either due to A or due to B.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Summation of the call amounts either due to A or due to B."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Result1", propOrder = {"dueToPartyA", "dueToPartyB", "additionalInformation"})
 public class Result1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -201,6 +207,7 @@ public class Result1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DueToPtyA")
 	public ActiveCurrencyAndAmount getDueToPartyA() {
 		return dueToPartyA;
 	}
@@ -209,6 +216,7 @@ public class Result1 {
 		this.dueToPartyA = dueToPartyA;
 	}
 
+	@XmlElement(name = "DueToPtyB")
 	public ActiveCurrencyAndAmount getDueToPartyB() {
 		return dueToPartyB;
 	}
@@ -217,6 +225,7 @@ public class Result1 {
 		this.dueToPartyB = dueToPartyB;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max210Text getAdditionalInformation() {
 		return additionalInformation;
 	}

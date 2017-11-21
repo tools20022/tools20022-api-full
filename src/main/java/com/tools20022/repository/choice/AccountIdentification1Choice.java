@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique identifier of an account, as assigned by the account servicer.
@@ -86,6 +90,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountIdentification1Choice", propOrder = {"IBAN", "BBAN", "UPIC", "domesticAccount"})
 public class AccountIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -370,6 +376,7 @@ public class AccountIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IBAN", required = true)
 	public IBANIdentifier getIBAN() {
 		return iBAN;
 	}
@@ -378,6 +385,7 @@ public class AccountIdentification1Choice {
 		this.iBAN = iBAN;
 	}
 
+	@XmlElement(name = "BBAN", required = true)
 	public BBANIdentifier getBBAN() {
 		return bBAN;
 	}
@@ -386,6 +394,7 @@ public class AccountIdentification1Choice {
 		this.bBAN = bBAN;
 	}
 
+	@XmlElement(name = "UPIC", required = true)
 	public UPICIdentifier getUPIC() {
 		return uPIC;
 	}
@@ -394,6 +403,7 @@ public class AccountIdentification1Choice {
 		this.uPIC = uPIC;
 	}
 
+	@XmlElement(name = "DmstAcct", required = true)
 	public SimpleIdentificationInformation getDomesticAccount() {
 		return domesticAccount;
 	}

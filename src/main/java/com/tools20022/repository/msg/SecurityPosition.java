@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Net position of a segregated holding, in a single security, within the
@@ -65,6 +69,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityPosition", propOrder = {"identification", "position"})
 public class SecurityPosition {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class SecurityPosition {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification3 getIdentification() {
 		return identification;
 	}
@@ -187,6 +194,7 @@ public class SecurityPosition {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Pos")
 	public List<EligiblePosition> getPosition() {
 		return position;
 	}

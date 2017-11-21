@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.CorporateActionDeactivationInstruction1;
 import com.tools20022.repository.msg.CorporateActionInformation1;
 import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -54,9 +56,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.028.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -89,6 +88,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.028.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -100,6 +102,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgentCADeactivationInstructionV01", propOrder = {"identification", "corporateActionGeneralInformation", "deactivationDetails"})
 public class AgentCADeactivationInstructionV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -140,6 +144,14 @@ public class AgentCADeactivationInstructionV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCADeactivationInstructionV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
@@ -174,6 +186,14 @@ public class AgentCADeactivationInstructionV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCADeactivationInstructionV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionDeactivationInstruction1 deactivationDetails;
@@ -210,6 +230,14 @@ public class AgentCADeactivationInstructionV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionDeactivationInstruction1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCADeactivationInstructionV01.class.getMethod("getDeactivationDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -222,8 +250,8 @@ public class AgentCADeactivationInstructionV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCADeactvtnInstr";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCADeactivationInstructionV01.mmIdentification, AgentCADeactivationInstructionV01.mmCorporateActionGeneralInformation,
-						AgentCADeactivationInstructionV01.mmDeactivationDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADeactivationInstructionV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCADeactivationInstructionV01.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.AgentCADeactivationInstructionV01.mmDeactivationDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -233,10 +261,16 @@ public class AgentCADeactivationInstructionV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AgentCADeactivationInstructionV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
@@ -245,6 +279,7 @@ public class AgentCADeactivationInstructionV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
@@ -253,11 +288,18 @@ public class AgentCADeactivationInstructionV01 {
 		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
 	}
 
+	@XmlElement(name = "DeactvtnDtls", required = true)
 	public CorporateActionDeactivationInstruction1 getDeactivationDetails() {
 		return deactivationDetails;
 	}
 
 	public void setDeactivationDetails(CorporateActionDeactivationInstruction1 deactivationDetails) {
 		this.deactivationDetails = deactivationDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.028.01.01")
+	static public class Document {
+		@XmlElement(name = "AgtCADeactvtnInstr", required = true)
+		public AgentCADeactivationInstructionV01 messageBody;
 	}
 }

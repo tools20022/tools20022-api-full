@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the opening and valuation conditions for the non deliverable
@@ -90,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NonDeliverableForwardConditions1", propOrder = {"openingIndicator", "openingFixingConditions"})
 public class NonDeliverableForwardConditions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -198,6 +204,7 @@ public class NonDeliverableForwardConditions1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OpngInd", required = true)
 	public YesNoIndicator getOpeningIndicator() {
 		return openingIndicator;
 	}
@@ -206,6 +213,7 @@ public class NonDeliverableForwardConditions1 {
 		this.openingIndicator = openingIndicator;
 	}
 
+	@XmlElement(name = "OpngFxgConds", required = true)
 	public NDFOpeningFixing1Choice getOpeningFixingConditions() {
 		return openingFixingConditions;
 	}

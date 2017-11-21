@@ -28,6 +28,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the status of the global movement.
@@ -79,6 +83,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GlobalDistributionStatus1", propOrder = {"processedStatus", "rejectedStatus"})
 public class GlobalDistributionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -231,6 +237,7 @@ public class GlobalDistributionStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcdSts", required = true)
 	public DistributionProcessingStatus1 getProcessedStatus() {
 		return processedStatus;
 	}
@@ -239,6 +246,7 @@ public class GlobalDistributionStatus1 {
 		this.processedStatus = processedStatus;
 	}
 
+	@XmlElement(name = "RjctdSts", required = true)
 	public DistributionRejectionStatus1 getRejectedStatus() {
 		return rejectedStatus;
 	}

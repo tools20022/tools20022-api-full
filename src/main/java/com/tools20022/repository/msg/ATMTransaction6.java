@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Inquiry information for the transaction.
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMTransaction1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransaction6", propOrder = {"transactionIdentification", "accountData", "protectedAccountData", "totalRequestedAmount", "detailedRequestedAmount", "ICCRelatedData"})
 public class ATMTransaction6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -479,6 +485,7 @@ public class ATMTransaction6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -487,6 +494,7 @@ public class ATMTransaction6 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "AcctData")
 	public CardAccount3 getAccountData() {
 		return accountData;
 	}
@@ -495,6 +503,7 @@ public class ATMTransaction6 {
 		this.accountData = accountData;
 	}
 
+	@XmlElement(name = "PrtctdAcctData")
 	public ContentInformationType10 getProtectedAccountData() {
 		return protectedAccountData;
 	}
@@ -503,6 +512,7 @@ public class ATMTransaction6 {
 		this.protectedAccountData = protectedAccountData;
 	}
 
+	@XmlElement(name = "TtlReqdAmt")
 	public AmountAndCurrency1 getTotalRequestedAmount() {
 		return totalRequestedAmount;
 	}
@@ -511,6 +521,7 @@ public class ATMTransaction6 {
 		this.totalRequestedAmount = totalRequestedAmount;
 	}
 
+	@XmlElement(name = "DtldReqdAmt")
 	public DetailedAmount12 getDetailedRequestedAmount() {
 		return detailedRequestedAmount;
 	}
@@ -519,6 +530,7 @@ public class ATMTransaction6 {
 		this.detailedRequestedAmount = detailedRequestedAmount;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}

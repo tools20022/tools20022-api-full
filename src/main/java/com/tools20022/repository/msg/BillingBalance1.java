@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the balance for the billing services.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the balance for the billing services."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingBalance1", propOrder = {"type", "value", "currencyType"})
 public class BillingBalance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class BillingBalance1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public BillingBalanceType1Choice getType() {
 		return type;
 	}
@@ -237,6 +244,7 @@ public class BillingBalance1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public AmountAndDirection34 getValue() {
 		return value;
 	}
@@ -245,6 +253,7 @@ public class BillingBalance1 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "CcyTp")
 	public BillingCurrencyType1Code getCurrencyType() {
 		return currencyType;
 	}

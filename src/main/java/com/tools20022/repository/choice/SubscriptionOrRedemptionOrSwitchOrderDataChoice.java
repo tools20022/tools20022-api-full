@@ -30,6 +30,10 @@ import com.tools20022.repository.msg.SubscriptionOrder10;
 import com.tools20022.repository.msg.SwitchOrder5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of subscription, redemption or switch order details.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of subscription, redemption or switch order details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionOrRedemptionOrSwitchOrderDataChoice", propOrder = {"subscriptionDetails", "redemptionDetails", "switchDetails"})
 public class SubscriptionOrRedemptionOrSwitchOrderDataChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class SubscriptionOrRedemptionOrSwitchOrderDataChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SbcptDtls", required = true)
 	public SubscriptionOrder10 getSubscriptionDetails() {
 		return subscriptionDetails;
 	}
@@ -237,6 +244,7 @@ public class SubscriptionOrRedemptionOrSwitchOrderDataChoice {
 		this.subscriptionDetails = subscriptionDetails;
 	}
 
+	@XmlElement(name = "RedDtls", required = true)
 	public RedemptionOrder10 getRedemptionDetails() {
 		return redemptionDetails;
 	}
@@ -245,6 +253,7 @@ public class SubscriptionOrRedemptionOrSwitchOrderDataChoice {
 		this.redemptionDetails = redemptionDetails;
 	}
 
+	@XmlElement(name = "SwtchDtls", required = true)
 	public SwitchOrder5 getSwitchDetails() {
 		return switchDetails;
 	}

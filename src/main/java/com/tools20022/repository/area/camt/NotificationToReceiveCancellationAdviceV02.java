@@ -25,8 +25,10 @@ import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.GroupHeader43;
 import com.tools20022.repository.msg.OriginalNotification4;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -42,9 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.058.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -72,6 +71,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.058.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -91,6 +93,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NotificationToReceiveCancellationAdviceV02", propOrder = {"groupHeader", "originalNotification"})
 public class NotificationToReceiveCancellationAdviceV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -127,6 +131,14 @@ public class NotificationToReceiveCancellationAdviceV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader43.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationToReceiveCancellationAdviceV02.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OriginalNotification4 originalNotification;
@@ -166,6 +178,14 @@ public class NotificationToReceiveCancellationAdviceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> OriginalNotification4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationToReceiveCancellationAdviceV02.class.getMethod("getOriginalNotification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -179,7 +199,8 @@ public class NotificationToReceiveCancellationAdviceV02 {
 				rootElement = "Document";
 				xmlTag = "NtfctnToRcvCxlAdvc";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(NotificationToReceiveCancellationAdviceV02.mmGroupHeader, NotificationToReceiveCancellationAdviceV02.mmOriginalNotification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV02.mmGroupHeader,
+						com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV02.mmOriginalNotification);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -189,10 +210,16 @@ public class NotificationToReceiveCancellationAdviceV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return NotificationToReceiveCancellationAdviceV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader43 getGroupHeader() {
 		return groupHeader;
 	}
@@ -201,11 +228,18 @@ public class NotificationToReceiveCancellationAdviceV02 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "OrgnlNtfctn", required = true)
 	public OriginalNotification4 getOriginalNotification() {
 		return originalNotification;
 	}
 
 	public void setOriginalNotification(OriginalNotification4 originalNotification) {
 		this.originalNotification = originalNotification;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.058.02.02")
+	static public class Document {
+		@XmlElement(name = "NtfctnToRcvCxlAdvc", required = true)
+		public NotificationToReceiveCancellationAdviceV02 messageBody;
 	}
 }

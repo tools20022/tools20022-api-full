@@ -54,6 +54,8 @@ public class RestrictedFINMax31Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RestrictedFINMax31Text";
 				definition = "Specifies a character string with a maximum length of 31 characters.";
+				minLength = 1;
+				maxLength = 31;
 			}
 		});
 		return mmObject_lazy.get();

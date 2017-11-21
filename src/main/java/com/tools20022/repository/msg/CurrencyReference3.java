@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the process of a currency exchange or conversion.
@@ -69,6 +73,8 @@ import java.util.List;
  * CurrencyReference2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyReference3", propOrder = {"targetCurrency", "sourceCurrency", "exchangeRateInformation"})
 public class CurrencyReference3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -257,6 +263,7 @@ public class CurrencyReference3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrgtCcy", required = true)
 	public ActiveCurrencyCode getTargetCurrency() {
 		return targetCurrency;
 	}
@@ -265,6 +272,7 @@ public class CurrencyReference3 {
 		this.targetCurrency = targetCurrency;
 	}
 
+	@XmlElement(name = "SrcCcy", required = true)
 	public ActiveCurrencyCode getSourceCurrency() {
 		return sourceCurrency;
 	}
@@ -273,6 +281,7 @@ public class CurrencyReference3 {
 		this.sourceCurrency = sourceCurrency;
 	}
 
+	@XmlElement(name = "XchgRateInf")
 	public List<ExchangeRateInformation1> getExchangeRateInformation() {
 		return exchangeRateInformation;
 	}

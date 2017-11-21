@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -41,6 +42,100 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmBaseCurrency
+ * Account.mmBaseCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmIdentification
+ * Account.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmParentAccount
+ * Account.mmParentAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmSubAccount
+ * Account.mmSubAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmRelatedFundProcessingCharacteristics
+ * Account.mmRelatedFundProcessingCharacteristics}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmStatus
+ * Account.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmLanguage
+ * Account.mmLanguage}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmPartyRole
+ * Account.mmPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmTradePartyRole
+ * Account.mmTradePartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmReportingCurrency
+ * Account.mmReportingCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmAccountRestriction
+ * Account.mmAccountRestriction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmSettlementPartyRole
+ * Account.mmSettlementPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmPurpose
+ * Account.mmPurpose}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmClosingDate
+ * Account.mmClosingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmLiveDate
+ * Account.mmLiveDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmReportedPeriod
+ * Account.mmReportedPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmInvestmentFundPartyRole
+ * Account.mmInvestmentFundPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmRelatedCollateralProcess
+ * Account.mmRelatedCollateralProcess}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmType
+ * Account.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmRelatedProceedsDelivery
+ * Account.mmRelatedProceedsDelivery}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmRelatedCorporateActionPartyRole
+ * Account.mmRelatedCorporateActionPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmDefaultFundAccountOwner
+ * Account.mmDefaultFundAccountOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmSystem
+ * Account.mmSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmBalance
+ * Account.mmBalance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmEntry
+ * Account.mmEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmAccountContract
+ * Account.mmAccountContract}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmOpeningDate
+ * Account.mmOpeningDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmCurrencyExchange
+ * Account.mmCurrencyExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmDefaultFundContribution
+ * Account.mmDefaultFundContribution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmSystemMember
+ * Account.mmSystemMember}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmCollateralAccountType
+ * Account.mmCollateralAccountType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmAccountService
+ * Account.mmAccountService}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmReconciliation
+ * Account.mmReconciliation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmManagedAccountProduct
+ * Account.mmManagedAccountProduct}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashAccount CashAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesAccount
+ * SecuritiesAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentAccount
+ * InvestmentAccount}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -221,100 +316,6 @@ import java.util.List;
  * Account23.mmRelatedAccountDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashAccount CashAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesAccount
- * SecuritiesAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentAccount
- * InvestmentAccount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmBaseCurrency
- * Account.mmBaseCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmIdentification
- * Account.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmParentAccount
- * Account.mmParentAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmSubAccount
- * Account.mmSubAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Account#mmRelatedFundProcessingCharacteristics
- * Account.mmRelatedFundProcessingCharacteristics}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmStatus
- * Account.mmStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmLanguage
- * Account.mmLanguage}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmPartyRole
- * Account.mmPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmTradePartyRole
- * Account.mmTradePartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmReportingCurrency
- * Account.mmReportingCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Account#mmAccountRestriction
- * Account.mmAccountRestriction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Account#mmSettlementPartyRole
- * Account.mmSettlementPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmPurpose
- * Account.mmPurpose}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmClosingDate
- * Account.mmClosingDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmLiveDate
- * Account.mmLiveDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmReportedPeriod
- * Account.mmReportedPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Account#mmInvestmentFundPartyRole
- * Account.mmInvestmentFundPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Account#mmRelatedCollateralProcess
- * Account.mmRelatedCollateralProcess}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmType
- * Account.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Account#mmRelatedProceedsDelivery
- * Account.mmRelatedProceedsDelivery}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Account#mmRelatedCorporateActionPartyRole
- * Account.mmRelatedCorporateActionPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Account#mmDefaultFundAccountOwner
- * Account.mmDefaultFundAccountOwner}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmSystem
- * Account.mmSystem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmBalance
- * Account.mmBalance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmEntry
- * Account.mmEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmAccountContract
- * Account.mmAccountContract}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmOpeningDate
- * Account.mmOpeningDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmCurrencyExchange
- * Account.mmCurrencyExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Account#mmDefaultFundContribution
- * Account.mmDefaultFundContribution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmSystemMember
- * Account.mmSystemMember}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Account#mmCollateralAccountType
- * Account.mmCollateralAccountType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmAccountService
- * Account.mmAccountService}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmReconciliation
- * Account.mmReconciliation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Account#mmManagedAccountProduct
- * Account.mmManagedAccountProduct}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -345,10 +346,6 @@ public class Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -463,6 +460,10 @@ public class Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -491,6 +492,14 @@ public class Account {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Account.class.getMethod("getBaseCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AccountIdentification identification;
 	/**
@@ -512,10 +521,6 @@ public class Account {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1900,6 +1905,10 @@ public class Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2043,10 +2052,6 @@ public class Account {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2058,6 +2063,10 @@ public class Account {
 	 * CashAccountCharacteristics2.mmParentAccount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2102,10 +2111,6 @@ public class Account {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2204,6 +2209,10 @@ public class Account {
 	 * RedemptionExecution15.mmSubAccountForHolding}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2305,10 +2314,6 @@ public class Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.AccountStatus
 	 * AccountStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2394,6 +2399,10 @@ public class Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2434,10 +2443,6 @@ public class Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.LanguageCode
 	 * LanguageCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2516,6 +2521,10 @@ public class Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2541,6 +2550,14 @@ public class Account {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LanguageCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Account.class.getMethod("getLanguage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.AccountPartyRole> partyRole;
@@ -2651,10 +2668,6 @@ public class Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2672,6 +2685,10 @@ public class Account {
 	 * CashAccountCharacteristics2.mmAccountBalanceCurrencyCode}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2698,6 +2715,14 @@ public class Account {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Account.class.getMethod("getReportingCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<com.tools20022.repository.entity.AccountRestriction> accountRestriction;
 	/**
@@ -2717,10 +2742,6 @@ public class Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.AccountRestriction
 	 * AccountRestriction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2747,6 +2768,10 @@ public class Account {
 	 * CustomerAccount3.mmRestriction}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2831,10 +2856,6 @@ public class Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max140Text
 	 * Max140Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2862,6 +2883,10 @@ public class Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2885,6 +2910,14 @@ public class Account {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Account.class.getMethod("getPurpose", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ISODateTime closingDate;
 	/**
@@ -2897,10 +2930,6 @@ public class Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2946,6 +2975,10 @@ public class Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2972,6 +3005,14 @@ public class Account {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Account.class.getMethod("getClosingDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ISODateTime liveDate;
 	/**
@@ -2983,10 +3024,6 @@ public class Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2995,6 +3032,10 @@ public class Account {
 	 * AccountContract3.mmGoLiveDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3018,6 +3059,14 @@ public class Account {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Account.class.getMethod("getLiveDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DateTimePeriod reportedPeriod;
 	/**
@@ -3037,10 +3086,6 @@ public class Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3073,6 +3118,10 @@ public class Account {
 	 * AccountNotification12.mmFromToDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3217,10 +3266,6 @@ public class Account {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
 	 * GenericIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3261,6 +3306,10 @@ public class Account {
 	 * CardAccount12.mmAccountType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3502,10 +3551,6 @@ public class Account {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Balance Balance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3587,6 +3632,10 @@ public class Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3635,10 +3684,6 @@ public class Account {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Entry Entry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3647,6 +3692,10 @@ public class Account {
 	 * ATMAccountStatement1.mmAccountStatement}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3732,10 +3781,6 @@ public class Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3766,6 +3811,10 @@ public class Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3790,6 +3839,14 @@ public class Account {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Account.class.getMethod("getOpeningDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.CurrencyExchange> currencyExchange;
@@ -3951,10 +4008,6 @@ public class Account {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CollateralAccountTypeCode
 	 * CollateralAccountTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
-	 * Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3985,6 +4038,10 @@ public class Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Account
+	 * Account}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4008,6 +4065,14 @@ public class Account {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralAccountTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Account.class.getMethod("getCollateralAccountType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AccountService accountService;
@@ -4200,6 +4265,11 @@ public class Account {
 						StatementTerm1Choice.mmObject(), StatementAttributes1.mmObject(), Account14.mmObject(), SubAccount4.mmObject(), ATMAccountStatement1.mmObject(), Account18.mmObject(), SubAccount5.mmObject(), Account20.mmObject(),
 						CollateralAccount2.mmObject(), CollateralAccountIdentificationType2Choice.mmObject(), Account21.mmObject(), SubAccount6.mmObject(), Account23.mmObject(), Account22.mmObject(), CollateralAccount3.mmObject(),
 						CollateralAccountIdentificationType3Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Account.class;
 			}
 		});
 		return mmObject_lazy.get();

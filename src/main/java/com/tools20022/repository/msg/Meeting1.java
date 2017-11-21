@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the physical parameters of a general meeting. Several dates and
@@ -81,6 +85,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Meeting1", propOrder = {"dateAndTime", "dateStatus", "quorumRequired", "location", "quorumQuantity", "quorumQuantityPercentage"})
 public class Meeting1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -418,6 +424,7 @@ public class Meeting1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtAndTm", required = true)
 	public ISODateTime getDateAndTime() {
 		return dateAndTime;
 	}
@@ -426,6 +433,7 @@ public class Meeting1 {
 		this.dateAndTime = dateAndTime;
 	}
 
+	@XmlElement(name = "DtSts", required = true)
 	public MeetingDateStatus1Code getDateStatus() {
 		return dateStatus;
 	}
@@ -434,6 +442,7 @@ public class Meeting1 {
 		this.dateStatus = dateStatus;
 	}
 
+	@XmlElement(name = "QrmReqrd")
 	public YesNoIndicator getQuorumRequired() {
 		return quorumRequired;
 	}
@@ -442,6 +451,7 @@ public class Meeting1 {
 		this.quorumRequired = quorumRequired;
 	}
 
+	@XmlElement(name = "Lctn", required = true)
 	public List<PostalAddress1> getLocation() {
 		return location;
 	}
@@ -450,6 +460,7 @@ public class Meeting1 {
 		this.location = location;
 	}
 
+	@XmlElement(name = "QrmQty")
 	public Max35Text getQuorumQuantity() {
 		return quorumQuantity;
 	}
@@ -458,6 +469,7 @@ public class Meeting1 {
 		this.quorumQuantity = quorumQuantity;
 	}
 
+	@XmlElement(name = "QrmQtyPctg")
 	public PercentageRate getQuorumQuantityPercentage() {
 		return quorumQuantityPercentage;
 	}

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,6 +39,69 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmIdentification
+ * ContactPoint.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedInvestmentFund
+ * ContactPoint.mmRelatedInvestmentFund}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ContactPoint#mmBICAddress
+ * ContactPoint.mmBICAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedParty
+ * ContactPoint.mmRelatedParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedCorporateActionEvent
+ * ContactPoint.mmRelatedCorporateActionEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedReportingService
+ * ContactPoint.mmRelatedReportingService}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmStoredDocument
+ * ContactPoint.mmStoredDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRemittanceRelatedPayment
+ * ContactPoint.mmRemittanceRelatedPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedProxyAppointment
+ * ContactPoint.mmRelatedProxyAppointment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmContactPointForMeeting
+ * ContactPoint.mmContactPointForMeeting}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmContactPointForVote
+ * ContactPoint.mmContactPointForVote}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ContactPoint#mmMainContact
+ * ContactPoint.mmMainContact}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmReturnAddress
+ * ContactPoint.mmReturnAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedPayment
+ * ContactPoint.mmRelatedPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmTemporaryIndicator
+ * ContactPoint.mmTemporaryIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmDeliveredAttendanceCard
+ * ContactPoint.mmDeliveredAttendanceCard}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmInvestmentFundClassProcessing
+ * ContactPoint.mmInvestmentFundClassProcessing}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress PhoneAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ElectronicAddress
+ * ElectronicAddress}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -141,69 +205,6 @@ import java.util.List;
  * RemittanceLocation4.mmRemittanceLocationDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress PhoneAddress}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ElectronicAddress
- * ElectronicAddress}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmIdentification
- * ContactPoint.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedInvestmentFund
- * ContactPoint.mmRelatedInvestmentFund}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ContactPoint#mmBICAddress
- * ContactPoint.mmBICAddress}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedParty
- * ContactPoint.mmRelatedParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedCorporateActionEvent
- * ContactPoint.mmRelatedCorporateActionEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedReportingService
- * ContactPoint.mmRelatedReportingService}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmStoredDocument
- * ContactPoint.mmStoredDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRemittanceRelatedPayment
- * ContactPoint.mmRemittanceRelatedPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedProxyAppointment
- * ContactPoint.mmRelatedProxyAppointment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmContactPointForMeeting
- * ContactPoint.mmContactPointForMeeting}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmContactPointForVote
- * ContactPoint.mmContactPointForVote}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ContactPoint#mmMainContact
- * ContactPoint.mmMainContact}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmReturnAddress
- * ContactPoint.mmReturnAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedPayment
- * ContactPoint.mmRelatedPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmTemporaryIndicator
- * ContactPoint.mmTemporaryIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmDeliveredAttendanceCard
- * ContactPoint.mmDeliveredAttendanceCard}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmInvestmentFundClassProcessing
- * ContactPoint.mmInvestmentFundClassProcessing}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -241,10 +242,6 @@ public class ContactPoint {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
 	 * GenericIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ContactPoint ContactPoint}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -253,6 +250,10 @@ public class ContactPoint {
 	 * OtherContact1.mmIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ContactPoint ContactPoint}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -338,10 +339,6 @@ public class ContactPoint {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.AnyBICIdentifier
 	 * AnyBICIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ContactPoint ContactPoint}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -355,6 +352,10 @@ public class ContactPoint {
 	 * Member1.mmReturnAddress}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ContactPoint ContactPoint}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -378,6 +379,14 @@ public class ContactPoint {
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ContactPoint.class.getMethod("getBICAddress", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Party relatedParty;
 	/**
@@ -396,10 +405,6 @@ public class ContactPoint {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Party Party}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ContactPoint ContactPoint}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -408,6 +413,10 @@ public class ContactPoint {
 	 * PostalAddress3.mmNameAndAddress}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ContactPoint ContactPoint}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -833,10 +842,6 @@ public class ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.ContactPoint
 	 * ContactPoint}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ContactPoint ContactPoint}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -845,6 +850,10 @@ public class ContactPoint {
 	 * MemberDetails1.mmMemberReturnAddress}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ContactPoint ContactPoint}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -957,6 +966,14 @@ public class ContactPoint {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ContactPoint.class.getMethod("getTemporaryIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AttendanceCard deliveredAttendanceCard;
 	/**
@@ -1026,10 +1043,6 @@ public class ContactPoint {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ContactPoint ContactPoint}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1053,6 +1066,10 @@ public class ContactPoint {
 	 * OrderDeskContactDetails.mmRedemptionProcessingCharacteristics}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ContactPoint ContactPoint}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1109,6 +1126,11 @@ public class ContactPoint {
 				derivationComponent_lazy = () -> Arrays.asList(OrderDeskContactDetails.mmObject(), ContactAttributes1.mmObject(), CommunicationAddress3.mmObject(), CommunicationMethod2Choice.mmObject(), RemittanceLocation1.mmObject(),
 						RemittanceLocation2.mmObject(), ContactInformation1.mmObject(), CommunicationAddress4.mmObject(), LocationFormat1Choice.mmObject(), CommunicationAddressDetails.mmObject(), OtherContact1.mmObject(),
 						ResidenceLocation1Choice.mmObject(), RemittanceLocation3.mmObject(), RemittanceLocationDetails1.mmObject(), RemittanceLocation4.mmObject(), CommunicationAddress5.mmObject(), CommunicationAddress6.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ContactPoint.class;
 			}
 		});
 		return mmObject_lazy.get();

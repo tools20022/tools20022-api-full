@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Card payment transactions from one or several data set of transactions.
@@ -79,6 +83,8 @@ import java.util.List;
  * CardPaymentBatchTransfer3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentBatchTransfer4", propOrder = {"transactionTotals", "dataSet"})
 public class CardPaymentBatchTransfer4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -212,6 +218,7 @@ public class CardPaymentBatchTransfer4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxTtls")
 	public List<TransactionTotals7> getTransactionTotals() {
 		return transactionTotals;
 	}
@@ -220,6 +227,7 @@ public class CardPaymentBatchTransfer4 {
 		this.transactionTotals = transactionTotals;
 	}
 
+	@XmlElement(name = "DataSet")
 	public List<CardPaymentDataSet13> getDataSet() {
 		return dataSet;
 	}

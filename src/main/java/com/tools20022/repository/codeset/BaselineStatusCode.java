@@ -29,17 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus1Code
- * BaselineStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus3Code
- * BaselineStatus3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus2Code
- * BaselineStatus2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -78,6 +67,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.BaselineStatusCode#mmDataSetAcceptanceRequested
  * BaselineStatusCode.mmDataSetAcceptanceRequested}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus1Code
+ * BaselineStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus3Code
+ * BaselineStatus3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus2Code
+ * BaselineStatus2Code}</li>
  * </ul>
  * </li>
  * <li>

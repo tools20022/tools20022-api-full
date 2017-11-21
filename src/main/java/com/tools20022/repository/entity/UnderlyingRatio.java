@@ -36,6 +36,20 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.UnderlyingRatio#mmSecuritiesConversion
+ * UnderlyingRatio.mmSecuritiesConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.UnderlyingRatio#mmUnderlyingQuantityDenominator
+ * UnderlyingRatio.mmUnderlyingQuantityDenominator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.UnderlyingRatio#mmUnderlyingQuantityNumerator
+ * UnderlyingRatio.mmUnderlyingQuantityNumerator}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -57,20 +71,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#mmRatio
  * SecuritiesConversion.mmRatio}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.UnderlyingRatio#mmSecuritiesConversion
- * UnderlyingRatio.mmSecuritiesConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.UnderlyingRatio#mmUnderlyingQuantityDenominator
- * UnderlyingRatio.mmUnderlyingQuantityDenominator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.UnderlyingRatio#mmUnderlyingQuantityNumerator
- * UnderlyingRatio.mmUnderlyingQuantityNumerator}</li>
  * </ul>
  * </li>
  * <li>
@@ -111,11 +111,6 @@ public class UnderlyingRatio {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion
 	 * SecuritiesConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.UnderlyingRatio
-	 * UnderlyingRatio}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -124,6 +119,11 @@ public class UnderlyingRatio {
 	 * UnderlyingRatio1.mmRelatedFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.UnderlyingRatio
+	 * UnderlyingRatio}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -138,7 +138,7 @@ public class UnderlyingRatio {
 	public static final MMBusinessAssociationEnd mmSecuritiesConversion = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingRatio1.mmRelatedFinancialInstrumentIdentification);
-			elementContext_lazy = () -> UnderlyingRatio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UnderlyingRatio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesConversion";
@@ -167,11 +167,6 @@ public class UnderlyingRatio {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.UnderlyingRatio
-	 * UnderlyingRatio}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -180,6 +175,11 @@ public class UnderlyingRatio {
 	 * UnderlyingRatio1.mmUnderlyingQuantityDenominator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.UnderlyingRatio
+	 * UnderlyingRatio}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -194,7 +194,7 @@ public class UnderlyingRatio {
 	public static final MMBusinessAssociationEnd mmUnderlyingQuantityDenominator = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingRatio1.mmUnderlyingQuantityDenominator);
-			elementContext_lazy = () -> UnderlyingRatio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UnderlyingRatio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnderlyingQuantityDenominator";
@@ -224,11 +224,6 @@ public class UnderlyingRatio {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.UnderlyingRatio
-	 * UnderlyingRatio}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -237,6 +232,11 @@ public class UnderlyingRatio {
 	 * UnderlyingRatio1.mmUnderlyingQuantityNumerator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.UnderlyingRatio
+	 * UnderlyingRatio}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -251,7 +251,7 @@ public class UnderlyingRatio {
 	public static final MMBusinessAssociationEnd mmUnderlyingQuantityNumerator = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingRatio1.mmUnderlyingQuantityNumerator);
-			elementContext_lazy = () -> UnderlyingRatio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UnderlyingRatio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnderlyingQuantityNumerator";
@@ -273,8 +273,14 @@ public class UnderlyingRatio {
 				definition = "Related financial instrument into which the security can be converted.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesQuantity.mmDenominatorRatio, com.tools20022.repository.entity.SecuritiesQuantity.mmNumeratorRatio,
 						com.tools20022.repository.entity.SecuritiesConversion.mmRatio);
-				element_lazy = () -> Arrays.asList(UnderlyingRatio.mmSecuritiesConversion, UnderlyingRatio.mmUnderlyingQuantityDenominator, UnderlyingRatio.mmUnderlyingQuantityNumerator);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UnderlyingRatio.mmSecuritiesConversion, com.tools20022.repository.entity.UnderlyingRatio.mmUnderlyingQuantityDenominator,
+						com.tools20022.repository.entity.UnderlyingRatio.mmUnderlyingQuantityNumerator);
 				derivationComponent_lazy = () -> Arrays.asList(UnderlyingRatio1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UnderlyingRatio.class;
 			}
 		});
 		return mmObject_lazy.get();

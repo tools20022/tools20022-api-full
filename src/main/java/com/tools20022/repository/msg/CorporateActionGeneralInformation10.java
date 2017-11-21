@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General information about the corporate action event.
@@ -93,6 +97,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionGeneralInformation10", propOrder = {"corporateActionEventIdentification", "officialCorporateActionEventIdentification", "narrativeType"})
 public class CorporateActionGeneralInformation10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -265,6 +271,7 @@ public class CorporateActionGeneralInformation10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CorpActnEvtId", required = true)
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -273,6 +280,7 @@ public class CorporateActionGeneralInformation10 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "OffclCorpActnEvtId")
 	public Max35Text getOfficialCorporateActionEventIdentification() {
 		return officialCorporateActionEventIdentification;
 	}
@@ -281,6 +289,7 @@ public class CorporateActionGeneralInformation10 {
 		this.officialCorporateActionEventIdentification = officialCorporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "NrrtvTp")
 	public CorporateActionNarrative1Choice getNarrativeType() {
 		return narrativeType;
 	}

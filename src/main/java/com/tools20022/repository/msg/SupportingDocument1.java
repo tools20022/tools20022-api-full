@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Currency control document supporting the contract registration.
@@ -96,6 +100,8 @@ import java.util.List;
  * "Currency control document supporting the contract registration."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SupportingDocument1", propOrder = {"supportingDocumentIdentification", "originalRequestIdentification", "certificate", "accountOwner", "accountServicer", "amendment", "contractReference", "entry", "supplementaryData"})
 public class SupportingDocument1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -538,6 +544,7 @@ public class SupportingDocument1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SpprtgDocId", required = true)
 	public Max35Text getSupportingDocumentIdentification() {
 		return supportingDocumentIdentification;
 	}
@@ -546,6 +553,7 @@ public class SupportingDocument1 {
 		this.supportingDocumentIdentification = supportingDocumentIdentification;
 	}
 
+	@XmlElement(name = "OrgnlReqId")
 	public Max35Text getOriginalRequestIdentification() {
 		return originalRequestIdentification;
 	}
@@ -554,6 +562,7 @@ public class SupportingDocument1 {
 		this.originalRequestIdentification = originalRequestIdentification;
 	}
 
+	@XmlElement(name = "Cert", required = true)
 	public DocumentIdentification28 getCertificate() {
 		return certificate;
 	}
@@ -562,6 +571,7 @@ public class SupportingDocument1 {
 		this.certificate = certificate;
 	}
 
+	@XmlElement(name = "AcctOwnr", required = true)
 	public PartyIdentification77 getAccountOwner() {
 		return accountOwner;
 	}
@@ -570,6 +580,7 @@ public class SupportingDocument1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
 		return accountServicer;
 	}
@@ -578,6 +589,7 @@ public class SupportingDocument1 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "Amdmnt")
 	public DocumentAmendment1 getAmendment() {
 		return amendment;
 	}
@@ -586,6 +598,7 @@ public class SupportingDocument1 {
 		this.amendment = amendment;
 	}
 
+	@XmlElement(name = "CtrctRef", required = true)
 	public ContractRegistrationReference1Choice getContractReference() {
 		return contractReference;
 	}
@@ -594,6 +607,7 @@ public class SupportingDocument1 {
 		this.contractReference = contractReference;
 	}
 
+	@XmlElement(name = "Ntry", required = true)
 	public List<SupportingDocumentEntry1> getEntry() {
 		return entry;
 	}
@@ -602,6 +616,7 @@ public class SupportingDocument1 {
 		this.entry = entry;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

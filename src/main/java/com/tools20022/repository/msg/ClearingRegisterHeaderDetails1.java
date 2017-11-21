@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about clearing register.
@@ -86,6 +90,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about clearing register."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClearingRegisterHeaderDetails1", propOrder = {"processingPeriod", "totalInterbankSettlementCreditAmount", "totalInterbankSettlementDebitAmount", "clearingAgent", "clearingAgentAccount", "guaranteeFundAgent",
+		"guaranteeFundAgentAccount", "clearingCircuit", "settlementTimeRequest", "settlementTimeIndication", "paymentIdentification"})
 public class ClearingRegisterHeaderDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -579,6 +586,7 @@ public class ClearingRegisterHeaderDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcgPrd", required = true)
 	public Period4 getProcessingPeriod() {
 		return processingPeriod;
 	}
@@ -587,6 +595,7 @@ public class ClearingRegisterHeaderDetails1 {
 		this.processingPeriod = processingPeriod;
 	}
 
+	@XmlElement(name = "TtlIntrBkSttlmCdtAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalInterbankSettlementCreditAmount() {
 		return totalInterbankSettlementCreditAmount;
 	}
@@ -595,6 +604,7 @@ public class ClearingRegisterHeaderDetails1 {
 		this.totalInterbankSettlementCreditAmount = totalInterbankSettlementCreditAmount;
 	}
 
+	@XmlElement(name = "TtlIntrBkSttlmDbtAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalInterbankSettlementDebitAmount() {
 		return totalInterbankSettlementDebitAmount;
 	}
@@ -603,6 +613,7 @@ public class ClearingRegisterHeaderDetails1 {
 		this.totalInterbankSettlementDebitAmount = totalInterbankSettlementDebitAmount;
 	}
 
+	@XmlElement(name = "ClrAgt")
 	public BranchAndFinancialInstitutionIdentification5 getClearingAgent() {
 		return clearingAgent;
 	}
@@ -611,6 +622,7 @@ public class ClearingRegisterHeaderDetails1 {
 		this.clearingAgent = clearingAgent;
 	}
 
+	@XmlElement(name = "ClrAgtAcct")
 	public CashAccount24 getClearingAgentAccount() {
 		return clearingAgentAccount;
 	}
@@ -619,6 +631,7 @@ public class ClearingRegisterHeaderDetails1 {
 		this.clearingAgentAccount = clearingAgentAccount;
 	}
 
+	@XmlElement(name = "GrntFndAgt")
 	public BranchAndFinancialInstitutionIdentification5 getGuaranteeFundAgent() {
 		return guaranteeFundAgent;
 	}
@@ -627,6 +640,7 @@ public class ClearingRegisterHeaderDetails1 {
 		this.guaranteeFundAgent = guaranteeFundAgent;
 	}
 
+	@XmlElement(name = "GrntFndAgtAcct")
 	public CashAccount24 getGuaranteeFundAgentAccount() {
 		return guaranteeFundAgentAccount;
 	}
@@ -635,6 +649,7 @@ public class ClearingRegisterHeaderDetails1 {
 		this.guaranteeFundAgentAccount = guaranteeFundAgentAccount;
 	}
 
+	@XmlElement(name = "ClrCrct")
 	public ClearingScheme1Choice getClearingCircuit() {
 		return clearingCircuit;
 	}
@@ -643,6 +658,7 @@ public class ClearingRegisterHeaderDetails1 {
 		this.clearingCircuit = clearingCircuit;
 	}
 
+	@XmlElement(name = "SttlmTmReq")
 	public SettlementTimeRequest2 getSettlementTimeRequest() {
 		return settlementTimeRequest;
 	}
@@ -651,6 +667,7 @@ public class ClearingRegisterHeaderDetails1 {
 		this.settlementTimeRequest = settlementTimeRequest;
 	}
 
+	@XmlElement(name = "SttlmTmIndctn")
 	public SettlementDateTimeIndication1 getSettlementTimeIndication() {
 		return settlementTimeIndication;
 	}
@@ -659,6 +676,7 @@ public class ClearingRegisterHeaderDetails1 {
 		this.settlementTimeIndication = settlementTimeIndication;
 	}
 
+	@XmlElement(name = "PmtId", required = true)
 	public PaymentIdentification3 getPaymentIdentification() {
 		return paymentIdentification;
 	}

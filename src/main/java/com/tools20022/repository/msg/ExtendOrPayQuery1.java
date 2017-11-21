@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Undertaking extend or pay query details.
@@ -92,6 +96,8 @@ import java.util.List;
  * definition} = "Undertaking extend or pay query details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExtendOrPayQuery1", propOrder = {"undertakingIdentification", "demandDetails", "requestedExpiryDate", "bankInstructions", "bankContact", "enclosedFile", "additionalInformation"})
 public class ExtendOrPayQuery1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -426,6 +432,7 @@ public class ExtendOrPayQuery1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UdrtkgId", required = true)
 	public Undertaking9 getUndertakingIdentification() {
 		return undertakingIdentification;
 	}
@@ -434,6 +441,7 @@ public class ExtendOrPayQuery1 {
 		this.undertakingIdentification = undertakingIdentification;
 	}
 
+	@XmlElement(name = "DmndDtls", required = true)
 	public Demand2 getDemandDetails() {
 		return demandDetails;
 	}
@@ -442,6 +450,7 @@ public class ExtendOrPayQuery1 {
 		this.demandDetails = demandDetails;
 	}
 
+	@XmlElement(name = "ReqdXpryDt", required = true)
 	public ISODate getRequestedExpiryDate() {
 		return requestedExpiryDate;
 	}
@@ -450,6 +459,7 @@ public class ExtendOrPayQuery1 {
 		this.requestedExpiryDate = requestedExpiryDate;
 	}
 
+	@XmlElement(name = "BkInstrs")
 	public BankInstructions1 getBankInstructions() {
 		return bankInstructions;
 	}
@@ -458,6 +468,7 @@ public class ExtendOrPayQuery1 {
 		this.bankInstructions = bankInstructions;
 	}
 
+	@XmlElement(name = "BkCtct")
 	public List<Contacts3> getBankContact() {
 		return bankContact;
 	}
@@ -466,6 +477,7 @@ public class ExtendOrPayQuery1 {
 		this.bankContact = bankContact;
 	}
 
+	@XmlElement(name = "NclsdFile")
 	public List<Document9> getEnclosedFile() {
 		return enclosedFile;
 	}
@@ -474,6 +486,7 @@ public class ExtendOrPayQuery1 {
 		this.enclosedFile = enclosedFile;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

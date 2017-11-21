@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Index;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Credit default swap derivative specific for reporting derivatives on a credit
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CreditDefaultSwapDerivative3", propOrder = {"underlyingIndexIdentification", "indexName", "index"})
 public class CreditDefaultSwapDerivative3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -235,6 +241,7 @@ public class CreditDefaultSwapDerivative3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UndrlygIndxId")
 	public ISINOct2015Identifier getUnderlyingIndexIdentification() {
 		return underlyingIndexIdentification;
 	}
@@ -243,6 +250,7 @@ public class CreditDefaultSwapDerivative3 {
 		this.underlyingIndexIdentification = underlyingIndexIdentification;
 	}
 
+	@XmlElement(name = "IndxNm", required = true)
 	public Max25Text getIndexName() {
 		return indexName;
 	}
@@ -251,6 +259,7 @@ public class CreditDefaultSwapDerivative3 {
 		this.indexName = indexName;
 	}
 
+	@XmlElement(name = "Indx", required = true)
 	public CreditDefaultSwapIndex2 getIndex() {
 		return index;
 	}

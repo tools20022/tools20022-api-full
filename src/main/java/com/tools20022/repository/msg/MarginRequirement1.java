@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.MarginAmountRequirement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of expected margin required by any of the parties of the margin
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarginRequirement1", propOrder = {"deliverMarginAmount", "returnMarginAmount"})
 public class MarginRequirement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -187,6 +193,7 @@ public class MarginRequirement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DlvrMrgnAmt")
 	public ActiveCurrencyAndAmount getDeliverMarginAmount() {
 		return deliverMarginAmount;
 	}
@@ -195,6 +202,7 @@ public class MarginRequirement1 {
 		this.deliverMarginAmount = deliverMarginAmount;
 	}
 
+	@XmlElement(name = "RtrMrgnAmt")
 	public ActiveCurrencyAndAmount getReturnMarginAmount() {
 		return returnMarginAmount;
 	}

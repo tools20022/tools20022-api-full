@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Chain of parties involved in the settlement of a transaction, including
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementParties7", propOrder = {"depository", "party1", "party2", "party3", "party4", "party5"})
 public class SettlementParties7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -389,6 +395,7 @@ public class SettlementParties7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dpstry")
 	public PartyIdentification4 getDepository() {
 		return depository;
 	}
@@ -397,6 +404,7 @@ public class SettlementParties7 {
 		this.depository = depository;
 	}
 
+	@XmlElement(name = "Pty1")
 	public PartyIdentificationAndAccount26 getParty1() {
 		return party1;
 	}
@@ -405,6 +413,7 @@ public class SettlementParties7 {
 		this.party1 = party1;
 	}
 
+	@XmlElement(name = "Pty2")
 	public PartyIdentificationAndAccount26 getParty2() {
 		return party2;
 	}
@@ -413,6 +422,7 @@ public class SettlementParties7 {
 		this.party2 = party2;
 	}
 
+	@XmlElement(name = "Pty3")
 	public PartyIdentificationAndAccount26 getParty3() {
 		return party3;
 	}
@@ -421,6 +431,7 @@ public class SettlementParties7 {
 		this.party3 = party3;
 	}
 
+	@XmlElement(name = "Pty4")
 	public PartyIdentificationAndAccount26 getParty4() {
 		return party4;
 	}
@@ -429,6 +440,7 @@ public class SettlementParties7 {
 		this.party4 = party4;
 	}
 
+	@XmlElement(name = "Pty5")
 	public PartyIdentificationAndAccount26 getParty5() {
 		return party5;
 	}

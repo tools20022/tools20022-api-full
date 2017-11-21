@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -57,9 +59,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.025.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -135,6 +134,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.025.001.05}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -158,6 +160,10 @@ import java.util.List;
  * SecuritiesSettlementTransactionConfirmationV04}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesSettlementTransactionConfirmationV05", propOrder = {"transactionIdentificationDetails", "additionalParameters", "tradeDetails", "financialInstrumentIdentification", "financialInstrumentAttributes",
+		"quantityAndAccountDetails", "settlementParameters", "standingSettlementInstructionDetails", "deliveringSettlementParties", "receivingSettlementParties", "cashParties", "settledAmount", "otherAmounts", "otherBusinessParties",
+		"additionalPhysicalOrRegistrationDetails", "supplementaryData"})
 public class SecuritiesSettlementTransactionConfirmationV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -213,6 +219,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> SettlementTypeAndIdentification15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getTransactionIdentificationDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalParameters17 additionalParameters;
 	/**
@@ -263,6 +277,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalParameters17.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getAdditionalParameters", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesTradeDetails31 tradeDetails;
 	/**
@@ -312,6 +334,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesTradeDetails31.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getTradeDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecurityIdentification14 financialInstrumentIdentification;
@@ -368,6 +398,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification14.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getFinancialInstrumentIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected FinancialInstrumentAttributes35 financialInstrumentAttributes;
 	/**
@@ -419,6 +457,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentAttributes35.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getFinancialInstrumentAttributes", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected QuantityAndAccount28 quantityAndAccountDetails;
@@ -473,6 +519,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> QuantityAndAccount28.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getQuantityAndAccountDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SettlementDetails70 settlementParameters;
@@ -529,6 +583,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> SettlementDetails70.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getSettlementParameters", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected StandingSettlementInstruction4 standingSettlementInstructionDetails;
 	/**
@@ -584,6 +646,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> StandingSettlementInstruction4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getStandingSettlementInstructionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SettlementParties11 deliveringSettlementParties;
 	/**
@@ -635,6 +705,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties11.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getDeliveringSettlementParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SettlementParties11 receivingSettlementParties;
@@ -688,6 +766,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties11.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getReceivingSettlementParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CashParties17 cashParties;
 	/**
@@ -739,6 +825,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CashParties17.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getCashParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AmountAndDirection36 settledAmount;
@@ -794,6 +888,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> AmountAndDirection36.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getSettledAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OtherAmounts18 otherAmounts;
 	/**
@@ -843,6 +945,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> OtherAmounts18.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getOtherAmounts", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OtherParties19 otherBusinessParties;
 	/**
@@ -891,6 +1001,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> OtherParties19.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getOtherBusinessParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RegistrationParameters1 additionalPhysicalOrRegistrationDetails;
@@ -947,6 +1065,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> RegistrationParameters1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getAdditionalPhysicalOrRegistrationDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -999,6 +1125,14 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionConfirmationV05.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -1013,14 +1147,19 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxConf";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionConfirmationV05.mmTransactionIdentificationDetails, SecuritiesSettlementTransactionConfirmationV05.mmAdditionalParameters,
-						SecuritiesSettlementTransactionConfirmationV05.mmTradeDetails, SecuritiesSettlementTransactionConfirmationV05.mmFinancialInstrumentIdentification,
-						SecuritiesSettlementTransactionConfirmationV05.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionConfirmationV05.mmQuantityAndAccountDetails,
-						SecuritiesSettlementTransactionConfirmationV05.mmSettlementParameters, SecuritiesSettlementTransactionConfirmationV05.mmStandingSettlementInstructionDetails,
-						SecuritiesSettlementTransactionConfirmationV05.mmDeliveringSettlementParties, SecuritiesSettlementTransactionConfirmationV05.mmReceivingSettlementParties,
-						SecuritiesSettlementTransactionConfirmationV05.mmCashParties, SecuritiesSettlementTransactionConfirmationV05.mmSettledAmount, SecuritiesSettlementTransactionConfirmationV05.mmOtherAmounts,
-						SecuritiesSettlementTransactionConfirmationV05.mmOtherBusinessParties, SecuritiesSettlementTransactionConfirmationV05.mmAdditionalPhysicalOrRegistrationDetails,
-						SecuritiesSettlementTransactionConfirmationV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmTransactionIdentificationDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmAdditionalParameters, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmTradeDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmFinancialInstrumentAttributes,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmQuantityAndAccountDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmSettlementParameters,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmStandingSettlementInstructionDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmDeliveringSettlementParties,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmReceivingSettlementParties, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmCashParties,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmSettledAmount, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmOtherAmounts,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmOtherBusinessParties,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmAdditionalPhysicalOrRegistrationDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -1030,10 +1169,16 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesSettlementTransactionConfirmationV05.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxIdDtls", required = true)
 	public SettlementTypeAndIdentification15 getTransactionIdentificationDetails() {
 		return transactionIdentificationDetails;
 	}
@@ -1042,6 +1187,7 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 		this.transactionIdentificationDetails = transactionIdentificationDetails;
 	}
 
+	@XmlElement(name = "AddtlParams")
 	public AdditionalParameters17 getAdditionalParameters() {
 		return additionalParameters;
 	}
@@ -1050,6 +1196,7 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 		this.additionalParameters = additionalParameters;
 	}
 
+	@XmlElement(name = "TradDtls", required = true)
 	public SecuritiesTradeDetails31 getTradeDetails() {
 		return tradeDetails;
 	}
@@ -1058,6 +1205,7 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 		this.tradeDetails = tradeDetails;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -1066,6 +1214,7 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public FinancialInstrumentAttributes35 getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -1074,6 +1223,7 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "QtyAndAcctDtls", required = true)
 	public QuantityAndAccount28 getQuantityAndAccountDetails() {
 		return quantityAndAccountDetails;
 	}
@@ -1082,6 +1232,7 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 		this.quantityAndAccountDetails = quantityAndAccountDetails;
 	}
 
+	@XmlElement(name = "SttlmParams", required = true)
 	public SettlementDetails70 getSettlementParameters() {
 		return settlementParameters;
 	}
@@ -1090,6 +1241,7 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 		this.settlementParameters = settlementParameters;
 	}
 
+	@XmlElement(name = "StgSttlmInstrDtls")
 	public StandingSettlementInstruction4 getStandingSettlementInstructionDetails() {
 		return standingSettlementInstructionDetails;
 	}
@@ -1098,6 +1250,7 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 		this.standingSettlementInstructionDetails = standingSettlementInstructionDetails;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties11 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -1106,6 +1259,7 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties11 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -1114,6 +1268,7 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "CshPties")
 	public CashParties17 getCashParties() {
 		return cashParties;
 	}
@@ -1122,6 +1277,7 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 		this.cashParties = cashParties;
 	}
 
+	@XmlElement(name = "SttldAmt")
 	public AmountAndDirection36 getSettledAmount() {
 		return settledAmount;
 	}
@@ -1130,6 +1286,7 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 		this.settledAmount = settledAmount;
 	}
 
+	@XmlElement(name = "OthrAmts")
 	public OtherAmounts18 getOtherAmounts() {
 		return otherAmounts;
 	}
@@ -1138,6 +1295,7 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 		this.otherAmounts = otherAmounts;
 	}
 
+	@XmlElement(name = "OthrBizPties")
 	public OtherParties19 getOtherBusinessParties() {
 		return otherBusinessParties;
 	}
@@ -1146,6 +1304,7 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 		this.otherBusinessParties = otherBusinessParties;
 	}
 
+	@XmlElement(name = "AddtlPhysOrRegnDtls")
 	public RegistrationParameters1 getAdditionalPhysicalOrRegistrationDetails() {
 		return additionalPhysicalOrRegistrationDetails;
 	}
@@ -1154,11 +1313,18 @@ public class SecuritiesSettlementTransactionConfirmationV05 {
 		this.additionalPhysicalOrRegistrationDetails = additionalPhysicalOrRegistrationDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.025.05.05")
+	static public class Document {
+		@XmlElement(name = "SctiesSttlmTxConf", required = true)
+		public SecuritiesSettlementTransactionConfirmationV05 messageBody;
 	}
 }

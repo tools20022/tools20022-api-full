@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Environment of the transaction.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMEnvironment2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMEnvironment5", propOrder = {"ATM", "customer", "protectedCardData", "plainCardData"})
 public class ATMEnvironment5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -272,6 +278,7 @@ public class ATMEnvironment5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ATM", required = true)
 	public AutomatedTellerMachine2 getATM() {
 		return aTM;
 	}
@@ -280,6 +287,7 @@ public class ATMEnvironment5 {
 		this.aTM = aTM;
 	}
 
+	@XmlElement(name = "Cstmr", required = true)
 	public ATMCustomer2 getCustomer() {
 		return customer;
 	}
@@ -288,6 +296,7 @@ public class ATMEnvironment5 {
 		this.customer = customer;
 	}
 
+	@XmlElement(name = "PrtctdCardData")
 	public ContentInformationType10 getProtectedCardData() {
 		return protectedCardData;
 	}
@@ -296,6 +305,7 @@ public class ATMEnvironment5 {
 		this.protectedCardData = protectedCardData;
 	}
 
+	@XmlElement(name = "PlainCardData")
 	public PlainCardData14 getPlainCardData() {
 		return plainCardData;
 	}

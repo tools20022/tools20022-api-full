@@ -36,6 +36,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of reference.
@@ -105,6 +109,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References2Choice", propOrder = {"securitiesSettlementTransactionIdentification", "securitiesFinancingTransactionIdentification", "intraPositionMovementIdentification", "otherTransactionIdentification"})
 public class References2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -367,6 +373,7 @@ public class References2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesSttlmTxId", required = true)
 	public SettlementTypeAndIdentification3 getSecuritiesSettlementTransactionIdentification() {
 		return securitiesSettlementTransactionIdentification;
 	}
@@ -375,6 +382,7 @@ public class References2Choice {
 		this.securitiesSettlementTransactionIdentification = securitiesSettlementTransactionIdentification;
 	}
 
+	@XmlElement(name = "SctiesFincgTxId", required = true)
 	public SettlementTypeAndIdentification3 getSecuritiesFinancingTransactionIdentification() {
 		return securitiesFinancingTransactionIdentification;
 	}
@@ -383,6 +391,7 @@ public class References2Choice {
 		this.securitiesFinancingTransactionIdentification = securitiesFinancingTransactionIdentification;
 	}
 
+	@XmlElement(name = "IntraPosMvmntId", required = true)
 	public Max35Text getIntraPositionMovementIdentification() {
 		return intraPositionMovementIdentification;
 	}
@@ -391,6 +400,7 @@ public class References2Choice {
 		this.intraPositionMovementIdentification = intraPositionMovementIdentification;
 	}
 
+	@XmlElement(name = "OthrTxId", required = true)
 	public GenericDocumentIdentification1 getOtherTransactionIdentification() {
 		return otherTransactionIdentification;
 	}

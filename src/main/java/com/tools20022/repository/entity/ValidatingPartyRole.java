@@ -34,6 +34,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.DocumentPartyRole
+ * DocumentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -43,9 +46,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyProfileInformation1.mmValidatingParty}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.DocumentPartyRole
- * DocumentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -74,6 +74,11 @@ public class ValidatingPartyRole extends DocumentPartyRole {
 				definition = "Identification of the person who validated the signature.";
 				derivationElement_lazy = () -> Arrays.asList(PartyProfileInformation1.mmValidatingParty);
 				superType_lazy = () -> DocumentPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ValidatingPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

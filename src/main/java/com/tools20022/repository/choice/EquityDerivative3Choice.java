@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Element to define an equity instrument underlying code types.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EquityDerivative3Choice", propOrder = {"basket", "index", "singleName", "other"})
 public class EquityDerivative3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -292,6 +298,7 @@ public class EquityDerivative3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Bskt", required = true)
 	public UnderlyingEquityType3Code getBasket() {
 		return basket;
 	}
@@ -300,6 +307,7 @@ public class EquityDerivative3Choice {
 		this.basket = basket;
 	}
 
+	@XmlElement(name = "Indx", required = true)
 	public UnderlyingEquityType4Code getIndex() {
 		return index;
 	}
@@ -308,6 +316,7 @@ public class EquityDerivative3Choice {
 		this.index = index;
 	}
 
+	@XmlElement(name = "SnglNm", required = true)
 	public UnderlyingEquityType5Code getSingleName() {
 		return singleName;
 	}
@@ -316,6 +325,7 @@ public class EquityDerivative3Choice {
 		this.singleName = singleName;
 	}
 
+	@XmlElement(name = "Othr", required = true)
 	public UnderlyingEquityType6Code getOther() {
 		return other;
 	}

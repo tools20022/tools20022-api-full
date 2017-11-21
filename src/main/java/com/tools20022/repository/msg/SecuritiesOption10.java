@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the corporate action security option.
@@ -99,6 +103,9 @@ import java.util.function.Supplier;
  * "Provides information about the corporate action security option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesOption10", propOrder = {"securityDetails", "creditDebitIndicator", "temporaryFinancialInstrumentIndicator", "nonEligibleProceedsIndicator", "entitledQuantity", "safekeepingPlace", "fractionDisposition",
+		"currencyOption", "tradingPeriod", "dateDetails", "rateDetails", "priceDetails"})
 public class SecuritiesOption10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -731,6 +738,7 @@ public class SecuritiesOption10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctyDtls", required = true)
 	public FinancialInstrumentAttributes10 getSecurityDetails() {
 		return securityDetails;
 	}
@@ -739,6 +747,7 @@ public class SecuritiesOption10 {
 		this.securityDetails = securityDetails;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -747,6 +756,7 @@ public class SecuritiesOption10 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "TempFinInstrmInd")
 	public TemporaryFinancialInstrumentIndicator2Choice getTemporaryFinancialInstrumentIndicator() {
 		return temporaryFinancialInstrumentIndicator;
 	}
@@ -755,6 +765,7 @@ public class SecuritiesOption10 {
 		this.temporaryFinancialInstrumentIndicator = temporaryFinancialInstrumentIndicator;
 	}
 
+	@XmlElement(name = "NonElgblPrcdsInd")
 	public NonEligibleProceedsIndicator2Choice getNonEligibleProceedsIndicator() {
 		return nonEligibleProceedsIndicator;
 	}
@@ -763,6 +774,7 @@ public class SecuritiesOption10 {
 		this.nonEligibleProceedsIndicator = nonEligibleProceedsIndicator;
 	}
 
+	@XmlElement(name = "EntitldQty")
 	public Quantity10Choice getEntitledQuantity() {
 		return entitledQuantity;
 	}
@@ -771,6 +783,7 @@ public class SecuritiesOption10 {
 		this.entitledQuantity = entitledQuantity;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat5Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -779,6 +792,7 @@ public class SecuritiesOption10 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "FrctnDspstn")
 	public FractionDispositionType6Choice getFractionDisposition() {
 		return fractionDisposition;
 	}
@@ -787,6 +801,7 @@ public class SecuritiesOption10 {
 		this.fractionDisposition = fractionDisposition;
 	}
 
+	@XmlElement(name = "CcyOptn")
 	public ActiveCurrencyCode getCurrencyOption() {
 		return currencyOption;
 	}
@@ -795,6 +810,7 @@ public class SecuritiesOption10 {
 		this.currencyOption = currencyOption;
 	}
 
+	@XmlElement(name = "TradgPrd")
 	public Period1Choice getTradingPeriod() {
 		return tradingPeriod;
 	}
@@ -803,6 +819,7 @@ public class SecuritiesOption10 {
 		this.tradingPeriod = tradingPeriod;
 	}
 
+	@XmlElement(name = "DtDtls", required = true)
 	public SecurityDate4 getDateDetails() {
 		return dateDetails;
 	}
@@ -811,6 +828,7 @@ public class SecuritiesOption10 {
 		this.dateDetails = dateDetails;
 	}
 
+	@XmlElement(name = "RateDtls")
 	public CorporateActionRate13 getRateDetails() {
 		return rateDetails;
 	}
@@ -819,6 +837,7 @@ public class SecuritiesOption10 {
 		this.rateDetails = rateDetails;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public CorporateActionPrice13 getPriceDetails() {
 		return priceDetails;
 	}

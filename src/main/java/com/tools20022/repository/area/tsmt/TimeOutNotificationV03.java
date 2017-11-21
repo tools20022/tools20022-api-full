@@ -25,9 +25,11 @@ import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -45,9 +47,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.040.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -95,6 +94,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.040.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -106,6 +108,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TimeOutNotificationV03", propOrder = {"notificationIdentification", "transactionIdentification", "establishedBaselineIdentification", "transactionStatus", "userTransactionReference", "timeOutDescription",
+		"requestForAction"})
 public class TimeOutNotificationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -142,6 +147,14 @@ public class TimeOutNotificationV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TimeOutNotificationV03.class.getMethod("getNotificationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -182,6 +195,14 @@ public class TimeOutNotificationV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TimeOutNotificationV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
@@ -220,6 +241,14 @@ public class TimeOutNotificationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TimeOutNotificationV03.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionStatus4 transactionStatus;
 	/**
@@ -255,6 +284,14 @@ public class TimeOutNotificationV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TimeOutNotificationV03.class.getMethod("getTransactionStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<DocumentIdentification5> userTransactionReference;
@@ -294,6 +331,14 @@ public class TimeOutNotificationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TimeOutNotificationV03.class.getMethod("getUserTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TimeOutResult2 timeOutDescription;
 	/**
@@ -327,6 +372,14 @@ public class TimeOutNotificationV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TimeOutResult2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TimeOutNotificationV03.class.getMethod("getTimeOutDescription", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PendingActivity2 requestForAction;
@@ -363,6 +416,14 @@ public class TimeOutNotificationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TimeOutNotificationV03.class.getMethod("getRequestForAction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -375,8 +436,10 @@ public class TimeOutNotificationV03 {
 				rootElement = "Document";
 				xmlTag = "TmOutNtfctn";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(TimeOutNotificationV03.mmNotificationIdentification, TimeOutNotificationV03.mmTransactionIdentification, TimeOutNotificationV03.mmEstablishedBaselineIdentification,
-						TimeOutNotificationV03.mmTransactionStatus, TimeOutNotificationV03.mmUserTransactionReference, TimeOutNotificationV03.mmTimeOutDescription, TimeOutNotificationV03.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmNotificationIdentification,
+						com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmTimeOutDescription, com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -386,10 +449,16 @@ public class TimeOutNotificationV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TimeOutNotificationV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NtfctnId", required = true)
 	public MessageIdentification1 getNotificationIdentification() {
 		return notificationIdentification;
 	}
@@ -398,6 +467,7 @@ public class TimeOutNotificationV03 {
 		this.notificationIdentification = notificationIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -406,6 +476,7 @@ public class TimeOutNotificationV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "EstblishdBaselnId")
 	public DocumentIdentification3 getEstablishedBaselineIdentification() {
 		return establishedBaselineIdentification;
 	}
@@ -414,6 +485,7 @@ public class TimeOutNotificationV03 {
 		this.establishedBaselineIdentification = establishedBaselineIdentification;
 	}
 
+	@XmlElement(name = "TxSts", required = true)
 	public TransactionStatus4 getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -422,6 +494,7 @@ public class TimeOutNotificationV03 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "UsrTxRef")
 	public List<DocumentIdentification5> getUserTransactionReference() {
 		return userTransactionReference;
 	}
@@ -430,6 +503,7 @@ public class TimeOutNotificationV03 {
 		this.userTransactionReference = userTransactionReference;
 	}
 
+	@XmlElement(name = "TmOutDesc", required = true)
 	public TimeOutResult2 getTimeOutDescription() {
 		return timeOutDescription;
 	}
@@ -438,11 +512,18 @@ public class TimeOutNotificationV03 {
 		this.timeOutDescription = timeOutDescription;
 	}
 
+	@XmlElement(name = "ReqForActn")
 	public PendingActivity2 getRequestForAction() {
 		return requestForAction;
 	}
 
 	public void setRequestForAction(PendingActivity2 requestForAction) {
 		this.requestForAction = requestForAction;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.040.03.03")
+	static public class Document {
+		@XmlElement(name = "TmOutNtfctn", required = true)
+		public TimeOutNotificationV03 messageBody;
 	}
 }

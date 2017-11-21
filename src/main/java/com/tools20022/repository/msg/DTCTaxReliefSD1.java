@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about tax relief categories.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information about tax relief categories."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DTCTaxReliefSD1", propOrder = {"categoryIdentification", "categoryDescription"})
 public class DTCTaxReliefSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +165,7 @@ public class DTCTaxReliefSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CtgyId", required = true)
 	public Exact3NumericText getCategoryIdentification() {
 		return categoryIdentification;
 	}
@@ -167,6 +174,7 @@ public class DTCTaxReliefSD1 {
 		this.categoryIdentification = categoryIdentification;
 	}
 
+	@XmlElement(name = "CtgyDesc", required = true)
 	public Max35Text getCategoryDescription() {
 		return categoryDescription;
 	}

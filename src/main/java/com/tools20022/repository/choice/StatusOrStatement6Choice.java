@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the identification of a status or statement query.
@@ -64,6 +68,8 @@ import java.util.function.Supplier;
  * "Choice between the identification of a status or statement query."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusOrStatement6Choice", propOrder = {"statusAdvice", "statement"})
 public class StatusOrStatement6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class StatusOrStatement6Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsAdvc", required = true)
 	public DocumentNumber11 getStatusAdvice() {
 		return statusAdvice;
 	}
@@ -186,6 +193,7 @@ public class StatusOrStatement6Choice {
 		this.statusAdvice = statusAdvice;
 	}
 
+	@XmlElement(name = "Stmt", required = true)
 	public DocumentNumber3 getStatement() {
 		return statement;
 	}

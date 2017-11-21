@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money for which goods or services are offered, sold, or bought.
@@ -96,6 +100,9 @@ import java.util.List;
  * "Amount of money for which goods or services are offered, sold, or bought."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnitPrice6", propOrder = {"type", "priceMethod", "valueInInvestmentCurrency", "valueInAlternativeCurrency", "forExecutionIndicator", "cumDividendIndicator", "calculationBasis", "numberOfDaysAccrued",
+		"taxableIncomePerShare", "taxableIncomePerShareCalculated", "chargeDetails", "taxLiabilityDetails", "taxRefundDetails"})
 public class UnitPrice6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -727,6 +734,7 @@ public class UnitPrice6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public PriceType2 getType() {
 		return type;
 	}
@@ -735,6 +743,7 @@ public class UnitPrice6 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "PricMtd")
 	public PriceMethod1Code getPriceMethod() {
 		return priceMethod;
 	}
@@ -743,6 +752,7 @@ public class UnitPrice6 {
 		this.priceMethod = priceMethod;
 	}
 
+	@XmlElement(name = "ValInInvstmtCcy", required = true)
 	public List<PriceValue1> getValueInInvestmentCurrency() {
 		return valueInInvestmentCurrency;
 	}
@@ -751,6 +761,7 @@ public class UnitPrice6 {
 		this.valueInInvestmentCurrency = valueInInvestmentCurrency;
 	}
 
+	@XmlElement(name = "ValInAltrntvCcy")
 	public List<PriceValue1> getValueInAlternativeCurrency() {
 		return valueInAlternativeCurrency;
 	}
@@ -759,6 +770,7 @@ public class UnitPrice6 {
 		this.valueInAlternativeCurrency = valueInAlternativeCurrency;
 	}
 
+	@XmlElement(name = "ForExctnInd", required = true)
 	public YesNoIndicator getForExecutionIndicator() {
 		return forExecutionIndicator;
 	}
@@ -767,6 +779,7 @@ public class UnitPrice6 {
 		this.forExecutionIndicator = forExecutionIndicator;
 	}
 
+	@XmlElement(name = "CumDvddInd", required = true)
 	public YesNoIndicator getCumDividendIndicator() {
 		return cumDividendIndicator;
 	}
@@ -775,6 +788,7 @@ public class UnitPrice6 {
 		this.cumDividendIndicator = cumDividendIndicator;
 	}
 
+	@XmlElement(name = "ClctnBsis")
 	public PercentageRate getCalculationBasis() {
 		return calculationBasis;
 	}
@@ -783,6 +797,7 @@ public class UnitPrice6 {
 		this.calculationBasis = calculationBasis;
 	}
 
+	@XmlElement(name = "NbOfDaysAcrd")
 	public Number getNumberOfDaysAccrued() {
 		return numberOfDaysAccrued;
 	}
@@ -791,6 +806,7 @@ public class UnitPrice6 {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
 	}
 
+	@XmlElement(name = "TaxblIncmPerShr")
 	public AmountPrice1Choice getTaxableIncomePerShare() {
 		return taxableIncomePerShare;
 	}
@@ -799,6 +815,7 @@ public class UnitPrice6 {
 		this.taxableIncomePerShare = taxableIncomePerShare;
 	}
 
+	@XmlElement(name = "TaxblIncmPerShrClctd")
 	public TaxableIncomePerShareCalculated1 getTaxableIncomePerShareCalculated() {
 		return taxableIncomePerShareCalculated;
 	}
@@ -807,6 +824,7 @@ public class UnitPrice6 {
 		this.taxableIncomePerShareCalculated = taxableIncomePerShareCalculated;
 	}
 
+	@XmlElement(name = "ChrgDtls")
 	public List<Charge9> getChargeDetails() {
 		return chargeDetails;
 	}
@@ -815,6 +833,7 @@ public class UnitPrice6 {
 		this.chargeDetails = chargeDetails;
 	}
 
+	@XmlElement(name = "TaxLbltyDtls")
 	public List<Tax8> getTaxLiabilityDetails() {
 		return taxLiabilityDetails;
 	}
@@ -823,6 +842,7 @@ public class UnitPrice6 {
 		this.taxLiabilityDetails = taxLiabilityDetails;
 	}
 
+	@XmlElement(name = "TaxRfndDtls")
 	public List<Tax8> getTaxRefundDetails() {
 		return taxRefundDetails;
 	}

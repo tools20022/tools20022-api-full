@@ -29,19 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CancellationStatus1Code
- * CancellationStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CancellationStatus2Code
- * CancellationStatus2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CancellationStatus3Code
- * CancellationStatus3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CancellationStatus4Code
- * CancellationStatus4Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -62,6 +49,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CancellationStatusCode#mmReceivedByIssuerOrRegistrar
  * CancellationStatusCode.mmReceivedByIssuerOrRegistrar}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancellationStatus1Code
+ * CancellationStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancellationStatus2Code
+ * CancellationStatus2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancellationStatus3Code
+ * CancellationStatus3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancellationStatus4Code
+ * CancellationStatus4Code}</li>
  * </ul>
  * </li>
  * <li>

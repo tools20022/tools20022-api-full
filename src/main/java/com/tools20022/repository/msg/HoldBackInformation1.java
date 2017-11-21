@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about hold back.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "HoldBackInformation1", propOrder = {"holdBackAmount", "holdBackReleaseDate"})
 public class HoldBackInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -201,6 +207,7 @@ public class HoldBackInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "HldBckAmt")
 	public ActiveCurrencyAndAmount getHoldBackAmount() {
 		return holdBackAmount;
 	}
@@ -209,6 +216,7 @@ public class HoldBackInformation1 {
 		this.holdBackAmount = holdBackAmount;
 	}
 
+	@XmlElement(name = "HldBckRlsDt")
 	public ISODate getHoldBackReleaseDate() {
 		return holdBackReleaseDate;
 	}

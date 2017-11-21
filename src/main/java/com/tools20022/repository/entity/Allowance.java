@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.LineItemMonetarySummation1;
 import com.tools20022.repository.msg.SettlementAllowanceCharge1;
 import com.tools20022.repository.msg.SettlementMonetarySummation1;
 import com.tools20022.repository.msg.TradeSettlement1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,6 +40,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Allowance#mmTotalAllowance
+ * Allowance.mmTotalAllowance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Allowance#mmNetPriceAllowance
+ * Allowance.mmNetPriceAllowance}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Adjustment
+ * Adjustment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -54,19 +68,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.TradeSettlement1#mmAllowanceCharge
  * TradeSettlement1.mmAllowanceCharge}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Adjustment
- * Adjustment}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Allowance#mmTotalAllowance
- * Allowance.mmTotalAllowance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Allowance#mmNetPriceAllowance
- * Allowance.mmNetPriceAllowance}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,10 +99,6 @@ public class Allowance extends Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Allowance
-	 * Allowance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -113,6 +110,10 @@ public class Allowance extends Adjustment {
 	 * LineItemMonetarySummation1.mmAllowanceTotalAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Allowance
+	 * Allowance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -127,7 +128,7 @@ public class Allowance extends Adjustment {
 	public static final MMBusinessAttribute mmTotalAllowance = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementMonetarySummation1.mmAllowanceTotalAmount, LineItemMonetarySummation1.mmAllowanceTotalAmount);
-			elementContext_lazy = () -> Allowance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allowance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalAllowance";
@@ -135,6 +136,14 @@ public class Allowance extends Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Allowance.class.getMethod("getTotalAllowance", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount netPriceAllowance;
@@ -165,7 +174,7 @@ public class Allowance extends Adjustment {
 	 */
 	public static final MMBusinessAttribute mmNetPriceAllowance = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Allowance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allowance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetPriceAllowance";
@@ -173,6 +182,14 @@ public class Allowance extends Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Allowance.class.getMethod("getNetPriceAllowance", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -185,8 +202,13 @@ public class Allowance extends Adjustment {
 				definition = "Amount of money deducted from a price or an amount due.";
 				derivationElement_lazy = () -> Arrays.asList(TradeSettlement1.mmAllowanceCharge);
 				superType_lazy = () -> Adjustment.mmObject();
-				element_lazy = () -> Arrays.asList(Allowance.mmTotalAllowance, Allowance.mmNetPriceAllowance);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Allowance.mmTotalAllowance, com.tools20022.repository.entity.Allowance.mmNetPriceAllowance);
 				derivationComponent_lazy = () -> Arrays.asList(SettlementAllowanceCharge1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Allowance.class;
 			}
 		});
 		return mmObject_lazy.get();

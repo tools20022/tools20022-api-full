@@ -42,6 +42,29 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmPayment
+ * CommercialTradeSettlement.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmInvoice
+ * CommercialTradeSettlement.mmInvoice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmLetterOfCredit
+ * CommercialTradeSettlement.mmLetterOfCredit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmProductDelivery
+ * CommercialTradeSettlement.mmProductDelivery}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmCommercialTrade
+ * CommercialTradeSettlement.mmCommercialTrade}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Settlement
+ * Settlement}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -69,29 +92,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.LetterOfCredit#mmCommercialTradeSettlement
  * LetterOfCredit.mmCommercialTradeSettlement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Settlement
- * Settlement}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmPayment
- * CommercialTradeSettlement.mmPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmInvoice
- * CommercialTradeSettlement.mmInvoice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmLetterOfCredit
- * CommercialTradeSettlement.mmLetterOfCredit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmProductDelivery
- * CommercialTradeSettlement.mmProductDelivery}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmCommercialTrade
- * CommercialTradeSettlement.mmCommercialTrade}</li>
  * </ul>
  * </li>
  * <li>
@@ -131,11 +131,6 @@ public class CommercialTradeSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement
-	 * CommercialTradeSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -144,6 +139,11 @@ public class CommercialTradeSettlement extends Settlement {
 	 * TradeSettlement1.mmPaymentMeans}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement
+	 * CommercialTradeSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -158,7 +158,7 @@ public class CommercialTradeSettlement extends Settlement {
 	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmPaymentMeans);
-			elementContext_lazy = () -> CommercialTradeSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
@@ -186,11 +186,6 @@ public class CommercialTradeSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Invoice Invoice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement
-	 * CommercialTradeSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -206,6 +201,11 @@ public class CommercialTradeSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement
+	 * CommercialTradeSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -219,7 +219,7 @@ public class CommercialTradeSettlement extends Settlement {
 	public static final MMBusinessAssociationEnd mmInvoice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmMonetarySummation, TradeSettlement1.mmInvoiceReferencedDocument, TradeSettlement1.mmProformaInvoiceReferencedDocument);
-			elementContext_lazy = () -> CommercialTradeSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Invoice";
@@ -267,7 +267,7 @@ public class CommercialTradeSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmLetterOfCredit = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CommercialTradeSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LetterOfCredit";
@@ -296,11 +296,6 @@ public class CommercialTradeSettlement extends Settlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.ProductDelivery
 	 * ProductDelivery}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement
-	 * CommercialTradeSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -312,6 +307,11 @@ public class CommercialTradeSettlement extends Settlement {
 	 * CardPaymentInvoice2.mmTradeDelivery}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement
+	 * CommercialTradeSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -326,7 +326,7 @@ public class CommercialTradeSettlement extends Settlement {
 	public static final MMBusinessAssociationEnd mmProductDelivery = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardPaymentInvoice1.mmTradeDelivery, CardPaymentInvoice2.mmTradeDelivery);
-			elementContext_lazy = () -> CommercialTradeSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProductDelivery";
@@ -373,7 +373,7 @@ public class CommercialTradeSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmCommercialTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CommercialTradeSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommercialTrade";
@@ -396,9 +396,15 @@ public class CommercialTradeSettlement extends Settlement {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.mmTradeSettlement, com.tools20022.repository.entity.Invoice.mmTradeSettlement,
 						com.tools20022.repository.entity.CommercialTrade.mmTradeSettlement, com.tools20022.repository.entity.ProductDelivery.mmTradeSettlement, com.tools20022.repository.entity.LetterOfCredit.mmCommercialTradeSettlement);
 				superType_lazy = () -> Settlement.mmObject();
-				element_lazy = () -> Arrays.asList(CommercialTradeSettlement.mmPayment, CommercialTradeSettlement.mmInvoice, CommercialTradeSettlement.mmLetterOfCredit, CommercialTradeSettlement.mmProductDelivery,
-						CommercialTradeSettlement.mmCommercialTrade);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CommercialTradeSettlement.mmPayment, com.tools20022.repository.entity.CommercialTradeSettlement.mmInvoice,
+						com.tools20022.repository.entity.CommercialTradeSettlement.mmLetterOfCredit, com.tools20022.repository.entity.CommercialTradeSettlement.mmProductDelivery,
+						com.tools20022.repository.entity.CommercialTradeSettlement.mmCommercialTrade);
 				derivationComponent_lazy = () -> Arrays.asList(TradeSettlement1.mmObject(), EarlyPaymentsVAT1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CommercialTradeSettlement.class;
 			}
 		});
 		return mmObject_lazy.get();

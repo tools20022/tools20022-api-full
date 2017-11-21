@@ -40,6 +40,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
+ * InvestmentAccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -87,10 +91,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountParties10Choice.mmNominee}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
- * InvestmentAccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -123,6 +123,11 @@ public class Nominee extends InvestmentAccountPartyRole {
 						AccountParties3Choice.mmNominee, AccountParties4Choice.mmNominee, AccountParties7Choice.mmNominee, AccountParties6Choice.mmNominee, AccountParties5Choice.mmNominee, AccountParties9Choice.mmNominee,
 						AccountParties8Choice.mmNominee, AccountParties11Choice.mmNominee, AccountParties10Choice.mmNominee);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Nominee.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -36,6 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Completion of a securities settlement instruction, wherein securities are
@@ -145,6 +149,10 @@ import java.util.List;
  * Transfer13}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Transfer23", propOrder = {"transferConfirmationReference", "transferReference", "clientReference", "counterpartyReference", "effectiveTransferDate", "requestedSettlementDate", "effectiveSettlementDate", "tradeDate",
+		"transferOrderDateForm", "transferReason", "holdingsPlanType", "financialInstrumentDetails", "totalUnitsNumber", "unitsDetails", "portfolioTransferOutRate", "rounding", "averagePrice", "transferCurrency",
+		"ownAccountTransferIndicator", "nonStandardSettlementInformation", "receivingAgentDetails", "deliveringAgentDetails"})
 public class Transfer23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1426,6 +1434,7 @@ public class Transfer23 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrfConfRef", required = true)
 	public Max35Text getTransferConfirmationReference() {
 		return transferConfirmationReference;
 	}
@@ -1434,6 +1443,7 @@ public class Transfer23 {
 		this.transferConfirmationReference = transferConfirmationReference;
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -1442,6 +1452,7 @@ public class Transfer23 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -1450,6 +1461,7 @@ public class Transfer23 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CtrPtyRef")
 	public AdditionalReference2 getCounterpartyReference() {
 		return counterpartyReference;
 	}
@@ -1458,6 +1470,7 @@ public class Transfer23 {
 		this.counterpartyReference = counterpartyReference;
 	}
 
+	@XmlElement(name = "FctvTrfDt", required = true)
 	public DateAndDateTimeChoice getEffectiveTransferDate() {
 		return effectiveTransferDate;
 	}
@@ -1466,6 +1479,7 @@ public class Transfer23 {
 		this.effectiveTransferDate = effectiveTransferDate;
 	}
 
+	@XmlElement(name = "ReqdSttlmDt")
 	public ISODate getRequestedSettlementDate() {
 		return requestedSettlementDate;
 	}
@@ -1474,6 +1488,7 @@ public class Transfer23 {
 		this.requestedSettlementDate = requestedSettlementDate;
 	}
 
+	@XmlElement(name = "FctvSttlmDt")
 	public DateAndDateTimeChoice getEffectiveSettlementDate() {
 		return effectiveSettlementDate;
 	}
@@ -1482,6 +1497,7 @@ public class Transfer23 {
 		this.effectiveSettlementDate = effectiveSettlementDate;
 	}
 
+	@XmlElement(name = "TradDt")
 	public DateAndDateTimeChoice getTradeDate() {
 		return tradeDate;
 	}
@@ -1490,6 +1506,7 @@ public class Transfer23 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "TrfOrdrDtForm")
 	public ISODate getTransferOrderDateForm() {
 		return transferOrderDateForm;
 	}
@@ -1498,6 +1515,7 @@ public class Transfer23 {
 		this.transferOrderDateForm = transferOrderDateForm;
 	}
 
+	@XmlElement(name = "TrfRsn")
 	public TransferReason1 getTransferReason() {
 		return transferReason;
 	}
@@ -1506,6 +1524,7 @@ public class Transfer23 {
 		this.transferReason = transferReason;
 	}
 
+	@XmlElement(name = "HldgsPlanTp")
 	public List<HoldingsPlanType1Code> getHoldingsPlanType() {
 		return holdingsPlanType;
 	}
@@ -1514,6 +1533,7 @@ public class Transfer23 {
 		this.holdingsPlanType = holdingsPlanType;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument13 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -1522,6 +1542,7 @@ public class Transfer23 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "TtlUnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
@@ -1530,6 +1551,7 @@ public class Transfer23 {
 		this.totalUnitsNumber = totalUnitsNumber;
 	}
 
+	@XmlElement(name = "UnitsDtls")
 	public List<Unit3> getUnitsDetails() {
 		return unitsDetails;
 	}
@@ -1538,6 +1560,7 @@ public class Transfer23 {
 		this.unitsDetails = unitsDetails;
 	}
 
+	@XmlElement(name = "PrtflTrfOutRate")
 	public PercentageRate getPortfolioTransferOutRate() {
 		return portfolioTransferOutRate;
 	}
@@ -1546,6 +1569,7 @@ public class Transfer23 {
 		this.portfolioTransferOutRate = portfolioTransferOutRate;
 	}
 
+	@XmlElement(name = "Rndg")
 	public RoundingDirection2Code getRounding() {
 		return rounding;
 	}
@@ -1554,6 +1578,7 @@ public class Transfer23 {
 		this.rounding = rounding;
 	}
 
+	@XmlElement(name = "AvrgPric")
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAveragePrice() {
 		return averagePrice;
 	}
@@ -1562,6 +1587,7 @@ public class Transfer23 {
 		this.averagePrice = averagePrice;
 	}
 
+	@XmlElement(name = "TrfCcy")
 	public CurrencyCode getTransferCurrency() {
 		return transferCurrency;
 	}
@@ -1570,6 +1596,7 @@ public class Transfer23 {
 		this.transferCurrency = transferCurrency;
 	}
 
+	@XmlElement(name = "OwnAcctTrfInd")
 	public YesNoIndicator getOwnAccountTransferIndicator() {
 		return ownAccountTransferIndicator;
 	}
@@ -1578,6 +1605,7 @@ public class Transfer23 {
 		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
 	}
 
+	@XmlElement(name = "NonStdSttlmInf")
 	public Max350Text getNonStandardSettlementInformation() {
 		return nonStandardSettlementInformation;
 	}
@@ -1586,6 +1614,7 @@ public class Transfer23 {
 		this.nonStandardSettlementInformation = nonStandardSettlementInformation;
 	}
 
+	@XmlElement(name = "RcvgAgtDtls")
 	public PartyIdentificationAndAccount93 getReceivingAgentDetails() {
 		return receivingAgentDetails;
 	}
@@ -1594,6 +1623,7 @@ public class Transfer23 {
 		this.receivingAgentDetails = receivingAgentDetails;
 	}
 
+	@XmlElement(name = "DlvrgAgtDtls")
 	public PartyIdentificationAndAccount93 getDeliveringAgentDetails() {
 		return deliveringAgentDetails;
 	}

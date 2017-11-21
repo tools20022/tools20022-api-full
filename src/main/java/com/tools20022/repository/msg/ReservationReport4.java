@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Reservation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports either on the reservation or on a business error.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ReservationReport3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReservationReport4", propOrder = {"reservationIdentification", "reservationOrError"})
 public class ReservationReport4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -186,6 +192,7 @@ public class ReservationReport4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RsvatnId", required = true)
 	public ReservationIdentification1 getReservationIdentification() {
 		return reservationIdentification;
 	}
@@ -194,6 +201,7 @@ public class ReservationReport4 {
 		this.reservationIdentification = reservationIdentification;
 	}
 
+	@XmlElement(name = "RsvatnOrErr", required = true)
 	public ReservationOrError5Choice getReservationOrError() {
 		return reservationOrError;
 	}

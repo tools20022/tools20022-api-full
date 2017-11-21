@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information that locates and identifies a party.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * NameAndAddress5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NameAndAddress15", propOrder = {"name", "postalAddress"})
 public class NameAndAddress15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -195,6 +201,7 @@ public class NameAndAddress15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max350Text getName() {
 		return name;
 	}
@@ -203,6 +210,7 @@ public class NameAndAddress15 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PstlAdr")
 	public PostalAddress21 getPostalAddress() {
 		return postalAddress;
 	}

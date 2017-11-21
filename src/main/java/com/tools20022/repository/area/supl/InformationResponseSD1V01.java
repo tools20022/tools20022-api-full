@@ -27,18 +27,17 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.AccountAndParties2;
 import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4;
 import com.tools20022.repository.msgset.SupplementaryDataISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * This extends the message InformationRequestResponse.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code supl.027.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SupplementaryDataLatestVersion
@@ -74,6 +73,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code supl.027.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -83,6 +85,8 @@ import java.util.List;
  * definition} = "This extends the message InformationRequestResponse."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InformationResponseSD1V01", propOrder = {"investigationIdentification", "creationDateTime", "accountServicerIdentification", "accountAndParties"})
 public class InformationResponseSD1V01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -119,6 +123,14 @@ public class InformationResponseSD1V01 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationResponseSD1V01.class.getMethod("getInvestigationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ISODateTime creationDateTime;
 	/**
@@ -152,6 +164,14 @@ public class InformationResponseSD1V01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationResponseSD1V01.class.getMethod("getCreationDateTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BranchAndFinancialInstitutionIdentification4 accountServicerIdentification;
@@ -188,6 +208,14 @@ public class InformationResponseSD1V01 {
 			minOccurs = 1;
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationResponseSD1V01.class.getMethod("getAccountServicerIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AccountAndParties2> accountAndParties;
 	/**
@@ -222,6 +250,14 @@ public class InformationResponseSD1V01 {
 			minOccurs = 1;
 			complexType_lazy = () -> AccountAndParties2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationResponseSD1V01.class.getMethod("getAccountAndParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -234,8 +270,8 @@ public class InformationResponseSD1V01 {
 				rootElement = "Document";
 				xmlTag = "InfRspnSD1";
 				businessArea_lazy = () -> SupplementaryDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(InformationResponseSD1V01.mmInvestigationIdentification, InformationResponseSD1V01.mmCreationDateTime, InformationResponseSD1V01.mmAccountServicerIdentification,
-						InformationResponseSD1V01.mmAccountAndParties);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.supl.InformationResponseSD1V01.mmInvestigationIdentification, com.tools20022.repository.area.supl.InformationResponseSD1V01.mmCreationDateTime,
+						com.tools20022.repository.area.supl.InformationResponseSD1V01.mmAccountServicerIdentification, com.tools20022.repository.area.supl.InformationResponseSD1V01.mmAccountAndParties);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "supl";
@@ -245,10 +281,16 @@ public class InformationResponseSD1V01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InformationResponseSD1V01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InvstgtnId", required = true)
 	public Max35Text getInvestigationIdentification() {
 		return investigationIdentification;
 	}
@@ -257,6 +299,7 @@ public class InformationResponseSD1V01 {
 		this.investigationIdentification = investigationIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -265,6 +308,7 @@ public class InformationResponseSD1V01 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "AcctSvcrId", required = true)
 	public BranchAndFinancialInstitutionIdentification4 getAccountServicerIdentification() {
 		return accountServicerIdentification;
 	}
@@ -273,11 +317,18 @@ public class InformationResponseSD1V01 {
 		this.accountServicerIdentification = accountServicerIdentification;
 	}
 
+	@XmlElement(name = "AcctAndPties", required = true)
 	public List<AccountAndParties2> getAccountAndParties() {
 		return accountAndParties;
 	}
 
 	public void setAccountAndParties(List<AccountAndParties2> accountAndParties) {
 		this.accountAndParties = accountAndParties;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:supl.027.01.01")
+	static public class Document {
+		@XmlElement(name = "InfRspnSD1", required = true)
+		public InformationResponseSD1V01 messageBody;
 	}
 }

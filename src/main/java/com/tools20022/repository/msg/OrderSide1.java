@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates in which direction the intention is to transfer the ownership of a
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderSide1", propOrder = {"side", "allOrdersIndicator"})
 public class OrderSide1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class OrderSide1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sd")
 	public Side1Code getSide() {
 		return side;
 	}
@@ -181,6 +188,7 @@ public class OrderSide1 {
 		this.side = side;
 	}
 
+	@XmlElement(name = "AllOrdrsInd")
 	public YesNoIndicator getAllOrdersIndicator() {
 		return allOrdersIndicator;
 	}

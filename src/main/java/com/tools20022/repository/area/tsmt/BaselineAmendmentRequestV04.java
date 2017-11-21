@@ -25,9 +25,11 @@ import com.tools20022.repository.area.TradeServicesManagementPreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -58,9 +60,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.009.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementPreviousVersion
@@ -112,6 +111,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.009.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -135,6 +137,9 @@ import java.util.List;
  * BaselineAmendmentRequestV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BaselineAmendmentRequestV04", propOrder = {"requestIdentification", "transactionIdentification", "submitterTransactionReference", "baseline", "buyerContactPerson", "sellerContactPerson", "buyerBankContactPerson",
+		"sellerBankContactPerson", "otherBankContactPerson"})
 public class BaselineAmendmentRequestV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -186,6 +191,14 @@ public class BaselineAmendmentRequestV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineAmendmentRequestV04.class.getMethod("getRequestIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -241,6 +254,14 @@ public class BaselineAmendmentRequestV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineAmendmentRequestV04.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
@@ -292,6 +313,14 @@ public class BaselineAmendmentRequestV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineAmendmentRequestV04.class.getMethod("getSubmitterTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Baseline4 baseline;
 	/**
@@ -342,6 +371,14 @@ public class BaselineAmendmentRequestV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> Baseline4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineAmendmentRequestV04.class.getMethod("getBaseline", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ContactIdentification1> buyerContactPerson;
 	/**
@@ -390,6 +427,14 @@ public class BaselineAmendmentRequestV04 {
 			previousVersion_lazy = () -> BaselineAmendmentRequestV03.mmBuyerContactPerson;
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineAmendmentRequestV04.class.getMethod("getBuyerContactPerson", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<ContactIdentification1> sellerContactPerson;
@@ -441,6 +486,14 @@ public class BaselineAmendmentRequestV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineAmendmentRequestV04.class.getMethod("getSellerContactPerson", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ContactIdentification1> buyerBankContactPerson;
 	/**
@@ -490,6 +543,14 @@ public class BaselineAmendmentRequestV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineAmendmentRequestV04.class.getMethod("getBuyerBankContactPerson", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ContactIdentification1> sellerBankContactPerson;
 	/**
@@ -538,6 +599,14 @@ public class BaselineAmendmentRequestV04 {
 			previousVersion_lazy = () -> BaselineAmendmentRequestV03.mmSellerBankContactPerson;
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineAmendmentRequestV04.class.getMethod("getSellerBankContactPerson", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<ContactIdentification3> otherBankContactPerson;
@@ -590,6 +659,14 @@ public class BaselineAmendmentRequestV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineAmendmentRequestV04.class.getMethod("getOtherBankContactPerson", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -604,9 +681,11 @@ public class BaselineAmendmentRequestV04 {
 				rootElement = "Document";
 				xmlTag = "BaselnAmdmntReq";
 				businessArea_lazy = () -> TradeServicesManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(BaselineAmendmentRequestV04.mmRequestIdentification, BaselineAmendmentRequestV04.mmTransactionIdentification, BaselineAmendmentRequestV04.mmSubmitterTransactionReference,
-						BaselineAmendmentRequestV04.mmBaseline, BaselineAmendmentRequestV04.mmBuyerContactPerson, BaselineAmendmentRequestV04.mmSellerContactPerson, BaselineAmendmentRequestV04.mmBuyerBankContactPerson,
-						BaselineAmendmentRequestV04.mmSellerBankContactPerson, BaselineAmendmentRequestV04.mmOtherBankContactPerson);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmRequestIdentification,
+						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmTransactionIdentification, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmSubmitterTransactionReference,
+						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmBaseline, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmBuyerContactPerson,
+						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmSellerContactPerson, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmBuyerBankContactPerson,
+						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmSellerBankContactPerson, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmOtherBankContactPerson);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -616,10 +695,16 @@ public class BaselineAmendmentRequestV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BaselineAmendmentRequestV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqId", required = true)
 	public MessageIdentification1 getRequestIdentification() {
 		return requestIdentification;
 	}
@@ -628,6 +713,7 @@ public class BaselineAmendmentRequestV04 {
 		this.requestIdentification = requestIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -636,6 +722,7 @@ public class BaselineAmendmentRequestV04 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "SubmitrTxRef")
 	public SimpleIdentificationInformation getSubmitterTransactionReference() {
 		return submitterTransactionReference;
 	}
@@ -644,6 +731,7 @@ public class BaselineAmendmentRequestV04 {
 		this.submitterTransactionReference = submitterTransactionReference;
 	}
 
+	@XmlElement(name = "Baseln", required = true)
 	public Baseline4 getBaseline() {
 		return baseline;
 	}
@@ -652,6 +740,7 @@ public class BaselineAmendmentRequestV04 {
 		this.baseline = baseline;
 	}
 
+	@XmlElement(name = "BuyrCtctPrsn")
 	public List<ContactIdentification1> getBuyerContactPerson() {
 		return buyerContactPerson;
 	}
@@ -660,6 +749,7 @@ public class BaselineAmendmentRequestV04 {
 		this.buyerContactPerson = buyerContactPerson;
 	}
 
+	@XmlElement(name = "SellrCtctPrsn")
 	public List<ContactIdentification1> getSellerContactPerson() {
 		return sellerContactPerson;
 	}
@@ -668,6 +758,7 @@ public class BaselineAmendmentRequestV04 {
 		this.sellerContactPerson = sellerContactPerson;
 	}
 
+	@XmlElement(name = "BuyrBkCtctPrsn")
 	public List<ContactIdentification1> getBuyerBankContactPerson() {
 		return buyerBankContactPerson;
 	}
@@ -676,6 +767,7 @@ public class BaselineAmendmentRequestV04 {
 		this.buyerBankContactPerson = buyerBankContactPerson;
 	}
 
+	@XmlElement(name = "SellrBkCtctPrsn")
 	public List<ContactIdentification1> getSellerBankContactPerson() {
 		return sellerBankContactPerson;
 	}
@@ -684,11 +776,18 @@ public class BaselineAmendmentRequestV04 {
 		this.sellerBankContactPerson = sellerBankContactPerson;
 	}
 
+	@XmlElement(name = "OthrBkCtctPrsn")
 	public List<ContactIdentification3> getOtherBankContactPerson() {
 		return otherBankContactPerson;
 	}
 
 	public void setOtherBankContactPerson(List<ContactIdentification3> otherBankContactPerson) {
 		this.otherBankContactPerson = otherBankContactPerson;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.009.04.04")
+	static public class Document {
+		@XmlElement(name = "BaselnAmdmntReq", required = true)
+		public BaselineAmendmentRequestV04 messageBody;
 	}
 }

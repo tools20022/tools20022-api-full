@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * References of the original instruction for which an action has been
@@ -86,6 +90,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References35Choice", propOrder = {"accountOwnerTransactionIdentification", "accountServicerTransactionIdentification", "marketInfrastructureTransactionIdentification", "processorTransactionIdentification",
+		"poolIdentification", "commonIdentification", "tradeIdentification", "corporateActionEventIdentification"})
 public class References35Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -503,6 +510,7 @@ public class References35Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnrTxId", required = true)
 	public Max35Text getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
@@ -511,6 +519,7 @@ public class References35Choice {
 		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrTxId", required = true)
 	public Max35Text getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
@@ -519,6 +528,7 @@ public class References35Choice {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
 	}
 
+	@XmlElement(name = "MktInfrstrctrTxId", required = true)
 	public Max35Text getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}
@@ -527,6 +537,7 @@ public class References35Choice {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
 	}
 
+	@XmlElement(name = "PrcrTxId", required = true)
 	public Max35Text getProcessorTransactionIdentification() {
 		return processorTransactionIdentification;
 	}
@@ -535,6 +546,7 @@ public class References35Choice {
 		this.processorTransactionIdentification = processorTransactionIdentification;
 	}
 
+	@XmlElement(name = "PoolId", required = true)
 	public Max35Text getPoolIdentification() {
 		return poolIdentification;
 	}
@@ -543,6 +555,7 @@ public class References35Choice {
 		this.poolIdentification = poolIdentification;
 	}
 
+	@XmlElement(name = "CmonId", required = true)
 	public Max35Text getCommonIdentification() {
 		return commonIdentification;
 	}
@@ -551,6 +564,7 @@ public class References35Choice {
 		this.commonIdentification = commonIdentification;
 	}
 
+	@XmlElement(name = "TradId", required = true)
 	public Max35Text getTradeIdentification() {
 		return tradeIdentification;
 	}
@@ -559,6 +573,7 @@ public class References35Choice {
 		this.tradeIdentification = tradeIdentification;
 	}
 
+	@XmlElement(name = "CorpActnEvtId", required = true)
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}

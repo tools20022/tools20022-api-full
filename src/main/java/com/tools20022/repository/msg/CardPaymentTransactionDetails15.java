@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the transaction to capture.
@@ -124,6 +128,9 @@ import java.util.List;
  * CardPaymentTransactionDetails4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransactionDetails15", propOrder = {"currency", "totalAmount", "amountQualifier", "detailedAmount", "requestedAmount", "authorisedAmount", "validityDate", "unattendedLevelCategory", "accountType",
+		"conversionAccepted", "currencyConversion", "instalment", "aggregationTransaction", "product", "cardPaymentInvoice", "ICCRelatedData"})
 public class CardPaymentTransactionDetails15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1081,6 +1088,7 @@ public class CardPaymentTransactionDetails15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -1089,6 +1097,7 @@ public class CardPaymentTransactionDetails15 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "TtlAmt", required = true)
 	public ImpliedCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -1097,6 +1106,7 @@ public class CardPaymentTransactionDetails15 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "AmtQlfr")
 	public TypeOfAmount1Code getAmountQualifier() {
 		return amountQualifier;
 	}
@@ -1105,6 +1115,7 @@ public class CardPaymentTransactionDetails15 {
 		this.amountQualifier = amountQualifier;
 	}
 
+	@XmlElement(name = "DtldAmt")
 	public DetailedAmount5 getDetailedAmount() {
 		return detailedAmount;
 	}
@@ -1113,6 +1124,7 @@ public class CardPaymentTransactionDetails15 {
 		this.detailedAmount = detailedAmount;
 	}
 
+	@XmlElement(name = "ReqdAmt")
 	public ImpliedCurrencyAndAmount getRequestedAmount() {
 		return requestedAmount;
 	}
@@ -1121,6 +1133,7 @@ public class CardPaymentTransactionDetails15 {
 		this.requestedAmount = requestedAmount;
 	}
 
+	@XmlElement(name = "AuthrsdAmt")
 	public ImpliedCurrencyAndAmount getAuthorisedAmount() {
 		return authorisedAmount;
 	}
@@ -1129,6 +1142,7 @@ public class CardPaymentTransactionDetails15 {
 		this.authorisedAmount = authorisedAmount;
 	}
 
+	@XmlElement(name = "VldtyDt")
 	public ISODate getValidityDate() {
 		return validityDate;
 	}
@@ -1137,6 +1151,7 @@ public class CardPaymentTransactionDetails15 {
 		this.validityDate = validityDate;
 	}
 
+	@XmlElement(name = "UattnddLvlCtgy")
 	public Max35NumericText getUnattendedLevelCategory() {
 		return unattendedLevelCategory;
 	}
@@ -1145,6 +1160,7 @@ public class CardPaymentTransactionDetails15 {
 		this.unattendedLevelCategory = unattendedLevelCategory;
 	}
 
+	@XmlElement(name = "AcctTp")
 	public CardAccountType1Code getAccountType() {
 		return accountType;
 	}
@@ -1153,6 +1169,7 @@ public class CardPaymentTransactionDetails15 {
 		this.accountType = accountType;
 	}
 
+	@XmlElement(name = "ConvsAccptd")
 	public TrueFalseIndicator getConversionAccepted() {
 		return conversionAccepted;
 	}
@@ -1161,6 +1178,7 @@ public class CardPaymentTransactionDetails15 {
 		this.conversionAccepted = conversionAccepted;
 	}
 
+	@XmlElement(name = "CcyConvs")
 	public CurrencyConversion1 getCurrencyConversion() {
 		return currencyConversion;
 	}
@@ -1169,6 +1187,7 @@ public class CardPaymentTransactionDetails15 {
 		this.currencyConversion = currencyConversion;
 	}
 
+	@XmlElement(name = "Instlmt")
 	public RecurringTransaction2 getInstalment() {
 		return instalment;
 	}
@@ -1177,6 +1196,7 @@ public class CardPaymentTransactionDetails15 {
 		this.instalment = instalment;
 	}
 
+	@XmlElement(name = "AggtnTx")
 	public AggregationTransaction1 getAggregationTransaction() {
 		return aggregationTransaction;
 	}
@@ -1185,6 +1205,7 @@ public class CardPaymentTransactionDetails15 {
 		this.aggregationTransaction = aggregationTransaction;
 	}
 
+	@XmlElement(name = "Pdct")
 	public List<Product1> getProduct() {
 		return product;
 	}
@@ -1193,6 +1214,7 @@ public class CardPaymentTransactionDetails15 {
 		this.product = product;
 	}
 
+	@XmlElement(name = "CardPmtInvc")
 	public CardPaymentInvoice1 getCardPaymentInvoice() {
 		return cardPaymentInvoice;
 	}
@@ -1201,6 +1223,7 @@ public class CardPaymentTransactionDetails15 {
 		this.cardPaymentInvoice = cardPaymentInvoice;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}

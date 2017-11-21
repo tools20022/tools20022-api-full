@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional references linked to the order.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Additional references linked to the order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reference8", propOrder = {"quoteIdentification", "IOIIdentification", "referenceOrderIdentification"})
 public class Reference8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -199,6 +205,7 @@ public class Reference8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QtId")
 	public Max35Text getQuoteIdentification() {
 		return quoteIdentification;
 	}
@@ -207,6 +214,7 @@ public class Reference8 {
 		this.quoteIdentification = quoteIdentification;
 	}
 
+	@XmlElement(name = "IOIId")
 	public Max35Text getIOIIdentification() {
 		return iOIIdentification;
 	}
@@ -215,6 +223,7 @@ public class Reference8 {
 		this.iOIIdentification = iOIIdentification;
 	}
 
+	@XmlElement(name = "RefOrdrId")
 	public Max35Text getReferenceOrderIdentification() {
 		return referenceOrderIdentification;
 	}

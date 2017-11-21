@@ -29,39 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType7Code
- * ChargeType7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType9Code
- * ChargeType9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType4Code
- * ChargeType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType12Code
- * ChargeType12Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType1Code
- * ChargeType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType10Code
- * ChargeType10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType6Code
- * ChargeType6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType11Code
- * ChargeType11Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType14Code
- * ChargeType14Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType17Code
- * ChargeType17Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType8Code
- * ChargeType8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType13Code
- * ChargeType13Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType16Code
- * ChargeType16Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType15Code
- * ChargeType15Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -193,6 +160,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmIssuanceFee
  * ChargeTypeCode.mmIssuanceFee}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType7Code
+ * ChargeType7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType9Code
+ * ChargeType9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType4Code
+ * ChargeType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType12Code
+ * ChargeType12Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType1Code
+ * ChargeType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType10Code
+ * ChargeType10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType6Code
+ * ChargeType6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType11Code
+ * ChargeType11Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType14Code
+ * ChargeType14Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType17Code
+ * ChargeType17Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType8Code
+ * ChargeType8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType13Code
+ * ChargeType13Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType16Code
+ * ChargeType16Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType15Code
+ * ChargeType15Code}</li>
  * </ul>
  * </li>
  * <li>

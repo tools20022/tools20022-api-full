@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies corporate action quantities.
@@ -91,6 +95,9 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionQuantity3", propOrder = {"minimumExercisableQuantity", "minimumExercisableMultipleQuantity", "maximumQuantity", "minimumQuantitySought", "newBoardLotQuantity", "newDenominationQuantity", "baseDenomination",
+		"incrementalDenomination"})
 public class CorporateActionQuantity3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -525,6 +532,7 @@ public class CorporateActionQuantity3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MinExrcblQty")
 	public FinancialInstrumentQuantity1Choice getMinimumExercisableQuantity() {
 		return minimumExercisableQuantity;
 	}
@@ -533,6 +541,7 @@ public class CorporateActionQuantity3 {
 		this.minimumExercisableQuantity = minimumExercisableQuantity;
 	}
 
+	@XmlElement(name = "MinExrcblMltplQty")
 	public FinancialInstrumentQuantity1Choice getMinimumExercisableMultipleQuantity() {
 		return minimumExercisableMultipleQuantity;
 	}
@@ -541,6 +550,7 @@ public class CorporateActionQuantity3 {
 		this.minimumExercisableMultipleQuantity = minimumExercisableMultipleQuantity;
 	}
 
+	@XmlElement(name = "MaxQty")
 	public FinancialInstrumentQuantity16Choice getMaximumQuantity() {
 		return maximumQuantity;
 	}
@@ -549,6 +559,7 @@ public class CorporateActionQuantity3 {
 		this.maximumQuantity = maximumQuantity;
 	}
 
+	@XmlElement(name = "MinQtySght")
 	public FinancialInstrumentQuantity16Choice getMinimumQuantitySought() {
 		return minimumQuantitySought;
 	}
@@ -557,6 +568,7 @@ public class CorporateActionQuantity3 {
 		this.minimumQuantitySought = minimumQuantitySought;
 	}
 
+	@XmlElement(name = "NewBrdLotQty")
 	public FinancialInstrumentQuantity1Choice getNewBoardLotQuantity() {
 		return newBoardLotQuantity;
 	}
@@ -565,6 +577,7 @@ public class CorporateActionQuantity3 {
 		this.newBoardLotQuantity = newBoardLotQuantity;
 	}
 
+	@XmlElement(name = "NewDnmtnQty")
 	public FinancialInstrumentQuantity1Choice getNewDenominationQuantity() {
 		return newDenominationQuantity;
 	}
@@ -573,6 +586,7 @@ public class CorporateActionQuantity3 {
 		this.newDenominationQuantity = newDenominationQuantity;
 	}
 
+	@XmlElement(name = "BaseDnmtn")
 	public FinancialInstrumentQuantity1Choice getBaseDenomination() {
 		return baseDenomination;
 	}
@@ -581,6 +595,7 @@ public class CorporateActionQuantity3 {
 		this.baseDenomination = baseDenomination;
 	}
 
+	@XmlElement(name = "IncrmtlDnmtn")
 	public FinancialInstrumentQuantity1Choice getIncrementalDenomination() {
 		return incrementalDenomination;
 	}

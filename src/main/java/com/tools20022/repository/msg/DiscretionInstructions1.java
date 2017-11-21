@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Discretion;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates on an order that the trader wishes to display one price in the
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DiscretionInstructions1", propOrder = {"offset", "offsetSign", "relatedPriceType", "moveType", "limitType", "roundDirection", "scope", "offsetType"})
 public class DiscretionInstructions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -508,6 +514,7 @@ public class DiscretionInstructions1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Offset", required = true)
 	public ActiveCurrencyAndAmount getOffset() {
 		return offset;
 	}
@@ -516,6 +523,7 @@ public class DiscretionInstructions1 {
 		this.offset = offset;
 	}
 
+	@XmlElement(name = "OffsetSgn", required = true)
 	public PlusOrMinusIndicator getOffsetSign() {
 		return offsetSign;
 	}
@@ -524,6 +532,7 @@ public class DiscretionInstructions1 {
 		this.offsetSign = offsetSign;
 	}
 
+	@XmlElement(name = "RltdPricTp", required = true)
 	public TypeOfDiscretionPrice1Code getRelatedPriceType() {
 		return relatedPriceType;
 	}
@@ -532,6 +541,7 @@ public class DiscretionInstructions1 {
 		this.relatedPriceType = relatedPriceType;
 	}
 
+	@XmlElement(name = "MvTp", required = true)
 	public MoveType1Code getMoveType() {
 		return moveType;
 	}
@@ -540,6 +550,7 @@ public class DiscretionInstructions1 {
 		this.moveType = moveType;
 	}
 
+	@XmlElement(name = "LmtTp", required = true)
 	public Max35Text getLimitType() {
 		return limitType;
 	}
@@ -548,6 +559,7 @@ public class DiscretionInstructions1 {
 		this.limitType = limitType;
 	}
 
+	@XmlElement(name = "RndDrctn", required = true)
 	public Max35Text getRoundDirection() {
 		return roundDirection;
 	}
@@ -556,6 +568,7 @@ public class DiscretionInstructions1 {
 		this.roundDirection = roundDirection;
 	}
 
+	@XmlElement(name = "Scp", required = true)
 	public PriceProtectionScope2Code getScope() {
 		return scope;
 	}
@@ -564,6 +577,7 @@ public class DiscretionInstructions1 {
 		this.scope = scope;
 	}
 
+	@XmlElement(name = "OffsetTp", required = true)
 	public OffsetType1Code getOffsetType() {
 		return offsetType;
 	}

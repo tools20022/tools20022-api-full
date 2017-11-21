@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Human entity, as distinguished from a corporate entity (which is sometimes
@@ -133,6 +137,9 @@ import java.util.List;
  * IndividualPerson27}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualPerson28", propOrder = {"namePrefix", "givenName", "middleName", "name", "nameSuffix", "gender", "birthDate", "countryOfBirth", "provinceOfBirth", "cityOfBirth", "profession", "modifiedPostalAddress",
+		"modifiedCitizenship", "employingCompany", "businessFunction", "politicallyExposedPersonType", "deathDate", "civilStatus", "educationLevel", "familyInformation"})
 public class IndividualPerson28 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1393,6 +1400,7 @@ public class IndividualPerson28 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NmPrfx")
 	public NamePrefix1Choice getNamePrefix() {
 		return namePrefix;
 	}
@@ -1401,6 +1409,7 @@ public class IndividualPerson28 {
 		this.namePrefix = namePrefix;
 	}
 
+	@XmlElement(name = "GvnNm")
 	public Max35Text getGivenName() {
 		return givenName;
 	}
@@ -1409,6 +1418,7 @@ public class IndividualPerson28 {
 		this.givenName = givenName;
 	}
 
+	@XmlElement(name = "MddlNm")
 	public Max35Text getMiddleName() {
 		return middleName;
 	}
@@ -1417,6 +1427,7 @@ public class IndividualPerson28 {
 		this.middleName = middleName;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max350Text getName() {
 		return name;
 	}
@@ -1425,6 +1436,7 @@ public class IndividualPerson28 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "NmSfx")
 	public Max35Text getNameSuffix() {
 		return nameSuffix;
 	}
@@ -1433,6 +1445,7 @@ public class IndividualPerson28 {
 		this.nameSuffix = nameSuffix;
 	}
 
+	@XmlElement(name = "Gndr")
 	public GenderCode getGender() {
 		return gender;
 	}
@@ -1441,6 +1454,7 @@ public class IndividualPerson28 {
 		this.gender = gender;
 	}
 
+	@XmlElement(name = "BirthDt")
 	public ISODate getBirthDate() {
 		return birthDate;
 	}
@@ -1449,6 +1463,7 @@ public class IndividualPerson28 {
 		this.birthDate = birthDate;
 	}
 
+	@XmlElement(name = "CtryOfBirth")
 	public CountryCode getCountryOfBirth() {
 		return countryOfBirth;
 	}
@@ -1457,6 +1472,7 @@ public class IndividualPerson28 {
 		this.countryOfBirth = countryOfBirth;
 	}
 
+	@XmlElement(name = "PrvcOfBirth")
 	public Max35Text getProvinceOfBirth() {
 		return provinceOfBirth;
 	}
@@ -1465,6 +1481,7 @@ public class IndividualPerson28 {
 		this.provinceOfBirth = provinceOfBirth;
 	}
 
+	@XmlElement(name = "CityOfBirth")
 	public Max35Text getCityOfBirth() {
 		return cityOfBirth;
 	}
@@ -1473,6 +1490,7 @@ public class IndividualPerson28 {
 		this.cityOfBirth = cityOfBirth;
 	}
 
+	@XmlElement(name = "Prfssn")
 	public Max35Text getProfession() {
 		return profession;
 	}
@@ -1481,6 +1499,7 @@ public class IndividualPerson28 {
 		this.profession = profession;
 	}
 
+	@XmlElement(name = "ModfdPstlAdr")
 	public List<ModificationScope34> getModifiedPostalAddress() {
 		return modifiedPostalAddress;
 	}
@@ -1489,6 +1508,7 @@ public class IndividualPerson28 {
 		this.modifiedPostalAddress = modifiedPostalAddress;
 	}
 
+	@XmlElement(name = "ModfdCtznsh")
 	public List<ModificationScope3> getModifiedCitizenship() {
 		return modifiedCitizenship;
 	}
@@ -1497,6 +1517,7 @@ public class IndividualPerson28 {
 		this.modifiedCitizenship = modifiedCitizenship;
 	}
 
+	@XmlElement(name = "EmplngCpny")
 	public Max140Text getEmployingCompany() {
 		return employingCompany;
 	}
@@ -1505,6 +1526,7 @@ public class IndividualPerson28 {
 		this.employingCompany = employingCompany;
 	}
 
+	@XmlElement(name = "BizFctn")
 	public Max35Text getBusinessFunction() {
 		return businessFunction;
 	}
@@ -1513,6 +1535,7 @@ public class IndividualPerson28 {
 		this.businessFunction = businessFunction;
 	}
 
+	@XmlElement(name = "PltclyXpsdPrsnTp")
 	public PoliticalExposureType1Choice getPoliticallyExposedPersonType() {
 		return politicallyExposedPersonType;
 	}
@@ -1521,6 +1544,7 @@ public class IndividualPerson28 {
 		this.politicallyExposedPersonType = politicallyExposedPersonType;
 	}
 
+	@XmlElement(name = "DthDt")
 	public ISODate getDeathDate() {
 		return deathDate;
 	}
@@ -1529,6 +1553,7 @@ public class IndividualPerson28 {
 		this.deathDate = deathDate;
 	}
 
+	@XmlElement(name = "CvlSts")
 	public CivilStatus1Choice getCivilStatus() {
 		return civilStatus;
 	}
@@ -1537,6 +1562,7 @@ public class IndividualPerson28 {
 		this.civilStatus = civilStatus;
 	}
 
+	@XmlElement(name = "EdctnLvl")
 	public Max35Text getEducationLevel() {
 		return educationLevel;
 	}
@@ -1545,6 +1571,7 @@ public class IndividualPerson28 {
 		this.educationLevel = educationLevel;
 	}
 
+	@XmlElement(name = "FmlyInf")
 	public PersonalInformation1 getFamilyInformation() {
 		return familyInformation;
 	}

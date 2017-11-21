@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Exact5NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of 3 and 5 exact numeric number.
@@ -56,6 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of 3 and 5 exact numeric number."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Number3Choice", propOrder = {"short", "long"})
 public class Number3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class Number3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Shrt", required = true)
 	public Exact3NumericText getShort() {
 		return short_;
 	}
@@ -168,6 +175,7 @@ public class Number3Choice {
 		this.short_ = short_;
 	}
 
+	@XmlElement(name = "Lng", required = true)
 	public Exact5NumericText getLong() {
 		return long_;
 	}

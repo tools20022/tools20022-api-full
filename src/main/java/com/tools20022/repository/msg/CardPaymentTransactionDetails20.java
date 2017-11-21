@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the transaction in the authorisation response.
@@ -94,6 +98,8 @@ import java.util.function.Supplier;
  * CardPaymentTransactionDetails13}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransactionDetails20", propOrder = {"currency", "totalAmount", "detailedAmount", "validityDate", "accountType", "ICCRelatedData"})
 public class CardPaymentTransactionDetails20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -499,6 +505,7 @@ public class CardPaymentTransactionDetails20 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy", required = true)
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -507,6 +514,7 @@ public class CardPaymentTransactionDetails20 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "TtlAmt", required = true)
 	public ImpliedCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -515,6 +523,7 @@ public class CardPaymentTransactionDetails20 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "DtldAmt")
 	public DetailedAmount7 getDetailedAmount() {
 		return detailedAmount;
 	}
@@ -523,6 +532,7 @@ public class CardPaymentTransactionDetails20 {
 		this.detailedAmount = detailedAmount;
 	}
 
+	@XmlElement(name = "VldtyDt")
 	public ISODate getValidityDate() {
 		return validityDate;
 	}
@@ -531,6 +541,7 @@ public class CardPaymentTransactionDetails20 {
 		this.validityDate = validityDate;
 	}
 
+	@XmlElement(name = "AcctTp")
 	public CardAccountType2Code getAccountType() {
 		return accountType;
 	}
@@ -539,6 +550,7 @@ public class CardPaymentTransactionDetails20 {
 		this.accountType = accountType;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}

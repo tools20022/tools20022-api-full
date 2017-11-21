@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,6 +38,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmBirthName
+ * PersonName.mmBirthName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmNamePrefix
+ * PersonName.mmNamePrefix}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmGivenName
+ * PersonName.mmGivenName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmMiddleName
+ * PersonName.mmMiddleName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmNameSuffix
+ * PersonName.mmNameSuffix}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmIdentification
+ * PersonName.mmIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PartyName
+ * PartyName}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -54,26 +75,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmPersonName
  * PersonIdentification.mmPersonName}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PartyName
- * PartyName}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmBirthName
- * PersonName.mmBirthName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmNamePrefix
- * PersonName.mmNamePrefix}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmGivenName
- * PersonName.mmGivenName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmMiddleName
- * PersonName.mmMiddleName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmNameSuffix
- * PersonName.mmNameSuffix}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmIdentification
- * PersonName.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -106,10 +107,6 @@ public class PersonName extends PartyName {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName PersonName}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -190,6 +187,10 @@ public class PersonName extends PartyName {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PersonName PersonName}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -207,7 +208,7 @@ public class PersonName extends PartyName {
 					IndividualPerson13.mmBirthName, IndividualPerson17.mmBirthName, IndividualPerson15.mmName, IndividualPerson21.mmName, IndividualPerson22.mmName, IndividualPerson23.mmName, IndividualPerson24.mmName,
 					IndividualPerson25.mmBirthName, IndividualPerson26.mmBirthName, IndividualPerson30.mmName, IndividualPerson28.mmName, IndividualPerson27.mmName, PersonalInformation1.mmNameOfFather, IndividualPerson29.mmName,
 					IndividualPerson32.mmName, IndividualPerson31.mmName, IndividualPerson33.mmName, IndividualPerson35.mmName, IndividualPerson34.mmName);
-			elementContext_lazy = () -> PersonName.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BirthName";
@@ -215,6 +216,14 @@ public class PersonName extends PartyName {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PersonName.class.getMethod("getBirthName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected NamePrefix1Code namePrefix;
@@ -228,10 +237,6 @@ public class PersonName extends PartyName {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.NamePrefix1Code
 	 * NamePrefix1Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName PersonName}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -324,6 +329,10 @@ public class PersonName extends PartyName {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PersonName PersonName}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -341,7 +350,7 @@ public class PersonName extends PartyName {
 					IndividualPerson11.mmNamePrefix, IndividualPerson11.mmExtendedNamePrefix, ContactDetails2.mmNamePrefix, ContactIdentification2.mmNamePrefix, ContactIdentification1.mmNamePrefix, Contacts3.mmNamePrefix,
 					ContactIdentification4.mmNamePrefix, ContactIdentification3.mmNamePrefix, ContactDetails3.mmNamePrefix, IndividualPerson21.mmNamePrefix, IndividualPerson22.mmNamePrefix, IndividualPerson23.mmNamePrefix,
 					IndividualPerson24.mmNamePrefix, IndividualPerson28.mmNamePrefix, IndividualPerson27.mmNamePrefix, IndividualPerson29.mmNamePrefix, IndividualPerson33.mmNamePrefix, IndividualPerson34.mmNamePrefix);
-			elementContext_lazy = () -> PersonName.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NamePrefix";
@@ -349,6 +358,14 @@ public class PersonName extends PartyName {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NamePrefix1Code.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PersonName.class.getMethod("getNamePrefix", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text givenName;
@@ -361,10 +378,6 @@ public class PersonName extends PartyName {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName PersonName}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -491,6 +504,10 @@ public class PersonName extends PartyName {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PersonName PersonName}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -510,7 +527,7 @@ public class PersonName extends PartyName {
 					IndividualPerson25.mmGivenName, IndividualPerson26.mmGivenName, Cardholder8.mmName, Cardholder7.mmName, Cardholder9.mmName, PersonIdentification10.mmFirstName, IndividualPerson30.mmGivenName,
 					IndividualPerson28.mmGivenName, IndividualPerson27.mmGivenName, PersonalInformation1.mmNameOfPartner, IndividualPerson29.mmGivenName, Cardholder11.mmName, Cardholder10.mmName, IndividualPerson33.mmGivenName,
 					IndividualPerson35.mmGivenName, IndividualPerson34.mmGivenName, Cardholder12.mmName);
-			elementContext_lazy = () -> PersonName.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GivenName";
@@ -518,6 +535,14 @@ public class PersonName extends PartyName {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PersonName.class.getMethod("getGivenName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text middleName;
@@ -530,10 +555,6 @@ public class PersonName extends PartyName {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName PersonName}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -591,6 +612,10 @@ public class PersonName extends PartyName {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PersonName PersonName}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -606,7 +631,7 @@ public class PersonName extends PartyName {
 			derivation_lazy = () -> Arrays.asList(IndividualPerson5.mmMiddleName, IndividualPerson10.mmMiddleName, IndividualPerson20.mmMiddleName, IndividualPerson4.mmMiddleName, IndividualPerson6.mmMiddleName,
 					IndividualPerson11.mmMiddleName, IndividualPerson21.mmMiddleName, IndividualPerson22.mmMiddleName, IndividualPerson23.mmMiddleName, IndividualPerson24.mmMiddleName, IndividualPerson30.mmMiddleName,
 					IndividualPerson28.mmMiddleName, IndividualPerson27.mmMiddleName, IndividualPerson29.mmMiddleName, IndividualPerson33.mmMiddleName, IndividualPerson35.mmMiddleName, IndividualPerson34.mmMiddleName);
-			elementContext_lazy = () -> PersonName.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MiddleName";
@@ -614,6 +639,14 @@ public class PersonName extends PartyName {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PersonName.class.getMethod("getMiddleName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text nameSuffix;
@@ -627,10 +660,6 @@ public class PersonName extends PartyName {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName PersonName}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -682,6 +711,10 @@ public class PersonName extends PartyName {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PersonName PersonName}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -699,7 +732,7 @@ public class PersonName extends PartyName {
 			derivation_lazy = () -> Arrays.asList(IndividualPerson5.mmNameSuffix, IndividualPerson10.mmNameSuffix, IndividualPerson20.mmNameSuffix, IndividualPerson3.mmNameSuffix, IndividualPerson8.mmNameSuffix,
 					IndividualPerson6.mmNameSuffix, IndividualPerson11.mmNameSuffix, IndividualPerson21.mmNameSuffix, IndividualPerson22.mmNameSuffix, IndividualPerson23.mmNameSuffix, IndividualPerson24.mmNameSuffix,
 					IndividualPerson28.mmNameSuffix, IndividualPerson27.mmNameSuffix, IndividualPerson33.mmNameSuffix, IndividualPerson34.mmNameSuffix);
-			elementContext_lazy = () -> PersonName.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NameSuffix";
@@ -707,6 +740,14 @@ public class PersonName extends PartyName {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PersonName.class.getMethod("getNameSuffix", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PersonIdentification identification;
@@ -745,7 +786,7 @@ public class PersonName extends PartyName {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PersonName.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -767,8 +808,14 @@ public class PersonName extends PartyName {
 				definition = "Name by which a person is known and that is usually used to identify that person.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PersonIdentification.mmPersonName);
 				superType_lazy = () -> PartyName.mmObject();
-				element_lazy = () -> Arrays.asList(PersonName.mmBirthName, PersonName.mmNamePrefix, PersonName.mmGivenName, PersonName.mmMiddleName, PersonName.mmNameSuffix, PersonName.mmIdentification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PersonName.mmBirthName, com.tools20022.repository.entity.PersonName.mmNamePrefix, com.tools20022.repository.entity.PersonName.mmGivenName,
+						com.tools20022.repository.entity.PersonName.mmMiddleName, com.tools20022.repository.entity.PersonName.mmNameSuffix, com.tools20022.repository.entity.PersonName.mmIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(NamePrefix1Choice.mmObject(), PersonalInformation1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PersonName.class;
 			}
 		});
 		return mmObject_lazy.get();

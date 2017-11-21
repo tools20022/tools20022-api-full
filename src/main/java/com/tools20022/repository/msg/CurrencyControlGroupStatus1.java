@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the currency control group status details.
@@ -92,6 +96,8 @@ import java.util.List;
  * definition} = "Provides the currency control group status details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyControlGroupStatus1", propOrder = {"originalReferences", "reportingParty", "registrationAgent", "reportingPeriod", "status", "statusReason", "statusDateTime"})
 public class CurrencyControlGroupStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -445,6 +451,7 @@ public class CurrencyControlGroupStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlRefs", required = true)
 	public OriginalMessage3 getOriginalReferences() {
 		return originalReferences;
 	}
@@ -453,6 +460,7 @@ public class CurrencyControlGroupStatus1 {
 		this.originalReferences = originalReferences;
 	}
 
+	@XmlElement(name = "RptgPty", required = true)
 	public TradeParty2 getReportingParty() {
 		return reportingParty;
 	}
@@ -461,6 +469,7 @@ public class CurrencyControlGroupStatus1 {
 		this.reportingParty = reportingParty;
 	}
 
+	@XmlElement(name = "RegnAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getRegistrationAgent() {
 		return registrationAgent;
 	}
@@ -469,6 +478,7 @@ public class CurrencyControlGroupStatus1 {
 		this.registrationAgent = registrationAgent;
 	}
 
+	@XmlElement(name = "RptgPrd")
 	public Period4Choice getReportingPeriod() {
 		return reportingPeriod;
 	}
@@ -477,6 +487,7 @@ public class CurrencyControlGroupStatus1 {
 		this.reportingPeriod = reportingPeriod;
 	}
 
+	@XmlElement(name = "Sts")
 	public StatisticalReportingStatus1Code getStatus() {
 		return status;
 	}
@@ -485,6 +496,7 @@ public class CurrencyControlGroupStatus1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "StsRsn")
 	public List<ValidationStatusReason1> getStatusReason() {
 		return statusReason;
 	}
@@ -493,6 +505,7 @@ public class CurrencyControlGroupStatus1 {
 		this.statusReason = statusReason;
 	}
 
+	@XmlElement(name = "StsDtTm")
 	public ISODateTime getStatusDateTime() {
 		return statusDateTime;
 	}

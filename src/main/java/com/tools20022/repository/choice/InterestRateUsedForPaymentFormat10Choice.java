@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RateTypeAndAmountAndStatus32;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between an amount or a rate or an unspecified rate.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between an amount or a rate or an unspecified rate."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestRateUsedForPaymentFormat10Choice", propOrder = {"rate", "amount", "rateTypeAndAmountAndRateStatus", "notSpecifiedRate"})
 public class InterestRateUsedForPaymentFormat10Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -275,6 +281,7 @@ public class InterestRateUsedForPaymentFormat10Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -283,6 +290,7 @@ public class InterestRateUsedForPaymentFormat10Choice {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -291,6 +299,7 @@ public class InterestRateUsedForPaymentFormat10Choice {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
 	public RateTypeAndAmountAndStatus32 getRateTypeAndAmountAndRateStatus() {
 		return rateTypeAndAmountAndRateStatus;
 	}
@@ -299,6 +308,7 @@ public class InterestRateUsedForPaymentFormat10Choice {
 		this.rateTypeAndAmountAndRateStatus = rateTypeAndAmountAndRateStatus;
 	}
 
+	@XmlElement(name = "NotSpcfdRate", required = true)
 	public RateType13Code getNotSpecifiedRate() {
 		return notSpecifiedRate;
 	}

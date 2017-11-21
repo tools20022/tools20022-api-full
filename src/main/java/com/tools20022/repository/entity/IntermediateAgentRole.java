@@ -68,6 +68,11 @@ public class IntermediateAgentRole extends InvoiceFinancingPartyRole {
 				definition = "Financial institution that receives a financing request from the financing requestor and forwards it to the first agent for execution.";
 				superType_lazy = () -> InvoiceFinancingPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IntermediateAgentRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

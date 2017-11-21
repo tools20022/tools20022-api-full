@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification25;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the payment direction.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of format for the payment direction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentDirection3Choice", propOrder = {"indicator", "proprietary"})
 public class PaymentDirection3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class PaymentDirection3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ind", required = true)
 	public PaymentDirectionIndicator getIndicator() {
 		return indicator;
 	}
@@ -189,6 +196,7 @@ public class PaymentDirection3Choice {
 		this.indicator = indicator;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification25 getProprietary() {
 		return proprietary;
 	}

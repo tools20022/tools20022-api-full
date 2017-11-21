@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the corporate action security option.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides information about the corporate action security option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesOption58", propOrder = {"financialInstrumentIdentification", "creditDebitIndicator", "postingQuantity", "postingDate", "originalPostingDate"})
 public class SecuritiesOption58 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -341,6 +347,7 @@ public class SecuritiesOption58 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification20 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -349,6 +356,7 @@ public class SecuritiesOption58 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -357,6 +365,7 @@ public class SecuritiesOption58 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "PstngQty", required = true)
 	public Quantity10Choice getPostingQuantity() {
 		return postingQuantity;
 	}
@@ -365,6 +374,7 @@ public class SecuritiesOption58 {
 		this.postingQuantity = postingQuantity;
 	}
 
+	@XmlElement(name = "PstngDt", required = true)
 	public DateAndDateTimeChoice getPostingDate() {
 		return postingDate;
 	}
@@ -373,6 +383,7 @@ public class SecuritiesOption58 {
 		this.postingDate = postingDate;
 	}
 
+	@XmlElement(name = "OrgnlPstngDt")
 	public DateAndDateTimeChoice getOriginalPostingDate() {
 		return originalPostingDate;
 	}

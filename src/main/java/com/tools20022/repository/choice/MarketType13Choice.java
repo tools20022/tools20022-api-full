@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the market type.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of format for the market type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarketType13Choice", propOrder = {"code", "proprietary"})
 public class MarketType13Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class MarketType13Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public MarketType8Code getCode() {
 		return code;
 	}
@@ -166,6 +173,7 @@ public class MarketType13Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Prtry")
 	public GenericIdentification1 getProprietary() {
 		return proprietary;
 	}

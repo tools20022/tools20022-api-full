@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Structured information supplied to enable the matching, i.e. reconciliation,
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CreditorReferenceInformation1", propOrder = {"creditorReferenceType", "creditorReference"})
 public class CreditorReferenceInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class CreditorReferenceInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CdtrRefTp")
 	public CreditorReferenceType1 getCreditorReferenceType() {
 		return creditorReferenceType;
 	}
@@ -193,6 +200,7 @@ public class CreditorReferenceInformation1 {
 		this.creditorReferenceType = creditorReferenceType;
 	}
 
+	@XmlElement(name = "CdtrRef")
 	public Max35Text getCreditorReference() {
 		return creditorReference;
 	}

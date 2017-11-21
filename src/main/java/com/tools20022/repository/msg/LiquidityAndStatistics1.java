@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.NonDisclosedListTrading;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Ability of a financial instrument to be easily traded and converted to cash,
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LiquidityAndStatistics1", propOrder = {"grossIndicator", "indicatorType", "weightedAverageLiquidity", "outMainCountryIndex", "crossPercent", "sideValue1", "sideValue2"})
 public class LiquidityAndStatistics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -451,6 +457,7 @@ public class LiquidityAndStatistics1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrssInd", required = true)
 	public TrueFalseIndicator getGrossIndicator() {
 		return grossIndicator;
 	}
@@ -459,6 +466,7 @@ public class LiquidityAndStatistics1 {
 		this.grossIndicator = grossIndicator;
 	}
 
+	@XmlElement(name = "IndTp", required = true)
 	public LiquidityIndicatorType1Code getIndicatorType() {
 		return indicatorType;
 	}
@@ -467,6 +475,7 @@ public class LiquidityAndStatistics1 {
 		this.indicatorType = indicatorType;
 	}
 
+	@XmlElement(name = "WghtdAvrgLqdty", required = true)
 	public PercentageRate getWeightedAverageLiquidity() {
 		return weightedAverageLiquidity;
 	}
@@ -475,6 +484,7 @@ public class LiquidityAndStatistics1 {
 		this.weightedAverageLiquidity = weightedAverageLiquidity;
 	}
 
+	@XmlElement(name = "OutMainCtryIndx", required = true)
 	public ActiveCurrencyAndAmount getOutMainCountryIndex() {
 		return outMainCountryIndex;
 	}
@@ -483,6 +493,7 @@ public class LiquidityAndStatistics1 {
 		this.outMainCountryIndex = outMainCountryIndex;
 	}
 
+	@XmlElement(name = "CrossPct")
 	public PercentageRate getCrossPercent() {
 		return crossPercent;
 	}
@@ -491,6 +502,7 @@ public class LiquidityAndStatistics1 {
 		this.crossPercent = crossPercent;
 	}
 
+	@XmlElement(name = "SdVal1")
 	public ActiveCurrencyAndAmount getSideValue1() {
 		return sideValue1;
 	}
@@ -499,6 +511,7 @@ public class LiquidityAndStatistics1 {
 		this.sideValue1 = sideValue1;
 	}
 
+	@XmlElement(name = "SdVal2")
 	public ActiveCurrencyAndAmount getSideValue2() {
 		return sideValue2;
 	}

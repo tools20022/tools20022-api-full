@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Range of sequence numbers related to card transactions.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Range of sequence numbers related to card transactions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardSequenceNumberRange1", propOrder = {"firstTransaction", "lastTransaction"})
 public class CardSequenceNumberRange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +168,7 @@ public class CardSequenceNumberRange1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrstTx")
 	public Max35Text getFirstTransaction() {
 		return firstTransaction;
 	}
@@ -170,6 +177,7 @@ public class CardSequenceNumberRange1 {
 		this.firstTransaction = firstTransaction;
 	}
 
+	@XmlElement(name = "LastTx")
 	public Max35Text getLastTransaction() {
 		return lastTransaction;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * This is regulatory transaction reporting information from the Trading Side
@@ -72,6 +76,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradingSideTransactionReporting1", propOrder = {"reportingJurisdiction", "reportingParty", "tradingSideUniqueTransactionIdentifier"})
 public class TradingSideTransactionReporting1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -245,6 +251,7 @@ public class TradingSideTransactionReporting1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptgJursdctn")
 	public Max35Text getReportingJurisdiction() {
 		return reportingJurisdiction;
 	}
@@ -253,6 +260,7 @@ public class TradingSideTransactionReporting1 {
 		this.reportingJurisdiction = reportingJurisdiction;
 	}
 
+	@XmlElement(name = "RptgPty")
 	public PartyIdentification73Choice getReportingParty() {
 		return reportingParty;
 	}
@@ -261,6 +269,7 @@ public class TradingSideTransactionReporting1 {
 		this.reportingParty = reportingParty;
 	}
 
+	@XmlElement(name = "TradgSdUnqTxIdr")
 	public List<UniqueTransactionIdentifier2> getTradingSideUniqueTransactionIdentifier() {
 		return tradingSideUniqueTransactionIdentifier;
 	}

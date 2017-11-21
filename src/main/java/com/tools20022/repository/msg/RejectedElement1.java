@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on the rejection reason of an individual element.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides information on the rejection reason of an individual element."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RejectedElement1", propOrder = {"elementSequenceNumber", "individualRejectionReason"})
 public class RejectedElement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class RejectedElement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ElmtSeqNb", required = true)
 	public Number getElementSequenceNumber() {
 		return elementSequenceNumber;
 	}
@@ -169,6 +176,7 @@ public class RejectedElement1 {
 		this.elementSequenceNumber = elementSequenceNumber;
 	}
 
+	@XmlElement(name = "IndvRjctnRsn", required = true)
 	public Max140Text getIndividualRejectionReason() {
 		return individualRejectionReason;
 	}

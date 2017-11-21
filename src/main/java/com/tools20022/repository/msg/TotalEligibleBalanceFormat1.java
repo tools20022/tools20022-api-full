@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Total eligible balance for the corporate action and full and part way period
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TotalEligibleBalanceFormat1", propOrder = {"balance", "fullPeriodUnits", "partWayPeriodUnits"})
 public class TotalEligibleBalanceFormat1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -272,6 +278,7 @@ public class TotalEligibleBalanceFormat1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Bal")
 	public Quantity3Choice getBalance() {
 		return balance;
 	}
@@ -280,6 +287,7 @@ public class TotalEligibleBalanceFormat1 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "FullPrdUnits")
 	public SignedQuantityFormat2 getFullPeriodUnits() {
 		return fullPeriodUnits;
 	}
@@ -288,6 +296,7 @@ public class TotalEligibleBalanceFormat1 {
 		this.fullPeriodUnits = fullPeriodUnits;
 	}
 
+	@XmlElement(name = "PartWayPrdUnits")
 	public SignedQuantityFormat2 getPartWayPeriodUnits() {
 		return partWayPeriodUnits;
 	}

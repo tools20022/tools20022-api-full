@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements providing the total sum of entries per bank transaction code.
@@ -75,6 +79,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NumberAndSumOfTransactionsPerBankTransactionCode1", propOrder = {"numberOfEntries", "sum", "totalNetEntryAmount", "creditDebitIndicator", "bankTransactionCode", "availability"})
 public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -357,6 +363,7 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NbOfNtries")
 	public Max15NumericText getNumberOfEntries() {
 		return numberOfEntries;
 	}
@@ -365,6 +372,7 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 		this.numberOfEntries = numberOfEntries;
 	}
 
+	@XmlElement(name = "Sum")
 	public DecimalNumber getSum() {
 		return sum;
 	}
@@ -373,6 +381,7 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 		this.sum = sum;
 	}
 
+	@XmlElement(name = "TtlNetNtryAmt")
 	public DecimalNumber getTotalNetEntryAmount() {
 		return totalNetEntryAmount;
 	}
@@ -381,6 +390,7 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 		this.totalNetEntryAmount = totalNetEntryAmount;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -389,6 +399,7 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "BkTxCd", required = true)
 	public BankTransactionCodeStructure1 getBankTransactionCode() {
 		return bankTransactionCode;
 	}
@@ -397,6 +408,7 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 		this.bankTransactionCode = bankTransactionCode;
 	}
 
+	@XmlElement(name = "Avlbty")
 	public List<CashBalanceAvailability1> getAvailability() {
 		return availability;
 	}

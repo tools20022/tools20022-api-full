@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CollateralMovement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the margin result.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides details on the margin result."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarginResult1Choice", propOrder = {"excessAmount", "deficitAmount"})
 public class MarginResult1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class MarginResult1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XcssAmt", required = true)
 	public ActiveCurrencyAndAmount getExcessAmount() {
 		return excessAmount;
 	}
@@ -189,6 +196,7 @@ public class MarginResult1Choice {
 		this.excessAmount = excessAmount;
 	}
 
+	@XmlElement(name = "DfcitAmt", required = true)
 	public ActiveCurrencyAndAmount getDeficitAmount() {
 		return deficitAmount;
 	}

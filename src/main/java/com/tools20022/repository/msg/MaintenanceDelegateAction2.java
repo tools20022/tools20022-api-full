@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information for the MTM to build or include delegated actions in the
@@ -93,6 +97,8 @@ import java.util.List;
  * MaintenanceDelegateAction1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MaintenanceDelegateAction2", propOrder = {"periodicAction", "TMRemoteAccess", "TMSProtocol", "TMSProtocolVersion", "dataSetIdentification", "reTry", "additionalInformation", "action"})
 public class MaintenanceDelegateAction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -571,6 +577,7 @@ public class MaintenanceDelegateAction2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrdcActn")
 	public TrueFalseIndicator getPeriodicAction() {
 		return periodicAction;
 	}
@@ -579,6 +586,7 @@ public class MaintenanceDelegateAction2 {
 		this.periodicAction = periodicAction;
 	}
 
+	@XmlElement(name = "TMRmotAccs")
 	public NetworkParameters5 getTMRemoteAccess() {
 		return tMRemoteAccess;
 	}
@@ -587,6 +595,7 @@ public class MaintenanceDelegateAction2 {
 		this.tMRemoteAccess = tMRemoteAccess;
 	}
 
+	@XmlElement(name = "TMSPrtcol")
 	public Max35Text getTMSProtocol() {
 		return tMSProtocol;
 	}
@@ -595,6 +604,7 @@ public class MaintenanceDelegateAction2 {
 		this.tMSProtocol = tMSProtocol;
 	}
 
+	@XmlElement(name = "TMSPrtcolVrsn")
 	public Max35Text getTMSProtocolVersion() {
 		return tMSProtocolVersion;
 	}
@@ -603,6 +613,7 @@ public class MaintenanceDelegateAction2 {
 		this.tMSProtocolVersion = tMSProtocolVersion;
 	}
 
+	@XmlElement(name = "DataSetId")
 	public DataSetIdentification6 getDataSetIdentification() {
 		return dataSetIdentification;
 	}
@@ -611,6 +622,7 @@ public class MaintenanceDelegateAction2 {
 		this.dataSetIdentification = dataSetIdentification;
 	}
 
+	@XmlElement(name = "ReTry")
 	public ProcessRetry2 getReTry() {
 		return reTry;
 	}
@@ -619,6 +631,7 @@ public class MaintenanceDelegateAction2 {
 		this.reTry = reTry;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max3000Binary> getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -627,6 +640,7 @@ public class MaintenanceDelegateAction2 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "Actn")
 	public List<TMSAction5> getAction() {
 		return action;
 	}

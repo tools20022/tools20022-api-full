@@ -68,6 +68,8 @@ public class ExternalLocalInstrumentCode {
 				})).get();
 				name = "ExternalLocalInstrumentCode";
 				definition = "Specifies the external local instrument code in the format of character string with a maximum length of 35 characters.\nThe list of valid codes is an external code list published separately.";
+				minLength = 1;
+				maxLength = 35;
 			}
 		});
 		return mmObject_lazy.get();

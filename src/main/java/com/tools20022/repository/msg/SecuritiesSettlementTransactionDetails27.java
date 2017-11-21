@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of the update(s) for the settlement transaction.
@@ -108,6 +112,10 @@ import java.util.List;
  * SecuritiesSettlementTransactionDetails20}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesSettlementTransactionDetails27", propOrder = {"settlementTypeAndAdditionalParameters", "linkages", "tradeDetails", "financialInstrumentAttributes", "quantityAndAccountDetails", "settlementParameters",
+		"standingSettlementInstructionDetails", "deliveringSettlementParties", "receivingSettlementParties", "cashParties", "settlementAmount", "otherAmounts", "otherBusinessParties", "additionalPhysicalOrRegistrationDetails",
+		"supplementaryData"})
 public class SecuritiesSettlementTransactionDetails27 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -934,6 +942,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmTpAndAddtlParams")
 	public SettlementTypeAndAdditionalParameters13 getSettlementTypeAndAdditionalParameters() {
 		return settlementTypeAndAdditionalParameters;
 	}
@@ -942,6 +951,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 		this.settlementTypeAndAdditionalParameters = settlementTypeAndAdditionalParameters;
 	}
 
+	@XmlElement(name = "Lnkgs")
 	public List<Linkages40> getLinkages() {
 		return linkages;
 	}
@@ -950,6 +960,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 		this.linkages = linkages;
 	}
 
+	@XmlElement(name = "TradDtls")
 	public SecuritiesTradeDetails50 getTradeDetails() {
 		return tradeDetails;
 	}
@@ -958,6 +969,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 		this.tradeDetails = tradeDetails;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public FinancialInstrumentAttributes64 getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -966,6 +978,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "QtyAndAcctDtls")
 	public QuantityAndAccount44 getQuantityAndAccountDetails() {
 		return quantityAndAccountDetails;
 	}
@@ -974,6 +987,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 		this.quantityAndAccountDetails = quantityAndAccountDetails;
 	}
 
+	@XmlElement(name = "SttlmParams")
 	public SettlementDetails122 getSettlementParameters() {
 		return settlementParameters;
 	}
@@ -982,6 +996,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 		this.settlementParameters = settlementParameters;
 	}
 
+	@XmlElement(name = "StgSttlmInstrDtls")
 	public StandingSettlementInstruction11 getStandingSettlementInstructionDetails() {
 		return standingSettlementInstructionDetails;
 	}
@@ -990,6 +1005,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 		this.standingSettlementInstructionDetails = standingSettlementInstructionDetails;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties39 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -998,6 +1014,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties39 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -1006,6 +1023,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "CshPties")
 	public CashParties26 getCashParties() {
 		return cashParties;
 	}
@@ -1014,6 +1032,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 		this.cashParties = cashParties;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public AmountAndDirection45 getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -1022,6 +1041,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "OthrAmts")
 	public OtherAmounts28 getOtherAmounts() {
 		return otherAmounts;
 	}
@@ -1030,6 +1050,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 		this.otherAmounts = otherAmounts;
 	}
 
+	@XmlElement(name = "OthrBizPties")
 	public OtherParties27 getOtherBusinessParties() {
 		return otherBusinessParties;
 	}
@@ -1038,6 +1059,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 		this.otherBusinessParties = otherBusinessParties;
 	}
 
+	@XmlElement(name = "AddtlPhysOrRegnDtls")
 	public RegistrationParameters4 getAdditionalPhysicalOrRegistrationDetails() {
 		return additionalPhysicalOrRegistrationDetails;
 	}
@@ -1046,6 +1068,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 		this.additionalPhysicalOrRegistrationDetails = additionalPhysicalOrRegistrationDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

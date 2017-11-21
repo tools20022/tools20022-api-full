@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SectorAndLocation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the identification of the reported party through the name or the
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SectorAndLocation1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NameOrSector1Choice", propOrder = {"name", "sector"})
 public class NameOrSector1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class NameOrSector1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max70Text getName() {
 		return name;
 	}
@@ -204,6 +211,7 @@ public class NameOrSector1Choice {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Sctr", required = true)
 	public SNA2008SectorIdentifier getSector() {
 		return sector;
 	}

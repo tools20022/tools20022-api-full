@@ -64,6 +64,11 @@ public class NotificationReceiver extends DocumentPartyRole {
 				definition = "Identifies the party (to be) notified of the content of a document.";
 				superType_lazy = () -> DocumentPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return NotificationReceiver.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

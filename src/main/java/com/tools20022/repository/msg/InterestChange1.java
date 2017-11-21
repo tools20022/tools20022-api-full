@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Variable interest payment of a security.
@@ -92,6 +96,9 @@ import java.util.function.Supplier;
  * definition} = "Variable interest payment of a security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestChange1", propOrder = {"fixingDate", "reportingDate", "resetDate", "spreadRate", "variableRateChangeFrequency", "rateResetSource", "arriers", "indexRateBasis", "indexRateCurrency", "indexRateFrequency",
+		"indexRateMultiplier"})
 public class InterestChange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -666,6 +673,7 @@ public class InterestChange1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FxgDt", required = true)
 	public ISODateTime getFixingDate() {
 		return fixingDate;
 	}
@@ -674,6 +682,7 @@ public class InterestChange1 {
 		this.fixingDate = fixingDate;
 	}
 
+	@XmlElement(name = "RptgDt", required = true)
 	public ISODateTime getReportingDate() {
 		return reportingDate;
 	}
@@ -682,6 +691,7 @@ public class InterestChange1 {
 		this.reportingDate = reportingDate;
 	}
 
+	@XmlElement(name = "RstDt", required = true)
 	public ISODateTime getResetDate() {
 		return resetDate;
 	}
@@ -690,6 +700,7 @@ public class InterestChange1 {
 		this.resetDate = resetDate;
 	}
 
+	@XmlElement(name = "SprdRate", required = true)
 	public PercentageRate getSpreadRate() {
 		return spreadRate;
 	}
@@ -698,6 +709,7 @@ public class InterestChange1 {
 		this.spreadRate = spreadRate;
 	}
 
+	@XmlElement(name = "VarblRateChngFrqcy", required = true)
 	public Frequency1Code getVariableRateChangeFrequency() {
 		return variableRateChangeFrequency;
 	}
@@ -706,6 +718,7 @@ public class InterestChange1 {
 		this.variableRateChangeFrequency = variableRateChangeFrequency;
 	}
 
+	@XmlElement(name = "RateRstSrc", required = true)
 	public Max35Text getRateResetSource() {
 		return rateResetSource;
 	}
@@ -714,6 +727,7 @@ public class InterestChange1 {
 		this.rateResetSource = rateResetSource;
 	}
 
+	@XmlElement(name = "Arrs", required = true)
 	public Max16Text getArriers() {
 		return arriers;
 	}
@@ -722,6 +736,7 @@ public class InterestChange1 {
 		this.arriers = arriers;
 	}
 
+	@XmlElement(name = "IndxRateBsis", required = true)
 	public PercentageRate getIndexRateBasis() {
 		return indexRateBasis;
 	}
@@ -730,6 +745,7 @@ public class InterestChange1 {
 		this.indexRateBasis = indexRateBasis;
 	}
 
+	@XmlElement(name = "IndxRateCcy", required = true)
 	public CurrencyCode getIndexRateCurrency() {
 		return indexRateCurrency;
 	}
@@ -738,6 +754,7 @@ public class InterestChange1 {
 		this.indexRateCurrency = indexRateCurrency;
 	}
 
+	@XmlElement(name = "IndxRateFrqcy", required = true)
 	public Frequency1Code getIndexRateFrequency() {
 		return indexRateFrequency;
 	}
@@ -746,6 +763,7 @@ public class InterestChange1 {
 		this.indexRateFrequency = indexRateFrequency;
 	}
 
+	@XmlElement(name = "IndxRateMltplr", required = true)
 	public DecimalNumber getIndexRateMultiplier() {
 		return indexRateMultiplier;
 	}

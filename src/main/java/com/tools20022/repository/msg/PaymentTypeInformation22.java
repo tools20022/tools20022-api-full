@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide further details of the type of payment.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Set of elements used to provide further details of the type of payment."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTypeInformation22", propOrder = {"instructionPriority", "clearingChannel", "serviceLevel", "localInstrument", "sequenceType", "categoryPurpose"})
 public class PaymentTypeInformation22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -410,6 +416,7 @@ public class PaymentTypeInformation22 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrPrty")
 	public Priority2Code getInstructionPriority() {
 		return instructionPriority;
 	}
@@ -418,6 +425,7 @@ public class PaymentTypeInformation22 {
 		this.instructionPriority = instructionPriority;
 	}
 
+	@XmlElement(name = "ClrChanl")
 	public ClearingChannel2Code getClearingChannel() {
 		return clearingChannel;
 	}
@@ -426,6 +434,7 @@ public class PaymentTypeInformation22 {
 		this.clearingChannel = clearingChannel;
 	}
 
+	@XmlElement(name = "SvcLvl")
 	public ServiceLevel8Choice getServiceLevel() {
 		return serviceLevel;
 	}
@@ -434,6 +443,7 @@ public class PaymentTypeInformation22 {
 		this.serviceLevel = serviceLevel;
 	}
 
+	@XmlElement(name = "LclInstrm")
 	public LocalInstrument2Choice getLocalInstrument() {
 		return localInstrument;
 	}
@@ -442,6 +452,7 @@ public class PaymentTypeInformation22 {
 		this.localInstrument = localInstrument;
 	}
 
+	@XmlElement(name = "SeqTp")
 	public SequenceType1Code getSequenceType() {
 		return sequenceType;
 	}
@@ -450,6 +461,7 @@ public class PaymentTypeInformation22 {
 		this.sequenceType = sequenceType;
 	}
 
+	@XmlElement(name = "CtgyPurp")
 	public CategoryPurpose1Choice getCategoryPurpose() {
 		return categoryPurpose;
 	}

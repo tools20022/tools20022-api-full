@@ -26,6 +26,10 @@ import com.tools20022.repository.choice.SettlementStatus7Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of status.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusAndReason15", propOrder = {"inferredMatchingStatus", "matchingStatus", "settlementStatus", "instructionProcessingStatus", "settled", "proprietary"})
 public class StatusAndReason15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -343,6 +349,7 @@ public class StatusAndReason15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IfrrdMtchgSts")
 	public MatchingStatus7Choice getInferredMatchingStatus() {
 		return inferredMatchingStatus;
 	}
@@ -351,6 +358,7 @@ public class StatusAndReason15 {
 		this.inferredMatchingStatus = inferredMatchingStatus;
 	}
 
+	@XmlElement(name = "MtchgSts")
 	public MatchingStatus7Choice getMatchingStatus() {
 		return matchingStatus;
 	}
@@ -359,6 +367,7 @@ public class StatusAndReason15 {
 		this.matchingStatus = matchingStatus;
 	}
 
+	@XmlElement(name = "SttlmSts")
 	public SettlementStatus7Choice getSettlementStatus() {
 		return settlementStatus;
 	}
@@ -367,6 +376,7 @@ public class StatusAndReason15 {
 		this.settlementStatus = settlementStatus;
 	}
 
+	@XmlElement(name = "InstrPrcgSts")
 	public InstructionProcessingStatus10Choice getInstructionProcessingStatus() {
 		return instructionProcessingStatus;
 	}
@@ -375,6 +385,7 @@ public class StatusAndReason15 {
 		this.instructionProcessingStatus = instructionProcessingStatus;
 	}
 
+	@XmlElement(name = "Sttld")
 	public ProprietaryReason1 getSettled() {
 		return settled;
 	}
@@ -383,6 +394,7 @@ public class StatusAndReason15 {
 		this.settled = settled;
 	}
 
+	@XmlElement(name = "Prtry")
 	public ProprietaryStatusAndReason1 getProprietary() {
 		return proprietary;
 	}

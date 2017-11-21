@@ -26,9 +26,11 @@ import com.tools20022.repository.choice.PartyIdentification73Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The PayInSchedule message is sent by a central settlement system to the
@@ -39,9 +41,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.062.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
@@ -86,6 +85,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.062.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -97,6 +99,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PayInScheduleV03", propOrder = {"partyIdentification", "reportData", "payInScheduleLongBalance", "payInScheduleItem", "payInFactors", "supplementaryData"})
 public class PayInScheduleV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -134,6 +138,14 @@ public class PayInScheduleV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PayInScheduleV03.class.getMethod("getPartyIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ReportData4 reportData;
 	/**
@@ -167,6 +179,14 @@ public class PayInScheduleV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ReportData4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PayInScheduleV03.class.getMethod("getReportData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<BalanceStatus2> payInScheduleLongBalance;
@@ -204,6 +224,14 @@ public class PayInScheduleV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> BalanceStatus2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PayInScheduleV03.class.getMethod("getPayInScheduleLongBalance", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PayInScheduleItems1> payInScheduleItem;
 	/**
@@ -239,6 +267,14 @@ public class PayInScheduleV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PayInScheduleItems1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PayInScheduleV03.class.getMethod("getPayInScheduleItem", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PayInFactors1 payInFactors;
 	/**
@@ -272,6 +308,14 @@ public class PayInScheduleV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PayInFactors1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PayInScheduleV03.class.getMethod("getPayInFactors", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -310,6 +354,14 @@ public class PayInScheduleV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PayInScheduleV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -322,8 +374,9 @@ public class PayInScheduleV03 {
 				rootElement = "Document";
 				xmlTag = "PayInSchdl";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PayInScheduleV03.mmPartyIdentification, PayInScheduleV03.mmReportData, PayInScheduleV03.mmPayInScheduleLongBalance, PayInScheduleV03.mmPayInScheduleItem,
-						PayInScheduleV03.mmPayInFactors, PayInScheduleV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInScheduleV03.mmPartyIdentification, com.tools20022.repository.area.camt.PayInScheduleV03.mmReportData,
+						com.tools20022.repository.area.camt.PayInScheduleV03.mmPayInScheduleLongBalance, com.tools20022.repository.area.camt.PayInScheduleV03.mmPayInScheduleItem,
+						com.tools20022.repository.area.camt.PayInScheduleV03.mmPayInFactors, com.tools20022.repository.area.camt.PayInScheduleV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -333,10 +386,16 @@ public class PayInScheduleV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PayInScheduleV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification73Choice getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -345,6 +404,7 @@ public class PayInScheduleV03 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "RptData", required = true)
 	public ReportData4 getReportData() {
 		return reportData;
 	}
@@ -353,6 +413,7 @@ public class PayInScheduleV03 {
 		this.reportData = reportData;
 	}
 
+	@XmlElement(name = "PayInSchdlLngBal")
 	public List<BalanceStatus2> getPayInScheduleLongBalance() {
 		return payInScheduleLongBalance;
 	}
@@ -361,6 +422,7 @@ public class PayInScheduleV03 {
 		this.payInScheduleLongBalance = payInScheduleLongBalance;
 	}
 
+	@XmlElement(name = "PayInSchdlItm")
 	public List<PayInScheduleItems1> getPayInScheduleItem() {
 		return payInScheduleItem;
 	}
@@ -369,6 +431,7 @@ public class PayInScheduleV03 {
 		this.payInScheduleItem = payInScheduleItem;
 	}
 
+	@XmlElement(name = "PayInFctrs")
 	public PayInFactors1 getPayInFactors() {
 		return payInFactors;
 	}
@@ -377,11 +440,18 @@ public class PayInScheduleV03 {
 		this.payInFactors = payInFactors;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.062.03.03")
+	static public class Document {
+		@XmlElement(name = "PayInSchdl", required = true)
+		public PayInScheduleV03 messageBody;
 	}
 }

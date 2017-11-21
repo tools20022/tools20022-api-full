@@ -29,6 +29,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "([^/]+/)+([^/]+)|([^/]*)"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -57,6 +59,9 @@ public class RestrictedFINMax34Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RestrictedFINMax34Text";
 				definition = "Specifies a character string with a maximum length of 34 characters. It has a pattern ([^/]+/)+([^/]+)|([^/]*) that disables the use of slash \"/\" at the beginning and end of line and double slash \"//\" within the line.";
+				minLength = 1;
+				maxLength = 34;
+				pattern = "([^/]+/)+([^/]+)|([^/]*)";
 			}
 		});
 		return mmObject_lazy.get();

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Parameters applied to the settlement of a security transfer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReceiveInformation1", propOrder = {"settlementPartiesDetails", "physicalTransferIndicator", "physicalTransferDetails"})
 public class ReceiveInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -241,6 +247,7 @@ public class ReceiveInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmPtiesDtls", required = true)
 	public ReceivingPartiesAndAccount1 getSettlementPartiesDetails() {
 		return settlementPartiesDetails;
 	}
@@ -249,6 +256,7 @@ public class ReceiveInformation1 {
 		this.settlementPartiesDetails = settlementPartiesDetails;
 	}
 
+	@XmlElement(name = "PhysTrfInd", required = true)
 	public YesNoIndicator getPhysicalTransferIndicator() {
 		return physicalTransferIndicator;
 	}
@@ -257,6 +265,7 @@ public class ReceiveInformation1 {
 		this.physicalTransferIndicator = physicalTransferIndicator;
 	}
 
+	@XmlElement(name = "PhysTrfDtls")
 	public DeliveryParameters2 getPhysicalTransferDetails() {
 		return physicalTransferDetails;
 	}

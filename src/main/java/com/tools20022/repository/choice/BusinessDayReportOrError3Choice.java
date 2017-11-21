@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between business day information details or an operational error when
@@ -66,6 +70,8 @@ import java.util.List;
  * BusinessDayReportOrError1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BusinessDayReportOrError3Choice", propOrder = {"businessReport", "operationalError"})
 public class BusinessDayReportOrError3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class BusinessDayReportOrError3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BizRpt", required = true)
 	public List<BusinessDay3> getBusinessReport() {
 		return businessReport;
 	}
@@ -188,6 +195,7 @@ public class BusinessDayReportOrError3Choice {
 		this.businessReport = businessReport;
 	}
 
+	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
 		return operationalError;
 	}

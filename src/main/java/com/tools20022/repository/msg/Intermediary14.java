@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parties used for acting parties that apply either to the whole message or to
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Intermediary14", propOrder = {"identification", "role", "safekeepingDetails", "cashDetails"})
 public class Intermediary14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -286,6 +292,7 @@ public class Intermediary14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification23 getIdentification() {
 		return identification;
 	}
@@ -294,6 +301,7 @@ public class Intermediary14 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Role", required = true)
 	public PartyRole1Choice getRole() {
 		return role;
 	}
@@ -302,6 +310,7 @@ public class Intermediary14 {
 		this.role = role;
 	}
 
+	@XmlElement(name = "SfkpgDtls")
 	public SecuritiesAccount2 getSafekeepingDetails() {
 		return safekeepingDetails;
 	}
@@ -310,6 +319,7 @@ public class Intermediary14 {
 		this.safekeepingDetails = safekeepingDetails;
 	}
 
+	@XmlElement(name = "CshDtls")
 	public AccountIdentification3Choice getCashDetails() {
 		return cashDetails;
 	}

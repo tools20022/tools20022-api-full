@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.TaxRecord;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides for regional taxes on the service.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides for regional taxes on the service."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingServicesTax2", propOrder = {"number", "description", "rate", "pricingAmount"})
 public class BillingServicesTax2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -269,6 +275,7 @@ public class BillingServicesTax2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nb", required = true)
 	public Max35Text getNumber() {
 		return number;
 	}
@@ -277,6 +284,7 @@ public class BillingServicesTax2 {
 		this.number = number;
 	}
 
+	@XmlElement(name = "Desc")
 	public Max40Text getDescription() {
 		return description;
 	}
@@ -285,6 +293,7 @@ public class BillingServicesTax2 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public DecimalNumber getRate() {
 		return rate;
 	}
@@ -293,6 +302,7 @@ public class BillingServicesTax2 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "PricgAmt", required = true)
 	public AmountAndDirection34 getPricingAmount() {
 		return pricingAmount;
 	}

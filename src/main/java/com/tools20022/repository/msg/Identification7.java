@@ -29,6 +29,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique identifier of a document, message or transaction.
@@ -107,6 +111,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Identification7", propOrder = {"accountOwnerTransactionIdentification", "accountServicerTransactionIdentification", "marketInfrastructureTransactionIdentification", "processorTransactionIdentification",
+		"commonIdentification", "tradeIdentification", "masterIdentification", "basketIdentification", "indexIdentification", "listIdentification", "programIdentification", "poolIdentification", "corporateActionEventIdentification"})
 public class Identification7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -776,6 +783,7 @@ public class Identification7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnrTxId", required = true)
 	public Max35Text getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
@@ -784,6 +792,7 @@ public class Identification7 {
 		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrTxId")
 	public Max35Text getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
@@ -792,6 +801,7 @@ public class Identification7 {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
 	}
 
+	@XmlElement(name = "MktInfrstrctrTxId")
 	public Max35Text getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}
@@ -800,6 +810,7 @@ public class Identification7 {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
 	}
 
+	@XmlElement(name = "PrcrTxId")
 	public Max35Text getProcessorTransactionIdentification() {
 		return processorTransactionIdentification;
 	}
@@ -808,6 +819,7 @@ public class Identification7 {
 		this.processorTransactionIdentification = processorTransactionIdentification;
 	}
 
+	@XmlElement(name = "CmonId")
 	public Max35Text getCommonIdentification() {
 		return commonIdentification;
 	}
@@ -816,6 +828,7 @@ public class Identification7 {
 		this.commonIdentification = commonIdentification;
 	}
 
+	@XmlElement(name = "TradId")
 	public List<Max35Text> getTradeIdentification() {
 		return tradeIdentification;
 	}
@@ -824,6 +837,7 @@ public class Identification7 {
 		this.tradeIdentification = tradeIdentification;
 	}
 
+	@XmlElement(name = "MstrId")
 	public Max35Text getMasterIdentification() {
 		return masterIdentification;
 	}
@@ -832,6 +846,7 @@ public class Identification7 {
 		this.masterIdentification = masterIdentification;
 	}
 
+	@XmlElement(name = "BsktId")
 	public Max35Text getBasketIdentification() {
 		return basketIdentification;
 	}
@@ -840,6 +855,7 @@ public class Identification7 {
 		this.basketIdentification = basketIdentification;
 	}
 
+	@XmlElement(name = "IndxId")
 	public Max35Text getIndexIdentification() {
 		return indexIdentification;
 	}
@@ -848,6 +864,7 @@ public class Identification7 {
 		this.indexIdentification = indexIdentification;
 	}
 
+	@XmlElement(name = "ListId")
 	public Max35Text getListIdentification() {
 		return listIdentification;
 	}
@@ -856,6 +873,7 @@ public class Identification7 {
 		this.listIdentification = listIdentification;
 	}
 
+	@XmlElement(name = "PrgmId")
 	public Max35Text getProgramIdentification() {
 		return programIdentification;
 	}
@@ -864,6 +882,7 @@ public class Identification7 {
 		this.programIdentification = programIdentification;
 	}
 
+	@XmlElement(name = "PoolId")
 	public Max35Text getPoolIdentification() {
 		return poolIdentification;
 	}
@@ -872,6 +891,7 @@ public class Identification7 {
 		this.poolIdentification = poolIdentification;
 	}
 
+	@XmlElement(name = "CorpActnEvtId")
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PaymentDateRange1;
 import com.tools20022.repository.msg.PaymentDateRange2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,16 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentDateRange2
- * PaymentDateRange2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentDateRange1
- * PaymentDateRange1}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -57,6 +48,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentSchedule.mmAmount}</li>
  * <li>{@linkplain com.tools20022.repository.entity.PaymentSchedule#mmRate
  * PaymentSchedule.mmRate}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentDateRange2
+ * PaymentDateRange2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentDateRange1
+ * PaymentDateRange1}</li>
  * </ul>
  * </li>
  * <li>
@@ -87,11 +88,6 @@ public class PaymentSchedule {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentSchedule
-	 * PaymentSchedule}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -110,6 +106,11 @@ public class PaymentSchedule {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentSchedule
+	 * PaymentSchedule}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -123,7 +124,7 @@ public class PaymentSchedule {
 	public static final MMBusinessAttribute mmDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentDateRange2.mmExpectedDate, PaymentDateRange2.mmDueDate, PaymentDateRange1.mmExpectedDate, PaymentDateRange1.mmDueDate);
-			elementContext_lazy = () -> PaymentSchedule.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentSchedule.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Date";
@@ -131,6 +132,14 @@ public class PaymentSchedule {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentSchedule.class.getMethod("getDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount amount;
@@ -144,11 +153,6 @@ public class PaymentSchedule {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentSchedule
-	 * PaymentSchedule}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -156,6 +160,11 @@ public class PaymentSchedule {
 	 * PaymentDateRange2.mmAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentSchedule
+	 * PaymentSchedule}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -170,7 +179,7 @@ public class PaymentSchedule {
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentDateRange2.mmAmount);
-			elementContext_lazy = () -> PaymentSchedule.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentSchedule.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -178,6 +187,14 @@ public class PaymentSchedule {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentSchedule.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate rate;
@@ -209,7 +226,7 @@ public class PaymentSchedule {
 	 */
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PaymentSchedule.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentSchedule.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
@@ -217,6 +234,14 @@ public class PaymentSchedule {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentSchedule.class.getMethod("getRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -227,8 +252,13 @@ public class PaymentSchedule {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentSchedule";
 				definition = "Schedule for partial payments of an issue.";
-				element_lazy = () -> Arrays.asList(PaymentSchedule.mmDate, PaymentSchedule.mmAmount, PaymentSchedule.mmRate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentSchedule.mmDate, com.tools20022.repository.entity.PaymentSchedule.mmAmount, com.tools20022.repository.entity.PaymentSchedule.mmRate);
 				derivationComponent_lazy = () -> Arrays.asList(PaymentDateRange2.mmObject(), PaymentDateRange1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PaymentSchedule.class;
 			}
 		});
 		return mmObject_lazy.get();

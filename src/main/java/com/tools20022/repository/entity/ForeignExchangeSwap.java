@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.TreasuryTrade;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,6 +37,20 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeSwap#mmLinkSwapIdentification
+ * ForeignExchangeSwap.mmLinkSwapIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeSwap#mmSwapLeg
+ * ForeignExchangeSwap.mmSwapLeg}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TreasuryTrade
+ * TreasuryTrade}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -64,20 +79,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmRelatedSwap
  * ForeignExchangeTrade.mmRelatedSwap}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TreasuryTrade
- * TreasuryTrade}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeSwap#mmLinkSwapIdentification
- * ForeignExchangeSwap.mmLinkSwapIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeSwap#mmSwapLeg
- * ForeignExchangeSwap.mmSwapLeg}</li>
  * </ul>
  * </li>
  * <li>
@@ -111,11 +112,6 @@ public class ForeignExchangeSwap extends TreasuryTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeSwap
-	 * ForeignExchangeSwap}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -130,6 +126,11 @@ public class ForeignExchangeSwap extends TreasuryTrade {
 	 * RegulatoryReporting6.mmLinkSwapIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeSwap
+	 * ForeignExchangeSwap}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -146,7 +147,7 @@ public class ForeignExchangeSwap extends TreasuryTrade {
 	public static final MMBusinessAttribute mmLinkSwapIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RegulatoryReporting1.mmLinkSwapIdentification, RegulatoryReporting4.mmLinkSwapIdentification, RegulatoryReporting6.mmLinkSwapIdentification);
-			elementContext_lazy = () -> ForeignExchangeSwap.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeSwap.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LinkSwapIdentification";
@@ -154,6 +155,14 @@ public class ForeignExchangeSwap extends TreasuryTrade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeSwap.class.getMethod("getLinkSwapIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.ForeignExchangeTrade> swapLeg;
@@ -196,7 +205,7 @@ public class ForeignExchangeSwap extends TreasuryTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmSwapLeg = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ForeignExchangeSwap.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeSwap.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SwapLeg";
@@ -218,9 +227,14 @@ public class ForeignExchangeSwap extends TreasuryTrade {
 				definition = "Combination of two foreign exchange trades, in opposite directions, for different value dates and for the same pair(s) of currencies.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ForeignExchangeTrade.mmRelatedSwap);
 				superType_lazy = () -> TreasuryTrade.mmObject();
-				element_lazy = () -> Arrays.asList(ForeignExchangeSwap.mmLinkSwapIdentification, ForeignExchangeSwap.mmSwapLeg);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ForeignExchangeSwap.mmLinkSwapIdentification, com.tools20022.repository.entity.ForeignExchangeSwap.mmSwapLeg);
 				derivationComponent_lazy = () -> Arrays.asList(ForeignExchangeSwapTransaction1.mmObject(), OvernightIndexSwapTransaction1.mmObject(), ForeignExchangeSwapTransaction2.mmObject(), OvernightIndexSwapTransaction3.mmObject(),
 						ForeignExchangeSwapTransaction3.mmObject(), OvernightIndexSwapTransaction4.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ForeignExchangeSwap.class;
 			}
 		});
 		return mmObject_lazy.get();

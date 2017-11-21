@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * An event determined by a corporation's board of directors, that changes the
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateAction1", propOrder = {"code", "number", "proprietary"})
 public class CorporateAction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -204,6 +210,7 @@ public class CorporateAction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd")
 	public Max35Text getCode() {
 		return code;
 	}
@@ -212,6 +219,7 @@ public class CorporateAction1 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Nb")
 	public Max35Text getNumber() {
 		return number;
 	}
@@ -220,6 +228,7 @@ public class CorporateAction1 {
 		this.number = number;
 	}
 
+	@XmlElement(name = "Prtry")
 	public Max35Text getProprietary() {
 		return proprietary;
 	}

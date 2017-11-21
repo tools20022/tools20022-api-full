@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters for contracts which obligate the buyer to receive and the seller
@@ -81,6 +85,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Future2", propOrder = {"contractSize", "exercisePrice", "futureDate", "minimumSize", "unitOfMeasure", "timeUnit", "additionalUnderlyingAttributes"})
 public class Future2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -438,6 +444,7 @@ public class Future2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CtrctSz")
 	public BaseOneRate getContractSize() {
 		return contractSize;
 	}
@@ -446,6 +453,7 @@ public class Future2 {
 		this.contractSize = contractSize;
 	}
 
+	@XmlElement(name = "ExrcPric")
 	public Price1 getExercisePrice() {
 		return exercisePrice;
 	}
@@ -454,6 +462,7 @@ public class Future2 {
 		this.exercisePrice = exercisePrice;
 	}
 
+	@XmlElement(name = "FutrDt")
 	public ISODateTime getFutureDate() {
 		return futureDate;
 	}
@@ -462,6 +471,7 @@ public class Future2 {
 		this.futureDate = futureDate;
 	}
 
+	@XmlElement(name = "MinSz")
 	public ActiveCurrencyAndAmount getMinimumSize() {
 		return minimumSize;
 	}
@@ -470,6 +480,7 @@ public class Future2 {
 		this.minimumSize = minimumSize;
 	}
 
+	@XmlElement(name = "UnitOfMeasr")
 	public UnitOfMeasure2Choice getUnitOfMeasure() {
 		return unitOfMeasure;
 	}
@@ -478,6 +489,7 @@ public class Future2 {
 		this.unitOfMeasure = unitOfMeasure;
 	}
 
+	@XmlElement(name = "TmUnit")
 	public TimeUnit2Choice getTimeUnit() {
 		return timeUnit;
 	}
@@ -486,6 +498,7 @@ public class Future2 {
 		this.timeUnit = timeUnit;
 	}
 
+	@XmlElement(name = "AddtlUndrlygAttrbts")
 	public List<UnderlyingAttributes2> getAdditionalUnderlyingAttributes() {
 		return additionalUnderlyingAttributes;
 	}

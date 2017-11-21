@@ -25,6 +25,10 @@ import com.tools20022.repository.msg.IndividualPerson29;
 import com.tools20022.repository.msg.Organisation23;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of individual or organisation name and address.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of individual or organisation name and address."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegisteredShareholderName1Choice", propOrder = {"individualPerson", "organisation"})
 public class RegisteredShareholderName1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -164,6 +170,7 @@ public class RegisteredShareholderName1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IndvPrsn", required = true)
 	public IndividualPerson29 getIndividualPerson() {
 		return individualPerson;
 	}
@@ -172,6 +179,7 @@ public class RegisteredShareholderName1Choice {
 		this.individualPerson = individualPerson;
 	}
 
+	@XmlElement(name = "Org", required = true)
 	public Organisation23 getOrganisation() {
 		return organisation;
 	}

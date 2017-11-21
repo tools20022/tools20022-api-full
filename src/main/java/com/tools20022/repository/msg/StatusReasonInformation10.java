@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on the status reason of the instruction.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusReasonInformation10", propOrder = {"reason", "additionalInformation"})
 public class StatusReasonInformation10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class StatusReasonInformation10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public StatusReason6Choice getReason() {
 		return reason;
 	}
@@ -184,6 +191,7 @@ public class StatusReasonInformation10 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max140Text getAdditionalInformation() {
 		return additionalInformation;
 	}

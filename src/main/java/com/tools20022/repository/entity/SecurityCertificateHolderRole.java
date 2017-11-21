@@ -36,6 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecurityCertificatePartyRole
+ * SecurityCertificatePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -46,10 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyAndCertificate3}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecurityCertificatePartyRole
- * SecurityCertificatePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -78,6 +78,11 @@ public class SecurityCertificateHolderRole extends SecurityCertificatePartyRole 
 				definition = "Holder of the security certificate.";
 				superType_lazy = () -> SecurityCertificatePartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(PartyAndCertificate2.mmObject(), PartyAndCertificate3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecurityCertificateHolderRole.class;
 			}
 		});
 		return mmObject_lazy.get();

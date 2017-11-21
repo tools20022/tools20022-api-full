@@ -37,6 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
+ * InvestmentAccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -88,10 +92,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountParties16.mmCustodianForMinor}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
- * InvestmentAccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -125,6 +125,11 @@ public class CustodianForMinor extends InvestmentAccountPartyRole {
 						AccountParties6Choice.mmCustodianForMinor, AccountParties5Choice.mmCustodianForMinor, AccountParties13.mmCustodianForMinor, AccountParties14.mmCustodianForMinor, AccountParties15.mmCustodianForMinor,
 						AccountParties16.mmCustodianForMinor);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CustodianForMinor.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Tax related to an investment fund order.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Tax14 Tax14}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Tax31", propOrder = {"type", "appliedAmount", "appliedRate", "country", "recipientIdentification", "taxCalculationDetails"})
 public class Tax31 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -470,6 +476,7 @@ public class Tax31 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TaxType3Choice getType() {
 		return type;
 	}
@@ -478,6 +485,7 @@ public class Tax31 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "ApldAmt", required = true)
 	public ActiveCurrencyAndAmount getAppliedAmount() {
 		return appliedAmount;
 	}
@@ -486,6 +494,7 @@ public class Tax31 {
 		this.appliedAmount = appliedAmount;
 	}
 
+	@XmlElement(name = "ApldRate")
 	public PercentageRate getAppliedRate() {
 		return appliedRate;
 	}
@@ -494,6 +503,7 @@ public class Tax31 {
 		this.appliedRate = appliedRate;
 	}
 
+	@XmlElement(name = "Ctry")
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -502,6 +512,7 @@ public class Tax31 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification113 getRecipientIdentification() {
 		return recipientIdentification;
 	}
@@ -510,6 +521,7 @@ public class Tax31 {
 		this.recipientIdentification = recipientIdentification;
 	}
 
+	@XmlElement(name = "TaxClctnDtls")
 	public TaxCalculationInformation10 getTaxCalculationDetails() {
 		return taxCalculationDetails;
 	}

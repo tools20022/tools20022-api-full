@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Non-exempt beneficial owner exemption information.
@@ -54,6 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Non-exempt beneficial owner exemption information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NonExemptExemptionStatus1", propOrder = "acknowledgementOfNonExemptIndicator")
 public class NonExemptExemptionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -114,6 +120,7 @@ public class NonExemptExemptionStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AckOfNonXmptInd", required = true)
 	public YesNoIndicator getAcknowledgementOfNonExemptIndicator() {
 		return acknowledgementOfNonExemptIndicator;
 	}

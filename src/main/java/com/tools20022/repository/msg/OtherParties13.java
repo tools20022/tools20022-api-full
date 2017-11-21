@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Other parties information.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Other parties information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherParties13", propOrder = {"investor", "stockExchange", "tradeRegulator"})
 public class OtherParties13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class OtherParties13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Invstr")
 	public PartyIdentification60Choice getInvestor() {
 		return investor;
 	}
@@ -236,6 +243,7 @@ public class OtherParties13 {
 		this.investor = investor;
 	}
 
+	@XmlElement(name = "StockXchg")
 	public PartyIdentification59Choice getStockExchange() {
 		return stockExchange;
 	}
@@ -244,6 +252,7 @@ public class OtherParties13 {
 		this.stockExchange = stockExchange;
 	}
 
+	@XmlElement(name = "TradRgltr")
 	public PartyIdentification59Choice getTradeRegulator() {
 		return tradeRegulator;
 	}

@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of integrated applications that provides centralised services such as
@@ -78,6 +82,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemAvailabilityAndEventsDetails1", propOrder = {"systemCurrency", "sessionPeriod", "event", "closureInformation"})
 public class SystemAvailabilityAndEventsDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -293,6 +299,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysCcy", required = true)
 	public CurrencyCode getSystemCurrency() {
 		return systemCurrency;
 	}
@@ -301,6 +308,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 		this.systemCurrency = systemCurrency;
 	}
 
+	@XmlElement(name = "SsnPrd")
 	public TimePeriodDetails getSessionPeriod() {
 		return sessionPeriod;
 	}
@@ -309,6 +317,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 		this.sessionPeriod = sessionPeriod;
 	}
 
+	@XmlElement(name = "Evt")
 	public List<SystemEvent1> getEvent() {
 		return event;
 	}
@@ -317,6 +326,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 		this.event = event;
 	}
 
+	@XmlElement(name = "ClsrInf")
 	public List<SystemClosureDetails> getClosureInformation() {
 		return closureInformation;
 	}

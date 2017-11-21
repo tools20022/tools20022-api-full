@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Agreement;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AgreementConditions1;
 import com.tools20022.repository.msg.GeneralInformation5;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,29 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmCollateralAgreement
+ * MasterAgreement.mmCollateralAgreement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmMasterAgreementType
+ * MasterAgreement.mmMasterAgreementType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmGovernedTrades
+ * MasterAgreement.mmGovernedTrades}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmGovernedContract
+ * MasterAgreement.mmGovernedContract}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmGoverningLaw
+ * MasterAgreement.mmGoverningLaw}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Agreement
+ * Agreement}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -73,29 +97,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.msg.GeneralInformation5#mmAgreementDetails
  * GeneralInformation5.mmAgreementDetails}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Agreement
- * Agreement}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmCollateralAgreement
- * MasterAgreement.mmCollateralAgreement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmMasterAgreementType
- * MasterAgreement.mmMasterAgreementType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmGovernedTrades
- * MasterAgreement.mmGovernedTrades}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmGovernedContract
- * MasterAgreement.mmGovernedContract}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmGoverningLaw
- * MasterAgreement.mmGoverningLaw}</li>
  * </ul>
  * </li>
  * <li>
@@ -156,7 +157,7 @@ public class MasterAgreement extends Agreement {
 	 */
 	public static final MMBusinessAssociationEnd mmCollateralAgreement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> MasterAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralAgreement";
@@ -180,11 +181,6 @@ public class MasterAgreement extends Agreement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AgreementFrameworkCode
 	 * AgreementFrameworkCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.MasterAgreement
-	 * MasterAgreement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -199,6 +195,11 @@ public class MasterAgreement extends Agreement {
 	 * AgreementConditions1.mmAgreementCode}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.MasterAgreement
+	 * MasterAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -215,7 +216,7 @@ public class MasterAgreement extends Agreement {
 	public static final MMBusinessAttribute mmMasterAgreementType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AgreementFramework1Choice.mmAgreementFramework, AgreementFramework1Choice.mmProprietaryIdentification, AgreementConditions1.mmAgreementCode);
-			elementContext_lazy = () -> MasterAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MasterAgreementType";
@@ -223,6 +224,14 @@ public class MasterAgreement extends Agreement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AgreementFrameworkCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MasterAgreement.class.getMethod("getMasterAgreementType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Trade> governedTrades;
@@ -260,7 +269,7 @@ public class MasterAgreement extends Agreement {
 	 */
 	public static final MMBusinessAssociationEnd mmGovernedTrades = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> MasterAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GovernedTrades";
@@ -306,7 +315,7 @@ public class MasterAgreement extends Agreement {
 	 */
 	public static final MMBusinessAssociationEnd mmGovernedContract = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> MasterAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GovernedContract";
@@ -347,7 +356,7 @@ public class MasterAgreement extends Agreement {
 	 */
 	public static final MMBusinessAttribute mmGoverningLaw = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> MasterAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GoverningLaw";
@@ -355,6 +364,14 @@ public class MasterAgreement extends Agreement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MasterAgreement.class.getMethod("getGoverningLaw", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -369,8 +386,14 @@ public class MasterAgreement extends Agreement {
 						com.tools20022.repository.entity.CollateralAgreement.mmAssociatedMasterAgreement);
 				derivationElement_lazy = () -> Arrays.asList(BPOApplicableRules1Choice.mmOtherRulesAndVersion, GeneralInformation5.mmAgreementDetails);
 				superType_lazy = () -> Agreement.mmObject();
-				element_lazy = () -> Arrays.asList(MasterAgreement.mmCollateralAgreement, MasterAgreement.mmMasterAgreementType, MasterAgreement.mmGovernedTrades, MasterAgreement.mmGovernedContract, MasterAgreement.mmGoverningLaw);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MasterAgreement.mmCollateralAgreement, com.tools20022.repository.entity.MasterAgreement.mmMasterAgreementType,
+						com.tools20022.repository.entity.MasterAgreement.mmGovernedTrades, com.tools20022.repository.entity.MasterAgreement.mmGovernedContract, com.tools20022.repository.entity.MasterAgreement.mmGoverningLaw);
 				derivationComponent_lazy = () -> Arrays.asList(AgreementFramework1Choice.mmObject(), AgreementConditions1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MasterAgreement.class;
 			}
 		});
 		return mmObject_lazy.get();

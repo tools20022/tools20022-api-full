@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information to display, print or store.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ActionMessage1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ActionMessage2", propOrder = {"messageDestination", "format", "messageContent", "messageContentSignature"})
 public class ActionMessage2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -317,6 +323,7 @@ public class ActionMessage2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgDstn", required = true)
 	public UserInterface4Code getMessageDestination() {
 		return messageDestination;
 	}
@@ -325,6 +332,7 @@ public class ActionMessage2 {
 		this.messageDestination = messageDestination;
 	}
 
+	@XmlElement(name = "Frmt")
 	public OutputFormat1Code getFormat() {
 		return format;
 	}
@@ -333,6 +341,7 @@ public class ActionMessage2 {
 		this.format = format;
 	}
 
+	@XmlElement(name = "MsgCntt", required = true)
 	public Max20000Text getMessageContent() {
 		return messageContent;
 	}
@@ -341,6 +350,7 @@ public class ActionMessage2 {
 		this.messageContent = messageContent;
 	}
 
+	@XmlElement(name = "MsgCnttSgntr")
 	public Max140Binary getMessageContentSignature() {
 		return messageContentSignature;
 	}

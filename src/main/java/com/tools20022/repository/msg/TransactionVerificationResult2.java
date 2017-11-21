@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Result of the verifications performed by the issuer to deliver or decline the
@@ -81,6 +85,8 @@ import java.util.List;
  * TransactionVerificationResult1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionVerificationResult2", propOrder = {"electronicCommerceAuthenticationResult", "CSCResult", "cardholderAddressVerificationResult", "declinedProductCode"})
 public class TransactionVerificationResult2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -269,6 +275,7 @@ public class TransactionVerificationResult2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ElctrncComrcAuthntcnRslt")
 	public Max500Text getElectronicCommerceAuthenticationResult() {
 		return electronicCommerceAuthenticationResult;
 	}
@@ -277,6 +284,7 @@ public class TransactionVerificationResult2 {
 		this.electronicCommerceAuthenticationResult = electronicCommerceAuthenticationResult;
 	}
 
+	@XmlElement(name = "CSCRslt")
 	public CSCResult1Code getCSCResult() {
 		return cSCResult;
 	}
@@ -285,6 +293,7 @@ public class TransactionVerificationResult2 {
 		this.cSCResult = cSCResult;
 	}
 
+	@XmlElement(name = "CrdhldrAdrVrfctnRslt")
 	public List<CardholderAddressVerificationResult1Code> getCardholderAddressVerificationResult() {
 		return cardholderAddressVerificationResult;
 	}
@@ -293,6 +302,7 @@ public class TransactionVerificationResult2 {
 		this.cardholderAddressVerificationResult = cardholderAddressVerificationResult;
 	}
 
+	@XmlElement(name = "DclndPdctCd")
 	public List<Max70Text> getDeclinedProductCode() {
 		return declinedProductCode;
 	}

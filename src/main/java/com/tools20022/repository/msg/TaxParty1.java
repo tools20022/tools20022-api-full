@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.TaxPayer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details about the entity involved in the tax paid or to be paid.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Details about the entity involved in the tax paid or to be paid."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxParty1", propOrder = {"taxIdentification", "registrationIdentification", "taxType"})
 public class TaxParty1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -223,6 +229,7 @@ public class TaxParty1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TaxId")
 	public Max35Text getTaxIdentification() {
 		return taxIdentification;
 	}
@@ -231,6 +238,7 @@ public class TaxParty1 {
 		this.taxIdentification = taxIdentification;
 	}
 
+	@XmlElement(name = "RegnId")
 	public Max35Text getRegistrationIdentification() {
 		return registrationIdentification;
 	}
@@ -239,6 +247,7 @@ public class TaxParty1 {
 		this.registrationIdentification = registrationIdentification;
 	}
 
+	@XmlElement(name = "TaxTp")
 	public Max35Text getTaxType() {
 		return taxType;
 	}

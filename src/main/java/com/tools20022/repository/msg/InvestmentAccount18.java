@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account between an investor(s) and a fund manager or a fund. The account can
@@ -142,6 +146,10 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccount18", propOrder = {"name", "designation", "type", "extendedType", "ownershipType", "extendedOwnershipType", "taxExemptionReason", "extendedTaxExemptionReason", "statementFrequency",
+		"extendedStatementFrequency", "referenceCurrency", "language", "incomePreference", "taxWithholdingMethod", "letterIntentReference", "accumulationRightReference", "requiredSignatoriesNumber", "fundFamilyName", "fundDetails",
+		"roundingDetails", "accountServicer"})
 public class InvestmentAccount18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1388,6 +1396,7 @@ public class InvestmentAccount18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max35Text getName() {
 		return name;
 	}
@@ -1396,6 +1405,7 @@ public class InvestmentAccount18 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Dsgnt")
 	public Max35Text getDesignation() {
 		return designation;
 	}
@@ -1404,6 +1414,7 @@ public class InvestmentAccount18 {
 		this.designation = designation;
 	}
 
+	@XmlElement(name = "Tp")
 	public FundCashAccount2Code getType() {
 		return type;
 	}
@@ -1412,6 +1423,7 @@ public class InvestmentAccount18 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XtndedTp")
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
@@ -1420,6 +1432,7 @@ public class InvestmentAccount18 {
 		this.extendedType = extendedType;
 	}
 
+	@XmlElement(name = "OwnrshTp")
 	public AccountOwnershipType2Code getOwnershipType() {
 		return ownershipType;
 	}
@@ -1428,6 +1441,7 @@ public class InvestmentAccount18 {
 		this.ownershipType = ownershipType;
 	}
 
+	@XmlElement(name = "XtndedOwnrshTp")
 	public Extended350Code getExtendedOwnershipType() {
 		return extendedOwnershipType;
 	}
@@ -1436,6 +1450,7 @@ public class InvestmentAccount18 {
 		this.extendedOwnershipType = extendedOwnershipType;
 	}
 
+	@XmlElement(name = "TaxXmptnRsn")
 	public TaxExemptReason1Code getTaxExemptionReason() {
 		return taxExemptionReason;
 	}
@@ -1444,6 +1459,7 @@ public class InvestmentAccount18 {
 		this.taxExemptionReason = taxExemptionReason;
 	}
 
+	@XmlElement(name = "XtndedTaxXmptnRsn")
 	public Extended350Code getExtendedTaxExemptionReason() {
 		return extendedTaxExemptionReason;
 	}
@@ -1452,6 +1468,7 @@ public class InvestmentAccount18 {
 		this.extendedTaxExemptionReason = extendedTaxExemptionReason;
 	}
 
+	@XmlElement(name = "StmtFrqcy")
 	public Frequency1Code getStatementFrequency() {
 		return statementFrequency;
 	}
@@ -1460,6 +1477,7 @@ public class InvestmentAccount18 {
 		this.statementFrequency = statementFrequency;
 	}
 
+	@XmlElement(name = "XtndedStmtFrqcy")
 	public Extended350Code getExtendedStatementFrequency() {
 		return extendedStatementFrequency;
 	}
@@ -1468,6 +1486,7 @@ public class InvestmentAccount18 {
 		this.extendedStatementFrequency = extendedStatementFrequency;
 	}
 
+	@XmlElement(name = "RefCcy")
 	public CurrencyCode getReferenceCurrency() {
 		return referenceCurrency;
 	}
@@ -1476,6 +1495,7 @@ public class InvestmentAccount18 {
 		this.referenceCurrency = referenceCurrency;
 	}
 
+	@XmlElement(name = "Lang")
 	public LanguageCode getLanguage() {
 		return language;
 	}
@@ -1484,6 +1504,7 @@ public class InvestmentAccount18 {
 		this.language = language;
 	}
 
+	@XmlElement(name = "IncmPref")
 	public IncomePreference1Code getIncomePreference() {
 		return incomePreference;
 	}
@@ -1492,6 +1513,7 @@ public class InvestmentAccount18 {
 		this.incomePreference = incomePreference;
 	}
 
+	@XmlElement(name = "TaxWhldgMtd")
 	public TaxWithholdingMethod1Code getTaxWithholdingMethod() {
 		return taxWithholdingMethod;
 	}
@@ -1500,6 +1522,7 @@ public class InvestmentAccount18 {
 		this.taxWithholdingMethod = taxWithholdingMethod;
 	}
 
+	@XmlElement(name = "LttrInttRef")
 	public Max35Text getLetterIntentReference() {
 		return letterIntentReference;
 	}
@@ -1508,6 +1531,7 @@ public class InvestmentAccount18 {
 		this.letterIntentReference = letterIntentReference;
 	}
 
+	@XmlElement(name = "AcmltnRghtRef")
 	public Max35Text getAccumulationRightReference() {
 		return accumulationRightReference;
 	}
@@ -1516,6 +1540,7 @@ public class InvestmentAccount18 {
 		this.accumulationRightReference = accumulationRightReference;
 	}
 
+	@XmlElement(name = "ReqrdSgntriesNb")
 	public Number getRequiredSignatoriesNumber() {
 		return requiredSignatoriesNumber;
 	}
@@ -1524,6 +1549,7 @@ public class InvestmentAccount18 {
 		this.requiredSignatoriesNumber = requiredSignatoriesNumber;
 	}
 
+	@XmlElement(name = "FndFmlyNm")
 	public Max350Text getFundFamilyName() {
 		return fundFamilyName;
 	}
@@ -1532,6 +1558,7 @@ public class InvestmentAccount18 {
 		this.fundFamilyName = fundFamilyName;
 	}
 
+	@XmlElement(name = "FndDtls")
 	public FinancialInstrument6 getFundDetails() {
 		return fundDetails;
 	}
@@ -1540,6 +1567,7 @@ public class InvestmentAccount18 {
 		this.fundDetails = fundDetails;
 	}
 
+	@XmlElement(name = "RndgDtls")
 	public RoundingParameters1 getRoundingDetails() {
 		return roundingDetails;
 	}
@@ -1548,6 +1576,7 @@ public class InvestmentAccount18 {
 		this.roundingDetails = roundingDetails;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public PartyIdentification2Choice getAccountServicer() {
 		return accountServicer;
 	}

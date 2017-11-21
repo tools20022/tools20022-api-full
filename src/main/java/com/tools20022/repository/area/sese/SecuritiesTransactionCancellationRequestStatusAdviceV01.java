@@ -26,9 +26,11 @@ import com.tools20022.repository.choice.PartyIdentification10Choice;
 import com.tools20022.repository.choice.ProcessingStatus2Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -62,9 +64,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.027.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -113,6 +112,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.027.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -132,6 +134,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTransactionCancellationRequestStatusAdviceV01", propOrder = {"identification", "cancellationRequestReference", "transactionIdentification", "processingStatus", "transactionDetails", "messageOriginator",
+		"messageRecipient", "extension"})
 public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +178,14 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification11.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestStatusAdviceV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Identification1 cancellationRequestReference;
 	/**
@@ -209,6 +222,14 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Identification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestStatusAdviceV01.class.getMethod("getCancellationRequestReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TransactionIdentifications4 transactionIdentification;
@@ -248,6 +269,14 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> TransactionIdentifications4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestStatusAdviceV01.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ProcessingStatus2Choice processingStatus;
 	/**
@@ -284,6 +313,14 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> ProcessingStatus2Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestStatusAdviceV01.class.getMethod("getProcessingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionDetails4 transactionDetails;
 	/**
@@ -318,6 +355,14 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TransactionDetails4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestStatusAdviceV01.class.getMethod("getTransactionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification10Choice messageOriginator;
@@ -354,6 +399,14 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestStatusAdviceV01.class.getMethod("getMessageOriginator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification10Choice messageRecipient;
@@ -393,6 +446,14 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestStatusAdviceV01.class.getMethod("getMessageRecipient", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension2> extension;
 	/**
@@ -429,6 +490,14 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestStatusAdviceV01.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -442,10 +511,15 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "SctiesTxCxlReqStsAdvc";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTransactionCancellationRequestStatusAdviceV01.mmIdentification, SecuritiesTransactionCancellationRequestStatusAdviceV01.mmCancellationRequestReference,
-						SecuritiesTransactionCancellationRequestStatusAdviceV01.mmTransactionIdentification, SecuritiesTransactionCancellationRequestStatusAdviceV01.mmProcessingStatus,
-						SecuritiesTransactionCancellationRequestStatusAdviceV01.mmTransactionDetails, SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageOriginator,
-						SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageRecipient, SecuritiesTransactionCancellationRequestStatusAdviceV01.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays
+						.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmIdentification,
+								com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmCancellationRequestReference,
+								com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmTransactionIdentification,
+								com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmProcessingStatus,
+								com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmTransactionDetails,
+								com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageOriginator,
+								com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageRecipient,
+								com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -455,10 +529,16 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesTransactionCancellationRequestStatusAdviceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification11 getIdentification() {
 		return identification;
 	}
@@ -467,6 +547,7 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "CxlReqRef", required = true)
 	public Identification1 getCancellationRequestReference() {
 		return cancellationRequestReference;
 	}
@@ -475,6 +556,7 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 		this.cancellationRequestReference = cancellationRequestReference;
 	}
 
+	@XmlElement(name = "TxId")
 	public TransactionIdentifications4 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -483,6 +565,7 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "PrcgSts", required = true)
 	public ProcessingStatus2Choice getProcessingStatus() {
 		return processingStatus;
 	}
@@ -491,6 +574,7 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "TxDtls")
 	public TransactionDetails4 getTransactionDetails() {
 		return transactionDetails;
 	}
@@ -499,6 +583,7 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 		this.transactionDetails = transactionDetails;
 	}
 
+	@XmlElement(name = "MsgOrgtr")
 	public PartyIdentification10Choice getMessageOriginator() {
 		return messageOriginator;
 	}
@@ -507,6 +592,7 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 		this.messageOriginator = messageOriginator;
 	}
 
+	@XmlElement(name = "MsgRcpt")
 	public PartyIdentification10Choice getMessageRecipient() {
 		return messageRecipient;
 	}
@@ -515,11 +601,18 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 		this.messageRecipient = messageRecipient;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension2> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension2> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.027.01.01")
+	static public class Document {
+		@XmlElement(name = "SctiesTxCxlReqStsAdvc", required = true)
+		public SecuritiesTransactionCancellationRequestStatusAdviceV01 messageBody;
 	}
 }

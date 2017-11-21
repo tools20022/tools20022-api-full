@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the clearing details.
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Clearing2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Clearing4", propOrder = {"settlementNettingEligibleCode", "clearingSegment", "guaranteedTrade", "nonGuaranteedTrade"})
 public class Clearing4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -335,6 +341,7 @@ public class Clearing4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmNetgElgblCd", required = true)
 	public NettingEligible1Code getSettlementNettingEligibleCode() {
 		return settlementNettingEligibleCode;
 	}
@@ -343,6 +350,7 @@ public class Clearing4 {
 		this.settlementNettingEligibleCode = settlementNettingEligibleCode;
 	}
 
+	@XmlElement(name = "ClrSgmt")
 	public PartyIdentification35Choice getClearingSegment() {
 		return clearingSegment;
 	}
@@ -351,6 +359,7 @@ public class Clearing4 {
 		this.clearingSegment = clearingSegment;
 	}
 
+	@XmlElement(name = "GrntedTrad")
 	public YesNoIndicator getGuaranteedTrade() {
 		return guaranteedTrade;
 	}
@@ -359,6 +368,7 @@ public class Clearing4 {
 		this.guaranteedTrade = guaranteedTrade;
 	}
 
+	@XmlElement(name = "NonGrntedTrad")
 	public NonGuaranteedTrade3 getNonGuaranteedTrade() {
 		return nonGuaranteedTrade;
 	}

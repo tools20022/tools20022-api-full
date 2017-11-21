@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the trade leg statement details.
@@ -70,6 +74,8 @@ import java.util.List;
  * definition} = "Provides the trade leg statement details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeLegStatement1", propOrder = {"clearingAccount", "clearingSegment", "tradeLegsDetails", "nonClearingMember"})
 public class TradeLegStatement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -289,6 +295,7 @@ public class TradeLegStatement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClrAcct")
 	public SecuritiesAccount18 getClearingAccount() {
 		return clearingAccount;
 	}
@@ -297,6 +304,7 @@ public class TradeLegStatement1 {
 		this.clearingAccount = clearingAccount;
 	}
 
+	@XmlElement(name = "ClrSgmt")
 	public PartyIdentification35Choice getClearingSegment() {
 		return clearingSegment;
 	}
@@ -305,6 +313,7 @@ public class TradeLegStatement1 {
 		this.clearingSegment = clearingSegment;
 	}
 
+	@XmlElement(name = "TradLegsDtls", required = true)
 	public List<TradeLeg3> getTradeLegsDetails() {
 		return tradeLegsDetails;
 	}
@@ -313,6 +322,7 @@ public class TradeLegStatement1 {
 		this.tradeLegsDetails = tradeLegsDetails;
 	}
 
+	@XmlElement(name = "NonClrMmb")
 	public PartyIdentificationAndAccount31 getNonClearingMember() {
 		return nonClearingMember;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.ObligationFulfilment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference of the transaction, that is the underlying payment instruction or
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CertificateReference1", propOrder = {"identification", "date"})
 public class CertificateReference1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class CertificateReference1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public CertificateIdentification1 getIdentification() {
 		return identification;
 	}
@@ -189,6 +196,7 @@ public class CertificateReference1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}

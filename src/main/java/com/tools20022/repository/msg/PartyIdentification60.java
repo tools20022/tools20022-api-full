@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.TreasuryTradingParty;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a party by fund name, name and address or an LEI.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Identification of a party by fund name, name and address or an LEI."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification60", propOrder = {"fundIdentification", "nameAndAddress", "legalEntityIdentifier"})
 public class PartyIdentification60 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -237,6 +243,7 @@ public class PartyIdentification60 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FndId", required = true)
 	public Max35Text getFundIdentification() {
 		return fundIdentification;
 	}
@@ -245,6 +252,7 @@ public class PartyIdentification60 {
 		this.fundIdentification = fundIdentification;
 	}
 
+	@XmlElement(name = "NmAndAdr")
 	public NameAndAddress8 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -253,6 +261,7 @@ public class PartyIdentification60 {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "LglNttyIdr")
 	public LEIIdentifier getLegalEntityIdentifier() {
 		return legalEntityIdentifier;
 	}

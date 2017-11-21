@@ -39,6 +39,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryAuthorityRole#mmRegulatoryReport
+ * RegulatoryAuthorityRole.mmRegulatoryReport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryAuthorityRole#mmCountry
+ * RegulatoryAuthorityRole.mmCountry}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -68,19 +81,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmAuthorityName
  * MarketIdentification92.mmAuthorityName}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryAuthorityRole#mmRegulatoryReport
- * RegulatoryAuthorityRole.mmRegulatoryReport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryAuthorityRole#mmCountry
- * RegulatoryAuthorityRole.mmCountry}</li>
  * </ul>
  * </li>
  * <li>
@@ -137,7 +137,7 @@ public class RegulatoryAuthorityRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmRegulatoryReport = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RegulatoryAuthorityRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RegulatoryAuthorityRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegulatoryReport";
@@ -184,7 +184,7 @@ public class RegulatoryAuthorityRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmCountry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RegulatoryAuthorityRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RegulatoryAuthorityRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Country";
@@ -207,8 +207,13 @@ public class RegulatoryAuthorityRole extends Role {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.mmNationalRegulatoryAuthority, com.tools20022.repository.entity.RegulatoryReport.mmAuthority);
 				derivationElement_lazy = () -> Arrays.asList(MarketIdentification92.mmAuthorityName);
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(RegulatoryAuthorityRole.mmRegulatoryReport, RegulatoryAuthorityRole.mmCountry);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RegulatoryAuthorityRole.mmRegulatoryReport, com.tools20022.repository.entity.RegulatoryAuthorityRole.mmCountry);
 				derivationComponent_lazy = () -> Arrays.asList(RegulatoryAuthority.mmObject(), RegulatoryAuthority2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RegulatoryAuthorityRole.class;
 			}
 		});
 		return mmObject_lazy.get();

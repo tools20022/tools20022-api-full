@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide information on the original transactions, to
@@ -91,6 +95,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTransactionInformation34", propOrder = {"statusIdentification", "originalInstructionIdentification", "originalEndToEndIdentification", "transactionStatus", "statusReasonInformation", "chargesInformation",
+		"acceptanceDateTime", "accountServicerReference", "clearingSystemReference", "originalTransactionReference"})
 public class PaymentTransactionInformation34 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -608,6 +615,7 @@ public class PaymentTransactionInformation34 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsId")
 	public Max35Text getStatusIdentification() {
 		return statusIdentification;
 	}
@@ -616,6 +624,7 @@ public class PaymentTransactionInformation34 {
 		this.statusIdentification = statusIdentification;
 	}
 
+	@XmlElement(name = "OrgnlInstrId")
 	public Max35Text getOriginalInstructionIdentification() {
 		return originalInstructionIdentification;
 	}
@@ -624,6 +633,7 @@ public class PaymentTransactionInformation34 {
 		this.originalInstructionIdentification = originalInstructionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlEndToEndId")
 	public Max35Text getOriginalEndToEndIdentification() {
 		return originalEndToEndIdentification;
 	}
@@ -632,6 +642,7 @@ public class PaymentTransactionInformation34 {
 		this.originalEndToEndIdentification = originalEndToEndIdentification;
 	}
 
+	@XmlElement(name = "TxSts")
 	public TransactionIndividualStatus3Code getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -640,6 +651,7 @@ public class PaymentTransactionInformation34 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "StsRsnInf")
 	public List<StatusReasonInformation9> getStatusReasonInformation() {
 		return statusReasonInformation;
 	}
@@ -648,6 +660,7 @@ public class PaymentTransactionInformation34 {
 		this.statusReasonInformation = statusReasonInformation;
 	}
 
+	@XmlElement(name = "ChrgsInf")
 	public List<ChargesInformation7> getChargesInformation() {
 		return chargesInformation;
 	}
@@ -656,6 +669,7 @@ public class PaymentTransactionInformation34 {
 		this.chargesInformation = chargesInformation;
 	}
 
+	@XmlElement(name = "AccptncDtTm")
 	public ISODateTime getAcceptanceDateTime() {
 		return acceptanceDateTime;
 	}
@@ -664,6 +678,7 @@ public class PaymentTransactionInformation34 {
 		this.acceptanceDateTime = acceptanceDateTime;
 	}
 
+	@XmlElement(name = "AcctSvcrRef")
 	public Max35Text getAccountServicerReference() {
 		return accountServicerReference;
 	}
@@ -672,6 +687,7 @@ public class PaymentTransactionInformation34 {
 		this.accountServicerReference = accountServicerReference;
 	}
 
+	@XmlElement(name = "ClrSysRef")
 	public Max35Text getClearingSystemReference() {
 		return clearingSystemReference;
 	}
@@ -680,6 +696,7 @@ public class PaymentTransactionInformation34 {
 		this.clearingSystemReference = clearingSystemReference;
 	}
 
+	@XmlElement(name = "OrgnlTxRef")
 	public OriginalTransactionReference15 getOriginalTransactionReference() {
 		return originalTransactionReference;
 	}

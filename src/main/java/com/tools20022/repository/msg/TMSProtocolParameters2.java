@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Configuration parameters of the TMS protocol between a POI and a terminal
@@ -94,6 +98,9 @@ import java.util.List;
  * TMSProtocolParameters1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TMSProtocolParameters2", propOrder = {"actionType", "terminalManagerIdentification", "maintenanceService", "version", "applicationIdentification", "hostIdentification", "POIIdentification", "initiatingPartyIdentification",
+		"recipientPartyIdentification", "fileTransfer"})
 public class TMSProtocolParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -581,6 +588,7 @@ public class TMSProtocolParameters2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ActnTp", required = true)
 	public TerminalManagementAction3Code getActionType() {
 		return actionType;
 	}
@@ -589,6 +597,7 @@ public class TMSProtocolParameters2 {
 		this.actionType = actionType;
 	}
 
+	@XmlElement(name = "TermnlMgrId", required = true)
 	public GenericIdentification71 getTerminalManagerIdentification() {
 		return terminalManagerIdentification;
 	}
@@ -597,6 +606,7 @@ public class TMSProtocolParameters2 {
 		this.terminalManagerIdentification = terminalManagerIdentification;
 	}
 
+	@XmlElement(name = "MntncSvc", required = true)
 	public List<DataSetCategory10Code> getMaintenanceService() {
 		return maintenanceService;
 	}
@@ -605,6 +615,7 @@ public class TMSProtocolParameters2 {
 		this.maintenanceService = maintenanceService;
 	}
 
+	@XmlElement(name = "Vrsn", required = true)
 	public Max256Text getVersion() {
 		return version;
 	}
@@ -613,6 +624,7 @@ public class TMSProtocolParameters2 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "ApplId")
 	public List<Max35Text> getApplicationIdentification() {
 		return applicationIdentification;
 	}
@@ -621,6 +633,7 @@ public class TMSProtocolParameters2 {
 		this.applicationIdentification = applicationIdentification;
 	}
 
+	@XmlElement(name = "HstId", required = true)
 	public Max35Text getHostIdentification() {
 		return hostIdentification;
 	}
@@ -629,6 +642,7 @@ public class TMSProtocolParameters2 {
 		this.hostIdentification = hostIdentification;
 	}
 
+	@XmlElement(name = "POIId")
 	public Max35Text getPOIIdentification() {
 		return pOIIdentification;
 	}
@@ -637,6 +651,7 @@ public class TMSProtocolParameters2 {
 		this.pOIIdentification = pOIIdentification;
 	}
 
+	@XmlElement(name = "InitgPtyId")
 	public Max35Text getInitiatingPartyIdentification() {
 		return initiatingPartyIdentification;
 	}
@@ -645,6 +660,7 @@ public class TMSProtocolParameters2 {
 		this.initiatingPartyIdentification = initiatingPartyIdentification;
 	}
 
+	@XmlElement(name = "RcptPtyId")
 	public Max35Text getRecipientPartyIdentification() {
 		return recipientPartyIdentification;
 	}
@@ -653,6 +669,7 @@ public class TMSProtocolParameters2 {
 		this.recipientPartyIdentification = recipientPartyIdentification;
 	}
 
+	@XmlElement(name = "FileTrf")
 	public TrueFalseIndicator getFileTransfer() {
 		return fileTransfer;
 	}

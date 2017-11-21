@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Encrypted data with encryption key.
@@ -64,6 +68,8 @@ import java.util.List;
  * EnvelopedData3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EnvelopedData4", propOrder = {"version", "recipient", "encryptedContent"})
 public class EnvelopedData4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -224,6 +230,7 @@ public class EnvelopedData4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Number getVersion() {
 		return version;
 	}
@@ -232,6 +239,7 @@ public class EnvelopedData4 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "Rcpt", required = true)
 	public List<Recipient4Choice> getRecipient() {
 		return recipient;
 	}
@@ -240,6 +248,7 @@ public class EnvelopedData4 {
 		this.recipient = recipient;
 	}
 
+	@XmlElement(name = "NcrptdCntt")
 	public EncryptedContent3 getEncryptedContent() {
 		return encryptedContent;
 	}

@@ -31,9 +31,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TransactionDetails28;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -81,9 +83,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.020.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
@@ -139,6 +138,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.020.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -162,6 +164,9 @@ import java.util.List;
  * SecuritiesTransactionCancellationRequestV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTransactionCancellationRequestV04", propOrder = {"accountOwnerTransactionIdentification", "accountServicerTransactionIdentification", "marketInfrastructureTransactionIdentification",
+		"processorTransactionIdentification", "accountOwner", "safekeepingAccount", "transactionDetails", "FXCancellation", "supplementaryData"})
 public class SecuritiesTransactionCancellationRequestV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -219,6 +224,14 @@ public class SecuritiesTransactionCancellationRequestV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> References2Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestV04.class.getMethod("getAccountOwnerTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max35Text accountServicerTransactionIdentification;
 	/**
@@ -272,6 +285,14 @@ public class SecuritiesTransactionCancellationRequestV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestV04.class.getMethod("getAccountServicerTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text marketInfrastructureTransactionIdentification;
@@ -327,6 +348,14 @@ public class SecuritiesTransactionCancellationRequestV04 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestV04.class.getMethod("getMarketInfrastructureTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max35Text processorTransactionIdentification;
 	/**
@@ -379,6 +408,14 @@ public class SecuritiesTransactionCancellationRequestV04 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestV04.class.getMethod("getProcessorTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification36Choice accountOwner;
 	/**
@@ -428,6 +465,14 @@ public class SecuritiesTransactionCancellationRequestV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification36Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestV04.class.getMethod("getAccountOwner", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesAccount13 safekeepingAccount;
@@ -479,6 +524,14 @@ public class SecuritiesTransactionCancellationRequestV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestV04.class.getMethod("getSafekeepingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionDetails28 transactionDetails;
 	/**
@@ -529,6 +582,14 @@ public class SecuritiesTransactionCancellationRequestV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> TransactionDetails28.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestV04.class.getMethod("getTransactionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected FXCancellation1Choice fXCancellation;
 	/**
@@ -578,6 +639,14 @@ public class SecuritiesTransactionCancellationRequestV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FXCancellation1Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestV04.class.getMethod("getFXCancellation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -631,6 +700,14 @@ public class SecuritiesTransactionCancellationRequestV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionCancellationRequestV04.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -645,10 +722,12 @@ public class SecuritiesTransactionCancellationRequestV04 {
 				rootElement = "Document";
 				xmlTag = "SctiesTxCxlReq";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTransactionCancellationRequestV04.mmAccountOwnerTransactionIdentification, SecuritiesTransactionCancellationRequestV04.mmAccountServicerTransactionIdentification,
-						SecuritiesTransactionCancellationRequestV04.mmMarketInfrastructureTransactionIdentification, SecuritiesTransactionCancellationRequestV04.mmProcessorTransactionIdentification,
-						SecuritiesTransactionCancellationRequestV04.mmAccountOwner, SecuritiesTransactionCancellationRequestV04.mmSafekeepingAccount, SecuritiesTransactionCancellationRequestV04.mmTransactionDetails,
-						SecuritiesTransactionCancellationRequestV04.mmFXCancellation, SecuritiesTransactionCancellationRequestV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04.mmAccountOwnerTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04.mmAccountServicerTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04.mmProcessorTransactionIdentification, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04.mmAccountOwner,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04.mmSafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04.mmTransactionDetails,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04.mmFXCancellation, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -658,10 +737,16 @@ public class SecuritiesTransactionCancellationRequestV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesTransactionCancellationRequestV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnrTxId", required = true)
 	public References2Choice getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
@@ -670,6 +755,7 @@ public class SecuritiesTransactionCancellationRequestV04 {
 		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrTxId")
 	public Max35Text getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
@@ -678,6 +764,7 @@ public class SecuritiesTransactionCancellationRequestV04 {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
 	}
 
+	@XmlElement(name = "MktInfrstrctrTxId")
 	public Max35Text getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}
@@ -686,6 +773,7 @@ public class SecuritiesTransactionCancellationRequestV04 {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
 	}
 
+	@XmlElement(name = "PrcrTxId")
 	public Max35Text getProcessorTransactionIdentification() {
 		return processorTransactionIdentification;
 	}
@@ -694,6 +782,7 @@ public class SecuritiesTransactionCancellationRequestV04 {
 		this.processorTransactionIdentification = processorTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification36Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -702,6 +791,7 @@ public class SecuritiesTransactionCancellationRequestV04 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -710,6 +800,7 @@ public class SecuritiesTransactionCancellationRequestV04 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "TxDtls")
 	public TransactionDetails28 getTransactionDetails() {
 		return transactionDetails;
 	}
@@ -718,6 +809,7 @@ public class SecuritiesTransactionCancellationRequestV04 {
 		this.transactionDetails = transactionDetails;
 	}
 
+	@XmlElement(name = "FxCxl")
 	public FXCancellation1Choice getFXCancellation() {
 		return fXCancellation;
 	}
@@ -726,11 +818,18 @@ public class SecuritiesTransactionCancellationRequestV04 {
 		this.fXCancellation = fXCancellation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.020.04.04")
+	static public class Document {
+		@XmlElement(name = "SctiesTxCxlReq", required = true)
+		public SecuritiesTransactionCancellationRequestV04 messageBody;
 	}
 }

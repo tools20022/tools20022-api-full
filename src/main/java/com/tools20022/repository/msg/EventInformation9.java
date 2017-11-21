@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.CorporateActionServicing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about event of a corporate action.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * EventInformation7}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EventInformation9", propOrder = {"corporateActionEventIdentification", "officialCorporateActionEventIdentification", "eventType", "mandatoryVoluntaryEventType", "lastNotificationIdentification"})
 public class EventInformation9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -376,6 +382,7 @@ public class EventInformation9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CorpActnEvtId", required = true)
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -384,6 +391,7 @@ public class EventInformation9 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "OffclCorpActnEvtId")
 	public Max35Text getOfficialCorporateActionEventIdentification() {
 		return officialCorporateActionEventIdentification;
 	}
@@ -392,6 +400,7 @@ public class EventInformation9 {
 		this.officialCorporateActionEventIdentification = officialCorporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "EvtTp", required = true)
 	public CorporateActionEventType52Choice getEventType() {
 		return eventType;
 	}
@@ -400,6 +409,7 @@ public class EventInformation9 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "MndtryVlntryEvtTp", required = true)
 	public CorporateActionMandatoryVoluntary3Choice getMandatoryVoluntaryEventType() {
 		return mandatoryVoluntaryEventType;
 	}
@@ -408,6 +418,7 @@ public class EventInformation9 {
 		this.mandatoryVoluntaryEventType = mandatoryVoluntaryEventType;
 	}
 
+	@XmlElement(name = "LastNtfctnId")
 	public NotificationIdentification3 getLastNotificationIdentification() {
 		return lastNotificationIdentification;
 	}

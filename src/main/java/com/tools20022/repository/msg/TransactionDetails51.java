@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies additional details of the transaction.
@@ -169,6 +173,11 @@ import java.util.List;
  * definition} = "Identifies additional details of the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionDetails51", propOrder = {"transactionActivity", "settlementTransactionOrCorporateActionEventType", "securitiesMovementType", "payment", "settlementParameters", "placeOfTrade", "safekeepingPlace",
+		"placeOfClearing", "financialInstrumentIdentification", "countryOfIssue", "conditionalSecuritiesDelivery", "settlementQuantity", "settledQuantity", "previouslySettledQuantity", "remainingToBeSettledQuantity", "numberOfDaysAccrued",
+		"settlementAmount", "settledAmount", "previouslySettledAmount", "remainingSettlementAmount", "accruedInterestAmount", "tradeDate", "intendedSettlementDate", "effectiveSettlementDate", "valueDate", "statusDate", "linkages",
+		"priority", "deliveringSettlementParties", "receivingSettlementParties", "reversalIndicator", "messageOriginator", "creationDateTime", "transactionAdditionalDetails", "supplementaryData"})
 public class TransactionDetails51 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1869,6 +1878,7 @@ public class TransactionDetails51 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxActvty", required = true)
 	public TransactionActivity1Choice getTransactionActivity() {
 		return transactionActivity;
 	}
@@ -1877,6 +1887,7 @@ public class TransactionDetails51 {
 		this.transactionActivity = transactionActivity;
 	}
 
+	@XmlElement(name = "SttlmTxOrCorpActnEvtTp")
 	public SettlementOrCorporateActionEvent5Choice getSettlementTransactionOrCorporateActionEventType() {
 		return settlementTransactionOrCorporateActionEventType;
 	}
@@ -1885,6 +1896,7 @@ public class TransactionDetails51 {
 		this.settlementTransactionOrCorporateActionEventType = settlementTransactionOrCorporateActionEventType;
 	}
 
+	@XmlElement(name = "SctiesMvmntTp", required = true)
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
@@ -1893,6 +1905,7 @@ public class TransactionDetails51 {
 		this.securitiesMovementType = securitiesMovementType;
 	}
 
+	@XmlElement(name = "Pmt", required = true)
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
@@ -1901,6 +1914,7 @@ public class TransactionDetails51 {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "SttlmParams")
 	public SettlementDetails66 getSettlementParameters() {
 		return settlementParameters;
 	}
@@ -1909,6 +1923,7 @@ public class TransactionDetails51 {
 		this.settlementParameters = settlementParameters;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public MarketIdentification4 getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -1917,6 +1932,7 @@ public class TransactionDetails51 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat3Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -1925,6 +1941,7 @@ public class TransactionDetails51 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "PlcOfClr")
 	public AnyBICIdentifier getPlaceOfClearing() {
 		return placeOfClearing;
 	}
@@ -1933,6 +1950,7 @@ public class TransactionDetails51 {
 		this.placeOfClearing = placeOfClearing;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -1941,6 +1959,7 @@ public class TransactionDetails51 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "CtryOfIsse")
 	public CountryCode getCountryOfIssue() {
 		return countryOfIssue;
 	}
@@ -1949,6 +1968,7 @@ public class TransactionDetails51 {
 		this.countryOfIssue = countryOfIssue;
 	}
 
+	@XmlElement(name = "CondlSctiesDlvry")
 	public YesNoIndicator getConditionalSecuritiesDelivery() {
 		return conditionalSecuritiesDelivery;
 	}
@@ -1957,6 +1977,7 @@ public class TransactionDetails51 {
 		this.conditionalSecuritiesDelivery = conditionalSecuritiesDelivery;
 	}
 
+	@XmlElement(name = "SttlmQty", required = true)
 	public FinancialInstrumentQuantity1Choice getSettlementQuantity() {
 		return settlementQuantity;
 	}
@@ -1965,6 +1986,7 @@ public class TransactionDetails51 {
 		this.settlementQuantity = settlementQuantity;
 	}
 
+	@XmlElement(name = "SttldQty")
 	public FinancialInstrumentQuantity1Choice getSettledQuantity() {
 		return settledQuantity;
 	}
@@ -1973,6 +1995,7 @@ public class TransactionDetails51 {
 		this.settledQuantity = settledQuantity;
 	}
 
+	@XmlElement(name = "PrevslySttldQty")
 	public FinancialInstrumentQuantity1Choice getPreviouslySettledQuantity() {
 		return previouslySettledQuantity;
 	}
@@ -1981,6 +2004,7 @@ public class TransactionDetails51 {
 		this.previouslySettledQuantity = previouslySettledQuantity;
 	}
 
+	@XmlElement(name = "RmngToBeSttldQty")
 	public FinancialInstrumentQuantity1Choice getRemainingToBeSettledQuantity() {
 		return remainingToBeSettledQuantity;
 	}
@@ -1989,6 +2013,7 @@ public class TransactionDetails51 {
 		this.remainingToBeSettledQuantity = remainingToBeSettledQuantity;
 	}
 
+	@XmlElement(name = "NbOfDaysAcrd")
 	public Max3Number getNumberOfDaysAccrued() {
 		return numberOfDaysAccrued;
 	}
@@ -1997,6 +2022,7 @@ public class TransactionDetails51 {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
 	}
 
+	@XmlElement(name = "SttlmAmt", required = true)
 	public AmountAndDirection4 getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -2005,6 +2031,7 @@ public class TransactionDetails51 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "SttldAmt")
 	public AmountAndDirection4 getSettledAmount() {
 		return settledAmount;
 	}
@@ -2013,6 +2040,7 @@ public class TransactionDetails51 {
 		this.settledAmount = settledAmount;
 	}
 
+	@XmlElement(name = "PrevslySttldAmt")
 	public AmountAndDirection4 getPreviouslySettledAmount() {
 		return previouslySettledAmount;
 	}
@@ -2021,6 +2049,7 @@ public class TransactionDetails51 {
 		this.previouslySettledAmount = previouslySettledAmount;
 	}
 
+	@XmlElement(name = "RmngSttlmAmt")
 	public AmountAndDirection4 getRemainingSettlementAmount() {
 		return remainingSettlementAmount;
 	}
@@ -2029,6 +2058,7 @@ public class TransactionDetails51 {
 		this.remainingSettlementAmount = remainingSettlementAmount;
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt")
 	public AmountAndDirection4 getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -2037,6 +2067,7 @@ public class TransactionDetails51 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "TradDt")
 	public TradeDate1Choice getTradeDate() {
 		return tradeDate;
 	}
@@ -2045,6 +2076,7 @@ public class TransactionDetails51 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "IntnddSttlmDt", required = true)
 	public SettlementDate2Choice getIntendedSettlementDate() {
 		return intendedSettlementDate;
 	}
@@ -2053,6 +2085,7 @@ public class TransactionDetails51 {
 		this.intendedSettlementDate = intendedSettlementDate;
 	}
 
+	@XmlElement(name = "FctvSttlmDt")
 	public DateAndDateTimeChoice getEffectiveSettlementDate() {
 		return effectiveSettlementDate;
 	}
@@ -2061,6 +2094,7 @@ public class TransactionDetails51 {
 		this.effectiveSettlementDate = effectiveSettlementDate;
 	}
 
+	@XmlElement(name = "ValDt")
 	public DateAndDateTimeChoice getValueDate() {
 		return valueDate;
 	}
@@ -2069,6 +2103,7 @@ public class TransactionDetails51 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "StsDt")
 	public ISODateTime getStatusDate() {
 		return statusDate;
 	}
@@ -2077,6 +2112,7 @@ public class TransactionDetails51 {
 		this.statusDate = statusDate;
 	}
 
+	@XmlElement(name = "Lnkgs")
 	public List<Linkages26> getLinkages() {
 		return linkages;
 	}
@@ -2085,6 +2121,7 @@ public class TransactionDetails51 {
 		this.linkages = linkages;
 	}
 
+	@XmlElement(name = "Prty")
 	public PriorityNumeric1Choice getPriority() {
 		return priority;
 	}
@@ -2093,6 +2130,7 @@ public class TransactionDetails51 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties13 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -2101,6 +2139,7 @@ public class TransactionDetails51 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties13 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -2109,6 +2148,7 @@ public class TransactionDetails51 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "RvslInd")
 	public YesNoIndicator getReversalIndicator() {
 		return reversalIndicator;
 	}
@@ -2117,6 +2157,7 @@ public class TransactionDetails51 {
 		this.reversalIndicator = reversalIndicator;
 	}
 
+	@XmlElement(name = "MsgOrgtr")
 	public SystemPartyIdentification5 getMessageOriginator() {
 		return messageOriginator;
 	}
@@ -2125,6 +2166,7 @@ public class TransactionDetails51 {
 		this.messageOriginator = messageOriginator;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -2133,6 +2175,7 @@ public class TransactionDetails51 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "TxAddtlDtls")
 	public Max350Text getTransactionAdditionalDetails() {
 		return transactionAdditionalDetails;
 	}
@@ -2141,6 +2184,7 @@ public class TransactionDetails51 {
 		this.transactionAdditionalDetails = transactionAdditionalDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

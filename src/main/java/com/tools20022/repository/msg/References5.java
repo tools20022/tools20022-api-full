@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements for the identification of the message and related references.
@@ -95,6 +99,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References5", propOrder = {"requestType", "messageIdentification", "processIdentification", "acknowledgedMessageIdentification", "status", "attachedDocumentName"})
 public class References5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -363,6 +369,7 @@ public class References5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqTp", required = true)
 	public UseCases1Code getRequestType() {
 		return requestType;
 	}
@@ -371,6 +378,7 @@ public class References5 {
 		this.requestType = requestType;
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -379,6 +387,7 @@ public class References5 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PrcId", required = true)
 	public MessageIdentification1 getProcessIdentification() {
 		return processIdentification;
 	}
@@ -387,6 +396,7 @@ public class References5 {
 		this.processIdentification = processIdentification;
 	}
 
+	@XmlElement(name = "AckdMsgId")
 	public List<MessageIdentification1> getAcknowledgedMessageIdentification() {
 		return acknowledgedMessageIdentification;
 	}
@@ -395,6 +405,7 @@ public class References5 {
 		this.acknowledgedMessageIdentification = acknowledgedMessageIdentification;
 	}
 
+	@XmlElement(name = "Sts")
 	public Max35Text getStatus() {
 		return status;
 	}
@@ -403,6 +414,7 @@ public class References5 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "AttchdDocNm")
 	public List<Max70Text> getAttachedDocumentName() {
 		return attachedDocumentName;
 	}

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -35,16 +36,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmBenchmark
- * Portfolio.mmBenchmark}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmPortfolioBenchmark
- * Index.mmPortfolioBenchmark}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -68,6 +59,16 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.PortfolioBenchmark#mmDescription
  * PortfolioBenchmark.mmDescription}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmBenchmark
+ * Portfolio.mmBenchmark}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmPortfolioBenchmark
+ * Index.mmPortfolioBenchmark}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,7 +126,7 @@ public class PortfolioBenchmark {
 	 */
 	public static final MMBusinessAssociationEnd mmIndex = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PortfolioBenchmark.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioBenchmark.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Index";
@@ -172,7 +173,7 @@ public class PortfolioBenchmark {
 	 */
 	public static final MMBusinessAssociationEnd mmPortfolio = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PortfolioBenchmark.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioBenchmark.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Portfolio";
@@ -213,7 +214,7 @@ public class PortfolioBenchmark {
 	 */
 	public static final MMBusinessAttribute mmBenchmarkWeight = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PortfolioBenchmark.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioBenchmark.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BenchmarkWeight";
@@ -221,6 +222,14 @@ public class PortfolioBenchmark {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioBenchmark.class.getMethod("getBenchmarkWeight", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate maximumDeviation;
@@ -252,7 +261,7 @@ public class PortfolioBenchmark {
 	 */
 	public static final MMBusinessAttribute mmMaximumDeviation = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PortfolioBenchmark.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioBenchmark.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumDeviation";
@@ -260,6 +269,14 @@ public class PortfolioBenchmark {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioBenchmark.class.getMethod("getMaximumDeviation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate minimumDeviation;
@@ -291,7 +308,7 @@ public class PortfolioBenchmark {
 	 */
 	public static final MMBusinessAttribute mmMinimumDeviation = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PortfolioBenchmark.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioBenchmark.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumDeviation";
@@ -299,6 +316,14 @@ public class PortfolioBenchmark {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioBenchmark.class.getMethod("getMinimumDeviation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DateTimePeriod effectivePeriod;
@@ -333,7 +358,7 @@ public class PortfolioBenchmark {
 	 */
 	public static final MMBusinessAttribute mmEffectivePeriod = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PortfolioBenchmark.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioBenchmark.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EffectivePeriod";
@@ -341,6 +366,14 @@ public class PortfolioBenchmark {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioBenchmark.class.getMethod("getEffectivePeriod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max350Text description;
@@ -374,7 +407,7 @@ public class PortfolioBenchmark {
 	 */
 	public static final MMBusinessAttribute mmDescription = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PortfolioBenchmark.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioBenchmark.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Description";
@@ -382,6 +415,14 @@ public class PortfolioBenchmark {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioBenchmark.class.getMethod("getDescription", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -393,8 +434,14 @@ public class PortfolioBenchmark {
 				name = "PortfolioBenchmark";
 				definition = "Security or other price against which the performance of the portfolio is evaluated.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Portfolio.mmBenchmark, com.tools20022.repository.entity.Index.mmPortfolioBenchmark);
-				element_lazy = () -> Arrays.asList(PortfolioBenchmark.mmIndex, PortfolioBenchmark.mmPortfolio, PortfolioBenchmark.mmBenchmarkWeight, PortfolioBenchmark.mmMaximumDeviation, PortfolioBenchmark.mmMinimumDeviation,
-						PortfolioBenchmark.mmEffectivePeriod, PortfolioBenchmark.mmDescription);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PortfolioBenchmark.mmIndex, com.tools20022.repository.entity.PortfolioBenchmark.mmPortfolio,
+						com.tools20022.repository.entity.PortfolioBenchmark.mmBenchmarkWeight, com.tools20022.repository.entity.PortfolioBenchmark.mmMaximumDeviation, com.tools20022.repository.entity.PortfolioBenchmark.mmMinimumDeviation,
+						com.tools20022.repository.entity.PortfolioBenchmark.mmEffectivePeriod, com.tools20022.repository.entity.PortfolioBenchmark.mmDescription);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PortfolioBenchmark.class;
 			}
 		});
 		return mmObject_lazy.get();

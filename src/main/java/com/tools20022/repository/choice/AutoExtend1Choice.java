@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the auto extend period.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of format for the auto extend period."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AutoExtend1Choice", propOrder = {"days", "months", "years", "date"})
 public class AutoExtend1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -241,6 +247,7 @@ public class AutoExtend1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Days", required = true)
 	public Number getDays() {
 		return days;
 	}
@@ -249,6 +256,7 @@ public class AutoExtend1Choice {
 		this.days = days;
 	}
 
+	@XmlElement(name = "Mnths", required = true)
 	public Number getMonths() {
 		return months;
 	}
@@ -257,6 +265,7 @@ public class AutoExtend1Choice {
 		this.months = months;
 	}
 
+	@XmlElement(name = "Yrs", required = true)
 	public Number getYears() {
 		return years;
 	}
@@ -265,6 +274,7 @@ public class AutoExtend1Choice {
 		this.years = years;
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action general
@@ -92,6 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionNotificationSD7}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionGeneralInformationSD11", propOrder = {"placeAndName", "eventGroup", "eventType", "subEventType", "DTCMandatoryVoluntaryEventType", "declaredMandatoryVoluntaryEventType", "EDSMessagingEligibilityFlag"})
 public class CorporateActionGeneralInformationSD11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -493,6 +499,7 @@ public class CorporateActionGeneralInformationSD11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -501,6 +508,7 @@ public class CorporateActionGeneralInformationSD11 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "EvtGrp")
 	public EventGroup1Code getEventGroup() {
 		return eventGroup;
 	}
@@ -509,6 +517,7 @@ public class CorporateActionGeneralInformationSD11 {
 		this.eventGroup = eventGroup;
 	}
 
+	@XmlElement(name = "EvtTp")
 	public ExtendedEventType1Code getEventType() {
 		return eventType;
 	}
@@ -517,6 +526,7 @@ public class CorporateActionGeneralInformationSD11 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "SubEvtTp")
 	public DTCCSubEventType2Code getSubEventType() {
 		return subEventType;
 	}
@@ -525,6 +535,7 @@ public class CorporateActionGeneralInformationSD11 {
 		this.subEventType = subEventType;
 	}
 
+	@XmlElement(name = "DTCMndtryVlntryEvtTp")
 	public CorporateActionMandatoryVoluntary1Code getDTCMandatoryVoluntaryEventType() {
 		return dTCMandatoryVoluntaryEventType;
 	}
@@ -533,6 +544,7 @@ public class CorporateActionGeneralInformationSD11 {
 		this.dTCMandatoryVoluntaryEventType = dTCMandatoryVoluntaryEventType;
 	}
 
+	@XmlElement(name = "DclrdMndtryVlntryEvtTp")
 	public CorporateActionMandatoryVoluntary1Code getDeclaredMandatoryVoluntaryEventType() {
 		return declaredMandatoryVoluntaryEventType;
 	}
@@ -541,6 +553,7 @@ public class CorporateActionGeneralInformationSD11 {
 		this.declaredMandatoryVoluntaryEventType = declaredMandatoryVoluntaryEventType;
 	}
 
+	@XmlElement(name = "EDSMsggElgbltyFlg")
 	public YesNoIndicator getEDSMessagingEligibilityFlag() {
 		return eDSMessagingEligibilityFlag;
 	}

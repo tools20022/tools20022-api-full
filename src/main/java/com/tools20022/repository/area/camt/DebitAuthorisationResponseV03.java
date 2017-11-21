@@ -30,9 +30,11 @@ import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestvers
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion;
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20162017;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -56,9 +58,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.036.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
@@ -101,6 +100,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.036.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -116,6 +118,8 @@ import java.util.List;
  * DebitAuthorisationResponseV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DebitAuthorisationResponseV03", propOrder = {"assignment", "case", "confirmation", "supplementaryData"})
 public class DebitAuthorisationResponseV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -156,6 +160,14 @@ public class DebitAuthorisationResponseV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DebitAuthorisationResponseV03.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case3 case_;
 	/**
@@ -188,6 +200,14 @@ public class DebitAuthorisationResponseV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Case3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DebitAuthorisationResponseV03.class.getMethod("getCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DebitAuthorisationConfirmation2 confirmation;
@@ -223,6 +243,14 @@ public class DebitAuthorisationResponseV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DebitAuthorisationConfirmation2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DebitAuthorisationResponseV03.class.getMethod("getConfirmation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -261,6 +289,14 @@ public class DebitAuthorisationResponseV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DebitAuthorisationResponseV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -275,8 +311,8 @@ public class DebitAuthorisationResponseV03 {
 				rootElement = "Document";
 				xmlTag = "DbtAuthstnRspn";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(DebitAuthorisationResponseV03.mmAssignment, DebitAuthorisationResponseV03.mmCase, DebitAuthorisationResponseV03.mmConfirmation,
-						DebitAuthorisationResponseV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DebitAuthorisationResponseV03.mmAssignment, com.tools20022.repository.area.camt.DebitAuthorisationResponseV03.mmCase,
+						com.tools20022.repository.area.camt.DebitAuthorisationResponseV03.mmConfirmation, com.tools20022.repository.area.camt.DebitAuthorisationResponseV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -286,10 +322,16 @@ public class DebitAuthorisationResponseV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DebitAuthorisationResponseV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment3 getAssignment() {
 		return assignment;
 	}
@@ -298,6 +340,7 @@ public class DebitAuthorisationResponseV03 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "Case", required = true)
 	public Case3 getCase() {
 		return case_;
 	}
@@ -306,6 +349,7 @@ public class DebitAuthorisationResponseV03 {
 		this.case_ = case_;
 	}
 
+	@XmlElement(name = "Conf", required = true)
 	public DebitAuthorisationConfirmation2 getConfirmation() {
 		return confirmation;
 	}
@@ -314,11 +358,18 @@ public class DebitAuthorisationResponseV03 {
 		this.confirmation = confirmation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.036.03.03")
+	static public class Document {
+		@XmlElement(name = "DbtAuthstnRspn", required = true)
+		public DebitAuthorisationResponseV03 messageBody;
 	}
 }

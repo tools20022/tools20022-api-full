@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max240Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information of the counterparty in case of [sankaku] gappei (a third party is
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CounterpartyDetailsType1", propOrder = {"financialInstrumentIdentification", "postEffectiveDateClassification", "abbreviatedLocalLanguageSecurityName"})
 public class CounterpartyDetailsType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class CounterpartyDetailsType1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification15 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -226,6 +233,7 @@ public class CounterpartyDetailsType1 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "PstFctvDtClssfctn")
 	public InstitutionalClassificationCode getPostEffectiveDateClassification() {
 		return postEffectiveDateClassification;
 	}
@@ -234,6 +242,7 @@ public class CounterpartyDetailsType1 {
 		this.postEffectiveDateClassification = postEffectiveDateClassification;
 	}
 
+	@XmlElement(name = "AbbrvtdLclLangSctyNm", required = true)
 	public Max240Text getAbbreviatedLocalLanguageSecurityName() {
 		return abbreviatedLocalLanguageSecurityName;
 	}

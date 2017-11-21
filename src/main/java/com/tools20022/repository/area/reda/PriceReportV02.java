@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.PriceValuation2;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -52,9 +54,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code reda.001.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ReferenceDataArchive
@@ -93,6 +92,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code reda.001.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -111,6 +113,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "reda.001.001.02", propOrder = {"poolReference", "previousReference", "relatedReference", "priceValuationDetails", "extension"})
 public class PriceReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -148,6 +152,14 @@ public class PriceReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportV02.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference3> previousReference;
 	/**
@@ -181,6 +193,14 @@ public class PriceReportV02 {
 			definition = "Reference to a linked message that was previously sent.";
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportV02.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 relatedReference;
@@ -218,6 +238,14 @@ public class PriceReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportV02.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PriceValuation2> priceValuationDetails;
 	/**
@@ -251,6 +279,14 @@ public class PriceReportV02 {
 			definition = "Information related to the price valuation of a financial instrument.";
 			minOccurs = 1;
 			complexType_lazy = () -> PriceValuation2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportV02.class.getMethod("getPriceValuationDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -288,6 +324,14 @@ public class PriceReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportV02.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -302,7 +346,8 @@ public class PriceReportV02 {
 				xmlTag = "reda.001.001.02";
 				businessArea_lazy = () -> ReferenceDataArchive.mmObject();
 				xmlName = "reda.001.001.02";
-				messageBuildingBlock_lazy = () -> Arrays.asList(PriceReportV02.mmPoolReference, PriceReportV02.mmPreviousReference, PriceReportV02.mmRelatedReference, PriceReportV02.mmPriceValuationDetails, PriceReportV02.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportV02.mmPoolReference, com.tools20022.repository.area.reda.PriceReportV02.mmPreviousReference,
+						com.tools20022.repository.area.reda.PriceReportV02.mmRelatedReference, com.tools20022.repository.area.reda.PriceReportV02.mmPriceValuationDetails, com.tools20022.repository.area.reda.PriceReportV02.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "reda";
@@ -312,10 +357,16 @@ public class PriceReportV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PriceReportV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -324,6 +375,7 @@ public class PriceReportV02 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference3> getPreviousReference() {
 		return previousReference;
 	}
@@ -332,6 +384,7 @@ public class PriceReportV02 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
@@ -340,6 +393,7 @@ public class PriceReportV02 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "PricValtnDtls", required = true)
 	public List<PriceValuation2> getPriceValuationDetails() {
 		return priceValuationDetails;
 	}
@@ -348,11 +402,18 @@ public class PriceReportV02 {
 		this.priceValuationDetails = priceValuationDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:reda.001.02.02")
+	static public class Document {
+		@XmlElement(name = "reda.001.001.02", required = true)
+		public PriceReportV02 messageBody;
 	}
 }

@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Search for a system and a member of a system.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Search for a system and a member of a system."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemDetails2", propOrder = {"systemIdentification", "memberIdentification", "country", "accountIdentification"})
 public class SystemDetails2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -283,6 +289,7 @@ public class SystemDetails2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysId")
 	public CashClearingSystem1Code getSystemIdentification() {
 		return systemIdentification;
 	}
@@ -291,6 +298,7 @@ public class SystemDetails2 {
 		this.systemIdentification = systemIdentification;
 	}
 
+	@XmlElement(name = "MmbId")
 	public MemberIdentificationChoice getMemberIdentification() {
 		return memberIdentification;
 	}
@@ -299,6 +307,7 @@ public class SystemDetails2 {
 		this.memberIdentification = memberIdentification;
 	}
 
+	@XmlElement(name = "Ctry")
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -307,6 +316,7 @@ public class SystemDetails2 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "AcctId")
 	public AccountIdentification1Choice getAccountIdentification() {
 		return accountIdentification;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of statuses for the status of the transfer.
@@ -93,6 +97,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferStatus1Choice", propOrder = {"status", "pendingSettlement", "unmatched", "inRepair", "rejected", "failedSettlement", "cancelled", "reversed", "cancellationPending"})
 public class TransferStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -630,6 +636,7 @@ public class TransferStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public TransferInstructionStatus3 getStatus() {
 		return status;
 	}
@@ -638,6 +645,7 @@ public class TransferStatus1Choice {
 		this.status = status;
 	}
 
+	@XmlElement(name = "PdgSttlm", required = true)
 	public PendingSettlementStatus2 getPendingSettlement() {
 		return pendingSettlement;
 	}
@@ -646,6 +654,7 @@ public class TransferStatus1Choice {
 		this.pendingSettlement = pendingSettlement;
 	}
 
+	@XmlElement(name = "Umtchd", required = true)
 	public TransferUnmatchedStatus2 getUnmatched() {
 		return unmatched;
 	}
@@ -654,6 +663,7 @@ public class TransferStatus1Choice {
 		this.unmatched = unmatched;
 	}
 
+	@XmlElement(name = "InRpr", required = true)
 	public InRepairStatus3 getInRepair() {
 		return inRepair;
 	}
@@ -662,6 +672,7 @@ public class TransferStatus1Choice {
 		this.inRepair = inRepair;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public List<RejectedStatus8Choice> getRejected() {
 		return rejected;
 	}
@@ -670,6 +681,7 @@ public class TransferStatus1Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "FaildSttlm", required = true)
 	public FailedSettlementStatus1 getFailedSettlement() {
 		return failedSettlement;
 	}
@@ -678,6 +690,7 @@ public class TransferStatus1Choice {
 		this.failedSettlement = failedSettlement;
 	}
 
+	@XmlElement(name = "Canc", required = true)
 	public CancelledStatus3 getCancelled() {
 		return cancelled;
 	}
@@ -686,6 +699,7 @@ public class TransferStatus1Choice {
 		this.cancelled = cancelled;
 	}
 
+	@XmlElement(name = "Rvsd", required = true)
 	public ReversedStatus1 getReversed() {
 		return reversed;
 	}
@@ -694,6 +708,7 @@ public class TransferStatus1Choice {
 		this.reversed = reversed;
 	}
 
+	@XmlElement(name = "CxlPdg", required = true)
 	public CancellationPendingStatus1 getCancellationPending() {
 		return cancellationPending;
 	}

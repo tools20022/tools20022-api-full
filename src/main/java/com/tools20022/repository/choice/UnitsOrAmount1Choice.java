@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between an amount or number of units.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between an amount or number of units."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnitsOrAmount1Choice", propOrder = {"amount", "unit"})
 public class UnitsOrAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class UnitsOrAmount1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -166,6 +173,7 @@ public class UnitsOrAmount1Choice {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Unit", required = true)
 	public DecimalNumber getUnit() {
 		return unit;
 	}

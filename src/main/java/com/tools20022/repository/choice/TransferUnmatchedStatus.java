@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.TransferUnmatchedStatusReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status is unmatched.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Status is unmatched."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferUnmatchedStatus", propOrder = {"reason", "dataSourceScheme", "noReason"})
 public class TransferUnmatchedStatus {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class TransferUnmatchedStatus {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public TransferUnmatchedStatusReason1 getReason() {
 		return reason;
 	}
@@ -238,6 +245,7 @@ public class TransferUnmatchedStatus {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}
@@ -246,6 +254,7 @@ public class TransferUnmatchedStatus {
 		this.dataSourceScheme = dataSourceScheme;
 	}
 
+	@XmlElement(name = "NoRsn", required = true)
 	public NoReasonCode getNoReason() {
 		return noReason;
 	}

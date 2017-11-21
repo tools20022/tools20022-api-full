@@ -27,6 +27,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "RR01|SL01"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -54,6 +56,7 @@ public class RestrictedRR01SL01CodeText {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RestrictedRR01SL01CodeText";
 				definition = "EPC Technical validation subset restricted RR01 or SL01 code.";
+				pattern = "RR01|SL01";
 			}
 		});
 		return mmObject_lazy.get();

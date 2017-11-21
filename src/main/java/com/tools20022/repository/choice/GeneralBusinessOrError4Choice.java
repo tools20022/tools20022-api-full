@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.GeneralBusinessInformation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports either on the business information or on a business error.
@@ -69,6 +73,8 @@ import java.util.List;
  * GeneralBusinessOrError2Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GeneralBusinessOrError4Choice", propOrder = {"businessError", "generalBusiness"})
 public class GeneralBusinessOrError4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -182,6 +188,7 @@ public class GeneralBusinessOrError4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling4> getBusinessError() {
 		return businessError;
 	}
@@ -190,6 +197,7 @@ public class GeneralBusinessOrError4Choice {
 		this.businessError = businessError;
 	}
 
+	@XmlElement(name = "GnlBiz", required = true)
 	public GeneralBusinessInformation getGeneralBusiness() {
 		return generalBusiness;
 	}

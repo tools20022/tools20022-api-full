@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides transaction type and identification information.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SettlementTypeAndAdditionalParameters5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementTypeAndAdditionalParameters14", propOrder = {"securitiesMovementType", "payment", "commonIdentification", "corporateActionEventIdentification", "reconciliationIndicator"})
 public class SettlementTypeAndAdditionalParameters14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -379,6 +385,7 @@ public class SettlementTypeAndAdditionalParameters14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesMvmntTp")
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
@@ -387,6 +394,7 @@ public class SettlementTypeAndAdditionalParameters14 {
 		this.securitiesMovementType = securitiesMovementType;
 	}
 
+	@XmlElement(name = "Pmt")
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
@@ -395,6 +403,7 @@ public class SettlementTypeAndAdditionalParameters14 {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "CmonId")
 	public Max35Text getCommonIdentification() {
 		return commonIdentification;
 	}
@@ -403,6 +412,7 @@ public class SettlementTypeAndAdditionalParameters14 {
 		this.commonIdentification = commonIdentification;
 	}
 
+	@XmlElement(name = "CorpActnEvtId")
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -411,6 +421,7 @@ public class SettlementTypeAndAdditionalParameters14 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "RcncltnInd")
 	public YesNoIndicator getReconciliationIndicator() {
 		return reconciliationIndicator;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Commodity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines commodity sub-product attributes of an other c10 of type deliverable.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherC10CommodityDeliverable2", propOrder = {"baseProduct", "subProduct"})
 public class OtherC10CommodityDeliverable2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class OtherC10CommodityDeliverable2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BasePdct", required = true)
 	public AssetClassProductType11Code getBaseProduct() {
 		return baseProduct;
 	}
@@ -188,6 +195,7 @@ public class OtherC10CommodityDeliverable2 {
 		this.baseProduct = baseProduct;
 	}
 
+	@XmlElement(name = "SubPdct")
 	public AssetClassSubProductType47Code getSubProduct() {
 		return subProduct;
 	}

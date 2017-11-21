@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesOrderParameters;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * The quantities, amount or price of a financial instrument to be ordered.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "The quantities, amount or price of a financial instrument to be ordered."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderQuantity3", propOrder = {"minimumQuantity", "price", "matchIncrement", "maxPriceLevels", "previousClosingPrice"})
 public class OrderQuantity3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -334,6 +340,7 @@ public class OrderQuantity3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MinQty")
 	public FinancialInstrumentQuantityChoice getMinimumQuantity() {
 		return minimumQuantity;
 	}
@@ -342,6 +349,7 @@ public class OrderQuantity3 {
 		this.minimumQuantity = minimumQuantity;
 	}
 
+	@XmlElement(name = "Pric")
 	public Price1 getPrice() {
 		return price;
 	}
@@ -350,6 +358,7 @@ public class OrderQuantity3 {
 		this.price = price;
 	}
 
+	@XmlElement(name = "MtchIncrmt")
 	public FinancialInstrumentQuantityChoice getMatchIncrement() {
 		return matchIncrement;
 	}
@@ -358,6 +367,7 @@ public class OrderQuantity3 {
 		this.matchIncrement = matchIncrement;
 	}
 
+	@XmlElement(name = "MxPricLvls")
 	public Number getMaxPriceLevels() {
 		return maxPriceLevels;
 	}
@@ -366,6 +376,7 @@ public class OrderQuantity3 {
 		this.maxPriceLevels = maxPriceLevels;
 	}
 
+	@XmlElement(name = "PrvsClsgPric")
 	public Price1 getPreviousClosingPrice() {
 		return previousClosingPrice;
 	}

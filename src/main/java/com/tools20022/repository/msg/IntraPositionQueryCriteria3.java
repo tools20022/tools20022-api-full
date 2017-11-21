@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria based on which information is included.
@@ -77,6 +81,8 @@ import java.util.List;
  * definition} = "Defines the criteria based on which information is included."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionQueryCriteria3", propOrder = {"modificationRequestIdentification", "instructionQueryType", "processingStatus", "safekeepingAccount", "accountOwner", "messageOriginator", "creationDateTime"})
 public class IntraPositionQueryCriteria3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -387,6 +393,7 @@ public class IntraPositionQueryCriteria3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ModReqId")
 	public List<Max35Text> getModificationRequestIdentification() {
 		return modificationRequestIdentification;
 	}
@@ -395,6 +402,7 @@ public class IntraPositionQueryCriteria3 {
 		this.modificationRequestIdentification = modificationRequestIdentification;
 	}
 
+	@XmlElement(name = "InstrQryTp", required = true)
 	public InstructionQueryType1Code getInstructionQueryType() {
 		return instructionQueryType;
 	}
@@ -403,6 +411,7 @@ public class IntraPositionQueryCriteria3 {
 		this.instructionQueryType = instructionQueryType;
 	}
 
+	@XmlElement(name = "PrcgSts")
 	public List<ModificationProcessingStatus1Choice> getProcessingStatus() {
 		return processingStatus;
 	}
@@ -411,6 +420,7 @@ public class IntraPositionQueryCriteria3 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public List<SecuritiesAccount13> getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -419,6 +429,7 @@ public class IntraPositionQueryCriteria3 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public List<SystemPartyIdentification5> getAccountOwner() {
 		return accountOwner;
 	}
@@ -427,6 +438,7 @@ public class IntraPositionQueryCriteria3 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "MsgOrgtr")
 	public List<SystemPartyIdentification5> getMessageOriginator() {
 		return messageOriginator;
 	}
@@ -435,6 +447,7 @@ public class IntraPositionQueryCriteria3 {
 		this.messageOriginator = messageOriginator;
 	}
 
+	@XmlElement(name = "CreDtTm")
 	public DateAndDateTimeSearch2Choice getCreationDateTime() {
 		return creationDateTime;
 	}

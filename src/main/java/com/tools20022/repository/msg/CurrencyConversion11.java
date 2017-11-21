@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Conversion between the currency of a card acceptor and the currency of a card
@@ -73,6 +77,8 @@ import java.util.List;
  * CurrencyConversion7}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyConversion11", propOrder = {"result", "resultReason", "conversionDetails"})
 public class CurrencyConversion11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -234,6 +240,7 @@ public class CurrencyConversion11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rslt", required = true)
 	public CurrencyConversionResponse3Code getResult() {
 		return result;
 	}
@@ -242,6 +249,7 @@ public class CurrencyConversion11 {
 		this.result = result;
 	}
 
+	@XmlElement(name = "RsltRsn")
 	public Max35Text getResultReason() {
 		return resultReason;
 	}
@@ -250,6 +258,7 @@ public class CurrencyConversion11 {
 		this.resultReason = resultReason;
 	}
 
+	@XmlElement(name = "ConvsDtls")
 	public List<CurrencyConversion12> getConversionDetails() {
 		return conversionDetails;
 	}

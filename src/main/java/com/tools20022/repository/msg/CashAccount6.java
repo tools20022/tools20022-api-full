@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account to or from which a cash entry is made.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Account to or from which a cash entry is made."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccount6", propOrder = {"identification", "GBBankSortCode", "servicer"})
 public class CashAccount6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -237,6 +243,7 @@ public class CashAccount6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -245,6 +252,7 @@ public class CashAccount6 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "GBBkSortCd", required = true)
 	public UKDomesticSortCodeIdentifier getGBBankSortCode() {
 		return gBBankSortCode;
 	}
@@ -253,6 +261,7 @@ public class CashAccount6 {
 		this.gBBankSortCode = gBBankSortCode;
 	}
 
+	@XmlElement(name = "Svcr")
 	public PartyIdentification2Choice getServicer() {
 		return servicer;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.TransportByRail;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the transportation of goods by rail.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportByRail2", propOrder = {"placeOfReceipt", "placeOfDelivery", "railCarrierName"})
 public class TransportByRail2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -265,6 +271,7 @@ public class TransportByRail2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcOfRct", required = true)
 	public Max35Text getPlaceOfReceipt() {
 		return placeOfReceipt;
 	}
@@ -273,6 +280,7 @@ public class TransportByRail2 {
 		this.placeOfReceipt = placeOfReceipt;
 	}
 
+	@XmlElement(name = "PlcOfDlvry", required = true)
 	public Max35Text getPlaceOfDelivery() {
 		return placeOfDelivery;
 	}
@@ -281,6 +289,7 @@ public class TransportByRail2 {
 		this.placeOfDelivery = placeOfDelivery;
 	}
 
+	@XmlElement(name = "RailCrrierNm")
 	public Max35Text getRailCarrierName() {
 		return railCarrierName;
 	}

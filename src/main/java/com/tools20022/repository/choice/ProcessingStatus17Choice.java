@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.ProprietaryReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of status for the processing.
@@ -129,6 +133,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of status for the processing."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProcessingStatus17Choice", propOrder = {"acknowledgedAccepted", "alreadyMatchedAndAffirmed", "defaultAction", "done", "forcedRejection", "fullyExecutedConfirmationSent", "future", "generated", "inRepair", "noInstruction",
+		"openOrder", "pendingProcessing", "receivedAtIntermediary", "rejected", "settlementInstructionSent", "standingInstruction", "tradingSuspendedByStockExchange", "treated", "proprietaryStatus"})
 public class ProcessingStatus17Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -1053,6 +1060,7 @@ public class ProcessingStatus17Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AckdAccptd", required = true)
 	public ProprietaryReason1 getAcknowledgedAccepted() {
 		return acknowledgedAccepted;
 	}
@@ -1061,6 +1069,7 @@ public class ProcessingStatus17Choice {
 		this.acknowledgedAccepted = acknowledgedAccepted;
 	}
 
+	@XmlElement(name = "AlrdyMtchdAndAffrmd", required = true)
 	public ProprietaryReason1 getAlreadyMatchedAndAffirmed() {
 		return alreadyMatchedAndAffirmed;
 	}
@@ -1069,6 +1078,7 @@ public class ProcessingStatus17Choice {
 		this.alreadyMatchedAndAffirmed = alreadyMatchedAndAffirmed;
 	}
 
+	@XmlElement(name = "DfltActn", required = true)
 	public ProprietaryReason1 getDefaultAction() {
 		return defaultAction;
 	}
@@ -1077,6 +1087,7 @@ public class ProcessingStatus17Choice {
 		this.defaultAction = defaultAction;
 	}
 
+	@XmlElement(name = "Done", required = true)
 	public ProprietaryReason1 getDone() {
 		return done;
 	}
@@ -1085,6 +1096,7 @@ public class ProcessingStatus17Choice {
 		this.done = done;
 	}
 
+	@XmlElement(name = "ForcdRjctn", required = true)
 	public ProprietaryReason1 getForcedRejection() {
 		return forcedRejection;
 	}
@@ -1093,6 +1105,7 @@ public class ProcessingStatus17Choice {
 		this.forcedRejection = forcedRejection;
 	}
 
+	@XmlElement(name = "FullyExctdConfSnt", required = true)
 	public ProprietaryReason1 getFullyExecutedConfirmationSent() {
 		return fullyExecutedConfirmationSent;
 	}
@@ -1101,6 +1114,7 @@ public class ProcessingStatus17Choice {
 		this.fullyExecutedConfirmationSent = fullyExecutedConfirmationSent;
 	}
 
+	@XmlElement(name = "Futr", required = true)
 	public ProprietaryReason1 getFuture() {
 		return future;
 	}
@@ -1109,6 +1123,7 @@ public class ProcessingStatus17Choice {
 		this.future = future;
 	}
 
+	@XmlElement(name = "Gnrtd", required = true)
 	public ProprietaryReason1 getGenerated() {
 		return generated;
 	}
@@ -1117,6 +1132,7 @@ public class ProcessingStatus17Choice {
 		this.generated = generated;
 	}
 
+	@XmlElement(name = "InRpr", required = true)
 	public InstructionProcessingReason2Choice getInRepair() {
 		return inRepair;
 	}
@@ -1125,6 +1141,7 @@ public class ProcessingStatus17Choice {
 		this.inRepair = inRepair;
 	}
 
+	@XmlElement(name = "NoInstr", required = true)
 	public ProprietaryReason1 getNoInstruction() {
 		return noInstruction;
 	}
@@ -1133,6 +1150,7 @@ public class ProcessingStatus17Choice {
 		this.noInstruction = noInstruction;
 	}
 
+	@XmlElement(name = "OpnOrdr", required = true)
 	public ProprietaryReason1 getOpenOrder() {
 		return openOrder;
 	}
@@ -1141,6 +1159,7 @@ public class ProcessingStatus17Choice {
 		this.openOrder = openOrder;
 	}
 
+	@XmlElement(name = "PdgPrcg", required = true)
 	public PendingProcessing1Choice getPendingProcessing() {
 		return pendingProcessing;
 	}
@@ -1149,6 +1168,7 @@ public class ProcessingStatus17Choice {
 		this.pendingProcessing = pendingProcessing;
 	}
 
+	@XmlElement(name = "RcvdAtIntrmy", required = true)
 	public ProprietaryReason1 getReceivedAtIntermediary() {
 		return receivedAtIntermediary;
 	}
@@ -1157,6 +1177,7 @@ public class ProcessingStatus17Choice {
 		this.receivedAtIntermediary = receivedAtIntermediary;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public InstructionProcessingReason1Choice getRejected() {
 		return rejected;
 	}
@@ -1165,6 +1186,7 @@ public class ProcessingStatus17Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "SttlmInstrSnt", required = true)
 	public ProprietaryReason1 getSettlementInstructionSent() {
 		return settlementInstructionSent;
 	}
@@ -1173,6 +1195,7 @@ public class ProcessingStatus17Choice {
 		this.settlementInstructionSent = settlementInstructionSent;
 	}
 
+	@XmlElement(name = "StgInstr", required = true)
 	public ProprietaryReason1 getStandingInstruction() {
 		return standingInstruction;
 	}
@@ -1181,6 +1204,7 @@ public class ProcessingStatus17Choice {
 		this.standingInstruction = standingInstruction;
 	}
 
+	@XmlElement(name = "TradgSspdByStockXchg", required = true)
 	public ProprietaryReason1 getTradingSuspendedByStockExchange() {
 		return tradingSuspendedByStockExchange;
 	}
@@ -1189,6 +1213,7 @@ public class ProcessingStatus17Choice {
 		this.tradingSuspendedByStockExchange = tradingSuspendedByStockExchange;
 	}
 
+	@XmlElement(name = "Trtd", required = true)
 	public ProprietaryReason1 getTreated() {
 		return treated;
 	}
@@ -1197,6 +1222,7 @@ public class ProcessingStatus17Choice {
 		this.treated = treated;
 	}
 
+	@XmlElement(name = "PrtrySts")
 	public ProprietaryStatusAndReason1 getProprietaryStatus() {
 		return proprietaryStatus;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.TransportBySea;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related for the transportation of goods by sea.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportBySea4", propOrder = {"portOfLoading", "portOfDischarge", "vesselName", "seaCarrierName"})
 public class TransportBySea4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -315,6 +321,7 @@ public class TransportBySea4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PortOfLoadng", required = true)
 	public Max35Text getPortOfLoading() {
 		return portOfLoading;
 	}
@@ -323,6 +330,7 @@ public class TransportBySea4 {
 		this.portOfLoading = portOfLoading;
 	}
 
+	@XmlElement(name = "PortOfDschrge", required = true)
 	public Max35Text getPortOfDischarge() {
 		return portOfDischarge;
 	}
@@ -331,6 +339,7 @@ public class TransportBySea4 {
 		this.portOfDischarge = portOfDischarge;
 	}
 
+	@XmlElement(name = "VsslNm")
 	public Max35Text getVesselName() {
 		return vesselName;
 	}
@@ -339,6 +348,7 @@ public class TransportBySea4 {
 		this.vesselName = vesselName;
 	}
 
+	@XmlElement(name = "SeaCrrierNm")
 	public Max35Text getSeaCarrierName() {
 		return seaCarrierName;
 	}

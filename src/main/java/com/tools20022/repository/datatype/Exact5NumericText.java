@@ -27,6 +27,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[0-9]{5}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -53,6 +55,7 @@ public class Exact5NumericText {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Exact5NumericText";
 				definition = "Specifies a numeric string with an exact length of 5 digits.";
+				pattern = "[0-9]{5}";
 			}
 		});
 		return mmObject_lazy.get();

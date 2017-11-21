@@ -29,18 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Status1Code Status1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status3Code Status3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status2Code Status2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status4Code Status4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status5Code Status5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status6Code Status6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status7Code Status7Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -75,6 +63,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.StatusCode#mmCancelledBySubcustodian
  * StatusCode.mmCancelledBySubcustodian}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status1Code Status1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status3Code Status3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status2Code Status2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status4Code Status4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status5Code Status5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status6Code Status6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status7Code Status7Code}</li>
  * </ul>
  * </li>
  * <li>

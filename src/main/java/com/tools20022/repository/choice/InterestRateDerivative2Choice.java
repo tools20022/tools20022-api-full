@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.UnderlyingInterestRateType3Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice element specifying the underlying types of an interest rate
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestRateDerivative2Choice", propOrder = {"swapRelated", "other"})
 public class InterestRateDerivative2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -168,6 +174,7 @@ public class InterestRateDerivative2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SwpRltd", required = true)
 	public SwapType1Code getSwapRelated() {
 		return swapRelated;
 	}
@@ -176,6 +183,7 @@ public class InterestRateDerivative2Choice {
 		this.swapRelated = swapRelated;
 	}
 
+	@XmlElement(name = "Othr", required = true)
 	public UnderlyingInterestRateType3Code getOther() {
 		return other;
 	}

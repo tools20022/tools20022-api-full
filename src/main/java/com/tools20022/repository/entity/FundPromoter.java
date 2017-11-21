@@ -63,6 +63,11 @@ public class FundPromoter extends FundManagerRole {
 				definition = "Fund Promoter";
 				superType_lazy = () -> FundManagerRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FundPromoter.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines a business letter containing identifications of involved entities and
@@ -172,6 +176,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BusinessLetter1", propOrder = {"applicationContext", "letterIdentifier", "date", "relatedLetter", "relatedMessage", "contentIdentifier", "instructionPriority", "originator", "primaryRecipient", "sender",
+		"authorisationUser", "responseRecipient", "copyRecipient", "otherParty", "associatedDocument", "governingContract", "legalContext", "additionalInformation", "notice", "validationStatusInformation", "digitalSignature"})
 public class BusinessLetter1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1175,6 +1182,7 @@ public class BusinessLetter1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ApplCntxt")
 	public Max35Text getApplicationContext() {
 		return applicationContext;
 	}
@@ -1183,6 +1191,7 @@ public class BusinessLetter1 {
 		this.applicationContext = applicationContext;
 	}
 
+	@XmlElement(name = "LttrIdr", required = true)
 	public QualifiedDocumentInformation1 getLetterIdentifier() {
 		return letterIdentifier;
 	}
@@ -1191,6 +1200,7 @@ public class BusinessLetter1 {
 		this.letterIdentifier = letterIdentifier;
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
@@ -1199,6 +1209,7 @@ public class BusinessLetter1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "RltdLttr")
 	public List<QualifiedDocumentInformation1> getRelatedLetter() {
 		return relatedLetter;
 	}
@@ -1207,6 +1218,7 @@ public class BusinessLetter1 {
 		this.relatedLetter = relatedLetter;
 	}
 
+	@XmlElement(name = "RltdMsg")
 	public List<QualifiedDocumentInformation1> getRelatedMessage() {
 		return relatedMessage;
 	}
@@ -1215,6 +1227,7 @@ public class BusinessLetter1 {
 		this.relatedMessage = relatedMessage;
 	}
 
+	@XmlElement(name = "CnttIdr")
 	public List<Max35Text> getContentIdentifier() {
 		return contentIdentifier;
 	}
@@ -1223,6 +1236,7 @@ public class BusinessLetter1 {
 		this.contentIdentifier = contentIdentifier;
 	}
 
+	@XmlElement(name = "InstrPrty")
 	public Priority3Code getInstructionPriority() {
 		return instructionPriority;
 	}
@@ -1231,6 +1245,7 @@ public class BusinessLetter1 {
 		this.instructionPriority = instructionPriority;
 	}
 
+	@XmlElement(name = "Orgtr", required = true)
 	public QualifiedPartyIdentification1 getOriginator() {
 		return originator;
 	}
@@ -1239,6 +1254,7 @@ public class BusinessLetter1 {
 		this.originator = originator;
 	}
 
+	@XmlElement(name = "PmryRcpt", required = true)
 	public List<QualifiedPartyIdentification1> getPrimaryRecipient() {
 		return primaryRecipient;
 	}
@@ -1247,6 +1263,7 @@ public class BusinessLetter1 {
 		this.primaryRecipient = primaryRecipient;
 	}
 
+	@XmlElement(name = "Sndr")
 	public List<QualifiedPartyIdentification1> getSender() {
 		return sender;
 	}
@@ -1255,6 +1272,7 @@ public class BusinessLetter1 {
 		this.sender = sender;
 	}
 
+	@XmlElement(name = "AuthstnUsr", required = true)
 	public List<QualifiedPartyIdentification1> getAuthorisationUser() {
 		return authorisationUser;
 	}
@@ -1263,6 +1281,7 @@ public class BusinessLetter1 {
 		this.authorisationUser = authorisationUser;
 	}
 
+	@XmlElement(name = "RspnRcpt")
 	public List<QualifiedPartyIdentification1> getResponseRecipient() {
 		return responseRecipient;
 	}
@@ -1271,6 +1290,7 @@ public class BusinessLetter1 {
 		this.responseRecipient = responseRecipient;
 	}
 
+	@XmlElement(name = "CpyRcpt")
 	public List<QualifiedPartyIdentification1> getCopyRecipient() {
 		return copyRecipient;
 	}
@@ -1279,6 +1299,7 @@ public class BusinessLetter1 {
 		this.copyRecipient = copyRecipient;
 	}
 
+	@XmlElement(name = "OthrPty")
 	public List<QualifiedPartyIdentification1> getOtherParty() {
 		return otherParty;
 	}
@@ -1287,6 +1308,7 @@ public class BusinessLetter1 {
 		this.otherParty = otherParty;
 	}
 
+	@XmlElement(name = "AssoctdDoc")
 	public List<QualifiedDocumentInformation1> getAssociatedDocument() {
 		return associatedDocument;
 	}
@@ -1295,6 +1317,7 @@ public class BusinessLetter1 {
 		this.associatedDocument = associatedDocument;
 	}
 
+	@XmlElement(name = "GovngCtrct")
 	public List<QualifiedDocumentInformation1> getGoverningContract() {
 		return governingContract;
 	}
@@ -1303,6 +1326,7 @@ public class BusinessLetter1 {
 		this.governingContract = governingContract;
 	}
 
+	@XmlElement(name = "LglCntxt")
 	public List<GovernanceRules2> getLegalContext() {
 		return legalContext;
 	}
@@ -1311,6 +1335,7 @@ public class BusinessLetter1 {
 		this.legalContext = legalContext;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max2000Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -1319,6 +1344,7 @@ public class BusinessLetter1 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "Ntce")
 	public Max350Text getNotice() {
 		return notice;
 	}
@@ -1327,6 +1353,7 @@ public class BusinessLetter1 {
 		this.notice = notice;
 	}
 
+	@XmlElement(name = "VldtnStsInf")
 	public ValidationStatusInformation1 getValidationStatusInformation() {
 		return validationStatusInformation;
 	}
@@ -1335,6 +1362,7 @@ public class BusinessLetter1 {
 		this.validationStatusInformation = validationStatusInformation;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public List<QualifiedPartyAndXMLSignature1> getDigitalSignature() {
 		return digitalSignature;
 	}

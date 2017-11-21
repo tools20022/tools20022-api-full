@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the modification requests data in the report.
@@ -70,6 +74,8 @@ import java.util.List;
  * definition} = "Provides the modification requests data in the report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraBalanceModification1", propOrder = {"accountOwner", "cashAccount", "processingStatus", "modification"})
 public class IntraBalanceModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -277,6 +283,7 @@ public class IntraBalanceModification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public SystemPartyIdentification5 getAccountOwner() {
 		return accountOwner;
 	}
@@ -285,6 +292,7 @@ public class IntraBalanceModification1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccount24 getCashAccount() {
 		return cashAccount;
 	}
@@ -293,6 +301,7 @@ public class IntraBalanceModification1 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "PrcgSts")
 	public ProcessingStatus31Choice getProcessingStatus() {
 		return processingStatus;
 	}
@@ -301,6 +310,7 @@ public class IntraBalanceModification1 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "Mod", required = true)
 	public List<IntraBalanceModification2> getModification() {
 		return modification;
 	}

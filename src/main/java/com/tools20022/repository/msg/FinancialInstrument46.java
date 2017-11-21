@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Security that is a sub-set of an investment fund, and is governed by the same
@@ -104,6 +108,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * FinancialInstrument39}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrument46", propOrder = {"identification", "name", "shortName", "transferType", "quantity", "averageAcquisitionPrice", "transferCurrency", "totalBookValue", "transfereeAccount", "subAccountDetails",
+		"settlementPartiesReceivingSideDetails", "deliveringAgentDetails"})
 public class FinancialInstrument46 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -787,6 +794,7 @@ public class FinancialInstrument46 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification23Choice getIdentification() {
 		return identification;
 	}
@@ -795,6 +803,7 @@ public class FinancialInstrument46 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max350Text getName() {
 		return name;
 	}
@@ -803,6 +812,7 @@ public class FinancialInstrument46 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "ShrtNm")
 	public Max35Text getShortName() {
 		return shortName;
 	}
@@ -811,6 +821,7 @@ public class FinancialInstrument46 {
 		this.shortName = shortName;
 	}
 
+	@XmlElement(name = "TrfTp", required = true)
 	public TransferType1Code getTransferType() {
 		return transferType;
 	}
@@ -819,6 +830,7 @@ public class FinancialInstrument46 {
 		this.transferType = transferType;
 	}
 
+	@XmlElement(name = "Qty")
 	public Quantity12Choice getQuantity() {
 		return quantity;
 	}
@@ -827,6 +839,7 @@ public class FinancialInstrument46 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "AvrgAcqstnPric")
 	public ActiveOrHistoricCurrencyAndAmount getAverageAcquisitionPrice() {
 		return averageAcquisitionPrice;
 	}
@@ -835,6 +848,7 @@ public class FinancialInstrument46 {
 		this.averageAcquisitionPrice = averageAcquisitionPrice;
 	}
 
+	@XmlElement(name = "TrfCcy")
 	public ActiveOrHistoricCurrencyCode getTransferCurrency() {
 		return transferCurrency;
 	}
@@ -843,6 +857,7 @@ public class FinancialInstrument46 {
 		this.transferCurrency = transferCurrency;
 	}
 
+	@XmlElement(name = "TtlBookVal")
 	public ActiveOrHistoricCurrencyAndAmount getTotalBookValue() {
 		return totalBookValue;
 	}
@@ -851,6 +866,7 @@ public class FinancialInstrument46 {
 		this.totalBookValue = totalBookValue;
 	}
 
+	@XmlElement(name = "TrfeeAcct")
 	public Account19 getTransfereeAccount() {
 		return transfereeAccount;
 	}
@@ -859,6 +875,7 @@ public class FinancialInstrument46 {
 		this.transfereeAccount = transfereeAccount;
 	}
 
+	@XmlElement(name = "SubAcctDtls")
 	public SubAccount5 getSubAccountDetails() {
 		return subAccountDetails;
 	}
@@ -867,6 +884,7 @@ public class FinancialInstrument46 {
 		this.subAccountDetails = subAccountDetails;
 	}
 
+	@XmlElement(name = "SttlmPtiesRcvgSdDtls")
 	public ReceivingPartiesAndAccount14 getSettlementPartiesReceivingSideDetails() {
 		return settlementPartiesReceivingSideDetails;
 	}
@@ -875,6 +893,7 @@ public class FinancialInstrument46 {
 		this.settlementPartiesReceivingSideDetails = settlementPartiesReceivingSideDetails;
 	}
 
+	@XmlElement(name = "DlvrgAgtDtls")
 	public PartyIdentificationAndAccount125 getDeliveringAgentDetails() {
 		return deliveringAgentDetails;
 	}

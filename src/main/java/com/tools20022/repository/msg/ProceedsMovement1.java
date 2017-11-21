@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the proceeds movements.
@@ -70,6 +74,8 @@ import java.util.List;
  * definition} = "Details of the proceeds movements."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProceedsMovement1", propOrder = {"cashProceedsMovementDetails", "securitiesProceedsMovementDetails", "taxDetails"})
 public class ProceedsMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -217,6 +223,7 @@ public class ProceedsMovement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshPrcdsMvmntDtls")
 	public List<CashProceeds1> getCashProceedsMovementDetails() {
 		return cashProceedsMovementDetails;
 	}
@@ -225,6 +232,7 @@ public class ProceedsMovement1 {
 		this.cashProceedsMovementDetails = cashProceedsMovementDetails;
 	}
 
+	@XmlElement(name = "SctiesPrcdsMvmntDtls")
 	public List<SecuritiesProceeds1> getSecuritiesProceedsMovementDetails() {
 		return securitiesProceedsMovementDetails;
 	}
@@ -233,6 +241,7 @@ public class ProceedsMovement1 {
 		this.securitiesProceedsMovementDetails = securitiesProceedsMovementDetails;
 	}
 
+	@XmlElement(name = "TaxDtls")
 	public TaxVoucher1 getTaxDetails() {
 		return taxDetails;
 	}

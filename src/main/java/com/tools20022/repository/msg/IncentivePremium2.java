@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cash premium made available if the securities holder consents or participates
@@ -90,6 +94,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IncentivePremium2", propOrder = {"description", "amount", "perSecurity", "perVote", "perAttendee", "paymentDate"})
 public class IncentivePremium2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -447,6 +453,7 @@ public class IncentivePremium2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Desc")
 	public Max350Text getDescription() {
 		return description;
 	}
@@ -455,6 +462,7 @@ public class IncentivePremium2 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public PriceRateOrAmountChoice getAmount() {
 		return amount;
 	}
@@ -463,6 +471,7 @@ public class IncentivePremium2 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "PerScty", required = true)
 	public Number getPerSecurity() {
 		return perSecurity;
 	}
@@ -471,6 +480,7 @@ public class IncentivePremium2 {
 		this.perSecurity = perSecurity;
 	}
 
+	@XmlElement(name = "PerVote", required = true)
 	public Number getPerVote() {
 		return perVote;
 	}
@@ -479,6 +489,7 @@ public class IncentivePremium2 {
 		this.perVote = perVote;
 	}
 
+	@XmlElement(name = "PerAttndee", required = true)
 	public YesNoIndicator getPerAttendee() {
 		return perAttendee;
 	}
@@ -487,6 +498,7 @@ public class IncentivePremium2 {
 		this.perAttendee = perAttendee;
 	}
 
+	@XmlElement(name = "PmtDt")
 	public DateFormat3Choice getPaymentDate() {
 		return paymentDate;
 	}

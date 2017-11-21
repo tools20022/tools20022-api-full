@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the processing status.
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of format for the processing status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionProcessingStatus6Choice", propOrder = {"rejected", "repair", "cancelled", "acknowledgedAccepted", "proprietary"})
 public class IntraPositionProcessingStatus6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -351,6 +357,7 @@ public class IntraPositionProcessingStatus6Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectionOrRepairStatus33Choice getRejected() {
 		return rejected;
 	}
@@ -359,6 +366,7 @@ public class IntraPositionProcessingStatus6Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Rpr", required = true)
 	public RejectionOrRepairStatus33Choice getRepair() {
 		return repair;
 	}
@@ -367,6 +375,7 @@ public class IntraPositionProcessingStatus6Choice {
 		this.repair = repair;
 	}
 
+	@XmlElement(name = "Canc", required = true)
 	public CancellationStatus17Choice getCancelled() {
 		return cancelled;
 	}
@@ -375,6 +384,7 @@ public class IntraPositionProcessingStatus6Choice {
 		this.cancelled = cancelled;
 	}
 
+	@XmlElement(name = "AckdAccptd", required = true)
 	public AcknowledgedAcceptedStatus25Choice getAcknowledgedAccepted() {
 		return acknowledgedAccepted;
 	}
@@ -383,6 +393,7 @@ public class IntraPositionProcessingStatus6Choice {
 		this.acknowledgedAccepted = acknowledgedAccepted;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason7 getProprietary() {
 		return proprietary;
 	}

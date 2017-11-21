@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Digest computed on the identified data.
@@ -73,6 +77,8 @@ import java.util.List;
  * DigestedData1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DigestedData2", propOrder = {"version", "digestAlgorithm", "encapsulatedContent", "digest"})
 public class DigestedData2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -286,6 +292,7 @@ public class DigestedData2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Number getVersion() {
 		return version;
 	}
@@ -294,6 +301,7 @@ public class DigestedData2 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "DgstAlgo", required = true)
 	public List<AlgorithmIdentification5> getDigestAlgorithm() {
 		return digestAlgorithm;
 	}
@@ -302,6 +310,7 @@ public class DigestedData2 {
 		this.digestAlgorithm = digestAlgorithm;
 	}
 
+	@XmlElement(name = "NcpsltdCntt", required = true)
 	public EncapsulatedContent1 getEncapsulatedContent() {
 		return encapsulatedContent;
 	}
@@ -310,6 +319,7 @@ public class DigestedData2 {
 		this.encapsulatedContent = encapsulatedContent;
 	}
 
+	@XmlElement(name = "Dgst", required = true)
 	public Max140Text getDigest() {
 		return digest;
 	}

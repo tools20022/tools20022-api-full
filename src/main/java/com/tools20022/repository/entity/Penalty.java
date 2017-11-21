@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PaymentTerms3;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,9 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Adjustment
- * Adjustment}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -47,6 +45,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * Penalty.mmPenaltyBasisAmount}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Adjustment
+ * Adjustment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -76,10 +77,6 @@ public class Penalty extends Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Penalty
-	 * Penalty}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -88,6 +85,10 @@ public class Penalty extends Adjustment {
 	 * PaymentTerms3.mmPenaltyBasisAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Penalty
+	 * Penalty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -102,7 +103,7 @@ public class Penalty extends Adjustment {
 	public static final MMBusinessAttribute mmPenaltyBasisAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentTerms3.mmPenaltyBasisAmount);
-			elementContext_lazy = () -> Penalty.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Penalty.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PenaltyBasisAmount";
@@ -110,6 +111,14 @@ public class Penalty extends Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Penalty.class.getMethod("getPenaltyBasisAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -121,7 +130,12 @@ public class Penalty extends Adjustment {
 				name = "Penalty";
 				definition = "Fee charged when the conditions of a contract are not met.";
 				superType_lazy = () -> Adjustment.mmObject();
-				element_lazy = () -> Arrays.asList(Penalty.mmPenaltyBasisAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Penalty.mmPenaltyBasisAmount);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Penalty.class;
 			}
 		});
 		return mmObject_lazy.get();

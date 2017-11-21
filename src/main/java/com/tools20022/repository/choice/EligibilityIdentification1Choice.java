@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.ISINIdentifier;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the eligibility details.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the eligibility details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EligibilityIdentification1Choice", propOrder = {"country", "financialInstrumentIdentification", "issuerCSDIdentification"})
 public class EligibilityIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -210,6 +216,7 @@ public class EligibilityIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -218,6 +225,7 @@ public class EligibilityIdentification1Choice {
 		this.country = country;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public ISINIdentifier getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -226,6 +234,7 @@ public class EligibilityIdentification1Choice {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "IssrCSDId", required = true)
 	public SystemPartyIdentification1Choice getIssuerCSDIdentification() {
 		return issuerCSDIdentification;
 	}

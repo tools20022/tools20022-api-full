@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Automatic extension information.
@@ -66,6 +70,8 @@ import java.util.List;
  * definition} = "Automatic extension information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AutoExtension1", propOrder = {"period", "finalExpiryDate", "nonExtensionNotification"})
 public class AutoExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -224,6 +230,7 @@ public class AutoExtension1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prd")
 	public AutoExtend1Choice getPeriod() {
 		return period;
 	}
@@ -232,6 +239,7 @@ public class AutoExtension1 {
 		this.period = period;
 	}
 
+	@XmlElement(name = "FnlXpryDt")
 	public ISODate getFinalExpiryDate() {
 		return finalExpiryDate;
 	}
@@ -240,6 +248,7 @@ public class AutoExtension1 {
 		this.finalExpiryDate = finalExpiryDate;
 	}
 
+	@XmlElement(name = "NonXtnsnNtfctn")
 	public List<NonExtension1> getNonExtensionNotification() {
 		return nonExtensionNotification;
 	}

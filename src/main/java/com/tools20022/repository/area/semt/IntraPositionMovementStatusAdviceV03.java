@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.IntraPositionDetails19;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TransactionIdentifications15;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * Scope An account servicer sends a IntraPositionMovementStatusAdvice to an
@@ -55,9 +57,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.014.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
@@ -94,6 +93,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.014.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -117,6 +119,8 @@ import java.util.List;
  * IntraPositionMovementStatusAdviceV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionMovementStatusAdviceV03", propOrder = {"transactionIdentification", "processingStatus", "settlementStatus", "transactionDetails", "supplementaryData"})
 public class IntraPositionMovementStatusAdviceV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +170,14 @@ public class IntraPositionMovementStatusAdviceV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionIdentifications15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementStatusAdviceV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected IntraPositionProcessingStatus3Choice processingStatus;
 	/**
@@ -211,6 +223,14 @@ public class IntraPositionMovementStatusAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> IntraPositionProcessingStatus3Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementStatusAdviceV03.class.getMethod("getProcessingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SettlementStatus9Choice settlementStatus;
 	/**
@@ -255,6 +275,14 @@ public class IntraPositionMovementStatusAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementStatus9Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementStatusAdviceV03.class.getMethod("getSettlementStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected IntraPositionDetails19 transactionDetails;
 	/**
@@ -298,6 +326,14 @@ public class IntraPositionMovementStatusAdviceV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> IntraPositionDetails19.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementStatusAdviceV03.class.getMethod("getTransactionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -345,6 +381,14 @@ public class IntraPositionMovementStatusAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementStatusAdviceV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -359,8 +403,9 @@ public class IntraPositionMovementStatusAdviceV03 {
 				rootElement = "Document";
 				xmlTag = "IntraPosMvmntStsAdvc";
 				businessArea_lazy = () -> SecuritiesManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementStatusAdviceV03.mmTransactionIdentification, IntraPositionMovementStatusAdviceV03.mmProcessingStatus,
-						IntraPositionMovementStatusAdviceV03.mmSettlementStatus, IntraPositionMovementStatusAdviceV03.mmTransactionDetails, IntraPositionMovementStatusAdviceV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.mmTransactionIdentification,
+						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.mmProcessingStatus, com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.mmSettlementStatus,
+						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.mmTransactionDetails, com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -370,10 +415,16 @@ public class IntraPositionMovementStatusAdviceV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IntraPositionMovementStatusAdviceV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifications15 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -382,6 +433,7 @@ public class IntraPositionMovementStatusAdviceV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "PrcgSts")
 	public IntraPositionProcessingStatus3Choice getProcessingStatus() {
 		return processingStatus;
 	}
@@ -390,6 +442,7 @@ public class IntraPositionMovementStatusAdviceV03 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "SttlmSts")
 	public SettlementStatus9Choice getSettlementStatus() {
 		return settlementStatus;
 	}
@@ -398,6 +451,7 @@ public class IntraPositionMovementStatusAdviceV03 {
 		this.settlementStatus = settlementStatus;
 	}
 
+	@XmlElement(name = "TxDtls")
 	public IntraPositionDetails19 getTransactionDetails() {
 		return transactionDetails;
 	}
@@ -406,11 +460,18 @@ public class IntraPositionMovementStatusAdviceV03 {
 		this.transactionDetails = transactionDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.014.03.03")
+	static public class Document {
+		@XmlElement(name = "IntraPosMvmntStsAdvc", required = true)
+		public IntraPositionMovementStatusAdviceV03 messageBody;
 	}
 }

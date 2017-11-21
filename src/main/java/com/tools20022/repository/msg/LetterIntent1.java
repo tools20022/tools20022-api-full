@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies information about the letter of intent.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies information about the letter of intent."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LetterIntent1", propOrder = {"letterIntentReference", "amount", "startDate", "endDate"})
 public class LetterIntent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -245,6 +251,7 @@ public class LetterIntent1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LttrInttRef", required = true)
 	public Max35Text getLetterIntentReference() {
 		return letterIntentReference;
 	}
@@ -253,6 +260,7 @@ public class LetterIntent1 {
 		this.letterIntentReference = letterIntentReference;
 	}
 
+	@XmlElement(name = "Amt")
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -261,6 +269,7 @@ public class LetterIntent1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "StartDt")
 	public ISODate getStartDate() {
 		return startDate;
 	}
@@ -269,6 +278,7 @@ public class LetterIntent1 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "EndDt")
 	public ISODate getEndDate() {
 		return endDate;
 	}

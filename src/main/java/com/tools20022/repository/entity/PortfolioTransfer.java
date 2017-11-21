@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.PEPISACode;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,50 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferredYear
+ * PortfolioTransfer.mmTransferredYear}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmCashComponentIndicator
+ * PortfolioTransfer.mmCashComponentIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmAccountFrom
+ * PortfolioTransfer.mmAccountFrom}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmAccountTo
+ * PortfolioTransfer.mmAccountTo}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmPaymentObligation
+ * PortfolioTransfer.mmPaymentObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferredPortfolio
+ * PortfolioTransfer.mmTransferredPortfolio}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmSecuritiesDeliveryObligation
+ * PortfolioTransfer.mmSecuritiesDeliveryObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferredAmount
+ * PortfolioTransfer.mmTransferredAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferredPercentage
+ * PortfolioTransfer.mmTransferredPercentage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferDate
+ * PortfolioTransfer.mmTransferDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmNomineeAccount
+ * PortfolioTransfer.mmNomineeAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmPEPOrISAPlan
+ * PortfolioTransfer.mmPEPOrISAPlan}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmCurrentYearISAType
+ * PortfolioTransfer.mmCurrentYearISAType}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -238,50 +283,6 @@ import java.util.List;
  * ISATransfer24.mmProductTransferAndReference}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferredYear
- * PortfolioTransfer.mmTransferredYear}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmCashComponentIndicator
- * PortfolioTransfer.mmCashComponentIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmAccountFrom
- * PortfolioTransfer.mmAccountFrom}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmAccountTo
- * PortfolioTransfer.mmAccountTo}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmPaymentObligation
- * PortfolioTransfer.mmPaymentObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferredPortfolio
- * PortfolioTransfer.mmTransferredPortfolio}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmSecuritiesDeliveryObligation
- * PortfolioTransfer.mmSecuritiesDeliveryObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferredAmount
- * PortfolioTransfer.mmTransferredAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferredPercentage
- * PortfolioTransfer.mmTransferredPercentage}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferDate
- * PortfolioTransfer.mmTransferDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmNomineeAccount
- * PortfolioTransfer.mmNomineeAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmPEPOrISAPlan
- * PortfolioTransfer.mmPEPOrISAPlan}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmCurrentYearISAType
- * PortfolioTransfer.mmCurrentYearISAType}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -313,11 +314,6 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISOYear
 	 * ISOYear}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
-	 * PortfolioTransfer}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -343,6 +339,11 @@ public class PortfolioTransfer {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
+	 * PortfolioTransfer}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -359,7 +360,7 @@ public class PortfolioTransfer {
 		{
 			derivation_lazy = () -> Arrays.asList(PreviousYearChoice.mmSpecificPreviousYears, PreviousYear1.mmSpecificPreviousYears, PreviousYear1Choice.mmSpecificPreviousYears, PreviousYear2.mmPreviousYears, PreviousYear3.mmPreviousYear,
 					PEPISACashTransfer1.mmYear, PEPISACashTransfer2.mmYear);
-			elementContext_lazy = () -> PortfolioTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferredYear";
@@ -367,6 +368,14 @@ public class PortfolioTransfer {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOYear.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransfer.class.getMethod("getTransferredYear", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator cashComponentIndicator;
@@ -381,11 +390,6 @@ public class PortfolioTransfer {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
-	 * PortfolioTransfer}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -413,6 +417,11 @@ public class PortfolioTransfer {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
+	 * PortfolioTransfer}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -429,7 +438,7 @@ public class PortfolioTransfer {
 		{
 			derivation_lazy = () -> Arrays.asList(PreviousYear1.mmCashComponentIndicator, ISAYearsOfIssue1.mmCashComponentIndicator, PreviousYear2.mmCashComponentIndicator, ISAYearsOfIssue4.mmCashComponentIndicator,
 					ISAYearsOfIssue3.mmCashComponentIndicator, PreviousYear3.mmCashComponentIndicator, ISAYearsOfIssue5.mmCashComponentIndicator);
-			elementContext_lazy = () -> PortfolioTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashComponentIndicator";
@@ -437,6 +446,14 @@ public class PortfolioTransfer {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransfer.class.getMethod("getCashComponentIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.InvestmentAccount> accountFrom;
@@ -458,11 +475,6 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentAccount
 	 * InvestmentAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
-	 * PortfolioTransfer}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -487,6 +499,11 @@ public class PortfolioTransfer {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
+	 * PortfolioTransfer}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -503,7 +520,7 @@ public class PortfolioTransfer {
 		{
 			derivation_lazy = () -> Arrays.asList(PEPISATransfer7.mmClientAccount, PEPISATransfer11.mmTransferorAccount, ISATransfer9.mmTransferorAccount, ISATransfer12.mmTransferorAccount, ISATransfer19.mmTransferorAccount,
 					ISATransfer24.mmTransferorAccount);
-			elementContext_lazy = () -> PortfolioTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountFrom";
@@ -553,7 +570,7 @@ public class PortfolioTransfer {
 	 */
 	public static final MMBusinessAssociationEnd mmAccountTo = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PortfolioTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountTo";
@@ -603,7 +620,7 @@ public class PortfolioTransfer {
 	 */
 	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PortfolioTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
@@ -632,11 +649,6 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Portfolio Portfolio}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
-	 * PortfolioTransfer}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -696,6 +708,11 @@ public class PortfolioTransfer {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
+	 * PortfolioTransfer}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -712,7 +729,7 @@ public class PortfolioTransfer {
 					PEPISATransfer4.mmPortfolio, ISATransfer2.mmPortfolio, ISATransfer10.mmPortfolio, PEPISATransfer3.mmPortfolio, ISATransfer1.mmPortfolio, ISATransfer7.mmPortfolio, PEPISATransfer5.mmPortfolio, ISATransfer5.mmPortfolio,
 					ISATransfer15.mmPortfolio, ISATransfer16.mmPortfolio, ISATransfer13.mmPortfolio, ISATransfer14.mmPortfolio, ISATransfer21.mmPortfolio, ISATransfer18.mmPortfolio, ISATransfer23.mmPortfolio, ISATransfer26.mmPortfolio,
 					ISATransfer27.mmPortfolio, ISATransfer22.mmPortfolio);
-			elementContext_lazy = () -> PortfolioTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferredPortfolio";
@@ -763,7 +780,7 @@ public class PortfolioTransfer {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesDeliveryObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PortfolioTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesDeliveryObligation";
@@ -806,7 +823,7 @@ public class PortfolioTransfer {
 	 */
 	public static final MMBusinessAttribute mmTransferredAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PortfolioTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferredAmount";
@@ -814,6 +831,14 @@ public class PortfolioTransfer {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransfer.class.getMethod("getTransferredAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate transferredPercentage;
@@ -828,11 +853,6 @@ public class PortfolioTransfer {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
-	 * PortfolioTransfer}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -844,6 +864,11 @@ public class PortfolioTransfer {
 	 * PEPISACashTransfer2.mmPercentageToBeTransferred}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
+	 * PortfolioTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -860,7 +885,7 @@ public class PortfolioTransfer {
 	public static final MMBusinessAttribute mmTransferredPercentage = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PEPISACashTransfer1.mmPercentageToBeTransferred, PEPISACashTransfer2.mmPercentageToBeTransferred);
-			elementContext_lazy = () -> PortfolioTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferredPercentage";
@@ -868,6 +893,14 @@ public class PortfolioTransfer {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransfer.class.getMethod("getTransferredPercentage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime transferDate;
@@ -880,11 +913,6 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
-	 * PortfolioTransfer}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -930,6 +958,11 @@ public class PortfolioTransfer {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
+	 * PortfolioTransfer}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -945,7 +978,7 @@ public class PortfolioTransfer {
 			derivation_lazy = () -> Arrays.asList(PEPISATransfer2.mmActualTransferDate, PEPISATransfer4.mmActualTransferDate, ISATransfer2.mmActualTransferDate, ISATransfer10.mmActualTransferDate, ISATransfer1.mmRequestedTransferDate,
 					ISATransfer7.mmRequestedTransferDate, PEPISACashTransfer2.mmSettlementDate, ISATransfer16.mmRequestedTransferDate, ISATransfer13.mmActualTransferDate, ISATransfer21.mmActualTransferDate,
 					ISATransfer18.mmRequestedTransferDate, ISATransfer26.mmActualTransferDate, ISATransfer22.mmRequestedTransferDate);
-			elementContext_lazy = () -> PortfolioTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferDate";
@@ -953,6 +986,14 @@ public class PortfolioTransfer {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransfer.class.getMethod("getTransferDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentAccount nomineeAccount;
@@ -974,11 +1015,6 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentAccount
 	 * InvestmentAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
-	 * PortfolioTransfer}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1003,6 +1039,11 @@ public class PortfolioTransfer {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
+	 * PortfolioTransfer}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1019,7 +1060,7 @@ public class PortfolioTransfer {
 		{
 			derivation_lazy = () -> Arrays.asList(PEPISATransfer7.mmNomineeAccount, PEPISATransfer11.mmNomineeAccount, ISATransfer9.mmNomineeAccount, ISATransfer12.mmNomineeAccount, ISATransfer19.mmNomineeAccount,
 					ISATransfer24.mmNomineeAccount);
-			elementContext_lazy = () -> PortfolioTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NomineeAccount";
@@ -1041,11 +1082,6 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.PEPISACode
 	 * PEPISACode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
-	 * PortfolioTransfer}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1055,6 +1091,11 @@ public class PortfolioTransfer {
 	 * PEPISACashTransfer2.mmType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
+	 * PortfolioTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1070,7 +1111,7 @@ public class PortfolioTransfer {
 	public static final MMBusinessAttribute mmPEPOrISAPlan = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PEPISACashTransfer1.mmType, PEPISACashTransfer2.mmType);
-			elementContext_lazy = () -> PortfolioTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PEPOrISAPlan";
@@ -1078,6 +1119,14 @@ public class PortfolioTransfer {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PEPISACode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransfer.class.getMethod("getPEPOrISAPlan", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISATypeCode currentYearISAType;
@@ -1091,11 +1140,6 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.ISATypeCode
 	 * ISATypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
-	 * PortfolioTransfer}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1144,6 +1188,11 @@ public class PortfolioTransfer {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
+	 * PortfolioTransfer}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1161,7 +1210,7 @@ public class PortfolioTransfer {
 			derivation_lazy = () -> Arrays.asList(ISAYearsOfIssue.mmCurrentYear, ISAYearsOfIssue1.mmCurrentYearType, ISAYearsOfIssue1.mmExtendedCurrentYearType, CurrentYearType1Choice.mmCurrentYearType,
 					CurrentYearType1Choice.mmExtendedCurrentYearType, ISAYearsOfIssue4.mmCurrentYear, ISAYearsOfIssue3.mmCurrentYearType, ISAYearsOfIssue3.mmExtendedCurrentYearType, ISAYearsOfIssue5.mmCurrentYear,
 					ISAYearsOfIssue2.mmCurrentYearType, ISAYearsOfIssue2.mmExtendedCurrentYearType, CurrentYearType2Choice.mmCurrentYearType, CurrentYearType2Choice.mmExtendedCurrentYearType, ISAYearsOfIssue6.mmCurrentYear);
-			elementContext_lazy = () -> PortfolioTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrentYearISAType";
@@ -1169,6 +1218,14 @@ public class PortfolioTransfer {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISATypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransfer.class.getMethod("getCurrentYearISAType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1188,9 +1245,11 @@ public class PortfolioTransfer {
 						PEPISATransfer4.mmPEP, ISAYearsOfIssue5.mmPreviousYears, PEPISATransfer3.mmISA, PEPISATransfer3.mmPEP, ISAYearsOfIssue2.mmPreviousYears, PEPISATransfer5.mmISA, PEPISATransfer5.mmPEP,
 						ISAYearsOfIssue6.mmPreviousYears, PEPOrISAChoice.mmISA, PEPOrISAChoice.mmPEP, ISATransfer12.mmProductTransferAndReference, ISATransfer17.mmProductTransfer, ISATransfer20.mmProductTransfer,
 						ISATransfer19.mmProductTransferAndReference, ISATransfer25.mmProductTransfer, ISATransfer24.mmProductTransferAndReference);
-				element_lazy = () -> Arrays.asList(PortfolioTransfer.mmTransferredYear, PortfolioTransfer.mmCashComponentIndicator, PortfolioTransfer.mmAccountFrom, PortfolioTransfer.mmAccountTo, PortfolioTransfer.mmPaymentObligation,
-						PortfolioTransfer.mmTransferredPortfolio, PortfolioTransfer.mmSecuritiesDeliveryObligation, PortfolioTransfer.mmTransferredAmount, PortfolioTransfer.mmTransferredPercentage, PortfolioTransfer.mmTransferDate,
-						PortfolioTransfer.mmNomineeAccount, PortfolioTransfer.mmPEPOrISAPlan, PortfolioTransfer.mmCurrentYearISAType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PortfolioTransfer.mmTransferredYear, com.tools20022.repository.entity.PortfolioTransfer.mmCashComponentIndicator,
+						com.tools20022.repository.entity.PortfolioTransfer.mmAccountFrom, com.tools20022.repository.entity.PortfolioTransfer.mmAccountTo, com.tools20022.repository.entity.PortfolioTransfer.mmPaymentObligation,
+						com.tools20022.repository.entity.PortfolioTransfer.mmTransferredPortfolio, com.tools20022.repository.entity.PortfolioTransfer.mmSecuritiesDeliveryObligation,
+						com.tools20022.repository.entity.PortfolioTransfer.mmTransferredAmount, com.tools20022.repository.entity.PortfolioTransfer.mmTransferredPercentage, com.tools20022.repository.entity.PortfolioTransfer.mmTransferDate,
+						com.tools20022.repository.entity.PortfolioTransfer.mmNomineeAccount, com.tools20022.repository.entity.PortfolioTransfer.mmPEPOrISAPlan, com.tools20022.repository.entity.PortfolioTransfer.mmCurrentYearISAType);
 				derivationComponent_lazy = () -> Arrays.asList(PreviousYearChoice.mmObject(), ISAYearsOfIssue.mmObject(), PEPISATransfer1.mmObject(), PreviousYear1.mmObject(), ISAYearsOfIssue1.mmObject(), PEPISATransfer6.mmObject(),
 						CurrentYearType1Choice.mmObject(), PreviousYear1Choice.mmObject(), PreviousYear2.mmObject(), ISAYearsOfIssue4.mmObject(), ISATransfer4.mmObject(), ISATransfer6.mmObject(), PEPISATransfer8.mmObject(),
 						PEPISATransfer7.mmObject(), ISATransfer3.mmObject(), PEPISATransfer11.mmObject(), ISATransfer8.mmObject(), ISATransfer9.mmObject(), PEPISATransfer2.mmObject(), ISAYearsOfIssue3.mmObject(),
@@ -1199,6 +1258,11 @@ public class PortfolioTransfer {
 						PEPISACashTransfer2.mmObject(), ISATransfer15.mmObject(), ISATransfer16.mmObject(), ISATransfer13.mmObject(), ISATransfer14.mmObject(), ISATransfer12.mmObject(), ISATransfer17.mmObject(), ISATransfer21.mmObject(),
 						ISATransfer18.mmObject(), ISATransfer20.mmObject(), ISATransfer19.mmObject(), ISATransfer23.mmObject(), ISATransfer26.mmObject(), ISATransfer27.mmObject(), ISATransfer22.mmObject(), ISATransfer25.mmObject(),
 						ISATransfer24.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PortfolioTransfer.class;
 			}
 		});
 		return mmObject_lazy.get();

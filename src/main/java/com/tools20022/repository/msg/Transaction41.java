@@ -32,6 +32,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the details of the transaction.
@@ -123,6 +127,10 @@ import java.util.List;
  * Transaction34}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Transaction41", propOrder = {"accountOwnerTransactionIdentification", "accountServicerTransactionIdentification", "marketInfrastructureTransactionIdentification", "processorTransactionIdentification",
+		"tradeIdentification", "poolIdentification", "commonIdentification", "corporateActionEventIdentification", "tripartyAgentCollateralTransactionIdentification", "clientTripartyCollateralTransactionIdentification",
+		"clientCollateralInstructionIdentification", "tripartyCollateralInstructionIdentification", "transactionDetails", "statusAndReason"})
 public class Transaction41 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1042,6 +1050,7 @@ public class Transaction41 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnrTxId", required = true)
 	public Max35Text getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
@@ -1050,6 +1059,7 @@ public class Transaction41 {
 		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrTxId")
 	public Max35Text getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
@@ -1058,6 +1068,7 @@ public class Transaction41 {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
 	}
 
+	@XmlElement(name = "MktInfrstrctrTxId")
 	public Max35Text getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}
@@ -1066,6 +1077,7 @@ public class Transaction41 {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
 	}
 
+	@XmlElement(name = "PrcrTxId")
 	public Max35Text getProcessorTransactionIdentification() {
 		return processorTransactionIdentification;
 	}
@@ -1074,6 +1086,7 @@ public class Transaction41 {
 		this.processorTransactionIdentification = processorTransactionIdentification;
 	}
 
+	@XmlElement(name = "TradId")
 	public List<Max35Text> getTradeIdentification() {
 		return tradeIdentification;
 	}
@@ -1082,6 +1095,7 @@ public class Transaction41 {
 		this.tradeIdentification = tradeIdentification;
 	}
 
+	@XmlElement(name = "PoolId")
 	public Max35Text getPoolIdentification() {
 		return poolIdentification;
 	}
@@ -1090,6 +1104,7 @@ public class Transaction41 {
 		this.poolIdentification = poolIdentification;
 	}
 
+	@XmlElement(name = "CmonId")
 	public Max35Text getCommonIdentification() {
 		return commonIdentification;
 	}
@@ -1098,6 +1113,7 @@ public class Transaction41 {
 		this.commonIdentification = commonIdentification;
 	}
 
+	@XmlElement(name = "CorpActnEvtId")
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -1106,6 +1122,7 @@ public class Transaction41 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "TrptyAgtCollTxId")
 	public Max35Text getTripartyAgentCollateralTransactionIdentification() {
 		return tripartyAgentCollateralTransactionIdentification;
 	}
@@ -1114,6 +1131,7 @@ public class Transaction41 {
 		this.tripartyAgentCollateralTransactionIdentification = tripartyAgentCollateralTransactionIdentification;
 	}
 
+	@XmlElement(name = "ClntTrptyCollTxId")
 	public Max35Text getClientTripartyCollateralTransactionIdentification() {
 		return clientTripartyCollateralTransactionIdentification;
 	}
@@ -1122,6 +1140,7 @@ public class Transaction41 {
 		this.clientTripartyCollateralTransactionIdentification = clientTripartyCollateralTransactionIdentification;
 	}
 
+	@XmlElement(name = "ClntCollInstrId")
 	public Max35Text getClientCollateralInstructionIdentification() {
 		return clientCollateralInstructionIdentification;
 	}
@@ -1130,6 +1149,7 @@ public class Transaction41 {
 		this.clientCollateralInstructionIdentification = clientCollateralInstructionIdentification;
 	}
 
+	@XmlElement(name = "TrptyCollInstrId")
 	public Max35Text getTripartyCollateralInstructionIdentification() {
 		return tripartyCollateralInstructionIdentification;
 	}
@@ -1138,6 +1158,7 @@ public class Transaction41 {
 		this.tripartyCollateralInstructionIdentification = tripartyCollateralInstructionIdentification;
 	}
 
+	@XmlElement(name = "TxDtls")
 	public TransactionDetails69 getTransactionDetails() {
 		return transactionDetails;
 	}
@@ -1146,6 +1167,7 @@ public class Transaction41 {
 		this.transactionDetails = transactionDetails;
 	}
 
+	@XmlElement(name = "StsAndRsn")
 	public List<Status15Choice> getStatusAndReason() {
 		return statusAndReason;
 	}

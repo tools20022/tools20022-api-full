@@ -23,6 +23,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.IndividualPerson13;
 import com.tools20022.repository.msg.IndividualPerson17;
 import com.tools20022.repository.msg.IndividualPerson26;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,18 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmMeetingAttendance
- * InstructionForMeeting.mmMeetingAttendance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AttendanceCard#mmMeetingAttendance
- * AttendanceCard.mmMeetingAttendance}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -60,6 +49,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.MeetingAttendance#mmRelatedMeeting
  * MeetingAttendance.mmRelatedMeeting}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmMeetingAttendance
+ * InstructionForMeeting.mmMeetingAttendance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AttendanceCard#mmMeetingAttendance
+ * AttendanceCard.mmMeetingAttendance}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,11 +101,6 @@ public class MeetingAttendance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.AttendanceCard
 	 * AttendanceCard}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingAttendance
-	 * MeetingAttendance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -120,6 +116,11 @@ public class MeetingAttendance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.MeetingAttendance
+	 * MeetingAttendance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -133,7 +134,7 @@ public class MeetingAttendance {
 	public static final MMBusinessAssociationEnd mmAttendanceCard = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndividualPerson13.mmAttendanceCardDetails, IndividualPerson17.mmAttendanceCardDetails, IndividualPerson26.mmAttendanceCardDetails);
-			elementContext_lazy = () -> MeetingAttendance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingAttendance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AttendanceCard";
@@ -177,7 +178,7 @@ public class MeetingAttendance {
 	 */
 	public static final MMBusinessAttribute mmPercentageOfVotingRights = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> MeetingAttendance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingAttendance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfVotingRights";
@@ -185,6 +186,14 @@ public class MeetingAttendance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingAttendance.class.getMethod("getPercentageOfVotingRights", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InstructionForMeeting relatedMeeting;
@@ -225,7 +234,7 @@ public class MeetingAttendance {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedMeeting = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> MeetingAttendance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingAttendance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedMeeting";
@@ -246,7 +255,13 @@ public class MeetingAttendance {
 				name = "MeetingAttendance";
 				definition = "Information on the participation of the security holder or of its assigned representative.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InstructionForMeeting.mmMeetingAttendance, com.tools20022.repository.entity.AttendanceCard.mmMeetingAttendance);
-				element_lazy = () -> Arrays.asList(MeetingAttendance.mmAttendanceCard, MeetingAttendance.mmPercentageOfVotingRights, MeetingAttendance.mmRelatedMeeting);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingAttendance.mmAttendanceCard, com.tools20022.repository.entity.MeetingAttendance.mmPercentageOfVotingRights,
+						com.tools20022.repository.entity.MeetingAttendance.mmRelatedMeeting);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingAttendance.class;
 			}
 		});
 		return mmObject_lazy.get();

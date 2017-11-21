@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.YieldCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Return provided by a financial instrument.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Return provided by a financial instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "YieldCalculation2", propOrder = {"value", "calculationType", "redemptionPrice", "valueDate", "valuePeriod", "calculationDate"})
 public class YieldCalculation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -383,6 +389,7 @@ public class YieldCalculation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public PercentageRate getValue() {
 		return value;
 	}
@@ -391,6 +398,7 @@ public class YieldCalculation2 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "ClctnTp", required = true)
 	public CalculationType1Code getCalculationType() {
 		return calculationType;
 	}
@@ -399,6 +407,7 @@ public class YieldCalculation2 {
 		this.calculationType = calculationType;
 	}
 
+	@XmlElement(name = "RedPric")
 	public Price4 getRedemptionPrice() {
 		return redemptionPrice;
 	}
@@ -407,6 +416,7 @@ public class YieldCalculation2 {
 		this.redemptionPrice = redemptionPrice;
 	}
 
+	@XmlElement(name = "ValDt")
 	public ISODate getValueDate() {
 		return valueDate;
 	}
@@ -415,6 +425,7 @@ public class YieldCalculation2 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "ValPrd")
 	public DateTimePeriodChoice getValuePeriod() {
 		return valuePeriod;
 	}
@@ -423,6 +434,7 @@ public class YieldCalculation2 {
 		this.valuePeriod = valuePeriod;
 	}
 
+	@XmlElement(name = "ClctnDt")
 	public ISODate getCalculationDate() {
 		return calculationDate;
 	}

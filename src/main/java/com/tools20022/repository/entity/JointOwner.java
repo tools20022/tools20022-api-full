@@ -39,6 +39,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
+ * InvestmentAccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -86,10 +90,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountParties10Choice.mmJointOwner}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
- * InvestmentAccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -122,6 +122,11 @@ public class JointOwner extends InvestmentAccountPartyRole {
 						AccountParties2Choice.mmJointOwner, AccountParties3Choice.mmJointOwner, AccountParties4Choice.mmJointOwner, AccountParties7Choice.mmJointOwner, AccountParties6Choice.mmJointOwner, AccountParties5Choice.mmJointOwner,
 						AccountParties9Choice.mmJointOwner, AccountParties8Choice.mmJointOwner, AccountParties11Choice.mmJointOwner, AccountParties10Choice.mmJointOwner);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return JointOwner.class;
 			}
 		});
 		return mmObject_lazy.get();

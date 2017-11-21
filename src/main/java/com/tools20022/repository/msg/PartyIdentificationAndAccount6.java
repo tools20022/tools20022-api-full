@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Entity involved in an activity.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Entity involved in an activity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount6", propOrder = {"partyIdentification", "creditAccount", "financingAccount"})
 public class PartyIdentificationAndAccount6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -235,6 +241,7 @@ public class PartyIdentificationAndAccount6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification25 getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -243,6 +250,7 @@ public class PartyIdentificationAndAccount6 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "CdtAcct")
 	public CashAccount7 getCreditAccount() {
 		return creditAccount;
 	}
@@ -251,6 +259,7 @@ public class PartyIdentificationAndAccount6 {
 		this.creditAccount = creditAccount;
 	}
 
+	@XmlElement(name = "FincgAcct")
 	public CashAccount7 getFinancingAccount() {
 		return financingAccount;
 	}

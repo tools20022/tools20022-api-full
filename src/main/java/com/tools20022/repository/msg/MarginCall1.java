@@ -36,6 +36,10 @@ import com.tools20022.repository.entity.VariationMarginTerm;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the margin call request.
@@ -115,6 +119,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details of the margin call request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarginCall1", propOrder = {"exposedAmountPartyA", "exposedAmountPartyB", "exposureConvention", "independentAmountPartyA", "independentAmountPartyB", "marginTerms", "collateralBalance"})
 public class MarginCall1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -495,6 +501,7 @@ public class MarginCall1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XpsdAmtPtyA")
 	public ActiveCurrencyAndAmount getExposedAmountPartyA() {
 		return exposedAmountPartyA;
 	}
@@ -503,6 +510,7 @@ public class MarginCall1 {
 		this.exposedAmountPartyA = exposedAmountPartyA;
 	}
 
+	@XmlElement(name = "XpsdAmtPtyB")
 	public ActiveCurrencyAndAmount getExposedAmountPartyB() {
 		return exposedAmountPartyB;
 	}
@@ -511,6 +519,7 @@ public class MarginCall1 {
 		this.exposedAmountPartyB = exposedAmountPartyB;
 	}
 
+	@XmlElement(name = "XpsrCnvntn")
 	public ExposureConventionType1Code getExposureConvention() {
 		return exposureConvention;
 	}
@@ -519,6 +528,7 @@ public class MarginCall1 {
 		this.exposureConvention = exposureConvention;
 	}
 
+	@XmlElement(name = "IndpdntAmtPtyA")
 	public AggregatedIndependentAmount1 getIndependentAmountPartyA() {
 		return independentAmountPartyA;
 	}
@@ -527,6 +537,7 @@ public class MarginCall1 {
 		this.independentAmountPartyA = independentAmountPartyA;
 	}
 
+	@XmlElement(name = "IndpdntAmtPtyB")
 	public AggregatedIndependentAmount1 getIndependentAmountPartyB() {
 		return independentAmountPartyB;
 	}
@@ -535,6 +546,7 @@ public class MarginCall1 {
 		this.independentAmountPartyB = independentAmountPartyB;
 	}
 
+	@XmlElement(name = "MrgnTerms")
 	public MarginTerms1Choice getMarginTerms() {
 		return marginTerms;
 	}
@@ -543,6 +555,7 @@ public class MarginCall1 {
 		this.marginTerms = marginTerms;
 	}
 
+	@XmlElement(name = "CollBal")
 	public CollateralBalance1Choice getCollateralBalance() {
 		return collateralBalance;
 	}

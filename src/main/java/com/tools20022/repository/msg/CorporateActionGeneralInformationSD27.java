@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action general
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionGeneralInformationSD25}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionGeneralInformationSD27", propOrder = {"placeAndName", "eventGroup", "eventType", "subEventType", "redemptionIdentification"})
 public class CorporateActionGeneralInformationSD27 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -348,6 +354,7 @@ public class CorporateActionGeneralInformationSD27 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -356,6 +363,7 @@ public class CorporateActionGeneralInformationSD27 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "EvtGrp")
 	public EventGroup2Code getEventGroup() {
 		return eventGroup;
 	}
@@ -364,6 +372,7 @@ public class CorporateActionGeneralInformationSD27 {
 		this.eventGroup = eventGroup;
 	}
 
+	@XmlElement(name = "EvtTp")
 	public ExtendedEventType4Code getEventType() {
 		return eventType;
 	}
@@ -372,6 +381,7 @@ public class CorporateActionGeneralInformationSD27 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "SubEvtTp")
 	public DTCCSubEventType5Code getSubEventType() {
 		return subEventType;
 	}
@@ -380,6 +390,7 @@ public class CorporateActionGeneralInformationSD27 {
 		this.subEventType = subEventType;
 	}
 
+	@XmlElement(name = "RedId")
 	public Max10NumericText getRedemptionIdentification() {
 		return redemptionIdentification;
 	}

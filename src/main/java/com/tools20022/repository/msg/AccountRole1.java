@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the party and owner type.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the party and owner type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountRole1", propOrder = {"party", "ownerType", "startDate", "endDate"})
 public class AccountRole1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -256,6 +262,7 @@ public class AccountRole1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pty", required = true)
 	public PartyIdentification41 getParty() {
 		return party;
 	}
@@ -264,6 +271,7 @@ public class AccountRole1 {
 		this.party = party;
 	}
 
+	@XmlElement(name = "OwnrTp", required = true)
 	public OwnerType1 getOwnerType() {
 		return ownerType;
 	}
@@ -272,6 +280,7 @@ public class AccountRole1 {
 		this.ownerType = ownerType;
 	}
 
+	@XmlElement(name = "StartDt")
 	public ISODate getStartDate() {
 		return startDate;
 	}
@@ -280,6 +289,7 @@ public class AccountRole1 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "EndDt")
 	public ISODate getEndDate() {
 		return endDate;
 	}

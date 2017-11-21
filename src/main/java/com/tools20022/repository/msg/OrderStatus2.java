@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status and reason of an instructed order.
@@ -84,6 +88,8 @@ import java.util.List;
  * definition} = "Status and reason of an instructed order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderStatus2", propOrder = {"listIdentification", "listStatusType", "listOrderStatus", "totalNumberOfReports", "reportSequenceNumber", "totalNumberOfOrders", "rejectionReason", "singleOrderDetails"})
 public class OrderStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -462,6 +468,7 @@ public class OrderStatus2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ListId", required = true)
 	public Max35Text getListIdentification() {
 		return listIdentification;
 	}
@@ -470,6 +477,7 @@ public class OrderStatus2 {
 		this.listIdentification = listIdentification;
 	}
 
+	@XmlElement(name = "ListStsTp", required = true)
 	public ListStatusType1Code getListStatusType() {
 		return listStatusType;
 	}
@@ -478,6 +486,7 @@ public class OrderStatus2 {
 		this.listStatusType = listStatusType;
 	}
 
+	@XmlElement(name = "ListOrdrSts", required = true)
 	public OrderStatus6Code getListOrderStatus() {
 		return listOrderStatus;
 	}
@@ -486,6 +495,7 @@ public class OrderStatus2 {
 		this.listOrderStatus = listOrderStatus;
 	}
 
+	@XmlElement(name = "TtlNbOfRpts", required = true)
 	public Number getTotalNumberOfReports() {
 		return totalNumberOfReports;
 	}
@@ -494,6 +504,7 @@ public class OrderStatus2 {
 		this.totalNumberOfReports = totalNumberOfReports;
 	}
 
+	@XmlElement(name = "RptSeqNb", required = true)
 	public Number getReportSequenceNumber() {
 		return reportSequenceNumber;
 	}
@@ -502,6 +513,7 @@ public class OrderStatus2 {
 		this.reportSequenceNumber = reportSequenceNumber;
 	}
 
+	@XmlElement(name = "TtlNbOfOrdrs", required = true)
 	public Number getTotalNumberOfOrders() {
 		return totalNumberOfOrders;
 	}
@@ -510,6 +522,7 @@ public class OrderStatus2 {
 		this.totalNumberOfOrders = totalNumberOfOrders;
 	}
 
+	@XmlElement(name = "RjctnRsn")
 	public RejectionReason3Choice getRejectionReason() {
 		return rejectionReason;
 	}
@@ -518,6 +531,7 @@ public class OrderStatus2 {
 		this.rejectionReason = rejectionReason;
 	}
 
+	@XmlElement(name = "SnglOrdrDtls")
 	public List<OrderStatus3> getSingleOrderDetails() {
 		return singleOrderDetails;
 	}

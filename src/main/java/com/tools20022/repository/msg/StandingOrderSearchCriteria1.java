@@ -35,6 +35,10 @@ import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria which are used to search for standing orders defined
@@ -107,6 +111,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingOrderSearchCriteria1", propOrder = {"keyAttributesIndicator", "standingOrderIdentification", "type", "account", "currency", "validityPeriod", "systemMember", "responsibleParty", "associatedPoolAccount",
+		"linkSetIdentification", "linkSetOrderIdentification", "linkSetOrderSequence", "zeroSweepIndicator"})
 public class StandingOrderSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -762,6 +769,7 @@ public class StandingOrderSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "KeyAttrbtsInd")
 	public TrueFalseIndicator getKeyAttributesIndicator() {
 		return keyAttributesIndicator;
 	}
@@ -770,6 +778,7 @@ public class StandingOrderSearchCriteria1 {
 		this.keyAttributesIndicator = keyAttributesIndicator;
 	}
 
+	@XmlElement(name = "StgOrdrId")
 	public Max35Text getStandingOrderIdentification() {
 		return standingOrderIdentification;
 	}
@@ -778,6 +787,7 @@ public class StandingOrderSearchCriteria1 {
 		this.standingOrderIdentification = standingOrderIdentification;
 	}
 
+	@XmlElement(name = "Tp")
 	public StandingOrderType1Choice getType() {
 		return type;
 	}
@@ -786,6 +796,7 @@ public class StandingOrderSearchCriteria1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Acct")
 	public CashAccount24 getAccount() {
 		return account;
 	}
@@ -794,6 +805,7 @@ public class StandingOrderSearchCriteria1 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -802,6 +814,7 @@ public class StandingOrderSearchCriteria1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "VldtyPrd")
 	public DatePeriodDetails2Choice getValidityPeriod() {
 		return validityPeriod;
 	}
@@ -810,6 +823,7 @@ public class StandingOrderSearchCriteria1 {
 		this.validityPeriod = validityPeriod;
 	}
 
+	@XmlElement(name = "SysMmb")
 	public BranchAndFinancialInstitutionIdentification5 getSystemMember() {
 		return systemMember;
 	}
@@ -818,6 +832,7 @@ public class StandingOrderSearchCriteria1 {
 		this.systemMember = systemMember;
 	}
 
+	@XmlElement(name = "RspnsblPty")
 	public BranchAndFinancialInstitutionIdentification5 getResponsibleParty() {
 		return responsibleParty;
 	}
@@ -826,6 +841,7 @@ public class StandingOrderSearchCriteria1 {
 		this.responsibleParty = responsibleParty;
 	}
 
+	@XmlElement(name = "AssoctdPoolAcct")
 	public AccountIdentification4Choice getAssociatedPoolAccount() {
 		return associatedPoolAccount;
 	}
@@ -834,6 +850,7 @@ public class StandingOrderSearchCriteria1 {
 		this.associatedPoolAccount = associatedPoolAccount;
 	}
 
+	@XmlElement(name = "LkSetId")
 	public Max35Text getLinkSetIdentification() {
 		return linkSetIdentification;
 	}
@@ -842,6 +859,7 @@ public class StandingOrderSearchCriteria1 {
 		this.linkSetIdentification = linkSetIdentification;
 	}
 
+	@XmlElement(name = "LkSetOrdrId")
 	public Max35Text getLinkSetOrderIdentification() {
 		return linkSetOrderIdentification;
 	}
@@ -850,6 +868,7 @@ public class StandingOrderSearchCriteria1 {
 		this.linkSetOrderIdentification = linkSetOrderIdentification;
 	}
 
+	@XmlElement(name = "LkSetOrdrSeq")
 	public Number getLinkSetOrderSequence() {
 		return linkSetOrderSequence;
 	}
@@ -858,6 +877,7 @@ public class StandingOrderSearchCriteria1 {
 		this.linkSetOrderSequence = linkSetOrderSequence;
 	}
 
+	@XmlElement(name = "ZeroSweepInd")
 	public TrueFalseIndicator getZeroSweepIndicator() {
 		return zeroSweepIndicator;
 	}

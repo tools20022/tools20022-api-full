@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates to the issuer the level of risk of the transaction.
@@ -64,6 +68,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransactionRiskIndicator1", propOrder = {"reason", "level", "recommendedAction"})
 public class CardTransactionRiskIndicator1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -205,6 +211,7 @@ public class CardTransactionRiskIndicator1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn")
 	public List<CardTransactionRiskReason1Code> getReason() {
 		return reason;
 	}
@@ -213,6 +220,7 @@ public class CardTransactionRiskIndicator1 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "Lvl", required = true)
 	public Number getLevel() {
 		return level;
 	}
@@ -221,6 +229,7 @@ public class CardTransactionRiskIndicator1 {
 		this.level = level;
 	}
 
+	@XmlElement(name = "RcmmnddActn")
 	public List<ActionType4Code> getRecommendedAction() {
 		return recommendedAction;
 	}

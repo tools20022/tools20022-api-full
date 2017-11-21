@@ -65,6 +65,11 @@ public class TradingBranch extends TreasuryTradingParty {
 				definition = "Specifies the branch of the trading party with which the deal was done.";
 				superType_lazy = () -> TreasuryTradingParty.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TradingBranch.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

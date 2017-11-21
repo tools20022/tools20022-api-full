@@ -29,13 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethod1Code
- * DisplayMethod1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -45,6 +38,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * DisplayMethodCode.mmNew}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethodCode#mmRandom
  * DisplayMethodCode.mmRandom}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethod1Code
+ * DisplayMethod1Code}</li>
  * </ul>
  * </li>
  * <li>

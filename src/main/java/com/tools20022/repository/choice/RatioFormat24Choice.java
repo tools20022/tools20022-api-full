@@ -31,6 +31,10 @@ import com.tools20022.repository.msg.AmountToAmountRatio3;
 import com.tools20022.repository.msg.QuantityToQuantityRatio2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format to express a ratio.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of format to express a ratio."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RatioFormat24Choice", propOrder = {"quantityToQuantity", "notSpecifiedRate", "amountToAmount", "amountToQuantity", "quantityToAmount"})
 public class RatioFormat24Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -323,6 +329,7 @@ public class RatioFormat24Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QtyToQty", required = true)
 	public QuantityToQuantityRatio2 getQuantityToQuantity() {
 		return quantityToQuantity;
 	}
@@ -331,6 +338,7 @@ public class RatioFormat24Choice {
 		this.quantityToQuantity = quantityToQuantity;
 	}
 
+	@XmlElement(name = "NotSpcfdRate", required = true)
 	public RateValueType7Code getNotSpecifiedRate() {
 		return notSpecifiedRate;
 	}
@@ -339,6 +347,7 @@ public class RatioFormat24Choice {
 		this.notSpecifiedRate = notSpecifiedRate;
 	}
 
+	@XmlElement(name = "AmtToAmt", required = true)
 	public AmountToAmountRatio3 getAmountToAmount() {
 		return amountToAmount;
 	}
@@ -347,6 +356,7 @@ public class RatioFormat24Choice {
 		this.amountToAmount = amountToAmount;
 	}
 
+	@XmlElement(name = "AmtToQty", required = true)
 	public AmountAndQuantityRatio5 getAmountToQuantity() {
 		return amountToQuantity;
 	}
@@ -355,6 +365,7 @@ public class RatioFormat24Choice {
 		this.amountToQuantity = amountToQuantity;
 	}
 
+	@XmlElement(name = "QtyToAmt", required = true)
 	public AmountAndQuantityRatio5 getQuantityToAmount() {
 		return quantityToAmount;
 	}

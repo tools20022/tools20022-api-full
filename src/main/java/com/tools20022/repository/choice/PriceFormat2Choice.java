@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.AmountPrice1;
 import com.tools20022.repository.msg.PriceRate1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats to express a price.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of formats to express a price."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceFormat2Choice", propOrder = {"amount", "rate", "notSpecified"})
 public class PriceFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class PriceFormat2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public AmountPrice1 getAmount() {
 		return amount;
 	}
@@ -226,6 +233,7 @@ public class PriceFormat2Choice {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PriceRate1 getRate() {
 		return rate;
 	}
@@ -234,6 +242,7 @@ public class PriceFormat2Choice {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "NotSpcfd", required = true)
 	public PriceValueType5FormatChoice getNotSpecified() {
 		return notSpecified;
 	}

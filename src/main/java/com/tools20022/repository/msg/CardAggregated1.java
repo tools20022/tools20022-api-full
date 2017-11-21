@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Globalised card transaction entry details.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Globalised card transaction entry details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardAggregated1", propOrder = {"additionalService", "transactionCategory", "saleReconciliationIdentification", "sequenceNumberRange", "transactionDateRange"})
 public class CardAggregated1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -325,6 +331,7 @@ public class CardAggregated1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlSvc")
 	public CardPaymentServiceType2Code getAdditionalService() {
 		return additionalService;
 	}
@@ -333,6 +340,7 @@ public class CardAggregated1 {
 		this.additionalService = additionalService;
 	}
 
+	@XmlElement(name = "TxCtgy")
 	public ExternalCardTransactionCategory1Code getTransactionCategory() {
 		return transactionCategory;
 	}
@@ -341,6 +349,7 @@ public class CardAggregated1 {
 		this.transactionCategory = transactionCategory;
 	}
 
+	@XmlElement(name = "SaleRcncltnId")
 	public Max35Text getSaleReconciliationIdentification() {
 		return saleReconciliationIdentification;
 	}
@@ -349,6 +358,7 @@ public class CardAggregated1 {
 		this.saleReconciliationIdentification = saleReconciliationIdentification;
 	}
 
+	@XmlElement(name = "SeqNbRg")
 	public CardSequenceNumberRange1 getSequenceNumberRange() {
 		return sequenceNumberRange;
 	}
@@ -357,6 +367,7 @@ public class CardAggregated1 {
 		this.sequenceNumberRange = sequenceNumberRange;
 	}
 
+	@XmlElement(name = "TxDtRg")
 	public DateOrDateTimePeriodChoice getTransactionDateRange() {
 		return transactionDateRange;
 	}

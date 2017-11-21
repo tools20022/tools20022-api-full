@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.ProceedsDefinition;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies corporate action dates.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionDate23}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionDate47", propOrder = {"paymentDate", "valueDate", "foreignExchangeRateFixingDate", "earliestPaymentDate"})
 public class CorporateActionDate47 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -313,6 +319,7 @@ public class CorporateActionDate47 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtDt", required = true)
 	public DateFormat31Choice getPaymentDate() {
 		return paymentDate;
 	}
@@ -321,6 +328,7 @@ public class CorporateActionDate47 {
 		this.paymentDate = paymentDate;
 	}
 
+	@XmlElement(name = "ValDt")
 	public DateFormat33Choice getValueDate() {
 		return valueDate;
 	}
@@ -329,6 +337,7 @@ public class CorporateActionDate47 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "FXRateFxgDt")
 	public DateFormat31Choice getForeignExchangeRateFixingDate() {
 		return foreignExchangeRateFixingDate;
 	}
@@ -337,6 +346,7 @@ public class CorporateActionDate47 {
 		this.foreignExchangeRateFixingDate = foreignExchangeRateFixingDate;
 	}
 
+	@XmlElement(name = "EarlstPmtDt")
 	public DateFormat31Choice getEarliestPaymentDate() {
 		return earliestPaymentDate;
 	}

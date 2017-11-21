@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.DefaultFundReport1;
 import com.tools20022.repository.msg.ReportParameters2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -50,9 +52,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code secl.006.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
@@ -88,6 +87,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code secl.006.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -99,6 +101,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DefaultFundContributionReportV02", propOrder = {"reportParameters", "clearingMember", "reportDetails", "supplementaryData"})
 public class DefaultFundContributionReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -139,6 +143,14 @@ public class DefaultFundContributionReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> ReportParameters2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DefaultFundContributionReportV02.class.getMethod("getReportParameters", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification35Choice clearingMember;
 	/**
@@ -177,6 +189,14 @@ public class DefaultFundContributionReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DefaultFundContributionReportV02.class.getMethod("getClearingMember", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<DefaultFundReport1> reportDetails;
 	/**
@@ -210,6 +230,14 @@ public class DefaultFundContributionReportV02 {
 			definition = "Provides details on the default fund report.";
 			minOccurs = 1;
 			complexType_lazy = () -> DefaultFundReport1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DefaultFundContributionReportV02.class.getMethod("getReportDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -248,6 +276,14 @@ public class DefaultFundContributionReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DefaultFundContributionReportV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -260,8 +296,8 @@ public class DefaultFundContributionReportV02 {
 				rootElement = "Document";
 				xmlTag = "DfltFndCntrbtnRpt";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(DefaultFundContributionReportV02.mmReportParameters, DefaultFundContributionReportV02.mmClearingMember, DefaultFundContributionReportV02.mmReportDetails,
-						DefaultFundContributionReportV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.DefaultFundContributionReportV02.mmReportParameters, com.tools20022.repository.area.secl.DefaultFundContributionReportV02.mmClearingMember,
+						com.tools20022.repository.area.secl.DefaultFundContributionReportV02.mmReportDetails, com.tools20022.repository.area.secl.DefaultFundContributionReportV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "secl";
@@ -271,10 +307,16 @@ public class DefaultFundContributionReportV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DefaultFundContributionReportV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptParams", required = true)
 	public ReportParameters2 getReportParameters() {
 		return reportParameters;
 	}
@@ -283,6 +325,7 @@ public class DefaultFundContributionReportV02 {
 		this.reportParameters = reportParameters;
 	}
 
+	@XmlElement(name = "ClrMmb", required = true)
 	public PartyIdentification35Choice getClearingMember() {
 		return clearingMember;
 	}
@@ -291,6 +334,7 @@ public class DefaultFundContributionReportV02 {
 		this.clearingMember = clearingMember;
 	}
 
+	@XmlElement(name = "RptDtls", required = true)
 	public List<DefaultFundReport1> getReportDetails() {
 		return reportDetails;
 	}
@@ -299,11 +343,18 @@ public class DefaultFundContributionReportV02 {
 		this.reportDetails = reportDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:secl.006.02.02")
+	static public class Document {
+		@XmlElement(name = "DfltFndCntrbtnRpt", required = true)
+		public DefaultFundContributionReportV02 messageBody;
 	}
 }

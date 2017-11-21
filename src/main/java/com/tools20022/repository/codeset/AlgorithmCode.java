@@ -29,41 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code
- * Algorithm1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm7Code
- * Algorithm7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm5Code
- * Algorithm5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm8Code
- * Algorithm8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm2Code
- * Algorithm2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm3Code
- * Algorithm3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm4Code
- * Algorithm4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm6Code
- * Algorithm6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm9Code
- * Algorithm9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm10Code
- * Algorithm10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm11Code
- * Algorithm11Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm14Code
- * Algorithm14Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm12Code
- * Algorithm12Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm15Code
- * Algorithm15Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm13Code
- * Algorithm13Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -127,6 +92,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * AlgorithmCode.mmSHA1WithRSA}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#mmRSASSAPSS
  * AlgorithmCode.mmRSASSAPSS}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code
+ * Algorithm1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm7Code
+ * Algorithm7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm5Code
+ * Algorithm5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm8Code
+ * Algorithm8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm2Code
+ * Algorithm2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm3Code
+ * Algorithm3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm4Code
+ * Algorithm4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm6Code
+ * Algorithm6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm9Code
+ * Algorithm9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm10Code
+ * Algorithm10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm11Code
+ * Algorithm11Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm14Code
+ * Algorithm14Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm12Code
+ * Algorithm12Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm15Code
+ * Algorithm15Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm13Code
+ * Algorithm13Code}</li>
  * </ul>
  * </li>
  * <li>

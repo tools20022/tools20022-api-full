@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Capabilities of the POI (Point Of Interaction) performing the transaction.
@@ -91,6 +95,8 @@ import java.util.List;
  * PointOfInteractionCapabilities1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PointOfInteractionCapabilities2", propOrder = {"cardReadingCapabilities", "cardholderVerificationCapabilities", "onLineCapabilities", "displayCapabilities", "printLineWidth", "availableLanguage"})
 public class PointOfInteractionCapabilities2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -475,6 +481,7 @@ public class PointOfInteractionCapabilities2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CardRdngCpblties")
 	public List<CardDataReading1Code> getCardReadingCapabilities() {
 		return cardReadingCapabilities;
 	}
@@ -483,6 +490,7 @@ public class PointOfInteractionCapabilities2 {
 		this.cardReadingCapabilities = cardReadingCapabilities;
 	}
 
+	@XmlElement(name = "CrdhldrVrfctnCpblties")
 	public List<CardholderVerificationCapability1Code> getCardholderVerificationCapabilities() {
 		return cardholderVerificationCapabilities;
 	}
@@ -491,6 +499,7 @@ public class PointOfInteractionCapabilities2 {
 		this.cardholderVerificationCapabilities = cardholderVerificationCapabilities;
 	}
 
+	@XmlElement(name = "OnLineCpblties")
 	public OnLineCapability1Code getOnLineCapabilities() {
 		return onLineCapabilities;
 	}
@@ -499,6 +508,7 @@ public class PointOfInteractionCapabilities2 {
 		this.onLineCapabilities = onLineCapabilities;
 	}
 
+	@XmlElement(name = "DispCpblties")
 	public List<DisplayCapabilities2> getDisplayCapabilities() {
 		return displayCapabilities;
 	}
@@ -507,6 +517,7 @@ public class PointOfInteractionCapabilities2 {
 		this.displayCapabilities = displayCapabilities;
 	}
 
+	@XmlElement(name = "PrtLineWidth")
 	public Number getPrintLineWidth() {
 		return printLineWidth;
 	}
@@ -515,6 +526,7 @@ public class PointOfInteractionCapabilities2 {
 		this.printLineWidth = printLineWidth;
 	}
 
+	@XmlElement(name = "AvlblLang")
 	public List<ISO2ALanguageCode> getAvailableLanguage() {
 		return availableLanguage;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of search criteria for querying party reference data.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Set of search criteria for querying party reference data."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyDataSearchCriteria1", propOrder = {"openingDate", "closingDate", "type", "CSDOrNCB", "identification", "restrictionIdentification", "restrictionIssueDate"})
 public class PartyDataSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -395,6 +401,7 @@ public class PartyDataSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OpngDt")
 	public DateSearchChoice getOpeningDate() {
 		return openingDate;
 	}
@@ -403,6 +410,7 @@ public class PartyDataSearchCriteria1 {
 		this.openingDate = openingDate;
 	}
 
+	@XmlElement(name = "ClsgDt")
 	public DateSearchChoice getClosingDate() {
 		return closingDate;
 	}
@@ -411,6 +419,7 @@ public class PartyDataSearchCriteria1 {
 		this.closingDate = closingDate;
 	}
 
+	@XmlElement(name = "Tp")
 	public SystemPartyType1Code getType() {
 		return type;
 	}
@@ -419,6 +428,7 @@ public class PartyDataSearchCriteria1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "CSDOrNCB")
 	public CSDOrNCB1Choice getCSDOrNCB() {
 		return cSDOrNCB;
 	}
@@ -427,6 +437,7 @@ public class PartyDataSearchCriteria1 {
 		this.cSDOrNCB = cSDOrNCB;
 	}
 
+	@XmlElement(name = "Id")
 	public BICFIIdentifier getIdentification() {
 		return identification;
 	}
@@ -435,6 +446,7 @@ public class PartyDataSearchCriteria1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "RstrctnId")
 	public Max35Text getRestrictionIdentification() {
 		return restrictionIdentification;
 	}
@@ -443,6 +455,7 @@ public class PartyDataSearchCriteria1 {
 		this.restrictionIdentification = restrictionIdentification;
 	}
 
+	@XmlElement(name = "RstrctnIsseDt")
 	public DateAndDateTimeSearchChoice getRestrictionIssueDate() {
 		return restrictionIssueDate;
 	}

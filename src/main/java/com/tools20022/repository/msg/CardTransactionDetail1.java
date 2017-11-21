@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the card transaction.
@@ -101,6 +105,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransactionDetail1", propOrder = {"transactionAmounts", "additionalAmounts", "messageReason", "validityDate", "unattendedLevelCategory", "accountFrom", "accountTo", "instalment", "antiMoneyLaundering", "ICCRelatedData"})
 public class CardTransactionDetail1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -715,6 +721,7 @@ public class CardTransactionDetail1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxAmts", required = true)
 	public CardTransactionAmount1 getTransactionAmounts() {
 		return transactionAmounts;
 	}
@@ -723,6 +730,7 @@ public class CardTransactionDetail1 {
 		this.transactionAmounts = transactionAmounts;
 	}
 
+	@XmlElement(name = "AddtlAmts")
 	public List<DetailedAmount10> getAdditionalAmounts() {
 		return additionalAmounts;
 	}
@@ -731,6 +739,7 @@ public class CardTransactionDetail1 {
 		this.additionalAmounts = additionalAmounts;
 	}
 
+	@XmlElement(name = "MsgRsn")
 	public MessageReason1Code getMessageReason() {
 		return messageReason;
 	}
@@ -739,6 +748,7 @@ public class CardTransactionDetail1 {
 		this.messageReason = messageReason;
 	}
 
+	@XmlElement(name = "VldtyDt")
 	public ISODate getValidityDate() {
 		return validityDate;
 	}
@@ -747,6 +757,7 @@ public class CardTransactionDetail1 {
 		this.validityDate = validityDate;
 	}
 
+	@XmlElement(name = "UattnddLvlCtgy")
 	public Max35NumericText getUnattendedLevelCategory() {
 		return unattendedLevelCategory;
 	}
@@ -755,6 +766,7 @@ public class CardTransactionDetail1 {
 		this.unattendedLevelCategory = unattendedLevelCategory;
 	}
 
+	@XmlElement(name = "AcctFr")
 	public CardAccount1 getAccountFrom() {
 		return accountFrom;
 	}
@@ -763,6 +775,7 @@ public class CardTransactionDetail1 {
 		this.accountFrom = accountFrom;
 	}
 
+	@XmlElement(name = "AcctTo")
 	public CardAccount1 getAccountTo() {
 		return accountTo;
 	}
@@ -771,6 +784,7 @@ public class CardTransactionDetail1 {
 		this.accountTo = accountTo;
 	}
 
+	@XmlElement(name = "Instlmt")
 	public RecurringTransaction2 getInstalment() {
 		return instalment;
 	}
@@ -779,6 +793,7 @@ public class CardTransactionDetail1 {
 		this.instalment = instalment;
 	}
 
+	@XmlElement(name = "AML")
 	public AntiMoneyLaundering1 getAntiMoneyLaundering() {
 		return antiMoneyLaundering;
 	}
@@ -787,6 +802,7 @@ public class CardTransactionDetail1 {
 		this.antiMoneyLaundering = antiMoneyLaundering;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}

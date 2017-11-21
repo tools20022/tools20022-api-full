@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Human entity, as distinguished from a corporate entity (which is sometimes
@@ -278,6 +282,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualPerson8", propOrder = {"name", "givenName", "namePrefix", "nameSuffix", "gender", "birthDate", "socialSecurityNumber", "individualInvestorAddress"})
 public class IndividualPerson8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -702,6 +708,7 @@ public class IndividualPerson8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max35Text getName() {
 		return name;
 	}
@@ -710,6 +717,7 @@ public class IndividualPerson8 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "GvnNm", required = true)
 	public Max35Text getGivenName() {
 		return givenName;
 	}
@@ -718,6 +726,7 @@ public class IndividualPerson8 {
 		this.givenName = givenName;
 	}
 
+	@XmlElement(name = "NmPrfx")
 	public NamePrefix1Code getNamePrefix() {
 		return namePrefix;
 	}
@@ -726,6 +735,7 @@ public class IndividualPerson8 {
 		this.namePrefix = namePrefix;
 	}
 
+	@XmlElement(name = "NmSfx")
 	public Max35Text getNameSuffix() {
 		return nameSuffix;
 	}
@@ -734,6 +744,7 @@ public class IndividualPerson8 {
 		this.nameSuffix = nameSuffix;
 	}
 
+	@XmlElement(name = "Gndr")
 	public GenderCode getGender() {
 		return gender;
 	}
@@ -742,6 +753,7 @@ public class IndividualPerson8 {
 		this.gender = gender;
 	}
 
+	@XmlElement(name = "BirthDt")
 	public ISODate getBirthDate() {
 		return birthDate;
 	}
@@ -750,6 +762,7 @@ public class IndividualPerson8 {
 		this.birthDate = birthDate;
 	}
 
+	@XmlElement(name = "SclSctyNb")
 	public Max35Text getSocialSecurityNumber() {
 		return socialSecurityNumber;
 	}
@@ -758,6 +771,7 @@ public class IndividualPerson8 {
 		this.socialSecurityNumber = socialSecurityNumber;
 	}
 
+	@XmlElement(name = "IndvInvstrAdr", required = true)
 	public PostalAddress1 getIndividualInvestorAddress() {
 		return individualInvestorAddress;
 	}

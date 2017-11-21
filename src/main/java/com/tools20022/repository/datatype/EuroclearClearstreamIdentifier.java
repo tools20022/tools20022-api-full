@@ -68,6 +68,8 @@ public class EuroclearClearstreamIdentifier {
 				name = "EuroclearClearstreamIdentifier";
 				definition = "Identifier of securities issued in Luxembourg. The common code is a 9-digit code that replaces the CEDEL (Clearstream) and Euroclear codes.";
 				identificationScheme = "Clearstream; EuroclearClearstreamIdentifier";
+				minLength = 1;
+				maxLength = 12;
 			}
 		});
 		return mmObject_lazy.get();

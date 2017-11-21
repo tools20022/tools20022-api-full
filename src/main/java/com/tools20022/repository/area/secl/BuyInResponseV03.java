@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.BuyIn3;
 import com.tools20022.repository.msg.SettlementObligation7;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -46,9 +48,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code secl.008.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
@@ -84,6 +83,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code secl.008.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -95,6 +97,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BuyInResponseV03", propOrder = {"transactionIdentification", "buyInResponseDetails", "originalSettlementObligationDetails", "supplementaryData"})
 public class BuyInResponseV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -134,6 +138,14 @@ public class BuyInResponseV03 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BuyInResponseV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected BuyIn3 buyInResponseDetails;
 	/**
@@ -169,6 +181,14 @@ public class BuyInResponseV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BuyIn3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BuyInResponseV03.class.getMethod("getBuyInResponseDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SettlementObligation7 originalSettlementObligationDetails;
@@ -208,6 +228,14 @@ public class BuyInResponseV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementObligation7.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BuyInResponseV03.class.getMethod("getOriginalSettlementObligationDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -245,6 +273,14 @@ public class BuyInResponseV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BuyInResponseV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -257,8 +293,8 @@ public class BuyInResponseV03 {
 				rootElement = "Document";
 				xmlTag = "BuyInRspn";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(BuyInResponseV03.mmTransactionIdentification, BuyInResponseV03.mmBuyInResponseDetails, BuyInResponseV03.mmOriginalSettlementObligationDetails,
-						BuyInResponseV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.BuyInResponseV03.mmTransactionIdentification, com.tools20022.repository.area.secl.BuyInResponseV03.mmBuyInResponseDetails,
+						com.tools20022.repository.area.secl.BuyInResponseV03.mmOriginalSettlementObligationDetails, com.tools20022.repository.area.secl.BuyInResponseV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "secl";
@@ -268,10 +304,16 @@ public class BuyInResponseV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BuyInResponseV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId")
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -280,6 +322,7 @@ public class BuyInResponseV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "BuyInRspnDtls", required = true)
 	public BuyIn3 getBuyInResponseDetails() {
 		return buyInResponseDetails;
 	}
@@ -288,6 +331,7 @@ public class BuyInResponseV03 {
 		this.buyInResponseDetails = buyInResponseDetails;
 	}
 
+	@XmlElement(name = "OrgnlSttlmOblgtnDtls")
 	public SettlementObligation7 getOriginalSettlementObligationDetails() {
 		return originalSettlementObligationDetails;
 	}
@@ -296,11 +340,18 @@ public class BuyInResponseV03 {
 		this.originalSettlementObligationDetails = originalSettlementObligationDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:secl.008.03.03")
+	static public class Document {
+		@XmlElement(name = "BuyInRspn", required = true)
+		public BuyInResponseV03 messageBody;
 	}
 }

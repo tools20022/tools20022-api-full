@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the original group, to which the message refers.
@@ -111,6 +115,8 @@ import java.util.List;
  * "Provides details on the original group, to which the message refers."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalGroupHeader3", propOrder = {"originalMessageIdentification", "originalMessageNameIdentification", "originalCreationDateTime", "reversalReasonInformation"})
 public class OriginalGroupHeader3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -320,6 +326,7 @@ public class OriginalGroupHeader3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMsgId", required = true)
 	public Max35Text getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}
@@ -328,6 +335,7 @@ public class OriginalGroupHeader3 {
 		this.originalMessageIdentification = originalMessageIdentification;
 	}
 
+	@XmlElement(name = "OrgnlMsgNmId", required = true)
 	public Max35Text getOriginalMessageNameIdentification() {
 		return originalMessageNameIdentification;
 	}
@@ -336,6 +344,7 @@ public class OriginalGroupHeader3 {
 		this.originalMessageNameIdentification = originalMessageNameIdentification;
 	}
 
+	@XmlElement(name = "OrgnlCreDtTm")
 	public ISODateTime getOriginalCreationDateTime() {
 		return originalCreationDateTime;
 	}
@@ -344,6 +353,7 @@ public class OriginalGroupHeader3 {
 		this.originalCreationDateTime = originalCreationDateTime;
 	}
 
+	@XmlElement(name = "RvslRsnInf")
 	public List<PaymentReversalReason7> getReversalReasonInformation() {
 		return reversalReasonInformation;
 	}

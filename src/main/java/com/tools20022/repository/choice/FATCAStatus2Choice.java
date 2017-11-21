@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for the Foreign Account Tax Compliance Act (FATCA) status.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * FATCAStatus1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FATCAStatus2Choice", propOrder = {"code", "proprietary"})
 public class FATCAStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -210,6 +216,7 @@ public class FATCAStatus2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public FATCAStatus1Code getCode() {
 		return code;
 	}
@@ -218,6 +225,7 @@ public class FATCAStatus2Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification47 getProprietary() {
 		return proprietary;
 	}

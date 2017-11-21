@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines proprietary reason to reject a transaction.
@@ -66,6 +70,8 @@ import java.util.function.Supplier;
  * definition} = "Defines proprietary reason  to reject a transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProprietaryStatusJustification", propOrder = {"proprietaryStatusReason", "reason"})
 public class ProprietaryStatusJustification {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -192,6 +198,7 @@ public class ProprietaryStatusJustification {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrtryStsRsn", required = true)
 	public Max4AlphaNumericText getProprietaryStatusReason() {
 		return proprietaryStatusReason;
 	}
@@ -200,6 +207,7 @@ public class ProprietaryStatusJustification {
 		this.proprietaryStatusReason = proprietaryStatusReason;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public Max256Text getReason() {
 		return reason;
 	}

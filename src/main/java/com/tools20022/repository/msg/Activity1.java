@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the message that is associated with the activity.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information about the message that is associated with the activity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Activity1", propOrder = {"messageName", "description"})
 public class Activity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -155,6 +161,7 @@ public class Activity1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgNm", required = true)
 	public Max70Text getMessageName() {
 		return messageName;
 	}
@@ -163,6 +170,7 @@ public class Activity1 {
 		this.messageName = messageName;
 	}
 
+	@XmlElement(name = "Desc")
 	public Max140Text getDescription() {
 		return description;
 	}

@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.CurrencyControlHeader3;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.SupportingDocumentRequestOrLetter1;
 import com.tools20022.repository.msgset.CrossBorderTransactionsCurrencyControlReportingISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The CurrencyControlRequestOrLetter message is sent by the reporting party
@@ -38,9 +40,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.026.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -73,6 +72,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.026.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -84,6 +86,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyControlRequestOrLetterV01", propOrder = {"groupHeader", "requestOrLetter", "supplementaryData"})
 public class CurrencyControlRequestOrLetterV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -123,6 +127,14 @@ public class CurrencyControlRequestOrLetterV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CurrencyControlHeader3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CurrencyControlRequestOrLetterV01.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupportingDocumentRequestOrLetter1> requestOrLetter;
 	/**
@@ -156,6 +168,14 @@ public class CurrencyControlRequestOrLetterV01 {
 			definition = "Supporting document request or letter details.";
 			minOccurs = 1;
 			complexType_lazy = () -> SupportingDocumentRequestOrLetter1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CurrencyControlRequestOrLetterV01.class.getMethod("getRequestOrLetter", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -194,6 +214,14 @@ public class CurrencyControlRequestOrLetterV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CurrencyControlRequestOrLetterV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -206,7 +234,8 @@ public class CurrencyControlRequestOrLetterV01 {
 				rootElement = "Document";
 				xmlTag = "CcyCtrlReqOrLttr";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CurrencyControlRequestOrLetterV01.mmGroupHeader, CurrencyControlRequestOrLetterV01.mmRequestOrLetter, CurrencyControlRequestOrLetterV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.CurrencyControlRequestOrLetterV01.mmGroupHeader, com.tools20022.repository.area.auth.CurrencyControlRequestOrLetterV01.mmRequestOrLetter,
+						com.tools20022.repository.area.auth.CurrencyControlRequestOrLetterV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -216,10 +245,16 @@ public class CurrencyControlRequestOrLetterV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CurrencyControlRequestOrLetterV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public CurrencyControlHeader3 getGroupHeader() {
 		return groupHeader;
 	}
@@ -228,6 +263,7 @@ public class CurrencyControlRequestOrLetterV01 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "ReqOrLttr", required = true)
 	public List<SupportingDocumentRequestOrLetter1> getRequestOrLetter() {
 		return requestOrLetter;
 	}
@@ -236,11 +272,18 @@ public class CurrencyControlRequestOrLetterV01 {
 		this.requestOrLetter = requestOrLetter;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.026.01.01")
+	static public class Document {
+		@XmlElement(name = "CcyCtrlReqOrLttr", required = true)
+		public CurrencyControlRequestOrLetterV01 messageBody;
 	}
 }

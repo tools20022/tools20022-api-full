@@ -69,6 +69,11 @@ public class DeliverersIntermediary extends SecuritiesSettlementPartyRole {
 				definition = "Party that the deliverer's custodian uses to effect the delivery of a security, when the deliverer's custodian does not have a direct relationship with the delivering agent.";
 				superType_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DeliverersIntermediary.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

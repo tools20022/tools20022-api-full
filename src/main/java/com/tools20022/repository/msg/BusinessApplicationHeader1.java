@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.SignatureEnvelope;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the Business Application Header of the Business Message.<br>
@@ -106,6 +110,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BusinessApplicationHeader1", propOrder = {"characterSet", "from", "to", "businessMessageIdentifier", "messageDefinitionIdentifier", "businessService", "creationDate", "copyDuplicate", "possibleDuplicate", "priority",
+		"signature"})
 public class BusinessApplicationHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -639,6 +646,7 @@ public class BusinessApplicationHeader1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CharSet")
 	public UnicodeChartsCode getCharacterSet() {
 		return characterSet;
 	}
@@ -647,6 +655,7 @@ public class BusinessApplicationHeader1 {
 		this.characterSet = characterSet;
 	}
 
+	@XmlElement(name = "Fr", required = true)
 	public Party9Choice getFrom() {
 		return from;
 	}
@@ -655,6 +664,7 @@ public class BusinessApplicationHeader1 {
 		this.from = from;
 	}
 
+	@XmlElement(name = "To", required = true)
 	public Party9Choice getTo() {
 		return to;
 	}
@@ -663,6 +673,7 @@ public class BusinessApplicationHeader1 {
 		this.to = to;
 	}
 
+	@XmlElement(name = "BizMsgIdr", required = true)
 	public Max35Text getBusinessMessageIdentifier() {
 		return businessMessageIdentifier;
 	}
@@ -671,6 +682,7 @@ public class BusinessApplicationHeader1 {
 		this.businessMessageIdentifier = businessMessageIdentifier;
 	}
 
+	@XmlElement(name = "MsgDefIdr", required = true)
 	public Max35Text getMessageDefinitionIdentifier() {
 		return messageDefinitionIdentifier;
 	}
@@ -679,6 +691,7 @@ public class BusinessApplicationHeader1 {
 		this.messageDefinitionIdentifier = messageDefinitionIdentifier;
 	}
 
+	@XmlElement(name = "BizSvc")
 	public Max35Text getBusinessService() {
 		return businessService;
 	}
@@ -687,6 +700,7 @@ public class BusinessApplicationHeader1 {
 		this.businessService = businessService;
 	}
 
+	@XmlElement(name = "CreDt", required = true)
 	public ISONormalisedDateTime getCreationDate() {
 		return creationDate;
 	}
@@ -695,6 +709,7 @@ public class BusinessApplicationHeader1 {
 		this.creationDate = creationDate;
 	}
 
+	@XmlElement(name = "CpyDplct")
 	public CopyDuplicate1Code getCopyDuplicate() {
 		return copyDuplicate;
 	}
@@ -703,6 +718,7 @@ public class BusinessApplicationHeader1 {
 		this.copyDuplicate = copyDuplicate;
 	}
 
+	@XmlElement(name = "PssblDplct")
 	public YesNoIndicator getPossibleDuplicate() {
 		return possibleDuplicate;
 	}
@@ -711,6 +727,7 @@ public class BusinessApplicationHeader1 {
 		this.possibleDuplicate = possibleDuplicate;
 	}
 
+	@XmlElement(name = "Prty")
 	public BusinessMessagePriorityCode getPriority() {
 		return priority;
 	}
@@ -719,6 +736,7 @@ public class BusinessApplicationHeader1 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "Sgntr")
 	public SignatureEnvelope getSignature() {
 		return signature;
 	}

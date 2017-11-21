@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.AcquirerFinancialResponse1;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header17;
 import com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The AcquirerFinancialResponse message is sent by an issuer or an agent to
@@ -35,9 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code cain.004.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcquirertoIssuerCardTransactionLatestVersion
@@ -70,6 +69,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code cain.004.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -81,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcquirerFinancialResponse", propOrder = {"header", "financialResponse", "securityTrailer"})
 public class AcquirerFinancialResponse {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -116,6 +120,14 @@ public class AcquirerFinancialResponse {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header17.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcquirerFinancialResponse.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AcquirerFinancialResponse1 financialResponse;
@@ -153,6 +165,14 @@ public class AcquirerFinancialResponse {
 			minOccurs = 1;
 			complexType_lazy = () -> AcquirerFinancialResponse1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcquirerFinancialResponse.class.getMethod("getFinancialResponse", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType15 securityTrailer;
 	/**
@@ -188,6 +208,14 @@ public class AcquirerFinancialResponse {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcquirerFinancialResponse.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -200,7 +228,8 @@ public class AcquirerFinancialResponse {
 				rootElement = "Document";
 				xmlTag = "AcqrrFinRspn";
 				businessArea_lazy = () -> AcquirertoIssuerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AcquirerFinancialResponse.mmHeader, AcquirerFinancialResponse.mmFinancialResponse, AcquirerFinancialResponse.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerFinancialResponse.mmHeader, com.tools20022.repository.area.cain.AcquirerFinancialResponse.mmFinancialResponse,
+						com.tools20022.repository.area.cain.AcquirerFinancialResponse.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "cain";
@@ -210,10 +239,16 @@ public class AcquirerFinancialResponse {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcquirerFinancialResponse.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header17 getHeader() {
 		return header;
 	}
@@ -222,6 +257,7 @@ public class AcquirerFinancialResponse {
 		this.header = header;
 	}
 
+	@XmlElement(name = "FinRspn", required = true)
 	public AcquirerFinancialResponse1 getFinancialResponse() {
 		return financialResponse;
 	}
@@ -230,11 +266,18 @@ public class AcquirerFinancialResponse {
 		this.financialResponse = financialResponse;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType15 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:cain.004.01.01")
+	static public class Document {
+		@XmlElement(name = "AcqrrFinRspn", required = true)
+		public AcquirerFinancialResponse messageBody;
 	}
 }

@@ -54,6 +54,8 @@ public class Max10Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max10Text";
 				definition = "Specifies a character string with a maximum length of 10 characters.";
+				minLength = 1;
+				maxLength = 10;
 			}
 		});
 		return mmObject_lazy.get();

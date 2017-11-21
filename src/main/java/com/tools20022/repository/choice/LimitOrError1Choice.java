@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.Limit4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between risk management limit details or a business error when the
@@ -68,6 +72,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LimitOrError1Choice", propOrder = {"limit", "businessError"})
 public class LimitOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -184,6 +190,7 @@ public class LimitOrError1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Lmt", required = true)
 	public Limit4 getLimit() {
 		return limit;
 	}
@@ -192,6 +199,7 @@ public class LimitOrError1Choice {
 		this.limit = limit;
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling3> getBusinessError() {
 		return businessError;
 	}

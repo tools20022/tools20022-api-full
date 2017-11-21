@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Report parameters.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Report parameters."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundCashForecastParameters2", propOrder = {"financialInstrumentDetails", "tradeDateTime", "detailedReportParameter"})
 public class FundCashForecastParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -214,6 +220,7 @@ public class FundCashForecastParameters2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmDtls")
 	public FinancialInstrument17 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -222,6 +229,7 @@ public class FundCashForecastParameters2 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "TradDtTm")
 	public DateAndDateTimeChoice getTradeDateTime() {
 		return tradeDateTime;
 	}
@@ -230,6 +238,7 @@ public class FundCashForecastParameters2 {
 		this.tradeDateTime = tradeDateTime;
 	}
 
+	@XmlElement(name = "DtldRptParam")
 	public ReportParameters getDetailedReportParameter() {
 		return detailedReportParameter;
 	}

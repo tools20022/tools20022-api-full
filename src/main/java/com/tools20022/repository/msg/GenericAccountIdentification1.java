@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.IdentificationIssuerRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to a generic account identification.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information related to a generic account identification."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericAccountIdentification1", propOrder = {"identification", "schemeName", "issuer"})
 public class GenericAccountIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class GenericAccountIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max34Text getIdentification() {
 		return identification;
 	}
@@ -237,6 +244,7 @@ public class GenericAccountIdentification1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SchmeNm")
 	public AccountSchemeName1Choice getSchemeName() {
 		return schemeName;
 	}
@@ -245,6 +253,7 @@ public class GenericAccountIdentification1 {
 		this.schemeName = schemeName;
 	}
 
+	@XmlElement(name = "Issr")
 	public Max35Text getIssuer() {
 		return issuer;
 	}

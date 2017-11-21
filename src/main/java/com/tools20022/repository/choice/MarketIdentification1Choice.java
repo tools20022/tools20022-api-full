@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.TradingMarket;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of market identification.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of market identification."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarketIdentification1Choice", propOrder = {"marketIdentifierCode", "description"})
 public class MarketIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -171,6 +177,7 @@ public class MarketIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MktIdrCd", required = true)
 	public MICIdentifier getMarketIdentifierCode() {
 		return marketIdentifierCode;
 	}
@@ -179,6 +186,7 @@ public class MarketIdentification1Choice {
 		this.marketIdentifierCode = marketIdentifierCode;
 	}
 
+	@XmlElement(name = "Desc", required = true)
 	public Max35Text getDescription() {
 		return description;
 	}

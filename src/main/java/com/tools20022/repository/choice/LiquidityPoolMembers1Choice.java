@@ -25,6 +25,10 @@ import com.tools20022.repository.msg.AccountOwnerAndIdentification1;
 import com.tools20022.repository.msg.AccountOwnerAndIdentificationList1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between head member or subordinate member identifiers of liquidity
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LiquidityPoolMembers1Choice", propOrder = {"headMemberDetails", "subordinateMemberDetails"})
 public class LiquidityPoolMembers1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +168,7 @@ public class LiquidityPoolMembers1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "HeadMmbDtls", required = true)
 	public AccountOwnerAndIdentification1 getHeadMemberDetails() {
 		return headMemberDetails;
 	}
@@ -170,6 +177,7 @@ public class LiquidityPoolMembers1Choice {
 		this.headMemberDetails = headMemberDetails;
 	}
 
+	@XmlElement(name = "SubrdntMmbDtls", required = true)
 	public AccountOwnerAndIdentificationList1 getSubordinateMemberDetails() {
 		return subordinateMemberDetails;
 	}

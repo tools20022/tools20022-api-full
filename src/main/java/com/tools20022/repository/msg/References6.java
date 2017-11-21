@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements for the identification of the message and related references.
@@ -88,6 +92,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References6", propOrder = {"rejectedRequestType", "rejectionReason", "rejectedRequestIdentification", "messageIdentification", "processIdentification", "attachedDocumentName"})
 public class References6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -356,6 +362,7 @@ public class References6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RjctdReqTp", required = true)
 	public UseCases1Code getRejectedRequestType() {
 		return rejectedRequestType;
 	}
@@ -364,6 +371,7 @@ public class References6 {
 		this.rejectedRequestType = rejectedRequestType;
 	}
 
+	@XmlElement(name = "RjctnRsn", required = true)
 	public List<Max350Text> getRejectionReason() {
 		return rejectionReason;
 	}
@@ -372,6 +380,7 @@ public class References6 {
 		this.rejectionReason = rejectionReason;
 	}
 
+	@XmlElement(name = "RjctdReqId", required = true)
 	public MessageIdentification1 getRejectedRequestIdentification() {
 		return rejectedRequestIdentification;
 	}
@@ -380,6 +389,7 @@ public class References6 {
 		this.rejectedRequestIdentification = rejectedRequestIdentification;
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -388,6 +398,7 @@ public class References6 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PrcId", required = true)
 	public MessageIdentification1 getProcessIdentification() {
 		return processIdentification;
 	}
@@ -396,6 +407,7 @@ public class References6 {
 		this.processIdentification = processIdentification;
 	}
 
+	@XmlElement(name = "AttchdDocNm")
 	public List<Max70Text> getAttachedDocumentName() {
 		return attachedDocumentName;
 	}

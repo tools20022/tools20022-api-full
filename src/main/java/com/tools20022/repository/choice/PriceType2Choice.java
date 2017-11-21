@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Price3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of price type.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of price type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceType2Choice", propOrder = {"market", "indicative"})
 public class PriceType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class PriceType2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Mkt", required = true)
 	public Price3 getMarket() {
 		return market;
 	}
@@ -181,6 +188,7 @@ public class PriceType2Choice {
 		this.market = market;
 	}
 
+	@XmlElement(name = "Indctv", required = true)
 	public Price3 getIndicative() {
 		return indicative;
 	}

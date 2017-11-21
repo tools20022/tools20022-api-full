@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryQuantity9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between different quantity of security formats.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between different quantity of security formats."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Quantity21Choice", propOrder = {"quantity", "proprietaryQuantity"})
 public class Quantity21Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class Quantity21Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity15Choice getQuantity() {
 		return quantity;
 	}
@@ -169,6 +176,7 @@ public class Quantity21Choice {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "PrtryQty", required = true)
 	public ProprietaryQuantity9 getProprietaryQuantity() {
 		return proprietaryQuantity;
 	}

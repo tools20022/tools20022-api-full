@@ -27,6 +27,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[0-9]{1,35}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -54,6 +56,7 @@ public class Max35NumericText {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max35NumericText";
 				definition = "Specifies a numeric string with a maximum length of 35 digits.";
+				pattern = "[0-9]{1,35}";
 			}
 		});
 		return mmObject_lazy.get();

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Response;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Response of a requested service.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ResponseType1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ResponseType2", propOrder = {"result", "resultDetails", "additionalResultInformation"})
 public class ResponseType2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -252,6 +258,7 @@ public class ResponseType2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rslt", required = true)
 	public Response3Code getResult() {
 		return result;
 	}
@@ -260,6 +267,7 @@ public class ResponseType2 {
 		this.result = result;
 	}
 
+	@XmlElement(name = "RsltDtls")
 	public ResultDetail1Code getResultDetails() {
 		return resultDetails;
 	}
@@ -268,6 +276,7 @@ public class ResponseType2 {
 		this.resultDetails = resultDetails;
 	}
 
+	@XmlElement(name = "AddtlRsltInf")
 	public Max140Text getAdditionalResultInformation() {
 		return additionalResultInformation;
 	}

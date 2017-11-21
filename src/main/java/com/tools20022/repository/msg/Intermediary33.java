@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a party and its role.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Intermediary7}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Intermediary33", propOrder = {"identification", "legalEntityIdentifier", "account"})
 public class Intermediary33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -251,6 +257,7 @@ public class Intermediary33 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification70Choice getIdentification() {
 		return identification;
 	}
@@ -259,6 +266,7 @@ public class Intermediary33 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "LglNttyIdr")
 	public LEIIdentifier getLegalEntityIdentifier() {
 		return legalEntityIdentifier;
 	}
@@ -267,6 +275,7 @@ public class Intermediary33 {
 		this.legalEntityIdentifier = legalEntityIdentifier;
 	}
 
+	@XmlElement(name = "Acct")
 	public Account20 getAccount() {
 		return account;
 	}

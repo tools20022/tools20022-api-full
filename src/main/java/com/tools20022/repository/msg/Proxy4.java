@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.ProxyAppointment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the elements that identify a proxy appointed to represent a party
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Proxy4", propOrder = {"proxyType", "personDetails", "voteInstructionForAgendaResolution"})
 public class Proxy4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -250,6 +256,7 @@ public class Proxy4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrxyTp", required = true)
 	public ProxyType2Code getProxyType() {
 		return proxyType;
 	}
@@ -258,6 +265,7 @@ public class Proxy4 {
 		this.proxyType = proxyType;
 	}
 
+	@XmlElement(name = "PrsnDtls")
 	public IndividualPerson17 getPersonDetails() {
 		return personDetails;
 	}
@@ -266,6 +274,7 @@ public class Proxy4 {
 		this.personDetails = personDetails;
 	}
 
+	@XmlElement(name = "VoteInstrForAgndRsltn")
 	public Vote2Choice getVoteInstructionForAgendaResolution() {
 		return voteInstructionForAgendaResolution;
 	}

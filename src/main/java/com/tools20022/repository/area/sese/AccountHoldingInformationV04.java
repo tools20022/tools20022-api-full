@@ -27,9 +27,11 @@ import com.tools20022.repository.codeset.BusinessFlowDirectionType1Code;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -43,9 +45,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.018.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
@@ -121,6 +120,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.018.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -144,6 +146,9 @@ import java.util.List;
  * AccountHoldingInformationV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountHoldingInformationV04", propOrder = {"messageReference", "poolReference", "previousReference", "relatedReference", "businessFlowDirectionType", "primaryIndividualInvestor", "secondaryIndividualInvestor",
+		"otherIndividualInvestor", "primaryCorporateInvestor", "secondaryCorporateInvestor", "otherCorporateInvestor", "transferorAccount", "nomineeAccount", "transferee", "productTransfer", "marketPracticeVersion", "extension"})
 public class AccountHoldingInformationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +201,14 @@ public class AccountHoldingInformationV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getMessageReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -245,6 +258,14 @@ public class AccountHoldingInformationV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 previousReference;
@@ -296,6 +317,14 @@ public class AccountHoldingInformationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 relatedReference;
 	/**
@@ -346,6 +375,14 @@ public class AccountHoldingInformationV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BusinessFlowDirectionType1Code businessFlowDirectionType;
@@ -400,6 +437,14 @@ public class AccountHoldingInformationV04 {
 			minOccurs = 0;
 			simpleType_lazy = () -> BusinessFlowDirectionType1Code.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getBusinessFlowDirectionType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected IndividualPerson8 primaryIndividualInvestor;
 	/**
@@ -452,6 +497,14 @@ public class AccountHoldingInformationV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getPrimaryIndividualInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected IndividualPerson8 secondaryIndividualInvestor;
@@ -506,6 +559,14 @@ public class AccountHoldingInformationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getSecondaryIndividualInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<IndividualPerson8> otherIndividualInvestor;
 	/**
@@ -557,6 +618,14 @@ public class AccountHoldingInformationV04 {
 			previousVersion_lazy = () -> AccountHoldingInformationV03.mmOtherIndividualInvestor;
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getOtherIndividualInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Organisation4 primaryCorporateInvestor;
@@ -610,6 +679,14 @@ public class AccountHoldingInformationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getPrimaryCorporateInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Organisation4 secondaryCorporateInvestor;
 	/**
@@ -662,6 +739,14 @@ public class AccountHoldingInformationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getSecondaryCorporateInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Organisation4> otherCorporateInvestor;
 	/**
@@ -712,6 +797,14 @@ public class AccountHoldingInformationV04 {
 			previousVersion_lazy = () -> AccountHoldingInformationV03.mmOtherCorporateInvestor;
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getOtherCorporateInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Account15 transferorAccount;
@@ -765,6 +858,14 @@ public class AccountHoldingInformationV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> Account15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getTransferorAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Account16 nomineeAccount;
 	/**
@@ -816,6 +917,14 @@ public class AccountHoldingInformationV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Account16.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getNomineeAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification2Choice transferee;
@@ -870,6 +979,14 @@ public class AccountHoldingInformationV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getTransferee", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ISATransfer14> productTransfer;
 	/**
@@ -919,6 +1036,14 @@ public class AccountHoldingInformationV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> ISATransfer14.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getProductTransfer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
@@ -963,6 +1088,14 @@ public class AccountHoldingInformationV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getMarketPracticeVersion", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -1015,6 +1148,14 @@ public class AccountHoldingInformationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountHoldingInformationV04.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -1029,11 +1170,15 @@ public class AccountHoldingInformationV04 {
 				rootElement = "Document";
 				xmlTag = "AcctHldgInf";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AccountHoldingInformationV04.mmMessageReference, AccountHoldingInformationV04.mmPoolReference, AccountHoldingInformationV04.mmPreviousReference,
-						AccountHoldingInformationV04.mmRelatedReference, AccountHoldingInformationV04.mmBusinessFlowDirectionType, AccountHoldingInformationV04.mmPrimaryIndividualInvestor,
-						AccountHoldingInformationV04.mmSecondaryIndividualInvestor, AccountHoldingInformationV04.mmOtherIndividualInvestor, AccountHoldingInformationV04.mmPrimaryCorporateInvestor,
-						AccountHoldingInformationV04.mmSecondaryCorporateInvestor, AccountHoldingInformationV04.mmOtherCorporateInvestor, AccountHoldingInformationV04.mmTransferorAccount, AccountHoldingInformationV04.mmNomineeAccount,
-						AccountHoldingInformationV04.mmTransferee, AccountHoldingInformationV04.mmProductTransfer, AccountHoldingInformationV04.mmMarketPracticeVersion, AccountHoldingInformationV04.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmMessageReference, com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmPoolReference,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmPreviousReference, com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmRelatedReference,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmBusinessFlowDirectionType, com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmPrimaryIndividualInvestor,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmSecondaryIndividualInvestor, com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmOtherIndividualInvestor,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmPrimaryCorporateInvestor, com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmSecondaryCorporateInvestor,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmOtherCorporateInvestor, com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmTransferorAccount,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmNomineeAccount, com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmTransferee,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmProductTransfer, com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmMarketPracticeVersion,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -1043,10 +1188,16 @@ public class AccountHoldingInformationV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountHoldingInformationV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgRef", required = true)
 	public MessageIdentification1 getMessageReference() {
 		return messageReference;
 	}
@@ -1055,6 +1206,7 @@ public class AccountHoldingInformationV04 {
 		this.messageReference = messageReference;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -1063,6 +1215,7 @@ public class AccountHoldingInformationV04 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -1071,6 +1224,7 @@ public class AccountHoldingInformationV04 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
@@ -1079,6 +1233,7 @@ public class AccountHoldingInformationV04 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "BizFlowDrctnTp")
 	public BusinessFlowDirectionType1Code getBusinessFlowDirectionType() {
 		return businessFlowDirectionType;
 	}
@@ -1087,6 +1242,7 @@ public class AccountHoldingInformationV04 {
 		this.businessFlowDirectionType = businessFlowDirectionType;
 	}
 
+	@XmlElement(name = "PmryIndvInvstr")
 	public IndividualPerson8 getPrimaryIndividualInvestor() {
 		return primaryIndividualInvestor;
 	}
@@ -1095,6 +1251,7 @@ public class AccountHoldingInformationV04 {
 		this.primaryIndividualInvestor = primaryIndividualInvestor;
 	}
 
+	@XmlElement(name = "ScndryIndvInvstr")
 	public IndividualPerson8 getSecondaryIndividualInvestor() {
 		return secondaryIndividualInvestor;
 	}
@@ -1103,6 +1260,7 @@ public class AccountHoldingInformationV04 {
 		this.secondaryIndividualInvestor = secondaryIndividualInvestor;
 	}
 
+	@XmlElement(name = "OthrIndvInvstr")
 	public List<IndividualPerson8> getOtherIndividualInvestor() {
 		return otherIndividualInvestor;
 	}
@@ -1111,6 +1269,7 @@ public class AccountHoldingInformationV04 {
 		this.otherIndividualInvestor = otherIndividualInvestor;
 	}
 
+	@XmlElement(name = "PmryCorpInvstr")
 	public Organisation4 getPrimaryCorporateInvestor() {
 		return primaryCorporateInvestor;
 	}
@@ -1119,6 +1278,7 @@ public class AccountHoldingInformationV04 {
 		this.primaryCorporateInvestor = primaryCorporateInvestor;
 	}
 
+	@XmlElement(name = "ScndryCorpInvstr")
 	public Organisation4 getSecondaryCorporateInvestor() {
 		return secondaryCorporateInvestor;
 	}
@@ -1127,6 +1287,7 @@ public class AccountHoldingInformationV04 {
 		this.secondaryCorporateInvestor = secondaryCorporateInvestor;
 	}
 
+	@XmlElement(name = "OthrCorpInvstr")
 	public List<Organisation4> getOtherCorporateInvestor() {
 		return otherCorporateInvestor;
 	}
@@ -1135,6 +1296,7 @@ public class AccountHoldingInformationV04 {
 		this.otherCorporateInvestor = otherCorporateInvestor;
 	}
 
+	@XmlElement(name = "TrfrAcct", required = true)
 	public Account15 getTransferorAccount() {
 		return transferorAccount;
 	}
@@ -1143,6 +1305,7 @@ public class AccountHoldingInformationV04 {
 		this.transferorAccount = transferorAccount;
 	}
 
+	@XmlElement(name = "NmneeAcct")
 	public Account16 getNomineeAccount() {
 		return nomineeAccount;
 	}
@@ -1151,6 +1314,7 @@ public class AccountHoldingInformationV04 {
 		this.nomineeAccount = nomineeAccount;
 	}
 
+	@XmlElement(name = "Trfee", required = true)
 	public PartyIdentification2Choice getTransferee() {
 		return transferee;
 	}
@@ -1159,6 +1323,7 @@ public class AccountHoldingInformationV04 {
 		this.transferee = transferee;
 	}
 
+	@XmlElement(name = "PdctTrf", required = true)
 	public List<ISATransfer14> getProductTransfer() {
 		return productTransfer;
 	}
@@ -1167,6 +1332,7 @@ public class AccountHoldingInformationV04 {
 		this.productTransfer = productTransfer;
 	}
 
+	@XmlElement(name = "MktPrctcVrsn")
 	public MarketPracticeVersion1 getMarketPracticeVersion() {
 		return marketPracticeVersion;
 	}
@@ -1175,11 +1341,18 @@ public class AccountHoldingInformationV04 {
 		this.marketPracticeVersion = marketPracticeVersion;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.018.04.04")
+	static public class Document {
+		@XmlElement(name = "AcctHldgInf", required = true)
+		public AccountHoldingInformationV04 messageBody;
 	}
 }

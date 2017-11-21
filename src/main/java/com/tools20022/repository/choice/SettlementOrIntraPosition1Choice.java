@@ -25,6 +25,10 @@ import com.tools20022.repository.msg.IntraPosition4;
 import com.tools20022.repository.msg.TransactionDetails52;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the intra-position movement or the settlement transaction.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between the intra-position movement or the settlement transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementOrIntraPosition1Choice", propOrder = {"intraPositionMovement", "settlementTransaction"})
 public class SettlementOrIntraPosition1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class SettlementOrIntraPosition1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IntraPosMvmnt", required = true)
 	public IntraPosition4 getIntraPositionMovement() {
 		return intraPositionMovement;
 	}
@@ -166,6 +173,7 @@ public class SettlementOrIntraPosition1Choice {
 		this.intraPositionMovement = intraPositionMovement;
 	}
 
+	@XmlElement(name = "SttlmTx", required = true)
 	public TransactionDetails52 getSettlementTransaction() {
 		return settlementTransaction;
 	}

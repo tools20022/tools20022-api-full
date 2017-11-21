@@ -36,20 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Account#mmSettlementPartyRole
- * Account.mmSettlementPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.SettlementPartyRole#mmSettlementAccount
+ * SettlementPartyRole.mmSettlementAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Settlement#mmSettlementPartyRole
- * Settlement.mmSettlementPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.SettlementPartyRole#mmSettlement
+ * SettlementPartyRole.mmSettlement}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -76,15 +73,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * GiveUpClearingFirm}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementPartyRole#mmSettlementAccount
- * SettlementPartyRole.mmSettlementAccount}</li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmSettlementPartyRole
+ * Account.mmSettlementPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementPartyRole#mmSettlement
- * SettlementPartyRole.mmSettlement}</li>
+ * {@linkplain com.tools20022.repository.entity.Settlement#mmSettlementPartyRole
+ * Settlement.mmSettlementPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -122,11 +122,6 @@ public class SettlementPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SettlementPartyRole
-	 * SettlementPartyRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -148,6 +143,11 @@ public class SettlementPartyRole extends Role {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SettlementPartyRole
+	 * SettlementPartyRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -162,7 +162,7 @@ public class SettlementPartyRole extends Role {
 		{
 			derivation_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount1.mmDelivererDetails, DeliveringPartiesAndAccount4.mmDelivererDetails, DeliveringPartiesAndAccount8.mmDelivererDetails,
 					DeliveringPartiesAndAccount9.mmDelivererDetails, DeliveringPartiesAndAccount13.mmDelivererDetails);
-			elementContext_lazy = () -> SettlementPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SettlementPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementAccount";
@@ -211,7 +211,7 @@ public class SettlementPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmSettlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SettlementPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SettlementPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settlement";
@@ -235,7 +235,12 @@ public class SettlementPartyRole extends Role {
 				subType_lazy = () -> Arrays.asList(SecuritiesSettlementPartyRole.mmObject(), CashSettlementInstructionPartyRole.mmObject(), TreasurySettlementPartyRole.mmObject(), SSIDatabaseProvider.mmObject(),
 						CentralClearingCounterpartyRole.mmObject(), ClearingPlace.mmObject(), ContraClearingFirm.mmObject(), CorrespondentClearingFirm.mmObject(), GiveUpClearingFirm.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(SettlementPartyRole.mmSettlementAccount, SettlementPartyRole.mmSettlement);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SettlementPartyRole.mmSettlementAccount, com.tools20022.repository.entity.SettlementPartyRole.mmSettlement);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SettlementPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

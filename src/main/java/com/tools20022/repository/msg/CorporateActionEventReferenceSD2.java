@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding linkage details.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides additional information regarding linkage details. "</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionEventReferenceSD2", propOrder = {"placeAndName", "linkageType", "linkAddedDate", "linkModifiedDate"})
 public class CorporateActionEventReferenceSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -254,6 +260,7 @@ public class CorporateActionEventReferenceSD2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -262,6 +269,7 @@ public class CorporateActionEventReferenceSD2 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "LkgTp", required = true)
 	public DTCCLinkType1Code getLinkageType() {
 		return linkageType;
 	}
@@ -270,6 +278,7 @@ public class CorporateActionEventReferenceSD2 {
 		this.linkageType = linkageType;
 	}
 
+	@XmlElement(name = "LkAddedDt", required = true)
 	public ISODate getLinkAddedDate() {
 		return linkAddedDate;
 	}
@@ -278,6 +287,7 @@ public class CorporateActionEventReferenceSD2 {
 		this.linkAddedDate = linkAddedDate;
 	}
 
+	@XmlElement(name = "LkModfdDt")
 	public ISODate getLinkModifiedDate() {
 		return linkModifiedDate;
 	}

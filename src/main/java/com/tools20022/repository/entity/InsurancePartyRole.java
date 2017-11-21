@@ -36,17 +36,14 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InsuranceCertificate#mmInsurancePartyRole
- * InsuranceCertificate.mmInsurancePartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.InsurancePartyRole#mmInsuranceCertificate
+ * InsurancePartyRole.mmInsuranceCertificate}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -55,12 +52,15 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.repository.entity.Insurer Insurer}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InsurancePartyRole#mmInsuranceCertificate
- * InsurancePartyRole.mmInsuranceCertificate}</li>
+ * {@linkplain com.tools20022.repository.entity.InsuranceCertificate#mmInsurancePartyRole
+ * InsuranceCertificate.mmInsurancePartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -119,7 +119,7 @@ public class InsurancePartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmInsuranceCertificate = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InsurancePartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InsurancePartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsuranceCertificate";
@@ -141,7 +141,12 @@ public class InsurancePartyRole extends Role {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InsuranceCertificate.mmInsurancePartyRole);
 				subType_lazy = () -> Arrays.asList(Assured.mmObject(), ClaimsAgent.mmObject(), Insurer.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(InsurancePartyRole.mmInsuranceCertificate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InsurancePartyRole.mmInsuranceCertificate);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InsurancePartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

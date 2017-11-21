@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -38,6 +39,85 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmExemptionReason
+ * Tax.mmExemptionReason}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCountry Tax.mmCountry}
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmTaxLiabilityValueCalculation
+ * Tax.mmTaxLiabilityValueCalculation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmType Tax.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmRate Tax.mmRate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxableParty
+ * Tax.mmTaxableParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmTaxRefundValueCalculation
+ * Tax.mmTaxRefundValueCalculation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmBasis Tax.mmBasis}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmSecuritiesTransfer
+ * Tax.mmSecuritiesTransfer}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxRateType
+ * Tax.mmTaxRateType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxAccount
+ * Tax.mmTaxAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxationConditions
+ * Tax.mmTaxationConditions}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmAdjustment
+ * Tax.mmAdjustment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmInterest
+ * Tax.mmInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmIdentification
+ * Tax.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmRelatedPaymentSettlement
+ * Tax.mmRelatedPaymentSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxableBaseAmount
+ * Tax.mmTaxableBaseAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxDate Tax.mmTaxDate}
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmCertificateIdentification
+ * Tax.mmCertificateIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmAdministrationZone
+ * Tax.mmAdministrationZone}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmMethod Tax.mmMethod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmRecord Tax.mmRecord}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmProduct Tax.mmProduct}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCurrencyExchange
+ * Tax.mmCurrencyExchange}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCurrency
+ * Tax.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmPartyRole
+ * Tax.mmPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxDeduction
+ * Tax.mmTaxDeduction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmRelatedCorporateActionDistribution
+ * Tax.mmRelatedCorporateActionDistribution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCalculationDate
+ * Tax.mmCalculationDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmDividend
+ * Tax.mmDividend}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmWithholdingTaxType
+ * Tax.mmWithholdingTaxType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCorporateActionEvent
+ * Tax.mmCorporateActionEvent}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxIdentificationType
+ * Tax.mmTaxIdentificationType}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
+ * </li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -357,85 +437,6 @@ import java.util.List;
  * CorporateActionRate85.mmAdditionalTax}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
- * </li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmExemptionReason
- * Tax.mmExemptionReason}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCountry Tax.mmCountry}
- * </li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#mmTaxLiabilityValueCalculation
- * Tax.mmTaxLiabilityValueCalculation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmType Tax.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmRate Tax.mmRate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxableParty
- * Tax.mmTaxableParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#mmTaxRefundValueCalculation
- * Tax.mmTaxRefundValueCalculation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmBasis Tax.mmBasis}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmSecuritiesTransfer
- * Tax.mmSecuritiesTransfer}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxRateType
- * Tax.mmTaxRateType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxAccount
- * Tax.mmTaxAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxationConditions
- * Tax.mmTaxationConditions}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmAdjustment
- * Tax.mmAdjustment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmInterest
- * Tax.mmInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmIdentification
- * Tax.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#mmRelatedPaymentSettlement
- * Tax.mmRelatedPaymentSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxableBaseAmount
- * Tax.mmTaxableBaseAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxDate Tax.mmTaxDate}
- * </li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#mmCertificateIdentification
- * Tax.mmCertificateIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmAdministrationZone
- * Tax.mmAdministrationZone}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmMethod Tax.mmMethod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmRecord Tax.mmRecord}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmProduct Tax.mmProduct}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCurrencyExchange
- * Tax.mmCurrencyExchange}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCurrency
- * Tax.mmCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmPartyRole
- * Tax.mmPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxDeduction
- * Tax.mmTaxDeduction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#mmRelatedCorporateActionDistribution
- * Tax.mmRelatedCorporateActionDistribution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCalculationDate
- * Tax.mmCalculationDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmDividend
- * Tax.mmDividend}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmWithholdingTaxType
- * Tax.mmWithholdingTaxType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCorporateActionEvent
- * Tax.mmCorporateActionEvent}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxIdentificationType
- * Tax.mmTaxIdentificationType}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -467,9 +468,6 @@ public class Tax {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TaxExemptReasonCode
 	 * TaxExemptReasonCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -582,6 +580,9 @@ public class Tax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -602,7 +603,7 @@ public class Tax {
 					SettlementSubTotalCalculatedTax1.mmExemptionReason, ExemptionReasonType1Choice.mmExemptionReason, ExemptionReasonType1Choice.mmProprietary, Tax18.mmExemptionReasonType, Tax19.mmExemptionReasonType,
 					Tax21.mmExemptionReason, ExemptionReason1Choice.mmCode, ExemptionReason1Choice.mmProprietary, Tax25.mmExemptionReason, TaxExemptionReason2Choice.mmCode, TaxExemptionReason2Choice.mmProprietary, Tax28.mmExemptionReason,
 					Tax32.mmExemptionReason, Tax30.mmExemptionReason);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExemptionReason";
@@ -610,6 +611,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxExemptReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getExemptionReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Country country;
@@ -629,9 +638,6 @@ public class Tax {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Country Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -671,6 +677,9 @@ public class Tax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -687,7 +696,7 @@ public class Tax {
 		{
 			derivation_lazy = () -> Arrays.asList(Organisation13.mmTaxationCountry, IndividualPerson20.mmTaxationCountry, IndividualPerson21.mmTaxationCountry, IndividualPerson22.mmTaxationCountry, Organisation15.mmTaxationCountry,
 					Organisation16.mmTaxationCountry, Organisation17.mmTaxationCountry, IndividualPerson23.mmTaxationCountry, IndividualPerson24.mmTaxationCountry, TaxReporting1.mmTaxationCountry, TaxReporting2.mmTaxationCountry);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Country";
@@ -737,7 +746,7 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmTaxLiabilityValueCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxLiabilityValueCalculation";
@@ -759,9 +768,6 @@ public class Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.TaxTypeCode
 	 * TaxTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -862,6 +868,9 @@ public class Tax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -880,7 +889,7 @@ public class Tax {
 					LineItemTax1.mmTypeCode, Tax13.mmType, Tax13.mmOtherTaxType, Tax12.mmType, Tax12.mmOtherTaxType, TaxDetailsType1Choice.mmType, TaxDetailsType1Choice.mmProprietary, Tax20.mmType, TaxType1Choice.mmCode,
 					TaxType1Choice.mmProprietary, Tax21.mmType, Tax22.mmType, TaxType2Choice.mmType, TaxType2Choice.mmOtherTaxType, Tax23.mmType, Tax25.mmType, Tax28.mmType, Product3.mmTaxType, SettlementSubTotalCalculatedTax2.mmTypeCode,
 					SettlementSubTotalCalculatedTax2.mmExemptionReasonCode, TaxType3Choice.mmCode, TaxType3Choice.mmProprietary, Tax32.mmType, Tax30.mmType, Tax31.mmType);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -888,6 +897,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount amount;
@@ -901,11 +918,11 @@ public class Tax {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} = List of 878 elements</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} = List of 878 elements</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -921,7 +938,7 @@ public class Tax {
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> ListBuilderForTax_00.addElems(new ArrayList<>());
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -929,6 +946,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate rate;
@@ -942,9 +967,6 @@ public class Tax {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1775,6 +1797,9 @@ public class Tax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1836,7 +1861,7 @@ public class Tax {
 					CorporateActionRate83.mmTaxOnIncome, CorporateActionRate84.mmWithholdingTaxRate, CorporateActionRate84.mmSecondLevelTax, CorporateActionRate84.mmTaxOnIncome, CorporateActionRate85.mmWithholdingTaxRate,
 					CorporateActionRate85.mmSecondLevelTax, RateDetails28.mmWithholdingTaxRate, RateDetails28.mmSecondLevelTax, RateDetails28.mmFiscalStamp, RateDetails28.mmTaxOnIncome, RateDetails28.mmTaxOnProfits,
 					RateDetails28.mmTaxReclaimRate, RateDetails30.mmFiscalStamp, RateDetails30.mmWithholdingTaxRate, RateDetails30.mmSecondLevelTax, RateDetails30.mmTaxOnIncome, RateDetails30.mmTaxOnProfits, RateDetails30.mmTaxReclaimRate);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
@@ -1844,6 +1869,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Party taxableParty;
@@ -1879,7 +1912,7 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmTaxableParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxableParty";
@@ -1928,7 +1961,7 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmTaxRefundValueCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxRefundValueCalculation";
@@ -1951,9 +1984,6 @@ public class Tax {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode
 	 * TaxationBasisCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2042,6 +2072,9 @@ public class Tax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2061,7 +2094,7 @@ public class Tax {
 					TaxCalculationInformation3.mmBasis, TaxCalculationInformation6.mmBasis, TaxCalculationInformation6.mmExtendedBasis, TaxCalculationBasisType1Choice.mmBasis, TaxCalculationBasisType1Choice.mmProprietary,
 					TaxCalculationInformation7.mmTaxCalculationBasis, Tax21.mmBasis, TaxBasis1Choice.mmCode, TaxBasis1Choice.mmProprietary, TaxCalculationInformation8.mmBasis, Order17.mmChargeTaxBasisType, Order18.mmChargeTaxBasisType,
 					Tax25.mmBasis, ChargeBasisType1Choice.mmCode, ChargeBasisType1Choice.mmProprietary, Tax28.mmBasis, TaxCalculationInformation9.mmBasis, TaxCalculationInformation10.mmBasis);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Basis";
@@ -2069,6 +2102,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxationBasisCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getBasis", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesTransfer securitiesTransfer;
@@ -2105,7 +2146,7 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTransfer = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTransfer";
@@ -2127,9 +2168,6 @@ public class Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.RateTypeCode
 	 * RateTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2166,6 +2204,9 @@ public class Tax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2180,7 +2221,7 @@ public class Tax {
 		{
 			derivation_lazy = () -> Arrays.asList(RateType10Choice.mmCode, RateType10Choice.mmProprietary, RateType11Choice.mmCode, RateType11Choice.mmProprietary, RateType12Choice.mmCode, RateType12Choice.mmProprietary,
 					RateType14Choice.mmCode, RateType14Choice.mmProprietary, RateType37Choice.mmCode, RateType37Choice.mmProprietary, RateType48Choice.mmCode, RateType48Choice.mmProprietary);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxRateType";
@@ -2188,6 +2229,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getTaxRateType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.CashAccount> taxAccount;
@@ -2208,9 +2257,6 @@ public class Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2229,6 +2275,9 @@ public class Tax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2242,7 +2291,7 @@ public class Tax {
 	public static final MMBusinessAssociationEnd mmTaxAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Account8Choice.mmTaxAccount, Account9Choice.mmTaxAccount, TaxReporting1.mmCashAccountDetails, TaxReporting2.mmCashAccountDetails);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxAccount";
@@ -2263,9 +2312,6 @@ public class Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2335,6 +2381,9 @@ public class Tax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2353,7 +2402,7 @@ public class Tax {
 					CorporateActionNarrative2.mmTaxationConditions, CorporateActionNarrative27.mmTaxationConditions, CorporateActionNarrative31.mmTaxationConditions, CorporateActionNarrative28.mmTaxationConditions,
 					CorporateActionNarrative29.mmTaxationConditions, CorporateActionNarrative35.mmTaxationConditions, CorporateActionNarrative37.mmTaxationConditions, CorporateActionNarrative41.mmTaxationConditions,
 					CorporateActionNarrative36.mmTaxationConditions, SettlementSubTotalCalculatedTax2.mmExemptionReasonText);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxationConditions";
@@ -2361,6 +2410,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getTaxationConditions", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Adjustment adjustment;
@@ -2397,7 +2454,7 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmAdjustment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Adjustment";
@@ -2442,7 +2499,7 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
@@ -2465,9 +2522,6 @@ public class Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2501,6 +2555,9 @@ public class Tax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2517,7 +2574,7 @@ public class Tax {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxCharges1.mmIdentification, TaxInformation2.mmTaxReferenceNumber, TaxCharges2.mmIdentification, TaxInformation3.mmReferenceNumber, SettlementSubTotalCalculatedTax1.mmCategoryCode,
 					TaxIdentification1.mmTaxIdentificationNumber, Garnishment1.mmReferenceNumber, TaxInformation4.mmReferenceNumber, TaxIdentification2.mmIdentification);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -2525,6 +2582,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Payment relatedPaymentSettlement;
@@ -2560,7 +2625,7 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPaymentSettlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPaymentSettlement";
@@ -2583,9 +2648,6 @@ public class Tax {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2640,6 +2702,9 @@ public class Tax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2656,7 +2721,7 @@ public class Tax {
 					TaxCalculationInformation6.mmTaxableAmount, InvoiceTotals1.mmTotalTaxableAmount, SettlementMonetarySummation1.mmTaxBasisAmount, LineItemMonetarySummation1.mmTaxBasisTotalAmount,
 					TaxCalculationInformation7.mmTaxableAmount, ServiceItemTotals1.mmTotalTaxableAmount, InvoiceTotals2.mmTotalTaxableAmount, ServiceCategoryTotals1.mmTotalTaxableAmount, TaxCalculationInformation8.mmTaxableAmount,
 					TaxInformation4.mmTotalTaxableBaseAmount, TaxCalculationInformation10.mmTaxableAmount);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxableBaseAmount";
@@ -2664,6 +2729,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getTaxableBaseAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODate taxDate;
@@ -2676,9 +2749,6 @@ public class Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2718,6 +2788,9 @@ public class Tax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2732,7 +2805,7 @@ public class Tax {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxInformation2.mmTaxDate, TaxInformation3.mmDate, SettlementTax1.mmTaxPointDate, LineItemTax1.mmTaxPointDate, BillingTaxRegion1.mmPointDate, TaxInformation4.mmDate,
 					InvestmentAccount49.mmFiscalYear, InvestmentAccount51.mmFiscalYear, InvestmentAccount50.mmFiscalYear, InvestmentAccount61.mmFiscalYear, InvestmentAccount63.mmFiscalYear, InvestmentAccount62.mmFiscalYear);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxDate";
@@ -2740,6 +2813,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getTaxDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text certificateIdentification;
@@ -2752,9 +2833,6 @@ public class Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2766,6 +2844,9 @@ public class Tax {
 	 * TaxRecord1.mmCertificateIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2781,7 +2862,7 @@ public class Tax {
 	public static final MMBusinessAttribute mmCertificateIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxDetails.mmCertificateIdentification, TaxRecord1.mmCertificateIdentification);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificateIdentification";
@@ -2789,6 +2870,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getCertificateIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max140Text administrationZone;
@@ -2801,9 +2890,6 @@ public class Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max140Text
 	 * Max140Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2833,6 +2919,9 @@ public class Tax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2848,7 +2937,7 @@ public class Tax {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxInformation3.mmAdministrationZone, AccountTax1.mmRegion, ServiceTaxDesignation1.mmRegion, BillingTaxRegion1.mmRegionName, BillingStatement1.mmTaxRegion,
 					TaxInformation4.mmAdministrationZone, TaxIdentification2.mmIssuer, BillingStatement2.mmTaxRegion);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdministrationZone";
@@ -2856,6 +2945,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getAdministrationZone", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text method;
@@ -2868,9 +2965,6 @@ public class Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2880,6 +2974,9 @@ public class Tax {
 	 * TaxInformation4.mmMethod}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2896,7 +2993,7 @@ public class Tax {
 	public static final MMBusinessAttribute mmMethod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxInformation3.mmMethod, TaxInformation4.mmMethod);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Method";
@@ -2904,6 +3001,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.TaxRecord> record;
@@ -2923,9 +3028,6 @@ public class Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.TaxRecord TaxRecord}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2954,6 +3056,9 @@ public class Tax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2968,7 +3073,7 @@ public class Tax {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxInformation3.mmRecord, BillingMethod1.mmTaxIdentification, BillingMethod2.mmTaxIdentification, BillingMethod3.mmTaxIdentification, BillingService1.mmTaxDesignation,
 					TaxCalculation1.mmTaxIdentification, TaxInformation4.mmRecord, BillingService2.mmTaxDesignation);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Record";
@@ -3011,7 +3116,7 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmProduct = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Product";
@@ -3041,9 +3146,6 @@ public class Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
 	 * CurrencyExchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3052,6 +3154,9 @@ public class Tax {
 	 * TradeSettlement1.mmTaxCurrencyExchange}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3066,7 +3171,7 @@ public class Tax {
 	public static final MMBusinessAssociationEnd mmCurrencyExchange = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmTaxCurrencyExchange);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchange";
@@ -3087,9 +3192,6 @@ public class Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3105,6 +3207,9 @@ public class Tax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3118,7 +3223,7 @@ public class Tax {
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashAccountCharacteristics1.mmHostCurrencyCode, TaxCalculation1.mmHostCurrency, CashAccountCharacteristics2.mmHostCurrencyCode);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
@@ -3126,6 +3231,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.TaxPartyRole> partyRole;
@@ -3147,9 +3260,6 @@ public class Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.TaxPartyRole
 	 * TaxPartyRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3158,6 +3268,9 @@ public class Tax {
 	 * BillingTaxRegion1.mmSendingFinancialInstitution}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3174,7 +3287,7 @@ public class Tax {
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingTaxRegion1.mmSendingFinancialInstitution);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
@@ -3212,7 +3325,7 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmTaxDeduction = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxDeduction";
@@ -3220,6 +3333,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getTaxDeduction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Distribution relatedCorporateActionDistribution;
@@ -3256,7 +3377,7 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCorporateActionDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCorporateActionDistribution";
@@ -3294,7 +3415,7 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmCalculationDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationDate";
@@ -3302,6 +3423,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getCalculationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Dividend> dividend;
@@ -3336,7 +3465,7 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmDividend = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Dividend";
@@ -3358,9 +3487,6 @@ public class Tax {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.WithholdingTaxRateTypeCode
 	 * WithholdingTaxRateTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3399,6 +3525,9 @@ public class Tax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3414,7 +3543,7 @@ public class Tax {
 			derivation_lazy = () -> Arrays.asList(RateTypeAndPercentageRate1.mmRateType, RateType28Choice.mmCode, RateType28Choice.mmProprietary, RateType30Choice.mmCode, RateType30Choice.mmProprietary,
 					RateTypeAndPercentageRate3.mmRateType, RateTypeAndPercentageRate8.mmRateType, RateType42Choice.mmCode, RateType42Choice.mmProprietary, RateTypeAndPercentageRate9.mmRateType, RateType46Choice.mmCode,
 					RateType46Choice.mmProprietary);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WithholdingTaxType";
@@ -3422,6 +3551,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> WithholdingTaxRateTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getWithholdingTaxType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionEvent corporateActionEvent;
@@ -3459,7 +3596,7 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEvent";
@@ -3482,9 +3619,6 @@ public class Tax {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TaxIdentificationNumberTypeCode
 	 * TaxIdentificationNumberTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3496,6 +3630,9 @@ public class Tax {
 	 * TaxIdentificationType1Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3510,7 +3647,7 @@ public class Tax {
 	public static final MMBusinessAttribute mmTaxIdentificationType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxIdentification2.mmTaxIdentificationType, TaxIdentificationType1Choice.mmCode);
-			elementContext_lazy = () -> Tax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxIdentificationType";
@@ -3518,6 +3655,14 @@ public class Tax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxIdentificationNumberTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tax.class.getMethod("getTaxIdentificationType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -3546,10 +3691,16 @@ public class Tax {
 						TradeSettlement2.mmSubTotalCalculatedTax, CorporateActionRate82.mmAdditionalTax, CorporateActionRate80.mmAdditionalTax, CorporateActionRate81.mmAdditionalTax, CorporateActionRate83.mmAdditionalTax,
 						CorporateActionRate84.mmAdditionalTax, CorporateActionRate85.mmAdditionalTax);
 				subType_lazy = () -> Arrays.asList(SecuritiesTax.mmObject());
-				element_lazy = () -> Arrays.asList(Tax.mmExemptionReason, Tax.mmCountry, Tax.mmTaxLiabilityValueCalculation, Tax.mmType, Tax.mmAmount, Tax.mmRate, Tax.mmTaxableParty, Tax.mmTaxRefundValueCalculation, Tax.mmBasis,
-						Tax.mmSecuritiesTransfer, Tax.mmTaxRateType, Tax.mmTaxAccount, Tax.mmTaxationConditions, Tax.mmAdjustment, Tax.mmInterest, Tax.mmIdentification, Tax.mmRelatedPaymentSettlement, Tax.mmTaxableBaseAmount,
-						Tax.mmTaxDate, Tax.mmCertificateIdentification, Tax.mmAdministrationZone, Tax.mmMethod, Tax.mmRecord, Tax.mmProduct, Tax.mmCurrencyExchange, Tax.mmCurrency, Tax.mmPartyRole, Tax.mmTaxDeduction,
-						Tax.mmRelatedCorporateActionDistribution, Tax.mmCalculationDate, Tax.mmDividend, Tax.mmWithholdingTaxType, Tax.mmCorporateActionEvent, Tax.mmTaxIdentificationType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Tax.mmExemptionReason, com.tools20022.repository.entity.Tax.mmCountry, com.tools20022.repository.entity.Tax.mmTaxLiabilityValueCalculation,
+						com.tools20022.repository.entity.Tax.mmType, com.tools20022.repository.entity.Tax.mmAmount, com.tools20022.repository.entity.Tax.mmRate, com.tools20022.repository.entity.Tax.mmTaxableParty,
+						com.tools20022.repository.entity.Tax.mmTaxRefundValueCalculation, com.tools20022.repository.entity.Tax.mmBasis, com.tools20022.repository.entity.Tax.mmSecuritiesTransfer,
+						com.tools20022.repository.entity.Tax.mmTaxRateType, com.tools20022.repository.entity.Tax.mmTaxAccount, com.tools20022.repository.entity.Tax.mmTaxationConditions, com.tools20022.repository.entity.Tax.mmAdjustment,
+						com.tools20022.repository.entity.Tax.mmInterest, com.tools20022.repository.entity.Tax.mmIdentification, com.tools20022.repository.entity.Tax.mmRelatedPaymentSettlement,
+						com.tools20022.repository.entity.Tax.mmTaxableBaseAmount, com.tools20022.repository.entity.Tax.mmTaxDate, com.tools20022.repository.entity.Tax.mmCertificateIdentification,
+						com.tools20022.repository.entity.Tax.mmAdministrationZone, com.tools20022.repository.entity.Tax.mmMethod, com.tools20022.repository.entity.Tax.mmRecord, com.tools20022.repository.entity.Tax.mmProduct,
+						com.tools20022.repository.entity.Tax.mmCurrencyExchange, com.tools20022.repository.entity.Tax.mmCurrency, com.tools20022.repository.entity.Tax.mmPartyRole, com.tools20022.repository.entity.Tax.mmTaxDeduction,
+						com.tools20022.repository.entity.Tax.mmRelatedCorporateActionDistribution, com.tools20022.repository.entity.Tax.mmCalculationDate, com.tools20022.repository.entity.Tax.mmDividend,
+						com.tools20022.repository.entity.Tax.mmWithholdingTaxType, com.tools20022.repository.entity.Tax.mmCorporateActionEvent, com.tools20022.repository.entity.Tax.mmTaxIdentificationType);
 				derivationComponent_lazy = () -> Arrays.asList(TaxExemptionReason1Choice.mmObject(), TaxTypeFormat2Choice.mmObject(), TaxExemptionReasonFormatChoice.mmObject(), Tax3.mmObject(), RateType10Choice.mmObject(),
 						RateType11Choice.mmObject(), RateType12Choice.mmObject(), RateType14Choice.mmObject(), TaxCharges1.mmObject(), TaxType.mmObject(), TaxDetails.mmObject(), TaxInformation2.mmObject(), TaxCharges2.mmObject(),
 						TaxRecordDetails1.mmObject(), TaxAmount1.mmObject(), TaxInformation3.mmObject(), TaxAmountType1Choice.mmObject(), TaxAmountAndType1.mmObject(), TaxationBasis1.mmObject(), TaxExemptionReason1.mmObject(),
@@ -3560,6 +3711,11 @@ public class Tax {
 						RateTypeAndPercentageRate3.mmObject(), TaxIdentification2.mmObject(), TaxIdentificationType1Choice.mmObject(), RateTypeAndPercentageRate8.mmObject(), RateType42Choice.mmObject(), RateType37Choice.mmObject(),
 						TaxExemptionReason2Choice.mmObject(), TaxReporting1.mmObject(), RateTypeAndPercentageRate9.mmObject(), RateType46Choice.mmObject(), RateType48Choice.mmObject(), SettlementSubTotalCalculatedTax2.mmObject(),
 						TaxReporting2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Tax.class;
 			}
 		});
 		return mmObject_lazy.get();

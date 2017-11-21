@@ -37,6 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradePartyRole
+ * SecuritiesTradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -52,10 +56,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ConfirmationParties2.mmAffirmingParty}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradePartyRole
- * SecuritiesTradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -86,6 +86,11 @@ public class AffirmingPartyRole extends SecuritiesTradePartyRole {
 				definition = "Party (buyer or seller) that positively affirms the details of a previously agreed security trade confirmation.";
 				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties3.mmAffirmingParty, ConfirmationParties4.mmAffirmingParty, ConfirmationParties2.mmAffirmingParty);
 				superType_lazy = () -> SecuritiesTradePartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AffirmingPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

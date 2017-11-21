@@ -37,6 +37,21 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DuplicateCase#mmDuplicatedCase
+ * DuplicateCase.mmDuplicatedCase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DuplicateCase#mmRelatedCaseResolution
+ * DuplicateCase.mmRelatedCaseResolution}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestigationResolution
+ * InvestigationResolution}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -47,21 +62,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmDuplicateCase
  * PaymentInvestigationCaseResolution.mmDuplicateCase}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestigationResolution
- * InvestigationResolution}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DuplicateCase#mmDuplicatedCase
- * DuplicateCase.mmDuplicatedCase}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DuplicateCase#mmRelatedCaseResolution
- * DuplicateCase.mmRelatedCaseResolution}</li>
  * </ul>
  * </li>
  * <li>
@@ -120,7 +120,7 @@ public class DuplicateCase extends InvestigationResolution {
 	 */
 	public static final MMBusinessAssociationEnd mmDuplicatedCase = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> DuplicateCase.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DuplicateCase.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DuplicatedCase";
@@ -168,7 +168,7 @@ public class DuplicateCase extends InvestigationResolution {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCaseResolution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> DuplicateCase.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DuplicateCase.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedCaseResolution";
@@ -190,7 +190,12 @@ public class DuplicateCase extends InvestigationResolution {
 				definition = "Outcome that results in closing a case as duplicate because the same issue has been reported by another party.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationCase.mmDuplicateCaseResolution, com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmDuplicateCase);
 				superType_lazy = () -> InvestigationResolution.mmObject();
-				element_lazy = () -> Arrays.asList(DuplicateCase.mmDuplicatedCase, DuplicateCase.mmRelatedCaseResolution);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DuplicateCase.mmDuplicatedCase, com.tools20022.repository.entity.DuplicateCase.mmRelatedCaseResolution);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DuplicateCase.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,6 +37,32 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmIdentificationForSystem
+ * SystemIdentification.mmIdentificationForSystem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmModel
+ * SystemIdentification.mmModel}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSerialNumber
+ * SystemIdentification.mmSerialNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmApprovalNumber
+ * SystemIdentification.mmApprovalNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSystemVersion
+ * SystemIdentification.mmSystemVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSystemName
+ * SystemIdentification.mmSystemName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmIdentification
+ * SystemIdentification.mmIdentification}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -78,32 +105,6 @@ import java.util.List;
  * MarketInfrastructureIdentification1Choice.mmProprietary}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmIdentificationForSystem
- * SystemIdentification.mmIdentificationForSystem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmModel
- * SystemIdentification.mmModel}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSerialNumber
- * SystemIdentification.mmSerialNumber}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmApprovalNumber
- * SystemIdentification.mmApprovalNumber}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSystemVersion
- * SystemIdentification.mmSystemVersion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSystemName
- * SystemIdentification.mmSystemName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmIdentification
- * SystemIdentification.mmIdentification}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -139,11 +140,6 @@ public class SystemIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.System System}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
-	 * SystemIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -159,6 +155,11 @@ public class SystemIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
+	 * SystemIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -172,7 +173,7 @@ public class SystemIdentification {
 	public static final MMBusinessAssociationEnd mmIdentificationForSystem = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(AutomatedTellerMachine3.mmIdentification, AutomatedTellerMachine4.mmIdentification, AutomatedTellerMachine10.mmIdentification);
-			elementContext_lazy = () -> SystemIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForSystem";
@@ -194,11 +195,6 @@ public class SystemIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
-	 * SystemIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -210,6 +206,11 @@ public class SystemIdentification {
 	 * PointOfInteractionComponent2.mmModel}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
+	 * SystemIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -224,7 +225,7 @@ public class SystemIdentification {
 	public static final MMBusinessAttribute mmModel = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent1.mmModel, PointOfInteractionComponent2.mmModel);
-			elementContext_lazy = () -> SystemIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Model";
@@ -232,6 +233,14 @@ public class SystemIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SystemIdentification.class.getMethod("getModel", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text serialNumber;
@@ -244,11 +253,6 @@ public class SystemIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
-	 * SystemIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -264,6 +268,11 @@ public class SystemIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
+	 * SystemIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -277,7 +286,7 @@ public class SystemIdentification {
 	public static final MMBusinessAttribute mmSerialNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent1.mmSerialNumber, PointOfInteractionComponent2.mmSerialNumber, PointOfInteractionComponentIdentification1.mmSerialNumber);
-			elementContext_lazy = () -> SystemIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SerialNumber";
@@ -285,6 +294,14 @@ public class SystemIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SystemIdentification.class.getMethod("getSerialNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max70Text approvalNumber;
@@ -298,11 +315,6 @@ public class SystemIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
-	 * SystemIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -314,6 +326,11 @@ public class SystemIdentification {
 	 * PointOfInteractionComponent2.mmApprovalNumber}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
+	 * SystemIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -330,7 +347,7 @@ public class SystemIdentification {
 	public static final MMBusinessAttribute mmApprovalNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent1.mmApprovalNumber, PointOfInteractionComponent2.mmApprovalNumber);
-			elementContext_lazy = () -> SystemIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApprovalNumber";
@@ -338,6 +355,14 @@ public class SystemIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SystemIdentification.class.getMethod("getApprovalNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text systemVersion;
@@ -350,11 +375,6 @@ public class SystemIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
-	 * SystemIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -373,6 +393,11 @@ public class SystemIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
+	 * SystemIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -388,7 +413,7 @@ public class SystemIdentification {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent2.mmVersionNumber, PointOfInteractionComponentStatus1.mmVersionNumber, PointOfInteractionComponentStatus2.mmVersionNumber,
 					PointOfInteractionComponentStatus3.mmVersionNumber);
-			elementContext_lazy = () -> SystemIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemVersion";
@@ -396,6 +421,14 @@ public class SystemIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SystemIdentification.class.getMethod("getSystemVersion", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.SystemName> systemName;
@@ -416,11 +449,6 @@ public class SystemIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SystemName
 	 * SystemName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
-	 * SystemIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -436,6 +464,11 @@ public class SystemIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
+	 * SystemIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -449,7 +482,7 @@ public class SystemIdentification {
 	public static final MMBusinessAssociationEnd mmSystemName = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(AutomatedTellerMachine3.mmSequenceNumber, AutomatedTellerMachine4.mmSequenceNumber, AutomatedTellerMachine10.mmSequenceNumber);
-			elementContext_lazy = () -> SystemIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemName";
@@ -479,11 +512,6 @@ public class SystemIdentification {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
 	 * GenericIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
-	 * SystemIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -550,6 +578,11 @@ public class SystemIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
+	 * SystemIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -567,7 +600,7 @@ public class SystemIdentification {
 					CardPaymentTransaction33.mmPOIIdentification, ManagementPlan4.mmPOIIdentification, ManagementPlan4.mmTerminalManagerIdentification, CardPaymentTransaction50.mmPOIIdentification,
 					CardPaymentTransaction37.mmPOIIdentification, ManagementPlan5.mmPOIIdentification, ManagementPlan5.mmTerminalManagerIdentification, CardPaymentTransaction52.mmPOIIdentification,
 					CardPaymentTransaction65.mmPOIIdentification, ManagementPlan6.mmPOIIdentification, ManagementPlan6.mmTerminalManagerIdentification, CardPaymentTransaction73.mmPOIIdentification);
-			elementContext_lazy = () -> SystemIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -589,9 +622,15 @@ public class SystemIdentification {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmRelatedSystemIdentification, com.tools20022.repository.entity.System.mmSystemIdentification,
 						com.tools20022.repository.entity.SystemName.mmSystemIdentification);
 				derivationElement_lazy = () -> Arrays.asList(MarketInfrastructureIdentification1Choice.mmCode, MarketInfrastructureIdentification1Choice.mmProprietary);
-				element_lazy = () -> Arrays.asList(SystemIdentification.mmIdentificationForSystem, SystemIdentification.mmModel, SystemIdentification.mmSerialNumber, SystemIdentification.mmApprovalNumber,
-						SystemIdentification.mmSystemVersion, SystemIdentification.mmSystemName, SystemIdentification.mmIdentification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemIdentification.mmIdentificationForSystem, com.tools20022.repository.entity.SystemIdentification.mmModel,
+						com.tools20022.repository.entity.SystemIdentification.mmSerialNumber, com.tools20022.repository.entity.SystemIdentification.mmApprovalNumber, com.tools20022.repository.entity.SystemIdentification.mmSystemVersion,
+						com.tools20022.repository.entity.SystemIdentification.mmSystemName, com.tools20022.repository.entity.SystemIdentification.mmIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(MarketInfrastructureIdentification1Choice.mmObject(), AutomatedTellerMachine3.mmObject(), AutomatedTellerMachine4.mmObject(), AutomatedTellerMachine10.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SystemIdentification.class;
 			}
 		});
 		return mmObject_lazy.get();

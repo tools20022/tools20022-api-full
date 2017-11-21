@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.UndertakingStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Undertaking extend or pay query details.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Undertaking extend or pay query details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExtendOrPayQuery2", propOrder = {"undertakingIdentification", "demandDetails", "status"})
 public class ExtendOrPayQuery2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -236,6 +242,7 @@ public class ExtendOrPayQuery2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UdrtkgId", required = true)
 	public Undertaking9 getUndertakingIdentification() {
 		return undertakingIdentification;
 	}
@@ -244,6 +251,7 @@ public class ExtendOrPayQuery2 {
 		this.undertakingIdentification = undertakingIdentification;
 	}
 
+	@XmlElement(name = "DmndDtls", required = true)
 	public Demand4 getDemandDetails() {
 		return demandDetails;
 	}
@@ -252,6 +260,7 @@ public class ExtendOrPayQuery2 {
 		this.demandDetails = demandDetails;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public DemandStatus1Code getStatus() {
 		return status;
 	}

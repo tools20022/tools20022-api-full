@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Trade settlement details for this invoice which involves the payment of an
@@ -101,6 +105,9 @@ import java.util.List;
  * {@linkplain com.tools20022.repository.msg.TradeSettlement1 TradeSettlement1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeSettlement2", propOrder = {"paymentReference", "dueDate", "duePayableAmount", "invoiceCurrencyExchange", "deliveryDate", "billingPeriod", "taxTotalAmount", "exemptionReasonCode", "exemptionReason",
+		"subTotalCalculatedTax", "earlyPayments"})
 public class TradeSettlement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -619,6 +626,7 @@ public class TradeSettlement2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtRef")
 	public CreditorReferenceInformation2 getPaymentReference() {
 		return paymentReference;
 	}
@@ -627,6 +635,7 @@ public class TradeSettlement2 {
 		this.paymentReference = paymentReference;
 	}
 
+	@XmlElement(name = "DueDt")
 	public ISODate getDueDate() {
 		return dueDate;
 	}
@@ -635,6 +644,7 @@ public class TradeSettlement2 {
 		this.dueDate = dueDate;
 	}
 
+	@XmlElement(name = "DuePyblAmt", required = true)
 	public CurrencyAndAmount getDuePayableAmount() {
 		return duePayableAmount;
 	}
@@ -643,6 +653,7 @@ public class TradeSettlement2 {
 		this.duePayableAmount = duePayableAmount;
 	}
 
+	@XmlElement(name = "InvcCcyXchg")
 	public CurrencyReference3 getInvoiceCurrencyExchange() {
 		return invoiceCurrencyExchange;
 	}
@@ -651,6 +662,7 @@ public class TradeSettlement2 {
 		this.invoiceCurrencyExchange = invoiceCurrencyExchange;
 	}
 
+	@XmlElement(name = "DlvryDt")
 	public ISODate getDeliveryDate() {
 		return deliveryDate;
 	}
@@ -659,6 +671,7 @@ public class TradeSettlement2 {
 		this.deliveryDate = deliveryDate;
 	}
 
+	@XmlElement(name = "BllgPrd")
 	public Period2 getBillingPeriod() {
 		return billingPeriod;
 	}
@@ -667,6 +680,7 @@ public class TradeSettlement2 {
 		this.billingPeriod = billingPeriod;
 	}
 
+	@XmlElement(name = "TaxTtlAmt", required = true)
 	public CurrencyAndAmount getTaxTotalAmount() {
 		return taxTotalAmount;
 	}
@@ -675,6 +689,7 @@ public class TradeSettlement2 {
 		this.taxTotalAmount = taxTotalAmount;
 	}
 
+	@XmlElement(name = "XmptnRsnCd")
 	public Max4Text getExemptionReasonCode() {
 		return exemptionReasonCode;
 	}
@@ -683,6 +698,7 @@ public class TradeSettlement2 {
 		this.exemptionReasonCode = exemptionReasonCode;
 	}
 
+	@XmlElement(name = "XmptnRsn")
 	public Max500Text getExemptionReason() {
 		return exemptionReason;
 	}
@@ -691,6 +707,7 @@ public class TradeSettlement2 {
 		this.exemptionReason = exemptionReason;
 	}
 
+	@XmlElement(name = "SubTtlClctdTax")
 	public List<SettlementSubTotalCalculatedTax2> getSubTotalCalculatedTax() {
 		return subTotalCalculatedTax;
 	}
@@ -699,6 +716,7 @@ public class TradeSettlement2 {
 		this.subTotalCalculatedTax = subTotalCalculatedTax;
 	}
 
+	@XmlElement(name = "EarlyPmts")
 	public List<EarlyPayment1> getEarlyPayments() {
 		return earlyPayments;
 	}

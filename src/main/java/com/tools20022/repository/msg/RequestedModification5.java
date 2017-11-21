@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provide further details on the requested modifications of the underlying
@@ -159,6 +163,10 @@ import java.util.List;
  * RequestedModification4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestedModification5", propOrder = {"instructionIdentification", "endToEndIdentification", "transactionIdentification", "paymentTypeInformation", "requestedExecutionDate", "requestedCollectionDate",
+		"interbankSettlementDate", "amount", "interbankSettlementAmount", "chargeBearer", "ultimateDebtor", "debtor", "debtorAccount", "debtorAgentAccount", "settlementInformation", "creditorAgentAccount", "creditor", "creditorAccount",
+		"ultimateCreditor", "purpose", "instructionForDebtorAgent", "instructionForNextAgent", "instructionForCreditorAgent", "remittanceInformation"})
 public class RequestedModification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1767,6 +1775,7 @@ public class RequestedModification5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrId")
 	public Max35Text getInstructionIdentification() {
 		return instructionIdentification;
 	}
@@ -1775,6 +1784,7 @@ public class RequestedModification5 {
 		this.instructionIdentification = instructionIdentification;
 	}
 
+	@XmlElement(name = "EndToEndId")
 	public Max35Text getEndToEndIdentification() {
 		return endToEndIdentification;
 	}
@@ -1783,6 +1793,7 @@ public class RequestedModification5 {
 		this.endToEndIdentification = endToEndIdentification;
 	}
 
+	@XmlElement(name = "TxId")
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -1791,6 +1802,7 @@ public class RequestedModification5 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "PmtTpInf")
 	public PaymentTypeInformation25 getPaymentTypeInformation() {
 		return paymentTypeInformation;
 	}
@@ -1799,6 +1811,7 @@ public class RequestedModification5 {
 		this.paymentTypeInformation = paymentTypeInformation;
 	}
 
+	@XmlElement(name = "ReqdExctnDt")
 	public ISODate getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -1807,6 +1820,7 @@ public class RequestedModification5 {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "ReqdColltnDt")
 	public ISODate getRequestedCollectionDate() {
 		return requestedCollectionDate;
 	}
@@ -1815,6 +1829,7 @@ public class RequestedModification5 {
 		this.requestedCollectionDate = requestedCollectionDate;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDt")
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}
@@ -1823,6 +1838,7 @@ public class RequestedModification5 {
 		this.interbankSettlementDate = interbankSettlementDate;
 	}
 
+	@XmlElement(name = "Amt")
 	public AmountType4Choice getAmount() {
 		return amount;
 	}
@@ -1831,6 +1847,7 @@ public class RequestedModification5 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmt")
 	public ActiveOrHistoricCurrencyAndAmount getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
@@ -1839,6 +1856,7 @@ public class RequestedModification5 {
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
 
+	@XmlElement(name = "ChrgBr")
 	public ChargeBearerType1Code getChargeBearer() {
 		return chargeBearer;
 	}
@@ -1847,6 +1865,7 @@ public class RequestedModification5 {
 		this.chargeBearer = chargeBearer;
 	}
 
+	@XmlElement(name = "UltmtDbtr")
 	public PartyIdentification43 getUltimateDebtor() {
 		return ultimateDebtor;
 	}
@@ -1855,6 +1874,7 @@ public class RequestedModification5 {
 		this.ultimateDebtor = ultimateDebtor;
 	}
 
+	@XmlElement(name = "Dbtr")
 	public PartyIdentification43 getDebtor() {
 		return debtor;
 	}
@@ -1863,6 +1883,7 @@ public class RequestedModification5 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAcct")
 	public CashAccount24 getDebtorAccount() {
 		return debtorAccount;
 	}
@@ -1871,6 +1892,7 @@ public class RequestedModification5 {
 		this.debtorAccount = debtorAccount;
 	}
 
+	@XmlElement(name = "DbtrAgtAcct")
 	public CashAccount24 getDebtorAgentAccount() {
 		return debtorAgentAccount;
 	}
@@ -1879,6 +1901,7 @@ public class RequestedModification5 {
 		this.debtorAgentAccount = debtorAgentAccount;
 	}
 
+	@XmlElement(name = "SttlmInf")
 	public SettlementInstruction3 getSettlementInformation() {
 		return settlementInformation;
 	}
@@ -1887,6 +1910,7 @@ public class RequestedModification5 {
 		this.settlementInformation = settlementInformation;
 	}
 
+	@XmlElement(name = "CdtrAgtAcct")
 	public CashAccount24 getCreditorAgentAccount() {
 		return creditorAgentAccount;
 	}
@@ -1895,6 +1919,7 @@ public class RequestedModification5 {
 		this.creditorAgentAccount = creditorAgentAccount;
 	}
 
+	@XmlElement(name = "Cdtr")
 	public PartyIdentification43 getCreditor() {
 		return creditor;
 	}
@@ -1903,6 +1928,7 @@ public class RequestedModification5 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAcct")
 	public CashAccount24 getCreditorAccount() {
 		return creditorAccount;
 	}
@@ -1911,6 +1937,7 @@ public class RequestedModification5 {
 		this.creditorAccount = creditorAccount;
 	}
 
+	@XmlElement(name = "UltmtCdtr")
 	public PartyIdentification43 getUltimateCreditor() {
 		return ultimateCreditor;
 	}
@@ -1919,6 +1946,7 @@ public class RequestedModification5 {
 		this.ultimateCreditor = ultimateCreditor;
 	}
 
+	@XmlElement(name = "Purp")
 	public Purpose2Choice getPurpose() {
 		return purpose;
 	}
@@ -1927,6 +1955,7 @@ public class RequestedModification5 {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "InstrForDbtrAgt")
 	public Max140Text getInstructionForDebtorAgent() {
 		return instructionForDebtorAgent;
 	}
@@ -1935,6 +1964,7 @@ public class RequestedModification5 {
 		this.instructionForDebtorAgent = instructionForDebtorAgent;
 	}
 
+	@XmlElement(name = "InstrForNxtAgt")
 	public List<InstructionForNextAgent1> getInstructionForNextAgent() {
 		return instructionForNextAgent;
 	}
@@ -1943,6 +1973,7 @@ public class RequestedModification5 {
 		this.instructionForNextAgent = instructionForNextAgent;
 	}
 
+	@XmlElement(name = "InstrForCdtrAgt")
 	public List<InstructionForCreditorAgent1> getInstructionForCreditorAgent() {
 		return instructionForCreditorAgent;
 	}
@@ -1951,6 +1982,7 @@ public class RequestedModification5 {
 		this.instructionForCreditorAgent = instructionForCreditorAgent;
 	}
 
+	@XmlElement(name = "RmtInf")
 	public RemittanceInformation11 getRemittanceInformation() {
 		return remittanceInformation;
 	}

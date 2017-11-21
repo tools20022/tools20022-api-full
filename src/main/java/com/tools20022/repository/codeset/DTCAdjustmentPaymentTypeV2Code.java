@@ -29,17 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code
- * DTCAdjustmentPaymentType2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType3Code
- * DTCAdjustmentPaymentType3Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -154,6 +143,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmWarrantRateChange
  * DTCAdjustmentPaymentTypeV2Code.mmWarrantRateChange}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code
+ * DTCAdjustmentPaymentType2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType3Code
+ * DTCAdjustmentPaymentType3Code}</li>
  * </ul>
  * </li>
  * <li>

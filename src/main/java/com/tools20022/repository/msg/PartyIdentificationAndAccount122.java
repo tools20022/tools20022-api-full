@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about identification and account of the party .
@@ -77,6 +81,8 @@ import java.util.List;
  * PartyIdentificationAndAccount51}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount122", propOrder = {"identification", "safekeepingAccount", "processingIdentification", "alternateIdentification"})
 public class PartyIdentificationAndAccount122 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -304,6 +310,7 @@ public class PartyIdentificationAndAccount122 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification71Choice getIdentification() {
 		return identification;
 	}
@@ -312,6 +319,7 @@ public class PartyIdentificationAndAccount122 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public Max35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -320,6 +328,7 @@ public class PartyIdentificationAndAccount122 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public Max35Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -328,6 +337,7 @@ public class PartyIdentificationAndAccount122 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public List<AlternatePartyIdentification7> getAlternateIdentification() {
 		return alternateIdentification;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.LotBreakdown;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of breakdown of a quantity.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details of breakdown of a quantity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuantityBreakdown11", propOrder = {"lotNumber", "lotQuantity", "lotDateTime", "lotPrice"})
 public class QuantityBreakdown11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -280,6 +286,7 @@ public class QuantityBreakdown11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LotNb")
 	public GenericIdentification37 getLotNumber() {
 		return lotNumber;
 	}
@@ -288,6 +295,7 @@ public class QuantityBreakdown11 {
 		this.lotNumber = lotNumber;
 	}
 
+	@XmlElement(name = "LotQty")
 	public FinancialInstrumentQuantity1Choice getLotQuantity() {
 		return lotQuantity;
 	}
@@ -296,6 +304,7 @@ public class QuantityBreakdown11 {
 		this.lotQuantity = lotQuantity;
 	}
 
+	@XmlElement(name = "LotDtTm")
 	public DateAndDateTime1Choice getLotDateTime() {
 		return lotDateTime;
 	}
@@ -304,6 +313,7 @@ public class QuantityBreakdown11 {
 		this.lotDateTime = lotDateTime;
 	}
 
+	@XmlElement(name = "LotPric")
 	public Price4 getLotPrice() {
 		return lotPrice;
 	}

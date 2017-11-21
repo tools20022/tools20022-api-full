@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PersonIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique and unambiguous way to identify a person.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Unique and unambiguous way to identify a person."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PersonIdentification6", propOrder = {"issuer", "personIdentificationType"})
 public class PersonIdentification6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class PersonIdentification6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Issr")
 	public Max35Text getIssuer() {
 		return issuer;
 	}
@@ -184,6 +191,7 @@ public class PersonIdentification6 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "PrsnIdTp", required = true)
 	public PersonIdentificationType1Choice getPersonIdentificationType() {
 		return personIdentificationType;
 	}

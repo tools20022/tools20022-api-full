@@ -66,6 +66,11 @@ public class CarrierAgent extends TransportPartyRole {
 				definition = "Carrier's agent (for example, shipping company) that acts on behalf of the carrier and may be the issuer of transport documents.";
 				superType_lazy = () -> TransportPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CarrierAgent.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

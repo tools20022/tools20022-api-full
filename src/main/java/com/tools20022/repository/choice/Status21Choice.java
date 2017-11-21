@@ -31,6 +31,10 @@ import com.tools20022.repository.msg.TransferCancellationPendingStatus1;
 import com.tools20022.repository.msg.TransferCancellationStatus2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for the specification of the status.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.choice.Status20Choice Status20Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Status21Choice", propOrder = {"status", "rejected", "complete", "pending"})
 public class Status21Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -285,6 +291,7 @@ public class Status21Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public TransferCancellationStatus2 getStatus() {
 		return status;
 	}
@@ -293,6 +300,7 @@ public class Status21Choice {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectionReason33 getRejected() {
 		return rejected;
 	}
@@ -301,6 +309,7 @@ public class Status21Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Cmplt", required = true)
 	public CancelledCompleteReason1 getComplete() {
 		return complete;
 	}
@@ -309,6 +318,7 @@ public class Status21Choice {
 		this.complete = complete;
 	}
 
+	@XmlElement(name = "Pdg", required = true)
 	public TransferCancellationPendingStatus1 getPending() {
 		return pending;
 	}

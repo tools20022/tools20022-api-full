@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money associated with a service.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ChargesDetails2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ChargesDetails4", propOrder = {"chargesType", "amount"})
 public class ChargesDetails4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -184,6 +190,7 @@ public class ChargesDetails4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ChrgsTp", required = true)
 	public ChargesType1Choice getChargesType() {
 		return chargesType;
 	}
@@ -192,6 +199,7 @@ public class ChargesDetails4 {
 		this.chargesType = chargesType;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}

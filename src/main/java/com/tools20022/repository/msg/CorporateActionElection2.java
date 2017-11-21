@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about a corporate action election amendment request.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides information about a corporate action election amendment request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionElection2", propOrder = {"optionType", "optionNumber", "newInstructedQuantity", "reason"})
 public class CorporateActionElection2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -295,6 +301,7 @@ public class CorporateActionElection2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption1FormatChoice getOptionType() {
 		return optionType;
 	}
@@ -303,6 +310,7 @@ public class CorporateActionElection2 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "OptnNb", required = true)
 	public Exact3NumericText getOptionNumber() {
 		return optionNumber;
 	}
@@ -311,6 +319,7 @@ public class CorporateActionElection2 {
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "NewInstdQty", required = true)
 	public UnitOrFaceAmount1Choice getNewInstructedQuantity() {
 		return newInstructedQuantity;
 	}
@@ -319,6 +328,7 @@ public class CorporateActionElection2 {
 		this.newInstructedQuantity = newInstructedQuantity;
 	}
 
+	@XmlElement(name = "Rsn")
 	public Max350Text getReason() {
 		return reason;
 	}

@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.SimpleIdentificationInformation;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -40,9 +42,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.049.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -78,6 +77,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.049.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -89,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RoleAndBaselineAcceptanceV01", propOrder = {"acceptanceIdentification", "relatedMessageReference", "transactionIdentification"})
 public class RoleAndBaselineAcceptanceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -126,6 +130,14 @@ public class RoleAndBaselineAcceptanceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RoleAndBaselineAcceptanceV01.class.getMethod("getAcceptanceIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MessageIdentification1 relatedMessageReference;
 	/**
@@ -161,6 +173,14 @@ public class RoleAndBaselineAcceptanceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RoleAndBaselineAcceptanceV01.class.getMethod("getRelatedMessageReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -201,6 +221,14 @@ public class RoleAndBaselineAcceptanceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RoleAndBaselineAcceptanceV01.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -213,7 +241,8 @@ public class RoleAndBaselineAcceptanceV01 {
 				rootElement = "Document";
 				xmlTag = "RoleAndBaselnAccptnc";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(RoleAndBaselineAcceptanceV01.mmAcceptanceIdentification, RoleAndBaselineAcceptanceV01.mmRelatedMessageReference, RoleAndBaselineAcceptanceV01.mmTransactionIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01.mmAcceptanceIdentification,
+						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01.mmRelatedMessageReference, com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01.mmTransactionIdentification);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -223,10 +252,16 @@ public class RoleAndBaselineAcceptanceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RoleAndBaselineAcceptanceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AccptncId", required = true)
 	public MessageIdentification1 getAcceptanceIdentification() {
 		return acceptanceIdentification;
 	}
@@ -235,6 +270,7 @@ public class RoleAndBaselineAcceptanceV01 {
 		this.acceptanceIdentification = acceptanceIdentification;
 	}
 
+	@XmlElement(name = "RltdMsgRef", required = true)
 	public MessageIdentification1 getRelatedMessageReference() {
 		return relatedMessageReference;
 	}
@@ -243,11 +279,18 @@ public class RoleAndBaselineAcceptanceV01 {
 		this.relatedMessageReference = relatedMessageReference;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
 	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
 		this.transactionIdentification = transactionIdentification;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.049.01.01")
+	static public class Document {
+		@XmlElement(name = "RoleAndBaselnAccptnc", required = true)
+		public RoleAndBaselineAcceptanceV01 messageBody;
 	}
 }

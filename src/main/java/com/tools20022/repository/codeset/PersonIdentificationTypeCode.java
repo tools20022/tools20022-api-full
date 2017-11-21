@@ -30,29 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code
- * PersonIdentificationType1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code
- * PersonIdentificationType5Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code
- * PersonIdentificationType4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType2Code
- * PersonIdentificationType2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code
- * PersonIdentificationType6Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code
- * PartyIdentificationType7Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -115,6 +92,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PersonIdentificationTypeCode#mmIndustryClassification
  * PersonIdentificationTypeCode.mmIndustryClassification}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code
+ * PersonIdentificationType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code
+ * PersonIdentificationType5Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code
+ * PersonIdentificationType4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType2Code
+ * PersonIdentificationType2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code
+ * PersonIdentificationType6Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code
+ * PartyIdentificationType7Code}</li>
  * </ul>
  * </li>
  * <li>

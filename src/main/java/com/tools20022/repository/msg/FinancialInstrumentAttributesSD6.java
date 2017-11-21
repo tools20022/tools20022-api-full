@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding underlying security details.
@@ -89,6 +93,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentAttributesSD6", propOrder = {"placeAndName", "countryOfListing", "incomeSourceCountry", "DTCAssetClass", "DTCAssetType", "securityEligibilityIndicator", "tickerSymbol", "linkedSecurity"})
 public class FinancialInstrumentAttributesSD6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -526,6 +532,7 @@ public class FinancialInstrumentAttributesSD6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -534,6 +541,7 @@ public class FinancialInstrumentAttributesSD6 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "CtryOfListg")
 	public CountryCode getCountryOfListing() {
 		return countryOfListing;
 	}
@@ -542,6 +550,7 @@ public class FinancialInstrumentAttributesSD6 {
 		this.countryOfListing = countryOfListing;
 	}
 
+	@XmlElement(name = "IncmSrcCtry")
 	public CountryCode getIncomeSourceCountry() {
 		return incomeSourceCountry;
 	}
@@ -550,6 +559,7 @@ public class FinancialInstrumentAttributesSD6 {
 		this.incomeSourceCountry = incomeSourceCountry;
 	}
 
+	@XmlElement(name = "DTCAsstClss")
 	public AssetClass1Code getDTCAssetClass() {
 		return dTCAssetClass;
 	}
@@ -558,6 +568,7 @@ public class FinancialInstrumentAttributesSD6 {
 		this.dTCAssetClass = dTCAssetClass;
 	}
 
+	@XmlElement(name = "DTCAsstTp")
 	public DTCAssetType1Code getDTCAssetType() {
 		return dTCAssetType;
 	}
@@ -566,6 +577,7 @@ public class FinancialInstrumentAttributesSD6 {
 		this.dTCAssetType = dTCAssetType;
 	}
 
+	@XmlElement(name = "SctyElgbltyInd")
 	public YesNoIndicator getSecurityEligibilityIndicator() {
 		return securityEligibilityIndicator;
 	}
@@ -574,6 +586,7 @@ public class FinancialInstrumentAttributesSD6 {
 		this.securityEligibilityIndicator = securityEligibilityIndicator;
 	}
 
+	@XmlElement(name = "TckrSymb")
 	public Max35Text getTickerSymbol() {
 		return tickerSymbol;
 	}
@@ -582,6 +595,7 @@ public class FinancialInstrumentAttributesSD6 {
 		this.tickerSymbol = tickerSymbol;
 	}
 
+	@XmlElement(name = "LkdScty")
 	public SecurityIdentification15 getLinkedSecurity() {
 		return linkedSecurity;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Authorisation response from the acquirer.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorAuthorisationResponse1", propOrder = {"environment", "transaction", "transactionResponse"})
 public class AcceptorAuthorisationResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -248,6 +254,7 @@ public class AcceptorAuthorisationResponse1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment3 getEnvironment() {
 		return environment;
 	}
@@ -256,6 +263,7 @@ public class AcceptorAuthorisationResponse1 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransaction2 getTransaction() {
 		return transaction;
 	}
@@ -264,6 +272,7 @@ public class AcceptorAuthorisationResponse1 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "TxRspn", required = true)
 	public CardPaymentTransaction9 getTransactionResponse() {
 		return transactionResponse;
 	}

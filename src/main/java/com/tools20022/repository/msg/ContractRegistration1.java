@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Currency control contract registration details.
@@ -82,6 +86,8 @@ import java.util.List;
  * definition} = "Currency control contract registration details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContractRegistration1", propOrder = {"contractRegistrationIdentification", "reportingParty", "registrationAgent", "contractRegistrationOpening", "supplementaryData"})
 public class ContractRegistration1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -334,6 +340,7 @@ public class ContractRegistration1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CtrctRegnId", required = true)
 	public Max35Text getContractRegistrationIdentification() {
 		return contractRegistrationIdentification;
 	}
@@ -342,6 +349,7 @@ public class ContractRegistration1 {
 		this.contractRegistrationIdentification = contractRegistrationIdentification;
 	}
 
+	@XmlElement(name = "RptgPty", required = true)
 	public TradeParty2 getReportingParty() {
 		return reportingParty;
 	}
@@ -350,6 +358,7 @@ public class ContractRegistration1 {
 		this.reportingParty = reportingParty;
 	}
 
+	@XmlElement(name = "RegnAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getRegistrationAgent() {
 		return registrationAgent;
 	}
@@ -358,6 +367,7 @@ public class ContractRegistration1 {
 		this.registrationAgent = registrationAgent;
 	}
 
+	@XmlElement(name = "CtrctRegnOpng", required = true)
 	public List<ContractRegistration2> getContractRegistrationOpening() {
 		return contractRegistrationOpening;
 	}
@@ -366,6 +376,7 @@ public class ContractRegistration1 {
 		this.contractRegistrationOpening = contractRegistrationOpening;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

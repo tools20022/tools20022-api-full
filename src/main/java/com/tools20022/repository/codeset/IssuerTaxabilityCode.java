@@ -29,18 +29,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerTaxability1Code
- * IssuerTaxability1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
  * {@linkplain com.tools20022.repository.codeset.IssuerTaxabilityCode#mmTaxable
  * IssuerTaxabilityCode.mmTaxable}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.IssuerTaxability1Code
+ * IssuerTaxability1Code}</li>
  * </ul>
  * </li>
  * <li>

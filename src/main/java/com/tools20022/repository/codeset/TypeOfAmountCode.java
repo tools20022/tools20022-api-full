@@ -29,27 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code
- * TypeOfAmount3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount1Code
- * TypeOfAmount1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount2Code
- * TypeOfAmount2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount4Code
- * TypeOfAmount4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code
- * TypeOfAmount7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code
- * TypeOfAmount6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code
- * TypeOfAmount5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount8Code
- * TypeOfAmount8Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -145,6 +124,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TypeOfAmountCode#mmReserved
  * TypeOfAmountCode.mmReserved}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code
+ * TypeOfAmount3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount1Code
+ * TypeOfAmount1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount2Code
+ * TypeOfAmount2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount4Code
+ * TypeOfAmount4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code
+ * TypeOfAmount7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code
+ * TypeOfAmount6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code
+ * TypeOfAmount5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount8Code
+ * TypeOfAmount8Code}</li>
  * </ul>
  * </li>
  * <li>

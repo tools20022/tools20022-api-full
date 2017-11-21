@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.IdentificationAssignment1;
 import com.tools20022.repository.msg.IdentificationVerification1;
 import com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -43,9 +45,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.023.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementPreviousVersion
@@ -76,6 +75,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.023.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -95,6 +97,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IdentificationVerificationRequestV01", propOrder = {"assignment", "verification"})
 public class IdentificationVerificationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -131,6 +135,14 @@ public class IdentificationVerificationRequestV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> IdentificationAssignment1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationVerificationRequestV01.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<IdentificationVerification1> verification;
@@ -169,6 +181,14 @@ public class IdentificationVerificationRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> IdentificationVerification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationVerificationRequestV01.class.getMethod("getVerification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -182,7 +202,7 @@ public class IdentificationVerificationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "IdVrfctnReq";
 				businessArea_lazy = () -> AccountManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(IdentificationVerificationRequestV01.mmAssignment, IdentificationVerificationRequestV01.mmVerification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationVerificationRequestV01.mmAssignment, com.tools20022.repository.area.acmt.IdentificationVerificationRequestV01.mmVerification);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";
@@ -192,10 +212,16 @@ public class IdentificationVerificationRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IdentificationVerificationRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public IdentificationAssignment1 getAssignment() {
 		return assignment;
 	}
@@ -204,11 +230,18 @@ public class IdentificationVerificationRequestV01 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "Vrfctn", required = true)
 	public List<IdentificationVerification1> getVerification() {
 		return verification;
 	}
 
 	public void setVerification(List<IdentificationVerification1> verification) {
 		this.verification = verification;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.023.01.01")
+	static public class Document {
+		@XmlElement(name = "IdVrfctnReq", required = true)
+		public IdentificationVerificationRequestV01 messageBody;
 	}
 }

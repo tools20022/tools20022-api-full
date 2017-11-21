@@ -30,22 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason1Code
- * CancelledStatusReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason2Code
- * CancelledStatusReason2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code
- * CancellationCompleteStatusReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason3Code
- * CancelledStatusReason3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason8Code
- * CancelledStatusReason8Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -81,6 +65,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#mmCancelledByIntermediary
  * CancelledStatusReasonCode.mmCancelledByIntermediary}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason1Code
+ * CancelledStatusReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason2Code
+ * CancelledStatusReason2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code
+ * CancellationCompleteStatusReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason3Code
+ * CancelledStatusReason3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason8Code
+ * CancelledStatusReason8Code}</li>
  * </ul>
  * </li>
  * <li>

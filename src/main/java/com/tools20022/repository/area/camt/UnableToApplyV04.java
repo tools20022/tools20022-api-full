@@ -29,9 +29,11 @@ import com.tools20022.repository.msg.CaseAssignment3;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -85,9 +87,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.026.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
@@ -126,6 +125,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.026.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -148,6 +150,8 @@ import java.util.List;
  * UnableToApplyV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnableToApplyV04", propOrder = {"assignment", "case", "underlying", "justification", "supplementaryData"})
 public class UnableToApplyV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -197,6 +201,14 @@ public class UnableToApplyV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UnableToApplyV04.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case3 case_;
 	/**
@@ -238,6 +250,14 @@ public class UnableToApplyV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Case3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UnableToApplyV04.class.getMethod("getCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected UnderlyingTransaction2Choice underlying;
@@ -286,6 +306,14 @@ public class UnableToApplyV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTransaction2Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UnableToApplyV04.class.getMethod("getUnderlying", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected UnableToApplyJustification2Choice justification;
 	/**
@@ -333,6 +361,14 @@ public class UnableToApplyV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> UnableToApplyJustification2Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UnableToApplyV04.class.getMethod("getJustification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -379,6 +415,14 @@ public class UnableToApplyV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UnableToApplyV04.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -393,7 +437,8 @@ public class UnableToApplyV04 {
 				rootElement = "Document";
 				xmlTag = "UblToApply";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(UnableToApplyV04.mmAssignment, UnableToApplyV04.mmCase, UnableToApplyV04.mmUnderlying, UnableToApplyV04.mmJustification, UnableToApplyV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.UnableToApplyV04.mmAssignment, com.tools20022.repository.area.camt.UnableToApplyV04.mmCase,
+						com.tools20022.repository.area.camt.UnableToApplyV04.mmUnderlying, com.tools20022.repository.area.camt.UnableToApplyV04.mmJustification, com.tools20022.repository.area.camt.UnableToApplyV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -403,10 +448,16 @@ public class UnableToApplyV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UnableToApplyV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment3 getAssignment() {
 		return assignment;
 	}
@@ -415,6 +466,7 @@ public class UnableToApplyV04 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "Case", required = true)
 	public Case3 getCase() {
 		return case_;
 	}
@@ -423,6 +475,7 @@ public class UnableToApplyV04 {
 		this.case_ = case_;
 	}
 
+	@XmlElement(name = "Undrlyg", required = true)
 	public UnderlyingTransaction2Choice getUnderlying() {
 		return underlying;
 	}
@@ -431,6 +484,7 @@ public class UnableToApplyV04 {
 		this.underlying = underlying;
 	}
 
+	@XmlElement(name = "Justfn", required = true)
 	public UnableToApplyJustification2Choice getJustification() {
 		return justification;
 	}
@@ -439,11 +493,18 @@ public class UnableToApplyV04 {
 		this.justification = justification;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.026.04.04")
+	static public class Document {
+		@XmlElement(name = "UblToApply", required = true)
+		public UnableToApplyV04 messageBody;
 	}
 }

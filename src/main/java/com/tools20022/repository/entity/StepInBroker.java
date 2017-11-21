@@ -36,6 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Broker Broker}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -48,8 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ConfirmationParties2.mmStepInFirm}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Broker Broker}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -80,6 +80,11 @@ public class StepInBroker extends Broker {
 				definition = "Broker to which the investment manager directs the execution of a portion of the trade.";
 				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties4.mmStepInFirm, ConfirmationParties2.mmStepInFirm);
 				superType_lazy = () -> Broker.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StepInBroker.class;
 			}
 		});
 		return mmObject_lazy.get();

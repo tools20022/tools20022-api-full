@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.ReconciliationTransaction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transaction information in the cancellation request.
@@ -90,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransaction5", propOrder = {"transactionCapture", "merchantCategoryCode", "transactionIdentification", "originalTransaction", "reconciliationIdentification", "transactionDetails", "additionalTransactionData"})
 public class CardPaymentTransaction5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -443,6 +449,7 @@ public class CardPaymentTransaction5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxCaptr", required = true)
 	public TrueFalseIndicator getTransactionCapture() {
 		return transactionCapture;
 	}
@@ -451,6 +458,7 @@ public class CardPaymentTransaction5 {
 		this.transactionCapture = transactionCapture;
 	}
 
+	@XmlElement(name = "MrchntCtgyCd", required = true)
 	public Min3Max4Text getMerchantCategoryCode() {
 		return merchantCategoryCode;
 	}
@@ -459,6 +467,7 @@ public class CardPaymentTransaction5 {
 		this.merchantCategoryCode = merchantCategoryCode;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -467,6 +476,7 @@ public class CardPaymentTransaction5 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlTx", required = true)
 	public CardPaymentTransaction8 getOriginalTransaction() {
 		return originalTransaction;
 	}
@@ -475,6 +485,7 @@ public class CardPaymentTransaction5 {
 		this.originalTransaction = originalTransaction;
 	}
 
+	@XmlElement(name = "RcncltnId")
 	public Max35Text getReconciliationIdentification() {
 		return reconciliationIdentification;
 	}
@@ -483,6 +494,7 @@ public class CardPaymentTransaction5 {
 		this.reconciliationIdentification = reconciliationIdentification;
 	}
 
+	@XmlElement(name = "TxDtls", required = true)
 	public CardPaymentTransactionDetails5 getTransactionDetails() {
 		return transactionDetails;
 	}
@@ -491,6 +503,7 @@ public class CardPaymentTransaction5 {
 		this.transactionDetails = transactionDetails;
 	}
 
+	@XmlElement(name = "AddtlTxData")
 	public Max70Text getAdditionalTransactionData() {
 		return additionalTransactionData;
 	}

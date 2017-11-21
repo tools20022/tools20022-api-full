@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.PaymentInstructionExtract;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -70,9 +72,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.026.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -107,6 +106,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.026.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -118,6 +120,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "camt.026.001.01", propOrder = {"assignment", "case", "underlying", "justification"})
 public class UnableToApply {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -154,6 +158,14 @@ public class UnableToApply {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UnableToApply.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case case_;
 	/**
@@ -186,6 +198,14 @@ public class UnableToApply {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Case.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UnableToApply.class.getMethod("getCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PaymentInstructionExtract underlying;
@@ -225,6 +245,14 @@ public class UnableToApply {
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstructionExtract.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UnableToApply.class.getMethod("getUnderlying", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected UnableToApplyJustificationChoice justification;
 	/**
@@ -260,6 +288,14 @@ public class UnableToApply {
 			minOccurs = 1;
 			complexType_lazy = () -> UnableToApplyJustificationChoice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UnableToApply.class.getMethod("getJustification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -273,7 +309,8 @@ public class UnableToApply {
 				xmlTag = "camt.026.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.026.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(UnableToApply.mmAssignment, UnableToApply.mmCase, UnableToApply.mmUnderlying, UnableToApply.mmJustification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.UnableToApply.mmAssignment, com.tools20022.repository.area.camt.UnableToApply.mmCase,
+						com.tools20022.repository.area.camt.UnableToApply.mmUnderlying, com.tools20022.repository.area.camt.UnableToApply.mmJustification);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -283,10 +320,16 @@ public class UnableToApply {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UnableToApply.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment getAssignment() {
 		return assignment;
 	}
@@ -295,6 +338,7 @@ public class UnableToApply {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "Case", required = true)
 	public Case getCase() {
 		return case_;
 	}
@@ -303,6 +347,7 @@ public class UnableToApply {
 		this.case_ = case_;
 	}
 
+	@XmlElement(name = "Undrlyg", required = true)
 	public PaymentInstructionExtract getUnderlying() {
 		return underlying;
 	}
@@ -311,11 +356,18 @@ public class UnableToApply {
 		this.underlying = underlying;
 	}
 
+	@XmlElement(name = "Justfn", required = true)
 	public UnableToApplyJustificationChoice getJustification() {
 		return justification;
 	}
 
 	public void setJustification(UnableToApplyJustificationChoice justification) {
 		this.justification = justification;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.026.01.01")
+	static public class Document {
+		@XmlElement(name = "camt.026.001.01", required = true)
+		public UnableToApply messageBody;
 	}
 }

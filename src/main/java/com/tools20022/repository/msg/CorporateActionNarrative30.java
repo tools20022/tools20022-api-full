@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information such as the registration details.
@@ -85,6 +89,8 @@ import java.util.List;
  * CorporateActionNarrative21}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNarrative30", propOrder = {"registrationDetails", "partyContactNarrative", "certificationBreakdown"})
 public class CorporateActionNarrative30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -260,6 +266,7 @@ public class CorporateActionNarrative30 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RegnDtls")
 	public List<Max350Text> getRegistrationDetails() {
 		return registrationDetails;
 	}
@@ -268,6 +275,7 @@ public class CorporateActionNarrative30 {
 		this.registrationDetails = registrationDetails;
 	}
 
+	@XmlElement(name = "PtyCtctNrrtv")
 	public List<Max350Text> getPartyContactNarrative() {
 		return partyContactNarrative;
 	}
@@ -276,6 +284,7 @@ public class CorporateActionNarrative30 {
 		this.partyContactNarrative = partyContactNarrative;
 	}
 
+	@XmlElement(name = "CertfctnBrkdwn")
 	public List<Max350Text> getCertificationBreakdown() {
 		return certificationBreakdown;
 	}

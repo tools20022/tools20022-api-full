@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Breakdown of the cash movements into a fund by order type, eg, order by
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalOrderQuantityType1", propOrder = {"structured", "additionalInformation"})
 public class OriginalOrderQuantityType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class OriginalOrderQuantityType1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Strd", required = true)
 	public OrderQuantityType1Code getStructured() {
 		return structured;
 	}
@@ -181,6 +188,7 @@ public class OriginalOrderQuantityType1 {
 		this.structured = structured;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}

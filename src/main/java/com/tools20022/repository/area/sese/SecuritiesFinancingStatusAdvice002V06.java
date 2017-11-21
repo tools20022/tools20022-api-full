@@ -30,9 +30,11 @@ import com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TransactionIdentifications35;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -58,9 +60,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.034.002.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousversionsubsetvariant
@@ -108,6 +107,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.034.002.06}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -127,6 +129,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesFinancingStatusAdvice002V06", propOrder = {"transactionIdentification", "processingStatus", "matchingStatus", "inferredMatchingStatus", "settlementStatus", "repoCallRequestStatus", "transactionDetails",
+		"supplementaryData"})
 public class SecuritiesFinancingStatusAdvice002V06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -165,6 +170,14 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionIdentifications35.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesFinancingStatusAdvice002V06.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ProcessingStatus57Choice processingStatus;
 	/**
@@ -200,6 +213,14 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 			minOccurs = 0;
 			complexType_lazy = () -> ProcessingStatus57Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesFinancingStatusAdvice002V06.class.getMethod("getProcessingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MatchingStatus29Choice matchingStatus;
 	/**
@@ -234,6 +255,14 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MatchingStatus29Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesFinancingStatusAdvice002V06.class.getMethod("getMatchingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MatchingStatus29Choice inferredMatchingStatus;
@@ -274,6 +303,14 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 			minOccurs = 0;
 			complexType_lazy = () -> MatchingStatus29Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesFinancingStatusAdvice002V06.class.getMethod("getInferredMatchingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SettlementStatus21Choice settlementStatus;
 	/**
@@ -308,6 +345,14 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementStatus21Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesFinancingStatusAdvice002V06.class.getMethod("getSettlementStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RepoCallRequestStatus9Choice repoCallRequestStatus;
@@ -345,6 +390,14 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 			minOccurs = 0;
 			complexType_lazy = () -> RepoCallRequestStatus9Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesFinancingStatusAdvice002V06.class.getMethod("getRepoCallRequestStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesFinancingTransactionDetails33 transactionDetails;
 	/**
@@ -379,6 +432,14 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesFinancingTransactionDetails33.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesFinancingStatusAdvice002V06.class.getMethod("getTransactionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -417,6 +478,14 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesFinancingStatusAdvice002V06.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -430,9 +499,11 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 				rootElement = "Document";
 				xmlTag = "SctiesFincgStsAdvc";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousversionsubsetvariant.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingStatusAdvice002V06.mmTransactionIdentification, SecuritiesFinancingStatusAdvice002V06.mmProcessingStatus,
-						SecuritiesFinancingStatusAdvice002V06.mmMatchingStatus, SecuritiesFinancingStatusAdvice002V06.mmInferredMatchingStatus, SecuritiesFinancingStatusAdvice002V06.mmSettlementStatus,
-						SecuritiesFinancingStatusAdvice002V06.mmRepoCallRequestStatus, SecuritiesFinancingStatusAdvice002V06.mmTransactionDetails, SecuritiesFinancingStatusAdvice002V06.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V06.mmTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V06.mmProcessingStatus, com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V06.mmMatchingStatus,
+						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V06.mmInferredMatchingStatus, com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V06.mmSettlementStatus,
+						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V06.mmRepoCallRequestStatus, com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V06.mmTransactionDetails,
+						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V06.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -442,10 +513,16 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesFinancingStatusAdvice002V06.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifications35 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -454,6 +531,7 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "PrcgSts")
 	public ProcessingStatus57Choice getProcessingStatus() {
 		return processingStatus;
 	}
@@ -462,6 +540,7 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "MtchgSts")
 	public MatchingStatus29Choice getMatchingStatus() {
 		return matchingStatus;
 	}
@@ -470,6 +549,7 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 		this.matchingStatus = matchingStatus;
 	}
 
+	@XmlElement(name = "IfrrdMtchgSts")
 	public MatchingStatus29Choice getInferredMatchingStatus() {
 		return inferredMatchingStatus;
 	}
@@ -478,6 +558,7 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 		this.inferredMatchingStatus = inferredMatchingStatus;
 	}
 
+	@XmlElement(name = "SttlmSts")
 	public SettlementStatus21Choice getSettlementStatus() {
 		return settlementStatus;
 	}
@@ -486,6 +567,7 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 		this.settlementStatus = settlementStatus;
 	}
 
+	@XmlElement(name = "RepoCallReqSts")
 	public RepoCallRequestStatus9Choice getRepoCallRequestStatus() {
 		return repoCallRequestStatus;
 	}
@@ -494,6 +576,7 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 		this.repoCallRequestStatus = repoCallRequestStatus;
 	}
 
+	@XmlElement(name = "TxDtls")
 	public SecuritiesFinancingTransactionDetails33 getTransactionDetails() {
 		return transactionDetails;
 	}
@@ -502,11 +585,18 @@ public class SecuritiesFinancingStatusAdvice002V06 {
 		this.transactionDetails = transactionDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.034.06.06")
+	static public class Document {
+		@XmlElement(name = "SctiesFincgStsAdvc", required = true)
+		public SecuritiesFinancingStatusAdvice002V06 messageBody;
 	}
 }

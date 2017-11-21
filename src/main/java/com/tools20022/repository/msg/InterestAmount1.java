@@ -34,6 +34,10 @@ import com.tools20022.repository.entity.Settlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the elements related to the interest amount calculation.
@@ -128,6 +132,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides the elements related to the interest amount calculation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestAmount1", propOrder = {"interestRequestSequence", "interestPeriod", "accruedInterestAmount", "valueDate", "interestMethod", "interestRate", "dayCountBasis", "appliedWithholdingTax", "calculationMethod",
+		"calculationFrequency", "collateralPurpose", "openingCollateralBalance", "closingCollateralBalance", "standardSettlementInstructions", "additionalInformation", "referenceDetails"})
 public class InterestAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -914,6 +921,7 @@ public class InterestAmount1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IntrstReqSeq", required = true)
 	public InterestRequestSequence1Code getInterestRequestSequence() {
 		return interestRequestSequence;
 	}
@@ -922,6 +930,7 @@ public class InterestAmount1 {
 		this.interestRequestSequence = interestRequestSequence;
 	}
 
+	@XmlElement(name = "IntrstPrd", required = true)
 	public DatePeriodDetails getInterestPeriod() {
 		return interestPeriod;
 	}
@@ -930,6 +939,7 @@ public class InterestAmount1 {
 		this.interestPeriod = interestPeriod;
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt", required = true)
 	public ActiveCurrencyAndAmount getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -938,6 +948,7 @@ public class InterestAmount1 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "ValDt", required = true)
 	public ISODate getValueDate() {
 		return valueDate;
 	}
@@ -946,6 +957,7 @@ public class InterestAmount1 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "IntrstMtd", required = true)
 	public InterestMethod1Code getInterestMethod() {
 		return interestMethod;
 	}
@@ -954,6 +966,7 @@ public class InterestAmount1 {
 		this.interestMethod = interestMethod;
 	}
 
+	@XmlElement(name = "IntrstRate")
 	public InterestRate1Choice getInterestRate() {
 		return interestRate;
 	}
@@ -962,6 +975,7 @@ public class InterestAmount1 {
 		this.interestRate = interestRate;
 	}
 
+	@XmlElement(name = "DayCntBsis")
 	public InterestComputationMethod2Code getDayCountBasis() {
 		return dayCountBasis;
 	}
@@ -970,6 +984,7 @@ public class InterestAmount1 {
 		this.dayCountBasis = dayCountBasis;
 	}
 
+	@XmlElement(name = "ApldWhldgTax")
 	public YesNoIndicator getAppliedWithholdingTax() {
 		return appliedWithholdingTax;
 	}
@@ -978,6 +993,7 @@ public class InterestAmount1 {
 		this.appliedWithholdingTax = appliedWithholdingTax;
 	}
 
+	@XmlElement(name = "ClctnMtd")
 	public CalculationMethod1Code getCalculationMethod() {
 		return calculationMethod;
 	}
@@ -986,6 +1002,7 @@ public class InterestAmount1 {
 		this.calculationMethod = calculationMethod;
 	}
 
+	@XmlElement(name = "ClctnFrqcy")
 	public Frequency1Code getCalculationFrequency() {
 		return calculationFrequency;
 	}
@@ -994,6 +1011,7 @@ public class InterestAmount1 {
 		this.calculationFrequency = calculationFrequency;
 	}
 
+	@XmlElement(name = "CollPurp", required = true)
 	public CollateralPurpose1Choice getCollateralPurpose() {
 		return collateralPurpose;
 	}
@@ -1002,6 +1020,7 @@ public class InterestAmount1 {
 		this.collateralPurpose = collateralPurpose;
 	}
 
+	@XmlElement(name = "OpngCollBal")
 	public CollateralBalance1 getOpeningCollateralBalance() {
 		return openingCollateralBalance;
 	}
@@ -1010,6 +1029,7 @@ public class InterestAmount1 {
 		this.openingCollateralBalance = openingCollateralBalance;
 	}
 
+	@XmlElement(name = "ClsgCollBal", required = true)
 	public CollateralBalance1 getClosingCollateralBalance() {
 		return closingCollateralBalance;
 	}
@@ -1018,6 +1038,7 @@ public class InterestAmount1 {
 		this.closingCollateralBalance = closingCollateralBalance;
 	}
 
+	@XmlElement(name = "StdSttlmInstrs")
 	public Max140Text getStandardSettlementInstructions() {
 		return standardSettlementInstructions;
 	}
@@ -1026,6 +1047,7 @@ public class InterestAmount1 {
 		this.standardSettlementInstructions = standardSettlementInstructions;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max210Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -1034,6 +1056,7 @@ public class InterestAmount1 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "RefDtls")
 	public Reference20 getReferenceDetails() {
 		return referenceDetails;
 	}

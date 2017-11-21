@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the commodity quantity in tons or the amount and currency used (for
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TonsOrCurrency2Choice", propOrder = {"number", "amount"})
 public class TonsOrCurrency2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -165,6 +171,7 @@ public class TonsOrCurrency2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nb", required = true)
 	public DecimalNumber getNumber() {
 		return number;
 	}
@@ -173,6 +180,7 @@ public class TonsOrCurrency2Choice {
 		this.number = number;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}

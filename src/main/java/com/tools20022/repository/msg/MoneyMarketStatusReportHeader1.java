@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the money market statistical status report header details.
@@ -84,6 +88,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MoneyMarketStatusReportHeader1", propOrder = {"reportingAgent", "reportingPeriod", "reportStatus", "validationRule"})
 public class MoneyMarketStatusReportHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -296,6 +302,7 @@ public class MoneyMarketStatusReportHeader1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptgAgt", required = true)
 	public LEIIdentifier getReportingAgent() {
 		return reportingAgent;
 	}
@@ -304,6 +311,7 @@ public class MoneyMarketStatusReportHeader1 {
 		this.reportingAgent = reportingAgent;
 	}
 
+	@XmlElement(name = "RptgPrd", required = true)
 	public DateTimePeriod1 getReportingPeriod() {
 		return reportingPeriod;
 	}
@@ -312,6 +320,7 @@ public class MoneyMarketStatusReportHeader1 {
 		this.reportingPeriod = reportingPeriod;
 	}
 
+	@XmlElement(name = "RptSts", required = true)
 	public StatisticalReportingStatus1Code getReportStatus() {
 		return reportStatus;
 	}
@@ -320,6 +329,7 @@ public class MoneyMarketStatusReportHeader1 {
 		this.reportStatus = reportStatus;
 	}
 
+	@XmlElement(name = "VldtnRule")
 	public List<GenericValidationRuleIdentification1> getValidationRule() {
 		return validationRule;
 	}

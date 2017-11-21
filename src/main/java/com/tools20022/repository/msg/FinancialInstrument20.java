@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Security that is a sub-set of an investment fund, and is governed by the same
@@ -101,6 +105,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrument20", propOrder = {"physicalBearerSecurities", "dematerialisedBearerSecurities", "physicalRegisteredSecurities", "dematerialisedRegisteredSecurities", "distributionPolicy", "dividendPolicy",
+		"dividendFrequency", "reinvestmentFrequency", "frontEndLoad", "backEndLoad", "switchFee", "EUSavingsDirective"})
 public class FinancialInstrument20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -726,6 +733,7 @@ public class FinancialInstrument20 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PhysBrScties", required = true)
 	public YesNoIndicator getPhysicalBearerSecurities() {
 		return physicalBearerSecurities;
 	}
@@ -734,6 +742,7 @@ public class FinancialInstrument20 {
 		this.physicalBearerSecurities = physicalBearerSecurities;
 	}
 
+	@XmlElement(name = "DmtrlsdBrScties", required = true)
 	public YesNoIndicator getDematerialisedBearerSecurities() {
 		return dematerialisedBearerSecurities;
 	}
@@ -742,6 +751,7 @@ public class FinancialInstrument20 {
 		this.dematerialisedBearerSecurities = dematerialisedBearerSecurities;
 	}
 
+	@XmlElement(name = "PhysRegdScties", required = true)
 	public YesNoIndicator getPhysicalRegisteredSecurities() {
 		return physicalRegisteredSecurities;
 	}
@@ -750,6 +760,7 @@ public class FinancialInstrument20 {
 		this.physicalRegisteredSecurities = physicalRegisteredSecurities;
 	}
 
+	@XmlElement(name = "DmtrlsdRegdScties", required = true)
 	public YesNoIndicator getDematerialisedRegisteredSecurities() {
 		return dematerialisedRegisteredSecurities;
 	}
@@ -758,6 +769,7 @@ public class FinancialInstrument20 {
 		this.dematerialisedRegisteredSecurities = dematerialisedRegisteredSecurities;
 	}
 
+	@XmlElement(name = "DstrbtnPlcy", required = true)
 	public DistributionPolicy1Code getDistributionPolicy() {
 		return distributionPolicy;
 	}
@@ -766,6 +778,7 @@ public class FinancialInstrument20 {
 		this.distributionPolicy = distributionPolicy;
 	}
 
+	@XmlElement(name = "DvddPlcy")
 	public DividendPolicy1Code getDividendPolicy() {
 		return dividendPolicy;
 	}
@@ -774,6 +787,7 @@ public class FinancialInstrument20 {
 		this.dividendPolicy = dividendPolicy;
 	}
 
+	@XmlElement(name = "DvddFrqcy")
 	public EventFrequency5Code getDividendFrequency() {
 		return dividendFrequency;
 	}
@@ -782,6 +796,7 @@ public class FinancialInstrument20 {
 		this.dividendFrequency = dividendFrequency;
 	}
 
+	@XmlElement(name = "RinvstmtFrqcy")
 	public EventFrequency5Code getReinvestmentFrequency() {
 		return reinvestmentFrequency;
 	}
@@ -790,6 +805,7 @@ public class FinancialInstrument20 {
 		this.reinvestmentFrequency = reinvestmentFrequency;
 	}
 
+	@XmlElement(name = "FrntEndLd", required = true)
 	public YesNoIndicator getFrontEndLoad() {
 		return frontEndLoad;
 	}
@@ -798,6 +814,7 @@ public class FinancialInstrument20 {
 		this.frontEndLoad = frontEndLoad;
 	}
 
+	@XmlElement(name = "BckEndLd", required = true)
 	public YesNoIndicator getBackEndLoad() {
 		return backEndLoad;
 	}
@@ -806,6 +823,7 @@ public class FinancialInstrument20 {
 		this.backEndLoad = backEndLoad;
 	}
 
+	@XmlElement(name = "SwtchFee", required = true)
 	public YesNoIndicator getSwitchFee() {
 		return switchFee;
 	}
@@ -814,6 +832,7 @@ public class FinancialInstrument20 {
 		this.switchFee = switchFee;
 	}
 
+	@XmlElement(name = "EUSvgsDrctv", required = true)
 	public EUSavingsDirective1Code getEUSavingsDirective() {
 		return eUSavingsDirective;
 	}

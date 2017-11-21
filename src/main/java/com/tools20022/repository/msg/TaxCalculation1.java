@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the details for the tax calculation.
@@ -71,6 +75,8 @@ import java.util.List;
  * definition} = "Specifies the details for the tax calculation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxCalculation1", propOrder = {"hostCurrency", "taxableServiceChargeConversion", "totalTaxableServiceChargeHostAmount", "taxIdentification", "totalTax"})
 public class TaxCalculation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -352,6 +358,7 @@ public class TaxCalculation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "HstCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getHostCurrency() {
 		return hostCurrency;
 	}
@@ -360,6 +367,7 @@ public class TaxCalculation1 {
 		this.hostCurrency = hostCurrency;
 	}
 
+	@XmlElement(name = "TaxblSvcChrgConvs", required = true)
 	public List<BillingServicesAmount3> getTaxableServiceChargeConversion() {
 		return taxableServiceChargeConversion;
 	}
@@ -368,6 +376,7 @@ public class TaxCalculation1 {
 		this.taxableServiceChargeConversion = taxableServiceChargeConversion;
 	}
 
+	@XmlElement(name = "TtlTaxblSvcChrgHstAmt", required = true)
 	public AmountAndDirection34 getTotalTaxableServiceChargeHostAmount() {
 		return totalTaxableServiceChargeHostAmount;
 	}
@@ -376,6 +385,7 @@ public class TaxCalculation1 {
 		this.totalTaxableServiceChargeHostAmount = totalTaxableServiceChargeHostAmount;
 	}
 
+	@XmlElement(name = "TaxId", required = true)
 	public List<BillingServicesTax3> getTaxIdentification() {
 		return taxIdentification;
 	}
@@ -384,6 +394,7 @@ public class TaxCalculation1 {
 		this.taxIdentification = taxIdentification;
 	}
 
+	@XmlElement(name = "TtlTax", required = true)
 	public AmountAndDirection34 getTotalTax() {
 		return totalTax;
 	}

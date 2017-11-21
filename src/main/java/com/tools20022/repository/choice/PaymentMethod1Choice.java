@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Method of payment for the remittance of the CSD or the NCB to the invoicing
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentMethod1Choice", propOrder = {"code", "proprietary"})
 public class PaymentMethod1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class PaymentMethod1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public Max4AlphaNumericText getCode() {
 		return code;
 	}
@@ -174,6 +181,7 @@ public class PaymentMethod1Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public Max210Text getProprietary() {
 		return proprietary;
 	}

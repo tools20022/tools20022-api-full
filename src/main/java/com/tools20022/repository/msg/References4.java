@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements for the identification of the message and related references.
@@ -125,6 +129,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References4", propOrder = {"messageIdentification", "processIdentification", "attachedDocumentName"})
 public class References4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -276,6 +282,7 @@ public class References4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -284,6 +291,7 @@ public class References4 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PrcId", required = true)
 	public MessageIdentification1 getProcessIdentification() {
 		return processIdentification;
 	}
@@ -292,6 +300,7 @@ public class References4 {
 		this.processIdentification = processIdentification;
 	}
 
+	@XmlElement(name = "AttchdDocNm")
 	public List<Max70Text> getAttachedDocumentName() {
 		return attachedDocumentName;
 	}

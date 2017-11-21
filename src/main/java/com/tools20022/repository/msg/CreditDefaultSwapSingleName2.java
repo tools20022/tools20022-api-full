@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Swaps;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Credit default swap derivative specific for reporting on a single name credit
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CreditDefaultSwapSingleName2", propOrder = {"sovereignIssuer", "referenceParty", "notionalCurrency"})
 public class CreditDefaultSwapSingleName2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -241,6 +247,7 @@ public class CreditDefaultSwapSingleName2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SvrgnIssr", required = true)
 	public TrueFalseIndicator getSovereignIssuer() {
 		return sovereignIssuer;
 	}
@@ -249,6 +256,7 @@ public class CreditDefaultSwapSingleName2 {
 		this.sovereignIssuer = sovereignIssuer;
 	}
 
+	@XmlElement(name = "RefPty")
 	public DerivativePartyIdentification1Choice getReferenceParty() {
 		return referenceParty;
 	}
@@ -257,6 +265,7 @@ public class CreditDefaultSwapSingleName2 {
 		this.referenceParty = referenceParty;
 	}
 
+	@XmlElement(name = "NtnlCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getNotionalCurrency() {
 		return notionalCurrency;
 	}

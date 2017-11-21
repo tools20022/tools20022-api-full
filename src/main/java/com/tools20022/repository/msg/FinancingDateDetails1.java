@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Includes a set of dates (e.g. credit date) related to settlement of the
@@ -68,6 +72,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancingDateDetails1", propOrder = {"bookDate", "creditDate", "debitDate"})
 public class FinancingDateDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -227,6 +233,7 @@ public class FinancingDateDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BookDt")
 	public List<ISODate> getBookDate() {
 		return bookDate;
 	}
@@ -235,6 +242,7 @@ public class FinancingDateDetails1 {
 		this.bookDate = bookDate;
 	}
 
+	@XmlElement(name = "CdtDt", required = true)
 	public ISODate getCreditDate() {
 		return creditDate;
 	}
@@ -243,6 +251,7 @@ public class FinancingDateDetails1 {
 		this.creditDate = creditDate;
 	}
 
+	@XmlElement(name = "DbtDt")
 	public ISODate getDebitDate() {
 		return debitDate;
 	}

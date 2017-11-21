@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional references linked to the cross order modification request.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Additional references linked to the cross order modification request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reference14", propOrder = {"originalCrossOrderIdentification", "hostCrossIdentification"})
 public class Reference14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class Reference14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlCrossOrdrId", required = true)
 	public Max35Text getOriginalCrossOrderIdentification() {
 		return originalCrossOrderIdentification;
 	}
@@ -174,6 +181,7 @@ public class Reference14 {
 		this.originalCrossOrderIdentification = originalCrossOrderIdentification;
 	}
 
+	@XmlElement(name = "HstCrossId", required = true)
 	public Max35Text getHostCrossIdentification() {
 		return hostCrossIdentification;
 	}

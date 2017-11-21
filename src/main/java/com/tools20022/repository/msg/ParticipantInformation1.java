@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Participant profile participant information.
@@ -73,6 +77,8 @@ import java.util.List;
  * definition} = "Participant profile participant information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ParticipantInformation1", propOrder = {"profileDeletionDate", "bankBranch", "terminalIdentification", "restrictions", "externalPaymentSystemInformation", "migration"})
 public class ParticipantInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -339,6 +345,7 @@ public class ParticipantInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrflDeltnDt")
 	public ISODateTime getProfileDeletionDate() {
 		return profileDeletionDate;
 	}
@@ -347,6 +354,7 @@ public class ParticipantInformation1 {
 		this.profileDeletionDate = profileDeletionDate;
 	}
 
+	@XmlElement(name = "BkBrnch")
 	public CentralisedAndAuthorisedBranchIdentification1Choice getBankBranch() {
 		return bankBranch;
 	}
@@ -355,6 +363,7 @@ public class ParticipantInformation1 {
 		this.bankBranch = bankBranch;
 	}
 
+	@XmlElement(name = "TermnlId")
 	public Max35Text getTerminalIdentification() {
 		return terminalIdentification;
 	}
@@ -363,6 +372,7 @@ public class ParticipantInformation1 {
 		this.terminalIdentification = terminalIdentification;
 	}
 
+	@XmlElement(name = "Rstrctns")
 	public List<Max35Text> getRestrictions() {
 		return restrictions;
 	}
@@ -371,6 +381,7 @@ public class ParticipantInformation1 {
 		this.restrictions = restrictions;
 	}
 
+	@XmlElement(name = "XtrnlPmtSysInf")
 	public ExternalPaymentSystemDetails1 getExternalPaymentSystemInformation() {
 		return externalPaymentSystemInformation;
 	}
@@ -379,6 +390,7 @@ public class ParticipantInformation1 {
 		this.externalPaymentSystemInformation = externalPaymentSystemInformation;
 	}
 
+	@XmlElement(name = "Mgrtn", required = true)
 	public SystemMigration1 getMigration() {
 		return migration;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Facilitates the redemption of one or more lots.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Facilitates the redemption of one or more lots."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LotDetails1", propOrder = {"lotDescription", "tradeDate", "orderReference", "dealReference", "lotQuantityAndAmount"})
 public class LotDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -326,6 +332,7 @@ public class LotDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LotDesc")
 	public Max350Text getLotDescription() {
 		return lotDescription;
 	}
@@ -334,6 +341,7 @@ public class LotDetails1 {
 		this.lotDescription = lotDescription;
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
@@ -342,6 +350,7 @@ public class LotDetails1 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -350,6 +359,7 @@ public class LotDetails1 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "DealRef")
 	public Max35Text getDealReference() {
 		return dealReference;
 	}
@@ -358,6 +368,7 @@ public class LotDetails1 {
 		this.dealReference = dealReference;
 	}
 
+	@XmlElement(name = "LotQtyAndAmt")
 	public SidePocketQuantityAndAmount1 getLotQuantityAndAmount() {
 		return lotQuantityAndAmount;
 	}

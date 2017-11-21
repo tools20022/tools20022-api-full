@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to identify the documents referred to in the remittance
@@ -77,6 +81,8 @@ import java.util.List;
  * ReferredDocumentInformation6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReferredDocumentInformation7", propOrder = {"type", "number", "relatedDate", "lineDetails"})
 public class ReferredDocumentInformation7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -305,6 +311,7 @@ public class ReferredDocumentInformation7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public ReferredDocumentType4 getType() {
 		return type;
 	}
@@ -313,6 +320,7 @@ public class ReferredDocumentInformation7 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Nb")
 	public Max35Text getNumber() {
 		return number;
 	}
@@ -321,6 +329,7 @@ public class ReferredDocumentInformation7 {
 		this.number = number;
 	}
 
+	@XmlElement(name = "RltdDt")
 	public ISODate getRelatedDate() {
 		return relatedDate;
 	}
@@ -329,6 +338,7 @@ public class ReferredDocumentInformation7 {
 		this.relatedDate = relatedDate;
 	}
 
+	@XmlElement(name = "LineDtls")
 	public List<DocumentLineInformation1> getLineDetails() {
 		return lineDetails;
 	}

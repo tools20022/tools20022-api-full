@@ -29,17 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code
- * TradeType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType1Code
- * TradeType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType2Code
- * TradeType2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.TradeTypeCode#mmBasket
@@ -121,6 +110,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TradeTypeCode#mmFutureBuyBackTrade
  * TradeTypeCode.mmFutureBuyBackTrade}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code
+ * TradeType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType1Code
+ * TradeType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType2Code
+ * TradeType2Code}</li>
  * </ul>
  * </li>
  * <li>

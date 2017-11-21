@@ -40,6 +40,17 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingAttendeeRole#mmPerson
+ * MeetingAttendeeRole.mmPerson}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.MeetingPartyRole
+ * MeetingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -58,17 +69,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SecurityPosition1#mmMeetingAttendee
  * SecurityPosition1.mmMeetingAttendee}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.MeetingPartyRole
- * MeetingPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingAttendeeRole#mmPerson
- * MeetingAttendeeRole.mmPerson}</li>
  * </ul>
  * </li>
  * <li>
@@ -127,7 +127,7 @@ public class MeetingAttendeeRole extends MeetingPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmPerson = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> MeetingAttendeeRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingAttendeeRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Person";
@@ -149,7 +149,12 @@ public class MeetingAttendeeRole extends MeetingPartyRole {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Person.mmMeetingAttendee);
 				derivationElement_lazy = () -> Arrays.asList(SecurityPosition2.mmMeetingAttendee, SecurityPosition1.mmMeetingAttendee);
 				superType_lazy = () -> MeetingPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(MeetingAttendeeRole.mmPerson);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingAttendeeRole.mmPerson);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingAttendeeRole.class;
 			}
 		});
 		return mmObject_lazy.get();

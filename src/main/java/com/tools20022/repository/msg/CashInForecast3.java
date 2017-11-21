@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cash movements into a fund as a result of investment funds transactions, eg,
@@ -86,6 +90,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashInForecast3", propOrder = {"cashSettlementDate", "subTotalAmount", "subTotalUnitsNumber", "exceptionalCashFlowIndicator", "cashInBreakdownDetails"})
 public class CashInForecast3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -386,6 +392,7 @@ public class CashInForecast3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshSttlmDt", required = true)
 	public ISODate getCashSettlementDate() {
 		return cashSettlementDate;
 	}
@@ -394,6 +401,7 @@ public class CashInForecast3 {
 		this.cashSettlementDate = cashSettlementDate;
 	}
 
+	@XmlElement(name = "SubTtlAmt")
 	public ActiveOrHistoricCurrencyAndAmount getSubTotalAmount() {
 		return subTotalAmount;
 	}
@@ -402,6 +410,7 @@ public class CashInForecast3 {
 		this.subTotalAmount = subTotalAmount;
 	}
 
+	@XmlElement(name = "SubTtlUnitsNb")
 	public FinancialInstrumentQuantity1 getSubTotalUnitsNumber() {
 		return subTotalUnitsNumber;
 	}
@@ -410,6 +419,7 @@ public class CashInForecast3 {
 		this.subTotalUnitsNumber = subTotalUnitsNumber;
 	}
 
+	@XmlElement(name = "XcptnlCshFlowInd")
 	public YesNoIndicator getExceptionalCashFlowIndicator() {
 		return exceptionalCashFlowIndicator;
 	}
@@ -418,6 +428,7 @@ public class CashInForecast3 {
 		this.exceptionalCashFlowIndicator = exceptionalCashFlowIndicator;
 	}
 
+	@XmlElement(name = "CshInBrkdwnDtls")
 	public List<FundCashInBreakdown2> getCashInBreakdownDetails() {
 		return cashInBreakdownDetails;
 	}

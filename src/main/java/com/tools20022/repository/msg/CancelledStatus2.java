@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status is cancelled.
@@ -85,6 +89,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancelledStatus2", propOrder = {"reason", "extendedReason", "dataSourceScheme", "noSpecifiedReason"})
 public class CancelledStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -346,6 +352,7 @@ public class CancelledStatus2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public CancelledStatusReason2Code getReason() {
 		return reason;
 	}
@@ -354,6 +361,7 @@ public class CancelledStatus2 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "XtndedRsn", required = true)
 	public Extended350Code getExtendedReason() {
 		return extendedReason;
 	}
@@ -362,6 +370,7 @@ public class CancelledStatus2 {
 		this.extendedReason = extendedReason;
 	}
 
+	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}
@@ -370,6 +379,7 @@ public class CancelledStatus2 {
 		this.dataSourceScheme = dataSourceScheme;
 	}
 
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}

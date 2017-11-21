@@ -29,6 +29,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Limit details of one particular limit set by the member and managed by the
@@ -76,6 +80,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LimitDetailsStructure3", propOrder = {"currentLimitIdentification", "allCurrentLimits"})
 public class LimitDetailsStructure3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -237,6 +243,7 @@ public class LimitDetailsStructure3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CurLmtId", required = true)
 	public List<LimitIdentificationDetails2> getCurrentLimitIdentification() {
 		return currentLimitIdentification;
 	}
@@ -245,6 +252,7 @@ public class LimitDetailsStructure3 {
 		this.currentLimitIdentification = currentLimitIdentification;
 	}
 
+	@XmlElement(name = "AllCurLmts", required = true)
 	public List<LimitIdentificationDetails3> getAllCurrentLimits() {
 		return allCurrentLimits;
 	}

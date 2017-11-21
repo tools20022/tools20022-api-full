@@ -33,6 +33,10 @@ import com.tools20022.repository.msg.RejectedCancellationJustification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between different statuses of an investigation case.
@@ -88,6 +92,8 @@ import java.util.List;
  * definition} = "Choice between different statuses of an investigation case."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestigationStatusChoice", propOrder = {"confirmation", "rejectedModification", "rejectedCancellation", "duplicateOf", "assignmentCancellationConfirmation"})
 public class InvestigationStatusChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -356,6 +362,7 @@ public class InvestigationStatusChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Conf", required = true)
 	public InvestigationExecutionConfirmation1Code getConfirmation() {
 		return confirmation;
 	}
@@ -364,6 +371,7 @@ public class InvestigationStatusChoice {
 		this.confirmation = confirmation;
 	}
 
+	@XmlElement(name = "RjctdMod", required = true)
 	public List<PaymentModificationRejection1Code> getRejectedModification() {
 		return rejectedModification;
 	}
@@ -372,6 +380,7 @@ public class InvestigationStatusChoice {
 		this.rejectedModification = rejectedModification;
 	}
 
+	@XmlElement(name = "RjctdCxl", required = true)
 	public RejectedCancellationJustification getRejectedCancellation() {
 		return rejectedCancellation;
 	}
@@ -380,6 +389,7 @@ public class InvestigationStatusChoice {
 		this.rejectedCancellation = rejectedCancellation;
 	}
 
+	@XmlElement(name = "DplctOf", required = true)
 	public Case getDuplicateOf() {
 		return duplicateOf;
 	}
@@ -388,6 +398,7 @@ public class InvestigationStatusChoice {
 		this.duplicateOf = duplicateOf;
 	}
 
+	@XmlElement(name = "AssgnmtCxlConf", required = true)
 	public YesNoIndicator getAssignmentCancellationConfirmation() {
 		return assignmentCancellationConfirmation;
 	}

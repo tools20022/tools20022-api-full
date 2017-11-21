@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the agreed amount and the collateral movement direction.
@@ -66,6 +70,8 @@ import java.util.List;
  * "Provides the agreed amount and the collateral movement direction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralMovement1", propOrder = {"agreedAmount", "movementDetails"})
 public class CollateralMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class CollateralMovement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AgrdAmt", required = true)
 	public ActiveCurrencyAndAmount getAgreedAmount() {
 		return agreedAmount;
 	}
@@ -193,6 +200,7 @@ public class CollateralMovement1 {
 		this.agreedAmount = agreedAmount;
 	}
 
+	@XmlElement(name = "MvmntDtls")
 	public List<CollateralMovement1Choice> getMovementDetails() {
 		return movementDetails;
 	}

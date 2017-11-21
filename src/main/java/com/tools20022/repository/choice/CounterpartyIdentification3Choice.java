@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.NameAndLocation1;
 import com.tools20022.repository.msg.SectorAndLocation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the identification of the reporting agent counterparty.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CounterpartyIdentification2Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CounterpartyIdentification3Choice", propOrder = {"LEI", "sectorAndLocation", "nameAndLocation"})
 public class CounterpartyIdentification3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -252,6 +258,7 @@ public class CounterpartyIdentification3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LEI", required = true)
 	public LEIIdentifier getLEI() {
 		return lEI;
 	}
@@ -260,6 +267,7 @@ public class CounterpartyIdentification3Choice {
 		this.lEI = lEI;
 	}
 
+	@XmlElement(name = "SctrAndLctn", required = true)
 	public SectorAndLocation1 getSectorAndLocation() {
 		return sectorAndLocation;
 	}
@@ -268,6 +276,7 @@ public class CounterpartyIdentification3Choice {
 		this.sectorAndLocation = sectorAndLocation;
 	}
 
+	@XmlElement(name = "NmAndLctn", required = true)
 	public NameAndLocation1 getNameAndLocation() {
 		return nameAndLocation;
 	}

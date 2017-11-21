@@ -26,6 +26,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information supplied to enable the matching of an entry with the items that
@@ -73,6 +77,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RemittanceInformation3", propOrder = {"unstructured", "structured"})
 public class RemittanceInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -243,6 +249,7 @@ public class RemittanceInformation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ustrd", required = true)
 	public Max140Text getUnstructured() {
 		return unstructured;
 	}
@@ -251,6 +258,7 @@ public class RemittanceInformation3 {
 		this.unstructured = unstructured;
 	}
 
+	@XmlElement(name = "Strd", required = true)
 	public StructuredRemittanceInformation6 getStructured() {
 		return structured;
 	}

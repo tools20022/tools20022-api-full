@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies a payment instruction by a set of characteristics (as per EBA
@@ -88,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LongPaymentIdentification1", propOrder = {"transactionIdentification", "interBankSettlementAmount", "interBankSettlementDate", "paymentMethod", "instructingAgent", "instructedAgent", "entryType", "endToEndIdentification"})
 public class LongPaymentIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -514,6 +520,7 @@ public class LongPaymentIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -522,6 +529,7 @@ public class LongPaymentIdentification1 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmt", required = true)
 	public ImpliedCurrencyAndAmount getInterBankSettlementAmount() {
 		return interBankSettlementAmount;
 	}
@@ -530,6 +538,7 @@ public class LongPaymentIdentification1 {
 		this.interBankSettlementAmount = interBankSettlementAmount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDt", required = true)
 	public ISODate getInterBankSettlementDate() {
 		return interBankSettlementDate;
 	}
@@ -538,6 +547,7 @@ public class LongPaymentIdentification1 {
 		this.interBankSettlementDate = interBankSettlementDate;
 	}
 
+	@XmlElement(name = "PmtMtd")
 	public PaymentOrigin1Choice getPaymentMethod() {
 		return paymentMethod;
 	}
@@ -546,6 +556,7 @@ public class LongPaymentIdentification1 {
 		this.paymentMethod = paymentMethod;
 	}
 
+	@XmlElement(name = "InstgAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getInstructingAgent() {
 		return instructingAgent;
 	}
@@ -554,6 +565,7 @@ public class LongPaymentIdentification1 {
 		this.instructingAgent = instructingAgent;
 	}
 
+	@XmlElement(name = "InstdAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getInstructedAgent() {
 		return instructedAgent;
 	}
@@ -562,6 +574,7 @@ public class LongPaymentIdentification1 {
 		this.instructedAgent = instructedAgent;
 	}
 
+	@XmlElement(name = "NtryTp")
 	public EntryTypeIdentifier getEntryType() {
 		return entryType;
 	}
@@ -570,6 +583,7 @@ public class LongPaymentIdentification1 {
 		this.entryType = entryType;
 	}
 
+	@XmlElement(name = "EndToEndId")
 	public Max35Text getEndToEndIdentification() {
 		return endToEndIdentification;
 	}

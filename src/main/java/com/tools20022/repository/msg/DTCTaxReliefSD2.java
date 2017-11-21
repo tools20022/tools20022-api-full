@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * DTC (The Depository Trust Company) Tax Relief service election details.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "DTC (The Depository Trust Company) Tax Relief service election details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DTCTaxReliefSD2", propOrder = {"placeAndName", "DTCTaxReliefCategory", "instructionQuantity"})
 public class DTCTaxReliefSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -206,6 +212,7 @@ public class DTCTaxReliefSD2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -214,6 +221,7 @@ public class DTCTaxReliefSD2 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "DTCTaxRlfCtgy", required = true)
 	public DTCTaxReliefSD1 getDTCTaxReliefCategory() {
 		return dTCTaxReliefCategory;
 	}
@@ -222,6 +230,7 @@ public class DTCTaxReliefSD2 {
 		this.dTCTaxReliefCategory = dTCTaxReliefCategory;
 	}
 
+	@XmlElement(name = "InstrQty", required = true)
 	public FinancialInstrumentQuantity15Choice getInstructionQuantity() {
 		return instructionQuantity;
 	}

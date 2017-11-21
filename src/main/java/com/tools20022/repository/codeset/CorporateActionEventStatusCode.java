@@ -29,20 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus2Code
- * CorporateActionEventStatus2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus1Code
- * CorporateActionEventStatus1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus3Code
- * CorporateActionEventStatus3Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -63,6 +49,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatusCode#mmInactive
  * CorporateActionEventStatusCode.mmInactive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus2Code
+ * CorporateActionEventStatus2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus1Code
+ * CorporateActionEventStatus1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus3Code
+ * CorporateActionEventStatus3Code}</li>
  * </ul>
  * </li>
  * <li>

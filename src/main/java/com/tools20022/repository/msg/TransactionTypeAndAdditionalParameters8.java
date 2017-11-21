@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the conditions under which the order/trade is to be settled.
@@ -88,6 +92,9 @@ import java.util.function.Supplier;
  * "Specifies the conditions under which the order/trade is to be settled."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionTypeAndAdditionalParameters8", propOrder = {"accountOwnerTransactionIdentification", "accountServicerTransactionIdentification", "securitiesFinancingTransactionType", "payment", "modificationType",
+		"commonIdentification", "poolIdentification"})
 public class TransactionTypeAndAdditionalParameters8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -463,6 +470,7 @@ public class TransactionTypeAndAdditionalParameters8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnrTxId", required = true)
 	public RestrictedFINXMax16Text getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
@@ -471,6 +479,7 @@ public class TransactionTypeAndAdditionalParameters8 {
 		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrTxId")
 	public RestrictedFINXMax16Text getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
@@ -479,6 +488,7 @@ public class TransactionTypeAndAdditionalParameters8 {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
 	}
 
+	@XmlElement(name = "SctiesFincgTxTp", required = true)
 	public SecuritiesFinancingTransactionType1Code getSecuritiesFinancingTransactionType() {
 		return securitiesFinancingTransactionType;
 	}
@@ -487,6 +497,7 @@ public class TransactionTypeAndAdditionalParameters8 {
 		this.securitiesFinancingTransactionType = securitiesFinancingTransactionType;
 	}
 
+	@XmlElement(name = "Pmt", required = true)
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
@@ -495,6 +506,7 @@ public class TransactionTypeAndAdditionalParameters8 {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "ModTp")
 	public RepurchaseType9Choice getModificationType() {
 		return modificationType;
 	}
@@ -503,6 +515,7 @@ public class TransactionTypeAndAdditionalParameters8 {
 		this.modificationType = modificationType;
 	}
 
+	@XmlElement(name = "CmonId")
 	public RestrictedFINXMax16Text getCommonIdentification() {
 		return commonIdentification;
 	}
@@ -511,6 +524,7 @@ public class TransactionTypeAndAdditionalParameters8 {
 		this.commonIdentification = commonIdentification;
 	}
 
+	@XmlElement(name = "PoolId")
 	public RestrictedFINXMax16Text getPoolIdentification() {
 		return poolIdentification;
 	}

@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.Header27;
 import com.tools20022.repository.msg.StatusReport5;
 import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20152016;
 import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * Informs the master terminal manager (MTM) or the terminal manager (TM) about
@@ -37,9 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catm.001.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
@@ -74,6 +73,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catm.001.001.05}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -96,6 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * StatusReportV04}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusReportV05", propOrder = {"header", "statusReport", "securityTrailer"})
 public class StatusReportV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -147,6 +151,14 @@ public class StatusReportV05 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header27.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusReportV05.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected StatusReport5 statusReport;
@@ -200,6 +212,14 @@ public class StatusReportV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> StatusReport5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusReportV05.class.getMethod("getStatusReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType12 securityTrailer;
 	/**
@@ -251,6 +271,14 @@ public class StatusReportV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType12.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusReportV05.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -265,7 +293,8 @@ public class StatusReportV05 {
 				rootElement = "Document";
 				xmlTag = "StsRpt";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(StatusReportV05.mmHeader, StatusReportV05.mmStatusReport, StatusReportV05.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.StatusReportV05.mmHeader, com.tools20022.repository.area.catm.StatusReportV05.mmStatusReport,
+						com.tools20022.repository.area.catm.StatusReportV05.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catm";
@@ -275,10 +304,16 @@ public class StatusReportV05 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StatusReportV05.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header27 getHeader() {
 		return header;
 	}
@@ -287,6 +322,7 @@ public class StatusReportV05 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "StsRpt", required = true)
 	public StatusReport5 getStatusReport() {
 		return statusReport;
 	}
@@ -295,11 +331,18 @@ public class StatusReportV05 {
 		this.statusReport = statusReport;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType12 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType12 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catm.001.05.05")
+	static public class Document {
+		@XmlElement(name = "StsRpt", required = true)
+		public StatusReportV05 messageBody;
 	}
 }

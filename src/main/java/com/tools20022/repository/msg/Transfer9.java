@@ -29,6 +29,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -101,6 +105,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Transfer9", propOrder = {"masterReference", "transferReference", "clientReference", "cancellationReference", "requestedTransferDate", "totalUnitsNumber", "portfolioTransferOutRate", "unitsDetails", "rounding",
+		"ownAccountTransferIndicator", "averagePrice", "nonStandardSettlementInformation"})
 public class Transfer9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -742,6 +749,7 @@ public class Transfer9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -750,6 +758,7 @@ public class Transfer9 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -758,6 +767,7 @@ public class Transfer9 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -766,6 +776,7 @@ public class Transfer9 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -774,6 +785,7 @@ public class Transfer9 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "ReqdTrfDt", required = true)
 	public DateFormat1Choice getRequestedTransferDate() {
 		return requestedTransferDate;
 	}
@@ -782,6 +794,7 @@ public class Transfer9 {
 		this.requestedTransferDate = requestedTransferDate;
 	}
 
+	@XmlElement(name = "TtlUnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
@@ -790,6 +803,7 @@ public class Transfer9 {
 		this.totalUnitsNumber = totalUnitsNumber;
 	}
 
+	@XmlElement(name = "PrtflTrfOutRate", required = true)
 	public PercentageRate getPortfolioTransferOutRate() {
 		return portfolioTransferOutRate;
 	}
@@ -798,6 +812,7 @@ public class Transfer9 {
 		this.portfolioTransferOutRate = portfolioTransferOutRate;
 	}
 
+	@XmlElement(name = "UnitsDtls")
 	public List<Unit3> getUnitsDetails() {
 		return unitsDetails;
 	}
@@ -806,6 +821,7 @@ public class Transfer9 {
 		this.unitsDetails = unitsDetails;
 	}
 
+	@XmlElement(name = "Rndg")
 	public RoundingDirection2Code getRounding() {
 		return rounding;
 	}
@@ -814,6 +830,7 @@ public class Transfer9 {
 		this.rounding = rounding;
 	}
 
+	@XmlElement(name = "OwnAcctTrfInd")
 	public YesNoIndicator getOwnAccountTransferIndicator() {
 		return ownAccountTransferIndicator;
 	}
@@ -822,6 +839,7 @@ public class Transfer9 {
 		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
 	}
 
+	@XmlElement(name = "AvrgPric")
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAveragePrice() {
 		return averagePrice;
 	}
@@ -830,6 +848,7 @@ public class Transfer9 {
 		this.averagePrice = averagePrice;
 	}
 
+	@XmlElement(name = "NonStdSttlmInf")
 	public Max350Text getNonStandardSettlementInformation() {
 		return nonStandardSettlementInformation;
 	}

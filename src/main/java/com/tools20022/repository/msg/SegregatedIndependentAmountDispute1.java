@@ -29,6 +29,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides for the segregated independent amount, the dispute details like the
@@ -69,6 +73,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SegregatedIndependentAmountDispute1", propOrder = {"disputeDetails", "disputeResolutionType1Choice"})
 public class SegregatedIndependentAmountDispute1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class SegregatedIndependentAmountDispute1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DsptDtls", required = true)
 	public Dispute1 getDisputeDetails() {
 		return disputeDetails;
 	}
@@ -186,6 +193,7 @@ public class SegregatedIndependentAmountDispute1 {
 		this.disputeDetails = disputeDetails;
 	}
 
+	@XmlElement(name = "DsptRsltnTp1Chc")
 	public List<DisputeResolutionType1Choice> getDisputeResolutionType1Choice() {
 		return disputeResolutionType1Choice;
 	}

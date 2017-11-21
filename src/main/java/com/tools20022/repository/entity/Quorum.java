@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.Meeting1;
 import com.tools20022.repository.msg.Meeting2;
 import com.tools20022.repository.msg.Meeting3;
 import com.tools20022.repository.msg.Meeting4;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,6 +41,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Quorum#mmQuantity
+ * Quorum.mmQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quorum#mmPercentage
+ * Quorum.mmPercentage}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quorum#mmQuorumRequired
+ * Quorum.mmQuorumRequired}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quorum#mmMeeting
+ * Quorum.mmMeeting}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -54,19 +68,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmQuorum
  * Meeting.mmQuorum}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Quorum#mmQuantity
- * Quorum.mmQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quorum#mmPercentage
- * Quorum.mmPercentage}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quorum#mmQuorumRequired
- * Quorum.mmQuorumRequired}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quorum#mmMeeting
- * Quorum.mmMeeting}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,10 +100,6 @@ public class Quorum {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quorum
-	 * Quorum}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -120,6 +117,10 @@ public class Quorum {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quorum
+	 * Quorum}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -134,7 +135,7 @@ public class Quorum {
 	public static final MMBusinessAttribute mmQuantity = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Meeting1.mmQuorumQuantity, Meeting2.mmQuorumQuantity, QuorumQuantity1Choice.mmQuorumQuantity, Meeting3.mmQuorumQuantity, Meeting4.mmQuorumQuantity);
-			elementContext_lazy = () -> Quorum.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quorum.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
@@ -142,6 +143,14 @@ public class Quorum {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Quorum.class.getMethod("getQuantity", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate percentage;
@@ -156,10 +165,6 @@ public class Quorum {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quorum
-	 * Quorum}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -174,6 +179,10 @@ public class Quorum {
 	 * QuorumQuantity1Choice.mmQuorumQuantityPercentage}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quorum
+	 * Quorum}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -190,7 +199,7 @@ public class Quorum {
 	public static final MMBusinessAttribute mmPercentage = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Meeting1.mmQuorumQuantityPercentage, Meeting2.mmQuorumQuantityPercentage, QuorumQuantity1Choice.mmQuorumQuantityPercentage);
-			elementContext_lazy = () -> Quorum.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quorum.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Percentage";
@@ -198,6 +207,14 @@ public class Quorum {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Quorum.class.getMethod("getPercentage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator quorumRequired;
@@ -212,10 +229,6 @@ public class Quorum {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quorum
-	 * Quorum}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -229,6 +242,10 @@ public class Quorum {
 	 * Meeting4.mmQuorumRequired}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quorum
+	 * Quorum}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -245,7 +262,7 @@ public class Quorum {
 	public static final MMBusinessAttribute mmQuorumRequired = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Meeting1.mmQuorumRequired, Meeting2.mmQuorumRequired, Meeting3.mmQuorumRequired, Meeting4.mmQuorumRequired);
-			elementContext_lazy = () -> Quorum.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quorum.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuorumRequired";
@@ -253,6 +270,14 @@ public class Quorum {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Quorum.class.getMethod("getQuorumRequired", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Meeting meeting;
@@ -289,7 +314,7 @@ public class Quorum {
 	 */
 	public static final MMBusinessAssociationEnd mmMeeting = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Quorum.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Quorum.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Meeting";
@@ -310,8 +335,14 @@ public class Quorum {
 				name = "Quorum";
 				definition = "Specifies whether a quorum is required or not together with the quorum parameters.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Meeting.mmQuorum);
-				element_lazy = () -> Arrays.asList(Quorum.mmQuantity, Quorum.mmPercentage, Quorum.mmQuorumRequired, Quorum.mmMeeting);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Quorum.mmQuantity, com.tools20022.repository.entity.Quorum.mmPercentage, com.tools20022.repository.entity.Quorum.mmQuorumRequired,
+						com.tools20022.repository.entity.Quorum.mmMeeting);
 				derivationComponent_lazy = () -> Arrays.asList(QuorumQuantity1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Quorum.class;
 			}
 		});
 		return mmObject_lazy.get();

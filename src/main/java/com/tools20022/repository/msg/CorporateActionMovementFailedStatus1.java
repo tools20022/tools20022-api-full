@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the failure of the settlement of a movement.
@@ -73,6 +77,8 @@ import java.util.List;
  * "Provides information about the failure of the settlement of a movement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionMovementFailedStatus1", propOrder = {"agentAccountIdentification", "clientAccountIdentification", "accountOwnerIdentification", "resourceDetails"})
 public class CorporateActionMovementFailedStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -284,6 +290,7 @@ public class CorporateActionMovementFailedStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AgtAcctId", required = true)
 	public Max35Text getAgentAccountIdentification() {
 		return agentAccountIdentification;
 	}
@@ -292,6 +299,7 @@ public class CorporateActionMovementFailedStatus1 {
 		this.agentAccountIdentification = agentAccountIdentification;
 	}
 
+	@XmlElement(name = "ClntAcctId")
 	public Max35Text getClientAccountIdentification() {
 		return clientAccountIdentification;
 	}
@@ -300,6 +308,7 @@ public class CorporateActionMovementFailedStatus1 {
 		this.clientAccountIdentification = clientAccountIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnrId")
 	public PartyIdentification2Choice getAccountOwnerIdentification() {
 		return accountOwnerIdentification;
 	}
@@ -308,6 +317,7 @@ public class CorporateActionMovementFailedStatus1 {
 		this.accountOwnerIdentification = accountOwnerIdentification;
 	}
 
+	@XmlElement(name = "RsrcDtls", required = true)
 	public List<FailedMovement1> getResourceDetails() {
 		return resourceDetails;
 	}

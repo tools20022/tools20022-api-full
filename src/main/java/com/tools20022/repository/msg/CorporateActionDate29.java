@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Deadline;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies corporate action dates.
@@ -97,6 +101,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionDate15}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionDate29", propOrder = {"earlyResponseDeadline", "coverExpirationDate", "protectDate", "marketDeadline", "responseDeadline", "expiryDate", "subscriptionCostDebitDate", "depositoryCoverExpirationDate",
+		"stockLendingDeadline"})
 public class CorporateActionDate29 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -705,6 +712,7 @@ public class CorporateActionDate29 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EarlyRspnDdln")
 	public DateFormat19Choice getEarlyResponseDeadline() {
 		return earlyResponseDeadline;
 	}
@@ -713,6 +721,7 @@ public class CorporateActionDate29 {
 		this.earlyResponseDeadline = earlyResponseDeadline;
 	}
 
+	@XmlElement(name = "CoverXprtnDt")
 	public DateFormat19Choice getCoverExpirationDate() {
 		return coverExpirationDate;
 	}
@@ -721,6 +730,7 @@ public class CorporateActionDate29 {
 		this.coverExpirationDate = coverExpirationDate;
 	}
 
+	@XmlElement(name = "PrtctDt")
 	public DateFormat19Choice getProtectDate() {
 		return protectDate;
 	}
@@ -729,6 +739,7 @@ public class CorporateActionDate29 {
 		this.protectDate = protectDate;
 	}
 
+	@XmlElement(name = "MktDdln")
 	public DateFormat19Choice getMarketDeadline() {
 		return marketDeadline;
 	}
@@ -737,6 +748,7 @@ public class CorporateActionDate29 {
 		this.marketDeadline = marketDeadline;
 	}
 
+	@XmlElement(name = "RspnDdln")
 	public DateFormat20Choice getResponseDeadline() {
 		return responseDeadline;
 	}
@@ -745,6 +757,7 @@ public class CorporateActionDate29 {
 		this.responseDeadline = responseDeadline;
 	}
 
+	@XmlElement(name = "XpryDt")
 	public DateFormat19Choice getExpiryDate() {
 		return expiryDate;
 	}
@@ -753,6 +766,7 @@ public class CorporateActionDate29 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "SbcptCostDbtDt")
 	public DateFormat19Choice getSubscriptionCostDebitDate() {
 		return subscriptionCostDebitDate;
 	}
@@ -761,6 +775,7 @@ public class CorporateActionDate29 {
 		this.subscriptionCostDebitDate = subscriptionCostDebitDate;
 	}
 
+	@XmlElement(name = "DpstryCoverXprtnDt")
 	public DateFormat19Choice getDepositoryCoverExpirationDate() {
 		return depositoryCoverExpirationDate;
 	}
@@ -769,6 +784,7 @@ public class CorporateActionDate29 {
 		this.depositoryCoverExpirationDate = depositoryCoverExpirationDate;
 	}
 
+	@XmlElement(name = "StockLndgDdln")
 	public DateFormat19Choice getStockLendingDeadline() {
 		return stockLendingDeadline;
 	}

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.entity.TreasuryTrade;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -39,6 +40,35 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CurrencyOption#mmCallAmount
+ * CurrencyOption.mmCallAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CurrencyOption#mmPutAmount
+ * CurrencyOption.mmPutAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmPremiumCalculation
+ * CurrencyOption.mmPremiumCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmOptionDefinition
+ * CurrencyOption.mmOptionDefinition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmPremiumSettlement
+ * CurrencyOption.mmPremiumSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmExercisedOption
+ * CurrencyOption.mmExercisedOption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmOptionSettlementCurrency
+ * CurrencyOption.mmOptionSettlementCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CurrencyOption#mmStrikeRate
+ * CurrencyOption.mmStrikeRate}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TreasuryTrade
+ * TreasuryTrade}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -103,35 +133,6 @@ import java.util.List;
  * OptionData4.mmOption}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TreasuryTrade
- * TreasuryTrade}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CurrencyOption#mmCallAmount
- * CurrencyOption.mmCallAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CurrencyOption#mmPutAmount
- * CurrencyOption.mmPutAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmPremiumCalculation
- * CurrencyOption.mmPremiumCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmOptionDefinition
- * CurrencyOption.mmOptionDefinition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmPremiumSettlement
- * CurrencyOption.mmPremiumSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmExercisedOption
- * CurrencyOption.mmExercisedOption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmOptionSettlementCurrency
- * CurrencyOption.mmOptionSettlementCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CurrencyOption#mmStrikeRate
- * CurrencyOption.mmStrikeRate}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -163,11 +164,6 @@ public class CurrencyOption extends TreasuryTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount
 	 * ActiveOrHistoricCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
-	 * CurrencyOption}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -186,6 +182,11 @@ public class CurrencyOption extends TreasuryTrade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
+	 * CurrencyOption}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -200,7 +201,7 @@ public class CurrencyOption extends TreasuryTrade {
 	public static final MMBusinessAttribute mmCallAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountsAndValueDate2.mmCallAmount, AmountsAndValueDate3.mmCallAmount, AmountsAndValueDate4.mmCallAmount, AmountsAndValueDate5.mmCallAmount);
-			elementContext_lazy = () -> CurrencyOption.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CallAmount";
@@ -208,6 +209,14 @@ public class CurrencyOption extends TreasuryTrade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CurrencyOption.class.getMethod("getCallAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ActiveOrHistoricCurrencyAndAmount putAmount;
@@ -221,11 +230,6 @@ public class CurrencyOption extends TreasuryTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount
 	 * ActiveOrHistoricCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
-	 * CurrencyOption}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -244,6 +248,11 @@ public class CurrencyOption extends TreasuryTrade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
+	 * CurrencyOption}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -258,7 +267,7 @@ public class CurrencyOption extends TreasuryTrade {
 	public static final MMBusinessAttribute mmPutAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountsAndValueDate2.mmPutAmount, AmountsAndValueDate3.mmPutAmount, AmountsAndValueDate4.mmPutAmount, AmountsAndValueDate5.mmPutAmount);
-			elementContext_lazy = () -> CurrencyOption.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PutAmount";
@@ -266,6 +275,14 @@ public class CurrencyOption extends TreasuryTrade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CurrencyOption.class.getMethod("getPutAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PremiumCalculation premiumCalculation;
@@ -286,11 +303,6 @@ public class CurrencyOption extends TreasuryTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PremiumCalculation
 	 * PremiumCalculation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
-	 * CurrencyOption}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -305,6 +317,11 @@ public class CurrencyOption extends TreasuryTrade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
+	 * CurrencyOption}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -318,7 +335,7 @@ public class CurrencyOption extends TreasuryTrade {
 	public static final MMBusinessAssociationEnd mmPremiumCalculation = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Option2.mmPremium, Option4.mmPremium, Option5.mmPremium, Option6.mmPremium);
-			elementContext_lazy = () -> CurrencyOption.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PremiumCalculation";
@@ -366,7 +383,7 @@ public class CurrencyOption extends TreasuryTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmOptionDefinition = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CurrencyOption.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionDefinition";
@@ -396,11 +413,6 @@ public class CurrencyOption extends TreasuryTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentObligation
 	 * PaymentObligation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
-	 * CurrencyOption}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -408,6 +420,11 @@ public class CurrencyOption extends TreasuryTrade {
 	 * Option3.mmPremium}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
+	 * CurrencyOption}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -424,7 +441,7 @@ public class CurrencyOption extends TreasuryTrade {
 	public static final MMBusinessAssociationEnd mmPremiumSettlement = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Option3.mmPremium);
-			elementContext_lazy = () -> CurrencyOption.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PremiumSettlement";
@@ -473,7 +490,7 @@ public class CurrencyOption extends TreasuryTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmExercisedOption = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CurrencyOption.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExercisedOption";
@@ -495,11 +512,6 @@ public class CurrencyOption extends TreasuryTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode
 	 * ActiveOrHistoricCurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
-	 * CurrencyOption}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -511,6 +523,11 @@ public class CurrencyOption extends TreasuryTrade {
 	 * AmountsAndValueDate5.mmOptionSettlementCurrency}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
+	 * CurrencyOption}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -526,7 +543,7 @@ public class CurrencyOption extends TreasuryTrade {
 	public static final MMBusinessAttribute mmOptionSettlementCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountsAndValueDate4.mmOptionSettlementCurrency, AmountsAndValueDate5.mmOptionSettlementCurrency);
-			elementContext_lazy = () -> CurrencyOption.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionSettlementCurrency";
@@ -534,6 +551,14 @@ public class CurrencyOption extends TreasuryTrade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CurrencyOption.class.getMethod("getOptionSettlementCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BaseOneRate strikeRate;
@@ -546,11 +571,6 @@ public class CurrencyOption extends TreasuryTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.BaseOneRate
 	 * BaseOneRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
-	 * CurrencyOption}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -567,6 +587,11 @@ public class CurrencyOption extends TreasuryTrade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
+	 * CurrencyOption}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -581,7 +606,7 @@ public class CurrencyOption extends TreasuryTrade {
 	public static final MMBusinessAttribute mmStrikeRate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Option2.mmStrikePrice, Option3.mmStrikePrice, Option4.mmStrikePrice, Option5.mmStrikePrice, Option6.mmStrikePrice);
-			elementContext_lazy = () -> CurrencyOption.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StrikeRate";
@@ -589,6 +614,14 @@ public class CurrencyOption extends TreasuryTrade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CurrencyOption.class.getMethod("getStrikeRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -604,10 +637,16 @@ public class CurrencyOption extends TreasuryTrade {
 				derivationElement_lazy = () -> Arrays.asList(Option2.mmOptionAmounts, Option3.mmOptionAmounts, OptionData1.mmOption, OptionData2.mmOption, Option4.mmOptionAmounts, Option5.mmOptionAmounts, Option6.mmOptionAmounts,
 						OptionData3.mmOption, OptionData4.mmOption);
 				superType_lazy = () -> TreasuryTrade.mmObject();
-				element_lazy = () -> Arrays.asList(CurrencyOption.mmCallAmount, CurrencyOption.mmPutAmount, CurrencyOption.mmPremiumCalculation, CurrencyOption.mmOptionDefinition, CurrencyOption.mmPremiumSettlement,
-						CurrencyOption.mmExercisedOption, CurrencyOption.mmOptionSettlementCurrency, CurrencyOption.mmStrikeRate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CurrencyOption.mmCallAmount, com.tools20022.repository.entity.CurrencyOption.mmPutAmount,
+						com.tools20022.repository.entity.CurrencyOption.mmPremiumCalculation, com.tools20022.repository.entity.CurrencyOption.mmOptionDefinition, com.tools20022.repository.entity.CurrencyOption.mmPremiumSettlement,
+						com.tools20022.repository.entity.CurrencyOption.mmExercisedOption, com.tools20022.repository.entity.CurrencyOption.mmOptionSettlementCurrency, com.tools20022.repository.entity.CurrencyOption.mmStrikeRate);
 				derivationComponent_lazy = () -> Arrays.asList(AmountsAndValueDate2.mmObject(), Option2.mmObject(), Option3.mmObject(), OptionData1.mmObject(), OptionData2.mmObject(), AmountsAndValueDate3.mmObject(), Option4.mmObject(),
 						AmountsAndValueDate4.mmObject(), Option5.mmObject(), AmountsAndValueDate5.mmObject(), Option6.mmObject(), OptionData3.mmObject(), OptionData4.mmObject(), Option10.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CurrencyOption.class;
 			}
 		});
 		return mmObject_lazy.get();

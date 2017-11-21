@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the foreign exchange trade including Spot\Forward\NDF that is
@@ -97,6 +101,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Trade3", propOrder = {"executionPrice", "lastQuantity", "settlementType", "settlementDate", "valuationRate", "forwardPoints", "calculatedCounterpartyCurrencyLastQuantity", "valueDate", "riskAmount",
+		"securityIdentification", "fixingCurrency", "fixingDate", "optionIndicator", "deltaIndicator", "associatedTradeReference"})
 public class Trade3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -749,6 +756,7 @@ public class Trade3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ExctnPric", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getExecutionPrice() {
 		return executionPrice;
 	}
@@ -757,6 +765,7 @@ public class Trade3 {
 		this.executionPrice = executionPrice;
 	}
 
+	@XmlElement(name = "LastQty", required = true)
 	public CurrencyAndAmount getLastQuantity() {
 		return lastQuantity;
 	}
@@ -765,6 +774,7 @@ public class Trade3 {
 		this.lastQuantity = lastQuantity;
 	}
 
+	@XmlElement(name = "SttlmTp", required = true)
 	public SettlementDateCode getSettlementType() {
 		return settlementType;
 	}
@@ -773,6 +783,7 @@ public class Trade3 {
 		this.settlementType = settlementType;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
@@ -781,6 +792,7 @@ public class Trade3 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "ValtnRate", required = true)
 	public AgreedRate3 getValuationRate() {
 		return valuationRate;
 	}
@@ -789,6 +801,7 @@ public class Trade3 {
 		this.valuationRate = valuationRate;
 	}
 
+	@XmlElement(name = "FwdPts")
 	public DecimalNumber getForwardPoints() {
 		return forwardPoints;
 	}
@@ -797,6 +810,7 @@ public class Trade3 {
 		this.forwardPoints = forwardPoints;
 	}
 
+	@XmlElement(name = "ClctdCtrPtyCcyLastQty", required = true)
 	public CurrencyAndAmount getCalculatedCounterpartyCurrencyLastQuantity() {
 		return calculatedCounterpartyCurrencyLastQuantity;
 	}
@@ -805,6 +819,7 @@ public class Trade3 {
 		this.calculatedCounterpartyCurrencyLastQuantity = calculatedCounterpartyCurrencyLastQuantity;
 	}
 
+	@XmlElement(name = "ValDt", required = true)
 	public ISODate getValueDate() {
 		return valueDate;
 	}
@@ -813,6 +828,7 @@ public class Trade3 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "RskAmt", required = true)
 	public ActiveCurrencyAndAmount getRiskAmount() {
 		return riskAmount;
 	}
@@ -821,6 +837,7 @@ public class Trade3 {
 		this.riskAmount = riskAmount;
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification18 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -829,6 +846,7 @@ public class Trade3 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "FxgCcy")
 	public CurrencyCode getFixingCurrency() {
 		return fixingCurrency;
 	}
@@ -837,6 +855,7 @@ public class Trade3 {
 		this.fixingCurrency = fixingCurrency;
 	}
 
+	@XmlElement(name = "FxgDt")
 	public ISODate getFixingDate() {
 		return fixingDate;
 	}
@@ -845,6 +864,7 @@ public class Trade3 {
 		this.fixingDate = fixingDate;
 	}
 
+	@XmlElement(name = "OptnInd")
 	public YesNoIndicator getOptionIndicator() {
 		return optionIndicator;
 	}
@@ -853,6 +873,7 @@ public class Trade3 {
 		this.optionIndicator = optionIndicator;
 	}
 
+	@XmlElement(name = "DltaInd")
 	public YesNoIndicator getDeltaIndicator() {
 		return deltaIndicator;
 	}
@@ -861,6 +882,7 @@ public class Trade3 {
 		this.deltaIndicator = deltaIndicator;
 	}
 
+	@XmlElement(name = "AssoctdTradRef")
 	public List<Max70Text> getAssociatedTradeReference() {
 		return associatedTradeReference;
 	}

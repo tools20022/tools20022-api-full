@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of transaction type or corporation action event type.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of transaction type or corporation action event type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionType1Choice", propOrder = {"transactionType", "corporateActionType"})
 public class TransactionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class TransactionType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxTp", required = true)
 	public TransactionType2Choice getTransactionType() {
 		return transactionType;
 	}
@@ -184,6 +191,7 @@ public class TransactionType1Choice {
 		this.transactionType = transactionType;
 	}
 
+	@XmlElement(name = "CorpActnTp", required = true)
 	public CorporateAction1Choice getCorporateActionType() {
 		return corporateActionType;
 	}

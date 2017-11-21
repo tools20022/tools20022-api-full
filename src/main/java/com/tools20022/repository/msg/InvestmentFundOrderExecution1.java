@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference of an order, deal reference, client reference and master reference.
@@ -98,6 +102,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentFundOrderExecution1", propOrder = {"masterReference", "amendmentIndicator", "orderReferences"})
 public class InvestmentFundOrderExecution1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -262,6 +268,7 @@ public class InvestmentFundOrderExecution1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -270,6 +277,7 @@ public class InvestmentFundOrderExecution1 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "AmdmntInd", required = true)
 	public YesNoIndicator getAmendmentIndicator() {
 		return amendmentIndicator;
 	}
@@ -278,6 +286,7 @@ public class InvestmentFundOrderExecution1 {
 		this.amendmentIndicator = amendmentIndicator;
 	}
 
+	@XmlElement(name = "OrdrRefs", required = true)
 	public List<InvestmentFundOrderExecution2> getOrderReferences() {
 		return orderReferences;
 	}

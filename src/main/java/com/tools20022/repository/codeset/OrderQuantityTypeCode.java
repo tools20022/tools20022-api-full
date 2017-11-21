@@ -30,17 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderQuantityType3Code
- * OrderQuantityType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderQuantityType1Code
- * OrderQuantityType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderQuantityType2Code
- * OrderQuantityType2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -82,6 +71,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#mmRequestedToBeReplacedQuantity
  * OrderQuantityTypeCode.mmRequestedToBeReplacedQuantity}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderQuantityType3Code
+ * OrderQuantityType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderQuantityType1Code
+ * OrderQuantityType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderQuantityType2Code
+ * OrderQuantityType2Code}</li>
  * </ul>
  * </li>
  * <li>

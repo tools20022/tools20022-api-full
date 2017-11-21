@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional amounts from the processor or the issuer without financial impacts
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * DetailedAmount9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DetailedAmount10", propOrder = {"type", "additionalType", "amount", "label"})
 public class DetailedAmount10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -320,6 +326,7 @@ public class DetailedAmount10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TypeOfAmount6Code getType() {
 		return type;
 	}
@@ -328,6 +335,7 @@ public class DetailedAmount10 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "AddtlTp")
 	public Max35Text getAdditionalType() {
 		return additionalType;
 	}
@@ -336,6 +344,7 @@ public class DetailedAmount10 {
 		this.additionalType = additionalType;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -344,6 +353,7 @@ public class DetailedAmount10 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Labl")
 	public Max35Text getLabel() {
 		return label;
 	}

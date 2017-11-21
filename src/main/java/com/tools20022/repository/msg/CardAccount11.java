@@ -35,6 +35,10 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Customer account information.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Customer account information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardAccount11", propOrder = {"selectionMethod", "selectedAccountType", "accountName", "currency", "accountIdentifier", "creditReference", "servicer"})
 public class CardAccount11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -435,6 +441,7 @@ public class CardAccount11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SelctnMtd")
 	public AccountChoiceMethod1Code getSelectionMethod() {
 		return selectionMethod;
 	}
@@ -443,6 +450,7 @@ public class CardAccount11 {
 		this.selectionMethod = selectionMethod;
 	}
 
+	@XmlElement(name = "SelctdAcctTp")
 	public CardAccountType3Code getSelectedAccountType() {
 		return selectedAccountType;
 	}
@@ -451,6 +459,7 @@ public class CardAccount11 {
 		this.selectedAccountType = selectedAccountType;
 	}
 
+	@XmlElement(name = "AcctNm")
 	public Max70Text getAccountName() {
 		return accountName;
 	}
@@ -459,6 +468,7 @@ public class CardAccount11 {
 		this.accountName = accountName;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -467,6 +477,7 @@ public class CardAccount11 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "AcctIdr")
 	public AccountIdentification31Choice getAccountIdentifier() {
 		return accountIdentifier;
 	}
@@ -475,6 +486,7 @@ public class CardAccount11 {
 		this.accountIdentifier = accountIdentifier;
 	}
 
+	@XmlElement(name = "CdtRef")
 	public Max35Text getCreditReference() {
 		return creditReference;
 	}
@@ -483,6 +495,7 @@ public class CardAccount11 {
 		this.creditReference = creditReference;
 	}
 
+	@XmlElement(name = "Svcr")
 	public PartyIdentification72Choice getServicer() {
 		return servicer;
 	}

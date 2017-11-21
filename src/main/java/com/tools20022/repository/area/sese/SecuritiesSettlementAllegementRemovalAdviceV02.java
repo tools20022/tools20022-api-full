@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.choice.PartyIdentification36Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -57,9 +59,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.029.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -101,6 +100,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.029.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -124,6 +126,9 @@ import java.util.List;
  * SecuritiesSettlementAllegementRemovalAdviceV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesSettlementAllegementRemovalAdviceV02", propOrder = {"accountServicerTransactionIdentification", "marketInfrastructureTransactionIdentification", "accountOwner", "safekeepingAccount", "transactionDetails",
+		"supplementaryData"})
 public class SecuritiesSettlementAllegementRemovalAdviceV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +167,14 @@ public class SecuritiesSettlementAllegementRemovalAdviceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> SettlementTypeAndIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementAllegementRemovalAdviceV02.class.getMethod("getAccountServicerTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Identification1 marketInfrastructureTransactionIdentification;
 	/**
@@ -199,6 +212,14 @@ public class SecuritiesSettlementAllegementRemovalAdviceV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> Identification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementAllegementRemovalAdviceV02.class.getMethod("getMarketInfrastructureTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification36Choice accountOwner;
 	/**
@@ -233,6 +254,14 @@ public class SecuritiesSettlementAllegementRemovalAdviceV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification36Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementAllegementRemovalAdviceV02.class.getMethod("getAccountOwner", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesAccount13 safekeepingAccount;
@@ -269,6 +298,14 @@ public class SecuritiesSettlementAllegementRemovalAdviceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementAllegementRemovalAdviceV02.class.getMethod("getSafekeepingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionDetails28 transactionDetails;
 	/**
@@ -303,6 +340,14 @@ public class SecuritiesSettlementAllegementRemovalAdviceV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TransactionDetails28.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementAllegementRemovalAdviceV02.class.getMethod("getTransactionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -341,6 +386,14 @@ public class SecuritiesSettlementAllegementRemovalAdviceV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementAllegementRemovalAdviceV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -355,9 +408,10 @@ public class SecuritiesSettlementAllegementRemovalAdviceV02 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmAllgmtRmvlAdvc";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementAllegementRemovalAdviceV02.mmAccountServicerTransactionIdentification,
-						SecuritiesSettlementAllegementRemovalAdviceV02.mmMarketInfrastructureTransactionIdentification, SecuritiesSettlementAllegementRemovalAdviceV02.mmAccountOwner,
-						SecuritiesSettlementAllegementRemovalAdviceV02.mmSafekeepingAccount, SecuritiesSettlementAllegementRemovalAdviceV02.mmTransactionDetails, SecuritiesSettlementAllegementRemovalAdviceV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02.mmAccountServicerTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02.mmTransactionDetails, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -367,10 +421,16 @@ public class SecuritiesSettlementAllegementRemovalAdviceV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesSettlementAllegementRemovalAdviceV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctSvcrTxId", required = true)
 	public SettlementTypeAndIdentification3 getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
@@ -379,6 +439,7 @@ public class SecuritiesSettlementAllegementRemovalAdviceV02 {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
 	}
 
+	@XmlElement(name = "MktInfrstrctrTxId")
 	public Identification1 getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}
@@ -387,6 +448,7 @@ public class SecuritiesSettlementAllegementRemovalAdviceV02 {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification36Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -395,6 +457,7 @@ public class SecuritiesSettlementAllegementRemovalAdviceV02 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -403,6 +466,7 @@ public class SecuritiesSettlementAllegementRemovalAdviceV02 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "TxDtls")
 	public TransactionDetails28 getTransactionDetails() {
 		return transactionDetails;
 	}
@@ -411,11 +475,18 @@ public class SecuritiesSettlementAllegementRemovalAdviceV02 {
 		this.transactionDetails = transactionDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.029.02.02")
+	static public class Document {
+		@XmlElement(name = "SctiesSttlmAllgmtRmvlAdvc", required = true)
+		public SecuritiesSettlementAllegementRemovalAdviceV02 messageBody;
 	}
 }

@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the details of the transaction.
@@ -131,6 +135,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransactionDetails63}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionDetails78", propOrder = {"transactionActivity", "settlementTransactionOrCorporateActionEventType", "securitiesMovementType", "payment", "settlementParameters", "placeOfTrade", "safekeepingPlace",
+		"placeOfClearing", "postingQuantity", "numberOfDaysAccrued", "postingAmount", "accruedInterestAmount", "tradeDate", "effectiveSettlementDate", "settlementDate", "valueDate", "deliveringSettlementParties",
+		"receivingSettlementParties", "reversalIndicator", "transactionAdditionalDetails"})
 public class TransactionDetails78 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1423,6 +1431,7 @@ public class TransactionDetails78 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxActvty", required = true)
 	public TransactionActivity3Choice getTransactionActivity() {
 		return transactionActivity;
 	}
@@ -1431,6 +1440,7 @@ public class TransactionDetails78 {
 		this.transactionActivity = transactionActivity;
 	}
 
+	@XmlElement(name = "SttlmTxOrCorpActnEvtTp")
 	public SettlementOrCorporateActionEvent13Choice getSettlementTransactionOrCorporateActionEventType() {
 		return settlementTransactionOrCorporateActionEventType;
 	}
@@ -1439,6 +1449,7 @@ public class TransactionDetails78 {
 		this.settlementTransactionOrCorporateActionEventType = settlementTransactionOrCorporateActionEventType;
 	}
 
+	@XmlElement(name = "SctiesMvmntTp", required = true)
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
@@ -1447,6 +1458,7 @@ public class TransactionDetails78 {
 		this.securitiesMovementType = securitiesMovementType;
 	}
 
+	@XmlElement(name = "Pmt", required = true)
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
@@ -1455,6 +1467,7 @@ public class TransactionDetails78 {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "SttlmParams")
 	public SettlementDetails91 getSettlementParameters() {
 		return settlementParameters;
 	}
@@ -1463,6 +1476,7 @@ public class TransactionDetails78 {
 		this.settlementParameters = settlementParameters;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public PlaceOfTradeIdentification1 getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -1471,6 +1485,7 @@ public class TransactionDetails78 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafeKeepingPlace1 getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -1479,6 +1494,7 @@ public class TransactionDetails78 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "PlcOfClr")
 	public PlaceOfClearingIdentification1 getPlaceOfClearing() {
 		return placeOfClearing;
 	}
@@ -1487,6 +1503,7 @@ public class TransactionDetails78 {
 		this.placeOfClearing = placeOfClearing;
 	}
 
+	@XmlElement(name = "PstngQty", required = true)
 	public Quantity6Choice getPostingQuantity() {
 		return postingQuantity;
 	}
@@ -1495,6 +1512,7 @@ public class TransactionDetails78 {
 		this.postingQuantity = postingQuantity;
 	}
 
+	@XmlElement(name = "NbOfDaysAcrd")
 	public Max3Number getNumberOfDaysAccrued() {
 		return numberOfDaysAccrued;
 	}
@@ -1503,6 +1521,7 @@ public class TransactionDetails78 {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
 	}
 
+	@XmlElement(name = "PstngAmt")
 	public AmountAndDirection3 getPostingAmount() {
 		return postingAmount;
 	}
@@ -1511,6 +1530,7 @@ public class TransactionDetails78 {
 		this.postingAmount = postingAmount;
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt")
 	public AmountAndDirection21 getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -1519,6 +1539,7 @@ public class TransactionDetails78 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "TradDt")
 	public TradeDate5Choice getTradeDate() {
 		return tradeDate;
 	}
@@ -1527,6 +1548,7 @@ public class TransactionDetails78 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "FctvSttlmDt", required = true)
 	public DateAndDateTimeChoice getEffectiveSettlementDate() {
 		return effectiveSettlementDate;
 	}
@@ -1535,6 +1557,7 @@ public class TransactionDetails78 {
 		this.effectiveSettlementDate = effectiveSettlementDate;
 	}
 
+	@XmlElement(name = "SttlmDt")
 	public SettlementDate9Choice getSettlementDate() {
 		return settlementDate;
 	}
@@ -1543,6 +1566,7 @@ public class TransactionDetails78 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "ValDt")
 	public DateAndDateTimeChoice getValueDate() {
 		return valueDate;
 	}
@@ -1551,6 +1575,7 @@ public class TransactionDetails78 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties40 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -1559,6 +1584,7 @@ public class TransactionDetails78 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties40 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -1567,6 +1593,7 @@ public class TransactionDetails78 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "RvslInd")
 	public YesNoIndicator getReversalIndicator() {
 		return reversalIndicator;
 	}
@@ -1575,6 +1602,7 @@ public class TransactionDetails78 {
 		this.reversalIndicator = reversalIndicator;
 	}
 
+	@XmlElement(name = "TxAddtlDtls")
 	public Max350Text getTransactionAdditionalDetails() {
 		return transactionAdditionalDetails;
 	}

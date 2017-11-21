@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * The Collateral Account provides additional information on the Collateral
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralAccount1", propOrder = {"identification", "type", "name"})
 public class CollateralAccount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -260,6 +266,7 @@ public class CollateralAccount1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -268,6 +275,7 @@ public class CollateralAccount1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp")
 	public CollateralAccountIdentificationType1Choice getType() {
 		return type;
 	}
@@ -276,6 +284,7 @@ public class CollateralAccount1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max70Text getName() {
 		return name;
 	}

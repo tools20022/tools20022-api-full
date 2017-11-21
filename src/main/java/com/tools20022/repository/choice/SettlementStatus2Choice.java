@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the settlement status.
@@ -105,6 +109,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementStatus2Choice", propOrder = {"pending", "failing", "proprietary"})
 public class SettlementStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -277,6 +283,7 @@ public class SettlementStatus2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pdg", required = true)
 	public PendingStatus3Choice getPending() {
 		return pending;
 	}
@@ -285,6 +292,7 @@ public class SettlementStatus2Choice {
 		this.pending = pending;
 	}
 
+	@XmlElement(name = "Flng", required = true)
 	public FailingStatus1Choice getFailing() {
 		return failing;
 	}
@@ -293,6 +301,7 @@ public class SettlementStatus2Choice {
 		this.failing = failing;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason1 getProprietary() {
 		return proprietary;
 	}

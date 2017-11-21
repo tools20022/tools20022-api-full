@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max13AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the choice of identification of the e-banking application as a
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelEbanking1Choice", propOrder = {"userIdentification", "contractIdentification"})
 public class IsabelEbanking1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class IsabelEbanking1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UsrId", required = true)
 	public Max13AlphaNumericText getUserIdentification() {
 		return userIdentification;
 	}
@@ -171,6 +178,7 @@ public class IsabelEbanking1Choice {
 		this.userIdentification = userIdentification;
 	}
 
+	@XmlElement(name = "CtrctId", required = true)
 	public Max13AlphaNumericText getContractIdentification() {
 		return contractIdentification;
 	}

@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * A safekeeping account is an account on which a securities entry is made.
@@ -87,6 +91,8 @@ import java.util.List;
  * "A safekeeping account is an account on which a securities entry is made."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SafekeepingAccount3", propOrder = {"accountIdentification", "accountOwner", "subAccountDetails", "instructedBalance", "rightsHolder"})
 public class SafekeepingAccount3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -348,6 +354,7 @@ public class SafekeepingAccount3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -356,6 +363,7 @@ public class SafekeepingAccount3 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification9Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -364,6 +372,7 @@ public class SafekeepingAccount3 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SubAcctDtls")
 	public SubAccount2 getSubAccountDetails() {
 		return subAccountDetails;
 	}
@@ -372,6 +381,7 @@ public class SafekeepingAccount3 {
 		this.subAccountDetails = subAccountDetails;
 	}
 
+	@XmlElement(name = "InstdBal", required = true)
 	public List<HoldingBalance4> getInstructedBalance() {
 		return instructedBalance;
 	}
@@ -380,6 +390,7 @@ public class SafekeepingAccount3 {
 		this.instructedBalance = instructedBalance;
 	}
 
+	@XmlElement(name = "RghtsHldr")
 	public List<PartyIdentification9Choice> getRightsHolder() {
 		return rightsHolder;
 	}

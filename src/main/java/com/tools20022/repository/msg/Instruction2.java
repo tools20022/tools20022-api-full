@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on the instruction.
@@ -102,6 +106,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Instruction2", propOrder = {"instructionIdentification", "requestedExecutionDate", "voteExecutionConfirmation", "accountDetails", "proxy", "voteDetails", "meetingAttendee", "specificInstructionRequest"})
 public class Instruction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -564,6 +570,7 @@ public class Instruction2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrId", required = true)
 	public Max35Text getInstructionIdentification() {
 		return instructionIdentification;
 	}
@@ -572,6 +579,7 @@ public class Instruction2 {
 		this.instructionIdentification = instructionIdentification;
 	}
 
+	@XmlElement(name = "ReqdExctnDt")
 	public ISODateTime getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -580,6 +588,7 @@ public class Instruction2 {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "VoteExctnConf", required = true)
 	public YesNoIndicator getVoteExecutionConfirmation() {
 		return voteExecutionConfirmation;
 	}
@@ -588,6 +597,7 @@ public class Instruction2 {
 		this.voteExecutionConfirmation = voteExecutionConfirmation;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public SafekeepingAccount4 getAccountDetails() {
 		return accountDetails;
 	}
@@ -596,6 +606,7 @@ public class Instruction2 {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "Prxy")
 	public Proxy4 getProxy() {
 		return proxy;
 	}
@@ -604,6 +615,7 @@ public class Instruction2 {
 		this.proxy = proxy;
 	}
 
+	@XmlElement(name = "VoteDtls")
 	public VoteDetails2 getVoteDetails() {
 		return voteDetails;
 	}
@@ -612,6 +624,7 @@ public class Instruction2 {
 		this.voteDetails = voteDetails;
 	}
 
+	@XmlElement(name = "MtgAttndee")
 	public List<IndividualPerson17> getMeetingAttendee() {
 		return meetingAttendee;
 	}
@@ -620,6 +633,7 @@ public class Instruction2 {
 		this.meetingAttendee = meetingAttendee;
 	}
 
+	@XmlElement(name = "SpcfcInstrReq")
 	public SpecificInstructionRequest1 getSpecificInstructionRequest() {
 		return specificInstructionRequest;
 	}

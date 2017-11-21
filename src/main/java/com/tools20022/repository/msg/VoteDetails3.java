@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.VoteInstructionRequest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies detailed voting instructions.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * VoteDetails2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "VoteDetails3", propOrder = {"voteInstructionForAgendaResolution", "voteInstructionForMeetingResolution"})
 public class VoteDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -195,6 +201,7 @@ public class VoteDetails3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "VoteInstrForAgndRsltn", required = true)
 	public Vote3Choice getVoteInstructionForAgendaResolution() {
 		return voteInstructionForAgendaResolution;
 	}
@@ -203,6 +210,7 @@ public class VoteDetails3 {
 		this.voteInstructionForAgendaResolution = voteInstructionForAgendaResolution;
 	}
 
+	@XmlElement(name = "VoteInstrForMtgRsltn")
 	public VoteInstructionForMeetingResolution2Choice getVoteInstructionForMeetingResolution() {
 		return voteInstructionForMeetingResolution;
 	}

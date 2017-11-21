@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of breakdown of a quantity.
@@ -91,6 +95,8 @@ import java.util.function.Supplier;
  * QuantityBreakdown9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuantityBreakdown16", propOrder = {"lotNumber", "lotQuantity", "securitiesSubBalanceType", "lotDateTime", "lotPrice", "typeOfPrice"})
 public class QuantityBreakdown16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -466,6 +472,7 @@ public class QuantityBreakdown16 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LotNb")
 	public GenericIdentification37 getLotNumber() {
 		return lotNumber;
 	}
@@ -474,6 +481,7 @@ public class QuantityBreakdown16 {
 		this.lotNumber = lotNumber;
 	}
 
+	@XmlElement(name = "LotQty")
 	public FinancialInstrumentQuantity1Choice getLotQuantity() {
 		return lotQuantity;
 	}
@@ -482,6 +490,7 @@ public class QuantityBreakdown16 {
 		this.lotQuantity = lotQuantity;
 	}
 
+	@XmlElement(name = "SctiesSubBalTp")
 	public GenericIdentification20 getSecuritiesSubBalanceType() {
 		return securitiesSubBalanceType;
 	}
@@ -490,6 +499,7 @@ public class QuantityBreakdown16 {
 		this.securitiesSubBalanceType = securitiesSubBalanceType;
 	}
 
+	@XmlElement(name = "LotDtTm")
 	public DateAndDateTimeChoice getLotDateTime() {
 		return lotDateTime;
 	}
@@ -498,6 +508,7 @@ public class QuantityBreakdown16 {
 		this.lotDateTime = lotDateTime;
 	}
 
+	@XmlElement(name = "LotPric")
 	public Price2 getLotPrice() {
 		return lotPrice;
 	}
@@ -506,6 +517,7 @@ public class QuantityBreakdown16 {
 		this.lotPrice = lotPrice;
 	}
 
+	@XmlElement(name = "TpOfPric")
 	public TypeOfPrice3Choice getTypeOfPrice() {
 		return typeOfPrice;
 	}

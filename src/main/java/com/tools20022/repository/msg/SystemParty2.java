@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the definition of a party within a system. <br>
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemParty2", propOrder = {"openingDate", "closingDate"})
 public class SystemParty2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class SystemParty2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OpngDt")
 	public ISODate getOpeningDate() {
 		return openingDate;
 	}
@@ -168,6 +175,7 @@ public class SystemParty2 {
 		this.openingDate = openingDate;
 	}
 
+	@XmlElement(name = "ClsgDt")
 	public ISODate getClosingDate() {
 		return closingDate;
 	}

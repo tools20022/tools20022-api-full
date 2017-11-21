@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.CardPaymentValidation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cancellation advice response from the acquirer.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorCancellationAdviceResponse1", propOrder = {"environment", "transaction", "TMSTrigger"})
 public class AcceptorCancellationAdviceResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -247,6 +253,7 @@ public class AcceptorCancellationAdviceResponse1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment3 getEnvironment() {
 		return environment;
 	}
@@ -255,6 +262,7 @@ public class AcceptorCancellationAdviceResponse1 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransactionAdviceResponse2 getTransaction() {
 		return transaction;
 	}
@@ -263,6 +271,7 @@ public class AcceptorCancellationAdviceResponse1 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "TMSTrggr")
 	public TMSTrigger1 getTMSTrigger() {
 		return tMSTrigger;
 	}

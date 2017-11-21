@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies corporate action dates.
@@ -83,6 +87,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies corporate action dates."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionDate8", propOrder = {"earlyResponseDeadline", "coverExpirationDate", "protectDate", "marketDeadline", "responseDeadline", "expiryDate", "subscriptionCostDebitDate", "depositoryCoverExpirationDate",
+		"leadPlaintiffDeadline"})
 public class CorporateActionDate8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -564,6 +571,7 @@ public class CorporateActionDate8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EarlyRspnDdln")
 	public DateFormat6Choice getEarlyResponseDeadline() {
 		return earlyResponseDeadline;
 	}
@@ -572,6 +580,7 @@ public class CorporateActionDate8 {
 		this.earlyResponseDeadline = earlyResponseDeadline;
 	}
 
+	@XmlElement(name = "CoverXprtnDt")
 	public DateFormat6Choice getCoverExpirationDate() {
 		return coverExpirationDate;
 	}
@@ -580,6 +589,7 @@ public class CorporateActionDate8 {
 		this.coverExpirationDate = coverExpirationDate;
 	}
 
+	@XmlElement(name = "PrtctDt")
 	public DateFormat6Choice getProtectDate() {
 		return protectDate;
 	}
@@ -588,6 +598,7 @@ public class CorporateActionDate8 {
 		this.protectDate = protectDate;
 	}
 
+	@XmlElement(name = "MktDdln")
 	public DateFormat6Choice getMarketDeadline() {
 		return marketDeadline;
 	}
@@ -596,6 +607,7 @@ public class CorporateActionDate8 {
 		this.marketDeadline = marketDeadline;
 	}
 
+	@XmlElement(name = "RspnDdln")
 	public DateFormat7Choice getResponseDeadline() {
 		return responseDeadline;
 	}
@@ -604,6 +616,7 @@ public class CorporateActionDate8 {
 		this.responseDeadline = responseDeadline;
 	}
 
+	@XmlElement(name = "XpryDt")
 	public DateFormat6Choice getExpiryDate() {
 		return expiryDate;
 	}
@@ -612,6 +625,7 @@ public class CorporateActionDate8 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "SbcptCostDbtDt")
 	public DateFormat6Choice getSubscriptionCostDebitDate() {
 		return subscriptionCostDebitDate;
 	}
@@ -620,6 +634,7 @@ public class CorporateActionDate8 {
 		this.subscriptionCostDebitDate = subscriptionCostDebitDate;
 	}
 
+	@XmlElement(name = "DpstryCoverXprtnDt")
 	public DateFormat6Choice getDepositoryCoverExpirationDate() {
 		return depositoryCoverExpirationDate;
 	}
@@ -628,6 +643,7 @@ public class CorporateActionDate8 {
 		this.depositoryCoverExpirationDate = depositoryCoverExpirationDate;
 	}
 
+	@XmlElement(name = "LeadPlntffDdln")
 	public DateFormat6Choice getLeadPlaintiffDeadline() {
 		return leadPlaintiffDeadline;
 	}

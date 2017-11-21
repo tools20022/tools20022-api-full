@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional information about a request (e.g. financing request).
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Additional information about a request (e.g. financing request)."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalInformation1", propOrder = {"informationType", "informationValue"})
 public class AdditionalInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +165,7 @@ public class AdditionalInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InfTp", required = true)
 	public InformationType1Choice getInformationType() {
 		return informationType;
 	}
@@ -167,6 +174,7 @@ public class AdditionalInformation1 {
 		this.informationType = informationType;
 	}
 
+	@XmlElement(name = "InfVal", required = true)
 	public Max350Text getInformationValue() {
 		return informationValue;
 	}

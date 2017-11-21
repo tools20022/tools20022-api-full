@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of an entity involved in an activity.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identification of an entity involved in an activity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification78", propOrder = {"partySource", "tradePartyIdentification"})
 public class PartyIdentification78 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class PartyIdentification78 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtySrc")
 	public IdentificationType1Code getPartySource() {
 		return partySource;
 	}
@@ -166,6 +173,7 @@ public class PartyIdentification78 {
 		this.partySource = partySource;
 	}
 
+	@XmlElement(name = "TradPtyId", required = true)
 	public Max35Text getTradePartyIdentification() {
 		return tradePartyIdentification;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DateTimePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between search criteria based on dates and date ranges.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between search criteria based on dates and date ranges."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DateTimeSearch1Choice", propOrder = {"fromDateTime", "toDateTime", "fromToDateTime", "equalDateTime", "notEqualDateTime"})
 public class DateTimeSearch1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -293,6 +299,7 @@ public class DateTimeSearch1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrDtTm", required = true)
 	public ISODateTime getFromDateTime() {
 		return fromDateTime;
 	}
@@ -301,6 +308,7 @@ public class DateTimeSearch1Choice {
 		this.fromDateTime = fromDateTime;
 	}
 
+	@XmlElement(name = "ToDtTm", required = true)
 	public ISODateTime getToDateTime() {
 		return toDateTime;
 	}
@@ -309,6 +317,7 @@ public class DateTimeSearch1Choice {
 		this.toDateTime = toDateTime;
 	}
 
+	@XmlElement(name = "FrToDtTm", required = true)
 	public DateTimePeriodDetails getFromToDateTime() {
 		return fromToDateTime;
 	}
@@ -317,6 +326,7 @@ public class DateTimeSearch1Choice {
 		this.fromToDateTime = fromToDateTime;
 	}
 
+	@XmlElement(name = "EQDtTm", required = true)
 	public ISODateTime getEqualDateTime() {
 		return equalDateTime;
 	}
@@ -325,6 +335,7 @@ public class DateTimeSearch1Choice {
 		this.equalDateTime = equalDateTime;
 	}
 
+	@XmlElement(name = "NEQDtTm", required = true)
 	public ISODateTime getNotEqualDateTime() {
 		return notEqualDateTime;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Franking details
@@ -80,6 +84,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Franking details"</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FrankingSD1", propOrder = {"placeAndName", "frankingClass", "fullyFrankedIndicator", "frankedPercentage", "unfrankedPercentage", "corporateTaxRateForFrankingCredit", "frankedAmountPerSecurity",
+		"unfrankedAmountPerSecurity", "conduitForeignIncomeAmount"})
 public class FrankingSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -474,6 +481,7 @@ public class FrankingSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -482,6 +490,7 @@ public class FrankingSD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "FrnkgClss", required = true)
 	public FrankingClass1Code getFrankingClass() {
 		return frankingClass;
 	}
@@ -490,6 +499,7 @@ public class FrankingSD1 {
 		this.frankingClass = frankingClass;
 	}
 
+	@XmlElement(name = "FullyFrnkdInd")
 	public YesNoIndicator getFullyFrankedIndicator() {
 		return fullyFrankedIndicator;
 	}
@@ -498,6 +508,7 @@ public class FrankingSD1 {
 		this.fullyFrankedIndicator = fullyFrankedIndicator;
 	}
 
+	@XmlElement(name = "FrnkdPctg")
 	public PercentageRate getFrankedPercentage() {
 		return frankedPercentage;
 	}
@@ -506,6 +517,7 @@ public class FrankingSD1 {
 		this.frankedPercentage = frankedPercentage;
 	}
 
+	@XmlElement(name = "UfrnkdPctg")
 	public PercentageRate getUnfrankedPercentage() {
 		return unfrankedPercentage;
 	}
@@ -514,6 +526,7 @@ public class FrankingSD1 {
 		this.unfrankedPercentage = unfrankedPercentage;
 	}
 
+	@XmlElement(name = "CorpTaxRateForFrnkgCdt")
 	public PercentageRate getCorporateTaxRateForFrankingCredit() {
 		return corporateTaxRateForFrankingCredit;
 	}
@@ -522,6 +535,7 @@ public class FrankingSD1 {
 		this.corporateTaxRateForFrankingCredit = corporateTaxRateForFrankingCredit;
 	}
 
+	@XmlElement(name = "FrnkdAmtPerScty")
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getFrankedAmountPerSecurity() {
 		return frankedAmountPerSecurity;
 	}
@@ -530,6 +544,7 @@ public class FrankingSD1 {
 		this.frankedAmountPerSecurity = frankedAmountPerSecurity;
 	}
 
+	@XmlElement(name = "UfrnkdAmtPerScty")
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getUnfrankedAmountPerSecurity() {
 		return unfrankedAmountPerSecurity;
 	}
@@ -538,6 +553,7 @@ public class FrankingSD1 {
 		this.unfrankedAmountPerSecurity = unfrankedAmountPerSecurity;
 	}
 
+	@XmlElement(name = "CndtFrgnIncmAmt")
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getConduitForeignIncomeAmount() {
 		return conduitForeignIncomeAmount;
 	}

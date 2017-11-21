@@ -63,6 +63,11 @@ public class RightsHolder extends MeetingPartyRole {
 				definition = "Owner of voting rights.";
 				superType_lazy = () -> MeetingPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RightsHolder.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

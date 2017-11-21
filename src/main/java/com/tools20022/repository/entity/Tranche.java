@@ -20,6 +20,7 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,14 +34,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmTranche
- * Asset.mmTranche}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -50,6 +43,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * Tranche.mmDetachmentPoint}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Tranche#mmAttachmentPoint
  * Tranche.mmAttachmentPoint}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmTranche
+ * Asset.mmTranche}</li>
  * </ul>
  * </li>
  * <li>
@@ -106,7 +107,7 @@ public class Tranche {
 	 */
 	public static final MMBusinessAssociationEnd mmAsset = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Tranche.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tranche.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Asset";
@@ -145,7 +146,7 @@ public class Tranche {
 	 */
 	public static final MMBusinessAttribute mmDetachmentPoint = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Tranche.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tranche.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetachmentPoint";
@@ -153,6 +154,14 @@ public class Tranche {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tranche.class.getMethod("getDetachmentPoint", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BaseOneRate attachmentPoint;
@@ -185,7 +194,7 @@ public class Tranche {
 	 */
 	public static final MMBusinessAttribute mmAttachmentPoint = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Tranche.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Tranche.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttachmentPoint";
@@ -193,6 +202,14 @@ public class Tranche {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Tranche.class.getMethod("getAttachmentPoint", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -204,7 +221,12 @@ public class Tranche {
 				name = "Tranche";
 				definition = "One of a number of related assets offered as part of the same transaction. The detachment point less the attachment  point represents the maximum loss.\r\n";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Asset.mmTranche);
-				element_lazy = () -> Arrays.asList(Tranche.mmAsset, Tranche.mmDetachmentPoint, Tranche.mmAttachmentPoint);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Tranche.mmAsset, com.tools20022.repository.entity.Tranche.mmDetachmentPoint, com.tools20022.repository.entity.Tranche.mmAttachmentPoint);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Tranche.class;
 			}
 		});
 		return mmObject_lazy.get();

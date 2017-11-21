@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party and account details.
@@ -72,6 +76,8 @@ import java.util.function.Supplier;
  * definition} = "Party and account details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount25", propOrder = {"identification", "safekeepingAccount", "processingIdentification"})
 public class PartyIdentificationAndAccount25 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -236,6 +242,7 @@ public class PartyIdentificationAndAccount25 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification16Choice getIdentification() {
 		return identification;
 	}
@@ -244,6 +251,7 @@ public class PartyIdentificationAndAccount25 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount17 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -252,6 +260,7 @@ public class PartyIdentificationAndAccount25 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public RestrictedFINXMax16Text getProcessingIdentification() {
 		return processingIdentification;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference of an order, order cancellation and master reference.
@@ -88,6 +92,8 @@ import java.util.List;
  * "Reference of an order, order cancellation and master reference."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentFundOrder1", propOrder = {"masterReference", "orderReferences"})
 public class InvestmentFundOrder1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -204,6 +210,7 @@ public class InvestmentFundOrder1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -212,6 +219,7 @@ public class InvestmentFundOrder1 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrRefs", required = true)
 	public List<InvestmentFundOrder5> getOrderReferences() {
 		return orderReferences;
 	}

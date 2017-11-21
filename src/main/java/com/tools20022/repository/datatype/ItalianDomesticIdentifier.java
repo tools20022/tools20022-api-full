@@ -34,6 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} =
  * "Associazione Bancaria Italiana; Italian Domestic Identification"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "IT[0-9]{10,10}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -70,6 +72,7 @@ public class ItalianDomesticIdentifier {
 				name = "ItalianDomesticIdentifier";
 				definition = "Italian Domestic Identification Code. Identifies Italian financial institutions on the Italian national clearing system. The code is assigned by the Associazione Bancaria Italiana (ABI).";
 				identificationScheme = "Associazione Bancaria Italiana; Italian Domestic Identification";
+				pattern = "IT[0-9]{10,10}";
 			}
 		});
 		return mmObject_lazy.get();

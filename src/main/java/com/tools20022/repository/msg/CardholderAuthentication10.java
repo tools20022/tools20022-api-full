@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Authentication;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data related to the authentication of the cardholder.
@@ -93,6 +97,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardholderAuthentication9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardholderAuthentication10", propOrder = {"authenticationMethod", "authenticationValue", "protectedAuthenticationValue", "cardholderOnLinePIN", "cardholderIdentification", "addressVerification", "authenticationType",
+		"authenticationLevel", "authenticationResult", "authenticationAdditionalInformation"})
 public class CardholderAuthentication10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -596,6 +603,7 @@ public class CardholderAuthentication10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AuthntcnMtd", required = true)
 	public AuthenticationMethod5Code getAuthenticationMethod() {
 		return authenticationMethod;
 	}
@@ -604,6 +612,7 @@ public class CardholderAuthentication10 {
 		this.authenticationMethod = authenticationMethod;
 	}
 
+	@XmlElement(name = "AuthntcnVal")
 	public Max5000Binary getAuthenticationValue() {
 		return authenticationValue;
 	}
@@ -612,6 +621,7 @@ public class CardholderAuthentication10 {
 		this.authenticationValue = authenticationValue;
 	}
 
+	@XmlElement(name = "PrtctdAuthntcnVal")
 	public ContentInformationType10 getProtectedAuthenticationValue() {
 		return protectedAuthenticationValue;
 	}
@@ -620,6 +630,7 @@ public class CardholderAuthentication10 {
 		this.protectedAuthenticationValue = protectedAuthenticationValue;
 	}
 
+	@XmlElement(name = "CrdhldrOnLinePIN")
 	public OnLinePIN4 getCardholderOnLinePIN() {
 		return cardholderOnLinePIN;
 	}
@@ -628,6 +639,7 @@ public class CardholderAuthentication10 {
 		this.cardholderOnLinePIN = cardholderOnLinePIN;
 	}
 
+	@XmlElement(name = "CrdhldrId")
 	public PersonIdentification11 getCardholderIdentification() {
 		return cardholderIdentification;
 	}
@@ -636,6 +648,7 @@ public class CardholderAuthentication10 {
 		this.cardholderIdentification = cardholderIdentification;
 	}
 
+	@XmlElement(name = "AdrVrfctn")
 	public AddressVerification1 getAddressVerification() {
 		return addressVerification;
 	}
@@ -644,6 +657,7 @@ public class CardholderAuthentication10 {
 		this.addressVerification = addressVerification;
 	}
 
+	@XmlElement(name = "AuthntcnTp")
 	public Max35Text getAuthenticationType() {
 		return authenticationType;
 	}
@@ -652,6 +666,7 @@ public class CardholderAuthentication10 {
 		this.authenticationType = authenticationType;
 	}
 
+	@XmlElement(name = "AuthntcnLvl")
 	public Max35Text getAuthenticationLevel() {
 		return authenticationLevel;
 	}
@@ -660,6 +675,7 @@ public class CardholderAuthentication10 {
 		this.authenticationLevel = authenticationLevel;
 	}
 
+	@XmlElement(name = "AuthntcnRslt")
 	public AuthenticationResultCode getAuthenticationResult() {
 		return authenticationResult;
 	}
@@ -668,6 +684,7 @@ public class CardholderAuthentication10 {
 		this.authenticationResult = authenticationResult;
 	}
 
+	@XmlElement(name = "AuthntcnAddtlInf")
 	public Max35Text getAuthenticationAdditionalInformation() {
 		return authenticationAdditionalInformation;
 	}

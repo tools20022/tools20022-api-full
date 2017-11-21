@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Assessments for the component of the point of interaction.
@@ -73,6 +77,8 @@ import java.util.List;
  * definition} = "Assessments for the component of the point of interaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PointOfInteractionComponentAssessment1", propOrder = {"type", "assigner", "deliveryDate", "expirationDate", "number"})
 public class PointOfInteractionComponentAssessment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -321,6 +327,7 @@ public class PointOfInteractionComponentAssessment1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public POIComponentAssessment1Code getType() {
 		return type;
 	}
@@ -329,6 +336,7 @@ public class PointOfInteractionComponentAssessment1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Assgnr", required = true)
 	public List<Max35Text> getAssigner() {
 		return assigner;
 	}
@@ -337,6 +345,7 @@ public class PointOfInteractionComponentAssessment1 {
 		this.assigner = assigner;
 	}
 
+	@XmlElement(name = "DlvryDt")
 	public ISODateTime getDeliveryDate() {
 		return deliveryDate;
 	}
@@ -345,6 +354,7 @@ public class PointOfInteractionComponentAssessment1 {
 		this.deliveryDate = deliveryDate;
 	}
 
+	@XmlElement(name = "XprtnDt")
 	public ISODateTime getExpirationDate() {
 		return expirationDate;
 	}
@@ -353,6 +363,7 @@ public class PointOfInteractionComponentAssessment1 {
 		this.expirationDate = expirationDate;
 	}
 
+	@XmlElement(name = "Nb", required = true)
 	public Max35Text getNumber() {
 		return number;
 	}

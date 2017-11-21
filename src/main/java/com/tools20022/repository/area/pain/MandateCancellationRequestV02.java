@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.GroupHeader47;
 import com.tools20022.repository.msg.MandateCancellation2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -53,9 +55,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.011.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
@@ -86,6 +85,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.011.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -109,6 +111,8 @@ import java.util.List;
  * MandateCancellationRequestV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MandateCancellationRequestV02", propOrder = {"groupHeader", "underlyingCancellationDetails", "supplementaryData"})
 public class MandateCancellationRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -149,6 +153,14 @@ public class MandateCancellationRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader47.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateCancellationRequestV02.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MandateCancellation2 underlyingCancellationDetails;
 	/**
@@ -184,6 +196,14 @@ public class MandateCancellationRequestV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MandateCancellation2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateCancellationRequestV02.class.getMethod("getUnderlyingCancellationDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -222,6 +242,14 @@ public class MandateCancellationRequestV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateCancellationRequestV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -236,7 +264,8 @@ public class MandateCancellationRequestV02 {
 				rootElement = "Document";
 				xmlTag = "MndtCxlReq";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MandateCancellationRequestV02.mmGroupHeader, MandateCancellationRequestV02.mmUnderlyingCancellationDetails, MandateCancellationRequestV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateCancellationRequestV02.mmGroupHeader,
+						com.tools20022.repository.area.pain.MandateCancellationRequestV02.mmUnderlyingCancellationDetails, com.tools20022.repository.area.pain.MandateCancellationRequestV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";
@@ -246,10 +275,16 @@ public class MandateCancellationRequestV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MandateCancellationRequestV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader47 getGroupHeader() {
 		return groupHeader;
 	}
@@ -258,6 +293,7 @@ public class MandateCancellationRequestV02 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "UndrlygCxlDtls", required = true)
 	public MandateCancellation2 getUnderlyingCancellationDetails() {
 		return underlyingCancellationDetails;
 	}
@@ -266,11 +302,18 @@ public class MandateCancellationRequestV02 {
 		this.underlyingCancellationDetails = underlyingCancellationDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.011.02.02")
+	static public class Document {
+		@XmlElement(name = "MndtCxlReq", required = true)
+		public MandateCancellationRequestV02 messageBody;
 	}
 }

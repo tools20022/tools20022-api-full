@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Product;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of the service to be billed.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * BillingServiceIdentification1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingServiceIdentification3", propOrder = {"identification", "subService", "description", "commonCode", "bankTransactionCode", "serviceType"})
 public class BillingServiceIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -422,6 +428,7 @@ public class BillingServiceIdentification3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -430,6 +437,7 @@ public class BillingServiceIdentification3 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SubSvc")
 	public BillingSubServiceIdentification1 getSubService() {
 		return subService;
 	}
@@ -438,6 +446,7 @@ public class BillingServiceIdentification3 {
 		this.subService = subService;
 	}
 
+	@XmlElement(name = "Desc", required = true)
 	public Max70Text getDescription() {
 		return description;
 	}
@@ -446,6 +455,7 @@ public class BillingServiceIdentification3 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "CmonCd")
 	public BillingServiceCommonIdentification1 getCommonCode() {
 		return commonCode;
 	}
@@ -454,6 +464,7 @@ public class BillingServiceIdentification3 {
 		this.commonCode = commonCode;
 	}
 
+	@XmlElement(name = "BkTxCd")
 	public BankTransactionCodeStructure4 getBankTransactionCode() {
 		return bankTransactionCode;
 	}
@@ -462,6 +473,7 @@ public class BillingServiceIdentification3 {
 		this.bankTransactionCode = bankTransactionCode;
 	}
 
+	@XmlElement(name = "SvcTp")
 	public Max12Text getServiceType() {
 		return serviceType;
 	}

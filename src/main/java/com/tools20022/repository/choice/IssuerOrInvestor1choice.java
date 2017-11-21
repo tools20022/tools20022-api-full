@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines how the CSD is linked to the security.
@@ -56,6 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines how the CSD is linked to the security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IssuerOrInvestor1choice", propOrder = {"issuerCSD", "investorCSD"})
 public class IssuerOrInvestor1choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -157,6 +163,7 @@ public class IssuerOrInvestor1choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IssrCSD", required = true)
 	public SystemPartyIdentification1Choice getIssuerCSD() {
 		return issuerCSD;
 	}
@@ -165,6 +172,7 @@ public class IssuerOrInvestor1choice {
 		this.issuerCSD = issuerCSD;
 	}
 
+	@XmlElement(name = "InvstrCSD", required = true)
 	public SystemPartyIdentification1Choice getInvestorCSD() {
 		return investorCSD;
 	}

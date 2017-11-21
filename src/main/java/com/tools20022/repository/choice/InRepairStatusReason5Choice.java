@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.InRepairStatusReason3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for an in repair status.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * InRepairStatusReason3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InRepairStatusReason5Choice", propOrder = {"code", "proprietary"})
 public class InRepairStatusReason5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class InRepairStatusReason5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public InRepairStatusReason1Code getCode() {
 		return code;
 	}
@@ -185,6 +192,7 @@ public class InRepairStatusReason5Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification1 getProprietary() {
 		return proprietary;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.CorporateActionPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Stock lending deadline assigned to a borrower of the stock.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Stock lending deadline assigned to a borrower of the stock."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BorrowerLendingDeadline1", propOrder = {"stockLendingDeadline", "borrower"})
 public class BorrowerLendingDeadline1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class BorrowerLendingDeadline1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StockLndgDdln", required = true)
 	public DateFormat31Choice getStockLendingDeadline() {
 		return stockLendingDeadline;
 	}
@@ -188,6 +195,7 @@ public class BorrowerLendingDeadline1 {
 		this.stockLendingDeadline = stockLendingDeadline;
 	}
 
+	@XmlElement(name = "Brrwr", required = true)
 	public PartyIdentification92Choice getBorrower() {
 		return borrower;
 	}

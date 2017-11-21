@@ -29,13 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code
- * Qualifier1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.QualifierCode#mmAllOrNone
@@ -81,6 +74,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * QualifierCode.mmAtMidpoint}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.QualifierCode#mmPreOpen
  * QualifierCode.mmPreOpen}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code
+ * Qualifier1Code}</li>
  * </ul>
  * </li>
  * <li>

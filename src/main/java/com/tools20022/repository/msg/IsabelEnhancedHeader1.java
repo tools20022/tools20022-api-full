@@ -32,6 +32,10 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the enhanced parameters for an Isabel payment file.
@@ -95,6 +99,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelEnhancedHeader1", propOrder = {"debitType", "bankDebitType", "accountBasedContract", "validationResults", "powerToSignValidationResults", "powerToSignValidationTimeStamp", "senderTrigger", "sendTimeStamp",
+		"extraConditionsAccepted", "source", "numberOfRequiredSignatures", "extended"})
 public class IsabelEnhancedHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -630,6 +637,7 @@ public class IsabelEnhancedHeader1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DbtTp", required = true)
 	public DebitType1Code getDebitType() {
 		return debitType;
 	}
@@ -638,6 +646,7 @@ public class IsabelEnhancedHeader1 {
 		this.debitType = debitType;
 	}
 
+	@XmlElement(name = "BkDbtTp", required = true)
 	public DebitType1Code getBankDebitType() {
 		return bankDebitType;
 	}
@@ -646,6 +655,7 @@ public class IsabelEnhancedHeader1 {
 		this.bankDebitType = bankDebitType;
 	}
 
+	@XmlElement(name = "AcctBasedCtrct", required = true)
 	public TrueFalseIndicator getAccountBasedContract() {
 		return accountBasedContract;
 	}
@@ -654,6 +664,7 @@ public class IsabelEnhancedHeader1 {
 		this.accountBasedContract = accountBasedContract;
 	}
 
+	@XmlElement(name = "VldtnRslts", required = true)
 	public Validation1Code getValidationResults() {
 		return validationResults;
 	}
@@ -662,6 +673,7 @@ public class IsabelEnhancedHeader1 {
 		this.validationResults = validationResults;
 	}
 
+	@XmlElement(name = "PwrToSgnVldtnRslts", required = true)
 	public Validation2Code getPowerToSignValidationResults() {
 		return powerToSignValidationResults;
 	}
@@ -670,6 +682,7 @@ public class IsabelEnhancedHeader1 {
 		this.powerToSignValidationResults = powerToSignValidationResults;
 	}
 
+	@XmlElement(name = "PwrToSgnVldtnTmStmp", required = true)
 	public ISODateTime getPowerToSignValidationTimeStamp() {
 		return powerToSignValidationTimeStamp;
 	}
@@ -678,6 +691,7 @@ public class IsabelEnhancedHeader1 {
 		this.powerToSignValidationTimeStamp = powerToSignValidationTimeStamp;
 	}
 
+	@XmlElement(name = "SndrTrggr", required = true)
 	public IsabelSenderTrigger1Choice getSenderTrigger() {
 		return senderTrigger;
 	}
@@ -686,6 +700,7 @@ public class IsabelEnhancedHeader1 {
 		this.senderTrigger = senderTrigger;
 	}
 
+	@XmlElement(name = "SndTmStmp", required = true)
 	public ISODateTime getSendTimeStamp() {
 		return sendTimeStamp;
 	}
@@ -694,6 +709,7 @@ public class IsabelEnhancedHeader1 {
 		this.sendTimeStamp = sendTimeStamp;
 	}
 
+	@XmlElement(name = "XtraCondsAccptd", required = true)
 	public TrueFalseIndicator getExtraConditionsAccepted() {
 		return extraConditionsAccepted;
 	}
@@ -702,6 +718,7 @@ public class IsabelEnhancedHeader1 {
 		this.extraConditionsAccepted = extraConditionsAccepted;
 	}
 
+	@XmlElement(name = "Src", required = true)
 	public IsabelInputSource1Choice getSource() {
 		return source;
 	}
@@ -710,6 +727,7 @@ public class IsabelEnhancedHeader1 {
 		this.source = source;
 	}
 
+	@XmlElement(name = "NbOfReqrdSgntrs")
 	public Number getNumberOfRequiredSignatures() {
 		return numberOfRequiredSignatures;
 	}
@@ -718,6 +736,7 @@ public class IsabelEnhancedHeader1 {
 		this.numberOfRequiredSignatures = numberOfRequiredSignatures;
 	}
 
+	@XmlElement(name = "Xtnded")
 	public IsabelExtendedHeader1 getExtended() {
 		return extended;
 	}

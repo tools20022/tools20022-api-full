@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment token information.
@@ -78,6 +82,8 @@ import java.util.List;
  * CardPaymentToken3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentToken4", propOrder = {"token", "cardSequenceNumber", "tokenExpiryDate", "tokenCharacteristic", "tokenRequestor", "tokenAssuranceLevel", "tokenAssuranceData"})
 public class CardPaymentToken4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -414,6 +420,7 @@ public class CardPaymentToken4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tkn")
 	public Min8Max28NumericText getToken() {
 		return token;
 	}
@@ -422,6 +429,7 @@ public class CardPaymentToken4 {
 		this.token = token;
 	}
 
+	@XmlElement(name = "CardSeqNb")
 	public Min2Max3NumericText getCardSequenceNumber() {
 		return cardSequenceNumber;
 	}
@@ -430,6 +438,7 @@ public class CardPaymentToken4 {
 		this.cardSequenceNumber = cardSequenceNumber;
 	}
 
+	@XmlElement(name = "TknXpryDt")
 	public Max10Text getTokenExpiryDate() {
 		return tokenExpiryDate;
 	}
@@ -438,6 +447,7 @@ public class CardPaymentToken4 {
 		this.tokenExpiryDate = tokenExpiryDate;
 	}
 
+	@XmlElement(name = "TknChrtc")
 	public List<Max35Text> getTokenCharacteristic() {
 		return tokenCharacteristic;
 	}
@@ -446,6 +456,7 @@ public class CardPaymentToken4 {
 		this.tokenCharacteristic = tokenCharacteristic;
 	}
 
+	@XmlElement(name = "TknRqstr")
 	public PaymentTokenIdentifiers1 getTokenRequestor() {
 		return tokenRequestor;
 	}
@@ -454,6 +465,7 @@ public class CardPaymentToken4 {
 		this.tokenRequestor = tokenRequestor;
 	}
 
+	@XmlElement(name = "TknAssrncLvl")
 	public Number getTokenAssuranceLevel() {
 		return tokenAssuranceLevel;
 	}
@@ -462,6 +474,7 @@ public class CardPaymentToken4 {
 		this.tokenAssuranceLevel = tokenAssuranceLevel;
 	}
 
+	@XmlElement(name = "TknAssrncData")
 	public Max500Binary getTokenAssuranceData() {
 		return tokenAssuranceData;
 	}

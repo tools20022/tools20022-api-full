@@ -26,6 +26,10 @@ import com.tools20022.repository.codeset.QueryType2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the query criteria.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransactionQuery1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionQuery2", propOrder = {"queryType", "transactionCriteria"})
 public class TransactionQuery2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class TransactionQuery2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QryTp")
 	public QueryType2Code getQueryType() {
 		return queryType;
 	}
@@ -187,6 +194,7 @@ public class TransactionQuery2 {
 		this.queryType = queryType;
 	}
 
+	@XmlElement(name = "TxCrit")
 	public TransactionCriteria2Choice getTransactionCriteria() {
 		return transactionCriteria;
 	}

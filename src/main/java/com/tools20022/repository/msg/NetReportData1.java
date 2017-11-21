@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the meta data associated with a net report.
@@ -90,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the meta data associated with a net report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NetReportData1", propOrder = {"messageIdentification", "creationDateTime", "nettingCutOffTime", "reportDate", "valueDate", "reportType", "netReportServicer", "netServiceType", "messagePagination"})
 public class NetReportData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -490,6 +496,7 @@ public class NetReportData1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -498,6 +505,7 @@ public class NetReportData1 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -506,6 +514,7 @@ public class NetReportData1 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "NetgCutOffTm", required = true)
 	public ISOTime getNettingCutOffTime() {
 		return nettingCutOffTime;
 	}
@@ -514,6 +523,7 @@ public class NetReportData1 {
 		this.nettingCutOffTime = nettingCutOffTime;
 	}
 
+	@XmlElement(name = "RptDt", required = true)
 	public ISODate getReportDate() {
 		return reportDate;
 	}
@@ -522,6 +532,7 @@ public class NetReportData1 {
 		this.reportDate = reportDate;
 	}
 
+	@XmlElement(name = "ValDt", required = true)
 	public ISODate getValueDate() {
 		return valueDate;
 	}
@@ -530,6 +541,7 @@ public class NetReportData1 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "RptTp")
 	public Max35Text getReportType() {
 		return reportType;
 	}
@@ -538,6 +550,7 @@ public class NetReportData1 {
 		this.reportType = reportType;
 	}
 
+	@XmlElement(name = "NetRptSvcr")
 	public PartyIdentification73Choice getNetReportServicer() {
 		return netReportServicer;
 	}
@@ -546,6 +559,7 @@ public class NetReportData1 {
 		this.netReportServicer = netReportServicer;
 	}
 
+	@XmlElement(name = "NetSvcTp")
 	public Max35Text getNetServiceType() {
 		return netServiceType;
 	}
@@ -554,6 +568,7 @@ public class NetReportData1 {
 		this.netServiceType = netServiceType;
 	}
 
+	@XmlElement(name = "MsgPgntn")
 	public Pagination getMessagePagination() {
 		return messagePagination;
 	}

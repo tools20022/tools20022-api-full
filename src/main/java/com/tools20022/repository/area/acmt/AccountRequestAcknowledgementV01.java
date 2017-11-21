@@ -25,9 +25,11 @@ import com.tools20022.repository.area.AccountManagementPreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.BankAccountManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -42,9 +44,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.010.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementPreviousVersion
@@ -84,6 +83,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.010.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -103,6 +105,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountRequestAcknowledgementV01", propOrder = {"references", "accountIdentification", "organisationIdentification", "accountServicerIdentification", "digitalSignature"})
 public class AccountRequestAcknowledgementV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -142,6 +146,14 @@ public class AccountRequestAcknowledgementV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> References5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountRequestAcknowledgementV01.class.getMethod("getReferences", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AccountForAction1> accountIdentification;
 	/**
@@ -179,6 +191,14 @@ public class AccountRequestAcknowledgementV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> AccountForAction1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountRequestAcknowledgementV01.class.getMethod("getAccountIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<OrganisationIdentification6> organisationIdentification;
 	/**
@@ -212,6 +232,14 @@ public class AccountRequestAcknowledgementV01 {
 			definition = "Identifier for an organisation.";
 			minOccurs = 1;
 			complexType_lazy = () -> OrganisationIdentification6.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountRequestAcknowledgementV01.class.getMethod("getOrganisationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BranchAndFinancialInstitutionIdentification4 accountServicerIdentification;
@@ -251,6 +279,14 @@ public class AccountRequestAcknowledgementV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountRequestAcknowledgementV01.class.getMethod("getAccountServicerIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PartyAndSignature1> digitalSignature;
 	/**
@@ -288,6 +324,14 @@ public class AccountRequestAcknowledgementV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountRequestAcknowledgementV01.class.getMethod("getDigitalSignature", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -301,8 +345,9 @@ public class AccountRequestAcknowledgementV01 {
 				rootElement = "Document";
 				xmlTag = "AcctReqAck";
 				businessArea_lazy = () -> AccountManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AccountRequestAcknowledgementV01.mmReferences, AccountRequestAcknowledgementV01.mmAccountIdentification, AccountRequestAcknowledgementV01.mmOrganisationIdentification,
-						AccountRequestAcknowledgementV01.mmAccountServicerIdentification, AccountRequestAcknowledgementV01.mmDigitalSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV01.mmReferences,
+						com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV01.mmAccountIdentification, com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV01.mmOrganisationIdentification,
+						com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV01.mmAccountServicerIdentification, com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV01.mmDigitalSignature);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";
@@ -312,10 +357,16 @@ public class AccountRequestAcknowledgementV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountRequestAcknowledgementV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Refs", required = true)
 	public References5 getReferences() {
 		return references;
 	}
@@ -324,6 +375,7 @@ public class AccountRequestAcknowledgementV01 {
 		this.references = references;
 	}
 
+	@XmlElement(name = "AcctId")
 	public List<AccountForAction1> getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -332,6 +384,7 @@ public class AccountRequestAcknowledgementV01 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "OrgId", required = true)
 	public List<OrganisationIdentification6> getOrganisationIdentification() {
 		return organisationIdentification;
 	}
@@ -340,6 +393,7 @@ public class AccountRequestAcknowledgementV01 {
 		this.organisationIdentification = organisationIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrId", required = true)
 	public BranchAndFinancialInstitutionIdentification4 getAccountServicerIdentification() {
 		return accountServicerIdentification;
 	}
@@ -348,11 +402,18 @@ public class AccountRequestAcknowledgementV01 {
 		this.accountServicerIdentification = accountServicerIdentification;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public List<PartyAndSignature1> getDigitalSignature() {
 		return digitalSignature;
 	}
 
 	public void setDigitalSignature(List<PartyAndSignature1> digitalSignature) {
 		this.digitalSignature = digitalSignature;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.010.01.01")
+	static public class Document {
+		@XmlElement(name = "AcctReqAck", required = true)
+		public AccountRequestAcknowledgementV01 messageBody;
 	}
 }

@@ -29,21 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate1Code
- * SettlementDate1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate4Code
- * SettlementDate4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate5Code
- * SettlementDate5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate2Code
- * SettlementDate2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate3Code
- * SettlementDate3Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -105,6 +90,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SettlementDateCode#mmWhenIssued
  * SettlementDateCode.mmWhenIssued}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate1Code
+ * SettlementDate1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate4Code
+ * SettlementDate4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate5Code
+ * SettlementDate5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate2Code
+ * SettlementDate2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate3Code
+ * SettlementDate3Code}</li>
  * </ul>
  * </li>
  * <li>

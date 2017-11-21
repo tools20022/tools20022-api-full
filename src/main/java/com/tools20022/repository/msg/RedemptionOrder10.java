@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.RedemptionOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extract of trade data for a redemption order.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Extract of trade data for a redemption order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RedemptionOrder10", propOrder = {"investmentAccountDetails", "financialInstrumentDetails", "financialInstrumentQuantity"})
 public class RedemptionOrder10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -235,6 +241,7 @@ public class RedemptionOrder10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount30 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -243,6 +250,7 @@ public class RedemptionOrder10 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "FinInstrmDtls")
 	public FinancialInstrument18 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -251,6 +259,7 @@ public class RedemptionOrder10 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "FinInstrmQty")
 	public FinancialInstrumentQuantity8Choice getFinancialInstrumentQuantity() {
 		return financialInstrumentQuantity;
 	}

@@ -68,6 +68,11 @@ public class CustodyService extends FinancialService {
 				definition = "A service in which a  financial institution holds securities on behalf of the client. Custody provides an investor a place to store assets. Assets in custody are not fungible for the brokerage because they remain on the client's name.";
 				superType_lazy = () -> FinancialService.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CustodyService.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusJustification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * A choice between payment status reasons.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "A choice between payment status reasons."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentStatusReasonCode3Choice", propOrder = {"unmatchedStatusReason", "cancelledStatusReason", "suspendedStatusReason", "pendingFailingSettlement", "pendingSettlement", "proprietaryRejectionReason"})
 public class PaymentStatusReasonCode3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -375,6 +381,7 @@ public class PaymentStatusReasonCode3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UmtchdStsRsn", required = true)
 	public UnmatchedStatusReason1Code getUnmatchedStatusReason() {
 		return unmatchedStatusReason;
 	}
@@ -383,6 +390,7 @@ public class PaymentStatusReasonCode3Choice {
 		this.unmatchedStatusReason = unmatchedStatusReason;
 	}
 
+	@XmlElement(name = "CancStsRsn", required = true)
 	public CancelledStatusReason1Code getCancelledStatusReason() {
 		return cancelledStatusReason;
 	}
@@ -391,6 +399,7 @@ public class PaymentStatusReasonCode3Choice {
 		this.cancelledStatusReason = cancelledStatusReason;
 	}
 
+	@XmlElement(name = "SspdStsRsn", required = true)
 	public SuspendedStatusReason1Code getSuspendedStatusReason() {
 		return suspendedStatusReason;
 	}
@@ -399,6 +408,7 @@ public class PaymentStatusReasonCode3Choice {
 		this.suspendedStatusReason = suspendedStatusReason;
 	}
 
+	@XmlElement(name = "PdgFlngSttlm", required = true)
 	public PendingFailingSettlement1Code getPendingFailingSettlement() {
 		return pendingFailingSettlement;
 	}
@@ -407,6 +417,7 @@ public class PaymentStatusReasonCode3Choice {
 		this.pendingFailingSettlement = pendingFailingSettlement;
 	}
 
+	@XmlElement(name = "PdgSttlm", required = true)
 	public PendingSettlement2Code getPendingSettlement() {
 		return pendingSettlement;
 	}
@@ -415,6 +426,7 @@ public class PaymentStatusReasonCode3Choice {
 		this.pendingSettlement = pendingSettlement;
 	}
 
+	@XmlElement(name = "PrtryRjctnRsn", required = true)
 	public ProprietaryStatusJustification getProprietaryRejectionReason() {
 		return proprietaryRejectionReason;
 	}

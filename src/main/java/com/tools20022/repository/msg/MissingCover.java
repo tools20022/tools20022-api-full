@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PaymentInvestigationCase;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates that the claim for non receipt is effectively a missing cover.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Indicates that the claim for non receipt is effectively a missing cover."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MissingCover", propOrder = "missingCoverIndication")
 public class MissingCover {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -137,6 +143,7 @@ public class MissingCover {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MssngCoverIndctn", required = true)
 	public YesNoIndicator getMissingCoverIndication() {
 		return missingCoverIndication;
 	}

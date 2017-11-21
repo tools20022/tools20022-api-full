@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for benchmark curve name.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * BenchmarkCurveName4Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BenchmarkCurveName6Choice", propOrder = {"ISIN", "index", "name"})
 public class BenchmarkCurveName6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -251,6 +257,7 @@ public class BenchmarkCurveName6Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ISIN", required = true)
 	public ISINOct2015Identifier getISIN() {
 		return iSIN;
 	}
@@ -259,6 +266,7 @@ public class BenchmarkCurveName6Choice {
 		this.iSIN = iSIN;
 	}
 
+	@XmlElement(name = "Indx", required = true)
 	public BenchmarkCurveName2Code getIndex() {
 		return index;
 	}
@@ -267,6 +275,7 @@ public class BenchmarkCurveName6Choice {
 		this.index = index;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max25Text getName() {
 		return name;
 	}

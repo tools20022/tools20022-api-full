@@ -26,6 +26,10 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters to be used in a report.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Parameters to be used in a report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportParameters", propOrder = {"country", "currency", "party", "userDefinedParameter"})
 public class ReportParameters {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -249,6 +255,7 @@ public class ReportParameters {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ctry")
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -257,6 +264,7 @@ public class ReportParameters {
 		this.country = country;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveOrHistoricCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -265,6 +273,7 @@ public class ReportParameters {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Pty")
 	public BreakdownByParty2 getParty() {
 		return party;
 	}
@@ -273,6 +282,7 @@ public class ReportParameters {
 		this.party = party;
 	}
 
+	@XmlElement(name = "UsrDfndParam")
 	public BreakdownByUserDefinedParameter2 getUserDefinedParameter() {
 		return userDefinedParameter;
 	}

@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Human entity, as distinguished from a corporate entity (which is sometimes
@@ -84,6 +88,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualPerson9", propOrder = {"name", "birthDate", "countryAndResidentialStatus", "beneficiaryCertificationCompletion", "otherIdentification"})
 public class IndividualPerson9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -399,6 +405,7 @@ public class IndividualPerson9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max350Text getName() {
 		return name;
 	}
@@ -407,6 +414,7 @@ public class IndividualPerson9 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "BirthDt")
 	public ISODate getBirthDate() {
 		return birthDate;
 	}
@@ -415,6 +423,7 @@ public class IndividualPerson9 {
 		this.birthDate = birthDate;
 	}
 
+	@XmlElement(name = "CtryAndResdtlSts")
 	public CountryAndResidentialStatusType1 getCountryAndResidentialStatus() {
 		return countryAndResidentialStatus;
 	}
@@ -423,6 +432,7 @@ public class IndividualPerson9 {
 		this.countryAndResidentialStatus = countryAndResidentialStatus;
 	}
 
+	@XmlElement(name = "BnfcryCertfctnCmpltn")
 	public BeneficiaryCertificationCompletion1Code getBeneficiaryCertificationCompletion() {
 		return beneficiaryCertificationCompletion;
 	}
@@ -431,6 +441,7 @@ public class IndividualPerson9 {
 		this.beneficiaryCertificationCompletion = beneficiaryCertificationCompletion;
 	}
 
+	@XmlElement(name = "OthrId")
 	public List<GenericIdentification11> getOtherIdentification() {
 		return otherIdentification;
 	}

@@ -66,6 +66,11 @@ public class ChargeAgent extends ChargePartyRole {
 				definition = "Party that takes the transaction charges or to which the transaction charges are due.";
 				superType_lazy = () -> ChargePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ChargeAgent.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

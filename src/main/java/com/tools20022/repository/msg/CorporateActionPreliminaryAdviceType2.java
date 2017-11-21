@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.CorporateActionNotification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Type of movement preliminary advice document.
@@ -94,6 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionPreliminaryAdviceType1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionPreliminaryAdviceType2", propOrder = {"type", "eligibilityIndicator"})
 public class CorporateActionPreliminaryAdviceType2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -224,6 +230,7 @@ public class CorporateActionPreliminaryAdviceType2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public CorporateActionPreliminaryAdviceType1Code getType() {
 		return type;
 	}
@@ -232,6 +239,7 @@ public class CorporateActionPreliminaryAdviceType2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "ElgbltyInd")
 	public YesNoIndicator getEligibilityIndicator() {
 		return eligibilityIndicator;
 	}

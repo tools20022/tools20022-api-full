@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.UnitPrice4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between ways to express an amount.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between ways to express an amount."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountPrice1Choice", propOrder = {"amount", "unitPrice"})
 public class AmountPrice1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -174,6 +180,7 @@ public class AmountPrice1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -182,6 +189,7 @@ public class AmountPrice1Choice {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "UnitPric", required = true)
 	public UnitPrice4 getUnitPrice() {
 		return unitPrice;
 	}

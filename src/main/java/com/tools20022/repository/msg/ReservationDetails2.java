@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Reservation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Liquidity set aside by the account owner for specific purposes.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Liquidity set aside by the account owner for specific purposes."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReservationDetails2", propOrder = {"startDateTime", "amount"})
 public class ReservationDetails2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class ReservationDetails2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StartDtTm")
 	public DateAndDateTimeChoice getStartDateTime() {
 		return startDateTime;
 	}
@@ -187,6 +194,7 @@ public class ReservationDetails2 {
 		this.startDateTime = startDateTime;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public AmountChoice getAmount() {
 		return amount;
 	}

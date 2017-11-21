@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.Obligation3;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CollateralManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -50,9 +52,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code colr.009.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CollateralManagementPreviousVersion
@@ -89,6 +88,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code colr.009.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -108,6 +110,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarginCallDisputeNotificationV03", propOrder = {"transactionIdentification", "obligation", "disputeNotification", "supplementaryData"})
 public class MarginCallDisputeNotificationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -156,6 +160,14 @@ public class MarginCallDisputeNotificationV03 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallDisputeNotificationV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Obligation3 obligation;
 	/**
@@ -203,6 +215,14 @@ public class MarginCallDisputeNotificationV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Obligation3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallDisputeNotificationV03.class.getMethod("getObligation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DisputeNotification1Choice disputeNotification;
 	/**
@@ -246,6 +266,14 @@ public class MarginCallDisputeNotificationV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DisputeNotification1Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallDisputeNotificationV03.class.getMethod("getDisputeNotification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -293,6 +321,14 @@ public class MarginCallDisputeNotificationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallDisputeNotificationV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -306,8 +342,9 @@ public class MarginCallDisputeNotificationV03 {
 				rootElement = "Document";
 				xmlTag = "MrgnCallDsptNtfctn";
 				businessArea_lazy = () -> CollateralManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MarginCallDisputeNotificationV03.mmTransactionIdentification, MarginCallDisputeNotificationV03.mmObligation, MarginCallDisputeNotificationV03.mmDisputeNotification,
-						MarginCallDisputeNotificationV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallDisputeNotificationV03.mmTransactionIdentification,
+						com.tools20022.repository.area.colr.MarginCallDisputeNotificationV03.mmObligation, com.tools20022.repository.area.colr.MarginCallDisputeNotificationV03.mmDisputeNotification,
+						com.tools20022.repository.area.colr.MarginCallDisputeNotificationV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "colr";
@@ -317,10 +354,16 @@ public class MarginCallDisputeNotificationV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MarginCallDisputeNotificationV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -329,6 +372,7 @@ public class MarginCallDisputeNotificationV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "Oblgtn", required = true)
 	public Obligation3 getObligation() {
 		return obligation;
 	}
@@ -337,6 +381,7 @@ public class MarginCallDisputeNotificationV03 {
 		this.obligation = obligation;
 	}
 
+	@XmlElement(name = "DsptNtfctn", required = true)
 	public DisputeNotification1Choice getDisputeNotification() {
 		return disputeNotification;
 	}
@@ -345,11 +390,18 @@ public class MarginCallDisputeNotificationV03 {
 		this.disputeNotification = disputeNotification;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:colr.009.03.03")
+	static public class Document {
+		@XmlElement(name = "MrgnCallDsptNtfctn", required = true)
+		public MarginCallDisputeNotificationV03 messageBody;
 	}
 }

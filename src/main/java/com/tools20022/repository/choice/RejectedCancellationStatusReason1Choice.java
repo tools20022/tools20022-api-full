@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason for which a cancellation is rejected.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Reason for which a cancellation is rejected."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RejectedCancellationStatusReason1Choice", propOrder = {"reason", "extendedReason", "dataSourceScheme"})
 public class RejectedCancellationStatusReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class RejectedCancellationStatusReason1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public RejectedCancellationStatusReason1Code getReason() {
 		return reason;
 	}
@@ -226,6 +233,7 @@ public class RejectedCancellationStatusReason1Choice {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "XtndedRsn", required = true)
 	public Extended350Code getExtendedReason() {
 		return extendedReason;
 	}
@@ -234,6 +242,7 @@ public class RejectedCancellationStatusReason1Choice {
 		this.extendedReason = extendedReason;
 	}
 
+	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}

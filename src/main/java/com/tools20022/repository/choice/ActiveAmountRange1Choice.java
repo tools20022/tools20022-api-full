@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a range of amount values with or without the currency.
@@ -67,6 +71,8 @@ import java.util.function.Supplier;
  * "Choice between a range of amount values with or without the currency. "</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ActiveAmountRange1Choice", propOrder = {"impliedCurrencyAndAmountRange", "currencyAndAmountRange"})
 public class ActiveAmountRange1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -192,6 +198,7 @@ public class ActiveAmountRange1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ImpldCcyAndAmtRg", required = true)
 	public ImpliedCurrencyAndAmountRange getImpliedCurrencyAndAmountRange() {
 		return impliedCurrencyAndAmountRange;
 	}
@@ -200,6 +207,7 @@ public class ActiveAmountRange1Choice {
 		this.impliedCurrencyAndAmountRange = impliedCurrencyAndAmountRange;
 	}
 
+	@XmlElement(name = "CcyAndAmtRg", required = true)
 	public ActiveCurrencyAndAmountRange1 getCurrencyAndAmountRange() {
 		return currencyAndAmountRange;
 	}

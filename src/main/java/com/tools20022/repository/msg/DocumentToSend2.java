@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Determine the type of document and the type of communication method to be
@@ -88,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * DocumentToSend1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DocumentToSend2", propOrder = {"type", "recipient", "methodOfTransmission"})
 public class DocumentToSend2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -271,6 +277,7 @@ public class DocumentToSend2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public Max140Text getType() {
 		return type;
 	}
@@ -279,6 +286,7 @@ public class DocumentToSend2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Rcpt", required = true)
 	public PartyIdentification2Choice getRecipient() {
 		return recipient;
 	}
@@ -287,6 +295,7 @@ public class DocumentToSend2 {
 		this.recipient = recipient;
 	}
 
+	@XmlElement(name = "MtdOfTrnsmssn", required = true)
 	public CommunicationMethod3Choice getMethodOfTransmission() {
 		return methodOfTransmission;
 	}

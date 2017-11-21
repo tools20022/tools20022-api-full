@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a party with the Bank Identification Code or Market
@@ -82,6 +86,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification6Choice", propOrder = {"BIC", "MIC", "proprietaryIdentification", "nameAndAddress", "postalAddress"})
 public class PartyIdentification6Choice {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -359,6 +365,7 @@ public class PartyIdentification6Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BIC")
 	public BICIdentifier getBIC() {
 		return bIC;
 	}
@@ -367,6 +374,7 @@ public class PartyIdentification6Choice {
 		this.bIC = bIC;
 	}
 
+	@XmlElement(name = "MIC")
 	public MICIdentifier getMIC() {
 		return mIC;
 	}
@@ -375,6 +383,7 @@ public class PartyIdentification6Choice {
 		this.mIC = mIC;
 	}
 
+	@XmlElement(name = "PrtryId")
 	public GenericIdentification1 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
@@ -383,6 +392,7 @@ public class PartyIdentification6Choice {
 		this.proprietaryIdentification = proprietaryIdentification;
 	}
 
+	@XmlElement(name = "NmAndAdr")
 	public NameAndAddress5 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -391,6 +401,7 @@ public class PartyIdentification6Choice {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "PstlAdr")
 	public PostalAddress1 getPostalAddress() {
 		return postalAddress;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.ProductCharacteristics;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Product characteristic applicable to this trade product.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProductCharacteristics2", propOrder = {"characteristic", "valueMeasure"})
 public class ProductCharacteristics2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -194,6 +200,7 @@ public class ProductCharacteristics2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Chrtc")
 	public ProductCharacteristics1Choice getCharacteristic() {
 		return characteristic;
 	}
@@ -202,6 +209,7 @@ public class ProductCharacteristics2 {
 		this.characteristic = characteristic;
 	}
 
+	@XmlElement(name = "ValMeasr")
 	public Quantity3 getValueMeasure() {
 		return valueMeasure;
 	}

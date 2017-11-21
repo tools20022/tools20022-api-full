@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account between an investor(s) and a fund manager or a fund. The account can
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccount15", propOrder = {"accountIdentification", "type"})
 public class InvestmentAccount15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class InvestmentAccount15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId")
 	public AccountIdentification1 getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -189,6 +196,7 @@ public class InvestmentAccount15 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "Tp")
 	public CashAccountType1 getType() {
 		return type;
 	}

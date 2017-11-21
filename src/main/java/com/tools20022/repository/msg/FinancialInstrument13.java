@@ -35,6 +35,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Security that is a sub-set of an investment fund, and is governed by the same
@@ -103,6 +107,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrument13", propOrder = {"identification", "name", "supplementaryIdentification", "classType", "securitiesForm", "distributionPolicy"})
 public class FinancialInstrument13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -416,6 +422,7 @@ public class FinancialInstrument13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification3Choice getIdentification() {
 		return identification;
 	}
@@ -424,6 +431,7 @@ public class FinancialInstrument13 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max350Text getName() {
 		return name;
 	}
@@ -432,6 +440,7 @@ public class FinancialInstrument13 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "SplmtryId")
 	public Max35Text getSupplementaryIdentification() {
 		return supplementaryIdentification;
 	}
@@ -440,6 +449,7 @@ public class FinancialInstrument13 {
 		this.supplementaryIdentification = supplementaryIdentification;
 	}
 
+	@XmlElement(name = "ClssTp")
 	public Max35Text getClassType() {
 		return classType;
 	}
@@ -448,6 +458,7 @@ public class FinancialInstrument13 {
 		this.classType = classType;
 	}
 
+	@XmlElement(name = "SctiesForm")
 	public FormOfSecurity1Code getSecuritiesForm() {
 		return securitiesForm;
 	}
@@ -456,6 +467,7 @@ public class FinancialInstrument13 {
 		this.securitiesForm = securitiesForm;
 	}
 
+	@XmlElement(name = "DstrbtnPlcy")
 	public DistributionPolicy1Code getDistributionPolicy() {
 		return distributionPolicy;
 	}

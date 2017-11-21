@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.Statement9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of a cancellation advice.
@@ -59,6 +63,8 @@ import java.util.List;
  * definition} = "Choice of a cancellation advice."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Advice1Choice", propOrder = {"orderConfirmationAdviceDetails", "statementAdviceDetails"})
 public class Advice1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class Advice1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrConfAdvcDtls", required = true)
 	public List<InvestmentFundOrderExecution3> getOrderConfirmationAdviceDetails() {
 		return orderConfirmationAdviceDetails;
 	}
@@ -171,6 +178,7 @@ public class Advice1Choice {
 		this.orderConfirmationAdviceDetails = orderConfirmationAdviceDetails;
 	}
 
+	@XmlElement(name = "StmtAdvcDtls", required = true)
 	public Statement9 getStatementAdviceDetails() {
 		return statementAdviceDetails;
 	}

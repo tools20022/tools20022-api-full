@@ -28,6 +28,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "0|-1|-2"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -56,6 +58,7 @@ public class DateOffsetText {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateOffsetText";
 				definition = "Specifies a date offset in the form of an integer value of business days. Restricted to the values 0, -1 and -2.";
+				pattern = "0|-1|-2";
 			}
 		});
 		return mmObject_lazy.get();

@@ -25,8 +25,10 @@ import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.AdditionalReference2;
 import com.tools20022.repository.msg.TransferIn1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -43,9 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.008.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -81,6 +80,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.008.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -100,6 +102,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "sese.008.001.01", propOrder = {"previousReference", "poolReference", "relatedReference", "transferInConfirmationToBeReversed"})
 public class ReversalOfTransferInConfirmation {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -137,6 +141,14 @@ public class ReversalOfTransferInConfirmation {
 			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ReversalOfTransferInConfirmation.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference2 poolReference;
 	/**
@@ -171,6 +183,14 @@ public class ReversalOfTransferInConfirmation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ReversalOfTransferInConfirmation.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference2 relatedReference;
@@ -208,6 +228,14 @@ public class ReversalOfTransferInConfirmation {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ReversalOfTransferInConfirmation.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransferIn1 transferInConfirmationToBeReversed;
 	/**
@@ -242,6 +270,14 @@ public class ReversalOfTransferInConfirmation {
 			minOccurs = 0;
 			complexType_lazy = () -> TransferIn1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ReversalOfTransferInConfirmation.class.getMethod("getTransferInConfirmationToBeReversed", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -256,8 +292,8 @@ public class ReversalOfTransferInConfirmation {
 				xmlTag = "sese.008.001.01";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
 				xmlName = "sese.008.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(ReversalOfTransferInConfirmation.mmPreviousReference, ReversalOfTransferInConfirmation.mmPoolReference, ReversalOfTransferInConfirmation.mmRelatedReference,
-						ReversalOfTransferInConfirmation.mmTransferInConfirmationToBeReversed);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation.mmPreviousReference, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation.mmPoolReference,
+						com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation.mmRelatedReference, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation.mmTransferInConfirmationToBeReversed);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -267,10 +303,16 @@ public class ReversalOfTransferInConfirmation {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ReversalOfTransferInConfirmation.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference2 getPreviousReference() {
 		return previousReference;
 	}
@@ -279,6 +321,7 @@ public class ReversalOfTransferInConfirmation {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference2 getPoolReference() {
 		return poolReference;
 	}
@@ -287,6 +330,7 @@ public class ReversalOfTransferInConfirmation {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference2 getRelatedReference() {
 		return relatedReference;
 	}
@@ -295,11 +339,18 @@ public class ReversalOfTransferInConfirmation {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "TrfInConfToBeRvsd")
 	public TransferIn1 getTransferInConfirmationToBeReversed() {
 		return transferInConfirmationToBeReversed;
 	}
 
 	public void setTransferInConfirmationToBeReversed(TransferIn1 transferInConfirmationToBeReversed) {
 		this.transferInConfirmationToBeReversed = transferInConfirmationToBeReversed;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.008.01.01")
+	static public class Document {
+		@XmlElement(name = "sese.008.001.01", required = true)
+		public ReversalOfTransferInConfirmation messageBody;
 	}
 }

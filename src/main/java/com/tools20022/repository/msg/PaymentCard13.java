@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment card performing the transaction.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentCard11}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentCard13", propOrder = {"protectedCardData", "plainCardData", "maskedPAN", "cardProductType", "cardProductName"})
 public class PaymentCard13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -378,6 +384,7 @@ public class PaymentCard13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrtctdCardData")
 	public ContentInformationType10 getProtectedCardData() {
 		return protectedCardData;
 	}
@@ -386,6 +393,7 @@ public class PaymentCard13 {
 		this.protectedCardData = protectedCardData;
 	}
 
+	@XmlElement(name = "PlainCardData")
 	public PlainCardData9 getPlainCardData() {
 		return plainCardData;
 	}
@@ -394,6 +402,7 @@ public class PaymentCard13 {
 		this.plainCardData = plainCardData;
 	}
 
+	@XmlElement(name = "MskdPAN")
 	public Max30Text getMaskedPAN() {
 		return maskedPAN;
 	}
@@ -402,6 +411,7 @@ public class PaymentCard13 {
 		this.maskedPAN = maskedPAN;
 	}
 
+	@XmlElement(name = "CardPdctTp")
 	public CardProductType1Code getCardProductType() {
 		return cardProductType;
 	}
@@ -410,6 +420,7 @@ public class PaymentCard13 {
 		this.cardProductType = cardProductType;
 	}
 
+	@XmlElement(name = "CardPdctNm")
 	public Max35Text getCardProductName() {
 		return cardProductName;
 	}

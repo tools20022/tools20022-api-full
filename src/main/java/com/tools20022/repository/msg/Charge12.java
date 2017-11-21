@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the different types of freight charges associated with goods.
@@ -68,6 +72,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Charge12", propOrder = {"type", "charges"})
 public class Charge12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -197,6 +203,7 @@ public class Charge12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public FreightCharges1Code getType() {
 		return type;
 	}
@@ -205,6 +212,7 @@ public class Charge12 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Chrgs")
 	public List<ChargesDetails1> getCharges() {
 		return charges;
 	}

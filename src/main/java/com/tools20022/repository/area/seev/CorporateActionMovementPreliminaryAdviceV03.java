@@ -26,9 +26,11 @@ import com.tools20022.repository.choice.AccountIdentification18Choice;
 import com.tools20022.repository.choice.PartyIdentification46Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -55,9 +57,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.035.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
@@ -153,6 +152,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.035.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -176,6 +178,10 @@ import java.util.List;
  * CorporateActionMovementPreliminaryAdviceV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionMovementPreliminaryAdviceV03", propOrder = {"pagination", "movementPreliminaryAdviceGeneralInformation", "previousMovementPreliminaryAdviceIdentification", "notificationIdentification",
+		"movementConfirmationIdentification", "instructionIdentification", "otherDocumentIdentification", "eventsLinkage", "reversalReason", "corporateActionGeneralInformation", "accountDetails", "corporateActionMovementDetails",
+		"additionalInformation", "issuerAgent", "payingAgent", "subPayingAgent", "registrar", "resellingAgent", "physicalSecuritiesAgent", "dropAgent", "solicitationAgent", "informationAgent", "supplementaryData"})
 public class CorporateActionMovementPreliminaryAdviceV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -216,6 +222,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getPagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionPreliminaryAdviceType1 movementPreliminaryAdviceGeneralInformation;
 	/**
@@ -251,6 +265,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionPreliminaryAdviceType1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getMovementPreliminaryAdviceGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DocumentIdentification15 previousMovementPreliminaryAdviceIdentification;
@@ -289,6 +311,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getPreviousMovementPreliminaryAdviceIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification15 notificationIdentification;
 	/**
@@ -324,6 +354,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification15.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getNotificationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DocumentIdentification15 movementConfirmationIdentification;
@@ -361,6 +399,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getMovementConfirmationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification9 instructionIdentification;
 	/**
@@ -396,6 +442,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification9.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getInstructionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<DocumentIdentification13> otherDocumentIdentification;
 	/**
@@ -430,6 +484,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			definition = "Identification of other documents as well as the document number.";
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification13.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getOtherDocumentIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<CorporateActionEventReference1> eventsLinkage;
@@ -468,6 +530,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionEventReference1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getEventsLinkage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionReversalReason1 reversalReason;
 	/**
@@ -503,6 +573,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionReversalReason1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getReversalReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionGeneralInformation38 corporateActionGeneralInformation;
 	/**
@@ -537,6 +615,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionGeneralInformation38.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AccountIdentification18Choice accountDetails;
@@ -576,6 +662,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification18Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getAccountDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<CorporateActionOption35> corporateActionMovementDetails;
 	/**
@@ -609,6 +703,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			definition = "Information about the corporate action option.";
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionOption35.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getCorporateActionMovementDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionNarrative6 additionalInformation;
@@ -644,6 +746,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionNarrative6.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getAdditionalInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<PartyIdentification46Choice> issuerAgent;
@@ -683,6 +793,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification46Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getIssuerAgent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PartyIdentification46Choice> payingAgent;
 	/**
@@ -719,6 +837,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			definition = "Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.";
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification46Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getPayingAgent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<PartyIdentification46Choice> subPayingAgent;
@@ -757,6 +883,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification46Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getSubPayingAgent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification46Choice registrar;
 	/**
@@ -792,6 +926,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification46Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getRegistrar", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<PartyIdentification46Choice> resellingAgent;
@@ -829,6 +971,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			definition = "A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner. ";
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification46Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getResellingAgent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification46Choice physicalSecuritiesAgent;
@@ -869,6 +1019,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification46Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getPhysicalSecuritiesAgent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification46Choice dropAgent;
 	/**
@@ -908,6 +1066,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification46Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getDropAgent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PartyIdentification46Choice> solicitationAgent;
 	/**
@@ -945,6 +1111,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			definition = "A trust company, bank or similar financial institution assigned by an issuer to maintain records of investors and account balances and transactions for the consent of a material change. ";
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification46Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getSolicitationAgent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification46Choice informationAgent;
@@ -984,6 +1158,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification46Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getInformationAgent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -1021,6 +1203,14 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionMovementPreliminaryAdviceV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -1035,15 +1225,21 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 				rootElement = "Document";
 				xmlTag = "CorpActnMvmntPrlimryAdvc";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceV03.mmPagination, CorporateActionMovementPreliminaryAdviceV03.mmMovementPreliminaryAdviceGeneralInformation,
-						CorporateActionMovementPreliminaryAdviceV03.mmPreviousMovementPreliminaryAdviceIdentification, CorporateActionMovementPreliminaryAdviceV03.mmNotificationIdentification,
-						CorporateActionMovementPreliminaryAdviceV03.mmMovementConfirmationIdentification, CorporateActionMovementPreliminaryAdviceV03.mmInstructionIdentification,
-						CorporateActionMovementPreliminaryAdviceV03.mmOtherDocumentIdentification, CorporateActionMovementPreliminaryAdviceV03.mmEventsLinkage, CorporateActionMovementPreliminaryAdviceV03.mmReversalReason,
-						CorporateActionMovementPreliminaryAdviceV03.mmCorporateActionGeneralInformation, CorporateActionMovementPreliminaryAdviceV03.mmAccountDetails,
-						CorporateActionMovementPreliminaryAdviceV03.mmCorporateActionMovementDetails, CorporateActionMovementPreliminaryAdviceV03.mmAdditionalInformation, CorporateActionMovementPreliminaryAdviceV03.mmIssuerAgent,
-						CorporateActionMovementPreliminaryAdviceV03.mmPayingAgent, CorporateActionMovementPreliminaryAdviceV03.mmSubPayingAgent, CorporateActionMovementPreliminaryAdviceV03.mmRegistrar,
-						CorporateActionMovementPreliminaryAdviceV03.mmResellingAgent, CorporateActionMovementPreliminaryAdviceV03.mmPhysicalSecuritiesAgent, CorporateActionMovementPreliminaryAdviceV03.mmDropAgent,
-						CorporateActionMovementPreliminaryAdviceV03.mmSolicitationAgent, CorporateActionMovementPreliminaryAdviceV03.mmInformationAgent, CorporateActionMovementPreliminaryAdviceV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmPagination,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmMovementPreliminaryAdviceGeneralInformation,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmPreviousMovementPreliminaryAdviceIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmNotificationIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmMovementConfirmationIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmInstructionIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmOtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmEventsLinkage,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmReversalReason, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmAccountDetails, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmCorporateActionMovementDetails,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmAdditionalInformation, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmIssuerAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmSubPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmRegistrar, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmResellingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmPhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmDropAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmSolicitationAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmInformationAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -1053,10 +1249,16 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionMovementPreliminaryAdviceV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pgntn")
 	public Pagination getPagination() {
 		return pagination;
 	}
@@ -1065,6 +1267,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.pagination = pagination;
 	}
 
+	@XmlElement(name = "MvmntPrlimryAdvcGnlInf", required = true)
 	public CorporateActionPreliminaryAdviceType1 getMovementPreliminaryAdviceGeneralInformation() {
 		return movementPreliminaryAdviceGeneralInformation;
 	}
@@ -1073,6 +1276,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.movementPreliminaryAdviceGeneralInformation = movementPreliminaryAdviceGeneralInformation;
 	}
 
+	@XmlElement(name = "PrvsMvmntPrlimryAdvcId")
 	public DocumentIdentification15 getPreviousMovementPreliminaryAdviceIdentification() {
 		return previousMovementPreliminaryAdviceIdentification;
 	}
@@ -1081,6 +1285,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.previousMovementPreliminaryAdviceIdentification = previousMovementPreliminaryAdviceIdentification;
 	}
 
+	@XmlElement(name = "NtfctnId")
 	public DocumentIdentification15 getNotificationIdentification() {
 		return notificationIdentification;
 	}
@@ -1089,6 +1294,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.notificationIdentification = notificationIdentification;
 	}
 
+	@XmlElement(name = "MvmntConfId")
 	public DocumentIdentification15 getMovementConfirmationIdentification() {
 		return movementConfirmationIdentification;
 	}
@@ -1097,6 +1303,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.movementConfirmationIdentification = movementConfirmationIdentification;
 	}
 
+	@XmlElement(name = "InstrId")
 	public DocumentIdentification9 getInstructionIdentification() {
 		return instructionIdentification;
 	}
@@ -1105,6 +1312,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.instructionIdentification = instructionIdentification;
 	}
 
+	@XmlElement(name = "OthrDocId")
 	public List<DocumentIdentification13> getOtherDocumentIdentification() {
 		return otherDocumentIdentification;
 	}
@@ -1113,6 +1321,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.otherDocumentIdentification = otherDocumentIdentification;
 	}
 
+	@XmlElement(name = "EvtsLkg")
 	public List<CorporateActionEventReference1> getEventsLinkage() {
 		return eventsLinkage;
 	}
@@ -1121,6 +1330,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.eventsLinkage = eventsLinkage;
 	}
 
+	@XmlElement(name = "RvslRsn")
 	public CorporateActionReversalReason1 getReversalReason() {
 		return reversalReason;
 	}
@@ -1129,6 +1339,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.reversalReason = reversalReason;
 	}
 
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionGeneralInformation38 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
@@ -1137,6 +1348,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public AccountIdentification18Choice getAccountDetails() {
 		return accountDetails;
 	}
@@ -1145,6 +1357,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "CorpActnMvmntDtls")
 	public List<CorporateActionOption35> getCorporateActionMovementDetails() {
 		return corporateActionMovementDetails;
 	}
@@ -1153,6 +1366,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.corporateActionMovementDetails = corporateActionMovementDetails;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public CorporateActionNarrative6 getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -1161,6 +1375,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "IssrAgt")
 	public List<PartyIdentification46Choice> getIssuerAgent() {
 		return issuerAgent;
 	}
@@ -1169,6 +1384,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.issuerAgent = issuerAgent;
 	}
 
+	@XmlElement(name = "PngAgt")
 	public List<PartyIdentification46Choice> getPayingAgent() {
 		return payingAgent;
 	}
@@ -1177,6 +1393,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.payingAgent = payingAgent;
 	}
 
+	@XmlElement(name = "SubPngAgt")
 	public List<PartyIdentification46Choice> getSubPayingAgent() {
 		return subPayingAgent;
 	}
@@ -1185,6 +1402,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.subPayingAgent = subPayingAgent;
 	}
 
+	@XmlElement(name = "Regar")
 	public PartyIdentification46Choice getRegistrar() {
 		return registrar;
 	}
@@ -1193,6 +1411,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.registrar = registrar;
 	}
 
+	@XmlElement(name = "RsellngAgt")
 	public List<PartyIdentification46Choice> getResellingAgent() {
 		return resellingAgent;
 	}
@@ -1201,6 +1420,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.resellingAgent = resellingAgent;
 	}
 
+	@XmlElement(name = "PhysSctiesAgt")
 	public PartyIdentification46Choice getPhysicalSecuritiesAgent() {
 		return physicalSecuritiesAgent;
 	}
@@ -1209,6 +1429,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.physicalSecuritiesAgent = physicalSecuritiesAgent;
 	}
 
+	@XmlElement(name = "DrpAgt")
 	public PartyIdentification46Choice getDropAgent() {
 		return dropAgent;
 	}
@@ -1217,6 +1438,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.dropAgent = dropAgent;
 	}
 
+	@XmlElement(name = "SlctnAgt")
 	public List<PartyIdentification46Choice> getSolicitationAgent() {
 		return solicitationAgent;
 	}
@@ -1225,6 +1447,7 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.solicitationAgent = solicitationAgent;
 	}
 
+	@XmlElement(name = "InfAgt")
 	public PartyIdentification46Choice getInformationAgent() {
 		return informationAgent;
 	}
@@ -1233,11 +1456,18 @@ public class CorporateActionMovementPreliminaryAdviceV03 {
 		this.informationAgent = informationAgent;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.035.03.03")
+	static public class Document {
+		@XmlElement(name = "CorpActnMvmntPrlimryAdvc", required = true)
+		public CorporateActionMovementPreliminaryAdviceV03 messageBody;
 	}
 }

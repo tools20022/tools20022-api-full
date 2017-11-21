@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics shared by all individual transactions included in the
@@ -95,6 +99,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GroupHeader1", propOrder = {"messageIdentification", "creationDateTime", "authorisation", "batchBooking", "numberOfTransactions", "controlSum", "grouping", "initiatingParty", "forwardingAgent"})
 public class GroupHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -544,6 +550,7 @@ public class GroupHeader1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -552,6 +559,7 @@ public class GroupHeader1 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -560,6 +568,7 @@ public class GroupHeader1 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "Authstn")
 	public List<Max128Text> getAuthorisation() {
 		return authorisation;
 	}
@@ -568,6 +577,7 @@ public class GroupHeader1 {
 		this.authorisation = authorisation;
 	}
 
+	@XmlElement(name = "BtchBookg")
 	public BatchBookingIndicator getBatchBooking() {
 		return batchBooking;
 	}
@@ -576,6 +586,7 @@ public class GroupHeader1 {
 		this.batchBooking = batchBooking;
 	}
 
+	@XmlElement(name = "NbOfTxs", required = true)
 	public Max15NumericText getNumberOfTransactions() {
 		return numberOfTransactions;
 	}
@@ -584,6 +595,7 @@ public class GroupHeader1 {
 		this.numberOfTransactions = numberOfTransactions;
 	}
 
+	@XmlElement(name = "CtrlSum")
 	public DecimalNumber getControlSum() {
 		return controlSum;
 	}
@@ -592,6 +604,7 @@ public class GroupHeader1 {
 		this.controlSum = controlSum;
 	}
 
+	@XmlElement(name = "Grpg", required = true)
 	public Grouping1Code getGrouping() {
 		return grouping;
 	}
@@ -600,6 +613,7 @@ public class GroupHeader1 {
 		this.grouping = grouping;
 	}
 
+	@XmlElement(name = "InitgPty", required = true)
 	public PartyIdentification8 getInitiatingParty() {
 		return initiatingParty;
 	}
@@ -608,6 +622,7 @@ public class GroupHeader1 {
 		this.initiatingParty = initiatingParty;
 	}
 
+	@XmlElement(name = "FwdgAgt")
 	public BranchAndFinancialInstitutionIdentification3 getForwardingAgent() {
 		return forwardingAgent;
 	}

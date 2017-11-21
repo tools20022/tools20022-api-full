@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the requested reporting period.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the requested reporting period."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportingPeriod1", propOrder = {"fromToDate", "fromToTime", "type"})
 public class ReportingPeriod1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -221,6 +227,7 @@ public class ReportingPeriod1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrToDt", required = true)
 	public DatePeriodDetails1 getFromToDate() {
 		return fromToDate;
 	}
@@ -229,6 +236,7 @@ public class ReportingPeriod1 {
 		this.fromToDate = fromToDate;
 	}
 
+	@XmlElement(name = "FrToTm", required = true)
 	public TimePeriodDetails1 getFromToTime() {
 		return fromToTime;
 	}
@@ -237,6 +245,7 @@ public class ReportingPeriod1 {
 		this.fromToTime = fromToTime;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public QueryType3Code getType() {
 		return type;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Location on the Earth specified by the Universal Transverse Mercator
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UTMCoordinates1", propOrder = {"UTMZone", "UTMEastward", "UTMNorthward"})
 public class UTMCoordinates1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -211,6 +217,7 @@ public class UTMCoordinates1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UTMZone", required = true)
 	public Max16Text getUTMZone() {
 		return uTMZone;
 	}
@@ -219,6 +226,7 @@ public class UTMCoordinates1 {
 		this.uTMZone = uTMZone;
 	}
 
+	@XmlElement(name = "UTMEstwrd", required = true)
 	public Number getUTMEastward() {
 		return uTMEastward;
 	}
@@ -227,6 +235,7 @@ public class UTMCoordinates1 {
 		this.uTMEastward = uTMEastward;
 	}
 
+	@XmlElement(name = "UTMNrthwrd", required = true)
 	public Number getUTMNorthward() {
 		return uTMNorthward;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SystemIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a POI (Point of Interaction) component.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identification of a POI (Point of Interaction) component."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PointOfInteractionComponentIdentification1", propOrder = {"itemNumber", "providerIdentification", "identification", "serialNumber"})
 public class PointOfInteractionComponentIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -280,6 +286,7 @@ public class PointOfInteractionComponentIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ItmNb")
 	public Max35Text getItemNumber() {
 		return itemNumber;
 	}
@@ -288,6 +295,7 @@ public class PointOfInteractionComponentIdentification1 {
 		this.itemNumber = itemNumber;
 	}
 
+	@XmlElement(name = "PrvdrId")
 	public Max35Text getProviderIdentification() {
 		return providerIdentification;
 	}
@@ -296,6 +304,7 @@ public class PointOfInteractionComponentIdentification1 {
 		this.providerIdentification = providerIdentification;
 	}
 
+	@XmlElement(name = "Id")
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -304,6 +313,7 @@ public class PointOfInteractionComponentIdentification1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SrlNb")
 	public Max35Text getSerialNumber() {
 		return serialNumber;
 	}

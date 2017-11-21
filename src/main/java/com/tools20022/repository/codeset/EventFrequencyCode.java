@@ -29,31 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency2Code
- * EventFrequency2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency5Code
- * EventFrequency5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency1Code
- * EventFrequency1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency3Code
- * EventFrequency3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency4Code
- * EventFrequency4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency7Code
- * EventFrequency7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency6Code
- * EventFrequency6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency8Code
- * EventFrequency8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency10Code
- * EventFrequency10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency9Code
- * EventFrequency9Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -104,6 +79,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * EventFrequencyCode.mmEveryTwoYears}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.EventFrequencyCode#mmNone
  * EventFrequencyCode.mmNone}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency2Code
+ * EventFrequency2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency5Code
+ * EventFrequency5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency1Code
+ * EventFrequency1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency3Code
+ * EventFrequency3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency4Code
+ * EventFrequency4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency7Code
+ * EventFrequency7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency6Code
+ * EventFrequency6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency8Code
+ * EventFrequency8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency10Code
+ * EventFrequency10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency9Code
+ * EventFrequency9Code}</li>
  * </ul>
  * </li>
  * <li>

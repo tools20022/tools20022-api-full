@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Legally constituted organization specified for this party.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * LegalOrganisation1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LegalOrganisation2", propOrder = {"identification", "name", "establishmentDate", "registrationDate"})
 public class LegalOrganisation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -296,6 +302,7 @@ public class LegalOrganisation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -304,6 +311,7 @@ public class LegalOrganisation2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max140Text getName() {
 		return name;
 	}
@@ -312,6 +320,7 @@ public class LegalOrganisation2 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "EstblishmtDt")
 	public ISODate getEstablishmentDate() {
 		return establishmentDate;
 	}
@@ -320,6 +329,7 @@ public class LegalOrganisation2 {
 		this.establishmentDate = establishmentDate;
 	}
 
+	@XmlElement(name = "RegnDt")
 	public ISODate getRegistrationDate() {
 		return registrationDate;
 	}

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.ProceedsDefinition;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -43,6 +44,50 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmCashIncentiveRate
+ * CashProceedsDefinition.mmCashIncentiveRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmContractualPaymentIndicator
+ * CashProceedsDefinition.mmContractualPaymentIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIncomeType
+ * CashProceedsDefinition.mmIncomeType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIndemnityAmount
+ * CashProceedsDefinition.mmIndemnityAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmCashIncentiveAmount
+ * CashProceedsDefinition.mmCashIncentiveAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmPrincipalOrCorpus
+ * CashProceedsDefinition.mmPrincipalOrCorpus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmRedemptionPremiumAmount
+ * CashProceedsDefinition.mmRedemptionPremiumAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIncomePortion
+ * CashProceedsDefinition.mmIncomePortion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmInterest
+ * CashProceedsDefinition.mmInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmAmount
+ * CashProceedsDefinition.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmDividend
+ * CashProceedsDefinition.mmDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmPaymentCurrency
+ * CashProceedsDefinition.mmPaymentCurrency}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.ProceedsDefinition
+ * ProceedsDefinition}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -280,50 +325,6 @@ import java.util.List;
  * CorporateActionOption133.mmCashMovementDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.ProceedsDefinition
- * ProceedsDefinition}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmCashIncentiveRate
- * CashProceedsDefinition.mmCashIncentiveRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmContractualPaymentIndicator
- * CashProceedsDefinition.mmContractualPaymentIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIncomeType
- * CashProceedsDefinition.mmIncomeType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIndemnityAmount
- * CashProceedsDefinition.mmIndemnityAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmCashIncentiveAmount
- * CashProceedsDefinition.mmCashIncentiveAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmPrincipalOrCorpus
- * CashProceedsDefinition.mmPrincipalOrCorpus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmRedemptionPremiumAmount
- * CashProceedsDefinition.mmRedemptionPremiumAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIncomePortion
- * CashProceedsDefinition.mmIncomePortion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmInterest
- * CashProceedsDefinition.mmInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmAmount
- * CashProceedsDefinition.mmAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmDividend
- * CashProceedsDefinition.mmDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmPaymentCurrency
- * CashProceedsDefinition.mmPaymentCurrency}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -356,11 +357,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
-	 * CashProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -445,6 +441,11 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
+	 * CashProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -465,7 +466,7 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					RateDetails14.mmThirdPartyIncentiveRate, RateDetails18.mmThirdPartyIncentiveRate, RateDetails21.mmThirdPartyIncentiveRate, RateDetails23.mmThirdPartyIncentiveRate, RateDetails22.mmThirdPartyIncentiveRate,
 					RateDetails24.mmThirdPartyIncentiveRate, RateDetails25.mmThirdPartyIncentiveRate, RateDetails26.mmThirdPartyIncentiveRate, RateDetails27.mmThirdPartyIncentiveRate, RateDetails28.mmThirdPartyIncentiveRate,
 					RateDetails30.mmThirdPartyIncentiveRate);
-			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashIncentiveRate";
@@ -473,6 +474,14 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashProceedsDefinition.class.getMethod("getCashIncentiveRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PaymentCode contractualPaymentIndicator;
@@ -485,11 +494,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.PaymentCode
 	 * PaymentCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
-	 * CashProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -586,6 +590,11 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
+	 * CashProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -605,7 +614,7 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					CashOption38.mmContractualPaymentIndicator, CashOption39.mmContractualPaymentIndicator, CashOption41.mmContractualPaymentIndicator, CashOption44.mmContractualPaymentIndicator, CashOption42.mmContractualPaymentIndicator,
 					CashOption46.mmContractualPaymentIndicator, CashOption47.mmContractualPaymentIndicator, CashOption52.mmContractualPaymentIndicator, CashOption51.mmContractualPaymentIndicator, CashOption54.mmContractualPaymentIndicator,
 					CashOption55.mmContractualPaymentIndicator);
-			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ContractualPaymentIndicator";
@@ -613,6 +622,14 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashProceedsDefinition.class.getMethod("getContractualPaymentIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected GenericIdentification incomeType;
@@ -636,11 +653,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
 	 * GenericIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
-	 * CashProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -762,6 +774,11 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
+	 * CashProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -784,7 +801,7 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					CashOption46.mmIncomeType, SecuritiesOption55.mmIncomeType, CashOption49.mmIncomeType, CashOption47.mmIncomeType, SecuritiesOption57.mmIncomeType, CashOption52.mmIncomeType, SecuritiesOption60.mmIncomeType,
 					CashOption51.mmIncomeType, SecuritiesOption59.mmIncomeType, CashOption50.mmIncomeType, CashOption53.mmIncomeType, SecuritiesOption61.mmIncomeType, SecuritiesOption63.mmIncomeType, CashOption54.mmIncomeType,
 					CashOption55.mmIncomeType);
-			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncomeType";
@@ -808,11 +825,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
-	 * CashProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -930,6 +942,11 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
+	 * CashProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -952,7 +969,7 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					CorporateActionAmounts1.mmIndemnityAmount, CorporateActionAmounts29.mmIndemnityAmount, CorporateActionAmounts27.mmIndemnityAmount, CorporateActionAmounts28.mmIndemnityAmount, CorporateActionAmounts33.mmIndemnityAmount,
 					CorporateActionAmounts32.mmIndemnityAmount, CorporateActionAmounts35.mmIndemnityAmount, CorporateActionAmounts37.mmIndemnityAmount, CorporateActionAmounts36.mmIndemnityAmount, CorporateActionAmounts38.mmIndemnityAmount,
 					CorporateActionAmounts39.mmIndemnityAmount, CorporateActionAmounts41.mmIndemnityAmount, CorporateActionAmounts40.mmIndemnityAmount);
-			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndemnityAmount";
@@ -960,6 +977,14 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashProceedsDefinition.class.getMethod("getIndemnityAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ActiveCurrencyAndAmount cashIncentiveAmount;
@@ -974,11 +999,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
-	 * CashProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1045,6 +1065,11 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
+	 * CashProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1064,7 +1089,7 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					CorporateActionAmounts13.mmCashIncentive, CorporateActionAmounts16.mmCashIncentive, CorporateActionAmounts19.mmCashIncentive, CorporateActionAmounts4.mmCashIncentive, CorporateActionAmounts7.mmCashIncentive,
 					CorporateActionAmounts10.mmCashIncentive, CorporateActionAmounts14.mmCashIncentive, CorporateActionAmounts15.mmCashIncentive, CorporateActionAmounts18.mmCashIncentive, CorporateActionRate2.mmCashIncentive,
 					CorporateActionAmounts1.mmCashIncentive);
-			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashIncentiveAmount";
@@ -1072,6 +1097,14 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashProceedsDefinition.class.getMethod("getCashIncentiveAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount principalOrCorpus;
@@ -1086,11 +1119,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
-	 * CashProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1172,6 +1200,11 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
+	 * CashProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1193,7 +1226,7 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					CorporateActionAmounts1.mmPrincipalOrCorpus, CorporateActionAmounts29.mmPrincipalOrCorpus, CorporateActionAmounts27.mmPrincipalOrCorpus, CorporateActionAmounts32.mmPrincipalOrCorpus,
 					CorporateActionAmounts35.mmPrincipalOrCorpus, CorporateActionAmounts37.mmPrincipalOrCorpus, CorporateActionAmounts36.mmPrincipalOrCorpus, CorporateActionAmounts39.mmPrincipalOrCorpus,
 					CorporateActionAmounts41.mmPrincipalOrCorpus);
-			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PrincipalOrCorpus";
@@ -1201,6 +1234,14 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashProceedsDefinition.class.getMethod("getPrincipalOrCorpus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount redemptionPremiumAmount;
@@ -1215,11 +1256,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
-	 * CashProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1301,6 +1337,11 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
+	 * CashProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1322,7 +1363,7 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					CorporateActionAmounts26.mmRedemptionPremiumAmount, CorporateActionAmounts1.mmRedemptionPremiumAmount, CorporateActionAmounts29.mmRedemptionPremiumAmount, CorporateActionAmounts27.mmRedemptionPremiumAmount,
 					CorporateActionAmounts32.mmRedemptionPremiumAmount, CorporateActionAmounts35.mmRedemptionPremiumAmount, CorporateActionAmounts37.mmRedemptionPremiumAmount, CorporateActionAmounts36.mmRedemptionPremiumAmount,
 					CorporateActionAmounts39.mmRedemptionPremiumAmount, CorporateActionAmounts41.mmRedemptionPremiumAmount);
-			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RedemptionPremiumAmount";
@@ -1330,6 +1371,14 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashProceedsDefinition.class.getMethod("getRedemptionPremiumAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount incomePortion;
@@ -1344,11 +1393,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
-	 * CashProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1463,6 +1507,11 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
+	 * CashProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1485,7 +1534,7 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					CorporateActionAmounts29.mmIncomePortion, CorporateActionAmounts27.mmIncomePortion, CorporateActionAmounts28.mmIncomePortion, CorporateActionAmounts33.mmIncomePortion, CorporateActionAmounts32.mmIncomePortion,
 					CorporateActionAmounts35.mmIncomePortion, CorporateActionAmounts37.mmIncomePortion, CorporateActionAmounts36.mmIncomePortion, CorporateActionAmounts38.mmIncomePortion, CorporateActionAmounts39.mmIncomePortion,
 					CorporateActionAmounts41.mmIncomePortion, CorporateActionAmounts40.mmIncomePortion);
-			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncomePortion";
@@ -1493,6 +1542,14 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashProceedsDefinition.class.getMethod("getIncomePortion", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Interest> interest;
@@ -1512,11 +1569,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Interest Interest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
-	 * CashProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1562,6 +1614,11 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
+	 * CashProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1577,7 +1634,7 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate3.mmInterest, CorporateActionRate14.mmInterest, CorporateActionRate16.mmInterest, CorporateActionRate24.mmInterest, CorporateActionRate27.mmInterest,
 					CorporateActionRate32.mmInterest, CorporateActionRate35.mmInterest, CorporateActionRate41.mmInterest, CorporateActionRate1.mmInterest, CorporateActionRate43.mmInterest, CorporateActionRate56.mmInterest,
 					CorporateActionRate66.mmInterest, CorporateActionRate78.mmInterest);
-			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
@@ -1617,7 +1674,7 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -1625,6 +1682,14 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashProceedsDefinition.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Dividend> dividend;
@@ -1666,7 +1731,7 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 */
 	public static final MMBusinessAssociationEnd mmDividend = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Dividend";
@@ -1705,7 +1770,7 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 */
 	public static final MMBusinessAttribute mmPaymentCurrency = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentCurrency";
@@ -1713,6 +1778,14 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashProceedsDefinition.class.getMethod("getPaymentCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1740,9 +1813,12 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 						CorporateActionOption132.mmCashMovementDetails, CorporateActionOption130.mmCashMovementDetails, CorporateActionOption129.mmCashMovementDetails, CorporateActionOption136.mmCashMovementDetails,
 						CorporateActionOption135.mmCashMovementDetails, CorporateActionOption133.mmCashMovementDetails);
 				superType_lazy = () -> ProceedsDefinition.mmObject();
-				element_lazy = () -> Arrays.asList(CashProceedsDefinition.mmCashIncentiveRate, CashProceedsDefinition.mmContractualPaymentIndicator, CashProceedsDefinition.mmIncomeType, CashProceedsDefinition.mmIndemnityAmount,
-						CashProceedsDefinition.mmCashIncentiveAmount, CashProceedsDefinition.mmPrincipalOrCorpus, CashProceedsDefinition.mmRedemptionPremiumAmount, CashProceedsDefinition.mmIncomePortion, CashProceedsDefinition.mmInterest,
-						CashProceedsDefinition.mmAmount, CashProceedsDefinition.mmDividend, CashProceedsDefinition.mmPaymentCurrency);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashProceedsDefinition.mmCashIncentiveRate, com.tools20022.repository.entity.CashProceedsDefinition.mmContractualPaymentIndicator,
+						com.tools20022.repository.entity.CashProceedsDefinition.mmIncomeType, com.tools20022.repository.entity.CashProceedsDefinition.mmIndemnityAmount,
+						com.tools20022.repository.entity.CashProceedsDefinition.mmCashIncentiveAmount, com.tools20022.repository.entity.CashProceedsDefinition.mmPrincipalOrCorpus,
+						com.tools20022.repository.entity.CashProceedsDefinition.mmRedemptionPremiumAmount, com.tools20022.repository.entity.CashProceedsDefinition.mmIncomePortion,
+						com.tools20022.repository.entity.CashProceedsDefinition.mmInterest, com.tools20022.repository.entity.CashProceedsDefinition.mmAmount, com.tools20022.repository.entity.CashProceedsDefinition.mmDividend,
+						com.tools20022.repository.entity.CashProceedsDefinition.mmPaymentCurrency);
 				derivationComponent_lazy = () -> Arrays.asList(CashOption2.mmObject(), CashOption9.mmObject(), CashOption12.mmObject(), CashOption13.mmObject(), CashOption18.mmObject(), CashOption22.mmObject(), CashOption26.mmObject(),
 						CashOption27.mmObject(), CashOption3.mmObject(), CashOption6.mmObject(), CashOption11.mmObject(), CashOption14.mmObject(), CashOption16.mmObject(), CashOption20.mmObject(), CashOption25.mmObject(),
 						CashOption28.mmObject(), CashOption5.mmObject(), CashOption7.mmObject(), CashOption19.mmObject(), CashOption23.mmObject(), CashOption4.mmObject(), CashOption8.mmObject(), CashOption10.mmObject(),
@@ -1750,6 +1826,11 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 						CashOption31.mmObject(), CashOption32.mmObject(), CashOption36.mmObject(), CashOption35.mmObject(), CashOption38.mmObject(), CashOption39.mmObject(), CashOption41.mmObject(), CashOption44.mmObject(),
 						CashOption45.mmObject(), CashOption42.mmObject(), CashOption43.mmObject(), CashOption46.mmObject(), CashOption49.mmObject(), CashOption47.mmObject(), CashOption48.mmObject(), CashOption52.mmObject(),
 						CashOption51.mmObject(), CashOption50.mmObject(), CashOption53.mmObject(), CashOption54.mmObject(), CashOption55.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CashProceedsDefinition.class;
 			}
 		});
 		return mmObject_lazy.get();

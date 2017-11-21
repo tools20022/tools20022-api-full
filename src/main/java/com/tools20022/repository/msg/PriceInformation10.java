@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money for which goods or services are offered, sold, or bought.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Amount of money for which goods or services are offered, sold, or bought."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceInformation10", propOrder = {"currentPrice", "type", "previousPrice", "amountOfChange"})
 public class PriceInformation10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -283,6 +289,7 @@ public class PriceInformation10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CurPric", required = true)
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getCurrentPrice() {
 		return currentPrice;
 	}
@@ -291,6 +298,7 @@ public class PriceInformation10 {
 		this.currentPrice = currentPrice;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TypeOfPrice27Choice getType() {
 		return type;
 	}
@@ -299,6 +307,7 @@ public class PriceInformation10 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "PrvsPric")
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getPreviousPrice() {
 		return previousPrice;
 	}
@@ -307,6 +316,7 @@ public class PriceInformation10 {
 		this.previousPrice = previousPrice;
 	}
 
+	@XmlElement(name = "AmtOfChng")
 	public PriceValueAndRate4 getAmountOfChange() {
 		return amountOfChange;
 	}

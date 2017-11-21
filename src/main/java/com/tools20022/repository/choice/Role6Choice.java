@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for a party role.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Role2Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Role6Choice", propOrder = {"code", "proprietary", "text"})
 public class Role6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -241,6 +247,7 @@ public class Role6Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public InvestmentFundRole2Code getCode() {
 		return code;
 	}
@@ -249,6 +256,7 @@ public class Role6Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification30 getProprietary() {
 		return proprietary;
 	}
@@ -257,6 +265,7 @@ public class Role6Choice {
 		this.proprietary = proprietary;
 	}
 
+	@XmlElement(name = "Txt", required = true)
 	public Max350Text getText() {
 		return text;
 	}

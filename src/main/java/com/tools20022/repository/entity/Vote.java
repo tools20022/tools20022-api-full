@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -35,30 +36,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Vote1 Vote1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote4 Vote4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote7 Vote7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote6 Vote6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote8 Vote8}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Resolution#mmCastVotes
- * Resolution.mmCastVotes}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmVotePerResolution
- * VoteInstructionRequest.mmVotePerResolution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.VoteResult#mmVote
- * VoteResult.mmVote}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -89,6 +66,30 @@ import java.util.List;
  * Vote.mmWithdrawn}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Vote#mmThreeYears
  * Vote.mmThreeYears}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote1 Vote1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote4 Vote4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote7 Vote7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote6 Vote6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote8 Vote8}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Resolution#mmCastVotes
+ * Resolution.mmCastVotes}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmVotePerResolution
+ * VoteInstructionRequest.mmVotePerResolution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.VoteResult#mmVote
+ * VoteResult.mmVote}</li>
  * </ul>
  * </li>
  * <li>
@@ -145,7 +146,7 @@ public class Vote {
 	 */
 	public static final MMBusinessAssociationEnd mmVoteRequest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Vote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteRequest";
@@ -167,10 +168,6 @@ public class Vote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -182,6 +179,10 @@ public class Vote {
 	 * <li>{@linkplain com.tools20022.repository.msg.Vote6#mmFor Vote6.mmFor}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Vote8#mmFor Vote8.mmFor}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -197,7 +198,7 @@ public class Vote {
 	public static final MMBusinessAttribute mmFor = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote1.mmFor, Vote4.mmFor, Vote2.mmFor, Vote5.mmFor, Vote7.mmFor, Vote6.mmFor, Vote8.mmFor);
-			elementContext_lazy = () -> Vote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "For";
@@ -205,6 +206,14 @@ public class Vote {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Vote.class.getMethod("getFor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number against;
@@ -217,10 +226,6 @@ public class Vote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -241,6 +246,10 @@ public class Vote {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -254,7 +263,7 @@ public class Vote {
 	public static final MMBusinessAttribute mmAgainst = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote1.mmAgainst, Vote4.mmAgainst, Vote2.mmAgainst, Vote5.mmAgainst, Vote7.mmAgainst, Vote6.mmAgainst, Vote8.mmAgainst);
-			elementContext_lazy = () -> Vote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Against";
@@ -262,6 +271,14 @@ public class Vote {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Vote.class.getMethod("getAgainst", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number abstain;
@@ -274,10 +291,6 @@ public class Vote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -298,6 +311,10 @@ public class Vote {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -311,7 +328,7 @@ public class Vote {
 	public static final MMBusinessAttribute mmAbstain = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote1.mmAbstain, Vote4.mmAbstain, Vote2.mmAbstain, Vote5.mmAbstain, Vote7.mmAbstain, Vote6.mmAbstain, Vote8.mmAbstain);
-			elementContext_lazy = () -> Vote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Abstain";
@@ -319,6 +336,14 @@ public class Vote {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Vote.class.getMethod("getAbstain", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number withhold;
@@ -331,10 +356,6 @@ public class Vote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -355,6 +376,10 @@ public class Vote {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -368,7 +393,7 @@ public class Vote {
 	public static final MMBusinessAttribute mmWithhold = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote1.mmWithhold, Vote4.mmWithhold, Vote2.mmWithhold, Vote5.mmWithhold, Vote7.mmWithhold, Vote6.mmWithhold, Vote8.mmWithhold);
-			elementContext_lazy = () -> Vote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Withhold";
@@ -376,6 +401,14 @@ public class Vote {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Vote.class.getMethod("getWithhold", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number withManagement;
@@ -388,10 +421,6 @@ public class Vote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -404,6 +433,10 @@ public class Vote {
 	 * <li>{@linkplain com.tools20022.repository.msg.Vote8#mmWithManagement
 	 * Vote8.mmWithManagement}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -420,7 +453,7 @@ public class Vote {
 	public static final MMBusinessAttribute mmWithManagement = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote1.mmWithManagement, Vote4.mmWithManagement, Vote6.mmWithManagement, Vote8.mmWithManagement);
-			elementContext_lazy = () -> Vote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WithManagement";
@@ -428,6 +461,14 @@ public class Vote {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Vote.class.getMethod("getWithManagement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number againstManagement;
@@ -440,10 +481,6 @@ public class Vote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -456,6 +493,10 @@ public class Vote {
 	 * <li>{@linkplain com.tools20022.repository.msg.Vote8#mmAgainstManagement
 	 * Vote8.mmAgainstManagement}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -472,7 +513,7 @@ public class Vote {
 	public static final MMBusinessAttribute mmAgainstManagement = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote1.mmAgainstManagement, Vote4.mmAgainstManagement, Vote6.mmAgainstManagement, Vote8.mmAgainstManagement);
-			elementContext_lazy = () -> Vote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AgainstManagement";
@@ -480,6 +521,14 @@ public class Vote {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Vote.class.getMethod("getAgainstManagement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Resolution> resolution;
@@ -517,7 +566,7 @@ public class Vote {
 	 */
 	public static final MMBusinessAssociationEnd mmResolution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Vote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Resolution";
@@ -538,10 +587,6 @@ public class Vote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -558,6 +603,10 @@ public class Vote {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -571,7 +620,7 @@ public class Vote {
 	public static final MMBusinessAttribute mmNoAction = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote4.mmNoAction, Vote5.mmNoAction, Vote7.mmNoAction, Vote6.mmNoAction, Vote8.mmNoAction);
-			elementContext_lazy = () -> Vote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoAction";
@@ -579,6 +628,14 @@ public class Vote {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Vote.class.getMethod("getNoAction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected VoteResult result;
@@ -617,7 +674,7 @@ public class Vote {
 	 */
 	public static final MMBusinessAssociationEnd mmResult = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Vote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Result";
@@ -640,10 +697,6 @@ public class Vote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -654,6 +707,10 @@ public class Vote {
 	 * <li>{@linkplain com.tools20022.repository.msg.Vote8#mmTwoYears
 	 * Vote8.mmTwoYears}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -671,7 +728,7 @@ public class Vote {
 	public static final MMBusinessAttribute mmTwoYears = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote7.mmTwoYears, Vote6.mmTwoYears, Vote8.mmTwoYears);
-			elementContext_lazy = () -> Vote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TwoYears";
@@ -679,6 +736,14 @@ public class Vote {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Vote.class.getMethod("getTwoYears", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number oneYear;
@@ -692,10 +757,6 @@ public class Vote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -706,6 +767,10 @@ public class Vote {
 	 * <li>{@linkplain com.tools20022.repository.msg.Vote8#mmOneYear
 	 * Vote8.mmOneYear}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -723,7 +788,7 @@ public class Vote {
 	public static final MMBusinessAttribute mmOneYear = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote7.mmOneYear, Vote6.mmOneYear, Vote8.mmOneYear);
-			elementContext_lazy = () -> Vote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OneYear";
@@ -731,6 +796,14 @@ public class Vote {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Vote.class.getMethod("getOneYear", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator withdrawn;
@@ -744,16 +817,16 @@ public class Vote {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.Vote6#mmWithdrawn
 	 * Vote6.mmWithdrawn}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -769,7 +842,7 @@ public class Vote {
 	public static final MMBusinessAttribute mmWithdrawn = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote6.mmWithdrawn);
-			elementContext_lazy = () -> Vote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Withdrawn";
@@ -777,6 +850,14 @@ public class Vote {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Vote.class.getMethod("getWithdrawn", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number threeYears;
@@ -790,10 +871,6 @@ public class Vote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -804,6 +881,10 @@ public class Vote {
 	 * <li>{@linkplain com.tools20022.repository.msg.Vote8#mmThreeYears
 	 * Vote8.mmThreeYears}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Vote Vote}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -821,7 +902,7 @@ public class Vote {
 	public static final MMBusinessAttribute mmThreeYears = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote7.mmThreeYears, Vote6.mmThreeYears, Vote8.mmThreeYears);
-			elementContext_lazy = () -> Vote.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ThreeYears";
@@ -829,6 +910,14 @@ public class Vote {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Vote.class.getMethod("getThreeYears", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -841,9 +930,16 @@ public class Vote {
 				definition = "Number of votes assigned to each voting option.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Resolution.mmCastVotes, com.tools20022.repository.entity.VoteInstructionRequest.mmVotePerResolution,
 						com.tools20022.repository.entity.VoteResult.mmVote);
-				element_lazy = () -> Arrays.asList(Vote.mmVoteRequest, Vote.mmFor, Vote.mmAgainst, Vote.mmAbstain, Vote.mmWithhold, Vote.mmWithManagement, Vote.mmAgainstManagement, Vote.mmResolution, Vote.mmNoAction, Vote.mmResult,
-						Vote.mmTwoYears, Vote.mmOneYear, Vote.mmWithdrawn, Vote.mmThreeYears);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Vote.mmVoteRequest, com.tools20022.repository.entity.Vote.mmFor, com.tools20022.repository.entity.Vote.mmAgainst,
+						com.tools20022.repository.entity.Vote.mmAbstain, com.tools20022.repository.entity.Vote.mmWithhold, com.tools20022.repository.entity.Vote.mmWithManagement, com.tools20022.repository.entity.Vote.mmAgainstManagement,
+						com.tools20022.repository.entity.Vote.mmResolution, com.tools20022.repository.entity.Vote.mmNoAction, com.tools20022.repository.entity.Vote.mmResult, com.tools20022.repository.entity.Vote.mmTwoYears,
+						com.tools20022.repository.entity.Vote.mmOneYear, com.tools20022.repository.entity.Vote.mmWithdrawn, com.tools20022.repository.entity.Vote.mmThreeYears);
 				derivationComponent_lazy = () -> Arrays.asList(Vote1.mmObject(), Vote4.mmObject(), Vote7.mmObject(), Vote6.mmObject(), Vote8.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Vote.class;
 			}
 		});
 		return mmObject_lazy.get();

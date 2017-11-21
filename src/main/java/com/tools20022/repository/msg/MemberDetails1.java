@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the members of a system.
@@ -69,6 +73,8 @@ import java.util.List;
  * definition} = "Information about the members of a system."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MemberDetails1", propOrder = {"memberReturnAddress", "contactReference", "communicationAddress"})
 public class MemberDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class MemberDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MmbRtrAdr")
 	public List<MemberIdentificationChoice> getMemberReturnAddress() {
 		return memberReturnAddress;
 	}
@@ -238,6 +245,7 @@ public class MemberDetails1 {
 		this.memberReturnAddress = memberReturnAddress;
 	}
 
+	@XmlElement(name = "CtctRef")
 	public List<ContactIdentificationAndAddress> getContactReference() {
 		return contactReference;
 	}
@@ -246,6 +254,7 @@ public class MemberDetails1 {
 		this.contactReference = contactReference;
 	}
 
+	@XmlElement(name = "ComAdr")
 	public CommunicationAddressDetails getCommunicationAddress() {
 		return communicationAddress;
 	}

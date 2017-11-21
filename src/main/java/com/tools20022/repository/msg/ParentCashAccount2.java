@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the cash account elements of a parent cash account.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ParentCashAccount1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ParentCashAccount2", propOrder = {"level", "identification", "servicer"})
 public class ParentCashAccount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -251,6 +257,7 @@ public class ParentCashAccount2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Lvl")
 	public AccountLevel1Code getLevel() {
 		return level;
 	}
@@ -259,6 +266,7 @@ public class ParentCashAccount2 {
 		this.level = level;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public CashAccount24 getIdentification() {
 		return identification;
 	}
@@ -267,6 +275,7 @@ public class ParentCashAccount2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Svcr")
 	public BranchAndFinancialInstitutionIdentification5 getServicer() {
 		return servicer;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference information concerning the original payment initiation, to which
@@ -87,6 +91,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * UnderlyingPaymentInstruction2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnderlyingPaymentInstruction3", propOrder = {"originalGroupInformation", "originalPaymentInformationIdentification", "originalInstructionIdentification", "originalEndToEndIdentification", "originalInstructedAmount",
+		"requestedExecutionDate", "requestedCollectionDate"})
 public class UnderlyingPaymentInstruction3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -500,6 +507,7 @@ public class UnderlyingPaymentInstruction3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlGrpInf")
 	public UnderlyingGroupInformation1 getOriginalGroupInformation() {
 		return originalGroupInformation;
 	}
@@ -508,6 +516,7 @@ public class UnderlyingPaymentInstruction3 {
 		this.originalGroupInformation = originalGroupInformation;
 	}
 
+	@XmlElement(name = "OrgnlPmtInfId")
 	public Max35Text getOriginalPaymentInformationIdentification() {
 		return originalPaymentInformationIdentification;
 	}
@@ -516,6 +525,7 @@ public class UnderlyingPaymentInstruction3 {
 		this.originalPaymentInformationIdentification = originalPaymentInformationIdentification;
 	}
 
+	@XmlElement(name = "OrgnlInstrId")
 	public Max35Text getOriginalInstructionIdentification() {
 		return originalInstructionIdentification;
 	}
@@ -524,6 +534,7 @@ public class UnderlyingPaymentInstruction3 {
 		this.originalInstructionIdentification = originalInstructionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlEndToEndId")
 	public Max35Text getOriginalEndToEndIdentification() {
 		return originalEndToEndIdentification;
 	}
@@ -532,6 +543,7 @@ public class UnderlyingPaymentInstruction3 {
 		this.originalEndToEndIdentification = originalEndToEndIdentification;
 	}
 
+	@XmlElement(name = "OrgnlInstdAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getOriginalInstructedAmount() {
 		return originalInstructedAmount;
 	}
@@ -540,6 +552,7 @@ public class UnderlyingPaymentInstruction3 {
 		this.originalInstructedAmount = originalInstructedAmount;
 	}
 
+	@XmlElement(name = "ReqdExctnDt")
 	public DateAndDateTimeChoice getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -548,6 +561,7 @@ public class UnderlyingPaymentInstruction3 {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "ReqdColltnDt")
 	public ISODate getRequestedCollectionDate() {
 		return requestedCollectionDate;
 	}

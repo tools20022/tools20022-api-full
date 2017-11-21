@@ -37,6 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementSystem#mmSettlementParty
+ * SecuritiesSettlementSystem.mmSettlementParty}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.System System}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -106,16 +116,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ReceivingPartiesAndAccount13.mmSecuritiesSettlementSystem}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.System System}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementSystem#mmSettlementParty
- * SecuritiesSettlementSystem.mmSettlementParty}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -171,7 +171,7 @@ public class SecuritiesSettlementSystem extends System {
 	 */
 	public static final MMBusinessAssociationEnd mmSettlementParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesSettlementSystem.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementParty";
@@ -199,7 +199,12 @@ public class SecuritiesSettlementSystem extends System {
 						ReceivingPartiesAndAccount11.mmSecuritiesSettlementSystem, DeliveringPartiesAndAccount11.mmSecuritiesSettlementSystem, DeliveringPartiesAndAccount14.mmSecuritiesSettlementSystem,
 						DeliveringPartiesAndAccount13.mmSecuritiesSettlementSystem, ReceivingPartiesAndAccount14.mmSecuritiesSettlementSystem, ReceivingPartiesAndAccount13.mmSecuritiesSettlementSystem);
 				superType_lazy = () -> System.mmObject();
-				element_lazy = () -> Arrays.asList(SecuritiesSettlementSystem.mmSettlementParty);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlementSystem.mmSettlementParty);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesSettlementSystem.class;
 			}
 		});
 		return mmObject_lazy.get();

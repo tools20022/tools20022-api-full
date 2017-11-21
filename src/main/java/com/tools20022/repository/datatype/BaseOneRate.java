@@ -62,6 +62,8 @@ public class BaseOneRate {
 				name = "BaseOneRate";
 				definition = "Rate expressed as a decimal, eg, 0.7 is 7/10 and 70%.";
 				baseValue = 1.0;
+				totalDigits = 11;
+				fractionDigits = 10;
 			}
 		});
 		return mmObject_lazy.get();

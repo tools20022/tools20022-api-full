@@ -25,9 +25,11 @@ import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.choice.BankContactPerson1Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -62,9 +64,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.012.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -112,6 +111,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.012.001.05}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -127,6 +129,9 @@ import java.util.List;
  * BaselineReSubmissionV04}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BaselineReSubmissionV05", propOrder = {"submissionIdentification", "transactionIdentification", "submitterTransactionReference", "baseline", "buyerContactPerson", "sellerContactPerson", "bankContactPerson",
+		"otherBankContactPerson"})
 public class BaselineReSubmissionV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -169,6 +174,14 @@ public class BaselineReSubmissionV05 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReSubmissionV05.class.getMethod("getSubmissionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -215,6 +228,14 @@ public class BaselineReSubmissionV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReSubmissionV05.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
@@ -257,6 +278,14 @@ public class BaselineReSubmissionV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReSubmissionV05.class.getMethod("getSubmitterTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Baseline5 baseline;
 	/**
@@ -297,6 +326,14 @@ public class BaselineReSubmissionV05 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Baseline5.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReSubmissionV05.class.getMethod("getBaseline", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<ContactIdentification1> buyerContactPerson;
@@ -339,6 +376,14 @@ public class BaselineReSubmissionV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReSubmissionV05.class.getMethod("getBuyerContactPerson", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ContactIdentification1> sellerContactPerson;
 	/**
@@ -379,6 +424,14 @@ public class BaselineReSubmissionV05 {
 			previousVersion_lazy = () -> BaselineReSubmissionV04.mmSellerContactPerson;
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReSubmissionV05.class.getMethod("getSellerContactPerson", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BankContactPerson1Choice bankContactPerson;
@@ -422,6 +475,14 @@ public class BaselineReSubmissionV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> BankContactPerson1Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReSubmissionV05.class.getMethod("getBankContactPerson", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ContactIdentification3> otherBankContactPerson;
 	/**
@@ -464,6 +525,14 @@ public class BaselineReSubmissionV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReSubmissionV05.class.getMethod("getOtherBankContactPerson", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -477,9 +546,11 @@ public class BaselineReSubmissionV05 {
 				rootElement = "Document";
 				xmlTag = "BaselnReSubmissn";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(BaselineReSubmissionV05.mmSubmissionIdentification, BaselineReSubmissionV05.mmTransactionIdentification, BaselineReSubmissionV05.mmSubmitterTransactionReference,
-						BaselineReSubmissionV05.mmBaseline, BaselineReSubmissionV05.mmBuyerContactPerson, BaselineReSubmissionV05.mmSellerContactPerson, BaselineReSubmissionV05.mmBankContactPerson,
-						BaselineReSubmissionV05.mmOtherBankContactPerson);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineReSubmissionV05.mmSubmissionIdentification,
+						com.tools20022.repository.area.tsmt.BaselineReSubmissionV05.mmTransactionIdentification, com.tools20022.repository.area.tsmt.BaselineReSubmissionV05.mmSubmitterTransactionReference,
+						com.tools20022.repository.area.tsmt.BaselineReSubmissionV05.mmBaseline, com.tools20022.repository.area.tsmt.BaselineReSubmissionV05.mmBuyerContactPerson,
+						com.tools20022.repository.area.tsmt.BaselineReSubmissionV05.mmSellerContactPerson, com.tools20022.repository.area.tsmt.BaselineReSubmissionV05.mmBankContactPerson,
+						com.tools20022.repository.area.tsmt.BaselineReSubmissionV05.mmOtherBankContactPerson);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -489,10 +560,16 @@ public class BaselineReSubmissionV05 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BaselineReSubmissionV05.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SubmissnId", required = true)
 	public MessageIdentification1 getSubmissionIdentification() {
 		return submissionIdentification;
 	}
@@ -501,6 +578,7 @@ public class BaselineReSubmissionV05 {
 		this.submissionIdentification = submissionIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -509,6 +587,7 @@ public class BaselineReSubmissionV05 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "SubmitrTxRef")
 	public SimpleIdentificationInformation getSubmitterTransactionReference() {
 		return submitterTransactionReference;
 	}
@@ -517,6 +596,7 @@ public class BaselineReSubmissionV05 {
 		this.submitterTransactionReference = submitterTransactionReference;
 	}
 
+	@XmlElement(name = "Baseln", required = true)
 	public Baseline5 getBaseline() {
 		return baseline;
 	}
@@ -525,6 +605,7 @@ public class BaselineReSubmissionV05 {
 		this.baseline = baseline;
 	}
 
+	@XmlElement(name = "BuyrCtctPrsn")
 	public List<ContactIdentification1> getBuyerContactPerson() {
 		return buyerContactPerson;
 	}
@@ -533,6 +614,7 @@ public class BaselineReSubmissionV05 {
 		this.buyerContactPerson = buyerContactPerson;
 	}
 
+	@XmlElement(name = "SellrCtctPrsn")
 	public List<ContactIdentification1> getSellerContactPerson() {
 		return sellerContactPerson;
 	}
@@ -541,6 +623,7 @@ public class BaselineReSubmissionV05 {
 		this.sellerContactPerson = sellerContactPerson;
 	}
 
+	@XmlElement(name = "BkCtctPrsn", required = true)
 	public BankContactPerson1Choice getBankContactPerson() {
 		return bankContactPerson;
 	}
@@ -549,11 +632,18 @@ public class BaselineReSubmissionV05 {
 		this.bankContactPerson = bankContactPerson;
 	}
 
+	@XmlElement(name = "OthrBkCtctPrsn")
 	public List<ContactIdentification3> getOtherBankContactPerson() {
 		return otherBankContactPerson;
 	}
 
 	public void setOtherBankContactPerson(List<ContactIdentification3> otherBankContactPerson) {
 		this.otherBankContactPerson = otherBankContactPerson;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.012.05.05")
+	static public class Document {
+		@XmlElement(name = "BaselnReSubmissn", required = true)
+		public BaselineReSubmissionV05 messageBody;
 	}
 }

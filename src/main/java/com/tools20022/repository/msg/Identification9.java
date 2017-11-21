@@ -29,6 +29,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique identifier of a document, message or transaction.
@@ -100,6 +104,9 @@ import java.util.List;
  * definition} = "Unique identifier of a document, message or transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Identification9", propOrder = {"accountOwnerTransactionIdentification", "accountServicerTransactionIdentification", "marketInfrastructureTransactionIdentification", "processorTransactionIdentification",
+		"commonIdentification", "tradeIdentification", "masterIdentification", "basketIdentification", "indexIdentification", "listIdentification", "programIdentification", "poolIdentification", "corporateActionEventIdentification"})
 public class Identification9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -781,6 +788,7 @@ public class Identification9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnrTxId", required = true)
 	public RestrictedFINXMax16Text getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
@@ -789,6 +797,7 @@ public class Identification9 {
 		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrTxId")
 	public RestrictedFINXMax16Text getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
@@ -797,6 +806,7 @@ public class Identification9 {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
 	}
 
+	@XmlElement(name = "MktInfrstrctrTxId")
 	public RestrictedFINXMax16Text getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}
@@ -805,6 +815,7 @@ public class Identification9 {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
 	}
 
+	@XmlElement(name = "PrcrTxId")
 	public RestrictedFINXMax16Text getProcessorTransactionIdentification() {
 		return processorTransactionIdentification;
 	}
@@ -813,6 +824,7 @@ public class Identification9 {
 		this.processorTransactionIdentification = processorTransactionIdentification;
 	}
 
+	@XmlElement(name = "CmonId")
 	public RestrictedFINXMax16Text getCommonIdentification() {
 		return commonIdentification;
 	}
@@ -821,6 +833,7 @@ public class Identification9 {
 		this.commonIdentification = commonIdentification;
 	}
 
+	@XmlElement(name = "TradId")
 	public List<RestrictedFINXMax16Text> getTradeIdentification() {
 		return tradeIdentification;
 	}
@@ -829,6 +842,7 @@ public class Identification9 {
 		this.tradeIdentification = tradeIdentification;
 	}
 
+	@XmlElement(name = "MstrId")
 	public RestrictedFINXMax16Text getMasterIdentification() {
 		return masterIdentification;
 	}
@@ -837,6 +851,7 @@ public class Identification9 {
 		this.masterIdentification = masterIdentification;
 	}
 
+	@XmlElement(name = "BsktId")
 	public RestrictedFINXMax16Text getBasketIdentification() {
 		return basketIdentification;
 	}
@@ -845,6 +860,7 @@ public class Identification9 {
 		this.basketIdentification = basketIdentification;
 	}
 
+	@XmlElement(name = "IndxId")
 	public RestrictedFINXMax16Text getIndexIdentification() {
 		return indexIdentification;
 	}
@@ -853,6 +869,7 @@ public class Identification9 {
 		this.indexIdentification = indexIdentification;
 	}
 
+	@XmlElement(name = "ListId")
 	public RestrictedFINXMax16Text getListIdentification() {
 		return listIdentification;
 	}
@@ -861,6 +878,7 @@ public class Identification9 {
 		this.listIdentification = listIdentification;
 	}
 
+	@XmlElement(name = "PrgmId")
 	public RestrictedFINXMax16Text getProgramIdentification() {
 		return programIdentification;
 	}
@@ -869,6 +887,7 @@ public class Identification9 {
 		this.programIdentification = programIdentification;
 	}
 
+	@XmlElement(name = "PoolId")
 	public RestrictedFINXMax16Text getPoolIdentification() {
 		return poolIdentification;
 	}
@@ -877,6 +896,7 @@ public class Identification9 {
 		this.poolIdentification = poolIdentification;
 	}
 
+	@XmlElement(name = "CorpActnEvtId")
 	public RestrictedFINXMax16Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}

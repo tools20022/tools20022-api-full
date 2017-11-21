@@ -29,6 +29,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for system business day information.
@@ -64,6 +68,8 @@ import java.util.List;
  * "Defines the criteria used to search for system business day information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BusinessDayInformationSearchCriteria", propOrder = {"systemIdentification", "systemCurrency"})
 public class BusinessDayInformationSearchCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class BusinessDayInformationSearchCriteria {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysId")
 	public List<SystemIdentificationChoice> getSystemIdentification() {
 		return systemIdentification;
 	}
@@ -180,6 +187,7 @@ public class BusinessDayInformationSearchCriteria {
 		this.systemIdentification = systemIdentification;
 	}
 
+	@XmlElement(name = "SysCcy")
 	public List<CurrencyCode> getSystemCurrency() {
 		return systemCurrency;
 	}

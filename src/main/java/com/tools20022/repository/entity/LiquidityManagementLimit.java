@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CurrencyFactors1;
 import com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -44,6 +45,28 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmVolatilityMargin
+ * LiquidityManagementLimit.mmVolatilityMargin}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmCurrencyExchange
+ * LiquidityManagementLimit.mmCurrencyExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmRelatedCashServices
+ * LiquidityManagementLimit.mmRelatedCashServices}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmLiquidityLimitType
+ * LiquidityManagementLimit.mmLiquidityLimitType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmRequiredAmount
+ * LiquidityManagementLimit.mmRequiredAmount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Limit Limit}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -74,28 +97,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.choice.CurrentLimitChoice#mmLiquidityManagementCurrentLimitIdentification
  * CurrentLimitChoice.mmLiquidityManagementCurrentLimitIdentification}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Limit Limit}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmVolatilityMargin
- * LiquidityManagementLimit.mmVolatilityMargin}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmCurrencyExchange
- * LiquidityManagementLimit.mmCurrencyExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmRelatedCashServices
- * LiquidityManagementLimit.mmRelatedCashServices}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmLiquidityLimitType
- * LiquidityManagementLimit.mmLiquidityLimitType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmRequiredAmount
- * LiquidityManagementLimit.mmRequiredAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -130,11 +131,6 @@ public class LiquidityManagementLimit extends Limit {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit
-	 * LiquidityManagementLimit}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -143,6 +139,11 @@ public class LiquidityManagementLimit extends Limit {
 	 * CurrencyFactors1.mmVolatilityMargin}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit
+	 * LiquidityManagementLimit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -159,7 +160,7 @@ public class LiquidityManagementLimit extends Limit {
 	public static final MMBusinessAttribute mmVolatilityMargin = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CurrencyFactors1.mmVolatilityMargin);
-			elementContext_lazy = () -> LiquidityManagementLimit.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VolatilityMargin";
@@ -167,6 +168,14 @@ public class LiquidityManagementLimit extends Limit {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return LiquidityManagementLimit.class.getMethod("getVolatilityMargin", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.CurrencyExchange> currencyExchange;
@@ -188,11 +197,6 @@ public class LiquidityManagementLimit extends Limit {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
 	 * CurrencyExchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit
-	 * LiquidityManagementLimit}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -200,6 +204,11 @@ public class LiquidityManagementLimit extends Limit {
 	 * CurrencyFactors1.mmRate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit
+	 * LiquidityManagementLimit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -216,7 +225,7 @@ public class LiquidityManagementLimit extends Limit {
 	public static final MMBusinessAssociationEnd mmCurrencyExchange = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CurrencyFactors1.mmRate);
-			elementContext_lazy = () -> LiquidityManagementLimit.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchange";
@@ -267,7 +276,7 @@ public class LiquidityManagementLimit extends Limit {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCashServices = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> LiquidityManagementLimit.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCashServices";
@@ -290,11 +299,6 @@ public class LiquidityManagementLimit extends Limit {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.LiquidityLimitTypeCode
 	 * LiquidityLimitTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit
-	 * LiquidityManagementLimit}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -303,6 +307,11 @@ public class LiquidityManagementLimit extends Limit {
 	 * LiquidityManagementLimitIdentificationDetails.mmType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit
+	 * LiquidityManagementLimit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -317,7 +326,7 @@ public class LiquidityManagementLimit extends Limit {
 	public static final MMBusinessAttribute mmLiquidityLimitType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LiquidityManagementLimitIdentificationDetails.mmType);
-			elementContext_lazy = () -> LiquidityManagementLimit.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LiquidityLimitType";
@@ -325,6 +334,14 @@ public class LiquidityManagementLimit extends Limit {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LiquidityLimitTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return LiquidityManagementLimit.class.getMethod("getLiquidityLimitType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount requiredAmount;
@@ -357,7 +374,7 @@ public class LiquidityManagementLimit extends Limit {
 	 */
 	public static final MMBusinessAttribute mmRequiredAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> LiquidityManagementLimit.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequiredAmount";
@@ -365,6 +382,14 @@ public class LiquidityManagementLimit extends Limit {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return LiquidityManagementLimit.class.getMethod("getRequiredAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -378,9 +403,15 @@ public class LiquidityManagementLimit extends Limit {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashManagementService.mmLiquidityManagementLimit, com.tools20022.repository.entity.CurrencyExchange.mmRelatedLimitManagement);
 				derivationElement_lazy = () -> Arrays.asList(CurrentLimitChoice.mmLiquidityManagementCurrentLimitIdentification);
 				superType_lazy = () -> Limit.mmObject();
-				element_lazy = () -> Arrays.asList(LiquidityManagementLimit.mmVolatilityMargin, LiquidityManagementLimit.mmCurrencyExchange, LiquidityManagementLimit.mmRelatedCashServices, LiquidityManagementLimit.mmLiquidityLimitType,
-						LiquidityManagementLimit.mmRequiredAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.LiquidityManagementLimit.mmVolatilityMargin, com.tools20022.repository.entity.LiquidityManagementLimit.mmCurrencyExchange,
+						com.tools20022.repository.entity.LiquidityManagementLimit.mmRelatedCashServices, com.tools20022.repository.entity.LiquidityManagementLimit.mmLiquidityLimitType,
+						com.tools20022.repository.entity.LiquidityManagementLimit.mmRequiredAmount);
 				derivationComponent_lazy = () -> Arrays.asList(CurrencyFactors1.mmObject(), LiquidityManagementLimitIdentificationDetails.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return LiquidityManagementLimit.class;
 			}
 		});
 		return mmObject_lazy.get();

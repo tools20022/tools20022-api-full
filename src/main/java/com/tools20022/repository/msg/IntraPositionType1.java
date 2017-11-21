@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Intra-position type used to specify pairs of from/to balances.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Intra-position type used to specify pairs of from/to balances."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionType1", propOrder = {"balanceFrom", "balanceTo"})
 public class IntraPositionType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -174,6 +180,7 @@ public class IntraPositionType1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BalFr")
 	public SecuritiesSubBalanceTypeAndQuantityBreakdown1 getBalanceFrom() {
 		return balanceFrom;
 	}
@@ -182,6 +189,7 @@ public class IntraPositionType1 {
 		this.balanceFrom = balanceFrom;
 	}
 
+	@XmlElement(name = "BalTo")
 	public SecuritiesSubBalanceTypeAndQuantityBreakdown1 getBalanceTo() {
 		return balanceTo;
 	}

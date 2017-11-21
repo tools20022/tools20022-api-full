@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Sale context in which the transaction is performed.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SaleContext1", propOrder = {"saleIdentification", "saleReferenceNumber", "saleReconciliationIdentification", "cashierIdentification", "shiftNumber", "additionalSaleData"})
 public class SaleContext1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -409,6 +415,7 @@ public class SaleContext1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SaleId")
 	public Max35Text getSaleIdentification() {
 		return saleIdentification;
 	}
@@ -417,6 +424,7 @@ public class SaleContext1 {
 		this.saleIdentification = saleIdentification;
 	}
 
+	@XmlElement(name = "SaleRefNb")
 	public Max35Text getSaleReferenceNumber() {
 		return saleReferenceNumber;
 	}
@@ -425,6 +433,7 @@ public class SaleContext1 {
 		this.saleReferenceNumber = saleReferenceNumber;
 	}
 
+	@XmlElement(name = "SaleRcncltnId")
 	public Max35Text getSaleReconciliationIdentification() {
 		return saleReconciliationIdentification;
 	}
@@ -433,6 +442,7 @@ public class SaleContext1 {
 		this.saleReconciliationIdentification = saleReconciliationIdentification;
 	}
 
+	@XmlElement(name = "CshrId")
 	public Max35Text getCashierIdentification() {
 		return cashierIdentification;
 	}
@@ -441,6 +451,7 @@ public class SaleContext1 {
 		this.cashierIdentification = cashierIdentification;
 	}
 
+	@XmlElement(name = "ShftNb")
 	public Max2NumericText getShiftNumber() {
 		return shiftNumber;
 	}
@@ -449,6 +460,7 @@ public class SaleContext1 {
 		this.shiftNumber = shiftNumber;
 	}
 
+	@XmlElement(name = "AddtlSaleData")
 	public Max70Text getAdditionalSaleData() {
 		return additionalSaleData;
 	}

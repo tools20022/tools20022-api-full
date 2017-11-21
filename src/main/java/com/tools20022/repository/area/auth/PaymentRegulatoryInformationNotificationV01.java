@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.CurrencyControlHeader3;
 import com.tools20022.repository.msg.RegulatoryReportingNotification1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CrossBorderTransactionsCurrencyControlReportingISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The PaymentRegulatoryInformationNotification message is sent by the reporting
@@ -41,9 +43,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.024.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -76,6 +75,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.024.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -87,6 +89,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentRegulatoryInformationNotificationV01", propOrder = {"groupHeader", "transactionNotification", "supplementaryData"})
 public class PaymentRegulatoryInformationNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -126,6 +130,14 @@ public class PaymentRegulatoryInformationNotificationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CurrencyControlHeader3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentRegulatoryInformationNotificationV01.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<RegulatoryReportingNotification1> transactionNotification;
 	/**
@@ -162,6 +174,14 @@ public class PaymentRegulatoryInformationNotificationV01 {
 			definition = "Notification of information related to a regulatory reporting on a payment.";
 			minOccurs = 1;
 			complexType_lazy = () -> RegulatoryReportingNotification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentRegulatoryInformationNotificationV01.class.getMethod("getTransactionNotification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -200,6 +220,14 @@ public class PaymentRegulatoryInformationNotificationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentRegulatoryInformationNotificationV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -212,8 +240,8 @@ public class PaymentRegulatoryInformationNotificationV01 {
 				rootElement = "Document";
 				xmlTag = "PmtRgltryInfNtfctn";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PaymentRegulatoryInformationNotificationV01.mmGroupHeader, PaymentRegulatoryInformationNotificationV01.mmTransactionNotification,
-						PaymentRegulatoryInformationNotificationV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01.mmGroupHeader,
+						com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01.mmTransactionNotification, com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -223,10 +251,16 @@ public class PaymentRegulatoryInformationNotificationV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PaymentRegulatoryInformationNotificationV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public CurrencyControlHeader3 getGroupHeader() {
 		return groupHeader;
 	}
@@ -235,6 +269,7 @@ public class PaymentRegulatoryInformationNotificationV01 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "TxNtfctn", required = true)
 	public List<RegulatoryReportingNotification1> getTransactionNotification() {
 		return transactionNotification;
 	}
@@ -243,11 +278,18 @@ public class PaymentRegulatoryInformationNotificationV01 {
 		this.transactionNotification = transactionNotification;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.024.01.01")
+	static public class Document {
+		@XmlElement(name = "PmtRgltryInfNtfctn", required = true)
+		public PaymentRegulatoryInformationNotificationV01 messageBody;
 	}
 }

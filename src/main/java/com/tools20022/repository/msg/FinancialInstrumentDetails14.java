@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reporting per financial instrument.
@@ -85,6 +89,8 @@ import java.util.List;
  * FinancialInstrumentDetails10}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentDetails14", propOrder = {"financialInstrumentIdentification", "financialInstrumentAttributes", "subBalance"})
 public class FinancialInstrumentDetails14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -277,6 +283,7 @@ public class FinancialInstrumentDetails14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -285,6 +292,7 @@ public class FinancialInstrumentDetails14 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public FinancialInstrumentAttributes36 getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -293,6 +301,7 @@ public class FinancialInstrumentDetails14 {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "SubBal", required = true)
 	public List<IntraPositionDetails28> getSubBalance() {
 		return subBalance;
 	}

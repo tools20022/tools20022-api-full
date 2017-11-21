@@ -28,8 +28,10 @@ import com.tools20022.repository.msg.MarketPracticeVersion1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -53,9 +55,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.014.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
@@ -98,6 +97,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.014.001.06}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -121,6 +123,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PortfolioTransferCancellationRequestV05}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PortfolioTransferCancellationRequestV06", propOrder = {"messageReference", "poolReference", "previousReference", "relatedReference", "cancellation", "marketPracticeVersion"})
 public class PortfolioTransferCancellationRequestV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +177,14 @@ public class PortfolioTransferCancellationRequestV06 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferCancellationRequestV06.class.getMethod("getMessageReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -223,6 +235,14 @@ public class PortfolioTransferCancellationRequestV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferCancellationRequestV06.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 previousReference;
 	/**
@@ -272,6 +292,14 @@ public class PortfolioTransferCancellationRequestV06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferCancellationRequestV06.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 relatedReference;
@@ -324,6 +352,14 @@ public class PortfolioTransferCancellationRequestV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferCancellationRequestV06.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Cancellation7Choice cancellation;
 	/**
@@ -374,6 +410,14 @@ public class PortfolioTransferCancellationRequestV06 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Cancellation7Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferCancellationRequestV06.class.getMethod("getCancellation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MarketPracticeVersion1 marketPracticeVersion;
@@ -426,6 +470,14 @@ public class PortfolioTransferCancellationRequestV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferCancellationRequestV06.class.getMethod("getMarketPracticeVersion", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -440,9 +492,10 @@ public class PortfolioTransferCancellationRequestV06 {
 				rootElement = "Document";
 				xmlTag = "PrtflTrfCxlReq";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PortfolioTransferCancellationRequestV06.mmMessageReference, PortfolioTransferCancellationRequestV06.mmPoolReference,
-						PortfolioTransferCancellationRequestV06.mmPreviousReference, PortfolioTransferCancellationRequestV06.mmRelatedReference, PortfolioTransferCancellationRequestV06.mmCancellation,
-						PortfolioTransferCancellationRequestV06.mmMarketPracticeVersion);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmMessageReference,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmPoolReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmPreviousReference,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmRelatedReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmCancellation,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmMarketPracticeVersion);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -452,10 +505,16 @@ public class PortfolioTransferCancellationRequestV06 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PortfolioTransferCancellationRequestV06.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgRef", required = true)
 	public MessageIdentification1 getMessageReference() {
 		return messageReference;
 	}
@@ -464,6 +523,7 @@ public class PortfolioTransferCancellationRequestV06 {
 		this.messageReference = messageReference;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -472,6 +532,7 @@ public class PortfolioTransferCancellationRequestV06 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -480,6 +541,7 @@ public class PortfolioTransferCancellationRequestV06 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
@@ -488,6 +550,7 @@ public class PortfolioTransferCancellationRequestV06 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "Cxl", required = true)
 	public Cancellation7Choice getCancellation() {
 		return cancellation;
 	}
@@ -496,11 +559,18 @@ public class PortfolioTransferCancellationRequestV06 {
 		this.cancellation = cancellation;
 	}
 
+	@XmlElement(name = "MktPrctcVrsn")
 	public MarketPracticeVersion1 getMarketPracticeVersion() {
 		return marketPracticeVersion;
 	}
 
 	public void setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
 		this.marketPracticeVersion = marketPracticeVersion;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.014.06.06")
+	static public class Document {
+		@XmlElement(name = "PrtflTrfCxlReq", required = true)
+		public PortfolioTransferCancellationRequestV06 messageBody;
 	}
 }

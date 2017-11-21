@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the transaction.
@@ -123,6 +127,9 @@ import java.util.List;
  * definition} = "Details of the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionDetails3", propOrder = {"tradeReference", "associatedTradeReference", "placeOfTrade", "tradeDateTime", "financialInstrumentDetails", "side", "transactionReportMarker", "counterparty", "client", "capacity",
+		"executedTradePrice", "executedTradeQuantity", "settlementAmount", "settlementDate", "proxyHolder", "additionalInformation"})
 public class TransactionDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -929,6 +936,7 @@ public class TransactionDetails3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradRef", required = true)
 	public Max70Text getTradeReference() {
 		return tradeReference;
 	}
@@ -937,6 +945,7 @@ public class TransactionDetails3 {
 		this.tradeReference = tradeReference;
 	}
 
+	@XmlElement(name = "AssoctdTradRef")
 	public List<Max70Text> getAssociatedTradeReference() {
 		return associatedTradeReference;
 	}
@@ -945,6 +954,7 @@ public class TransactionDetails3 {
 		this.associatedTradeReference = associatedTradeReference;
 	}
 
+	@XmlElement(name = "PlcOfTrad", required = true)
 	public PlaceOfTradeIdentification2Choice getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -953,6 +963,7 @@ public class TransactionDetails3 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "TradDtTm", required = true)
 	public ISODateTime getTradeDateTime() {
 		return tradeDateTime;
 	}
@@ -961,6 +972,7 @@ public class TransactionDetails3 {
 		this.tradeDateTime = tradeDateTime;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument15 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -969,6 +981,7 @@ public class TransactionDetails3 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "Sd", required = true)
 	public OrderDriverCode getSide() {
 		return side;
 	}
@@ -977,6 +990,7 @@ public class TransactionDetails3 {
 		this.side = side;
 	}
 
+	@XmlElement(name = "TxRptMrkr")
 	public List<PartyIdentification24Choice> getTransactionReportMarker() {
 		return transactionReportMarker;
 	}
@@ -985,6 +999,7 @@ public class TransactionDetails3 {
 		this.transactionReportMarker = transactionReportMarker;
 	}
 
+	@XmlElement(name = "CtrPty", required = true)
 	public PartyIdentification11Choice getCounterparty() {
 		return counterparty;
 	}
@@ -993,6 +1008,7 @@ public class TransactionDetails3 {
 		this.counterparty = counterparty;
 	}
 
+	@XmlElement(name = "Clnt")
 	public PartyIdentification23 getClient() {
 		return client;
 	}
@@ -1001,6 +1017,7 @@ public class TransactionDetails3 {
 		this.client = client;
 	}
 
+	@XmlElement(name = "Cpcty", required = true)
 	public TradingCapacity3Code getCapacity() {
 		return capacity;
 	}
@@ -1009,6 +1026,7 @@ public class TransactionDetails3 {
 		this.capacity = capacity;
 	}
 
+	@XmlElement(name = "ExctdTradPric", required = true)
 	public PriceRateOrAmountChoice getExecutedTradePrice() {
 		return executedTradePrice;
 	}
@@ -1017,6 +1035,7 @@ public class TransactionDetails3 {
 		this.executedTradePrice = executedTradePrice;
 	}
 
+	@XmlElement(name = "ExctdTradQty", required = true)
 	public UnitOrFaceAmountChoice getExecutedTradeQuantity() {
 		return executedTradeQuantity;
 	}
@@ -1025,6 +1044,7 @@ public class TransactionDetails3 {
 		this.executedTradeQuantity = executedTradeQuantity;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public ActiveCurrencyAndAmount getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -1033,6 +1053,7 @@ public class TransactionDetails3 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "SttlmDt")
 	public ISODateTime getSettlementDate() {
 		return settlementDate;
 	}
@@ -1041,6 +1062,7 @@ public class TransactionDetails3 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "PrxyHldr")
 	public PartyIdentification2Choice getProxyHolder() {
 		return proxyHolder;
 	}
@@ -1049,6 +1071,7 @@ public class TransactionDetails3 {
 		this.proxyHolder = proxyHolder;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}

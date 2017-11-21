@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money characterics used to specify a limit.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Amount of money characterics used to specify a limit."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LimitAmount1", propOrder = {"amount", "utilisationAmount", "availableAmount"})
 public class LimitAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -224,6 +230,7 @@ public class LimitAmount1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public CreditDebitAmount1 getAmount() {
 		return amount;
 	}
@@ -232,6 +239,7 @@ public class LimitAmount1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "UtlstnAmt", required = true)
 	public CreditDebitAmount1 getUtilisationAmount() {
 		return utilisationAmount;
 	}
@@ -240,6 +248,7 @@ public class LimitAmount1 {
 		this.utilisationAmount = utilisationAmount;
 	}
 
+	@XmlElement(name = "AvlblAmt", required = true)
 	public CreditDebitAmount1 getAvailableAmount() {
 		return availableAmount;
 	}

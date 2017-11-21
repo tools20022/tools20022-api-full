@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details to identify an account.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the details to identify an account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccount24", propOrder = {"identification", "type", "currency", "name"})
 public class CashAccount24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -307,6 +313,7 @@ public class CashAccount24 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentification4Choice getIdentification() {
 		return identification;
 	}
@@ -315,6 +322,7 @@ public class CashAccount24 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp")
 	public CashAccountType2Choice getType() {
 		return type;
 	}
@@ -323,6 +331,7 @@ public class CashAccount24 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveOrHistoricCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -331,6 +340,7 @@ public class CashAccount24 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max70Text getName() {
 		return name;
 	}

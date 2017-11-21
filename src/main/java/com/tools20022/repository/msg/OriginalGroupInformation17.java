@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique and unambiguous identifier of the group of transactions as assigned by
@@ -86,6 +90,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalGroupInformation17", propOrder = {"originalMessageIdentification", "networkFileName", "originalMessageNameIdentification", "groupStatus", "statusReasonInformation"})
 public class OriginalGroupInformation17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -391,6 +397,7 @@ public class OriginalGroupInformation17 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMsgId", required = true)
 	public Max35Text getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}
@@ -399,6 +406,7 @@ public class OriginalGroupInformation17 {
 		this.originalMessageIdentification = originalMessageIdentification;
 	}
 
+	@XmlElement(name = "NtwkFileNm", required = true)
 	public Max35Text getNetworkFileName() {
 		return networkFileName;
 	}
@@ -407,6 +415,7 @@ public class OriginalGroupInformation17 {
 		this.networkFileName = networkFileName;
 	}
 
+	@XmlElement(name = "OrgnlMsgNmId", required = true)
 	public Max35Text getOriginalMessageNameIdentification() {
 		return originalMessageNameIdentification;
 	}
@@ -415,6 +424,7 @@ public class OriginalGroupInformation17 {
 		this.originalMessageNameIdentification = originalMessageNameIdentification;
 	}
 
+	@XmlElement(name = "GrpSts")
 	public TransactionGroupStatus2Code getGroupStatus() {
 		return groupStatus;
 	}
@@ -423,6 +433,7 @@ public class OriginalGroupInformation17 {
 		this.groupStatus = groupStatus;
 	}
 
+	@XmlElement(name = "StsRsnInf")
 	public StatusReasonInformation6 getStatusReasonInformation() {
 		return statusReasonInformation;
 	}

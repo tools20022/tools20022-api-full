@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.CommodityDerivate5;
 import com.tools20022.repository.msg.CommodityDerivate6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice for transparency calculation specific details on commodities.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice for transparency calculation specific details on commodities."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CommodityDerivate2Choice", propOrder = {"freight", "energy"})
 public class CommodityDerivate2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class CommodityDerivate2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Frght", required = true)
 	public CommodityDerivate5 getFreight() {
 		return freight;
 	}
@@ -181,6 +188,7 @@ public class CommodityDerivate2Choice {
 		this.freight = freight;
 	}
 
+	@XmlElement(name = "Nrgy", required = true)
 	public CommodityDerivate6 getEnergy() {
 		return energy;
 	}

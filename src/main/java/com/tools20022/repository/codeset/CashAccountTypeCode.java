@@ -29,21 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CashAccountType1Code
- * CashAccountType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CashAccountType2Code
- * CashAccountType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CashAccountType4Code
- * CashAccountType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CashAccountType3Code
- * CashAccountType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CashAccountType5Code
- * CashAccountType5Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -107,6 +92,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CashAccountTypeCode#mmSegregated
  * CashAccountTypeCode.mmSegregated}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CashAccountType1Code
+ * CashAccountType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CashAccountType2Code
+ * CashAccountType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CashAccountType4Code
+ * CashAccountType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CashAccountType3Code
+ * CashAccountType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CashAccountType5Code
+ * CashAccountType5Code}</li>
  * </ul>
  * </li>
  * <li>

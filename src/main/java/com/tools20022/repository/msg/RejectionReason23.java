@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason to reject the message.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.msg.RejectionReason3 RejectionReason3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RejectionReason23", propOrder = {"reason", "additionalInformation", "linkedMessage"})
 public class RejectionReason23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -251,6 +257,7 @@ public class RejectionReason23 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public MessageRejectedReason1Code getReason() {
 		return reason;
 	}
@@ -259,6 +266,7 @@ public class RejectionReason23 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max140Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -267,6 +275,7 @@ public class RejectionReason23 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "LkdMsg")
 	public LinkedMessage1Choice getLinkedMessage() {
 		return linkedMessage;
 	}

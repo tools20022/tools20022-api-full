@@ -65,6 +65,11 @@ public class SystemReferenceDataResponsible extends SystemPartyRole {
 				definition = "Party responsible for the maintenance of other parties reference data.";
 				superType_lazy = () -> SystemPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SystemReferenceDataResponsible.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

@@ -24,8 +24,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TreasuryArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -38,9 +40,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code trea.007.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
  * TreasuryArchive}</li>
@@ -81,6 +80,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code trea.007.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -92,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NonDeliverableForwardNotificationV02", propOrder = {"tradingSideIdentification", "counterpartySideIdentification", "openingData", "valuationData", "tradeInformationAndStatus", "settlementData"})
 public class NonDeliverableForwardNotificationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -132,6 +136,14 @@ public class NonDeliverableForwardNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NonDeliverableForwardNotificationV02.class.getMethod("getTradingSideIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TradePartyIdentification3 counterpartySideIdentification;
 	/**
@@ -170,6 +182,14 @@ public class NonDeliverableForwardNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NonDeliverableForwardNotificationV02.class.getMethod("getCounterpartySideIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OpeningData2 openingData;
 	/**
@@ -204,6 +224,14 @@ public class NonDeliverableForwardNotificationV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> OpeningData2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NonDeliverableForwardNotificationV02.class.getMethod("getOpeningData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ClosingData2 valuationData;
@@ -240,6 +268,14 @@ public class NonDeliverableForwardNotificationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ClosingData2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NonDeliverableForwardNotificationV02.class.getMethod("getValuationData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TradeStatus1 tradeInformationAndStatus;
 	/**
@@ -275,6 +311,14 @@ public class NonDeliverableForwardNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradeStatus1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NonDeliverableForwardNotificationV02.class.getMethod("getTradeInformationAndStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SettlementData2 settlementData;
 	/**
@@ -309,6 +353,14 @@ public class NonDeliverableForwardNotificationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementData2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NonDeliverableForwardNotificationV02.class.getMethod("getSettlementData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -321,9 +373,10 @@ public class NonDeliverableForwardNotificationV02 {
 				rootElement = "Document";
 				xmlTag = "NDFNtfctnV02";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(NonDeliverableForwardNotificationV02.mmTradingSideIdentification, NonDeliverableForwardNotificationV02.mmCounterpartySideIdentification,
-						NonDeliverableForwardNotificationV02.mmOpeningData, NonDeliverableForwardNotificationV02.mmValuationData, NonDeliverableForwardNotificationV02.mmTradeInformationAndStatus,
-						NonDeliverableForwardNotificationV02.mmSettlementData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmTradingSideIdentification,
+						com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmOpeningData,
+						com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmValuationData, com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmTradeInformationAndStatus,
+						com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmSettlementData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "trea";
@@ -333,10 +386,16 @@ public class NonDeliverableForwardNotificationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return NonDeliverableForwardNotificationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradgSdId", required = true)
 	public TradePartyIdentification3 getTradingSideIdentification() {
 		return tradingSideIdentification;
 	}
@@ -345,6 +404,7 @@ public class NonDeliverableForwardNotificationV02 {
 		this.tradingSideIdentification = tradingSideIdentification;
 	}
 
+	@XmlElement(name = "CtrPtySdId", required = true)
 	public TradePartyIdentification3 getCounterpartySideIdentification() {
 		return counterpartySideIdentification;
 	}
@@ -353,6 +413,7 @@ public class NonDeliverableForwardNotificationV02 {
 		this.counterpartySideIdentification = counterpartySideIdentification;
 	}
 
+	@XmlElement(name = "OpngData")
 	public OpeningData2 getOpeningData() {
 		return openingData;
 	}
@@ -361,6 +422,7 @@ public class NonDeliverableForwardNotificationV02 {
 		this.openingData = openingData;
 	}
 
+	@XmlElement(name = "ValtnData")
 	public ClosingData2 getValuationData() {
 		return valuationData;
 	}
@@ -369,6 +431,7 @@ public class NonDeliverableForwardNotificationV02 {
 		this.valuationData = valuationData;
 	}
 
+	@XmlElement(name = "TradInfAndSts", required = true)
 	public TradeStatus1 getTradeInformationAndStatus() {
 		return tradeInformationAndStatus;
 	}
@@ -377,11 +440,18 @@ public class NonDeliverableForwardNotificationV02 {
 		this.tradeInformationAndStatus = tradeInformationAndStatus;
 	}
 
+	@XmlElement(name = "SttlmData")
 	public SettlementData2 getSettlementData() {
 		return settlementData;
 	}
 
 	public void setSettlementData(SettlementData2 settlementData) {
 		this.settlementData = settlementData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:trea.007.02.02")
+	static public class Document {
+		@XmlElement(name = "NDFNtfctnV02", required = true)
+		public NonDeliverableForwardNotificationV02 messageBody;
 	}
 }

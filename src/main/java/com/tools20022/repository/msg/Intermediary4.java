@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party that provides services to investors relating to financial products.
@@ -101,6 +105,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Party that provides services to investors relating to financial products."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Intermediary4", propOrder = {"identification", "account", "role"})
 public class Intermediary4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -264,6 +270,7 @@ public class Intermediary4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification2Choice getIdentification() {
 		return identification;
 	}
@@ -272,6 +279,7 @@ public class Intermediary4 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Acct")
 	public Account2 getAccount() {
 		return account;
 	}
@@ -280,6 +288,7 @@ public class Intermediary4 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "Role")
 	public Max35Text getRole() {
 		return role;
 	}

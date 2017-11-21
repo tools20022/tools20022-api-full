@@ -37,6 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
+ * UndertakingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -49,10 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Undertaking3.mmApplicant}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
- * UndertakingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -83,6 +83,11 @@ public class UndertakingApplicant extends UndertakingPartyRole {
 				definition = "Party named in an undertaking as the party on whose behalf the undertaking is issued.";
 				derivationElement_lazy = () -> Arrays.asList(Undertaking1.mmApplicant, Undertaking4.mmApplicant, Undertaking3.mmApplicant);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UndertakingApplicant.class;
 			}
 		});
 		return mmObject_lazy.get();

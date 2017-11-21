@@ -36,6 +36,31 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InterestManagement#mmInterestCalculation
+ * InterestManagement.mmInterestCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InterestManagement#mmFinancialTransaction
+ * InterestManagement.mmFinancialTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InterestManagement#mmInterest
+ * InterestManagement.mmInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InterestManagement#mmPaymentObligation
+ * InterestManagement.mmPaymentObligation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration
+ * CollateralInterestAdministration}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -52,31 +77,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmInterestManagement
  * FinancialTransaction.mmInterestManagement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration
- * CollateralInterestAdministration}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InterestManagement#mmInterestCalculation
- * InterestManagement.mmInterestCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InterestManagement#mmFinancialTransaction
- * InterestManagement.mmFinancialTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InterestManagement#mmInterest
- * InterestManagement.mmInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InterestManagement#mmPaymentObligation
- * InterestManagement.mmPaymentObligation}</li>
  * </ul>
  * </li>
  * <li>
@@ -136,7 +136,7 @@ public class InterestManagement {
 	 */
 	public static final MMBusinessAssociationEnd mmInterestCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InterestManagement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InterestManagement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestCalculation";
@@ -185,7 +185,7 @@ public class InterestManagement {
 	 */
 	public static final MMBusinessAssociationEnd mmFinancialTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InterestManagement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InterestManagement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialTransaction";
@@ -233,7 +233,7 @@ public class InterestManagement {
 	 */
 	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InterestManagement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InterestManagement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
@@ -283,7 +283,7 @@ public class InterestManagement {
 	 */
 	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InterestManagement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InterestManagement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
@@ -306,7 +306,13 @@ public class InterestManagement {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.mmInterest, com.tools20022.repository.entity.Interest.mmRelatedInterestManagement,
 						com.tools20022.repository.entity.InterestCalculation.mmRelatedInterestManagement, com.tools20022.repository.entity.FinancialTransaction.mmInterestManagement);
 				subType_lazy = () -> Arrays.asList(CollateralInterestAdministration.mmObject());
-				element_lazy = () -> Arrays.asList(InterestManagement.mmInterestCalculation, InterestManagement.mmFinancialTransaction, InterestManagement.mmInterest, InterestManagement.mmPaymentObligation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InterestManagement.mmInterestCalculation, com.tools20022.repository.entity.InterestManagement.mmFinancialTransaction,
+						com.tools20022.repository.entity.InterestManagement.mmInterest, com.tools20022.repository.entity.InterestManagement.mmPaymentObligation);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InterestManagement.class;
 			}
 		});
 		return mmObject_lazy.get();

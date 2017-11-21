@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account on which a securities entry is made.
@@ -91,6 +95,8 @@ import java.util.List;
  * SafekeepingAccount5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SafekeepingAccount7", propOrder = {"accountIdentification", "accountOwner", "accountServicer", "beneficialOwner", "balanceDetails", "accountSubLevel1", "accountSubLevel1Difference"})
 public class SafekeepingAccount7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -496,6 +502,7 @@ public class SafekeepingAccount7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public SecuritiesAccount19 getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -504,6 +511,7 @@ public class SafekeepingAccount7 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnr", required = true)
 	public PartyIdentification100 getAccountOwner() {
 		return accountOwner;
 	}
@@ -512,6 +520,7 @@ public class SafekeepingAccount7 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr", required = true)
 	public PartyIdentification100 getAccountServicer() {
 		return accountServicer;
 	}
@@ -520,6 +529,7 @@ public class SafekeepingAccount7 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "BnfclOwnr")
 	public List<BeneficialOwner2> getBeneficialOwner() {
 		return beneficialOwner;
 	}
@@ -528,6 +538,7 @@ public class SafekeepingAccount7 {
 		this.beneficialOwner = beneficialOwner;
 	}
 
+	@XmlElement(name = "BalDtls")
 	public List<AggregateHoldingBalance3> getBalanceDetails() {
 		return balanceDetails;
 	}
@@ -536,6 +547,7 @@ public class SafekeepingAccount7 {
 		this.balanceDetails = balanceDetails;
 	}
 
+	@XmlElement(name = "AcctSubLvl1")
 	public List<AccountSubLevel11> getAccountSubLevel1() {
 		return accountSubLevel1;
 	}
@@ -544,6 +556,7 @@ public class SafekeepingAccount7 {
 		this.accountSubLevel1 = accountSubLevel1;
 	}
 
+	@XmlElement(name = "AcctSubLvl1Diff")
 	public List<AggregateHoldingBalance2> getAccountSubLevel1Difference() {
 		return accountSubLevel1Difference;
 	}

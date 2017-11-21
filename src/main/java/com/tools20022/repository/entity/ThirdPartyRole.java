@@ -33,9 +33,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.SystemPartyRole
- * SystemPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -45,6 +42,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * IndirectMember}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.SystemPartyRole
+ * SystemPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -74,6 +74,11 @@ public class ThirdPartyRole extends SystemPartyRole {
 				definition = "Party that can use the facilities of a system through one of its members.";
 				subType_lazy = () -> Arrays.asList(NonClearingMemberRole.mmObject(), IndirectMember.mmObject());
 				superType_lazy = () -> SystemPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ThirdPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Overall position, in a single security, held in a securities account at a
@@ -125,6 +129,10 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AggregateBalanceInformation15", propOrder = {"financialInstrumentIdentification", "financialInstrumentAttributes", "investmentFundsFinancialInstrumentAttributes", "additionalDerivativeAttributes", "aggregateBalance",
+		"safekeepingPlace", "corporateActionOptionType", "priceDetails", "foreignExchangeDetails", "daysAccrued", "accountBaseCurrencyAmounts", "instrumentCurrencyAmounts", "alternateReportingCurrencyAmounts", "quantityBreakdown",
+		"balanceBreakdown", "additionalBalanceBreakdown", "balanceAtSafekeepingPlace", "holdingAdditionalDetails", "supplementaryData"})
 public class AggregateBalanceInformation15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1073,6 +1081,7 @@ public class AggregateBalanceInformation15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -1081,6 +1090,7 @@ public class AggregateBalanceInformation15 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public FinancialInstrumentAttributes30 getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -1089,6 +1099,7 @@ public class AggregateBalanceInformation15 {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "InvstmtFndsFinInstrmAttrbts")
 	public FinancialInstrument22 getInvestmentFundsFinancialInstrumentAttributes() {
 		return investmentFundsFinancialInstrumentAttributes;
 	}
@@ -1097,6 +1108,7 @@ public class AggregateBalanceInformation15 {
 		this.investmentFundsFinancialInstrumentAttributes = investmentFundsFinancialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "AddtlDerivAttrbts")
 	public DerivativeBasicAttributes2 getAdditionalDerivativeAttributes() {
 		return additionalDerivativeAttributes;
 	}
@@ -1105,6 +1117,7 @@ public class AggregateBalanceInformation15 {
 		this.additionalDerivativeAttributes = additionalDerivativeAttributes;
 	}
 
+	@XmlElement(name = "AggtBal", required = true)
 	public Balance2 getAggregateBalance() {
 		return aggregateBalance;
 	}
@@ -1113,6 +1126,7 @@ public class AggregateBalanceInformation15 {
 		this.aggregateBalance = aggregateBalance;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat4Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -1121,6 +1135,7 @@ public class AggregateBalanceInformation15 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "CorpActnOptnTp")
 	public CorporateActionOption5Code getCorporateActionOptionType() {
 		return corporateActionOptionType;
 	}
@@ -1129,6 +1144,7 @@ public class AggregateBalanceInformation15 {
 		this.corporateActionOptionType = corporateActionOptionType;
 	}
 
+	@XmlElement(name = "PricDtls", required = true)
 	public List<PriceInformation7> getPriceDetails() {
 		return priceDetails;
 	}
@@ -1137,6 +1153,7 @@ public class AggregateBalanceInformation15 {
 		this.priceDetails = priceDetails;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public List<ForeignExchangeTerms16> getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -1145,6 +1162,7 @@ public class AggregateBalanceInformation15 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "DaysAcrd")
 	public Number getDaysAccrued() {
 		return daysAccrued;
 	}
@@ -1153,6 +1171,7 @@ public class AggregateBalanceInformation15 {
 		this.daysAccrued = daysAccrued;
 	}
 
+	@XmlElement(name = "AcctBaseCcyAmts", required = true)
 	public BalanceAmounts5 getAccountBaseCurrencyAmounts() {
 		return accountBaseCurrencyAmounts;
 	}
@@ -1161,6 +1180,7 @@ public class AggregateBalanceInformation15 {
 		this.accountBaseCurrencyAmounts = accountBaseCurrencyAmounts;
 	}
 
+	@XmlElement(name = "InstrmCcyAmts")
 	public BalanceAmounts5 getInstrumentCurrencyAmounts() {
 		return instrumentCurrencyAmounts;
 	}
@@ -1169,6 +1189,7 @@ public class AggregateBalanceInformation15 {
 		this.instrumentCurrencyAmounts = instrumentCurrencyAmounts;
 	}
 
+	@XmlElement(name = "AltrnRptgCcyAmts")
 	public BalanceAmounts5 getAlternateReportingCurrencyAmounts() {
 		return alternateReportingCurrencyAmounts;
 	}
@@ -1177,6 +1198,7 @@ public class AggregateBalanceInformation15 {
 		this.alternateReportingCurrencyAmounts = alternateReportingCurrencyAmounts;
 	}
 
+	@XmlElement(name = "QtyBrkdwn")
 	public List<QuantityBreakdown8> getQuantityBreakdown() {
 		return quantityBreakdown;
 	}
@@ -1185,6 +1207,7 @@ public class AggregateBalanceInformation15 {
 		this.quantityBreakdown = quantityBreakdown;
 	}
 
+	@XmlElement(name = "BalBrkdwn")
 	public List<SubBalanceInformation7> getBalanceBreakdown() {
 		return balanceBreakdown;
 	}
@@ -1193,6 +1216,7 @@ public class AggregateBalanceInformation15 {
 		this.balanceBreakdown = balanceBreakdown;
 	}
 
+	@XmlElement(name = "AddtlBalBrkdwn")
 	public List<AdditionalBalanceInformation7> getAdditionalBalanceBreakdown() {
 		return additionalBalanceBreakdown;
 	}
@@ -1201,6 +1225,7 @@ public class AggregateBalanceInformation15 {
 		this.additionalBalanceBreakdown = additionalBalanceBreakdown;
 	}
 
+	@XmlElement(name = "BalAtSfkpgPlc")
 	public List<AggregateBalancePerSafekeepingPlace14> getBalanceAtSafekeepingPlace() {
 		return balanceAtSafekeepingPlace;
 	}
@@ -1209,6 +1234,7 @@ public class AggregateBalanceInformation15 {
 		this.balanceAtSafekeepingPlace = balanceAtSafekeepingPlace;
 	}
 
+	@XmlElement(name = "HldgAddtlDtls")
 	public RestrictedFINXMax350Text getHoldingAdditionalDetails() {
 		return holdingAdditionalDetails;
 	}
@@ -1217,6 +1243,7 @@ public class AggregateBalanceInformation15 {
 		this.holdingAdditionalDetails = holdingAdditionalDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

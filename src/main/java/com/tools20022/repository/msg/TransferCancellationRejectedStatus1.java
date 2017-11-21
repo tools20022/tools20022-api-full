@@ -29,6 +29,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status of the transfer cancellation is rejected.
@@ -78,6 +82,8 @@ import java.util.List;
  * definition} = "Status of the transfer cancellation is rejected."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferCancellationRejectedStatus1", propOrder = {"reason", "extendedReason", "dataSourceScheme"})
 public class TransferCancellationRejectedStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -288,6 +294,7 @@ public class TransferCancellationRejectedStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public CancellationRejectedReason1Code getReason() {
 		return reason;
 	}
@@ -296,6 +303,7 @@ public class TransferCancellationRejectedStatus1 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "XtndedRsn", required = true)
 	public Extended350Code getExtendedReason() {
 		return extendedReason;
 	}
@@ -304,6 +312,7 @@ public class TransferCancellationRejectedStatus1 {
 		this.extendedReason = extendedReason;
 	}
 
+	@XmlElement(name = "DataSrcSchme", required = true)
 	public List<GenericIdentification1> getDataSourceScheme() {
 		return dataSourceScheme;
 	}

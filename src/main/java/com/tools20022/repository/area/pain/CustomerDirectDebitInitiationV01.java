@@ -25,9 +25,11 @@ import com.tools20022.repository.area.PaymentsInitiationArchive;
 import com.tools20022.repository.msg.GroupHeader1;
 import com.tools20022.repository.msg.PaymentInstructionInformation2;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -77,9 +79,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.008.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
@@ -109,6 +108,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.008.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -128,6 +130,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "pain.008.001.01", propOrder = {"groupHeader", "paymentInformation"})
 public class CustomerDirectDebitInitiationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +171,14 @@ public class CustomerDirectDebitInitiationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerDirectDebitInitiationV01.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PaymentInstructionInformation2> paymentInformation;
 	/**
@@ -204,6 +216,14 @@ public class CustomerDirectDebitInitiationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstructionInformation2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerDirectDebitInitiationV01.class.getMethod("getPaymentInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -218,7 +238,7 @@ public class CustomerDirectDebitInitiationV01 {
 				xmlTag = "pain.008.001.01";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
 				xmlName = "pain.008.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerDirectDebitInitiationV01.mmGroupHeader, CustomerDirectDebitInitiationV01.mmPaymentInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV01.mmGroupHeader, com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV01.mmPaymentInformation);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";
@@ -228,10 +248,16 @@ public class CustomerDirectDebitInitiationV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CustomerDirectDebitInitiationV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader1 getGroupHeader() {
 		return groupHeader;
 	}
@@ -240,11 +266,18 @@ public class CustomerDirectDebitInitiationV01 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "PmtInf", required = true)
 	public List<PaymentInstructionInformation2> getPaymentInformation() {
 		return paymentInformation;
 	}
 
 	public void setPaymentInformation(List<PaymentInstructionInformation2> paymentInformation) {
 		this.paymentInformation = paymentInformation;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.01.01")
+	static public class Document {
+		@XmlElement(name = "pain.008.001.01", required = true)
+		public CustomerDirectDebitInitiationV01 messageBody;
 	}
 }

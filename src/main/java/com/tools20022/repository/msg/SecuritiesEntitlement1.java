@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides entitlement information.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides entitlement information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesEntitlement1", propOrder = {"securityIdentification", "entitledSecuritiesQuantity"})
 public class SecuritiesEntitlement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class SecuritiesEntitlement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification7 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -189,6 +196,7 @@ public class SecuritiesEntitlement1 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "EntitldSctiesQty", required = true)
 	public UnitOrFaceAmount1Choice getEntitledSecuritiesQuantity() {
 		return entitledSecuritiesQuantity;
 	}

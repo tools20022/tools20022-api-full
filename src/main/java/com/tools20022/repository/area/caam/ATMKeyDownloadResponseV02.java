@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType13;
 import com.tools20022.repository.msg.Header31;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The ATMKeyDownloadResponse message is sent from an acquirer to an ATM in
@@ -37,9 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caam.004.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
@@ -75,6 +74,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caam.004.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -90,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMKeyDownloadResponseV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMKeyDownloadResponseV02", propOrder = {"header", "protectedATMKeyDownloadResponse", "ATMKeyDownloadResponse", "securityTrailer"})
 public class ATMKeyDownloadResponseV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -129,6 +133,14 @@ public class ATMKeyDownloadResponseV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header31.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMKeyDownloadResponseV02.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType10 protectedATMKeyDownloadResponse;
 	/**
@@ -163,6 +175,14 @@ public class ATMKeyDownloadResponseV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMKeyDownloadResponseV02.class.getMethod("getProtectedATMKeyDownloadResponse", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ATMKeyDownloadResponse2 aTMKeyDownloadResponse;
@@ -202,6 +222,14 @@ public class ATMKeyDownloadResponseV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ATMKeyDownloadResponse2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMKeyDownloadResponseV02.class.getMethod("getATMKeyDownloadResponse", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType13 securityTrailer;
 	/**
@@ -238,6 +266,14 @@ public class ATMKeyDownloadResponseV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType13.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMKeyDownloadResponseV02.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -251,8 +287,8 @@ public class ATMKeyDownloadResponseV02 {
 				rootElement = "Document";
 				xmlTag = "ATMKeyDwnldRspn";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ATMKeyDownloadResponseV02.mmHeader, ATMKeyDownloadResponseV02.mmProtectedATMKeyDownloadResponse, ATMKeyDownloadResponseV02.mmATMKeyDownloadResponse,
-						ATMKeyDownloadResponseV02.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02.mmHeader, com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02.mmProtectedATMKeyDownloadResponse,
+						com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02.mmATMKeyDownloadResponse, com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caam";
@@ -262,10 +298,16 @@ public class ATMKeyDownloadResponseV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ATMKeyDownloadResponseV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header31 getHeader() {
 		return header;
 	}
@@ -274,6 +316,7 @@ public class ATMKeyDownloadResponseV02 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "PrtctdATMKeyDwnldRspn")
 	public ContentInformationType10 getProtectedATMKeyDownloadResponse() {
 		return protectedATMKeyDownloadResponse;
 	}
@@ -282,6 +325,7 @@ public class ATMKeyDownloadResponseV02 {
 		this.protectedATMKeyDownloadResponse = protectedATMKeyDownloadResponse;
 	}
 
+	@XmlElement(name = "ATMKeyDwnldRspn")
 	public ATMKeyDownloadResponse2 getATMKeyDownloadResponse() {
 		return aTMKeyDownloadResponse;
 	}
@@ -290,11 +334,18 @@ public class ATMKeyDownloadResponseV02 {
 		this.aTMKeyDownloadResponse = aTMKeyDownloadResponse;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType13 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType13 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caam.004.02.02")
+	static public class Document {
+		@XmlElement(name = "ATMKeyDwnldRspn", required = true)
+		public ATMKeyDownloadResponseV02 messageBody;
 	}
 }

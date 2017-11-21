@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information such as the contribution account
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Contribution1", propOrder = {"account", "requiredAmount", "increaseCoverageAmount", "nonClearingMember"})
 public class Contribution1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -290,6 +296,7 @@ public class Contribution1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acct")
 	public AccountIdentification4Choice getAccount() {
 		return account;
 	}
@@ -298,6 +305,7 @@ public class Contribution1 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "ReqrdAmt", required = true)
 	public ActiveCurrencyAndAmount getRequiredAmount() {
 		return requiredAmount;
 	}
@@ -306,6 +314,7 @@ public class Contribution1 {
 		this.requiredAmount = requiredAmount;
 	}
 
+	@XmlElement(name = "IncrCvrgAmt")
 	public ActiveCurrencyAndAmount getIncreaseCoverageAmount() {
 		return increaseCoverageAmount;
 	}
@@ -314,6 +323,7 @@ public class Contribution1 {
 		this.increaseCoverageAmount = increaseCoverageAmount;
 	}
 
+	@XmlElement(name = "NonClrMmb")
 	public PartyIdentificationAndAccount31 getNonClearingMember() {
 		return nonClearingMember;
 	}

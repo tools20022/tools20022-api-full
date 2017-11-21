@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Deadline;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides corporate action option details about total instructed balance.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides corporate action option details about total instructed balance."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionOption11", propOrder = {"optionNumber", "optionType", "marketDeadline", "defaultProcessingOrStandingInstruction", "responseDeadline"})
 public class CorporateActionOption11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -343,6 +349,7 @@ public class CorporateActionOption11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OptnNb")
 	public Exact3NumericText getOptionNumber() {
 		return optionNumber;
 	}
@@ -351,6 +358,7 @@ public class CorporateActionOption11 {
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption5Choice getOptionType() {
 		return optionType;
 	}
@@ -359,6 +367,7 @@ public class CorporateActionOption11 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "MktDdln")
 	public DateFormat7Choice getMarketDeadline() {
 		return marketDeadline;
 	}
@@ -367,6 +376,7 @@ public class CorporateActionOption11 {
 		this.marketDeadline = marketDeadline;
 	}
 
+	@XmlElement(name = "DfltPrcgOrStgInstr")
 	public DefaultProcessingOrStandingInstruction1Choice getDefaultProcessingOrStandingInstruction() {
 		return defaultProcessingOrStandingInstruction;
 	}
@@ -375,6 +385,7 @@ public class CorporateActionOption11 {
 		this.defaultProcessingOrStandingInstruction = defaultProcessingOrStandingInstruction;
 	}
 
+	@XmlElement(name = "RspnDdln")
 	public DateFormat6Choice getResponseDeadline() {
 		return responseDeadline;
 	}

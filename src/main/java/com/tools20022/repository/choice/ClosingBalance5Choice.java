@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of closing balance.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of closing balance."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClosingBalance5Choice", propOrder = {"final", "intermediary"})
 public class ClosingBalance5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class ClosingBalance5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Fnl", required = true)
 	public BalanceQuantity12Choice getFinal() {
 		return final_;
 	}
@@ -188,6 +195,7 @@ public class ClosingBalance5Choice {
 		this.final_ = final_;
 	}
 
+	@XmlElement(name = "Intrmy", required = true)
 	public BalanceQuantity12Choice getIntermediary() {
 		return intermediary;
 	}

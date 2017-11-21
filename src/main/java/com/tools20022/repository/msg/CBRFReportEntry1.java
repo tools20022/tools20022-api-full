@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Report entry details.
@@ -62,6 +66,8 @@ import java.util.List;
  * definition} = "Report entry details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CBRFReportEntry1", propOrder = {"messageName", "totalNumberOfEntries", "messageDetails"})
 public class CBRFReportEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -203,6 +209,7 @@ public class CBRFReportEntry1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgNm", required = true)
 	public Max35Text getMessageName() {
 		return messageName;
 	}
@@ -211,6 +218,7 @@ public class CBRFReportEntry1 {
 		this.messageName = messageName;
 	}
 
+	@XmlElement(name = "TtlNbOfNtries", required = true)
 	public Max9NumericText getTotalNumberOfEntries() {
 		return totalNumberOfEntries;
 	}
@@ -219,6 +227,7 @@ public class CBRFReportEntry1 {
 		this.totalNumberOfEntries = totalNumberOfEntries;
 	}
 
+	@XmlElement(name = "MsgDtls", required = true)
 	public List<ElectronicMessageDetails1> getMessageDetails() {
 		return messageDetails;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines commodity attributes of a derivative where the type is agricultural.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AssetClassCommodityAgricultural1Choice", propOrder = {"grainOilSeed", "soft", "potato", "oliveOil", "dairy", "forestry", "seafood", "liveStock", "grain"})
 public class AssetClassCommodityAgricultural1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -535,6 +541,7 @@ public class AssetClassCommodityAgricultural1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrnOilSeed", required = true)
 	public AgriculturalCommodityOilSeed1 getGrainOilSeed() {
 		return grainOilSeed;
 	}
@@ -543,6 +550,7 @@ public class AssetClassCommodityAgricultural1Choice {
 		this.grainOilSeed = grainOilSeed;
 	}
 
+	@XmlElement(name = "Soft", required = true)
 	public AgriculturalCommoditySoft1 getSoft() {
 		return soft;
 	}
@@ -551,6 +559,7 @@ public class AssetClassCommodityAgricultural1Choice {
 		this.soft = soft;
 	}
 
+	@XmlElement(name = "Ptt", required = true)
 	public AgriculturalCommodityPotato1 getPotato() {
 		return potato;
 	}
@@ -559,6 +568,7 @@ public class AssetClassCommodityAgricultural1Choice {
 		this.potato = potato;
 	}
 
+	@XmlElement(name = "OlvOil", required = true)
 	public AgriculturalCommodityOliveOil1 getOliveOil() {
 		return oliveOil;
 	}
@@ -567,6 +577,7 @@ public class AssetClassCommodityAgricultural1Choice {
 		this.oliveOil = oliveOil;
 	}
 
+	@XmlElement(name = "Dairy", required = true)
 	public AgriculturalCommodityDairy1 getDairy() {
 		return dairy;
 	}
@@ -575,6 +586,7 @@ public class AssetClassCommodityAgricultural1Choice {
 		this.dairy = dairy;
 	}
 
+	@XmlElement(name = "Frstry", required = true)
 	public AgriculturalCommodityForestry1 getForestry() {
 		return forestry;
 	}
@@ -583,6 +595,7 @@ public class AssetClassCommodityAgricultural1Choice {
 		this.forestry = forestry;
 	}
 
+	@XmlElement(name = "Sfd", required = true)
 	public AgriculturalCommoditySeafood1 getSeafood() {
 		return seafood;
 	}
@@ -591,6 +604,7 @@ public class AssetClassCommodityAgricultural1Choice {
 		this.seafood = seafood;
 	}
 
+	@XmlElement(name = "LiveStock", required = true)
 	public AgriculturalCommodityLiveStock1 getLiveStock() {
 		return liveStock;
 	}
@@ -599,6 +613,7 @@ public class AssetClassCommodityAgricultural1Choice {
 		this.liveStock = liveStock;
 	}
 
+	@XmlElement(name = "Grn", required = true)
 	public AgriculturalCommodityGrain1 getGrain() {
 		return grain;
 	}

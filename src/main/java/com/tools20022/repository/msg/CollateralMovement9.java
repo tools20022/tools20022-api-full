@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Obligation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the type of collateral that will be delivered and the date to be
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralMovement9", propOrder = {"collateralType", "date"})
 public class CollateralMovement9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class CollateralMovement9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CollTp", required = true)
 	public CollateralType1Code getCollateralType() {
 		return collateralType;
 	}
@@ -185,6 +192,7 @@ public class CollateralMovement9 {
 		this.collateralType = collateralType;
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODate getDate() {
 		return date;
 	}

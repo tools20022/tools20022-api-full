@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Settlement of the securities in a securities transaction, that is, the
@@ -73,6 +77,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementInformation4", propOrder = {"securitiesQuantityType", "contractSettlementMonth", "minimumDenomination", "minimumMultipleQuantity", "deviatingSettlementUnit"})
 public class SettlementInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -307,6 +313,7 @@ public class SettlementInformation4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesQtyTp")
 	public SettlementUnitType2Choice getSecuritiesQuantityType() {
 		return securitiesQuantityType;
 	}
@@ -315,6 +322,7 @@ public class SettlementInformation4 {
 		this.securitiesQuantityType = securitiesQuantityType;
 	}
 
+	@XmlElement(name = "CtrctSttlmMnth")
 	public ISOYearMonth getContractSettlementMonth() {
 		return contractSettlementMonth;
 	}
@@ -323,6 +331,7 @@ public class SettlementInformation4 {
 		this.contractSettlementMonth = contractSettlementMonth;
 	}
 
+	@XmlElement(name = "MinDnmtn")
 	public FinancialInstrumentQuantity1Choice getMinimumDenomination() {
 		return minimumDenomination;
 	}
@@ -331,6 +340,7 @@ public class SettlementInformation4 {
 		this.minimumDenomination = minimumDenomination;
 	}
 
+	@XmlElement(name = "MinMltplQty")
 	public FinancialInstrumentQuantity1Choice getMinimumMultipleQuantity() {
 		return minimumMultipleQuantity;
 	}
@@ -339,6 +349,7 @@ public class SettlementInformation4 {
 		this.minimumMultipleQuantity = minimumMultipleQuantity;
 	}
 
+	@XmlElement(name = "DevtgSttlmUnit")
 	public List<FinancialInstrumentQuantity1Choice> getDeviatingSettlementUnit() {
 		return deviatingSettlementUnit;
 	}

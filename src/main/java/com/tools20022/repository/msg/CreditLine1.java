@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transaction has an origin and a destination in the same country and is made
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CreditLine1", propOrder = {"included", "amount"})
 public class CreditLine1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class CreditLine1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Incl", required = true)
 	public TrueFalseIndicator getIncluded() {
 		return included;
 	}
@@ -181,6 +188,7 @@ public class CreditLine1 {
 		this.included = included;
 	}
 
+	@XmlElement(name = "Amt")
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}

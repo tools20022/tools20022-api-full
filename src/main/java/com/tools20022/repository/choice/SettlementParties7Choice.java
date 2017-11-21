@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.DeliveringPartiesAndAccount15;
 import com.tools20022.repository.msg.ReceivingPartiesAndAccount15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on either the delivering or receiving parties.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SettlementParties5Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementParties7Choice", propOrder = {"deliveringSettlementParties", "receivingSettlementParties"})
 public class SettlementParties7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -207,6 +213,7 @@ public class SettlementParties7Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties", required = true)
 	public DeliveringPartiesAndAccount15 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -215,6 +222,7 @@ public class SettlementParties7Choice {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties", required = true)
 	public ReceivingPartiesAndAccount15 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}

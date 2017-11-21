@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information on the delegation of a maintenance action or maintenance
@@ -95,6 +99,9 @@ import java.util.List;
  * MaintenanceDelegation2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MaintenanceDelegation4", propOrder = {"maintenanceService", "response", "responseReason", "delegationType", "POISubset", "delegationScopeIdentification", "delegationScopeDefinition", "delegationProof",
+		"protectedDelegationProof", "POIIdentificationAssociation"})
 public class MaintenanceDelegation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -597,6 +604,7 @@ public class MaintenanceDelegation4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MntncSvc", required = true)
 	public List<DataSetCategory6Code> getMaintenanceService() {
 		return maintenanceService;
 	}
@@ -605,6 +613,7 @@ public class MaintenanceDelegation4 {
 		this.maintenanceService = maintenanceService;
 	}
 
+	@XmlElement(name = "Rspn", required = true)
 	public Response2Code getResponse() {
 		return response;
 	}
@@ -613,6 +622,7 @@ public class MaintenanceDelegation4 {
 		this.response = response;
 	}
 
+	@XmlElement(name = "RspnRsn")
 	public Max35Text getResponseReason() {
 		return responseReason;
 	}
@@ -621,6 +631,7 @@ public class MaintenanceDelegation4 {
 		this.responseReason = responseReason;
 	}
 
+	@XmlElement(name = "DlgtnTp", required = true)
 	public TerminalManagementAction3Code getDelegationType() {
 		return delegationType;
 	}
@@ -629,6 +640,7 @@ public class MaintenanceDelegation4 {
 		this.delegationType = delegationType;
 	}
 
+	@XmlElement(name = "POISubset")
 	public List<Max35Text> getPOISubset() {
 		return pOISubset;
 	}
@@ -637,6 +649,7 @@ public class MaintenanceDelegation4 {
 		this.pOISubset = pOISubset;
 	}
 
+	@XmlElement(name = "DlgtnScpId")
 	public Max35Text getDelegationScopeIdentification() {
 		return delegationScopeIdentification;
 	}
@@ -645,6 +658,7 @@ public class MaintenanceDelegation4 {
 		this.delegationScopeIdentification = delegationScopeIdentification;
 	}
 
+	@XmlElement(name = "DlgtnScpDef")
 	public Max3000Binary getDelegationScopeDefinition() {
 		return delegationScopeDefinition;
 	}
@@ -653,6 +667,7 @@ public class MaintenanceDelegation4 {
 		this.delegationScopeDefinition = delegationScopeDefinition;
 	}
 
+	@XmlElement(name = "DlgtnProof")
 	public Max5000Binary getDelegationProof() {
 		return delegationProof;
 	}
@@ -661,6 +676,7 @@ public class MaintenanceDelegation4 {
 		this.delegationProof = delegationProof;
 	}
 
+	@XmlElement(name = "PrtctdDlgtnProof")
 	public ContentInformationType12 getProtectedDelegationProof() {
 		return protectedDelegationProof;
 	}
@@ -669,6 +685,7 @@ public class MaintenanceDelegation4 {
 		this.protectedDelegationProof = protectedDelegationProof;
 	}
 
+	@XmlElement(name = "POIIdAssoctn")
 	public List<MaintenanceIdentificationAssociation1> getPOIIdentificationAssociation() {
 		return pOIIdentificationAssociation;
 	}

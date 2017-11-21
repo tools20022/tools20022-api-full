@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason for the rejection or repair status.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Reason for the rejection or repair status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RejectionOrRepairReason7", propOrder = {"code", "additionalReasonInformation"})
 public class RejectionOrRepairReason7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class RejectionOrRepairReason7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public RejectionAndRepairReason7Choice getCode() {
 		return code;
 	}
@@ -193,6 +200,7 @@ public class RejectionOrRepairReason7 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "AddtlRsnInf")
 	public RestrictedFINXMax210Text getAdditionalReasonInformation() {
 		return additionalReasonInformation;
 	}

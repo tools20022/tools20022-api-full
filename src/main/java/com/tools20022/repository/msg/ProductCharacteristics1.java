@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.ProductCharacteristics;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the characteristic of a product.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the characteristic of a product."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProductCharacteristics1", propOrder = {"type", "characteristics"})
 public class ProductCharacteristics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class ProductCharacteristics1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ProductCharacteristics1Code getType() {
 		return type;
 	}
@@ -183,6 +190,7 @@ public class ProductCharacteristics1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Chrtcs", required = true)
 	public Max35Text getCharacteristics() {
 		return characteristics;
 	}

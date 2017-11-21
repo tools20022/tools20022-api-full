@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment context in which the transaction is performed.
@@ -95,6 +99,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.msg.PaymentContext13 PaymentContext13}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentContext19", propOrder = {"cardPresent", "cardholderPresent", "onLineContext", "attendanceContext", "transactionEnvironment", "transactionChannel", "attendantMessageCapable", "attendantLanguage", "cardDataEntryMode",
+		"fallbackIndicator"})
 public class PaymentContext19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -744,6 +751,7 @@ public class PaymentContext19 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CardPres")
 	public TrueFalseIndicator getCardPresent() {
 		return cardPresent;
 	}
@@ -752,6 +760,7 @@ public class PaymentContext19 {
 		this.cardPresent = cardPresent;
 	}
 
+	@XmlElement(name = "CrdhldrPres")
 	public TrueFalseIndicator getCardholderPresent() {
 		return cardholderPresent;
 	}
@@ -760,6 +769,7 @@ public class PaymentContext19 {
 		this.cardholderPresent = cardholderPresent;
 	}
 
+	@XmlElement(name = "OnLineCntxt")
 	public TrueFalseIndicator getOnLineContext() {
 		return onLineContext;
 	}
@@ -768,6 +778,7 @@ public class PaymentContext19 {
 		this.onLineContext = onLineContext;
 	}
 
+	@XmlElement(name = "AttndncCntxt")
 	public AttendanceContext1Code getAttendanceContext() {
 		return attendanceContext;
 	}
@@ -776,6 +787,7 @@ public class PaymentContext19 {
 		this.attendanceContext = attendanceContext;
 	}
 
+	@XmlElement(name = "TxEnvt")
 	public TransactionEnvironment1Code getTransactionEnvironment() {
 		return transactionEnvironment;
 	}
@@ -784,6 +796,7 @@ public class PaymentContext19 {
 		this.transactionEnvironment = transactionEnvironment;
 	}
 
+	@XmlElement(name = "TxChanl")
 	public TransactionChannel3Code getTransactionChannel() {
 		return transactionChannel;
 	}
@@ -792,6 +805,7 @@ public class PaymentContext19 {
 		this.transactionChannel = transactionChannel;
 	}
 
+	@XmlElement(name = "AttndntMsgCpbl")
 	public TrueFalseIndicator getAttendantMessageCapable() {
 		return attendantMessageCapable;
 	}
@@ -800,6 +814,7 @@ public class PaymentContext19 {
 		this.attendantMessageCapable = attendantMessageCapable;
 	}
 
+	@XmlElement(name = "AttndntLang")
 	public LanguageCode getAttendantLanguage() {
 		return attendantLanguage;
 	}
@@ -808,6 +823,7 @@ public class PaymentContext19 {
 		this.attendantLanguage = attendantLanguage;
 	}
 
+	@XmlElement(name = "CardDataNtryMd")
 	public CardDataReading5Code getCardDataEntryMode() {
 		return cardDataEntryMode;
 	}
@@ -816,6 +832,7 @@ public class PaymentContext19 {
 		this.cardDataEntryMode = cardDataEntryMode;
 	}
 
+	@XmlElement(name = "FllbckInd")
 	public CardFallback1Code getFallbackIndicator() {
 		return fallbackIndicator;
 	}

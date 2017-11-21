@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the type of account and the assets to be transferred.
@@ -83,6 +87,8 @@ import java.util.List;
  * "Describes the type of account and the assets to be transferred."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PEPISACashTransfer1", propOrder = {"identification", "type", "percentageToBeTransferred", "amountToBeTransferred", "year", "assets"})
 public class PEPISACashTransfer1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -438,6 +444,7 @@ public class PEPISACashTransfer1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -446,6 +453,7 @@ public class PEPISACashTransfer1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public PEPISA1Code getType() {
 		return type;
 	}
@@ -454,6 +462,7 @@ public class PEPISACashTransfer1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "PctgToBeTrfd", required = true)
 	public PercentageRate getPercentageToBeTransferred() {
 		return percentageToBeTransferred;
 	}
@@ -462,6 +471,7 @@ public class PEPISACashTransfer1 {
 		this.percentageToBeTransferred = percentageToBeTransferred;
 	}
 
+	@XmlElement(name = "AmtToBeTrfd", required = true)
 	public ImpliedCurrencyAndAmount getAmountToBeTransferred() {
 		return amountToBeTransferred;
 	}
@@ -470,6 +480,7 @@ public class PEPISACashTransfer1 {
 		this.amountToBeTransferred = amountToBeTransferred;
 	}
 
+	@XmlElement(name = "Yr", required = true)
 	public PEPOrISAChoice getYear() {
 		return year;
 	}
@@ -478,6 +489,7 @@ public class PEPISACashTransfer1 {
 		this.year = year;
 	}
 
+	@XmlElement(name = "Assts")
 	public List<FinancialInstrument7> getAssets() {
 		return assets;
 	}

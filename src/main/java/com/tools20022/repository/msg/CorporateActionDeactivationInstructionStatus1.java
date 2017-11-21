@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides status of the deactivation instruction.
@@ -89,6 +93,8 @@ import java.util.function.Supplier;
  * definition} = "Provides status of the deactivation instruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionDeactivationInstructionStatus1", propOrder = {"optionType", "optionNumber", "processedStatus", "rejectedStatus"})
 public class CorporateActionDeactivationInstructionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -353,6 +359,7 @@ public class CorporateActionDeactivationInstructionStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OptnTp")
 	public CorporateActionOption1FormatChoice getOptionType() {
 		return optionType;
 	}
@@ -361,6 +368,7 @@ public class CorporateActionDeactivationInstructionStatus1 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "OptnNb")
 	public Exact3NumericText getOptionNumber() {
 		return optionNumber;
 	}
@@ -369,6 +377,7 @@ public class CorporateActionDeactivationInstructionStatus1 {
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "PrcdSts", required = true)
 	public CorporateActionDeactivationInstructionProcessingStatus1 getProcessedStatus() {
 		return processedStatus;
 	}
@@ -377,6 +386,7 @@ public class CorporateActionDeactivationInstructionStatus1 {
 		this.processedStatus = processedStatus;
 	}
 
+	@XmlElement(name = "RjctdSts", required = true)
 	public CorporateActionDeactivationInstructionRejectionStatus1 getRejectedStatus() {
 		return rejectedStatus;
 	}

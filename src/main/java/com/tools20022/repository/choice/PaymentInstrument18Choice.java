@@ -31,6 +31,10 @@ import com.tools20022.repository.msg.DirectDebitMandate5;
 import com.tools20022.repository.msg.PaymentCard18;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of payment instruments.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentInstrument17Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstrument18Choice", propOrder = {"paymentCardDetails", "directDebitDetails", "cheque", "bankersDraft"})
 public class PaymentInstrument18Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -308,6 +314,7 @@ public class PaymentInstrument18Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtCardDtls", required = true)
 	public PaymentCard18 getPaymentCardDetails() {
 		return paymentCardDetails;
 	}
@@ -316,6 +323,7 @@ public class PaymentInstrument18Choice {
 		this.paymentCardDetails = paymentCardDetails;
 	}
 
+	@XmlElement(name = "DrctDbtDtls", required = true)
 	public DirectDebitMandate5 getDirectDebitDetails() {
 		return directDebitDetails;
 	}
@@ -324,6 +332,7 @@ public class PaymentInstrument18Choice {
 		this.directDebitDetails = directDebitDetails;
 	}
 
+	@XmlElement(name = "Chq", required = true)
 	public YesNoIndicator getCheque() {
 		return cheque;
 	}
@@ -332,6 +341,7 @@ public class PaymentInstrument18Choice {
 		this.cheque = cheque;
 	}
 
+	@XmlElement(name = "BkrsDrft", required = true)
 	public YesNoIndicator getBankersDraft() {
 		return bankersDraft;
 	}

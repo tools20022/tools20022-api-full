@@ -54,6 +54,8 @@ public class Max4Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max4Text";
 				definition = "Specifies a character string with a maximum length of 4 characters.";
+				minLength = 1;
+				maxLength = 4;
 			}
 		});
 		return mmObject_lazy.get();

@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Maintenance command the ATM must perform.
@@ -85,6 +89,8 @@ import java.util.List;
  * ATMCommand1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCommand4", propOrder = {"type", "urgency", "dateTime", "commandIdentification", "reason", "traceReason", "additionalReasonInformation", "commandParameters"})
 public class ATMCommand4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -470,6 +476,7 @@ public class ATMCommand4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ATMCommand2Code getType() {
 		return type;
 	}
@@ -478,6 +485,7 @@ public class ATMCommand4 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Urgcy", required = true)
 	public TMSContactLevel2Code getUrgency() {
 		return urgency;
 	}
@@ -486,6 +494,7 @@ public class ATMCommand4 {
 		this.urgency = urgency;
 	}
 
+	@XmlElement(name = "DtTm")
 	public ISODateTime getDateTime() {
 		return dateTime;
 	}
@@ -494,6 +503,7 @@ public class ATMCommand4 {
 		this.dateTime = dateTime;
 	}
 
+	@XmlElement(name = "CmdId")
 	public ATMCommandIdentification1 getCommandIdentification() {
 		return commandIdentification;
 	}
@@ -502,6 +512,7 @@ public class ATMCommand4 {
 		this.commandIdentification = commandIdentification;
 	}
 
+	@XmlElement(name = "Rsn")
 	public ATMCommandReason1Code getReason() {
 		return reason;
 	}
@@ -510,6 +521,7 @@ public class ATMCommand4 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "TracRsn")
 	public List<ATMCommandReason1Code> getTraceReason() {
 		return traceReason;
 	}
@@ -518,6 +530,7 @@ public class ATMCommand4 {
 		this.traceReason = traceReason;
 	}
 
+	@XmlElement(name = "AddtlRsnInf")
 	public Max70Text getAdditionalReasonInformation() {
 		return additionalReasonInformation;
 	}
@@ -526,6 +539,7 @@ public class ATMCommand4 {
 		this.additionalReasonInformation = additionalReasonInformation;
 	}
 
+	@XmlElement(name = "CmdParams")
 	public ATMCommandParameters2Choice getCommandParameters() {
 		return commandParameters;
 	}

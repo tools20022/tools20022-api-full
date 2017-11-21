@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information that locates and identifies a specific address, as defined by
@@ -89,6 +93,8 @@ import java.util.List;
  * PostalAddress8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PostalAddress13", propOrder = {"addressLine", "streetName", "buildingNumber", "postCode", "townName", "countrySubDivision", "country"})
 public class PostalAddress13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -546,6 +552,7 @@ public class PostalAddress13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AdrLine")
 	public List<Max70Text> getAddressLine() {
 		return addressLine;
 	}
@@ -554,6 +561,7 @@ public class PostalAddress13 {
 		this.addressLine = addressLine;
 	}
 
+	@XmlElement(name = "StrtNm")
 	public Max70Text getStreetName() {
 		return streetName;
 	}
@@ -562,6 +570,7 @@ public class PostalAddress13 {
 		this.streetName = streetName;
 	}
 
+	@XmlElement(name = "BldgNb")
 	public Max16Text getBuildingNumber() {
 		return buildingNumber;
 	}
@@ -570,6 +579,7 @@ public class PostalAddress13 {
 		this.buildingNumber = buildingNumber;
 	}
 
+	@XmlElement(name = "PstCd", required = true)
 	public Max16Text getPostCode() {
 		return postCode;
 	}
@@ -578,6 +588,7 @@ public class PostalAddress13 {
 		this.postCode = postCode;
 	}
 
+	@XmlElement(name = "TwnNm", required = true)
 	public Max35Text getTownName() {
 		return townName;
 	}
@@ -586,6 +597,7 @@ public class PostalAddress13 {
 		this.townName = townName;
 	}
 
+	@XmlElement(name = "CtrySubDvsn")
 	public Max35Text getCountrySubDivision() {
 		return countrySubDivision;
 	}
@@ -594,6 +606,7 @@ public class PostalAddress13 {
 		this.countrySubDivision = countrySubDivision;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about an amount.
@@ -62,6 +66,8 @@ import java.util.List;
  * definition} = "Information about an amount."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingAmount3", propOrder = {"amount", "additionalInformation"})
 public class UndertakingAmount3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -169,6 +175,7 @@ public class UndertakingAmount3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -177,6 +184,7 @@ public class UndertakingAmount3 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

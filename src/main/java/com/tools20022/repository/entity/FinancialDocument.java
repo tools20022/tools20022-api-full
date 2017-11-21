@@ -35,6 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Cheque Cheque}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice Invoice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.UndertakingDocument
+ * UndertakingDocument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CreditNote CreditNote}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -49,18 +61,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#mmReferredDocument
  * InvoiceRequestInformation1.mmReferredDocument}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Cheque Cheque}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice Invoice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.UndertakingDocument
- * UndertakingDocument}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CreditNote CreditNote}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,6 +94,11 @@ public class FinancialDocument extends Document {
 				subType_lazy = () -> Arrays.asList(Cheque.mmObject(), Invoice.mmObject(), UndertakingDocument.mmObject(), CreditNote.mmObject());
 				superType_lazy = () -> Document.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(FinancialItem1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FinancialDocument.class;
 			}
 		});
 		return mmObject_lazy.get();

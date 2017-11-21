@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AdditionalReference3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference to a message.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LinkedMessage1Choice", propOrder = {"previousReference", "otherReference", "relatedReference"})
 public class LinkedMessage1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -226,6 +232,7 @@ public class LinkedMessage1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -234,6 +241,7 @@ public class LinkedMessage1Choice {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "OthrRef", required = true)
 	public AdditionalReference3 getOtherReference() {
 		return otherReference;
 	}
@@ -242,6 +250,7 @@ public class LinkedMessage1Choice {
 		this.otherReference = otherReference;
 	}
 
+	@XmlElement(name = "RltdRef", required = true)
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}

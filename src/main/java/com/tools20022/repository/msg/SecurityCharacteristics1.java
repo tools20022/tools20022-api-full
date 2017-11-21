@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide detailed information about the security.
@@ -67,6 +71,8 @@ import java.util.List;
  * "Set of elements used to provide detailed information about the security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityCharacteristics1", propOrder = {"identification", "position", "valuationPrice", "collateralValue"})
 public class SecurityCharacteristics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -254,6 +260,7 @@ public class SecurityCharacteristics1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public List<SecurityIdentification10Choice> getIdentification() {
 		return identification;
 	}
@@ -262,6 +269,7 @@ public class SecurityCharacteristics1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Pos")
 	public List<SecuritiesPosition1> getPosition() {
 		return position;
 	}
@@ -270,6 +278,7 @@ public class SecurityCharacteristics1 {
 		this.position = position;
 	}
 
+	@XmlElement(name = "ValtnPric", required = true)
 	public AmountPricePerFinancialInstrumentQuantity5 getValuationPrice() {
 		return valuationPrice;
 	}
@@ -278,6 +287,7 @@ public class SecurityCharacteristics1 {
 		this.valuationPrice = valuationPrice;
 	}
 
+	@XmlElement(name = "CollVal", required = true)
 	public ActiveCurrencyAndAmount getCollateralValue() {
 		return collateralValue;
 	}

@@ -36,16 +36,14 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmPartyRole
- * Document.mmPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DocumentPartyRole#mmDocument
+ * DocumentPartyRole.mmDocument}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -65,12 +63,14 @@ import java.util.List;
  * NotifyingParty}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DocumentPartyRole#mmDocument
- * DocumentPartyRole.mmDocument}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmPartyRole
+ * Document.mmPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -126,7 +126,7 @@ public class DocumentPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmDocument = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> DocumentPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DocumentPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Document";
@@ -149,7 +149,12 @@ public class DocumentPartyRole extends Role {
 				subType_lazy = () -> Arrays.asList(ValidatingPartyRole.mmObject(), CheckingPartyRole.mmObject(), ResponsiblePartyRole.mmObject(), DocumentIssuer.mmObject(), DocumentSignatory.mmObject(), NotificationReceiver.mmObject(),
 						NotifyingParty.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(DocumentPartyRole.mmDocument);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DocumentPartyRole.mmDocument);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DocumentPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Contains all needed party details for tax agency (sender of the TaxReport)
@@ -94,6 +98,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxReport1", propOrder = {"taxReportHeader", "seller", "buyer", "tradeSettlement", "otherParty", "additionalInformation", "additionalReference", "supplementaryData"})
 public class TaxReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -451,6 +457,7 @@ public class TaxReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TaxRptHdr", required = true)
 	public GroupHeader69 getTaxReportHeader() {
 		return taxReportHeader;
 	}
@@ -459,6 +466,7 @@ public class TaxReport1 {
 		this.taxReportHeader = taxReportHeader;
 	}
 
+	@XmlElement(name = "Sellr", required = true)
 	public PartyIdentification72 getSeller() {
 		return seller;
 	}
@@ -467,6 +475,7 @@ public class TaxReport1 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "Buyr")
 	public PartyIdentification72 getBuyer() {
 		return buyer;
 	}
@@ -475,6 +484,7 @@ public class TaxReport1 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "TradSttlm", required = true)
 	public TradeSettlement2 getTradeSettlement() {
 		return tradeSettlement;
 	}
@@ -483,6 +493,7 @@ public class TaxReport1 {
 		this.tradeSettlement = tradeSettlement;
 	}
 
+	@XmlElement(name = "OthrPty")
 	public List<PartyIdentification72> getOtherParty() {
 		return otherParty;
 	}
@@ -491,6 +502,7 @@ public class TaxReport1 {
 		this.otherParty = otherParty;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<AdditionalInformation1> getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -499,6 +511,7 @@ public class TaxReport1 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "AddtlRef")
 	public List<DocumentGeneralInformation2> getAdditionalReference() {
 		return additionalReference;
 	}
@@ -507,6 +520,7 @@ public class TaxReport1 {
 		this.additionalReference = additionalReference;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

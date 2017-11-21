@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the party fields used to search for a payment.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the party fields used to search for a payment."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTransactionParty", propOrder = {"debtor", "firstAgent", "instructingAgentCorrespondent", "instructedAgentCorrespondent", "intermediary", "finalAgent", "creditor"})
 public class PaymentTransactionParty {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -452,6 +458,7 @@ public class PaymentTransactionParty {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dbtr")
 	public BICIdentifier getDebtor() {
 		return debtor;
 	}
@@ -460,6 +467,7 @@ public class PaymentTransactionParty {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "FrstAgt")
 	public BICIdentifier getFirstAgent() {
 		return firstAgent;
 	}
@@ -468,6 +476,7 @@ public class PaymentTransactionParty {
 		this.firstAgent = firstAgent;
 	}
 
+	@XmlElement(name = "InstgAgtCrspdt")
 	public BICIdentifier getInstructingAgentCorrespondent() {
 		return instructingAgentCorrespondent;
 	}
@@ -476,6 +485,7 @@ public class PaymentTransactionParty {
 		this.instructingAgentCorrespondent = instructingAgentCorrespondent;
 	}
 
+	@XmlElement(name = "InstdAgtCrspdt")
 	public BICIdentifier getInstructedAgentCorrespondent() {
 		return instructedAgentCorrespondent;
 	}
@@ -484,6 +494,7 @@ public class PaymentTransactionParty {
 		this.instructedAgentCorrespondent = instructedAgentCorrespondent;
 	}
 
+	@XmlElement(name = "Intrmy")
 	public BICIdentifier getIntermediary() {
 		return intermediary;
 	}
@@ -492,6 +503,7 @@ public class PaymentTransactionParty {
 		this.intermediary = intermediary;
 	}
 
+	@XmlElement(name = "FnlAgt")
 	public BICIdentifier getFinalAgent() {
 		return finalAgent;
 	}
@@ -500,6 +512,7 @@ public class PaymentTransactionParty {
 		this.finalAgent = finalAgent;
 	}
 
+	@XmlElement(name = "Cdtr")
 	public BICIdentifier getCreditor() {
 		return creditor;
 	}

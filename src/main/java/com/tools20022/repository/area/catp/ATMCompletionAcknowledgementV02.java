@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header32;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The ATMCompletionAcknowledgement message is sent by an acquirer or its agent
@@ -36,9 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catp.009.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
@@ -74,6 +73,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catp.009.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -89,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMCompletionAcknowledgementV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCompletionAcknowledgementV02", propOrder = {"header", "protectedATMCompletionAcknowledgement", "ATMCompletionAcknowledgement", "securityTrailer"})
 public class ATMCompletionAcknowledgementV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -128,6 +132,14 @@ public class ATMCompletionAcknowledgementV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header32.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMCompletionAcknowledgementV02.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType10 protectedATMCompletionAcknowledgement;
 	/**
@@ -162,6 +174,14 @@ public class ATMCompletionAcknowledgementV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMCompletionAcknowledgementV02.class.getMethod("getProtectedATMCompletionAcknowledgement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ATMCompletionAcknowledgement2 aTMCompletionAcknowledgement;
@@ -201,6 +221,14 @@ public class ATMCompletionAcknowledgementV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ATMCompletionAcknowledgement2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMCompletionAcknowledgementV02.class.getMethod("getATMCompletionAcknowledgement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType15 securityTrailer;
 	/**
@@ -236,6 +264,14 @@ public class ATMCompletionAcknowledgementV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMCompletionAcknowledgementV02.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -249,8 +285,9 @@ public class ATMCompletionAcknowledgementV02 {
 				rootElement = "Document";
 				xmlTag = "ATMCmpltnAck";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ATMCompletionAcknowledgementV02.mmHeader, ATMCompletionAcknowledgementV02.mmProtectedATMCompletionAcknowledgement,
-						ATMCompletionAcknowledgementV02.mmATMCompletionAcknowledgement, ATMCompletionAcknowledgementV02.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV02.mmHeader,
+						com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV02.mmProtectedATMCompletionAcknowledgement, com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV02.mmATMCompletionAcknowledgement,
+						com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV02.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catp";
@@ -260,10 +297,16 @@ public class ATMCompletionAcknowledgementV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ATMCompletionAcknowledgementV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header32 getHeader() {
 		return header;
 	}
@@ -272,6 +315,7 @@ public class ATMCompletionAcknowledgementV02 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "PrtctdATMCmpltnAck")
 	public ContentInformationType10 getProtectedATMCompletionAcknowledgement() {
 		return protectedATMCompletionAcknowledgement;
 	}
@@ -280,6 +324,7 @@ public class ATMCompletionAcknowledgementV02 {
 		this.protectedATMCompletionAcknowledgement = protectedATMCompletionAcknowledgement;
 	}
 
+	@XmlElement(name = "ATMCmpltnAck")
 	public ATMCompletionAcknowledgement2 getATMCompletionAcknowledgement() {
 		return aTMCompletionAcknowledgement;
 	}
@@ -288,11 +333,18 @@ public class ATMCompletionAcknowledgementV02 {
 		this.aTMCompletionAcknowledgement = aTMCompletionAcknowledgement;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType15 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catp.009.02.02")
+	static public class Document {
+		@XmlElement(name = "ATMCmpltnAck", required = true)
+		public ATMCompletionAcknowledgementV02 messageBody;
 	}
 }

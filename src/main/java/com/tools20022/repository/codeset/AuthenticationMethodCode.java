@@ -29,25 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationMethod1Code
- * AuthenticationMethod1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationMethod2Code
- * AuthenticationMethod2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationMethod4Code
- * AuthenticationMethod4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code
- * AuthenticationMethod3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code
- * AuthenticationMethod7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code
- * AuthenticationMethod5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationMethod6Code
- * AuthenticationMethod6Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -125,6 +106,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AuthenticationMethodCode#mmOther
  * AuthenticationMethodCode.mmOther}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationMethod1Code
+ * AuthenticationMethod1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationMethod2Code
+ * AuthenticationMethod2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationMethod4Code
+ * AuthenticationMethod4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code
+ * AuthenticationMethod3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code
+ * AuthenticationMethod7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code
+ * AuthenticationMethod5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationMethod6Code
+ * AuthenticationMethod6Code}</li>
  * </ul>
  * </li>
  * <li>

@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cryptographic key involved in the security command.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * KEKIdentifier3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "KEKIdentifier4", propOrder = {"name", "keyIdentification", "keyVersion"})
 public class KEKIdentifier4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -217,6 +223,7 @@ public class KEKIdentifier4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max140Text getName() {
 		return name;
 	}
@@ -225,6 +232,7 @@ public class KEKIdentifier4 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "KeyId")
 	public Max140Text getKeyIdentification() {
 		return keyIdentification;
 	}
@@ -233,6 +241,7 @@ public class KEKIdentifier4 {
 		this.keyIdentification = keyIdentification;
 	}
 
+	@XmlElement(name = "KeyVrsn")
 	public Max140Text getKeyVersion() {
 		return keyVersion;
 	}

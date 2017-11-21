@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.LongQuantityToQuantityRatio2;
 import com.tools20022.repository.msg.QuantityToQuantityRatio1;
 import com.tools20022.repository.msg.QuantityToQuantityRatio2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmAdditionalQuantityForResultantSecuritiesProceedsDefinition
+ * QuantityRatio.mmAdditionalQuantityForResultantSecuritiesProceedsDefinition}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.QuantityRatio#mmQuantity1
+ * QuantityRatio.mmQuantity1}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.QuantityRatio#mmQuantity2
+ * QuantityRatio.mmQuantity2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmAdditionalQuantityForSubscribedSecuritiesProceedsDefinition
+ * QuantityRatio.mmAdditionalQuantityForSubscribedSecuritiesProceedsDefinition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmNewToOldProceedsDefinition
+ * QuantityRatio.mmNewToOldProceedsDefinition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmNewToUnderlyingProceedsDefinition
+ * QuantityRatio.mmNewToUnderlyingProceedsDefinition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmIntermediateSecuritiesProceedsDefinition
+ * QuantityRatio.mmIntermediateSecuritiesProceedsDefinition}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.QuantityRatio#mmwarrant
+ * QuantityRatio.mmwarrant}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -150,32 +177,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * RatioFormat21Choice.mmQuantityToQuantity}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmAdditionalQuantityForResultantSecuritiesProceedsDefinition
- * QuantityRatio.mmAdditionalQuantityForResultantSecuritiesProceedsDefinition}</li>
- * <li>{@linkplain com.tools20022.repository.entity.QuantityRatio#mmQuantity1
- * QuantityRatio.mmQuantity1}</li>
- * <li>{@linkplain com.tools20022.repository.entity.QuantityRatio#mmQuantity2
- * QuantityRatio.mmQuantity2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmAdditionalQuantityForSubscribedSecuritiesProceedsDefinition
- * QuantityRatio.mmAdditionalQuantityForSubscribedSecuritiesProceedsDefinition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmNewToOldProceedsDefinition
- * QuantityRatio.mmNewToOldProceedsDefinition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmNewToUnderlyingProceedsDefinition
- * QuantityRatio.mmNewToUnderlyingProceedsDefinition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmIntermediateSecuritiesProceedsDefinition
- * QuantityRatio.mmIntermediateSecuritiesProceedsDefinition}</li>
- * <li>{@linkplain com.tools20022.repository.entity.QuantityRatio#mmwarrant
- * QuantityRatio.mmwarrant}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -235,7 +236,7 @@ public class QuantityRatio {
 	 */
 	public static final MMBusinessAssociationEnd mmAdditionalQuantityForResultantSecuritiesProceedsDefinition = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> QuantityRatio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdditionalQuantityForResultantSecuritiesProceedsDefinition";
@@ -258,11 +259,6 @@ public class QuantityRatio {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.DecimalNumber
 	 * DecimalNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.QuantityRatio QuantityRatio}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -278,6 +274,11 @@ public class QuantityRatio {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.QuantityRatio QuantityRatio}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -291,7 +292,7 @@ public class QuantityRatio {
 	public static final MMBusinessAttribute mmQuantity1 = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuantityToQuantityRatio1.mmQuantity1, QuantityToQuantityRatio2.mmQuantity1, LongQuantityToQuantityRatio2.mmLongQuantity1);
-			elementContext_lazy = () -> QuantityRatio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity1";
@@ -299,6 +300,14 @@ public class QuantityRatio {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return QuantityRatio.class.getMethod("getQuantity1", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DecimalNumber quantity2;
@@ -312,11 +321,6 @@ public class QuantityRatio {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.DecimalNumber
 	 * DecimalNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.QuantityRatio QuantityRatio}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -332,6 +336,11 @@ public class QuantityRatio {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.QuantityRatio QuantityRatio}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -345,7 +354,7 @@ public class QuantityRatio {
 	public static final MMBusinessAttribute mmQuantity2 = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuantityToQuantityRatio1.mmQuantity2, QuantityToQuantityRatio2.mmQuantity2, LongQuantityToQuantityRatio2.mmLongQuantity2);
-			elementContext_lazy = () -> QuantityRatio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity2";
@@ -353,6 +362,14 @@ public class QuantityRatio {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return QuantityRatio.class.getMethod("getQuantity2", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesProceedsDefinition additionalQuantityForSubscribedSecuritiesProceedsDefinition;
@@ -395,7 +412,7 @@ public class QuantityRatio {
 	 */
 	public static final MMBusinessAssociationEnd mmAdditionalQuantityForSubscribedSecuritiesProceedsDefinition = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> QuantityRatio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdditionalQuantityForSubscribedSecuritiesProceedsDefinition";
@@ -445,7 +462,7 @@ public class QuantityRatio {
 	 */
 	public static final MMBusinessAssociationEnd mmNewToOldProceedsDefinition = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> QuantityRatio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewToOldProceedsDefinition";
@@ -495,7 +512,7 @@ public class QuantityRatio {
 	 */
 	public static final MMBusinessAssociationEnd mmNewToUnderlyingProceedsDefinition = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> QuantityRatio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewToUnderlyingProceedsDefinition";
@@ -547,7 +564,7 @@ public class QuantityRatio {
 	 */
 	public static final MMBusinessAssociationEnd mmIntermediateSecuritiesProceedsDefinition = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> QuantityRatio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntermediateSecuritiesProceedsDefinition";
@@ -596,7 +613,7 @@ public class QuantityRatio {
 	 */
 	public static final MMBusinessAssociationEnd mmwarrant = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> QuantityRatio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "warrant";
@@ -624,10 +641,16 @@ public class QuantityRatio {
 						RatioFormat10Choice.mmQuantityToQuantity, RatioFormat11Choice.mmQuantityToQuantity, RatioFormat12Choice.mmQuantityToQuantity, RatioFormat13Choice.mmQuantityToQuantity, RatioFormat14Choice.mmQuantityToQuantity,
 						RatioFormat2Choice.mmQuantityToQuantity, RatioFormat1Choice.mmQuantityToQuantity, RatioFormat19Choice.mmQuantityToQuantity, RatioFormat17Choice.mmQuantityToQuantity, RatioFormat18Choice.mmQuantityToQuantity,
 						RatioFormat20Choice.mmQuantityToQuantity, RatioFormat22Choice.mmQuantityToQuantity, RatioFormat24Choice.mmQuantityToQuantity, RatioFormat23Choice.mmQuantityToQuantity, RatioFormat21Choice.mmQuantityToQuantity);
-				element_lazy = () -> Arrays.asList(QuantityRatio.mmAdditionalQuantityForResultantSecuritiesProceedsDefinition, QuantityRatio.mmQuantity1, QuantityRatio.mmQuantity2,
-						QuantityRatio.mmAdditionalQuantityForSubscribedSecuritiesProceedsDefinition, QuantityRatio.mmNewToOldProceedsDefinition, QuantityRatio.mmNewToUnderlyingProceedsDefinition,
-						QuantityRatio.mmIntermediateSecuritiesProceedsDefinition, QuantityRatio.mmwarrant);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.QuantityRatio.mmAdditionalQuantityForResultantSecuritiesProceedsDefinition, com.tools20022.repository.entity.QuantityRatio.mmQuantity1,
+						com.tools20022.repository.entity.QuantityRatio.mmQuantity2, com.tools20022.repository.entity.QuantityRatio.mmAdditionalQuantityForSubscribedSecuritiesProceedsDefinition,
+						com.tools20022.repository.entity.QuantityRatio.mmNewToOldProceedsDefinition, com.tools20022.repository.entity.QuantityRatio.mmNewToUnderlyingProceedsDefinition,
+						com.tools20022.repository.entity.QuantityRatio.mmIntermediateSecuritiesProceedsDefinition, com.tools20022.repository.entity.QuantityRatio.mmwarrant);
 				derivationComponent_lazy = () -> Arrays.asList(QuantityToQuantityRatio1.mmObject(), QuantityToQuantityRatio2.mmObject(), LongQuantityToQuantityRatio2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return QuantityRatio.class;
 			}
 		});
 		return mmObject_lazy.get();

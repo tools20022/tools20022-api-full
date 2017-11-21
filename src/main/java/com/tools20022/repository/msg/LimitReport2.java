@@ -28,6 +28,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports either on the risk management limit or on a business error.
@@ -74,6 +78,8 @@ import java.util.function.Supplier;
  * "Reports either on the risk management limit or on a business error."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LimitReport2", propOrder = {"limitIdentification", "limit", "businessError"})
 public class LimitReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -273,6 +279,7 @@ public class LimitReport2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LmtId", required = true)
 	public LimitIdentificationDetails2 getLimitIdentification() {
 		return limitIdentification;
 	}
@@ -281,6 +288,7 @@ public class LimitReport2 {
 		this.limitIdentification = limitIdentification;
 	}
 
+	@XmlElement(name = "Lmt", required = true)
 	public LimitDetails3 getLimit() {
 		return limit;
 	}
@@ -289,6 +297,7 @@ public class LimitReport2 {
 		this.limit = limit;
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public ErrorHandling2 getBusinessError() {
 		return businessError;
 	}

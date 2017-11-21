@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies additional parameters to the message or transaction.
@@ -83,6 +87,9 @@ import java.util.function.Supplier;
  * "Specifies additional parameters to the message or transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalParameters20", propOrder = {"preConfirmation", "partialSettlement", "previousPartialConfirmationIdentification", "tripartyAgentCollateralTransactionIdentification",
+		"clientTripartyCollateralTransactionIdentification", "clientCollateralInstructionIdentification", "tripartyCollateralInstructionIdentification"})
 public class AdditionalParameters20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -462,6 +469,7 @@ public class AdditionalParameters20 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PreConf")
 	public PreConfirmation1Code getPreConfirmation() {
 		return preConfirmation;
 	}
@@ -470,6 +478,7 @@ public class AdditionalParameters20 {
 		this.preConfirmation = preConfirmation;
 	}
 
+	@XmlElement(name = "PrtlSttlm")
 	public PartialSettlement2Code getPartialSettlement() {
 		return partialSettlement;
 	}
@@ -478,6 +487,7 @@ public class AdditionalParameters20 {
 		this.partialSettlement = partialSettlement;
 	}
 
+	@XmlElement(name = "PrvsPrtlConfId")
 	public RestrictedFINXMax16Text getPreviousPartialConfirmationIdentification() {
 		return previousPartialConfirmationIdentification;
 	}
@@ -486,6 +496,7 @@ public class AdditionalParameters20 {
 		this.previousPartialConfirmationIdentification = previousPartialConfirmationIdentification;
 	}
 
+	@XmlElement(name = "TrptyAgtCollTxId")
 	public RestrictedFINXMax16Text getTripartyAgentCollateralTransactionIdentification() {
 		return tripartyAgentCollateralTransactionIdentification;
 	}
@@ -494,6 +505,7 @@ public class AdditionalParameters20 {
 		this.tripartyAgentCollateralTransactionIdentification = tripartyAgentCollateralTransactionIdentification;
 	}
 
+	@XmlElement(name = "ClntTrptyCollTxId")
 	public RestrictedFINXMax16Text getClientTripartyCollateralTransactionIdentification() {
 		return clientTripartyCollateralTransactionIdentification;
 	}
@@ -502,6 +514,7 @@ public class AdditionalParameters20 {
 		this.clientTripartyCollateralTransactionIdentification = clientTripartyCollateralTransactionIdentification;
 	}
 
+	@XmlElement(name = "ClntCollInstrId")
 	public RestrictedFINXMax16Text getClientCollateralInstructionIdentification() {
 		return clientCollateralInstructionIdentification;
 	}
@@ -510,6 +523,7 @@ public class AdditionalParameters20 {
 		this.clientCollateralInstructionIdentification = clientCollateralInstructionIdentification;
 	}
 
+	@XmlElement(name = "TrptyCollInstrId")
 	public RestrictedFINXMax16Text getTripartyCollateralInstructionIdentification() {
 		return tripartyCollateralInstructionIdentification;
 	}

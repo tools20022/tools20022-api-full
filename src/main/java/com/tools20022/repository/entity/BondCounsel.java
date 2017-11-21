@@ -65,6 +65,11 @@ public class BondCounsel extends SecuritiesPartyRole {
 				definition = "Attorney who prepares the legal opinion concerning a municipal bond issue.";
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BondCounsel.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

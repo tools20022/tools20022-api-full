@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies an order linked to an account opening.
@@ -106,6 +110,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies an order linked to an account opening."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentFundOrder4", propOrder = {"orderReference", "masterReference"})
 public class InvestmentFundOrder4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class InvestmentFundOrder4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrRef")
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -237,6 +244,7 @@ public class InvestmentFundOrder4 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}

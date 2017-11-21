@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action option details.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionOptionSD2", propOrder = {"placeAndName", "extendedOptionFeatures", "defaultOptionFlag", "DTCTaxControlNumberRequiredFlag"})
 public class CorporateActionOptionSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -271,6 +277,7 @@ public class CorporateActionOptionSD2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -279,6 +286,7 @@ public class CorporateActionOptionSD2 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "XtndedOptnFeatrs")
 	public ExtendedOptionFeature1Code getExtendedOptionFeatures() {
 		return extendedOptionFeatures;
 	}
@@ -287,6 +295,7 @@ public class CorporateActionOptionSD2 {
 		this.extendedOptionFeatures = extendedOptionFeatures;
 	}
 
+	@XmlElement(name = "DfltOptnFlg", required = true)
 	public YesNoIndicator getDefaultOptionFlag() {
 		return defaultOptionFlag;
 	}
@@ -295,6 +304,7 @@ public class CorporateActionOptionSD2 {
 		this.defaultOptionFlag = defaultOptionFlag;
 	}
 
+	@XmlElement(name = "DTCTaxCtrlNbReqrdFlg")
 	public YesNoIndicator getDTCTaxControlNumberRequiredFlag() {
 		return dTCTaxControlNumberRequiredFlag;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instruction status.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransferInstructionStatus3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferInstructionStatus4", propOrder = {"status", "reason"})
 public class TransferInstructionStatus4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -193,6 +199,7 @@ public class TransferInstructionStatus4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public TransferStatus4Code getStatus() {
 		return status;
 	}
@@ -201,6 +208,7 @@ public class TransferInstructionStatus4 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Rsn")
 	public Max350Text getReason() {
 		return reason;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Numerical representation of the net increases and decreases in an account at
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BalanceStatus2", propOrder = "balance")
 public class BalanceStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -140,6 +146,7 @@ public class BalanceStatus2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Bal", required = true)
 	public ActiveCurrencyAndAmount getBalance() {
 		return balance;
 	}

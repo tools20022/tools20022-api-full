@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Owner and account number of the guarantee fund.
@@ -56,6 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Owner and account number of the guarantee fund."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GuaranteeFundInformation1", propOrder = {"guaranteeFundAccount", "guaranteeFundAccountOwner"})
 public class GuaranteeFundInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -156,6 +162,7 @@ public class GuaranteeFundInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrntFndAcct", required = true)
 	public CashAccount24 getGuaranteeFundAccount() {
 		return guaranteeFundAccount;
 	}
@@ -164,6 +171,7 @@ public class GuaranteeFundInformation1 {
 		this.guaranteeFundAccount = guaranteeFundAccount;
 	}
 
+	@XmlElement(name = "GrntFndAcctOwnr", required = true)
 	public FinancialInstitutionIdentification9 getGuaranteeFundAccountOwner() {
 		return guaranteeFundAccountOwner;
 	}

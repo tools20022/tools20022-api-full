@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes information needed to identify a change for a static data, the time
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AuditTrail1", propOrder = {"fieldName", "oldFieldValue", "newFieldValue", "operationTimeStamp", "instructingUser", "approvingUser"})
 public class AuditTrail1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -328,6 +334,7 @@ public class AuditTrail1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FldNm", required = true)
 	public Max35Text getFieldName() {
 		return fieldName;
 	}
@@ -336,6 +343,7 @@ public class AuditTrail1 {
 		this.fieldName = fieldName;
 	}
 
+	@XmlElement(name = "OdFldVal", required = true)
 	public Max350Text getOldFieldValue() {
 		return oldFieldValue;
 	}
@@ -344,6 +352,7 @@ public class AuditTrail1 {
 		this.oldFieldValue = oldFieldValue;
 	}
 
+	@XmlElement(name = "NewFldVal", required = true)
 	public Max350Text getNewFieldValue() {
 		return newFieldValue;
 	}
@@ -352,6 +361,7 @@ public class AuditTrail1 {
 		this.newFieldValue = newFieldValue;
 	}
 
+	@XmlElement(name = "OprTmStmp", required = true)
 	public ISODateTime getOperationTimeStamp() {
 		return operationTimeStamp;
 	}
@@ -360,6 +370,7 @@ public class AuditTrail1 {
 		this.operationTimeStamp = operationTimeStamp;
 	}
 
+	@XmlElement(name = "InstgUsr", required = true)
 	public Max256Text getInstructingUser() {
 		return instructingUser;
 	}
@@ -368,6 +379,7 @@ public class AuditTrail1 {
 		this.instructingUser = instructingUser;
 	}
 
+	@XmlElement(name = "ApprvgUsr")
 	public Max256Text getApprovingUser() {
 		return approvingUser;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the value of a date.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the value of a date."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DateFormat4Choice", propOrder = {"date", "notSpecifiedDate", "proprietary"})
 public class DateFormat4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -203,6 +209,7 @@ public class DateFormat4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public DateAndDateTimeChoice getDate() {
 		return date;
 	}
@@ -211,6 +218,7 @@ public class DateFormat4Choice {
 		this.date = date;
 	}
 
+	@XmlElement(name = "NotSpcfdDt", required = true)
 	public DateType6Code getNotSpecifiedDate() {
 		return notSpecifiedDate;
 	}
@@ -219,6 +227,7 @@ public class DateFormat4Choice {
 		this.notSpecifiedDate = notSpecifiedDate;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification13 getProprietary() {
 		return proprietary;
 	}

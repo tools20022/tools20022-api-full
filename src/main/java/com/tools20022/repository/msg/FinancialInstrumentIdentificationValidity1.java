@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the date from which the financial instrument identification is
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentIdentificationValidity1", propOrder = {"financialInstrumentIdentification", "ISINValidFrom"})
 public class FinancialInstrumentIdentificationValidity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class FinancialInstrumentIdentificationValidity1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -193,6 +200,7 @@ public class FinancialInstrumentIdentificationValidity1 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "ISINVldFr")
 	public ISODate getISINValidFrom() {
 		return iSINValidFrom;
 	}

@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.GroupHeader58;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.BanktoCustomerCashManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * Scope The BankToCustomerDebitCreditNotification message is sent by the
@@ -49,9 +51,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.054.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
@@ -85,6 +84,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.054.001.05}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -108,6 +110,8 @@ import java.util.List;
  * BankToCustomerDebitCreditNotificationV04}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BankToCustomerDebitCreditNotificationV05", propOrder = {"groupHeader", "notification", "supplementaryData"})
 public class BankToCustomerDebitCreditNotificationV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +163,14 @@ public class BankToCustomerDebitCreditNotificationV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader58.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BankToCustomerDebitCreditNotificationV05.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AccountNotification11> notification;
 	/**
@@ -207,6 +219,14 @@ public class BankToCustomerDebitCreditNotificationV05 {
 			previousVersion_lazy = () -> BankToCustomerDebitCreditNotificationV04.mmNotification;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountNotification11.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BankToCustomerDebitCreditNotificationV05.class.getMethod("getNotification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -260,6 +280,14 @@ public class BankToCustomerDebitCreditNotificationV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BankToCustomerDebitCreditNotificationV05.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -274,7 +302,8 @@ public class BankToCustomerDebitCreditNotificationV05 {
 				rootElement = "Document";
 				xmlTag = "BkToCstmrDbtCdtNtfctn";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(BankToCustomerDebitCreditNotificationV05.mmGroupHeader, BankToCustomerDebitCreditNotificationV05.mmNotification, BankToCustomerDebitCreditNotificationV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05.mmGroupHeader,
+						com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05.mmNotification, com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -284,10 +313,16 @@ public class BankToCustomerDebitCreditNotificationV05 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BankToCustomerDebitCreditNotificationV05.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader58 getGroupHeader() {
 		return groupHeader;
 	}
@@ -296,6 +331,7 @@ public class BankToCustomerDebitCreditNotificationV05 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "Ntfctn", required = true)
 	public List<AccountNotification11> getNotification() {
 		return notification;
 	}
@@ -304,11 +340,18 @@ public class BankToCustomerDebitCreditNotificationV05 {
 		this.notification = notification;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.054.05.05")
+	static public class Document {
+		@XmlElement(name = "BkToCstmrDbtCdtNtfctn", required = true)
+		public BankToCustomerDebitCreditNotificationV05 messageBody;
 	}
 }

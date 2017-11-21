@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.SecuritiesMarketReportHeader1;
 import com.tools20022.repository.msg.SecuritiesNonTradingDayReport1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The FinancialInstrumentReportingNonWorkingDayReport message is sent by the
@@ -36,9 +38,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.039.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -72,6 +71,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.039.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -83,6 +85,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentReportingNonWorkingDayReportV01", propOrder = {"reportHeader", "nonWorkingDay", "supplementaryData"})
 public class FinancialInstrumentReportingNonWorkingDayReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -120,6 +124,14 @@ public class FinancialInstrumentReportingNonWorkingDayReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesMarketReportHeader1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingNonWorkingDayReportV01.class.getMethod("getReportHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SecuritiesNonTradingDayReport1> nonWorkingDay;
 	/**
@@ -153,6 +165,14 @@ public class FinancialInstrumentReportingNonWorkingDayReportV01 {
 			definition = "Provides details on the days a venue is not open.";
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesNonTradingDayReport1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingNonWorkingDayReportV01.class.getMethod("getNonWorkingDay", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -191,6 +211,14 @@ public class FinancialInstrumentReportingNonWorkingDayReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingNonWorkingDayReportV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -203,8 +231,8 @@ public class FinancialInstrumentReportingNonWorkingDayReportV01 {
 				rootElement = "Document";
 				xmlTag = "FinInstrmRptgNonWorkgDayRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingNonWorkingDayReportV01.mmReportHeader, FinancialInstrumentReportingNonWorkingDayReportV01.mmNonWorkingDay,
-						FinancialInstrumentReportingNonWorkingDayReportV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01.mmReportHeader,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01.mmNonWorkingDay, com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -214,10 +242,16 @@ public class FinancialInstrumentReportingNonWorkingDayReportV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FinancialInstrumentReportingNonWorkingDayReportV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptHdr", required = true)
 	public SecuritiesMarketReportHeader1 getReportHeader() {
 		return reportHeader;
 	}
@@ -226,6 +260,7 @@ public class FinancialInstrumentReportingNonWorkingDayReportV01 {
 		this.reportHeader = reportHeader;
 	}
 
+	@XmlElement(name = "NonWorkgDay", required = true)
 	public List<SecuritiesNonTradingDayReport1> getNonWorkingDay() {
 		return nonWorkingDay;
 	}
@@ -234,11 +269,18 @@ public class FinancialInstrumentReportingNonWorkingDayReportV01 {
 		this.nonWorkingDay = nonWorkingDay;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.039.01.01")
+	static public class Document {
+		@XmlElement(name = "FinInstrmRptgNonWorkgDayRpt", required = true)
+		public FinancialInstrumentReportingNonWorkingDayReportV01 messageBody;
 	}
 }

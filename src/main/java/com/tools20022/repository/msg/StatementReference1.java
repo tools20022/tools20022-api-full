@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the reference of the statment by a unique identifier and the date
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatementReference1", propOrder = {"statementIdentification", "statementDateTime", "pagination"})
 public class StatementReference1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -223,6 +229,7 @@ public class StatementReference1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtId", required = true)
 	public Max35Text getStatementIdentification() {
 		return statementIdentification;
 	}
@@ -231,6 +238,7 @@ public class StatementReference1 {
 		this.statementIdentification = statementIdentification;
 	}
 
+	@XmlElement(name = "StmtDtTm", required = true)
 	public DateAndDateTimeChoice getStatementDateTime() {
 		return statementDateTime;
 	}
@@ -239,6 +247,7 @@ public class StatementReference1 {
 		this.statementDateTime = statementDateTime;
 	}
 
+	@XmlElement(name = "Pgntn")
 	public Pagination getPagination() {
 		return pagination;
 	}

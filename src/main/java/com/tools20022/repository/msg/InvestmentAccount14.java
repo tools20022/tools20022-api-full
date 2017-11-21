@@ -28,6 +28,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account between an investor(s) and a fund manager or a fund. The account can
@@ -95,6 +99,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccount14", propOrder = {"accountIdentification", "accountName", "accountDesignation", "individualOwnerIdentification", "organisationOwnerIdentification", "accountServicer"})
 public class InvestmentAccount14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -508,6 +514,7 @@ public class InvestmentAccount14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentification1 getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -516,6 +523,7 @@ public class InvestmentAccount14 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctNm")
 	public Max35Text getAccountName() {
 		return accountName;
 	}
@@ -524,6 +532,7 @@ public class InvestmentAccount14 {
 		this.accountName = accountName;
 	}
 
+	@XmlElement(name = "AcctDsgnt")
 	public Max35Text getAccountDesignation() {
 		return accountDesignation;
 	}
@@ -532,6 +541,7 @@ public class InvestmentAccount14 {
 		this.accountDesignation = accountDesignation;
 	}
 
+	@XmlElement(name = "IndvOwnrId")
 	public IndividualPersonIdentificationChoice getIndividualOwnerIdentification() {
 		return individualOwnerIdentification;
 	}
@@ -540,6 +550,7 @@ public class InvestmentAccount14 {
 		this.individualOwnerIdentification = individualOwnerIdentification;
 	}
 
+	@XmlElement(name = "OrgOwnrId")
 	public PartyIdentification2Choice getOrganisationOwnerIdentification() {
 		return organisationOwnerIdentification;
 	}
@@ -548,6 +559,7 @@ public class InvestmentAccount14 {
 		this.organisationOwnerIdentification = organisationOwnerIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public PartyIdentification2Choice getAccountServicer() {
 		return accountServicer;
 	}

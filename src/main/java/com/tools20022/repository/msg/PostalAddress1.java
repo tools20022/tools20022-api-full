@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information that locates and identifies a specific address, as defined by
@@ -82,6 +86,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PostalAddress1", propOrder = {"addressType", "addressLine", "streetName", "buildingNumber", "postCode", "townName", "countrySubDivision", "country"})
 public class PostalAddress1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -475,6 +481,7 @@ public class PostalAddress1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AdrTp")
 	public AddressType2Code getAddressType() {
 		return addressType;
 	}
@@ -483,6 +490,7 @@ public class PostalAddress1 {
 		this.addressType = addressType;
 	}
 
+	@XmlElement(name = "AdrLine")
 	public List<Max70Text> getAddressLine() {
 		return addressLine;
 	}
@@ -491,6 +499,7 @@ public class PostalAddress1 {
 		this.addressLine = addressLine;
 	}
 
+	@XmlElement(name = "StrtNm")
 	public Max70Text getStreetName() {
 		return streetName;
 	}
@@ -499,6 +508,7 @@ public class PostalAddress1 {
 		this.streetName = streetName;
 	}
 
+	@XmlElement(name = "BldgNb")
 	public Max16Text getBuildingNumber() {
 		return buildingNumber;
 	}
@@ -507,6 +517,7 @@ public class PostalAddress1 {
 		this.buildingNumber = buildingNumber;
 	}
 
+	@XmlElement(name = "PstCd")
 	public Max16Text getPostCode() {
 		return postCode;
 	}
@@ -515,6 +526,7 @@ public class PostalAddress1 {
 		this.postCode = postCode;
 	}
 
+	@XmlElement(name = "TwnNm")
 	public Max35Text getTownName() {
 		return townName;
 	}
@@ -523,6 +535,7 @@ public class PostalAddress1 {
 		this.townName = townName;
 	}
 
+	@XmlElement(name = "CtrySubDvsn")
 	public Max35Text getCountrySubDivision() {
 		return countrySubDivision;
 	}
@@ -531,6 +544,7 @@ public class PostalAddress1 {
 		this.countrySubDivision = countrySubDivision;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}

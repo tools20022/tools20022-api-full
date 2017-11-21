@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Safekeeping or investment account. A safekeeping account is an account on
@@ -99,6 +103,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SafekeepingAccount1", propOrder = {"identification", "fungibleIndicator", "name", "designation", "intermediaryInformation", "accountOwner", "accountServicer"})
 public class SafekeepingAccount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -476,6 +482,7 @@ public class SafekeepingAccount1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentificationFormatChoice getIdentification() {
 		return identification;
 	}
@@ -484,6 +491,7 @@ public class SafekeepingAccount1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "FngbInd", required = true)
 	public YesNoIndicator getFungibleIndicator() {
 		return fungibleIndicator;
 	}
@@ -492,6 +500,7 @@ public class SafekeepingAccount1 {
 		this.fungibleIndicator = fungibleIndicator;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max35Text getName() {
 		return name;
 	}
@@ -500,6 +509,7 @@ public class SafekeepingAccount1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Dsgnt")
 	public Max35Text getDesignation() {
 		return designation;
 	}
@@ -508,6 +518,7 @@ public class SafekeepingAccount1 {
 		this.designation = designation;
 	}
 
+	@XmlElement(name = "IntrmyInf")
 	public List<Intermediary1> getIntermediaryInformation() {
 		return intermediaryInformation;
 	}
@@ -516,6 +527,7 @@ public class SafekeepingAccount1 {
 		this.intermediaryInformation = intermediaryInformation;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification1Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -524,6 +536,7 @@ public class SafekeepingAccount1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public PartyIdentification1Choice getAccountServicer() {
 		return accountServicer;
 	}

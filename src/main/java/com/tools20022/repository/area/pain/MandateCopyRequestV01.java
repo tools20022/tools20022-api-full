@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.MandateCopy1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PaymentsMandatesISOLatestversion;
 import com.tools20022.repository.msgset.PaymentsMandatesMaintenance20162017;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -51,9 +53,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.017.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationLatestVersion
@@ -89,6 +88,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.017.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -100,6 +102,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MandateCopyRequestV01", propOrder = {"groupHeader", "underlyingCopyRequestDetails", "supplementaryData"})
 public class MandateCopyRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -139,6 +143,14 @@ public class MandateCopyRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader47.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateCopyRequestV01.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<MandateCopy1> underlyingCopyRequestDetails;
 	/**
@@ -174,6 +186,14 @@ public class MandateCopyRequestV01 {
 			definition = "Set of information used to identify the mandate for which a copy is requested.";
 			minOccurs = 1;
 			complexType_lazy = () -> MandateCopy1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateCopyRequestV01.class.getMethod("getUnderlyingCopyRequestDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -212,6 +232,14 @@ public class MandateCopyRequestV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateCopyRequestV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -224,7 +252,8 @@ public class MandateCopyRequestV01 {
 				rootElement = "Document";
 				xmlTag = "MndtCpyReq";
 				businessArea_lazy = () -> PaymentsInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MandateCopyRequestV01.mmGroupHeader, MandateCopyRequestV01.mmUnderlyingCopyRequestDetails, MandateCopyRequestV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateCopyRequestV01.mmGroupHeader, com.tools20022.repository.area.pain.MandateCopyRequestV01.mmUnderlyingCopyRequestDetails,
+						com.tools20022.repository.area.pain.MandateCopyRequestV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";
@@ -234,10 +263,16 @@ public class MandateCopyRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MandateCopyRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader47 getGroupHeader() {
 		return groupHeader;
 	}
@@ -246,6 +281,7 @@ public class MandateCopyRequestV01 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "UndrlygCpyReqDtls", required = true)
 	public List<MandateCopy1> getUnderlyingCopyRequestDetails() {
 		return underlyingCopyRequestDetails;
 	}
@@ -254,11 +290,18 @@ public class MandateCopyRequestV01 {
 		this.underlyingCopyRequestDetails = underlyingCopyRequestDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.017.01.01")
+	static public class Document {
+		@XmlElement(name = "MndtCpyReq", required = true)
+		public MandateCopyRequestV01 messageBody;
 	}
 }

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Confirmation information for the issued undertaking.
@@ -72,6 +76,8 @@ import java.util.List;
  * definition} = "Confirmation information for the issued undertaking."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingConfirmation1", propOrder = {"confirmer", "referenceNumber", "date", "confirmation"})
 public class UndertakingConfirmation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -279,6 +285,7 @@ public class UndertakingConfirmation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cnfrmr", required = true)
 	public PartyIdentification43 getConfirmer() {
 		return confirmer;
 	}
@@ -287,6 +294,7 @@ public class UndertakingConfirmation1 {
 		this.confirmer = confirmer;
 	}
 
+	@XmlElement(name = "RefNb", required = true)
 	public Max35Text getReferenceNumber() {
 		return referenceNumber;
 	}
@@ -295,6 +303,7 @@ public class UndertakingConfirmation1 {
 		this.referenceNumber = referenceNumber;
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public DateAndDateTimeChoice getDate() {
 		return date;
 	}
@@ -303,6 +312,7 @@ public class UndertakingConfirmation1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Conf")
 	public List<Max2000Text> getConfirmation() {
 		return confirmation;
 	}

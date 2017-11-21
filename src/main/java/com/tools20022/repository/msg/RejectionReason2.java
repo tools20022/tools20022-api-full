@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General information about the reason of the rejection.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "General information about the reason of the rejection."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RejectionReason2", propOrder = {"rejectingPartyReason", "rejectionDateTime", "errorLocation", "reasonDescription", "additionalData"})
 public class RejectionReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -315,6 +321,7 @@ public class RejectionReason2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RjctgPtyRsn", required = true)
 	public Max35Text getRejectingPartyReason() {
 		return rejectingPartyReason;
 	}
@@ -323,6 +330,7 @@ public class RejectionReason2 {
 		this.rejectingPartyReason = rejectingPartyReason;
 	}
 
+	@XmlElement(name = "RjctnDtTm")
 	public ISODateTime getRejectionDateTime() {
 		return rejectionDateTime;
 	}
@@ -331,6 +339,7 @@ public class RejectionReason2 {
 		this.rejectionDateTime = rejectionDateTime;
 	}
 
+	@XmlElement(name = "ErrLctn")
 	public Max350Text getErrorLocation() {
 		return errorLocation;
 	}
@@ -339,6 +348,7 @@ public class RejectionReason2 {
 		this.errorLocation = errorLocation;
 	}
 
+	@XmlElement(name = "RsnDesc")
 	public Max350Text getReasonDescription() {
 		return reasonDescription;
 	}
@@ -347,6 +357,7 @@ public class RejectionReason2 {
 		this.reasonDescription = reasonDescription;
 	}
 
+	@XmlElement(name = "AddtlData")
 	public Max20000Text getAdditionalData() {
 		return additionalData;
 	}

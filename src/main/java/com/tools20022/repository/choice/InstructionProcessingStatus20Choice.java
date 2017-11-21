@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.NoSpecifiedReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between different instruction processing statuses.
@@ -102,6 +106,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * InstructionProcessingStatus15Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructionProcessingStatus20Choice", propOrder = {"cancelled", "acceptedForFurtherProcessing", "rejected", "pending", "defaultAction", "standingInstruction", "proprietaryStatus"})
 public class InstructionProcessingStatus20Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -573,6 +579,7 @@ public class InstructionProcessingStatus20Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Canc", required = true)
 	public CancelledStatus1Choice getCancelled() {
 		return cancelled;
 	}
@@ -581,6 +588,7 @@ public class InstructionProcessingStatus20Choice {
 		this.cancelled = cancelled;
 	}
 
+	@XmlElement(name = "AccptdForFrthrPrcg", required = true)
 	public AcceptedStatus3Choice getAcceptedForFurtherProcessing() {
 		return acceptedForFurtherProcessing;
 	}
@@ -589,6 +597,7 @@ public class InstructionProcessingStatus20Choice {
 		this.acceptedForFurtherProcessing = acceptedForFurtherProcessing;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectedStatus13Choice getRejected() {
 		return rejected;
 	}
@@ -597,6 +606,7 @@ public class InstructionProcessingStatus20Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Pdg", required = true)
 	public PendingStatus34Choice getPending() {
 		return pending;
 	}
@@ -605,6 +615,7 @@ public class InstructionProcessingStatus20Choice {
 		this.pending = pending;
 	}
 
+	@XmlElement(name = "DfltActn", required = true)
 	public NoSpecifiedReason1 getDefaultAction() {
 		return defaultAction;
 	}
@@ -613,6 +624,7 @@ public class InstructionProcessingStatus20Choice {
 		this.defaultAction = defaultAction;
 	}
 
+	@XmlElement(name = "StgInstr", required = true)
 	public NoSpecifiedReason1 getStandingInstruction() {
 		return standingInstruction;
 	}
@@ -621,6 +633,7 @@ public class InstructionProcessingStatus20Choice {
 		this.standingInstruction = standingInstruction;
 	}
 
+	@XmlElement(name = "PrtrySts", required = true)
 	public ProprietaryStatusAndReason1 getProprietaryStatus() {
 		return proprietaryStatus;
 	}

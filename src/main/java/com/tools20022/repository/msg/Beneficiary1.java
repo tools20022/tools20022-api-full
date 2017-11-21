@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details related to the beneficiary.
@@ -64,6 +68,8 @@ import java.util.List;
  * definition} = "Details related to the beneficiary."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Beneficiary1", propOrder = {"newAddressOrNewBeneficiary", "additionalInformation"})
 public class Beneficiary1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -165,6 +171,7 @@ public class Beneficiary1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NewAdrOrNewBnfcry", required = true)
 	public AddressOrParty1Choice getNewAddressOrNewBeneficiary() {
 		return newAddressOrNewBeneficiary;
 	}
@@ -173,6 +180,7 @@ public class Beneficiary1 {
 		this.newAddressOrNewBeneficiary = newAddressOrNewBeneficiary;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice element to define a derivative instrument.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice element to define a derivative instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Derivative2Choice", propOrder = {"commodity", "interestRate", "foreignExchange", "equity", "contractForDifference", "credit", "emissionAllowance"})
 public class Derivative2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -427,6 +433,7 @@ public class Derivative2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cmmdty", required = true)
 	public CommodityDerivate4 getCommodity() {
 		return commodity;
 	}
@@ -435,6 +442,7 @@ public class Derivative2Choice {
 		this.commodity = commodity;
 	}
 
+	@XmlElement(name = "IntrstRate", required = true)
 	public InterestRateDerivative5 getInterestRate() {
 		return interestRate;
 	}
@@ -443,6 +451,7 @@ public class Derivative2Choice {
 		this.interestRate = interestRate;
 	}
 
+	@XmlElement(name = "FX", required = true)
 	public ForeignExchangeDerivative2 getForeignExchange() {
 		return foreignExchange;
 	}
@@ -451,6 +460,7 @@ public class Derivative2Choice {
 		this.foreignExchange = foreignExchange;
 	}
 
+	@XmlElement(name = "Eqty", required = true)
 	public EquityDerivative2 getEquity() {
 		return equity;
 	}
@@ -459,6 +469,7 @@ public class Derivative2Choice {
 		this.equity = equity;
 	}
 
+	@XmlElement(name = "CtrctForDiff", required = true)
 	public ContractForDifference2 getContractForDifference() {
 		return contractForDifference;
 	}
@@ -467,6 +478,7 @@ public class Derivative2Choice {
 		this.contractForDifference = contractForDifference;
 	}
 
+	@XmlElement(name = "Cdt", required = true)
 	public CreditDefaultSwapsDerivative3Choice getCredit() {
 		return credit;
 	}
@@ -475,6 +487,7 @@ public class Derivative2Choice {
 		this.credit = credit;
 	}
 
+	@XmlElement(name = "EmssnAllwnc", required = true)
 	public EmissionAllowanceProductType1Code getEmissionAllowance() {
 		return emissionAllowance;
 	}

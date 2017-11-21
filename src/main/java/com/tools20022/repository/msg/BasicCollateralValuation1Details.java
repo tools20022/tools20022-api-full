@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Basic valuation details of a collateral position.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Basic valuation details of a collateral position."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BasicCollateralValuation1Details", propOrder = {"valuationHaircut", "haircutSource"})
 public class BasicCollateralValuation1Details {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class BasicCollateralValuation1Details {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ValtnHrcut", required = true)
 	public PercentageRate getValuationHaircut() {
 		return valuationHaircut;
 	}
@@ -189,6 +196,7 @@ public class BasicCollateralValuation1Details {
 		this.valuationHaircut = valuationHaircut;
 	}
 
+	@XmlElement(name = "HrcutSrc")
 	public PartyIdentification15 getHaircutSource() {
 		return haircutSource;
 	}

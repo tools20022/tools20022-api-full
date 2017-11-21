@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Investor;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the investment account ownership with respect to new issue
@@ -98,6 +102,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * NewIssueAllocation1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NewIssueAllocation2", propOrder = {"restricted", "exemptPersonReason", "deMinimus"})
 public class NewIssueAllocation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -267,6 +273,7 @@ public class NewIssueAllocation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rstrctd", required = true)
 	public YesNoIndicator getRestricted() {
 		return restricted;
 	}
@@ -275,6 +282,7 @@ public class NewIssueAllocation2 {
 		this.restricted = restricted;
 	}
 
+	@XmlElement(name = "XmptPrsnRsn")
 	public Max350Text getExemptPersonReason() {
 		return exemptPersonReason;
 	}
@@ -283,6 +291,7 @@ public class NewIssueAllocation2 {
 		this.exemptPersonReason = exemptPersonReason;
 	}
 
+	@XmlElement(name = "DeMnms")
 	public DeMinimus1Choice getDeMinimus() {
 		return deMinimus;
 	}

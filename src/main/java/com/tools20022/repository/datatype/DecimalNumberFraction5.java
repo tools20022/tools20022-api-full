@@ -62,6 +62,8 @@ public class DecimalNumberFraction5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DecimalNumberFraction5";
 				definition = "Number of objects represented as a decimal number, eg, 0.75 or 45.6.";
+				totalDigits = 18;
+				fractionDigits = 5;
 			}
 		});
 		return mmObject_lazy.get();

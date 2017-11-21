@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Total of credit or debit transactions
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransactionTotals4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionTotals5", propOrder = {"amount", "number", "chargeBackAmount", "chargeBackNumber", "reversalAmount", "reversalNumber", "feeAmounts"})
 public class TransactionTotals5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -388,6 +394,7 @@ public class TransactionTotals5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -396,6 +403,7 @@ public class TransactionTotals5 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Nb", required = true)
 	public Number getNumber() {
 		return number;
 	}
@@ -404,6 +412,7 @@ public class TransactionTotals5 {
 		this.number = number;
 	}
 
+	@XmlElement(name = "ChrgBckAmt", required = true)
 	public ImpliedCurrencyAndAmount getChargeBackAmount() {
 		return chargeBackAmount;
 	}
@@ -412,6 +421,7 @@ public class TransactionTotals5 {
 		this.chargeBackAmount = chargeBackAmount;
 	}
 
+	@XmlElement(name = "ChrgBckNb", required = true)
 	public Number getChargeBackNumber() {
 		return chargeBackNumber;
 	}
@@ -420,6 +430,7 @@ public class TransactionTotals5 {
 		this.chargeBackNumber = chargeBackNumber;
 	}
 
+	@XmlElement(name = "RvslAmt", required = true)
 	public ImpliedCurrencyAndAmount getReversalAmount() {
 		return reversalAmount;
 	}
@@ -428,6 +439,7 @@ public class TransactionTotals5 {
 		this.reversalAmount = reversalAmount;
 	}
 
+	@XmlElement(name = "RvslNb", required = true)
 	public Number getReversalNumber() {
 		return reversalNumber;
 	}
@@ -436,6 +448,7 @@ public class TransactionTotals5 {
 		this.reversalNumber = reversalNumber;
 	}
 
+	@XmlElement(name = "FeeAmts")
 	public ImpliedCurrencyAndAmount getFeeAmounts() {
 		return feeAmounts;
 	}

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssuredTypeCode;
 import com.tools20022.repository.entity.InsurancePartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,9 +36,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.InsurancePartyRole
- * InsurancePartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -45,6 +43,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * Assured.mmAssuredType}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.InsurancePartyRole
+ * InsurancePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -91,7 +92,7 @@ public class Assured extends InsurancePartyRole {
 	 */
 	public static final MMBusinessAttribute mmAssuredType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Assured.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Assured.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssuredType";
@@ -99,6 +100,14 @@ public class Assured extends InsurancePartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssuredTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Assured.class.getMethod("getAssuredType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -110,7 +119,12 @@ public class Assured extends InsurancePartyRole {
 				name = "Assured";
 				definition = "Party that is covered under the assurance policy.";
 				superType_lazy = () -> InsurancePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(Assured.mmAssuredType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Assured.mmAssuredType);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Assured.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of the transaction in an unambiguous way.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionIdentifier1", propOrder = {"transactionDateTime", "transactionReference"})
 public class TransactionIdentifier1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -188,6 +194,7 @@ public class TransactionIdentifier1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxDtTm", required = true)
 	public ISODateTime getTransactionDateTime() {
 		return transactionDateTime;
 	}
@@ -196,6 +203,7 @@ public class TransactionIdentifier1 {
 		this.transactionDateTime = transactionDateTime;
 	}
 
+	@XmlElement(name = "TxRef", required = true)
 	public Max35Text getTransactionReference() {
 		return transactionReference;
 	}

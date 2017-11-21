@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.MetalCommodityNonPrecious1;
 import com.tools20022.repository.msg.MetalCommodityPrecious1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines commodity attributes of a derivative where the type is metal.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Defines commodity attributes of a derivative where the type is metal."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AssetClassCommodityMetal1Choice", propOrder = {"nonPrecious", "precious"})
 public class AssetClassCommodityMetal1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class AssetClassCommodityMetal1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NonPrcs", required = true)
 	public MetalCommodityNonPrecious1 getNonPrecious() {
 		return nonPrecious;
 	}
@@ -184,6 +191,7 @@ public class AssetClassCommodityMetal1Choice {
 		this.nonPrecious = nonPrecious;
 	}
 
+	@XmlElement(name = "Prcs", required = true)
 	public MetalCommodityPrecious1 getPrecious() {
 		return precious;
 	}

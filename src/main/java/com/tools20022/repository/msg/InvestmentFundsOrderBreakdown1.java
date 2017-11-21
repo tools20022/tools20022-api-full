@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * An investor's instruction to either subscribe or redeem an amount of money or
@@ -90,6 +94,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentFundsOrderBreakdown1", propOrder = {"orderBreakdownType", "extendedOrderBreakdownType", "amount"})
 public class InvestmentFundsOrderBreakdown1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -323,6 +329,7 @@ public class InvestmentFundsOrderBreakdown1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrBrkdwnTp", required = true)
 	public FundOrderType5Code getOrderBreakdownType() {
 		return orderBreakdownType;
 	}
@@ -331,6 +338,7 @@ public class InvestmentFundsOrderBreakdown1 {
 		this.orderBreakdownType = orderBreakdownType;
 	}
 
+	@XmlElement(name = "XtndedOrdrBrkdwnTp", required = true)
 	public Extended350Code getExtendedOrderBreakdownType() {
 		return extendedOrderBreakdownType;
 	}
@@ -339,6 +347,7 @@ public class InvestmentFundsOrderBreakdown1 {
 		this.extendedOrderBreakdownType = extendedOrderBreakdownType;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}

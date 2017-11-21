@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the cash movement.
@@ -71,6 +75,8 @@ import java.util.List;
  * definition} = "Provides information about the cash movement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashMovement1", propOrder = {"movementIdentification", "amount", "taxAmount", "charges", "accountDetails"})
 public class CashMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -312,6 +318,7 @@ public class CashMovement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MvmntId")
 	public Max35Text getMovementIdentification() {
 		return movementIdentification;
 	}
@@ -320,6 +327,7 @@ public class CashMovement1 {
 		this.movementIdentification = movementIdentification;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -328,6 +336,7 @@ public class CashMovement1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "TaxAmt")
 	public ActiveCurrencyAndAmount getTaxAmount() {
 		return taxAmount;
 	}
@@ -336,6 +345,7 @@ public class CashMovement1 {
 		this.taxAmount = taxAmount;
 	}
 
+	@XmlElement(name = "Chrgs")
 	public List<Charges1> getCharges() {
 		return charges;
 	}
@@ -344,6 +354,7 @@ public class CashMovement1 {
 		this.charges = charges;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public List<CashAccount18> getAccountDetails() {
 		return accountDetails;
 	}

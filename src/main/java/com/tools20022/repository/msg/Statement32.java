@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics of the statement.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Characteristics of the statement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Statement32", propOrder = {"statementIdentification", "activityIndicator", "frequency", "statementDateTime"})
 public class Statement32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -263,6 +269,7 @@ public class Statement32 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtId", required = true)
 	public Max35Text getStatementIdentification() {
 		return statementIdentification;
 	}
@@ -271,6 +278,7 @@ public class Statement32 {
 		this.statementIdentification = statementIdentification;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
@@ -279,6 +287,7 @@ public class Statement32 {
 		this.activityIndicator = activityIndicator;
 	}
 
+	@XmlElement(name = "Frqcy", required = true)
 	public Frequency1Code getFrequency() {
 		return frequency;
 	}
@@ -287,6 +296,7 @@ public class Statement32 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "StmtDtTm", required = true)
 	public DateAndDateTimeChoice getStatementDateTime() {
 		return statementDateTime;
 	}

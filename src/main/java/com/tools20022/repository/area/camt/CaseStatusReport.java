@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.CaseStatus;
 import com.tools20022.repository.msg.ReportHeader;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * Scope The Case Status Report message is sent by a case assignee to a case
@@ -49,9 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.039.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -86,6 +85,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.039.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -97,6 +99,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "camt.039.001.01", propOrder = {"header", "case", "status", "newAssignment"})
 public class CaseStatusReport {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -134,6 +138,14 @@ public class CaseStatusReport {
 			minOccurs = 1;
 			complexType_lazy = () -> ReportHeader.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CaseStatusReport.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case case_;
 	/**
@@ -166,6 +178,14 @@ public class CaseStatusReport {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Case.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CaseStatusReport.class.getMethod("getCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CaseStatus status;
@@ -201,6 +221,14 @@ public class CaseStatusReport {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseStatus.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CaseStatusReport.class.getMethod("getStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CaseAssignment newAssignment;
 	/**
@@ -235,6 +263,14 @@ public class CaseStatusReport {
 			minOccurs = 0;
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CaseStatusReport.class.getMethod("getNewAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -248,7 +284,8 @@ public class CaseStatusReport {
 				xmlTag = "camt.039.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.039.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(CaseStatusReport.mmHeader, CaseStatusReport.mmCase, CaseStatusReport.mmStatus, CaseStatusReport.mmNewAssignment);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CaseStatusReport.mmHeader, com.tools20022.repository.area.camt.CaseStatusReport.mmCase,
+						com.tools20022.repository.area.camt.CaseStatusReport.mmStatus, com.tools20022.repository.area.camt.CaseStatusReport.mmNewAssignment);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -258,10 +295,16 @@ public class CaseStatusReport {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CaseStatusReport.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public ReportHeader getHeader() {
 		return header;
 	}
@@ -270,6 +313,7 @@ public class CaseStatusReport {
 		this.header = header;
 	}
 
+	@XmlElement(name = "Case", required = true)
 	public Case getCase() {
 		return case_;
 	}
@@ -278,6 +322,7 @@ public class CaseStatusReport {
 		this.case_ = case_;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public CaseStatus getStatus() {
 		return status;
 	}
@@ -286,11 +331,18 @@ public class CaseStatusReport {
 		this.status = status;
 	}
 
+	@XmlElement(name = "NewAssgnmt")
 	public CaseAssignment getNewAssignment() {
 		return newAssignment;
 	}
 
 	public void setNewAssignment(CaseAssignment newAssignment) {
 		this.newAssignment = newAssignment;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.039.01.01")
+	static public class Document {
+		@XmlElement(name = "camt.039.001.01", required = true)
+		public CaseStatusReport messageBody;
 	}
 }

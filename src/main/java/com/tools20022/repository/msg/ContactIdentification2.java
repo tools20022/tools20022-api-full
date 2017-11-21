@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information needed to contact a physical person.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information needed to contact a physical person."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContactIdentification2", propOrder = {"namePrefix", "givenName", "name", "phoneNumber", "mobileNumber", "faxNumber", "emailAddress"})
 public class ContactIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -439,6 +445,7 @@ public class ContactIdentification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NmPrfx")
 	public NamePrefix1Code getNamePrefix() {
 		return namePrefix;
 	}
@@ -447,6 +454,7 @@ public class ContactIdentification2 {
 		this.namePrefix = namePrefix;
 	}
 
+	@XmlElement(name = "GvnNm")
 	public Max35Text getGivenName() {
 		return givenName;
 	}
@@ -455,6 +463,7 @@ public class ContactIdentification2 {
 		this.givenName = givenName;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max35Text getName() {
 		return name;
 	}
@@ -463,6 +472,7 @@ public class ContactIdentification2 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PhneNb")
 	public PhoneNumber getPhoneNumber() {
 		return phoneNumber;
 	}
@@ -471,6 +481,7 @@ public class ContactIdentification2 {
 		this.phoneNumber = phoneNumber;
 	}
 
+	@XmlElement(name = "MobNb")
 	public PhoneNumber getMobileNumber() {
 		return mobileNumber;
 	}
@@ -479,6 +490,7 @@ public class ContactIdentification2 {
 		this.mobileNumber = mobileNumber;
 	}
 
+	@XmlElement(name = "FaxNb")
 	public PhoneNumber getFaxNumber() {
 		return faxNumber;
 	}
@@ -487,6 +499,7 @@ public class ContactIdentification2 {
 		this.faxNumber = faxNumber;
 	}
 
+	@XmlElement(name = "EmailAdr")
 	public Max256Text getEmailAddress() {
 		return emailAddress;
 	}

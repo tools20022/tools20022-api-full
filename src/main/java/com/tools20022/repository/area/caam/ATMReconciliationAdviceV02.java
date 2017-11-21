@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header32;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The ATMReconciliationAdvice message is sent by an ATM to an acquirer or its
@@ -37,9 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caam.009.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
@@ -75,6 +74,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caam.009.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -90,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMReconciliationAdviceV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMReconciliationAdviceV02", propOrder = {"header", "protectedATMReconciliationAdvice", "ATMReconciliationAdvice", "securityTrailer"})
 public class ATMReconciliationAdviceV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -129,6 +133,14 @@ public class ATMReconciliationAdviceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header32.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMReconciliationAdviceV02.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType10 protectedATMReconciliationAdvice;
 	/**
@@ -163,6 +175,14 @@ public class ATMReconciliationAdviceV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMReconciliationAdviceV02.class.getMethod("getProtectedATMReconciliationAdvice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ATMReconciliationAdvice2 aTMReconciliationAdvice;
@@ -199,6 +219,14 @@ public class ATMReconciliationAdviceV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ATMReconciliationAdvice2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMReconciliationAdviceV02.class.getMethod("getATMReconciliationAdvice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType15 securityTrailer;
 	/**
@@ -234,6 +262,14 @@ public class ATMReconciliationAdviceV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMReconciliationAdviceV02.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -247,8 +283,8 @@ public class ATMReconciliationAdviceV02 {
 				rootElement = "Document";
 				xmlTag = "ATMRcncltnAdvc";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ATMReconciliationAdviceV02.mmHeader, ATMReconciliationAdviceV02.mmProtectedATMReconciliationAdvice, ATMReconciliationAdviceV02.mmATMReconciliationAdvice,
-						ATMReconciliationAdviceV02.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMReconciliationAdviceV02.mmHeader, com.tools20022.repository.area.caam.ATMReconciliationAdviceV02.mmProtectedATMReconciliationAdvice,
+						com.tools20022.repository.area.caam.ATMReconciliationAdviceV02.mmATMReconciliationAdvice, com.tools20022.repository.area.caam.ATMReconciliationAdviceV02.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caam";
@@ -258,10 +294,16 @@ public class ATMReconciliationAdviceV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ATMReconciliationAdviceV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header32 getHeader() {
 		return header;
 	}
@@ -270,6 +312,7 @@ public class ATMReconciliationAdviceV02 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "PrtctdATMRcncltnAdvc")
 	public ContentInformationType10 getProtectedATMReconciliationAdvice() {
 		return protectedATMReconciliationAdvice;
 	}
@@ -278,6 +321,7 @@ public class ATMReconciliationAdviceV02 {
 		this.protectedATMReconciliationAdvice = protectedATMReconciliationAdvice;
 	}
 
+	@XmlElement(name = "ATMRcncltnAdvc")
 	public ATMReconciliationAdvice2 getATMReconciliationAdvice() {
 		return aTMReconciliationAdvice;
 	}
@@ -286,11 +330,18 @@ public class ATMReconciliationAdviceV02 {
 		this.aTMReconciliationAdvice = aTMReconciliationAdvice;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType15 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caam.009.02.02")
+	static public class Document {
+		@XmlElement(name = "ATMRcncltnAdvc", required = true)
+		public ATMReconciliationAdviceV02 messageBody;
 	}
 }

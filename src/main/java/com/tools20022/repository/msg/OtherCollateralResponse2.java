@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides more details on the response such as the response type, the
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * OtherCollateralResponse1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherCollateralResponse2", propOrder = {"responseType", "collateralIdentification", "assetNumber", "rejectionReason", "rejectionInformation"})
 public class OtherCollateralResponse2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -358,6 +364,7 @@ public class OtherCollateralResponse2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RspnTp", required = true)
 	public Status4Code getResponseType() {
 		return responseType;
 	}
@@ -366,6 +373,7 @@ public class OtherCollateralResponse2 {
 		this.responseType = responseType;
 	}
 
+	@XmlElement(name = "CollId")
 	public Max35Text getCollateralIdentification() {
 		return collateralIdentification;
 	}
@@ -374,6 +382,7 @@ public class OtherCollateralResponse2 {
 		this.collateralIdentification = collateralIdentification;
 	}
 
+	@XmlElement(name = "AsstNb")
 	public Max35Text getAssetNumber() {
 		return assetNumber;
 	}
@@ -382,6 +391,7 @@ public class OtherCollateralResponse2 {
 		this.assetNumber = assetNumber;
 	}
 
+	@XmlElement(name = "RjctnRsn")
 	public RejectionReasonV021Code getRejectionReason() {
 		return rejectionReason;
 	}
@@ -390,6 +400,7 @@ public class OtherCollateralResponse2 {
 		this.rejectionReason = rejectionReason;
 	}
 
+	@XmlElement(name = "RjctnInf")
 	public Max35Text getRejectionInformation() {
 		return rejectionInformation;
 	}

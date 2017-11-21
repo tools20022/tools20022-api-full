@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Rules governing an undertaking such as a guarantee or standby letter of
@@ -69,6 +73,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GovernanceRules1", propOrder = {"ruleIdentification", "applicableLaw", "jurisdiction"})
 public class GovernanceRules1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class GovernanceRules1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RuleId", required = true)
 	public GovernanceIdentification1Choice getRuleIdentification() {
 		return ruleIdentification;
 	}
@@ -238,6 +245,7 @@ public class GovernanceRules1 {
 		this.ruleIdentification = ruleIdentification;
 	}
 
+	@XmlElement(name = "AplblLaw")
 	public Location1 getApplicableLaw() {
 		return applicableLaw;
 	}
@@ -246,6 +254,7 @@ public class GovernanceRules1 {
 		this.applicableLaw = applicableLaw;
 	}
 
+	@XmlElement(name = "Jursdctn")
 	public List<Location1> getJurisdiction() {
 		return jurisdiction;
 	}

@@ -37,6 +37,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmCorporateAction
+ * CorporateActionFeesAndCharges.mmCorporateAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmSolicitationFee
+ * CorporateActionFeesAndCharges.mmSolicitationFee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmEarlySolicitationFeeRate
+ * CorporateActionFeesAndCharges.mmEarlySolicitationFeeRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmCommission
+ * CorporateActionFeesAndCharges.mmCommission}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Charges Charges}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -53,25 +72,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmEarlySolicitationFeeCorporateActionParameters
  * RateAndAmount.mmEarlySolicitationFeeCorporateActionParameters}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Charges Charges}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmCorporateAction
- * CorporateActionFeesAndCharges.mmCorporateAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmSolicitationFee
- * CorporateActionFeesAndCharges.mmSolicitationFee}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmEarlySolicitationFeeRate
- * CorporateActionFeesAndCharges.mmEarlySolicitationFeeRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmCommission
- * CorporateActionFeesAndCharges.mmCommission}</li>
  * </ul>
  * </li>
  * <li>
@@ -131,7 +131,7 @@ public class CorporateActionFeesAndCharges extends Charges {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateAction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionFeesAndCharges.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateAction";
@@ -165,11 +165,6 @@ public class CorporateActionFeesAndCharges extends Charges {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.RateAndAmount
 	 * RateAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges
-	 * CorporateActionFeesAndCharges}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -368,6 +363,11 @@ public class CorporateActionFeesAndCharges extends Charges {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges
+	 * CorporateActionFeesAndCharges}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -395,7 +395,7 @@ public class CorporateActionFeesAndCharges extends Charges {
 					CorporateActionAmounts35.mmSolicitationFees, CorporateActionAmounts37.mmSolicitationFees, RateDetails23.mmSolicitationFeeRate, CorporateActionAmounts36.mmSolicitationFees, RateDetails22.mmSolicitationFeeRate,
 					CorporateActionAmounts38.mmSolicitationFees, RateDetails24.mmSolicitationFeeRate, CorporateActionAmounts39.mmSolicitationFees, CorporateActionAmounts41.mmSolicitationFees, RateDetails25.mmSolicitationFeeRate,
 					CorporateActionAmounts40.mmSolicitationFees, RateDetails26.mmSolicitationFeeRate, RateDetails27.mmSolicitationFeeRate, RateDetails28.mmSolicitationFeeRate, RateDetails30.mmSolicitationFeeRate);
-			elementContext_lazy = () -> CorporateActionFeesAndCharges.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SolicitationFee";
@@ -426,11 +426,6 @@ public class CorporateActionFeesAndCharges extends Charges {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.RateAndAmount
 	 * RateAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges
-	 * CorporateActionFeesAndCharges}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -503,6 +498,11 @@ public class CorporateActionFeesAndCharges extends Charges {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges
+	 * CorporateActionFeesAndCharges}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -522,7 +522,7 @@ public class CorporateActionFeesAndCharges extends Charges {
 					RateDetails10.mmEarlySolicitationFeeRate, RateDetails13.mmEarlySolicitationFeeRate, RateDetails15.mmEarlySolicitationFeeRate, RateDetails14.mmEarlySolicitationFeeRate, RateDetails18.mmEarlySolicitationFeeRate,
 					RateDetails21.mmEarlySolicitationFeeRate, RateDetails23.mmEarlySolicitationFeeRate, RateDetails22.mmEarlySolicitationFeeRate, RateDetails24.mmEarlySolicitationFeeRate, RateDetails25.mmEarlySolicitationFeeRate,
 					RateDetails26.mmEarlySolicitationFeeRate, RateDetails27.mmEarlySolicitationFeeRate, RateDetails28.mmEarlySolicitationFeeRate, RateDetails30.mmEarlySolicitationFeeRate);
-			elementContext_lazy = () -> CorporateActionFeesAndCharges.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarlySolicitationFeeRate";
@@ -570,7 +570,7 @@ public class CorporateActionFeesAndCharges extends Charges {
 	 */
 	public static final MMBusinessAssociationEnd mmCommission = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionFeesAndCharges.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Commission";
@@ -593,8 +593,13 @@ public class CorporateActionFeesAndCharges extends Charges {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Commission.mmCorporateActionFeesAndCharges, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionCharge,
 						com.tools20022.repository.entity.RateAndAmount.mmSolicitationFeeCorporateActionParameters, com.tools20022.repository.entity.RateAndAmount.mmEarlySolicitationFeeCorporateActionParameters);
 				superType_lazy = () -> Charges.mmObject();
-				element_lazy = () -> Arrays.asList(CorporateActionFeesAndCharges.mmCorporateAction, CorporateActionFeesAndCharges.mmSolicitationFee, CorporateActionFeesAndCharges.mmEarlySolicitationFeeRate,
-						CorporateActionFeesAndCharges.mmCommission);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmCorporateAction, com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmSolicitationFee,
+						com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmEarlySolicitationFeeRate, com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmCommission);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionFeesAndCharges.class;
 			}
 		});
 		return mmObject_lazy.get();

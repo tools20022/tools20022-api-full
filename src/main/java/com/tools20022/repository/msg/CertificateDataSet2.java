@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Formal document used to record a fact and used as proof of the fact, in the
@@ -134,6 +138,9 @@ import java.util.List;
  * CertificateDataSet1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CertificateDataSet2", propOrder = {"dataSetIdentification", "certificateType", "lineItem", "certifiedCharacteristics", "issueDate", "placeOfIssue", "issuer", "inspectionDate", "authorisedInspectorIndicator",
+		"certificateIdentification", "transport", "goodsDescription", "consignor", "consignee", "manufacturer", "additionalInformation"})
 public class CertificateDataSet2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1020,6 +1027,7 @@ public class CertificateDataSet2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DataSetId", required = true)
 	public DocumentIdentification1 getDataSetIdentification() {
 		return dataSetIdentification;
 	}
@@ -1028,6 +1036,7 @@ public class CertificateDataSet2 {
 		this.dataSetIdentification = dataSetIdentification;
 	}
 
+	@XmlElement(name = "CertTp", required = true)
 	public TradeCertificateType1Code getCertificateType() {
 		return certificateType;
 	}
@@ -1036,6 +1045,7 @@ public class CertificateDataSet2 {
 		this.certificateType = certificateType;
 	}
 
+	@XmlElement(name = "LineItm")
 	public List<LineItemAndPOIdentification1> getLineItem() {
 		return lineItem;
 	}
@@ -1044,6 +1054,7 @@ public class CertificateDataSet2 {
 		this.lineItem = lineItem;
 	}
 
+	@XmlElement(name = "CertfdChrtcs", required = true)
 	public CertifiedCharacteristics2Choice getCertifiedCharacteristics() {
 		return certifiedCharacteristics;
 	}
@@ -1052,6 +1063,7 @@ public class CertificateDataSet2 {
 		this.certifiedCharacteristics = certifiedCharacteristics;
 	}
 
+	@XmlElement(name = "IsseDt", required = true)
 	public ISODate getIssueDate() {
 		return issueDate;
 	}
@@ -1060,6 +1072,7 @@ public class CertificateDataSet2 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "PlcOfIsse")
 	public PostalAddress5 getPlaceOfIssue() {
 		return placeOfIssue;
 	}
@@ -1068,6 +1081,7 @@ public class CertificateDataSet2 {
 		this.placeOfIssue = placeOfIssue;
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public PartyIdentification26 getIssuer() {
 		return issuer;
 	}
@@ -1076,6 +1090,7 @@ public class CertificateDataSet2 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "InspctnDt")
 	public DatePeriodDetails getInspectionDate() {
 		return inspectionDate;
 	}
@@ -1084,6 +1099,7 @@ public class CertificateDataSet2 {
 		this.inspectionDate = inspectionDate;
 	}
 
+	@XmlElement(name = "AuthrsdInspctrInd")
 	public YesNoIndicator getAuthorisedInspectorIndicator() {
 		return authorisedInspectorIndicator;
 	}
@@ -1092,6 +1108,7 @@ public class CertificateDataSet2 {
 		this.authorisedInspectorIndicator = authorisedInspectorIndicator;
 	}
 
+	@XmlElement(name = "CertId", required = true)
 	public Max35Text getCertificateIdentification() {
 		return certificateIdentification;
 	}
@@ -1100,6 +1117,7 @@ public class CertificateDataSet2 {
 		this.certificateIdentification = certificateIdentification;
 	}
 
+	@XmlElement(name = "Trnsprt")
 	public SingleTransport3 getTransport() {
 		return transport;
 	}
@@ -1108,6 +1126,7 @@ public class CertificateDataSet2 {
 		this.transport = transport;
 	}
 
+	@XmlElement(name = "GoodsDesc")
 	public Max70Text getGoodsDescription() {
 		return goodsDescription;
 	}
@@ -1116,6 +1135,7 @@ public class CertificateDataSet2 {
 		this.goodsDescription = goodsDescription;
 	}
 
+	@XmlElement(name = "Consgnr")
 	public PartyIdentification26 getConsignor() {
 		return consignor;
 	}
@@ -1124,6 +1144,7 @@ public class CertificateDataSet2 {
 		this.consignor = consignor;
 	}
 
+	@XmlElement(name = "Consgn")
 	public PartyIdentification26 getConsignee() {
 		return consignee;
 	}
@@ -1132,6 +1153,7 @@ public class CertificateDataSet2 {
 		this.consignee = consignee;
 	}
 
+	@XmlElement(name = "Manfctr")
 	public PartyIdentification26 getManufacturer() {
 		return manufacturer;
 	}
@@ -1140,6 +1162,7 @@ public class CertificateDataSet2 {
 		this.manufacturer = manufacturer;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max350Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

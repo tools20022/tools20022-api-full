@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Calculation of the current situation of a baseline as a result of the
@@ -98,6 +102,9 @@ import java.util.List;
  * LineItem8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LineItem14", propOrder = {"lineItemDetails", "orderedLineItemsTotalAmount", "acceptedLineItemsTotalAmount", "outstandingLineItemsTotalAmount", "pendingLineItemsTotalAmount", "orderedTotalNetAmount",
+		"acceptedTotalNetAmount", "outstandingTotalNetAmount", "pendingTotalNetAmount"})
 public class LineItem14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -580,6 +587,7 @@ public class LineItem14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LineItmDtls", required = true)
 	public List<LineItemDetails12> getLineItemDetails() {
 		return lineItemDetails;
 	}
@@ -588,6 +596,7 @@ public class LineItem14 {
 		this.lineItemDetails = lineItemDetails;
 	}
 
+	@XmlElement(name = "OrdrdLineItmsTtlAmt", required = true)
 	public CurrencyAndAmount getOrderedLineItemsTotalAmount() {
 		return orderedLineItemsTotalAmount;
 	}
@@ -596,6 +605,7 @@ public class LineItem14 {
 		this.orderedLineItemsTotalAmount = orderedLineItemsTotalAmount;
 	}
 
+	@XmlElement(name = "AccptdLineItmsTtlAmt", required = true)
 	public CurrencyAndAmount getAcceptedLineItemsTotalAmount() {
 		return acceptedLineItemsTotalAmount;
 	}
@@ -604,6 +614,7 @@ public class LineItem14 {
 		this.acceptedLineItemsTotalAmount = acceptedLineItemsTotalAmount;
 	}
 
+	@XmlElement(name = "OutsdngLineItmsTtlAmt", required = true)
 	public CurrencyAndAmount getOutstandingLineItemsTotalAmount() {
 		return outstandingLineItemsTotalAmount;
 	}
@@ -612,6 +623,7 @@ public class LineItem14 {
 		this.outstandingLineItemsTotalAmount = outstandingLineItemsTotalAmount;
 	}
 
+	@XmlElement(name = "PdgLineItmsTtlAmt", required = true)
 	public CurrencyAndAmount getPendingLineItemsTotalAmount() {
 		return pendingLineItemsTotalAmount;
 	}
@@ -620,6 +632,7 @@ public class LineItem14 {
 		this.pendingLineItemsTotalAmount = pendingLineItemsTotalAmount;
 	}
 
+	@XmlElement(name = "OrdrdTtlNetAmt", required = true)
 	public CurrencyAndAmount getOrderedTotalNetAmount() {
 		return orderedTotalNetAmount;
 	}
@@ -628,6 +641,7 @@ public class LineItem14 {
 		this.orderedTotalNetAmount = orderedTotalNetAmount;
 	}
 
+	@XmlElement(name = "AccptdTtlNetAmt", required = true)
 	public CurrencyAndAmount getAcceptedTotalNetAmount() {
 		return acceptedTotalNetAmount;
 	}
@@ -636,6 +650,7 @@ public class LineItem14 {
 		this.acceptedTotalNetAmount = acceptedTotalNetAmount;
 	}
 
+	@XmlElement(name = "OutsdngTtlNetAmt", required = true)
 	public CurrencyAndAmount getOutstandingTotalNetAmount() {
 		return outstandingTotalNetAmount;
 	}
@@ -644,6 +659,7 @@ public class LineItem14 {
 		this.outstandingTotalNetAmount = outstandingTotalNetAmount;
 	}
 
+	@XmlElement(name = "PdgTtlNetAmt", required = true)
 	public CurrencyAndAmount getPendingTotalNetAmount() {
 		return pendingTotalNetAmount;
 	}

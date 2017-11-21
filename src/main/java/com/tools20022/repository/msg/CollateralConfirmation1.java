@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.CollateralStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the status details about the collateral substitution.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides the status details about the collateral substitution."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralConfirmation1", propOrder = {"collateralSubstitutionRequestIdentification", "collateralSubstitutionResponseIdentification", "confirmationType", "comment"})
 public class CollateralConfirmation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -283,6 +289,7 @@ public class CollateralConfirmation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CollSbstitnReqId", required = true)
 	public Max35Text getCollateralSubstitutionRequestIdentification() {
 		return collateralSubstitutionRequestIdentification;
 	}
@@ -291,6 +298,7 @@ public class CollateralConfirmation1 {
 		this.collateralSubstitutionRequestIdentification = collateralSubstitutionRequestIdentification;
 	}
 
+	@XmlElement(name = "CollSbstitnRspnId")
 	public Max35Text getCollateralSubstitutionResponseIdentification() {
 		return collateralSubstitutionResponseIdentification;
 	}
@@ -299,6 +307,7 @@ public class CollateralConfirmation1 {
 		this.collateralSubstitutionResponseIdentification = collateralSubstitutionResponseIdentification;
 	}
 
+	@XmlElement(name = "ConfTp", required = true)
 	public CollateralSubstitutionConfirmation1Code getConfirmationType() {
 		return confirmationType;
 	}
@@ -307,6 +316,7 @@ public class CollateralConfirmation1 {
 		this.confirmationType = confirmationType;
 	}
 
+	@XmlElement(name = "Cmnt")
 	public Max140Text getComment() {
 		return comment;
 	}

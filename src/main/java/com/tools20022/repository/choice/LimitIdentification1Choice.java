@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.LimitIdentification1;
 import com.tools20022.repository.msg.LimitIdentification2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Limit details of one particular limit set by the member and managed by the
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LimitIdentification1Choice", propOrder = {"current", "default", "allCurrent", "allDefault"})
 public class LimitIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -277,6 +283,7 @@ public class LimitIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cur", required = true)
 	public LimitIdentification1 getCurrent() {
 		return current;
 	}
@@ -285,6 +292,7 @@ public class LimitIdentification1Choice {
 		this.current = current;
 	}
 
+	@XmlElement(name = "Dflt", required = true)
 	public LimitIdentification1 getDefault() {
 		return default_;
 	}
@@ -293,6 +301,7 @@ public class LimitIdentification1Choice {
 		this.default_ = default_;
 	}
 
+	@XmlElement(name = "AllCur", required = true)
 	public LimitIdentification2 getAllCurrent() {
 		return allCurrent;
 	}
@@ -301,6 +310,7 @@ public class LimitIdentification1Choice {
 		this.allCurrent = allCurrent;
 	}
 
+	@XmlElement(name = "AllDflt", required = true)
 	public LimitIdentification2 getAllDefault() {
 		return allDefault;
 	}

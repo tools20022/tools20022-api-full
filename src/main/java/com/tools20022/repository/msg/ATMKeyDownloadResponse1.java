@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the response of an ATM key download from an ATM
@@ -81,6 +85,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMKeyDownloadResponse1", propOrder = {"environment", "ATMSecurityContext", "ATMChallenge", "hostSecurityParameters", "command"})
 public class ATMKeyDownloadResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -306,6 +312,7 @@ public class ATMKeyDownloadResponse1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public ATMEnvironment7 getEnvironment() {
 		return environment;
 	}
@@ -314,6 +321,7 @@ public class ATMKeyDownloadResponse1 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "ATMSctyCntxt", required = true)
 	public ATMSecurityContext2 getATMSecurityContext() {
 		return aTMSecurityContext;
 	}
@@ -322,6 +330,7 @@ public class ATMKeyDownloadResponse1 {
 		this.aTMSecurityContext = aTMSecurityContext;
 	}
 
+	@XmlElement(name = "ATMChllng")
 	public Max140Binary getATMChallenge() {
 		return aTMChallenge;
 	}
@@ -330,6 +339,7 @@ public class ATMKeyDownloadResponse1 {
 		this.aTMChallenge = aTMChallenge;
 	}
 
+	@XmlElement(name = "HstSctyParams", required = true)
 	public SecurityParameters5 getHostSecurityParameters() {
 		return hostSecurityParameters;
 	}
@@ -338,6 +348,7 @@ public class ATMKeyDownloadResponse1 {
 		this.hostSecurityParameters = hostSecurityParameters;
 	}
 
+	@XmlElement(name = "Cmd")
 	public List<ATMCommand1> getCommand() {
 		return command;
 	}

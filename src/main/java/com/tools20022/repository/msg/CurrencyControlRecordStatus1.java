@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of each individual currency control record.
@@ -75,6 +79,8 @@ import java.util.List;
  * "Provides the details of each individual currency control record."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyControlRecordStatus1", propOrder = {"recordIdentification", "status", "statusReason", "statusDateTime", "documentIdentification"})
 public class CurrencyControlRecordStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -328,6 +334,7 @@ public class CurrencyControlRecordStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RcrdId", required = true)
 	public Max35Text getRecordIdentification() {
 		return recordIdentification;
 	}
@@ -336,6 +343,7 @@ public class CurrencyControlRecordStatus1 {
 		this.recordIdentification = recordIdentification;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public StatisticalReportingStatus1Code getStatus() {
 		return status;
 	}
@@ -344,6 +352,7 @@ public class CurrencyControlRecordStatus1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "StsRsn")
 	public List<ValidationStatusReason1> getStatusReason() {
 		return statusReason;
 	}
@@ -352,6 +361,7 @@ public class CurrencyControlRecordStatus1 {
 		this.statusReason = statusReason;
 	}
 
+	@XmlElement(name = "StsDtTm")
 	public ISODateTime getStatusDateTime() {
 		return statusDateTime;
 	}
@@ -360,6 +370,7 @@ public class CurrencyControlRecordStatus1 {
 		this.statusDateTime = statusDateTime;
 	}
 
+	@XmlElement(name = "DocId")
 	public DocumentIdentification28 getDocumentIdentification() {
 		return documentIdentification;
 	}

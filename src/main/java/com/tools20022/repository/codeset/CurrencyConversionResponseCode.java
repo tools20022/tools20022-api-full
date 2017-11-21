@@ -29,20 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code
- * CurrencyConversionResponse1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code
- * CurrencyConversionResponse2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code
- * CurrencyConversionResponse3Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -78,6 +64,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponseCode#mmCatalogue
  * CurrencyConversionResponseCode.mmCatalogue}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code
+ * CurrencyConversionResponse1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code
+ * CurrencyConversionResponse2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code
+ * CurrencyConversionResponse3Code}</li>
  * </ul>
  * </li>
  * <li>

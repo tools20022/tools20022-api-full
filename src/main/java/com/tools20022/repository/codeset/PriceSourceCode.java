@@ -29,15 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceSource1Code
- * PriceSource1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceSource2Code
- * PriceSource2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.PriceSourceCode#mmFund
@@ -50,6 +41,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PriceSourceCode#mmStockExchange
  * PriceSourceCode.mmStockExchange}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceSource1Code
+ * PriceSource1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceSource2Code
+ * PriceSource2Code}</li>
  * </ul>
  * </li>
  * <li>

@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports either on currency exchange information or on a business error.
@@ -60,6 +64,8 @@ import java.util.List;
  * "Reports either on currency exchange information or on a business error."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExchangeRateReportOrError2Choice", propOrder = {"businessError", "currencyExchange"})
 public class ExchangeRateReportOrError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class ExchangeRateReportOrError2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling3> getBusinessError() {
 		return businessError;
 	}
@@ -166,6 +173,7 @@ public class ExchangeRateReportOrError2Choice {
 		this.businessError = businessError;
 	}
 
+	@XmlElement(name = "CcyXchg", required = true)
 	public CurrencyExchange7 getCurrencyExchange() {
 		return currencyExchange;
 	}

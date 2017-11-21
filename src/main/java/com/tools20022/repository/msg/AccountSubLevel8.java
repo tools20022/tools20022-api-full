@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account and holding of the next sub-level (Level 8).
@@ -89,6 +93,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountSubLevel8", propOrder = {"accountIdentification", "accountOwner", "accountServicer", "beneficialOwner", "balanceForAccount", "accountSubLevel9", "accountSubLevel9Difference", "agent", "supplementaryData"})
 public class AccountSubLevel8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -609,6 +615,7 @@ public class AccountSubLevel8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public SecuritiesAccount19 getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -617,6 +624,7 @@ public class AccountSubLevel8 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnr", required = true)
 	public PartyIdentification100 getAccountOwner() {
 		return accountOwner;
 	}
@@ -625,6 +633,7 @@ public class AccountSubLevel8 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr", required = true)
 	public PartyIdentification100 getAccountServicer() {
 		return accountServicer;
 	}
@@ -633,6 +642,7 @@ public class AccountSubLevel8 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "BnfclOwnr")
 	public List<BeneficialOwner2> getBeneficialOwner() {
 		return beneficialOwner;
 	}
@@ -641,6 +651,7 @@ public class AccountSubLevel8 {
 		this.beneficialOwner = beneficialOwner;
 	}
 
+	@XmlElement(name = "BalForAcct")
 	public List<AggregateHoldingBalance1> getBalanceForAccount() {
 		return balanceForAccount;
 	}
@@ -649,6 +660,7 @@ public class AccountSubLevel8 {
 		this.balanceForAccount = balanceForAccount;
 	}
 
+	@XmlElement(name = "AcctSubLvl9")
 	public List<AccountSubLevel9> getAccountSubLevel9() {
 		return accountSubLevel9;
 	}
@@ -657,6 +669,7 @@ public class AccountSubLevel8 {
 		this.accountSubLevel9 = accountSubLevel9;
 	}
 
+	@XmlElement(name = "AcctSubLvl9Diff")
 	public List<AggregateHoldingBalance2> getAccountSubLevel9Difference() {
 		return accountSubLevel9Difference;
 	}
@@ -665,6 +678,7 @@ public class AccountSubLevel8 {
 		this.accountSubLevel9Difference = accountSubLevel9Difference;
 	}
 
+	@XmlElement(name = "Agt")
 	public List<Intermediary29> getAgent() {
 		return agent;
 	}
@@ -673,6 +687,7 @@ public class AccountSubLevel8 {
 		this.agent = agent;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

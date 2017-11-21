@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics that unambiguously identify the single invoice
@@ -99,6 +103,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvoiceRequestInformation1", propOrder = {"invoiceGeneralInformation", "invoiceTotalsInformation", "creditDebitNoteAmount", "instalmentInformation", "requestedAmount", "supplier", "buyer", "invoicePaymentInformation",
+		"referredDocument"})
 public class InvoiceRequestInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -565,6 +572,7 @@ public class InvoiceRequestInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InvcGnlInf", required = true)
 	public DocumentGeneralInformation1 getInvoiceGeneralInformation() {
 		return invoiceGeneralInformation;
 	}
@@ -573,6 +581,7 @@ public class InvoiceRequestInformation1 {
 		this.invoiceGeneralInformation = invoiceGeneralInformation;
 	}
 
+	@XmlElement(name = "InvcTtlsInf", required = true)
 	public InvoiceTotals1 getInvoiceTotalsInformation() {
 		return invoiceTotalsInformation;
 	}
@@ -581,6 +590,7 @@ public class InvoiceRequestInformation1 {
 		this.invoiceTotalsInformation = invoiceTotalsInformation;
 	}
 
+	@XmlElement(name = "CdtDbtNoteAmt")
 	public ActiveCurrencyAndAmount getCreditDebitNoteAmount() {
 		return creditDebitNoteAmount;
 	}
@@ -589,6 +599,7 @@ public class InvoiceRequestInformation1 {
 		this.creditDebitNoteAmount = creditDebitNoteAmount;
 	}
 
+	@XmlElement(name = "InstlmtInf")
 	public List<Instalment1> getInstalmentInformation() {
 		return instalmentInformation;
 	}
@@ -597,6 +608,7 @@ public class InvoiceRequestInformation1 {
 		this.instalmentInformation = instalmentInformation;
 	}
 
+	@XmlElement(name = "ReqdAmt")
 	public FinancingRateOrAmountChoice getRequestedAmount() {
 		return requestedAmount;
 	}
@@ -605,6 +617,7 @@ public class InvoiceRequestInformation1 {
 		this.requestedAmount = requestedAmount;
 	}
 
+	@XmlElement(name = "Spplr", required = true)
 	public PartyAndAccountIdentificationAndContactInformation1 getSupplier() {
 		return supplier;
 	}
@@ -613,6 +626,7 @@ public class InvoiceRequestInformation1 {
 		this.supplier = supplier;
 	}
 
+	@XmlElement(name = "Buyr", required = true)
 	public PartyIdentificationAndContactInformation1 getBuyer() {
 		return buyer;
 	}
@@ -621,6 +635,7 @@ public class InvoiceRequestInformation1 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "InvcPmtInf", required = true)
 	public PaymentInformation15 getInvoicePaymentInformation() {
 		return invoicePaymentInformation;
 	}
@@ -629,6 +644,7 @@ public class InvoiceRequestInformation1 {
 		this.invoicePaymentInformation = invoicePaymentInformation;
 	}
 
+	@XmlElement(name = "RfrdDoc")
 	public List<ReferredDocumentInformation2> getReferredDocument() {
 		return referredDocument;
 	}

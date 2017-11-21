@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Net position of a segregated holding, in a single security, within the
@@ -100,6 +104,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AggregateBalancePerSafekeepingPlace1", propOrder = {"aggregateQuantity", "availableQuantity", "notAvailableQuantity", "daysAccrued", "holdingValue", "accruedInterestAmount", "bookValue", "safekeepingPlace", "priceDetails",
+		"foreignExchangeDetails", "balanceBreakdownDetails", "additionalBalanceBreakdownDetails"})
 public class AggregateBalancePerSafekeepingPlace1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -719,6 +726,7 @@ public class AggregateBalancePerSafekeepingPlace1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AggtQty", required = true)
 	public BalanceQuantity1Choice getAggregateQuantity() {
 		return aggregateQuantity;
 	}
@@ -727,6 +735,7 @@ public class AggregateBalancePerSafekeepingPlace1 {
 		this.aggregateQuantity = aggregateQuantity;
 	}
 
+	@XmlElement(name = "AvlblQty")
 	public BalanceQuantity1Choice getAvailableQuantity() {
 		return availableQuantity;
 	}
@@ -735,6 +744,7 @@ public class AggregateBalancePerSafekeepingPlace1 {
 		this.availableQuantity = availableQuantity;
 	}
 
+	@XmlElement(name = "NotAvlblQty")
 	public BalanceQuantity1Choice getNotAvailableQuantity() {
 		return notAvailableQuantity;
 	}
@@ -743,6 +753,7 @@ public class AggregateBalancePerSafekeepingPlace1 {
 		this.notAvailableQuantity = notAvailableQuantity;
 	}
 
+	@XmlElement(name = "DaysAcrd")
 	public Number getDaysAccrued() {
 		return daysAccrued;
 	}
@@ -751,6 +762,7 @@ public class AggregateBalancePerSafekeepingPlace1 {
 		this.daysAccrued = daysAccrued;
 	}
 
+	@XmlElement(name = "HldgVal")
 	public List<ActiveOrHistoricCurrencyAndAmount> getHoldingValue() {
 		return holdingValue;
 	}
@@ -759,6 +771,7 @@ public class AggregateBalancePerSafekeepingPlace1 {
 		this.holdingValue = holdingValue;
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt")
 	public ActiveOrHistoricCurrencyAndAmount getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -767,6 +780,7 @@ public class AggregateBalancePerSafekeepingPlace1 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "BookVal")
 	public ActiveOrHistoricCurrencyAndAmount getBookValue() {
 		return bookValue;
 	}
@@ -775,6 +789,7 @@ public class AggregateBalancePerSafekeepingPlace1 {
 		this.bookValue = bookValue;
 	}
 
+	@XmlElement(name = "SfkpgPlc", required = true)
 	public SafekeepingPlaceFormatChoice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -783,6 +798,7 @@ public class AggregateBalancePerSafekeepingPlace1 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public List<PriceInformation1> getPriceDetails() {
 		return priceDetails;
 	}
@@ -791,6 +807,7 @@ public class AggregateBalancePerSafekeepingPlace1 {
 		this.priceDetails = priceDetails;
 	}
 
+	@XmlElement(name = "FrgnXchgDtls")
 	public ForeignExchangeTerms3 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -799,6 +816,7 @@ public class AggregateBalancePerSafekeepingPlace1 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "BalBrkdwnDtls")
 	public List<SubBalanceInformation1> getBalanceBreakdownDetails() {
 		return balanceBreakdownDetails;
 	}
@@ -807,6 +825,7 @@ public class AggregateBalancePerSafekeepingPlace1 {
 		this.balanceBreakdownDetails = balanceBreakdownDetails;
 	}
 
+	@XmlElement(name = "AddtlBalBrkdwnDtls")
 	public List<AdditionalBalanceInformation> getAdditionalBalanceBreakdownDetails() {
 		return additionalBalanceBreakdownDetails;
 	}

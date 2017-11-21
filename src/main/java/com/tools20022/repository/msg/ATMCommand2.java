@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Result of a maintenance command performed by the ATM.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMCommand1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCommand2", propOrder = {"type", "requiredDateTime", "processedDateTime", "commandIdentification", "result", "additionalErrorInformation"})
 public class ATMCommand2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -422,6 +428,7 @@ public class ATMCommand2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ATMCommand2Code getType() {
 		return type;
 	}
@@ -430,6 +437,7 @@ public class ATMCommand2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "ReqrdDtTm")
 	public ISODateTime getRequiredDateTime() {
 		return requiredDateTime;
 	}
@@ -438,6 +446,7 @@ public class ATMCommand2 {
 		this.requiredDateTime = requiredDateTime;
 	}
 
+	@XmlElement(name = "PrcdDtTm", required = true)
 	public ISODateTime getProcessedDateTime() {
 		return processedDateTime;
 	}
@@ -446,6 +455,7 @@ public class ATMCommand2 {
 		this.processedDateTime = processedDateTime;
 	}
 
+	@XmlElement(name = "CmdId")
 	public ATMCommandIdentification1 getCommandIdentification() {
 		return commandIdentification;
 	}
@@ -454,6 +464,7 @@ public class ATMCommand2 {
 		this.commandIdentification = commandIdentification;
 	}
 
+	@XmlElement(name = "Rslt", required = true)
 	public TerminalManagementActionResult2Code getResult() {
 		return result;
 	}
@@ -462,6 +473,7 @@ public class ATMCommand2 {
 		this.result = result;
 	}
 
+	@XmlElement(name = "AddtlErrInf")
 	public Max140Text getAdditionalErrorInformation() {
 		return additionalErrorInformation;
 	}

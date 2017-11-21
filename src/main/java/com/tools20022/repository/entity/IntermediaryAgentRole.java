@@ -23,6 +23,7 @@ import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PaymentComplementaryInformation;
 import com.tools20022.repository.msg.RequestGroupInformation1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,6 +38,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#mmIntermediaryAgentRole
+ * IntermediaryAgentRole.mmIntermediaryAgentRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#mmNextParty
+ * IntermediaryAgentRole.mmNextParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#mmPosition
+ * IntermediaryAgentRole.mmPosition}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
+ * PaymentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -59,23 +77,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#mmIntermediaryAgent
  * RequestGroupInformation1.mmIntermediaryAgent}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
- * PaymentPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#mmIntermediaryAgentRole
- * IntermediaryAgentRole.mmIntermediaryAgentRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#mmNextParty
- * IntermediaryAgentRole.mmNextParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#mmPosition
- * IntermediaryAgentRole.mmPosition}</li>
  * </ul>
  * </li>
  * <li>
@@ -237,6 +238,14 @@ public class IntermediaryAgentRole extends PaymentPartyRole {
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntermediaryAgentRole.class.getMethod("getPosition", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	static public MMBusinessComponent mmObject() {
@@ -251,6 +260,11 @@ public class IntermediaryAgentRole extends PaymentPartyRole {
 				superType_lazy = () -> PaymentPartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IntermediaryAgentRole.mmIntermediaryAgentRole, com.tools20022.repository.entity.IntermediaryAgentRole.mmNextParty,
 						com.tools20022.repository.entity.IntermediaryAgentRole.mmPosition);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IntermediaryAgentRole.class;
 			}
 		});
 		return mmObject_lazy.get();

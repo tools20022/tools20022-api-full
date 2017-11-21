@@ -35,6 +35,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a percentage price or an amount price or an amount price per
@@ -95,6 +99,8 @@ import java.util.function.Supplier;
  * PriceFormat7Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceFormat34Choice", propOrder = {"percentagePrice", "amountPrice", "amountPricePerFinancialInstrumentQuantity", "amountPricePerAmount", "indexPoints"})
 public class PriceFormat34Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -432,6 +438,7 @@ public class PriceFormat34Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PctgPric", required = true)
 	public PercentagePrice1 getPercentagePrice() {
 		return percentagePrice;
 	}
@@ -440,6 +447,7 @@ public class PriceFormat34Choice {
 		this.percentagePrice = percentagePrice;
 	}
 
+	@XmlElement(name = "AmtPric", required = true)
 	public AmountPrice3 getAmountPrice() {
 		return amountPrice;
 	}
@@ -448,6 +456,7 @@ public class PriceFormat34Choice {
 		this.amountPrice = amountPrice;
 	}
 
+	@XmlElement(name = "AmtPricPerFinInstrmQty", required = true)
 	public AmountPricePerFinancialInstrumentQuantity3 getAmountPricePerFinancialInstrumentQuantity() {
 		return amountPricePerFinancialInstrumentQuantity;
 	}
@@ -456,6 +465,7 @@ public class PriceFormat34Choice {
 		this.amountPricePerFinancialInstrumentQuantity = amountPricePerFinancialInstrumentQuantity;
 	}
 
+	@XmlElement(name = "AmtPricPerAmt", required = true)
 	public AmountPricePerAmount2 getAmountPricePerAmount() {
 		return amountPricePerAmount;
 	}
@@ -464,6 +474,7 @@ public class PriceFormat34Choice {
 		this.amountPricePerAmount = amountPricePerAmount;
 	}
 
+	@XmlElement(name = "IndxPts", required = true)
 	public DecimalNumber getIndexPoints() {
 		return indexPoints;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about discounts or waivers to charges and commissions.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information about discounts or waivers to charges and commissions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ChargeOrCommissionDiscount1", propOrder = {"amount", "rate", "basis"})
 public class ChargeOrCommissionDiscount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -244,6 +250,7 @@ public class ChargeOrCommissionDiscount1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt")
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -252,6 +259,7 @@ public class ChargeOrCommissionDiscount1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -260,6 +268,7 @@ public class ChargeOrCommissionDiscount1 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "Bsis")
 	public WaivingInstruction2Choice getBasis() {
 		return basis;
 	}

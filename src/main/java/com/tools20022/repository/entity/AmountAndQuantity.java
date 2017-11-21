@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmSecuritiesPricing
+ * AmountAndQuantity.mmSecuritiesPricing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmAmount
+ * AmountAndQuantity.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmQuantity
+ * AmountAndQuantity.mmQuantity}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -169,19 +183,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SolicitationFeeRateFormat9Choice.mmAmountToQuantity}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmSecuritiesPricing
- * AmountAndQuantity.mmSecuritiesPricing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmAmount
- * AmountAndQuantity.mmAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmQuantity
- * AmountAndQuantity.mmQuantity}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -238,7 +239,7 @@ public class AmountAndQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesPricing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AmountAndQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesPricing";
@@ -261,11 +262,6 @@ public class AmountAndQuantity {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AmountAndQuantity
-	 * AmountAndQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -287,6 +283,11 @@ public class AmountAndQuantity {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AmountAndQuantity
+	 * AmountAndQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -300,7 +301,7 @@ public class AmountAndQuantity {
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountAndQuantityRatio2.mmAmount, AmountAndQuantityRatio3.mmAmount, AmountAndQuantityRatio1.mmAmount, AmountAndQuantityRatio4.mmAmount, AmountAndQuantityRatio5.mmAmount);
-			elementContext_lazy = () -> AmountAndQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -308,6 +309,14 @@ public class AmountAndQuantity {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmountAndQuantity.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DecimalNumber quantity;
@@ -321,11 +330,6 @@ public class AmountAndQuantity {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.DecimalNumber
 	 * DecimalNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AmountAndQuantity
-	 * AmountAndQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -347,6 +351,11 @@ public class AmountAndQuantity {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AmountAndQuantity
+	 * AmountAndQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -360,7 +369,7 @@ public class AmountAndQuantity {
 	public static final MMBusinessAttribute mmQuantity = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountAndQuantityRatio2.mmQuantity, AmountAndQuantityRatio3.mmQuantity, AmountAndQuantityRatio1.mmQuantity, AmountAndQuantityRatio4.mmQuantity, AmountAndQuantityRatio5.mmQuantity);
-			elementContext_lazy = () -> AmountAndQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
@@ -368,6 +377,14 @@ public class AmountAndQuantity {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmountAndQuantity.class.getMethod("getQuantity", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -387,9 +404,15 @@ public class AmountAndQuantity {
 						RatioFormat19Choice.mmAmountToQuantity, RatioFormat19Choice.mmQuantityToAmount, SolicitationFeeRateFormat7Choice.mmAmountToQuantity, RatioFormat18Choice.mmAmountToQuantity, RatioFormat18Choice.mmQuantityToAmount,
 						SolicitationFeeRateFormat8Choice.mmAmountToQuantity, RatioFormat22Choice.mmAmountToQuantity, RatioFormat22Choice.mmQuantityToAmount, SolicitationFeeRateFormat10Choice.mmAmountToQuantity,
 						RatioFormat24Choice.mmAmountToQuantity, RatioFormat24Choice.mmQuantityToAmount, SolicitationFeeRateFormat9Choice.mmAmountToQuantity);
-				element_lazy = () -> Arrays.asList(AmountAndQuantity.mmSecuritiesPricing, AmountAndQuantity.mmAmount, AmountAndQuantity.mmQuantity);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AmountAndQuantity.mmSecuritiesPricing, com.tools20022.repository.entity.AmountAndQuantity.mmAmount,
+						com.tools20022.repository.entity.AmountAndQuantity.mmQuantity);
 				derivationComponent_lazy = () -> Arrays.asList(AmountAndQuantityRatio2.mmObject(), AmountAndQuantityRatio3.mmObject(), AmountAndQuantityRatio1.mmObject(), AmountAndQuantityRatio4.mmObject(),
 						AmountAndQuantityRatio5.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AmountAndQuantity.class;
 			}
 		});
 		return mmObject_lazy.get();

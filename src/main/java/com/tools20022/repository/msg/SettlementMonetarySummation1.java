@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies a collection of monetary totals for this settlement.
@@ -86,6 +90,9 @@ import java.util.List;
  * "Specifies a collection of monetary totals for this settlement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementMonetarySummation1", propOrder = {"lineTotalAmount", "allowanceTotalAmount", "totalDiscountAmount", "chargeTotalAmount", "totalPrepaidAmount", "taxTotalAmount", "taxBasisAmount", "roundingAmount",
+		"grandTotalAmount", "informationAmount"})
 public class SettlementMonetarySummation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -592,6 +599,7 @@ public class SettlementMonetarySummation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LineTtlAmt")
 	public List<CurrencyAndAmount> getLineTotalAmount() {
 		return lineTotalAmount;
 	}
@@ -600,6 +608,7 @@ public class SettlementMonetarySummation1 {
 		this.lineTotalAmount = lineTotalAmount;
 	}
 
+	@XmlElement(name = "AllwncTtlAmt")
 	public List<CurrencyAndAmount> getAllowanceTotalAmount() {
 		return allowanceTotalAmount;
 	}
@@ -608,6 +617,7 @@ public class SettlementMonetarySummation1 {
 		this.allowanceTotalAmount = allowanceTotalAmount;
 	}
 
+	@XmlElement(name = "TtlDscntAmt")
 	public List<CurrencyAndAmount> getTotalDiscountAmount() {
 		return totalDiscountAmount;
 	}
@@ -616,6 +626,7 @@ public class SettlementMonetarySummation1 {
 		this.totalDiscountAmount = totalDiscountAmount;
 	}
 
+	@XmlElement(name = "ChrgTtlAmt")
 	public List<CurrencyAndAmount> getChargeTotalAmount() {
 		return chargeTotalAmount;
 	}
@@ -624,6 +635,7 @@ public class SettlementMonetarySummation1 {
 		this.chargeTotalAmount = chargeTotalAmount;
 	}
 
+	@XmlElement(name = "TtlPrepdAmt")
 	public List<CurrencyAndAmount> getTotalPrepaidAmount() {
 		return totalPrepaidAmount;
 	}
@@ -632,6 +644,7 @@ public class SettlementMonetarySummation1 {
 		this.totalPrepaidAmount = totalPrepaidAmount;
 	}
 
+	@XmlElement(name = "TaxTtlAmt")
 	public List<CurrencyAndAmount> getTaxTotalAmount() {
 		return taxTotalAmount;
 	}
@@ -640,6 +653,7 @@ public class SettlementMonetarySummation1 {
 		this.taxTotalAmount = taxTotalAmount;
 	}
 
+	@XmlElement(name = "TaxBsisAmt")
 	public List<CurrencyAndAmount> getTaxBasisAmount() {
 		return taxBasisAmount;
 	}
@@ -648,6 +662,7 @@ public class SettlementMonetarySummation1 {
 		this.taxBasisAmount = taxBasisAmount;
 	}
 
+	@XmlElement(name = "RndgAmt")
 	public List<CurrencyAndAmount> getRoundingAmount() {
 		return roundingAmount;
 	}
@@ -656,6 +671,7 @@ public class SettlementMonetarySummation1 {
 		this.roundingAmount = roundingAmount;
 	}
 
+	@XmlElement(name = "GrdTtlAmt")
 	public List<CurrencyAndAmount> getGrandTotalAmount() {
 		return grandTotalAmount;
 	}
@@ -664,6 +680,7 @@ public class SettlementMonetarySummation1 {
 		this.grandTotalAmount = grandTotalAmount;
 	}
 
+	@XmlElement(name = "InfAmt")
 	public List<CurrencyAndAmount> getInformationAmount() {
 		return informationAmount;
 	}

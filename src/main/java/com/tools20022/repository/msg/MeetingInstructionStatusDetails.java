@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the status of an instruction.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about the status of an instruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingInstructionStatusDetails", propOrder = {"processingStatus", "rejectionStatus", "statusReason"})
 public class MeetingInstructionStatusDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -267,6 +273,7 @@ public class MeetingInstructionStatusDetails {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcgSts", required = true)
 	public Status1Code getProcessingStatus() {
 		return processingStatus;
 	}
@@ -275,6 +282,7 @@ public class MeetingInstructionStatusDetails {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "RjctnSts", required = true)
 	public MeetingInstructionRejection1Code getRejectionStatus() {
 		return rejectionStatus;
 	}
@@ -283,6 +291,7 @@ public class MeetingInstructionStatusDetails {
 		this.rejectionStatus = rejectionStatus;
 	}
 
+	@XmlElement(name = "StsRsn")
 	public Max350Text getStatusReason() {
 		return statusReason;
 	}

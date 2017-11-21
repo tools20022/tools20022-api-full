@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to a party identification or account identification.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information related to a party identification or account identification."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SimpleIdentificationInformation2", propOrder = "identification")
 public class SimpleIdentificationInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -127,6 +133,7 @@ public class SimpleIdentificationInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max34Text getIdentification() {
 		return identification;
 	}

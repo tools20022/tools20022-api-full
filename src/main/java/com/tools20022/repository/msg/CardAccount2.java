@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account involved in the card transaction.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardAccount1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardAccount2", propOrder = {"selectedAccountType", "accountName", "accountOwner", "currency", "accountIdentifier", "servicer", "balance", "balanceDate"})
 public class CardAccount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -519,6 +525,7 @@ public class CardAccount2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SelctdAcctTp")
 	public CardAccountType2Code getSelectedAccountType() {
 		return selectedAccountType;
 	}
@@ -527,6 +534,7 @@ public class CardAccount2 {
 		this.selectedAccountType = selectedAccountType;
 	}
 
+	@XmlElement(name = "AcctNm")
 	public Max70Text getAccountName() {
 		return accountName;
 	}
@@ -535,6 +543,7 @@ public class CardAccount2 {
 		this.accountName = accountName;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public NameAndAddress3 getAccountOwner() {
 		return accountOwner;
 	}
@@ -543,6 +552,7 @@ public class CardAccount2 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -551,6 +561,7 @@ public class CardAccount2 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "AcctIdr")
 	public AccountIdentification30Choice getAccountIdentifier() {
 		return accountIdentifier;
 	}
@@ -559,6 +570,7 @@ public class CardAccount2 {
 		this.accountIdentifier = accountIdentifier;
 	}
 
+	@XmlElement(name = "Svcr")
 	public PartyIdentification72Choice getServicer() {
 		return servicer;
 	}
@@ -567,6 +579,7 @@ public class CardAccount2 {
 		this.servicer = servicer;
 	}
 
+	@XmlElement(name = "Bal")
 	public AmountAndDirection41 getBalance() {
 		return balance;
 	}
@@ -575,6 +588,7 @@ public class CardAccount2 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "BalDt")
 	public ISODate getBalanceDate() {
 		return balanceDate;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional information from the underlying payment instruction which cannot
@@ -111,6 +115,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentComplementaryInformation", propOrder = {"remittanceChoice", "debtor", "debtorAccount", "firstAgent", "amount", "nostroVostroAccount", "intermediary", "firstSettlementAgent", "lastSettlementAgent",
+		"intermediarySettlementAgent", "creditor", "creditorAccount", "senderToReceiverInformation"})
 public class PaymentComplementaryInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -744,6 +751,7 @@ public class PaymentComplementaryInformation {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RmtChc")
 	public RemittanceInformation3Choice getRemittanceChoice() {
 		return remittanceChoice;
 	}
@@ -752,6 +760,7 @@ public class PaymentComplementaryInformation {
 		this.remittanceChoice = remittanceChoice;
 	}
 
+	@XmlElement(name = "Dbtr")
 	public PartyIdentification1 getDebtor() {
 		return debtor;
 	}
@@ -760,6 +769,7 @@ public class PaymentComplementaryInformation {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAcct")
 	public CashAccount3 getDebtorAccount() {
 		return debtorAccount;
 	}
@@ -768,6 +778,7 @@ public class PaymentComplementaryInformation {
 		this.debtorAccount = debtorAccount;
 	}
 
+	@XmlElement(name = "FrstAgt")
 	public BranchAndFinancialInstitutionIdentification getFirstAgent() {
 		return firstAgent;
 	}
@@ -776,6 +787,7 @@ public class PaymentComplementaryInformation {
 		this.firstAgent = firstAgent;
 	}
 
+	@XmlElement(name = "Amt")
 	public AmountType1Choice getAmount() {
 		return amount;
 	}
@@ -784,6 +796,7 @@ public class PaymentComplementaryInformation {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "NstrVstrAcct")
 	public CashAccount3 getNostroVostroAccount() {
 		return nostroVostroAccount;
 	}
@@ -792,6 +805,7 @@ public class PaymentComplementaryInformation {
 		this.nostroVostroAccount = nostroVostroAccount;
 	}
 
+	@XmlElement(name = "Intrmy")
 	public Intermediary1 getIntermediary() {
 		return intermediary;
 	}
@@ -800,6 +814,7 @@ public class PaymentComplementaryInformation {
 		this.intermediary = intermediary;
 	}
 
+	@XmlElement(name = "FrstSttlmAgt")
 	public BranchAndFinancialInstitutionIdentification getFirstSettlementAgent() {
 		return firstSettlementAgent;
 	}
@@ -808,6 +823,7 @@ public class PaymentComplementaryInformation {
 		this.firstSettlementAgent = firstSettlementAgent;
 	}
 
+	@XmlElement(name = "LastSttlmAgt")
 	public BranchAndFinancialInstitutionIdentification getLastSettlementAgent() {
 		return lastSettlementAgent;
 	}
@@ -816,6 +832,7 @@ public class PaymentComplementaryInformation {
 		this.lastSettlementAgent = lastSettlementAgent;
 	}
 
+	@XmlElement(name = "IntrmySttlmAgt")
 	public BranchAndFinancialInstitutionIdentification getIntermediarySettlementAgent() {
 		return intermediarySettlementAgent;
 	}
@@ -824,6 +841,7 @@ public class PaymentComplementaryInformation {
 		this.intermediarySettlementAgent = intermediarySettlementAgent;
 	}
 
+	@XmlElement(name = "Cdtr")
 	public PartyIdentification1 getCreditor() {
 		return creditor;
 	}
@@ -832,6 +850,7 @@ public class PaymentComplementaryInformation {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAcct")
 	public CashAccount3 getCreditorAccount() {
 		return creditorAccount;
 	}
@@ -840,6 +859,7 @@ public class PaymentComplementaryInformation {
 		this.creditorAccount = creditorAccount;
 	}
 
+	@XmlElement(name = "SndrToRcvrInf")
 	public List<Max35Text> getSenderToReceiverInformation() {
 		return senderToReceiverInformation;
 	}

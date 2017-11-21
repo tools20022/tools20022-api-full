@@ -35,19 +35,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Household#mmMember
+ * Household.mmMember}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.entity.Person#mmHousehold
  * Person.mmHousehold}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Household#mmMember
- * Household.mmMember}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,7 +104,7 @@ public class Household {
 	 */
 	public static final MMBusinessAssociationEnd mmMember = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Household.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Household.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Member";
@@ -125,7 +125,12 @@ public class Household {
 				name = "Household";
 				definition = "Specifies the members of a household in relation with the ownership of an account.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Person.mmHousehold);
-				element_lazy = () -> Arrays.asList(Household.mmMember);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Household.mmMember);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Household.class;
 			}
 		});
 		return mmObject_lazy.get();

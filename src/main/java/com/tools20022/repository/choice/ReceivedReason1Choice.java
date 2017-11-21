@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for the reason of a received status.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of formats for the reason of a received status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReceivedReason1Choice", propOrder = {"noSpecifiedReason", "reason"})
 public class ReceivedReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class ReceivedReason1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
@@ -186,6 +193,7 @@ public class ReceivedReason1Choice {
 		this.noSpecifiedReason = noSpecifiedReason;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public ReceivedReason2Choice getReason() {
 		return reason;
 	}

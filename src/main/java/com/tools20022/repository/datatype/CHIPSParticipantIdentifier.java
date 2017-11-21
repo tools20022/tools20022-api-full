@@ -34,6 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} =
  * "American Banker's Association (ABA); CHIPS Participant Number"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "CP[0-9]{4,4}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -70,6 +72,7 @@ public class CHIPSParticipantIdentifier {
 				name = "CHIPSParticipantIdentifier";
 				definition = "(United States) Clearing House Interbank Payment System (CHIPS) Participant Identifier (ID). Identifies financial institutions participating on CHIPS. The CHIPS Participant ID is assigned by the New York Clearing House.";
 				identificationScheme = "American Banker's Association (ABA); CHIPS Participant Number";
+				pattern = "CP[0-9]{4,4}";
 			}
 		});
 		return mmObject_lazy.get();

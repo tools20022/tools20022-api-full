@@ -29,40 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceType4Code
- * BalanceType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceType6Code
- * BalanceType6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceType10Code
- * BalanceType10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceType5Code
- * BalanceType5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceType7Code
- * BalanceType7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceType11Code
- * BalanceType11Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceType8Code
- * BalanceType8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceType12Code
- * BalanceType12Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceType9Code
- * BalanceType9Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType10Code
- * SecuritiesBalanceType10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType6Code
- * SecuritiesBalanceType6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CashBalanceType1Code
- * CashBalanceType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType9Code
- * SecuritiesBalanceType9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceType13Code
- * BalanceType13Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -390,6 +356,40 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmInformation
  * BalanceTypeCode.mmInformation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceType4Code
+ * BalanceType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceType6Code
+ * BalanceType6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceType10Code
+ * BalanceType10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceType5Code
+ * BalanceType5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceType7Code
+ * BalanceType7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceType11Code
+ * BalanceType11Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceType8Code
+ * BalanceType8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceType12Code
+ * BalanceType12Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceType9Code
+ * BalanceType9Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType10Code
+ * SecuritiesBalanceType10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType6Code
+ * SecuritiesBalanceType6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CashBalanceType1Code
+ * CashBalanceType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType9Code
+ * SecuritiesBalanceType9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceType13Code
+ * BalanceType13Code}</li>
  * </ul>
  * </li>
  * <li>

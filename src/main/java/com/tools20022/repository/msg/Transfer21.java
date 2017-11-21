@@ -36,6 +36,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -125,6 +129,9 @@ import java.util.List;
  * Transfer15}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Transfer21", propOrder = {"transferReference", "clientReference", "counterpartyReference", "businessFlowType", "transferReason", "transferDate", "requestedSettlementDate", "holdingsPlanType", "financialInstrumentDetails",
+		"totalUnitsNumber", "ownAccountTransferIndicator", "nonStandardSettlementInformation", "receivingAgentDetails", "deliveringAgentDetails"})
 public class Transfer21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -955,6 +962,7 @@ public class Transfer21 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -963,6 +971,7 @@ public class Transfer21 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -971,6 +980,7 @@ public class Transfer21 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CtrPtyRef")
 	public AdditionalReference2 getCounterpartyReference() {
 		return counterpartyReference;
 	}
@@ -979,6 +989,7 @@ public class Transfer21 {
 		this.counterpartyReference = counterpartyReference;
 	}
 
+	@XmlElement(name = "BizFlowTp")
 	public BusinessFlowType1Code getBusinessFlowType() {
 		return businessFlowType;
 	}
@@ -987,6 +998,7 @@ public class Transfer21 {
 		this.businessFlowType = businessFlowType;
 	}
 
+	@XmlElement(name = "TrfRsn")
 	public TransferReason1 getTransferReason() {
 		return transferReason;
 	}
@@ -995,6 +1007,7 @@ public class Transfer21 {
 		this.transferReason = transferReason;
 	}
 
+	@XmlElement(name = "TrfDt")
 	public DateFormat1Choice getTransferDate() {
 		return transferDate;
 	}
@@ -1003,6 +1016,7 @@ public class Transfer21 {
 		this.transferDate = transferDate;
 	}
 
+	@XmlElement(name = "ReqdSttlmDt")
 	public ISODate getRequestedSettlementDate() {
 		return requestedSettlementDate;
 	}
@@ -1011,6 +1025,7 @@ public class Transfer21 {
 		this.requestedSettlementDate = requestedSettlementDate;
 	}
 
+	@XmlElement(name = "HldgsPlanTp")
 	public List<HoldingsPlanType1Code> getHoldingsPlanType() {
 		return holdingsPlanType;
 	}
@@ -1019,6 +1034,7 @@ public class Transfer21 {
 		this.holdingsPlanType = holdingsPlanType;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument13 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -1027,6 +1043,7 @@ public class Transfer21 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "TtlUnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
@@ -1035,6 +1052,7 @@ public class Transfer21 {
 		this.totalUnitsNumber = totalUnitsNumber;
 	}
 
+	@XmlElement(name = "OwnAcctTrfInd")
 	public YesNoIndicator getOwnAccountTransferIndicator() {
 		return ownAccountTransferIndicator;
 	}
@@ -1043,6 +1061,7 @@ public class Transfer21 {
 		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
 	}
 
+	@XmlElement(name = "NonStdSttlmInf")
 	public Max350Text getNonStandardSettlementInformation() {
 		return nonStandardSettlementInformation;
 	}
@@ -1051,6 +1070,7 @@ public class Transfer21 {
 		this.nonStandardSettlementInformation = nonStandardSettlementInformation;
 	}
 
+	@XmlElement(name = "RcvgAgtDtls")
 	public PartyIdentificationAndAccount93 getReceivingAgentDetails() {
 		return receivingAgentDetails;
 	}
@@ -1059,6 +1079,7 @@ public class Transfer21 {
 		this.receivingAgentDetails = receivingAgentDetails;
 	}
 
+	@XmlElement(name = "DlvrgAgtDtls")
 	public PartyIdentificationAndAccount93 getDeliveringAgentDetails() {
 		return deliveringAgentDetails;
 	}

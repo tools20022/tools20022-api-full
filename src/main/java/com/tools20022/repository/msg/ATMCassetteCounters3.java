@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * ATM cassette counter per unit value or globally.
@@ -77,6 +81,8 @@ import java.util.List;
  * definition} = "ATM cassette counter per unit value or globally."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCassetteCounters3", propOrder = {"unitValue", "currency", "mediaCategory", "currentNumber", "currentAmount", "flowTotals"})
 public class ATMCassetteCounters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -366,6 +372,7 @@ public class ATMCassetteCounters3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitVal")
 	public ImpliedCurrencyAndAmount getUnitValue() {
 		return unitValue;
 	}
@@ -374,6 +381,7 @@ public class ATMCassetteCounters3 {
 		this.unitValue = unitValue;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -382,6 +390,7 @@ public class ATMCassetteCounters3 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "MdiaCtgy")
 	public ATMMediaType3Code getMediaCategory() {
 		return mediaCategory;
 	}
@@ -390,6 +399,7 @@ public class ATMCassetteCounters3 {
 		this.mediaCategory = mediaCategory;
 	}
 
+	@XmlElement(name = "CurNb", required = true)
 	public Number getCurrentNumber() {
 		return currentNumber;
 	}
@@ -398,6 +408,7 @@ public class ATMCassetteCounters3 {
 		this.currentNumber = currentNumber;
 	}
 
+	@XmlElement(name = "CurAmt")
 	public ImpliedCurrencyAndAmount getCurrentAmount() {
 		return currentAmount;
 	}
@@ -406,6 +417,7 @@ public class ATMCassetteCounters3 {
 		this.currentAmount = currentAmount;
 	}
 
+	@XmlElement(name = "FlowTtls")
 	public List<ATMCassetteCounters4> getFlowTotals() {
 		return flowTotals;
 	}

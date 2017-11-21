@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference of a transfer and of a transfer cancellation.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransferReference5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferReference9", propOrder = {"masterReference", "transferReference", "clientReference", "counterpartyReference", "cancellationReference"})
 public class TransferReference9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -368,6 +374,7 @@ public class TransferReference9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -376,6 +383,7 @@ public class TransferReference9 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -384,6 +392,7 @@ public class TransferReference9 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public AdditionalReference7 getClientReference() {
 		return clientReference;
 	}
@@ -392,6 +401,7 @@ public class TransferReference9 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CtrPtyRef")
 	public AdditionalReference7 getCounterpartyReference() {
 		return counterpartyReference;
 	}
@@ -400,6 +410,7 @@ public class TransferReference9 {
 		this.counterpartyReference = counterpartyReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}

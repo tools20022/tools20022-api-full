@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action movement details.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionMovementCashMovementDetailsSD1", propOrder = {"placeAndName", "creditDebitIndicator", "transactionAmount", "transactionReasonCode", "contraParticipantNumber", "earliestPaymentDate"})
 public class CorporateActionMovementCashMovementDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -414,6 +420,7 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -422,6 +429,7 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -430,6 +438,7 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "TxAmt")
 	public RestrictedFINActiveCurrencyAndAmount getTransactionAmount() {
 		return transactionAmount;
 	}
@@ -438,6 +447,7 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 		this.transactionAmount = transactionAmount;
 	}
 
+	@XmlElement(name = "TxRsnCd")
 	public DTCAdjustmentPaymentType1Code getTransactionReasonCode() {
 		return transactionReasonCode;
 	}
@@ -446,6 +456,7 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 		this.transactionReasonCode = transactionReasonCode;
 	}
 
+	@XmlElement(name = "ContraPtcptNb")
 	public Max8Text getContraParticipantNumber() {
 		return contraParticipantNumber;
 	}
@@ -454,6 +465,7 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 		this.contraParticipantNumber = contraParticipantNumber;
 	}
 
+	@XmlElement(name = "EarlstPmtDt")
 	public DateFormat22Choice getEarliestPaymentDate() {
 		return earliestPaymentDate;
 	}

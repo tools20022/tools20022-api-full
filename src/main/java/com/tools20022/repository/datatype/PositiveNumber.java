@@ -28,6 +28,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMDecimal#getMinInclusive
+ * minInclusive} = "1"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -61,6 +63,9 @@ public class PositiveNumber {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PositiveNumber";
 				definition = "Number of objects represented as a positive integer.";
+				minInclusive = "1";
+				totalDigits = 18;
+				fractionDigits = 0;
 			}
 		});
 		return mmObject_lazy.get();

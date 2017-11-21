@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account to or from which a securities entry is made.
@@ -84,6 +88,8 @@ import java.util.List;
  * SubAccountIdentification38}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubAccountIdentification43", propOrder = {"accountOwner", "safekeepingAccount", "activityIndicator", "balanceForSubAccount"})
 public class SubAccountIdentification43 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -318,6 +324,7 @@ public class SubAccountIdentification43 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification98 getAccountOwner() {
 		return accountOwner;
 	}
@@ -326,6 +333,7 @@ public class SubAccountIdentification43 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount25 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -334,6 +342,7 @@ public class SubAccountIdentification43 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
@@ -342,6 +351,7 @@ public class SubAccountIdentification43 {
 		this.activityIndicator = activityIndicator;
 	}
 
+	@XmlElement(name = "BalForSubAcct")
 	public List<AggregateBalanceInformation31> getBalanceForSubAccount() {
 		return balanceForSubAccount;
 	}

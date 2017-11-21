@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates the details of a guarantee.
@@ -81,6 +85,8 @@ import java.util.List;
  * definition} = "Indicates the details of a guarantee."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GuaranteeDetails1", propOrder = {"issuer", "position", "description", "guaranteedAmount", "excess", "coveredPercentage", "associatedDocument", "additionalInformation"})
 public class GuaranteeDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -470,6 +476,7 @@ public class GuaranteeDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Issr")
 	public QualifiedPartyIdentification1 getIssuer() {
 		return issuer;
 	}
@@ -478,6 +485,7 @@ public class GuaranteeDetails1 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "Pos")
 	public positiveInteger getPosition() {
 		return position;
 	}
@@ -486,6 +494,7 @@ public class GuaranteeDetails1 {
 		this.position = position;
 	}
 
+	@XmlElement(name = "Desc")
 	public Max2000Text getDescription() {
 		return description;
 	}
@@ -494,6 +503,7 @@ public class GuaranteeDetails1 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "GrntedAmt")
 	public List<AmountAndPeriod1> getGuaranteedAmount() {
 		return guaranteedAmount;
 	}
@@ -502,6 +512,7 @@ public class GuaranteeDetails1 {
 		this.guaranteedAmount = guaranteedAmount;
 	}
 
+	@XmlElement(name = "Xcss")
 	public List<AmountAndPeriod1> getExcess() {
 		return excess;
 	}
@@ -510,6 +521,7 @@ public class GuaranteeDetails1 {
 		this.excess = excess;
 	}
 
+	@XmlElement(name = "CvrdPctg")
 	public List<PercentageAndPeriod1> getCoveredPercentage() {
 		return coveredPercentage;
 	}
@@ -518,6 +530,7 @@ public class GuaranteeDetails1 {
 		this.coveredPercentage = coveredPercentage;
 	}
 
+	@XmlElement(name = "AssoctdDoc")
 	public List<QualifiedDocumentInformation1> getAssociatedDocument() {
 		return associatedDocument;
 	}
@@ -526,6 +539,7 @@ public class GuaranteeDetails1 {
 		this.associatedDocument = associatedDocument;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

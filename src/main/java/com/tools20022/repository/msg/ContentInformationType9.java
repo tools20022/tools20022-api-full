@@ -30,6 +30,10 @@ import com.tools20022.repository.codeset.ContentType1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General cryptographic message syntax (CMS) containing protected data.
@@ -105,6 +109,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ContentInformationType4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContentInformationType9", propOrder = {"contentType", "envelopedData", "authenticatedData", "signedData", "digestedData"})
 public class ContentInformationType9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -408,6 +414,7 @@ public class ContentInformationType9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CnttTp", required = true)
 	public ContentType1Code getContentType() {
 		return contentType;
 	}
@@ -416,6 +423,7 @@ public class ContentInformationType9 {
 		this.contentType = contentType;
 	}
 
+	@XmlElement(name = "EnvlpdData")
 	public EnvelopedData3 getEnvelopedData() {
 		return envelopedData;
 	}
@@ -424,6 +432,7 @@ public class ContentInformationType9 {
 		this.envelopedData = envelopedData;
 	}
 
+	@XmlElement(name = "AuthntcdData")
 	public AuthenticatedData3 getAuthenticatedData() {
 		return authenticatedData;
 	}
@@ -432,6 +441,7 @@ public class ContentInformationType9 {
 		this.authenticatedData = authenticatedData;
 	}
 
+	@XmlElement(name = "SgndData")
 	public SignedData3 getSignedData() {
 		return signedData;
 	}
@@ -440,6 +450,7 @@ public class ContentInformationType9 {
 		this.signedData = signedData;
 	}
 
+	@XmlElement(name = "DgstdData")
 	public DigestedData3 getDigestedData() {
 		return digestedData;
 	}

@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.Notification1;
 import com.tools20022.repository.msg.SimpleIdentificationInformation;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -42,9 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.047.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -83,6 +82,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.047.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -94,6 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SpecialRequestV01", propOrder = {"requestIdentification", "transactionIdentification", "submitterTransactionReference", "notification"})
 public class SpecialRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -130,6 +134,14 @@ public class SpecialRequestV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SpecialRequestV01.class.getMethod("getRequestIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -170,6 +182,14 @@ public class SpecialRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SpecialRequestV01.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
@@ -208,6 +228,14 @@ public class SpecialRequestV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SpecialRequestV01.class.getMethod("getSubmitterTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Notification1 notification;
 	/**
@@ -242,6 +270,14 @@ public class SpecialRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Notification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SpecialRequestV01.class.getMethod("getNotification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -254,7 +290,8 @@ public class SpecialRequestV01 {
 				rootElement = "Document";
 				xmlTag = "SpclReq";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SpecialRequestV01.mmRequestIdentification, SpecialRequestV01.mmTransactionIdentification, SpecialRequestV01.mmSubmitterTransactionReference, SpecialRequestV01.mmNotification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.SpecialRequestV01.mmRequestIdentification, com.tools20022.repository.area.tsmt.SpecialRequestV01.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.SpecialRequestV01.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.SpecialRequestV01.mmNotification);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -264,10 +301,16 @@ public class SpecialRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SpecialRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqId", required = true)
 	public MessageIdentification1 getRequestIdentification() {
 		return requestIdentification;
 	}
@@ -276,6 +319,7 @@ public class SpecialRequestV01 {
 		this.requestIdentification = requestIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -284,6 +328,7 @@ public class SpecialRequestV01 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "SubmitrTxRef")
 	public SimpleIdentificationInformation getSubmitterTransactionReference() {
 		return submitterTransactionReference;
 	}
@@ -292,11 +337,18 @@ public class SpecialRequestV01 {
 		this.submitterTransactionReference = submitterTransactionReference;
 	}
 
+	@XmlElement(name = "Ntfctn", required = true)
 	public Notification1 getNotification() {
 		return notification;
 	}
 
 	public void setNotification(Notification1 notification) {
 		this.notification = notification;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.047.01.01")
+	static public class Document {
+		@XmlElement(name = "SpclReq", required = true)
+		public SpecialRequestV01 messageBody;
 	}
 }

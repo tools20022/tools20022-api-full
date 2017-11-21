@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Contact person at the party organising the meeting, at the issuer or at an
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingContactPerson1", propOrder = {"contactPerson", "employingParty", "placeOfListing"})
 public class MeetingContactPerson1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -274,6 +280,7 @@ public class MeetingContactPerson1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CtctPrsn")
 	public ContactIdentification1 getContactPerson() {
 		return contactPerson;
 	}
@@ -282,6 +289,7 @@ public class MeetingContactPerson1 {
 		this.contactPerson = contactPerson;
 	}
 
+	@XmlElement(name = "EmplngPty")
 	public PartyIdentification9Choice getEmployingParty() {
 		return employingParty;
 	}
@@ -290,6 +298,7 @@ public class MeetingContactPerson1 {
 		this.employingParty = employingParty;
 	}
 
+	@XmlElement(name = "PlcOfListg")
 	public MICIdentifier getPlaceOfListing() {
 		return placeOfListing;
 	}

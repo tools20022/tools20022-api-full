@@ -36,6 +36,10 @@ import com.tools20022.repository.entity.PrivateCertificate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information to support the Know Your Customer (KYC) processes.
@@ -113,6 +117,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyProfileInformation4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyProfileInformation5", propOrder = {"certificationIndicator", "validatingParty", "checkingParty", "responsibleParty", "certificateType", "checkingDate", "checkingFrequency", "nextRevisionDate", "salaryRange",
+		"sourceOfWealth", "customerConductClassification", "riskLevel", "knowYourCustomerCheckType", "knowYourCustomerDatabaseCheck"})
 public class PartyProfileInformation5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -880,6 +887,7 @@ public class PartyProfileInformation5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CertfctnInd")
 	public YesNoIndicator getCertificationIndicator() {
 		return certificationIndicator;
 	}
@@ -888,6 +896,7 @@ public class PartyProfileInformation5 {
 		this.certificationIndicator = certificationIndicator;
 	}
 
+	@XmlElement(name = "VldtngPty")
 	public Max140Text getValidatingParty() {
 		return validatingParty;
 	}
@@ -896,6 +905,7 @@ public class PartyProfileInformation5 {
 		this.validatingParty = validatingParty;
 	}
 
+	@XmlElement(name = "ChckngPty")
 	public Max140Text getCheckingParty() {
 		return checkingParty;
 	}
@@ -904,6 +914,7 @@ public class PartyProfileInformation5 {
 		this.checkingParty = checkingParty;
 	}
 
+	@XmlElement(name = "RspnsblPty")
 	public Max140Text getResponsibleParty() {
 		return responsibleParty;
 	}
@@ -912,6 +923,7 @@ public class PartyProfileInformation5 {
 		this.responsibleParty = responsibleParty;
 	}
 
+	@XmlElement(name = "CertTp")
 	public CertificationType1Choice getCertificateType() {
 		return certificateType;
 	}
@@ -920,6 +932,7 @@ public class PartyProfileInformation5 {
 		this.certificateType = certificateType;
 	}
 
+	@XmlElement(name = "ChckngDt")
 	public ISODate getCheckingDate() {
 		return checkingDate;
 	}
@@ -928,6 +941,7 @@ public class PartyProfileInformation5 {
 		this.checkingDate = checkingDate;
 	}
 
+	@XmlElement(name = "ChckngFrqcy")
 	public EventFrequency1Code getCheckingFrequency() {
 		return checkingFrequency;
 	}
@@ -936,6 +950,7 @@ public class PartyProfileInformation5 {
 		this.checkingFrequency = checkingFrequency;
 	}
 
+	@XmlElement(name = "NxtRvsnDt")
 	public ISODate getNextRevisionDate() {
 		return nextRevisionDate;
 	}
@@ -944,6 +959,7 @@ public class PartyProfileInformation5 {
 		this.nextRevisionDate = nextRevisionDate;
 	}
 
+	@XmlElement(name = "SlryRg")
 	public Max35Text getSalaryRange() {
 		return salaryRange;
 	}
@@ -952,6 +968,7 @@ public class PartyProfileInformation5 {
 		this.salaryRange = salaryRange;
 	}
 
+	@XmlElement(name = "SrcOfWlth")
 	public Max140Text getSourceOfWealth() {
 		return sourceOfWealth;
 	}
@@ -960,6 +977,7 @@ public class PartyProfileInformation5 {
 		this.sourceOfWealth = sourceOfWealth;
 	}
 
+	@XmlElement(name = "CstmrCndctClssfctn")
 	public CustomerConductClassification1Choice getCustomerConductClassification() {
 		return customerConductClassification;
 	}
@@ -968,6 +986,7 @@ public class PartyProfileInformation5 {
 		this.customerConductClassification = customerConductClassification;
 	}
 
+	@XmlElement(name = "RskLvl")
 	public RiskLevel2Choice getRiskLevel() {
 		return riskLevel;
 	}
@@ -976,6 +995,7 @@ public class PartyProfileInformation5 {
 		this.riskLevel = riskLevel;
 	}
 
+	@XmlElement(name = "KnowYourCstmrChckTp")
 	public KYCCheckType1Choice getKnowYourCustomerCheckType() {
 		return knowYourCustomerCheckType;
 	}
@@ -984,6 +1004,7 @@ public class PartyProfileInformation5 {
 		this.knowYourCustomerCheckType = knowYourCustomerCheckType;
 	}
 
+	@XmlElement(name = "KnowYourCstmrDBChck")
 	public DataBaseCheck1 getKnowYourCustomerDatabaseCheck() {
 		return knowYourCustomerDatabaseCheck;
 	}

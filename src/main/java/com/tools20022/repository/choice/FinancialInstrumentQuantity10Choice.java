@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between ways to express the quantity of the financial instrument.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between ways to express the quantity of the financial instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentQuantity10Choice", propOrder = {"unitsNumber", "orderedAmount", "holdingsRate"})
 public class FinancialInstrumentQuantity10Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class FinancialInstrumentQuantity10Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -238,6 +245,7 @@ public class FinancialInstrumentQuantity10Choice {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "OrdrdAmt", required = true)
 	public ActiveCurrencyAndAmount getOrderedAmount() {
 		return orderedAmount;
 	}
@@ -246,6 +254,7 @@ public class FinancialInstrumentQuantity10Choice {
 		this.orderedAmount = orderedAmount;
 	}
 
+	@XmlElement(name = "HldgsRate", required = true)
 	public PercentageRate getHoldingsRate() {
 		return holdingsRate;
 	}

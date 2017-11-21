@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format to expressed a ratio.
@@ -79,6 +83,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RatioFormat4Choice", propOrder = {"quantityToQuantity", "amountToAmount", "amountToQuantity", "quantityToAmount"})
 public class RatioFormat4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -294,6 +300,7 @@ public class RatioFormat4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QtyToQty", required = true)
 	public QuantityToQuantityRatio1 getQuantityToQuantity() {
 		return quantityToQuantity;
 	}
@@ -302,6 +309,7 @@ public class RatioFormat4Choice {
 		this.quantityToQuantity = quantityToQuantity;
 	}
 
+	@XmlElement(name = "AmtToAmt", required = true)
 	public AmountToAmountRatio2 getAmountToAmount() {
 		return amountToAmount;
 	}
@@ -310,6 +318,7 @@ public class RatioFormat4Choice {
 		this.amountToAmount = amountToAmount;
 	}
 
+	@XmlElement(name = "AmtToQty", required = true)
 	public AmountAndQuantityRatio2 getAmountToQuantity() {
 		return amountToQuantity;
 	}
@@ -318,6 +327,7 @@ public class RatioFormat4Choice {
 		this.amountToQuantity = amountToQuantity;
 	}
 
+	@XmlElement(name = "QtyToAmt", required = true)
 	public AmountAndQuantityRatio2 getQuantityToAmount() {
 		return quantityToAmount;
 	}

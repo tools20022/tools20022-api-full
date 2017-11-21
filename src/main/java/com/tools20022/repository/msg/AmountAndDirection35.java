@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Resulting debit or credit amount of the netted amounts for all debit and
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AmountAndDirection3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountAndDirection35", propOrder = {"amount", "creditDebitIndicator"})
 public class AmountAndDirection35 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class AmountAndDirection35 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public NonNegativeDecimalNumber getAmount() {
 		return amount;
 	}
@@ -193,6 +200,7 @@ public class AmountAndDirection35 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}

@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Meeting;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the general meeting, specifying the participation
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AdditionalRights1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalRights2", propOrder = {"additionalRight", "additionalRightInformationURLAddress", "additionalRightDeadline", "additionalRightMarketDeadline", "additionalRightThreshold"})
 public class AdditionalRights2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -391,6 +397,7 @@ public class AdditionalRights2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlRght", required = true)
 	public AdditionalRightCode1Choice getAdditionalRight() {
 		return additionalRight;
 	}
@@ -399,6 +406,7 @@ public class AdditionalRights2 {
 		this.additionalRight = additionalRight;
 	}
 
+	@XmlElement(name = "AddtlRghtInfURLAdr")
 	public Max256Text getAdditionalRightInformationURLAddress() {
 		return additionalRightInformationURLAddress;
 	}
@@ -407,6 +415,7 @@ public class AdditionalRights2 {
 		this.additionalRightInformationURLAddress = additionalRightInformationURLAddress;
 	}
 
+	@XmlElement(name = "AddtlRghtDdln")
 	public DateFormat29Choice getAdditionalRightDeadline() {
 		return additionalRightDeadline;
 	}
@@ -415,6 +424,7 @@ public class AdditionalRights2 {
 		this.additionalRightDeadline = additionalRightDeadline;
 	}
 
+	@XmlElement(name = "AddtlRghtMktDdln")
 	public DateFormat29Choice getAdditionalRightMarketDeadline() {
 		return additionalRightMarketDeadline;
 	}
@@ -423,6 +433,7 @@ public class AdditionalRights2 {
 		this.additionalRightMarketDeadline = additionalRightMarketDeadline;
 	}
 
+	@XmlElement(name = "AddtlRghtThrshld")
 	public AdditionalRightThreshold1Choice getAdditionalRightThreshold() {
 		return additionalRightThreshold;
 	}

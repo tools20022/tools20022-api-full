@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,31 +38,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.GuaranteeDetails1
- * GuaranteeDetails1}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmGuarantee
- * Trade.mmGuarantee}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DateTimePeriod#mmGuarantee
- * DateTimePeriod.mmGuarantee}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmGuarantee
- * Document.mmGuarantee}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GuaranteePartyRole#mmGuarantee
- * GuaranteePartyRole.mmGuarantee}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -83,6 +59,31 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Guarantee#mmGuaranteePartyRole
  * Guarantee.mmGuaranteePartyRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.GuaranteeDetails1
+ * GuaranteeDetails1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmGuarantee
+ * Trade.mmGuarantee}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DateTimePeriod#mmGuarantee
+ * DateTimePeriod.mmGuarantee}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmGuarantee
+ * Document.mmGuarantee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GuaranteePartyRole#mmGuarantee
+ * GuaranteePartyRole.mmGuarantee}</li>
  * </ul>
  * </li>
  * <li>
@@ -115,10 +116,6 @@ public class Guarantee extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Guarantee
-	 * Guarantee}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -149,6 +146,10 @@ public class Guarantee extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Guarantee
+	 * Guarantee}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -163,7 +164,7 @@ public class Guarantee extends Asset {
 		{
 			derivation_lazy = () -> Arrays.asList(OtherCollateral1.mmGuaranteeAmount, OtherCollateral2.mmGuaranteeAmount, OtherCollateral3.mmGuaranteeAmount, OtherCollateral4.mmGuaranteeAmount, GuaranteeDetails1.mmGuaranteedAmount,
 					OtherCollateral7.mmGuaranteeAmount, OtherCollateral6.mmGuaranteeAmount, OtherCollateral5.mmGuaranteeAmount);
-			elementContext_lazy = () -> Guarantee.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Guarantee.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CoveredAmount";
@@ -171,6 +172,14 @@ public class Guarantee extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Guarantee.class.getMethod("getCoveredAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DateTimePeriod effectivePeriod;
@@ -208,7 +217,7 @@ public class Guarantee extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmEffectivePeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Guarantee.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Guarantee.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EffectivePeriod";
@@ -251,7 +260,7 @@ public class Guarantee extends Asset {
 	 */
 	public static final MMBusinessAttribute mmGuaranteeType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Guarantee.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Guarantee.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GuaranteeType";
@@ -259,6 +268,14 @@ public class Guarantee extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> GuarantyTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Guarantee.class.getMethod("getGuaranteeType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate coveredPercentage;
@@ -272,10 +289,6 @@ public class Guarantee extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Guarantee
-	 * Guarantee}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -284,6 +297,10 @@ public class Guarantee extends Asset {
 	 * GuaranteeDetails1.mmCoveredPercentage}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Guarantee
+	 * Guarantee}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -299,7 +316,7 @@ public class Guarantee extends Asset {
 	public static final MMBusinessAttribute mmCoveredPercentage = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(GuaranteeDetails1.mmCoveredPercentage);
-			elementContext_lazy = () -> Guarantee.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Guarantee.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CoveredPercentage";
@@ -307,6 +324,14 @@ public class Guarantee extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Guarantee.class.getMethod("getCoveredPercentage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Document> document;
@@ -344,7 +369,7 @@ public class Guarantee extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmDocument = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Guarantee.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Guarantee.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Document";
@@ -390,7 +415,7 @@ public class Guarantee extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmGuaranteedTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Guarantee.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Guarantee.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedTrade";
@@ -413,10 +438,6 @@ public class Guarantee extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Guarantee
-	 * Guarantee}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -424,6 +445,10 @@ public class Guarantee extends Asset {
 	 * GuaranteeDetails1.mmExcess}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Guarantee
+	 * Guarantee}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -438,7 +463,7 @@ public class Guarantee extends Asset {
 	public static final MMBusinessAttribute mmExcessAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(GuaranteeDetails1.mmExcess);
-			elementContext_lazy = () -> Guarantee.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Guarantee.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExcessAmount";
@@ -446,6 +471,14 @@ public class Guarantee extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Guarantee.class.getMethod("getExcessAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected GuaranteePartyRole guaranteePartyRole;
@@ -484,7 +517,7 @@ public class Guarantee extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmGuaranteePartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Guarantee.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Guarantee.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteePartyRole";
@@ -507,9 +540,15 @@ public class Guarantee extends Asset {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.mmGuarantee, com.tools20022.repository.entity.DateTimePeriod.mmGuarantee, com.tools20022.repository.entity.Document.mmGuarantee,
 						com.tools20022.repository.entity.GuaranteePartyRole.mmGuarantee);
 				superType_lazy = () -> Asset.mmObject();
-				element_lazy = () -> Arrays.asList(Guarantee.mmCoveredAmount, Guarantee.mmEffectivePeriod, Guarantee.mmGuaranteeType, Guarantee.mmCoveredPercentage, Guarantee.mmDocument, Guarantee.mmGuaranteedTrade,
-						Guarantee.mmExcessAmount, Guarantee.mmGuaranteePartyRole);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Guarantee.mmCoveredAmount, com.tools20022.repository.entity.Guarantee.mmEffectivePeriod, com.tools20022.repository.entity.Guarantee.mmGuaranteeType,
+						com.tools20022.repository.entity.Guarantee.mmCoveredPercentage, com.tools20022.repository.entity.Guarantee.mmDocument, com.tools20022.repository.entity.Guarantee.mmGuaranteedTrade,
+						com.tools20022.repository.entity.Guarantee.mmExcessAmount, com.tools20022.repository.entity.Guarantee.mmGuaranteePartyRole);
 				derivationComponent_lazy = () -> Arrays.asList(GuaranteeDetails1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Guarantee.class;
 			}
 		});
 		return mmObject_lazy.get();

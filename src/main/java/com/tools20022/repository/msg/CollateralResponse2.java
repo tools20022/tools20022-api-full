@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information on the collateral proposal(s), that is either
@@ -72,6 +76,8 @@ import java.util.List;
  * CollateralResponse1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralResponse2", propOrder = {"securitiesCollateralResponse", "cashCollateralResponse", "otherCollateralResponse"})
 public class CollateralResponse2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -250,6 +256,7 @@ public class CollateralResponse2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesCollRspn")
 	public List<SecuritiesCollateralResponse1> getSecuritiesCollateralResponse() {
 		return securitiesCollateralResponse;
 	}
@@ -258,6 +265,7 @@ public class CollateralResponse2 {
 		this.securitiesCollateralResponse = securitiesCollateralResponse;
 	}
 
+	@XmlElement(name = "CshCollRspn")
 	public List<CashCollateralResponse2> getCashCollateralResponse() {
 		return cashCollateralResponse;
 	}
@@ -266,6 +274,7 @@ public class CollateralResponse2 {
 		this.cashCollateralResponse = cashCollateralResponse;
 	}
 
+	@XmlElement(name = "OthrCollRspn")
 	public List<OtherCollateralResponse2> getOtherCollateralResponse() {
 		return otherCollateralResponse;
 	}

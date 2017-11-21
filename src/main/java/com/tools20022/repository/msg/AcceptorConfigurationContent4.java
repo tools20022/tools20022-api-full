@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Content of the acceptor configuration.
@@ -88,6 +92,8 @@ import java.util.List;
  * AcceptorConfigurationContent3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorConfigurationContent4", propOrder = {"TMSProtocolParameters", "acquirerProtocolParameters", "merchantParameters", "terminalParameters", "applicationParameters", "hostCommunicationParameters", "securityParameters"})
 public class AcceptorConfigurationContent4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -525,6 +531,7 @@ public class AcceptorConfigurationContent4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TMSPrtcolParams")
 	public List<TMSProtocolParameters1> getTMSProtocolParameters() {
 		return tMSProtocolParameters;
 	}
@@ -533,6 +540,7 @@ public class AcceptorConfigurationContent4 {
 		this.tMSProtocolParameters = tMSProtocolParameters;
 	}
 
+	@XmlElement(name = "AcqrrPrtcolParams")
 	public List<AcquirerProtocolParameters7> getAcquirerProtocolParameters() {
 		return acquirerProtocolParameters;
 	}
@@ -541,6 +549,7 @@ public class AcceptorConfigurationContent4 {
 		this.acquirerProtocolParameters = acquirerProtocolParameters;
 	}
 
+	@XmlElement(name = "MrchntParams")
 	public List<MerchantConfigurationParameters1> getMerchantParameters() {
 		return merchantParameters;
 	}
@@ -549,6 +558,7 @@ public class AcceptorConfigurationContent4 {
 		this.merchantParameters = merchantParameters;
 	}
 
+	@XmlElement(name = "TermnlParams")
 	public List<PaymentTerminalParameters2> getTerminalParameters() {
 		return terminalParameters;
 	}
@@ -557,6 +567,7 @@ public class AcceptorConfigurationContent4 {
 		this.terminalParameters = terminalParameters;
 	}
 
+	@XmlElement(name = "ApplParams")
 	public List<ApplicationParameters4> getApplicationParameters() {
 		return applicationParameters;
 	}
@@ -565,6 +576,7 @@ public class AcceptorConfigurationContent4 {
 		this.applicationParameters = applicationParameters;
 	}
 
+	@XmlElement(name = "HstComParams")
 	public List<HostCommunicationParameter3> getHostCommunicationParameters() {
 		return hostCommunicationParameters;
 	}
@@ -573,6 +585,7 @@ public class AcceptorConfigurationContent4 {
 		this.hostCommunicationParameters = hostCommunicationParameters;
 	}
 
+	@XmlElement(name = "SctyParams")
 	public List<SecurityParameters3> getSecurityParameters() {
 		return securityParameters;
 	}

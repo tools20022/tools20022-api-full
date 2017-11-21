@@ -27,9 +27,11 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The FinancialInstrumentReportingInvalidReferenceDataReport message is sent by
@@ -39,9 +41,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.042.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -80,6 +79,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.042.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -91,6 +93,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentReportingInvalidReferenceDataReportV01", propOrder = {"datePeriod", "numberOfRecords", "financialInstruments", "supplementaryData"})
 public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -137,6 +141,14 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Period4Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingInvalidReferenceDataReportV01.class.getMethod("getDatePeriod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Number numberOfRecords;
 	/**
@@ -171,6 +183,14 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingInvalidReferenceDataReportV01.class.getMethod("getNumberOfRecords", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SecuritiesInvalidReferenceDataReport3> financialInstruments;
 	/**
@@ -204,6 +224,14 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 			definition = "Provides the details of the financial instruments.";
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesInvalidReferenceDataReport3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingInvalidReferenceDataReportV01.class.getMethod("getFinancialInstruments", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -242,6 +270,14 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingInvalidReferenceDataReportV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -254,8 +290,10 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 				rootElement = "Document";
 				xmlTag = "FinInstrmRptgInvldRefDataRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingInvalidReferenceDataReportV01.mmDatePeriod, FinancialInstrumentReportingInvalidReferenceDataReportV01.mmNumberOfRecords,
-						FinancialInstrumentReportingInvalidReferenceDataReportV01.mmFinancialInstruments, FinancialInstrumentReportingInvalidReferenceDataReportV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.mmDatePeriod,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.mmNumberOfRecords,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.mmFinancialInstruments,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -265,10 +303,16 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FinancialInstrumentReportingInvalidReferenceDataReportV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtPrd", required = true)
 	public Period4Choice getDatePeriod() {
 		return datePeriod;
 	}
@@ -277,6 +321,7 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 		this.datePeriod = datePeriod;
 	}
 
+	@XmlElement(name = "NbOfRcrds")
 	public Number getNumberOfRecords() {
 		return numberOfRecords;
 	}
@@ -285,6 +330,7 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 		this.numberOfRecords = numberOfRecords;
 	}
 
+	@XmlElement(name = "FinInstrms", required = true)
 	public List<SecuritiesInvalidReferenceDataReport3> getFinancialInstruments() {
 		return financialInstruments;
 	}
@@ -293,11 +339,18 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 		this.financialInstruments = financialInstruments;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.042.01.01")
+	static public class Document {
+		@XmlElement(name = "FinInstrmRptgInvldRefDataRpt", required = true)
+		public FinancialInstrumentReportingInvalidReferenceDataReportV01 messageBody;
 	}
 }

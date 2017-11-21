@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesTradePreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -51,9 +53,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.009.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
@@ -101,6 +100,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.009.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -124,6 +126,8 @@ import java.util.List;
  * SubscriptionBulkOrderConfirmationV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionBulkOrderConfirmationV03", propOrder = {"messageIdentification", "poolReference", "previousReference", "relatedReference", "bulkExecutionDetails", "relatedPartyDetails", "copyDetails", "extension"})
 public class SubscriptionBulkOrderConfirmationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +177,14 @@ public class SubscriptionBulkOrderConfirmationV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderConfirmationV03.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -217,6 +229,14 @@ public class SubscriptionBulkOrderConfirmationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderConfirmationV03.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference3> previousReference;
 	/**
@@ -259,6 +279,14 @@ public class SubscriptionBulkOrderConfirmationV03 {
 			nextVersions_lazy = () -> Arrays.asList(SubscriptionBulkOrderConfirmationV04.mmPreviousReference);
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderConfirmationV03.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 relatedReference;
@@ -305,6 +333,14 @@ public class SubscriptionBulkOrderConfirmationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderConfirmationV03.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SubscriptionBulkExecution3 bulkExecutionDetails;
 	/**
@@ -350,6 +386,14 @@ public class SubscriptionBulkOrderConfirmationV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> SubscriptionBulkExecution3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderConfirmationV03.class.getMethod("getBulkExecutionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Intermediary9> relatedPartyDetails;
 	/**
@@ -383,6 +427,14 @@ public class SubscriptionBulkOrderConfirmationV03 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			complexType_lazy = () -> Intermediary9.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderConfirmationV03.class.getMethod("getRelatedPartyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CopyInformation2 copyDetails;
@@ -429,6 +481,14 @@ public class SubscriptionBulkOrderConfirmationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderConfirmationV03.class.getMethod("getCopyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension1> extension;
 	/**
@@ -474,6 +534,14 @@ public class SubscriptionBulkOrderConfirmationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderConfirmationV03.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -488,9 +556,11 @@ public class SubscriptionBulkOrderConfirmationV03 {
 				rootElement = "Document";
 				xmlTag = "SbcptBlkOrdrConfV03";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SubscriptionBulkOrderConfirmationV03.mmMessageIdentification, SubscriptionBulkOrderConfirmationV03.mmPoolReference, SubscriptionBulkOrderConfirmationV03.mmPreviousReference,
-						SubscriptionBulkOrderConfirmationV03.mmRelatedReference, SubscriptionBulkOrderConfirmationV03.mmBulkExecutionDetails, SubscriptionBulkOrderConfirmationV03.mmRelatedPartyDetails,
-						SubscriptionBulkOrderConfirmationV03.mmCopyDetails, SubscriptionBulkOrderConfirmationV03.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmPoolReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmRelatedReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmBulkExecutionDetails,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmRelatedPartyDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmCopyDetails,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -500,10 +570,16 @@ public class SubscriptionBulkOrderConfirmationV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SubscriptionBulkOrderConfirmationV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -512,6 +588,7 @@ public class SubscriptionBulkOrderConfirmationV03 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -520,6 +597,7 @@ public class SubscriptionBulkOrderConfirmationV03 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference3> getPreviousReference() {
 		return previousReference;
 	}
@@ -528,6 +606,7 @@ public class SubscriptionBulkOrderConfirmationV03 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
@@ -536,6 +615,7 @@ public class SubscriptionBulkOrderConfirmationV03 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "BlkExctnDtls", required = true)
 	public SubscriptionBulkExecution3 getBulkExecutionDetails() {
 		return bulkExecutionDetails;
 	}
@@ -544,6 +624,7 @@ public class SubscriptionBulkOrderConfirmationV03 {
 		this.bulkExecutionDetails = bulkExecutionDetails;
 	}
 
+	@XmlElement(name = "RltdPtyDtls")
 	public List<Intermediary9> getRelatedPartyDetails() {
 		return relatedPartyDetails;
 	}
@@ -552,6 +633,7 @@ public class SubscriptionBulkOrderConfirmationV03 {
 		this.relatedPartyDetails = relatedPartyDetails;
 	}
 
+	@XmlElement(name = "CpyDtls")
 	public CopyInformation2 getCopyDetails() {
 		return copyDetails;
 	}
@@ -560,11 +642,18 @@ public class SubscriptionBulkOrderConfirmationV03 {
 		this.copyDetails = copyDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.009.03.03")
+	static public class Document {
+		@XmlElement(name = "SbcptBlkOrdrConfV03", required = true)
+		public SubscriptionBulkOrderConfirmationV03 messageBody;
 	}
 }

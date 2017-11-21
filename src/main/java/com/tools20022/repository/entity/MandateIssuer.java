@@ -63,6 +63,11 @@ public class MandateIssuer extends MandatePartyRole {
 				definition = "Issuer of the mandate.";
 				superType_lazy = () -> MandatePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MandateIssuer.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

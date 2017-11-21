@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action general
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionGeneralInformationSD4", propOrder = {"placeAndName", "eventType", "subEventType"})
 public class CorporateActionGeneralInformationSD4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -257,6 +263,7 @@ public class CorporateActionGeneralInformationSD4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -265,6 +272,7 @@ public class CorporateActionGeneralInformationSD4 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "EvtTp")
 	public ExtendedEventType1Code getEventType() {
 		return eventType;
 	}
@@ -273,6 +281,7 @@ public class CorporateActionGeneralInformationSD4 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "SubEvtTp")
 	public DTCCSubEventType2Code getSubEventType() {
 		return subEventType;
 	}

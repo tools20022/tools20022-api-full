@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extension for additional information.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Extension for additional information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UpdatedAdditionalInformation6SD3", propOrder = {"placeAndName", "securitiesCreditAccountIdentification", "offerorShare", "offerorShareLocalCode", "localLanguageName"})
 public class UpdatedAdditionalInformation6SD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -309,6 +315,7 @@ public class UpdatedAdditionalInformation6SD3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -317,6 +324,7 @@ public class UpdatedAdditionalInformation6SD3 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "SctiesCdtAcctId")
 	public Max50Text getSecuritiesCreditAccountIdentification() {
 		return securitiesCreditAccountIdentification;
 	}
@@ -325,6 +333,7 @@ public class UpdatedAdditionalInformation6SD3 {
 		this.securitiesCreditAccountIdentification = securitiesCreditAccountIdentification;
 	}
 
+	@XmlElement(name = "OfferrShr")
 	public ISINIdentifier getOfferorShare() {
 		return offerorShare;
 	}
@@ -333,6 +342,7 @@ public class UpdatedAdditionalInformation6SD3 {
 		this.offerorShare = offerorShare;
 	}
 
+	@XmlElement(name = "OfferrShrLclCd")
 	public Max5AlphaNumericText getOfferorShareLocalCode() {
 		return offerorShareLocalCode;
 	}
@@ -341,6 +351,7 @@ public class UpdatedAdditionalInformation6SD3 {
 		this.offerorShareLocalCode = offerorShareLocalCode;
 	}
 
+	@XmlElement(name = "LclLangNm")
 	public Max240Text getLocalLanguageName() {
 		return localLanguageName;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Total amount of commissions related to a specific order.
@@ -57,6 +61,8 @@ import java.util.List;
  * definition} = "Total amount of commissions related to a specific order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TotalCommissions4", propOrder = "commissionDetails")
 public class TotalCommissions4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -121,6 +127,7 @@ public class TotalCommissions4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ComssnDtls", required = true)
 	public List<Commission14> getCommissionDetails() {
 		return commissionDetails;
 	}

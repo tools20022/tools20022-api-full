@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Detailed description of the items that correspond to the parameters set in a
@@ -116,6 +120,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionReportItems3", propOrder = {"transactionIdentification", "establishedBaselineIdentification", "transactionStatus", "userTransactionReference", "purchaseOrderReference", "buyer", "seller", "buyerBank",
+		"buyerBankCountry", "sellerBank", "sellerBankCountry", "obligorBank", "submittingBank", "outstandingAmount", "totalNetAmount", "pendingRequestForAction"})
 public class TransactionReportItems3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -813,6 +820,7 @@ public class TransactionReportItems3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -821,6 +829,7 @@ public class TransactionReportItems3 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "EstblishdBaselnId")
 	public DocumentIdentification3 getEstablishedBaselineIdentification() {
 		return establishedBaselineIdentification;
 	}
@@ -829,6 +838,7 @@ public class TransactionReportItems3 {
 		this.establishedBaselineIdentification = establishedBaselineIdentification;
 	}
 
+	@XmlElement(name = "TxSts", required = true)
 	public TransactionStatus4 getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -837,6 +847,7 @@ public class TransactionReportItems3 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "UsrTxRef")
 	public List<DocumentIdentification5> getUserTransactionReference() {
 		return userTransactionReference;
 	}
@@ -845,6 +856,7 @@ public class TransactionReportItems3 {
 		this.userTransactionReference = userTransactionReference;
 	}
 
+	@XmlElement(name = "PurchsOrdrRef", required = true)
 	public DocumentIdentification7 getPurchaseOrderReference() {
 		return purchaseOrderReference;
 	}
@@ -853,6 +865,7 @@ public class TransactionReportItems3 {
 		this.purchaseOrderReference = purchaseOrderReference;
 	}
 
+	@XmlElement(name = "Buyr", required = true)
 	public PartyIdentification26 getBuyer() {
 		return buyer;
 	}
@@ -861,6 +874,7 @@ public class TransactionReportItems3 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Sellr", required = true)
 	public PartyIdentification26 getSeller() {
 		return seller;
 	}
@@ -869,6 +883,7 @@ public class TransactionReportItems3 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "BuyrBk", required = true)
 	public BICIdentification1 getBuyerBank() {
 		return buyerBank;
 	}
@@ -877,6 +892,7 @@ public class TransactionReportItems3 {
 		this.buyerBank = buyerBank;
 	}
 
+	@XmlElement(name = "BuyrBkCtry", required = true)
 	public CountryCode getBuyerBankCountry() {
 		return buyerBankCountry;
 	}
@@ -885,6 +901,7 @@ public class TransactionReportItems3 {
 		this.buyerBankCountry = buyerBankCountry;
 	}
 
+	@XmlElement(name = "SellrBk", required = true)
 	public BICIdentification1 getSellerBank() {
 		return sellerBank;
 	}
@@ -893,6 +910,7 @@ public class TransactionReportItems3 {
 		this.sellerBank = sellerBank;
 	}
 
+	@XmlElement(name = "SellrBkCtry", required = true)
 	public CountryCode getSellerBankCountry() {
 		return sellerBankCountry;
 	}
@@ -901,6 +919,7 @@ public class TransactionReportItems3 {
 		this.sellerBankCountry = sellerBankCountry;
 	}
 
+	@XmlElement(name = "OblgrBk")
 	public List<BICIdentification1> getObligorBank() {
 		return obligorBank;
 	}
@@ -909,6 +928,7 @@ public class TransactionReportItems3 {
 		this.obligorBank = obligorBank;
 	}
 
+	@XmlElement(name = "SubmitgBk")
 	public List<BICIdentification1> getSubmittingBank() {
 		return submittingBank;
 	}
@@ -917,6 +937,7 @@ public class TransactionReportItems3 {
 		this.submittingBank = submittingBank;
 	}
 
+	@XmlElement(name = "OutsdngAmt", required = true)
 	public CurrencyAndAmount getOutstandingAmount() {
 		return outstandingAmount;
 	}
@@ -925,6 +946,7 @@ public class TransactionReportItems3 {
 		this.outstandingAmount = outstandingAmount;
 	}
 
+	@XmlElement(name = "TtlNetAmt", required = true)
 	public CurrencyAndAmount getTotalNetAmount() {
 		return totalNetAmount;
 	}
@@ -933,6 +955,7 @@ public class TransactionReportItems3 {
 		this.totalNetAmount = totalNetAmount;
 	}
 
+	@XmlElement(name = "PdgReqForActn")
 	public List<PendingActivity2> getPendingRequestForAction() {
 		return pendingRequestForAction;
 	}

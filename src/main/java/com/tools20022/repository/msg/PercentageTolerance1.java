@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Tolerance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Variance allowed on a quantity or on a price.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Variance allowed on a quantity or on a price."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PercentageTolerance1", propOrder = {"plusPercent", "minusPercent"})
 public class PercentageTolerance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class PercentageTolerance1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlusPct", required = true)
 	public PercentageRate getPlusPercent() {
 		return plusPercent;
 	}
@@ -188,6 +195,7 @@ public class PercentageTolerance1 {
 		this.plusPercent = plusPercent;
 	}
 
+	@XmlElement(name = "MnsPct", required = true)
 	public PercentageRate getMinusPercent() {
 		return minusPercent;
 	}

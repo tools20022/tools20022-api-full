@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.AdditionalReference2;
 import com.tools20022.repository.msg.Pagination;
 import com.tools20022.repository.msg.StatementOfInvestmentFundTransactions1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -47,9 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.007.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
@@ -85,6 +84,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.007.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -104,6 +106,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "semt.007.001.01", propOrder = {"previousReference", "relatedReference", "messagePagination", "statementToBeCancelled"})
 public class StatementOfInvestmentFundTransactionsCancellation {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -141,6 +145,14 @@ public class StatementOfInvestmentFundTransactionsCancellation {
 			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatementOfInvestmentFundTransactionsCancellation.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference2 relatedReference;
 	/**
@@ -177,6 +189,14 @@ public class StatementOfInvestmentFundTransactionsCancellation {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatementOfInvestmentFundTransactionsCancellation.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Pagination messagePagination;
 	/**
@@ -210,6 +230,14 @@ public class StatementOfInvestmentFundTransactionsCancellation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatementOfInvestmentFundTransactionsCancellation.class.getMethod("getMessagePagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected StatementOfInvestmentFundTransactions1 statementToBeCancelled;
@@ -247,6 +275,14 @@ public class StatementOfInvestmentFundTransactionsCancellation {
 			minOccurs = 0;
 			complexType_lazy = () -> StatementOfInvestmentFundTransactions1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatementOfInvestmentFundTransactionsCancellation.class.getMethod("getStatementToBeCancelled", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -261,8 +297,9 @@ public class StatementOfInvestmentFundTransactionsCancellation {
 				xmlTag = "semt.007.001.01";
 				businessArea_lazy = () -> SecuritiesManagementArchive.mmObject();
 				xmlName = "semt.007.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(StatementOfInvestmentFundTransactionsCancellation.mmPreviousReference, StatementOfInvestmentFundTransactionsCancellation.mmRelatedReference,
-						StatementOfInvestmentFundTransactionsCancellation.mmMessagePagination, StatementOfInvestmentFundTransactionsCancellation.mmStatementToBeCancelled);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.mmPreviousReference,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.mmRelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.mmMessagePagination,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.mmStatementToBeCancelled);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -272,10 +309,16 @@ public class StatementOfInvestmentFundTransactionsCancellation {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StatementOfInvestmentFundTransactionsCancellation.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference2 getPreviousReference() {
 		return previousReference;
 	}
@@ -284,6 +327,7 @@ public class StatementOfInvestmentFundTransactionsCancellation {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference2 getRelatedReference() {
 		return relatedReference;
 	}
@@ -292,6 +336,7 @@ public class StatementOfInvestmentFundTransactionsCancellation {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "MsgPgntn", required = true)
 	public Pagination getMessagePagination() {
 		return messagePagination;
 	}
@@ -300,11 +345,18 @@ public class StatementOfInvestmentFundTransactionsCancellation {
 		this.messagePagination = messagePagination;
 	}
 
+	@XmlElement(name = "StmtToBeCanc")
 	public StatementOfInvestmentFundTransactions1 getStatementToBeCancelled() {
 		return statementToBeCancelled;
 	}
 
 	public void setStatementToBeCancelled(StatementOfInvestmentFundTransactions1 statementToBeCancelled) {
 		this.statementToBeCancelled = statementToBeCancelled;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.007.01.01")
+	static public class Document {
+		@XmlElement(name = "semt.007.001.01", required = true)
+		public StatementOfInvestmentFundTransactionsCancellation messageBody;
 	}
 }

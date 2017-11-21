@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PartyIdentification63;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of a depostory or settlement currency.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of a depostory or settlement currency."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyOrCurrency1Choice", propOrder = {"depository", "settlementCurrency"})
 public class PartyOrCurrency1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -184,6 +190,7 @@ public class PartyOrCurrency1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dpstry", required = true)
 	public PartyIdentification63 getDepository() {
 		return depository;
 	}
@@ -192,6 +199,7 @@ public class PartyOrCurrency1Choice {
 		this.depository = depository;
 	}
 
+	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}

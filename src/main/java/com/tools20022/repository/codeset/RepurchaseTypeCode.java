@@ -29,23 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType3Code
- * RepurchaseType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType2Code
- * RepurchaseType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType7Code
- * RepurchaseType7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType4Code
- * RepurchaseType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType5Code
- * RepurchaseType5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType6Code
- * RepurchaseType6Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseTypeCode#mmSwap
@@ -70,6 +53,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.RepurchaseTypeCode#mmPrincipalExposureAdjustment
  * RepurchaseTypeCode.mmPrincipalExposureAdjustment}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType3Code
+ * RepurchaseType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType2Code
+ * RepurchaseType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType7Code
+ * RepurchaseType7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType4Code
+ * RepurchaseType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType5Code
+ * RepurchaseType5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType6Code
+ * RepurchaseType6Code}</li>
  * </ul>
  * </li>
  * <li>

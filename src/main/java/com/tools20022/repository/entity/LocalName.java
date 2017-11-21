@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,6 +36,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmFullName
+ * LocalName.mmFullName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmRelatedSecurity
+ * LocalName.mmRelatedSecurity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmShortName
+ * LocalName.mmShortName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmLanguage
+ * LocalName.mmLanguage}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -50,19 +64,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmName
  * SecuritiesIdentification.mmName}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmFullName
- * LocalName.mmFullName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmRelatedSecurity
- * LocalName.mmRelatedSecurity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmShortName
- * LocalName.mmShortName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmLanguage
- * LocalName.mmLanguage}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,10 +94,6 @@ public class LocalName {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.LocalName
-	 * LocalName}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -266,6 +263,10 @@ public class LocalName {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.LocalName
+	 * LocalName}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -287,7 +288,7 @@ public class LocalName {
 					FinancialInstrument49.mmName, FinancialInstrument48.mmName, FinancialInstrument47.mmName, FinancialInstrument46.mmName, SecurityInstrumentDescription9.mmFullName, SecurityInstrumentDescription11.mmFullName,
 					FinancialInstrument57.mmName, FinancialInstrument56.mmName, HoldBackInformation2.mmFinancialInstrumentName, FinancialInstrument55.mmName, TransparencyDataReport11.mmFullName, TransparencyDataReport12.mmFullName,
 					TransparencyDataReport10.mmFullName, TransparencyDataReport14.mmFullName, HoldBackInformation3.mmFinancialInstrumentName);
-			elementContext_lazy = () -> LocalName.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.LocalName.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FullName";
@@ -295,6 +296,14 @@ public class LocalName {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return LocalName.class.getMethod("getFullName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesIdentification relatedSecurity;
@@ -333,7 +342,7 @@ public class LocalName {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> LocalName.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.LocalName.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecurity";
@@ -355,10 +364,6 @@ public class LocalName {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.LocalName
-	 * LocalName}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -404,6 +409,10 @@ public class LocalName {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.LocalName
+	 * LocalName}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -419,7 +428,7 @@ public class LocalName {
 			derivation_lazy = () -> Arrays.asList(CommonFinancialInstrumentAttributes1.mmISOSecurityShortName, FinancialInstrumentName1.mmISOShortName, FinancialInstrument51.mmShortName, FinancialInstrument50.mmShortName,
 					FinancialInstrument45.mmShortName, FinancialInstrument49.mmShortName, FinancialInstrument48.mmShortName, FinancialInstrument47.mmShortName, FinancialInstrument46.mmShortName, SecurityInstrumentDescription9.mmShortName,
 					FinancialInstrument57.mmShortName, FinancialInstrument56.mmShortName, FinancialInstrument55.mmShortName);
-			elementContext_lazy = () -> LocalName.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.LocalName.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShortName";
@@ -427,6 +436,14 @@ public class LocalName {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return LocalName.class.getMethod("getShortName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected LanguageCode language;
@@ -456,7 +473,7 @@ public class LocalName {
 	 */
 	public static final MMBusinessAttribute mmLanguage = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> LocalName.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.LocalName.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Language";
@@ -464,6 +481,14 @@ public class LocalName {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LanguageCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return LocalName.class.getMethod("getLanguage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -475,8 +500,14 @@ public class LocalName {
 				name = "LocalName";
 				definition = "Name of the security.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesIdentification.mmName);
-				element_lazy = () -> Arrays.asList(LocalName.mmFullName, LocalName.mmRelatedSecurity, LocalName.mmShortName, LocalName.mmLanguage);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.LocalName.mmFullName, com.tools20022.repository.entity.LocalName.mmRelatedSecurity, com.tools20022.repository.entity.LocalName.mmShortName,
+						com.tools20022.repository.entity.LocalName.mmLanguage);
 				derivationComponent_lazy = () -> Arrays.asList(FinancialInstrumentName1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return LocalName.class;
 			}
 		});
 		return mmObject_lazy.get();

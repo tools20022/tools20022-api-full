@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Swaps;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the legs of swap transaction.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details of the legs of swap transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwapLegIdentification2", propOrder = {"swapIn", "swapOut"})
 public class SwapLegIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class SwapLegIdentification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SwpIn")
 	public FinancialInstrumentIdentification7Choice getSwapIn() {
 		return swapIn;
 	}
@@ -183,6 +190,7 @@ public class SwapLegIdentification2 {
 		this.swapIn = swapIn;
 	}
 
+	@XmlElement(name = "SwpOut")
 	public FinancialInstrumentIdentification7Choice getSwapOut() {
 		return swapOut;
 	}

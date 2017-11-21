@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.BillingMethod2;
 import com.tools20022.repository.msg.BillingMethod3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between tax calculation methods A, B or D.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between tax calculation methods A, B or D."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingMethod1Choice", propOrder = {"methodA", "methodB", "methodD"})
 public class BillingMethod1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -221,6 +227,7 @@ public class BillingMethod1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MtdA", required = true)
 	public BillingMethod1 getMethodA() {
 		return methodA;
 	}
@@ -229,6 +236,7 @@ public class BillingMethod1Choice {
 		this.methodA = methodA;
 	}
 
+	@XmlElement(name = "MtdB", required = true)
 	public BillingMethod2 getMethodB() {
 		return methodB;
 	}
@@ -237,6 +245,7 @@ public class BillingMethod1Choice {
 		this.methodB = methodB;
 	}
 
+	@XmlElement(name = "MtdD", required = true)
 	public BillingMethod3 getMethodD() {
 		return methodD;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Response;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Trace of response by the entities in the path from the issuer to the ATM.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Trace of response by the entities in the path from the issuer to the ATM."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ResponseType8", propOrder = {"responderIdentification", "codification", "response", "responseReason", "additionalResponseInformation"})
 public class ResponseType8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -298,6 +304,7 @@ public class ResponseType8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RspndrId", required = true)
 	public Max35Text getResponderIdentification() {
 		return responderIdentification;
 	}
@@ -306,6 +313,7 @@ public class ResponseType8 {
 		this.responderIdentification = responderIdentification;
 	}
 
+	@XmlElement(name = "Cdfctn")
 	public Max35Text getCodification() {
 		return codification;
 	}
@@ -314,6 +322,7 @@ public class ResponseType8 {
 		this.codification = codification;
 	}
 
+	@XmlElement(name = "Rspn", required = true)
 	public Max35Text getResponse() {
 		return response;
 	}
@@ -322,6 +331,7 @@ public class ResponseType8 {
 		this.response = response;
 	}
 
+	@XmlElement(name = "RspnRsn")
 	public Max35Text getResponseReason() {
 		return responseReason;
 	}
@@ -330,6 +340,7 @@ public class ResponseType8 {
 		this.responseReason = responseReason;
 	}
 
+	@XmlElement(name = "AddtlRspnInf")
 	public Max35Text getAdditionalResponseInformation() {
 		return additionalResponseInformation;
 	}

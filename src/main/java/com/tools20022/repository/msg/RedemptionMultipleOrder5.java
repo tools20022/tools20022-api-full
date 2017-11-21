@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instruction from an investor to sell investment fund units back to the fund.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RedemptionMultipleOrder5", propOrder = {"masterReference", "placeOfTrade", "expiryDateTime", "investmentAccountDetails", "individualOrderDetails"})
 public class RedemptionMultipleOrder5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -341,6 +347,7 @@ public class RedemptionMultipleOrder5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public RestrictedFINMax16Text getMasterReference() {
 		return masterReference;
 	}
@@ -349,6 +356,7 @@ public class RedemptionMultipleOrder5 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public PlaceOfTradeIdentification3Choice getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -357,6 +365,7 @@ public class RedemptionMultipleOrder5 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "XpryDtTm")
 	public DateAndDateTimeChoice getExpiryDateTime() {
 		return expiryDateTime;
 	}
@@ -365,6 +374,7 @@ public class RedemptionMultipleOrder5 {
 		this.expiryDateTime = expiryDateTime;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount33 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -373,6 +383,7 @@ public class RedemptionMultipleOrder5 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "IndvOrdrDtls", required = true)
 	public RedemptionOrder11 getIndividualOrderDetails() {
 		return individualOrderDetails;
 	}

@@ -30,35 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason2Code
- * TransactionRejectReason2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason1Code
- * TransactionReversalReason1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason4Code
- * TransactionRejectReason4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code
- * TransactionRejectReason5Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason2Code
- * TransactionReversalReason2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code
- * TransactionRejectReason7Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionReturnReason1Code
- * TransactionReturnReason1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason6Code
- * TransactionRejectReason6Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -212,6 +183,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TransactionReasonCode#mmNarrative
  * TransactionReasonCode.mmNarrative}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason2Code
+ * TransactionRejectReason2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason1Code
+ * TransactionReversalReason1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason4Code
+ * TransactionRejectReason4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code
+ * TransactionRejectReason5Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason2Code
+ * TransactionReversalReason2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code
+ * TransactionRejectReason7Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionReturnReason1Code
+ * TransactionReturnReason1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason6Code
+ * TransactionRejectReason6Code}</li>
  * </ul>
  * </li>
  * <li>

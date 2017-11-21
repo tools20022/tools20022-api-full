@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.TreasuryTradingParty;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Treasury trading profile.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Treasury trading profile."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TreasuryProfile1", propOrder = {"date", "traderType", "rate"})
 public class TreasuryProfile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class TreasuryProfile1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
@@ -237,6 +244,7 @@ public class TreasuryProfile1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "TradrTp", required = true)
 	public PartyRole5Choice getTraderType() {
 		return traderType;
 	}
@@ -245,6 +253,7 @@ public class TreasuryProfile1 {
 		this.traderType = traderType;
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}

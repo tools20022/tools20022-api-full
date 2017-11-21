@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further means of referencing a payment transaction.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides further means of referencing a payment transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentIdentification4", propOrder = {"instructionIdentification", "endToEndIdentification", "transactionIdentification", "clearingSystemReference", "firstAgent"})
 public class PaymentIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -361,6 +367,7 @@ public class PaymentIdentification4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrId")
 	public Max35Text getInstructionIdentification() {
 		return instructionIdentification;
 	}
@@ -369,6 +376,7 @@ public class PaymentIdentification4 {
 		this.instructionIdentification = instructionIdentification;
 	}
 
+	@XmlElement(name = "EndToEndId", required = true)
 	public Max35Text getEndToEndIdentification() {
 		return endToEndIdentification;
 	}
@@ -377,6 +385,7 @@ public class PaymentIdentification4 {
 		this.endToEndIdentification = endToEndIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -385,6 +394,7 @@ public class PaymentIdentification4 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "ClrSysRef")
 	public Max35Text getClearingSystemReference() {
 		return clearingSystemReference;
 	}
@@ -393,6 +403,7 @@ public class PaymentIdentification4 {
 		this.clearingSystemReference = clearingSystemReference;
 	}
 
+	@XmlElement(name = "FrstAgt")
 	public BranchAndFinancialInstitutionIdentification5 getFirstAgent() {
 		return firstAgent;
 	}

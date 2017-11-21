@@ -34,8 +34,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Deadline Deadline}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -60,6 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * VoteWithPremiumDeadline}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Deadline Deadline}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -91,6 +91,11 @@ public class MeetingDeadline extends Deadline {
 				subType_lazy = () -> Arrays.asList(MeetingParticipationRegistrationDeadline.mmObject(), AttendanceConfirmationDeadline.mmObject(), VoteRegistrationDeadline.mmObject(), AdditionalRightDeadline.mmObject(),
 						VoteRevocabilityDeadline.mmObject(), ProxyAppointmentDeadline.mmObject(), ResolutionProposalDeadline.mmObject(), VoteDeadline.mmObject(), VoteWithPremiumDeadline.mmObject());
 				superType_lazy = () -> Deadline.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingDeadline.class;
 			}
 		});
 		return mmObject_lazy.get();

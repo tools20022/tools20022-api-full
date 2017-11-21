@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.CFIIdentifier;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Criteria for a query about securities reference data.
@@ -93,6 +97,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Criteria for a query about securities reference data."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesSearchCriteria1", propOrder = {"financialInstrumentIdentification", "classificationFinancialInstrument", "maturityDate", "issueDate", "issueCurrency", "countryOfIssue", "securityStatus", "maintainingCSD",
+		"investorCSD", "issuerCSD", "technicalIssuerCSD", "CSD"})
 public class SecuritiesSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -623,6 +630,7 @@ public class SecuritiesSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -631,6 +639,7 @@ public class SecuritiesSearchCriteria1 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "ClssfctnFinInstrm")
 	public CFIIdentifier getClassificationFinancialInstrument() {
 		return classificationFinancialInstrument;
 	}
@@ -639,6 +648,7 @@ public class SecuritiesSearchCriteria1 {
 		this.classificationFinancialInstrument = classificationFinancialInstrument;
 	}
 
+	@XmlElement(name = "MtrtyDt")
 	public DateSearchChoice getMaturityDate() {
 		return maturityDate;
 	}
@@ -647,6 +657,7 @@ public class SecuritiesSearchCriteria1 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "IsseDt")
 	public DateSearchChoice getIssueDate() {
 		return issueDate;
 	}
@@ -655,6 +666,7 @@ public class SecuritiesSearchCriteria1 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "IsseCcy")
 	public ActiveOrHistoricCurrencyCode getIssueCurrency() {
 		return issueCurrency;
 	}
@@ -663,6 +675,7 @@ public class SecuritiesSearchCriteria1 {
 		this.issueCurrency = issueCurrency;
 	}
 
+	@XmlElement(name = "CtryOfIsse")
 	public CountryCode getCountryOfIssue() {
 		return countryOfIssue;
 	}
@@ -671,6 +684,7 @@ public class SecuritiesSearchCriteria1 {
 		this.countryOfIssue = countryOfIssue;
 	}
 
+	@XmlElement(name = "SctySts")
 	public SecurityStatus2Choice getSecurityStatus() {
 		return securityStatus;
 	}
@@ -679,6 +693,7 @@ public class SecuritiesSearchCriteria1 {
 		this.securityStatus = securityStatus;
 	}
 
+	@XmlElement(name = "MntngCSD")
 	public SystemPartyIdentification1Choice getMaintainingCSD() {
 		return maintainingCSD;
 	}
@@ -687,6 +702,7 @@ public class SecuritiesSearchCriteria1 {
 		this.maintainingCSD = maintainingCSD;
 	}
 
+	@XmlElement(name = "InvstrCSD")
 	public SystemPartyIdentification1Choice getInvestorCSD() {
 		return investorCSD;
 	}
@@ -695,6 +711,7 @@ public class SecuritiesSearchCriteria1 {
 		this.investorCSD = investorCSD;
 	}
 
+	@XmlElement(name = "IssrCSD")
 	public SystemPartyIdentification1Choice getIssuerCSD() {
 		return issuerCSD;
 	}
@@ -703,6 +720,7 @@ public class SecuritiesSearchCriteria1 {
 		this.issuerCSD = issuerCSD;
 	}
 
+	@XmlElement(name = "TechIssrCSD")
 	public SystemPartyIdentification1Choice getTechnicalIssuerCSD() {
 		return technicalIssuerCSD;
 	}
@@ -711,6 +729,7 @@ public class SecuritiesSearchCriteria1 {
 		this.technicalIssuerCSD = technicalIssuerCSD;
 	}
 
+	@XmlElement(name = "CSD")
 	public SystemPartyIdentification1Choice getCSD() {
 		return cSD;
 	}

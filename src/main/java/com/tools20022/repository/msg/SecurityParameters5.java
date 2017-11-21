@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Security parameters of the host downloading the key.
@@ -65,6 +69,8 @@ import java.util.List;
  * SecurityParameters4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityParameters5", propOrder = {"hostChallenge", "key", "digitalSignature"})
 public class SecurityParameters5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class SecurityParameters5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "HstChllng")
 	public Max140Binary getHostChallenge() {
 		return hostChallenge;
 	}
@@ -237,6 +244,7 @@ public class SecurityParameters5 {
 		this.hostChallenge = hostChallenge;
 	}
 
+	@XmlElement(name = "Key")
 	public List<CryptographicKey8> getKey() {
 		return key;
 	}
@@ -245,6 +253,7 @@ public class SecurityParameters5 {
 		this.key = key;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public ContentInformationType14 getDigitalSignature() {
 		return digitalSignature;
 	}

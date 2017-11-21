@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Trigger parameters.
@@ -62,6 +66,8 @@ import java.util.List;
  * definition} = "Trigger parameters."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Trigger1", propOrder = {"dateChoice", "documentaryEvent"})
 public class Trigger1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class Trigger1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtChc")
 	public FixedOrRecurrentDate1Choice getDateChoice() {
 		return dateChoice;
 	}
@@ -183,6 +190,7 @@ public class Trigger1 {
 		this.dateChoice = dateChoice;
 	}
 
+	@XmlElement(name = "DcmntryEvt")
 	public List<Document10> getDocumentaryEvent() {
 		return documentaryEvent;
 	}

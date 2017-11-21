@@ -35,6 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the corporate action option.
@@ -118,6 +122,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionOption23", propOrder = {"optionNumber", "optionType", "optionFeatures", "fractionDisposition", "currencyOption", "dateDetails", "periodDetails", "rateAndAmountDetails", "priceDetails", "placeOfTrade",
+		"securitiesMovementDetails", "cashMovementDetails"})
 public class CorporateActionOption23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -740,6 +747,7 @@ public class CorporateActionOption23 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OptnNb", required = true)
 	public OptionNumber1Choice getOptionNumber() {
 		return optionNumber;
 	}
@@ -748,6 +756,7 @@ public class CorporateActionOption23 {
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption3Choice getOptionType() {
 		return optionType;
 	}
@@ -756,6 +765,7 @@ public class CorporateActionOption23 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "OptnFeatrs")
 	public List<OptionFeaturesFormat1Choice> getOptionFeatures() {
 		return optionFeatures;
 	}
@@ -764,6 +774,7 @@ public class CorporateActionOption23 {
 		this.optionFeatures = optionFeatures;
 	}
 
+	@XmlElement(name = "FrctnDspstn")
 	public FractionDispositionType12Choice getFractionDisposition() {
 		return fractionDisposition;
 	}
@@ -772,6 +783,7 @@ public class CorporateActionOption23 {
 		this.fractionDisposition = fractionDisposition;
 	}
 
+	@XmlElement(name = "CcyOptn")
 	public ActiveCurrencyCode getCurrencyOption() {
 		return currencyOption;
 	}
@@ -780,6 +792,7 @@ public class CorporateActionOption23 {
 		this.currencyOption = currencyOption;
 	}
 
+	@XmlElement(name = "DtDtls")
 	public CorporateActionDate18 getDateDetails() {
 		return dateDetails;
 	}
@@ -788,6 +801,7 @@ public class CorporateActionOption23 {
 		this.dateDetails = dateDetails;
 	}
 
+	@XmlElement(name = "PrdDtls")
 	public CorporateActionPeriod9 getPeriodDetails() {
 		return periodDetails;
 	}
@@ -796,6 +810,7 @@ public class CorporateActionOption23 {
 		this.periodDetails = periodDetails;
 	}
 
+	@XmlElement(name = "RateAndAmtDtls")
 	public CorporateActionRate20 getRateAndAmountDetails() {
 		return rateAndAmountDetails;
 	}
@@ -804,6 +819,7 @@ public class CorporateActionOption23 {
 		this.rateAndAmountDetails = rateAndAmountDetails;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public CorporateActionPrice21 getPriceDetails() {
 		return priceDetails;
 	}
@@ -812,6 +828,7 @@ public class CorporateActionOption23 {
 		this.priceDetails = priceDetails;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public MarketIdentification4 getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -820,6 +837,7 @@ public class CorporateActionOption23 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "SctiesMvmntDtls")
 	public List<SecuritiesOption18> getSecuritiesMovementDetails() {
 		return securitiesMovementDetails;
 	}
@@ -828,6 +846,7 @@ public class CorporateActionOption23 {
 		this.securitiesMovementDetails = securitiesMovementDetails;
 	}
 
+	@XmlElement(name = "CshMvmntDtls")
 	public List<CashOption12> getCashMovementDetails() {
 		return cashMovementDetails;
 	}

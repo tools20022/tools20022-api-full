@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Creation/cancellation of investment units on the books of the fund or its
@@ -129,6 +133,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestmentFundTransaction3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentFundTransaction4", propOrder = {"eventType", "bookingStatus", "masterReference", "orderReference", "clientReference", "dealReference", "legIdentification", "legExecutionIdentification", "orderDateTime",
+		"settledTransactionIndicator", "registeredTransactionIndicator", "unitsQuantity", "creditDebit", "reversal", "settlementAmount", "settlementDate", "tradeDateTime", "cumDividendIndicator", "partiallyExecutedIndicator",
+		"priceDetails"})
 public class InvestmentFundTransaction4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1248,6 +1256,7 @@ public class InvestmentFundTransaction4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EvtTp", required = true)
 	public TransactionType1Choice getEventType() {
 		return eventType;
 	}
@@ -1256,6 +1265,7 @@ public class InvestmentFundTransaction4 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "BookgSts")
 	public TransactionStatus1Code getBookingStatus() {
 		return bookingStatus;
 	}
@@ -1264,6 +1274,7 @@ public class InvestmentFundTransaction4 {
 		this.bookingStatus = bookingStatus;
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -1272,6 +1283,7 @@ public class InvestmentFundTransaction4 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrRef")
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -1280,6 +1292,7 @@ public class InvestmentFundTransaction4 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -1288,6 +1301,7 @@ public class InvestmentFundTransaction4 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "DealRef")
 	public Max35Text getDealReference() {
 		return dealReference;
 	}
@@ -1296,6 +1310,7 @@ public class InvestmentFundTransaction4 {
 		this.dealReference = dealReference;
 	}
 
+	@XmlElement(name = "LegId")
 	public Max35Text getLegIdentification() {
 		return legIdentification;
 	}
@@ -1304,6 +1319,7 @@ public class InvestmentFundTransaction4 {
 		this.legIdentification = legIdentification;
 	}
 
+	@XmlElement(name = "LegExctnId")
 	public Max35Text getLegExecutionIdentification() {
 		return legExecutionIdentification;
 	}
@@ -1312,6 +1328,7 @@ public class InvestmentFundTransaction4 {
 		this.legExecutionIdentification = legExecutionIdentification;
 	}
 
+	@XmlElement(name = "OrdrDtTm")
 	public ISODateTime getOrderDateTime() {
 		return orderDateTime;
 	}
@@ -1320,6 +1337,7 @@ public class InvestmentFundTransaction4 {
 		this.orderDateTime = orderDateTime;
 	}
 
+	@XmlElement(name = "SttldTxInd", required = true)
 	public YesNoIndicator getSettledTransactionIndicator() {
 		return settledTransactionIndicator;
 	}
@@ -1328,6 +1346,7 @@ public class InvestmentFundTransaction4 {
 		this.settledTransactionIndicator = settledTransactionIndicator;
 	}
 
+	@XmlElement(name = "RegdTxInd", required = true)
 	public YesNoIndicator getRegisteredTransactionIndicator() {
 		return registeredTransactionIndicator;
 	}
@@ -1336,6 +1355,7 @@ public class InvestmentFundTransaction4 {
 		this.registeredTransactionIndicator = registeredTransactionIndicator;
 	}
 
+	@XmlElement(name = "UnitsQty", required = true)
 	public FinancialInstrumentQuantity1 getUnitsQuantity() {
 		return unitsQuantity;
 	}
@@ -1344,6 +1364,7 @@ public class InvestmentFundTransaction4 {
 		this.unitsQuantity = unitsQuantity;
 	}
 
+	@XmlElement(name = "CdtDbt", required = true)
 	public CreditDebitCode getCreditDebit() {
 		return creditDebit;
 	}
@@ -1352,6 +1373,7 @@ public class InvestmentFundTransaction4 {
 		this.creditDebit = creditDebit;
 	}
 
+	@XmlElement(name = "Rvsl")
 	public ReversalCode getReversal() {
 		return reversal;
 	}
@@ -1360,6 +1382,7 @@ public class InvestmentFundTransaction4 {
 		this.reversal = reversal;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public ActiveCurrencyAndAmount getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -1368,6 +1391,7 @@ public class InvestmentFundTransaction4 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "SttlmDt")
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
@@ -1376,6 +1400,7 @@ public class InvestmentFundTransaction4 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "TradDtTm", required = true)
 	public DateAndDateTimeChoice getTradeDateTime() {
 		return tradeDateTime;
 	}
@@ -1384,6 +1409,7 @@ public class InvestmentFundTransaction4 {
 		this.tradeDateTime = tradeDateTime;
 	}
 
+	@XmlElement(name = "CumDvddInd", required = true)
 	public YesNoIndicator getCumDividendIndicator() {
 		return cumDividendIndicator;
 	}
@@ -1392,6 +1418,7 @@ public class InvestmentFundTransaction4 {
 		this.cumDividendIndicator = cumDividendIndicator;
 	}
 
+	@XmlElement(name = "PrtlyExctdInd", required = true)
 	public YesNoIndicator getPartiallyExecutedIndicator() {
 		return partiallyExecutedIndicator;
 	}
@@ -1400,6 +1427,7 @@ public class InvestmentFundTransaction4 {
 		this.partiallyExecutedIndicator = partiallyExecutedIndicator;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public UnitPrice20 getPriceDetails() {
 		return priceDetails;
 	}

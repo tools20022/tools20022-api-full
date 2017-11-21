@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SystemEventInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a code and a free format.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between a code and a free format."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemEventType1Choice", propOrder = {"code", "proprietaryEvent"})
 public class SystemEventType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class SystemEventType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public SystemEventType2Code getCode() {
 		return code;
 	}
@@ -174,6 +181,7 @@ public class SystemEventType1Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "PrtryEvt", required = true)
 	public Max140Text getProprietaryEvent() {
 		return proprietaryEvent;
 	}

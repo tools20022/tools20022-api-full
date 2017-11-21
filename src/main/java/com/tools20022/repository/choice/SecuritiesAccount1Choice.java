@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.SecuritiesAccountRange1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies one or a range of securities accounts.
@@ -63,6 +67,8 @@ import java.util.List;
  * definition} = "Specifies one or a range of securities accounts."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesAccount1Choice", propOrder = {"range", "account"})
 public class SecuritiesAccount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -169,6 +175,7 @@ public class SecuritiesAccount1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rg", required = true)
 	public SecuritiesAccountRange1 getRange() {
 		return range;
 	}
@@ -177,6 +184,7 @@ public class SecuritiesAccount1Choice {
 		this.range = range;
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public List<SecuritiesAccount13> getAccount() {
 		return account;
 	}

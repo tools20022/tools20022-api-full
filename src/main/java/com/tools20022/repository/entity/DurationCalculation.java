@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.CalculationTypeCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,18 +36,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmDurationCalculation
- * SecuritiesPricing.mmDurationCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.VariableInterest#mmDurationCalculation
- * VariableInterest.mmDurationCalculation}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -67,6 +56,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.DurationCalculation#mmValuePeriod
  * DurationCalculation.mmValuePeriod}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmDurationCalculation
+ * SecuritiesPricing.mmDurationCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.VariableInterest#mmDurationCalculation
+ * VariableInterest.mmDurationCalculation}</li>
  * </ul>
  * </li>
  * <li>
@@ -126,7 +127,7 @@ public class DurationCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSecuritiesPricing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> DurationCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DurationCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesPricing";
@@ -174,7 +175,7 @@ public class DurationCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmVariableInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> DurationCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DurationCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VariableInterest";
@@ -215,7 +216,7 @@ public class DurationCalculation {
 	 */
 	public static final MMBusinessAttribute mmYears = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> DurationCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DurationCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Years";
@@ -223,6 +224,14 @@ public class DurationCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DurationCalculation.class.getMethod("getYears", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CalculationTypeCode calculationType;
@@ -254,7 +263,7 @@ public class DurationCalculation {
 	 */
 	public static final MMBusinessAttribute mmCalculationType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> DurationCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DurationCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationType";
@@ -262,6 +271,14 @@ public class DurationCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CalculationTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DurationCalculation.class.getMethod("getCalculationType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime valueDate;
@@ -295,7 +312,7 @@ public class DurationCalculation {
 	 */
 	public static final MMBusinessAttribute mmValueDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> DurationCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DurationCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
@@ -303,6 +320,14 @@ public class DurationCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DurationCalculation.class.getMethod("getValueDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DateTimePeriod valuePeriod;
@@ -334,7 +359,7 @@ public class DurationCalculation {
 	 */
 	public static final MMBusinessAttribute mmValuePeriod = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> DurationCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DurationCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValuePeriod";
@@ -342,6 +367,14 @@ public class DurationCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DurationCalculation.class.getMethod("getValuePeriod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -353,8 +386,14 @@ public class DurationCalculation {
 				name = "DurationCalculation";
 				definition = "Calculation of the price sensitivity of a fixed-income security to a change in interest rates.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmDurationCalculation, com.tools20022.repository.entity.VariableInterest.mmDurationCalculation);
-				element_lazy = () -> Arrays.asList(DurationCalculation.mmRelatedSecuritiesPricing, DurationCalculation.mmVariableInterest, DurationCalculation.mmYears, DurationCalculation.mmCalculationType, DurationCalculation.mmValueDate,
-						DurationCalculation.mmValuePeriod);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DurationCalculation.mmRelatedSecuritiesPricing, com.tools20022.repository.entity.DurationCalculation.mmVariableInterest,
+						com.tools20022.repository.entity.DurationCalculation.mmYears, com.tools20022.repository.entity.DurationCalculation.mmCalculationType, com.tools20022.repository.entity.DurationCalculation.mmValueDate,
+						com.tools20022.repository.entity.DurationCalculation.mmValuePeriod);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DurationCalculation.class;
 			}
 		});
 		return mmObject_lazy.get();

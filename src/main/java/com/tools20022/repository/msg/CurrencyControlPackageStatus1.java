@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of each package of currency control records.
@@ -84,6 +88,8 @@ import java.util.List;
  * "Provides the details of each package of currency control records."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyControlPackageStatus1", propOrder = {"packageIdentification", "status", "statusReason", "statusDateTime", "recordStatus"})
 public class CurrencyControlPackageStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -337,6 +343,7 @@ public class CurrencyControlPackageStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PackgId", required = true)
 	public Max35Text getPackageIdentification() {
 		return packageIdentification;
 	}
@@ -345,6 +352,7 @@ public class CurrencyControlPackageStatus1 {
 		this.packageIdentification = packageIdentification;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public StatisticalReportingStatus1Code getStatus() {
 		return status;
 	}
@@ -353,6 +361,7 @@ public class CurrencyControlPackageStatus1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "StsRsn")
 	public List<ValidationStatusReason1> getStatusReason() {
 		return statusReason;
 	}
@@ -361,6 +370,7 @@ public class CurrencyControlPackageStatus1 {
 		this.statusReason = statusReason;
 	}
 
+	@XmlElement(name = "StsDtTm")
 	public ISODateTime getStatusDateTime() {
 		return statusDateTime;
 	}
@@ -369,6 +379,7 @@ public class CurrencyControlPackageStatus1 {
 		this.statusDateTime = statusDateTime;
 	}
 
+	@XmlElement(name = "RcrdSts")
 	public List<CurrencyControlRecordStatus1> getRecordStatus() {
 		return recordStatus;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.CRSStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Common Reporting Standard (CRS) status information.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Common Reporting Standard (CRS) status information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CRSStatus4", propOrder = {"type", "source", "exceptionalReportingCountry"})
 public class CRSStatus4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -223,6 +229,7 @@ public class CRSStatus4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public CRSStatus3Choice getType() {
 		return type;
 	}
@@ -231,6 +238,7 @@ public class CRSStatus4 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Src")
 	public CRSSource1Choice getSource() {
 		return source;
 	}
@@ -239,6 +247,7 @@ public class CRSStatus4 {
 		this.source = source;
 	}
 
+	@XmlElement(name = "XcptnlRptgCtry")
 	public CountryCode getExceptionalReportingCountry() {
 		return exceptionalReportingCountry;
 	}

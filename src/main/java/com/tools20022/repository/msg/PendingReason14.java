@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the reason why the instruction or request has a pending status.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PendingReason8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PendingReason14", propOrder = {"code", "additionalReasonInformation"})
 public class PendingReason14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -198,6 +204,7 @@ public class PendingReason14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public PendingReason26Choice getCode() {
 		return code;
 	}
@@ -206,6 +213,7 @@ public class PendingReason14 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "AddtlRsnInf")
 	public Max210Text getAdditionalReasonInformation() {
 		return additionalReasonInformation;
 	}

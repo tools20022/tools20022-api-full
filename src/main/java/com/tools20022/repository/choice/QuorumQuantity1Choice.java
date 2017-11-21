@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Quorum;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of quorum quantity.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of quorum quantity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuorumQuantity1Choice", propOrder = {"quorumQuantity", "quorumQuantityPercentage"})
 public class QuorumQuantity1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class QuorumQuantity1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QrmQty", required = true)
 	public Max35Text getQuorumQuantity() {
 		return quorumQuantity;
 	}
@@ -186,6 +193,7 @@ public class QuorumQuantity1Choice {
 		this.quorumQuantity = quorumQuantity;
 	}
 
+	@XmlElement(name = "QrmQtyPctg", required = true)
 	public PercentageRate getQuorumQuantityPercentage() {
 		return quorumQuantityPercentage;
 	}

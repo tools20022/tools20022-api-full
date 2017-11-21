@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Environment of the card payment transaction.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentEnvironment14}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentEnvironment27", propOrder = {"acquirer", "merchant", "POI", "card", "cardholder", "protectedCardholderData"})
 public class CardPaymentEnvironment27 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -470,6 +476,7 @@ public class CardPaymentEnvironment27 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acqrr")
 	public Acquirer2 getAcquirer() {
 		return acquirer;
 	}
@@ -478,6 +485,7 @@ public class CardPaymentEnvironment27 {
 		this.acquirer = acquirer;
 	}
 
+	@XmlElement(name = "Mrchnt")
 	public Organisation8 getMerchant() {
 		return merchant;
 	}
@@ -486,6 +494,7 @@ public class CardPaymentEnvironment27 {
 		this.merchant = merchant;
 	}
 
+	@XmlElement(name = "POI")
 	public PointOfInteraction3 getPOI() {
 		return pOI;
 	}
@@ -494,6 +503,7 @@ public class CardPaymentEnvironment27 {
 		this.pOI = pOI;
 	}
 
+	@XmlElement(name = "Card", required = true)
 	public PaymentCard8 getCard() {
 		return card;
 	}
@@ -502,6 +512,7 @@ public class CardPaymentEnvironment27 {
 		this.card = card;
 	}
 
+	@XmlElement(name = "Crdhldr")
 	public Cardholder6 getCardholder() {
 		return cardholder;
 	}
@@ -510,6 +521,7 @@ public class CardPaymentEnvironment27 {
 		this.cardholder = cardholder;
 	}
 
+	@XmlElement(name = "PrtctdCrdhldrData")
 	public ContentInformationType7 getProtectedCardholderData() {
 		return protectedCardholderData;
 	}

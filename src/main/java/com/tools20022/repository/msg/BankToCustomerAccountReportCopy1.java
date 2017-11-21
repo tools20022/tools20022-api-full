@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the Bank To Customer Account Report message.
@@ -60,6 +64,8 @@ import java.util.List;
  * definition} = "Details of the Bank To Customer Account Report message."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BankToCustomerAccountReportCopy1", propOrder = {"groupHeader", "report", "supplementaryData"})
 public class BankToCustomerAccountReportCopy1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -201,6 +207,7 @@ public class BankToCustomerAccountReportCopy1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader58 getGroupHeader() {
 		return groupHeader;
 	}
@@ -209,6 +216,7 @@ public class BankToCustomerAccountReportCopy1 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "Rpt", required = true)
 	public List<AccountReport19> getReport() {
 		return report;
 	}
@@ -217,6 +225,7 @@ public class BankToCustomerAccountReportCopy1 {
 		this.report = report;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

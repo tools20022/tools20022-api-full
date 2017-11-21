@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the transaction in the authorisation request in a batch.
@@ -114,6 +118,9 @@ import java.util.List;
  * CardPaymentTransactionDetails31}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransactionDetails39", propOrder = {"currency", "totalAmount", "amountQualifier", "detailedAmount", "validityDate", "onLineReason", "unattendedLevelCategory", "accountType", "currencyConversionResult",
+		"instalment", "aggregationTransaction", "productCodeSetIdentification", "saleItem", "deliveryLocation", "cardPaymentInvoice", "ICCRelatedData"})
 public class CardPaymentTransactionDetails39 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -968,6 +975,7 @@ public class CardPaymentTransactionDetails39 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -976,6 +984,7 @@ public class CardPaymentTransactionDetails39 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "TtlAmt", required = true)
 	public ImpliedCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -984,6 +993,7 @@ public class CardPaymentTransactionDetails39 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "AmtQlfr")
 	public TypeOfAmount8Code getAmountQualifier() {
 		return amountQualifier;
 	}
@@ -992,6 +1002,7 @@ public class CardPaymentTransactionDetails39 {
 		this.amountQualifier = amountQualifier;
 	}
 
+	@XmlElement(name = "DtldAmt")
 	public DetailedAmount15 getDetailedAmount() {
 		return detailedAmount;
 	}
@@ -1000,6 +1011,7 @@ public class CardPaymentTransactionDetails39 {
 		this.detailedAmount = detailedAmount;
 	}
 
+	@XmlElement(name = "VldtyDt")
 	public ISODate getValidityDate() {
 		return validityDate;
 	}
@@ -1008,6 +1020,7 @@ public class CardPaymentTransactionDetails39 {
 		this.validityDate = validityDate;
 	}
 
+	@XmlElement(name = "OnLineRsn")
 	public OnLineReason1Code getOnLineReason() {
 		return onLineReason;
 	}
@@ -1016,6 +1029,7 @@ public class CardPaymentTransactionDetails39 {
 		this.onLineReason = onLineReason;
 	}
 
+	@XmlElement(name = "UattnddLvlCtgy")
 	public Max35NumericText getUnattendedLevelCategory() {
 		return unattendedLevelCategory;
 	}
@@ -1024,6 +1038,7 @@ public class CardPaymentTransactionDetails39 {
 		this.unattendedLevelCategory = unattendedLevelCategory;
 	}
 
+	@XmlElement(name = "AcctTp")
 	public CardAccountType3Code getAccountType() {
 		return accountType;
 	}
@@ -1032,6 +1047,7 @@ public class CardPaymentTransactionDetails39 {
 		this.accountType = accountType;
 	}
 
+	@XmlElement(name = "CcyConvsRslt")
 	public CurrencyConversion13 getCurrencyConversionResult() {
 		return currencyConversionResult;
 	}
@@ -1040,6 +1056,7 @@ public class CardPaymentTransactionDetails39 {
 		this.currencyConversionResult = currencyConversionResult;
 	}
 
+	@XmlElement(name = "Instlmt")
 	public RecurringTransaction2 getInstalment() {
 		return instalment;
 	}
@@ -1048,6 +1065,7 @@ public class CardPaymentTransactionDetails39 {
 		this.instalment = instalment;
 	}
 
+	@XmlElement(name = "AggtnTx")
 	public AggregationTransaction2 getAggregationTransaction() {
 		return aggregationTransaction;
 	}
@@ -1056,6 +1074,7 @@ public class CardPaymentTransactionDetails39 {
 		this.aggregationTransaction = aggregationTransaction;
 	}
 
+	@XmlElement(name = "PdctCdSetId")
 	public Max10Text getProductCodeSetIdentification() {
 		return productCodeSetIdentification;
 	}
@@ -1064,6 +1083,7 @@ public class CardPaymentTransactionDetails39 {
 		this.productCodeSetIdentification = productCodeSetIdentification;
 	}
 
+	@XmlElement(name = "SaleItm")
 	public List<Product3> getSaleItem() {
 		return saleItem;
 	}
@@ -1072,6 +1092,7 @@ public class CardPaymentTransactionDetails39 {
 		this.saleItem = saleItem;
 	}
 
+	@XmlElement(name = "DlvryLctn")
 	public Max10Text getDeliveryLocation() {
 		return deliveryLocation;
 	}
@@ -1080,6 +1101,7 @@ public class CardPaymentTransactionDetails39 {
 		this.deliveryLocation = deliveryLocation;
 	}
 
+	@XmlElement(name = "CardPmtInvc")
 	public CardPaymentInvoice2 getCardPaymentInvoice() {
 		return cardPaymentInvoice;
 	}
@@ -1088,6 +1110,7 @@ public class CardPaymentTransactionDetails39 {
 		this.cardPaymentInvoice = cardPaymentInvoice;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details about praticipant's liquidity.
@@ -74,6 +78,8 @@ import java.util.List;
  * definition} = "Details about praticipant's liquidity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountLiquidityReport1", propOrder = {"account", "accountOverdueIndicator", "limitInformation", "liquidityInformation", "arrestInformation", "debitQueuedTransactions", "creditQueuedTransactions"})
 public class AccountLiquidityReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -385,6 +391,7 @@ public class AccountLiquidityReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CashAccount25 getAccount() {
 		return account;
 	}
@@ -393,6 +400,7 @@ public class AccountLiquidityReport1 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "AcctOvrdueInd", required = true)
 	public YesNoIndicator getAccountOverdueIndicator() {
 		return accountOverdueIndicator;
 	}
@@ -401,6 +409,7 @@ public class AccountLiquidityReport1 {
 		this.accountOverdueIndicator = accountOverdueIndicator;
 	}
 
+	@XmlElement(name = "LmtInf")
 	public List<AccountLimits1> getLimitInformation() {
 		return limitInformation;
 	}
@@ -409,6 +418,7 @@ public class AccountLiquidityReport1 {
 		this.limitInformation = limitInformation;
 	}
 
+	@XmlElement(name = "LqdtyInf")
 	public LiquidityDetails1 getLiquidityInformation() {
 		return liquidityInformation;
 	}
@@ -417,6 +427,7 @@ public class AccountLiquidityReport1 {
 		this.liquidityInformation = liquidityInformation;
 	}
 
+	@XmlElement(name = "ArrstInf", required = true)
 	public ArrestedFunds1 getArrestInformation() {
 		return arrestInformation;
 	}
@@ -425,6 +436,7 @@ public class AccountLiquidityReport1 {
 		this.arrestInformation = arrestInformation;
 	}
 
+	@XmlElement(name = "DbtQdTxs")
 	public List<QueuedTransactionsReport1> getDebitQueuedTransactions() {
 		return debitQueuedTransactions;
 	}
@@ -433,6 +445,7 @@ public class AccountLiquidityReport1 {
 		this.debitQueuedTransactions = debitQueuedTransactions;
 	}
 
+	@XmlElement(name = "CdtQdTxs")
 	public List<QueuedTransactionsReport1> getCreditQueuedTransactions() {
 		return creditQueuedTransactions;
 	}

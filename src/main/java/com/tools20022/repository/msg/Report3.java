@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.Max5NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General characteristics related to a statement which reports information for
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Report3", propOrder = {"reportNumber", "queryReference", "reportIdentification", "reportDateTime", "frequency", "updateType", "noticeType"})
 public class Report3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -386,6 +392,7 @@ public class Report3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptNb")
 	public Max5NumericText getReportNumber() {
 		return reportNumber;
 	}
@@ -394,6 +401,7 @@ public class Report3 {
 		this.reportNumber = reportNumber;
 	}
 
+	@XmlElement(name = "QryRef")
 	public QueryReference getQueryReference() {
 		return queryReference;
 	}
@@ -402,6 +410,7 @@ public class Report3 {
 		this.queryReference = queryReference;
 	}
 
+	@XmlElement(name = "RptId")
 	public Max35Text getReportIdentification() {
 		return reportIdentification;
 	}
@@ -410,6 +419,7 @@ public class Report3 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "RptDtTm", required = true)
 	public DateAndDateTime1Choice getReportDateTime() {
 		return reportDateTime;
 	}
@@ -418,6 +428,7 @@ public class Report3 {
 		this.reportDateTime = reportDateTime;
 	}
 
+	@XmlElement(name = "Frqcy")
 	public Frequency4Choice getFrequency() {
 		return frequency;
 	}
@@ -426,6 +437,7 @@ public class Report3 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "UpdTp")
 	public StatementUpdateTypeCodeAndDSSCodeChoice getUpdateType() {
 		return updateType;
 	}
@@ -434,6 +446,7 @@ public class Report3 {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "NtceTp")
 	public GenericIdentification38 getNoticeType() {
 		return noticeType;
 	}

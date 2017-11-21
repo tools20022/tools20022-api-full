@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a securities account and its characteristics.
@@ -187,6 +191,11 @@ import java.util.List;
  * InvestmentAccount51}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccount63", propOrder = {"accountStatusUpdateInstruction", "name", "designation", "type", "ownershipType", "taxExemption", "statementFrequency", "referenceCurrency", "language", "incomePreference",
+		"reinvestmentDetails", "taxWithholdingMethod", "taxReporting", "letterIntentDetails", "accumulationRightReference", "requiredSignatoriesNumber", "fundFamilyName", "modifiedFinancialInstrumentDetails", "roundingDetails",
+		"accountServicer", "blockedStatus", "accountUsageType", "foreignStatusCertification", "accountSignatureDateTime", "transactionChannelType", "investmentAccountCategory", "pledging", "collateral", "thirdPartyRights",
+		"powerOfAttorneyLevelOfControl", "accountingStatus", "openingDate", "closingDate", "negativeIndicator", "processingOrder", "liability", "modifiedInvestorProfile", "fiscalYear"})
 public class InvestmentAccount63 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -2255,6 +2264,7 @@ public class InvestmentAccount63 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctStsUpdInstr")
 	public AccountStatusUpdateInstruction1 getAccountStatusUpdateInstruction() {
 		return accountStatusUpdateInstruction;
 	}
@@ -2263,6 +2273,7 @@ public class InvestmentAccount63 {
 		this.accountStatusUpdateInstruction = accountStatusUpdateInstruction;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max35Text getName() {
 		return name;
 	}
@@ -2271,6 +2282,7 @@ public class InvestmentAccount63 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Dsgnt")
 	public Max35Text getDesignation() {
 		return designation;
 	}
@@ -2279,6 +2291,7 @@ public class InvestmentAccount63 {
 		this.designation = designation;
 	}
 
+	@XmlElement(name = "Tp")
 	public AccountType2Choice getType() {
 		return type;
 	}
@@ -2287,6 +2300,7 @@ public class InvestmentAccount63 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "OwnrshTp")
 	public OwnershipType2Choice getOwnershipType() {
 		return ownershipType;
 	}
@@ -2295,6 +2309,7 @@ public class InvestmentAccount63 {
 		this.ownershipType = ownershipType;
 	}
 
+	@XmlElement(name = "TaxXmptn")
 	public TaxExemptionReason2Choice getTaxExemption() {
 		return taxExemption;
 	}
@@ -2303,6 +2318,7 @@ public class InvestmentAccount63 {
 		this.taxExemption = taxExemption;
 	}
 
+	@XmlElement(name = "StmtFrqcy")
 	public StatementFrequencyReason2Choice getStatementFrequency() {
 		return statementFrequency;
 	}
@@ -2311,6 +2327,7 @@ public class InvestmentAccount63 {
 		this.statementFrequency = statementFrequency;
 	}
 
+	@XmlElement(name = "RefCcy")
 	public ActiveCurrencyCode getReferenceCurrency() {
 		return referenceCurrency;
 	}
@@ -2319,6 +2336,7 @@ public class InvestmentAccount63 {
 		this.referenceCurrency = referenceCurrency;
 	}
 
+	@XmlElement(name = "Lang")
 	public LanguageCode getLanguage() {
 		return language;
 	}
@@ -2327,6 +2345,7 @@ public class InvestmentAccount63 {
 		this.language = language;
 	}
 
+	@XmlElement(name = "IncmPref")
 	public IncomePreference2Code getIncomePreference() {
 		return incomePreference;
 	}
@@ -2335,6 +2354,7 @@ public class InvestmentAccount63 {
 		this.incomePreference = incomePreference;
 	}
 
+	@XmlElement(name = "RinvstmtDtls")
 	public List<Reinvestment3> getReinvestmentDetails() {
 		return reinvestmentDetails;
 	}
@@ -2343,6 +2363,7 @@ public class InvestmentAccount63 {
 		this.reinvestmentDetails = reinvestmentDetails;
 	}
 
+	@XmlElement(name = "TaxWhldgMtd")
 	public TaxWithholdingMethod3Code getTaxWithholdingMethod() {
 		return taxWithholdingMethod;
 	}
@@ -2351,6 +2372,7 @@ public class InvestmentAccount63 {
 		this.taxWithholdingMethod = taxWithholdingMethod;
 	}
 
+	@XmlElement(name = "TaxRptg")
 	public List<TaxReporting2> getTaxReporting() {
 		return taxReporting;
 	}
@@ -2359,6 +2381,7 @@ public class InvestmentAccount63 {
 		this.taxReporting = taxReporting;
 	}
 
+	@XmlElement(name = "LttrInttDtls")
 	public LetterIntent1 getLetterIntentDetails() {
 		return letterIntentDetails;
 	}
@@ -2367,6 +2390,7 @@ public class InvestmentAccount63 {
 		this.letterIntentDetails = letterIntentDetails;
 	}
 
+	@XmlElement(name = "AcmltnRghtRef")
 	public Max35Text getAccumulationRightReference() {
 		return accumulationRightReference;
 	}
@@ -2375,6 +2399,7 @@ public class InvestmentAccount63 {
 		this.accumulationRightReference = accumulationRightReference;
 	}
 
+	@XmlElement(name = "ReqrdSgntriesNb")
 	public Number getRequiredSignatoriesNumber() {
 		return requiredSignatoriesNumber;
 	}
@@ -2383,6 +2408,7 @@ public class InvestmentAccount63 {
 		this.requiredSignatoriesNumber = requiredSignatoriesNumber;
 	}
 
+	@XmlElement(name = "FndFmlyNm")
 	public Max350Text getFundFamilyName() {
 		return fundFamilyName;
 	}
@@ -2391,6 +2417,7 @@ public class InvestmentAccount63 {
 		this.fundFamilyName = fundFamilyName;
 	}
 
+	@XmlElement(name = "ModfdFinInstrmDtls")
 	public List<ModificationScope36> getModifiedFinancialInstrumentDetails() {
 		return modifiedFinancialInstrumentDetails;
 	}
@@ -2399,6 +2426,7 @@ public class InvestmentAccount63 {
 		this.modifiedFinancialInstrumentDetails = modifiedFinancialInstrumentDetails;
 	}
 
+	@XmlElement(name = "RndgDtls")
 	public RoundingParameters1 getRoundingDetails() {
 		return roundingDetails;
 	}
@@ -2407,6 +2435,7 @@ public class InvestmentAccount63 {
 		this.roundingDetails = roundingDetails;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public PartyIdentification70Choice getAccountServicer() {
 		return accountServicer;
 	}
@@ -2415,6 +2444,7 @@ public class InvestmentAccount63 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "BlckdSts")
 	public BlockedStatusReason2Choice getBlockedStatus() {
 		return blockedStatus;
 	}
@@ -2423,6 +2453,7 @@ public class InvestmentAccount63 {
 		this.blockedStatus = blockedStatus;
 	}
 
+	@XmlElement(name = "AcctUsgTp")
 	public AccountUsageType2Choice getAccountUsageType() {
 		return accountUsageType;
 	}
@@ -2431,6 +2462,7 @@ public class InvestmentAccount63 {
 		this.accountUsageType = accountUsageType;
 	}
 
+	@XmlElement(name = "FrgnStsCertfctn")
 	public Provided1Code getForeignStatusCertification() {
 		return foreignStatusCertification;
 	}
@@ -2439,6 +2471,7 @@ public class InvestmentAccount63 {
 		this.foreignStatusCertification = foreignStatusCertification;
 	}
 
+	@XmlElement(name = "AcctSgntrDtTm")
 	public DateAndDateTimeChoice getAccountSignatureDateTime() {
 		return accountSignatureDateTime;
 	}
@@ -2447,6 +2480,7 @@ public class InvestmentAccount63 {
 		this.accountSignatureDateTime = accountSignatureDateTime;
 	}
 
+	@XmlElement(name = "TxChanlTp")
 	public TransactionChannelType1Choice getTransactionChannelType() {
 		return transactionChannelType;
 	}
@@ -2455,6 +2489,7 @@ public class InvestmentAccount63 {
 		this.transactionChannelType = transactionChannelType;
 	}
 
+	@XmlElement(name = "InvstmtAcctCtgy")
 	public InvestmentAccountCategory1Choice getInvestmentAccountCategory() {
 		return investmentAccountCategory;
 	}
@@ -2463,6 +2498,7 @@ public class InvestmentAccount63 {
 		this.investmentAccountCategory = investmentAccountCategory;
 	}
 
+	@XmlElement(name = "Pldgg")
 	public Eligible1Code getPledging() {
 		return pledging;
 	}
@@ -2471,6 +2507,7 @@ public class InvestmentAccount63 {
 		this.pledging = pledging;
 	}
 
+	@XmlElement(name = "Coll")
 	public Collateral1Code getCollateral() {
 		return collateral;
 	}
@@ -2479,6 +2516,7 @@ public class InvestmentAccount63 {
 		this.collateral = collateral;
 	}
 
+	@XmlElement(name = "ThrdPtyRghts")
 	public ThirdPartyRights1 getThirdPartyRights() {
 		return thirdPartyRights;
 	}
@@ -2487,6 +2525,7 @@ public class InvestmentAccount63 {
 		this.thirdPartyRights = thirdPartyRights;
 	}
 
+	@XmlElement(name = "PwrOfAttnyLvlOfCtrl")
 	public LevelOfControl1Choice getPowerOfAttorneyLevelOfControl() {
 		return powerOfAttorneyLevelOfControl;
 	}
@@ -2495,6 +2534,7 @@ public class InvestmentAccount63 {
 		this.powerOfAttorneyLevelOfControl = powerOfAttorneyLevelOfControl;
 	}
 
+	@XmlElement(name = "AcctgSts")
 	public AccountingStatus1Choice getAccountingStatus() {
 		return accountingStatus;
 	}
@@ -2503,6 +2543,7 @@ public class InvestmentAccount63 {
 		this.accountingStatus = accountingStatus;
 	}
 
+	@XmlElement(name = "OpngDt")
 	public DateAndDateTimeChoice getOpeningDate() {
 		return openingDate;
 	}
@@ -2511,6 +2552,7 @@ public class InvestmentAccount63 {
 		this.openingDate = openingDate;
 	}
 
+	@XmlElement(name = "ClsgDt")
 	public DateAndDateTimeChoice getClosingDate() {
 		return closingDate;
 	}
@@ -2519,6 +2561,7 @@ public class InvestmentAccount63 {
 		this.closingDate = closingDate;
 	}
 
+	@XmlElement(name = "NegInd")
 	public YesNoIndicator getNegativeIndicator() {
 		return negativeIndicator;
 	}
@@ -2527,6 +2570,7 @@ public class InvestmentAccount63 {
 		this.negativeIndicator = negativeIndicator;
 	}
 
+	@XmlElement(name = "PrcgOrdr")
 	public PositionEffect3Code getProcessingOrder() {
 		return processingOrder;
 	}
@@ -2535,6 +2579,7 @@ public class InvestmentAccount63 {
 		this.processingOrder = processingOrder;
 	}
 
+	@XmlElement(name = "Lblty")
 	public Liability1Choice getLiability() {
 		return liability;
 	}
@@ -2543,6 +2588,7 @@ public class InvestmentAccount63 {
 		this.liability = liability;
 	}
 
+	@XmlElement(name = "ModfdInvstrPrfl")
 	public List<ModificationScope32> getModifiedInvestorProfile() {
 		return modifiedInvestorProfile;
 	}
@@ -2551,6 +2597,7 @@ public class InvestmentAccount63 {
 		this.modifiedInvestorProfile = modifiedInvestorProfile;
 	}
 
+	@XmlElement(name = "FsclYr")
 	public FiscalYear1Choice getFiscalYear() {
 		return fiscalYear;
 	}

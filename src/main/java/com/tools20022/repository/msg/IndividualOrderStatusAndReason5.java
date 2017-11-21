@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status report of the individual order that was previously received.
@@ -84,6 +88,8 @@ import java.util.function.Supplier;
  * "Status report of the individual order that was previously received."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualOrderStatusAndReason5", propOrder = {"masterReference", "orderReference", "status", "cancelled", "rejected"})
 public class IndividualOrderStatusAndReason5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -413,6 +419,7 @@ public class IndividualOrderStatusAndReason5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public RestrictedFINMax16Text getMasterReference() {
 		return masterReference;
 	}
@@ -421,6 +428,7 @@ public class IndividualOrderStatusAndReason5 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public RestrictedFINMax16Text getOrderReference() {
 		return orderReference;
 	}
@@ -429,6 +437,7 @@ public class IndividualOrderStatusAndReason5 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public OrderStatus7Code getStatus() {
 		return status;
 	}
@@ -437,6 +446,7 @@ public class IndividualOrderStatusAndReason5 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Canc", required = true)
 	public CancelledStatus4 getCancelled() {
 		return cancelled;
 	}
@@ -445,6 +455,7 @@ public class IndividualOrderStatusAndReason5 {
 		this.cancelled = cancelled;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectedStatus8 getRejected() {
 		return rejected;
 	}

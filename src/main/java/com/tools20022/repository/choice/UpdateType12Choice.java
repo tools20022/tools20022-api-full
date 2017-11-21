@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18;
 import com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the type of update requested. That is addition, deletion or
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UpdateType12Choice", propOrder = {"addition", "deletion", "modification"})
 public class UpdateType12Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -209,6 +215,7 @@ public class UpdateType12Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Addtn", required = true)
 	public SecuritiesSettlementTransactionDetails17 getAddition() {
 		return addition;
 	}
@@ -217,6 +224,7 @@ public class UpdateType12Choice {
 		this.addition = addition;
 	}
 
+	@XmlElement(name = "Deltn", required = true)
 	public SecuritiesSettlementTransactionDetails18 getDeletion() {
 		return deletion;
 	}
@@ -225,6 +233,7 @@ public class UpdateType12Choice {
 		this.deletion = deletion;
 	}
 
+	@XmlElement(name = "Mod", required = true)
 	public SecuritiesSettlementTransactionDetails19 getModification() {
 		return modification;
 	}

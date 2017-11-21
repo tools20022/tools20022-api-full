@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Groups the vote and the voting party information.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Groups the vote and the voting party information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "VotingPartyAndInstruction", propOrder = {"identification", "requestedExecutionDate", "personDetail", "quantityOfSecurity", "votePerResolution", "attendanceCardLabelling"})
 public class VotingPartyAndInstruction {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -413,6 +419,7 @@ public class VotingPartyAndInstruction {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -421,6 +428,7 @@ public class VotingPartyAndInstruction {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "ReqdExctnDt")
 	public ISODateTime getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -429,6 +437,7 @@ public class VotingPartyAndInstruction {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "PrsnDtl", required = true)
 	public IndividualPerson7 getPersonDetail() {
 		return personDetail;
 	}
@@ -437,6 +446,7 @@ public class VotingPartyAndInstruction {
 		this.personDetail = personDetail;
 	}
 
+	@XmlElement(name = "QtyOfScty")
 	public Number getQuantityOfSecurity() {
 		return quantityOfSecurity;
 	}
@@ -445,6 +455,7 @@ public class VotingPartyAndInstruction {
 		this.quantityOfSecurity = quantityOfSecurity;
 	}
 
+	@XmlElement(name = "VotePerRsltn", required = true)
 	public VoteChoice getVotePerResolution() {
 		return votePerResolution;
 	}
@@ -453,6 +464,7 @@ public class VotingPartyAndInstruction {
 		this.votePerResolution = votePerResolution;
 	}
 
+	@XmlElement(name = "AttndncCardLbllg")
 	public Max105Text getAttendanceCardLabelling() {
 		return attendanceCardLabelling;
 	}

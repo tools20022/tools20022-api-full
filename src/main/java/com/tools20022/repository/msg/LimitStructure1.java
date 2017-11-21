@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.RiskManagementLimit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Limit details of one particular limit set by the member and managed by the
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LimitStructure1", propOrder = {"limitIdentification", "newLimitValueSet"})
 public class LimitStructure1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class LimitStructure1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LmtId", required = true)
 	public LimitIdentification1Choice getLimitIdentification() {
 		return limitIdentification;
 	}
@@ -184,6 +191,7 @@ public class LimitStructure1 {
 		this.limitIdentification = limitIdentification;
 	}
 
+	@XmlElement(name = "NewLmtValSet", required = true)
 	public Limit6 getNewLimitValueSet() {
 		return newLimitValueSet;
 	}

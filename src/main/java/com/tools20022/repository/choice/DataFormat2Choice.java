@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the specification of the data in a structured or unstructured
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DataFormat2Choice", propOrder = {"structured", "unstructured"})
 public class DataFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +168,7 @@ public class DataFormat2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Strd", required = true)
 	public GenericIdentification1 getStructured() {
 		return structured;
 	}
@@ -170,6 +177,7 @@ public class DataFormat2Choice {
 		this.structured = structured;
 	}
 
+	@XmlElement(name = "Ustrd", required = true)
 	public Max140Text getUnstructured() {
 		return unstructured;
 	}

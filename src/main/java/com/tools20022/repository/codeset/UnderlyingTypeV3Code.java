@@ -29,21 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code
- * UnderlyingInterestRateType3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code
- * UnderlyingContractForDifferenceType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code
- * UnderlyingEquityType6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnderlyingEquityType5Code
- * UnderlyingEquityType5Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -115,6 +100,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmEmissionAllowance
  * UnderlyingTypeV3Code.mmEmissionAllowance}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code
+ * UnderlyingInterestRateType3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code
+ * UnderlyingContractForDifferenceType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code
+ * UnderlyingEquityType6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnderlyingEquityType5Code
+ * UnderlyingEquityType5Code}</li>
  * </ul>
  * </li>
  * <li>

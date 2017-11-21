@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money associated with a service.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ChargesDetails1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ChargesDetails3", propOrder = {"type", "amountOrPercentage"})
 public class ChargesDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -171,6 +177,7 @@ public class ChargesDetails3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ChargesType1Choice getType() {
 		return type;
 	}
@@ -179,6 +186,7 @@ public class ChargesDetails3 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "AmtOrPctg", required = true)
 	public AmountOrPercentage2Choice getAmountOrPercentage() {
 		return amountOrPercentage;
 	}

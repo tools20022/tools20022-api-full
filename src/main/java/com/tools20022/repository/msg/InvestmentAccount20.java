@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account between an investor(s) and a fund manager or a fund. The account can
@@ -88,6 +92,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccount20", propOrder = {"accountIdentification", "type", "extendedType"})
 public class InvestmentAccount20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -321,6 +327,7 @@ public class InvestmentAccount20 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId")
 	public AccountIdentification1 getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -329,6 +336,7 @@ public class InvestmentAccount20 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "Tp")
 	public FundCashAccount2Code getType() {
 		return type;
 	}
@@ -337,6 +345,7 @@ public class InvestmentAccount20 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XtndedTp")
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}

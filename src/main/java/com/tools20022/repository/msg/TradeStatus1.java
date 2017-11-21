@@ -35,6 +35,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the status of a trade in a central settlement system.
@@ -103,6 +107,8 @@ import java.util.function.Supplier;
  * "Specifies the status of a trade in a central settlement system."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeStatus1", propOrder = {"allegedTrade", "matchingSystemUniqueReference", "status", "extendedStatus", "statusSubType", "statusTime", "statusOriginator"})
 public class TradeStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -496,6 +502,7 @@ public class TradeStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AllgdTrad")
 	public YesNoIndicator getAllegedTrade() {
 		return allegedTrade;
 	}
@@ -504,6 +511,7 @@ public class TradeStatus1 {
 		this.allegedTrade = allegedTrade;
 	}
 
+	@XmlElement(name = "MtchgSysUnqRef", required = true)
 	public Max35Text getMatchingSystemUniqueReference() {
 		return matchingSystemUniqueReference;
 	}
@@ -512,6 +520,7 @@ public class TradeStatus1 {
 		this.matchingSystemUniqueReference = matchingSystemUniqueReference;
 	}
 
+	@XmlElement(name = "Sts")
 	public TradeStatus1Code getStatus() {
 		return status;
 	}
@@ -520,6 +529,7 @@ public class TradeStatus1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "XtndedSts")
 	public Extended350Code getExtendedStatus() {
 		return extendedStatus;
 	}
@@ -528,6 +538,7 @@ public class TradeStatus1 {
 		this.extendedStatus = extendedStatus;
 	}
 
+	@XmlElement(name = "StsSubTp")
 	public Max70Text getStatusSubType() {
 		return statusSubType;
 	}
@@ -536,6 +547,7 @@ public class TradeStatus1 {
 		this.statusSubType = statusSubType;
 	}
 
+	@XmlElement(name = "StsTm")
 	public ISODateTime getStatusTime() {
 		return statusTime;
 	}
@@ -544,6 +556,7 @@ public class TradeStatus1 {
 		this.statusTime = statusTime;
 	}
 
+	@XmlElement(name = "StsOrgtr")
 	public Max35Text getStatusOriginator() {
 		return statusOriginator;
 	}

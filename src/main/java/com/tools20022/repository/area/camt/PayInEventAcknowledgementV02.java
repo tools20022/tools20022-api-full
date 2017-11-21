@@ -28,9 +28,11 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The PayInEventAcknowledgement message is sent by a participant of a central
@@ -39,9 +41,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.063.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
@@ -80,6 +79,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.063.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -91,6 +93,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PayInEventAcknowledgementV02", propOrder = {"messageIdentification", "settlementSessionIdentifier", "acknowledgementDetails", "supplementaryData"})
 public class PayInEventAcknowledgementV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -130,6 +134,14 @@ public class PayInEventAcknowledgementV02 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PayInEventAcknowledgementV02.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
@@ -168,6 +180,14 @@ public class PayInEventAcknowledgementV02 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PayInEventAcknowledgementV02.class.getMethod("getSettlementSessionIdentifier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AcknowledgementDetails1Choice acknowledgementDetails;
 	/**
@@ -203,6 +223,14 @@ public class PayInEventAcknowledgementV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcknowledgementDetails1Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PayInEventAcknowledgementV02.class.getMethod("getAcknowledgementDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -241,6 +269,14 @@ public class PayInEventAcknowledgementV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PayInEventAcknowledgementV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -253,8 +289,9 @@ public class PayInEventAcknowledgementV02 {
 				rootElement = "Document";
 				xmlTag = "PayInEvtAck";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PayInEventAcknowledgementV02.mmMessageIdentification, PayInEventAcknowledgementV02.mmSettlementSessionIdentifier, PayInEventAcknowledgementV02.mmAcknowledgementDetails,
-						PayInEventAcknowledgementV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInEventAcknowledgementV02.mmMessageIdentification,
+						com.tools20022.repository.area.camt.PayInEventAcknowledgementV02.mmSettlementSessionIdentifier, com.tools20022.repository.area.camt.PayInEventAcknowledgementV02.mmAcknowledgementDetails,
+						com.tools20022.repository.area.camt.PayInEventAcknowledgementV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -264,10 +301,16 @@ public class PayInEventAcknowledgementV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PayInEventAcknowledgementV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -276,6 +319,7 @@ public class PayInEventAcknowledgementV02 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "SttlmSsnIdr")
 	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
 		return settlementSessionIdentifier;
 	}
@@ -284,6 +328,7 @@ public class PayInEventAcknowledgementV02 {
 		this.settlementSessionIdentifier = settlementSessionIdentifier;
 	}
 
+	@XmlElement(name = "AckDtls", required = true)
 	public AcknowledgementDetails1Choice getAcknowledgementDetails() {
 		return acknowledgementDetails;
 	}
@@ -292,11 +337,18 @@ public class PayInEventAcknowledgementV02 {
 		this.acknowledgementDetails = acknowledgementDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.063.02.02")
+	static public class Document {
+		@XmlElement(name = "PayInEvtAck", required = true)
+		public PayInEventAcknowledgementV02 messageBody;
 	}
 }

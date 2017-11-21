@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Entity involved in an activity.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Entity involved in an activity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification27", propOrder = {"name", "proprietaryIdentification", "country"})
 public class PartyIdentification27 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -233,6 +239,7 @@ public class PartyIdentification27 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max70Text getName() {
 		return name;
 	}
@@ -241,6 +248,7 @@ public class PartyIdentification27 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PrtryId")
 	public GenericIdentification4 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
@@ -249,6 +257,7 @@ public class PartyIdentification27 {
 		this.proprietaryIdentification = proprietaryIdentification;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}

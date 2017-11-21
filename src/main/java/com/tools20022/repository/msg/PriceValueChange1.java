@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Value given to a positive or negative price change.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Value given to a positive or negative price change."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceValueChange1", propOrder = {"amount", "amountSign", "rate"})
 public class PriceValueChange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -219,6 +225,7 @@ public class PriceValueChange1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt")
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -227,6 +234,7 @@ public class PriceValueChange1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "AmtSgn")
 	public PlusOrMinusIndicator getAmountSign() {
 		return amountSign;
 	}
@@ -235,6 +243,7 @@ public class PriceValueChange1 {
 		this.amountSign = amountSign;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}

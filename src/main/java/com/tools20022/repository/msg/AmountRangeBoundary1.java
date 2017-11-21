@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.AmountRangeBoundary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Limit for an amount range.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Limit for an amount range."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountRangeBoundary1", propOrder = {"boundaryAmount", "included"})
 public class AmountRangeBoundary1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class AmountRangeBoundary1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BdryAmt", required = true)
 	public ImpliedCurrencyAndAmount getBoundaryAmount() {
 		return boundaryAmount;
 	}
@@ -187,6 +194,7 @@ public class AmountRangeBoundary1 {
 		this.boundaryAmount = boundaryAmount;
 	}
 
+	@XmlElement(name = "Incl", required = true)
 	public YesNoIndicator getIncluded() {
 		return included;
 	}

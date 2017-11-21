@@ -24,6 +24,10 @@ import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines which data, representing the link between the CSD and the security,
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityCSDLinkUpdate1", propOrder = "validTo")
 public class SecurityCSDLinkUpdate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -117,6 +123,7 @@ public class SecurityCSDLinkUpdate1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "VldTo", required = true)
 	public DateAndDateTimeChoice getValidTo() {
 		return validTo;
 	}

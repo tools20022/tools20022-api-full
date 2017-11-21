@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.positiveInteger;
 import com.tools20022.repository.entity.GuaranteePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GuaranteeDetails1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,9 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.GuaranteePartyRole
- * GuaranteePartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -47,6 +45,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * GuarantorRole.mmPosition}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.GuaranteePartyRole
+ * GuaranteePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -78,11 +79,6 @@ public class GuarantorRole extends GuaranteePartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.positiveInteger
 	 * positiveInteger}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.GuarantorRole GuarantorRole}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -90,6 +86,11 @@ public class GuarantorRole extends GuaranteePartyRole {
 	 * {@linkplain com.tools20022.repository.msg.GuaranteeDetails1#mmPosition
 	 * GuaranteeDetails1.mmPosition}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.GuarantorRole GuarantorRole}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -105,7 +106,7 @@ public class GuarantorRole extends GuaranteePartyRole {
 	public static final MMBusinessAttribute mmPosition = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(GuaranteeDetails1.mmPosition);
-			elementContext_lazy = () -> GuarantorRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GuarantorRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Position";
@@ -113,6 +114,14 @@ public class GuarantorRole extends GuaranteePartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> positiveInteger.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return GuarantorRole.class.getMethod("getPosition", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -124,7 +133,12 @@ public class GuarantorRole extends GuaranteePartyRole {
 				name = "GuarantorRole";
 				definition = "Legal entity, other than the issuer, who gives a guarantee. The guarantor becomes liable in case of default.";
 				superType_lazy = () -> GuaranteePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(GuarantorRole.mmPosition);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GuarantorRole.mmPosition);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return GuarantorRole.class;
 			}
 		});
 		return mmObject_lazy.get();

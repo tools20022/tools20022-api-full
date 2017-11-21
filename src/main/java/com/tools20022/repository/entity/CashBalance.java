@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -44,6 +45,38 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashBalance#mmCashAccount
+ * CashBalance.mmCashAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashBalance#mmCalculationType
+ * CashBalance.mmCalculationType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashBalance#mmCounterparty
+ * CashBalance.mmCounterparty}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashBalance#mmAmount
+ * CashBalance.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashBalance#mmAvailability
+ * CashBalance.mmAvailability}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashBalance#mmCashBalanceEntry
+ * CashBalance.mmCashBalanceEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashBalance#mmBalanceAdjustmentCode
+ * CashBalance.mmBalanceAdjustmentCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashBalance#mmRelatedCardPaymentValidationProcess
+ * CashBalance.mmRelatedCardPaymentValidationProcess}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashBalance#mmCutOffDate
+ * CashBalance.mmCutOffDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashBalance#mmRelatedRegisteredContract
+ * CashBalance.mmRelatedRegisteredContract}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Balance Balance}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -198,38 +231,6 @@ import java.util.List;
  * AccountReport19.mmBalance}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Balance Balance}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashBalance#mmCashAccount
- * CashBalance.mmCashAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashBalance#mmCalculationType
- * CashBalance.mmCalculationType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashBalance#mmCounterparty
- * CashBalance.mmCounterparty}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashBalance#mmAmount
- * CashBalance.mmAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashBalance#mmAvailability
- * CashBalance.mmAvailability}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashBalance#mmCashBalanceEntry
- * CashBalance.mmCashBalanceEntry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashBalance#mmBalanceAdjustmentCode
- * CashBalance.mmBalanceAdjustmentCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashBalance#mmRelatedCardPaymentValidationProcess
- * CashBalance.mmRelatedCardPaymentValidationProcess}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashBalance#mmCutOffDate
- * CashBalance.mmCutOffDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashBalance#mmRelatedRegisteredContract
- * CashBalance.mmRelatedRegisteredContract}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -268,10 +269,6 @@ public class CashBalance extends Balance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -374,6 +371,10 @@ public class CashBalance extends Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -392,7 +393,7 @@ public class CashBalance extends Balance {
 					AccountNotification4.mmRelatedAccount, AccountNotification6.mmAccount, AccountNotification6.mmRelatedAccount, AccountReport18.mmAccount, AccountStatement5.mmAccount, AccountNotification10.mmAccount,
 					AccountNotification10.mmRelatedAccount, AccountNotification11.mmAccount, AccountNotification11.mmRelatedAccount, AccountStatement6.mmAccount, AccountReport19.mmAccount, AccountNotification13.mmAccount,
 					AccountNotification13.mmRelatedAccount, AccountNotification12.mmAccount, AccountNotification12.mmRelatedAccount);
-			elementContext_lazy = () -> CashBalance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
@@ -415,10 +416,6 @@ public class CashBalance extends Balance {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.BalanceCounterpartyCode
 	 * BalanceCounterpartyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -437,6 +434,10 @@ public class CashBalance extends Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -452,7 +453,7 @@ public class CashBalance extends Balance {
 	public static final MMBusinessAttribute mmCalculationType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BalanceDetails2.mmCounterpartyType, BalanceDetails3.mmCounterpartyType, BalanceDetails4.mmCounterpartyType, CashBalance4.mmCounterpartyType);
-			elementContext_lazy = () -> CashBalance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationType";
@@ -460,6 +461,14 @@ public class CashBalance extends Balance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BalanceCounterpartyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashBalance.class.getMethod("getCalculationType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.SystemMemberRole> counterparty;
@@ -482,10 +491,6 @@ public class CashBalance extends Balance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SystemMemberRole
 	 * SystemMemberRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -504,6 +509,10 @@ public class CashBalance extends Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -519,7 +528,7 @@ public class CashBalance extends Balance {
 	public static final MMBusinessAssociationEnd mmCounterparty = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BalanceDetails2.mmCounterpartyIdentification, BalanceDetails3.mmCounterpartyIdentification, BalanceDetails4.mmCounterpartyIdentification, CashBalance4.mmCounterpartyIdentification);
-			elementContext_lazy = () -> CashBalance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Counterparty";
@@ -541,10 +550,6 @@ public class CashBalance extends Balance {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -629,6 +634,10 @@ public class CashBalance extends Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -646,7 +655,7 @@ public class CashBalance extends Balance {
 					BalanceStatus2.mmBalance, CardPaymentTransaction9.mmBalance, CardPaymentTransaction18.mmBalance, BalanceDetails6.mmAmount, BalanceDetails5.mmAmount, BillingService1.mmBalanceRequiredAccountAmount,
 					BalanceAdjustment1.mmBalanceAmount, BalanceAdjustment1.mmAverageAmount, BillingServiceAdjustment1.mmBalanceRequiredAmount, CardPaymentTransaction24.mmBalance, CardPaymentTransaction39.mmBalance,
 					ContractBalance1.mmAmount, CashBalance7.mmAmount, BillingService2.mmBalanceRequiredAccountAmount, CardPaymentTransaction54.mmBalance, CardPaymentTransaction67.mmBalance);
-			elementContext_lazy = () -> CashBalance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -654,6 +663,14 @@ public class CashBalance extends Balance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashBalance.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CashAvailability availability;
@@ -675,10 +692,6 @@ public class CashBalance extends Balance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAvailability
 	 * CashAvailability}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -718,6 +731,10 @@ public class CashBalance extends Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -734,7 +751,7 @@ public class CashBalance extends Balance {
 		{
 			derivation_lazy = () -> Arrays.asList(CashBalance1.mmAvailability, ReportEntry1.mmAvailability, CashBalance3.mmAvailability, TotalsPerBankTransactionCode3.mmAvailability, ReportEntry4.mmAvailability,
 					CashBalance2.mmAvailability, StatementEntry1.mmAvailability, ReportEntry7.mmAvailability, CashBalance7.mmAvailability, ReportEntry8.mmAvailability, TotalsPerBankTransactionCode4.mmAvailability);
-			elementContext_lazy = () -> CashBalance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Availability";
@@ -764,10 +781,6 @@ public class CashBalance extends Balance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashEntry CashEntry}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -835,6 +848,10 @@ public class CashBalance extends Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -851,7 +868,7 @@ public class CashBalance extends Balance {
 					AccountNotification7.mmEntry, AccountStatement1.mmEntry, AccountStatement2.mmEntry, AccountStatement3.mmEntry, AccountStatement4.mmEntry, ReportData5.mmAccountValue, AccountNotification3.mmItem,
 					AccountNotification4.mmItem, AccountNotification6.mmItem, BillingBalance1.mmValue, AccountReport18.mmEntry, AccountStatement5.mmEntry, AccountNotification10.mmItem, AccountNotification11.mmEntry,
 					AccountStatement6.mmEntry, AccountReport19.mmEntry, AccountNotification13.mmItem, AccountNotification12.mmEntry);
-			elementContext_lazy = () -> CashBalance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashBalanceEntry";
@@ -873,10 +890,6 @@ public class CashBalance extends Balance {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.BalanceAdjustmentTypeCode
 	 * BalanceAdjustmentTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -884,6 +897,10 @@ public class CashBalance extends Balance {
 	 * BalanceAdjustment1.mmType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -898,7 +915,7 @@ public class CashBalance extends Balance {
 	public static final MMBusinessAttribute mmBalanceAdjustmentCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BalanceAdjustment1.mmType);
-			elementContext_lazy = () -> CashBalance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BalanceAdjustmentCode";
@@ -906,6 +923,14 @@ public class CashBalance extends Balance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BalanceAdjustmentTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashBalance.class.getMethod("getBalanceAdjustmentCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CardPaymentValidation relatedCardPaymentValidationProcess;
@@ -945,7 +970,7 @@ public class CashBalance extends Balance {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCardPaymentValidationProcess = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashBalance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCardPaymentValidationProcess";
@@ -971,10 +996,6 @@ public class CashBalance extends Balance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -983,6 +1004,10 @@ public class CashBalance extends Balance {
 	 * FinancingItemList1.mmAmountCutOffDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -999,7 +1024,7 @@ public class CashBalance extends Balance {
 	public static final MMBusinessAttribute mmCutOffDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancingItemList1.mmAmountCutOffDate);
-			elementContext_lazy = () -> CashBalance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CutOffDate";
@@ -1007,6 +1032,14 @@ public class CashBalance extends Balance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashBalance.class.getMethod("getCutOffDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RegisteredContract relatedRegisteredContract;
@@ -1045,7 +1078,7 @@ public class CashBalance extends Balance {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedRegisteredContract = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashBalance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedRegisteredContract";
@@ -1071,8 +1104,10 @@ public class CashBalance extends Balance {
 				derivationElement_lazy = () -> Arrays.asList(AccountReport9.mmBalance, AccountReport11.mmBalance, AccountReport12.mmBalance, AccountReport16.mmBalance, AccountStatement1.mmBalance, AccountStatement2.mmBalance,
 						AccountStatement3.mmBalance, AccountStatement4.mmBalance, IntraBalance2.mmCashSubBalanceIdentification, AccountReport18.mmBalance, AccountStatement5.mmBalance, AccountStatement6.mmBalance, AccountReport19.mmBalance);
 				superType_lazy = () -> Balance.mmObject();
-				element_lazy = () -> Arrays.asList(CashBalance.mmCashAccount, CashBalance.mmCalculationType, CashBalance.mmCounterparty, CashBalance.mmAmount, CashBalance.mmAvailability, CashBalance.mmCashBalanceEntry,
-						CashBalance.mmBalanceAdjustmentCode, CashBalance.mmRelatedCardPaymentValidationProcess, CashBalance.mmCutOffDate, CashBalance.mmRelatedRegisteredContract);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashBalance.mmCashAccount, com.tools20022.repository.entity.CashBalance.mmCalculationType, com.tools20022.repository.entity.CashBalance.mmCounterparty,
+						com.tools20022.repository.entity.CashBalance.mmAmount, com.tools20022.repository.entity.CashBalance.mmAvailability, com.tools20022.repository.entity.CashBalance.mmCashBalanceEntry,
+						com.tools20022.repository.entity.CashBalance.mmBalanceAdjustmentCode, com.tools20022.repository.entity.CashBalance.mmRelatedCardPaymentValidationProcess, com.tools20022.repository.entity.CashBalance.mmCutOffDate,
+						com.tools20022.repository.entity.CashBalance.mmRelatedRegisteredContract);
 				derivationComponent_lazy = () -> Arrays.asList(BalanceDetails2.mmObject(), BalanceDetails3.mmObject(), BalanceDetails4.mmObject(), CashBalance4.mmObject(), CashBalanceDetails2.mmObject(), CashBalanceDetails3.mmObject(),
 						CashBalanceDetails4.mmObject(), CashBalanceDetails5.mmObject(), CashBalanceDetails6.mmObject(), CashBalanceDetails7.mmObject(), CashBalance5.mmObject(), CashBalance6.mmObject(), CashBalance1.mmObject(),
 						AccountReport9.mmObject(), BalanceType5Choice.mmObject(), BalanceSubType1Choice.mmObject(), BalanceType12.mmObject(), CashBalance3.mmObject(), AccountReport11.mmObject(), AccountReport12.mmObject(),
@@ -1081,6 +1116,11 @@ public class CashBalance extends Balance {
 						ReportData3.mmObject(), BalanceStatus2.mmObject(), ReportData4.mmObject(), CashBalanceType1FormatType.mmObject(), AccountNotification3.mmObject(), AccountNotification4.mmObject(), AccountNotification6.mmObject(),
 						BillingBalanceType1Choice.mmObject(), BillingBalance1.mmObject(), BalanceAdjustment1.mmObject(), AccountReport18.mmObject(), AccountStatement5.mmObject(), AccountNotification10.mmObject(),
 						AccountNotification11.mmObject(), ContractBalance1.mmObject(), AccountStatement6.mmObject(), AccountReport19.mmObject(), AccountNotification13.mmObject(), AccountNotification12.mmObject(), CashBalance7.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CashBalance.class;
 			}
 		});
 		return mmObject_lazy.get();

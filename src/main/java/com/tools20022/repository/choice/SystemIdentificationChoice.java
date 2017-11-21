@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information used to identify a cash clearing system.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information used to identify a cash clearing system."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemIdentificationChoice", propOrder = {"clearingSystemIdentification", "country"})
 public class SystemIdentificationChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class SystemIdentificationChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClrSysId", required = true)
 	public CashClearingSystem1Code getClearingSystemIdentification() {
 		return clearingSystemIdentification;
 	}
@@ -184,6 +191,7 @@ public class SystemIdentificationChoice {
 		this.clearingSystemIdentification = clearingSystemIdentification;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Criterion by which the cash movements are broken down.
@@ -59,6 +63,8 @@ import java.util.List;
  * definition} = "Criterion by which the cash movements are broken down."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashSortingCriterion2", propOrder = {"sortingCriterionType", "forecastBreakdownDetails"})
 public class CashSortingCriterion2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +168,7 @@ public class CashSortingCriterion2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SrtgCritnTp", required = true)
 	public SortCriteria1Choice getSortingCriterionType() {
 		return sortingCriterionType;
 	}
@@ -170,6 +177,7 @@ public class CashSortingCriterion2 {
 		this.sortingCriterionType = sortingCriterionType;
 	}
 
+	@XmlElement(name = "FcstBrkdwnDtls", required = true)
 	public List<ForecastParameter2> getForecastBreakdownDetails() {
 		return forecastBreakdownDetails;
 	}

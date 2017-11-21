@@ -31,6 +31,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General characteristics related to a statement which reports information for
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Statement8", propOrder = {"reference", "statementPeriod", "creationDateTime", "frequency", "updateType", "activityIndicator", "reportNumber"})
 public class Statement8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -394,6 +400,7 @@ public class Statement8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ref", required = true)
 	public Max35Text getReference() {
 		return reference;
 	}
@@ -402,6 +409,7 @@ public class Statement8 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "StmtPrd", required = true)
 	public DatePeriodDetails getStatementPeriod() {
 		return statementPeriod;
 	}
@@ -410,6 +418,7 @@ public class Statement8 {
 		this.statementPeriod = statementPeriod;
 	}
 
+	@XmlElement(name = "CreDtTm")
 	public DateAndDateTimeChoice getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -418,6 +427,7 @@ public class Statement8 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "Frqcy")
 	public EventFrequency1Code getFrequency() {
 		return frequency;
 	}
@@ -426,6 +436,7 @@ public class Statement8 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "UpdTp", required = true)
 	public StatementUpdateTypeCode getUpdateType() {
 		return updateType;
 	}
@@ -434,6 +445,7 @@ public class Statement8 {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
@@ -442,6 +454,7 @@ public class Statement8 {
 		this.activityIndicator = activityIndicator;
 	}
 
+	@XmlElement(name = "RptNb")
 	public Max5NumericText getReportNumber() {
 		return reportNumber;
 	}

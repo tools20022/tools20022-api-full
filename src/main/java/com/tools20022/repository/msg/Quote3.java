@@ -36,6 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Proposition of price for a financial instrument.
@@ -89,6 +93,8 @@ import java.util.List;
  * definition} = "Proposition of price for a financial instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Quote3", propOrder = {"type", "qualifier", "validUntilDateTime", "previousClosingPrice", "priceType", "requestedPrice", "currency", "quoteOriginator", "quoteOriginatorRole", "requestorEligibility", "sourceOfQuote"})
 public class Quote3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -633,6 +639,7 @@ public class Quote3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public QuoteType1Code getType() {
 		return type;
 	}
@@ -641,6 +648,7 @@ public class Quote3 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Qlfr")
 	public List<Qualifier1Code> getQualifier() {
 		return qualifier;
 	}
@@ -649,6 +657,7 @@ public class Quote3 {
 		this.qualifier = qualifier;
 	}
 
+	@XmlElement(name = "VldUntilDtTm")
 	public ISODateTime getValidUntilDateTime() {
 		return validUntilDateTime;
 	}
@@ -657,6 +666,7 @@ public class Quote3 {
 		this.validUntilDateTime = validUntilDateTime;
 	}
 
+	@XmlElement(name = "PrvsClsgPric")
 	public Price1 getPreviousClosingPrice() {
 		return previousClosingPrice;
 	}
@@ -665,6 +675,7 @@ public class Quote3 {
 		this.previousClosingPrice = previousClosingPrice;
 	}
 
+	@XmlElement(name = "PricTp")
 	public PriceValueType3Code getPriceType() {
 		return priceType;
 	}
@@ -673,6 +684,7 @@ public class Quote3 {
 		this.priceType = priceType;
 	}
 
+	@XmlElement(name = "ReqdPric")
 	public Price1 getRequestedPrice() {
 		return requestedPrice;
 	}
@@ -681,6 +693,7 @@ public class Quote3 {
 		this.requestedPrice = requestedPrice;
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -689,6 +702,7 @@ public class Quote3 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "QtOrgtr")
 	public PartyIdentification24Choice getQuoteOriginator() {
 		return quoteOriginator;
 	}
@@ -697,6 +711,7 @@ public class Quote3 {
 		this.quoteOriginator = quoteOriginator;
 	}
 
+	@XmlElement(name = "QtOrgtrRole")
 	public OriginatorRole1Code getQuoteOriginatorRole() {
 		return quoteOriginatorRole;
 	}
@@ -705,6 +720,7 @@ public class Quote3 {
 		this.quoteOriginatorRole = quoteOriginatorRole;
 	}
 
+	@XmlElement(name = "RqstrElgblty")
 	public Eligibility1Code getRequestorEligibility() {
 		return requestorEligibility;
 	}
@@ -713,6 +729,7 @@ public class Quote3 {
 		this.requestorEligibility = requestorEligibility;
 	}
 
+	@XmlElement(name = "SrcOfQt")
 	public PartyIdentification25Choice getSourceOfQuote() {
 		return sourceOfQuote;
 	}

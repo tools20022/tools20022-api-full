@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status report of an account opening instruction or account modification
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountManagementStatusAndReason2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountManagementStatusAndReason3", propOrder = {"status", "accountApplicationIdentification"})
 public class AccountManagementStatusAndReason3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -233,6 +239,7 @@ public class AccountManagementStatusAndReason3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public Status14Choice getStatus() {
 		return status;
 	}
@@ -241,6 +248,7 @@ public class AccountManagementStatusAndReason3 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "AcctApplId")
 	public Max35Text getAccountApplicationIdentification() {
 		return accountApplicationIdentification;
 	}

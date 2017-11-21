@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes a transaction and its status.
@@ -66,6 +70,8 @@ import java.util.List;
  * definition} = "Describes a transaction and its status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusReportItems1", propOrder = {"transactionIdentification", "reportedEntity", "status", "subStatus"})
 public class StatusReportItems1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -259,6 +265,7 @@ public class StatusReportItems1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -267,6 +274,7 @@ public class StatusReportItems1 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "RptdNtty", required = true)
 	public List<BICIdentification1> getReportedEntity() {
 		return reportedEntity;
 	}
@@ -275,6 +283,7 @@ public class StatusReportItems1 {
 		this.reportedEntity = reportedEntity;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public BaselineStatus1Code getStatus() {
 		return status;
 	}
@@ -283,6 +292,7 @@ public class StatusReportItems1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "SubSts")
 	public Max140Text getSubStatus() {
 		return subStatus;
 	}

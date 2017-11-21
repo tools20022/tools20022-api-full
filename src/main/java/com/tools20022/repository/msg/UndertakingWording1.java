@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the wording for a demand guarantee, standby letter of
@@ -68,6 +72,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingWording1", propOrder = {"modelForm", "requestedWordingLanguage", "undertakingTermsAndConditions"})
 public class UndertakingWording1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -223,6 +229,7 @@ public class UndertakingWording1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MdlForm")
 	public ModelFormIdentification1 getModelForm() {
 		return modelForm;
 	}
@@ -231,6 +238,7 @@ public class UndertakingWording1 {
 		this.modelForm = modelForm;
 	}
 
+	@XmlElement(name = "ReqdWrdgLang")
 	public ISO2ALanguageCode getRequestedWordingLanguage() {
 		return requestedWordingLanguage;
 	}
@@ -239,6 +247,7 @@ public class UndertakingWording1 {
 		this.requestedWordingLanguage = requestedWordingLanguage;
 	}
 
+	@XmlElement(name = "UdrtkgTermsAndConds")
 	public List<Narrative1> getUndertakingTermsAndConditions() {
 		return undertakingTermsAndConditions;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.AmountRange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Expresses an amount or an amount range with an explicit debit/credit
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ImpliedCurrencyAndAmountRange", propOrder = {"amount", "creditDebitIndicator"})
 public class ImpliedCurrencyAndAmountRange {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class ImpliedCurrencyAndAmountRange {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAmountRangeChoice getAmount() {
 		return amount;
 	}
@@ -187,6 +194,7 @@ public class ImpliedCurrencyAndAmountRange {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}

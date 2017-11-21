@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account to or from which a cash entry is made.
@@ -89,6 +93,8 @@ import java.util.List;
  * definition} = "Account to or from which a cash entry is made."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccountDetails1", propOrder = {"name", "type", "currency", "currentMultilateralLimit", "accountOwner", "accountServicer", "multilateralBalance", "currentBilateralLimit", "standingOrder"})
 public class CashAccountDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -563,6 +569,7 @@ public class CashAccountDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max35Text getName() {
 		return name;
 	}
@@ -571,6 +578,7 @@ public class CashAccountDetails1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Tp")
 	public CashAccountType2Code getType() {
 		return type;
 	}
@@ -579,6 +587,7 @@ public class CashAccountDetails1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -587,6 +596,7 @@ public class CashAccountDetails1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "CurMulLmt")
 	public LimitDetails getCurrentMultilateralLimit() {
 		return currentMultilateralLimit;
 	}
@@ -595,6 +605,7 @@ public class CashAccountDetails1 {
 		this.currentMultilateralLimit = currentMultilateralLimit;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public AnyBICIdentifier getAccountOwner() {
 		return accountOwner;
 	}
@@ -603,6 +614,7 @@ public class CashAccountDetails1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public BICIdentifier getAccountServicer() {
 		return accountServicer;
 	}
@@ -611,6 +623,7 @@ public class CashAccountDetails1 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "MulBal")
 	public List<CashBalanceDetails2> getMultilateralBalance() {
 		return multilateralBalance;
 	}
@@ -619,6 +632,7 @@ public class CashAccountDetails1 {
 		this.multilateralBalance = multilateralBalance;
 	}
 
+	@XmlElement(name = "CurBilLmt")
 	public List<BilateralLimitDetails1> getCurrentBilateralLimit() {
 		return currentBilateralLimit;
 	}
@@ -627,6 +641,7 @@ public class CashAccountDetails1 {
 		this.currentBilateralLimit = currentBilateralLimit;
 	}
 
+	@XmlElement(name = "StgOrdr")
 	public List<StandingOrderDetails3> getStandingOrder() {
 		return standingOrder;
 	}

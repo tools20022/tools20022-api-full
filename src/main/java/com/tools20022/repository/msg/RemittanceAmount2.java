@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Nature of the amount and currency on a document referred to in the remittance
@@ -84,6 +88,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RemittanceAmount2", propOrder = {"duePayableAmount", "discountAppliedAmount", "creditNoteAmount", "taxAmount", "adjustmentAmountAndReason", "remittedAmount"})
 public class RemittanceAmount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -453,6 +459,7 @@ public class RemittanceAmount2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DuePyblAmt")
 	public ActiveOrHistoricCurrencyAndAmount getDuePayableAmount() {
 		return duePayableAmount;
 	}
@@ -461,6 +468,7 @@ public class RemittanceAmount2 {
 		this.duePayableAmount = duePayableAmount;
 	}
 
+	@XmlElement(name = "DscntApldAmt")
 	public List<DiscountAmountAndType1> getDiscountAppliedAmount() {
 		return discountAppliedAmount;
 	}
@@ -469,6 +477,7 @@ public class RemittanceAmount2 {
 		this.discountAppliedAmount = discountAppliedAmount;
 	}
 
+	@XmlElement(name = "CdtNoteAmt")
 	public ActiveOrHistoricCurrencyAndAmount getCreditNoteAmount() {
 		return creditNoteAmount;
 	}
@@ -477,6 +486,7 @@ public class RemittanceAmount2 {
 		this.creditNoteAmount = creditNoteAmount;
 	}
 
+	@XmlElement(name = "TaxAmt")
 	public List<TaxAmountAndType1> getTaxAmount() {
 		return taxAmount;
 	}
@@ -485,6 +495,7 @@ public class RemittanceAmount2 {
 		this.taxAmount = taxAmount;
 	}
 
+	@XmlElement(name = "AdjstmntAmtAndRsn")
 	public List<DocumentAdjustment1> getAdjustmentAmountAndReason() {
 		return adjustmentAmountAndReason;
 	}
@@ -493,6 +504,7 @@ public class RemittanceAmount2 {
 		this.adjustmentAmountAndReason = adjustmentAmountAndReason;
 	}
 
+	@XmlElement(name = "RmtdAmt")
 	public ActiveOrHistoricCurrencyAndAmount getRemittedAmount() {
 		return remittedAmount;
 	}

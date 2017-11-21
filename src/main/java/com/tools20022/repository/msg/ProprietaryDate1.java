@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Proprietary date information.
@@ -71,6 +75,8 @@ import java.util.function.Supplier;
  * definition} = "Proprietary date information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProprietaryDate1", propOrder = {"type", "date", "dateTime"})
 public class ProprietaryDate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -261,6 +267,7 @@ public class ProprietaryDate1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public Max35Text getType() {
 		return type;
 	}
@@ -269,6 +276,7 @@ public class ProprietaryDate1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
@@ -277,6 +285,7 @@ public class ProprietaryDate1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "DtTm", required = true)
 	public ISODateTime getDateTime() {
 		return dateTime;
 	}

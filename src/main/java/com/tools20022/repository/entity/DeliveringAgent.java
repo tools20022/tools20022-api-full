@@ -67,6 +67,11 @@ public class DeliveringAgent extends SecuritiesSettlementPartyRole {
 				definition = "Party that delivers securities to the receiving agent at the place of settlement. For example, a central securities depository.";
 				superType_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DeliveringAgent.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

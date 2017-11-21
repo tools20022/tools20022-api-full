@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.PortfolioTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Year in which the ISA plan is issued.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Year in which the ISA plan is issued."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ISAYearsOfIssue", propOrder = {"currentYear", "previousYears"})
 public class ISAYearsOfIssue {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class ISAYearsOfIssue {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CurYr")
 	public ISAType1Code getCurrentYear() {
 		return currentYear;
 	}
@@ -183,6 +190,7 @@ public class ISAYearsOfIssue {
 		this.currentYear = currentYear;
 	}
 
+	@XmlElement(name = "PrvsYrs")
 	public PreviousYearChoice getPreviousYears() {
 		return previousYears;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Authorisation response from the acquirer.
@@ -97,6 +101,9 @@ import java.util.List;
  * CardPaymentTransaction39}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransaction54", propOrder = {"authorisationResult", "transactionVerificationResult", "allowedProductCode", "notAllowedProductCode", "additionalAvailableProduct", "balance", "protectedBalance", "action",
+		"currencyConversionEligibility"})
 public class CardPaymentTransaction54 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -633,6 +640,7 @@ public class CardPaymentTransaction54 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AuthstnRslt", required = true)
 	public AuthorisationResult10 getAuthorisationResult() {
 		return authorisationResult;
 	}
@@ -641,6 +649,7 @@ public class CardPaymentTransaction54 {
 		this.authorisationResult = authorisationResult;
 	}
 
+	@XmlElement(name = "TxVrfctnRslt")
 	public List<TransactionVerificationResult4> getTransactionVerificationResult() {
 		return transactionVerificationResult;
 	}
@@ -649,6 +658,7 @@ public class CardPaymentTransaction54 {
 		this.transactionVerificationResult = transactionVerificationResult;
 	}
 
+	@XmlElement(name = "AllwdPdctCd")
 	public List<Product4> getAllowedProductCode() {
 		return allowedProductCode;
 	}
@@ -657,6 +667,7 @@ public class CardPaymentTransaction54 {
 		this.allowedProductCode = allowedProductCode;
 	}
 
+	@XmlElement(name = "NotAllwdPdctCd")
 	public List<Product4> getNotAllowedProductCode() {
 		return notAllowedProductCode;
 	}
@@ -665,6 +676,7 @@ public class CardPaymentTransaction54 {
 		this.notAllowedProductCode = notAllowedProductCode;
 	}
 
+	@XmlElement(name = "AddtlAvlblPdct")
 	public List<Product5> getAdditionalAvailableProduct() {
 		return additionalAvailableProduct;
 	}
@@ -673,6 +685,7 @@ public class CardPaymentTransaction54 {
 		this.additionalAvailableProduct = additionalAvailableProduct;
 	}
 
+	@XmlElement(name = "Bal")
 	public AmountAndDirection41 getBalance() {
 		return balance;
 	}
@@ -681,6 +694,7 @@ public class CardPaymentTransaction54 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "PrtctdBal")
 	public ContentInformationType10 getProtectedBalance() {
 		return protectedBalance;
 	}
@@ -689,6 +703,7 @@ public class CardPaymentTransaction54 {
 		this.protectedBalance = protectedBalance;
 	}
 
+	@XmlElement(name = "Actn")
 	public List<Action6> getAction() {
 		return action;
 	}
@@ -697,6 +712,7 @@ public class CardPaymentTransaction54 {
 		this.action = action;
 	}
 
+	@XmlElement(name = "CcyConvsElgblty")
 	public CurrencyConversion6 getCurrencyConversionEligibility() {
 		return currencyConversionEligibility;
 	}

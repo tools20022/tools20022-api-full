@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.AccountReport19;
 import com.tools20022.repository.msg.GroupHeader58;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.BanktoCustomerCashManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -53,9 +55,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.052.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
@@ -88,6 +87,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.052.001.06}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -103,6 +105,8 @@ import java.util.List;
  * BankToCustomerAccountReportV05}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BankToCustomerAccountReportV06", propOrder = {"groupHeader", "report", "supplementaryData"})
 public class BankToCustomerAccountReportV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -145,6 +149,14 @@ public class BankToCustomerAccountReportV06 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader58.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BankToCustomerAccountReportV06.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AccountReport19> report;
 	/**
@@ -183,6 +195,14 @@ public class BankToCustomerAccountReportV06 {
 			previousVersion_lazy = () -> BankToCustomerAccountReportV05.mmReport;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountReport19.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BankToCustomerAccountReportV06.class.getMethod("getReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -227,6 +247,14 @@ public class BankToCustomerAccountReportV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BankToCustomerAccountReportV06.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -240,7 +268,8 @@ public class BankToCustomerAccountReportV06 {
 				rootElement = "Document";
 				xmlTag = "BkToCstmrAcctRpt";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(BankToCustomerAccountReportV06.mmGroupHeader, BankToCustomerAccountReportV06.mmReport, BankToCustomerAccountReportV06.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerAccountReportV06.mmGroupHeader, com.tools20022.repository.area.camt.BankToCustomerAccountReportV06.mmReport,
+						com.tools20022.repository.area.camt.BankToCustomerAccountReportV06.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -250,10 +279,16 @@ public class BankToCustomerAccountReportV06 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BankToCustomerAccountReportV06.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader58 getGroupHeader() {
 		return groupHeader;
 	}
@@ -262,6 +297,7 @@ public class BankToCustomerAccountReportV06 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "Rpt", required = true)
 	public List<AccountReport19> getReport() {
 		return report;
 	}
@@ -270,11 +306,18 @@ public class BankToCustomerAccountReportV06 {
 		this.report = report;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.052.06.06")
+	static public class Document {
+		@XmlElement(name = "BkToCstmrAcctRpt", required = true)
+		public BankToCustomerAccountReportV06 messageBody;
 	}
 }

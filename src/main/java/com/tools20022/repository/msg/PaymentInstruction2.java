@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the payment instruction.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstruction2", propOrder = {"instruction", "type", "priority", "processingValidityTime"})
 public class PaymentInstruction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -336,6 +342,7 @@ public class PaymentInstruction2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Instr")
 	public Instruction1Code getInstruction() {
 		return instruction;
 	}
@@ -344,6 +351,7 @@ public class PaymentInstruction2 {
 		this.instruction = instruction;
 	}
 
+	@XmlElement(name = "Tp")
 	public PaymentType3Choice getType() {
 		return type;
 	}
@@ -352,6 +360,7 @@ public class PaymentInstruction2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Prty")
 	public PriorityCodeChoice getPriority() {
 		return priority;
 	}
@@ -360,6 +369,7 @@ public class PaymentInstruction2 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "PrcgVldtyTm")
 	public DateTimePeriodChoice getProcessingValidityTime() {
 		return processingValidityTime;
 	}

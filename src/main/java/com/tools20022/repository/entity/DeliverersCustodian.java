@@ -67,6 +67,11 @@ public class DeliverersCustodian extends SecuritiesSettlementPartyRole {
 				definition = "Party that acts on behalf of the seller of securities when the seller does not have a direct relationship with the delivering agent.";
 				superType_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DeliverersCustodian.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

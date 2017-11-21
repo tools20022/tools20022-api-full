@@ -32,6 +32,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Order to invest the investor's principal in an investment fund.
@@ -128,6 +132,10 @@ import java.util.List;
  * "Order to invest the investor's principal in an investment fund."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionOrder4", propOrder = {"orderReference", "orderType", "financialInstrumentDetails", "unitsNumber", "netAmount", "rounding", "grossAmount", "foreignExchangeDetails", "incomePreference", "letterIntentReference",
+		"accumulationRightReference", "chargeDetails", "commissionDetails", "taxDetails", "settlementAndCustodyDetails", "physicalDeliveryIndicator", "physicalDeliveryDetails", "requestedSettlementCurrency", "requestedNAVCurrency",
+		"cashSettlementDetails"})
 public class SubscriptionOrder4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1169,6 +1177,7 @@ public class SubscriptionOrder4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -1177,6 +1186,7 @@ public class SubscriptionOrder4 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "OrdrTp")
 	public List<FundOrderType1> getOrderType() {
 		return orderType;
 	}
@@ -1185,6 +1195,7 @@ public class SubscriptionOrder4 {
 		this.orderType = orderType;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument6 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -1193,6 +1204,7 @@ public class SubscriptionOrder4 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -1201,6 +1213,7 @@ public class SubscriptionOrder4 {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "NetAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
@@ -1209,6 +1222,7 @@ public class SubscriptionOrder4 {
 		this.netAmount = netAmount;
 	}
 
+	@XmlElement(name = "Rndg")
 	public RoundingDirection2Code getRounding() {
 		return rounding;
 	}
@@ -1217,6 +1231,7 @@ public class SubscriptionOrder4 {
 		this.rounding = rounding;
 	}
 
+	@XmlElement(name = "GrssAmt")
 	public ActiveOrHistoricCurrencyAndAmount getGrossAmount() {
 		return grossAmount;
 	}
@@ -1225,6 +1240,7 @@ public class SubscriptionOrder4 {
 		this.grossAmount = grossAmount;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public ForeignExchangeTerms5 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -1233,6 +1249,7 @@ public class SubscriptionOrder4 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "IncmPref")
 	public IncomePreference1Code getIncomePreference() {
 		return incomePreference;
 	}
@@ -1241,6 +1258,7 @@ public class SubscriptionOrder4 {
 		this.incomePreference = incomePreference;
 	}
 
+	@XmlElement(name = "LttrInttRef")
 	public Max35Text getLetterIntentReference() {
 		return letterIntentReference;
 	}
@@ -1249,6 +1267,7 @@ public class SubscriptionOrder4 {
 		this.letterIntentReference = letterIntentReference;
 	}
 
+	@XmlElement(name = "AcmltnRghtRef")
 	public Max35Text getAccumulationRightReference() {
 		return accumulationRightReference;
 	}
@@ -1257,6 +1276,7 @@ public class SubscriptionOrder4 {
 		this.accumulationRightReference = accumulationRightReference;
 	}
 
+	@XmlElement(name = "ChrgDtls")
 	public List<Charge8> getChargeDetails() {
 		return chargeDetails;
 	}
@@ -1265,6 +1285,7 @@ public class SubscriptionOrder4 {
 		this.chargeDetails = chargeDetails;
 	}
 
+	@XmlElement(name = "ComssnDtls")
 	public List<Commission6> getCommissionDetails() {
 		return commissionDetails;
 	}
@@ -1273,6 +1294,7 @@ public class SubscriptionOrder4 {
 		this.commissionDetails = commissionDetails;
 	}
 
+	@XmlElement(name = "TaxDtls")
 	public List<Tax6> getTaxDetails() {
 		return taxDetails;
 	}
@@ -1281,6 +1303,7 @@ public class SubscriptionOrder4 {
 		this.taxDetails = taxDetails;
 	}
 
+	@XmlElement(name = "SttlmAndCtdyDtls")
 	public FundSettlementParameters4 getSettlementAndCustodyDetails() {
 		return settlementAndCustodyDetails;
 	}
@@ -1289,6 +1312,7 @@ public class SubscriptionOrder4 {
 		this.settlementAndCustodyDetails = settlementAndCustodyDetails;
 	}
 
+	@XmlElement(name = "PhysDlvryInd", required = true)
 	public YesNoIndicator getPhysicalDeliveryIndicator() {
 		return physicalDeliveryIndicator;
 	}
@@ -1297,6 +1321,7 @@ public class SubscriptionOrder4 {
 		this.physicalDeliveryIndicator = physicalDeliveryIndicator;
 	}
 
+	@XmlElement(name = "PhysDlvryDtls")
 	public NameAndAddress4 getPhysicalDeliveryDetails() {
 		return physicalDeliveryDetails;
 	}
@@ -1305,6 +1330,7 @@ public class SubscriptionOrder4 {
 		this.physicalDeliveryDetails = physicalDeliveryDetails;
 	}
 
+	@XmlElement(name = "ReqdSttlmCcy")
 	public CurrencyCode getRequestedSettlementCurrency() {
 		return requestedSettlementCurrency;
 	}
@@ -1313,6 +1339,7 @@ public class SubscriptionOrder4 {
 		this.requestedSettlementCurrency = requestedSettlementCurrency;
 	}
 
+	@XmlElement(name = "ReqdNAVCcy")
 	public CurrencyCode getRequestedNAVCurrency() {
 		return requestedNAVCurrency;
 	}
@@ -1321,6 +1348,7 @@ public class SubscriptionOrder4 {
 		this.requestedNAVCurrency = requestedNAVCurrency;
 	}
 
+	@XmlElement(name = "CshSttlmDtls")
 	public PaymentTransaction19 getCashSettlementDetails() {
 		return cashSettlementDetails;
 	}

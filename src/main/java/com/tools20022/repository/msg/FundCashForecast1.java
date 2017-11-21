@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cash movements from or to a fund as a result of investment funds
@@ -112,6 +116,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundCashForecast1", propOrder = {"tradeDateTime", "previousTradeDateTime", "financialInstrumentDetails", "totalNAV", "previousTotalNAV", "totalUnitsNumber", "previousTotalUnitsNumber", "totalNAVChangeRate",
+		"investmentCurrency", "exceptionalNetCashFlowIndicator", "cashInForecastDetails", "cashOutForecastDetails", "netCashForecastDetails"})
 public class FundCashForecast1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -769,6 +776,7 @@ public class FundCashForecast1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradDtTm", required = true)
 	public DateAndDateTimeChoice getTradeDateTime() {
 		return tradeDateTime;
 	}
@@ -777,6 +785,7 @@ public class FundCashForecast1 {
 		this.tradeDateTime = tradeDateTime;
 	}
 
+	@XmlElement(name = "PrvsTradDtTm")
 	public DateAndDateTimeChoice getPreviousTradeDateTime() {
 		return previousTradeDateTime;
 	}
@@ -785,6 +794,7 @@ public class FundCashForecast1 {
 		this.previousTradeDateTime = previousTradeDateTime;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument5 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -793,6 +803,7 @@ public class FundCashForecast1 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "TtlNAV")
 	public ActiveOrHistoricCurrencyAndAmount getTotalNAV() {
 		return totalNAV;
 	}
@@ -801,6 +812,7 @@ public class FundCashForecast1 {
 		this.totalNAV = totalNAV;
 	}
 
+	@XmlElement(name = "PrvsTtlNAV")
 	public ActiveOrHistoricCurrencyAndAmount getPreviousTotalNAV() {
 		return previousTotalNAV;
 	}
@@ -809,6 +821,7 @@ public class FundCashForecast1 {
 		this.previousTotalNAV = previousTotalNAV;
 	}
 
+	@XmlElement(name = "TtlUnitsNb")
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
@@ -817,6 +830,7 @@ public class FundCashForecast1 {
 		this.totalUnitsNumber = totalUnitsNumber;
 	}
 
+	@XmlElement(name = "PrvsTtlUnitsNb")
 	public FinancialInstrumentQuantity1 getPreviousTotalUnitsNumber() {
 		return previousTotalUnitsNumber;
 	}
@@ -825,6 +839,7 @@ public class FundCashForecast1 {
 		this.previousTotalUnitsNumber = previousTotalUnitsNumber;
 	}
 
+	@XmlElement(name = "TtlNAVChngRate")
 	public PercentageRate getTotalNAVChangeRate() {
 		return totalNAVChangeRate;
 	}
@@ -833,6 +848,7 @@ public class FundCashForecast1 {
 		this.totalNAVChangeRate = totalNAVChangeRate;
 	}
 
+	@XmlElement(name = "InvstmtCcy")
 	public List<ActiveOrHistoricCurrencyCode> getInvestmentCurrency() {
 		return investmentCurrency;
 	}
@@ -841,6 +857,7 @@ public class FundCashForecast1 {
 		this.investmentCurrency = investmentCurrency;
 	}
 
+	@XmlElement(name = "XcptnlNetCshFlowInd", required = true)
 	public YesNoIndicator getExceptionalNetCashFlowIndicator() {
 		return exceptionalNetCashFlowIndicator;
 	}
@@ -849,6 +866,7 @@ public class FundCashForecast1 {
 		this.exceptionalNetCashFlowIndicator = exceptionalNetCashFlowIndicator;
 	}
 
+	@XmlElement(name = "CshInFcstDtls")
 	public List<CashInForecast2> getCashInForecastDetails() {
 		return cashInForecastDetails;
 	}
@@ -857,6 +875,7 @@ public class FundCashForecast1 {
 		this.cashInForecastDetails = cashInForecastDetails;
 	}
 
+	@XmlElement(name = "CshOutFcstDtls")
 	public List<CashOutForecast2> getCashOutForecastDetails() {
 		return cashOutForecastDetails;
 	}
@@ -865,6 +884,7 @@ public class FundCashForecast1 {
 		this.cashOutForecastDetails = cashOutForecastDetails;
 	}
 
+	@XmlElement(name = "NetCshFcstDtls")
 	public List<NetCashForecast1> getNetCashForecastDetails() {
 		return netCashForecastDetails;
 	}

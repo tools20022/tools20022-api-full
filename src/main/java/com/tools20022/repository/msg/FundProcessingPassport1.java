@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Fund Processing Passsport (FPP) is a fully harmonised document with all key
@@ -105,6 +109,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundProcessingPassport1", propOrder = {"updatedDate", "securityIdentification", "mainFundOrderDesk", "fundManagementCompany", "fundDetails", "valuationDealingCharacteristics", "investmentRestrictions",
+		"subscriptionProcessingCharacteristics", "redemptionProcessingCharacteristics", "settlementDetails", "localMarketAnnex", "extension"})
 public class FundProcessingPassport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -714,6 +721,7 @@ public class FundProcessingPassport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UpdtdDt", required = true)
 	public UpdatedDate getUpdatedDate() {
 		return updatedDate;
 	}
@@ -722,6 +730,7 @@ public class FundProcessingPassport1 {
 		this.updatedDate = updatedDate;
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification1 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -730,6 +739,7 @@ public class FundProcessingPassport1 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "MainFndOrdrDsk", required = true)
 	public ContactAttributes1 getMainFundOrderDesk() {
 		return mainFundOrderDesk;
 	}
@@ -738,6 +748,7 @@ public class FundProcessingPassport1 {
 		this.mainFundOrderDesk = mainFundOrderDesk;
 	}
 
+	@XmlElement(name = "FndMgmtCpny", required = true)
 	public ContactAttributes1 getFundManagementCompany() {
 		return fundManagementCompany;
 	}
@@ -746,6 +757,7 @@ public class FundProcessingPassport1 {
 		this.fundManagementCompany = fundManagementCompany;
 	}
 
+	@XmlElement(name = "FndDtls", required = true)
 	public FinancialInstrument20 getFundDetails() {
 		return fundDetails;
 	}
@@ -754,6 +766,7 @@ public class FundProcessingPassport1 {
 		this.fundDetails = fundDetails;
 	}
 
+	@XmlElement(name = "ValtnDealgChrtcs", required = true)
 	public ValuationDealingProcessingCharacteristics2 getValuationDealingCharacteristics() {
 		return valuationDealingCharacteristics;
 	}
@@ -762,6 +775,7 @@ public class FundProcessingPassport1 {
 		this.valuationDealingCharacteristics = valuationDealingCharacteristics;
 	}
 
+	@XmlElement(name = "InvstmtRstrctns", required = true)
 	public InvestmentRestrictions2 getInvestmentRestrictions() {
 		return investmentRestrictions;
 	}
@@ -770,6 +784,7 @@ public class FundProcessingPassport1 {
 		this.investmentRestrictions = investmentRestrictions;
 	}
 
+	@XmlElement(name = "SbcptPrcgChrtcs", required = true)
 	public ProcessingCharacteristics2 getSubscriptionProcessingCharacteristics() {
 		return subscriptionProcessingCharacteristics;
 	}
@@ -778,6 +793,7 @@ public class FundProcessingPassport1 {
 		this.subscriptionProcessingCharacteristics = subscriptionProcessingCharacteristics;
 	}
 
+	@XmlElement(name = "RedPrcgChrtcs", required = true)
 	public ProcessingCharacteristics3 getRedemptionProcessingCharacteristics() {
 		return redemptionProcessingCharacteristics;
 	}
@@ -786,6 +802,7 @@ public class FundProcessingPassport1 {
 		this.redemptionProcessingCharacteristics = redemptionProcessingCharacteristics;
 	}
 
+	@XmlElement(name = "SttlmDtls", required = true)
 	public List<CashAccount22> getSettlementDetails() {
 		return settlementDetails;
 	}
@@ -794,6 +811,7 @@ public class FundProcessingPassport1 {
 		this.settlementDetails = settlementDetails;
 	}
 
+	@XmlElement(name = "LclMktAnx")
 	public List<LocalMarketAnnex2> getLocalMarketAnnex() {
 		return localMarketAnnex;
 	}
@@ -802,6 +820,7 @@ public class FundProcessingPassport1 {
 		this.localMarketAnnex = localMarketAnnex;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

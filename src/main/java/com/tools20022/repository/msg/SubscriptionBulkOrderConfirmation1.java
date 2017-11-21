@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Order confirmation details.
@@ -81,6 +85,8 @@ import java.util.List;
  * definition} = "Order confirmation details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionBulkOrderConfirmation1", propOrder = {"amendmentIndicator", "bulkExecutionDetails", "relatedPartyDetails", "extension"})
 public class SubscriptionBulkOrderConfirmation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -284,6 +290,7 @@ public class SubscriptionBulkOrderConfirmation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AmdmntInd", required = true)
 	public YesNoIndicator getAmendmentIndicator() {
 		return amendmentIndicator;
 	}
@@ -292,6 +299,7 @@ public class SubscriptionBulkOrderConfirmation1 {
 		this.amendmentIndicator = amendmentIndicator;
 	}
 
+	@XmlElement(name = "BlkExctnDtls", required = true)
 	public SubscriptionBulkExecution3 getBulkExecutionDetails() {
 		return bulkExecutionDetails;
 	}
@@ -300,6 +308,7 @@ public class SubscriptionBulkOrderConfirmation1 {
 		this.bulkExecutionDetails = bulkExecutionDetails;
 	}
 
+	@XmlElement(name = "RltdPtyDtls")
 	public List<Intermediary9> getRelatedPartyDetails() {
 		return relatedPartyDetails;
 	}
@@ -308,6 +317,7 @@ public class SubscriptionBulkOrderConfirmation1 {
 		this.relatedPartyDetails = relatedPartyDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

@@ -25,9 +25,11 @@ import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.AccountReport11;
 import com.tools20022.repository.msg.GroupHeader42;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -52,9 +54,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.052.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -82,6 +81,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.052.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -105,6 +107,8 @@ import java.util.List;
  * BankToCustomerAccountReportV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BankToCustomerAccountReportV02", propOrder = {"groupHeader", "report"})
 public class BankToCustomerAccountReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -141,6 +145,14 @@ public class BankToCustomerAccountReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader42.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BankToCustomerAccountReportV02.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AccountReport11> report;
 	/**
@@ -174,6 +186,14 @@ public class BankToCustomerAccountReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> AccountReport11.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BankToCustomerAccountReportV02.class.getMethod("getReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -188,7 +208,7 @@ public class BankToCustomerAccountReportV02 {
 				rootElement = "Document";
 				xmlTag = "BkToCstmrAcctRpt";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(BankToCustomerAccountReportV02.mmGroupHeader, BankToCustomerAccountReportV02.mmReport);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerAccountReportV02.mmGroupHeader, com.tools20022.repository.area.camt.BankToCustomerAccountReportV02.mmReport);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -198,10 +218,16 @@ public class BankToCustomerAccountReportV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BankToCustomerAccountReportV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader42 getGroupHeader() {
 		return groupHeader;
 	}
@@ -210,11 +236,18 @@ public class BankToCustomerAccountReportV02 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "Rpt", required = true)
 	public List<AccountReport11> getReport() {
 		return report;
 	}
 
 	public void setReport(List<AccountReport11> report) {
 		this.report = report;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.052.02.02")
+	static public class Document {
+		@XmlElement(name = "BkToCstmrAcctRpt", required = true)
+		public BankToCustomerAccountReportV02 messageBody;
 	}
 }

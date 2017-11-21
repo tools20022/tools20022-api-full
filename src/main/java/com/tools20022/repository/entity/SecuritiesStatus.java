@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.SecurityStatusCode;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,6 +38,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmPaymentStatus
+ * SecuritiesStatus.mmPaymentStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmStatus
+ * SecuritiesStatus.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmRegistrationStatus
+ * SecuritiesStatus.mmRegistrationStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmSecurity
+ * SecuritiesStatus.mmSecurity}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -71,23 +89,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Security.mmSecurityStatus}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmPaymentStatus
- * SecuritiesStatus.mmPaymentStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmStatus
- * SecuritiesStatus.mmStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmRegistrationStatus
- * SecuritiesStatus.mmRegistrationStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmSecurity
- * SecuritiesStatus.mmSecurity}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -117,11 +118,6 @@ public class SecuritiesStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatusCode
 	 * SecuritiesPaymentStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus
-	 * SecuritiesStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -229,6 +225,11 @@ public class SecuritiesStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus
+	 * SecuritiesStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -250,7 +251,7 @@ public class SecuritiesStatus extends Status {
 					FinancialInstrumentAttributes2.mmPaymentStatus, FinancialInstrumentAttributes63.mmPaymentStatus, FinancialInstrumentAttributes64.mmPaymentStatus, SecuritiesPaymentStatus5Choice.mmCode,
 					SecuritiesPaymentStatus5Choice.mmProprietary, FinancialInstrumentAttributes75.mmPaymentStatus, FinancialInstrumentAttributes78.mmPaymentStatus, SecuritiesPaymentStatus6Choice.mmCode,
 					SecuritiesPaymentStatus6Choice.mmProprietary);
-			elementContext_lazy = () -> SecuritiesStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentStatus";
@@ -258,6 +259,14 @@ public class SecuritiesStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesPaymentStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatus.class.getMethod("getPaymentStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecurityStatusCode status;
@@ -271,11 +280,6 @@ public class SecuritiesStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode
 	 * SecurityStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus
-	 * SecuritiesStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -284,6 +288,11 @@ public class SecuritiesStatus extends Status {
 	 * FinancialInstrumentAttributes1.mmSecurityStatus}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus
+	 * SecuritiesStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -299,7 +308,7 @@ public class SecuritiesStatus extends Status {
 	public static final MMBusinessAttribute mmStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmSecurityStatus);
-			elementContext_lazy = () -> SecuritiesStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
@@ -307,6 +316,14 @@ public class SecuritiesStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecurityStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatus.class.getMethod("getStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RegistrationProcessingStatusCode registrationStatus;
@@ -320,11 +337,6 @@ public class SecuritiesStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.RegistrationProcessingStatusCode
 	 * RegistrationProcessingStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus
-	 * SecuritiesStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -343,6 +355,11 @@ public class SecuritiesStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus
+	 * SecuritiesStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -357,7 +374,7 @@ public class SecuritiesStatus extends Status {
 	public static final MMBusinessAttribute mmRegistrationStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RegistrationProcessingStatus1Choice.mmCode, RegistrationProcessingStatus2Choice.mmCode, RegistrationProcessingStatus3Choice.mmCode, RegistrationProcessingStatus4Choice.mmCode);
-			elementContext_lazy = () -> SecuritiesStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationStatus";
@@ -365,6 +382,14 @@ public class SecuritiesStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RegistrationProcessingStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatus.class.getMethod("getRegistrationStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Security security;
@@ -402,7 +427,7 @@ public class SecuritiesStatus extends Status {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
@@ -424,9 +449,15 @@ public class SecuritiesStatus extends Status {
 				definition = "Specifies the status of the security within its lifecycle.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmSecurityStatus);
 				superType_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
-				element_lazy = () -> Arrays.asList(SecuritiesStatus.mmPaymentStatus, SecuritiesStatus.mmStatus, SecuritiesStatus.mmRegistrationStatus, SecuritiesStatus.mmSecurity);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesStatus.mmPaymentStatus, com.tools20022.repository.entity.SecuritiesStatus.mmStatus,
+						com.tools20022.repository.entity.SecuritiesStatus.mmRegistrationStatus, com.tools20022.repository.entity.SecuritiesStatus.mmSecurity);
 				derivationComponent_lazy = () -> Arrays.asList(SecuritiesPaymentStatus1Choice.mmObject(), SecuritiesPaymentStatus2Choice.mmObject(), SecuritiesPaymentStatus3Choice.mmObject(), SecurityStatus2Choice.mmObject(),
 						SecuritiesPaymentStatus4Choice.mmObject(), SecuritiesPaymentStatus5Choice.mmObject(), SecuritiesPaymentStatus6Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesStatus.class;
 			}
 		});
 		return mmObject_lazy.get();

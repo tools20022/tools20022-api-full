@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.Mandate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -41,6 +42,46 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmRelatedDirectDebit
+ * DirectDebitMandate.mmRelatedDirectDebit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmFinalCollectionDate
+ * DirectDebitMandate.mmFinalCollectionDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmFrequency
+ * DirectDebitMandate.mmFrequency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmFirstCollectionDate
+ * DirectDebitMandate.mmFirstCollectionDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmMandatePaymentType
+ * DirectDebitMandate.mmMandatePaymentType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmCollectionAmount
+ * DirectDebitMandate.mmCollectionAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmMaximumAmount
+ * DirectDebitMandate.mmMaximumAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmPreNotification
+ * DirectDebitMandate.mmPreNotification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmPreNotificationThreshold
+ * DirectDebitMandate.mmPreNotificationThreshold}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmClassification
+ * DirectDebitMandate.mmClassification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmPointInTime
+ * DirectDebitMandate.mmPointInTime}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -269,46 +310,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * OriginalMandate5Choice.mmOriginalMandate}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmRelatedDirectDebit
- * DirectDebitMandate.mmRelatedDirectDebit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmFinalCollectionDate
- * DirectDebitMandate.mmFinalCollectionDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmFrequency
- * DirectDebitMandate.mmFrequency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmFirstCollectionDate
- * DirectDebitMandate.mmFirstCollectionDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmMandatePaymentType
- * DirectDebitMandate.mmMandatePaymentType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmCollectionAmount
- * DirectDebitMandate.mmCollectionAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmMaximumAmount
- * DirectDebitMandate.mmMaximumAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmPreNotification
- * DirectDebitMandate.mmPreNotification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmPreNotificationThreshold
- * DirectDebitMandate.mmPreNotificationThreshold}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmClassification
- * DirectDebitMandate.mmClassification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmPointInTime
- * DirectDebitMandate.mmPointInTime}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -365,7 +366,7 @@ public class DirectDebitMandate extends Mandate {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedDirectDebit = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> DirectDebitMandate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedDirectDebit";
@@ -387,11 +388,6 @@ public class DirectDebitMandate extends Mandate {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
-	 * DirectDebitMandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -458,6 +454,11 @@ public class DirectDebitMandate extends Mandate {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
+	 * DirectDebitMandate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -477,7 +478,7 @@ public class DirectDebitMandate extends Mandate {
 					MandateRelatedInformation9.mmFinalCollectionDate, AmendmentInformationDetails5.mmOriginalFinalCollectionDate, MandateRelatedInformation5.mmFinalCollectionDate,
 					AmendmentInformationDetails10.mmOriginalFinalCollectionDate, MandateRelatedInformation10.mmFinalCollectionDate, MandateOccurrences3.mmFinalCollectionDate, MandateRelatedInformation11.mmFinalCollectionDate,
 					MandateOccurrences4.mmFinalCollectionDate, AmendmentInformationDetails11.mmOriginalFinalCollectionDate);
-			elementContext_lazy = () -> DirectDebitMandate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinalCollectionDate";
@@ -485,6 +486,14 @@ public class DirectDebitMandate extends Mandate {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DirectDebitMandate.class.getMethod("getFinalCollectionDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected FrequencyCode frequency;
@@ -499,11 +508,6 @@ public class DirectDebitMandate extends Mandate {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FrequencyCode
 	 * FrequencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
-	 * DirectDebitMandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -573,6 +577,11 @@ public class DirectDebitMandate extends Mandate {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
+	 * DirectDebitMandate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -592,7 +601,7 @@ public class DirectDebitMandate extends Mandate {
 					MandateOccurrences2.mmFrequency, AmendmentInformationDetails9.mmOriginalFrequency, MandateRelatedInformation9.mmFrequency, AmendmentInformationDetails5.mmOriginalFrequency, MandateRelatedInformation5.mmFrequency,
 					AmendmentInformationDetails10.mmOriginalFrequency, MandateRelatedInformation10.mmFrequency, MandateOccurrences3.mmFrequency, MandateRelatedInformation11.mmFrequency, MandateAdjustment1.mmCategory,
 					MandateOccurrences4.mmFrequency, AmendmentInformationDetails11.mmOriginalFrequency);
-			elementContext_lazy = () -> DirectDebitMandate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Frequency";
@@ -600,6 +609,14 @@ public class DirectDebitMandate extends Mandate {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FrequencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DirectDebitMandate.class.getMethod("getFrequency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODate firstCollectionDate;
@@ -612,11 +629,6 @@ public class DirectDebitMandate extends Mandate {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
-	 * DirectDebitMandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -659,6 +671,11 @@ public class DirectDebitMandate extends Mandate {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
+	 * DirectDebitMandate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -676,7 +693,7 @@ public class DirectDebitMandate extends Mandate {
 					MandateRelatedInformation8.mmFirstCollectionDate, MandateOccurrences1.mmFirstCollectionDate, MandateOccurrences2.mmFirstCollectionDate, MandateRelatedInformation9.mmFirstCollectionDate,
 					MandateRelatedInformation5.mmFirstCollectionDate, MandateRelatedInformation10.mmFirstCollectionDate, MandateOccurrences3.mmFirstCollectionDate, MandateRelatedInformation11.mmFirstCollectionDate,
 					MandateOccurrences4.mmFirstCollectionDate);
-			elementContext_lazy = () -> DirectDebitMandate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstCollectionDate";
@@ -684,6 +701,14 @@ public class DirectDebitMandate extends Mandate {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DirectDebitMandate.class.getMethod("getFirstCollectionDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PaymentProcessing mandatePaymentType;
@@ -706,11 +731,6 @@ public class DirectDebitMandate extends Mandate {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentProcessing
 	 * PaymentProcessing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
-	 * DirectDebitMandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -745,6 +765,11 @@ public class DirectDebitMandate extends Mandate {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
+	 * DirectDebitMandate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -761,7 +786,7 @@ public class DirectDebitMandate extends Mandate {
 		{
 			derivation_lazy = () -> Arrays.asList(MandateTypeInformation1.mmLocalInstrument, Mandate1.mmType, Mandate3.mmType, Mandate2.mmType, Mandate4.mmType, Mandate7.mmType, Mandate6.mmType, Mandate5.mmType, Mandate10.mmType,
 					MandateTypeInformation2.mmLocalInstrument, Mandate9.mmType, Mandate11.mmType, Mandate8.mmType);
-			elementContext_lazy = () -> DirectDebitMandate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MandatePaymentType";
@@ -785,11 +810,6 @@ public class DirectDebitMandate extends Mandate {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
-	 * DirectDebitMandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -853,6 +873,11 @@ public class DirectDebitMandate extends Mandate {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
+	 * DirectDebitMandate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -870,7 +895,7 @@ public class DirectDebitMandate extends Mandate {
 			derivation_lazy = () -> Arrays.asList(MandateInformation1.mmCollectionAmount, Mandate1.mmCollectionAmount, MandateInformation3.mmCollectionAmount, Mandate3.mmCollectionAmount, MandateInformation2.mmCollectionAmount,
 					Mandate2.mmCollectionAmount, Mandate4.mmCollectionAmount, Mandate7.mmCollectionAmount, Mandate6.mmCollectionAmount, Mandate5.mmCollectionAmount, Mandate10.mmFirstCollectionAmount, Mandate10.mmCollectionAmount,
 					Mandate9.mmFirstCollectionAmount, Mandate9.mmCollectionAmount, Mandate11.mmFirstCollectionAmount, Mandate11.mmCollectionAmount, MandateAdjustment1.mmAmount, Mandate8.mmFirstCollectionAmount, Mandate8.mmCollectionAmount);
-			elementContext_lazy = () -> DirectDebitMandate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionAmount";
@@ -878,6 +903,14 @@ public class DirectDebitMandate extends Mandate {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DirectDebitMandate.class.getMethod("getCollectionAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount maximumAmount;
@@ -892,11 +925,6 @@ public class DirectDebitMandate extends Mandate {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
-	 * DirectDebitMandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -934,6 +962,11 @@ public class DirectDebitMandate extends Mandate {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
+	 * DirectDebitMandate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -950,7 +983,7 @@ public class DirectDebitMandate extends Mandate {
 		{
 			derivation_lazy = () -> Arrays.asList(MandateInformation1.mmMaximumAmount, Mandate1.mmMaximumAmount, MandateInformation3.mmMaximumAmount, Mandate3.mmMaximumAmount, MandateInformation2.mmMaximumAmount, Mandate2.mmMaximumAmount,
 					Mandate4.mmMaximumAmount, Mandate7.mmMaximumAmount, Mandate6.mmMaximumAmount, Mandate5.mmMaximumAmount, Mandate10.mmMaximumAmount, Mandate9.mmMaximumAmount, Mandate11.mmMaximumAmount, Mandate8.mmMaximumAmount);
-			elementContext_lazy = () -> DirectDebitMandate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumAmount";
@@ -958,6 +991,14 @@ public class DirectDebitMandate extends Mandate {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DirectDebitMandate.class.getMethod("getMaximumAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TrueFalseIndicator preNotification;
@@ -992,7 +1033,7 @@ public class DirectDebitMandate extends Mandate {
 	 */
 	public static final MMBusinessAttribute mmPreNotification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> DirectDebitMandate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreNotification";
@@ -1000,6 +1041,14 @@ public class DirectDebitMandate extends Mandate {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DirectDebitMandate.class.getMethod("getPreNotification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number preNotificationThreshold;
@@ -1033,7 +1082,7 @@ public class DirectDebitMandate extends Mandate {
 	 */
 	public static final MMBusinessAttribute mmPreNotificationThreshold = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> DirectDebitMandate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreNotificationThreshold";
@@ -1041,6 +1090,14 @@ public class DirectDebitMandate extends Mandate {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DirectDebitMandate.class.getMethod("getPreNotificationThreshold", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MandateClassificationCode classification;
@@ -1054,11 +1111,6 @@ public class DirectDebitMandate extends Mandate {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.MandateClassificationCode
 	 * MandateClassificationCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
-	 * DirectDebitMandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1067,6 +1119,11 @@ public class DirectDebitMandate extends Mandate {
 	 * MandateTypeInformation2.mmClassification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
+	 * DirectDebitMandate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1081,7 +1138,7 @@ public class DirectDebitMandate extends Mandate {
 	public static final MMBusinessAttribute mmClassification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(MandateTypeInformation2.mmClassification);
-			elementContext_lazy = () -> DirectDebitMandate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Classification";
@@ -1089,6 +1146,14 @@ public class DirectDebitMandate extends Mandate {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MandateClassificationCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DirectDebitMandate.class.getMethod("getClassification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected FrequencyCode pointInTime;
@@ -1123,7 +1188,7 @@ public class DirectDebitMandate extends Mandate {
 	 */
 	public static final MMBusinessAttribute mmPointInTime = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> DirectDebitMandate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PointInTime";
@@ -1131,6 +1196,14 @@ public class DirectDebitMandate extends Mandate {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FrequencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DirectDebitMandate.class.getMethod("getPointInTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1155,9 +1228,13 @@ public class DirectDebitMandate extends Mandate {
 						MandateAmendment5.mmMandate, OriginalMandate4Choice.mmOriginalMandate, Mandate9.mmOccurrences, OriginalTransactionReference24.mmMandateRelatedInformation, MandateRelatedInformation11.mmAmendmentInformationDetails,
 						Mandate11.mmOccurrences, Mandate8.mmOccurrences, OriginalMandate5Choice.mmOriginalMandate);
 				superType_lazy = () -> Mandate.mmObject();
-				element_lazy = () -> Arrays.asList(DirectDebitMandate.mmRelatedDirectDebit, DirectDebitMandate.mmFinalCollectionDate, DirectDebitMandate.mmFrequency, DirectDebitMandate.mmFirstCollectionDate,
-						DirectDebitMandate.mmMandatePaymentType, DirectDebitMandate.mmCollectionAmount, DirectDebitMandate.mmMaximumAmount, DirectDebitMandate.mmPreNotification, DirectDebitMandate.mmPreNotificationThreshold,
-						DirectDebitMandate.mmClassification, DirectDebitMandate.mmPointInTime);
+				element_lazy = () -> Arrays
+						.asList(com.tools20022.repository.entity.DirectDebitMandate.mmRelatedDirectDebit, com.tools20022.repository.entity.DirectDebitMandate.mmFinalCollectionDate,
+								com.tools20022.repository.entity.DirectDebitMandate.mmFrequency, com.tools20022.repository.entity.DirectDebitMandate.mmFirstCollectionDate,
+								com.tools20022.repository.entity.DirectDebitMandate.mmMandatePaymentType, com.tools20022.repository.entity.DirectDebitMandate.mmCollectionAmount,
+								com.tools20022.repository.entity.DirectDebitMandate.mmMaximumAmount, com.tools20022.repository.entity.DirectDebitMandate.mmPreNotification,
+								com.tools20022.repository.entity.DirectDebitMandate.mmPreNotificationThreshold, com.tools20022.repository.entity.DirectDebitMandate.mmClassification,
+								com.tools20022.repository.entity.DirectDebitMandate.mmPointInTime);
 				derivationComponent_lazy = () -> Arrays.asList(AmendmentInformationDetails1.mmObject(), MandateRelatedInformation1.mmObject(), AmendmentInformationDetails6.mmObject(), MandateRelatedInformation6.mmObject(),
 						AmendmentInformationDetails7.mmObject(), MandateRelatedInformation7.mmObject(), AmendmentInformationDetails8.mmObject(), MandateRelatedInformation8.mmObject(), MandateOccurrences1.mmObject(),
 						MandateInformation1.mmObject(), MandateAcceptance1.mmObject(), MandateOccurrences2.mmObject(), Mandate1.mmObject(), MandateAcceptance2.mmObject(), MandateAcceptance3.mmObject(), MandateInformation3.mmObject(),
@@ -1165,6 +1242,11 @@ public class DirectDebitMandate extends Mandate {
 						MandateRelatedInformation4.mmObject(), AmendmentInformationDetails5.mmObject(), MandateRelatedInformation5.mmObject(), MandateAcceptance4.mmObject(), Mandate7.mmObject(), AmendmentInformationDetails10.mmObject(),
 						Mandate6.mmObject(), Mandate5.mmObject(), MandateRelatedInformation10.mmObject(), MandateOccurrences3.mmObject(), Mandate10.mmObject(), MandateAcceptance5.mmObject(), Mandate9.mmObject(),
 						MandateRelatedInformation11.mmObject(), Mandate11.mmObject(), MandateAdjustment1.mmObject(), MandateOccurrences4.mmObject(), Mandate8.mmObject(), AmendmentInformationDetails11.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DirectDebitMandate.class;
 			}
 		});
 		return mmObject_lazy.get();

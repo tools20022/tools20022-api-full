@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the standing settlement instruction to be applied.
@@ -99,6 +103,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingSettlementInstruction5", propOrder = {"settlementStandingInstructionDatabase", "counterparty", "vendor", "otherDeliveringSettlementParties", "otherReceivingSettlementParties"})
 public class StandingSettlementInstruction5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -381,6 +387,7 @@ public class StandingSettlementInstruction5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmStgInstrDB", required = true)
 	public SettlementStandingInstructionDatabase1Choice getSettlementStandingInstructionDatabase() {
 		return settlementStandingInstructionDatabase;
 	}
@@ -389,6 +396,7 @@ public class StandingSettlementInstruction5 {
 		this.settlementStandingInstructionDatabase = settlementStandingInstructionDatabase;
 	}
 
+	@XmlElement(name = "CtrPty", required = true)
 	public Counterparty5Choice getCounterparty() {
 		return counterparty;
 	}
@@ -397,6 +405,7 @@ public class StandingSettlementInstruction5 {
 		this.counterparty = counterparty;
 	}
 
+	@XmlElement(name = "Vndr")
 	public PartyIdentification45Choice getVendor() {
 		return vendor;
 	}
@@ -405,6 +414,7 @@ public class StandingSettlementInstruction5 {
 		this.vendor = vendor;
 	}
 
+	@XmlElement(name = "OthrDlvrgSttlmPties")
 	public SettlementParties14 getOtherDeliveringSettlementParties() {
 		return otherDeliveringSettlementParties;
 	}
@@ -413,6 +423,7 @@ public class StandingSettlementInstruction5 {
 		this.otherDeliveringSettlementParties = otherDeliveringSettlementParties;
 	}
 
+	@XmlElement(name = "OthrRcvgSttlmPties")
 	public SettlementParties14 getOtherReceivingSettlementParties() {
 		return otherReceivingSettlementParties;
 	}

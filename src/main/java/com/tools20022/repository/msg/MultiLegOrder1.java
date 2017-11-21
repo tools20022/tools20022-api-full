@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the multileg order.
@@ -66,6 +70,8 @@ import java.util.List;
  * definition} = "Provides details about the multileg order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MultiLegOrder1", propOrder = {"reportTypeRequest", "orderDetails", "legGroupDetails"})
 public class MultiLegOrder1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class MultiLegOrder1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptTpReq")
 	public MultilegReportType1Code getReportTypeRequest() {
 		return reportTypeRequest;
 	}
@@ -226,6 +233,7 @@ public class MultiLegOrder1 {
 		this.reportTypeRequest = reportTypeRequest;
 	}
 
+	@XmlElement(name = "OrdrDtls", required = true)
 	public Order3 getOrderDetails() {
 		return orderDetails;
 	}
@@ -234,6 +242,7 @@ public class MultiLegOrder1 {
 		this.orderDetails = orderDetails;
 	}
 
+	@XmlElement(name = "LegGrpDtls")
 	public List<InstrumentLeg3> getLegGroupDetails() {
 		return legGroupDetails;
 	}

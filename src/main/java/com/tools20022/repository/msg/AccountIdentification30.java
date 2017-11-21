@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.AccountInformationType1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of the account expressed with a data source scheme.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Identification of the account expressed with a data source scheme."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountIdentification30", propOrder = {"accountType", "identification"})
 public class AccountIdentification30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class AccountIdentification30 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctTp", required = true)
 	public AccountInformationType1Code getAccountType() {
 		return accountType;
 	}
@@ -171,6 +178,7 @@ public class AccountIdentification30 {
 		this.accountType = accountType;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentification26 getIdentification() {
 		return identification;
 	}

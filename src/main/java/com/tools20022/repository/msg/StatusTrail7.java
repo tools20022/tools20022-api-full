@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the history of status and reasons for a pending, posted or cancelled
@@ -102,6 +106,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusTrail7", propOrder = {"statusDate", "sendingOrganisationIdentification", "userIdentification", "processingStatus", "inferredMatchingStatus", "matchingStatus", "settlementStatus", "modificationProcessingStatus",
+		"cancellationStatus", "settled", "supplementaryData"})
 public class StatusTrail7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -632,6 +639,7 @@ public class StatusTrail7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsDt", required = true)
 	public ISODateTime getStatusDate() {
 		return statusDate;
 	}
@@ -640,6 +648,7 @@ public class StatusTrail7 {
 		this.statusDate = statusDate;
 	}
 
+	@XmlElement(name = "SndgOrgId")
 	public OrganisationIdentification9 getSendingOrganisationIdentification() {
 		return sendingOrganisationIdentification;
 	}
@@ -648,6 +657,7 @@ public class StatusTrail7 {
 		this.sendingOrganisationIdentification = sendingOrganisationIdentification;
 	}
 
+	@XmlElement(name = "UsrId")
 	public RestrictedFINXMax35Text getUserIdentification() {
 		return userIdentification;
 	}
@@ -656,6 +666,7 @@ public class StatusTrail7 {
 		this.userIdentification = userIdentification;
 	}
 
+	@XmlElement(name = "PrcgSts")
 	public ProcessingStatus60Choice getProcessingStatus() {
 		return processingStatus;
 	}
@@ -664,6 +675,7 @@ public class StatusTrail7 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "IfrrdMtchgSts")
 	public MatchingStatus30Choice getInferredMatchingStatus() {
 		return inferredMatchingStatus;
 	}
@@ -672,6 +684,7 @@ public class StatusTrail7 {
 		this.inferredMatchingStatus = inferredMatchingStatus;
 	}
 
+	@XmlElement(name = "MtchgSts")
 	public MatchingStatus30Choice getMatchingStatus() {
 		return matchingStatus;
 	}
@@ -680,6 +693,7 @@ public class StatusTrail7 {
 		this.matchingStatus = matchingStatus;
 	}
 
+	@XmlElement(name = "SttlmSts")
 	public SettlementStatus22Choice getSettlementStatus() {
 		return settlementStatus;
 	}
@@ -688,6 +702,7 @@ public class StatusTrail7 {
 		this.settlementStatus = settlementStatus;
 	}
 
+	@XmlElement(name = "ModPrcgSts")
 	public ModificationProcessingStatus8Choice getModificationProcessingStatus() {
 		return modificationProcessingStatus;
 	}
@@ -696,6 +711,7 @@ public class StatusTrail7 {
 		this.modificationProcessingStatus = modificationProcessingStatus;
 	}
 
+	@XmlElement(name = "CxlSts")
 	public ProcessingStatus61Choice getCancellationStatus() {
 		return cancellationStatus;
 	}
@@ -704,6 +720,7 @@ public class StatusTrail7 {
 		this.cancellationStatus = cancellationStatus;
 	}
 
+	@XmlElement(name = "Sttld")
 	public ProprietaryReason5 getSettled() {
 		return settled;
 	}
@@ -712,6 +729,7 @@ public class StatusTrail7 {
 		this.settled = settled;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

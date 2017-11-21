@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a high frequency trading profile.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about a high frequency trading profile."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "HighFrequencyTradingProfile1", propOrder = {"date", "settlementFrequency", "consolidationType"})
 public class HighFrequencyTradingProfile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -209,6 +215,7 @@ public class HighFrequencyTradingProfile1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODate getDate() {
 		return date;
 	}
@@ -217,6 +224,7 @@ public class HighFrequencyTradingProfile1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "SttlmFrqcy")
 	public SettlementFrequency1Choice getSettlementFrequency() {
 		return settlementFrequency;
 	}
@@ -225,6 +233,7 @@ public class HighFrequencyTradingProfile1 {
 		this.settlementFrequency = settlementFrequency;
 	}
 
+	@XmlElement(name = "CnsldtnTp")
 	public ConsolidationType1Choice getConsolidationType() {
 		return consolidationType;
 	}

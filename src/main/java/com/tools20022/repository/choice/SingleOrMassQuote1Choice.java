@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.MassQuote1;
 import com.tools20022.repository.msg.SingleQuote1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a single or a mass quote.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between a single or a mass quote."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SingleOrMassQuote1Choice", propOrder = {"singleQuoteDetails", "massQuoteDetails"})
 public class SingleOrMassQuote1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class SingleOrMassQuote1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SnglQtDtls", required = true)
 	public SingleQuote1 getSingleQuoteDetails() {
 		return singleQuoteDetails;
 	}
@@ -171,6 +178,7 @@ public class SingleOrMassQuote1Choice {
 		this.singleQuoteDetails = singleQuoteDetails;
 	}
 
+	@XmlElement(name = "MassQtDtls", required = true)
 	public MassQuote1 getMassQuoteDetails() {
 		return massQuoteDetails;
 	}

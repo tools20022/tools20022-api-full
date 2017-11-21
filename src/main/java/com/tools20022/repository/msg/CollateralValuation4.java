@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the specification of the valuation of a collateral, based on the
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralValuation4", propOrder = {"poolStatus", "type", "sector", "nominalAmount"})
 public class CollateralValuation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -332,6 +338,7 @@ public class CollateralValuation4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PoolSts", required = true)
 	public CollateralPool1Code getPoolStatus() {
 		return poolStatus;
 	}
@@ -340,6 +347,7 @@ public class CollateralValuation4 {
 		this.poolStatus = poolStatus;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public CFIIdentifier getType() {
 		return type;
 	}
@@ -348,6 +356,7 @@ public class CollateralValuation4 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Sctr", required = true)
 	public SNA2008SectorIdentifier getSector() {
 		return sector;
 	}
@@ -356,6 +365,7 @@ public class CollateralValuation4 {
 		this.sector = sector;
 	}
 
+	@XmlElement(name = "NmnlAmt")
 	public ActiveCurrencyAndAmount getNominalAmount() {
 		return nominalAmount;
 	}

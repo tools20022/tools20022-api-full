@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the securities transaction report.
@@ -104,6 +108,9 @@ import java.util.List;
  * definition} = "Details of the securities transaction report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTransactionReport4", propOrder = {"transactionIdentification", "executingParty", "investmentPartyIndicator", "submittingParty", "buyer", "seller", "orderTransmission", "transaction", "financialInstrument",
+		"investmentDecisionPerson", "executingPerson", "additionalAttributes", "technicalAttributes", "supplementaryData"})
 public class SecuritiesTransactionReport4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -790,6 +797,7 @@ public class SecuritiesTransactionReport4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max52Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -798,6 +806,7 @@ public class SecuritiesTransactionReport4 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "ExctgPty", required = true)
 	public LEIIdentifier getExecutingParty() {
 		return executingParty;
 	}
@@ -806,6 +815,7 @@ public class SecuritiesTransactionReport4 {
 		this.executingParty = executingParty;
 	}
 
+	@XmlElement(name = "InvstmtPtyInd", required = true)
 	public TrueFalseIndicator getInvestmentPartyIndicator() {
 		return investmentPartyIndicator;
 	}
@@ -814,6 +824,7 @@ public class SecuritiesTransactionReport4 {
 		this.investmentPartyIndicator = investmentPartyIndicator;
 	}
 
+	@XmlElement(name = "SubmitgPty", required = true)
 	public LEIIdentifier getSubmittingParty() {
 		return submittingParty;
 	}
@@ -822,6 +833,7 @@ public class SecuritiesTransactionReport4 {
 		this.submittingParty = submittingParty;
 	}
 
+	@XmlElement(name = "Buyr", required = true)
 	public PartyIdentification79 getBuyer() {
 		return buyer;
 	}
@@ -830,6 +842,7 @@ public class SecuritiesTransactionReport4 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Sellr", required = true)
 	public PartyIdentification79 getSeller() {
 		return seller;
 	}
@@ -838,6 +851,7 @@ public class SecuritiesTransactionReport4 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "OrdrTrnsmssn", required = true)
 	public SecuritiesTransactionTransmission2 getOrderTransmission() {
 		return orderTransmission;
 	}
@@ -846,6 +860,7 @@ public class SecuritiesTransactionReport4 {
 		this.orderTransmission = orderTransmission;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public SecuritiesTransaction1 getTransaction() {
 		return transaction;
 	}
@@ -854,6 +869,7 @@ public class SecuritiesTransactionReport4 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "FinInstrm", required = true)
 	public FinancialInstrumentAttributes3Choice getFinancialInstrument() {
 		return financialInstrument;
 	}
@@ -862,6 +878,7 @@ public class SecuritiesTransactionReport4 {
 		this.financialInstrument = financialInstrument;
 	}
 
+	@XmlElement(name = "InvstmtDcsnPrsn")
 	public InvestmentParty1Choice getInvestmentDecisionPerson() {
 		return investmentDecisionPerson;
 	}
@@ -870,6 +887,7 @@ public class SecuritiesTransactionReport4 {
 		this.investmentDecisionPerson = investmentDecisionPerson;
 	}
 
+	@XmlElement(name = "ExctgPrsn", required = true)
 	public ExecutingParty1Choice getExecutingPerson() {
 		return executingPerson;
 	}
@@ -878,6 +896,7 @@ public class SecuritiesTransactionReport4 {
 		this.executingPerson = executingPerson;
 	}
 
+	@XmlElement(name = "AddtlAttrbts", required = true)
 	public SecuritiesTransactionIndicator2 getAdditionalAttributes() {
 		return additionalAttributes;
 	}
@@ -886,6 +905,7 @@ public class SecuritiesTransactionReport4 {
 		this.additionalAttributes = additionalAttributes;
 	}
 
+	@XmlElement(name = "TechAttrbts")
 	public RecordTechnicalData1 getTechnicalAttributes() {
 		return technicalAttributes;
 	}
@@ -894,6 +914,7 @@ public class SecuritiesTransactionReport4 {
 		this.technicalAttributes = technicalAttributes;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Return criteria for information to be returned in the report deriving from a
@@ -105,6 +109,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesReturnCriteria1", propOrder = {"financialInstrumentIdentification", "ISOSecurityLongName", "ISOSecurityShortName", "classificationFinancialInstrument", "maturityDate", "issueDate", "issueCurrency",
+		"countryOfIssue", "securityStatus", "investorCSD", "issuerCSD", "technicalIssuerCSD", "CSD", "securitiesQuantityType", "minimumDenomination", "minimumMultipleQuantity", "deviatingSettlementUnit"})
 public class SecuritiesReturnCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -855,6 +862,7 @@ public class SecuritiesReturnCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public RequestedIndicator getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -863,6 +871,7 @@ public class SecuritiesReturnCriteria1 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "ISOSctyLngNm", required = true)
 	public RequestedIndicator getISOSecurityLongName() {
 		return iSOSecurityLongName;
 	}
@@ -871,6 +880,7 @@ public class SecuritiesReturnCriteria1 {
 		this.iSOSecurityLongName = iSOSecurityLongName;
 	}
 
+	@XmlElement(name = "ISOSctyShrtNm", required = true)
 	public RequestedIndicator getISOSecurityShortName() {
 		return iSOSecurityShortName;
 	}
@@ -879,6 +889,7 @@ public class SecuritiesReturnCriteria1 {
 		this.iSOSecurityShortName = iSOSecurityShortName;
 	}
 
+	@XmlElement(name = "ClssfctnFinInstrm", required = true)
 	public RequestedIndicator getClassificationFinancialInstrument() {
 		return classificationFinancialInstrument;
 	}
@@ -887,6 +898,7 @@ public class SecuritiesReturnCriteria1 {
 		this.classificationFinancialInstrument = classificationFinancialInstrument;
 	}
 
+	@XmlElement(name = "MtrtyDt", required = true)
 	public RequestedIndicator getMaturityDate() {
 		return maturityDate;
 	}
@@ -895,6 +907,7 @@ public class SecuritiesReturnCriteria1 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "IsseDt", required = true)
 	public RequestedIndicator getIssueDate() {
 		return issueDate;
 	}
@@ -903,6 +916,7 @@ public class SecuritiesReturnCriteria1 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "IsseCcy", required = true)
 	public RequestedIndicator getIssueCurrency() {
 		return issueCurrency;
 	}
@@ -911,6 +925,7 @@ public class SecuritiesReturnCriteria1 {
 		this.issueCurrency = issueCurrency;
 	}
 
+	@XmlElement(name = "CtryOfIsse", required = true)
 	public RequestedIndicator getCountryOfIssue() {
 		return countryOfIssue;
 	}
@@ -919,6 +934,7 @@ public class SecuritiesReturnCriteria1 {
 		this.countryOfIssue = countryOfIssue;
 	}
 
+	@XmlElement(name = "SctySts", required = true)
 	public RequestedIndicator getSecurityStatus() {
 		return securityStatus;
 	}
@@ -927,6 +943,7 @@ public class SecuritiesReturnCriteria1 {
 		this.securityStatus = securityStatus;
 	}
 
+	@XmlElement(name = "InvstrCSD", required = true)
 	public RequestedIndicator getInvestorCSD() {
 		return investorCSD;
 	}
@@ -935,6 +952,7 @@ public class SecuritiesReturnCriteria1 {
 		this.investorCSD = investorCSD;
 	}
 
+	@XmlElement(name = "IssrCSD", required = true)
 	public RequestedIndicator getIssuerCSD() {
 		return issuerCSD;
 	}
@@ -943,6 +961,7 @@ public class SecuritiesReturnCriteria1 {
 		this.issuerCSD = issuerCSD;
 	}
 
+	@XmlElement(name = "TechIssrCSD", required = true)
 	public RequestedIndicator getTechnicalIssuerCSD() {
 		return technicalIssuerCSD;
 	}
@@ -951,6 +970,7 @@ public class SecuritiesReturnCriteria1 {
 		this.technicalIssuerCSD = technicalIssuerCSD;
 	}
 
+	@XmlElement(name = "CSD", required = true)
 	public RequestedIndicator getCSD() {
 		return cSD;
 	}
@@ -959,6 +979,7 @@ public class SecuritiesReturnCriteria1 {
 		this.cSD = cSD;
 	}
 
+	@XmlElement(name = "SctiesQtyTp", required = true)
 	public RequestedIndicator getSecuritiesQuantityType() {
 		return securitiesQuantityType;
 	}
@@ -967,6 +988,7 @@ public class SecuritiesReturnCriteria1 {
 		this.securitiesQuantityType = securitiesQuantityType;
 	}
 
+	@XmlElement(name = "MinDnmtn", required = true)
 	public RequestedIndicator getMinimumDenomination() {
 		return minimumDenomination;
 	}
@@ -975,6 +997,7 @@ public class SecuritiesReturnCriteria1 {
 		this.minimumDenomination = minimumDenomination;
 	}
 
+	@XmlElement(name = "MinMltplQty", required = true)
 	public RequestedIndicator getMinimumMultipleQuantity() {
 		return minimumMultipleQuantity;
 	}
@@ -983,6 +1006,7 @@ public class SecuritiesReturnCriteria1 {
 		this.minimumMultipleQuantity = minimumMultipleQuantity;
 	}
 
+	@XmlElement(name = "DevtgSttlmUnit", required = true)
 	public RequestedIndicator getDeviatingSettlementUnit() {
 		return deviatingSettlementUnit;
 	}

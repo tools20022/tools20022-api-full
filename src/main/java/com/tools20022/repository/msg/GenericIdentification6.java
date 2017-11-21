@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.IdentificationIssuerRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Balance expressed with a data source scheme.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Balance expressed with a data source scheme."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericIdentification6", propOrder = {"issuer", "information", "balance"})
 public class GenericIdentification6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class GenericIdentification6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public Max8Text getIssuer() {
 		return issuer;
 	}
@@ -226,6 +233,7 @@ public class GenericIdentification6 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "Inf", required = true)
 	public Exact4AlphaNumericText getInformation() {
 		return information;
 	}
@@ -234,6 +242,7 @@ public class GenericIdentification6 {
 		this.information = information;
 	}
 
+	@XmlElement(name = "Bal", required = true)
 	public Number getBalance() {
 		return balance;
 	}

@@ -29,26 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition4Code
- * TradeTransactionCondition4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code
- * TradeTransactionCondition2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
- * TradeTransactionCondition1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition3Code
- * TradeTransactionCondition3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition5Code
- * TradeTransactionCondition5Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -216,6 +196,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmNonMarketPrice
  * TradeTransactionConditionCode.mmNonMarketPrice}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition4Code
+ * TradeTransactionCondition4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code
+ * TradeTransactionCondition2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
+ * TradeTransactionCondition1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition3Code
+ * TradeTransactionCondition3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition5Code
+ * TradeTransactionCondition5Code}</li>
  * </ul>
  * </li>
  * <li>

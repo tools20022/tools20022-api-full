@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,63 +39,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity3 Quantity3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity4 Quantity4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity2 Quantity2}</li>
- * <li>{@linkplain com.tools20022.repository.choice.UnitOfMeasure2Choice
- * UnitOfMeasure2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity10 Quantity10}</li>
- * <li>{@linkplain com.tools20022.repository.choice.UnitOfMeasure3Choice
- * UnitOfMeasure3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity9 Quantity9}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Product#mmQuantity
- * Product.mmQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tolerance#mmQuantity
- * Tolerance.mmQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LineItem#mmNetWeight
- * LineItem.mmNetWeight}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LineItem#mmBilledQuantity
- * LineItem.mmBilledQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.LineItem#mmChargeFreeQuantity
- * LineItem.mmChargeFreeQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.LineItem#mmMeasureQuantityStartRelatedLineItem
- * LineItem.mmMeasureQuantityStartRelatedLineItem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.LineItem#mmMeasureQuantityEndRelatedLineItem
- * LineItem.mmMeasureQuantityEndRelatedLineItem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.LineItem#mmGrossPriceQuantity
- * LineItem.mmGrossPriceQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LineItem#mmNetPriceQuantity
- * LineItem.mmNetPriceQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LineItem#mmGrossWeight
- * LineItem.mmGrossWeight}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Packaging#mmQuantity
- * Packaging.mmQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Packaging#mmPerPackageUnitQuantity
- * Packaging.mmPerPackageUnitQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Packaging#mmTotalConsignmentQuantity
- * Packaging.mmTotalConsignmentQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Packaging#mmTotalVolume
- * Packaging.mmTotalVolume}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Packaging#mmTotalWeight
- * Packaging.mmTotalWeight}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -152,6 +96,63 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity3 Quantity3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity4 Quantity4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity2 Quantity2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.UnitOfMeasure2Choice
+ * UnitOfMeasure2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity10 Quantity10}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.UnitOfMeasure3Choice
+ * UnitOfMeasure3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity9 Quantity9}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmQuantity
+ * Product.mmQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tolerance#mmQuantity
+ * Tolerance.mmQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LineItem#mmNetWeight
+ * LineItem.mmNetWeight}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LineItem#mmBilledQuantity
+ * LineItem.mmBilledQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.LineItem#mmChargeFreeQuantity
+ * LineItem.mmChargeFreeQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.LineItem#mmMeasureQuantityStartRelatedLineItem
+ * LineItem.mmMeasureQuantityStartRelatedLineItem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.LineItem#mmMeasureQuantityEndRelatedLineItem
+ * LineItem.mmMeasureQuantityEndRelatedLineItem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.LineItem#mmGrossPriceQuantity
+ * LineItem.mmGrossPriceQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LineItem#mmNetPriceQuantity
+ * LineItem.mmNetPriceQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LineItem#mmGrossWeight
+ * LineItem.mmGrossWeight}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Packaging#mmQuantity
+ * Packaging.mmQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Packaging#mmPerPackageUnitQuantity
+ * Packaging.mmPerPackageUnitQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Packaging#mmTotalConsignmentQuantity
+ * Packaging.mmTotalConsignmentQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Packaging#mmTotalVolume
+ * Packaging.mmTotalVolume}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Packaging#mmTotalWeight
+ * Packaging.mmTotalWeight}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -180,11 +181,6 @@ public class ProductQuantity {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
 	 * UnitOfMeasureCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity
-	 * ProductQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -233,6 +229,11 @@ public class ProductQuantity {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity
+	 * ProductQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -249,7 +250,7 @@ public class ProductQuantity {
 			derivation_lazy = () -> Arrays.asList(Product2.mmUnitOfMeasure, Product1.mmUnitOfMeasure, Quantity3.mmUnitOfMeasureCode, Quantity3.mmOtherUnitOfMeasure, Quantity4.mmUnitOfMeasureCode, Quantity4.mmOtherUnitOfMeasure,
 					Quantity2.mmUnitOfMeasureCode, Quantity2.mmOtherUnitOfMeasure, UnitOfMeasure2Choice.mmCode, UnitOfMeasure2Choice.mmProprietary, Quantity10.mmUnitOfMeasure, UnitOfMeasure3Choice.mmUnitOfMeasureCode,
 					UnitOfMeasure3Choice.mmOtherUnitOfMeasure, Quantity9.mmUnitOfMeasure, Product3.mmUnitOfMeasure, Product5.mmUnitOfMeasure);
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnitOfMeasure";
@@ -257,6 +258,14 @@ public class ProductQuantity {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnitOfMeasureCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProductQuantity.class.getMethod("getUnitOfMeasure", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DecimalNumber value;
@@ -271,11 +280,6 @@ public class ProductQuantity {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.DecimalNumber
 	 * DecimalNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity
-	 * ProductQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -319,6 +323,11 @@ public class ProductQuantity {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity
+	 * ProductQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -336,7 +345,7 @@ public class ProductQuantity {
 			derivation_lazy = () -> Arrays.asList(Product2.mmProductQuantity, Product1.mmProductQuantity, Quantity3.mmValue, Quantity4.mmValue, BillingServiceParameters1.mmVolume, BillingServiceParameters2.mmVolume,
 					BillingServiceAdjustment1.mmVolumeChange, BillingServiceAdjustment1.mmOriginalVolume, BillingServiceAdjustment1.mmNewVolume, ServiceItemTotals1.mmQuantity, Quantity10.mmValue, Quantity9.mmValue,
 					BillingServiceParameters3.mmVolume, Product3.mmProductQuantity, Product5.mmQuantityLimit);
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Value";
@@ -344,6 +353,14 @@ public class ProductQuantity {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProductQuantity.class.getMethod("getValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Product> product;
@@ -382,7 +399,7 @@ public class ProductQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmProduct = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Product";
@@ -405,11 +422,6 @@ public class ProductQuantity {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max15NumericText
 	 * Max15NumericText}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity
-	 * ProductQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -428,6 +440,11 @@ public class ProductQuantity {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity
+	 * ProductQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -443,7 +460,7 @@ public class ProductQuantity {
 	public static final MMBusinessAttribute mmFactor = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Quantity4.mmFactor, Quantity2.mmFactor, UnitPrice8.mmFactor, UnitPrice9.mmFactor, Quantity9.mmFactor, UnitPrice18.mmFactor);
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Factor";
@@ -451,6 +468,14 @@ public class ProductQuantity {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProductQuantity.class.getMethod("getFactor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected LineItem netWeightRelatedLineItem;
@@ -488,7 +513,7 @@ public class ProductQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmNetWeightRelatedLineItem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetWeightRelatedLineItem";
@@ -535,7 +560,7 @@ public class ProductQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmBilledQuantityRelatedLineItem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BilledQuantityRelatedLineItem";
@@ -583,7 +608,7 @@ public class ProductQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPackaging = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPackaging";
@@ -632,7 +657,7 @@ public class ProductQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmPackagingForUnitQuantity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PackagingForUnitQuantity";
@@ -680,7 +705,7 @@ public class ProductQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmChargeFreeQuantityRelatedLineItem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargeFreeQuantityRelatedLineItem";
@@ -711,11 +736,6 @@ public class ProductQuantity {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.LineItem LineItem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity
-	 * ProductQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -727,6 +747,11 @@ public class ProductQuantity {
 	 * LineItem16.mmMeasureQuantityStart}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity
+	 * ProductQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -743,7 +768,7 @@ public class ProductQuantity {
 	public static final MMBusinessAssociationEnd mmMeasureQuantityStart = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem10.mmMeasureQuantityStart, LineItem16.mmMeasureQuantityStart);
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MeasureQuantityStart";
@@ -774,11 +799,6 @@ public class ProductQuantity {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.LineItem LineItem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity
-	 * ProductQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -790,6 +810,11 @@ public class ProductQuantity {
 	 * LineItem16.mmMeasureQuantityEnd}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity
+	 * ProductQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -806,7 +831,7 @@ public class ProductQuantity {
 	public static final MMBusinessAssociationEnd mmMeasureQuantityEnd = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem10.mmMeasureQuantityEnd, LineItem16.mmMeasureQuantityEnd);
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MeasureQuantityEnd";
@@ -836,11 +861,6 @@ public class ProductQuantity {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Tolerance Tolerance}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity
-	 * ProductQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -868,6 +888,11 @@ public class ProductQuantity {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity
+	 * ProductQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -882,7 +907,7 @@ public class ProductQuantity {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItemDetails4.mmQuantityTolerance, LineItemDetails7.mmQuantityTolerance, LineItemDetails5.mmQuantityTolerance, LineItemDetails8.mmQuantityTolerance,
 					LineItemDetails10.mmQuantityTolerance, LineItemDetails13.mmQuantityTolerance, LineItemDetails12.mmQuantityTolerance);
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuantityTolerance";
@@ -931,7 +956,7 @@ public class ProductQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmPackagingForConsignmentlQuantity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PackagingForConsignmentlQuantity";
@@ -979,7 +1004,7 @@ public class ProductQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmPackagingForVolume = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PackagingForVolume";
@@ -1027,7 +1052,7 @@ public class ProductQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmPackagingForWeight = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PackagingForWeight";
@@ -1074,7 +1099,7 @@ public class ProductQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmGrossPriceQuantityRelatedLineItem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossPriceQuantityRelatedLineItem";
@@ -1121,7 +1146,7 @@ public class ProductQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmNetPriceQuantityRelatedLineItem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetPriceQuantityRelatedLineItem";
@@ -1168,7 +1193,7 @@ public class ProductQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmGrossWeightRelatedLineItem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductQuantity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossWeightRelatedLineItem";
@@ -1193,11 +1218,20 @@ public class ProductQuantity {
 						com.tools20022.repository.entity.LineItem.mmMeasureQuantityEndRelatedLineItem, com.tools20022.repository.entity.LineItem.mmGrossPriceQuantity, com.tools20022.repository.entity.LineItem.mmNetPriceQuantity,
 						com.tools20022.repository.entity.LineItem.mmGrossWeight, com.tools20022.repository.entity.Packaging.mmQuantity, com.tools20022.repository.entity.Packaging.mmPerPackageUnitQuantity,
 						com.tools20022.repository.entity.Packaging.mmTotalConsignmentQuantity, com.tools20022.repository.entity.Packaging.mmTotalVolume, com.tools20022.repository.entity.Packaging.mmTotalWeight);
-				element_lazy = () -> Arrays.asList(ProductQuantity.mmUnitOfMeasure, ProductQuantity.mmValue, ProductQuantity.mmProduct, ProductQuantity.mmFactor, ProductQuantity.mmNetWeightRelatedLineItem,
-						ProductQuantity.mmBilledQuantityRelatedLineItem, ProductQuantity.mmRelatedPackaging, ProductQuantity.mmPackagingForUnitQuantity, ProductQuantity.mmChargeFreeQuantityRelatedLineItem,
-						ProductQuantity.mmMeasureQuantityStart, ProductQuantity.mmMeasureQuantityEnd, ProductQuantity.mmQuantityTolerance, ProductQuantity.mmPackagingForConsignmentlQuantity, ProductQuantity.mmPackagingForVolume,
-						ProductQuantity.mmPackagingForWeight, ProductQuantity.mmGrossPriceQuantityRelatedLineItem, ProductQuantity.mmNetPriceQuantityRelatedLineItem, ProductQuantity.mmGrossWeightRelatedLineItem);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProductQuantity.mmUnitOfMeasure, com.tools20022.repository.entity.ProductQuantity.mmValue, com.tools20022.repository.entity.ProductQuantity.mmProduct,
+						com.tools20022.repository.entity.ProductQuantity.mmFactor, com.tools20022.repository.entity.ProductQuantity.mmNetWeightRelatedLineItem,
+						com.tools20022.repository.entity.ProductQuantity.mmBilledQuantityRelatedLineItem, com.tools20022.repository.entity.ProductQuantity.mmRelatedPackaging,
+						com.tools20022.repository.entity.ProductQuantity.mmPackagingForUnitQuantity, com.tools20022.repository.entity.ProductQuantity.mmChargeFreeQuantityRelatedLineItem,
+						com.tools20022.repository.entity.ProductQuantity.mmMeasureQuantityStart, com.tools20022.repository.entity.ProductQuantity.mmMeasureQuantityEnd, com.tools20022.repository.entity.ProductQuantity.mmQuantityTolerance,
+						com.tools20022.repository.entity.ProductQuantity.mmPackagingForConsignmentlQuantity, com.tools20022.repository.entity.ProductQuantity.mmPackagingForVolume,
+						com.tools20022.repository.entity.ProductQuantity.mmPackagingForWeight, com.tools20022.repository.entity.ProductQuantity.mmGrossPriceQuantityRelatedLineItem,
+						com.tools20022.repository.entity.ProductQuantity.mmNetPriceQuantityRelatedLineItem, com.tools20022.repository.entity.ProductQuantity.mmGrossWeightRelatedLineItem);
 				derivationComponent_lazy = () -> Arrays.asList(Quantity3.mmObject(), Quantity4.mmObject(), Quantity2.mmObject(), UnitOfMeasure2Choice.mmObject(), Quantity10.mmObject(), UnitOfMeasure3Choice.mmObject(), Quantity9.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ProductQuantity.class;
 			}
 		});
 		return mmObject_lazy.get();

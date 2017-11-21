@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,24 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmSpotSell
- * FinancialInstrumentSwap.mmSpotSell}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmSpotBuy
- * FinancialInstrumentSwap.mmSpotBuy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmForwardBuyBack
- * FinancialInstrumentSwap.mmForwardBuyBack}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmForwardSellBack
- * FinancialInstrumentSwap.mmForwardSellBack}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -84,6 +67,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesSwapLeg#mmForwardSellBackSwap
  * SecuritiesSwapLeg.mmForwardSellBackSwap}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmSpotSell
+ * FinancialInstrumentSwap.mmSpotSell}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmSpotBuy
+ * FinancialInstrumentSwap.mmSpotBuy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmForwardBuyBack
+ * FinancialInstrumentSwap.mmForwardBuyBack}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmForwardSellBack
+ * FinancialInstrumentSwap.mmForwardSellBack}</li>
  * </ul>
  * </li>
  * <li>
@@ -138,7 +139,7 @@ public class SecuritiesSwapLeg {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSwapLeg.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -146,6 +147,14 @@ public class SecuritiesSwapLeg {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSwapLeg.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BenchmarkCurveNameCode benchmark;
@@ -180,7 +189,7 @@ public class SecuritiesSwapLeg {
 	 */
 	public static final MMBusinessAttribute mmBenchmark = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSwapLeg.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Benchmark";
@@ -188,6 +197,14 @@ public class SecuritiesSwapLeg {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BenchmarkCurveNameCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSwapLeg.class.getMethod("getBenchmark", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max256Text curvePoint;
@@ -218,7 +235,7 @@ public class SecuritiesSwapLeg {
 	 */
 	public static final MMBusinessAttribute mmCurvePoint = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSwapLeg.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurvePoint";
@@ -226,6 +243,14 @@ public class SecuritiesSwapLeg {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSwapLeg.class.getMethod("getCurvePoint", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate benchmarkYield;
@@ -260,7 +285,7 @@ public class SecuritiesSwapLeg {
 	 */
 	public static final MMBusinessAttribute mmBenchmarkYield = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSwapLeg.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BenchmarkYield";
@@ -268,6 +293,14 @@ public class SecuritiesSwapLeg {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSwapLeg.class.getMethod("getBenchmarkYield", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BaseOneRate benchmarkOffset;
@@ -301,7 +334,7 @@ public class SecuritiesSwapLeg {
 	 */
 	public static final MMBusinessAttribute mmBenchmarkOffset = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSwapLeg.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BenchmarkOffset";
@@ -309,6 +342,14 @@ public class SecuritiesSwapLeg {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSwapLeg.class.getMethod("getBenchmarkOffset", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected FinancialInstrumentSwap spotSellSwap;
@@ -348,7 +389,7 @@ public class SecuritiesSwapLeg {
 	 */
 	public static final MMBusinessAssociationEnd mmSpotSellSwap = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSwapLeg.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpotSellSwap";
@@ -397,7 +438,7 @@ public class SecuritiesSwapLeg {
 	 */
 	public static final MMBusinessAssociationEnd mmSpotBuySwap = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSwapLeg.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpotBuySwap";
@@ -446,7 +487,7 @@ public class SecuritiesSwapLeg {
 	 */
 	public static final MMBusinessAssociationEnd mmForwardBuyBackSwap = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSwapLeg.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForwardBuyBackSwap";
@@ -495,7 +536,7 @@ public class SecuritiesSwapLeg {
 	 */
 	public static final MMBusinessAssociationEnd mmForwardSellBackSwap = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSwapLeg.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForwardSellBackSwap";
@@ -517,8 +558,15 @@ public class SecuritiesSwapLeg {
 				definition = "Contains the details of one of the legs of a swap, both in time (spot versus [partial] forward details) and the side (sell versus buy).";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.FinancialInstrumentSwap.mmSpotSell, com.tools20022.repository.entity.FinancialInstrumentSwap.mmSpotBuy,
 						com.tools20022.repository.entity.FinancialInstrumentSwap.mmForwardBuyBack, com.tools20022.repository.entity.FinancialInstrumentSwap.mmForwardSellBack);
-				element_lazy = () -> Arrays.asList(SecuritiesSwapLeg.mmAmount, SecuritiesSwapLeg.mmBenchmark, SecuritiesSwapLeg.mmCurvePoint, SecuritiesSwapLeg.mmBenchmarkYield, SecuritiesSwapLeg.mmBenchmarkOffset,
-						SecuritiesSwapLeg.mmSpotSellSwap, SecuritiesSwapLeg.mmSpotBuySwap, SecuritiesSwapLeg.mmForwardBuyBackSwap, SecuritiesSwapLeg.mmForwardSellBackSwap);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSwapLeg.mmAmount, com.tools20022.repository.entity.SecuritiesSwapLeg.mmBenchmark,
+						com.tools20022.repository.entity.SecuritiesSwapLeg.mmCurvePoint, com.tools20022.repository.entity.SecuritiesSwapLeg.mmBenchmarkYield, com.tools20022.repository.entity.SecuritiesSwapLeg.mmBenchmarkOffset,
+						com.tools20022.repository.entity.SecuritiesSwapLeg.mmSpotSellSwap, com.tools20022.repository.entity.SecuritiesSwapLeg.mmSpotBuySwap, com.tools20022.repository.entity.SecuritiesSwapLeg.mmForwardBuyBackSwap,
+						com.tools20022.repository.entity.SecuritiesSwapLeg.mmForwardSellBackSwap);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesSwapLeg.class;
 			}
 		});
 		return mmObject_lazy.get();

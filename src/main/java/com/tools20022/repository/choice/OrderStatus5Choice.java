@@ -31,6 +31,10 @@ import com.tools20022.repository.msg.RejectedStatus9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of status for an order.
@@ -78,6 +82,8 @@ import java.util.List;
  * definition} = "Choice of status for an order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderStatus5Choice", propOrder = {"status", "cancelled", "conditionallyAccepted", "rejected", "suspended", "inRepair", "partiallySettled"})
 public class OrderStatus5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -523,6 +529,7 @@ public class OrderStatus5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public OrderStatus4Code getStatus() {
 		return status;
 	}
@@ -531,6 +538,7 @@ public class OrderStatus5Choice {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Canc", required = true)
 	public CancelledStatusReason16 getCancelled() {
 		return cancelled;
 	}
@@ -539,6 +547,7 @@ public class OrderStatus5Choice {
 		this.cancelled = cancelled;
 	}
 
+	@XmlElement(name = "CondlyAccptd", required = true)
 	public ConditionallyAcceptedStatus3Choice getConditionallyAccepted() {
 		return conditionallyAccepted;
 	}
@@ -547,6 +556,7 @@ public class OrderStatus5Choice {
 		this.conditionallyAccepted = conditionallyAccepted;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public List<RejectedStatus9> getRejected() {
 		return rejected;
 	}
@@ -555,6 +565,7 @@ public class OrderStatus5Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Sspd", required = true)
 	public SuspendedStatusReason4Choice getSuspended() {
 		return suspended;
 	}
@@ -563,6 +574,7 @@ public class OrderStatus5Choice {
 		this.suspended = suspended;
 	}
 
+	@XmlElement(name = "InRpr", required = true)
 	public InRepairStatusReason4Choice getInRepair() {
 		return inRepair;
 	}
@@ -571,6 +583,7 @@ public class OrderStatus5Choice {
 		this.inRepair = inRepair;
 	}
 
+	@XmlElement(name = "PrtlySttld", required = true)
 	public PartiallySettledStatus10 getPartiallySettled() {
 		return partiallySettled;
 	}

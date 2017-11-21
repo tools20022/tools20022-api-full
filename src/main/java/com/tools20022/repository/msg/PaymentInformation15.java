@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment terms and conditions related to a single invoice to be financed.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Payment terms and conditions related to a single invoice to be financed."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInformation15", propOrder = {"paymentMethod", "paymentAccount"})
 public class PaymentInformation15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -182,6 +188,7 @@ public class PaymentInformation15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtMtd", required = true)
 	public PaymentMethod4Code getPaymentMethod() {
 		return paymentMethod;
 	}
@@ -190,6 +197,7 @@ public class PaymentInformation15 {
 		this.paymentMethod = paymentMethod;
 	}
 
+	@XmlElement(name = "PmtAcct")
 	public CashAccount7 getPaymentAccount() {
 		return paymentAccount;
 	}

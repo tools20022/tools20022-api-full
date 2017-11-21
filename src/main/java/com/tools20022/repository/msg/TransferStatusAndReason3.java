@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the status of a transfer instruction and its reason.
@@ -105,6 +109,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransferStatusAndReason2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferStatusAndReason3", propOrder = {"masterReference", "transferReference", "clientReference", "cancellationReference", "transferStatus", "tradeDate", "sendOutDate", "statusInitiator"})
 public class TransferStatusAndReason3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -623,6 +629,7 @@ public class TransferStatusAndReason3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -631,6 +638,7 @@ public class TransferStatusAndReason3 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -639,6 +647,7 @@ public class TransferStatusAndReason3 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -647,6 +656,7 @@ public class TransferStatusAndReason3 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -655,6 +665,7 @@ public class TransferStatusAndReason3 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "TrfSts", required = true)
 	public TransferStatus1Choice getTransferStatus() {
 		return transferStatus;
 	}
@@ -663,6 +674,7 @@ public class TransferStatusAndReason3 {
 		this.transferStatus = transferStatus;
 	}
 
+	@XmlElement(name = "TradDt")
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
@@ -671,6 +683,7 @@ public class TransferStatusAndReason3 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "SndOutDt")
 	public ISODate getSendOutDate() {
 		return sendOutDate;
 	}
@@ -679,6 +692,7 @@ public class TransferStatusAndReason3 {
 		this.sendOutDate = sendOutDate;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification2Choice getStatusInitiator() {
 		return statusInitiator;
 	}

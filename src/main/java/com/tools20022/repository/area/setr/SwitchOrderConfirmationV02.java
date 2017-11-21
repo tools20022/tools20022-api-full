@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesTradeArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -43,9 +45,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.015.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradeArchive
@@ -93,6 +92,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.015.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -112,6 +114,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "setr.015.001.02", propOrder = {"masterReference", "poolReference", "previousReference", "relatedReference", "switchExecutionDetails", "intermediaryDetails", "copyDetails", "extension"})
 public class SwitchOrderConfirmationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -152,6 +156,14 @@ public class SwitchOrderConfirmationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationV02.class.getMethod("getMasterReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -187,6 +199,14 @@ public class SwitchOrderConfirmationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationV02.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference3> previousReference;
 	/**
@@ -220,6 +240,14 @@ public class SwitchOrderConfirmationV02 {
 			definition = "Reference to a linked message that was previously sent.";
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationV02.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 relatedReference;
@@ -257,6 +285,14 @@ public class SwitchOrderConfirmationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationV02.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SwitchExecution3 switchExecutionDetails;
 	/**
@@ -292,6 +328,14 @@ public class SwitchOrderConfirmationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> SwitchExecution3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationV02.class.getMethod("getSwitchExecutionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Intermediary4> intermediaryDetails;
 	/**
@@ -326,6 +370,14 @@ public class SwitchOrderConfirmationV02 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			complexType_lazy = () -> Intermediary4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationV02.class.getMethod("getIntermediaryDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CopyInformation1 copyDetails;
@@ -363,6 +415,14 @@ public class SwitchOrderConfirmationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationV02.class.getMethod("getCopyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension1> extension;
 	/**
@@ -399,6 +459,14 @@ public class SwitchOrderConfirmationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationV02.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -413,9 +481,10 @@ public class SwitchOrderConfirmationV02 {
 				xmlTag = "setr.015.001.02";
 				businessArea_lazy = () -> SecuritiesTradeArchive.mmObject();
 				xmlName = "setr.015.001.02";
-				messageBuildingBlock_lazy = () -> Arrays.asList(SwitchOrderConfirmationV02.mmMasterReference, SwitchOrderConfirmationV02.mmPoolReference, SwitchOrderConfirmationV02.mmPreviousReference,
-						SwitchOrderConfirmationV02.mmRelatedReference, SwitchOrderConfirmationV02.mmSwitchExecutionDetails, SwitchOrderConfirmationV02.mmIntermediaryDetails, SwitchOrderConfirmationV02.mmCopyDetails,
-						SwitchOrderConfirmationV02.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmMasterReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmPoolReference,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmPreviousReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmRelatedReference,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmSwitchExecutionDetails, com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmIntermediaryDetails,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmCopyDetails, com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -425,10 +494,16 @@ public class SwitchOrderConfirmationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SwitchOrderConfirmationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public AdditionalReference3 getMasterReference() {
 		return masterReference;
 	}
@@ -437,6 +512,7 @@ public class SwitchOrderConfirmationV02 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -445,6 +521,7 @@ public class SwitchOrderConfirmationV02 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference3> getPreviousReference() {
 		return previousReference;
 	}
@@ -453,6 +530,7 @@ public class SwitchOrderConfirmationV02 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef", required = true)
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
@@ -461,6 +539,7 @@ public class SwitchOrderConfirmationV02 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "SwtchExctnDtls", required = true)
 	public SwitchExecution3 getSwitchExecutionDetails() {
 		return switchExecutionDetails;
 	}
@@ -469,6 +548,7 @@ public class SwitchOrderConfirmationV02 {
 		this.switchExecutionDetails = switchExecutionDetails;
 	}
 
+	@XmlElement(name = "IntrmyDtls")
 	public List<Intermediary4> getIntermediaryDetails() {
 		return intermediaryDetails;
 	}
@@ -477,6 +557,7 @@ public class SwitchOrderConfirmationV02 {
 		this.intermediaryDetails = intermediaryDetails;
 	}
 
+	@XmlElement(name = "CpyDtls")
 	public CopyInformation1 getCopyDetails() {
 		return copyDetails;
 	}
@@ -485,11 +566,18 @@ public class SwitchOrderConfirmationV02 {
 		this.copyDetails = copyDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.015.02.02")
+	static public class Document {
+		@XmlElement(name = "setr.015.001.02", required = true)
+		public SwitchOrderConfirmationV02 messageBody;
 	}
 }

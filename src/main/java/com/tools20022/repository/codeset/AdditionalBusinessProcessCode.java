@@ -30,32 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess3Code
- * AdditionalBusinessProcess3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code
- * AdditionalBusinessProcess4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess2Code
- * AdditionalBusinessProcess2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess1Code
- * AdditionalBusinessProcess1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code
- * AdditionalBusinessProcess7Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess5Code
- * AdditionalBusinessProcess5Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code
- * AdditionalBusinessProcess6Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -100,6 +74,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcessCode#mmRequiredAction
  * AdditionalBusinessProcessCode.mmRequiredAction}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess3Code
+ * AdditionalBusinessProcess3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code
+ * AdditionalBusinessProcess4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess2Code
+ * AdditionalBusinessProcess2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess1Code
+ * AdditionalBusinessProcess1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code
+ * AdditionalBusinessProcess7Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess5Code
+ * AdditionalBusinessProcess5Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code
+ * AdditionalBusinessProcess6Code}</li>
  * </ul>
  * </li>
  * <li>

@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to security commands.
@@ -76,6 +80,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMSecurityContext1", propOrder = {"currentSecurityScheme", "securitySchemeCapabilities", "securityDevice", "key", "hostChallenge"})
 public class ATMSecurityContext1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -318,6 +324,7 @@ public class ATMSecurityContext1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CurSctySchme", required = true)
 	public ATMSecurityScheme1Code getCurrentSecurityScheme() {
 		return currentSecurityScheme;
 	}
@@ -326,6 +333,7 @@ public class ATMSecurityContext1 {
 		this.currentSecurityScheme = currentSecurityScheme;
 	}
 
+	@XmlElement(name = "SctySchmeCpblties")
 	public List<ATMSecurityScheme2Code> getSecuritySchemeCapabilities() {
 		return securitySchemeCapabilities;
 	}
@@ -334,6 +342,7 @@ public class ATMSecurityContext1 {
 		this.securitySchemeCapabilities = securitySchemeCapabilities;
 	}
 
+	@XmlElement(name = "SctyDvc", required = true)
 	public ATMSecurityDevice1 getSecurityDevice() {
 		return securityDevice;
 	}
@@ -342,6 +351,7 @@ public class ATMSecurityContext1 {
 		this.securityDevice = securityDevice;
 	}
 
+	@XmlElement(name = "Key")
 	public List<CryptographicKey7> getKey() {
 		return key;
 	}
@@ -350,6 +360,7 @@ public class ATMSecurityContext1 {
 		this.key = key;
 	}
 
+	@XmlElement(name = "HstChllng")
 	public Max140Binary getHostChallenge() {
 		return hostChallenge;
 	}

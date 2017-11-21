@@ -24,6 +24,10 @@ import com.tools20022.repository.codeset.SettlementQueryType1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the information that is searched through the definition of specific
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementInstructionQueryDefinition1", propOrder = {"queryType", "searchCriteria"})
 public class SettlementInstructionQueryDefinition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -164,6 +170,7 @@ public class SettlementInstructionQueryDefinition1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QryTp", required = true)
 	public SettlementQueryType1Code getQueryType() {
 		return queryType;
 	}
@@ -172,6 +179,7 @@ public class SettlementInstructionQueryDefinition1 {
 		this.queryType = queryType;
 	}
 
+	@XmlElement(name = "SchCrit", required = true)
 	public SettlementInstructionQueryCriteria1 getSearchCriteria() {
 		return searchCriteria;
 	}

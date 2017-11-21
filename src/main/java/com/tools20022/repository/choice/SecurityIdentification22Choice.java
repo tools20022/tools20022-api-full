@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AlternateIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for the identification of a financial instrument.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecurityIdentification1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityIdentification22Choice", propOrder = {"ISIN", "alternateIdentification", "RIC", "tickerSymbol", "bloomberg", "CTA", "common"})
 public class SecurityIdentification22Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -508,6 +514,7 @@ public class SecurityIdentification22Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ISIN", required = true)
 	public ISINOct2015Identifier getISIN() {
 		return iSIN;
 	}
@@ -516,6 +523,7 @@ public class SecurityIdentification22Choice {
 		this.iSIN = iSIN;
 	}
 
+	@XmlElement(name = "AltrnId", required = true)
 	public AlternateIdentification1 getAlternateIdentification() {
 		return alternateIdentification;
 	}
@@ -524,6 +532,7 @@ public class SecurityIdentification22Choice {
 		this.alternateIdentification = alternateIdentification;
 	}
 
+	@XmlElement(name = "RIC", required = true)
 	public RICIdentifier getRIC() {
 		return rIC;
 	}
@@ -532,6 +541,7 @@ public class SecurityIdentification22Choice {
 		this.rIC = rIC;
 	}
 
+	@XmlElement(name = "TckrSymb", required = true)
 	public TickerIdentifier getTickerSymbol() {
 		return tickerSymbol;
 	}
@@ -540,6 +550,7 @@ public class SecurityIdentification22Choice {
 		this.tickerSymbol = tickerSymbol;
 	}
 
+	@XmlElement(name = "Blmbrg", required = true)
 	public BloombergIdentifier getBloomberg() {
 		return bloomberg;
 	}
@@ -548,6 +559,7 @@ public class SecurityIdentification22Choice {
 		this.bloomberg = bloomberg;
 	}
 
+	@XmlElement(name = "CTA", required = true)
 	public ConsolidatedTapeAssociationIdentifier getCTA() {
 		return cTA;
 	}
@@ -556,6 +568,7 @@ public class SecurityIdentification22Choice {
 		this.cTA = cTA;
 	}
 
+	@XmlElement(name = "Cmon", required = true)
 	public EuroclearClearstreamIdentifier getCommon() {
 		return common;
 	}

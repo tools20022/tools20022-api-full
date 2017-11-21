@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Single terminal management action to be performed by the point of
@@ -114,6 +118,9 @@ import java.util.List;
  * TMSAction5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TMSAction6", propOrder = {"type", "remoteAccess", "terminalManagerIdentification", "TMSProtocol", "TMSProtocolVersion", "dataSetIdentification", "componentType", "delegationScopeIdentification",
+		"delegationScopeDefinition", "delegationProof", "protectedDelegationProof", "trigger", "additionalProcess", "reTry", "timeCondition", "TMChallenge", "keyEnciphermentCertificate", "errorAction", "additionalInformation"})
 public class TMSAction6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1060,6 +1067,7 @@ public class TMSAction6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TerminalManagementAction2Code getType() {
 		return type;
 	}
@@ -1068,6 +1076,7 @@ public class TMSAction6 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "RmotAccs")
 	public NetworkParameters5 getRemoteAccess() {
 		return remoteAccess;
 	}
@@ -1076,6 +1085,7 @@ public class TMSAction6 {
 		this.remoteAccess = remoteAccess;
 	}
 
+	@XmlElement(name = "TermnlMgrId")
 	public GenericIdentification71 getTerminalManagerIdentification() {
 		return terminalManagerIdentification;
 	}
@@ -1084,6 +1094,7 @@ public class TMSAction6 {
 		this.terminalManagerIdentification = terminalManagerIdentification;
 	}
 
+	@XmlElement(name = "TMSPrtcol")
 	public Max35Text getTMSProtocol() {
 		return tMSProtocol;
 	}
@@ -1092,6 +1103,7 @@ public class TMSAction6 {
 		this.tMSProtocol = tMSProtocol;
 	}
 
+	@XmlElement(name = "TMSPrtcolVrsn")
 	public Max35Text getTMSProtocolVersion() {
 		return tMSProtocolVersion;
 	}
@@ -1100,6 +1112,7 @@ public class TMSAction6 {
 		this.tMSProtocolVersion = tMSProtocolVersion;
 	}
 
+	@XmlElement(name = "DataSetId")
 	public DataSetIdentification6 getDataSetIdentification() {
 		return dataSetIdentification;
 	}
@@ -1108,6 +1121,7 @@ public class TMSAction6 {
 		this.dataSetIdentification = dataSetIdentification;
 	}
 
+	@XmlElement(name = "CmpntTp")
 	public List<DataSetCategory9Code> getComponentType() {
 		return componentType;
 	}
@@ -1116,6 +1130,7 @@ public class TMSAction6 {
 		this.componentType = componentType;
 	}
 
+	@XmlElement(name = "DlgtnScpId")
 	public Max35Text getDelegationScopeIdentification() {
 		return delegationScopeIdentification;
 	}
@@ -1124,6 +1139,7 @@ public class TMSAction6 {
 		this.delegationScopeIdentification = delegationScopeIdentification;
 	}
 
+	@XmlElement(name = "DlgtnScpDef")
 	public Max3000Binary getDelegationScopeDefinition() {
 		return delegationScopeDefinition;
 	}
@@ -1132,6 +1148,7 @@ public class TMSAction6 {
 		this.delegationScopeDefinition = delegationScopeDefinition;
 	}
 
+	@XmlElement(name = "DlgtnProof")
 	public Max5000Binary getDelegationProof() {
 		return delegationProof;
 	}
@@ -1140,6 +1157,7 @@ public class TMSAction6 {
 		this.delegationProof = delegationProof;
 	}
 
+	@XmlElement(name = "PrtctdDlgtnProof")
 	public ContentInformationType12 getProtectedDelegationProof() {
 		return protectedDelegationProof;
 	}
@@ -1148,6 +1166,7 @@ public class TMSAction6 {
 		this.protectedDelegationProof = protectedDelegationProof;
 	}
 
+	@XmlElement(name = "Trggr", required = true)
 	public TerminalManagementActionTrigger1Code getTrigger() {
 		return trigger;
 	}
@@ -1156,6 +1175,7 @@ public class TMSAction6 {
 		this.trigger = trigger;
 	}
 
+	@XmlElement(name = "AddtlPrc")
 	public List<TerminalManagementAdditionalProcess1Code> getAdditionalProcess() {
 		return additionalProcess;
 	}
@@ -1164,6 +1184,7 @@ public class TMSAction6 {
 		this.additionalProcess = additionalProcess;
 	}
 
+	@XmlElement(name = "ReTry")
 	public ProcessRetry2 getReTry() {
 		return reTry;
 	}
@@ -1172,6 +1193,7 @@ public class TMSAction6 {
 		this.reTry = reTry;
 	}
 
+	@XmlElement(name = "TmCond")
 	public ProcessTiming3 getTimeCondition() {
 		return timeCondition;
 	}
@@ -1180,6 +1202,7 @@ public class TMSAction6 {
 		this.timeCondition = timeCondition;
 	}
 
+	@XmlElement(name = "TMChllng")
 	public Max140Binary getTMChallenge() {
 		return tMChallenge;
 	}
@@ -1188,6 +1211,7 @@ public class TMSAction6 {
 		this.tMChallenge = tMChallenge;
 	}
 
+	@XmlElement(name = "KeyNcphrmntCert")
 	public List<Max10KBinary> getKeyEnciphermentCertificate() {
 		return keyEnciphermentCertificate;
 	}
@@ -1196,6 +1220,7 @@ public class TMSAction6 {
 		this.keyEnciphermentCertificate = keyEnciphermentCertificate;
 	}
 
+	@XmlElement(name = "ErrActn")
 	public List<ErrorAction3> getErrorAction() {
 		return errorAction;
 	}
@@ -1204,6 +1229,7 @@ public class TMSAction6 {
 		this.errorAction = errorAction;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max3000Binary> getAdditionalInformation() {
 		return additionalInformation;
 	}

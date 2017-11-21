@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the current and market value of the collateral held.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Collateral6", propOrder = {"postHaircutValue", "marketValue", "collateralType"})
 public class Collateral6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class Collateral6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PstHrcutVal", required = true)
 	public ActiveCurrencyAndAmount getPostHaircutValue() {
 		return postHaircutValue;
 	}
@@ -237,6 +244,7 @@ public class Collateral6 {
 		this.postHaircutValue = postHaircutValue;
 	}
 
+	@XmlElement(name = "MktVal", required = true)
 	public ActiveCurrencyAndAmount getMarketValue() {
 		return marketValue;
 	}
@@ -245,6 +253,7 @@ public class Collateral6 {
 		this.marketValue = marketValue;
 	}
 
+	@XmlElement(name = "CollTp", required = true)
 	public CollateralType1Code getCollateralType() {
 		return collateralType;
 	}

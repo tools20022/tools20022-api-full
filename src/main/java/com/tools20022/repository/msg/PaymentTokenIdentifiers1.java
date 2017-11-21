@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifier of a token provider requestor.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifier of a token provider requestor."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTokenIdentifiers1", propOrder = {"providerIdentification", "requestorIdentification"})
 public class PaymentTokenIdentifiers1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -156,6 +162,7 @@ public class PaymentTokenIdentifiers1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrvdrId", required = true)
 	public Max35Text getProviderIdentification() {
 		return providerIdentification;
 	}
@@ -164,6 +171,7 @@ public class PaymentTokenIdentifiers1 {
 		this.providerIdentification = providerIdentification;
 	}
 
+	@XmlElement(name = "RqstrId", required = true)
 	public Max35Text getRequestorIdentification() {
 		return requestorIdentification;
 	}

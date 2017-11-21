@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide information concerning the verification of
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "VerificationReport1", propOrder = {"originalIdentification", "verification", "reason", "originalPartyAndAccountIdentification", "updatedPartyAndAccountIdentification"})
 public class VerificationReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -323,6 +329,7 @@ public class VerificationReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlId", required = true)
 	public Max35Text getOriginalIdentification() {
 		return originalIdentification;
 	}
@@ -331,6 +338,7 @@ public class VerificationReport1 {
 		this.originalIdentification = originalIdentification;
 	}
 
+	@XmlElement(name = "Vrfctn", required = true)
 	public IdentificationVerificationIndicator getVerification() {
 		return verification;
 	}
@@ -339,6 +347,7 @@ public class VerificationReport1 {
 		this.verification = verification;
 	}
 
+	@XmlElement(name = "Rsn")
 	public VerificationReason1Choice getReason() {
 		return reason;
 	}
@@ -347,6 +356,7 @@ public class VerificationReport1 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "OrgnlPtyAndAcctId")
 	public IdentificationInformation1 getOriginalPartyAndAccountIdentification() {
 		return originalPartyAndAccountIdentification;
 	}
@@ -355,6 +365,7 @@ public class VerificationReport1 {
 		this.originalPartyAndAccountIdentification = originalPartyAndAccountIdentification;
 	}
 
+	@XmlElement(name = "UpdtdPtyAndAcctId")
 	public IdentificationInformation1 getUpdatedPartyAndAccountIdentification() {
 		return updatedPartyAndAccountIdentification;
 	}

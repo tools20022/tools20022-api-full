@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cryptographic Key to exchange.
@@ -85,6 +89,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CryptographicKey1", propOrder = {"identification", "additionalIdentification", "version", "type", "function", "activationDate", "deactivationDate", "keyValue"})
 public class CryptographicKey1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -439,6 +445,7 @@ public class CryptographicKey1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max140Text getIdentification() {
 		return identification;
 	}
@@ -447,6 +454,7 @@ public class CryptographicKey1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AddtlId")
 	public Max35Binary getAdditionalIdentification() {
 		return additionalIdentification;
 	}
@@ -455,6 +463,7 @@ public class CryptographicKey1 {
 		this.additionalIdentification = additionalIdentification;
 	}
 
+	@XmlElement(name = "Vrsn", required = true)
 	public Exact10Text getVersion() {
 		return version;
 	}
@@ -463,6 +472,7 @@ public class CryptographicKey1 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "Tp")
 	public CryptographicKeyType1Code getType() {
 		return type;
 	}
@@ -471,6 +481,7 @@ public class CryptographicKey1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Fctn", required = true)
 	public List<KeyUsage1Code> getFunction() {
 		return function;
 	}
@@ -479,6 +490,7 @@ public class CryptographicKey1 {
 		this.function = function;
 	}
 
+	@XmlElement(name = "ActvtnDt")
 	public ISODateTime getActivationDate() {
 		return activationDate;
 	}
@@ -487,6 +499,7 @@ public class CryptographicKey1 {
 		this.activationDate = activationDate;
 	}
 
+	@XmlElement(name = "DeactvtnDt")
 	public ISODateTime getDeactivationDate() {
 		return deactivationDate;
 	}
@@ -495,6 +508,7 @@ public class CryptographicKey1 {
 		this.deactivationDate = deactivationDate;
 	}
 
+	@XmlElement(name = "KeyVal", required = true)
 	public ContentInformationType2 getKeyValue() {
 		return keyValue;
 	}

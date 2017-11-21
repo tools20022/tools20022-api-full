@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.ElectionType1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the type of election advice and linked messages.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ElectionAdviceFunction1", propOrder = {"electionType", "previousAgentCAElectionAdviceIdentification", "agentCAElectionStatusAdviceIdentification", "agentCAElectionAmendmentRequestIdentification"})
 public class ElectionAdviceFunction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -271,6 +277,7 @@ public class ElectionAdviceFunction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ElctnTp", required = true)
 	public ElectionType1Code getElectionType() {
 		return electionType;
 	}
@@ -279,6 +286,7 @@ public class ElectionAdviceFunction1 {
 		this.electionType = electionType;
 	}
 
+	@XmlElement(name = "PrvsAgtCAElctnAdvcId")
 	public DocumentIdentification8 getPreviousAgentCAElectionAdviceIdentification() {
 		return previousAgentCAElectionAdviceIdentification;
 	}
@@ -287,6 +295,7 @@ public class ElectionAdviceFunction1 {
 		this.previousAgentCAElectionAdviceIdentification = previousAgentCAElectionAdviceIdentification;
 	}
 
+	@XmlElement(name = "AgtCAElctnStsAdvcId")
 	public DocumentIdentification8 getAgentCAElectionStatusAdviceIdentification() {
 		return agentCAElectionStatusAdviceIdentification;
 	}
@@ -295,6 +304,7 @@ public class ElectionAdviceFunction1 {
 		this.agentCAElectionStatusAdviceIdentification = agentCAElectionStatusAdviceIdentification;
 	}
 
+	@XmlElement(name = "AgtCAElctnAmdmntReqId")
 	public DocumentIdentification8 getAgentCAElectionAmendmentRequestIdentification() {
 		return agentCAElectionAmendmentRequestIdentification;
 	}

@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money due to a party as compensation for a service.
@@ -80,6 +84,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Commission14", propOrder = {"type", "amount", "rate", "commercialAgreementReference"})
 public class Commission14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -335,6 +341,7 @@ public class Commission14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public CommissionType6Code getType() {
 		return type;
 	}
@@ -343,6 +350,7 @@ public class Commission14 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Amt")
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -351,6 +359,7 @@ public class Commission14 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -359,6 +368,7 @@ public class Commission14 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "ComrclAgrmtRef")
 	public RestrictedFINMax30Text getCommercialAgreementReference() {
 		return commercialAgreementReference;
 	}

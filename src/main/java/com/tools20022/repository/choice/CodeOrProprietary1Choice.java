@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format between an ISO 20022 code and a proprietary code.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice of format between an ISO 20022 code and a proprietary code."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CodeOrProprietary1Choice", propOrder = {"code", "proprietary"})
 public class CodeOrProprietary1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class CodeOrProprietary1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public Max4Text getCode() {
 		return code;
 	}
@@ -185,6 +192,7 @@ public class CodeOrProprietary1Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification13 getProprietary() {
 		return proprietary;
 	}

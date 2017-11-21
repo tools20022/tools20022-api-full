@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.AcquirerAuthorisationResponse1;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header17;
 import com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The AcquirerAuthorisationResponse message is sent by an issuer or an agent to
@@ -35,9 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code cain.002.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcquirertoIssuerCardTransactionLatestVersion
@@ -70,6 +69,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code cain.002.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -81,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcquirerAuthorisationResponse", propOrder = {"header", "authorisationResponse", "securityTrailer"})
 public class AcquirerAuthorisationResponse {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -117,6 +121,14 @@ public class AcquirerAuthorisationResponse {
 			minOccurs = 1;
 			complexType_lazy = () -> Header17.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcquirerAuthorisationResponse.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AcquirerAuthorisationResponse1 authorisationResponse;
 	/**
@@ -151,6 +163,14 @@ public class AcquirerAuthorisationResponse {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcquirerAuthorisationResponse1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcquirerAuthorisationResponse.class.getMethod("getAuthorisationResponse", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ContentInformationType15 securityTrailer;
@@ -187,6 +207,14 @@ public class AcquirerAuthorisationResponse {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcquirerAuthorisationResponse.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -199,7 +227,8 @@ public class AcquirerAuthorisationResponse {
 				rootElement = "Document";
 				xmlTag = "AcqrrAuthstnRspn";
 				businessArea_lazy = () -> AcquirertoIssuerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AcquirerAuthorisationResponse.mmHeader, AcquirerAuthorisationResponse.mmAuthorisationResponse, AcquirerAuthorisationResponse.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerAuthorisationResponse.mmHeader, com.tools20022.repository.area.cain.AcquirerAuthorisationResponse.mmAuthorisationResponse,
+						com.tools20022.repository.area.cain.AcquirerAuthorisationResponse.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "cain";
@@ -209,10 +238,16 @@ public class AcquirerAuthorisationResponse {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcquirerAuthorisationResponse.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header17 getHeader() {
 		return header;
 	}
@@ -221,6 +256,7 @@ public class AcquirerAuthorisationResponse {
 		this.header = header;
 	}
 
+	@XmlElement(name = "AuthstnRspn", required = true)
 	public AcquirerAuthorisationResponse1 getAuthorisationResponse() {
 		return authorisationResponse;
 	}
@@ -229,11 +265,18 @@ public class AcquirerAuthorisationResponse {
 		this.authorisationResponse = authorisationResponse;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType15 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:cain.002.01.01")
+	static public class Document {
+		@XmlElement(name = "AcqrrAuthstnRspn", required = true)
+		public AcquirerAuthorisationResponse messageBody;
 	}
 }

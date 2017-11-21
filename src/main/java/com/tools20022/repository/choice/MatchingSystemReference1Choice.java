@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a matching system unique identification or the related
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MatchingSystemReference1Choice", propOrder = {"matchingSystemUniqueReference", "relatedReference"})
 public class MatchingSystemReference1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -182,6 +188,7 @@ public class MatchingSystemReference1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MtchgSysUnqRef", required = true)
 	public Max35Text getMatchingSystemUniqueReference() {
 		return matchingSystemUniqueReference;
 	}
@@ -190,6 +197,7 @@ public class MatchingSystemReference1Choice {
 		this.matchingSystemUniqueReference = matchingSystemUniqueReference;
 	}
 
+	@XmlElement(name = "RltdRef", required = true)
 	public Max35Text getRelatedReference() {
 		return relatedReference;
 	}

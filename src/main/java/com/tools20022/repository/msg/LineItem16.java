@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unit of information showing the related provision of products and/or services
@@ -141,6 +145,10 @@ import java.util.List;
  * LineItem10}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LineItem16", propOrder = {"identification", "tradeProduct", "buyerOrderIdentification", "contractIdentification", "purchaseAccountingAccount", "netPrice", "netPriceQuantity", "netPriceAllowanceCharge", "netWeight",
+		"grossPrice", "grossPriceQuantity", "grossWeight", "logisticsCharge", "tax", "allowanceCharge", "financialAdjustment", "billedQuantity", "packageQuantity", "perPackageUnitQuantity", "packaging", "chargeFreeQuantity",
+		"measureQuantityStart", "measureQuantityEnd", "measureDateTimeStart", "measureDateTimeEnd", "shipTo", "incoterms", "deliveryDateTime", "deliveryNoteIdentification", "monetarySummation", "includedNote"})
 public class LineItem16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1794,6 +1802,7 @@ public class LineItem16 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -1802,6 +1811,7 @@ public class LineItem16 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "TradPdct")
 	public TradeProduct2 getTradeProduct() {
 		return tradeProduct;
 	}
@@ -1810,6 +1820,7 @@ public class LineItem16 {
 		this.tradeProduct = tradeProduct;
 	}
 
+	@XmlElement(name = "BuyrOrdrId")
 	public DocumentIdentification23 getBuyerOrderIdentification() {
 		return buyerOrderIdentification;
 	}
@@ -1818,6 +1829,7 @@ public class LineItem16 {
 		this.buyerOrderIdentification = buyerOrderIdentification;
 	}
 
+	@XmlElement(name = "CtrctId")
 	public DocumentIdentification22 getContractIdentification() {
 		return contractIdentification;
 	}
@@ -1826,6 +1838,7 @@ public class LineItem16 {
 		this.contractIdentification = contractIdentification;
 	}
 
+	@XmlElement(name = "PurchsAcctgAcct")
 	public List<AccountingAccount1> getPurchaseAccountingAccount() {
 		return purchaseAccountingAccount;
 	}
@@ -1834,6 +1847,7 @@ public class LineItem16 {
 		this.purchaseAccountingAccount = purchaseAccountingAccount;
 	}
 
+	@XmlElement(name = "NetPric")
 	public List<CurrencyAndAmount> getNetPrice() {
 		return netPrice;
 	}
@@ -1842,6 +1856,7 @@ public class LineItem16 {
 		this.netPrice = netPrice;
 	}
 
+	@XmlElement(name = "NetPricQty")
 	public Quantity9 getNetPriceQuantity() {
 		return netPriceQuantity;
 	}
@@ -1850,6 +1865,7 @@ public class LineItem16 {
 		this.netPriceQuantity = netPriceQuantity;
 	}
 
+	@XmlElement(name = "NetPricAllwncChrg")
 	public List<LineItemAllowanceCharge2> getNetPriceAllowanceCharge() {
 		return netPriceAllowanceCharge;
 	}
@@ -1858,6 +1874,7 @@ public class LineItem16 {
 		this.netPriceAllowanceCharge = netPriceAllowanceCharge;
 	}
 
+	@XmlElement(name = "NetWght")
 	public Quantity10 getNetWeight() {
 		return netWeight;
 	}
@@ -1866,6 +1883,7 @@ public class LineItem16 {
 		this.netWeight = netWeight;
 	}
 
+	@XmlElement(name = "GrssPric")
 	public List<CurrencyAndAmount> getGrossPrice() {
 		return grossPrice;
 	}
@@ -1874,6 +1892,7 @@ public class LineItem16 {
 		this.grossPrice = grossPrice;
 	}
 
+	@XmlElement(name = "GrssPricQty")
 	public Quantity9 getGrossPriceQuantity() {
 		return grossPriceQuantity;
 	}
@@ -1882,6 +1901,7 @@ public class LineItem16 {
 		this.grossPriceQuantity = grossPriceQuantity;
 	}
 
+	@XmlElement(name = "GrssWght")
 	public Quantity10 getGrossWeight() {
 		return grossWeight;
 	}
@@ -1890,6 +1910,7 @@ public class LineItem16 {
 		this.grossWeight = grossWeight;
 	}
 
+	@XmlElement(name = "LogstcsChrg")
 	public List<ChargesDetails4> getLogisticsCharge() {
 		return logisticsCharge;
 	}
@@ -1898,6 +1919,7 @@ public class LineItem16 {
 		this.logisticsCharge = logisticsCharge;
 	}
 
+	@XmlElement(name = "Tax")
 	public List<LineItemTax1> getTax() {
 		return tax;
 	}
@@ -1906,6 +1928,7 @@ public class LineItem16 {
 		this.tax = tax;
 	}
 
+	@XmlElement(name = "AllwncChrg")
 	public List<LineItemAllowanceCharge2> getAllowanceCharge() {
 		return allowanceCharge;
 	}
@@ -1914,6 +1937,7 @@ public class LineItem16 {
 		this.allowanceCharge = allowanceCharge;
 	}
 
+	@XmlElement(name = "FinAdjstmnt")
 	public List<Adjustment6> getFinancialAdjustment() {
 		return financialAdjustment;
 	}
@@ -1922,6 +1946,7 @@ public class LineItem16 {
 		this.financialAdjustment = financialAdjustment;
 	}
 
+	@XmlElement(name = "BlldQty")
 	public Quantity10 getBilledQuantity() {
 		return billedQuantity;
 	}
@@ -1930,6 +1955,7 @@ public class LineItem16 {
 		this.billedQuantity = billedQuantity;
 	}
 
+	@XmlElement(name = "PackgQty")
 	public DecimalNumber getPackageQuantity() {
 		return packageQuantity;
 	}
@@ -1938,6 +1964,7 @@ public class LineItem16 {
 		this.packageQuantity = packageQuantity;
 	}
 
+	@XmlElement(name = "PerPackgUnitQty")
 	public Quantity10 getPerPackageUnitQuantity() {
 		return perPackageUnitQuantity;
 	}
@@ -1946,6 +1973,7 @@ public class LineItem16 {
 		this.perPackageUnitQuantity = perPackageUnitQuantity;
 	}
 
+	@XmlElement(name = "Packgng")
 	public List<Packaging1> getPackaging() {
 		return packaging;
 	}
@@ -1954,6 +1982,7 @@ public class LineItem16 {
 		this.packaging = packaging;
 	}
 
+	@XmlElement(name = "ChrgFreeQty")
 	public Quantity10 getChargeFreeQuantity() {
 		return chargeFreeQuantity;
 	}
@@ -1962,6 +1991,7 @@ public class LineItem16 {
 		this.chargeFreeQuantity = chargeFreeQuantity;
 	}
 
+	@XmlElement(name = "MeasrQtyStart")
 	public Quantity10 getMeasureQuantityStart() {
 		return measureQuantityStart;
 	}
@@ -1970,6 +2000,7 @@ public class LineItem16 {
 		this.measureQuantityStart = measureQuantityStart;
 	}
 
+	@XmlElement(name = "MeasrQtyEnd")
 	public Quantity10 getMeasureQuantityEnd() {
 		return measureQuantityEnd;
 	}
@@ -1978,6 +2009,7 @@ public class LineItem16 {
 		this.measureQuantityEnd = measureQuantityEnd;
 	}
 
+	@XmlElement(name = "MeasrDtTmStart")
 	public ISODateTime getMeasureDateTimeStart() {
 		return measureDateTimeStart;
 	}
@@ -1986,6 +2018,7 @@ public class LineItem16 {
 		this.measureDateTimeStart = measureDateTimeStart;
 	}
 
+	@XmlElement(name = "MeasrDtTmEnd")
 	public ISODateTime getMeasureDateTimeEnd() {
 		return measureDateTimeEnd;
 	}
@@ -1994,6 +2027,7 @@ public class LineItem16 {
 		this.measureDateTimeEnd = measureDateTimeEnd;
 	}
 
+	@XmlElement(name = "ShipTo")
 	public TradeParty3 getShipTo() {
 		return shipTo;
 	}
@@ -2002,6 +2036,7 @@ public class LineItem16 {
 		this.shipTo = shipTo;
 	}
 
+	@XmlElement(name = "Incotrms")
 	public Incoterms3 getIncoterms() {
 		return incoterms;
 	}
@@ -2010,6 +2045,7 @@ public class LineItem16 {
 		this.incoterms = incoterms;
 	}
 
+	@XmlElement(name = "DlvryDtTm")
 	public ISODateTime getDeliveryDateTime() {
 		return deliveryDateTime;
 	}
@@ -2018,6 +2054,7 @@ public class LineItem16 {
 		this.deliveryDateTime = deliveryDateTime;
 	}
 
+	@XmlElement(name = "DlvryNoteId")
 	public DocumentIdentification22 getDeliveryNoteIdentification() {
 		return deliveryNoteIdentification;
 	}
@@ -2026,6 +2063,7 @@ public class LineItem16 {
 		this.deliveryNoteIdentification = deliveryNoteIdentification;
 	}
 
+	@XmlElement(name = "MntrySummtn")
 	public LineItemMonetarySummation1 getMonetarySummation() {
 		return monetarySummation;
 	}
@@ -2034,6 +2072,7 @@ public class LineItem16 {
 		this.monetarySummation = monetarySummation;
 	}
 
+	@XmlElement(name = "InclNote")
 	public List<AdditionalInformation1> getIncludedNote() {
 		return includedNote;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of actions to be performed by the card acceptor.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Action4", propOrder = {"actionType", "messageToPresent"})
 public class Action4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -211,6 +217,7 @@ public class Action4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ActnTp", required = true)
 	public ActionType5Code getActionType() {
 		return actionType;
 	}
@@ -219,6 +226,7 @@ public class Action4 {
 		this.actionType = actionType;
 	}
 
+	@XmlElement(name = "MsgToPres")
 	public ActionMessage2 getMessageToPresent() {
 		return messageToPresent;
 	}

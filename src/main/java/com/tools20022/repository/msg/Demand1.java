@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the demand.
@@ -100,6 +104,9 @@ import java.util.List;
  * definition} = "Details of the demand."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Demand1", propOrder = {"identification", "type", "undertakingIdentification", "demandAmount", "advisingPartyReferenceNumber", "secondAdvisingPartyReferenceNumber", "confirmerReferenceNumber", "settlementAccount",
+		"presentationDetails", "requestedExpiryDate", "demandDocumentation", "additionalInformation"})
 public class Demand1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -649,6 +656,7 @@ public class Demand1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -657,6 +665,7 @@ public class Demand1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public DemandType1Code getType() {
 		return type;
 	}
@@ -665,6 +674,7 @@ public class Demand1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "UdrtkgId", required = true)
 	public Undertaking6 getUndertakingIdentification() {
 		return undertakingIdentification;
 	}
@@ -673,6 +683,7 @@ public class Demand1 {
 		this.undertakingIdentification = undertakingIdentification;
 	}
 
+	@XmlElement(name = "DmndAmt", required = true)
 	public UndertakingAmount3 getDemandAmount() {
 		return demandAmount;
 	}
@@ -681,6 +692,7 @@ public class Demand1 {
 		this.demandAmount = demandAmount;
 	}
 
+	@XmlElement(name = "AdvsgPtyRefNb")
 	public Max35Text getAdvisingPartyReferenceNumber() {
 		return advisingPartyReferenceNumber;
 	}
@@ -689,6 +701,7 @@ public class Demand1 {
 		this.advisingPartyReferenceNumber = advisingPartyReferenceNumber;
 	}
 
+	@XmlElement(name = "ScndAdvsgPtyRefNb")
 	public Max35Text getSecondAdvisingPartyReferenceNumber() {
 		return secondAdvisingPartyReferenceNumber;
 	}
@@ -697,6 +710,7 @@ public class Demand1 {
 		this.secondAdvisingPartyReferenceNumber = secondAdvisingPartyReferenceNumber;
 	}
 
+	@XmlElement(name = "CnfrmrRefNb")
 	public Max35Text getConfirmerReferenceNumber() {
 		return confirmerReferenceNumber;
 	}
@@ -705,6 +719,7 @@ public class Demand1 {
 		this.confirmerReferenceNumber = confirmerReferenceNumber;
 	}
 
+	@XmlElement(name = "SttlmAcct")
 	public List<CashAccount27> getSettlementAccount() {
 		return settlementAccount;
 	}
@@ -713,6 +728,7 @@ public class Demand1 {
 		this.settlementAccount = settlementAccount;
 	}
 
+	@XmlElement(name = "PresntnDtls")
 	public Presentation2 getPresentationDetails() {
 		return presentationDetails;
 	}
@@ -721,6 +737,7 @@ public class Demand1 {
 		this.presentationDetails = presentationDetails;
 	}
 
+	@XmlElement(name = "ReqdXpryDt")
 	public ISODate getRequestedExpiryDate() {
 		return requestedExpiryDate;
 	}
@@ -729,6 +746,7 @@ public class Demand1 {
 		this.requestedExpiryDate = requestedExpiryDate;
 	}
 
+	@XmlElement(name = "DmndDcmnttn")
 	public DemandDocumentation1 getDemandDocumentation() {
 		return demandDocumentation;
 	}
@@ -737,6 +755,7 @@ public class Demand1 {
 		this.demandDocumentation = demandDocumentation;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

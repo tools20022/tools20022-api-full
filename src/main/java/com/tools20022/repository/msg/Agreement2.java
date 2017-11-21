@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Agreement details for the over the counter market.
@@ -119,6 +123,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Agreement2", propOrder = {"agreementDetails", "agreementIdentification", "agreementDate", "baseCurrency", "agreementFramework"})
 public class Agreement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -427,6 +433,7 @@ public class Agreement2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AgrmtDtls", required = true)
 	public Max140Text getAgreementDetails() {
 		return agreementDetails;
 	}
@@ -435,6 +442,7 @@ public class Agreement2 {
 		this.agreementDetails = agreementDetails;
 	}
 
+	@XmlElement(name = "AgrmtId")
 	public Max140Text getAgreementIdentification() {
 		return agreementIdentification;
 	}
@@ -443,6 +451,7 @@ public class Agreement2 {
 		this.agreementIdentification = agreementIdentification;
 	}
 
+	@XmlElement(name = "AgrmtDt", required = true)
 	public ISODate getAgreementDate() {
 		return agreementDate;
 	}
@@ -451,6 +460,7 @@ public class Agreement2 {
 		this.agreementDate = agreementDate;
 	}
 
+	@XmlElement(name = "BaseCcy", required = true)
 	public CurrencyCode getBaseCurrency() {
 		return baseCurrency;
 	}
@@ -459,6 +469,7 @@ public class Agreement2 {
 		this.baseCurrency = baseCurrency;
 	}
 
+	@XmlElement(name = "AgrmtFrmwk")
 	public AgreementFramework1Choice getAgreementFramework() {
 		return agreementFramework;
 	}

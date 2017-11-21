@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on the remittance advice.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information on the remittance advice."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RemittanceLocationDetails1", propOrder = {"method", "electronicAddress", "postalAddress"})
 public class RemittanceLocationDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -253,6 +259,7 @@ public class RemittanceLocationDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Mtd", required = true)
 	public RemittanceLocationMethod2Code getMethod() {
 		return method;
 	}
@@ -261,6 +268,7 @@ public class RemittanceLocationDetails1 {
 		this.method = method;
 	}
 
+	@XmlElement(name = "ElctrncAdr")
 	public Max2048Text getElectronicAddress() {
 		return electronicAddress;
 	}
@@ -269,6 +277,7 @@ public class RemittanceLocationDetails1 {
 		this.electronicAddress = electronicAddress;
 	}
 
+	@XmlElement(name = "PstlAdr")
 	public NameAndAddress10 getPostalAddress() {
 		return postalAddress;
 	}

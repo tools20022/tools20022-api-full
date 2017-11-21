@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Financial instruments representing a sum of rights of the investor vis-a-vis
@@ -171,6 +175,11 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentAttributes1", propOrder = {"certificateNumber", "properties", "classificationType", "contractVersionNumber", "countryOfIssue", "couponAttachedNumber", "coveredIndicator", "denominationCurrency",
+		"appearance", "issueDate", "legalRestrictions", "taxLotNumber", "tradeLotSize", "minimumTradedNominalQuantity", "name", "placeOfIssueIdentification", "placeOfRegistry", "poolNumber", "primaryPlaceOfListingIdentification",
+		"positionLimit", "listingDate", "NTPositionLimit", "productType", "contractSettlementMonth", "minimumTradingPricingIncrement", "purpose", "rating", "securityStatus", "secondaryPlaceOfListing", "settleStyle", "issuer",
+		"registrationForm", "legAttributes", "eventGroupDetails", "additionalUnderlyingAttributes"})
 public class FinancialInstrumentAttributes1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1916,6 +1925,7 @@ public class FinancialInstrumentAttributes1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CertNb")
 	public Max35Text getCertificateNumber() {
 		return certificateNumber;
 	}
@@ -1924,6 +1934,7 @@ public class FinancialInstrumentAttributes1 {
 		this.certificateNumber = certificateNumber;
 	}
 
+	@XmlElement(name = "Props")
 	public FinancialInstrumentProperties1Choice getProperties() {
 		return properties;
 	}
@@ -1932,6 +1943,7 @@ public class FinancialInstrumentAttributes1 {
 		this.properties = properties;
 	}
 
+	@XmlElement(name = "ClssfctnTp")
 	public SecurityClassificationType1Choice getClassificationType() {
 		return classificationType;
 	}
@@ -1940,6 +1952,7 @@ public class FinancialInstrumentAttributes1 {
 		this.classificationType = classificationType;
 	}
 
+	@XmlElement(name = "CtrctVrsnNb")
 	public Number getContractVersionNumber() {
 		return contractVersionNumber;
 	}
@@ -1948,6 +1961,7 @@ public class FinancialInstrumentAttributes1 {
 		this.contractVersionNumber = contractVersionNumber;
 	}
 
+	@XmlElement(name = "CtryOfIsse")
 	public CountryCode getCountryOfIssue() {
 		return countryOfIssue;
 	}
@@ -1956,6 +1970,7 @@ public class FinancialInstrumentAttributes1 {
 		this.countryOfIssue = countryOfIssue;
 	}
 
+	@XmlElement(name = "CpnAttchdNb")
 	public Max3NumericText getCouponAttachedNumber() {
 		return couponAttachedNumber;
 	}
@@ -1964,6 +1979,7 @@ public class FinancialInstrumentAttributes1 {
 		this.couponAttachedNumber = couponAttachedNumber;
 	}
 
+	@XmlElement(name = "CvrdInd")
 	public YesNoIndicator getCoveredIndicator() {
 		return coveredIndicator;
 	}
@@ -1972,6 +1988,7 @@ public class FinancialInstrumentAttributes1 {
 		this.coveredIndicator = coveredIndicator;
 	}
 
+	@XmlElement(name = "DnmtnCcy")
 	public CurrencyCode getDenominationCurrency() {
 		return denominationCurrency;
 	}
@@ -1980,6 +1997,7 @@ public class FinancialInstrumentAttributes1 {
 		this.denominationCurrency = denominationCurrency;
 	}
 
+	@XmlElement(name = "Apprnc")
 	public Appearance1Code getAppearance() {
 		return appearance;
 	}
@@ -1988,6 +2006,7 @@ public class FinancialInstrumentAttributes1 {
 		this.appearance = appearance;
 	}
 
+	@XmlElement(name = "IsseDt")
 	public ISODateTime getIssueDate() {
 		return issueDate;
 	}
@@ -1996,6 +2015,7 @@ public class FinancialInstrumentAttributes1 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "LglRstrctns")
 	public LegalRestrictions1Code getLegalRestrictions() {
 		return legalRestrictions;
 	}
@@ -2004,6 +2024,7 @@ public class FinancialInstrumentAttributes1 {
 		this.legalRestrictions = legalRestrictions;
 	}
 
+	@XmlElement(name = "TaxLotNb")
 	public Max15NumericText getTaxLotNumber() {
 		return taxLotNumber;
 	}
@@ -2012,6 +2033,7 @@ public class FinancialInstrumentAttributes1 {
 		this.taxLotNumber = taxLotNumber;
 	}
 
+	@XmlElement(name = "TradLotSz")
 	public FinancialInstrumentQuantityChoice getTradeLotSize() {
 		return tradeLotSize;
 	}
@@ -2020,6 +2042,7 @@ public class FinancialInstrumentAttributes1 {
 		this.tradeLotSize = tradeLotSize;
 	}
 
+	@XmlElement(name = "MinTraddNmnlQty")
 	public UnitOrFaceAmountChoice getMinimumTradedNominalQuantity() {
 		return minimumTradedNominalQuantity;
 	}
@@ -2028,6 +2051,7 @@ public class FinancialInstrumentAttributes1 {
 		this.minimumTradedNominalQuantity = minimumTradedNominalQuantity;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max140Text getName() {
 		return name;
 	}
@@ -2036,6 +2060,7 @@ public class FinancialInstrumentAttributes1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PlcOfIsseId")
 	public MICIdentifier getPlaceOfIssueIdentification() {
 		return placeOfIssueIdentification;
 	}
@@ -2044,6 +2069,7 @@ public class FinancialInstrumentAttributes1 {
 		this.placeOfIssueIdentification = placeOfIssueIdentification;
 	}
 
+	@XmlElement(name = "PlcOfRegy")
 	public BICOrCountryCodeChoice getPlaceOfRegistry() {
 		return placeOfRegistry;
 	}
@@ -2052,6 +2078,7 @@ public class FinancialInstrumentAttributes1 {
 		this.placeOfRegistry = placeOfRegistry;
 	}
 
+	@XmlElement(name = "PoolNb")
 	public Max15NumericText getPoolNumber() {
 		return poolNumber;
 	}
@@ -2060,6 +2087,7 @@ public class FinancialInstrumentAttributes1 {
 		this.poolNumber = poolNumber;
 	}
 
+	@XmlElement(name = "PmryPlcOfListgId")
 	public MICIdentifier getPrimaryPlaceOfListingIdentification() {
 		return primaryPlaceOfListingIdentification;
 	}
@@ -2068,6 +2096,7 @@ public class FinancialInstrumentAttributes1 {
 		this.primaryPlaceOfListingIdentification = primaryPlaceOfListingIdentification;
 	}
 
+	@XmlElement(name = "PosLmt")
 	public FinancialInstrumentQuantityChoice getPositionLimit() {
 		return positionLimit;
 	}
@@ -2076,6 +2105,7 @@ public class FinancialInstrumentAttributes1 {
 		this.positionLimit = positionLimit;
 	}
 
+	@XmlElement(name = "ListgDt")
 	public ISODateTime getListingDate() {
 		return listingDate;
 	}
@@ -2084,6 +2114,7 @@ public class FinancialInstrumentAttributes1 {
 		this.listingDate = listingDate;
 	}
 
+	@XmlElement(name = "NTPosLmt")
 	public FinancialInstrumentQuantityChoice getNTPositionLimit() {
 		return nTPositionLimit;
 	}
@@ -2092,6 +2123,7 @@ public class FinancialInstrumentAttributes1 {
 		this.nTPositionLimit = nTPositionLimit;
 	}
 
+	@XmlElement(name = "PdctTp")
 	public ProductType1Code getProductType() {
 		return productType;
 	}
@@ -2100,6 +2132,7 @@ public class FinancialInstrumentAttributes1 {
 		this.productType = productType;
 	}
 
+	@XmlElement(name = "CtrctSttlmMnth")
 	public ISOYearMonth getContractSettlementMonth() {
 		return contractSettlementMonth;
 	}
@@ -2108,6 +2141,7 @@ public class FinancialInstrumentAttributes1 {
 		this.contractSettlementMonth = contractSettlementMonth;
 	}
 
+	@XmlElement(name = "MinTradgPricgIncrmt")
 	public Number getMinimumTradingPricingIncrement() {
 		return minimumTradingPricingIncrement;
 	}
@@ -2116,6 +2150,7 @@ public class FinancialInstrumentAttributes1 {
 		this.minimumTradingPricingIncrement = minimumTradingPricingIncrement;
 	}
 
+	@XmlElement(name = "Purp")
 	public Max256Text getPurpose() {
 		return purpose;
 	}
@@ -2124,6 +2159,7 @@ public class FinancialInstrumentAttributes1 {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "Ratg")
 	public Rating1 getRating() {
 		return rating;
 	}
@@ -2132,6 +2168,7 @@ public class FinancialInstrumentAttributes1 {
 		this.rating = rating;
 	}
 
+	@XmlElement(name = "SctySts")
 	public SecurityStatus1Code getSecurityStatus() {
 		return securityStatus;
 	}
@@ -2140,6 +2177,7 @@ public class FinancialInstrumentAttributes1 {
 		this.securityStatus = securityStatus;
 	}
 
+	@XmlElement(name = "ScndryPlcOfListg")
 	public List<MICIdentifier> getSecondaryPlaceOfListing() {
 		return secondaryPlaceOfListing;
 	}
@@ -2148,6 +2186,7 @@ public class FinancialInstrumentAttributes1 {
 		this.secondaryPlaceOfListing = secondaryPlaceOfListing;
 	}
 
+	@XmlElement(name = "SttlStyle")
 	public SettleStyle1Code getSettleStyle() {
 		return settleStyle;
 	}
@@ -2156,6 +2195,7 @@ public class FinancialInstrumentAttributes1 {
 		this.settleStyle = settleStyle;
 	}
 
+	@XmlElement(name = "Issr")
 	public PartyIdentification12Choice getIssuer() {
 		return issuer;
 	}
@@ -2164,6 +2204,7 @@ public class FinancialInstrumentAttributes1 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "RegnForm")
 	public FormOfSecurity1Code getRegistrationForm() {
 		return registrationForm;
 	}
@@ -2172,6 +2213,7 @@ public class FinancialInstrumentAttributes1 {
 		this.registrationForm = registrationForm;
 	}
 
+	@XmlElement(name = "LegAttrbts")
 	public LegDetails1 getLegAttributes() {
 		return legAttributes;
 	}
@@ -2180,6 +2222,7 @@ public class FinancialInstrumentAttributes1 {
 		this.legAttributes = legAttributes;
 	}
 
+	@XmlElement(name = "EvtGrpDtls")
 	public List<EventGroup1> getEventGroupDetails() {
 		return eventGroupDetails;
 	}
@@ -2188,6 +2231,7 @@ public class FinancialInstrumentAttributes1 {
 		this.eventGroupDetails = eventGroupDetails;
 	}
 
+	@XmlElement(name = "AddtlUndrlygAttrbts")
 	public UnderlyingAttributes getAdditionalUnderlyingAttributes() {
 		return additionalUnderlyingAttributes;
 	}

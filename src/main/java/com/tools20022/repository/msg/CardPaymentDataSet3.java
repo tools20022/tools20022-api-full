@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transaction for whose batch capture has been rejected.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentDataSet3", propOrder = {"transactionSequenceCounter", "transactionResponse", "environment", "transaction"})
 public class CardPaymentDataSet3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -256,6 +262,7 @@ public class CardPaymentDataSet3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxSeqCntr", required = true)
 	public Max9NumericText getTransactionSequenceCounter() {
 		return transactionSequenceCounter;
 	}
@@ -264,6 +271,7 @@ public class CardPaymentDataSet3 {
 		this.transactionSequenceCounter = transactionSequenceCounter;
 	}
 
+	@XmlElement(name = "TxRspn", required = true)
 	public ResponseType1 getTransactionResponse() {
 		return transactionResponse;
 	}
@@ -272,6 +280,7 @@ public class CardPaymentDataSet3 {
 		this.transactionResponse = transactionResponse;
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment3 getEnvironment() {
 		return environment;
 	}
@@ -280,6 +289,7 @@ public class CardPaymentDataSet3 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransactionAdviceResponse1 getTransaction() {
 		return transaction;
 	}

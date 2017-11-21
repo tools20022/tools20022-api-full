@@ -33,6 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} =
  * "Central Bank of Russia; RussianCentralBankIdentificationCode"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "RU[0-9]{9,9}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -69,6 +71,7 @@ public class RussianCentralBankIdentificationCodeIdentifier {
 				name = "RussianCentralBankIdentificationCodeIdentifier";
 				definition = "Russian Central Bank Identification Code. Identifies Russian financial institutions on the Russian national clearing system.";
 				identificationScheme = "Central Bank of Russia; RussianCentralBankIdentificationCode";
+				pattern = "RU[0-9]{9,9}";
 			}
 		});
 		return mmObject_lazy.get();

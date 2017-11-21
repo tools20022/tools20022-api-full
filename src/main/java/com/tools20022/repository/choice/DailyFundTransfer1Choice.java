@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TransferEvent1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between time and event fund transfer.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between time and event fund transfer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DailyFundTransfer1Choice", propOrder = {"transferTime", "transferEvent"})
 public class DailyFundTransfer1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class DailyFundTransfer1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrfTm", required = true)
 	public ISOTime getTransferTime() {
 		return transferTime;
 	}
@@ -166,6 +173,7 @@ public class DailyFundTransfer1Choice {
 		this.transferTime = transferTime;
 	}
 
+	@XmlElement(name = "TrfEvt", required = true)
 	public TransferEvent1 getTransferEvent() {
 		return transferEvent;
 	}

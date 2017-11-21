@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Posting of an item to a cash account, in the context of a cash transaction,
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PayInScheduleItems", propOrder = {"amount", "deadline"})
 public class PayInScheduleItems {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class PayInScheduleItems {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -185,6 +192,7 @@ public class PayInScheduleItems {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Ddln", required = true)
 	public ISOTime getDeadline() {
 		return deadline;
 	}

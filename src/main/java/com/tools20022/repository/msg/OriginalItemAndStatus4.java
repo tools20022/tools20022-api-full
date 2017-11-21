@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the original notification item and to provide the status.
@@ -95,6 +99,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * OriginalItemAndStatus3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalItemAndStatus4", propOrder = {"originalItemIdentification", "originalEndToEndIdentification", "amount", "expectedValueDate", "itemStatus", "additionalStatusInformation", "originalItemReference"})
 public class OriginalItemAndStatus4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -555,6 +561,7 @@ public class OriginalItemAndStatus4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlItmId", required = true)
 	public Max35Text getOriginalItemIdentification() {
 		return originalItemIdentification;
 	}
@@ -563,6 +570,7 @@ public class OriginalItemAndStatus4 {
 		this.originalItemIdentification = originalItemIdentification;
 	}
 
+	@XmlElement(name = "OrgnlEndToEndId")
 	public Max35Text getOriginalEndToEndIdentification() {
 		return originalEndToEndIdentification;
 	}
@@ -571,6 +579,7 @@ public class OriginalItemAndStatus4 {
 		this.originalEndToEndIdentification = originalEndToEndIdentification;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -579,6 +588,7 @@ public class OriginalItemAndStatus4 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "XpctdValDt")
 	public ISODate getExpectedValueDate() {
 		return expectedValueDate;
 	}
@@ -587,6 +597,7 @@ public class OriginalItemAndStatus4 {
 		this.expectedValueDate = expectedValueDate;
 	}
 
+	@XmlElement(name = "ItmSts", required = true)
 	public NotificationStatus3Code getItemStatus() {
 		return itemStatus;
 	}
@@ -595,6 +606,7 @@ public class OriginalItemAndStatus4 {
 		this.itemStatus = itemStatus;
 	}
 
+	@XmlElement(name = "AddtlStsInf")
 	public Max105Text getAdditionalStatusInformation() {
 		return additionalStatusInformation;
 	}
@@ -603,6 +615,7 @@ public class OriginalItemAndStatus4 {
 		this.additionalStatusInformation = additionalStatusInformation;
 	}
 
+	@XmlElement(name = "OrgnlItmRef")
 	public OriginalItemReference3 getOriginalItemReference() {
 		return originalItemReference;
 	}

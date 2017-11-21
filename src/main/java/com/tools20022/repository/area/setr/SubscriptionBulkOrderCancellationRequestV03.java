@@ -21,8 +21,10 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.area.SecuritiesTradePreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -67,9 +69,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.008.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
@@ -119,6 +118,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.008.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -142,6 +144,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SubscriptionBulkOrderCancellationInstructionV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionBulkOrderCancellationRequestV03", propOrder = {"messageIdentification", "poolReference", "previousReference", "cancellationByReference", "cancellationByOrderDetails", "copyDetails"})
 public class SubscriptionBulkOrderCancellationRequestV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -151,6 +155,10 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03
+	 * SubscriptionBulkOrderCancellationRequestV03}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -164,10 +172,6 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 	 * </li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03
-	 * SubscriptionBulkOrderCancellationRequestV03}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -186,8 +190,9 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReferenceOrByOrderDetailsRule";
 			definition = "Either CancellationByOrderDetails or CancellationByReference may be present, but not both.";
-			messageDefinition_lazy = () -> SubscriptionBulkOrderCancellationRequestV03.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(SubscriptionBulkOrderCancellationRequestV03.mmCancellationByReference, SubscriptionBulkOrderCancellationRequestV03.mmCancellationByOrderDetails);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmCancellationByReference,
+					com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmCancellationByOrderDetails);
 		}
 	};
 	protected MessageIdentification1 messageIdentification;
@@ -236,6 +241,14 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderCancellationRequestV03.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -279,6 +292,14 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderCancellationRequestV03.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 previousReference;
@@ -324,6 +345,14 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderCancellationRequestV03.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected InvestmentFundOrder1 cancellationByReference;
 	/**
@@ -358,6 +387,14 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundOrder1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderCancellationRequestV03.class.getMethod("getCancellationByReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SubscriptionBulkOrderInstruction2 cancellationByOrderDetails;
@@ -394,6 +431,14 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SubscriptionBulkOrderInstruction2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderCancellationRequestV03.class.getMethod("getCancellationByOrderDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CopyInformation2 copyDetails;
@@ -439,6 +484,14 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderCancellationRequestV03.class.getMethod("getCopyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -450,13 +503,14 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 				nextVersions_lazy = () -> Arrays.asList(SubscriptionBulkOrderCancellationRequestV04.mmObject());
 				previousVersion_lazy = () -> SubscriptionBulkOrderCancellationInstructionV02.mmObject();
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject());
-				xors_lazy = () -> Arrays.asList(SubscriptionBulkOrderCancellationRequestV03.mmCancellationByReferenceOrByOrderDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmCancellationByReferenceOrByOrderDetailsRule);
 				rootElement = "Document";
 				xmlTag = "SbcptBlkOrdrCxlReqV03";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SubscriptionBulkOrderCancellationRequestV03.mmMessageIdentification, SubscriptionBulkOrderCancellationRequestV03.mmPoolReference,
-						SubscriptionBulkOrderCancellationRequestV03.mmPreviousReference, SubscriptionBulkOrderCancellationRequestV03.mmCancellationByReference, SubscriptionBulkOrderCancellationRequestV03.mmCancellationByOrderDetails,
-						SubscriptionBulkOrderCancellationRequestV03.mmCopyDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmPoolReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmCancellationByReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmCancellationByOrderDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmCopyDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -466,10 +520,16 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SubscriptionBulkOrderCancellationRequestV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -478,6 +538,7 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -486,6 +547,7 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -494,6 +556,7 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "CxlByRef")
 	public InvestmentFundOrder1 getCancellationByReference() {
 		return cancellationByReference;
 	}
@@ -502,6 +565,7 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 		this.cancellationByReference = cancellationByReference;
 	}
 
+	@XmlElement(name = "CxlByOrdrDtls")
 	public SubscriptionBulkOrderInstruction2 getCancellationByOrderDetails() {
 		return cancellationByOrderDetails;
 	}
@@ -510,11 +574,18 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 		this.cancellationByOrderDetails = cancellationByOrderDetails;
 	}
 
+	@XmlElement(name = "CpyDtls")
 	public CopyInformation2 getCopyDetails() {
 		return copyDetails;
 	}
 
 	public void setCopyDetails(CopyInformation2 copyDetails) {
 		this.copyDetails = copyDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.008.03.03")
+	static public class Document {
+		@XmlElement(name = "SbcptBlkOrdrCxlReqV03", required = true)
+		public SubscriptionBulkOrderCancellationRequestV03 messageBody;
 	}
 }

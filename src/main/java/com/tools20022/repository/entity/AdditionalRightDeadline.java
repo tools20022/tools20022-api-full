@@ -67,6 +67,11 @@ public class AdditionalRightDeadline extends MeetingDeadline {
 				definition = "Date and time by which security holders can propose amendments or new resolutions.";
 				superType_lazy = () -> MeetingDeadline.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AdditionalRightDeadline.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

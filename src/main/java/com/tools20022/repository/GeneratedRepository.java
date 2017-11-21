@@ -503,6 +503,7 @@ public class GeneratedRepository extends ReflectionBasedRepository {
 	 */
 	public static final MMBusinessProcessCatalogue mmcatalogue = new MMBusinessProcessCatalogue() {
 		{
+			repository_lazy = () -> GeneratedRepository.mmObject();
 			topLevelCatalogueEntry_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestISOPreviousversion.mmObject(), CreditorPaymentActivationRequestISOLatestversion.mmObject(),
 					CardPaymentsExchangesTerminalManagementISOPreviousversion.mmObject(), CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion.mmObject(), DemandGuaranteesandStandbyLettersofCreditISOLatestversion.mmObject(),
 					InvestmentFundsISOPreviousversion.mmObject(), ProxyVotingISOLatestversion.mmObject(), IssuersAgentsCommunicationISOLatestversion.mmObject(), TransactionRegulatoryReportingISOArchive.mmObject(),
@@ -544,7 +545,6 @@ public class GeneratedRepository extends ReflectionBasedRepository {
 					PaymentsRemittanceAdviceLatestVersion.mmObject(), ForeignExchangeTradePreviousVersion.mmObject(), ATMManagementLatestVersion.mmObject(), ATMCardTransactionLatestVersion.mmObject(),
 					CollateralManagementPreviousVersion.mmObject(), TerminalManagementArchive.mmObject(), AcceptortoAcquirerCardTransactionArchive.mmObject(), AcquirertoIssuerCardTransactionLatestVersion.mmObject(),
 					PaymentsRemittanceAdvicePreviousVersion.mmObject(), CollateralManagementArchive.mmObject(), PaymentsRemittanceAdviceArchive.mmObject(), BUSINESSPROCESS_FOR_ROLES.mmObject());
-			repository_lazy = () -> GeneratedRepository.mmObject();
 		}
 	};
 	/**
@@ -562,8 +562,8 @@ public class GeneratedRepository extends ReflectionBasedRepository {
 	 */
 	public static final MMDataDictionary mmdataDict = new MMDataDictionary() {
 		{
-			repository_lazy = () -> GeneratedRepository.mmObject();
 			topLevelDictionaryEntry_lazy = () -> ListBuilderForGeneratedRepository_00.addElems(new ArrayList<>());
+			repository_lazy = () -> GeneratedRepository.mmObject();
 		}
 	};
 

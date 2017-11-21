@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of leg.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of leg."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LegIdentification1Choice", propOrder = {"redemptionLegIdentification", "subscriptionLegIdentification"})
 public class LegIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class LegIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RedLegId", required = true)
 	public Max35Text getRedemptionLegIdentification() {
 		return redemptionLegIdentification;
 	}
@@ -181,6 +188,7 @@ public class LegIdentification1Choice {
 		this.redemptionLegIdentification = redemptionLegIdentification;
 	}
 
+	@XmlElement(name = "SbcptLegId", required = true)
 	public Max35Text getSubscriptionLegIdentification() {
 		return subscriptionLegIdentification;
 	}

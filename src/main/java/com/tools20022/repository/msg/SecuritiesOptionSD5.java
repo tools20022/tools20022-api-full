@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action option securities
@@ -107,6 +111,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesOptionSD2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesOptionSD5", propOrder = {"placeAndName", "DTCPayMethod", "DTCPayOrder", "reinvestmentIncomeClassification", "entitlementCalculationMethod", "priceBasis", "DTCExitExplanationIndicator", "chargeFlag",
+		"protectChargeFlag", "estimatedPriceFlag", "DTCFractionalShareInstructionPeriod", "DTCUSTaxInstructionPeriod"})
 public class SecuritiesOptionSD5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -768,6 +775,7 @@ public class SecuritiesOptionSD5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -776,6 +784,7 @@ public class SecuritiesOptionSD5 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "DTCPayMtd")
 	public Max3Text getDTCPayMethod() {
 		return dTCPayMethod;
 	}
@@ -784,6 +793,7 @@ public class SecuritiesOptionSD5 {
 		this.dTCPayMethod = dTCPayMethod;
 	}
 
+	@XmlElement(name = "DTCPayOrdr")
 	public Max3Text getDTCPayOrder() {
 		return dTCPayOrder;
 	}
@@ -792,6 +802,7 @@ public class SecuritiesOptionSD5 {
 		this.dTCPayOrder = dTCPayOrder;
 	}
 
+	@XmlElement(name = "RinvstmtIncmClssfctn")
 	public ReinvestmentIncomeClassification1Code getReinvestmentIncomeClassification() {
 		return reinvestmentIncomeClassification;
 	}
@@ -800,6 +811,7 @@ public class SecuritiesOptionSD5 {
 		this.reinvestmentIncomeClassification = reinvestmentIncomeClassification;
 	}
 
+	@XmlElement(name = "EntitlmntClctnMtd")
 	public DTCEntitlementCalculationMethod1Code getEntitlementCalculationMethod() {
 		return entitlementCalculationMethod;
 	}
@@ -808,6 +820,7 @@ public class SecuritiesOptionSD5 {
 		this.entitlementCalculationMethod = entitlementCalculationMethod;
 	}
 
+	@XmlElement(name = "PricBsis")
 	public DTCBaseDisbursed1Code getPriceBasis() {
 		return priceBasis;
 	}
@@ -816,6 +829,7 @@ public class SecuritiesOptionSD5 {
 		this.priceBasis = priceBasis;
 	}
 
+	@XmlElement(name = "DTCExitExpltnInd")
 	public SecuritiesExitReason1Code getDTCExitExplanationIndicator() {
 		return dTCExitExplanationIndicator;
 	}
@@ -824,6 +838,7 @@ public class SecuritiesOptionSD5 {
 		this.dTCExitExplanationIndicator = dTCExitExplanationIndicator;
 	}
 
+	@XmlElement(name = "ChrgFlg")
 	public YesNoIndicator getChargeFlag() {
 		return chargeFlag;
 	}
@@ -832,6 +847,7 @@ public class SecuritiesOptionSD5 {
 		this.chargeFlag = chargeFlag;
 	}
 
+	@XmlElement(name = "PrtctChrgFlg")
 	public YesNoIndicator getProtectChargeFlag() {
 		return protectChargeFlag;
 	}
@@ -840,6 +856,7 @@ public class SecuritiesOptionSD5 {
 		this.protectChargeFlag = protectChargeFlag;
 	}
 
+	@XmlElement(name = "EstmtdPricFlg")
 	public YesNoIndicator getEstimatedPriceFlag() {
 		return estimatedPriceFlag;
 	}
@@ -848,6 +865,7 @@ public class SecuritiesOptionSD5 {
 		this.estimatedPriceFlag = estimatedPriceFlag;
 	}
 
+	@XmlElement(name = "DTCFrctnlShrInstrPrd")
 	public Period3 getDTCFractionalShareInstructionPeriod() {
 		return dTCFractionalShareInstructionPeriod;
 	}
@@ -856,6 +874,7 @@ public class SecuritiesOptionSD5 {
 		this.dTCFractionalShareInstructionPeriod = dTCFractionalShareInstructionPeriod;
 	}
 
+	@XmlElement(name = "DTCUSTaxInstrPrd")
 	public Period3 getDTCUSTaxInstructionPeriod() {
 		return dTCUSTaxInstructionPeriod;
 	}

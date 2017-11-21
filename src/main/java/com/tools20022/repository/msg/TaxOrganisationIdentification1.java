@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party to which the TaxReport is delivered. This message block contains party
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxOrganisationIdentification1", propOrder = {"name", "postalAddress", "contactDetails"})
 public class TaxOrganisationIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -238,6 +244,7 @@ public class TaxOrganisationIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max140Text getName() {
 		return name;
 	}
@@ -246,6 +253,7 @@ public class TaxOrganisationIdentification1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PstlAdr")
 	public PostalAddress6 getPostalAddress() {
 		return postalAddress;
 	}
@@ -254,6 +262,7 @@ public class TaxOrganisationIdentification1 {
 		this.postalAddress = postalAddress;
 	}
 
+	@XmlElement(name = "CtctDtls")
 	public ContactDetails2 getContactDetails() {
 		return contactDetails;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Tangible items of value to a business.
@@ -60,6 +64,8 @@ import java.util.List;
  * definition} = "Tangible items of value to a business."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityAttributes2", propOrder = {"financialInstrumentType", "financialInstrumentAttributes", "supplementaryData"})
 public class SecurityAttributes2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -205,6 +211,7 @@ public class SecurityAttributes2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmTp")
 	public List<FinancialInstrument28> getFinancialInstrumentType() {
 		return financialInstrumentType;
 	}
@@ -213,6 +220,7 @@ public class SecurityAttributes2 {
 		this.financialInstrumentType = financialInstrumentType;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public List<CommonFinancialInstrumentAttributes2> getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -221,6 +229,7 @@ public class SecurityAttributes2 {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

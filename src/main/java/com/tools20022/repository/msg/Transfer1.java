@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -97,6 +101,8 @@ import java.util.List;
  * definition} = "Parameters applied to the settlement of a security transfer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Transfer1", propOrder = {"transferReference", "requestedTransferDate", "totalUnitsNumber", "portfolioTransferOutRate", "unitsDetails", "ownAccountTransferIndicator", "averagePrice"})
 public class Transfer1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -495,6 +501,7 @@ public class Transfer1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -503,6 +510,7 @@ public class Transfer1 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "ReqdTrfDt", required = true)
 	public DateFormat1Choice getRequestedTransferDate() {
 		return requestedTransferDate;
 	}
@@ -511,6 +519,7 @@ public class Transfer1 {
 		this.requestedTransferDate = requestedTransferDate;
 	}
 
+	@XmlElement(name = "TtlUnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
@@ -519,6 +528,7 @@ public class Transfer1 {
 		this.totalUnitsNumber = totalUnitsNumber;
 	}
 
+	@XmlElement(name = "PrtflTrfOutRate", required = true)
 	public PercentageRate getPortfolioTransferOutRate() {
 		return portfolioTransferOutRate;
 	}
@@ -527,6 +537,7 @@ public class Transfer1 {
 		this.portfolioTransferOutRate = portfolioTransferOutRate;
 	}
 
+	@XmlElement(name = "UnitsDtls")
 	public List<Unit1> getUnitsDetails() {
 		return unitsDetails;
 	}
@@ -535,6 +546,7 @@ public class Transfer1 {
 		this.unitsDetails = unitsDetails;
 	}
 
+	@XmlElement(name = "OwnAcctTrfInd", required = true)
 	public YesNoIndicator getOwnAccountTransferIndicator() {
 		return ownAccountTransferIndicator;
 	}
@@ -543,6 +555,7 @@ public class Transfer1 {
 		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
 	}
 
+	@XmlElement(name = "AvrgPric")
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAveragePrice() {
 		return averagePrice;
 	}

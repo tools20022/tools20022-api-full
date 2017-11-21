@@ -29,34 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType6Code TaxType6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType12Code
- * TaxType12Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType2Code TaxType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code
- * TaxType13Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType4Code TaxType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType7Code TaxType7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType10Code
- * TaxType10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code TaxType5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType11Code
- * TaxType11Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType3Code TaxType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType15Code
- * TaxType15Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType9Code TaxType9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType14Code
- * TaxType14Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code
- * TaxType16Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType17Code
- * TaxType17Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -160,6 +132,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TaxTypeCode#mmCapitalLossCredit
  * TaxTypeCode.mmCapitalLossCredit}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType6Code TaxType6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType12Code
+ * TaxType12Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType2Code TaxType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code
+ * TaxType13Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType4Code TaxType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType7Code TaxType7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType10Code
+ * TaxType10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code TaxType5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType11Code
+ * TaxType11Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType3Code TaxType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType15Code
+ * TaxType15Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType9Code TaxType9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType14Code
+ * TaxType14Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code
+ * TaxType16Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType17Code
+ * TaxType17Code}</li>
  * </ul>
  * </li>
  * <li>

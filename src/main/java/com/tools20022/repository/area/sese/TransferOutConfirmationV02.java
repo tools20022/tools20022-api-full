@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.003.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -103,6 +102,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.003.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -126,6 +128,9 @@ import java.util.List;
  * TransferOutConfirmation}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferOutConfirmationV02", propOrder = {"messageIdentification", "relatedReference", "poolReference", "previousReference", "transferDetails", "financialInstrumentDetails", "accountDetails", "settlementDetails",
+		"copyDetails", "extension"})
 public class TransferOutConfirmationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +171,14 @@ public class TransferOutConfirmationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutConfirmationV02.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference2 relatedReference;
 	/**
@@ -202,6 +215,14 @@ public class TransferOutConfirmationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutConfirmationV02.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference2 poolReference;
 	/**
@@ -237,6 +258,14 @@ public class TransferOutConfirmationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutConfirmationV02.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference2 previousReference;
 	/**
@@ -271,6 +300,14 @@ public class TransferOutConfirmationV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutConfirmationV02.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Transfer10 transferDetails;
@@ -308,6 +345,14 @@ public class TransferOutConfirmationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> Transfer10.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutConfirmationV02.class.getMethod("getTransferDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected FinancialInstrument13 financialInstrumentDetails;
 	/**
@@ -343,6 +388,14 @@ public class TransferOutConfirmationV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrument13.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutConfirmationV02.class.getMethod("getFinancialInstrumentDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentAccount22 accountDetails;
@@ -382,6 +435,14 @@ public class TransferOutConfirmationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccount22.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutConfirmationV02.class.getMethod("getAccountDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ReceiveInformation4 settlementDetails;
 	/**
@@ -417,6 +478,14 @@ public class TransferOutConfirmationV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ReceiveInformation4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutConfirmationV02.class.getMethod("getSettlementDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CopyInformation2 copyDetails;
@@ -454,6 +523,14 @@ public class TransferOutConfirmationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutConfirmationV02.class.getMethod("getCopyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension1> extension;
 	/**
@@ -490,6 +567,14 @@ public class TransferOutConfirmationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutConfirmationV02.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -504,9 +589,11 @@ public class TransferOutConfirmationV02 {
 				rootElement = "Document";
 				xmlTag = "TrfOutConfV02";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(TransferOutConfirmationV02.mmMessageIdentification, TransferOutConfirmationV02.mmRelatedReference, TransferOutConfirmationV02.mmPoolReference,
-						TransferOutConfirmationV02.mmPreviousReference, TransferOutConfirmationV02.mmTransferDetails, TransferOutConfirmationV02.mmFinancialInstrumentDetails, TransferOutConfirmationV02.mmAccountDetails,
-						TransferOutConfirmationV02.mmSettlementDetails, TransferOutConfirmationV02.mmCopyDetails, TransferOutConfirmationV02.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmMessageIdentification, com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmPoolReference, com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmTransferDetails, com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmFinancialInstrumentDetails,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmAccountDetails, com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmSettlementDetails,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmCopyDetails, com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -516,10 +603,16 @@ public class TransferOutConfirmationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TransferOutConfirmationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -528,6 +621,7 @@ public class TransferOutConfirmationV02 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference2 getRelatedReference() {
 		return relatedReference;
 	}
@@ -536,6 +630,7 @@ public class TransferOutConfirmationV02 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference2 getPoolReference() {
 		return poolReference;
 	}
@@ -544,6 +639,7 @@ public class TransferOutConfirmationV02 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference2 getPreviousReference() {
 		return previousReference;
 	}
@@ -552,6 +648,7 @@ public class TransferOutConfirmationV02 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "TrfDtls", required = true)
 	public Transfer10 getTransferDetails() {
 		return transferDetails;
 	}
@@ -560,6 +657,7 @@ public class TransferOutConfirmationV02 {
 		this.transferDetails = transferDetails;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument13 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -568,6 +666,7 @@ public class TransferOutConfirmationV02 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public InvestmentAccount22 getAccountDetails() {
 		return accountDetails;
 	}
@@ -576,6 +675,7 @@ public class TransferOutConfirmationV02 {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "SttlmDtls", required = true)
 	public ReceiveInformation4 getSettlementDetails() {
 		return settlementDetails;
 	}
@@ -584,6 +684,7 @@ public class TransferOutConfirmationV02 {
 		this.settlementDetails = settlementDetails;
 	}
 
+	@XmlElement(name = "CpyDtls")
 	public CopyInformation2 getCopyDetails() {
 		return copyDetails;
 	}
@@ -592,11 +693,18 @@ public class TransferOutConfirmationV02 {
 		this.copyDetails = copyDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.003.02.02")
+	static public class Document {
+		@XmlElement(name = "TrfOutConfV02", required = true)
+		public TransferOutConfirmationV02 messageBody;
 	}
 }

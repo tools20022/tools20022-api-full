@@ -67,6 +67,11 @@ public class GiverRole extends CollateralPartyRole {
 				definition = "Party which provides the collateral. A party can be both a taker and a giver in a collateral relationship.";
 				superType_lazy = () -> CollateralPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return GiverRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

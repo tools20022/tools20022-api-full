@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Authorisation response from the acquirer.
@@ -91,6 +95,8 @@ import java.util.List;
  * CardPaymentTransaction9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransaction18", propOrder = {"authorisationResult", "transactionVerificationResult", "balance", "currency", "action"})
 public class CardPaymentTransaction18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -389,6 +395,7 @@ public class CardPaymentTransaction18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AuthstnRslt", required = true)
 	public AuthorisationResult1 getAuthorisationResult() {
 		return authorisationResult;
 	}
@@ -397,6 +404,7 @@ public class CardPaymentTransaction18 {
 		this.authorisationResult = authorisationResult;
 	}
 
+	@XmlElement(name = "TxVrfctnRslt")
 	public TransactionVerificationResult2 getTransactionVerificationResult() {
 		return transactionVerificationResult;
 	}
@@ -405,6 +413,7 @@ public class CardPaymentTransaction18 {
 		this.transactionVerificationResult = transactionVerificationResult;
 	}
 
+	@XmlElement(name = "Bal")
 	public ImpliedCurrencyAndAmount getBalance() {
 		return balance;
 	}
@@ -413,6 +422,7 @@ public class CardPaymentTransaction18 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -421,6 +431,7 @@ public class CardPaymentTransaction18 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Actn")
 	public List<Action2> getAction() {
 		return action;
 	}

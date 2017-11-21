@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria to be used to extract
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the criteria to be used to extract"</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingSearchCriteria1", propOrder = {"billingIdentification", "billingPeriod", "CSDOrNCB", "billedCustomerIdentification", "accountIdentification"})
 public class BillingSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -338,6 +344,7 @@ public class BillingSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BllgId")
 	public BillingIdentification1 getBillingIdentification() {
 		return billingIdentification;
 	}
@@ -346,6 +353,7 @@ public class BillingSearchCriteria1 {
 		this.billingIdentification = billingIdentification;
 	}
 
+	@XmlElement(name = "BllgPrd")
 	public DatePeriodDetails getBillingPeriod() {
 		return billingPeriod;
 	}
@@ -354,6 +362,7 @@ public class BillingSearchCriteria1 {
 		this.billingPeriod = billingPeriod;
 	}
 
+	@XmlElement(name = "CSDOrNCB")
 	public CSDOrNCB1Choice getCSDOrNCB() {
 		return cSDOrNCB;
 	}
@@ -362,6 +371,7 @@ public class BillingSearchCriteria1 {
 		this.cSDOrNCB = cSDOrNCB;
 	}
 
+	@XmlElement(name = "BlldCstmrId")
 	public BICFIIdentifier getBilledCustomerIdentification() {
 		return billedCustomerIdentification;
 	}
@@ -370,6 +380,7 @@ public class BillingSearchCriteria1 {
 		this.billedCustomerIdentification = billedCustomerIdentification;
 	}
 
+	@XmlElement(name = "AcctId")
 	public AccountIdentification20Choice getAccountIdentification() {
 		return accountIdentification;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.choice.AcknowledgementOfExemption1Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Incompetent beneficial owner exemption information.
@@ -54,6 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Incompetent beneficial owner exemption information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IncompetentExemptionStatus1", propOrder = "documentationAcknowledgementOfExemption")
 public class IncompetentExemptionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -117,6 +123,7 @@ public class IncompetentExemptionStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DcmnttnAckOfXmptn", required = true)
 	public AcknowledgementOfExemption1Choice getDocumentationAcknowledgementOfExemption() {
 		return documentationAcknowledgementOfExemption;
 	}

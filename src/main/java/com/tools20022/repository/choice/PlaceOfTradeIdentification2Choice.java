@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.TradingMarket;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates whether the trade was executed on or off-market.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates whether the trade was executed on or off-market."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PlaceOfTradeIdentification2Choice", propOrder = {"marketIdentification", "offMarket"})
 public class PlaceOfTradeIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class PlaceOfTradeIdentification2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MktId", required = true)
 	public MICIdentifier getMarketIdentification() {
 		return marketIdentification;
 	}
@@ -188,6 +195,7 @@ public class PlaceOfTradeIdentification2Choice {
 		this.marketIdentification = marketIdentification;
 	}
 
+	@XmlElement(name = "OffMkt", required = true)
 	public OffMarket1Choice getOffMarket() {
 		return offMarket;
 	}

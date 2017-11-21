@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics related to a cheque instruction, such as cheque type
@@ -86,6 +90,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Cheque6", propOrder = {"chequeType", "chequeNumber", "chequeFrom", "deliveryMethod", "deliverTo", "instructionPriority", "chequeMaturityDate", "formsCode", "memoField", "regionalClearingZone", "printLocation"})
 public class Cheque6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -635,6 +641,7 @@ public class Cheque6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ChqTp")
 	public ChequeType2Code getChequeType() {
 		return chequeType;
 	}
@@ -643,6 +650,7 @@ public class Cheque6 {
 		this.chequeType = chequeType;
 	}
 
+	@XmlElement(name = "ChqNb")
 	public Max35Text getChequeNumber() {
 		return chequeNumber;
 	}
@@ -651,6 +659,7 @@ public class Cheque6 {
 		this.chequeNumber = chequeNumber;
 	}
 
+	@XmlElement(name = "ChqFr")
 	public NameAndAddress10 getChequeFrom() {
 		return chequeFrom;
 	}
@@ -659,6 +668,7 @@ public class Cheque6 {
 		this.chequeFrom = chequeFrom;
 	}
 
+	@XmlElement(name = "DlvryMtd")
 	public ChequeDeliveryMethod1Choice getDeliveryMethod() {
 		return deliveryMethod;
 	}
@@ -667,6 +677,7 @@ public class Cheque6 {
 		this.deliveryMethod = deliveryMethod;
 	}
 
+	@XmlElement(name = "DlvrTo")
 	public NameAndAddress10 getDeliverTo() {
 		return deliverTo;
 	}
@@ -675,6 +686,7 @@ public class Cheque6 {
 		this.deliverTo = deliverTo;
 	}
 
+	@XmlElement(name = "InstrPrty")
 	public Priority2Code getInstructionPriority() {
 		return instructionPriority;
 	}
@@ -683,6 +695,7 @@ public class Cheque6 {
 		this.instructionPriority = instructionPriority;
 	}
 
+	@XmlElement(name = "ChqMtrtyDt")
 	public ISODate getChequeMaturityDate() {
 		return chequeMaturityDate;
 	}
@@ -691,6 +704,7 @@ public class Cheque6 {
 		this.chequeMaturityDate = chequeMaturityDate;
 	}
 
+	@XmlElement(name = "FrmsCd")
 	public Max35Text getFormsCode() {
 		return formsCode;
 	}
@@ -699,6 +713,7 @@ public class Cheque6 {
 		this.formsCode = formsCode;
 	}
 
+	@XmlElement(name = "MemoFld")
 	public List<Max35Text> getMemoField() {
 		return memoField;
 	}
@@ -707,6 +722,7 @@ public class Cheque6 {
 		this.memoField = memoField;
 	}
 
+	@XmlElement(name = "RgnlClrZone")
 	public Max35Text getRegionalClearingZone() {
 		return regionalClearingZone;
 	}
@@ -715,6 +731,7 @@ public class Cheque6 {
 		this.regionalClearingZone = regionalClearingZone;
 	}
 
+	@XmlElement(name = "PrtLctn")
 	public Max35Text getPrintLocation() {
 		return printLocation;
 	}

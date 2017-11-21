@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.SupplementaryDataEnvelope1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Container for proprietary information. Business content of this element is
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProprietaryData5", propOrder = {"type", "data"})
 public class ProprietaryData5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +165,7 @@ public class ProprietaryData5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public Max35Text getType() {
 		return type;
 	}
@@ -167,6 +174,7 @@ public class ProprietaryData5 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Data", required = true)
 	public SupplementaryDataEnvelope1 getData() {
 		return data;
 	}

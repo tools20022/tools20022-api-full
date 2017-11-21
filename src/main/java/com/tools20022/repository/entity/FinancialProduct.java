@@ -33,8 +33,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Product Product}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -44,6 +42,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ManagedAccountProduct}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Product Product}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -72,6 +72,11 @@ public class FinancialProduct extends Product {
 				definition = "Product offered by a financial institution to its customers.";
 				subType_lazy = () -> Arrays.asList(InvestmentFund.mmObject(), ManagedAccountProduct.mmObject());
 				superType_lazy = () -> Product.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FinancialProduct.class;
 			}
 		});
 		return mmObject_lazy.get();

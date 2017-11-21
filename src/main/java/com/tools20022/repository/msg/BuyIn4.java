@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.BuyIn;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies elements related to the notification (or warn) sent by the central
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.BuyIn1 BuyIn1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BuyIn4", propOrder = {"warningIndicator", "expectedBuyInDate", "cancellationLimitDate", "buyInReversionDate"})
 public class BuyIn4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -285,6 +291,7 @@ public class BuyIn4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "WrngInd")
 	public YesNoIndicator getWarningIndicator() {
 		return warningIndicator;
 	}
@@ -293,6 +300,7 @@ public class BuyIn4 {
 		this.warningIndicator = warningIndicator;
 	}
 
+	@XmlElement(name = "XpctdBuyInDt", required = true)
 	public DateFormat15Choice getExpectedBuyInDate() {
 		return expectedBuyInDate;
 	}
@@ -301,6 +309,7 @@ public class BuyIn4 {
 		this.expectedBuyInDate = expectedBuyInDate;
 	}
 
+	@XmlElement(name = "CxlLmtDt")
 	public ISODate getCancellationLimitDate() {
 		return cancellationLimitDate;
 	}
@@ -309,6 +318,7 @@ public class BuyIn4 {
 		this.cancellationLimitDate = cancellationLimitDate;
 	}
 
+	@XmlElement(name = "BuyInRvrsnDt")
 	public ISODate getBuyInReversionDate() {
 		return buyInReversionDate;
 	}

@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the classification.
@@ -66,6 +70,8 @@ import java.util.function.Supplier;
  * definition} = "Choice of format for the classification."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClassificationType2Choice", propOrder = {"classificationFinancialInstrument", "alternateClassification"})
 public class ClassificationType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -187,6 +193,7 @@ public class ClassificationType2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClssfctnFinInstrm", required = true)
 	public CFIIdentifier getClassificationFinancialInstrument() {
 		return classificationFinancialInstrument;
 	}
@@ -195,6 +202,7 @@ public class ClassificationType2Choice {
 		this.classificationFinancialInstrument = classificationFinancialInstrument;
 	}
 
+	@XmlElement(name = "AltrnClssfctn", required = true)
 	public GenericIdentification19 getAlternateClassification() {
 		return alternateClassification;
 	}

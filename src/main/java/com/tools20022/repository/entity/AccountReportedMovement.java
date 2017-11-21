@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,15 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccount#mmReportedMovements
- * CashAccount.mmReportedMovements}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -63,6 +55,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.AccountReportedMovement#mmReportedCashAccount
  * AccountReportedMovement.mmReportedCashAccount}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccount#mmReportedMovements
+ * CashAccount.mmReportedMovements}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,11 +98,6 @@ public class AccountReportedMovement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
-	 * AccountReportedMovement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -129,6 +125,11 @@ public class AccountReportedMovement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
+	 * AccountReportedMovement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -145,7 +146,7 @@ public class AccountReportedMovement {
 		{
 			derivation_lazy = () -> Arrays.asList(CustomerAccount1.mmMonthlyPaymentValue, CustomerAccount5.mmMonthlyPaymentValue, CustomerAccountModification1.mmMonthlyPaymentValue, CustomerAccount4.mmMonthlyPaymentValue,
 					CustomerAccount2.mmMinimumMonthlyPaymentValue, CustomerAccount2.mmMaximumMonthlyPaymentValue, CustomerAccount3.mmMonthlyPaymentValue);
-			elementContext_lazy = () -> AccountReportedMovement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountReportedMovement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MonthlyPaymentValue";
@@ -153,6 +154,14 @@ public class AccountReportedMovement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountReportedMovement.class.getMethod("getMonthlyPaymentValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount monthlyReceivedValue;
@@ -167,11 +176,6 @@ public class AccountReportedMovement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
-	 * AccountReportedMovement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -199,6 +203,11 @@ public class AccountReportedMovement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
+	 * AccountReportedMovement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -215,7 +224,7 @@ public class AccountReportedMovement {
 		{
 			derivation_lazy = () -> Arrays.asList(CustomerAccount1.mmMonthlyReceivedValue, CustomerAccount5.mmMonthlyReceivedValue, CustomerAccountModification1.mmMonthlyReceivedValue, CustomerAccount4.mmMonthlyReceivedValue,
 					CustomerAccount2.mmMinimumMonthlyReceivedValue, CustomerAccount2.mmMaximumMonthlyReceivedValue, CustomerAccount3.mmMonthlyReceivedValue);
-			elementContext_lazy = () -> AccountReportedMovement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountReportedMovement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MonthlyReceivedValue";
@@ -223,6 +232,14 @@ public class AccountReportedMovement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountReportedMovement.class.getMethod("getMonthlyReceivedValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text monthlyTransactionNumber;
@@ -236,11 +253,6 @@ public class AccountReportedMovement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
-	 * AccountReportedMovement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -268,6 +280,11 @@ public class AccountReportedMovement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
+	 * AccountReportedMovement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -284,7 +301,7 @@ public class AccountReportedMovement {
 		{
 			derivation_lazy = () -> Arrays.asList(CustomerAccount1.mmMonthlyTransactionNumber, CustomerAccount5.mmMonthlyTransactionNumber, CustomerAccountModification1.mmMonthlyTransactionNumber,
 					CustomerAccount4.mmMonthlyTransactionNumber, CustomerAccount2.mmMinimumMonthlyTransactionNumber, CustomerAccount2.mmMaximumMonthlyTransactionNumber, CustomerAccount3.mmMonthlyTransactionNumber);
-			elementContext_lazy = () -> AccountReportedMovement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountReportedMovement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MonthlyTransactionNumber";
@@ -292,6 +309,14 @@ public class AccountReportedMovement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountReportedMovement.class.getMethod("getMonthlyTransactionNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount averageBalance;
@@ -306,11 +331,6 @@ public class AccountReportedMovement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
-	 * AccountReportedMovement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -338,6 +358,11 @@ public class AccountReportedMovement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
+	 * AccountReportedMovement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -354,7 +379,7 @@ public class AccountReportedMovement {
 		{
 			derivation_lazy = () -> Arrays.asList(CustomerAccount1.mmAverageBalance, CustomerAccount5.mmAverageBalance, CustomerAccountModification1.mmAverageBalance, CustomerAccount4.mmAverageBalance,
 					CustomerAccount2.mmMinimumAverageBalance, CustomerAccount2.mmMaximumAverageBalance, CustomerAccount3.mmAverageBalance);
-			elementContext_lazy = () -> AccountReportedMovement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountReportedMovement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AverageBalance";
@@ -362,6 +387,14 @@ public class AccountReportedMovement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountReportedMovement.class.getMethod("getAverageBalance", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CashAccount reportedCashAccount;
@@ -401,7 +434,7 @@ public class AccountReportedMovement {
 	 */
 	public static final MMBusinessAssociationEnd mmReportedCashAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AccountReportedMovement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountReportedMovement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReportedCashAccount";
@@ -422,8 +455,14 @@ public class AccountReportedMovement {
 				name = "AccountReportedMovement";
 				definition = "Provides statistical information on the number of movements and their value for a particular account.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmReportedMovements);
-				element_lazy = () -> Arrays.asList(AccountReportedMovement.mmMonthlyPaymentValue, AccountReportedMovement.mmMonthlyReceivedValue, AccountReportedMovement.mmMonthlyTransactionNumber, AccountReportedMovement.mmAverageBalance,
-						AccountReportedMovement.mmReportedCashAccount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountReportedMovement.mmMonthlyPaymentValue, com.tools20022.repository.entity.AccountReportedMovement.mmMonthlyReceivedValue,
+						com.tools20022.repository.entity.AccountReportedMovement.mmMonthlyTransactionNumber, com.tools20022.repository.entity.AccountReportedMovement.mmAverageBalance,
+						com.tools20022.repository.entity.AccountReportedMovement.mmReportedCashAccount);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountReportedMovement.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max60Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment wire instruction details.
@@ -90,6 +94,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * WireInstructionSD1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "WireInstructionSD2", propOrder = {"placeAndName", "wireQuantity", "bankName", "bankAddress", "bankCity", "bankCountry", "bankAttentionTo", "bankComments", "beneficiaryAccount", "beneficiaryAccountIdentification",
+		"beneficiaryAccountComments"})
 public class WireInstructionSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -566,6 +573,7 @@ public class WireInstructionSD2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -574,6 +582,7 @@ public class WireInstructionSD2 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "WireQty", required = true)
 	public FinancialInstrumentQuantity15Choice getWireQuantity() {
 		return wireQuantity;
 	}
@@ -582,6 +591,7 @@ public class WireInstructionSD2 {
 		this.wireQuantity = wireQuantity;
 	}
 
+	@XmlElement(name = "BkNm", required = true)
 	public Max30Text getBankName() {
 		return bankName;
 	}
@@ -590,6 +600,7 @@ public class WireInstructionSD2 {
 		this.bankName = bankName;
 	}
 
+	@XmlElement(name = "BkAdr", required = true)
 	public Max30Text getBankAddress() {
 		return bankAddress;
 	}
@@ -598,6 +609,7 @@ public class WireInstructionSD2 {
 		this.bankAddress = bankAddress;
 	}
 
+	@XmlElement(name = "BkCity", required = true)
 	public Max30Text getBankCity() {
 		return bankCity;
 	}
@@ -606,6 +618,7 @@ public class WireInstructionSD2 {
 		this.bankCity = bankCity;
 	}
 
+	@XmlElement(name = "BkCtry", required = true)
 	public CountryCode getBankCountry() {
 		return bankCountry;
 	}
@@ -614,6 +627,7 @@ public class WireInstructionSD2 {
 		this.bankCountry = bankCountry;
 	}
 
+	@XmlElement(name = "BkAttnTo", required = true)
 	public Max30Text getBankAttentionTo() {
 		return bankAttentionTo;
 	}
@@ -622,6 +636,7 @@ public class WireInstructionSD2 {
 		this.bankAttentionTo = bankAttentionTo;
 	}
 
+	@XmlElement(name = "BkCmnts", required = true)
 	public Max60Text getBankComments() {
 		return bankComments;
 	}
@@ -630,6 +645,7 @@ public class WireInstructionSD2 {
 		this.bankComments = bankComments;
 	}
 
+	@XmlElement(name = "BnfcryAcct", required = true)
 	public Max30Text getBeneficiaryAccount() {
 		return beneficiaryAccount;
 	}
@@ -638,6 +654,7 @@ public class WireInstructionSD2 {
 		this.beneficiaryAccount = beneficiaryAccount;
 	}
 
+	@XmlElement(name = "BnfcryAcctId", required = true)
 	public Max30Text getBeneficiaryAccountIdentification() {
 		return beneficiaryAccountIdentification;
 	}
@@ -646,6 +663,7 @@ public class WireInstructionSD2 {
 		this.beneficiaryAccountIdentification = beneficiaryAccountIdentification;
 	}
 
+	@XmlElement(name = "BnfcryAcctCmnts", required = true)
 	public Max30Text getBeneficiaryAccountComments() {
 		return beneficiaryAccountComments;
 	}

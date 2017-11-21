@@ -35,6 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for a payment.
@@ -116,6 +120,9 @@ import java.util.List;
  * definition} = "Defines the criteria used to search for a payment."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentSearch2", propOrder = {"transactionReference", "transferValueDate", "instructionReference", "instructionStatus", "instructedAmount", "instructedAmountCurrency", "creditDebitIndicator", "interbankSettlementAmount",
+		"interbankSettlementAmountCurrency", "paymentMethod", "priority", "processingValidityTime", "instruction", "paymentType", "paymentInstructionReference", "interbankValueDate", "relatedReference", "paymentTransactionParty"})
 public class PaymentSearch2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -970,6 +977,7 @@ public class PaymentSearch2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxRef")
 	public List<Max35Text> getTransactionReference() {
 		return transactionReference;
 	}
@@ -978,6 +986,7 @@ public class PaymentSearch2 {
 		this.transactionReference = transactionReference;
 	}
 
+	@XmlElement(name = "TrfValDt")
 	public List<DateAndDateTimeSearchChoice> getTransferValueDate() {
 		return transferValueDate;
 	}
@@ -986,6 +995,7 @@ public class PaymentSearch2 {
 		this.transferValueDate = transferValueDate;
 	}
 
+	@XmlElement(name = "InstrRef")
 	public List<PaymentIdentification2Choice> getInstructionReference() {
 		return instructionReference;
 	}
@@ -994,6 +1004,7 @@ public class PaymentSearch2 {
 		this.instructionReference = instructionReference;
 	}
 
+	@XmlElement(name = "InstrSts")
 	public List<InstructionStatusSearch2> getInstructionStatus() {
 		return instructionStatus;
 	}
@@ -1002,6 +1013,7 @@ public class PaymentSearch2 {
 		this.instructionStatus = instructionStatus;
 	}
 
+	@XmlElement(name = "InstdAmt")
 	public List<AmountRangeChoice> getInstructedAmount() {
 		return instructedAmount;
 	}
@@ -1010,6 +1022,7 @@ public class PaymentSearch2 {
 		this.instructedAmount = instructedAmount;
 	}
 
+	@XmlElement(name = "InstdAmtCcy")
 	public List<CurrencyCode> getInstructedAmountCurrency() {
 		return instructedAmountCurrency;
 	}
@@ -1018,6 +1031,7 @@ public class PaymentSearch2 {
 		this.instructedAmountCurrency = instructedAmountCurrency;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -1026,6 +1040,7 @@ public class PaymentSearch2 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmt")
 	public List<AmountRangeChoice> getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
@@ -1034,6 +1049,7 @@ public class PaymentSearch2 {
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmtCcy")
 	public List<CurrencyCode> getInterbankSettlementAmountCurrency() {
 		return interbankSettlementAmountCurrency;
 	}
@@ -1042,6 +1058,7 @@ public class PaymentSearch2 {
 		this.interbankSettlementAmountCurrency = interbankSettlementAmountCurrency;
 	}
 
+	@XmlElement(name = "PmtMtd")
 	public List<PaymentOrigin1Choice> getPaymentMethod() {
 		return paymentMethod;
 	}
@@ -1050,6 +1067,7 @@ public class PaymentSearch2 {
 		this.paymentMethod = paymentMethod;
 	}
 
+	@XmlElement(name = "Prty")
 	public List<PriorityCodeChoice> getPriority() {
 		return priority;
 	}
@@ -1058,6 +1076,7 @@ public class PaymentSearch2 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "PrcgVldtyTm")
 	public List<DateTimePeriodChoice> getProcessingValidityTime() {
 		return processingValidityTime;
 	}
@@ -1066,6 +1085,7 @@ public class PaymentSearch2 {
 		this.processingValidityTime = processingValidityTime;
 	}
 
+	@XmlElement(name = "Instr")
 	public List<Instruction1Code> getInstruction() {
 		return instruction;
 	}
@@ -1074,6 +1094,7 @@ public class PaymentSearch2 {
 		this.instruction = instruction;
 	}
 
+	@XmlElement(name = "PmtTp")
 	public List<PaymentType2Choice> getPaymentType() {
 		return paymentType;
 	}
@@ -1082,6 +1103,7 @@ public class PaymentSearch2 {
 		this.paymentType = paymentType;
 	}
 
+	@XmlElement(name = "PmtInstrRef")
 	public List<Max35Text> getPaymentInstructionReference() {
 		return paymentInstructionReference;
 	}
@@ -1090,6 +1112,7 @@ public class PaymentSearch2 {
 		this.paymentInstructionReference = paymentInstructionReference;
 	}
 
+	@XmlElement(name = "IntrBkValDt")
 	public List<ISODate> getInterbankValueDate() {
 		return interbankValueDate;
 	}
@@ -1098,6 +1121,7 @@ public class PaymentSearch2 {
 		this.interbankValueDate = interbankValueDate;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public List<Max35Text> getRelatedReference() {
 		return relatedReference;
 	}
@@ -1106,6 +1130,7 @@ public class PaymentSearch2 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "PmtTxPty")
 	public PaymentTransactionParty getPaymentTransactionParty() {
 		return paymentTransactionParty;
 	}

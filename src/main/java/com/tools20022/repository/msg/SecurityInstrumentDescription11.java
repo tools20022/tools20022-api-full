@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the security instrument by its name and typical characteristics.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecurityInstrumentDescription9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityInstrumentDescription11", propOrder = {"identification", "fullName", "classificationType", "notionalCurrency"})
 public class SecurityInstrumentDescription11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -317,6 +323,7 @@ public class SecurityInstrumentDescription11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public ISINOct2015Identifier getIdentification() {
 		return identification;
 	}
@@ -325,6 +332,7 @@ public class SecurityInstrumentDescription11 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "FullNm", required = true)
 	public Max350Text getFullName() {
 		return fullName;
 	}
@@ -333,6 +341,7 @@ public class SecurityInstrumentDescription11 {
 		this.fullName = fullName;
 	}
 
+	@XmlElement(name = "ClssfctnTp", required = true)
 	public CFIOct2015Identifier getClassificationType() {
 		return classificationType;
 	}
@@ -341,6 +350,7 @@ public class SecurityInstrumentDescription11 {
 		this.classificationType = classificationType;
 	}
 
+	@XmlElement(name = "NtnlCcy")
 	public ActiveOrHistoricCurrencyCode getNotionalCurrency() {
 		return notionalCurrency;
 	}

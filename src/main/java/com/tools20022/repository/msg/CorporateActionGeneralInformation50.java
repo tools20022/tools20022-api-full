@@ -37,6 +37,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General information about the corporate action event.
@@ -126,6 +130,9 @@ import java.util.function.Supplier;
  * CorporateActionGeneralInformation39}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionGeneralInformation50", propOrder = {"corporateActionEventIdentification", "officialCorporateActionEventIdentification", "classActionNumber", "eventType", "financialInstrumentIdentification",
+		"additionalBusinessProcessIndicator", "intermediateSecuritiesDistributionType", "fractionalQuantity"})
 public class CorporateActionGeneralInformation50 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -629,6 +636,7 @@ public class CorporateActionGeneralInformation50 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CorpActnEvtId", required = true)
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -637,6 +645,7 @@ public class CorporateActionGeneralInformation50 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "OffclCorpActnEvtId")
 	public Max35Text getOfficialCorporateActionEventIdentification() {
 		return officialCorporateActionEventIdentification;
 	}
@@ -645,6 +654,7 @@ public class CorporateActionGeneralInformation50 {
 		this.officialCorporateActionEventIdentification = officialCorporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "ClssActnNb")
 	public Max35Text getClassActionNumber() {
 		return classActionNumber;
 	}
@@ -653,6 +663,7 @@ public class CorporateActionGeneralInformation50 {
 		this.classActionNumber = classActionNumber;
 	}
 
+	@XmlElement(name = "EvtTp", required = true)
 	public CorporateActionEventType12Choice getEventType() {
 		return eventType;
 	}
@@ -661,6 +672,7 @@ public class CorporateActionGeneralInformation50 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -669,6 +681,7 @@ public class CorporateActionGeneralInformation50 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "AddtlBizPrcInd")
 	public AdditionalBusinessProcessFormat7Choice getAdditionalBusinessProcessIndicator() {
 		return additionalBusinessProcessIndicator;
 	}
@@ -677,6 +690,7 @@ public class CorporateActionGeneralInformation50 {
 		this.additionalBusinessProcessIndicator = additionalBusinessProcessIndicator;
 	}
 
+	@XmlElement(name = "IntrmdtSctiesDstrbtnTp")
 	public IntermediateSecuritiesDistributionTypeFormat6Choice getIntermediateSecuritiesDistributionType() {
 		return intermediateSecuritiesDistributionType;
 	}
@@ -685,6 +699,7 @@ public class CorporateActionGeneralInformation50 {
 		this.intermediateSecuritiesDistributionType = intermediateSecuritiesDistributionType;
 	}
 
+	@XmlElement(name = "FrctnlQty")
 	public FinancialInstrumentQuantity1Choice getFractionalQuantity() {
 		return fractionalQuantity;
 	}

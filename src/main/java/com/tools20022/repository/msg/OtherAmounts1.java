@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money debited and credited on the books of an account servicer.
@@ -112,6 +116,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Amount of money debited and credited on the books of an account servicer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherAmounts1", propOrder = {"accruedInterestAmount", "chargesFees", "countryNationalFederalTax", "tradeAmount", "executingBrokerAmount", "issueDiscountAllowance", "paymentLevyTax", "localTax", "localBrokerCommission",
+		"margin", "other", "postageAmount", "regulatoryAmount", "shippingAmount", "specialConcession", "stampDuty", "stockExchangeTax", "transferTax", "transactionTax", "valueAddedTax", "withholdingTax", "netGainLoss", "consumptionTax",
+		"accruedCapitalisationAmount"})
 public class OtherAmounts1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1276,6 +1284,7 @@ public class OtherAmounts1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt")
 	public AmountAndDirection1 getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -1284,6 +1293,7 @@ public class OtherAmounts1 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "ChrgsFees")
 	public AmountAndDirection1 getChargesFees() {
 		return chargesFees;
 	}
@@ -1292,6 +1302,7 @@ public class OtherAmounts1 {
 		this.chargesFees = chargesFees;
 	}
 
+	@XmlElement(name = "CtryNtlFdrlTax")
 	public AmountAndDirection1 getCountryNationalFederalTax() {
 		return countryNationalFederalTax;
 	}
@@ -1300,6 +1311,7 @@ public class OtherAmounts1 {
 		this.countryNationalFederalTax = countryNationalFederalTax;
 	}
 
+	@XmlElement(name = "TradAmt")
 	public AmountAndDirection1 getTradeAmount() {
 		return tradeAmount;
 	}
@@ -1308,6 +1320,7 @@ public class OtherAmounts1 {
 		this.tradeAmount = tradeAmount;
 	}
 
+	@XmlElement(name = "ExctgBrkrAmt")
 	public AmountAndDirection1 getExecutingBrokerAmount() {
 		return executingBrokerAmount;
 	}
@@ -1316,6 +1329,7 @@ public class OtherAmounts1 {
 		this.executingBrokerAmount = executingBrokerAmount;
 	}
 
+	@XmlElement(name = "IsseDscntAllwnc")
 	public AmountAndDirection1 getIssueDiscountAllowance() {
 		return issueDiscountAllowance;
 	}
@@ -1324,6 +1338,7 @@ public class OtherAmounts1 {
 		this.issueDiscountAllowance = issueDiscountAllowance;
 	}
 
+	@XmlElement(name = "PmtLevyTax")
 	public AmountAndDirection1 getPaymentLevyTax() {
 		return paymentLevyTax;
 	}
@@ -1332,6 +1347,7 @@ public class OtherAmounts1 {
 		this.paymentLevyTax = paymentLevyTax;
 	}
 
+	@XmlElement(name = "LclTax")
 	public AmountAndDirection1 getLocalTax() {
 		return localTax;
 	}
@@ -1340,6 +1356,7 @@ public class OtherAmounts1 {
 		this.localTax = localTax;
 	}
 
+	@XmlElement(name = "LclBrkrComssn")
 	public AmountAndDirection1 getLocalBrokerCommission() {
 		return localBrokerCommission;
 	}
@@ -1348,6 +1365,7 @@ public class OtherAmounts1 {
 		this.localBrokerCommission = localBrokerCommission;
 	}
 
+	@XmlElement(name = "Mrgn")
 	public AmountAndDirection1 getMargin() {
 		return margin;
 	}
@@ -1356,6 +1374,7 @@ public class OtherAmounts1 {
 		this.margin = margin;
 	}
 
+	@XmlElement(name = "Othr")
 	public AmountAndDirection1 getOther() {
 		return other;
 	}
@@ -1364,6 +1383,7 @@ public class OtherAmounts1 {
 		this.other = other;
 	}
 
+	@XmlElement(name = "PstgAmt")
 	public AmountAndDirection1 getPostageAmount() {
 		return postageAmount;
 	}
@@ -1372,6 +1392,7 @@ public class OtherAmounts1 {
 		this.postageAmount = postageAmount;
 	}
 
+	@XmlElement(name = "RgltryAmt")
 	public AmountAndDirection1 getRegulatoryAmount() {
 		return regulatoryAmount;
 	}
@@ -1380,6 +1401,7 @@ public class OtherAmounts1 {
 		this.regulatoryAmount = regulatoryAmount;
 	}
 
+	@XmlElement(name = "ShppgAmt")
 	public AmountAndDirection1 getShippingAmount() {
 		return shippingAmount;
 	}
@@ -1388,6 +1410,7 @@ public class OtherAmounts1 {
 		this.shippingAmount = shippingAmount;
 	}
 
+	@XmlElement(name = "SpclCncssn")
 	public AmountAndDirection1 getSpecialConcession() {
 		return specialConcession;
 	}
@@ -1396,6 +1419,7 @@ public class OtherAmounts1 {
 		this.specialConcession = specialConcession;
 	}
 
+	@XmlElement(name = "StmpDty")
 	public AmountAndDirection1 getStampDuty() {
 		return stampDuty;
 	}
@@ -1404,6 +1428,7 @@ public class OtherAmounts1 {
 		this.stampDuty = stampDuty;
 	}
 
+	@XmlElement(name = "StockXchgTax")
 	public AmountAndDirection1 getStockExchangeTax() {
 		return stockExchangeTax;
 	}
@@ -1412,6 +1437,7 @@ public class OtherAmounts1 {
 		this.stockExchangeTax = stockExchangeTax;
 	}
 
+	@XmlElement(name = "TrfTax")
 	public AmountAndDirection1 getTransferTax() {
 		return transferTax;
 	}
@@ -1420,6 +1446,7 @@ public class OtherAmounts1 {
 		this.transferTax = transferTax;
 	}
 
+	@XmlElement(name = "TxTax")
 	public AmountAndDirection1 getTransactionTax() {
 		return transactionTax;
 	}
@@ -1428,6 +1455,7 @@ public class OtherAmounts1 {
 		this.transactionTax = transactionTax;
 	}
 
+	@XmlElement(name = "ValAddedTax")
 	public AmountAndDirection1 getValueAddedTax() {
 		return valueAddedTax;
 	}
@@ -1436,6 +1464,7 @@ public class OtherAmounts1 {
 		this.valueAddedTax = valueAddedTax;
 	}
 
+	@XmlElement(name = "WhldgTax")
 	public AmountAndDirection1 getWithholdingTax() {
 		return withholdingTax;
 	}
@@ -1444,6 +1473,7 @@ public class OtherAmounts1 {
 		this.withholdingTax = withholdingTax;
 	}
 
+	@XmlElement(name = "NetGnLoss")
 	public AmountAndDirection1 getNetGainLoss() {
 		return netGainLoss;
 	}
@@ -1452,6 +1482,7 @@ public class OtherAmounts1 {
 		this.netGainLoss = netGainLoss;
 	}
 
+	@XmlElement(name = "CsmptnTax")
 	public AmountAndDirection1 getConsumptionTax() {
 		return consumptionTax;
 	}
@@ -1460,6 +1491,7 @@ public class OtherAmounts1 {
 		this.consumptionTax = consumptionTax;
 	}
 
+	@XmlElement(name = "AcrdCptlstnAmt")
 	public AmountAndDirection1 getAccruedCapitalisationAmount() {
 		return accruedCapitalisationAmount;
 	}

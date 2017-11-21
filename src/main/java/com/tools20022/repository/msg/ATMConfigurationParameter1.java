@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Configuration parameter version of the ATM.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMConfigurationParameter1", propOrder = {"type", "version"})
 public class ATMConfigurationParameter1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class ATMConfigurationParameter1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public DataSetCategory7Code getType() {
 		return type;
 	}
@@ -174,6 +181,7 @@ public class ATMConfigurationParameter1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Vrsn", required = true)
 	public Max35Text getVersion() {
 		return version;
 	}

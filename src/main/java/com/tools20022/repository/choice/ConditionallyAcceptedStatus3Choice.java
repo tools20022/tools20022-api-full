@@ -30,6 +30,10 @@ import com.tools20022.repository.msg.ConditionallyAcceptedStatusReason3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason for a conditionally accepted status.
@@ -70,6 +74,8 @@ import java.util.List;
  * ConditionallyAcceptedStatus2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ConditionallyAcceptedStatus3Choice", propOrder = {"noSpecifiedReason", "reasonDetails"})
 public class ConditionallyAcceptedStatus3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -223,6 +229,7 @@ public class ConditionallyAcceptedStatus3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
@@ -231,6 +238,7 @@ public class ConditionallyAcceptedStatus3Choice {
 		this.noSpecifiedReason = noSpecifiedReason;
 	}
 
+	@XmlElement(name = "RsnDtls", required = true)
 	public List<ConditionallyAcceptedStatusReason3> getReasonDetails() {
 		return reasonDetails;
 	}

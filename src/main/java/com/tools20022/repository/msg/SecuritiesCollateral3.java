@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the securities posted as collateral.
@@ -109,6 +113,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesCollateral2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesCollateral3", propOrder = {"collateralIdentification", "securityIdentification", "maturityDate", "limitedCoverageIndicator", "quantity", "price", "marketValue", "haircut", "collateralValue", "valueDate",
+		"safekeepingAccount", "safekeepingPlace", "settlementParameters"})
 public class SecuritiesCollateral3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -968,6 +975,7 @@ public class SecuritiesCollateral3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CollId")
 	public Max35Text getCollateralIdentification() {
 		return collateralIdentification;
 	}
@@ -976,6 +984,7 @@ public class SecuritiesCollateral3 {
 		this.collateralIdentification = collateralIdentification;
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification14 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -984,6 +993,7 @@ public class SecuritiesCollateral3 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "MtrtyDt")
 	public DateAndDateTimeChoice getMaturityDate() {
 		return maturityDate;
 	}
@@ -992,6 +1002,7 @@ public class SecuritiesCollateral3 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "LtdCvrgInd")
 	public YesNoIndicator getLimitedCoverageIndicator() {
 		return limitedCoverageIndicator;
 	}
@@ -1000,6 +1011,7 @@ public class SecuritiesCollateral3 {
 		this.limitedCoverageIndicator = limitedCoverageIndicator;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity1Choice getQuantity() {
 		return quantity;
 	}
@@ -1008,6 +1020,7 @@ public class SecuritiesCollateral3 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "Pric")
 	public Price2 getPrice() {
 		return price;
 	}
@@ -1016,6 +1029,7 @@ public class SecuritiesCollateral3 {
 		this.price = price;
 	}
 
+	@XmlElement(name = "MktVal")
 	public ActiveCurrencyAndAmount getMarketValue() {
 		return marketValue;
 	}
@@ -1024,6 +1038,7 @@ public class SecuritiesCollateral3 {
 		this.marketValue = marketValue;
 	}
 
+	@XmlElement(name = "Hrcut")
 	public PercentageRate getHaircut() {
 		return haircut;
 	}
@@ -1032,6 +1047,7 @@ public class SecuritiesCollateral3 {
 		this.haircut = haircut;
 	}
 
+	@XmlElement(name = "CollVal")
 	public ActiveCurrencyAndAmount getCollateralValue() {
 		return collateralValue;
 	}
@@ -1040,6 +1056,7 @@ public class SecuritiesCollateral3 {
 		this.collateralValue = collateralValue;
 	}
 
+	@XmlElement(name = "ValDt")
 	public ISODate getValueDate() {
 		return valueDate;
 	}
@@ -1048,6 +1065,7 @@ public class SecuritiesCollateral3 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount19 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -1056,6 +1074,7 @@ public class SecuritiesCollateral3 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "SfkpgPlc", required = true)
 	public SafekeepingPlaceFormat7Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -1064,6 +1083,7 @@ public class SecuritiesCollateral3 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "SttlmParams")
 	public SettlementDetails88 getSettlementParameters() {
 		return settlementParameters;
 	}

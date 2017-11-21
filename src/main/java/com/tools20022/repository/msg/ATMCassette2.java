@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information on the cassette of an ATM.
@@ -72,6 +76,8 @@ import java.util.List;
  * definition} = "Information on the cassette of an ATM."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCassette2", propOrder = {"physicalIdentification", "logicalIdentification", "serialNumber", "type", "subType", "mediaType", "mediaCounters"})
 public class ATMCassette2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -372,6 +378,7 @@ public class ATMCassette2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PhysId")
 	public Max35Text getPhysicalIdentification() {
 		return physicalIdentification;
 	}
@@ -380,6 +387,7 @@ public class ATMCassette2 {
 		this.physicalIdentification = physicalIdentification;
 	}
 
+	@XmlElement(name = "LogclId", required = true)
 	public Max35Text getLogicalIdentification() {
 		return logicalIdentification;
 	}
@@ -388,6 +396,7 @@ public class ATMCassette2 {
 		this.logicalIdentification = logicalIdentification;
 	}
 
+	@XmlElement(name = "SrlNb")
 	public Max35Text getSerialNumber() {
 		return serialNumber;
 	}
@@ -396,6 +405,7 @@ public class ATMCassette2 {
 		this.serialNumber = serialNumber;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ATMCassetteType1Code getType() {
 		return type;
 	}
@@ -404,6 +414,7 @@ public class ATMCassette2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "SubTp")
 	public List<ATMNoteType1Code> getSubType() {
 		return subType;
 	}
@@ -412,6 +423,7 @@ public class ATMCassette2 {
 		this.subType = subType;
 	}
 
+	@XmlElement(name = "MdiaTp")
 	public ATMMediaType1Code getMediaType() {
 		return mediaType;
 	}
@@ -420,6 +432,7 @@ public class ATMCassette2 {
 		this.mediaType = mediaType;
 	}
 
+	@XmlElement(name = "MdiaCntrs")
 	public List<ATMCassetteCounters3> getMediaCounters() {
 		return mediaCounters;
 	}

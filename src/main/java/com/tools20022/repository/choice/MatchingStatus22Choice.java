@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.ProprietaryReason2;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the matching status.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of format for the matching status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MatchingStatus22Choice", propOrder = {"matched", "unmatched", "proprietary"})
 public class MatchingStatus22Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -226,6 +232,7 @@ public class MatchingStatus22Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Mtchd", required = true)
 	public ProprietaryReason2 getMatched() {
 		return matched;
 	}
@@ -234,6 +241,7 @@ public class MatchingStatus22Choice {
 		this.matched = matched;
 	}
 
+	@XmlElement(name = "Umtchd", required = true)
 	public UnmatchedStatus15Choice getUnmatched() {
 		return unmatched;
 	}
@@ -242,6 +250,7 @@ public class MatchingStatus22Choice {
 		this.unmatched = unmatched;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason2 getProprietary() {
 		return proprietary;
 	}

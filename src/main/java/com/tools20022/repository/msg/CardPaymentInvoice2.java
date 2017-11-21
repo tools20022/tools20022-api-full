@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Detailed invoice data.
@@ -73,6 +77,8 @@ import java.util.List;
  * CardPaymentInvoice1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentInvoice2", propOrder = {"invoiceHeader", "tradeAgreement", "tradeDelivery", "lineItem"})
 public class CardPaymentInvoice2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -306,6 +312,7 @@ public class CardPaymentInvoice2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InvcHdr", required = true)
 	public InvoiceHeader2 getInvoiceHeader() {
 		return invoiceHeader;
 	}
@@ -314,6 +321,7 @@ public class CardPaymentInvoice2 {
 		this.invoiceHeader = invoiceHeader;
 	}
 
+	@XmlElement(name = "TradAgrmt", required = true)
 	public TradeAgreement13 getTradeAgreement() {
 		return tradeAgreement;
 	}
@@ -322,6 +330,7 @@ public class CardPaymentInvoice2 {
 		this.tradeAgreement = tradeAgreement;
 	}
 
+	@XmlElement(name = "TradDlvry", required = true)
 	public TradeDelivery2 getTradeDelivery() {
 		return tradeDelivery;
 	}
@@ -330,6 +339,7 @@ public class CardPaymentInvoice2 {
 		this.tradeDelivery = tradeDelivery;
 	}
 
+	@XmlElement(name = "LineItm")
 	public List<LineItem16> getLineItem() {
 		return lineItem;
 	}

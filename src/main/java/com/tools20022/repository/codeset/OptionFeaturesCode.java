@@ -29,29 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures1Code
- * OptionFeatures1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures2Code
- * OptionFeatures2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures3Code
- * OptionFeatures3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures4Code
- * OptionFeatures4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures5Code
- * OptionFeatures5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures8Code
- * OptionFeatures8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures7Code
- * OptionFeatures7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures6Code
- * OptionFeatures6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures10Code
- * OptionFeatures10Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -96,6 +73,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OptionFeaturesCode#mmInstructCashAmount
  * OptionFeaturesCode.mmInstructCashAmount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures1Code
+ * OptionFeatures1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures2Code
+ * OptionFeatures2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures3Code
+ * OptionFeatures3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures4Code
+ * OptionFeatures4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures5Code
+ * OptionFeatures5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures8Code
+ * OptionFeatures8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures7Code
+ * OptionFeatures7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures6Code
+ * OptionFeatures6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionFeatures10Code
+ * OptionFeatures10Code}</li>
  * </ul>
  * </li>
  * <li>

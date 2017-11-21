@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Security that is a sub-set of an investment fund, and is governed by the same
@@ -112,6 +116,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrument16", propOrder = {"identification", "name", "classType", "umbrellaName", "countryOfDomicile", "registeredDistributionCountry", "denominationCurrency", "distributionPolicy", "dividendPolicy",
+		"securitiesForm", "dematerialisedIndicator", "dividendFrequency", "reinvestmentFrequency", "EUSavingsDirective", "frontEndLoadIndicator", "backEndLoadIndicator", "switchFeeIndicator"})
 public class FinancialInstrument16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -974,6 +981,7 @@ public class FinancialInstrument16 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification7 getIdentification() {
 		return identification;
 	}
@@ -982,6 +990,7 @@ public class FinancialInstrument16 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max350Text getName() {
 		return name;
 	}
@@ -990,6 +999,7 @@ public class FinancialInstrument16 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "ClssTp")
 	public Max35Text getClassType() {
 		return classType;
 	}
@@ -998,6 +1008,7 @@ public class FinancialInstrument16 {
 		this.classType = classType;
 	}
 
+	@XmlElement(name = "UmbrllNm")
 	public Max35Text getUmbrellaName() {
 		return umbrellaName;
 	}
@@ -1006,6 +1017,7 @@ public class FinancialInstrument16 {
 		this.umbrellaName = umbrellaName;
 	}
 
+	@XmlElement(name = "CtryOfDmcl", required = true)
 	public CountryCode getCountryOfDomicile() {
 		return countryOfDomicile;
 	}
@@ -1014,6 +1026,7 @@ public class FinancialInstrument16 {
 		this.countryOfDomicile = countryOfDomicile;
 	}
 
+	@XmlElement(name = "RegdDstrbtnCtry", required = true)
 	public List<CountryCode> getRegisteredDistributionCountry() {
 		return registeredDistributionCountry;
 	}
@@ -1022,6 +1035,7 @@ public class FinancialInstrument16 {
 		this.registeredDistributionCountry = registeredDistributionCountry;
 	}
 
+	@XmlElement(name = "DnmtnCcy", required = true)
 	public ActiveCurrencyCode getDenominationCurrency() {
 		return denominationCurrency;
 	}
@@ -1030,6 +1044,7 @@ public class FinancialInstrument16 {
 		this.denominationCurrency = denominationCurrency;
 	}
 
+	@XmlElement(name = "DstrbtnPlcy", required = true)
 	public DistributionPolicy1Code getDistributionPolicy() {
 		return distributionPolicy;
 	}
@@ -1038,6 +1053,7 @@ public class FinancialInstrument16 {
 		this.distributionPolicy = distributionPolicy;
 	}
 
+	@XmlElement(name = "DvddPlcy")
 	public DividendPolicy1Code getDividendPolicy() {
 		return dividendPolicy;
 	}
@@ -1046,6 +1062,7 @@ public class FinancialInstrument16 {
 		this.dividendPolicy = dividendPolicy;
 	}
 
+	@XmlElement(name = "SctiesForm", required = true)
 	public FormOfSecurity1Code getSecuritiesForm() {
 		return securitiesForm;
 	}
@@ -1054,6 +1071,7 @@ public class FinancialInstrument16 {
 		this.securitiesForm = securitiesForm;
 	}
 
+	@XmlElement(name = "DmtrlsdInd", required = true)
 	public YesNoIndicator getDematerialisedIndicator() {
 		return dematerialisedIndicator;
 	}
@@ -1062,6 +1080,7 @@ public class FinancialInstrument16 {
 		this.dematerialisedIndicator = dematerialisedIndicator;
 	}
 
+	@XmlElement(name = "DvddFrqcy")
 	public EventFrequency2Code getDividendFrequency() {
 		return dividendFrequency;
 	}
@@ -1070,6 +1089,7 @@ public class FinancialInstrument16 {
 		this.dividendFrequency = dividendFrequency;
 	}
 
+	@XmlElement(name = "RinvstmtFrqcy")
 	public EventFrequency2Code getReinvestmentFrequency() {
 		return reinvestmentFrequency;
 	}
@@ -1078,6 +1098,7 @@ public class FinancialInstrument16 {
 		this.reinvestmentFrequency = reinvestmentFrequency;
 	}
 
+	@XmlElement(name = "EUSvgsDrctv")
 	public EUSavingsDirective1Code getEUSavingsDirective() {
 		return eUSavingsDirective;
 	}
@@ -1086,6 +1107,7 @@ public class FinancialInstrument16 {
 		this.eUSavingsDirective = eUSavingsDirective;
 	}
 
+	@XmlElement(name = "FrntEndLdInd", required = true)
 	public YesNoIndicator getFrontEndLoadIndicator() {
 		return frontEndLoadIndicator;
 	}
@@ -1094,6 +1116,7 @@ public class FinancialInstrument16 {
 		this.frontEndLoadIndicator = frontEndLoadIndicator;
 	}
 
+	@XmlElement(name = "BckEndLdInd", required = true)
 	public YesNoIndicator getBackEndLoadIndicator() {
 		return backEndLoadIndicator;
 	}
@@ -1102,6 +1125,7 @@ public class FinancialInstrument16 {
 		this.backEndLoadIndicator = backEndLoadIndicator;
 	}
 
+	@XmlElement(name = "SwtchFeeInd", required = true)
 	public YesNoIndicator getSwitchFeeIndicator() {
 		return switchFeeIndicator;
 	}

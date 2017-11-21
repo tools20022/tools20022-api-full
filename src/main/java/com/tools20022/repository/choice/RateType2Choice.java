@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information needed to process a currency exchange or conversion.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information needed to process a currency exchange or conversion."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RateType2Choice", propOrder = {"code", "proprietary"})
 public class RateType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class RateType2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public ExchangeRateType1Code getCode() {
 		return code;
 	}
@@ -185,6 +192,7 @@ public class RateType2Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public Max35Text getProprietary() {
 		return proprietary;
 	}

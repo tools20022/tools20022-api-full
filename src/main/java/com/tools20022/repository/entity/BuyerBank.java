@@ -63,6 +63,11 @@ public class BuyerBank extends TradePartyRole {
 				definition = "Financial institution of the buyer.";
 				superType_lazy = () -> TradePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BuyerBank.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

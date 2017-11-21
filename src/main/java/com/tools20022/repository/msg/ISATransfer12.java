@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the type of product and the assets to be transferred.
@@ -98,6 +102,9 @@ import java.util.List;
  * ISATransfer9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ISATransfer12", propOrder = {"primaryIndividualInvestor", "secondaryIndividualInvestor", "otherIndividualInvestor", "primaryCorporateInvestor", "secondaryCorporateInvestor", "otherCorporateInvestor", "transferorAccount",
+		"nomineeAccount", "transferee", "cashAccount", "productTransferAndReference", "extension"})
 public class ISATransfer12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -860,6 +867,7 @@ public class ISATransfer12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmryIndvInvstr")
 	public IndividualPerson8 getPrimaryIndividualInvestor() {
 		return primaryIndividualInvestor;
 	}
@@ -868,6 +876,7 @@ public class ISATransfer12 {
 		this.primaryIndividualInvestor = primaryIndividualInvestor;
 	}
 
+	@XmlElement(name = "ScndryIndvInvstr")
 	public IndividualPerson8 getSecondaryIndividualInvestor() {
 		return secondaryIndividualInvestor;
 	}
@@ -876,6 +885,7 @@ public class ISATransfer12 {
 		this.secondaryIndividualInvestor = secondaryIndividualInvestor;
 	}
 
+	@XmlElement(name = "OthrIndvInvstr")
 	public List<IndividualPerson8> getOtherIndividualInvestor() {
 		return otherIndividualInvestor;
 	}
@@ -884,6 +894,7 @@ public class ISATransfer12 {
 		this.otherIndividualInvestor = otherIndividualInvestor;
 	}
 
+	@XmlElement(name = "PmryCorpInvstr")
 	public Organisation4 getPrimaryCorporateInvestor() {
 		return primaryCorporateInvestor;
 	}
@@ -892,6 +903,7 @@ public class ISATransfer12 {
 		this.primaryCorporateInvestor = primaryCorporateInvestor;
 	}
 
+	@XmlElement(name = "ScndryCorpInvstr")
 	public Organisation4 getSecondaryCorporateInvestor() {
 		return secondaryCorporateInvestor;
 	}
@@ -900,6 +912,7 @@ public class ISATransfer12 {
 		this.secondaryCorporateInvestor = secondaryCorporateInvestor;
 	}
 
+	@XmlElement(name = "OthrCorpInvstr")
 	public List<Organisation4> getOtherCorporateInvestor() {
 		return otherCorporateInvestor;
 	}
@@ -908,6 +921,7 @@ public class ISATransfer12 {
 		this.otherCorporateInvestor = otherCorporateInvestor;
 	}
 
+	@XmlElement(name = "TrfrAcct", required = true)
 	public Account15 getTransferorAccount() {
 		return transferorAccount;
 	}
@@ -916,6 +930,7 @@ public class ISATransfer12 {
 		this.transferorAccount = transferorAccount;
 	}
 
+	@XmlElement(name = "NmneeAcct")
 	public Account16 getNomineeAccount() {
 		return nomineeAccount;
 	}
@@ -924,6 +939,7 @@ public class ISATransfer12 {
 		this.nomineeAccount = nomineeAccount;
 	}
 
+	@XmlElement(name = "Trfee", required = true)
 	public PartyIdentification2Choice getTransferee() {
 		return transferee;
 	}
@@ -932,6 +948,7 @@ public class ISATransfer12 {
 		this.transferee = transferee;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccount29 getCashAccount() {
 		return cashAccount;
 	}
@@ -940,6 +957,7 @@ public class ISATransfer12 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "PdctTrfAndRef", required = true)
 	public ISATransfer17 getProductTransferAndReference() {
 		return productTransferAndReference;
 	}
@@ -948,6 +966,7 @@ public class ISATransfer12 {
 		this.productTransferAndReference = productTransferAndReference;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Parameters applied to the settlement of a security transfer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DeliveringPartiesAndAccount6", propOrder = {"deliverersCustodianDetails", "deliverersIntermediaryDetails", "deliveringAgentDetails"})
 public class DeliveringPartiesAndAccount6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -237,6 +243,7 @@ public class DeliveringPartiesAndAccount6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DlvrrsCtdnDtls")
 	public PartyIdentificationAndAccount13 getDeliverersCustodianDetails() {
 		return deliverersCustodianDetails;
 	}
@@ -245,6 +252,7 @@ public class DeliveringPartiesAndAccount6 {
 		this.deliverersCustodianDetails = deliverersCustodianDetails;
 	}
 
+	@XmlElement(name = "DlvrrsIntrmyDtls")
 	public PartyIdentificationAndAccount13 getDeliverersIntermediaryDetails() {
 		return deliverersIntermediaryDetails;
 	}
@@ -253,6 +261,7 @@ public class DeliveringPartiesAndAccount6 {
 		this.deliverersIntermediaryDetails = deliverersIntermediaryDetails;
 	}
 
+	@XmlElement(name = "DlvrgAgtDtls", required = true)
 	public PartyIdentificationAndAccount13 getDeliveringAgentDetails() {
 		return deliveringAgentDetails;
 	}

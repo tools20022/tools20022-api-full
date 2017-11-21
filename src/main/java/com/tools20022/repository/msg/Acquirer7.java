@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.FinancialInstitution;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Acquirer of the withdrawal transaction, in charge of the funds settlement
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Acquirer6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Acquirer7", propOrder = {"acquiringInstitution", "branch"})
 public class Acquirer7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -208,6 +214,7 @@ public class Acquirer7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcqrgInstn")
 	public Max35Text getAcquiringInstitution() {
 		return acquiringInstitution;
 	}
@@ -216,6 +223,7 @@ public class Acquirer7 {
 		this.acquiringInstitution = acquiringInstitution;
 	}
 
+	@XmlElement(name = "Brnch")
 	public Max35Text getBranch() {
 		return branch;
 	}

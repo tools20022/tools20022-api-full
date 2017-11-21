@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of an entity involved in an activity.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyIdentification46}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification91", propOrder = {"identification", "LEI", "processingIdentification"})
 public class PartyIdentification91 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -243,6 +249,7 @@ public class PartyIdentification91 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification44Choice getIdentification() {
 		return identification;
 	}
@@ -251,6 +258,7 @@ public class PartyIdentification91 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "LEI")
 	public LEIIdentifier getLEI() {
 		return lEI;
 	}
@@ -259,6 +267,7 @@ public class PartyIdentification91 {
 		this.lEI = lEI;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public Max35Text getProcessingIdentification() {
 		return processingIdentification;
 	}

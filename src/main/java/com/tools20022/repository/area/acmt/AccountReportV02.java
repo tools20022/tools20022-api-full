@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AccountManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.BankAccountManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The AccountReport message is sent from a financial institution to an
@@ -36,9 +38,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.014.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementLatestVersion
@@ -82,6 +81,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.014.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -97,6 +99,8 @@ import java.util.List;
  * AccountReportV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountReportV02", propOrder = {"references", "from", "accountServicerIdentification", "organisation", "report", "digitalSignature", "supplementaryData"})
 public class AccountReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -136,6 +140,14 @@ public class AccountReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> References5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountReportV02.class.getMethod("getReferences", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OrganisationIdentification8 from;
 	/**
@@ -173,6 +185,14 @@ public class AccountReportV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> OrganisationIdentification8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountReportV02.class.getMethod("getFrom", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BranchAndFinancialInstitutionIdentification5 accountServicerIdentification;
@@ -212,6 +232,14 @@ public class AccountReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountReportV02.class.getMethod("getAccountServicerIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Organisation12 organisation;
 	/**
@@ -250,6 +278,14 @@ public class AccountReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> Organisation12.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountReportV02.class.getMethod("getOrganisation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AccountReport15> report;
 	/**
@@ -282,6 +318,14 @@ public class AccountReportV02 {
 			definition = "Account report.";
 			minOccurs = 0;
 			complexType_lazy = () -> AccountReport15.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountReportV02.class.getMethod("getReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<PartyAndSignature2> digitalSignature;
@@ -320,6 +364,14 @@ public class AccountReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountReportV02.class.getMethod("getDigitalSignature", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -357,6 +409,14 @@ public class AccountReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountReportV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -370,8 +430,9 @@ public class AccountReportV02 {
 				rootElement = "Document";
 				xmlTag = "AcctRpt";
 				businessArea_lazy = () -> AccountManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AccountReportV02.mmReferences, AccountReportV02.mmFrom, AccountReportV02.mmAccountServicerIdentification, AccountReportV02.mmOrganisation, AccountReportV02.mmReport,
-						AccountReportV02.mmDigitalSignature, AccountReportV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountReportV02.mmReferences, com.tools20022.repository.area.acmt.AccountReportV02.mmFrom,
+						com.tools20022.repository.area.acmt.AccountReportV02.mmAccountServicerIdentification, com.tools20022.repository.area.acmt.AccountReportV02.mmOrganisation,
+						com.tools20022.repository.area.acmt.AccountReportV02.mmReport, com.tools20022.repository.area.acmt.AccountReportV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountReportV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";
@@ -381,10 +442,16 @@ public class AccountReportV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountReportV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Refs", required = true)
 	public References5 getReferences() {
 		return references;
 	}
@@ -393,6 +460,7 @@ public class AccountReportV02 {
 		this.references = references;
 	}
 
+	@XmlElement(name = "Fr")
 	public OrganisationIdentification8 getFrom() {
 		return from;
 	}
@@ -401,6 +469,7 @@ public class AccountReportV02 {
 		this.from = from;
 	}
 
+	@XmlElement(name = "AcctSvcrId", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getAccountServicerIdentification() {
 		return accountServicerIdentification;
 	}
@@ -409,6 +478,7 @@ public class AccountReportV02 {
 		this.accountServicerIdentification = accountServicerIdentification;
 	}
 
+	@XmlElement(name = "Org", required = true)
 	public Organisation12 getOrganisation() {
 		return organisation;
 	}
@@ -417,6 +487,7 @@ public class AccountReportV02 {
 		this.organisation = organisation;
 	}
 
+	@XmlElement(name = "Rpt")
 	public List<AccountReport15> getReport() {
 		return report;
 	}
@@ -425,6 +496,7 @@ public class AccountReportV02 {
 		this.report = report;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public List<PartyAndSignature2> getDigitalSignature() {
 		return digitalSignature;
 	}
@@ -433,11 +505,18 @@ public class AccountReportV02 {
 		this.digitalSignature = digitalSignature;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.014.02.02")
+	static public class Document {
+		@XmlElement(name = "AcctRpt", required = true)
+		public AccountReportV02 messageBody;
 	}
 }

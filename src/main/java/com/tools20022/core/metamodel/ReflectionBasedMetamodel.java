@@ -56,8 +56,15 @@ public class ReflectionBasedMetamodel implements Metamodel {
 	}
 
 	private <B extends GeneratedMetamodelBean> MMTypeImpl<B> getTypeImplByClass(Class<B> beanClass) {
+		Class<?> keyClass;
+		if( ! mmTypesByClass.containsKey(beanClass)) {
+			keyClass = beanClass.getSuperclass();
+		} else {
+			keyClass = beanClass;
+		}
+		
 		@SuppressWarnings("unchecked")
-		MMTypeImpl<B> ret = (MMTypeImpl<B>) mmTypesByClass.get(beanClass);
+		MMTypeImpl<B> ret = (MMTypeImpl<B>) mmTypesByClass.get(keyClass);
 		if (ret == null)
 			throw new NoSuchElementException("No metatype for class " + beanClass);
 		return ret;

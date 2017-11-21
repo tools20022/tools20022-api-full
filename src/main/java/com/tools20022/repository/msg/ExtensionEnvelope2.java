@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.ExtensionContents2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Technical component that contains the validated extension information. This
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExtensionEnvelope2", propOrder = "extensionContents")
 public class ExtensionEnvelope2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -117,6 +123,7 @@ public class ExtensionEnvelope2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XtnsnCnts", required = true)
 	public ExtensionContents2 getExtensionContents() {
 		return extensionContents;
 	}

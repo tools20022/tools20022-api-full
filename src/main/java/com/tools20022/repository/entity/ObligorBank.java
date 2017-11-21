@@ -67,6 +67,11 @@ public class ObligorBank extends CommercialTradePartyRole {
 				definition = "Bank that has to pay under a payment obligation contracted between two financial institutions related to the financing of a commercial transaction.";
 				superType_lazy = () -> CommercialTradePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ObligorBank.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

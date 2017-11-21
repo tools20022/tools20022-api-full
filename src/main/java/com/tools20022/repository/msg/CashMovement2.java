@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the cash movement.
@@ -71,6 +75,8 @@ import java.util.List;
  * definition} = "Provides information about the cash movement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashMovement2", propOrder = {"amount", "accountDetails"})
 public class CashMovement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -184,6 +190,7 @@ public class CashMovement2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -192,6 +199,7 @@ public class CashMovement2 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public List<CashAccount19> getAccountDetails() {
 		return accountDetails;
 	}

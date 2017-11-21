@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters to communicate with a host.
@@ -83,6 +87,8 @@ import java.util.List;
  * NetworkParameters3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NetworkParameters5", propOrder = {"address", "userName", "accessCode", "serverCertificate", "serverCertificateIdentifier", "clientCertificate", "securityProfile"})
 public class NetworkParameters5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -435,6 +441,7 @@ public class NetworkParameters5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Adr", required = true)
 	public List<NetworkParameters4> getAddress() {
 		return address;
 	}
@@ -443,6 +450,7 @@ public class NetworkParameters5 {
 		this.address = address;
 	}
 
+	@XmlElement(name = "UsrNm")
 	public Max35Text getUserName() {
 		return userName;
 	}
@@ -451,6 +459,7 @@ public class NetworkParameters5 {
 		this.userName = userName;
 	}
 
+	@XmlElement(name = "AccsCd")
 	public Max35Binary getAccessCode() {
 		return accessCode;
 	}
@@ -459,6 +468,7 @@ public class NetworkParameters5 {
 		this.accessCode = accessCode;
 	}
 
+	@XmlElement(name = "SvrCert")
 	public List<Max10KBinary> getServerCertificate() {
 		return serverCertificate;
 	}
@@ -467,6 +477,7 @@ public class NetworkParameters5 {
 		this.serverCertificate = serverCertificate;
 	}
 
+	@XmlElement(name = "SvrCertIdr")
 	public List<Max140Binary> getServerCertificateIdentifier() {
 		return serverCertificateIdentifier;
 	}
@@ -475,6 +486,7 @@ public class NetworkParameters5 {
 		this.serverCertificateIdentifier = serverCertificateIdentifier;
 	}
 
+	@XmlElement(name = "ClntCert")
 	public List<Max10KBinary> getClientCertificate() {
 		return clientCertificate;
 	}
@@ -483,6 +495,7 @@ public class NetworkParameters5 {
 		this.clientCertificate = clientCertificate;
 	}
 
+	@XmlElement(name = "SctyPrfl")
 	public Max35Text getSecurityProfile() {
 		return securityProfile;
 	}

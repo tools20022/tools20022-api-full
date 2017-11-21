@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.Max8Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Breakdown of unallocated securities transactions.
@@ -91,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionUnallocatedSecuritiesTransactionDetailsSD4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionUnallocatedSecuritiesTransactionDetailsSD5", propOrder = {"creditDebitIndicator", "reasonCode", "transactionQuantity", "unallocatedReasonCode", "contraParticipantNumber", "earliestPaymentDate"})
 public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -470,6 +476,7 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -478,6 +485,7 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD5 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "RsnCd")
 	public DTCAdjustmentPaymentType3Code getReasonCode() {
 		return reasonCode;
 	}
@@ -486,6 +494,7 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD5 {
 		this.reasonCode = reasonCode;
 	}
 
+	@XmlElement(name = "TxQty")
 	public FinancialInstrumentQuantity15Choice getTransactionQuantity() {
 		return transactionQuantity;
 	}
@@ -494,6 +503,7 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD5 {
 		this.transactionQuantity = transactionQuantity;
 	}
 
+	@XmlElement(name = "UallctdRsnCd")
 	public DTCUnallocatedAdjustmentReason2Code getUnallocatedReasonCode() {
 		return unallocatedReasonCode;
 	}
@@ -502,6 +512,7 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD5 {
 		this.unallocatedReasonCode = unallocatedReasonCode;
 	}
 
+	@XmlElement(name = "ContraPtcptNb")
 	public Max8Text getContraParticipantNumber() {
 		return contraParticipantNumber;
 	}
@@ -510,6 +521,7 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD5 {
 		this.contraParticipantNumber = contraParticipantNumber;
 	}
 
+	@XmlElement(name = "EarlstPmtDt")
 	public DateFormat28Choice getEarliestPaymentDate() {
 		return earliestPaymentDate;
 	}

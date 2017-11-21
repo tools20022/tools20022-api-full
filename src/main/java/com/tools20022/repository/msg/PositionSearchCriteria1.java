@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the securities account position query criteria.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the securities account position query criteria."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PositionSearchCriteria1", propOrder = {"accountOwner", "accountServicer", "safekeepingAccount", "financialInstrument", "countryOfIssue", "subBalanceType", "returnZeroPosition"})
 public class PositionSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -398,6 +404,7 @@ public class PositionSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification71Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -406,6 +413,7 @@ public class PositionSearchCriteria1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public PartyIdentification71Choice getAccountServicer() {
 		return accountServicer;
 	}
@@ -414,6 +422,7 @@ public class PositionSearchCriteria1 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount1Choice getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -422,6 +431,7 @@ public class PositionSearchCriteria1 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "FinInstrm")
 	public SecurityIdentification14 getFinancialInstrument() {
 		return financialInstrument;
 	}
@@ -430,6 +440,7 @@ public class PositionSearchCriteria1 {
 		this.financialInstrument = financialInstrument;
 	}
 
+	@XmlElement(name = "CtryOfIsse")
 	public CountryCode getCountryOfIssue() {
 		return countryOfIssue;
 	}
@@ -438,6 +449,7 @@ public class PositionSearchCriteria1 {
 		this.countryOfIssue = countryOfIssue;
 	}
 
+	@XmlElement(name = "SubBalTp")
 	public SecuritiesBalanceType2Choice getSubBalanceType() {
 		return subBalanceType;
 	}
@@ -446,6 +458,7 @@ public class PositionSearchCriteria1 {
 		this.subBalanceType = subBalanceType;
 	}
 
+	@XmlElement(name = "RtrZeroPos", required = true)
 	public TrueFalseIndicator getReturnZeroPosition() {
 		return returnZeroPosition;
 	}

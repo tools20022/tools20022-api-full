@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the amendment.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details of the amendment."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Amendment7", propOrder = {"amendmentIdentification", "amendmentStatus"})
 public class Amendment7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class Amendment7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AmdmntId", required = true)
 	public Amendment8 getAmendmentIdentification() {
 		return amendmentIdentification;
 	}
@@ -191,6 +198,7 @@ public class Amendment7 {
 		this.amendmentIdentification = amendmentIdentification;
 	}
 
+	@XmlElement(name = "AmdmntSts", required = true)
 	public UndertakingStatus2Code getAmendmentStatus() {
 		return amendmentStatus;
 	}

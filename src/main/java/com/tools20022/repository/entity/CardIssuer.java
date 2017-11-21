@@ -67,6 +67,11 @@ public class CardIssuer extends CardPaymentPartyRole {
 				definition = "Party that issues a payment card, as expressed by a numeric identification of the card issuer according to ISO/IEC 7812-1.";
 				superType_lazy = () -> CardPaymentPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CardIssuer.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice number format.
@@ -61,6 +65,8 @@ import java.util.function.Supplier;
  * definition} = "Choice number format."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Number4Choice", propOrder = {"short", "long"})
 public class Number4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class Number4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Shrt", required = true)
 	public Exact3NumericText getShort() {
 		return short_;
 	}
@@ -180,6 +187,7 @@ public class Number4Choice {
 		this.short_ = short_;
 	}
 
+	@XmlElement(name = "Lng", required = true)
 	public GenericIdentification18 getLong() {
 		return long_;
 	}

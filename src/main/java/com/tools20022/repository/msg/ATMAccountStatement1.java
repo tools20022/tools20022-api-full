@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Statement information of an account.
@@ -74,6 +78,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMAccountStatement1", propOrder = {"accountIdentifier", "accountName", "accountStatement"})
 public class ATMAccountStatement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -243,6 +249,7 @@ public class ATMAccountStatement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctIdr", required = true)
 	public AccountIdentification31Choice getAccountIdentifier() {
 		return accountIdentifier;
 	}
@@ -251,6 +258,7 @@ public class ATMAccountStatement1 {
 		this.accountIdentifier = accountIdentifier;
 	}
 
+	@XmlElement(name = "AcctNm")
 	public Max70Text getAccountName() {
 		return accountName;
 	}
@@ -259,6 +267,7 @@ public class ATMAccountStatement1 {
 		this.accountName = accountName;
 	}
 
+	@XmlElement(name = "AcctStmt")
 	public List<ATMAccountStatement2> getAccountStatement() {
 		return accountStatement;
 	}

@@ -68,6 +68,11 @@ public class ThirdReimbursementAgent extends CashSettlementInstructionPartyRole 
 				definition = "Specifies the branch of the instructed agent where the amount of money will be made available when different from the instructed reimbursement agent.";
 				superType_lazy = () -> CashSettlementInstructionPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ThirdReimbursementAgent.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

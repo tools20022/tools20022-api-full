@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cash movements out of a fund as a result of investment funds transactions,
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashOutForecast4", propOrder = {"cashSettlementDate", "subTotalAmount", "subTotalUnitsNumber", "exceptionalCashFlowIndicator"})
 public class CashOutForecast4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -330,6 +336,7 @@ public class CashOutForecast4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshSttlmDt", required = true)
 	public ISODate getCashSettlementDate() {
 		return cashSettlementDate;
 	}
@@ -338,6 +345,7 @@ public class CashOutForecast4 {
 		this.cashSettlementDate = cashSettlementDate;
 	}
 
+	@XmlElement(name = "SubTtlAmt")
 	public ActiveOrHistoricCurrencyAndAmount getSubTotalAmount() {
 		return subTotalAmount;
 	}
@@ -346,6 +354,7 @@ public class CashOutForecast4 {
 		this.subTotalAmount = subTotalAmount;
 	}
 
+	@XmlElement(name = "SubTtlUnitsNb")
 	public FinancialInstrumentQuantity1 getSubTotalUnitsNumber() {
 		return subTotalUnitsNumber;
 	}
@@ -354,6 +363,7 @@ public class CashOutForecast4 {
 		this.subTotalUnitsNumber = subTotalUnitsNumber;
 	}
 
+	@XmlElement(name = "XcptnlCshFlowInd")
 	public YesNoIndicator getExceptionalCashFlowIndicator() {
 		return exceptionalCashFlowIndicator;
 	}

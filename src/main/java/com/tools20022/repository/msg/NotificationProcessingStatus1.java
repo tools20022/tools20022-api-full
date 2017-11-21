@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provide processing status information for a notification advice.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provide processing status information for a notification advice."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NotificationProcessingStatus1", propOrder = {"status", "additionalInformation"})
 public class NotificationProcessingStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +165,7 @@ public class NotificationProcessingStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public ProcessedStatus1FormatChoice getStatus() {
 		return status;
 	}
@@ -167,6 +174,7 @@ public class NotificationProcessingStatus1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}

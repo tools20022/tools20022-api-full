@@ -29,19 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Response1Code
- * Response1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Response2Code
- * Response2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Response3Code
- * Response3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Response4Code
- * Response4Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.ResponseCode#mmDeclined
@@ -62,6 +49,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * ResponseCode.mmNotProcessed}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ResponseCode#mmProcessed
  * ResponseCode.mmProcessed}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Response1Code
+ * Response1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Response2Code
+ * Response2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Response3Code
+ * Response3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Response4Code
+ * Response4Code}</li>
  * </ul>
  * </li>
  * <li>

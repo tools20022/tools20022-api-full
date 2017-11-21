@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information such as the information to comply with.
@@ -72,6 +76,8 @@ import java.util.List;
  * "Provides additional information such as the information to comply with."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNarrative33", propOrder = {"informationToComplyWith", "deliveryDetails", "foreignExchangeInstructionsAdditionalInformation", "instructionAdditionalInformation"})
 public class CorporateActionNarrative33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -289,6 +295,7 @@ public class CorporateActionNarrative33 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InfToCmplyWth")
 	public List<RestrictedFINXMax350Text> getInformationToComplyWith() {
 		return informationToComplyWith;
 	}
@@ -297,6 +304,7 @@ public class CorporateActionNarrative33 {
 		this.informationToComplyWith = informationToComplyWith;
 	}
 
+	@XmlElement(name = "DlvryDtls")
 	public List<RestrictedFINXMax350Text> getDeliveryDetails() {
 		return deliveryDetails;
 	}
@@ -305,6 +313,7 @@ public class CorporateActionNarrative33 {
 		this.deliveryDetails = deliveryDetails;
 	}
 
+	@XmlElement(name = "FXInstrsAddtlInf")
 	public List<RestrictedFINXMax350Text> getForeignExchangeInstructionsAdditionalInformation() {
 		return foreignExchangeInstructionsAdditionalInformation;
 	}
@@ -313,6 +322,7 @@ public class CorporateActionNarrative33 {
 		this.foreignExchangeInstructionsAdditionalInformation = foreignExchangeInstructionsAdditionalInformation;
 	}
 
+	@XmlElement(name = "InstrAddtlInf")
 	public List<RestrictedFINXMax350Text> getInstructionAdditionalInformation() {
 		return instructionAdditionalInformation;
 	}

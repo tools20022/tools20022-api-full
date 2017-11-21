@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies cash parties in the framework of a corporate action event.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies cash parties in the framework of a corporate action event."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashParties12", propOrder = {"creditor", "creditorAgent", "marketClaimCounterparty"})
 public class CashParties12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -226,6 +232,7 @@ public class CashParties12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cdtr")
 	public PartyIdentificationAndAccount57 getCreditor() {
 		return creditor;
 	}
@@ -234,6 +241,7 @@ public class CashParties12 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAgt")
 	public PartyIdentificationAndAccount58 getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -242,6 +250,7 @@ public class CashParties12 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "MktClmCtrPty")
 	public PartyIdentificationAndAccount57 getMarketClaimCounterparty() {
 		return marketClaimCounterparty;
 	}

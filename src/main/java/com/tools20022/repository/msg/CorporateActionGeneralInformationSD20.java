@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action general
@@ -81,6 +85,8 @@ import java.util.List;
  * CorporateActionGeneralInformationSD17}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionGeneralInformationSD20", propOrder = {"placeAndName", "securityIdentification", "safekeepingAccount", "unallocatedDetails"})
 public class CorporateActionGeneralInformationSD20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -327,6 +333,7 @@ public class CorporateActionGeneralInformationSD20 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -335,6 +342,7 @@ public class CorporateActionGeneralInformationSD20 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification15 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -343,6 +351,7 @@ public class CorporateActionGeneralInformationSD20 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public RestrictedFINXMax35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -351,6 +360,7 @@ public class CorporateActionGeneralInformationSD20 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "UallctdDtls")
 	public List<CorporateActionUnallocatedDetailsSD4> getUnallocatedDetails() {
 		return unallocatedDetails;
 	}

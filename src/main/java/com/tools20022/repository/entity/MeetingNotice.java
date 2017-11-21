@@ -21,6 +21,7 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,6 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingNotice#mmRelatedServicing
+ * MeetingNotice.mmRelatedServicing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingNotice#mmBeneficialOwnerExclusiveIndicator
+ * MeetingNotice.mmBeneficialOwnerExclusiveIndicator}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -56,17 +68,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.MeetingServicing#mmMeetingNotice
  * MeetingServicing.mmMeetingNotice}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingNotice#mmRelatedServicing
- * MeetingNotice.mmRelatedServicing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingNotice#mmBeneficialOwnerExclusiveIndicator
- * MeetingNotice.mmBeneficialOwnerExclusiveIndicator}</li>
  * </ul>
  * </li>
  * <li>
@@ -127,7 +128,7 @@ public class MeetingNotice {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedServicing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> MeetingNotice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingNotice.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedServicing";
@@ -171,7 +172,7 @@ public class MeetingNotice {
 	 */
 	public static final MMBusinessAttribute mmBeneficialOwnerExclusiveIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> MeetingNotice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingNotice.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BeneficialOwnerExclusiveIndicator";
@@ -179,6 +180,14 @@ public class MeetingNotice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingNotice.class.getMethod("getBeneficialOwnerExclusiveIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -190,8 +199,13 @@ public class MeetingNotice {
 				name = "MeetingNotice";
 				definition = "Information about the general meeting, specifying the participation requirements and the voting procedures. Alternatively, it may indicate where such information may be obtained.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingServicing.mmMeetingNotice);
-				element_lazy = () -> Arrays.asList(MeetingNotice.mmRelatedServicing, MeetingNotice.mmBeneficialOwnerExclusiveIndicator);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingNotice.mmRelatedServicing, com.tools20022.repository.entity.MeetingNotice.mmBeneficialOwnerExclusiveIndicator);
 				derivationComponent_lazy = () -> Arrays.asList(MeetingNotice1.mmObject(), MeetingNotice2.mmObject(), MeetingNotice3.mmObject(), EligibilityDates.mmObject(), EligibilityDates1.mmObject(), MeetingNotice4.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingNotice.class;
 			}
 		});
 		return mmObject_lazy.get();

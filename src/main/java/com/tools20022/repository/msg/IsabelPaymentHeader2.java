@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the header information for a payment initiation file.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the header information for a payment initiation file."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelPaymentHeader2", propOrder = {"actualSenderIdentification", "senderPKIIdentification", "contractIdentification", "payloadCreationDate", "file", "qualifiedTransactionType", "urgencyCode", "enhanced"})
 public class IsabelPaymentHeader2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -442,6 +448,7 @@ public class IsabelPaymentHeader2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ActlSndrId", required = true)
 	public Max13AlphaNumericText getActualSenderIdentification() {
 		return actualSenderIdentification;
 	}
@@ -450,6 +457,7 @@ public class IsabelPaymentHeader2 {
 		this.actualSenderIdentification = actualSenderIdentification;
 	}
 
+	@XmlElement(name = "SndrPKIId", required = true)
 	public Max13AlphaNumericText getSenderPKIIdentification() {
 		return senderPKIIdentification;
 	}
@@ -458,6 +466,7 @@ public class IsabelPaymentHeader2 {
 		this.senderPKIIdentification = senderPKIIdentification;
 	}
 
+	@XmlElement(name = "CtrctId", required = true)
 	public Max13AlphaNumericText getContractIdentification() {
 		return contractIdentification;
 	}
@@ -466,6 +475,7 @@ public class IsabelPaymentHeader2 {
 		this.contractIdentification = contractIdentification;
 	}
 
+	@XmlElement(name = "PyldCreDt", required = true)
 	public DateAndDateTimeChoice getPayloadCreationDate() {
 		return payloadCreationDate;
 	}
@@ -474,6 +484,7 @@ public class IsabelPaymentHeader2 {
 		this.payloadCreationDate = payloadCreationDate;
 	}
 
+	@XmlElement(name = "File", required = true)
 	public IsabelFile1 getFile() {
 		return file;
 	}
@@ -482,6 +493,7 @@ public class IsabelPaymentHeader2 {
 		this.file = file;
 	}
 
+	@XmlElement(name = "QlfdTxTp", required = true)
 	public Max6Text getQualifiedTransactionType() {
 		return qualifiedTransactionType;
 	}
@@ -490,6 +502,7 @@ public class IsabelPaymentHeader2 {
 		this.qualifiedTransactionType = qualifiedTransactionType;
 	}
 
+	@XmlElement(name = "UrgcyCd", required = true)
 	public Priority4Code getUrgencyCode() {
 		return urgencyCode;
 	}
@@ -498,6 +511,7 @@ public class IsabelPaymentHeader2 {
 		this.urgencyCode = urgencyCode;
 	}
 
+	@XmlElement(name = "Nhncd")
 	public IsabelEnhancedHeader1 getEnhanced() {
 		return enhanced;
 	}

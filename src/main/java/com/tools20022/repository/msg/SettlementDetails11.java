@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters which explicitly state the conditions that must be fulfilled
@@ -126,6 +130,10 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementDetails11", propOrder = {"holdIndicator", "settlementTransactionCondition", "securitiesTransactionType", "settlingCapacity", "stampDutyTaxBasis", "securitiesRTGS", "registration", "beneficialOwnership",
+		"exposureType", "cashClearingSystem", "taxCapacity", "repurchaseType", "marketClientSide", "blockTrade", "legalRestrictions", "settlementSystemMethod", "nettingEligibility", "CCPEligibility", "letterOfGuarantee",
+		"partialSettlementIndicator", "eligibleForCollateral"})
 public class SettlementDetails11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1183,6 +1191,7 @@ public class SettlementDetails11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "HldInd")
 	public YesNoIndicator getHoldIndicator() {
 		return holdIndicator;
 	}
@@ -1191,6 +1200,7 @@ public class SettlementDetails11 {
 		this.holdIndicator = holdIndicator;
 	}
 
+	@XmlElement(name = "SttlmTxCond")
 	public List<SettlementTransactionCondition3Choice> getSettlementTransactionCondition() {
 		return settlementTransactionCondition;
 	}
@@ -1199,6 +1209,7 @@ public class SettlementDetails11 {
 		this.settlementTransactionCondition = settlementTransactionCondition;
 	}
 
+	@XmlElement(name = "SctiesTxTp", required = true)
 	public SecuritiesTransactionType4Choice getSecuritiesTransactionType() {
 		return securitiesTransactionType;
 	}
@@ -1207,6 +1218,7 @@ public class SettlementDetails11 {
 		this.securitiesTransactionType = securitiesTransactionType;
 	}
 
+	@XmlElement(name = "SttlgCpcty")
 	public SettlingCapacity2Choice getSettlingCapacity() {
 		return settlingCapacity;
 	}
@@ -1215,6 +1227,7 @@ public class SettlementDetails11 {
 		this.settlingCapacity = settlingCapacity;
 	}
 
+	@XmlElement(name = "StmpDtyTaxBsis")
 	public GenericIdentification25 getStampDutyTaxBasis() {
 		return stampDutyTaxBasis;
 	}
@@ -1223,6 +1236,7 @@ public class SettlementDetails11 {
 		this.stampDutyTaxBasis = stampDutyTaxBasis;
 	}
 
+	@XmlElement(name = "SctiesRTGS")
 	public SecuritiesRTGS2Choice getSecuritiesRTGS() {
 		return securitiesRTGS;
 	}
@@ -1231,6 +1245,7 @@ public class SettlementDetails11 {
 		this.securitiesRTGS = securitiesRTGS;
 	}
 
+	@XmlElement(name = "Regn")
 	public Registration2Choice getRegistration() {
 		return registration;
 	}
@@ -1239,6 +1254,7 @@ public class SettlementDetails11 {
 		this.registration = registration;
 	}
 
+	@XmlElement(name = "BnfclOwnrsh")
 	public BeneficialOwnership2Choice getBeneficialOwnership() {
 		return beneficialOwnership;
 	}
@@ -1247,6 +1263,7 @@ public class SettlementDetails11 {
 		this.beneficialOwnership = beneficialOwnership;
 	}
 
+	@XmlElement(name = "XpsrTp")
 	public ExposureType2Choice getExposureType() {
 		return exposureType;
 	}
@@ -1255,6 +1272,7 @@ public class SettlementDetails11 {
 		this.exposureType = exposureType;
 	}
 
+	@XmlElement(name = "CshClrSys")
 	public CashSettlementSystem2Choice getCashClearingSystem() {
 		return cashClearingSystem;
 	}
@@ -1263,6 +1281,7 @@ public class SettlementDetails11 {
 		this.cashClearingSystem = cashClearingSystem;
 	}
 
+	@XmlElement(name = "TaxCpcty")
 	public TaxCapacityParty2Choice getTaxCapacity() {
 		return taxCapacity;
 	}
@@ -1271,6 +1290,7 @@ public class SettlementDetails11 {
 		this.taxCapacity = taxCapacity;
 	}
 
+	@XmlElement(name = "RpTp")
 	public RepurchaseType6Choice getRepurchaseType() {
 		return repurchaseType;
 	}
@@ -1279,6 +1299,7 @@ public class SettlementDetails11 {
 		this.repurchaseType = repurchaseType;
 	}
 
+	@XmlElement(name = "MktClntSd")
 	public MarketClientSide2Choice getMarketClientSide() {
 		return marketClientSide;
 	}
@@ -1287,6 +1308,7 @@ public class SettlementDetails11 {
 		this.marketClientSide = marketClientSide;
 	}
 
+	@XmlElement(name = "BlckTrad")
 	public BlockTrade2Choice getBlockTrade() {
 		return blockTrade;
 	}
@@ -1295,6 +1317,7 @@ public class SettlementDetails11 {
 		this.blockTrade = blockTrade;
 	}
 
+	@XmlElement(name = "LglRstrctns")
 	public Restriction2Choice getLegalRestrictions() {
 		return legalRestrictions;
 	}
@@ -1303,6 +1326,7 @@ public class SettlementDetails11 {
 		this.legalRestrictions = legalRestrictions;
 	}
 
+	@XmlElement(name = "SttlmSysMtd")
 	public SettlementSystemMethod2Choice getSettlementSystemMethod() {
 		return settlementSystemMethod;
 	}
@@ -1311,6 +1335,7 @@ public class SettlementDetails11 {
 		this.settlementSystemMethod = settlementSystemMethod;
 	}
 
+	@XmlElement(name = "NetgElgblty")
 	public NettingEligibility2Choice getNettingEligibility() {
 		return nettingEligibility;
 	}
@@ -1319,6 +1344,7 @@ public class SettlementDetails11 {
 		this.nettingEligibility = nettingEligibility;
 	}
 
+	@XmlElement(name = "CCPElgblty")
 	public CentralCounterPartyEligibility2Choice getCCPEligibility() {
 		return cCPEligibility;
 	}
@@ -1327,6 +1353,7 @@ public class SettlementDetails11 {
 		this.cCPEligibility = cCPEligibility;
 	}
 
+	@XmlElement(name = "LttrOfGrnt")
 	public LetterOfGuarantee2Choice getLetterOfGuarantee() {
 		return letterOfGuarantee;
 	}
@@ -1335,6 +1362,7 @@ public class SettlementDetails11 {
 		this.letterOfGuarantee = letterOfGuarantee;
 	}
 
+	@XmlElement(name = "PrtlSttlmInd")
 	public YesNoIndicator getPartialSettlementIndicator() {
 		return partialSettlementIndicator;
 	}
@@ -1343,6 +1371,7 @@ public class SettlementDetails11 {
 		this.partialSettlementIndicator = partialSettlementIndicator;
 	}
 
+	@XmlElement(name = "ElgblForColl")
 	public YesNoIndicator getEligibleForCollateral() {
 		return eligibleForCollateral;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account to or from which a cash entry is made.
@@ -96,6 +100,9 @@ import java.util.List;
  * CashAccount26}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccount33", propOrder = {"settlementCurrency", "identification", "accountOwner", "accountServicer", "accountServicerBranch", "accountOwnerOtherIdentification", "investmentAccountType", "creditDebit",
+		"settlementInstructionReason", "cashAccountPurpose", "cashAccountDesignation", "dividendPercentage"})
 public class CashAccount33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -742,6 +749,7 @@ public class CashAccount33 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -750,6 +758,7 @@ public class CashAccount33 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentificationAndName5 getIdentification() {
 		return identification;
 	}
@@ -758,6 +767,7 @@ public class CashAccount33 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification70Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -766,6 +776,7 @@ public class CashAccount33 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public FinancialInstitutionIdentification7Choice getAccountServicer() {
 		return accountServicer;
 	}
@@ -774,6 +785,7 @@ public class CashAccount33 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "AcctSvcrBrnch")
 	public BranchData getAccountServicerBranch() {
 		return accountServicerBranch;
 	}
@@ -782,6 +794,7 @@ public class CashAccount33 {
 		this.accountServicerBranch = accountServicerBranch;
 	}
 
+	@XmlElement(name = "AcctOwnrOthrId")
 	public List<GenericIdentification82> getAccountOwnerOtherIdentification() {
 		return accountOwnerOtherIdentification;
 	}
@@ -790,6 +803,7 @@ public class CashAccount33 {
 		this.accountOwnerOtherIdentification = accountOwnerOtherIdentification;
 	}
 
+	@XmlElement(name = "InvstmtAcctTp")
 	public AccountType2Choice getInvestmentAccountType() {
 		return investmentAccountType;
 	}
@@ -798,6 +812,7 @@ public class CashAccount33 {
 		this.investmentAccountType = investmentAccountType;
 	}
 
+	@XmlElement(name = "CdtDbt")
 	public CreditDebit3Code getCreditDebit() {
 		return creditDebit;
 	}
@@ -806,6 +821,7 @@ public class CashAccount33 {
 		this.creditDebit = creditDebit;
 	}
 
+	@XmlElement(name = "SttlmInstrRsn")
 	public SettlementInstructionReason1Choice getSettlementInstructionReason() {
 		return settlementInstructionReason;
 	}
@@ -814,6 +830,7 @@ public class CashAccount33 {
 		this.settlementInstructionReason = settlementInstructionReason;
 	}
 
+	@XmlElement(name = "CshAcctPurp")
 	public CashAccountType3Choice getCashAccountPurpose() {
 		return cashAccountPurpose;
 	}
@@ -822,6 +839,7 @@ public class CashAccount33 {
 		this.cashAccountPurpose = cashAccountPurpose;
 	}
 
+	@XmlElement(name = "CshAcctDsgnt")
 	public AccountDesignation1Choice getCashAccountDesignation() {
 		return cashAccountDesignation;
 	}
@@ -830,6 +848,7 @@ public class CashAccount33 {
 		this.cashAccountDesignation = cashAccountDesignation;
 	}
 
+	@XmlElement(name = "DvddPctg")
 	public PercentageBoundedRate getDividendPercentage() {
 		return dividendPercentage;
 	}

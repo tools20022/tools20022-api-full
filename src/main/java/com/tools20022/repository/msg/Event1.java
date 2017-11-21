@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on an event that happened in a system.
@@ -79,6 +83,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Event1", propOrder = {"eventCode", "eventParameter", "eventDescription", "eventTime"})
 public class Event1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -293,6 +299,7 @@ public class Event1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EvtCd", required = true)
 	public Max4AlphaNumericText getEventCode() {
 		return eventCode;
 	}
@@ -301,6 +308,7 @@ public class Event1 {
 		this.eventCode = eventCode;
 	}
 
+	@XmlElement(name = "EvtParam")
 	public List<Max35Text> getEventParameter() {
 		return eventParameter;
 	}
@@ -309,6 +317,7 @@ public class Event1 {
 		this.eventParameter = eventParameter;
 	}
 
+	@XmlElement(name = "EvtDesc")
 	public Max350Text getEventDescription() {
 		return eventDescription;
 	}
@@ -317,6 +326,7 @@ public class Event1 {
 		this.eventDescription = eventDescription;
 	}
 
+	@XmlElement(name = "EvtTm")
 	public ISODateTime getEventTime() {
 		return eventTime;
 	}

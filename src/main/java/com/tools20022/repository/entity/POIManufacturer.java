@@ -65,6 +65,11 @@ public class POIManufacturer extends CardPaymentPartyRole {
 				definition = "Manufacturer or the software, hardware or system of the POI component.";
 				superType_lazy = () -> CardPaymentPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return POIManufacturer.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

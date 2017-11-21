@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.SettlementData2;
 import com.tools20022.repository.msg.TradePartyIdentification4;
 import com.tools20022.repository.msg.TradeStatus1;
 import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -42,9 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code trea.012.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
  * TreasuryArchive}</li>
@@ -82,6 +81,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code trea.012.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -93,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ForeignExchangeOptionNotificationV02", propOrder = {"tradingSideIdentification", "counterpartySideIdentification", "optionData", "tradeStatus", "settlementData"})
 public class ForeignExchangeOptionNotificationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -133,6 +137,14 @@ public class ForeignExchangeOptionNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeOptionNotificationV02.class.getMethod("getTradingSideIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TradePartyIdentification4 counterpartySideIdentification;
 	/**
@@ -171,6 +183,14 @@ public class ForeignExchangeOptionNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeOptionNotificationV02.class.getMethod("getCounterpartySideIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OptionData2 optionData;
 	/**
@@ -204,6 +224,14 @@ public class ForeignExchangeOptionNotificationV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> OptionData2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeOptionNotificationV02.class.getMethod("getOptionData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TradeStatus1 tradeStatus;
@@ -240,6 +268,14 @@ public class ForeignExchangeOptionNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradeStatus1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeOptionNotificationV02.class.getMethod("getTradeStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SettlementData2 settlementData;
 	/**
@@ -274,6 +310,14 @@ public class ForeignExchangeOptionNotificationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementData2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeOptionNotificationV02.class.getMethod("getSettlementData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -286,8 +330,9 @@ public class ForeignExchangeOptionNotificationV02 {
 				rootElement = "Document";
 				xmlTag = "FXOptnNtfctnV02";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeOptionNotificationV02.mmTradingSideIdentification, ForeignExchangeOptionNotificationV02.mmCounterpartySideIdentification,
-						ForeignExchangeOptionNotificationV02.mmOptionData, ForeignExchangeOptionNotificationV02.mmTradeStatus, ForeignExchangeOptionNotificationV02.mmSettlementData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmTradingSideIdentification,
+						com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmOptionData,
+						com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmTradeStatus, com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmSettlementData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "trea";
@@ -297,10 +342,16 @@ public class ForeignExchangeOptionNotificationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ForeignExchangeOptionNotificationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradgSdId", required = true)
 	public TradePartyIdentification4 getTradingSideIdentification() {
 		return tradingSideIdentification;
 	}
@@ -309,6 +360,7 @@ public class ForeignExchangeOptionNotificationV02 {
 		this.tradingSideIdentification = tradingSideIdentification;
 	}
 
+	@XmlElement(name = "CtrPtySdId", required = true)
 	public TradePartyIdentification4 getCounterpartySideIdentification() {
 		return counterpartySideIdentification;
 	}
@@ -317,6 +369,7 @@ public class ForeignExchangeOptionNotificationV02 {
 		this.counterpartySideIdentification = counterpartySideIdentification;
 	}
 
+	@XmlElement(name = "OptnData", required = true)
 	public OptionData2 getOptionData() {
 		return optionData;
 	}
@@ -325,6 +378,7 @@ public class ForeignExchangeOptionNotificationV02 {
 		this.optionData = optionData;
 	}
 
+	@XmlElement(name = "TradSts", required = true)
 	public TradeStatus1 getTradeStatus() {
 		return tradeStatus;
 	}
@@ -333,11 +387,18 @@ public class ForeignExchangeOptionNotificationV02 {
 		this.tradeStatus = tradeStatus;
 	}
 
+	@XmlElement(name = "SttlmData")
 	public SettlementData2 getSettlementData() {
 		return settlementData;
 	}
 
 	public void setSettlementData(SettlementData2 settlementData) {
 		this.settlementData = settlementData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:trea.012.02.02")
+	static public class Document {
+		@XmlElement(name = "FXOptnNtfctnV02", required = true)
+		public ForeignExchangeOptionNotificationV02 messageBody;
 	}
 }

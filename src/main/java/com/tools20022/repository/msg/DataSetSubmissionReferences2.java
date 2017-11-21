@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides references to the submitted data set both for the TSU and for the
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DataSetSubmissionReferences2", propOrder = {"transactionIdentification", "submitterTransactionReference"})
 public class DataSetSubmissionReferences2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class DataSetSubmissionReferences2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -174,6 +181,7 @@ public class DataSetSubmissionReferences2 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "SubmitrTxRef", required = true)
 	public Max35Text getSubmitterTransactionReference() {
 		return submitterTransactionReference;
 	}

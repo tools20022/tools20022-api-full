@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters related to the net position.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Parameters related to the net position."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportParameters1", propOrder = {"netPositionIdentification", "reportDateAndTime", "updateType", "frequency", "reportNumber", "activityIndicator"})
 public class ReportParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -359,6 +365,7 @@ public class ReportParameters1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NetPosId", required = true)
 	public Max35Text getNetPositionIdentification() {
 		return netPositionIdentification;
 	}
@@ -367,6 +374,7 @@ public class ReportParameters1 {
 		this.netPositionIdentification = netPositionIdentification;
 	}
 
+	@XmlElement(name = "RptDtAndTm", required = true)
 	public DateAndDateTimeChoice getReportDateAndTime() {
 		return reportDateAndTime;
 	}
@@ -375,6 +383,7 @@ public class ReportParameters1 {
 		this.reportDateAndTime = reportDateAndTime;
 	}
 
+	@XmlElement(name = "UpdTp", required = true)
 	public StatementUpdateType1Code getUpdateType() {
 		return updateType;
 	}
@@ -383,6 +392,7 @@ public class ReportParameters1 {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "Frqcy", required = true)
 	public EventFrequency6Code getFrequency() {
 		return frequency;
 	}
@@ -391,6 +401,7 @@ public class ReportParameters1 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "RptNb")
 	public Exact5NumericText getReportNumber() {
 		return reportNumber;
 	}
@@ -399,6 +410,7 @@ public class ReportParameters1 {
 		this.reportNumber = reportNumber;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}

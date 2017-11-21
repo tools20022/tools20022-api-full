@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action option securities
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * FinancialInstrumentAttributesSD1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentAttributesSD13", propOrder = {"placeAndName", "DTCSecurityTransferableFlag", "declaredDisbursedSecurityDetails", "DTCDisbursedSecurityAssetType", "DTCDisbursedSecurityAssetClass", "babyBondDenomination"})
 public class FinancialInstrumentAttributesSD13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -404,6 +410,7 @@ public class FinancialInstrumentAttributesSD13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -412,6 +419,7 @@ public class FinancialInstrumentAttributesSD13 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "DTCSctyTrfblFlg")
 	public YesNoIndicator getDTCSecurityTransferableFlag() {
 		return dTCSecurityTransferableFlag;
 	}
@@ -420,6 +428,7 @@ public class FinancialInstrumentAttributesSD13 {
 		this.dTCSecurityTransferableFlag = dTCSecurityTransferableFlag;
 	}
 
+	@XmlElement(name = "DclrdDsbrsdSctyDtls")
 	public FinancialInstrumentAttributesSD2 getDeclaredDisbursedSecurityDetails() {
 		return declaredDisbursedSecurityDetails;
 	}
@@ -428,6 +437,7 @@ public class FinancialInstrumentAttributesSD13 {
 		this.declaredDisbursedSecurityDetails = declaredDisbursedSecurityDetails;
 	}
 
+	@XmlElement(name = "DTCDsbrsdSctyAsstTp")
 	public DTCAssetType2Code getDTCDisbursedSecurityAssetType() {
 		return dTCDisbursedSecurityAssetType;
 	}
@@ -436,6 +446,7 @@ public class FinancialInstrumentAttributesSD13 {
 		this.dTCDisbursedSecurityAssetType = dTCDisbursedSecurityAssetType;
 	}
 
+	@XmlElement(name = "DTCDsbrsdSctyAsstClss")
 	public AssetClass1Code getDTCDisbursedSecurityAssetClass() {
 		return dTCDisbursedSecurityAssetClass;
 	}
@@ -444,6 +455,7 @@ public class FinancialInstrumentAttributesSD13 {
 		this.dTCDisbursedSecurityAssetClass = dTCDisbursedSecurityAssetClass;
 	}
 
+	@XmlElement(name = "BabyBdDnmtn")
 	public DecimalNumber getBabyBondDenomination() {
 		return babyBondDenomination;
 	}

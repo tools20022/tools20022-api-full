@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.BaselineStatusCode;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,6 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.BaselineStatus#mmStatus
+ * BaselineStatus.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BaselineStatus#mmCommercialTrade
+ * BaselineStatus.mmCommercialTrade}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -57,18 +70,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmTransactionStatus
  * CommercialTrade.mmTransactionStatus}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.BaselineStatus#mmStatus
- * BaselineStatus.mmStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BaselineStatus#mmCommercialTrade
- * BaselineStatus.mmCommercialTrade}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,11 +101,6 @@ public class BaselineStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.BaselineStatusCode
 	 * BaselineStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BaselineStatus
-	 * BaselineStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -132,6 +128,11 @@ public class BaselineStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BaselineStatus
+	 * BaselineStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -146,7 +147,7 @@ public class BaselineStatus extends Status {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionStatus1.mmStatus, TransactionStatus4.mmStatus, TransactionStatus3.mmStatus, TransactionStatus2.mmStatus, TransactionStatus5.mmStatus, StatusReportItems1.mmStatus,
 					StatusReportItems2.mmStatus);
-			elementContext_lazy = () -> BaselineStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
@@ -154,6 +155,14 @@ public class BaselineStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaselineStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineStatus.class.getMethod("getStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CommercialTrade commercialTrade;
@@ -192,7 +201,7 @@ public class BaselineStatus extends Status {
 	 */
 	public static final MMBusinessAssociationEnd mmCommercialTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> BaselineStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommercialTrade";
@@ -214,8 +223,13 @@ public class BaselineStatus extends Status {
 				definition = "Indicates the status of a baseline.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CommercialTrade.mmTransactionStatus);
 				superType_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
-				element_lazy = () -> Arrays.asList(BaselineStatus.mmStatus, BaselineStatus.mmCommercialTrade);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BaselineStatus.mmStatus, com.tools20022.repository.entity.BaselineStatus.mmCommercialTrade);
 				derivationComponent_lazy = () -> Arrays.asList(TransactionStatus1.mmObject(), TransactionStatus4.mmObject(), TransactionStatus3.mmObject(), TransactionStatus2.mmObject(), TransactionStatus5.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BaselineStatus.class;
 			}
 		});
 		return mmObject_lazy.get();

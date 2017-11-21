@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesSettlementSystem;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Chain of parties involved in the settlement of a transaction, including
@@ -97,6 +101,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * ReceivingPartiesAndAccount9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReceivingPartiesAndAccount13", propOrder = {"receiverDetails", "receiversCustodianDetails", "receiversIntermediary1Details", "receiversIntermediary2Details", "receivingAgentDetails", "securitiesSettlementSystem",
+		"placeOfSettlementDetails"})
 public class ReceivingPartiesAndAccount13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -553,6 +560,7 @@ public class ReceivingPartiesAndAccount13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RcvrDtls")
 	public InvestmentAccount55 getReceiverDetails() {
 		return receiverDetails;
 	}
@@ -561,6 +569,7 @@ public class ReceivingPartiesAndAccount13 {
 		this.receiverDetails = receiverDetails;
 	}
 
+	@XmlElement(name = "RcvrsCtdnDtls")
 	public PartyIdentificationAndAccount124 getReceiversCustodianDetails() {
 		return receiversCustodianDetails;
 	}
@@ -569,6 +578,7 @@ public class ReceivingPartiesAndAccount13 {
 		this.receiversCustodianDetails = receiversCustodianDetails;
 	}
 
+	@XmlElement(name = "RcvrsIntrmy1Dtls")
 	public PartyIdentificationAndAccount124 getReceiversIntermediary1Details() {
 		return receiversIntermediary1Details;
 	}
@@ -577,6 +587,7 @@ public class ReceivingPartiesAndAccount13 {
 		this.receiversIntermediary1Details = receiversIntermediary1Details;
 	}
 
+	@XmlElement(name = "RcvrsIntrmy2Dtls")
 	public PartyIdentificationAndAccount124 getReceiversIntermediary2Details() {
 		return receiversIntermediary2Details;
 	}
@@ -585,6 +596,7 @@ public class ReceivingPartiesAndAccount13 {
 		this.receiversIntermediary2Details = receiversIntermediary2Details;
 	}
 
+	@XmlElement(name = "RcvgAgtDtls", required = true)
 	public PartyIdentificationAndAccount123 getReceivingAgentDetails() {
 		return receivingAgentDetails;
 	}
@@ -593,6 +605,7 @@ public class ReceivingPartiesAndAccount13 {
 		this.receivingAgentDetails = receivingAgentDetails;
 	}
 
+	@XmlElement(name = "SctiesSttlmSys")
 	public Max35Text getSecuritiesSettlementSystem() {
 		return securitiesSettlementSystem;
 	}
@@ -601,6 +614,7 @@ public class ReceivingPartiesAndAccount13 {
 		this.securitiesSettlementSystem = securitiesSettlementSystem;
 	}
 
+	@XmlElement(name = "PlcOfSttlmDtls")
 	public PartyIdentification97 getPlaceOfSettlementDetails() {
 		return placeOfSettlementDetails;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Proprietary identification of the reason related to a status.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ProprietaryReason1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProprietaryReason4", propOrder = {"reason", "additionalReasonInformation"})
 public class ProprietaryReason4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -192,6 +198,7 @@ public class ProprietaryReason4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn")
 	public GenericIdentification30 getReason() {
 		return reason;
 	}
@@ -200,6 +207,7 @@ public class ProprietaryReason4 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "AddtlRsnInf")
 	public Max210Text getAdditionalReasonInformation() {
 		return additionalReasonInformation;
 	}

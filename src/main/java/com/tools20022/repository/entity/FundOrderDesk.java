@@ -23,6 +23,7 @@ import com.tools20022.repository.entity.InvestmentFundPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MainFundOrderDeskLocation1;
 import com.tools20022.repository.msg.ProcessingCharacteristics2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,6 +37,21 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FundOrderDesk#mmMainFundOrderDeskIndicator
+ * FundOrderDesk.mmMainFundOrderDeskIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FundOrderDesk#mmMainFundOrderDeskAccount
+ * FundOrderDesk.mmMainFundOrderDeskAccount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole
+ * InvestmentFundPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -60,21 +76,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.msg.ProcessingCharacteristics2#mmMainFundOrderDeskLocation
  * ProcessingCharacteristics2.mmMainFundOrderDeskLocation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole
- * InvestmentFundPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FundOrderDesk#mmMainFundOrderDeskIndicator
- * FundOrderDesk.mmMainFundOrderDeskIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FundOrderDesk#mmMainFundOrderDeskAccount
- * FundOrderDesk.mmMainFundOrderDeskAccount}</li>
  * </ul>
  * </li>
  * <li>
@@ -129,7 +130,7 @@ public class FundOrderDesk extends InvestmentFundPartyRole {
 	 */
 	public static final MMBusinessAttribute mmMainFundOrderDeskIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> FundOrderDesk.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FundOrderDesk.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MainFundOrderDeskIndicator";
@@ -137,6 +138,14 @@ public class FundOrderDesk extends InvestmentFundPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FundOrderDesk.class.getMethod("getMainFundOrderDeskIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.InvestmentAccount> mainFundOrderDeskAccount;
@@ -178,7 +187,7 @@ public class FundOrderDesk extends InvestmentFundPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmMainFundOrderDeskAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> FundOrderDesk.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FundOrderDesk.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MainFundOrderDeskAccount";
@@ -200,8 +209,13 @@ public class FundOrderDesk extends InvestmentFundPartyRole {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccount.mmAccountForInvestmentFundProcessing);
 				derivationElement_lazy = () -> Arrays.asList(ProcessingCharacteristics2.mmMainFundOrderDeskLocation);
 				superType_lazy = () -> InvestmentFundPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(FundOrderDesk.mmMainFundOrderDeskIndicator, FundOrderDesk.mmMainFundOrderDeskAccount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.FundOrderDesk.mmMainFundOrderDeskIndicator, com.tools20022.repository.entity.FundOrderDesk.mmMainFundOrderDeskAccount);
 				derivationComponent_lazy = () -> Arrays.asList(MainFundOrderDeskLocation1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FundOrderDesk.class;
 			}
 		});
 		return mmObject_lazy.get();

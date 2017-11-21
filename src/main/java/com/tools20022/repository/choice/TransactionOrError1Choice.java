@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.Transaction24;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the transaction details or a business error when the requested
@@ -73,6 +77,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionOrError1Choice", propOrder = {"transaction", "businessError"})
 public class TransactionOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -192,6 +198,7 @@ public class TransactionOrError1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public Transaction24 getTransaction() {
 		return transaction;
 	}
@@ -200,6 +207,7 @@ public class TransactionOrError1Choice {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling3> getBusinessError() {
 		return businessError;
 	}

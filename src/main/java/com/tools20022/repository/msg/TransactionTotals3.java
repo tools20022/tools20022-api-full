@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transaction totals during the reconciliation period, for a certain type of
@@ -92,6 +96,8 @@ import java.util.function.Supplier;
  * TransactionTotals2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionTotals3", propOrder = {"POIGroupIdentification", "cardProductProfile", "currency", "type", "totalNumber", "cumulativeAmount"})
 public class TransactionTotals3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -481,6 +487,7 @@ public class TransactionTotals3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "POIGrpId")
 	public Max35Text getPOIGroupIdentification() {
 		return pOIGroupIdentification;
 	}
@@ -489,6 +496,7 @@ public class TransactionTotals3 {
 		this.pOIGroupIdentification = pOIGroupIdentification;
 	}
 
+	@XmlElement(name = "CardPdctPrfl")
 	public Max35Text getCardProductProfile() {
 		return cardProductProfile;
 	}
@@ -497,6 +505,7 @@ public class TransactionTotals3 {
 		this.cardProductProfile = cardProductProfile;
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -505,6 +514,7 @@ public class TransactionTotals3 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TypeTransactionTotals2Code getType() {
 		return type;
 	}
@@ -513,6 +523,7 @@ public class TransactionTotals3 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "TtlNb", required = true)
 	public Number getTotalNumber() {
 		return totalNumber;
 	}
@@ -521,6 +532,7 @@ public class TransactionTotals3 {
 		this.totalNumber = totalNumber;
 	}
 
+	@XmlElement(name = "CmltvAmt", required = true)
 	public ImpliedCurrencyAndAmount getCumulativeAmount() {
 		return cumulativeAmount;
 	}

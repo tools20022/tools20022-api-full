@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole
+ * InvoiceFinancingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -43,10 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * RequestGroupInformation1.mmFirstAgent}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole
- * InvoiceFinancingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -75,6 +75,11 @@ public class FirstAgentRole extends InvoiceFinancingPartyRole {
 				definition = "Organisation offering invoice financing services. ";
 				derivationElement_lazy = () -> Arrays.asList(RequestGroupInformation1.mmFirstAgent);
 				superType_lazy = () -> InvoiceFinancingPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FirstAgentRole.class;
 			}
 		});
 		return mmObject_lazy.get();

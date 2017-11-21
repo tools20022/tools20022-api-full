@@ -29,9 +29,11 @@ import com.tools20022.repository.msg.MissingCover3;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * Scope The Claim Non Receipt message is sent by a case creator/case assigner
@@ -88,9 +90,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.027.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
@@ -130,6 +129,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.027.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -152,6 +154,8 @@ import java.util.List;
  * ClaimNonReceiptV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClaimNonReceiptV04", propOrder = {"assignment", "case", "underlying", "coverDetails", "supplementaryData"})
 public class ClaimNonReceiptV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -201,6 +205,14 @@ public class ClaimNonReceiptV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ClaimNonReceiptV04.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case3 case_;
 	/**
@@ -242,6 +254,14 @@ public class ClaimNonReceiptV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Case3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ClaimNonReceiptV04.class.getMethod("getCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected UnderlyingTransaction2Choice underlying;
@@ -293,6 +313,14 @@ public class ClaimNonReceiptV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTransaction2Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ClaimNonReceiptV04.class.getMethod("getUnderlying", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MissingCover3 coverDetails;
 	/**
@@ -340,6 +368,14 @@ public class ClaimNonReceiptV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> MissingCover3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ClaimNonReceiptV04.class.getMethod("getCoverDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -386,6 +422,14 @@ public class ClaimNonReceiptV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ClaimNonReceiptV04.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -400,7 +444,8 @@ public class ClaimNonReceiptV04 {
 				rootElement = "Document";
 				xmlTag = "ClmNonRct";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ClaimNonReceiptV04.mmAssignment, ClaimNonReceiptV04.mmCase, ClaimNonReceiptV04.mmUnderlying, ClaimNonReceiptV04.mmCoverDetails, ClaimNonReceiptV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmAssignment, com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmCase,
+						com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmUnderlying, com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmCoverDetails, com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -410,10 +455,16 @@ public class ClaimNonReceiptV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ClaimNonReceiptV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment3 getAssignment() {
 		return assignment;
 	}
@@ -422,6 +473,7 @@ public class ClaimNonReceiptV04 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "Case", required = true)
 	public Case3 getCase() {
 		return case_;
 	}
@@ -430,6 +482,7 @@ public class ClaimNonReceiptV04 {
 		this.case_ = case_;
 	}
 
+	@XmlElement(name = "Undrlyg", required = true)
 	public UnderlyingTransaction2Choice getUnderlying() {
 		return underlying;
 	}
@@ -438,6 +491,7 @@ public class ClaimNonReceiptV04 {
 		this.underlying = underlying;
 	}
 
+	@XmlElement(name = "CoverDtls")
 	public MissingCover3 getCoverDetails() {
 		return coverDetails;
 	}
@@ -446,11 +500,18 @@ public class ClaimNonReceiptV04 {
 		this.coverDetails = coverDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.027.04.04")
+	static public class Document {
+		@XmlElement(name = "ClmNonRct", required = true)
+		public ClaimNonReceiptV04 messageBody;
 	}
 }

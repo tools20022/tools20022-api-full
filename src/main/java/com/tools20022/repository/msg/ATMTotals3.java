@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.ATMTotal;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Totals of the ATM.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Totals of the ATM."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTotals3", propOrder = {"identification", "additionalIdentification", "period", "currency", "count", "amount"})
 public class ATMTotals3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -363,6 +369,7 @@ public class ATMTotals3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max70Text getIdentification() {
 		return identification;
 	}
@@ -371,6 +378,7 @@ public class ATMTotals3 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AddtlId")
 	public Max70Text getAdditionalIdentification() {
 		return additionalIdentification;
 	}
@@ -379,6 +387,7 @@ public class ATMTotals3 {
 		this.additionalIdentification = additionalIdentification;
 	}
 
+	@XmlElement(name = "Prd", required = true)
 	public ATMCounterType2Code getPeriod() {
 		return period;
 	}
@@ -387,6 +396,7 @@ public class ATMTotals3 {
 		this.period = period;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -395,6 +405,7 @@ public class ATMTotals3 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Cnt", required = true)
 	public Number getCount() {
 		return count;
 	}
@@ -403,6 +414,7 @@ public class ATMTotals3 {
 		this.count = count;
 	}
 
+	@XmlElement(name = "Amt")
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AmountPrice1Choice;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,14 +36,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.AmountPrice1Choice
- * AmountPrice1Choice}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -50,6 +43,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * AmountAndPrice.mmAmount}</li>
  * <li>{@linkplain com.tools20022.repository.entity.AmountAndPrice#mmPrice
  * AmountAndPrice.mmPrice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.AmountPrice1Choice
+ * AmountPrice1Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -81,11 +82,6 @@ public class AmountAndPrice {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AmountAndPrice
-	 * AmountAndPrice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -94,6 +90,11 @@ public class AmountAndPrice {
 	 * AmountPrice1Choice.mmAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AmountAndPrice
+	 * AmountAndPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -108,7 +109,7 @@ public class AmountAndPrice {
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountPrice1Choice.mmAmount);
-			elementContext_lazy = () -> AmountAndPrice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndPrice.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -116,6 +117,14 @@ public class AmountAndPrice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmountAndPrice.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesPricing price;
@@ -129,11 +138,6 @@ public class AmountAndPrice {
 	 * complexType} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AmountAndPrice
-	 * AmountAndPrice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -142,6 +146,11 @@ public class AmountAndPrice {
 	 * AmountPrice1Choice.mmUnitPrice}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AmountAndPrice
+	 * AmountAndPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -156,7 +165,7 @@ public class AmountAndPrice {
 	public static final MMBusinessAttribute mmPrice = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountPrice1Choice.mmUnitPrice);
-			elementContext_lazy = () -> AmountAndPrice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndPrice.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Price";
@@ -164,6 +173,14 @@ public class AmountAndPrice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmountAndPrice.class.getMethod("getPrice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -174,8 +191,13 @@ public class AmountAndPrice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndPrice";
 				definition = "Expression of amount.";
-				element_lazy = () -> Arrays.asList(AmountAndPrice.mmAmount, AmountAndPrice.mmPrice);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AmountAndPrice.mmAmount, com.tools20022.repository.entity.AmountAndPrice.mmPrice);
 				derivationComponent_lazy = () -> Arrays.asList(AmountPrice1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AmountAndPrice.class;
 			}
 		});
 		return mmObject_lazy.get();

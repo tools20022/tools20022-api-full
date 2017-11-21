@@ -39,6 +39,32 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPartyRole#mmCorporateActionEvent
+ * CorporateActionPartyRole.mmCorporateActionEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPartyRole#mmAccount
+ * CorporateActionPartyRole.mmAccount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.MeetingPartyRole
+ * MeetingPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CorporateActionAgent
+ * CorporateActionAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MarketClaimCounterparty
+ * MarketClaimCounterparty}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CorporateActionOfferor
+ * CorporateActionOfferor}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -61,32 +87,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline2#mmBorrower
  * BorrowerLendingDeadline2.mmBorrower}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.MeetingPartyRole
- * MeetingPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CorporateActionAgent
- * CorporateActionAgent}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MarketClaimCounterparty
- * MarketClaimCounterparty}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CorporateActionOfferor
- * CorporateActionOfferor}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPartyRole#mmCorporateActionEvent
- * CorporateActionPartyRole.mmCorporateActionEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPartyRole#mmAccount
- * CorporateActionPartyRole.mmAccount}</li>
  * </ul>
  * </li>
  * <li>
@@ -144,7 +144,7 @@ public class CorporateActionPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionEvent";
@@ -193,7 +193,7 @@ public class CorporateActionPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
@@ -216,7 +216,12 @@ public class CorporateActionPartyRole extends Role {
 				derivationElement_lazy = () -> Arrays.asList(BorrowerLendingDeadline1.mmBorrower, BorrowerLendingDeadline2.mmBorrower);
 				subType_lazy = () -> Arrays.asList(MeetingPartyRole.mmObject(), CorporateActionAgent.mmObject(), MarketClaimCounterparty.mmObject(), CorporateActionOfferor.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(CorporateActionPartyRole.mmCorporateActionEvent, CorporateActionPartyRole.mmAccount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionPartyRole.mmCorporateActionEvent, com.tools20022.repository.entity.CorporateActionPartyRole.mmAccount);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

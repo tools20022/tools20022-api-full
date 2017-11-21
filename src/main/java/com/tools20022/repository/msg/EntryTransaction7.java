@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the underlying transaction.
@@ -141,6 +145,10 @@ import java.util.List;
  * EntryTransaction4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EntryTransaction7", propOrder = {"references", "amount", "creditDebitIndicator", "amountDetails", "availability", "bankTransactionCode", "charges", "interest", "relatedParties", "relatedAgents", "purpose",
+		"relatedRemittanceInformation", "remittanceInformation", "relatedDates", "relatedPrice", "relatedQuantities", "financialInstrumentIdentification", "tax", "returnInformation", "corporateAction", "safekeepingAccount", "cashDeposit",
+		"cardTransaction", "additionalTransactionInformation", "supplementaryData"})
 public class EntryTransaction7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1790,6 +1798,7 @@ public class EntryTransaction7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Refs")
 	public TransactionReferences3 getReferences() {
 		return references;
 	}
@@ -1798,6 +1807,7 @@ public class EntryTransaction7 {
 		this.references = references;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -1806,6 +1816,7 @@ public class EntryTransaction7 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -1814,6 +1825,7 @@ public class EntryTransaction7 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "AmtDtls")
 	public AmountAndCurrencyExchange3 getAmountDetails() {
 		return amountDetails;
 	}
@@ -1822,6 +1834,7 @@ public class EntryTransaction7 {
 		this.amountDetails = amountDetails;
 	}
 
+	@XmlElement(name = "Avlbty")
 	public List<CashBalanceAvailability2> getAvailability() {
 		return availability;
 	}
@@ -1830,6 +1843,7 @@ public class EntryTransaction7 {
 		this.availability = availability;
 	}
 
+	@XmlElement(name = "BkTxCd")
 	public BankTransactionCodeStructure4 getBankTransactionCode() {
 		return bankTransactionCode;
 	}
@@ -1838,6 +1852,7 @@ public class EntryTransaction7 {
 		this.bankTransactionCode = bankTransactionCode;
 	}
 
+	@XmlElement(name = "Chrgs")
 	public Charges4 getCharges() {
 		return charges;
 	}
@@ -1846,6 +1861,7 @@ public class EntryTransaction7 {
 		this.charges = charges;
 	}
 
+	@XmlElement(name = "Intrst")
 	public TransactionInterest3 getInterest() {
 		return interest;
 	}
@@ -1854,6 +1870,7 @@ public class EntryTransaction7 {
 		this.interest = interest;
 	}
 
+	@XmlElement(name = "RltdPties")
 	public TransactionParties3 getRelatedParties() {
 		return relatedParties;
 	}
@@ -1862,6 +1879,7 @@ public class EntryTransaction7 {
 		this.relatedParties = relatedParties;
 	}
 
+	@XmlElement(name = "RltdAgts")
 	public TransactionAgents3 getRelatedAgents() {
 		return relatedAgents;
 	}
@@ -1870,6 +1888,7 @@ public class EntryTransaction7 {
 		this.relatedAgents = relatedAgents;
 	}
 
+	@XmlElement(name = "Purp")
 	public Purpose2Choice getPurpose() {
 		return purpose;
 	}
@@ -1878,6 +1897,7 @@ public class EntryTransaction7 {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "RltdRmtInf")
 	public List<RemittanceLocation4> getRelatedRemittanceInformation() {
 		return relatedRemittanceInformation;
 	}
@@ -1886,6 +1906,7 @@ public class EntryTransaction7 {
 		this.relatedRemittanceInformation = relatedRemittanceInformation;
 	}
 
+	@XmlElement(name = "RmtInf")
 	public RemittanceInformation10 getRemittanceInformation() {
 		return remittanceInformation;
 	}
@@ -1894,6 +1915,7 @@ public class EntryTransaction7 {
 		this.remittanceInformation = remittanceInformation;
 	}
 
+	@XmlElement(name = "RltdDts")
 	public TransactionDates2 getRelatedDates() {
 		return relatedDates;
 	}
@@ -1902,6 +1924,7 @@ public class EntryTransaction7 {
 		this.relatedDates = relatedDates;
 	}
 
+	@XmlElement(name = "RltdPric")
 	public TransactionPrice3Choice getRelatedPrice() {
 		return relatedPrice;
 	}
@@ -1910,6 +1933,7 @@ public class EntryTransaction7 {
 		this.relatedPrice = relatedPrice;
 	}
 
+	@XmlElement(name = "RltdQties")
 	public List<TransactionQuantities2Choice> getRelatedQuantities() {
 		return relatedQuantities;
 	}
@@ -1918,6 +1942,7 @@ public class EntryTransaction7 {
 		this.relatedQuantities = relatedQuantities;
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -1926,6 +1951,7 @@ public class EntryTransaction7 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "Tax")
 	public TaxInformation3 getTax() {
 		return tax;
 	}
@@ -1934,6 +1960,7 @@ public class EntryTransaction7 {
 		this.tax = tax;
 	}
 
+	@XmlElement(name = "RtrInf")
 	public PaymentReturnReason2 getReturnInformation() {
 		return returnInformation;
 	}
@@ -1942,6 +1969,7 @@ public class EntryTransaction7 {
 		this.returnInformation = returnInformation;
 	}
 
+	@XmlElement(name = "CorpActn")
 	public CorporateAction9 getCorporateAction() {
 		return corporateAction;
 	}
@@ -1950,6 +1978,7 @@ public class EntryTransaction7 {
 		this.corporateAction = corporateAction;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -1958,6 +1987,7 @@ public class EntryTransaction7 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "CshDpst")
 	public List<CashDeposit1> getCashDeposit() {
 		return cashDeposit;
 	}
@@ -1966,6 +1996,7 @@ public class EntryTransaction7 {
 		this.cashDeposit = cashDeposit;
 	}
 
+	@XmlElement(name = "CardTx")
 	public CardTransaction2 getCardTransaction() {
 		return cardTransaction;
 	}
@@ -1974,6 +2005,7 @@ public class EntryTransaction7 {
 		this.cardTransaction = cardTransaction;
 	}
 
+	@XmlElement(name = "AddtlTxInf")
 	public Max500Text getAdditionalTransactionInformation() {
 		return additionalTransactionInformation;
 	}
@@ -1982,6 +2014,7 @@ public class EntryTransaction7 {
 		this.additionalTransactionInformation = additionalTransactionInformation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

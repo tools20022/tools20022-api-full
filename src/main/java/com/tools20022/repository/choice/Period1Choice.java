@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Period3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a period or a period code.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between a period or a period code."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Period1Choice", propOrder = {"period", "periodCode"})
 public class Period1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -168,6 +174,7 @@ public class Period1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prd", required = true)
 	public Period3 getPeriod() {
 		return period;
 	}
@@ -176,6 +183,7 @@ public class Period1Choice {
 		this.period = period;
 	}
 
+	@XmlElement(name = "PrdCd", required = true)
 	public DateType6Code getPeriodCode() {
 		return periodCode;
 	}

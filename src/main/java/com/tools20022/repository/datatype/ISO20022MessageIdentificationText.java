@@ -27,6 +27,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[a-z]{4}\\.[0-9]{3}\\.[0-9]{3}\\.[0-9]{2}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -53,6 +55,7 @@ public class ISO20022MessageIdentificationText {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISO20022MessageIdentificationText";
 				definition = "ISO 20022 Message identifier of an MX message.";
+				pattern = "[a-z]{4}\\.[0-9]{3}\\.[0-9]{3}\\.[0-9]{2}";
 			}
 		});
 		return mmObject_lazy.get();

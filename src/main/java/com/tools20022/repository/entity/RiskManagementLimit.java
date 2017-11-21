@@ -48,6 +48,19 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#mmCashManagementService
+ * RiskManagementLimit.mmCashManagementService}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#mmCounterparty
+ * RiskManagementLimit.mmCounterparty}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Limit Limit}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -219,19 +232,6 @@ import java.util.List;
  * Limits5.mmDefaultLimit}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Limit Limit}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#mmCashManagementService
- * RiskManagementLimit.mmCashManagementService}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#mmCounterparty
- * RiskManagementLimit.mmCounterparty}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -290,7 +290,7 @@ public class RiskManagementLimit extends Limit {
 	 */
 	public static final MMBusinessAssociationEnd mmCashManagementService = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RiskManagementLimit.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RiskManagementLimit.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashManagementService";
@@ -320,11 +320,6 @@ public class RiskManagementLimit extends Limit {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SystemMemberRole
 	 * SystemMemberRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.RiskManagementLimit
-	 * RiskManagementLimit}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -336,6 +331,11 @@ public class RiskManagementLimit extends Limit {
 	 * LimitSearchCriteria2.mmBilateralLimitCounterpartyIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.RiskManagementLimit
+	 * RiskManagementLimit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -352,7 +352,7 @@ public class RiskManagementLimit extends Limit {
 	public static final MMBusinessAssociationEnd mmCounterparty = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(LimitSearchCriteria1.mmBilateralLimitCounterpartyIdentification, LimitSearchCriteria2.mmBilateralLimitCounterpartyIdentification);
-			elementContext_lazy = () -> RiskManagementLimit.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RiskManagementLimit.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Counterparty";
@@ -381,12 +381,17 @@ public class RiskManagementLimit extends Limit {
 						LimitReport4.mmLimitIdentification, Limits4.mmCurrentLimit, Limits4.mmDefaultLimit, CurrentLimitChoice.mmRiskManagementCurrentLimitIdentification, LimitReport5.mmLimitIdentification, Limits5.mmCurrentLimit,
 						Limits5.mmDefaultLimit);
 				superType_lazy = () -> Limit.mmObject();
-				element_lazy = () -> Arrays.asList(RiskManagementLimit.mmCashManagementService, RiskManagementLimit.mmCounterparty);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RiskManagementLimit.mmCashManagementService, com.tools20022.repository.entity.RiskManagementLimit.mmCounterparty);
 				derivationComponent_lazy = () -> Arrays.asList(RiskManagementLimitIdentificationDetails.mmObject(), LimitIdentificationDetails1.mmObject(), LimitIdentificationDetails2.mmObject(), LimitDetailsStructure1.mmObject(),
 						LimitIdentificationDetails3.mmObject(), LimitDetailsStructure3.mmObject(), LimitType1Choice.mmObject(), LimitIdentification1.mmObject(), LimitIdentification2.mmObject(), LimitStructure1Choice.mmObject(),
 						LimitDetailsStructure2.mmObject(), LimitIdentification1Choice.mmObject(), LimitStructure1.mmObject(), BilateralLimitDetails1.mmObject(), BilateralLimitDetails2.mmObject(), BilateralLimitDetails3.mmObject(),
 						BilateralLimit1.mmObject(), LimitReport1.mmObject(), Limits1.mmObject(), LimitReport2.mmObject(), Limits2.mmObject(), LimitReport3.mmObject(), Limits3.mmObject(), LimitReport4.mmObject(), Limits4.mmObject(),
 						LimitIdentification4.mmObject(), LimitUtilisationJournalSearchCriteria1.mmObject(), LimitReport5.mmObject(), Limits5.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RiskManagementLimit.class;
 			}
 		});
 		return mmObject_lazy.get();

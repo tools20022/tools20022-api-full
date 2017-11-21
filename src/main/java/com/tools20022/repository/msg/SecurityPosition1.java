@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Net position of a segregated holding, in a single security, within the
@@ -84,6 +88,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityPosition1", propOrder = {"identification", "position", "meetingAttendee", "proxy", "voteDetails", "participationRegistrationRequest", "blockingRequest", "securitiesRegistrationRequest", "securitySubPosition"})
 public class SecurityPosition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -525,6 +531,7 @@ public class SecurityPosition1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification3 getIdentification() {
 		return identification;
 	}
@@ -533,6 +540,7 @@ public class SecurityPosition1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Pos")
 	public EligiblePosition getPosition() {
 		return position;
 	}
@@ -541,6 +549,7 @@ public class SecurityPosition1 {
 		this.position = position;
 	}
 
+	@XmlElement(name = "MtgAttndee")
 	public List<VotingPartyAndInstruction> getMeetingAttendee() {
 		return meetingAttendee;
 	}
@@ -549,6 +558,7 @@ public class SecurityPosition1 {
 		this.meetingAttendee = meetingAttendee;
 	}
 
+	@XmlElement(name = "Prxy")
 	public List<VotingPartyAndInstruction> getProxy() {
 		return proxy;
 	}
@@ -557,6 +567,7 @@ public class SecurityPosition1 {
 		this.proxy = proxy;
 	}
 
+	@XmlElement(name = "VoteDtls")
 	public List<VoteInstruction> getVoteDetails() {
 		return voteDetails;
 	}
@@ -565,6 +576,7 @@ public class SecurityPosition1 {
 		this.voteDetails = voteDetails;
 	}
 
+	@XmlElement(name = "PrtcptnRegnReq")
 	public List<RequestInformation> getParticipationRegistrationRequest() {
 		return participationRegistrationRequest;
 	}
@@ -573,6 +585,7 @@ public class SecurityPosition1 {
 		this.participationRegistrationRequest = participationRegistrationRequest;
 	}
 
+	@XmlElement(name = "BlckgReq")
 	public List<RequestInformation> getBlockingRequest() {
 		return blockingRequest;
 	}
@@ -581,6 +594,7 @@ public class SecurityPosition1 {
 		this.blockingRequest = blockingRequest;
 	}
 
+	@XmlElement(name = "SctiesRegnReq")
 	public List<RequestInformation> getSecuritiesRegistrationRequest() {
 		return securitiesRegistrationRequest;
 	}
@@ -589,6 +603,7 @@ public class SecurityPosition1 {
 		this.securitiesRegistrationRequest = securitiesRegistrationRequest;
 	}
 
+	@XmlElement(name = "SctySubPos")
 	public List<SecurityPosition2> getSecuritySubPosition() {
 		return securitySubPosition;
 	}

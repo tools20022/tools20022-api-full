@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies rates.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies rates."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionRate1", propOrder = {"interest", "relatedIndex", "percentageSought", "reinvestmentDiscountToMarket", "spread", "bidInterval", "charges"})
 public class CorporateActionRate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -443,6 +449,7 @@ public class CorporateActionRate1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Intrst")
 	public RateAndAmountFormat1Choice getInterest() {
 		return interest;
 	}
@@ -451,6 +458,7 @@ public class CorporateActionRate1 {
 		this.interest = interest;
 	}
 
+	@XmlElement(name = "RltdIndx")
 	public RateFormat1Choice getRelatedIndex() {
 		return relatedIndex;
 	}
@@ -459,6 +467,7 @@ public class CorporateActionRate1 {
 		this.relatedIndex = relatedIndex;
 	}
 
+	@XmlElement(name = "PctgSght")
 	public RateFormat1Choice getPercentageSought() {
 		return percentageSought;
 	}
@@ -467,6 +476,7 @@ public class CorporateActionRate1 {
 		this.percentageSought = percentageSought;
 	}
 
+	@XmlElement(name = "RinvstmtDscntToMkt")
 	public RateFormat1Choice getReinvestmentDiscountToMarket() {
 		return reinvestmentDiscountToMarket;
 	}
@@ -475,6 +485,7 @@ public class CorporateActionRate1 {
 		this.reinvestmentDiscountToMarket = reinvestmentDiscountToMarket;
 	}
 
+	@XmlElement(name = "Sprd")
 	public RateFormat1Choice getSpread() {
 		return spread;
 	}
@@ -483,6 +494,7 @@ public class CorporateActionRate1 {
 		this.spread = spread;
 	}
 
+	@XmlElement(name = "BidIntrvl")
 	public AmountAndRateFormat3Choice getBidInterval() {
 		return bidInterval;
 	}
@@ -491,6 +503,7 @@ public class CorporateActionRate1 {
 		this.bidInterval = bidInterval;
 	}
 
+	@XmlElement(name = "Chrgs")
 	public RateAndAmountFormat1Choice getCharges() {
 		return charges;
 	}

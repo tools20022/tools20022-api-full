@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Commercial details of a trade transaction between a buyer and a seller.
@@ -95,6 +99,9 @@ import java.util.List;
  * LineItem9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LineItem12", propOrder = {"purchaseOrderReference", "finalSubmission", "commercialLineItems", "lineItemsTotalAmount", "adjustment", "freightCharges", "tax", "totalNetAmount", "buyerDefinedInformation",
+		"sellerDefinedInformation", "incoterms"})
 public class LineItem12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -786,6 +793,7 @@ public class LineItem12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PurchsOrdrRef", required = true)
 	public DocumentIdentification7 getPurchaseOrderReference() {
 		return purchaseOrderReference;
 	}
@@ -794,6 +802,7 @@ public class LineItem12 {
 		this.purchaseOrderReference = purchaseOrderReference;
 	}
 
+	@XmlElement(name = "FnlSubmissn", required = true)
 	public YesNoIndicator getFinalSubmission() {
 		return finalSubmission;
 	}
@@ -802,6 +811,7 @@ public class LineItem12 {
 		this.finalSubmission = finalSubmission;
 	}
 
+	@XmlElement(name = "ComrclLineItms", required = true)
 	public List<LineItemDetails11> getCommercialLineItems() {
 		return commercialLineItems;
 	}
@@ -810,6 +820,7 @@ public class LineItem12 {
 		this.commercialLineItems = commercialLineItems;
 	}
 
+	@XmlElement(name = "LineItmsTtlAmt", required = true)
 	public CurrencyAndAmount getLineItemsTotalAmount() {
 		return lineItemsTotalAmount;
 	}
@@ -818,6 +829,7 @@ public class LineItem12 {
 		this.lineItemsTotalAmount = lineItemsTotalAmount;
 	}
 
+	@XmlElement(name = "Adjstmnt")
 	public List<Adjustment6> getAdjustment() {
 		return adjustment;
 	}
@@ -826,6 +838,7 @@ public class LineItem12 {
 		this.adjustment = adjustment;
 	}
 
+	@XmlElement(name = "FrghtChrgs")
 	public Charge25 getFreightCharges() {
 		return freightCharges;
 	}
@@ -834,6 +847,7 @@ public class LineItem12 {
 		this.freightCharges = freightCharges;
 	}
 
+	@XmlElement(name = "Tax")
 	public List<Tax22> getTax() {
 		return tax;
 	}
@@ -842,6 +856,7 @@ public class LineItem12 {
 		this.tax = tax;
 	}
 
+	@XmlElement(name = "TtlNetAmt", required = true)
 	public CurrencyAndAmount getTotalNetAmount() {
 		return totalNetAmount;
 	}
@@ -850,6 +865,7 @@ public class LineItem12 {
 		this.totalNetAmount = totalNetAmount;
 	}
 
+	@XmlElement(name = "BuyrDfndInf")
 	public List<UserDefinedInformation1> getBuyerDefinedInformation() {
 		return buyerDefinedInformation;
 	}
@@ -858,6 +874,7 @@ public class LineItem12 {
 		this.buyerDefinedInformation = buyerDefinedInformation;
 	}
 
+	@XmlElement(name = "SellrDfndInf")
 	public List<UserDefinedInformation1> getSellerDefinedInformation() {
 		return sellerDefinedInformation;
 	}
@@ -866,6 +883,7 @@ public class LineItem12 {
 		this.sellerDefinedInformation = sellerDefinedInformation;
 	}
 
+	@XmlElement(name = "Incotrms")
 	public Incoterms4 getIncoterms() {
 		return incoterms;
 	}

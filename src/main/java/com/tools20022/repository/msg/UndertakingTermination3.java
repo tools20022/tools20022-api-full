@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the notification of the termination of an undertaking.
@@ -71,6 +75,8 @@ import java.util.List;
  * "Information about the notification of the termination of an undertaking."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingTermination3", propOrder = {"effectiveDate", "reason", "additionalInformation"})
 public class UndertakingTermination3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -231,6 +237,7 @@ public class UndertakingTermination3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FctvDt", required = true)
 	public ISODate getEffectiveDate() {
 		return effectiveDate;
 	}
@@ -239,6 +246,7 @@ public class UndertakingTermination3 {
 		this.effectiveDate = effectiveDate;
 	}
 
+	@XmlElement(name = "Rsn")
 	public TerminationReason1Choice getReason() {
 		return reason;
 	}
@@ -247,6 +255,7 @@ public class UndertakingTermination3 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

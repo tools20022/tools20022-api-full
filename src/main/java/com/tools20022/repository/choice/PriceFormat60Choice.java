@@ -33,6 +33,10 @@ import com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity7;
 import com.tools20022.repository.msg.PercentagePrice1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a percentage price or an amount price or an unspecified price
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceFormat60Choice", propOrder = {"percentagePrice", "amountPrice", "notSpecifiedPrice", "amountPricePerFinancialInstrumentQuantity", "amountPricePerAmount", "indexPoints"})
 public class PriceFormat60Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -386,6 +392,7 @@ public class PriceFormat60Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PctgPric", required = true)
 	public PercentagePrice1 getPercentagePrice() {
 		return percentagePrice;
 	}
@@ -394,6 +401,7 @@ public class PriceFormat60Choice {
 		this.percentagePrice = percentagePrice;
 	}
 
+	@XmlElement(name = "AmtPric", required = true)
 	public AmountPrice5 getAmountPrice() {
 		return amountPrice;
 	}
@@ -402,6 +410,7 @@ public class PriceFormat60Choice {
 		this.amountPrice = amountPrice;
 	}
 
+	@XmlElement(name = "NotSpcfdPric", required = true)
 	public PriceValueType8Code getNotSpecifiedPrice() {
 		return notSpecifiedPrice;
 	}
@@ -410,6 +419,7 @@ public class PriceFormat60Choice {
 		this.notSpecifiedPrice = notSpecifiedPrice;
 	}
 
+	@XmlElement(name = "AmtPricPerFinInstrmQty", required = true)
 	public AmountPricePerFinancialInstrumentQuantity7 getAmountPricePerFinancialInstrumentQuantity() {
 		return amountPricePerFinancialInstrumentQuantity;
 	}
@@ -418,6 +428,7 @@ public class PriceFormat60Choice {
 		this.amountPricePerFinancialInstrumentQuantity = amountPricePerFinancialInstrumentQuantity;
 	}
 
+	@XmlElement(name = "AmtPricPerAmt", required = true)
 	public AmountPricePerAmount3 getAmountPricePerAmount() {
 		return amountPricePerAmount;
 	}
@@ -426,6 +437,7 @@ public class PriceFormat60Choice {
 		this.amountPricePerAmount = amountPricePerAmount;
 	}
 
+	@XmlElement(name = "IndxPts", required = true)
 	public RestrictedFINDecimalNumber getIndexPoints() {
 		return indexPoints;
 	}

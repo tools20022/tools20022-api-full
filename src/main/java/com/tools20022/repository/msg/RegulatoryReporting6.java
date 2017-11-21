@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Includes data elements that can be used for reporting to trade repositories,
@@ -175,6 +179,11 @@ import java.util.List;
  * RegulatoryReporting4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegulatoryReporting6", propOrder = {"tradingSideTransactionReporting", "counterpartySideTransactionReporting", "centralCounterpartyClearingHouse", "clearingBroker", "clearingExceptionParty", "clearingBrokerIdentification",
+		"clearingThresholdIndicator", "clearedProductIdentification", "underlyingProductIdentifier", "allocationIndicator", "collateralisationIndicator", "executionVenue", "executionTimestamp", "nonStandardFlag", "linkSwapIdentification",
+		"financialNatureOfTheCounterpartyIndicator", "collateralPortfolioIndicator", "collateralPortfolioCode", "portfolioCompressionIndicator", "corporateSectorIndicator", "tradeWithNonEEACounterpartyIndicator",
+		"intragroupTradeIndicator", "commercialOrTreasuryFinancingIndicator", "financialInstrumentIdentification", "confirmationDateAndTimestamp", "clearingTimestamp", "additionalReportingInformation"})
 public class RegulatoryReporting6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1649,6 +1658,7 @@ public class RegulatoryReporting6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradgSdTxRptg")
 	public List<TradingSideTransactionReporting1> getTradingSideTransactionReporting() {
 		return tradingSideTransactionReporting;
 	}
@@ -1657,6 +1667,7 @@ public class RegulatoryReporting6 {
 		this.tradingSideTransactionReporting = tradingSideTransactionReporting;
 	}
 
+	@XmlElement(name = "CtrPtySdTxRptg")
 	public List<CounterpartySideTransactionReporting1> getCounterpartySideTransactionReporting() {
 		return counterpartySideTransactionReporting;
 	}
@@ -1665,6 +1676,7 @@ public class RegulatoryReporting6 {
 		this.counterpartySideTransactionReporting = counterpartySideTransactionReporting;
 	}
 
+	@XmlElement(name = "CntrlCtrPtyClrHs")
 	public PartyIdentification73Choice getCentralCounterpartyClearingHouse() {
 		return centralCounterpartyClearingHouse;
 	}
@@ -1673,6 +1685,7 @@ public class RegulatoryReporting6 {
 		this.centralCounterpartyClearingHouse = centralCounterpartyClearingHouse;
 	}
 
+	@XmlElement(name = "ClrBrkr")
 	public PartyIdentification73Choice getClearingBroker() {
 		return clearingBroker;
 	}
@@ -1681,6 +1694,7 @@ public class RegulatoryReporting6 {
 		this.clearingBroker = clearingBroker;
 	}
 
+	@XmlElement(name = "ClrXcptnPty")
 	public PartyIdentification73Choice getClearingExceptionParty() {
 		return clearingExceptionParty;
 	}
@@ -1689,6 +1703,7 @@ public class RegulatoryReporting6 {
 		this.clearingExceptionParty = clearingExceptionParty;
 	}
 
+	@XmlElement(name = "ClrBrkrId")
 	public ClearingBrokerIdentification1 getClearingBrokerIdentification() {
 		return clearingBrokerIdentification;
 	}
@@ -1697,6 +1712,7 @@ public class RegulatoryReporting6 {
 		this.clearingBrokerIdentification = clearingBrokerIdentification;
 	}
 
+	@XmlElement(name = "ClrThrshldInd")
 	public YesNoIndicator getClearingThresholdIndicator() {
 		return clearingThresholdIndicator;
 	}
@@ -1705,6 +1721,7 @@ public class RegulatoryReporting6 {
 		this.clearingThresholdIndicator = clearingThresholdIndicator;
 	}
 
+	@XmlElement(name = "ClrdPdctId")
 	public Max35Text getClearedProductIdentification() {
 		return clearedProductIdentification;
 	}
@@ -1713,6 +1730,7 @@ public class RegulatoryReporting6 {
 		this.clearedProductIdentification = clearedProductIdentification;
 	}
 
+	@XmlElement(name = "UndrlygPdctIdr")
 	public UnderlyingProductIdentifier1Code getUnderlyingProductIdentifier() {
 		return underlyingProductIdentifier;
 	}
@@ -1721,6 +1739,7 @@ public class RegulatoryReporting6 {
 		this.underlyingProductIdentifier = underlyingProductIdentifier;
 	}
 
+	@XmlElement(name = "AllcnInd")
 	public AllocationIndicator1Code getAllocationIndicator() {
 		return allocationIndicator;
 	}
@@ -1729,6 +1748,7 @@ public class RegulatoryReporting6 {
 		this.allocationIndicator = allocationIndicator;
 	}
 
+	@XmlElement(name = "CollstnInd")
 	public CollateralisationIndicator1Code getCollateralisationIndicator() {
 		return collateralisationIndicator;
 	}
@@ -1737,6 +1757,7 @@ public class RegulatoryReporting6 {
 		this.collateralisationIndicator = collateralisationIndicator;
 	}
 
+	@XmlElement(name = "ExctnVn")
 	public Max35Text getExecutionVenue() {
 		return executionVenue;
 	}
@@ -1745,6 +1766,7 @@ public class RegulatoryReporting6 {
 		this.executionVenue = executionVenue;
 	}
 
+	@XmlElement(name = "ExctnTmstmp")
 	public DateAndDateTimeChoice getExecutionTimestamp() {
 		return executionTimestamp;
 	}
@@ -1753,6 +1775,7 @@ public class RegulatoryReporting6 {
 		this.executionTimestamp = executionTimestamp;
 	}
 
+	@XmlElement(name = "NonStdFlg")
 	public YesNoIndicator getNonStandardFlag() {
 		return nonStandardFlag;
 	}
@@ -1761,6 +1784,7 @@ public class RegulatoryReporting6 {
 		this.nonStandardFlag = nonStandardFlag;
 	}
 
+	@XmlElement(name = "LkSwpId")
 	public Exact42Text getLinkSwapIdentification() {
 		return linkSwapIdentification;
 	}
@@ -1769,6 +1793,7 @@ public class RegulatoryReporting6 {
 		this.linkSwapIdentification = linkSwapIdentification;
 	}
 
+	@XmlElement(name = "FinNtrOfTheCtrPtyInd")
 	public YesNoIndicator getFinancialNatureOfTheCounterpartyIndicator() {
 		return financialNatureOfTheCounterpartyIndicator;
 	}
@@ -1777,6 +1802,7 @@ public class RegulatoryReporting6 {
 		this.financialNatureOfTheCounterpartyIndicator = financialNatureOfTheCounterpartyIndicator;
 	}
 
+	@XmlElement(name = "CollPrtflInd")
 	public YesNoIndicator getCollateralPortfolioIndicator() {
 		return collateralPortfolioIndicator;
 	}
@@ -1785,6 +1811,7 @@ public class RegulatoryReporting6 {
 		this.collateralPortfolioIndicator = collateralPortfolioIndicator;
 	}
 
+	@XmlElement(name = "CollPrtflCd")
 	public Max10Text getCollateralPortfolioCode() {
 		return collateralPortfolioCode;
 	}
@@ -1793,6 +1820,7 @@ public class RegulatoryReporting6 {
 		this.collateralPortfolioCode = collateralPortfolioCode;
 	}
 
+	@XmlElement(name = "PrtflCmprssnInd")
 	public YesNoIndicator getPortfolioCompressionIndicator() {
 		return portfolioCompressionIndicator;
 	}
@@ -1801,6 +1829,7 @@ public class RegulatoryReporting6 {
 		this.portfolioCompressionIndicator = portfolioCompressionIndicator;
 	}
 
+	@XmlElement(name = "CorpSctrInd")
 	public CorporateSectorIdentifier1Code getCorporateSectorIndicator() {
 		return corporateSectorIndicator;
 	}
@@ -1809,6 +1838,7 @@ public class RegulatoryReporting6 {
 		this.corporateSectorIndicator = corporateSectorIndicator;
 	}
 
+	@XmlElement(name = "TradWthNonEEACtrPtyInd")
 	public YesNoIndicator getTradeWithNonEEACounterpartyIndicator() {
 		return tradeWithNonEEACounterpartyIndicator;
 	}
@@ -1817,6 +1847,7 @@ public class RegulatoryReporting6 {
 		this.tradeWithNonEEACounterpartyIndicator = tradeWithNonEEACounterpartyIndicator;
 	}
 
+	@XmlElement(name = "NtrgrpTradInd")
 	public YesNoIndicator getIntragroupTradeIndicator() {
 		return intragroupTradeIndicator;
 	}
@@ -1825,6 +1856,7 @@ public class RegulatoryReporting6 {
 		this.intragroupTradeIndicator = intragroupTradeIndicator;
 	}
 
+	@XmlElement(name = "ComrclOrTrsrFincgInd")
 	public YesNoIndicator getCommercialOrTreasuryFinancingIndicator() {
 		return commercialOrTreasuryFinancingIndicator;
 	}
@@ -1833,6 +1865,7 @@ public class RegulatoryReporting6 {
 		this.commercialOrTreasuryFinancingIndicator = commercialOrTreasuryFinancingIndicator;
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public SecurityIdentification19 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -1841,6 +1874,7 @@ public class RegulatoryReporting6 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "ConfDtAndTmstmp")
 	public ISODateTime getConfirmationDateAndTimestamp() {
 		return confirmationDateAndTimestamp;
 	}
@@ -1849,6 +1883,7 @@ public class RegulatoryReporting6 {
 		this.confirmationDateAndTimestamp = confirmationDateAndTimestamp;
 	}
 
+	@XmlElement(name = "ClrTmstmp")
 	public ISOTime getClearingTimestamp() {
 		return clearingTimestamp;
 	}
@@ -1857,6 +1892,7 @@ public class RegulatoryReporting6 {
 		this.clearingTimestamp = clearingTimestamp;
 	}
 
+	@XmlElement(name = "AddtlRptgInf")
 	public Max210Text getAdditionalReportingInformation() {
 		return additionalReportingInformation;
 	}

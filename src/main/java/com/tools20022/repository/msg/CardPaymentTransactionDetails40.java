@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the payment transaction.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentTransactionDetails33}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransactionDetails40", propOrder = {"currency", "totalAmount", "amountQualifier", "detailedAmount", "ICCRelatedData"})
 public class CardPaymentTransactionDetails40 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -369,6 +375,7 @@ public class CardPaymentTransactionDetails40 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy", required = true)
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -377,6 +384,7 @@ public class CardPaymentTransactionDetails40 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "TtlAmt", required = true)
 	public ImpliedCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -385,6 +393,7 @@ public class CardPaymentTransactionDetails40 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "AmtQlfr")
 	public TypeOfAmount8Code getAmountQualifier() {
 		return amountQualifier;
 	}
@@ -393,6 +402,7 @@ public class CardPaymentTransactionDetails40 {
 		this.amountQualifier = amountQualifier;
 	}
 
+	@XmlElement(name = "DtldAmt")
 	public DetailedAmount15 getDetailedAmount() {
 		return detailedAmount;
 	}
@@ -401,6 +411,7 @@ public class CardPaymentTransactionDetails40 {
 		this.detailedAmount = detailedAmount;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters defining the timing conditions to process an action.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ProcessTiming3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProcessTiming4", propOrder = {"startTime", "endTime", "period"})
 public class ProcessTiming4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -223,6 +229,7 @@ public class ProcessTiming4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StartTm")
 	public ISODateTime getStartTime() {
 		return startTime;
 	}
@@ -231,6 +238,7 @@ public class ProcessTiming4 {
 		this.startTime = startTime;
 	}
 
+	@XmlElement(name = "EndTm")
 	public ISODateTime getEndTime() {
 		return endTime;
 	}
@@ -239,6 +247,7 @@ public class ProcessTiming4 {
 		this.endTime = endTime;
 	}
 
+	@XmlElement(name = "Prd")
 	public Max9NumericText getPeriod() {
 		return period;
 	}

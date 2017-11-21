@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information used to calculate the tax.
@@ -96,6 +100,8 @@ import java.util.function.Supplier;
  * definition} = "Information used to calculate the tax."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxCalculationInformation4", propOrder = {"EUCapitalGain", "extendedEUCapitalGain", "percentageOfDebtClaim", "percentageGrandfatheredDebt", "taxableIncomePerDividend", "EUDividendStatus", "extendedEUDividendStatus"})
 public class TaxCalculationInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -574,6 +580,7 @@ public class TaxCalculationInformation4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EUCptlGn")
 	public EUCapitalGain2Code getEUCapitalGain() {
 		return eUCapitalGain;
 	}
@@ -582,6 +589,7 @@ public class TaxCalculationInformation4 {
 		this.eUCapitalGain = eUCapitalGain;
 	}
 
+	@XmlElement(name = "XtndedEUCptlGn")
 	public Extended350Code getExtendedEUCapitalGain() {
 		return extendedEUCapitalGain;
 	}
@@ -590,6 +598,7 @@ public class TaxCalculationInformation4 {
 		this.extendedEUCapitalGain = extendedEUCapitalGain;
 	}
 
+	@XmlElement(name = "PctgOfDebtClm")
 	public PercentageRate getPercentageOfDebtClaim() {
 		return percentageOfDebtClaim;
 	}
@@ -598,6 +607,7 @@ public class TaxCalculationInformation4 {
 		this.percentageOfDebtClaim = percentageOfDebtClaim;
 	}
 
+	@XmlElement(name = "PctgGrdfthdDebt")
 	public PercentageRate getPercentageGrandfatheredDebt() {
 		return percentageGrandfatheredDebt;
 	}
@@ -606,6 +616,7 @@ public class TaxCalculationInformation4 {
 		this.percentageGrandfatheredDebt = percentageGrandfatheredDebt;
 	}
 
+	@XmlElement(name = "TaxblIncmPerDvdd")
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getTaxableIncomePerDividend() {
 		return taxableIncomePerDividend;
 	}
@@ -614,6 +625,7 @@ public class TaxCalculationInformation4 {
 		this.taxableIncomePerDividend = taxableIncomePerDividend;
 	}
 
+	@XmlElement(name = "EUDvddSts")
 	public EUDividendStatus1Code getEUDividendStatus() {
 		return eUDividendStatus;
 	}
@@ -622,6 +634,7 @@ public class TaxCalculationInformation4 {
 		this.eUDividendStatus = eUDividendStatus;
 	}
 
+	@XmlElement(name = "XtndedEUDvddSts")
 	public Extended350Code getExtendedEUDividendStatus() {
 		return extendedEUDividendStatus;
 	}

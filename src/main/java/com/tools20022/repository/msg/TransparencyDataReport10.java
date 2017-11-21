@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides for reporting details of non-equity instruments as part of
@@ -110,6 +114,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransparencyDataReport10", propOrder = {"technicalRecordIdentification", "identification", "fullName", "tradingVenue", "reportingDate", "maturityDate", "financialInstrumentClassification", "underlyingInstrumentAssetClass",
+		"derivativeContractType", "bond", "emissionAllowanceType", "derivative"})
 public class TransparencyDataReport10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -714,6 +721,7 @@ public class TransparencyDataReport10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TechRcrdId")
 	public Max35Text getTechnicalRecordIdentification() {
 		return technicalRecordIdentification;
 	}
@@ -722,6 +730,7 @@ public class TransparencyDataReport10 {
 		this.technicalRecordIdentification = technicalRecordIdentification;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public ISINOct2015Identifier getIdentification() {
 		return identification;
 	}
@@ -730,6 +739,7 @@ public class TransparencyDataReport10 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "FullNm")
 	public Max350Text getFullName() {
 		return fullName;
 	}
@@ -738,6 +748,7 @@ public class TransparencyDataReport10 {
 		this.fullName = fullName;
 	}
 
+	@XmlElement(name = "TradgVn")
 	public MICIdentifier getTradingVenue() {
 		return tradingVenue;
 	}
@@ -746,6 +757,7 @@ public class TransparencyDataReport10 {
 		this.tradingVenue = tradingVenue;
 	}
 
+	@XmlElement(name = "RptgDt")
 	public ISODate getReportingDate() {
 		return reportingDate;
 	}
@@ -754,6 +766,7 @@ public class TransparencyDataReport10 {
 		this.reportingDate = reportingDate;
 	}
 
+	@XmlElement(name = "MtrtyDt")
 	public ISODate getMaturityDate() {
 		return maturityDate;
 	}
@@ -762,6 +775,7 @@ public class TransparencyDataReport10 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "FinInstrmClssfctn", required = true)
 	public NonEquityInstrumentReportingClassification1Code getFinancialInstrumentClassification() {
 		return financialInstrumentClassification;
 	}
@@ -770,6 +784,7 @@ public class TransparencyDataReport10 {
 		this.financialInstrumentClassification = financialInstrumentClassification;
 	}
 
+	@XmlElement(name = "UndrlygInstrmAsstClss")
 	public ProductType5Code getUnderlyingInstrumentAssetClass() {
 		return underlyingInstrumentAssetClass;
 	}
@@ -778,6 +793,7 @@ public class TransparencyDataReport10 {
 		this.underlyingInstrumentAssetClass = underlyingInstrumentAssetClass;
 	}
 
+	@XmlElement(name = "DerivCtrctTp")
 	public FinancialInstrumentContractType1Code getDerivativeContractType() {
 		return derivativeContractType;
 	}
@@ -786,6 +802,7 @@ public class TransparencyDataReport10 {
 		this.derivativeContractType = derivativeContractType;
 	}
 
+	@XmlElement(name = "Bd")
 	public DebtInstrument5 getBond() {
 		return bond;
 	}
@@ -794,6 +811,7 @@ public class TransparencyDataReport10 {
 		this.bond = bond;
 	}
 
+	@XmlElement(name = "EmssnAllwncTp")
 	public EmissionAllowanceProductType2Code getEmissionAllowanceType() {
 		return emissionAllowanceType;
 	}
@@ -802,6 +820,7 @@ public class TransparencyDataReport10 {
 		this.emissionAllowanceType = emissionAllowanceType;
 	}
 
+	@XmlElement(name = "Deriv")
 	public Derivative2Choice getDerivative() {
 		return derivative;
 	}

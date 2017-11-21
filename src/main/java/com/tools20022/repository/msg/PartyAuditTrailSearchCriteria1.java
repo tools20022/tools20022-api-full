@@ -25,6 +25,10 @@ import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes search criteria for party audit trail query.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Describes search criteria for party audit trail query."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyAuditTrailSearchCriteria1", propOrder = {"partyIdentification", "datePeriod"})
 public class PartyAuditTrailSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +165,7 @@ public class PartyAuditTrailSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyId")
 	public SystemPartyIdentification3 getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -167,6 +174,7 @@ public class PartyAuditTrailSearchCriteria1 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "DtPrd")
 	public DateSearchChoice getDatePeriod() {
 		return datePeriod;
 	}

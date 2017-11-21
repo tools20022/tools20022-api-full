@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.SecuritiesMarketReportHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TransparencyDataReport10;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The FinancialInstrumentReportingNonEquityTransparencyDataReport message is
@@ -38,9 +40,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.033.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -77,6 +76,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.033.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -88,6 +90,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentReportingNonEquityTransparencyDataReportV01", propOrder = {"reportHeader", "nonEquityTransparencyData", "supplementaryData"})
 public class FinancialInstrumentReportingNonEquityTransparencyDataReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -124,6 +128,14 @@ public class FinancialInstrumentReportingNonEquityTransparencyDataReportV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesMarketReportHeader1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingNonEquityTransparencyDataReportV01.class.getMethod("getReportHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<TransparencyDataReport10> nonEquityTransparencyData;
@@ -162,6 +174,14 @@ public class FinancialInstrumentReportingNonEquityTransparencyDataReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> TransparencyDataReport10.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingNonEquityTransparencyDataReportV01.class.getMethod("getNonEquityTransparencyData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -199,6 +219,14 @@ public class FinancialInstrumentReportingNonEquityTransparencyDataReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingNonEquityTransparencyDataReportV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -211,8 +239,9 @@ public class FinancialInstrumentReportingNonEquityTransparencyDataReportV01 {
 				rootElement = "Document";
 				xmlTag = "FinInstrmRptgNonEqtyTrnsprncyDataRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmReportHeader, FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmNonEquityTransparencyData,
-						FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmReportHeader,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmNonEquityTransparencyData,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -222,10 +251,16 @@ public class FinancialInstrumentReportingNonEquityTransparencyDataReportV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FinancialInstrumentReportingNonEquityTransparencyDataReportV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptHdr", required = true)
 	public SecuritiesMarketReportHeader1 getReportHeader() {
 		return reportHeader;
 	}
@@ -234,6 +269,7 @@ public class FinancialInstrumentReportingNonEquityTransparencyDataReportV01 {
 		this.reportHeader = reportHeader;
 	}
 
+	@XmlElement(name = "NonEqtyTrnsprncyData", required = true)
 	public List<TransparencyDataReport10> getNonEquityTransparencyData() {
 		return nonEquityTransparencyData;
 	}
@@ -242,11 +278,18 @@ public class FinancialInstrumentReportingNonEquityTransparencyDataReportV01 {
 		this.nonEquityTransparencyData = nonEquityTransparencyData;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.033.01.01")
+	static public class Document {
+		@XmlElement(name = "FinInstrmRptgNonEqtyTrnsprncyDataRpt", required = true)
+		public FinancialInstrumentReportingNonEquityTransparencyDataReportV01 messageBody;
 	}
 }

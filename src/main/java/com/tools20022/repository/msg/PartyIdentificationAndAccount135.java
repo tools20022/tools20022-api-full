@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party and account details.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Party and account details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount135", propOrder = {"identification", "LEI", "alternateIdentification", "nationality", "safekeepingAccount", "processingIdentification", "additionalInformation"})
 public class PartyIdentificationAndAccount135 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -431,6 +437,7 @@ public class PartyIdentificationAndAccount135 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public PartyIdentification104Choice getIdentification() {
 		return identification;
 	}
@@ -439,6 +446,7 @@ public class PartyIdentificationAndAccount135 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "LEI")
 	public LEIIdentifier getLEI() {
 		return lEI;
 	}
@@ -447,6 +455,7 @@ public class PartyIdentificationAndAccount135 {
 		this.lEI = lEI;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification9 getAlternateIdentification() {
 		return alternateIdentification;
 	}
@@ -455,6 +464,7 @@ public class PartyIdentificationAndAccount135 {
 		this.alternateIdentification = alternateIdentification;
 	}
 
+	@XmlElement(name = "Ntlty")
 	public CountryCode getNationality() {
 		return nationality;
 	}
@@ -463,6 +473,7 @@ public class PartyIdentificationAndAccount135 {
 		this.nationality = nationality;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public RestrictedFINXMax35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -471,6 +482,7 @@ public class PartyIdentificationAndAccount135 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public RestrictedFINXMax16Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -479,6 +491,7 @@ public class PartyIdentificationAndAccount135 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public PartyTextInformation3 getAdditionalInformation() {
 		return additionalInformation;
 	}

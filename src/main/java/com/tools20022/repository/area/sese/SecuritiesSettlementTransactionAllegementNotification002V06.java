@@ -26,9 +26,11 @@ import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -55,9 +57,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.028.002.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestversionsubsetvariant
@@ -145,6 +144,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.028.002.06}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -160,6 +162,10 @@ import java.util.List;
  * SecuritiesSettlementTransactionAllegementNotification002V05}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesSettlementTransactionAllegementNotification002V06", propOrder = {"transactionIdentification", "settlementTypeAndAdditionalParameters", "marketInfrastructureTransactionIdentification", "tradeDetails",
+		"financialInstrumentIdentification", "financialInstrumentAttributes", "quantityAndAccountDetails", "securitiesFinancingDetails", "settlementParameters", "deliveringSettlementParties", "receivingSettlementParties", "cashParties",
+		"settlementAmount", "otherAmounts", "otherBusinessParties", "supplementaryData"})
 public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -200,6 +206,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SettlementTypeAndAdditionalParameters15 settlementTypeAndAdditionalParameters;
 	/**
@@ -234,6 +248,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SettlementTypeAndAdditionalParameters15.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getSettlementTypeAndAdditionalParameters", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Identification16 marketInfrastructureTransactionIdentification;
@@ -273,6 +295,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			minOccurs = 0;
 			complexType_lazy = () -> Identification16.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getMarketInfrastructureTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesTradeDetails60 tradeDetails;
 	/**
@@ -307,6 +337,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesTradeDetails60.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getTradeDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecurityIdentification20 financialInstrumentIdentification;
@@ -346,6 +384,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification20.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getFinancialInstrumentIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected FinancialInstrumentAttributes78 financialInstrumentAttributes;
 	/**
@@ -380,6 +426,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentAttributes78.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getFinancialInstrumentAttributes", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected QuantityAndAccount58 quantityAndAccountDetails;
@@ -418,6 +472,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			minOccurs = 1;
 			complexType_lazy = () -> QuantityAndAccount58.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getQuantityAndAccountDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesFinancingTransactionDetails34 securitiesFinancingDetails;
 	/**
@@ -453,6 +515,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesFinancingTransactionDetails34.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getSecuritiesFinancingDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SettlementDetails131 settlementParameters;
@@ -494,6 +564,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			minOccurs = 1;
 			complexType_lazy = () -> SettlementDetails131.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getSettlementParameters", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SettlementParties44 deliveringSettlementParties;
 	/**
@@ -528,6 +606,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties44.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getDeliveringSettlementParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SettlementParties44 receivingSettlementParties;
@@ -564,6 +650,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties44.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getReceivingSettlementParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CashParties32 cashParties;
 	/**
@@ -598,6 +692,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CashParties32.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getCashParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AmountAndDirection71 settlementAmount;
@@ -637,6 +739,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			minOccurs = 0;
 			complexType_lazy = () -> AmountAndDirection71.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getSettlementAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OtherAmounts36 otherAmounts;
 	/**
@@ -671,6 +781,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			minOccurs = 0;
 			complexType_lazy = () -> OtherAmounts36.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getOtherAmounts", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OtherParties31 otherBusinessParties;
 	/**
@@ -704,6 +822,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> OtherParties31.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getOtherBusinessParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -742,6 +868,14 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -755,15 +889,22 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxAllgmtNtfctn";
 				businessArea_lazy = () -> SecuritiesSettlementLatestversionsubsetvariant.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotification002V06.mmTransactionIdentification,
-						SecuritiesSettlementTransactionAllegementNotification002V06.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionAllegementNotification002V06.mmMarketInfrastructureTransactionIdentification,
-						SecuritiesSettlementTransactionAllegementNotification002V06.mmTradeDetails, SecuritiesSettlementTransactionAllegementNotification002V06.mmFinancialInstrumentIdentification,
-						SecuritiesSettlementTransactionAllegementNotification002V06.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionAllegementNotification002V06.mmQuantityAndAccountDetails,
-						SecuritiesSettlementTransactionAllegementNotification002V06.mmSecuritiesFinancingDetails, SecuritiesSettlementTransactionAllegementNotification002V06.mmSettlementParameters,
-						SecuritiesSettlementTransactionAllegementNotification002V06.mmDeliveringSettlementParties, SecuritiesSettlementTransactionAllegementNotification002V06.mmReceivingSettlementParties,
-						SecuritiesSettlementTransactionAllegementNotification002V06.mmCashParties, SecuritiesSettlementTransactionAllegementNotification002V06.mmSettlementAmount,
-						SecuritiesSettlementTransactionAllegementNotification002V06.mmOtherAmounts, SecuritiesSettlementTransactionAllegementNotification002V06.mmOtherBusinessParties,
-						SecuritiesSettlementTransactionAllegementNotification002V06.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmSettlementTypeAndAdditionalParameters,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmTradeDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmFinancialInstrumentAttributes,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmQuantityAndAccountDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmSecuritiesFinancingDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmSettlementParameters,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmDeliveringSettlementParties,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmReceivingSettlementParties,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmCashParties,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmSettlementAmount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmOtherAmounts,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmOtherBusinessParties,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -773,10 +914,16 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesSettlementTransactionAllegementNotification002V06.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public RestrictedFINXMax16Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -785,6 +932,7 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "SttlmTpAndAddtlParams", required = true)
 	public SettlementTypeAndAdditionalParameters15 getSettlementTypeAndAdditionalParameters() {
 		return settlementTypeAndAdditionalParameters;
 	}
@@ -793,6 +941,7 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 		this.settlementTypeAndAdditionalParameters = settlementTypeAndAdditionalParameters;
 	}
 
+	@XmlElement(name = "MktInfrstrctrTxId")
 	public Identification16 getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}
@@ -801,6 +950,7 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
 	}
 
+	@XmlElement(name = "TradDtls", required = true)
 	public SecuritiesTradeDetails60 getTradeDetails() {
 		return tradeDetails;
 	}
@@ -809,6 +959,7 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 		this.tradeDetails = tradeDetails;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification20 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -817,6 +968,7 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public FinancialInstrumentAttributes78 getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -825,6 +977,7 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "QtyAndAcctDtls", required = true)
 	public QuantityAndAccount58 getQuantityAndAccountDetails() {
 		return quantityAndAccountDetails;
 	}
@@ -833,6 +986,7 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 		this.quantityAndAccountDetails = quantityAndAccountDetails;
 	}
 
+	@XmlElement(name = "SctiesFincgDtls")
 	public SecuritiesFinancingTransactionDetails34 getSecuritiesFinancingDetails() {
 		return securitiesFinancingDetails;
 	}
@@ -841,6 +995,7 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 		this.securitiesFinancingDetails = securitiesFinancingDetails;
 	}
 
+	@XmlElement(name = "SttlmParams", required = true)
 	public SettlementDetails131 getSettlementParameters() {
 		return settlementParameters;
 	}
@@ -849,6 +1004,7 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 		this.settlementParameters = settlementParameters;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties44 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -857,6 +1013,7 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties44 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -865,6 +1022,7 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "CshPties")
 	public CashParties32 getCashParties() {
 		return cashParties;
 	}
@@ -873,6 +1031,7 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 		this.cashParties = cashParties;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public AmountAndDirection71 getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -881,6 +1040,7 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "OthrAmts")
 	public OtherAmounts36 getOtherAmounts() {
 		return otherAmounts;
 	}
@@ -889,6 +1049,7 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 		this.otherAmounts = otherAmounts;
 	}
 
+	@XmlElement(name = "OthrBizPties")
 	public OtherParties31 getOtherBusinessParties() {
 		return otherBusinessParties;
 	}
@@ -897,11 +1058,18 @@ public class SecuritiesSettlementTransactionAllegementNotification002V06 {
 		this.otherBusinessParties = otherBusinessParties;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.028.06.06")
+	static public class Document {
+		@XmlElement(name = "SctiesSttlmTxAllgmtNtfctn", required = true)
+		public SecuritiesSettlementTransactionAllegementNotification002V06 messageBody;
 	}
 }

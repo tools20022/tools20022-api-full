@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the details of the account and the role of the party.
@@ -77,6 +81,8 @@ import java.util.List;
  * "Specifies the details of the account and the role of the party."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountAndParties2", propOrder = {"account", "role", "additionalInformation"})
 public class AccountAndParties2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class AccountAndParties2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CustomerAccount1 getAccount() {
 		return account;
 	}
@@ -236,6 +243,7 @@ public class AccountAndParties2 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "Role", required = true)
 	public List<AccountRole1> getRole() {
 		return role;
 	}
@@ -244,6 +252,7 @@ public class AccountAndParties2 {
 		this.role = role;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max256Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

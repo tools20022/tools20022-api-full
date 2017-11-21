@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Further information on the reversal reason of the transaction.
@@ -69,6 +73,8 @@ import java.util.List;
  * "Further information on the reversal reason of the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReversalReasonInformation5", propOrder = {"reversalOriginator", "reversalReason", "additionalReversalReasonInformation"})
 public class ReversalReasonInformation5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -222,6 +228,7 @@ public class ReversalReasonInformation5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RvslOrgtr", required = true)
 	public PartyIdentification14 getReversalOriginator() {
 		return reversalOriginator;
 	}
@@ -230,6 +237,7 @@ public class ReversalReasonInformation5 {
 		this.reversalOriginator = reversalOriginator;
 	}
 
+	@XmlElement(name = "RvslRsn", required = true)
 	public ReversalReason1Choice getReversalReason() {
 		return reversalReason;
 	}
@@ -238,6 +246,7 @@ public class ReversalReasonInformation5 {
 		this.reversalReason = reversalReason;
 	}
 
+	@XmlElement(name = "AddtlRvslRsnInf")
 	public List<Max105Text> getAdditionalReversalReasonInformation() {
 		return additionalReversalReasonInformation;
 	}

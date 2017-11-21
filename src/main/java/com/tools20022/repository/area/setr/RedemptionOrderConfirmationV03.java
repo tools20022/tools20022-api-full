@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesTradePreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -57,9 +59,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.006.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
@@ -107,6 +106,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.006.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -130,6 +132,8 @@ import java.util.List;
  * RedemptionMultipleOrderConfirmationV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RedemptionOrderConfirmationV03", propOrder = {"messageIdentification", "poolReference", "previousReference", "relatedReference", "multipleExecutionDetails", "relatedPartyDetails", "copyDetails", "extension"})
 public class RedemptionOrderConfirmationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +183,14 @@ public class RedemptionOrderConfirmationV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionOrderConfirmationV03.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -223,6 +235,14 @@ public class RedemptionOrderConfirmationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionOrderConfirmationV03.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference3> previousReference;
 	/**
@@ -265,6 +285,14 @@ public class RedemptionOrderConfirmationV03 {
 			nextVersions_lazy = () -> Arrays.asList(RedemptionOrderConfirmationV04.mmPreviousReference);
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionOrderConfirmationV03.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 relatedReference;
@@ -310,6 +338,14 @@ public class RedemptionOrderConfirmationV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionOrderConfirmationV03.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RedemptionMultipleExecution3 multipleExecutionDetails;
@@ -357,6 +393,14 @@ public class RedemptionOrderConfirmationV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> RedemptionMultipleExecution3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionOrderConfirmationV03.class.getMethod("getMultipleExecutionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Intermediary9> relatedPartyDetails;
 	/**
@@ -390,6 +434,14 @@ public class RedemptionOrderConfirmationV03 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			complexType_lazy = () -> Intermediary9.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionOrderConfirmationV03.class.getMethod("getRelatedPartyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CopyInformation2 copyDetails;
@@ -436,6 +488,14 @@ public class RedemptionOrderConfirmationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionOrderConfirmationV03.class.getMethod("getCopyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension1> extension;
 	/**
@@ -481,6 +541,14 @@ public class RedemptionOrderConfirmationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionOrderConfirmationV03.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -495,9 +563,10 @@ public class RedemptionOrderConfirmationV03 {
 				rootElement = "Document";
 				xmlTag = "RedOrdrConfV03";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(RedemptionOrderConfirmationV03.mmMessageIdentification, RedemptionOrderConfirmationV03.mmPoolReference, RedemptionOrderConfirmationV03.mmPreviousReference,
-						RedemptionOrderConfirmationV03.mmRelatedReference, RedemptionOrderConfirmationV03.mmMultipleExecutionDetails, RedemptionOrderConfirmationV03.mmRelatedPartyDetails, RedemptionOrderConfirmationV03.mmCopyDetails,
-						RedemptionOrderConfirmationV03.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.mmMessageIdentification, com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.mmPoolReference,
+						com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.mmPreviousReference, com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.mmRelatedReference,
+						com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.mmMultipleExecutionDetails, com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.mmRelatedPartyDetails,
+						com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.mmCopyDetails, com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -507,10 +576,16 @@ public class RedemptionOrderConfirmationV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RedemptionOrderConfirmationV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -519,6 +594,7 @@ public class RedemptionOrderConfirmationV03 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -527,6 +603,7 @@ public class RedemptionOrderConfirmationV03 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference3> getPreviousReference() {
 		return previousReference;
 	}
@@ -535,6 +612,7 @@ public class RedemptionOrderConfirmationV03 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
@@ -543,6 +621,7 @@ public class RedemptionOrderConfirmationV03 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "MltplExctnDtls", required = true)
 	public RedemptionMultipleExecution3 getMultipleExecutionDetails() {
 		return multipleExecutionDetails;
 	}
@@ -551,6 +630,7 @@ public class RedemptionOrderConfirmationV03 {
 		this.multipleExecutionDetails = multipleExecutionDetails;
 	}
 
+	@XmlElement(name = "RltdPtyDtls")
 	public List<Intermediary9> getRelatedPartyDetails() {
 		return relatedPartyDetails;
 	}
@@ -559,6 +639,7 @@ public class RedemptionOrderConfirmationV03 {
 		this.relatedPartyDetails = relatedPartyDetails;
 	}
 
+	@XmlElement(name = "CpyDtls")
 	public CopyInformation2 getCopyDetails() {
 		return copyDetails;
 	}
@@ -567,11 +648,18 @@ public class RedemptionOrderConfirmationV03 {
 		this.copyDetails = copyDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.006.03.03")
+	static public class Document {
+		@XmlElement(name = "RedOrdrConfV03", required = true)
+		public RedemptionOrderConfirmationV03 messageBody;
 	}
 }

@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Signed quantity of security formats.
@@ -67,6 +71,8 @@ import java.util.function.Supplier;
  * definition} = "Signed quantity of security formats."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SignedQuantityFormat3", propOrder = {"shortLongPosition", "quantityChoice"})
 public class SignedQuantityFormat3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -187,6 +193,7 @@ public class SignedQuantityFormat3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ShrtLngPos", required = true)
 	public ShortLong1Code getShortLongPosition() {
 		return shortLongPosition;
 	}
@@ -195,6 +202,7 @@ public class SignedQuantityFormat3 {
 		this.shortLongPosition = shortLongPosition;
 	}
 
+	@XmlElement(name = "QtyChc", required = true)
 	public Quantity7Choice getQuantityChoice() {
 		return quantityChoice;
 	}

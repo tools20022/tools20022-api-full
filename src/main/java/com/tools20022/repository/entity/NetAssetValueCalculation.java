@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.ValuationTimingCode;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,63 +38,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PriceValuation2
- * PriceValuation2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceValuation3
- * PriceValuation3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceValuation4
- * PriceValuation4}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmNetAssetValueCalculation
- * InvestmentFundClass.mmNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmNetAssetValueCalculation
- * SecuritiesPricing.mmNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#mmTaxLiabilityValueCalculation
- * Tax.mmTaxLiabilityValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#mmTaxRefundValueCalculation
- * Tax.mmTaxRefundValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmNetAssetValueCalculation
- * SecuritiesQuantity.mmNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmNetAssetValueCalculation
- * ValuationStatistics.mmNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PerformanceFactors#mmNetAssetValueCalculation
- * PerformanceFactors.mmNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedNetAssetValueCalculation
- * Interest.mmRelatedNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FundsCashFlow#mmNetAssetValueCalculation
- * FundsCashFlow.mmNetAssetValueCalculation}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PriceReport2#mmPriceValuationDetails
- * PriceReport2.mmPriceValuationDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PriceReport3#mmPriceValuationDetails
- * PriceReport3.mmPriceValuationDetails}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -163,6 +107,63 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceValuation2
+ * PriceValuation2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceValuation3
+ * PriceValuation3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceValuation4
+ * PriceValuation4}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmNetAssetValueCalculation
+ * InvestmentFundClass.mmNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmNetAssetValueCalculation
+ * SecuritiesPricing.mmNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmTaxLiabilityValueCalculation
+ * Tax.mmTaxLiabilityValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmTaxRefundValueCalculation
+ * Tax.mmTaxRefundValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmNetAssetValueCalculation
+ * SecuritiesQuantity.mmNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmNetAssetValueCalculation
+ * ValuationStatistics.mmNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PerformanceFactors#mmNetAssetValueCalculation
+ * PerformanceFactors.mmNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedNetAssetValueCalculation
+ * Interest.mmRelatedNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FundsCashFlow#mmNetAssetValueCalculation
+ * FundsCashFlow.mmNetAssetValueCalculation}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PriceReport2#mmPriceValuationDetails
+ * PriceReport2.mmPriceValuationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PriceReport3#mmPriceValuationDetails
+ * PriceReport3.mmPriceValuationDetails}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -192,11 +193,6 @@ public class NetAssetValueCalculation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.EventFrequencyCode
 	 * EventFrequencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
-	 * NetAssetValueCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -215,6 +211,11 @@ public class NetAssetValueCalculation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
+	 * NetAssetValueCalculation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -229,7 +230,7 @@ public class NetAssetValueCalculation {
 		{
 			derivation_lazy = () -> Arrays.asList(ValuationDealingProcessingCharacteristics.mmValuationFrequency, ValuationDealingProcessingCharacteristics2.mmValuationFrequency, PriceValuation3.mmValuationFrequency,
 					PriceValuation4.mmValuationFrequency);
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValuationFrequency";
@@ -237,6 +238,14 @@ public class NetAssetValueCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetAssetValueCalculation.class.getMethod("getValuationFrequency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime valuationDateTime;
@@ -249,11 +258,6 @@ public class NetAssetValueCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
-	 * NetAssetValueCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -310,6 +314,11 @@ public class NetAssetValueCalculation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
+	 * NetAssetValueCalculation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -328,7 +337,7 @@ public class NetAssetValueCalculation {
 					PriceValuation3.mmValuationDateTime, PriceValuation3.mmNAVDateTime, PriceValuation3.mmNextValuationDateTime, PriceValuation3.mmPreviousValuationDateTime, PriceValuation4.mmValuationDateTime,
 					PriceValuation4.mmNAVDateTime, PriceValuation4.mmNextValuationDateTime, PriceValuation4.mmPreviousValuationDateTime, Order16.mmNAVDate, Order14.mmNAVDate, RedemptionExecution10.mmNAVDate,
 					SubscriptionExecution7.mmNAVDate, Order17.mmNAVDate, Order18.mmNAVDate);
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValuationDateTime";
@@ -336,6 +345,14 @@ public class NetAssetValueCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetAssetValueCalculation.class.getMethod("getValuationDateTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount netAssetValue;
@@ -350,11 +367,6 @@ public class NetAssetValueCalculation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
-	 * NetAssetValueCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -458,6 +470,11 @@ public class NetAssetValueCalculation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
+	 * NetAssetValueCalculation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -479,7 +496,7 @@ public class NetAssetValueCalculation {
 					InvestmentFund1.mmTotalValue, FundCashForecast7.mmTotalNAV, FundCashForecast7.mmPreviousTotalNAV, Fund2.mmTotalNAV, Fund2.mmPreviousTotalNAV, EstimatedFundCashForecast6.mmEstimatedTotalNAV,
 					EstimatedFundCashForecast6.mmPreviousTotalNAV, Fund1.mmEstimatedTotalNAV, Fund1.mmPreviousTotalNAV, FundCashForecast6.mmTotalNAV, FundCashForecast6.mmPreviousTotalNAV, EstimatedFundCashForecast5.mmEstimatedTotalNAV,
 					EstimatedFundCashForecast5.mmPreviousTotalNAV, Fund3.mmEstimatedTotalNAV, Fund3.mmPreviousTotalNAV, Fund4.mmTotalNAV, Fund4.mmPreviousTotalNAV);
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAssetValue";
@@ -487,6 +504,14 @@ public class NetAssetValueCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetAssetValueCalculation.class.getMethod("getNetAssetValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentFundClass relatedFund;
@@ -507,11 +532,6 @@ public class NetAssetValueCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentFundClass
 	 * InvestmentFundClass}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
-	 * NetAssetValueCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -545,6 +565,11 @@ public class NetAssetValueCalculation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
+	 * NetAssetValueCalculation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -561,7 +586,7 @@ public class NetAssetValueCalculation {
 			derivation_lazy = () -> Arrays.asList(PriceValuation2.mmTotalUnitsNumber, PriceValuation3.mmTotalUnitsNumber, PriceValuation4.mmFinancialInstrumentDetails, FundCashForecast1.mmPreviousTotalUnitsNumber,
 					FundCashForecast3.mmPreviousTotalUnitsNumber, FundCashForecast2.mmPreviousTotalUnitsNumber, FundCashForecast4.mmPreviousTotalUnitsNumber, FundCashForecast7.mmPreviousTotalUnitsNumber,
 					FundCashForecast6.mmPreviousTotalUnitsNumber);
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedFund";
@@ -585,11 +610,6 @@ public class NetAssetValueCalculation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ValuationTimingCode
 	 * ValuationTimingCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
-	 * NetAssetValueCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -604,6 +624,11 @@ public class NetAssetValueCalculation {
 	 * PriceValuation4.mmValuationType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
+	 * NetAssetValueCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -620,7 +645,7 @@ public class NetAssetValueCalculation {
 	public static final MMBusinessAttribute mmValuationType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PriceValuation2.mmValuationCycle, PriceValuation3.mmValuationType, PriceValuation4.mmValuationType);
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValuationType";
@@ -628,6 +653,14 @@ public class NetAssetValueCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ValuationTimingCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetAssetValueCalculation.class.getMethod("getValuationType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator suspendedIndicator;
@@ -642,11 +675,6 @@ public class NetAssetValueCalculation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
-	 * NetAssetValueCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -661,6 +689,11 @@ public class NetAssetValueCalculation {
 	 * PriceValuation4.mmSuspendedIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
+	 * NetAssetValueCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -677,7 +710,7 @@ public class NetAssetValueCalculation {
 	public static final MMBusinessAttribute mmSuspendedIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PriceValuation2.mmSuspendedIndicator, PriceValuation3.mmSuspendedIndicator, PriceValuation4.mmSuspendedIndicator);
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SuspendedIndicator";
@@ -685,6 +718,14 @@ public class NetAssetValueCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetAssetValueCalculation.class.getMethod("getSuspendedIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator forExecutionIndicator;
@@ -699,11 +740,6 @@ public class NetAssetValueCalculation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
-	 * NetAssetValueCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -715,6 +751,11 @@ public class NetAssetValueCalculation {
 	 * UnitPrice15.mmForExecutionIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
+	 * NetAssetValueCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -731,7 +772,7 @@ public class NetAssetValueCalculation {
 	public static final MMBusinessAttribute mmForExecutionIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnitPrice6.mmForExecutionIndicator, UnitPrice15.mmForExecutionIndicator);
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForExecutionIndicator";
@@ -739,6 +780,14 @@ public class NetAssetValueCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetAssetValueCalculation.class.getMethod("getForExecutionIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Tax taxLiability;
@@ -758,11 +807,6 @@ public class NetAssetValueCalculation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
-	 * NetAssetValueCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -774,6 +818,11 @@ public class NetAssetValueCalculation {
 	 * UnitPrice15.mmTaxLiabilityDetails}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
+	 * NetAssetValueCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -788,7 +837,7 @@ public class NetAssetValueCalculation {
 	public static final MMBusinessAssociationEnd mmTaxLiability = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnitPrice6.mmTaxLiabilityDetails, UnitPrice15.mmTaxLiabilityDetails);
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxLiability";
@@ -817,11 +866,6 @@ public class NetAssetValueCalculation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
-	 * NetAssetValueCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -833,6 +877,11 @@ public class NetAssetValueCalculation {
 	 * UnitPrice15.mmTaxRefundDetails}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
+	 * NetAssetValueCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -847,7 +896,7 @@ public class NetAssetValueCalculation {
 	public static final MMBusinessAssociationEnd mmTaxRefund = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnitPrice6.mmTaxRefundDetails, UnitPrice15.mmTaxRefundDetails);
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxRefund";
@@ -870,11 +919,6 @@ public class NetAssetValueCalculation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
-	 * NetAssetValueCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -886,6 +930,11 @@ public class NetAssetValueCalculation {
 	 * PriceValuation4.mmOfficialValuationIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
+	 * NetAssetValueCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -901,7 +950,7 @@ public class NetAssetValueCalculation {
 	public static final MMBusinessAttribute mmOfficialValuationIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PriceValuation3.mmOfficialValuationIndicator, PriceValuation4.mmOfficialValuationIndicator);
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfficialValuationIndicator";
@@ -909,6 +958,14 @@ public class NetAssetValueCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetAssetValueCalculation.class.getMethod("getOfficialValuationIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator estimatedPriceIndicator;
@@ -922,11 +979,6 @@ public class NetAssetValueCalculation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
-	 * NetAssetValueCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -935,6 +987,11 @@ public class NetAssetValueCalculation {
 	 * UnitPrice15.mmEstimatedPriceIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
+	 * NetAssetValueCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -949,7 +1006,7 @@ public class NetAssetValueCalculation {
 	public static final MMBusinessAttribute mmEstimatedPriceIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnitPrice15.mmEstimatedPriceIndicator);
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EstimatedPriceIndicator";
@@ -957,6 +1014,14 @@ public class NetAssetValueCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetAssetValueCalculation.class.getMethod("getEstimatedPriceIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.ValuationStatistics> valuationStatistics;
@@ -977,11 +1042,6 @@ public class NetAssetValueCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.ValuationStatistics
 	 * ValuationStatistics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
-	 * NetAssetValueCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -993,6 +1053,11 @@ public class NetAssetValueCalculation {
 	 * PriceValuation4.mmValuationStatistics}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
+	 * NetAssetValueCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1009,7 +1074,7 @@ public class NetAssetValueCalculation {
 	public static final MMBusinessAssociationEnd mmValuationStatistics = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PriceValuation3.mmValuationStatistics, PriceValuation4.mmValuationStatistics);
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValuationStatistics";
@@ -1038,11 +1103,6 @@ public class NetAssetValueCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PerformanceFactors
 	 * PerformanceFactors}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
-	 * NetAssetValueCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1054,6 +1114,11 @@ public class NetAssetValueCalculation {
 	 * PriceValuation4.mmPerformanceDetails}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
+	 * NetAssetValueCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1069,7 +1134,7 @@ public class NetAssetValueCalculation {
 	public static final MMBusinessAssociationEnd mmInvestmentFundPerformanceFactors = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PriceValuation3.mmPerformanceDetails, PriceValuation4.mmPerformanceDetails);
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundPerformanceFactors";
@@ -1099,11 +1164,6 @@ public class NetAssetValueCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
-	 * NetAssetValueCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1112,6 +1172,11 @@ public class NetAssetValueCalculation {
 	 * PriceValuation4.mmPriceDetails}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
+	 * NetAssetValueCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1126,7 +1191,7 @@ public class NetAssetValueCalculation {
 	public static final MMBusinessAssociationEnd mmPrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PriceValuation4.mmPriceDetails);
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Price";
@@ -1156,11 +1221,6 @@ public class NetAssetValueCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
-	 * NetAssetValueCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1169,6 +1229,11 @@ public class NetAssetValueCalculation {
 	 * PriceValuation4.mmTotalUnitsNumber}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation
+	 * NetAssetValueCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1183,7 +1248,7 @@ public class NetAssetValueCalculation {
 	public static final MMBusinessAssociationEnd mmSecuritiesQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PriceValuation4.mmTotalUnitsNumber);
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesQuantity";
@@ -1232,7 +1297,7 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
@@ -1280,7 +1345,7 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmFundsCashFlow = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundsCashFlow";
@@ -1321,7 +1386,7 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAttribute mmDeclarationChannel = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeclarationChannel";
@@ -1329,6 +1394,14 @@ public class NetAssetValueCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetAssetValueCalculation.class.getMethod("getDeclarationChannel", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime declarationDate;
@@ -1359,7 +1432,7 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAttribute mmDeclarationDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeclarationDate";
@@ -1367,6 +1440,14 @@ public class NetAssetValueCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetAssetValueCalculation.class.getMethod("getDeclarationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODate firstValuationDate;
@@ -1398,7 +1479,7 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAttribute mmFirstValuationDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstValuationDate";
@@ -1406,6 +1487,14 @@ public class NetAssetValueCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetAssetValueCalculation.class.getMethod("getFirstValuationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator historicPricingIndicator;
@@ -1437,7 +1526,7 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAttribute mmHistoricPricingIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HistoricPricingIndicator";
@@ -1445,6 +1534,14 @@ public class NetAssetValueCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetAssetValueCalculation.class.getMethod("getHistoricPricingIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1460,13 +1557,23 @@ public class NetAssetValueCalculation {
 						com.tools20022.repository.entity.ValuationStatistics.mmNetAssetValueCalculation, com.tools20022.repository.entity.PerformanceFactors.mmNetAssetValueCalculation,
 						com.tools20022.repository.entity.Interest.mmRelatedNetAssetValueCalculation, com.tools20022.repository.entity.FundsCashFlow.mmNetAssetValueCalculation);
 				derivationElement_lazy = () -> Arrays.asList(PriceReport2.mmPriceValuationDetails, PriceReport3.mmPriceValuationDetails);
-				element_lazy = () -> Arrays.asList(NetAssetValueCalculation.mmValuationFrequency, NetAssetValueCalculation.mmValuationDateTime, NetAssetValueCalculation.mmNetAssetValue, NetAssetValueCalculation.mmRelatedFund,
-						NetAssetValueCalculation.mmValuationType, NetAssetValueCalculation.mmSuspendedIndicator, NetAssetValueCalculation.mmForExecutionIndicator, NetAssetValueCalculation.mmTaxLiability,
-						NetAssetValueCalculation.mmTaxRefund, NetAssetValueCalculation.mmOfficialValuationIndicator, NetAssetValueCalculation.mmEstimatedPriceIndicator, NetAssetValueCalculation.mmValuationStatistics,
-						NetAssetValueCalculation.mmInvestmentFundPerformanceFactors, NetAssetValueCalculation.mmPrice, NetAssetValueCalculation.mmSecuritiesQuantity, NetAssetValueCalculation.mmInterest,
-						NetAssetValueCalculation.mmFundsCashFlow, NetAssetValueCalculation.mmDeclarationChannel, NetAssetValueCalculation.mmDeclarationDate, NetAssetValueCalculation.mmFirstValuationDate,
-						NetAssetValueCalculation.mmHistoricPricingIndicator);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationFrequency, com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationDateTime,
+						com.tools20022.repository.entity.NetAssetValueCalculation.mmNetAssetValue, com.tools20022.repository.entity.NetAssetValueCalculation.mmRelatedFund,
+						com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationType, com.tools20022.repository.entity.NetAssetValueCalculation.mmSuspendedIndicator,
+						com.tools20022.repository.entity.NetAssetValueCalculation.mmForExecutionIndicator, com.tools20022.repository.entity.NetAssetValueCalculation.mmTaxLiability,
+						com.tools20022.repository.entity.NetAssetValueCalculation.mmTaxRefund, com.tools20022.repository.entity.NetAssetValueCalculation.mmOfficialValuationIndicator,
+						com.tools20022.repository.entity.NetAssetValueCalculation.mmEstimatedPriceIndicator, com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationStatistics,
+						com.tools20022.repository.entity.NetAssetValueCalculation.mmInvestmentFundPerformanceFactors, com.tools20022.repository.entity.NetAssetValueCalculation.mmPrice,
+						com.tools20022.repository.entity.NetAssetValueCalculation.mmSecuritiesQuantity, com.tools20022.repository.entity.NetAssetValueCalculation.mmInterest,
+						com.tools20022.repository.entity.NetAssetValueCalculation.mmFundsCashFlow, com.tools20022.repository.entity.NetAssetValueCalculation.mmDeclarationChannel,
+						com.tools20022.repository.entity.NetAssetValueCalculation.mmDeclarationDate, com.tools20022.repository.entity.NetAssetValueCalculation.mmFirstValuationDate,
+						com.tools20022.repository.entity.NetAssetValueCalculation.mmHistoricPricingIndicator);
 				derivationComponent_lazy = () -> Arrays.asList(PriceValuation2.mmObject(), PriceValuation3.mmObject(), PriceValuation4.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return NetAssetValueCalculation.class;
 			}
 		});
 		return mmObject_lazy.get();

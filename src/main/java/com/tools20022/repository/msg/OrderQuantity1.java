@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Intention to transfer an ownership of a financial instrument.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderQuantity1", propOrder = {"quantity", "quantityType", "price"})
 public class OrderQuantity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -222,6 +228,7 @@ public class OrderQuantity1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public QuantityOrAmount1Choice getQuantity() {
 		return quantity;
 	}
@@ -230,6 +237,7 @@ public class OrderQuantity1 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "QtyTp")
 	public OrderQuantityType3Code getQuantityType() {
 		return quantityType;
 	}
@@ -238,6 +246,7 @@ public class OrderQuantity1 {
 		this.quantityType = quantityType;
 	}
 
+	@XmlElement(name = "Pric")
 	public Price1 getPrice() {
 		return price;
 	}

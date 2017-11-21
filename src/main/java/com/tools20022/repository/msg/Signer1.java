@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Entity who has signed the data and its digital signature.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Signer1", propOrder = {"version", "signerIdentification", "digestAlgorithm", "signatureAlgorithm", "signature"})
 public class Signer1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -292,6 +298,7 @@ public class Signer1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Number getVersion() {
 		return version;
 	}
@@ -300,6 +307,7 @@ public class Signer1 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "SgnrId", required = true)
 	public CertificateIdentifier1 getSignerIdentification() {
 		return signerIdentification;
 	}
@@ -308,6 +316,7 @@ public class Signer1 {
 		this.signerIdentification = signerIdentification;
 	}
 
+	@XmlElement(name = "DgstAlgo", required = true)
 	public AlgorithmIdentification1 getDigestAlgorithm() {
 		return digestAlgorithm;
 	}
@@ -316,6 +325,7 @@ public class Signer1 {
 		this.digestAlgorithm = digestAlgorithm;
 	}
 
+	@XmlElement(name = "SgntrAlgo", required = true)
 	public AlgorithmIdentification1 getSignatureAlgorithm() {
 		return signatureAlgorithm;
 	}
@@ -324,6 +334,7 @@ public class Signer1 {
 		this.signatureAlgorithm = signatureAlgorithm;
 	}
 
+	@XmlElement(name = "Sgntr", required = true)
 	public Max500Binary getSignature() {
 		return signature;
 	}

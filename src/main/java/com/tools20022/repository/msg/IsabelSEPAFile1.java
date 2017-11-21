@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the characteristics for a SEPA formatted payment initiation file.
@@ -65,6 +69,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelSEPAFile1", propOrder = {"SEPAIndicator", "categoryPurpose", "marketPractices"})
 public class IsabelSEPAFile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -212,6 +218,7 @@ public class IsabelSEPAFile1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SEPAInd", required = true)
 	public TrueFalseIndicator getSEPAIndicator() {
 		return sEPAIndicator;
 	}
@@ -220,6 +227,7 @@ public class IsabelSEPAFile1 {
 		this.sEPAIndicator = sEPAIndicator;
 	}
 
+	@XmlElement(name = "CtgyPurp", required = true)
 	public Max6Text getCategoryPurpose() {
 		return categoryPurpose;
 	}
@@ -228,6 +236,7 @@ public class IsabelSEPAFile1 {
 		this.categoryPurpose = categoryPurpose;
 	}
 
+	@XmlElement(name = "MktPrctcs")
 	public List<Max35Text> getMarketPractices() {
 		return marketPractices;
 	}

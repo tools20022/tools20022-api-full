@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between ISIN and an alternative format for the identification of a
@@ -80,6 +84,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityIdentification7", propOrder = {"ISIN", "otherIdentification", "description"})
 public class SecurityIdentification7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -301,6 +307,7 @@ public class SecurityIdentification7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ISIN", required = true)
 	public ISINIdentifier getISIN() {
 		return iSIN;
 	}
@@ -309,6 +316,7 @@ public class SecurityIdentification7 {
 		this.iSIN = iSIN;
 	}
 
+	@XmlElement(name = "OthrId", required = true)
 	public AlternateSecurityIdentification3 getOtherIdentification() {
 		return otherIdentification;
 	}
@@ -317,6 +325,7 @@ public class SecurityIdentification7 {
 		this.otherIdentification = otherIdentification;
 	}
 
+	@XmlElement(name = "Desc")
 	public Max140Text getDescription() {
 		return description;
 	}

@@ -64,6 +64,11 @@ public class Assigner extends InvestigationPartyRole {
 				definition = "Party who assigns the case.";
 				superType_lazy = () -> InvestigationPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Assigner.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

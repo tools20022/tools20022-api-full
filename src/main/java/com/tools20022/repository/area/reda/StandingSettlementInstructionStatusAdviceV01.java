@@ -30,9 +30,11 @@ import com.tools20022.repository.msg.AccountIdentification26;
 import com.tools20022.repository.msg.EffectiveDate1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.SSIforSecuritiesPaymentsandForeignExchange;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -54,9 +56,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code reda.058.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
@@ -101,6 +100,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code reda.058.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -112,6 +114,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingSettlementInstructionStatusAdviceV01", propOrder = {"effectiveDateDetails", "accountIdentification", "marketIdentification", "settlementDetails", "relatedMessageReference", "processingStatus", "supplementaryData"})
 public class StandingSettlementInstructionStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -147,6 +151,14 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> EffectiveDate1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingSettlementInstructionStatusAdviceV01.class.getMethod("getEffectiveDateDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<AccountIdentification26> accountIdentification;
@@ -187,6 +199,14 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification26.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingSettlementInstructionStatusAdviceV01.class.getMethod("getAccountIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MarketIdentificationOrCashPurpose1Choice marketIdentification;
 	/**
@@ -222,6 +242,14 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MarketIdentificationOrCashPurpose1Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingSettlementInstructionStatusAdviceV01.class.getMethod("getMarketIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyOrCurrency1Choice settlementDetails;
@@ -261,6 +289,14 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyOrCurrency1Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingSettlementInstructionStatusAdviceV01.class.getMethod("getSettlementDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max35Text relatedMessageReference;
 	/**
@@ -295,6 +331,14 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingSettlementInstructionStatusAdviceV01.class.getMethod("getRelatedMessageReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ProcessingStatus43Choice processingStatus;
@@ -333,6 +377,14 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> ProcessingStatus43Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingSettlementInstructionStatusAdviceV01.class.getMethod("getProcessingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -370,6 +422,14 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingSettlementInstructionStatusAdviceV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -382,9 +442,10 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "StgSttlmInstrStsAdvc";
 				businessArea_lazy = () -> ReferenceDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(StandingSettlementInstructionStatusAdviceV01.mmEffectiveDateDetails, StandingSettlementInstructionStatusAdviceV01.mmAccountIdentification,
-						StandingSettlementInstructionStatusAdviceV01.mmMarketIdentification, StandingSettlementInstructionStatusAdviceV01.mmSettlementDetails, StandingSettlementInstructionStatusAdviceV01.mmRelatedMessageReference,
-						StandingSettlementInstructionStatusAdviceV01.mmProcessingStatus, StandingSettlementInstructionStatusAdviceV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmEffectiveDateDetails,
+						com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmAccountIdentification, com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmMarketIdentification,
+						com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmSettlementDetails, com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmRelatedMessageReference,
+						com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmProcessingStatus, com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "reda";
@@ -394,10 +455,16 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StandingSettlementInstructionStatusAdviceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FctvDtDtls")
 	public EffectiveDate1 getEffectiveDateDetails() {
 		return effectiveDateDetails;
 	}
@@ -406,6 +473,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 		this.effectiveDateDetails = effectiveDateDetails;
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public List<AccountIdentification26> getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -414,6 +482,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "MktId", required = true)
 	public MarketIdentificationOrCashPurpose1Choice getMarketIdentification() {
 		return marketIdentification;
 	}
@@ -422,6 +491,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 		this.marketIdentification = marketIdentification;
 	}
 
+	@XmlElement(name = "SttlmDtls", required = true)
 	public PartyOrCurrency1Choice getSettlementDetails() {
 		return settlementDetails;
 	}
@@ -430,6 +500,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 		this.settlementDetails = settlementDetails;
 	}
 
+	@XmlElement(name = "RltdMsgRef", required = true)
 	public Max35Text getRelatedMessageReference() {
 		return relatedMessageReference;
 	}
@@ -438,6 +509,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 		this.relatedMessageReference = relatedMessageReference;
 	}
 
+	@XmlElement(name = "PrcgSts", required = true)
 	public ProcessingStatus43Choice getProcessingStatus() {
 		return processingStatus;
 	}
@@ -446,11 +518,18 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:reda.058.01.01")
+	static public class Document {
+		@XmlElement(name = "StgSttlmInstrStsAdvc", required = true)
+		public StandingSettlementInstructionStatusAdviceV01 messageBody;
 	}
 }

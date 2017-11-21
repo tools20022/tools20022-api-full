@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Meeting;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the general meeting, specifying the participation
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalRights1", propOrder = {"additionalRight", "additionalRightInformationURLAddress", "additionalRightDeadline", "additionalRightMarketDeadline", "additionalRightThreshold"})
 public class AdditionalRights1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -409,6 +415,7 @@ public class AdditionalRights1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlRght", required = true)
 	public AdditionalRightCode1Choice getAdditionalRight() {
 		return additionalRight;
 	}
@@ -417,6 +424,7 @@ public class AdditionalRights1 {
 		this.additionalRight = additionalRight;
 	}
 
+	@XmlElement(name = "AddtlRghtInfURLAdr")
 	public Max256Text getAdditionalRightInformationURLAddress() {
 		return additionalRightInformationURLAddress;
 	}
@@ -425,6 +433,7 @@ public class AdditionalRights1 {
 		this.additionalRightInformationURLAddress = additionalRightInformationURLAddress;
 	}
 
+	@XmlElement(name = "AddtlRghtDdln")
 	public DateFormat2Choice getAdditionalRightDeadline() {
 		return additionalRightDeadline;
 	}
@@ -433,6 +442,7 @@ public class AdditionalRights1 {
 		this.additionalRightDeadline = additionalRightDeadline;
 	}
 
+	@XmlElement(name = "AddtlRghtMktDdln")
 	public DateFormat2Choice getAdditionalRightMarketDeadline() {
 		return additionalRightMarketDeadline;
 	}
@@ -441,6 +451,7 @@ public class AdditionalRights1 {
 		this.additionalRightMarketDeadline = additionalRightMarketDeadline;
 	}
 
+	@XmlElement(name = "AddtlRghtThrshld")
 	public AdditionalRightThreshold1Choice getAdditionalRightThreshold() {
 		return additionalRightThreshold;
 	}

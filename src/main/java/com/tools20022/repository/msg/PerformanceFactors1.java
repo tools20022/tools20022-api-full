@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.PerformanceFactors;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Performance factors of the investment fund / fund class.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Performance factors of the investment fund / fund class."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PerformanceFactors1", propOrder = {"corporateActionFactor", "cumulativeCorporateActionFactor", "accumulationPeriod", "normalPerformance"})
 public class PerformanceFactors1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -288,6 +294,7 @@ public class PerformanceFactors1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CorpActnFctr")
 	public DecimalNumber getCorporateActionFactor() {
 		return corporateActionFactor;
 	}
@@ -296,6 +303,7 @@ public class PerformanceFactors1 {
 		this.corporateActionFactor = corporateActionFactor;
 	}
 
+	@XmlElement(name = "CmltvCorpActnFctr")
 	public DecimalNumber getCumulativeCorporateActionFactor() {
 		return cumulativeCorporateActionFactor;
 	}
@@ -304,6 +312,7 @@ public class PerformanceFactors1 {
 		this.cumulativeCorporateActionFactor = cumulativeCorporateActionFactor;
 	}
 
+	@XmlElement(name = "AcmltnPrd")
 	public DatePeriodDetails getAccumulationPeriod() {
 		return accumulationPeriod;
 	}
@@ -312,6 +321,7 @@ public class PerformanceFactors1 {
 		this.accumulationPeriod = accumulationPeriod;
 	}
 
+	@XmlElement(name = "NrmlPrfrmnc")
 	public DecimalNumber getNormalPerformance() {
 		return normalPerformance;
 	}

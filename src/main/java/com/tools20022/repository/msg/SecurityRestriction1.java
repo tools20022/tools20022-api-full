@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Restrictions applicable to the security.
@@ -70,6 +74,8 @@ import java.util.List;
  * definition} = "Restrictions applicable to the security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityRestriction1", propOrder = {"effectivePeriod", "restrictionType", "legalRestrictionType", "investorRestrictionType", "investorType"})
 public class SecurityRestriction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -303,6 +309,7 @@ public class SecurityRestriction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FctvPrd")
 	public DateTimePeriodDetails1 getEffectivePeriod() {
 		return effectivePeriod;
 	}
@@ -311,6 +318,7 @@ public class SecurityRestriction1 {
 		this.effectivePeriod = effectivePeriod;
 	}
 
+	@XmlElement(name = "RstrctnTp")
 	public SecurityRestrictionType1Choice getRestrictionType() {
 		return restrictionType;
 	}
@@ -319,6 +327,7 @@ public class SecurityRestriction1 {
 		this.restrictionType = restrictionType;
 	}
 
+	@XmlElement(name = "LglRstrctnTp")
 	public LegalRestrictions2Choice getLegalRestrictionType() {
 		return legalRestrictionType;
 	}
@@ -327,6 +336,7 @@ public class SecurityRestriction1 {
 		this.legalRestrictionType = legalRestrictionType;
 	}
 
+	@XmlElement(name = "InvstrRstrctnTp")
 	public List<InvestorRestrictionType2Choice> getInvestorRestrictionType() {
 		return investorRestrictionType;
 	}
@@ -335,6 +345,7 @@ public class SecurityRestriction1 {
 		this.investorRestrictionType = investorRestrictionType;
 	}
 
+	@XmlElement(name = "InvstrTp")
 	public List<InvestorType2Choice> getInvestorType() {
 		return investorType;
 	}

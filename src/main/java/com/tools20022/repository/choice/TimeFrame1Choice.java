@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.TimeFrame;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between TimeFrame elements that define a period as number of days
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TimeFrame1Choice", propOrder = {"tradePlus", "tradeMinus", "renunciationPlus", "renunciationMinus"})
 public class TimeFrame1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -292,6 +298,7 @@ public class TimeFrame1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TPlus", required = true)
 	public Number getTradePlus() {
 		return tradePlus;
 	}
@@ -300,6 +307,7 @@ public class TimeFrame1Choice {
 		this.tradePlus = tradePlus;
 	}
 
+	@XmlElement(name = "TMns", required = true)
 	public Number getTradeMinus() {
 		return tradeMinus;
 	}
@@ -308,6 +316,7 @@ public class TimeFrame1Choice {
 		this.tradeMinus = tradeMinus;
 	}
 
+	@XmlElement(name = "RPlus", required = true)
 	public Number getRenunciationPlus() {
 		return renunciationPlus;
 	}
@@ -316,6 +325,7 @@ public class TimeFrame1Choice {
 		this.renunciationPlus = renunciationPlus;
 	}
 
+	@XmlElement(name = "RMns", required = true)
 	public Number getRenunciationMinus() {
 		return renunciationMinus;
 	}

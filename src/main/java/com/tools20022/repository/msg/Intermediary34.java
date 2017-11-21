@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party that provides services to investors relating to financial products.
@@ -90,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Intermediary26}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Intermediary34", propOrder = {"identification", "account", "role", "contactPerson"})
 public class Intermediary34 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -347,6 +353,7 @@ public class Intermediary34 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification70Choice getIdentification() {
 		return identification;
 	}
@@ -355,6 +362,7 @@ public class Intermediary34 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Acct")
 	public Account20 getAccount() {
 		return account;
 	}
@@ -363,6 +371,7 @@ public class Intermediary34 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "Role")
 	public Role4Choice getRole() {
 		return role;
 	}
@@ -371,6 +380,7 @@ public class Intermediary34 {
 		this.role = role;
 	}
 
+	@XmlElement(name = "CtctPrsn")
 	public ContactIdentification2 getContactPerson() {
 		return contactPerson;
 	}

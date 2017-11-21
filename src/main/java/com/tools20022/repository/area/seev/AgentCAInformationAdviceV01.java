@@ -24,8 +24,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -43,9 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.023.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -87,6 +86,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.023.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -98,6 +100,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgentCAInformationAdviceV01", propOrder = {"identification", "agentCAElectionAdviceIdentification", "corporateActionGeneralInformation", "accountDetails", "corporateActionAdditionalInformation", "contactDetails"})
 public class AgentCAInformationAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -138,6 +142,14 @@ public class AgentCAInformationAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAInformationAdviceV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification8 agentCAElectionAdviceIdentification;
 	/**
@@ -174,6 +186,14 @@ public class AgentCAInformationAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAInformationAdviceV01.class.getMethod("getAgentCAElectionAdviceIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
@@ -208,6 +228,14 @@ public class AgentCAInformationAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAInformationAdviceV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesAccount7 accountDetails;
@@ -247,6 +275,14 @@ public class AgentCAInformationAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount7.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAInformationAdviceV01.class.getMethod("getAccountDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionAdditionalInformation1 corporateActionAdditionalInformation;
 	/**
@@ -285,6 +321,14 @@ public class AgentCAInformationAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAInformationAdviceV01.class.getMethod("getCorporateActionAdditionalInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContactPerson1 contactDetails;
 	/**
@@ -320,6 +364,14 @@ public class AgentCAInformationAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContactPerson1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAInformationAdviceV01.class.getMethod("getContactDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -332,9 +384,10 @@ public class AgentCAInformationAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCAInfAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAInformationAdviceV01.mmIdentification, AgentCAInformationAdviceV01.mmAgentCAElectionAdviceIdentification,
-						AgentCAInformationAdviceV01.mmCorporateActionGeneralInformation, AgentCAInformationAdviceV01.mmAccountDetails, AgentCAInformationAdviceV01.mmCorporateActionAdditionalInformation,
-						AgentCAInformationAdviceV01.mmContactDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmAgentCAElectionAdviceIdentification, com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmAccountDetails, com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmCorporateActionAdditionalInformation,
+						com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmContactDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -344,10 +397,16 @@ public class AgentCAInformationAdviceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AgentCAInformationAdviceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
@@ -356,6 +415,7 @@ public class AgentCAInformationAdviceV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AgtCAElctnAdvcId")
 	public DocumentIdentification8 getAgentCAElectionAdviceIdentification() {
 		return agentCAElectionAdviceIdentification;
 	}
@@ -364,6 +424,7 @@ public class AgentCAInformationAdviceV01 {
 		this.agentCAElectionAdviceIdentification = agentCAElectionAdviceIdentification;
 	}
 
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
@@ -372,6 +433,7 @@ public class AgentCAInformationAdviceV01 {
 		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public SecuritiesAccount7 getAccountDetails() {
 		return accountDetails;
 	}
@@ -380,6 +442,7 @@ public class AgentCAInformationAdviceV01 {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "CorpActnAddtlInf", required = true)
 	public CorporateActionAdditionalInformation1 getCorporateActionAdditionalInformation() {
 		return corporateActionAdditionalInformation;
 	}
@@ -388,11 +451,18 @@ public class AgentCAInformationAdviceV01 {
 		this.corporateActionAdditionalInformation = corporateActionAdditionalInformation;
 	}
 
+	@XmlElement(name = "CtctDtls")
 	public ContactPerson1 getContactDetails() {
 		return contactDetails;
 	}
 
 	public void setContactDetails(ContactPerson1 contactDetails) {
 		this.contactDetails = contactDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.023.01.01")
+	static public class Document {
+		@XmlElement(name = "AgtCAInfAdvc", required = true)
+		public AgentCAInformationAdviceV01 messageBody;
 	}
 }

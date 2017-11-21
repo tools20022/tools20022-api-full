@@ -24,8 +24,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TreasuryArchive;
 import com.tools20022.repository.msg.MessageReference;
 import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -38,9 +40,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code trea.013.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
  * TreasuryArchive}</li>
@@ -66,6 +65,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code trea.013.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -77,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "WithdrawalNotificationV01", propOrder = "matchingSystemUniqueReference")
 public class WithdrawalNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -117,6 +121,14 @@ public class WithdrawalNotificationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageReference.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return WithdrawalNotificationV01.class.getMethod("getMatchingSystemUniqueReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -129,7 +141,7 @@ public class WithdrawalNotificationV01 {
 				rootElement = "Document";
 				xmlTag = "WdrwlNtfctnV01";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(WithdrawalNotificationV01.mmMatchingSystemUniqueReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.WithdrawalNotificationV01.mmMatchingSystemUniqueReference);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "trea";
@@ -139,15 +151,27 @@ public class WithdrawalNotificationV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return WithdrawalNotificationV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MtchgSysUnqRef", required = true)
 	public MessageReference getMatchingSystemUniqueReference() {
 		return matchingSystemUniqueReference;
 	}
 
 	public void setMatchingSystemUniqueReference(MessageReference matchingSystemUniqueReference) {
 		this.matchingSystemUniqueReference = matchingSystemUniqueReference;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:trea.013.01.01")
+	static public class Document {
+		@XmlElement(name = "WdrwlNtfctnV01", required = true)
+		public WithdrawalNotificationV01 messageBody;
 	}
 }

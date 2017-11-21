@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the corporate action security option.
@@ -81,6 +85,8 @@ import java.util.function.Supplier;
  * "Provides information about the corporate action security option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesOption11", propOrder = {"securityIdentification", "creditDebitIndicator", "postingQuantity", "postingDate", "originalPostingDate"})
 public class SecuritiesOption11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -352,6 +358,7 @@ public class SecuritiesOption11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification12 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -360,6 +367,7 @@ public class SecuritiesOption11 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -368,6 +376,7 @@ public class SecuritiesOption11 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "PstngQty", required = true)
 	public Quantity10Choice getPostingQuantity() {
 		return postingQuantity;
 	}
@@ -376,6 +385,7 @@ public class SecuritiesOption11 {
 		this.postingQuantity = postingQuantity;
 	}
 
+	@XmlElement(name = "PstngDt", required = true)
 	public DateAndDateTimeChoice getPostingDate() {
 		return postingDate;
 	}
@@ -384,6 +394,7 @@ public class SecuritiesOption11 {
 		this.postingDate = postingDate;
 	}
 
+	@XmlElement(name = "OrgnlPstngDt")
 	public DateAndDateTimeChoice getOriginalPostingDate() {
 		return originalPostingDate;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.msg.InRepairStatusReason4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for the reason for an in repair status.
@@ -69,6 +73,8 @@ import java.util.List;
  * InRepairStatus2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InRepairStatusReason4Choice", propOrder = {"noSpecifiedReason", "reasonDetails"})
 public class InRepairStatusReason4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -195,6 +201,7 @@ public class InRepairStatusReason4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
@@ -203,6 +210,7 @@ public class InRepairStatusReason4Choice {
 		this.noSpecifiedReason = noSpecifiedReason;
 	}
 
+	@XmlElement(name = "RsnDtls", required = true)
 	public List<InRepairStatusReason4> getReasonDetails() {
 		return reasonDetails;
 	}

@@ -24,9 +24,11 @@ import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -68,9 +70,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.057.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
@@ -116,6 +115,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.057.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -135,6 +137,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderConfirmationStatusReportV01", propOrder = {"messageIdentification", "otherReference", "relatedReference", "individualOrderConfirmationDetailsReport", "extension"})
 public class OrderConfirmationStatusReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -144,6 +148,10 @@ public class OrderConfirmationStatusReportV01 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01
+	 * OrderConfirmationStatusReportV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -156,10 +164,6 @@ public class OrderConfirmationStatusReportV01 {
 	 * OrderConfirmationStatusReportV01.mmRelatedReference}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01
-	 * OrderConfirmationStatusReportV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -178,8 +182,9 @@ public class OrderConfirmationStatusReportV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
 			definition = "Occurrences of either RelatedReference or OtherReference may be present, but not occurrences of both.";
-			messageDefinition_lazy = () -> OrderConfirmationStatusReportV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(OrderConfirmationStatusReportV01.mmOtherReference, OrderConfirmationStatusReportV01.mmRelatedReference);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmOtherReference,
+					com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmRelatedReference);
 		}
 	};
 	protected MessageIdentification1 messageIdentification;
@@ -228,6 +233,14 @@ public class OrderConfirmationStatusReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderConfirmationStatusReportV01.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference3> otherReference;
 	/**
@@ -266,6 +279,14 @@ public class OrderConfirmationStatusReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderConfirmationStatusReportV01.class.getMethod("getOtherReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference3> relatedReference;
 	/**
@@ -301,6 +322,14 @@ public class OrderConfirmationStatusReportV01 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderConfirmationStatusReportV01.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<IndividualOrderConfirmationStatusAndReason1> individualOrderConfirmationDetailsReport;
@@ -347,6 +376,14 @@ public class OrderConfirmationStatusReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> IndividualOrderConfirmationStatusAndReason1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderConfirmationStatusReportV01.class.getMethod("getIndividualOrderConfirmationDetailsReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension1> extension;
 	/**
@@ -392,6 +429,14 @@ public class OrderConfirmationStatusReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderConfirmationStatusReportV01.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -402,12 +447,13 @@ public class OrderConfirmationStatusReportV01 {
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the OrderConfirmationStatusReport message to the executing party, for example, a transfer agent, to report the status of an order confirmation or an order confirmation amendment.\r\nUsage\r\nThe OrderConfirmationStatusReport message is used to report on the status of one or more individual:\r\n- subscription confirmations,\r\n- subscription confirmation amendments,\r\n- redemption confirmations,\r\n- redemption confirmation amendments,\r\n- switch order confirmations,\r\n- switch order confirmation amendments.\r\nOne of the following statuses can be reported:\r\n- confirmation rejected, or,\r\n- amendment rejected, or,\r\n- sent to next party, or,\r\n- communication problem with next party, or,\r\n- confirmation accepted, or,\r\n- confirmation received.\r\nIt is likely that the OrderConfirmationStatusReport is only sent by the order instructing party to the order executing party to reject an order confirmation or to reject an order confirmation amendment, although if an intermediary party is used, the statuses sent to next party and communication problem with next party are also likely be used. The statuses confirmation accepted and confirmation received would only be used in the event the order executing party sends a RequestForOrderConfirmationStatusReport message and one of the other statuses does not apply.\r\nIf the status being reported is either confirmation rejected or amendment rejected, then a reason for the rejection must be given.\r\nThe individual order confirmation or confirmation amendment for which the status is given is identified with its order reference. The message identification of the message in which the individual order confirmation or confirmation amendment was conveyed may also be quoted in RelatedReference, but this is not recommended.";
 				nextVersions_lazy = () -> Arrays.asList(OrderConfirmationStatusReportV02.mmObject());
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject());
-				xors_lazy = () -> Arrays.asList(OrderConfirmationStatusReportV01.mmRelatedReferenceOrOtherReferenceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmRelatedReferenceOrOtherReferenceRule);
 				rootElement = "Document";
 				xmlTag = "OrdrConfStsRptV01";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(OrderConfirmationStatusReportV01.mmMessageIdentification, OrderConfirmationStatusReportV01.mmOtherReference, OrderConfirmationStatusReportV01.mmRelatedReference,
-						OrderConfirmationStatusReportV01.mmIndividualOrderConfirmationDetailsReport, OrderConfirmationStatusReportV01.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmMessageIdentification,
+						com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmOtherReference, com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmRelatedReference,
+						com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmIndividualOrderConfirmationDetailsReport, com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -417,10 +463,16 @@ public class OrderConfirmationStatusReportV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return OrderConfirmationStatusReportV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -429,6 +481,7 @@ public class OrderConfirmationStatusReportV01 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "OthrRef")
 	public List<AdditionalReference3> getOtherReference() {
 		return otherReference;
 	}
@@ -437,6 +490,7 @@ public class OrderConfirmationStatusReportV01 {
 		this.otherReference = otherReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public List<AdditionalReference3> getRelatedReference() {
 		return relatedReference;
 	}
@@ -445,6 +499,7 @@ public class OrderConfirmationStatusReportV01 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "IndvOrdrConfDtlsRpt", required = true)
 	public List<IndividualOrderConfirmationStatusAndReason1> getIndividualOrderConfirmationDetailsReport() {
 		return individualOrderConfirmationDetailsReport;
 	}
@@ -453,11 +508,18 @@ public class OrderConfirmationStatusReportV01 {
 		this.individualOrderConfirmationDetailsReport = individualOrderConfirmationDetailsReport;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.057.01.01")
+	static public class Document {
+		@XmlElement(name = "OrdrConfStsRptV01", required = true)
+		public OrderConfirmationStatusReportV01 messageBody;
 	}
 }

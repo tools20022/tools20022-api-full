@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for the price.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of formats for the price."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceRateOrAmountOrUnknown1Choice", propOrder = {"rate", "amount", "unknownIndicator"})
 public class PriceRateOrAmountOrUnknown1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -222,6 +228,7 @@ public class PriceRateOrAmountOrUnknown1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -230,6 +237,7 @@ public class PriceRateOrAmountOrUnknown1Choice {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -238,6 +246,7 @@ public class PriceRateOrAmountOrUnknown1Choice {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "UknwnInd", required = true)
 	public YesNoIndicator getUnknownIndicator() {
 		return unknownIndicator;
 	}

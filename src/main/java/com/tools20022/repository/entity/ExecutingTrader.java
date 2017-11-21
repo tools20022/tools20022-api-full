@@ -38,6 +38,18 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExecutingTrader#mmExecutingBroker
+ * ExecutingTrader.mmExecutingBroker}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradePartyRole
+ * SecuritiesTradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -57,18 +69,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmExecutingParty
  * SecuritiesTransactionReport4.mmExecutingParty}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradePartyRole
- * SecuritiesTradePartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExecutingTrader#mmExecutingBroker
- * ExecutingTrader.mmExecutingBroker}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,7 +125,7 @@ public class ExecutingTrader extends SecuritiesTradePartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmExecutingBroker = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ExecutingTrader.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExecutingTrader.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExecutingBroker";
@@ -147,7 +147,12 @@ public class ExecutingTrader extends SecuritiesTradePartyRole {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExecutingBrokerRole.mmExecutingTrader);
 				derivationElement_lazy = () -> Arrays.asList(SecuritiesTransactionReport2.mmExecutingParty, SecuritiesTransactionReport4.mmExecutingParty);
 				superType_lazy = () -> SecuritiesTradePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(ExecutingTrader.mmExecutingBroker);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExecutingTrader.mmExecutingBroker);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ExecutingTrader.class;
 			}
 		});
 		return mmObject_lazy.get();

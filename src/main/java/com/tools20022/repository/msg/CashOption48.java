@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.ProceedsDefinition;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the cash option.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information about the cash option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashOption48", propOrder = {"creditDebitIndicator", "account", "postingDate", "originalPostingDate", "valueDate", "postingAmount"})
 public class CashOption48 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -381,6 +387,7 @@ public class CashOption48 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -389,6 +396,7 @@ public class CashOption48 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Acct")
 	public Account9Choice getAccount() {
 		return account;
 	}
@@ -397,6 +405,7 @@ public class CashOption48 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "PstngDt", required = true)
 	public DateAndDateTimeChoice getPostingDate() {
 		return postingDate;
 	}
@@ -405,6 +414,7 @@ public class CashOption48 {
 		this.postingDate = postingDate;
 	}
 
+	@XmlElement(name = "OrgnlPstngDt")
 	public DateAndDateTimeChoice getOriginalPostingDate() {
 		return originalPostingDate;
 	}
@@ -413,6 +423,7 @@ public class CashOption48 {
 		this.originalPostingDate = originalPostingDate;
 	}
 
+	@XmlElement(name = "ValDt")
 	public DateAndDateTimeChoice getValueDate() {
 		return valueDate;
 	}
@@ -421,6 +432,7 @@ public class CashOption48 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "PstngAmt", required = true)
 	public RestrictedFINActiveCurrencyAndAmount getPostingAmount() {
 		return postingAmount;
 	}

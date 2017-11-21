@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesManagementArchive;
 import com.tools20022.repository.choice.PartyIdentification36Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -62,9 +64,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.018.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
@@ -104,6 +103,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.018.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -127,6 +129,8 @@ import java.util.List;
  * SecuritiesTransactionPendingReportV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTransactionPendingReportV03", propOrder = {"pagination", "statementGeneralDetails", "accountOwner", "safekeepingAccount", "status", "transactions"})
 public class SecuritiesTransactionPendingReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +171,14 @@ public class SecuritiesTransactionPendingReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionPendingReportV03.class.getMethod("getPagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Statement14 statementGeneralDetails;
 	/**
@@ -200,6 +212,14 @@ public class SecuritiesTransactionPendingReportV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Statement14.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionPendingReportV03.class.getMethod("getStatementGeneralDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification36Choice accountOwner;
@@ -236,6 +256,14 @@ public class SecuritiesTransactionPendingReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification36Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionPendingReportV03.class.getMethod("getAccountOwner", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesAccount13 safekeepingAccount;
 	/**
@@ -271,6 +299,14 @@ public class SecuritiesTransactionPendingReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionPendingReportV03.class.getMethod("getSafekeepingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<StatusAndReason9> status;
 	/**
@@ -305,6 +341,14 @@ public class SecuritiesTransactionPendingReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> StatusAndReason9.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionPendingReportV03.class.getMethod("getStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Transaction19> transactions;
 	/**
@@ -338,6 +382,14 @@ public class SecuritiesTransactionPendingReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> Transaction19.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionPendingReportV03.class.getMethod("getTransactions", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -352,8 +404,10 @@ public class SecuritiesTransactionPendingReportV03 {
 				rootElement = "Document";
 				xmlTag = "SctiesTxPdgRpt";
 				businessArea_lazy = () -> SecuritiesManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTransactionPendingReportV03.mmPagination, SecuritiesTransactionPendingReportV03.mmStatementGeneralDetails, SecuritiesTransactionPendingReportV03.mmAccountOwner,
-						SecuritiesTransactionPendingReportV03.mmSafekeepingAccount, SecuritiesTransactionPendingReportV03.mmStatus, SecuritiesTransactionPendingReportV03.mmTransactions);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03.mmStatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03.mmStatus,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03.mmTransactions);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -363,10 +417,16 @@ public class SecuritiesTransactionPendingReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesTransactionPendingReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
@@ -375,6 +435,7 @@ public class SecuritiesTransactionPendingReportV03 {
 		this.pagination = pagination;
 	}
 
+	@XmlElement(name = "StmtGnlDtls", required = true)
 	public Statement14 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
@@ -383,6 +444,7 @@ public class SecuritiesTransactionPendingReportV03 {
 		this.statementGeneralDetails = statementGeneralDetails;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification36Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -391,6 +453,7 @@ public class SecuritiesTransactionPendingReportV03 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -399,6 +462,7 @@ public class SecuritiesTransactionPendingReportV03 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "Sts")
 	public List<StatusAndReason9> getStatus() {
 		return status;
 	}
@@ -407,11 +471,18 @@ public class SecuritiesTransactionPendingReportV03 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Txs")
 	public List<Transaction19> getTransactions() {
 		return transactions;
 	}
 
 	public void setTransactions(List<Transaction19> transactions) {
 		this.transactions = transactions;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.018.03.03")
+	static public class Document {
+		@XmlElement(name = "SctiesTxPdgRpt", required = true)
+		public SecuritiesTransactionPendingReportV03 messageBody;
 	}
 }

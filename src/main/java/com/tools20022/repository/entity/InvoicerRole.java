@@ -35,6 +35,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.InvoicePartyRole
+ * InvoicePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -46,9 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * StructuredRemittanceInformation10.mmInvoicer}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.InvoicePartyRole
- * InvoicePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -78,6 +78,11 @@ public class InvoicerRole extends InvoicePartyRole {
 				definition = "Party identified as the liable party on the face of a commercial invoice.";
 				derivationElement_lazy = () -> Arrays.asList(TradeSettlement1.mmInvoicer, StructuredRemittanceInformation10.mmInvoicer);
 				superType_lazy = () -> InvoicePartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvoicerRole.class;
 			}
 		});
 		return mmObject_lazy.get();

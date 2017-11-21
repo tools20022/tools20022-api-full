@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DatePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between search criteria based on dates and date ranges.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between search criteria based on dates and date ranges."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DateSearchChoice", propOrder = {"fromDate", "toDate", "fromToDate", "equalDate", "notEqualDate"})
 public class DateSearchChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -303,6 +309,7 @@ public class DateSearchChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrDt", required = true)
 	public ISODate getFromDate() {
 		return fromDate;
 	}
@@ -311,6 +318,7 @@ public class DateSearchChoice {
 		this.fromDate = fromDate;
 	}
 
+	@XmlElement(name = "ToDt", required = true)
 	public ISODate getToDate() {
 		return toDate;
 	}
@@ -319,6 +327,7 @@ public class DateSearchChoice {
 		this.toDate = toDate;
 	}
 
+	@XmlElement(name = "FrToDt", required = true)
 	public DatePeriodDetails getFromToDate() {
 		return fromToDate;
 	}
@@ -327,6 +336,7 @@ public class DateSearchChoice {
 		this.fromToDate = fromToDate;
 	}
 
+	@XmlElement(name = "EQDt", required = true)
 	public ISODate getEqualDate() {
 		return equalDate;
 	}
@@ -335,6 +345,7 @@ public class DateSearchChoice {
 		this.equalDate = equalDate;
 	}
 
+	@XmlElement(name = "NEQDt", required = true)
 	public ISODate getNotEqualDate() {
 		return notEqualDate;
 	}

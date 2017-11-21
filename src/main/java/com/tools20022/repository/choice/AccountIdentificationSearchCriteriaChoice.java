@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the different options to search for an account.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between the different options to search for an account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountIdentificationSearchCriteriaChoice", propOrder = {"equal", "containText", "notContainText"})
 public class AccountIdentificationSearchCriteriaChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -211,6 +217,7 @@ public class AccountIdentificationSearchCriteriaChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EQ", required = true)
 	public AccountIdentification1Choice getEqual() {
 		return equal;
 	}
@@ -219,6 +226,7 @@ public class AccountIdentificationSearchCriteriaChoice {
 		this.equal = equal;
 	}
 
+	@XmlElement(name = "CTTxt", required = true)
 	public Max35Text getContainText() {
 		return containText;
 	}
@@ -227,6 +235,7 @@ public class AccountIdentificationSearchCriteriaChoice {
 		this.containText = containText;
 	}
 
+	@XmlElement(name = "NCTTxt", required = true)
 	public Max35Text getNotContainText() {
 		return notContainText;
 	}

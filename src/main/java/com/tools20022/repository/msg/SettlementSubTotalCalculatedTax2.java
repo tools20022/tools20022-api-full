@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the subtotal calculated tax applicable for this settlement.
@@ -81,6 +85,8 @@ import java.util.List;
  * "Specifies  the subtotal calculated tax applicable for this settlement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementSubTotalCalculatedTax2", propOrder = {"typeCode", "calculatedRate", "basisAmount", "calculatedAmount", "exemptionReasonCode", "exemptionReasonText", "taxCurrencyExchange"})
 public class SettlementSubTotalCalculatedTax2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -435,6 +441,7 @@ public class SettlementSubTotalCalculatedTax2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TpCd")
 	public Max4Text getTypeCode() {
 		return typeCode;
 	}
@@ -443,6 +450,7 @@ public class SettlementSubTotalCalculatedTax2 {
 		this.typeCode = typeCode;
 	}
 
+	@XmlElement(name = "ClctdRate")
 	public PercentageRate getCalculatedRate() {
 		return calculatedRate;
 	}
@@ -451,6 +459,7 @@ public class SettlementSubTotalCalculatedTax2 {
 		this.calculatedRate = calculatedRate;
 	}
 
+	@XmlElement(name = "BsisAmt")
 	public List<CurrencyAndAmount> getBasisAmount() {
 		return basisAmount;
 	}
@@ -459,6 +468,7 @@ public class SettlementSubTotalCalculatedTax2 {
 		this.basisAmount = basisAmount;
 	}
 
+	@XmlElement(name = "ClctdAmt")
 	public List<CurrencyAndAmount> getCalculatedAmount() {
 		return calculatedAmount;
 	}
@@ -467,6 +477,7 @@ public class SettlementSubTotalCalculatedTax2 {
 		this.calculatedAmount = calculatedAmount;
 	}
 
+	@XmlElement(name = "XmptnRsnCd")
 	public Max4Text getExemptionReasonCode() {
 		return exemptionReasonCode;
 	}
@@ -475,6 +486,7 @@ public class SettlementSubTotalCalculatedTax2 {
 		this.exemptionReasonCode = exemptionReasonCode;
 	}
 
+	@XmlElement(name = "XmptnRsnTxt")
 	public Max500Text getExemptionReasonText() {
 		return exemptionReasonText;
 	}
@@ -483,6 +495,7 @@ public class SettlementSubTotalCalculatedTax2 {
 		this.exemptionReasonText = exemptionReasonText;
 	}
 
+	@XmlElement(name = "TaxCcyXchg")
 	public CurrencyReference3 getTaxCurrencyExchange() {
 		return taxCurrencyExchange;
 	}

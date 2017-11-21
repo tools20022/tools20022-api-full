@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a cash forecast report.
@@ -82,6 +86,8 @@ import java.util.List;
  * FundConfirmedCashForecastReport2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundConfirmedCashForecastReport3", propOrder = {"fundOrSubFundDetails", "fundCashForecastDetails", "consolidatedNetCashForecast", "extension"})
 public class FundConfirmedCashForecastReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -304,6 +310,7 @@ public class FundConfirmedCashForecastReport3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FndOrSubFndDtls")
 	public List<Fund2> getFundOrSubFundDetails() {
 		return fundOrSubFundDetails;
 	}
@@ -312,6 +319,7 @@ public class FundConfirmedCashForecastReport3 {
 		this.fundOrSubFundDetails = fundOrSubFundDetails;
 	}
 
+	@XmlElement(name = "FndCshFcstDtls")
 	public List<FundCashForecast7> getFundCashForecastDetails() {
 		return fundCashForecastDetails;
 	}
@@ -320,6 +328,7 @@ public class FundConfirmedCashForecastReport3 {
 		this.fundCashForecastDetails = fundCashForecastDetails;
 	}
 
+	@XmlElement(name = "CnsltdNetCshFcst")
 	public NetCashForecast3 getConsolidatedNetCashForecast() {
 		return consolidatedNetCashForecast;
 	}
@@ -328,6 +337,7 @@ public class FundConfirmedCashForecastReport3 {
 		this.consolidatedNetCashForecast = consolidatedNetCashForecast;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

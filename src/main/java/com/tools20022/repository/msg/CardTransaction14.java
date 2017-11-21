@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Key exchange transaction.
@@ -72,6 +76,8 @@ import java.util.List;
  * CardTransaction13}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransaction14", propOrder = {"keyExchangeType", "initiatorDateTime", "keyVerification", "key", "transactionResponse"})
 public class CardTransaction14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -300,6 +306,7 @@ public class CardTransaction14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "KeyXchgTp", required = true)
 	public CardServiceType3Code getKeyExchangeType() {
 		return keyExchangeType;
 	}
@@ -308,6 +315,7 @@ public class CardTransaction14 {
 		this.keyExchangeType = keyExchangeType;
 	}
 
+	@XmlElement(name = "InitrDtTm", required = true)
 	public ISODateTime getInitiatorDateTime() {
 		return initiatorDateTime;
 	}
@@ -316,6 +324,7 @@ public class CardTransaction14 {
 		this.initiatorDateTime = initiatorDateTime;
 	}
 
+	@XmlElement(name = "KeyVrfctn")
 	public List<KEKIdentifier3> getKeyVerification() {
 		return keyVerification;
 	}
@@ -324,6 +333,7 @@ public class CardTransaction14 {
 		this.keyVerification = keyVerification;
 	}
 
+	@XmlElement(name = "Key")
 	public List<CryptographicKey6> getKey() {
 		return key;
 	}
@@ -332,6 +342,7 @@ public class CardTransaction14 {
 		this.key = key;
 	}
 
+	@XmlElement(name = "TxRspn", required = true)
 	public ResponseType2 getTransactionResponse() {
 		return transactionResponse;
 	}

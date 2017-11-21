@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the reject of a message from an ATM or an ATM manager.
@@ -79,6 +83,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMReject2", propOrder = {"rejectInitiatorIdentification", "rejectReason", "additionalInformation", "command", "messageInError"})
 public class ATMReject2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -307,6 +313,7 @@ public class ATMReject2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RjctInitrId")
 	public Max35Text getRejectInitiatorIdentification() {
 		return rejectInitiatorIdentification;
 	}
@@ -315,6 +322,7 @@ public class ATMReject2 {
 		this.rejectInitiatorIdentification = rejectInitiatorIdentification;
 	}
 
+	@XmlElement(name = "RjctRsn", required = true)
 	public RejectReason1Code getRejectReason() {
 		return rejectReason;
 	}
@@ -323,6 +331,7 @@ public class ATMReject2 {
 		this.rejectReason = rejectReason;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max500Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -331,6 +340,7 @@ public class ATMReject2 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "Cmd")
 	public List<ATMCommand7> getCommand() {
 		return command;
 	}
@@ -339,6 +349,7 @@ public class ATMReject2 {
 		this.command = command;
 	}
 
+	@XmlElement(name = "MsgInErr")
 	public Max100KBinary getMessageInError() {
 		return messageInError;
 	}

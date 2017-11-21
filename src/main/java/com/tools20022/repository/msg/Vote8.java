@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.VoteInstructionRequest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Decision of the voting party for one resolution. Several types of decisions
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Vote4 Vote4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Vote8", propOrder = {"issuerLabel", "for", "against", "abstain", "withhold", "withManagement", "againstManagement", "discretionary", "oneYear", "twoYears", "threeYears", "noAction"})
 public class Vote8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -724,6 +730,7 @@ public class Vote8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IssrLabl", required = true)
 	public Max35Text getIssuerLabel() {
 		return issuerLabel;
 	}
@@ -732,6 +739,7 @@ public class Vote8 {
 		this.issuerLabel = issuerLabel;
 	}
 
+	@XmlElement(name = "For")
 	public Number getFor() {
 		return for_;
 	}
@@ -740,6 +748,7 @@ public class Vote8 {
 		this.for_ = for_;
 	}
 
+	@XmlElement(name = "Agnst")
 	public Number getAgainst() {
 		return against;
 	}
@@ -748,6 +757,7 @@ public class Vote8 {
 		this.against = against;
 	}
 
+	@XmlElement(name = "Abstn")
 	public Number getAbstain() {
 		return abstain;
 	}
@@ -756,6 +766,7 @@ public class Vote8 {
 		this.abstain = abstain;
 	}
 
+	@XmlElement(name = "Wthhld")
 	public Number getWithhold() {
 		return withhold;
 	}
@@ -764,6 +775,7 @@ public class Vote8 {
 		this.withhold = withhold;
 	}
 
+	@XmlElement(name = "WthMgmt")
 	public Number getWithManagement() {
 		return withManagement;
 	}
@@ -772,6 +784,7 @@ public class Vote8 {
 		this.withManagement = withManagement;
 	}
 
+	@XmlElement(name = "AgnstMgmt")
 	public Number getAgainstManagement() {
 		return againstManagement;
 	}
@@ -780,6 +793,7 @@ public class Vote8 {
 		this.againstManagement = againstManagement;
 	}
 
+	@XmlElement(name = "Dscrtnry")
 	public Number getDiscretionary() {
 		return discretionary;
 	}
@@ -788,6 +802,7 @@ public class Vote8 {
 		this.discretionary = discretionary;
 	}
 
+	@XmlElement(name = "OneYr")
 	public Number getOneYear() {
 		return oneYear;
 	}
@@ -796,6 +811,7 @@ public class Vote8 {
 		this.oneYear = oneYear;
 	}
 
+	@XmlElement(name = "TwoYrs")
 	public Number getTwoYears() {
 		return twoYears;
 	}
@@ -804,6 +820,7 @@ public class Vote8 {
 		this.twoYears = twoYears;
 	}
 
+	@XmlElement(name = "ThreeYrs")
 	public Number getThreeYears() {
 		return threeYears;
 	}
@@ -812,6 +829,7 @@ public class Vote8 {
 		this.threeYears = threeYears;
 	}
 
+	@XmlElement(name = "NoActn")
 	public Number getNoAction() {
 		return noAction;
 	}

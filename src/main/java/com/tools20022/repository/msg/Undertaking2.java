@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Independent undertaking, such as a demand guarantee or standby letter of
@@ -87,6 +91,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Undertaking2", propOrder = {"name", "beneficiary", "expiryDetails", "counterUndertakingAmount", "confirmationChargesPayableBy", "governanceRulesAndLaw", "standardClaimDocumentIndicator", "additionalInformation"})
 public class Undertaking2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -481,6 +487,7 @@ public class Undertaking2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public UndertakingName1Code getName() {
 		return name;
 	}
@@ -489,6 +496,7 @@ public class Undertaking2 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Bnfcry")
 	public PartyIdentification43 getBeneficiary() {
 		return beneficiary;
 	}
@@ -497,6 +505,7 @@ public class Undertaking2 {
 		this.beneficiary = beneficiary;
 	}
 
+	@XmlElement(name = "XpryDtls")
 	public ExpiryDetails2 getExpiryDetails() {
 		return expiryDetails;
 	}
@@ -505,6 +514,7 @@ public class Undertaking2 {
 		this.expiryDetails = expiryDetails;
 	}
 
+	@XmlElement(name = "CntrUdrtkgAmt")
 	public UndertakingAmount1 getCounterUndertakingAmount() {
 		return counterUndertakingAmount;
 	}
@@ -513,6 +523,7 @@ public class Undertaking2 {
 		this.counterUndertakingAmount = counterUndertakingAmount;
 	}
 
+	@XmlElement(name = "ConfChrgsPyblBy")
 	public ExternalTypeOfParty1Code getConfirmationChargesPayableBy() {
 		return confirmationChargesPayableBy;
 	}
@@ -521,6 +532,7 @@ public class Undertaking2 {
 		this.confirmationChargesPayableBy = confirmationChargesPayableBy;
 	}
 
+	@XmlElement(name = "GovncRulesAndLaw")
 	public GovernanceRules1 getGovernanceRulesAndLaw() {
 		return governanceRulesAndLaw;
 	}
@@ -529,6 +541,7 @@ public class Undertaking2 {
 		this.governanceRulesAndLaw = governanceRulesAndLaw;
 	}
 
+	@XmlElement(name = "StdClmDocInd")
 	public YesNoIndicator getStandardClaimDocumentIndicator() {
 		return standardClaimDocumentIndicator;
 	}
@@ -537,6 +550,7 @@ public class Undertaking2 {
 		this.standardClaimDocumentIndicator = standardClaimDocumentIndicator;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

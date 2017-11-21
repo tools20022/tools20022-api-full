@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CashAccountService;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of the service to be billed.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identification of the service to be billed."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingServiceIdentification2", propOrder = {"identification", "subService", "description"})
 public class BillingServiceIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -232,6 +238,7 @@ public class BillingServiceIdentification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -240,6 +247,7 @@ public class BillingServiceIdentification2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SubSvc")
 	public BillingSubServiceIdentification1 getSubService() {
 		return subService;
 	}
@@ -248,6 +256,7 @@ public class BillingServiceIdentification2 {
 		this.subService = subService;
 	}
 
+	@XmlElement(name = "Desc", required = true)
 	public Max70Text getDescription() {
 		return description;
 	}

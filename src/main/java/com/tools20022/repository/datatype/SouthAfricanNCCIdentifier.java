@@ -36,6 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * identificationScheme} =
  * "South African Bankers Services Company Ltd (Bank Serv); South African National Clearing system Code"
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "ZA[0-9]{6,6}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -72,6 +74,7 @@ public class SouthAfricanNCCIdentifier {
 				name = "SouthAfricanNCCIdentifier";
 				definition = "South African National Clearing Code (NCC). Identifies South African financial institutions on the South African national clearing system. The code is assigned by the South African Bankers Services Company Ltd. (BankServ).";
 				identificationScheme = "South African Bankers Services Company Ltd (Bank Serv); South African National Clearing system Code";
+				pattern = "ZA[0-9]{6,6}";
 			}
 		});
 		return mmObject_lazy.get();

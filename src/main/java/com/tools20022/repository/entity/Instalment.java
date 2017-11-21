@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -41,6 +42,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Instalment#mmInitialNumberOfInstalment
+ * Instalment.mmInitialNumberOfInstalment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Instalment#mmTotalNumberOfInstalment
+ * Instalment.mmTotalNumberOfInstalment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Instalment#mmPeriodUnit
+ * Instalment.mmPeriodUnit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Instalment#mmNumberOfUnits
+ * Instalment.mmNumberOfUnits}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Instalment#mmSequenceIdentification
+ * Instalment.mmSequenceIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Instalment#mmInvestmentPlan
+ * Instalment.mmInvestmentPlan}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Instalment#mmInstalmentPlanType
+ * Instalment.mmInstalmentPlanType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Instalment#mmFirstPaymentAmount
+ * Instalment.mmFirstPaymentAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Instalment#mmFirstPaymentDate
+ * Instalment.mmFirstPaymentDate}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PaymentObligation
+ * PaymentObligation}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -149,38 +182,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentTransactionDetails37.mmInstalment}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PaymentObligation
- * PaymentObligation}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Instalment#mmInitialNumberOfInstalment
- * Instalment.mmInitialNumberOfInstalment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Instalment#mmTotalNumberOfInstalment
- * Instalment.mmTotalNumberOfInstalment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Instalment#mmPeriodUnit
- * Instalment.mmPeriodUnit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Instalment#mmNumberOfUnits
- * Instalment.mmNumberOfUnits}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Instalment#mmSequenceIdentification
- * Instalment.mmSequenceIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Instalment#mmInvestmentPlan
- * Instalment.mmInvestmentPlan}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Instalment#mmInstalmentPlanType
- * Instalment.mmInstalmentPlanType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Instalment#mmFirstPaymentAmount
- * Instalment.mmFirstPaymentAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Instalment#mmFirstPaymentDate
- * Instalment.mmFirstPaymentDate}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -212,10 +213,6 @@ public class Instalment extends PaymentObligation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -255,6 +252,10 @@ public class Instalment extends PaymentObligation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -272,7 +273,7 @@ public class Instalment extends PaymentObligation {
 			derivation_lazy = () -> Arrays.asList(InvestmentPlan2.mmInitialNumberOfInstalment, InvestmentPlan4.mmInitialNumberOfInstalment, InvestmentPlan6.mmInitialNumberOfInstalment, InvestmentPlan5.mmInitialNumberOfInstalment,
 					InvestmentPlan3.mmInitialNumberOfInstalment, InvestmentPlan7.mmInitialNumberOfInstalment, InvestmentPlan9.mmInitialNumberOfInstalments, InvestmentPlan8.mmInitialNumberOfInstalments,
 					InvestmentPlan10.mmInitialNumberOfInstalments, InvestmentPlan11.mmInitialNumberOfInstalments, InitialAmount1Choice.mmInitialNumberOfInstalments);
-			elementContext_lazy = () -> Instalment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InitialNumberOfInstalment";
@@ -280,6 +281,14 @@ public class Instalment extends PaymentObligation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Instalment.class.getMethod("getInitialNumberOfInstalment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number totalNumberOfInstalment;
@@ -293,10 +302,6 @@ public class Instalment extends PaymentObligation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -354,6 +359,10 @@ public class Instalment extends PaymentObligation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -373,7 +382,7 @@ public class Instalment extends PaymentObligation {
 					InvestmentPlan8.mmTotalNumberOfInstalments, RecurringTransaction2.mmTotalNumberOfPayments, InvestmentPlan10.mmTotalNumberOfInstalments, InvestmentPlan11.mmTotalNumberOfInstalments,
 					InvestmentPlan12.mmTotalNumberOfInstalments, InvestmentPlan13.mmTotalNumberOfInstalments, RecurringTransaction3.mmNumberOfOccurrences, InvestmentPlan14.mmTotalNumberOfInstalments,
 					InvestmentPlan15.mmTotalNumberOfInstalments);
-			elementContext_lazy = () -> Instalment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalNumberOfInstalment";
@@ -381,6 +390,14 @@ public class Instalment extends PaymentObligation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Instalment.class.getMethod("getTotalNumberOfInstalment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected FrequencyCode periodUnit;
@@ -394,10 +411,6 @@ public class Instalment extends PaymentObligation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FrequencyCode
 	 * FrequencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -412,6 +425,10 @@ public class Instalment extends PaymentObligation {
 	 * RecurringTransaction3.mmPeriodUnit}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -428,7 +445,7 @@ public class Instalment extends PaymentObligation {
 	public static final MMBusinessAttribute mmPeriodUnit = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RecurringTransaction1.mmPeriodUnit, RecurringTransaction2.mmPeriodUnit, RecurringTransaction3.mmPeriodUnit);
-			elementContext_lazy = () -> Instalment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PeriodUnit";
@@ -436,6 +453,14 @@ public class Instalment extends PaymentObligation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FrequencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Instalment.class.getMethod("getPeriodUnit", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number numberOfUnits;
@@ -448,10 +473,6 @@ public class Instalment extends PaymentObligation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -467,6 +488,10 @@ public class Instalment extends PaymentObligation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -480,7 +505,7 @@ public class Instalment extends PaymentObligation {
 	public static final MMBusinessAttribute mmNumberOfUnits = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RecurringTransaction1.mmInstalmentPeriod, RecurringTransaction2.mmInstalmentPeriod, RecurringTransaction3.mmIntervalDay);
-			elementContext_lazy = () -> Instalment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfUnits";
@@ -488,6 +513,14 @@ public class Instalment extends PaymentObligation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Instalment.class.getMethod("getNumberOfUnits", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max70Text sequenceIdentification;
@@ -500,10 +533,6 @@ public class Instalment extends PaymentObligation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -515,6 +544,10 @@ public class Instalment extends PaymentObligation {
 	 * Instalment2.mmSequenceIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -529,7 +562,7 @@ public class Instalment extends PaymentObligation {
 	public static final MMBusinessAttribute mmSequenceIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Instalment1.mmSequenceIdentification, Instalment2.mmSequenceIdentification);
-			elementContext_lazy = () -> Instalment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SequenceIdentification";
@@ -537,6 +570,14 @@ public class Instalment extends PaymentObligation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Instalment.class.getMethod("getSequenceIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentPlan investmentPlan;
@@ -575,7 +616,7 @@ public class Instalment extends PaymentObligation {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentPlan = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Instalment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentPlan";
@@ -598,10 +639,6 @@ public class Instalment extends PaymentObligation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.InstalmentPlanCode
 	 * InstalmentPlanCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -610,6 +647,10 @@ public class Instalment extends PaymentObligation {
 	 * RecurringTransaction2.mmInstalmentPlan}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -624,7 +665,7 @@ public class Instalment extends PaymentObligation {
 	public static final MMBusinessAttribute mmInstalmentPlanType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RecurringTransaction2.mmInstalmentPlan);
-			elementContext_lazy = () -> Instalment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstalmentPlanType";
@@ -632,6 +673,14 @@ public class Instalment extends PaymentObligation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InstalmentPlanCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Instalment.class.getMethod("getInstalmentPlanType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount firstPaymentAmount;
@@ -645,10 +694,6 @@ public class Instalment extends PaymentObligation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -657,6 +702,10 @@ public class Instalment extends PaymentObligation {
 	 * RecurringTransaction2.mmFirstAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -671,7 +720,7 @@ public class Instalment extends PaymentObligation {
 	public static final MMBusinessAttribute mmFirstPaymentAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RecurringTransaction2.mmFirstAmount);
-			elementContext_lazy = () -> Instalment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstPaymentAmount";
@@ -679,6 +728,14 @@ public class Instalment extends PaymentObligation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Instalment.class.getMethod("getFirstPaymentAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime firstPaymentDate;
@@ -691,10 +748,6 @@ public class Instalment extends PaymentObligation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -706,6 +759,10 @@ public class Instalment extends PaymentObligation {
 	 * RecurringTransaction3.mmStartDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -720,7 +777,7 @@ public class Instalment extends PaymentObligation {
 	public static final MMBusinessAttribute mmFirstPaymentDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RecurringTransaction2.mmFirstPaymentDate, RecurringTransaction3.mmStartDate);
-			elementContext_lazy = () -> Instalment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstPaymentDate";
@@ -728,6 +785,14 @@ public class Instalment extends PaymentObligation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Instalment.class.getMethod("getFirstPaymentDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -747,10 +812,17 @@ public class Instalment extends PaymentObligation {
 						CardPaymentTransactionDetails27.mmInstalment, CardPaymentTransactionDetails31.mmInstalment, CardPaymentTransactionDetails39.mmInstalment, CardPaymentTransactionDetails38.mmInstalment,
 						CardPaymentTransactionDetails41.mmInstalment, CardPaymentTransactionDetails37.mmInstalment);
 				superType_lazy = () -> PaymentObligation.mmObject();
-				element_lazy = () -> Arrays.asList(Instalment.mmInitialNumberOfInstalment, Instalment.mmTotalNumberOfInstalment, Instalment.mmPeriodUnit, Instalment.mmNumberOfUnits, Instalment.mmSequenceIdentification,
-						Instalment.mmInvestmentPlan, Instalment.mmInstalmentPlanType, Instalment.mmFirstPaymentAmount, Instalment.mmFirstPaymentDate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Instalment.mmInitialNumberOfInstalment, com.tools20022.repository.entity.Instalment.mmTotalNumberOfInstalment,
+						com.tools20022.repository.entity.Instalment.mmPeriodUnit, com.tools20022.repository.entity.Instalment.mmNumberOfUnits, com.tools20022.repository.entity.Instalment.mmSequenceIdentification,
+						com.tools20022.repository.entity.Instalment.mmInvestmentPlan, com.tools20022.repository.entity.Instalment.mmInstalmentPlanType, com.tools20022.repository.entity.Instalment.mmFirstPaymentAmount,
+						com.tools20022.repository.entity.Instalment.mmFirstPaymentDate);
 				derivationComponent_lazy = () -> Arrays.asList(RecurringTransaction1.mmObject(), Instalment1.mmObject(), RecurringTransaction2.mmObject(), Instalment2.mmObject(), InitialAmount1Choice.mmObject(),
 						RecurringTransaction3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Instalment.class;
 			}
 		});
 		return mmObject_lazy.get();

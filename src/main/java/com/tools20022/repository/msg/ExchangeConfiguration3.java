@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Configuration parameters of data exchanges.
@@ -89,6 +93,8 @@ import java.util.List;
  * ExchangeConfiguration2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExchangeConfiguration3", propOrder = {"exchangePolicy", "maximumNumber", "maximumAmount", "timeCondition", "exchangeFailed", "exchangeDeclined"})
 public class ExchangeConfiguration3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -432,6 +438,7 @@ public class ExchangeConfiguration3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XchgPlcy", required = true)
 	public List<ExchangePolicy1Code> getExchangePolicy() {
 		return exchangePolicy;
 	}
@@ -440,6 +447,7 @@ public class ExchangeConfiguration3 {
 		this.exchangePolicy = exchangePolicy;
 	}
 
+	@XmlElement(name = "MaxNb")
 	public Number getMaximumNumber() {
 		return maximumNumber;
 	}
@@ -448,6 +456,7 @@ public class ExchangeConfiguration3 {
 		this.maximumNumber = maximumNumber;
 	}
 
+	@XmlElement(name = "MaxAmt")
 	public ImpliedCurrencyAndAmount getMaximumAmount() {
 		return maximumAmount;
 	}
@@ -456,6 +465,7 @@ public class ExchangeConfiguration3 {
 		this.maximumAmount = maximumAmount;
 	}
 
+	@XmlElement(name = "TmCond")
 	public ProcessTiming2 getTimeCondition() {
 		return timeCondition;
 	}
@@ -464,6 +474,7 @@ public class ExchangeConfiguration3 {
 		this.timeCondition = timeCondition;
 	}
 
+	@XmlElement(name = "XchgFaild")
 	public TrueFalseIndicator getExchangeFailed() {
 		return exchangeFailed;
 	}
@@ -472,6 +483,7 @@ public class ExchangeConfiguration3 {
 		this.exchangeFailed = exchangeFailed;
 	}
 
+	@XmlElement(name = "XchgDclnd")
 	public TrueFalseIndicator getExchangeDeclined() {
 		return exchangeDeclined;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information of the certificate to create.
@@ -69,6 +73,8 @@ import java.util.List;
  * CertificationRequest1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CertificationRequest2", propOrder = {"version", "subjectName", "subjectPublicKeyInformation", "attribute"})
 public class CertificationRequest2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -264,6 +270,7 @@ public class CertificationRequest2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Number getVersion() {
 		return version;
 	}
@@ -272,6 +279,7 @@ public class CertificationRequest2 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "SbjtNm")
 	public CertificateIssuer1 getSubjectName() {
 		return subjectName;
 	}
@@ -280,6 +288,7 @@ public class CertificationRequest2 {
 		this.subjectName = subjectName;
 	}
 
+	@XmlElement(name = "SbjtPblcKeyInf", required = true)
 	public PublicRSAKey2 getSubjectPublicKeyInformation() {
 		return subjectPublicKeyInformation;
 	}
@@ -288,6 +297,7 @@ public class CertificationRequest2 {
 		this.subjectPublicKeyInformation = subjectPublicKeyInformation;
 	}
 
+	@XmlElement(name = "Attr", required = true)
 	public List<RelativeDistinguishedName2> getAttribute() {
 		return attribute;
 	}

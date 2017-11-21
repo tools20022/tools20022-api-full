@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Acknowledgement of exempt instruction specifying whether the documentation
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcknowledgementOfExemption1Choice", propOrder = {"documentationWillBeSentIndicator", "documentationWillNotBeSentIndicator"})
 public class AcknowledgementOfExemption1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +173,7 @@ public class AcknowledgementOfExemption1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DcmnttnWillBeSntInd", required = true)
 	public YesNoIndicator getDocumentationWillBeSentIndicator() {
 		return documentationWillBeSentIndicator;
 	}
@@ -175,6 +182,7 @@ public class AcknowledgementOfExemption1Choice {
 		this.documentationWillBeSentIndicator = documentationWillBeSentIndicator;
 	}
 
+	@XmlElement(name = "DcmnttnWillNotBeSntInd", required = true)
 	public YesNoIndicator getDocumentationWillNotBeSentIndicator() {
 		return documentationWillNotBeSentIndicator;
 	}

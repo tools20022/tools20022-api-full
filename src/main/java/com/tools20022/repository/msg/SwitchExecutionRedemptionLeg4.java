@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SwitchExecutionRedemptionLeg;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Execution of the redemption part, in a switch between investment funds or
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwitchExecutionRedemptionLeg4", propOrder = {"legExecutionIdentification", "legIdentification", "investmentAccountDetails", "financialInstrumentDetails", "financialInstrumentQuantity"})
 public class SwitchExecutionRedemptionLeg4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -330,6 +336,7 @@ public class SwitchExecutionRedemptionLeg4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LegExctnId")
 	public Max35Text getLegExecutionIdentification() {
 		return legExecutionIdentification;
 	}
@@ -338,6 +345,7 @@ public class SwitchExecutionRedemptionLeg4 {
 		this.legExecutionIdentification = legExecutionIdentification;
 	}
 
+	@XmlElement(name = "LegId")
 	public Max35Text getLegIdentification() {
 		return legIdentification;
 	}
@@ -346,6 +354,7 @@ public class SwitchExecutionRedemptionLeg4 {
 		this.legIdentification = legIdentification;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount30 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -354,6 +363,7 @@ public class SwitchExecutionRedemptionLeg4 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "FinInstrmDtls")
 	public FinancialInstrument18 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -362,6 +372,7 @@ public class SwitchExecutionRedemptionLeg4 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "FinInstrmQty")
 	public FinancialInstrumentQuantity3 getFinancialInstrumentQuantity() {
 		return financialInstrumentQuantity;
 	}

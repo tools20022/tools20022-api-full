@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information on the charges related to the payment transaction.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information on the charges related to the payment transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ChargesInformation4", propOrder = {"chargesAmount", "chargesParty"})
 public class ChargesInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class ChargesInformation4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ChrgsAmt", required = true)
 	public EuroMax9Amount getChargesAmount() {
 		return chargesAmount;
 	}
@@ -188,6 +195,7 @@ public class ChargesInformation4 {
 		this.chargesAmount = chargesAmount;
 	}
 
+	@XmlElement(name = "ChrgsPty", required = true)
 	public FinancialInstitution2 getChargesParty() {
 		return chargesParty;
 	}

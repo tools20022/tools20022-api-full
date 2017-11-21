@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,6 +36,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmResponseStatus
+ * CollateralStatus.mmResponseStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmCollateralManagementCancellationReason
+ * CollateralStatus.mmCollateralManagementCancellationReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmSubstitutionStatus
+ * CollateralStatus.mmSubstitutionStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmInterestRejectionReason
+ * CollateralStatus.mmInterestRejectionReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmMarginCallResponse
+ * CollateralStatus.mmMarginCallResponse}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmSettlement
+ * CollateralStatus.mmSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmCancellationReason
+ * CollateralStatus.mmCancellationReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmCollateral
+ * CollateralStatus.mmCollateral}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -77,37 +109,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Collateral.mmStatus}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmResponseStatus
- * CollateralStatus.mmResponseStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmCollateralManagementCancellationReason
- * CollateralStatus.mmCollateralManagementCancellationReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmSubstitutionStatus
- * CollateralStatus.mmSubstitutionStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmInterestRejectionReason
- * CollateralStatus.mmInterestRejectionReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmMarginCallResponse
- * CollateralStatus.mmMarginCallResponse}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmSettlement
- * CollateralStatus.mmSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmCancellationReason
- * CollateralStatus.mmCancellationReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmCollateral
- * CollateralStatus.mmCollateral}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -140,11 +141,6 @@ public class CollateralStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ResponseStatusCode
 	 * ResponseStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus
-	 * CollateralStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -193,6 +189,11 @@ public class CollateralStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus
+	 * CollateralStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -210,7 +211,7 @@ public class CollateralStatus extends Status {
 			derivation_lazy = () -> Arrays.asList(ResponseStatus1Choice.mmCode, Status1Choice.mmResponseStatus, Status8Choice.mmResponseStatus, ResponseStatus2Choice.mmCode, Status3Choice.mmResponseStatus, Status10Choice.mmResponseStatus,
 					OtherCollateralResponse1.mmResponseType, CashCollateralResponse1.mmResponseType, ResponseStatus5Choice.mmCode, Status19Choice.mmResponseStatus, Status22Choice.mmResponseStatus, ResponseStatus7Choice.mmCode,
 					OtherCollateralResponse2.mmResponseType, CashCollateralResponse2.mmResponseType);
-			elementContext_lazy = () -> CollateralStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResponseStatus";
@@ -218,6 +219,14 @@ public class CollateralStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ResponseStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralStatus.class.getMethod("getResponseStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CollateralManagementCancellationReasonCode collateralManagementCancellationReason;
@@ -231,11 +240,6 @@ public class CollateralStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CollateralManagementCancellationReasonCode
 	 * CollateralManagementCancellationReasonCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus
-	 * CollateralStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -254,6 +258,11 @@ public class CollateralStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus
+	 * CollateralStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -268,7 +277,7 @@ public class CollateralStatus extends Status {
 		{
 			derivation_lazy = () -> Arrays.asList(CollateralCancellationType1Choice.mmCode, CollateralCancellationType1Choice.mmProprietary, CollateralCancellationReason1.mmCancellationReasonCode,
 					CollateralCancellationStatus1.mmRejectionDetails);
-			elementContext_lazy = () -> CollateralStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollateralManagementCancellationReason";
@@ -276,6 +285,14 @@ public class CollateralStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralManagementCancellationReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralStatus.class.getMethod("getCollateralManagementCancellationReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CollateralSubstitutionConfirmationCode substitutionStatus;
@@ -290,11 +307,6 @@ public class CollateralStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionConfirmationCode
 	 * CollateralSubstitutionConfirmationCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus
-	 * CollateralStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -303,6 +315,11 @@ public class CollateralStatus extends Status {
 	 * CollateralConfirmation1.mmConfirmationType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus
+	 * CollateralStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -319,7 +336,7 @@ public class CollateralStatus extends Status {
 	public static final MMBusinessAttribute mmSubstitutionStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CollateralConfirmation1.mmConfirmationType);
-			elementContext_lazy = () -> CollateralStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubstitutionStatus";
@@ -327,6 +344,14 @@ public class CollateralStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralSubstitutionConfirmationCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralStatus.class.getMethod("getSubstitutionStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InterestRejectionReasonCode interestRejectionReason;
@@ -340,11 +365,6 @@ public class CollateralStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestRejectionReasonCode
 	 * InterestRejectionReasonCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus
-	 * CollateralStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -360,6 +380,11 @@ public class CollateralStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus
+	 * CollateralStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -374,7 +399,7 @@ public class CollateralStatus extends Status {
 	public static final MMBusinessAttribute mmInterestRejectionReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RejectionReason21FormatChoice.mmCode, RejectionReason21FormatChoice.mmProprietary, InterestResponse1.mmRejectionReason);
-			elementContext_lazy = () -> CollateralStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestRejectionReason";
@@ -382,6 +407,14 @@ public class CollateralStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InterestRejectionReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralStatus.class.getMethod("getInterestRejectionReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MarginCallResponseCode marginCallResponse;
@@ -396,11 +429,6 @@ public class CollateralStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.MarginCallResponseCode
 	 * MarginCallResponseCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus
-	 * CollateralStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -412,6 +440,11 @@ public class CollateralStatus extends Status {
 	 * ResponseType1Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus
+	 * CollateralStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -428,7 +461,7 @@ public class CollateralStatus extends Status {
 	public static final MMBusinessAttribute mmMarginCallResponse = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ResponseType1Choice.mmCode, ResponseType1Choice.mmProprietary);
-			elementContext_lazy = () -> CollateralStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarginCallResponse";
@@ -436,6 +469,14 @@ public class CollateralStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MarginCallResponseCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralStatus.class.getMethod("getMarginCallResponse", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SettlementStatusCode settlement;
@@ -449,11 +490,6 @@ public class CollateralStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementStatusCode
 	 * SettlementStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus
-	 * CollateralStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -469,6 +505,11 @@ public class CollateralStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus
+	 * CollateralStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -482,7 +523,7 @@ public class CollateralStatus extends Status {
 	public static final MMBusinessAttribute mmSettlement = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CollateralValuation1.mmSettlementStatus, CollateralValuation2.mmSettlementStatus, CollateralValuation5.mmSettlementStatus);
-			elementContext_lazy = () -> CollateralStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Settlement";
@@ -490,6 +531,14 @@ public class CollateralStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralStatus.class.getMethod("getSettlement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CancellationReasonCode cancellationReason;
@@ -522,7 +571,7 @@ public class CollateralStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmCancellationReason = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CollateralStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CancellationReason";
@@ -530,6 +579,14 @@ public class CollateralStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancellationReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralStatus.class.getMethod("getCancellationReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Collateral collateral;
@@ -568,7 +625,7 @@ public class CollateralStatus extends Status {
 	 */
 	public static final MMBusinessAssociationEnd mmCollateral = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CollateralStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Collateral";
@@ -590,11 +647,18 @@ public class CollateralStatus extends Status {
 				definition = "Specifies the status of the collateral or of an event related to collateral.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Collateral.mmStatus);
 				superType_lazy = () -> Status.mmObject();
-				element_lazy = () -> Arrays.asList(CollateralStatus.mmResponseStatus, CollateralStatus.mmCollateralManagementCancellationReason, CollateralStatus.mmSubstitutionStatus, CollateralStatus.mmInterestRejectionReason,
-						CollateralStatus.mmMarginCallResponse, CollateralStatus.mmSettlement, CollateralStatus.mmCancellationReason, CollateralStatus.mmCollateral);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralStatus.mmResponseStatus, com.tools20022.repository.entity.CollateralStatus.mmCollateralManagementCancellationReason,
+						com.tools20022.repository.entity.CollateralStatus.mmSubstitutionStatus, com.tools20022.repository.entity.CollateralStatus.mmInterestRejectionReason,
+						com.tools20022.repository.entity.CollateralStatus.mmMarginCallResponse, com.tools20022.repository.entity.CollateralStatus.mmSettlement, com.tools20022.repository.entity.CollateralStatus.mmCancellationReason,
+						com.tools20022.repository.entity.CollateralStatus.mmCollateral);
 				derivationComponent_lazy = () -> Arrays.asList(CollateralCancellationType1Choice.mmObject(), CollateralCancellationReason1.mmObject(), RejectionStatus2.mmObject(), CollateralCancellationStatus1.mmObject(),
 						CollateralProposalResponseType1.mmObject(), CollateralConfirmation1.mmObject(), InterestResponse1.mmObject(), CollateralStatusReason1.mmObject(), OtherCollateralResponse1.mmObject(),
 						CashCollateralResponse1.mmObject(), SecuritiesCollateralResponse1.mmObject(), OtherCollateralResponse2.mmObject(), CashCollateralResponse2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CollateralStatus.class;
 			}
 		});
 		return mmObject_lazy.get();

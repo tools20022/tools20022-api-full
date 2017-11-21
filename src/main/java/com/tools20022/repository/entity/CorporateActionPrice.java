@@ -35,6 +35,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCorporateActionEvent
+ * CorporateActionPrice.mmCorporateActionEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCorporateActionExercisePrice
+ * CorporateActionPrice.mmCorporateActionExercisePrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPriceReceivedPerProduct
+ * CorporateActionPrice.mmGenericCashPriceReceivedPerProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPricePaidPerProduct
+ * CorporateActionPrice.mmGenericCashPricePaidPerProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashInLieuOfSharePrice
+ * CorporateActionPrice.mmCashInLieuOfSharePrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmOverSubscriptionDepositPrice
+ * CorporateActionPrice.mmOverSubscriptionDepositPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashValueForTax
+ * CorporateActionPrice.mmCashValueForTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmPricingCalculation
+ * CorporateActionPrice.mmPricingCalculation}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -307,35 +336,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionPrice64.mmIndicativeOrMarketPrice}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCorporateActionEvent
- * CorporateActionPrice.mmCorporateActionEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCorporateActionExercisePrice
- * CorporateActionPrice.mmCorporateActionExercisePrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPriceReceivedPerProduct
- * CorporateActionPrice.mmGenericCashPriceReceivedPerProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPricePaidPerProduct
- * CorporateActionPrice.mmGenericCashPricePaidPerProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashInLieuOfSharePrice
- * CorporateActionPrice.mmCashInLieuOfSharePrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmOverSubscriptionDepositPrice
- * CorporateActionPrice.mmOverSubscriptionDepositPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashValueForTax
- * CorporateActionPrice.mmCashValueForTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmPricingCalculation
- * CorporateActionPrice.mmPricingCalculation}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -391,7 +391,7 @@ public class CorporateActionPrice {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionPrice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionEvent";
@@ -426,11 +426,6 @@ public class CorporateActionPrice {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice
-	 * CorporateActionPrice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -464,6 +459,11 @@ public class CorporateActionPrice {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice
+	 * CorporateActionPrice}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -480,7 +480,7 @@ public class CorporateActionPrice {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPrice8.mmExercisePrice, CorporateActionPrice11.mmExercisePrice, CorporateActionPrice19.mmExercisePrice, CorporateActionPrice20.mmExercisePrice,
 					CorporateActionPrice5.mmExercisePrice, CorporateActionPrice7.mmExercisePrice, CorporateActionPrice6.mmExercisePrice, CorporateActionPrice14.mmExercisePrice, CorporateActionPrice1.mmExercisePrice);
-			elementContext_lazy = () -> CorporateActionPrice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionExercisePrice";
@@ -511,11 +511,6 @@ public class CorporateActionPrice {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice
-	 * CorporateActionPrice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -711,6 +706,11 @@ public class CorporateActionPrice {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice
+	 * CorporateActionPrice}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -745,7 +745,7 @@ public class CorporateActionPrice {
 					PriceDetails23.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice56.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice60.mmGenericCashPriceReceivedPerProduct,
 					PriceDetails22.mmGenericCashPriceReceivedPerProduct, PriceDetails24.mmGenericCashPriceReceivedPerProduct, PriceDetails25.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice62.mmGenericCashPriceReceivedPerProduct,
 					CorporateActionPrice66.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice64.mmGenericCashPriceReceivedPerProduct);
-			elementContext_lazy = () -> CorporateActionPrice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GenericCashPriceReceivedPerProduct";
@@ -777,11 +777,6 @@ public class CorporateActionPrice {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice
-	 * CorporateActionPrice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -947,6 +942,11 @@ public class CorporateActionPrice {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice
+	 * CorporateActionPrice}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -975,7 +975,7 @@ public class CorporateActionPrice {
 					CorporateActionPrice51.mmGenericCashPricePaidPerProduct, CorporateActionPrice59.mmGenericCashPricePaidPerProduct, PriceDetails23.mmGenericCashPricePaidPerProduct, CorporateActionPrice56.mmGenericCashPricePaidPerProduct,
 					CorporateActionPrice60.mmGenericCashPricePaidPerProduct, PriceDetails22.mmGenericCashPricePaidPerProduct, PriceDetails24.mmGenericCashPricePaidPerProduct, PriceDetails25.mmGenericCashPricePaidPerProduct,
 					CorporateActionPrice62.mmGenericCashPricePaidPerProduct, CorporateActionPrice66.mmGenericCashPricePaidPerProduct, CorporateActionPrice64.mmGenericCashPricePaidPerProduct);
-			elementContext_lazy = () -> CorporateActionPrice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GenericCashPricePaidPerProduct";
@@ -1006,11 +1006,6 @@ public class CorporateActionPrice {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice
-	 * CorporateActionPrice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1140,6 +1135,11 @@ public class CorporateActionPrice {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice
+	 * CorporateActionPrice}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1165,7 +1165,7 @@ public class CorporateActionPrice {
 					CorporateActionPrice55.mmCashInLieuOfSharePrice, CorporateActionPrice51.mmCashInLieuOfSharePrice, CorporateActionPrice59.mmCashInLieuOfSharePrice, CorporateActionPrice56.mmCashInLieuOfSharePrice,
 					CorporateActionPrice58.mmCashInLieuOfSharePrice, CorporateActionPrice61.mmCashInLieuOfSharePrice, CorporateActionPrice63.mmCashInLieuOfSharePrice, CorporateActionPrice65.mmCashInLieuOfSharePrice,
 					CorporateActionPrice66.mmCashInLieuOfSharePrice, CorporateActionPrice64.mmCashInLieuOfSharePrice);
-			elementContext_lazy = () -> CorporateActionPrice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashInLieuOfSharePrice";
@@ -1196,11 +1196,6 @@ public class CorporateActionPrice {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice
-	 * CorporateActionPrice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1258,6 +1253,11 @@ public class CorporateActionPrice {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice
+	 * CorporateActionPrice}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1277,7 +1277,7 @@ public class CorporateActionPrice {
 					CorporateActionPrice14.mmOverSubscriptionDepositPrice, CorporateActionPrice16.mmOverSubscriptionDepositPrice, CorporateActionPrice23.mmOverSubscriptionDepositPrice, CorporateActionPrice28.mmOverSubscriptionDepositPrice,
 					CorporateActionPrice34.mmOverSubscriptionDepositPrice, CorporateActionPrice1.mmOverSubscriptionDepositPrice, CorporateActionPrice58.mmOverSubscriptionDepositPrice, CorporateActionPrice61.mmOverSubscriptionDepositPrice,
 					CorporateActionPrice63.mmOverSubscriptionDepositPrice, CorporateActionPrice65.mmOverSubscriptionDepositPrice);
-			elementContext_lazy = () -> CorporateActionPrice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OverSubscriptionDepositPrice";
@@ -1308,11 +1308,6 @@ public class CorporateActionPrice {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice
-	 * CorporateActionPrice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1373,6 +1368,11 @@ public class CorporateActionPrice {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice
+	 * CorporateActionPrice}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1391,7 +1391,7 @@ public class CorporateActionPrice {
 					CorporateActionPrice26.mmCashValueForTax, CorporateActionPrice32.mmCashValueForTax, CorporateActionPrice38.mmCashValueForTax, CorporateActionPrice41.mmCashValueForTax, CorporateActionPrice31.mmCashValueForTax,
 					CorporateActionPrice37.mmCashValueForTax, CorporateActionPrice43.mmCashValueForTax, CorporateActionPrice45.mmCashValueForTax, CorporateActionPrice55.mmCashValueForTax, CorporateActionPrice51.mmCashValueForTax,
 					CorporateActionPrice59.mmCashValueForTax, CorporateActionPrice56.mmCashValueForTax, CorporateActionPrice66.mmCashValueForTax, CorporateActionPrice64.mmCashValueForTax);
-			elementContext_lazy = () -> CorporateActionPrice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashValueForTax";
@@ -1440,7 +1440,7 @@ public class CorporateActionPrice {
 	 */
 	public static final MMBusinessAssociationEnd mmPricingCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionPrice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PricingCalculation";
@@ -1475,9 +1475,10 @@ public class CorporateActionPrice {
 						CorporateActionPrice52.mmIndicativeOrMarketPrice, CorporateActionPrice55.mmIndicativeOrMarketPrice, CorporateActionPrice51.mmIndicativeOrMarketPrice, CorporateActionPrice59.mmIndicativeOrMarketPrice,
 						CorporateActionPrice56.mmIndicativeOrMarketPrice, CorporateActionPrice60.mmIndicativeOrMarketPrice, CorporateActionPrice62.mmIndicativeOrMarketPrice, CorporateActionPrice66.mmIndicativeOrMarketPrice,
 						CorporateActionPrice64.mmIndicativeOrMarketPrice);
-				element_lazy = () -> Arrays.asList(CorporateActionPrice.mmCorporateActionEvent, CorporateActionPrice.mmCorporateActionExercisePrice, CorporateActionPrice.mmGenericCashPriceReceivedPerProduct,
-						CorporateActionPrice.mmGenericCashPricePaidPerProduct, CorporateActionPrice.mmCashInLieuOfSharePrice, CorporateActionPrice.mmOverSubscriptionDepositPrice, CorporateActionPrice.mmCashValueForTax,
-						CorporateActionPrice.mmPricingCalculation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionPrice.mmCorporateActionEvent, com.tools20022.repository.entity.CorporateActionPrice.mmCorporateActionExercisePrice,
+						com.tools20022.repository.entity.CorporateActionPrice.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.entity.CorporateActionPrice.mmGenericCashPricePaidPerProduct,
+						com.tools20022.repository.entity.CorporateActionPrice.mmCashInLieuOfSharePrice, com.tools20022.repository.entity.CorporateActionPrice.mmOverSubscriptionDepositPrice,
+						com.tools20022.repository.entity.CorporateActionPrice.mmCashValueForTax, com.tools20022.repository.entity.CorporateActionPrice.mmPricingCalculation);
 				derivationComponent_lazy = () -> Arrays.asList(CorporateActionPrice8.mmObject(), CorporateActionPrice11.mmObject(), CorporateActionPrice19.mmObject(), CorporateActionPrice20.mmObject(), CorporateActionPrice29.mmObject(),
 						CorporateActionPrice35.mmObject(), CorporateActionPrice5.mmObject(), CorporateActionPrice9.mmObject(), CorporateActionPrice7.mmObject(), CorporateActionPrice12.mmObject(), CorporateActionPrice21.mmObject(),
 						CorporateActionPrice22.mmObject(), CorporateActionPrice30.mmObject(), CorporateActionPrice27.mmObject(), CorporateActionPrice36.mmObject(), CorporateActionPrice33.mmObject(), CorporateActionPrice39.mmObject(),
@@ -1489,6 +1490,11 @@ public class CorporateActionPrice {
 						CorporateActionPrice55.mmObject(), CorporateActionPrice51.mmObject(), CorporateActionPrice59.mmObject(), CorporateActionPrice56.mmObject(), CorporateActionPrice60.mmObject(), CorporateActionPrice58.mmObject(),
 						CorporateActionPrice61.mmObject(), CorporateActionPrice57.mmObject(), CorporateActionPrice63.mmObject(), CorporateActionPrice65.mmObject(), CorporateActionPrice62.mmObject(), CorporateActionPrice66.mmObject(),
 						CorporateActionPrice67.mmObject(), CorporateActionPrice64.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionPrice.class;
 			}
 		});
 		return mmObject_lazy.get();

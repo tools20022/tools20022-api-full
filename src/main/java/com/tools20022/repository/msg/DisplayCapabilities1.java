@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * The capabilities of the display components performing the transaction.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DisplayCapabilities1", propOrder = {"displayType", "numberOfLines", "lineWidth"})
 public class DisplayCapabilities1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -240,6 +246,7 @@ public class DisplayCapabilities1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DispTp", required = true)
 	public UserInterface2Code getDisplayType() {
 		return displayType;
 	}
@@ -248,6 +255,7 @@ public class DisplayCapabilities1 {
 		this.displayType = displayType;
 	}
 
+	@XmlElement(name = "NbOfLines", required = true)
 	public Max3NumericText getNumberOfLines() {
 		return numberOfLines;
 	}
@@ -256,6 +264,7 @@ public class DisplayCapabilities1 {
 		this.numberOfLines = numberOfLines;
 	}
 
+	@XmlElement(name = "LineWidth", required = true)
 	public Max3NumericText getLineWidth() {
 		return lineWidth;
 	}

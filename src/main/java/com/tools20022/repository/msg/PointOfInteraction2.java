@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Point of interaction (POI) performing the transaction.
@@ -85,6 +89,8 @@ import java.util.List;
  * PointOfInteraction1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PointOfInteraction2", propOrder = {"identification", "systemName", "groupIdentification", "capabilities", "component"})
 public class PointOfInteraction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -383,6 +389,7 @@ public class PointOfInteraction2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public GenericIdentification32 getIdentification() {
 		return identification;
 	}
@@ -391,6 +398,7 @@ public class PointOfInteraction2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SysNm")
 	public Max70Text getSystemName() {
 		return systemName;
 	}
@@ -399,6 +407,7 @@ public class PointOfInteraction2 {
 		this.systemName = systemName;
 	}
 
+	@XmlElement(name = "GrpId")
 	public Max35Text getGroupIdentification() {
 		return groupIdentification;
 	}
@@ -407,6 +416,7 @@ public class PointOfInteraction2 {
 		this.groupIdentification = groupIdentification;
 	}
 
+	@XmlElement(name = "Cpblties")
 	public PointOfInteractionCapabilities1 getCapabilities() {
 		return capabilities;
 	}
@@ -415,6 +425,7 @@ public class PointOfInteraction2 {
 		this.capabilities = capabilities;
 	}
 
+	@XmlElement(name = "Cmpnt")
 	public List<PointOfInteractionComponent3> getComponent() {
 		return component;
 	}

@@ -25,9 +25,11 @@ import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -51,9 +53,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.010.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -119,6 +118,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.010.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -130,6 +132,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BaselineMatchReportV03", propOrder = {"reportIdentification", "transactionIdentification", "establishedBaselineIdentification", "transactionStatus", "userTransactionReference", "buyer", "seller", "buyerBank", "sellerBank",
+		"baselineEstablishmentTrials", "comparedDocumentReference", "report", "requestForAction"})
 public class BaselineMatchReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +171,14 @@ public class BaselineMatchReportV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineMatchReportV03.class.getMethod("getReportIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -206,6 +219,14 @@ public class BaselineMatchReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineMatchReportV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
@@ -244,6 +265,14 @@ public class BaselineMatchReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineMatchReportV03.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionStatus4 transactionStatus;
 	/**
@@ -279,6 +308,14 @@ public class BaselineMatchReportV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineMatchReportV03.class.getMethod("getTransactionStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<DocumentIdentification5> userTransactionReference;
@@ -318,6 +355,14 @@ public class BaselineMatchReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineMatchReportV03.class.getMethod("getUserTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification26 buyer;
 	/**
@@ -354,6 +399,14 @@ public class BaselineMatchReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineMatchReportV03.class.getMethod("getBuyer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification26 seller;
 	/**
@@ -389,6 +442,14 @@ public class BaselineMatchReportV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineMatchReportV03.class.getMethod("getSeller", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BICIdentification1 buyerBank;
@@ -427,6 +488,14 @@ public class BaselineMatchReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineMatchReportV03.class.getMethod("getBuyerBank", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected BICIdentification1 sellerBank;
 	/**
@@ -464,6 +533,14 @@ public class BaselineMatchReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineMatchReportV03.class.getMethod("getSellerBank", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Limit1 baselineEstablishmentTrials;
 	/**
@@ -496,6 +573,14 @@ public class BaselineMatchReportV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Limit1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineMatchReportV03.class.getMethod("getBaselineEstablishmentTrials", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<DocumentIdentification4> comparedDocumentReference;
@@ -532,6 +617,14 @@ public class BaselineMatchReportV03 {
 			minOccurs = 2;
 			complexType_lazy = () -> DocumentIdentification4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineMatchReportV03.class.getMethod("getComparedDocumentReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MisMatchReport3 report;
 	/**
@@ -566,6 +659,14 @@ public class BaselineMatchReportV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MisMatchReport3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineMatchReportV03.class.getMethod("getReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PendingActivity2 requestForAction;
@@ -602,6 +703,14 @@ public class BaselineMatchReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineMatchReportV03.class.getMethod("getRequestForAction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -614,10 +723,12 @@ public class BaselineMatchReportV03 {
 				rootElement = "Document";
 				xmlTag = "BaselnMtchRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(BaselineMatchReportV03.mmReportIdentification, BaselineMatchReportV03.mmTransactionIdentification, BaselineMatchReportV03.mmEstablishedBaselineIdentification,
-						BaselineMatchReportV03.mmTransactionStatus, BaselineMatchReportV03.mmUserTransactionReference, BaselineMatchReportV03.mmBuyer, BaselineMatchReportV03.mmSeller, BaselineMatchReportV03.mmBuyerBank,
-						BaselineMatchReportV03.mmSellerBank, BaselineMatchReportV03.mmBaselineEstablishmentTrials, BaselineMatchReportV03.mmComparedDocumentReference, BaselineMatchReportV03.mmReport,
-						BaselineMatchReportV03.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmReportIdentification, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmBuyer,
+						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmSeller, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmBuyerBank, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmSellerBank,
+						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmBaselineEstablishmentTrials, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmComparedDocumentReference,
+						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmReport, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -627,10 +738,16 @@ public class BaselineMatchReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BaselineMatchReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptId", required = true)
 	public MessageIdentification1 getReportIdentification() {
 		return reportIdentification;
 	}
@@ -639,6 +756,7 @@ public class BaselineMatchReportV03 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -647,6 +765,7 @@ public class BaselineMatchReportV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "EstblishdBaselnId")
 	public DocumentIdentification3 getEstablishedBaselineIdentification() {
 		return establishedBaselineIdentification;
 	}
@@ -655,6 +774,7 @@ public class BaselineMatchReportV03 {
 		this.establishedBaselineIdentification = establishedBaselineIdentification;
 	}
 
+	@XmlElement(name = "TxSts", required = true)
 	public TransactionStatus4 getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -663,6 +783,7 @@ public class BaselineMatchReportV03 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "UsrTxRef")
 	public List<DocumentIdentification5> getUserTransactionReference() {
 		return userTransactionReference;
 	}
@@ -671,6 +792,7 @@ public class BaselineMatchReportV03 {
 		this.userTransactionReference = userTransactionReference;
 	}
 
+	@XmlElement(name = "Buyr", required = true)
 	public PartyIdentification26 getBuyer() {
 		return buyer;
 	}
@@ -679,6 +801,7 @@ public class BaselineMatchReportV03 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Sellr", required = true)
 	public PartyIdentification26 getSeller() {
 		return seller;
 	}
@@ -687,6 +810,7 @@ public class BaselineMatchReportV03 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "BuyrBk", required = true)
 	public BICIdentification1 getBuyerBank() {
 		return buyerBank;
 	}
@@ -695,6 +819,7 @@ public class BaselineMatchReportV03 {
 		this.buyerBank = buyerBank;
 	}
 
+	@XmlElement(name = "SellrBk", required = true)
 	public BICIdentification1 getSellerBank() {
 		return sellerBank;
 	}
@@ -703,6 +828,7 @@ public class BaselineMatchReportV03 {
 		this.sellerBank = sellerBank;
 	}
 
+	@XmlElement(name = "BaselnEstblishmtTrils", required = true)
 	public Limit1 getBaselineEstablishmentTrials() {
 		return baselineEstablishmentTrials;
 	}
@@ -711,6 +837,7 @@ public class BaselineMatchReportV03 {
 		this.baselineEstablishmentTrials = baselineEstablishmentTrials;
 	}
 
+	@XmlElement(name = "CmpardDocRef", required = true)
 	public List<DocumentIdentification4> getComparedDocumentReference() {
 		return comparedDocumentReference;
 	}
@@ -719,6 +846,7 @@ public class BaselineMatchReportV03 {
 		this.comparedDocumentReference = comparedDocumentReference;
 	}
 
+	@XmlElement(name = "Rpt", required = true)
 	public MisMatchReport3 getReport() {
 		return report;
 	}
@@ -727,11 +855,18 @@ public class BaselineMatchReportV03 {
 		this.report = report;
 	}
 
+	@XmlElement(name = "ReqForActn")
 	public PendingActivity2 getRequestForAction() {
 		return requestForAction;
 	}
 
 	public void setRequestForAction(PendingActivity2 requestForAction) {
 		this.requestForAction = requestForAction;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.010.03.03")
+	static public class Document {
+		@XmlElement(name = "BaselnMtchRpt", required = true)
+		public BaselineMatchReportV03 messageBody;
 	}
 }

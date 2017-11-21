@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Corporate action event option and related payout details.
@@ -63,6 +67,8 @@ import java.util.List;
  * definition} = "Corporate action event option and related payout details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionOption99", propOrder = {"optionNumber", "payoutDetails"})
 public class CorporateActionOption99 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -171,6 +177,7 @@ public class CorporateActionOption99 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OptnNb", required = true)
 	public Exact3NumericText getOptionNumber() {
 		return optionNumber;
 	}
@@ -179,6 +186,7 @@ public class CorporateActionOption99 {
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "PyoutDtls")
 	public List<CorporateActionPayout1> getPayoutDetails() {
 		return payoutDetails;
 	}

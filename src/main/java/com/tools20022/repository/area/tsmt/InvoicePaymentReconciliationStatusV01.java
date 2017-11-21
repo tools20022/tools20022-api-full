@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.BusinessLetter1;
 import com.tools20022.repository.msg.EncapsulatedBusinessMessage1;
 import com.tools20022.repository.msg.ReconciliationList1;
 import com.tools20022.repository.msgset.FactoringServicesISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The message InvoicePaymentReconciliationStatus is sent from a payee to a
@@ -45,9 +47,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.054.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -89,6 +88,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.054.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -100,6 +102,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvoicePaymentReconciliationStatusV01", propOrder = {"header", "reconciliationList", "reconciliationCount", "itemCount", "controlSum", "attachedMessage"})
 public class InvoicePaymentReconciliationStatusV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -139,6 +143,14 @@ public class InvoicePaymentReconciliationStatusV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> BusinessLetter1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoicePaymentReconciliationStatusV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ReconciliationList1> reconciliationList;
 	/**
@@ -172,6 +184,14 @@ public class InvoicePaymentReconciliationStatusV01 {
 			definition = "List of payment reconciliation information.";
 			minOccurs = 1;
 			complexType_lazy = () -> ReconciliationList1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoicePaymentReconciliationStatusV01.class.getMethod("getReconciliationList", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max15NumericText reconciliationCount;
@@ -208,6 +228,14 @@ public class InvoicePaymentReconciliationStatusV01 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoicePaymentReconciliationStatusV01.class.getMethod("getReconciliationCount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max15NumericText itemCount;
 	/**
@@ -242,6 +270,14 @@ public class InvoicePaymentReconciliationStatusV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoicePaymentReconciliationStatusV01.class.getMethod("getItemCount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DecimalNumber controlSum;
@@ -281,6 +317,14 @@ public class InvoicePaymentReconciliationStatusV01 {
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoicePaymentReconciliationStatusV01.class.getMethod("getControlSum", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<EncapsulatedBusinessMessage1> attachedMessage;
 	/**
@@ -315,6 +359,14 @@ public class InvoicePaymentReconciliationStatusV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoicePaymentReconciliationStatusV01.class.getMethod("getAttachedMessage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -327,8 +379,10 @@ public class InvoicePaymentReconciliationStatusV01 {
 				rootElement = "Document";
 				xmlTag = "InvcPmtRcncltnSts";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(InvoicePaymentReconciliationStatusV01.mmHeader, InvoicePaymentReconciliationStatusV01.mmReconciliationList, InvoicePaymentReconciliationStatusV01.mmReconciliationCount,
-						InvoicePaymentReconciliationStatusV01.mmItemCount, InvoicePaymentReconciliationStatusV01.mmControlSum, InvoicePaymentReconciliationStatusV01.mmAttachedMessage);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmHeader,
+						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmReconciliationList, com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmReconciliationCount,
+						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmItemCount, com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmControlSum,
+						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmAttachedMessage);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -338,10 +392,16 @@ public class InvoicePaymentReconciliationStatusV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvoicePaymentReconciliationStatusV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public BusinessLetter1 getHeader() {
 		return header;
 	}
@@ -350,6 +410,7 @@ public class InvoicePaymentReconciliationStatusV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "RcncltnList", required = true)
 	public List<ReconciliationList1> getReconciliationList() {
 		return reconciliationList;
 	}
@@ -358,6 +419,7 @@ public class InvoicePaymentReconciliationStatusV01 {
 		this.reconciliationList = reconciliationList;
 	}
 
+	@XmlElement(name = "RcncltnCnt")
 	public Max15NumericText getReconciliationCount() {
 		return reconciliationCount;
 	}
@@ -366,6 +428,7 @@ public class InvoicePaymentReconciliationStatusV01 {
 		this.reconciliationCount = reconciliationCount;
 	}
 
+	@XmlElement(name = "ItmCnt")
 	public Max15NumericText getItemCount() {
 		return itemCount;
 	}
@@ -374,6 +437,7 @@ public class InvoicePaymentReconciliationStatusV01 {
 		this.itemCount = itemCount;
 	}
 
+	@XmlElement(name = "CtrlSum")
 	public DecimalNumber getControlSum() {
 		return controlSum;
 	}
@@ -382,11 +446,18 @@ public class InvoicePaymentReconciliationStatusV01 {
 		this.controlSum = controlSum;
 	}
 
+	@XmlElement(name = "AttchdMsg")
 	public List<EncapsulatedBusinessMessage1> getAttachedMessage() {
 		return attachedMessage;
 	}
 
 	public void setAttachedMessage(List<EncapsulatedBusinessMessage1> attachedMessage) {
 		this.attachedMessage = attachedMessage;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.054.01.01")
+	static public class Document {
+		@XmlElement(name = "InvcPmtRcncltnSts", required = true)
+		public InvoicePaymentReconciliationStatusV01 messageBody;
 	}
 }

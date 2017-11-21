@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Scheme;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Proprietary quantity format.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ProprietaryQuantity2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProprietaryQuantity8", propOrder = {"quantity", "quantityType", "issuer", "schemeName"})
 public class ProprietaryQuantity8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -290,6 +296,7 @@ public class ProprietaryQuantity8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public DecimalNumber getQuantity() {
 		return quantity;
 	}
@@ -298,6 +305,7 @@ public class ProprietaryQuantity8 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "QtyTp", required = true)
 	public Exact4AlphaNumericText getQuantityType() {
 		return quantityType;
 	}
@@ -306,6 +314,7 @@ public class ProprietaryQuantity8 {
 		this.quantityType = quantityType;
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public Max35Text getIssuer() {
 		return issuer;
 	}
@@ -314,6 +323,7 @@ public class ProprietaryQuantity8 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "SchmeNm")
 	public Max35Text getSchemeName() {
 		return schemeName;
 	}

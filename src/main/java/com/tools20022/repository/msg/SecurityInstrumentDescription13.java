@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the security instrument by its name and typical characteristics.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityInstrumentDescription13", propOrder = {"financialInstrumentGeneralAttributes", "debtInstrumentAttributes", "derivativeInstrumentAttributes"})
 public class SecurityInstrumentDescription13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -226,6 +232,7 @@ public class SecurityInstrumentDescription13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmGnlAttrbts", required = true)
 	public SecurityInstrumentDescription11 getFinancialInstrumentGeneralAttributes() {
 		return financialInstrumentGeneralAttributes;
 	}
@@ -234,6 +241,7 @@ public class SecurityInstrumentDescription13 {
 		this.financialInstrumentGeneralAttributes = financialInstrumentGeneralAttributes;
 	}
 
+	@XmlElement(name = "DebtInstrmAttrbts")
 	public DebtInstrument4 getDebtInstrumentAttributes() {
 		return debtInstrumentAttributes;
 	}
@@ -242,6 +250,7 @@ public class SecurityInstrumentDescription13 {
 		this.debtInstrumentAttributes = debtInstrumentAttributes;
 	}
 
+	@XmlElement(name = "DerivInstrmAttrbts", required = true)
 	public DerivativeInstrument6 getDerivativeInstrumentAttributes() {
 		return derivativeInstrumentAttributes;
 	}

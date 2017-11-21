@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.OriginalGroupHeader1;
 import com.tools20022.repository.msg.OriginalPaymentInstruction1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -55,9 +57,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.002.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
@@ -91,6 +90,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.002.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -114,6 +116,8 @@ import java.util.List;
  * CustomerPaymentStatusReportV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustomerPaymentStatusReportV04", propOrder = {"groupHeader", "originalGroupInformationAndStatus", "originalPaymentInformationAndStatus", "supplementaryData"})
 public class CustomerPaymentStatusReportV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -153,6 +157,14 @@ public class CustomerPaymentStatusReportV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader52.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentStatusReportV04.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OriginalGroupHeader1 originalGroupInformationAndStatus;
 	/**
@@ -191,6 +203,14 @@ public class CustomerPaymentStatusReportV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> OriginalGroupHeader1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentStatusReportV04.class.getMethod("getOriginalGroupInformationAndStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<OriginalPaymentInstruction1> originalPaymentInformationAndStatus;
 	/**
@@ -227,6 +247,14 @@ public class CustomerPaymentStatusReportV04 {
 			definition = "Information concerning the original payment information, to which the status report message refers.";
 			minOccurs = 0;
 			complexType_lazy = () -> OriginalPaymentInstruction1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentStatusReportV04.class.getMethod("getOriginalPaymentInformationAndStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -265,6 +293,14 @@ public class CustomerPaymentStatusReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentStatusReportV04.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -279,8 +315,9 @@ public class CustomerPaymentStatusReportV04 {
 				rootElement = "Document";
 				xmlTag = "CstmrPmtStsRpt";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentStatusReportV04.mmGroupHeader, CustomerPaymentStatusReportV04.mmOriginalGroupInformationAndStatus,
-						CustomerPaymentStatusReportV04.mmOriginalPaymentInformationAndStatus, CustomerPaymentStatusReportV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentStatusReportV04.mmGroupHeader,
+						com.tools20022.repository.area.pain.CustomerPaymentStatusReportV04.mmOriginalGroupInformationAndStatus, com.tools20022.repository.area.pain.CustomerPaymentStatusReportV04.mmOriginalPaymentInformationAndStatus,
+						com.tools20022.repository.area.pain.CustomerPaymentStatusReportV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";
@@ -290,10 +327,16 @@ public class CustomerPaymentStatusReportV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CustomerPaymentStatusReportV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader52 getGroupHeader() {
 		return groupHeader;
 	}
@@ -302,6 +345,7 @@ public class CustomerPaymentStatusReportV04 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
 	public OriginalGroupHeader1 getOriginalGroupInformationAndStatus() {
 		return originalGroupInformationAndStatus;
 	}
@@ -310,6 +354,7 @@ public class CustomerPaymentStatusReportV04 {
 		this.originalGroupInformationAndStatus = originalGroupInformationAndStatus;
 	}
 
+	@XmlElement(name = "OrgnlPmtInfAndSts")
 	public List<OriginalPaymentInstruction1> getOriginalPaymentInformationAndStatus() {
 		return originalPaymentInformationAndStatus;
 	}
@@ -318,11 +363,18 @@ public class CustomerPaymentStatusReportV04 {
 		this.originalPaymentInformationAndStatus = originalPaymentInformationAndStatus;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.002.04.04")
+	static public class Document {
+		@XmlElement(name = "CstmrPmtStsRpt", required = true)
+		public CustomerPaymentStatusReportV04 messageBody;
 	}
 }

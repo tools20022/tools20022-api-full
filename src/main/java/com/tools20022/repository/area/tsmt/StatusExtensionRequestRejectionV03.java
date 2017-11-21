@@ -28,8 +28,10 @@ import com.tools20022.repository.msg.SimpleIdentificationInformation;
 import com.tools20022.repository.msg.TransactionStatus4;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.033.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -93,6 +92,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.033.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -104,6 +106,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusExtensionRequestRejectionV03", propOrder = {"rejectionIdentification", "transactionIdentification", "submitterTransactionReference", "statusNotToBeExtended", "rejectionReason"})
 public class StatusExtensionRequestRejectionV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -140,6 +144,14 @@ public class StatusExtensionRequestRejectionV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusExtensionRequestRejectionV03.class.getMethod("getRejectionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -180,6 +192,14 @@ public class StatusExtensionRequestRejectionV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusExtensionRequestRejectionV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
@@ -215,6 +235,14 @@ public class StatusExtensionRequestRejectionV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusExtensionRequestRejectionV03.class.getMethod("getSubmitterTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TransactionStatus4 statusNotToBeExtended;
@@ -252,6 +280,14 @@ public class StatusExtensionRequestRejectionV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusExtensionRequestRejectionV03.class.getMethod("getStatusNotToBeExtended", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Reason2 rejectionReason;
 	/**
@@ -286,6 +322,14 @@ public class StatusExtensionRequestRejectionV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Reason2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusExtensionRequestRejectionV03.class.getMethod("getRejectionReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -298,8 +342,9 @@ public class StatusExtensionRequestRejectionV03 {
 				rootElement = "Document";
 				xmlTag = "StsXtnsnReqRjctn";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(StatusExtensionRequestRejectionV03.mmRejectionIdentification, StatusExtensionRequestRejectionV03.mmTransactionIdentification,
-						StatusExtensionRequestRejectionV03.mmSubmitterTransactionReference, StatusExtensionRequestRejectionV03.mmStatusNotToBeExtended, StatusExtensionRequestRejectionV03.mmRejectionReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmRejectionIdentification,
+						com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmSubmitterTransactionReference,
+						com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmStatusNotToBeExtended, com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmRejectionReason);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -309,10 +354,16 @@ public class StatusExtensionRequestRejectionV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StatusExtensionRequestRejectionV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RjctnId", required = true)
 	public MessageIdentification1 getRejectionIdentification() {
 		return rejectionIdentification;
 	}
@@ -321,6 +372,7 @@ public class StatusExtensionRequestRejectionV03 {
 		this.rejectionIdentification = rejectionIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -329,6 +381,7 @@ public class StatusExtensionRequestRejectionV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "SubmitrTxRef")
 	public SimpleIdentificationInformation getSubmitterTransactionReference() {
 		return submitterTransactionReference;
 	}
@@ -337,6 +390,7 @@ public class StatusExtensionRequestRejectionV03 {
 		this.submitterTransactionReference = submitterTransactionReference;
 	}
 
+	@XmlElement(name = "StsNotToBeXtnded", required = true)
 	public TransactionStatus4 getStatusNotToBeExtended() {
 		return statusNotToBeExtended;
 	}
@@ -345,11 +399,18 @@ public class StatusExtensionRequestRejectionV03 {
 		this.statusNotToBeExtended = statusNotToBeExtended;
 	}
 
+	@XmlElement(name = "RjctnRsn", required = true)
 	public Reason2 getRejectionReason() {
 		return rejectionReason;
 	}
 
 	public void setRejectionReason(Reason2 rejectionReason) {
 		this.rejectionReason = rejectionReason;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.033.03.03")
+	static public class Document {
+		@XmlElement(name = "StsXtnsnReqRjctn", required = true)
+		public StatusExtensionRequestRejectionV03 messageBody;
 	}
 }

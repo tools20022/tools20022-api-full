@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -66,9 +68,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.011.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -131,6 +130,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.011.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -146,6 +148,9 @@ import java.util.List;
  * BaselineReportV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BaselineReportV04", propOrder = {"reportIdentification", "relatedMessageReference", "reportType", "transactionIdentification", "establishedBaselineIdentification", "transactionStatus", "userTransactionReference", "buyer",
+		"seller", "buyerBank", "sellerBank", "reportedLineItem", "requestForAction"})
 public class BaselineReportV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -188,6 +193,14 @@ public class BaselineReportV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReportV04.class.getMethod("getReportIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MessageIdentification1 relatedMessageReference;
@@ -233,6 +246,14 @@ public class BaselineReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReportV04.class.getMethod("getRelatedMessageReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ReportType2 reportType;
 	/**
@@ -272,6 +293,14 @@ public class BaselineReportV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ReportType2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReportV04.class.getMethod("getReportType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -318,6 +347,14 @@ public class BaselineReportV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReportV04.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification6 establishedBaselineIdentification;
 	/**
@@ -362,6 +399,14 @@ public class BaselineReportV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification6.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReportV04.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionStatus4 transactionStatus;
 	/**
@@ -403,6 +448,14 @@ public class BaselineReportV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReportV04.class.getMethod("getTransactionStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<DocumentIdentification5> userTransactionReference;
@@ -448,6 +501,14 @@ public class BaselineReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReportV04.class.getMethod("getUserTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification26 buyer;
 	/**
@@ -490,6 +551,14 @@ public class BaselineReportV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReportV04.class.getMethod("getBuyer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification26 seller;
 	/**
@@ -531,6 +600,14 @@ public class BaselineReportV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReportV04.class.getMethod("getSeller", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BICIdentification1 buyerBank;
@@ -575,6 +652,14 @@ public class BaselineReportV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReportV04.class.getMethod("getBuyerBank", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected BICIdentification1 sellerBank;
 	/**
@@ -618,6 +703,14 @@ public class BaselineReportV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReportV04.class.getMethod("getSellerBank", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected LineItem14 reportedLineItem;
 	/**
@@ -657,6 +750,14 @@ public class BaselineReportV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> LineItem14.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReportV04.class.getMethod("getReportedLineItem", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PendingActivity2 requestForAction;
@@ -699,6 +800,14 @@ public class BaselineReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BaselineReportV04.class.getMethod("getRequestForAction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -712,9 +821,12 @@ public class BaselineReportV04 {
 				rootElement = "Document";
 				xmlTag = "BaselnRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(BaselineReportV04.mmReportIdentification, BaselineReportV04.mmRelatedMessageReference, BaselineReportV04.mmReportType, BaselineReportV04.mmTransactionIdentification,
-						BaselineReportV04.mmEstablishedBaselineIdentification, BaselineReportV04.mmTransactionStatus, BaselineReportV04.mmUserTransactionReference, BaselineReportV04.mmBuyer, BaselineReportV04.mmSeller,
-						BaselineReportV04.mmBuyerBank, BaselineReportV04.mmSellerBank, BaselineReportV04.mmReportedLineItem, BaselineReportV04.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineReportV04.mmReportIdentification, com.tools20022.repository.area.tsmt.BaselineReportV04.mmRelatedMessageReference,
+						com.tools20022.repository.area.tsmt.BaselineReportV04.mmReportType, com.tools20022.repository.area.tsmt.BaselineReportV04.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.BaselineReportV04.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.BaselineReportV04.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.BaselineReportV04.mmUserTransactionReference, com.tools20022.repository.area.tsmt.BaselineReportV04.mmBuyer, com.tools20022.repository.area.tsmt.BaselineReportV04.mmSeller,
+						com.tools20022.repository.area.tsmt.BaselineReportV04.mmBuyerBank, com.tools20022.repository.area.tsmt.BaselineReportV04.mmSellerBank, com.tools20022.repository.area.tsmt.BaselineReportV04.mmReportedLineItem,
+						com.tools20022.repository.area.tsmt.BaselineReportV04.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -724,10 +836,16 @@ public class BaselineReportV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BaselineReportV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptId", required = true)
 	public MessageIdentification1 getReportIdentification() {
 		return reportIdentification;
 	}
@@ -736,6 +854,7 @@ public class BaselineReportV04 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "RltdMsgRef")
 	public MessageIdentification1 getRelatedMessageReference() {
 		return relatedMessageReference;
 	}
@@ -744,6 +863,7 @@ public class BaselineReportV04 {
 		this.relatedMessageReference = relatedMessageReference;
 	}
 
+	@XmlElement(name = "RptTp", required = true)
 	public ReportType2 getReportType() {
 		return reportType;
 	}
@@ -752,6 +872,7 @@ public class BaselineReportV04 {
 		this.reportType = reportType;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -760,6 +881,7 @@ public class BaselineReportV04 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "EstblishdBaselnId", required = true)
 	public DocumentIdentification6 getEstablishedBaselineIdentification() {
 		return establishedBaselineIdentification;
 	}
@@ -768,6 +890,7 @@ public class BaselineReportV04 {
 		this.establishedBaselineIdentification = establishedBaselineIdentification;
 	}
 
+	@XmlElement(name = "TxSts", required = true)
 	public TransactionStatus4 getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -776,6 +899,7 @@ public class BaselineReportV04 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "UsrTxRef")
 	public List<DocumentIdentification5> getUserTransactionReference() {
 		return userTransactionReference;
 	}
@@ -784,6 +908,7 @@ public class BaselineReportV04 {
 		this.userTransactionReference = userTransactionReference;
 	}
 
+	@XmlElement(name = "Buyr", required = true)
 	public PartyIdentification26 getBuyer() {
 		return buyer;
 	}
@@ -792,6 +917,7 @@ public class BaselineReportV04 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Sellr", required = true)
 	public PartyIdentification26 getSeller() {
 		return seller;
 	}
@@ -800,6 +926,7 @@ public class BaselineReportV04 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "BuyrBk", required = true)
 	public BICIdentification1 getBuyerBank() {
 		return buyerBank;
 	}
@@ -808,6 +935,7 @@ public class BaselineReportV04 {
 		this.buyerBank = buyerBank;
 	}
 
+	@XmlElement(name = "SellrBk", required = true)
 	public BICIdentification1 getSellerBank() {
 		return sellerBank;
 	}
@@ -816,6 +944,7 @@ public class BaselineReportV04 {
 		this.sellerBank = sellerBank;
 	}
 
+	@XmlElement(name = "RptdLineItm", required = true)
 	public LineItem14 getReportedLineItem() {
 		return reportedLineItem;
 	}
@@ -824,11 +953,18 @@ public class BaselineReportV04 {
 		this.reportedLineItem = reportedLineItem;
 	}
 
+	@XmlElement(name = "ReqForActn")
 	public PendingActivity2 getRequestForAction() {
 		return requestForAction;
 	}
 
 	public void setRequestForAction(PendingActivity2 requestForAction) {
 		this.requestForAction = requestForAction;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.011.04.04")
+	static public class Document {
+		@XmlElement(name = "BaselnRpt", required = true)
+		public BaselineReportV04 messageBody;
 	}
 }

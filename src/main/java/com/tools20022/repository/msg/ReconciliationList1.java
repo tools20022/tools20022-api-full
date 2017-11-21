@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies a list of reconciliation information concerning financial items.
@@ -116,6 +120,9 @@ import java.util.List;
  * "Specifies a list of reconciliation information concerning financial items."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReconciliationList1", propOrder = {"date", "relatedDocument", "recipient", "advisor", "parameters", "paymentReference", "paymentMeans", "paymentDate", "paymentTerms", "paymentAmount", "item", "itemCount", "controlSum",
+		"associatedDocument", "additionalInformation", "validationStatusInformation"})
 public class ReconciliationList1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -881,6 +888,7 @@ public class ReconciliationList1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
@@ -889,6 +897,7 @@ public class ReconciliationList1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "RltdDoc")
 	public List<QualifiedDocumentInformation1> getRelatedDocument() {
 		return relatedDocument;
 	}
@@ -897,6 +906,7 @@ public class ReconciliationList1 {
 		this.relatedDocument = relatedDocument;
 	}
 
+	@XmlElement(name = "Rcpt", required = true)
 	public QualifiedPartyIdentification1 getRecipient() {
 		return recipient;
 	}
@@ -905,6 +915,7 @@ public class ReconciliationList1 {
 		this.recipient = recipient;
 	}
 
+	@XmlElement(name = "Advsr", required = true)
 	public QualifiedPartyIdentification1 getAdvisor() {
 		return advisor;
 	}
@@ -913,6 +924,7 @@ public class ReconciliationList1 {
 		this.advisor = advisor;
 	}
 
+	@XmlElement(name = "Params", required = true)
 	public FinancialItemParameters1 getParameters() {
 		return parameters;
 	}
@@ -921,6 +933,7 @@ public class ReconciliationList1 {
 		this.parameters = parameters;
 	}
 
+	@XmlElement(name = "PmtRef", required = true)
 	public PaymentIdentification1 getPaymentReference() {
 		return paymentReference;
 	}
@@ -929,6 +942,7 @@ public class ReconciliationList1 {
 		this.paymentReference = paymentReference;
 	}
 
+	@XmlElement(name = "PmtMeans", required = true)
 	public PaymentMeans1 getPaymentMeans() {
 		return paymentMeans;
 	}
@@ -937,6 +951,7 @@ public class ReconciliationList1 {
 		this.paymentMeans = paymentMeans;
 	}
 
+	@XmlElement(name = "PmtDt", required = true)
 	public ISODate getPaymentDate() {
 		return paymentDate;
 	}
@@ -945,6 +960,7 @@ public class ReconciliationList1 {
 		this.paymentDate = paymentDate;
 	}
 
+	@XmlElement(name = "PmtTerms", required = true)
 	public PaymentTerms6 getPaymentTerms() {
 		return paymentTerms;
 	}
@@ -953,6 +969,7 @@ public class ReconciliationList1 {
 		this.paymentTerms = paymentTerms;
 	}
 
+	@XmlElement(name = "PmtAmt", required = true)
 	public CurrencyAndAmount getPaymentAmount() {
 		return paymentAmount;
 	}
@@ -961,6 +978,7 @@ public class ReconciliationList1 {
 		this.paymentAmount = paymentAmount;
 	}
 
+	@XmlElement(name = "Itm", required = true)
 	public List<FinancialItem1> getItem() {
 		return item;
 	}
@@ -969,6 +987,7 @@ public class ReconciliationList1 {
 		this.item = item;
 	}
 
+	@XmlElement(name = "ItmCnt", required = true)
 	public Max15NumericText getItemCount() {
 		return itemCount;
 	}
@@ -977,6 +996,7 @@ public class ReconciliationList1 {
 		this.itemCount = itemCount;
 	}
 
+	@XmlElement(name = "CtrlSum")
 	public DecimalNumber getControlSum() {
 		return controlSum;
 	}
@@ -985,6 +1005,7 @@ public class ReconciliationList1 {
 		this.controlSum = controlSum;
 	}
 
+	@XmlElement(name = "AssoctdDoc")
 	public List<QualifiedDocumentInformation1> getAssociatedDocument() {
 		return associatedDocument;
 	}
@@ -993,6 +1014,7 @@ public class ReconciliationList1 {
 		this.associatedDocument = associatedDocument;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max2000Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -1001,6 +1023,7 @@ public class ReconciliationList1 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "VldtnStsInf")
 	public ValidationStatusInformation1 getValidationStatusInformation() {
 		return validationStatusInformation;
 	}

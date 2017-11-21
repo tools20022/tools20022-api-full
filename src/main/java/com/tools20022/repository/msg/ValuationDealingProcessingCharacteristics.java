@@ -37,6 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Valuation dealing processing characteristics linked to the instrument, ie,
@@ -113,6 +117,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ValuationDealingProcessingCharacteristics", propOrder = {"valuationFrequency", "valuationFrequencyDescription", "subscriptionDealingFrequency", "subscriptionDealFrequencyDescription", "limitedSubscriptionPeriod",
+		"redemptionDealingFrequency", "redemptionDealFrequencyDescription", "limitedRedemptionPeriod", "decimalisationPrice", "decimalisationUnits", "dualFundIndicator", "priceMethod", "priceCurrency"})
 public class ValuationDealingProcessingCharacteristics {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -748,6 +755,7 @@ public class ValuationDealingProcessingCharacteristics {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ValtnFrqcy", required = true)
 	public EventFrequency2Code getValuationFrequency() {
 		return valuationFrequency;
 	}
@@ -756,6 +764,7 @@ public class ValuationDealingProcessingCharacteristics {
 		this.valuationFrequency = valuationFrequency;
 	}
 
+	@XmlElement(name = "ValtnFrqcyDesc")
 	public Max350Text getValuationFrequencyDescription() {
 		return valuationFrequencyDescription;
 	}
@@ -764,6 +773,7 @@ public class ValuationDealingProcessingCharacteristics {
 		this.valuationFrequencyDescription = valuationFrequencyDescription;
 	}
 
+	@XmlElement(name = "SbcptDealgFrqcy", required = true)
 	public EventFrequency2Code getSubscriptionDealingFrequency() {
 		return subscriptionDealingFrequency;
 	}
@@ -772,6 +782,7 @@ public class ValuationDealingProcessingCharacteristics {
 		this.subscriptionDealingFrequency = subscriptionDealingFrequency;
 	}
 
+	@XmlElement(name = "SbcptDealFrqcyDesc")
 	public Max350Text getSubscriptionDealFrequencyDescription() {
 		return subscriptionDealFrequencyDescription;
 	}
@@ -780,6 +791,7 @@ public class ValuationDealingProcessingCharacteristics {
 		this.subscriptionDealFrequencyDescription = subscriptionDealFrequencyDescription;
 	}
 
+	@XmlElement(name = "LtdSbcptPrd")
 	public Max350Text getLimitedSubscriptionPeriod() {
 		return limitedSubscriptionPeriod;
 	}
@@ -788,6 +800,7 @@ public class ValuationDealingProcessingCharacteristics {
 		this.limitedSubscriptionPeriod = limitedSubscriptionPeriod;
 	}
 
+	@XmlElement(name = "RedDealgFrqcy", required = true)
 	public EventFrequency2Code getRedemptionDealingFrequency() {
 		return redemptionDealingFrequency;
 	}
@@ -796,6 +809,7 @@ public class ValuationDealingProcessingCharacteristics {
 		this.redemptionDealingFrequency = redemptionDealingFrequency;
 	}
 
+	@XmlElement(name = "RedDealFrqcyDesc")
 	public Max350Text getRedemptionDealFrequencyDescription() {
 		return redemptionDealFrequencyDescription;
 	}
@@ -804,6 +818,7 @@ public class ValuationDealingProcessingCharacteristics {
 		this.redemptionDealFrequencyDescription = redemptionDealFrequencyDescription;
 	}
 
+	@XmlElement(name = "LtdRedPrd")
 	public Max350Text getLimitedRedemptionPeriod() {
 		return limitedRedemptionPeriod;
 	}
@@ -812,6 +827,7 @@ public class ValuationDealingProcessingCharacteristics {
 		this.limitedRedemptionPeriod = limitedRedemptionPeriod;
 	}
 
+	@XmlElement(name = "DcmlstnPric", required = true)
 	public Number getDecimalisationPrice() {
 		return decimalisationPrice;
 	}
@@ -820,6 +836,7 @@ public class ValuationDealingProcessingCharacteristics {
 		this.decimalisationPrice = decimalisationPrice;
 	}
 
+	@XmlElement(name = "DcmlstnUnits", required = true)
 	public Number getDecimalisationUnits() {
 		return decimalisationUnits;
 	}
@@ -828,6 +845,7 @@ public class ValuationDealingProcessingCharacteristics {
 		this.decimalisationUnits = decimalisationUnits;
 	}
 
+	@XmlElement(name = "DualFndInd", required = true)
 	public YesNoIndicator getDualFundIndicator() {
 		return dualFundIndicator;
 	}
@@ -836,6 +854,7 @@ public class ValuationDealingProcessingCharacteristics {
 		this.dualFundIndicator = dualFundIndicator;
 	}
 
+	@XmlElement(name = "PricMtd", required = true)
 	public PriceMethod1Code getPriceMethod() {
 		return priceMethod;
 	}
@@ -844,6 +863,7 @@ public class ValuationDealingProcessingCharacteristics {
 		this.priceMethod = priceMethod;
 	}
 
+	@XmlElement(name = "PricCcy", required = true)
 	public List<ActiveCurrencyCode> getPriceCurrency() {
 		return priceCurrency;
 	}

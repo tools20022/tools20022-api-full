@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.Margin1;
 import com.tools20022.repository.msg.SegregatedIndependentAmountMargin1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the margin terms for the variation margin and the segregated
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarginTerms1Choice", propOrder = {"marginDetails", "segregatedIndependentAmountMargin"})
 public class MarginTerms1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class MarginTerms1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MrgnDtls", required = true)
 	public Margin1 getMarginDetails() {
 		return marginDetails;
 	}
@@ -191,6 +198,7 @@ public class MarginTerms1Choice {
 		this.marginDetails = marginDetails;
 	}
 
+	@XmlElement(name = "SgrtdIndpdntAmtMrgn", required = true)
 	public SegregatedIndependentAmountMargin1 getSegregatedIndependentAmountMargin() {
 		return segregatedIndependentAmountMargin;
 	}

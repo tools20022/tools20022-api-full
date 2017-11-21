@@ -35,6 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics that unambiguously identify the global invoice
@@ -115,6 +119,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestGroupInformation1", propOrder = {"groupIdentification", "creationDateTime", "authorisation", "numberOfInvoiceRequests", "totalBulkInvoiceAmount", "currency", "financingAgreement", "financingRequestor",
+		"intermediaryAgent", "firstAgent", "agreementClauses", "additionalInformation"})
 public class RequestGroupInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -705,6 +712,7 @@ public class RequestGroupInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpId", required = true)
 	public Max35Text getGroupIdentification() {
 		return groupIdentification;
 	}
@@ -713,6 +721,7 @@ public class RequestGroupInformation1 {
 		this.groupIdentification = groupIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -721,6 +730,7 @@ public class RequestGroupInformation1 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "Authstn")
 	public List<Max128Text> getAuthorisation() {
 		return authorisation;
 	}
@@ -729,6 +739,7 @@ public class RequestGroupInformation1 {
 		this.authorisation = authorisation;
 	}
 
+	@XmlElement(name = "NbOfInvcReqs")
 	public Max15NumericText getNumberOfInvoiceRequests() {
 		return numberOfInvoiceRequests;
 	}
@@ -737,6 +748,7 @@ public class RequestGroupInformation1 {
 		this.numberOfInvoiceRequests = numberOfInvoiceRequests;
 	}
 
+	@XmlElement(name = "TtlBlkInvcAmt")
 	public ActiveCurrencyAndAmount getTotalBulkInvoiceAmount() {
 		return totalBulkInvoiceAmount;
 	}
@@ -745,6 +757,7 @@ public class RequestGroupInformation1 {
 		this.totalBulkInvoiceAmount = totalBulkInvoiceAmount;
 	}
 
+	@XmlElement(name = "Ccy", required = true)
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -753,6 +766,7 @@ public class RequestGroupInformation1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "FincgAgrmt")
 	public Max350Text getFinancingAgreement() {
 		return financingAgreement;
 	}
@@ -761,6 +775,7 @@ public class RequestGroupInformation1 {
 		this.financingAgreement = financingAgreement;
 	}
 
+	@XmlElement(name = "FincgRqstr", required = true)
 	public PartyIdentificationAndAccount6 getFinancingRequestor() {
 		return financingRequestor;
 	}
@@ -769,6 +784,7 @@ public class RequestGroupInformation1 {
 		this.financingRequestor = financingRequestor;
 	}
 
+	@XmlElement(name = "IntrmyAgt")
 	public FinancialInstitutionIdentification6 getIntermediaryAgent() {
 		return intermediaryAgent;
 	}
@@ -777,6 +793,7 @@ public class RequestGroupInformation1 {
 		this.intermediaryAgent = intermediaryAgent;
 	}
 
+	@XmlElement(name = "FrstAgt", required = true)
 	public FinancialInstitutionIdentification6 getFirstAgent() {
 		return firstAgent;
 	}
@@ -785,6 +802,7 @@ public class RequestGroupInformation1 {
 		this.firstAgent = firstAgent;
 	}
 
+	@XmlElement(name = "AgrmtClauses")
 	public List<AgreementClauses1> getAgreementClauses() {
 		return agreementClauses;
 	}
@@ -793,6 +811,7 @@ public class RequestGroupInformation1 {
 		this.agreementClauses = agreementClauses;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<AdditionalInformation1> getAdditionalInformation() {
 		return additionalInformation;
 	}

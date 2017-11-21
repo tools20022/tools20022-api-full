@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.DateTimePeriodDetails1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -48,9 +50,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.003.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -86,6 +85,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.003.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -97,6 +99,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ActivityReportRequestV03", propOrder = {"requestIdentification", "entitiesToBeReported", "reportPeriod"})
 public class ActivityReportRequestV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -133,6 +137,14 @@ public class ActivityReportRequestV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ActivityReportRequestV03.class.getMethod("getRequestIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<BICIdentification1> entitiesToBeReported;
@@ -171,6 +183,14 @@ public class ActivityReportRequestV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ActivityReportRequestV03.class.getMethod("getEntitiesToBeReported", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DateTimePeriodDetails1 reportPeriod;
 	/**
@@ -207,6 +227,14 @@ public class ActivityReportRequestV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> DateTimePeriodDetails1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ActivityReportRequestV03.class.getMethod("getReportPeriod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -219,7 +247,8 @@ public class ActivityReportRequestV03 {
 				rootElement = "Document";
 				xmlTag = "ActvtyReqRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ActivityReportRequestV03.mmRequestIdentification, ActivityReportRequestV03.mmEntitiesToBeReported, ActivityReportRequestV03.mmReportPeriod);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActivityReportRequestV03.mmRequestIdentification, com.tools20022.repository.area.tsmt.ActivityReportRequestV03.mmEntitiesToBeReported,
+						com.tools20022.repository.area.tsmt.ActivityReportRequestV03.mmReportPeriod);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -229,10 +258,16 @@ public class ActivityReportRequestV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ActivityReportRequestV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqId", required = true)
 	public MessageIdentification1 getRequestIdentification() {
 		return requestIdentification;
 	}
@@ -241,6 +276,7 @@ public class ActivityReportRequestV03 {
 		this.requestIdentification = requestIdentification;
 	}
 
+	@XmlElement(name = "NttiesToBeRptd")
 	public List<BICIdentification1> getEntitiesToBeReported() {
 		return entitiesToBeReported;
 	}
@@ -249,11 +285,18 @@ public class ActivityReportRequestV03 {
 		this.entitiesToBeReported = entitiesToBeReported;
 	}
 
+	@XmlElement(name = "RptPrd", required = true)
 	public DateTimePeriodDetails1 getReportPeriod() {
 		return reportPeriod;
 	}
 
 	public void setReportPeriod(DateTimePeriodDetails1 reportPeriod) {
 		this.reportPeriod = reportPeriod;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.003.03.03")
+	static public class Document {
+		@XmlElement(name = "ActvtyReqRpt", required = true)
+		public ActivityReportRequestV03 messageBody;
 	}
 }

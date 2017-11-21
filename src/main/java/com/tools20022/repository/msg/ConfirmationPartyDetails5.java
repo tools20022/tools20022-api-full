@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parties used for acting parties that apply either to the whole message or to
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ConfirmationPartyDetails5", propOrder = {"identification", "alternateIdentification", "processingIdentification", "additionalInformation", "investorProtectionAssociationMembership"})
 public class ConfirmationPartyDetails5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -338,6 +344,7 @@ public class ConfirmationPartyDetails5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification32Choice getIdentification() {
 		return identification;
 	}
@@ -346,6 +353,7 @@ public class ConfirmationPartyDetails5 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification5 getAlternateIdentification() {
 		return alternateIdentification;
 	}
@@ -354,6 +362,7 @@ public class ConfirmationPartyDetails5 {
 		this.alternateIdentification = alternateIdentification;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public Max35Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -362,6 +371,7 @@ public class ConfirmationPartyDetails5 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public PartyTextInformation5 getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -370,6 +380,7 @@ public class ConfirmationPartyDetails5 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "InvstrPrtcnAssoctnMmbsh")
 	public YesNoIndicator getInvestorProtectionAssociationMembership() {
 		return investorProtectionAssociationMembership;
 	}

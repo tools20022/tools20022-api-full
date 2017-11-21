@@ -36,16 +36,13 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmInvoicePartyRole
- * Invoice.mmInvoicePartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvoicePartyRole#mmInvoice
+ * InvoicePartyRole.mmInvoice}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -55,11 +52,14 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.repository.entity.InvoicerRole InvoicerRole}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvoicePartyRole#mmInvoice
- * InvoicePartyRole.mmInvoice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmInvoicePartyRole
+ * Invoice.mmInvoicePartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -115,7 +115,7 @@ public class InvoicePartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmInvoice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvoicePartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvoicePartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Invoice";
@@ -137,7 +137,12 @@ public class InvoicePartyRole extends Role {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Invoice.mmInvoicePartyRole);
 				subType_lazy = () -> Arrays.asList(InvoiceeRole.mmObject(), InvoiceFinancingPartyRole.mmObject(), InvoicerRole.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(InvoicePartyRole.mmInvoice);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvoicePartyRole.mmInvoice);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvoicePartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

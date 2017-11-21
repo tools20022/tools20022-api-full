@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide reference and status information on the
@@ -105,6 +109,9 @@ import java.util.List;
  * PaymentTransaction37}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTransaction47", propOrder = {"cancellationIdentification", "case", "originalInstructionIdentification", "originalEndToEndIdentification", "originalInstructedAmount", "originalRequestedExecutionDate",
+		"originalRequestedCollectionDate", "cancellationReasonInformation", "originalTransactionReference", "supplementaryData"})
 public class PaymentTransaction47 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -708,6 +715,7 @@ public class PaymentTransaction47 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlId")
 	public Max35Text getCancellationIdentification() {
 		return cancellationIdentification;
 	}
@@ -716,6 +724,7 @@ public class PaymentTransaction47 {
 		this.cancellationIdentification = cancellationIdentification;
 	}
 
+	@XmlElement(name = "Case")
 	public Case3 getCase() {
 		return case_;
 	}
@@ -724,6 +733,7 @@ public class PaymentTransaction47 {
 		this.case_ = case_;
 	}
 
+	@XmlElement(name = "OrgnlInstrId")
 	public Max35Text getOriginalInstructionIdentification() {
 		return originalInstructionIdentification;
 	}
@@ -732,6 +742,7 @@ public class PaymentTransaction47 {
 		this.originalInstructionIdentification = originalInstructionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlEndToEndId")
 	public Max35Text getOriginalEndToEndIdentification() {
 		return originalEndToEndIdentification;
 	}
@@ -740,6 +751,7 @@ public class PaymentTransaction47 {
 		this.originalEndToEndIdentification = originalEndToEndIdentification;
 	}
 
+	@XmlElement(name = "OrgnlInstdAmt")
 	public ActiveOrHistoricCurrencyAndAmount getOriginalInstructedAmount() {
 		return originalInstructedAmount;
 	}
@@ -748,6 +760,7 @@ public class PaymentTransaction47 {
 		this.originalInstructedAmount = originalInstructedAmount;
 	}
 
+	@XmlElement(name = "OrgnlReqdExctnDt")
 	public ISODate getOriginalRequestedExecutionDate() {
 		return originalRequestedExecutionDate;
 	}
@@ -756,6 +769,7 @@ public class PaymentTransaction47 {
 		this.originalRequestedExecutionDate = originalRequestedExecutionDate;
 	}
 
+	@XmlElement(name = "OrgnlReqdColltnDt")
 	public ISODate getOriginalRequestedCollectionDate() {
 		return originalRequestedCollectionDate;
 	}
@@ -764,6 +778,7 @@ public class PaymentTransaction47 {
 		this.originalRequestedCollectionDate = originalRequestedCollectionDate;
 	}
 
+	@XmlElement(name = "CxlRsnInf")
 	public List<PaymentCancellationReason2> getCancellationReasonInformation() {
 		return cancellationReasonInformation;
 	}
@@ -772,6 +787,7 @@ public class PaymentTransaction47 {
 		this.cancellationReasonInformation = cancellationReasonInformation;
 	}
 
+	@XmlElement(name = "OrgnlTxRef")
 	public OriginalTransactionReference16 getOriginalTransactionReference() {
 		return originalTransactionReference;
 	}
@@ -780,6 +796,7 @@ public class PaymentTransaction47 {
 		this.originalTransactionReference = originalTransactionReference;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

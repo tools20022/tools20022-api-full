@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.RejectionReason31;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for the specification of the status.
@@ -75,6 +79,8 @@ import java.util.List;
  * {@linkplain com.tools20022.repository.choice.Status14Choice Status14Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Status20Choice", propOrder = {"status", "rejected"})
 public class Status20Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -222,6 +228,7 @@ public class Status20Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public AccountManagementStatus1Code getStatus() {
 		return status;
 	}
@@ -230,6 +237,7 @@ public class Status20Choice {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public List<RejectionReason31> getRejected() {
 		return rejected;
 	}

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,6 +38,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Leg#mmRelatedAsset
+ * Leg.mmRelatedAsset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Leg#mmRatioQuantity
+ * Leg.mmRatioQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Leg#mmCurrency
+ * Leg.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Leg#mmSwapType
+ * Leg.mmSwapType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Leg#mmPool Leg.mmPool}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Leg#mmTrade Leg.mmTrade}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -76,21 +92,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * RequestForQuote.mmInstrumentLegGroupDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Leg#mmRelatedAsset
- * Leg.mmRelatedAsset}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Leg#mmRatioQuantity
- * Leg.mmRatioQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Leg#mmCurrency
- * Leg.mmCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Leg#mmSwapType
- * Leg.mmSwapType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Leg#mmPool Leg.mmPool}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Leg#mmTrade Leg.mmTrade}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -126,9 +127,6 @@ public class Leg {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Leg Leg}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -144,6 +142,9 @@ public class Leg {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Leg Leg}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -157,7 +158,7 @@ public class Leg {
 	public static final MMBusinessAssociationEnd mmRelatedAsset = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InstrumentLeg2.mmLegFinancialInstrumentAttributes, InstrumentLeg3.mmLegFinancialInstrumentAttributes, InstrumentLeg1.mmLegFinancialInstrumentAttributes);
-			elementContext_lazy = () -> Leg.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedAsset";
@@ -181,9 +182,6 @@ public class Leg {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Leg Leg}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -192,6 +190,9 @@ public class Leg {
 	 * LegDetails1.mmRatioQuantity}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Leg Leg}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -208,7 +209,7 @@ public class Leg {
 	public static final MMBusinessAttribute mmRatioQuantity = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LegDetails1.mmRatioQuantity);
-			elementContext_lazy = () -> Leg.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RatioQuantity";
@@ -216,6 +217,14 @@ public class Leg {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Leg.class.getMethod("getRatioQuantity", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyCode currency;
@@ -229,9 +238,6 @@ public class Leg {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Leg Leg}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -242,6 +248,9 @@ public class Leg {
 	 * InstrumentLeg6.mmLegCurrency}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Leg Leg}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -258,7 +267,7 @@ public class Leg {
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LegDetails1.mmCurrency, InstrumentLeg6.mmLegCurrency);
-			elementContext_lazy = () -> Leg.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
@@ -266,6 +275,14 @@ public class Leg {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Leg.class.getMethod("getCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text swapType;
@@ -280,9 +297,6 @@ public class Leg {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Leg Leg}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -291,6 +305,9 @@ public class Leg {
 	 * InstrumentLeg2.mmLegSwapType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Leg Leg}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -307,7 +324,7 @@ public class Leg {
 	public static final MMBusinessAttribute mmSwapType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InstrumentLeg2.mmLegSwapType);
-			elementContext_lazy = () -> Leg.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SwapType";
@@ -315,6 +332,14 @@ public class Leg {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Leg.class.getMethod("getSwapType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number pool;
@@ -346,7 +371,7 @@ public class Leg {
 	 */
 	public static final MMBusinessAttribute mmPool = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Leg.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pool";
@@ -354,6 +379,14 @@ public class Leg {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Leg.class.getMethod("getPool", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Trade trade;
@@ -388,7 +421,7 @@ public class Leg {
 	 */
 	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Leg.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
@@ -411,8 +444,14 @@ public class Leg {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Asset.mmLegAdditionalInformation, com.tools20022.repository.entity.Trade.mmLeg);
 				derivationElement_lazy = () -> Arrays.asList(SingleQuote1.mmInstrumentLegGroupDetails, QuoteCancellation1Choice.mmInstrumentLegGroupDetails, QuoteRequest1.mmInstrumentLegGroupDetails,
 						RequestForQuote.mmInstrumentLegGroupDetails);
-				element_lazy = () -> Arrays.asList(Leg.mmRelatedAsset, Leg.mmRatioQuantity, Leg.mmCurrency, Leg.mmSwapType, Leg.mmPool, Leg.mmTrade);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Leg.mmRelatedAsset, com.tools20022.repository.entity.Leg.mmRatioQuantity, com.tools20022.repository.entity.Leg.mmCurrency,
+						com.tools20022.repository.entity.Leg.mmSwapType, com.tools20022.repository.entity.Leg.mmPool, com.tools20022.repository.entity.Leg.mmTrade);
 				derivationComponent_lazy = () -> Arrays.asList(LegDetails1.mmObject(), InstrumentLeg2.mmObject(), InstrumentLeg3.mmObject(), InstrumentLeg1.mmObject(), InstrumentLeg6.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Leg.class;
 			}
 		});
 		return mmObject_lazy.get();

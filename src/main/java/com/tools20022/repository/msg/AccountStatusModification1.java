@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.Modification1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the type of change to the status of the account.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of change to the status of the account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountStatusModification1", propOrder = {"modificationCode", "status"})
 public class AccountStatusModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +165,7 @@ public class AccountStatusModification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ModCd")
 	public Modification1Code getModificationCode() {
 		return modificationCode;
 	}
@@ -167,6 +174,7 @@ public class AccountStatusModification1 {
 		this.modificationCode = modificationCode;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public AccountStatus3Code getStatus() {
 		return status;
 	}

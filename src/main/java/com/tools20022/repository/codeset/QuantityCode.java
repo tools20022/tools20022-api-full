@@ -29,6 +29,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuantityCode#mmOpen
+ * QuantityCode.mmOpen}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.QuantityCode#mmUnknownQuantity
+ * QuantityCode.mmUnknownQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.QuantityCode#mmAllSecurities
+ * QuantityCode.mmAllSecurities}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuantityCode#mmAnyAndAll
+ * QuantityCode.mmAnyAndAll}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
  * =
  * <ul>
@@ -42,20 +56,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Quantity4Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.Quantity5Code
  * Quantity5Code}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.QuantityCode#mmOpen
- * QuantityCode.mmOpen}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.QuantityCode#mmUnknownQuantity
- * QuantityCode.mmUnknownQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.QuantityCode#mmAllSecurities
- * QuantityCode.mmAllSecurities}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QuantityCode#mmAnyAndAll
- * QuantityCode.mmAnyAndAll}</li>
  * </ul>
  * </li>
  * <li>

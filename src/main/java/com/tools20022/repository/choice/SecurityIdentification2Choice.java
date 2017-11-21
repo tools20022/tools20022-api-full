@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for the identification of a financial instrument.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between formats for the identification of a financial instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityIdentification2Choice", propOrder = {"ISIN", "sedol"})
 public class SecurityIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -190,6 +196,7 @@ public class SecurityIdentification2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ISIN", required = true)
 	public ISINIdentifier getISIN() {
 		return iSIN;
 	}
@@ -198,6 +205,7 @@ public class SecurityIdentification2Choice {
 		this.iSIN = iSIN;
 	}
 
+	@XmlElement(name = "Sdl", required = true)
 	public SEDOLIdentifier getSedol() {
 		return sedol;
 	}

@@ -67,6 +67,11 @@ public class MeetingInitiatorRole extends MeetingPartyRole {
 				definition = "Specifies a party, other than the issuer, that requested that the meeting take place. It may be a court of justice or an association of security holders.";
 				superType_lazy = () -> MeetingPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingInitiatorRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

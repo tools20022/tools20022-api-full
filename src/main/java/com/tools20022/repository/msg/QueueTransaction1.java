@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transaction summmary details.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Transaction summmary details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QueueTransaction1", propOrder = {"accountOwner", "account", "numberOfTransactions", "totalAmount"})
 public class QueueTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -250,6 +256,7 @@ public class QueueTransaction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnr", required = true)
 	public FinancialInstitutionIdentification8 getAccountOwner() {
 		return accountOwner;
 	}
@@ -258,6 +265,7 @@ public class QueueTransaction1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public AccountIdentification4Choice getAccount() {
 		return account;
 	}
@@ -266,6 +274,7 @@ public class QueueTransaction1 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "NbOfTxs")
 	public Number getNumberOfTransactions() {
 		return numberOfTransactions;
 	}
@@ -274,6 +283,7 @@ public class QueueTransaction1 {
 		this.numberOfTransactions = numberOfTransactions;
 	}
 
+	@XmlElement(name = "TtlAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}

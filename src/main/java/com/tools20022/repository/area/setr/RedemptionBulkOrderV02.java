@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesTradeArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -53,9 +55,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.001.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradeArchive
@@ -100,6 +99,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.001.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -118,6 +120,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "setr.001.001.02", propOrder = {"masterReference", "poolReference", "previousReference", "bulkOrderDetails", "intermediaryDetails", "copyDetails", "extension"})
 public class RedemptionBulkOrderV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +162,14 @@ public class RedemptionBulkOrderV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionBulkOrderV02.class.getMethod("getMasterReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -193,6 +205,14 @@ public class RedemptionBulkOrderV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionBulkOrderV02.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference3> previousReference;
 	/**
@@ -226,6 +246,14 @@ public class RedemptionBulkOrderV02 {
 			definition = "Reference to a linked message that was previously sent.";
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionBulkOrderV02.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RedemptionBulkOrder2 bulkOrderDetails;
@@ -262,6 +290,14 @@ public class RedemptionBulkOrderV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> RedemptionBulkOrder2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionBulkOrderV02.class.getMethod("getBulkOrderDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Intermediary4> intermediaryDetails;
 	/**
@@ -295,6 +331,14 @@ public class RedemptionBulkOrderV02 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			complexType_lazy = () -> Intermediary4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionBulkOrderV02.class.getMethod("getIntermediaryDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CopyInformation1 copyDetails;
@@ -332,6 +376,14 @@ public class RedemptionBulkOrderV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionBulkOrderV02.class.getMethod("getCopyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension1> extension;
 	/**
@@ -368,6 +420,14 @@ public class RedemptionBulkOrderV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionBulkOrderV02.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -382,8 +442,10 @@ public class RedemptionBulkOrderV02 {
 				xmlTag = "setr.001.001.02";
 				businessArea_lazy = () -> SecuritiesTradeArchive.mmObject();
 				xmlName = "setr.001.001.02";
-				messageBuildingBlock_lazy = () -> Arrays.asList(RedemptionBulkOrderV02.mmMasterReference, RedemptionBulkOrderV02.mmPoolReference, RedemptionBulkOrderV02.mmPreviousReference, RedemptionBulkOrderV02.mmBulkOrderDetails,
-						RedemptionBulkOrderV02.mmIntermediaryDetails, RedemptionBulkOrderV02.mmCopyDetails, RedemptionBulkOrderV02.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmMasterReference, com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmPoolReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmPreviousReference, com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmBulkOrderDetails,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmIntermediaryDetails, com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmCopyDetails,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -393,10 +455,16 @@ public class RedemptionBulkOrderV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RedemptionBulkOrderV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public AdditionalReference3 getMasterReference() {
 		return masterReference;
 	}
@@ -405,6 +473,7 @@ public class RedemptionBulkOrderV02 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -413,6 +482,7 @@ public class RedemptionBulkOrderV02 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference3> getPreviousReference() {
 		return previousReference;
 	}
@@ -421,6 +491,7 @@ public class RedemptionBulkOrderV02 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "BlkOrdrDtls", required = true)
 	public RedemptionBulkOrder2 getBulkOrderDetails() {
 		return bulkOrderDetails;
 	}
@@ -429,6 +500,7 @@ public class RedemptionBulkOrderV02 {
 		this.bulkOrderDetails = bulkOrderDetails;
 	}
 
+	@XmlElement(name = "IntrmyDtls")
 	public List<Intermediary4> getIntermediaryDetails() {
 		return intermediaryDetails;
 	}
@@ -437,6 +509,7 @@ public class RedemptionBulkOrderV02 {
 		this.intermediaryDetails = intermediaryDetails;
 	}
 
+	@XmlElement(name = "CpyDtls")
 	public CopyInformation1 getCopyDetails() {
 		return copyDetails;
 	}
@@ -445,11 +518,18 @@ public class RedemptionBulkOrderV02 {
 		this.copyDetails = copyDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.001.02.02")
+	static public class Document {
+		@XmlElement(name = "setr.001.001.02", required = true)
+		public RedemptionBulkOrderV02 messageBody;
 	}
 }

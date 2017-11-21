@@ -39,17 +39,14 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecurityCertificate#mmSecurityCertificatePartyRole
- * SecurityCertificate.mmSecurityCertificatePartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.SecurityCertificatePartyRole#mmSecurityCertificate
+ * SecurityCertificatePartyRole.mmSecurityCertificate}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -61,12 +58,15 @@ import java.util.List;
  * SecurityCertificateIssuerRole}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecurityCertificatePartyRole#mmSecurityCertificate
- * SecurityCertificatePartyRole.mmSecurityCertificate}</li>
+ * {@linkplain com.tools20022.repository.entity.SecurityCertificate#mmSecurityCertificatePartyRole
+ * SecurityCertificate.mmSecurityCertificatePartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -106,11 +106,6 @@ public class SecurityCertificatePartyRole extends Role {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecurityCertificate
 	 * SecurityCertificate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecurityCertificatePartyRole
-	 * SecurityCertificatePartyRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -122,6 +117,11 @@ public class SecurityCertificatePartyRole extends Role {
 	 * PartyAndCertificate3.mmCertificate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecurityCertificatePartyRole
+	 * SecurityCertificatePartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -137,7 +137,7 @@ public class SecurityCertificatePartyRole extends Role {
 	public static final MMBusinessAssociationEnd mmSecurityCertificate = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyAndCertificate2.mmCertificate, PartyAndCertificate3.mmCertificate);
-			elementContext_lazy = () -> SecurityCertificatePartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecurityCertificatePartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecurityCertificate";
@@ -159,7 +159,12 @@ public class SecurityCertificatePartyRole extends Role {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecurityCertificate.mmSecurityCertificatePartyRole);
 				subType_lazy = () -> Arrays.asList(SecurityCertificateHolderRole.mmObject(), SecurityCertificateIssuerRole.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(SecurityCertificatePartyRole.mmSecurityCertificate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecurityCertificatePartyRole.mmSecurityCertificate);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecurityCertificatePartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

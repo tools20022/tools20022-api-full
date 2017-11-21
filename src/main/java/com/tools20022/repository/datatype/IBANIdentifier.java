@@ -37,6 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * identificationScheme} =
  * "National Banking Association; International Bank Account Number (ISO 13616)"
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[a-zA-Z]{2,2}[0-9]{2,2}[a-zA-Z0-9]{1,30}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -73,6 +75,7 @@ public class IBANIdentifier {
 				name = "IBANIdentifier";
 				definition = "An identifier used internationally by financial institutions to uniquely identify the account of a customer at a financial institution, as described in the latest edition of the international standard ISO 13616. \"Banking and related financial services - International Bank Account Number (IBAN)\".";
 				identificationScheme = "National Banking Association; International Bank Account Number (ISO 13616)";
+				pattern = "[a-zA-Z]{2,2}[0-9]{2,2}[a-zA-Z0-9]{1,30}";
 			}
 		});
 		return mmObject_lazy.get();

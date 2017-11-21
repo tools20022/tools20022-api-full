@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesEventsArchive;
 import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -43,9 +45,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.005.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
@@ -85,6 +84,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.005.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -108,6 +110,8 @@ import java.util.List;
  * MeetingInstructionCancellationRequestV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingInstructionCancellationRequestV03", propOrder = {"identification", "previousReference", "meetingReference", "requestingParty", "securityIdentification", "instructedPosition"})
 public class MeetingInstructionCancellationRequestV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -145,6 +149,14 @@ public class MeetingInstructionCancellationRequestV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionCancellationRequestV03.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MessageIdentification previousReference;
 	/**
@@ -179,6 +191,14 @@ public class MeetingInstructionCancellationRequestV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionCancellationRequestV03.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MeetingReference4 meetingReference;
@@ -215,6 +235,14 @@ public class MeetingInstructionCancellationRequestV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> MeetingReference4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionCancellationRequestV03.class.getMethod("getMeetingReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification9Choice requestingParty;
 	/**
@@ -249,6 +277,14 @@ public class MeetingInstructionCancellationRequestV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionCancellationRequestV03.class.getMethod("getRequestingParty", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecurityIdentification11 securityIdentification;
@@ -285,6 +321,14 @@ public class MeetingInstructionCancellationRequestV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecurityIdentification11.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionCancellationRequestV03.class.getMethod("getSecurityIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SafekeepingAccount4> instructedPosition;
@@ -323,6 +367,14 @@ public class MeetingInstructionCancellationRequestV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SafekeepingAccount4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionCancellationRequestV03.class.getMethod("getInstructedPosition", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -337,9 +389,10 @@ public class MeetingInstructionCancellationRequestV03 {
 				rootElement = "Document";
 				xmlTag = "MtgInstrCxlReq";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionCancellationRequestV03.mmIdentification, MeetingInstructionCancellationRequestV03.mmPreviousReference,
-						MeetingInstructionCancellationRequestV03.mmMeetingReference, MeetingInstructionCancellationRequestV03.mmRequestingParty, MeetingInstructionCancellationRequestV03.mmSecurityIdentification,
-						MeetingInstructionCancellationRequestV03.mmInstructedPosition);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.mmIdentification,
+						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.mmPreviousReference, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.mmMeetingReference,
+						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.mmRequestingParty, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.mmSecurityIdentification,
+						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.mmInstructedPosition);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -349,10 +402,16 @@ public class MeetingInstructionCancellationRequestV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingInstructionCancellationRequestV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public MessageIdentification1 getIdentification() {
 		return identification;
 	}
@@ -361,6 +420,7 @@ public class MeetingInstructionCancellationRequestV03 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "PrvsRef", required = true)
 	public MessageIdentification getPreviousReference() {
 		return previousReference;
 	}
@@ -369,6 +429,7 @@ public class MeetingInstructionCancellationRequestV03 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "MtgRef")
 	public MeetingReference4 getMeetingReference() {
 		return meetingReference;
 	}
@@ -377,6 +438,7 @@ public class MeetingInstructionCancellationRequestV03 {
 		this.meetingReference = meetingReference;
 	}
 
+	@XmlElement(name = "RqstngPty")
 	public PartyIdentification9Choice getRequestingParty() {
 		return requestingParty;
 	}
@@ -385,6 +447,7 @@ public class MeetingInstructionCancellationRequestV03 {
 		this.requestingParty = requestingParty;
 	}
 
+	@XmlElement(name = "SctyId")
 	public SecurityIdentification11 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -393,11 +456,18 @@ public class MeetingInstructionCancellationRequestV03 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "InstdPos")
 	public List<SafekeepingAccount4> getInstructedPosition() {
 		return instructedPosition;
 	}
 
 	public void setInstructedPosition(List<SafekeepingAccount4> instructedPosition) {
 		this.instructedPosition = instructedPosition;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.005.03.03")
+	static public class Document {
+		@XmlElement(name = "MtgInstrCxlReq", required = true)
+		public MeetingInstructionCancellationRequestV03 messageBody;
 	}
 }

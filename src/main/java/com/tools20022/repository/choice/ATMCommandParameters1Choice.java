@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ATMConfigurationParameter1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specific parameters attached to an ATM command.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCommandParameters1Choice", propOrder = {"ATMRequiredGlobalStatus", "expectedMessageFunction", "requiredConfigurationParameter"})
 public class ATMCommandParameters1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -256,6 +262,7 @@ public class ATMCommandParameters1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ATMReqrdGblSts", required = true)
 	public ATMStatus1Code getATMRequiredGlobalStatus() {
 		return aTMRequiredGlobalStatus;
 	}
@@ -264,6 +271,7 @@ public class ATMCommandParameters1Choice {
 		this.aTMRequiredGlobalStatus = aTMRequiredGlobalStatus;
 	}
 
+	@XmlElement(name = "XpctdMsgFctn", required = true)
 	public MessageFunction8Code getExpectedMessageFunction() {
 		return expectedMessageFunction;
 	}
@@ -272,6 +280,7 @@ public class ATMCommandParameters1Choice {
 		this.expectedMessageFunction = expectedMessageFunction;
 	}
 
+	@XmlElement(name = "ReqrdCfgtnParam", required = true)
 	public ATMConfigurationParameter1 getRequiredConfigurationParameter() {
 		return requiredConfigurationParameter;
 	}

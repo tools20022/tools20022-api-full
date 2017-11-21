@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.ContentInformationType12;
 import com.tools20022.repository.msg.Header29;
 import com.tools20022.repository.msg.MaintenanceDelegationRequest3;
 import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * A terminal manager requests to the master terminal manager the delegation of
@@ -36,9 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catm.005.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
@@ -71,6 +70,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catm.005.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -86,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * MaintenanceDelegationRequestV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MaintenanceDelegationRequestV03", propOrder = {"header", "maintenanceDelegationRequest", "securityTrailer"})
 public class MaintenanceDelegationRequestV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -127,6 +131,14 @@ public class MaintenanceDelegationRequestV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Header29.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MaintenanceDelegationRequestV03.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MaintenanceDelegationRequest3 maintenanceDelegationRequest;
@@ -170,6 +182,14 @@ public class MaintenanceDelegationRequestV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MaintenanceDelegationRequest3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MaintenanceDelegationRequestV03.class.getMethod("getMaintenanceDelegationRequest", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType12 securityTrailer;
 	/**
@@ -212,6 +232,14 @@ public class MaintenanceDelegationRequestV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType12.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MaintenanceDelegationRequestV03.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -225,7 +253,8 @@ public class MaintenanceDelegationRequestV03 {
 				rootElement = "Document";
 				xmlTag = "MntncDlgtnReq";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MaintenanceDelegationRequestV03.mmHeader, MaintenanceDelegationRequestV03.mmMaintenanceDelegationRequest, MaintenanceDelegationRequestV03.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.MaintenanceDelegationRequestV03.mmHeader,
+						com.tools20022.repository.area.catm.MaintenanceDelegationRequestV03.mmMaintenanceDelegationRequest, com.tools20022.repository.area.catm.MaintenanceDelegationRequestV03.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catm";
@@ -235,10 +264,16 @@ public class MaintenanceDelegationRequestV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MaintenanceDelegationRequestV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr")
 	public Header29 getHeader() {
 		return header;
 	}
@@ -247,6 +282,7 @@ public class MaintenanceDelegationRequestV03 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "MntncDlgtnReq", required = true)
 	public MaintenanceDelegationRequest3 getMaintenanceDelegationRequest() {
 		return maintenanceDelegationRequest;
 	}
@@ -255,11 +291,18 @@ public class MaintenanceDelegationRequestV03 {
 		this.maintenanceDelegationRequest = maintenanceDelegationRequest;
 	}
 
+	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType12 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType12 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catm.005.03.03")
+	static public class Document {
+		@XmlElement(name = "MntncDlgtnReq", required = true)
+		public MaintenanceDelegationRequestV03 messageBody;
 	}
 }

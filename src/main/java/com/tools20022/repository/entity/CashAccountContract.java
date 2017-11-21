@@ -38,6 +38,29 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccountContract#mmCashAccount
+ * CashAccountContract.mmCashAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccountContract#mmTransferCashAccount
+ * CashAccountContract.mmTransferCashAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccountContract#mmServices
+ * CashAccountContract.mmServices}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccountContract#mmBalanceTransfer
+ * CashAccountContract.mmBalanceTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccountContract#mmCashAccountMandate
+ * CashAccountContract.mmCashAccountMandate}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.AccountContract
+ * AccountContract}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -107,29 +130,6 @@ import java.util.List;
  * AccountReport14.mmContractDates}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.AccountContract
- * AccountContract}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccountContract#mmCashAccount
- * CashAccountContract.mmCashAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccountContract#mmTransferCashAccount
- * CashAccountContract.mmTransferCashAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccountContract#mmServices
- * CashAccountContract.mmServices}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccountContract#mmBalanceTransfer
- * CashAccountContract.mmBalanceTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccountContract#mmCashAccountMandate
- * CashAccountContract.mmCashAccountMandate}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -170,11 +170,6 @@ public class CashAccountContract extends AccountContract {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccountContract
-	 * CashAccountContract}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -223,6 +218,11 @@ public class CashAccountContract extends AccountContract {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashAccountContract
+	 * CashAccountContract}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -240,7 +240,7 @@ public class CashAccountContract extends AccountContract {
 			derivation_lazy = () -> Arrays.asList(AccountReport7.mmAccount, AccountReport8.mmAccount, AccountReport10.mmAccount, AccountReport13.mmAccountOrError, AccountReport1.mmAccount, AccountReport1.mmReferenceAccount,
 					AccountReport15.mmAccount, AccountReport15.mmReferenceAccount, ReportingRequest1.mmAccount, ReportingRequest2.mmAccount, ReportingRequest3.mmAccount, BillingStatement1.mmAccountCharacteristics,
 					AccountReport14.mmAccount, AccountReport14.mmReferenceAccount, AccountReport17.mmAccountOrError, BillingStatement2.mmAccountCharacteristics);
-			elementContext_lazy = () -> CashAccountContract.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
@@ -290,7 +290,7 @@ public class CashAccountContract extends AccountContract {
 	 */
 	public static final MMBusinessAssociationEnd mmTransferCashAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashAccountContract.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferCashAccount";
@@ -341,7 +341,7 @@ public class CashAccountContract extends AccountContract {
 	 */
 	public static final MMBusinessAssociationEnd mmServices = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashAccountContract.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Services";
@@ -393,7 +393,7 @@ public class CashAccountContract extends AccountContract {
 	 */
 	public static final MMBusinessAssociationEnd mmBalanceTransfer = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashAccountContract.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BalanceTransfer";
@@ -440,7 +440,7 @@ public class CashAccountContract extends AccountContract {
 	 */
 	public static final MMBusinessAssociationEnd mmCashAccountMandate = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashAccountContract.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccountMandate";
@@ -466,10 +466,15 @@ public class CashAccountContract extends AccountContract {
 				derivationElement_lazy = () -> Arrays.asList(AccountReport1.mmUnderlyingMasterAgreement, AccountReport1.mmContractDates, AccountReport15.mmUnderlyingMasterAgreement, AccountReport15.mmContractDates,
 						AccountReport14.mmUnderlyingMasterAgreement, AccountReport14.mmContractDates);
 				superType_lazy = () -> AccountContract.mmObject();
-				element_lazy = () -> Arrays.asList(CashAccountContract.mmCashAccount, CashAccountContract.mmTransferCashAccount, CashAccountContract.mmServices, CashAccountContract.mmBalanceTransfer,
-						CashAccountContract.mmCashAccountMandate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccountContract.mmCashAccount, com.tools20022.repository.entity.CashAccountContract.mmTransferCashAccount,
+						com.tools20022.repository.entity.CashAccountContract.mmServices, com.tools20022.repository.entity.CashAccountContract.mmBalanceTransfer, com.tools20022.repository.entity.CashAccountContract.mmCashAccountMandate);
 				derivationComponent_lazy = () -> Arrays.asList(AccountReport7.mmObject(), AccountReport8.mmObject(), AccountReport10.mmObject(), AccountReport13.mmObject(), AccountContract4.mmObject(), AccountContract2.mmObject(),
 						AccountContract3.mmObject(), AccountReport1.mmObject(), AccountReport15.mmObject(), AccountReport14.mmObject(), AccountReport17.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CashAccountContract.class;
 			}
 		});
 		return mmObject_lazy.get();

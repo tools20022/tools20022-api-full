@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.ShipmentDateRange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Certificate and contract reference of a transaction.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Certificate and contract reference of a transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionCertificateContract1", propOrder = {"contractReference", "transactionAmountInContractCurrency", "expectedShipmentDate", "expectedAdvancePaymentReturnDate", "additionalInformation"})
 public class TransactionCertificateContract1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -335,6 +341,7 @@ public class TransactionCertificateContract1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CtrctRef")
 	public ContractRegistrationReference1Choice getContractReference() {
 		return contractReference;
 	}
@@ -343,6 +350,7 @@ public class TransactionCertificateContract1 {
 		this.contractReference = contractReference;
 	}
 
+	@XmlElement(name = "TxAmtInCtrctCcy")
 	public ActiveCurrencyAndAmount getTransactionAmountInContractCurrency() {
 		return transactionAmountInContractCurrency;
 	}
@@ -351,6 +359,7 @@ public class TransactionCertificateContract1 {
 		this.transactionAmountInContractCurrency = transactionAmountInContractCurrency;
 	}
 
+	@XmlElement(name = "XpctdShipmntDt")
 	public ISODate getExpectedShipmentDate() {
 		return expectedShipmentDate;
 	}
@@ -359,6 +368,7 @@ public class TransactionCertificateContract1 {
 		this.expectedShipmentDate = expectedShipmentDate;
 	}
 
+	@XmlElement(name = "XpctdAdvncPmtRtrDt")
 	public ISODate getExpectedAdvancePaymentReturnDate() {
 		return expectedAdvancePaymentReturnDate;
 	}
@@ -367,6 +377,7 @@ public class TransactionCertificateContract1 {
 		this.expectedAdvancePaymentReturnDate = expectedAdvancePaymentReturnDate;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max1025Text getAdditionalInformation() {
 		return additionalInformation;
 	}

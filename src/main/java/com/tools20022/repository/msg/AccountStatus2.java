@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status of an account.
@@ -79,6 +83,8 @@ import java.util.List;
  * AccountStatus1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountStatus2", propOrder = {"enabled", "disabled", "pending", "pendingOpening", "proforma", "closed", "closurePending", "other"})
 public class AccountStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -478,6 +484,7 @@ public class AccountStatus2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nbld")
 	public EnabledStatusReason1Choice getEnabled() {
 		return enabled;
 	}
@@ -486,6 +493,7 @@ public class AccountStatus2 {
 		this.enabled = enabled;
 	}
 
+	@XmlElement(name = "Dsbld")
 	public DisabledStatusReason1Choice getDisabled() {
 		return disabled;
 	}
@@ -494,6 +502,7 @@ public class AccountStatus2 {
 		this.disabled = disabled;
 	}
 
+	@XmlElement(name = "Pdg")
 	public PendingStatusReason1Choice getPending() {
 		return pending;
 	}
@@ -502,6 +511,7 @@ public class AccountStatus2 {
 		this.pending = pending;
 	}
 
+	@XmlElement(name = "PdgOpng")
 	public PendingOpeningStatusReason1Choice getPendingOpening() {
 		return pendingOpening;
 	}
@@ -510,6 +520,7 @@ public class AccountStatus2 {
 		this.pendingOpening = pendingOpening;
 	}
 
+	@XmlElement(name = "Profrm")
 	public ProformaStatusReason1Choice getProforma() {
 		return proforma;
 	}
@@ -518,6 +529,7 @@ public class AccountStatus2 {
 		this.proforma = proforma;
 	}
 
+	@XmlElement(name = "Clsd")
 	public ClosedStatusReason1Choice getClosed() {
 		return closed;
 	}
@@ -526,6 +538,7 @@ public class AccountStatus2 {
 		this.closed = closed;
 	}
 
+	@XmlElement(name = "ClsrPdg")
 	public ClosurePendingStatusReason1Choice getClosurePending() {
 		return closurePending;
 	}
@@ -534,6 +547,7 @@ public class AccountStatus2 {
 		this.closurePending = closurePending;
 	}
 
+	@XmlElement(name = "Othr")
 	public List<OtherAccountStatus1> getOther() {
 		return other;
 	}

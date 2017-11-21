@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the formats to express a date.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between the formats to express a date."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DateFormat1Choice", propOrder = {"date", "code", "dateTime"})
 public class DateFormat1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -225,6 +231,7 @@ public class DateFormat1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
@@ -233,6 +240,7 @@ public class DateFormat1Choice {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public SettlementDate1Code getCode() {
 		return code;
 	}
@@ -241,6 +249,7 @@ public class DateFormat1Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "DtTm", required = true)
 	public ISODateTime getDateTime() {
 		return dateTime;
 	}

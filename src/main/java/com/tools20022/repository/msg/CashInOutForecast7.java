@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cash movements into or out of a fund as a result of investment funds
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CashInForecast6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashInOutForecast7", propOrder = {"cashSettlementDate", "amount"})
 public class CashInOutForecast7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -195,6 +201,7 @@ public class CashInOutForecast7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshSttlmDt")
 	public ISODate getCashSettlementDate() {
 		return cashSettlementDate;
 	}
@@ -203,6 +210,7 @@ public class CashInOutForecast7 {
 		this.cashSettlementDate = cashSettlementDate;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}

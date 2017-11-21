@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
+ * UndertakingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -42,10 +46,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Presentation2.mmPresenter}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
- * UndertakingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -74,6 +74,11 @@ public class UndertakingPresenter extends UndertakingPartyRole {
 				definition = "Party that makes the presentation.";
 				derivationElement_lazy = () -> Arrays.asList(Presentation2.mmPresenter);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UndertakingPresenter.class;
 			}
 		});
 		return mmObject_lazy.get();

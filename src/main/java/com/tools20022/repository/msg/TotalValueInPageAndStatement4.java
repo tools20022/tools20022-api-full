@@ -24,6 +24,10 @@ import com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReport002V
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Totals for the value of the holdings reported in the statement or page.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Totals for the value of the holdings reported in the statement or page."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TotalValueInPageAndStatement4", propOrder = {"totalHoldingsValueOfPage", "totalHoldingsValueOfStatement", "totalBookValueOfStatement"})
 public class TotalValueInPageAndStatement4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -221,6 +227,7 @@ public class TotalValueInPageAndStatement4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlHldgsValOfPg")
 	public AmountAndDirection14 getTotalHoldingsValueOfPage() {
 		return totalHoldingsValueOfPage;
 	}
@@ -229,6 +236,7 @@ public class TotalValueInPageAndStatement4 {
 		this.totalHoldingsValueOfPage = totalHoldingsValueOfPage;
 	}
 
+	@XmlElement(name = "TtlHldgsValOfStmt", required = true)
 	public AmountAndDirection14 getTotalHoldingsValueOfStatement() {
 		return totalHoldingsValueOfStatement;
 	}
@@ -237,6 +245,7 @@ public class TotalValueInPageAndStatement4 {
 		this.totalHoldingsValueOfStatement = totalHoldingsValueOfStatement;
 	}
 
+	@XmlElement(name = "TtlBookValOfStmt")
 	public AmountAndDirection14 getTotalBookValueOfStatement() {
 		return totalBookValueOfStatement;
 	}

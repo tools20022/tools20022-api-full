@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria which are used to search for generated report.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Defines the criteria which are used to search for generated report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportQueryCriteria1", propOrder = {"newQueryName", "searchCriteria"})
 public class ReportQueryCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class ReportQueryCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NewQryNm")
 	public Max35Text getNewQueryName() {
 		return newQueryName;
 	}
@@ -169,6 +176,7 @@ public class ReportQueryCriteria1 {
 		this.newQueryName = newQueryName;
 	}
 
+	@XmlElement(name = "SchCrit", required = true)
 	public ReportQuerySearchCriteria1 getSearchCriteria() {
 		return searchCriteria;
 	}

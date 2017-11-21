@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional amount that may be displayed to the customer, for instance the
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransactionAmounts7", propOrder = {"type", "amount", "currency", "label"})
 public class ATMTransactionAmounts7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -272,6 +278,7 @@ public class ATMTransactionAmounts7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public Max35Text getType() {
 		return type;
 	}
@@ -280,6 +287,7 @@ public class ATMTransactionAmounts7 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -288,6 +296,7 @@ public class ATMTransactionAmounts7 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -296,6 +305,7 @@ public class ATMTransactionAmounts7 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Labl")
 	public Max70Text getLabel() {
 		return label;
 	}

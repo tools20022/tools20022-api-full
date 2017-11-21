@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to identify a financial institution.
@@ -79,6 +83,8 @@ import java.util.function.Supplier;
  * definition} = "Set of elements used to identify a financial institution."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstitutionIdentification7", propOrder = {"BIC", "clearingSystemMemberIdentification", "name", "postalAddress", "other"})
 public class FinancialInstitutionIdentification7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -358,6 +364,7 @@ public class FinancialInstitutionIdentification7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BIC")
 	public BICIdentifier getBIC() {
 		return bIC;
 	}
@@ -366,6 +373,7 @@ public class FinancialInstitutionIdentification7 {
 		this.bIC = bIC;
 	}
 
+	@XmlElement(name = "ClrSysMmbId")
 	public ClearingSystemMemberIdentification2 getClearingSystemMemberIdentification() {
 		return clearingSystemMemberIdentification;
 	}
@@ -374,6 +382,7 @@ public class FinancialInstitutionIdentification7 {
 		this.clearingSystemMemberIdentification = clearingSystemMemberIdentification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max140Text getName() {
 		return name;
 	}
@@ -382,6 +391,7 @@ public class FinancialInstitutionIdentification7 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PstlAdr")
 	public PostalAddress6 getPostalAddress() {
 		return postalAddress;
 	}
@@ -390,6 +400,7 @@ public class FinancialInstitutionIdentification7 {
 		this.postalAddress = postalAddress;
 	}
 
+	@XmlElement(name = "Othr")
 	public GenericFinancialIdentification1 getOther() {
 		return other;
 	}

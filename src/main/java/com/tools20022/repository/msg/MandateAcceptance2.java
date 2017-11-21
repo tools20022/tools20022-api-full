@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the mandate, which is being accepted.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MandateAcceptance2", propOrder = {"originalMessageInformation", "acceptanceResult", "originalMandate"})
 public class MandateAcceptance2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -246,6 +252,7 @@ public class MandateAcceptance2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMsgInf")
 	public OriginalMessageInformation1 getOriginalMessageInformation() {
 		return originalMessageInformation;
 	}
@@ -254,6 +261,7 @@ public class MandateAcceptance2 {
 		this.originalMessageInformation = originalMessageInformation;
 	}
 
+	@XmlElement(name = "AccptncRslt", required = true)
 	public AcceptanceResult6 getAcceptanceResult() {
 		return acceptanceResult;
 	}
@@ -262,6 +270,7 @@ public class MandateAcceptance2 {
 		this.acceptanceResult = acceptanceResult;
 	}
 
+	@XmlElement(name = "OrgnlMndt", required = true)
 	public OriginalMandate2Choice getOriginalMandate() {
 		return originalMandate;
 	}

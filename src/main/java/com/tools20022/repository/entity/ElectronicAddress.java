@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ContactPoint;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmEmailAddress
+ * ElectronicAddress.mmEmailAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmURLAddress
+ * ElectronicAddress.mmURLAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmTelexAddress
+ * ElectronicAddress.mmTelexAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmRelatedPresentation
+ * ElectronicAddress.mmRelatedPresentation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmTeletextAddress
+ * ElectronicAddress.mmTeletextAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmISDNAddress
+ * ElectronicAddress.mmISDNAddress}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.ContactPoint
+ * ContactPoint}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -217,32 +244,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestmentAccountOwnershipInformation14.mmSecondaryCommunicationAddress}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.ContactPoint
- * ContactPoint}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmEmailAddress
- * ElectronicAddress.mmEmailAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmURLAddress
- * ElectronicAddress.mmURLAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmTelexAddress
- * ElectronicAddress.mmTelexAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmRelatedPresentation
- * ElectronicAddress.mmRelatedPresentation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmTeletextAddress
- * ElectronicAddress.mmTeletextAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmISDNAddress
- * ElectronicAddress.mmISDNAddress}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -271,11 +272,6 @@ public class ElectronicAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max256Text
 	 * Max256Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress
-	 * ElectronicAddress}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -335,6 +331,11 @@ public class ElectronicAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress
+	 * ElectronicAddress}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -351,7 +352,7 @@ public class ElectronicAddress extends ContactPoint {
 					ContactIdentification2.mmEmailAddress, ContactIdentification1.mmEmailAddress, Contacts3.mmEmailAddress, ContactInformation1.mmEmailAddress, CommunicationAddress4.mmEmailAddress, ContactIdentification4.mmEmailAddress,
 					ContactIdentification3.mmEmailAddress, CommunicationAddressDetails.mmEmailAddress, ContactDetails3.mmEmailAddress, PersonIdentification7.mmEmailAddress, CommunicationAddress5.mmEmail, CommunicationAddress6.mmEmail,
 					PersonIdentification11.mmEmailAddress);
-			elementContext_lazy = () -> ElectronicAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EmailAddress";
@@ -359,6 +360,14 @@ public class ElectronicAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ElectronicAddress.class.getMethod("getEmailAddress", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max256Text uRLAddress;
@@ -372,11 +381,6 @@ public class ElectronicAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max256Text
 	 * Max256Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress
-	 * ElectronicAddress}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -449,6 +453,11 @@ public class ElectronicAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress
+	 * ElectronicAddress}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -468,7 +477,7 @@ public class ElectronicAddress extends ContactPoint {
 					MeetingNotice3.mmAdditionalDocumentationURLAddress, IssuerInformation1.mmURLAddress, CorporateActionNarrative1.mmURLAddress, AgreementClauses1.mmDocumentURL, DocumentGeneralInformation1.mmURL,
 					DocumentGeneralInformation2.mmURL, IssuerInformation2.mmURLAddress, MeetingNotice4.mmAdditionalDocumentationURLAddress, AdditionalRights2.mmAdditionalRightInformationURLAddress, QualifiedDocumentInformation1.mmURL,
 					CommunicationAddress5.mmURLAddress, DocumentGeneralInformation3.mmURL, CommunicationAddress6.mmURLAddress);
-			elementContext_lazy = () -> ElectronicAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "URLAddress";
@@ -476,6 +485,14 @@ public class ElectronicAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ElectronicAddress.class.getMethod("getURLAddress", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text telexAddress;
@@ -488,11 +505,6 @@ public class ElectronicAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress
-	 * ElectronicAddress}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -504,6 +516,11 @@ public class ElectronicAddress extends ContactPoint {
 	 * CommunicationAddress6.mmTelexAddress}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress
+	 * ElectronicAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -518,7 +535,7 @@ public class ElectronicAddress extends ContactPoint {
 	public static final MMBusinessAttribute mmTelexAddress = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CommunicationAddress3.mmTelexAddress, CommunicationAddress6.mmTelexAddress);
-			elementContext_lazy = () -> ElectronicAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TelexAddress";
@@ -526,6 +543,14 @@ public class ElectronicAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ElectronicAddress.class.getMethod("getTelexAddress", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Presentation relatedPresentation;
@@ -567,7 +592,7 @@ public class ElectronicAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPresentation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ElectronicAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPresentation";
@@ -607,7 +632,7 @@ public class ElectronicAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmTeletextAddress = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> ElectronicAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TeletextAddress";
@@ -615,6 +640,14 @@ public class ElectronicAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ElectronicAddress.class.getMethod("getTeletextAddress", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text iSDNAddress;
@@ -645,7 +678,7 @@ public class ElectronicAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmISDNAddress = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> ElectronicAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ISDNAddress";
@@ -653,6 +686,14 @@ public class ElectronicAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ElectronicAddress.class.getMethod("getISDNAddress", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -682,8 +723,14 @@ public class ElectronicAddress extends ContactPoint {
 								InvestmentAccountOwnershipInformation15.mmPrimaryCommunicationAddress, InvestmentAccountOwnershipInformation15.mmSecondaryCommunicationAddress,
 								InvestmentAccountOwnershipInformation14.mmPrimaryCommunicationAddress, InvestmentAccountOwnershipInformation14.mmSecondaryCommunicationAddress);
 				superType_lazy = () -> ContactPoint.mmObject();
-				element_lazy = () -> Arrays.asList(ElectronicAddress.mmEmailAddress, ElectronicAddress.mmURLAddress, ElectronicAddress.mmTelexAddress, ElectronicAddress.mmRelatedPresentation, ElectronicAddress.mmTeletextAddress,
-						ElectronicAddress.mmISDNAddress);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ElectronicAddress.mmEmailAddress, com.tools20022.repository.entity.ElectronicAddress.mmURLAddress,
+						com.tools20022.repository.entity.ElectronicAddress.mmTelexAddress, com.tools20022.repository.entity.ElectronicAddress.mmRelatedPresentation, com.tools20022.repository.entity.ElectronicAddress.mmTeletextAddress,
+						com.tools20022.repository.entity.ElectronicAddress.mmISDNAddress);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ElectronicAddress.class;
 			}
 		});
 		return mmObject_lazy.get();

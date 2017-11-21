@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.ErrorHandling4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between account details or a business error when the requested data
@@ -70,6 +74,8 @@ import java.util.List;
  * AccountOrBusinessError1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountOrBusinessError2Choice", propOrder = {"account", "businessError"})
 public class AccountOrBusinessError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -187,6 +193,7 @@ public class AccountOrBusinessError2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CashAccount23 getAccount() {
 		return account;
 	}
@@ -195,6 +202,7 @@ public class AccountOrBusinessError2Choice {
 		this.account = account;
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling4> getBusinessError() {
 		return businessError;
 	}

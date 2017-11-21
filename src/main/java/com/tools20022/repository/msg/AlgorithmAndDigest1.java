@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines a cryptographic digest algorithm and value.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines a cryptographic digest algorithm and value."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AlgorithmAndDigest1", propOrder = {"digestAlgorithm", "digest"})
 public class AlgorithmAndDigest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -157,6 +163,7 @@ public class AlgorithmAndDigest1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DgstAlgo", required = true)
 	public Algorithm5Code getDigestAlgorithm() {
 		return digestAlgorithm;
 	}
@@ -165,6 +172,7 @@ public class AlgorithmAndDigest1 {
 		this.digestAlgorithm = digestAlgorithm;
 	}
 
+	@XmlElement(name = "Dgst", required = true)
 	public Max140Text getDigest() {
 		return digest;
 	}

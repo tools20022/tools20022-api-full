@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.IncentivePremium;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cash premium made available if the securities holder consents or participates
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IncentivePremium1", propOrder = {"premiumDescription", "premiumAmount", "perSecurity", "perVote", "perAttendee", "paymentDate"})
 public class IncentivePremium1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -433,6 +439,7 @@ public class IncentivePremium1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrmDesc")
 	public Max350Text getPremiumDescription() {
 		return premiumDescription;
 	}
@@ -441,6 +448,7 @@ public class IncentivePremium1 {
 		this.premiumDescription = premiumDescription;
 	}
 
+	@XmlElement(name = "PrmAmt", required = true)
 	public CurrencyAndAmount getPremiumAmount() {
 		return premiumAmount;
 	}
@@ -449,6 +457,7 @@ public class IncentivePremium1 {
 		this.premiumAmount = premiumAmount;
 	}
 
+	@XmlElement(name = "PerScty", required = true)
 	public Number getPerSecurity() {
 		return perSecurity;
 	}
@@ -457,6 +466,7 @@ public class IncentivePremium1 {
 		this.perSecurity = perSecurity;
 	}
 
+	@XmlElement(name = "PerVote", required = true)
 	public Number getPerVote() {
 		return perVote;
 	}
@@ -465,6 +475,7 @@ public class IncentivePremium1 {
 		this.perVote = perVote;
 	}
 
+	@XmlElement(name = "PerAttndee", required = true)
 	public YesNoIndicator getPerAttendee() {
 		return perAttendee;
 	}
@@ -473,6 +484,7 @@ public class IncentivePremium1 {
 		this.perAttendee = perAttendee;
 	}
 
+	@XmlElement(name = "PmtDt")
 	public ISODate getPaymentDate() {
 		return paymentDate;
 	}

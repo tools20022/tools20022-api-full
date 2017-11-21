@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cash movements out of a fund as a result of investment funds transactions,
@@ -79,6 +83,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashOutForecast1", propOrder = {"settlementDate", "subTotalAmount", "subTotalUnitsNumber", "exceptionalCashFlowIndicator", "cashOutBreakdownDetails"})
 public class CashOutForecast1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -340,6 +346,7 @@ public class CashOutForecast1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
@@ -348,6 +355,7 @@ public class CashOutForecast1 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "SubTtlAmt")
 	public ActiveOrHistoricCurrencyAndAmount getSubTotalAmount() {
 		return subTotalAmount;
 	}
@@ -356,6 +364,7 @@ public class CashOutForecast1 {
 		this.subTotalAmount = subTotalAmount;
 	}
 
+	@XmlElement(name = "SubTtlUnitsNb")
 	public FinancialInstrumentQuantity1 getSubTotalUnitsNumber() {
 		return subTotalUnitsNumber;
 	}
@@ -364,6 +373,7 @@ public class CashOutForecast1 {
 		this.subTotalUnitsNumber = subTotalUnitsNumber;
 	}
 
+	@XmlElement(name = "XcptnlCshFlowInd")
 	public YesNoIndicator getExceptionalCashFlowIndicator() {
 		return exceptionalCashFlowIndicator;
 	}
@@ -372,6 +382,7 @@ public class CashOutForecast1 {
 		this.exceptionalCashFlowIndicator = exceptionalCashFlowIndicator;
 	}
 
+	@XmlElement(name = "CshOutBrkdwnDtls")
 	public List<FundCashOutBreakdown1> getCashOutBreakdownDetails() {
 		return cashOutBreakdownDetails;
 	}

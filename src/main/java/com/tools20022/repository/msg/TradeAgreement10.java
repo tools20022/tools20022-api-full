@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.TreasuryTrade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Date and identification of a trade.
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradeAgreement7}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeAgreement10", propOrder = {"tradeDate", "originatorReference", "commonReference", "operationType", "operationScope", "settlementSessionIdentifier", "paymentVersusPaymentIndicator"})
 public class TradeAgreement10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -530,6 +536,7 @@ public class TradeAgreement10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
@@ -538,6 +545,7 @@ public class TradeAgreement10 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "OrgtrRef", required = true)
 	public Max35Text getOriginatorReference() {
 		return originatorReference;
 	}
@@ -546,6 +554,7 @@ public class TradeAgreement10 {
 		this.originatorReference = originatorReference;
 	}
 
+	@XmlElement(name = "CmonRef")
 	public Max35Text getCommonReference() {
 		return commonReference;
 	}
@@ -554,6 +563,7 @@ public class TradeAgreement10 {
 		this.commonReference = commonReference;
 	}
 
+	@XmlElement(name = "OprTp")
 	public Max4Text getOperationType() {
 		return operationType;
 	}
@@ -562,6 +572,7 @@ public class TradeAgreement10 {
 		this.operationType = operationType;
 	}
 
+	@XmlElement(name = "OprScp")
 	public Max4Text getOperationScope() {
 		return operationScope;
 	}
@@ -570,6 +581,7 @@ public class TradeAgreement10 {
 		this.operationScope = operationScope;
 	}
 
+	@XmlElement(name = "SttlmSsnIdr")
 	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
 		return settlementSessionIdentifier;
 	}
@@ -578,6 +590,7 @@ public class TradeAgreement10 {
 		this.settlementSessionIdentifier = settlementSessionIdentifier;
 	}
 
+	@XmlElement(name = "PmtVrssPmtInd")
 	public YesNoIndicator getPaymentVersusPaymentIndicator() {
 		return paymentVersusPaymentIndicator;
 	}

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,23 +38,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmCreditMethod
- * Payment.mmCreditMethod}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ChequeIssue ChequeIssue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BookEntry BookEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AccountEntry AccountEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashDelivery CashDelivery}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -70,6 +54,23 @@ import java.util.List;
  * CreditInstrument.mmNetAmount}</li>
  * <li>{@linkplain com.tools20022.repository.entity.CreditInstrument#mmDeadline
  * CreditInstrument.mmDeadline}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequeIssue ChequeIssue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BookEntry BookEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountEntry AccountEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashDelivery CashDelivery}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmCreditMethod
+ * Payment.mmCreditMethod}</li>
  * </ul>
  * </li>
  * <li>
@@ -126,7 +127,7 @@ public class CreditInstrument {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CreditInstrument.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPayment";
@@ -148,11 +149,6 @@ public class CreditInstrument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentMethodCode
 	 * PaymentMethodCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CreditInstrument
-	 * CreditInstrument}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -249,6 +245,11 @@ public class CreditInstrument {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CreditInstrument
+	 * CreditInstrument}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -268,7 +269,7 @@ public class CreditInstrument {
 					PaymentInstruction15.mmPaymentMethod, OriginalTransactionReference20.mmPaymentMethod, PaymentInstruction17.mmPaymentMethod, PaymentInstruction18.mmPaymentMethod, PaymentInstruction19.mmPaymentMethod,
 					PaymentInstruction20.mmPaymentMethod, OriginalTransactionReference22.mmPaymentMethod, PaymentInstruction21.mmPaymentMethod, PaymentInstruction23.mmPaymentMethod, PaymentInstruction22.mmPaymentMethod,
 					OriginalTransactionReference24.mmPaymentMethod);
-			elementContext_lazy = () -> CreditInstrument.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Method";
@@ -276,6 +277,14 @@ public class CreditInstrument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentMethodCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CreditInstrument.class.getMethod("getMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text creditInstrumentIdentification;
@@ -288,11 +297,6 @@ public class CreditInstrument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CreditInstrument
-	 * CreditInstrument}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -309,6 +313,11 @@ public class CreditInstrument {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CreditInstrument
+	 * CreditInstrument}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -322,7 +331,7 @@ public class CreditInstrument {
 	public static final MMBusinessAttribute mmCreditInstrumentIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmChequeNumber, Cheque6.mmChequeNumber, Cheque7.mmChequeNumber, Cheque3.mmNumber, Cheque9.mmNumber);
-			elementContext_lazy = () -> CreditInstrument.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditInstrumentIdentification";
@@ -330,6 +339,14 @@ public class CreditInstrument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CreditInstrument.class.getMethod("getCreditInstrumentIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount netAmount;
@@ -344,11 +361,6 @@ public class CreditInstrument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CreditInstrument
-	 * CreditInstrument}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -360,6 +372,11 @@ public class CreditInstrument {
 	 * LiquidityDebitTransfer1.mmTransferredAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CreditInstrument
+	 * CreditInstrument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -376,7 +393,7 @@ public class CreditInstrument {
 	public static final MMBusinessAttribute mmNetAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LiquidityCreditTransfer1.mmTransferredAmount, LiquidityDebitTransfer1.mmTransferredAmount);
-			elementContext_lazy = () -> CreditInstrument.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAmount";
@@ -384,6 +401,14 @@ public class CreditInstrument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CreditInstrument.class.getMethod("getNetAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime deadline;
@@ -414,7 +439,7 @@ public class CreditInstrument {
 	 */
 	public static final MMBusinessAttribute mmDeadline = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CreditInstrument.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Deadline";
@@ -422,6 +447,14 @@ public class CreditInstrument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CreditInstrument.class.getMethod("getDeadline", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -434,7 +467,13 @@ public class CreditInstrument {
 				definition = "Specifies the instrument to be used for the credit of a payment.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.mmCreditMethod);
 				subType_lazy = () -> Arrays.asList(ChequeIssue.mmObject(), BookEntry.mmObject(), AccountEntry.mmObject(), CashDelivery.mmObject());
-				element_lazy = () -> Arrays.asList(CreditInstrument.mmRelatedPayment, CreditInstrument.mmMethod, CreditInstrument.mmCreditInstrumentIdentification, CreditInstrument.mmNetAmount, CreditInstrument.mmDeadline);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CreditInstrument.mmRelatedPayment, com.tools20022.repository.entity.CreditInstrument.mmMethod,
+						com.tools20022.repository.entity.CreditInstrument.mmCreditInstrumentIdentification, com.tools20022.repository.entity.CreditInstrument.mmNetAmount, com.tools20022.repository.entity.CreditInstrument.mmDeadline);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CreditInstrument.class;
 			}
 		});
 		return mmObject_lazy.get();

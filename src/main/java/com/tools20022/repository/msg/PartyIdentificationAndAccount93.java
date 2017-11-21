@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party involved in the settlement chain.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount93", propOrder = {"partyIdentification", "accountIdentification", "placeOfSettlement"})
 public class PartyIdentificationAndAccount93 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -262,6 +268,7 @@ public class PartyIdentificationAndAccount93 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyId")
 	public PartyIdentification2Choice getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -270,6 +277,7 @@ public class PartyIdentificationAndAccount93 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "AcctId")
 	public AccountIdentification1 getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -278,6 +286,7 @@ public class PartyIdentificationAndAccount93 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "PlcOfSttlm", required = true)
 	public PartyIdentification2Choice getPlaceOfSettlement() {
 		return placeOfSettlement;
 	}

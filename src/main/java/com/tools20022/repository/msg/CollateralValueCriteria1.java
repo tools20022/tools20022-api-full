@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria which are used to search for an account and to report on
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralValueCriteria1", propOrder = {"queryName", "searchCriteria", "returnCriteria"})
 public class CollateralValueCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -208,6 +214,7 @@ public class CollateralValueCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QryNm")
 	public Max35Text getQueryName() {
 		return queryName;
 	}
@@ -216,6 +223,7 @@ public class CollateralValueCriteria1 {
 		this.queryName = queryName;
 	}
 
+	@XmlElement(name = "SchCrit")
 	public CollateralValueSearchCriteria1 getSearchCriteria() {
 		return searchCriteria;
 	}
@@ -224,6 +232,7 @@ public class CollateralValueCriteria1 {
 		this.searchCriteria = searchCriteria;
 	}
 
+	@XmlElement(name = "RtrCrit")
 	public CashAccountReturnCriteria2 getReturnCriteria() {
 		return returnCriteria;
 	}

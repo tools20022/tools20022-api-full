@@ -31,6 +31,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the type of product and the assets to be transferred.
@@ -96,6 +100,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PEPISATransfer8", propOrder = {"masterReference", "transferIdentification", "cancellationReference", "residualCashIndicator", "ISA", "PEP", "portfolio", "financialInstrumentAssetForTransfer"})
 public class PEPISATransfer8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -559,6 +565,7 @@ public class PEPISATransfer8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -567,6 +574,7 @@ public class PEPISATransfer8 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "TrfId", required = true)
 	public Max35Text getTransferIdentification() {
 		return transferIdentification;
 	}
@@ -575,6 +583,7 @@ public class PEPISATransfer8 {
 		this.transferIdentification = transferIdentification;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -583,6 +592,7 @@ public class PEPISATransfer8 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "RsdlCshInd", required = true)
 	public YesNoIndicator getResidualCashIndicator() {
 		return residualCashIndicator;
 	}
@@ -591,6 +601,7 @@ public class PEPISATransfer8 {
 		this.residualCashIndicator = residualCashIndicator;
 	}
 
+	@XmlElement(name = "ISA", required = true)
 	public ISAYearsOfIssue1 getISA() {
 		return iSA;
 	}
@@ -599,6 +610,7 @@ public class PEPISATransfer8 {
 		this.iSA = iSA;
 	}
 
+	@XmlElement(name = "PEP", required = true)
 	public PreviousYearChoice getPEP() {
 		return pEP;
 	}
@@ -607,6 +619,7 @@ public class PEPISATransfer8 {
 		this.pEP = pEP;
 	}
 
+	@XmlElement(name = "Prtfl", required = true)
 	public Portfolio1 getPortfolio() {
 		return portfolio;
 	}
@@ -615,6 +628,7 @@ public class PEPISATransfer8 {
 		this.portfolio = portfolio;
 	}
 
+	@XmlElement(name = "FinInstrmAsstForTrf")
 	public List<FinancialInstrument11> getFinancialInstrumentAssetForTransfer() {
 		return financialInstrumentAssetForTransfer;
 	}

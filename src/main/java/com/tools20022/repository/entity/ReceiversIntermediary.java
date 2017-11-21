@@ -69,6 +69,11 @@ public class ReceiversIntermediary extends SecuritiesSettlementPartyRole {
 				definition = "Party that the receiver's custodian uses to effect the receipt of a security, when the receiver's custodian does not have a direct relationship with the receiver agent.";
 				superType_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ReceiversIntermediary.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

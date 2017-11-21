@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Date and date parameters.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Date and date parameters."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EffectiveDate1", propOrder = {"effectiveDate", "effectiveDateParameter"})
 public class EffectiveDate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class EffectiveDate1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FctvDt", required = true)
 	public ISODate getEffectiveDate() {
 		return effectiveDate;
 	}
@@ -191,6 +198,7 @@ public class EffectiveDate1 {
 		this.effectiveDate = effectiveDate;
 	}
 
+	@XmlElement(name = "FctvDtParam")
 	public ExternalEffectiveDateParameter1Code getEffectiveDateParameter() {
 		return effectiveDateParameter;
 	}

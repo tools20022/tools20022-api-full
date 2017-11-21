@@ -28,6 +28,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between types of payment instrument, ie, cheque, credit transfer,
@@ -76,6 +80,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstrument9Choice", propOrder = {"paymentCardDetails", "creditTransferDetails", "directDebitDetails", "chequeDetails", "accountDetails"})
 public class PaymentInstrument9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -350,6 +356,7 @@ public class PaymentInstrument9Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtCardDtls", required = true)
 	public PaymentCard2 getPaymentCardDetails() {
 		return paymentCardDetails;
 	}
@@ -358,6 +365,7 @@ public class PaymentInstrument9Choice {
 		this.paymentCardDetails = paymentCardDetails;
 	}
 
+	@XmlElement(name = "CdtTrfDtls", required = true)
 	public CreditTransfer4 getCreditTransferDetails() {
 		return creditTransferDetails;
 	}
@@ -366,6 +374,7 @@ public class PaymentInstrument9Choice {
 		this.creditTransferDetails = creditTransferDetails;
 	}
 
+	@XmlElement(name = "DrctDbtDtls", required = true)
 	public DirectDebitMandate2 getDirectDebitDetails() {
 		return directDebitDetails;
 	}
@@ -374,6 +383,7 @@ public class PaymentInstrument9Choice {
 		this.directDebitDetails = directDebitDetails;
 	}
 
+	@XmlElement(name = "ChqDtls", required = true)
 	public Cheque3 getChequeDetails() {
 		return chequeDetails;
 	}
@@ -382,6 +392,7 @@ public class PaymentInstrument9Choice {
 		this.chequeDetails = chequeDetails;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public InvestmentAccount15 getAccountDetails() {
 		return accountDetails;
 	}

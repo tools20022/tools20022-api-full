@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Outcome of the withdrawal authorisation.
@@ -77,6 +81,8 @@ import java.util.List;
  * AuthorisationResult8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AuthorisationResult9", propOrder = {"authorisationEntity", "authorisationResponse", "responseTrace", "authorisationCode", "action"})
 public class AuthorisationResult9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -357,6 +363,7 @@ public class AuthorisationResult9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AuthstnNtty")
 	public PartyType13Code getAuthorisationEntity() {
 		return authorisationEntity;
 	}
@@ -365,6 +372,7 @@ public class AuthorisationResult9 {
 		this.authorisationEntity = authorisationEntity;
 	}
 
+	@XmlElement(name = "AuthstnRspn", required = true)
 	public ResponseType3 getAuthorisationResponse() {
 		return authorisationResponse;
 	}
@@ -373,6 +381,7 @@ public class AuthorisationResult9 {
 		this.authorisationResponse = authorisationResponse;
 	}
 
+	@XmlElement(name = "RspnTrac")
 	public List<ResponseType4> getResponseTrace() {
 		return responseTrace;
 	}
@@ -381,6 +390,7 @@ public class AuthorisationResult9 {
 		this.responseTrace = responseTrace;
 	}
 
+	@XmlElement(name = "AuthstnCd")
 	public Min6Max8Text getAuthorisationCode() {
 		return authorisationCode;
 	}
@@ -389,6 +399,7 @@ public class AuthorisationResult9 {
 		this.authorisationCode = authorisationCode;
 	}
 
+	@XmlElement(name = "Actn")
 	public List<Action5> getAction() {
 		return action;
 	}

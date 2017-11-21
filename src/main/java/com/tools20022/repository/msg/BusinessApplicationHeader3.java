@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies specific data from the Business Application Header of the Business
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BusinessApplicationHeader3", propOrder = {"from", "to", "businessMessageIdentifier", "messageDefinitionIdentifier", "businessService", "creationDate"})
 public class BusinessApplicationHeader3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -371,6 +377,7 @@ public class BusinessApplicationHeader3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Fr", required = true)
 	public Party29Choice getFrom() {
 		return from;
 	}
@@ -379,6 +386,7 @@ public class BusinessApplicationHeader3 {
 		this.from = from;
 	}
 
+	@XmlElement(name = "To", required = true)
 	public Party29Choice getTo() {
 		return to;
 	}
@@ -387,6 +395,7 @@ public class BusinessApplicationHeader3 {
 		this.to = to;
 	}
 
+	@XmlElement(name = "BizMsgIdr", required = true)
 	public Max35Text getBusinessMessageIdentifier() {
 		return businessMessageIdentifier;
 	}
@@ -395,6 +404,7 @@ public class BusinessApplicationHeader3 {
 		this.businessMessageIdentifier = businessMessageIdentifier;
 	}
 
+	@XmlElement(name = "MsgDefIdr", required = true)
 	public Max35Text getMessageDefinitionIdentifier() {
 		return messageDefinitionIdentifier;
 	}
@@ -403,6 +413,7 @@ public class BusinessApplicationHeader3 {
 		this.messageDefinitionIdentifier = messageDefinitionIdentifier;
 	}
 
+	@XmlElement(name = "BizSvc")
 	public Max35Text getBusinessService() {
 		return businessService;
 	}
@@ -411,6 +422,7 @@ public class BusinessApplicationHeader3 {
 		this.businessService = businessService;
 	}
 
+	@XmlElement(name = "CreDt", required = true)
 	public ISONormalisedDateTime getCreationDate() {
 		return creationDate;
 	}

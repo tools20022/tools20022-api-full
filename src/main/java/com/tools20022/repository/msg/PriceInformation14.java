@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SourceOfPrice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money for which goods or services are offered, sold, or bought.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Amount of money for which goods or services are offered, sold, or bought."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceInformation14", propOrder = {"type", "value", "valueType", "sourceOfPrice", "quotationDate"})
 public class PriceInformation14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -334,6 +340,7 @@ public class PriceInformation14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TypeOfPrice33Choice getType() {
 		return type;
 	}
@@ -342,6 +349,7 @@ public class PriceInformation14 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public PriceRateOrAmountOrUnknown1Choice getValue() {
 		return value;
 	}
@@ -350,6 +358,7 @@ public class PriceInformation14 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "ValTp", required = true)
 	public YieldedOrValueType1Choice getValueType() {
 		return valueType;
 	}
@@ -358,6 +367,7 @@ public class PriceInformation14 {
 		this.valueType = valueType;
 	}
 
+	@XmlElement(name = "SrcOfPric")
 	public MarketIdentification91 getSourceOfPrice() {
 		return sourceOfPrice;
 	}
@@ -366,6 +376,7 @@ public class PriceInformation14 {
 		this.sourceOfPrice = sourceOfPrice;
 	}
 
+	@XmlElement(name = "QtnDt")
 	public DateAndDateTimeChoice getQuotationDate() {
 		return quotationDate;
 	}

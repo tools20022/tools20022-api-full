@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies individually each leg of a transport of goods.
@@ -73,6 +77,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SingleTransport4", propOrder = {"transportByAir", "transportBySea", "transportByRoad", "transportByRail"})
 public class SingleTransport4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -316,6 +322,7 @@ public class SingleTransport4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrnsprtByAir")
 	public List<TransportByAir3> getTransportByAir() {
 		return transportByAir;
 	}
@@ -324,6 +331,7 @@ public class SingleTransport4 {
 		this.transportByAir = transportByAir;
 	}
 
+	@XmlElement(name = "TrnsprtBySea")
 	public List<TransportBySea3> getTransportBySea() {
 		return transportBySea;
 	}
@@ -332,6 +340,7 @@ public class SingleTransport4 {
 		this.transportBySea = transportBySea;
 	}
 
+	@XmlElement(name = "TrnsprtByRoad")
 	public List<TransportByRoad3> getTransportByRoad() {
 		return transportByRoad;
 	}
@@ -340,6 +349,7 @@ public class SingleTransport4 {
 		this.transportByRoad = transportByRoad;
 	}
 
+	@XmlElement(name = "TrnsprtByRail")
 	public List<TransportByRail3> getTransportByRail() {
 		return transportByRail;
 	}

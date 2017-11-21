@@ -30,6 +30,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status report of the individual orders confirmation that was previously
@@ -118,6 +122,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualOrderConfirmationStatusAndReason1", propOrder = {"masterReference", "orderReference", "clientReference", "dealReference", "confirmationRejected", "amendmentRejected", "status", "statusInitiator",
+		"investmentAccountDetails", "financialInstrumentDetails"})
 public class IndividualOrderConfirmationStatusAndReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -759,6 +766,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -767,6 +775,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -775,6 +784,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -783,6 +793,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "DealRef")
 	public Max35Text getDealReference() {
 		return dealReference;
 	}
@@ -791,6 +802,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 		this.dealReference = dealReference;
 	}
 
+	@XmlElement(name = "ConfRjctd", required = true)
 	public List<ConfirmationRejectedStatus1> getConfirmationRejected() {
 		return confirmationRejected;
 	}
@@ -799,6 +811,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 		this.confirmationRejected = confirmationRejected;
 	}
 
+	@XmlElement(name = "AmdmntRjctd", required = true)
 	public List<ConfirmationRejectedStatus1> getAmendmentRejected() {
 		return amendmentRejected;
 	}
@@ -807,6 +820,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 		this.amendmentRejected = amendmentRejected;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public OrderConfirmationStatus1Code getStatus() {
 		return status;
 	}
@@ -815,6 +829,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification2Choice getStatusInitiator() {
 		return statusInitiator;
 	}
@@ -823,6 +838,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 		this.statusInitiator = statusInitiator;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount13 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -831,6 +847,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "FinInstrmDtls")
 	public FinancialInstrument10 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}

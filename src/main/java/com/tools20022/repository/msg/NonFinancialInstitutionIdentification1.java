@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique and unambiguous identification of a non-financial institution.
@@ -85,6 +89,8 @@ import java.util.function.Supplier;
  * "Unique and unambiguous identification of a non-financial institution."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NonFinancialInstitutionIdentification1", propOrder = {"BEI", "EANGLN", "CHIPSUniversalIdentification", "DUNS", "bankPartyIdentification", "taxIdentificationNumber", "proprietaryIdentification"})
 public class NonFinancialInstitutionIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -470,6 +476,7 @@ public class NonFinancialInstitutionIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BEI")
 	public BEIIdentifier getBEI() {
 		return bEI;
 	}
@@ -478,6 +485,7 @@ public class NonFinancialInstitutionIdentification1 {
 		this.bEI = bEI;
 	}
 
+	@XmlElement(name = "EANGLN")
 	public EANGLNIdentifier getEANGLN() {
 		return eANGLN;
 	}
@@ -486,6 +494,7 @@ public class NonFinancialInstitutionIdentification1 {
 		this.eANGLN = eANGLN;
 	}
 
+	@XmlElement(name = "USCHU")
 	public CHIPSUniversalIdentifier getCHIPSUniversalIdentification() {
 		return cHIPSUniversalIdentification;
 	}
@@ -494,6 +503,7 @@ public class NonFinancialInstitutionIdentification1 {
 		this.cHIPSUniversalIdentification = cHIPSUniversalIdentification;
 	}
 
+	@XmlElement(name = "DUNS")
 	public DunsIdentifier getDUNS() {
 		return dUNS;
 	}
@@ -502,6 +512,7 @@ public class NonFinancialInstitutionIdentification1 {
 		this.dUNS = dUNS;
 	}
 
+	@XmlElement(name = "BkPtyId")
 	public Max35Text getBankPartyIdentification() {
 		return bankPartyIdentification;
 	}
@@ -510,6 +521,7 @@ public class NonFinancialInstitutionIdentification1 {
 		this.bankPartyIdentification = bankPartyIdentification;
 	}
 
+	@XmlElement(name = "TaxIdNb")
 	public Max35Text getTaxIdentificationNumber() {
 		return taxIdentificationNumber;
 	}
@@ -518,6 +530,7 @@ public class NonFinancialInstitutionIdentification1 {
 		this.taxIdentificationNumber = taxIdentificationNumber;
 	}
 
+	@XmlElement(name = "PrtryId")
 	public GenericIdentification3 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}

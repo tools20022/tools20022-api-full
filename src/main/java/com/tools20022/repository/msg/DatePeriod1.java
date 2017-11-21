@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Range of time defined by a start date and an end date.
@@ -56,6 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Range of time defined by a start date and an end date."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DatePeriod1", propOrder = {"fromDate", "toDate"})
 public class DatePeriod1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -165,6 +171,7 @@ public class DatePeriod1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrDt")
 	public ISODate getFromDate() {
 		return fromDate;
 	}
@@ -173,6 +180,7 @@ public class DatePeriod1 {
 		this.fromDate = fromDate;
 	}
 
+	@XmlElement(name = "ToDt", required = true)
 	public ISODate getToDate() {
 		return toDate;
 	}

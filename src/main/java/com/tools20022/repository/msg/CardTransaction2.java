@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Card transaction details.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.msg.CardTransaction1 CardTransaction1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransaction2", propOrder = {"card", "POI", "transaction", "prePaidAccount"})
 public class CardTransaction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -304,6 +310,7 @@ public class CardTransaction2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Card")
 	public PaymentCard4 getCard() {
 		return card;
 	}
@@ -312,6 +319,7 @@ public class CardTransaction2 {
 		this.card = card;
 	}
 
+	@XmlElement(name = "POI")
 	public PointOfInteraction1 getPOI() {
 		return pOI;
 	}
@@ -320,6 +328,7 @@ public class CardTransaction2 {
 		this.pOI = pOI;
 	}
 
+	@XmlElement(name = "Tx")
 	public CardTransaction2Choice getTransaction() {
 		return transaction;
 	}
@@ -328,6 +337,7 @@ public class CardTransaction2 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "PrePdAcct")
 	public CashAccount24 getPrePaidAccount() {
 		return prePaidAccount;
 	}

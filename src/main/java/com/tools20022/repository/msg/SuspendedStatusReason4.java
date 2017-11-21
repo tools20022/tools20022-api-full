@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason for a suspended status.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SuspendedStatusReason2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SuspendedStatusReason4", propOrder = {"reason", "additionalInformation"})
 public class SuspendedStatusReason4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -187,6 +193,7 @@ public class SuspendedStatusReason4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public SuspendedStatusReason5Choice getReason() {
 		return reason;
 	}
@@ -195,6 +202,7 @@ public class SuspendedStatusReason4 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}

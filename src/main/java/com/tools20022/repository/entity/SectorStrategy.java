@@ -36,22 +36,22 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.SectorStrategy#mmSector
+ * SectorStrategy.mmSector}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PortfolioStrategy
+ * PortfolioStrategy}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.entity.Sector#mmStrategy
  * Sector.mmStrategy}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PortfolioStrategy
- * PortfolioStrategy}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SectorStrategy#mmSector
- * SectorStrategy.mmSector}</li>
  * </ul>
  * </li>
  * <li>
@@ -108,7 +108,7 @@ public class SectorStrategy extends PortfolioStrategy {
 	 */
 	public static final MMBusinessAssociationEnd mmSector = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SectorStrategy.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SectorStrategy.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sector";
@@ -129,7 +129,12 @@ public class SectorStrategy extends PortfolioStrategy {
 				definition = "Strategy is sector based.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Sector.mmStrategy);
 				superType_lazy = () -> PortfolioStrategy.mmObject();
-				element_lazy = () -> Arrays.asList(SectorStrategy.mmSector);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SectorStrategy.mmSector);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SectorStrategy.class;
 			}
 		});
 		return mmObject_lazy.get();

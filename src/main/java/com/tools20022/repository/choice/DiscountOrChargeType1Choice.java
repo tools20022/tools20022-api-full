@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Discount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a type of discount or a type of charge.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between a type of discount or a type of charge."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DiscountOrChargeType1Choice", propOrder = {"chargeType", "discountType"})
 public class DiscountOrChargeType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class DiscountOrChargeType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ChrgTp", required = true)
 	public ChargeTypeFormat3Choice getChargeType() {
 		return chargeType;
 	}
@@ -183,6 +190,7 @@ public class DiscountOrChargeType1Choice {
 		this.chargeType = chargeType;
 	}
 
+	@XmlElement(name = "DscntTp", required = true)
 	public DiscountTypeFormat1Choice getDiscountType() {
 		return discountType;
 	}

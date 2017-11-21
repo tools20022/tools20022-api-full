@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics shared by all individual transactions included in the
@@ -97,6 +101,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GroupHeader7", propOrder = {"messageIdentification", "creationDateTime", "numberOfTransactions", "controlSum", "groupCancellation", "initiatingParty", "forwardingAgent", "debtorAgent", "creditorAgent", "instructingAgent",
+		"instructedAgent"})
 public class GroupHeader7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -645,6 +652,7 @@ public class GroupHeader7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -653,6 +661,7 @@ public class GroupHeader7 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -661,6 +670,7 @@ public class GroupHeader7 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "NbOfTxs", required = true)
 	public Max15NumericText getNumberOfTransactions() {
 		return numberOfTransactions;
 	}
@@ -669,6 +679,7 @@ public class GroupHeader7 {
 		this.numberOfTransactions = numberOfTransactions;
 	}
 
+	@XmlElement(name = "CtrlSum")
 	public DecimalNumber getControlSum() {
 		return controlSum;
 	}
@@ -677,6 +688,7 @@ public class GroupHeader7 {
 		this.controlSum = controlSum;
 	}
 
+	@XmlElement(name = "GrpCxl")
 	public GroupingIndicator getGroupCancellation() {
 		return groupCancellation;
 	}
@@ -685,6 +697,7 @@ public class GroupHeader7 {
 		this.groupCancellation = groupCancellation;
 	}
 
+	@XmlElement(name = "InitgPty")
 	public PartyIdentification8 getInitiatingParty() {
 		return initiatingParty;
 	}
@@ -693,6 +706,7 @@ public class GroupHeader7 {
 		this.initiatingParty = initiatingParty;
 	}
 
+	@XmlElement(name = "FwdgAgt")
 	public BranchAndFinancialInstitutionIdentification3 getForwardingAgent() {
 		return forwardingAgent;
 	}
@@ -701,6 +715,7 @@ public class GroupHeader7 {
 		this.forwardingAgent = forwardingAgent;
 	}
 
+	@XmlElement(name = "DbtrAgt")
 	public BranchAndFinancialInstitutionIdentification3 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -709,6 +724,7 @@ public class GroupHeader7 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "CdtrAgt")
 	public BranchAndFinancialInstitutionIdentification3 getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -717,6 +733,7 @@ public class GroupHeader7 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "InstgAgt")
 	public BranchAndFinancialInstitutionIdentification3 getInstructingAgent() {
 		return instructingAgent;
 	}
@@ -725,6 +742,7 @@ public class GroupHeader7 {
 		this.instructingAgent = instructingAgent;
 	}
 
+	@XmlElement(name = "InstdAgt")
 	public BranchAndFinancialInstitutionIdentification3 getInstructedAgent() {
 		return instructedAgent;
 	}

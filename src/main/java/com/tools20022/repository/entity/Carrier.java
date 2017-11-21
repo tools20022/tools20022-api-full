@@ -66,6 +66,11 @@ public class Carrier extends TransportPartyRole {
 				definition = "Identifies the party that is responsible for the conveyance of the goods from one place to another.";
 				superType_lazy = () -> TransportPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Carrier.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

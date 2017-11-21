@@ -34,6 +34,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.ChargePartyRole
+ * ChargePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -42,9 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Charges5.mmChargesPayer}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.ChargePartyRole
- * ChargePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -74,6 +74,11 @@ public class ChargeBearer extends ChargePartyRole {
 				definition = "Party(ies) liable for a charge associated with the transfer of cash.";
 				derivationElement_lazy = () -> Arrays.asList(Charges5.mmChargesPayer);
 				superType_lazy = () -> ChargePartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ChargeBearer.class;
 			}
 		});
 		return mmObject_lazy.get();

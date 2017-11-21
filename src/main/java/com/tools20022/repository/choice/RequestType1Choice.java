@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.RequestType2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the type of action to be performed in the request.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the type of action to be performed in the request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestType1Choice", propOrder = {"paymentControl", "enquiry"})
 public class RequestType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class RequestType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtCtrl", required = true)
 	public RequestType1Code getPaymentControl() {
 		return paymentControl;
 	}
@@ -169,6 +176,7 @@ public class RequestType1Choice {
 		this.paymentControl = paymentControl;
 	}
 
+	@XmlElement(name = "Enqry", required = true)
 	public RequestType2Code getEnquiry() {
 		return enquiry;
 	}

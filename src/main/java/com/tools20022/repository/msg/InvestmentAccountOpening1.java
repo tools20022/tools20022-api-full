@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the type of opening instruction and identification
@@ -90,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestmentAccountOpeningDetails}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccountOpening1", propOrder = {"openingType", "accountApplicationIdentification", "clientReference", "counterpartyReference"})
 public class InvestmentAccountOpening1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -347,6 +353,7 @@ public class InvestmentAccountOpening1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OpngTp", required = true)
 	public AccountOpeningType1Code getOpeningType() {
 		return openingType;
 	}
@@ -355,6 +362,7 @@ public class InvestmentAccountOpening1 {
 		this.openingType = openingType;
 	}
 
+	@XmlElement(name = "AcctApplId")
 	public Max35Text getAccountApplicationIdentification() {
 		return accountApplicationIdentification;
 	}
@@ -363,6 +371,7 @@ public class InvestmentAccountOpening1 {
 		this.accountApplicationIdentification = accountApplicationIdentification;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -371,6 +380,7 @@ public class InvestmentAccountOpening1 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CtrPtyRef")
 	public AdditionalReference2 getCounterpartyReference() {
 		return counterpartyReference;
 	}

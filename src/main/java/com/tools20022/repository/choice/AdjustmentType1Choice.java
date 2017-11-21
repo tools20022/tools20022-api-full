@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the type of adjustment applied to the amount of goods/services by
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdjustmentType1Choice", propOrder = {"type", "otherAdjustmentType"})
 public class AdjustmentType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class AdjustmentType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public AdjustmentType2Code getType() {
 		return type;
 	}
@@ -189,6 +196,7 @@ public class AdjustmentType1Choice {
 		this.type = type;
 	}
 
+	@XmlElement(name = "OthrAdjstmntTp", required = true)
 	public Max35Text getOtherAdjustmentType() {
 		return otherAdjustmentType;
 	}

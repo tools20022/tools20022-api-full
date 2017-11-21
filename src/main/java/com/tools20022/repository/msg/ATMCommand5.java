@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.TerminalManagementSystem;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Command result for reinitialization of the transaction counters.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMCommand2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCommand5", propOrder = {"type", "requiredDateTime", "processedDateTime", "commandIdentification", "result", "additionalErrorInformation"})
 public class ATMCommand5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -389,6 +395,7 @@ public class ATMCommand5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ATMCommand3Code getType() {
 		return type;
 	}
@@ -397,6 +404,7 @@ public class ATMCommand5 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "ReqrdDtTm")
 	public ISODateTime getRequiredDateTime() {
 		return requiredDateTime;
 	}
@@ -405,6 +413,7 @@ public class ATMCommand5 {
 		this.requiredDateTime = requiredDateTime;
 	}
 
+	@XmlElement(name = "PrcdDtTm", required = true)
 	public ISODateTime getProcessedDateTime() {
 		return processedDateTime;
 	}
@@ -413,6 +422,7 @@ public class ATMCommand5 {
 		this.processedDateTime = processedDateTime;
 	}
 
+	@XmlElement(name = "CmdId")
 	public ATMCommandIdentification1 getCommandIdentification() {
 		return commandIdentification;
 	}
@@ -421,6 +431,7 @@ public class ATMCommand5 {
 		this.commandIdentification = commandIdentification;
 	}
 
+	@XmlElement(name = "Rslt", required = true)
 	public TerminalManagementActionResult2Code getResult() {
 		return result;
 	}
@@ -429,6 +440,7 @@ public class ATMCommand5 {
 		this.result = result;
 	}
 
+	@XmlElement(name = "AddtlErrInf")
 	public Max140Text getAdditionalErrorInformation() {
 		return additionalErrorInformation;
 	}

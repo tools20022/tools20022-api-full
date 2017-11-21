@@ -26,9 +26,11 @@ import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.choice.SettlementParties2Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -50,9 +52,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code secl.010.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
@@ -100,6 +99,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code secl.010.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -111,6 +113,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementObligationReportV03", propOrder = {"reportParameters", "pagination", "clearingMember", "clearingSegment", "deliveryAccount", "reportDetails", "settlementParties", "supplementaryData"})
 public class SettlementObligationReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -151,6 +155,14 @@ public class SettlementObligationReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> ReportParameters4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SettlementObligationReportV03.class.getMethod("getReportParameters", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Pagination pagination;
 	/**
@@ -189,6 +201,14 @@ public class SettlementObligationReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SettlementObligationReportV03.class.getMethod("getPagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification35Choice clearingMember;
 	/**
@@ -226,6 +246,14 @@ public class SettlementObligationReportV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SettlementObligationReportV03.class.getMethod("getClearingMember", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification35Choice clearingSegment;
@@ -268,6 +296,14 @@ public class SettlementObligationReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SettlementObligationReportV03.class.getMethod("getClearingSegment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesAccount19 deliveryAccount;
 	/**
@@ -309,6 +345,14 @@ public class SettlementObligationReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesAccount19.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SettlementObligationReportV03.class.getMethod("getDeliveryAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Report5> reportDetails;
 	/**
@@ -341,6 +385,14 @@ public class SettlementObligationReportV03 {
 			definition = "Provides details on the settlement obligation report.";
 			minOccurs = 1;
 			complexType_lazy = () -> Report5.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SettlementObligationReportV03.class.getMethod("getReportDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SettlementParties2Choice settlementParties;
@@ -380,6 +432,14 @@ public class SettlementObligationReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties2Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SettlementObligationReportV03.class.getMethod("getSettlementParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -417,6 +477,14 @@ public class SettlementObligationReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SettlementObligationReportV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -429,9 +497,10 @@ public class SettlementObligationReportV03 {
 				rootElement = "Document";
 				xmlTag = "SttlmOblgtnRpt";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SettlementObligationReportV03.mmReportParameters, SettlementObligationReportV03.mmPagination, SettlementObligationReportV03.mmClearingMember,
-						SettlementObligationReportV03.mmClearingSegment, SettlementObligationReportV03.mmDeliveryAccount, SettlementObligationReportV03.mmReportDetails, SettlementObligationReportV03.mmSettlementParties,
-						SettlementObligationReportV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.SettlementObligationReportV03.mmReportParameters, com.tools20022.repository.area.secl.SettlementObligationReportV03.mmPagination,
+						com.tools20022.repository.area.secl.SettlementObligationReportV03.mmClearingMember, com.tools20022.repository.area.secl.SettlementObligationReportV03.mmClearingSegment,
+						com.tools20022.repository.area.secl.SettlementObligationReportV03.mmDeliveryAccount, com.tools20022.repository.area.secl.SettlementObligationReportV03.mmReportDetails,
+						com.tools20022.repository.area.secl.SettlementObligationReportV03.mmSettlementParties, com.tools20022.repository.area.secl.SettlementObligationReportV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "secl";
@@ -441,10 +510,16 @@ public class SettlementObligationReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SettlementObligationReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptParams", required = true)
 	public ReportParameters4 getReportParameters() {
 		return reportParameters;
 	}
@@ -453,6 +528,7 @@ public class SettlementObligationReportV03 {
 		this.reportParameters = reportParameters;
 	}
 
+	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
@@ -461,6 +537,7 @@ public class SettlementObligationReportV03 {
 		this.pagination = pagination;
 	}
 
+	@XmlElement(name = "ClrMmb")
 	public PartyIdentification35Choice getClearingMember() {
 		return clearingMember;
 	}
@@ -469,6 +546,7 @@ public class SettlementObligationReportV03 {
 		this.clearingMember = clearingMember;
 	}
 
+	@XmlElement(name = "ClrSgmt")
 	public PartyIdentification35Choice getClearingSegment() {
 		return clearingSegment;
 	}
@@ -477,6 +555,7 @@ public class SettlementObligationReportV03 {
 		this.clearingSegment = clearingSegment;
 	}
 
+	@XmlElement(name = "DlvryAcct")
 	public SecuritiesAccount19 getDeliveryAccount() {
 		return deliveryAccount;
 	}
@@ -485,6 +564,7 @@ public class SettlementObligationReportV03 {
 		this.deliveryAccount = deliveryAccount;
 	}
 
+	@XmlElement(name = "RptDtls", required = true)
 	public List<Report5> getReportDetails() {
 		return reportDetails;
 	}
@@ -493,6 +573,7 @@ public class SettlementObligationReportV03 {
 		this.reportDetails = reportDetails;
 	}
 
+	@XmlElement(name = "SttlmPties")
 	public SettlementParties2Choice getSettlementParties() {
 		return settlementParties;
 	}
@@ -501,11 +582,18 @@ public class SettlementObligationReportV03 {
 		this.settlementParties = settlementParties;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:secl.010.03.03")
+	static public class Document {
+		@XmlElement(name = "SttlmOblgtnRpt", required = true)
+		public SettlementObligationReportV03 messageBody;
 	}
 }

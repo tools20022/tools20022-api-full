@@ -35,6 +35,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * identificationScheme} =
  * "Centro de Cooperacion Interbancaria (CCI); Spanish Domestic Interbanking Identifier"
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "ES[0-9]{8,9}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -71,6 +73,7 @@ public class SpanishDomesticInterbankingIdentifier {
 				name = "SpanishDomesticInterbankingIdentifier";
 				definition = "Spanish Domestic Interbanking Code. Identifies Spanish financial institutions on the Spanish national clearing system. The code is assigned by the Centro de Cooperacion Interbancaria (CCI).";
 				identificationScheme = "Centro de Cooperacion Interbancaria (CCI); Spanish Domestic Interbanking Identifier";
+				pattern = "ES[0-9]{8,9}";
 			}
 		});
 		return mmObject_lazy.get();

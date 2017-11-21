@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extension for mergers.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Extension for mergers."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateAction6SD1", propOrder = {"placeAndName", "mergerDetails", "targetCompanyAgreement", "totalNumberOfNewSharesIssued"})
 public class CorporateAction6SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -262,6 +268,7 @@ public class CorporateAction6SD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -270,6 +277,7 @@ public class CorporateAction6SD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "MrgrDtls")
 	public MergerDetailsType1 getMergerDetails() {
 		return mergerDetails;
 	}
@@ -278,6 +286,7 @@ public class CorporateAction6SD1 {
 		this.mergerDetails = mergerDetails;
 	}
 
+	@XmlElement(name = "TrgtCpnyAgrmt")
 	public TargetCompanyAgreementCode getTargetCompanyAgreement() {
 		return targetCompanyAgreement;
 	}
@@ -286,6 +295,7 @@ public class CorporateAction6SD1 {
 		this.targetCompanyAgreement = targetCompanyAgreement;
 	}
 
+	@XmlElement(name = "TtlNbOfNewShrsIssd")
 	public FinancialInstrumentQuantity15Choice getTotalNumberOfNewSharesIssued() {
 		return totalNumberOfNewSharesIssued;
 	}

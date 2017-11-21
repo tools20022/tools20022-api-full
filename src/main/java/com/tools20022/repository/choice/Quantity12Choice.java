@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of quantity of assets to be transferred in percentage rate or units.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Quantity12Choice", propOrder = {"unit", "percentageRate"})
 public class Quantity12Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class Quantity12Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Unit")
 	public DecimalNumber getUnit() {
 		return unit;
 	}
@@ -187,6 +194,7 @@ public class Quantity12Choice {
 		this.unit = unit;
 	}
 
+	@XmlElement(name = "PctgRate")
 	public PercentageRate getPercentageRate() {
 		return percentageRate;
 	}

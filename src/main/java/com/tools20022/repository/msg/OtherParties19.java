@@ -30,6 +30,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Other parties information.
@@ -143,6 +147,8 @@ import java.util.List;
  * OtherParties8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherParties19", propOrder = {"investor", "qualifiedForeignIntermediary", "stockExchange", "tradeRegulator", "tripartyAgent", "broker"})
 public class OtherParties19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -527,6 +533,7 @@ public class OtherParties19 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Invstr")
 	public List<PartyIdentificationAndAccount81> getInvestor() {
 		return investor;
 	}
@@ -535,6 +542,7 @@ public class OtherParties19 {
 		this.investor = investor;
 	}
 
+	@XmlElement(name = "QlfdFrgnIntrmy")
 	public PartyIdentificationAndAccount41 getQualifiedForeignIntermediary() {
 		return qualifiedForeignIntermediary;
 	}
@@ -543,6 +551,7 @@ public class OtherParties19 {
 		this.qualifiedForeignIntermediary = qualifiedForeignIntermediary;
 	}
 
+	@XmlElement(name = "StockXchg")
 	public PartyIdentificationAndAccount86 getStockExchange() {
 		return stockExchange;
 	}
@@ -551,6 +560,7 @@ public class OtherParties19 {
 		this.stockExchange = stockExchange;
 	}
 
+	@XmlElement(name = "TradRgltr")
 	public PartyIdentificationAndAccount86 getTradeRegulator() {
 		return tradeRegulator;
 	}
@@ -559,6 +569,7 @@ public class OtherParties19 {
 		this.tradeRegulator = tradeRegulator;
 	}
 
+	@XmlElement(name = "TrptyAgt")
 	public PartyIdentificationAndAccount41 getTripartyAgent() {
 		return tripartyAgent;
 	}
@@ -567,6 +578,7 @@ public class OtherParties19 {
 		this.tripartyAgent = tripartyAgent;
 	}
 
+	@XmlElement(name = "Brkr")
 	public PartyIdentificationAndAccount41 getBroker() {
 		return broker;
 	}

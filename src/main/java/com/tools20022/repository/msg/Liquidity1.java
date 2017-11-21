@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Liquidity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Ability of a financial instrument to be easily traded and converted to cash,
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Liquidity1", propOrder = {"value", "numberOfSecurities", "upper", "lower"})
 public class Liquidity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -278,6 +284,7 @@ public class Liquidity1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Val")
 	public ActiveCurrencyAndAmount getValue() {
 		return value;
 	}
@@ -286,6 +293,7 @@ public class Liquidity1 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "NbOfScties")
 	public DecimalNumber getNumberOfSecurities() {
 		return numberOfSecurities;
 	}
@@ -294,6 +302,7 @@ public class Liquidity1 {
 		this.numberOfSecurities = numberOfSecurities;
 	}
 
+	@XmlElement(name = "Upper")
 	public PercentageRate getUpper() {
 		return upper;
 	}
@@ -302,6 +311,7 @@ public class Liquidity1 {
 		this.upper = upper;
 	}
 
+	@XmlElement(name = "Lwr")
 	public PercentageRate getLower() {
 		return lower;
 	}

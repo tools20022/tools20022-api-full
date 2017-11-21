@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for the statement basis.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between formats for the statement basis."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatementBasisCodeAndDSSCodeChoice", propOrder = {"statementBasisAsCode", "statementBasisAsDSS"})
 public class StatementBasisCodeAndDSSCodeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +168,7 @@ public class StatementBasisCodeAndDSSCodeChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtBsisAsCd", required = true)
 	public StatementBasis1Code getStatementBasisAsCode() {
 		return statementBasisAsCode;
 	}
@@ -170,6 +177,7 @@ public class StatementBasisCodeAndDSSCodeChoice {
 		this.statementBasisAsCode = statementBasisAsCode;
 	}
 
+	@XmlElement(name = "StmtBsisAsDSS", required = true)
 	public GenericIdentification7 getStatementBasisAsDSS() {
 		return statementBasisAsDSS;
 	}

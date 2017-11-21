@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the advice for the issuance of an undertaking.
@@ -81,6 +85,8 @@ import java.util.List;
  * definition} = "Details of the advice for the issuance of an undertaking."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingAdvice1", propOrder = {"undertakingIssuanceMessage", "firstAdvisingPartyAdditionalInformation", "secondAdvisingPartyAdditionalInformation", "confirmationDetails", "digitalSignature"})
 public class UndertakingAdvice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -326,6 +332,7 @@ public class UndertakingAdvice1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UdrtkgIssncMsg", required = true)
 	public UndertakingIssuanceMessage getUndertakingIssuanceMessage() {
 		return undertakingIssuanceMessage;
 	}
@@ -334,6 +341,7 @@ public class UndertakingAdvice1 {
 		this.undertakingIssuanceMessage = undertakingIssuanceMessage;
 	}
 
+	@XmlElement(name = "FrstAdvsgPtyAddtlInf")
 	public AdvisingPartyAdditionalInformation1 getFirstAdvisingPartyAdditionalInformation() {
 		return firstAdvisingPartyAdditionalInformation;
 	}
@@ -342,6 +350,7 @@ public class UndertakingAdvice1 {
 		this.firstAdvisingPartyAdditionalInformation = firstAdvisingPartyAdditionalInformation;
 	}
 
+	@XmlElement(name = "ScndAdvsgPtyAddtlInf")
 	public AdvisingPartyAdditionalInformation1 getSecondAdvisingPartyAdditionalInformation() {
 		return secondAdvisingPartyAdditionalInformation;
 	}
@@ -350,6 +359,7 @@ public class UndertakingAdvice1 {
 		this.secondAdvisingPartyAdditionalInformation = secondAdvisingPartyAdditionalInformation;
 	}
 
+	@XmlElement(name = "ConfDtls")
 	public UndertakingConfirmation1 getConfirmationDetails() {
 		return confirmationDetails;
 	}
@@ -358,6 +368,7 @@ public class UndertakingAdvice1 {
 		this.confirmationDetails = confirmationDetails;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public List<PartyAndSignature2> getDigitalSignature() {
 		return digitalSignature;
 	}

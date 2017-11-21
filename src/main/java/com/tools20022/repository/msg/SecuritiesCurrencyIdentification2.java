@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details an individual currency including details on which country trades the
@@ -90,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesCurrencyIdentification2", propOrder = {"currency", "fractionalDigit", "countryDetails", "preEuro", "modification", "validityPeriod", "lastUpdated"})
 public class SecuritiesCurrencyIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -403,6 +409,7 @@ public class SecuritiesCurrencyIdentification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy", required = true)
 	public CurrencyCodeAndName1 getCurrency() {
 		return currency;
 	}
@@ -411,6 +418,7 @@ public class SecuritiesCurrencyIdentification2 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "FrctnlDgt")
 	public Max1Number getFractionalDigit() {
 		return fractionalDigit;
 	}
@@ -419,6 +427,7 @@ public class SecuritiesCurrencyIdentification2 {
 		this.fractionalDigit = fractionalDigit;
 	}
 
+	@XmlElement(name = "CtryDtls", required = true)
 	public CountryCodeAndName3 getCountryDetails() {
 		return countryDetails;
 	}
@@ -427,6 +436,7 @@ public class SecuritiesCurrencyIdentification2 {
 		this.countryDetails = countryDetails;
 	}
 
+	@XmlElement(name = "PreEuro", required = true)
 	public TrueFalseIndicator getPreEuro() {
 		return preEuro;
 	}
@@ -435,6 +445,7 @@ public class SecuritiesCurrencyIdentification2 {
 		this.preEuro = preEuro;
 	}
 
+	@XmlElement(name = "Mod")
 	public Modification1Code getModification() {
 		return modification;
 	}
@@ -443,6 +454,7 @@ public class SecuritiesCurrencyIdentification2 {
 		this.modification = modification;
 	}
 
+	@XmlElement(name = "VldtyPrd", required = true)
 	public Period4Choice getValidityPeriod() {
 		return validityPeriod;
 	}
@@ -451,6 +463,7 @@ public class SecuritiesCurrencyIdentification2 {
 		this.validityPeriod = validityPeriod;
 	}
 
+	@XmlElement(name = "LastUpdtd")
 	public ISODate getLastUpdated() {
 		return lastUpdated;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.ATMCommand5Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party which has requested the reconciliation.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Party which has requested the reconciliation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCommand9", propOrder = {"type", "commandIdentification"})
 public class ATMCommand9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -156,6 +162,7 @@ public class ATMCommand9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ATMCommand5Code getType() {
 		return type;
 	}
@@ -164,6 +171,7 @@ public class ATMCommand9 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "CmdId")
 	public ATMCommandIdentification1 getCommandIdentification() {
 		return commandIdentification;
 	}

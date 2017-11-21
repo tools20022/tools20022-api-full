@@ -41,6 +41,31 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole#mmCashAccount
+ * InvoiceFinancingPartyRole.mmCashAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole#mmInvoiceFinancingTransaction
+ * InvoiceFinancingPartyRole.mmInvoiceFinancingTransaction}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.IntermediateAgentRole
+ * IntermediateAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FirstAgentRole
+ * FirstAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FinancingRequestorRole
+ * FinancingRequestorRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.InvoicePartyRole
+ * InvoicePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -66,31 +91,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.msg.FinancingNotificationParties1#mmAcknowledgementReceiver
  * FinancingNotificationParties1.mmAcknowledgementReceiver}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.InvoicePartyRole
- * InvoicePartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.IntermediateAgentRole
- * IntermediateAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FirstAgentRole
- * FirstAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FinancingRequestorRole
- * FinancingRequestorRole}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole#mmCashAccount
- * InvoiceFinancingPartyRole.mmCashAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole#mmInvoiceFinancingTransaction
- * InvoiceFinancingPartyRole.mmInvoiceFinancingTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -130,11 +130,6 @@ public class InvoiceFinancingPartyRole extends InvoicePartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole
-	 * InvoiceFinancingPartyRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -157,6 +152,11 @@ public class InvoiceFinancingPartyRole extends InvoicePartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole
+	 * InvoiceFinancingPartyRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -171,7 +171,7 @@ public class InvoiceFinancingPartyRole extends InvoicePartyRole {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyIdentificationAndAccount6.mmCreditAccount, PartyIdentificationAndAccount6.mmFinancingAccount, PartyAndAccountIdentificationAndContactInformation1.mmAccountIdentification,
 					FinancingAllowedSummary1.mmCreditAccount, FinancingAllowedSummary1.mmFinancingAccount);
-			elementContext_lazy = () -> InvoiceFinancingPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
@@ -222,7 +222,7 @@ public class InvoiceFinancingPartyRole extends InvoicePartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmInvoiceFinancingTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvoiceFinancingPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvoiceFinancingTransaction";
@@ -245,7 +245,12 @@ public class InvoiceFinancingPartyRole extends InvoicePartyRole {
 				derivationElement_lazy = () -> Arrays.asList(FinancingNotificationParties1.mmNotifyingParty, FinancingNotificationParties1.mmNotificationReceiver, FinancingNotificationParties1.mmAcknowledgementReceiver);
 				subType_lazy = () -> Arrays.asList(IntermediateAgentRole.mmObject(), FirstAgentRole.mmObject(), FinancingRequestorRole.mmObject());
 				superType_lazy = () -> InvoicePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(InvoiceFinancingPartyRole.mmCashAccount, InvoiceFinancingPartyRole.mmInvoiceFinancingTransaction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmCashAccount, com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmInvoiceFinancingTransaction);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvoiceFinancingPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -71,9 +73,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.057.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
@@ -109,6 +108,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.057.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -124,6 +126,8 @@ import java.util.List;
  * OrderConfirmationStatusReportV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderConfirmationStatusReportV02", propOrder = {"messageIdentification", "reference", "individualOrderConfirmationDetailsReport", "extension"})
 public class OrderConfirmationStatusReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -170,6 +174,14 @@ public class OrderConfirmationStatusReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderConfirmationStatusReportV02.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected References61Choice reference;
 	/**
@@ -206,6 +218,14 @@ public class OrderConfirmationStatusReportV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> References61Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderConfirmationStatusReportV02.class.getMethod("getReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<IndividualOrderConfirmationStatusAndReason2> individualOrderConfirmationDetailsReport;
@@ -249,6 +269,14 @@ public class OrderConfirmationStatusReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderConfirmationStatusReportV02.class.getMethod("getIndividualOrderConfirmationDetailsReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension1> extension;
 	/**
@@ -291,6 +319,14 @@ public class OrderConfirmationStatusReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderConfirmationStatusReportV02.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -304,8 +340,8 @@ public class OrderConfirmationStatusReportV02 {
 				rootElement = "Document";
 				xmlTag = "OrdrConfStsRpt";
 				businessArea_lazy = () -> SecuritiesTradeLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(OrderConfirmationStatusReportV02.mmMessageIdentification, OrderConfirmationStatusReportV02.mmReference,
-						OrderConfirmationStatusReportV02.mmIndividualOrderConfirmationDetailsReport, OrderConfirmationStatusReportV02.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02.mmMessageIdentification, com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02.mmReference,
+						com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02.mmIndividualOrderConfirmationDetailsReport, com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -315,10 +351,16 @@ public class OrderConfirmationStatusReportV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return OrderConfirmationStatusReportV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -327,6 +369,7 @@ public class OrderConfirmationStatusReportV02 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "Ref")
 	public References61Choice getReference() {
 		return reference;
 	}
@@ -335,6 +378,7 @@ public class OrderConfirmationStatusReportV02 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "IndvOrdrConfDtlsRpt", required = true)
 	public List<IndividualOrderConfirmationStatusAndReason2> getIndividualOrderConfirmationDetailsReport() {
 		return individualOrderConfirmationDetailsReport;
 	}
@@ -343,11 +387,18 @@ public class OrderConfirmationStatusReportV02 {
 		this.individualOrderConfirmationDetailsReport = individualOrderConfirmationDetailsReport;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.057.02.02")
+	static public class Document {
+		@XmlElement(name = "OrdrConfStsRpt", required = true)
+		public OrderConfirmationStatusReportV02 messageBody;
 	}
 }

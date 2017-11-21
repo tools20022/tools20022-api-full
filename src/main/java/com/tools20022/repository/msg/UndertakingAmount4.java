@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.UndertakingAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defined variation amount and balance.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defined variation amount and balance."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingAmount4", propOrder = {"variationAmount", "balanceAmount"})
 public class UndertakingAmount4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class UndertakingAmount4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "VartnAmt", required = true)
 	public ActiveCurrencyAndAmount getVariationAmount() {
 		return variationAmount;
 	}
@@ -187,6 +194,7 @@ public class UndertakingAmount4 {
 		this.variationAmount = variationAmount;
 	}
 
+	@XmlElement(name = "BalAmt")
 	public ActiveCurrencyAndAmount getBalanceAmount() {
 		return balanceAmount;
 	}

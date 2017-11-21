@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the error that is the cause of the rejection.
@@ -76,6 +80,8 @@ import java.util.List;
  * definition} = "Describes the error that is the cause of the rejection."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ValidationResult3", propOrder = {"sequenceNumber", "ruleIdentification", "ruleDescription", "element"})
 public class ValidationResult3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -260,6 +266,7 @@ public class ValidationResult3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SeqNb", required = true)
 	public Number getSequenceNumber() {
 		return sequenceNumber;
 	}
@@ -268,6 +275,7 @@ public class ValidationResult3 {
 		this.sequenceNumber = sequenceNumber;
 	}
 
+	@XmlElement(name = "RuleId", required = true)
 	public Max35Text getRuleIdentification() {
 		return ruleIdentification;
 	}
@@ -276,6 +284,7 @@ public class ValidationResult3 {
 		this.ruleIdentification = ruleIdentification;
 	}
 
+	@XmlElement(name = "RuleDesc", required = true)
 	public Max350Text getRuleDescription() {
 		return ruleDescription;
 	}
@@ -284,6 +293,7 @@ public class ValidationResult3 {
 		this.ruleDescription = ruleDescription;
 	}
 
+	@XmlElement(name = "Elmt")
 	public List<ElementIdentification3> getElement() {
 		return element;
 	}

@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information supplied to enable the matching/reconciliation of an entry with
@@ -96,6 +100,8 @@ import java.util.List;
  * RemittanceInformation8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RemittanceInformation12", propOrder = {"remittanceIdentification", "unstructured", "structured", "originalPaymentInformation"})
 public class RemittanceInformation12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -373,6 +379,7 @@ public class RemittanceInformation12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RmtId")
 	public Max35Text getRemittanceIdentification() {
 		return remittanceIdentification;
 	}
@@ -381,6 +388,7 @@ public class RemittanceInformation12 {
 		this.remittanceIdentification = remittanceIdentification;
 	}
 
+	@XmlElement(name = "Ustrd")
 	public List<Max140Text> getUnstructured() {
 		return unstructured;
 	}
@@ -389,6 +397,7 @@ public class RemittanceInformation12 {
 		this.unstructured = unstructured;
 	}
 
+	@XmlElement(name = "Strd")
 	public List<StructuredRemittanceInformation13> getStructured() {
 		return structured;
 	}
@@ -397,6 +406,7 @@ public class RemittanceInformation12 {
 		this.structured = structured;
 	}
 
+	@XmlElement(name = "OrgnlPmtInf", required = true)
 	public OriginalPaymentInformation6 getOriginalPaymentInformation() {
 		return originalPaymentInformation;
 	}

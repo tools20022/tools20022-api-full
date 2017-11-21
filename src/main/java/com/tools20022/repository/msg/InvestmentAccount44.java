@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account between an investor(s) and a fund manager or a fund. The account can
@@ -90,6 +94,8 @@ import java.util.List;
  * InvestmentAccount29}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccount44", propOrder = {"name", "designation", "fundType", "fundFamilyName", "securityDetails", "ownerIdentification", "intermediary", "accountServicer"})
 public class InvestmentAccount44 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -547,6 +553,7 @@ public class InvestmentAccount44 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max35Text getName() {
 		return name;
 	}
@@ -555,6 +562,7 @@ public class InvestmentAccount44 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Dsgnt")
 	public Max35Text getDesignation() {
 		return designation;
 	}
@@ -563,6 +571,7 @@ public class InvestmentAccount44 {
 		this.designation = designation;
 	}
 
+	@XmlElement(name = "FndTp")
 	public Max35Text getFundType() {
 		return fundType;
 	}
@@ -571,6 +580,7 @@ public class InvestmentAccount44 {
 		this.fundType = fundType;
 	}
 
+	@XmlElement(name = "FndFmlyNm")
 	public Max350Text getFundFamilyName() {
 		return fundFamilyName;
 	}
@@ -579,6 +589,7 @@ public class InvestmentAccount44 {
 		this.fundFamilyName = fundFamilyName;
 	}
 
+	@XmlElement(name = "SctyDtls")
 	public FinancialInstrument10 getSecurityDetails() {
 		return securityDetails;
 	}
@@ -587,6 +598,7 @@ public class InvestmentAccount44 {
 		this.securityDetails = securityDetails;
 	}
 
+	@XmlElement(name = "OwnrId")
 	public OwnerIdentification1Choice getOwnerIdentification() {
 		return ownerIdentification;
 	}
@@ -595,6 +607,7 @@ public class InvestmentAccount44 {
 		this.ownerIdentification = ownerIdentification;
 	}
 
+	@XmlElement(name = "Intrmy")
 	public List<Intermediary7> getIntermediary() {
 		return intermediary;
 	}
@@ -603,6 +616,7 @@ public class InvestmentAccount44 {
 		this.intermediary = intermediary;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public PartyIdentification2Choice getAccountServicer() {
 		return accountServicer;
 	}

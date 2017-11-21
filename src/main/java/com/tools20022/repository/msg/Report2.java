@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the settlement obligation report.
@@ -63,6 +67,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Report2", propOrder = {"nonClearingMember", "settlementObligationDetails"})
 public class Report2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -188,6 +194,7 @@ public class Report2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NonClrMmb")
 	public List<PartyIdentificationAndAccount31> getNonClearingMember() {
 		return nonClearingMember;
 	}
@@ -196,6 +203,7 @@ public class Report2 {
 		this.nonClearingMember = nonClearingMember;
 	}
 
+	@XmlElement(name = "SttlmOblgtnDtls", required = true)
 	public List<SettlementObligation4> getSettlementObligationDetails() {
 		return settlementObligationDetails;
 	}

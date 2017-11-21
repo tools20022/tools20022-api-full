@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Net cash movements to a fund as a result of investment funds transactions.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Net cash movements to a fund as a result of investment funds transactions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NetCashForecast1", propOrder = {"settlementDate", "netAmount", "netUnitsNumber", "flowDirection"})
 public class NetCashForecast1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -284,6 +290,7 @@ public class NetCashForecast1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmDt")
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
@@ -292,6 +299,7 @@ public class NetCashForecast1 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "NetAmt")
 	public ActiveOrHistoricCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
@@ -300,6 +308,7 @@ public class NetCashForecast1 {
 		this.netAmount = netAmount;
 	}
 
+	@XmlElement(name = "NetUnitsNb")
 	public FinancialInstrumentQuantity1 getNetUnitsNumber() {
 		return netUnitsNumber;
 	}
@@ -308,6 +317,7 @@ public class NetCashForecast1 {
 		this.netUnitsNumber = netUnitsNumber;
 	}
 
+	@XmlElement(name = "FlowDrctn", required = true)
 	public FlowDirectionType1Code getFlowDirection() {
 		return flowDirection;
 	}

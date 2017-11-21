@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.ClearingSideCode;
 import com.tools20022.repository.entity.SystemPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,6 +37,37 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmClearingSystemMemberIdentification
+ * ClearingMemberRole.mmClearingSystemMemberIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmSide
+ * ClearingMemberRole.mmSide}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmClearingAccount
+ * ClearingMemberRole.mmClearingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmMarginAccount
+ * ClearingMemberRole.mmMarginAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmDeliveryAccount
+ * ClearingMemberRole.mmDeliveryAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmDefaultFundAccount
+ * ClearingMemberRole.mmDefaultFundAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmClearingSegment
+ * ClearingMemberRole.mmClearingSegment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmRelatedClearingMemberRole
+ * ClearingMemberRole.mmRelatedClearingMemberRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.SystemPartyRole
+ * SystemPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -73,37 +105,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CutOffData1#mmParticipantIdentification
  * CutOffData1.mmParticipantIdentification}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.SystemPartyRole
- * SystemPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmClearingSystemMemberIdentification
- * ClearingMemberRole.mmClearingSystemMemberIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmSide
- * ClearingMemberRole.mmSide}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmClearingAccount
- * ClearingMemberRole.mmClearingAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmMarginAccount
- * ClearingMemberRole.mmMarginAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmDeliveryAccount
- * ClearingMemberRole.mmDeliveryAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmDefaultFundAccount
- * ClearingMemberRole.mmDefaultFundAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmClearingSegment
- * ClearingMemberRole.mmClearingSegment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmRelatedClearingMemberRole
- * ClearingMemberRole.mmRelatedClearingMemberRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -189,11 +190,6 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ClearingSideCode
 	 * ClearingSideCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ClearingMemberRole
-	 * ClearingMemberRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -202,6 +198,11 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * PartyIdentificationAndAccount78.mmSide}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ClearingMemberRole
+	 * ClearingMemberRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -225,6 +226,14 @@ public class ClearingMemberRole extends SystemPartyRole {
 			minOccurs = 1;
 			simpleType_lazy = () -> ClearingSideCode.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ClearingMemberRole.class.getMethod("getSide", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesAccount> clearingAccount;
 	/**
@@ -245,11 +254,6 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesAccount
 	 * SecuritiesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ClearingMemberRole
-	 * ClearingMemberRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -301,6 +305,11 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ClearingMemberRole
+	 * ClearingMemberRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -348,11 +357,6 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesAccount
 	 * SecuritiesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ClearingMemberRole
-	 * ClearingMemberRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -364,6 +368,11 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * TradeLeg9.mmMarginAccount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ClearingMemberRole
+	 * ClearingMemberRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -411,11 +420,6 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesAccount
 	 * SecuritiesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ClearingMemberRole
-	 * ClearingMemberRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -448,6 +452,11 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * TradeLeg9.mmDeliveryAccount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ClearingMemberRole
+	 * ClearingMemberRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -643,6 +652,11 @@ public class ClearingMemberRole extends SystemPartyRole {
 						com.tools20022.repository.entity.ClearingMemberRole.mmClearingAccount, com.tools20022.repository.entity.ClearingMemberRole.mmMarginAccount, com.tools20022.repository.entity.ClearingMemberRole.mmDeliveryAccount,
 						com.tools20022.repository.entity.ClearingMemberRole.mmDefaultFundAccount, com.tools20022.repository.entity.ClearingMemberRole.mmClearingSegment,
 						com.tools20022.repository.entity.ClearingMemberRole.mmRelatedClearingMemberRole);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ClearingMemberRole.class;
 			}
 		});
 		return mmObject_lazy.get();

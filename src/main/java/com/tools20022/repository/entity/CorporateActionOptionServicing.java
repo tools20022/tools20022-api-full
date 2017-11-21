@@ -37,6 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOptionServicing#mmRelatedOption
+ * CorporateActionOptionServicing.mmRelatedOption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOptionServicing#mmRelatedServicing
+ * CorporateActionOptionServicing.mmRelatedServicing}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -47,17 +58,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmCorporateActionOptionServicing
  * CorporateActionServicing.mmCorporateActionOptionServicing}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOptionServicing#mmRelatedOption
- * CorporateActionOptionServicing.mmRelatedOption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOptionServicing#mmRelatedServicing
- * CorporateActionOptionServicing.mmRelatedServicing}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,11 +99,6 @@ public class CorporateActionOptionServicing {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption
 	 * CorporateActionOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOptionServicing
-	 * CorporateActionOptionServicing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -112,6 +107,11 @@ public class CorporateActionOptionServicing {
 	 * CorporateActionNotificationAdvice1.mmCorporateActionOptionDetails}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOptionServicing
+	 * CorporateActionOptionServicing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -127,7 +127,7 @@ public class CorporateActionOptionServicing {
 	public static final MMBusinessAssociationEnd mmRelatedOption = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionNotificationAdvice1.mmCorporateActionOptionDetails);
-			elementContext_lazy = () -> CorporateActionOptionServicing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOptionServicing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOption";
@@ -179,7 +179,7 @@ public class CorporateActionOptionServicing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedServicing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionOptionServicing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOptionServicing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedServicing";
@@ -201,7 +201,12 @@ public class CorporateActionOptionServicing {
 				definition = "Option servicing process which calculates the entitlement based on a corporate action option.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionOption.mmCorporateActionOptionServicing,
 						com.tools20022.repository.entity.CorporateActionServicing.mmCorporateActionOptionServicing);
-				element_lazy = () -> Arrays.asList(CorporateActionOptionServicing.mmRelatedOption, CorporateActionOptionServicing.mmRelatedServicing);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionOptionServicing.mmRelatedOption, com.tools20022.repository.entity.CorporateActionOptionServicing.mmRelatedServicing);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionOptionServicing.class;
 			}
 		});
 		return mmObject_lazy.get();

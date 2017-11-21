@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Clearing instructions transactions list.
@@ -57,6 +61,8 @@ import java.util.List;
  * definition} = "Clearing instructions transactions list."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClearingInstructions1", propOrder = {"FIToFICreditTransferTransactionInformation", "FIToFIDirectDebitTransactionInformation"})
 public class ClearingInstructions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +168,7 @@ public class ClearingInstructions1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FIToFICdtTrfTxInf", required = true)
 	public List<FIToFICreditTransferTransactionInformationDetails1> getFIToFICreditTransferTransactionInformation() {
 		return fIToFICreditTransferTransactionInformation;
 	}
@@ -170,6 +177,7 @@ public class ClearingInstructions1 {
 		this.fIToFICreditTransferTransactionInformation = fIToFICreditTransferTransactionInformation;
 	}
 
+	@XmlElement(name = "FIToFIDrctDbtTxInf", required = true)
 	public List<FIToFIDirectDebitTransactionInformationDetails1> getFIToFIDirectDebitTransactionInformation() {
 		return fIToFIDirectDebitTransactionInformation;
 	}

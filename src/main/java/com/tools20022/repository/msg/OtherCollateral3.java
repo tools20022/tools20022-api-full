@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the letter of credit or bank guarantee, or other
@@ -119,6 +123,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.msg.OtherCollateral2 OtherCollateral2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherCollateral3", propOrder = {"assetNumber", "letterOfCreditIdentification", "letterOfCreditAmount", "guaranteeAmount", "otherTypeOfCollateral", "collateralOwnership", "issueDate", "expiryDate",
+		"limitedCoverageIndicator", "issuer", "blockedQuantity", "valueDate", "exchangeRate", "marketValue", "haircut", "collateralValue", "safekeepingPlace", "safekeepingAccount"})
 public class OtherCollateral3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1247,6 +1254,7 @@ public class OtherCollateral3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AsstNb")
 	public Max35Text getAssetNumber() {
 		return assetNumber;
 	}
@@ -1255,6 +1263,7 @@ public class OtherCollateral3 {
 		this.assetNumber = assetNumber;
 	}
 
+	@XmlElement(name = "LttrOfCdtId")
 	public Max35Text getLetterOfCreditIdentification() {
 		return letterOfCreditIdentification;
 	}
@@ -1263,6 +1272,7 @@ public class OtherCollateral3 {
 		this.letterOfCreditIdentification = letterOfCreditIdentification;
 	}
 
+	@XmlElement(name = "LttrOfCdtAmt")
 	public ActiveCurrencyAndAmount getLetterOfCreditAmount() {
 		return letterOfCreditAmount;
 	}
@@ -1271,6 +1281,7 @@ public class OtherCollateral3 {
 		this.letterOfCreditAmount = letterOfCreditAmount;
 	}
 
+	@XmlElement(name = "GrntAmt")
 	public ActiveCurrencyAndAmount getGuaranteeAmount() {
 		return guaranteeAmount;
 	}
@@ -1279,6 +1290,7 @@ public class OtherCollateral3 {
 		this.guaranteeAmount = guaranteeAmount;
 	}
 
+	@XmlElement(name = "OthrTpOfColl")
 	public OtherTypeOfCollateral2 getOtherTypeOfCollateral() {
 		return otherTypeOfCollateral;
 	}
@@ -1287,6 +1299,7 @@ public class OtherCollateral3 {
 		this.otherTypeOfCollateral = otherTypeOfCollateral;
 	}
 
+	@XmlElement(name = "CollOwnrsh")
 	public CollateralOwnership1 getCollateralOwnership() {
 		return collateralOwnership;
 	}
@@ -1295,6 +1308,7 @@ public class OtherCollateral3 {
 		this.collateralOwnership = collateralOwnership;
 	}
 
+	@XmlElement(name = "IsseDt")
 	public DateFormat14Choice getIssueDate() {
 		return issueDate;
 	}
@@ -1303,6 +1317,7 @@ public class OtherCollateral3 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "XpryDt")
 	public DateFormat14Choice getExpiryDate() {
 		return expiryDate;
 	}
@@ -1311,6 +1326,7 @@ public class OtherCollateral3 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "LtdCvrgInd")
 	public YesNoIndicator getLimitedCoverageIndicator() {
 		return limitedCoverageIndicator;
 	}
@@ -1319,6 +1335,7 @@ public class OtherCollateral3 {
 		this.limitedCoverageIndicator = limitedCoverageIndicator;
 	}
 
+	@XmlElement(name = "Issr")
 	public PartyIdentification33Choice getIssuer() {
 		return issuer;
 	}
@@ -1327,6 +1344,7 @@ public class OtherCollateral3 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "BlckdQty")
 	public FinancialInstrumentQuantity1Choice getBlockedQuantity() {
 		return blockedQuantity;
 	}
@@ -1335,6 +1353,7 @@ public class OtherCollateral3 {
 		this.blockedQuantity = blockedQuantity;
 	}
 
+	@XmlElement(name = "ValDt")
 	public ISODate getValueDate() {
 		return valueDate;
 	}
@@ -1343,6 +1362,7 @@ public class OtherCollateral3 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "XchgRate")
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -1351,6 +1371,7 @@ public class OtherCollateral3 {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "MktVal")
 	public ActiveCurrencyAndAmount getMarketValue() {
 		return marketValue;
 	}
@@ -1359,6 +1380,7 @@ public class OtherCollateral3 {
 		this.marketValue = marketValue;
 	}
 
+	@XmlElement(name = "Hrcut")
 	public PercentageRate getHaircut() {
 		return haircut;
 	}
@@ -1367,6 +1389,7 @@ public class OtherCollateral3 {
 		this.haircut = haircut;
 	}
 
+	@XmlElement(name = "CollVal", required = true)
 	public ActiveCurrencyAndAmount getCollateralValue() {
 		return collateralValue;
 	}
@@ -1375,6 +1398,7 @@ public class OtherCollateral3 {
 		this.collateralValue = collateralValue;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat7Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -1383,6 +1407,7 @@ public class OtherCollateral3 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount19 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}

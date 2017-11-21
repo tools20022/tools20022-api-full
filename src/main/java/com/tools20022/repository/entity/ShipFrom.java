@@ -35,6 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.CommercialTradePartyRole
+ * CommercialTradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -45,10 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradeDelivery2.mmShipFrom}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.CommercialTradePartyRole
- * CommercialTradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -77,6 +77,11 @@ public class ShipFrom extends CommercialTradePartyRole {
 				definition = "Party from whom the goods are dispatched.";
 				derivationElement_lazy = () -> Arrays.asList(TradeDelivery1.mmShipFrom, TradeDelivery2.mmShipFrom);
 				superType_lazy = () -> CommercialTradePartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ShipFrom.class;
 			}
 		});
 		return mmObject_lazy.get();

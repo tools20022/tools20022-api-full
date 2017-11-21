@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additionnal details related to the leg.
@@ -108,6 +112,9 @@ import java.util.List;
  * definition} = "Additionnal details related to the leg."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstrumentLeg2", propOrder = {"legIdentification", "legOrderQuantity", "legBidPrice", "legOfferPrice", "legOptionRatio", "legSwapType", "legSettlementDate", "legSettlementDateCode", "instrumentLegDetails",
+		"legFinancialInstrumentAttributes", "legStipulations", "legBenchmarkCurveDetails", "tradingParties", "cashParties", "otherBusinessParties", "receivingSettlementParties", "deliveringSettlementParties"})
 public class InstrumentLeg2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -950,6 +957,7 @@ public class InstrumentLeg2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LegId")
 	public Max35Text getLegIdentification() {
 		return legIdentification;
 	}
@@ -958,6 +966,7 @@ public class InstrumentLeg2 {
 		this.legIdentification = legIdentification;
 	}
 
+	@XmlElement(name = "LegOrdrQty", required = true)
 	public Quantity1Choice getLegOrderQuantity() {
 		return legOrderQuantity;
 	}
@@ -966,6 +975,7 @@ public class InstrumentLeg2 {
 		this.legOrderQuantity = legOrderQuantity;
 	}
 
+	@XmlElement(name = "LegBidPric")
 	public Price1 getLegBidPrice() {
 		return legBidPrice;
 	}
@@ -974,6 +984,7 @@ public class InstrumentLeg2 {
 		this.legBidPrice = legBidPrice;
 	}
 
+	@XmlElement(name = "LegOfferPric")
 	public Price1 getLegOfferPrice() {
 		return legOfferPrice;
 	}
@@ -982,6 +993,7 @@ public class InstrumentLeg2 {
 		this.legOfferPrice = legOfferPrice;
 	}
 
+	@XmlElement(name = "LegOptnRatio")
 	public PercentageRate getLegOptionRatio() {
 		return legOptionRatio;
 	}
@@ -990,6 +1002,7 @@ public class InstrumentLeg2 {
 		this.legOptionRatio = legOptionRatio;
 	}
 
+	@XmlElement(name = "LegSwpTp")
 	public LegSwapType1Code getLegSwapType() {
 		return legSwapType;
 	}
@@ -998,6 +1011,7 @@ public class InstrumentLeg2 {
 		this.legSwapType = legSwapType;
 	}
 
+	@XmlElement(name = "LegSttlmDt")
 	public ISODateTime getLegSettlementDate() {
 		return legSettlementDate;
 	}
@@ -1006,6 +1020,7 @@ public class InstrumentLeg2 {
 		this.legSettlementDate = legSettlementDate;
 	}
 
+	@XmlElement(name = "LegSttlmDtCd")
 	public DateType1Choice getLegSettlementDateCode() {
 		return legSettlementDateCode;
 	}
@@ -1014,6 +1029,7 @@ public class InstrumentLeg2 {
 		this.legSettlementDateCode = legSettlementDateCode;
 	}
 
+	@XmlElement(name = "InstrmLegDtls")
 	public SecurityIdentification7 getInstrumentLegDetails() {
 		return instrumentLegDetails;
 	}
@@ -1022,6 +1038,7 @@ public class InstrumentLeg2 {
 		this.instrumentLegDetails = instrumentLegDetails;
 	}
 
+	@XmlElement(name = "LegFinInstrmAttrbts")
 	public FinancialInstrumentAttributes1 getLegFinancialInstrumentAttributes() {
 		return legFinancialInstrumentAttributes;
 	}
@@ -1030,6 +1047,7 @@ public class InstrumentLeg2 {
 		this.legFinancialInstrumentAttributes = legFinancialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "LegStiptns")
 	public FinancialInstrumentStipulations getLegStipulations() {
 		return legStipulations;
 	}
@@ -1038,6 +1056,7 @@ public class InstrumentLeg2 {
 		this.legStipulations = legStipulations;
 	}
 
+	@XmlElement(name = "LegBchmkCrvDtls")
 	public BenchmarkCurve1 getLegBenchmarkCurveDetails() {
 		return legBenchmarkCurveDetails;
 	}
@@ -1046,6 +1065,7 @@ public class InstrumentLeg2 {
 		this.legBenchmarkCurveDetails = legBenchmarkCurveDetails;
 	}
 
+	@XmlElement(name = "TradgPties")
 	public List<Intermediary14> getTradingParties() {
 		return tradingParties;
 	}
@@ -1054,6 +1074,7 @@ public class InstrumentLeg2 {
 		this.tradingParties = tradingParties;
 	}
 
+	@XmlElement(name = "CshPties")
 	public CashParties1 getCashParties() {
 		return cashParties;
 	}
@@ -1062,6 +1083,7 @@ public class InstrumentLeg2 {
 		this.cashParties = cashParties;
 	}
 
+	@XmlElement(name = "OthrBizPties")
 	public OtherParties1 getOtherBusinessParties() {
 		return otherBusinessParties;
 	}
@@ -1070,6 +1092,7 @@ public class InstrumentLeg2 {
 		this.otherBusinessParties = otherBusinessParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties3 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -1078,6 +1101,7 @@ public class InstrumentLeg2 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties3 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}

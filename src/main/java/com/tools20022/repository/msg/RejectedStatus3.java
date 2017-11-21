@@ -30,6 +30,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status is rejected.
@@ -73,6 +77,8 @@ import java.util.List;
  * definition} = "Status is rejected."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RejectedStatus3", propOrder = {"reason", "dataSourceScheme"})
 public class RejectedStatus3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -236,6 +242,7 @@ public class RejectedStatus3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public List<RejectedStatusReason6> getReason() {
 		return reason;
 	}
@@ -244,6 +251,7 @@ public class RejectedStatus3 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "DataSrcSchme", required = true)
 	public List<GenericIdentification1> getDataSourceScheme() {
 		return dataSourceScheme;
 	}

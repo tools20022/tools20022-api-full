@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Environment of the transaction given in a response to a request in a batch.
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentEnvironment11}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentEnvironment16", propOrder = {"acquirerIdentification", "merchantIdentification", "POIIdentification", "protectedCardData", "plainCardData"})
 public class CardPaymentEnvironment16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -387,6 +393,7 @@ public class CardPaymentEnvironment16 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acqrr")
 	public GenericIdentification32 getAcquirerIdentification() {
 		return acquirerIdentification;
 	}
@@ -395,6 +402,7 @@ public class CardPaymentEnvironment16 {
 		this.acquirerIdentification = acquirerIdentification;
 	}
 
+	@XmlElement(name = "MrchntId")
 	public GenericIdentification32 getMerchantIdentification() {
 		return merchantIdentification;
 	}
@@ -403,6 +411,7 @@ public class CardPaymentEnvironment16 {
 		this.merchantIdentification = merchantIdentification;
 	}
 
+	@XmlElement(name = "POIId")
 	public GenericIdentification32 getPOIIdentification() {
 		return pOIIdentification;
 	}
@@ -411,6 +420,7 @@ public class CardPaymentEnvironment16 {
 		this.pOIIdentification = pOIIdentification;
 	}
 
+	@XmlElement(name = "PrtctdCardData")
 	public ContentInformationType5 getProtectedCardData() {
 		return protectedCardData;
 	}
@@ -419,6 +429,7 @@ public class CardPaymentEnvironment16 {
 		this.protectedCardData = protectedCardData;
 	}
 
+	@XmlElement(name = "PlainCardData")
 	public PlainCardData3 getPlainCardData() {
 		return plainCardData;
 	}

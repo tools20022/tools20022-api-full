@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the confirmation of a transfer in transaction.
@@ -80,6 +84,8 @@ import java.util.List;
  * TransferIn9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferIn12", propOrder = {"masterReference", "transferDetails", "accountDetails", "settlementDetails", "extension"})
 public class TransferIn12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -406,6 +412,7 @@ public class TransferIn12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -414,6 +421,7 @@ public class TransferIn12 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "TrfDtls", required = true)
 	public List<Transfer29> getTransferDetails() {
 		return transferDetails;
 	}
@@ -422,6 +430,7 @@ public class TransferIn12 {
 		this.transferDetails = transferDetails;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public InvestmentAccount40 getAccountDetails() {
 		return accountDetails;
 	}
@@ -430,6 +439,7 @@ public class TransferIn12 {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "SttlmDtls")
 	public DeliverInformation14 getSettlementDetails() {
 		return settlementDetails;
 	}
@@ -438,6 +448,7 @@ public class TransferIn12 {
 		this.settlementDetails = settlementDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

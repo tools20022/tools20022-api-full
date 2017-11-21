@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the role of the issuer agent.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * IssuerAgent1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IssuerAgent2", propOrder = {"identification", "role"})
 public class IssuerAgent2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -201,6 +207,7 @@ public class IssuerAgent2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification40Choice getIdentification() {
 		return identification;
 	}
@@ -209,6 +216,7 @@ public class IssuerAgent2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Role")
 	public AgentRole1Code getRole() {
 		return role;
 	}

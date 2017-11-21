@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.ContactPoint;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Communication device number or electronic address used for communication.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Communication device number or electronic address used for communication."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherContact1", propOrder = {"channelType", "identification"})
 public class OtherContact1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -169,6 +175,7 @@ public class OtherContact1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ChanlTp", required = true)
 	public Max4Text getChannelType() {
 		return channelType;
 	}
@@ -177,6 +184,7 @@ public class OtherContact1 {
 		this.channelType = channelType;
 	}
 
+	@XmlElement(name = "Id")
 	public Max128Text getIdentification() {
 		return identification;
 	}

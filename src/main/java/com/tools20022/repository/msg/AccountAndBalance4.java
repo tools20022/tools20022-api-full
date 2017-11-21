@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides account and balance information.
@@ -94,6 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountAndBalance4", propOrder = {"safekeepingAccount", "confirmedBalance"})
 public class AccountAndBalance4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -232,6 +238,7 @@ public class AccountAndBalance4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public Max35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -240,6 +247,7 @@ public class AccountAndBalance4 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "ConfdBal", required = true)
 	public BalanceFormat1Choice getConfirmedBalance() {
 		return confirmedBalance;
 	}

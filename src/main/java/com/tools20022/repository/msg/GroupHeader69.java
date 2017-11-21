@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics shared by all individual transactions included in the
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * GroupHeader12}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GroupHeader69", propOrder = {"identification", "issuedDate", "reportCategory", "taxReportPurpose", "originalIdentification", "sellerTaxRepresentative", "buyerTaxRepresentative", "languageCode"})
 public class GroupHeader69 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -455,6 +461,7 @@ public class GroupHeader69 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -463,6 +470,7 @@ public class GroupHeader69 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "IssdDt", required = true)
 	public ISODate getIssuedDate() {
 		return issuedDate;
 	}
@@ -471,6 +479,7 @@ public class GroupHeader69 {
 		this.issuedDate = issuedDate;
 	}
 
+	@XmlElement(name = "RptCtgy", required = true)
 	public ExternalDocumentType1Code getReportCategory() {
 		return reportCategory;
 	}
@@ -479,6 +488,7 @@ public class GroupHeader69 {
 		this.reportCategory = reportCategory;
 	}
 
+	@XmlElement(name = "TaxRptPurp", required = true)
 	public ExternalDocumentType1Code getTaxReportPurpose() {
 		return taxReportPurpose;
 	}
@@ -487,6 +497,7 @@ public class GroupHeader69 {
 		this.taxReportPurpose = taxReportPurpose;
 	}
 
+	@XmlElement(name = "OrgnlId")
 	public Max35Text getOriginalIdentification() {
 		return originalIdentification;
 	}
@@ -495,6 +506,7 @@ public class GroupHeader69 {
 		this.originalIdentification = originalIdentification;
 	}
 
+	@XmlElement(name = "SellrTaxRprtv")
 	public PartyIdentification116 getSellerTaxRepresentative() {
 		return sellerTaxRepresentative;
 	}
@@ -503,6 +515,7 @@ public class GroupHeader69 {
 		this.sellerTaxRepresentative = sellerTaxRepresentative;
 	}
 
+	@XmlElement(name = "BuyrTaxRprtv")
 	public PartyIdentification116 getBuyerTaxRepresentative() {
 		return buyerTaxRepresentative;
 	}
@@ -511,6 +524,7 @@ public class GroupHeader69 {
 		this.buyerTaxRepresentative = buyerTaxRepresentative;
 	}
 
+	@XmlElement(name = "LangCd")
 	public LanguageCode getLanguageCode() {
 		return languageCode;
 	}

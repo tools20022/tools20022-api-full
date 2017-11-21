@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party and account details.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Party and account details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount137", propOrder = {"identification", "LEI", "alternateIdentification", "processingIdentification", "additionalInformation"})
 public class PartyIdentificationAndAccount137 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -323,6 +329,7 @@ public class PartyIdentificationAndAccount137 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification104Choice getIdentification() {
 		return identification;
 	}
@@ -331,6 +338,7 @@ public class PartyIdentificationAndAccount137 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "LEI")
 	public LEIIdentifier getLEI() {
 		return lEI;
 	}
@@ -339,6 +347,7 @@ public class PartyIdentificationAndAccount137 {
 		this.lEI = lEI;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification9 getAlternateIdentification() {
 		return alternateIdentification;
 	}
@@ -347,6 +356,7 @@ public class PartyIdentificationAndAccount137 {
 		this.alternateIdentification = alternateIdentification;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public RestrictedFINXMax16Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -355,6 +365,7 @@ public class PartyIdentificationAndAccount137 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public PartyTextInformation3 getAdditionalInformation() {
 		return additionalInformation;
 	}

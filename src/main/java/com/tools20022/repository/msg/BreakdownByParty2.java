@@ -25,6 +25,10 @@ import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the party for which the cash-in and cash-out flows are to be
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BreakdownByParty2", propOrder = {"party", "additionalParameters"})
 public class BreakdownByParty2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -164,6 +170,7 @@ public class BreakdownByParty2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pty", required = true)
 	public PartyIdentification2Choice getParty() {
 		return party;
 	}
@@ -172,6 +179,7 @@ public class BreakdownByParty2 {
 		this.party = party;
 	}
 
+	@XmlElement(name = "AddtlParams")
 	public AdditionalParameters1 getAdditionalParameters() {
 		return additionalParameters;
 	}

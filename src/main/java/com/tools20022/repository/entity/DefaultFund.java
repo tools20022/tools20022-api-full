@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Contribution1;
 import com.tools20022.repository.msg.DefaultFund1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.DefaultFund#mmTotalAmount
+ * DefaultFund.mmTotalAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DefaultFund#mmContribution
+ * DefaultFund.mmContribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DefaultFund#mmClearingSystem
+ * DefaultFund.mmClearingSystem}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -53,18 +66,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#mmDefaultFund
  * DefaultFundContribution.mmDefaultFund}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.DefaultFund#mmTotalAmount
- * DefaultFund.mmTotalAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DefaultFund#mmContribution
- * DefaultFund.mmContribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DefaultFund#mmClearingSystem
- * DefaultFund.mmClearingSystem}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,10 +100,6 @@ public class DefaultFund {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DefaultFund DefaultFund}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -114,6 +111,10 @@ public class DefaultFund {
 	 * DefaultFund1.mmTotalDefaultFundAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DefaultFund DefaultFund}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -130,7 +131,7 @@ public class DefaultFund {
 	public static final MMBusinessAttribute mmTotalAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Contribution1.mmRequiredAmount, DefaultFund1.mmTotalDefaultFundAmount);
-			elementContext_lazy = () -> DefaultFund.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DefaultFund.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalAmount";
@@ -138,6 +139,14 @@ public class DefaultFund {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DefaultFund.class.getMethod("getTotalAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DefaultFundContribution contribution;
@@ -159,10 +168,6 @@ public class DefaultFund {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.DefaultFundContribution
 	 * DefaultFundContribution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DefaultFund DefaultFund}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -171,6 +176,10 @@ public class DefaultFund {
 	 * DefaultFund1.mmContribution}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DefaultFund DefaultFund}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -185,7 +194,7 @@ public class DefaultFund {
 	public static final MMBusinessAssociationEnd mmContribution = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(DefaultFund1.mmContribution);
-			elementContext_lazy = () -> DefaultFund.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DefaultFund.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contribution";
@@ -235,7 +244,7 @@ public class DefaultFund {
 	 */
 	public static final MMBusinessAssociationEnd mmClearingSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> DefaultFund.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DefaultFund.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSystem";
@@ -256,8 +265,13 @@ public class DefaultFund {
 				name = "DefaultFund";
 				definition = "Assets posted by participants in a clearing fund that can be used in the event of a default by a participant to compensate non-defaulting participants for losses they suffer due to this default.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ClearingSystem.mmDefaultFund, com.tools20022.repository.entity.DefaultFundContribution.mmDefaultFund);
-				element_lazy = () -> Arrays.asList(DefaultFund.mmTotalAmount, DefaultFund.mmContribution, DefaultFund.mmClearingSystem);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DefaultFund.mmTotalAmount, com.tools20022.repository.entity.DefaultFund.mmContribution, com.tools20022.repository.entity.DefaultFund.mmClearingSystem);
 				derivationComponent_lazy = () -> Arrays.asList(DefaultFund1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DefaultFund.class;
 			}
 		});
 		return mmObject_lazy.get();

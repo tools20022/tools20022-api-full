@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money associated with a service.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Amount of money associated with a service."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Charge10", propOrder = {"type", "chargeBasis", "amount", "rate", "recipientIdentification"})
 public class Charge10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -321,6 +327,7 @@ public class Charge10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ChargeType1 getType() {
 		return type;
 	}
@@ -329,6 +336,7 @@ public class Charge10 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "ChrgBsis")
 	public TaxationBasis1 getChargeBasis() {
 		return chargeBasis;
 	}
@@ -337,6 +345,7 @@ public class Charge10 {
 		this.chargeBasis = chargeBasis;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -345,6 +354,7 @@ public class Charge10 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -353,6 +363,7 @@ public class Charge10 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification2Choice getRecipientIdentification() {
 		return recipientIdentification;
 	}

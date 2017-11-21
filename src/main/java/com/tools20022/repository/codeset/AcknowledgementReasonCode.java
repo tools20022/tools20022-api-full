@@ -29,27 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code
- * AcknowledgementReason5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason6Code
- * AcknowledgementReason6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason3Code
- * AcknowledgementReason3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason4Code
- * AcknowledgementReason4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason1Code
- * AcknowledgementReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason2Code
- * AcknowledgementReason2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason7Code
- * AcknowledgementReason7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason8Code
- * AcknowledgementReason8Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -82,6 +61,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#mmNarrativeReason
  * AcknowledgementReasonCode.mmNarrativeReason}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code
+ * AcknowledgementReason5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason6Code
+ * AcknowledgementReason6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason3Code
+ * AcknowledgementReason3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason4Code
+ * AcknowledgementReason4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason1Code
+ * AcknowledgementReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason2Code
+ * AcknowledgementReason2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason7Code
+ * AcknowledgementReason7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AcknowledgementReason8Code
+ * AcknowledgementReason8Code}</li>
  * </ul>
  * </li>
  * <li>

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Rating;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Assessment of securities credit and investment risk.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Assessment of securities credit and investment risk."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Rating1", propOrder = {"ratingScheme", "valueDate", "valueIdentification"})
 public class Rating1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -223,6 +229,7 @@ public class Rating1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RatgSchme", required = true)
 	public Max35Text getRatingScheme() {
 		return ratingScheme;
 	}
@@ -231,6 +238,7 @@ public class Rating1 {
 		this.ratingScheme = ratingScheme;
 	}
 
+	@XmlElement(name = "ValDt", required = true)
 	public ISODateTime getValueDate() {
 		return valueDate;
 	}
@@ -239,6 +247,7 @@ public class Rating1 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "ValId", required = true)
 	public RatingValueIdentifier getValueIdentification() {
 		return valueIdentification;
 	}

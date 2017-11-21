@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CashDeposit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Deposit of an amount of money defined in cash notes and/or coins.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Deposit of an amount of money defined in cash notes and/or coins."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashDeposit1", propOrder = {"noteDenomination", "numberOfNotes", "amount"})
 public class CashDeposit1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class CashDeposit1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NoteDnmtn", required = true)
 	public ActiveCurrencyAndAmount getNoteDenomination() {
 		return noteDenomination;
 	}
@@ -238,6 +245,7 @@ public class CashDeposit1 {
 		this.noteDenomination = noteDenomination;
 	}
 
+	@XmlElement(name = "NbOfNotes", required = true)
 	public Max15NumericText getNumberOfNotes() {
 		return numberOfNotes;
 	}
@@ -246,6 +254,7 @@ public class CashDeposit1 {
 		this.numberOfNotes = numberOfNotes;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}

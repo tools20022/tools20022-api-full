@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * The process of notifying of an upcoming corporate action. It provides
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionEventStatus1", propOrder = {"eventCompletenessStatus", "eventConfirmationStatus"})
 public class CorporateActionEventStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -182,6 +188,7 @@ public class CorporateActionEventStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EvtCmpltnsSts", required = true)
 	public EventCompletenessStatus1Code getEventCompletenessStatus() {
 		return eventCompletenessStatus;
 	}
@@ -190,6 +197,7 @@ public class CorporateActionEventStatus1 {
 		this.eventCompletenessStatus = eventCompletenessStatus;
 	}
 
+	@XmlElement(name = "EvtConfSts", required = true)
 	public EventConfirmationStatus1Code getEventConfirmationStatus() {
 		return eventConfirmationStatus;
 	}

@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information used for identifying an account.
@@ -94,6 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CashAccount11}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccount29", propOrder = {"identification", "accountServicer"})
 public class CashAccount29 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -244,6 +250,7 @@ public class CashAccount29 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public CashAccountIdentification1Choice getIdentification() {
 		return identification;
 	}
@@ -252,6 +259,7 @@ public class CashAccount29 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public FinancialInstitutionIdentification3Choice getAccountServicer() {
 		return accountServicer;
 	}

@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the cash movement.
@@ -79,6 +83,8 @@ import java.util.List;
  * definition} = "Provides information about the cash movement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashMovement3", propOrder = {"postingDateTime", "valueDate", "postingAmount", "accountDetails"})
 public class CashMovement3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -285,6 +291,7 @@ public class CashMovement3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PstngDtTm")
 	public DateAndDateTimeChoice getPostingDateTime() {
 		return postingDateTime;
 	}
@@ -293,6 +300,7 @@ public class CashMovement3 {
 		this.postingDateTime = postingDateTime;
 	}
 
+	@XmlElement(name = "ValDt", required = true)
 	public ISODate getValueDate() {
 		return valueDate;
 	}
@@ -301,6 +309,7 @@ public class CashMovement3 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "PstngAmt", required = true)
 	public ActiveCurrencyAndAmount getPostingAmount() {
 		return postingAmount;
 	}
@@ -309,6 +318,7 @@ public class CashMovement3 {
 		this.postingAmount = postingAmount;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public List<CashAccount18> getAccountDetails() {
 		return accountDetails;
 	}

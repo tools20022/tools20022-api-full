@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmFiscalExemption
+ * InvestmentFundTax.mmFiscalExemption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmInvestmentAccount
+ * InvestmentFundTax.mmInvestmentAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmPercentageOfDebtClaim
+ * InvestmentFundTax.mmPercentageOfDebtClaim}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmPercentageGrandfatheredDebt
+ * InvestmentFundTax.mmPercentageGrandfatheredDebt}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmExemptionIndicator
+ * InvestmentFundTax.mmExemptionIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmTransaction
+ * InvestmentFundTax.mmTransaction}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.SecuritiesTax
+ * SecuritiesTax}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -293,32 +320,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SwitchRedemptionLegExecution4.mmTransactionOverhead}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.SecuritiesTax
- * SecuritiesTax}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmFiscalExemption
- * InvestmentFundTax.mmFiscalExemption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmInvestmentAccount
- * InvestmentFundTax.mmInvestmentAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmPercentageOfDebtClaim
- * InvestmentFundTax.mmPercentageOfDebtClaim}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmPercentageGrandfatheredDebt
- * InvestmentFundTax.mmPercentageGrandfatheredDebt}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmExemptionIndicator
- * InvestmentFundTax.mmExemptionIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmTransaction
- * InvestmentFundTax.mmTransaction}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -350,11 +351,6 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax
-	 * InvestmentFundTax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -403,6 +399,11 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax
+	 * InvestmentFundTax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -422,7 +423,7 @@ public class InvestmentFundTax extends SecuritiesTax {
 					InvestmentAccountOwnershipInformation8.mmFiscalExemption, InvestmentAccountOwnershipInformation9.mmFiscalExemption, InvestmentAccountOwnershipInformation10.mmFiscalExemption,
 					InvestmentAccountOwnershipInformation11.mmFiscalExemption, InvestmentAccountOwnershipInformation12.mmFiscalExemption, InvestmentAccountOwnershipInformation13.mmFiscalExemption,
 					InvestmentAccountOwnershipInformation15.mmFiscalExemption, InvestmentAccountOwnershipInformation14.mmFiscalExemption);
-			elementContext_lazy = () -> InvestmentFundTax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FiscalExemption";
@@ -430,6 +431,14 @@ public class InvestmentFundTax extends SecuritiesTax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundTax.class.getMethod("getFiscalExemption", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentAccount investmentAccount;
@@ -468,7 +477,7 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentFundTax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccount";
@@ -494,11 +503,6 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax
-	 * InvestmentFundTax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -523,6 +527,11 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax
+	 * InvestmentFundTax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -539,7 +548,7 @@ public class InvestmentFundTax extends SecuritiesTax {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxCalculationInformation2.mmPercentageOfDebtClaim, TaxCalculationInformation4.mmPercentageOfDebtClaim, TotalTaxes3.mmPercentageOfDebtClaim, TotalTaxes4.mmPercentageOfDebtClaim,
 					TotalTaxes5.mmPercentageOfDebtClaim, InformativeTax1.mmPercentageOfDebtClaim);
-			elementContext_lazy = () -> InvestmentFundTax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfDebtClaim";
@@ -547,6 +556,14 @@ public class InvestmentFundTax extends SecuritiesTax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundTax.class.getMethod("getPercentageOfDebtClaim", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate percentageGrandfatheredDebt;
@@ -560,11 +577,6 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax
-	 * InvestmentFundTax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -576,6 +588,11 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * TaxCalculationInformation4.mmPercentageGrandfatheredDebt}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax
+	 * InvestmentFundTax}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -590,7 +607,7 @@ public class InvestmentFundTax extends SecuritiesTax {
 	public static final MMBusinessAttribute mmPercentageGrandfatheredDebt = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxCalculationInformation2.mmPercentageGrandfatheredDebt, TaxCalculationInformation4.mmPercentageGrandfatheredDebt);
-			elementContext_lazy = () -> InvestmentFundTax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageGrandfatheredDebt";
@@ -598,6 +615,14 @@ public class InvestmentFundTax extends SecuritiesTax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundTax.class.getMethod("getPercentageGrandfatheredDebt", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator exemptionIndicator;
@@ -611,11 +636,6 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax
-	 * InvestmentFundTax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -650,6 +670,11 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax
+	 * InvestmentFundTax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -665,7 +690,7 @@ public class InvestmentFundTax extends SecuritiesTax {
 			derivation_lazy = () -> Arrays.asList(Tax3.mmExemptionIndicator, Tax15.mmExemptionIndicator, Tax6.mmExemptionIndicator, Tax16.mmExemptionIndicator, Tax7.mmExemptionIndicator, Tax14.mmExemptionIndicator,
 					Tax18.mmExemptionIndicator, Tax19.mmExemptionIndicator, Tax20.mmExemptionIndicator, Tax21.mmExemptionIndicator, Tax25.mmExemptionIndicator, Tax28.mmExemptionIndicator, Tax32.mmExemptionIndicator,
 					Tax30.mmExemptionIndicator);
-			elementContext_lazy = () -> InvestmentFundTax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExemptionIndicator";
@@ -673,6 +698,14 @@ public class InvestmentFundTax extends SecuritiesTax {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundTax.class.getMethod("getExemptionIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentFundTransaction transaction;
@@ -712,7 +745,7 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 */
 	public static final MMBusinessAssociationEnd mmTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentFundTax.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Transaction";
@@ -747,13 +780,19 @@ public class InvestmentFundTax extends SecuritiesTax {
 						Tax30.mmTaxCalculationDetails, Tax31.mmTaxCalculationDetails, RedemptionExecution16.mmTransactionOverhead, InvestmentAccountOwnershipInformation14.mmTaxExemption, SubscriptionOrder14.mmTransactionOverhead,
 						SwitchSubscriptionLegExecution4.mmTransactionOverhead, RedemptionExecution15.mmTransactionOverhead, SwitchRedemptionLegExecution4.mmTransactionOverhead);
 				superType_lazy = () -> SecuritiesTax.mmObject();
-				element_lazy = () -> Arrays.asList(InvestmentFundTax.mmFiscalExemption, InvestmentFundTax.mmInvestmentAccount, InvestmentFundTax.mmPercentageOfDebtClaim, InvestmentFundTax.mmPercentageGrandfatheredDebt,
-						InvestmentFundTax.mmExemptionIndicator, InvestmentFundTax.mmTransaction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundTax.mmFiscalExemption, com.tools20022.repository.entity.InvestmentFundTax.mmInvestmentAccount,
+						com.tools20022.repository.entity.InvestmentFundTax.mmPercentageOfDebtClaim, com.tools20022.repository.entity.InvestmentFundTax.mmPercentageGrandfatheredDebt,
+						com.tools20022.repository.entity.InvestmentFundTax.mmExemptionIndicator, com.tools20022.repository.entity.InvestmentFundTax.mmTransaction);
 				derivationComponent_lazy = () -> Arrays.asList(TaxCalculationInformation2.mmObject(), Tax8.mmObject(), TaxCalculationInformation4.mmObject(), Tax17.mmObject(), Tax15.mmObject(), TaxCalculationInformation1.mmObject(),
 						Tax6.mmObject(), TaxCalculationInformation5.mmObject(), Tax16.mmObject(), TaxCalculationInformation3.mmObject(), Tax7.mmObject(), TotalTaxes2.mmObject(), TaxCalculationInformation6.mmObject(), Tax14.mmObject(),
 						TotalTaxes3.mmObject(), TaxCalculationBasisType1Choice.mmObject(), TaxCalculationInformation7.mmObject(), Tax18.mmObject(), TotalTaxes4.mmObject(), Tax19.mmObject(), Tax20.mmObject(), TotalTaxes5.mmObject(),
 						Tax21.mmObject(), TaxCalculationInformation8.mmObject(), Tax25.mmObject(), Tax28.mmObject(), FeeAndTax1.mmObject(), Tax32.mmObject(), TotalFeesAndTaxes40.mmObject(), Tax30.mmObject(),
 						TaxCalculationInformation9.mmObject(), Tax31.mmObject(), TaxCalculationInformation10.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvestmentFundTax.class;
 			}
 		});
 		return mmObject_lazy.get();

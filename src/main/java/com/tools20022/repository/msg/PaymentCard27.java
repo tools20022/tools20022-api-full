@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment card performing the transaction.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentCard19}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentCard27", propOrder = {"protectedCardData", "plainCardData", "paymentAccountReference", "maskedPAN", "cardBrand", "cardProductType", "cardProductSubType"})
 public class PaymentCard27 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -441,6 +447,7 @@ public class PaymentCard27 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrtctdCardData")
 	public ContentInformationType10 getProtectedCardData() {
 		return protectedCardData;
 	}
@@ -449,6 +456,7 @@ public class PaymentCard27 {
 		this.protectedCardData = protectedCardData;
 	}
 
+	@XmlElement(name = "PlainCardData")
 	public PlainCardData8 getPlainCardData() {
 		return plainCardData;
 	}
@@ -457,6 +465,7 @@ public class PaymentCard27 {
 		this.plainCardData = plainCardData;
 	}
 
+	@XmlElement(name = "PmtAcctRef")
 	public Max70Text getPaymentAccountReference() {
 		return paymentAccountReference;
 	}
@@ -465,6 +474,7 @@ public class PaymentCard27 {
 		this.paymentAccountReference = paymentAccountReference;
 	}
 
+	@XmlElement(name = "MskdPAN")
 	public Max30Text getMaskedPAN() {
 		return maskedPAN;
 	}
@@ -473,6 +483,7 @@ public class PaymentCard27 {
 		this.maskedPAN = maskedPAN;
 	}
 
+	@XmlElement(name = "CardBrnd")
 	public Max35Text getCardBrand() {
 		return cardBrand;
 	}
@@ -481,6 +492,7 @@ public class PaymentCard27 {
 		this.cardBrand = cardBrand;
 	}
 
+	@XmlElement(name = "CardPdctTp")
 	public CardProductType1Code getCardProductType() {
 		return cardProductType;
 	}
@@ -489,6 +501,7 @@ public class PaymentCard27 {
 		this.cardProductType = cardProductType;
 	}
 
+	@XmlElement(name = "CardPdctSubTp")
 	public Max35Text getCardProductSubType() {
 		return cardProductSubType;
 	}

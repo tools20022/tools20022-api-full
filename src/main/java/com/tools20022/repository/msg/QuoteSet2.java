@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies a group of related quotes. This can, for example be used to
@@ -79,6 +83,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuoteSet2", propOrder = {"identification", "validUntilDateTime", "quoteEntryDetails", "underlyingFinancialInstrument", "underlyingFinancialInstrumentAttributes", "underlyingStipulations"})
 public class QuoteSet2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -373,6 +379,7 @@ public class QuoteSet2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -381,6 +388,7 @@ public class QuoteSet2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "VldUntilDtTm")
 	public ISODateTime getValidUntilDateTime() {
 		return validUntilDateTime;
 	}
@@ -389,6 +397,7 @@ public class QuoteSet2 {
 		this.validUntilDateTime = validUntilDateTime;
 	}
 
+	@XmlElement(name = "QtNtryDtls")
 	public List<QuoteEntry2> getQuoteEntryDetails() {
 		return quoteEntryDetails;
 	}
@@ -397,6 +406,7 @@ public class QuoteSet2 {
 		this.quoteEntryDetails = quoteEntryDetails;
 	}
 
+	@XmlElement(name = "UndrlygFinInstrm", required = true)
 	public List<SecurityIdentification7> getUnderlyingFinancialInstrument() {
 		return underlyingFinancialInstrument;
 	}
@@ -405,6 +415,7 @@ public class QuoteSet2 {
 		this.underlyingFinancialInstrument = underlyingFinancialInstrument;
 	}
 
+	@XmlElement(name = "UndrlygFinInstrmAttrbts")
 	public FinancialInstrumentAttributes1 getUnderlyingFinancialInstrumentAttributes() {
 		return underlyingFinancialInstrumentAttributes;
 	}
@@ -413,6 +424,7 @@ public class QuoteSet2 {
 		this.underlyingFinancialInstrumentAttributes = underlyingFinancialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "UndrlygStiptns")
 	public FinancialInstrumentStipulations getUnderlyingStipulations() {
 		return underlyingStipulations;
 	}

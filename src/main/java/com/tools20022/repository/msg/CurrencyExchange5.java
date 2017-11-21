@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide details of the currency exchange.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Set of elements used to provide details of the currency exchange."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyExchange5", propOrder = {"sourceCurrency", "targetCurrency", "unitCurrency", "exchangeRate", "contractIdentification", "quotationDate"})
 public class CurrencyExchange5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -401,6 +407,7 @@ public class CurrencyExchange5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SrcCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getSourceCurrency() {
 		return sourceCurrency;
 	}
@@ -409,6 +416,7 @@ public class CurrencyExchange5 {
 		this.sourceCurrency = sourceCurrency;
 	}
 
+	@XmlElement(name = "TrgtCcy")
 	public ActiveOrHistoricCurrencyCode getTargetCurrency() {
 		return targetCurrency;
 	}
@@ -417,6 +425,7 @@ public class CurrencyExchange5 {
 		this.targetCurrency = targetCurrency;
 	}
 
+	@XmlElement(name = "UnitCcy")
 	public ActiveOrHistoricCurrencyCode getUnitCurrency() {
 		return unitCurrency;
 	}
@@ -425,6 +434,7 @@ public class CurrencyExchange5 {
 		this.unitCurrency = unitCurrency;
 	}
 
+	@XmlElement(name = "XchgRate", required = true)
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -433,6 +443,7 @@ public class CurrencyExchange5 {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "CtrctId")
 	public Max35Text getContractIdentification() {
 		return contractIdentification;
 	}
@@ -441,6 +452,7 @@ public class CurrencyExchange5 {
 		this.contractIdentification = contractIdentification;
 	}
 
+	@XmlElement(name = "QtnDt")
 	public ISODateTime getQuotationDate() {
 		return quotationDate;
 	}

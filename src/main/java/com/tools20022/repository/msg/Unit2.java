@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Quantity of a security.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Quantity of a security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Unit2", propOrder = {"instrument", "totalNumber", "group1Number", "group2Number", "complete"})
 public class Unit2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -319,6 +325,7 @@ public class Unit2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Instrm", required = true)
 	public FinancialInstrument7 getInstrument() {
 		return instrument;
 	}
@@ -327,6 +334,7 @@ public class Unit2 {
 		this.instrument = instrument;
 	}
 
+	@XmlElement(name = "TtlNb", required = true)
 	public DecimalNumber getTotalNumber() {
 		return totalNumber;
 	}
@@ -335,6 +343,7 @@ public class Unit2 {
 		this.totalNumber = totalNumber;
 	}
 
+	@XmlElement(name = "Grp1Nb")
 	public DecimalNumber getGroup1Number() {
 		return group1Number;
 	}
@@ -343,6 +352,7 @@ public class Unit2 {
 		this.group1Number = group1Number;
 	}
 
+	@XmlElement(name = "Grp2Nb")
 	public DecimalNumber getGroup2Number() {
 		return group2Number;
 	}
@@ -351,6 +361,7 @@ public class Unit2 {
 		this.group2Number = group2Number;
 	}
 
+	@XmlElement(name = "Cmplt", required = true)
 	public YesNoIndicator getComplete() {
 		return complete;
 	}

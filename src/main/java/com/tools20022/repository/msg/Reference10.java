@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional references linked to the order modification request.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Additional references linked to the order modification request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reference10", propOrder = {"originalClientOrderIdentification", "originalOrderModificationTime"})
 public class Reference10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -164,6 +170,7 @@ public class Reference10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlClntOrdrId", required = true)
 	public Max35Text getOriginalClientOrderIdentification() {
 		return originalClientOrderIdentification;
 	}
@@ -172,6 +179,7 @@ public class Reference10 {
 		this.originalClientOrderIdentification = originalClientOrderIdentification;
 	}
 
+	@XmlElement(name = "OrgnlOrdrModTm")
 	public ISODateTime getOriginalOrderModificationTime() {
 		return originalOrderModificationTime;
 	}

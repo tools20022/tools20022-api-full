@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Human entity, as distinguished from a corporate entity (which is sometimes
@@ -76,6 +80,8 @@ import java.util.List;
  * IndividualPerson12}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualPerson32", propOrder = {"name", "birthDate", "countryAndResidentialStatus", "otherIdentification"})
 public class IndividualPerson32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -319,6 +325,7 @@ public class IndividualPerson32 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max350Text getName() {
 		return name;
 	}
@@ -327,6 +334,7 @@ public class IndividualPerson32 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "BirthDt")
 	public ISODate getBirthDate() {
 		return birthDate;
 	}
@@ -335,6 +343,7 @@ public class IndividualPerson32 {
 		this.birthDate = birthDate;
 	}
 
+	@XmlElement(name = "CtryAndResdtlSts")
 	public CountryAndResidentialStatusType2 getCountryAndResidentialStatus() {
 		return countryAndResidentialStatus;
 	}
@@ -343,6 +352,7 @@ public class IndividualPerson32 {
 		this.countryAndResidentialStatus = countryAndResidentialStatus;
 	}
 
+	@XmlElement(name = "OthrId")
 	public List<GenericIdentification164> getOtherIdentification() {
 		return otherIdentification;
 	}

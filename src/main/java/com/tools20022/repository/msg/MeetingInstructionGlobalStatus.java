@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique status applying to a meeting instruction message and therefore to each
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingInstructionGlobalStatus", propOrder = {"processingStatus", "rejectionStatus", "cancellationStatus", "statusReason"})
 public class MeetingInstructionGlobalStatus {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -332,6 +338,7 @@ public class MeetingInstructionGlobalStatus {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcgSts", required = true)
 	public Status1Code getProcessingStatus() {
 		return processingStatus;
 	}
@@ -340,6 +347,7 @@ public class MeetingInstructionGlobalStatus {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "RjctnSts", required = true)
 	public MeetingInstructionRejection1Code getRejectionStatus() {
 		return rejectionStatus;
 	}
@@ -348,6 +356,7 @@ public class MeetingInstructionGlobalStatus {
 		this.rejectionStatus = rejectionStatus;
 	}
 
+	@XmlElement(name = "CxlSts", required = true)
 	public MeetingInstructionCancellationStatus1Code getCancellationStatus() {
 		return cancellationStatus;
 	}
@@ -356,6 +365,7 @@ public class MeetingInstructionGlobalStatus {
 		this.cancellationStatus = cancellationStatus;
 	}
 
+	@XmlElement(name = "StsRsn")
 	public Max350Text getStatusReason() {
 		return statusReason;
 	}

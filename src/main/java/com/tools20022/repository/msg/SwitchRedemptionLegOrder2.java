@@ -35,6 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Redemption leg, or switch-out, of a switch transaction.
@@ -105,6 +109,9 @@ import java.util.List;
  * definition} = "Redemption leg, or switch-out, of a switch transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwitchRedemptionLegOrder2", propOrder = {"legIdentification", "financialInstrumentDetails", "financialInstrumentQuantityChoice", "incomePreference", "group1Or2Units", "requestedSettlementCurrency", "requestedNAVCurrency",
+		"chargeDetails", "commissionDetails", "taxDetails", "settlementAndCustodyDetails", "physicalDeliveryIndicator", "physicalDeliveryDetails"})
 public class SwitchRedemptionLegOrder2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -749,6 +756,7 @@ public class SwitchRedemptionLegOrder2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LegId")
 	public Max35Text getLegIdentification() {
 		return legIdentification;
 	}
@@ -757,6 +765,7 @@ public class SwitchRedemptionLegOrder2 {
 		this.legIdentification = legIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument6 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -765,6 +774,7 @@ public class SwitchRedemptionLegOrder2 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "FinInstrmQtyChc")
 	public FinancialInstrumentQuantity3Choice getFinancialInstrumentQuantityChoice() {
 		return financialInstrumentQuantityChoice;
 	}
@@ -773,6 +783,7 @@ public class SwitchRedemptionLegOrder2 {
 		this.financialInstrumentQuantityChoice = financialInstrumentQuantityChoice;
 	}
 
+	@XmlElement(name = "IncmPref")
 	public IncomePreference1Code getIncomePreference() {
 		return incomePreference;
 	}
@@ -781,6 +792,7 @@ public class SwitchRedemptionLegOrder2 {
 		this.incomePreference = incomePreference;
 	}
 
+	@XmlElement(name = "Grp1Or2Units")
 	public UKTaxGroupUnitCode getGroup1Or2Units() {
 		return group1Or2Units;
 	}
@@ -789,6 +801,7 @@ public class SwitchRedemptionLegOrder2 {
 		this.group1Or2Units = group1Or2Units;
 	}
 
+	@XmlElement(name = "ReqdSttlmCcy")
 	public CurrencyCode getRequestedSettlementCurrency() {
 		return requestedSettlementCurrency;
 	}
@@ -797,6 +810,7 @@ public class SwitchRedemptionLegOrder2 {
 		this.requestedSettlementCurrency = requestedSettlementCurrency;
 	}
 
+	@XmlElement(name = "ReqdNAVCcy")
 	public CurrencyCode getRequestedNAVCurrency() {
 		return requestedNAVCurrency;
 	}
@@ -805,6 +819,7 @@ public class SwitchRedemptionLegOrder2 {
 		this.requestedNAVCurrency = requestedNAVCurrency;
 	}
 
+	@XmlElement(name = "ChrgDtls")
 	public List<Charge8> getChargeDetails() {
 		return chargeDetails;
 	}
@@ -813,6 +828,7 @@ public class SwitchRedemptionLegOrder2 {
 		this.chargeDetails = chargeDetails;
 	}
 
+	@XmlElement(name = "ComssnDtls")
 	public List<Commission6> getCommissionDetails() {
 		return commissionDetails;
 	}
@@ -821,6 +837,7 @@ public class SwitchRedemptionLegOrder2 {
 		this.commissionDetails = commissionDetails;
 	}
 
+	@XmlElement(name = "TaxDtls")
 	public List<Tax6> getTaxDetails() {
 		return taxDetails;
 	}
@@ -829,6 +846,7 @@ public class SwitchRedemptionLegOrder2 {
 		this.taxDetails = taxDetails;
 	}
 
+	@XmlElement(name = "SttlmAndCtdyDtls")
 	public FundSettlementParameters3 getSettlementAndCustodyDetails() {
 		return settlementAndCustodyDetails;
 	}
@@ -837,6 +855,7 @@ public class SwitchRedemptionLegOrder2 {
 		this.settlementAndCustodyDetails = settlementAndCustodyDetails;
 	}
 
+	@XmlElement(name = "PhysDlvryInd", required = true)
 	public YesNoIndicator getPhysicalDeliveryIndicator() {
 		return physicalDeliveryIndicator;
 	}
@@ -845,6 +864,7 @@ public class SwitchRedemptionLegOrder2 {
 		this.physicalDeliveryIndicator = physicalDeliveryIndicator;
 	}
 
+	@XmlElement(name = "PhysDlvryDtls")
 	public DeliveryParameters3 getPhysicalDeliveryDetails() {
 		return physicalDeliveryDetails;
 	}

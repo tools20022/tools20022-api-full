@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data common to all transactions of a data set.
@@ -84,6 +88,8 @@ import java.util.List;
  * CommonData5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CommonData6", propOrder = {"environment", "context", "transactionType", "additionalService", "serviceAttribute", "merchantCategoryCode", "reconciliationIdentification", "currency"})
 public class CommonData6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -540,6 +546,7 @@ public class CommonData6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt")
 	public CardPaymentEnvironment58 getEnvironment() {
 		return environment;
 	}
@@ -548,6 +555,7 @@ public class CommonData6 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Cntxt")
 	public CardPaymentContext24 getContext() {
 		return context;
 	}
@@ -556,6 +564,7 @@ public class CommonData6 {
 		this.context = context;
 	}
 
+	@XmlElement(name = "TxTp")
 	public CardPaymentServiceType5Code getTransactionType() {
 		return transactionType;
 	}
@@ -564,6 +573,7 @@ public class CommonData6 {
 		this.transactionType = transactionType;
 	}
 
+	@XmlElement(name = "AddtlSvc")
 	public List<CardPaymentServiceType9Code> getAdditionalService() {
 		return additionalService;
 	}
@@ -572,6 +582,7 @@ public class CommonData6 {
 		this.additionalService = additionalService;
 	}
 
+	@XmlElement(name = "SvcAttr")
 	public CardPaymentServiceType3Code getServiceAttribute() {
 		return serviceAttribute;
 	}
@@ -580,6 +591,7 @@ public class CommonData6 {
 		this.serviceAttribute = serviceAttribute;
 	}
 
+	@XmlElement(name = "MrchntCtgyCd")
 	public Min3Max4Text getMerchantCategoryCode() {
 		return merchantCategoryCode;
 	}
@@ -588,6 +600,7 @@ public class CommonData6 {
 		this.merchantCategoryCode = merchantCategoryCode;
 	}
 
+	@XmlElement(name = "RcncltnId")
 	public Max35Text getReconciliationIdentification() {
 		return reconciliationIdentification;
 	}
@@ -596,6 +609,7 @@ public class CommonData6 {
 		this.reconciliationIdentification = reconciliationIdentification;
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}

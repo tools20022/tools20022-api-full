@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cancellation response from the acquirer.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorCancellationResponse3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorCancellationResponse4", propOrder = {"environment", "transaction", "transactionResponse"})
 public class AcceptorCancellationResponse4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -293,6 +299,7 @@ public class AcceptorCancellationResponse4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment33 getEnvironment() {
 		return environment;
 	}
@@ -301,6 +308,7 @@ public class AcceptorCancellationResponse4 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransaction42 getTransaction() {
 		return transaction;
 	}
@@ -309,6 +317,7 @@ public class AcceptorCancellationResponse4 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "TxRspn", required = true)
 	public CardPaymentTransaction43 getTransactionResponse() {
 		return transactionResponse;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies a payment instruction by a set of characteristics (as per EBA
@@ -95,6 +99,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstructionReference2Details", propOrder = {"paymentInstructionReference", "interbankSettlementAmount", "interbankValueDate", "paymentMethod", "instructingAgentIdentification", "instructedAgentIdentification",
+		"creditDebitIndicator", "statusValue", "statusValueTime", "purpose", "relatedReference"})
 public class PaymentInstructionReference2Details {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -651,6 +658,7 @@ public class PaymentInstructionReference2Details {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtInstrRef", required = true)
 	public Max35Text getPaymentInstructionReference() {
 		return paymentInstructionReference;
 	}
@@ -659,6 +667,7 @@ public class PaymentInstructionReference2Details {
 		this.paymentInstructionReference = paymentInstructionReference;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmt", required = true)
 	public ImpliedCurrencyAndAmount getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
@@ -667,6 +676,7 @@ public class PaymentInstructionReference2Details {
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
 
+	@XmlElement(name = "IntrBkValDt", required = true)
 	public ISODate getInterbankValueDate() {
 		return interbankValueDate;
 	}
@@ -675,6 +685,7 @@ public class PaymentInstructionReference2Details {
 		this.interbankValueDate = interbankValueDate;
 	}
 
+	@XmlElement(name = "PmtMtd", required = true)
 	public PaymentOrigin1Choice getPaymentMethod() {
 		return paymentMethod;
 	}
@@ -683,6 +694,7 @@ public class PaymentInstructionReference2Details {
 		this.paymentMethod = paymentMethod;
 	}
 
+	@XmlElement(name = "InstgAgtId", required = true)
 	public BICIdentifier getInstructingAgentIdentification() {
 		return instructingAgentIdentification;
 	}
@@ -691,6 +703,7 @@ public class PaymentInstructionReference2Details {
 		this.instructingAgentIdentification = instructingAgentIdentification;
 	}
 
+	@XmlElement(name = "InstdAgtId", required = true)
 	public BICIdentifier getInstructedAgentIdentification() {
 		return instructedAgentIdentification;
 	}
@@ -699,6 +712,7 @@ public class PaymentInstructionReference2Details {
 		this.instructedAgentIdentification = instructedAgentIdentification;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -707,6 +721,7 @@ public class PaymentInstructionReference2Details {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "StsVal", required = true)
 	public PaymentInstructionStatus1Code getStatusValue() {
 		return statusValue;
 	}
@@ -715,6 +730,7 @@ public class PaymentInstructionReference2Details {
 		this.statusValue = statusValue;
 	}
 
+	@XmlElement(name = "StsValTm", required = true)
 	public ISODateTime getStatusValueTime() {
 		return statusValueTime;
 	}
@@ -723,6 +739,7 @@ public class PaymentInstructionReference2Details {
 		this.statusValueTime = statusValueTime;
 	}
 
+	@XmlElement(name = "Purp", required = true)
 	public Max10Text getPurpose() {
 		return purpose;
 	}
@@ -731,6 +748,7 @@ public class PaymentInstructionReference2Details {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public Max35Text getRelatedReference() {
 		return relatedReference;
 	}

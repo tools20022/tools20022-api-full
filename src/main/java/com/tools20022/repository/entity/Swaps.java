@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CreditDefaultSwapSingleName2;
 import com.tools20022.repository.msg.SwapLegIdentification2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,24 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SwapLegIdentification2
- * SwapLegIdentification2}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Derivative
- * Derivative}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CreditDefaultSwap
- * CreditDefaultSwap}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -61,6 +44,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * Swaps.mmSovereignIssuer}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Swaps#mmObligation
  * Swaps.mmObligation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CreditDefaultSwap
+ * CreditDefaultSwap}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Derivative
+ * Derivative}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SwapLegIdentification2
+ * SwapLegIdentification2}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,10 +94,6 @@ public class Swaps extends Derivative {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getComplexType
 	 * complexType} = {@linkplain com.tools20022.repository.entity.IssuerRole
 	 * IssuerRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Swaps
-	 * Swaps}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -105,6 +102,10 @@ public class Swaps extends Derivative {
 	 * CreditDefaultSwapSingleName2.mmSovereignIssuer}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Swaps
+	 * Swaps}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -119,7 +120,7 @@ public class Swaps extends Derivative {
 	public static final MMBusinessAttribute mmSovereignIssuer = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CreditDefaultSwapSingleName2.mmSovereignIssuer);
-			elementContext_lazy = () -> Swaps.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Swaps.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SovereignIssuer";
@@ -127,6 +128,14 @@ public class Swaps extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.entity.IssuerRole.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Swaps.class.getMethod("getSovereignIssuer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Obligation obligation;
@@ -156,7 +165,7 @@ public class Swaps extends Derivative {
 	 */
 	public static final MMBusinessAttribute mmObligation = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Swaps.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Swaps.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Obligation";
@@ -164,6 +173,14 @@ public class Swaps extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Swaps.class.getMethod("getObligation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -176,8 +193,13 @@ public class Swaps extends Derivative {
 				definition = "Derivative contract through which two parties exchange financial instruments.";
 				subType_lazy = () -> Arrays.asList(CreditDefaultSwap.mmObject());
 				superType_lazy = () -> com.tools20022.repository.entity.Derivative.mmObject();
-				element_lazy = () -> Arrays.asList(Swaps.mmSovereignIssuer, Swaps.mmObligation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Swaps.mmSovereignIssuer, com.tools20022.repository.entity.Swaps.mmObligation);
 				derivationComponent_lazy = () -> Arrays.asList(SwapLegIdentification2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Swaps.class;
 			}
 		});
 		return mmObject_lazy.get();

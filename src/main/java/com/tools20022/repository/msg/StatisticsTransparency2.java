@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Statistics for a financial instrument generated as part of transparency
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatisticsTransparency2", propOrder = {"totalNumberOfTransactionsExecuted", "totalVolumeOfTransactionsExecuted"})
 public class StatisticsTransparency2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class StatisticsTransparency2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlNbOfTxsExctd", required = true)
 	public Number getTotalNumberOfTransactionsExecuted() {
 		return totalNumberOfTransactionsExecuted;
 	}
@@ -171,6 +178,7 @@ public class StatisticsTransparency2 {
 		this.totalNumberOfTransactionsExecuted = totalNumberOfTransactionsExecuted;
 	}
 
+	@XmlElement(name = "TtlVolOfTxsExctd", required = true)
 	public DecimalNumber getTotalVolumeOfTransactionsExecuted() {
 		return totalVolumeOfTransactionsExecuted;
 	}

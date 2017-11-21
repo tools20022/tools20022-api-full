@@ -35,6 +35,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Execution of the subscription part, in a switch between investment funds or
@@ -127,6 +131,10 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwitchSubscriptionLegExecution2", propOrder = {"legIdentification", "legExecutionIdentification", "financialInstrumentDetails", "unitsNumber", "netAmount", "grossAmount", "tradeDateTime", "priceDetails",
+		"cumDividendIndicator", "interimProfitAmount", "incomePreference", "requestedSettlementCurrency", "requestedNAVCurrency", "chargeGeneralDetails", "commissionGeneralDetails", "taxGeneralDetails", "settlementAndCustodyDetails",
+		"physicalDeliveryIndicator", "physicalDeliveryDetails"})
 public class SwitchSubscriptionLegExecution2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1075,6 +1083,7 @@ public class SwitchSubscriptionLegExecution2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LegId")
 	public Max35Text getLegIdentification() {
 		return legIdentification;
 	}
@@ -1083,6 +1092,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.legIdentification = legIdentification;
 	}
 
+	@XmlElement(name = "LegExctnId")
 	public Max35Text getLegExecutionIdentification() {
 		return legExecutionIdentification;
 	}
@@ -1091,6 +1101,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.legExecutionIdentification = legExecutionIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument6 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -1099,6 +1110,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -1107,6 +1119,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "NetAmt", required = true)
 	public ActiveCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
@@ -1115,6 +1128,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.netAmount = netAmount;
 	}
 
+	@XmlElement(name = "GrssAmt")
 	public ActiveCurrencyAndAmount getGrossAmount() {
 		return grossAmount;
 	}
@@ -1123,6 +1137,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.grossAmount = grossAmount;
 	}
 
+	@XmlElement(name = "TradDtTm", required = true)
 	public DateAndDateTimeChoice getTradeDateTime() {
 		return tradeDateTime;
 	}
@@ -1131,6 +1146,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.tradeDateTime = tradeDateTime;
 	}
 
+	@XmlElement(name = "PricDtls", required = true)
 	public UnitPrice5 getPriceDetails() {
 		return priceDetails;
 	}
@@ -1139,6 +1155,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.priceDetails = priceDetails;
 	}
 
+	@XmlElement(name = "CumDvddInd", required = true)
 	public YesNoIndicator getCumDividendIndicator() {
 		return cumDividendIndicator;
 	}
@@ -1147,6 +1164,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.cumDividendIndicator = cumDividendIndicator;
 	}
 
+	@XmlElement(name = "IntrmPrftAmt")
 	public ProfitAndLoss1Choice getInterimProfitAmount() {
 		return interimProfitAmount;
 	}
@@ -1155,6 +1173,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.interimProfitAmount = interimProfitAmount;
 	}
 
+	@XmlElement(name = "IncmPref")
 	public IncomePreference1Code getIncomePreference() {
 		return incomePreference;
 	}
@@ -1163,6 +1182,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.incomePreference = incomePreference;
 	}
 
+	@XmlElement(name = "ReqdSttlmCcy")
 	public CurrencyCode getRequestedSettlementCurrency() {
 		return requestedSettlementCurrency;
 	}
@@ -1171,6 +1191,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.requestedSettlementCurrency = requestedSettlementCurrency;
 	}
 
+	@XmlElement(name = "ReqdNAVCcy")
 	public CurrencyCode getRequestedNAVCurrency() {
 		return requestedNAVCurrency;
 	}
@@ -1179,6 +1200,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.requestedNAVCurrency = requestedNAVCurrency;
 	}
 
+	@XmlElement(name = "ChrgGnlDtls")
 	public TotalCharges2 getChargeGeneralDetails() {
 		return chargeGeneralDetails;
 	}
@@ -1187,6 +1209,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.chargeGeneralDetails = chargeGeneralDetails;
 	}
 
+	@XmlElement(name = "ComssnGnlDtls")
 	public TotalCommissions2 getCommissionGeneralDetails() {
 		return commissionGeneralDetails;
 	}
@@ -1195,6 +1218,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.commissionGeneralDetails = commissionGeneralDetails;
 	}
 
+	@XmlElement(name = "TaxGnlDtls")
 	public TotalTaxes2 getTaxGeneralDetails() {
 		return taxGeneralDetails;
 	}
@@ -1203,6 +1227,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.taxGeneralDetails = taxGeneralDetails;
 	}
 
+	@XmlElement(name = "SttlmAndCtdyDtls")
 	public FundSettlementParameters3 getSettlementAndCustodyDetails() {
 		return settlementAndCustodyDetails;
 	}
@@ -1211,6 +1236,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.settlementAndCustodyDetails = settlementAndCustodyDetails;
 	}
 
+	@XmlElement(name = "PhysDlvryInd", required = true)
 	public YesNoIndicator getPhysicalDeliveryIndicator() {
 		return physicalDeliveryIndicator;
 	}
@@ -1219,6 +1245,7 @@ public class SwitchSubscriptionLegExecution2 {
 		this.physicalDeliveryIndicator = physicalDeliveryIndicator;
 	}
 
+	@XmlElement(name = "PhysDlvryDtls")
 	public DeliveryParameters3 getPhysicalDeliveryDetails() {
 		return physicalDeliveryDetails;
 	}

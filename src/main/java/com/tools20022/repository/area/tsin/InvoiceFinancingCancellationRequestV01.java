@@ -25,8 +25,10 @@ import com.tools20022.repository.area.TradeServicesInitiationLatestVersion;
 import com.tools20022.repository.msg.CancellationRequestInformation1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvoiceFinancingRequestISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -52,9 +54,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsin.003.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
@@ -84,6 +83,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsin.003.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -95,6 +97,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvoiceFinancingCancellationRequestV01", propOrder = {"cancellationRequestIdentification", "cancellationRequestInformation"})
 public class InvoiceFinancingCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -131,6 +135,14 @@ public class InvoiceFinancingCancellationRequestV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceFinancingCancellationRequestV01.class.getMethod("getCancellationRequestIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CancellationRequestInformation1 cancellationRequestInformation;
@@ -171,6 +183,14 @@ public class InvoiceFinancingCancellationRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CancellationRequestInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceFinancingCancellationRequestV01.class.getMethod("getCancellationRequestInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -183,7 +203,8 @@ public class InvoiceFinancingCancellationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "InvcFincgCxlReq";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceFinancingCancellationRequestV01.mmCancellationRequestIdentification, InvoiceFinancingCancellationRequestV01.mmCancellationRequestInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01.mmCancellationRequestIdentification,
+						com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01.mmCancellationRequestInformation);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsin";
@@ -193,10 +214,16 @@ public class InvoiceFinancingCancellationRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvoiceFinancingCancellationRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlReqId", required = true)
 	public MessageIdentification1 getCancellationRequestIdentification() {
 		return cancellationRequestIdentification;
 	}
@@ -205,11 +232,18 @@ public class InvoiceFinancingCancellationRequestV01 {
 		this.cancellationRequestIdentification = cancellationRequestIdentification;
 	}
 
+	@XmlElement(name = "CxlReqInf", required = true)
 	public CancellationRequestInformation1 getCancellationRequestInformation() {
 		return cancellationRequestInformation;
 	}
 
 	public void setCancellationRequestInformation(CancellationRequestInformation1 cancellationRequestInformation) {
 		this.cancellationRequestInformation = cancellationRequestInformation;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.003.01.01")
+	static public class Document {
+		@XmlElement(name = "InvcFincgCxlReq", required = true)
+		public InvoiceFinancingCancellationRequestV01 messageBody;
 	}
 }

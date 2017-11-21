@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding the corporate action event.
@@ -73,6 +77,9 @@ import java.util.List;
  * CorporateActionUnallocatedDetailsSD4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionUnallocatedDetailsSD5", propOrder = {"unallocatedDistributionBalance", "unallocatedRedemptionBalance", "unallocatedReorganisationBalance", "unallocatedSecuritiesTransactionDetails",
+		"unallocatedCashTransactionDetails"})
 public class CorporateActionUnallocatedDetailsSD5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -339,6 +346,7 @@ public class CorporateActionUnallocatedDetailsSD5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UallctdDstrbtnBal")
 	public CorporateActionUnallocatedBalanceSD2Choice getUnallocatedDistributionBalance() {
 		return unallocatedDistributionBalance;
 	}
@@ -347,6 +355,7 @@ public class CorporateActionUnallocatedDetailsSD5 {
 		this.unallocatedDistributionBalance = unallocatedDistributionBalance;
 	}
 
+	@XmlElement(name = "UallctdRedBal")
 	public CorporateActionUnallocatedBalanceSD1 getUnallocatedRedemptionBalance() {
 		return unallocatedRedemptionBalance;
 	}
@@ -355,6 +364,7 @@ public class CorporateActionUnallocatedDetailsSD5 {
 		this.unallocatedRedemptionBalance = unallocatedRedemptionBalance;
 	}
 
+	@XmlElement(name = "UallctdReorgBal")
 	public CorporateActionUnallocatedBalanceSD2 getUnallocatedReorganisationBalance() {
 		return unallocatedReorganisationBalance;
 	}
@@ -363,6 +373,7 @@ public class CorporateActionUnallocatedDetailsSD5 {
 		this.unallocatedReorganisationBalance = unallocatedReorganisationBalance;
 	}
 
+	@XmlElement(name = "UallctdSctiesTxDtls")
 	public List<CorporateActionUnallocatedSecuritiesTransactionDetailsSD6> getUnallocatedSecuritiesTransactionDetails() {
 		return unallocatedSecuritiesTransactionDetails;
 	}
@@ -371,6 +382,7 @@ public class CorporateActionUnallocatedDetailsSD5 {
 		this.unallocatedSecuritiesTransactionDetails = unallocatedSecuritiesTransactionDetails;
 	}
 
+	@XmlElement(name = "UallctdCshTxDtls")
 	public List<CorporateActionUnallocatedCashTransactionDetailsSD5> getUnallocatedCashTransactionDetails() {
 		return unallocatedCashTransactionDetails;
 	}

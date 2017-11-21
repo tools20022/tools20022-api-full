@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AccountManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.002.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementArchive
@@ -118,6 +117,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.002.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -141,6 +143,9 @@ import java.util.List;
  * AccountDetailsConfirmationV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountDetailsConfirmationV04", propOrder = {"messageIdentification", "orderReference", "relatedReference", "confirmationDetails", "investmentAccount", "accountParties", "intermediaries", "placement", "newIssueAllocation",
+		"savingsInvestmentPlan", "withdrawalInvestmentPlan", "cashSettlement", "serviceLevelAgreement", "marketPracticeVersion", "extension"})
 public class AccountDetailsConfirmationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -193,6 +198,14 @@ public class AccountDetailsConfirmationV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountDetailsConfirmationV04.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected InvestmentFundOrder4 orderReference;
 	/**
@@ -242,6 +255,14 @@ public class AccountDetailsConfirmationV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundOrder4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountDetailsConfirmationV04.class.getMethod("getOrderReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 relatedReference;
@@ -293,6 +314,14 @@ public class AccountDetailsConfirmationV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountDetailsConfirmationV04.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AccountManagementConfirmation1 confirmationDetails;
@@ -347,6 +376,14 @@ public class AccountDetailsConfirmationV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> AccountManagementConfirmation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountDetailsConfirmationV04.class.getMethod("getConfirmationDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected InvestmentAccount38 investmentAccount;
 	/**
@@ -398,6 +435,14 @@ public class AccountDetailsConfirmationV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentAccount38.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountDetailsConfirmationV04.class.getMethod("getInvestmentAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AccountParties9 accountParties;
@@ -451,6 +496,14 @@ public class AccountDetailsConfirmationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> AccountParties9.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountDetailsConfirmationV04.class.getMethod("getAccountParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Intermediary24> intermediaries;
 	/**
@@ -503,6 +556,14 @@ public class AccountDetailsConfirmationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> Intermediary24.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountDetailsConfirmationV04.class.getMethod("getIntermediaries", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ReferredAgent1 placement;
 	/**
@@ -551,6 +612,14 @@ public class AccountDetailsConfirmationV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ReferredAgent1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountDetailsConfirmationV04.class.getMethod("getPlacement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected NewIssueAllocation1 newIssueAllocation;
@@ -605,6 +674,14 @@ public class AccountDetailsConfirmationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> NewIssueAllocation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountDetailsConfirmationV04.class.getMethod("getNewIssueAllocation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<InvestmentPlan9> savingsInvestmentPlan;
 	/**
@@ -657,6 +734,14 @@ public class AccountDetailsConfirmationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentPlan9.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountDetailsConfirmationV04.class.getMethod("getSavingsInvestmentPlan", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<InvestmentPlan9> withdrawalInvestmentPlan;
 	/**
@@ -708,6 +793,14 @@ public class AccountDetailsConfirmationV04 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentPlan9.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountDetailsConfirmationV04.class.getMethod("getWithdrawalInvestmentPlan", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<InvestmentFundCashSettlementInformation7> cashSettlement;
@@ -762,6 +855,14 @@ public class AccountDetailsConfirmationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundCashSettlementInformation7.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountDetailsConfirmationV04.class.getMethod("getCashSettlement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<DocumentToSend1> serviceLevelAgreement;
 	/**
@@ -812,6 +913,14 @@ public class AccountDetailsConfirmationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentToSend1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountDetailsConfirmationV04.class.getMethod("getServiceLevelAgreement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
@@ -856,6 +965,14 @@ public class AccountDetailsConfirmationV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountDetailsConfirmationV04.class.getMethod("getMarketPracticeVersion", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -908,6 +1025,14 @@ public class AccountDetailsConfirmationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountDetailsConfirmationV04.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -922,10 +1047,14 @@ public class AccountDetailsConfirmationV04 {
 				rootElement = "Document";
 				xmlTag = "AcctDtlsConf";
 				businessArea_lazy = () -> AccountManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmMessageIdentification, AccountDetailsConfirmationV04.mmOrderReference, AccountDetailsConfirmationV04.mmRelatedReference,
-						AccountDetailsConfirmationV04.mmConfirmationDetails, AccountDetailsConfirmationV04.mmInvestmentAccount, AccountDetailsConfirmationV04.mmAccountParties, AccountDetailsConfirmationV04.mmIntermediaries,
-						AccountDetailsConfirmationV04.mmPlacement, AccountDetailsConfirmationV04.mmNewIssueAllocation, AccountDetailsConfirmationV04.mmSavingsInvestmentPlan, AccountDetailsConfirmationV04.mmWithdrawalInvestmentPlan,
-						AccountDetailsConfirmationV04.mmCashSettlement, AccountDetailsConfirmationV04.mmServiceLevelAgreement, AccountDetailsConfirmationV04.mmMarketPracticeVersion, AccountDetailsConfirmationV04.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmOrderReference,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmRelatedReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmConfirmationDetails,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmInvestmentAccount, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmAccountParties,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmIntermediaries, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmPlacement,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmNewIssueAllocation, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmSavingsInvestmentPlan,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmWithdrawalInvestmentPlan, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmCashSettlement,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmServiceLevelAgreement, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmMarketPracticeVersion,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";
@@ -935,10 +1064,16 @@ public class AccountDetailsConfirmationV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountDetailsConfirmationV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -947,6 +1082,7 @@ public class AccountDetailsConfirmationV04 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "OrdrRef")
 	public InvestmentFundOrder4 getOrderReference() {
 		return orderReference;
 	}
@@ -955,6 +1091,7 @@ public class AccountDetailsConfirmationV04 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
@@ -963,6 +1100,7 @@ public class AccountDetailsConfirmationV04 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "ConfDtls", required = true)
 	public AccountManagementConfirmation1 getConfirmationDetails() {
 		return confirmationDetails;
 	}
@@ -971,6 +1109,7 @@ public class AccountDetailsConfirmationV04 {
 		this.confirmationDetails = confirmationDetails;
 	}
 
+	@XmlElement(name = "InvstmtAcct")
 	public InvestmentAccount38 getInvestmentAccount() {
 		return investmentAccount;
 	}
@@ -979,6 +1118,7 @@ public class AccountDetailsConfirmationV04 {
 		this.investmentAccount = investmentAccount;
 	}
 
+	@XmlElement(name = "AcctPties")
 	public AccountParties9 getAccountParties() {
 		return accountParties;
 	}
@@ -987,6 +1127,7 @@ public class AccountDetailsConfirmationV04 {
 		this.accountParties = accountParties;
 	}
 
+	@XmlElement(name = "Intrmies")
 	public List<Intermediary24> getIntermediaries() {
 		return intermediaries;
 	}
@@ -995,6 +1136,7 @@ public class AccountDetailsConfirmationV04 {
 		this.intermediaries = intermediaries;
 	}
 
+	@XmlElement(name = "Plcmnt")
 	public ReferredAgent1 getPlacement() {
 		return placement;
 	}
@@ -1003,6 +1145,7 @@ public class AccountDetailsConfirmationV04 {
 		this.placement = placement;
 	}
 
+	@XmlElement(name = "NewIsseAllcn")
 	public NewIssueAllocation1 getNewIssueAllocation() {
 		return newIssueAllocation;
 	}
@@ -1011,6 +1154,7 @@ public class AccountDetailsConfirmationV04 {
 		this.newIssueAllocation = newIssueAllocation;
 	}
 
+	@XmlElement(name = "SvgsInvstmtPlan")
 	public List<InvestmentPlan9> getSavingsInvestmentPlan() {
 		return savingsInvestmentPlan;
 	}
@@ -1019,6 +1163,7 @@ public class AccountDetailsConfirmationV04 {
 		this.savingsInvestmentPlan = savingsInvestmentPlan;
 	}
 
+	@XmlElement(name = "WdrwlInvstmtPlan")
 	public List<InvestmentPlan9> getWithdrawalInvestmentPlan() {
 		return withdrawalInvestmentPlan;
 	}
@@ -1027,6 +1172,7 @@ public class AccountDetailsConfirmationV04 {
 		this.withdrawalInvestmentPlan = withdrawalInvestmentPlan;
 	}
 
+	@XmlElement(name = "CshSttlm")
 	public List<InvestmentFundCashSettlementInformation7> getCashSettlement() {
 		return cashSettlement;
 	}
@@ -1035,6 +1181,7 @@ public class AccountDetailsConfirmationV04 {
 		this.cashSettlement = cashSettlement;
 	}
 
+	@XmlElement(name = "SvcLvlAgrmt")
 	public List<DocumentToSend1> getServiceLevelAgreement() {
 		return serviceLevelAgreement;
 	}
@@ -1043,6 +1190,7 @@ public class AccountDetailsConfirmationV04 {
 		this.serviceLevelAgreement = serviceLevelAgreement;
 	}
 
+	@XmlElement(name = "MktPrctcVrsn")
 	public MarketPracticeVersion1 getMarketPracticeVersion() {
 		return marketPracticeVersion;
 	}
@@ -1051,11 +1199,18 @@ public class AccountDetailsConfirmationV04 {
 		this.marketPracticeVersion = marketPracticeVersion;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.002.04.04")
+	static public class Document {
+		@XmlElement(name = "AcctDtlsConf", required = true)
+		public AccountDetailsConfirmationV04 messageBody;
 	}
 }

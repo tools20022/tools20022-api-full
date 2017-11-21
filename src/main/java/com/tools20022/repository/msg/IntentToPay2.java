@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the details of an intention to pay based on purchase orders or
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * IntentToPay1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntentToPay2", propOrder = {"breakdown", "expectedPaymentDate", "settlementTerms"})
 public class IntentToPay2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -250,6 +256,7 @@ public class IntentToPay2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Brkdwn", required = true)
 	public BreakDown1Choice getBreakdown() {
 		return breakdown;
 	}
@@ -258,6 +265,7 @@ public class IntentToPay2 {
 		this.breakdown = breakdown;
 	}
 
+	@XmlElement(name = "XpctdPmtDt", required = true)
 	public ISODate getExpectedPaymentDate() {
 		return expectedPaymentDate;
 	}
@@ -266,6 +274,7 @@ public class IntentToPay2 {
 		this.expectedPaymentDate = expectedPaymentDate;
 	}
 
+	@XmlElement(name = "SttlmTerms")
 	public SettlementTerms3 getSettlementTerms() {
 		return settlementTerms;
 	}

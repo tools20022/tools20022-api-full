@@ -30,6 +30,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMDecimal#getMinInclusive
+ * minInclusive} = "0"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -65,6 +67,9 @@ public class ImpliedCurrencyAndAmount {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ImpliedCurrencyAndAmount";
 				definition = "Number of monetary units specified in a currency where the unit of currency is implied by the context and compliant with ISO 4217. The decimal separator is a dot.\nNote: a zero amount is considered a positive amount.";
+				minInclusive = "0";
+				totalDigits = 18;
+				fractionDigits = 5;
 			}
 		});
 		return mmObject_lazy.get();

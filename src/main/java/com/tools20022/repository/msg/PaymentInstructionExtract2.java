@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of a payment instruction. The information contained in this component
@@ -94,6 +98,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstructionExtract2", propOrder = {"originalMessageNameIdentification", "originalInstructionIdentification", "instructedAmount", "interbankSettlementAmount", "requestedExecutionDate", "interbankSettlementDate"})
 public class PaymentInstructionExtract2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -512,6 +518,7 @@ public class PaymentInstructionExtract2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMsgNmId")
 	public Max35Text getOriginalMessageNameIdentification() {
 		return originalMessageNameIdentification;
 	}
@@ -520,6 +527,7 @@ public class PaymentInstructionExtract2 {
 		this.originalMessageNameIdentification = originalMessageNameIdentification;
 	}
 
+	@XmlElement(name = "OrgnlInstrId", required = true)
 	public Max35Text getOriginalInstructionIdentification() {
 		return originalInstructionIdentification;
 	}
@@ -528,6 +536,7 @@ public class PaymentInstructionExtract2 {
 		this.originalInstructionIdentification = originalInstructionIdentification;
 	}
 
+	@XmlElement(name = "InstdAmt", required = true)
 	public CurrencyAndAmount getInstructedAmount() {
 		return instructedAmount;
 	}
@@ -536,6 +545,7 @@ public class PaymentInstructionExtract2 {
 		this.instructedAmount = instructedAmount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmt", required = true)
 	public CurrencyAndAmount getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
@@ -544,6 +554,7 @@ public class PaymentInstructionExtract2 {
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
 
+	@XmlElement(name = "ReqdExctnDt", required = true)
 	public ISODate getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -552,6 +563,7 @@ public class PaymentInstructionExtract2 {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDt", required = true)
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}

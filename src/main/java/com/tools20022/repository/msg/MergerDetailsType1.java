@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information about mergers.
@@ -69,6 +73,8 @@ import java.util.List;
  * definition} = "Provides additional information about mergers."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MergerDetailsType1", propOrder = {"mergerType", "counterpartyDetails", "simplifiedMergerClassification", "shortFormMergerClassification", "shareUnitQuantityOfNewCompany"})
 public class MergerDetailsType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -309,6 +315,7 @@ public class MergerDetailsType1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MrgrTp")
 	public MergerTypeCode getMergerType() {
 		return mergerType;
 	}
@@ -317,6 +324,7 @@ public class MergerDetailsType1 {
 		this.mergerType = mergerType;
 	}
 
+	@XmlElement(name = "CtrPtyDtls")
 	public List<CounterpartyDetailsType1> getCounterpartyDetails() {
 		return counterpartyDetails;
 	}
@@ -325,6 +333,7 @@ public class MergerDetailsType1 {
 		this.counterpartyDetails = counterpartyDetails;
 	}
 
+	@XmlElement(name = "SmplfdMrgrClssfctn")
 	public MergerCode getSimplifiedMergerClassification() {
 		return simplifiedMergerClassification;
 	}
@@ -333,6 +342,7 @@ public class MergerDetailsType1 {
 		this.simplifiedMergerClassification = simplifiedMergerClassification;
 	}
 
+	@XmlElement(name = "ShrtFormMrgrClssfctn")
 	public MergerCode getShortFormMergerClassification() {
 		return shortFormMergerClassification;
 	}
@@ -341,6 +351,7 @@ public class MergerDetailsType1 {
 		this.shortFormMergerClassification = shortFormMergerClassification;
 	}
 
+	@XmlElement(name = "ShrUnitQtyOfNewCpny")
 	public Number getShareUnitQuantityOfNewCompany() {
 		return shareUnitQuantityOfNewCompany;
 	}

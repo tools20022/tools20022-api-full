@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.PaymentInstructionExtract;
 import com.tools20022.repository.msg.RequestedModification;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -113,9 +115,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.007.002.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -151,6 +150,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.007.002.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -162,6 +164,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "camt.007.002.01", propOrder = {"assignment", "case", "underlying", "modification"})
 public class RequestToModifyPayment {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -198,6 +202,14 @@ public class RequestToModifyPayment {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RequestToModifyPayment.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case case_;
 	/**
@@ -230,6 +242,14 @@ public class RequestToModifyPayment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Case.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RequestToModifyPayment.class.getMethod("getCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PaymentInstructionExtract underlying;
@@ -266,6 +286,14 @@ public class RequestToModifyPayment {
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstructionExtract.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RequestToModifyPayment.class.getMethod("getUnderlying", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected RequestedModification modification;
 	/**
@@ -297,6 +325,14 @@ public class RequestToModifyPayment {
 			minOccurs = 1;
 			complexType_lazy = () -> RequestedModification.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RequestToModifyPayment.class.getMethod("getModification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -310,7 +346,8 @@ public class RequestToModifyPayment {
 				xmlTag = "camt.007.002.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.007.002.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(RequestToModifyPayment.mmAssignment, RequestToModifyPayment.mmCase, RequestToModifyPayment.mmUnderlying, RequestToModifyPayment.mmModification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPayment.mmAssignment, com.tools20022.repository.area.camt.RequestToModifyPayment.mmCase,
+						com.tools20022.repository.area.camt.RequestToModifyPayment.mmUnderlying, com.tools20022.repository.area.camt.RequestToModifyPayment.mmModification);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -320,10 +357,16 @@ public class RequestToModifyPayment {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RequestToModifyPayment.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment getAssignment() {
 		return assignment;
 	}
@@ -332,6 +375,7 @@ public class RequestToModifyPayment {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "Case", required = true)
 	public Case getCase() {
 		return case_;
 	}
@@ -340,6 +384,7 @@ public class RequestToModifyPayment {
 		this.case_ = case_;
 	}
 
+	@XmlElement(name = "Undrlyg", required = true)
 	public PaymentInstructionExtract getUnderlying() {
 		return underlying;
 	}
@@ -348,11 +393,18 @@ public class RequestToModifyPayment {
 		this.underlying = underlying;
 	}
 
+	@XmlElement(name = "Mod", required = true)
 	public RequestedModification getModification() {
 		return modification;
 	}
 
 	public void setModification(RequestedModification modification) {
 		this.modification = modification;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.007.01.01")
+	static public class Document {
+		@XmlElement(name = "camt.007.002.01", required = true)
+		public RequestToModifyPayment messageBody;
 	}
 }

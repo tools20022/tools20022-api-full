@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements qualifying the interest rate.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Set of elements qualifying the interest rate."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Rate2", propOrder = {"sign", "rate"})
 public class Rate2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -169,6 +175,7 @@ public class Rate2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sgn")
 	public PlusOrMinusIndicator getSign() {
 		return sign;
 	}
@@ -177,6 +184,7 @@ public class Rate2 {
 		this.sign = sign;
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}

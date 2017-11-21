@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the reason for an action.
@@ -88,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for an action."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reason2", propOrder = "description")
 public class Reason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -155,6 +161,7 @@ public class Reason2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Desc", required = true)
 	public Max140Text getDescription() {
 		return description;
 	}

@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Place at which the security is traded.
@@ -84,6 +88,9 @@ import java.util.List;
  * definition} = "Place at which the security is traded."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradingParameters1", propOrder = {"marketIdentification", "roundLot", "tradeLotSize", "secondaryPlaceOfListing", "minimumTradedNominalQuantity", "maximumTradedNominalQuantity", "minimumTradingPricingIncrement",
+		"primaryPlaceOfListingIdentification"})
 public class TradingParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -498,6 +505,7 @@ public class TradingParameters1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MktId")
 	public MICIdentifier getMarketIdentification() {
 		return marketIdentification;
 	}
@@ -506,6 +514,7 @@ public class TradingParameters1 {
 		this.marketIdentification = marketIdentification;
 	}
 
+	@XmlElement(name = "RndLot")
 	public FinancialInstrumentQuantity1Choice getRoundLot() {
 		return roundLot;
 	}
@@ -514,6 +523,7 @@ public class TradingParameters1 {
 		this.roundLot = roundLot;
 	}
 
+	@XmlElement(name = "TradLotSz")
 	public FinancialInstrumentQuantity1Choice getTradeLotSize() {
 		return tradeLotSize;
 	}
@@ -522,6 +532,7 @@ public class TradingParameters1 {
 		this.tradeLotSize = tradeLotSize;
 	}
 
+	@XmlElement(name = "ScndryPlcOfListg")
 	public List<MICIdentifier> getSecondaryPlaceOfListing() {
 		return secondaryPlaceOfListing;
 	}
@@ -530,6 +541,7 @@ public class TradingParameters1 {
 		this.secondaryPlaceOfListing = secondaryPlaceOfListing;
 	}
 
+	@XmlElement(name = "MinTraddNmnlQty")
 	public UnitOrFaceAmountChoice getMinimumTradedNominalQuantity() {
 		return minimumTradedNominalQuantity;
 	}
@@ -538,6 +550,7 @@ public class TradingParameters1 {
 		this.minimumTradedNominalQuantity = minimumTradedNominalQuantity;
 	}
 
+	@XmlElement(name = "MaxTraddNmnlQty")
 	public UnitOrFaceAmountChoice getMaximumTradedNominalQuantity() {
 		return maximumTradedNominalQuantity;
 	}
@@ -546,6 +559,7 @@ public class TradingParameters1 {
 		this.maximumTradedNominalQuantity = maximumTradedNominalQuantity;
 	}
 
+	@XmlElement(name = "MinTradgPricgIncrmt")
 	public Number getMinimumTradingPricingIncrement() {
 		return minimumTradingPricingIncrement;
 	}
@@ -554,6 +568,7 @@ public class TradingParameters1 {
 		this.minimumTradingPricingIncrement = minimumTradingPricingIncrement;
 	}
 
+	@XmlElement(name = "PmryPlcOfListgId")
 	public MICIdentifier getPrimaryPlaceOfListingIdentification() {
 		return primaryPlaceOfListingIdentification;
 	}

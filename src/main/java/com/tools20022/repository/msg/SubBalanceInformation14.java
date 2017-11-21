@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Net position of a segregated holding of a single security within the overall
@@ -78,6 +82,8 @@ import java.util.List;
  * SubBalanceInformation6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubBalanceInformation14", propOrder = {"subBalanceType", "quantity", "subBalanceAdditionalDetails", "additionalBalanceBreakdownDetails"})
 public class SubBalanceInformation14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -309,6 +315,7 @@ public class SubBalanceInformation14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SubBalTp", required = true)
 	public SubBalanceType11Choice getSubBalanceType() {
 		return subBalanceType;
 	}
@@ -317,6 +324,7 @@ public class SubBalanceInformation14 {
 		this.subBalanceType = subBalanceType;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public SubBalanceQuantity6Choice getQuantity() {
 		return quantity;
 	}
@@ -325,6 +333,7 @@ public class SubBalanceInformation14 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "SubBalAddtlDtls")
 	public Max140Text getSubBalanceAdditionalDetails() {
 		return subBalanceAdditionalDetails;
 	}
@@ -333,6 +342,7 @@ public class SubBalanceInformation14 {
 		this.subBalanceAdditionalDetails = subBalanceAdditionalDetails;
 	}
 
+	@XmlElement(name = "AddtlBalBrkdwnDtls")
 	public List<AdditionalBalanceInformation14> getAdditionalBalanceBreakdownDetails() {
 		return additionalBalanceBreakdownDetails;
 	}

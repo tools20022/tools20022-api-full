@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.VoteResult;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates the number of voting rights cast to a resolution.
@@ -95,6 +99,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Vote5", propOrder = {"issuerLabel", "accepted", "for", "against", "abstain", "withhold", "noAction"})
 public class Vote5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -496,6 +502,7 @@ public class Vote5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IssrLabl", required = true)
 	public Max35Text getIssuerLabel() {
 		return issuerLabel;
 	}
@@ -504,6 +511,7 @@ public class Vote5 {
 		this.issuerLabel = issuerLabel;
 	}
 
+	@XmlElement(name = "Accptd", required = true)
 	public YesNoIndicator getAccepted() {
 		return accepted;
 	}
@@ -512,6 +520,7 @@ public class Vote5 {
 		this.accepted = accepted;
 	}
 
+	@XmlElement(name = "For")
 	public Number getFor() {
 		return for_;
 	}
@@ -520,6 +529,7 @@ public class Vote5 {
 		this.for_ = for_;
 	}
 
+	@XmlElement(name = "Agnst")
 	public Number getAgainst() {
 		return against;
 	}
@@ -528,6 +538,7 @@ public class Vote5 {
 		this.against = against;
 	}
 
+	@XmlElement(name = "Abstn")
 	public Number getAbstain() {
 		return abstain;
 	}
@@ -536,6 +547,7 @@ public class Vote5 {
 		this.abstain = abstain;
 	}
 
+	@XmlElement(name = "Wthhld")
 	public Number getWithhold() {
 		return withhold;
 	}
@@ -544,6 +556,7 @@ public class Vote5 {
 		this.withhold = withhold;
 	}
 
+	@XmlElement(name = "NoActn")
 	public Number getNoAction() {
 		return noAction;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies prices related to a corporate action option.
@@ -77,6 +81,8 @@ import java.util.List;
  * definition} = "Specifies prices related to a corporate action option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionPrice6", propOrder = {"cashInLieuOfSharePrice", "exercisePrice", "genericCashPriceReceivedPerProduct", "overSubscriptionDepositPrice", "genericCashPricePaidPerProduct", "taxableIncomePerDividendShare"})
 public class CorporateActionPrice6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -404,6 +410,7 @@ public class CorporateActionPrice6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshInLieuOfShrPric")
 	public PriceFormat11Choice getCashInLieuOfSharePrice() {
 		return cashInLieuOfSharePrice;
 	}
@@ -412,6 +419,7 @@ public class CorporateActionPrice6 {
 		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
 	}
 
+	@XmlElement(name = "ExrcPric")
 	public PriceFormat8Choice getExercisePrice() {
 		return exercisePrice;
 	}
@@ -420,6 +428,7 @@ public class CorporateActionPrice6 {
 		this.exercisePrice = exercisePrice;
 	}
 
+	@XmlElement(name = "GncCshPricRcvdPerPdct")
 	public List<PriceFormat9Choice> getGenericCashPriceReceivedPerProduct() {
 		return genericCashPriceReceivedPerProduct;
 	}
@@ -428,6 +437,7 @@ public class CorporateActionPrice6 {
 		this.genericCashPriceReceivedPerProduct = genericCashPriceReceivedPerProduct;
 	}
 
+	@XmlElement(name = "OverSbcptDpstPric")
 	public PriceFormat11Choice getOverSubscriptionDepositPrice() {
 		return overSubscriptionDepositPrice;
 	}
@@ -436,6 +446,7 @@ public class CorporateActionPrice6 {
 		this.overSubscriptionDepositPrice = overSubscriptionDepositPrice;
 	}
 
+	@XmlElement(name = "GncCshPricPdPerPdct")
 	public PriceFormat11Choice getGenericCashPricePaidPerProduct() {
 		return genericCashPricePaidPerProduct;
 	}
@@ -444,6 +455,7 @@ public class CorporateActionPrice6 {
 		this.genericCashPricePaidPerProduct = genericCashPricePaidPerProduct;
 	}
 
+	@XmlElement(name = "TaxblIncmPerDvddShr")
 	public AmountPrice3 getTaxableIncomePerDividendShare() {
 		return taxableIncomePerDividendShare;
 	}

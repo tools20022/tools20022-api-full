@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provide the processing status information of a deactivation instruction.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provide the processing status information of a deactivation instruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionDeactivationInstructionProcessingStatus1", propOrder = {"status", "additionalInformation"})
 public class CorporateActionDeactivationInstructionProcessingStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class CorporateActionDeactivationInstructionProcessingStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public ProcessedStatus6FormatChoice getStatus() {
 		return status;
 	}
@@ -186,6 +193,7 @@ public class CorporateActionDeactivationInstructionProcessingStatus1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}

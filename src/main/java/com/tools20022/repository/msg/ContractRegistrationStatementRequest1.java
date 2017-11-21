@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details on the statement requested elements.
@@ -88,6 +92,8 @@ import java.util.List;
  * definition} = "Details on the statement requested elements."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContractRegistrationStatementRequest1", propOrder = {"statementRequestIdentification", "reportingPeriod", "reportingParty", "registrationAgent", "registeredContractIdentification", "returnCriteria", "supplementaryData"})
 public class ContractRegistrationStatementRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -425,6 +431,7 @@ public class ContractRegistrationStatementRequest1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtReqId", required = true)
 	public Max35Text getStatementRequestIdentification() {
 		return statementRequestIdentification;
 	}
@@ -433,6 +440,7 @@ public class ContractRegistrationStatementRequest1 {
 		this.statementRequestIdentification = statementRequestIdentification;
 	}
 
+	@XmlElement(name = "RptgPrd", required = true)
 	public ReportingPeriod1 getReportingPeriod() {
 		return reportingPeriod;
 	}
@@ -441,6 +449,7 @@ public class ContractRegistrationStatementRequest1 {
 		this.reportingPeriod = reportingPeriod;
 	}
 
+	@XmlElement(name = "RptgPty", required = true)
 	public TradeParty2 getReportingParty() {
 		return reportingParty;
 	}
@@ -449,6 +458,7 @@ public class ContractRegistrationStatementRequest1 {
 		this.reportingParty = reportingParty;
 	}
 
+	@XmlElement(name = "RegnAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getRegistrationAgent() {
 		return registrationAgent;
 	}
@@ -457,6 +467,7 @@ public class ContractRegistrationStatementRequest1 {
 		this.registrationAgent = registrationAgent;
 	}
 
+	@XmlElement(name = "RegdCtrctId", required = true)
 	public Max35Text getRegisteredContractIdentification() {
 		return registeredContractIdentification;
 	}
@@ -465,6 +476,7 @@ public class ContractRegistrationStatementRequest1 {
 		this.registeredContractIdentification = registeredContractIdentification;
 	}
 
+	@XmlElement(name = "RtrCrit")
 	public ContractRegistrationStatementCriteria1 getReturnCriteria() {
 		return returnCriteria;
 	}
@@ -473,6 +485,7 @@ public class ContractRegistrationStatementRequest1 {
 		this.returnCriteria = returnCriteria;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

@@ -34,6 +34,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General characteristics related to a statement which reports information.
@@ -93,6 +97,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "General characteristics related to a statement which reports information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Statement48", propOrder = {"statementType", "reportingType", "statementIdentification", "reportNumber", "statementDateTime", "frequency", "updateType", "activityIndicator", "notificationDeadlinePeriod"})
 public class Statement48 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -493,6 +499,7 @@ public class Statement48 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtTp", required = true)
 	public CorporateActionStatementType1Code getStatementType() {
 		return statementType;
 	}
@@ -501,6 +508,7 @@ public class Statement48 {
 		this.statementType = statementType;
 	}
 
+	@XmlElement(name = "RptgTp", required = true)
 	public CorporateActionStatementReportingType1Code getReportingType() {
 		return reportingType;
 	}
@@ -509,6 +517,7 @@ public class Statement48 {
 		this.reportingType = reportingType;
 	}
 
+	@XmlElement(name = "StmtId", required = true)
 	public RestrictedFINXMax16Text getStatementIdentification() {
 		return statementIdentification;
 	}
@@ -517,6 +526,7 @@ public class Statement48 {
 		this.statementIdentification = statementIdentification;
 	}
 
+	@XmlElement(name = "RptNb")
 	public Max5NumericText getReportNumber() {
 		return reportNumber;
 	}
@@ -525,6 +535,7 @@ public class Statement48 {
 		this.reportNumber = reportNumber;
 	}
 
+	@XmlElement(name = "StmtDtTm", required = true)
 	public DateAndDateTimeChoice getStatementDateTime() {
 		return statementDateTime;
 	}
@@ -533,6 +544,7 @@ public class Statement48 {
 		this.statementDateTime = statementDateTime;
 	}
 
+	@XmlElement(name = "Frqcy", required = true)
 	public Frequency26Choice getFrequency() {
 		return frequency;
 	}
@@ -541,6 +553,7 @@ public class Statement48 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "UpdTp", required = true)
 	public UpdateType16Choice getUpdateType() {
 		return updateType;
 	}
@@ -549,6 +562,7 @@ public class Statement48 {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
@@ -557,6 +571,7 @@ public class Statement48 {
 		this.activityIndicator = activityIndicator;
 	}
 
+	@XmlElement(name = "NtfctnDdlnPrd")
 	public DateOrDateTimePeriodChoice getNotificationDeadlinePeriod() {
 		return notificationDeadlinePeriod;
 	}

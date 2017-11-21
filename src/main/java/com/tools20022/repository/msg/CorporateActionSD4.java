@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action details.
@@ -87,6 +91,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides additional information regarding corporate action details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionSD4", propOrder = {"placeAndName", "newParValue", "oldParValue", "exchangeFeeRequiredFlag", "custodianShellFlag", "mustAllSharesBeSubmittedFlag", "lotteryDetails", "qualifiedDividendTaxIndicator",
+		"survivingCompany", "foreignIncomeSourceFlag"})
 public class CorporateActionSD4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -549,6 +556,7 @@ public class CorporateActionSD4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -557,6 +565,7 @@ public class CorporateActionSD4 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "NewParVal")
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getNewParValue() {
 		return newParValue;
 	}
@@ -565,6 +574,7 @@ public class CorporateActionSD4 {
 		this.newParValue = newParValue;
 	}
 
+	@XmlElement(name = "OdParVal")
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getOldParValue() {
 		return oldParValue;
 	}
@@ -573,6 +583,7 @@ public class CorporateActionSD4 {
 		this.oldParValue = oldParValue;
 	}
 
+	@XmlElement(name = "XchgFeeReqrdFlg")
 	public YesNoIndicator getExchangeFeeRequiredFlag() {
 		return exchangeFeeRequiredFlag;
 	}
@@ -581,6 +592,7 @@ public class CorporateActionSD4 {
 		this.exchangeFeeRequiredFlag = exchangeFeeRequiredFlag;
 	}
 
+	@XmlElement(name = "CtdnShellFlg")
 	public YesNoIndicator getCustodianShellFlag() {
 		return custodianShellFlag;
 	}
@@ -589,6 +601,7 @@ public class CorporateActionSD4 {
 		this.custodianShellFlag = custodianShellFlag;
 	}
 
+	@XmlElement(name = "MustAllShrsBeSubmittdFlg")
 	public YesNoIndicator getMustAllSharesBeSubmittedFlag() {
 		return mustAllSharesBeSubmittedFlag;
 	}
@@ -597,6 +610,7 @@ public class CorporateActionSD4 {
 		this.mustAllSharesBeSubmittedFlag = mustAllSharesBeSubmittedFlag;
 	}
 
+	@XmlElement(name = "LtryDtls")
 	public CorporateActionSD6 getLotteryDetails() {
 		return lotteryDetails;
 	}
@@ -605,6 +619,7 @@ public class CorporateActionSD4 {
 		this.lotteryDetails = lotteryDetails;
 	}
 
+	@XmlElement(name = "QlfdDvddTaxInd")
 	public QualifiedDividendTax1Code getQualifiedDividendTaxIndicator() {
 		return qualifiedDividendTaxIndicator;
 	}
@@ -613,6 +628,7 @@ public class CorporateActionSD4 {
 		this.qualifiedDividendTaxIndicator = qualifiedDividendTaxIndicator;
 	}
 
+	@XmlElement(name = "SrvvgCpny")
 	public Max70Text getSurvivingCompany() {
 		return survivingCompany;
 	}
@@ -621,6 +637,7 @@ public class CorporateActionSD4 {
 		this.survivingCompany = survivingCompany;
 	}
 
+	@XmlElement(name = "FrgnIncmSrcFlg")
 	public YesNoIndicator getForeignIncomeSourceFlag() {
 		return foreignIncomeSourceFlag;
 	}

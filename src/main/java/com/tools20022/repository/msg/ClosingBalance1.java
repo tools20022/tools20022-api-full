@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Closing balance for the statement period (final closing balance) or of this
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClosingBalance1", propOrder = {"shortLongIndicator", "closingBalance"})
 public class ClosingBalance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -208,6 +214,7 @@ public class ClosingBalance1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ShrtLngInd", required = true)
 	public ShortLong1Code getShortLongIndicator() {
 		return shortLongIndicator;
 	}
@@ -216,6 +223,7 @@ public class ClosingBalance1 {
 		this.shortLongIndicator = shortLongIndicator;
 	}
 
+	@XmlElement(name = "ClsgBal", required = true)
 	public ClosingBalance1Choice getClosingBalance() {
 		return closingBalance;
 	}

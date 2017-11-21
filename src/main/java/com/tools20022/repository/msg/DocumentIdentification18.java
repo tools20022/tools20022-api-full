@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about identification of the document.
@@ -75,6 +79,8 @@ import java.util.function.Supplier;
  * definition} = "Provides information about identification of the document."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DocumentIdentification18", propOrder = {"identification", "creationDateTime", "copyDuplicate", "changeInstructionIndicator"})
 public class DocumentIdentification18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -301,6 +307,7 @@ public class DocumentIdentification18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public RestrictedFINXMax16Text getIdentification() {
 		return identification;
 	}
@@ -309,6 +316,7 @@ public class DocumentIdentification18 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "CreDtTm")
 	public DateAndDateTimeChoice getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -317,6 +325,7 @@ public class DocumentIdentification18 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "CpyDplct")
 	public CopyDuplicate1Code getCopyDuplicate() {
 		return copyDuplicate;
 	}
@@ -325,6 +334,7 @@ public class DocumentIdentification18 {
 		this.copyDuplicate = copyDuplicate;
 	}
 
+	@XmlElement(name = "ChngInstrInd")
 	public YesNoIndicator getChangeInstructionIndicator() {
 		return changeInstructionIndicator;
 	}

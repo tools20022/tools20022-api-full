@@ -56,6 +56,8 @@ public class Min6Max8Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Min6Max8Text";
 				definition = "Specifies a character string with a minimum length of 6 characters, and a maximum length of 8 characters.";
+				minLength = 6;
+				maxLength = 8;
 			}
 		});
 		return mmObject_lazy.get();

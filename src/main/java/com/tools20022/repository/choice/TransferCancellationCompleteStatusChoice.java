@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.TransferCancellationCompleteReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason for the complete status.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Reason for the complete status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferCancellationCompleteStatusChoice", propOrder = {"reason", "dataSourceScheme"})
 public class TransferCancellationCompleteStatusChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class TransferCancellationCompleteStatusChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public TransferCancellationCompleteReason1 getReason() {
 		return reason;
 	}
@@ -188,6 +195,7 @@ public class TransferCancellationCompleteStatusChoice {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}

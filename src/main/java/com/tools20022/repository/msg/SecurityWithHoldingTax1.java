@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements of a cash distribution that will be withheld by a tax
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityWithHoldingTax1", propOrder = {"withholdingTaxValue", "country"})
 public class SecurityWithHoldingTax1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +168,7 @@ public class SecurityWithHoldingTax1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "WhldgTaxVal", required = true)
 	public RateAndAmountFormat1Choice getWithholdingTaxValue() {
 		return withholdingTaxValue;
 	}
@@ -170,6 +177,7 @@ public class SecurityWithHoldingTax1 {
 		this.withholdingTaxValue = withholdingTaxValue;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}

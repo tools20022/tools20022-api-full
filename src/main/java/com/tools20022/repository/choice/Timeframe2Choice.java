@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.TimeFrame;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between TimeFrame elements that define a period as number of days
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Timeframe2Choice", propOrder = {"tradePlus", "renunciationPlus", "prepayment"})
 public class Timeframe2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -236,6 +242,7 @@ public class Timeframe2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TPlus", required = true)
 	public Number getTradePlus() {
 		return tradePlus;
 	}
@@ -244,6 +251,7 @@ public class Timeframe2Choice {
 		this.tradePlus = tradePlus;
 	}
 
+	@XmlElement(name = "RPlus", required = true)
 	public Number getRenunciationPlus() {
 		return renunciationPlus;
 	}
@@ -252,6 +260,7 @@ public class Timeframe2Choice {
 		this.renunciationPlus = renunciationPlus;
 	}
 
+	@XmlElement(name = "Prepmt", required = true)
 	public YesNoIndicator getPrepayment() {
 		return prepayment;
 	}

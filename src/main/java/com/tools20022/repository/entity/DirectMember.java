@@ -66,6 +66,11 @@ public class DirectMember extends SystemMemberRole {
 				definition = "Financial institution or member of a system having full rights to the system specifications.";
 				superType_lazy = () -> SystemMemberRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DirectMember.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

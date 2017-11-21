@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details related to the status of the order.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides details related to the status of the order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusAndReason10", propOrder = {"affirmationStatus", "unaffirmedReason", "additionalReasonInformation"})
 public class StatusAndReason10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -235,6 +241,7 @@ public class StatusAndReason10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AffirmSts", required = true)
 	public AffirmationStatus7Choice getAffirmationStatus() {
 		return affirmationStatus;
 	}
@@ -243,6 +250,7 @@ public class StatusAndReason10 {
 		this.affirmationStatus = affirmationStatus;
 	}
 
+	@XmlElement(name = "UaffrmdRsn")
 	public UnaffirmedReason2Choice getUnaffirmedReason() {
 		return unaffirmedReason;
 	}
@@ -251,6 +259,7 @@ public class StatusAndReason10 {
 		this.unaffirmedReason = unaffirmedReason;
 	}
 
+	@XmlElement(name = "AddtlRsnInf")
 	public Max210Text getAdditionalReasonInformation() {
 		return additionalReasonInformation;
 	}

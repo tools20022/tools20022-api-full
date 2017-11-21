@@ -34,6 +34,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.DocumentPartyRole
+ * DocumentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -43,9 +46,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyProfileInformation1.mmResponsibleParty}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.DocumentPartyRole
- * DocumentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -75,6 +75,11 @@ public class ResponsiblePartyRole extends DocumentPartyRole {
 				definition = "Identification of the party who is responsible for the certificate.";
 				derivationElement_lazy = () -> Arrays.asList(PartyProfileInformation1.mmResponsibleParty);
 				superType_lazy = () -> DocumentPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ResponsiblePartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

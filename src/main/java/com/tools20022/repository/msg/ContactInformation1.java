@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.PhoneAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Communication device number or electronic address used for communication.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Communication device number or electronic address used for communication."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContactInformation1", propOrder = {"name", "faxNumber", "telephoneNumber", "emailAddress"})
 public class ContactInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -287,6 +293,7 @@ public class ContactInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max350Text getName() {
 		return name;
 	}
@@ -295,6 +302,7 @@ public class ContactInformation1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "FaxNb")
 	public PhoneNumber getFaxNumber() {
 		return faxNumber;
 	}
@@ -303,6 +311,7 @@ public class ContactInformation1 {
 		this.faxNumber = faxNumber;
 	}
 
+	@XmlElement(name = "TelNb")
 	public PhoneNumber getTelephoneNumber() {
 		return telephoneNumber;
 	}
@@ -311,6 +320,7 @@ public class ContactInformation1 {
 		this.telephoneNumber = telephoneNumber;
 	}
 
+	@XmlElement(name = "EmailAdr")
 	public Max256Text getEmailAddress() {
 		return emailAddress;
 	}

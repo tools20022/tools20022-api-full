@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide the total sum of entries per bank transaction
@@ -82,6 +86,8 @@ import java.util.List;
  * TotalsPerBankTransactionCode3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TotalsPerBankTransactionCode4", propOrder = {"numberOfEntries", "sum", "totalNetEntry", "forecastIndicator", "bankTransactionCode", "availability"})
 public class TotalsPerBankTransactionCode4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -412,6 +418,7 @@ public class TotalsPerBankTransactionCode4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NbOfNtries")
 	public Max15NumericText getNumberOfEntries() {
 		return numberOfEntries;
 	}
@@ -420,6 +427,7 @@ public class TotalsPerBankTransactionCode4 {
 		this.numberOfEntries = numberOfEntries;
 	}
 
+	@XmlElement(name = "Sum")
 	public DecimalNumber getSum() {
 		return sum;
 	}
@@ -428,6 +436,7 @@ public class TotalsPerBankTransactionCode4 {
 		this.sum = sum;
 	}
 
+	@XmlElement(name = "TtlNetNtry")
 	public AmountAndDirection35 getTotalNetEntry() {
 		return totalNetEntry;
 	}
@@ -436,6 +445,7 @@ public class TotalsPerBankTransactionCode4 {
 		this.totalNetEntry = totalNetEntry;
 	}
 
+	@XmlElement(name = "FcstInd")
 	public TrueFalseIndicator getForecastIndicator() {
 		return forecastIndicator;
 	}
@@ -444,6 +454,7 @@ public class TotalsPerBankTransactionCode4 {
 		this.forecastIndicator = forecastIndicator;
 	}
 
+	@XmlElement(name = "BkTxCd", required = true)
 	public BankTransactionCodeStructure4 getBankTransactionCode() {
 		return bankTransactionCode;
 	}
@@ -452,6 +463,7 @@ public class TotalsPerBankTransactionCode4 {
 		this.bankTransactionCode = bankTransactionCode;
 	}
 
+	@XmlElement(name = "Avlbty")
 	public List<CashAvailability1> getAvailability() {
 		return availability;
 	}

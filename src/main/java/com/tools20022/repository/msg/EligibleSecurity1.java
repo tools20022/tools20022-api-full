@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.ISINIdentifier;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details of the eligible securities as defined in the collateral
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EligibleSecurity1", propOrder = {"securityIdentification", "collateralisationCurrency", "partyIdentification"})
 public class EligibleSecurity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -212,6 +218,7 @@ public class EligibleSecurity1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public ISINIdentifier getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -220,6 +227,7 @@ public class EligibleSecurity1 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "CollstnCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getCollateralisationCurrency() {
 		return collateralisationCurrency;
 	}
@@ -228,6 +236,7 @@ public class EligibleSecurity1 {
 		this.collateralisationCurrency = collateralisationCurrency;
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public NCBOrPaymentBank1Choice getPartyIdentification() {
 		return partyIdentification;
 	}

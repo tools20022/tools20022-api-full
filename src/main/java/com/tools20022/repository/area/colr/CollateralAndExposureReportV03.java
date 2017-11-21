@@ -25,9 +25,11 @@ import com.tools20022.repository.area.CollateralManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CollateralManagementISOLatestversion;
 import com.tools20022.repository.msgset.CollateralManagementMaintenance20162017;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -48,9 +50,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code colr.016.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CollateralManagementLatestVersion
@@ -95,6 +94,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code colr.016.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -110,6 +112,8 @@ import java.util.List;
  * CollateralAndExposureReportV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralAndExposureReportV03", propOrder = {"reportParameters", "pagination", "obligation", "agreement", "collateralReport", "supplementaryData"})
 public class CollateralAndExposureReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -156,6 +160,14 @@ public class CollateralAndExposureReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> ReportParameters5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralAndExposureReportV03.class.getMethod("getReportParameters", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Pagination pagination;
 	/**
@@ -198,6 +210,14 @@ public class CollateralAndExposureReportV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Pagination.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralAndExposureReportV03.class.getMethod("getPagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Obligation4 obligation;
@@ -243,6 +263,14 @@ public class CollateralAndExposureReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Obligation4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralAndExposureReportV03.class.getMethod("getObligation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Agreement4 agreement;
 	/**
@@ -283,6 +311,14 @@ public class CollateralAndExposureReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> Agreement4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralAndExposureReportV03.class.getMethod("getAgreement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Collateral13> collateralReport;
 	/**
@@ -321,6 +357,14 @@ public class CollateralAndExposureReportV03 {
 			previousVersion_lazy = () -> CollateralAndExposureReportV02.mmCollateralReport;
 			minOccurs = 1;
 			complexType_lazy = () -> Collateral13.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralAndExposureReportV03.class.getMethod("getCollateralReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -365,6 +409,14 @@ public class CollateralAndExposureReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralAndExposureReportV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -378,8 +430,9 @@ public class CollateralAndExposureReportV03 {
 				rootElement = "Document";
 				xmlTag = "CollAndXpsrRpt";
 				businessArea_lazy = () -> CollateralManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralAndExposureReportV03.mmReportParameters, CollateralAndExposureReportV03.mmPagination, CollateralAndExposureReportV03.mmObligation,
-						CollateralAndExposureReportV03.mmAgreement, CollateralAndExposureReportV03.mmCollateralReport, CollateralAndExposureReportV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmReportParameters, com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmPagination,
+						com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmObligation, com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmAgreement,
+						com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmCollateralReport, com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "colr";
@@ -389,10 +442,16 @@ public class CollateralAndExposureReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CollateralAndExposureReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptParams", required = true)
 	public ReportParameters5 getReportParameters() {
 		return reportParameters;
 	}
@@ -401,6 +460,7 @@ public class CollateralAndExposureReportV03 {
 		this.reportParameters = reportParameters;
 	}
 
+	@XmlElement(name = "Pgntn")
 	public Pagination getPagination() {
 		return pagination;
 	}
@@ -409,6 +469,7 @@ public class CollateralAndExposureReportV03 {
 		this.pagination = pagination;
 	}
 
+	@XmlElement(name = "Oblgtn", required = true)
 	public Obligation4 getObligation() {
 		return obligation;
 	}
@@ -417,6 +478,7 @@ public class CollateralAndExposureReportV03 {
 		this.obligation = obligation;
 	}
 
+	@XmlElement(name = "Agrmt")
 	public Agreement4 getAgreement() {
 		return agreement;
 	}
@@ -425,6 +487,7 @@ public class CollateralAndExposureReportV03 {
 		this.agreement = agreement;
 	}
 
+	@XmlElement(name = "CollRpt", required = true)
 	public List<Collateral13> getCollateralReport() {
 		return collateralReport;
 	}
@@ -433,11 +496,18 @@ public class CollateralAndExposureReportV03 {
 		this.collateralReport = collateralReport;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:colr.016.03.03")
+	static public class Document {
+		@XmlElement(name = "CollAndXpsrRpt", required = true)
+		public CollateralAndExposureReportV03 messageBody;
 	}
 }

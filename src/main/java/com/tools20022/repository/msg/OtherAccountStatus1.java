@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status of an account.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Status of an account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherAccountStatus1", propOrder = {"status", "reason"})
 public class OtherAccountStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class OtherAccountStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public GenericIdentification36 getStatus() {
 		return status;
 	}
@@ -181,6 +188,7 @@ public class OtherAccountStatus1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Rsn")
 	public GenericIdentification36 getReason() {
 		return reason;
 	}

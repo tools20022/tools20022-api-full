@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Lottery;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the corporate action event.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information about the corporate action event."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateAction14", propOrder = {"dateDetails", "lotteryType"})
 public class CorporateAction14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -192,6 +198,7 @@ public class CorporateAction14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtDtls")
 	public CorporateActionDate30 getDateDetails() {
 		return dateDetails;
 	}
@@ -200,6 +207,7 @@ public class CorporateAction14 {
 		this.dateDetails = dateDetails;
 	}
 
+	@XmlElement(name = "LtryTp")
 	public LotteryTypeFormat1Choice getLotteryType() {
 		return lotteryType;
 	}

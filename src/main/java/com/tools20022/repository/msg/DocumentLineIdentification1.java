@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the documents referred to in the remittance information.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Identifies the documents referred to in the remittance information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DocumentLineIdentification1", propOrder = {"type", "number", "relatedDate"})
 public class DocumentLineIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -239,6 +245,7 @@ public class DocumentLineIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public DocumentLineType1 getType() {
 		return type;
 	}
@@ -247,6 +254,7 @@ public class DocumentLineIdentification1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Nb")
 	public Max35Text getNumber() {
 		return number;
 	}
@@ -255,6 +263,7 @@ public class DocumentLineIdentification1 {
 		this.number = number;
 	}
 
+	@XmlElement(name = "RltdDt")
 	public ISODate getRelatedDate() {
 		return relatedDate;
 	}

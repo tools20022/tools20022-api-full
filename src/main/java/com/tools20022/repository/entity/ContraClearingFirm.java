@@ -65,6 +65,11 @@ public class ContraClearingFirm extends SettlementPartyRole {
 				definition = "Party that is the clearing firm of the counterparty in a trade.";
 				superType_lazy = () -> SettlementPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ContraClearingFirm.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Trade settlement details for this invoice which involves the payment of an
@@ -160,6 +164,10 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeSettlement1", propOrder = {"duePayableAmount", "creditorReference", "paymentReference", "invoiceCurrencyCode", "invoicer", "invoicee", "payee", "payer", "taxCurrencyExchange", "invoiceCurrencyExchange",
+		"paymentCurrencyExchange", "paymentMeans", "tax", "billingPeriod", "allowanceCharge", "subTotalCalculatedTax", "logisticsCharge", "paymentTerms", "monetarySummation", "adjustmentAmountAndReason", "invoiceReferencedDocument",
+		"proformaInvoiceReferencedDocument", "letterOfCreditReferencedDocument", "financialCard", "purchaseAccountingAccount", "issuerFactoringListIdentification", "issuerFactoringAgreementIdentification"})
 public class TradeSettlement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1483,6 +1491,7 @@ public class TradeSettlement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DuePyblAmt")
 	public List<CurrencyAndAmount> getDuePayableAmount() {
 		return duePayableAmount;
 	}
@@ -1491,6 +1500,7 @@ public class TradeSettlement1 {
 		this.duePayableAmount = duePayableAmount;
 	}
 
+	@XmlElement(name = "CdtrRef")
 	public List<CreditorReferenceInformation2> getCreditorReference() {
 		return creditorReference;
 	}
@@ -1499,6 +1509,7 @@ public class TradeSettlement1 {
 		this.creditorReference = creditorReference;
 	}
 
+	@XmlElement(name = "PmtRef")
 	public List<Max35Text> getPaymentReference() {
 		return paymentReference;
 	}
@@ -1507,6 +1518,7 @@ public class TradeSettlement1 {
 		this.paymentReference = paymentReference;
 	}
 
+	@XmlElement(name = "InvcCcyCd")
 	public CurrencyCode getInvoiceCurrencyCode() {
 		return invoiceCurrencyCode;
 	}
@@ -1515,6 +1527,7 @@ public class TradeSettlement1 {
 		this.invoiceCurrencyCode = invoiceCurrencyCode;
 	}
 
+	@XmlElement(name = "Invcr")
 	public TradeParty1 getInvoicer() {
 		return invoicer;
 	}
@@ -1523,6 +1536,7 @@ public class TradeSettlement1 {
 		this.invoicer = invoicer;
 	}
 
+	@XmlElement(name = "Invcee")
 	public TradeParty1 getInvoicee() {
 		return invoicee;
 	}
@@ -1531,6 +1545,7 @@ public class TradeSettlement1 {
 		this.invoicee = invoicee;
 	}
 
+	@XmlElement(name = "Pyee")
 	public TradeParty1 getPayee() {
 		return payee;
 	}
@@ -1539,6 +1554,7 @@ public class TradeSettlement1 {
 		this.payee = payee;
 	}
 
+	@XmlElement(name = "Pyer")
 	public TradeParty1 getPayer() {
 		return payer;
 	}
@@ -1547,6 +1563,7 @@ public class TradeSettlement1 {
 		this.payer = payer;
 	}
 
+	@XmlElement(name = "TaxCcyXchg")
 	public CurrencyReference2 getTaxCurrencyExchange() {
 		return taxCurrencyExchange;
 	}
@@ -1555,6 +1572,7 @@ public class TradeSettlement1 {
 		this.taxCurrencyExchange = taxCurrencyExchange;
 	}
 
+	@XmlElement(name = "InvcCcyXchg")
 	public CurrencyReference2 getInvoiceCurrencyExchange() {
 		return invoiceCurrencyExchange;
 	}
@@ -1563,6 +1581,7 @@ public class TradeSettlement1 {
 		this.invoiceCurrencyExchange = invoiceCurrencyExchange;
 	}
 
+	@XmlElement(name = "PmtCcyXchg")
 	public CurrencyReference2 getPaymentCurrencyExchange() {
 		return paymentCurrencyExchange;
 	}
@@ -1571,6 +1590,7 @@ public class TradeSettlement1 {
 		this.paymentCurrencyExchange = paymentCurrencyExchange;
 	}
 
+	@XmlElement(name = "PmtMeans")
 	public List<PaymentMeans1> getPaymentMeans() {
 		return paymentMeans;
 	}
@@ -1579,6 +1599,7 @@ public class TradeSettlement1 {
 		this.paymentMeans = paymentMeans;
 	}
 
+	@XmlElement(name = "Tax")
 	public List<SettlementTax1> getTax() {
 		return tax;
 	}
@@ -1587,6 +1608,7 @@ public class TradeSettlement1 {
 		this.tax = tax;
 	}
 
+	@XmlElement(name = "BllgPrd")
 	public Period1 getBillingPeriod() {
 		return billingPeriod;
 	}
@@ -1595,6 +1617,7 @@ public class TradeSettlement1 {
 		this.billingPeriod = billingPeriod;
 	}
 
+	@XmlElement(name = "AllwncChrg")
 	public List<SettlementAllowanceCharge1> getAllowanceCharge() {
 		return allowanceCharge;
 	}
@@ -1603,6 +1626,7 @@ public class TradeSettlement1 {
 		this.allowanceCharge = allowanceCharge;
 	}
 
+	@XmlElement(name = "SubTtlClctdTax")
 	public List<SettlementSubTotalCalculatedTax1> getSubTotalCalculatedTax() {
 		return subTotalCalculatedTax;
 	}
@@ -1611,6 +1635,7 @@ public class TradeSettlement1 {
 		this.subTotalCalculatedTax = subTotalCalculatedTax;
 	}
 
+	@XmlElement(name = "LogstcsChrg")
 	public List<ChargesDetails2> getLogisticsCharge() {
 		return logisticsCharge;
 	}
@@ -1619,6 +1644,7 @@ public class TradeSettlement1 {
 		this.logisticsCharge = logisticsCharge;
 	}
 
+	@XmlElement(name = "PmtTerms")
 	public List<PaymentTerms3> getPaymentTerms() {
 		return paymentTerms;
 	}
@@ -1627,6 +1653,7 @@ public class TradeSettlement1 {
 		this.paymentTerms = paymentTerms;
 	}
 
+	@XmlElement(name = "MntrySummtn", required = true)
 	public SettlementMonetarySummation1 getMonetarySummation() {
 		return monetarySummation;
 	}
@@ -1635,6 +1662,7 @@ public class TradeSettlement1 {
 		this.monetarySummation = monetarySummation;
 	}
 
+	@XmlElement(name = "AdjstmntAmtAndRsn")
 	public List<DocumentAdjustment2> getAdjustmentAmountAndReason() {
 		return adjustmentAmountAndReason;
 	}
@@ -1643,6 +1671,7 @@ public class TradeSettlement1 {
 		this.adjustmentAmountAndReason = adjustmentAmountAndReason;
 	}
 
+	@XmlElement(name = "InvcRefdDoc")
 	public DocumentIdentification22 getInvoiceReferencedDocument() {
 		return invoiceReferencedDocument;
 	}
@@ -1651,6 +1680,7 @@ public class TradeSettlement1 {
 		this.invoiceReferencedDocument = invoiceReferencedDocument;
 	}
 
+	@XmlElement(name = "ProfrmInvcRefdDoc")
 	public DocumentIdentification22 getProformaInvoiceReferencedDocument() {
 		return proformaInvoiceReferencedDocument;
 	}
@@ -1659,6 +1689,7 @@ public class TradeSettlement1 {
 		this.proformaInvoiceReferencedDocument = proformaInvoiceReferencedDocument;
 	}
 
+	@XmlElement(name = "LttrOfCdtRefdDoc")
 	public DocumentIdentification7 getLetterOfCreditReferencedDocument() {
 		return letterOfCreditReferencedDocument;
 	}
@@ -1667,6 +1698,7 @@ public class TradeSettlement1 {
 		this.letterOfCreditReferencedDocument = letterOfCreditReferencedDocument;
 	}
 
+	@XmlElement(name = "FinCard")
 	public List<FinancialCard1> getFinancialCard() {
 		return financialCard;
 	}
@@ -1675,6 +1707,7 @@ public class TradeSettlement1 {
 		this.financialCard = financialCard;
 	}
 
+	@XmlElement(name = "PurchsAcctgAcct")
 	public List<AccountingAccount1> getPurchaseAccountingAccount() {
 		return purchaseAccountingAccount;
 	}
@@ -1683,6 +1716,7 @@ public class TradeSettlement1 {
 		this.purchaseAccountingAccount = purchaseAccountingAccount;
 	}
 
+	@XmlElement(name = "IssrFactrgListId")
 	public List<Max35Text> getIssuerFactoringListIdentification() {
 		return issuerFactoringListIdentification;
 	}
@@ -1691,6 +1725,7 @@ public class TradeSettlement1 {
 		this.issuerFactoringListIdentification = issuerFactoringListIdentification;
 	}
 
+	@XmlElement(name = "IssrFactrgAgrmtId")
 	public List<Max35Text> getIssuerFactoringAgreementIdentification() {
 		return issuerFactoringAgreementIdentification;
 	}

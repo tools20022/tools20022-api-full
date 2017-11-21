@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Currency control document entry supporting the contract registration.
@@ -93,6 +97,9 @@ import java.util.List;
  * "Currency control document entry supporting the contract registration."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SupportingDocumentEntry1", propOrder = {"entryIdentification", "originalDocument", "documentType", "totalAmount", "totalAmountAfterShipment", "totalAmountInContractCurrency", "totalAmountAfterShipmentInContractCurrency",
+		"shipmentAttributes", "additionalInformation", "attachment"})
 public class SupportingDocumentEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -599,6 +606,7 @@ public class SupportingDocumentEntry1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NtryId", required = true)
 	public Max35Text getEntryIdentification() {
 		return entryIdentification;
 	}
@@ -607,6 +615,7 @@ public class SupportingDocumentEntry1 {
 		this.entryIdentification = entryIdentification;
 	}
 
+	@XmlElement(name = "OrgnlDoc", required = true)
 	public DocumentIdentification22 getOriginalDocument() {
 		return originalDocument;
 	}
@@ -615,6 +624,7 @@ public class SupportingDocumentEntry1 {
 		this.originalDocument = originalDocument;
 	}
 
+	@XmlElement(name = "DocTp", required = true)
 	public Exact4AlphaNumericText getDocumentType() {
 		return documentType;
 	}
@@ -623,6 +633,7 @@ public class SupportingDocumentEntry1 {
 		this.documentType = documentType;
 	}
 
+	@XmlElement(name = "TtlAmt")
 	public ActiveCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -631,6 +642,7 @@ public class SupportingDocumentEntry1 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "TtlAmtAftrShipmnt")
 	public ActiveCurrencyAndAmount getTotalAmountAfterShipment() {
 		return totalAmountAfterShipment;
 	}
@@ -639,6 +651,7 @@ public class SupportingDocumentEntry1 {
 		this.totalAmountAfterShipment = totalAmountAfterShipment;
 	}
 
+	@XmlElement(name = "TtlAmtInCtrctCcy")
 	public ActiveCurrencyAndAmount getTotalAmountInContractCurrency() {
 		return totalAmountInContractCurrency;
 	}
@@ -647,6 +660,7 @@ public class SupportingDocumentEntry1 {
 		this.totalAmountInContractCurrency = totalAmountInContractCurrency;
 	}
 
+	@XmlElement(name = "TtlAmtAftrShipmntInCtrctCcy")
 	public ActiveCurrencyAndAmount getTotalAmountAfterShipmentInContractCurrency() {
 		return totalAmountAfterShipmentInContractCurrency;
 	}
@@ -655,6 +669,7 @@ public class SupportingDocumentEntry1 {
 		this.totalAmountAfterShipmentInContractCurrency = totalAmountAfterShipmentInContractCurrency;
 	}
 
+	@XmlElement(name = "ShipmntAttrbts", required = true)
 	public ShipmentAttribute1 getShipmentAttributes() {
 		return shipmentAttributes;
 	}
@@ -663,6 +678,7 @@ public class SupportingDocumentEntry1 {
 		this.shipmentAttributes = shipmentAttributes;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max500Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -671,6 +687,7 @@ public class SupportingDocumentEntry1 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "Attchmnt")
 	public List<DocumentGeneralInformation3> getAttachment() {
 		return attachment;
 	}

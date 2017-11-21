@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode;
 import com.tools20022.repository.entity.InvestigationResolution;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,39 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmInvestigationStatus
+ * PaymentInvestigationCaseResolution.mmInvestigationStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmDebitAuthorisationConfirmation
+ * PaymentInvestigationCaseResolution.mmDebitAuthorisationConfirmation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmCoverCorrection
+ * PaymentInvestigationCaseResolution.mmCoverCorrection}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmEntryCorrection
+ * PaymentInvestigationCaseResolution.mmEntryCorrection}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmPaymentCorrection
+ * PaymentInvestigationCaseResolution.mmPaymentCorrection}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmPaymentExecutionCorrection
+ * PaymentInvestigationCaseResolution.mmPaymentExecutionCorrection}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmInvestigationCaseRejection
+ * PaymentInvestigationCaseResolution.mmInvestigationCaseRejection}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmDuplicateCase
+ * PaymentInvestigationCaseResolution.mmDuplicateCase}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestigationResolution
+ * InvestigationResolution}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -81,39 +115,6 @@ import java.util.List;
  * DuplicateCase.mmRelatedCaseResolution}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestigationResolution
- * InvestigationResolution}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmInvestigationStatus
- * PaymentInvestigationCaseResolution.mmInvestigationStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmDebitAuthorisationConfirmation
- * PaymentInvestigationCaseResolution.mmDebitAuthorisationConfirmation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmCoverCorrection
- * PaymentInvestigationCaseResolution.mmCoverCorrection}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmEntryCorrection
- * PaymentInvestigationCaseResolution.mmEntryCorrection}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmPaymentCorrection
- * PaymentInvestigationCaseResolution.mmPaymentCorrection}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmPaymentExecutionCorrection
- * PaymentInvestigationCaseResolution.mmPaymentExecutionCorrection}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmInvestigationCaseRejection
- * PaymentInvestigationCaseResolution.mmInvestigationCaseRejection}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmDuplicateCase
- * PaymentInvestigationCaseResolution.mmDuplicateCase}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -145,11 +146,6 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode
 	 * InvestigationExecutionConfirmationCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution
-	 * PaymentInvestigationCaseResolution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -171,6 +167,11 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution
+	 * PaymentInvestigationCaseResolution}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -185,7 +186,7 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 		{
 			derivation_lazy = () -> Arrays.asList(InvestigationStatusChoice.mmConfirmation, com.tools20022.repository.msg.InvestigationStatus.mmConfirmation, CaseStatus.mmInvestigationStatus, InvestigationStatus2Choice.mmConfirmation,
 					InvestigationStatus3Choice.mmConfirmation);
-			elementContext_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestigationStatus";
@@ -193,6 +194,14 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentInvestigationCaseResolution.class.getMethod("getInvestigationStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DebitAuthorisation debitAuthorisationConfirmation;
@@ -235,7 +244,7 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 */
 	public static final MMBusinessAssociationEnd mmDebitAuthorisationConfirmation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitAuthorisationConfirmation";
@@ -266,11 +275,6 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashSettlement
 	 * CashSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution
-	 * PaymentInvestigationCaseResolution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -282,6 +286,11 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 * MissingCover3.mmCoverCorrection}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution
+	 * PaymentInvestigationCaseResolution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -298,7 +307,7 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	public static final MMBusinessAssociationEnd mmCoverCorrection = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(MissingCover2.mmCoverCorrection, MissingCover3.mmCoverCorrection);
-			elementContext_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CoverCorrection";
@@ -349,7 +358,7 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 */
 	public static final MMBusinessAssociationEnd mmEntryCorrection = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntryCorrection";
@@ -377,11 +386,6 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution
-	 * PaymentInvestigationCaseResolution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -390,6 +394,11 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 * InvestigationStatus.mmReturnInformation}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution
+	 * PaymentInvestigationCaseResolution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -405,7 +414,7 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	public static final MMBusinessAssociationEnd mmPaymentCorrection = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestigationStatus.mmReturnInformation);
-			elementContext_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentCorrection";
@@ -453,7 +462,7 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 */
 	public static final MMBusinessAssociationEnd mmPaymentExecutionCorrection = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentExecutionCorrection";
@@ -485,11 +494,6 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseRejection
 	 * PaymentInvestigationCaseRejection}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution
-	 * PaymentInvestigationCaseResolution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -501,6 +505,11 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 * PaymentTransactionInformation33.mmCancellationStatusReasonInformation}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution
+	 * PaymentInvestigationCaseResolution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -517,7 +526,7 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	public static final MMBusinessAssociationEnd mmInvestigationCaseRejection = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentTransactionInformation32.mmCancellationStatusReasonInformation, PaymentTransactionInformation33.mmCancellationStatusReasonInformation);
-			elementContext_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestigationCaseRejection";
@@ -548,11 +557,6 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DuplicateCase
 	 * DuplicateCase}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution
-	 * PaymentInvestigationCaseResolution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -567,6 +571,11 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 * InvestigationStatus3Choice.mmDuplicateOf}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution
+	 * PaymentInvestigationCaseResolution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -583,7 +592,7 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	public static final MMBusinessAssociationEnd mmDuplicateCase = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestigationStatusChoice.mmDuplicateOf, InvestigationStatus2Choice.mmDuplicateOf, InvestigationStatus3Choice.mmDuplicateOf);
-			elementContext_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DuplicateCase";
@@ -607,10 +616,17 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 						com.tools20022.repository.entity.DebitAuthorisation.mmRelatedInvestigationCaseResolution, com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRelatedInvestigationCaseResolution,
 						com.tools20022.repository.entity.DuplicateCase.mmRelatedCaseResolution);
 				superType_lazy = () -> InvestigationResolution.mmObject();
-				element_lazy = () -> Arrays.asList(PaymentInvestigationCaseResolution.mmInvestigationStatus, PaymentInvestigationCaseResolution.mmDebitAuthorisationConfirmation, PaymentInvestigationCaseResolution.mmCoverCorrection,
-						PaymentInvestigationCaseResolution.mmEntryCorrection, PaymentInvestigationCaseResolution.mmPaymentCorrection, PaymentInvestigationCaseResolution.mmPaymentExecutionCorrection,
-						PaymentInvestigationCaseResolution.mmInvestigationCaseRejection, PaymentInvestigationCaseResolution.mmDuplicateCase);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmInvestigationStatus,
+						com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmDebitAuthorisationConfirmation, com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmCoverCorrection,
+						com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmEntryCorrection, com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmPaymentCorrection,
+						com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmPaymentExecutionCorrection, com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmInvestigationCaseRejection,
+						com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmDuplicateCase);
 				derivationComponent_lazy = () -> Arrays.asList(InvestigationStatusChoice.mmObject(), com.tools20022.repository.msg.InvestigationStatus.mmObject(), InvestigationStatus2Choice.mmObject(), InvestigationStatus3Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PaymentInvestigationCaseResolution.class;
 			}
 		});
 		return mmObject_lazy.get();

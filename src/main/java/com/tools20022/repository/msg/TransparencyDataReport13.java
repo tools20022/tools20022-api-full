@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides for reporting quantitative details of equity instruments as part of
@@ -96,6 +100,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransparencyDataReport13", propOrder = {"technicalRecordIdentification", "identification", "reportingDate", "tradingVenue", "suspension", "transactionsExecuted", "transactionsExecutedExcludingPreTradeWaiver",
+		"transactionsExecutedExcludingPostTradeLargeInScaleWaiver"})
 public class TransparencyDataReport13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -486,6 +493,7 @@ public class TransparencyDataReport13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TechRcrdId")
 	public Max35Text getTechnicalRecordIdentification() {
 		return technicalRecordIdentification;
 	}
@@ -494,6 +502,7 @@ public class TransparencyDataReport13 {
 		this.technicalRecordIdentification = technicalRecordIdentification;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public ISINOct2015Identifier getIdentification() {
 		return identification;
 	}
@@ -502,6 +511,7 @@ public class TransparencyDataReport13 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "RptgDt")
 	public ISODate getReportingDate() {
 		return reportingDate;
 	}
@@ -510,6 +520,7 @@ public class TransparencyDataReport13 {
 		this.reportingDate = reportingDate;
 	}
 
+	@XmlElement(name = "TradgVn")
 	public MICIdentifier getTradingVenue() {
 		return tradingVenue;
 	}
@@ -518,6 +529,7 @@ public class TransparencyDataReport13 {
 		this.tradingVenue = tradingVenue;
 	}
 
+	@XmlElement(name = "Sspnsn", required = true)
 	public TrueFalseIndicator getSuspension() {
 		return suspension;
 	}
@@ -526,6 +538,7 @@ public class TransparencyDataReport13 {
 		this.suspension = suspension;
 	}
 
+	@XmlElement(name = "TxsExctd", required = true)
 	public NumberAndVolume2 getTransactionsExecuted() {
 		return transactionsExecuted;
 	}
@@ -534,6 +547,7 @@ public class TransparencyDataReport13 {
 		this.transactionsExecuted = transactionsExecuted;
 	}
 
+	@XmlElement(name = "TxsExctdExclgPreTradWvr", required = true)
 	public NumberAndVolume2 getTransactionsExecutedExcludingPreTradeWaiver() {
 		return transactionsExecutedExcludingPreTradeWaiver;
 	}
@@ -542,6 +556,7 @@ public class TransparencyDataReport13 {
 		this.transactionsExecutedExcludingPreTradeWaiver = transactionsExecutedExcludingPreTradeWaiver;
 	}
 
+	@XmlElement(name = "TxsExctdExclgPstTradLrgInScaleWvr", required = true)
 	public NumberAndVolume2 getTransactionsExecutedExcludingPostTradeLargeInScaleWaiver() {
 		return transactionsExecutedExcludingPostTradeLargeInScaleWaiver;
 	}

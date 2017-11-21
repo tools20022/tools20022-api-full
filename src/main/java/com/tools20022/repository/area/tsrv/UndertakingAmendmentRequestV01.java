@@ -26,9 +26,11 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.msg.Amendment3;
 import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The UndertakingAmendmentRequest message is sent by the party that requested
@@ -43,9 +45,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsrv.004.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
@@ -78,6 +77,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsrv.004.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -89,6 +91,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingAmendmentRequestV01", propOrder = {"undertakingAmendmentRequestDetails", "instructionsToBank", "digitalSignature"})
 public class UndertakingAmendmentRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -126,6 +130,14 @@ public class UndertakingAmendmentRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Amendment3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingAmendmentRequestV01.class.getMethod("getUndertakingAmendmentRequestDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Max2000Text> instructionsToBank;
 	/**
@@ -159,6 +171,14 @@ public class UndertakingAmendmentRequestV01 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingAmendmentRequestV01.class.getMethod("getInstructionsToBank", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyAndSignature2 digitalSignature;
@@ -195,6 +215,14 @@ public class UndertakingAmendmentRequestV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingAmendmentRequestV01.class.getMethod("getDigitalSignature", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -207,7 +235,8 @@ public class UndertakingAmendmentRequestV01 {
 				rootElement = "Document";
 				xmlTag = "UdrtkgAmdmntReq";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingAmendmentRequestV01.mmUndertakingAmendmentRequestDetails, UndertakingAmendmentRequestV01.mmInstructionsToBank, UndertakingAmendmentRequestV01.mmDigitalSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentRequestV01.mmUndertakingAmendmentRequestDetails,
+						com.tools20022.repository.area.tsrv.UndertakingAmendmentRequestV01.mmInstructionsToBank, com.tools20022.repository.area.tsrv.UndertakingAmendmentRequestV01.mmDigitalSignature);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsrv";
@@ -217,10 +246,16 @@ public class UndertakingAmendmentRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UndertakingAmendmentRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UdrtkgAmdmntReqDtls", required = true)
 	public Amendment3 getUndertakingAmendmentRequestDetails() {
 		return undertakingAmendmentRequestDetails;
 	}
@@ -229,6 +264,7 @@ public class UndertakingAmendmentRequestV01 {
 		this.undertakingAmendmentRequestDetails = undertakingAmendmentRequestDetails;
 	}
 
+	@XmlElement(name = "InstrsToBk")
 	public List<Max2000Text> getInstructionsToBank() {
 		return instructionsToBank;
 	}
@@ -237,11 +273,18 @@ public class UndertakingAmendmentRequestV01 {
 		this.instructionsToBank = instructionsToBank;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public PartyAndSignature2 getDigitalSignature() {
 		return digitalSignature;
 	}
 
 	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
 		this.digitalSignature = digitalSignature;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.004.01.01")
+	static public class Document {
+		@XmlElement(name = "UdrtkgAmdmntReq", required = true)
+		public UndertakingAmendmentRequestV01 messageBody;
 	}
 }

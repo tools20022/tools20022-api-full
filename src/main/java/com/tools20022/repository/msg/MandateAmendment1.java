@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the mandate to be amended and gives details of the new mandate.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Identifies the mandate to be amended and gives details of the new mandate."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MandateAmendment1", propOrder = {"originalMessageInformation", "amendmentReason", "mandate", "originalMandate"})
 public class MandateAmendment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -287,6 +293,7 @@ public class MandateAmendment1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMsgInf")
 	public OriginalMessageInformation1 getOriginalMessageInformation() {
 		return originalMessageInformation;
 	}
@@ -295,6 +302,7 @@ public class MandateAmendment1 {
 		this.originalMessageInformation = originalMessageInformation;
 	}
 
+	@XmlElement(name = "AmdmntRsn", required = true)
 	public AmendmentReasonInformation1 getAmendmentReason() {
 		return amendmentReason;
 	}
@@ -303,6 +311,7 @@ public class MandateAmendment1 {
 		this.amendmentReason = amendmentReason;
 	}
 
+	@XmlElement(name = "Mndt", required = true)
 	public MandateInformation3 getMandate() {
 		return mandate;
 	}
@@ -311,6 +320,7 @@ public class MandateAmendment1 {
 		this.mandate = mandate;
 	}
 
+	@XmlElement(name = "OrgnlMndt", required = true)
 	public OriginalMandate1Choice getOriginalMandate() {
 		return originalMandate;
 	}

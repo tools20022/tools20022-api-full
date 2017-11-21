@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.AdditionalReference6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of references used to reference a previous transaction.
@@ -84,6 +88,8 @@ import java.util.List;
  * References40Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References49Choice", propOrder = {"relatedReference", "otherReference"})
 public class References49Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -220,6 +226,7 @@ public class References49Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RltdRef", required = true)
 	public List<AdditionalReference6> getRelatedReference() {
 		return relatedReference;
 	}
@@ -228,6 +235,7 @@ public class References49Choice {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "OthrRef", required = true)
 	public List<AdditionalReference6> getOtherReference() {
 		return otherReference;
 	}

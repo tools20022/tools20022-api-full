@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.LoanContract1;
 import com.tools20022.repository.msg.TradeContract1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of the type of underlying contract.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of the type of underlying contract."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnderlyingContract1Choice", propOrder = {"loan", "trade"})
 public class UnderlyingContract1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -174,6 +180,7 @@ public class UnderlyingContract1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ln", required = true)
 	public LoanContract1 getLoan() {
 		return loan;
 	}
@@ -182,6 +189,7 @@ public class UnderlyingContract1Choice {
 		this.loan = loan;
 	}
 
+	@XmlElement(name = "Trad", required = true)
 	public TradeContract1 getTrade() {
 		return trade;
 	}

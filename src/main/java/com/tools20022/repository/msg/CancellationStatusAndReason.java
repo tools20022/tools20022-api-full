@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status of a transfer cancellation instruction and the reason for the status.
@@ -94,6 +98,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancellationStatusAndReason", propOrder = {"status", "rejected", "complete", "statusInitiator"})
 public class CancellationStatusAndReason {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -363,6 +369,7 @@ public class CancellationStatusAndReason {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public TransferCancellationStatus getStatus() {
 		return status;
 	}
@@ -371,6 +378,7 @@ public class CancellationStatusAndReason {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public TransferCancellationRejectedStatus1Choice getRejected() {
 		return rejected;
 	}
@@ -379,6 +387,7 @@ public class CancellationStatusAndReason {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Cmplt", required = true)
 	public TransferCancellationCompleteStatusChoice getComplete() {
 		return complete;
 	}
@@ -387,6 +396,7 @@ public class CancellationStatusAndReason {
 		this.complete = complete;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification1Choice getStatusInitiator() {
 		return statusInitiator;
 	}

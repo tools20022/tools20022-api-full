@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Numerical representation of the nett increases and decreases in an account at
@@ -91,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ReportData3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportData4", propOrder = {"messageIdentification", "valueDate", "dateAndTimeStamp", "type", "scheduleType", "settlementSessionIdentifier"})
 public class ReportData4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -381,6 +387,7 @@ public class ReportData4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -389,6 +396,7 @@ public class ReportData4 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "ValDt", required = true)
 	public ISODate getValueDate() {
 		return valueDate;
 	}
@@ -397,6 +405,7 @@ public class ReportData4 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "DtAndTmStmp", required = true)
 	public ISODateTime getDateAndTimeStamp() {
 		return dateAndTimeStamp;
 	}
@@ -405,6 +414,7 @@ public class ReportData4 {
 		this.dateAndTimeStamp = dateAndTimeStamp;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public Entry2Code getType() {
 		return type;
 	}
@@ -413,6 +423,7 @@ public class ReportData4 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "SchdlTp", required = true)
 	public Exact4AlphaNumericText getScheduleType() {
 		return scheduleType;
 	}
@@ -421,6 +432,7 @@ public class ReportData4 {
 		this.scheduleType = scheduleType;
 	}
 
+	@XmlElement(name = "SttlmSsnIdr")
 	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
 		return settlementSessionIdentifier;
 	}

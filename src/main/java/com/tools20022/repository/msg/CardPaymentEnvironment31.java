@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Environment of the diagnostic exchange.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentEnvironment29}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentEnvironment31", propOrder = {"acquirer", "acquirerAvailable", "merchantIdentification", "POIIdentification"})
 public class CardPaymentEnvironment31 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -345,6 +351,7 @@ public class CardPaymentEnvironment31 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acqrr", required = true)
 	public Acquirer2 getAcquirer() {
 		return acquirer;
 	}
@@ -353,6 +360,7 @@ public class CardPaymentEnvironment31 {
 		this.acquirer = acquirer;
 	}
 
+	@XmlElement(name = "AcqrrAvlbl")
 	public TrueFalseIndicator getAcquirerAvailable() {
 		return acquirerAvailable;
 	}
@@ -361,6 +369,7 @@ public class CardPaymentEnvironment31 {
 		this.acquirerAvailable = acquirerAvailable;
 	}
 
+	@XmlElement(name = "MrchntId")
 	public GenericIdentification32 getMerchantIdentification() {
 		return merchantIdentification;
 	}
@@ -369,6 +378,7 @@ public class CardPaymentEnvironment31 {
 		this.merchantIdentification = merchantIdentification;
 	}
 
+	@XmlElement(name = "POIId")
 	public GenericIdentification32 getPOIIdentification() {
 		return pOIIdentification;
 	}

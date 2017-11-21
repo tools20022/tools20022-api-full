@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * expressed as a ISO20022 code.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "expressed as a ISO20022 code."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeDate4Choice", propOrder = {"date", "value"})
 public class TradeDate4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class TradeDate4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public DateAndDateTime1Choice getDate() {
 		return date;
 	}
@@ -180,6 +187,7 @@ public class TradeDate4Choice {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public TradingDateCode1Choice getValue() {
 		return value;
 	}

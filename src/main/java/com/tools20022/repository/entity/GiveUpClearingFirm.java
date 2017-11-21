@@ -67,6 +67,11 @@ public class GiveUpClearingFirm extends SettlementPartyRole {
 				definition = "Firm to which the trade is given up (carries the position that results from a trade).";
 				superType_lazy = () -> SettlementPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return GiveUpClearingFirm.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.OvernightIndexSwapTransaction1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a reason for no activity and the overnight index swaps segment
@@ -63,6 +67,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OvernightIndexSwap1Choice", propOrder = {"dataSetAction", "transaction"})
 public class OvernightIndexSwap1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -169,6 +175,7 @@ public class OvernightIndexSwap1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DataSetActn", required = true)
 	public ReportPeriodActivity1Code getDataSetAction() {
 		return dataSetAction;
 	}
@@ -177,6 +184,7 @@ public class OvernightIndexSwap1Choice {
 		this.dataSetAction = dataSetAction;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public List<OvernightIndexSwapTransaction1> getTransaction() {
 		return transaction;
 	}

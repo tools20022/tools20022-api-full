@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Eligible and not eligible balance of securities for a corporate action event.
@@ -106,6 +110,9 @@ import java.util.List;
  * CorporateActionBalanceDetails12}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionBalanceDetails32", propOrder = {"totalEligibleBalance", "blockedBalance", "borrowedBalance", "collateralInBalance", "collateralOutBalance", "onLoanBalance", "pendingDeliveryBalance", "pendingReceiptBalance",
+		"outForRegistrationBalance", "settlementPositionBalance", "streetPositionBalance", "tradeDatePositionBalance", "inTransshipmentBalance", "registeredBalance"})
 public class CorporateActionBalanceDetails32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -916,6 +923,7 @@ public class CorporateActionBalanceDetails32 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlElgblBal")
 	public Quantity17Choice getTotalEligibleBalance() {
 		return totalEligibleBalance;
 	}
@@ -924,6 +932,7 @@ public class CorporateActionBalanceDetails32 {
 		this.totalEligibleBalance = totalEligibleBalance;
 	}
 
+	@XmlElement(name = "BlckdBal")
 	public BalanceFormat5Choice getBlockedBalance() {
 		return blockedBalance;
 	}
@@ -932,6 +941,7 @@ public class CorporateActionBalanceDetails32 {
 		this.blockedBalance = blockedBalance;
 	}
 
+	@XmlElement(name = "BrrwdBal")
 	public BalanceFormat5Choice getBorrowedBalance() {
 		return borrowedBalance;
 	}
@@ -940,6 +950,7 @@ public class CorporateActionBalanceDetails32 {
 		this.borrowedBalance = borrowedBalance;
 	}
 
+	@XmlElement(name = "CollInBal")
 	public BalanceFormat5Choice getCollateralInBalance() {
 		return collateralInBalance;
 	}
@@ -948,6 +959,7 @@ public class CorporateActionBalanceDetails32 {
 		this.collateralInBalance = collateralInBalance;
 	}
 
+	@XmlElement(name = "CollOutBal")
 	public BalanceFormat5Choice getCollateralOutBalance() {
 		return collateralOutBalance;
 	}
@@ -956,6 +968,7 @@ public class CorporateActionBalanceDetails32 {
 		this.collateralOutBalance = collateralOutBalance;
 	}
 
+	@XmlElement(name = "OnLnBal")
 	public BalanceFormat5Choice getOnLoanBalance() {
 		return onLoanBalance;
 	}
@@ -964,6 +977,7 @@ public class CorporateActionBalanceDetails32 {
 		this.onLoanBalance = onLoanBalance;
 	}
 
+	@XmlElement(name = "PdgDlvryBal")
 	public List<BalanceFormat5Choice> getPendingDeliveryBalance() {
 		return pendingDeliveryBalance;
 	}
@@ -972,6 +986,7 @@ public class CorporateActionBalanceDetails32 {
 		this.pendingDeliveryBalance = pendingDeliveryBalance;
 	}
 
+	@XmlElement(name = "PdgRctBal")
 	public List<BalanceFormat5Choice> getPendingReceiptBalance() {
 		return pendingReceiptBalance;
 	}
@@ -980,6 +995,7 @@ public class CorporateActionBalanceDetails32 {
 		this.pendingReceiptBalance = pendingReceiptBalance;
 	}
 
+	@XmlElement(name = "OutForRegnBal")
 	public BalanceFormat5Choice getOutForRegistrationBalance() {
 		return outForRegistrationBalance;
 	}
@@ -988,6 +1004,7 @@ public class CorporateActionBalanceDetails32 {
 		this.outForRegistrationBalance = outForRegistrationBalance;
 	}
 
+	@XmlElement(name = "SttlmPosBal")
 	public BalanceFormat5Choice getSettlementPositionBalance() {
 		return settlementPositionBalance;
 	}
@@ -996,6 +1013,7 @@ public class CorporateActionBalanceDetails32 {
 		this.settlementPositionBalance = settlementPositionBalance;
 	}
 
+	@XmlElement(name = "StrtPosBal")
 	public BalanceFormat5Choice getStreetPositionBalance() {
 		return streetPositionBalance;
 	}
@@ -1004,6 +1022,7 @@ public class CorporateActionBalanceDetails32 {
 		this.streetPositionBalance = streetPositionBalance;
 	}
 
+	@XmlElement(name = "TradDtPosBal")
 	public BalanceFormat5Choice getTradeDatePositionBalance() {
 		return tradeDatePositionBalance;
 	}
@@ -1012,6 +1031,7 @@ public class CorporateActionBalanceDetails32 {
 		this.tradeDatePositionBalance = tradeDatePositionBalance;
 	}
 
+	@XmlElement(name = "InTrnsShipmntBal")
 	public BalanceFormat5Choice getInTransshipmentBalance() {
 		return inTransshipmentBalance;
 	}
@@ -1020,6 +1040,7 @@ public class CorporateActionBalanceDetails32 {
 		this.inTransshipmentBalance = inTransshipmentBalance;
 	}
 
+	@XmlElement(name = "RegdBal")
 	public BalanceFormat5Choice getRegisteredBalance() {
 		return registeredBalance;
 	}

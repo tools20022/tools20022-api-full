@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * A proprietary or domestic identification scheme that uniquely identifies a
@@ -86,6 +90,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AlternateFinancialInstrumentIdentification1", propOrder = {"domesticIdentificationSource", "proprietaryIdentificationSource", "identification"})
 public class AlternateFinancialInstrumentIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -299,6 +305,7 @@ public class AlternateFinancialInstrumentIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DmstIdSrc", required = true)
 	public CountryCode getDomesticIdentificationSource() {
 		return domesticIdentificationSource;
 	}
@@ -307,6 +314,7 @@ public class AlternateFinancialInstrumentIdentification1 {
 		this.domesticIdentificationSource = domesticIdentificationSource;
 	}
 
+	@XmlElement(name = "PrtryIdSrc", required = true)
 	public Max16Text getProprietaryIdentificationSource() {
 		return proprietaryIdentificationSource;
 	}
@@ -315,6 +323,7 @@ public class AlternateFinancialInstrumentIdentification1 {
 		this.proprietaryIdentificationSource = proprietaryIdentificationSource;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the type of process related to an ATM message.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the type of process related to an ATM message."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMMessageFunction2", propOrder = {"function", "ATMServiceCode", "hostServiceCode"})
 public class ATMMessageFunction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -202,6 +208,7 @@ public class ATMMessageFunction2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Fctn", required = true)
 	public MessageFunction11Code getFunction() {
 		return function;
 	}
@@ -210,6 +217,7 @@ public class ATMMessageFunction2 {
 		this.function = function;
 	}
 
+	@XmlElement(name = "ATMSvcCd")
 	public Max35Text getATMServiceCode() {
 		return aTMServiceCode;
 	}
@@ -218,6 +226,7 @@ public class ATMMessageFunction2 {
 		this.aTMServiceCode = aTMServiceCode;
 	}
 
+	@XmlElement(name = "HstSvcCd")
 	public Max35Text getHostServiceCode() {
 		return hostServiceCode;
 	}

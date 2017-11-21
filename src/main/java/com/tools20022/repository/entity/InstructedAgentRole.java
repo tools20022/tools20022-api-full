@@ -66,6 +66,11 @@ public class InstructedAgentRole extends PaymentPartyRole {
 				definition = "Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).";
 				superType_lazy = () -> PaymentPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InstructedAgentRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

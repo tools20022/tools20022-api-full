@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money associated with a service.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Amount of money associated with a service."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Charge21", propOrder = {"chargeType", "chargeAmountOrRate", "recipientIdentification"})
 public class Charge21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -222,6 +228,7 @@ public class Charge21 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ChrgTp", required = true)
 	public ChargeType1Choice getChargeType() {
 		return chargeType;
 	}
@@ -230,6 +237,7 @@ public class Charge21 {
 		this.chargeType = chargeType;
 	}
 
+	@XmlElement(name = "ChrgAmtOrRate", required = true)
 	public AmountRate1Choice getChargeAmountOrRate() {
 		return chargeAmountOrRate;
 	}
@@ -238,6 +246,7 @@ public class Charge21 {
 		this.chargeAmountOrRate = chargeAmountOrRate;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification2Choice getRecipientIdentification() {
 		return recipientIdentification;
 	}

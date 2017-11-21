@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding the corporate action event.
@@ -78,6 +82,8 @@ import java.util.List;
  * CorporateActionUnallocatedDetailsSD2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionUnallocatedDetailsSD3", propOrder = {"unallocatedDistributionBalance", "unallocatedRedemptionBalance", "unallocatedSecuritiesTransactionDetails", "unallocatedCashTransactionDetails"})
 public class CorporateActionUnallocatedDetailsSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -331,6 +337,7 @@ public class CorporateActionUnallocatedDetailsSD3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UallctdDstrbtnBal")
 	public CorporateActionUnallocatedBalanceSD2Choice getUnallocatedDistributionBalance() {
 		return unallocatedDistributionBalance;
 	}
@@ -339,6 +346,7 @@ public class CorporateActionUnallocatedDetailsSD3 {
 		this.unallocatedDistributionBalance = unallocatedDistributionBalance;
 	}
 
+	@XmlElement(name = "UallctdRedBal")
 	public CorporateActionUnallocatedBalanceSD1 getUnallocatedRedemptionBalance() {
 		return unallocatedRedemptionBalance;
 	}
@@ -347,6 +355,7 @@ public class CorporateActionUnallocatedDetailsSD3 {
 		this.unallocatedRedemptionBalance = unallocatedRedemptionBalance;
 	}
 
+	@XmlElement(name = "UallctdSctiesTxDtls")
 	public List<CorporateActionUnallocatedSecuritiesTransactionDetailsSD4> getUnallocatedSecuritiesTransactionDetails() {
 		return unallocatedSecuritiesTransactionDetails;
 	}
@@ -355,6 +364,7 @@ public class CorporateActionUnallocatedDetailsSD3 {
 		this.unallocatedSecuritiesTransactionDetails = unallocatedSecuritiesTransactionDetails;
 	}
 
+	@XmlElement(name = "UallctdCshTxDtls")
 	public List<CorporateActionUnallocatedCashTransactionDetailsSD3> getUnallocatedCashTransactionDetails() {
 		return unallocatedCashTransactionDetails;
 	}

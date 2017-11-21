@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the trigger used by the sender to generate the file.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the trigger used by the sender to generate the file."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelSenderTrigger1Choice", propOrder = {"code", "proprietary"})
 public class IsabelSenderTrigger1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class IsabelSenderTrigger1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public SenderTrigger1Code getCode() {
 		return code;
 	}
@@ -171,6 +178,7 @@ public class IsabelSenderTrigger1Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public Max4AlphaNumericText getProprietary() {
 		return proprietary;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.SellerRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique identification, as assigned by an organisation, to unambiguously
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification116", propOrder = {"partyIdentification", "legalOrganisation", "taxParty"})
 public class PartyIdentification116 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -212,6 +218,7 @@ public class PartyIdentification116 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public OrganisationIdentification28 getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -220,6 +227,7 @@ public class PartyIdentification116 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "LglOrg")
 	public LegalOrganisation1 getLegalOrganisation() {
 		return legalOrganisation;
 	}
@@ -228,6 +236,7 @@ public class PartyIdentification116 {
 		this.legalOrganisation = legalOrganisation;
 	}
 
+	@XmlElement(name = "TaxPty")
 	public TaxParty1 getTaxParty() {
 		return taxParty;
 	}

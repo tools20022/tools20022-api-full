@@ -35,10 +35,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
- * SecuritiesPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -49,6 +45,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * LocalDepositoryRole}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
+ * SecuritiesPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -79,6 +79,11 @@ public class DepositoryRole extends SecuritiesPartyRole {
 				definition = "Place where securities are deposited, that is company, bank or institution that holds and facilitates the exchange of securities.\r\n \r\n";
 				subType_lazy = () -> Arrays.asList(CentralSecuritiesDepositoryRole.mmObject(), LocalDepositoryRole.mmObject());
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DepositoryRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -69,6 +69,11 @@ public class ClearingPlace extends SettlementPartyRole {
 				definition = "Infrastructure that may be a component of a clearing house and which facilitates clearing and settlement for its members by standing between the buyer and the seller. It may net transactions and it substitutes itself as settlement counterparty for each position.";
 				superType_lazy = () -> SettlementPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ClearingPlace.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

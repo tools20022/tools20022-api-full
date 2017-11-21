@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specification of the request for report.
@@ -56,6 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specification of the request for report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestedParameters2", propOrder = {"statementByAccount", "statementByAccountAndFinancialInstrument"})
 public class RequestedParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class RequestedParameters2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtByAcct", required = true)
 	public StatementAttributes1 getStatementByAccount() {
 		return statementByAccount;
 	}
@@ -168,6 +175,7 @@ public class RequestedParameters2 {
 		this.statementByAccount = statementByAccount;
 	}
 
+	@XmlElement(name = "StmtByAcctAndFinInstrm", required = true)
 	public GenericReportParameters getStatementByAccountAndFinancialInstrument() {
 		return statementByAccountAndFinancialInstrument;
 	}

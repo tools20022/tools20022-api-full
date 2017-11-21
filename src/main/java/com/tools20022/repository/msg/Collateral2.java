@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.CollateralManagement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the collateral that will be either delivered, returned or
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Collateral2", propOrder = {"marginCallRequestIdentification", "marginCallResponseIdentification", "standardSettlementInstructions", "proposalType", "collateralProposalResponseIdentification"})
 public class Collateral2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -314,6 +320,7 @@ public class Collateral2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MrgnCallReqId", required = true)
 	public Max35Text getMarginCallRequestIdentification() {
 		return marginCallRequestIdentification;
 	}
@@ -322,6 +329,7 @@ public class Collateral2 {
 		this.marginCallRequestIdentification = marginCallRequestIdentification;
 	}
 
+	@XmlElement(name = "MrgnCallRspnId", required = true)
 	public Max35Text getMarginCallResponseIdentification() {
 		return marginCallResponseIdentification;
 	}
@@ -330,6 +338,7 @@ public class Collateral2 {
 		this.marginCallResponseIdentification = marginCallResponseIdentification;
 	}
 
+	@XmlElement(name = "StdSttlmInstrs", required = true)
 	public Max140Text getStandardSettlementInstructions() {
 		return standardSettlementInstructions;
 	}
@@ -338,6 +347,7 @@ public class Collateral2 {
 		this.standardSettlementInstructions = standardSettlementInstructions;
 	}
 
+	@XmlElement(name = "PrpslTp")
 	public ProposalType1Choice getProposalType() {
 		return proposalType;
 	}
@@ -346,6 +356,7 @@ public class Collateral2 {
 		this.proposalType = proposalType;
 	}
 
+	@XmlElement(name = "CollPrpslRspnId")
 	public Max35Text getCollateralProposalResponseIdentification() {
 		return collateralProposalResponseIdentification;
 	}

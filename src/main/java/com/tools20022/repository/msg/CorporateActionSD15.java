@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max15AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Contains details about called certificates.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionSD5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionSD15", propOrder = {"certificateNumber", "certificateCalledAmount"})
 public class CorporateActionSD15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class CorporateActionSD15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CertNb", required = true)
 	public Max15AlphaNumericText getCertificateNumber() {
 		return certificateNumber;
 	}
@@ -191,6 +198,7 @@ public class CorporateActionSD15 {
 		this.certificateNumber = certificateNumber;
 	}
 
+	@XmlElement(name = "CertClldAmt", required = true)
 	public DecimalNumber getCertificateCalledAmount() {
 		return certificateCalledAmount;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.NoSpecifiedReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between different instruction cancellation request statuses.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between different instruction cancellation request statuses."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructionCancellationRequestStatus8Choice", propOrder = {"cancellationCompleted", "accepted", "rejected", "pendingCancellation", "proprietaryStatus"})
 public class InstructionCancellationRequestStatus8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -343,6 +349,7 @@ public class InstructionCancellationRequestStatus8Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlCmpltd", required = true)
 	public CancelledStatus8Choice getCancellationCompleted() {
 		return cancellationCompleted;
 	}
@@ -351,6 +358,7 @@ public class InstructionCancellationRequestStatus8Choice {
 		this.cancellationCompleted = cancellationCompleted;
 	}
 
+	@XmlElement(name = "Accptd", required = true)
 	public NoSpecifiedReason1 getAccepted() {
 		return accepted;
 	}
@@ -359,6 +367,7 @@ public class InstructionCancellationRequestStatus8Choice {
 		this.accepted = accepted;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectedStatus15Choice getRejected() {
 		return rejected;
 	}
@@ -367,6 +376,7 @@ public class InstructionCancellationRequestStatus8Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "PdgCxl", required = true)
 	public PendingCancellationStatus4Choice getPendingCancellation() {
 		return pendingCancellation;
 	}
@@ -375,6 +385,7 @@ public class InstructionCancellationRequestStatus8Choice {
 		this.pendingCancellation = pendingCancellation;
 	}
 
+	@XmlElement(name = "PrtrySts", required = true)
 	public ProprietaryStatusAndReason2 getProprietaryStatus() {
 		return proprietaryStatus;
 	}

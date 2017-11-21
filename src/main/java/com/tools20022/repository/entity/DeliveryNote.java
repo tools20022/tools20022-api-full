@@ -35,6 +35,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -45,8 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradeDelivery2.mmDeliveryNote}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -75,6 +75,11 @@ public class DeliveryNote extends Document {
 				definition = "Document which is a proof of delivery of the product.";
 				derivationElement_lazy = () -> Arrays.asList(TradeDelivery1.mmDeliveryNote, TradeDelivery2.mmDeliveryNote);
 				superType_lazy = () -> Document.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DeliveryNote.class;
 			}
 		});
 		return mmObject_lazy.get();

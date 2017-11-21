@@ -34,6 +34,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.InvoicePartyRole
+ * InvoicePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -66,9 +69,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * StructuredRemittanceInformation13.mmInvoicee}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.InvoicePartyRole
- * InvoicePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -100,6 +100,11 @@ public class InvoiceeRole extends InvoicePartyRole {
 						StructuredRemittanceInformation8.mmInvoicee, StructuredRemittanceInformation2.mmInvoicee, TradeSettlement1.mmInvoicee, StructuredRemittanceInformation10.mmInvoicee, StructuredRemittanceInformation12.mmInvoicee,
 						StructuredRemittanceInformation13.mmInvoicee);
 				superType_lazy = () -> InvoicePartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvoiceeRole.class;
 			}
 		});
 		return mmObject_lazy.get();

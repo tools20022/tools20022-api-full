@@ -29,17 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType1Code
- * ATMMediaType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType3Code
- * ATMMediaType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType2Code
- * ATMMediaType2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmCards
@@ -75,6 +64,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmUnrecognised
  * ATMMediaTypeCode.mmUnrecognised}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType1Code
+ * ATMMediaType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType3Code
+ * ATMMediaType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType2Code
+ * ATMMediaType2Code}</li>
  * </ul>
  * </li>
  * <li>

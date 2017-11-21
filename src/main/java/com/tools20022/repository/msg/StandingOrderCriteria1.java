@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria which are used to search for a standing order and to
@@ -65,6 +69,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingOrderCriteria1", propOrder = {"newQueryName", "searchCriteria", "returnCriteria"})
 public class StandingOrderCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -210,6 +216,7 @@ public class StandingOrderCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NewQryNm")
 	public Max35Text getNewQueryName() {
 		return newQueryName;
 	}
@@ -218,6 +225,7 @@ public class StandingOrderCriteria1 {
 		this.newQueryName = newQueryName;
 	}
 
+	@XmlElement(name = "SchCrit")
 	public List<StandingOrderSearchCriteria1> getSearchCriteria() {
 		return searchCriteria;
 	}
@@ -226,6 +234,7 @@ public class StandingOrderCriteria1 {
 		this.searchCriteria = searchCriteria;
 	}
 
+	@XmlElement(name = "RtrCrit")
 	public StandingOrderReturnCriteria1 getReturnCriteria() {
 		return returnCriteria;
 	}

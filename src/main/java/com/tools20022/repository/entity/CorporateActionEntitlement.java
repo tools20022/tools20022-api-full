@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.InstructedOrQuantityToReceive2Choice;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,6 +39,43 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmEligibleBalance
+ * CorporateActionEntitlement.mmEligibleBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmSecuritiesBalance
+ * CorporateActionEntitlement.mmSecuritiesBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmInstructedBalance
+ * CorporateActionEntitlement.mmInstructedBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmUninstructedBalance
+ * CorporateActionEntitlement.mmUninstructedBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmEligibleBalanceIndicator
+ * CorporateActionEntitlement.mmEligibleBalanceIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmRelatedServicing
+ * CorporateActionEntitlement.mmRelatedServicing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmNotEligibleBalance
+ * CorporateActionEntitlement.mmNotEligibleBalance}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement
+ * CorporateActionCashEntitlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement
+ * CorporateActionSecuritiesEntitlement}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -167,43 +205,6 @@ import java.util.List;
  * EntitlementAdvice1.mmAccountAndDistributionDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement
- * CorporateActionCashEntitlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement
- * CorporateActionSecuritiesEntitlement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmEligibleBalance
- * CorporateActionEntitlement.mmEligibleBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmSecuritiesBalance
- * CorporateActionEntitlement.mmSecuritiesBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmInstructedBalance
- * CorporateActionEntitlement.mmInstructedBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmUninstructedBalance
- * CorporateActionEntitlement.mmUninstructedBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmEligibleBalanceIndicator
- * CorporateActionEntitlement.mmEligibleBalanceIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmRelatedServicing
- * CorporateActionEntitlement.mmRelatedServicing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmNotEligibleBalance
- * CorporateActionEntitlement.mmNotEligibleBalance}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -243,11 +244,6 @@ public class CorporateActionEntitlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesBalance
 	 * SecuritiesBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
-	 * CorporateActionEntitlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -383,6 +379,11 @@ public class CorporateActionEntitlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
+	 * CorporateActionEntitlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -410,7 +411,7 @@ public class CorporateActionEntitlement {
 					CorporateActionBalanceDetails31.mmTotalEligibleBalance, CorporateActionBalanceDetails30.mmTotalEligibleBalance, CorporateActionBalanceDetails29.mmTotalEligibleBalance, CorporateActionOption121.mmTotalEligibleBalance,
 					CorporateActionBalanceDetails33.mmTotalEligibleBalance, CorporateActionBalanceDetails35.mmTotalEligibleBalance, CorporateActionBalanceDetails34.mmTotalEligibleBalance,
 					CorporateActionBalanceDetails36.mmTotalEligibleBalance);
-			elementContext_lazy = () -> CorporateActionEntitlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EligibleBalance";
@@ -439,11 +440,6 @@ public class CorporateActionEntitlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesBalance
 	 * SecuritiesBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
-	 * CorporateActionEntitlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1896,6 +1892,11 @@ public class CorporateActionEntitlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
+	 * CorporateActionEntitlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2047,7 +2048,7 @@ public class CorporateActionEntitlement {
 					CorporateActionBalanceDetails36.mmOutForRegistrationBalance, CorporateActionBalanceDetails36.mmSettlementPositionBalance, CorporateActionBalanceDetails36.mmStreetPositionBalance,
 					CorporateActionBalanceDetails36.mmTradeDatePositionBalance, CorporateActionBalanceDetails36.mmInTransshipmentBalance, CorporateActionBalanceDetails36.mmRegisteredBalance,
 					CorporateActionBalanceDetails36.mmObligatedBalance, CorporateActionBalanceDetails36.mmAffectedBalance, CorporateActionBalanceDetails36.mmUnaffectedBalance);
-			elementContext_lazy = () -> CorporateActionEntitlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesBalance";
@@ -2076,11 +2077,6 @@ public class CorporateActionEntitlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesBalance
 	 * SecuritiesBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
-	 * CorporateActionEntitlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2264,6 +2260,11 @@ public class CorporateActionEntitlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
+	 * CorporateActionEntitlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2292,7 +2293,7 @@ public class CorporateActionEntitlement {
 					SecuritiesOption52.mmInstructedQuantity, CorporateActionBalanceDetails30.mmTotalInstructedBalanceDetails, CorporateActionBalanceDetails29.mmInstructedBalance, InstructedBalanceDetails5.mmTotalInstructedBalance,
 					CorporateActionOption121.mmInstructedBalance, FinancialInstrumentAttributes73.mmInstructedBalance, InstructedCorporateActionOption7.mmInstructedBalance, CorporateActionBalanceDetails33.mmTotalInstructedBalanceDetails,
 					InstructedBalanceDetails6.mmTotalInstructedBalance, SecuritiesOption54.mmInstructedQuantity, CorporateActionBalanceDetails36.mmInstructedBalance, CorporateActionOption128.mmInstructedQuantity);
-			elementContext_lazy = () -> CorporateActionEntitlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstructedBalance";
@@ -2321,11 +2322,6 @@ public class CorporateActionEntitlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesBalance
 	 * SecuritiesBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
-	 * CorporateActionEntitlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2437,6 +2433,11 @@ public class CorporateActionEntitlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
+	 * CorporateActionEntitlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2458,7 +2459,7 @@ public class CorporateActionEntitlement {
 					CorporateActionOption8.mmUninstructedBalance, CorporateActionBalanceDetails21.mmUninstructedBalance, CorporateActionBalanceDetails25.mmUninstructedBalance, CorporateActionOption116.mmUninstructedBalance,
 					FinancialInstrumentAttributes68.mmUninstructedBalance, CorporateActionBalanceDetails30.mmUninstructedBalance, CorporateActionBalanceDetails29.mmUninstructedBalance, CorporateActionOption121.mmUninstructedBalance,
 					FinancialInstrumentAttributes73.mmUninstructedBalance, CorporateActionBalanceDetails33.mmUninstructedBalance, CorporateActionBalanceDetails36.mmUninstructedBalance);
-			elementContext_lazy = () -> CorporateActionEntitlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UninstructedBalance";
@@ -2482,11 +2483,6 @@ public class CorporateActionEntitlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
-	 * CorporateActionEntitlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2508,6 +2504,11 @@ public class CorporateActionEntitlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
+	 * CorporateActionEntitlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2524,7 +2525,7 @@ public class CorporateActionEntitlement {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionNotification2.mmEligibleBalanceIndicator, CorporateActionNotification3.mmEligibleBalanceIndicator, CorporateActionNotification4.mmEligibleBalanceIndicator,
 					CorporateActionNotification5.mmEligibleBalanceIndicator, CorporateActionNotification6.mmEligibleBalanceIndicator);
-			elementContext_lazy = () -> CorporateActionEntitlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EligibleBalanceIndicator";
@@ -2532,6 +2533,14 @@ public class CorporateActionEntitlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionEntitlement.class.getMethod("getEligibleBalanceIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionServicing relatedServicing;
@@ -2574,7 +2583,7 @@ public class CorporateActionEntitlement {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedServicing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionEntitlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedServicing";
@@ -2625,7 +2634,7 @@ public class CorporateActionEntitlement {
 	 */
 	public static final MMBusinessAssociationEnd mmNotEligibleBalance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionEntitlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotEligibleBalance";
@@ -2649,8 +2658,10 @@ public class CorporateActionEntitlement {
 						com.tools20022.repository.entity.SecuritiesBalance.mmNotEligibleBalanceRelatedEntitlement, com.tools20022.repository.entity.CorporateActionServicing.mmCorporateActionEntitlement);
 				derivationElement_lazy = () -> Arrays.asList(EntitlementAdvice1.mmAccountAndDistributionDetails);
 				subType_lazy = () -> Arrays.asList(CorporateActionCashEntitlement.mmObject(), CorporateActionSecuritiesEntitlement.mmObject());
-				element_lazy = () -> Arrays.asList(CorporateActionEntitlement.mmEligibleBalance, CorporateActionEntitlement.mmSecuritiesBalance, CorporateActionEntitlement.mmInstructedBalance,
-						CorporateActionEntitlement.mmUninstructedBalance, CorporateActionEntitlement.mmEligibleBalanceIndicator, CorporateActionEntitlement.mmRelatedServicing, CorporateActionEntitlement.mmNotEligibleBalance);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionEntitlement.mmEligibleBalance, com.tools20022.repository.entity.CorporateActionEntitlement.mmSecuritiesBalance,
+						com.tools20022.repository.entity.CorporateActionEntitlement.mmInstructedBalance, com.tools20022.repository.entity.CorporateActionEntitlement.mmUninstructedBalance,
+						com.tools20022.repository.entity.CorporateActionEntitlement.mmEligibleBalanceIndicator, com.tools20022.repository.entity.CorporateActionEntitlement.mmRelatedServicing,
+						com.tools20022.repository.entity.CorporateActionEntitlement.mmNotEligibleBalance);
 				derivationComponent_lazy = () -> Arrays.asList(CorporateActionBalanceDetails3.mmObject(), CorporateActionBalanceDetails5.mmObject(), CorporateActionBalanceDetails12.mmObject(), CorporateActionBalanceDetails15.mmObject(),
 						CorporateActionBalanceDetails4.mmObject(), CorporateActionBalanceDetails8.mmObject(), CorporateActionBalanceDetails9.mmObject(), CorporateActionBalanceDetails16.mmObject(), CorporateActionBalanceDetails2.mmObject(),
 						CorporateActionBalanceDetails6.mmObject(), CorporateActionBalanceDetails11.mmObject(), CorporateActionBalanceDetails14.mmObject(), CorporateActionBalanceDetails18.mmObject(),
@@ -2659,6 +2670,11 @@ public class CorporateActionEntitlement {
 						CorporateActionBalanceDetails21.mmObject(), CorporateActionBalanceDetails22.mmObject(), CorporateActionBalanceDetails25.mmObject(), CorporateActionBalanceDetails28.mmObject(),
 						CorporateActionBalanceDetails32.mmObject(), CorporateActionBalanceDetails31.mmObject(), CorporateActionBalanceDetails30.mmObject(), CorporateActionBalanceDetails29.mmObject(),
 						CorporateActionBalanceDetails33.mmObject(), CorporateActionBalanceDetails35.mmObject(), CorporateActionBalanceDetails34.mmObject(), CorporateActionBalanceDetails36.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionEntitlement.class;
 			}
 		});
 		return mmObject_lazy.get();

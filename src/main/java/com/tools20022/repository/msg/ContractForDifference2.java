@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transparency calculation specific details on a contract for difference,
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContractForDifference2", propOrder = {"underlyingType", "notionalCurrency1", "notionalCurrency2"})
 public class ContractForDifference2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -217,6 +223,7 @@ public class ContractForDifference2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UndrlygTp", required = true)
 	public UnderlyingContractForDifferenceType3Code getUnderlyingType() {
 		return underlyingType;
 	}
@@ -225,6 +232,7 @@ public class ContractForDifference2 {
 		this.underlyingType = underlyingType;
 	}
 
+	@XmlElement(name = "NtnlCcy1")
 	public ActiveOrHistoricCurrencyCode getNotionalCurrency1() {
 		return notionalCurrency1;
 	}
@@ -233,6 +241,7 @@ public class ContractForDifference2 {
 		this.notionalCurrency1 = notionalCurrency1;
 	}
 
+	@XmlElement(name = "NtnlCcy2")
 	public ActiveOrHistoricCurrencyCode getNotionalCurrency2() {
 		return notionalCurrency2;
 	}

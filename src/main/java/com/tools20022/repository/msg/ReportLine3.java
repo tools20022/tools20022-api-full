@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a payment against a purchase order.
@@ -72,6 +76,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportLine3", propOrder = {"purchaseOrderReference", "adjustment", "netAmount"})
 public class ReportLine3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -257,6 +263,7 @@ public class ReportLine3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PurchsOrdrRef", required = true)
 	public DocumentIdentification7 getPurchaseOrderReference() {
 		return purchaseOrderReference;
 	}
@@ -265,6 +272,7 @@ public class ReportLine3 {
 		this.purchaseOrderReference = purchaseOrderReference;
 	}
 
+	@XmlElement(name = "Adjstmnt")
 	public List<Adjustment4> getAdjustment() {
 		return adjustment;
 	}
@@ -273,6 +281,7 @@ public class ReportLine3 {
 		this.adjustment = adjustment;
 	}
 
+	@XmlElement(name = "NetAmt", required = true)
 	public CurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}

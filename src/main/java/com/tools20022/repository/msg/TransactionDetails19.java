@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the details of the transaction.
@@ -71,6 +75,8 @@ import java.util.function.Supplier;
  * definition} = "Identifies the details of the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionDetails19", propOrder = {"reference", "accountOwner", "safekeepingAccount"})
 public class TransactionDetails19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -234,6 +240,7 @@ public class TransactionDetails19 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ref", required = true)
 	public References9Choice getReference() {
 		return reference;
 	}
@@ -242,6 +249,7 @@ public class TransactionDetails19 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification18Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -250,6 +258,7 @@ public class TransactionDetails19 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount17 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}

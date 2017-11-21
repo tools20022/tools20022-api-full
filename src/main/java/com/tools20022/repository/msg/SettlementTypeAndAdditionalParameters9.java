@@ -35,6 +35,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides transaction type and identification information.
@@ -123,6 +127,9 @@ import java.util.function.Supplier;
  * SettlementTypeAndAdditionalParameters1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementTypeAndAdditionalParameters9", propOrder = {"securitiesMovementType", "payment", "commonIdentification", "corporateActionEventIdentification", "reconciliationIndicator",
+		"clientCollateralInstructionIdentification", "clientCollateralTransactionIdentification", "tripartyAgentCollateralTransactionIdentification", "tripartyCollateralInstructionIdentification"})
 public class SettlementTypeAndAdditionalParameters9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -661,6 +668,7 @@ public class SettlementTypeAndAdditionalParameters9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesMvmntTp", required = true)
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
@@ -669,6 +677,7 @@ public class SettlementTypeAndAdditionalParameters9 {
 		this.securitiesMovementType = securitiesMovementType;
 	}
 
+	@XmlElement(name = "Pmt", required = true)
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
@@ -677,6 +686,7 @@ public class SettlementTypeAndAdditionalParameters9 {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "CmonId")
 	public Max35Text getCommonIdentification() {
 		return commonIdentification;
 	}
@@ -685,6 +695,7 @@ public class SettlementTypeAndAdditionalParameters9 {
 		this.commonIdentification = commonIdentification;
 	}
 
+	@XmlElement(name = "CorpActnEvtId")
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -693,6 +704,7 @@ public class SettlementTypeAndAdditionalParameters9 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "RcncltnInd")
 	public YesNoIndicator getReconciliationIndicator() {
 		return reconciliationIndicator;
 	}
@@ -701,6 +713,7 @@ public class SettlementTypeAndAdditionalParameters9 {
 		this.reconciliationIndicator = reconciliationIndicator;
 	}
 
+	@XmlElement(name = "ClntCollInstrId")
 	public Max35Text getClientCollateralInstructionIdentification() {
 		return clientCollateralInstructionIdentification;
 	}
@@ -709,6 +722,7 @@ public class SettlementTypeAndAdditionalParameters9 {
 		this.clientCollateralInstructionIdentification = clientCollateralInstructionIdentification;
 	}
 
+	@XmlElement(name = "ClntCollTxId")
 	public Max35Text getClientCollateralTransactionIdentification() {
 		return clientCollateralTransactionIdentification;
 	}
@@ -717,6 +731,7 @@ public class SettlementTypeAndAdditionalParameters9 {
 		this.clientCollateralTransactionIdentification = clientCollateralTransactionIdentification;
 	}
 
+	@XmlElement(name = "TrptyAgtCollTxId")
 	public Max35Text getTripartyAgentCollateralTransactionIdentification() {
 		return tripartyAgentCollateralTransactionIdentification;
 	}
@@ -725,6 +740,7 @@ public class SettlementTypeAndAdditionalParameters9 {
 		this.tripartyAgentCollateralTransactionIdentification = tripartyAgentCollateralTransactionIdentification;
 	}
 
+	@XmlElement(name = "TrptyCollInstrId")
 	public Max35Text getTripartyCollateralInstructionIdentification() {
 		return tripartyCollateralInstructionIdentification;
 	}

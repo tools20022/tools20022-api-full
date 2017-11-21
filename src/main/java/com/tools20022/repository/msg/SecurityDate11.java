@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies security date details.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecurityDate6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityDate11", propOrder = {"postingDate", "availableDate", "pariPassuDate", "dividendRankingDate", "earliestPaymentDate", "paymentDate"})
 public class SecurityDate11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -419,6 +425,7 @@ public class SecurityDate11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PstngDt", required = true)
 	public DateAndDateTimeChoice getPostingDate() {
 		return postingDate;
 	}
@@ -427,6 +434,7 @@ public class SecurityDate11 {
 		this.postingDate = postingDate;
 	}
 
+	@XmlElement(name = "AvlblDt")
 	public DateFormat31Choice getAvailableDate() {
 		return availableDate;
 	}
@@ -435,6 +443,7 @@ public class SecurityDate11 {
 		this.availableDate = availableDate;
 	}
 
+	@XmlElement(name = "PrpssDt")
 	public DateFormat31Choice getPariPassuDate() {
 		return pariPassuDate;
 	}
@@ -443,6 +452,7 @@ public class SecurityDate11 {
 		this.pariPassuDate = pariPassuDate;
 	}
 
+	@XmlElement(name = "DvddRnkgDt")
 	public DateFormat31Choice getDividendRankingDate() {
 		return dividendRankingDate;
 	}
@@ -451,6 +461,7 @@ public class SecurityDate11 {
 		this.dividendRankingDate = dividendRankingDate;
 	}
 
+	@XmlElement(name = "EarlstPmtDt")
 	public DateFormat31Choice getEarliestPaymentDate() {
 		return earliestPaymentDate;
 	}
@@ -459,6 +470,7 @@ public class SecurityDate11 {
 		this.earliestPaymentDate = earliestPaymentDate;
 	}
 
+	@XmlElement(name = "PmtDt")
 	public DateFormat31Choice getPaymentDate() {
 		return paymentDate;
 	}

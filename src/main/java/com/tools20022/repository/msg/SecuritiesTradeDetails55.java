@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the securities trade.
@@ -116,6 +120,9 @@ import java.util.List;
  * SecuritiesTradeDetails38}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTradeDetails55", propOrder = {"placeOfTrade", "placeOfClearing", "tradeDate", "settlementDate", "effectiveSettlementDate", "dealPrice", "reporting", "numberOfDaysAccrued", "tradeTransactionCondition",
+		"investorCapacity", "tradeOriginatorRole", "settlementInstructionProcessingAdditionalDetails", "FXAdditionalDetails"})
 public class SecuritiesTradeDetails55 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -850,6 +857,7 @@ public class SecuritiesTradeDetails55 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public PlaceOfTradeIdentification1 getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -858,6 +866,7 @@ public class SecuritiesTradeDetails55 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "PlcOfClr")
 	public PlaceOfClearingIdentification1 getPlaceOfClearing() {
 		return placeOfClearing;
 	}
@@ -866,6 +875,7 @@ public class SecuritiesTradeDetails55 {
 		this.placeOfClearing = placeOfClearing;
 	}
 
+	@XmlElement(name = "TradDt")
 	public TradeDate5Choice getTradeDate() {
 		return tradeDate;
 	}
@@ -874,6 +884,7 @@ public class SecuritiesTradeDetails55 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "SttlmDt")
 	public SettlementDate9Choice getSettlementDate() {
 		return settlementDate;
 	}
@@ -882,6 +893,7 @@ public class SecuritiesTradeDetails55 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "FctvSttlmDt", required = true)
 	public SettlementDate11Choice getEffectiveSettlementDate() {
 		return effectiveSettlementDate;
 	}
@@ -890,6 +902,7 @@ public class SecuritiesTradeDetails55 {
 		this.effectiveSettlementDate = effectiveSettlementDate;
 	}
 
+	@XmlElement(name = "DealPric")
 	public Price2 getDealPrice() {
 		return dealPrice;
 	}
@@ -898,6 +911,7 @@ public class SecuritiesTradeDetails55 {
 		this.dealPrice = dealPrice;
 	}
 
+	@XmlElement(name = "Rptg")
 	public List<Reporting6Choice> getReporting() {
 		return reporting;
 	}
@@ -906,6 +920,7 @@ public class SecuritiesTradeDetails55 {
 		this.reporting = reporting;
 	}
 
+	@XmlElement(name = "NbOfDaysAcrd")
 	public Max3Number getNumberOfDaysAccrued() {
 		return numberOfDaysAccrued;
 	}
@@ -914,6 +929,7 @@ public class SecuritiesTradeDetails55 {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
 	}
 
+	@XmlElement(name = "TradTxCond")
 	public List<TradeTransactionCondition5Choice> getTradeTransactionCondition() {
 		return tradeTransactionCondition;
 	}
@@ -922,6 +938,7 @@ public class SecuritiesTradeDetails55 {
 		this.tradeTransactionCondition = tradeTransactionCondition;
 	}
 
+	@XmlElement(name = "InvstrCpcty")
 	public InvestorCapacity4Choice getInvestorCapacity() {
 		return investorCapacity;
 	}
@@ -930,6 +947,7 @@ public class SecuritiesTradeDetails55 {
 		this.investorCapacity = investorCapacity;
 	}
 
+	@XmlElement(name = "TradOrgtrRole")
 	public TradeOriginator3Choice getTradeOriginatorRole() {
 		return tradeOriginatorRole;
 	}
@@ -938,6 +956,7 @@ public class SecuritiesTradeDetails55 {
 		this.tradeOriginatorRole = tradeOriginatorRole;
 	}
 
+	@XmlElement(name = "SttlmInstrPrcgAddtlDtls")
 	public Max350Text getSettlementInstructionProcessingAdditionalDetails() {
 		return settlementInstructionProcessingAdditionalDetails;
 	}
@@ -946,6 +965,7 @@ public class SecuritiesTradeDetails55 {
 		this.settlementInstructionProcessingAdditionalDetails = settlementInstructionProcessingAdditionalDetails;
 	}
 
+	@XmlElement(name = "FxAddtlDtls")
 	public Max350Text getFXAdditionalDetails() {
 		return fXAdditionalDetails;
 	}

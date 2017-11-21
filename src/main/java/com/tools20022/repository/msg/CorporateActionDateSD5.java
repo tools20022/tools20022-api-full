@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action date details.
@@ -83,6 +87,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides additional information regarding corporate action date details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionDateSD5", propOrder = {"placeAndName", "DTCLastDayForEarlyRedemption", "DTCPositionCaptureDate", "newYorkCutOffDate", "DTCExtendedCutOffDate", "effectiveDateByExchange", "dateDeclaredWorthless",
+		"deleteWorthlessSecurityDate", "DTCExitDate", "subscriptionBeginDate"})
 public class CorporateActionDateSD5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -544,6 +551,7 @@ public class CorporateActionDateSD5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -552,6 +560,7 @@ public class CorporateActionDateSD5 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "DTCLastDayForEarlyRed")
 	public ISODate getDTCLastDayForEarlyRedemption() {
 		return dTCLastDayForEarlyRedemption;
 	}
@@ -560,6 +569,7 @@ public class CorporateActionDateSD5 {
 		this.dTCLastDayForEarlyRedemption = dTCLastDayForEarlyRedemption;
 	}
 
+	@XmlElement(name = "DTCPosCaptrDt")
 	public ISODate getDTCPositionCaptureDate() {
 		return dTCPositionCaptureDate;
 	}
@@ -568,6 +578,7 @@ public class CorporateActionDateSD5 {
 		this.dTCPositionCaptureDate = dTCPositionCaptureDate;
 	}
 
+	@XmlElement(name = "NewYorkCutOffDt")
 	public ISODate getNewYorkCutOffDate() {
 		return newYorkCutOffDate;
 	}
@@ -576,6 +587,7 @@ public class CorporateActionDateSD5 {
 		this.newYorkCutOffDate = newYorkCutOffDate;
 	}
 
+	@XmlElement(name = "DTCXtndedCutOffDt")
 	public ISODate getDTCExtendedCutOffDate() {
 		return dTCExtendedCutOffDate;
 	}
@@ -584,6 +596,7 @@ public class CorporateActionDateSD5 {
 		this.dTCExtendedCutOffDate = dTCExtendedCutOffDate;
 	}
 
+	@XmlElement(name = "FctvDtByXchg")
 	public ISODate getEffectiveDateByExchange() {
 		return effectiveDateByExchange;
 	}
@@ -592,6 +605,7 @@ public class CorporateActionDateSD5 {
 		this.effectiveDateByExchange = effectiveDateByExchange;
 	}
 
+	@XmlElement(name = "DtDclrdWrthls")
 	public ISODate getDateDeclaredWorthless() {
 		return dateDeclaredWorthless;
 	}
@@ -600,6 +614,7 @@ public class CorporateActionDateSD5 {
 		this.dateDeclaredWorthless = dateDeclaredWorthless;
 	}
 
+	@XmlElement(name = "DelWrthlsSctyDt")
 	public ISODate getDeleteWorthlessSecurityDate() {
 		return deleteWorthlessSecurityDate;
 	}
@@ -608,6 +623,7 @@ public class CorporateActionDateSD5 {
 		this.deleteWorthlessSecurityDate = deleteWorthlessSecurityDate;
 	}
 
+	@XmlElement(name = "DTCExitDt")
 	public ISODate getDTCExitDate() {
 		return dTCExitDate;
 	}
@@ -616,6 +632,7 @@ public class CorporateActionDateSD5 {
 		this.dTCExitDate = dTCExitDate;
 	}
 
+	@XmlElement(name = "SbcptBegnDt")
 	public ISODate getSubscriptionBeginDate() {
 		return subscriptionBeginDate;
 	}

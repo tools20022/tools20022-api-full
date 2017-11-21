@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Name and address of an institution.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Name and address of an institution."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NameAndAddress6", propOrder = {"name", "address"})
 public class NameAndAddress6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class NameAndAddress6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max70Text getName() {
 		return name;
 	}
@@ -189,6 +196,7 @@ public class NameAndAddress6 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Adr", required = true)
 	public PostalAddress2 getAddress() {
 		return address;
 	}

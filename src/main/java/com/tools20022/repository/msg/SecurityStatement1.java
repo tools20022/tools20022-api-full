@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides system date for all of the changes occurred for an entity.
@@ -59,6 +63,8 @@ import java.util.List;
  * "Provides system date for all of the changes occurred for an entity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityStatement1", propOrder = {"systemDate", "change"})
 public class SecurityStatement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class SecurityStatement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysDt", required = true)
 	public ISODate getSystemDate() {
 		return systemDate;
 	}
@@ -169,6 +176,7 @@ public class SecurityStatement1 {
 		this.systemDate = systemDate;
 	}
 
+	@XmlElement(name = "Chng")
 	public List<SecuritiesReferenceDataChange1> getChange() {
 		return change;
 	}

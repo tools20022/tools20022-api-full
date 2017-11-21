@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Reinvestment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reinvestment information.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Reinvestment2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reinvestment3", propOrder = {"financialInstrumentDetails", "requestedNAVCurrency", "reinvestmentPercentage"})
 public class Reinvestment3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -251,6 +257,7 @@ public class Reinvestment3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument56 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -259,6 +266,7 @@ public class Reinvestment3 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "ReqdNAVCcy")
 	public ActiveCurrencyCode getRequestedNAVCurrency() {
 		return requestedNAVCurrency;
 	}
@@ -267,6 +275,7 @@ public class Reinvestment3 {
 		this.requestedNAVCurrency = requestedNAVCurrency;
 	}
 
+	@XmlElement(name = "RinvstmtPctg", required = true)
 	public PercentageRate getReinvestmentPercentage() {
 		return reinvestmentPercentage;
 	}

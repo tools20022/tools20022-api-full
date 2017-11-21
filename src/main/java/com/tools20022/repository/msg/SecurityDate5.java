@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies security date details.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityDate5", propOrder = {"paymentDate", "availableDate", "dividendRankingDate", "earliestPaymentDate", "pariPassuDate"})
 public class SecurityDate5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -335,6 +341,7 @@ public class SecurityDate5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtDt", required = true)
 	public DateFormat19Choice getPaymentDate() {
 		return paymentDate;
 	}
@@ -343,6 +350,7 @@ public class SecurityDate5 {
 		this.paymentDate = paymentDate;
 	}
 
+	@XmlElement(name = "AvlblDt")
 	public DateFormat19Choice getAvailableDate() {
 		return availableDate;
 	}
@@ -351,6 +359,7 @@ public class SecurityDate5 {
 		this.availableDate = availableDate;
 	}
 
+	@XmlElement(name = "DvddRnkgDt")
 	public DateFormat19Choice getDividendRankingDate() {
 		return dividendRankingDate;
 	}
@@ -359,6 +368,7 @@ public class SecurityDate5 {
 		this.dividendRankingDate = dividendRankingDate;
 	}
 
+	@XmlElement(name = "EarlstPmtDt")
 	public DateFormat19Choice getEarliestPaymentDate() {
 		return earliestPaymentDate;
 	}
@@ -367,6 +377,7 @@ public class SecurityDate5 {
 		this.earliestPaymentDate = earliestPaymentDate;
 	}
 
+	@XmlElement(name = "PrpssDt")
 	public DateFormat19Choice getPariPassuDate() {
 		return pariPassuDate;
 	}

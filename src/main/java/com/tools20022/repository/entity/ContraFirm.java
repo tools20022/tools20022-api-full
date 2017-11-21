@@ -64,6 +64,11 @@ public class ContraFirm extends SecuritiesTradePartyRole {
 				definition = "Party that is the counterparty in a trade.";
 				superType_lazy = () -> SecuritiesTradePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ContraFirm.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

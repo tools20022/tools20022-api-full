@@ -25,6 +25,10 @@ import com.tools20022.repository.msg.CollateralValuePosition1;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Business Report on collateral value or on business error.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Business Report on collateral value or on business error."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralValueReportOrError2Choice", propOrder = {"businessError", "collateralValue"})
 public class CollateralValueReportOrError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class CollateralValueReportOrError2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public ErrorHandling3 getBusinessError() {
 		return businessError;
 	}
@@ -169,6 +176,7 @@ public class CollateralValueReportOrError2Choice {
 		this.businessError = businessError;
 	}
 
+	@XmlElement(name = "CollVal", required = true)
 	public CollateralValuePosition1 getCollateralValue() {
 		return collateralValue;
 	}

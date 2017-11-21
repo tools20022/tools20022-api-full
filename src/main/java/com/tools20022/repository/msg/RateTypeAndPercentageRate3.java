@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the value expressed as a rate type and a percentage rate.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the value expressed as a rate type and a percentage rate."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RateTypeAndPercentageRate3", propOrder = {"rateType", "rate"})
 public class RateTypeAndPercentageRate3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class RateTypeAndPercentageRate3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RateTp", required = true)
 	public RateType30Choice getRateType() {
 		return rateType;
 	}
@@ -183,6 +190,7 @@ public class RateTypeAndPercentageRate3 {
 		this.rateType = rateType;
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}

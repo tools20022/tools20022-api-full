@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.ExchangeForPhysicalTrade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Technique whereby a position in the underlying is traded for a futures
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExchangeForPhysicalTradeParameters1", propOrder = {"outsideIndex", "fairValue", "valueForFutures"})
 public class ExchangeForPhysicalTradeParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -241,6 +247,7 @@ public class ExchangeForPhysicalTradeParameters1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OutsdIndx")
 	public PercentageRate getOutsideIndex() {
 		return outsideIndex;
 	}
@@ -249,6 +256,7 @@ public class ExchangeForPhysicalTradeParameters1 {
 		this.outsideIndex = outsideIndex;
 	}
 
+	@XmlElement(name = "FairVal")
 	public ActiveCurrencyAndAmount getFairValue() {
 		return fairValue;
 	}
@@ -257,6 +265,7 @@ public class ExchangeForPhysicalTradeParameters1 {
 		this.fairValue = fairValue;
 	}
 
+	@XmlElement(name = "ValForFutrs")
 	public ActiveCurrencyAndAmount getValueForFutures() {
 		return valueForFutures;
 	}

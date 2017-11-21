@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the events that occurred for one transaction.
@@ -82,6 +86,8 @@ import java.util.List;
  * ActivityReportItems2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ActivityReportItems3", propOrder = {"transactionIdentification", "userTransactionReference", "reportedEntity", "reportedItem", "pendingRequestForAction"})
 public class ActivityReportItems3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -342,6 +348,7 @@ public class ActivityReportItems3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -350,6 +357,7 @@ public class ActivityReportItems3 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "UsrTxRef")
 	public List<DocumentIdentification5> getUserTransactionReference() {
 		return userTransactionReference;
 	}
@@ -358,6 +366,7 @@ public class ActivityReportItems3 {
 		this.userTransactionReference = userTransactionReference;
 	}
 
+	@XmlElement(name = "RptdNtty", required = true)
 	public List<BICIdentification1> getReportedEntity() {
 		return reportedEntity;
 	}
@@ -366,6 +375,7 @@ public class ActivityReportItems3 {
 		this.reportedEntity = reportedEntity;
 	}
 
+	@XmlElement(name = "RptdItm", required = true)
 	public List<ActivityDetails1> getReportedItem() {
 		return reportedItem;
 	}
@@ -374,6 +384,7 @@ public class ActivityReportItems3 {
 		this.reportedItem = reportedItem;
 	}
 
+	@XmlElement(name = "PdgReqForActn")
 	public List<PendingActivity2> getPendingRequestForAction() {
 		return pendingRequestForAction;
 	}

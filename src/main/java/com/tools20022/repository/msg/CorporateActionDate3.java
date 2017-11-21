@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies coprorate action dates.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies coprorate action dates."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionDate3", propOrder = {"paymentDate", "availableDate", "dividendRankingDate", "pariPassuDate", "firstDealingDate", "earliestPaymentDate"})
 public class CorporateActionDate3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -390,6 +396,7 @@ public class CorporateActionDate3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtDt")
 	public DateFormat4Choice getPaymentDate() {
 		return paymentDate;
 	}
@@ -398,6 +405,7 @@ public class CorporateActionDate3 {
 		this.paymentDate = paymentDate;
 	}
 
+	@XmlElement(name = "AvlblDt")
 	public DateFormat4Choice getAvailableDate() {
 		return availableDate;
 	}
@@ -406,6 +414,7 @@ public class CorporateActionDate3 {
 		this.availableDate = availableDate;
 	}
 
+	@XmlElement(name = "DvddRnkgDt")
 	public DateFormat4Choice getDividendRankingDate() {
 		return dividendRankingDate;
 	}
@@ -414,6 +423,7 @@ public class CorporateActionDate3 {
 		this.dividendRankingDate = dividendRankingDate;
 	}
 
+	@XmlElement(name = "PrpssDt")
 	public DateFormat4Choice getPariPassuDate() {
 		return pariPassuDate;
 	}
@@ -422,6 +432,7 @@ public class CorporateActionDate3 {
 		this.pariPassuDate = pariPassuDate;
 	}
 
+	@XmlElement(name = "FrstDealgDt")
 	public DateFormat4Choice getFirstDealingDate() {
 		return firstDealingDate;
 	}
@@ -430,6 +441,7 @@ public class CorporateActionDate3 {
 		this.firstDealingDate = firstDealingDate;
 	}
 
+	@XmlElement(name = "EarlstPmtDt")
 	public DateFormat4Choice getEarliestPaymentDate() {
 		return earliestPaymentDate;
 	}

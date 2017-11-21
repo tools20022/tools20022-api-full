@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PartyAndCertificate2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies a choice between one party or a group of parties.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies a choice between one party or a group of parties."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyOrGroup1Choice", propOrder = {"groupIdentification", "party"})
 public class PartyOrGroup1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class PartyOrGroup1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpId", required = true)
 	public Max4AlphaNumericText getGroupIdentification() {
 		return groupIdentification;
 	}
@@ -166,6 +173,7 @@ public class PartyOrGroup1Choice {
 		this.groupIdentification = groupIdentification;
 	}
 
+	@XmlElement(name = "Pty", required = true)
 	public PartyAndCertificate2 getParty() {
 		return party;
 	}

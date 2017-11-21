@@ -54,6 +54,8 @@ public class Max6Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max6Text";
 				definition = "Specifies a character string with a maximum length of 6 characters.";
+				minLength = 1;
+				maxLength = 6;
 			}
 		});
 		return mmObject_lazy.get();

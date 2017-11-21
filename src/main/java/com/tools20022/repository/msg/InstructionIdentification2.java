@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies an instruction.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies an instruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructionIdentification2", propOrder = {"instructionIdentification", "creationDateTime"})
 public class InstructionIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class InstructionIdentification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrId", required = true)
 	public Max35Text getInstructionIdentification() {
 		return instructionIdentification;
 	}
@@ -168,6 +175,7 @@ public class InstructionIdentification2 {
 		this.instructionIdentification = instructionIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm")
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}

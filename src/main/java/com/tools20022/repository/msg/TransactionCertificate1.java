@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Certificate against which all currency control transactions are registered.
@@ -81,6 +85,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionCertificate1", propOrder = {"transactionIdentification", "certificate", "account", "bankAccountDomiciliationCountry", "amendment", "certificateRecord", "supplementaryData"})
 public class TransactionCertificate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -427,6 +433,7 @@ public class TransactionCertificate1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -435,6 +442,7 @@ public class TransactionCertificate1 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "Cert", required = true)
 	public DocumentIdentification28 getCertificate() {
 		return certificate;
 	}
@@ -443,6 +451,7 @@ public class TransactionCertificate1 {
 		this.certificate = certificate;
 	}
 
+	@XmlElement(name = "Acct")
 	public CashAccount24 getAccount() {
 		return account;
 	}
@@ -451,6 +460,7 @@ public class TransactionCertificate1 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "BkAcctDmcltnCtry")
 	public CountryCode getBankAccountDomiciliationCountry() {
 		return bankAccountDomiciliationCountry;
 	}
@@ -459,6 +469,7 @@ public class TransactionCertificate1 {
 		this.bankAccountDomiciliationCountry = bankAccountDomiciliationCountry;
 	}
 
+	@XmlElement(name = "Amdmnt")
 	public DocumentAmendment1 getAmendment() {
 		return amendment;
 	}
@@ -467,6 +478,7 @@ public class TransactionCertificate1 {
 		this.amendment = amendment;
 	}
 
+	@XmlElement(name = "CertRcrd", required = true)
 	public List<TransactionCertificateRecord1> getCertificateRecord() {
 		return certificateRecord;
 	}
@@ -475,6 +487,7 @@ public class TransactionCertificate1 {
 		this.certificateRecord = certificateRecord;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

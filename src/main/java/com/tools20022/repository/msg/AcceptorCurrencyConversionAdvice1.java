@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the currency conversion advice
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information related to the currency conversion advice"</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorCurrencyConversionAdvice1", propOrder = {"environment", "transaction", "currencyConversionResult"})
 public class AcceptorCurrencyConversionAdvice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -240,6 +246,7 @@ public class AcceptorCurrencyConversionAdvice1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment65 getEnvironment() {
 		return environment;
 	}
@@ -248,6 +255,7 @@ public class AcceptorCurrencyConversionAdvice1 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransaction77 getTransaction() {
 		return transaction;
 	}
@@ -256,6 +264,7 @@ public class AcceptorCurrencyConversionAdvice1 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "CcyConvsRslt")
 	public CurrencyConversion13 getCurrencyConversionResult() {
 		return currencyConversionResult;
 	}

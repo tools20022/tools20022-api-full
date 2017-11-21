@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between an indicator or a proprietary code to specify whether the
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TemporaryFinancialInstrumentIndicator1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TemporaryFinancialInstrumentIndicator3Choice", propOrder = {"temporaryIndicator", "proprietary"})
 public class TemporaryFinancialInstrumentIndicator3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -201,6 +207,7 @@ public class TemporaryFinancialInstrumentIndicator3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TempInd", required = true)
 	public YesNoIndicator getTemporaryIndicator() {
 		return temporaryIndicator;
 	}
@@ -209,6 +216,7 @@ public class TemporaryFinancialInstrumentIndicator3Choice {
 		this.temporaryIndicator = temporaryIndicator;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification30 getProprietary() {
 		return proprietary;
 	}

@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Generic identification scheme for a document.
@@ -63,6 +67,8 @@ import java.util.function.Supplier;
  * definition} = "Generic identification scheme for a document."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericDocumentIdentification2", propOrder = {"messageNumber", "identification"})
 public class GenericDocumentIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -174,6 +180,7 @@ public class GenericDocumentIdentification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgNb")
 	public DocumentNumber2Choice getMessageNumber() {
 		return messageNumber;
 	}
@@ -182,6 +189,7 @@ public class GenericDocumentIdentification2 {
 		this.messageNumber = messageNumber;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public RestrictedFINXMax16Text getIdentification() {
 		return identification;
 	}

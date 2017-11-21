@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria which are used to search for a transaction and to report
@@ -69,6 +73,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionCriteria2", propOrder = {"newQueryName", "searchCriteria", "statementReport", "returnCriteria"})
 public class TransactionCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -254,6 +260,7 @@ public class TransactionCriteria2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NewQryNm")
 	public Max35Text getNewQueryName() {
 		return newQueryName;
 	}
@@ -262,6 +269,7 @@ public class TransactionCriteria2 {
 		this.newQueryName = newQueryName;
 	}
 
+	@XmlElement(name = "SchCrit")
 	public List<TransactionSearchCriteria2> getSearchCriteria() {
 		return searchCriteria;
 	}
@@ -270,6 +278,7 @@ public class TransactionCriteria2 {
 		this.searchCriteria = searchCriteria;
 	}
 
+	@XmlElement(name = "StmtRpt")
 	public ReportIndicator1Code getStatementReport() {
 		return statementReport;
 	}
@@ -278,6 +287,7 @@ public class TransactionCriteria2 {
 		this.statementReport = statementReport;
 	}
 
+	@XmlElement(name = "RtrCrit")
 	public TransactionReturnCriteria2 getReturnCriteria() {
 		return returnCriteria;
 	}

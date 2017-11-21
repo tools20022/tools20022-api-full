@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Change amount and rate.
@@ -55,6 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Change amount and rate."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountAndRate2", propOrder = {"amount", "rate"})
 public class AmountAndRate2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -154,6 +160,7 @@ public class AmountAndRate2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt")
 	public AmountAndDirection30 getAmount() {
 		return amount;
 	}
@@ -162,6 +169,7 @@ public class AmountAndRate2 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}

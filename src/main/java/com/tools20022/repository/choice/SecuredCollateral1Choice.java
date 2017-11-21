@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.CollateralValuation4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the collateral details for the secured markets.
@@ -76,6 +80,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuredCollateral1Choice", propOrder = {"singleCollateral", "multipleCollateral", "poolCollateral", "otherCollateral"})
 public class SecuredCollateral1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -332,6 +338,7 @@ public class SecuredCollateral1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SnglColl", required = true)
 	public CollateralValuation3 getSingleCollateral() {
 		return singleCollateral;
 	}
@@ -340,6 +347,7 @@ public class SecuredCollateral1Choice {
 		this.singleCollateral = singleCollateral;
 	}
 
+	@XmlElement(name = "MltplColl", required = true)
 	public List<CollateralValuation3> getMultipleCollateral() {
 		return multipleCollateral;
 	}
@@ -348,6 +356,7 @@ public class SecuredCollateral1Choice {
 		this.multipleCollateral = multipleCollateral;
 	}
 
+	@XmlElement(name = "PoolColl", required = true)
 	public CollateralValuation3 getPoolCollateral() {
 		return poolCollateral;
 	}
@@ -356,6 +365,7 @@ public class SecuredCollateral1Choice {
 		this.poolCollateral = poolCollateral;
 	}
 
+	@XmlElement(name = "OthrColl", required = true)
 	public List<CollateralValuation4> getOtherCollateral() {
 		return otherCollateral;
 	}

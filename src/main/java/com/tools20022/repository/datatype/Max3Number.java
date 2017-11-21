@@ -61,6 +61,8 @@ public class Max3Number {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max3Number";
 				definition = "Number (max 999) of objects represented as an integer.";
+				totalDigits = 3;
+				fractionDigits = 0;
 			}
 		});
 		return mmObject_lazy.get();

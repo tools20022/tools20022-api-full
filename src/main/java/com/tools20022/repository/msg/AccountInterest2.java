@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide details of the interest that applies to the
@@ -69,6 +73,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountInterest2", propOrder = {"type", "rate", "fromToDate", "reason"})
 public class AccountInterest2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -270,6 +276,7 @@ public class AccountInterest2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public InterestType1Choice getType() {
 		return type;
 	}
@@ -278,6 +285,7 @@ public class AccountInterest2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Rate")
 	public List<Rate3> getRate() {
 		return rate;
 	}
@@ -286,6 +294,7 @@ public class AccountInterest2 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "FrToDt")
 	public DateTimePeriodDetails getFromToDate() {
 		return fromToDate;
 	}
@@ -294,6 +303,7 @@ public class AccountInterest2 {
 		this.fromToDate = fromToDate;
 	}
 
+	@XmlElement(name = "Rsn")
 	public Max35Text getReason() {
 		return reason;
 	}

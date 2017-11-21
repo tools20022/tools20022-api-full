@@ -40,6 +40,26 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Contract#mmMasterAgreement
+ * Contract.mmMasterAgreement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountContract
+ * AccountContract}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.RegisteredContract
+ * RegisteredContract}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Agreement
+ * Agreement}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -77,26 +97,6 @@ import java.util.List;
  * RegisteredContract5.mmContract}</li>
  * <li>{@linkplain com.tools20022.repository.msg.RegisteredContract3#mmContract
  * RegisteredContract3.mmContract}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Agreement
- * Agreement}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AccountContract
- * AccountContract}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RegisteredContract
- * RegisteredContract}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Contract#mmMasterAgreement
- * Contract.mmMasterAgreement}</li>
  * </ul>
  * </li>
  * <li>
@@ -155,7 +155,7 @@ public class Contract extends Agreement {
 	 */
 	public static final MMBusinessAssociationEnd mmMasterAgreement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Contract.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Contract.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MasterAgreement";
@@ -178,8 +178,13 @@ public class Contract extends Agreement {
 				derivationElement_lazy = () -> Arrays.asList(RegisteredContract4.mmContract, TransactionCertificateRecord1.mmContract, RegisteredContract5.mmContract, RegisteredContract3.mmContract);
 				subType_lazy = () -> Arrays.asList(AccountContract.mmObject(), Mandate.mmObject(), RegisteredContract.mmObject());
 				superType_lazy = () -> Agreement.mmObject();
-				element_lazy = () -> Arrays.asList(Contract.mmMasterAgreement);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Contract.mmMasterAgreement);
 				derivationComponent_lazy = () -> Arrays.asList(UnderlyingContract1Choice.mmObject(), TransactionCertificateContract1.mmObject(), TradeContract1.mmObject(), ContractClosureReason1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Contract.class;
 			}
 		});
 		return mmObject_lazy.get();

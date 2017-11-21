@@ -35,6 +35,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[a-zA-Z]{3}[0-9]{1,2}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -63,6 +65,7 @@ public class RateSourceText {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateSourceText";
 				definition = "Specifies a rate source.\r\n\r\nThe values to be used for the settlement rate source are published in Annex A of the 1998 FX and Currency\r\nOption Definitions (the FX definitions, as published by the International Swaps and Derivatives Association,\r\nInc., the Emerging Markets Traders Association and the Foreign Exchange Committee) as amended and\r\nsupplemented from time to time.";
+				pattern = "[a-zA-Z]{3}[0-9]{1,2}";
 			}
 		});
 		return mmObject_lazy.get();

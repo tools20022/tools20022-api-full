@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the repurchase agreement call acknowledgement.
@@ -88,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RepoCallRequestStatus2Choice", propOrder = {"acknowledgedAccepted", "denied", "proprietary"})
 public class RepoCallRequestStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -252,6 +258,7 @@ public class RepoCallRequestStatus2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AckdAccptd", required = true)
 	public AcknowledgedAcceptedStatus2Choice getAcknowledgedAccepted() {
 		return acknowledgedAccepted;
 	}
@@ -260,6 +267,7 @@ public class RepoCallRequestStatus2Choice {
 		this.acknowledgedAccepted = acknowledgedAccepted;
 	}
 
+	@XmlElement(name = "Dnd", required = true)
 	public DeniedStatus1Choice getDenied() {
 		return denied;
 	}
@@ -268,6 +276,7 @@ public class RepoCallRequestStatus2Choice {
 		this.denied = denied;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason1 getProprietary() {
 		return proprietary;
 	}

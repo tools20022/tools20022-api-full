@@ -29,26 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType6Code
- * CorporateActionEventType6Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType8Code
- * CorporateActionEventType8Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code
- * CorporateActionEventType7Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType9Code
- * CorporateActionEventType9Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType2Code
- * CorporateActionEventType2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -278,6 +258,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV3Code#mmCashDistributionFromNonEligibleSecuritiesSales
  * CorporateActionEventTypeV3Code.
  * mmCashDistributionFromNonEligibleSecuritiesSales}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType6Code
+ * CorporateActionEventType6Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType8Code
+ * CorporateActionEventType8Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code
+ * CorporateActionEventType7Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType9Code
+ * CorporateActionEventType9Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType2Code
+ * CorporateActionEventType2Code}</li>
  * </ul>
  * </li>
  * <li>

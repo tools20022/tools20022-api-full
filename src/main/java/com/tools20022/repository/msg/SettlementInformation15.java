@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide information on the settlement of the
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementInformation15", propOrder = {"instructingReimbursementAgent", "instructingReimbursementAgentAccount", "instructedReimbursementAgent", "instructedReimbursementAgentAccount"})
 public class SettlementInformation15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -296,6 +302,7 @@ public class SettlementInformation15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstgRmbrsmntAgt")
 	public BranchAndFinancialInstitutionIdentification4 getInstructingReimbursementAgent() {
 		return instructingReimbursementAgent;
 	}
@@ -304,6 +311,7 @@ public class SettlementInformation15 {
 		this.instructingReimbursementAgent = instructingReimbursementAgent;
 	}
 
+	@XmlElement(name = "InstgRmbrsmntAgtAcct")
 	public CashAccount16 getInstructingReimbursementAgentAccount() {
 		return instructingReimbursementAgentAccount;
 	}
@@ -312,6 +320,7 @@ public class SettlementInformation15 {
 		this.instructingReimbursementAgentAccount = instructingReimbursementAgentAccount;
 	}
 
+	@XmlElement(name = "InstdRmbrsmntAgt")
 	public BranchAndFinancialInstitutionIdentification4 getInstructedReimbursementAgent() {
 		return instructedReimbursementAgent;
 	}
@@ -320,6 +329,7 @@ public class SettlementInformation15 {
 		this.instructedReimbursementAgent = instructedReimbursementAgent;
 	}
 
+	@XmlElement(name = "InstdRmbrsmntAgtAcct")
 	public CashAccount16 getInstructedReimbursementAgentAccount() {
 		return instructedReimbursementAgentAccount;
 	}

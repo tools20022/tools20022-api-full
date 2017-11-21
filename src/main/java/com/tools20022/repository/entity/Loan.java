@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Debt;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +39,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Loan#mmPrincipalAmount
+ * Loan.mmPrincipalAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Loan#mmInterestPaymentsSchedule
+ * Loan.mmInterestPaymentsSchedule}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Loan#mmIntraCompanyLoanIndicator
+ * Loan.mmIntraCompanyLoanIndicator}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Debt Debt}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -66,21 +82,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * UnderlyingContract1Choice.mmLoan}</li>
  * <li>{@linkplain com.tools20022.repository.msg.LoanContract1#mmSyndicatedLoan
  * LoanContract1.mmSyndicatedLoan}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Debt Debt}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Loan#mmPrincipalAmount
- * Loan.mmPrincipalAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Loan#mmInterestPaymentsSchedule
- * Loan.mmInterestPaymentsSchedule}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Loan#mmIntraCompanyLoanIndicator
- * Loan.mmIntraCompanyLoanIndicator}</li>
  * </ul>
  * </li>
  * <li>
@@ -115,10 +116,6 @@ public class Loan extends Debt {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Loan Loan}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -133,6 +130,10 @@ public class Loan extends Debt {
 	 * <li>{@linkplain com.tools20022.repository.msg.LoanContract1#mmAmount
 	 * LoanContract1.mmAmount}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Loan Loan}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -150,7 +151,7 @@ public class Loan extends Debt {
 	public static final MMBusinessAttribute mmPrincipalAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RegisteredContract4.mmLoanPrincipalAmount, RegisteredContract5.mmLoanPrincipalAmount, SyndicatedLoan1.mmAmount, LoanContract1.mmAmount);
-			elementContext_lazy = () -> Loan.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Loan.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PrincipalAmount";
@@ -158,6 +159,14 @@ public class Loan extends Debt {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Loan.class.getMethod("getPrincipalAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PaymentTerms interestPaymentsSchedule;
@@ -178,10 +187,6 @@ public class Loan extends Debt {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentTerms
 	 * PaymentTerms}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Loan Loan}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -189,6 +194,10 @@ public class Loan extends Debt {
 	 * {@linkplain com.tools20022.repository.msg.LoanContract1#mmInterestSchedule
 	 * LoanContract1.mmInterestSchedule}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Loan Loan}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -205,7 +214,7 @@ public class Loan extends Debt {
 	public static final MMBusinessAssociationEnd mmInterestPaymentsSchedule = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(LoanContract1.mmInterestSchedule);
-			elementContext_lazy = () -> Loan.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Loan.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestPaymentsSchedule";
@@ -228,10 +237,6 @@ public class Loan extends Debt {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Loan Loan}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -247,6 +252,10 @@ public class Loan extends Debt {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Loan Loan}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -260,7 +269,7 @@ public class Loan extends Debt {
 	public static final MMBusinessAttribute mmIntraCompanyLoanIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RegisteredContract4.mmInterCompanyLoan, RegisteredContract5.mmInterCompanyLoan, LoanContract1.mmIntraCompanyLoan);
-			elementContext_lazy = () -> Loan.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Loan.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntraCompanyLoanIndicator";
@@ -268,6 +277,14 @@ public class Loan extends Debt {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Loan.class.getMethod("getIntraCompanyLoanIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -281,8 +298,14 @@ public class Loan extends Debt {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentTerms.mmRelatedLoan);
 				derivationElement_lazy = () -> Arrays.asList(UnderlyingContract1Choice.mmLoan, LoanContract1.mmSyndicatedLoan);
 				superType_lazy = () -> Debt.mmObject();
-				element_lazy = () -> Arrays.asList(Loan.mmPrincipalAmount, Loan.mmInterestPaymentsSchedule, Loan.mmIntraCompanyLoanIndicator);
+				element_lazy = () -> Arrays
+						.asList(com.tools20022.repository.entity.Loan.mmPrincipalAmount, com.tools20022.repository.entity.Loan.mmInterestPaymentsSchedule, com.tools20022.repository.entity.Loan.mmIntraCompanyLoanIndicator);
 				derivationComponent_lazy = () -> Arrays.asList(LoanContractTranche1.mmObject(), SyndicatedLoan1.mmObject(), LoanContract1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Loan.class;
 			}
 		});
 		return mmObject_lazy.get();

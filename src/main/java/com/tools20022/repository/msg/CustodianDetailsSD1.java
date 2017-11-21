@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information regarding custodian service record.
@@ -90,6 +94,9 @@ import java.util.List;
  * definition} = "Provides information regarding custodian service record."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustodianDetailsSD1", propOrder = {"placeAndName", "custodianCorporateActionRecordIdentification", "agreeIndicator", "completenessIndicator", "custodianActionIndicator", "GCAActionIndicator", "receivingBIC",
+		"originatingBIC", "compositeNotInSubscriptionFlag", "relatedCustodianMessageDetails"})
 public class CustodianDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -554,6 +561,7 @@ public class CustodianDetailsSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -562,6 +570,7 @@ public class CustodianDetailsSD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "CtdnCorpActnRcrdId", required = true)
 	public Max35Text getCustodianCorporateActionRecordIdentification() {
 		return custodianCorporateActionRecordIdentification;
 	}
@@ -570,6 +579,7 @@ public class CustodianDetailsSD1 {
 		this.custodianCorporateActionRecordIdentification = custodianCorporateActionRecordIdentification;
 	}
 
+	@XmlElement(name = "AgrInd", required = true)
 	public CustodianRecordAgreementType1Code getAgreeIndicator() {
 		return agreeIndicator;
 	}
@@ -578,6 +588,7 @@ public class CustodianDetailsSD1 {
 		this.agreeIndicator = agreeIndicator;
 	}
 
+	@XmlElement(name = "CmpltnsInd", required = true)
 	public CustodianRecordCompletenessType1Code getCompletenessIndicator() {
 		return completenessIndicator;
 	}
@@ -586,6 +597,7 @@ public class CustodianDetailsSD1 {
 		this.completenessIndicator = completenessIndicator;
 	}
 
+	@XmlElement(name = "CtdnActnInd")
 	public CustodianAction1Code getCustodianActionIndicator() {
 		return custodianActionIndicator;
 	}
@@ -594,6 +606,7 @@ public class CustodianDetailsSD1 {
 		this.custodianActionIndicator = custodianActionIndicator;
 	}
 
+	@XmlElement(name = "GCAActnInd")
 	public GCAActionType1Code getGCAActionIndicator() {
 		return gCAActionIndicator;
 	}
@@ -602,6 +615,7 @@ public class CustodianDetailsSD1 {
 		this.gCAActionIndicator = gCAActionIndicator;
 	}
 
+	@XmlElement(name = "RcvgBIC", required = true)
 	public AnyBICIdentifier getReceivingBIC() {
 		return receivingBIC;
 	}
@@ -610,6 +624,7 @@ public class CustodianDetailsSD1 {
 		this.receivingBIC = receivingBIC;
 	}
 
+	@XmlElement(name = "OrgtgBIC", required = true)
 	public AnyBICIdentifier getOriginatingBIC() {
 		return originatingBIC;
 	}
@@ -618,6 +633,7 @@ public class CustodianDetailsSD1 {
 		this.originatingBIC = originatingBIC;
 	}
 
+	@XmlElement(name = "CmpsitNotInSbcptFlg", required = true)
 	public YesNoIndicator getCompositeNotInSubscriptionFlag() {
 		return compositeNotInSubscriptionFlag;
 	}
@@ -626,6 +642,7 @@ public class CustodianDetailsSD1 {
 		this.compositeNotInSubscriptionFlag = compositeNotInSubscriptionFlag;
 	}
 
+	@XmlElement(name = "RltdCtdnMsgDtls")
 	public List<RelatedCustodianMessageDetailsSD1> getRelatedCustodianMessageDetails() {
 		return relatedCustodianMessageDetails;
 	}

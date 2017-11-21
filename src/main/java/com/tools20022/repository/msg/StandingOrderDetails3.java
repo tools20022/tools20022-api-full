@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instruction given by a party that has explicit authority to instruct a debit
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingOrderDetails3", propOrder = {"amount", "creditDebitIndicator", "reference", "frequency", "validityPeriod", "associatedPoolAccount"})
 public class StandingOrderDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -403,6 +409,7 @@ public class StandingOrderDetails3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public AmountChoice getAmount() {
 		return amount;
 	}
@@ -411,6 +418,7 @@ public class StandingOrderDetails3 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -419,6 +427,7 @@ public class StandingOrderDetails3 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Ref")
 	public Max35Text getReference() {
 		return reference;
 	}
@@ -427,6 +436,7 @@ public class StandingOrderDetails3 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "Frqcy")
 	public Frequency2Code getFrequency() {
 		return frequency;
 	}
@@ -435,6 +445,7 @@ public class StandingOrderDetails3 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "VldtyPrd")
 	public DatePeriodDetails1 getValidityPeriod() {
 		return validityPeriod;
 	}
@@ -443,6 +454,7 @@ public class StandingOrderDetails3 {
 		this.validityPeriod = validityPeriod;
 	}
 
+	@XmlElement(name = "AssoctdPoolAcct")
 	public AccountIdentification1Choice getAssociatedPoolAccount() {
 		return associatedPoolAccount;
 	}

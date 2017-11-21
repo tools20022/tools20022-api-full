@@ -36,6 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PlaceOfSettlement#mmSettlementMarket
+ * PlaceOfSettlement.mmSettlementMarket}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole
+ * SecuritiesSettlementPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -52,18 +64,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CommodityDerivate6#mmSettlementLocation
  * CommodityDerivate6.mmSettlementLocation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole
- * SecuritiesSettlementPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PlaceOfSettlement#mmSettlementMarket
- * PlaceOfSettlement.mmSettlementMarket}</li>
  * </ul>
  * </li>
  * <li>
@@ -120,7 +120,7 @@ public class PlaceOfSettlement extends SecuritiesSettlementPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmSettlementMarket = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PlaceOfSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PlaceOfSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMarket";
@@ -143,7 +143,12 @@ public class PlaceOfSettlement extends SecuritiesSettlementPartyRole {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradingMarket.mmRelatedPlaceOfSettlement);
 				derivationElement_lazy = () -> Arrays.asList(CommodityDerivate6.mmSettlementLocation);
 				superType_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(PlaceOfSettlement.mmSettlementMarket);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PlaceOfSettlement.mmSettlementMarket);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PlaceOfSettlement.class;
 			}
 		});
 		return mmObject_lazy.get();

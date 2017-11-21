@@ -36,6 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for an account.
@@ -85,6 +89,8 @@ import java.util.List;
  * definition} = "Defines the criteria used to search for an account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccountSearchCriteria3", propOrder = {"accountIdentification", "type", "currency", "balance", "accountOwner", "accountServicer"})
 public class CashAccountSearchCriteria3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -400,6 +406,7 @@ public class CashAccountSearchCriteria3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId")
 	public List<AccountIdentificationSearchCriteriaChoice> getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -408,6 +415,7 @@ public class CashAccountSearchCriteria3 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "Tp")
 	public List<CashAccountType2Code> getType() {
 		return type;
 	}
@@ -416,6 +424,7 @@ public class CashAccountSearchCriteria3 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Ccy")
 	public List<CurrencyCode> getCurrency() {
 		return currency;
 	}
@@ -424,6 +433,7 @@ public class CashAccountSearchCriteria3 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Bal")
 	public List<BalanceDetails3> getBalance() {
 		return balance;
 	}
@@ -432,6 +442,7 @@ public class CashAccountSearchCriteria3 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public AnyBICIdentifier getAccountOwner() {
 		return accountOwner;
 	}
@@ -440,6 +451,7 @@ public class CashAccountSearchCriteria3 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public BICIdentifier getAccountServicer() {
 		return accountServicer;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV02;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the acknowledgement of an ATM reconciliation from the
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMReconciliationAcknowledgement2", propOrder = {"ATM", "transaction"})
 public class ATMReconciliationAcknowledgement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -170,6 +176,7 @@ public class ATMReconciliationAcknowledgement2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ATM", required = true)
 	public AutomatedTellerMachine3 getATM() {
 		return aTM;
 	}
@@ -178,6 +185,7 @@ public class ATMReconciliationAcknowledgement2 {
 		this.aTM = aTM;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public ATMTransaction26 getTransaction() {
 		return transaction;
 	}

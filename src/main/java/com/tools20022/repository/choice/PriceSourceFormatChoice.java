@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.GenericIdentification5;
 import com.tools20022.repository.msg.PriceSource;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of the source (place) of the price quotation
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of the source (place) of the price quotation"</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceSourceFormatChoice", propOrder = {"localMarketPlace", "nonLocalMarketPlace", "placeAsDSS"})
 public class PriceSourceFormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -236,6 +242,7 @@ public class PriceSourceFormatChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LclMktPlc", required = true)
 	public MICIdentifier getLocalMarketPlace() {
 		return localMarketPlace;
 	}
@@ -244,6 +251,7 @@ public class PriceSourceFormatChoice {
 		this.localMarketPlace = localMarketPlace;
 	}
 
+	@XmlElement(name = "NonLclMktPlc", required = true)
 	public PriceSource getNonLocalMarketPlace() {
 		return nonLocalMarketPlace;
 	}
@@ -252,6 +260,7 @@ public class PriceSourceFormatChoice {
 		this.nonLocalMarketPlace = nonLocalMarketPlace;
 	}
 
+	@XmlElement(name = "PlcAsDSS", required = true)
 	public GenericIdentification5 getPlaceAsDSS() {
 		return placeAsDSS;
 	}

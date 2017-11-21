@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification expressed as a proprietary type and narrative description.
@@ -66,6 +70,8 @@ import java.util.function.Supplier;
  * "Identification expressed as a proprietary type and narrative description."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericIdentification26", propOrder = {"type", "identification"})
 public class GenericIdentification26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -193,6 +199,7 @@ public class GenericIdentification26 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public GenericIdentification25 getType() {
 		return type;
 	}
@@ -201,6 +208,7 @@ public class GenericIdentification26 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Id")
 	public RestrictedFINXMax30Text getIdentification() {
 		return identification;
 	}

@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.StatusReportItems2;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -44,9 +46,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.037.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -82,6 +81,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.037.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -93,6 +95,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusReportV03", propOrder = {"reportIdentification", "relatedMessageReference", "reportedItems"})
 public class StatusReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -130,6 +134,14 @@ public class StatusReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusReportV03.class.getMethod("getReportIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MessageIdentification1 relatedMessageReference;
 	/**
@@ -165,6 +177,14 @@ public class StatusReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusReportV03.class.getMethod("getRelatedMessageReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<StatusReportItems2> reportedItems;
 	/**
@@ -199,6 +219,14 @@ public class StatusReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> StatusReportItems2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusReportV03.class.getMethod("getReportedItems", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -211,7 +239,8 @@ public class StatusReportV03 {
 				rootElement = "Document";
 				xmlTag = "StsRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(StatusReportV03.mmReportIdentification, StatusReportV03.mmRelatedMessageReference, StatusReportV03.mmReportedItems);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusReportV03.mmReportIdentification, com.tools20022.repository.area.tsmt.StatusReportV03.mmRelatedMessageReference,
+						com.tools20022.repository.area.tsmt.StatusReportV03.mmReportedItems);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -221,10 +250,16 @@ public class StatusReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StatusReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptId", required = true)
 	public MessageIdentification1 getReportIdentification() {
 		return reportIdentification;
 	}
@@ -233,6 +268,7 @@ public class StatusReportV03 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "RltdMsgRef", required = true)
 	public MessageIdentification1 getRelatedMessageReference() {
 		return relatedMessageReference;
 	}
@@ -241,11 +277,18 @@ public class StatusReportV03 {
 		this.relatedMessageReference = relatedMessageReference;
 	}
 
+	@XmlElement(name = "RptdItms")
 	public List<StatusReportItems2> getReportedItems() {
 		return reportedItems;
 	}
 
 	public void setReportedItems(List<StatusReportItems2> reportedItems) {
 		this.reportedItems = reportedItems;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.037.03.03")
+	static public class Document {
+		@XmlElement(name = "StsRpt", required = true)
+		public StatusReportV03 messageBody;
 	}
 }

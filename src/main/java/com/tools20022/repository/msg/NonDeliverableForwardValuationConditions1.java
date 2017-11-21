@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of parameters used to calculate the fixing rate to be applied to a
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NonDeliverableForwardValuationConditions1", propOrder = {"settlementCurrency", "valuationDate", "additionalValuationInformation", "settlementParty"})
 public class NonDeliverableForwardValuationConditions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -290,6 +296,7 @@ public class NonDeliverableForwardValuationConditions1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -298,6 +305,7 @@ public class NonDeliverableForwardValuationConditions1 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "ValtnDt", required = true)
 	public ISODate getValuationDate() {
 		return valuationDate;
 	}
@@ -306,6 +314,7 @@ public class NonDeliverableForwardValuationConditions1 {
 		this.valuationDate = valuationDate;
 	}
 
+	@XmlElement(name = "AddtlValtnInf")
 	public Max140Text getAdditionalValuationInformation() {
 		return additionalValuationInformation;
 	}
@@ -314,6 +323,7 @@ public class NonDeliverableForwardValuationConditions1 {
 		this.additionalValuationInformation = additionalValuationInformation;
 	}
 
+	@XmlElement(name = "SttlmPty")
 	public PartyIdentification7Choice getSettlementParty() {
 		return settlementParty;
 	}

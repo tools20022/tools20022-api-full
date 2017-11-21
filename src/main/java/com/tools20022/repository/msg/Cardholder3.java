@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data related to the cardholder.
@@ -84,6 +88,8 @@ import java.util.List;
  * Cardholder1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Cardholder3", propOrder = {"identification", "name", "language", "authentication", "addressVerification", "personalData"})
 public class Cardholder3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -423,6 +429,7 @@ public class Cardholder3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public List<CardholderIdentification1> getIdentification() {
 		return identification;
 	}
@@ -431,6 +438,7 @@ public class Cardholder3 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max45Text getName() {
 		return name;
 	}
@@ -439,6 +447,7 @@ public class Cardholder3 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Lang")
 	public ISO2ALanguageCode getLanguage() {
 		return language;
 	}
@@ -447,6 +456,7 @@ public class Cardholder3 {
 		this.language = language;
 	}
 
+	@XmlElement(name = "Authntcn")
 	public List<CardholderAuthentication3> getAuthentication() {
 		return authentication;
 	}
@@ -455,6 +465,7 @@ public class Cardholder3 {
 		this.authentication = authentication;
 	}
 
+	@XmlElement(name = "AdrVrfctn")
 	public AddressVerification1 getAddressVerification() {
 		return addressVerification;
 	}
@@ -463,6 +474,7 @@ public class Cardholder3 {
 		this.addressVerification = addressVerification;
 	}
 
+	@XmlElement(name = "PrsnlData")
 	public Max70Text getPersonalData() {
 		return personalData;
 	}

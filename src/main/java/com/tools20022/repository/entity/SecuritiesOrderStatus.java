@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,49 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConfirmationRejectedStatusReason
+ * SecuritiesOrderStatus.mmConfirmationRejectedStatusReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConfirmationStatus
+ * SecuritiesOrderStatus.mmConfirmationStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmCancellationStatus
+ * SecuritiesOrderStatus.mmCancellationStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmPartiallySettledStatusReason
+ * SecuritiesOrderStatus.mmPartiallySettledStatusReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmSuspendedStatusReason
+ * SecuritiesOrderStatus.mmSuspendedStatusReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmListOrderStatus
+ * SecuritiesOrderStatus.mmListOrderStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmSecuritiesOrder
+ * SecuritiesOrderStatus.mmSecuritiesOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmInvestmentFundOrder
+ * SecuritiesOrderStatus.mmInvestmentFundOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmCumulativeQuantity
+ * SecuritiesOrderStatus.mmCumulativeQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmRemainingQuantity
+ * SecuritiesOrderStatus.mmRemainingQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConditionallyAcceptedStatus
+ * SecuritiesOrderStatus.mmConditionallyAcceptedStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmOrderStatus
+ * SecuritiesOrderStatus.mmOrderStatus}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -230,49 +274,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * OrderStatus4Choice.mmRejected}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConfirmationRejectedStatusReason
- * SecuritiesOrderStatus.mmConfirmationRejectedStatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConfirmationStatus
- * SecuritiesOrderStatus.mmConfirmationStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmCancellationStatus
- * SecuritiesOrderStatus.mmCancellationStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmPartiallySettledStatusReason
- * SecuritiesOrderStatus.mmPartiallySettledStatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmSuspendedStatusReason
- * SecuritiesOrderStatus.mmSuspendedStatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmListOrderStatus
- * SecuritiesOrderStatus.mmListOrderStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmSecuritiesOrder
- * SecuritiesOrderStatus.mmSecuritiesOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmInvestmentFundOrder
- * SecuritiesOrderStatus.mmInvestmentFundOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmCumulativeQuantity
- * SecuritiesOrderStatus.mmCumulativeQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmRemainingQuantity
- * SecuritiesOrderStatus.mmRemainingQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConditionallyAcceptedStatus
- * SecuritiesOrderStatus.mmConditionallyAcceptedStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmOrderStatus
- * SecuritiesOrderStatus.mmOrderStatus}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -303,11 +304,6 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReasonCode
 	 * RejectedConfirmationStatusReasonCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
-	 * SecuritiesOrderStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -326,6 +322,11 @@ public class SecuritiesOrderStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
+	 * SecuritiesOrderStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -339,7 +340,7 @@ public class SecuritiesOrderStatus extends Status {
 	public static final MMBusinessAttribute mmConfirmationRejectedStatusReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ConfirmationRejectedStatus1.mmReason, ConfirmationStatus1Choice.mmConfirmationRejected, ConfirmationRejectedStatus2.mmReason, ConfirmationRejectedReason1Choice.mmCode);
-			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConfirmationRejectedStatusReason";
@@ -347,6 +348,14 @@ public class SecuritiesOrderStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectedConfirmationStatusReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesOrderStatus.class.getMethod("getConfirmationRejectedStatusReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OrderConfirmationStatusCode confirmationStatus;
@@ -360,11 +369,6 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatusCode
 	 * OrderConfirmationStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
-	 * SecuritiesOrderStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -376,6 +380,11 @@ public class SecuritiesOrderStatus extends Status {
 	 * ConfirmationStatus1Choice.mmStatus}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
+	 * SecuritiesOrderStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -390,7 +399,7 @@ public class SecuritiesOrderStatus extends Status {
 	public static final MMBusinessAttribute mmConfirmationStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndividualOrderConfirmationStatusAndReason1.mmStatus, ConfirmationStatus1Choice.mmStatus);
-			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConfirmationStatus";
@@ -398,6 +407,14 @@ public class SecuritiesOrderStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderConfirmationStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesOrderStatus.class.getMethod("getConfirmationStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OrderCancellationStatusCode cancellationStatus;
@@ -411,11 +428,6 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatusCode
 	 * OrderCancellationStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
-	 * SecuritiesOrderStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -434,6 +446,11 @@ public class SecuritiesOrderStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
+	 * SecuritiesOrderStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -447,7 +464,7 @@ public class SecuritiesOrderStatus extends Status {
 	public static final MMBusinessAttribute mmCancellationStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrderStatusAndReason8.mmStatus, IndividualOrderStatusAndReason4.mmStatus, SwitchOrderStatusAndReason1.mmCancelled, CancellationStatus22Choice.mmStatus);
-			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CancellationStatus";
@@ -455,6 +472,14 @@ public class SecuritiesOrderStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderCancellationStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesOrderStatus.class.getMethod("getCancellationStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartiallySettledStatusReasonCode partiallySettledStatusReason;
@@ -468,11 +493,6 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReasonCode
 	 * PartiallySettledStatusReasonCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
-	 * SecuritiesOrderStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -512,6 +532,11 @@ public class SecuritiesOrderStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
+	 * SecuritiesOrderStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -527,7 +552,7 @@ public class SecuritiesOrderStatus extends Status {
 			derivation_lazy = () -> Arrays.asList(PartiallySettledStatus1.mmReason, OrderStatusAndReason7.mmPartiallySettled, IndividualOrderStatusAndReason2.mmPartiallySettled, SwitchOrderStatusAndReason1.mmPartiallySettled,
 					PartiallySettledStatus2.mmReason, PartiallySettledStatus2.mmProprietary, OrderStatus1Choice.mmPartiallySettled, OrderStatus5Choice.mmPartiallySettled, PartiallySettledStatus10.mmReason,
 					OrderStatus3Choice.mmPartiallySettled, OrderStatus4Choice.mmPartiallySettled);
-			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartiallySettledStatusReason";
@@ -535,6 +560,14 @@ public class SecuritiesOrderStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PartiallySettledStatusReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesOrderStatus.class.getMethod("getPartiallySettledStatusReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SuspendedStatusReasonCode suspendedStatusReason;
@@ -548,11 +581,6 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReasonCode
 	 * SuspendedStatusReasonCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
-	 * SecuritiesOrderStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -601,6 +629,11 @@ public class SecuritiesOrderStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
+	 * SecuritiesOrderStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -616,7 +649,7 @@ public class SecuritiesOrderStatus extends Status {
 			derivation_lazy = () -> Arrays.asList(SuspendedStatusReason1.mmStructured, OrderStatusAndReason3.mmSuspended, IndividualOrderStatusAndReason1.mmSuspended, SuspendedStatusReason2.mmReason, SuspendedStatus2.mmReasonDetails,
 					OrderStatusAndReason7.mmSuspended, IndividualOrderStatusAndReason2.mmSuspended, SwitchOrderStatusAndReason1.mmSuspended, SuspendedStatusReasonChoice.mmReason, SuspendedStatusReasonChoice.mmProprietary,
 					OrderStatus1Choice.mmSuspended, OrderStatus5Choice.mmSuspended, OrderStatus3Choice.mmSuspended, OrderStatus4Choice.mmSuspended);
-			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SuspendedStatusReason";
@@ -624,6 +657,14 @@ public class SecuritiesOrderStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SuspendedStatusReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesOrderStatus.class.getMethod("getSuspendedStatusReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ListStatusTypeCode listOrderStatus;
@@ -637,11 +678,6 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ListStatusTypeCode
 	 * ListStatusTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
-	 * SecuritiesOrderStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -650,6 +686,11 @@ public class SecuritiesOrderStatus extends Status {
 	 * OrderStatus2.mmListStatusType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
+	 * SecuritiesOrderStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -664,7 +705,7 @@ public class SecuritiesOrderStatus extends Status {
 	public static final MMBusinessAttribute mmListOrderStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrderStatus2.mmListStatusType);
-			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ListOrderStatus";
@@ -672,6 +713,14 @@ public class SecuritiesOrderStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ListStatusTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesOrderStatus.class.getMethod("getListOrderStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesOrder securitiesOrder;
@@ -710,7 +759,7 @@ public class SecuritiesOrderStatus extends Status {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesOrder";
@@ -740,11 +789,6 @@ public class SecuritiesOrderStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentFundOrder
 	 * InvestmentFundOrder}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
-	 * SecuritiesOrderStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -760,6 +804,11 @@ public class SecuritiesOrderStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
+	 * SecuritiesOrderStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -773,7 +822,7 @@ public class SecuritiesOrderStatus extends Status {
 	public static final MMBusinessAssociationEnd mmInvestmentFundOrder = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndividualOrderStatusAndReason2.mmOrderData, IndividualOrderStatusAndReason3.mmOrderData, IndividualOrderStatusAndReason7.mmOrderData);
-			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundOrder";
@@ -803,11 +852,6 @@ public class SecuritiesOrderStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
-	 * SecuritiesOrderStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -819,6 +863,11 @@ public class SecuritiesOrderStatus extends Status {
 	 * OrderStatus3.mmCumulativeQuantity}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
+	 * SecuritiesOrderStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -833,7 +882,7 @@ public class SecuritiesOrderStatus extends Status {
 	public static final MMBusinessAssociationEnd mmCumulativeQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrderStatus1.mmCumulativeQuantity, OrderStatus3.mmCumulativeQuantity);
-			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CumulativeQuantity";
@@ -863,11 +912,6 @@ public class SecuritiesOrderStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
-	 * SecuritiesOrderStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -886,6 +930,11 @@ public class SecuritiesOrderStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
+	 * SecuritiesOrderStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -899,7 +948,7 @@ public class SecuritiesOrderStatus extends Status {
 	public static final MMBusinessAssociationEnd mmRemainingQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PartialFill1.mmRemainingQuantity, OrderStatus1.mmRemainingQuantity, OrderStatus3.mmRemainingQuantity, PartialFill2.mmRemainingQuantity);
-			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RemainingQuantity";
@@ -922,11 +971,6 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode
 	 * ConditionallyAcceptedStatusReasonCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
-	 * SecuritiesOrderStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -990,6 +1034,11 @@ public class SecuritiesOrderStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
+	 * SecuritiesOrderStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1007,7 +1056,7 @@ public class SecuritiesOrderStatus extends Status {
 					OrderStatusAndReason7.mmConditionallyAccepted, IndividualOrderStatusAndReason2.mmConditionallyAccepted, SwitchOrderStatusAndReason1.mmConditionallyAccepted, ConditionallyAcceptedStatusReason1Choice.mmReason,
 					ConditionallyAcceptedStatusReason1Choice.mmProprietary, OrderStatus1Choice.mmConditionallyAccepted, OrderStatus5Choice.mmConditionallyAccepted, SuspendedStatusReason4Choice.mmReasonDetails,
 					ConditionallyAcceptedStatus3Choice.mmReasonDetails, InRepairStatusReason4Choice.mmReasonDetails, OrderStatus3Choice.mmConditionallyAccepted, OrderStatus4Choice.mmConditionallyAccepted);
-			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConditionallyAcceptedStatus";
@@ -1015,6 +1064,14 @@ public class SecuritiesOrderStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesOrderStatus.class.getMethod("getConditionallyAcceptedStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OrderStatusCode orderStatus;
@@ -1028,11 +1085,6 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OrderStatusCode
 	 * OrderStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
-	 * SecuritiesOrderStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1087,6 +1139,11 @@ public class SecuritiesOrderStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
+	 * SecuritiesOrderStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1103,7 +1160,7 @@ public class SecuritiesOrderStatus extends Status {
 			derivation_lazy = () -> Arrays.asList(OrderStatusAndReason4.mmStatus, OrderStatusAndReason3.mmStatus, IndividualOrderStatusAndReason1.mmStatus, OrderStatusAndReason7.mmStatus, IndividualOrderStatusAndReason2.mmStatus,
 					SwitchOrderStatusAndReason1.mmStatus, OrderStatus1Choice.mmStatus, IndividualOrderStatusAndReason5.mmStatus, OrderStatusAndReason5.mmStatus, OrderStatus2.mmListOrderStatus, OrderStatus5Choice.mmStatus,
 					IndividualOrderStatusAndReason7.mmOrderStatus, SwitchOrderStatusAndReason2.mmOrderStatus, OrderStatusAndReason10.mmOrderStatus, OrderStatus3Choice.mmStatus, OrderStatus4Choice.mmStatus);
-			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderStatus";
@@ -1111,6 +1168,14 @@ public class SecuritiesOrderStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesOrderStatus.class.getMethod("getOrderStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1128,10 +1193,12 @@ public class SecuritiesOrderStatus extends Status {
 						IndividualOrderStatusAndReason5.mmRejected, OrderStatusAndReason5.mmOrderStatusDetails, OrderStatus3.mmSingleOrderStatusDetails, OrderStatus2.mmSingleOrderDetails, OrderStatus5Choice.mmRejected,
 						ConfirmationStatus1Choice.mmAmendmentRejected, OrderStatus3Choice.mmRejected, OrderStatus4Choice.mmRejected);
 				superType_lazy = () -> Status.mmObject();
-				element_lazy = () -> Arrays.asList(SecuritiesOrderStatus.mmConfirmationRejectedStatusReason, SecuritiesOrderStatus.mmConfirmationStatus, SecuritiesOrderStatus.mmCancellationStatus,
-						SecuritiesOrderStatus.mmPartiallySettledStatusReason, SecuritiesOrderStatus.mmSuspendedStatusReason, SecuritiesOrderStatus.mmListOrderStatus, SecuritiesOrderStatus.mmSecuritiesOrder,
-						SecuritiesOrderStatus.mmInvestmentFundOrder, SecuritiesOrderStatus.mmCumulativeQuantity, SecuritiesOrderStatus.mmRemainingQuantity, SecuritiesOrderStatus.mmConditionallyAcceptedStatus,
-						SecuritiesOrderStatus.mmOrderStatus);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrderStatus.mmConfirmationRejectedStatusReason, com.tools20022.repository.entity.SecuritiesOrderStatus.mmConfirmationStatus,
+						com.tools20022.repository.entity.SecuritiesOrderStatus.mmCancellationStatus, com.tools20022.repository.entity.SecuritiesOrderStatus.mmPartiallySettledStatusReason,
+						com.tools20022.repository.entity.SecuritiesOrderStatus.mmSuspendedStatusReason, com.tools20022.repository.entity.SecuritiesOrderStatus.mmListOrderStatus,
+						com.tools20022.repository.entity.SecuritiesOrderStatus.mmSecuritiesOrder, com.tools20022.repository.entity.SecuritiesOrderStatus.mmInvestmentFundOrder,
+						com.tools20022.repository.entity.SecuritiesOrderStatus.mmCumulativeQuantity, com.tools20022.repository.entity.SecuritiesOrderStatus.mmRemainingQuantity,
+						com.tools20022.repository.entity.SecuritiesOrderStatus.mmConditionallyAcceptedStatus, com.tools20022.repository.entity.SecuritiesOrderStatus.mmOrderStatus);
 				derivationComponent_lazy = () -> Arrays.asList(RejectedStatusReason4.mmObject(), RejectedStatus4.mmObject(), OrderStatusAndReason4.mmObject(), RejectedStatus7.mmObject(), OrderStatusAndReason8.mmObject(),
 						IndividualOrderStatusAndReason4.mmObject(), ConfirmationRejectedStatus1.mmObject(), ConditionallyAcceptedStatusReason1.mmObject(), ConditionallyAcceptedStatus1.mmObject(), RejectedStatusReason6.mmObject(),
 						RejectedStatus3.mmObject(), SuspendedStatusReason1.mmObject(), SuspendedStatus1.mmObject(), OrderStatusAndReason3.mmObject(), InRepairStatus1.mmObject(), RepairedConditions2.mmObject(),
@@ -1142,6 +1209,11 @@ public class SecuritiesOrderStatus extends Status {
 						OrderStatus3.mmObject(), OrderStatus2.mmObject(), InRepairStatus4Choice.mmObject(), SuspendedStatusReason4Choice.mmObject(), ConditionallyAcceptedStatus3Choice.mmObject(), RejectedStatus9.mmObject(),
 						PartiallySettledStatus10.mmObject(), InRepairStatusReason4Choice.mmObject(), ConfirmationStatus1Choice.mmObject(), ConfirmationRejectedStatus2.mmObject(), IndividualOrderStatusAndReason7.mmObject(),
 						OrderStatusAndReason10.mmObject(), OrderStatusAndReason9.mmObject(), IndividualOrderStatusAndReason8.mmObject(), RejectedStatus10.mmObject(), ConfirmationRejectedReason1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesOrderStatus.class;
 			}
 		});
 		return mmObject_lazy.get();

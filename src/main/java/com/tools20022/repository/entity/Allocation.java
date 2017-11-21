@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.PreAllocation1;
 import com.tools20022.repository.msg.SyndicatedLoan1;
 import com.tools20022.repository.msg.UnderlyingAttributes;
 import com.tools20022.repository.msg.UnderlyingAttributes2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -42,37 +43,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PreAllocation1 PreAllocation1}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAllocation
- * SecuritiesPricing.mmAllocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedAllocation
- * SecuritiesAccount.mmRelatedAllocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAllocation
- * SecuritiesQuantity.mmAllocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradeAllocation
- * SecuritiesTrade.mmTradeAllocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettledAllocation
- * SecuritiesSettlement.mmSettledAllocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSecuritiesOrderAllocation
- * SecuritiesOrder.mmSecuritiesOrderAllocation}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -111,6 +81,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PreAllocation1 PreAllocation1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAllocation
+ * SecuritiesPricing.mmAllocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedAllocation
+ * SecuritiesAccount.mmRelatedAllocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAllocation
+ * SecuritiesQuantity.mmAllocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradeAllocation
+ * SecuritiesTrade.mmTradeAllocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettledAllocation
+ * SecuritiesSettlement.mmSettledAllocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSecuritiesOrderAllocation
+ * SecuritiesOrder.mmSecuritiesOrderAllocation}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -141,10 +142,6 @@ public class Allocation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Allocation Allocation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -156,6 +153,10 @@ public class Allocation {
 	 * UnderlyingAttributes2.mmAllocationPercentage}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Allocation Allocation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -171,7 +172,7 @@ public class Allocation {
 	public static final MMBusinessAttribute mmPercentage = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmAllocationPercent, UnderlyingAttributes2.mmAllocationPercentage);
-			elementContext_lazy = () -> Allocation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Percentage";
@@ -179,6 +180,14 @@ public class Allocation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Allocation.class.getMethod("getPercentage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesQuantity allocatedQuantity;
@@ -200,10 +209,6 @@ public class Allocation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Allocation Allocation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -214,6 +219,10 @@ public class Allocation {
 	 * SyndicatedLoan1.mmShare}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Allocation Allocation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -230,7 +239,7 @@ public class Allocation {
 	public static final MMBusinessAssociationEnd mmAllocatedQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PreAllocation1.mmAllocatedQuantity, SyndicatedLoan1.mmShare);
-			elementContext_lazy = () -> Allocation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllocatedQuantity";
@@ -252,10 +261,6 @@ public class Allocation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Allocation Allocation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -264,6 +269,10 @@ public class Allocation {
 	 * PreAllocation1.mmAllocatedSettlementCurrency}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Allocation Allocation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -278,7 +287,7 @@ public class Allocation {
 	public static final MMBusinessAttribute mmSettlementCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PreAllocation1.mmAllocatedSettlementCurrency);
-			elementContext_lazy = () -> Allocation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementCurrency";
@@ -286,6 +295,14 @@ public class Allocation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Allocation.class.getMethod("getSettlementCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesAccount allocationAccount;
@@ -306,10 +323,6 @@ public class Allocation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesAccount
 	 * SecuritiesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Allocation Allocation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -318,6 +331,10 @@ public class Allocation {
 	 * PreAllocation1.mmAllocationAccountDetails}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Allocation Allocation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -332,7 +349,7 @@ public class Allocation {
 	public static final MMBusinessAssociationEnd mmAllocationAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PreAllocation1.mmAllocationAccountDetails);
-			elementContext_lazy = () -> Allocation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllocationAccount";
@@ -379,7 +396,7 @@ public class Allocation {
 	 */
 	public static final MMBusinessAssociationEnd mmAllocatedPrice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Allocation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllocatedPrice";
@@ -420,7 +437,7 @@ public class Allocation {
 	 */
 	public static final MMBusinessAttribute mmAllocationAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Allocation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllocationAmount";
@@ -428,6 +445,14 @@ public class Allocation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Allocation.class.getMethod("getAllocationAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RoundingDirectionCode method;
@@ -461,7 +486,7 @@ public class Allocation {
 	 */
 	public static final MMBusinessAttribute mmMethod = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Allocation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Method";
@@ -469,6 +494,14 @@ public class Allocation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RoundingDirectionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Allocation.class.getMethod("getMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DecimalNumber averagePricePrecision;
@@ -499,7 +532,7 @@ public class Allocation {
 	 */
 	public static final MMBusinessAttribute mmAveragePricePrecision = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Allocation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AveragePricePrecision";
@@ -507,6 +540,14 @@ public class Allocation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Allocation.class.getMethod("getAveragePricePrecision", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesSettlement settlementExecutionParameters;
@@ -546,7 +587,7 @@ public class Allocation {
 	 */
 	public static final MMBusinessAssociationEnd mmSettlementExecutionParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Allocation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementExecutionParameters";
@@ -593,7 +634,7 @@ public class Allocation {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Allocation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesOrder";
@@ -640,7 +681,7 @@ public class Allocation {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Allocation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTrade";
@@ -679,7 +720,7 @@ public class Allocation {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Allocation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -687,6 +728,14 @@ public class Allocation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Allocation.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -700,9 +749,16 @@ public class Allocation {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmAllocation, com.tools20022.repository.entity.SecuritiesAccount.mmRelatedAllocation,
 						com.tools20022.repository.entity.SecuritiesQuantity.mmAllocation, com.tools20022.repository.entity.SecuritiesTrade.mmTradeAllocation, com.tools20022.repository.entity.SecuritiesSettlement.mmSettledAllocation,
 						com.tools20022.repository.entity.SecuritiesOrder.mmSecuritiesOrderAllocation);
-				element_lazy = () -> Arrays.asList(Allocation.mmPercentage, Allocation.mmAllocatedQuantity, Allocation.mmSettlementCurrency, Allocation.mmAllocationAccount, Allocation.mmAllocatedPrice, Allocation.mmAllocationAmount,
-						Allocation.mmMethod, Allocation.mmAveragePricePrecision, Allocation.mmSettlementExecutionParameters, Allocation.mmSecuritiesOrder, Allocation.mmSecuritiesTrade, Allocation.mmIdentification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Allocation.mmPercentage, com.tools20022.repository.entity.Allocation.mmAllocatedQuantity, com.tools20022.repository.entity.Allocation.mmSettlementCurrency,
+						com.tools20022.repository.entity.Allocation.mmAllocationAccount, com.tools20022.repository.entity.Allocation.mmAllocatedPrice, com.tools20022.repository.entity.Allocation.mmAllocationAmount,
+						com.tools20022.repository.entity.Allocation.mmMethod, com.tools20022.repository.entity.Allocation.mmAveragePricePrecision, com.tools20022.repository.entity.Allocation.mmSettlementExecutionParameters,
+						com.tools20022.repository.entity.Allocation.mmSecuritiesOrder, com.tools20022.repository.entity.Allocation.mmSecuritiesTrade, com.tools20022.repository.entity.Allocation.mmIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(PreAllocation1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Allocation.class;
 			}
 		});
 		return mmObject_lazy.get();

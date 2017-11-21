@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further individual record details on the charges related to the
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ChargesRecord1", propOrder = {"amount", "creditDebitIndicator", "type", "rate", "bearer", "agent", "tax"})
 public class ChargesRecord1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -440,6 +446,7 @@ public class ChargesRecord1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -448,6 +455,7 @@ public class ChargesRecord1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -456,6 +464,7 @@ public class ChargesRecord1 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Tp")
 	public ChargeType3Choice getType() {
 		return type;
 	}
@@ -464,6 +473,7 @@ public class ChargesRecord1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -472,6 +482,7 @@ public class ChargesRecord1 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "Br")
 	public ChargeBearerType1Code getBearer() {
 		return bearer;
 	}
@@ -480,6 +491,7 @@ public class ChargesRecord1 {
 		this.bearer = bearer;
 	}
 
+	@XmlElement(name = "Agt")
 	public BranchAndFinancialInstitutionIdentification5 getAgent() {
 		return agent;
 	}
@@ -488,6 +500,7 @@ public class ChargesRecord1 {
 		this.agent = agent;
 	}
 
+	@XmlElement(name = "Tax")
 	public TaxCharges2 getTax() {
 		return tax;
 	}

@@ -70,6 +70,8 @@ public class RICIdentifier {
 				name = "RICIdentifier";
 				definition = "Reuters Identification Code (RIC). A numbering system used within the Reuters system to identify instruments worldwide. The RIC contains an X-character market specific code (can be the CUSIP or EPIC codes) followed by a full stop, then the two-digit ISO country code, eg, IBM in UK is IBM.UK.";
 				identificationScheme = "REUTERS ; REUTERSIdentifier";
+				minLength = 1;
+				maxLength = 35;
 			}
 		});
 		return mmObject_lazy.get();

@@ -29,13 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ProfileType1Code
- * ProfileType1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.ProfileTypeCode#mmTreasury
@@ -48,6 +41,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * ProfileTypeCode.mmMarketMaker}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ProfileTypeCode#mmHedge
  * ProfileTypeCode.mmHedge}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProfileType1Code
+ * ProfileType1Code}</li>
  * </ul>
  * </li>
  * <li>

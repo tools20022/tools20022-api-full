@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.MeetingNotice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Dates determining the entitlement.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Dates determining the entitlement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EligibilityDates1", propOrder = "entitlementFixingDate")
 public class EligibilityDates1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -151,6 +157,7 @@ public class EligibilityDates1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EntitlmntFxgDt", required = true)
 	public ISODate getEntitlementFixingDate() {
 		return entitlementFixingDate;
 	}

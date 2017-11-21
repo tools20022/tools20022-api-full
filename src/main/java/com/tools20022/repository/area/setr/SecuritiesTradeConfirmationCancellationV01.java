@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TransactiontIdentification4;
 import com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -54,9 +56,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.029.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
@@ -95,6 +94,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.029.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -106,6 +108,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTradeConfirmationCancellationV01", propOrder = {"identification", "references", "otherBusinessParties", "supplementaryData"})
 public class SecuritiesTradeConfirmationCancellationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -147,6 +151,14 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> TransactiontIdentification4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationCancellationV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Linkages15> references;
 	/**
@@ -182,6 +194,14 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 			definition = "Link to another transaction that must be processed after, before or at the same time.";
 			minOccurs = 0;
 			complexType_lazy = () -> Linkages15.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationCancellationV01.class.getMethod("getReferences", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OtherParties18 otherBusinessParties;
@@ -222,6 +242,14 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> OtherParties18.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationCancellationV01.class.getMethod("getOtherBusinessParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -259,6 +287,14 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationCancellationV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -271,8 +307,9 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 				rootElement = "Document";
 				xmlTag = "SctiesTradConfCxl";
 				businessArea_lazy = () -> SecuritiesTradeLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationCancellationV01.mmIdentification, SecuritiesTradeConfirmationCancellationV01.mmReferences,
-						SecuritiesTradeConfirmationCancellationV01.mmOtherBusinessParties, SecuritiesTradeConfirmationCancellationV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationCancellationV01.mmIdentification,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationCancellationV01.mmReferences, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationCancellationV01.mmOtherBusinessParties,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationCancellationV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -282,10 +319,16 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesTradeConfirmationCancellationV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public TransactiontIdentification4 getIdentification() {
 		return identification;
 	}
@@ -294,6 +337,7 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Refs")
 	public List<Linkages15> getReferences() {
 		return references;
 	}
@@ -302,6 +346,7 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 		this.references = references;
 	}
 
+	@XmlElement(name = "OthrBizPties")
 	public OtherParties18 getOtherBusinessParties() {
 		return otherBusinessParties;
 	}
@@ -310,11 +355,18 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 		this.otherBusinessParties = otherBusinessParties;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.029.01.01")
+	static public class Document {
+		@XmlElement(name = "SctiesTradConfCxl", required = true)
+		public SecuritiesTradeConfirmationCancellationV01 messageBody;
 	}
 }

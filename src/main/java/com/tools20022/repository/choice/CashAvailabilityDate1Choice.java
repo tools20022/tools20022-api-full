@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CashBalanceAvailabilityDate1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates when the amount of money will become available.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CashBalanceAvailabilityDate1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAvailabilityDate1Choice", propOrder = {"numberOfDays", "actualDate"})
 public class CashAvailabilityDate1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -194,6 +200,7 @@ public class CashAvailabilityDate1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NbOfDays", required = true)
 	public Max15PlusSignedNumericText getNumberOfDays() {
 		return numberOfDays;
 	}
@@ -202,6 +209,7 @@ public class CashAvailabilityDate1Choice {
 		this.numberOfDays = numberOfDays;
 	}
 
+	@XmlElement(name = "ActlDt", required = true)
 	public ISODate getActualDate() {
 		return actualDate;
 	}

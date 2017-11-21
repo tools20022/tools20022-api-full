@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for a reservation.
@@ -77,6 +81,8 @@ import java.util.List;
  * definition} = "Defines the criteria used to search for a reservation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReservationSearchCriteria2", propOrder = {"systemIdentification", "defaultReservationType", "currentReservationType", "accountOwner", "accountIdentification"})
 public class ReservationSearchCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -341,6 +347,7 @@ public class ReservationSearchCriteria2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysId")
 	public SystemIdentification2Choice getSystemIdentification() {
 		return systemIdentification;
 	}
@@ -349,6 +356,7 @@ public class ReservationSearchCriteria2 {
 		this.systemIdentification = systemIdentification;
 	}
 
+	@XmlElement(name = "DfltRsvatnTp")
 	public List<ReservationType1Code> getDefaultReservationType() {
 		return defaultReservationType;
 	}
@@ -357,6 +365,7 @@ public class ReservationSearchCriteria2 {
 		this.defaultReservationType = defaultReservationType;
 	}
 
+	@XmlElement(name = "CurRsvatnTp")
 	public List<ReservationType1Code> getCurrentReservationType() {
 		return currentReservationType;
 	}
@@ -365,6 +374,7 @@ public class ReservationSearchCriteria2 {
 		this.currentReservationType = currentReservationType;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public BranchAndFinancialInstitutionIdentification5 getAccountOwner() {
 		return accountOwner;
 	}
@@ -373,6 +383,7 @@ public class ReservationSearchCriteria2 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctId")
 	public AccountIdentification4Choice getAccountIdentification() {
 		return accountIdentification;
 	}

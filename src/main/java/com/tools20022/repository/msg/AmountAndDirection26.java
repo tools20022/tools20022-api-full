@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money debited or credited on the books of an account servicer.
@@ -72,6 +76,8 @@ import java.util.function.Supplier;
  * "Amount of money debited or credited on the books of an account servicer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountAndDirection26", propOrder = {"amount", "creditDebitIndicator", "foreignExchangeDetails"})
 public class AmountAndDirection26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -241,6 +247,7 @@ public class AmountAndDirection26 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public RestrictedFINActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -249,6 +256,7 @@ public class AmountAndDirection26 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -257,6 +265,7 @@ public class AmountAndDirection26 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public ForeignExchangeTerms12 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}

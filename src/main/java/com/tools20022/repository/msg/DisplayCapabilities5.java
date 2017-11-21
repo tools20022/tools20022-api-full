@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Capabilities of the display components performing the transaction.
@@ -75,6 +79,8 @@ import java.util.List;
  * DisplayCapabilities4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DisplayCapabilities5", propOrder = {"destination", "availableFormat", "numberOfLines", "lineWidth", "availableLanguage"})
 public class DisplayCapabilities5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -331,6 +337,7 @@ public class DisplayCapabilities5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dstn", required = true)
 	public List<UserInterface5Code> getDestination() {
 		return destination;
 	}
@@ -339,6 +346,7 @@ public class DisplayCapabilities5 {
 		this.destination = destination;
 	}
 
+	@XmlElement(name = "AvlblFrmt")
 	public List<OutputFormat1Code> getAvailableFormat() {
 		return availableFormat;
 	}
@@ -347,6 +355,7 @@ public class DisplayCapabilities5 {
 		this.availableFormat = availableFormat;
 	}
 
+	@XmlElement(name = "NbOfLines")
 	public Number getNumberOfLines() {
 		return numberOfLines;
 	}
@@ -355,6 +364,7 @@ public class DisplayCapabilities5 {
 		this.numberOfLines = numberOfLines;
 	}
 
+	@XmlElement(name = "LineWidth")
 	public Number getLineWidth() {
 		return lineWidth;
 	}
@@ -363,6 +373,7 @@ public class DisplayCapabilities5 {
 		this.lineWidth = lineWidth;
 	}
 
+	@XmlElement(name = "AvlblLang")
 	public List<LanguageCode> getAvailableLanguage() {
 		return availableLanguage;
 	}

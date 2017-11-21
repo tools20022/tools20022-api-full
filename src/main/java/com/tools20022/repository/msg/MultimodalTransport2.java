@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to multimodal transportation of goods.
@@ -99,6 +103,9 @@ import java.util.List;
  * definition} = "Information related to multimodal transportation of goods."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MultimodalTransport2", propOrder = {"departureAirport", "destinationAirport", "airCarrierName", "portOfLoading", "portOfDischarge", "vesselName", "placeOfReceipt", "placeOfDelivery", "takingInCharge",
+		"placeOfFinalDestination", "transitLocation", "roadCarrierName", "railCarrierName"})
 public class MultimodalTransport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -733,6 +740,7 @@ public class MultimodalTransport2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DprtureAirprt")
 	public List<AirportName1Choice> getDepartureAirport() {
 		return departureAirport;
 	}
@@ -741,6 +749,7 @@ public class MultimodalTransport2 {
 		this.departureAirport = departureAirport;
 	}
 
+	@XmlElement(name = "DstnAirprt")
 	public List<AirportName1Choice> getDestinationAirport() {
 		return destinationAirport;
 	}
@@ -749,6 +758,7 @@ public class MultimodalTransport2 {
 		this.destinationAirport = destinationAirport;
 	}
 
+	@XmlElement(name = "AirCrrierNm")
 	public List<Max35Text> getAirCarrierName() {
 		return airCarrierName;
 	}
@@ -757,6 +767,7 @@ public class MultimodalTransport2 {
 		this.airCarrierName = airCarrierName;
 	}
 
+	@XmlElement(name = "PortOfLoadng")
 	public List<Max35Text> getPortOfLoading() {
 		return portOfLoading;
 	}
@@ -765,6 +776,7 @@ public class MultimodalTransport2 {
 		this.portOfLoading = portOfLoading;
 	}
 
+	@XmlElement(name = "PortOfDschrge")
 	public List<Max35Text> getPortOfDischarge() {
 		return portOfDischarge;
 	}
@@ -773,6 +785,7 @@ public class MultimodalTransport2 {
 		this.portOfDischarge = portOfDischarge;
 	}
 
+	@XmlElement(name = "VsslNm")
 	public List<Max35Text> getVesselName() {
 		return vesselName;
 	}
@@ -781,6 +794,7 @@ public class MultimodalTransport2 {
 		this.vesselName = vesselName;
 	}
 
+	@XmlElement(name = "PlcOfRct")
 	public List<Max35Text> getPlaceOfReceipt() {
 		return placeOfReceipt;
 	}
@@ -789,6 +803,7 @@ public class MultimodalTransport2 {
 		this.placeOfReceipt = placeOfReceipt;
 	}
 
+	@XmlElement(name = "PlcOfDlvry")
 	public List<Max35Text> getPlaceOfDelivery() {
 		return placeOfDelivery;
 	}
@@ -797,6 +812,7 @@ public class MultimodalTransport2 {
 		this.placeOfDelivery = placeOfDelivery;
 	}
 
+	@XmlElement(name = "TakngInChrg")
 	public List<Max35Text> getTakingInCharge() {
 		return takingInCharge;
 	}
@@ -805,6 +821,7 @@ public class MultimodalTransport2 {
 		this.takingInCharge = takingInCharge;
 	}
 
+	@XmlElement(name = "PlcOfFnlDstn")
 	public List<Max35Text> getPlaceOfFinalDestination() {
 		return placeOfFinalDestination;
 	}
@@ -813,6 +830,7 @@ public class MultimodalTransport2 {
 		this.placeOfFinalDestination = placeOfFinalDestination;
 	}
 
+	@XmlElement(name = "TrnstLctn")
 	public List<Max35Text> getTransitLocation() {
 		return transitLocation;
 	}
@@ -821,6 +839,7 @@ public class MultimodalTransport2 {
 		this.transitLocation = transitLocation;
 	}
 
+	@XmlElement(name = "RoadCrrierNm")
 	public List<Max35Text> getRoadCarrierName() {
 		return roadCarrierName;
 	}
@@ -829,6 +848,7 @@ public class MultimodalTransport2 {
 		this.roadCarrierName = roadCarrierName;
 	}
 
+	@XmlElement(name = "RailCrrierNm")
 	public List<Max35Text> getRailCarrierName() {
 		return railCarrierName;
 	}

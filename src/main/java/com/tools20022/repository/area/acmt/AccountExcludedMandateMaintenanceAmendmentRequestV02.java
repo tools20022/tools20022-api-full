@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AccountManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.BankAccountManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The AccountExcludedMandateMaintenanceAmendmentRequest message is sent from an
@@ -43,9 +45,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.016.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementLatestVersion
@@ -98,6 +97,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.016.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -113,6 +115,9 @@ import java.util.List;
  * AccountExcludedMandateMaintenanceAmendmentRequestV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountExcludedMandateMaintenanceAmendmentRequestV02", propOrder = {"references", "from", "contractDates", "underlyingMasterAgreement", "account", "accountServicerIdentification", "organisation", "digitalSignature",
+		"supplementaryData"})
 public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -151,6 +156,14 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> References4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountExcludedMandateMaintenanceAmendmentRequestV02.class.getMethod("getReferences", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OrganisationIdentification8 from;
@@ -191,6 +204,14 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> OrganisationIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountExcludedMandateMaintenanceAmendmentRequestV02.class.getMethod("getFrom", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AccountContract2 contractDates;
 	/**
@@ -225,6 +246,14 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountContract2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountExcludedMandateMaintenanceAmendmentRequestV02.class.getMethod("getContractDates", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ContractDocument1 underlyingMasterAgreement;
@@ -265,6 +294,14 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContractDocument1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountExcludedMandateMaintenanceAmendmentRequestV02.class.getMethod("getUnderlyingMasterAgreement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CustomerAccountModification1 account;
 	/**
@@ -303,6 +340,14 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> CustomerAccountModification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountExcludedMandateMaintenanceAmendmentRequestV02.class.getMethod("getAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected BranchAndFinancialInstitutionIdentification5 accountServicerIdentification;
 	/**
@@ -340,6 +385,14 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountExcludedMandateMaintenanceAmendmentRequestV02.class.getMethod("getAccountServicerIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OrganisationModification1 organisation;
@@ -380,6 +433,14 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> OrganisationModification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountExcludedMandateMaintenanceAmendmentRequestV02.class.getMethod("getOrganisation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PartyAndSignature2> digitalSignature;
 	/**
@@ -416,6 +477,14 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 			definition = "Contains the signature with its components, namely signed info, signature value, key info and the object.";
 			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountExcludedMandateMaintenanceAmendmentRequestV02.class.getMethod("getDigitalSignature", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -454,6 +523,14 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountExcludedMandateMaintenanceAmendmentRequestV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -467,10 +544,13 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 				rootElement = "Document";
 				xmlTag = "AcctExcldMndtMntncAmdmntReq";
 				businessArea_lazy = () -> AccountManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AccountExcludedMandateMaintenanceAmendmentRequestV02.mmReferences, AccountExcludedMandateMaintenanceAmendmentRequestV02.mmFrom,
-						AccountExcludedMandateMaintenanceAmendmentRequestV02.mmContractDates, AccountExcludedMandateMaintenanceAmendmentRequestV02.mmUnderlyingMasterAgreement, AccountExcludedMandateMaintenanceAmendmentRequestV02.mmAccount,
-						AccountExcludedMandateMaintenanceAmendmentRequestV02.mmAccountServicerIdentification, AccountExcludedMandateMaintenanceAmendmentRequestV02.mmOrganisation,
-						AccountExcludedMandateMaintenanceAmendmentRequestV02.mmDigitalSignature, AccountExcludedMandateMaintenanceAmendmentRequestV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmReferences,
+						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmFrom, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmContractDates,
+						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmUnderlyingMasterAgreement,
+						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmAccount,
+						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmAccountServicerIdentification,
+						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmOrganisation, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmDigitalSignature,
+						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";
@@ -480,10 +560,16 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountExcludedMandateMaintenanceAmendmentRequestV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Refs", required = true)
 	public References4 getReferences() {
 		return references;
 	}
@@ -492,6 +578,7 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 		this.references = references;
 	}
 
+	@XmlElement(name = "Fr")
 	public OrganisationIdentification8 getFrom() {
 		return from;
 	}
@@ -500,6 +587,7 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 		this.from = from;
 	}
 
+	@XmlElement(name = "CtrctDts")
 	public AccountContract2 getContractDates() {
 		return contractDates;
 	}
@@ -508,6 +596,7 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 		this.contractDates = contractDates;
 	}
 
+	@XmlElement(name = "UndrlygMstrAgrmt")
 	public ContractDocument1 getUnderlyingMasterAgreement() {
 		return underlyingMasterAgreement;
 	}
@@ -516,6 +605,7 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 		this.underlyingMasterAgreement = underlyingMasterAgreement;
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CustomerAccountModification1 getAccount() {
 		return account;
 	}
@@ -524,6 +614,7 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "AcctSvcrId", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getAccountServicerIdentification() {
 		return accountServicerIdentification;
 	}
@@ -532,6 +623,7 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 		this.accountServicerIdentification = accountServicerIdentification;
 	}
 
+	@XmlElement(name = "Org", required = true)
 	public OrganisationModification1 getOrganisation() {
 		return organisation;
 	}
@@ -540,6 +632,7 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 		this.organisation = organisation;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public List<PartyAndSignature2> getDigitalSignature() {
 		return digitalSignature;
 	}
@@ -548,11 +641,18 @@ public class AccountExcludedMandateMaintenanceAmendmentRequestV02 {
 		this.digitalSignature = digitalSignature;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.016.02.02")
+	static public class Document {
+		@XmlElement(name = "AcctExcldMndtMntncAmdmntReq", required = true)
+		public AccountExcludedMandateMaintenanceAmendmentRequestV02 messageBody;
 	}
 }

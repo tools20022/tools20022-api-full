@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Issuance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies prices related to a corporate action option.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionPrice19", propOrder = {"indicativeOrMarketPrice", "exercisePrice", "issuePrice", "genericCashPriceReceivedPerProduct", "genericCashPricePaidPerProduct"})
 public class CorporateActionPrice19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -349,6 +355,7 @@ public class CorporateActionPrice19 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IndctvOrMktPric")
 	public IndicativeOrMarketPrice2Choice getIndicativeOrMarketPrice() {
 		return indicativeOrMarketPrice;
 	}
@@ -357,6 +364,7 @@ public class CorporateActionPrice19 {
 		this.indicativeOrMarketPrice = indicativeOrMarketPrice;
 	}
 
+	@XmlElement(name = "ExrcPric")
 	public PriceFormat5Choice getExercisePrice() {
 		return exercisePrice;
 	}
@@ -365,6 +373,7 @@ public class CorporateActionPrice19 {
 		this.exercisePrice = exercisePrice;
 	}
 
+	@XmlElement(name = "IssePric")
 	public PriceFormat5Choice getIssuePrice() {
 		return issuePrice;
 	}
@@ -373,6 +382,7 @@ public class CorporateActionPrice19 {
 		this.issuePrice = issuePrice;
 	}
 
+	@XmlElement(name = "GncCshPricRcvdPerPdct")
 	public PriceFormat21Choice getGenericCashPriceReceivedPerProduct() {
 		return genericCashPriceReceivedPerProduct;
 	}
@@ -381,6 +391,7 @@ public class CorporateActionPrice19 {
 		this.genericCashPriceReceivedPerProduct = genericCashPriceReceivedPerProduct;
 	}
 
+	@XmlElement(name = "GncCshPricPdPerPdct")
 	public PriceFormat5Choice getGenericCashPricePaidPerProduct() {
 		return genericCashPricePaidPerProduct;
 	}

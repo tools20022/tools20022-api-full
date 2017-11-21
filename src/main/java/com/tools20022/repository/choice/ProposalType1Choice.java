@@ -31,6 +31,10 @@ import com.tools20022.repository.msg.SecuritiesCollateral1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the type of collateral proposed for the margin call.
@@ -71,6 +75,8 @@ import java.util.List;
  * "Choice between the type of collateral proposed for the margin call."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProposalType1Choice", propOrder = {"securitiesCollateral", "cashCollateral", "otherCollateral"})
 public class ProposalType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class ProposalType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesColl")
 	public List<SecuritiesCollateral1> getSecuritiesCollateral() {
 		return securitiesCollateral;
 	}
@@ -236,6 +243,7 @@ public class ProposalType1Choice {
 		this.securitiesCollateral = securitiesCollateral;
 	}
 
+	@XmlElement(name = "CshColl")
 	public List<CashCollateral1> getCashCollateral() {
 		return cashCollateral;
 	}
@@ -244,6 +252,7 @@ public class ProposalType1Choice {
 		this.cashCollateral = cashCollateral;
 	}
 
+	@XmlElement(name = "OthrColl")
 	public List<OtherCollateral1> getOtherCollateral() {
 		return otherCollateral;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Configuration parameters of data exchanges.
@@ -84,6 +88,8 @@ import java.util.List;
  * ExchangeConfiguration2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExchangeConfiguration4", propOrder = {"exchangePolicy", "maximumNumber", "maximumAmount", "reTry", "timeCondition"})
 public class ExchangeConfiguration4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -400,6 +406,7 @@ public class ExchangeConfiguration4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XchgPlcy", required = true)
 	public List<ExchangePolicy1Code> getExchangePolicy() {
 		return exchangePolicy;
 	}
@@ -408,6 +415,7 @@ public class ExchangeConfiguration4 {
 		this.exchangePolicy = exchangePolicy;
 	}
 
+	@XmlElement(name = "MaxNb")
 	public Number getMaximumNumber() {
 		return maximumNumber;
 	}
@@ -416,6 +424,7 @@ public class ExchangeConfiguration4 {
 		this.maximumNumber = maximumNumber;
 	}
 
+	@XmlElement(name = "MaxAmt")
 	public ImpliedCurrencyAndAmount getMaximumAmount() {
 		return maximumAmount;
 	}
@@ -424,6 +433,7 @@ public class ExchangeConfiguration4 {
 		this.maximumAmount = maximumAmount;
 	}
 
+	@XmlElement(name = "ReTry")
 	public ProcessRetry2 getReTry() {
 		return reTry;
 	}
@@ -432,6 +442,7 @@ public class ExchangeConfiguration4 {
 		this.reTry = reTry;
 	}
 
+	@XmlElement(name = "TmCond")
 	public ProcessTiming3 getTimeCondition() {
 		return timeCondition;
 	}

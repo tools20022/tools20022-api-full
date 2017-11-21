@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the references of the underlying trade leg(s) and/or the reference
@@ -61,6 +65,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reference19", propOrder = {"tradeLegNotificationIdentification", "netPositionIdentification"})
 public class Reference19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class Reference19 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradLegNtfctnId")
 	public List<Max35Text> getTradeLegNotificationIdentification() {
 		return tradeLegNotificationIdentification;
 	}
@@ -171,6 +178,7 @@ public class Reference19 {
 		this.tradeLegNotificationIdentification = tradeLegNotificationIdentification;
 	}
 
+	@XmlElement(name = "NetPosId")
 	public Max35Text getNetPositionIdentification() {
 		return netPositionIdentification;
 	}

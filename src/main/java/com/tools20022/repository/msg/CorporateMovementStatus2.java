@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides status of the movement.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides status of the movement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateMovementStatus2", propOrder = {"processedStatus", "rejectedStatus"})
 public class CorporateMovementStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -188,6 +194,7 @@ public class CorporateMovementStatus2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcdSts", required = true)
 	public CorporationActionMovementProcessingStatus2 getProcessedStatus() {
 		return processedStatus;
 	}
@@ -196,6 +203,7 @@ public class CorporateMovementStatus2 {
 		this.processedStatus = processedStatus;
 	}
 
+	@XmlElement(name = "RjctdSts", required = true)
 	public CorporateActionMovementRejectionStatus2 getRejectedStatus() {
 		return rejectedStatus;
 	}

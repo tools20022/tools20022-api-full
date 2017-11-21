@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PaymentSchedule;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies expected and due payment date.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ShipmentDateRange1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentDateRange1", propOrder = {"paymentScheduleIdentification", "expectedDate", "dueDate"})
 public class PaymentDateRange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -235,6 +241,7 @@ public class PaymentDateRange1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtSchdlId")
 	public Max35Text getPaymentScheduleIdentification() {
 		return paymentScheduleIdentification;
 	}
@@ -243,6 +250,7 @@ public class PaymentDateRange1 {
 		this.paymentScheduleIdentification = paymentScheduleIdentification;
 	}
 
+	@XmlElement(name = "XpctdDt")
 	public ISODate getExpectedDate() {
 		return expectedDate;
 	}
@@ -251,6 +259,7 @@ public class PaymentDateRange1 {
 		this.expectedDate = expectedDate;
 	}
 
+	@XmlElement(name = "DueDt")
 	public ISODate getDueDate() {
 		return dueDate;
 	}

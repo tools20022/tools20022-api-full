@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.SecuritiesMarketReportHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.VolumeCapReport1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The FinancialInstrumentReportingTradingVolumeCapDataReport message is sent by
@@ -38,9 +40,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.035.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -75,6 +74,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.035.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -86,6 +88,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentReportingTradingVolumeCapDataReportV01", propOrder = {"reportHeader", "volumeCapData", "supplementaryData"})
 public class FinancialInstrumentReportingTradingVolumeCapDataReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -123,6 +127,14 @@ public class FinancialInstrumentReportingTradingVolumeCapDataReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesMarketReportHeader1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingTradingVolumeCapDataReportV01.class.getMethod("getReportHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<VolumeCapReport1> volumeCapData;
 	/**
@@ -157,6 +169,14 @@ public class FinancialInstrumentReportingTradingVolumeCapDataReportV01 {
 			definition = "Provides details on the volume of trades of financial instruments.";
 			minOccurs = 1;
 			complexType_lazy = () -> VolumeCapReport1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingTradingVolumeCapDataReportV01.class.getMethod("getVolumeCapData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -195,6 +215,14 @@ public class FinancialInstrumentReportingTradingVolumeCapDataReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingTradingVolumeCapDataReportV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -207,8 +235,9 @@ public class FinancialInstrumentReportingTradingVolumeCapDataReportV01 {
 				rootElement = "Document";
 				xmlTag = "FinInstrmRptgTradgVolCapDataRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmReportHeader, FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmVolumeCapData,
-						FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmReportHeader,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmVolumeCapData,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -218,10 +247,16 @@ public class FinancialInstrumentReportingTradingVolumeCapDataReportV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FinancialInstrumentReportingTradingVolumeCapDataReportV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptHdr", required = true)
 	public SecuritiesMarketReportHeader1 getReportHeader() {
 		return reportHeader;
 	}
@@ -230,6 +265,7 @@ public class FinancialInstrumentReportingTradingVolumeCapDataReportV01 {
 		this.reportHeader = reportHeader;
 	}
 
+	@XmlElement(name = "VolCapData", required = true)
 	public List<VolumeCapReport1> getVolumeCapData() {
 		return volumeCapData;
 	}
@@ -238,11 +274,18 @@ public class FinancialInstrumentReportingTradingVolumeCapDataReportV01 {
 		this.volumeCapData = volumeCapData;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.035.01.01")
+	static public class Document {
+		@XmlElement(name = "FinInstrmRptgTradgVolCapDataRpt", required = true)
+		public FinancialInstrumentReportingTradingVolumeCapDataReportV01 messageBody;
 	}
 }

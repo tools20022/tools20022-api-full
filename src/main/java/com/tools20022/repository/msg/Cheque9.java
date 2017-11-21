@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics related to a cheque instruction, such as cheque type
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Cheque9", propOrder = {"number", "payeeIdentification", "draweeIdentification", "drawerIdentification"})
 public class Cheque9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -312,6 +318,7 @@ public class Cheque9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nb")
 	public Max35Text getNumber() {
 		return number;
 	}
@@ -320,6 +327,7 @@ public class Cheque9 {
 		this.number = number;
 	}
 
+	@XmlElement(name = "PyeeId", required = true)
 	public PartyIdentification113 getPayeeIdentification() {
 		return payeeIdentification;
 	}
@@ -328,6 +336,7 @@ public class Cheque9 {
 		this.payeeIdentification = payeeIdentification;
 	}
 
+	@XmlElement(name = "DrweeId")
 	public FinancialInstitutionIdentification10 getDraweeIdentification() {
 		return draweeIdentification;
 	}
@@ -336,6 +345,7 @@ public class Cheque9 {
 		this.draweeIdentification = draweeIdentification;
 	}
 
+	@XmlElement(name = "DrwrId")
 	public PartyIdentification113 getDrawerIdentification() {
 		return drawerIdentification;
 	}

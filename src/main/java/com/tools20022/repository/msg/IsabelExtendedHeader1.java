@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max3Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the extended parameters for an Isabel payment file.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelExtendedHeader1", propOrder = {"SEPA", "BPNFinancialInstitution", "BICFinancialInstitution"})
 public class IsabelExtendedHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -204,6 +210,7 @@ public class IsabelExtendedHeader1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SEPA")
 	public IsabelSEPAFile1 getSEPA() {
 		return sEPA;
 	}
@@ -212,6 +219,7 @@ public class IsabelExtendedHeader1 {
 		this.sEPA = sEPA;
 	}
 
+	@XmlElement(name = "BPNFI")
 	public Max3Text getBPNFinancialInstitution() {
 		return bPNFinancialInstitution;
 	}
@@ -220,6 +228,7 @@ public class IsabelExtendedHeader1 {
 		this.bPNFinancialInstitution = bPNFinancialInstitution;
 	}
 
+	@XmlElement(name = "BICFI")
 	public BICFIIdentifier getBICFinancialInstitution() {
 		return bICFinancialInstitution;
 	}

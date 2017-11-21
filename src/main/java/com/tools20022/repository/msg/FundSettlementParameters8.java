@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Parameters applied to the settlement of a security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundSettlementParameters8", propOrder = {"settlementPlace", "receivingSideDetails"})
 public class FundSettlementParameters8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class FundSettlementParameters8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmPlc", required = true)
 	public PartyIdentification26Choice getSettlementPlace() {
 		return settlementPlace;
 	}
@@ -193,6 +200,7 @@ public class FundSettlementParameters8 {
 		this.settlementPlace = settlementPlace;
 	}
 
+	@XmlElement(name = "RcvgSdDtls", required = true)
 	public ReceivingPartiesAndAccount5 getReceivingSideDetails() {
 		return receivingSideDetails;
 	}

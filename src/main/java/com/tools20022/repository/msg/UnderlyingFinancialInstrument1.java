@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Underlying financial instrument to which an trade confirmation is related.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnderlyingFinancialInstrument1", propOrder = {"identification", "attributes"})
 public class UnderlyingFinancialInstrument1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -195,6 +201,7 @@ public class UnderlyingFinancialInstrument1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification14 getIdentification() {
 		return identification;
 	}
@@ -203,6 +210,7 @@ public class UnderlyingFinancialInstrument1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Attrbts")
 	public FinancialInstrumentAttributes31 getAttributes() {
 		return attributes;
 	}

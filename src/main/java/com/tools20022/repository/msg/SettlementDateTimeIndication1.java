@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CashSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information on the occurred settlement time(s) of the payment transaction.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information on the occurred settlement time(s) of the payment transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementDateTimeIndication1", propOrder = {"debitDateTime", "creditDateTime"})
 public class SettlementDateTimeIndication1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -184,6 +190,7 @@ public class SettlementDateTimeIndication1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DbtDtTm")
 	public ISODateTime getDebitDateTime() {
 		return debitDateTime;
 	}
@@ -192,6 +199,7 @@ public class SettlementDateTimeIndication1 {
 		this.debitDateTime = debitDateTime;
 	}
 
+	@XmlElement(name = "CdtDtTm")
 	public ISODateTime getCreditDateTime() {
 		return creditDateTime;
 	}

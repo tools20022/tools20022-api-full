@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a list of pending statuses or final statuses.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentStatusCode5Choice", propOrder = {"pending", "final", "RTGS", "settlement", "proprietary"})
 public class PaymentStatusCode5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -385,6 +391,7 @@ public class PaymentStatusCode5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pdg", required = true)
 	public PendingStatus4Code getPending() {
 		return pending;
 	}
@@ -393,6 +400,7 @@ public class PaymentStatusCode5Choice {
 		this.pending = pending;
 	}
 
+	@XmlElement(name = "Fnl", required = true)
 	public FinalStatus1Code getFinal() {
 		return final_;
 	}
@@ -401,6 +409,7 @@ public class PaymentStatusCode5Choice {
 		this.final_ = final_;
 	}
 
+	@XmlElement(name = "RTGS", required = true)
 	public Max4AlphaNumericText getRTGS() {
 		return rTGS;
 	}
@@ -409,6 +418,7 @@ public class PaymentStatusCode5Choice {
 		this.rTGS = rTGS;
 	}
 
+	@XmlElement(name = "Sttlm", required = true)
 	public Max4AlphaNumericText getSettlement() {
 		return settlement;
 	}
@@ -417,6 +427,7 @@ public class PaymentStatusCode5Choice {
 		this.settlement = settlement;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public Max4AlphaNumericText getProprietary() {
 		return proprietary;
 	}

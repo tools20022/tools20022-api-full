@@ -33,6 +33,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics of the statement.
@@ -95,6 +99,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Statement14}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Statement41", propOrder = {"reportNumber", "queryReference", "statementIdentification", "statementDateTime", "frequency", "updateType", "statementStructure", "activityIndicator"})
 public class Statement41 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -496,6 +502,7 @@ public class Statement41 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptNb")
 	public Number3Choice getReportNumber() {
 		return reportNumber;
 	}
@@ -504,6 +511,7 @@ public class Statement41 {
 		this.reportNumber = reportNumber;
 	}
 
+	@XmlElement(name = "QryRef")
 	public Max35Text getQueryReference() {
 		return queryReference;
 	}
@@ -512,6 +520,7 @@ public class Statement41 {
 		this.queryReference = queryReference;
 	}
 
+	@XmlElement(name = "StmtId")
 	public Max35Text getStatementIdentification() {
 		return statementIdentification;
 	}
@@ -520,6 +529,7 @@ public class Statement41 {
 		this.statementIdentification = statementIdentification;
 	}
 
+	@XmlElement(name = "StmtDtTm", required = true)
 	public DateAndDateTimeChoice getStatementDateTime() {
 		return statementDateTime;
 	}
@@ -528,6 +538,7 @@ public class Statement41 {
 		this.statementDateTime = statementDateTime;
 	}
 
+	@XmlElement(name = "Frqcy")
 	public Frequency25Choice getFrequency() {
 		return frequency;
 	}
@@ -536,6 +547,7 @@ public class Statement41 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "UpdTp")
 	public UpdateType15Choice getUpdateType() {
 		return updateType;
 	}
@@ -544,6 +556,7 @@ public class Statement41 {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "StmtStr", required = true)
 	public StatementStructure1Code getStatementStructure() {
 		return statementStructure;
 	}
@@ -552,6 +565,7 @@ public class Statement41 {
 		this.statementStructure = statementStructure;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide information concerning the identification
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IdentificationModification1", propOrder = {"identification", "originalPartyAndAccountIdentification", "updatedPartyAndAccountIdentification", "additionalInformation"})
 public class IdentificationModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -295,6 +301,7 @@ public class IdentificationModification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -303,6 +310,7 @@ public class IdentificationModification1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "OrgnlPtyAndAcctId")
 	public IdentificationInformation1 getOriginalPartyAndAccountIdentification() {
 		return originalPartyAndAccountIdentification;
 	}
@@ -311,6 +319,7 @@ public class IdentificationModification1 {
 		this.originalPartyAndAccountIdentification = originalPartyAndAccountIdentification;
 	}
 
+	@XmlElement(name = "UpdtdPtyAndAcctId", required = true)
 	public IdentificationInformation1 getUpdatedPartyAndAccountIdentification() {
 		return updatedPartyAndAccountIdentification;
 	}
@@ -319,6 +328,7 @@ public class IdentificationModification1 {
 		this.updatedPartyAndAccountIdentification = updatedPartyAndAccountIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max140Text getAdditionalInformation() {
 		return additionalInformation;
 	}

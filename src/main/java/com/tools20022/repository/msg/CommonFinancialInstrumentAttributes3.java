@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Tangible items of value to a business.
@@ -218,6 +222,12 @@ import java.util.List;
  * definition} = "Tangible items of value to a business."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CommonFinancialInstrumentAttributes3", propOrder = {"securityStatus", "financialInstrumentName", "denominationCurrency", "certificateNumber", "contractVersionNumber", "couponAttachedNumber", "taxLotNumber", "poolNumber",
+		"coveredIndicator", "legalRestrictions", "positionLimit", "nearTermPositionLimit", "listingDate", "recordDate", "expiryDate", "purpose", "classificationType", "issuance", "tradingMarket", "spreadAndBenchmarkCurve", "putType",
+		"callType", "fungibleIndicator", "confidential", "privatePlacement", "convertibleIndicator", "conversionPeriod", "conversionRatioNumerator", "conversionRatioDenominator", "primaryPlaceOfDeposit", "tradingMethod", "TEFRARule",
+		"serieNumber", "class_", "withholdingTaxRegime", "paymentStatus", "initialPhysicalForm", "afterExchangePhysicalForm", "commonSafekeeper", "redemptionType", "redemptionPaymentCurrency", "restriction",
+		"financialInstrumentIdentificationValidity", "settlementInformation", "financialInstrumentForm", "contactName", "leadManager", "principalPayingAgent", "payingAgent", "depository", "underlyingRisk", "securityCSDLink"})
 public class CommonFinancialInstrumentAttributes3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -2504,6 +2514,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctySts")
 	public SecurityStatus2Choice getSecurityStatus() {
 		return securityStatus;
 	}
@@ -2512,6 +2523,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.securityStatus = securityStatus;
 	}
 
+	@XmlElement(name = "FinInstrmNm")
 	public List<FinancialInstrumentName1> getFinancialInstrumentName() {
 		return financialInstrumentName;
 	}
@@ -2520,6 +2532,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.financialInstrumentName = financialInstrumentName;
 	}
 
+	@XmlElement(name = "DnmtnCcy")
 	public CurrencyCode getDenominationCurrency() {
 		return denominationCurrency;
 	}
@@ -2528,6 +2541,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.denominationCurrency = denominationCurrency;
 	}
 
+	@XmlElement(name = "CertNb")
 	public Max35Text getCertificateNumber() {
 		return certificateNumber;
 	}
@@ -2536,6 +2550,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.certificateNumber = certificateNumber;
 	}
 
+	@XmlElement(name = "CtrctVrsnNb")
 	public Number getContractVersionNumber() {
 		return contractVersionNumber;
 	}
@@ -2544,6 +2559,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.contractVersionNumber = contractVersionNumber;
 	}
 
+	@XmlElement(name = "CpnAttchdNb")
 	public Max3NumericText getCouponAttachedNumber() {
 		return couponAttachedNumber;
 	}
@@ -2552,6 +2568,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.couponAttachedNumber = couponAttachedNumber;
 	}
 
+	@XmlElement(name = "TaxLotNb")
 	public Max15NumericText getTaxLotNumber() {
 		return taxLotNumber;
 	}
@@ -2560,6 +2577,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.taxLotNumber = taxLotNumber;
 	}
 
+	@XmlElement(name = "PoolNb")
 	public Max15NumericText getPoolNumber() {
 		return poolNumber;
 	}
@@ -2568,6 +2586,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.poolNumber = poolNumber;
 	}
 
+	@XmlElement(name = "CvrdInd")
 	public YesNoIndicator getCoveredIndicator() {
 		return coveredIndicator;
 	}
@@ -2576,6 +2595,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.coveredIndicator = coveredIndicator;
 	}
 
+	@XmlElement(name = "LglRstrctns")
 	public LegalRestrictions3Choice getLegalRestrictions() {
 		return legalRestrictions;
 	}
@@ -2584,6 +2604,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.legalRestrictions = legalRestrictions;
 	}
 
+	@XmlElement(name = "PosLmt")
 	public FinancialInstrumentQuantity1Choice getPositionLimit() {
 		return positionLimit;
 	}
@@ -2592,6 +2613,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.positionLimit = positionLimit;
 	}
 
+	@XmlElement(name = "NearTermPosLmt")
 	public FinancialInstrumentQuantity1Choice getNearTermPositionLimit() {
 		return nearTermPositionLimit;
 	}
@@ -2600,6 +2622,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.nearTermPositionLimit = nearTermPositionLimit;
 	}
 
+	@XmlElement(name = "ListgDt")
 	public ISODate getListingDate() {
 		return listingDate;
 	}
@@ -2608,6 +2631,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.listingDate = listingDate;
 	}
 
+	@XmlElement(name = "RcrdDt")
 	public ISODateTime getRecordDate() {
 		return recordDate;
 	}
@@ -2616,6 +2640,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.recordDate = recordDate;
 	}
 
+	@XmlElement(name = "XpryDt")
 	public ISODate getExpiryDate() {
 		return expiryDate;
 	}
@@ -2624,6 +2649,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "Purp")
 	public Max256Text getPurpose() {
 		return purpose;
 	}
@@ -2632,6 +2658,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "ClssfctnTp")
 	public ClassificationType1 getClassificationType() {
 		return classificationType;
 	}
@@ -2640,6 +2667,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.classificationType = classificationType;
 	}
 
+	@XmlElement(name = "Issnc")
 	public Issuance2 getIssuance() {
 		return issuance;
 	}
@@ -2648,6 +2676,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.issuance = issuance;
 	}
 
+	@XmlElement(name = "TradgMkt")
 	public List<TradingParameters1> getTradingMarket() {
 		return tradingMarket;
 	}
@@ -2656,6 +2685,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.tradingMarket = tradingMarket;
 	}
 
+	@XmlElement(name = "SprdAndBchmkCrv")
 	public List<BenchmarkCurve2> getSpreadAndBenchmarkCurve() {
 		return spreadAndBenchmarkCurve;
 	}
@@ -2664,6 +2694,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.spreadAndBenchmarkCurve = spreadAndBenchmarkCurve;
 	}
 
+	@XmlElement(name = "PutTp")
 	public PutType2Choice getPutType() {
 		return putType;
 	}
@@ -2672,6 +2703,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.putType = putType;
 	}
 
+	@XmlElement(name = "CallTp")
 	public CallType2Choice getCallType() {
 		return callType;
 	}
@@ -2680,6 +2712,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.callType = callType;
 	}
 
+	@XmlElement(name = "FngbInd")
 	public YesNoIndicator getFungibleIndicator() {
 		return fungibleIndicator;
 	}
@@ -2688,6 +2721,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.fungibleIndicator = fungibleIndicator;
 	}
 
+	@XmlElement(name = "Cnfdtl")
 	public YesNoIndicator getConfidential() {
 		return confidential;
 	}
@@ -2696,6 +2730,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.confidential = confidential;
 	}
 
+	@XmlElement(name = "PrvtPlcmnt")
 	public YesNoIndicator getPrivatePlacement() {
 		return privatePlacement;
 	}
@@ -2704,6 +2739,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.privatePlacement = privatePlacement;
 	}
 
+	@XmlElement(name = "ConvtblInd")
 	public YesNoIndicator getConvertibleIndicator() {
 		return convertibleIndicator;
 	}
@@ -2712,6 +2748,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.convertibleIndicator = convertibleIndicator;
 	}
 
+	@XmlElement(name = "ConvsPrd")
 	public DateTimePeriodDetails getConversionPeriod() {
 		return conversionPeriod;
 	}
@@ -2720,6 +2757,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.conversionPeriod = conversionPeriod;
 	}
 
+	@XmlElement(name = "ConvsRatioNmrtr")
 	public FinancialInstrumentQuantity1Choice getConversionRatioNumerator() {
 		return conversionRatioNumerator;
 	}
@@ -2728,6 +2766,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.conversionRatioNumerator = conversionRatioNumerator;
 	}
 
+	@XmlElement(name = "ConvsRatioDnmtr")
 	public FinancialInstrumentQuantity1Choice getConversionRatioDenominator() {
 		return conversionRatioDenominator;
 	}
@@ -2736,6 +2775,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.conversionRatioDenominator = conversionRatioDenominator;
 	}
 
+	@XmlElement(name = "PmryPlcOfDpst")
 	public PartyIdentification71Choice getPrimaryPlaceOfDeposit() {
 		return primaryPlaceOfDeposit;
 	}
@@ -2744,6 +2784,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.primaryPlaceOfDeposit = primaryPlaceOfDeposit;
 	}
 
+	@XmlElement(name = "TradgMtd")
 	public UnitOrFaceAmount1Choice getTradingMethod() {
 		return tradingMethod;
 	}
@@ -2752,6 +2793,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.tradingMethod = tradingMethod;
 	}
 
+	@XmlElement(name = "TEFRARule")
 	public TEFRARules2Choice getTEFRARule() {
 		return tEFRARule;
 	}
@@ -2760,6 +2802,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.tEFRARule = tEFRARule;
 	}
 
+	@XmlElement(name = "SrNb")
 	public Max16Text getSerieNumber() {
 		return serieNumber;
 	}
@@ -2768,6 +2811,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.serieNumber = serieNumber;
 	}
 
+	@XmlElement(name = "Clss")
 	public Max16Text getClass_() {
 		return class_;
 	}
@@ -2776,6 +2820,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.class_ = class_;
 	}
 
+	@XmlElement(name = "WhldgTaxRgm")
 	public List<SecurityWithHoldingTax1> getWithholdingTaxRegime() {
 		return withholdingTaxRegime;
 	}
@@ -2784,6 +2829,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.withholdingTaxRegime = withholdingTaxRegime;
 	}
 
+	@XmlElement(name = "PmtSts")
 	public SecuritiesPaymentStatus4Choice getPaymentStatus() {
 		return paymentStatus;
 	}
@@ -2792,6 +2838,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.paymentStatus = paymentStatus;
 	}
 
+	@XmlElement(name = "InitlPhysForm")
 	public InitialPhysicalForm2Choice getInitialPhysicalForm() {
 		return initialPhysicalForm;
 	}
@@ -2800,6 +2847,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.initialPhysicalForm = initialPhysicalForm;
 	}
 
+	@XmlElement(name = "AftrXchgPhysForm")
 	public InitialPhysicalForm1Choice getAfterExchangePhysicalForm() {
 		return afterExchangePhysicalForm;
 	}
@@ -2808,6 +2856,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.afterExchangePhysicalForm = afterExchangePhysicalForm;
 	}
 
+	@XmlElement(name = "CmonSfkpr")
 	public AnyBICIdentifier getCommonSafekeeper() {
 		return commonSafekeeper;
 	}
@@ -2816,6 +2865,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.commonSafekeeper = commonSafekeeper;
 	}
 
+	@XmlElement(name = "RedTp")
 	public MaturityRedemptionType2Choice getRedemptionType() {
 		return redemptionType;
 	}
@@ -2824,6 +2874,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.redemptionType = redemptionType;
 	}
 
+	@XmlElement(name = "RedPmtCcy")
 	public ActiveCurrencyCode getRedemptionPaymentCurrency() {
 		return redemptionPaymentCurrency;
 	}
@@ -2832,6 +2883,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.redemptionPaymentCurrency = redemptionPaymentCurrency;
 	}
 
+	@XmlElement(name = "Rstrctn")
 	public List<SecurityRestriction1> getRestriction() {
 		return restriction;
 	}
@@ -2840,6 +2892,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.restriction = restriction;
 	}
 
+	@XmlElement(name = "FinInstrmIdVldty")
 	public List<FinancialInstrumentIdentificationValidity1> getFinancialInstrumentIdentificationValidity() {
 		return financialInstrumentIdentificationValidity;
 	}
@@ -2848,6 +2901,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.financialInstrumentIdentificationValidity = financialInstrumentIdentificationValidity;
 	}
 
+	@XmlElement(name = "SttlmInf")
 	public List<SettlementInformation4> getSettlementInformation() {
 		return settlementInformation;
 	}
@@ -2856,6 +2910,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.settlementInformation = settlementInformation;
 	}
 
+	@XmlElement(name = "FinInstrmForm")
 	public FinancialInstrumentForm1 getFinancialInstrumentForm() {
 		return financialInstrumentForm;
 	}
@@ -2864,6 +2919,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.financialInstrumentForm = financialInstrumentForm;
 	}
 
+	@XmlElement(name = "CtctNm")
 	public Organisation2 getContactName() {
 		return contactName;
 	}
@@ -2872,6 +2928,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.contactName = contactName;
 	}
 
+	@XmlElement(name = "LeadMgr")
 	public Organisation2 getLeadManager() {
 		return leadManager;
 	}
@@ -2880,6 +2937,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.leadManager = leadManager;
 	}
 
+	@XmlElement(name = "PrncplPngAgt")
 	public Organisation2 getPrincipalPayingAgent() {
 		return principalPayingAgent;
 	}
@@ -2888,6 +2946,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.principalPayingAgent = principalPayingAgent;
 	}
 
+	@XmlElement(name = "PngAgt")
 	public Organisation2 getPayingAgent() {
 		return payingAgent;
 	}
@@ -2896,6 +2955,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.payingAgent = payingAgent;
 	}
 
+	@XmlElement(name = "Dpstry")
 	public Organisation2 getDepository() {
 		return depository;
 	}
@@ -2904,6 +2964,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.depository = depository;
 	}
 
+	@XmlElement(name = "UndrlygRsk")
 	public Organisation2 getUnderlyingRisk() {
 		return underlyingRisk;
 	}
@@ -2912,6 +2973,7 @@ public class CommonFinancialInstrumentAttributes3 {
 		this.underlyingRisk = underlyingRisk;
 	}
 
+	@XmlElement(name = "SctyCSDLk")
 	public List<SecurityCSDLink1> getSecurityCSDLink() {
 		return securityCSDLink;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Authorisation response from the acquirer.
@@ -92,6 +96,8 @@ import java.util.List;
  * CardPaymentTransaction24}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransaction39", propOrder = {"authorisationResult", "transactionVerificationResult", "declinedProductCode", "balance", "protectedBalance", "action", "currencyConversion"})
 public class CardPaymentTransaction39 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -519,6 +525,7 @@ public class CardPaymentTransaction39 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AuthstnRslt", required = true)
 	public AuthorisationResult4 getAuthorisationResult() {
 		return authorisationResult;
 	}
@@ -527,6 +534,7 @@ public class CardPaymentTransaction39 {
 		this.authorisationResult = authorisationResult;
 	}
 
+	@XmlElement(name = "TxVrfctnRslt")
 	public List<TransactionVerificationResult3> getTransactionVerificationResult() {
 		return transactionVerificationResult;
 	}
@@ -535,6 +543,7 @@ public class CardPaymentTransaction39 {
 		this.transactionVerificationResult = transactionVerificationResult;
 	}
 
+	@XmlElement(name = "DclndPdctCd")
 	public List<Max70Text> getDeclinedProductCode() {
 		return declinedProductCode;
 	}
@@ -543,6 +552,7 @@ public class CardPaymentTransaction39 {
 		this.declinedProductCode = declinedProductCode;
 	}
 
+	@XmlElement(name = "Bal")
 	public AmountAndDirection41 getBalance() {
 		return balance;
 	}
@@ -551,6 +561,7 @@ public class CardPaymentTransaction39 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "PrtctdBal")
 	public ContentInformationType10 getProtectedBalance() {
 		return protectedBalance;
 	}
@@ -559,6 +570,7 @@ public class CardPaymentTransaction39 {
 		this.protectedBalance = protectedBalance;
 	}
 
+	@XmlElement(name = "Actn")
 	public List<Action3> getAction() {
 		return action;
 	}
@@ -567,6 +579,7 @@ public class CardPaymentTransaction39 {
 		this.action = action;
 	}
 
+	@XmlElement(name = "CcyConvs")
 	public CurrencyConversion3 getCurrencyConversion() {
 		return currencyConversion;
 	}

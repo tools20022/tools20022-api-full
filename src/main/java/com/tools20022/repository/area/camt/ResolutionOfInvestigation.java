@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.PaymentInstructionExtract;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -80,9 +82,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.029.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -118,6 +117,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.029.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -129,6 +131,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "camt.029.001.01", propOrder = {"assignment", "resolvedCase", "status", "correctionTransaction"})
 public class ResolutionOfInvestigation {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -168,6 +172,14 @@ public class ResolutionOfInvestigation {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ResolutionOfInvestigation.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case resolvedCase;
 	/**
@@ -200,6 +212,14 @@ public class ResolutionOfInvestigation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Case.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ResolutionOfInvestigation.class.getMethod("getResolvedCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestigationStatusChoice status;
@@ -235,6 +255,14 @@ public class ResolutionOfInvestigation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestigationStatusChoice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ResolutionOfInvestigation.class.getMethod("getStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PaymentInstructionExtract correctionTransaction;
@@ -273,6 +301,14 @@ public class ResolutionOfInvestigation {
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentInstructionExtract.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ResolutionOfInvestigation.class.getMethod("getCorrectionTransaction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -286,7 +322,8 @@ public class ResolutionOfInvestigation {
 				xmlTag = "camt.029.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.029.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(ResolutionOfInvestigation.mmAssignment, ResolutionOfInvestigation.mmResolvedCase, ResolutionOfInvestigation.mmStatus, ResolutionOfInvestigation.mmCorrectionTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigation.mmAssignment, com.tools20022.repository.area.camt.ResolutionOfInvestigation.mmResolvedCase,
+						com.tools20022.repository.area.camt.ResolutionOfInvestigation.mmStatus, com.tools20022.repository.area.camt.ResolutionOfInvestigation.mmCorrectionTransaction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -296,10 +333,16 @@ public class ResolutionOfInvestigation {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ResolutionOfInvestigation.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment getAssignment() {
 		return assignment;
 	}
@@ -308,6 +351,7 @@ public class ResolutionOfInvestigation {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "RslvdCase", required = true)
 	public Case getResolvedCase() {
 		return resolvedCase;
 	}
@@ -316,6 +360,7 @@ public class ResolutionOfInvestigation {
 		this.resolvedCase = resolvedCase;
 	}
 
+	@XmlElement(name = "Sts")
 	public InvestigationStatusChoice getStatus() {
 		return status;
 	}
@@ -324,11 +369,18 @@ public class ResolutionOfInvestigation {
 		this.status = status;
 	}
 
+	@XmlElement(name = "CrrctnTx")
 	public PaymentInstructionExtract getCorrectionTransaction() {
 		return correctionTransaction;
 	}
 
 	public void setCorrectionTransaction(PaymentInstructionExtract correctionTransaction) {
 		this.correctionTransaction = correctionTransaction;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.029.01.01")
+	static public class Document {
+		@XmlElement(name = "camt.029.001.01", required = true)
+		public ResolutionOfInvestigation messageBody;
 	}
 }

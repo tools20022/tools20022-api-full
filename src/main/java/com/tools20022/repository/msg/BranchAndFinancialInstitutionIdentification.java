@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Organisation established primarily to provide financial services.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Organisation established primarily to provide financial services."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BranchAndFinancialInstitutionIdentification", propOrder = {"financialInstitutionIdentification", "branchIdentification"})
 public class BranchAndFinancialInstitutionIdentification {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class BranchAndFinancialInstitutionIdentification {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstnId", required = true)
 	public FinancialInstitutionIdentification1 getFinancialInstitutionIdentification() {
 		return financialInstitutionIdentification;
 	}
@@ -191,6 +198,7 @@ public class BranchAndFinancialInstitutionIdentification {
 		this.financialInstitutionIdentification = financialInstitutionIdentification;
 	}
 
+	@XmlElement(name = "BrnchId")
 	public BranchData getBranchIdentification() {
 		return branchIdentification;
 	}

@@ -36,6 +36,17 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingResultDissemination#mmRelatedServicing
+ * MeetingResultDissemination.mmRelatedServicing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingResultDissemination#mmVoteResult
+ * MeetingResultDissemination.mmVoteResult}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -46,17 +57,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.MeetingServicing#mmMeetingResultDissemination
  * MeetingServicing.mmMeetingResultDissemination}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingResultDissemination#mmRelatedServicing
- * MeetingResultDissemination.mmRelatedServicing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingResultDissemination#mmVoteResult
- * MeetingResultDissemination.mmVoteResult}</li>
  * </ul>
  * </li>
  * <li>
@@ -117,7 +117,7 @@ public class MeetingResultDissemination {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedServicing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> MeetingResultDissemination.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingResultDissemination.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedServicing";
@@ -168,7 +168,7 @@ public class MeetingResultDissemination {
 	 */
 	public static final MMBusinessAssociationEnd mmVoteResult = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> MeetingResultDissemination.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingResultDissemination.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteResult";
@@ -188,7 +188,12 @@ public class MeetingResultDissemination {
 				name = "MeetingResultDissemination";
 				definition = "Provides information on the voting results of a shareholders meeting.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.VoteResult.mmVoteDissemination, com.tools20022.repository.entity.MeetingServicing.mmMeetingResultDissemination);
-				element_lazy = () -> Arrays.asList(MeetingResultDissemination.mmRelatedServicing, MeetingResultDissemination.mmVoteResult);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingResultDissemination.mmRelatedServicing, com.tools20022.repository.entity.MeetingResultDissemination.mmVoteResult);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingResultDissemination.class;
 			}
 		});
 		return mmObject_lazy.get();

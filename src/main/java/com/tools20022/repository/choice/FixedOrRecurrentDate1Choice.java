@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DateInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a fixed date and a recurring date.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between a fixed date and a recurring date."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FixedOrRecurrentDate1Choice", propOrder = {"fixedDate", "recurrentDate"})
 public class FixedOrRecurrentDate1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class FixedOrRecurrentDate1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FxdDt", required = true)
 	public ISODate getFixedDate() {
 		return fixedDate;
 	}
@@ -168,6 +175,7 @@ public class FixedOrRecurrentDate1Choice {
 		this.fixedDate = fixedDate;
 	}
 
+	@XmlElement(name = "RcrntDt", required = true)
 	public DateInformation1 getRecurrentDate() {
 		return recurrentDate;
 	}

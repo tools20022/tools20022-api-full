@@ -29,6 +29,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMDecimal#getMinInclusive
+ * minInclusive} = "0"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -64,6 +66,9 @@ public class NonNegativeDecimalNumber {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NonNegativeDecimalNumber";
 				definition = "Number of objects represented as a non negative decimal number, eg, 0.75 or 45.6.";
+				minInclusive = "0";
+				totalDigits = 18;
+				fractionDigits = 17;
 			}
 		});
 		return mmObject_lazy.get();

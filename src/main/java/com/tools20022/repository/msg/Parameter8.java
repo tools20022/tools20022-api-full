@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters of the RSASSA-PSS digital signature algorithm (RSA signature
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Parameter4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Parameter8", propOrder = {"digestAlgorithm", "maskGeneratorAlgorithm", "saltLength", "trailerField"})
 public class Parameter8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -260,6 +266,7 @@ public class Parameter8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DgstAlgo", required = true)
 	public Algorithm11Code getDigestAlgorithm() {
 		return digestAlgorithm;
 	}
@@ -268,6 +275,7 @@ public class Parameter8 {
 		this.digestAlgorithm = digestAlgorithm;
 	}
 
+	@XmlElement(name = "MskGnrtrAlgo", required = true)
 	public AlgorithmIdentification12 getMaskGeneratorAlgorithm() {
 		return maskGeneratorAlgorithm;
 	}
@@ -276,6 +284,7 @@ public class Parameter8 {
 		this.maskGeneratorAlgorithm = maskGeneratorAlgorithm;
 	}
 
+	@XmlElement(name = "SaltLngth", required = true)
 	public Number getSaltLength() {
 		return saltLength;
 	}
@@ -284,6 +293,7 @@ public class Parameter8 {
 		this.saltLength = saltLength;
 	}
 
+	@XmlElement(name = "TrlrFld")
 	public Number getTrailerField() {
 		return trailerField;
 	}

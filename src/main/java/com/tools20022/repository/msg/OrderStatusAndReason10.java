@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status report of a bulk or multiple or switch order that was previously
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * OrderStatusAndReason7}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderStatusAndReason10", propOrder = {"masterReference", "orderStatus", "statusInitiator"})
 public class OrderStatusAndReason10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -253,6 +259,7 @@ public class OrderStatusAndReason10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -261,6 +268,7 @@ public class OrderStatusAndReason10 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrSts", required = true)
 	public OrderStatus3Choice getOrderStatus() {
 		return orderStatus;
 	}
@@ -269,6 +277,7 @@ public class OrderStatusAndReason10 {
 		this.orderStatus = orderStatus;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification113 getStatusInitiator() {
 		return statusInitiator;
 	}

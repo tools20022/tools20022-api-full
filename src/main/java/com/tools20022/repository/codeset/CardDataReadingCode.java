@@ -29,21 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading1Code
- * CardDataReading1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading2Code
- * CardDataReading2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading3Code
- * CardDataReading3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading4Code
- * CardDataReading4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading5Code
- * CardDataReading5Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.CardDataReadingCode#mmTag
@@ -74,6 +59,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CardDataReadingCode#mmUnknown
  * CardDataReadingCode.mmUnknown}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading1Code
+ * CardDataReading1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading2Code
+ * CardDataReading2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading3Code
+ * CardDataReading3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading4Code
+ * CardDataReading4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading5Code
+ * CardDataReading5Code}</li>
  * </ul>
  * </li>
  * <li>

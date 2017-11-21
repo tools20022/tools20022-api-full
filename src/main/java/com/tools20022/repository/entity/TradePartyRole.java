@@ -27,6 +27,7 @@ import com.tools20022.repository.codeset.TradingCapacityCode;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -41,6 +42,55 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.TradePartyRole#mmAccount
+ * TradePartyRole.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradePartyRole#mmTradingPartyCapacity
+ * TradePartyRole.mmTradingPartyCapacity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradePartyRole#mmBuyerOrSeller
+ * TradePartyRole.mmBuyerOrSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradePartyRole#mmTrade
+ * TradePartyRole.mmTrade}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestorRole InvestorRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradeOriginatorRole
+ * TradeOriginatorRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTradePartyRole
+ * SecuritiesTradePartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BuyerRole BuyerRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Borrower Borrower}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SellerRole SellerRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Lender Lender}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradeRegulator
+ * TradeRegulator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Broker Broker}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TreasuryTradePartyRole
+ * TreasuryTradePartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CommercialTradePartyRole
+ * CommercialTradePartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ClearingExceptionPartyRole
+ * ClearingExceptionPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.QualifiedForeignIntermediary
+ * QualifiedForeignIntermediary}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.StockExchange StockExchange}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.SellerBank SellerBank}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BuyerBank BuyerBank}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AllocationPartyRole
+ * AllocationPartyRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -176,55 +226,6 @@ import java.util.List;
  * InvestmentFundRole2Choice.mmProprietary}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvestorRole InvestorRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradeOriginatorRole
- * TradeOriginatorRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTradePartyRole
- * SecuritiesTradePartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BuyerRole BuyerRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Borrower Borrower}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SellerRole SellerRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Lender Lender}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradeRegulator
- * TradeRegulator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Broker Broker}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TreasuryTradePartyRole
- * TreasuryTradePartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CommercialTradePartyRole
- * CommercialTradePartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ClearingExceptionPartyRole
- * ClearingExceptionPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.QualifiedForeignIntermediary
- * QualifiedForeignIntermediary}</li>
- * <li>{@linkplain com.tools20022.repository.entity.StockExchange StockExchange}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.SellerBank SellerBank}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BuyerBank BuyerBank}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AllocationPartyRole
- * AllocationPartyRole}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.TradePartyRole#mmAccount
- * TradePartyRole.mmAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradePartyRole#mmTradingPartyCapacity
- * TradePartyRole.mmTradingPartyCapacity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradePartyRole#mmBuyerOrSeller
- * TradePartyRole.mmBuyerOrSeller}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradePartyRole#mmTrade
- * TradePartyRole.mmTrade}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -263,11 +264,6 @@ public class TradePartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradePartyRole
-	 * TradePartyRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -310,6 +306,11 @@ public class TradePartyRole extends Role {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradePartyRole
+	 * TradePartyRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -327,7 +328,7 @@ public class TradePartyRole extends Role {
 			derivation_lazy = () -> Arrays.asList(Intermediary4.mmAccount, Intermediary10.mmAccount, Intermediary8.mmAccount, Intermediary9.mmAccount, TradeLeg5.mmTradingPartyAccount, TradeLeg6.mmTradingPartyAccount,
 					TradeLeg7.mmTradingPartyAccount, Intermediary16.mmAccount, Intermediary19.mmAccount, Intermediary20.mmAccount, TradeLeg8.mmTradingPartyAccount, TradeLeg10.mmTradingPartyAccount, TradeLeg9.mmTradingPartyAccount,
 					Intermediary39.mmAccount, Intermediary40.mmAccount);
-			elementContext_lazy = () -> TradePartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
@@ -349,11 +350,6 @@ public class TradePartyRole extends Role {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode
 	 * TradingCapacityCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradePartyRole
-	 * TradePartyRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -440,6 +436,11 @@ public class TradePartyRole extends Role {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradePartyRole
+	 * TradePartyRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -457,7 +458,7 @@ public class TradePartyRole extends Role {
 					TransactionDetails3.mmCapacity, SettlementObligation4.mmTradingCapacity, TradeLeg2.mmTradingCapacity, TradeLeg5.mmTradingCapacity, TradeLeg1.mmTradingCapacity, TradeLeg3.mmTradingCapacity, TradeLeg6.mmTradingCapacity,
 					TradeLeg4.mmTradingCapacity, TradeLeg7.mmTradingCapacity, NetPosition2.mmTradingCapacity, Order9.mmTradingCapacity, TradeLeg8.mmTradingCapacity, NetPosition3.mmTradingCapacity, TradeLeg10.mmTradingCapacity,
 					TradeLeg9.mmTradingCapacity, SettlementObligation8.mmTradingCapacity, SecuritiesTransaction1.mmTradingCapacity, Intermediary39.mmTradingPartyCapacity);
-			elementContext_lazy = () -> TradePartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingPartyCapacity";
@@ -465,6 +466,14 @@ public class TradePartyRole extends Role {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradingCapacityCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradePartyRole.class.getMethod("getTradingPartyCapacity", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OptionPartyCode buyerOrSeller;
@@ -478,11 +487,6 @@ public class TradePartyRole extends Role {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OptionPartyCode
 	 * OptionPartyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradePartyRole
-	 * TradePartyRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -515,6 +519,11 @@ public class TradePartyRole extends Role {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradePartyRole
+	 * TradePartyRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -530,7 +539,7 @@ public class TradePartyRole extends Role {
 			derivation_lazy = () -> Arrays.asList(Option1.mmTradingPartyRole, TradePartyIdentification2.mmRole, TradePartyIdentification4.mmBuyerOrSellerIndicator, OptionParty1Choice.mmCode, OptionParty1Choice.mmProprietary,
 					ForeignExchangeSwapTransaction1.mmCounterpartyIdentification, TradePartyIdentification7.mmBuyerOrSellerIndicator, ForeignExchangeSwapTransaction2.mmCounterpartyIdentification,
 					ForeignExchangeSwapTransaction3.mmCounterpartyIdentification);
-			elementContext_lazy = () -> TradePartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuyerOrSeller";
@@ -538,6 +547,14 @@ public class TradePartyRole extends Role {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionPartyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradePartyRole.class.getMethod("getBuyerOrSeller", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Trade> trade;
@@ -575,7 +592,7 @@ public class TradePartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradePartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
@@ -604,12 +621,18 @@ public class TradePartyRole extends Role {
 						TradeRegulator.mmObject(), Broker.mmObject(), TreasuryTradePartyRole.mmObject(), CommercialTradePartyRole.mmObject(), ClearingExceptionPartyRole.mmObject(), QualifiedForeignIntermediary.mmObject(),
 						StockExchange.mmObject(), SellerBank.mmObject(), BuyerBank.mmObject(), AllocationPartyRole.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(TradePartyRole.mmAccount, TradePartyRole.mmTradingPartyCapacity, TradePartyRole.mmBuyerOrSeller, TradePartyRole.mmTrade);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradePartyRole.mmAccount, com.tools20022.repository.entity.TradePartyRole.mmTradingPartyCapacity,
+						com.tools20022.repository.entity.TradePartyRole.mmBuyerOrSeller, com.tools20022.repository.entity.TradePartyRole.mmTrade);
 				derivationComponent_lazy = () -> Arrays.asList(Intermediary4.mmObject(), Intermediary10.mmObject(), ConfirmationPartyDetails4.mmObject(), Intermediary14.mmObject(), ConfirmationPartyDetails2.mmObject(),
 						ConfirmationPartyDetails3.mmObject(), ConfirmationParties3.mmObject(), ConfirmationPartyDetails1.mmObject(), ConfirmationPartyDetails6.mmObject(), ConfirmationParties4.mmObject(),
 						ConfirmationPartyDetails5.mmObject(), ConfirmationParties2.mmObject(), TradePartyIdentification2.mmObject(), TradePartyIdentification3.mmObject(), TradePartyIdentification5.mmObject(), Intermediary8.mmObject(),
 						Intermediary9.mmObject(), TradePartyIdentification1.mmObject(), TradePartyIdentification4.mmObject(), Intermediary16.mmObject(), Intermediary19.mmObject(), Intermediary20.mmObject(), OptionParty1Choice.mmObject(),
 						Intermediary29.mmObject(), TradePartyIdentification7.mmObject(), Intermediary39.mmObject(), Intermediary40.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TradePartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

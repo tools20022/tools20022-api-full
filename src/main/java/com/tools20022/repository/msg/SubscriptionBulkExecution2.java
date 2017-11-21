@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Execution of a subscription order.
@@ -97,6 +101,9 @@ import java.util.List;
  * definition} = "Execution of a subscription order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionBulkExecution2", propOrder = {"placeOfTrade", "orderDateTime", "cancellationRight", "financialInstrumentDetails", "individualExecutionDetails", "requestedSettlementCurrency", "requestedNAVCurrency",
+		"bulkCashSettlementDetails"})
 public class SubscriptionBulkExecution2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -514,6 +521,7 @@ public class SubscriptionBulkExecution2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public CountryCode getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -522,6 +530,7 @@ public class SubscriptionBulkExecution2 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "OrdrDtTm")
 	public ISODateTime getOrderDateTime() {
 		return orderDateTime;
 	}
@@ -530,6 +539,7 @@ public class SubscriptionBulkExecution2 {
 		this.orderDateTime = orderDateTime;
 	}
 
+	@XmlElement(name = "CxlRght")
 	public CancellationRight1 getCancellationRight() {
 		return cancellationRight;
 	}
@@ -538,6 +548,7 @@ public class SubscriptionBulkExecution2 {
 		this.cancellationRight = cancellationRight;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument6 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -546,6 +557,7 @@ public class SubscriptionBulkExecution2 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "IndvExctnDtls", required = true)
 	public List<SubscriptionExecution3> getIndividualExecutionDetails() {
 		return individualExecutionDetails;
 	}
@@ -554,6 +566,7 @@ public class SubscriptionBulkExecution2 {
 		this.individualExecutionDetails = individualExecutionDetails;
 	}
 
+	@XmlElement(name = "ReqdSttlmCcy")
 	public CurrencyCode getRequestedSettlementCurrency() {
 		return requestedSettlementCurrency;
 	}
@@ -562,6 +575,7 @@ public class SubscriptionBulkExecution2 {
 		this.requestedSettlementCurrency = requestedSettlementCurrency;
 	}
 
+	@XmlElement(name = "ReqdNAVCcy")
 	public CurrencyCode getRequestedNAVCurrency() {
 		return requestedNAVCurrency;
 	}
@@ -570,6 +584,7 @@ public class SubscriptionBulkExecution2 {
 		this.requestedNAVCurrency = requestedNAVCurrency;
 	}
 
+	@XmlElement(name = "BlkCshSttlmDtls")
 	public PaymentTransaction16 getBulkCashSettlementDetails() {
 		return bulkCashSettlementDetails;
 	}

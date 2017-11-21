@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money for which goods or services are offered, sold, or bought.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * UnitPrice10}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnitPrice22", propOrder = {"type", "value", "priceMethod", "numberOfDaysAccrued", "taxableIncomePerShare", "taxableIncomePerShareCalculated", "priceDifferenceReason"})
 public class UnitPrice22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -477,6 +483,7 @@ public class UnitPrice22 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TypeOfPrice46Choice getType() {
 		return type;
 	}
@@ -485,6 +492,7 @@ public class UnitPrice22 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public PriceValue1 getValue() {
 		return value;
 	}
@@ -493,6 +501,7 @@ public class UnitPrice22 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "PricMtd")
 	public PriceMethod1Code getPriceMethod() {
 		return priceMethod;
 	}
@@ -501,6 +510,7 @@ public class UnitPrice22 {
 		this.priceMethod = priceMethod;
 	}
 
+	@XmlElement(name = "NbOfDaysAcrd")
 	public Number getNumberOfDaysAccrued() {
 		return numberOfDaysAccrued;
 	}
@@ -509,6 +519,7 @@ public class UnitPrice22 {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
 	}
 
+	@XmlElement(name = "TaxblIncmPerShr")
 	public ActiveCurrencyAnd13DecimalAmount getTaxableIncomePerShare() {
 		return taxableIncomePerShare;
 	}
@@ -517,6 +528,7 @@ public class UnitPrice22 {
 		this.taxableIncomePerShare = taxableIncomePerShare;
 	}
 
+	@XmlElement(name = "TaxblIncmPerShrClctd")
 	public TaxableIncomePerShareCalculated2Choice getTaxableIncomePerShareCalculated() {
 		return taxableIncomePerShareCalculated;
 	}
@@ -525,6 +537,7 @@ public class UnitPrice22 {
 		this.taxableIncomePerShareCalculated = taxableIncomePerShareCalculated;
 	}
 
+	@XmlElement(name = "PricDiffRsn")
 	public Max350Text getPriceDifferenceReason() {
 		return priceDifferenceReason;
 	}

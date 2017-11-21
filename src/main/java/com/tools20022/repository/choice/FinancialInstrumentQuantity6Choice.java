@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between ways to express the quantity of the financial instrument to be
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentQuantity6Choice", propOrder = {"unitsNumber", "percentageOfTotalRedemptionAmount", "netAmount", "grossAmount"})
 public class FinancialInstrumentQuantity6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -338,6 +344,7 @@ public class FinancialInstrumentQuantity6Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -346,6 +353,7 @@ public class FinancialInstrumentQuantity6Choice {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "PctgOfTtlRedAmt", required = true)
 	public PercentageRate getPercentageOfTotalRedemptionAmount() {
 		return percentageOfTotalRedemptionAmount;
 	}
@@ -354,6 +362,7 @@ public class FinancialInstrumentQuantity6Choice {
 		this.percentageOfTotalRedemptionAmount = percentageOfTotalRedemptionAmount;
 	}
 
+	@XmlElement(name = "NetAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
@@ -362,6 +371,7 @@ public class FinancialInstrumentQuantity6Choice {
 		this.netAmount = netAmount;
 	}
 
+	@XmlElement(name = "GrssAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getGrossAmount() {
 		return grossAmount;
 	}

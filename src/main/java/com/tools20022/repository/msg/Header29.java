@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics related to the reject of a transaction.
@@ -91,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Header16}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Header29", propOrder = {"protocolVersion", "exchangeIdentification", "creationDateTime", "initiatingParty", "recipientParty"})
 public class Header29 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -348,6 +354,7 @@ public class Header29 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrtcolVrsn", required = true)
 	public Max6Text getProtocolVersion() {
 		return protocolVersion;
 	}
@@ -356,6 +363,7 @@ public class Header29 {
 		this.protocolVersion = protocolVersion;
 	}
 
+	@XmlElement(name = "XchgId")
 	public Number getExchangeIdentification() {
 		return exchangeIdentification;
 	}
@@ -364,6 +372,7 @@ public class Header29 {
 		this.exchangeIdentification = exchangeIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -372,6 +381,7 @@ public class Header29 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "InitgPty", required = true)
 	public GenericIdentification72 getInitiatingParty() {
 		return initiatingParty;
 	}
@@ -380,6 +390,7 @@ public class Header29 {
 		this.initiatingParty = initiatingParty;
 	}
 
+	@XmlElement(name = "RcptPty")
 	public GenericIdentification93 getRecipientParty() {
 		return recipientParty;
 	}

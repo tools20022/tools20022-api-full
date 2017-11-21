@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Modification on the value of goods and / or services. For example: rebate,
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Adjustment6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Adjustment7", propOrder = {"type", "amountOrPercentage", "direction"})
 public class Adjustment7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -251,6 +257,7 @@ public class Adjustment7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public AdjustmentType1Choice getType() {
 		return type;
 	}
@@ -259,6 +266,7 @@ public class Adjustment7 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "AmtOrPctg", required = true)
 	public AmountOrPercentage2Choice getAmountOrPercentage() {
 		return amountOrPercentage;
 	}
@@ -267,6 +275,7 @@ public class Adjustment7 {
 		this.amountOrPercentage = amountOrPercentage;
 	}
 
+	@XmlElement(name = "Drctn", required = true)
 	public AdjustmentDirection1Code getDirection() {
 		return direction;
 	}

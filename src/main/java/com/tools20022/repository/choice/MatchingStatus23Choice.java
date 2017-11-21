@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.ProprietaryReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of status for the matching.
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * MatchingStatus9Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MatchingStatus23Choice", propOrder = {"matched", "matchedWithTolerance", "matchingAlleged", "unmatched", "proprietaryStatus"})
 public class MatchingStatus23Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -379,6 +385,7 @@ public class MatchingStatus23Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Mtchd", required = true)
 	public ProprietaryReason1 getMatched() {
 		return matched;
 	}
@@ -387,6 +394,7 @@ public class MatchingStatus23Choice {
 		this.matched = matched;
 	}
 
+	@XmlElement(name = "MtchdWthTlrnce", required = true)
 	public ProprietaryReason1 getMatchedWithTolerance() {
 		return matchedWithTolerance;
 	}
@@ -395,6 +403,7 @@ public class MatchingStatus23Choice {
 		this.matchedWithTolerance = matchedWithTolerance;
 	}
 
+	@XmlElement(name = "MtchgAllgd", required = true)
 	public MatchingReason4Choice getMatchingAlleged() {
 		return matchingAlleged;
 	}
@@ -403,6 +412,7 @@ public class MatchingStatus23Choice {
 		this.matchingAlleged = matchingAlleged;
 	}
 
+	@XmlElement(name = "Umtchd", required = true)
 	public MatchingReason1Choice getUnmatched() {
 		return unmatched;
 	}
@@ -411,6 +421,7 @@ public class MatchingStatus23Choice {
 		this.unmatched = unmatched;
 	}
 
+	@XmlElement(name = "PrtrySts")
 	public ProprietaryStatusAndReason1 getProprietaryStatus() {
 		return proprietaryStatus;
 	}

@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -40,9 +42,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.017.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementArchive
@@ -100,6 +99,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.017.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -119,6 +121,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ForwardDataSetSubmissionReportV03", propOrder = {"reportIdentification", "relatedTransactionReferences", "commonSubmissionReference", "submitter", "buyerBank", "sellerBank", "commercialDataSet", "transportDataSet",
+		"insuranceDataSet", "certificateDataSet", "otherCertificateDataSet", "requestForAction"})
 public class ForwardDataSetSubmissionReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -165,6 +170,14 @@ public class ForwardDataSetSubmissionReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardDataSetSubmissionReportV03.class.getMethod("getReportIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<DataSetSubmissionReferences4> relatedTransactionReferences;
 	/**
@@ -210,6 +223,14 @@ public class ForwardDataSetSubmissionReportV03 {
 			nextVersions_lazy = () -> Arrays.asList(ForwardDataSetSubmissionReportV04.mmRelatedTransactionReferences);
 			minOccurs = 1;
 			complexType_lazy = () -> DataSetSubmissionReferences4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardDataSetSubmissionReportV03.class.getMethod("getRelatedTransactionReferences", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation commonSubmissionReference;
@@ -258,6 +279,14 @@ public class ForwardDataSetSubmissionReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardDataSetSubmissionReportV03.class.getMethod("getCommonSubmissionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected BICIdentification1 submitter;
 	/**
@@ -305,6 +334,14 @@ public class ForwardDataSetSubmissionReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardDataSetSubmissionReportV03.class.getMethod("getSubmitter", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected BICIdentification1 buyerBank;
 	/**
@@ -351,6 +388,14 @@ public class ForwardDataSetSubmissionReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardDataSetSubmissionReportV03.class.getMethod("getBuyerBank", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected BICIdentification1 sellerBank;
 	/**
@@ -396,6 +441,14 @@ public class ForwardDataSetSubmissionReportV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardDataSetSubmissionReportV03.class.getMethod("getSellerBank", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CommercialDataSet3 commercialDataSet;
@@ -444,6 +497,14 @@ public class ForwardDataSetSubmissionReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> CommercialDataSet3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardDataSetSubmissionReportV03.class.getMethod("getCommercialDataSet", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransportDataSet3 transportDataSet;
 	/**
@@ -490,6 +551,14 @@ public class ForwardDataSetSubmissionReportV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TransportDataSet3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardDataSetSubmissionReportV03.class.getMethod("getTransportDataSet", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InsuranceDataSet1 insuranceDataSet;
@@ -538,6 +607,14 @@ public class ForwardDataSetSubmissionReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> InsuranceDataSet1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardDataSetSubmissionReportV03.class.getMethod("getInsuranceDataSet", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<CertificateDataSet1> certificateDataSet;
 	/**
@@ -583,6 +660,14 @@ public class ForwardDataSetSubmissionReportV03 {
 			nextVersions_lazy = () -> Arrays.asList(ForwardDataSetSubmissionReportV04.mmCertificateDataSet);
 			minOccurs = 0;
 			complexType_lazy = () -> CertificateDataSet1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardDataSetSubmissionReportV03.class.getMethod("getCertificateDataSet", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<OtherCertificateDataSet1> otherCertificateDataSet;
@@ -630,6 +715,14 @@ public class ForwardDataSetSubmissionReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> OtherCertificateDataSet1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardDataSetSubmissionReportV03.class.getMethod("getOtherCertificateDataSet", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PendingActivity2 requestForAction;
 	/**
@@ -674,6 +767,14 @@ public class ForwardDataSetSubmissionReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardDataSetSubmissionReportV03.class.getMethod("getRequestForAction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -687,10 +788,13 @@ public class ForwardDataSetSubmissionReportV03 {
 				rootElement = "Document";
 				xmlTag = "FwdDataSetSubmissnRpt";
 				businessArea_lazy = () -> TradeServicesManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ForwardDataSetSubmissionReportV03.mmReportIdentification, ForwardDataSetSubmissionReportV03.mmRelatedTransactionReferences,
-						ForwardDataSetSubmissionReportV03.mmCommonSubmissionReference, ForwardDataSetSubmissionReportV03.mmSubmitter, ForwardDataSetSubmissionReportV03.mmBuyerBank, ForwardDataSetSubmissionReportV03.mmSellerBank,
-						ForwardDataSetSubmissionReportV03.mmCommercialDataSet, ForwardDataSetSubmissionReportV03.mmTransportDataSet, ForwardDataSetSubmissionReportV03.mmInsuranceDataSet,
-						ForwardDataSetSubmissionReportV03.mmCertificateDataSet, ForwardDataSetSubmissionReportV03.mmOtherCertificateDataSet, ForwardDataSetSubmissionReportV03.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmReportIdentification,
+						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmRelatedTransactionReferences, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmCommonSubmissionReference,
+						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmSubmitter, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmBuyerBank,
+						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmSellerBank, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmCommercialDataSet,
+						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmTransportDataSet, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmInsuranceDataSet,
+						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmCertificateDataSet, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmOtherCertificateDataSet,
+						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -700,10 +804,16 @@ public class ForwardDataSetSubmissionReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ForwardDataSetSubmissionReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptId", required = true)
 	public MessageIdentification1 getReportIdentification() {
 		return reportIdentification;
 	}
@@ -712,6 +822,7 @@ public class ForwardDataSetSubmissionReportV03 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "RltdTxRefs", required = true)
 	public List<DataSetSubmissionReferences4> getRelatedTransactionReferences() {
 		return relatedTransactionReferences;
 	}
@@ -720,6 +831,7 @@ public class ForwardDataSetSubmissionReportV03 {
 		this.relatedTransactionReferences = relatedTransactionReferences;
 	}
 
+	@XmlElement(name = "CmonSubmissnRef", required = true)
 	public SimpleIdentificationInformation getCommonSubmissionReference() {
 		return commonSubmissionReference;
 	}
@@ -728,6 +840,7 @@ public class ForwardDataSetSubmissionReportV03 {
 		this.commonSubmissionReference = commonSubmissionReference;
 	}
 
+	@XmlElement(name = "Submitr", required = true)
 	public BICIdentification1 getSubmitter() {
 		return submitter;
 	}
@@ -736,6 +849,7 @@ public class ForwardDataSetSubmissionReportV03 {
 		this.submitter = submitter;
 	}
 
+	@XmlElement(name = "BuyrBk", required = true)
 	public BICIdentification1 getBuyerBank() {
 		return buyerBank;
 	}
@@ -744,6 +858,7 @@ public class ForwardDataSetSubmissionReportV03 {
 		this.buyerBank = buyerBank;
 	}
 
+	@XmlElement(name = "SellrBk", required = true)
 	public BICIdentification1 getSellerBank() {
 		return sellerBank;
 	}
@@ -752,6 +867,7 @@ public class ForwardDataSetSubmissionReportV03 {
 		this.sellerBank = sellerBank;
 	}
 
+	@XmlElement(name = "ComrclDataSet")
 	public CommercialDataSet3 getCommercialDataSet() {
 		return commercialDataSet;
 	}
@@ -760,6 +876,7 @@ public class ForwardDataSetSubmissionReportV03 {
 		this.commercialDataSet = commercialDataSet;
 	}
 
+	@XmlElement(name = "TrnsprtDataSet")
 	public TransportDataSet3 getTransportDataSet() {
 		return transportDataSet;
 	}
@@ -768,6 +885,7 @@ public class ForwardDataSetSubmissionReportV03 {
 		this.transportDataSet = transportDataSet;
 	}
 
+	@XmlElement(name = "InsrncDataSet")
 	public InsuranceDataSet1 getInsuranceDataSet() {
 		return insuranceDataSet;
 	}
@@ -776,6 +894,7 @@ public class ForwardDataSetSubmissionReportV03 {
 		this.insuranceDataSet = insuranceDataSet;
 	}
 
+	@XmlElement(name = "CertDataSet")
 	public List<CertificateDataSet1> getCertificateDataSet() {
 		return certificateDataSet;
 	}
@@ -784,6 +903,7 @@ public class ForwardDataSetSubmissionReportV03 {
 		this.certificateDataSet = certificateDataSet;
 	}
 
+	@XmlElement(name = "OthrCertDataSet")
 	public List<OtherCertificateDataSet1> getOtherCertificateDataSet() {
 		return otherCertificateDataSet;
 	}
@@ -792,11 +912,18 @@ public class ForwardDataSetSubmissionReportV03 {
 		this.otherCertificateDataSet = otherCertificateDataSet;
 	}
 
+	@XmlElement(name = "ReqForActn")
 	public PendingActivity2 getRequestForAction() {
 		return requestForAction;
 	}
 
 	public void setRequestForAction(PendingActivity2 requestForAction) {
 		this.requestForAction = requestForAction;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.017.03.03")
+	static public class Document {
+		@XmlElement(name = "FwdDataSetSubmissnRpt", required = true)
+		public ForwardDataSetSubmissionReportV03 messageBody;
 	}
 }

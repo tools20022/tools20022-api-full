@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the securities reference data for the required financial
@@ -94,6 +98,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesReferenceDataReport5", propOrder = {"technicalRecordIdentification", "financialInstrumentGeneralAttributes", "issuer", "tradingVenueRelatedAttributes", "debtInstrumentAttributes",
+		"derivativeInstrumentAttributes", "technicalAttributes"})
 public class SecuritiesReferenceDataReport5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -439,6 +446,7 @@ public class SecuritiesReferenceDataReport5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TechRcrdId")
 	public Max35Text getTechnicalRecordIdentification() {
 		return technicalRecordIdentification;
 	}
@@ -447,6 +455,7 @@ public class SecuritiesReferenceDataReport5 {
 		this.technicalRecordIdentification = technicalRecordIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmGnlAttrbts", required = true)
 	public SecurityInstrumentDescription9 getFinancialInstrumentGeneralAttributes() {
 		return financialInstrumentGeneralAttributes;
 	}
@@ -455,6 +464,7 @@ public class SecuritiesReferenceDataReport5 {
 		this.financialInstrumentGeneralAttributes = financialInstrumentGeneralAttributes;
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public LEIIdentifier getIssuer() {
 		return issuer;
 	}
@@ -463,6 +473,7 @@ public class SecuritiesReferenceDataReport5 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "TradgVnRltdAttrbts", required = true)
 	public List<TradingVenueAttributes1> getTradingVenueRelatedAttributes() {
 		return tradingVenueRelatedAttributes;
 	}
@@ -471,6 +482,7 @@ public class SecuritiesReferenceDataReport5 {
 		this.tradingVenueRelatedAttributes = tradingVenueRelatedAttributes;
 	}
 
+	@XmlElement(name = "DebtInstrmAttrbts")
 	public DebtInstrument2 getDebtInstrumentAttributes() {
 		return debtInstrumentAttributes;
 	}
@@ -479,6 +491,7 @@ public class SecuritiesReferenceDataReport5 {
 		this.debtInstrumentAttributes = debtInstrumentAttributes;
 	}
 
+	@XmlElement(name = "DerivInstrmAttrbts")
 	public DerivativeInstrument5 getDerivativeInstrumentAttributes() {
 		return derivativeInstrumentAttributes;
 	}
@@ -487,6 +500,7 @@ public class SecuritiesReferenceDataReport5 {
 		this.derivativeInstrumentAttributes = derivativeInstrumentAttributes;
 	}
 
+	@XmlElement(name = "TechAttrbts")
 	public RecordTechnicalData3 getTechnicalAttributes() {
 		return technicalAttributes;
 	}

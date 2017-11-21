@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between selected investment plans issued during previous years or the
@@ -66,6 +70,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PreviousYear1Choice", propOrder = {"allPreviousYears", "specificPreviousYears"})
 public class PreviousYear1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class PreviousYear1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AllPrvsYrs", required = true)
 	public PreviousAll getAllPreviousYears() {
 		return allPreviousYears;
 	}
@@ -186,6 +193,7 @@ public class PreviousYear1Choice {
 		this.allPreviousYears = allPreviousYears;
 	}
 
+	@XmlElement(name = "SpcfcPrvsYrs", required = true)
 	public List<ISOYear> getSpecificPreviousYears() {
 		return specificPreviousYears;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the return indicators and the investigation result.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the return indicators and the investigation result."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReturnIndicator1", propOrder = {"responsePeriod", "authorityRequestType", "investigationResult", "additionalInformation"})
 public class ReturnIndicator1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -265,6 +271,7 @@ public class ReturnIndicator1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RspnPrd")
 	public DateOrDateTimePeriodChoice getResponsePeriod() {
 		return responsePeriod;
 	}
@@ -273,6 +280,7 @@ public class ReturnIndicator1 {
 		this.responsePeriod = responsePeriod;
 	}
 
+	@XmlElement(name = "AuthrtyReqTp", required = true)
 	public AuthorityRequestType1 getAuthorityRequestType() {
 		return authorityRequestType;
 	}
@@ -281,6 +289,7 @@ public class ReturnIndicator1 {
 		this.authorityRequestType = authorityRequestType;
 	}
 
+	@XmlElement(name = "InvstgtnRslt", required = true)
 	public InvestigationResult1Choice getInvestigationResult() {
 		return investigationResult;
 	}
@@ -289,6 +298,7 @@ public class ReturnIndicator1 {
 		this.investigationResult = investigationResult;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max500Text getAdditionalInformation() {
 		return additionalInformation;
 	}

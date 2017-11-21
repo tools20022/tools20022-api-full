@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Encrypted data with an encryption key identified with a name.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NamedKeyEncryptedData1", propOrder = {"version", "keyName", "encryptedContent"})
 public class NamedKeyEncryptedData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -211,6 +217,7 @@ public class NamedKeyEncryptedData1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Number getVersion() {
 		return version;
 	}
@@ -219,6 +226,7 @@ public class NamedKeyEncryptedData1 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "KeyNm")
 	public Max140Text getKeyName() {
 		return keyName;
 	}
@@ -227,6 +235,7 @@ public class NamedKeyEncryptedData1 {
 		this.keyName = keyName;
 	}
 
+	@XmlElement(name = "NcrptdCntt", required = true)
 	public EncryptedContent1 getEncryptedContent() {
 		return encryptedContent;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max10Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about funds that have been arrested.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about funds that have been arrested. "</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ArrestedFunds1", propOrder = {"arrestIdentification", "totalAmount", "remainingUnpaidAmount", "arrestedAmount"})
 public class ArrestedFunds1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -245,6 +251,7 @@ public class ArrestedFunds1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ArrstId")
 	public Max10Text getArrestIdentification() {
 		return arrestIdentification;
 	}
@@ -253,6 +260,7 @@ public class ArrestedFunds1 {
 		this.arrestIdentification = arrestIdentification;
 	}
 
+	@XmlElement(name = "TtlAmt")
 	public ActiveCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -261,6 +269,7 @@ public class ArrestedFunds1 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "RmngUnpdAmt", required = true)
 	public ActiveCurrencyAndAmount getRemainingUnpaidAmount() {
 		return remainingUnpaidAmount;
 	}
@@ -269,6 +278,7 @@ public class ArrestedFunds1 {
 		this.remainingUnpaidAmount = remainingUnpaidAmount;
 	}
 
+	@XmlElement(name = "ArrstdAmt")
 	public ActiveCurrencyAndAmount getArrestedAmount() {
 		return arrestedAmount;
 	}

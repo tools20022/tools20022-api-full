@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the interest statement.
@@ -83,6 +87,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestStatement2", propOrder = {"interestPeriod", "totalInterestAmountDueToA", "totalInterestAmountDueToB", "valueDate", "interestPaymentRequestIdentification", "interestCalculationDetails"})
 public class InterestStatement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -438,6 +444,7 @@ public class InterestStatement2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IntrstPrd", required = true)
 	public DatePeriodDetails getInterestPeriod() {
 		return interestPeriod;
 	}
@@ -446,6 +453,7 @@ public class InterestStatement2 {
 		this.interestPeriod = interestPeriod;
 	}
 
+	@XmlElement(name = "TtlIntrstAmtDueToA")
 	public ActiveCurrencyAndAmount getTotalInterestAmountDueToA() {
 		return totalInterestAmountDueToA;
 	}
@@ -454,6 +462,7 @@ public class InterestStatement2 {
 		this.totalInterestAmountDueToA = totalInterestAmountDueToA;
 	}
 
+	@XmlElement(name = "TtlIntrstAmtDueToB")
 	public ActiveCurrencyAndAmount getTotalInterestAmountDueToB() {
 		return totalInterestAmountDueToB;
 	}
@@ -462,6 +471,7 @@ public class InterestStatement2 {
 		this.totalInterestAmountDueToB = totalInterestAmountDueToB;
 	}
 
+	@XmlElement(name = "ValDt", required = true)
 	public ISODate getValueDate() {
 		return valueDate;
 	}
@@ -470,6 +480,7 @@ public class InterestStatement2 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "IntrstPmtReqId")
 	public Max35Text getInterestPaymentRequestIdentification() {
 		return interestPaymentRequestIdentification;
 	}
@@ -478,6 +489,7 @@ public class InterestStatement2 {
 		this.interestPaymentRequestIdentification = interestPaymentRequestIdentification;
 	}
 
+	@XmlElement(name = "IntrstClctnDtls")
 	public List<InterestCalculation2> getInterestCalculationDetails() {
 		return interestCalculationDetails;
 	}

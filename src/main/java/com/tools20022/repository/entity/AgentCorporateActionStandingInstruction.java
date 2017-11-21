@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.StandingSettlementInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CorporateActionStandingInstruction1;
 import com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -43,6 +44,27 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmStandingInstructionType
+ * AgentCorporateActionStandingInstruction.mmStandingInstructionType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmGrossOrNetIndicator
+ * AgentCorporateActionStandingInstruction.mmGrossOrNetIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmRelatedDeliveryInstructions
+ * AgentCorporateActionStandingInstruction.mmRelatedDeliveryInstructions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmSecurity
+ * AgentCorporateActionStandingInstruction.mmSecurity}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction
+ * StandingSettlementInstruction}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -66,27 +88,6 @@ import java.util.List;
  * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmCorporateActionStandingInstruction
  * CorporateActionProceedsDeliveryInstruction.
  * mmCorporateActionStandingInstruction}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction
- * StandingSettlementInstruction}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmStandingInstructionType
- * AgentCorporateActionStandingInstruction.mmStandingInstructionType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmGrossOrNetIndicator
- * AgentCorporateActionStandingInstruction.mmGrossOrNetIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmRelatedDeliveryInstructions
- * AgentCorporateActionStandingInstruction.mmRelatedDeliveryInstructions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmSecurity
- * AgentCorporateActionStandingInstruction.mmSecurity}</li>
  * </ul>
  * </li>
  * <li>
@@ -120,11 +121,6 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.StandingInstructionTypeCode
 	 * StandingInstructionTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction
-	 * AgentCorporateActionStandingInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -134,6 +130,11 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	 * mmStandingInstructionType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction
+	 * AgentCorporateActionStandingInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -148,7 +149,7 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	public static final MMBusinessAttribute mmStandingInstructionType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionStandingInstructionGeneralInformation1.mmStandingInstructionType);
-			elementContext_lazy = () -> AgentCorporateActionStandingInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StandingInstructionType";
@@ -156,6 +157,14 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StandingInstructionTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCorporateActionStandingInstruction.class.getMethod("getStandingInstructionType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected StandingInstructionGrossNetCode grossOrNetIndicator;
@@ -169,11 +178,6 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.StandingInstructionGrossNetCode
 	 * StandingInstructionGrossNetCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction
-	 * AgentCorporateActionStandingInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -182,6 +186,11 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	 * CorporateActionStandingInstruction1.mmNetOrGross}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction
+	 * AgentCorporateActionStandingInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -197,7 +206,7 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	public static final MMBusinessAttribute mmGrossOrNetIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionStandingInstruction1.mmNetOrGross);
-			elementContext_lazy = () -> AgentCorporateActionStandingInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossOrNetIndicator";
@@ -205,6 +214,14 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StandingInstructionGrossNetCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCorporateActionStandingInstruction.class.getMethod("getGrossOrNetIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionProceedsDeliveryInstruction relatedDeliveryInstructions;
@@ -248,7 +265,7 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedDeliveryInstructions = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AgentCorporateActionStandingInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedDeliveryInstructions";
@@ -296,7 +313,7 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AgentCorporateActionStandingInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
@@ -318,9 +335,15 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmCorporateActionStandingInstructions,
 						com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmCorporateActionStandingInstruction);
 				superType_lazy = () -> StandingSettlementInstruction.mmObject();
-				element_lazy = () -> Arrays.asList(AgentCorporateActionStandingInstruction.mmStandingInstructionType, AgentCorporateActionStandingInstruction.mmGrossOrNetIndicator,
-						AgentCorporateActionStandingInstruction.mmRelatedDeliveryInstructions, AgentCorporateActionStandingInstruction.mmSecurity);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmStandingInstructionType,
+						com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmGrossOrNetIndicator, com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmRelatedDeliveryInstructions,
+						com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmSecurity);
 				derivationComponent_lazy = () -> Arrays.asList(CorporateActionStandingInstructionGeneralInformation1.mmObject(), CorporateActionStandingInstruction1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AgentCorporateActionStandingInstruction.class;
 			}
 		});
 		return mmObject_lazy.get();

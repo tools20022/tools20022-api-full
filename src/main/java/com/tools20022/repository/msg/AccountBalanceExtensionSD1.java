@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding account balance. Contains
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountBalanceExtensionSD1", propOrder = {"placeAndName", "transactionPosition", "asOfDate", "deliveryDate", "contraParticipantNumber", "receiverAccountNumber", "delivererAccountNumber"})
 public class AccountBalanceExtensionSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -402,6 +408,7 @@ public class AccountBalanceExtensionSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -410,6 +417,7 @@ public class AccountBalanceExtensionSD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "TxPos")
 	public AdjustedBalanceTypeSD1Choice getTransactionPosition() {
 		return transactionPosition;
 	}
@@ -418,6 +426,7 @@ public class AccountBalanceExtensionSD1 {
 		this.transactionPosition = transactionPosition;
 	}
 
+	@XmlElement(name = "AsOfDt")
 	public ISODate getAsOfDate() {
 		return asOfDate;
 	}
@@ -426,6 +435,7 @@ public class AccountBalanceExtensionSD1 {
 		this.asOfDate = asOfDate;
 	}
 
+	@XmlElement(name = "DlvryDt")
 	public ISODate getDeliveryDate() {
 		return deliveryDate;
 	}
@@ -434,6 +444,7 @@ public class AccountBalanceExtensionSD1 {
 		this.deliveryDate = deliveryDate;
 	}
 
+	@XmlElement(name = "ContraPtcptNb")
 	public Max8Text getContraParticipantNumber() {
 		return contraParticipantNumber;
 	}
@@ -442,6 +453,7 @@ public class AccountBalanceExtensionSD1 {
 		this.contraParticipantNumber = contraParticipantNumber;
 	}
 
+	@XmlElement(name = "RcvrAcctNb")
 	public RestrictedFINXMax35Text getReceiverAccountNumber() {
 		return receiverAccountNumber;
 	}
@@ -450,6 +462,7 @@ public class AccountBalanceExtensionSD1 {
 		this.receiverAccountNumber = receiverAccountNumber;
 	}
 
+	@XmlElement(name = "DlvrrAcctNb")
 	public RestrictedFINXMax35Text getDelivererAccountNumber() {
 		return delivererAccountNumber;
 	}

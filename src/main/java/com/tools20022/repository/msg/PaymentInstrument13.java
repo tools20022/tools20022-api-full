@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instrument used to process a payment instruction.
@@ -81,6 +85,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Instrument used to process a payment instruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstrument13", propOrder = {"settlementCurrency", "dividendPercentage", "subscriptionPaymentInstrument", "redemptionPaymentInstrument", "dividendPaymentInstrument", "savingsPlanPaymentInstrument",
+		"interestPaymentInstrument"})
 public class PaymentInstrument13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -449,6 +456,7 @@ public class PaymentInstrument13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -457,6 +465,7 @@ public class PaymentInstrument13 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "DvddPctg")
 	public PercentageBoundedRate getDividendPercentage() {
 		return dividendPercentage;
 	}
@@ -465,6 +474,7 @@ public class PaymentInstrument13 {
 		this.dividendPercentage = dividendPercentage;
 	}
 
+	@XmlElement(name = "SbcptPmtInstrm")
 	public PaymentInstrument18Choice getSubscriptionPaymentInstrument() {
 		return subscriptionPaymentInstrument;
 	}
@@ -473,6 +483,7 @@ public class PaymentInstrument13 {
 		this.subscriptionPaymentInstrument = subscriptionPaymentInstrument;
 	}
 
+	@XmlElement(name = "RedPmtInstrm")
 	public PaymentInstrument19Choice getRedemptionPaymentInstrument() {
 		return redemptionPaymentInstrument;
 	}
@@ -481,6 +492,7 @@ public class PaymentInstrument13 {
 		this.redemptionPaymentInstrument = redemptionPaymentInstrument;
 	}
 
+	@XmlElement(name = "DvddPmtInstrm")
 	public PaymentInstrument19Choice getDividendPaymentInstrument() {
 		return dividendPaymentInstrument;
 	}
@@ -489,6 +501,7 @@ public class PaymentInstrument13 {
 		this.dividendPaymentInstrument = dividendPaymentInstrument;
 	}
 
+	@XmlElement(name = "SvgsPlanPmtInstrm")
 	public PaymentInstrument18Choice getSavingsPlanPaymentInstrument() {
 		return savingsPlanPaymentInstrument;
 	}
@@ -497,6 +510,7 @@ public class PaymentInstrument13 {
 		this.savingsPlanPaymentInstrument = savingsPlanPaymentInstrument;
 	}
 
+	@XmlElement(name = "IntrstPmtInstrm")
 	public PaymentInstrument19Choice getInterestPaymentInstrument() {
 		return interestPaymentInstrument;
 	}

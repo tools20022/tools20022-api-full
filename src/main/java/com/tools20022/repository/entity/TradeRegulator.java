@@ -63,6 +63,11 @@ public class TradeRegulator extends TradePartyRole {
 				definition = "Institution to which a trade must be reported.";
 				superType_lazy = () -> TradePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TradeRegulator.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

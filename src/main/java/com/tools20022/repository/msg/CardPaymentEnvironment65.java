@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Environment of the transaction given in a response to a request.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentEnvironment46}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentEnvironment65", propOrder = {"acquirerIdentification", "merchantIdentification", "POIIdentification", "card", "paymentToken"})
 public class CardPaymentEnvironment65 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -355,6 +361,7 @@ public class CardPaymentEnvironment65 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcqrrId")
 	public GenericIdentification53 getAcquirerIdentification() {
 		return acquirerIdentification;
 	}
@@ -363,6 +370,7 @@ public class CardPaymentEnvironment65 {
 		this.acquirerIdentification = acquirerIdentification;
 	}
 
+	@XmlElement(name = "MrchntId")
 	public GenericIdentification32 getMerchantIdentification() {
 		return merchantIdentification;
 	}
@@ -371,6 +379,7 @@ public class CardPaymentEnvironment65 {
 		this.merchantIdentification = merchantIdentification;
 	}
 
+	@XmlElement(name = "POIId", required = true)
 	public GenericIdentification32 getPOIIdentification() {
 		return pOIIdentification;
 	}
@@ -379,6 +388,7 @@ public class CardPaymentEnvironment65 {
 		this.pOIIdentification = pOIIdentification;
 	}
 
+	@XmlElement(name = "Card")
 	public PaymentCard27 getCard() {
 		return card;
 	}
@@ -387,6 +397,7 @@ public class CardPaymentEnvironment65 {
 		this.card = card;
 	}
 
+	@XmlElement(name = "PmtTkn")
 	public CardPaymentToken2 getPaymentToken() {
 		return paymentToken;
 	}

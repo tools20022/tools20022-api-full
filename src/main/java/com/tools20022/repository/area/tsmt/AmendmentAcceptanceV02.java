@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.SimpleIdentificationInformation;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -46,9 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.005.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -90,6 +89,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.005.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -101,6 +103,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmendmentAcceptanceV02", propOrder = {"acceptanceIdentification", "transactionIdentification", "submitterTransactionReference", "deltaReportReference", "acceptedAmendmentNumber"})
 public class AmendmentAcceptanceV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -137,6 +141,14 @@ public class AmendmentAcceptanceV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmendmentAcceptanceV02.class.getMethod("getAcceptanceIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -177,6 +189,14 @@ public class AmendmentAcceptanceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmendmentAcceptanceV02.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
@@ -214,6 +234,14 @@ public class AmendmentAcceptanceV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmendmentAcceptanceV02.class.getMethod("getSubmitterTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MessageIdentification1 deltaReportReference;
@@ -253,6 +281,14 @@ public class AmendmentAcceptanceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmendmentAcceptanceV02.class.getMethod("getDeltaReportReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Count1 acceptedAmendmentNumber;
 	/**
@@ -286,6 +322,14 @@ public class AmendmentAcceptanceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> Count1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmendmentAcceptanceV02.class.getMethod("getAcceptedAmendmentNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -298,8 +342,9 @@ public class AmendmentAcceptanceV02 {
 				rootElement = "Document";
 				xmlTag = "AmdmntAccptnc";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AmendmentAcceptanceV02.mmAcceptanceIdentification, AmendmentAcceptanceV02.mmTransactionIdentification, AmendmentAcceptanceV02.mmSubmitterTransactionReference,
-						AmendmentAcceptanceV02.mmDeltaReportReference, AmendmentAcceptanceV02.mmAcceptedAmendmentNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.mmAcceptanceIdentification, com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.mmDeltaReportReference,
+						com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.mmAcceptedAmendmentNumber);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -309,10 +354,16 @@ public class AmendmentAcceptanceV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AmendmentAcceptanceV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AccptncId", required = true)
 	public MessageIdentification1 getAcceptanceIdentification() {
 		return acceptanceIdentification;
 	}
@@ -321,6 +372,7 @@ public class AmendmentAcceptanceV02 {
 		this.acceptanceIdentification = acceptanceIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -329,6 +381,7 @@ public class AmendmentAcceptanceV02 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "SubmitrTxRef")
 	public SimpleIdentificationInformation getSubmitterTransactionReference() {
 		return submitterTransactionReference;
 	}
@@ -337,6 +390,7 @@ public class AmendmentAcceptanceV02 {
 		this.submitterTransactionReference = submitterTransactionReference;
 	}
 
+	@XmlElement(name = "DltaRptRef", required = true)
 	public MessageIdentification1 getDeltaReportReference() {
 		return deltaReportReference;
 	}
@@ -345,11 +399,18 @@ public class AmendmentAcceptanceV02 {
 		this.deltaReportReference = deltaReportReference;
 	}
 
+	@XmlElement(name = "AccptdAmdmntNb", required = true)
 	public Count1 getAcceptedAmendmentNumber() {
 		return acceptedAmendmentNumber;
 	}
 
 	public void setAcceptedAmendmentNumber(Count1 acceptedAmendmentNumber) {
 		this.acceptedAmendmentNumber = acceptedAmendmentNumber;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.005.02.02")
+	static public class Document {
+		@XmlElement(name = "AmdmntAccptnc", required = true)
+		public AmendmentAcceptanceV02 messageBody;
 	}
 }

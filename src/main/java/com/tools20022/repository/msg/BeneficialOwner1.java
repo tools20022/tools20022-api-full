@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the beneficial owner of the securities.
@@ -97,6 +101,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BeneficialOwner1", propOrder = {"beneficialOwnerIdentification", "additionalIdentification", "nationality", "domicileCountry", "nonDomicileCountry", "certificationIndicator", "certificationType", "declarationDetails",
+		"securityIdentification", "electedSecuritiesQuantity"})
 public class BeneficialOwner1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -685,6 +692,7 @@ public class BeneficialOwner1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BnfclOwnrId", required = true)
 	public PartyIdentification2Choice getBeneficialOwnerIdentification() {
 		return beneficialOwnerIdentification;
 	}
@@ -693,6 +701,7 @@ public class BeneficialOwner1 {
 		this.beneficialOwnerIdentification = beneficialOwnerIdentification;
 	}
 
+	@XmlElement(name = "AddtlId")
 	public GenericIdentification16 getAdditionalIdentification() {
 		return additionalIdentification;
 	}
@@ -701,6 +710,7 @@ public class BeneficialOwner1 {
 		this.additionalIdentification = additionalIdentification;
 	}
 
+	@XmlElement(name = "Ntlty")
 	public CountryCode getNationality() {
 		return nationality;
 	}
@@ -709,6 +719,7 @@ public class BeneficialOwner1 {
 		this.nationality = nationality;
 	}
 
+	@XmlElement(name = "DmclCtry")
 	public CountryCode getDomicileCountry() {
 		return domicileCountry;
 	}
@@ -717,6 +728,7 @@ public class BeneficialOwner1 {
 		this.domicileCountry = domicileCountry;
 	}
 
+	@XmlElement(name = "NonDmclCtry")
 	public CountryCode getNonDomicileCountry() {
 		return nonDomicileCountry;
 	}
@@ -725,6 +737,7 @@ public class BeneficialOwner1 {
 		this.nonDomicileCountry = nonDomicileCountry;
 	}
 
+	@XmlElement(name = "CertfctnInd")
 	public YesNoIndicator getCertificationIndicator() {
 		return certificationIndicator;
 	}
@@ -733,6 +746,7 @@ public class BeneficialOwner1 {
 		this.certificationIndicator = certificationIndicator;
 	}
 
+	@XmlElement(name = "CertfctnTp")
 	public BeneficiaryCertificationType1FormatChoice getCertificationType() {
 		return certificationType;
 	}
@@ -741,6 +755,7 @@ public class BeneficialOwner1 {
 		this.certificationType = certificationType;
 	}
 
+	@XmlElement(name = "DclrtnDtls")
 	public Max350Text getDeclarationDetails() {
 		return declarationDetails;
 	}
@@ -749,6 +764,7 @@ public class BeneficialOwner1 {
 		this.declarationDetails = declarationDetails;
 	}
 
+	@XmlElement(name = "SctyId")
 	public SecurityIdentification7 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -757,6 +773,7 @@ public class BeneficialOwner1 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "ElctdSctiesQty", required = true)
 	public UnitOrFaceAmount1Choice getElectedSecuritiesQuantity() {
 		return electedSecuritiesQuantity;
 	}

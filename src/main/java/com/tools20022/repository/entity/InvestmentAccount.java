@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -39,6 +40,70 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentAccountType
+ * InvestmentAccount.mmInvestmentAccountType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmOwnershipType
+ * InvestmentAccount.mmOwnershipType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmDesignation
+ * InvestmentAccount.mmDesignation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmReferenceCurrency
+ * InvestmentAccount.mmReferenceCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentFundClass
+ * InvestmentAccount.mmInvestmentFundClass}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmCashAccount
+ * InvestmentAccount.mmCashAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmSecuritiesAccount
+ * InvestmentAccount.mmSecuritiesAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentFundTax
+ * InvestmentAccount.mmInvestmentFundTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentFundTransaction
+ * InvestmentAccount.mmInvestmentFundTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmSidePocket
+ * InvestmentAccount.mmSidePocket}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentAccountPartyRole
+ * InvestmentAccount.mmInvestmentAccountPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmDebitPortfolioTransfer
+ * InvestmentAccount.mmDebitPortfolioTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmCreditPortfolioTransfer
+ * InvestmentAccount.mmCreditPortfolioTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmAccountForInvestmentFundProcessing
+ * InvestmentAccount.mmAccountForInvestmentFundProcessing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentAccountContract
+ * InvestmentAccount.mmInvestmentAccountContract}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmAccountUsageType
+ * InvestmentAccount.mmAccountUsageType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmCategory
+ * InvestmentAccount.mmCategory}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmPortfolio
+ * InvestmentAccount.mmPortfolio}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmRelatedPortfolioTransfer
+ * InvestmentAccount.mmRelatedPortfolioTransfer}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -409,70 +474,6 @@ import java.util.List;
  * InvestmentAccount62.mmAccountUsageType}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentAccountType
- * InvestmentAccount.mmInvestmentAccountType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmOwnershipType
- * InvestmentAccount.mmOwnershipType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmDesignation
- * InvestmentAccount.mmDesignation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmReferenceCurrency
- * InvestmentAccount.mmReferenceCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentFundClass
- * InvestmentAccount.mmInvestmentFundClass}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmCashAccount
- * InvestmentAccount.mmCashAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmSecuritiesAccount
- * InvestmentAccount.mmSecuritiesAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentFundTax
- * InvestmentAccount.mmInvestmentFundTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentFundTransaction
- * InvestmentAccount.mmInvestmentFundTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmSidePocket
- * InvestmentAccount.mmSidePocket}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentAccountPartyRole
- * InvestmentAccount.mmInvestmentAccountPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmDebitPortfolioTransfer
- * InvestmentAccount.mmDebitPortfolioTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmCreditPortfolioTransfer
- * InvestmentAccount.mmCreditPortfolioTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmAccountForInvestmentFundProcessing
- * InvestmentAccount.mmAccountForInvestmentFundProcessing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentAccountContract
- * InvestmentAccount.mmInvestmentAccountContract}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmAccountUsageType
- * InvestmentAccount.mmAccountUsageType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmCategory
- * InvestmentAccount.mmCategory}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmPortfolio
- * InvestmentAccount.mmPortfolio}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmRelatedPortfolioTransfer
- * InvestmentAccount.mmRelatedPortfolioTransfer}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -505,11 +506,6 @@ public class InvestmentAccount extends Account {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode
 	 * FundCashAccountCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
-	 * InvestmentAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -582,6 +578,11 @@ public class InvestmentAccount extends Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
+	 * InvestmentAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -601,7 +602,7 @@ public class InvestmentAccount extends Account {
 					InvestmentAccount18.mmExtendedType, InvestmentAccount28.mmType, InvestmentAccount28.mmExtendedType, InvestmentAccount16.mmType, InvestmentAccount16.mmExtendedType, InvestmentAccount26.mmType,
 					InvestmentAccount26.mmExtendedType, CashAccountType1.mmStructured, InvestmentAccount15.mmType, InvestmentAccount20.mmType, InvestmentAccount20.mmExtendedType, AccountType2Choice.mmCode, AccountType2Choice.mmProprietary,
 					InvestmentAccount60.mmType);
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccountType";
@@ -609,6 +610,14 @@ public class InvestmentAccount extends Account {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FundCashAccountCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentAccount.class.getMethod("getInvestmentAccountType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AccountOwnershipTypeCode ownershipType;
@@ -622,11 +631,6 @@ public class InvestmentAccount extends Account {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AccountOwnershipTypeCode
 	 * AccountOwnershipTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
-	 * InvestmentAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -723,6 +727,11 @@ public class InvestmentAccount extends Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
+	 * InvestmentAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -741,7 +750,7 @@ public class InvestmentAccount extends Account {
 					InvestmentAccount26.mmOwnershipType, InvestmentAccount26.mmExtendedOwnershipType, InvestmentAccount34.mmOwnershipType, InvestmentAccount38.mmOwnershipType, InvestmentAccount37.mmOwnershipType,
 					InvestmentAccount39.mmOwnershipType, InvestmentAccount46.mmOwnershipType, InvestmentAccount47.mmOwnershipType, InvestmentAccount49.mmOwnershipType, InvestmentAccount51.mmOwnershipType,
 					InvestmentAccount50.mmOwnershipType, OwnershipType2Choice.mmCode, OwnershipType2Choice.mmProprietary, InvestmentAccount61.mmOwnershipType, InvestmentAccount63.mmOwnershipType, InvestmentAccount62.mmOwnershipType);
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OwnershipType";
@@ -749,6 +758,14 @@ public class InvestmentAccount extends Account {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountOwnershipTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentAccount.class.getMethod("getOwnershipType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max70Text designation;
@@ -765,11 +782,6 @@ public class InvestmentAccount extends Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
-	 * InvestmentAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -942,6 +954,11 @@ public class InvestmentAccount extends Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
+	 * InvestmentAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -967,7 +984,7 @@ public class InvestmentAccount extends Account {
 					InvestmentAccount50.mmDesignation, InvestmentAccount56.mmAccountDesignation, InvestmentAccount52.mmDesignation, InvestmentAccount55.mmAccountDesignation, InvestmentAccount53.mmAccountDesignation,
 					InvestmentAccount57.mmAccountDesignation, SecuritiesAccount33.mmDesignation, InvestmentAccount61.mmDesignation, InvestmentAccount63.mmDesignation, InvestmentAccount62.mmDesignation,
 					InvestmentAccount58.mmAccountDesignation, SubAccount6.mmAccountDesignation, InvestmentAccount64.mmDesignation);
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Designation";
@@ -975,6 +992,14 @@ public class InvestmentAccount extends Account {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentAccount.class.getMethod("getDesignation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyCode referenceCurrency;
@@ -988,11 +1013,6 @@ public class InvestmentAccount extends Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
-	 * InvestmentAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1059,6 +1079,11 @@ public class InvestmentAccount extends Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
+	 * InvestmentAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1078,7 +1103,7 @@ public class InvestmentAccount extends Account {
 					InvestmentAccount38.mmReferenceCurrency, InvestmentAccount37.mmReferenceCurrency, InvestmentAccount39.mmReferenceCurrency, InvestmentAccount46.mmReferenceCurrency, InvestmentAccount47.mmReferenceCurrency,
 					InvestmentAccount49.mmReferenceCurrency, InvestmentAccount51.mmReferenceCurrency, InvestmentAccount50.mmReferenceCurrency, InvestmentAccount61.mmReferenceCurrency, InvestmentAccount63.mmReferenceCurrency,
 					InvestmentAccount62.mmReferenceCurrency);
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReferenceCurrency";
@@ -1086,6 +1111,14 @@ public class InvestmentAccount extends Account {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentAccount.class.getMethod("getReferenceCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.InvestmentFundClass> investmentFundClass;
@@ -1106,11 +1139,6 @@ public class InvestmentAccount extends Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentFundClass
 	 * InvestmentFundClass}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
-	 * InvestmentAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1195,6 +1223,11 @@ public class InvestmentAccount extends Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
+	 * InvestmentAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1213,7 +1246,7 @@ public class InvestmentAccount extends Account {
 					InvestmentAccount44.mmSecurityDetails, InvestmentAccount46.mmFundsDetails, InvestmentAccount47.mmModifiedFundDetails, InvestmentAccount49.mmFinancialInstrumentDetails,
 					InvestmentAccount51.mmModifiedFinancialInstrumentDetails, InvestmentAccount50.mmFinancialInstrumentDetails, InvestmentAccount52.mmSecurityDetails, InvestmentAccount61.mmFinancialInstrumentDetails,
 					InvestmentAccount63.mmModifiedFinancialInstrumentDetails, InvestmentAccount62.mmFinancialInstrumentDetails, InvestmentAccount64.mmSecurityDetails);
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundClass";
@@ -1242,11 +1275,6 @@ public class InvestmentAccount extends Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
-	 * InvestmentAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1303,6 +1331,11 @@ public class InvestmentAccount extends Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
+	 * InvestmentAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1320,7 +1353,7 @@ public class InvestmentAccount extends Account {
 					ISATransfer9.mmCashAccount, PaymentInstrument11Choice.mmCashAccountDetails, PaymentInstrument12Choice.mmCashAccountDetails, PaymentInstrument13Choice.mmCashAccountDetails, PaymentInstrument14Choice.mmCashAccountDetails,
 					InvestmentAccount38.mmCashAccount, ISATransfer12.mmCashAccount, ISATransfer19.mmCashAccount, InvestmentAccount46.mmCashAccount, ISATransfer24.mmCashAccount, PaymentInstrument21Choice.mmCashAccountDetails,
 					PaymentInstrument20Choice.mmCashAccountDetails);
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
@@ -1350,11 +1383,6 @@ public class InvestmentAccount extends Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesAccount
 	 * SecuritiesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
-	 * InvestmentAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1379,6 +1407,11 @@ public class InvestmentAccount extends Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
+	 * InvestmentAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1395,7 +1428,7 @@ public class InvestmentAccount extends Account {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentAccount17.mmSecuritiesAccount, InvestmentAccount27.mmSecuritiesAccount, InvestmentAccount35.mmSecuritiesAccount, InvestmentAccount30.mmAccount,
 					InvestmentAccount38.mmSecuritiesAccount, InvestmentAccount46.mmSecuritiesAccount);
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesAccount";
@@ -1424,11 +1457,6 @@ public class InvestmentAccount extends Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentFundTax
 	 * InvestmentFundTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
-	 * InvestmentAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1477,6 +1505,11 @@ public class InvestmentAccount extends Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
+	 * InvestmentAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1492,7 +1525,7 @@ public class InvestmentAccount extends Account {
 			derivation_lazy = () -> Arrays.asList(InvestmentAccount35.mmTaxExemption, InvestmentAccount36.mmTaxExemption, InvestmentAccount34.mmTaxExemption, InvestmentAccount38.mmTaxExemption, InvestmentAccount37.mmTaxExemption,
 					InvestmentAccount39.mmTaxExemption, InvestmentAccount46.mmTaxExemption, InvestmentAccount47.mmTaxExemption, InvestmentAccount49.mmTaxExemption, InvestmentAccount51.mmTaxExemption, InvestmentAccount50.mmTaxExemption,
 					InvestmentAccount61.mmTaxExemption, InvestmentAccount63.mmTaxExemption, InvestmentAccount62.mmTaxExemption);
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundTax";
@@ -1522,11 +1555,6 @@ public class InvestmentAccount extends Account {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction
 	 * InvestmentFundTransaction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
-	 * InvestmentAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1551,6 +1579,11 @@ public class InvestmentAccount extends Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
+	 * InvestmentAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1566,7 +1599,7 @@ public class InvestmentAccount extends Account {
 		{
 			derivation_lazy = () -> Arrays.asList(SubAccountIdentification4.mmTransactionOnSubAccount, StatementOfInvestmentFundTransactions1.mmTransactionOnAccount, SubAccountIdentification6.mmTransactionOnSubAccount,
 					StatementOfInvestmentFundTransactions2.mmTransactionOnAccount, SubAccountIdentification36.mmTransactionOnSubAccount, StatementOfInvestmentFundTransactions3.mmTransactionOnAccount);
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundTransaction";
@@ -1595,11 +1628,6 @@ public class InvestmentAccount extends Account {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SidePocket
 	 * SidePocket}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
-	 * InvestmentAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1618,6 +1646,11 @@ public class InvestmentAccount extends Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
+	 * InvestmentAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1632,7 +1665,7 @@ public class InvestmentAccount extends Account {
 	public static final MMBusinessAssociationEnd mmSidePocket = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(RedemptionExecution10.mmSidePocketDetails, RedemptionOrder9.mmSidePocketDetails, SubscriptionExecution7.mmSidePocketDetails, SubscriptionOrder9.mmSidePocketDetails);
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocket";
@@ -1683,7 +1716,7 @@ public class InvestmentAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentAccountPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccountPartyRole";
@@ -1731,7 +1764,7 @@ public class InvestmentAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmDebitPortfolioTransfer = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitPortfolioTransfer";
@@ -1781,7 +1814,7 @@ public class InvestmentAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmCreditPortfolioTransfer = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditPortfolioTransfer";
@@ -1829,7 +1862,7 @@ public class InvestmentAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmAccountForInvestmentFundProcessing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountForInvestmentFundProcessing";
@@ -1860,11 +1893,6 @@ public class InvestmentAccount extends Account {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountContract
 	 * InvestmentAccountContract}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
-	 * InvestmentAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1919,6 +1947,11 @@ public class InvestmentAccount extends Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
+	 * InvestmentAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1935,7 +1968,7 @@ public class InvestmentAccount extends Account {
 					SubscriptionOrder7.mmLetterIntentReference, SubscriptionOrder4.mmLetterIntentReference, SubscriptionOrder6.mmLetterIntentReference, SubscriptionExecution4.mmLetterIntentReference,
 					SubscriptionExecution6.mmLetterIntentReference, SubscriptionOrder8.mmLetterIntentReference, RedemptionExecution10.mmLetterIntentReference, SubscriptionExecution7.mmLetterIntentReference,
 					SubscriptionExecution13.mmLetterIntentReference, SubscriptionExecution12.mmLetterIntentReference, SubscriptionOrder15.mmLetterIntentReference, SubscriptionOrder14.mmLetterIntentReference);
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccountContract";
@@ -1979,7 +2012,7 @@ public class InvestmentAccount extends Account {
 	 */
 	public static final MMBusinessAttribute mmAccountUsageType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountUsageType";
@@ -1987,6 +2020,14 @@ public class InvestmentAccount extends Account {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountUsageTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentAccount.class.getMethod("getAccountUsageType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentAccountCategoryCode category;
@@ -2000,11 +2041,6 @@ public class InvestmentAccount extends Account {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestmentAccountCategoryCode
 	 * InvestmentAccountCategoryCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
-	 * InvestmentAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2050,6 +2086,11 @@ public class InvestmentAccount extends Account {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount
+	 * InvestmentAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2066,7 +2107,7 @@ public class InvestmentAccount extends Account {
 					InvestmentAccountCategory1Choice.mmProprietary, InvestmentAccount46.mmInvestmentAccountCategory, InvestmentAccount47.mmInvestmentAccountCategory, InvestmentAccount49.mmInvestmentAccountCategory,
 					InvestmentAccount51.mmInvestmentAccountCategory, InvestmentAccount50.mmInvestmentAccountCategory, InvestmentAccount61.mmInvestmentAccountCategory, InvestmentAccount63.mmInvestmentAccountCategory,
 					InvestmentAccount62.mmInvestmentAccountCategory);
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Category";
@@ -2074,6 +2115,14 @@ public class InvestmentAccount extends Account {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentAccountCategoryCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentAccount.class.getMethod("getCategory", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Portfolio portfolio;
@@ -2112,7 +2161,7 @@ public class InvestmentAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmPortfolio = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Portfolio";
@@ -2160,7 +2209,7 @@ public class InvestmentAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPortfolioTransfer = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentAccount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPortfolioTransfer";
@@ -2201,11 +2250,14 @@ public class InvestmentAccount extends Account {
 						TransferOut16.mmAccountDetails, AccountUsageType2Choice.mmCode, AccountUsageType2Choice.mmProprietary, InvestmentAccount61.mmType, InvestmentAccount61.mmAccountUsageType,
 						AccountSelection2Choice.mmOtherAccountSelectionData, InvestmentAccount63.mmType, InvestmentAccount63.mmAccountUsageType, InvestmentAccount62.mmType, InvestmentAccount62.mmAccountUsageType);
 				superType_lazy = () -> Account.mmObject();
-				element_lazy = () -> Arrays.asList(InvestmentAccount.mmInvestmentAccountType, InvestmentAccount.mmOwnershipType, InvestmentAccount.mmDesignation, InvestmentAccount.mmReferenceCurrency,
-						InvestmentAccount.mmInvestmentFundClass, InvestmentAccount.mmCashAccount, InvestmentAccount.mmSecuritiesAccount, InvestmentAccount.mmInvestmentFundTax, InvestmentAccount.mmInvestmentFundTransaction,
-						InvestmentAccount.mmSidePocket, InvestmentAccount.mmInvestmentAccountPartyRole, InvestmentAccount.mmDebitPortfolioTransfer, InvestmentAccount.mmCreditPortfolioTransfer,
-						InvestmentAccount.mmAccountForInvestmentFundProcessing, InvestmentAccount.mmInvestmentAccountContract, InvestmentAccount.mmAccountUsageType, InvestmentAccount.mmCategory, InvestmentAccount.mmPortfolio,
-						InvestmentAccount.mmRelatedPortfolioTransfer);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccount.mmInvestmentAccountType, com.tools20022.repository.entity.InvestmentAccount.mmOwnershipType,
+						com.tools20022.repository.entity.InvestmentAccount.mmDesignation, com.tools20022.repository.entity.InvestmentAccount.mmReferenceCurrency, com.tools20022.repository.entity.InvestmentAccount.mmInvestmentFundClass,
+						com.tools20022.repository.entity.InvestmentAccount.mmCashAccount, com.tools20022.repository.entity.InvestmentAccount.mmSecuritiesAccount, com.tools20022.repository.entity.InvestmentAccount.mmInvestmentFundTax,
+						com.tools20022.repository.entity.InvestmentAccount.mmInvestmentFundTransaction, com.tools20022.repository.entity.InvestmentAccount.mmSidePocket,
+						com.tools20022.repository.entity.InvestmentAccount.mmInvestmentAccountPartyRole, com.tools20022.repository.entity.InvestmentAccount.mmDebitPortfolioTransfer,
+						com.tools20022.repository.entity.InvestmentAccount.mmCreditPortfolioTransfer, com.tools20022.repository.entity.InvestmentAccount.mmAccountForInvestmentFundProcessing,
+						com.tools20022.repository.entity.InvestmentAccount.mmInvestmentAccountContract, com.tools20022.repository.entity.InvestmentAccount.mmAccountUsageType, com.tools20022.repository.entity.InvestmentAccount.mmCategory,
+						com.tools20022.repository.entity.InvestmentAccount.mmPortfolio, com.tools20022.repository.entity.InvestmentAccount.mmRelatedPortfolioTransfer);
 				derivationComponent_lazy = () -> Arrays.asList(InvestmentAccount17.mmObject(), InvestmentAccount27.mmObject(), AccountType1Choice.mmObject(), OwnershipType1Choice.mmObject(), AccountUsageType1Choice.mmObject(),
 						InvestmentAccount35.mmObject(), InvestmentAccountType1Choice.mmObject(), Account5.mmObject(), Account6.mmObject(), InvestmentAccount19.mmObject(), InvestmentAccountSelection1.mmObject(),
 						InvestmentAccount18.mmObject(), InvestmentAccount29.mmObject(), InvestmentAccountSelection2.mmObject(), InvestmentAccount28.mmObject(), InvestmentAccount36.mmObject(), InvestmentAccount16.mmObject(),
@@ -2218,6 +2270,11 @@ public class InvestmentAccount extends Account {
 						InvestmentAccount50.mmObject(), InvestmentAccount56.mmObject(), InvestmentAccount52.mmObject(), AccountType2Choice.mmObject(), InvestmentAccount55.mmObject(), InvestmentAccount53.mmObject(),
 						InvestmentAccount57.mmObject(), AccountUsageType2Choice.mmObject(), OwnershipType2Choice.mmObject(), InvestmentAccount61.mmObject(), InvestmentAccount63.mmObject(), InvestmentAccount62.mmObject(),
 						InvestmentAccount58.mmObject(), InvestmentAccount64.mmObject(), InvestmentAccount60.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvestmentAccount.class;
 			}
 		});
 		return mmObject_lazy.get();

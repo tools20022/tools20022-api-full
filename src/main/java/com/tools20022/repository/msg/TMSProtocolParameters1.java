@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Configuration parameters of the TMS protocol between a POI and a terminal
@@ -92,6 +96,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TMSProtocolParameters1", propOrder = {"terminalManagerIdentification", "maintenanceService", "version", "applicationIdentification", "hostAddress", "hostKey", "POIIdentification", "initiatingPartyIdentification",
+		"recipientPartyIdentification"})
 public class TMSProtocolParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -554,6 +561,7 @@ public class TMSProtocolParameters1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TermnlMgrId", required = true)
 	public GenericIdentification71 getTerminalManagerIdentification() {
 		return terminalManagerIdentification;
 	}
@@ -562,6 +570,7 @@ public class TMSProtocolParameters1 {
 		this.terminalManagerIdentification = terminalManagerIdentification;
 	}
 
+	@XmlElement(name = "MntncSvc", required = true)
 	public List<DataSetCategory5Code> getMaintenanceService() {
 		return maintenanceService;
 	}
@@ -570,6 +579,7 @@ public class TMSProtocolParameters1 {
 		this.maintenanceService = maintenanceService;
 	}
 
+	@XmlElement(name = "Vrsn", required = true)
 	public Max256Text getVersion() {
 		return version;
 	}
@@ -578,6 +588,7 @@ public class TMSProtocolParameters1 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "ApplId")
 	public List<Max35Text> getApplicationIdentification() {
 		return applicationIdentification;
 	}
@@ -586,6 +597,7 @@ public class TMSProtocolParameters1 {
 		this.applicationIdentification = applicationIdentification;
 	}
 
+	@XmlElement(name = "HstAdr")
 	public NetworkParameters3 getHostAddress() {
 		return hostAddress;
 	}
@@ -594,6 +606,7 @@ public class TMSProtocolParameters1 {
 		this.hostAddress = hostAddress;
 	}
 
+	@XmlElement(name = "HstKey")
 	public List<KEKIdentifier2> getHostKey() {
 		return hostKey;
 	}
@@ -602,6 +615,7 @@ public class TMSProtocolParameters1 {
 		this.hostKey = hostKey;
 	}
 
+	@XmlElement(name = "POIId")
 	public Max35Text getPOIIdentification() {
 		return pOIIdentification;
 	}
@@ -610,6 +624,7 @@ public class TMSProtocolParameters1 {
 		this.pOIIdentification = pOIIdentification;
 	}
 
+	@XmlElement(name = "InitgPtyId")
 	public Max35Text getInitiatingPartyIdentification() {
 		return initiatingPartyIdentification;
 	}
@@ -618,6 +633,7 @@ public class TMSProtocolParameters1 {
 		this.initiatingPartyIdentification = initiatingPartyIdentification;
 	}
 
+	@XmlElement(name = "RcptPtyId")
 	public Max35Text getRecipientPartyIdentification() {
 		return recipientPartyIdentification;
 	}

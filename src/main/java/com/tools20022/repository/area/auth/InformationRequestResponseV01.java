@@ -28,9 +28,11 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.ReturnIndicator1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.AuthoritiesFinancialInvestigationsISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * This message is sent by the financial institution to the authorities (police,
@@ -46,9 +48,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.002.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -90,6 +89,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.002.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -101,6 +103,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InformationRequestResponseV01", propOrder = {"responseIdentification", "investigationIdentification", "responseStatus", "searchCriteria", "returnIndicator", "supplementaryData"})
 public class InformationRequestResponseV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -140,6 +144,14 @@ public class InformationRequestResponseV01 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationRequestResponseV01.class.getMethod("getResponseIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max35Text investigationIdentification;
 	/**
@@ -177,6 +189,14 @@ public class InformationRequestResponseV01 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationRequestResponseV01.class.getMethod("getInvestigationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected StatusResponse1Code responseStatus;
 	/**
@@ -211,6 +231,14 @@ public class InformationRequestResponseV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatusResponse1Code.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationRequestResponseV01.class.getMethod("getResponseStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SearchCriteria1Choice searchCriteria;
@@ -251,6 +279,14 @@ public class InformationRequestResponseV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> SearchCriteria1Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationRequestResponseV01.class.getMethod("getSearchCriteria", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ReturnIndicator1> returnIndicator;
 	/**
@@ -285,6 +321,14 @@ public class InformationRequestResponseV01 {
 			definition = "Provides the return indicators and the investigation result.";
 			minOccurs = 1;
 			complexType_lazy = () -> ReturnIndicator1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationRequestResponseV01.class.getMethod("getReturnIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -323,6 +367,14 @@ public class InformationRequestResponseV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationRequestResponseV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -335,8 +387,10 @@ public class InformationRequestResponseV01 {
 				rootElement = "Document";
 				xmlTag = "InfReqRspn";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(InformationRequestResponseV01.mmResponseIdentification, InformationRequestResponseV01.mmInvestigationIdentification, InformationRequestResponseV01.mmResponseStatus,
-						InformationRequestResponseV01.mmSearchCriteria, InformationRequestResponseV01.mmReturnIndicator, InformationRequestResponseV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InformationRequestResponseV01.mmResponseIdentification,
+						com.tools20022.repository.area.auth.InformationRequestResponseV01.mmInvestigationIdentification, com.tools20022.repository.area.auth.InformationRequestResponseV01.mmResponseStatus,
+						com.tools20022.repository.area.auth.InformationRequestResponseV01.mmSearchCriteria, com.tools20022.repository.area.auth.InformationRequestResponseV01.mmReturnIndicator,
+						com.tools20022.repository.area.auth.InformationRequestResponseV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -346,10 +400,16 @@ public class InformationRequestResponseV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InformationRequestResponseV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RspnId", required = true)
 	public Max35Text getResponseIdentification() {
 		return responseIdentification;
 	}
@@ -358,6 +418,7 @@ public class InformationRequestResponseV01 {
 		this.responseIdentification = responseIdentification;
 	}
 
+	@XmlElement(name = "InvstgtnId", required = true)
 	public Max35Text getInvestigationIdentification() {
 		return investigationIdentification;
 	}
@@ -366,6 +427,7 @@ public class InformationRequestResponseV01 {
 		this.investigationIdentification = investigationIdentification;
 	}
 
+	@XmlElement(name = "RspnSts", required = true)
 	public StatusResponse1Code getResponseStatus() {
 		return responseStatus;
 	}
@@ -374,6 +436,7 @@ public class InformationRequestResponseV01 {
 		this.responseStatus = responseStatus;
 	}
 
+	@XmlElement(name = "SchCrit", required = true)
 	public SearchCriteria1Choice getSearchCriteria() {
 		return searchCriteria;
 	}
@@ -382,6 +445,7 @@ public class InformationRequestResponseV01 {
 		this.searchCriteria = searchCriteria;
 	}
 
+	@XmlElement(name = "RtrInd", required = true)
 	public List<ReturnIndicator1> getReturnIndicator() {
 		return returnIndicator;
 	}
@@ -390,11 +454,18 @@ public class InformationRequestResponseV01 {
 		this.returnIndicator = returnIndicator;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.002.01.01")
+	static public class Document {
+		@XmlElement(name = "InfReqRspn", required = true)
+		public InformationRequestResponseV01 messageBody;
 	}
 }

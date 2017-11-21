@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the security instrument by its name and typical characteristics.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityInstrumentDescription1", propOrder = {"description", "classificationType", "placeOfListing", "exerciseDate", "maturityDate", "optionType", "strikePrice", "multiplier"})
 public class SecurityInstrumentDescription1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -486,6 +492,7 @@ public class SecurityInstrumentDescription1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Desc")
 	public Max350Text getDescription() {
 		return description;
 	}
@@ -494,6 +501,7 @@ public class SecurityInstrumentDescription1 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "ClssfctnTp")
 	public Max6Text getClassificationType() {
 		return classificationType;
 	}
@@ -502,6 +510,7 @@ public class SecurityInstrumentDescription1 {
 		this.classificationType = classificationType;
 	}
 
+	@XmlElement(name = "PlcOfListg")
 	public MICIdentifier getPlaceOfListing() {
 		return placeOfListing;
 	}
@@ -510,6 +519,7 @@ public class SecurityInstrumentDescription1 {
 		this.placeOfListing = placeOfListing;
 	}
 
+	@XmlElement(name = "ExrcDt")
 	public ISODate getExerciseDate() {
 		return exerciseDate;
 	}
@@ -518,6 +528,7 @@ public class SecurityInstrumentDescription1 {
 		this.exerciseDate = exerciseDate;
 	}
 
+	@XmlElement(name = "MtrtyDt")
 	public ISODate getMaturityDate() {
 		return maturityDate;
 	}
@@ -526,6 +537,7 @@ public class SecurityInstrumentDescription1 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "OptnTp")
 	public OptionType1Code getOptionType() {
 		return optionType;
 	}
@@ -534,6 +546,7 @@ public class SecurityInstrumentDescription1 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "StrkPric")
 	public PriceRateOrAmountChoice getStrikePrice() {
 		return strikePrice;
 	}
@@ -542,6 +555,7 @@ public class SecurityInstrumentDescription1 {
 		this.strikePrice = strikePrice;
 	}
 
+	@XmlElement(name = "Mltplr")
 	public BaseOneRate getMultiplier() {
 		return multiplier;
 	}

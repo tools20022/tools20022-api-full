@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericAccountIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the unique identification of an account as assigned by the account
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountIdentification4Choice", propOrder = {"IBAN", "other"})
 public class AccountIdentification4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -190,6 +196,7 @@ public class AccountIdentification4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IBAN", required = true)
 	public IBAN2007Identifier getIBAN() {
 		return iBAN;
 	}
@@ -198,6 +205,7 @@ public class AccountIdentification4Choice {
 		this.iBAN = iBAN;
 	}
 
+	@XmlElement(name = "Othr", required = true)
 	public GenericAccountIdentification1 getOther() {
 		return other;
 	}

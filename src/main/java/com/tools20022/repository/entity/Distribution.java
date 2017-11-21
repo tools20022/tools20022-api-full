@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,51 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Dividend#mmRelatedDistribution
- * Dividend.mmRelatedDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmDistribution
- * SecuritiesPricing.mmDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmExercisePeriodDistribution
- * DateTimePeriod.mmExercisePeriodDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmOfferPeriodDistribution
- * DateTimePeriod.mmOfferPeriodDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmTradingPeriodDistribution
- * DateTimePeriod.mmTradingPeriodDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmBlockingPeriodDistribution
- * DateTimePeriod.mmBlockingPeriodDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmCashDistribution
- * DateTimePeriod.mmCashDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#mmRelatedCorporateActionDistribution
- * Tax.mmRelatedCorporateActionDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IncentivePremium#mmCorporateActionDistribution
- * IncentivePremium.mmCorporateActionDistribution}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashDistribution
- * CashDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAndCashDistribution
- * SecuritiesAndCashDistribution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesDistribution
- * SecuritiesDistribution}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -145,6 +101,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * Distribution.mmOfferPriceFixingDate}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashDistribution
+ * CashDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAndCashDistribution
+ * SecuritiesAndCashDistribution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesDistribution
+ * SecuritiesDistribution}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Dividend#mmRelatedDistribution
+ * Dividend.mmRelatedDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmDistribution
+ * SecuritiesPricing.mmDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmExercisePeriodDistribution
+ * DateTimePeriod.mmExercisePeriodDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmOfferPeriodDistribution
+ * DateTimePeriod.mmOfferPeriodDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmTradingPeriodDistribution
+ * DateTimePeriod.mmTradingPeriodDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmBlockingPeriodDistribution
+ * DateTimePeriod.mmBlockingPeriodDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmCashDistribution
+ * DateTimePeriod.mmCashDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmRelatedCorporateActionDistribution
+ * Tax.mmRelatedCorporateActionDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IncentivePremium#mmCorporateActionDistribution
+ * IncentivePremium.mmCorporateActionDistribution}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -202,7 +203,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmExercisePeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExercisePeriod";
@@ -249,7 +250,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmOfferPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfferPeriod";
@@ -297,7 +298,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmTradingPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingPeriod";
@@ -347,7 +348,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmBlockingPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BlockingPeriod";
@@ -394,7 +395,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmInterestPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestPeriod";
@@ -441,7 +442,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmDistributionTax = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DistributionTax";
@@ -491,7 +492,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmOfferPrice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfferPrice";
@@ -541,7 +542,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmIncentivePremium = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncentivePremium";
@@ -583,7 +584,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAttribute mmEffectiveDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EffectiveDate";
@@ -591,6 +592,14 @@ public class Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Distribution.class.getMethod("getEffectiveDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max350Text eventConditions;
@@ -623,7 +632,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAttribute mmEventConditions = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EventConditions";
@@ -631,6 +640,14 @@ public class Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Distribution.class.getMethod("getEventConditions", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime exDate;
@@ -663,7 +680,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAttribute mmExDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExDate";
@@ -671,6 +688,14 @@ public class Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Distribution.class.getMethod("getExDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate grossRate;
@@ -702,7 +727,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAttribute mmGrossRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossRate";
@@ -710,6 +735,14 @@ public class Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Distribution.class.getMethod("getGrossRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime meetingDate;
@@ -739,7 +772,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAttribute mmMeetingDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MeetingDate";
@@ -747,6 +780,14 @@ public class Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Distribution.class.getMethod("getMeetingDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate netRate;
@@ -778,7 +819,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAttribute mmNetRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetRate";
@@ -786,6 +827,14 @@ public class Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Distribution.class.getMethod("getNetRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount newFaceValue;
@@ -816,7 +865,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAttribute mmNewFaceValue = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewFaceValue";
@@ -824,6 +873,14 @@ public class Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Distribution.class.getMethod("getNewFaceValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount newParValue;
@@ -854,7 +911,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAttribute mmNewParValue = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewParValue";
@@ -862,6 +919,14 @@ public class Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Distribution.class.getMethod("getNewParValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime paymentDate;
@@ -894,7 +959,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAttribute mmPaymentDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentDate";
@@ -902,6 +967,14 @@ public class Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Distribution.class.getMethod("getPaymentDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Dividend dividend;
@@ -938,7 +1011,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmDividend = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dividend";
@@ -981,7 +1054,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAttribute mmCorporateActionOption = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionOption";
@@ -989,6 +1062,14 @@ public class Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionOptionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Distribution.class.getMethod("getCorporateActionOption", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyCode currencyOption;
@@ -1018,7 +1099,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAttribute mmCurrencyOption = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyOption";
@@ -1026,6 +1107,14 @@ public class Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Distribution.class.getMethod("getCurrencyOption", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount decreaseAmount;
@@ -1058,7 +1147,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAttribute mmDecreaseAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DecreaseAmount";
@@ -1066,6 +1155,14 @@ public class Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Distribution.class.getMethod("getDecreaseAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate decreaseRate;
@@ -1099,7 +1196,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAttribute mmDecreaseRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DecreaseRate";
@@ -1107,6 +1204,14 @@ public class Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Distribution.class.getMethod("getDecreaseRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime offerPriceFixingDate;
@@ -1139,7 +1244,7 @@ public class Distribution {
 	 */
 	public static final MMBusinessAttribute mmOfferPriceFixingDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Distribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfferPriceFixingDate";
@@ -1147,6 +1252,14 @@ public class Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Distribution.class.getMethod("getOfferPriceFixingDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1163,10 +1276,19 @@ public class Distribution {
 						com.tools20022.repository.entity.DateTimePeriod.mmCashDistribution, com.tools20022.repository.entity.Tax.mmRelatedCorporateActionDistribution,
 						com.tools20022.repository.entity.IncentivePremium.mmCorporateActionDistribution);
 				subType_lazy = () -> Arrays.asList(CashDistribution.mmObject(), SecuritiesAndCashDistribution.mmObject(), SecuritiesDistribution.mmObject());
-				element_lazy = () -> Arrays.asList(Distribution.mmExercisePeriod, Distribution.mmOfferPeriod, Distribution.mmTradingPeriod, Distribution.mmBlockingPeriod, Distribution.mmInterestPeriod, Distribution.mmDistributionTax,
-						Distribution.mmOfferPrice, Distribution.mmIncentivePremium, Distribution.mmEffectiveDate, Distribution.mmEventConditions, Distribution.mmExDate, Distribution.mmGrossRate, Distribution.mmMeetingDate,
-						Distribution.mmNetRate, Distribution.mmNewFaceValue, Distribution.mmNewParValue, Distribution.mmPaymentDate, Distribution.mmDividend, Distribution.mmCorporateActionOption, Distribution.mmCurrencyOption,
-						Distribution.mmDecreaseAmount, Distribution.mmDecreaseRate, Distribution.mmOfferPriceFixingDate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Distribution.mmExercisePeriod, com.tools20022.repository.entity.Distribution.mmOfferPeriod, com.tools20022.repository.entity.Distribution.mmTradingPeriod,
+						com.tools20022.repository.entity.Distribution.mmBlockingPeriod, com.tools20022.repository.entity.Distribution.mmInterestPeriod, com.tools20022.repository.entity.Distribution.mmDistributionTax,
+						com.tools20022.repository.entity.Distribution.mmOfferPrice, com.tools20022.repository.entity.Distribution.mmIncentivePremium, com.tools20022.repository.entity.Distribution.mmEffectiveDate,
+						com.tools20022.repository.entity.Distribution.mmEventConditions, com.tools20022.repository.entity.Distribution.mmExDate, com.tools20022.repository.entity.Distribution.mmGrossRate,
+						com.tools20022.repository.entity.Distribution.mmMeetingDate, com.tools20022.repository.entity.Distribution.mmNetRate, com.tools20022.repository.entity.Distribution.mmNewFaceValue,
+						com.tools20022.repository.entity.Distribution.mmNewParValue, com.tools20022.repository.entity.Distribution.mmPaymentDate, com.tools20022.repository.entity.Distribution.mmDividend,
+						com.tools20022.repository.entity.Distribution.mmCorporateActionOption, com.tools20022.repository.entity.Distribution.mmCurrencyOption, com.tools20022.repository.entity.Distribution.mmDecreaseAmount,
+						com.tools20022.repository.entity.Distribution.mmDecreaseRate, com.tools20022.repository.entity.Distribution.mmOfferPriceFixingDate);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Distribution.class;
 			}
 		});
 		return mmObject_lazy.get();

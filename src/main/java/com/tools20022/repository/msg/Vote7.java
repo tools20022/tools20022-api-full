@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Vote;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates the number of voting rights cast to a resolution.
@@ -89,6 +93,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Vote5 Vote5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Vote7", propOrder = {"issuerLabel", "resolutionStatus", "for", "against", "abstain", "withhold", "oneYear", "twoYears", "threeYears", "noAction"})
 public class Vote7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -624,6 +630,7 @@ public class Vote7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IssrLabl", required = true)
 	public Max35Text getIssuerLabel() {
 		return issuerLabel;
 	}
@@ -632,6 +639,7 @@ public class Vote7 {
 		this.issuerLabel = issuerLabel;
 	}
 
+	@XmlElement(name = "RsltnSts", required = true)
 	public ResolutionStatus2Code getResolutionStatus() {
 		return resolutionStatus;
 	}
@@ -640,6 +648,7 @@ public class Vote7 {
 		this.resolutionStatus = resolutionStatus;
 	}
 
+	@XmlElement(name = "For")
 	public Number getFor() {
 		return for_;
 	}
@@ -648,6 +657,7 @@ public class Vote7 {
 		this.for_ = for_;
 	}
 
+	@XmlElement(name = "Agnst")
 	public Number getAgainst() {
 		return against;
 	}
@@ -656,6 +666,7 @@ public class Vote7 {
 		this.against = against;
 	}
 
+	@XmlElement(name = "Abstn")
 	public Number getAbstain() {
 		return abstain;
 	}
@@ -664,6 +675,7 @@ public class Vote7 {
 		this.abstain = abstain;
 	}
 
+	@XmlElement(name = "Wthhld")
 	public Number getWithhold() {
 		return withhold;
 	}
@@ -672,6 +684,7 @@ public class Vote7 {
 		this.withhold = withhold;
 	}
 
+	@XmlElement(name = "OneYr")
 	public Number getOneYear() {
 		return oneYear;
 	}
@@ -680,6 +693,7 @@ public class Vote7 {
 		this.oneYear = oneYear;
 	}
 
+	@XmlElement(name = "TwoYrs")
 	public Number getTwoYears() {
 		return twoYears;
 	}
@@ -688,6 +702,7 @@ public class Vote7 {
 		this.twoYears = twoYears;
 	}
 
+	@XmlElement(name = "ThreeYrs")
 	public Number getThreeYears() {
 		return threeYears;
 	}
@@ -696,6 +711,7 @@ public class Vote7 {
 		this.threeYears = threeYears;
 	}
 
+	@XmlElement(name = "NoActn")
 	public Number getNoAction() {
 		return noAction;
 	}

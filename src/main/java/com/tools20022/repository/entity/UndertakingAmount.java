@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.UndertakingAmount1;
 import com.tools20022.repository.msg.UndertakingAmount2;
 import com.tools20022.repository.msg.UndertakingAmount3;
 import com.tools20022.repository.msg.UndertakingAmount4;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,6 +41,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingAmount#mmUndertaking
+ * UndertakingAmount.mmUndertaking}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.UndertakingAmount#mmAmount
+ * UndertakingAmount.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingAmount#mmTolerance
+ * UndertakingAmount.mmTolerance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingAmount#mmBalanceAmount
+ * UndertakingAmount.mmBalanceAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.UndertakingAmount#mmType
+ * UndertakingAmount.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingAmount#mmInterest
+ * UndertakingAmount.mmInterest}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -88,27 +110,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.AmountOrPercentage1Choice#mmPercentageAmount
  * AmountOrPercentage1Choice.mmPercentageAmount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingAmount#mmUndertaking
- * UndertakingAmount.mmUndertaking}</li>
- * <li>{@linkplain com.tools20022.repository.entity.UndertakingAmount#mmAmount
- * UndertakingAmount.mmAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingAmount#mmTolerance
- * UndertakingAmount.mmTolerance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingAmount#mmBalanceAmount
- * UndertakingAmount.mmBalanceAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.UndertakingAmount#mmType
- * UndertakingAmount.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingAmount#mmInterest
- * UndertakingAmount.mmInterest}</li>
  * </ul>
  * </li>
  * <li>
@@ -166,7 +167,7 @@ public class UndertakingAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmUndertaking = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> UndertakingAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Undertaking";
@@ -189,11 +190,6 @@ public class UndertakingAmount {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingAmount
-	 * UndertakingAmount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -205,6 +201,11 @@ public class UndertakingAmount {
 	 * UndertakingAmount3.mmAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.UndertakingAmount
+	 * UndertakingAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -219,7 +220,7 @@ public class UndertakingAmount {
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingAmount1.mmAmount, UndertakingAmount3.mmAmount);
-			elementContext_lazy = () -> UndertakingAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -227,6 +228,14 @@ public class UndertakingAmount {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingAmount.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Tolerance tolerance;
@@ -248,11 +257,6 @@ public class UndertakingAmount {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Tolerance Tolerance}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingAmount
-	 * UndertakingAmount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -261,6 +265,11 @@ public class UndertakingAmount {
 	 * UndertakingAmount1.mmPlusTolerance}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.UndertakingAmount
+	 * UndertakingAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -277,7 +286,7 @@ public class UndertakingAmount {
 	public static final MMBusinessAssociationEnd mmTolerance = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingAmount1.mmPlusTolerance);
-			elementContext_lazy = () -> UndertakingAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tolerance";
@@ -301,11 +310,6 @@ public class UndertakingAmount {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingAmount
-	 * UndertakingAmount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -314,6 +318,11 @@ public class UndertakingAmount {
 	 * UndertakingAmount4.mmBalanceAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.UndertakingAmount
+	 * UndertakingAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -330,7 +339,7 @@ public class UndertakingAmount {
 	public static final MMBusinessAttribute mmBalanceAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingAmount4.mmBalanceAmount);
-			elementContext_lazy = () -> UndertakingAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BalanceAmount";
@@ -338,6 +347,14 @@ public class UndertakingAmount {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingAmount.class.getMethod("getBalanceAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AmountTypeCode type;
@@ -352,11 +369,6 @@ public class UndertakingAmount {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AmountTypeCode
 	 * AmountTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingAmount
-	 * UndertakingAmount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -368,6 +380,11 @@ public class UndertakingAmount {
 	 * AmountType1FormatChoice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.UndertakingAmount
+	 * UndertakingAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -384,7 +401,7 @@ public class UndertakingAmount {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountType1FormatChoice.mmCode, AmountType1FormatChoice.mmProprietary);
-			elementContext_lazy = () -> UndertakingAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -392,6 +409,14 @@ public class UndertakingAmount {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AmountTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingAmount.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Interest interest;
@@ -429,7 +454,7 @@ public class UndertakingAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> UndertakingAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
@@ -452,9 +477,16 @@ public class UndertakingAmount {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Interest.mmRelatedUndertakingAmount, com.tools20022.repository.entity.Undertaking.mmUndertakingAmount,
 						com.tools20022.repository.entity.Tolerance.mmRelatedUndertakingAmount);
 				derivationElement_lazy = () -> Arrays.asList(UndertakingAmount2.mmAmountChoice, AmountOrPercentage1Choice.mmDefinedAmount, AmountOrPercentage1Choice.mmPercentageAmount);
-				element_lazy = () -> Arrays.asList(UndertakingAmount.mmUndertaking, UndertakingAmount.mmAmount, UndertakingAmount.mmTolerance, UndertakingAmount.mmBalanceAmount, UndertakingAmount.mmType, UndertakingAmount.mmInterest);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UndertakingAmount.mmUndertaking, com.tools20022.repository.entity.UndertakingAmount.mmAmount,
+						com.tools20022.repository.entity.UndertakingAmount.mmTolerance, com.tools20022.repository.entity.UndertakingAmount.mmBalanceAmount, com.tools20022.repository.entity.UndertakingAmount.mmType,
+						com.tools20022.repository.entity.UndertakingAmount.mmInterest);
 				derivationComponent_lazy = () -> Arrays.asList(Amount1Choice.mmObject(), UndertakingAmount2.mmObject(), UndertakingAmount1.mmObject(), UndertakingAmount4.mmObject(), AmountOrPercentage1Choice.mmObject(),
 						UndertakingAmount3.mmObject(), AmountType1FormatChoice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UndertakingAmount.class;
 			}
 		});
 		return mmObject_lazy.get();

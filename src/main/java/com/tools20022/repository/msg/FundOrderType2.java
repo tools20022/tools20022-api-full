@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the category of the investment fund order.
@@ -81,6 +85,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundOrderType2", propOrder = {"orderType", "extendedOrderType"})
 public class FundOrderType2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -259,6 +265,7 @@ public class FundOrderType2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrTp", required = true)
 	public FundOrderType3Code getOrderType() {
 		return orderType;
 	}
@@ -267,6 +274,7 @@ public class FundOrderType2 {
 		this.orderType = orderType;
 	}
 
+	@XmlElement(name = "XtndedOrdrTp", required = true)
 	public Extended350Code getExtendedOrderType() {
 		return extendedOrderType;
 	}

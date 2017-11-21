@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Deposited media put in the safe.
@@ -73,6 +77,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMDepositedMedia1", propOrder = {"accountSequenceNumber", "mediaType", "mediaCategory", "mediaItems"})
 public class ATMDepositedMedia1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -283,6 +289,7 @@ public class ATMDepositedMedia1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctSeqNb")
 	public Number getAccountSequenceNumber() {
 		return accountSequenceNumber;
 	}
@@ -291,6 +298,7 @@ public class ATMDepositedMedia1 {
 		this.accountSequenceNumber = accountSequenceNumber;
 	}
 
+	@XmlElement(name = "MdiaTp", required = true)
 	public ATMMediaType2Code getMediaType() {
 		return mediaType;
 	}
@@ -299,6 +307,7 @@ public class ATMDepositedMedia1 {
 		this.mediaType = mediaType;
 	}
 
+	@XmlElement(name = "MdiaCtgy")
 	public ATMMediaType3Code getMediaCategory() {
 		return mediaCategory;
 	}
@@ -307,6 +316,7 @@ public class ATMDepositedMedia1 {
 		this.mediaCategory = mediaCategory;
 	}
 
+	@XmlElement(name = "MdiaItms", required = true)
 	public List<ATMDepositedMedia2> getMediaItems() {
 		return mediaItems;
 	}

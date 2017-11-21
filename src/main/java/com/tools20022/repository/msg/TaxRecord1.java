@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.TaxRecord;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to define the tax record.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Set of elements used to define the tax record."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxRecord1", propOrder = {"type", "category", "categoryDetails", "debtorStatus", "certificateIdentification", "formsCode", "period", "taxAmount", "additionalInformation"})
 public class TaxRecord1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -512,6 +518,7 @@ public class TaxRecord1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public Max35Text getType() {
 		return type;
 	}
@@ -520,6 +527,7 @@ public class TaxRecord1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Ctgy")
 	public Max35Text getCategory() {
 		return category;
 	}
@@ -528,6 +536,7 @@ public class TaxRecord1 {
 		this.category = category;
 	}
 
+	@XmlElement(name = "CtgyDtls")
 	public Max35Text getCategoryDetails() {
 		return categoryDetails;
 	}
@@ -536,6 +545,7 @@ public class TaxRecord1 {
 		this.categoryDetails = categoryDetails;
 	}
 
+	@XmlElement(name = "DbtrSts")
 	public Max35Text getDebtorStatus() {
 		return debtorStatus;
 	}
@@ -544,6 +554,7 @@ public class TaxRecord1 {
 		this.debtorStatus = debtorStatus;
 	}
 
+	@XmlElement(name = "CertId")
 	public Max35Text getCertificateIdentification() {
 		return certificateIdentification;
 	}
@@ -552,6 +563,7 @@ public class TaxRecord1 {
 		this.certificateIdentification = certificateIdentification;
 	}
 
+	@XmlElement(name = "FrmsCd")
 	public Max35Text getFormsCode() {
 		return formsCode;
 	}
@@ -560,6 +572,7 @@ public class TaxRecord1 {
 		this.formsCode = formsCode;
 	}
 
+	@XmlElement(name = "Prd")
 	public TaxPeriod1 getPeriod() {
 		return period;
 	}
@@ -568,6 +581,7 @@ public class TaxRecord1 {
 		this.period = period;
 	}
 
+	@XmlElement(name = "TaxAmt")
 	public TaxAmount1 getTaxAmount() {
 		return taxAmount;
 	}
@@ -576,6 +590,7 @@ public class TaxRecord1 {
 		this.taxAmount = taxAmount;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max140Text getAdditionalInformation() {
 		return additionalInformation;
 	}

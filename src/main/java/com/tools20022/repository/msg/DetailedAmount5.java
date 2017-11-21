@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Detailed amounts associated with the total amount of transaction.
@@ -76,6 +80,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DetailedAmount5", propOrder = {"cashBack", "gratuity", "fees", "rebate", "valueAddedTax"})
 public class DetailedAmount5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -368,6 +374,7 @@ public class DetailedAmount5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshBck")
 	public ImpliedCurrencyAndAmount getCashBack() {
 		return cashBack;
 	}
@@ -376,6 +383,7 @@ public class DetailedAmount5 {
 		this.cashBack = cashBack;
 	}
 
+	@XmlElement(name = "Grtty")
 	public ImpliedCurrencyAndAmount getGratuity() {
 		return gratuity;
 	}
@@ -384,6 +392,7 @@ public class DetailedAmount5 {
 		this.gratuity = gratuity;
 	}
 
+	@XmlElement(name = "Fees")
 	public List<DetailedAmount4> getFees() {
 		return fees;
 	}
@@ -392,6 +401,7 @@ public class DetailedAmount5 {
 		this.fees = fees;
 	}
 
+	@XmlElement(name = "Rbt")
 	public List<DetailedAmount4> getRebate() {
 		return rebate;
 	}
@@ -400,6 +410,7 @@ public class DetailedAmount5 {
 		this.rebate = rebate;
 	}
 
+	@XmlElement(name = "ValAddedTax")
 	public List<DetailedAmount4> getValueAddedTax() {
 		return valueAddedTax;
 	}

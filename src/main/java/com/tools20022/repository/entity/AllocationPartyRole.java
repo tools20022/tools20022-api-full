@@ -64,6 +64,11 @@ public class AllocationPartyRole extends TradePartyRole {
 				definition = "Party which instructs the trade allocation to the executing party.";
 				superType_lazy = () -> TradePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AllocationPartyRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

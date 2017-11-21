@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -44,6 +45,44 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Derivative#mmUnderlyingAsset
+ * Derivative.mmUnderlyingAsset}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrencyAndAmount
+ * Derivative.mmNotionalCurrencyAndAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Derivative#mmDerivativeCovered
+ * Derivative.mmDerivativeCovered}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Derivative#mmExerciseDate
+ * Derivative.mmExerciseDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Derivative#mmInterestIncludedInPrice
+ * Derivative.mmInterestIncludedInPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Derivative#mmTick
+ * Derivative.mmTick}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Derivative#mmExercisePrice
+ * Derivative.mmExercisePrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrency
+ * Derivative.mmNotionalCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Derivative#mmVersionNumber
+ * Derivative.mmVersionNumber}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Option Option}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Future Future}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Swaps Swaps}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -133,44 +172,6 @@ import java.util.List;
  * Derivative2Choice.mmEmissionAllowance}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Option Option}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Future Future}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Swaps Swaps}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Derivative#mmUnderlyingAsset
- * Derivative.mmUnderlyingAsset}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrencyAndAmount
- * Derivative.mmNotionalCurrencyAndAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Derivative#mmDerivativeCovered
- * Derivative.mmDerivativeCovered}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Derivative#mmExerciseDate
- * Derivative.mmExerciseDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Derivative#mmInterestIncludedInPrice
- * Derivative.mmInterestIncludedInPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Derivative#mmTick
- * Derivative.mmTick}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Derivative#mmExercisePrice
- * Derivative.mmExercisePrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrency
- * Derivative.mmNotionalCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Derivative#mmVersionNumber
- * Derivative.mmVersionNumber}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -208,10 +209,6 @@ public class Derivative extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -251,6 +248,10 @@ public class Derivative extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -289,10 +290,6 @@ public class Derivative extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -310,6 +307,10 @@ public class Derivative extends Asset {
 	 * UnderlyingAttributes2.mmCashAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -335,6 +336,14 @@ public class Derivative extends Asset {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Derivative.class.getMethod("getNotionalCurrencyAndAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected YesNoIndicator derivativeCovered;
 	/**
@@ -348,10 +357,6 @@ public class Derivative extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -388,6 +393,10 @@ public class Derivative extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -413,6 +422,14 @@ public class Derivative extends Asset {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Derivative.class.getMethod("getDerivativeCovered", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ISODateTime exerciseDate;
 	/**
@@ -424,10 +441,6 @@ public class Derivative extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -445,6 +458,10 @@ public class Derivative extends Asset {
 	 * DerivativeInstrument6.mmExpiryDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -467,6 +484,14 @@ public class Derivative extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Derivative.class.getMethod("getExerciseDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator interestIncludedInPrice;
@@ -508,6 +533,14 @@ public class Derivative extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Derivative.class.getMethod("getInterestIncludedInPrice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesPricing tick;
@@ -577,10 +610,6 @@ public class Derivative extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -672,6 +701,10 @@ public class Derivative extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -716,10 +749,6 @@ public class Derivative extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -753,6 +782,10 @@ public class Derivative extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -779,6 +812,14 @@ public class Derivative extends Asset {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Derivative.class.getMethod("getNotionalCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Number versionNumber;
 	/**
@@ -792,10 +833,6 @@ public class Derivative extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -815,6 +852,10 @@ public class Derivative extends Asset {
 	 * CreditDefaultSwapIndex2.mmVersion}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -841,6 +882,14 @@ public class Derivative extends Asset {
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Derivative.class.getMethod("getVersionNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	static public MMBusinessComponent mmObject() {
@@ -864,6 +913,11 @@ public class Derivative extends Asset {
 						DerivativeForeignExchange2.mmObject(), DerivativeInterest3.mmObject(), DerivativeForeignExchange3.mmObject(), DerivativeInstrument5.mmObject(), EquityDerivative2.mmObject(), EquityDerivative3Choice.mmObject(),
 						ForeignExchangeDerivative2.mmObject(), ContractForDifference2.mmObject(), InterestRateDerivative5.mmObject(), BondDerivative2.mmObject(), CommodityDerivate4.mmObject(), CommodityDerivate2Choice.mmObject(),
 						DerivativeInstrument6.mmObject(), Derivative2Choice.mmObject(), UnsecuredMarketTransaction4.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Derivative.class;
 			}
 		});
 		return mmObject_lazy.get();

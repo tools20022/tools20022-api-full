@@ -29,9 +29,11 @@ import com.tools20022.repository.msg.TradeData12;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * Scope <br>
@@ -41,9 +43,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code fxtr.030.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ForeignExchangeTradeLatestVersion
@@ -85,6 +84,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code fxtr.030.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -96,6 +98,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ForeignExchangeTradeBulkStatusNotificationV04", propOrder = {"statusDetails", "tradeData", "messagePagination", "supplementaryData"})
 public class ForeignExchangeTradeBulkStatusNotificationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -133,6 +137,14 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradeData12.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTradeBulkStatusNotificationV04.class.getMethod("getStatusDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<TradeData11> tradeData;
 	/**
@@ -167,6 +179,14 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 			definition = "Identifies one or more trades for which the status notification is sent.\r\n";
 			minOccurs = 1;
 			complexType_lazy = () -> TradeData11.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTradeBulkStatusNotificationV04.class.getMethod("getTradeData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Pagination messagePagination;
@@ -206,6 +226,14 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTradeBulkStatusNotificationV04.class.getMethod("getMessagePagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -243,6 +271,14 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTradeBulkStatusNotificationV04.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -255,8 +291,9 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 				rootElement = "Document";
 				xmlTag = "FXTradBlkStsNtfctn";
 				businessArea_lazy = () -> ForeignExchangeTradeLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeBulkStatusNotificationV04.mmStatusDetails, ForeignExchangeTradeBulkStatusNotificationV04.mmTradeData,
-						ForeignExchangeTradeBulkStatusNotificationV04.mmMessagePagination, ForeignExchangeTradeBulkStatusNotificationV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.mmStatusDetails,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.mmTradeData, com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.mmMessagePagination,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "fxtr";
@@ -266,10 +303,16 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ForeignExchangeTradeBulkStatusNotificationV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsDtls", required = true)
 	public TradeData12 getStatusDetails() {
 		return statusDetails;
 	}
@@ -278,6 +321,7 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 		this.statusDetails = statusDetails;
 	}
 
+	@XmlElement(name = "TradData", required = true)
 	public List<TradeData11> getTradeData() {
 		return tradeData;
 	}
@@ -286,6 +330,7 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 		this.tradeData = tradeData;
 	}
 
+	@XmlElement(name = "MsgPgntn")
 	public Pagination getMessagePagination() {
 		return messagePagination;
 	}
@@ -294,11 +339,18 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 		this.messagePagination = messagePagination;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.030.04.04")
+	static public class Document {
+		@XmlElement(name = "FXTradBlkStsNtfctn", required = true)
+		public ForeignExchangeTradeBulkStatusNotificationV04 messageBody;
 	}
 }

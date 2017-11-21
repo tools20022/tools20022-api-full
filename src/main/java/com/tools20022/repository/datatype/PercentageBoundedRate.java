@@ -29,6 +29,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMDecimal#getMinInclusive
+ * minInclusive} = "0"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMDecimal#getMaxInclusive
+ * maxInclusive} = "100"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -65,6 +69,10 @@ public class PercentageBoundedRate {
 				name = "PercentageBoundedRate";
 				definition = "Rate expressed as a percentage, ie, in hundredths, eg, 0.7 is 7/10 of a percent, and 7.0 is 7%.";
 				baseValue = 100.0;
+				minInclusive = "0";
+				maxInclusive = "100";
+				totalDigits = 11;
+				fractionDigits = 10;
 			}
 		});
 		return mmObject_lazy.get();

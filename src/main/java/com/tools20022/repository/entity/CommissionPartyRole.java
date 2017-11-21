@@ -36,17 +36,14 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionPartyRole
- * Commission.mmCommissionPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.CommissionPartyRole#mmCommission
+ * CommissionPartyRole.mmCommission}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -54,12 +51,15 @@ import java.util.List;
  * CommissionRecipient}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CommissionPartyRole#mmCommission
- * CommissionPartyRole.mmCommission}</li>
+ * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionPartyRole
+ * Commission.mmCommissionPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -118,7 +118,7 @@ public class CommissionPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmCommission = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CommissionPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CommissionPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Commission";
@@ -140,7 +140,12 @@ public class CommissionPartyRole extends Role {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Commission.mmCommissionPartyRole);
 				subType_lazy = () -> Arrays.asList(CommissionRecipient.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(CommissionPartyRole.mmCommission);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CommissionPartyRole.mmCommission);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CommissionPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

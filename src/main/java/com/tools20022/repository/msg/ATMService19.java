@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Service allowed on the account.
@@ -62,6 +66,8 @@ import java.util.List;
  * ATMService17}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMService19", propOrder = {"serviceType", "serviceVariant", "limits"})
 public class ATMService19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class ATMService19 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SvcTp", required = true)
 	public ATMServiceType8Code getServiceType() {
 		return serviceType;
 	}
@@ -226,6 +233,7 @@ public class ATMService19 {
 		this.serviceType = serviceType;
 	}
 
+	@XmlElement(name = "SvcVarnt")
 	public List<ATMService18> getServiceVariant() {
 		return serviceVariant;
 	}
@@ -234,6 +242,7 @@ public class ATMService19 {
 		this.serviceVariant = serviceVariant;
 	}
 
+	@XmlElement(name = "Lmts")
 	public List<ATMTransactionAmounts6> getLimits() {
 		return limits;
 	}

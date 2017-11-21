@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Net position of a segregated holding of a single security within the overall
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuantityAndAvailability2", propOrder = {"quantity", "availabilityIndicator"})
 public class QuantityAndAvailability2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class QuantityAndAvailability2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity15Choice getQuantity() {
 		return quantity;
 	}
@@ -174,6 +181,7 @@ public class QuantityAndAvailability2 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "AvlbtyInd", required = true)
 	public YesNoIndicator getAvailabilityIndicator() {
 		return availabilityIndicator;
 	}

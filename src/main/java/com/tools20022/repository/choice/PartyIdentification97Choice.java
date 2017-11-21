@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.NameAndAddress5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of identification of a party.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyIdentification70Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification97Choice", propOrder = {"anyBIC", "legalEntityIdentifier", "nameAndAddress", "proprietaryIdentification"})
 public class PartyIdentification97Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -317,6 +323,7 @@ public class PartyIdentification97Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AnyBIC", required = true)
 	public AnyBICIdentifier getAnyBIC() {
 		return anyBIC;
 	}
@@ -325,6 +332,7 @@ public class PartyIdentification97Choice {
 		this.anyBIC = anyBIC;
 	}
 
+	@XmlElement(name = "LglNttyIdr", required = true)
 	public LEIIdentifier getLegalEntityIdentifier() {
 		return legalEntityIdentifier;
 	}
@@ -333,6 +341,7 @@ public class PartyIdentification97Choice {
 		this.legalEntityIdentifier = legalEntityIdentifier;
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress5 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -341,6 +350,7 @@ public class PartyIdentification97Choice {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "PrtryId", required = true)
 	public GenericIdentification1 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}

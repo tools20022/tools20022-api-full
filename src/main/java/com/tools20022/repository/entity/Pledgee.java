@@ -28,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1;
 import com.tools20022.repository.msg.PledgeeTypeAndText1;
 import com.tools20022.repository.msg.PledgeeTypeAndText2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,6 +41,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Pledgee#mmPledgeeType
+ * Pledgee.mmPledgeeType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Pledgee#mmSecuritiesBalance
+ * Pledgee.mmSecuritiesBalance}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
+ * SecuritiesPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -108,19 +122,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * PledgeeFormat4Choice.mmIdentification}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
- * SecuritiesPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Pledgee#mmPledgeeType
- * Pledgee.mmPledgeeType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Pledgee#mmSecuritiesBalance
- * Pledgee.mmSecuritiesBalance}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -150,10 +151,6 @@ public class Pledgee extends SecuritiesPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PledgeeTypeCode
 	 * PledgeeTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Pledgee
-	 * Pledgee}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -169,6 +166,10 @@ public class Pledgee extends SecuritiesPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Pledgee
+	 * Pledgee}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -182,7 +183,7 @@ public class Pledgee extends SecuritiesPartyRole {
 	public static final MMBusinessAttribute mmPledgeeType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PledgeeTypeAndText1.mmPledgeeType, PledgeeTypeAndAnyBICIdentifier1.mmPledgeeType, PledgeeTypeAndText2.mmPledgeeType);
-			elementContext_lazy = () -> Pledgee.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Pledgee.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PledgeeType";
@@ -190,6 +191,14 @@ public class Pledgee extends SecuritiesPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PledgeeTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Pledgee.class.getMethod("getPledgeeType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesBalance securitiesBalance;
@@ -227,7 +236,7 @@ public class Pledgee extends SecuritiesPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesBalance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Pledgee.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Pledgee.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesBalance";
@@ -252,9 +261,14 @@ public class Pledgee extends SecuritiesPartyRole {
 						PledgeeFormat2Choice.mmTypeAndIdentification, PledgeeFormat2Choice.mmIdentification, PledgeeTypeAndText2.mmIdentification, PledgeeFormat3Choice.mmTypeAndIdentification, PledgeeFormat3Choice.mmIdentification,
 						PledgeeFormat4Choice.mmTypeAndIdentification, PledgeeFormat4Choice.mmIdentification);
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(Pledgee.mmPledgeeType, Pledgee.mmSecuritiesBalance);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Pledgee.mmPledgeeType, com.tools20022.repository.entity.Pledgee.mmSecuritiesBalance);
 				derivationComponent_lazy = () -> Arrays.asList(PledgeeTypeAndText1.mmObject(), PledgeeFormat1Choice.mmObject(), PledgeeTypeAndAnyBICIdentifier1.mmObject(), PledgeeFormat2Choice.mmObject(), PledgeeTypeAndText2.mmObject(),
 						PledgeeFormat3Choice.mmObject(), PledgeeFormat4Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Pledgee.class;
 			}
 		});
 		return mmObject_lazy.get();

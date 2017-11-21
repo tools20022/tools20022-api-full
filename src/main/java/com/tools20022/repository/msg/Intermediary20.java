@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party that provides services to investors relating to financial products.
@@ -77,6 +81,8 @@ import java.util.function.Supplier;
  * "Party that provides services to investors relating to financial products."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Intermediary20", propOrder = {"identification", "account", "role", "extendedRole"})
 public class Intermediary20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -331,6 +337,7 @@ public class Intermediary20 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification26Choice getIdentification() {
 		return identification;
 	}
@@ -339,6 +346,7 @@ public class Intermediary20 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Acct")
 	public Account8 getAccount() {
 		return account;
 	}
@@ -347,6 +355,7 @@ public class Intermediary20 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "Role", required = true)
 	public InvestmentFundRole5Code getRole() {
 		return role;
 	}
@@ -355,6 +364,7 @@ public class Intermediary20 {
 		this.role = role;
 	}
 
+	@XmlElement(name = "XtndedRole", required = true)
 	public Extended350Code getExtendedRole() {
 		return extendedRole;
 	}

@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment processes required to transfer cash from the debtor to the creditor.
@@ -100,6 +104,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashParties8", propOrder = {"debtor", "debtorAgent", "creditor", "creditorAgent"})
 public class CashParties8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -320,6 +326,7 @@ public class CashParties8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dbtr")
 	public PartyIdentificationAndAccount39 getDebtor() {
 		return debtor;
 	}
@@ -328,6 +335,7 @@ public class CashParties8 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAgt")
 	public PartyIdentificationAndAccount50 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -336,6 +344,7 @@ public class CashParties8 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "Cdtr")
 	public PartyIdentificationAndAccount39 getCreditor() {
 		return creditor;
 	}
@@ -344,6 +353,7 @@ public class CashParties8 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAgt")
 	public PartyIdentificationAndAccount50 getCreditorAgent() {
 		return creditorAgent;
 	}

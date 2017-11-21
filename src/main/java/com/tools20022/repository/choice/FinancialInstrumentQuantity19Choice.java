@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for the quantity of security.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * FinancialInstrumentQuantity16Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentQuantity19Choice", propOrder = {"unit", "faceAmount", "amortisedValue", "code"})
 public class FinancialInstrumentQuantity19Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -294,6 +300,7 @@ public class FinancialInstrumentQuantity19Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Unit", required = true)
 	public DecimalNumber getUnit() {
 		return unit;
 	}
@@ -302,6 +309,7 @@ public class FinancialInstrumentQuantity19Choice {
 		this.unit = unit;
 	}
 
+	@XmlElement(name = "FaceAmt", required = true)
 	public ImpliedCurrencyAndAmount getFaceAmount() {
 		return faceAmount;
 	}
@@ -310,6 +318,7 @@ public class FinancialInstrumentQuantity19Choice {
 		this.faceAmount = faceAmount;
 	}
 
+	@XmlElement(name = "AmtsdVal", required = true)
 	public ImpliedCurrencyAndAmount getAmortisedValue() {
 		return amortisedValue;
 	}
@@ -318,6 +327,7 @@ public class FinancialInstrumentQuantity19Choice {
 		this.amortisedValue = amortisedValue;
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public Quantity4Code getCode() {
 		return code;
 	}

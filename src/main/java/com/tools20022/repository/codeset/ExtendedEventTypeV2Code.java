@@ -30,17 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code
- * ExtendedEventType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType3Code
- * ExtendedEventType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code
- * ExtendedEventType4Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -73,6 +62,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ExtendedEventTypeV2Code#mmFinalPaydown
  * ExtendedEventTypeV2Code.mmFinalPaydown}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code
+ * ExtendedEventType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType3Code
+ * ExtendedEventType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code
+ * ExtendedEventType4Code}</li>
  * </ul>
  * </li>
  * <li>

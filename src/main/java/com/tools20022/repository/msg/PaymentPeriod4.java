@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.PaymentTerms;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the payment terms by means of a code and a period.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentPeriod3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentPeriod4", propOrder = {"code", "numberOfDays"})
 public class PaymentPeriod4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -188,6 +194,7 @@ public class PaymentPeriod4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public PaymentTime4Code getCode() {
 		return code;
 	}
@@ -196,6 +203,7 @@ public class PaymentPeriod4 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "NbOfDays")
 	public Number getNumberOfDays() {
 		return numberOfDays;
 	}

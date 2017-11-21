@@ -29,15 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BillingCurrencyType1Code
- * BillingCurrencyType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BillingCurrencyType2Code
- * BillingCurrencyType2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -52,6 +43,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.BillingCurrencyTypeCode#mmHost
  * BillingCurrencyTypeCode.mmHost}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.BillingCurrencyType1Code
+ * BillingCurrencyType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BillingCurrencyType2Code
+ * BillingCurrencyType2Code}</li>
  * </ul>
  * </li>
  * <li>

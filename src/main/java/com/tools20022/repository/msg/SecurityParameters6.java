@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters related to the security of software application and application
@@ -75,6 +79,8 @@ import java.util.List;
  * SecurityParameters3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityParameters6", propOrder = {"actionType", "version", "POIChallenge", "TMChallenge", "symmetricKey"})
 public class SecurityParameters6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -330,6 +336,7 @@ public class SecurityParameters6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ActnTp", required = true)
 	public TerminalManagementAction3Code getActionType() {
 		return actionType;
 	}
@@ -338,6 +345,7 @@ public class SecurityParameters6 {
 		this.actionType = actionType;
 	}
 
+	@XmlElement(name = "Vrsn", required = true)
 	public Max256Text getVersion() {
 		return version;
 	}
@@ -346,6 +354,7 @@ public class SecurityParameters6 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "POIChllng")
 	public Max140Binary getPOIChallenge() {
 		return pOIChallenge;
 	}
@@ -354,6 +363,7 @@ public class SecurityParameters6 {
 		this.pOIChallenge = pOIChallenge;
 	}
 
+	@XmlElement(name = "TMChllng")
 	public Max140Binary getTMChallenge() {
 		return tMChallenge;
 	}
@@ -362,6 +372,7 @@ public class SecurityParameters6 {
 		this.tMChallenge = tMChallenge;
 	}
 
+	@XmlElement(name = "SmmtrcKey")
 	public List<CryptographicKey5> getSymmetricKey() {
 		return symmetricKey;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Acceptor parameters dedicated to the merchant.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * MerchantConfigurationParameters2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MerchantConfigurationParameters3", propOrder = {"actionType", "merchantIdentification", "version", "proxy", "otherParameters"})
 public class MerchantConfigurationParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -333,6 +339,7 @@ public class MerchantConfigurationParameters3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ActnTp", required = true)
 	public TerminalManagementAction3Code getActionType() {
 		return actionType;
 	}
@@ -341,6 +348,7 @@ public class MerchantConfigurationParameters3 {
 		this.actionType = actionType;
 	}
 
+	@XmlElement(name = "MrchntId")
 	public Max35Text getMerchantIdentification() {
 		return merchantIdentification;
 	}
@@ -349,6 +357,7 @@ public class MerchantConfigurationParameters3 {
 		this.merchantIdentification = merchantIdentification;
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Max256Text getVersion() {
 		return version;
 	}
@@ -357,6 +366,7 @@ public class MerchantConfigurationParameters3 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "Prxy")
 	public NetworkParameters6 getProxy() {
 		return proxy;
 	}
@@ -365,6 +375,7 @@ public class MerchantConfigurationParameters3 {
 		this.proxy = proxy;
 	}
 
+	@XmlElement(name = "OthrParams")
 	public Max10000Binary getOtherParameters() {
 		return otherParameters;
 	}

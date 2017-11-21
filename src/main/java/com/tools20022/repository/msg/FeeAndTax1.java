@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money associated with a service.
@@ -66,6 +70,8 @@ import java.util.List;
  * definition} = "Amount of money associated with a service."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FeeAndTax1", propOrder = {"commercialAgreementReference", "individualFee", "individualTax"})
 public class FeeAndTax1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -234,6 +240,7 @@ public class FeeAndTax1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ComrclAgrmtRef")
 	public Max35Text getCommercialAgreementReference() {
 		return commercialAgreementReference;
 	}
@@ -242,6 +249,7 @@ public class FeeAndTax1 {
 		this.commercialAgreementReference = commercialAgreementReference;
 	}
 
+	@XmlElement(name = "IndvFee")
 	public List<Fee1> getIndividualFee() {
 		return individualFee;
 	}
@@ -250,6 +258,7 @@ public class FeeAndTax1 {
 		this.individualFee = individualFee;
 	}
 
+	@XmlElement(name = "IndvTax")
 	public List<Tax30> getIndividualTax() {
 		return individualTax;
 	}

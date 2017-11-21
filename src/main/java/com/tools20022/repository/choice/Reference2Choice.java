@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the identification of the MarginCallRequest message, the
@@ -106,6 +110,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reference2Choice", propOrder = {"marginCallRequestIdentification", "marginCallResponseIdentification", "collateralProposalIdentification", "collateralProposalResponseIdentification", "disputeNotificationIdentification",
+		"collateralSubstitutionRequestIdentification", "collateralSubstitutionResponseIdentification", "collateralSubstitutionConfirmationIdentification", "interestPaymentRequestIdentification", "interestPaymentResponseIdentification",
+		"interestPaymentStatementIdentification"})
 public class Reference2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -589,6 +597,7 @@ public class Reference2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MrgnCallReqId", required = true)
 	public Max35Text getMarginCallRequestIdentification() {
 		return marginCallRequestIdentification;
 	}
@@ -597,6 +606,7 @@ public class Reference2Choice {
 		this.marginCallRequestIdentification = marginCallRequestIdentification;
 	}
 
+	@XmlElement(name = "MrgnCallRspnId", required = true)
 	public Max35Text getMarginCallResponseIdentification() {
 		return marginCallResponseIdentification;
 	}
@@ -605,6 +615,7 @@ public class Reference2Choice {
 		this.marginCallResponseIdentification = marginCallResponseIdentification;
 	}
 
+	@XmlElement(name = "CollPrpslId", required = true)
 	public Max35Text getCollateralProposalIdentification() {
 		return collateralProposalIdentification;
 	}
@@ -613,6 +624,7 @@ public class Reference2Choice {
 		this.collateralProposalIdentification = collateralProposalIdentification;
 	}
 
+	@XmlElement(name = "CollPrpslRspnId", required = true)
 	public Max35Text getCollateralProposalResponseIdentification() {
 		return collateralProposalResponseIdentification;
 	}
@@ -621,6 +633,7 @@ public class Reference2Choice {
 		this.collateralProposalResponseIdentification = collateralProposalResponseIdentification;
 	}
 
+	@XmlElement(name = "DsptNtfctnId", required = true)
 	public Max35Text getDisputeNotificationIdentification() {
 		return disputeNotificationIdentification;
 	}
@@ -629,6 +642,7 @@ public class Reference2Choice {
 		this.disputeNotificationIdentification = disputeNotificationIdentification;
 	}
 
+	@XmlElement(name = "CollSbstitnReqId", required = true)
 	public Max35Text getCollateralSubstitutionRequestIdentification() {
 		return collateralSubstitutionRequestIdentification;
 	}
@@ -637,6 +651,7 @@ public class Reference2Choice {
 		this.collateralSubstitutionRequestIdentification = collateralSubstitutionRequestIdentification;
 	}
 
+	@XmlElement(name = "CollSbstitnRspnId", required = true)
 	public Max35Text getCollateralSubstitutionResponseIdentification() {
 		return collateralSubstitutionResponseIdentification;
 	}
@@ -645,6 +660,7 @@ public class Reference2Choice {
 		this.collateralSubstitutionResponseIdentification = collateralSubstitutionResponseIdentification;
 	}
 
+	@XmlElement(name = "CollSbstitnConfId", required = true)
 	public Max35Text getCollateralSubstitutionConfirmationIdentification() {
 		return collateralSubstitutionConfirmationIdentification;
 	}
@@ -653,6 +669,7 @@ public class Reference2Choice {
 		this.collateralSubstitutionConfirmationIdentification = collateralSubstitutionConfirmationIdentification;
 	}
 
+	@XmlElement(name = "IntrstPmtReqId", required = true)
 	public Max35Text getInterestPaymentRequestIdentification() {
 		return interestPaymentRequestIdentification;
 	}
@@ -661,6 +678,7 @@ public class Reference2Choice {
 		this.interestPaymentRequestIdentification = interestPaymentRequestIdentification;
 	}
 
+	@XmlElement(name = "IntrstPmtRspnId", required = true)
 	public Max35Text getInterestPaymentResponseIdentification() {
 		return interestPaymentResponseIdentification;
 	}
@@ -669,6 +687,7 @@ public class Reference2Choice {
 		this.interestPaymentResponseIdentification = interestPaymentResponseIdentification;
 	}
 
+	@XmlElement(name = "IntrstPmtStmtId", required = true)
 	public Max35Text getInterestPaymentStatementIdentification() {
 		return interestPaymentStatementIdentification;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.choice.TransactionOrError1Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the payment transactions.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionReport1", propOrder = {"paymentIdentification", "transactionOrError"})
 public class TransactionReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -191,6 +197,7 @@ public class TransactionReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtId", required = true)
 	public PaymentIdentification4Choice getPaymentIdentification() {
 		return paymentIdentification;
 	}
@@ -199,6 +206,7 @@ public class TransactionReport1 {
 		this.paymentIdentification = paymentIdentification;
 	}
 
+	@XmlElement(name = "TxOrErr", required = true)
 	public TransactionOrError1Choice getTransactionOrError() {
 		return transactionOrError;
 	}

@@ -21,9 +21,11 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -45,9 +47,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.002.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -91,6 +90,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.002.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -114,6 +116,8 @@ import java.util.List;
  * TransferOutCancellationRequestV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferOutCancellationRequestV03", propOrder = {"messageIdentification", "references", "cancellationByReference", "cancellationByTransferOutDetails", "copyDetails"})
 public class TransferOutCancellationRequestV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -122,6 +126,10 @@ public class TransferOutCancellationRequestV03 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV03
+	 * TransferOutCancellationRequestV03}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -134,10 +142,6 @@ public class TransferOutCancellationRequestV03 {
 	 * TransferOutCancellationRequestV03.mmCancellationByTransferOutDetails}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV03
-	 * TransferOutCancellationRequestV03}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -150,8 +154,9 @@ public class TransferOutCancellationRequestV03 {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Operation1";
-			messageDefinition_lazy = () -> TransferOutCancellationRequestV03.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(TransferOutCancellationRequestV03.mmCancellationByReference, TransferOutCancellationRequestV03.mmCancellationByTransferOutDetails);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.mmCancellationByReference,
+					com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.mmCancellationByTransferOutDetails);
 		}
 	};
 	protected MessageIdentification1 messageIdentification;
@@ -191,6 +196,14 @@ public class TransferOutCancellationRequestV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutCancellationRequestV03.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<References11> references;
 	/**
@@ -228,6 +241,14 @@ public class TransferOutCancellationRequestV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> References11.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutCancellationRequestV03.class.getMethod("getReferences", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransferReference1 cancellationByReference;
 	/**
@@ -263,6 +284,14 @@ public class TransferOutCancellationRequestV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> TransferReference1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutCancellationRequestV03.class.getMethod("getCancellationByReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransferOut7 cancellationByTransferOutDetails;
 	/**
@@ -296,6 +325,14 @@ public class TransferOutCancellationRequestV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TransferOut7.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutCancellationRequestV03.class.getMethod("getCancellationByTransferOutDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CopyInformation2 copyDetails;
@@ -333,6 +370,14 @@ public class TransferOutCancellationRequestV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutCancellationRequestV03.class.getMethod("getCopyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -344,12 +389,13 @@ public class TransferOutCancellationRequestV03 {
 				nextVersions_lazy = () -> Arrays.asList(TransferOutCancellationRequestV04.mmObject());
 				previousVersion_lazy = () -> TransferOutCancellationRequestV02.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(TransferOutCancellationRequestV03.mmOperation1);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.mmOperation1);
 				rootElement = "Document";
 				xmlTag = "TrfOutCxlReq";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(TransferOutCancellationRequestV03.mmMessageIdentification, TransferOutCancellationRequestV03.mmReferences, TransferOutCancellationRequestV03.mmCancellationByReference,
-						TransferOutCancellationRequestV03.mmCancellationByTransferOutDetails, TransferOutCancellationRequestV03.mmCopyDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.mmReferences, com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.mmCancellationByReference,
+						com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.mmCancellationByTransferOutDetails, com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.mmCopyDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -359,10 +405,16 @@ public class TransferOutCancellationRequestV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TransferOutCancellationRequestV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -371,6 +423,7 @@ public class TransferOutCancellationRequestV03 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "Refs", required = true)
 	public List<References11> getReferences() {
 		return references;
 	}
@@ -379,6 +432,7 @@ public class TransferOutCancellationRequestV03 {
 		this.references = references;
 	}
 
+	@XmlElement(name = "CxlByRef")
 	public TransferReference1 getCancellationByReference() {
 		return cancellationByReference;
 	}
@@ -387,6 +441,7 @@ public class TransferOutCancellationRequestV03 {
 		this.cancellationByReference = cancellationByReference;
 	}
 
+	@XmlElement(name = "CxlByTrfOutDtls")
 	public TransferOut7 getCancellationByTransferOutDetails() {
 		return cancellationByTransferOutDetails;
 	}
@@ -395,11 +450,18 @@ public class TransferOutCancellationRequestV03 {
 		this.cancellationByTransferOutDetails = cancellationByTransferOutDetails;
 	}
 
+	@XmlElement(name = "CpyDtls")
 	public CopyInformation2 getCopyDetails() {
 		return copyDetails;
 	}
 
 	public void setCopyDetails(CopyInformation2 copyDetails) {
 		this.copyDetails = copyDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.002.03.03")
+	static public class Document {
+		@XmlElement(name = "TrfOutCxlReq", required = true)
+		public TransferOutCancellationRequestV03 messageBody;
 	}
 }

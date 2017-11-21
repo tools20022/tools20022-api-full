@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the notification of the termination of an undertaking.
@@ -82,6 +86,8 @@ import java.util.List;
  * "Information about the notification of the termination of an undertaking."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingTerminationNotice1", propOrder = {"undertakingIdentification", "terminationDetails", "enclosedFile", "additionalInformation"})
 public class UndertakingTerminationNotice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -285,6 +291,7 @@ public class UndertakingTerminationNotice1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UdrtkgId", required = true)
 	public Undertaking9 getUndertakingIdentification() {
 		return undertakingIdentification;
 	}
@@ -293,6 +300,7 @@ public class UndertakingTerminationNotice1 {
 		this.undertakingIdentification = undertakingIdentification;
 	}
 
+	@XmlElement(name = "TermntnDtls", required = true)
 	public UndertakingTermination3 getTerminationDetails() {
 		return terminationDetails;
 	}
@@ -301,6 +309,7 @@ public class UndertakingTerminationNotice1 {
 		this.terminationDetails = terminationDetails;
 	}
 
+	@XmlElement(name = "NclsdFile")
 	public List<Document9> getEnclosedFile() {
 		return enclosedFile;
 	}
@@ -309,6 +318,7 @@ public class UndertakingTerminationNotice1 {
 		this.enclosedFile = enclosedFile;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

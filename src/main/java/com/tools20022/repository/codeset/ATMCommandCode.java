@@ -29,21 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand2Code
- * ATMCommand2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand1Code
- * ATMCommand1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand3Code
- * ATMCommand3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand4Code
- * ATMCommand4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand5Code
- * ATMCommand5Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -87,6 +72,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#mmCountersReport
  * ATMCommandCode.mmCountersReport}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand2Code
+ * ATMCommand2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand1Code
+ * ATMCommand1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand3Code
+ * ATMCommand3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand4Code
+ * ATMCommand4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand5Code
+ * ATMCommand5Code}</li>
  * </ul>
  * </li>
  * <li>

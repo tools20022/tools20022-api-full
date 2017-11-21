@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference and status information concerning the original transactions,
@@ -93,6 +97,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTransactionInformation14", propOrder = {"reversalIdentification", "originalInstructionIdentification", "originalEndToEndIdentification", "originalTransactionIdentification", "originalInterbankSettlementAmount",
+		"reversedInterbankSettlementAmount", "chargeBearer", "instructingAgent", "instructedAgent", "reversalReasonInformation", "originalTransactionReference"})
 public class PaymentTransactionInformation14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -667,6 +674,7 @@ public class PaymentTransactionInformation14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RvslId")
 	public Max35Text getReversalIdentification() {
 		return reversalIdentification;
 	}
@@ -675,6 +683,7 @@ public class PaymentTransactionInformation14 {
 		this.reversalIdentification = reversalIdentification;
 	}
 
+	@XmlElement(name = "OrgnlInstrId")
 	public Max35Text getOriginalInstructionIdentification() {
 		return originalInstructionIdentification;
 	}
@@ -683,6 +692,7 @@ public class PaymentTransactionInformation14 {
 		this.originalInstructionIdentification = originalInstructionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlEndToEndId")
 	public Max35Text getOriginalEndToEndIdentification() {
 		return originalEndToEndIdentification;
 	}
@@ -691,6 +701,7 @@ public class PaymentTransactionInformation14 {
 		this.originalEndToEndIdentification = originalEndToEndIdentification;
 	}
 
+	@XmlElement(name = "OrgnlTxId")
 	public Max35Text getOriginalTransactionIdentification() {
 		return originalTransactionIdentification;
 	}
@@ -699,6 +710,7 @@ public class PaymentTransactionInformation14 {
 		this.originalTransactionIdentification = originalTransactionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlIntrBkSttlmAmt")
 	public EuroMax9Amount getOriginalInterbankSettlementAmount() {
 		return originalInterbankSettlementAmount;
 	}
@@ -707,6 +719,7 @@ public class PaymentTransactionInformation14 {
 		this.originalInterbankSettlementAmount = originalInterbankSettlementAmount;
 	}
 
+	@XmlElement(name = "RvsdIntrBkSttlmAmt", required = true)
 	public EuroMax9Amount getReversedInterbankSettlementAmount() {
 		return reversedInterbankSettlementAmount;
 	}
@@ -715,6 +728,7 @@ public class PaymentTransactionInformation14 {
 		this.reversedInterbankSettlementAmount = reversedInterbankSettlementAmount;
 	}
 
+	@XmlElement(name = "ChrgBr")
 	public ChargeBearerType2Code getChargeBearer() {
 		return chargeBearer;
 	}
@@ -723,6 +737,7 @@ public class PaymentTransactionInformation14 {
 		this.chargeBearer = chargeBearer;
 	}
 
+	@XmlElement(name = "InstgAgt")
 	public FinancialInstitution2 getInstructingAgent() {
 		return instructingAgent;
 	}
@@ -731,6 +746,7 @@ public class PaymentTransactionInformation14 {
 		this.instructingAgent = instructingAgent;
 	}
 
+	@XmlElement(name = "InstdAgt")
 	public FinancialInstitution2 getInstructedAgent() {
 		return instructedAgent;
 	}
@@ -739,6 +755,7 @@ public class PaymentTransactionInformation14 {
 		this.instructedAgent = instructedAgent;
 	}
 
+	@XmlElement(name = "RvslRsnInf")
 	public ReversalReasonInformation4 getReversalReasonInformation() {
 		return reversalReasonInformation;
 	}
@@ -747,6 +764,7 @@ public class PaymentTransactionInformation14 {
 		this.reversalReasonInformation = reversalReasonInformation;
 	}
 
+	@XmlElement(name = "OrgnlTxRef", required = true)
 	public OriginalTransactionReference7 getOriginalTransactionReference() {
 		return originalTransactionReference;
 	}

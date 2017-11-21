@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,100 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmClassType
+ * InvestmentFundClass.mmClassType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDistributionPolicy
+ * InvestmentFundClass.mmDistributionPolicy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDividendPolicy
+ * InvestmentFundClass.mmDividendPolicy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDualFundIndicator
+ * InvestmentFundClass.mmDualFundIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmRequestedNAVCurrency
+ * InvestmentFundClass.mmRequestedNAVCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmTradingCurrency
+ * InvestmentFundClass.mmTradingCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmInvestmentFund
+ * InvestmentFundClass.mmInvestmentFund}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmPhysicalBearerSecurities
+ * InvestmentFundClass.mmPhysicalBearerSecurities}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDematerialisedBearerSecurities
+ * InvestmentFundClass.mmDematerialisedBearerSecurities}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmPhysicalRegisteredSecurities
+ * InvestmentFundClass.mmPhysicalRegisteredSecurities}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDematerialisedRegisteredSecurities
+ * InvestmentFundClass.mmDematerialisedRegisteredSecurities}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmProcessingCharacteristics
+ * InvestmentFundClass.mmProcessingCharacteristics}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmProductGroup
+ * InvestmentFundClass.mmProductGroup}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmInvestmentAccount
+ * InvestmentFundClass.mmInvestmentAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmNetAssetValueCalculation
+ * InvestmentFundClass.mmNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmInvestmentFundTransaction
+ * InvestmentFundClass.mmInvestmentFundTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmSeriesIssueIdentificationDate
+ * InvestmentFundClass.mmSeriesIssueIdentificationDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmSeriesName
+ * InvestmentFundClass.mmSeriesName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmNewIssueIndicator
+ * InvestmentFundClass.mmNewIssueIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmEqualisation
+ * InvestmentFundClass.mmEqualisation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmTopUpAmount
+ * InvestmentFundClass.mmTopUpAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmHoldBackAmount
+ * InvestmentFundClass.mmHoldBackAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmHoldBackReleaseDate
+ * InvestmentFundClass.mmHoldBackReleaseDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmLotDescription
+ * InvestmentFundClass.mmLotDescription}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmFundClassification
+ * InvestmentFundClass.mmFundClassification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmUnderlyingAssetType
+ * InvestmentFundClass.mmUnderlyingAssetType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmInvestorType
+ * InvestmentFundClass.mmInvestorType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmReinvestment
+ * InvestmentFundClass.mmReinvestment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmOutstandingUnits
+ * InvestmentFundClass.mmOutstandingUnits}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -554,100 +649,6 @@ import java.util.List;
  * FinancialInstrument56.mmBlockedHoldingDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmClassType
- * InvestmentFundClass.mmClassType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDistributionPolicy
- * InvestmentFundClass.mmDistributionPolicy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDividendPolicy
- * InvestmentFundClass.mmDividendPolicy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDualFundIndicator
- * InvestmentFundClass.mmDualFundIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmRequestedNAVCurrency
- * InvestmentFundClass.mmRequestedNAVCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmTradingCurrency
- * InvestmentFundClass.mmTradingCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmInvestmentFund
- * InvestmentFundClass.mmInvestmentFund}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmPhysicalBearerSecurities
- * InvestmentFundClass.mmPhysicalBearerSecurities}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDematerialisedBearerSecurities
- * InvestmentFundClass.mmDematerialisedBearerSecurities}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmPhysicalRegisteredSecurities
- * InvestmentFundClass.mmPhysicalRegisteredSecurities}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDematerialisedRegisteredSecurities
- * InvestmentFundClass.mmDematerialisedRegisteredSecurities}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmProcessingCharacteristics
- * InvestmentFundClass.mmProcessingCharacteristics}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmProductGroup
- * InvestmentFundClass.mmProductGroup}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmInvestmentAccount
- * InvestmentFundClass.mmInvestmentAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmNetAssetValueCalculation
- * InvestmentFundClass.mmNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmInvestmentFundTransaction
- * InvestmentFundClass.mmInvestmentFundTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmSeriesIssueIdentificationDate
- * InvestmentFundClass.mmSeriesIssueIdentificationDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmSeriesName
- * InvestmentFundClass.mmSeriesName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmNewIssueIndicator
- * InvestmentFundClass.mmNewIssueIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmEqualisation
- * InvestmentFundClass.mmEqualisation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmTopUpAmount
- * InvestmentFundClass.mmTopUpAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmHoldBackAmount
- * InvestmentFundClass.mmHoldBackAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmHoldBackReleaseDate
- * InvestmentFundClass.mmHoldBackReleaseDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmLotDescription
- * InvestmentFundClass.mmLotDescription}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmFundClassification
- * InvestmentFundClass.mmFundClassification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmUnderlyingAssetType
- * InvestmentFundClass.mmUnderlyingAssetType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmInvestorType
- * InvestmentFundClass.mmInvestorType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmReinvestment
- * InvestmentFundClass.mmReinvestment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmOutstandingUnits
- * InvestmentFundClass.mmOutstandingUnits}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -682,11 +683,6 @@ public class InvestmentFundClass extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -768,6 +764,11 @@ public class InvestmentFundClass extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -787,7 +788,7 @@ public class InvestmentFundClass extends Security {
 					FinancialInstrument22.mmClassType, FinancialInstrument4.mmClassType, FinancialInstrument9.mmClassType, InvestmentFundTransactionsByFund1.mmClassType, InvestmentFundTransactionsByFund2.mmClassType,
 					InvestmentFund1.mmClassType, FinancialInstrument19.mmClassType, InvestmentFundTransactionsByFund3.mmClassType, FinancialInstrument51.mmClassType, FinancialInstrument45.mmClassType, FinancialInstrument49.mmClassType,
 					FinancialInstrument57.mmClassType, FinancialInstrument56.mmClassType, FinancialInstrument55.mmClassType);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClassType";
@@ -795,6 +796,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getClassType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DistributionPolicyCode distributionPolicy;
@@ -809,11 +818,6 @@ public class InvestmentFundClass extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DistributionPolicyCode
 	 * DistributionPolicyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -889,6 +893,11 @@ public class InvestmentFundClass extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -908,7 +917,7 @@ public class InvestmentFundClass extends Security {
 					FinancialInstrument13.mmDistributionPolicy, FinancialInstrument21.mmDistributionPolicy, FinancialInstrument22.mmDistributionPolicy, FinancialInstrument4.mmDistributionPolicy, FinancialInstrument9.mmDistributionPolicy,
 					InvestmentFundTransactionsByFund1.mmDistributionPolicy, InvestmentFundTransactionsByFund2.mmDistributionPolicy, InvestmentFundTransactionsByFund3.mmDistributionPolicy, FinancialInstrument51.mmDistributionPolicy,
 					FinancialInstrument45.mmDistributionPolicy, FinancialInstrument49.mmDistributionPolicy, FinancialInstrument57.mmDistributionPolicy, FinancialInstrument56.mmDistributionPolicy, FinancialInstrument55.mmDistributionPolicy);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DistributionPolicy";
@@ -916,6 +925,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DistributionPolicyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getDistributionPolicy", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DividendPolicyCode dividendPolicy;
@@ -929,11 +946,6 @@ public class InvestmentFundClass extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DividendPolicyCode
 	 * DividendPolicyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -945,6 +957,11 @@ public class InvestmentFundClass extends Security {
 	 * FinancialInstrument20.mmDividendPolicy}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -959,7 +976,7 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmDividendPolicy = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmDividendPolicy, FinancialInstrument20.mmDividendPolicy);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendPolicy";
@@ -967,6 +984,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DividendPolicyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getDividendPolicy", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator dualFundIndicator;
@@ -980,11 +1005,6 @@ public class InvestmentFundClass extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1012,6 +1032,11 @@ public class InvestmentFundClass extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1026,7 +1051,7 @@ public class InvestmentFundClass extends Security {
 		{
 			derivation_lazy = () -> Arrays.asList(ValuationDealingProcessingCharacteristics.mmDualFundIndicator, ValuationDealingProcessingCharacteristics2.mmDualFundIndicator, FinancialInstrument5.mmDualFundIndicator,
 					FinancialInstrument8.mmDualFundIndicator, FinancialInstrument21.mmDualFundIndicator, FinancialInstrument22.mmDualFundIndicator, FinancialInstrument9.mmDualFundIndicator);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DualFundIndicator";
@@ -1034,6 +1059,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getDualFundIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyCode requestedNAVCurrency;
@@ -1048,11 +1081,6 @@ public class InvestmentFundClass extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1221,6 +1249,11 @@ public class InvestmentFundClass extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1249,7 +1282,7 @@ public class InvestmentFundClass extends Security {
 					RedemptionOrder14.mmRequestedNAVCurrency, SwitchSubscriptionLegOrder6.mmRequestedNAVCurrency, SubscriptionExecution13.mmRequestedNAVCurrency, Reinvestment3.mmRequestedNAVCurrency,
 					SwitchRedemptionLegOrder6.mmRequestedNAVCurrency, SubscriptionOrder14.mmRequestedNAVCurrency, SwitchSubscriptionLegExecution4.mmRequestedNAVCurrency, RedemptionExecution15.mmRequestedNAVCurrency,
 					SwitchRedemptionLegExecution4.mmRequestedNAVCurrency);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedNAVCurrency";
@@ -1257,6 +1290,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getRequestedNAVCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyCode tradingCurrency;
@@ -1269,11 +1310,6 @@ public class InvestmentFundClass extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1333,6 +1369,11 @@ public class InvestmentFundClass extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1349,7 +1390,7 @@ public class InvestmentFundClass extends Security {
 					FundCashForecast3.mmInvestmentCurrency, FundCashForecast2.mmInvestmentCurrency, FundCashForecast4.mmInvestmentCurrency, EstimatedFundCashForecast2.mmInvestmentCurrency, EstimatedFundCashForecast4.mmInvestmentCurrency,
 					EstimatedFundCashForecast1.mmInvestmentCurrency, EstimatedFundCashForecast3.mmInvestmentCurrency, FundCashForecast7.mmInvestmentCurrency, Fund2.mmCurrency, EstimatedFundCashForecast6.mmInvestmentCurrency,
 					Fund1.mmCurrency, FundCashForecast6.mmInvestmentCurrency, EstimatedFundCashForecast5.mmInvestmentCurrency, Fund3.mmCurrency, Fund4.mmCurrency);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingCurrency";
@@ -1357,6 +1398,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getTradingCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentFund investmentFund;
@@ -1377,11 +1426,6 @@ public class InvestmentFundClass extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentFund
 	 * InvestmentFund}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1424,6 +1468,11 @@ public class InvestmentFundClass extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1441,7 +1490,7 @@ public class InvestmentFundClass extends Security {
 					FundCashForecast4.mmFinancialInstrumentDetails, EstimatedFundCashForecast2.mmFinancialInstrumentDetails, EstimatedFundCashForecast4.mmFinancialInstrumentDetails, EstimatedFundCashForecast1.mmFinancialInstrumentDetails,
 					EstimatedFundCashForecast3.mmFinancialInstrumentDetails, FundCashForecast7.mmFinancialInstrumentDetails, EstimatedFundCashForecast6.mmFinancialInstrumentDetails, FundCashForecast6.mmFinancialInstrumentDetails,
 					EstimatedFundCashForecast5.mmFinancialInstrumentDetails);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFund";
@@ -1465,11 +1514,6 @@ public class InvestmentFundClass extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1478,6 +1522,11 @@ public class InvestmentFundClass extends Security {
 	 * FinancialInstrument20.mmPhysicalBearerSecurities}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1494,7 +1543,7 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmPhysicalBearerSecurities = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument20.mmPhysicalBearerSecurities);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhysicalBearerSecurities";
@@ -1502,6 +1551,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getPhysicalBearerSecurities", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator dematerialisedBearerSecurities;
@@ -1516,11 +1573,6 @@ public class InvestmentFundClass extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1529,6 +1581,11 @@ public class InvestmentFundClass extends Security {
 	 * FinancialInstrument20.mmDematerialisedBearerSecurities}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1545,7 +1602,7 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmDematerialisedBearerSecurities = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument20.mmDematerialisedBearerSecurities);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DematerialisedBearerSecurities";
@@ -1553,6 +1610,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getDematerialisedBearerSecurities", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator physicalRegisteredSecurities;
@@ -1567,11 +1632,6 @@ public class InvestmentFundClass extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1580,6 +1640,11 @@ public class InvestmentFundClass extends Security {
 	 * FinancialInstrument20.mmPhysicalRegisteredSecurities}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1596,7 +1661,7 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmPhysicalRegisteredSecurities = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument20.mmPhysicalRegisteredSecurities);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhysicalRegisteredSecurities";
@@ -1604,6 +1669,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getPhysicalRegisteredSecurities", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator dematerialisedRegisteredSecurities;
@@ -1618,11 +1691,6 @@ public class InvestmentFundClass extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1631,6 +1699,11 @@ public class InvestmentFundClass extends Security {
 	 * FinancialInstrument20.mmDematerialisedRegisteredSecurities}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1647,7 +1720,7 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmDematerialisedRegisteredSecurities = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument20.mmDematerialisedRegisteredSecurities);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DematerialisedRegisteredSecurities";
@@ -1655,6 +1728,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getDematerialisedRegisteredSecurities", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics> processingCharacteristics;
@@ -1677,11 +1758,6 @@ public class InvestmentFundClass extends Security {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1703,6 +1779,11 @@ public class InvestmentFundClass extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1719,7 +1800,7 @@ public class InvestmentFundClass extends Security {
 		{
 			derivation_lazy = () -> Arrays.asList(LocalMarketAnnex2.mmSubscriptionProcessingCharacteristics, LocalMarketAnnex2.mmRedemptionProcessingCharacteristics, FundProcessingPassport1.mmValuationDealingCharacteristics,
 					FundProcessingPassport1.mmSubscriptionProcessingCharacteristics, FundProcessingPassport1.mmRedemptionProcessingCharacteristics);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProcessingCharacteristics";
@@ -1740,11 +1821,6 @@ public class InvestmentFundClass extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max140Text
 	 * Max140Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1784,6 +1860,11 @@ public class InvestmentFundClass extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1799,7 +1880,7 @@ public class InvestmentFundClass extends Security {
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument17.mmProductGroup, FinancialInstrument6.mmProductGroup, FinancialInstrument10.mmProductGroup, FinancialInstrument29.mmProductGroup, FinancialInstrument21.mmProductGroup,
 					FinancialInstrument22.mmProductGroup, FinancialInstrument51.mmProductGroup, FinancialInstrument45.mmProductGroup, FinancialInstrument57.mmProductGroup, FinancialInstrument56.mmProductGroup,
 					FinancialInstrument55.mmProductGroup);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProductGroup";
@@ -1807,6 +1888,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getProductGroup", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.InvestmentAccount> investmentAccount;
@@ -1827,11 +1916,6 @@ public class InvestmentFundClass extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentAccount
 	 * InvestmentAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1925,6 +2009,11 @@ public class InvestmentFundClass extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1943,7 +2032,7 @@ public class InvestmentFundClass extends Security {
 					FinancialInstrument34.mmSubAccountDetails, FinancialInstrument36.mmTransfereeAccount, FinancialInstrument36.mmSubAccountDetails, FinancialInstrument40.mmTransfereeAccount, FinancialInstrument40.mmSubAccountDetails,
 					FinancialInstrument39.mmTransfereeAccount, FinancialInstrument39.mmSubAccountDetails, FinancialInstrument50.mmTransfereeAccount, FinancialInstrument50.mmSubAccountDetails, FinancialInstrument48.mmTransfereeAccount,
 					FinancialInstrument48.mmSubAccountDetails, FinancialInstrument47.mmTransfereeAccount, FinancialInstrument47.mmSubAccountDetails, FinancialInstrument46.mmTransfereeAccount, FinancialInstrument46.mmSubAccountDetails);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccount";
@@ -1991,7 +2080,7 @@ public class InvestmentFundClass extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmNetAssetValueCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAssetValueCalculation";
@@ -2040,7 +2129,7 @@ public class InvestmentFundClass extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentFundTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundTransaction";
@@ -2063,11 +2152,6 @@ public class InvestmentFundClass extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2085,6 +2169,11 @@ public class InvestmentFundClass extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2100,7 +2189,7 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmSeriesIssueIdentificationDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument18.mmSeriesIssueIdentificationDate, Series1.mmSeriesDate, DateFormat42Choice.mmYearMonth, DateFormat42Choice.mmYearMonthDay);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SeriesIssueIdentificationDate";
@@ -2108,6 +2197,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getSeriesIssueIdentificationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text seriesName;
@@ -2122,11 +2219,6 @@ public class InvestmentFundClass extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2140,6 +2232,11 @@ public class InvestmentFundClass extends Security {
 	 * FinancialInstrument57.mmSeriesIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2156,7 +2253,7 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmSeriesName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument18.mmSeriesName, Series1.mmSeriesName, FinancialInstrument57.mmSeriesIdentification);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SeriesName";
@@ -2164,6 +2261,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getSeriesName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator newIssueIndicator;
@@ -2178,11 +2283,6 @@ public class InvestmentFundClass extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2191,6 +2291,11 @@ public class InvestmentFundClass extends Security {
 	 * FinancialInstrument18.mmNewIssueIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2207,7 +2312,7 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmNewIssueIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument18.mmNewIssueIndicator);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewIssueIndicator";
@@ -2215,6 +2320,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getNewIssueIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Equalisation equalisation;
@@ -2236,11 +2349,6 @@ public class InvestmentFundClass extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Equalisation
 	 * Equalisation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2340,6 +2448,11 @@ public class InvestmentFundClass extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2360,7 +2473,7 @@ public class InvestmentFundClass extends Security {
 					AggregateBalanceInformation5.mmEqualisationBalance, RedemptionExecution10.mmEqualisation, SubscriptionExecution7.mmEqualisation, RedemptionOrder14.mmEqualisation, SwitchSubscriptionLegOrder6.mmEqualisation,
 					SubscriptionExecution13.mmEqualisation, SubscriptionExecution12.mmEqualisation, SubscriptionOrder15.mmEqualisation, SwitchRedemptionLegOrder6.mmEqualisation, RedemptionOrder15.mmEqualisation,
 					RedemptionExecution16.mmEqualisation, SubscriptionOrder14.mmEqualisation, SwitchSubscriptionLegExecution4.mmEqualisation, RedemptionExecution15.mmEqualisation, SwitchRedemptionLegExecution4.mmEqualisation);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Equalisation";
@@ -2384,11 +2497,6 @@ public class InvestmentFundClass extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2397,6 +2505,11 @@ public class InvestmentFundClass extends Security {
 	 * ExpectedExecutionDetails3.mmTopUpAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2413,7 +2526,7 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmTopUpAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ExpectedExecutionDetails3.mmTopUpAmount);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TopUpAmount";
@@ -2421,6 +2534,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getTopUpAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount holdBackAmount;
@@ -2434,11 +2555,6 @@ public class InvestmentFundClass extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2454,6 +2570,11 @@ public class InvestmentFundClass extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2467,7 +2588,7 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmHoldBackAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(HoldBackInformation1.mmHoldBackAmount, HoldBackInformation2.mmAmount, HoldBackInformation3.mmAmount);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HoldBackAmount";
@@ -2475,6 +2596,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getHoldBackAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODate holdBackReleaseDate;
@@ -2487,11 +2616,6 @@ public class InvestmentFundClass extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2507,6 +2631,11 @@ public class InvestmentFundClass extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2520,7 +2649,7 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmHoldBackReleaseDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(HoldBackInformation1.mmHoldBackReleaseDate, HoldBackInformation2.mmExpectedReleaseDate, HoldBackInformation3.mmExpectedReleaseDate);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HoldBackReleaseDate";
@@ -2528,6 +2657,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getHoldBackReleaseDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max350Text lotDescription;
@@ -2558,7 +2695,7 @@ public class InvestmentFundClass extends Security {
 	 */
 	public static final MMBusinessAttribute mmLotDescription = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LotDescription";
@@ -2566,6 +2703,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getLotDescription", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected GenericIdentification fundClassification;
@@ -2605,7 +2750,7 @@ public class InvestmentFundClass extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmFundClassification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundClassification";
@@ -2646,7 +2791,7 @@ public class InvestmentFundClass extends Security {
 	 */
 	public static final MMBusinessAttribute mmUnderlyingAssetType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnderlyingAssetType";
@@ -2654,6 +2799,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FinancialInstrumentProductTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getUnderlyingAssetType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestorTypeCode investorType;
@@ -2685,7 +2838,7 @@ public class InvestmentFundClass extends Security {
 	 */
 	public static final MMBusinessAttribute mmInvestorType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestorType";
@@ -2693,6 +2846,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestorTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getInvestorType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Reinvestment reinvestment;
@@ -2732,7 +2893,7 @@ public class InvestmentFundClass extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmReinvestment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reinvestment";
@@ -2755,11 +2916,6 @@ public class InvestmentFundClass extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.DecimalNumber
 	 * DecimalNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2768,6 +2924,11 @@ public class InvestmentFundClass extends Security {
 	 * InvestmentFund1.mmTotalUnitsOutstanding}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2782,7 +2943,7 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmOutstandingUnits = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentFund1.mmTotalUnitsOutstanding);
-			elementContext_lazy = () -> InvestmentFundClass.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OutstandingUnits";
@@ -2790,6 +2951,14 @@ public class InvestmentFundClass extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundClass.class.getMethod("getOutstandingUnits", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -2838,13 +3007,20 @@ public class InvestmentFundClass extends Security {
 						AggregateBalanceInformation33.mmInvestmentFundsFinancialInstrumentAttributes, InvestmentPlan14.mmSecurityDetails, InvestmentPlan15.mmSecurityDetails, Repartition5.mmFinancialInstrument,
 						FinancialInstrument56.mmBlockedHoldingDetails);
 				superType_lazy = () -> Security.mmObject();
-				element_lazy = () -> Arrays.asList(InvestmentFundClass.mmClassType, InvestmentFundClass.mmDistributionPolicy, InvestmentFundClass.mmDividendPolicy, InvestmentFundClass.mmDualFundIndicator,
-						InvestmentFundClass.mmRequestedNAVCurrency, InvestmentFundClass.mmTradingCurrency, InvestmentFundClass.mmInvestmentFund, InvestmentFundClass.mmPhysicalBearerSecurities,
-						InvestmentFundClass.mmDematerialisedBearerSecurities, InvestmentFundClass.mmPhysicalRegisteredSecurities, InvestmentFundClass.mmDematerialisedRegisteredSecurities, InvestmentFundClass.mmProcessingCharacteristics,
-						InvestmentFundClass.mmProductGroup, InvestmentFundClass.mmInvestmentAccount, InvestmentFundClass.mmNetAssetValueCalculation, InvestmentFundClass.mmInvestmentFundTransaction,
-						InvestmentFundClass.mmSeriesIssueIdentificationDate, InvestmentFundClass.mmSeriesName, InvestmentFundClass.mmNewIssueIndicator, InvestmentFundClass.mmEqualisation, InvestmentFundClass.mmTopUpAmount,
-						InvestmentFundClass.mmHoldBackAmount, InvestmentFundClass.mmHoldBackReleaseDate, InvestmentFundClass.mmLotDescription, InvestmentFundClass.mmFundClassification, InvestmentFundClass.mmUnderlyingAssetType,
-						InvestmentFundClass.mmInvestorType, InvestmentFundClass.mmReinvestment, InvestmentFundClass.mmOutstandingUnits);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClass.mmClassType, com.tools20022.repository.entity.InvestmentFundClass.mmDistributionPolicy,
+						com.tools20022.repository.entity.InvestmentFundClass.mmDividendPolicy, com.tools20022.repository.entity.InvestmentFundClass.mmDualFundIndicator,
+						com.tools20022.repository.entity.InvestmentFundClass.mmRequestedNAVCurrency, com.tools20022.repository.entity.InvestmentFundClass.mmTradingCurrency,
+						com.tools20022.repository.entity.InvestmentFundClass.mmInvestmentFund, com.tools20022.repository.entity.InvestmentFundClass.mmPhysicalBearerSecurities,
+						com.tools20022.repository.entity.InvestmentFundClass.mmDematerialisedBearerSecurities, com.tools20022.repository.entity.InvestmentFundClass.mmPhysicalRegisteredSecurities,
+						com.tools20022.repository.entity.InvestmentFundClass.mmDematerialisedRegisteredSecurities, com.tools20022.repository.entity.InvestmentFundClass.mmProcessingCharacteristics,
+						com.tools20022.repository.entity.InvestmentFundClass.mmProductGroup, com.tools20022.repository.entity.InvestmentFundClass.mmInvestmentAccount,
+						com.tools20022.repository.entity.InvestmentFundClass.mmNetAssetValueCalculation, com.tools20022.repository.entity.InvestmentFundClass.mmInvestmentFundTransaction,
+						com.tools20022.repository.entity.InvestmentFundClass.mmSeriesIssueIdentificationDate, com.tools20022.repository.entity.InvestmentFundClass.mmSeriesName,
+						com.tools20022.repository.entity.InvestmentFundClass.mmNewIssueIndicator, com.tools20022.repository.entity.InvestmentFundClass.mmEqualisation, com.tools20022.repository.entity.InvestmentFundClass.mmTopUpAmount,
+						com.tools20022.repository.entity.InvestmentFundClass.mmHoldBackAmount, com.tools20022.repository.entity.InvestmentFundClass.mmHoldBackReleaseDate,
+						com.tools20022.repository.entity.InvestmentFundClass.mmLotDescription, com.tools20022.repository.entity.InvestmentFundClass.mmFundClassification,
+						com.tools20022.repository.entity.InvestmentFundClass.mmUnderlyingAssetType, com.tools20022.repository.entity.InvestmentFundClass.mmInvestorType, com.tools20022.repository.entity.InvestmentFundClass.mmReinvestment,
+						com.tools20022.repository.entity.InvestmentFundClass.mmOutstandingUnits);
 				derivationComponent_lazy = () -> Arrays.asList(FinancialInstrument16.mmObject(), FinancialInstrument20.mmObject(), FinancialInstrument17.mmObject(), FinancialInstrument6.mmObject(), FinancialInstrument10.mmObject(),
 						BlockedHoldingDetails1.mmObject(), FinancialInstrument29.mmObject(), Repartition2.mmObject(), FinancialInstrument7.mmObject(), FinancialInstrument12.mmObject(), FinancialInstrument26.mmObject(),
 						FinancialInstrument30.mmObject(), FinancialInstrument11.mmObject(), FinancialInstrument25.mmObject(), FinancialInstrument27.mmObject(), FinancialInstrument32.mmObject(), FinancialInstrument24.mmObject(),
@@ -2855,6 +3031,11 @@ public class InvestmentFundClass extends Security {
 						Repartition4.mmObject(), FinancialInstrument45.mmObject(), FinancialInstrument49.mmObject(), FinancialInstrument48.mmObject(), BlockedHoldingDetails2.mmObject(), FinancialInstrument47.mmObject(),
 						FinancialInstrument46.mmObject(), Series1.mmObject(), FinancialInstrument57.mmObject(), Repartition5.mmObject(), FinancialInstrument56.mmObject(), HoldBackInformation2.mmObject(), FinancialInstrument55.mmObject(),
 						HoldBackInformation3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvestmentFundClass.class;
 			}
 		});
 		return mmObject_lazy.get();

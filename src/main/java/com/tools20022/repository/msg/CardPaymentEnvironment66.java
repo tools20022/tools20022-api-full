@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.MerchantRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Environment of the transaction.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentEnvironment54}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentEnvironment66", propOrder = {"acquirerIdentification", "merchantIdentification", "POIIdentification", "card", "paymentToken"})
 public class CardPaymentEnvironment66 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -361,6 +367,7 @@ public class CardPaymentEnvironment66 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcqrrId")
 	public GenericIdentification53 getAcquirerIdentification() {
 		return acquirerIdentification;
 	}
@@ -369,6 +376,7 @@ public class CardPaymentEnvironment66 {
 		this.acquirerIdentification = acquirerIdentification;
 	}
 
+	@XmlElement(name = "MrchntId")
 	public GenericIdentification32 getMerchantIdentification() {
 		return merchantIdentification;
 	}
@@ -377,6 +385,7 @@ public class CardPaymentEnvironment66 {
 		this.merchantIdentification = merchantIdentification;
 	}
 
+	@XmlElement(name = "POIId")
 	public GenericIdentification32 getPOIIdentification() {
 		return pOIIdentification;
 	}
@@ -385,6 +394,7 @@ public class CardPaymentEnvironment66 {
 		this.pOIIdentification = pOIIdentification;
 	}
 
+	@XmlElement(name = "Card")
 	public PaymentCard27 getCard() {
 		return card;
 	}
@@ -393,6 +403,7 @@ public class CardPaymentEnvironment66 {
 		this.card = card;
 	}
 
+	@XmlElement(name = "PmtTkn")
 	public CardPaymentToken2 getPaymentToken() {
 		return paymentToken;
 	}

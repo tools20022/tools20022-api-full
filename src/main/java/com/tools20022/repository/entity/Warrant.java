@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +39,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmSubscriptionPrice
+ * Warrant.mmSubscriptionPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmMultiplier
+ * Warrant.mmMultiplier}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmStyle
+ * Warrant.mmStyle}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmWarrantParity
+ * Warrant.mmWarrantParity}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -69,21 +85,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.FinancialInstrument28#mmWarrant
  * FinancialInstrument28.mmWarrant}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmSubscriptionPrice
- * Warrant.mmSubscriptionPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmMultiplier
- * Warrant.mmMultiplier}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmStyle
- * Warrant.mmStyle}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmWarrantParity
- * Warrant.mmWarrantParity}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,10 +126,6 @@ public class Warrant extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Warrant
-	 * Warrant}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -210,6 +207,10 @@ public class Warrant extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Warrant
+	 * Warrant}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -231,7 +232,7 @@ public class Warrant extends Security {
 					FinancialInstrumentAttributes31.mmSubscriptionPrice, FinancialInstrumentAttributes44.mmSubscriptionPrice, FinancialInstrumentAttributes15.mmSubscriptionPrice, FinancialInstrumentAttributes29.mmSubscriptionPrice,
 					Warrant2.mmSubscriptionPrice, FinancialInstrumentAttributes2.mmSubscriptionPrice, FinancialInstrumentAttributes63.mmSubscriptionPrice, FinancialInstrumentAttributes64.mmSubscriptionPrice,
 					FinancialInstrumentAttributes75.mmSubscriptionPrice, FinancialInstrumentAttributes78.mmSubscriptionPrice);
-			elementContext_lazy = () -> Warrant.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionPrice";
@@ -254,10 +255,6 @@ public class Warrant extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.BaseOneRate
 	 * BaseOneRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Warrant
-	 * Warrant}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -267,6 +264,10 @@ public class Warrant extends Security {
 	 * Warrant2.mmMultiplier}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Warrant
+	 * Warrant}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -283,7 +284,7 @@ public class Warrant extends Security {
 	public static final MMBusinessAttribute mmMultiplier = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Warrant1.mmMultiplier, Warrant2.mmMultiplier);
-			elementContext_lazy = () -> Warrant.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Multiplier";
@@ -291,6 +292,14 @@ public class Warrant extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Warrant.class.getMethod("getMultiplier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected WarrantStyleCode style;
@@ -304,10 +313,6 @@ public class Warrant extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.WarrantStyleCode
 	 * WarrantStyleCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Warrant
-	 * Warrant}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -322,6 +327,10 @@ public class Warrant extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Warrant
+	 * Warrant}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -335,7 +344,7 @@ public class Warrant extends Security {
 	public static final MMBusinessAttribute mmStyle = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(WarrantStyle2Choice.mmCode, WarrantStyle2Choice.mmProprietary, Warrant2.mmType);
-			elementContext_lazy = () -> Warrant.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Style";
@@ -343,6 +352,14 @@ public class Warrant extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> WarrantStyleCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Warrant.class.getMethod("getStyle", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected QuantityRatio warrantParity;
@@ -364,10 +381,6 @@ public class Warrant extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
 	 * QuantityRatio}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Warrant
-	 * Warrant}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -392,6 +405,10 @@ public class Warrant extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Warrant
+	 * Warrant}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -408,7 +425,7 @@ public class Warrant extends Security {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes48.mmWarrantParity, FinancialInstrumentAttributes55.mmWarrantParity, FinancialInstrumentAttributes66.mmWarrantParity,
 					FinancialInstrumentAttributes70.mmWarrantParity, FinancialInstrumentAttributes79.mmWarrantParity, FinancialInstrumentAttributes85.mmWarrantParity);
-			elementContext_lazy = () -> Warrant.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantParity";
@@ -431,8 +448,14 @@ public class Warrant extends Security {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmRelatedWarrant, com.tools20022.repository.entity.QuantityRatio.mmwarrant);
 				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentProperties1Choice.mmWarrant, FinancialInstrument28.mmWarrant);
 				superType_lazy = () -> Security.mmObject();
-				element_lazy = () -> Arrays.asList(Warrant.mmSubscriptionPrice, Warrant.mmMultiplier, Warrant.mmStyle, Warrant.mmWarrantParity);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Warrant.mmSubscriptionPrice, com.tools20022.repository.entity.Warrant.mmMultiplier, com.tools20022.repository.entity.Warrant.mmStyle,
+						com.tools20022.repository.entity.Warrant.mmWarrantParity);
 				derivationComponent_lazy = () -> Arrays.asList(Warrant1.mmObject(), WarrantStyle2Choice.mmObject(), Warrant2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Warrant.class;
 			}
 		});
 		return mmObject_lazy.get();

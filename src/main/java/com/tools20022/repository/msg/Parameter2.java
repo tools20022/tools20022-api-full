@@ -24,6 +24,10 @@ import com.tools20022.repository.codeset.Algorithm5Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters of the RSAES-OAEP encryption algorithm (RSA Encryption Scheme:
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Parameter1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Parameter2", propOrder = {"digestAlgorithm", "maskGeneratorAlgorithm"})
 public class Parameter2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -191,6 +197,7 @@ public class Parameter2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DgstAlgo")
 	public Algorithm5Code getDigestAlgorithm() {
 		return digestAlgorithm;
 	}
@@ -199,6 +206,7 @@ public class Parameter2 {
 		this.digestAlgorithm = digestAlgorithm;
 	}
 
+	@XmlElement(name = "MskGnrtrAlgo")
 	public AlgorithmIdentification8 getMaskGeneratorAlgorithm() {
 		return maskGeneratorAlgorithm;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of partners involved in exchange from the merchant to the
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Traceability1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Traceability2", propOrder = {"relayIdentification", "traceDateTimeIn", "traceDateTimeOut"})
 public class Traceability2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -280,6 +286,7 @@ public class Traceability2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RlayId", required = true)
 	public GenericIdentification76 getRelayIdentification() {
 		return relayIdentification;
 	}
@@ -288,6 +295,7 @@ public class Traceability2 {
 		this.relayIdentification = relayIdentification;
 	}
 
+	@XmlElement(name = "TracDtTmIn", required = true)
 	public ISODateTime getTraceDateTimeIn() {
 		return traceDateTimeIn;
 	}
@@ -296,6 +304,7 @@ public class Traceability2 {
 		this.traceDateTimeIn = traceDateTimeIn;
 	}
 
+	@XmlElement(name = "TracDtTmOut", required = true)
 	public ISODateTime getTraceDateTimeOut() {
 		return traceDateTimeOut;
 	}

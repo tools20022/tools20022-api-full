@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.LocalName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Name of the security.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Name of the security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentName1", propOrder = {"ISOShortName", "ISOLongName", "validFrom"})
 public class FinancialInstrumentName1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -227,6 +233,7 @@ public class FinancialInstrumentName1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ISOShrtNm")
 	public Max35Text getISOShortName() {
 		return iSOShortName;
 	}
@@ -235,6 +242,7 @@ public class FinancialInstrumentName1 {
 		this.iSOShortName = iSOShortName;
 	}
 
+	@XmlElement(name = "ISOLngNm")
 	public Max350Text getISOLongName() {
 		return iSOLongName;
 	}
@@ -243,6 +251,7 @@ public class FinancialInstrumentName1 {
 		this.iSOLongName = iSOLongName;
 	}
 
+	@XmlElement(name = "VldFr")
 	public DateAndDateTimeChoice getValidFrom() {
 		return validFrom;
 	}

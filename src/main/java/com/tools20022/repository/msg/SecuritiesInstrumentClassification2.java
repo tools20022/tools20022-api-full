@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details an individuation of the classification type of the financial
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesInstrumentClassification2", propOrder = {"identifier", "modification", "validityPeriod", "lastUpdated"})
 public class SecuritiesInstrumentClassification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -274,6 +280,7 @@ public class SecuritiesInstrumentClassification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Idr", required = true)
 	public CFIOct2015Identifier getIdentifier() {
 		return identifier;
 	}
@@ -282,6 +289,7 @@ public class SecuritiesInstrumentClassification2 {
 		this.identifier = identifier;
 	}
 
+	@XmlElement(name = "Mod")
 	public Modification1Code getModification() {
 		return modification;
 	}
@@ -290,6 +298,7 @@ public class SecuritiesInstrumentClassification2 {
 		this.modification = modification;
 	}
 
+	@XmlElement(name = "VldtyPrd", required = true)
 	public Period4Choice getValidityPeriod() {
 		return validityPeriod;
 	}
@@ -298,6 +307,7 @@ public class SecuritiesInstrumentClassification2 {
 		this.validityPeriod = validityPeriod;
 	}
 
+	@XmlElement(name = "LastUpdtd")
 	public ISODate getLastUpdated() {
 		return lastUpdated;
 	}

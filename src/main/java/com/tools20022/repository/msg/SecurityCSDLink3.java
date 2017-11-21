@@ -25,6 +25,10 @@ import com.tools20022.repository.choice.IssuerOrInvestor1choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines how the CSD is linked to the security.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines how the CSD is linked to the security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityCSDLink3", propOrder = {"financialInstrumentIdentification", "issuerInvestorCSD", "validFrom"})
 public class SecurityCSDLink3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -204,6 +210,7 @@ public class SecurityCSDLink3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -212,6 +219,7 @@ public class SecurityCSDLink3 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "IssrInvstrCSD", required = true)
 	public IssuerOrInvestor1choice getIssuerInvestorCSD() {
 		return issuerInvestorCSD;
 	}
@@ -220,6 +228,7 @@ public class SecurityCSDLink3 {
 		this.issuerInvestorCSD = issuerInvestorCSD;
 	}
 
+	@XmlElement(name = "VldFr", required = true)
 	public DateAndDateTimeChoice getValidFrom() {
 		return validFrom;
 	}

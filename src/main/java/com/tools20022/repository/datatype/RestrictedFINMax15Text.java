@@ -54,6 +54,8 @@ public class RestrictedFINMax15Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RestrictedFINMax15Text";
 				definition = "Specifies a character string with a maximum length of 15 characters.";
+				minLength = 1;
+				maxLength = 15;
 			}
 		});
 		return mmObject_lazy.get();

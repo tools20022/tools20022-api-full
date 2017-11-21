@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics of the report.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Characteristics of the report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraBalanceReport2", propOrder = {"reportNumber", "queryReference", "reportIdentification", "reportDateTime", "reportPeriod", "frequency", "updateType", "activityIndicator"})
 public class IntraBalanceReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -433,6 +439,7 @@ public class IntraBalanceReport2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptNb")
 	public Number3Choice getReportNumber() {
 		return reportNumber;
 	}
@@ -441,6 +448,7 @@ public class IntraBalanceReport2 {
 		this.reportNumber = reportNumber;
 	}
 
+	@XmlElement(name = "QryRef")
 	public Max35Text getQueryReference() {
 		return queryReference;
 	}
@@ -449,6 +457,7 @@ public class IntraBalanceReport2 {
 		this.queryReference = queryReference;
 	}
 
+	@XmlElement(name = "RptId")
 	public Max35Text getReportIdentification() {
 		return reportIdentification;
 	}
@@ -457,6 +466,7 @@ public class IntraBalanceReport2 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "RptDtTm")
 	public DateAndDateTimeChoice getReportDateTime() {
 		return reportDateTime;
 	}
@@ -465,6 +475,7 @@ public class IntraBalanceReport2 {
 		this.reportDateTime = reportDateTime;
 	}
 
+	@XmlElement(name = "RptPrd")
 	public Period2Choice getReportPeriod() {
 		return reportPeriod;
 	}
@@ -473,6 +484,7 @@ public class IntraBalanceReport2 {
 		this.reportPeriod = reportPeriod;
 	}
 
+	@XmlElement(name = "Frqcy")
 	public Frequency9Choice getFrequency() {
 		return frequency;
 	}
@@ -481,6 +493,7 @@ public class IntraBalanceReport2 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "UpdTp", required = true)
 	public UpdateType2Choice getUpdateType() {
 		return updateType;
 	}
@@ -489,6 +502,7 @@ public class IntraBalanceReport2 {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}

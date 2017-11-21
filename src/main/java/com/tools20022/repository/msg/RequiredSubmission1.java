@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.FinancialInstitution;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies per transaction which document must be submitted and under which
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequiredSubmission1", propOrder = {"latestMatchDate", "requiredCommercialDataSet", "requiredTransportDataSet", "submitter"})
 public class RequiredSubmission1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -271,6 +277,7 @@ public class RequiredSubmission1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LatstMtchDt")
 	public ISODate getLatestMatchDate() {
 		return latestMatchDate;
 	}
@@ -279,6 +286,7 @@ public class RequiredSubmission1 {
 		this.latestMatchDate = latestMatchDate;
 	}
 
+	@XmlElement(name = "ReqrdComrclDataSet", required = true)
 	public YesNoIndicator getRequiredCommercialDataSet() {
 		return requiredCommercialDataSet;
 	}
@@ -287,6 +295,7 @@ public class RequiredSubmission1 {
 		this.requiredCommercialDataSet = requiredCommercialDataSet;
 	}
 
+	@XmlElement(name = "ReqrdTrnsprtDataSet", required = true)
 	public YesNoIndicator getRequiredTransportDataSet() {
 		return requiredTransportDataSet;
 	}
@@ -295,6 +304,7 @@ public class RequiredSubmission1 {
 		this.requiredTransportDataSet = requiredTransportDataSet;
 	}
 
+	@XmlElement(name = "Submitr", required = true)
 	public BICIdentification1 getSubmitter() {
 		return submitter;
 	}

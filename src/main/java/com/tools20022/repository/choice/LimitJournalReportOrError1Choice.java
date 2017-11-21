@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.LimitJournalReport1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the limit report as either an operational error or a business report.
@@ -61,6 +65,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LimitJournalReportOrError1Choice", propOrder = {"businessReport", "operationalError"})
 public class LimitJournalReportOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -164,6 +170,7 @@ public class LimitJournalReportOrError1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BizRpt", required = true)
 	public List<LimitJournalReport1> getBusinessReport() {
 		return businessReport;
 	}
@@ -172,6 +179,7 @@ public class LimitJournalReportOrError1Choice {
 		this.businessReport = businessReport;
 	}
 
+	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
 		return operationalError;
 	}

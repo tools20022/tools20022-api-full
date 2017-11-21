@@ -69,6 +69,11 @@ public class FundAdministratorRole extends InvestmentFundPartyRole {
 				definition = "Party in charge of financial accounting, net asset value (NAV) calculation, management and performance fee calculation. Can also be in charge of orders centralisation and registration.";
 				superType_lazy = () -> InvestmentFundPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FundAdministratorRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

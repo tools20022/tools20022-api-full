@@ -25,6 +25,10 @@ import com.tools20022.repository.choice.ProfileType1Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about actions that may be taken on an account.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about actions that may be taken on an account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestorProfile1", propOrder = {"type", "status", "treasury", "highFrequencyTrading", "marketMaker"})
 public class InvestorProfile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -288,6 +294,7 @@ public class InvestorProfile1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public ProfileType1Choice getType() {
 		return type;
 	}
@@ -296,6 +303,7 @@ public class InvestorProfile1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Sts")
 	public InvestorProfileStatus1Choice getStatus() {
 		return status;
 	}
@@ -304,6 +312,7 @@ public class InvestorProfile1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Trsr")
 	public TreasuryProfile1 getTreasury() {
 		return treasury;
 	}
@@ -312,6 +321,7 @@ public class InvestorProfile1 {
 		this.treasury = treasury;
 	}
 
+	@XmlElement(name = "HghFrqcyTradg")
 	public HighFrequencyTradingProfile1 getHighFrequencyTrading() {
 		return highFrequencyTrading;
 	}
@@ -320,6 +330,7 @@ public class InvestorProfile1 {
 		this.highFrequencyTrading = highFrequencyTrading;
 	}
 
+	@XmlElement(name = "MktMakr")
 	public MarketMakerProfile1 getMarketMaker() {
 		return marketMaker;
 	}

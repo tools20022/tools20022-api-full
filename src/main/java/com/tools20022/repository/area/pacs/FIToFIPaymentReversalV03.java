@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.OriginalGroupHeader3;
 import com.tools20022.repository.msg.PaymentTransaction36;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -50,9 +52,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pacs.007.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementArchive
@@ -86,6 +85,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pacs.007.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -108,6 +110,8 @@ import java.util.List;
  * FIToFIPaymentReversalV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FIToFIPaymentReversalV03", propOrder = {"groupHeader", "originalGroupInformation", "transactionInformation", "supplementaryData"})
 public class FIToFIPaymentReversalV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -147,6 +151,14 @@ public class FIToFIPaymentReversalV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader57.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFIPaymentReversalV03.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OriginalGroupHeader3 originalGroupInformation;
 	/**
@@ -185,6 +197,14 @@ public class FIToFIPaymentReversalV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> OriginalGroupHeader3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFIPaymentReversalV03.class.getMethod("getOriginalGroupInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PaymentTransaction36> transactionInformation;
 	/**
@@ -221,6 +241,14 @@ public class FIToFIPaymentReversalV03 {
 			definition = "Information concerning the original transactions, to which the reversal message refers.";
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentTransaction36.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFIPaymentReversalV03.class.getMethod("getTransactionInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -259,6 +287,14 @@ public class FIToFIPaymentReversalV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFIPaymentReversalV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -273,8 +309,8 @@ public class FIToFIPaymentReversalV03 {
 				rootElement = "Document";
 				xmlTag = "FIToFIPmtRvsl";
 				businessArea_lazy = () -> PaymentsClearingandSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FIToFIPaymentReversalV03.mmGroupHeader, FIToFIPaymentReversalV03.mmOriginalGroupInformation, FIToFIPaymentReversalV03.mmTransactionInformation,
-						FIToFIPaymentReversalV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentReversalV03.mmGroupHeader, com.tools20022.repository.area.pacs.FIToFIPaymentReversalV03.mmOriginalGroupInformation,
+						com.tools20022.repository.area.pacs.FIToFIPaymentReversalV03.mmTransactionInformation, com.tools20022.repository.area.pacs.FIToFIPaymentReversalV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pacs";
@@ -284,10 +320,16 @@ public class FIToFIPaymentReversalV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FIToFIPaymentReversalV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader57 getGroupHeader() {
 		return groupHeader;
 	}
@@ -296,6 +338,7 @@ public class FIToFIPaymentReversalV03 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "OrgnlGrpInf", required = true)
 	public OriginalGroupHeader3 getOriginalGroupInformation() {
 		return originalGroupInformation;
 	}
@@ -304,6 +347,7 @@ public class FIToFIPaymentReversalV03 {
 		this.originalGroupInformation = originalGroupInformation;
 	}
 
+	@XmlElement(name = "TxInf")
 	public List<PaymentTransaction36> getTransactionInformation() {
 		return transactionInformation;
 	}
@@ -312,11 +356,18 @@ public class FIToFIPaymentReversalV03 {
 		this.transactionInformation = transactionInformation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.007.03.03")
+	static public class Document {
+		@XmlElement(name = "FIToFIPmtRvsl", required = true)
+		public FIToFIPaymentReversalV03 messageBody;
 	}
 }

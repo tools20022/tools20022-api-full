@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Human entity, as distinguished from a corporate entity (which is sometimes
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContactIdentificationAndAddress", propOrder = {"name", "role", "communicationAddress"})
 public class ContactIdentificationAndAddress {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -235,6 +241,7 @@ public class ContactIdentificationAndAddress {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max35Text getName() {
 		return name;
 	}
@@ -243,6 +250,7 @@ public class ContactIdentificationAndAddress {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Role", required = true)
 	public PaymentRole1Code getRole() {
 		return role;
 	}
@@ -251,6 +259,7 @@ public class ContactIdentificationAndAddress {
 		this.role = role;
 	}
 
+	@XmlElement(name = "ComAdr", required = true)
 	public CommunicationAddressDetails getCommunicationAddress() {
 		return communicationAddress;
 	}

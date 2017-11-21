@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Balance related details for a portfolio.
@@ -68,6 +72,8 @@ import java.util.List;
  * definition} = "Balance related details for a portfolio."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BalanceDetails5", propOrder = {"type", "unrealised", "amount", "detailedBalance"})
 public class BalanceDetails5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -275,6 +281,7 @@ public class BalanceDetails5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public BalanceType6Choice getType() {
 		return type;
 	}
@@ -283,6 +290,7 @@ public class BalanceDetails5 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Urlsd")
 	public Unrealised1Code getUnrealised() {
 		return unrealised;
 	}
@@ -291,6 +299,7 @@ public class BalanceDetails5 {
 		this.unrealised = unrealised;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public AmountAndDirection31 getAmount() {
 		return amount;
 	}
@@ -299,6 +308,7 @@ public class BalanceDetails5 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "DtldBal")
 	public List<BalanceDetails6> getDetailedBalance() {
 		return detailedBalance;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the meta data associated with a netting cut off report.
@@ -91,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the meta data associated with a netting cut off report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NettingCutOffReportData1", propOrder = {"messageIdentification", "creationDateTime", "reportType", "activationDate", "netServiceParticipantIdentification", "reportServicer", "netServiceType", "messagePagination"})
 public class NettingCutOffReportData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -454,6 +460,7 @@ public class NettingCutOffReportData1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -462,6 +469,7 @@ public class NettingCutOffReportData1 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -470,6 +478,7 @@ public class NettingCutOffReportData1 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "RptTp", required = true)
 	public Max4Text getReportType() {
 		return reportType;
 	}
@@ -478,6 +487,7 @@ public class NettingCutOffReportData1 {
 		this.reportType = reportType;
 	}
 
+	@XmlElement(name = "ActvtnDt", required = true)
 	public ISODate getActivationDate() {
 		return activationDate;
 	}
@@ -486,6 +496,7 @@ public class NettingCutOffReportData1 {
 		this.activationDate = activationDate;
 	}
 
+	@XmlElement(name = "NetSvcPtcptId")
 	public PartyIdentification73Choice getNetServiceParticipantIdentification() {
 		return netServiceParticipantIdentification;
 	}
@@ -494,6 +505,7 @@ public class NettingCutOffReportData1 {
 		this.netServiceParticipantIdentification = netServiceParticipantIdentification;
 	}
 
+	@XmlElement(name = "RptSvcr")
 	public PartyIdentification73Choice getReportServicer() {
 		return reportServicer;
 	}
@@ -502,6 +514,7 @@ public class NettingCutOffReportData1 {
 		this.reportServicer = reportServicer;
 	}
 
+	@XmlElement(name = "NetSvcTp")
 	public Max35Text getNetServiceType() {
 		return netServiceType;
 	}
@@ -510,6 +523,7 @@ public class NettingCutOffReportData1 {
 		this.netServiceType = netServiceType;
 	}
 
+	@XmlElement(name = "MsgPgntn")
 	public Pagination getMessagePagination() {
 		return messagePagination;
 	}

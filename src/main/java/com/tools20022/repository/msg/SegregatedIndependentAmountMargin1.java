@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.IndependentAmountTerm;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Elements used to calculate the collateral margin call for the segregated
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SegregatedIndependentAmountMargin1", propOrder = {"minimumTransferAmount", "roundingAmount", "roundingMethod"})
 public class SegregatedIndependentAmountMargin1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -242,6 +248,7 @@ public class SegregatedIndependentAmountMargin1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MinTrfAmt", required = true)
 	public ActiveCurrencyAndAmount getMinimumTransferAmount() {
 		return minimumTransferAmount;
 	}
@@ -250,6 +257,7 @@ public class SegregatedIndependentAmountMargin1 {
 		this.minimumTransferAmount = minimumTransferAmount;
 	}
 
+	@XmlElement(name = "RndgAmt")
 	public ActiveCurrencyAndAmount getRoundingAmount() {
 		return roundingAmount;
 	}
@@ -258,6 +266,7 @@ public class SegregatedIndependentAmountMargin1 {
 		this.roundingAmount = roundingAmount;
 	}
 
+	@XmlElement(name = "RndgMtd")
 	public RoundingMethod1Code getRoundingMethod() {
 		return roundingMethod;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account between an investor(s) and a fund manager or a fund. The account can
@@ -93,6 +97,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccount25", propOrder = {"identification", "name", "designation", "intermediaryInformation", "accountServicer"})
 public class InvestmentAccount25 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -416,6 +422,7 @@ public class InvestmentAccount25 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentification1 getIdentification() {
 		return identification;
 	}
@@ -424,6 +431,7 @@ public class InvestmentAccount25 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max35Text getName() {
 		return name;
 	}
@@ -432,6 +440,7 @@ public class InvestmentAccount25 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Dsgnt")
 	public Max35Text getDesignation() {
 		return designation;
 	}
@@ -440,6 +449,7 @@ public class InvestmentAccount25 {
 		this.designation = designation;
 	}
 
+	@XmlElement(name = "IntrmyInf")
 	public List<Intermediary11> getIntermediaryInformation() {
 		return intermediaryInformation;
 	}
@@ -448,6 +458,7 @@ public class InvestmentAccount25 {
 		this.intermediaryInformation = intermediaryInformation;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public PartyIdentification2Choice getAccountServicer() {
 		return accountServicer;
 	}

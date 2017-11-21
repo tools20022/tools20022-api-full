@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data related to a component of the POI.
@@ -79,6 +83,8 @@ import java.util.List;
  * definition} = "Data related to a component of the POI."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PointOfInteractionComponent2", propOrder = {"POIComponentType", "manufacturerIdentification", "model", "versionNumber", "serialNumber", "approvalNumber"})
 public class PointOfInteractionComponent2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -384,6 +390,7 @@ public class PointOfInteractionComponent2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "POICmpntTp", required = true)
 	public POIComponentType2Code getPOIComponentType() {
 		return pOIComponentType;
 	}
@@ -392,6 +399,7 @@ public class PointOfInteractionComponent2 {
 		this.pOIComponentType = pOIComponentType;
 	}
 
+	@XmlElement(name = "ManfctrId")
 	public Max35Text getManufacturerIdentification() {
 		return manufacturerIdentification;
 	}
@@ -400,6 +408,7 @@ public class PointOfInteractionComponent2 {
 		this.manufacturerIdentification = manufacturerIdentification;
 	}
 
+	@XmlElement(name = "Mdl")
 	public Max35Text getModel() {
 		return model;
 	}
@@ -408,6 +417,7 @@ public class PointOfInteractionComponent2 {
 		this.model = model;
 	}
 
+	@XmlElement(name = "VrsnNb")
 	public Max16Text getVersionNumber() {
 		return versionNumber;
 	}
@@ -416,6 +426,7 @@ public class PointOfInteractionComponent2 {
 		this.versionNumber = versionNumber;
 	}
 
+	@XmlElement(name = "SrlNb")
 	public Max35Text getSerialNumber() {
 		return serialNumber;
 	}
@@ -424,6 +435,7 @@ public class PointOfInteractionComponent2 {
 		this.serialNumber = serialNumber;
 	}
 
+	@XmlElement(name = "ApprvlNb")
 	public List<Max70Text> getApprovalNumber() {
 		return approvalNumber;
 	}

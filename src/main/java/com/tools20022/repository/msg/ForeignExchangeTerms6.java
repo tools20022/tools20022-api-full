@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information needed to process a currency exchange or conversion.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ForeignExchangeTerms6", propOrder = {"unitCurrency", "quotedCurrency", "exchangeRate", "quotationDate", "quotingInstitution"})
 public class ForeignExchangeTerms6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -395,6 +401,7 @@ public class ForeignExchangeTerms6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getUnitCurrency() {
 		return unitCurrency;
 	}
@@ -403,6 +410,7 @@ public class ForeignExchangeTerms6 {
 		this.unitCurrency = unitCurrency;
 	}
 
+	@XmlElement(name = "QtdCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getQuotedCurrency() {
 		return quotedCurrency;
 	}
@@ -411,6 +419,7 @@ public class ForeignExchangeTerms6 {
 		this.quotedCurrency = quotedCurrency;
 	}
 
+	@XmlElement(name = "XchgRate", required = true)
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -419,6 +428,7 @@ public class ForeignExchangeTerms6 {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "QtnDt")
 	public ISODateTime getQuotationDate() {
 		return quotationDate;
 	}
@@ -427,6 +437,7 @@ public class ForeignExchangeTerms6 {
 		this.quotationDate = quotationDate;
 	}
 
+	@XmlElement(name = "QtgInstn")
 	public PartyIdentification2Choice getQuotingInstitution() {
 		return quotingInstitution;
 	}

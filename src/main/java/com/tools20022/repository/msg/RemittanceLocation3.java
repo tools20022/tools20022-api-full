@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on the remittance advice.
@@ -81,6 +85,8 @@ import java.util.List;
  * RemittanceLocation2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RemittanceLocation3", propOrder = {"remittanceIdentification", "remittanceLocationDetails", "references"})
 public class RemittanceLocation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -248,6 +254,7 @@ public class RemittanceLocation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RmtId")
 	public Max35Text getRemittanceIdentification() {
 		return remittanceIdentification;
 	}
@@ -256,6 +263,7 @@ public class RemittanceLocation3 {
 		this.remittanceIdentification = remittanceIdentification;
 	}
 
+	@XmlElement(name = "RmtLctnDtls", required = true)
 	public List<RemittanceLocationDetails1> getRemittanceLocationDetails() {
 		return remittanceLocationDetails;
 	}
@@ -264,6 +272,7 @@ public class RemittanceLocation3 {
 		this.remittanceLocationDetails = remittanceLocationDetails;
 	}
 
+	@XmlElement(name = "Refs", required = true)
 	public TransactionReferences4 getReferences() {
 		return references;
 	}

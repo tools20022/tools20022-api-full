@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique and unambiguous way to identify a person.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PersonIdentification5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PersonIdentification10", propOrder = {"firstName", "name", "birthDate", "other"})
 public class PersonIdentification10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -291,6 +297,7 @@ public class PersonIdentification10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrstNm", required = true)
 	public Max140Text getFirstName() {
 		return firstName;
 	}
@@ -299,6 +306,7 @@ public class PersonIdentification10 {
 		this.firstName = firstName;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max140Text getName() {
 		return name;
 	}
@@ -307,6 +315,7 @@ public class PersonIdentification10 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "BirthDt", required = true)
 	public ISODate getBirthDate() {
 		return birthDate;
 	}
@@ -315,6 +324,7 @@ public class PersonIdentification10 {
 		this.birthDate = birthDate;
 	}
 
+	@XmlElement(name = "Othr", required = true)
 	public GenericPersonIdentification1 getOther() {
 		return other;
 	}

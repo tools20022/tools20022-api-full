@@ -37,6 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -130,6 +134,9 @@ import java.util.List;
  * Transfer11}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Transfer19", propOrder = {"transferReference", "clientReference", "counterpartyReference", "businessFlowType", "requestedSettlementDate", "transferOrderDateForm", "transferReason", "holdingsPlanType",
+		"financialInstrumentDetails", "quantity", "unitsDetails", "rounding", "averagePrice", "transferCurrency", "ownAccountTransferIndicator", "nonStandardSettlementInformation", "receivingAgentDetails", "deliveringAgentDetails"})
 public class Transfer19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1191,6 +1198,7 @@ public class Transfer19 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -1199,6 +1207,7 @@ public class Transfer19 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -1207,6 +1216,7 @@ public class Transfer19 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CtrPtyRef")
 	public AdditionalReference2 getCounterpartyReference() {
 		return counterpartyReference;
 	}
@@ -1215,6 +1225,7 @@ public class Transfer19 {
 		this.counterpartyReference = counterpartyReference;
 	}
 
+	@XmlElement(name = "BizFlowTp")
 	public BusinessFlowType1Code getBusinessFlowType() {
 		return businessFlowType;
 	}
@@ -1223,6 +1234,7 @@ public class Transfer19 {
 		this.businessFlowType = businessFlowType;
 	}
 
+	@XmlElement(name = "ReqdSttlmDt")
 	public ISODate getRequestedSettlementDate() {
 		return requestedSettlementDate;
 	}
@@ -1231,6 +1243,7 @@ public class Transfer19 {
 		this.requestedSettlementDate = requestedSettlementDate;
 	}
 
+	@XmlElement(name = "TrfOrdrDtForm")
 	public ISODate getTransferOrderDateForm() {
 		return transferOrderDateForm;
 	}
@@ -1239,6 +1252,7 @@ public class Transfer19 {
 		this.transferOrderDateForm = transferOrderDateForm;
 	}
 
+	@XmlElement(name = "TrfRsn")
 	public TransferReason1 getTransferReason() {
 		return transferReason;
 	}
@@ -1247,6 +1261,7 @@ public class Transfer19 {
 		this.transferReason = transferReason;
 	}
 
+	@XmlElement(name = "HldgsPlanTp")
 	public List<HoldingsPlanType1Code> getHoldingsPlanType() {
 		return holdingsPlanType;
 	}
@@ -1255,6 +1270,7 @@ public class Transfer19 {
 		this.holdingsPlanType = holdingsPlanType;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument13 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -1263,6 +1279,7 @@ public class Transfer19 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public Quantity13Choice getQuantity() {
 		return quantity;
 	}
@@ -1271,6 +1288,7 @@ public class Transfer19 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "UnitsDtls")
 	public List<Unit3> getUnitsDetails() {
 		return unitsDetails;
 	}
@@ -1279,6 +1297,7 @@ public class Transfer19 {
 		this.unitsDetails = unitsDetails;
 	}
 
+	@XmlElement(name = "Rndg")
 	public RoundingDirection2Code getRounding() {
 		return rounding;
 	}
@@ -1287,6 +1306,7 @@ public class Transfer19 {
 		this.rounding = rounding;
 	}
 
+	@XmlElement(name = "AvrgPric")
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAveragePrice() {
 		return averagePrice;
 	}
@@ -1295,6 +1315,7 @@ public class Transfer19 {
 		this.averagePrice = averagePrice;
 	}
 
+	@XmlElement(name = "TrfCcy")
 	public CurrencyCode getTransferCurrency() {
 		return transferCurrency;
 	}
@@ -1303,6 +1324,7 @@ public class Transfer19 {
 		this.transferCurrency = transferCurrency;
 	}
 
+	@XmlElement(name = "OwnAcctTrfInd")
 	public YesNoIndicator getOwnAccountTransferIndicator() {
 		return ownAccountTransferIndicator;
 	}
@@ -1311,6 +1333,7 @@ public class Transfer19 {
 		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
 	}
 
+	@XmlElement(name = "NonStdSttlmInf")
 	public Max350Text getNonStandardSettlementInformation() {
 		return nonStandardSettlementInformation;
 	}
@@ -1319,6 +1342,7 @@ public class Transfer19 {
 		this.nonStandardSettlementInformation = nonStandardSettlementInformation;
 	}
 
+	@XmlElement(name = "RcvgAgtDtls")
 	public PartyIdentificationAndAccount93 getReceivingAgentDetails() {
 		return receivingAgentDetails;
 	}
@@ -1327,6 +1351,7 @@ public class Transfer19 {
 		this.receivingAgentDetails = receivingAgentDetails;
 	}
 
+	@XmlElement(name = "DlvrgAgtDtls")
 	public PartyIdentificationAndAccount93 getDeliveringAgentDetails() {
 		return deliveringAgentDetails;
 	}

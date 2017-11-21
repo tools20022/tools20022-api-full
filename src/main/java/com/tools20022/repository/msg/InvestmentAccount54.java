@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account between an investor(s) and a fund manager or a fund. The account can
@@ -131,6 +135,9 @@ import java.util.List;
  * InvestmentAccount40}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccount54", propOrder = {"ownerIdentification", "accountIdentification", "accountName", "accountDesignation", "intermediaryInformation", "securitiesForm", "dematerialisedIndicator", "incomePreference",
+		"beneficiaryCertificationCompletion", "safekeepingPlace", "accountServicer", "subAccountDetails", "settlementPartiesDetails"})
 public class InvestmentAccount54 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -979,6 +986,7 @@ public class InvestmentAccount54 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OwnrId")
 	public List<PartyIdentification70Choice> getOwnerIdentification() {
 		return ownerIdentification;
 	}
@@ -987,6 +995,7 @@ public class InvestmentAccount54 {
 		this.ownerIdentification = ownerIdentification;
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -995,6 +1004,7 @@ public class InvestmentAccount54 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctNm")
 	public Max35Text getAccountName() {
 		return accountName;
 	}
@@ -1003,6 +1013,7 @@ public class InvestmentAccount54 {
 		this.accountName = accountName;
 	}
 
+	@XmlElement(name = "AcctDsgnt")
 	public Max35Text getAccountDesignation() {
 		return accountDesignation;
 	}
@@ -1011,6 +1022,7 @@ public class InvestmentAccount54 {
 		this.accountDesignation = accountDesignation;
 	}
 
+	@XmlElement(name = "IntrmyInf")
 	public List<Intermediary34> getIntermediaryInformation() {
 		return intermediaryInformation;
 	}
@@ -1019,6 +1031,7 @@ public class InvestmentAccount54 {
 		this.intermediaryInformation = intermediaryInformation;
 	}
 
+	@XmlElement(name = "SctiesForm")
 	public FormOfSecurity1Code getSecuritiesForm() {
 		return securitiesForm;
 	}
@@ -1027,6 +1040,7 @@ public class InvestmentAccount54 {
 		this.securitiesForm = securitiesForm;
 	}
 
+	@XmlElement(name = "DmtrlsdInd")
 	public YesNoIndicator getDematerialisedIndicator() {
 		return dematerialisedIndicator;
 	}
@@ -1035,6 +1049,7 @@ public class InvestmentAccount54 {
 		this.dematerialisedIndicator = dematerialisedIndicator;
 	}
 
+	@XmlElement(name = "IncmPref")
 	public IncomePreference2Code getIncomePreference() {
 		return incomePreference;
 	}
@@ -1043,6 +1058,7 @@ public class InvestmentAccount54 {
 		this.incomePreference = incomePreference;
 	}
 
+	@XmlElement(name = "BnfcryCertfctnCmpltn")
 	public BeneficiaryCertificationCompletion1Code getBeneficiaryCertificationCompletion() {
 		return beneficiaryCertificationCompletion;
 	}
@@ -1051,6 +1067,7 @@ public class InvestmentAccount54 {
 		this.beneficiaryCertificationCompletion = beneficiaryCertificationCompletion;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat8Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -1059,6 +1076,7 @@ public class InvestmentAccount54 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public PartyIdentification70Choice getAccountServicer() {
 		return accountServicer;
 	}
@@ -1067,6 +1085,7 @@ public class InvestmentAccount54 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "SubAcctDtls")
 	public SubAccount5 getSubAccountDetails() {
 		return subAccountDetails;
 	}
@@ -1075,6 +1094,7 @@ public class InvestmentAccount54 {
 		this.subAccountDetails = subAccountDetails;
 	}
 
+	@XmlElement(name = "SttlmPtiesDtls")
 	public DeliveringPartiesAndAccount14 getSettlementPartiesDetails() {
 		return settlementPartiesDetails;
 	}

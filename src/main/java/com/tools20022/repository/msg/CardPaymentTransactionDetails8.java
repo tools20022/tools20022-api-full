@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the transaction in the authorisation request.
@@ -91,6 +95,9 @@ import java.util.List;
  * definition} = "Details of the transaction in the authorisation request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransactionDetails8", propOrder = {"amount", "ICCRelatedData", "paymentContext", "merchantCategoryCode", "transactionDateTime", "saleReferenceNumber", "rePresentmentReason", "additionalService",
+		"transactionReference"})
 public class CardPaymentTransactionDetails8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -529,6 +536,7 @@ public class CardPaymentTransactionDetails8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt")
 	public List<CardAmountAndCurrencyExchange1> getAmount() {
 		return amount;
 	}
@@ -537,6 +545,7 @@ public class CardPaymentTransactionDetails8 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max1025Text getICCRelatedData() {
 		return iCCRelatedData;
 	}
@@ -545,6 +554,7 @@ public class CardPaymentTransactionDetails8 {
 		this.iCCRelatedData = iCCRelatedData;
 	}
 
+	@XmlElement(name = "PmtCntxt")
 	public PaymentContext3 getPaymentContext() {
 		return paymentContext;
 	}
@@ -553,6 +563,7 @@ public class CardPaymentTransactionDetails8 {
 		this.paymentContext = paymentContext;
 	}
 
+	@XmlElement(name = "MrchntCtgyCd")
 	public Min3Max4Text getMerchantCategoryCode() {
 		return merchantCategoryCode;
 	}
@@ -561,6 +572,7 @@ public class CardPaymentTransactionDetails8 {
 		this.merchantCategoryCode = merchantCategoryCode;
 	}
 
+	@XmlElement(name = "TxDtTm")
 	public ISODateTime getTransactionDateTime() {
 		return transactionDateTime;
 	}
@@ -569,6 +581,7 @@ public class CardPaymentTransactionDetails8 {
 		this.transactionDateTime = transactionDateTime;
 	}
 
+	@XmlElement(name = "SaleRefNb")
 	public Max35Text getSaleReferenceNumber() {
 		return saleReferenceNumber;
 	}
@@ -577,6 +590,7 @@ public class CardPaymentTransactionDetails8 {
 		this.saleReferenceNumber = saleReferenceNumber;
 	}
 
+	@XmlElement(name = "RePresntmntRsn")
 	public ExternalRePresentmentReason1Code getRePresentmentReason() {
 		return rePresentmentReason;
 	}
@@ -585,6 +599,7 @@ public class CardPaymentTransactionDetails8 {
 		this.rePresentmentReason = rePresentmentReason;
 	}
 
+	@XmlElement(name = "AddtlSvc")
 	public CardPaymentServiceType2Code getAdditionalService() {
 		return additionalService;
 	}
@@ -593,6 +608,7 @@ public class CardPaymentTransactionDetails8 {
 		this.additionalService = additionalService;
 	}
 
+	@XmlElement(name = "TxRef")
 	public Max35Text getTransactionReference() {
 		return transactionReference;
 	}

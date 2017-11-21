@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.GroupHeader63;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOLatestversion;
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementMaintenance20162017;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * Scope:<br>
@@ -47,9 +49,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pacs.010.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementLatestVersion
@@ -85,6 +84,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pacs.010.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -96,6 +98,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstitutionDirectDebitV02", propOrder = {"groupHeader", "creditInstruction", "supplementaryData"})
 public class FinancialInstitutionDirectDebitV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -135,6 +139,14 @@ public class FinancialInstitutionDirectDebitV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader63.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstitutionDirectDebitV02.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<CreditTransferTransaction9> creditInstruction;
 	/**
@@ -171,6 +183,14 @@ public class FinancialInstitutionDirectDebitV02 {
 			definition = "Characteristics that apply to the credit side of the payment transaction(s) included in the message.";
 			minOccurs = 1;
 			complexType_lazy = () -> CreditTransferTransaction9.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstitutionDirectDebitV02.class.getMethod("getCreditInstruction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -209,6 +229,14 @@ public class FinancialInstitutionDirectDebitV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstitutionDirectDebitV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -221,7 +249,8 @@ public class FinancialInstitutionDirectDebitV02 {
 				rootElement = "Document";
 				xmlTag = "FIDrctDbt";
 				businessArea_lazy = () -> PaymentsClearingandSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstitutionDirectDebitV02.mmGroupHeader, FinancialInstitutionDirectDebitV02.mmCreditInstruction, FinancialInstitutionDirectDebitV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02.mmGroupHeader,
+						com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02.mmCreditInstruction, com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pacs";
@@ -231,10 +260,16 @@ public class FinancialInstitutionDirectDebitV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FinancialInstitutionDirectDebitV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader63 getGroupHeader() {
 		return groupHeader;
 	}
@@ -243,6 +278,7 @@ public class FinancialInstitutionDirectDebitV02 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "CdtInstr", required = true)
 	public List<CreditTransferTransaction9> getCreditInstruction() {
 		return creditInstruction;
 	}
@@ -251,11 +287,18 @@ public class FinancialInstitutionDirectDebitV02 {
 		this.creditInstruction = creditInstruction;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.010.02.02")
+	static public class Document {
+		@XmlElement(name = "FIDrctDbt", required = true)
+		public FinancialInstitutionDirectDebitV02 messageBody;
 	}
 }

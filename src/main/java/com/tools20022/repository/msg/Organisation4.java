@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Organised structure that is set up for a particular purpose, eg, a business,
@@ -253,6 +257,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Organisation4", propOrder = {"name", "identification", "purpose", "taxationCountry", "registrationCountry", "registrationDate", "taxIdentificationNumber", "nationalRegistrationNumber", "corporateInvestorAddress"})
 public class Organisation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -793,6 +799,7 @@ public class Organisation4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max140Text getName() {
 		return name;
 	}
@@ -801,6 +808,7 @@ public class Organisation4 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Id")
 	public PartyIdentification4Choice getIdentification() {
 		return identification;
 	}
@@ -809,6 +817,7 @@ public class Organisation4 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Purp")
 	public Max35Text getPurpose() {
 		return purpose;
 	}
@@ -817,6 +826,7 @@ public class Organisation4 {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "TaxtnCtry")
 	public CountryCode getTaxationCountry() {
 		return taxationCountry;
 	}
@@ -825,6 +835,7 @@ public class Organisation4 {
 		this.taxationCountry = taxationCountry;
 	}
 
+	@XmlElement(name = "RegnCtry")
 	public CountryCode getRegistrationCountry() {
 		return registrationCountry;
 	}
@@ -833,6 +844,7 @@ public class Organisation4 {
 		this.registrationCountry = registrationCountry;
 	}
 
+	@XmlElement(name = "RegnDt")
 	public ISODate getRegistrationDate() {
 		return registrationDate;
 	}
@@ -841,6 +853,7 @@ public class Organisation4 {
 		this.registrationDate = registrationDate;
 	}
 
+	@XmlElement(name = "TaxIdNb")
 	public Max35Text getTaxIdentificationNumber() {
 		return taxIdentificationNumber;
 	}
@@ -849,6 +862,7 @@ public class Organisation4 {
 		this.taxIdentificationNumber = taxIdentificationNumber;
 	}
 
+	@XmlElement(name = "NtlRegnNb")
 	public Max35Text getNationalRegistrationNumber() {
 		return nationalRegistrationNumber;
 	}
@@ -857,6 +871,7 @@ public class Organisation4 {
 		this.nationalRegistrationNumber = nationalRegistrationNumber;
 	}
 
+	@XmlElement(name = "CorpInvstrAdr", required = true)
 	public PostalAddress1 getCorporateInvestorAddress() {
 		return corporateInvestorAddress;
 	}

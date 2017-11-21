@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provide information about the reason for the modification and about the
@@ -90,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestmentAccountModificationDetails}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccountModification1", propOrder = {"modificationReason", "accountApplicationIdentification", "clientReference", "counterpartyReference"})
 public class InvestmentAccountModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -344,6 +350,7 @@ public class InvestmentAccountModification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ModRsn")
 	public Max350Text getModificationReason() {
 		return modificationReason;
 	}
@@ -352,6 +359,7 @@ public class InvestmentAccountModification1 {
 		this.modificationReason = modificationReason;
 	}
 
+	@XmlElement(name = "AcctApplId")
 	public Max35Text getAccountApplicationIdentification() {
 		return accountApplicationIdentification;
 	}
@@ -360,6 +368,7 @@ public class InvestmentAccountModification1 {
 		this.accountApplicationIdentification = accountApplicationIdentification;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -368,6 +377,7 @@ public class InvestmentAccountModification1 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CtrPtyRef")
 	public AdditionalReference2 getCounterpartyReference() {
 		return counterpartyReference;
 	}

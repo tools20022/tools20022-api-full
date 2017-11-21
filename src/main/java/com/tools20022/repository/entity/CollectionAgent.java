@@ -67,6 +67,11 @@ public class CollectionAgent extends SecuritiesPartyRole {
 				definition = "Additional party appointed to collect payment or securities on behalf of the issuer.";
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CollectionAgent.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

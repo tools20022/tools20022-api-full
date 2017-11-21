@@ -64,6 +64,11 @@ public class AccountingAgent extends SecuritiesTradePartyRole {
 				definition = "Party in charge of the accounting tasks.";
 				superType_lazy = () -> SecuritiesTradePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountingAgent.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

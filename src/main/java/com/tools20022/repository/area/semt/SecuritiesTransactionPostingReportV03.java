@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesManagementArchive;
 import com.tools20022.repository.choice.PartyIdentification36Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -62,9 +64,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.017.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
@@ -104,6 +103,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.017.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -127,6 +129,8 @@ import java.util.List;
  * SecuritiesTransactionPostingReportV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTransactionPostingReportV03", propOrder = {"pagination", "statementGeneralDetails", "accountOwner", "safekeepingAccount", "financialInstrumentDetails", "subAccountDetails"})
 public class SecuritiesTransactionPostingReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +171,14 @@ public class SecuritiesTransactionPostingReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionPostingReportV03.class.getMethod("getPagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Statement11 statementGeneralDetails;
 	/**
@@ -200,6 +212,14 @@ public class SecuritiesTransactionPostingReportV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Statement11.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionPostingReportV03.class.getMethod("getStatementGeneralDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification36Choice accountOwner;
@@ -236,6 +256,14 @@ public class SecuritiesTransactionPostingReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification36Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionPostingReportV03.class.getMethod("getAccountOwner", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesAccount13 safekeepingAccount;
 	/**
@@ -271,6 +299,14 @@ public class SecuritiesTransactionPostingReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionPostingReportV03.class.getMethod("getSafekeepingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<FinancialInstrumentDetails9> financialInstrumentDetails;
 	/**
@@ -304,6 +340,14 @@ public class SecuritiesTransactionPostingReportV03 {
 			definition = "Reporting per financial instrument.";
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentDetails9.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionPostingReportV03.class.getMethod("getFinancialInstrumentDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SubAccountIdentification21> subAccountDetails;
@@ -339,6 +383,14 @@ public class SecuritiesTransactionPostingReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SubAccountIdentification21.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransactionPostingReportV03.class.getMethod("getSubAccountDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -353,8 +405,10 @@ public class SecuritiesTransactionPostingReportV03 {
 				rootElement = "Document";
 				xmlTag = "SctiesTxPstngRpt";
 				businessArea_lazy = () -> SecuritiesManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTransactionPostingReportV03.mmPagination, SecuritiesTransactionPostingReportV03.mmStatementGeneralDetails, SecuritiesTransactionPostingReportV03.mmAccountOwner,
-						SecuritiesTransactionPostingReportV03.mmSafekeepingAccount, SecuritiesTransactionPostingReportV03.mmFinancialInstrumentDetails, SecuritiesTransactionPostingReportV03.mmSubAccountDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03.mmStatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03.mmFinancialInstrumentDetails,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03.mmSubAccountDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -364,10 +418,16 @@ public class SecuritiesTransactionPostingReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesTransactionPostingReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
@@ -376,6 +436,7 @@ public class SecuritiesTransactionPostingReportV03 {
 		this.pagination = pagination;
 	}
 
+	@XmlElement(name = "StmtGnlDtls", required = true)
 	public Statement11 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
@@ -384,6 +445,7 @@ public class SecuritiesTransactionPostingReportV03 {
 		this.statementGeneralDetails = statementGeneralDetails;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification36Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -392,6 +454,7 @@ public class SecuritiesTransactionPostingReportV03 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -400,6 +463,7 @@ public class SecuritiesTransactionPostingReportV03 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "FinInstrmDtls")
 	public List<FinancialInstrumentDetails9> getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -408,11 +472,18 @@ public class SecuritiesTransactionPostingReportV03 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "SubAcctDtls")
 	public List<SubAccountIdentification21> getSubAccountDetails() {
 		return subAccountDetails;
 	}
 
 	public void setSubAccountDetails(List<SubAccountIdentification21> subAccountDetails) {
 		this.subAccountDetails = subAccountDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.017.03.03")
+	static public class Document {
+		@XmlElement(name = "SctiesTxPstngRpt", required = true)
+		public SecuritiesTransactionPostingReportV03 messageBody;
 	}
 }

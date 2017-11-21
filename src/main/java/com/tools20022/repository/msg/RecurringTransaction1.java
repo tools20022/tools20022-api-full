@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Financial loan (instalment) or a recurring transaction.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RecurringTransaction1", propOrder = {"sequenceNumber", "periodUnit", "instalmentPeriod", "totalNumberOfPayments", "interestCharges"})
 public class RecurringTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -374,6 +380,7 @@ public class RecurringTransaction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SeqNb", required = true)
 	public Max2NumericText getSequenceNumber() {
 		return sequenceNumber;
 	}
@@ -382,6 +389,7 @@ public class RecurringTransaction1 {
 		this.sequenceNumber = sequenceNumber;
 	}
 
+	@XmlElement(name = "PrdUnit", required = true)
 	public Frequency4Code getPeriodUnit() {
 		return periodUnit;
 	}
@@ -390,6 +398,7 @@ public class RecurringTransaction1 {
 		this.periodUnit = periodUnit;
 	}
 
+	@XmlElement(name = "InstlmtPrd", required = true)
 	public Number getInstalmentPeriod() {
 		return instalmentPeriod;
 	}
@@ -398,6 +407,7 @@ public class RecurringTransaction1 {
 		this.instalmentPeriod = instalmentPeriod;
 	}
 
+	@XmlElement(name = "TtlNbOfPmts", required = true)
 	public Number getTotalNumberOfPayments() {
 		return totalNumberOfPayments;
 	}
@@ -406,6 +416,7 @@ public class RecurringTransaction1 {
 		this.totalNumberOfPayments = totalNumberOfPayments;
 	}
 
+	@XmlElement(name = "IntrstChrgs")
 	public ImpliedCurrencyAndAmount getInterestCharges() {
 		return interestCharges;
 	}

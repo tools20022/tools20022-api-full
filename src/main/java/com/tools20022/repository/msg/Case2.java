@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to identify a case.
@@ -121,6 +125,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Set of elements used to identify a case."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Case2", propOrder = {"identification", "creator", "reopenCaseIndication"})
 public class Case2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -279,6 +285,7 @@ public class Case2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -287,6 +294,7 @@ public class Case2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Cretr", required = true)
 	public Party7Choice getCreator() {
 		return creator;
 	}
@@ -295,6 +303,7 @@ public class Case2 {
 		this.creator = creator;
 	}
 
+	@XmlElement(name = "ReopCaseIndctn")
 	public YesNoIndicator getReopenCaseIndication() {
 		return reopenCaseIndication;
 	}

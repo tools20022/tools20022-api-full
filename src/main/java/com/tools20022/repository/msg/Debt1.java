@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Financial instruments evidencing moneys owed by the issuer to the holder on
@@ -185,6 +189,13 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Debt1", propOrder = {"faceAmount", "paymentFrequency", "datedDate", "firstPaymentDate", "maturityDate", "nextCouponDate", "putableDate", "nextCallableDate", "nextFactorDate", "dayCountBasis", "paymentDirectionIndicator",
+		"interestRate", "nextInterestRate", "oddCouponIndicator", "callableIndicator", "CPProgram", "CPRegistrationType", "interestAccrualDate", "putableIndicator", "convertibleIndicator", "preFundedIndicator", "escrowedIndicator",
+		"perpetualIndicator", "subordinatedIndicator", "extendibleIndicator", "extendiblePeriod", "variableRateIndicator", "overAllotmentAmount", "overAllotmentRate", "amortisableIndicator", "interestCalculationMethod",
+		"capitalisedInterest", "actualDenominationAmount", "currentFactor", "nextFactor", "previousFactor", "conversionPeriod", "conversionRatioDenominator", "conversionRatioNumerator", "pieces", "poolsMaximum", "poolsPerMillion",
+		"poolsPerLot", "poolsPerTrade", "constantPrePaymentPenaltyIndicator", "lotIdentification", "prePaymentSpeed", "constantPrePaymentYield", "weightedAverageCoupon", "weightedAverageLife", "weightedAverageLoan",
+		"weightedAverageMaturity", "insuredIndicator", "bankQualifiedIndicator", "variableInterestDetails", "yieldDetails"})
 public class Debt1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -2953,6 +2964,7 @@ public class Debt1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FaceAmt")
 	public ActiveCurrencyAndAmount getFaceAmount() {
 		return faceAmount;
 	}
@@ -2961,6 +2973,7 @@ public class Debt1 {
 		this.faceAmount = faceAmount;
 	}
 
+	@XmlElement(name = "PmtFrqcy")
 	public Frequency1Code getPaymentFrequency() {
 		return paymentFrequency;
 	}
@@ -2969,6 +2982,7 @@ public class Debt1 {
 		this.paymentFrequency = paymentFrequency;
 	}
 
+	@XmlElement(name = "DtdDt")
 	public ISODateTime getDatedDate() {
 		return datedDate;
 	}
@@ -2977,6 +2991,7 @@ public class Debt1 {
 		this.datedDate = datedDate;
 	}
 
+	@XmlElement(name = "FrstPmtDt")
 	public ISODateTime getFirstPaymentDate() {
 		return firstPaymentDate;
 	}
@@ -2985,6 +3000,7 @@ public class Debt1 {
 		this.firstPaymentDate = firstPaymentDate;
 	}
 
+	@XmlElement(name = "MtrtyDt")
 	public ISODateTime getMaturityDate() {
 		return maturityDate;
 	}
@@ -2993,6 +3009,7 @@ public class Debt1 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "NxtCpnDt")
 	public ISODateTime getNextCouponDate() {
 		return nextCouponDate;
 	}
@@ -3001,6 +3018,7 @@ public class Debt1 {
 		this.nextCouponDate = nextCouponDate;
 	}
 
+	@XmlElement(name = "PutblDt")
 	public ISODateTime getPutableDate() {
 		return putableDate;
 	}
@@ -3009,6 +3027,7 @@ public class Debt1 {
 		this.putableDate = putableDate;
 	}
 
+	@XmlElement(name = "NxtCllblDt")
 	public ISODateTime getNextCallableDate() {
 		return nextCallableDate;
 	}
@@ -3017,6 +3036,7 @@ public class Debt1 {
 		this.nextCallableDate = nextCallableDate;
 	}
 
+	@XmlElement(name = "NxtFctrDt")
 	public ISODateTime getNextFactorDate() {
 		return nextFactorDate;
 	}
@@ -3025,6 +3045,7 @@ public class Debt1 {
 		this.nextFactorDate = nextFactorDate;
 	}
 
+	@XmlElement(name = "DayCntBsis")
 	public InterestComputationMethod1Choice getDayCountBasis() {
 		return dayCountBasis;
 	}
@@ -3033,6 +3054,7 @@ public class Debt1 {
 		this.dayCountBasis = dayCountBasis;
 	}
 
+	@XmlElement(name = "PmtDrctnInd")
 	public PaymentDirectionIndicator getPaymentDirectionIndicator() {
 		return paymentDirectionIndicator;
 	}
@@ -3041,6 +3063,7 @@ public class Debt1 {
 		this.paymentDirectionIndicator = paymentDirectionIndicator;
 	}
 
+	@XmlElement(name = "IntrstRate")
 	public PercentageRate getInterestRate() {
 		return interestRate;
 	}
@@ -3049,6 +3072,7 @@ public class Debt1 {
 		this.interestRate = interestRate;
 	}
 
+	@XmlElement(name = "NxtIntrstRate")
 	public PercentageRate getNextInterestRate() {
 		return nextInterestRate;
 	}
@@ -3057,6 +3081,7 @@ public class Debt1 {
 		this.nextInterestRate = nextInterestRate;
 	}
 
+	@XmlElement(name = "OddCpnInd")
 	public YesNoIndicator getOddCouponIndicator() {
 		return oddCouponIndicator;
 	}
@@ -3065,6 +3090,7 @@ public class Debt1 {
 		this.oddCouponIndicator = oddCouponIndicator;
 	}
 
+	@XmlElement(name = "CllblInd")
 	public YesNoIndicator getCallableIndicator() {
 		return callableIndicator;
 	}
@@ -3073,6 +3099,7 @@ public class Debt1 {
 		this.callableIndicator = callableIndicator;
 	}
 
+	@XmlElement(name = "CPPrgm")
 	public Number getCPProgram() {
 		return cPProgram;
 	}
@@ -3081,6 +3108,7 @@ public class Debt1 {
 		this.cPProgram = cPProgram;
 	}
 
+	@XmlElement(name = "CPRegnTp")
 	public Max350Text getCPRegistrationType() {
 		return cPRegistrationType;
 	}
@@ -3089,6 +3117,7 @@ public class Debt1 {
 		this.cPRegistrationType = cPRegistrationType;
 	}
 
+	@XmlElement(name = "IntrstAcrlDt")
 	public ISODateTime getInterestAccrualDate() {
 		return interestAccrualDate;
 	}
@@ -3097,6 +3126,7 @@ public class Debt1 {
 		this.interestAccrualDate = interestAccrualDate;
 	}
 
+	@XmlElement(name = "PutblInd")
 	public YesNoIndicator getPutableIndicator() {
 		return putableIndicator;
 	}
@@ -3105,6 +3135,7 @@ public class Debt1 {
 		this.putableIndicator = putableIndicator;
 	}
 
+	@XmlElement(name = "ConvtblInd")
 	public YesNoIndicator getConvertibleIndicator() {
 		return convertibleIndicator;
 	}
@@ -3113,6 +3144,7 @@ public class Debt1 {
 		this.convertibleIndicator = convertibleIndicator;
 	}
 
+	@XmlElement(name = "PreFnddInd")
 	public YesNoIndicator getPreFundedIndicator() {
 		return preFundedIndicator;
 	}
@@ -3121,6 +3153,7 @@ public class Debt1 {
 		this.preFundedIndicator = preFundedIndicator;
 	}
 
+	@XmlElement(name = "EscrwdInd")
 	public YesNoIndicator getEscrowedIndicator() {
 		return escrowedIndicator;
 	}
@@ -3129,6 +3162,7 @@ public class Debt1 {
 		this.escrowedIndicator = escrowedIndicator;
 	}
 
+	@XmlElement(name = "PerptlInd")
 	public YesNoIndicator getPerpetualIndicator() {
 		return perpetualIndicator;
 	}
@@ -3137,6 +3171,7 @@ public class Debt1 {
 		this.perpetualIndicator = perpetualIndicator;
 	}
 
+	@XmlElement(name = "SubrdntdInd")
 	public YesNoIndicator getSubordinatedIndicator() {
 		return subordinatedIndicator;
 	}
@@ -3145,6 +3180,7 @@ public class Debt1 {
 		this.subordinatedIndicator = subordinatedIndicator;
 	}
 
+	@XmlElement(name = "XtndblInd")
 	public YesNoIndicator getExtendibleIndicator() {
 		return extendibleIndicator;
 	}
@@ -3153,6 +3189,7 @@ public class Debt1 {
 		this.extendibleIndicator = extendibleIndicator;
 	}
 
+	@XmlElement(name = "XtndblPrd")
 	public DateTimePeriodChoice getExtendiblePeriod() {
 		return extendiblePeriod;
 	}
@@ -3161,6 +3198,7 @@ public class Debt1 {
 		this.extendiblePeriod = extendiblePeriod;
 	}
 
+	@XmlElement(name = "VarblRateInd")
 	public YesNoIndicator getVariableRateIndicator() {
 		return variableRateIndicator;
 	}
@@ -3169,6 +3207,7 @@ public class Debt1 {
 		this.variableRateIndicator = variableRateIndicator;
 	}
 
+	@XmlElement(name = "OverAlltmtAmt")
 	public ActiveCurrencyAndAmount getOverAllotmentAmount() {
 		return overAllotmentAmount;
 	}
@@ -3177,6 +3216,7 @@ public class Debt1 {
 		this.overAllotmentAmount = overAllotmentAmount;
 	}
 
+	@XmlElement(name = "OverAlltmtRate")
 	public PercentageRate getOverAllotmentRate() {
 		return overAllotmentRate;
 	}
@@ -3185,6 +3225,7 @@ public class Debt1 {
 		this.overAllotmentRate = overAllotmentRate;
 	}
 
+	@XmlElement(name = "AmtsblInd")
 	public YesNoIndicator getAmortisableIndicator() {
 		return amortisableIndicator;
 	}
@@ -3193,6 +3234,7 @@ public class Debt1 {
 		this.amortisableIndicator = amortisableIndicator;
 	}
 
+	@XmlElement(name = "IntrstClctnMtd")
 	public Max70Text getInterestCalculationMethod() {
 		return interestCalculationMethod;
 	}
@@ -3201,6 +3243,7 @@ public class Debt1 {
 		this.interestCalculationMethod = interestCalculationMethod;
 	}
 
+	@XmlElement(name = "CptlsdIntrst")
 	public DistributionPolicy1Code getCapitalisedInterest() {
 		return capitalisedInterest;
 	}
@@ -3209,6 +3252,7 @@ public class Debt1 {
 		this.capitalisedInterest = capitalisedInterest;
 	}
 
+	@XmlElement(name = "ActlDnmtnAmt")
 	public List<ActiveCurrencyAndAmount> getActualDenominationAmount() {
 		return actualDenominationAmount;
 	}
@@ -3217,6 +3261,7 @@ public class Debt1 {
 		this.actualDenominationAmount = actualDenominationAmount;
 	}
 
+	@XmlElement(name = "CurFctr")
 	public PercentageRate getCurrentFactor() {
 		return currentFactor;
 	}
@@ -3225,6 +3270,7 @@ public class Debt1 {
 		this.currentFactor = currentFactor;
 	}
 
+	@XmlElement(name = "NxtFctr")
 	public PercentageRate getNextFactor() {
 		return nextFactor;
 	}
@@ -3233,6 +3279,7 @@ public class Debt1 {
 		this.nextFactor = nextFactor;
 	}
 
+	@XmlElement(name = "PrvsFctr")
 	public PercentageRate getPreviousFactor() {
 		return previousFactor;
 	}
@@ -3241,6 +3288,7 @@ public class Debt1 {
 		this.previousFactor = previousFactor;
 	}
 
+	@XmlElement(name = "ConvsPrd")
 	public DateTimePeriodDetails getConversionPeriod() {
 		return conversionPeriod;
 	}
@@ -3249,6 +3297,7 @@ public class Debt1 {
 		this.conversionPeriod = conversionPeriod;
 	}
 
+	@XmlElement(name = "ConvsRatioDnmtr")
 	public FinancialInstrumentQuantityChoice getConversionRatioDenominator() {
 		return conversionRatioDenominator;
 	}
@@ -3257,6 +3306,7 @@ public class Debt1 {
 		this.conversionRatioDenominator = conversionRatioDenominator;
 	}
 
+	@XmlElement(name = "ConvsRatioNmrtr")
 	public FinancialInstrumentQuantityChoice getConversionRatioNumerator() {
 		return conversionRatioNumerator;
 	}
@@ -3265,6 +3315,7 @@ public class Debt1 {
 		this.conversionRatioNumerator = conversionRatioNumerator;
 	}
 
+	@XmlElement(name = "Pcs")
 	public DecimalNumber getPieces() {
 		return pieces;
 	}
@@ -3273,6 +3324,7 @@ public class Debt1 {
 		this.pieces = pieces;
 	}
 
+	@XmlElement(name = "PlsMax")
 	public DecimalNumber getPoolsMaximum() {
 		return poolsMaximum;
 	}
@@ -3281,6 +3333,7 @@ public class Debt1 {
 		this.poolsMaximum = poolsMaximum;
 	}
 
+	@XmlElement(name = "PlsPerMln")
 	public DecimalNumber getPoolsPerMillion() {
 		return poolsPerMillion;
 	}
@@ -3289,6 +3342,7 @@ public class Debt1 {
 		this.poolsPerMillion = poolsPerMillion;
 	}
 
+	@XmlElement(name = "PlsPerLot")
 	public DecimalNumber getPoolsPerLot() {
 		return poolsPerLot;
 	}
@@ -3297,6 +3351,7 @@ public class Debt1 {
 		this.poolsPerLot = poolsPerLot;
 	}
 
+	@XmlElement(name = "PlsPerTrad")
 	public DecimalNumber getPoolsPerTrade() {
 		return poolsPerTrade;
 	}
@@ -3305,6 +3360,7 @@ public class Debt1 {
 		this.poolsPerTrade = poolsPerTrade;
 	}
 
+	@XmlElement(name = "CstPrePmtPnltyInd", required = true)
 	public YesNoIndicator getConstantPrePaymentPenaltyIndicator() {
 		return constantPrePaymentPenaltyIndicator;
 	}
@@ -3313,6 +3369,7 @@ public class Debt1 {
 		this.constantPrePaymentPenaltyIndicator = constantPrePaymentPenaltyIndicator;
 	}
 
+	@XmlElement(name = "LotId")
 	public Max35Text getLotIdentification() {
 		return lotIdentification;
 	}
@@ -3321,6 +3378,7 @@ public class Debt1 {
 		this.lotIdentification = lotIdentification;
 	}
 
+	@XmlElement(name = "PrePmtSpd")
 	public PrePaymentSpeed1 getPrePaymentSpeed() {
 		return prePaymentSpeed;
 	}
@@ -3329,6 +3387,7 @@ public class Debt1 {
 		this.prePaymentSpeed = prePaymentSpeed;
 	}
 
+	@XmlElement(name = "CstPrePmtYld")
 	public PercentageRate getConstantPrePaymentYield() {
 		return constantPrePaymentYield;
 	}
@@ -3337,6 +3396,7 @@ public class Debt1 {
 		this.constantPrePaymentYield = constantPrePaymentYield;
 	}
 
+	@XmlElement(name = "WghtdAvrgCpn")
 	public PercentageRate getWeightedAverageCoupon() {
 		return weightedAverageCoupon;
 	}
@@ -3345,6 +3405,7 @@ public class Debt1 {
 		this.weightedAverageCoupon = weightedAverageCoupon;
 	}
 
+	@XmlElement(name = "WghtdAvrgLife")
 	public DecimalNumber getWeightedAverageLife() {
 		return weightedAverageLife;
 	}
@@ -3353,6 +3414,7 @@ public class Debt1 {
 		this.weightedAverageLife = weightedAverageLife;
 	}
 
+	@XmlElement(name = "WghtdAvrgLn")
 	public DecimalNumber getWeightedAverageLoan() {
 		return weightedAverageLoan;
 	}
@@ -3361,6 +3423,7 @@ public class Debt1 {
 		this.weightedAverageLoan = weightedAverageLoan;
 	}
 
+	@XmlElement(name = "WghtdAvrgMtrty")
 	public DecimalNumber getWeightedAverageMaturity() {
 		return weightedAverageMaturity;
 	}
@@ -3369,6 +3432,7 @@ public class Debt1 {
 		this.weightedAverageMaturity = weightedAverageMaturity;
 	}
 
+	@XmlElement(name = "InsrdInd")
 	public YesNoIndicator getInsuredIndicator() {
 		return insuredIndicator;
 	}
@@ -3377,6 +3441,7 @@ public class Debt1 {
 		this.insuredIndicator = insuredIndicator;
 	}
 
+	@XmlElement(name = "BkQlfdInd")
 	public YesNoIndicator getBankQualifiedIndicator() {
 		return bankQualifiedIndicator;
 	}
@@ -3385,6 +3450,7 @@ public class Debt1 {
 		this.bankQualifiedIndicator = bankQualifiedIndicator;
 	}
 
+	@XmlElement(name = "VarblIntrstDtls")
 	public InterestChange1 getVariableInterestDetails() {
 		return variableInterestDetails;
 	}
@@ -3393,6 +3459,7 @@ public class Debt1 {
 		this.variableInterestDetails = variableInterestDetails;
 	}
 
+	@XmlElement(name = "YldDtls")
 	public YieldCalculation1 getYieldDetails() {
 		return yieldDetails;
 	}

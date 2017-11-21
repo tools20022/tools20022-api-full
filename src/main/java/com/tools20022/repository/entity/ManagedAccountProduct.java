@@ -36,6 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ManagedAccountProduct#mmAccount
+ * ManagedAccountProduct.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ManagedAccountProduct#mmInvestmentAccountContract
+ * ManagedAccountProduct.mmInvestmentAccountContract}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.FinancialProduct
+ * FinancialProduct}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -46,20 +60,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvestmentAccountContract#mmModeledAccount
  * InvestmentAccountContract.mmModeledAccount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.FinancialProduct
- * FinancialProduct}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ManagedAccountProduct#mmAccount
- * ManagedAccountProduct.mmAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ManagedAccountProduct#mmInvestmentAccountContract
- * ManagedAccountProduct.mmInvestmentAccountContract}</li>
  * </ul>
  * </li>
  * <li>
@@ -117,7 +117,7 @@ public class ManagedAccountProduct extends FinancialProduct {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ManagedAccountProduct.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ManagedAccountProduct.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
@@ -169,7 +169,7 @@ public class ManagedAccountProduct extends FinancialProduct {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentAccountContract = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ManagedAccountProduct.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ManagedAccountProduct.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccountContract";
@@ -191,7 +191,12 @@ public class ManagedAccountProduct extends FinancialProduct {
 				definition = "Product which provides guidance to investors to manage their portfolios.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmManagedAccountProduct, com.tools20022.repository.entity.InvestmentAccountContract.mmModeledAccount);
 				superType_lazy = () -> FinancialProduct.mmObject();
-				element_lazy = () -> Arrays.asList(ManagedAccountProduct.mmAccount, ManagedAccountProduct.mmInvestmentAccountContract);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ManagedAccountProduct.mmAccount, com.tools20022.repository.entity.ManagedAccountProduct.mmInvestmentAccountContract);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ManagedAccountProduct.class;
 			}
 		});
 		return mmObject_lazy.get();

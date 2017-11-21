@@ -30,21 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CancellationReason2Code
- * CancellationReason2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CancellationReason4Code
- * CancellationReason4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CancellationReason5Code
- * CancellationReason5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CancellationReason1Code
- * CancellationReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CancellationReason3Code
- * CancellationReason3Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -80,6 +65,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CancellationReasonCode#mmFraudulentOrigin
  * CancellationReasonCode.mmFraudulentOrigin}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancellationReason2Code
+ * CancellationReason2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancellationReason4Code
+ * CancellationReason4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancellationReason5Code
+ * CancellationReason5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancellationReason1Code
+ * CancellationReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancellationReason3Code
+ * CancellationReason3Code}</li>
  * </ul>
  * </li>
  * <li>

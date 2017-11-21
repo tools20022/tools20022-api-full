@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,37 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmAcceptorConfiguration
+ * TerminalManagementSystem.mmAcceptorConfiguration}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmNetworkAccess
+ * TerminalManagementSystem.mmNetworkAccess}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmCardPaymentAcquiring
+ * TerminalManagementSystem.mmCardPaymentAcquiring}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmContactLevel
+ * TerminalManagementSystem.mmContactLevel}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmContactDateTime
+ * TerminalManagementSystem.mmContactDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmTerminalManagerRole
+ * TerminalManagementSystem.mmTerminalManagerRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmControlledPointOfInteraction
+ * TerminalManagementSystem.mmControlledPointOfInteraction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmAction
+ * TerminalManagementSystem.mmAction}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.System System}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -104,37 +136,6 @@ import java.util.List;
  * TerminalManagerRole.mmTerminalManagementSystem}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.System System}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmAcceptorConfiguration
- * TerminalManagementSystem.mmAcceptorConfiguration}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmNetworkAccess
- * TerminalManagementSystem.mmNetworkAccess}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmCardPaymentAcquiring
- * TerminalManagementSystem.mmCardPaymentAcquiring}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmContactLevel
- * TerminalManagementSystem.mmContactLevel}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmContactDateTime
- * TerminalManagementSystem.mmContactDateTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmTerminalManagerRole
- * TerminalManagementSystem.mmTerminalManagerRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmControlledPointOfInteraction
- * TerminalManagementSystem.mmControlledPointOfInteraction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmAction
- * TerminalManagementSystem.mmAction}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -194,7 +195,7 @@ public class TerminalManagementSystem extends System {
 	 */
 	public static final MMBusinessAssociationEnd mmAcceptorConfiguration = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AcceptorConfiguration";
@@ -223,11 +224,6 @@ public class TerminalManagementSystem extends System {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.NetworkAccess
 	 * NetworkAccess}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
-	 * TerminalManagementSystem}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -252,6 +248,11 @@ public class TerminalManagementSystem extends System {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
+	 * TerminalManagementSystem}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -266,7 +267,7 @@ public class TerminalManagementSystem extends System {
 		{
 			derivation_lazy = () -> Arrays.asList(TMSAction1.mmAddress, TMSAction2.mmAddress, HostCommunicationParameter1.mmAddress, HostCommunicationParameter2.mmAddress, TMSAction3.mmAddress, HostCommunicationParameter3.mmAddress,
 					HostCommunicationParameter4.mmAddress);
-			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetworkAccess";
@@ -314,7 +315,7 @@ public class TerminalManagementSystem extends System {
 	 */
 	public static final MMBusinessAssociationEnd mmCardPaymentAcquiring = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPaymentAcquiring";
@@ -337,11 +338,6 @@ public class TerminalManagementSystem extends System {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode
 	 * TMSContactLevelCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
-	 * TerminalManagementSystem}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -357,6 +353,11 @@ public class TerminalManagementSystem extends System {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
+	 * TerminalManagementSystem}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -370,7 +371,7 @@ public class TerminalManagementSystem extends System {
 	public static final MMBusinessAttribute mmContactLevel = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TMSTrigger1.mmTMSContactLevel, ATMCommand1.mmUrgency, ATMCommand4.mmUrgency, ATMCommand7.mmUrgency);
-			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ContactLevel";
@@ -378,6 +379,14 @@ public class TerminalManagementSystem extends System {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TMSContactLevelCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TerminalManagementSystem.class.getMethod("getContactLevel", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime contactDateTime;
@@ -390,11 +399,6 @@ public class TerminalManagementSystem extends System {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
-	 * TerminalManagementSystem}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -403,6 +407,11 @@ public class TerminalManagementSystem extends System {
 	 * TMSTrigger1.mmTMSContactDateTime}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
+	 * TerminalManagementSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -417,7 +426,7 @@ public class TerminalManagementSystem extends System {
 	public static final MMBusinessAttribute mmContactDateTime = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TMSTrigger1.mmTMSContactDateTime);
-			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ContactDateTime";
@@ -425,6 +434,14 @@ public class TerminalManagementSystem extends System {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TerminalManagementSystem.class.getMethod("getContactDateTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.TerminalManagerRole> terminalManagerRole;
@@ -466,7 +483,7 @@ public class TerminalManagementSystem extends System {
 	 */
 	public static final MMBusinessAssociationEnd mmTerminalManagerRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminalManagerRole";
@@ -513,7 +530,7 @@ public class TerminalManagementSystem extends System {
 	 */
 	public static final MMBusinessAssociationEnd mmControlledPointOfInteraction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ControlledPointOfInteraction";
@@ -563,7 +580,7 @@ public class TerminalManagementSystem extends System {
 	 */
 	public static final MMBusinessAssociationEnd mmAction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Action";
@@ -586,12 +603,19 @@ public class TerminalManagementSystem extends System {
 						com.tools20022.repository.entity.AcceptorConfiguration.mmTerminalManagementSystem, com.tools20022.repository.entity.TerminalManagementAction.mmTerminalManagementSystem,
 						com.tools20022.repository.entity.NetworkAccess.mmTerminalManagementSystem, com.tools20022.repository.entity.TerminalManagerRole.mmTerminalManagementSystem);
 				superType_lazy = () -> System.mmObject();
-				element_lazy = () -> Arrays.asList(TerminalManagementSystem.mmAcceptorConfiguration, TerminalManagementSystem.mmNetworkAccess, TerminalManagementSystem.mmCardPaymentAcquiring, TerminalManagementSystem.mmContactLevel,
-						TerminalManagementSystem.mmContactDateTime, TerminalManagementSystem.mmTerminalManagerRole, TerminalManagementSystem.mmControlledPointOfInteraction, TerminalManagementSystem.mmAction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TerminalManagementSystem.mmAcceptorConfiguration, com.tools20022.repository.entity.TerminalManagementSystem.mmNetworkAccess,
+						com.tools20022.repository.entity.TerminalManagementSystem.mmCardPaymentAcquiring, com.tools20022.repository.entity.TerminalManagementSystem.mmContactLevel,
+						com.tools20022.repository.entity.TerminalManagementSystem.mmContactDateTime, com.tools20022.repository.entity.TerminalManagementSystem.mmTerminalManagerRole,
+						com.tools20022.repository.entity.TerminalManagementSystem.mmControlledPointOfInteraction, com.tools20022.repository.entity.TerminalManagementSystem.mmAction);
 				derivationComponent_lazy = () -> Arrays.asList(AcquirerHostConfiguration1.mmObject(), HostCommunicationParameter1.mmObject(), AcquirerHostConfiguration2.mmObject(), HostCommunicationParameter2.mmObject(),
 						TMSTrigger1.mmObject(), AcquirerHostConfiguration3.mmObject(), HostCommunicationParameter3.mmObject(), ATMCompletionAdvice1.mmObject(), ATMCompletionAcknowledgement1.mmObject(), ATMCommand1.mmObject(),
 						ATMCommandParameters1.mmObject(), ATMCommand4.mmObject(), ATMCommand5.mmObject(), ATMCommandParameters1Choice.mmObject(), HostCommunicationParameter4.mmObject(), ATMCompletionAdvice2.mmObject(),
 						ATMCompletionAcknowledgement2.mmObject(), ATMCommand7.mmObject(), ATMCommand8.mmObject(), AcquirerHostConfiguration4.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TerminalManagementSystem.class;
 			}
 		});
 		return mmObject_lazy.get();

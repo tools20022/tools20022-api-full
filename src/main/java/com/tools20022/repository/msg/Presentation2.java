@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.UndertakingPresenter;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information for the presentation of documents.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information for the presentation of documents."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Presentation2", propOrder = {"presenter", "beneficiaryPresentationDate"})
 public class Presentation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class Presentation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Presntr")
 	public PartyIdentification43 getPresenter() {
 		return presenter;
 	}
@@ -180,6 +187,7 @@ public class Presentation2 {
 		this.presenter = presenter;
 	}
 
+	@XmlElement(name = "BnfcryPresntnDt")
 	public ISODate getBeneficiaryPresentationDate() {
 		return beneficiaryPresentationDate;
 	}

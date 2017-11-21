@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Notification to the acquirer of the completion of the card payment at the
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorCompletionAdvice1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorCompletionAdvice2", propOrder = {"environment", "context", "transaction"})
 public class AcceptorCompletionAdvice2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -278,6 +284,7 @@ public class AcceptorCompletionAdvice2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment10 getEnvironment() {
 		return environment;
 	}
@@ -286,6 +293,7 @@ public class AcceptorCompletionAdvice2 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Cntxt")
 	public CardPaymentContext2 getContext() {
 		return context;
 	}
@@ -294,6 +302,7 @@ public class AcceptorCompletionAdvice2 {
 		this.context = context;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransaction13 getTransaction() {
 		return transaction;
 	}

@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the data for the posting intra-balance movements.
@@ -118,6 +122,10 @@ import java.util.List;
  * definition} = "Provides the data for the posting intra-balance movements."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraBalancePosting2", propOrder = {"accountOwnerTransactionIdentification", "accountServicerTransactionIdentification", "marketInfrastructureTransactionIdentification", "processorTransactionIdentification",
+		"poolIdentification", "corporateActionEventIdentification", "balanceTo", "settledAmount", "previouslySettledAmount", "remainingSettlementAmount", "effectiveSettlementDate", "statusDate", "cashSubBalanceIdentification", "linkages",
+		"priority", "messageOriginator", "creationDateTime", "instructionProcessingAdditionalDetails", "supplementaryData"})
 public class IntraBalancePosting2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -956,6 +964,7 @@ public class IntraBalancePosting2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnrTxId", required = true)
 	public Max35Text getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
@@ -964,6 +973,7 @@ public class IntraBalancePosting2 {
 		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrTxId")
 	public Max35Text getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
@@ -972,6 +982,7 @@ public class IntraBalancePosting2 {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
 	}
 
+	@XmlElement(name = "MktInfrstrctrTxId")
 	public Max35Text getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}
@@ -980,6 +991,7 @@ public class IntraBalancePosting2 {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
 	}
 
+	@XmlElement(name = "PrcrTxId")
 	public Max35Text getProcessorTransactionIdentification() {
 		return processorTransactionIdentification;
 	}
@@ -988,6 +1000,7 @@ public class IntraBalancePosting2 {
 		this.processorTransactionIdentification = processorTransactionIdentification;
 	}
 
+	@XmlElement(name = "PoolId")
 	public Max35Text getPoolIdentification() {
 		return poolIdentification;
 	}
@@ -996,6 +1009,7 @@ public class IntraBalancePosting2 {
 		this.poolIdentification = poolIdentification;
 	}
 
+	@XmlElement(name = "CorpActnEvtId")
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -1004,6 +1018,7 @@ public class IntraBalancePosting2 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "BalTo", required = true)
 	public CashSubBalanceTypeAndQuantityBreakdown1 getBalanceTo() {
 		return balanceTo;
 	}
@@ -1012,6 +1027,7 @@ public class IntraBalancePosting2 {
 		this.balanceTo = balanceTo;
 	}
 
+	@XmlElement(name = "SttldAmt", required = true)
 	public Amount2Choice getSettledAmount() {
 		return settledAmount;
 	}
@@ -1020,6 +1036,7 @@ public class IntraBalancePosting2 {
 		this.settledAmount = settledAmount;
 	}
 
+	@XmlElement(name = "PrevslySttldAmt")
 	public Amount2Choice getPreviouslySettledAmount() {
 		return previouslySettledAmount;
 	}
@@ -1028,6 +1045,7 @@ public class IntraBalancePosting2 {
 		this.previouslySettledAmount = previouslySettledAmount;
 	}
 
+	@XmlElement(name = "RmngSttlmAmt")
 	public Amount2Choice getRemainingSettlementAmount() {
 		return remainingSettlementAmount;
 	}
@@ -1036,6 +1054,7 @@ public class IntraBalancePosting2 {
 		this.remainingSettlementAmount = remainingSettlementAmount;
 	}
 
+	@XmlElement(name = "FctvSttlmDt", required = true)
 	public DateAndDateTimeChoice getEffectiveSettlementDate() {
 		return effectiveSettlementDate;
 	}
@@ -1044,6 +1063,7 @@ public class IntraBalancePosting2 {
 		this.effectiveSettlementDate = effectiveSettlementDate;
 	}
 
+	@XmlElement(name = "StsDt")
 	public ISODateTime getStatusDate() {
 		return statusDate;
 	}
@@ -1052,6 +1072,7 @@ public class IntraBalancePosting2 {
 		this.statusDate = statusDate;
 	}
 
+	@XmlElement(name = "CshSubBalId")
 	public GenericIdentification37 getCashSubBalanceIdentification() {
 		return cashSubBalanceIdentification;
 	}
@@ -1060,6 +1081,7 @@ public class IntraBalancePosting2 {
 		this.cashSubBalanceIdentification = cashSubBalanceIdentification;
 	}
 
+	@XmlElement(name = "Lnkgs")
 	public List<Linkages26> getLinkages() {
 		return linkages;
 	}
@@ -1068,6 +1090,7 @@ public class IntraBalancePosting2 {
 		this.linkages = linkages;
 	}
 
+	@XmlElement(name = "Prty")
 	public PriorityNumeric1Choice getPriority() {
 		return priority;
 	}
@@ -1076,6 +1099,7 @@ public class IntraBalancePosting2 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "MsgOrgtr")
 	public SystemPartyIdentification5 getMessageOriginator() {
 		return messageOriginator;
 	}
@@ -1084,6 +1108,7 @@ public class IntraBalancePosting2 {
 		this.messageOriginator = messageOriginator;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -1092,6 +1117,7 @@ public class IntraBalancePosting2 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "InstrPrcgAddtlDtls")
 	public Max350Text getInstructionProcessingAdditionalDetails() {
 		return instructionProcessingAdditionalDetails;
 	}
@@ -1100,6 +1126,7 @@ public class IntraBalancePosting2 {
 		this.instructionProcessingAdditionalDetails = instructionProcessingAdditionalDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

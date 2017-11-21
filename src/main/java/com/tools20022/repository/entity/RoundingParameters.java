@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.RoundingDirectionCode;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,6 +35,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmInvestmentAccountService
+ * RoundingParameters.mmInvestmentAccountService}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmRoundingModulus
+ * RoundingParameters.mmRoundingModulus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmRoundingDirection
+ * RoundingParameters.mmRoundingDirection}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmRelatedPegOrderInstruction
+ * RoundingParameters.mmRelatedPegOrderInstruction}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -52,23 +70,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#mmRoundDirection
  * SecuritiesPegOrderInstruction.mmRoundDirection}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmInvestmentAccountService
- * RoundingParameters.mmInvestmentAccountService}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmRoundingModulus
- * RoundingParameters.mmRoundingModulus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmRoundingDirection
- * RoundingParameters.mmRoundingDirection}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmRelatedPegOrderInstruction
- * RoundingParameters.mmRelatedPegOrderInstruction}</li>
  * </ul>
  * </li>
  * <li>
@@ -128,7 +129,7 @@ public class RoundingParameters {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentAccountService = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RoundingParameters.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RoundingParameters.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccountService";
@@ -153,11 +154,6 @@ public class RoundingParameters {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.DecimalNumber
 	 * DecimalNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.RoundingParameters
-	 * RoundingParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -166,6 +162,11 @@ public class RoundingParameters {
 	 * RoundingParameters1.mmRoundingModulus}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.RoundingParameters
+	 * RoundingParameters}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -182,7 +183,7 @@ public class RoundingParameters {
 	public static final MMBusinessAttribute mmRoundingModulus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RoundingParameters1.mmRoundingModulus);
-			elementContext_lazy = () -> RoundingParameters.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RoundingParameters.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundingModulus";
@@ -190,6 +191,14 @@ public class RoundingParameters {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RoundingParameters.class.getMethod("getRoundingModulus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RoundingDirectionCode roundingDirection;
@@ -203,11 +212,6 @@ public class RoundingParameters {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode
 	 * RoundingDirectionCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.RoundingParameters
-	 * RoundingParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -367,6 +371,11 @@ public class RoundingParameters {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.RoundingParameters
+	 * RoundingParameters}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -389,7 +398,7 @@ public class RoundingParameters {
 					InvestmentPlan10.mmRoundingDirection, InvestmentPlan11.mmRoundingDirection, InvestmentPlan12.mmRoundingDirection, Transfer31.mmRounding, Transfer30.mmRounding, InvestmentPlan13.mmRoundingDirection,
 					InvestmentPlan14.mmRoundingDirection, RedemptionOrder14.mmRounding, InvestmentPlan15.mmRoundingDirection, SubscriptionExecution13.mmRounding, SubscriptionExecution12.mmRounding, SubscriptionOrder15.mmRounding,
 					RedemptionOrder15.mmRounding, RedemptionExecution16.mmRounding, SubscriptionOrder14.mmRounding, RedemptionExecution15.mmRounding);
-			elementContext_lazy = () -> RoundingParameters.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RoundingParameters.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundingDirection";
@@ -397,6 +406,14 @@ public class RoundingParameters {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RoundingDirectionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RoundingParameters.class.getMethod("getRoundingDirection", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesPegOrderInstruction relatedPegOrderInstruction;
@@ -436,7 +453,7 @@ public class RoundingParameters {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPegOrderInstruction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RoundingParameters.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RoundingParameters.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPegOrderInstruction";
@@ -457,8 +474,14 @@ public class RoundingParameters {
 				name = "RoundingParameters";
 				definition = "Parameters applied to a fractional number.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccountService.mmRoundingMethod, com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmRoundDirection);
-				element_lazy = () -> Arrays.asList(RoundingParameters.mmInvestmentAccountService, RoundingParameters.mmRoundingModulus, RoundingParameters.mmRoundingDirection, RoundingParameters.mmRelatedPegOrderInstruction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RoundingParameters.mmInvestmentAccountService, com.tools20022.repository.entity.RoundingParameters.mmRoundingModulus,
+						com.tools20022.repository.entity.RoundingParameters.mmRoundingDirection, com.tools20022.repository.entity.RoundingParameters.mmRelatedPegOrderInstruction);
 				derivationComponent_lazy = () -> Arrays.asList(RoundingParameters1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RoundingParameters.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between an amount and a coefficient.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between an amount and a coefficient."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountOrCoefficientPrice1Choice", propOrder = {"amount", "coefficient"})
 public class AmountOrCoefficientPrice1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class AmountOrCoefficientPrice1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -169,6 +176,7 @@ public class AmountOrCoefficientPrice1Choice {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Coeff", required = true)
 	public DecimalNumber getCoefficient() {
 		return coefficient;
 	}

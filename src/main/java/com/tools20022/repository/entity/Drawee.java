@@ -66,6 +66,11 @@ public class Drawee extends ChequePartyRole {
 				definition = "Financial institution on which a cheque is drawn, ie, the financial institution that services the account of the entity that issued the cheque.";
 				superType_lazy = () -> ChequePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Drawee.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

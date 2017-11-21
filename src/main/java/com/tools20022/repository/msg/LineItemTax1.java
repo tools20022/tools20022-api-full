@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money due to the government or tax authority, according to various
@@ -72,6 +76,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LineItemTax1", propOrder = {"calculatedAmount", "typeCode", "taxPointDate", "calculatedRate", "categoryCode", "categoryName"})
 public class LineItemTax1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -362,6 +368,7 @@ public class LineItemTax1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClctdAmt")
 	public List<CurrencyAndAmount> getCalculatedAmount() {
 		return calculatedAmount;
 	}
@@ -370,6 +377,7 @@ public class LineItemTax1 {
 		this.calculatedAmount = calculatedAmount;
 	}
 
+	@XmlElement(name = "TpCd")
 	public TaxTypeFormat1Choice getTypeCode() {
 		return typeCode;
 	}
@@ -378,6 +386,7 @@ public class LineItemTax1 {
 		this.typeCode = typeCode;
 	}
 
+	@XmlElement(name = "TaxPtDt")
 	public ISODate getTaxPointDate() {
 		return taxPointDate;
 	}
@@ -386,6 +395,7 @@ public class LineItemTax1 {
 		this.taxPointDate = taxPointDate;
 	}
 
+	@XmlElement(name = "ClctdRate")
 	public PercentageRate getCalculatedRate() {
 		return calculatedRate;
 	}
@@ -394,6 +404,7 @@ public class LineItemTax1 {
 		this.calculatedRate = calculatedRate;
 	}
 
+	@XmlElement(name = "CtgyCd")
 	public Max4Text getCategoryCode() {
 		return categoryCode;
 	}
@@ -402,6 +413,7 @@ public class LineItemTax1 {
 		this.categoryCode = categoryCode;
 	}
 
+	@XmlElement(name = "CtgyNm")
 	public List<Max35Text> getCategoryName() {
 		return categoryName;
 	}

@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the status of an investigation case.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the status of an investigation case."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CaseStatus", propOrder = {"dateTime", "caseStatus", "investigationStatus", "reason"})
 public class CaseStatus {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -286,6 +292,7 @@ public class CaseStatus {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtTm", required = true)
 	public ISODateTime getDateTime() {
 		return dateTime;
 	}
@@ -294,6 +301,7 @@ public class CaseStatus {
 		this.dateTime = dateTime;
 	}
 
+	@XmlElement(name = "CaseSts", required = true)
 	public CaseStatus1Code getCaseStatus() {
 		return caseStatus;
 	}
@@ -302,6 +310,7 @@ public class CaseStatus {
 		this.caseStatus = caseStatus;
 	}
 
+	@XmlElement(name = "InvstgtnSts")
 	public InvestigationExecutionConfirmation1Code getInvestigationStatus() {
 		return investigationStatus;
 	}
@@ -310,6 +319,7 @@ public class CaseStatus {
 		this.investigationStatus = investigationStatus;
 	}
 
+	@XmlElement(name = "Rsn")
 	public Max140Text getReason() {
 		return reason;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for the type of charge.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Charge16}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Charge26", propOrder = {"type", "chargeApplied"})
 public class Charge26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -174,6 +180,7 @@ public class Charge26 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ChargeType4Choice getType() {
 		return type;
 	}
@@ -182,6 +189,7 @@ public class Charge26 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "ChrgApld", required = true)
 	public AmountOrRate3Choice getChargeApplied() {
 		return chargeApplied;
 	}

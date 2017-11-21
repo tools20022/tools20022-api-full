@@ -31,6 +31,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} = "Bloomberg;  BloombergIdentifier"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "(BBG)[BCDFGHJKLMNPQRSTVWXYZ\\d]{8}\\d"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -68,6 +70,7 @@ public class Bloomberg2Identifier {
 				name = "Bloomberg2Identifier";
 				definition = "An identifier of a security assigned by the Bloomberg organisation.";
 				identificationScheme = "Bloomberg;  BloombergIdentifier";
+				pattern = "(BBG)[BCDFGHJKLMNPQRSTVWXYZ\\d]{8}\\d";
 			}
 		});
 		return mmObject_lazy.get();

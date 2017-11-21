@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.RestrictedFINXMax8Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Rate name specifies the reference rate or basis rate on which a variable rate
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RateName2", propOrder = {"issuer", "rateName"})
 public class RateName2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class RateName2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Issr")
 	public RestrictedFINXMax8Text getIssuer() {
 		return issuer;
 	}
@@ -169,6 +176,7 @@ public class RateName2 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "RateNm", required = true)
 	public RestrictedFINXMax24Text getRateName() {
 		return rateName;
 	}

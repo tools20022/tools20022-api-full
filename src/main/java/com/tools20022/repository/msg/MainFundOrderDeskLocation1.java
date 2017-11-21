@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Location;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * U-003-2009 Addition and Modification of choice component. S-009-2009 They are
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MainFundOrderDeskLocation1", propOrder = {"country", "timeZoneOffSet"})
 public class MainFundOrderDeskLocation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class MainFundOrderDeskLocation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -189,6 +196,7 @@ public class MainFundOrderDeskLocation1 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "TmZoneOffSet", required = true)
 	public UTCOffset1 getTimeZoneOffSet() {
 		return timeZoneOffSet;
 	}

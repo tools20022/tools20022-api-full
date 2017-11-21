@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics and values set for account limits.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Characteristics and values set for account limits."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountLimits1", propOrder = {"limitType", "limitAmount", "limitUtilisationAmount", "bilateralLimitCounterpartyIdentification", "clearingCircuitScheme"})
 public class AccountLimits1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -292,6 +298,7 @@ public class AccountLimits1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LmtTp", required = true)
 	public Max35Text getLimitType() {
 		return limitType;
 	}
@@ -300,6 +307,7 @@ public class AccountLimits1 {
 		this.limitType = limitType;
 	}
 
+	@XmlElement(name = "LmtAmt", required = true)
 	public ActiveCurrencyAndAmount getLimitAmount() {
 		return limitAmount;
 	}
@@ -308,6 +316,7 @@ public class AccountLimits1 {
 		this.limitAmount = limitAmount;
 	}
 
+	@XmlElement(name = "LmtUtlstnAmt")
 	public ActiveCurrencyAndAmount getLimitUtilisationAmount() {
 		return limitUtilisationAmount;
 	}
@@ -316,6 +325,7 @@ public class AccountLimits1 {
 		this.limitUtilisationAmount = limitUtilisationAmount;
 	}
 
+	@XmlElement(name = "BilLmtCtrPtyId")
 	public BranchAndFinancialInstitutionIdentification5 getBilateralLimitCounterpartyIdentification() {
 		return bilateralLimitCounterpartyIdentification;
 	}
@@ -324,6 +334,7 @@ public class AccountLimits1 {
 		this.bilateralLimitCounterpartyIdentification = bilateralLimitCounterpartyIdentification;
 	}
 
+	@XmlElement(name = "ClrCrctSchme")
 	public ClearingScheme1Choice getClearingCircuitScheme() {
 		return clearingCircuitScheme;
 	}

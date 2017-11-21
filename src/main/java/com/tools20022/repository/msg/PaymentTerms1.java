@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the payment terms of the underlying transaction.
@@ -79,6 +83,8 @@ import java.util.function.Supplier;
  * definition} = "Specifies the payment terms of the underlying transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTerms1", propOrder = {"otherPaymentTerms", "paymentCode", "percentage", "amount"})
 public class PaymentTerms1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -381,6 +387,7 @@ public class PaymentTerms1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OthrPmtTerms", required = true)
 	public Max140Text getOtherPaymentTerms() {
 		return otherPaymentTerms;
 	}
@@ -389,6 +396,7 @@ public class PaymentTerms1 {
 		this.otherPaymentTerms = otherPaymentTerms;
 	}
 
+	@XmlElement(name = "PmtCd", required = true)
 	public PaymentPeriod1 getPaymentCode() {
 		return paymentCode;
 	}
@@ -397,6 +405,7 @@ public class PaymentTerms1 {
 		this.paymentCode = paymentCode;
 	}
 
+	@XmlElement(name = "Pctg", required = true)
 	public PercentageRate getPercentage() {
 		return percentage;
 	}
@@ -405,6 +414,7 @@ public class PaymentTerms1 {
 		this.percentage = percentage;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}

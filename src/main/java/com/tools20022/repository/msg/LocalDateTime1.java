@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Local time offset to UTC (Coordinated Universal Time).
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Local time offset to UTC (Coordinated Universal Time)."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LocalDateTime1", propOrder = {"fromDateTime", "toDateTime", "UTCOffset"})
 public class LocalDateTime1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -199,6 +205,7 @@ public class LocalDateTime1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrDtTm")
 	public ISODateTime getFromDateTime() {
 		return fromDateTime;
 	}
@@ -207,6 +214,7 @@ public class LocalDateTime1 {
 		this.fromDateTime = fromDateTime;
 	}
 
+	@XmlElement(name = "ToDtTm")
 	public ISODateTime getToDateTime() {
 		return toDateTime;
 	}
@@ -215,6 +223,7 @@ public class LocalDateTime1 {
 		this.toDateTime = toDateTime;
 	}
 
+	@XmlElement(name = "UTCOffset", required = true)
 	public Number getUTCOffset() {
 		return uTCOffset;
 	}

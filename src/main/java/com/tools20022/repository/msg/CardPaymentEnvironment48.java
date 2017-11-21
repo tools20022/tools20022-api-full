@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.MerchantRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Environment of the cancellation.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentEnvironment35}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentEnvironment48", propOrder = {"acquirer", "merchant", "POI", "card", "customerDevice", "wallet", "paymentToken"})
 public class CardPaymentEnvironment48 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -458,6 +464,7 @@ public class CardPaymentEnvironment48 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acqrr")
 	public Acquirer4 getAcquirer() {
 		return acquirer;
 	}
@@ -466,6 +473,7 @@ public class CardPaymentEnvironment48 {
 		this.acquirer = acquirer;
 	}
 
+	@XmlElement(name = "Mrchnt")
 	public Organisation25 getMerchant() {
 		return merchant;
 	}
@@ -474,6 +482,7 @@ public class CardPaymentEnvironment48 {
 		this.merchant = merchant;
 	}
 
+	@XmlElement(name = "POI", required = true)
 	public PointOfInteraction5 getPOI() {
 		return pOI;
 	}
@@ -482,6 +491,7 @@ public class CardPaymentEnvironment48 {
 		this.pOI = pOI;
 	}
 
+	@XmlElement(name = "Card", required = true)
 	public PaymentCard20 getCard() {
 		return card;
 	}
@@ -490,6 +500,7 @@ public class CardPaymentEnvironment48 {
 		this.card = card;
 	}
 
+	@XmlElement(name = "CstmrDvc")
 	public CustomerDevice1 getCustomerDevice() {
 		return customerDevice;
 	}
@@ -498,6 +509,7 @@ public class CardPaymentEnvironment48 {
 		this.customerDevice = customerDevice;
 	}
 
+	@XmlElement(name = "Wllt")
 	public CustomerDevice1 getWallet() {
 		return wallet;
 	}
@@ -506,6 +518,7 @@ public class CardPaymentEnvironment48 {
 		this.wallet = wallet;
 	}
 
+	@XmlElement(name = "PmtTkn")
 	public CardPaymentToken3 getPaymentToken() {
 		return paymentToken;
 	}

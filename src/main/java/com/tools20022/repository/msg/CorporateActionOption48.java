@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the corporate action option.
@@ -71,6 +75,8 @@ import java.util.List;
  * definition} = "Provides information about the corporate action option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionOption48", propOrder = {"optionNumber", "optionType", "securitiesMovementDetails", "cashMovementDetails"})
 public class CorporateActionOption48 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -284,6 +290,7 @@ public class CorporateActionOption48 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OptnNb", required = true)
 	public OptionNumber1Choice getOptionNumber() {
 		return optionNumber;
 	}
@@ -292,6 +299,7 @@ public class CorporateActionOption48 {
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption14Choice getOptionType() {
 		return optionType;
 	}
@@ -300,6 +308,7 @@ public class CorporateActionOption48 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "SctiesMvmntDtls")
 	public List<SecuritiesOption32> getSecuritiesMovementDetails() {
 		return securitiesMovementDetails;
 	}
@@ -308,6 +317,7 @@ public class CorporateActionOption48 {
 		this.securitiesMovementDetails = securitiesMovementDetails;
 	}
 
+	@XmlElement(name = "CshMvmntDtls")
 	public List<CashOption23> getCashMovementDetails() {
 		return cashMovementDetails;
 	}

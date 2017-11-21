@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics that apply to the credit side of the payment
@@ -112,6 +116,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstructionInformation2", propOrder = {"paymentInformationIdentification", "paymentMethod", "paymentTypeInformation", "requestedCollectionDate", "creditor", "creditorAccount", "creditorAgent",
+		"creditorAgentAccount", "ultimateCreditor", "chargeBearer", "chargesAccount", "chargesAccountAgent", "directDebitTransactionInformation"})
 public class PaymentInstructionInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -777,6 +784,7 @@ public class PaymentInstructionInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtInfId")
 	public Max35Text getPaymentInformationIdentification() {
 		return paymentInformationIdentification;
 	}
@@ -785,6 +793,7 @@ public class PaymentInstructionInformation2 {
 		this.paymentInformationIdentification = paymentInformationIdentification;
 	}
 
+	@XmlElement(name = "PmtMtd", required = true)
 	public PaymentMethod2Code getPaymentMethod() {
 		return paymentMethod;
 	}
@@ -793,6 +802,7 @@ public class PaymentInstructionInformation2 {
 		this.paymentMethod = paymentMethod;
 	}
 
+	@XmlElement(name = "PmtTpInf")
 	public PaymentTypeInformation2 getPaymentTypeInformation() {
 		return paymentTypeInformation;
 	}
@@ -801,6 +811,7 @@ public class PaymentInstructionInformation2 {
 		this.paymentTypeInformation = paymentTypeInformation;
 	}
 
+	@XmlElement(name = "ReqdColltnDt", required = true)
 	public ISODate getRequestedCollectionDate() {
 		return requestedCollectionDate;
 	}
@@ -809,6 +820,7 @@ public class PaymentInstructionInformation2 {
 		this.requestedCollectionDate = requestedCollectionDate;
 	}
 
+	@XmlElement(name = "Cdtr", required = true)
 	public PartyIdentification8 getCreditor() {
 		return creditor;
 	}
@@ -817,6 +829,7 @@ public class PaymentInstructionInformation2 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAcct", required = true)
 	public CashAccount7 getCreditorAccount() {
 		return creditorAccount;
 	}
@@ -825,6 +838,7 @@ public class PaymentInstructionInformation2 {
 		this.creditorAccount = creditorAccount;
 	}
 
+	@XmlElement(name = "CdtrAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification3 getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -833,6 +847,7 @@ public class PaymentInstructionInformation2 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "CdtrAgtAcct")
 	public CashAccount7 getCreditorAgentAccount() {
 		return creditorAgentAccount;
 	}
@@ -841,6 +856,7 @@ public class PaymentInstructionInformation2 {
 		this.creditorAgentAccount = creditorAgentAccount;
 	}
 
+	@XmlElement(name = "UltmtCdtr")
 	public PartyIdentification8 getUltimateCreditor() {
 		return ultimateCreditor;
 	}
@@ -849,6 +865,7 @@ public class PaymentInstructionInformation2 {
 		this.ultimateCreditor = ultimateCreditor;
 	}
 
+	@XmlElement(name = "ChrgBr")
 	public ChargeBearerType1Code getChargeBearer() {
 		return chargeBearer;
 	}
@@ -857,6 +874,7 @@ public class PaymentInstructionInformation2 {
 		this.chargeBearer = chargeBearer;
 	}
 
+	@XmlElement(name = "ChrgsAcct")
 	public CashAccount7 getChargesAccount() {
 		return chargesAccount;
 	}
@@ -865,6 +883,7 @@ public class PaymentInstructionInformation2 {
 		this.chargesAccount = chargesAccount;
 	}
 
+	@XmlElement(name = "ChrgsAcctAgt")
 	public BranchAndFinancialInstitutionIdentification3 getChargesAccountAgent() {
 		return chargesAccountAgent;
 	}
@@ -873,6 +892,7 @@ public class PaymentInstructionInformation2 {
 		this.chargesAccountAgent = chargesAccountAgent;
 	}
 
+	@XmlElement(name = "DrctDbtTxInf", required = true)
 	public List<DirectDebitTransactionInformation1> getDirectDebitTransactionInformation() {
 		return directDebitTransactionInformation;
 	}

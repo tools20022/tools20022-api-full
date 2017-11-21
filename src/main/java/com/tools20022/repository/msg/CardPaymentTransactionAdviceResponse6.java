@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Response;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Card payment completion advice response from the acquirer.
@@ -79,6 +83,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentTransactionAdviceResponse4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransactionAdviceResponse6", propOrder = {"saleReferenceIdentification", "transactionIdentification", "initiatorTransactionIdentification", "recipientTransactionIdentification", "reconciliationIdentification",
+		"response"})
 public class CardPaymentTransactionAdviceResponse6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -398,6 +405,7 @@ public class CardPaymentTransactionAdviceResponse6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SaleRefId")
 	public Max35Text getSaleReferenceIdentification() {
 		return saleReferenceIdentification;
 	}
@@ -406,6 +414,7 @@ public class CardPaymentTransactionAdviceResponse6 {
 		this.saleReferenceIdentification = saleReferenceIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -414,6 +423,7 @@ public class CardPaymentTransactionAdviceResponse6 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "InitrTxId")
 	public Max35Text getInitiatorTransactionIdentification() {
 		return initiatorTransactionIdentification;
 	}
@@ -422,6 +432,7 @@ public class CardPaymentTransactionAdviceResponse6 {
 		this.initiatorTransactionIdentification = initiatorTransactionIdentification;
 	}
 
+	@XmlElement(name = "RcptTxId")
 	public Max35Text getRecipientTransactionIdentification() {
 		return recipientTransactionIdentification;
 	}
@@ -430,6 +441,7 @@ public class CardPaymentTransactionAdviceResponse6 {
 		this.recipientTransactionIdentification = recipientTransactionIdentification;
 	}
 
+	@XmlElement(name = "RcncltnId")
 	public Max35Text getReconciliationIdentification() {
 		return reconciliationIdentification;
 	}
@@ -438,6 +450,7 @@ public class CardPaymentTransactionAdviceResponse6 {
 		this.reconciliationIdentification = reconciliationIdentification;
 	}
 
+	@XmlElement(name = "Rspn", required = true)
 	public Response4Code getResponse() {
 		return response;
 	}

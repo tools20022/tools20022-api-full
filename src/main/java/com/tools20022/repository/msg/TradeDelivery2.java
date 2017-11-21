@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies how the supply chain shipping arrangements and the delivery of
@@ -80,6 +84,8 @@ import java.util.List;
  * TradeDelivery1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeDelivery2", propOrder = {"deliveryPeriod", "deliveryDateTime", "shipFrom", "shipTo", "ultimateShipTo", "deliveryNote", "consignment"})
 public class TradeDelivery2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -462,6 +468,7 @@ public class TradeDelivery2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DlvryPrd")
 	public Period1 getDeliveryPeriod() {
 		return deliveryPeriod;
 	}
@@ -470,6 +477,7 @@ public class TradeDelivery2 {
 		this.deliveryPeriod = deliveryPeriod;
 	}
 
+	@XmlElement(name = "DlvryDtTm")
 	public ISODateTime getDeliveryDateTime() {
 		return deliveryDateTime;
 	}
@@ -478,6 +486,7 @@ public class TradeDelivery2 {
 		this.deliveryDateTime = deliveryDateTime;
 	}
 
+	@XmlElement(name = "ShipFr")
 	public TradeParty3 getShipFrom() {
 		return shipFrom;
 	}
@@ -486,6 +495,7 @@ public class TradeDelivery2 {
 		this.shipFrom = shipFrom;
 	}
 
+	@XmlElement(name = "ShipTo")
 	public TradeParty3 getShipTo() {
 		return shipTo;
 	}
@@ -494,6 +504,7 @@ public class TradeDelivery2 {
 		this.shipTo = shipTo;
 	}
 
+	@XmlElement(name = "UltmtShipTo")
 	public TradeParty3 getUltimateShipTo() {
 		return ultimateShipTo;
 	}
@@ -502,6 +513,7 @@ public class TradeDelivery2 {
 		this.ultimateShipTo = ultimateShipTo;
 	}
 
+	@XmlElement(name = "DlvryNote")
 	public DocumentIdentification22 getDeliveryNote() {
 		return deliveryNote;
 	}
@@ -510,6 +522,7 @@ public class TradeDelivery2 {
 		this.deliveryNote = deliveryNote;
 	}
 
+	@XmlElement(name = "Consgnmt")
 	public List<Consignment4> getConsignment() {
 		return consignment;
 	}

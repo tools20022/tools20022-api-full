@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Limit of deposited media for the customer.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Limit of deposited media for the customer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransactionAmounts9", propOrder = {"mediaType", "currency", "minimumNumber", "maximumNumber", "displayFlag"})
 public class ATMTransactionAmounts9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -311,6 +317,7 @@ public class ATMTransactionAmounts9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MdiaTp", required = true)
 	public ATMMediaType2Code getMediaType() {
 		return mediaType;
 	}
@@ -319,6 +326,7 @@ public class ATMTransactionAmounts9 {
 		this.mediaType = mediaType;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -327,6 +335,7 @@ public class ATMTransactionAmounts9 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "MinNb")
 	public Number getMinimumNumber() {
 		return minimumNumber;
 	}
@@ -335,6 +344,7 @@ public class ATMTransactionAmounts9 {
 		this.minimumNumber = minimumNumber;
 	}
 
+	@XmlElement(name = "MaxNb")
 	public Number getMaximumNumber() {
 		return maximumNumber;
 	}
@@ -343,6 +353,7 @@ public class ATMTransactionAmounts9 {
 		this.maximumNumber = maximumNumber;
 	}
 
+	@XmlElement(name = "DispFlg")
 	public TrueFalseIndicator getDisplayFlag() {
 		return displayFlag;
 	}

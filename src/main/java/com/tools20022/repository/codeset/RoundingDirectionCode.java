@@ -29,15 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RoundingDirection1Code
- * RoundingDirection1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RoundingDirection2Code
- * RoundingDirection2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -73,6 +64,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#mmRetain
  * RoundingDirectionCode.mmRetain}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RoundingDirection1Code
+ * RoundingDirection1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RoundingDirection2Code
+ * RoundingDirection2Code}</li>
  * </ul>
  * </li>
  * <li>

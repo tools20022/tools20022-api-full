@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Expected trade date and expected settlement date of the order execution.
@@ -89,6 +93,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Expected trade date and expected settlement date of the order execution."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExpectedExecutionDetails3", propOrder = {"expectedTradeDateTime", "expectedCashSettlementDate", "expectedExecutedAmount", "paymentInIndicator", "paymentReference", "prepaymentDate", "topUpAmount", "holdBackDetails",
+		"sidePocketQuantity"})
 public class ExpectedExecutionDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -544,6 +551,7 @@ public class ExpectedExecutionDetails3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XpctdTradDtTm")
 	public DateAndDateTimeChoice getExpectedTradeDateTime() {
 		return expectedTradeDateTime;
 	}
@@ -552,6 +560,7 @@ public class ExpectedExecutionDetails3 {
 		this.expectedTradeDateTime = expectedTradeDateTime;
 	}
 
+	@XmlElement(name = "XpctdCshSttlmDt")
 	public ISODate getExpectedCashSettlementDate() {
 		return expectedCashSettlementDate;
 	}
@@ -560,6 +569,7 @@ public class ExpectedExecutionDetails3 {
 		this.expectedCashSettlementDate = expectedCashSettlementDate;
 	}
 
+	@XmlElement(name = "XpctdExctdAmt", required = true)
 	public ActiveCurrencyAndAmount getExpectedExecutedAmount() {
 		return expectedExecutedAmount;
 	}
@@ -568,6 +578,7 @@ public class ExpectedExecutionDetails3 {
 		this.expectedExecutedAmount = expectedExecutedAmount;
 	}
 
+	@XmlElement(name = "PmtInInd")
 	public YesNoIndicator getPaymentInIndicator() {
 		return paymentInIndicator;
 	}
@@ -576,6 +587,7 @@ public class ExpectedExecutionDetails3 {
 		this.paymentInIndicator = paymentInIndicator;
 	}
 
+	@XmlElement(name = "PmtRef")
 	public Max35Text getPaymentReference() {
 		return paymentReference;
 	}
@@ -584,6 +596,7 @@ public class ExpectedExecutionDetails3 {
 		this.paymentReference = paymentReference;
 	}
 
+	@XmlElement(name = "PrepmtDt")
 	public ISODate getPrepaymentDate() {
 		return prepaymentDate;
 	}
@@ -592,6 +605,7 @@ public class ExpectedExecutionDetails3 {
 		this.prepaymentDate = prepaymentDate;
 	}
 
+	@XmlElement(name = "TopUpAmt")
 	public ActiveCurrencyAndAmount getTopUpAmount() {
 		return topUpAmount;
 	}
@@ -600,6 +614,7 @@ public class ExpectedExecutionDetails3 {
 		this.topUpAmount = topUpAmount;
 	}
 
+	@XmlElement(name = "HldBckDtls")
 	public HoldBackInformation1 getHoldBackDetails() {
 		return holdBackDetails;
 	}
@@ -608,6 +623,7 @@ public class ExpectedExecutionDetails3 {
 		this.holdBackDetails = holdBackDetails;
 	}
 
+	@XmlElement(name = "SdPcktQty")
 	public SidePocketQuantityAndAmount1 getSidePocketQuantity() {
 		return sidePocketQuantity;
 	}

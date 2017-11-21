@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.IndividualPayment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -41,6 +42,52 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCard
+ * CardPayment.mmPaymentCard}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmProduct
+ * CardPayment.mmProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmDetailedAmount
+ * CardPayment.mmDetailedAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmAmountQualifier
+ * CardPayment.mmAmountQualifier}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentAcquiring
+ * CardPayment.mmCardPaymentAcquiring}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCardPartyRole
+ * CardPayment.mmPaymentCardPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentStatus
+ * CardPayment.mmCardPaymentStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmDetailedAmountLabel
+ * CardPayment.mmDetailedAmountLabel}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmReconciliation
+ * CardPayment.mmReconciliation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmTransactionCategory
+ * CardPayment.mmTransactionCategory}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmCashBackAmount
+ * CardPayment.mmCashBackAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmGratuity
+ * CardPayment.mmGratuity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmDebitCreditDirection
+ * CardPayment.mmDebitCreditDirection}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmATMTotal
+ * CardPayment.mmATMTotal}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.IndividualPayment
+ * IndividualPayment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -1789,52 +1836,6 @@ import java.util.List;
  * CardPaymentTransaction78.mmTransactionDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.IndividualPayment
- * IndividualPayment}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCard
- * CardPayment.mmPaymentCard}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmProduct
- * CardPayment.mmProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmDetailedAmount
- * CardPayment.mmDetailedAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmAmountQualifier
- * CardPayment.mmAmountQualifier}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentAcquiring
- * CardPayment.mmCardPaymentAcquiring}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCardPartyRole
- * CardPayment.mmPaymentCardPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentStatus
- * CardPayment.mmCardPaymentStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmDetailedAmountLabel
- * CardPayment.mmDetailedAmountLabel}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmReconciliation
- * CardPayment.mmReconciliation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmTransactionCategory
- * CardPayment.mmTransactionCategory}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmCashBackAmount
- * CardPayment.mmCashBackAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmGratuity
- * CardPayment.mmGratuity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmDebitCreditDirection
- * CardPayment.mmDebitCreditDirection}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmATMTotal
- * CardPayment.mmATMTotal}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -1871,10 +1872,6 @@ public class CardPayment extends IndividualPayment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentCard
 	 * PaymentCard}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2045,6 +2042,10 @@ public class CardPayment extends IndividualPayment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2067,7 +2068,7 @@ public class CardPayment extends IndividualPayment {
 					CardPaymentEnvironment35.mmCard, PaymentInstrument18Choice.mmPaymentCardDetails, CardPaymentEnvironment52.mmCard, CardPaymentEnvironment49.mmCard, CardPaymentEnvironment48.mmCard, CardPaymentEnvironment56.mmCard,
 					CardPaymentEnvironment45.mmCard, CardPaymentEnvironment54.mmCard, CardPaymentEnvironment53.mmCard, CardPaymentEnvironment47.mmCard, PaymentInstrument20Choice.mmPaymentCardDetails, CardPaymentEnvironment61.mmCard,
 					CardPaymentEnvironment60.mmCard, CardPaymentEnvironment66.mmCard, CardPaymentEnvironment62.mmCard, CardPaymentEnvironment63.mmCard, CardPaymentEnvironment59.mmCard, CardPaymentEnvironment57.mmCard);
-			elementContext_lazy = () -> CardPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentCard";
@@ -2096,10 +2097,6 @@ public class CardPayment extends IndividualPayment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Product Product}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2172,6 +2169,10 @@ public class CardPayment extends IndividualPayment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2189,7 +2190,7 @@ public class CardPayment extends IndividualPayment {
 					CardIndividualTransaction2.mmProduct, CardPaymentTransactionDetails23.mmProduct, CardPaymentTransactionDetails21.mmProduct, CardPaymentTransactionDetails19.mmProduct, CardPaymentTransactionDetails24.mmProduct,
 					CardPaymentTransactionDetails29.mmSaleItem, CardPaymentTransactionDetails30.mmSaleItem, CardPaymentTransactionDetails27.mmSaleItem, CardPaymentTransactionDetails31.mmSaleItem, CardPaymentTransactionDetails39.mmSaleItem,
 					CardPaymentTransactionDetails38.mmSaleItem, CardPaymentTransactionDetails41.mmSaleItem, CardPaymentTransactionDetails37.mmSaleItem);
-			elementContext_lazy = () -> CardPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Product";
@@ -2211,10 +2212,6 @@ public class CardPayment extends IndividualPayment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ImpliedCurrencyAndAmount
 	 * ImpliedCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2386,6 +2383,10 @@ public class CardPayment extends IndividualPayment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2412,7 +2413,7 @@ public class CardPayment extends IndividualPayment {
 					CardPaymentTransactionDetails28.mmDetailedAmount, CardPaymentTransactionDetails29.mmDetailedAmount, CardPaymentTransactionDetails30.mmDetailedAmount, CardPaymentTransactionDetails27.mmDetailedAmount,
 					CardPaymentTransactionDetails31.mmDetailedAmount, CardPaymentTransactionDetails39.mmDetailedAmount, CardPaymentTransactionDetails38.mmDetailedAmount, CardPaymentTransactionDetails41.mmDetailedAmount,
 					CardPaymentTransactionDetails37.mmDetailedAmount, CardPaymentTransactionDetails40.mmDetailedAmount, CardPaymentTransactionDetails42.mmDetailedAmount, CardPaymentTransactionDetails43.mmDetailedAmount);
-			elementContext_lazy = () -> CardPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DetailedAmount";
@@ -2420,6 +2421,14 @@ public class CardPayment extends IndividualPayment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPayment.class.getMethod("getDetailedAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TypeOfAmountCode amountQualifier;
@@ -2433,10 +2442,6 @@ public class CardPayment extends IndividualPayment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TypeOfAmountCode
 	 * TypeOfAmountCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2539,6 +2544,10 @@ public class CardPayment extends IndividualPayment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2559,7 +2568,7 @@ public class CardPayment extends IndividualPayment {
 					CardTransactionAmount3.mmAmountQualifier, CardPaymentTransactionDetails33.mmAmountQualifier, CardPaymentTransactionDetails29.mmAmountQualifier, CardPaymentTransactionDetails30.mmAmountQualifier,
 					CardPaymentTransactionDetails27.mmAmountQualifier, CardPaymentTransactionDetails31.mmAmountQualifier, CardPaymentTransactionDetails39.mmAmountQualifier, CardPaymentTransactionDetails38.mmAmountQualifier,
 					CardPaymentTransactionDetails41.mmAmountQualifier, CardPaymentTransactionDetails37.mmAmountQualifier, CardPaymentTransactionDetails40.mmAmountQualifier);
-			elementContext_lazy = () -> CardPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmountQualifier";
@@ -2567,6 +2576,14 @@ public class CardPayment extends IndividualPayment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfAmountCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPayment.class.getMethod("getAmountQualifier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.CardPaymentAcquiring> cardPaymentAcquiring;
@@ -2588,10 +2605,6 @@ public class CardPayment extends IndividualPayment {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2814,6 +2827,10 @@ public class CardPayment extends IndividualPayment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2842,7 +2859,7 @@ public class CardPayment extends IndividualPayment {
 					ATMTransaction18.mmTransactionIdentification, ATMTransaction14.mmTransactionIdentification, ATMTransaction17.mmTransactionIdentification, ATMTransaction20.mmTransactionIdentification,
 					ATMTransaction21.mmTransactionIdentification, ATMTransaction29.mmTransactionIdentification, AcceptorCancellationRequest6.mmContext, AcceptorAuthorisationRequest6.mmContext, AcceptorCancellationAdvice6.mmContext,
 					AcceptorCompletionAdvice6.mmContext, CardPaymentDataSetTransaction19.mmContext, CardPaymentDataSetTransaction20.mmContext, CardPaymentDataSetTransaction18.mmContext, CommonData6.mmContext);
-			elementContext_lazy = () -> CardPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPaymentAcquiring";
@@ -2892,7 +2909,7 @@ public class CardPayment extends IndividualPayment {
 	 */
 	public static final MMBusinessAssociationEnd mmPaymentCardPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CardPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentCardPartyRole";
@@ -2921,10 +2938,6 @@ public class CardPayment extends IndividualPayment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CardPaymentStatus
 	 * CardPaymentStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2943,6 +2956,10 @@ public class CardPayment extends IndividualPayment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2956,7 +2973,7 @@ public class CardPayment extends IndividualPayment {
 	public static final MMBusinessAssociationEnd mmCardPaymentStatus = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ATMTransaction5.mmTransactionStatus, ATMTransaction3.mmTransactionStatus, ATMTransaction17.mmTransactionStatus, ATMTransaction20.mmTransactionStatus);
-			elementContext_lazy = () -> CardPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPaymentStatus";
@@ -2994,7 +3011,7 @@ public class CardPayment extends IndividualPayment {
 	 */
 	public static final MMBusinessAttribute mmDetailedAmountLabel = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CardPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DetailedAmountLabel";
@@ -3002,6 +3019,14 @@ public class CardPayment extends IndividualPayment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPayment.class.getMethod("getDetailedAmountLabel", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ReconciliationTransaction reconciliation;
@@ -3023,10 +3048,6 @@ public class CardPayment extends IndividualPayment {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
 	 * ReconciliationTransaction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3051,6 +3072,10 @@ public class CardPayment extends IndividualPayment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3065,7 +3090,7 @@ public class CardPayment extends IndividualPayment {
 		{
 			derivation_lazy = () -> Arrays.asList(AcceptorReconciliationResponse1.mmTransaction, AcceptorReconciliationResponse2.mmTransaction, AcceptorReconciliationResponse3.mmTransaction, CardTransaction8.mmReconciliation,
 					CardTransaction7.mmReconciliation, AcceptorReconciliationResponse4.mmTransaction);
-			elementContext_lazy = () -> CardPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reconciliation";
@@ -3106,7 +3131,7 @@ public class CardPayment extends IndividualPayment {
 	 */
 	public static final MMBusinessAttribute mmTransactionCategory = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CardPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionCategory";
@@ -3114,6 +3139,14 @@ public class CardPayment extends IndividualPayment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalCardTransactionCategoryCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPayment.class.getMethod("getTransactionCategory", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount cashBackAmount;
@@ -3147,7 +3180,7 @@ public class CardPayment extends IndividualPayment {
 	 */
 	public static final MMBusinessAttribute mmCashBackAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CardPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashBackAmount";
@@ -3155,6 +3188,14 @@ public class CardPayment extends IndividualPayment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPayment.class.getMethod("getCashBackAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount gratuity;
@@ -3185,7 +3226,7 @@ public class CardPayment extends IndividualPayment {
 	 */
 	public static final MMBusinessAttribute mmGratuity = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CardPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Gratuity";
@@ -3193,6 +3234,14 @@ public class CardPayment extends IndividualPayment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPayment.class.getMethod("getGratuity", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DebitCreditCode debitCreditDirection;
@@ -3223,7 +3272,7 @@ public class CardPayment extends IndividualPayment {
 	 */
 	public static final MMBusinessAttribute mmDebitCreditDirection = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CardPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitCreditDirection";
@@ -3231,6 +3280,14 @@ public class CardPayment extends IndividualPayment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPayment.class.getMethod("getDebitCreditDirection", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.ATMTotal> aTMTotal;
@@ -3250,10 +3307,6 @@ public class CardPayment extends IndividualPayment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.ATMTotal ATMTotal}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3265,6 +3318,10 @@ public class CardPayment extends IndividualPayment {
 	 * ATMTransaction17.mmATMTotals}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3279,7 +3336,7 @@ public class CardPayment extends IndividualPayment {
 	public static final MMBusinessAssociationEnd mmATMTotal = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ATMTransaction3.mmATMTotals, ATMTransaction17.mmATMTotals);
-			elementContext_lazy = () -> CardPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ATMTotal";
@@ -3379,9 +3436,11 @@ public class CardPayment extends IndividualPayment {
 						CardPaymentDataSetTransaction18.mmTransaction, CommonData6.mmEnvironment, CardPaymentTransaction69.mmOriginalTransaction, CardPaymentTransaction69.mmTransactionDetails,
 						AcceptorCurrencyConversionAdvice1.mmEnvironment, AcceptorCurrencyConversionAdvice1.mmTransaction, CardPaymentTransaction77.mmTransactionDetails, CardPaymentTransaction78.mmTransactionDetails);
 				superType_lazy = () -> IndividualPayment.mmObject();
-				element_lazy = () -> Arrays.asList(CardPayment.mmPaymentCard, CardPayment.mmProduct, CardPayment.mmDetailedAmount, CardPayment.mmAmountQualifier, CardPayment.mmCardPaymentAcquiring, CardPayment.mmPaymentCardPartyRole,
-						CardPayment.mmCardPaymentStatus, CardPayment.mmDetailedAmountLabel, CardPayment.mmReconciliation, CardPayment.mmTransactionCategory, CardPayment.mmCashBackAmount, CardPayment.mmGratuity,
-						CardPayment.mmDebitCreditDirection, CardPayment.mmATMTotal);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPayment.mmPaymentCard, com.tools20022.repository.entity.CardPayment.mmProduct, com.tools20022.repository.entity.CardPayment.mmDetailedAmount,
+						com.tools20022.repository.entity.CardPayment.mmAmountQualifier, com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring, com.tools20022.repository.entity.CardPayment.mmPaymentCardPartyRole,
+						com.tools20022.repository.entity.CardPayment.mmCardPaymentStatus, com.tools20022.repository.entity.CardPayment.mmDetailedAmountLabel, com.tools20022.repository.entity.CardPayment.mmReconciliation,
+						com.tools20022.repository.entity.CardPayment.mmTransactionCategory, com.tools20022.repository.entity.CardPayment.mmCashBackAmount, com.tools20022.repository.entity.CardPayment.mmGratuity,
+						com.tools20022.repository.entity.CardPayment.mmDebitCreditDirection, com.tools20022.repository.entity.CardPayment.mmATMTotal);
 				derivationComponent_lazy = () -> Arrays.asList(CardAggregated1.mmObject(), CardEntry1.mmObject(), CardIndividualTransaction1.mmObject(), CardTransaction1Choice.mmObject(), CardTransaction1.mmObject(),
 						CardAmountAndCurrencyExchange1.mmObject(), CardPaymentTransactionDetails8.mmObject(), CardPaymentEnvironment8.mmObject(), AcceptorDiagnosticResponse1.mmObject(), CardPaymentEnvironment17.mmObject(),
 						AcceptorDiagnosticResponse2.mmObject(), CardPaymentEnvironment5.mmObject(), CommonData1.mmObject(), CardPaymentEnvironment6.mmObject(), CardPaymentTransactionResult1.mmObject(), CardPaymentTransaction8.mmObject(),
@@ -3450,6 +3509,11 @@ public class CardPayment extends IndividualPayment {
 						CardPaymentDataSetTransaction18.mmObject(), CardPaymentEnvironment58.mmObject(), CardPaymentEnvironment59.mmObject(), CardPaymentTransactionDetails37.mmObject(), CommonData6.mmObject(),
 						CardPaymentEnvironment57.mmObject(), CardPaymentTransaction69.mmObject(), CardPaymentTransactionDetails40.mmObject(), CardPaymentTransactionDetails42.mmObject(), CardPaymentTransactionDetails43.mmObject(),
 						AcceptorCurrencyConversionAdvice1.mmObject(), CardPaymentTransaction77.mmObject(), CardPaymentTransaction78.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CardPayment.class;
 			}
 		});
 		return mmObject_lazy.get();

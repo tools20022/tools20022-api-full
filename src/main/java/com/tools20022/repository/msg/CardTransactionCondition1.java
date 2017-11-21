@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data used to assign specific condition such as liability shift or
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransactionCondition1", propOrder = {"program", "value"})
 public class CardTransactionCondition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +165,7 @@ public class CardTransactionCondition1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prgm", required = true)
 	public Max35Text getProgram() {
 		return program;
 	}
@@ -167,6 +174,7 @@ public class CardTransactionCondition1 {
 		this.program = program;
 	}
 
+	@XmlElement(name = "Val")
 	public Max35Text getValue() {
 		return value;
 	}

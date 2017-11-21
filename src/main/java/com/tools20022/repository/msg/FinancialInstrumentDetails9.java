@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reporting per financial instrument.
@@ -96,6 +100,8 @@ import java.util.List;
  * FinancialInstrumentDetails5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentDetails9", propOrder = {"financialInstrumentIdentification", "priceDetails", "safekeepingPlace", "openingBalance", "closingBalance", "transaction"})
 public class FinancialInstrumentDetails9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -415,6 +421,7 @@ public class FinancialInstrumentDetails9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -423,6 +430,7 @@ public class FinancialInstrumentDetails9 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public PriceInformation6 getPriceDetails() {
 		return priceDetails;
 	}
@@ -431,6 +439,7 @@ public class FinancialInstrumentDetails9 {
 		this.priceDetails = priceDetails;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat3Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -439,6 +448,7 @@ public class FinancialInstrumentDetails9 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "OpngBal")
 	public OpeningBalance1 getOpeningBalance() {
 		return openingBalance;
 	}
@@ -447,6 +457,7 @@ public class FinancialInstrumentDetails9 {
 		this.openingBalance = openingBalance;
 	}
 
+	@XmlElement(name = "ClsgBal")
 	public ClosingBalance1 getClosingBalance() {
 		return closingBalance;
 	}
@@ -455,6 +466,7 @@ public class FinancialInstrumentDetails9 {
 		this.closingBalance = closingBalance;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public List<Transaction18> getTransaction() {
 		return transaction;
 	}

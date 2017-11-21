@@ -21,6 +21,7 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.PartyTypeCode;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -34,17 +35,17 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCardPartyRole
- * CardPayment.mmPaymentCardPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole#mmCardPayment
+ * CardPaymentPartyRole.mmCardPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole#mmPartyType
+ * CardPaymentPartyRole.mmPartyType}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -63,15 +64,15 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.repository.entity.AcceptorRole AcceptorRole}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole#mmCardPayment
- * CardPaymentPartyRole.mmCardPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole#mmPartyType
- * CardPaymentPartyRole.mmPartyType}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCardPartyRole
+ * CardPayment.mmPaymentCardPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -129,7 +130,7 @@ public class CardPaymentPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmCardPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CardPaymentPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPayment";
@@ -172,7 +173,7 @@ public class CardPaymentPartyRole extends Role {
 	 */
 	public static final MMBusinessAttribute mmPartyType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CardPaymentPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyType";
@@ -180,6 +181,14 @@ public class CardPaymentPartyRole extends Role {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PartyTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentPartyRole.class.getMethod("getPartyType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -194,7 +203,12 @@ public class CardPaymentPartyRole extends Role {
 				subType_lazy = () -> Arrays.asList(CardholderRole.mmObject(), MerchantRole.mmObject(), AcquirerRole.mmObject(), AuthorisationEntity.mmObject(), Cashier.mmObject(), CardIssuer.mmObject(), DataSetInitiator.mmObject(),
 						POIManufacturer.mmObject(), AcceptorRole.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(CardPaymentPartyRole.mmCardPayment, CardPaymentPartyRole.mmPartyType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPaymentPartyRole.mmCardPayment, com.tools20022.repository.entity.CardPaymentPartyRole.mmPartyType);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CardPaymentPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

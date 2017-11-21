@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information to identify funds order(s).
@@ -86,6 +90,8 @@ import java.util.List;
  * MessageAndBusinessReference4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MessageAndBusinessReference10", propOrder = {"reference", "relatedReference", "orderReference"})
 public class MessageAndBusinessReference10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -262,6 +268,7 @@ public class MessageAndBusinessReference10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ref")
 	public References62Choice getReference() {
 		return reference;
 	}
@@ -270,6 +277,7 @@ public class MessageAndBusinessReference10 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference8 getRelatedReference() {
 		return relatedReference;
 	}
@@ -278,6 +286,7 @@ public class MessageAndBusinessReference10 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "OrdrRef")
 	public List<InvestmentFundOrder8> getOrderReference() {
 		return orderReference;
 	}

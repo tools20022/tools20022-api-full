@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Content of the acceptor configuration.
@@ -85,6 +89,9 @@ import java.util.List;
  * AcceptorConfigurationContent5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorConfigurationContent6", propOrder = {"replaceConfiguration", "TMSProtocolParameters", "acquirerProtocolParameters", "merchantParameters", "terminalParameters", "applicationParameters",
+		"hostCommunicationParameters", "securityParameters"})
 public class AcceptorConfigurationContent6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -515,6 +522,7 @@ public class AcceptorConfigurationContent6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RplcCfgtn")
 	public TrueFalseIndicator getReplaceConfiguration() {
 		return replaceConfiguration;
 	}
@@ -523,6 +531,7 @@ public class AcceptorConfigurationContent6 {
 		this.replaceConfiguration = replaceConfiguration;
 	}
 
+	@XmlElement(name = "TMSPrtcolParams")
 	public List<TMSProtocolParameters2> getTMSProtocolParameters() {
 		return tMSProtocolParameters;
 	}
@@ -531,6 +540,7 @@ public class AcceptorConfigurationContent6 {
 		this.tMSProtocolParameters = tMSProtocolParameters;
 	}
 
+	@XmlElement(name = "AcqrrPrtcolParams")
 	public List<AcquirerProtocolParameters10> getAcquirerProtocolParameters() {
 		return acquirerProtocolParameters;
 	}
@@ -539,6 +549,7 @@ public class AcceptorConfigurationContent6 {
 		this.acquirerProtocolParameters = acquirerProtocolParameters;
 	}
 
+	@XmlElement(name = "MrchntParams")
 	public List<MerchantConfigurationParameters3> getMerchantParameters() {
 		return merchantParameters;
 	}
@@ -547,6 +558,7 @@ public class AcceptorConfigurationContent6 {
 		this.merchantParameters = merchantParameters;
 	}
 
+	@XmlElement(name = "TermnlParams")
 	public List<PaymentTerminalParameters4> getTerminalParameters() {
 		return terminalParameters;
 	}
@@ -555,6 +567,7 @@ public class AcceptorConfigurationContent6 {
 		this.terminalParameters = terminalParameters;
 	}
 
+	@XmlElement(name = "ApplParams")
 	public List<ApplicationParameters6> getApplicationParameters() {
 		return applicationParameters;
 	}
@@ -563,6 +576,7 @@ public class AcceptorConfigurationContent6 {
 		this.applicationParameters = applicationParameters;
 	}
 
+	@XmlElement(name = "HstComParams")
 	public List<HostCommunicationParameter4> getHostCommunicationParameters() {
 		return hostCommunicationParameters;
 	}
@@ -571,6 +585,7 @@ public class AcceptorConfigurationContent6 {
 		this.hostCommunicationParameters = hostCommunicationParameters;
 	}
 
+	@XmlElement(name = "SctyParams")
 	public List<SecurityParameters6> getSecurityParameters() {
 		return securityParameters;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party related to an investment account.
@@ -110,6 +114,8 @@ import java.util.List;
  * AccountParties6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountParties9", propOrder = {"principalAccountParty", "secondaryOwner", "beneficiary", "powerOfAttorney", "legalGuardian", "successorOnDeath", "administrator", "otherParty", "granter", "settler"})
 public class AccountParties9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -798,6 +804,7 @@ public class AccountParties9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrncplAcctPty", required = true)
 	public AccountParties4Choice getPrincipalAccountParty() {
 		return principalAccountParty;
 	}
@@ -806,6 +813,7 @@ public class AccountParties9 {
 		this.principalAccountParty = principalAccountParty;
 	}
 
+	@XmlElement(name = "ScndryOwnr")
 	public List<InvestmentAccountOwnershipInformation9> getSecondaryOwner() {
 		return secondaryOwner;
 	}
@@ -814,6 +822,7 @@ public class AccountParties9 {
 		this.secondaryOwner = secondaryOwner;
 	}
 
+	@XmlElement(name = "Bnfcry")
 	public List<InvestmentAccountOwnershipInformation9> getBeneficiary() {
 		return beneficiary;
 	}
@@ -822,6 +831,7 @@ public class AccountParties9 {
 		this.beneficiary = beneficiary;
 	}
 
+	@XmlElement(name = "PwrOfAttny")
 	public List<InvestmentAccountOwnershipInformation9> getPowerOfAttorney() {
 		return powerOfAttorney;
 	}
@@ -830,6 +840,7 @@ public class AccountParties9 {
 		this.powerOfAttorney = powerOfAttorney;
 	}
 
+	@XmlElement(name = "LglGuardn")
 	public List<InvestmentAccountOwnershipInformation9> getLegalGuardian() {
 		return legalGuardian;
 	}
@@ -838,6 +849,7 @@ public class AccountParties9 {
 		this.legalGuardian = legalGuardian;
 	}
 
+	@XmlElement(name = "SucssrOnDth")
 	public List<InvestmentAccountOwnershipInformation9> getSuccessorOnDeath() {
 		return successorOnDeath;
 	}
@@ -846,6 +858,7 @@ public class AccountParties9 {
 		this.successorOnDeath = successorOnDeath;
 	}
 
+	@XmlElement(name = "Admstr")
 	public List<InvestmentAccountOwnershipInformation9> getAdministrator() {
 		return administrator;
 	}
@@ -854,6 +867,7 @@ public class AccountParties9 {
 		this.administrator = administrator;
 	}
 
+	@XmlElement(name = "OthrPty")
 	public List<ExtendedParty6> getOtherParty() {
 		return otherParty;
 	}
@@ -862,6 +876,7 @@ public class AccountParties9 {
 		this.otherParty = otherParty;
 	}
 
+	@XmlElement(name = "Grntr")
 	public List<InvestmentAccountOwnershipInformation9> getGranter() {
 		return granter;
 	}
@@ -870,6 +885,7 @@ public class AccountParties9 {
 		this.granter = granter;
 	}
 
+	@XmlElement(name = "Sttlr")
 	public List<InvestmentAccountOwnershipInformation9> getSettler() {
 		return settler;
 	}

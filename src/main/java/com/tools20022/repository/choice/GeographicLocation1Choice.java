@@ -25,6 +25,10 @@ import com.tools20022.repository.msg.GeographicCoordinates1;
 import com.tools20022.repository.msg.UTMCoordinates1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Geographic location of the ATM specified by geographic coordinates or UTM
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GeographicLocation1Choice", propOrder = {"geographicCoordinates", "UTMCoordinates"})
 public class GeographicLocation1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class GeographicLocation1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GeogcCordints", required = true)
 	public GeographicCoordinates1 getGeographicCoordinates() {
 		return geographicCoordinates;
 	}
@@ -174,6 +181,7 @@ public class GeographicLocation1Choice {
 		this.geographicCoordinates = geographicCoordinates;
 	}
 
+	@XmlElement(name = "UTMCordints", required = true)
 	public UTMCoordinates1 getUTMCoordinates() {
 		return uTMCoordinates;
 	}

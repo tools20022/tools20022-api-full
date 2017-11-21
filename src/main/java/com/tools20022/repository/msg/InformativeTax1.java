@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Tax related to an investment fund order.
@@ -79,6 +83,8 @@ import java.util.List;
  * TotalTaxes3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InformativeTax1", propOrder = {"taxableIncomePerDividend", "EUCapitalGain", "EUDividendStatus", "percentageOfDebtClaim", "individualTax"})
 public class InformativeTax1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -358,6 +364,7 @@ public class InformativeTax1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TaxblIncmPerDvdd")
 	public ActiveCurrencyAndAmount getTaxableIncomePerDividend() {
 		return taxableIncomePerDividend;
 	}
@@ -366,6 +373,7 @@ public class InformativeTax1 {
 		this.taxableIncomePerDividend = taxableIncomePerDividend;
 	}
 
+	@XmlElement(name = "EUCptlGn")
 	public EUCapitalGain3Choice getEUCapitalGain() {
 		return eUCapitalGain;
 	}
@@ -374,6 +382,7 @@ public class InformativeTax1 {
 		this.eUCapitalGain = eUCapitalGain;
 	}
 
+	@XmlElement(name = "EUDvddSts")
 	public EUDividendStatusType2Choice getEUDividendStatus() {
 		return eUDividendStatus;
 	}
@@ -382,6 +391,7 @@ public class InformativeTax1 {
 		this.eUDividendStatus = eUDividendStatus;
 	}
 
+	@XmlElement(name = "PctgOfDebtClm")
 	public PercentageRate getPercentageOfDebtClaim() {
 		return percentageOfDebtClaim;
 	}
@@ -390,6 +400,7 @@ public class InformativeTax1 {
 		this.percentageOfDebtClaim = percentageOfDebtClaim;
 	}
 
+	@XmlElement(name = "IndvTax")
 	public List<Tax32> getIndividualTax() {
 		return individualTax;
 	}

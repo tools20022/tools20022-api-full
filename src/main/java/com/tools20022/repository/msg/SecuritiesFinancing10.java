@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the closing of the securities financing transaction.
@@ -179,6 +183,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Details of the closing of the securities financing transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesFinancing10", propOrder = {"rateChangeDate", "rateType", "revaluation", "legalFramework", "interestComputationMethod", "variableRateSupport", "repurchaseRate", "stockLoanMargin", "securitiesHaircut",
+		"pricingRate", "spreadRate", "callableTradeIndicator", "transactionCallDelay", "accruedInterestAmount", "accruedInterestPercentage", "forfeitAmount", "premiumAmount", "closingAmountPerPiecesOfCollateral",
+		"totalNumberOfCollateralInstructions", "financingAgreement", "lendingTransactionMethod", "lendingWithCollateral", "borrowingReason", "collateralType", "contractTermsModificationChanged", "interestRate", "borrowingRate",
+		"standardCollateralRatio", "dividendRatio", "numberOfDaysLendingBorrowing", "standardCollateralAmount", "accruedInterestTax", "endNumberOfDaysAccrued", "endFactor", "securitiesLendingType", "reversible", "minimumDateForCallBack",
+		"rollOver", "periodicPayment", "exCoupon"})
 public class SecuritiesFinancing10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -2116,6 +2126,7 @@ public class SecuritiesFinancing10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RateChngDt")
 	public ISODateTime getRateChangeDate() {
 		return rateChangeDate;
 	}
@@ -2124,6 +2135,7 @@ public class SecuritiesFinancing10 {
 		this.rateChangeDate = rateChangeDate;
 	}
 
+	@XmlElement(name = "RateTp")
 	public RateType19Choice getRateType() {
 		return rateType;
 	}
@@ -2132,6 +2144,7 @@ public class SecuritiesFinancing10 {
 		this.rateType = rateType;
 	}
 
+	@XmlElement(name = "Rvaltn")
 	public Revaluation2Choice getRevaluation() {
 		return revaluation;
 	}
@@ -2140,6 +2153,7 @@ public class SecuritiesFinancing10 {
 		this.revaluation = revaluation;
 	}
 
+	@XmlElement(name = "LglFrmwk")
 	public LegalFramework1Code getLegalFramework() {
 		return legalFramework;
 	}
@@ -2148,6 +2162,7 @@ public class SecuritiesFinancing10 {
 		this.legalFramework = legalFramework;
 	}
 
+	@XmlElement(name = "IntrstCmptnMtd")
 	public InterestComputationMethod2Choice getInterestComputationMethod() {
 		return interestComputationMethod;
 	}
@@ -2156,6 +2171,7 @@ public class SecuritiesFinancing10 {
 		this.interestComputationMethod = interestComputationMethod;
 	}
 
+	@XmlElement(name = "VarblRateSpprt")
 	public RateName1 getVariableRateSupport() {
 		return variableRateSupport;
 	}
@@ -2164,6 +2180,7 @@ public class SecuritiesFinancing10 {
 		this.variableRateSupport = variableRateSupport;
 	}
 
+	@XmlElement(name = "RpRate")
 	public Rate2 getRepurchaseRate() {
 		return repurchaseRate;
 	}
@@ -2172,6 +2189,7 @@ public class SecuritiesFinancing10 {
 		this.repurchaseRate = repurchaseRate;
 	}
 
+	@XmlElement(name = "StockLnMrgn")
 	public Rate2 getStockLoanMargin() {
 		return stockLoanMargin;
 	}
@@ -2180,6 +2198,7 @@ public class SecuritiesFinancing10 {
 		this.stockLoanMargin = stockLoanMargin;
 	}
 
+	@XmlElement(name = "SctiesHrcut")
 	public Rate2 getSecuritiesHaircut() {
 		return securitiesHaircut;
 	}
@@ -2188,6 +2207,7 @@ public class SecuritiesFinancing10 {
 		this.securitiesHaircut = securitiesHaircut;
 	}
 
+	@XmlElement(name = "PricgRate")
 	public RateOrName1Choice getPricingRate() {
 		return pricingRate;
 	}
@@ -2196,6 +2216,7 @@ public class SecuritiesFinancing10 {
 		this.pricingRate = pricingRate;
 	}
 
+	@XmlElement(name = "SprdRate")
 	public SpreadRate1 getSpreadRate() {
 		return spreadRate;
 	}
@@ -2204,6 +2225,7 @@ public class SecuritiesFinancing10 {
 		this.spreadRate = spreadRate;
 	}
 
+	@XmlElement(name = "CllblTradInd")
 	public YesNoIndicator getCallableTradeIndicator() {
 		return callableTradeIndicator;
 	}
@@ -2212,6 +2234,7 @@ public class SecuritiesFinancing10 {
 		this.callableTradeIndicator = callableTradeIndicator;
 	}
 
+	@XmlElement(name = "TxCallDely")
 	public Max3NumericText getTransactionCallDelay() {
 		return transactionCallDelay;
 	}
@@ -2220,6 +2243,7 @@ public class SecuritiesFinancing10 {
 		this.transactionCallDelay = transactionCallDelay;
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt")
 	public AmountAndDirection5 getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -2228,6 +2252,7 @@ public class SecuritiesFinancing10 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "AcrdIntrstPctg")
 	public PercentageRate getAccruedInterestPercentage() {
 		return accruedInterestPercentage;
 	}
@@ -2236,6 +2261,7 @@ public class SecuritiesFinancing10 {
 		this.accruedInterestPercentage = accruedInterestPercentage;
 	}
 
+	@XmlElement(name = "FrftAmt")
 	public AmountAndDirection5 getForfeitAmount() {
 		return forfeitAmount;
 	}
@@ -2244,6 +2270,7 @@ public class SecuritiesFinancing10 {
 		this.forfeitAmount = forfeitAmount;
 	}
 
+	@XmlElement(name = "PrmAmt")
 	public AmountAndDirection5 getPremiumAmount() {
 		return premiumAmount;
 	}
@@ -2252,6 +2279,7 @@ public class SecuritiesFinancing10 {
 		this.premiumAmount = premiumAmount;
 	}
 
+	@XmlElement(name = "ClsgAmtPerPcsOfColl")
 	public AmountAndDirection5 getClosingAmountPerPiecesOfCollateral() {
 		return closingAmountPerPiecesOfCollateral;
 	}
@@ -2260,6 +2288,7 @@ public class SecuritiesFinancing10 {
 		this.closingAmountPerPiecesOfCollateral = closingAmountPerPiecesOfCollateral;
 	}
 
+	@XmlElement(name = "TtlNbOfCollInstrs")
 	public Max3NumericText getTotalNumberOfCollateralInstructions() {
 		return totalNumberOfCollateralInstructions;
 	}
@@ -2268,6 +2297,7 @@ public class SecuritiesFinancing10 {
 		this.totalNumberOfCollateralInstructions = totalNumberOfCollateralInstructions;
 	}
 
+	@XmlElement(name = "FincgAgrmt")
 	public Agreement3 getFinancingAgreement() {
 		return financingAgreement;
 	}
@@ -2276,6 +2306,7 @@ public class SecuritiesFinancing10 {
 		this.financingAgreement = financingAgreement;
 	}
 
+	@XmlElement(name = "LndgTxMtd")
 	public LendingTransactionMethod1Choice getLendingTransactionMethod() {
 		return lendingTransactionMethod;
 	}
@@ -2284,6 +2315,7 @@ public class SecuritiesFinancing10 {
 		this.lendingTransactionMethod = lendingTransactionMethod;
 	}
 
+	@XmlElement(name = "LndgWthColl")
 	public YesNoIndicator getLendingWithCollateral() {
 		return lendingWithCollateral;
 	}
@@ -2292,6 +2324,7 @@ public class SecuritiesFinancing10 {
 		this.lendingWithCollateral = lendingWithCollateral;
 	}
 
+	@XmlElement(name = "BrrwgRsn")
 	public BorrowingReason1Choice getBorrowingReason() {
 		return borrowingReason;
 	}
@@ -2300,6 +2333,7 @@ public class SecuritiesFinancing10 {
 		this.borrowingReason = borrowingReason;
 	}
 
+	@XmlElement(name = "CollTp")
 	public CollateralType1Choice getCollateralType() {
 		return collateralType;
 	}
@@ -2308,6 +2342,7 @@ public class SecuritiesFinancing10 {
 		this.collateralType = collateralType;
 	}
 
+	@XmlElement(name = "CtrctTermsModChngd")
 	public YesNoIndicator getContractTermsModificationChanged() {
 		return contractTermsModificationChanged;
 	}
@@ -2316,6 +2351,7 @@ public class SecuritiesFinancing10 {
 		this.contractTermsModificationChanged = contractTermsModificationChanged;
 	}
 
+	@XmlElement(name = "IntrstRate")
 	public Rate2 getInterestRate() {
 		return interestRate;
 	}
@@ -2324,6 +2360,7 @@ public class SecuritiesFinancing10 {
 		this.interestRate = interestRate;
 	}
 
+	@XmlElement(name = "BrrwgRate")
 	public Rate2 getBorrowingRate() {
 		return borrowingRate;
 	}
@@ -2332,6 +2369,7 @@ public class SecuritiesFinancing10 {
 		this.borrowingRate = borrowingRate;
 	}
 
+	@XmlElement(name = "StdCollRatio")
 	public Rate2 getStandardCollateralRatio() {
 		return standardCollateralRatio;
 	}
@@ -2340,6 +2378,7 @@ public class SecuritiesFinancing10 {
 		this.standardCollateralRatio = standardCollateralRatio;
 	}
 
+	@XmlElement(name = "DvddRatio")
 	public Rate2 getDividendRatio() {
 		return dividendRatio;
 	}
@@ -2348,6 +2387,7 @@ public class SecuritiesFinancing10 {
 		this.dividendRatio = dividendRatio;
 	}
 
+	@XmlElement(name = "NbOfDaysLndgBrrwg")
 	public Number21Choice getNumberOfDaysLendingBorrowing() {
 		return numberOfDaysLendingBorrowing;
 	}
@@ -2356,6 +2396,7 @@ public class SecuritiesFinancing10 {
 		this.numberOfDaysLendingBorrowing = numberOfDaysLendingBorrowing;
 	}
 
+	@XmlElement(name = "StdCollAmt")
 	public AmountAndDirection5 getStandardCollateralAmount() {
 		return standardCollateralAmount;
 	}
@@ -2364,6 +2405,7 @@ public class SecuritiesFinancing10 {
 		this.standardCollateralAmount = standardCollateralAmount;
 	}
 
+	@XmlElement(name = "AcrdIntrstTax")
 	public YesNoIndicator getAccruedInterestTax() {
 		return accruedInterestTax;
 	}
@@ -2372,6 +2414,7 @@ public class SecuritiesFinancing10 {
 		this.accruedInterestTax = accruedInterestTax;
 	}
 
+	@XmlElement(name = "EndNbOfDaysAcrd")
 	public Max3Number getEndNumberOfDaysAccrued() {
 		return endNumberOfDaysAccrued;
 	}
@@ -2380,6 +2423,7 @@ public class SecuritiesFinancing10 {
 		this.endNumberOfDaysAccrued = endNumberOfDaysAccrued;
 	}
 
+	@XmlElement(name = "EndFctr")
 	public BaseOneRate getEndFactor() {
 		return endFactor;
 	}
@@ -2388,6 +2432,7 @@ public class SecuritiesFinancing10 {
 		this.endFactor = endFactor;
 	}
 
+	@XmlElement(name = "SctiesLndgTp")
 	public SecuritiesLendingType1Choice getSecuritiesLendingType() {
 		return securitiesLendingType;
 	}
@@ -2396,6 +2441,7 @@ public class SecuritiesFinancing10 {
 		this.securitiesLendingType = securitiesLendingType;
 	}
 
+	@XmlElement(name = "Rvsbl")
 	public Reversible1Choice getReversible() {
 		return reversible;
 	}
@@ -2404,6 +2450,7 @@ public class SecuritiesFinancing10 {
 		this.reversible = reversible;
 	}
 
+	@XmlElement(name = "MinDtForCallBck")
 	public ISODate getMinimumDateForCallBack() {
 		return minimumDateForCallBack;
 	}
@@ -2412,6 +2459,7 @@ public class SecuritiesFinancing10 {
 		this.minimumDateForCallBack = minimumDateForCallBack;
 	}
 
+	@XmlElement(name = "RollOver")
 	public YesNoIndicator getRollOver() {
 		return rollOver;
 	}
@@ -2420,6 +2468,7 @@ public class SecuritiesFinancing10 {
 		this.rollOver = rollOver;
 	}
 
+	@XmlElement(name = "PrdcPmt")
 	public YesNoIndicator getPeriodicPayment() {
 		return periodicPayment;
 	}
@@ -2428,6 +2477,7 @@ public class SecuritiesFinancing10 {
 		this.periodicPayment = periodicPayment;
 	}
 
+	@XmlElement(name = "ExCpn")
 	public YesNoIndicator getExCoupon() {
 		return exCoupon;
 	}

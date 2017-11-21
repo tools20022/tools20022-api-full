@@ -28,6 +28,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the investment account ownership with respect to new issue
@@ -111,6 +115,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NewIssueAllocation1", propOrder = {"restricted", "exemptPersonReason", "deMinimusApplicable", "deMinimusNotApplicable"})
 public class NewIssueAllocation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -393,6 +399,7 @@ public class NewIssueAllocation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rstrctd", required = true)
 	public YesNoIndicator getRestricted() {
 		return restricted;
 	}
@@ -401,6 +408,7 @@ public class NewIssueAllocation1 {
 		this.restricted = restricted;
 	}
 
+	@XmlElement(name = "XmptPrsnRsn")
 	public Max350Text getExemptPersonReason() {
 		return exemptPersonReason;
 	}
@@ -409,6 +417,7 @@ public class NewIssueAllocation1 {
 		this.exemptPersonReason = exemptPersonReason;
 	}
 
+	@XmlElement(name = "DeMnmsAplbl")
 	public DeMinimusApplicable1 getDeMinimusApplicable() {
 		return deMinimusApplicable;
 	}
@@ -417,6 +426,7 @@ public class NewIssueAllocation1 {
 		this.deMinimusApplicable = deMinimusApplicable;
 	}
 
+	@XmlElement(name = "DeMnmsNotAplbl")
 	public DeMinimusNotApplicable1 getDeMinimusNotApplicable() {
 		return deMinimusNotApplicable;
 	}

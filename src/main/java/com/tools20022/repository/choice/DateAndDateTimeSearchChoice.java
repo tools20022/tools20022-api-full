@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a date or a date time pattern as search selection criteria.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between a date or a date time pattern as search selection criteria."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DateAndDateTimeSearchChoice", propOrder = {"dateTimeSearch", "dateSearch"})
 public class DateAndDateTimeSearchChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class DateAndDateTimeSearchChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtTmSch", required = true)
 	public DateTimePeriodChoice getDateTimeSearch() {
 		return dateTimeSearch;
 	}
@@ -166,6 +173,7 @@ public class DateAndDateTimeSearchChoice {
 		this.dateTimeSearch = dateTimeSearch;
 	}
 
+	@XmlElement(name = "DtSch", required = true)
 	public DateSearchChoice getDateSearch() {
 		return dateSearch;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details about the schedule change.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details about the schedule change."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ScheduleChangeEntry1", propOrder = {"scheduleEventType", "scheduleEventIdentification", "eventFrequency", "eventPreviousFrequency", "eventTime", "eventPreviousTime", "eventDuration", "eventPreviousDuration", "changeType"})
 public class ScheduleChangeEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -472,6 +478,7 @@ public class ScheduleChangeEntry1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SchdlEvtTp", required = true)
 	public SystemEventType2Choice getScheduleEventType() {
 		return scheduleEventType;
 	}
@@ -480,6 +487,7 @@ public class ScheduleChangeEntry1 {
 		this.scheduleEventType = scheduleEventType;
 	}
 
+	@XmlElement(name = "SchdlEvtId")
 	public Exact1NumericText getScheduleEventIdentification() {
 		return scheduleEventIdentification;
 	}
@@ -488,6 +496,7 @@ public class ScheduleChangeEntry1 {
 		this.scheduleEventIdentification = scheduleEventIdentification;
 	}
 
+	@XmlElement(name = "EvtFrqcy")
 	public Max4Text getEventFrequency() {
 		return eventFrequency;
 	}
@@ -496,6 +505,7 @@ public class ScheduleChangeEntry1 {
 		this.eventFrequency = eventFrequency;
 	}
 
+	@XmlElement(name = "EvtPrvsFrqcy")
 	public Max4Text getEventPreviousFrequency() {
 		return eventPreviousFrequency;
 	}
@@ -504,6 +514,7 @@ public class ScheduleChangeEntry1 {
 		this.eventPreviousFrequency = eventPreviousFrequency;
 	}
 
+	@XmlElement(name = "EvtTm")
 	public ISOTime getEventTime() {
 		return eventTime;
 	}
@@ -512,6 +523,7 @@ public class ScheduleChangeEntry1 {
 		this.eventTime = eventTime;
 	}
 
+	@XmlElement(name = "EvtPrvsTm")
 	public ISOTime getEventPreviousTime() {
 		return eventPreviousTime;
 	}
@@ -520,6 +532,7 @@ public class ScheduleChangeEntry1 {
 		this.eventPreviousTime = eventPreviousTime;
 	}
 
+	@XmlElement(name = "EvtDrtn")
 	public Max3NumericText getEventDuration() {
 		return eventDuration;
 	}
@@ -528,6 +541,7 @@ public class ScheduleChangeEntry1 {
 		this.eventDuration = eventDuration;
 	}
 
+	@XmlElement(name = "EvtPrvsDrtn")
 	public Max3NumericText getEventPreviousDuration() {
 		return eventPreviousDuration;
 	}
@@ -536,6 +550,7 @@ public class ScheduleChangeEntry1 {
 		this.eventPreviousDuration = eventPreviousDuration;
 	}
 
+	@XmlElement(name = "ChngTp", required = true)
 	public Max35Text getChangeType() {
 		return changeType;
 	}

@@ -35,6 +35,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TransportPartyRole
+ * TransportPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -45,9 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Consignment4.mmConsignor}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TransportPartyRole
- * TransportPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -76,6 +76,11 @@ public class Consignor extends TransportPartyRole {
 				definition = "Party responsible for dispatching the goods.";
 				derivationElement_lazy = () -> Arrays.asList(Consignment2.mmConsignor, Consignment4.mmConsignor);
 				superType_lazy = () -> TransportPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Consignor.class;
 			}
 		});
 		return mmObject_lazy.get();

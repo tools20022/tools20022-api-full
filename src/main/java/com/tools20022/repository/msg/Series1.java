@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a series.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identification of a series."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Series1", propOrder = {"seriesDate", "seriesName"})
 public class Series1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class Series1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SrsDt")
 	public DateFormat42Choice getSeriesDate() {
 		return seriesDate;
 	}
@@ -187,6 +194,7 @@ public class Series1 {
 		this.seriesDate = seriesDate;
 	}
 
+	@XmlElement(name = "SrsNm")
 	public Max35Text getSeriesName() {
 		return seriesName;
 	}

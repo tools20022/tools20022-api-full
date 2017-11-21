@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further means of referencing a payment transaction.
@@ -104,6 +108,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NotificationItem4", propOrder = {"identification", "endToEndIdentification", "account", "accountOwner", "accountServicer", "relatedAccount", "amount", "expectedValueDate", "debtor", "debtorAgent", "intermediaryAgent",
+		"purpose", "relatedRemittanceInformation", "remittanceInformation"})
 public class NotificationItem4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -944,6 +951,7 @@ public class NotificationItem4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -952,6 +960,7 @@ public class NotificationItem4 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "EndToEndId")
 	public Max35Text getEndToEndIdentification() {
 		return endToEndIdentification;
 	}
@@ -960,6 +969,7 @@ public class NotificationItem4 {
 		this.endToEndIdentification = endToEndIdentification;
 	}
 
+	@XmlElement(name = "Acct")
 	public CashAccount24 getAccount() {
 		return account;
 	}
@@ -968,6 +978,7 @@ public class NotificationItem4 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public Party12Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -976,6 +987,7 @@ public class NotificationItem4 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
 		return accountServicer;
 	}
@@ -984,6 +996,7 @@ public class NotificationItem4 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "RltdAcct")
 	public CashAccount24 getRelatedAccount() {
 		return relatedAccount;
 	}
@@ -992,6 +1005,7 @@ public class NotificationItem4 {
 		this.relatedAccount = relatedAccount;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -1000,6 +1014,7 @@ public class NotificationItem4 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "XpctdValDt")
 	public ISODate getExpectedValueDate() {
 		return expectedValueDate;
 	}
@@ -1008,6 +1023,7 @@ public class NotificationItem4 {
 		this.expectedValueDate = expectedValueDate;
 	}
 
+	@XmlElement(name = "Dbtr")
 	public Party12Choice getDebtor() {
 		return debtor;
 	}
@@ -1016,6 +1032,7 @@ public class NotificationItem4 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAgt")
 	public BranchAndFinancialInstitutionIdentification5 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -1024,6 +1041,7 @@ public class NotificationItem4 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "IntrmyAgt")
 	public BranchAndFinancialInstitutionIdentification5 getIntermediaryAgent() {
 		return intermediaryAgent;
 	}
@@ -1032,6 +1050,7 @@ public class NotificationItem4 {
 		this.intermediaryAgent = intermediaryAgent;
 	}
 
+	@XmlElement(name = "Purp")
 	public Purpose2Choice getPurpose() {
 		return purpose;
 	}
@@ -1040,6 +1059,7 @@ public class NotificationItem4 {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "RltdRmtInf")
 	public RemittanceLocation2 getRelatedRemittanceInformation() {
 		return relatedRemittanceInformation;
 	}
@@ -1048,6 +1068,7 @@ public class NotificationItem4 {
 		this.relatedRemittanceInformation = relatedRemittanceInformation;
 	}
 
+	@XmlElement(name = "RmtInf")
 	public RemittanceInformation7 getRemittanceInformation() {
 		return remittanceInformation;
 	}

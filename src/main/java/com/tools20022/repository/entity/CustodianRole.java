@@ -35,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#mmCustodian
- * InvestmentFund.mmCustodian}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
- * SecuritiesPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
  * <li>
  * {@linkplain com.tools20022.repository.entity.CustodianRole#mmInvestmentFund
  * CustodianRole.mmInvestmentFund}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
+ * SecuritiesPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#mmCustodian
+ * InvestmentFund.mmCustodian}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,7 +110,7 @@ public class CustodianRole extends SecuritiesPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentFund = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CustodianRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CustodianRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFund";
@@ -132,7 +132,12 @@ public class CustodianRole extends SecuritiesPartyRole {
 				definition = "The party that safekeeps and administers assets on behalf of the owner.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFund.mmCustodian);
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(CustodianRole.mmInvestmentFund);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CustodianRole.mmInvestmentFund);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CustodianRole.class;
 			}
 		});
 		return mmObject_lazy.get();

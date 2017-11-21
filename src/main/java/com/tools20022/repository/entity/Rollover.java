@@ -36,6 +36,18 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Rollover#mmSecuritiesSettlement
+ * Rollover.mmSecuritiesSettlement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
+ * ObligationFulfilment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -43,18 +55,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRollover
  * SecuritiesSettlement.mmRollover}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
- * ObligationFulfilment}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Rollover#mmSecuritiesSettlement
- * Rollover.mmSecuritiesSettlement}</li>
  * </ul>
  * </li>
  * <li>
@@ -113,7 +113,7 @@ public class Rollover extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesSettlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Rollover.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Rollover.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesSettlement";
@@ -134,7 +134,12 @@ public class Rollover extends ObligationFulfilment {
 				definition = "Process whereby a financial instrument is reinvested at maturity.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlement.mmRollover);
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(Rollover.mmSecuritiesSettlement);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Rollover.mmSecuritiesSettlement);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Rollover.class;
 			}
 		});
 		return mmObject_lazy.get();

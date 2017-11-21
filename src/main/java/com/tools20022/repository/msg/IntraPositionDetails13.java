@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the intra-position movement.
@@ -94,6 +98,9 @@ import java.util.function.Supplier;
  * definition} = "Details of the intra-position movement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionDetails13", propOrder = {"settledQuantity", "lotNumber", "collateralMonitorAmount", "previouslySettledQuantity", "remainingToBeSettledQuantity", "settlementDate", "availableDate", "corporateActionEventType",
+		"balanceFrom", "balanceTo", "instructionProcessingAdditionalDetails"})
 public class IntraPositionDetails13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -653,6 +660,7 @@ public class IntraPositionDetails13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttldQty", required = true)
 	public FinancialInstrumentQuantity15Choice getSettledQuantity() {
 		return settledQuantity;
 	}
@@ -661,6 +669,7 @@ public class IntraPositionDetails13 {
 		this.settledQuantity = settledQuantity;
 	}
 
+	@XmlElement(name = "LotNb")
 	public Number4Choice getLotNumber() {
 		return lotNumber;
 	}
@@ -669,6 +678,7 @@ public class IntraPositionDetails13 {
 		this.lotNumber = lotNumber;
 	}
 
+	@XmlElement(name = "CollMntrAmt")
 	public AmountAndDirection24 getCollateralMonitorAmount() {
 		return collateralMonitorAmount;
 	}
@@ -677,6 +687,7 @@ public class IntraPositionDetails13 {
 		this.collateralMonitorAmount = collateralMonitorAmount;
 	}
 
+	@XmlElement(name = "PrevslySttldQty")
 	public FinancialInstrumentQuantity15Choice getPreviouslySettledQuantity() {
 		return previouslySettledQuantity;
 	}
@@ -685,6 +696,7 @@ public class IntraPositionDetails13 {
 		this.previouslySettledQuantity = previouslySettledQuantity;
 	}
 
+	@XmlElement(name = "RmngToBeSttldQty")
 	public FinancialInstrumentQuantity15Choice getRemainingToBeSettledQuantity() {
 		return remainingToBeSettledQuantity;
 	}
@@ -693,6 +705,7 @@ public class IntraPositionDetails13 {
 		this.remainingToBeSettledQuantity = remainingToBeSettledQuantity;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public DateAndDateTimeChoice getSettlementDate() {
 		return settlementDate;
 	}
@@ -701,6 +714,7 @@ public class IntraPositionDetails13 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "AvlblDt")
 	public DateAndDateTimeChoice getAvailableDate() {
 		return availableDate;
 	}
@@ -709,6 +723,7 @@ public class IntraPositionDetails13 {
 		this.availableDate = availableDate;
 	}
 
+	@XmlElement(name = "CorpActnEvtTp")
 	public CorporateActionEventType4Choice getCorporateActionEventType() {
 		return corporateActionEventType;
 	}
@@ -717,6 +732,7 @@ public class IntraPositionDetails13 {
 		this.corporateActionEventType = corporateActionEventType;
 	}
 
+	@XmlElement(name = "BalFr", required = true)
 	public SecuritiesBalanceType5Choice getBalanceFrom() {
 		return balanceFrom;
 	}
@@ -725,6 +741,7 @@ public class IntraPositionDetails13 {
 		this.balanceFrom = balanceFrom;
 	}
 
+	@XmlElement(name = "BalTo", required = true)
 	public SecuritiesBalanceType5Choice getBalanceTo() {
 		return balanceTo;
 	}
@@ -733,6 +750,7 @@ public class IntraPositionDetails13 {
 		this.balanceTo = balanceTo;
 	}
 
+	@XmlElement(name = "InstrPrcgAddtlDtls")
 	public RestrictedFINXMax350Text getInstructionProcessingAdditionalDetails() {
 		return instructionProcessingAdditionalDetails;
 	}

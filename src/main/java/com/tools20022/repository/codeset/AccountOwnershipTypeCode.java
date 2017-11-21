@@ -29,17 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code
- * AccountOwnershipType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountOwnershipType3Code
- * AccountOwnershipType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountOwnershipType4Code
- * AccountOwnershipType4Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -96,6 +85,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AccountOwnershipTypeCode#mmLimitedPartnership
  * AccountOwnershipTypeCode.mmLimitedPartnership}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code
+ * AccountOwnershipType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountOwnershipType3Code
+ * AccountOwnershipType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountOwnershipType4Code
+ * AccountOwnershipType4Code}</li>
  * </ul>
  * </li>
  * <li>

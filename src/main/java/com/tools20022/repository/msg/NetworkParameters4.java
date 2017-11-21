@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters to communicate with a host.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * NetworkParameters3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NetworkParameters4", propOrder = {"networkType", "addressValue"})
 public class NetworkParameters4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -169,6 +175,7 @@ public class NetworkParameters4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NtwkTp", required = true)
 	public NetworkType1Code getNetworkType() {
 		return networkType;
 	}
@@ -177,6 +184,7 @@ public class NetworkParameters4 {
 		this.networkType = networkType;
 	}
 
+	@XmlElement(name = "AdrVal", required = true)
 	public Max70Text getAddressValue() {
 		return addressValue;
 	}

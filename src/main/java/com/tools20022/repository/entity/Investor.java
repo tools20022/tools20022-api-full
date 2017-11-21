@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.InvestmentAccountPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,6 +41,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Investor#mmNewIssuePermission
+ * Investor.mmNewIssuePermission}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Investor#mmDeMinimusApplicable
+ * Investor.mmDeMinimusApplicable}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Investor#mmRestricted
+ * Investor.mmRestricted}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Investor#mmRestrictedPersonReason
+ * Investor.mmRestrictedPersonReason}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
+ * InvestmentAccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -66,26 +87,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmInvestmentDecisionPerson
  * SecuritiesTransactionReport4.mmInvestmentDecisionPerson}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
- * InvestmentAccountPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Investor#mmNewIssuePermission
- * Investor.mmNewIssuePermission}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Investor#mmDeMinimusApplicable
- * Investor.mmDeMinimusApplicable}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Investor#mmRestricted
- * Investor.mmRestricted}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Investor#mmRestrictedPersonReason
- * Investor.mmRestrictedPersonReason}</li>
  * </ul>
  * </li>
  * <li>
@@ -120,10 +121,6 @@ public class Investor extends InvestmentAccountPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Investor
-	 * Investor}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -132,6 +129,10 @@ public class Investor extends InvestmentAccountPartyRole {
 	 * DeMinimusApplicable1.mmNewIssuePermission}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Investor
+	 * Investor}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -148,7 +149,7 @@ public class Investor extends InvestmentAccountPartyRole {
 	public static final MMBusinessAttribute mmNewIssuePermission = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DeMinimusApplicable1.mmNewIssuePermission);
-			elementContext_lazy = () -> Investor.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Investor.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewIssuePermission";
@@ -156,6 +157,14 @@ public class Investor extends InvestmentAccountPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Investor.class.getMethod("getNewIssuePermission", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text deMinimusApplicable;
@@ -168,10 +177,6 @@ public class Investor extends InvestmentAccountPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Investor
-	 * Investor}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -187,6 +192,10 @@ public class Investor extends InvestmentAccountPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Investor
+	 * Investor}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -201,7 +210,7 @@ public class Investor extends InvestmentAccountPartyRole {
 	public static final MMBusinessAttribute mmDeMinimusApplicable = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NewIssueAllocation1.mmDeMinimusApplicable, DeMinimus1Choice.mmDeMinimusApplicable, DeMinimus1Choice.mmDeMinimusNotApplicable);
-			elementContext_lazy = () -> Investor.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Investor.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeMinimusApplicable";
@@ -209,6 +218,14 @@ public class Investor extends InvestmentAccountPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Investor.class.getMethod("getDeMinimusApplicable", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator restricted;
@@ -223,10 +240,6 @@ public class Investor extends InvestmentAccountPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Investor
-	 * Investor}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -238,6 +251,10 @@ public class Investor extends InvestmentAccountPartyRole {
 	 * NewIssueAllocation2.mmRestricted}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Investor
+	 * Investor}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -254,7 +271,7 @@ public class Investor extends InvestmentAccountPartyRole {
 	public static final MMBusinessAttribute mmRestricted = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NewIssueAllocation1.mmRestricted, NewIssueAllocation2.mmRestricted);
-			elementContext_lazy = () -> Investor.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Investor.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Restricted";
@@ -262,6 +279,14 @@ public class Investor extends InvestmentAccountPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Investor.class.getMethod("getRestricted", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max350Text restrictedPersonReason;
@@ -274,10 +299,6 @@ public class Investor extends InvestmentAccountPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Investor
-	 * Investor}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -286,6 +307,10 @@ public class Investor extends InvestmentAccountPartyRole {
 	 * DeMinimusNotApplicable1.mmRestrictedPersonReason}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Investor
+	 * Investor}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -300,7 +325,7 @@ public class Investor extends InvestmentAccountPartyRole {
 	public static final MMBusinessAttribute mmRestrictedPersonReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DeMinimusNotApplicable1.mmRestrictedPersonReason);
-			elementContext_lazy = () -> Investor.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Investor.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RestrictedPersonReason";
@@ -308,6 +333,14 @@ public class Investor extends InvestmentAccountPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Investor.class.getMethod("getRestrictedPersonReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -320,8 +353,14 @@ public class Investor extends InvestmentAccountPartyRole {
 				definition = "Party which makes investment decisions in relation with its investment account.";
 				derivationElement_lazy = () -> Arrays.asList(NewIssueAllocation1.mmDeMinimusNotApplicable, SecuritiesTransactionReport4.mmInvestmentDecisionPerson);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(Investor.mmNewIssuePermission, Investor.mmDeMinimusApplicable, Investor.mmRestricted, Investor.mmRestrictedPersonReason);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Investor.mmNewIssuePermission, com.tools20022.repository.entity.Investor.mmDeMinimusApplicable, com.tools20022.repository.entity.Investor.mmRestricted,
+						com.tools20022.repository.entity.Investor.mmRestrictedPersonReason);
 				derivationComponent_lazy = () -> Arrays.asList(DeMinimusApplicable1.mmObject(), DeMinimusNotApplicable1.mmObject(), NewIssueAllocation1.mmObject(), NewIssueAllocation2.mmObject(), DeMinimus1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Investor.class;
 			}
 		});
 		return mmObject_lazy.get();

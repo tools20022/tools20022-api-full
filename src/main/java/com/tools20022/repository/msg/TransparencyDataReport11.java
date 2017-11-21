@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides for reporting qualitative details of equity instruments as part of
@@ -99,6 +103,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransparencyDataReport11", propOrder = {"technicalRecordIdentification", "identification", "fullName", "tradingVenue", "reportingDate", "financialInstrumentClassification", "numberOutstandingInstruments",
+		"holdingsExceedingTotalVotingRightThreshold", "issuanceSize", "instrumentPrice"})
 public class TransparencyDataReport11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -611,6 +618,7 @@ public class TransparencyDataReport11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TechRcrdId")
 	public Max35Text getTechnicalRecordIdentification() {
 		return technicalRecordIdentification;
 	}
@@ -619,6 +627,7 @@ public class TransparencyDataReport11 {
 		this.technicalRecordIdentification = technicalRecordIdentification;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public ISINOct2015Identifier getIdentification() {
 		return identification;
 	}
@@ -627,6 +636,7 @@ public class TransparencyDataReport11 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "FullNm")
 	public Max350Text getFullName() {
 		return fullName;
 	}
@@ -635,6 +645,7 @@ public class TransparencyDataReport11 {
 		this.fullName = fullName;
 	}
 
+	@XmlElement(name = "TradgVn")
 	public MICIdentifier getTradingVenue() {
 		return tradingVenue;
 	}
@@ -643,6 +654,7 @@ public class TransparencyDataReport11 {
 		this.tradingVenue = tradingVenue;
 	}
 
+	@XmlElement(name = "RptgDt")
 	public ISODate getReportingDate() {
 		return reportingDate;
 	}
@@ -651,6 +663,7 @@ public class TransparencyDataReport11 {
 		this.reportingDate = reportingDate;
 	}
 
+	@XmlElement(name = "FinInstrmClssfctn", required = true)
 	public EquityInstrumentReportingClassification1Code getFinancialInstrumentClassification() {
 		return financialInstrumentClassification;
 	}
@@ -659,6 +672,7 @@ public class TransparencyDataReport11 {
 		this.financialInstrumentClassification = financialInstrumentClassification;
 	}
 
+	@XmlElement(name = "NbOutsdngInstrms")
 	public DecimalNumberFraction5 getNumberOutstandingInstruments() {
 		return numberOutstandingInstruments;
 	}
@@ -667,6 +681,7 @@ public class TransparencyDataReport11 {
 		this.numberOutstandingInstruments = numberOutstandingInstruments;
 	}
 
+	@XmlElement(name = "HldgsExcdgTtlVtngRghtThrshld")
 	public DecimalNumberFraction5 getHoldingsExceedingTotalVotingRightThreshold() {
 		return holdingsExceedingTotalVotingRightThreshold;
 	}
@@ -675,6 +690,7 @@ public class TransparencyDataReport11 {
 		this.holdingsExceedingTotalVotingRightThreshold = holdingsExceedingTotalVotingRightThreshold;
 	}
 
+	@XmlElement(name = "IssncSz")
 	public ActiveCurrencyAndAmount getIssuanceSize() {
 		return issuanceSize;
 	}
@@ -683,6 +699,7 @@ public class TransparencyDataReport11 {
 		this.issuanceSize = issuanceSize;
 	}
 
+	@XmlElement(name = "InstrmPric")
 	public ActiveCurrencyAnd13DecimalAmount getInstrumentPrice() {
 		return instrumentPrice;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PaymentTerms;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the tranches defined for the loan contract.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides details on the tranches defined for the loan contract."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LoanContractTranche1", propOrder = {"trancheNumber", "expectedDate", "amount", "dueDate", "durationCode", "lastTrancheIndicator"})
 public class LoanContractTranche1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -361,6 +367,7 @@ public class LoanContractTranche1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrchNb", required = true)
 	public Number getTrancheNumber() {
 		return trancheNumber;
 	}
@@ -369,6 +376,7 @@ public class LoanContractTranche1 {
 		this.trancheNumber = trancheNumber;
 	}
 
+	@XmlElement(name = "XpctdDt", required = true)
 	public ISODate getExpectedDate() {
 		return expectedDate;
 	}
@@ -377,6 +385,7 @@ public class LoanContractTranche1 {
 		this.expectedDate = expectedDate;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -385,6 +394,7 @@ public class LoanContractTranche1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "DueDt")
 	public ISODate getDueDate() {
 		return dueDate;
 	}
@@ -393,6 +403,7 @@ public class LoanContractTranche1 {
 		this.dueDate = dueDate;
 	}
 
+	@XmlElement(name = "DrtnCd")
 	public Exact1NumericText getDurationCode() {
 		return durationCode;
 	}
@@ -401,6 +412,7 @@ public class LoanContractTranche1 {
 		this.durationCode = durationCode;
 	}
 
+	@XmlElement(name = "LastTrchInd")
 	public YesNoIndicator getLastTrancheIndicator() {
 		return lastTrancheIndicator;
 	}

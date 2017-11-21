@@ -39,6 +39,35 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmTreasuryTradeSettlementStatus
+ * TreasuryTrade.mmTreasuryTradeSettlementStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmInformationPartyRole
+ * TreasuryTrade.mmInformationPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmTreasurySettlementPartyRole
+ * TreasuryTrade.mmTreasurySettlementPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TreasuryTrade#mmPartyRole
+ * TreasuryTrade.mmPartyRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
+ * ForeignExchangeTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ForeignExchangeSwap
+ * ForeignExchangeSwap}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CurrencyOption
+ * CurrencyOption}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Trade Trade}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -101,35 +130,6 @@ import java.util.List;
  * TreasurySettlementPartyRole.mmTreasuryTrade}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Trade Trade}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
- * ForeignExchangeTrade}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ForeignExchangeSwap
- * ForeignExchangeSwap}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CurrencyOption
- * CurrencyOption}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmTreasuryTradeSettlementStatus
- * TreasuryTrade.mmTreasuryTradeSettlementStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmInformationPartyRole
- * TreasuryTrade.mmInformationPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmTreasurySettlementPartyRole
- * TreasuryTrade.mmTreasurySettlementPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TreasuryTrade#mmPartyRole
- * TreasuryTrade.mmPartyRole}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -169,11 +169,6 @@ public class TreasuryTrade extends Trade {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTrade TreasuryTrade}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -184,6 +179,11 @@ public class TreasuryTrade extends Trade {
 	 * {@linkplain com.tools20022.repository.msg.SplitTradeDetails3#mmStatusDetails
 	 * SplitTradeDetails3.mmStatusDetails}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTrade TreasuryTrade}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -199,7 +199,7 @@ public class TreasuryTrade extends Trade {
 	public static final MMBusinessAssociationEnd mmTreasuryTradeSettlementStatus = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SplitTradeDetails1.mmStatusDetails, SplitTradeDetails3.mmStatusDetails);
-			elementContext_lazy = () -> TreasuryTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TreasuryTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TreasuryTradeSettlementStatus";
@@ -248,7 +248,7 @@ public class TreasuryTrade extends Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmInformationPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TreasuryTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TreasuryTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InformationPartyRole";
@@ -300,7 +300,7 @@ public class TreasuryTrade extends Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmTreasurySettlementPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TreasuryTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TreasuryTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TreasurySettlementPartyRole";
@@ -349,7 +349,7 @@ public class TreasuryTrade extends Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TreasuryTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TreasuryTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
@@ -372,10 +372,16 @@ public class TreasuryTrade extends Trade {
 						com.tools20022.repository.entity.TreasuryTradePartyRole.mmTreasuryTrade, com.tools20022.repository.entity.TreasurySettlementPartyRole.mmTreasuryTrade);
 				subType_lazy = () -> Arrays.asList(ForeignExchangeTrade.mmObject(), ForeignExchangeSwap.mmObject(), CurrencyOption.mmObject());
 				superType_lazy = () -> Trade.mmObject();
-				element_lazy = () -> Arrays.asList(TreasuryTrade.mmTreasuryTradeSettlementStatus, TreasuryTrade.mmInformationPartyRole, TreasuryTrade.mmTreasurySettlementPartyRole, TreasuryTrade.mmPartyRole);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasuryTrade.mmTreasuryTradeSettlementStatus, com.tools20022.repository.entity.TreasuryTrade.mmInformationPartyRole,
+						com.tools20022.repository.entity.TreasuryTrade.mmTreasurySettlementPartyRole, com.tools20022.repository.entity.TreasuryTrade.mmPartyRole);
 				derivationComponent_lazy = () -> Arrays.asList(TradeAgreement2.mmObject(), TradeAgreement4.mmObject(), TradeAgreement8.mmObject(), GeneralInformation4.mmObject(), TradeAgreement1.mmObject(), TradeAgreement3.mmObject(),
 						TradeAgreement7.mmObject(), TradeAgreement5.mmObject(), TradeAgreement9.mmObject(), SplitTradeDetails1.mmObject(), TradeAgreement11.mmObject(), TradeAgreement12.mmObject(), TradeAgreement10.mmObject(),
 						Trade2.mmObject(), Trade1.mmObject(), TreasuryProfile1.mmObject(), GeneralInformation5.mmObject(), TradeAgreement15.mmObject(), TradeAgreement14.mmObject(), SplitTradeDetails3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TreasuryTrade.class;
 			}
 		});
 		return mmObject_lazy.get();

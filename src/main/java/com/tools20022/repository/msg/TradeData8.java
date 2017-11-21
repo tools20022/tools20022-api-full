@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on the status of a trade.
@@ -107,6 +111,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradeData5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeData8", propOrder = {"originatorReference", "matchingSystemUniqueReference", "matchingSystemMatchingReference", "matchingSystemMatchedSideReference", "currentSettlementDate", "newSettlementDate",
+		"currentStatusDateTime", "productType", "settlementSessionIdentifier", "regulatoryReporting"})
 public class TradeData8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -692,6 +699,7 @@ public class TradeData8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgtrRef")
 	public Max35Text getOriginatorReference() {
 		return originatorReference;
 	}
@@ -700,6 +708,7 @@ public class TradeData8 {
 		this.originatorReference = originatorReference;
 	}
 
+	@XmlElement(name = "MtchgSysUnqRef", required = true)
 	public Max35Text getMatchingSystemUniqueReference() {
 		return matchingSystemUniqueReference;
 	}
@@ -708,6 +717,7 @@ public class TradeData8 {
 		this.matchingSystemUniqueReference = matchingSystemUniqueReference;
 	}
 
+	@XmlElement(name = "MtchgSysMtchgRef")
 	public Max35Text getMatchingSystemMatchingReference() {
 		return matchingSystemMatchingReference;
 	}
@@ -716,6 +726,7 @@ public class TradeData8 {
 		this.matchingSystemMatchingReference = matchingSystemMatchingReference;
 	}
 
+	@XmlElement(name = "MtchgSysMtchdSdRef")
 	public Max35Text getMatchingSystemMatchedSideReference() {
 		return matchingSystemMatchedSideReference;
 	}
@@ -724,6 +735,7 @@ public class TradeData8 {
 		this.matchingSystemMatchedSideReference = matchingSystemMatchedSideReference;
 	}
 
+	@XmlElement(name = "CurSttlmDt")
 	public ISODate getCurrentSettlementDate() {
 		return currentSettlementDate;
 	}
@@ -732,6 +744,7 @@ public class TradeData8 {
 		this.currentSettlementDate = currentSettlementDate;
 	}
 
+	@XmlElement(name = "NewSttlmDt")
 	public ISODate getNewSettlementDate() {
 		return newSettlementDate;
 	}
@@ -740,6 +753,7 @@ public class TradeData8 {
 		this.newSettlementDate = newSettlementDate;
 	}
 
+	@XmlElement(name = "CurStsDtTm")
 	public ISODateTime getCurrentStatusDateTime() {
 		return currentStatusDateTime;
 	}
@@ -748,6 +762,7 @@ public class TradeData8 {
 		this.currentStatusDateTime = currentStatusDateTime;
 	}
 
+	@XmlElement(name = "PdctTp")
 	public Max35Text getProductType() {
 		return productType;
 	}
@@ -756,6 +771,7 @@ public class TradeData8 {
 		this.productType = productType;
 	}
 
+	@XmlElement(name = "SttlmSsnIdr")
 	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
 		return settlementSessionIdentifier;
 	}
@@ -764,6 +780,7 @@ public class TradeData8 {
 		this.settlementSessionIdentifier = settlementSessionIdentifier;
 	}
 
+	@XmlElement(name = "RgltryRptg")
 	public RegulatoryReporting1 getRegulatoryReporting() {
 		return regulatoryReporting;
 	}

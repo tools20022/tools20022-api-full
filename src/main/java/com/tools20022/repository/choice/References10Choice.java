@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of reference.
@@ -80,6 +84,9 @@ import java.util.function.Supplier;
  * definition} = "Choice of reference."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References10Choice", propOrder = {"accountServicerTransactionIdentification", "accountOwnerTransactionIdentification", "marketInfrastructureTransactionIdentification", "poolIdentification", "commonIdentification",
+		"tradeIdentification"})
 public class References10Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -411,6 +418,7 @@ public class References10Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctSvcrTxId", required = true)
 	public RestrictedFINXMax16Text getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
@@ -419,6 +427,7 @@ public class References10Choice {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnrTxId", required = true)
 	public RestrictedFINXMax16Text getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
@@ -427,6 +436,7 @@ public class References10Choice {
 		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
 	}
 
+	@XmlElement(name = "MktInfrstrctrTxId", required = true)
 	public RestrictedFINXMax16Text getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}
@@ -435,6 +445,7 @@ public class References10Choice {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
 	}
 
+	@XmlElement(name = "PoolId", required = true)
 	public RestrictedFINXMax16Text getPoolIdentification() {
 		return poolIdentification;
 	}
@@ -443,6 +454,7 @@ public class References10Choice {
 		this.poolIdentification = poolIdentification;
 	}
 
+	@XmlElement(name = "CmonId", required = true)
 	public RestrictedFINXMax16Text getCommonIdentification() {
 		return commonIdentification;
 	}
@@ -451,6 +463,7 @@ public class References10Choice {
 		this.commonIdentification = commonIdentification;
 	}
 
+	@XmlElement(name = "TradId", required = true)
 	public RestrictedFINXMax16Text getTradeIdentification() {
 		return tradeIdentification;
 	}

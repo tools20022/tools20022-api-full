@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies information concerning the technical error that prevented delivery
@@ -64,6 +68,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TechnicalError1", propOrder = {"severity", "errorCode", "description"})
 public class TechnicalError1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -205,6 +211,7 @@ public class TechnicalError1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "svrty", required = true)
 	public ErrorSeverity1Code getSeverity() {
 		return severity;
 	}
@@ -213,6 +220,7 @@ public class TechnicalError1 {
 		this.severity = severity;
 	}
 
+	@XmlElement(name = "ErrCd", required = true)
 	public TechnicalError1Choice getErrorCode() {
 		return errorCode;
 	}
@@ -221,6 +229,7 @@ public class TechnicalError1 {
 		this.errorCode = errorCode;
 	}
 
+	@XmlElement(name = "Desc", required = true)
 	public List<Max140Text> getDescription() {
 		return description;
 	}

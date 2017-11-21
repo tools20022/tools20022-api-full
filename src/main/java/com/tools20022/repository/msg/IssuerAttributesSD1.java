@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the issuer, as required by ASX.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details of the issuer, as required by ASX."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IssuerAttributesSD1", propOrder = {"placeAndName", "name", "registeredNumberType", "otherRegisteredNumberType", "registrationNumber", "issuerIdentification"})
 public class IssuerAttributesSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -346,6 +352,7 @@ public class IssuerAttributesSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -354,6 +361,7 @@ public class IssuerAttributesSD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public RestrictedFINXMax140Text getName() {
 		return name;
 	}
@@ -362,6 +370,7 @@ public class IssuerAttributesSD1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "RegdNbTp")
 	public RegisteredNumberType1Code getRegisteredNumberType() {
 		return registeredNumberType;
 	}
@@ -370,6 +379,7 @@ public class IssuerAttributesSD1 {
 		this.registeredNumberType = registeredNumberType;
 	}
 
+	@XmlElement(name = "OthrRegdNbTp")
 	public Max35Text getOtherRegisteredNumberType() {
 		return otherRegisteredNumberType;
 	}
@@ -378,6 +388,7 @@ public class IssuerAttributesSD1 {
 		this.otherRegisteredNumberType = otherRegisteredNumberType;
 	}
 
+	@XmlElement(name = "RegnNb", required = true)
 	public Max16Text getRegistrationNumber() {
 		return registrationNumber;
 	}
@@ -386,6 +397,7 @@ public class IssuerAttributesSD1 {
 		this.registrationNumber = registrationNumber;
 	}
 
+	@XmlElement(name = "IssrId", required = true)
 	public Exact3UpperCaseAlphaNumericText getIssuerIdentification() {
 		return issuerIdentification;
 	}

@@ -67,6 +67,11 @@ public class ReceiversCustodian extends SecuritiesSettlementPartyRole {
 				definition = "Party that acts on behalf of the buyer of securities when the buyer does not have a direct relationship with the receiving agent.";
 				superType_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ReceiversCustodian.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instruction, initiated by the creditor, to debit a debtor's account in favour
@@ -95,6 +99,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * DirectDebitMandate4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DirectDebitMandate6", propOrder = {"debtorAccount", "debtor", "debtorTaxIdentificationNumber", "debtorNationalRegistrationNumber", "creditor", "debtorAgent", "debtorAgentBranch", "creditorAgent", "creditorAgentBranch",
+		"registrationIdentification", "mandateIdentification"})
 public class DirectDebitMandate6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -739,6 +746,7 @@ public class DirectDebitMandate6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DbtrAcct", required = true)
 	public AccountIdentificationAndName5 getDebtorAccount() {
 		return debtorAccount;
 	}
@@ -747,6 +755,7 @@ public class DirectDebitMandate6 {
 		this.debtorAccount = debtorAccount;
 	}
 
+	@XmlElement(name = "Dbtr")
 	public PartyIdentification113 getDebtor() {
 		return debtor;
 	}
@@ -755,6 +764,7 @@ public class DirectDebitMandate6 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrTaxIdNb")
 	public Max35Text getDebtorTaxIdentificationNumber() {
 		return debtorTaxIdentificationNumber;
 	}
@@ -763,6 +773,7 @@ public class DirectDebitMandate6 {
 		this.debtorTaxIdentificationNumber = debtorTaxIdentificationNumber;
 	}
 
+	@XmlElement(name = "DbtrNtlRegnNb")
 	public Max35Text getDebtorNationalRegistrationNumber() {
 		return debtorNationalRegistrationNumber;
 	}
@@ -771,6 +782,7 @@ public class DirectDebitMandate6 {
 		this.debtorNationalRegistrationNumber = debtorNationalRegistrationNumber;
 	}
 
+	@XmlElement(name = "Cdtr")
 	public PartyIdentification113 getCreditor() {
 		return creditor;
 	}
@@ -779,6 +791,7 @@ public class DirectDebitMandate6 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "DbtrAgt", required = true)
 	public FinancialInstitutionIdentification10 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -787,6 +800,7 @@ public class DirectDebitMandate6 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "DbtrAgtBrnch")
 	public BranchData getDebtorAgentBranch() {
 		return debtorAgentBranch;
 	}
@@ -795,6 +809,7 @@ public class DirectDebitMandate6 {
 		this.debtorAgentBranch = debtorAgentBranch;
 	}
 
+	@XmlElement(name = "CdtrAgt")
 	public FinancialInstitutionIdentification10 getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -803,6 +818,7 @@ public class DirectDebitMandate6 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "CdtrAgtBrnch")
 	public BranchData getCreditorAgentBranch() {
 		return creditorAgentBranch;
 	}
@@ -811,6 +827,7 @@ public class DirectDebitMandate6 {
 		this.creditorAgentBranch = creditorAgentBranch;
 	}
 
+	@XmlElement(name = "RegnId")
 	public Max35Text getRegistrationIdentification() {
 		return registrationIdentification;
 	}
@@ -819,6 +836,7 @@ public class DirectDebitMandate6 {
 		this.registrationIdentification = registrationIdentification;
 	}
 
+	@XmlElement(name = "MndtId")
 	public Max35Text getMandateIdentification() {
 		return mandateIdentification;
 	}

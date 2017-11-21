@@ -25,8 +25,10 @@ import com.tools20022.repository.area.AdministrationLatestVersion;
 import com.tools20022.repository.msg.Event2;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -39,9 +41,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code admi.004.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AdministrationLatestVersion
@@ -71,6 +70,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code admi.004.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -82,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemEventNotificationV02", propOrder = "eventInformation")
 public class SystemEventNotificationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -117,6 +121,14 @@ public class SystemEventNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> Event2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SystemEventNotificationV02.class.getMethod("getEventInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -129,7 +141,7 @@ public class SystemEventNotificationV02 {
 				rootElement = "Document";
 				xmlTag = "SysEvtNtfctn";
 				businessArea_lazy = () -> AdministrationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SystemEventNotificationV02.mmEventInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.SystemEventNotificationV02.mmEventInformation);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "admi";
@@ -139,15 +151,27 @@ public class SystemEventNotificationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SystemEventNotificationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EvtInf", required = true)
 	public Event2 getEventInformation() {
 		return eventInformation;
 	}
 
 	public void setEventInformation(Event2 eventInformation) {
 		this.eventInformation = eventInformation;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:admi.004.02.02")
+	static public class Document {
+		@XmlElement(name = "SysEvtNtfctn", required = true)
+		public SystemEventNotificationV02 messageBody;
 	}
 }

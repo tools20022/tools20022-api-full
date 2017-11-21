@@ -61,6 +61,8 @@ public class Max5Number {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max5Number";
 				definition = "Number (max 99999) of objects represented as an integer.";
+				totalDigits = 5;
+				fractionDigits = 0;
 			}
 		});
 		return mmObject_lazy.get();

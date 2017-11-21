@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Card used to represent a financial account for the purpose of payment
@@ -71,6 +75,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialCard1", propOrder = {"creditLimitAmount", "creditAvailableAmount", "interestRatePercent"})
 public class FinancialCard1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -231,6 +237,7 @@ public class FinancialCard1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CdtLmtAmt")
 	public List<CurrencyAndAmount> getCreditLimitAmount() {
 		return creditLimitAmount;
 	}
@@ -239,6 +246,7 @@ public class FinancialCard1 {
 		this.creditLimitAmount = creditLimitAmount;
 	}
 
+	@XmlElement(name = "CdtAvlblAmt")
 	public List<CurrencyAndAmount> getCreditAvailableAmount() {
 		return creditAvailableAmount;
 	}
@@ -247,6 +255,7 @@ public class FinancialCard1 {
 		this.creditAvailableAmount = creditAvailableAmount;
 	}
 
+	@XmlElement(name = "IntrstRatePct")
 	public PercentageRate getInterestRatePercent() {
 		return interestRatePercent;
 	}

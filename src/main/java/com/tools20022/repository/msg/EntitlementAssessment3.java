@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.MeetingEntitlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the parameters, such as dates, used to calculate the entitlement to
@@ -112,6 +116,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * EntitlementAssessment2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EntitlementAssessment3", propOrder = {"securitiesBlockingDeadline", "securitiesBlockingSTPDeadline", "securitiesBlockingMarketDeadline", "securitiesBlockingPeriodEndDate", "entitlementFixingDate",
+		"registrationSecuritiesDeadline", "registrationSecuritiesSTPDeadline", "registrationSecuritiesMarketDeadline", "registrationParticipationDeadline", "registrationParticipationSTPDeadline", "registrationParticipationMarketDeadline",
+		"entitlement"})
 public class EntitlementAssessment3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -815,6 +823,7 @@ public class EntitlementAssessment3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesBlckgDdln")
 	public DateFormat29Choice getSecuritiesBlockingDeadline() {
 		return securitiesBlockingDeadline;
 	}
@@ -823,6 +832,7 @@ public class EntitlementAssessment3 {
 		this.securitiesBlockingDeadline = securitiesBlockingDeadline;
 	}
 
+	@XmlElement(name = "SctiesBlckgSTPDdln")
 	public DateFormat29Choice getSecuritiesBlockingSTPDeadline() {
 		return securitiesBlockingSTPDeadline;
 	}
@@ -831,6 +841,7 @@ public class EntitlementAssessment3 {
 		this.securitiesBlockingSTPDeadline = securitiesBlockingSTPDeadline;
 	}
 
+	@XmlElement(name = "SctiesBlckgMktDdln")
 	public DateFormat29Choice getSecuritiesBlockingMarketDeadline() {
 		return securitiesBlockingMarketDeadline;
 	}
@@ -839,6 +850,7 @@ public class EntitlementAssessment3 {
 		this.securitiesBlockingMarketDeadline = securitiesBlockingMarketDeadline;
 	}
 
+	@XmlElement(name = "SctiesBlckgPrdEndDt")
 	public ISODateTime getSecuritiesBlockingPeriodEndDate() {
 		return securitiesBlockingPeriodEndDate;
 	}
@@ -847,6 +859,7 @@ public class EntitlementAssessment3 {
 		this.securitiesBlockingPeriodEndDate = securitiesBlockingPeriodEndDate;
 	}
 
+	@XmlElement(name = "EntitlmntFxgDt")
 	public DateFormat1 getEntitlementFixingDate() {
 		return entitlementFixingDate;
 	}
@@ -855,6 +868,7 @@ public class EntitlementAssessment3 {
 		this.entitlementFixingDate = entitlementFixingDate;
 	}
 
+	@XmlElement(name = "RegnSctiesDdln")
 	public DateFormat29Choice getRegistrationSecuritiesDeadline() {
 		return registrationSecuritiesDeadline;
 	}
@@ -863,6 +877,7 @@ public class EntitlementAssessment3 {
 		this.registrationSecuritiesDeadline = registrationSecuritiesDeadline;
 	}
 
+	@XmlElement(name = "RegnSctiesSTPDdln")
 	public DateFormat29Choice getRegistrationSecuritiesSTPDeadline() {
 		return registrationSecuritiesSTPDeadline;
 	}
@@ -871,6 +886,7 @@ public class EntitlementAssessment3 {
 		this.registrationSecuritiesSTPDeadline = registrationSecuritiesSTPDeadline;
 	}
 
+	@XmlElement(name = "RegnSctiesMktDdln")
 	public DateFormat29Choice getRegistrationSecuritiesMarketDeadline() {
 		return registrationSecuritiesMarketDeadline;
 	}
@@ -879,6 +895,7 @@ public class EntitlementAssessment3 {
 		this.registrationSecuritiesMarketDeadline = registrationSecuritiesMarketDeadline;
 	}
 
+	@XmlElement(name = "RegnPrtcptnDdln")
 	public DateFormat29Choice getRegistrationParticipationDeadline() {
 		return registrationParticipationDeadline;
 	}
@@ -887,6 +904,7 @@ public class EntitlementAssessment3 {
 		this.registrationParticipationDeadline = registrationParticipationDeadline;
 	}
 
+	@XmlElement(name = "RegnPrtcptnSTPDdln")
 	public DateFormat29Choice getRegistrationParticipationSTPDeadline() {
 		return registrationParticipationSTPDeadline;
 	}
@@ -895,6 +913,7 @@ public class EntitlementAssessment3 {
 		this.registrationParticipationSTPDeadline = registrationParticipationSTPDeadline;
 	}
 
+	@XmlElement(name = "RegnPrtcptnMktDdln")
 	public DateFormat29Choice getRegistrationParticipationMarketDeadline() {
 		return registrationParticipationMarketDeadline;
 	}
@@ -903,6 +922,7 @@ public class EntitlementAssessment3 {
 		this.registrationParticipationMarketDeadline = registrationParticipationMarketDeadline;
 	}
 
+	@XmlElement(name = "Entitlmnt")
 	public Entitlement1Choice getEntitlement() {
 		return entitlement;
 	}

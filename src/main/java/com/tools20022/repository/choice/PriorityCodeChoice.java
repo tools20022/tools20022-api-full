@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Priority is expressed as a code or a text.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Priority is expressed  as a code or a text."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriorityCodeChoice", propOrder = {"code", "proprietaryCode"})
 public class PriorityCodeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -169,6 +175,7 @@ public class PriorityCodeChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public Priority1Code getCode() {
 		return code;
 	}
@@ -177,6 +184,7 @@ public class PriorityCodeChoice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "PrtryCd", required = true)
 	public Max4AlphaNumericText getProprietaryCode() {
 		return proprietaryCode;
 	}

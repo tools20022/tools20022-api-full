@@ -37,6 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -121,6 +125,9 @@ import java.util.List;
  * Transfer8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Transfer11", propOrder = {"transferReference", "clientReference", "counterpartyReference", "businessFlowType", "transferOrderDateForm", "transferReason", "holdingsPlanType", "financialInstrumentDetails", "quantity",
+		"unitsDetails", "rounding", "averagePrice", "transferCurrency", "ownAccountTransferIndicator", "nonStandardSettlementInformation"})
 public class Transfer11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -873,6 +880,7 @@ public class Transfer11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -881,6 +889,7 @@ public class Transfer11 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -889,6 +898,7 @@ public class Transfer11 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CtrPtyRef")
 	public AdditionalReference2 getCounterpartyReference() {
 		return counterpartyReference;
 	}
@@ -897,6 +907,7 @@ public class Transfer11 {
 		this.counterpartyReference = counterpartyReference;
 	}
 
+	@XmlElement(name = "BizFlowTp")
 	public BusinessFlowType1Code getBusinessFlowType() {
 		return businessFlowType;
 	}
@@ -905,6 +916,7 @@ public class Transfer11 {
 		this.businessFlowType = businessFlowType;
 	}
 
+	@XmlElement(name = "TrfOrdrDtForm")
 	public ISODate getTransferOrderDateForm() {
 		return transferOrderDateForm;
 	}
@@ -913,6 +925,7 @@ public class Transfer11 {
 		this.transferOrderDateForm = transferOrderDateForm;
 	}
 
+	@XmlElement(name = "TrfRsn")
 	public TransferReason1 getTransferReason() {
 		return transferReason;
 	}
@@ -921,6 +934,7 @@ public class Transfer11 {
 		this.transferReason = transferReason;
 	}
 
+	@XmlElement(name = "HldgsPlanTp")
 	public List<HoldingsPlanType1Code> getHoldingsPlanType() {
 		return holdingsPlanType;
 	}
@@ -929,6 +943,7 @@ public class Transfer11 {
 		this.holdingsPlanType = holdingsPlanType;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument13 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -937,6 +952,7 @@ public class Transfer11 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public Quantity13Choice getQuantity() {
 		return quantity;
 	}
@@ -945,6 +961,7 @@ public class Transfer11 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "UnitsDtls")
 	public List<Unit3> getUnitsDetails() {
 		return unitsDetails;
 	}
@@ -953,6 +970,7 @@ public class Transfer11 {
 		this.unitsDetails = unitsDetails;
 	}
 
+	@XmlElement(name = "Rndg")
 	public RoundingDirection2Code getRounding() {
 		return rounding;
 	}
@@ -961,6 +979,7 @@ public class Transfer11 {
 		this.rounding = rounding;
 	}
 
+	@XmlElement(name = "AvrgPric")
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAveragePrice() {
 		return averagePrice;
 	}
@@ -969,6 +988,7 @@ public class Transfer11 {
 		this.averagePrice = averagePrice;
 	}
 
+	@XmlElement(name = "TrfCcy")
 	public CurrencyCode getTransferCurrency() {
 		return transferCurrency;
 	}
@@ -977,6 +997,7 @@ public class Transfer11 {
 		this.transferCurrency = transferCurrency;
 	}
 
+	@XmlElement(name = "OwnAcctTrfInd")
 	public YesNoIndicator getOwnAccountTransferIndicator() {
 		return ownAccountTransferIndicator;
 	}
@@ -985,6 +1006,7 @@ public class Transfer11 {
 		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
 	}
 
+	@XmlElement(name = "NonStdSttlmInf")
 	public Max350Text getNonStandardSettlementInformation() {
 		return nonStandardSettlementInformation;
 	}

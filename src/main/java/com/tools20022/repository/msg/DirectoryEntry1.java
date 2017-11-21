@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Record details from National BIC directory.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Record details from National BIC directory."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DirectoryEntry1", propOrder = {"accountOwner", "changeType", "changeIdentification", "directoryCommonDetails", "participantProfile"})
 public class DirectoryEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -289,6 +295,7 @@ public class DirectoryEntry1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnr", required = true)
 	public FinancialInstitutionIdentification9 getAccountOwner() {
 		return accountOwner;
 	}
@@ -297,6 +304,7 @@ public class DirectoryEntry1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "ChngTp")
 	public Max35Text getChangeType() {
 		return changeType;
 	}
@@ -305,6 +313,7 @@ public class DirectoryEntry1 {
 		this.changeType = changeType;
 	}
 
+	@XmlElement(name = "ChngId")
 	public Number getChangeIdentification() {
 		return changeIdentification;
 	}
@@ -313,6 +322,7 @@ public class DirectoryEntry1 {
 		this.changeIdentification = changeIdentification;
 	}
 
+	@XmlElement(name = "DrctryCmonDtls", required = true)
 	public DirectoryInformation1 getDirectoryCommonDetails() {
 		return directoryCommonDetails;
 	}
@@ -321,6 +331,7 @@ public class DirectoryEntry1 {
 		this.directoryCommonDetails = directoryCommonDetails;
 	}
 
+	@XmlElement(name = "PtcptPrfl")
 	public ParticipantProfile1 getParticipantProfile() {
 		return participantProfile;
 	}

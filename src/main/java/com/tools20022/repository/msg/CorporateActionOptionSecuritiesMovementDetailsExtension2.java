@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max3Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action option securities
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionOptionSecuritiesMovementDetailsExtension2", propOrder = {"placeAndName", "payoutNumber", "DTCPayMethod", "DTCPayOrder"})
 public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -257,6 +263,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -265,6 +272,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "PyoutNb", required = true)
 	public Exact3NumericText getPayoutNumber() {
 		return payoutNumber;
 	}
@@ -273,6 +281,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 		this.payoutNumber = payoutNumber;
 	}
 
+	@XmlElement(name = "DTCPayMtd")
 	public Max3Text getDTCPayMethod() {
 		return dTCPayMethod;
 	}
@@ -281,6 +290,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 		this.dTCPayMethod = dTCPayMethod;
 	}
 
+	@XmlElement(name = "DTCPayOrdr")
 	public Max3Text getDTCPayOrder() {
 		return dTCPayOrder;
 	}

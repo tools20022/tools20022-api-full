@@ -64,6 +64,11 @@ public class RemarketingAgent extends SecuritiesPartyRole {
 				definition = "The party in charge of a remarketing event.";
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RemarketingAgent.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

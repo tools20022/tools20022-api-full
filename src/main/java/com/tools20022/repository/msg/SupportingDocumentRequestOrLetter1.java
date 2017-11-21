@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Currency control related document or letter supporting the contract
@@ -109,6 +113,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SupportingDocumentRequestOrLetter1", propOrder = {"requestOrLetterIdentification", "date", "sender", "receiver", "originalReferences", "subject", "type", "description", "responseRequired", "dueDate", "attachment",
+		"supplementaryData"})
 public class SupportingDocumentRequestOrLetter1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -700,6 +707,7 @@ public class SupportingDocumentRequestOrLetter1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqOrLttrId", required = true)
 	public Max35Text getRequestOrLetterIdentification() {
 		return requestOrLetterIdentification;
 	}
@@ -708,6 +716,7 @@ public class SupportingDocumentRequestOrLetter1 {
 		this.requestOrLetterIdentification = requestOrLetterIdentification;
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODate getDate() {
 		return date;
 	}
@@ -716,6 +725,7 @@ public class SupportingDocumentRequestOrLetter1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Sndr")
 	public Party28Choice getSender() {
 		return sender;
 	}
@@ -724,6 +734,7 @@ public class SupportingDocumentRequestOrLetter1 {
 		this.sender = sender;
 	}
 
+	@XmlElement(name = "Rcvr")
 	public Party28Choice getReceiver() {
 		return receiver;
 	}
@@ -732,6 +743,7 @@ public class SupportingDocumentRequestOrLetter1 {
 		this.receiver = receiver;
 	}
 
+	@XmlElement(name = "OrgnlRefs")
 	public List<OriginalMessage2> getOriginalReferences() {
 		return originalReferences;
 	}
@@ -740,6 +752,7 @@ public class SupportingDocumentRequestOrLetter1 {
 		this.originalReferences = originalReferences;
 	}
 
+	@XmlElement(name = "Sbjt", required = true)
 	public Max140Text getSubject() {
 		return subject;
 	}
@@ -748,6 +761,7 @@ public class SupportingDocumentRequestOrLetter1 {
 		this.subject = subject;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public SupportDocumentType1Code getType() {
 		return type;
 	}
@@ -756,6 +770,7 @@ public class SupportingDocumentRequestOrLetter1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Desc")
 	public Max1025Text getDescription() {
 		return description;
 	}
@@ -764,6 +779,7 @@ public class SupportingDocumentRequestOrLetter1 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "RspnReqrd", required = true)
 	public TrueFalseIndicator getResponseRequired() {
 		return responseRequired;
 	}
@@ -772,6 +788,7 @@ public class SupportingDocumentRequestOrLetter1 {
 		this.responseRequired = responseRequired;
 	}
 
+	@XmlElement(name = "DueDt")
 	public ISODate getDueDate() {
 		return dueDate;
 	}
@@ -780,6 +797,7 @@ public class SupportingDocumentRequestOrLetter1 {
 		this.dueDate = dueDate;
 	}
 
+	@XmlElement(name = "Attchmnt")
 	public List<DocumentGeneralInformation3> getAttachment() {
 		return attachment;
 	}
@@ -788,6 +806,7 @@ public class SupportingDocumentRequestOrLetter1 {
 		this.attachment = attachment;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

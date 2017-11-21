@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between default processing or standing instruction.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between default processing or standing instruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DefaultProcessingOrStandingInstruction1Choice", propOrder = {"defaultOptionIndicator", "standingInstructionIndicator"})
 public class DefaultProcessingOrStandingInstruction1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -165,6 +171,7 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DfltOptnInd", required = true)
 	public YesNoIndicator getDefaultOptionIndicator() {
 		return defaultOptionIndicator;
 	}
@@ -173,6 +180,7 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 		this.defaultOptionIndicator = defaultOptionIndicator;
 	}
 
+	@XmlElement(name = "StgInstrInd", required = true)
 	public YesNoIndicator getStandingInstructionIndicator() {
 		return standingInstructionIndicator;
 	}

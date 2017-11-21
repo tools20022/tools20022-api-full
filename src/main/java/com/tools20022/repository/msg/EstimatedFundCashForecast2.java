@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cash movements from or to a fund as a result of investment funds
@@ -111,6 +115,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EstimatedFundCashForecast2", propOrder = {"tradeDateTime", "previousTradeDateTime", "financialInstrumentDetails", "estimatedTotalNAV", "previousEstimatedTotalNAV", "estimatedTotalUnitsNumber",
+		"previousEstimatedTotalUnitsNumber", "estimatedTotalNAVChangeRate", "investmentCurrency", "exceptionalNetCashFlowIndicator", "sortingCriteriaDetails", "estimatedNetCashForecastDetails"})
 public class EstimatedFundCashForecast2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -714,6 +721,7 @@ public class EstimatedFundCashForecast2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradDtTm", required = true)
 	public DateAndDateTimeChoice getTradeDateTime() {
 		return tradeDateTime;
 	}
@@ -722,6 +730,7 @@ public class EstimatedFundCashForecast2 {
 		this.tradeDateTime = tradeDateTime;
 	}
 
+	@XmlElement(name = "PrvsTradDtTm", required = true)
 	public DateAndDateTimeChoice getPreviousTradeDateTime() {
 		return previousTradeDateTime;
 	}
@@ -730,6 +739,7 @@ public class EstimatedFundCashForecast2 {
 		this.previousTradeDateTime = previousTradeDateTime;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument5 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -738,6 +748,7 @@ public class EstimatedFundCashForecast2 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "EstmtdTtlNAV")
 	public ActiveOrHistoricCurrencyAndAmount getEstimatedTotalNAV() {
 		return estimatedTotalNAV;
 	}
@@ -746,6 +757,7 @@ public class EstimatedFundCashForecast2 {
 		this.estimatedTotalNAV = estimatedTotalNAV;
 	}
 
+	@XmlElement(name = "PrvsEstmtdTtlNAV")
 	public ActiveOrHistoricCurrencyAndAmount getPreviousEstimatedTotalNAV() {
 		return previousEstimatedTotalNAV;
 	}
@@ -754,6 +766,7 @@ public class EstimatedFundCashForecast2 {
 		this.previousEstimatedTotalNAV = previousEstimatedTotalNAV;
 	}
 
+	@XmlElement(name = "EstmtdTtlUnitsNb")
 	public FinancialInstrumentQuantity1 getEstimatedTotalUnitsNumber() {
 		return estimatedTotalUnitsNumber;
 	}
@@ -762,6 +775,7 @@ public class EstimatedFundCashForecast2 {
 		this.estimatedTotalUnitsNumber = estimatedTotalUnitsNumber;
 	}
 
+	@XmlElement(name = "PrvsEstmtdTtlUnitsNb")
 	public FinancialInstrumentQuantity1 getPreviousEstimatedTotalUnitsNumber() {
 		return previousEstimatedTotalUnitsNumber;
 	}
@@ -770,6 +784,7 @@ public class EstimatedFundCashForecast2 {
 		this.previousEstimatedTotalUnitsNumber = previousEstimatedTotalUnitsNumber;
 	}
 
+	@XmlElement(name = "EstmtdTtlNAVChngRate")
 	public PercentageRate getEstimatedTotalNAVChangeRate() {
 		return estimatedTotalNAVChangeRate;
 	}
@@ -778,6 +793,7 @@ public class EstimatedFundCashForecast2 {
 		this.estimatedTotalNAVChangeRate = estimatedTotalNAVChangeRate;
 	}
 
+	@XmlElement(name = "InvstmtCcy")
 	public List<ActiveOrHistoricCurrencyCode> getInvestmentCurrency() {
 		return investmentCurrency;
 	}
@@ -786,6 +802,7 @@ public class EstimatedFundCashForecast2 {
 		this.investmentCurrency = investmentCurrency;
 	}
 
+	@XmlElement(name = "XcptnlNetCshFlowInd", required = true)
 	public YesNoIndicator getExceptionalNetCashFlowIndicator() {
 		return exceptionalNetCashFlowIndicator;
 	}
@@ -794,6 +811,7 @@ public class EstimatedFundCashForecast2 {
 		this.exceptionalNetCashFlowIndicator = exceptionalNetCashFlowIndicator;
 	}
 
+	@XmlElement(name = "SrtgCritDtls", required = true)
 	public List<CashSortingCriterion1> getSortingCriteriaDetails() {
 		return sortingCriteriaDetails;
 	}
@@ -802,6 +820,7 @@ public class EstimatedFundCashForecast2 {
 		this.sortingCriteriaDetails = sortingCriteriaDetails;
 	}
 
+	@XmlElement(name = "EstmtdNetCshFcstDtls")
 	public List<NetCashForecast1> getEstimatedNetCashForecastDetails() {
 		return estimatedNetCashForecastDetails;
 	}

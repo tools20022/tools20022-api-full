@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between BIC and clearing system member identification.
@@ -67,6 +71,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MemberIdentificationChoice", propOrder = {"BIC", "clearingSystemMemberIdentification"})
 public class MemberIdentificationChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class MemberIdentificationChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BIC", required = true)
 	public BICIdentifier getBIC() {
 		return bIC;
 	}
@@ -204,6 +211,7 @@ public class MemberIdentificationChoice {
 		this.bIC = bIC;
 	}
 
+	@XmlElement(name = "ClrSysMmbId", required = true)
 	public ClearingSystemMemberIdentificationChoice getClearingSystemMemberIdentification() {
 		return clearingSystemMemberIdentification;
 	}

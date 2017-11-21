@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Presence condition of a message item.
@@ -61,6 +65,8 @@ import java.util.List;
  * definition} = "Presence condition of a message item."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MessageItemCondition1", propOrder = {"itemIdentification", "condition", "value"})
 public class MessageItemCondition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -202,6 +208,7 @@ public class MessageItemCondition1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ItmId", required = true)
 	public Max140Text getItemIdentification() {
 		return itemIdentification;
 	}
@@ -210,6 +217,7 @@ public class MessageItemCondition1 {
 		this.itemIdentification = itemIdentification;
 	}
 
+	@XmlElement(name = "Cond", required = true)
 	public MessageItemCondition1Code getCondition() {
 		return condition;
 	}
@@ -218,6 +226,7 @@ public class MessageItemCondition1 {
 		this.condition = condition;
 	}
 
+	@XmlElement(name = "Val")
 	public List<Max140Text> getValue() {
 		return value;
 	}

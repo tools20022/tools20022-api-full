@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Ratio expressed as amount per quantity.
@@ -66,6 +70,8 @@ import java.util.function.Supplier;
  * definition} = "Ratio expressed as amount per quantity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountAndQuantityRatio3", propOrder = {"amount", "quantity"})
 public class AmountAndQuantityRatio3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -187,6 +193,7 @@ public class AmountAndQuantityRatio3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -195,6 +202,7 @@ public class AmountAndQuantityRatio3 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public RestrictedFINDecimalNumber getQuantity() {
 		return quantity;
 	}

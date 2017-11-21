@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.GenericIdentification36;
 import com.tools20022.repository.msg.NameAndAddress13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of identification of a party.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyIdentification32Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification101Choice", propOrder = {"BIC", "proprietaryIdentification", "nameAndAddress"})
 public class PartyIdentification101Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -262,6 +268,7 @@ public class PartyIdentification101Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BIC", required = true)
 	public AnyBICIdentifier getBIC() {
 		return bIC;
 	}
@@ -270,6 +277,7 @@ public class PartyIdentification101Choice {
 		this.bIC = bIC;
 	}
 
+	@XmlElement(name = "PrtryId", required = true)
 	public GenericIdentification36 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
@@ -278,6 +286,7 @@ public class PartyIdentification101Choice {
 		this.proprietaryIdentification = proprietaryIdentification;
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress13 getNameAndAddress() {
 		return nameAndAddress;
 	}

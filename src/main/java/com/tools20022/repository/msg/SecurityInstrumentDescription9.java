@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the security instrument by its name and typical characteristics.
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityInstrumentDescription9", propOrder = {"identification", "fullName", "shortName", "classificationType", "notionalCurrency", "commodityDerivativeIndicator"})
 public class SecurityInstrumentDescription9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -429,6 +435,7 @@ public class SecurityInstrumentDescription9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public ISINOct2015Identifier getIdentification() {
 		return identification;
 	}
@@ -437,6 +444,7 @@ public class SecurityInstrumentDescription9 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "FullNm", required = true)
 	public Max350Text getFullName() {
 		return fullName;
 	}
@@ -445,6 +453,7 @@ public class SecurityInstrumentDescription9 {
 		this.fullName = fullName;
 	}
 
+	@XmlElement(name = "ShrtNm")
 	public Max35Text getShortName() {
 		return shortName;
 	}
@@ -453,6 +462,7 @@ public class SecurityInstrumentDescription9 {
 		this.shortName = shortName;
 	}
 
+	@XmlElement(name = "ClssfctnTp", required = true)
 	public CFIOct2015Identifier getClassificationType() {
 		return classificationType;
 	}
@@ -461,6 +471,7 @@ public class SecurityInstrumentDescription9 {
 		this.classificationType = classificationType;
 	}
 
+	@XmlElement(name = "NtnlCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getNotionalCurrency() {
 		return notionalCurrency;
 	}
@@ -469,6 +480,7 @@ public class SecurityInstrumentDescription9 {
 		this.notionalCurrency = notionalCurrency;
 	}
 
+	@XmlElement(name = "CmmdtyDerivInd", required = true)
 	public TrueFalseIndicator getCommodityDerivativeIndicator() {
 		return commodityDerivativeIndicator;
 	}

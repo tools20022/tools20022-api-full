@@ -24,6 +24,10 @@ import com.tools20022.repository.choice.TransactionReportOrError2Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * The ReturnTransaction message is sent by the transaction administrator to a
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReturnTransactionCopy1", propOrder = {"messageHeader", "reportOrError"})
 public class ReturnTransactionCopy1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class ReturnTransactionCopy1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgHdr", required = true)
 	public MessageHeader5 getMessageHeader() {
 		return messageHeader;
 	}
@@ -174,6 +181,7 @@ public class ReturnTransactionCopy1 {
 		this.messageHeader = messageHeader;
 	}
 
+	@XmlElement(name = "RptOrErr", required = true)
 	public TransactionReportOrError2Choice getReportOrError() {
 		return reportOrError;
 	}

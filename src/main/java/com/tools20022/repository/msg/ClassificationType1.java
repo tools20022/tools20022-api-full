@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the classification.
@@ -66,6 +70,8 @@ import java.util.List;
  * definition} = "Choice of format for the classification."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClassificationType1", propOrder = {"classificationFinancialInstrument", "financialInstrumentProductTypeCode", "alternateClassification"})
 public class ClassificationType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -234,6 +240,7 @@ public class ClassificationType1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClssfctnFinInstrm")
 	public CFIIdentifier getClassificationFinancialInstrument() {
 		return classificationFinancialInstrument;
 	}
@@ -242,6 +249,7 @@ public class ClassificationType1 {
 		this.classificationFinancialInstrument = classificationFinancialInstrument;
 	}
 
+	@XmlElement(name = "FinInstrmPdctTpCd")
 	public ExternalFinancialInstrumentProductType1Code getFinancialInstrumentProductTypeCode() {
 		return financialInstrumentProductTypeCode;
 	}
@@ -250,6 +258,7 @@ public class ClassificationType1 {
 		this.financialInstrumentProductTypeCode = financialInstrumentProductTypeCode;
 	}
 
+	@XmlElement(name = "AltrnClssfctn")
 	public List<GenericIdentification41> getAlternateClassification() {
 		return alternateClassification;
 	}

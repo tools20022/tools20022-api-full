@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason for a rejected status.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * RejectedStatus6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RejectedStatus9", propOrder = {"reason", "additionalInformation"})
 public class RejectedStatus9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -217,6 +223,7 @@ public class RejectedStatus9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn")
 	public RejectedReason20Choice getReason() {
 		return reason;
 	}
@@ -225,6 +232,7 @@ public class RejectedStatus9 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the transaction in the authorisation response contained in a
@@ -88,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentTransactionDetails32}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransactionDetails43", propOrder = {"currency", "totalAmount", "detailedAmount", "invoiceAmount", "validityDate", "accountType", "ICCRelatedData"})
 public class CardPaymentTransactionDetails43 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -481,6 +487,7 @@ public class CardPaymentTransactionDetails43 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -489,6 +496,7 @@ public class CardPaymentTransactionDetails43 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "TtlAmt", required = true)
 	public ImpliedCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -497,6 +505,7 @@ public class CardPaymentTransactionDetails43 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "DtldAmt")
 	public DetailedAmount15 getDetailedAmount() {
 		return detailedAmount;
 	}
@@ -505,6 +514,7 @@ public class CardPaymentTransactionDetails43 {
 		this.detailedAmount = detailedAmount;
 	}
 
+	@XmlElement(name = "InvcAmt")
 	public ImpliedCurrencyAndAmount getInvoiceAmount() {
 		return invoiceAmount;
 	}
@@ -513,6 +523,7 @@ public class CardPaymentTransactionDetails43 {
 		this.invoiceAmount = invoiceAmount;
 	}
 
+	@XmlElement(name = "VldtyDt")
 	public ISODate getValidityDate() {
 		return validityDate;
 	}
@@ -521,6 +532,7 @@ public class CardPaymentTransactionDetails43 {
 		this.validityDate = validityDate;
 	}
 
+	@XmlElement(name = "AcctTp")
 	public CardAccountType3Code getAccountType() {
 		return accountType;
 	}
@@ -529,6 +541,7 @@ public class CardPaymentTransactionDetails43 {
 		this.accountType = accountType;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}

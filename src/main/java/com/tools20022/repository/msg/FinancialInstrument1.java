@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification and attributes of a financial instrument for a custody
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrument1", propOrder = {"identification", "attributes", "valuationHaircutDetails"})
 public class FinancialInstrument1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -227,6 +233,7 @@ public class FinancialInstrument1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification11 getIdentification() {
 		return identification;
 	}
@@ -235,6 +242,7 @@ public class FinancialInstrument1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Attrbts")
 	public FinancialInstrumentAttributes2 getAttributes() {
 		return attributes;
 	}
@@ -243,6 +251,7 @@ public class FinancialInstrument1 {
 		this.attributes = attributes;
 	}
 
+	@XmlElement(name = "ValtnHrcutDtls")
 	public BasicCollateralValuation1Details getValuationHaircutDetails() {
 		return valuationHaircutDetails;
 	}

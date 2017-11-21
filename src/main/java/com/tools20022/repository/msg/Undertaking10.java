@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details related to the undertaking.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details related to the undertaking."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Undertaking10", propOrder = {"newUndertakingAmount", "newExpiryDetails"})
 public class Undertaking10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class Undertaking10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NewUdrtkgAmt")
 	public UndertakingAmount2 getNewUndertakingAmount() {
 		return newUndertakingAmount;
 	}
@@ -184,6 +191,7 @@ public class Undertaking10 {
 		this.newUndertakingAmount = newUndertakingAmount;
 	}
 
+	@XmlElement(name = "NewXpryDtls")
 	public ExpiryDetails1 getNewExpiryDetails() {
 		return newExpiryDetails;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements providing information on the original amount and currency
@@ -75,6 +79,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountAndCurrencyExchange2", propOrder = {"instructedAmount", "transactionAmount", "counterValueAmount", "announcedPostingAmount", "proprietaryAmount"})
 public class AmountAndCurrencyExchange2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -351,6 +357,7 @@ public class AmountAndCurrencyExchange2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstdAmt")
 	public AmountAndCurrencyExchangeDetails1 getInstructedAmount() {
 		return instructedAmount;
 	}
@@ -359,6 +366,7 @@ public class AmountAndCurrencyExchange2 {
 		this.instructedAmount = instructedAmount;
 	}
 
+	@XmlElement(name = "TxAmt")
 	public AmountAndCurrencyExchangeDetails1 getTransactionAmount() {
 		return transactionAmount;
 	}
@@ -367,6 +375,7 @@ public class AmountAndCurrencyExchange2 {
 		this.transactionAmount = transactionAmount;
 	}
 
+	@XmlElement(name = "CntrValAmt")
 	public AmountAndCurrencyExchangeDetails1 getCounterValueAmount() {
 		return counterValueAmount;
 	}
@@ -375,6 +384,7 @@ public class AmountAndCurrencyExchange2 {
 		this.counterValueAmount = counterValueAmount;
 	}
 
+	@XmlElement(name = "AnncdPstngAmt")
 	public AmountAndCurrencyExchangeDetails1 getAnnouncedPostingAmount() {
 		return announcedPostingAmount;
 	}
@@ -383,6 +393,7 @@ public class AmountAndCurrencyExchange2 {
 		this.announcedPostingAmount = announcedPostingAmount;
 	}
 
+	@XmlElement(name = "PrtryAmt")
 	public List<AmountAndCurrencyExchangeDetails2> getProprietaryAmount() {
 		return proprietaryAmount;
 	}

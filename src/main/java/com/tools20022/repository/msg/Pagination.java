@@ -42,6 +42,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Number used to sequence pages when it is not possible for data to be conveyed
@@ -461,6 +465,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Pagination", propOrder = {"pageNumber", "lastPageIndicator"})
 public class Pagination {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -596,6 +602,7 @@ public class Pagination {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PgNb", required = true)
 	public Max5NumericText getPageNumber() {
 		return pageNumber;
 	}
@@ -604,6 +611,7 @@ public class Pagination {
 		this.pageNumber = pageNumber;
 	}
 
+	@XmlElement(name = "LastPgInd", required = true)
 	public YesNoIndicator getLastPageIndicator() {
 		return lastPageIndicator;
 	}

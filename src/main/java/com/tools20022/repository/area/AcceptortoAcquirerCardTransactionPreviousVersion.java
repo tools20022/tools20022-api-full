@@ -31,6 +31,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getCode code} =
+ * "caaa"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getMessageDefinition
  * messageDefinition} =
  * <ul>
@@ -85,8 +87,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorAuthorisationResponseV03}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getCode code} =
- * "caaa"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =

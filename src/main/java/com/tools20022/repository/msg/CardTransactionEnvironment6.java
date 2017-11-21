@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Environment of the transaction.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardTransactionEnvironment5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransactionEnvironment6", propOrder = {"sendingInstitution", "receivingInstitution"})
 public class CardTransactionEnvironment6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class CardTransactionEnvironment6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SndgInstn", required = true)
 	public GenericIdentification73 getSendingInstitution() {
 		return sendingInstitution;
 	}
@@ -188,6 +195,7 @@ public class CardTransactionEnvironment6 {
 		this.sendingInstitution = sendingInstitution;
 	}
 
+	@XmlElement(name = "RcvgInstn", required = true)
 	public GenericIdentification73 getReceivingInstitution() {
 		return receivingInstitution;
 	}

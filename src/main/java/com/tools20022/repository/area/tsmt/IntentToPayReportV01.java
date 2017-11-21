@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.ReportLine1;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -45,9 +47,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.046.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -80,6 +79,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.046.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -91,6 +93,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntentToPayReportV01", propOrder = {"reportIdentification", "reportedItems"})
 public class IntentToPayReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -128,6 +132,14 @@ public class IntentToPayReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntentToPayReportV01.class.getMethod("getReportIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ReportLine1> reportedItems;
 	/**
@@ -161,6 +173,14 @@ public class IntentToPayReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ReportLine1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntentToPayReportV01.class.getMethod("getReportedItems", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -173,7 +193,7 @@ public class IntentToPayReportV01 {
 				rootElement = "Document";
 				xmlTag = "InttToPayRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(IntentToPayReportV01.mmReportIdentification, IntentToPayReportV01.mmReportedItems);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayReportV01.mmReportIdentification, com.tools20022.repository.area.tsmt.IntentToPayReportV01.mmReportedItems);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -183,10 +203,16 @@ public class IntentToPayReportV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IntentToPayReportV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptId", required = true)
 	public MessageIdentification1 getReportIdentification() {
 		return reportIdentification;
 	}
@@ -195,11 +221,18 @@ public class IntentToPayReportV01 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "RptdItms")
 	public List<ReportLine1> getReportedItems() {
 		return reportedItems;
 	}
 
 	public void setReportedItems(List<ReportLine1> reportedItems) {
 		this.reportedItems = reportedItems;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.046.01.01")
+	static public class Document {
+		@XmlElement(name = "InttToPayRpt", required = true)
+		public IntentToPayReportV01 messageBody;
 	}
 }

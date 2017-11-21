@@ -29,53 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code
- * SecuritiesTransactionType1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType7Code
- * SecuritiesTransactionType7Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code
- * SecuritiesFinancingTransactionType1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType5Code
- * SecuritiesTransactionType5Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType4Code
- * SecuritiesTransactionType4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType8Code
- * SecuritiesTransactionType8Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType3Code
- * SecuritiesTransactionType3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType9Code
- * SecuritiesTransactionType9Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType6Code
- * SecuritiesTransactionType6Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType10Code
- * SecuritiesTransactionType10Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType16Code
- * SecuritiesTransactionType16Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType17Code
- * SecuritiesTransactionType17Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code
- * SecuritiesFinancingTransactionType2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType18Code
- * SecuritiesTransactionType18Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -207,6 +160,53 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionTypeV2Code#mmExchangeTradedFunds
  * SecuritiesTransactionTypeV2Code.mmExchangeTradedFunds}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code
+ * SecuritiesTransactionType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType7Code
+ * SecuritiesTransactionType7Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code
+ * SecuritiesFinancingTransactionType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType5Code
+ * SecuritiesTransactionType5Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType4Code
+ * SecuritiesTransactionType4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType8Code
+ * SecuritiesTransactionType8Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType3Code
+ * SecuritiesTransactionType3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType9Code
+ * SecuritiesTransactionType9Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType6Code
+ * SecuritiesTransactionType6Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType10Code
+ * SecuritiesTransactionType10Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType16Code
+ * SecuritiesTransactionType16Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType17Code
+ * SecuritiesTransactionType17Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code
+ * SecuritiesFinancingTransactionType2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType18Code
+ * SecuritiesTransactionType18Code}</li>
  * </ul>
  * </li>
  * <li>

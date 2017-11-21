@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the prices related to a corporate action option.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PriceDetails14}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceDetails23", propOrder = {"genericCashPricePaidPerProduct", "genericCashPriceReceivedPerProduct"})
 public class PriceDetails23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -198,6 +204,7 @@ public class PriceDetails23 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GncCshPricPdPerPdct")
 	public PriceFormat51Choice getGenericCashPricePaidPerProduct() {
 		return genericCashPricePaidPerProduct;
 	}
@@ -206,6 +213,7 @@ public class PriceDetails23 {
 		this.genericCashPricePaidPerProduct = genericCashPricePaidPerProduct;
 	}
 
+	@XmlElement(name = "GncCshPricRcvdPerPdct")
 	public PriceFormat48Choice getGenericCashPriceReceivedPerProduct() {
 		return genericCashPriceReceivedPerProduct;
 	}

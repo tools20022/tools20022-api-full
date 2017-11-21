@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of the interest calculation.
@@ -95,6 +99,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * InterestCalculation2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestCalculation4", propOrder = {"calculationDate", "collateralAccountIdentification", "effectivePrincipalAmount", "principalAmount", "movementAmount", "numberOfDays", "effectiveRate", "interestRate", "spread",
+		"accruedInterestAmount", "aggregatedInterestAmount"})
 public class InterestCalculation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -726,6 +733,7 @@ public class InterestCalculation4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClctnDt", required = true)
 	public ISODate getCalculationDate() {
 		return calculationDate;
 	}
@@ -734,6 +742,7 @@ public class InterestCalculation4 {
 		this.calculationDate = calculationDate;
 	}
 
+	@XmlElement(name = "CollAcctId")
 	public CollateralAccount2 getCollateralAccountIdentification() {
 		return collateralAccountIdentification;
 	}
@@ -742,6 +751,7 @@ public class InterestCalculation4 {
 		this.collateralAccountIdentification = collateralAccountIdentification;
 	}
 
+	@XmlElement(name = "FctvPrncplAmt", required = true)
 	public AmountAndDirection20 getEffectivePrincipalAmount() {
 		return effectivePrincipalAmount;
 	}
@@ -750,6 +760,7 @@ public class InterestCalculation4 {
 		this.effectivePrincipalAmount = effectivePrincipalAmount;
 	}
 
+	@XmlElement(name = "PrncplAmt")
 	public AmountAndDirection20 getPrincipalAmount() {
 		return principalAmount;
 	}
@@ -758,6 +769,7 @@ public class InterestCalculation4 {
 		this.principalAmount = principalAmount;
 	}
 
+	@XmlElement(name = "MvmntAmt")
 	public AmountAndDirection20 getMovementAmount() {
 		return movementAmount;
 	}
@@ -766,6 +778,7 @@ public class InterestCalculation4 {
 		this.movementAmount = movementAmount;
 	}
 
+	@XmlElement(name = "NbOfDays")
 	public Number getNumberOfDays() {
 		return numberOfDays;
 	}
@@ -774,6 +787,7 @@ public class InterestCalculation4 {
 		this.numberOfDays = numberOfDays;
 	}
 
+	@XmlElement(name = "FctvRate", required = true)
 	public PercentageRate getEffectiveRate() {
 		return effectiveRate;
 	}
@@ -782,6 +796,7 @@ public class InterestCalculation4 {
 		this.effectiveRate = effectiveRate;
 	}
 
+	@XmlElement(name = "IntrstRate")
 	public PercentageRate getInterestRate() {
 		return interestRate;
 	}
@@ -790,6 +805,7 @@ public class InterestCalculation4 {
 		this.interestRate = interestRate;
 	}
 
+	@XmlElement(name = "Sprd")
 	public PercentageRate getSpread() {
 		return spread;
 	}
@@ -798,6 +814,7 @@ public class InterestCalculation4 {
 		this.spread = spread;
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt", required = true)
 	public AmountAndDirection20 getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -806,6 +823,7 @@ public class InterestCalculation4 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "AggtdIntrstAmt")
 	public ActiveCurrencyAndAmount getAggregatedInterestAmount() {
 		return aggregatedInterestAmount;
 	}

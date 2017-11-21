@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PartyIdentificationAndAccount106;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between buyer and seller.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Counterparty3Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Counterparty9Choice", propOrder = {"seller", "buyer"})
 public class Counterparty9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -192,6 +198,7 @@ public class Counterparty9Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sellr", required = true)
 	public PartyIdentificationAndAccount106 getSeller() {
 		return seller;
 	}
@@ -200,6 +207,7 @@ public class Counterparty9Choice {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "Buyr", required = true)
 	public PartyIdentificationAndAccount106 getBuyer() {
 		return buyer;
 	}

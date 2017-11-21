@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.ContentInformationType12;
 import com.tools20022.repository.msg.Header25;
 import com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20152016;
 import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The AcceptorBatchTransferResponse is sent by the acquirer (or its agent) to
@@ -37,9 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.012.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVersion
@@ -75,6 +74,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.012.001.05}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -98,6 +100,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorBatchTransferResponseV04}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorBatchTransferResponseV05", propOrder = {"header", "batchTransferResponse", "securityTrailer"})
 public class AcceptorBatchTransferResponseV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -148,6 +152,14 @@ public class AcceptorBatchTransferResponseV05 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header25.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorBatchTransferResponseV05.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CardPaymentBatchTransferResponse4 batchTransferResponse;
@@ -200,6 +212,14 @@ public class AcceptorBatchTransferResponseV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentBatchTransferResponse4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorBatchTransferResponseV05.class.getMethod("getBatchTransferResponse", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType12 securityTrailer;
 	/**
@@ -251,6 +271,14 @@ public class AcceptorBatchTransferResponseV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType12.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorBatchTransferResponseV05.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -265,7 +293,8 @@ public class AcceptorBatchTransferResponseV05 {
 				rootElement = "Document";
 				xmlTag = "AccptrBtchTrfRspn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorBatchTransferResponseV05.mmHeader, AcceptorBatchTransferResponseV05.mmBatchTransferResponse, AcceptorBatchTransferResponseV05.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV05.mmHeader, com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV05.mmBatchTransferResponse,
+						com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV05.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";
@@ -275,10 +304,16 @@ public class AcceptorBatchTransferResponseV05 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcceptorBatchTransferResponseV05.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header25 getHeader() {
 		return header;
 	}
@@ -287,6 +322,7 @@ public class AcceptorBatchTransferResponseV05 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "BtchTrfRspn", required = true)
 	public CardPaymentBatchTransferResponse4 getBatchTransferResponse() {
 		return batchTransferResponse;
 	}
@@ -295,11 +331,18 @@ public class AcceptorBatchTransferResponseV05 {
 		this.batchTransferResponse = batchTransferResponse;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType12 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType12 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.012.05.05")
+	static public class Document {
+		@XmlElement(name = "AccptrBtchTrfRspn", required = true)
+		public AcceptorBatchTransferResponseV05 messageBody;
 	}
 }

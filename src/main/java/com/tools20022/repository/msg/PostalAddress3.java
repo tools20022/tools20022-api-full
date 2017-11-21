@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information that locates and identifies a specific address, as defined by
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PostalAddress3", propOrder = {"addressType", "mailingIndicator", "registrationAddressIndicator", "nameAndAddress"})
 public class PostalAddress3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -317,6 +323,7 @@ public class PostalAddress3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AdrTp", required = true)
 	public AddressType1Code getAddressType() {
 		return addressType;
 	}
@@ -325,6 +332,7 @@ public class PostalAddress3 {
 		this.addressType = addressType;
 	}
 
+	@XmlElement(name = "MlngInd", required = true)
 	public YesNoIndicator getMailingIndicator() {
 		return mailingIndicator;
 	}
@@ -333,6 +341,7 @@ public class PostalAddress3 {
 		this.mailingIndicator = mailingIndicator;
 	}
 
+	@XmlElement(name = "RegnAdrInd", required = true)
 	public YesNoIndicator getRegistrationAddressIndicator() {
 		return registrationAddressIndicator;
 	}
@@ -341,6 +350,7 @@ public class PostalAddress3 {
 		this.registrationAddressIndicator = registrationAddressIndicator;
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress4 getNameAndAddress() {
 		return nameAndAddress;
 	}

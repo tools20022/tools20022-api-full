@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics of the statement.
@@ -89,6 +93,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Characteristics of the statement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Statement56", propOrder = {"reportNumber", "queryReference", "statementIdentification", "statementPeriod", "frequency", "updateType", "statementBasis", "activityIndicator", "subAccountIndicator"})
 public class Statement56 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -486,6 +492,7 @@ public class Statement56 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptNb")
 	public Number3Choice getReportNumber() {
 		return reportNumber;
 	}
@@ -494,6 +501,7 @@ public class Statement56 {
 		this.reportNumber = reportNumber;
 	}
 
+	@XmlElement(name = "QryRef")
 	public RestrictedFINXMax16Text getQueryReference() {
 		return queryReference;
 	}
@@ -502,6 +510,7 @@ public class Statement56 {
 		this.queryReference = queryReference;
 	}
 
+	@XmlElement(name = "StmtId")
 	public RestrictedFINXMax16Text getStatementIdentification() {
 		return statementIdentification;
 	}
@@ -510,6 +519,7 @@ public class Statement56 {
 		this.statementIdentification = statementIdentification;
 	}
 
+	@XmlElement(name = "StmtPrd", required = true)
 	public Period2Choice getStatementPeriod() {
 		return statementPeriod;
 	}
@@ -518,6 +528,7 @@ public class Statement56 {
 		this.statementPeriod = statementPeriod;
 	}
 
+	@XmlElement(name = "Frqcy")
 	public Frequency26Choice getFrequency() {
 		return frequency;
 	}
@@ -526,6 +537,7 @@ public class Statement56 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "UpdTp")
 	public UpdateType16Choice getUpdateType() {
 		return updateType;
 	}
@@ -534,6 +546,7 @@ public class Statement56 {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "StmtBsis", required = true)
 	public StatementBasis12Choice getStatementBasis() {
 		return statementBasis;
 	}
@@ -542,6 +555,7 @@ public class Statement56 {
 		this.statementBasis = statementBasis;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
@@ -550,6 +564,7 @@ public class Statement56 {
 		this.activityIndicator = activityIndicator;
 	}
 
+	@XmlElement(name = "SubAcctInd", required = true)
 	public YesNoIndicator getSubAccountIndicator() {
 		return subAccountIndicator;
 	}

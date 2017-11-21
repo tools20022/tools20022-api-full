@@ -65,6 +65,11 @@ public class AuthorisedAccountModifier extends AccountPartyRole {
 				definition = "Authorised sender of a message related to the life cycle of an account.";
 				superType_lazy = () -> AccountPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AuthorisedAccountModifier.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

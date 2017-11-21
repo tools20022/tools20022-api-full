@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.AcceptorDiagnosticRequest2;
 import com.tools20022.repository.msg.ContentInformationType6;
 import com.tools20022.repository.msg.Header1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent)
@@ -37,9 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.013.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive
@@ -70,6 +69,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.013.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -93,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorDiagnosticRequestV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorDiagnosticRequestV02", propOrder = {"header", "diagnosticRequest", "securityTrailer"})
 public class AcceptorDiagnosticRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -138,6 +142,14 @@ public class AcceptorDiagnosticRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorDiagnosticRequestV02.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AcceptorDiagnosticRequest2 diagnosticRequest;
 	/**
@@ -181,6 +193,14 @@ public class AcceptorDiagnosticRequestV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorDiagnosticRequest2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorDiagnosticRequestV02.class.getMethod("getDiagnosticRequest", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ContentInformationType6 securityTrailer;
@@ -226,6 +246,14 @@ public class AcceptorDiagnosticRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType6.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorDiagnosticRequestV02.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -240,7 +268,8 @@ public class AcceptorDiagnosticRequestV02 {
 				rootElement = "Document";
 				xmlTag = "AccptrDgnstcReq";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorDiagnosticRequestV02.mmHeader, AcceptorDiagnosticRequestV02.mmDiagnosticRequest, AcceptorDiagnosticRequestV02.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV02.mmHeader, com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV02.mmDiagnosticRequest,
+						com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV02.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";
@@ -250,10 +279,16 @@ public class AcceptorDiagnosticRequestV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcceptorDiagnosticRequestV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header1 getHeader() {
 		return header;
 	}
@@ -262,6 +297,7 @@ public class AcceptorDiagnosticRequestV02 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "DgnstcReq", required = true)
 	public AcceptorDiagnosticRequest2 getDiagnosticRequest() {
 		return diagnosticRequest;
 	}
@@ -270,11 +306,18 @@ public class AcceptorDiagnosticRequestV02 {
 		this.diagnosticRequest = diagnosticRequest;
 	}
 
+	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType6 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType6 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.013.02.02")
+	static public class Document {
+		@XmlElement(name = "AccptrDgnstcReq", required = true)
+		public AcceptorDiagnosticRequestV02 messageBody;
 	}
 }

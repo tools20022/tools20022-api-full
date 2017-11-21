@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.AccountPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,6 +39,53 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmOwnershipBeneficiaryRate
+ * InvestmentAccountPartyRole.mmOwnershipBeneficiaryRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmInvestmentAccount
+ * InvestmentAccountPartyRole.mmInvestmentAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmFATCAFormType
+ * InvestmentAccountPartyRole.mmFATCAFormType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmFATCAStatus
+ * InvestmentAccountPartyRole.mmFATCAStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmCRSStatus
+ * InvestmentAccountPartyRole.mmCRSStatus}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PrimaryOwner PrimaryOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TrusteeRole TrusteeRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CustodianForMinor
+ * CustodianForMinor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Nominee Nominee}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.JointOwner JointOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecondaryOwner
+ * SecondaryOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LegalGuardianRole
+ * LegalGuardianRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SuccessorOnDeath
+ * SuccessorOnDeath}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AdministratorRole
+ * AdministratorRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.IndividualInvestor
+ * IndividualInvestor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CorporateInvestor
+ * CorporateInvestor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Investor Investor}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
+ * AccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -309,53 +357,6 @@ import java.util.List;
  * ExtendedParty11.mmOtherPartyDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
- * AccountPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PrimaryOwner PrimaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TrusteeRole TrusteeRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CustodianForMinor
- * CustodianForMinor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Nominee Nominee}</li>
- * <li>{@linkplain com.tools20022.repository.entity.JointOwner JointOwner}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecondaryOwner
- * SecondaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LegalGuardianRole
- * LegalGuardianRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SuccessorOnDeath
- * SuccessorOnDeath}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AdministratorRole
- * AdministratorRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.IndividualInvestor
- * IndividualInvestor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CorporateInvestor
- * CorporateInvestor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Investor Investor}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmOwnershipBeneficiaryRate
- * InvestmentAccountPartyRole.mmOwnershipBeneficiaryRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmInvestmentAccount
- * InvestmentAccountPartyRole.mmInvestmentAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmFATCAFormType
- * InvestmentAccountPartyRole.mmFATCAFormType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmFATCAStatus
- * InvestmentAccountPartyRole.mmFATCAStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmCRSStatus
- * InvestmentAccountPartyRole.mmCRSStatus}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -389,11 +390,6 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
-	 * InvestmentAccountPartyRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -442,6 +438,11 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
+	 * InvestmentAccountPartyRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -461,7 +462,7 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 					InvestmentAccountOwnershipInformation7.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation8.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation9.mmOwnershipBeneficiaryRate,
 					InvestmentAccountOwnershipInformation10.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation11.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation12.mmOwnershipBeneficiaryRate,
 					InvestmentAccountOwnershipInformation13.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation15.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation14.mmOwnershipBeneficiaryRate);
-			elementContext_lazy = () -> InvestmentAccountPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OwnershipBeneficiaryRate";
@@ -469,6 +470,14 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentAccountPartyRole.class.getMethod("getOwnershipBeneficiaryRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.InvestmentAccount> investmentAccount;
@@ -490,11 +499,6 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentAccount
 	 * InvestmentAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
-	 * InvestmentAccountPartyRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -503,6 +507,11 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	 * TransferOut3.mmNomineeAccount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
+	 * InvestmentAccountPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -519,7 +528,7 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	public static final MMBusinessAssociationEnd mmInvestmentAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransferOut3.mmNomineeAccount);
-			elementContext_lazy = () -> InvestmentAccountPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccount";
@@ -542,11 +551,6 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FATCAFormTypeCode
 	 * FATCAFormTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
-	 * InvestmentAccountPartyRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -581,6 +585,11 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
+	 * InvestmentAccountPartyRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -598,7 +607,7 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation10.mmFATCAFormType, InvestmentAccountOwnershipInformation11.mmFATCAFormType, FATCAForm1Choice.mmCode,
 					InvestmentAccountOwnershipInformation12.mmFATCAFormType, InvestmentAccountOwnershipInformation13.mmFATCAFormType, InvestmentAccountOwnershipInformation15.mmFATCAFormType,
 					InvestmentAccountOwnershipInformation15.mmCRSFormType, CRSForm1Choice.mmCode, InvestmentAccountOwnershipInformation14.mmFATCAFormType, InvestmentAccountOwnershipInformation14.mmCRSFormType);
-			elementContext_lazy = () -> InvestmentAccountPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FATCAFormType";
@@ -606,6 +615,14 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FATCAFormTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentAccountPartyRole.class.getMethod("getFATCAFormType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.FATCAStatus> fATCAStatus;
@@ -626,11 +643,6 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.FATCAStatus
 	 * FATCAStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
-	 * InvestmentAccountPartyRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -655,6 +667,11 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
+	 * InvestmentAccountPartyRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -670,7 +687,7 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation10.mmFATCAStatus, InvestmentAccountOwnershipInformation11.mmFATCAStatus, InvestmentAccountOwnershipInformation12.mmFATCAStatus,
 					InvestmentAccountOwnershipInformation13.mmFATCAStatus, InvestmentAccountOwnershipInformation15.mmFATCAStatus, InvestmentAccountOwnershipInformation14.mmFATCAStatus);
-			elementContext_lazy = () -> InvestmentAccountPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FATCAStatus";
@@ -699,11 +716,6 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CRSStatus CRSStatus}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
-	 * InvestmentAccountPartyRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -715,6 +727,11 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	 * InvestmentAccountOwnershipInformation14.mmCRSStatus}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
+	 * InvestmentAccountPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -729,7 +746,7 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	public static final MMBusinessAssociationEnd mmCRSStatus = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation15.mmCRSStatus, InvestmentAccountOwnershipInformation14.mmCRSStatus);
-			elementContext_lazy = () -> InvestmentAccountPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CRSStatus";
@@ -764,8 +781,9 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 				subType_lazy = () -> Arrays.asList(PrimaryOwner.mmObject(), TrusteeRole.mmObject(), CustodianForMinor.mmObject(), Nominee.mmObject(), JointOwner.mmObject(), SecondaryOwner.mmObject(), LegalGuardianRole.mmObject(),
 						SuccessorOnDeath.mmObject(), AdministratorRole.mmObject(), IndividualInvestor.mmObject(), CorporateInvestor.mmObject(), Investor.mmObject());
 				superType_lazy = () -> AccountPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(InvestmentAccountPartyRole.mmOwnershipBeneficiaryRate, InvestmentAccountPartyRole.mmInvestmentAccount, InvestmentAccountPartyRole.mmFATCAFormType, InvestmentAccountPartyRole.mmFATCAStatus,
-						InvestmentAccountPartyRole.mmCRSStatus);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccountPartyRole.mmOwnershipBeneficiaryRate, com.tools20022.repository.entity.InvestmentAccountPartyRole.mmInvestmentAccount,
+						com.tools20022.repository.entity.InvestmentAccountPartyRole.mmFATCAFormType, com.tools20022.repository.entity.InvestmentAccountPartyRole.mmFATCAStatus,
+						com.tools20022.repository.entity.InvestmentAccountPartyRole.mmCRSStatus);
 				derivationComponent_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation5.mmObject(), InvestmentAccountOwnershipInformation2.mmObject(), AccountParties2.mmObject(), ExtendedParty2.mmObject(),
 						AccountParties5.mmObject(), MoneyLaunderingCheck1Choice.mmObject(), InvestmentAccountOwnershipInformation6.mmObject(), AccountParties1Choice.mmObject(), ExtendedParty3.mmObject(), AccountParties6.mmObject(),
 						InvestmentAccountOwnershipInformation3.mmObject(), AccountParties3.mmObject(), InvestmentAccountOwnershipInformation4.mmObject(), ExtendedParty1.mmObject(), AccountParties4.mmObject(),
@@ -776,6 +794,11 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 						AccountParties13.mmObject(), AccountParties14.mmObject(), InvestmentAccountOwnershipInformation12.mmObject(), ExtendedParty10.mmObject(), InvestmentAccountOwnershipInformation13.mmObject(),
 						AccountParties9Choice.mmObject(), AccountParties8Choice.mmObject(), ExtendedParty9.mmObject(), AccountParties15.mmObject(), AccountParties16.mmObject(), InvestmentAccountOwnershipInformation15.mmObject(),
 						AccountParties11Choice.mmObject(), ExtendedParty12.mmObject(), CRSForm1Choice.mmObject(), AccountParties10Choice.mmObject(), InvestmentAccountOwnershipInformation14.mmObject(), ExtendedParty11.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvestmentAccountPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

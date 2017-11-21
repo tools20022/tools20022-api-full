@@ -36,6 +36,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
+ * AccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -81,9 +84,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestmentAccount64.mmAccountOwner}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
- * AccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -115,6 +115,11 @@ public class AccountOwnerRole extends AccountPartyRole {
 						InvestmentAccount64.mmAccountOwner);
 				superType_lazy = () -> AccountPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(OwnerType1.mmObject(), AccountRole1.mmObject(), AccountOwner1Choice.mmObject(), AccountOwner2Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountOwnerRole.class;
 			}
 		});
 		return mmObject_lazy.get();

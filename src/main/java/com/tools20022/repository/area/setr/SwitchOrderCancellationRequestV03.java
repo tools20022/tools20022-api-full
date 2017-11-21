@@ -21,8 +21,10 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.area.SecuritiesTradePreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -51,9 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.014.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
@@ -103,6 +102,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.014.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -126,6 +128,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SwitchOrderCancellationInstructionV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwitchOrderCancellationRequestV03", propOrder = {"messageIdentification", "poolReference", "previousReference", "cancellationByReference", "cancellationByOrderDetails", "copyDetails"})
 public class SwitchOrderCancellationRequestV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -135,6 +139,10 @@ public class SwitchOrderCancellationRequestV03 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03
+	 * SwitchOrderCancellationRequestV03}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -147,10 +155,6 @@ public class SwitchOrderCancellationRequestV03 {
 	 * SwitchOrderCancellationRequestV03.mmCancellationByOrderDetails}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03
-	 * SwitchOrderCancellationRequestV03}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -169,8 +173,9 @@ public class SwitchOrderCancellationRequestV03 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReferenceOrByOrderDetailsRule";
 			definition = "Either CancellationByOrderDetails or CancellationByReference may be present, but not both.";
-			messageDefinition_lazy = () -> SwitchOrderCancellationRequestV03.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(SwitchOrderCancellationRequestV03.mmCancellationByReference, SwitchOrderCancellationRequestV03.mmCancellationByOrderDetails);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmCancellationByReference,
+					com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmCancellationByOrderDetails);
 		}
 	};
 	protected MessageIdentification1 messageIdentification;
@@ -219,6 +224,14 @@ public class SwitchOrderCancellationRequestV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderCancellationRequestV03.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -262,6 +275,14 @@ public class SwitchOrderCancellationRequestV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderCancellationRequestV03.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 previousReference;
@@ -307,6 +328,14 @@ public class SwitchOrderCancellationRequestV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderCancellationRequestV03.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected InvestmentFundOrder1 cancellationByReference;
 	/**
@@ -341,6 +370,14 @@ public class SwitchOrderCancellationRequestV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundOrder1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderCancellationRequestV03.class.getMethod("getCancellationByReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SwitchOrderInstruction2 cancellationByOrderDetails;
@@ -377,6 +414,14 @@ public class SwitchOrderCancellationRequestV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SwitchOrderInstruction2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderCancellationRequestV03.class.getMethod("getCancellationByOrderDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CopyInformation2 copyDetails;
@@ -423,6 +468,14 @@ public class SwitchOrderCancellationRequestV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderCancellationRequestV03.class.getMethod("getCopyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -434,12 +487,14 @@ public class SwitchOrderCancellationRequestV03 {
 				nextVersions_lazy = () -> Arrays.asList(SwitchOrderCancellationRequestV04.mmObject());
 				previousVersion_lazy = () -> SwitchOrderCancellationInstructionV02.mmObject();
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject());
-				xors_lazy = () -> Arrays.asList(SwitchOrderCancellationRequestV03.mmCancellationByReferenceOrByOrderDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmCancellationByReferenceOrByOrderDetailsRule);
 				rootElement = "Document";
 				xmlTag = "SwtchOrdrCxlReqV03";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SwitchOrderCancellationRequestV03.mmMessageIdentification, SwitchOrderCancellationRequestV03.mmPoolReference, SwitchOrderCancellationRequestV03.mmPreviousReference,
-						SwitchOrderCancellationRequestV03.mmCancellationByReference, SwitchOrderCancellationRequestV03.mmCancellationByOrderDetails, SwitchOrderCancellationRequestV03.mmCopyDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmPoolReference, com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmPreviousReference,
+						com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmCancellationByReference, com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmCancellationByOrderDetails,
+						com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmCopyDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -449,10 +504,16 @@ public class SwitchOrderCancellationRequestV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SwitchOrderCancellationRequestV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -461,6 +522,7 @@ public class SwitchOrderCancellationRequestV03 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -469,6 +531,7 @@ public class SwitchOrderCancellationRequestV03 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -477,6 +540,7 @@ public class SwitchOrderCancellationRequestV03 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "CxlByRef")
 	public InvestmentFundOrder1 getCancellationByReference() {
 		return cancellationByReference;
 	}
@@ -485,6 +549,7 @@ public class SwitchOrderCancellationRequestV03 {
 		this.cancellationByReference = cancellationByReference;
 	}
 
+	@XmlElement(name = "CxlByOrdrDtls")
 	public SwitchOrderInstruction2 getCancellationByOrderDetails() {
 		return cancellationByOrderDetails;
 	}
@@ -493,11 +558,18 @@ public class SwitchOrderCancellationRequestV03 {
 		this.cancellationByOrderDetails = cancellationByOrderDetails;
 	}
 
+	@XmlElement(name = "CpyDtls")
 	public CopyInformation2 getCopyDetails() {
 		return copyDetails;
 	}
 
 	public void setCopyDetails(CopyInformation2 copyDetails) {
 		this.copyDetails = copyDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.014.03.03")
+	static public class Document {
+		@XmlElement(name = "SwtchOrdrCxlReqV03", required = true)
+		public SwitchOrderCancellationRequestV03 messageBody;
 	}
 }

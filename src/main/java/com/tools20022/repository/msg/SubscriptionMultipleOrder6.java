@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Order to invest the investor's principal in an investment fund.
@@ -111,6 +115,9 @@ import java.util.List;
  * SubscriptionMultipleOrder4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionMultipleOrder6", propOrder = {"masterReference", "placeOfTrade", "orderDateTime", "expiryDateTime", "requestedFutureTradeDate", "cancellationRight", "investmentAccountDetails", "beneficiaryDetails",
+		"individualOrderDetails", "bulkCashSettlementDetails", "totalSettlementAmount"})
 public class SubscriptionMultipleOrder6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -735,6 +742,7 @@ public class SubscriptionMultipleOrder6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -743,6 +751,7 @@ public class SubscriptionMultipleOrder6 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public PlaceOfTradeIdentification1Choice getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -751,6 +760,7 @@ public class SubscriptionMultipleOrder6 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "OrdrDtTm")
 	public ISODateTime getOrderDateTime() {
 		return orderDateTime;
 	}
@@ -759,6 +769,7 @@ public class SubscriptionMultipleOrder6 {
 		this.orderDateTime = orderDateTime;
 	}
 
+	@XmlElement(name = "XpryDtTm")
 	public DateAndDateTimeChoice getExpiryDateTime() {
 		return expiryDateTime;
 	}
@@ -767,6 +778,7 @@ public class SubscriptionMultipleOrder6 {
 		this.expiryDateTime = expiryDateTime;
 	}
 
+	@XmlElement(name = "ReqdFutrTradDt")
 	public ISODate getRequestedFutureTradeDate() {
 		return requestedFutureTradeDate;
 	}
@@ -775,6 +787,7 @@ public class SubscriptionMultipleOrder6 {
 		this.requestedFutureTradeDate = requestedFutureTradeDate;
 	}
 
+	@XmlElement(name = "CxlRght")
 	public CancellationRight1Choice getCancellationRight() {
 		return cancellationRight;
 	}
@@ -783,6 +796,7 @@ public class SubscriptionMultipleOrder6 {
 		this.cancellationRight = cancellationRight;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount58 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -791,6 +805,7 @@ public class SubscriptionMultipleOrder6 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "BnfcryDtls")
 	public List<IndividualPerson31> getBeneficiaryDetails() {
 		return beneficiaryDetails;
 	}
@@ -799,6 +814,7 @@ public class SubscriptionMultipleOrder6 {
 		this.beneficiaryDetails = beneficiaryDetails;
 	}
 
+	@XmlElement(name = "IndvOrdrDtls", required = true)
 	public List<SubscriptionOrder14> getIndividualOrderDetails() {
 		return individualOrderDetails;
 	}
@@ -807,6 +823,7 @@ public class SubscriptionMultipleOrder6 {
 		this.individualOrderDetails = individualOrderDetails;
 	}
 
+	@XmlElement(name = "BlkCshSttlmDtls")
 	public PaymentTransaction70 getBulkCashSettlementDetails() {
 		return bulkCashSettlementDetails;
 	}
@@ -815,6 +832,7 @@ public class SubscriptionMultipleOrder6 {
 		this.bulkCashSettlementDetails = bulkCashSettlementDetails;
 	}
 
+	@XmlElement(name = "TtlSttlmAmt")
 	public ActiveCurrencyAndAmount getTotalSettlementAmount() {
 		return totalSettlementAmount;
 	}

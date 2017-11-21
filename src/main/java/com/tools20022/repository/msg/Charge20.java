@@ -36,6 +36,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money associated with a service.
@@ -97,6 +101,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Charge20", propOrder = {"type", "extendedType", "amount", "chargeBasis", "extendedChargeBasis", "chargeBearer", "recipientIdentification"})
 public class Charge20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -552,6 +558,7 @@ public class Charge20 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ChargeType12Code getType() {
 		return type;
 	}
@@ -560,6 +567,7 @@ public class Charge20 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XtndedTp", required = true)
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
@@ -568,6 +576,7 @@ public class Charge20 {
 		this.extendedType = extendedType;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -576,6 +585,7 @@ public class Charge20 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "ChrgBsis")
 	public TaxationBasis2Code getChargeBasis() {
 		return chargeBasis;
 	}
@@ -584,6 +594,7 @@ public class Charge20 {
 		this.chargeBasis = chargeBasis;
 	}
 
+	@XmlElement(name = "XtndedChrgBsis")
 	public Extended350Code getExtendedChargeBasis() {
 		return extendedChargeBasis;
 	}
@@ -592,6 +603,7 @@ public class Charge20 {
 		this.extendedChargeBasis = extendedChargeBasis;
 	}
 
+	@XmlElement(name = "ChrgBr")
 	public ChargeBearer1Code getChargeBearer() {
 		return chargeBearer;
 	}
@@ -600,6 +612,7 @@ public class Charge20 {
 		this.chargeBearer = chargeBearer;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification2Choice getRecipientIdentification() {
 		return recipientIdentification;
 	}

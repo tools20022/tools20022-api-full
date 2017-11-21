@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the jurisdiction (country, county, state, province, city).
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the jurisdiction (country, county, state, province, city)."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Jurisdiction1", propOrder = {"identification", "country"})
 public class Jurisdiction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -155,6 +161,7 @@ public class Jurisdiction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public Max70Text getIdentification() {
 		return identification;
 	}
@@ -163,6 +170,7 @@ public class Jurisdiction1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Ctry")
 	public CountryCode getCountry() {
 		return country;
 	}

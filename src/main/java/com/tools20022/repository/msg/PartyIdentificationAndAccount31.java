@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party and account details.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Party and account details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount31", propOrder = {"identification", "alternateIdentification", "additionalInformation", "clearingAccount"})
 public class PartyIdentificationAndAccount31 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -293,6 +299,7 @@ public class PartyIdentificationAndAccount31 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification33Choice getIdentification() {
 		return identification;
 	}
@@ -301,6 +308,7 @@ public class PartyIdentificationAndAccount31 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification4 getAlternateIdentification() {
 		return alternateIdentification;
 	}
@@ -309,6 +317,7 @@ public class PartyIdentificationAndAccount31 {
 		this.alternateIdentification = alternateIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public PartyTextInformation1 getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -317,6 +326,7 @@ public class PartyIdentificationAndAccount31 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "ClrAcct")
 	public SecuritiesAccount18 getClearingAccount() {
 		return clearingAccount;
 	}

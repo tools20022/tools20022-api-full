@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Variation parameters and triggers.
@@ -70,6 +74,8 @@ import java.util.List;
  * definition} = "Variation parameters and triggers."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AutomaticVariation1", propOrder = {"identification", "type", "amountAndTrigger", "additionalInformation"})
 public class AutomaticVariation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -264,6 +270,7 @@ public class AutomaticVariation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -272,6 +279,7 @@ public class AutomaticVariation1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public VariationType1Code getType() {
 		return type;
 	}
@@ -280,6 +288,7 @@ public class AutomaticVariation1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "AmtAndTrggr", required = true)
 	public List<AmountAndTrigger1> getAmountAndTrigger() {
 		return amountAndTrigger;
 	}
@@ -288,6 +297,7 @@ public class AutomaticVariation1 {
 		this.amountAndTrigger = amountAndTrigger;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

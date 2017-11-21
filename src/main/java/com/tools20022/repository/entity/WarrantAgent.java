@@ -66,6 +66,11 @@ public class WarrantAgent extends AssetPartyRole {
 				definition = "Entity appointed by the issuer to process the exercising of warrants, sometimes responsible for the issuance of the warrants into the market.";
 				superType_lazy = () -> AssetPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return WarrantAgent.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

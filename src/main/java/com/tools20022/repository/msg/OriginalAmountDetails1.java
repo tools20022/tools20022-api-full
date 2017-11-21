@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.RateAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * The OriginalAmountDetails contains all amount information in the acceptor
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalAmountDetails1", propOrder = {"actualAmount", "minimumAmount", "maximumAmount"})
 public class OriginalAmountDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -232,6 +238,7 @@ public class OriginalAmountDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ActlAmt")
 	public ImpliedCurrencyAndAmount getActualAmount() {
 		return actualAmount;
 	}
@@ -240,6 +247,7 @@ public class OriginalAmountDetails1 {
 		this.actualAmount = actualAmount;
 	}
 
+	@XmlElement(name = "MinAmt")
 	public ImpliedCurrencyAndAmount getMinimumAmount() {
 		return minimumAmount;
 	}
@@ -248,6 +256,7 @@ public class OriginalAmountDetails1 {
 		this.minimumAmount = minimumAmount;
 	}
 
+	@XmlElement(name = "MaxAmt")
 	public ImpliedCurrencyAndAmount getMaximumAmount() {
 		return maximumAmount;
 	}

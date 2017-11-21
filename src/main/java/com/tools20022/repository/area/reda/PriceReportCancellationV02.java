@@ -25,8 +25,10 @@ import com.tools20022.repository.area.ReferenceDataArchive;
 import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.PriceReport1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -46,9 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code reda.002.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ReferenceDataArchive
@@ -81,6 +80,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code reda.002.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -100,6 +102,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "reda.002.001.02", propOrder = {"poolReference", "previousReference", "priceReportToBeCancelled"})
 public class PriceReportCancellationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -137,6 +141,14 @@ public class PriceReportCancellationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCancellationV02.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 previousReference;
 	/**
@@ -171,6 +183,14 @@ public class PriceReportCancellationV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCancellationV02.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PriceReport1 priceReportToBeCancelled;
@@ -207,6 +227,14 @@ public class PriceReportCancellationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> PriceReport1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCancellationV02.class.getMethod("getPriceReportToBeCancelled", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -221,7 +249,8 @@ public class PriceReportCancellationV02 {
 				xmlTag = "reda.002.001.02";
 				businessArea_lazy = () -> ReferenceDataArchive.mmObject();
 				xmlName = "reda.002.001.02";
-				messageBuildingBlock_lazy = () -> Arrays.asList(PriceReportCancellationV02.mmPoolReference, PriceReportCancellationV02.mmPreviousReference, PriceReportCancellationV02.mmPriceReportToBeCancelled);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCancellationV02.mmPoolReference, com.tools20022.repository.area.reda.PriceReportCancellationV02.mmPreviousReference,
+						com.tools20022.repository.area.reda.PriceReportCancellationV02.mmPriceReportToBeCancelled);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "reda";
@@ -231,10 +260,16 @@ public class PriceReportCancellationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PriceReportCancellationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -243,6 +278,7 @@ public class PriceReportCancellationV02 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -251,11 +287,18 @@ public class PriceReportCancellationV02 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "PricRptToBeCanc")
 	public PriceReport1 getPriceReportToBeCancelled() {
 		return priceReportToBeCancelled;
 	}
 
 	public void setPriceReportToBeCancelled(PriceReport1 priceReportToBeCancelled) {
 		this.priceReportToBeCancelled = priceReportToBeCancelled;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:reda.002.02.02")
+	static public class Document {
+		@XmlElement(name = "reda.002.001.02", required = true)
+		public PriceReportCancellationV02 messageBody;
 	}
 }

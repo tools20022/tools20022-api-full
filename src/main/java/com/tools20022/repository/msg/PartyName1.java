@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the party name entity through the valid short and long names of the
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyName1", propOrder = {"validFrom", "name", "shortName"})
 public class PartyName1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -202,6 +208,7 @@ public class PartyName1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "VldFr", required = true)
 	public ISODate getValidFrom() {
 		return validFrom;
 	}
@@ -210,6 +217,7 @@ public class PartyName1 {
 		this.validFrom = validFrom;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max350Text getName() {
 		return name;
 	}
@@ -218,6 +226,7 @@ public class PartyName1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "ShrtNm", required = true)
 	public Max35Text getShortName() {
 		return shortName;
 	}

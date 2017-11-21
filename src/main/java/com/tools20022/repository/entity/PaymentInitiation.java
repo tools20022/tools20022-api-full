@@ -38,6 +38,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PaymentExecution
+ * PaymentExecution}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -48,9 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorrectivePaymentInitiation2}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PaymentExecution
- * PaymentExecution}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -81,6 +81,11 @@ public class PaymentInitiation extends PaymentExecution {
 				definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction is the first of the series of instructions which may be used to execute a payment. It is normally sent by the initiating party to the forwarding agent or to the debtor's agent.";
 				superType_lazy = () -> PaymentExecution.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(CorrectivePaymentInitiation1.mmObject(), CorrectivePaymentInitiation2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PaymentInitiation.class;
 			}
 		});
 		return mmObject_lazy.get();

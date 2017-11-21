@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.Vote4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Determines how the voting instructions are specified.
@@ -63,6 +67,8 @@ import java.util.List;
  * definition} = "Determines how the voting instructions are specified."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Vote1Choice", propOrder = {"voteInstruction", "globalVoteInstruction"})
 public class Vote1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class Vote1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "VoteInstr", required = true)
 	public List<Vote4> getVoteInstruction() {
 		return voteInstruction;
 	}
@@ -187,6 +194,7 @@ public class Vote1Choice {
 		this.voteInstruction = voteInstruction;
 	}
 
+	@XmlElement(name = "GblVoteInstr", required = true)
 	public List<Vote3> getGlobalVoteInstruction() {
 		return globalVoteInstruction;
 	}

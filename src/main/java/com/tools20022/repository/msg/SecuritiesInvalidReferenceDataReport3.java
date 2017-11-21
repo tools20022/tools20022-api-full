@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference data instruments that are no longer valid either through an
@@ -71,6 +75,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesInvalidReferenceDataReport3", propOrder = {"financialInstrument", "supplementaryData"})
 public class SecuritiesInvalidReferenceDataReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class SecuritiesInvalidReferenceDataReport3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrm", required = true)
 	public SecuritiesReferenceDataReport5 getFinancialInstrument() {
 		return financialInstrument;
 	}
@@ -185,6 +192,7 @@ public class SecuritiesInvalidReferenceDataReport3 {
 		this.financialInstrument = financialInstrument;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

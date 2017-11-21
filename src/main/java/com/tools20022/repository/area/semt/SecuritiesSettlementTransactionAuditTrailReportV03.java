@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -48,9 +50,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.022.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
@@ -96,6 +95,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.022.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -111,6 +113,8 @@ import java.util.List;
  * SecuritiesSettlementTransactionAuditTrailReportV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesSettlementTransactionAuditTrailReportV03", propOrder = {"pagination", "queryReference", "transactionIdentification", "safekeepingAccount", "accountOwner", "statusTrail"})
 public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -157,6 +161,14 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAuditTrailReportV03.class.getMethod("getPagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Identification14 queryReference;
 	/**
@@ -201,6 +213,14 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> Identification14.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAuditTrailReportV03.class.getMethod("getQueryReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionIdentifications29 transactionIdentification;
 	/**
@@ -244,6 +264,14 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> TransactionIdentifications29.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAuditTrailReportV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesAccount24 safekeepingAccount;
 	/**
@@ -285,6 +313,14 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount24.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAuditTrailReportV03.class.getMethod("getSafekeepingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification98 accountOwner;
 	/**
@@ -325,6 +361,14 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification98.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAuditTrailReportV03.class.getMethod("getAccountOwner", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<StatusTrail6> statusTrail;
@@ -368,6 +412,14 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> StatusTrail6.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionAuditTrailReportV03.class.getMethod("getStatusTrail", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -381,9 +433,11 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxAudtTrlRpt";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAuditTrailReportV03.mmPagination, SecuritiesSettlementTransactionAuditTrailReportV03.mmQueryReference,
-						SecuritiesSettlementTransactionAuditTrailReportV03.mmTransactionIdentification, SecuritiesSettlementTransactionAuditTrailReportV03.mmSafekeepingAccount,
-						SecuritiesSettlementTransactionAuditTrailReportV03.mmAccountOwner, SecuritiesSettlementTransactionAuditTrailReportV03.mmStatusTrail);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmQueryReference,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmTransactionIdentification,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmStatusTrail);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -393,10 +447,16 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesSettlementTransactionAuditTrailReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
@@ -405,6 +465,7 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 		this.pagination = pagination;
 	}
 
+	@XmlElement(name = "QryRef")
 	public Identification14 getQueryReference() {
 		return queryReference;
 	}
@@ -413,6 +474,7 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 		this.queryReference = queryReference;
 	}
 
+	@XmlElement(name = "TxId")
 	public TransactionIdentifications29 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -421,6 +483,7 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount24 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -429,6 +492,7 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification98 getAccountOwner() {
 		return accountOwner;
 	}
@@ -437,11 +501,18 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "StsTrl")
 	public List<StatusTrail6> getStatusTrail() {
 		return statusTrail;
 	}
 
 	public void setStatusTrail(List<StatusTrail6> statusTrail) {
 		this.statusTrail = statusTrail;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.022.03.03")
+	static public class Document {
+		@XmlElement(name = "SctiesSttlmTxAudtTrlRpt", required = true)
+		public SecuritiesSettlementTransactionAuditTrailReportV03 messageBody;
 	}
 }

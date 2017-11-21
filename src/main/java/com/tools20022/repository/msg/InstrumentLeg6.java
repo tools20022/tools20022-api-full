@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additionnal details related to the leg.
@@ -97,6 +101,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * InstrumentLeg1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstrumentLeg6", propOrder = {"legSide", "legSettlementType", "legSettlementDate", "legLastPrice", "legSettlementCurrency", "legOrderQuantity", "legForwardPoints", "legCalculatedCounterpartyCurrencyLastQuantity",
+		"legRiskAmount", "legValuationRate", "legValueDate", "legCurrency", "legSymbol", "legSecurityIdentification"})
 public class InstrumentLeg6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -732,6 +739,7 @@ public class InstrumentLeg6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LegSd", required = true)
 	public Side1Code getLegSide() {
 		return legSide;
 	}
@@ -740,6 +748,7 @@ public class InstrumentLeg6 {
 		this.legSide = legSide;
 	}
 
+	@XmlElement(name = "LegSttlmTp", required = true)
 	public SettlementDateCode getLegSettlementType() {
 		return legSettlementType;
 	}
@@ -748,6 +757,7 @@ public class InstrumentLeg6 {
 		this.legSettlementType = legSettlementType;
 	}
 
+	@XmlElement(name = "LegSttlmDt", required = true)
 	public ISODateTime getLegSettlementDate() {
 		return legSettlementDate;
 	}
@@ -756,6 +766,7 @@ public class InstrumentLeg6 {
 		this.legSettlementDate = legSettlementDate;
 	}
 
+	@XmlElement(name = "LegLastPric", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getLegLastPrice() {
 		return legLastPrice;
 	}
@@ -764,6 +775,7 @@ public class InstrumentLeg6 {
 		this.legLastPrice = legLastPrice;
 	}
 
+	@XmlElement(name = "LegSttlmCcy", required = true)
 	public CurrencyCode getLegSettlementCurrency() {
 		return legSettlementCurrency;
 	}
@@ -772,6 +784,7 @@ public class InstrumentLeg6 {
 		this.legSettlementCurrency = legSettlementCurrency;
 	}
 
+	@XmlElement(name = "LegOrdrQty", required = true)
 	public CurrencyAndAmount getLegOrderQuantity() {
 		return legOrderQuantity;
 	}
@@ -780,6 +793,7 @@ public class InstrumentLeg6 {
 		this.legOrderQuantity = legOrderQuantity;
 	}
 
+	@XmlElement(name = "LegFwdPts", required = true)
 	public DecimalNumber getLegForwardPoints() {
 		return legForwardPoints;
 	}
@@ -788,6 +802,7 @@ public class InstrumentLeg6 {
 		this.legForwardPoints = legForwardPoints;
 	}
 
+	@XmlElement(name = "LegClctdCtrPtyCcyLastQty", required = true)
 	public CurrencyAndAmount getLegCalculatedCounterpartyCurrencyLastQuantity() {
 		return legCalculatedCounterpartyCurrencyLastQuantity;
 	}
@@ -796,6 +811,7 @@ public class InstrumentLeg6 {
 		this.legCalculatedCounterpartyCurrencyLastQuantity = legCalculatedCounterpartyCurrencyLastQuantity;
 	}
 
+	@XmlElement(name = "LegRskAmt", required = true)
 	public ActiveCurrencyAndAmount getLegRiskAmount() {
 		return legRiskAmount;
 	}
@@ -804,6 +820,7 @@ public class InstrumentLeg6 {
 		this.legRiskAmount = legRiskAmount;
 	}
 
+	@XmlElement(name = "LegValtnRate", required = true)
 	public AgreedRate3 getLegValuationRate() {
 		return legValuationRate;
 	}
@@ -812,6 +829,7 @@ public class InstrumentLeg6 {
 		this.legValuationRate = legValuationRate;
 	}
 
+	@XmlElement(name = "LegValDt", required = true)
 	public ISODate getLegValueDate() {
 		return legValueDate;
 	}
@@ -820,6 +838,7 @@ public class InstrumentLeg6 {
 		this.legValueDate = legValueDate;
 	}
 
+	@XmlElement(name = "LegCcy", required = true)
 	public CurrencyCode getLegCurrency() {
 		return legCurrency;
 	}
@@ -828,6 +847,7 @@ public class InstrumentLeg6 {
 		this.legCurrency = legCurrency;
 	}
 
+	@XmlElement(name = "LegSymb", required = true)
 	public Max35Text getLegSymbol() {
 		return legSymbol;
 	}
@@ -836,6 +856,7 @@ public class InstrumentLeg6 {
 		this.legSymbol = legSymbol;
 	}
 
+	@XmlElement(name = "LegSctyId", required = true)
 	public SecurityIdentification18 getLegSecurityIdentification() {
 		return legSecurityIdentification;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment instrument between a debtor and a creditor, which flows through one
@@ -102,6 +106,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CreditTransfer6", propOrder = {"reference", "debtor", "debtorAccount", "debtorAgent", "debtorAgentAccount", "intermediaryAgent1", "intermediaryAgent1Account", "intermediaryAgent2", "intermediaryAgent2Account",
+		"creditorAgent", "creditorAgentAccount", "creditor", "creditorAccount"})
 public class CreditTransfer6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -891,6 +898,7 @@ public class CreditTransfer6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ref")
 	public Max35Text getReference() {
 		return reference;
 	}
@@ -899,6 +907,7 @@ public class CreditTransfer6 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "Dbtr")
 	public PartyIdentification2Choice getDebtor() {
 		return debtor;
 	}
@@ -907,6 +916,7 @@ public class CreditTransfer6 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAcct")
 	public AccountIdentificationAndName3 getDebtorAccount() {
 		return debtorAccount;
 	}
@@ -915,6 +925,7 @@ public class CreditTransfer6 {
 		this.debtorAccount = debtorAccount;
 	}
 
+	@XmlElement(name = "DbtrAgt")
 	public FinancialInstitutionIdentification3Choice getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -923,6 +934,7 @@ public class CreditTransfer6 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "DbtrAgtAcct")
 	public AccountIdentificationAndName3 getDebtorAgentAccount() {
 		return debtorAgentAccount;
 	}
@@ -931,6 +943,7 @@ public class CreditTransfer6 {
 		this.debtorAgentAccount = debtorAgentAccount;
 	}
 
+	@XmlElement(name = "IntrmyAgt1")
 	public FinancialInstitutionIdentification3Choice getIntermediaryAgent1() {
 		return intermediaryAgent1;
 	}
@@ -939,6 +952,7 @@ public class CreditTransfer6 {
 		this.intermediaryAgent1 = intermediaryAgent1;
 	}
 
+	@XmlElement(name = "IntrmyAgt1Acct")
 	public AccountIdentificationAndName3 getIntermediaryAgent1Account() {
 		return intermediaryAgent1Account;
 	}
@@ -947,6 +961,7 @@ public class CreditTransfer6 {
 		this.intermediaryAgent1Account = intermediaryAgent1Account;
 	}
 
+	@XmlElement(name = "IntrmyAgt2")
 	public FinancialInstitutionIdentification3Choice getIntermediaryAgent2() {
 		return intermediaryAgent2;
 	}
@@ -955,6 +970,7 @@ public class CreditTransfer6 {
 		this.intermediaryAgent2 = intermediaryAgent2;
 	}
 
+	@XmlElement(name = "IntrmyAgt2Acct")
 	public AccountIdentificationAndName3 getIntermediaryAgent2Account() {
 		return intermediaryAgent2Account;
 	}
@@ -963,6 +979,7 @@ public class CreditTransfer6 {
 		this.intermediaryAgent2Account = intermediaryAgent2Account;
 	}
 
+	@XmlElement(name = "CdtrAgt", required = true)
 	public FinancialInstitutionIdentification3Choice getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -971,6 +988,7 @@ public class CreditTransfer6 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "CdtrAgtAcct")
 	public AccountIdentificationAndName3 getCreditorAgentAccount() {
 		return creditorAgentAccount;
 	}
@@ -979,6 +997,7 @@ public class CreditTransfer6 {
 		this.creditorAgentAccount = creditorAgentAccount;
 	}
 
+	@XmlElement(name = "Cdtr")
 	public PartyIdentification2Choice getCreditor() {
 		return creditor;
 	}
@@ -987,6 +1006,7 @@ public class CreditTransfer6 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAcct", required = true)
 	public AccountIdentificationAndName3 getCreditorAccount() {
 		return creditorAccount;
 	}

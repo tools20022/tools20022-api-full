@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Document that a user must file with an authorized servicer for each contract
@@ -91,6 +95,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContractRegistration2", propOrder = {"contractRegistrationOpeningIdentification", "priority", "contract", "contractBalance", "paymentScheduleType", "previousRegistrationIdentification", "additionalInformation",
+		"attachment", "supplementaryData"})
 public class ContractRegistration2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -522,6 +529,7 @@ public class ContractRegistration2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CtrctRegnOpngId", required = true)
 	public Max35Text getContractRegistrationOpeningIdentification() {
 		return contractRegistrationOpeningIdentification;
 	}
@@ -530,6 +538,7 @@ public class ContractRegistration2 {
 		this.contractRegistrationOpeningIdentification = contractRegistrationOpeningIdentification;
 	}
 
+	@XmlElement(name = "Prty", required = true)
 	public Priority2Code getPriority() {
 		return priority;
 	}
@@ -538,6 +547,7 @@ public class ContractRegistration2 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "Ctrct", required = true)
 	public UnderlyingContract1Choice getContract() {
 		return contract;
 	}
@@ -546,6 +556,7 @@ public class ContractRegistration2 {
 		this.contract = contract;
 	}
 
+	@XmlElement(name = "CtrctBal")
 	public List<ContractBalance1> getContractBalance() {
 		return contractBalance;
 	}
@@ -554,6 +565,7 @@ public class ContractRegistration2 {
 		this.contractBalance = contractBalance;
 	}
 
+	@XmlElement(name = "PmtSchdlTp")
 	public PaymentScheduleType1Choice getPaymentScheduleType() {
 		return paymentScheduleType;
 	}
@@ -562,6 +574,7 @@ public class ContractRegistration2 {
 		this.paymentScheduleType = paymentScheduleType;
 	}
 
+	@XmlElement(name = "PrvsRegnId")
 	public List<DocumentIdentification22> getPreviousRegistrationIdentification() {
 		return previousRegistrationIdentification;
 	}
@@ -570,6 +583,7 @@ public class ContractRegistration2 {
 		this.previousRegistrationIdentification = previousRegistrationIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max1025Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -578,6 +592,7 @@ public class ContractRegistration2 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "Attchmnt")
 	public List<DocumentGeneralInformation3> getAttachment() {
 		return attachment;
 	}
@@ -586,6 +601,7 @@ public class ContractRegistration2 {
 		this.attachment = attachment;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

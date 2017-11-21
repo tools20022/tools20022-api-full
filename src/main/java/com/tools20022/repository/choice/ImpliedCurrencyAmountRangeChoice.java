@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.AmountRangeBoundary1;
 import com.tools20022.repository.msg.FromToAmountRange;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between ranges of values in which an amount is considered valid or a
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ImpliedCurrencyAmountRangeChoice", propOrder = {"fromAmount", "toAmount", "fromToAmount", "equalAmount", "notEqualAmount"})
 public class ImpliedCurrencyAmountRangeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -334,6 +340,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrAmt", required = true)
 	public AmountRangeBoundary1 getFromAmount() {
 		return fromAmount;
 	}
@@ -342,6 +349,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 		this.fromAmount = fromAmount;
 	}
 
+	@XmlElement(name = "ToAmt", required = true)
 	public AmountRangeBoundary1 getToAmount() {
 		return toAmount;
 	}
@@ -350,6 +358,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 		this.toAmount = toAmount;
 	}
 
+	@XmlElement(name = "FrToAmt", required = true)
 	public FromToAmountRange getFromToAmount() {
 		return fromToAmount;
 	}
@@ -358,6 +367,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 		this.fromToAmount = fromToAmount;
 	}
 
+	@XmlElement(name = "EQAmt", required = true)
 	public ImpliedCurrencyAndAmount getEqualAmount() {
 		return equalAmount;
 	}
@@ -366,6 +376,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 		this.equalAmount = equalAmount;
 	}
 
+	@XmlElement(name = "NEQAmt", required = true)
 	public ImpliedCurrencyAndAmount getNotEqualAmount() {
 		return notEqualAmount;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cancellation transaction between an acceptor and an acquirer.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorCancellationAdvice1", propOrder = {"environment", "context", "transaction"})
 public class AcceptorCancellationAdvice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -244,6 +250,7 @@ public class AcceptorCancellationAdvice1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment2 getEnvironment() {
 		return environment;
 	}
@@ -252,6 +259,7 @@ public class AcceptorCancellationAdvice1 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Cntxt")
 	public CardPaymentContext2 getContext() {
 		return context;
 	}
@@ -260,6 +268,7 @@ public class AcceptorCancellationAdvice1 {
 		this.context = context;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransaction7 getTransaction() {
 		return transaction;
 	}

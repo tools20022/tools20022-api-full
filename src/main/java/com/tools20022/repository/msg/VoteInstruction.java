@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.VoteInstructionRequest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the vote instructions.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the vote instructions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "VoteInstruction", propOrder = {"identification", "requestedExecutionDate", "voteExecutionConfirmation", "votePerResolution", "voteInstructionForMeetingResolution"})
 public class VoteInstruction {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -329,6 +335,7 @@ public class VoteInstruction {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -337,6 +344,7 @@ public class VoteInstruction {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "ReqdExctnDt")
 	public ISODateTime getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -345,6 +353,7 @@ public class VoteInstruction {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "VoteExctnConf", required = true)
 	public YesNoIndicator getVoteExecutionConfirmation() {
 		return voteExecutionConfirmation;
 	}
@@ -353,6 +362,7 @@ public class VoteInstruction {
 		this.voteExecutionConfirmation = voteExecutionConfirmation;
 	}
 
+	@XmlElement(name = "VotePerRsltn", required = true)
 	public VoteChoice getVotePerResolution() {
 		return votePerResolution;
 	}
@@ -361,6 +371,7 @@ public class VoteInstruction {
 		this.votePerResolution = votePerResolution;
 	}
 
+	@XmlElement(name = "VoteInstrForMtgRsltn")
 	public VoteInstructionForMeetingResolution getVoteInstructionForMeetingResolution() {
 		return voteInstructionForMeetingResolution;
 	}

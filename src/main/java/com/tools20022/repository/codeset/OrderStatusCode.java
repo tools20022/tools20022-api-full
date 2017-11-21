@@ -29,27 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus3Code
- * OrderStatus3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus2Code
- * OrderStatus2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus4Code
- * OrderStatus4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus5Code
- * OrderStatus5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus1Code
- * OrderStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus6Code
- * OrderStatus6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus7Code
- * OrderStatus7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus8Code
- * OrderStatus8Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmNew
@@ -131,6 +110,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * OrderStatusCode.mmCancelling}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmAlert
  * OrderStatusCode.mmAlert}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus3Code
+ * OrderStatus3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus2Code
+ * OrderStatus2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus4Code
+ * OrderStatus4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus5Code
+ * OrderStatus5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus1Code
+ * OrderStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus6Code
+ * OrderStatus6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus7Code
+ * OrderStatus7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus8Code
+ * OrderStatus8Code}</li>
  * </ul>
  * </li>
  * <li>

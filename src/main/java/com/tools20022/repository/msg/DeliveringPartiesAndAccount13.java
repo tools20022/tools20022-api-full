@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Chain of parties involved in the settlement of a transaction, including
@@ -97,6 +101,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * DeliveringPartiesAndAccount9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DeliveringPartiesAndAccount13", propOrder = {"delivererDetails", "deliverersCustodianDetails", "deliverersIntermediary1Details", "deliverersIntermediary2Details", "deliveringAgentDetails", "securitiesSettlementSystem",
+		"placeOfSettlementDetails"})
 public class DeliveringPartiesAndAccount13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -553,6 +560,7 @@ public class DeliveringPartiesAndAccount13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DlvrrDtls")
 	public InvestmentAccount55 getDelivererDetails() {
 		return delivererDetails;
 	}
@@ -561,6 +569,7 @@ public class DeliveringPartiesAndAccount13 {
 		this.delivererDetails = delivererDetails;
 	}
 
+	@XmlElement(name = "DlvrrsCtdnDtls")
 	public PartyIdentificationAndAccount124 getDeliverersCustodianDetails() {
 		return deliverersCustodianDetails;
 	}
@@ -569,6 +578,7 @@ public class DeliveringPartiesAndAccount13 {
 		this.deliverersCustodianDetails = deliverersCustodianDetails;
 	}
 
+	@XmlElement(name = "DlvrrsIntrmy1Dtls")
 	public PartyIdentificationAndAccount124 getDeliverersIntermediary1Details() {
 		return deliverersIntermediary1Details;
 	}
@@ -577,6 +587,7 @@ public class DeliveringPartiesAndAccount13 {
 		this.deliverersIntermediary1Details = deliverersIntermediary1Details;
 	}
 
+	@XmlElement(name = "DlvrrsIntrmy2Dtls")
 	public PartyIdentificationAndAccount124 getDeliverersIntermediary2Details() {
 		return deliverersIntermediary2Details;
 	}
@@ -585,6 +596,7 @@ public class DeliveringPartiesAndAccount13 {
 		this.deliverersIntermediary2Details = deliverersIntermediary2Details;
 	}
 
+	@XmlElement(name = "DlvrgAgtDtls", required = true)
 	public PartyIdentificationAndAccount124 getDeliveringAgentDetails() {
 		return deliveringAgentDetails;
 	}
@@ -593,6 +605,7 @@ public class DeliveringPartiesAndAccount13 {
 		this.deliveringAgentDetails = deliveringAgentDetails;
 	}
 
+	@XmlElement(name = "SctiesSttlmSys")
 	public Max35Text getSecuritiesSettlementSystem() {
 		return securitiesSettlementSystem;
 	}
@@ -601,6 +614,7 @@ public class DeliveringPartiesAndAccount13 {
 		this.securitiesSettlementSystem = securitiesSettlementSystem;
 	}
 
+	@XmlElement(name = "PlcOfSttlmDtls")
 	public PartyIdentification97 getPlaceOfSettlementDetails() {
 		return placeOfSettlementDetails;
 	}

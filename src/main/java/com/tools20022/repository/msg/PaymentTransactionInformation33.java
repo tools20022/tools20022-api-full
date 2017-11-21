@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide reference and status information on the
@@ -109,6 +113,10 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTransactionInformation33", propOrder = {"cancellationStatusIdentification", "resolvedCase", "originalGroupInformation", "originalInstructionIdentification", "originalEndToEndIdentification",
+		"originalTransactionIdentification", "originalClearingSystemReference", "transactionCancellationStatus", "cancellationStatusReasonInformation", "resolutionRelatedInformation", "originalInterbankSettlementAmount",
+		"originalInterbankSettlementDate", "assigner", "assignee", "originalTransactionReference"})
 public class PaymentTransactionInformation33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -877,6 +885,7 @@ public class PaymentTransactionInformation33 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlStsId")
 	public Max35Text getCancellationStatusIdentification() {
 		return cancellationStatusIdentification;
 	}
@@ -885,6 +894,7 @@ public class PaymentTransactionInformation33 {
 		this.cancellationStatusIdentification = cancellationStatusIdentification;
 	}
 
+	@XmlElement(name = "RslvdCase")
 	public Case2 getResolvedCase() {
 		return resolvedCase;
 	}
@@ -893,6 +903,7 @@ public class PaymentTransactionInformation33 {
 		this.resolvedCase = resolvedCase;
 	}
 
+	@XmlElement(name = "OrgnlGrpInf")
 	public OriginalGroupInformation3 getOriginalGroupInformation() {
 		return originalGroupInformation;
 	}
@@ -901,6 +912,7 @@ public class PaymentTransactionInformation33 {
 		this.originalGroupInformation = originalGroupInformation;
 	}
 
+	@XmlElement(name = "OrgnlInstrId")
 	public Max35Text getOriginalInstructionIdentification() {
 		return originalInstructionIdentification;
 	}
@@ -909,6 +921,7 @@ public class PaymentTransactionInformation33 {
 		this.originalInstructionIdentification = originalInstructionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlEndToEndId")
 	public Max35Text getOriginalEndToEndIdentification() {
 		return originalEndToEndIdentification;
 	}
@@ -917,6 +930,7 @@ public class PaymentTransactionInformation33 {
 		this.originalEndToEndIdentification = originalEndToEndIdentification;
 	}
 
+	@XmlElement(name = "OrgnlTxId")
 	public Max35Text getOriginalTransactionIdentification() {
 		return originalTransactionIdentification;
 	}
@@ -925,6 +939,7 @@ public class PaymentTransactionInformation33 {
 		this.originalTransactionIdentification = originalTransactionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlClrSysRef")
 	public Max35Text getOriginalClearingSystemReference() {
 		return originalClearingSystemReference;
 	}
@@ -933,6 +948,7 @@ public class PaymentTransactionInformation33 {
 		this.originalClearingSystemReference = originalClearingSystemReference;
 	}
 
+	@XmlElement(name = "TxCxlSts")
 	public CancellationIndividualStatus1Code getTransactionCancellationStatus() {
 		return transactionCancellationStatus;
 	}
@@ -941,6 +957,7 @@ public class PaymentTransactionInformation33 {
 		this.transactionCancellationStatus = transactionCancellationStatus;
 	}
 
+	@XmlElement(name = "CxlStsRsnInf")
 	public List<CancellationStatusReasonInformation1> getCancellationStatusReasonInformation() {
 		return cancellationStatusReasonInformation;
 	}
@@ -949,6 +966,7 @@ public class PaymentTransactionInformation33 {
 		this.cancellationStatusReasonInformation = cancellationStatusReasonInformation;
 	}
 
+	@XmlElement(name = "RsltnRltdInf")
 	public ResolutionInformation1 getResolutionRelatedInformation() {
 		return resolutionRelatedInformation;
 	}
@@ -957,6 +975,7 @@ public class PaymentTransactionInformation33 {
 		this.resolutionRelatedInformation = resolutionRelatedInformation;
 	}
 
+	@XmlElement(name = "OrgnlIntrBkSttlmAmt")
 	public ActiveOrHistoricCurrencyAndAmount getOriginalInterbankSettlementAmount() {
 		return originalInterbankSettlementAmount;
 	}
@@ -965,6 +984,7 @@ public class PaymentTransactionInformation33 {
 		this.originalInterbankSettlementAmount = originalInterbankSettlementAmount;
 	}
 
+	@XmlElement(name = "OrgnlIntrBkSttlmDt")
 	public ISODate getOriginalInterbankSettlementDate() {
 		return originalInterbankSettlementDate;
 	}
@@ -973,6 +993,7 @@ public class PaymentTransactionInformation33 {
 		this.originalInterbankSettlementDate = originalInterbankSettlementDate;
 	}
 
+	@XmlElement(name = "Assgnr")
 	public Party7Choice getAssigner() {
 		return assigner;
 	}
@@ -981,6 +1002,7 @@ public class PaymentTransactionInformation33 {
 		this.assigner = assigner;
 	}
 
+	@XmlElement(name = "Assgne")
 	public Party7Choice getAssignee() {
 		return assignee;
 	}
@@ -989,6 +1011,7 @@ public class PaymentTransactionInformation33 {
 		this.assignee = assignee;
 	}
 
+	@XmlElement(name = "OrgnlTxRef")
 	public OriginalTransactionReference13 getOriginalTransactionReference() {
 		return originalTransactionReference;
 	}

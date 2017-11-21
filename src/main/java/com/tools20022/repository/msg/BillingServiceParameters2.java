@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.ProductQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the detailed parameters a service to be billed.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the detailed parameters a service to be billed."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingServiceParameters2", propOrder = {"bankService", "volume", "unitPrice", "serviceChargeAmount"})
 public class BillingServiceParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -287,6 +293,7 @@ public class BillingServiceParameters2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BkSvc", required = true)
 	public BillingServiceIdentification2 getBankService() {
 		return bankService;
 	}
@@ -295,6 +302,7 @@ public class BillingServiceParameters2 {
 		this.bankService = bankService;
 	}
 
+	@XmlElement(name = "Vol")
 	public DecimalNumber getVolume() {
 		return volume;
 	}
@@ -303,6 +311,7 @@ public class BillingServiceParameters2 {
 		this.volume = volume;
 	}
 
+	@XmlElement(name = "UnitPric")
 	public AmountAndDirection34 getUnitPrice() {
 		return unitPrice;
 	}
@@ -311,6 +320,7 @@ public class BillingServiceParameters2 {
 		this.unitPrice = unitPrice;
 	}
 
+	@XmlElement(name = "SvcChrgAmt", required = true)
 	public AmountAndDirection34 getServiceChargeAmount() {
 		return serviceChargeAmount;
 	}

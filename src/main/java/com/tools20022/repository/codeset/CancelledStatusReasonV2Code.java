@@ -29,39 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason9Code
- * CancelledStatusReason9Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason13Code
- * CancelledStatusReason13Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason5Code
- * CancelledStatusReason5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason6Code
- * CancelledStatusReason6Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason11Code
- * CancelledStatusReason11Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason10Code
- * CancelledStatusReason10Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason12Code
- * CancelledStatusReason12Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code
- * CancelledStatusReason4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason7Code
- * CancelledStatusReason7Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason14Code
- * CancelledStatusReason14Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason15Code
- * CancelledStatusReason15Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -118,6 +85,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonV2Code#mmCancelledByThirdParty
  * CancelledStatusReasonV2Code.mmCancelledByThirdParty}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason9Code
+ * CancelledStatusReason9Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason13Code
+ * CancelledStatusReason13Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason5Code
+ * CancelledStatusReason5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason6Code
+ * CancelledStatusReason6Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason11Code
+ * CancelledStatusReason11Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason10Code
+ * CancelledStatusReason10Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason12Code
+ * CancelledStatusReason12Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code
+ * CancelledStatusReason4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancelledStatusReason7Code
+ * CancelledStatusReason7Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason14Code
+ * CancelledStatusReason14Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason15Code
+ * CancelledStatusReason15Code}</li>
  * </ul>
  * </li>
  * <li>

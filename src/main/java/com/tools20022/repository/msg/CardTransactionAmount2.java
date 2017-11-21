@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amounts of the transaction expressed within the terminal currency.
@@ -79,6 +83,8 @@ import java.util.List;
  * CardTransactionAmount1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransactionAmount2", propOrder = {"totalAmount", "cardholderBillingTransactionAmount", "detailedAmount"})
 public class CardTransactionAmount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -293,6 +299,7 @@ public class CardTransactionAmount2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlAmt", required = true)
 	public CurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -301,6 +308,7 @@ public class CardTransactionAmount2 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "CrdhldrBllgTxAmt")
 	public DetailedAmount8 getCardholderBillingTransactionAmount() {
 		return cardholderBillingTransactionAmount;
 	}
@@ -309,6 +317,7 @@ public class CardTransactionAmount2 {
 		this.cardholderBillingTransactionAmount = cardholderBillingTransactionAmount;
 	}
 
+	@XmlElement(name = "DtldAmt")
 	public List<DetailedAmount9> getDetailedAmount() {
 		return detailedAmount;
 	}

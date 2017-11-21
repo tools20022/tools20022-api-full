@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to registration of securities.
@@ -116,6 +120,8 @@ import java.util.List;
  * RegistrationParameters1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegistrationParameters4", propOrder = {"certificationIdentification", "certificationDateTime", "registrarAccount", "certificateNumber"})
 public class RegistrationParameters4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -360,6 +366,7 @@ public class RegistrationParameters4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CertfctnId")
 	public Max35Text getCertificationIdentification() {
 		return certificationIdentification;
 	}
@@ -368,6 +375,7 @@ public class RegistrationParameters4 {
 		this.certificationIdentification = certificationIdentification;
 	}
 
+	@XmlElement(name = "CertfctnDtTm")
 	public DateAndDateTimeChoice getCertificationDateTime() {
 		return certificationDateTime;
 	}
@@ -376,6 +384,7 @@ public class RegistrationParameters4 {
 		this.certificationDateTime = certificationDateTime;
 	}
 
+	@XmlElement(name = "RegarAcct")
 	public Max35Text getRegistrarAccount() {
 		return registrarAccount;
 	}
@@ -384,6 +393,7 @@ public class RegistrationParameters4 {
 		this.registrarAccount = registrarAccount;
 	}
 
+	@XmlElement(name = "CertNb")
 	public List<SecuritiesCertificate4> getCertificateNumber() {
 		return certificateNumber;
 	}

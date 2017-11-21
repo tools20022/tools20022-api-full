@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the billing rate.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the billing rate."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingRate1", propOrder = {"identification", "value", "daysInPeriod", "daysInYear"})
 public class BillingRate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -252,6 +258,7 @@ public class BillingRate1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public BillingRateIdentification1Choice getIdentification() {
 		return identification;
 	}
@@ -260,6 +267,7 @@ public class BillingRate1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public PercentageRate getValue() {
 		return value;
 	}
@@ -268,6 +276,7 @@ public class BillingRate1 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "DaysInPrd")
 	public Number getDaysInPeriod() {
 		return daysInPeriod;
 	}
@@ -276,6 +285,7 @@ public class BillingRate1 {
 		this.daysInPeriod = daysInPeriod;
 	}
 
+	@XmlElement(name = "DaysInYr")
 	public Number getDaysInYear() {
 		return daysInYear;
 	}

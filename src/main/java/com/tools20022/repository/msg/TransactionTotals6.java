@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional count which may be utilised for reconciliation.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransactionTotals4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionTotals6", propOrder = {"authorisation", "authorisationReversal", "inquiry", "inquiryReversal", "payments", "paymentReversal", "transfer", "transferReversal", "feeCollection"})
 public class TransactionTotals6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -473,6 +479,7 @@ public class TransactionTotals6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Authstn")
 	public Number getAuthorisation() {
 		return authorisation;
 	}
@@ -481,6 +488,7 @@ public class TransactionTotals6 {
 		this.authorisation = authorisation;
 	}
 
+	@XmlElement(name = "AuthstnRvsl")
 	public Number getAuthorisationReversal() {
 		return authorisationReversal;
 	}
@@ -489,6 +497,7 @@ public class TransactionTotals6 {
 		this.authorisationReversal = authorisationReversal;
 	}
 
+	@XmlElement(name = "Nqry")
 	public Number getInquiry() {
 		return inquiry;
 	}
@@ -497,6 +506,7 @@ public class TransactionTotals6 {
 		this.inquiry = inquiry;
 	}
 
+	@XmlElement(name = "NqryRvsl")
 	public Number getInquiryReversal() {
 		return inquiryReversal;
 	}
@@ -505,6 +515,7 @@ public class TransactionTotals6 {
 		this.inquiryReversal = inquiryReversal;
 	}
 
+	@XmlElement(name = "Pmts")
 	public Number getPayments() {
 		return payments;
 	}
@@ -513,6 +524,7 @@ public class TransactionTotals6 {
 		this.payments = payments;
 	}
 
+	@XmlElement(name = "PmtRvsl")
 	public Number getPaymentReversal() {
 		return paymentReversal;
 	}
@@ -521,6 +533,7 @@ public class TransactionTotals6 {
 		this.paymentReversal = paymentReversal;
 	}
 
+	@XmlElement(name = "Trf")
 	public Number getTransfer() {
 		return transfer;
 	}
@@ -529,6 +542,7 @@ public class TransactionTotals6 {
 		this.transfer = transfer;
 	}
 
+	@XmlElement(name = "TrfRvsl")
 	public Number getTransferReversal() {
 		return transferReversal;
 	}
@@ -537,6 +551,7 @@ public class TransactionTotals6 {
 		this.transferReversal = transferReversal;
 	}
 
+	@XmlElement(name = "FeeColltn")
 	public Number getFeeCollection() {
 		return feeCollection;
 	}

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CreditInstrument;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequeIssue#mmCheque
+ * ChequeIssue.mmCheque}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ChequeIssue#mmDeliveryMethod
+ * ChequeIssue.mmDeliveryMethod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequeIssue#mmDeliverTo
+ * ChequeIssue.mmDeliverTo}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequeIssue#mmPrintLocation
+ * ChequeIssue.mmPrintLocation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.CreditInstrument
+ * CreditInstrument}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -155,23 +173,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentInstrument20Choice.mmBankersDraftDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.CreditInstrument
- * CreditInstrument}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ChequeIssue#mmCheque
- * ChequeIssue.mmCheque}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ChequeIssue#mmDeliveryMethod
- * ChequeIssue.mmDeliveryMethod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ChequeIssue#mmDeliverTo
- * ChequeIssue.mmDeliverTo}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ChequeIssue#mmPrintLocation
- * ChequeIssue.mmPrintLocation}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -228,7 +229,7 @@ public class ChequeIssue extends CreditInstrument {
 	 */
 	public static final MMBusinessAssociationEnd mmCheque = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ChequeIssue.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ChequeIssue.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cheque";
@@ -251,10 +252,6 @@ public class ChequeIssue extends CreditInstrument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ChequeDeliveryCode
 	 * ChequeDeliveryCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ChequeIssue ChequeIssue}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -273,6 +270,10 @@ public class ChequeIssue extends CreditInstrument {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ChequeIssue ChequeIssue}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -287,7 +288,7 @@ public class ChequeIssue extends CreditInstrument {
 	public static final MMBusinessAttribute mmDeliveryMethod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ChequeDeliveryMethod1Choice.mmCode, ChequeDeliveryMethod1Choice.mmProprietary, Cheque5.mmDeliveryMethod, Cheque6.mmDeliveryMethod, Cheque7.mmDeliveryMethod);
-			elementContext_lazy = () -> ChequeIssue.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ChequeIssue.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliveryMethod";
@@ -295,6 +296,14 @@ public class ChequeIssue extends CreditInstrument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ChequeDeliveryCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ChequeIssue.class.getMethod("getDeliveryMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PostalAddress deliverTo;
@@ -315,10 +324,6 @@ public class ChequeIssue extends CreditInstrument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PostalAddress
 	 * PostalAddress}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ChequeIssue ChequeIssue}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -330,6 +335,10 @@ public class ChequeIssue extends CreditInstrument {
 	 * Cheque7.mmDeliverTo}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ChequeIssue ChequeIssue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -346,7 +355,7 @@ public class ChequeIssue extends CreditInstrument {
 	public static final MMBusinessAssociationEnd mmDeliverTo = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmDeliverTo, Cheque6.mmDeliverTo, Cheque7.mmDeliverTo);
-			elementContext_lazy = () -> ChequeIssue.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ChequeIssue.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliverTo";
@@ -368,10 +377,6 @@ public class ChequeIssue extends CreditInstrument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ChequeIssue ChequeIssue}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -383,6 +388,10 @@ public class ChequeIssue extends CreditInstrument {
 	 * Cheque7.mmPrintLocation}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ChequeIssue ChequeIssue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -397,7 +406,7 @@ public class ChequeIssue extends CreditInstrument {
 	public static final MMBusinessAttribute mmPrintLocation = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmPrintLocation, Cheque6.mmPrintLocation, Cheque7.mmPrintLocation);
-			elementContext_lazy = () -> ChequeIssue.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ChequeIssue.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PrintLocation";
@@ -405,6 +414,14 @@ public class ChequeIssue extends CreditInstrument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ChequeIssue.class.getMethod("getPrintLocation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -425,8 +442,14 @@ public class ChequeIssue extends CreditInstrument {
 						PaymentInstrument19Choice.mmChequeDetails, PaymentInstrument19Choice.mmBankersDraftDetails, PaymentInstrument21Choice.mmChequeDetails, PaymentInstrument21Choice.mmBankersDraftDetails,
 						PaymentInstrument20Choice.mmChequeDetails, PaymentInstrument20Choice.mmBankersDraftDetails);
 				superType_lazy = () -> CreditInstrument.mmObject();
-				element_lazy = () -> Arrays.asList(ChequeIssue.mmCheque, ChequeIssue.mmDeliveryMethod, ChequeIssue.mmDeliverTo, ChequeIssue.mmPrintLocation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ChequeIssue.mmCheque, com.tools20022.repository.entity.ChequeIssue.mmDeliveryMethod, com.tools20022.repository.entity.ChequeIssue.mmDeliverTo,
+						com.tools20022.repository.entity.ChequeIssue.mmPrintLocation);
 				derivationComponent_lazy = () -> Arrays.asList(Cheque4.mmObject(), ChequeDeliveryMethod1Choice.mmObject(), Cheque5.mmObject(), Cheque6.mmObject(), Cheque7.mmObject(), Cheque3.mmObject(), Cheque9.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ChequeIssue.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for the balance information.
@@ -78,6 +82,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubBalanceQuantity3Choice", propOrder = {"quantity", "proprietary", "quantityAndAvailability"})
 public class SubBalanceQuantity3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -284,6 +290,7 @@ public class SubBalanceQuantity3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity1Choice getQuantity() {
 		return quantity;
 	}
@@ -292,6 +299,7 @@ public class SubBalanceQuantity3Choice {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification22 getProprietary() {
 		return proprietary;
 	}
@@ -300,6 +308,7 @@ public class SubBalanceQuantity3Choice {
 		this.proprietary = proprietary;
 	}
 
+	@XmlElement(name = "QtyAndAvlbty", required = true)
 	public QuantityAndAvailability1 getQuantityAndAvailability() {
 		return quantityAndAvailability;
 	}

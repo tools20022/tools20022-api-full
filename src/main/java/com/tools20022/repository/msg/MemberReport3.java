@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SystemMemberRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports either on a member or a business error.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Reports either on a member or a business error."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MemberReport3", propOrder = {"memberIdentification", "memberOrError"})
 public class MemberReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class MemberReport3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MmbId", required = true)
 	public MemberIdentification2Choice getMemberIdentification() {
 		return memberIdentification;
 	}
@@ -185,6 +192,7 @@ public class MemberReport3 {
 		this.memberIdentification = memberIdentification;
 	}
 
+	@XmlElement(name = "MmbOrErr", required = true)
 	public MemberReportOrError2Choice getMemberOrError() {
 		return memberOrError;
 	}

@@ -69,6 +69,11 @@ public class LeadUnderwriter extends SecuritiesPartyRole {
 				definition = "Main party that is awarded the mandate by a borrower to raise money via a new issue. The lead manager guarantees the liquidity of the deal, arranges the syndication of the issue and undertakes a major underwriting and distribution commitment. Also called Lead Manager.";
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return LeadUnderwriter.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

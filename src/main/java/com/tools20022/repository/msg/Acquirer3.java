@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Acquirer involved in the card payment.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Acquirer2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Acquirer3", propOrder = {"identification", "parametersVersion"})
 public class Acquirer3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -197,6 +203,7 @@ public class Acquirer3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public GenericIdentification32 getIdentification() {
 		return identification;
 	}
@@ -205,6 +212,7 @@ public class Acquirer3 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "ParamsVrsn")
 	public Max35Text getParametersVersion() {
 		return parametersVersion;
 	}

@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.OriginalGroupHeader3;
 import com.tools20022.repository.msg.OriginalPaymentInstruction7;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.007.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
@@ -85,6 +84,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.007.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -108,6 +110,8 @@ import java.util.List;
  * CustomerPaymentReversalV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustomerPaymentReversalV04", propOrder = {"groupHeader", "originalGroupInformation", "originalPaymentInformationAndReversal", "supplementaryData"})
 public class CustomerPaymentReversalV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -156,6 +160,14 @@ public class CustomerPaymentReversalV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader56.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentReversalV04.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OriginalGroupHeader3 originalGroupInformation;
 	/**
@@ -203,6 +215,14 @@ public class CustomerPaymentReversalV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> OriginalGroupHeader3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentReversalV04.class.getMethod("getOriginalGroupInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<OriginalPaymentInstruction7> originalPaymentInformationAndReversal;
 	/**
@@ -248,6 +268,14 @@ public class CustomerPaymentReversalV04 {
 			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentReversalV05.mmOriginalPaymentInformationAndReversal);
 			minOccurs = 0;
 			complexType_lazy = () -> OriginalPaymentInstruction7.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentReversalV04.class.getMethod("getOriginalPaymentInformationAndReversal", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -295,6 +323,14 @@ public class CustomerPaymentReversalV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentReversalV04.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -309,8 +345,8 @@ public class CustomerPaymentReversalV04 {
 				rootElement = "Document";
 				xmlTag = "CstmrPmtRvsl";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentReversalV04.mmGroupHeader, CustomerPaymentReversalV04.mmOriginalGroupInformation, CustomerPaymentReversalV04.mmOriginalPaymentInformationAndReversal,
-						CustomerPaymentReversalV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentReversalV04.mmGroupHeader, com.tools20022.repository.area.pain.CustomerPaymentReversalV04.mmOriginalGroupInformation,
+						com.tools20022.repository.area.pain.CustomerPaymentReversalV04.mmOriginalPaymentInformationAndReversal, com.tools20022.repository.area.pain.CustomerPaymentReversalV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";
@@ -320,10 +356,16 @@ public class CustomerPaymentReversalV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CustomerPaymentReversalV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader56 getGroupHeader() {
 		return groupHeader;
 	}
@@ -332,6 +374,7 @@ public class CustomerPaymentReversalV04 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "OrgnlGrpInf", required = true)
 	public OriginalGroupHeader3 getOriginalGroupInformation() {
 		return originalGroupInformation;
 	}
@@ -340,6 +383,7 @@ public class CustomerPaymentReversalV04 {
 		this.originalGroupInformation = originalGroupInformation;
 	}
 
+	@XmlElement(name = "OrgnlPmtInfAndRvsl")
 	public List<OriginalPaymentInstruction7> getOriginalPaymentInformationAndReversal() {
 		return originalPaymentInformationAndReversal;
 	}
@@ -348,11 +392,18 @@ public class CustomerPaymentReversalV04 {
 		this.originalPaymentInformationAndReversal = originalPaymentInformationAndReversal;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.007.04.04")
+	static public class Document {
+		@XmlElement(name = "CstmrPmtRvsl", required = true)
+		public CustomerPaymentReversalV04 messageBody;
 	}
 }

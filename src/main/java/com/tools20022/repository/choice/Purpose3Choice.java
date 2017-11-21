@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for a settlement purpose.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.choice.Purpose2Choice Purpose2Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Purpose3Choice", propOrder = {"securitiesPurposeCode", "proprietary"})
 public class Purpose3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class Purpose3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesPurpCd", required = true)
 	public ExternalSecuritiesPurpose1Code getSecuritiesPurposeCode() {
 		return securitiesPurposeCode;
 	}
@@ -204,6 +211,7 @@ public class Purpose3Choice {
 		this.securitiesPurposeCode = securitiesPurposeCode;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification1 getProprietary() {
 		return proprietary;
 	}

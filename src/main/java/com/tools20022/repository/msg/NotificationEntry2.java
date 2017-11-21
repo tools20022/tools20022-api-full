@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide further means of referencing a payment
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NotificationEntry2", propOrder = {"identification", "endToEndIdentification", "amount", "expectedValueDate", "debtor", "debtorAgent", "intermediaryAgent"})
 public class NotificationEntry2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -448,6 +454,7 @@ public class NotificationEntry2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -456,6 +463,7 @@ public class NotificationEntry2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "EndToEndId")
 	public Max35Text getEndToEndIdentification() {
 		return endToEndIdentification;
 	}
@@ -464,6 +472,7 @@ public class NotificationEntry2 {
 		this.endToEndIdentification = endToEndIdentification;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -472,6 +481,7 @@ public class NotificationEntry2 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "XpctdValDt", required = true)
 	public ISODate getExpectedValueDate() {
 		return expectedValueDate;
 	}
@@ -480,6 +490,7 @@ public class NotificationEntry2 {
 		this.expectedValueDate = expectedValueDate;
 	}
 
+	@XmlElement(name = "Dbtr", required = true)
 	public PartyIdentification32 getDebtor() {
 		return debtor;
 	}
@@ -488,6 +499,7 @@ public class NotificationEntry2 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAgt")
 	public BranchAndFinancialInstitutionIdentification4 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -496,6 +508,7 @@ public class NotificationEntry2 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "IntrmyAgt")
 	public BranchAndFinancialInstitutionIdentification4 getIntermediaryAgent() {
 		return intermediaryAgent;
 	}

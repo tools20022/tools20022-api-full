@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.Amendment2;
 import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msg.PartyIdentification43;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The UndertakingAmendmentAdvice message is sent by an advising party to the
@@ -47,9 +49,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsrv.006.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
@@ -91,6 +90,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsrv.006.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -102,6 +104,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingAmendmentAdviceV01", propOrder = {"advisingParty", "secondAdvisingParty", "dateOfAdvice", "undertakingAmendmentAdviceDetails", "bankToBankInformation", "digitalSignature"})
 public class UndertakingAmendmentAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -140,6 +144,14 @@ public class UndertakingAmendmentAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification43.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingAmendmentAdviceV01.class.getMethod("getAdvisingParty", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification43 secondAdvisingParty;
 	/**
@@ -175,6 +187,14 @@ public class UndertakingAmendmentAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification43.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingAmendmentAdviceV01.class.getMethod("getSecondAdvisingParty", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ISODate dateOfAdvice;
 	/**
@@ -208,6 +228,14 @@ public class UndertakingAmendmentAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingAmendmentAdviceV01.class.getMethod("getDateOfAdvice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Amendment2 undertakingAmendmentAdviceDetails;
@@ -244,6 +272,14 @@ public class UndertakingAmendmentAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Amendment2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingAmendmentAdviceV01.class.getMethod("getUndertakingAmendmentAdviceDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Max2000Text> bankToBankInformation;
 	/**
@@ -278,6 +314,14 @@ public class UndertakingAmendmentAdviceV01 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingAmendmentAdviceV01.class.getMethod("getBankToBankInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyAndSignature2 digitalSignature;
@@ -314,6 +358,14 @@ public class UndertakingAmendmentAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingAmendmentAdviceV01.class.getMethod("getDigitalSignature", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -326,8 +378,9 @@ public class UndertakingAmendmentAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "UdrtkgAmdmntAdvc";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingAmendmentAdviceV01.mmAdvisingParty, UndertakingAmendmentAdviceV01.mmSecondAdvisingParty, UndertakingAmendmentAdviceV01.mmDateOfAdvice,
-						UndertakingAmendmentAdviceV01.mmUndertakingAmendmentAdviceDetails, UndertakingAmendmentAdviceV01.mmBankToBankInformation, UndertakingAmendmentAdviceV01.mmDigitalSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmAdvisingParty, com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmSecondAdvisingParty,
+						com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmDateOfAdvice, com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmUndertakingAmendmentAdviceDetails,
+						com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmBankToBankInformation, com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmDigitalSignature);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsrv";
@@ -337,10 +390,16 @@ public class UndertakingAmendmentAdviceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UndertakingAmendmentAdviceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AdvsgPty", required = true)
 	public PartyIdentification43 getAdvisingParty() {
 		return advisingParty;
 	}
@@ -349,6 +408,7 @@ public class UndertakingAmendmentAdviceV01 {
 		this.advisingParty = advisingParty;
 	}
 
+	@XmlElement(name = "ScndAdvsgPty")
 	public PartyIdentification43 getSecondAdvisingParty() {
 		return secondAdvisingParty;
 	}
@@ -357,6 +417,7 @@ public class UndertakingAmendmentAdviceV01 {
 		this.secondAdvisingParty = secondAdvisingParty;
 	}
 
+	@XmlElement(name = "DtOfAdvc", required = true)
 	public ISODate getDateOfAdvice() {
 		return dateOfAdvice;
 	}
@@ -365,6 +426,7 @@ public class UndertakingAmendmentAdviceV01 {
 		this.dateOfAdvice = dateOfAdvice;
 	}
 
+	@XmlElement(name = "UdrtkgAmdmntAdvcDtls", required = true)
 	public Amendment2 getUndertakingAmendmentAdviceDetails() {
 		return undertakingAmendmentAdviceDetails;
 	}
@@ -373,6 +435,7 @@ public class UndertakingAmendmentAdviceV01 {
 		this.undertakingAmendmentAdviceDetails = undertakingAmendmentAdviceDetails;
 	}
 
+	@XmlElement(name = "BkToBkInf")
 	public List<Max2000Text> getBankToBankInformation() {
 		return bankToBankInformation;
 	}
@@ -381,11 +444,18 @@ public class UndertakingAmendmentAdviceV01 {
 		this.bankToBankInformation = bankToBankInformation;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public PartyAndSignature2 getDigitalSignature() {
 		return digitalSignature;
 	}
 
 	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
 		this.digitalSignature = digitalSignature;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.006.01.01")
+	static public class Document {
+		@XmlElement(name = "UdrtkgAmdmntAdvc", required = true)
+		public UndertakingAmendmentAdviceV01 messageBody;
 	}
 }

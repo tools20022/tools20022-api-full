@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Select the type(s) of information to be retrieved about a registered
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccountInformationType1", propOrder = {"investmentAccount", "accountParties", "intermediaries", "investmentPlan", "cashSettlement", "serviceLevelAgreement"})
 public class InvestmentAccountInformationType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -351,6 +357,7 @@ public class InvestmentAccountInformationType1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InvstmtAcct", required = true)
 	public YesNoIndicator getInvestmentAccount() {
 		return investmentAccount;
 	}
@@ -359,6 +366,7 @@ public class InvestmentAccountInformationType1 {
 		this.investmentAccount = investmentAccount;
 	}
 
+	@XmlElement(name = "AcctPties", required = true)
 	public YesNoIndicator getAccountParties() {
 		return accountParties;
 	}
@@ -367,6 +375,7 @@ public class InvestmentAccountInformationType1 {
 		this.accountParties = accountParties;
 	}
 
+	@XmlElement(name = "Intrmies", required = true)
 	public YesNoIndicator getIntermediaries() {
 		return intermediaries;
 	}
@@ -375,6 +384,7 @@ public class InvestmentAccountInformationType1 {
 		this.intermediaries = intermediaries;
 	}
 
+	@XmlElement(name = "InvstmtPlan", required = true)
 	public YesNoIndicator getInvestmentPlan() {
 		return investmentPlan;
 	}
@@ -383,6 +393,7 @@ public class InvestmentAccountInformationType1 {
 		this.investmentPlan = investmentPlan;
 	}
 
+	@XmlElement(name = "CshSttlm", required = true)
 	public YesNoIndicator getCashSettlement() {
 		return cashSettlement;
 	}
@@ -391,6 +402,7 @@ public class InvestmentAccountInformationType1 {
 		this.cashSettlement = cashSettlement;
 	}
 
+	@XmlElement(name = "SvcLvlAgrmt", required = true)
 	public YesNoIndicator getServiceLevelAgreement() {
 		return serviceLevelAgreement;
 	}

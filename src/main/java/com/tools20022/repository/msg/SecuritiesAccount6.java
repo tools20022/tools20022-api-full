@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the securities account.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information about the securities account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesAccount6", propOrder = {"securityIdentification", "securitiesAccountIdentification", "accountOwnerIdentification", "safekeepingPlace", "registrationDetails"})
 public class SecuritiesAccount6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -335,6 +341,7 @@ public class SecuritiesAccount6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification7 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -343,6 +350,7 @@ public class SecuritiesAccount6 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "SctiesAcctId", required = true)
 	public Max35Text getSecuritiesAccountIdentification() {
 		return securitiesAccountIdentification;
 	}
@@ -351,6 +359,7 @@ public class SecuritiesAccount6 {
 		this.securitiesAccountIdentification = securitiesAccountIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnrId")
 	public PartyIdentification2Choice getAccountOwnerIdentification() {
 		return accountOwnerIdentification;
 	}
@@ -359,6 +368,7 @@ public class SecuritiesAccount6 {
 		this.accountOwnerIdentification = accountOwnerIdentification;
 	}
 
+	@XmlElement(name = "SfkpgPlc", required = true)
 	public PartyIdentification2Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -367,6 +377,7 @@ public class SecuritiesAccount6 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "RegnDtls")
 	public Max350Text getRegistrationDetails() {
 		return registrationDetails;
 	}

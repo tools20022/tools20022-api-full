@@ -37,24 +37,13 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndParties2
- * AccountAndParties2}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountPartyRole#mmAccount
+ * AccountPartyRole.mmAccount}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmPartyRole
- * Account.mmPartyRole}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -79,11 +68,22 @@ import java.util.List;
  * RepresentativeOfficer}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AccountPartyRole#mmAccount
- * AccountPartyRole.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndParties2
+ * AccountAndParties2}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmPartyRole
+ * Account.mmPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -121,11 +121,6 @@ public class AccountPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountPartyRole
-	 * AccountPartyRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -183,6 +178,11 @@ public class AccountPartyRole extends Role {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountPartyRole
+	 * AccountPartyRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -199,7 +199,7 @@ public class AccountPartyRole extends Role {
 					Intermediary2.mmAccount, Intermediary3.mmAccount, Intermediary21.mmAccount, Intermediary23.mmAccount, Intermediary22.mmAccount, PartyIdentification59.mmAccountNumber, Intermediary17.mmAccount, Intermediary18.mmAccount,
 					Intermediary24.mmAccount, Intermediary26.mmAccount, Intermediary25.mmAccount, Intermediary27.mmAccount, Intermediary32.mmAccount, Intermediary36.mmAccount, Intermediary34.mmAccount, Intermediary33.mmAccount,
 					Intermediary35.mmAccount, Intermediary37.mmAccount);
-			elementContext_lazy = () -> AccountPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
@@ -222,8 +222,13 @@ public class AccountPartyRole extends Role {
 				subType_lazy = () -> Arrays.asList(AccountOwnerRole.mmObject(), InvestmentAccountPartyRole.mmObject(), IntermediaryRole.mmObject(), AccountServicerRole.mmObject(), AccountResponsiblePartyRole.mmObject(),
 						TreasuryManager.mmObject(), AccountInformationRecipientRole.mmObject(), AuthorisedAccountModifier.mmObject(), RepresentativeOfficer.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(AccountPartyRole.mmAccount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountPartyRole.mmAccount);
 				derivationComponent_lazy = () -> Arrays.asList(AccountAndParties2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information about the CA event.
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides additional information about the CA event."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNarrative2", propOrder = {"informationConditions", "informationToComplyWith", "taxationConditions", "declarationDetails", "registrationDetails", "additionalText"})
 public class CorporateActionNarrative2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -399,6 +405,7 @@ public class CorporateActionNarrative2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InfConds")
 	public Max350Text getInformationConditions() {
 		return informationConditions;
 	}
@@ -407,6 +414,7 @@ public class CorporateActionNarrative2 {
 		this.informationConditions = informationConditions;
 	}
 
+	@XmlElement(name = "InfToCmplyWth")
 	public Max350Text getInformationToComplyWith() {
 		return informationToComplyWith;
 	}
@@ -415,6 +423,7 @@ public class CorporateActionNarrative2 {
 		this.informationToComplyWith = informationToComplyWith;
 	}
 
+	@XmlElement(name = "TaxtnConds")
 	public Max350Text getTaxationConditions() {
 		return taxationConditions;
 	}
@@ -423,6 +432,7 @@ public class CorporateActionNarrative2 {
 		this.taxationConditions = taxationConditions;
 	}
 
+	@XmlElement(name = "DclrtnDtls")
 	public Max350Text getDeclarationDetails() {
 		return declarationDetails;
 	}
@@ -431,6 +441,7 @@ public class CorporateActionNarrative2 {
 		this.declarationDetails = declarationDetails;
 	}
 
+	@XmlElement(name = "RegnDtls")
 	public Max350Text getRegistrationDetails() {
 		return registrationDetails;
 	}
@@ -439,6 +450,7 @@ public class CorporateActionNarrative2 {
 		this.registrationDetails = registrationDetails;
 	}
 
+	@XmlElement(name = "AddtlTxt")
 	public Max350Text getAdditionalText() {
 		return additionalText;
 	}

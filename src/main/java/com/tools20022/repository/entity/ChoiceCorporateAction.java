@@ -40,6 +40,18 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#mmCorporateActionOptionDefinition
+ * ChoiceCorporateAction.mmCorporateActionOptionDefinition}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.MandatoryCorporateAction
+ * MandatoryCorporateAction}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -47,18 +59,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmRelatedChoiceCorporateAction
  * CorporateActionOption.mmRelatedChoiceCorporateAction}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.MandatoryCorporateAction
- * MandatoryCorporateAction}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#mmCorporateActionOptionDefinition
- * ChoiceCorporateAction.mmCorporateActionOptionDefinition}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,11 +100,6 @@ public class ChoiceCorporateAction extends MandatoryCorporateAction {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption
 	 * CorporateActionOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction
-	 * ChoiceCorporateAction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -132,6 +127,11 @@ public class ChoiceCorporateAction extends MandatoryCorporateAction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction
+	 * ChoiceCorporateAction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -146,7 +146,7 @@ public class ChoiceCorporateAction extends MandatoryCorporateAction {
 		{
 			derivation_lazy = () -> Arrays.asList(InstructedBalanceDetails1.mmOptionDetails, InstructedBalanceDetails2.mmOptionDetails, InstructedBalanceDetails3.mmOptionDetails, InstructedBalanceDetails4.mmOptionDetails,
 					CorporateActionDeactivationInstruction1.mmOptionDetails, InstructedBalanceDetails5.mmOptionDetails, InstructedBalanceDetails6.mmOptionDetails);
-			elementContext_lazy = () -> ChoiceCorporateAction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionOptionDefinition";
@@ -167,7 +167,12 @@ public class ChoiceCorporateAction extends MandatoryCorporateAction {
 				definition = "Mandatory with choice corporate action event that involves a choice on behalf of the owner of the securities. The shareholders are given a chance to choose among several options.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionOption.mmRelatedChoiceCorporateAction);
 				superType_lazy = () -> MandatoryCorporateAction.mmObject();
-				element_lazy = () -> Arrays.asList(ChoiceCorporateAction.mmCorporateActionOptionDefinition);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ChoiceCorporateAction.mmCorporateActionOptionDefinition);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ChoiceCorporateAction.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies security date details.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityDate6", propOrder = {"postingDate", "availableDate", "pariPassuDate", "dividendRankingDate", "earliestPaymentDate", "paymentDate"})
 public class SecurityDate6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -440,6 +446,7 @@ public class SecurityDate6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PstngDt", required = true)
 	public DateAndDateTimeChoice getPostingDate() {
 		return postingDate;
 	}
@@ -448,6 +455,7 @@ public class SecurityDate6 {
 		this.postingDate = postingDate;
 	}
 
+	@XmlElement(name = "AvlblDt")
 	public DateFormat19Choice getAvailableDate() {
 		return availableDate;
 	}
@@ -456,6 +464,7 @@ public class SecurityDate6 {
 		this.availableDate = availableDate;
 	}
 
+	@XmlElement(name = "PrpssDt")
 	public DateFormat19Choice getPariPassuDate() {
 		return pariPassuDate;
 	}
@@ -464,6 +473,7 @@ public class SecurityDate6 {
 		this.pariPassuDate = pariPassuDate;
 	}
 
+	@XmlElement(name = "DvddRnkgDt")
 	public DateFormat19Choice getDividendRankingDate() {
 		return dividendRankingDate;
 	}
@@ -472,6 +482,7 @@ public class SecurityDate6 {
 		this.dividendRankingDate = dividendRankingDate;
 	}
 
+	@XmlElement(name = "EarlstPmtDt")
 	public DateFormat19Choice getEarliestPaymentDate() {
 		return earliestPaymentDate;
 	}
@@ -480,6 +491,7 @@ public class SecurityDate6 {
 		this.earliestPaymentDate = earliestPaymentDate;
 	}
 
+	@XmlElement(name = "PmtDt")
 	public DateFormat19Choice getPaymentDate() {
 		return paymentDate;
 	}

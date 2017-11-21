@@ -29,19 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ExposureType1Code
- * ExposureType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ExposureType2Code
- * ExposureType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ExposureType4Code
- * ExposureType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ExposureType5Code
- * ExposureType5Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -144,6 +131,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ExposureTypeCode#mmTreasuryBonds
  * ExposureTypeCode.mmTreasuryBonds}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExposureType1Code
+ * ExposureType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExposureType2Code
+ * ExposureType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExposureType4Code
+ * ExposureType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExposureType5Code
+ * ExposureType5Code}</li>
  * </ul>
  * </li>
  * <li>

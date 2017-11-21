@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BusinessDayCriteria1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the information that is searched either implicitly by recalling a
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BusinessDayCriteria2Choice", propOrder = {"queryName", "newCriteria"})
 public class BusinessDayCriteria2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -164,6 +170,7 @@ public class BusinessDayCriteria2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QryNm", required = true)
 	public Max35Text getQueryName() {
 		return queryName;
 	}
@@ -172,6 +179,7 @@ public class BusinessDayCriteria2Choice {
 		this.queryName = queryName;
 	}
 
+	@XmlElement(name = "NewCrit", required = true)
 	public BusinessDayCriteria1 getNewCriteria() {
 		return newCriteria;
 	}

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,6 +34,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Position#mmNetQuantity
+ * Position.mmNetQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Position#mmNetPositionAmount
+ * Position.mmNetPositionAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Position#mmSystem
+ * Position.mmSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Position#mmPrice
+ * Position.mmPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Position#mmSecuritiesSettlement
+ * Position.mmSecuritiesSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Position#mmInitialPositionAmount
+ * Position.mmInitialPositionAmount}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -57,26 +78,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPosition
  * SecuritiesSettlement.mmPosition}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Position#mmNetQuantity
- * Position.mmNetQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Position#mmNetPositionAmount
- * Position.mmNetPositionAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Position#mmSystem
- * Position.mmSystem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Position#mmPrice
- * Position.mmPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Position#mmSecuritiesSettlement
- * Position.mmSecuritiesSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Position#mmInitialPositionAmount
- * Position.mmInitialPositionAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -117,10 +118,6 @@ public class Position {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Position
-	 * Position}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -132,6 +129,10 @@ public class Position {
 	 * NetPosition3.mmNetQuantity}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Position
+	 * Position}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -148,7 +149,7 @@ public class Position {
 	public static final MMBusinessAssociationEnd mmNetQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetPosition1.mmNetQuantity, NetPosition2.mmNetQuantity, NetPosition3.mmNetQuantity);
-			elementContext_lazy = () -> Position.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Position.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetQuantity";
@@ -172,10 +173,6 @@ public class Position {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Position
-	 * Position}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -190,6 +187,10 @@ public class Position {
 	 * NetPosition3.mmNetPositionAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Position
+	 * Position}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -206,7 +207,7 @@ public class Position {
 	public static final MMBusinessAttribute mmNetPositionAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetPosition1.mmNetPositionAmount, NetPosition2.mmNetPositionAmount, NetPosition3.mmNetPositionAmount);
-			elementContext_lazy = () -> Position.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Position.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetPositionAmount";
@@ -214,6 +215,14 @@ public class Position {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Position.class.getMethod("getNetPositionAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected System system;
@@ -250,7 +259,7 @@ public class Position {
 	 */
 	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Position.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Position.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
@@ -280,10 +289,6 @@ public class Position {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Position
-	 * Position}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -295,6 +300,10 @@ public class Position {
 	 * SettlementObligation5.mmNetPositionPrice}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Position
+	 * Position}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -309,7 +318,7 @@ public class Position {
 	public static final MMBusinessAssociationEnd mmPrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementObligation3.mmNetPositionPrice, SettlementObligation5.mmNetPositionPrice);
-			elementContext_lazy = () -> Position.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Position.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Price";
@@ -357,7 +366,7 @@ public class Position {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesSettlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Position.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Position.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesSettlement";
@@ -380,10 +389,6 @@ public class Position {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Position
-	 * Position}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -399,6 +404,10 @@ public class Position {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Position
+	 * Position}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -413,7 +422,7 @@ public class Position {
 	public static final MMBusinessAttribute mmInitialPositionAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetPosition1.mmInitialPositionAmount, NetPosition2.mmInitialPositionAmount, NetPosition3.mmInitialPositionAmount);
-			elementContext_lazy = () -> Position.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Position.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InitialPositionAmount";
@@ -421,6 +430,14 @@ public class Position {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Position.class.getMethod("getInitialPositionAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -433,8 +450,14 @@ public class Position {
 				definition = "Specifies the status of trades and their value inside a system.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmRelatedPosition, com.tools20022.repository.entity.SecuritiesQuantity.mmPosition,
 						com.tools20022.repository.entity.System.mmTradesPosition, com.tools20022.repository.entity.SecuritiesSettlement.mmPosition);
-				element_lazy = () -> Arrays.asList(Position.mmNetQuantity, Position.mmNetPositionAmount, Position.mmSystem, Position.mmPrice, Position.mmSecuritiesSettlement, Position.mmInitialPositionAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Position.mmNetQuantity, com.tools20022.repository.entity.Position.mmNetPositionAmount, com.tools20022.repository.entity.Position.mmSystem,
+						com.tools20022.repository.entity.Position.mmPrice, com.tools20022.repository.entity.Position.mmSecuritiesSettlement, com.tools20022.repository.entity.Position.mmInitialPositionAmount);
 				derivationComponent_lazy = () -> Arrays.asList(NetPosition1.mmObject(), NetPosition2.mmObject(), NetPosition3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Position.class;
 			}
 		});
 		return mmObject_lazy.get();

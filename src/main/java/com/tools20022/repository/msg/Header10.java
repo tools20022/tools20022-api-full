@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics related to the protocol.
@@ -118,6 +122,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Header10", propOrder = {"messageFunction", "protocolVersion", "exchangeIdentification", "creationDateTime", "initiatingParty", "recipientParty", "traceability"})
 public class Header10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -547,6 +553,7 @@ public class Header10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgFctn", required = true)
 	public MessageFunction4Code getMessageFunction() {
 		return messageFunction;
 	}
@@ -555,6 +562,7 @@ public class Header10 {
 		this.messageFunction = messageFunction;
 	}
 
+	@XmlElement(name = "PrtcolVrsn", required = true)
 	public Max6Text getProtocolVersion() {
 		return protocolVersion;
 	}
@@ -563,6 +571,7 @@ public class Header10 {
 		this.protocolVersion = protocolVersion;
 	}
 
+	@XmlElement(name = "XchgId", required = true)
 	public Max3NumericText getExchangeIdentification() {
 		return exchangeIdentification;
 	}
@@ -571,6 +580,7 @@ public class Header10 {
 		this.exchangeIdentification = exchangeIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -579,6 +589,7 @@ public class Header10 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "InitgPty", required = true)
 	public GenericIdentification53 getInitiatingParty() {
 		return initiatingParty;
 	}
@@ -587,6 +598,7 @@ public class Header10 {
 		this.initiatingParty = initiatingParty;
 	}
 
+	@XmlElement(name = "RcptPty")
 	public GenericIdentification53 getRecipientParty() {
 		return recipientParty;
 	}
@@ -595,6 +607,7 @@ public class Header10 {
 		this.recipientParty = recipientParty;
 	}
 
+	@XmlElement(name = "Tracblt")
 	public List<Traceability2> getTraceability() {
 		return traceability;
 	}

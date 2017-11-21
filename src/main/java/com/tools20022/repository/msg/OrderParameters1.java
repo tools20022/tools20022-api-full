@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters of the transfer of a financial instrument.
@@ -114,6 +118,10 @@ import java.util.List;
  * definition} = "Parameters of the transfer of a financial instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderParameters1", propOrder = {"timeInForce", "type", "expiryDateAndTime", "effectiveDateAndTime", "handlingInstruction", "stockLocateRequiredIndicator", "moneyLaunderingStatus", "reportingIndicator", "priorityType",
+		"tradeTransactionConditionIndicator", "autoRoutingIndicator", "priceProtectionScope", "stopPrice", "targetStrategy", "complianceIdentification", "preTradeAnonymityIndicator", "goodTillBooking", "processCode",
+		"pegInstructionsDetails"})
 public class OrderParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1064,6 +1072,7 @@ public class OrderParameters1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TmInForce")
 	public ExecutionTimeLimit1Code getTimeInForce() {
 		return timeInForce;
 	}
@@ -1072,6 +1081,7 @@ public class OrderParameters1 {
 		this.timeInForce = timeInForce;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public OrderType1Code getType() {
 		return type;
 	}
@@ -1080,6 +1090,7 @@ public class OrderParameters1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XpryDtAndTm")
 	public ISODateTime getExpiryDateAndTime() {
 		return expiryDateAndTime;
 	}
@@ -1088,6 +1099,7 @@ public class OrderParameters1 {
 		this.expiryDateAndTime = expiryDateAndTime;
 	}
 
+	@XmlElement(name = "FctvDtAndTm")
 	public ISODateTime getEffectiveDateAndTime() {
 		return effectiveDateAndTime;
 	}
@@ -1096,6 +1108,7 @@ public class OrderParameters1 {
 		this.effectiveDateAndTime = effectiveDateAndTime;
 	}
 
+	@XmlElement(name = "HdlgInstr")
 	public TradingFloorOrderHandling1Code getHandlingInstruction() {
 		return handlingInstruction;
 	}
@@ -1104,6 +1117,7 @@ public class OrderParameters1 {
 		this.handlingInstruction = handlingInstruction;
 	}
 
+	@XmlElement(name = "StockLctReqrdInd")
 	public YesNoIndicator getStockLocateRequiredIndicator() {
 		return stockLocateRequiredIndicator;
 	}
@@ -1112,6 +1126,7 @@ public class OrderParameters1 {
 		this.stockLocateRequiredIndicator = stockLocateRequiredIndicator;
 	}
 
+	@XmlElement(name = "MnyLndrgSts")
 	public MoneyLaunderingCheck1Code getMoneyLaunderingStatus() {
 		return moneyLaunderingStatus;
 	}
@@ -1120,6 +1135,7 @@ public class OrderParameters1 {
 		this.moneyLaunderingStatus = moneyLaunderingStatus;
 	}
 
+	@XmlElement(name = "RptgInd")
 	public Reporting1Code getReportingIndicator() {
 		return reportingIndicator;
 	}
@@ -1128,6 +1144,7 @@ public class OrderParameters1 {
 		this.reportingIndicator = reportingIndicator;
 	}
 
+	@XmlElement(name = "PrtyTp")
 	public Priority1Code getPriorityType() {
 		return priorityType;
 	}
@@ -1136,6 +1153,7 @@ public class OrderParameters1 {
 		this.priorityType = priorityType;
 	}
 
+	@XmlElement(name = "TradTxCondInd")
 	public List<TradeTransactionCondition1Code> getTradeTransactionConditionIndicator() {
 		return tradeTransactionConditionIndicator;
 	}
@@ -1144,6 +1162,7 @@ public class OrderParameters1 {
 		this.tradeTransactionConditionIndicator = tradeTransactionConditionIndicator;
 	}
 
+	@XmlElement(name = "AutoRtgInd")
 	public AutoRouting1Code getAutoRoutingIndicator() {
 		return autoRoutingIndicator;
 	}
@@ -1152,6 +1171,7 @@ public class OrderParameters1 {
 		this.autoRoutingIndicator = autoRoutingIndicator;
 	}
 
+	@XmlElement(name = "PricPrtcnScp")
 	public PriceProtectionScope1Code getPriceProtectionScope() {
 		return priceProtectionScope;
 	}
@@ -1160,6 +1180,7 @@ public class OrderParameters1 {
 		this.priceProtectionScope = priceProtectionScope;
 	}
 
+	@XmlElement(name = "StopPric")
 	public Price1 getStopPrice() {
 		return stopPrice;
 	}
@@ -1168,6 +1189,7 @@ public class OrderParameters1 {
 		this.stopPrice = stopPrice;
 	}
 
+	@XmlElement(name = "TrgtStrtgy")
 	public Max35Text getTargetStrategy() {
 		return targetStrategy;
 	}
@@ -1176,6 +1198,7 @@ public class OrderParameters1 {
 		this.targetStrategy = targetStrategy;
 	}
 
+	@XmlElement(name = "CmplcId")
 	public Max35Text getComplianceIdentification() {
 		return complianceIdentification;
 	}
@@ -1184,6 +1207,7 @@ public class OrderParameters1 {
 		this.complianceIdentification = complianceIdentification;
 	}
 
+	@XmlElement(name = "PreTradAnmtyInd")
 	public YesNoIndicator getPreTradeAnonymityIndicator() {
 		return preTradeAnonymityIndicator;
 	}
@@ -1192,6 +1216,7 @@ public class OrderParameters1 {
 		this.preTradeAnonymityIndicator = preTradeAnonymityIndicator;
 	}
 
+	@XmlElement(name = "GoodTillBookg")
 	public GoodTillBookingInstruction1Code getGoodTillBooking() {
 		return goodTillBooking;
 	}
@@ -1200,6 +1225,7 @@ public class OrderParameters1 {
 		this.goodTillBooking = goodTillBooking;
 	}
 
+	@XmlElement(name = "PrcCd")
 	public CommissionType8Code getProcessCode() {
 		return processCode;
 	}
@@ -1208,6 +1234,7 @@ public class OrderParameters1 {
 		this.processCode = processCode;
 	}
 
+	@XmlElement(name = "PegInstrsDtls")
 	public PegOrderInstructions1 getPegInstructionsDetails() {
 		return pegInstructionsDetails;
 	}

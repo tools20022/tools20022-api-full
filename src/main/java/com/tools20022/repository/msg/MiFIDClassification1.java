@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details about the MIFID classification of the account owner.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details about the MIFID classification of the account owner."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MiFIDClassification1", propOrder = {"classification", "narrative"})
 public class MiFIDClassification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +165,7 @@ public class MiFIDClassification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Clssfctn", required = true)
 	public OrderOriginatorEligibility1Code getClassification() {
 		return classification;
 	}
@@ -167,6 +174,7 @@ public class MiFIDClassification1 {
 		this.classification = classification;
 	}
 
+	@XmlElement(name = "Nrrtv")
 	public Max350Text getNarrative() {
 		return narrative;
 	}

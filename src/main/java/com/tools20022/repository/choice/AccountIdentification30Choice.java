@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifier of an account, as assigned by the account servicer.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountIdentification1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountIdentification30Choice", propOrder = {"card", "MSISDN", "EMail", "IBAN", "BBAN", "UPIC", "domestic", "other"})
 public class AccountIdentification30Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -526,6 +532,7 @@ public class AccountIdentification30Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Card", required = true)
 	public Min8Max28NumericText getCard() {
 		return card;
 	}
@@ -534,6 +541,7 @@ public class AccountIdentification30Choice {
 		this.card = card;
 	}
 
+	@XmlElement(name = "MSISDN", required = true)
 	public Max16Text getMSISDN() {
 		return mSISDN;
 	}
@@ -542,6 +550,7 @@ public class AccountIdentification30Choice {
 		this.mSISDN = mSISDN;
 	}
 
+	@XmlElement(name = "EMail", required = true)
 	public Max35Text getEMail() {
 		return eMail;
 	}
@@ -550,6 +559,7 @@ public class AccountIdentification30Choice {
 		this.eMail = eMail;
 	}
 
+	@XmlElement(name = "IBAN", required = true)
 	public IBANIdentifier getIBAN() {
 		return iBAN;
 	}
@@ -558,6 +568,7 @@ public class AccountIdentification30Choice {
 		this.iBAN = iBAN;
 	}
 
+	@XmlElement(name = "BBAN", required = true)
 	public BBANIdentifier getBBAN() {
 		return bBAN;
 	}
@@ -566,6 +577,7 @@ public class AccountIdentification30Choice {
 		this.bBAN = bBAN;
 	}
 
+	@XmlElement(name = "UPIC", required = true)
 	public UPICIdentifier getUPIC() {
 		return uPIC;
 	}
@@ -574,6 +586,7 @@ public class AccountIdentification30Choice {
 		this.uPIC = uPIC;
 	}
 
+	@XmlElement(name = "Dmst", required = true)
 	public Max35Text getDomestic() {
 		return domestic;
 	}
@@ -582,6 +595,7 @@ public class AccountIdentification30Choice {
 		this.domestic = domestic;
 	}
 
+	@XmlElement(name = "Othr", required = true)
 	public Max35Text getOther() {
 		return other;
 	}

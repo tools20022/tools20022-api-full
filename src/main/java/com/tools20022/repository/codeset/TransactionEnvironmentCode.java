@@ -29,20 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment1Code
- * TransactionEnvironment1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment3Code
- * TransactionEnvironment3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment2Code
- * TransactionEnvironment2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -60,6 +46,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TransactionEnvironmentCode#mmOther
  * TransactionEnvironmentCode.mmOther}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment1Code
+ * TransactionEnvironment1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment3Code
+ * TransactionEnvironment3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment2Code
+ * TransactionEnvironment2Code}</li>
  * </ul>
  * </li>
  * <li>

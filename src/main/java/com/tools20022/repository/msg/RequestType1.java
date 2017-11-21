@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the original transaction number.
@@ -61,6 +65,8 @@ import java.util.List;
  * definition} = "Specifies the original transaction number."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestType1", propOrder = {"number", "type", "additionalInformation"})
 public class RequestType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -204,6 +210,7 @@ public class RequestType1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nb", required = true)
 	public Max35Text getNumber() {
 		return number;
 	}
@@ -212,6 +219,7 @@ public class RequestType1 {
 		this.number = number;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public List<TransactionRequestType1Code> getType() {
 		return type;
 	}
@@ -220,6 +228,7 @@ public class RequestType1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max500Text getAdditionalInformation() {
 		return additionalInformation;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the type of account and the assets to be transferred.
@@ -81,6 +85,8 @@ import java.util.List;
  * "Describes the type of account and the assets to be transferred."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PEPISATransfer2", propOrder = {"transferConfirmationIdentification", "transferInstructionReference", "tradeDate", "actualTransferDate", "ISA", "PEP", "assets"})
 public class PEPISATransfer2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -469,6 +475,7 @@ public class PEPISATransfer2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrfConfId", required = true)
 	public Max35Text getTransferConfirmationIdentification() {
 		return transferConfirmationIdentification;
 	}
@@ -477,6 +484,7 @@ public class PEPISATransfer2 {
 		this.transferConfirmationIdentification = transferConfirmationIdentification;
 	}
 
+	@XmlElement(name = "TrfInstrRef", required = true)
 	public Max35Text getTransferInstructionReference() {
 		return transferInstructionReference;
 	}
@@ -485,6 +493,7 @@ public class PEPISATransfer2 {
 		this.transferInstructionReference = transferInstructionReference;
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
@@ -493,6 +502,7 @@ public class PEPISATransfer2 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "ActlTrfDt", required = true)
 	public ISODate getActualTransferDate() {
 		return actualTransferDate;
 	}
@@ -501,6 +511,7 @@ public class PEPISATransfer2 {
 		this.actualTransferDate = actualTransferDate;
 	}
 
+	@XmlElement(name = "ISA", required = true)
 	public ISAYearsOfIssue getISA() {
 		return iSA;
 	}
@@ -509,6 +520,7 @@ public class PEPISATransfer2 {
 		this.iSA = iSA;
 	}
 
+	@XmlElement(name = "PEP", required = true)
 	public PreviousYearChoice getPEP() {
 		return pEP;
 	}
@@ -517,6 +529,7 @@ public class PEPISATransfer2 {
 		this.pEP = pEP;
 	}
 
+	@XmlElement(name = "Assts", required = true)
 	public List<Unit2> getAssets() {
 		return assets;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action details periods
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionPeriodSD1", propOrder = {"placeAndName", "DTCReorganisationDepositPeriod", "DTCChillPeriodForDepositoryDelivery"})
 public class CorporateActionPeriodSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -216,6 +222,7 @@ public class CorporateActionPeriodSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -224,6 +231,7 @@ public class CorporateActionPeriodSD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "DTCReorgDpstPrd")
 	public Period3 getDTCReorganisationDepositPeriod() {
 		return dTCReorganisationDepositPeriod;
 	}
@@ -232,6 +240,7 @@ public class CorporateActionPeriodSD1 {
 		this.dTCReorganisationDepositPeriod = dTCReorganisationDepositPeriod;
 	}
 
+	@XmlElement(name = "DTCChillPrdForDpstryDlvry")
 	public Period3 getDTCChillPeriodForDepositoryDelivery() {
 		return dTCChillPeriodForDepositoryDelivery;
 	}

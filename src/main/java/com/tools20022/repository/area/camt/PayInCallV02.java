@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.ReportData5;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The PayInCall message is sent by a central settlement system to request
@@ -38,9 +40,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.061.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
@@ -79,6 +78,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.061.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -90,6 +92,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PayInCallV02", propOrder = {"partyIdentification", "reportData", "settlementSessionIdentifier", "supplementaryData"})
 public class PayInCallV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -127,6 +131,14 @@ public class PayInCallV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PayInCallV02.class.getMethod("getPartyIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ReportData5 reportData;
 	/**
@@ -161,6 +173,14 @@ public class PayInCallV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ReportData5.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PayInCallV02.class.getMethod("getReportData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Exact4AlphaNumericText settlementSessionIdentifier;
@@ -200,6 +220,14 @@ public class PayInCallV02 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PayInCallV02.class.getMethod("getSettlementSessionIdentifier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -237,6 +265,14 @@ public class PayInCallV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PayInCallV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -249,7 +285,8 @@ public class PayInCallV02 {
 				rootElement = "Document";
 				xmlTag = "PayInCall";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PayInCallV02.mmPartyIdentification, PayInCallV02.mmReportData, PayInCallV02.mmSettlementSessionIdentifier, PayInCallV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInCallV02.mmPartyIdentification, com.tools20022.repository.area.camt.PayInCallV02.mmReportData,
+						com.tools20022.repository.area.camt.PayInCallV02.mmSettlementSessionIdentifier, com.tools20022.repository.area.camt.PayInCallV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -259,10 +296,16 @@ public class PayInCallV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PayInCallV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification73Choice getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -271,6 +314,7 @@ public class PayInCallV02 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "RptData", required = true)
 	public ReportData5 getReportData() {
 		return reportData;
 	}
@@ -279,6 +323,7 @@ public class PayInCallV02 {
 		this.reportData = reportData;
 	}
 
+	@XmlElement(name = "SttlmSsnIdr")
 	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
 		return settlementSessionIdentifier;
 	}
@@ -287,11 +332,18 @@ public class PayInCallV02 {
 		this.settlementSessionIdentifier = settlementSessionIdentifier;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.061.02.02")
+	static public class Document {
+		@XmlElement(name = "PayInCall", required = true)
+		public PayInCallV02 messageBody;
 	}
 }

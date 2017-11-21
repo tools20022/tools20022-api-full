@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max50Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the hash data for the file signature.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the hash data for the file signature."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelSignatureHash1", propOrder = {"hash", "algorithm"})
 public class IsabelSignatureHash1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class IsabelSignatureHash1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hash", required = true)
 	public Max50Binary getHash() {
 		return hash;
 	}
@@ -171,6 +178,7 @@ public class IsabelSignatureHash1 {
 		this.hash = hash;
 	}
 
+	@XmlElement(name = "Algo", required = true)
 	public Max105Text getAlgorithm() {
 		return algorithm;
 	}

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.RolePlayer;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,6 +39,66 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.System#mmSystemIdentification
+ * System.mmSystemIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmLocation
+ * System.mmLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmReconciliation
+ * System.mmReconciliation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmAvailability
+ * System.mmAvailability}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmEvent
+ * System.mmEvent}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmPartyRole
+ * System.mmPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmStatus
+ * System.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.System#mmSystemGeneratedInformation
+ * System.mmSystemGeneratedInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.System#mmVersionValidityPeriod
+ * System.mmVersionValidityPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmSystemDateTime
+ * System.mmSystemDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmNegotiation
+ * System.mmNegotiation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmAccount
+ * System.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmTrade
+ * System.mmTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmAssessment
+ * System.mmAssessment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmTradesPosition
+ * System.mmTradesPosition}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmSystemLanguage
+ * System.mmSystemLanguage}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ClearingSystem
+ * ClearingSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesSettlementSystem
+ * SecuritiesSettlementSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PointOfInteraction
+ * PointOfInteraction}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TerminalManagementSystem
+ * TerminalManagementSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MatchingSystem
+ * MatchingSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TreasurySettlementSystem
+ * TreasurySettlementSystem}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.RolePlayer
+ * RolePlayer}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -118,66 +179,6 @@ import java.util.List;
  * Transaction33.mmPaymentFrom}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.RolePlayer
- * RolePlayer}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ClearingSystem
- * ClearingSystem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesSettlementSystem
- * SecuritiesSettlementSystem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PointOfInteraction
- * PointOfInteraction}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TerminalManagementSystem
- * TerminalManagementSystem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MatchingSystem
- * MatchingSystem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TreasurySettlementSystem
- * TreasurySettlementSystem}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.System#mmSystemIdentification
- * System.mmSystemIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmLocation
- * System.mmLocation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmReconciliation
- * System.mmReconciliation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmAvailability
- * System.mmAvailability}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmEvent
- * System.mmEvent}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmPartyRole
- * System.mmPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmStatus
- * System.mmStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.System#mmSystemGeneratedInformation
- * System.mmSystemGeneratedInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.System#mmVersionValidityPeriod
- * System.mmVersionValidityPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmSystemDateTime
- * System.mmSystemDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmNegotiation
- * System.mmNegotiation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmAccount
- * System.mmAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmTrade
- * System.mmTrade}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmAssessment
- * System.mmAssessment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmTradesPosition
- * System.mmTradesPosition}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmSystemLanguage
- * System.mmSystemLanguage}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -217,10 +218,6 @@ public class System extends RolePlayer {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
 	 * SystemIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.System
-	 * System}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -314,6 +311,10 @@ public class System extends RolePlayer {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.System
+	 * System}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -334,7 +335,7 @@ public class System extends RolePlayer {
 					AcquirerHostConfiguration3.mmHostIdentification, HostCommunicationParameter3.mmHostIdentification, ATMCompletionAcknowledgement1.mmATM, CardAcceptorTerminal1.mmIdentification,
 					AcceptorConfiguration5.mmTerminalManagerIdentification, HostCommunicationParameter4.mmHostIdentification, ATMCompletionAcknowledgement2.mmATM, AcceptorConfiguration6.mmTerminalManagerIdentification,
 					AcquirerHostConfiguration4.mmHostIdentification);
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemIdentification";
@@ -363,10 +364,6 @@ public class System extends RolePlayer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Location Location}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.System
-	 * System}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -387,6 +384,10 @@ public class System extends RolePlayer {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.System
+	 * System}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -401,7 +402,7 @@ public class System extends RolePlayer {
 	public static final MMBusinessAssociationEnd mmLocation = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SystemSearch2.mmCountry, AutomatedTellerMachine3.mmLocation, AutomatedTellerMachine4.mmLocation, CardAcceptorTerminal1.mmLocation, AutomatedTellerMachine10.mmLocation);
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Location";
@@ -448,7 +449,7 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmReconciliation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reconciliation";
@@ -478,10 +479,6 @@ public class System extends RolePlayer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SystemAvailability
 	 * SystemAvailability}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.System
-	 * System}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -490,6 +487,10 @@ public class System extends RolePlayer {
 	 * ParticipantAndStatus1.mmServiceAvailability}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.System
+	 * System}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -505,7 +506,7 @@ public class System extends RolePlayer {
 	public static final MMBusinessAssociationEnd mmAvailability = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ParticipantAndStatus1.mmServiceAvailability);
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Availability";
@@ -559,7 +560,7 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Event";
@@ -589,10 +590,6 @@ public class System extends RolePlayer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SystemPartyRole
 	 * SystemPartyRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.System
-	 * System}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -641,6 +638,10 @@ public class System extends RolePlayer {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.System
+	 * System}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -656,7 +657,7 @@ public class System extends RolePlayer {
 			derivation_lazy = () -> Arrays.asList(IntraBalanceCancellation2.mmAccountOwner, IntraBalanceCancellation1.mmAccountOwner, IntraBalanceMovement1.mmAccountOwner, IntraBalanceMovements1.mmAccountOwner,
 					IntraPositionMovement1.mmAccountOwner, IntraPositionMovements1.mmAccountOwner, IntraPositionQueryCriteria1.mmSafekeepingAccountOwner, IntraBalanceModification2.mmAccountOwner, IntraBalanceModification1.mmAccountOwner,
 					IntraBalanceQueryCriteria3.mmCashAccountOwner, IntraPositionModification2.mmAccountOwner, IntraPositionModification1.mmAccountOwner, IntraPositionCancellation2.mmAccountOwner, IntraPositionCancellation1.mmAccountOwner);
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
@@ -685,10 +686,6 @@ public class System extends RolePlayer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SystemStatus
 	 * SystemStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.System
-	 * System}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -697,6 +694,10 @@ public class System extends RolePlayer {
 	 * ATMCommandParameters1Choice.mmATMRequiredGlobalStatus}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.System
+	 * System}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -711,7 +712,7 @@ public class System extends RolePlayer {
 	public static final MMBusinessAssociationEnd mmStatus = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ATMCommandParameters1Choice.mmATMRequiredGlobalStatus);
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
@@ -759,7 +760,7 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmSystemGeneratedInformation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemGeneratedInformation";
@@ -809,7 +810,7 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmVersionValidityPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VersionValidityPeriod";
@@ -848,7 +849,7 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAttribute mmSystemDateTime = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemDateTime";
@@ -856,6 +857,14 @@ public class System extends RolePlayer {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return System.class.getMethod("getSystemDateTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Negotiation negotiation;
@@ -893,7 +902,7 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmNegotiation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Negotiation";
@@ -939,7 +948,7 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
@@ -984,7 +993,7 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trade";
@@ -1031,7 +1040,7 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmAssessment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Assessment";
@@ -1078,7 +1087,7 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmTradesPosition = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradesPosition";
@@ -1118,7 +1127,7 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAttribute mmSystemLanguage = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> System.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemLanguage";
@@ -1126,6 +1135,14 @@ public class System extends RolePlayer {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISO2ALanguageCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return System.class.getMethod("getSystemLanguage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1146,10 +1163,18 @@ public class System extends RolePlayer {
 				subType_lazy = () -> Arrays.asList(ClearingSystem.mmObject(), SecuritiesSettlementSystem.mmObject(), PointOfInteraction.mmObject(), TerminalManagementSystem.mmObject(), MatchingSystem.mmObject(),
 						TreasurySettlementSystem.mmObject());
 				superType_lazy = () -> RolePlayer.mmObject();
-				element_lazy = () -> Arrays.asList(System.mmSystemIdentification, System.mmLocation, System.mmReconciliation, System.mmAvailability, System.mmEvent, System.mmPartyRole, System.mmStatus, System.mmSystemGeneratedInformation,
-						System.mmVersionValidityPeriod, System.mmSystemDateTime, System.mmNegotiation, System.mmAccount, System.mmTrade, System.mmAssessment, System.mmTradesPosition, System.mmSystemLanguage);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.System.mmSystemIdentification, com.tools20022.repository.entity.System.mmLocation, com.tools20022.repository.entity.System.mmReconciliation,
+						com.tools20022.repository.entity.System.mmAvailability, com.tools20022.repository.entity.System.mmEvent, com.tools20022.repository.entity.System.mmPartyRole, com.tools20022.repository.entity.System.mmStatus,
+						com.tools20022.repository.entity.System.mmSystemGeneratedInformation, com.tools20022.repository.entity.System.mmVersionValidityPeriod, com.tools20022.repository.entity.System.mmSystemDateTime,
+						com.tools20022.repository.entity.System.mmNegotiation, com.tools20022.repository.entity.System.mmAccount, com.tools20022.repository.entity.System.mmTrade, com.tools20022.repository.entity.System.mmAssessment,
+						com.tools20022.repository.entity.System.mmTradesPosition, com.tools20022.repository.entity.System.mmSystemLanguage);
 				derivationComponent_lazy = () -> Arrays.asList(SystemDetails1.mmObject(), SystemSearch2.mmObject(), SystemSearch3.mmObject(), SystemAvailabilityAndEventsDetails1.mmObject(), SystemAvailabilityAndEvents1.mmObject(),
 						SystemDetails2.mmObject(), System1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return System.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Portfolio1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -39,6 +40,30 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmValuation
+ * Portfolio.mmValuation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmTransfer
+ * Portfolio.mmTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Portfolio#mmAssetDescription
+ * Portfolio.mmAssetDescription}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmName
+ * Portfolio.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmIdentification
+ * Portfolio.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmStrategy
+ * Portfolio.mmStrategy}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmBenchmark
+ * Portfolio.mmBenchmark}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmInvestmentPlan
+ * Portfolio.mmInvestmentPlan}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmAccount
+ * Portfolio.mmAccount}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -93,30 +118,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.choice.ISAPortfolio3Choice#mmPortfolio
  * ISAPortfolio3Choice.mmPortfolio}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmValuation
- * Portfolio.mmValuation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmTransfer
- * Portfolio.mmTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Portfolio#mmAssetDescription
- * Portfolio.mmAssetDescription}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmName
- * Portfolio.mmName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmIdentification
- * Portfolio.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmStrategy
- * Portfolio.mmStrategy}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmBenchmark
- * Portfolio.mmBenchmark}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmInvestmentPlan
- * Portfolio.mmInvestmentPlan}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmAccount
- * Portfolio.mmAccount}</li>
  * </ul>
  * </li>
  * <li>
@@ -174,7 +175,7 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAssociationEnd mmValuation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Portfolio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Valuation";
@@ -204,10 +205,6 @@ public class Portfolio {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Portfolio
-	 * Portfolio}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -223,6 +220,10 @@ public class Portfolio {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Portfolio
+	 * Portfolio}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -236,7 +237,7 @@ public class Portfolio {
 	public static final MMBusinessAssociationEnd mmTransfer = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ISAPortfolio1Choice.mmISA, ISAPortfolio2Choice.mmISA, ISAPortfolio3Choice.mmISA);
-			elementContext_lazy = () -> Portfolio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Transfer";
@@ -284,7 +285,7 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAssociationEnd mmAssetDescription = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Portfolio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssetDescription";
@@ -322,7 +323,7 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Portfolio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Name";
@@ -330,6 +331,14 @@ public class Portfolio {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Portfolio.class.getMethod("getName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text identification;
@@ -359,7 +368,7 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Portfolio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -367,6 +376,14 @@ public class Portfolio {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Portfolio.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.PortfolioStrategy> strategy;
@@ -404,7 +421,7 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAssociationEnd mmStrategy = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Portfolio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Strategy";
@@ -450,7 +467,7 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAssociationEnd mmBenchmark = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Portfolio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Benchmark";
@@ -496,7 +513,7 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentPlan = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Portfolio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentPlan";
@@ -543,7 +560,7 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Portfolio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
@@ -567,9 +584,15 @@ public class Portfolio {
 						com.tools20022.repository.entity.PortfolioTransfer.mmTransferredPortfolio, com.tools20022.repository.entity.PortfolioValuation.mmPortfolio, com.tools20022.repository.entity.PortfolioStrategy.mmPortfolio,
 						com.tools20022.repository.entity.PortfolioBenchmark.mmPortfolio);
 				derivationElement_lazy = () -> Arrays.asList(Portfolio1.mmPortfolioInformation, ISAPortfolio1Choice.mmPortfolio, ISAPortfolio2Choice.mmPortfolio, ISAPortfolio3Choice.mmPortfolio);
-				element_lazy = () -> Arrays.asList(Portfolio.mmValuation, Portfolio.mmTransfer, Portfolio.mmAssetDescription, Portfolio.mmName, Portfolio.mmIdentification, Portfolio.mmStrategy, Portfolio.mmBenchmark,
-						Portfolio.mmInvestmentPlan, Portfolio.mmAccount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Portfolio.mmValuation, com.tools20022.repository.entity.Portfolio.mmTransfer, com.tools20022.repository.entity.Portfolio.mmAssetDescription,
+						com.tools20022.repository.entity.Portfolio.mmName, com.tools20022.repository.entity.Portfolio.mmIdentification, com.tools20022.repository.entity.Portfolio.mmStrategy,
+						com.tools20022.repository.entity.Portfolio.mmBenchmark, com.tools20022.repository.entity.Portfolio.mmInvestmentPlan, com.tools20022.repository.entity.Portfolio.mmAccount);
 				derivationComponent_lazy = () -> Arrays.asList(Portfolio1.mmObject(), ISAPortfolio1Choice.mmObject(), ISAPortfolio2Choice.mmObject(), ISAPortfolio3Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Portfolio.class;
 			}
 		});
 		return mmObject_lazy.get();

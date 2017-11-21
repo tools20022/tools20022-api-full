@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Overall holding position, in a single financial instrument, held in a
@@ -69,6 +73,8 @@ import java.util.List;
  * AggregateHoldingBalance1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AggregateHoldingBalance3", propOrder = {"balanceForAccount", "agent"})
 public class AggregateHoldingBalance3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class AggregateHoldingBalance3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BalForAcct", required = true)
 	public List<AggregateHoldingBalance1> getBalanceForAccount() {
 		return balanceForAccount;
 	}
@@ -193,6 +200,7 @@ public class AggregateHoldingBalance3 {
 		this.balanceForAccount = balanceForAccount;
 	}
 
+	@XmlElement(name = "Agt")
 	public List<Intermediary29> getAgent() {
 		return agent;
 	}

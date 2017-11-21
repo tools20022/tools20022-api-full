@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information specifying the Mandate.
@@ -108,6 +112,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OperationMandate1", propOrder = {"identification", "requiredSignatureNumber", "signatureOrderIndicator", "mandateHolder", "bankOperation", "startDate", "endDate"})
 public class OperationMandate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -463,6 +469,7 @@ public class OperationMandate1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -471,6 +478,7 @@ public class OperationMandate1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "ReqrdSgntrNb", required = true)
 	public Max15PlusSignedNumericText getRequiredSignatureNumber() {
 		return requiredSignatureNumber;
 	}
@@ -479,6 +487,7 @@ public class OperationMandate1 {
 		this.requiredSignatureNumber = requiredSignatureNumber;
 	}
 
+	@XmlElement(name = "SgntrOrdrInd", required = true)
 	public YesNoIndicator getSignatureOrderIndicator() {
 		return signatureOrderIndicator;
 	}
@@ -487,6 +496,7 @@ public class OperationMandate1 {
 		this.signatureOrderIndicator = signatureOrderIndicator;
 	}
 
+	@XmlElement(name = "MndtHldr")
 	public List<PartyAndCertificate1> getMandateHolder() {
 		return mandateHolder;
 	}
@@ -495,6 +505,7 @@ public class OperationMandate1 {
 		this.mandateHolder = mandateHolder;
 	}
 
+	@XmlElement(name = "BkOpr", required = true)
 	public List<BankTransactionCodeStructure4> getBankOperation() {
 		return bankOperation;
 	}
@@ -503,6 +514,7 @@ public class OperationMandate1 {
 		this.bankOperation = bankOperation;
 	}
 
+	@XmlElement(name = "StartDt")
 	public ISODate getStartDate() {
 		return startDate;
 	}
@@ -511,6 +523,7 @@ public class OperationMandate1 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "EndDt")
 	public ISODate getEndDate() {
 		return endDate;
 	}

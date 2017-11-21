@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.ReconciliationTransaction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transaction totals during the reconciliation period, for a certain type of
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransactionTotals3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionTotals7", propOrder = {"POIGroupIdentification", "cardProductProfile", "currency", "type", "totalNumber", "cumulativeAmount"})
 public class TransactionTotals7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -408,6 +414,7 @@ public class TransactionTotals7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "POIGrpId")
 	public Max35Text getPOIGroupIdentification() {
 		return pOIGroupIdentification;
 	}
@@ -416,6 +423,7 @@ public class TransactionTotals7 {
 		this.pOIGroupIdentification = pOIGroupIdentification;
 	}
 
+	@XmlElement(name = "CardPdctPrfl")
 	public Max35Text getCardProductProfile() {
 		return cardProductProfile;
 	}
@@ -424,6 +432,7 @@ public class TransactionTotals7 {
 		this.cardProductProfile = cardProductProfile;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -432,6 +441,7 @@ public class TransactionTotals7 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TypeTransactionTotals2Code getType() {
 		return type;
 	}
@@ -440,6 +450,7 @@ public class TransactionTotals7 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "TtlNb", required = true)
 	public Number getTotalNumber() {
 		return totalNumber;
 	}
@@ -448,6 +459,7 @@ public class TransactionTotals7 {
 		this.totalNumber = totalNumber;
 	}
 
+	@XmlElement(name = "CmltvAmt", required = true)
 	public ImpliedCurrencyAndAmount getCumulativeAmount() {
 		return cumulativeAmount;
 	}

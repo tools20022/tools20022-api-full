@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a custody statement of holdings.
@@ -85,6 +89,8 @@ import java.util.List;
  * definition} = "Information about a custody statement of holdings."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustodyStatementOfHoldings2", propOrder = {"statementGeneralDetails", "accountDetails", "balanceForAccount", "subAccountDetails", "totalValues", "extension"})
 public class CustodyStatementOfHoldings2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -379,6 +385,7 @@ public class CustodyStatementOfHoldings2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtGnlDtls")
 	public Statement7 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
@@ -387,6 +394,7 @@ public class CustodyStatementOfHoldings2 {
 		this.statementGeneralDetails = statementGeneralDetails;
 	}
 
+	@XmlElement(name = "AcctDtls")
 	public SafekeepingAccount2 getAccountDetails() {
 		return accountDetails;
 	}
@@ -395,6 +403,7 @@ public class CustodyStatementOfHoldings2 {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "BalForAcct")
 	public List<AggregateBalanceInformation4> getBalanceForAccount() {
 		return balanceForAccount;
 	}
@@ -403,6 +412,7 @@ public class CustodyStatementOfHoldings2 {
 		this.balanceForAccount = balanceForAccount;
 	}
 
+	@XmlElement(name = "SubAcctDtls")
 	public List<SubAccountIdentification5> getSubAccountDetails() {
 		return subAccountDetails;
 	}
@@ -411,6 +421,7 @@ public class CustodyStatementOfHoldings2 {
 		this.subAccountDetails = subAccountDetails;
 	}
 
+	@XmlElement(name = "TtlVals")
 	public TotalValueInPageAndStatement getTotalValues() {
 		return totalValues;
 	}
@@ -419,6 +430,7 @@ public class CustodyStatementOfHoldings2 {
 		this.totalValues = totalValues;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

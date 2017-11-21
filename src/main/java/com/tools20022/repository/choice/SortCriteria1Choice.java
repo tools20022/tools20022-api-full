@@ -24,6 +24,10 @@ import com.tools20022.repository.codeset.ReportSortedType1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between pre-defined and user-defined sorting criteria.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SortCriteria1Choice", propOrder = {"predefined", "userDefined"})
 public class SortCriteria1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class SortCriteria1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prdfnd", required = true)
 	public ReportSortedType1Code getPredefined() {
 		return predefined;
 	}
@@ -169,6 +176,7 @@ public class SortCriteria1Choice {
 		this.predefined = predefined;
 	}
 
+	@XmlElement(name = "UsrDfnd", required = true)
 	public DataFormat1Choice getUserDefined() {
 		return userDefined;
 	}

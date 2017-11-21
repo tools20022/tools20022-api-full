@@ -32,6 +32,10 @@ import com.tools20022.repository.msg.PartyIdentification44;
 import com.tools20022.repository.msg.PartyIdentification59;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a party by a choice between a BIC or a name and address or
@@ -97,6 +101,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyIdentification19Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification73Choice", propOrder = {"nameAndAddress", "anyBIC", "partyIdentification"})
 public class PartyIdentification73Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -267,6 +273,7 @@ public class PartyIdentification73Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress8 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -275,6 +282,7 @@ public class PartyIdentification73Choice {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "AnyBIC", required = true)
 	public PartyIdentification44 getAnyBIC() {
 		return anyBIC;
 	}
@@ -283,6 +291,7 @@ public class PartyIdentification73Choice {
 		this.anyBIC = anyBIC;
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification59 getPartyIdentification() {
 		return partyIdentification;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.FATCAStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Foreign Account Tax Compliance Act (FATCA) status information.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * FATCAStatus1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FATCAStatus2", propOrder = {"type", "source"})
 public class FATCAStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -188,6 +194,7 @@ public class FATCAStatus2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public FATCAStatus2Choice getType() {
 		return type;
 	}
@@ -196,6 +203,7 @@ public class FATCAStatus2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Src")
 	public FATCASource1Choice getSource() {
 		return source;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the trade status report.
@@ -79,6 +83,8 @@ import java.util.List;
  * definition} = "Details of the trade status report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeStatusReport1", propOrder = {"originalMessageDetails", "status", "statusReason", "additionalInformation"})
 public class TradeStatusReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -281,6 +287,7 @@ public class TradeStatusReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMsgDtls", required = true)
 	public OriginalMessage1 getOriginalMessageDetails() {
 		return originalMessageDetails;
 	}
@@ -289,6 +296,7 @@ public class TradeStatusReport1 {
 		this.originalMessageDetails = originalMessageDetails;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public UndertakingStatus1Code getStatus() {
 		return status;
 	}
@@ -297,6 +305,7 @@ public class TradeStatusReport1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "StsRsn")
 	public List<StatusReasonInformation8> getStatusReason() {
 		return statusReason;
 	}
@@ -305,6 +314,7 @@ public class TradeStatusReport1 {
 		this.statusReason = statusReason;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max35Text getAdditionalInformation() {
 		return additionalInformation;
 	}

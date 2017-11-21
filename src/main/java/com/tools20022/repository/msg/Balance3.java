@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Report on the net position of a security, on a single securities account, for
@@ -68,6 +72,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Balance3", propOrder = {"safekeepingAccount", "balanceForAccount", "subAccountDetails", "accountBaseCurrencyTotalAmounts"})
 public class Balance3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -269,6 +275,7 @@ public class Balance3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -277,6 +284,7 @@ public class Balance3 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "BalForAcct")
 	public List<AggregateBalanceInformation20> getBalanceForAccount() {
 		return balanceForAccount;
 	}
@@ -285,6 +293,7 @@ public class Balance3 {
 		this.balanceForAccount = balanceForAccount;
 	}
 
+	@XmlElement(name = "SubAcctDtls")
 	public List<SubAccountIdentification27> getSubAccountDetails() {
 		return subAccountDetails;
 	}
@@ -293,6 +302,7 @@ public class Balance3 {
 		this.subAccountDetails = subAccountDetails;
 	}
 
+	@XmlElement(name = "AcctBaseCcyTtlAmts")
 	public TotalValueInPageAndStatement1 getAccountBaseCurrencyTotalAmounts() {
 		return accountBaseCurrencyTotalAmounts;
 	}

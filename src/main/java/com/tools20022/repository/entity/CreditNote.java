@@ -66,6 +66,11 @@ public class CreditNote extends FinancialDocument {
 				definition = "Monetary instrument issued by a seller that allows a buyer to purchase an item or service from that seller on a future date.";
 				superType_lazy = () -> FinancialDocument.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CreditNote.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

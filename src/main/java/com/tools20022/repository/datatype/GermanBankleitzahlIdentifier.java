@@ -32,6 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} = "Deutsche Bundesbank ; German Bankleitzahl"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "BL[0-9]{8,8}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -68,6 +70,7 @@ public class GermanBankleitzahlIdentifier {
 				name = "GermanBankleitzahlIdentifier";
 				definition = "German Bankleitzahl. Identifies German financial institutions on the German national clearing systems.";
 				identificationScheme = "Deutsche Bundesbank ; German Bankleitzahl";
+				pattern = "BL[0-9]{8,8}";
 			}
 		});
 		return mmObject_lazy.get();

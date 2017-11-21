@@ -35,6 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
+ * InvestmentAccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -86,10 +90,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountParties16.mmAdministrator}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
- * InvestmentAccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -122,6 +122,11 @@ public class AdministratorRole extends InvestmentAccountPartyRole {
 						AccountParties7.mmAdministrator, AccountParties9.mmAdministrator, AccountParties8.mmAdministrator, AccountParties11.mmAdministrator, AccountParties10.mmAdministrator, AccountParties12.mmAdministrator,
 						AccountParties13.mmAdministrator, AccountParties14.mmAdministrator, AccountParties15.mmAdministrator, AccountParties16.mmAdministrator);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AdministratorRole.class;
 			}
 		});
 		return mmObject_lazy.get();

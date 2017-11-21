@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money due to a party as compensation for a service.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Commission9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Commission21", propOrder = {"commissionType", "commissionApplied"})
 public class Commission21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class Commission21 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ComssnTp", required = true)
 	public CommissionType5Choice getCommissionType() {
 		return commissionType;
 	}
@@ -185,6 +192,7 @@ public class Commission21 {
 		this.commissionType = commissionType;
 	}
 
+	@XmlElement(name = "ComssnApld", required = true)
 	public AmountOrRate3Choice getCommissionApplied() {
 		return commissionApplied;
 	}

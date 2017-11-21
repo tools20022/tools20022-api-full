@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides references to the transactions both for the matching application and
@@ -94,6 +98,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DataSetSubmissionReferences4", propOrder = {"transactionIdentification", "purchaseOrderReference", "userTransactionReference", "forcedMatch", "establishedBaselineIdentification", "transactionStatus"})
 public class DataSetSubmissionReferences4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -379,6 +385,7 @@ public class DataSetSubmissionReferences4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -387,6 +394,7 @@ public class DataSetSubmissionReferences4 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "PurchsOrdrRef", required = true)
 	public DocumentIdentification7 getPurchaseOrderReference() {
 		return purchaseOrderReference;
 	}
@@ -395,6 +403,7 @@ public class DataSetSubmissionReferences4 {
 		this.purchaseOrderReference = purchaseOrderReference;
 	}
 
+	@XmlElement(name = "UsrTxRef")
 	public List<DocumentIdentification5> getUserTransactionReference() {
 		return userTransactionReference;
 	}
@@ -403,6 +412,7 @@ public class DataSetSubmissionReferences4 {
 		this.userTransactionReference = userTransactionReference;
 	}
 
+	@XmlElement(name = "ForcdMtch", required = true)
 	public YesNoIndicator getForcedMatch() {
 		return forcedMatch;
 	}
@@ -411,6 +421,7 @@ public class DataSetSubmissionReferences4 {
 		this.forcedMatch = forcedMatch;
 	}
 
+	@XmlElement(name = "EstblishdBaselnId", required = true)
 	public DocumentIdentification3 getEstablishedBaselineIdentification() {
 		return establishedBaselineIdentification;
 	}
@@ -419,6 +430,7 @@ public class DataSetSubmissionReferences4 {
 		this.establishedBaselineIdentification = establishedBaselineIdentification;
 	}
 
+	@XmlElement(name = "TxSts", required = true)
 	public BaselineStatus3Code getTransactionStatus() {
 		return transactionStatus;
 	}

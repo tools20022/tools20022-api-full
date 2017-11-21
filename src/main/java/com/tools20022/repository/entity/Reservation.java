@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.ReservationTypeCode;
 import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,6 +37,25 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Reservation#mmReservationType
+ * Reservation.mmReservationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Reservation#mmRelatedIntraPositionTransfer
+ * Reservation.mmRelatedIntraPositionTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Reservation#mmSettlementInstruction
+ * Reservation.mmSettlementInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Reservation#mmAccountService
+ * Reservation.mmAccountService}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Limit Limit}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -180,25 +200,6 @@ import java.util.List;
  * ReservationReport4.mmReservationIdentification}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Limit Limit}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Reservation#mmReservationType
- * Reservation.mmReservationType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Reservation#mmRelatedIntraPositionTransfer
- * Reservation.mmRelatedIntraPositionTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Reservation#mmSettlementInstruction
- * Reservation.mmSettlementInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Reservation#mmAccountService
- * Reservation.mmAccountService}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -228,10 +229,6 @@ public class Reservation extends Limit {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode
 	 * ReservationTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Reservation Reservation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -262,6 +259,10 @@ public class Reservation extends Limit {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Reservation Reservation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -276,7 +277,7 @@ public class Reservation extends Limit {
 		{
 			derivation_lazy = () -> Arrays.asList(ReservationIdentificationDetails1.mmType, ReservationType1Choice.mmCode, ReservationType1Choice.mmProprietary, ReservationIdentification1.mmType,
 					ReservationSearchCriteria1.mmDefaultReservationType, ReservationSearchCriteria1.mmCurrentReservationType, ReservationSearchCriteria2.mmDefaultReservationType, ReservationSearchCriteria2.mmCurrentReservationType);
-			elementContext_lazy = () -> Reservation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reservation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReservationType";
@@ -284,6 +285,14 @@ public class Reservation extends Limit {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReservationTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Reservation.class.getMethod("getReservationType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.IntraPositionTransfer> relatedIntraPositionTransfer;
@@ -323,7 +332,7 @@ public class Reservation extends Limit {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedIntraPositionTransfer = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Reservation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reservation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedIntraPositionTransfer";
@@ -370,7 +379,7 @@ public class Reservation extends Limit {
 	 */
 	public static final MMBusinessAssociationEnd mmSettlementInstruction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Reservation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reservation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementInstruction";
@@ -417,7 +426,7 @@ public class Reservation extends Limit {
 	 */
 	public static final MMBusinessAssociationEnd mmAccountService = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Reservation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reservation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountService";
@@ -446,12 +455,18 @@ public class Reservation extends Limit {
 						ReservationOrError2Choice.mmBusinessReport, ReservationOrError4Choice.mmBusinessReport, CurrentAndDefaultReservation2.mmCurrentReservation, CurrentAndDefaultReservation2.mmDefaultReservation,
 						ReservationOrError5Choice.mmReservation, ReservationReport4.mmReservationIdentification);
 				superType_lazy = () -> Limit.mmObject();
-				element_lazy = () -> Arrays.asList(Reservation.mmReservationType, Reservation.mmRelatedIntraPositionTransfer, Reservation.mmSettlementInstruction, Reservation.mmAccountService);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Reservation.mmReservationType, com.tools20022.repository.entity.Reservation.mmRelatedIntraPositionTransfer,
+						com.tools20022.repository.entity.Reservation.mmSettlementInstruction, com.tools20022.repository.entity.Reservation.mmAccountService);
 				derivationComponent_lazy = () -> Arrays.asList(ReservationIdentificationDetails1.mmObject(), ReservationType1Choice.mmObject(), ReservationIdentification1.mmObject(), ReservationSearchCriteria1.mmObject(),
 						ReservationCriteria1.mmObject(), ReservationSearchCriteria2.mmObject(), ReservationCriteria2.mmObject(), ReservationDetails2.mmObject(), CurrentOrDefaultReservation1Choice.mmObject(), Reservation2.mmObject(),
 						ReservationDetails1.mmObject(), ReservationReport1.mmObject(), Reservations1.mmObject(), ReservationReport2.mmObject(), Reservations2.mmObject(), ReservationStatus1Choice.mmObject(), Reservation1.mmObject(),
 						ReservationOrError3Choice.mmObject(), ReservationReport3.mmObject(), CurrentAndDefaultReservation1.mmObject(), ReservationOrError2Choice.mmObject(), ReservationOrError4Choice.mmObject(),
 						CurrentAndDefaultReservation2.mmObject(), ReservationOrError5Choice.mmObject(), ReservationReport4.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Reservation.class;
 			}
 		});
 		return mmObject_lazy.get();

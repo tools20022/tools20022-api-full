@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Address of a party expressed in a formal structure, usually according to the
@@ -97,6 +101,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StructuredLongPostalAddress1", propOrder = {"buildingName", "streetName", "streetBuildingIdentification", "floor", "townName", "districtName", "regionIdentification", "state", "countyIdentification", "country",
+		"postCodeIdentification", "postOfficeBox"})
 public class StructuredLongPostalAddress1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -694,6 +701,7 @@ public class StructuredLongPostalAddress1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BldgNm")
 	public Max35Text getBuildingName() {
 		return buildingName;
 	}
@@ -702,6 +710,7 @@ public class StructuredLongPostalAddress1 {
 		this.buildingName = buildingName;
 	}
 
+	@XmlElement(name = "StrtNm")
 	public Max35Text getStreetName() {
 		return streetName;
 	}
@@ -710,6 +719,7 @@ public class StructuredLongPostalAddress1 {
 		this.streetName = streetName;
 	}
 
+	@XmlElement(name = "StrtBldgId")
 	public Max35Text getStreetBuildingIdentification() {
 		return streetBuildingIdentification;
 	}
@@ -718,6 +728,7 @@ public class StructuredLongPostalAddress1 {
 		this.streetBuildingIdentification = streetBuildingIdentification;
 	}
 
+	@XmlElement(name = "Flr")
 	public Max16Text getFloor() {
 		return floor;
 	}
@@ -726,6 +737,7 @@ public class StructuredLongPostalAddress1 {
 		this.floor = floor;
 	}
 
+	@XmlElement(name = "TwnNm", required = true)
 	public Max35Text getTownName() {
 		return townName;
 	}
@@ -734,6 +746,7 @@ public class StructuredLongPostalAddress1 {
 		this.townName = townName;
 	}
 
+	@XmlElement(name = "DstrctNm")
 	public Max35Text getDistrictName() {
 		return districtName;
 	}
@@ -742,6 +755,7 @@ public class StructuredLongPostalAddress1 {
 		this.districtName = districtName;
 	}
 
+	@XmlElement(name = "RgnId")
 	public Max35Text getRegionIdentification() {
 		return regionIdentification;
 	}
@@ -750,6 +764,7 @@ public class StructuredLongPostalAddress1 {
 		this.regionIdentification = regionIdentification;
 	}
 
+	@XmlElement(name = "Stat")
 	public Max35Text getState() {
 		return state;
 	}
@@ -758,6 +773,7 @@ public class StructuredLongPostalAddress1 {
 		this.state = state;
 	}
 
+	@XmlElement(name = "CtyId")
 	public Max35Text getCountyIdentification() {
 		return countyIdentification;
 	}
@@ -766,6 +782,7 @@ public class StructuredLongPostalAddress1 {
 		this.countyIdentification = countyIdentification;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -774,6 +791,7 @@ public class StructuredLongPostalAddress1 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "PstCdId", required = true)
 	public Max16Text getPostCodeIdentification() {
 		return postCodeIdentification;
 	}
@@ -782,6 +800,7 @@ public class StructuredLongPostalAddress1 {
 		this.postCodeIdentification = postCodeIdentification;
 	}
 
+	@XmlElement(name = "POB")
 	public Max16Text getPostOfficeBox() {
 		return postOfficeBox;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.msg.IssuerAndSerialNumber1;
 import com.tools20022.repository.msg.KEKIdentifier2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a cryptographic asymmetric key.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Recipient4Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Recipient5Choice", propOrder = {"issuerAndSerialNumber", "keyIdentifier"})
 public class Recipient5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class Recipient5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IssrAndSrlNb", required = true)
 	public IssuerAndSerialNumber1 getIssuerAndSerialNumber() {
 		return issuerAndSerialNumber;
 	}
@@ -180,6 +187,7 @@ public class Recipient5Choice {
 		this.issuerAndSerialNumber = issuerAndSerialNumber;
 	}
 
+	@XmlElement(name = "KeyIdr", required = true)
 	public KEKIdentifier2 getKeyIdentifier() {
 		return keyIdentifier;
 	}

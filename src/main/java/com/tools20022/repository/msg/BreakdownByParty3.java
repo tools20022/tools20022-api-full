@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the cash-in and cash-out flows by party.
@@ -70,6 +74,8 @@ import java.util.List;
  * BreakdownByParty1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BreakdownByParty3", propOrder = {"party", "additionalParameters", "cashInForecast", "cashOutForecast", "netCashForecast"})
 public class BreakdownByParty3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -334,6 +340,7 @@ public class BreakdownByParty3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pty", required = true)
 	public InvestmentAccount42 getParty() {
 		return party;
 	}
@@ -342,6 +349,7 @@ public class BreakdownByParty3 {
 		this.party = party;
 	}
 
+	@XmlElement(name = "AddtlParams")
 	public AdditionalParameters1 getAdditionalParameters() {
 		return additionalParameters;
 	}
@@ -350,6 +358,7 @@ public class BreakdownByParty3 {
 		this.additionalParameters = additionalParameters;
 	}
 
+	@XmlElement(name = "CshInFcst")
 	public List<CashInForecast5> getCashInForecast() {
 		return cashInForecast;
 	}
@@ -358,6 +367,7 @@ public class BreakdownByParty3 {
 		this.cashInForecast = cashInForecast;
 	}
 
+	@XmlElement(name = "CshOutFcst")
 	public List<CashOutForecast5> getCashOutForecast() {
 		return cashOutForecast;
 	}
@@ -366,6 +376,7 @@ public class BreakdownByParty3 {
 		this.cashOutForecast = cashOutForecast;
 	}
 
+	@XmlElement(name = "NetCshFcst")
 	public List<NetCashForecast4> getNetCashForecast() {
 		return netCashForecast;
 	}

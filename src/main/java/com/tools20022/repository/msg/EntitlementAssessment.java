@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the parameters, such as dates, used to calculate the entitlement to
@@ -97,6 +101,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EntitlementAssessment", propOrder = {"securitiesBlockingDeadline", "securitiesBlockingMarketDeadline", "securitiesBlockingPeriodEndDate", "securitiesReregistrationDeadline", "securitiesReregistrationMarketDeadline",
+		"securitiesRegistrationDate", "registrationBeneficiary", "recordDate", "entitlementDescription", "entitlementRatio"})
 public class EntitlementAssessment {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -649,6 +656,7 @@ public class EntitlementAssessment {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesBlckgDdln")
 	public ISODateTime getSecuritiesBlockingDeadline() {
 		return securitiesBlockingDeadline;
 	}
@@ -657,6 +665,7 @@ public class EntitlementAssessment {
 		this.securitiesBlockingDeadline = securitiesBlockingDeadline;
 	}
 
+	@XmlElement(name = "SctiesBlckgMktDdln")
 	public ISODateTime getSecuritiesBlockingMarketDeadline() {
 		return securitiesBlockingMarketDeadline;
 	}
@@ -665,6 +674,7 @@ public class EntitlementAssessment {
 		this.securitiesBlockingMarketDeadline = securitiesBlockingMarketDeadline;
 	}
 
+	@XmlElement(name = "SctiesBlckgPrdEndDt")
 	public ISODateTime getSecuritiesBlockingPeriodEndDate() {
 		return securitiesBlockingPeriodEndDate;
 	}
@@ -673,6 +683,7 @@ public class EntitlementAssessment {
 		this.securitiesBlockingPeriodEndDate = securitiesBlockingPeriodEndDate;
 	}
 
+	@XmlElement(name = "SctiesRregnDdln")
 	public ISODateTime getSecuritiesReregistrationDeadline() {
 		return securitiesReregistrationDeadline;
 	}
@@ -681,6 +692,7 @@ public class EntitlementAssessment {
 		this.securitiesReregistrationDeadline = securitiesReregistrationDeadline;
 	}
 
+	@XmlElement(name = "SctiesRregnMktDdln")
 	public ISODateTime getSecuritiesReregistrationMarketDeadline() {
 		return securitiesReregistrationMarketDeadline;
 	}
@@ -689,6 +701,7 @@ public class EntitlementAssessment {
 		this.securitiesReregistrationMarketDeadline = securitiesReregistrationMarketDeadline;
 	}
 
+	@XmlElement(name = "SctiesRegnDt")
 	public ISODate getSecuritiesRegistrationDate() {
 		return securitiesRegistrationDate;
 	}
@@ -697,6 +710,7 @@ public class EntitlementAssessment {
 		this.securitiesRegistrationDate = securitiesRegistrationDate;
 	}
 
+	@XmlElement(name = "RegnBnfcry")
 	public PartyIdentification7Choice getRegistrationBeneficiary() {
 		return registrationBeneficiary;
 	}
@@ -705,6 +719,7 @@ public class EntitlementAssessment {
 		this.registrationBeneficiary = registrationBeneficiary;
 	}
 
+	@XmlElement(name = "RcrdDt")
 	public ISODate getRecordDate() {
 		return recordDate;
 	}
@@ -713,6 +728,7 @@ public class EntitlementAssessment {
 		this.recordDate = recordDate;
 	}
 
+	@XmlElement(name = "EntitlmntDesc")
 	public Max350Text getEntitlementDescription() {
 		return entitlementDescription;
 	}
@@ -721,6 +737,7 @@ public class EntitlementAssessment {
 		this.entitlementDescription = entitlementDescription;
 	}
 
+	@XmlElement(name = "EntitlmntRatio")
 	public DecimalNumber getEntitlementRatio() {
 		return entitlementRatio;
 	}

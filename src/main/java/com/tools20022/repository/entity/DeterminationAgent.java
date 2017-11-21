@@ -67,6 +67,11 @@ public class DeterminationAgent extends SecuritiesPartyRole {
 				definition = "Party that determines a parameter on which a calculation is based. For example, fixing of a reference rate.";
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DeterminationAgent.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

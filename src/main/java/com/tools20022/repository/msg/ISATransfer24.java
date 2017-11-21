@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the type of product and the assets to be transferred.
@@ -95,6 +99,9 @@ import java.util.List;
  * ISATransfer19}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ISATransfer24", propOrder = {"primaryIndividualInvestor", "secondaryIndividualInvestor", "otherIndividualInvestor", "primaryCorporateInvestor", "secondaryCorporateInvestor", "otherCorporateInvestor", "transferorAccount",
+		"nomineeAccount", "transferee", "intermediaryInformation", "cashAccount", "productTransferAndReference", "extension"})
 public class ISATransfer24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -795,6 +802,7 @@ public class ISATransfer24 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmryIndvInvstr")
 	public IndividualPerson8 getPrimaryIndividualInvestor() {
 		return primaryIndividualInvestor;
 	}
@@ -803,6 +811,7 @@ public class ISATransfer24 {
 		this.primaryIndividualInvestor = primaryIndividualInvestor;
 	}
 
+	@XmlElement(name = "ScndryIndvInvstr")
 	public IndividualPerson8 getSecondaryIndividualInvestor() {
 		return secondaryIndividualInvestor;
 	}
@@ -811,6 +820,7 @@ public class ISATransfer24 {
 		this.secondaryIndividualInvestor = secondaryIndividualInvestor;
 	}
 
+	@XmlElement(name = "OthrIndvInvstr")
 	public List<IndividualPerson8> getOtherIndividualInvestor() {
 		return otherIndividualInvestor;
 	}
@@ -819,6 +829,7 @@ public class ISATransfer24 {
 		this.otherIndividualInvestor = otherIndividualInvestor;
 	}
 
+	@XmlElement(name = "PmryCorpInvstr")
 	public Organisation21 getPrimaryCorporateInvestor() {
 		return primaryCorporateInvestor;
 	}
@@ -827,6 +838,7 @@ public class ISATransfer24 {
 		this.primaryCorporateInvestor = primaryCorporateInvestor;
 	}
 
+	@XmlElement(name = "ScndryCorpInvstr")
 	public Organisation21 getSecondaryCorporateInvestor() {
 		return secondaryCorporateInvestor;
 	}
@@ -835,6 +847,7 @@ public class ISATransfer24 {
 		this.secondaryCorporateInvestor = secondaryCorporateInvestor;
 	}
 
+	@XmlElement(name = "OthrCorpInvstr")
 	public List<Organisation21> getOtherCorporateInvestor() {
 		return otherCorporateInvestor;
 	}
@@ -843,6 +856,7 @@ public class ISATransfer24 {
 		this.otherCorporateInvestor = otherCorporateInvestor;
 	}
 
+	@XmlElement(name = "TrfrAcct", required = true)
 	public Account19 getTransferorAccount() {
 		return transferorAccount;
 	}
@@ -851,6 +865,7 @@ public class ISATransfer24 {
 		this.transferorAccount = transferorAccount;
 	}
 
+	@XmlElement(name = "NmneeAcct")
 	public Account19 getNomineeAccount() {
 		return nomineeAccount;
 	}
@@ -859,6 +874,7 @@ public class ISATransfer24 {
 		this.nomineeAccount = nomineeAccount;
 	}
 
+	@XmlElement(name = "Trfee", required = true)
 	public PartyIdentification70Choice getTransferee() {
 		return transferee;
 	}
@@ -867,6 +883,7 @@ public class ISATransfer24 {
 		this.transferee = transferee;
 	}
 
+	@XmlElement(name = "IntrmyInf")
 	public List<Intermediary34> getIntermediaryInformation() {
 		return intermediaryInformation;
 	}
@@ -875,6 +892,7 @@ public class ISATransfer24 {
 		this.intermediaryInformation = intermediaryInformation;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccount34 getCashAccount() {
 		return cashAccount;
 	}
@@ -883,6 +901,7 @@ public class ISATransfer24 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "PdctTrfAndRef", required = true)
 	public ISATransfer25 getProductTransferAndReference() {
 		return productTransferAndReference;
 	}
@@ -891,6 +910,7 @@ public class ISATransfer24 {
 		this.productTransferAndReference = productTransferAndReference;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

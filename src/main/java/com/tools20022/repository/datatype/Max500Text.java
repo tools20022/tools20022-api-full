@@ -54,6 +54,8 @@ public class Max500Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max500Text";
 				definition = "Specifies a character string with a maximum length of 500 characters.";
+				minLength = 1;
+				maxLength = 500;
 			}
 		});
 		return mmObject_lazy.get();

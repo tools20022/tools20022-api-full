@@ -25,6 +25,10 @@ import com.tools20022.repository.msg.ReportLine5;
 import com.tools20022.repository.msg.ReportLine6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies if breakdown is by purchase order or commercial invoice.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies if breakdown is by purchase order or commercial invoice."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BreakDown1Choice", propOrder = {"byPurchaseOrder", "byCommercialInvoice"})
 public class BreakDown1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class BreakDown1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ByPurchsOrdr", required = true)
 	public ReportLine5 getByPurchaseOrder() {
 		return byPurchaseOrder;
 	}
@@ -166,6 +173,7 @@ public class BreakDown1Choice {
 		this.byPurchaseOrder = byPurchaseOrder;
 	}
 
+	@XmlElement(name = "ByComrclInvc", required = true)
 	public ReportLine6 getByCommercialInvoice() {
 		return byCommercialInvoice;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account to or from which a cash entry is made.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CashAccount26}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccount32", propOrder = {"identification", "accountOwner", "accountServicer", "accountServicerBranch"})
 public class CashAccount32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -316,6 +322,7 @@ public class CashAccount32 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentificationAndName5 getIdentification() {
 		return identification;
 	}
@@ -324,6 +331,7 @@ public class CashAccount32 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification70Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -332,6 +340,7 @@ public class CashAccount32 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public PartyIdentification70Choice getAccountServicer() {
 		return accountServicer;
 	}
@@ -340,6 +349,7 @@ public class CashAccount32 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "AcctSvcrBrnch")
 	public BranchData getAccountServicerBranch() {
 		return accountServicerBranch;
 	}

@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the applicable Incoterm and associated location.
@@ -72,6 +76,8 @@ import java.util.function.Supplier;
  * definition} = "Specifies the applicable Incoterm and associated location."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Incoterms2", propOrder = {"code", "other", "location"})
 public class Incoterms2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -277,6 +283,7 @@ public class Incoterms2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public Incoterms1Code getCode() {
 		return code;
 	}
@@ -285,6 +292,7 @@ public class Incoterms2 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Othr", required = true)
 	public Max35Text getOther() {
 		return other;
 	}
@@ -293,6 +301,7 @@ public class Incoterms2 {
 		this.other = other;
 	}
 
+	@XmlElement(name = "Lctn", required = true)
 	public Max35Text getLocation() {
 		return location;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional specific query criteria.
@@ -82,6 +86,8 @@ import java.util.List;
  * AdditionalQueryParameters9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalQueryParameters11", propOrder = {"status", "reason", "financialInstrumentIdentification"})
 public class AdditionalQueryParameters11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -269,6 +275,7 @@ public class AdditionalQueryParameters11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts")
 	public Status19Choice getStatus() {
 		return status;
 	}
@@ -277,6 +284,7 @@ public class AdditionalQueryParameters11 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Rsn")
 	public List<Reason16Choice> getReason() {
 		return reason;
 	}
@@ -285,6 +293,7 @@ public class AdditionalQueryParameters11 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public List<SecurityIdentification19> getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}

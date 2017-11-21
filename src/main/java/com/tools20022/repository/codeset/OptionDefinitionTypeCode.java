@@ -31,17 +31,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionType1Code
- * OptionType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionTypeCode
- * OptionTypeCode}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionType2Code
- * OptionType2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -53,6 +42,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OptionDefinitionTypeCode#mmOther
  * OptionDefinitionTypeCode.mmOther}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionType1Code
+ * OptionType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionTypeCode
+ * OptionTypeCode}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionType2Code
+ * OptionType2Code}</li>
  * </ul>
  * </li>
  * <li>

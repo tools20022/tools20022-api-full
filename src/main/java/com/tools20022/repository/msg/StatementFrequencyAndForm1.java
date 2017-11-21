@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.ReportingService;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies a frequency, format and delivery address for statements.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies a frequency, format and delivery address for statements."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatementFrequencyAndForm1", propOrder = {"frequency", "communicationMethod", "deliveryAddress", "format"})
 public class StatementFrequencyAndForm1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -275,6 +281,7 @@ public class StatementFrequencyAndForm1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Frqcy", required = true)
 	public Frequency7Code getFrequency() {
 		return frequency;
 	}
@@ -283,6 +290,7 @@ public class StatementFrequencyAndForm1 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "ComMtd", required = true)
 	public CommunicationMethod2Choice getCommunicationMethod() {
 		return communicationMethod;
 	}
@@ -291,6 +299,7 @@ public class StatementFrequencyAndForm1 {
 		this.communicationMethod = communicationMethod;
 	}
 
+	@XmlElement(name = "DlvryAdr", required = true)
 	public Max350Text getDeliveryAddress() {
 		return deliveryAddress;
 	}
@@ -299,6 +308,7 @@ public class StatementFrequencyAndForm1 {
 		this.deliveryAddress = deliveryAddress;
 	}
 
+	@XmlElement(name = "Frmt", required = true)
 	public CommunicationFormat1Choice getFormat() {
 		return format;
 	}

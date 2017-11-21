@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AttendanceCard1;
 import com.tools20022.repository.msg.AttendanceCard2;
 import com.tools20022.repository.msg.VotingPartyAndInstruction;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -41,6 +42,23 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AttendanceCard#mmAttendanceCardLabelling
+ * AttendanceCard.mmAttendanceCardLabelling}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AttendanceCard#mmMeetingAttendance
+ * AttendanceCard.mmMeetingAttendance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AttendanceCard#mmDeliveryMethod
+ * AttendanceCard.mmDeliveryMethod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AttendanceCard#mmDeliveryPlace
+ * AttendanceCard.mmDeliveryPlace}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -61,23 +79,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.MeetingAttendance#mmAttendanceCard
  * MeetingAttendance.mmAttendanceCard}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AttendanceCard#mmAttendanceCardLabelling
- * AttendanceCard.mmAttendanceCardLabelling}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AttendanceCard#mmMeetingAttendance
- * AttendanceCard.mmMeetingAttendance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AttendanceCard#mmDeliveryMethod
- * AttendanceCard.mmDeliveryMethod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AttendanceCard#mmDeliveryPlace
- * AttendanceCard.mmDeliveryPlace}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,11 +111,6 @@ public class AttendanceCard {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max105Text
 	 * Max105Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AttendanceCard
-	 * AttendanceCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -130,6 +126,11 @@ public class AttendanceCard {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AttendanceCard
+	 * AttendanceCard}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -143,7 +144,7 @@ public class AttendanceCard {
 	public static final MMBusinessAttribute mmAttendanceCardLabelling = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(VotingPartyAndInstruction.mmAttendanceCardLabelling, AttendanceCard1.mmAttendanceCardLabelling, AttendanceCard2.mmAttendanceCardLabelling);
-			elementContext_lazy = () -> AttendanceCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AttendanceCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AttendanceCardLabelling";
@@ -151,6 +152,14 @@ public class AttendanceCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AttendanceCard.class.getMethod("getAttendanceCardLabelling", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MeetingAttendance meetingAttendance;
@@ -189,7 +198,7 @@ public class AttendanceCard {
 	 */
 	public static final MMBusinessAssociationEnd mmMeetingAttendance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AttendanceCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AttendanceCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MeetingAttendance";
@@ -212,11 +221,6 @@ public class AttendanceCard {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DeliveryPlaceCode
 	 * DeliveryPlaceCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AttendanceCard
-	 * AttendanceCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -228,6 +232,11 @@ public class AttendanceCard {
 	 * AttendanceCard2.mmDeliveryMethod}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AttendanceCard
+	 * AttendanceCard}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -242,7 +251,7 @@ public class AttendanceCard {
 	public static final MMBusinessAttribute mmDeliveryMethod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AttendanceCard1.mmDeliveryMethod, AttendanceCard2.mmDeliveryMethod);
-			elementContext_lazy = () -> AttendanceCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AttendanceCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliveryMethod";
@@ -250,6 +259,14 @@ public class AttendanceCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryPlaceCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AttendanceCard.class.getMethod("getDeliveryMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.ContactPoint> deliveryPlace;
@@ -288,7 +305,7 @@ public class AttendanceCard {
 	 */
 	public static final MMBusinessAssociationEnd mmDeliveryPlace = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AttendanceCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AttendanceCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliveryPlace";
@@ -308,8 +325,14 @@ public class AttendanceCard {
 				name = "AttendanceCard";
 				definition = "Information about the attendance card which is issued for the requestor, for its underlying client or for the appointed proxy person or meeting attendee when an attendance request is included in the meeting instruction. \r\nThe instructing party can specify which information must be indicated on the attendance card and to which location the attendance card must be delivered.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ContactPoint.mmDeliveredAttendanceCard, com.tools20022.repository.entity.MeetingAttendance.mmAttendanceCard);
-				element_lazy = () -> Arrays.asList(AttendanceCard.mmAttendanceCardLabelling, AttendanceCard.mmMeetingAttendance, AttendanceCard.mmDeliveryMethod, AttendanceCard.mmDeliveryPlace);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AttendanceCard.mmAttendanceCardLabelling, com.tools20022.repository.entity.AttendanceCard.mmMeetingAttendance,
+						com.tools20022.repository.entity.AttendanceCard.mmDeliveryMethod, com.tools20022.repository.entity.AttendanceCard.mmDeliveryPlace);
 				derivationComponent_lazy = () -> Arrays.asList(AttendanceCard1.mmObject(), AttendanceCard2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AttendanceCard.class;
 			}
 		});
 		return mmObject_lazy.get();

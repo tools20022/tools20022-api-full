@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Agreement between the parties, stipulating the terms and conditions of the
@@ -93,6 +97,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeContract1", propOrder = {"contractDocumentIdentification", "amount", "buyer", "seller", "maturityDate", "prolongationFlag", "startDate", "settlementCurrency", "exchangeRateInformation", "paymentSchedule",
+		"shipmentSchedule", "attachment"})
 public class TradeContract1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -665,6 +672,7 @@ public class TradeContract1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CtrctDocId")
 	public DocumentIdentification22 getContractDocumentIdentification() {
 		return contractDocumentIdentification;
 	}
@@ -673,6 +681,7 @@ public class TradeContract1 {
 		this.contractDocumentIdentification = contractDocumentIdentification;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -681,6 +690,7 @@ public class TradeContract1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Buyr", required = true)
 	public List<TradeParty2> getBuyer() {
 		return buyer;
 	}
@@ -689,6 +699,7 @@ public class TradeContract1 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Sellr", required = true)
 	public List<TradeParty2> getSeller() {
 		return seller;
 	}
@@ -697,6 +708,7 @@ public class TradeContract1 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "MtrtyDt", required = true)
 	public ISODate getMaturityDate() {
 		return maturityDate;
 	}
@@ -705,6 +717,7 @@ public class TradeContract1 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "PrlngtnFlg", required = true)
 	public TrueFalseIndicator getProlongationFlag() {
 		return prolongationFlag;
 	}
@@ -713,6 +726,7 @@ public class TradeContract1 {
 		this.prolongationFlag = prolongationFlag;
 	}
 
+	@XmlElement(name = "StartDt", required = true)
 	public ISODate getStartDate() {
 		return startDate;
 	}
@@ -721,6 +735,7 @@ public class TradeContract1 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -729,6 +744,7 @@ public class TradeContract1 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "XchgRateInf")
 	public ExchangeRate1 getExchangeRateInformation() {
 		return exchangeRateInformation;
 	}
@@ -737,6 +753,7 @@ public class TradeContract1 {
 		this.exchangeRateInformation = exchangeRateInformation;
 	}
 
+	@XmlElement(name = "PmtSchdl")
 	public InterestPaymentDateRange1 getPaymentSchedule() {
 		return paymentSchedule;
 	}
@@ -745,6 +762,7 @@ public class TradeContract1 {
 		this.paymentSchedule = paymentSchedule;
 	}
 
+	@XmlElement(name = "ShipmntSchdl")
 	public ShipmentSchedule2Choice getShipmentSchedule() {
 		return shipmentSchedule;
 	}
@@ -753,6 +771,7 @@ public class TradeContract1 {
 		this.shipmentSchedule = shipmentSchedule;
 	}
 
+	@XmlElement(name = "Attchmnt")
 	public List<DocumentGeneralInformation3> getAttachment() {
 		return attachment;
 	}

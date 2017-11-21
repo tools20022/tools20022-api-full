@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CorporateActionPrice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies prices related to a corporate action option.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionPrice16}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionPrice28", propOrder = {"cashInLieuOfSharePrice", "overSubscriptionDepositPrice"})
 public class CorporateActionPrice28 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -210,6 +216,7 @@ public class CorporateActionPrice28 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshInLieuOfShrPric")
 	public PriceFormat19Choice getCashInLieuOfSharePrice() {
 		return cashInLieuOfSharePrice;
 	}
@@ -218,6 +225,7 @@ public class CorporateActionPrice28 {
 		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
 	}
 
+	@XmlElement(name = "OverSbcptDpstPric")
 	public PriceFormat19Choice getOverSubscriptionDepositPrice() {
 		return overSubscriptionDepositPrice;
 	}

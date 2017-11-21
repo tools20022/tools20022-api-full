@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters which explicitly state the conditions that must be fulfilled
@@ -114,6 +118,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementDetails39", propOrder = {"settlementTransactionCondition", "settlingCapacity", "stampDutyTaxBasis", "securitiesRTGS", "registration", "beneficialOwnership", "cashClearingSystem", "taxCapacity", "repurchaseType",
+		"marketClientSide", "blockTrade", "legalRestrictions", "settlementSystemMethod", "nettingEligibility", "CCPEligibility", "letterOfGuarantee", "partialSettlementIndicator"})
 public class SettlementDetails39 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -974,6 +981,7 @@ public class SettlementDetails39 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmTxCond")
 	public List<SettlementTransactionCondition9Choice> getSettlementTransactionCondition() {
 		return settlementTransactionCondition;
 	}
@@ -982,6 +990,7 @@ public class SettlementDetails39 {
 		this.settlementTransactionCondition = settlementTransactionCondition;
 	}
 
+	@XmlElement(name = "SttlgCpcty")
 	public SettlingCapacity2Choice getSettlingCapacity() {
 		return settlingCapacity;
 	}
@@ -990,6 +999,7 @@ public class SettlementDetails39 {
 		this.settlingCapacity = settlingCapacity;
 	}
 
+	@XmlElement(name = "StmpDtyTaxBsis")
 	public GenericIdentification25 getStampDutyTaxBasis() {
 		return stampDutyTaxBasis;
 	}
@@ -998,6 +1008,7 @@ public class SettlementDetails39 {
 		this.stampDutyTaxBasis = stampDutyTaxBasis;
 	}
 
+	@XmlElement(name = "SctiesRTGS")
 	public SecuritiesRTGS2Choice getSecuritiesRTGS() {
 		return securitiesRTGS;
 	}
@@ -1006,6 +1017,7 @@ public class SettlementDetails39 {
 		this.securitiesRTGS = securitiesRTGS;
 	}
 
+	@XmlElement(name = "Regn")
 	public Registration2Choice getRegistration() {
 		return registration;
 	}
@@ -1014,6 +1026,7 @@ public class SettlementDetails39 {
 		this.registration = registration;
 	}
 
+	@XmlElement(name = "BnfclOwnrsh")
 	public BeneficialOwnership2Choice getBeneficialOwnership() {
 		return beneficialOwnership;
 	}
@@ -1022,6 +1035,7 @@ public class SettlementDetails39 {
 		this.beneficialOwnership = beneficialOwnership;
 	}
 
+	@XmlElement(name = "CshClrSys")
 	public CashSettlementSystem2Choice getCashClearingSystem() {
 		return cashClearingSystem;
 	}
@@ -1030,6 +1044,7 @@ public class SettlementDetails39 {
 		this.cashClearingSystem = cashClearingSystem;
 	}
 
+	@XmlElement(name = "TaxCpcty")
 	public TaxCapacityParty2Choice getTaxCapacity() {
 		return taxCapacity;
 	}
@@ -1038,6 +1053,7 @@ public class SettlementDetails39 {
 		this.taxCapacity = taxCapacity;
 	}
 
+	@XmlElement(name = "RpTp")
 	public RepurchaseType6Choice getRepurchaseType() {
 		return repurchaseType;
 	}
@@ -1046,6 +1062,7 @@ public class SettlementDetails39 {
 		this.repurchaseType = repurchaseType;
 	}
 
+	@XmlElement(name = "MktClntSd")
 	public MarketClientSide2Choice getMarketClientSide() {
 		return marketClientSide;
 	}
@@ -1054,6 +1071,7 @@ public class SettlementDetails39 {
 		this.marketClientSide = marketClientSide;
 	}
 
+	@XmlElement(name = "BlckTrad")
 	public BlockTrade2Choice getBlockTrade() {
 		return blockTrade;
 	}
@@ -1062,6 +1080,7 @@ public class SettlementDetails39 {
 		this.blockTrade = blockTrade;
 	}
 
+	@XmlElement(name = "LglRstrctns")
 	public Restriction2Choice getLegalRestrictions() {
 		return legalRestrictions;
 	}
@@ -1070,6 +1089,7 @@ public class SettlementDetails39 {
 		this.legalRestrictions = legalRestrictions;
 	}
 
+	@XmlElement(name = "SttlmSysMtd")
 	public SettlementSystemMethod2Choice getSettlementSystemMethod() {
 		return settlementSystemMethod;
 	}
@@ -1078,6 +1098,7 @@ public class SettlementDetails39 {
 		this.settlementSystemMethod = settlementSystemMethod;
 	}
 
+	@XmlElement(name = "NetgElgblty")
 	public NettingEligibility2Choice getNettingEligibility() {
 		return nettingEligibility;
 	}
@@ -1086,6 +1107,7 @@ public class SettlementDetails39 {
 		this.nettingEligibility = nettingEligibility;
 	}
 
+	@XmlElement(name = "CCPElgblty")
 	public CentralCounterPartyEligibility2Choice getCCPEligibility() {
 		return cCPEligibility;
 	}
@@ -1094,6 +1116,7 @@ public class SettlementDetails39 {
 		this.cCPEligibility = cCPEligibility;
 	}
 
+	@XmlElement(name = "LttrOfGrnt")
 	public LetterOfGuarantee2Choice getLetterOfGuarantee() {
 		return letterOfGuarantee;
 	}
@@ -1102,6 +1125,7 @@ public class SettlementDetails39 {
 		this.letterOfGuarantee = letterOfGuarantee;
 	}
 
+	@XmlElement(name = "PrtlSttlmInd")
 	public SettlementTransactionCondition5Code getPartialSettlementIndicator() {
 		return partialSettlementIndicator;
 	}

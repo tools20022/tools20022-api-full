@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.AmountAndRateStatus2;
 import com.tools20022.repository.msg.RateTypeAndAmountAndStatus35;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format to express a gross dividend.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of format to express a gross dividend."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GrossDividendRateFormat24Choice", propOrder = {"amount", "amountAndRateStatus", "rateTypeAndAmountAndRateStatus"})
 public class GrossDividendRateFormat24Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -222,6 +228,7 @@ public class GrossDividendRateFormat24Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -230,6 +237,7 @@ public class GrossDividendRateFormat24Choice {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "AmtAndRateSts", required = true)
 	public AmountAndRateStatus2 getAmountAndRateStatus() {
 		return amountAndRateStatus;
 	}
@@ -238,6 +246,7 @@ public class GrossDividendRateFormat24Choice {
 		this.amountAndRateStatus = amountAndRateStatus;
 	}
 
+	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
 	public RateTypeAndAmountAndStatus35 getRateTypeAndAmountAndRateStatus() {
 		return rateTypeAndAmountAndRateStatus;
 	}

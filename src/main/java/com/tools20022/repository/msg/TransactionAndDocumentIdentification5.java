@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transaction and document identification details.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Transaction and document identification details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionAndDocumentIdentification5", propOrder = {"transactionIdentification", "documentIdentification", "creationDateTime", "copyDuplicate", "messageOriginator", "messageRecipient"})
 public class TransactionAndDocumentIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -358,6 +364,7 @@ public class TransactionAndDocumentIdentification5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -366,6 +373,7 @@ public class TransactionAndDocumentIdentification5 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "DocId")
 	public Max35Text getDocumentIdentification() {
 		return documentIdentification;
 	}
@@ -374,6 +382,7 @@ public class TransactionAndDocumentIdentification5 {
 		this.documentIdentification = documentIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm")
 	public DateAndDateTimeChoice getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -382,6 +391,7 @@ public class TransactionAndDocumentIdentification5 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "CpyDplct")
 	public CopyDuplicate1Code getCopyDuplicate() {
 		return copyDuplicate;
 	}
@@ -390,6 +400,7 @@ public class TransactionAndDocumentIdentification5 {
 		this.copyDuplicate = copyDuplicate;
 	}
 
+	@XmlElement(name = "MsgOrgtr")
 	public PartyIdentification71Choice getMessageOriginator() {
 		return messageOriginator;
 	}
@@ -398,6 +409,7 @@ public class TransactionAndDocumentIdentification5 {
 		this.messageOriginator = messageOriginator;
 	}
 
+	@XmlElement(name = "MsgRcpt")
 	public PartyIdentification71Choice getMessageRecipient() {
 		return messageRecipient;
 	}

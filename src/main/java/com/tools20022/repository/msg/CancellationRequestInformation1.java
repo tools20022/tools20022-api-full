@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of information related to the cancellation request, such as actors
@@ -96,6 +100,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancellationRequestInformation1", propOrder = {"originalGroupIdentification", "originalCreationDateTime", "numberOfInvoiceRequests", "totalBulkInvoiceAmount", "cancellationReason", "financingRequestor",
+		"intermediaryAgent", "firstAgent"})
 public class CancellationRequestInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -499,6 +506,7 @@ public class CancellationRequestInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlGrpId", required = true)
 	public Max35Text getOriginalGroupIdentification() {
 		return originalGroupIdentification;
 	}
@@ -507,6 +515,7 @@ public class CancellationRequestInformation1 {
 		this.originalGroupIdentification = originalGroupIdentification;
 	}
 
+	@XmlElement(name = "OrgnlCreDtTm", required = true)
 	public ISODateTime getOriginalCreationDateTime() {
 		return originalCreationDateTime;
 	}
@@ -515,6 +524,7 @@ public class CancellationRequestInformation1 {
 		this.originalCreationDateTime = originalCreationDateTime;
 	}
 
+	@XmlElement(name = "NbOfInvcReqs")
 	public Max15NumericText getNumberOfInvoiceRequests() {
 		return numberOfInvoiceRequests;
 	}
@@ -523,6 +533,7 @@ public class CancellationRequestInformation1 {
 		this.numberOfInvoiceRequests = numberOfInvoiceRequests;
 	}
 
+	@XmlElement(name = "TtlBlkInvcAmt")
 	public ActiveCurrencyAndAmount getTotalBulkInvoiceAmount() {
 		return totalBulkInvoiceAmount;
 	}
@@ -531,6 +542,7 @@ public class CancellationRequestInformation1 {
 		this.totalBulkInvoiceAmount = totalBulkInvoiceAmount;
 	}
 
+	@XmlElement(name = "CxlRsn", required = true)
 	public Max105Text getCancellationReason() {
 		return cancellationReason;
 	}
@@ -539,6 +551,7 @@ public class CancellationRequestInformation1 {
 		this.cancellationReason = cancellationReason;
 	}
 
+	@XmlElement(name = "FincgRqstr")
 	public PartyIdentificationAndAccount6 getFinancingRequestor() {
 		return financingRequestor;
 	}
@@ -547,6 +560,7 @@ public class CancellationRequestInformation1 {
 		this.financingRequestor = financingRequestor;
 	}
 
+	@XmlElement(name = "IntrmyAgt")
 	public FinancialInstitutionIdentification6 getIntermediaryAgent() {
 		return intermediaryAgent;
 	}
@@ -555,6 +569,7 @@ public class CancellationRequestInformation1 {
 		this.intermediaryAgent = intermediaryAgent;
 	}
 
+	@XmlElement(name = "FrstAgt")
 	public FinancialInstitutionIdentification6 getFirstAgent() {
 		return firstAgent;
 	}

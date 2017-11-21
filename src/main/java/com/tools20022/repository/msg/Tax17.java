@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Tax related to an investment fund order.
@@ -79,6 +83,8 @@ import java.util.List;
  * definition} = "Tax related to an investment fund order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Tax17", propOrder = {"type", "extendedType", "amount", "rate", "country", "taxCalculationDetails"})
 public class Tax17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -420,6 +426,7 @@ public class Tax17 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TaxType12Code getType() {
 		return type;
 	}
@@ -428,6 +435,7 @@ public class Tax17 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XtndedTp", required = true)
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
@@ -436,6 +444,7 @@ public class Tax17 {
 		this.extendedType = extendedType;
 	}
 
+	@XmlElement(name = "Amt")
 	public List<ActiveOrHistoricCurrencyAnd13DecimalAmount> getAmount() {
 		return amount;
 	}
@@ -444,6 +453,7 @@ public class Tax17 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -452,6 +462,7 @@ public class Tax17 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -460,6 +471,7 @@ public class Tax17 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "TaxClctnDtls")
 	public TaxCalculationInformation4 getTaxCalculationDetails() {
 		return taxCalculationDetails;
 	}

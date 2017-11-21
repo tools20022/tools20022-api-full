@@ -30,6 +30,10 @@ import com.tools20022.repository.msg.RequestType1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of search criteria for the financial investigation.
@@ -81,6 +85,8 @@ import java.util.List;
  * definition} = "Choice of search criteria for the financial investigation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SearchCriteria1Choice", propOrder = {"account", "customerIdentification", "paymentInstrument", "originalTransactionNumber"})
 public class SearchCriteria1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -274,6 +280,7 @@ public class SearchCriteria1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public AccountAndParties1 getAccount() {
 		return account;
 	}
@@ -282,6 +289,7 @@ public class SearchCriteria1Choice {
 		this.account = account;
 	}
 
+	@XmlElement(name = "CstmrId", required = true)
 	public CustomerIdentification1 getCustomerIdentification() {
 		return customerIdentification;
 	}
@@ -290,6 +298,7 @@ public class SearchCriteria1Choice {
 		this.customerIdentification = customerIdentification;
 	}
 
+	@XmlElement(name = "PmtInstrm", required = true)
 	public PaymentInstrumentType1 getPaymentInstrument() {
 		return paymentInstrument;
 	}
@@ -298,6 +307,7 @@ public class SearchCriteria1Choice {
 		this.paymentInstrument = paymentInstrument;
 	}
 
+	@XmlElement(name = "OrgnlTxNb", required = true)
 	public List<RequestType1> getOriginalTransactionNumber() {
 		return originalTransactionNumber;
 	}

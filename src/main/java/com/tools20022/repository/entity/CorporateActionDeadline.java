@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.Deadline;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,18 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline1
- * BorrowerLendingDeadline1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline2
- * BorrowerLendingDeadline2}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Deadline Deadline}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -120,6 +109,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionDeadline.mmGuaranteedParticipationDate}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Deadline Deadline}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline1
+ * BorrowerLendingDeadline1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline2
+ * BorrowerLendingDeadline2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -150,11 +151,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * complexType} =
 	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -176,6 +172,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -192,7 +193,7 @@ public class CorporateActionDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod5.mmRevocabilityPeriod, CorporateActionPeriod5.mmAccountServicerRevocabilityPeriod, CorporateActionPeriod7.mmRevocabilityPeriod,
 					CorporateActionPeriod7.mmAccountServicerRevocabilityPeriod, CorporateActionPeriod2.mmRevocabilityPeriod);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RevocabilityPeriod";
@@ -200,6 +201,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getRevocabilityPeriod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime protectDate;
@@ -213,11 +222,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -269,6 +273,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -286,7 +295,7 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate6.mmProtectDate, CorporateActionDate10.mmProtectDate, CorporateActionDate18.mmProtectDate, CorporateActionDate19.mmProtectDate, CorporateActionDate8.mmProtectDate,
 					CorporateActionDate11.mmProtectDate, CorporateActionDate15.mmProtectDate, CorporateActionDate16.mmProtectDate, CorporateActionDate2.mmProtectDate, CorporateActionDate29.mmProtectDate,
 					CorporateActionDate33.mmProtectDate, CorporateActionDate46.mmProtectDate, CorporateActionDate48.mmProtectDate, CorporateActionDate52.mmProtectDate, CorporateActionDate55.mmProtectDate);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProtectDate";
@@ -294,6 +303,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getProtectDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime tradingSuspendedDate;
@@ -307,11 +324,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -351,6 +363,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -368,7 +385,7 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmTradingSuspendedDate, CorporateActionDate13.mmTradingSuspendedDate, CorporateActionDate14.mmTradingSuspendedDate, CorporateActionDate21.mmTradingSuspendedDate,
 					CorporateActionDate22.mmTradingSuspendedDate, CorporateActionDate25.mmTradingSuspendedDate, CorporateActionDate27.mmTradingSuspendedDate, CorporateActionDate28.mmTradingSuspendedDate,
 					CorporateActionDate2.mmTradingSuspendedDate, CorporateActionDate44.mmTradingSuspendedDate, CorporateActionDate58.mmTradingSuspendedDate);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingSuspendedDate";
@@ -376,6 +393,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getTradingSuspendedDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime thirdPartyDeadline;
@@ -389,11 +414,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -430,6 +450,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -447,7 +472,7 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmThirdPartyDeadline, CorporateActionDate13.mmThirdPartyDeadline, CorporateActionDate14.mmThirdPartyDeadline, CorporateActionDate21.mmThirdPartyDeadline,
 					CorporateActionDate22.mmThirdPartyDeadline, CorporateActionDate25.mmThirdPartyDeadline, CorporateActionDate27.mmThirdPartyDeadline, CorporateActionDate28.mmThirdPartyDeadline, CorporateActionDate44.mmThirdPartyDeadline,
 					CorporateActionDate58.mmThirdPartyDeadline);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ThirdPartyDeadline";
@@ -455,6 +480,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getThirdPartyDeadline", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime certificationDeadline;
@@ -468,11 +501,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -512,6 +540,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -529,7 +562,7 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmCertificationDeadline, CorporateActionDate13.mmCertificationDeadline, CorporateActionDate14.mmCertificationDeadline, CorporateActionDate21.mmCertificationDeadline,
 					CorporateActionDate22.mmCertificationDeadline, CorporateActionDate25.mmCertificationDeadline, CorporateActionDate27.mmCertificationDeadline, CorporateActionDate28.mmCertificationDeadline,
 					CorporateActionDate2.mmCertificationDeadline, CorporateActionDate44.mmCertificationDeadline, CorporateActionDate58.mmCertificationDeadline);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificationDeadline";
@@ -537,6 +570,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getCertificationDeadline", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime deadlineToSplit;
@@ -550,11 +591,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -594,6 +630,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -611,7 +652,7 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmDeadlineToSplit, CorporateActionDate13.mmDeadlineToSplit, CorporateActionDate14.mmDeadlineToSplit, CorporateActionDate21.mmDeadlineToSplit,
 					CorporateActionDate22.mmDeadlineToSplit, CorporateActionDate25.mmDeadlineToSplit, CorporateActionDate27.mmDeadlineToSplit, CorporateActionDate28.mmDeadlineToSplit, CorporateActionDate4.mmDeadlineToSplit,
 					CorporateActionDate44.mmDeadlineToSplit, CorporateActionDate58.mmDeadlineToSplit);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeadlineToSplit";
@@ -619,6 +660,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getDeadlineToSplit", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime specialExDate;
@@ -636,11 +685,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -680,6 +724,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -697,7 +746,7 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmSpecialExDate, CorporateActionDate13.mmSpecialExDate, CorporateActionDate14.mmSpecialExDate, CorporateActionDate21.mmSpecialExDate,
 					CorporateActionDate22.mmSpecialExDate, CorporateActionDate25.mmSpecialExDate, CorporateActionDate27.mmSpecialExDate, CorporateActionDate28.mmSpecialExDate, CorporateActionDate2.mmSpecialExDate,
 					CorporateActionDate44.mmSpecialExDate, CorporateActionDate58.mmSpecialExDate);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialExDate";
@@ -705,6 +754,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getSpecialExDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime deadlineForTaxBreakdownInstruction;
@@ -717,11 +774,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -761,6 +813,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -778,7 +835,7 @@ public class CorporateActionDeadline extends Deadline {
 					CorporateActionDate21.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate22.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate25.mmDeadlineForTaxBreakdownInstruction,
 					CorporateActionDate27.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate28.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate2.mmDeadlineForTaxBreakdownInstruction,
 					CorporateActionDate44.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate58.mmDeadlineForTaxBreakdownInstruction);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeadlineForTaxBreakdownInstruction";
@@ -786,6 +843,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getDeadlineForTaxBreakdownInstruction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime earlyClosingDate;
@@ -799,11 +864,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -843,6 +903,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -860,7 +925,7 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmEarlyClosingDate, CorporateActionDate13.mmEarlyClosingDate, CorporateActionDate14.mmEarlyClosingDate, CorporateActionDate21.mmEarlyClosingDate,
 					CorporateActionDate22.mmEarlyClosingDate, CorporateActionDate25.mmEarlyClosingDate, CorporateActionDate27.mmEarlyClosingDate, CorporateActionDate28.mmEarlyClosingDate, CorporateActionDate2.mmEarlyClosingDate,
 					CorporateActionDate44.mmEarlyClosingDate, CorporateActionDate58.mmEarlyClosingDate);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarlyClosingDate";
@@ -868,6 +933,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getEarlyClosingDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime recordDate;
@@ -881,11 +954,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -964,6 +1032,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -983,7 +1056,7 @@ public class CorporateActionDeadline extends Deadline {
 					EntitlementAdvice1.mmRecordDate, GlobalDistributionRequest1.mmRecordDate, CommonFinancialInstrumentAttributes1.mmRecordDate, CorporateActionDate30.mmRecordDate, CorporateActionDate34.mmRecordDate,
 					CorporateActionDate41.mmRecordDate, CorporateActionDate43.mmRecordDate, CorporateActionDate49.mmRecordDate, CorporateActionDate45.mmRecordDate, CorporateActionDate44.mmRecordDate, CorporateActionDate54.mmRecordDate,
 					CorporateActionDate50.mmRecordDate, CorporateActionDate58.mmRecordDate);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RecordDate";
@@ -991,6 +1064,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getRecordDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime coverExpirationDate;
@@ -1004,11 +1085,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1060,6 +1136,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1078,7 +1159,7 @@ public class CorporateActionDeadline extends Deadline {
 					CorporateActionDate8.mmCoverExpirationDate, CorporateActionDate11.mmCoverExpirationDate, CorporateActionDate15.mmCoverExpirationDate, CorporateActionDate16.mmCoverExpirationDate,
 					CorporateActionDate2.mmCoverExpirationDate, CorporateActionDate29.mmCoverExpirationDate, CorporateActionDate33.mmCoverExpirationDate, CorporateActionDate46.mmCoverExpirationDate,
 					CorporateActionDate48.mmCoverExpirationDate, CorporateActionDate52.mmCoverExpirationDate, CorporateActionDate55.mmCoverExpirationDate);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CoverExpirationDate";
@@ -1086,6 +1167,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getCoverExpirationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime electionToCounterpartyDeadline;
@@ -1099,11 +1188,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1149,6 +1233,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1168,7 +1257,7 @@ public class CorporateActionDeadline extends Deadline {
 					CorporateActionDate27.mmElectionToCounterpartyDeadline, CorporateActionDate28.mmElectionToCounterpartyDeadline, CorporateActionDate2.mmElectionToCounterpartyDeadline,
 					CorporateActionDate44.mmElectionToCounterpartyMarketDeadline, CorporateActionDate44.mmElectionToCounterpartyResponseDeadline, CorporateActionDate58.mmElectionToCounterpartyMarketDeadline,
 					CorporateActionDate58.mmElectionToCounterpartyResponseDeadline);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ElectionToCounterpartyDeadline";
@@ -1176,6 +1265,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getElectionToCounterpartyDeadline", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime expiryDate;
@@ -1188,11 +1285,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1244,6 +1336,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1259,7 +1356,7 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate6.mmExpiryDate, CorporateActionDate10.mmExpiryDate, CorporateActionDate18.mmExpiryDate, CorporateActionDate19.mmExpiryDate, CorporateActionDate8.mmExpiryDate,
 					CorporateActionDate11.mmExpiryDate, CorporateActionDate15.mmExpiryDate, CorporateActionDate16.mmExpiryDate, CorporateActionDate4.mmExpiryDate, CorporateActionDate29.mmExpiryDate, CorporateActionDate33.mmExpiryDate,
 					CorporateActionDate46.mmExpiryDate, CorporateActionDate48.mmExpiryDate, CorporateActionDate52.mmExpiryDate, CorporateActionDate55.mmExpiryDate);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryDate";
@@ -1267,6 +1364,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getExpiryDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime earlyThirdPartyDeadline;
@@ -1302,7 +1407,7 @@ public class CorporateActionDeadline extends Deadline {
 	 */
 	public static final MMBusinessAttribute mmEarlyThirdPartyDeadline = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarlyThirdPartyDeadline";
@@ -1310,6 +1415,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getEarlyThirdPartyDeadline", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime depositoryCoverExpirationDate;
@@ -1323,11 +1436,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1358,6 +1466,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1375,7 +1488,7 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate8.mmDepositoryCoverExpirationDate, CorporateActionDate11.mmDepositoryCoverExpirationDate, CorporateActionDate15.mmDepositoryCoverExpirationDate,
 					CorporateActionDate16.mmDepositoryCoverExpirationDate, CorporateActionDate29.mmDepositoryCoverExpirationDate, CorporateActionDate33.mmDepositoryCoverExpirationDate, CorporateActionDate48.mmDepositoryCoverExpirationDate,
 					CorporateActionDate55.mmDepositoryCoverExpirationDate);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositoryCoverExpirationDate";
@@ -1383,6 +1496,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getDepositoryCoverExpirationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime responseDeadline;
@@ -1397,11 +1518,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1456,6 +1572,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1474,7 +1595,7 @@ public class CorporateActionDeadline extends Deadline {
 					CorporateActionDate8.mmResponseDeadline, CorporateActionDate11.mmResponseDeadline, CorporateActionDate15.mmResponseDeadline, CorporateActionDate16.mmResponseDeadline, CorporateActionDate4.mmResponseDeadline,
 					CorporateActionOption11.mmResponseDeadline, CorporateActionDate29.mmResponseDeadline, CorporateActionDate33.mmResponseDeadline, CorporateActionDate46.mmResponseDeadline, CorporateActionDate48.mmResponseDeadline,
 					CorporateActionDate52.mmResponseDeadline, CorporateActionDate55.mmResponseDeadline);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResponseDeadline";
@@ -1482,6 +1603,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getResponseDeadline", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime consentExpirationDate;
@@ -1495,11 +1624,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1508,6 +1632,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * CorporateActionDate4.mmConsentExpirationDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1524,7 +1653,7 @@ public class CorporateActionDeadline extends Deadline {
 	public static final MMBusinessAttribute mmConsentExpirationDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate4.mmConsentExpirationDate);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConsentExpirationDate";
@@ -1532,6 +1661,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getConsentExpirationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime registrationDeadline;
@@ -1545,11 +1682,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1589,6 +1721,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1606,7 +1743,7 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmRegistrationDeadline, CorporateActionDate13.mmRegistrationDeadline, CorporateActionDate14.mmRegistrationDeadline, CorporateActionDate21.mmRegistrationDeadline,
 					CorporateActionDate22.mmRegistrationDeadline, CorporateActionDate25.mmRegistrationDeadline, CorporateActionDate27.mmRegistrationDeadline, CorporateActionDate28.mmRegistrationDeadline,
 					CorporateActionDate2.mmRegistrationDeadline, CorporateActionDate44.mmRegistrationDeadline, CorporateActionDate58.mmRegistrationDeadline);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationDeadline";
@@ -1614,6 +1751,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getRegistrationDeadline", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime stockLendingDeadline;
@@ -1628,11 +1773,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1657,6 +1797,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1673,7 +1818,7 @@ public class CorporateActionDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate29.mmStockLendingDeadline, CorporateActionDate33.mmStockLendingDeadline, CorporateActionDate48.mmStockLendingDeadline, BorrowerLendingDeadline1.mmStockLendingDeadline,
 					CorporateActionDate55.mmStockLendingDeadline, BorrowerLendingDeadline2.mmStockLendingDeadline);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StockLendingDeadline";
@@ -1681,6 +1826,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getStockLendingDeadline", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime consentRecordDate;
@@ -1699,11 +1852,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1712,6 +1860,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * CorporateActionDate4.mmConsentRecordDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1728,7 +1881,7 @@ public class CorporateActionDeadline extends Deadline {
 	public static final MMBusinessAttribute mmConsentRecordDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate4.mmConsentRecordDate);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConsentRecordDate";
@@ -1736,6 +1889,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getConsentRecordDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime earlyResponseDeadline;
@@ -1751,11 +1912,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1816,6 +1972,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1835,7 +1996,7 @@ public class CorporateActionDeadline extends Deadline {
 					CorporateActionDate22.mmEarlyThirdPartyDeadline, CorporateActionDate25.mmEarlyThirdPartyDeadline, CorporateActionDate27.mmEarlyThirdPartyDeadline, CorporateActionDate28.mmEarlyThirdPartyDeadline,
 					CorporateActionDate29.mmEarlyResponseDeadline, CorporateActionDate33.mmEarlyResponseDeadline, CorporateActionDate48.mmEarlyResponseDeadline, CorporateActionDate44.mmEarlyThirdPartyDeadline,
 					CorporateActionDate55.mmEarlyResponseDeadline, CorporateActionDate58.mmEarlyThirdPartyDeadline);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarlyResponseDeadline";
@@ -1843,6 +2004,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getEarlyResponseDeadline", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime guaranteedParticipationDate;
@@ -1856,11 +2025,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
-	 * CorporateActionDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1900,6 +2064,11 @@ public class CorporateActionDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+	 * CorporateActionDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1917,7 +2086,7 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmGuaranteedParticipationDate, CorporateActionDate13.mmGuaranteedParticipationDate, CorporateActionDate14.mmGuaranteedParticipationDate,
 					CorporateActionDate21.mmGuaranteedParticipationDate, CorporateActionDate22.mmGuaranteedParticipationDate, CorporateActionDate25.mmGuaranteedParticipationDate, CorporateActionDate27.mmGuaranteedParticipationDate,
 					CorporateActionDate28.mmGuaranteedParticipationDate, CorporateActionDate2.mmGuaranteedParticipationDate, CorporateActionDate44.mmGuaranteedParticipationDate, CorporateActionDate58.mmGuaranteedParticipationDate);
-			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GuaranteedParticipationDate";
@@ -1925,6 +2094,14 @@ public class CorporateActionDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionDeadline.class.getMethod("getGuaranteedParticipationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1936,13 +2113,23 @@ public class CorporateActionDeadline extends Deadline {
 				name = "CorporateActionDeadline";
 				definition = "Time constraints for processing corporate actions.";
 				superType_lazy = () -> Deadline.mmObject();
-				element_lazy = () -> Arrays.asList(CorporateActionDeadline.mmRevocabilityPeriod, CorporateActionDeadline.mmProtectDate, CorporateActionDeadline.mmTradingSuspendedDate, CorporateActionDeadline.mmThirdPartyDeadline,
-						CorporateActionDeadline.mmCertificationDeadline, CorporateActionDeadline.mmDeadlineToSplit, CorporateActionDeadline.mmSpecialExDate, CorporateActionDeadline.mmDeadlineForTaxBreakdownInstruction,
-						CorporateActionDeadline.mmEarlyClosingDate, CorporateActionDeadline.mmRecordDate, CorporateActionDeadline.mmCoverExpirationDate, CorporateActionDeadline.mmElectionToCounterpartyDeadline,
-						CorporateActionDeadline.mmExpiryDate, CorporateActionDeadline.mmEarlyThirdPartyDeadline, CorporateActionDeadline.mmDepositoryCoverExpirationDate, CorporateActionDeadline.mmResponseDeadline,
-						CorporateActionDeadline.mmConsentExpirationDate, CorporateActionDeadline.mmRegistrationDeadline, CorporateActionDeadline.mmStockLendingDeadline, CorporateActionDeadline.mmConsentRecordDate,
-						CorporateActionDeadline.mmEarlyResponseDeadline, CorporateActionDeadline.mmGuaranteedParticipationDate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionDeadline.mmRevocabilityPeriod, com.tools20022.repository.entity.CorporateActionDeadline.mmProtectDate,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmTradingSuspendedDate, com.tools20022.repository.entity.CorporateActionDeadline.mmThirdPartyDeadline,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmCertificationDeadline, com.tools20022.repository.entity.CorporateActionDeadline.mmDeadlineToSplit,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmSpecialExDate, com.tools20022.repository.entity.CorporateActionDeadline.mmDeadlineForTaxBreakdownInstruction,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmEarlyClosingDate, com.tools20022.repository.entity.CorporateActionDeadline.mmRecordDate,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmCoverExpirationDate, com.tools20022.repository.entity.CorporateActionDeadline.mmElectionToCounterpartyDeadline,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmExpiryDate, com.tools20022.repository.entity.CorporateActionDeadline.mmEarlyThirdPartyDeadline,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmDepositoryCoverExpirationDate, com.tools20022.repository.entity.CorporateActionDeadline.mmResponseDeadline,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmConsentExpirationDate, com.tools20022.repository.entity.CorporateActionDeadline.mmRegistrationDeadline,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmStockLendingDeadline, com.tools20022.repository.entity.CorporateActionDeadline.mmConsentRecordDate,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmEarlyResponseDeadline, com.tools20022.repository.entity.CorporateActionDeadline.mmGuaranteedParticipationDate);
 				derivationComponent_lazy = () -> Arrays.asList(BorrowerLendingDeadline1.mmObject(), BorrowerLendingDeadline2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionDeadline.class;
 			}
 		});
 		return mmObject_lazy.get();

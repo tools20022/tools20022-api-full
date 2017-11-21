@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the balance adjustments for a specific service.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the balance adjustments for a specific service."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BalanceAdjustment1", propOrder = {"type", "description", "balanceAmount", "averageAmount", "errorDate", "postingDate", "days", "earningsAdjustmentAmount"})
 public class BalanceAdjustment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -486,6 +492,7 @@ public class BalanceAdjustment1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public BalanceAdjustmentType1Code getType() {
 		return type;
 	}
@@ -494,6 +501,7 @@ public class BalanceAdjustment1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Desc", required = true)
 	public Max105Text getDescription() {
 		return description;
 	}
@@ -502,6 +510,7 @@ public class BalanceAdjustment1 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "BalAmt", required = true)
 	public AmountAndDirection34 getBalanceAmount() {
 		return balanceAmount;
 	}
@@ -510,6 +519,7 @@ public class BalanceAdjustment1 {
 		this.balanceAmount = balanceAmount;
 	}
 
+	@XmlElement(name = "AvrgAmt")
 	public AmountAndDirection34 getAverageAmount() {
 		return averageAmount;
 	}
@@ -518,6 +528,7 @@ public class BalanceAdjustment1 {
 		this.averageAmount = averageAmount;
 	}
 
+	@XmlElement(name = "ErrDt")
 	public ISODate getErrorDate() {
 		return errorDate;
 	}
@@ -526,6 +537,7 @@ public class BalanceAdjustment1 {
 		this.errorDate = errorDate;
 	}
 
+	@XmlElement(name = "PstngDt", required = true)
 	public ISODate getPostingDate() {
 		return postingDate;
 	}
@@ -534,6 +546,7 @@ public class BalanceAdjustment1 {
 		this.postingDate = postingDate;
 	}
 
+	@XmlElement(name = "Days")
 	public DecimalNumber getDays() {
 		return days;
 	}
@@ -542,6 +555,7 @@ public class BalanceAdjustment1 {
 		this.days = days;
 	}
 
+	@XmlElement(name = "EarngsAdjstmntAmt")
 	public AmountAndDirection34 getEarningsAdjustmentAmount() {
 		return earningsAdjustmentAmount;
 	}

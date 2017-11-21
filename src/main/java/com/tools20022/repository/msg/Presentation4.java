@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information for the presentation of documents.
@@ -65,6 +69,8 @@ import java.util.List;
  * definition} = "Information for the presentation of documents."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Presentation4", propOrder = {"medium", "document", "additionalInformation"})
 public class Presentation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -217,6 +223,7 @@ public class Presentation4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Mdm")
 	public PresentationMedium1Choice getMedium() {
 		return medium;
 	}
@@ -225,6 +232,7 @@ public class Presentation4 {
 		this.medium = medium;
 	}
 
+	@XmlElement(name = "Doc")
 	public List<Document11> getDocument() {
 		return document;
 	}
@@ -233,6 +241,7 @@ public class Presentation4 {
 		this.document = document;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.OrganisationName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information which describes the organisation.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Organisation12}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Organisation14", propOrder = {"fullLegalName", "organisationIdentification"})
 public class Organisation14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class Organisation14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FullLglNm")
 	public Max350Text getFullLegalName() {
 		return fullLegalName;
 	}
@@ -204,6 +211,7 @@ public class Organisation14 {
 		this.fullLegalName = fullLegalName;
 	}
 
+	@XmlElement(name = "OrgId", required = true)
 	public OrganisationIdentification8 getOrganisationIdentification() {
 		return organisationIdentification;
 	}

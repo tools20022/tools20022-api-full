@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the details of the transaction.
@@ -125,6 +129,11 @@ import java.util.List;
  * definition} = "Identifies the details of the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionPending2", propOrder = {"statusAndReason", "accountOwnerTransactionIdentification", "accountServicerTransactionIdentification", "marketInfrastructureTransactionIdentification",
+		"processorTransactionIdentification", "corporateActionEventIdentification", "poolIdentification", "balanceFrom", "balanceTo", "financialInstrumentIdentification", "financialInstrumentAttributes", "settlementQuantity",
+		"intendedSettlementDate", "statusDate", "linkages", "securitiesSubBalanceIdentification", "priority", "corporateActionEventType", "messageOriginator", "creationDateTime", "instructionProcessingAdditionalDetails",
+		"supplementaryData"})
 public class IntraPositionPending2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1088,6 +1097,7 @@ public class IntraPositionPending2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsAndRsn")
 	public PendingStatusAndReason1 getStatusAndReason() {
 		return statusAndReason;
 	}
@@ -1096,6 +1106,7 @@ public class IntraPositionPending2 {
 		this.statusAndReason = statusAndReason;
 	}
 
+	@XmlElement(name = "AcctOwnrTxId", required = true)
 	public Max35Text getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
@@ -1104,6 +1115,7 @@ public class IntraPositionPending2 {
 		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrTxId")
 	public Max35Text getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
@@ -1112,6 +1124,7 @@ public class IntraPositionPending2 {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
 	}
 
+	@XmlElement(name = "MktInfrstrctrTxId")
 	public Max35Text getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}
@@ -1120,6 +1133,7 @@ public class IntraPositionPending2 {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
 	}
 
+	@XmlElement(name = "PrcrTxId")
 	public Max35Text getProcessorTransactionIdentification() {
 		return processorTransactionIdentification;
 	}
@@ -1128,6 +1142,7 @@ public class IntraPositionPending2 {
 		this.processorTransactionIdentification = processorTransactionIdentification;
 	}
 
+	@XmlElement(name = "CorpActnEvtId")
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -1136,6 +1151,7 @@ public class IntraPositionPending2 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "PoolId")
 	public Max35Text getPoolIdentification() {
 		return poolIdentification;
 	}
@@ -1144,6 +1160,7 @@ public class IntraPositionPending2 {
 		this.poolIdentification = poolIdentification;
 	}
 
+	@XmlElement(name = "BalFr", required = true)
 	public SecuritiesSubBalanceTypeAndQuantityBreakdown1 getBalanceFrom() {
 		return balanceFrom;
 	}
@@ -1152,6 +1169,7 @@ public class IntraPositionPending2 {
 		this.balanceFrom = balanceFrom;
 	}
 
+	@XmlElement(name = "BalTo", required = true)
 	public SecuritiesSubBalanceTypeAndQuantityBreakdown1 getBalanceTo() {
 		return balanceTo;
 	}
@@ -1160,6 +1178,7 @@ public class IntraPositionPending2 {
 		this.balanceTo = balanceTo;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -1168,6 +1187,7 @@ public class IntraPositionPending2 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public FinancialInstrumentAttributes36 getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -1176,6 +1196,7 @@ public class IntraPositionPending2 {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "SttlmQty", required = true)
 	public FinancialInstrumentQuantity1Choice getSettlementQuantity() {
 		return settlementQuantity;
 	}
@@ -1184,6 +1205,7 @@ public class IntraPositionPending2 {
 		this.settlementQuantity = settlementQuantity;
 	}
 
+	@XmlElement(name = "IntnddSttlmDt", required = true)
 	public DateAndDateTimeChoice getIntendedSettlementDate() {
 		return intendedSettlementDate;
 	}
@@ -1192,6 +1214,7 @@ public class IntraPositionPending2 {
 		this.intendedSettlementDate = intendedSettlementDate;
 	}
 
+	@XmlElement(name = "StsDt")
 	public ISODateTime getStatusDate() {
 		return statusDate;
 	}
@@ -1200,6 +1223,7 @@ public class IntraPositionPending2 {
 		this.statusDate = statusDate;
 	}
 
+	@XmlElement(name = "Lnkgs")
 	public List<Linkages26> getLinkages() {
 		return linkages;
 	}
@@ -1208,6 +1232,7 @@ public class IntraPositionPending2 {
 		this.linkages = linkages;
 	}
 
+	@XmlElement(name = "SctiesSubBalId")
 	public GenericIdentification37 getSecuritiesSubBalanceIdentification() {
 		return securitiesSubBalanceIdentification;
 	}
@@ -1216,6 +1241,7 @@ public class IntraPositionPending2 {
 		this.securitiesSubBalanceIdentification = securitiesSubBalanceIdentification;
 	}
 
+	@XmlElement(name = "Prty")
 	public PriorityNumeric1Choice getPriority() {
 		return priority;
 	}
@@ -1224,6 +1250,7 @@ public class IntraPositionPending2 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "CorpActnEvtTp")
 	public CorporateActionEventType3Choice getCorporateActionEventType() {
 		return corporateActionEventType;
 	}
@@ -1232,6 +1259,7 @@ public class IntraPositionPending2 {
 		this.corporateActionEventType = corporateActionEventType;
 	}
 
+	@XmlElement(name = "MsgOrgtr")
 	public SystemPartyIdentification5 getMessageOriginator() {
 		return messageOriginator;
 	}
@@ -1240,6 +1268,7 @@ public class IntraPositionPending2 {
 		this.messageOriginator = messageOriginator;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -1248,6 +1277,7 @@ public class IntraPositionPending2 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "InstrPrcgAddtlDtls")
 	public Max350Text getInstructionProcessingAdditionalDetails() {
 		return instructionProcessingAdditionalDetails;
 	}
@@ -1256,6 +1286,7 @@ public class IntraPositionPending2 {
 		this.instructionProcessingAdditionalDetails = instructionProcessingAdditionalDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

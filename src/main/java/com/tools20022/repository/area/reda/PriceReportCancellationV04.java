@@ -29,9 +29,11 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * SCOPE<br>
@@ -53,9 +55,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code reda.002.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
@@ -115,6 +114,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code reda.002.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -130,6 +132,9 @@ import java.util.List;
  * PriceReportCancellationV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceReportCancellationV04", propOrder = {"messageIdentification", "poolReference", "previousReference", "messagePagination", "priceReportIdentification", "cancellationIdentification", "cancellationReason",
+		"expectedPriceCorrectionDate", "completePriceCancellation", "cancelledPriceValuationDetails", "extension"})
 public class PriceReportCancellationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -170,6 +175,14 @@ public class PriceReportCancellationV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCancellationV04.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -204,6 +217,14 @@ public class PriceReportCancellationV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCancellationV04.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 previousReference;
@@ -240,6 +261,14 @@ public class PriceReportCancellationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCancellationV04.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Pagination messagePagination;
 	/**
@@ -273,6 +302,14 @@ public class PriceReportCancellationV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCancellationV04.class.getMethod("getMessagePagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text priceReportIdentification;
@@ -311,6 +348,14 @@ public class PriceReportCancellationV04 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCancellationV04.class.getMethod("getPriceReportIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max35Text cancellationIdentification;
 	/**
@@ -348,6 +393,14 @@ public class PriceReportCancellationV04 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCancellationV04.class.getMethod("getCancellationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max350Text cancellationReason;
 	/**
@@ -381,6 +434,14 @@ public class PriceReportCancellationV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCancellationV04.class.getMethod("getCancellationReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DateAndDateTime1Choice expectedPriceCorrectionDate;
@@ -416,6 +477,14 @@ public class PriceReportCancellationV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime1Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCancellationV04.class.getMethod("getExpectedPriceCorrectionDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator completePriceCancellation;
@@ -455,6 +524,14 @@ public class PriceReportCancellationV04 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCancellationV04.class.getMethod("getCompletePriceCancellation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PriceReport3> cancelledPriceValuationDetails;
 	/**
@@ -487,6 +564,14 @@ public class PriceReportCancellationV04 {
 			definition = "Details of prices to be cancelled.";
 			minOccurs = 0;
 			complexType_lazy = () -> PriceReport3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCancellationV04.class.getMethod("getCancelledPriceValuationDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -524,6 +609,14 @@ public class PriceReportCancellationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCancellationV04.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -537,9 +630,12 @@ public class PriceReportCancellationV04 {
 				rootElement = "Document";
 				xmlTag = "PricRptCxl";
 				businessArea_lazy = () -> ReferenceDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PriceReportCancellationV04.mmMessageIdentification, PriceReportCancellationV04.mmPoolReference, PriceReportCancellationV04.mmPreviousReference,
-						PriceReportCancellationV04.mmMessagePagination, PriceReportCancellationV04.mmPriceReportIdentification, PriceReportCancellationV04.mmCancellationIdentification, PriceReportCancellationV04.mmCancellationReason,
-						PriceReportCancellationV04.mmExpectedPriceCorrectionDate, PriceReportCancellationV04.mmCompletePriceCancellation, PriceReportCancellationV04.mmCancelledPriceValuationDetails, PriceReportCancellationV04.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCancellationV04.mmMessageIdentification, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmPoolReference,
+						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmPreviousReference, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmMessagePagination,
+						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmPriceReportIdentification, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmCancellationIdentification,
+						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmCancellationReason, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmExpectedPriceCorrectionDate,
+						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmCompletePriceCancellation, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmCancelledPriceValuationDetails,
+						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "reda";
@@ -549,10 +645,16 @@ public class PriceReportCancellationV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PriceReportCancellationV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -561,6 +663,7 @@ public class PriceReportCancellationV04 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -569,6 +672,7 @@ public class PriceReportCancellationV04 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -577,6 +681,7 @@ public class PriceReportCancellationV04 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "MsgPgntn", required = true)
 	public Pagination getMessagePagination() {
 		return messagePagination;
 	}
@@ -585,6 +690,7 @@ public class PriceReportCancellationV04 {
 		this.messagePagination = messagePagination;
 	}
 
+	@XmlElement(name = "PricRptId", required = true)
 	public Max35Text getPriceReportIdentification() {
 		return priceReportIdentification;
 	}
@@ -593,6 +699,7 @@ public class PriceReportCancellationV04 {
 		this.priceReportIdentification = priceReportIdentification;
 	}
 
+	@XmlElement(name = "CxlId", required = true)
 	public Max35Text getCancellationIdentification() {
 		return cancellationIdentification;
 	}
@@ -601,6 +708,7 @@ public class PriceReportCancellationV04 {
 		this.cancellationIdentification = cancellationIdentification;
 	}
 
+	@XmlElement(name = "CxlRsn")
 	public Max350Text getCancellationReason() {
 		return cancellationReason;
 	}
@@ -609,6 +717,7 @@ public class PriceReportCancellationV04 {
 		this.cancellationReason = cancellationReason;
 	}
 
+	@XmlElement(name = "XpctdPricCrrctnDt")
 	public DateAndDateTime1Choice getExpectedPriceCorrectionDate() {
 		return expectedPriceCorrectionDate;
 	}
@@ -617,6 +726,7 @@ public class PriceReportCancellationV04 {
 		this.expectedPriceCorrectionDate = expectedPriceCorrectionDate;
 	}
 
+	@XmlElement(name = "CmpltPricCxl", required = true)
 	public YesNoIndicator getCompletePriceCancellation() {
 		return completePriceCancellation;
 	}
@@ -625,6 +735,7 @@ public class PriceReportCancellationV04 {
 		this.completePriceCancellation = completePriceCancellation;
 	}
 
+	@XmlElement(name = "CancPricValtnDtls")
 	public List<PriceReport3> getCancelledPriceValuationDetails() {
 		return cancelledPriceValuationDetails;
 	}
@@ -633,11 +744,18 @@ public class PriceReportCancellationV04 {
 		this.cancelledPriceValuationDetails = cancelledPriceValuationDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:reda.002.04.04")
+	static public class Document {
+		@XmlElement(name = "PricRptCxl", required = true)
+		public PriceReportCancellationV04 messageBody;
 	}
 }

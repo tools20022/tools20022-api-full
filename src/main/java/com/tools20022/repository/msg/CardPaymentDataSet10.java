@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of transactions to capture, sharing common characteristics.
@@ -83,6 +87,8 @@ import java.util.List;
  * CardPaymentDataSet7}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentDataSet10", propOrder = {"dataSetIdentification", "traceability", "dataSetInitiator", "transactionTotals", "commonData", "transaction"})
 public class CardPaymentDataSet10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -439,6 +445,7 @@ public class CardPaymentDataSet10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DataSetId", required = true)
 	public DataSetIdentification1 getDataSetIdentification() {
 		return dataSetIdentification;
 	}
@@ -447,6 +454,7 @@ public class CardPaymentDataSet10 {
 		this.dataSetIdentification = dataSetIdentification;
 	}
 
+	@XmlElement(name = "Tracblt")
 	public List<Traceability2> getTraceability() {
 		return traceability;
 	}
@@ -455,6 +463,7 @@ public class CardPaymentDataSet10 {
 		this.traceability = traceability;
 	}
 
+	@XmlElement(name = "DataSetInitr")
 	public GenericIdentification53 getDataSetInitiator() {
 		return dataSetInitiator;
 	}
@@ -463,6 +472,7 @@ public class CardPaymentDataSet10 {
 		this.dataSetInitiator = dataSetInitiator;
 	}
 
+	@XmlElement(name = "TxTtls", required = true)
 	public List<TransactionTotals3> getTransactionTotals() {
 		return transactionTotals;
 	}
@@ -471,6 +481,7 @@ public class CardPaymentDataSet10 {
 		this.transactionTotals = transactionTotals;
 	}
 
+	@XmlElement(name = "CmonData")
 	public CommonData4 getCommonData() {
 		return commonData;
 	}
@@ -479,6 +490,7 @@ public class CardPaymentDataSet10 {
 		this.commonData = commonData;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public List<CardPaymentDataSetTransaction3Choice> getTransaction() {
 		return transaction;
 	}

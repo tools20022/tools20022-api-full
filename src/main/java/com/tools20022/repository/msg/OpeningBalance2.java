@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Opening balance for the statement period (first opening balance) or of this
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OpeningBalance2", propOrder = {"shortLongIndicator", "openingBalance"})
 public class OpeningBalance2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class OpeningBalance2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ShrtLngInd", required = true)
 	public ShortLong1Code getShortLongIndicator() {
 		return shortLongIndicator;
 	}
@@ -191,6 +198,7 @@ public class OpeningBalance2 {
 		this.shortLongIndicator = shortLongIndicator;
 	}
 
+	@XmlElement(name = "OpngBal", required = true)
 	public OpeningBalance2Choice getOpeningBalance() {
 		return openingBalance;
 	}

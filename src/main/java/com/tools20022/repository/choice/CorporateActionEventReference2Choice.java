@@ -28,6 +28,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a corporate action identification or a corporate action
@@ -70,6 +74,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionEventReference2Choice", propOrder = {"linkedOfficialCorporateActionEventIdentification", "linkedCorporateActionIdentification"})
 public class CorporateActionEventReference2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -198,6 +204,7 @@ public class CorporateActionEventReference2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LkdOffclCorpActnEvtId", required = true)
 	public RestrictedFINXMax16Text getLinkedOfficialCorporateActionEventIdentification() {
 		return linkedOfficialCorporateActionEventIdentification;
 	}
@@ -206,6 +213,7 @@ public class CorporateActionEventReference2Choice {
 		this.linkedOfficialCorporateActionEventIdentification = linkedOfficialCorporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "LkdCorpActnId", required = true)
 	public RestrictedFINXMax16Text getLinkedCorporateActionIdentification() {
 		return linkedCorporateActionIdentification;
 	}

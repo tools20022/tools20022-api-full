@@ -22,6 +22,7 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,6 +36,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmAccount
+ * AccountIdentification.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmIBAN
+ * AccountIdentification.mmIBAN}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmBBAN
+ * AccountIdentification.mmBBAN}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmUPIC
+ * AccountIdentification.mmUPIC}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmProprietaryIdentification
+ * AccountIdentification.mmProprietaryIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmName
+ * AccountIdentification.mmName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmCostReferencePattern
+ * AccountIdentification.mmCostReferencePattern}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmNumber
+ * AccountIdentification.mmNumber}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -510,35 +540,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountIdentification37Choice.mmAccountsListAndBalanceDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmAccount
- * AccountIdentification.mmAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmIBAN
- * AccountIdentification.mmIBAN}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmBBAN
- * AccountIdentification.mmBBAN}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmUPIC
- * AccountIdentification.mmUPIC}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmProprietaryIdentification
- * AccountIdentification.mmProprietaryIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmName
- * AccountIdentification.mmName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmCostReferencePattern
- * AccountIdentification.mmCostReferencePattern}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmNumber
- * AccountIdentification.mmNumber}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -593,7 +594,7 @@ public class AccountIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AccountIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
@@ -621,11 +622,6 @@ public class AccountIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.IBAN2007Identifier
 	 * IBAN2007Identifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
-	 * AccountIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -668,6 +664,11 @@ public class AccountIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
+	 * AccountIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -685,7 +686,7 @@ public class AccountIdentification {
 			derivation_lazy = () -> Arrays.asList(AccountIdentification1Choice.mmIBAN, AccountIdentification5Choice.mmIBAN, CashAccountIdentification1Choice.mmIBAN, AccountIdentification3Choice.mmIBAN, AccountIdentification4Choice.mmIBAN,
 					AccountIdentification4Choice.mmOther, CashAccountIdentification5Choice.mmIBAN, CashAccountIdentification2Choice.mmIBAN, CashAccountIdentification6Choice.mmIBAN, AccountIdentification2.mmIBAN,
 					AccountIdentification30Choice.mmIBAN, AccountIdentification31Choice.mmIBAN);
-			elementContext_lazy = () -> AccountIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IBAN";
@@ -693,6 +694,14 @@ public class AccountIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IBAN2007Identifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountIdentification.class.getMethod("getIBAN", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BBANIdentifier bBAN;
@@ -709,11 +718,6 @@ public class AccountIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.BBANIdentifier
 	 * BBANIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
-	 * AccountIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -738,6 +742,11 @@ public class AccountIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
+	 * AccountIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -754,7 +763,7 @@ public class AccountIdentification {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountIdentification1Choice.mmBBAN, AccountIdentification5Choice.mmBBAN, CashAccountIdentification1Choice.mmBBAN, AccountIdentification3Choice.mmBBAN, AccountIdentification30Choice.mmBBAN,
 					AccountIdentification31Choice.mmBBAN);
-			elementContext_lazy = () -> AccountIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BBAN";
@@ -762,6 +771,14 @@ public class AccountIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BBANIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountIdentification.class.getMethod("getBBAN", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected UPICIdentifier uPIC;
@@ -778,11 +795,6 @@ public class AccountIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.UPICIdentifier
 	 * UPICIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
-	 * AccountIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -804,6 +816,11 @@ public class AccountIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
+	 * AccountIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -820,7 +837,7 @@ public class AccountIdentification {
 		{
 			derivation_lazy = () -> Arrays
 					.asList(AccountIdentification1Choice.mmUPIC, CashAccountIdentification1Choice.mmUPIC, AccountIdentification3Choice.mmUPIC, AccountIdentification30Choice.mmUPIC, AccountIdentification31Choice.mmUPIC);
-			elementContext_lazy = () -> AccountIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UPIC";
@@ -828,6 +845,14 @@ public class AccountIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UPICIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountIdentification.class.getMethod("getUPIC", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected GenericIdentification proprietaryIdentification;
@@ -850,11 +875,6 @@ public class AccountIdentification {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
 	 * GenericIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
-	 * AccountIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -909,6 +929,11 @@ public class AccountIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
+	 * AccountIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -927,7 +952,7 @@ public class AccountIdentification {
 					CashAccountIdentification1Choice.mmDomesticAccount, AccountIdentification3Choice.mmProprietaryAccount, CashAccountIdentification5Choice.mmProprietary, CashAccountIdentification2Choice.mmProprietary,
 					CashAccountIdentification6Choice.mmProprietary, AccountIdentification26.mmProprietary, AccountIdentification4.mmProprietary, CashAccountIdentification1.mmDomesticAccount, CustomerAccount2.mmProprietary,
 					AccountIdentification30Choice.mmOther, AccountIdentification31Choice.mmDomesticAccount, AccountDesignation1Choice.mmProprietary);
-			elementContext_lazy = () -> AccountIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProprietaryIdentification";
@@ -951,11 +976,6 @@ public class AccountIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
-	 * AccountIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1226,6 +1246,11 @@ public class AccountIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
+	 * AccountIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1257,7 +1282,7 @@ public class AccountIdentification {
 					InvestmentAccount57.mmAccountName, CollateralAccount2.mmName, SecuritiesAccount33.mmName, SecuritiesAccount27.mmName, SecuritiesAccount30.mmName, SecuritiesAccount34.mmName, CardAccount10.mmAccountName,
 					CardAccount9.mmAccountName, CardAccount8.mmAccountName, CardAccount11.mmAccountName, CardAccount13.mmAccountName, CardAccount7.mmAccountName, CardAccount12.mmAccountName, InvestmentAccount61.mmName,
 					InvestmentAccount63.mmName, InvestmentAccount62.mmName, InvestmentAccount58.mmAccountName, SubAccount6.mmName, InvestmentAccount64.mmName, CollateralAccount3.mmName);
-			elementContext_lazy = () -> AccountIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Name";
@@ -1265,6 +1290,14 @@ public class AccountIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountIdentification.class.getMethod("getName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected GenericIdentification costReferencePattern;
@@ -1288,11 +1321,6 @@ public class AccountIdentification {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
 	 * GenericIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
-	 * AccountIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1301,6 +1329,11 @@ public class AccountIdentification {
 	 * AccountingAccount1.mmCostReferencePattern}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
+	 * AccountIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1317,7 +1350,7 @@ public class AccountIdentification {
 	public static final MMBusinessAssociationEnd mmCostReferencePattern = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountingAccount1.mmCostReferencePattern);
-			elementContext_lazy = () -> AccountIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CostReferencePattern";
@@ -1339,11 +1372,6 @@ public class AccountIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
-	 * AccountIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1365,6 +1393,11 @@ public class AccountIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
+	 * AccountIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1380,7 +1413,7 @@ public class AccountIdentification {
 		{
 			derivation_lazy = () -> Arrays.asList(DetailedInstructionStatus8.mmAccountIdentification, DetailedInstructionStatus8.mmSubAccountIdentification, Entitlement1.mmAccountIdentification,
 					DetailedInstructionStatus11.mmAccountIdentification, DetailedInstructionStatus11.mmSubAccountIdentification);
-			elementContext_lazy = () -> AccountIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Number";
@@ -1388,6 +1421,14 @@ public class AccountIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountIdentification.class.getMethod("getNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1417,8 +1458,9 @@ public class AccountIdentification {
 						AccountIdentification33Choice.mmAccountsListAndBalanceDetails, AccountIdentification29Choice.mmForAllAccounts, AccountIdentification29Choice.mmAccountsList, AccountIdentification32Choice.mmForAllAccounts,
 						AccountIdentificationAndName5.mmIdentification, AccountIdentification34Choice.mmForAllAccounts, AccountIdentification34Choice.mmAccountsList, AccountIdentification36Choice.mmForAllAccounts,
 						AccountIdentification37Choice.mmForAllAccounts, AccountIdentification37Choice.mmAccountsListAndBalanceDetails);
-				element_lazy = () -> Arrays.asList(AccountIdentification.mmAccount, AccountIdentification.mmIBAN, AccountIdentification.mmBBAN, AccountIdentification.mmUPIC, AccountIdentification.mmProprietaryIdentification,
-						AccountIdentification.mmName, AccountIdentification.mmCostReferencePattern, AccountIdentification.mmNumber);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountIdentification.mmAccount, com.tools20022.repository.entity.AccountIdentification.mmIBAN,
+						com.tools20022.repository.entity.AccountIdentification.mmBBAN, com.tools20022.repository.entity.AccountIdentification.mmUPIC, com.tools20022.repository.entity.AccountIdentification.mmProprietaryIdentification,
+						com.tools20022.repository.entity.AccountIdentification.mmName, com.tools20022.repository.entity.AccountIdentification.mmCostReferencePattern, com.tools20022.repository.entity.AccountIdentification.mmNumber);
 				derivationComponent_lazy = () -> Arrays.asList(AccountIdentification1Choice.mmObject(), AccountIdentification5Choice.mmObject(), AccountIdentification1.mmObject(), AccountIdentificationAndPurpose.mmObject(),
 						AccountIdentification3.mmObject(), AccountIdentificationFormatChoice.mmObject(), CashAccountIdentification1Choice.mmObject(), AccountIdentificationAndName3.mmObject(), AccountIdentification3Choice.mmObject(),
 						GenericAccountIdentification1.mmObject(), AccountIdentification4Choice.mmObject(), AccountIdentificationDetails.mmObject(), CashAccountIdentification5Choice.mmObject(), CashAccountIdentification2Choice.mmObject(),
@@ -1442,6 +1484,11 @@ public class AccountIdentification {
 						AccountIdentification32.mmObject(), AccountIdentificationAndName5.mmObject(), AccountIdentification34Choice.mmObject(), AccountIdentification36Choice.mmObject(), AccountIdentification37Choice.mmObject(),
 						AccountIdentification35.mmObject(), AccountIdentification34.mmObject(), AccountIdentification37.mmObject(), AccountIdentification39.mmObject(), AccountIdentification40.mmObject(), AccountIdentification41.mmObject(),
 						AccountIdentification42.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountIdentification.class;
 			}
 		});
 		return mmObject_lazy.get();

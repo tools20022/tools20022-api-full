@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Withdrawal transaction for which the completion is sent.
@@ -95,6 +99,9 @@ import java.util.List;
  * ATMTransaction3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransaction5", propOrder = {"transactionIdentification", "transactionStatus", "incident", "incidentDetail", "reconciliationIdentification", "requestedReceipt", "receiptPrinted", "capturedCard", "authorisationResult",
+		"ICCRelatedData"})
 public class ATMTransaction5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -615,6 +622,7 @@ public class ATMTransaction5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -623,6 +631,7 @@ public class ATMTransaction5 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "TxSts", required = true)
 	public ATMTransactionStatus1Code getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -631,6 +640,7 @@ public class ATMTransaction5 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "Incdnt")
 	public List<FailureReason4Code> getIncident() {
 		return incident;
 	}
@@ -639,6 +649,7 @@ public class ATMTransaction5 {
 		this.incident = incident;
 	}
 
+	@XmlElement(name = "IncdntDtl")
 	public List<Max70Text> getIncidentDetail() {
 		return incidentDetail;
 	}
@@ -647,6 +658,7 @@ public class ATMTransaction5 {
 		this.incidentDetail = incidentDetail;
 	}
 
+	@XmlElement(name = "RcncltnId")
 	public Max35Text getReconciliationIdentification() {
 		return reconciliationIdentification;
 	}
@@ -655,6 +667,7 @@ public class ATMTransaction5 {
 		this.reconciliationIdentification = reconciliationIdentification;
 	}
 
+	@XmlElement(name = "ReqdRct")
 	public TrueFalseIndicator getRequestedReceipt() {
 		return requestedReceipt;
 	}
@@ -663,6 +676,7 @@ public class ATMTransaction5 {
 		this.requestedReceipt = requestedReceipt;
 	}
 
+	@XmlElement(name = "RctPrtd")
 	public TrueFalseIndicator getReceiptPrinted() {
 		return receiptPrinted;
 	}
@@ -671,6 +685,7 @@ public class ATMTransaction5 {
 		this.receiptPrinted = receiptPrinted;
 	}
 
+	@XmlElement(name = "CaptrdCard")
 	public TrueFalseIndicator getCapturedCard() {
 		return capturedCard;
 	}
@@ -679,6 +694,7 @@ public class ATMTransaction5 {
 		this.capturedCard = capturedCard;
 	}
 
+	@XmlElement(name = "AuthstnRslt")
 	public AuthorisationResult9 getAuthorisationResult() {
 		return authorisationResult;
 	}
@@ -687,6 +703,7 @@ public class ATMTransaction5 {
 		this.authorisationResult = authorisationResult;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}

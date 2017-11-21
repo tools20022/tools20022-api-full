@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment terminal or ATM performing the transaction.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Payment terminal or ATM performing the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardAcceptorTerminal1", propOrder = {"identification", "location", "capabilities"})
 public class CardAcceptorTerminal1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class CardAcceptorTerminal1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public GenericIdentification32 getIdentification() {
 		return identification;
 	}
@@ -236,6 +243,7 @@ public class CardAcceptorTerminal1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Lctn")
 	public PostalAddress18 getLocation() {
 		return location;
 	}
@@ -244,6 +252,7 @@ public class CardAcceptorTerminal1 {
 		this.location = location;
 	}
 
+	@XmlElement(name = "Cpblties", required = true)
 	public PointOfInteractionCapabilities4 getCapabilities() {
 		return capabilities;
 	}

@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Net position of a segregated holding, in a single security, within the
@@ -111,6 +115,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AggregateBalanceInformation2", propOrder = {"aggregateQuantity", "daysAccrued", "holdingValue", "accruedInterestAmount", "bookValue", "safekeepingPlace", "financialInstrumentDetails", "priceDetails",
+		"foreignExchangeDetails", "balanceBreakdownDetails", "additionalBalanceBreakdownDetails", "balanceAtSafekeepingPlace"})
 public class AggregateBalanceInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -729,6 +736,7 @@ public class AggregateBalanceInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AggtQty", required = true)
 	public BalanceQuantity1Choice getAggregateQuantity() {
 		return aggregateQuantity;
 	}
@@ -737,6 +745,7 @@ public class AggregateBalanceInformation2 {
 		this.aggregateQuantity = aggregateQuantity;
 	}
 
+	@XmlElement(name = "DaysAcrd")
 	public Number getDaysAccrued() {
 		return daysAccrued;
 	}
@@ -745,6 +754,7 @@ public class AggregateBalanceInformation2 {
 		this.daysAccrued = daysAccrued;
 	}
 
+	@XmlElement(name = "HldgVal", required = true)
 	public List<ActiveOrHistoricCurrencyAndAmount> getHoldingValue() {
 		return holdingValue;
 	}
@@ -753,6 +763,7 @@ public class AggregateBalanceInformation2 {
 		this.holdingValue = holdingValue;
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt")
 	public ActiveOrHistoricCurrencyAndAmount getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -761,6 +772,7 @@ public class AggregateBalanceInformation2 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "BookVal")
 	public ActiveOrHistoricCurrencyAndAmount getBookValue() {
 		return bookValue;
 	}
@@ -769,6 +781,7 @@ public class AggregateBalanceInformation2 {
 		this.bookValue = bookValue;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormatChoice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -777,6 +790,7 @@ public class AggregateBalanceInformation2 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument4 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -785,6 +799,7 @@ public class AggregateBalanceInformation2 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "PricDtls", required = true)
 	public List<PriceInformation1> getPriceDetails() {
 		return priceDetails;
 	}
@@ -793,6 +808,7 @@ public class AggregateBalanceInformation2 {
 		this.priceDetails = priceDetails;
 	}
 
+	@XmlElement(name = "FrgnXchgDtls")
 	public ForeignExchangeTerms3 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -801,6 +817,7 @@ public class AggregateBalanceInformation2 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "BalBrkdwnDtls")
 	public List<SubBalanceInformation1> getBalanceBreakdownDetails() {
 		return balanceBreakdownDetails;
 	}
@@ -809,6 +826,7 @@ public class AggregateBalanceInformation2 {
 		this.balanceBreakdownDetails = balanceBreakdownDetails;
 	}
 
+	@XmlElement(name = "AddtlBalBrkdwnDtls")
 	public List<AdditionalBalanceInformation> getAdditionalBalanceBreakdownDetails() {
 		return additionalBalanceBreakdownDetails;
 	}
@@ -817,6 +835,7 @@ public class AggregateBalanceInformation2 {
 		this.additionalBalanceBreakdownDetails = additionalBalanceBreakdownDetails;
 	}
 
+	@XmlElement(name = "BalAtSfkpgPlc")
 	public List<AggregateBalancePerSafekeepingPlace2> getBalanceAtSafekeepingPlace() {
 		return balanceAtSafekeepingPlace;
 	}

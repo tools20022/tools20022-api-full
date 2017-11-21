@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesTradePreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -48,9 +50,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.007.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
@@ -95,6 +94,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.007.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -117,6 +119,8 @@ import java.util.List;
  * SubscriptionBulkOrderV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionBulkOrderV03", propOrder = {"messageIdentification", "poolReference", "previousReference", "bulkOrderDetails", "relatedPartyDetails", "copyDetails", "extension"})
 public class SubscriptionBulkOrderV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +170,14 @@ public class SubscriptionBulkOrderV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderV03.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -210,6 +222,14 @@ public class SubscriptionBulkOrderV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderV03.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference3> previousReference;
 	/**
@@ -252,6 +272,14 @@ public class SubscriptionBulkOrderV03 {
 			nextVersions_lazy = () -> Arrays.asList(SubscriptionBulkOrderV04.mmPreviousReference);
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderV03.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SubscriptionBulkOrder4 bulkOrderDetails;
@@ -297,6 +325,14 @@ public class SubscriptionBulkOrderV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> SubscriptionBulkOrder4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderV03.class.getMethod("getBulkOrderDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Intermediary8> relatedPartyDetails;
 	/**
@@ -330,6 +366,14 @@ public class SubscriptionBulkOrderV03 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			complexType_lazy = () -> Intermediary8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderV03.class.getMethod("getRelatedPartyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CopyInformation2 copyDetails;
@@ -376,6 +420,14 @@ public class SubscriptionBulkOrderV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderV03.class.getMethod("getCopyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension1> extension;
 	/**
@@ -421,6 +473,14 @@ public class SubscriptionBulkOrderV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionBulkOrderV03.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -435,8 +495,10 @@ public class SubscriptionBulkOrderV03 {
 				rootElement = "Document";
 				xmlTag = "SbcptBlkOrdrV03";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SubscriptionBulkOrderV03.mmMessageIdentification, SubscriptionBulkOrderV03.mmPoolReference, SubscriptionBulkOrderV03.mmPreviousReference,
-						SubscriptionBulkOrderV03.mmBulkOrderDetails, SubscriptionBulkOrderV03.mmRelatedPartyDetails, SubscriptionBulkOrderV03.mmCopyDetails, SubscriptionBulkOrderV03.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.mmMessageIdentification, com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.mmPoolReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.mmPreviousReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.mmBulkOrderDetails,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.mmRelatedPartyDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.mmCopyDetails,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -446,10 +508,16 @@ public class SubscriptionBulkOrderV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SubscriptionBulkOrderV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -458,6 +526,7 @@ public class SubscriptionBulkOrderV03 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -466,6 +535,7 @@ public class SubscriptionBulkOrderV03 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference3> getPreviousReference() {
 		return previousReference;
 	}
@@ -474,6 +544,7 @@ public class SubscriptionBulkOrderV03 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "BlkOrdrDtls", required = true)
 	public SubscriptionBulkOrder4 getBulkOrderDetails() {
 		return bulkOrderDetails;
 	}
@@ -482,6 +553,7 @@ public class SubscriptionBulkOrderV03 {
 		this.bulkOrderDetails = bulkOrderDetails;
 	}
 
+	@XmlElement(name = "RltdPtyDtls")
 	public List<Intermediary8> getRelatedPartyDetails() {
 		return relatedPartyDetails;
 	}
@@ -490,6 +562,7 @@ public class SubscriptionBulkOrderV03 {
 		this.relatedPartyDetails = relatedPartyDetails;
 	}
 
+	@XmlElement(name = "CpyDtls")
 	public CopyInformation2 getCopyDetails() {
 		return copyDetails;
 	}
@@ -498,11 +571,18 @@ public class SubscriptionBulkOrderV03 {
 		this.copyDetails = copyDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.007.03.03")
+	static public class Document {
+		@XmlElement(name = "SbcptBlkOrdrV03", required = true)
+		public SubscriptionBulkOrderV03 messageBody;
 	}
 }

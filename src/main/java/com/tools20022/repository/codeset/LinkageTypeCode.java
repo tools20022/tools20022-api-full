@@ -29,13 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.LinkageType1Code
- * LinkageType1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.LinkageTypeCode#mmLink
@@ -44,6 +37,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * LinkageTypeCode.mmUnlink}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.LinkageTypeCode#mmSoft
  * LinkageTypeCode.mmSoft}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.LinkageType1Code
+ * LinkageType1Code}</li>
  * </ul>
  * </li>
  * <li>

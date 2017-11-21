@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Organised structure that is set up for a particular purpose, for example, a
@@ -99,6 +103,8 @@ import java.util.List;
  * Organisation24}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Organisation22", propOrder = {"name", "shortName", "identification", "legalEntityIdentifier", "purpose", "registrationCountry", "registrationDate", "modifiedPostalAddress", "typeOfOrganisation"})
 public class Organisation22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -659,6 +665,7 @@ public class Organisation22 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max350Text getName() {
 		return name;
 	}
@@ -667,6 +674,7 @@ public class Organisation22 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "ShrtNm")
 	public Max35Text getShortName() {
 		return shortName;
 	}
@@ -675,6 +683,7 @@ public class Organisation22 {
 		this.shortName = shortName;
 	}
 
+	@XmlElement(name = "Id")
 	public PartyIdentification72Choice getIdentification() {
 		return identification;
 	}
@@ -683,6 +692,7 @@ public class Organisation22 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "LglNttyIdr")
 	public LEIIdentifier getLegalEntityIdentifier() {
 		return legalEntityIdentifier;
 	}
@@ -691,6 +701,7 @@ public class Organisation22 {
 		this.legalEntityIdentifier = legalEntityIdentifier;
 	}
 
+	@XmlElement(name = "Purp")
 	public Max35Text getPurpose() {
 		return purpose;
 	}
@@ -699,6 +710,7 @@ public class Organisation22 {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "RegnCtry")
 	public CountryCode getRegistrationCountry() {
 		return registrationCountry;
 	}
@@ -707,6 +719,7 @@ public class Organisation22 {
 		this.registrationCountry = registrationCountry;
 	}
 
+	@XmlElement(name = "RegnDt")
 	public ISODate getRegistrationDate() {
 		return registrationDate;
 	}
@@ -715,6 +728,7 @@ public class Organisation22 {
 		this.registrationDate = registrationDate;
 	}
 
+	@XmlElement(name = "ModfdPstlAdr")
 	public List<ModificationScope34> getModifiedPostalAddress() {
 		return modifiedPostalAddress;
 	}
@@ -723,6 +737,7 @@ public class Organisation22 {
 		this.modifiedPostalAddress = modifiedPostalAddress;
 	}
 
+	@XmlElement(name = "TpOfOrg")
 	public OrganisationType1Choice getTypeOfOrganisation() {
 		return typeOfOrganisation;
 	}

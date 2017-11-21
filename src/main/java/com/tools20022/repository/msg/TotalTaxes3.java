@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information regarding the total amount of taxes.
@@ -103,6 +107,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TotalTaxes3", propOrder = {"totalAmountOfTaxes", "taxableIncomePerDividend", "EUCapitalGain", "extendedEUCapitalGain", "EUDividendStatus", "extendedEUDividendStatus", "percentageOfDebtClaim", "taxDetails"})
 public class TotalTaxes3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -616,6 +622,7 @@ public class TotalTaxes3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlAmtOfTaxs")
 	public ActiveCurrencyAnd13DecimalAmount getTotalAmountOfTaxes() {
 		return totalAmountOfTaxes;
 	}
@@ -624,6 +631,7 @@ public class TotalTaxes3 {
 		this.totalAmountOfTaxes = totalAmountOfTaxes;
 	}
 
+	@XmlElement(name = "TaxblIncmPerDvdd")
 	public ActiveCurrencyAndAmount getTaxableIncomePerDividend() {
 		return taxableIncomePerDividend;
 	}
@@ -632,6 +640,7 @@ public class TotalTaxes3 {
 		this.taxableIncomePerDividend = taxableIncomePerDividend;
 	}
 
+	@XmlElement(name = "EUCptlGn")
 	public EUCapitalGain2Code getEUCapitalGain() {
 		return eUCapitalGain;
 	}
@@ -640,6 +649,7 @@ public class TotalTaxes3 {
 		this.eUCapitalGain = eUCapitalGain;
 	}
 
+	@XmlElement(name = "XtndedEUCptlGn")
 	public Extended350Code getExtendedEUCapitalGain() {
 		return extendedEUCapitalGain;
 	}
@@ -648,6 +658,7 @@ public class TotalTaxes3 {
 		this.extendedEUCapitalGain = extendedEUCapitalGain;
 	}
 
+	@XmlElement(name = "EUDvddSts")
 	public EUDividendStatus1Code getEUDividendStatus() {
 		return eUDividendStatus;
 	}
@@ -656,6 +667,7 @@ public class TotalTaxes3 {
 		this.eUDividendStatus = eUDividendStatus;
 	}
 
+	@XmlElement(name = "XtndedEUDvddSts")
 	public Extended350Code getExtendedEUDividendStatus() {
 		return extendedEUDividendStatus;
 	}
@@ -664,6 +676,7 @@ public class TotalTaxes3 {
 		this.extendedEUDividendStatus = extendedEUDividendStatus;
 	}
 
+	@XmlElement(name = "PctgOfDebtClm")
 	public PercentageRate getPercentageOfDebtClaim() {
 		return percentageOfDebtClaim;
 	}
@@ -672,6 +685,7 @@ public class TotalTaxes3 {
 		this.percentageOfDebtClaim = percentageOfDebtClaim;
 	}
 
+	@XmlElement(name = "TaxDtls")
 	public List<Tax14> getTaxDetails() {
 		return taxDetails;
 	}

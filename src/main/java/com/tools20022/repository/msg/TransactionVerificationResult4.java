@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Result of performed verifications for the transaction.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransactionVerificationResult3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionVerificationResult4", propOrder = {"method", "verificationEntity", "result", "additionalResult"})
 public class TransactionVerificationResult4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -324,6 +330,7 @@ public class TransactionVerificationResult4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Mtd", required = true)
 	public AuthenticationMethod6Code getMethod() {
 		return method;
 	}
@@ -332,6 +339,7 @@ public class TransactionVerificationResult4 {
 		this.method = method;
 	}
 
+	@XmlElement(name = "VrfctnNtty")
 	public AuthenticationEntity2Code getVerificationEntity() {
 		return verificationEntity;
 	}
@@ -340,6 +348,7 @@ public class TransactionVerificationResult4 {
 		this.verificationEntity = verificationEntity;
 	}
 
+	@XmlElement(name = "Rslt")
 	public Verification1Code getResult() {
 		return result;
 	}
@@ -348,6 +357,7 @@ public class TransactionVerificationResult4 {
 		this.result = result;
 	}
 
+	@XmlElement(name = "AddtlRslt")
 	public Max500Text getAdditionalResult() {
 		return additionalResult;
 	}

@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.CaseAssignmentRejectionJustification;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -53,9 +55,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.031.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -88,6 +87,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.031.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -99,6 +101,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "camt.031.001.01", propOrder = {"assignment", "case", "justification"})
 public class RejectCaseAssignment {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -135,6 +139,14 @@ public class RejectCaseAssignment {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RejectCaseAssignment.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case case_;
 	/**
@@ -167,6 +179,14 @@ public class RejectCaseAssignment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Case.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RejectCaseAssignment.class.getMethod("getCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CaseAssignmentRejectionJustification justification;
@@ -203,6 +223,14 @@ public class RejectCaseAssignment {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignmentRejectionJustification.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RejectCaseAssignment.class.getMethod("getJustification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -216,7 +244,8 @@ public class RejectCaseAssignment {
 				xmlTag = "camt.031.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.031.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(RejectCaseAssignment.mmAssignment, RejectCaseAssignment.mmCase, RejectCaseAssignment.mmJustification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RejectCaseAssignment.mmAssignment, com.tools20022.repository.area.camt.RejectCaseAssignment.mmCase,
+						com.tools20022.repository.area.camt.RejectCaseAssignment.mmJustification);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -226,10 +255,16 @@ public class RejectCaseAssignment {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RejectCaseAssignment.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment getAssignment() {
 		return assignment;
 	}
@@ -238,6 +273,7 @@ public class RejectCaseAssignment {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "Case", required = true)
 	public Case getCase() {
 		return case_;
 	}
@@ -246,11 +282,18 @@ public class RejectCaseAssignment {
 		this.case_ = case_;
 	}
 
+	@XmlElement(name = "Justfn", required = true)
 	public CaseAssignmentRejectionJustification getJustification() {
 		return justification;
 	}
 
 	public void setJustification(CaseAssignmentRejectionJustification justification) {
 		this.justification = justification;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.031.01.01")
+	static public class Document {
+		@XmlElement(name = "camt.031.001.01", required = true)
+		public RejectCaseAssignment messageBody;
 	}
 }

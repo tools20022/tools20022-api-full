@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account to or from which a securities entry is made.<br>
@@ -94,6 +98,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemSecuritiesAccount1", propOrder = {"accountOwner", "identification", "type", "openingDate", "closingDate", "holdIndicator", "negativePosition", "marketSpecificAttribute", "restriction", "endInvestorFlag",
+		"pricingScheme"})
 public class SystemSecuritiesAccount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -597,6 +604,7 @@ public class SystemSecuritiesAccount1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnr", required = true)
 	public SystemPartyIdentification3 getAccountOwner() {
 		return accountOwner;
 	}
@@ -605,6 +613,7 @@ public class SystemSecuritiesAccount1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -613,6 +622,7 @@ public class SystemSecuritiesAccount1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public SystemSecuritiesAccountType1Code getType() {
 		return type;
 	}
@@ -621,6 +631,7 @@ public class SystemSecuritiesAccount1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "OpngDt", required = true)
 	public ISODate getOpeningDate() {
 		return openingDate;
 	}
@@ -629,6 +640,7 @@ public class SystemSecuritiesAccount1 {
 		this.openingDate = openingDate;
 	}
 
+	@XmlElement(name = "ClsgDt")
 	public ISODate getClosingDate() {
 		return closingDate;
 	}
@@ -637,6 +649,7 @@ public class SystemSecuritiesAccount1 {
 		this.closingDate = closingDate;
 	}
 
+	@XmlElement(name = "HldInd", required = true)
 	public TrueFalseIndicator getHoldIndicator() {
 		return holdIndicator;
 	}
@@ -645,6 +658,7 @@ public class SystemSecuritiesAccount1 {
 		this.holdIndicator = holdIndicator;
 	}
 
+	@XmlElement(name = "NegPos", required = true)
 	public YesNoIndicator getNegativePosition() {
 		return negativePosition;
 	}
@@ -653,6 +667,7 @@ public class SystemSecuritiesAccount1 {
 		this.negativePosition = negativePosition;
 	}
 
+	@XmlElement(name = "MktSpcfcAttr")
 	public List<MarketSpecificAttribute1> getMarketSpecificAttribute() {
 		return marketSpecificAttribute;
 	}
@@ -661,6 +676,7 @@ public class SystemSecuritiesAccount1 {
 		this.marketSpecificAttribute = marketSpecificAttribute;
 	}
 
+	@XmlElement(name = "Rstrctn")
 	public List<SystemRestriction1> getRestriction() {
 		return restriction;
 	}
@@ -669,6 +685,7 @@ public class SystemSecuritiesAccount1 {
 		this.restriction = restriction;
 	}
 
+	@XmlElement(name = "EndInvstrFlg", required = true)
 	public Exact4AlphaNumericText getEndInvestorFlag() {
 		return endInvestorFlag;
 	}
@@ -677,6 +694,7 @@ public class SystemSecuritiesAccount1 {
 		this.endInvestorFlag = endInvestorFlag;
 	}
 
+	@XmlElement(name = "PricgSchme", required = true)
 	public Exact4AlphaNumericText getPricingScheme() {
 		return pricingScheme;
 	}

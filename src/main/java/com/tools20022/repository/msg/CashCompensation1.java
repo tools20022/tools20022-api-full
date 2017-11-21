@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the cash compensation such as the fees and the total
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashCompensation1", propOrder = {"settlementAmount", "fees", "valueDate"})
 public class CashCompensation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -225,6 +231,7 @@ public class CashCompensation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmAmt", required = true)
 	public AmountAndDirection20 getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -233,6 +240,7 @@ public class CashCompensation1 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "Fees")
 	public AmountAndDirection20 getFees() {
 		return fees;
 	}
@@ -241,6 +249,7 @@ public class CashCompensation1 {
 		this.fees = fees;
 	}
 
+	@XmlElement(name = "ValDt")
 	public ISODate getValueDate() {
 		return valueDate;
 	}

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Deadline;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,8 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Deadline Deadline}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -46,6 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesBlockingDeadline.mmBlockingPeriod}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Deadline Deadline}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -76,11 +77,6 @@ public class SecuritiesBlockingDeadline extends Deadline {
 	 * complexType} =
 	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBlockingDeadline
-	 * SecuritiesBlockingDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -105,6 +101,11 @@ public class SecuritiesBlockingDeadline extends Deadline {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBlockingDeadline
+	 * SecuritiesBlockingDeadline}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -121,7 +122,7 @@ public class SecuritiesBlockingDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmBlockingPeriod, CorporateActionPeriod6.mmBlockingPeriod, CorporateActionPeriod8.mmBlockingPeriod, EligibilityDates.mmBlockingPeriod,
 					CorporateActionPeriod1.mmBlockingPeriod, CorporateActionPeriod10.mmBlockingPeriod);
-			elementContext_lazy = () -> SecuritiesBlockingDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesBlockingDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BlockingPeriod";
@@ -129,6 +130,14 @@ public class SecuritiesBlockingDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesBlockingDeadline.class.getMethod("getBlockingPeriod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -140,7 +149,12 @@ public class SecuritiesBlockingDeadline extends Deadline {
 				name = "SecuritiesBlockingDeadline";
 				definition = "Date by which the securities should be blocked.";
 				superType_lazy = () -> Deadline.mmObject();
-				element_lazy = () -> Arrays.asList(SecuritiesBlockingDeadline.mmBlockingPeriod);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesBlockingDeadline.mmBlockingPeriod);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesBlockingDeadline.class;
 			}
 		});
 		return mmObject_lazy.get();

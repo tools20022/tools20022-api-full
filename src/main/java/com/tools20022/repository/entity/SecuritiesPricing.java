@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -41,6 +42,199 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceMethod
+ * SecuritiesPricing.mmPriceMethod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceType
+ * SecuritiesPricing.mmPriceType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmCumDividendIndicator
+ * SecuritiesPricing.mmCumDividendIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmCalculationBasis
+ * SecuritiesPricing.mmCalculationBasis}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceChangeRelatedStatistics
+ * SecuritiesPricing.mmPriceChangeRelatedStatistics}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRate
+ * SecuritiesPricing.mmRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmHighestPriceValueRelatedStatistics
+ * SecuritiesPricing.mmHighestPriceValueRelatedStatistics}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmLowestPriceValueRelatedStatistics
+ * SecuritiesPricing.mmLowestPriceValueRelatedStatistics}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmSecurity
+ * SecuritiesPricing.mmSecurity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmSecuritiesTradeExecution
+ * SecuritiesPricing.mmSecuritiesTradeExecution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmYielded
+ * SecuritiesPricing.mmYielded}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTypeOfRate
+ * SecuritiesPricing.mmTypeOfRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmDerivative
+ * SecuritiesPricing.mmDerivative}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedWarrant
+ * SecuritiesPricing.mmRelatedWarrant}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedSecuritiesConversion
+ * SecuritiesPricing.mmRelatedSecuritiesConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmLotBreakdown
+ * SecuritiesPricing.mmLotBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTypeOfAmount
+ * SecuritiesPricing.mmTypeOfAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmExercisePriceRelatedEvent
+ * SecuritiesPricing.mmExercisePriceRelatedEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmGenericCashPriceReceivedPerProductRelatedEvent
+ * SecuritiesPricing.mmGenericCashPriceReceivedPerProductRelatedEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAmountPricePerFinancialInstrumentQuantity
+ * SecuritiesPricing.mmAmountPricePerFinancialInstrumentQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAmountPricePerAmount
+ * SecuritiesPricing.mmAmountPricePerAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmGenericCashPricePaidPerProductRelatedEvent
+ * SecuritiesPricing.mmGenericCashPricePaidPerProductRelatedEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceCalculationPeriod
+ * SecuritiesPricing.mmPriceCalculationPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmCashInLieuOfSharePriceRelatedEvent
+ * SecuritiesPricing.mmCashInLieuOfSharePriceRelatedEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmOverSubscriptionDepositPriceRelatedEvent
+ * SecuritiesPricing.mmOverSubscriptionDepositPriceRelatedEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmCashValueForTaxRelatedEvent
+ * SecuritiesPricing.mmCashValueForTaxRelatedEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMaximumPriceBiddingConditions
+ * SecuritiesPricing.mmMaximumPriceBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMinimumPriceBiddingConditions
+ * SecuritiesPricing.mmMinimumPriceBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmQuotationDate
+ * SecuritiesPricing.mmQuotationDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmYieldCalculation
+ * SecuritiesPricing.mmYieldCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedSecuritiesFinancing
+ * SecuritiesPricing.mmRelatedSecuritiesFinancing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmFundOrderRelatedToExecutedPrice
+ * SecuritiesPricing.mmFundOrderRelatedToExecutedPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmFundOrderRelatedToInformativePrice
+ * SecuritiesPricing.mmFundOrderRelatedToInformativePrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTaxVoucher
+ * SecuritiesPricing.mmTaxVoucher}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmSecuritiesTrade
+ * SecuritiesPricing.mmSecuritiesTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmNetAssetValueCalculation
+ * SecuritiesPricing.mmNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedBuyIn
+ * SecuritiesPricing.mmRelatedBuyIn}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmIndex
+ * SecuritiesPricing.mmIndex}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmInformationPartyRole
+ * SecuritiesPricing.mmInformationPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceFactPeriod
+ * SecuritiesPricing.mmPriceFactPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAnalyticsCalculation
+ * SecuritiesPricing.mmAnalyticsCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmDurationCalculation
+ * SecuritiesPricing.mmDurationCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmLifeCalculation
+ * SecuritiesPricing.mmLifeCalculation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmDate
+ * SecuritiesPricing.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmSpread
+ * SecuritiesPricing.mmSpread}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmOrder
+ * SecuritiesPricing.mmOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmStopPriceOrder
+ * SecuritiesPricing.mmStopPriceOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAllocation
+ * SecuritiesPricing.mmAllocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedOrder
+ * SecuritiesPricing.mmRelatedOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmIssuance
+ * SecuritiesPricing.mmIssuance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmEntitlement
+ * SecuritiesPricing.mmEntitlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmCashFractionsPriceRelatedSecuritiesDistribution
+ * SecuritiesPricing.mmCashFractionsPriceRelatedSecuritiesDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmSuscriptionPriceRelatedSecuritiesDistribution
+ * SecuritiesPricing.mmSuscriptionPriceRelatedSecuritiesDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmReinvestmentPriceRelatedSecuritiesDistribution
+ * SecuritiesPricing.mmReinvestmentPriceRelatedSecuritiesDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedFuture
+ * SecuritiesPricing.mmRelatedFuture}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmDistribution
+ * SecuritiesPricing.mmDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceChangeRedemptionSchedule
+ * SecuritiesPricing.mmPriceChangeRedemptionSchedule}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedRedemptionSchedule
+ * SecuritiesPricing.mmRelatedRedemptionSchedule}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPreviousClosingPriceRelatedQuote
+ * SecuritiesPricing.mmPreviousClosingPriceRelatedQuote}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRequestedPriceRelatedQuote
+ * SecuritiesPricing.mmRequestedPriceRelatedQuote}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceRelatedQuote
+ * SecuritiesPricing.mmPriceRelatedQuote}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMarketPriceRelatedQuote
+ * SecuritiesPricing.mmMarketPriceRelatedQuote}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
+ * SecuritiesPricing.mmPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedCorporateActionPrice
+ * SecuritiesPricing.mmRelatedCorporateActionPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedPosition
+ * SecuritiesPricing.mmRelatedPosition}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -574,199 +768,6 @@ import java.util.List;
  * PriceInformation14.mmValue}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceMethod
- * SecuritiesPricing.mmPriceMethod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceType
- * SecuritiesPricing.mmPriceType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmCumDividendIndicator
- * SecuritiesPricing.mmCumDividendIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmCalculationBasis
- * SecuritiesPricing.mmCalculationBasis}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceChangeRelatedStatistics
- * SecuritiesPricing.mmPriceChangeRelatedStatistics}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRate
- * SecuritiesPricing.mmRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmHighestPriceValueRelatedStatistics
- * SecuritiesPricing.mmHighestPriceValueRelatedStatistics}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmLowestPriceValueRelatedStatistics
- * SecuritiesPricing.mmLowestPriceValueRelatedStatistics}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmSecurity
- * SecuritiesPricing.mmSecurity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmSecuritiesTradeExecution
- * SecuritiesPricing.mmSecuritiesTradeExecution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmYielded
- * SecuritiesPricing.mmYielded}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTypeOfRate
- * SecuritiesPricing.mmTypeOfRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmDerivative
- * SecuritiesPricing.mmDerivative}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedWarrant
- * SecuritiesPricing.mmRelatedWarrant}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedSecuritiesConversion
- * SecuritiesPricing.mmRelatedSecuritiesConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmLotBreakdown
- * SecuritiesPricing.mmLotBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTypeOfAmount
- * SecuritiesPricing.mmTypeOfAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmExercisePriceRelatedEvent
- * SecuritiesPricing.mmExercisePriceRelatedEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmGenericCashPriceReceivedPerProductRelatedEvent
- * SecuritiesPricing.mmGenericCashPriceReceivedPerProductRelatedEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAmountPricePerFinancialInstrumentQuantity
- * SecuritiesPricing.mmAmountPricePerFinancialInstrumentQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAmountPricePerAmount
- * SecuritiesPricing.mmAmountPricePerAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmGenericCashPricePaidPerProductRelatedEvent
- * SecuritiesPricing.mmGenericCashPricePaidPerProductRelatedEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceCalculationPeriod
- * SecuritiesPricing.mmPriceCalculationPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmCashInLieuOfSharePriceRelatedEvent
- * SecuritiesPricing.mmCashInLieuOfSharePriceRelatedEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmOverSubscriptionDepositPriceRelatedEvent
- * SecuritiesPricing.mmOverSubscriptionDepositPriceRelatedEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmCashValueForTaxRelatedEvent
- * SecuritiesPricing.mmCashValueForTaxRelatedEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMaximumPriceBiddingConditions
- * SecuritiesPricing.mmMaximumPriceBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMinimumPriceBiddingConditions
- * SecuritiesPricing.mmMinimumPriceBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmQuotationDate
- * SecuritiesPricing.mmQuotationDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmYieldCalculation
- * SecuritiesPricing.mmYieldCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedSecuritiesFinancing
- * SecuritiesPricing.mmRelatedSecuritiesFinancing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmFundOrderRelatedToExecutedPrice
- * SecuritiesPricing.mmFundOrderRelatedToExecutedPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmFundOrderRelatedToInformativePrice
- * SecuritiesPricing.mmFundOrderRelatedToInformativePrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTaxVoucher
- * SecuritiesPricing.mmTaxVoucher}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmSecuritiesTrade
- * SecuritiesPricing.mmSecuritiesTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmNetAssetValueCalculation
- * SecuritiesPricing.mmNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedBuyIn
- * SecuritiesPricing.mmRelatedBuyIn}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmIndex
- * SecuritiesPricing.mmIndex}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmInformationPartyRole
- * SecuritiesPricing.mmInformationPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceFactPeriod
- * SecuritiesPricing.mmPriceFactPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAnalyticsCalculation
- * SecuritiesPricing.mmAnalyticsCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmDurationCalculation
- * SecuritiesPricing.mmDurationCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmLifeCalculation
- * SecuritiesPricing.mmLifeCalculation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmDate
- * SecuritiesPricing.mmDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmSpread
- * SecuritiesPricing.mmSpread}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmOrder
- * SecuritiesPricing.mmOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmStopPriceOrder
- * SecuritiesPricing.mmStopPriceOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAllocation
- * SecuritiesPricing.mmAllocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedOrder
- * SecuritiesPricing.mmRelatedOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmIssuance
- * SecuritiesPricing.mmIssuance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmEntitlement
- * SecuritiesPricing.mmEntitlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmCashFractionsPriceRelatedSecuritiesDistribution
- * SecuritiesPricing.mmCashFractionsPriceRelatedSecuritiesDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmSuscriptionPriceRelatedSecuritiesDistribution
- * SecuritiesPricing.mmSuscriptionPriceRelatedSecuritiesDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmReinvestmentPriceRelatedSecuritiesDistribution
- * SecuritiesPricing.mmReinvestmentPriceRelatedSecuritiesDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedFuture
- * SecuritiesPricing.mmRelatedFuture}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmDistribution
- * SecuritiesPricing.mmDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceChangeRedemptionSchedule
- * SecuritiesPricing.mmPriceChangeRedemptionSchedule}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedRedemptionSchedule
- * SecuritiesPricing.mmRelatedRedemptionSchedule}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPreviousClosingPriceRelatedQuote
- * SecuritiesPricing.mmPreviousClosingPriceRelatedQuote}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRequestedPriceRelatedQuote
- * SecuritiesPricing.mmRequestedPriceRelatedQuote}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceRelatedQuote
- * SecuritiesPricing.mmPriceRelatedQuote}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMarketPriceRelatedQuote
- * SecuritiesPricing.mmMarketPriceRelatedQuote}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
- * SecuritiesPricing.mmPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedCorporateActionPrice
- * SecuritiesPricing.mmRelatedCorporateActionPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedPosition
- * SecuritiesPricing.mmRelatedPosition}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -796,11 +797,6 @@ public class SecuritiesPricing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PriceMethodCode
 	 * PriceMethodCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -835,6 +831,11 @@ public class SecuritiesPricing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -850,7 +851,7 @@ public class SecuritiesPricing {
 			derivation_lazy = () -> Arrays.asList(ValuationDealingProcessingCharacteristics.mmPriceMethod, ValuationDealingProcessingCharacteristics2.mmPriceMethod, UnitPrice6.mmPriceMethod, UnitPrice15.mmPriceMethod,
 					UnitPrice3.mmPriceMethod, UnitPrice12.mmPriceMethod, UnitPrice1.mmPriceMethod, UnitPrice5.mmPriceMethod, UnitPrice10.mmPriceMethod, UnitPrice11.mmPriceMethod, UnitPrice20.mmPriceMethod, UnitPrice21.mmPriceMethod,
 					UnitPrice22.mmPriceMethod);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceMethod";
@@ -858,6 +859,14 @@ public class SecuritiesPricing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceMethodCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPricing.class.getMethod("getPriceMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TypeOfPriceCode priceType;
@@ -871,11 +880,6 @@ public class SecuritiesPricing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TypeOfPriceCode
 	 * TypeOfPriceCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1305,6 +1309,11 @@ public class SecuritiesPricing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1342,7 +1351,7 @@ public class SecuritiesPricing {
 					QuantityBreakdown38.mmTypeOfPrice, TypeOfPrice32Choice.mmCode, TypeOfPrice32Choice.mmProprietary, QuantityBreakdown44.mmTypeOfPrice, PriceInformation14.mmType, SecuritiesTradeDetails65.mmTypeOfPrice,
 					SecuritiesTradeDetails66.mmTypeOfPrice, UnitPrice22.mmType, TypeOfPrice46Choice.mmCode, TypeOfPrice46Choice.mmProprietary, DerivativeCommodity2.mmFinalPriceType, SecuritiesTradeDetails67.mmTypeOfPrice,
 					SecuritiesTradeDetails68.mmTypeOfPrice, SecuritiesTradeDetails69.mmTypeOfPrice, SecuritiesTradeDetails70.mmTypeOfPrice);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceType";
@@ -1350,6 +1359,14 @@ public class SecuritiesPricing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfPriceCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPricing.class.getMethod("getPriceType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator cumDividendIndicator;
@@ -1365,11 +1382,6 @@ public class SecuritiesPricing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1451,6 +1463,11 @@ public class SecuritiesPricing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1472,7 +1489,7 @@ public class SecuritiesPricing {
 					RedemptionExecution12.mmCumDividendIndicator, SubscriptionExecution9.mmCumDividendIndicator, InvestmentFundTransaction4.mmCumDividendIndicator, SubscriptionExecution13.mmCumDividendIndicator,
 					SubscriptionExecution12.mmCumDividendIndicator, RedemptionExecution16.mmCumDividendIndicator, SwitchSubscriptionLegExecution4.mmCumDividendIndicator, RedemptionExecution15.mmCumDividendIndicator,
 					SwitchRedemptionLegExecution4.mmCumDividendIndicator);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CumDividendIndicator";
@@ -1480,6 +1497,14 @@ public class SecuritiesPricing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPricing.class.getMethod("getCumDividendIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate calculationBasis;
@@ -1493,11 +1518,6 @@ public class SecuritiesPricing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1509,6 +1529,11 @@ public class SecuritiesPricing {
 	 * UnitPrice15.mmCalculationBasis}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1523,7 +1548,7 @@ public class SecuritiesPricing {
 	public static final MMBusinessAttribute mmCalculationBasis = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnitPrice6.mmCalculationBasis, UnitPrice15.mmCalculationBasis);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationBasis";
@@ -1531,6 +1556,14 @@ public class SecuritiesPricing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPricing.class.getMethod("getCalculationBasis", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.ValuationStatistics> priceChangeRelatedStatistics;
@@ -1570,7 +1603,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmPriceChangeRelatedStatistics = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceChangeRelatedStatistics";
@@ -1592,11 +1625,6 @@ public class SecuritiesPricing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1778,6 +1806,11 @@ public class SecuritiesPricing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1802,7 +1835,7 @@ public class SecuritiesPricing {
 					PriceFormat51Choice.mmPercentagePrice, PriceFormat49Choice.mmPercentagePrice, PriceFormat47Choice.mmPercentagePrice, PriceFormat44Choice.mmPercentagePrice, PriceFormat56Choice.mmPercentagePrice,
 					PriceFormat57Choice.mmPercentagePrice, PriceFormat52Choice.mmPercentagePrice, PriceFormat59Choice.mmPercentagePrice, PriceFormat55Choice.mmPercentagePrice, PriceFormat53Choice.mmPercentagePrice,
 					PriceFormat60Choice.mmPercentagePrice);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
@@ -1810,6 +1843,14 @@ public class SecuritiesPricing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPricing.class.getMethod("getRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ValuationStatistics highestPriceValueRelatedStatistics;
@@ -1849,7 +1890,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmHighestPriceValueRelatedStatistics = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HighestPriceValueRelatedStatistics";
@@ -1898,7 +1939,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmLowestPriceValueRelatedStatistics = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LowestPriceValueRelatedStatistics";
@@ -1945,7 +1986,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
@@ -1993,7 +2034,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTradeExecution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTradeExecution";
@@ -2017,11 +2058,6 @@ public class SecuritiesPricing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2043,6 +2079,11 @@ public class SecuritiesPricing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2058,7 +2099,7 @@ public class SecuritiesPricing {
 	public static final MMBusinessAttribute mmYielded = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(YieldedOrValueType1Choice.mmYielded, PriceInformation1.mmYielded, PriceInformation2.mmYielded, PriceInformation3.mmYieldedIndicator, PriceInformation4.mmYielded);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Yielded";
@@ -2066,6 +2107,14 @@ public class SecuritiesPricing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPricing.class.getMethod("getYielded", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PriceValueTypeCode typeOfRate;
@@ -2079,11 +2128,6 @@ public class SecuritiesPricing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode
 	 * PriceValueTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2131,6 +2175,11 @@ public class SecuritiesPricing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2147,7 +2196,7 @@ public class SecuritiesPricing {
 			derivation_lazy = () -> Arrays.asList(YieldedOrValueType1Choice.mmValueType, PercentagePrice1.mmPercentagePriceType, PriceInformation5.mmValueType, PriceInformation7.mmValueType, PriceInformation1.mmValueType,
 					PriceInformation2.mmValueType, PriceInformation6.mmValueType, PriceInformation8.mmValueType, Price1.mmValueType, PriceInformation4.mmValueType, PriceInformation12.mmValueType, PriceInformation13.mmValueType,
 					PriceInformation16.mmValueType, PriceInformation14.mmValueType);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TypeOfRate";
@@ -2155,6 +2204,14 @@ public class SecuritiesPricing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPricing.class.getMethod("getTypeOfRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Derivative> derivative;
@@ -2193,7 +2250,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmDerivative = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Derivative";
@@ -2239,7 +2296,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedWarrant = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedWarrant";
@@ -2289,7 +2346,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSecuritiesConversion = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesConversion";
@@ -2337,7 +2394,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmLotBreakdown = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LotBreakdown";
@@ -2360,11 +2417,6 @@ public class SecuritiesPricing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AmountPriceTypeCode
 	 * AmountPriceTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2419,6 +2471,11 @@ public class SecuritiesPricing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2436,7 +2493,7 @@ public class SecuritiesPricing {
 					AmountPricePerFinancialInstrumentQuantity4.mmAmountPriceType, AmountPricePerAmount3.mmAmountPriceType, AmountPrice2.mmAmountPriceType, AmountPrice4.mmAmountPriceType, AmountPriceType1FormatChoice.mmCode,
 					AmountPriceType1FormatChoice.mmProprietary, AmountPrice1.mmAmountPriceType, AmountPricePerFinancialInstrumentQuantity1.mmAmountPriceType, AmountPricePerAmount1.mmAmountPriceType,
 					AmountPricePerFinancialInstrumentQuantity5.mmAmountPriceType, AmountPricePerFinancialInstrumentQuantity6.mmAmountPriceType, AmountPricePerFinancialInstrumentQuantity7.mmAmountPriceType);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TypeOfAmount";
@@ -2444,6 +2501,14 @@ public class SecuritiesPricing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AmountPriceTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPricing.class.getMethod("getTypeOfAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionPrice exercisePriceRelatedEvent;
@@ -2484,7 +2549,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmExercisePriceRelatedEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExercisePriceRelatedEvent";
@@ -2536,7 +2601,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmGenericCashPriceReceivedPerProductRelatedEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GenericCashPriceReceivedPerProductRelatedEvent";
@@ -2566,11 +2631,6 @@ public class SecuritiesPricing {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.AmountAndQuantity
 	 * AmountAndQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2652,6 +2712,11 @@ public class SecuritiesPricing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2674,7 +2739,7 @@ public class SecuritiesPricing {
 					PriceFormat40Choice.mmAmountPricePerFinancialInstrumentQuantity, PriceFormat39Choice.mmAmountPricePerFinancialInstrumentQuantity, PriceFormat48Choice.mmAmountPricePerFinancialInstrumentQuantity,
 					PriceFormat49Choice.mmAmountPricePerFinancialInstrumentQuantity, PriceFormat47Choice.mmAmountPricePerFinancialInstrumentQuantity, PriceFormat56Choice.mmAmountPricePerFinancialInstrumentQuantity,
 					PriceFormat53Choice.mmAmountPricePerFinancialInstrumentQuantity, PriceFormat60Choice.mmAmountPricePerFinancialInstrumentQuantity);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmountPricePerFinancialInstrumentQuantity";
@@ -2704,11 +2769,6 @@ public class SecuritiesPricing {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.AmountRatio
 	 * AmountRatio}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2799,6 +2859,11 @@ public class SecuritiesPricing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2817,7 +2882,7 @@ public class SecuritiesPricing {
 					AmountPricePerAmount1.mmAmount, PriceFormat1Choice.mmAmountPricePerAmount, PriceFormat33Choice.mmAmountPricePerAmount, PriceFormat32Choice.mmAmountPricePerAmount, PriceFormat34Choice.mmAmountPricePerAmount,
 					PriceFormat43Choice.mmAmountPricePerAmount, PriceFormat40Choice.mmAmountPricePerAmount, PriceFormat39Choice.mmAmountPricePerAmount, PriceFormat48Choice.mmAmountPricePerAmount, PriceFormat49Choice.mmAmountPricePerAmount,
 					PriceFormat47Choice.mmAmountPricePerAmount, PriceFormat56Choice.mmAmountPricePerAmount, PriceFormat53Choice.mmAmountPricePerAmount, PriceFormat60Choice.mmAmountPricePerAmount);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmountPricePerAmount";
@@ -2869,7 +2934,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmGenericCashPricePaidPerProductRelatedEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GenericCashPricePaidPerProductRelatedEvent";
@@ -2900,11 +2965,6 @@ public class SecuritiesPricing {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2950,6 +3010,11 @@ public class SecuritiesPricing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2968,7 +3033,7 @@ public class SecuritiesPricing {
 					CorporateActionPeriod7.mmPriceCalculationPeriod, CorporateActionPeriod3.mmPriceCalculationPeriod, CorporateActionPeriod6.mmPriceCalculationPeriod, CorporateActionPeriod8.mmPriceCalculationPeriod,
 					PriceInformation9.mmPriceCalculationPeriod, CorporateActionPeriod1.mmPriceCalculationPeriod, CorporateActionPeriod2.mmPriceCalculationPeriod, CorporateActionPeriod10.mmPriceCalculationPeriod,
 					PriceInformation11.mmPriceCalculationPeriod, CorporateActionPeriod11.mmPriceCalculationPeriod);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceCalculationPeriod";
@@ -3020,7 +3085,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmCashInLieuOfSharePriceRelatedEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashInLieuOfSharePriceRelatedEvent";
@@ -3072,7 +3137,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmOverSubscriptionDepositPriceRelatedEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OverSubscriptionDepositPriceRelatedEvent";
@@ -3122,7 +3187,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmCashValueForTaxRelatedEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashValueForTaxRelatedEvent";
@@ -3171,7 +3236,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmMaximumPriceBiddingConditions = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumPriceBiddingConditions";
@@ -3220,7 +3285,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmMinimumPriceBiddingConditions = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumPriceBiddingConditions";
@@ -3242,11 +3307,6 @@ public class SecuritiesPricing {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3298,6 +3358,11 @@ public class SecuritiesPricing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3313,7 +3378,7 @@ public class SecuritiesPricing {
 			derivation_lazy = () -> Arrays.asList(PriceInformation5.mmQuotationDate, PriceInformation7.mmQuotationDate, PriceInformation1.mmQuotationDate, PriceInformation2.mmQuotationDate, PriceInformation6.mmQuotationDate,
 					PriceInformation8.mmQuotationDate, PriceInformation9.mmQuotationDate, CorporateActionDate4.mmQuotationSettingDate, PriceInformation3.mmQuotationDate, PriceInformation4.mmQuotationDate,
 					PriceInformation11.mmQuotationDate, PriceInformation12.mmQuotationDate, PriceInformation13.mmQuotationDate, PriceInformation16.mmQuotationDate, PriceInformation14.mmQuotationDate);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuotationDate";
@@ -3321,6 +3386,14 @@ public class SecuritiesPricing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPricing.class.getMethod("getQuotationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.YieldCalculation> yieldCalculation;
@@ -3341,11 +3414,6 @@ public class SecuritiesPricing {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.YieldCalculation
 	 * YieldCalculation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3368,6 +3436,11 @@ public class SecuritiesPricing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3382,7 +3455,7 @@ public class SecuritiesPricing {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmYieldDetails, FinancialInstrumentStipulations.mmYieldRange, FinancialInstrumentStipulations2.mmYieldRange, Debt2.mmYieldCalculation, SingleOrder1.mmYieldDetails,
 					IndicationOfInterest1.mmYieldDetails);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "YieldCalculation";
@@ -3430,7 +3503,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSecuritiesFinancing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesFinancing";
@@ -3478,7 +3551,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmFundOrderRelatedToExecutedPrice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundOrderRelatedToExecutedPrice";
@@ -3527,7 +3600,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmFundOrderRelatedToInformativePrice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundOrderRelatedToInformativePrice";
@@ -3575,7 +3648,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmTaxVoucher = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxVoucher";
@@ -3623,7 +3696,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTrade";
@@ -3673,7 +3746,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmNetAssetValueCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAssetValueCalculation";
@@ -3719,7 +3792,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedBuyIn = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedBuyIn";
@@ -3748,11 +3821,6 @@ public class SecuritiesPricing {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Index Index}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3760,6 +3828,11 @@ public class SecuritiesPricing {
 	 * BasketDescription3.mmIndex}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3775,7 +3848,7 @@ public class SecuritiesPricing {
 	public static final MMBusinessAssociationEnd mmIndex = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BasketDescription3.mmIndex);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Index";
@@ -3823,7 +3896,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmInformationPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InformationPartyRole";
@@ -3871,7 +3944,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmPriceFactPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceFactPeriod";
@@ -3920,7 +3993,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmAnalyticsCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AnalyticsCalculation";
@@ -3967,7 +4040,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmDurationCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DurationCalculation";
@@ -4014,7 +4087,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmLifeCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LifeCalculation";
@@ -4035,11 +4108,6 @@ public class SecuritiesPricing {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4048,6 +4116,11 @@ public class SecuritiesPricing {
 	 * AmountPricePerFinancialInstrumentQuantity5.mmPriceFixingDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4062,7 +4135,7 @@ public class SecuritiesPricing {
 	public static final MMBusinessAttribute mmDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountPricePerFinancialInstrumentQuantity5.mmPriceFixingDate);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Date";
@@ -4070,6 +4143,14 @@ public class SecuritiesPricing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesPricing.class.getMethod("getDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Spread spread;
@@ -4107,7 +4188,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmSpread = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Spread";
@@ -4155,7 +4236,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Order";
@@ -4203,7 +4284,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmStopPriceOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StopPriceOrder";
@@ -4251,7 +4332,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmAllocation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Allocation";
@@ -4300,7 +4381,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOrder";
@@ -4347,7 +4428,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmIssuance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuance";
@@ -4395,7 +4476,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmEntitlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Entitlement";
@@ -4445,7 +4526,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmCashFractionsPriceRelatedSecuritiesDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashFractionsPriceRelatedSecuritiesDistribution";
@@ -4495,7 +4576,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmSuscriptionPriceRelatedSecuritiesDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SuscriptionPriceRelatedSecuritiesDistribution";
@@ -4545,7 +4626,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmReinvestmentPriceRelatedSecuritiesDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReinvestmentPriceRelatedSecuritiesDistribution";
@@ -4593,7 +4674,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedFuture = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedFuture";
@@ -4641,7 +4722,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Distribution";
@@ -4690,7 +4771,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmPriceChangeRedemptionSchedule = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceChangeRedemptionSchedule";
@@ -4738,7 +4819,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedRedemptionSchedule = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedRedemptionSchedule";
@@ -4785,7 +4866,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmPreviousClosingPriceRelatedQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreviousClosingPriceRelatedQuote";
@@ -4832,7 +4913,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRequestedPriceRelatedQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedPriceRelatedQuote";
@@ -4878,7 +4959,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmPriceRelatedQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceRelatedQuote";
@@ -4925,7 +5006,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmMarketPriceRelatedQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketPriceRelatedQuote";
@@ -4954,11 +5035,6 @@ public class SecuritiesPricing {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Price Price}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5093,6 +5169,11 @@ public class SecuritiesPricing {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5114,7 +5195,7 @@ public class SecuritiesPricing {
 					AmountPricePerFinancialInstrumentQuantity5.mmPriceValue, InstrumentLeg2.mmLegBidPrice, InstrumentLeg2.mmLegOfferPrice, InstrumentLeg3.mmLegPrice, Order17.mmDealPrice, Order18.mmDealPrice, UnitPrice20.mmValue,
 					UnitPrice19.mmValue, SecuritiesTransactionPrice2Choice.mmMonetaryValue, AmountPricePerFinancialInstrumentQuantity6.mmPriceValue, UnitPrice21.mmValue, AmountPricePerFinancialInstrumentQuantity7.mmPriceValue,
 					UnitPrice22.mmValue, TransparencyDataReport11.mmInstrumentPrice);
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Price";
@@ -5164,7 +5245,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCorporateActionPrice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedCorporateActionPrice";
@@ -5211,7 +5292,7 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPosition = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPricing.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPosition";
@@ -5257,21 +5338,34 @@ public class SecuritiesPricing {
 						PriceInformation7.mmValue, PriceInformation1.mmValue, PriceInformation2.mmValue, PriceInformation6.mmValue, PriceInformation8.mmValue, PriceInformation9.mmValue, TransactionPrice1Choice.mmProprietary,
 						TransactionPrice2Choice.mmProprietary, TransactionPrice3Choice.mmProprietary, PriceRate1.mmRateType, PriceInformation10.mmAmountOfChange, PriceInformation3.mmValue, PriceInformation3.mmPriceType,
 						PriceInformation4.mmValue, PriceInformation11.mmValue, FinancialInstrumentAggregateBalance1.mmPrice, PriceInformation12.mmValue, PriceInformation13.mmValue, PriceInformation16.mmValue, PriceInformation14.mmValue);
-				element_lazy = () -> Arrays.asList(SecuritiesPricing.mmPriceMethod, SecuritiesPricing.mmPriceType, SecuritiesPricing.mmCumDividendIndicator, SecuritiesPricing.mmCalculationBasis,
-						SecuritiesPricing.mmPriceChangeRelatedStatistics, SecuritiesPricing.mmRate, SecuritiesPricing.mmHighestPriceValueRelatedStatistics, SecuritiesPricing.mmLowestPriceValueRelatedStatistics,
-						SecuritiesPricing.mmSecurity, SecuritiesPricing.mmSecuritiesTradeExecution, SecuritiesPricing.mmYielded, SecuritiesPricing.mmTypeOfRate, SecuritiesPricing.mmDerivative, SecuritiesPricing.mmRelatedWarrant,
-						SecuritiesPricing.mmRelatedSecuritiesConversion, SecuritiesPricing.mmLotBreakdown, SecuritiesPricing.mmTypeOfAmount, SecuritiesPricing.mmExercisePriceRelatedEvent,
-						SecuritiesPricing.mmGenericCashPriceReceivedPerProductRelatedEvent, SecuritiesPricing.mmAmountPricePerFinancialInstrumentQuantity, SecuritiesPricing.mmAmountPricePerAmount,
-						SecuritiesPricing.mmGenericCashPricePaidPerProductRelatedEvent, SecuritiesPricing.mmPriceCalculationPeriod, SecuritiesPricing.mmCashInLieuOfSharePriceRelatedEvent,
-						SecuritiesPricing.mmOverSubscriptionDepositPriceRelatedEvent, SecuritiesPricing.mmCashValueForTaxRelatedEvent, SecuritiesPricing.mmMaximumPriceBiddingConditions, SecuritiesPricing.mmMinimumPriceBiddingConditions,
-						SecuritiesPricing.mmQuotationDate, SecuritiesPricing.mmYieldCalculation, SecuritiesPricing.mmRelatedSecuritiesFinancing, SecuritiesPricing.mmFundOrderRelatedToExecutedPrice,
-						SecuritiesPricing.mmFundOrderRelatedToInformativePrice, SecuritiesPricing.mmTaxVoucher, SecuritiesPricing.mmSecuritiesTrade, SecuritiesPricing.mmNetAssetValueCalculation, SecuritiesPricing.mmRelatedBuyIn,
-						SecuritiesPricing.mmIndex, SecuritiesPricing.mmInformationPartyRole, SecuritiesPricing.mmPriceFactPeriod, SecuritiesPricing.mmAnalyticsCalculation, SecuritiesPricing.mmDurationCalculation,
-						SecuritiesPricing.mmLifeCalculation, SecuritiesPricing.mmDate, SecuritiesPricing.mmSpread, SecuritiesPricing.mmOrder, SecuritiesPricing.mmStopPriceOrder, SecuritiesPricing.mmAllocation,
-						SecuritiesPricing.mmRelatedOrder, SecuritiesPricing.mmIssuance, SecuritiesPricing.mmEntitlement, SecuritiesPricing.mmCashFractionsPriceRelatedSecuritiesDistribution,
-						SecuritiesPricing.mmSuscriptionPriceRelatedSecuritiesDistribution, SecuritiesPricing.mmReinvestmentPriceRelatedSecuritiesDistribution, SecuritiesPricing.mmRelatedFuture, SecuritiesPricing.mmDistribution,
-						SecuritiesPricing.mmPriceChangeRedemptionSchedule, SecuritiesPricing.mmRelatedRedemptionSchedule, SecuritiesPricing.mmPreviousClosingPriceRelatedQuote, SecuritiesPricing.mmRequestedPriceRelatedQuote,
-						SecuritiesPricing.mmPriceRelatedQuote, SecuritiesPricing.mmMarketPriceRelatedQuote, SecuritiesPricing.mmPrice, SecuritiesPricing.mmRelatedCorporateActionPrice, SecuritiesPricing.mmRelatedPosition);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmPriceMethod, com.tools20022.repository.entity.SecuritiesPricing.mmPriceType,
+						com.tools20022.repository.entity.SecuritiesPricing.mmCumDividendIndicator, com.tools20022.repository.entity.SecuritiesPricing.mmCalculationBasis,
+						com.tools20022.repository.entity.SecuritiesPricing.mmPriceChangeRelatedStatistics, com.tools20022.repository.entity.SecuritiesPricing.mmRate,
+						com.tools20022.repository.entity.SecuritiesPricing.mmHighestPriceValueRelatedStatistics, com.tools20022.repository.entity.SecuritiesPricing.mmLowestPriceValueRelatedStatistics,
+						com.tools20022.repository.entity.SecuritiesPricing.mmSecurity, com.tools20022.repository.entity.SecuritiesPricing.mmSecuritiesTradeExecution, com.tools20022.repository.entity.SecuritiesPricing.mmYielded,
+						com.tools20022.repository.entity.SecuritiesPricing.mmTypeOfRate, com.tools20022.repository.entity.SecuritiesPricing.mmDerivative, com.tools20022.repository.entity.SecuritiesPricing.mmRelatedWarrant,
+						com.tools20022.repository.entity.SecuritiesPricing.mmRelatedSecuritiesConversion, com.tools20022.repository.entity.SecuritiesPricing.mmLotBreakdown, com.tools20022.repository.entity.SecuritiesPricing.mmTypeOfAmount,
+						com.tools20022.repository.entity.SecuritiesPricing.mmExercisePriceRelatedEvent, com.tools20022.repository.entity.SecuritiesPricing.mmGenericCashPriceReceivedPerProductRelatedEvent,
+						com.tools20022.repository.entity.SecuritiesPricing.mmAmountPricePerFinancialInstrumentQuantity, com.tools20022.repository.entity.SecuritiesPricing.mmAmountPricePerAmount,
+						com.tools20022.repository.entity.SecuritiesPricing.mmGenericCashPricePaidPerProductRelatedEvent, com.tools20022.repository.entity.SecuritiesPricing.mmPriceCalculationPeriod,
+						com.tools20022.repository.entity.SecuritiesPricing.mmCashInLieuOfSharePriceRelatedEvent, com.tools20022.repository.entity.SecuritiesPricing.mmOverSubscriptionDepositPriceRelatedEvent,
+						com.tools20022.repository.entity.SecuritiesPricing.mmCashValueForTaxRelatedEvent, com.tools20022.repository.entity.SecuritiesPricing.mmMaximumPriceBiddingConditions,
+						com.tools20022.repository.entity.SecuritiesPricing.mmMinimumPriceBiddingConditions, com.tools20022.repository.entity.SecuritiesPricing.mmQuotationDate,
+						com.tools20022.repository.entity.SecuritiesPricing.mmYieldCalculation, com.tools20022.repository.entity.SecuritiesPricing.mmRelatedSecuritiesFinancing,
+						com.tools20022.repository.entity.SecuritiesPricing.mmFundOrderRelatedToExecutedPrice, com.tools20022.repository.entity.SecuritiesPricing.mmFundOrderRelatedToInformativePrice,
+						com.tools20022.repository.entity.SecuritiesPricing.mmTaxVoucher, com.tools20022.repository.entity.SecuritiesPricing.mmSecuritiesTrade, com.tools20022.repository.entity.SecuritiesPricing.mmNetAssetValueCalculation,
+						com.tools20022.repository.entity.SecuritiesPricing.mmRelatedBuyIn, com.tools20022.repository.entity.SecuritiesPricing.mmIndex, com.tools20022.repository.entity.SecuritiesPricing.mmInformationPartyRole,
+						com.tools20022.repository.entity.SecuritiesPricing.mmPriceFactPeriod, com.tools20022.repository.entity.SecuritiesPricing.mmAnalyticsCalculation,
+						com.tools20022.repository.entity.SecuritiesPricing.mmDurationCalculation, com.tools20022.repository.entity.SecuritiesPricing.mmLifeCalculation, com.tools20022.repository.entity.SecuritiesPricing.mmDate,
+						com.tools20022.repository.entity.SecuritiesPricing.mmSpread, com.tools20022.repository.entity.SecuritiesPricing.mmOrder, com.tools20022.repository.entity.SecuritiesPricing.mmStopPriceOrder,
+						com.tools20022.repository.entity.SecuritiesPricing.mmAllocation, com.tools20022.repository.entity.SecuritiesPricing.mmRelatedOrder, com.tools20022.repository.entity.SecuritiesPricing.mmIssuance,
+						com.tools20022.repository.entity.SecuritiesPricing.mmEntitlement, com.tools20022.repository.entity.SecuritiesPricing.mmCashFractionsPriceRelatedSecuritiesDistribution,
+						com.tools20022.repository.entity.SecuritiesPricing.mmSuscriptionPriceRelatedSecuritiesDistribution, com.tools20022.repository.entity.SecuritiesPricing.mmReinvestmentPriceRelatedSecuritiesDistribution,
+						com.tools20022.repository.entity.SecuritiesPricing.mmRelatedFuture, com.tools20022.repository.entity.SecuritiesPricing.mmDistribution,
+						com.tools20022.repository.entity.SecuritiesPricing.mmPriceChangeRedemptionSchedule, com.tools20022.repository.entity.SecuritiesPricing.mmRelatedRedemptionSchedule,
+						com.tools20022.repository.entity.SecuritiesPricing.mmPreviousClosingPriceRelatedQuote, com.tools20022.repository.entity.SecuritiesPricing.mmRequestedPriceRelatedQuote,
+						com.tools20022.repository.entity.SecuritiesPricing.mmPriceRelatedQuote, com.tools20022.repository.entity.SecuritiesPricing.mmMarketPriceRelatedQuote, com.tools20022.repository.entity.SecuritiesPricing.mmPrice,
+						com.tools20022.repository.entity.SecuritiesPricing.mmRelatedCorporateActionPrice, com.tools20022.repository.entity.SecuritiesPricing.mmRelatedPosition);
 				derivationComponent_lazy = () -> Arrays.asList(PriceValue1.mmObject(), UnitPrice4.mmObject(), UnitPrice6.mmObject(), PriceValue2.mmObject(), UnitPrice15.mmObject(), PriceValue5.mmObject(), UnitPrice3.mmObject(),
 						UnitPrice12.mmObject(), YieldedOrValueType1Choice.mmObject(), PriceRateOrAmountChoice.mmObject(), Price2.mmObject(), TypeOfPrice1Choice.mmObject(), TypeOfPrice3Choice.mmObject(), PriceType1Choice.mmObject(),
 						PriceRateOrAmount1Choice.mmObject(), Price3.mmObject(), TypeOfPrice5Choice.mmObject(), PriceType2Choice.mmObject(), PercentagePrice1.mmObject(), AmountPrice3.mmObject(), PriceFormat5Choice.mmObject(),
@@ -5299,6 +5393,11 @@ public class SecuritiesPricing {
 						PriceFormat52Choice.mmObject(), IndicativeOrMarketPrice11Choice.mmObject(), PriceFormat59Choice.mmObject(), PriceFormat55Choice.mmObject(), AmountPricePerFinancialInstrumentQuantity7.mmObject(),
 						PriceFormat53Choice.mmObject(), PriceFormat60Choice.mmObject(), PriceFormat58Choice.mmObject(), TypeOfPrice33Choice.mmObject(), PriceInformation16.mmObject(), TypeOfPrice45Choice.mmObject(),
 						TypeOfPrice32Choice.mmObject(), PriceInformation14.mmObject(), UnitPrice22.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesPricing.class;
 			}
 		});
 		return mmObject_lazy.get();

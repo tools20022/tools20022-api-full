@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.UnsecuredMarketTransaction2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a reason for no activity and the unsecured market segment
@@ -75,6 +79,8 @@ import java.util.List;
  * UnsecuredMarketReport1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnsecuredMarketReport2Choice", propOrder = {"dataSetAction", "transaction"})
 public class UnsecuredMarketReport2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -213,6 +219,7 @@ public class UnsecuredMarketReport2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DataSetActn", required = true)
 	public ReportPeriodActivity1Code getDataSetAction() {
 		return dataSetAction;
 	}
@@ -221,6 +228,7 @@ public class UnsecuredMarketReport2Choice {
 		this.dataSetAction = dataSetAction;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public List<UnsecuredMarketTransaction2> getTransaction() {
 		return transaction;
 	}

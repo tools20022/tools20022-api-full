@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transaction totals during the reconciliation period, for a certain type of
@@ -91,6 +95,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionTotals1", propOrder = {"POIGroupIdentification", "cardProductProfile", "currency", "type", "totalNumber", "cumulativeAmount"})
 public class TransactionTotals1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -399,6 +405,7 @@ public class TransactionTotals1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "POIGrpId")
 	public Max35Text getPOIGroupIdentification() {
 		return pOIGroupIdentification;
 	}
@@ -407,6 +414,7 @@ public class TransactionTotals1 {
 		this.pOIGroupIdentification = pOIGroupIdentification;
 	}
 
+	@XmlElement(name = "CardPdctPrfl")
 	public Exact4NumericText getCardProductProfile() {
 		return cardProductProfile;
 	}
@@ -415,6 +423,7 @@ public class TransactionTotals1 {
 		this.cardProductProfile = cardProductProfile;
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -423,6 +432,7 @@ public class TransactionTotals1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TypeTransactionTotals1Code getType() {
 		return type;
 	}
@@ -431,6 +441,7 @@ public class TransactionTotals1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "TtlNb", required = true)
 	public Max35NumericText getTotalNumber() {
 		return totalNumber;
 	}
@@ -439,6 +450,7 @@ public class TransactionTotals1 {
 		this.totalNumber = totalNumber;
 	}
 
+	@XmlElement(name = "CmltvAmt", required = true)
 	public ImpliedCurrencyAndAmount getCumulativeAmount() {
 		return cumulativeAmount;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of confirmation in the CMU.
@@ -98,6 +102,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details of confirmation in the CMU."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Confirmation1", propOrder = {"confirmationStatus", "confirmationTime", "tradePartyConfirmationTime", "initiatingPartyConfirmationTime", "confirmationType", "requestIdentification", "queryStartNumber",
+		"totalNumberOfReports", "pageNumber", "queryPageNumber", "messageNumberOfCurrentPage", "listOrderNumber", "lastPageIndicator", "lastReportRequested"})
 public class Confirmation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -694,6 +701,7 @@ public class Confirmation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ConfSts", required = true)
 	public TradeConfirmationStatus1Code getConfirmationStatus() {
 		return confirmationStatus;
 	}
@@ -702,6 +710,7 @@ public class Confirmation1 {
 		this.confirmationStatus = confirmationStatus;
 	}
 
+	@XmlElement(name = "ConfTm")
 	public ISODateTime getConfirmationTime() {
 		return confirmationTime;
 	}
@@ -710,6 +719,7 @@ public class Confirmation1 {
 		this.confirmationTime = confirmationTime;
 	}
 
+	@XmlElement(name = "TradPtyConfTm")
 	public ISODateTime getTradePartyConfirmationTime() {
 		return tradePartyConfirmationTime;
 	}
@@ -718,6 +728,7 @@ public class Confirmation1 {
 		this.tradePartyConfirmationTime = tradePartyConfirmationTime;
 	}
 
+	@XmlElement(name = "InitgPtyConfTm")
 	public ISODateTime getInitiatingPartyConfirmationTime() {
 		return initiatingPartyConfirmationTime;
 	}
@@ -726,6 +737,7 @@ public class Confirmation1 {
 		this.initiatingPartyConfirmationTime = initiatingPartyConfirmationTime;
 	}
 
+	@XmlElement(name = "ConfTp", required = true)
 	public ConfirmationRequest1Code getConfirmationType() {
 		return confirmationType;
 	}
@@ -734,6 +746,7 @@ public class Confirmation1 {
 		this.confirmationType = confirmationType;
 	}
 
+	@XmlElement(name = "ReqId", required = true)
 	public MessageIdentification1 getRequestIdentification() {
 		return requestIdentification;
 	}
@@ -742,6 +755,7 @@ public class Confirmation1 {
 		this.requestIdentification = requestIdentification;
 	}
 
+	@XmlElement(name = "QryStartNb", required = true)
 	public Max35NumericText getQueryStartNumber() {
 		return queryStartNumber;
 	}
@@ -750,6 +764,7 @@ public class Confirmation1 {
 		this.queryStartNumber = queryStartNumber;
 	}
 
+	@XmlElement(name = "TtlNbOfRpts", required = true)
 	public Number getTotalNumberOfReports() {
 		return totalNumberOfReports;
 	}
@@ -758,6 +773,7 @@ public class Confirmation1 {
 		this.totalNumberOfReports = totalNumberOfReports;
 	}
 
+	@XmlElement(name = "PgNb", required = true)
 	public Max35NumericText getPageNumber() {
 		return pageNumber;
 	}
@@ -766,6 +782,7 @@ public class Confirmation1 {
 		this.pageNumber = pageNumber;
 	}
 
+	@XmlElement(name = "QryPgNb", required = true)
 	public Max35NumericText getQueryPageNumber() {
 		return queryPageNumber;
 	}
@@ -774,6 +791,7 @@ public class Confirmation1 {
 		this.queryPageNumber = queryPageNumber;
 	}
 
+	@XmlElement(name = "MsgNbOfCurPg", required = true)
 	public Number getMessageNumberOfCurrentPage() {
 		return messageNumberOfCurrentPage;
 	}
@@ -782,6 +800,7 @@ public class Confirmation1 {
 		this.messageNumberOfCurrentPage = messageNumberOfCurrentPage;
 	}
 
+	@XmlElement(name = "ListOrdrNb", required = true)
 	public Number getListOrderNumber() {
 		return listOrderNumber;
 	}
@@ -790,6 +809,7 @@ public class Confirmation1 {
 		this.listOrderNumber = listOrderNumber;
 	}
 
+	@XmlElement(name = "LastPgInd", required = true)
 	public YesNoIndicator getLastPageIndicator() {
 		return lastPageIndicator;
 	}
@@ -798,6 +818,7 @@ public class Confirmation1 {
 		this.lastPageIndicator = lastPageIndicator;
 	}
 
+	@XmlElement(name = "LastRptReqd", required = true)
 	public YesNoIndicator getLastReportRequested() {
 		return lastReportRequested;
 	}

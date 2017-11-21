@@ -31,6 +31,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between different statuses of an investigation case.
@@ -88,6 +92,8 @@ import java.util.List;
  * definition} = "Choice between different statuses of an investigation case."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestigationStatus", propOrder = {"confirmation", "rejectedModification", "rejectedCancellation", "duplicateOf", "assignmentCancellationConfirmation", "returnInformation"})
 public class InvestigationStatus {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -453,6 +459,7 @@ public class InvestigationStatus {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Conf", required = true)
 	public InvestigationExecutionConfirmation2Code getConfirmation() {
 		return confirmation;
 	}
@@ -461,6 +468,7 @@ public class InvestigationStatus {
 		this.confirmation = confirmation;
 	}
 
+	@XmlElement(name = "RjctdMod", required = true)
 	public List<PaymentModificationRejection1Code> getRejectedModification() {
 		return rejectedModification;
 	}
@@ -469,6 +477,7 @@ public class InvestigationStatus {
 		this.rejectedModification = rejectedModification;
 	}
 
+	@XmlElement(name = "RjctdCxl", required = true)
 	public RejectedCancellationJustification getRejectedCancellation() {
 		return rejectedCancellation;
 	}
@@ -477,6 +486,7 @@ public class InvestigationStatus {
 		this.rejectedCancellation = rejectedCancellation;
 	}
 
+	@XmlElement(name = "DplctOf", required = true)
 	public Case getDuplicateOf() {
 		return duplicateOf;
 	}
@@ -485,6 +495,7 @@ public class InvestigationStatus {
 		this.duplicateOf = duplicateOf;
 	}
 
+	@XmlElement(name = "AssgnmtCxlConf", required = true)
 	public YesNoIndicator getAssignmentCancellationConfirmation() {
 		return assignmentCancellationConfirmation;
 	}
@@ -493,6 +504,7 @@ public class InvestigationStatus {
 		this.assignmentCancellationConfirmation = assignmentCancellationConfirmation;
 	}
 
+	@XmlElement(name = "RtrInf")
 	public ReturnInformation1 getReturnInformation() {
 		return returnInformation;
 	}

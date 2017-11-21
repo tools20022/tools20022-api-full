@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.RateAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a rate or an unspecified rate.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RateFormat5Choice", propOrder = {"rate", "notSpecifiedRate"})
 public class RateFormat5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class RateFormat5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -185,6 +192,7 @@ public class RateFormat5Choice {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "NotSpcfdRate", required = true)
 	public RateType9Code getNotSpecifiedRate() {
 		return notSpecifiedRate;
 	}

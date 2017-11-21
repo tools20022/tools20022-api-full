@@ -32,6 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} = "Polish Central Bank; Payment Routing Number"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "PL[0-9]{8,8}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -68,6 +70,7 @@ public class PolishNationalClearingCodeIdentifier {
 				name = "PolishNationalClearingCodeIdentifier";
 				definition = "Polish National Clearing Code Identifier. Identifies Polish financial institutions on the Polish national clearing system.";
 				identificationScheme = "Polish Central Bank; Payment Routing Number";
+				pattern = "PL[0-9]{8,8}";
 			}
 		});
 		return mmObject_lazy.get();

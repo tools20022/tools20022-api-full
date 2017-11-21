@@ -36,6 +36,18 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SSIDatabaseProvider#mmStandingSettlementDatabase
+ * SSIDatabaseProvider.mmStandingSettlementDatabase}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SettlementPartyRole
+ * SettlementPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -43,18 +55,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSSIDatabaseProvider
  * StandingSettlementInstruction.mmSSIDatabaseProvider}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SettlementPartyRole
- * SettlementPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SSIDatabaseProvider#mmStandingSettlementDatabase
- * SSIDatabaseProvider.mmStandingSettlementDatabase}</li>
  * </ul>
  * </li>
  * <li>
@@ -114,7 +114,7 @@ public class SSIDatabaseProvider extends SettlementPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmStandingSettlementDatabase = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SSIDatabaseProvider.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SSIDatabaseProvider.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StandingSettlementDatabase";
@@ -135,7 +135,12 @@ public class SSIDatabaseProvider extends SettlementPartyRole {
 				definition = "Provider of a standing settlement instruction (SSI) database.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.StandingSettlementInstruction.mmSSIDatabaseProvider);
 				superType_lazy = () -> SettlementPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(SSIDatabaseProvider.mmStandingSettlementDatabase);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SSIDatabaseProvider.mmStandingSettlementDatabase);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SSIDatabaseProvider.class;
 			}
 		});
 		return mmObject_lazy.get();

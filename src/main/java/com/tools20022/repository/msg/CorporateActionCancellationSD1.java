@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding linkage details.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides additional information regarding linkage details. "</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionCancellationSD1", propOrder = {"placeAndName", "linkedCorporateActionIdentification", "linkageType", "linkAddedDate", "linkModifiedDate"})
 public class CorporateActionCancellationSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -302,6 +308,7 @@ public class CorporateActionCancellationSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -310,6 +317,7 @@ public class CorporateActionCancellationSD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "LkdCorpActnId", required = true)
 	public Max35Text getLinkedCorporateActionIdentification() {
 		return linkedCorporateActionIdentification;
 	}
@@ -318,6 +326,7 @@ public class CorporateActionCancellationSD1 {
 		this.linkedCorporateActionIdentification = linkedCorporateActionIdentification;
 	}
 
+	@XmlElement(name = "LkgTp", required = true)
 	public DTCCLinkType1Code getLinkageType() {
 		return linkageType;
 	}
@@ -326,6 +335,7 @@ public class CorporateActionCancellationSD1 {
 		this.linkageType = linkageType;
 	}
 
+	@XmlElement(name = "LkAddedDt", required = true)
 	public ISODate getLinkAddedDate() {
 		return linkAddedDate;
 	}
@@ -334,6 +344,7 @@ public class CorporateActionCancellationSD1 {
 		this.linkAddedDate = linkAddedDate;
 	}
 
+	@XmlElement(name = "LkModfdDt")
 	public ISODate getLinkModifiedDate() {
 		return linkModifiedDate;
 	}

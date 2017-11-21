@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Contract by which an amount of money in exchange for future repayment of the
@@ -109,6 +113,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LoanContract1", propOrder = {"contractDocumentIdentification", "buyer", "seller", "amount", "maturityDate", "prolongationFlag", "startDate", "settlementCurrency", "specialConditions", "durationCode", "interestRate",
+		"tranche", "paymentSchedule", "interestSchedule", "intraCompanyLoan", "collateral", "syndicatedLoan", "attachment"})
 public class LoanContract1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -951,6 +958,7 @@ public class LoanContract1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CtrctDocId", required = true)
 	public DocumentIdentification22 getContractDocumentIdentification() {
 		return contractDocumentIdentification;
 	}
@@ -959,6 +967,7 @@ public class LoanContract1 {
 		this.contractDocumentIdentification = contractDocumentIdentification;
 	}
 
+	@XmlElement(name = "Buyr", required = true)
 	public List<TradeParty2> getBuyer() {
 		return buyer;
 	}
@@ -967,6 +976,7 @@ public class LoanContract1 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Sellr", required = true)
 	public List<TradeParty2> getSeller() {
 		return seller;
 	}
@@ -975,6 +985,7 @@ public class LoanContract1 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -983,6 +994,7 @@ public class LoanContract1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "MtrtyDt", required = true)
 	public ISODate getMaturityDate() {
 		return maturityDate;
 	}
@@ -991,6 +1003,7 @@ public class LoanContract1 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "PrlngtnFlg", required = true)
 	public TrueFalseIndicator getProlongationFlag() {
 		return prolongationFlag;
 	}
@@ -999,6 +1012,7 @@ public class LoanContract1 {
 		this.prolongationFlag = prolongationFlag;
 	}
 
+	@XmlElement(name = "StartDt", required = true)
 	public ISODate getStartDate() {
 		return startDate;
 	}
@@ -1007,6 +1021,7 @@ public class LoanContract1 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -1015,6 +1030,7 @@ public class LoanContract1 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "SpclConds")
 	public SpecialCondition1 getSpecialConditions() {
 		return specialConditions;
 	}
@@ -1023,6 +1039,7 @@ public class LoanContract1 {
 		this.specialConditions = specialConditions;
 	}
 
+	@XmlElement(name = "DrtnCd", required = true)
 	public Exact1NumericText getDurationCode() {
 		return durationCode;
 	}
@@ -1031,6 +1048,7 @@ public class LoanContract1 {
 		this.durationCode = durationCode;
 	}
 
+	@XmlElement(name = "IntrstRate", required = true)
 	public InterestRate2Choice getInterestRate() {
 		return interestRate;
 	}
@@ -1039,6 +1057,7 @@ public class LoanContract1 {
 		this.interestRate = interestRate;
 	}
 
+	@XmlElement(name = "Trch")
 	public List<LoanContractTranche1> getTranche() {
 		return tranche;
 	}
@@ -1047,6 +1066,7 @@ public class LoanContract1 {
 		this.tranche = tranche;
 	}
 
+	@XmlElement(name = "PmtSchdl")
 	public PaymentSchedule1Choice getPaymentSchedule() {
 		return paymentSchedule;
 	}
@@ -1055,6 +1075,7 @@ public class LoanContract1 {
 		this.paymentSchedule = paymentSchedule;
 	}
 
+	@XmlElement(name = "IntrstSchdl", required = true)
 	public InterestPaymentSchedule1Choice getInterestSchedule() {
 		return interestSchedule;
 	}
@@ -1063,6 +1084,7 @@ public class LoanContract1 {
 		this.interestSchedule = interestSchedule;
 	}
 
+	@XmlElement(name = "IntraCpnyLn", required = true)
 	public TrueFalseIndicator getIntraCompanyLoan() {
 		return intraCompanyLoan;
 	}
@@ -1071,6 +1093,7 @@ public class LoanContract1 {
 		this.intraCompanyLoan = intraCompanyLoan;
 	}
 
+	@XmlElement(name = "Coll")
 	public ContractCollateral1 getCollateral() {
 		return collateral;
 	}
@@ -1079,6 +1102,7 @@ public class LoanContract1 {
 		this.collateral = collateral;
 	}
 
+	@XmlElement(name = "SndctdLn")
 	public List<SyndicatedLoan1> getSyndicatedLoan() {
 		return syndicatedLoan;
 	}
@@ -1087,6 +1111,7 @@ public class LoanContract1 {
 		this.syndicatedLoan = syndicatedLoan;
 	}
 
+	@XmlElement(name = "Attchmnt")
 	public List<DocumentGeneralInformation3> getAttachment() {
 		return attachment;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.IdentificationIssuerRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to an identification.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * GenericIdentification41}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericIdentification48", propOrder = {"identification", "version", "issuer"})
 public class GenericIdentification48 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -226,6 +232,7 @@ public class GenericIdentification48 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -234,6 +241,7 @@ public class GenericIdentification48 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Vrsn", required = true)
 	public Max35Text getVersion() {
 		return version;
 	}
@@ -242,6 +250,7 @@ public class GenericIdentification48 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public Max35Text getIssuer() {
 		return issuer;
 	}

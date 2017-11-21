@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.ObligationFulfilment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -41,6 +42,100 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPaymentObligation
+ * Payment.mmPaymentObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmCurrencyOfTransfer
+ * Payment.mmCurrencyOfTransfer}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmCreditMethod
+ * Payment.mmCreditMethod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmType
+ * Payment.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmInstructedAmount
+ * Payment.mmInstructedAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPriority
+ * Payment.mmPriority}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmValueDate
+ * Payment.mmValueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPaymentStatus
+ * Payment.mmPaymentStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPartyRole
+ * Payment.mmPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmTaxOnPayment
+ * Payment.mmTaxOnPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPaymentExecution
+ * Payment.mmPaymentExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmPoolingAdjustmentDate
+ * Payment.mmPoolingAdjustmentDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmEquivalentAmount
+ * Payment.mmEquivalentAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmCurrencyExchange
+ * Payment.mmCurrencyExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmInstructionForCreditorAgent
+ * Payment.mmInstructionForCreditorAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmInstructionForDebtorAgent
+ * Payment.mmInstructionForDebtorAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentRelatedIdentifications
+ * Payment.mmPaymentRelatedIdentifications}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedInvestigationCase
+ * Payment.mmRelatedInvestigationCase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmSettlementTimeRequest
+ * Payment.mmSettlementTimeRequest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmAmount
+ * Payment.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmTradeSettlement
+ * Payment.mmTradeSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmStandardSettlementInstructions
+ * Payment.mmStandardSettlementInstructions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedDebitAuthorisation
+ * Payment.mmRelatedDebitAuthorisation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedInvestigationCaseResolution
+ * Payment.mmRelatedInvestigationCaseResolution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmOriginalPayment
+ * Payment.mmOriginalPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmReturnPayment
+ * Payment.mmReturnPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedSecuritiesSettlement
+ * Payment.mmRelatedSecuritiesSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmInvoiceReconciliation
+ * Payment.mmInvoiceReconciliation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPaymentInstrument
+ * Payment.mmPaymentInstrument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmAccount
+ * Payment.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmAdjustments
+ * Payment.mmAdjustments}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmContractRegistration
+ * Payment.mmContractRegistration}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.IndividualPayment
+ * IndividualPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BulkPayment BulkPayment}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
+ * ObligationFulfilment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -1380,100 +1475,6 @@ import java.util.List;
  * PaymentTransaction79.mmOriginalTransactionReference}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
- * ObligationFulfilment}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.IndividualPayment
- * IndividualPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BulkPayment BulkPayment}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPaymentObligation
- * Payment.mmPaymentObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#mmCurrencyOfTransfer
- * Payment.mmCurrencyOfTransfer}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmCreditMethod
- * Payment.mmCreditMethod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmType
- * Payment.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmInstructedAmount
- * Payment.mmInstructedAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPriority
- * Payment.mmPriority}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmValueDate
- * Payment.mmValueDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPaymentStatus
- * Payment.mmPaymentStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPartyRole
- * Payment.mmPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmTaxOnPayment
- * Payment.mmTaxOnPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPaymentExecution
- * Payment.mmPaymentExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#mmPoolingAdjustmentDate
- * Payment.mmPoolingAdjustmentDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmEquivalentAmount
- * Payment.mmEquivalentAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmCurrencyExchange
- * Payment.mmCurrencyExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#mmInstructionForCreditorAgent
- * Payment.mmInstructionForCreditorAgent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#mmInstructionForDebtorAgent
- * Payment.mmInstructionForDebtorAgent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentRelatedIdentifications
- * Payment.mmPaymentRelatedIdentifications}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedInvestigationCase
- * Payment.mmRelatedInvestigationCase}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#mmSettlementTimeRequest
- * Payment.mmSettlementTimeRequest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmAmount
- * Payment.mmAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmTradeSettlement
- * Payment.mmTradeSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#mmStandardSettlementInstructions
- * Payment.mmStandardSettlementInstructions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedDebitAuthorisation
- * Payment.mmRelatedDebitAuthorisation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedInvestigationCaseResolution
- * Payment.mmRelatedInvestigationCaseResolution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmOriginalPayment
- * Payment.mmOriginalPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmReturnPayment
- * Payment.mmReturnPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedSecuritiesSettlement
- * Payment.mmRelatedSecuritiesSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#mmInvoiceReconciliation
- * Payment.mmInvoiceReconciliation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPaymentInstrument
- * Payment.mmPaymentInstrument}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmAccount
- * Payment.mmAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmAdjustments
- * Payment.mmAdjustments}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#mmContractRegistration
- * Payment.mmContractRegistration}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -1512,10 +1513,6 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentObligation
 	 * PaymentObligation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1524,6 +1521,10 @@ public class Payment extends ObligationFulfilment {
 	 * TradeSettlement1.mmPaymentTerms}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1560,10 +1561,6 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1747,6 +1744,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1783,6 +1784,14 @@ public class Payment extends ObligationFulfilment {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Payment.class.getMethod("getCurrencyOfTransfer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<com.tools20022.repository.entity.CreditInstrument> creditMethod;
 	/**
@@ -1802,10 +1811,6 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CreditInstrument
 	 * CreditInstrument}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1838,6 +1843,10 @@ public class Payment extends ObligationFulfilment {
 	 * OriginalTransactionReference26.mmPaymentMethod}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1876,10 +1885,6 @@ public class Payment extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode
 	 * PaymentTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1947,6 +1952,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1972,6 +1981,14 @@ public class Payment extends ObligationFulfilment {
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentTypeCode.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Payment.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CurrencyAndAmount instructedAmount;
 	/**
@@ -1986,10 +2003,6 @@ public class Payment extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2662,6 +2675,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2739,6 +2756,14 @@ public class Payment extends ObligationFulfilment {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Payment.class.getMethod("getInstructedAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PriorityCode priority;
 	/**
@@ -2751,10 +2776,6 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.PriorityCode
 	 * PriorityCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2807,6 +2828,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2833,6 +2858,14 @@ public class Payment extends ObligationFulfilment {
 			minOccurs = 1;
 			simpleType_lazy = () -> PriorityCode.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Payment.class.getMethod("getPriority", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ISODate valueDate;
 	/**
@@ -2844,10 +2877,6 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3336,6 +3365,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3392,6 +3425,14 @@ public class Payment extends ObligationFulfilment {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Payment.class.getMethod("getValueDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<com.tools20022.repository.entity.PaymentStatus> paymentStatus;
 	/**
@@ -3411,10 +3452,6 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentStatus
 	 * PaymentStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3607,6 +3644,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3665,10 +3706,6 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
 	 * PaymentPartyRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3864,6 +3901,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3921,10 +3962,6 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4018,6 +4055,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4065,10 +4106,6 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentExecution
 	 * PaymentExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4240,6 +4277,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4290,10 +4331,6 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4345,6 +4382,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4373,6 +4414,14 @@ public class Payment extends ObligationFulfilment {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Payment.class.getMethod("getPoolingAdjustmentDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ImpliedCurrencyAndAmount equivalentAmount;
 	/**
@@ -4387,10 +4436,6 @@ public class Payment extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ImpliedCurrencyAndAmount
 	 * ImpliedCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4412,6 +4457,10 @@ public class Payment extends ObligationFulfilment {
 	 * AmountType4Choice.mmEquivalentAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4438,6 +4487,14 @@ public class Payment extends ObligationFulfilment {
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Payment.class.getMethod("getEquivalentAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<com.tools20022.repository.entity.CurrencyExchange> currencyExchange;
 	/**
@@ -4457,10 +4514,6 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
 	 * CurrencyExchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4643,6 +4696,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4697,10 +4754,6 @@ public class Payment extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionCode
 	 * InstructionCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4857,6 +4910,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4896,6 +4953,14 @@ public class Payment extends ObligationFulfilment {
 			minOccurs = 1;
 			simpleType_lazy = () -> InstructionCode.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Payment.class.getMethod("getInstructionForCreditorAgent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected InstructionCode instructionForDebtorAgent;
 	/**
@@ -4912,10 +4977,6 @@ public class Payment extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionCode
 	 * InstructionCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4988,6 +5049,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5019,6 +5084,14 @@ public class Payment extends ObligationFulfilment {
 			minOccurs = 1;
 			simpleType_lazy = () -> InstructionCode.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Payment.class.getMethod("getInstructionForDebtorAgent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<com.tools20022.repository.entity.PaymentIdentification> paymentRelatedIdentifications;
 	/**
@@ -5040,10 +5113,6 @@ public class Payment extends ObligationFulfilment {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
 	 * PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5209,6 +5278,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5270,10 +5343,6 @@ public class Payment extends ObligationFulfilment {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase
 	 * PaymentInvestigationCase}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5352,6 +5421,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5400,10 +5473,6 @@ public class Payment extends ObligationFulfilment {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest
 	 * SettlementTimeRequest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5455,6 +5524,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5496,10 +5569,6 @@ public class Payment extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5698,6 +5767,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5732,6 +5805,14 @@ public class Payment extends ObligationFulfilment {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Payment.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<com.tools20022.repository.entity.CommercialTradeSettlement> tradeSettlement;
 	/**
@@ -5752,10 +5833,6 @@ public class Payment extends ObligationFulfilment {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement
 	 * CommercialTradeSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5764,6 +5841,10 @@ public class Payment extends ObligationFulfilment {
 	 * EarlyPayment1.mmEarlyPaymentTaxSpecification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -5825,6 +5906,14 @@ public class Payment extends ObligationFulfilment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Payment.class.getMethod("getStandardSettlementInstructions", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DebitAuthorisation relatedDebitAuthorisation;
@@ -6121,10 +6210,6 @@ public class Payment extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode
 	 * PaymentInstrumentCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -6145,6 +6230,10 @@ public class Payment extends ObligationFulfilment {
 	 * TransactionCertificate2.mmLocalInstrument}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -6170,6 +6259,14 @@ public class Payment extends ObligationFulfilment {
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentInstrumentCode.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Payment.class.getMethod("getPaymentInstrument", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CashAccount account;
 	/**
@@ -6189,10 +6286,6 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -6256,6 +6349,10 @@ public class Payment extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -6302,10 +6399,6 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Adjustment
 	 * Adjustment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
-	 * Payment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -6320,6 +6413,10 @@ public class Payment extends ObligationFulfilment {
 	 * PaymentTransaction36.mmCompensationAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
+	 * Payment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -6547,6 +6644,11 @@ public class Payment extends ObligationFulfilment {
 						OriginalPaymentInstruction22.mmObject(), PaymentTransaction78.mmObject(), OriginalTransactionReference24.mmObject(), OriginalPaymentInstruction20.mmObject(), PaymentTransaction74.mmObject(),
 						OriginalPaymentInformation7.mmObject(), PaymentTransaction83.mmObject(), OriginalTransactionReference26.mmObject(), PaymentTransaction77.mmObject(), PaymentTransaction75.mmObject(), PaymentTransaction82.mmObject(),
 						PaymentTransaction79.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Payment.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification and attributes of a financial instrument for an accounting
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrument2", propOrder = {"identification", "attributes", "additionalDerivativeAttributes"})
 public class FinancialInstrument2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -227,6 +233,7 @@ public class FinancialInstrument2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification11 getIdentification() {
 		return identification;
 	}
@@ -235,6 +242,7 @@ public class FinancialInstrument2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Attrbts")
 	public FinancialInstrumentAttributes2 getAttributes() {
 		return attributes;
 	}
@@ -243,6 +251,7 @@ public class FinancialInstrument2 {
 		this.attributes = attributes;
 	}
 
+	@XmlElement(name = "AddtlDerivAttrbts")
 	public DerivativeBasicAttributes1 getAdditionalDerivativeAttributes() {
 		return additionalDerivativeAttributes;
 	}

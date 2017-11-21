@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Order to invest the investor's principal in an investment fund.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Order to invest the investor's principal in an investment fund."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionMultipleOrder5", propOrder = {"masterReference", "placeOfTrade", "expiryDateTime", "investmentAccountDetails", "individualOrderDetails"})
 public class SubscriptionMultipleOrder5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -338,6 +344,7 @@ public class SubscriptionMultipleOrder5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public RestrictedFINMax16Text getMasterReference() {
 		return masterReference;
 	}
@@ -346,6 +353,7 @@ public class SubscriptionMultipleOrder5 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public PlaceOfTradeIdentification3Choice getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -354,6 +362,7 @@ public class SubscriptionMultipleOrder5 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "XpryDtTm")
 	public DateAndDateTimeChoice getExpiryDateTime() {
 		return expiryDateTime;
 	}
@@ -362,6 +371,7 @@ public class SubscriptionMultipleOrder5 {
 		this.expiryDateTime = expiryDateTime;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount33 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -370,6 +380,7 @@ public class SubscriptionMultipleOrder5 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "IndvOrdrDtls", required = true)
 	public SubscriptionOrder11 getIndividualOrderDetails() {
 		return individualOrderDetails;
 	}

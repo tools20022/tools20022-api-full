@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status report of the individual orders of a bulk or multiple order that was
@@ -98,6 +102,9 @@ import java.util.List;
  * IndividualOrderStatusAndReason2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualOrderStatusAndReason7", propOrder = {"masterReference", "orderReference", "clientReference", "dealReference", "cancellationReference", "orderStatus", "repairedFee", "statusInitiator", "orderData", "newDetails",
+		"gatingOrHoldBackDetails"})
 public class IndividualOrderStatusAndReason7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -691,6 +698,7 @@ public class IndividualOrderStatusAndReason7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -699,6 +707,7 @@ public class IndividualOrderStatusAndReason7 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -707,6 +716,7 @@ public class IndividualOrderStatusAndReason7 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -715,6 +725,7 @@ public class IndividualOrderStatusAndReason7 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "DealRef")
 	public Max35Text getDealReference() {
 		return dealReference;
 	}
@@ -723,6 +734,7 @@ public class IndividualOrderStatusAndReason7 {
 		this.dealReference = dealReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -731,6 +743,7 @@ public class IndividualOrderStatusAndReason7 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "OrdrSts", required = true)
 	public OrderStatus5Choice getOrderStatus() {
 		return orderStatus;
 	}
@@ -739,6 +752,7 @@ public class IndividualOrderStatusAndReason7 {
 		this.orderStatus = orderStatus;
 	}
 
+	@XmlElement(name = "RprdFee")
 	public List<Fee3> getRepairedFee() {
 		return repairedFee;
 	}
@@ -747,6 +761,7 @@ public class IndividualOrderStatusAndReason7 {
 		this.repairedFee = repairedFee;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification113 getStatusInitiator() {
 		return statusInitiator;
 	}
@@ -755,6 +770,7 @@ public class IndividualOrderStatusAndReason7 {
 		this.statusInitiator = statusInitiator;
 	}
 
+	@XmlElement(name = "OrdrData")
 	public FundOrderData5 getOrderData() {
 		return orderData;
 	}
@@ -763,6 +779,7 @@ public class IndividualOrderStatusAndReason7 {
 		this.orderData = orderData;
 	}
 
+	@XmlElement(name = "NewDtls")
 	public ExpectedExecutionDetails4 getNewDetails() {
 		return newDetails;
 	}
@@ -771,6 +788,7 @@ public class IndividualOrderStatusAndReason7 {
 		this.newDetails = newDetails;
 	}
 
+	@XmlElement(name = "GtgOrHldBckDtls")
 	public HoldBackInformation3 getGatingOrHoldBackDetails() {
 		return gatingOrHoldBackDetails;
 	}

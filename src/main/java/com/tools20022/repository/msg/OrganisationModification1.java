@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information which describes the organisation.
@@ -117,6 +121,9 @@ import java.util.List;
  * Organisation12}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrganisationModification1", propOrder = {"fullLegalName", "tradingName", "countryOfOperation", "registrationDate", "operationalAddress", "businessAddress", "legalAddress", "billingAddress", "organisationIdentification",
+		"representativeOfficer", "treasuryManager", "mainMandateHolder", "sender", "legalRepresentative"})
 public class OrganisationModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -827,6 +834,7 @@ public class OrganisationModification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FullLglNm", required = true)
 	public FullLegalNameModification1 getFullLegalName() {
 		return fullLegalName;
 	}
@@ -835,6 +843,7 @@ public class OrganisationModification1 {
 		this.fullLegalName = fullLegalName;
 	}
 
+	@XmlElement(name = "TradgNm")
 	public TradingNameModification1 getTradingName() {
 		return tradingName;
 	}
@@ -843,6 +852,7 @@ public class OrganisationModification1 {
 		this.tradingName = tradingName;
 	}
 
+	@XmlElement(name = "CtryOfOpr", required = true)
 	public CountryCode getCountryOfOperation() {
 		return countryOfOperation;
 	}
@@ -851,6 +861,7 @@ public class OrganisationModification1 {
 		this.countryOfOperation = countryOfOperation;
 	}
 
+	@XmlElement(name = "RegnDt")
 	public ISODate getRegistrationDate() {
 		return registrationDate;
 	}
@@ -859,6 +870,7 @@ public class OrganisationModification1 {
 		this.registrationDate = registrationDate;
 	}
 
+	@XmlElement(name = "OprlAdr")
 	public AddressModification1 getOperationalAddress() {
 		return operationalAddress;
 	}
@@ -867,6 +879,7 @@ public class OrganisationModification1 {
 		this.operationalAddress = operationalAddress;
 	}
 
+	@XmlElement(name = "BizAdr")
 	public AddressModification1 getBusinessAddress() {
 		return businessAddress;
 	}
@@ -875,6 +888,7 @@ public class OrganisationModification1 {
 		this.businessAddress = businessAddress;
 	}
 
+	@XmlElement(name = "LglAdr", required = true)
 	public AddressModification1 getLegalAddress() {
 		return legalAddress;
 	}
@@ -883,6 +897,7 @@ public class OrganisationModification1 {
 		this.legalAddress = legalAddress;
 	}
 
+	@XmlElement(name = "BllgAdr")
 	public AddressModification1 getBillingAddress() {
 		return billingAddress;
 	}
@@ -891,6 +906,7 @@ public class OrganisationModification1 {
 		this.billingAddress = billingAddress;
 	}
 
+	@XmlElement(name = "OrgId", required = true)
 	public OrganisationIdentification8 getOrganisationIdentification() {
 		return organisationIdentification;
 	}
@@ -899,6 +915,7 @@ public class OrganisationModification1 {
 		this.organisationIdentification = organisationIdentification;
 	}
 
+	@XmlElement(name = "RprtvOffcr")
 	public List<PartyModification1> getRepresentativeOfficer() {
 		return representativeOfficer;
 	}
@@ -907,6 +924,7 @@ public class OrganisationModification1 {
 		this.representativeOfficer = representativeOfficer;
 	}
 
+	@XmlElement(name = "TrsrMgr")
 	public PartyModification1 getTreasuryManager() {
 		return treasuryManager;
 	}
@@ -915,6 +933,7 @@ public class OrganisationModification1 {
 		this.treasuryManager = treasuryManager;
 	}
 
+	@XmlElement(name = "MainMndtHldr")
 	public List<PartyModification1> getMainMandateHolder() {
 		return mainMandateHolder;
 	}
@@ -923,6 +942,7 @@ public class OrganisationModification1 {
 		this.mainMandateHolder = mainMandateHolder;
 	}
 
+	@XmlElement(name = "Sndr")
 	public List<PartyModification1> getSender() {
 		return sender;
 	}
@@ -931,6 +951,7 @@ public class OrganisationModification1 {
 		this.sender = sender;
 	}
 
+	@XmlElement(name = "LglRprtv")
 	public List<PartyModification1> getLegalRepresentative() {
 		return legalRepresentative;
 	}

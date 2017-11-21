@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique and unambiguous way to identify an organisation.
@@ -74,6 +78,8 @@ import java.util.function.Supplier;
  * definition} = "Unique and unambiguous way to identify an organisation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification39Choice", propOrder = {"anyBIC", "nameAndAddress", "country"})
 public class PartyIdentification39Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -241,6 +247,7 @@ public class PartyIdentification39Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AnyBIC", required = true)
 	public AnyBICIdentifier getAnyBIC() {
 		return anyBIC;
 	}
@@ -249,6 +256,7 @@ public class PartyIdentification39Choice {
 		this.anyBIC = anyBIC;
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress5 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -257,6 +265,7 @@ public class PartyIdentification39Choice {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}

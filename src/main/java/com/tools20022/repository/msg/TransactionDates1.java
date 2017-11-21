@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements identifying the dates related to the underlying transactions.
@@ -80,6 +84,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionDates1", propOrder = {"acceptanceDateTime", "tradeDate", "interbankSettlementDate", "startDate", "endDate", "transactionDateTime", "proprietary"})
 public class TransactionDates1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -438,6 +444,7 @@ public class TransactionDates1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AccptncDtTm")
 	public ISODateTime getAcceptanceDateTime() {
 		return acceptanceDateTime;
 	}
@@ -446,6 +453,7 @@ public class TransactionDates1 {
 		this.acceptanceDateTime = acceptanceDateTime;
 	}
 
+	@XmlElement(name = "TradDt")
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
@@ -454,6 +462,7 @@ public class TransactionDates1 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDt")
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}
@@ -462,6 +471,7 @@ public class TransactionDates1 {
 		this.interbankSettlementDate = interbankSettlementDate;
 	}
 
+	@XmlElement(name = "StartDt")
 	public ISODate getStartDate() {
 		return startDate;
 	}
@@ -470,6 +480,7 @@ public class TransactionDates1 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "EndDt")
 	public ISODate getEndDate() {
 		return endDate;
 	}
@@ -478,6 +489,7 @@ public class TransactionDates1 {
 		this.endDate = endDate;
 	}
 
+	@XmlElement(name = "TxDtTm")
 	public ISODateTime getTransactionDateTime() {
 		return transactionDateTime;
 	}
@@ -486,6 +498,7 @@ public class TransactionDates1 {
 		this.transactionDateTime = transactionDateTime;
 	}
 
+	@XmlElement(name = "Prtry")
 	public List<ProprietaryDate1> getProprietary() {
 		return proprietary;
 	}

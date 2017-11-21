@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports on limits.
@@ -62,6 +66,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Limits5", propOrder = {"currentLimit", "defaultLimit"})
 public class Limits5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class Limits5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CurLmt")
 	public List<LimitReport5> getCurrentLimit() {
 		return currentLimit;
 	}
@@ -193,6 +200,7 @@ public class Limits5 {
 		this.currentLimit = currentLimit;
 	}
 
+	@XmlElement(name = "DfltLmt")
 	public List<LimitReport5> getDefaultLimit() {
 		return defaultLimit;
 	}

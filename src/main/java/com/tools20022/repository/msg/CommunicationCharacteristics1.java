@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Low level communication of the hardware or software component toward another
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CommunicationCharacteristics1", propOrder = {"communicationType", "remoteParty", "active"})
 public class CommunicationCharacteristics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -246,6 +252,7 @@ public class CommunicationCharacteristics1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ComTp", required = true)
 	public POICommunicationType1Code getCommunicationType() {
 		return communicationType;
 	}
@@ -254,6 +261,7 @@ public class CommunicationCharacteristics1 {
 		this.communicationType = communicationType;
 	}
 
+	@XmlElement(name = "RmotPty", required = true)
 	public PartyType7Code getRemoteParty() {
 		return remoteParty;
 	}
@@ -262,6 +270,7 @@ public class CommunicationCharacteristics1 {
 		this.remoteParty = remoteParty;
 	}
 
+	@XmlElement(name = "Actv", required = true)
 	public TrueFalseIndicator getActive() {
 		return active;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of an exemption reason type.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of an exemption reason type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExemptionReasonType1Choice", propOrder = {"exemptionReason", "proprietary"})
 public class ExemptionReasonType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class ExemptionReasonType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XmptnRsn", required = true)
 	public TaxExemptReason1Code getExemptionReason() {
 		return exemptionReason;
 	}
@@ -180,6 +187,7 @@ public class ExemptionReasonType1Choice {
 		this.exemptionReason = exemptionReason;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification13 getProprietary() {
 		return proprietary;
 	}

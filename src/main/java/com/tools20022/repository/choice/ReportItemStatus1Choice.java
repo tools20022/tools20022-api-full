@@ -30,6 +30,10 @@ import com.tools20022.repository.msg.ReportItemStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides acceptance status of the holding item.
@@ -81,6 +85,8 @@ import java.util.List;
  * ProcessingStatus18Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportItemStatus1Choice", propOrder = {"accepted", "acceptedWithException", "rejected"})
 public class ReportItemStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -253,6 +259,7 @@ public class ReportItemStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Accptd", required = true)
 	public NoReasonCode getAccepted() {
 		return accepted;
 	}
@@ -261,6 +268,7 @@ public class ReportItemStatus1Choice {
 		this.accepted = accepted;
 	}
 
+	@XmlElement(name = "AccptdWthXcptn", required = true)
 	public List<ReportItemStatus1> getAcceptedWithException() {
 		return acceptedWithException;
 	}
@@ -269,6 +277,7 @@ public class ReportItemStatus1Choice {
 		this.acceptedWithException = acceptedWithException;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public ReportItemStatus1 getRejected() {
 		return rejected;
 	}

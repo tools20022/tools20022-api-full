@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the corporate action option.
@@ -126,6 +130,9 @@ import java.util.List;
  * CorporateActionOption38}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionOption57", propOrder = {"optionNumber", "optionType", "fractionDisposition", "changeType", "eligibleForCollateralIndicator", "currencyToBuy", "currencyToSell", "currencyOption", "securityIdentification",
+		"securitiesQuantity", "executionRequestedDateTime", "rateAndAmountDetails", "priceDetails", "additionalInformation"})
 public class CorporateActionOption57 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -971,6 +978,7 @@ public class CorporateActionOption57 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OptnNb", required = true)
 	public OptionNumber1Choice getOptionNumber() {
 		return optionNumber;
 	}
@@ -979,6 +987,7 @@ public class CorporateActionOption57 {
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption12Choice getOptionType() {
 		return optionType;
 	}
@@ -987,6 +996,7 @@ public class CorporateActionOption57 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "FrctnDspstn")
 	public FractionDispositionType17Choice getFractionDisposition() {
 		return fractionDisposition;
 	}
@@ -995,6 +1005,7 @@ public class CorporateActionOption57 {
 		this.fractionDisposition = fractionDisposition;
 	}
 
+	@XmlElement(name = "ChngTp")
 	public List<CorporateActionChangeTypeFormat2Choice> getChangeType() {
 		return changeType;
 	}
@@ -1003,6 +1014,7 @@ public class CorporateActionOption57 {
 		this.changeType = changeType;
 	}
 
+	@XmlElement(name = "ElgblForCollInd")
 	public YesNoIndicator getEligibleForCollateralIndicator() {
 		return eligibleForCollateralIndicator;
 	}
@@ -1011,6 +1023,7 @@ public class CorporateActionOption57 {
 		this.eligibleForCollateralIndicator = eligibleForCollateralIndicator;
 	}
 
+	@XmlElement(name = "CcyToBuy")
 	public ActiveCurrencyCode getCurrencyToBuy() {
 		return currencyToBuy;
 	}
@@ -1019,6 +1032,7 @@ public class CorporateActionOption57 {
 		this.currencyToBuy = currencyToBuy;
 	}
 
+	@XmlElement(name = "CcyToSell")
 	public ActiveCurrencyCode getCurrencyToSell() {
 		return currencyToSell;
 	}
@@ -1027,6 +1041,7 @@ public class CorporateActionOption57 {
 		this.currencyToSell = currencyToSell;
 	}
 
+	@XmlElement(name = "CcyOptn")
 	public ActiveCurrencyCode getCurrencyOption() {
 		return currencyOption;
 	}
@@ -1035,6 +1050,7 @@ public class CorporateActionOption57 {
 		this.currencyOption = currencyOption;
 	}
 
+	@XmlElement(name = "SctyId")
 	public SecurityIdentification14 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -1043,6 +1059,7 @@ public class CorporateActionOption57 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "SctiesQty", required = true)
 	public SecuritiesOption2 getSecuritiesQuantity() {
 		return securitiesQuantity;
 	}
@@ -1051,6 +1068,7 @@ public class CorporateActionOption57 {
 		this.securitiesQuantity = securitiesQuantity;
 	}
 
+	@XmlElement(name = "ExctnReqdDtTm")
 	public DateAndDateTimeChoice getExecutionRequestedDateTime() {
 		return executionRequestedDateTime;
 	}
@@ -1059,6 +1077,7 @@ public class CorporateActionOption57 {
 		this.executionRequestedDateTime = executionRequestedDateTime;
 	}
 
+	@XmlElement(name = "RateAndAmtDtls")
 	public CorporateActionRate8 getRateAndAmountDetails() {
 		return rateAndAmountDetails;
 	}
@@ -1067,6 +1086,7 @@ public class CorporateActionOption57 {
 		this.rateAndAmountDetails = rateAndAmountDetails;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public CorporateActionPrice29 getPriceDetails() {
 		return priceDetails;
 	}
@@ -1075,6 +1095,7 @@ public class CorporateActionOption57 {
 		this.priceDetails = priceDetails;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public CorporateActionNarrative8 getAdditionalInformation() {
 		return additionalInformation;
 	}

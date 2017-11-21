@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SystemIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * ATM information.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AutomatedTellerMachine2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AutomatedTellerMachine3", propOrder = {"identification", "additionalIdentification", "sequenceNumber", "location"})
 public class AutomatedTellerMachine3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -299,6 +305,7 @@ public class AutomatedTellerMachine3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -307,6 +314,7 @@ public class AutomatedTellerMachine3 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AddtlId")
 	public Max35Text getAdditionalIdentification() {
 		return additionalIdentification;
 	}
@@ -315,6 +323,7 @@ public class AutomatedTellerMachine3 {
 		this.additionalIdentification = additionalIdentification;
 	}
 
+	@XmlElement(name = "SeqNb")
 	public Max35Text getSequenceNumber() {
 		return sequenceNumber;
 	}
@@ -323,6 +332,7 @@ public class AutomatedTellerMachine3 {
 		this.sequenceNumber = sequenceNumber;
 	}
 
+	@XmlElement(name = "Lctn")
 	public PostalAddress17 getLocation() {
 		return location;
 	}

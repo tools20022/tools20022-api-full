@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information like the identification of the party or parties
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Obligation1", propOrder = {"partyA", "servicingPartyA", "partyB", "servicingPartyB", "exposureType", "valuationDate"})
 public class Obligation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -390,6 +396,7 @@ public class Obligation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyA", required = true)
 	public PartyIdentification33Choice getPartyA() {
 		return partyA;
 	}
@@ -398,6 +405,7 @@ public class Obligation1 {
 		this.partyA = partyA;
 	}
 
+	@XmlElement(name = "SvcgPtyA")
 	public PartyIdentification33Choice getServicingPartyA() {
 		return servicingPartyA;
 	}
@@ -406,6 +414,7 @@ public class Obligation1 {
 		this.servicingPartyA = servicingPartyA;
 	}
 
+	@XmlElement(name = "PtyB", required = true)
 	public PartyIdentification33Choice getPartyB() {
 		return partyB;
 	}
@@ -414,6 +423,7 @@ public class Obligation1 {
 		this.partyB = partyB;
 	}
 
+	@XmlElement(name = "SvcgPtyB")
 	public PartyIdentification33Choice getServicingPartyB() {
 		return servicingPartyB;
 	}
@@ -422,6 +432,7 @@ public class Obligation1 {
 		this.servicingPartyB = servicingPartyB;
 	}
 
+	@XmlElement(name = "XpsrTp")
 	public ExposureType1Code getExposureType() {
 		return exposureType;
 	}
@@ -430,6 +441,7 @@ public class Obligation1 {
 		this.exposureType = exposureType;
 	}
 
+	@XmlElement(name = "ValtnDt", required = true)
 	public DateAndDateTimeChoice getValuationDate() {
 		return valuationDate;
 	}

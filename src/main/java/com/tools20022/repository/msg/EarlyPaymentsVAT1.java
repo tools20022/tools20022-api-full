@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.CommercialTradeSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the payment terms of the underlying transaction.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the payment terms of the underlying transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EarlyPaymentsVAT1", propOrder = {"taxRate", "discountTaxType", "discountTaxAmount"})
 public class EarlyPaymentsVAT1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -210,6 +216,7 @@ public class EarlyPaymentsVAT1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TaxRate", required = true)
 	public PercentageRate getTaxRate() {
 		return taxRate;
 	}
@@ -218,6 +225,7 @@ public class EarlyPaymentsVAT1 {
 		this.taxRate = taxRate;
 	}
 
+	@XmlElement(name = "DscntTaxTp", required = true)
 	public Max4Text getDiscountTaxType() {
 		return discountTaxType;
 	}
@@ -226,6 +234,7 @@ public class EarlyPaymentsVAT1 {
 		this.discountTaxType = discountTaxType;
 	}
 
+	@XmlElement(name = "DscntTaxAmt", required = true)
 	public CurrencyAndAmount getDiscountTaxAmount() {
 		return discountTaxAmount;
 	}

@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides for reporting calculation results of equity instruments as part of
@@ -100,6 +104,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransparencyDataReport12", propOrder = {"technicalRecordIdentification", "identification", "fullName", "tradingVenue", "reportingPeriod", "liquidity", "methodology", "statistics", "relevantMarket"})
 public class TransparencyDataReport12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -538,6 +544,7 @@ public class TransparencyDataReport12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TechRcrdId")
 	public Max35Text getTechnicalRecordIdentification() {
 		return technicalRecordIdentification;
 	}
@@ -546,6 +553,7 @@ public class TransparencyDataReport12 {
 		this.technicalRecordIdentification = technicalRecordIdentification;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public ISINOct2015Identifier getIdentification() {
 		return identification;
 	}
@@ -554,6 +562,7 @@ public class TransparencyDataReport12 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "FullNm")
 	public Max350Text getFullName() {
 		return fullName;
 	}
@@ -562,6 +571,7 @@ public class TransparencyDataReport12 {
 		this.fullName = fullName;
 	}
 
+	@XmlElement(name = "TradgVn")
 	public MICIdentifier getTradingVenue() {
 		return tradingVenue;
 	}
@@ -570,6 +580,7 @@ public class TransparencyDataReport12 {
 		this.tradingVenue = tradingVenue;
 	}
 
+	@XmlElement(name = "RptgPrd")
 	public Period4Choice getReportingPeriod() {
 		return reportingPeriod;
 	}
@@ -578,6 +589,7 @@ public class TransparencyDataReport12 {
 		this.reportingPeriod = reportingPeriod;
 	}
 
+	@XmlElement(name = "Lqdty")
 	public TrueFalseIndicator getLiquidity() {
 		return liquidity;
 	}
@@ -586,6 +598,7 @@ public class TransparencyDataReport12 {
 		this.liquidity = liquidity;
 	}
 
+	@XmlElement(name = "Mthdlgy")
 	public TransparencyMethodology2Code getMethodology() {
 		return methodology;
 	}
@@ -594,6 +607,7 @@ public class TransparencyDataReport12 {
 		this.methodology = methodology;
 	}
 
+	@XmlElement(name = "Sttstcs")
 	public StatisticsTransparency3 getStatistics() {
 		return statistics;
 	}
@@ -602,6 +616,7 @@ public class TransparencyDataReport12 {
 		this.statistics = statistics;
 	}
 
+	@XmlElement(name = "RlvntMkt")
 	public MarketDetail2 getRelevantMarket() {
 		return relevantMarket;
 	}

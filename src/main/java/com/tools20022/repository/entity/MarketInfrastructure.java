@@ -38,6 +38,16 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarketInfrastructure#mmAccountLink
+ * MarketInfrastructure.mmAccountLink}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -45,16 +55,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.AccountLink#mmMarketInfrastructure
  * AccountLink.mmMarketInfrastructure}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarketInfrastructure#mmAccountLink
- * MarketInfrastructure.mmAccountLink}</li>
  * </ul>
  * </li>
  * <li>
@@ -115,7 +115,7 @@ public class MarketInfrastructure extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmAccountLink = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> MarketInfrastructure.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MarketInfrastructure.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountLink";
@@ -136,7 +136,12 @@ public class MarketInfrastructure extends Role {
 				definition = "Multilateral system among participating institutions, including the operator of the system, used for the purposes of clearing, settling, or recording payments, securities, derivatives or other financial transactions.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountLink.mmMarketInfrastructure);
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(MarketInfrastructure.mmAccountLink);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MarketInfrastructure.mmAccountLink);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MarketInfrastructure.class;
 			}
 		});
 		return mmObject_lazy.get();

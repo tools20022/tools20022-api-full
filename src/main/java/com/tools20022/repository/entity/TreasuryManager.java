@@ -64,6 +64,11 @@ public class TreasuryManager extends AccountPartyRole {
 				definition = "Person responsible for the treasury department within an organisation.";
 				superType_lazy = () -> AccountPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TreasuryManager.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

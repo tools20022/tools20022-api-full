@@ -23,6 +23,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports either on the transaction information or on a business error.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Reports either on the transaction information or on a business error."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionReportDetails3", propOrder = {"instructionReference", "transaction", "businessError"})
 public class TransactionReportDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -268,6 +274,7 @@ public class TransactionReportDetails3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrRef", required = true)
 	public PaymentIdentification2Choice getInstructionReference() {
 		return instructionReference;
 	}
@@ -276,6 +283,7 @@ public class TransactionReportDetails3 {
 		this.instructionReference = instructionReference;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public Transaction3 getTransaction() {
 		return transaction;
 	}
@@ -284,6 +292,7 @@ public class TransactionReportDetails3 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public ErrorHandling2 getBusinessError() {
 		return businessError;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.TreasuryTrade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Date and identification of a trade together with references to previous
@@ -98,6 +102,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradeAgreement8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeAgreement11", propOrder = {"tradeDate", "originatorReference", "matchingSystemReference", "commonReference", "amendOrCancelReason", "operationType", "operationScope", "settlementSessionIdentifier",
+		"paymentVersusPaymentIndicator"})
 public class TradeAgreement11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -672,6 +679,7 @@ public class TradeAgreement11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
@@ -680,6 +688,7 @@ public class TradeAgreement11 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "OrgtrRef", required = true)
 	public Max35Text getOriginatorReference() {
 		return originatorReference;
 	}
@@ -688,6 +697,7 @@ public class TradeAgreement11 {
 		this.originatorReference = originatorReference;
 	}
 
+	@XmlElement(name = "MtchgSysRef", required = true)
 	public MatchingSystemReference1Choice getMatchingSystemReference() {
 		return matchingSystemReference;
 	}
@@ -696,6 +706,7 @@ public class TradeAgreement11 {
 		this.matchingSystemReference = matchingSystemReference;
 	}
 
+	@XmlElement(name = "CmonRef")
 	public Max35Text getCommonReference() {
 		return commonReference;
 	}
@@ -704,6 +715,7 @@ public class TradeAgreement11 {
 		this.commonReference = commonReference;
 	}
 
+	@XmlElement(name = "AmdOrCclRsn")
 	public Max35Text getAmendOrCancelReason() {
 		return amendOrCancelReason;
 	}
@@ -712,6 +724,7 @@ public class TradeAgreement11 {
 		this.amendOrCancelReason = amendOrCancelReason;
 	}
 
+	@XmlElement(name = "OprTp")
 	public Max4Text getOperationType() {
 		return operationType;
 	}
@@ -720,6 +733,7 @@ public class TradeAgreement11 {
 		this.operationType = operationType;
 	}
 
+	@XmlElement(name = "OprScp")
 	public Max4Text getOperationScope() {
 		return operationScope;
 	}
@@ -728,6 +742,7 @@ public class TradeAgreement11 {
 		this.operationScope = operationScope;
 	}
 
+	@XmlElement(name = "SttlmSsnIdr")
 	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
 		return settlementSessionIdentifier;
 	}
@@ -736,6 +751,7 @@ public class TradeAgreement11 {
 		this.settlementSessionIdentifier = settlementSessionIdentifier;
 	}
 
+	@XmlElement(name = "PmtVrssPmtInd")
 	public YesNoIndicator getPaymentVersusPaymentIndicator() {
 		return paymentVersusPaymentIndicator;
 	}

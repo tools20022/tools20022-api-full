@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of breakdown of a quantity.
@@ -97,6 +101,8 @@ import java.util.function.Supplier;
  * QuantityBreakdown14}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuantityBreakdown24", propOrder = {"lotNumber", "lotQuantity", "lotDateTime", "lotPrice", "typeOfPrice", "accountBaseCurrencyAmounts", "instrumentCurrencyAmounts", "alternateReportingCurrencyAmounts"})
 public class QuantityBreakdown24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -588,6 +594,7 @@ public class QuantityBreakdown24 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LotNb")
 	public GenericIdentification37 getLotNumber() {
 		return lotNumber;
 	}
@@ -596,6 +603,7 @@ public class QuantityBreakdown24 {
 		this.lotNumber = lotNumber;
 	}
 
+	@XmlElement(name = "LotQty")
 	public Balance4 getLotQuantity() {
 		return lotQuantity;
 	}
@@ -604,6 +612,7 @@ public class QuantityBreakdown24 {
 		this.lotQuantity = lotQuantity;
 	}
 
+	@XmlElement(name = "LotDtTm")
 	public DateAndDateTimeChoice getLotDateTime() {
 		return lotDateTime;
 	}
@@ -612,6 +621,7 @@ public class QuantityBreakdown24 {
 		this.lotDateTime = lotDateTime;
 	}
 
+	@XmlElement(name = "LotPric")
 	public Price2 getLotPrice() {
 		return lotPrice;
 	}
@@ -620,6 +630,7 @@ public class QuantityBreakdown24 {
 		this.lotPrice = lotPrice;
 	}
 
+	@XmlElement(name = "TpOfPric")
 	public TypeOfPrice3Choice getTypeOfPrice() {
 		return typeOfPrice;
 	}
@@ -628,6 +639,7 @@ public class QuantityBreakdown24 {
 		this.typeOfPrice = typeOfPrice;
 	}
 
+	@XmlElement(name = "AcctBaseCcyAmts")
 	public BalanceAmounts2 getAccountBaseCurrencyAmounts() {
 		return accountBaseCurrencyAmounts;
 	}
@@ -636,6 +648,7 @@ public class QuantityBreakdown24 {
 		this.accountBaseCurrencyAmounts = accountBaseCurrencyAmounts;
 	}
 
+	@XmlElement(name = "InstrmCcyAmts")
 	public BalanceAmounts2 getInstrumentCurrencyAmounts() {
 		return instrumentCurrencyAmounts;
 	}
@@ -644,6 +657,7 @@ public class QuantityBreakdown24 {
 		this.instrumentCurrencyAmounts = instrumentCurrencyAmounts;
 	}
 
+	@XmlElement(name = "AltrnRptgCcyAmts")
 	public BalanceAmounts2 getAlternateReportingCurrencyAmounts() {
 		return alternateReportingCurrencyAmounts;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.codeset.QueryType1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the query criteria.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the query criteria."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MemberQueryDefinition", propOrder = {"queryType", "memberCriteria"})
 public class MemberQueryDefinition {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class MemberQueryDefinition {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QryTp")
 	public QueryType1Code getQueryType() {
 		return queryType;
 	}
@@ -171,6 +178,7 @@ public class MemberQueryDefinition {
 		this.queryType = queryType;
 	}
 
+	@XmlElement(name = "MmbCrit")
 	public MemberCriteriaDefinitionChoice getMemberCriteria() {
 		return memberCriteria;
 	}

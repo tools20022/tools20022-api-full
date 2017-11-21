@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of a taxable income per share calcualted type.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxableIncomePerShareCalculatedType1Choice", propOrder = {"taxableIncomePerShareCalculated", "proprietary"})
 public class TaxableIncomePerShareCalculatedType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -208,6 +214,7 @@ public class TaxableIncomePerShareCalculatedType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TaxblIncmPerShrClctd", required = true)
 	public TaxableIncomePerShareCalculated2Code getTaxableIncomePerShareCalculated() {
 		return taxableIncomePerShareCalculated;
 	}
@@ -216,6 +223,7 @@ public class TaxableIncomePerShareCalculatedType1Choice {
 		this.taxableIncomePerShareCalculated = taxableIncomePerShareCalculated;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification13 getProprietary() {
 		return proprietary;
 	}

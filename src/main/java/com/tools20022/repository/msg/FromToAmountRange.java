@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.AmountRange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Range of amount values.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Range of amount values."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FromToAmountRange", propOrder = {"fromAmount", "toAmount"})
 public class FromToAmountRange {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class FromToAmountRange {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrAmt", required = true)
 	public AmountRangeBoundary1 getFromAmount() {
 		return fromAmount;
 	}
@@ -180,6 +187,7 @@ public class FromToAmountRange {
 		this.fromAmount = fromAmount;
 	}
 
+	@XmlElement(name = "ToAmt", required = true)
 	public AmountRangeBoundary1 getToAmount() {
 		return toAmount;
 	}

@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * National Asociation Of Securities Dealers (NASD) regulatory requirement
@@ -78,6 +82,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeRegulatoryTimeStampGroup", propOrder = {"tradeRegulatoryTimeStamp", "tradeRegulatoryTimeStampType", "tradeRegulatoryTimeStampOrigin", "deskType", "deskTypeSource", "deskOrderHandlingInstructions"})
 public class TradeRegulatoryTimeStampGroup {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -368,6 +374,7 @@ public class TradeRegulatoryTimeStampGroup {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradRgltryTmStmp")
 	public ISODateTime getTradeRegulatoryTimeStamp() {
 		return tradeRegulatoryTimeStamp;
 	}
@@ -376,6 +383,7 @@ public class TradeRegulatoryTimeStampGroup {
 		this.tradeRegulatoryTimeStamp = tradeRegulatoryTimeStamp;
 	}
 
+	@XmlElement(name = "TradRgltryTmStmpTp")
 	public Max35Text getTradeRegulatoryTimeStampType() {
 		return tradeRegulatoryTimeStampType;
 	}
@@ -384,6 +392,7 @@ public class TradeRegulatoryTimeStampGroup {
 		this.tradeRegulatoryTimeStampType = tradeRegulatoryTimeStampType;
 	}
 
+	@XmlElement(name = "TradRgltryTmStmpOrgn", required = true)
 	public Max35Text getTradeRegulatoryTimeStampOrigin() {
 		return tradeRegulatoryTimeStampOrigin;
 	}
@@ -392,6 +401,7 @@ public class TradeRegulatoryTimeStampGroup {
 		this.tradeRegulatoryTimeStampOrigin = tradeRegulatoryTimeStampOrigin;
 	}
 
+	@XmlElement(name = "DskTp")
 	public Max35Text getDeskType() {
 		return deskType;
 	}
@@ -400,6 +410,7 @@ public class TradeRegulatoryTimeStampGroup {
 		this.deskType = deskType;
 	}
 
+	@XmlElement(name = "DskTpSrc")
 	public Max35Text getDeskTypeSource() {
 		return deskTypeSource;
 	}
@@ -408,6 +419,7 @@ public class TradeRegulatoryTimeStampGroup {
 		this.deskTypeSource = deskTypeSource;
 	}
 
+	@XmlElement(name = "DskOrdrHdlgInstrs")
 	public CustomerHandlingInstructionChoice getDeskOrderHandlingInstructions() {
 		return deskOrderHandlingInstructions;
 	}

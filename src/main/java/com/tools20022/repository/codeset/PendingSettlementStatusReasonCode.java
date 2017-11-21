@@ -31,19 +31,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingSettlement2Code
- * PendingSettlement2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code
- * PendingSettlementStatusReason1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code
- * PendingSettlementStatusReason2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -246,6 +233,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReasonCode#mmFinalVerification
  * PendingSettlementStatusReasonCode.mmFinalVerification}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingSettlement2Code
+ * PendingSettlement2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code
+ * PendingSettlementStatusReason1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code
+ * PendingSettlementStatusReason2Code}</li>
  * </ul>
  * </li>
  * <li>

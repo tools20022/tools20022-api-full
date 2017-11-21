@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account between an investor(s) and a fund manager or a fund. The account can
@@ -76,6 +80,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccount30", propOrder = {"account", "designation", "owner", "servicer", "subAccount"})
 public class InvestmentAccount30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -345,6 +351,7 @@ public class InvestmentAccount30 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public SecuritiesAccount5 getAccount() {
 		return account;
 	}
@@ -353,6 +360,7 @@ public class InvestmentAccount30 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "Dsgnt")
 	public Max35Text getDesignation() {
 		return designation;
 	}
@@ -361,6 +369,7 @@ public class InvestmentAccount30 {
 		this.designation = designation;
 	}
 
+	@XmlElement(name = "Ownr")
 	public List<PartyIdentification2Choice> getOwner() {
 		return owner;
 	}
@@ -369,6 +378,7 @@ public class InvestmentAccount30 {
 		this.owner = owner;
 	}
 
+	@XmlElement(name = "Svcr")
 	public PartyIdentification2Choice getServicer() {
 		return servicer;
 	}
@@ -377,6 +387,7 @@ public class InvestmentAccount30 {
 		this.servicer = servicer;
 	}
 
+	@XmlElement(name = "SubAcct")
 	public SubAccount3 getSubAccount() {
 		return subAccount;
 	}

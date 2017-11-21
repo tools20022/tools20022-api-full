@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Certificate issuer name (see X.509).
@@ -54,6 +58,8 @@ import java.util.List;
  * definition} = "Certificate issuer name (see X.509)."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CertificateIssuer1", propOrder = "relativeDistinguishedName")
 public class CertificateIssuer1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -112,6 +118,7 @@ public class CertificateIssuer1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RltvDstngshdNm", required = true)
 	public List<RelativeDistinguishedName1> getRelativeDistinguishedName() {
 		return relativeDistinguishedName;
 	}

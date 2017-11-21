@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Date and place of birth of a person.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Date and place of birth of a person."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DateAndPlaceOfBirth", propOrder = {"birthDate", "provinceOfBirth", "cityOfBirth", "countryOfBirth"})
 public class DateAndPlaceOfBirth {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -276,6 +282,7 @@ public class DateAndPlaceOfBirth {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BirthDt", required = true)
 	public ISODate getBirthDate() {
 		return birthDate;
 	}
@@ -284,6 +291,7 @@ public class DateAndPlaceOfBirth {
 		this.birthDate = birthDate;
 	}
 
+	@XmlElement(name = "PrvcOfBirth")
 	public Max35Text getProvinceOfBirth() {
 		return provinceOfBirth;
 	}
@@ -292,6 +300,7 @@ public class DateAndPlaceOfBirth {
 		this.provinceOfBirth = provinceOfBirth;
 	}
 
+	@XmlElement(name = "CityOfBirth", required = true)
 	public Max35Text getCityOfBirth() {
 		return cityOfBirth;
 	}
@@ -300,6 +309,7 @@ public class DateAndPlaceOfBirth {
 		this.cityOfBirth = cityOfBirth;
 	}
 
+	@XmlElement(name = "CtryOfBirth", required = true)
 	public CountryCode getCountryOfBirth() {
 		return countryOfBirth;
 	}

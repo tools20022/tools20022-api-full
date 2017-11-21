@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.VariableInterest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the index used to define the rate and optionally the basis point
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * VariableInterest1Rate}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FloatingInterestRate4", propOrder = {"referenceRate", "term", "basisPointSpread"})
 public class FloatingInterestRate4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -290,6 +296,7 @@ public class FloatingInterestRate4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RefRate", required = true)
 	public BenchmarkCurveName4Choice getReferenceRate() {
 		return referenceRate;
 	}
@@ -298,6 +305,7 @@ public class FloatingInterestRate4 {
 		this.referenceRate = referenceRate;
 	}
 
+	@XmlElement(name = "Term", required = true)
 	public InterestRateContractTerm1 getTerm() {
 		return term;
 	}
@@ -306,6 +314,7 @@ public class FloatingInterestRate4 {
 		this.term = term;
 	}
 
+	@XmlElement(name = "BsisPtSprd", required = true)
 	public Number getBasisPointSpread() {
 		return basisPointSpread;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.OperationThreshold;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Maximum amount allowed over a specific period of time.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Maximum amount allowed over a specific period of time."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MaximumAmountByPeriod1", propOrder = {"maximumAmount", "numberOfDays"})
 public class MaximumAmountByPeriod1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class MaximumAmountByPeriod1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MaxAmt", required = true)
 	public ActiveCurrencyAndAmount getMaximumAmount() {
 		return maximumAmount;
 	}
@@ -185,6 +192,7 @@ public class MaximumAmountByPeriod1 {
 		this.maximumAmount = maximumAmount;
 	}
 
+	@XmlElement(name = "NbOfDays", required = true)
 	public Max3NumericText getNumberOfDays() {
 		return numberOfDays;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SecuritiesProceedsDefinition;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies security rate details.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies security rate details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionRate13", propOrder = {"additionalQuantityForSubscribedResultantSecurities", "additionalQuantityForExistingSecurities", "newToOld", "newSecuritiesToUnderlyingSecurities", "transformationRate"})
 public class CorporateActionRate13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -351,6 +357,7 @@ public class CorporateActionRate13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlQtyForSbcbdRsltntScties")
 	public RatioFormat9Choice getAdditionalQuantityForSubscribedResultantSecurities() {
 		return additionalQuantityForSubscribedResultantSecurities;
 	}
@@ -359,6 +366,7 @@ public class CorporateActionRate13 {
 		this.additionalQuantityForSubscribedResultantSecurities = additionalQuantityForSubscribedResultantSecurities;
 	}
 
+	@XmlElement(name = "AddtlQtyForExstgScties")
 	public RatioFormat9Choice getAdditionalQuantityForExistingSecurities() {
 		return additionalQuantityForExistingSecurities;
 	}
@@ -367,6 +375,7 @@ public class CorporateActionRate13 {
 		this.additionalQuantityForExistingSecurities = additionalQuantityForExistingSecurities;
 	}
 
+	@XmlElement(name = "NewToOd")
 	public RatioFormat10Choice getNewToOld() {
 		return newToOld;
 	}
@@ -375,6 +384,7 @@ public class CorporateActionRate13 {
 		this.newToOld = newToOld;
 	}
 
+	@XmlElement(name = "NewSctiesToUndrlygScties")
 	public RatioFormat10Choice getNewSecuritiesToUnderlyingSecurities() {
 		return newSecuritiesToUnderlyingSecurities;
 	}
@@ -383,6 +393,7 @@ public class CorporateActionRate13 {
 		this.newSecuritiesToUnderlyingSecurities = newSecuritiesToUnderlyingSecurities;
 	}
 
+	@XmlElement(name = "TrfrmatnRate")
 	public PercentageRate getTransformationRate() {
 		return transformationRate;
 	}

@@ -25,9 +25,11 @@ import com.tools20022.repository.area.CashManagementPreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -105,9 +107,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.056.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
@@ -147,6 +146,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.056.001.05}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -170,6 +172,8 @@ import java.util.List;
  * FIToFIPaymentCancellationRequestV04}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FIToFIPaymentCancellationRequestV05", propOrder = {"assignment", "case", "controlData", "underlying", "supplementaryData"})
 public class FIToFIPaymentCancellationRequestV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -225,6 +229,14 @@ public class FIToFIPaymentCancellationRequestV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFIPaymentCancellationRequestV05.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case3 case_;
 	/**
@@ -272,6 +284,14 @@ public class FIToFIPaymentCancellationRequestV05 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Case3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFIPaymentCancellationRequestV05.class.getMethod("getCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ControlData1 controlData;
@@ -325,6 +345,14 @@ public class FIToFIPaymentCancellationRequestV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> ControlData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFIPaymentCancellationRequestV05.class.getMethod("getControlData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<UnderlyingTransaction13> underlying;
 	/**
@@ -373,6 +401,14 @@ public class FIToFIPaymentCancellationRequestV05 {
 			previousVersion_lazy = () -> FIToFIPaymentCancellationRequestV04.mmUnderlying;
 			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTransaction13.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFIPaymentCancellationRequestV05.class.getMethod("getUnderlying", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -426,6 +462,14 @@ public class FIToFIPaymentCancellationRequestV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFIPaymentCancellationRequestV05.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -440,8 +484,9 @@ public class FIToFIPaymentCancellationRequestV05 {
 				rootElement = "Document";
 				xmlTag = "FIToFIPmtCxlReq";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FIToFIPaymentCancellationRequestV05.mmAssignment, FIToFIPaymentCancellationRequestV05.mmCase, FIToFIPaymentCancellationRequestV05.mmControlData,
-						FIToFIPaymentCancellationRequestV05.mmUnderlying, FIToFIPaymentCancellationRequestV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV05.mmAssignment, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV05.mmCase,
+						com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV05.mmControlData, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV05.mmUnderlying,
+						com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -451,10 +496,16 @@ public class FIToFIPaymentCancellationRequestV05 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FIToFIPaymentCancellationRequestV05.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment3 getAssignment() {
 		return assignment;
 	}
@@ -463,6 +514,7 @@ public class FIToFIPaymentCancellationRequestV05 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "Case")
 	public Case3 getCase() {
 		return case_;
 	}
@@ -471,6 +523,7 @@ public class FIToFIPaymentCancellationRequestV05 {
 		this.case_ = case_;
 	}
 
+	@XmlElement(name = "CtrlData")
 	public ControlData1 getControlData() {
 		return controlData;
 	}
@@ -479,6 +532,7 @@ public class FIToFIPaymentCancellationRequestV05 {
 		this.controlData = controlData;
 	}
 
+	@XmlElement(name = "Undrlyg", required = true)
 	public List<UnderlyingTransaction13> getUnderlying() {
 		return underlying;
 	}
@@ -487,11 +541,18 @@ public class FIToFIPaymentCancellationRequestV05 {
 		this.underlying = underlying;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.056.05.05")
+	static public class Document {
+		@XmlElement(name = "FIToFIPmtCxlReq", required = true)
+		public FIToFIPaymentCancellationRequestV05 messageBody;
 	}
 }

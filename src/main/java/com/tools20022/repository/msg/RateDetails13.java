@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the rates related to securities movement.
@@ -118,6 +122,10 @@ import java.util.List;
  * "Provides information about the rates related to securities movement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RateDetails13", propOrder = {"additionalTax", "grossDividendRate", "interestRateUsedForPayment", "taxRelatedRate", "withholdingTaxRate", "chargesFees", "earlySolicitationFeeRate", "finalDividendRate", "fiscalStamp",
+		"fullyFrankedRate", "thirdPartyIncentiveRate", "netDividendRate", "nonResidentRate", "provisionalDividendRate", "applicableRate", "solicitationFeeRate", "taxCreditRate", "taxOnIncome", "taxOnProfits", "taxReclaimRate",
+		"withholdingOfForeignTax", "withholdingOfLocalTax", "equalisationRate"})
 public class RateDetails13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1257,6 +1265,7 @@ public class RateDetails13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlTax")
 	public RateAndAmountFormat16Choice getAdditionalTax() {
 		return additionalTax;
 	}
@@ -1265,6 +1274,7 @@ public class RateDetails13 {
 		this.additionalTax = additionalTax;
 	}
 
+	@XmlElement(name = "GrssDvddRate")
 	public List<GrossDividendRateFormat14Choice> getGrossDividendRate() {
 		return grossDividendRate;
 	}
@@ -1273,6 +1283,7 @@ public class RateDetails13 {
 		this.grossDividendRate = grossDividendRate;
 	}
 
+	@XmlElement(name = "IntrstRateUsdForPmt")
 	public List<InterestRateUsedForPaymentFormat6Choice> getInterestRateUsedForPayment() {
 		return interestRateUsedForPayment;
 	}
@@ -1281,6 +1292,7 @@ public class RateDetails13 {
 		this.interestRateUsedForPayment = interestRateUsedForPayment;
 	}
 
+	@XmlElement(name = "TaxRltdRate")
 	public List<RateTypeAndAmountAndStatus10> getTaxRelatedRate() {
 		return taxRelatedRate;
 	}
@@ -1289,6 +1301,7 @@ public class RateDetails13 {
 		this.taxRelatedRate = taxRelatedRate;
 	}
 
+	@XmlElement(name = "WhldgTaxRate")
 	public RateFormat6Choice getWithholdingTaxRate() {
 		return withholdingTaxRate;
 	}
@@ -1297,6 +1310,7 @@ public class RateDetails13 {
 		this.withholdingTaxRate = withholdingTaxRate;
 	}
 
+	@XmlElement(name = "ChrgsFees")
 	public RateAndAmountFormat16Choice getChargesFees() {
 		return chargesFees;
 	}
@@ -1305,6 +1319,7 @@ public class RateDetails13 {
 		this.chargesFees = chargesFees;
 	}
 
+	@XmlElement(name = "EarlySlctnFeeRate")
 	public SolicitationFeeRateFormat6Choice getEarlySolicitationFeeRate() {
 		return earlySolicitationFeeRate;
 	}
@@ -1313,6 +1328,7 @@ public class RateDetails13 {
 		this.earlySolicitationFeeRate = earlySolicitationFeeRate;
 	}
 
+	@XmlElement(name = "FnlDvddRate")
 	public RateAndAmountFormat17Choice getFinalDividendRate() {
 		return finalDividendRate;
 	}
@@ -1321,6 +1337,7 @@ public class RateDetails13 {
 		this.finalDividendRate = finalDividendRate;
 	}
 
+	@XmlElement(name = "FsclStmp")
 	public RateFormat6Choice getFiscalStamp() {
 		return fiscalStamp;
 	}
@@ -1329,6 +1346,7 @@ public class RateDetails13 {
 		this.fiscalStamp = fiscalStamp;
 	}
 
+	@XmlElement(name = "FullyFrnkdRate")
 	public RateAndAmountFormat16Choice getFullyFrankedRate() {
 		return fullyFrankedRate;
 	}
@@ -1337,6 +1355,7 @@ public class RateDetails13 {
 		this.fullyFrankedRate = fullyFrankedRate;
 	}
 
+	@XmlElement(name = "ThrdPtyIncntivRate")
 	public RateFormat9Choice getThirdPartyIncentiveRate() {
 		return thirdPartyIncentiveRate;
 	}
@@ -1345,6 +1364,7 @@ public class RateDetails13 {
 		this.thirdPartyIncentiveRate = thirdPartyIncentiveRate;
 	}
 
+	@XmlElement(name = "NetDvddRate")
 	public List<NetDividendRateFormat16Choice> getNetDividendRate() {
 		return netDividendRate;
 	}
@@ -1353,6 +1373,7 @@ public class RateDetails13 {
 		this.netDividendRate = netDividendRate;
 	}
 
+	@XmlElement(name = "NonResdtRate")
 	public RateAndAmountFormat16Choice getNonResidentRate() {
 		return nonResidentRate;
 	}
@@ -1361,6 +1382,7 @@ public class RateDetails13 {
 		this.nonResidentRate = nonResidentRate;
 	}
 
+	@XmlElement(name = "PrvsnlDvddRate")
 	public RateAndAmountFormat17Choice getProvisionalDividendRate() {
 		return provisionalDividendRate;
 	}
@@ -1369,6 +1391,7 @@ public class RateDetails13 {
 		this.provisionalDividendRate = provisionalDividendRate;
 	}
 
+	@XmlElement(name = "AplblRate")
 	public RateFormat6Choice getApplicableRate() {
 		return applicableRate;
 	}
@@ -1377,6 +1400,7 @@ public class RateDetails13 {
 		this.applicableRate = applicableRate;
 	}
 
+	@XmlElement(name = "SlctnFeeRate")
 	public SolicitationFeeRateFormat6Choice getSolicitationFeeRate() {
 		return solicitationFeeRate;
 	}
@@ -1385,6 +1409,7 @@ public class RateDetails13 {
 		this.solicitationFeeRate = solicitationFeeRate;
 	}
 
+	@XmlElement(name = "TaxCdtRate")
 	public List<TaxCreditRateFormat6Choice> getTaxCreditRate() {
 		return taxCreditRate;
 	}
@@ -1393,6 +1418,7 @@ public class RateDetails13 {
 		this.taxCreditRate = taxCreditRate;
 	}
 
+	@XmlElement(name = "TaxOnIncm")
 	public RateFormat6Choice getTaxOnIncome() {
 		return taxOnIncome;
 	}
@@ -1401,6 +1427,7 @@ public class RateDetails13 {
 		this.taxOnIncome = taxOnIncome;
 	}
 
+	@XmlElement(name = "TaxOnPrfts")
 	public RateFormat6Choice getTaxOnProfits() {
 		return taxOnProfits;
 	}
@@ -1409,6 +1436,7 @@ public class RateDetails13 {
 		this.taxOnProfits = taxOnProfits;
 	}
 
+	@XmlElement(name = "TaxRclmRate")
 	public RateFormat6Choice getTaxReclaimRate() {
 		return taxReclaimRate;
 	}
@@ -1417,6 +1445,7 @@ public class RateDetails13 {
 		this.taxReclaimRate = taxReclaimRate;
 	}
 
+	@XmlElement(name = "WhldgOfFrgnTax")
 	public RateAndAmountFormat16Choice getWithholdingOfForeignTax() {
 		return withholdingOfForeignTax;
 	}
@@ -1425,6 +1454,7 @@ public class RateDetails13 {
 		this.withholdingOfForeignTax = withholdingOfForeignTax;
 	}
 
+	@XmlElement(name = "WhldgOfLclTax")
 	public RateAndAmountFormat16Choice getWithholdingOfLocalTax() {
 		return withholdingOfLocalTax;
 	}
@@ -1433,6 +1463,7 @@ public class RateDetails13 {
 		this.withholdingOfLocalTax = withholdingOfLocalTax;
 	}
 
+	@XmlElement(name = "EqulstnRate")
 	public RateAndAmountFormat17Choice getEqualisationRate() {
 		return equalisationRate;
 	}

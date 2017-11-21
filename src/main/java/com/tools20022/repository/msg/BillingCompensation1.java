@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Service;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the compensation data of an incorrect billing.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the compensation data of an incorrect billing."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingCompensation1", propOrder = {"type", "value", "currencyType"})
 public class BillingCompensation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class BillingCompensation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public BillingCompensationType1Choice getType() {
 		return type;
 	}
@@ -238,6 +245,7 @@ public class BillingCompensation1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public AmountAndDirection34 getValue() {
 		return value;
 	}
@@ -246,6 +254,7 @@ public class BillingCompensation1 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "CcyTp")
 	public BillingCurrencyType2Code getCurrencyType() {
 		return currencyType;
 	}

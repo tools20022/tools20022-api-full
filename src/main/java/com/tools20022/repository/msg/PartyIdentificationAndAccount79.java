@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Entity involved in an activity.
@@ -94,6 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Entity involved in an activity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount79", propOrder = {"identification", "safekeepingAccount", "cashAccount", "processingIdentification", "countryOfResidence", "additionalInformation", "alternateIdentification"})
 public class PartyIdentificationAndAccount79 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -450,6 +456,7 @@ public class PartyIdentificationAndAccount79 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public PartyIdentification32Choice getIdentification() {
 		return identification;
 	}
@@ -458,6 +465,7 @@ public class PartyIdentificationAndAccount79 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public Max35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -466,6 +474,7 @@ public class PartyIdentificationAndAccount79 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccountIdentification2Choice getCashAccount() {
 		return cashAccount;
 	}
@@ -474,6 +483,7 @@ public class PartyIdentificationAndAccount79 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public Max35Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -482,6 +492,7 @@ public class PartyIdentificationAndAccount79 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "CtryOfRes")
 	public CountryCode getCountryOfResidence() {
 		return countryOfResidence;
 	}
@@ -490,6 +501,7 @@ public class PartyIdentificationAndAccount79 {
 		this.countryOfResidence = countryOfResidence;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public PartyTextInformation1 getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -498,6 +510,7 @@ public class PartyIdentificationAndAccount79 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification5 getAlternateIdentification() {
 		return alternateIdentification;
 	}

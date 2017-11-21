@@ -37,6 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TreasurySettlementSystem#mmSystemRole
+ * TreasurySettlementSystem.mmSystemRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.System System}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -44,16 +54,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.TreasurySettlementSystemRole#mmSystem
  * TreasurySettlementSystemRole.mmSystem}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.System System}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TreasurySettlementSystem#mmSystemRole
- * TreasurySettlementSystem.mmSystemRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -114,7 +114,7 @@ public class TreasurySettlementSystem extends System {
 	 */
 	public static final MMBusinessAssociationEnd mmSystemRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TreasurySettlementSystem.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TreasurySettlementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemRole";
@@ -136,7 +136,12 @@ public class TreasurySettlementSystem extends System {
 				definition = "Centralised system in which a central party settles treasury trades between members.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasurySettlementSystemRole.mmSystem);
 				superType_lazy = () -> System.mmObject();
-				element_lazy = () -> Arrays.asList(TreasurySettlementSystem.mmSystemRole);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasurySettlementSystem.mmSystemRole);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TreasurySettlementSystem.class;
 			}
 		});
 		return mmObject_lazy.get();

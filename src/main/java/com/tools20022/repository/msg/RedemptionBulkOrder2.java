@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instruction from an investor to sell investment fund units back to the fund.
@@ -102,6 +106,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RedemptionBulkOrder2", propOrder = {"placeOfTrade", "orderDateTime", "expiryDateTime", "cancellationRight", "financialInstrumentDetails", "individualOrderDetails", "requestedSettlementCurrency", "requestedNAVCurrency",
+		"bulkCashSettlementDetails"})
 public class RedemptionBulkOrder2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -566,6 +573,7 @@ public class RedemptionBulkOrder2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public CountryCode getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -574,6 +582,7 @@ public class RedemptionBulkOrder2 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "OrdrDtTm")
 	public ISODateTime getOrderDateTime() {
 		return orderDateTime;
 	}
@@ -582,6 +591,7 @@ public class RedemptionBulkOrder2 {
 		this.orderDateTime = orderDateTime;
 	}
 
+	@XmlElement(name = "XpryDtTm")
 	public ISODateTime getExpiryDateTime() {
 		return expiryDateTime;
 	}
@@ -590,6 +600,7 @@ public class RedemptionBulkOrder2 {
 		this.expiryDateTime = expiryDateTime;
 	}
 
+	@XmlElement(name = "CxlRght")
 	public CancellationRight1 getCancellationRight() {
 		return cancellationRight;
 	}
@@ -598,6 +609,7 @@ public class RedemptionBulkOrder2 {
 		this.cancellationRight = cancellationRight;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument6 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -606,6 +618,7 @@ public class RedemptionBulkOrder2 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "IndvOrdrDtls", required = true)
 	public List<RedemptionOrder3> getIndividualOrderDetails() {
 		return individualOrderDetails;
 	}
@@ -614,6 +627,7 @@ public class RedemptionBulkOrder2 {
 		this.individualOrderDetails = individualOrderDetails;
 	}
 
+	@XmlElement(name = "ReqdSttlmCcy")
 	public CurrencyCode getRequestedSettlementCurrency() {
 		return requestedSettlementCurrency;
 	}
@@ -622,6 +636,7 @@ public class RedemptionBulkOrder2 {
 		this.requestedSettlementCurrency = requestedSettlementCurrency;
 	}
 
+	@XmlElement(name = "ReqdNAVCcy")
 	public CurrencyCode getRequestedNAVCurrency() {
 		return requestedNAVCurrency;
 	}
@@ -630,6 +645,7 @@ public class RedemptionBulkOrder2 {
 		this.requestedNAVCurrency = requestedNAVCurrency;
 	}
 
+	@XmlElement(name = "BlkCshSttlmDtls")
 	public PaymentTransaction18 getBulkCashSettlementDetails() {
 		return bulkCashSettlementDetails;
 	}

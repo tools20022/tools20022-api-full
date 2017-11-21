@@ -34,6 +34,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Includes data elements that can be used for reporting to trade repositories,
@@ -145,6 +149,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegulatoryReporting1", propOrder = {"reportingJurisdiction", "reportingParty", "tradingSideUniqueTransactionIdentifier", "counterpartySideUniqueTransactionIdentifier", "clearingExceptionParty",
+		"clearingBrokerIdentification", "clearingThresholdIndicator", "clearedProductIdentification", "underlyingProductIdentifier", "allocationIndicator", "collateralisationIndicator", "executionVenue", "executionTimestamp",
+		"nonStandardFlag", "linkSwapIdentification", "additionalReportingInformation"})
 public class RegulatoryReporting1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1083,6 +1091,7 @@ public class RegulatoryReporting1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptgJursdctn")
 	public Max35Text getReportingJurisdiction() {
 		return reportingJurisdiction;
 	}
@@ -1091,6 +1100,7 @@ public class RegulatoryReporting1 {
 		this.reportingJurisdiction = reportingJurisdiction;
 	}
 
+	@XmlElement(name = "RptgPty")
 	public PartyIdentification73Choice getReportingParty() {
 		return reportingParty;
 	}
@@ -1099,6 +1109,7 @@ public class RegulatoryReporting1 {
 		this.reportingParty = reportingParty;
 	}
 
+	@XmlElement(name = "TradgSdUnqTxIdr")
 	public UniqueTransactionIdentifier1 getTradingSideUniqueTransactionIdentifier() {
 		return tradingSideUniqueTransactionIdentifier;
 	}
@@ -1107,6 +1118,7 @@ public class RegulatoryReporting1 {
 		this.tradingSideUniqueTransactionIdentifier = tradingSideUniqueTransactionIdentifier;
 	}
 
+	@XmlElement(name = "CtrPtySdUnqTxIdr")
 	public UniqueTransactionIdentifier1 getCounterpartySideUniqueTransactionIdentifier() {
 		return counterpartySideUniqueTransactionIdentifier;
 	}
@@ -1115,6 +1127,7 @@ public class RegulatoryReporting1 {
 		this.counterpartySideUniqueTransactionIdentifier = counterpartySideUniqueTransactionIdentifier;
 	}
 
+	@XmlElement(name = "ClrXcptnPty")
 	public PartyIdentification73Choice getClearingExceptionParty() {
 		return clearingExceptionParty;
 	}
@@ -1123,6 +1136,7 @@ public class RegulatoryReporting1 {
 		this.clearingExceptionParty = clearingExceptionParty;
 	}
 
+	@XmlElement(name = "ClrBrkrId")
 	public ClearingBrokerIdentification1 getClearingBrokerIdentification() {
 		return clearingBrokerIdentification;
 	}
@@ -1131,6 +1145,7 @@ public class RegulatoryReporting1 {
 		this.clearingBrokerIdentification = clearingBrokerIdentification;
 	}
 
+	@XmlElement(name = "ClrThrshldInd")
 	public YesNoIndicator getClearingThresholdIndicator() {
 		return clearingThresholdIndicator;
 	}
@@ -1139,6 +1154,7 @@ public class RegulatoryReporting1 {
 		this.clearingThresholdIndicator = clearingThresholdIndicator;
 	}
 
+	@XmlElement(name = "ClrdPdctId")
 	public Max35Text getClearedProductIdentification() {
 		return clearedProductIdentification;
 	}
@@ -1147,6 +1163,7 @@ public class RegulatoryReporting1 {
 		this.clearedProductIdentification = clearedProductIdentification;
 	}
 
+	@XmlElement(name = "UndrlygPdctIdr")
 	public UnderlyingProductIdentifier1Code getUnderlyingProductIdentifier() {
 		return underlyingProductIdentifier;
 	}
@@ -1155,6 +1172,7 @@ public class RegulatoryReporting1 {
 		this.underlyingProductIdentifier = underlyingProductIdentifier;
 	}
 
+	@XmlElement(name = "AllcnInd")
 	public AllocationIndicator1Code getAllocationIndicator() {
 		return allocationIndicator;
 	}
@@ -1163,6 +1181,7 @@ public class RegulatoryReporting1 {
 		this.allocationIndicator = allocationIndicator;
 	}
 
+	@XmlElement(name = "CollstnInd")
 	public CollateralisationIndicator1Code getCollateralisationIndicator() {
 		return collateralisationIndicator;
 	}
@@ -1171,6 +1190,7 @@ public class RegulatoryReporting1 {
 		this.collateralisationIndicator = collateralisationIndicator;
 	}
 
+	@XmlElement(name = "ExctnVn")
 	public Max35Text getExecutionVenue() {
 		return executionVenue;
 	}
@@ -1179,6 +1199,7 @@ public class RegulatoryReporting1 {
 		this.executionVenue = executionVenue;
 	}
 
+	@XmlElement(name = "ExctnTmstmp")
 	public DateAndDateTimeChoice getExecutionTimestamp() {
 		return executionTimestamp;
 	}
@@ -1187,6 +1208,7 @@ public class RegulatoryReporting1 {
 		this.executionTimestamp = executionTimestamp;
 	}
 
+	@XmlElement(name = "NonStdFlg")
 	public YesNoIndicator getNonStandardFlag() {
 		return nonStandardFlag;
 	}
@@ -1195,6 +1217,7 @@ public class RegulatoryReporting1 {
 		this.nonStandardFlag = nonStandardFlag;
 	}
 
+	@XmlElement(name = "LkSwpId")
 	public Exact42Text getLinkSwapIdentification() {
 		return linkSwapIdentification;
 	}
@@ -1203,6 +1226,7 @@ public class RegulatoryReporting1 {
 		this.linkSwapIdentification = linkSwapIdentification;
 	}
 
+	@XmlElement(name = "AddtlRptgInf")
 	public Max210Text getAdditionalReportingInformation() {
 		return additionalReportingInformation;
 	}

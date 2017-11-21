@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Independent undertaking, such as a demand guarantee or standby letter of
@@ -154,6 +158,10 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Undertaking3", propOrder = {"identification", "name", "type", "issuanceType", "applicant", "issuer", "beneficiary", "dateOfIssuance", "placeOfIssue", "advisingParty", "secondAdvisingParty", "undertakingAmount",
+		"expiryDetails", "confirmationIndicator", "confirmationPartyType", "additionalParty", "governanceRulesAndLaw", "underlyingTransaction", "presentationDetails", "undertakingTermsAndConditions", "multipleDemandIndicator",
+		"partialDemandIndicator", "confirmationChargesPayableBy", "transferChargesPayableBy", "automaticAmountVariation", "deliveryChannel", "transferIndicator", "enclosedFile", "additionalInformation", "requestedLocalUndertaking"})
 public class Undertaking3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1577,6 +1585,7 @@ public class Undertaking3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -1585,6 +1594,7 @@ public class Undertaking3 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public UndertakingIssuanceName1Code getName() {
 		return name;
 	}
@@ -1593,6 +1603,7 @@ public class Undertaking3 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Tp")
 	public UndertakingType1Choice getType() {
 		return type;
 	}
@@ -1601,6 +1612,7 @@ public class Undertaking3 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "IssncTp", required = true)
 	public IssuanceType1Code getIssuanceType() {
 		return issuanceType;
 	}
@@ -1609,6 +1621,7 @@ public class Undertaking3 {
 		this.issuanceType = issuanceType;
 	}
 
+	@XmlElement(name = "Applcnt")
 	public List<PartyIdentification43> getApplicant() {
 		return applicant;
 	}
@@ -1617,6 +1630,7 @@ public class Undertaking3 {
 		this.applicant = applicant;
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public PartyIdentification43 getIssuer() {
 		return issuer;
 	}
@@ -1625,6 +1639,7 @@ public class Undertaking3 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "Bnfcry", required = true)
 	public List<PartyIdentification43> getBeneficiary() {
 		return beneficiary;
 	}
@@ -1633,6 +1648,7 @@ public class Undertaking3 {
 		this.beneficiary = beneficiary;
 	}
 
+	@XmlElement(name = "DtOfIssnc", required = true)
 	public ISODate getDateOfIssuance() {
 		return dateOfIssuance;
 	}
@@ -1641,6 +1657,7 @@ public class Undertaking3 {
 		this.dateOfIssuance = dateOfIssuance;
 	}
 
+	@XmlElement(name = "PlcOfIsse")
 	public PostalAddress12 getPlaceOfIssue() {
 		return placeOfIssue;
 	}
@@ -1649,6 +1666,7 @@ public class Undertaking3 {
 		this.placeOfIssue = placeOfIssue;
 	}
 
+	@XmlElement(name = "AdvsgPty")
 	public PartyIdentification43 getAdvisingParty() {
 		return advisingParty;
 	}
@@ -1657,6 +1675,7 @@ public class Undertaking3 {
 		this.advisingParty = advisingParty;
 	}
 
+	@XmlElement(name = "ScndAdvsgPty")
 	public PartyIdentification43 getSecondAdvisingParty() {
 		return secondAdvisingParty;
 	}
@@ -1665,6 +1684,7 @@ public class Undertaking3 {
 		this.secondAdvisingParty = secondAdvisingParty;
 	}
 
+	@XmlElement(name = "UdrtkgAmt", required = true)
 	public UndertakingAmount1 getUndertakingAmount() {
 		return undertakingAmount;
 	}
@@ -1673,6 +1693,7 @@ public class Undertaking3 {
 		this.undertakingAmount = undertakingAmount;
 	}
 
+	@XmlElement(name = "XpryDtls", required = true)
 	public ExpiryDetails1 getExpiryDetails() {
 		return expiryDetails;
 	}
@@ -1681,6 +1702,7 @@ public class Undertaking3 {
 		this.expiryDetails = expiryDetails;
 	}
 
+	@XmlElement(name = "ConfInd")
 	public YesNoIndicator getConfirmationIndicator() {
 		return confirmationIndicator;
 	}
@@ -1689,6 +1711,7 @@ public class Undertaking3 {
 		this.confirmationIndicator = confirmationIndicator;
 	}
 
+	@XmlElement(name = "ConfPtyTp")
 	public ExternalTypeOfParty1Code getConfirmationPartyType() {
 		return confirmationPartyType;
 	}
@@ -1697,6 +1720,7 @@ public class Undertaking3 {
 		this.confirmationPartyType = confirmationPartyType;
 	}
 
+	@XmlElement(name = "AddtlPty")
 	public List<PartyAndType1> getAdditionalParty() {
 		return additionalParty;
 	}
@@ -1705,6 +1729,7 @@ public class Undertaking3 {
 		this.additionalParty = additionalParty;
 	}
 
+	@XmlElement(name = "GovncRulesAndLaw", required = true)
 	public GovernanceRules1 getGovernanceRulesAndLaw() {
 		return governanceRulesAndLaw;
 	}
@@ -1713,6 +1738,7 @@ public class Undertaking3 {
 		this.governanceRulesAndLaw = governanceRulesAndLaw;
 	}
 
+	@XmlElement(name = "UndrlygTx")
 	public List<UnderlyingTradeTransaction1> getUnderlyingTransaction() {
 		return underlyingTransaction;
 	}
@@ -1721,6 +1747,7 @@ public class Undertaking3 {
 		this.underlyingTransaction = underlyingTransaction;
 	}
 
+	@XmlElement(name = "PresntnDtls")
 	public Presentation1 getPresentationDetails() {
 		return presentationDetails;
 	}
@@ -1729,6 +1756,7 @@ public class Undertaking3 {
 		this.presentationDetails = presentationDetails;
 	}
 
+	@XmlElement(name = "UdrtkgTermsAndConds", required = true)
 	public List<Narrative1> getUndertakingTermsAndConditions() {
 		return undertakingTermsAndConditions;
 	}
@@ -1737,6 +1765,7 @@ public class Undertaking3 {
 		this.undertakingTermsAndConditions = undertakingTermsAndConditions;
 	}
 
+	@XmlElement(name = "MltplDmndInd")
 	public YesNoIndicator getMultipleDemandIndicator() {
 		return multipleDemandIndicator;
 	}
@@ -1745,6 +1774,7 @@ public class Undertaking3 {
 		this.multipleDemandIndicator = multipleDemandIndicator;
 	}
 
+	@XmlElement(name = "PrtlDmndInd")
 	public YesNoIndicator getPartialDemandIndicator() {
 		return partialDemandIndicator;
 	}
@@ -1753,6 +1783,7 @@ public class Undertaking3 {
 		this.partialDemandIndicator = partialDemandIndicator;
 	}
 
+	@XmlElement(name = "ConfChrgsPyblBy")
 	public ExternalTypeOfParty1Code getConfirmationChargesPayableBy() {
 		return confirmationChargesPayableBy;
 	}
@@ -1761,6 +1792,7 @@ public class Undertaking3 {
 		this.confirmationChargesPayableBy = confirmationChargesPayableBy;
 	}
 
+	@XmlElement(name = "TrfChrgsPyblBy")
 	public ExternalTypeOfParty1Code getTransferChargesPayableBy() {
 		return transferChargesPayableBy;
 	}
@@ -1769,6 +1801,7 @@ public class Undertaking3 {
 		this.transferChargesPayableBy = transferChargesPayableBy;
 	}
 
+	@XmlElement(name = "AutomtcAmtVartn")
 	public List<AutomaticVariation1> getAutomaticAmountVariation() {
 		return automaticAmountVariation;
 	}
@@ -1777,6 +1810,7 @@ public class Undertaking3 {
 		this.automaticAmountVariation = automaticAmountVariation;
 	}
 
+	@XmlElement(name = "DlvryChanl")
 	public CommunicationChannel1 getDeliveryChannel() {
 		return deliveryChannel;
 	}
@@ -1785,6 +1819,7 @@ public class Undertaking3 {
 		this.deliveryChannel = deliveryChannel;
 	}
 
+	@XmlElement(name = "TrfInd")
 	public YesNoIndicator getTransferIndicator() {
 		return transferIndicator;
 	}
@@ -1793,6 +1828,7 @@ public class Undertaking3 {
 		this.transferIndicator = transferIndicator;
 	}
 
+	@XmlElement(name = "NclsdFile")
 	public List<Document9> getEnclosedFile() {
 		return enclosedFile;
 	}
@@ -1801,6 +1837,7 @@ public class Undertaking3 {
 		this.enclosedFile = enclosedFile;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -1809,6 +1846,7 @@ public class Undertaking3 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "ReqdLclUdrtkg")
 	public Undertaking4 getRequestedLocalUndertaking() {
 		return requestedLocalUndertaking;
 	}

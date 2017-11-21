@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide identification information.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Set of elements used to provide identification information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IdentificationInformation1", propOrder = {"party", "account", "agent"})
 public class IdentificationInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class IdentificationInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pty")
 	public PartyIdentification32 getParty() {
 		return party;
 	}
@@ -237,6 +244,7 @@ public class IdentificationInformation1 {
 		this.party = party;
 	}
 
+	@XmlElement(name = "Acct")
 	public AccountIdentification4Choice getAccount() {
 		return account;
 	}
@@ -245,6 +253,7 @@ public class IdentificationInformation1 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "Agt")
 	public BranchAndFinancialInstitutionIdentification4 getAgent() {
 		return agent;
 	}

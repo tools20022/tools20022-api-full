@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Period2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Period as a date, a month or a date time span for which the statement is
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DatePeriod1Choice", propOrder = {"date", "dateMonth", "fromDateToDate"})
 public class DatePeriod1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -205,6 +211,7 @@ public class DatePeriod1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
@@ -213,6 +220,7 @@ public class DatePeriod1Choice {
 		this.date = date;
 	}
 
+	@XmlElement(name = "DtMnth", required = true)
 	public ISOYearMonth getDateMonth() {
 		return dateMonth;
 	}
@@ -221,6 +229,7 @@ public class DatePeriod1Choice {
 		this.dateMonth = dateMonth;
 	}
 
+	@XmlElement(name = "FrDtToDt", required = true)
 	public Period2 getFromDateToDate() {
 		return fromDateToDate;
 	}

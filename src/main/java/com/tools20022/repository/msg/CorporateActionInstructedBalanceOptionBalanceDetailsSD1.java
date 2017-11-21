@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action instructed balance
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionInstructedBalanceOptionBalanceDetailsSD1", propOrder = {"placeAndName", "optionUncoveredProtectBalance", "optionDailyInstructedBalance", "optionOversubscriptionQuantity", "optionUnacceptedBalance"})
 public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -309,6 +315,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -317,6 +324,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "OptnUcvrdPrtctBal")
 	public SignedQuantityFormat9 getOptionUncoveredProtectBalance() {
 		return optionUncoveredProtectBalance;
 	}
@@ -325,6 +333,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 		this.optionUncoveredProtectBalance = optionUncoveredProtectBalance;
 	}
 
+	@XmlElement(name = "OptnDalyInstdBal")
 	public SignedQuantityFormat9 getOptionDailyInstructedBalance() {
 		return optionDailyInstructedBalance;
 	}
@@ -333,6 +342,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 		this.optionDailyInstructedBalance = optionDailyInstructedBalance;
 	}
 
+	@XmlElement(name = "OptnOvrsbcptQty")
 	public SignedQuantityFormat9 getOptionOversubscriptionQuantity() {
 		return optionOversubscriptionQuantity;
 	}
@@ -341,6 +351,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 		this.optionOversubscriptionQuantity = optionOversubscriptionQuantity;
 	}
 
+	@XmlElement(name = "OptnUaccptdBal")
 	public SignedQuantityFormat9 getOptionUnacceptedBalance() {
 		return optionUnacceptedBalance;
 	}

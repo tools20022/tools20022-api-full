@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the request of maintenance delegations.
@@ -78,6 +82,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MaintenanceDelegationResponse1", propOrder = {"TMIdentification", "masterTMIdentification", "delegationResponse"})
 public class MaintenanceDelegationResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -248,6 +254,7 @@ public class MaintenanceDelegationResponse1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TMId", required = true)
 	public GenericIdentification72 getTMIdentification() {
 		return tMIdentification;
 	}
@@ -256,6 +263,7 @@ public class MaintenanceDelegationResponse1 {
 		this.tMIdentification = tMIdentification;
 	}
 
+	@XmlElement(name = "MstrTMId")
 	public GenericIdentification72 getMasterTMIdentification() {
 		return masterTMIdentification;
 	}
@@ -264,6 +272,7 @@ public class MaintenanceDelegationResponse1 {
 		this.masterTMIdentification = masterTMIdentification;
 	}
 
+	@XmlElement(name = "DlgtnRspn", required = true)
 	public List<MaintenanceDelegation2> getDelegationResponse() {
 		return delegationResponse;
 	}

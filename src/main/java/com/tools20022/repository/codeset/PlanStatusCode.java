@@ -29,13 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PlanStatus1Code
- * PlanStatus1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.PlanStatusCode#mmActive
@@ -44,6 +37,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * PlanStatusCode.mmSuspended}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.PlanStatusCode#mmClosed
  * PlanStatusCode.mmClosed}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PlanStatus1Code
+ * PlanStatus1Code}</li>
  * </ul>
  * </li>
  * <li>

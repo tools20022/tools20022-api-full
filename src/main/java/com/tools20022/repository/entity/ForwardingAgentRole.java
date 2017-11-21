@@ -66,6 +66,11 @@ public class ForwardingAgentRole extends PaymentPartyRole {
 				definition = "Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain for execution.";
 				superType_lazy = () -> PaymentPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ForwardingAgentRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

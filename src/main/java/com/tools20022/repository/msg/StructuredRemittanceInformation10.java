@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information supplied to enable the matching/reconciliation of an entry with
@@ -96,6 +100,9 @@ import java.util.List;
  * StructuredRemittanceInformation9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StructuredRemittanceInformation10", propOrder = {"referredDocumentInformation", "referredDocumentAmount", "creditorReferenceInformation", "invoicer", "invoicee", "taxRemittance", "garnishmentRemittance",
+		"additionalRemittanceInformation"})
 public class StructuredRemittanceInformation10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -546,6 +553,7 @@ public class StructuredRemittanceInformation10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RfrdDocInf")
 	public List<ReferredDocumentInformation4> getReferredDocumentInformation() {
 		return referredDocumentInformation;
 	}
@@ -554,6 +562,7 @@ public class StructuredRemittanceInformation10 {
 		this.referredDocumentInformation = referredDocumentInformation;
 	}
 
+	@XmlElement(name = "RfrdDocAmt")
 	public RemittanceAmount2 getReferredDocumentAmount() {
 		return referredDocumentAmount;
 	}
@@ -562,6 +571,7 @@ public class StructuredRemittanceInformation10 {
 		this.referredDocumentAmount = referredDocumentAmount;
 	}
 
+	@XmlElement(name = "CdtrRefInf")
 	public CreditorReferenceInformation2 getCreditorReferenceInformation() {
 		return creditorReferenceInformation;
 	}
@@ -570,6 +580,7 @@ public class StructuredRemittanceInformation10 {
 		this.creditorReferenceInformation = creditorReferenceInformation;
 	}
 
+	@XmlElement(name = "Invcr")
 	public PartyIdentification43 getInvoicer() {
 		return invoicer;
 	}
@@ -578,6 +589,7 @@ public class StructuredRemittanceInformation10 {
 		this.invoicer = invoicer;
 	}
 
+	@XmlElement(name = "Invcee")
 	public PartyIdentification43 getInvoicee() {
 		return invoicee;
 	}
@@ -586,6 +598,7 @@ public class StructuredRemittanceInformation10 {
 		this.invoicee = invoicee;
 	}
 
+	@XmlElement(name = "TaxRmt")
 	public TaxInformation4 getTaxRemittance() {
 		return taxRemittance;
 	}
@@ -594,6 +607,7 @@ public class StructuredRemittanceInformation10 {
 		this.taxRemittance = taxRemittance;
 	}
 
+	@XmlElement(name = "GrnshmtRmt")
 	public Garnishment1 getGarnishmentRemittance() {
 		return garnishmentRemittance;
 	}
@@ -602,6 +616,7 @@ public class StructuredRemittanceInformation10 {
 		this.garnishmentRemittance = garnishmentRemittance;
 	}
 
+	@XmlElement(name = "AddtlRmtInf")
 	public List<Max140Text> getAdditionalRemittanceInformation() {
 		return additionalRemittanceInformation;
 	}

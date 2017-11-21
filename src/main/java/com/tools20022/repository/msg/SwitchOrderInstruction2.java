@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a switch order.
@@ -71,6 +75,8 @@ import java.util.List;
  * definition} = "Information about a switch order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwitchOrderInstruction2", propOrder = {"switchOrderDetails", "extension"})
 public class SwitchOrderInstruction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class SwitchOrderInstruction2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SwtchOrdrDtls", required = true)
 	public List<SwitchOrder3> getSwitchOrderDetails() {
 		return switchOrderDetails;
 	}
@@ -185,6 +192,7 @@ public class SwitchOrderInstruction2 {
 		this.switchOrderDetails = switchOrderDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.CancellationPendingStatus1;
 import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason for the cancellation pending status.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CancellationPendingStatus1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancellationPendingStatus7Choice", propOrder = {"reason", "dataSourceScheme", "noSpecifiedReason"})
 public class CancellationPendingStatus7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -254,6 +260,7 @@ public class CancellationPendingStatus7Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public Max350Text getReason() {
 		return reason;
 	}
@@ -262,6 +269,7 @@ public class CancellationPendingStatus7Choice {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}
@@ -270,6 +278,7 @@ public class CancellationPendingStatus7Choice {
 		this.dataSourceScheme = dataSourceScheme;
 	}
 
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}

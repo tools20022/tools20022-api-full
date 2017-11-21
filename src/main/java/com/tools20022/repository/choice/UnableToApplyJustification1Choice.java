@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MissingOrIncorrectInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between details of missing information or the complete set of
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnableToApplyJustification1Choice", propOrder = {"anyInformation", "missingOrIncorrectInformation"})
 public class UnableToApplyJustification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class UnableToApplyJustification1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AnyInf", required = true)
 	public YesNoIndicator getAnyInformation() {
 		return anyInformation;
 	}
@@ -174,6 +181,7 @@ public class UnableToApplyJustification1Choice {
 		this.anyInformation = anyInformation;
 	}
 
+	@XmlElement(name = "MssngOrIncrrctInf", required = true)
 	public MissingOrIncorrectInformation1 getMissingOrIncorrectInformation() {
 		return missingOrIncorrectInformation;
 	}

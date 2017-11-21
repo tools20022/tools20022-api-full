@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MessageIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Type of instruction.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of instruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructionType1Choice", propOrder = {"instructionIdentification", "instructionCancellationIdentification"})
 public class InstructionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class InstructionType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrId", required = true)
 	public MessageIdentification getInstructionIdentification() {
 		return instructionIdentification;
 	}
@@ -189,6 +196,7 @@ public class InstructionType1Choice {
 		this.instructionIdentification = instructionIdentification;
 	}
 
+	@XmlElement(name = "InstrCxlId", required = true)
 	public MessageIdentification getInstructionCancellationIdentification() {
 		return instructionCancellationIdentification;
 	}

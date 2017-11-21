@@ -66,6 +66,11 @@ public class NotifyingParty extends DocumentPartyRole {
 				definition = "Identifies the party that notifies the content of a document to a third party.";
 				superType_lazy = () -> DocumentPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return NotifyingParty.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

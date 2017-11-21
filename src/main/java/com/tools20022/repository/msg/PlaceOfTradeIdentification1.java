@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of market in which a trade transaction has been executed.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Identification of market in which a trade transaction has been executed."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PlaceOfTradeIdentification1", propOrder = {"marketTypeAndIdentification", "LEI"})
 public class PlaceOfTradeIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -192,6 +198,7 @@ public class PlaceOfTradeIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MktTpAndId")
 	public MarketIdentification84 getMarketTypeAndIdentification() {
 		return marketTypeAndIdentification;
 	}
@@ -200,6 +207,7 @@ public class PlaceOfTradeIdentification1 {
 		this.marketTypeAndIdentification = marketTypeAndIdentification;
 	}
 
+	@XmlElement(name = "LEI")
 	public LEIIdentifier getLEI() {
 		return lEI;
 	}

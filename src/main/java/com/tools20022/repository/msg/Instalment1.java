@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information of a single instalment related to an invoice settlement.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information of a single instalment related to an invoice settlement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Instalment1", propOrder = {"sequenceIdentification", "paymentDueDate", "amount"})
 public class Instalment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -225,6 +231,7 @@ public class Instalment1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SeqId", required = true)
 	public Max70Text getSequenceIdentification() {
 		return sequenceIdentification;
 	}
@@ -233,6 +240,7 @@ public class Instalment1 {
 		this.sequenceIdentification = sequenceIdentification;
 	}
 
+	@XmlElement(name = "PmtDueDt", required = true)
 	public ISODate getPaymentDueDate() {
 		return paymentDueDate;
 	}
@@ -241,6 +249,7 @@ public class Instalment1 {
 		this.paymentDueDate = paymentDueDate;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}

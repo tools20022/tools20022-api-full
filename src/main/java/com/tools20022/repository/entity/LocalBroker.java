@@ -65,6 +65,11 @@ public class LocalBroker extends Broker {
 				definition = "Party paid a commission following the execution of a trade, as directed by the investment manager.";
 				superType_lazy = () -> Broker.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return LocalBroker.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of side pocket units, or amount, or rate.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of side pocket units, or amount, or rate."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SidePocketUnitsOrAmountOrRate1Choice", propOrder = {"unitsNumber", "orderedAmount", "holdingsRate"})
 public class SidePocketUnitsOrAmountOrRate1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -237,6 +243,7 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -245,6 +252,7 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "OrdrdAmt", required = true)
 	public ActiveCurrencyAndAmount getOrderedAmount() {
 		return orderedAmount;
 	}
@@ -253,6 +261,7 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 		this.orderedAmount = orderedAmount;
 	}
 
+	@XmlElement(name = "HldgsRate", required = true)
 	public PercentageRate getHoldingsRate() {
 		return holdingsRate;
 	}

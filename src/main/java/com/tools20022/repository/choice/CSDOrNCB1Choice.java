@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SystemPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a central securities depositary or a national central bank for
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CSDOrNCB1Choice", propOrder = {"CSDIdentification", "NCBIdentification"})
 public class CSDOrNCB1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class CSDOrNCB1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CSDId", required = true)
 	public BICFIIdentifier getCSDIdentification() {
 		return cSDIdentification;
 	}
@@ -193,6 +200,7 @@ public class CSDOrNCB1Choice {
 		this.cSDIdentification = cSDIdentification;
 	}
 
+	@XmlElement(name = "NCBId", required = true)
 	public BICFIIdentifier getNCBIdentification() {
 		return nCBIdentification;
 	}

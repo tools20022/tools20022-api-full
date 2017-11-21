@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the amendment.
@@ -78,6 +82,8 @@ import java.util.List;
  * definition} = "Details of the amendment."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Amendment6", propOrder = {"undertakingAmendmentMessage", "applicantReferenceNumber", "additionalInformation"})
 public class Amendment6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class Amendment6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UdrtkgAmdmntMsg", required = true)
 	public UndertakingAmendmentMessage1 getUndertakingAmendmentMessage() {
 		return undertakingAmendmentMessage;
 	}
@@ -236,6 +243,7 @@ public class Amendment6 {
 		this.undertakingAmendmentMessage = undertakingAmendmentMessage;
 	}
 
+	@XmlElement(name = "ApplcntRefNb")
 	public Max35Text getApplicantReferenceNumber() {
 		return applicantReferenceNumber;
 	}
@@ -244,6 +252,7 @@ public class Amendment6 {
 		this.applicantReferenceNumber = applicantReferenceNumber;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

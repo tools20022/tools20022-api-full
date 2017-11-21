@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType13;
 import com.tools20022.repository.msg.Header20;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The ATMDeviceControl message is sent by a maintenance host to an ATM in
@@ -37,9 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caam.002.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
@@ -75,6 +74,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caam.002.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -93,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMDeviceControlV01", propOrder = {"header", "protectedATMDeviceControl", "ATMDeviceControl", "securityTrailer"})
 public class ATMDeviceControlV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -132,6 +136,14 @@ public class ATMDeviceControlV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header20.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMDeviceControlV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType10 protectedATMDeviceControl;
 	/**
@@ -167,6 +179,14 @@ public class ATMDeviceControlV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMDeviceControlV01.class.getMethod("getProtectedATMDeviceControl", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ATMDeviceControl1 aTMDeviceControl;
 	/**
@@ -201,6 +221,14 @@ public class ATMDeviceControlV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ATMDeviceControl1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMDeviceControlV01.class.getMethod("getATMDeviceControl", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ContentInformationType13 securityTrailer;
@@ -238,6 +266,14 @@ public class ATMDeviceControlV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType13.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMDeviceControlV01.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -251,7 +287,8 @@ public class ATMDeviceControlV01 {
 				rootElement = "Document";
 				xmlTag = "ATMDvcCtrl";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ATMDeviceControlV01.mmHeader, ATMDeviceControlV01.mmProtectedATMDeviceControl, ATMDeviceControlV01.mmATMDeviceControl, ATMDeviceControlV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMDeviceControlV01.mmHeader, com.tools20022.repository.area.caam.ATMDeviceControlV01.mmProtectedATMDeviceControl,
+						com.tools20022.repository.area.caam.ATMDeviceControlV01.mmATMDeviceControl, com.tools20022.repository.area.caam.ATMDeviceControlV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caam";
@@ -261,10 +298,16 @@ public class ATMDeviceControlV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ATMDeviceControlV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header20 getHeader() {
 		return header;
 	}
@@ -273,6 +316,7 @@ public class ATMDeviceControlV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "PrtctdATMDvcCtrl")
 	public ContentInformationType10 getProtectedATMDeviceControl() {
 		return protectedATMDeviceControl;
 	}
@@ -281,6 +325,7 @@ public class ATMDeviceControlV01 {
 		this.protectedATMDeviceControl = protectedATMDeviceControl;
 	}
 
+	@XmlElement(name = "ATMDvcCtrl")
 	public ATMDeviceControl1 getATMDeviceControl() {
 		return aTMDeviceControl;
 	}
@@ -289,11 +334,18 @@ public class ATMDeviceControlV01 {
 		this.aTMDeviceControl = aTMDeviceControl;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType13 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType13 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caam.002.01.01")
+	static public class Document {
+		@XmlElement(name = "ATMDvcCtrl", required = true)
+		public ATMDeviceControlV01 messageBody;
 	}
 }

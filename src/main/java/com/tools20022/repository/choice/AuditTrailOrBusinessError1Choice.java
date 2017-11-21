@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Report between the static data audit trail or a business error.
@@ -60,6 +64,8 @@ import java.util.List;
  * "Report between the static data audit trail or a business error."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AuditTrailOrBusinessError1Choice", propOrder = {"auditTrail", "businessError"})
 public class AuditTrailOrBusinessError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class AuditTrailOrBusinessError1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AudtTrl", required = true)
 	public List<AuditTrail1> getAuditTrail() {
 		return auditTrail;
 	}
@@ -168,6 +175,7 @@ public class AuditTrailOrBusinessError1Choice {
 		this.auditTrail = auditTrail;
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling3> getBusinessError() {
 		return businessError;
 	}

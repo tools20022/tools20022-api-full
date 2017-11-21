@@ -28,6 +28,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instrument that has or represents monetary value and is used to process a
@@ -93,6 +97,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstrument8", propOrder = {"settlementCurrency", "cashAccountDetails", "paymentCardDetails", "directDebitDetails", "cheque", "bankersDraft"})
 public class PaymentInstrument8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -464,6 +470,7 @@ public class PaymentInstrument8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -472,6 +479,7 @@ public class PaymentInstrument8 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "CshAcctDtls", required = true)
 	public List<CashAccount4> getCashAccountDetails() {
 		return cashAccountDetails;
 	}
@@ -480,6 +488,7 @@ public class PaymentInstrument8 {
 		this.cashAccountDetails = cashAccountDetails;
 	}
 
+	@XmlElement(name = "PmtCardDtls", required = true)
 	public PaymentCard2 getPaymentCardDetails() {
 		return paymentCardDetails;
 	}
@@ -488,6 +497,7 @@ public class PaymentInstrument8 {
 		this.paymentCardDetails = paymentCardDetails;
 	}
 
+	@XmlElement(name = "DrctDbtDtls", required = true)
 	public DirectDebitMandate4 getDirectDebitDetails() {
 		return directDebitDetails;
 	}
@@ -496,6 +506,7 @@ public class PaymentInstrument8 {
 		this.directDebitDetails = directDebitDetails;
 	}
 
+	@XmlElement(name = "Chq", required = true)
 	public YesNoIndicator getCheque() {
 		return cheque;
 	}
@@ -504,6 +515,7 @@ public class PaymentInstrument8 {
 		this.cheque = cheque;
 	}
 
+	@XmlElement(name = "BkrsDrft", required = true)
 	public YesNoIndicator getBankersDraft() {
 		return bankersDraft;
 	}

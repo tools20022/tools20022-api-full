@@ -69,6 +69,11 @@ public class SystematicInternaliser extends SecuritiesTradePartyRole {
 				definition = "Firm which deals on its own account by executing client orders outside a regulated market or a multi-lateral trading facility, against its own books or against orders from other clients.";
 				superType_lazy = () -> SecuritiesTradePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SystematicInternaliser.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

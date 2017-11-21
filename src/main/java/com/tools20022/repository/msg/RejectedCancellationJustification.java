@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PaymentInvestigationCaseRejection;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the reason for rejecting a RequestToCancelPayment.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the reason for rejecting a RequestToCancelPayment."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RejectedCancellationJustification", propOrder = {"reasonCode", "reason"})
 public class RejectedCancellationJustification {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -171,6 +177,7 @@ public class RejectedCancellationJustification {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RsnCd", required = true)
 	public PaymentCancellationRejection1Code getReasonCode() {
 		return reasonCode;
 	}
@@ -179,6 +186,7 @@ public class RejectedCancellationJustification {
 		this.reasonCode = reasonCode;
 	}
 
+	@XmlElement(name = "Rsn")
 	public Max140Text getReason() {
 		return reason;
 	}

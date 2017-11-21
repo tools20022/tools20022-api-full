@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides references to the submitted data set both for the matching
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DataSetSubmissionReferences3", propOrder = {"transactionIdentification", "purchaseOrderReference", "submitterTransactionReference", "forcedMatch"})
 public class DataSetSubmissionReferences3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -282,6 +288,7 @@ public class DataSetSubmissionReferences3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -290,6 +297,7 @@ public class DataSetSubmissionReferences3 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "PurchsOrdrRef", required = true)
 	public DocumentIdentification7 getPurchaseOrderReference() {
 		return purchaseOrderReference;
 	}
@@ -298,6 +306,7 @@ public class DataSetSubmissionReferences3 {
 		this.purchaseOrderReference = purchaseOrderReference;
 	}
 
+	@XmlElement(name = "SubmitrTxRef")
 	public Max35Text getSubmitterTransactionReference() {
 		return submitterTransactionReference;
 	}
@@ -306,6 +315,7 @@ public class DataSetSubmissionReferences3 {
 		this.submitterTransactionReference = submitterTransactionReference;
 	}
 
+	@XmlElement(name = "ForcdMtch", required = true)
 	public YesNoIndicator getForcedMatch() {
 		return forcedMatch;
 	}

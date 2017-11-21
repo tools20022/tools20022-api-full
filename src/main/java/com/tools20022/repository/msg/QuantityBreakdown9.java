@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of breakdown of a quantity.
@@ -91,6 +95,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuantityBreakdown9", propOrder = {"lotNumber", "lotQuantity", "securitiesSubBalanceType", "lotDateTime", "lotPrice", "typeOfPrice"})
 public class QuantityBreakdown9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -410,6 +416,7 @@ public class QuantityBreakdown9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LotNb")
 	public Number2Choice getLotNumber() {
 		return lotNumber;
 	}
@@ -418,6 +425,7 @@ public class QuantityBreakdown9 {
 		this.lotNumber = lotNumber;
 	}
 
+	@XmlElement(name = "LotQty")
 	public FinancialInstrumentQuantity1Choice getLotQuantity() {
 		return lotQuantity;
 	}
@@ -426,6 +434,7 @@ public class QuantityBreakdown9 {
 		this.lotQuantity = lotQuantity;
 	}
 
+	@XmlElement(name = "SctiesSubBalTp")
 	public GenericIdentification19 getSecuritiesSubBalanceType() {
 		return securitiesSubBalanceType;
 	}
@@ -434,6 +443,7 @@ public class QuantityBreakdown9 {
 		this.securitiesSubBalanceType = securitiesSubBalanceType;
 	}
 
+	@XmlElement(name = "LotDtTm")
 	public DateAndDateTimeChoice getLotDateTime() {
 		return lotDateTime;
 	}
@@ -442,6 +452,7 @@ public class QuantityBreakdown9 {
 		this.lotDateTime = lotDateTime;
 	}
 
+	@XmlElement(name = "LotPric")
 	public Price2 getLotPrice() {
 		return lotPrice;
 	}
@@ -450,6 +461,7 @@ public class QuantityBreakdown9 {
 		this.lotPrice = lotPrice;
 	}
 
+	@XmlElement(name = "TpOfPric")
 	public TypeOfPrice3Choice getTypeOfPrice() {
 		return typeOfPrice;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SignedQuantityFormat4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of balance types to provide transaction details.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AdjustedBalanceTypeSD1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdjustedBalanceTypeSD3Choice", propOrder = {"stockLoan", "repo"})
 public class AdjustedBalanceTypeSD3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -182,6 +188,7 @@ public class AdjustedBalanceTypeSD3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StockLn", required = true)
 	public SignedQuantityFormat4 getStockLoan() {
 		return stockLoan;
 	}
@@ -190,6 +197,7 @@ public class AdjustedBalanceTypeSD3Choice {
 		this.stockLoan = stockLoan;
 	}
 
+	@XmlElement(name = "Repo", required = true)
 	public SignedQuantityFormat4 getRepo() {
 		return repo;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification information expressed as a country of fiscal domicile and a
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarketClaimDetailsSD1", propOrder = {"fiscalDomicile", "accountServicerIdentification", "accountOwnerIdentification", "taxRate", "cashCompensation", "dividendCorrection"})
 public class MarketClaimDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -368,6 +374,7 @@ public class MarketClaimDetailsSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FsclDmcl", required = true)
 	public CountryCode getFiscalDomicile() {
 		return fiscalDomicile;
 	}
@@ -376,6 +383,7 @@ public class MarketClaimDetailsSD1 {
 		this.fiscalDomicile = fiscalDomicile;
 	}
 
+	@XmlElement(name = "AcctSvcrId")
 	public Max35Text getAccountServicerIdentification() {
 		return accountServicerIdentification;
 	}
@@ -384,6 +392,7 @@ public class MarketClaimDetailsSD1 {
 		this.accountServicerIdentification = accountServicerIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnrId")
 	public Max35Text getAccountOwnerIdentification() {
 		return accountOwnerIdentification;
 	}
@@ -392,6 +401,7 @@ public class MarketClaimDetailsSD1 {
 		this.accountOwnerIdentification = accountOwnerIdentification;
 	}
 
+	@XmlElement(name = "TaxRate")
 	public PercentageRate getTaxRate() {
 		return taxRate;
 	}
@@ -400,6 +410,7 @@ public class MarketClaimDetailsSD1 {
 		this.taxRate = taxRate;
 	}
 
+	@XmlElement(name = "CshCompstn")
 	public FinancialInstrumentQuantity18Choice getCashCompensation() {
 		return cashCompensation;
 	}
@@ -408,6 +419,7 @@ public class MarketClaimDetailsSD1 {
 		this.cashCompensation = cashCompensation;
 	}
 
+	@XmlElement(name = "DvddCrrctn")
 	public FinancialInstrumentQuantity18Choice getDividendCorrection() {
 		return dividendCorrection;
 	}

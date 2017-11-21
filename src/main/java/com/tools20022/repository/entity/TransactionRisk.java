@@ -20,6 +20,7 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -35,18 +36,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Obligation#mmTransactionRisk
- * Obligation.mmTransactionRisk}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTransactionRisk
- * ExposureCalculation.mmTransactionRisk}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -59,6 +48,18 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.TransactionRisk#mmExposureCalculation
  * TransactionRisk.mmExposureCalculation}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmTransactionRisk
+ * Obligation.mmTransactionRisk}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTransactionRisk
+ * ExposureCalculation.mmTransactionRisk}</li>
  * </ul>
  * </li>
  * <li>
@@ -122,7 +123,7 @@ public class TransactionRisk {
 	 */
 	public static final MMBusinessAssociationEnd mmObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TransactionRisk.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TransactionRisk.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligation";
@@ -166,7 +167,7 @@ public class TransactionRisk {
 	 */
 	public static final MMBusinessAttribute mmExposedAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> TransactionRisk.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TransactionRisk.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExposedAmount";
@@ -174,6 +175,14 @@ public class TransactionRisk {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransactionRisk.class.getMethod("getExposedAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ExposureCalculation exposureCalculation;
@@ -215,7 +224,7 @@ public class TransactionRisk {
 	 */
 	public static final MMBusinessAssociationEnd mmExposureCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TransactionRisk.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TransactionRisk.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExposureCalculation";
@@ -236,7 +245,13 @@ public class TransactionRisk {
 				name = "TransactionRisk";
 				definition = "Calculation of the exposure amount that one party has vis-a-vis one counterparty or a central system, based on the transactions that are not yet settled.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Obligation.mmTransactionRisk, com.tools20022.repository.entity.ExposureCalculation.mmTransactionRisk);
-				element_lazy = () -> Arrays.asList(TransactionRisk.mmObligation, TransactionRisk.mmExposedAmount, TransactionRisk.mmExposureCalculation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransactionRisk.mmObligation, com.tools20022.repository.entity.TransactionRisk.mmExposedAmount,
+						com.tools20022.repository.entity.TransactionRisk.mmExposureCalculation);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TransactionRisk.class;
 			}
 		});
 		return mmObject_lazy.get();

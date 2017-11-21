@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a percentage price or an amount price or an amount price per
@@ -78,6 +82,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceFormat13Choice", propOrder = {"percentagePrice", "amountPrice", "amountPricePerFinancialInstrumentQuantity", "amountPricePerAmount"})
 public class PriceFormat13Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -296,6 +302,7 @@ public class PriceFormat13Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PctgPric", required = true)
 	public PercentagePrice1 getPercentagePrice() {
 		return percentagePrice;
 	}
@@ -304,6 +311,7 @@ public class PriceFormat13Choice {
 		this.percentagePrice = percentagePrice;
 	}
 
+	@XmlElement(name = "AmtPric", required = true)
 	public AmountPrice5 getAmountPrice() {
 		return amountPrice;
 	}
@@ -312,6 +320,7 @@ public class PriceFormat13Choice {
 		this.amountPrice = amountPrice;
 	}
 
+	@XmlElement(name = "AmtPricPerFinInstrmQty", required = true)
 	public AmountPricePerFinancialInstrumentQuantity4 getAmountPricePerFinancialInstrumentQuantity() {
 		return amountPricePerFinancialInstrumentQuantity;
 	}
@@ -320,6 +329,7 @@ public class PriceFormat13Choice {
 		this.amountPricePerFinancialInstrumentQuantity = amountPricePerFinancialInstrumentQuantity;
 	}
 
+	@XmlElement(name = "AmtPricPerAmt", required = true)
 	public AmountPricePerAmount3 getAmountPricePerAmount() {
 		return amountPricePerAmount;
 	}

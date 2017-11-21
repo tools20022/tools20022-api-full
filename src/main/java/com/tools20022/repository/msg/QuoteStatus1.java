@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.RejectionReason3Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the status of a quote and the rejection reason if required.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Identifies the status of a quote and the rejection reason if required."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuoteStatus1", propOrder = {"quoteStatus", "rejectionReason"})
 public class QuoteStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -157,6 +163,7 @@ public class QuoteStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QtSts", required = true)
 	public QuoteStatus1Code getQuoteStatus() {
 		return quoteStatus;
 	}
@@ -165,6 +172,7 @@ public class QuoteStatus1 {
 		this.quoteStatus = quoteStatus;
 	}
 
+	@XmlElement(name = "RjctnRsn")
 	public RejectionReason3Code getRejectionReason() {
 		return rejectionReason;
 	}

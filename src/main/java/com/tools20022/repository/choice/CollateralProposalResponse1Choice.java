@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.CollateralProposalResponse1;
 import com.tools20022.repository.msg.CollateralProposalResponseType1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the collateral proposal response for the variation margin and the
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralProposalResponse1Choice", propOrder = {"collateralProposalDetails", "segregatedIndependentAmount"})
 public class CollateralProposalResponse1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -213,6 +219,7 @@ public class CollateralProposalResponse1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CollPrpslDtls", required = true)
 	public CollateralProposalResponse1 getCollateralProposalDetails() {
 		return collateralProposalDetails;
 	}
@@ -221,6 +228,7 @@ public class CollateralProposalResponse1Choice {
 		this.collateralProposalDetails = collateralProposalDetails;
 	}
 
+	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
 	public CollateralProposalResponseType1 getSegregatedIndependentAmount() {
 		return segregatedIndependentAmount;
 	}

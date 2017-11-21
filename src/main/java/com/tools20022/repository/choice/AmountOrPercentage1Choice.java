@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.Percentage1;
 import com.tools20022.repository.msg.UndertakingAmount4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between an amount and percentage.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between an amount and percentage."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountOrPercentage1Choice", propOrder = {"definedAmount", "percentageAmount"})
 public class AmountOrPercentage1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -174,6 +180,7 @@ public class AmountOrPercentage1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DfndAmt", required = true)
 	public UndertakingAmount4 getDefinedAmount() {
 		return definedAmount;
 	}
@@ -182,6 +189,7 @@ public class AmountOrPercentage1Choice {
 		this.definedAmount = definedAmount;
 	}
 
+	@XmlElement(name = "PctgAmt", required = true)
 	public Percentage1 getPercentageAmount() {
 		return percentageAmount;
 	}

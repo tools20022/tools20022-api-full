@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.AmountPrice5;
 import com.tools20022.repository.msg.PercentagePrice1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a percentage price or an amount price.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between a percentage price or an amount price."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceFormat52Choice", propOrder = {"percentagePrice", "amountPrice"})
 public class PriceFormat52Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class PriceFormat52Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PctgPric", required = true)
 	public PercentagePrice1 getPercentagePrice() {
 		return percentagePrice;
 	}
@@ -183,6 +190,7 @@ public class PriceFormat52Choice {
 		this.percentagePrice = percentagePrice;
 	}
 
+	@XmlElement(name = "AmtPric", required = true)
 	public AmountPrice5 getAmountPrice() {
 		return amountPrice;
 	}

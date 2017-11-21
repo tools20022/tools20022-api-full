@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.Pagination;
 import com.tools20022.repository.msg.Statement48;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CorporateActionsISO15022VariantsISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.042.002.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestversionsubsetvariant
@@ -88,6 +87,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.042.002.06}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -99,6 +101,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionInstructionStatementReport002V06", propOrder = {"pagination", "statementGeneralDetails", "accountAndStatementDetails", "supplementaryData"})
 public class CorporateActionInstructionStatementReport002V06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -139,6 +143,14 @@ public class CorporateActionInstructionStatementReport002V06 {
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionInstructionStatementReport002V06.class.getMethod("getPagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Statement48 statementGeneralDetails;
 	/**
@@ -174,6 +186,14 @@ public class CorporateActionInstructionStatementReport002V06 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Statement48.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionInstructionStatementReport002V06.class.getMethod("getStatementGeneralDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<AccountIdentification41> accountAndStatementDetails;
@@ -212,6 +232,14 @@ public class CorporateActionInstructionStatementReport002V06 {
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification41.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionInstructionStatementReport002V06.class.getMethod("getAccountAndStatementDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -249,6 +277,14 @@ public class CorporateActionInstructionStatementReport002V06 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionInstructionStatementReport002V06.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -261,8 +297,10 @@ public class CorporateActionInstructionStatementReport002V06 {
 				rootElement = "Document";
 				xmlTag = "CorpActnInstrStmtRpt";
 				businessArea_lazy = () -> SecuritiesEventsLatestversionsubsetvariant.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionStatementReport002V06.mmPagination, CorporateActionInstructionStatementReport002V06.mmStatementGeneralDetails,
-						CorporateActionInstructionStatementReport002V06.mmAccountAndStatementDetails, CorporateActionInstructionStatementReport002V06.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.mmPagination,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.mmStatementGeneralDetails,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.mmAccountAndStatementDetails,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -272,10 +310,16 @@ public class CorporateActionInstructionStatementReport002V06 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionInstructionStatementReport002V06.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
@@ -284,6 +328,7 @@ public class CorporateActionInstructionStatementReport002V06 {
 		this.pagination = pagination;
 	}
 
+	@XmlElement(name = "StmtGnlDtls", required = true)
 	public Statement48 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
@@ -292,6 +337,7 @@ public class CorporateActionInstructionStatementReport002V06 {
 		this.statementGeneralDetails = statementGeneralDetails;
 	}
 
+	@XmlElement(name = "AcctAndStmtDtls", required = true)
 	public List<AccountIdentification41> getAccountAndStatementDetails() {
 		return accountAndStatementDetails;
 	}
@@ -300,11 +346,18 @@ public class CorporateActionInstructionStatementReport002V06 {
 		this.accountAndStatementDetails = accountAndStatementDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.042.06.06")
+	static public class Document {
+		@XmlElement(name = "CorpActnInstrStmtRpt", required = true)
+		public CorporateActionInstructionStatementReport002V06 messageBody;
 	}
 }

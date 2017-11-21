@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status report of the individual orders confirmation that was previously
@@ -98,6 +102,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * IndividualOrderConfirmationStatusAndReason1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualOrderConfirmationStatusAndReason2", propOrder = {"masterReference", "orderReference", "confirmation", "clientReference", "dealReference", "statusInitiator", "investmentAccountDetails",
+		"financialInstrumentDetails"})
 public class IndividualOrderConfirmationStatusAndReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -560,6 +567,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -568,6 +576,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -576,6 +585,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "Conf", required = true)
 	public ConfirmationStatus1Choice getConfirmation() {
 		return confirmation;
 	}
@@ -584,6 +594,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 		this.confirmation = confirmation;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -592,6 +603,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "DealRef")
 	public Max35Text getDealReference() {
 		return dealReference;
 	}
@@ -600,6 +612,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 		this.dealReference = dealReference;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification113 getStatusInitiator() {
 		return statusInitiator;
 	}
@@ -608,6 +621,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 		this.statusInitiator = statusInitiator;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount58 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -616,6 +630,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "FinInstrmDtls")
 	public FinancialInstrument57 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}

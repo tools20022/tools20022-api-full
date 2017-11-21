@@ -24,6 +24,10 @@ import com.tools20022.repository.codeset.DateType6Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the value of a date.
@@ -56,6 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the value of a date."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DateFormat12Choice", propOrder = {"date", "notSpecifiedDate"})
 public class DateFormat12Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -157,6 +163,7 @@ public class DateFormat12Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public DateAndDateTimeChoice getDate() {
 		return date;
 	}
@@ -165,6 +172,7 @@ public class DateFormat12Choice {
 		this.date = date;
 	}
 
+	@XmlElement(name = "NotSpcfdDt", required = true)
 	public DateType6Code getNotSpecifiedDate() {
 		return notSpecifiedDate;
 	}

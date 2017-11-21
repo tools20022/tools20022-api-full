@@ -25,9 +25,11 @@ import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -43,9 +45,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.001.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -93,6 +92,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.001.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -104,6 +106,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcknowledgementV03", propOrder = {"acknowledgementIdentification", "transactionIdentification", "establishedBaselineIdentification", "transactionStatus", "userTransactionReference", "acknowledgedMessageReference",
+		"requestForAction"})
 public class AcknowledgementV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -140,6 +145,14 @@ public class AcknowledgementV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcknowledgementV03.class.getMethod("getAcknowledgementIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -180,6 +193,14 @@ public class AcknowledgementV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcknowledgementV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
@@ -218,6 +239,14 @@ public class AcknowledgementV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcknowledgementV03.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionStatus4 transactionStatus;
 	/**
@@ -253,6 +282,14 @@ public class AcknowledgementV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcknowledgementV03.class.getMethod("getTransactionStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<DocumentIdentification5> userTransactionReference;
@@ -292,6 +329,14 @@ public class AcknowledgementV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcknowledgementV03.class.getMethod("getUserTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MessageIdentification1 acknowledgedMessageReference;
 	/**
@@ -328,6 +373,14 @@ public class AcknowledgementV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcknowledgementV03.class.getMethod("getAcknowledgedMessageReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PendingActivity2 requestForAction;
 	/**
@@ -363,6 +416,14 @@ public class AcknowledgementV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcknowledgementV03.class.getMethod("getRequestForAction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -375,8 +436,10 @@ public class AcknowledgementV03 {
 				rootElement = "Document";
 				xmlTag = "Ack";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AcknowledgementV03.mmAcknowledgementIdentification, AcknowledgementV03.mmTransactionIdentification, AcknowledgementV03.mmEstablishedBaselineIdentification,
-						AcknowledgementV03.mmTransactionStatus, AcknowledgementV03.mmUserTransactionReference, AcknowledgementV03.mmAcknowledgedMessageReference, AcknowledgementV03.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.mmAcknowledgementIdentification, com.tools20022.repository.area.tsmt.AcknowledgementV03.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.AcknowledgementV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.AcknowledgementV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.AcknowledgementV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.AcknowledgementV03.mmAcknowledgedMessageReference,
+						com.tools20022.repository.area.tsmt.AcknowledgementV03.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -386,10 +449,16 @@ public class AcknowledgementV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcknowledgementV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AckId", required = true)
 	public MessageIdentification1 getAcknowledgementIdentification() {
 		return acknowledgementIdentification;
 	}
@@ -398,6 +467,7 @@ public class AcknowledgementV03 {
 		this.acknowledgementIdentification = acknowledgementIdentification;
 	}
 
+	@XmlElement(name = "TxId")
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -406,6 +476,7 @@ public class AcknowledgementV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "EstblishdBaselnId")
 	public DocumentIdentification3 getEstablishedBaselineIdentification() {
 		return establishedBaselineIdentification;
 	}
@@ -414,6 +485,7 @@ public class AcknowledgementV03 {
 		this.establishedBaselineIdentification = establishedBaselineIdentification;
 	}
 
+	@XmlElement(name = "TxSts")
 	public TransactionStatus4 getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -422,6 +494,7 @@ public class AcknowledgementV03 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "UsrTxRef")
 	public List<DocumentIdentification5> getUserTransactionReference() {
 		return userTransactionReference;
 	}
@@ -430,6 +503,7 @@ public class AcknowledgementV03 {
 		this.userTransactionReference = userTransactionReference;
 	}
 
+	@XmlElement(name = "AckdMsgRef", required = true)
 	public MessageIdentification1 getAcknowledgedMessageReference() {
 		return acknowledgedMessageReference;
 	}
@@ -438,11 +512,18 @@ public class AcknowledgementV03 {
 		this.acknowledgedMessageReference = acknowledgedMessageReference;
 	}
 
+	@XmlElement(name = "ReqForActn")
 	public PendingActivity2 getRequestForAction() {
 		return requestForAction;
 	}
 
 	public void setRequestForAction(PendingActivity2 requestForAction) {
 		this.requestForAction = requestForAction;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.001.03.03")
+	static public class Document {
+		@XmlElement(name = "Ack", required = true)
+		public AcknowledgementV03 messageBody;
 	}
 }

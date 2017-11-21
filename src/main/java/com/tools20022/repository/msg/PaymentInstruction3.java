@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instruction to pay an amount of money to an ultimate beneficiary, on behalf
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstruction3", propOrder = {"requestedExecutionDateTime", "paymentType"})
 public class PaymentInstruction3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -211,6 +217,7 @@ public class PaymentInstruction3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqdExctnDtTm")
 	public ISODateTime getRequestedExecutionDateTime() {
 		return requestedExecutionDateTime;
 	}
@@ -219,6 +226,7 @@ public class PaymentInstruction3 {
 		this.requestedExecutionDateTime = requestedExecutionDateTime;
 	}
 
+	@XmlElement(name = "PmtTp")
 	public PaymentType3Choice getPaymentType() {
 		return paymentType;
 	}

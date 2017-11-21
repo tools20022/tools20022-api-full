@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instruction from an investor to sell investment fund units back to the fund.
@@ -146,6 +150,11 @@ import java.util.List;
  * {@linkplain com.tools20022.repository.msg.RedemptionOrder7 RedemptionOrder7}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RedemptionOrder15", propOrder = {"orderReference", "clientReference", "investmentAccountDetails", "orderType", "beneficiaryDetails", "amountOrUnitsOrPercentage", "rounding", "settlementAmount", "cashSettlementDate",
+		"settlementMethod", "foreignExchangeDetails", "incomePreference", "group1Or2Units", "transactionOverhead", "settlementAndCustodyDetails", "physicalDeliveryIndicator", "physicalDeliveryDetails", "cashSettlementDetails",
+		"nonStandardSettlementInformation", "staffClientBreakdown", "financialAdvice", "negotiatedTrade", "relatedPartyDetails", "equalisation", "customerConductClassification", "transactionChannelType", "signatureType",
+		"orderWaiverDetails"})
 public class RedemptionOrder15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1675,6 +1684,7 @@ public class RedemptionOrder15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -1683,6 +1693,7 @@ public class RedemptionOrder15 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -1691,6 +1702,7 @@ public class RedemptionOrder15 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount58 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -1699,6 +1711,7 @@ public class RedemptionOrder15 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "OrdrTp")
 	public List<FundOrderType4Choice> getOrderType() {
 		return orderType;
 	}
@@ -1707,6 +1720,7 @@ public class RedemptionOrder15 {
 		this.orderType = orderType;
 	}
 
+	@XmlElement(name = "BnfcryDtls")
 	public List<IndividualPerson32> getBeneficiaryDetails() {
 		return beneficiaryDetails;
 	}
@@ -1715,6 +1729,7 @@ public class RedemptionOrder15 {
 		this.beneficiaryDetails = beneficiaryDetails;
 	}
 
+	@XmlElement(name = "AmtOrUnitsOrPctg", required = true)
 	public FinancialInstrumentQuantity28Choice getAmountOrUnitsOrPercentage() {
 		return amountOrUnitsOrPercentage;
 	}
@@ -1723,6 +1738,7 @@ public class RedemptionOrder15 {
 		this.amountOrUnitsOrPercentage = amountOrUnitsOrPercentage;
 	}
 
+	@XmlElement(name = "Rndg")
 	public RoundingDirection2Code getRounding() {
 		return rounding;
 	}
@@ -1731,6 +1747,7 @@ public class RedemptionOrder15 {
 		this.rounding = rounding;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public ActiveCurrencyAndAmount getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -1739,6 +1756,7 @@ public class RedemptionOrder15 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "CshSttlmDt")
 	public ISODate getCashSettlementDate() {
 		return cashSettlementDate;
 	}
@@ -1747,6 +1765,7 @@ public class RedemptionOrder15 {
 		this.cashSettlementDate = cashSettlementDate;
 	}
 
+	@XmlElement(name = "SttlmMtd")
 	public DeliveryReceiptType2Code getSettlementMethod() {
 		return settlementMethod;
 	}
@@ -1755,6 +1774,7 @@ public class RedemptionOrder15 {
 		this.settlementMethod = settlementMethod;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public ForeignExchangeTerms32 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -1763,6 +1783,7 @@ public class RedemptionOrder15 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "IncmPref")
 	public IncomePreference1Code getIncomePreference() {
 		return incomePreference;
 	}
@@ -1771,6 +1792,7 @@ public class RedemptionOrder15 {
 		this.incomePreference = incomePreference;
 	}
 
+	@XmlElement(name = "Grp1Or2Units")
 	public UKTaxGroupUnit1Code getGroup1Or2Units() {
 		return group1Or2Units;
 	}
@@ -1779,6 +1801,7 @@ public class RedemptionOrder15 {
 		this.group1Or2Units = group1Or2Units;
 	}
 
+	@XmlElement(name = "TxOvrhd")
 	public FeeAndTax1 getTransactionOverhead() {
 		return transactionOverhead;
 	}
@@ -1787,6 +1810,7 @@ public class RedemptionOrder15 {
 		this.transactionOverhead = transactionOverhead;
 	}
 
+	@XmlElement(name = "SttlmAndCtdyDtls")
 	public FundSettlementParameters12 getSettlementAndCustodyDetails() {
 		return settlementAndCustodyDetails;
 	}
@@ -1795,6 +1819,7 @@ public class RedemptionOrder15 {
 		this.settlementAndCustodyDetails = settlementAndCustodyDetails;
 	}
 
+	@XmlElement(name = "PhysDlvryInd", required = true)
 	public YesNoIndicator getPhysicalDeliveryIndicator() {
 		return physicalDeliveryIndicator;
 	}
@@ -1803,6 +1828,7 @@ public class RedemptionOrder15 {
 		this.physicalDeliveryIndicator = physicalDeliveryIndicator;
 	}
 
+	@XmlElement(name = "PhysDlvryDtls")
 	public DeliveryParameters3 getPhysicalDeliveryDetails() {
 		return physicalDeliveryDetails;
 	}
@@ -1811,6 +1837,7 @@ public class RedemptionOrder15 {
 		this.physicalDeliveryDetails = physicalDeliveryDetails;
 	}
 
+	@XmlElement(name = "CshSttlmDtls")
 	public PaymentTransaction72 getCashSettlementDetails() {
 		return cashSettlementDetails;
 	}
@@ -1819,6 +1846,7 @@ public class RedemptionOrder15 {
 		this.cashSettlementDetails = cashSettlementDetails;
 	}
 
+	@XmlElement(name = "NonStdSttlmInf")
 	public Max350Text getNonStandardSettlementInformation() {
 		return nonStandardSettlementInformation;
 	}
@@ -1827,6 +1855,7 @@ public class RedemptionOrder15 {
 		this.nonStandardSettlementInformation = nonStandardSettlementInformation;
 	}
 
+	@XmlElement(name = "StffClntBrkdwn")
 	public List<InvestmentFundsOrderBreakdown2> getStaffClientBreakdown() {
 		return staffClientBreakdown;
 	}
@@ -1835,6 +1864,7 @@ public class RedemptionOrder15 {
 		this.staffClientBreakdown = staffClientBreakdown;
 	}
 
+	@XmlElement(name = "FinAdvc")
 	public FinancialAdvice1Code getFinancialAdvice() {
 		return financialAdvice;
 	}
@@ -1843,6 +1873,7 @@ public class RedemptionOrder15 {
 		this.financialAdvice = financialAdvice;
 	}
 
+	@XmlElement(name = "NgtdTrad")
 	public NegotiatedTrade1Code getNegotiatedTrade() {
 		return negotiatedTrade;
 	}
@@ -1851,6 +1882,7 @@ public class RedemptionOrder15 {
 		this.negotiatedTrade = negotiatedTrade;
 	}
 
+	@XmlElement(name = "RltdPtyDtls")
 	public List<Intermediary40> getRelatedPartyDetails() {
 		return relatedPartyDetails;
 	}
@@ -1859,6 +1891,7 @@ public class RedemptionOrder15 {
 		this.relatedPartyDetails = relatedPartyDetails;
 	}
 
+	@XmlElement(name = "Equlstn")
 	public Equalisation1 getEqualisation() {
 		return equalisation;
 	}
@@ -1867,6 +1900,7 @@ public class RedemptionOrder15 {
 		this.equalisation = equalisation;
 	}
 
+	@XmlElement(name = "CstmrCndctClssfctn")
 	public CustomerConductClassification1Choice getCustomerConductClassification() {
 		return customerConductClassification;
 	}
@@ -1875,6 +1909,7 @@ public class RedemptionOrder15 {
 		this.customerConductClassification = customerConductClassification;
 	}
 
+	@XmlElement(name = "TxChanlTp")
 	public TransactionChannelType1Choice getTransactionChannelType() {
 		return transactionChannelType;
 	}
@@ -1883,6 +1918,7 @@ public class RedemptionOrder15 {
 		this.transactionChannelType = transactionChannelType;
 	}
 
+	@XmlElement(name = "SgntrTp")
 	public SignatureType1Choice getSignatureType() {
 		return signatureType;
 	}
@@ -1891,6 +1927,7 @@ public class RedemptionOrder15 {
 		this.signatureType = signatureType;
 	}
 
+	@XmlElement(name = "OrdrWvrDtls")
 	public OrderWaiver1 getOrderWaiverDetails() {
 		return orderWaiverDetails;
 	}

@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Security that is a sub-set of an investment fund, and is governed by the same
@@ -92,6 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * FinancialInstrument45}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrument55", propOrder = {"identification", "name", "shortName", "supplementaryIdentification", "classType", "securitiesForm", "distributionPolicy", "productGroup"})
 public class FinancialInstrument55 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -551,6 +557,7 @@ public class FinancialInstrument55 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification25Choice getIdentification() {
 		return identification;
 	}
@@ -559,6 +566,7 @@ public class FinancialInstrument55 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max350Text getName() {
 		return name;
 	}
@@ -567,6 +575,7 @@ public class FinancialInstrument55 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "ShrtNm")
 	public Max35Text getShortName() {
 		return shortName;
 	}
@@ -575,6 +584,7 @@ public class FinancialInstrument55 {
 		this.shortName = shortName;
 	}
 
+	@XmlElement(name = "SplmtryId")
 	public Max35Text getSupplementaryIdentification() {
 		return supplementaryIdentification;
 	}
@@ -583,6 +593,7 @@ public class FinancialInstrument55 {
 		this.supplementaryIdentification = supplementaryIdentification;
 	}
 
+	@XmlElement(name = "ClssTp")
 	public Max35Text getClassType() {
 		return classType;
 	}
@@ -591,6 +602,7 @@ public class FinancialInstrument55 {
 		this.classType = classType;
 	}
 
+	@XmlElement(name = "SctiesForm")
 	public FormOfSecurity1Code getSecuritiesForm() {
 		return securitiesForm;
 	}
@@ -599,6 +611,7 @@ public class FinancialInstrument55 {
 		this.securitiesForm = securitiesForm;
 	}
 
+	@XmlElement(name = "DstrbtnPlcy")
 	public DistributionPolicy1Code getDistributionPolicy() {
 		return distributionPolicy;
 	}
@@ -607,6 +620,7 @@ public class FinancialInstrument55 {
 		this.distributionPolicy = distributionPolicy;
 	}
 
+	@XmlElement(name = "PdctGrp")
 	public Max140Text getProductGroup() {
 		return productGroup;
 	}

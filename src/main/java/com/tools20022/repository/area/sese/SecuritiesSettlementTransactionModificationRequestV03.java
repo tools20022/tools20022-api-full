@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.choice.UpdateType11Choice;
 import com.tools20022.repository.msg.TransactionDetails64;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -65,9 +67,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.038.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -96,6 +95,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.038.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -119,6 +121,8 @@ import java.util.List;
  * SecuritiesSettlementTransactionModificationRequestV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesSettlementTransactionModificationRequestV03", propOrder = {"modifiedTransactionDetails", "updateType"})
 public class SecuritiesSettlementTransactionModificationRequestV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -174,6 +178,14 @@ public class SecuritiesSettlementTransactionModificationRequestV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionDetails64.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionModificationRequestV03.class.getMethod("getModifiedTransactionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<UpdateType11Choice> updateType;
 	/**
@@ -224,6 +236,14 @@ public class SecuritiesSettlementTransactionModificationRequestV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> UpdateType11Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionModificationRequestV03.class.getMethod("getUpdateType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -238,7 +258,8 @@ public class SecuritiesSettlementTransactionModificationRequestV03 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxModReq";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionModificationRequestV03.mmModifiedTransactionDetails, SecuritiesSettlementTransactionModificationRequestV03.mmUpdateType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV03.mmModifiedTransactionDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV03.mmUpdateType);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -248,10 +269,16 @@ public class SecuritiesSettlementTransactionModificationRequestV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesSettlementTransactionModificationRequestV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ModfdTxDtls", required = true)
 	public TransactionDetails64 getModifiedTransactionDetails() {
 		return modifiedTransactionDetails;
 	}
@@ -260,11 +287,18 @@ public class SecuritiesSettlementTransactionModificationRequestV03 {
 		this.modifiedTransactionDetails = modifiedTransactionDetails;
 	}
 
+	@XmlElement(name = "UpdTp", required = true)
 	public List<UpdateType11Choice> getUpdateType() {
 		return updateType;
 	}
 
 	public void setUpdateType(List<UpdateType11Choice> updateType) {
 		this.updateType = updateType;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.038.03.03")
+	static public class Document {
+		@XmlElement(name = "SctiesSttlmTxModReq", required = true)
+		public SecuritiesSettlementTransactionModificationRequestV03 messageBody;
 	}
 }

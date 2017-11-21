@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CorporateActionStatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extension to corporate action event cancellation status and reason.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Extension to corporate action event cancellation status and reason."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionCancellation2SD1", propOrder = {"placeAndName", "localLanguageCancellationReason"})
 public class CorporateActionCancellation2SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class CorporateActionCancellation2SD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -183,6 +190,7 @@ public class CorporateActionCancellation2SD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "LclLangCxlRsn", required = true)
 	public Max450Text getLocalLanguageCancellationReason() {
 		return localLanguageCancellationReason;
 	}

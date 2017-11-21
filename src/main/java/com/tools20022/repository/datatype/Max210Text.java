@@ -54,6 +54,8 @@ public class Max210Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max210Text";
 				definition = "Specifies a character string with a maximum length of 210 characters.";
+				minLength = 1;
+				maxLength = 210;
 			}
 		});
 		return mmObject_lazy.get();

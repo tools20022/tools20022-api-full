@@ -25,9 +25,11 @@ import com.tools20022.repository.area.TradeServicesInitiationLatestVersion;
 import com.tools20022.repository.msg.InvoiceRequestInformation1;
 import com.tools20022.repository.msg.RequestGroupInformation1;
 import com.tools20022.repository.msgset.InvoiceFinancingRequestISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -70,9 +72,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsin.001.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
@@ -102,6 +101,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsin.001.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -113,6 +115,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvoiceFinancingRequestV01", propOrder = {"requestGroupInformation", "invoiceRequestInformation"})
 public class InvoiceFinancingRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -154,6 +158,14 @@ public class InvoiceFinancingRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> RequestGroupInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceFinancingRequestV01.class.getMethod("getRequestGroupInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<InvoiceRequestInformation1> invoiceRequestInformation;
 	/**
@@ -193,6 +205,14 @@ public class InvoiceFinancingRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> InvoiceRequestInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceFinancingRequestV01.class.getMethod("getInvoiceRequestInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -205,7 +225,8 @@ public class InvoiceFinancingRequestV01 {
 				rootElement = "Document";
 				xmlTag = "InvcFincgReq";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceFinancingRequestV01.mmRequestGroupInformation, InvoiceFinancingRequestV01.mmInvoiceRequestInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01.mmRequestGroupInformation,
+						com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01.mmInvoiceRequestInformation);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsin";
@@ -215,10 +236,16 @@ public class InvoiceFinancingRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvoiceFinancingRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqGrpInf", required = true)
 	public RequestGroupInformation1 getRequestGroupInformation() {
 		return requestGroupInformation;
 	}
@@ -227,11 +254,18 @@ public class InvoiceFinancingRequestV01 {
 		this.requestGroupInformation = requestGroupInformation;
 	}
 
+	@XmlElement(name = "InvcReqInf", required = true)
 	public List<InvoiceRequestInformation1> getInvoiceRequestInformation() {
 		return invoiceRequestInformation;
 	}
 
 	public void setInvoiceRequestInformation(List<InvoiceRequestInformation1> invoiceRequestInformation) {
 		this.invoiceRequestInformation = invoiceRequestInformation;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.001.01.01")
+	static public class Document {
+		@XmlElement(name = "InvcFincgReq", required = true)
+		public InvoiceFinancingRequestV01 messageBody;
 	}
 }

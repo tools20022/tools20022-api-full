@@ -29,44 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType7Code
- * AssetClassProductType7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType4Code
- * AssetClassProductType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType9Code
- * AssetClassProductType9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType8Code
- * AssetClassProductType8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType3Code
- * AssetClassProductType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType1Code
- * AssetClassProductType1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductType11Code
- * AssetClassProductType11Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType5Code
- * AssetClassProductType5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType2Code
- * AssetClassProductType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType6Code
- * AssetClassProductType6Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductType13Code
- * AssetClassProductType13Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductType12Code
- * AssetClassProductType12Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductType14Code
- * AssetClassProductType14Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductType15Code
- * AssetClassProductType15Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -111,6 +73,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#mmOther
  * AssetClassProductTypeCode.mmOther}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType7Code
+ * AssetClassProductType7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType4Code
+ * AssetClassProductType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType9Code
+ * AssetClassProductType9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType8Code
+ * AssetClassProductType8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType3Code
+ * AssetClassProductType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType1Code
+ * AssetClassProductType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductType11Code
+ * AssetClassProductType11Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType5Code
+ * AssetClassProductType5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType2Code
+ * AssetClassProductType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssetClassProductType6Code
+ * AssetClassProductType6Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductType13Code
+ * AssetClassProductType13Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductType12Code
+ * AssetClassProductType12Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductType14Code
+ * AssetClassProductType14Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductType15Code
+ * AssetClassProductType15Code}</li>
  * </ul>
  * </li>
  * <li>

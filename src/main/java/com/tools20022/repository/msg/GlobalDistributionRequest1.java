@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the global distribution.
@@ -96,6 +100,8 @@ import java.util.List;
  * definition} = "Provides information about the global distribution."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GlobalDistributionRequest1", propOrder = {"preadviceIndicator", "optionNumber", "optionType", "recordDate", "paymentDate", "securitiesMovement", "cashMovement"})
 public class GlobalDistributionRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -447,6 +453,7 @@ public class GlobalDistributionRequest1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PradvcInd", required = true)
 	public YesNoIndicator getPreadviceIndicator() {
 		return preadviceIndicator;
 	}
@@ -455,6 +462,7 @@ public class GlobalDistributionRequest1 {
 		this.preadviceIndicator = preadviceIndicator;
 	}
 
+	@XmlElement(name = "OptnNb", required = true)
 	public Exact3NumericText getOptionNumber() {
 		return optionNumber;
 	}
@@ -463,6 +471,7 @@ public class GlobalDistributionRequest1 {
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption1FormatChoice getOptionType() {
 		return optionType;
 	}
@@ -471,6 +480,7 @@ public class GlobalDistributionRequest1 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "RcrdDt", required = true)
 	public DateFormat4Choice getRecordDate() {
 		return recordDate;
 	}
@@ -479,6 +489,7 @@ public class GlobalDistributionRequest1 {
 		this.recordDate = recordDate;
 	}
 
+	@XmlElement(name = "PmtDt", required = true)
 	public DateFormat4Choice getPaymentDate() {
 		return paymentDate;
 	}
@@ -487,6 +498,7 @@ public class GlobalDistributionRequest1 {
 		this.paymentDate = paymentDate;
 	}
 
+	@XmlElement(name = "SctiesMvmnt")
 	public List<SecurityMovement1> getSecuritiesMovement() {
 		return securitiesMovement;
 	}
@@ -495,6 +507,7 @@ public class GlobalDistributionRequest1 {
 		this.securitiesMovement = securitiesMovement;
 	}
 
+	@XmlElement(name = "CshMvmnt")
 	public List<CashMovement1> getCashMovement() {
 		return cashMovement;
 	}

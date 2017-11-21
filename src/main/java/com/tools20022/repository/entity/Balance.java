@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.ProcessingTypeCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,44 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmType
+ * Balance.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmValueDate
+ * Balance.mmValueDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Balance#mmCreditDebitIndicator
+ * Balance.mmCreditDebitIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmAssetHolding
+ * Balance.mmAssetHolding}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmCalculationDate
+ * Balance.mmCalculationDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmAdjustment
+ * Balance.mmAdjustment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmAccount
+ * Balance.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmInterest
+ * Balance.mmInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmBalanceEntry
+ * Balance.mmBalanceEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Balance#mmProcessingRestriction
+ * Balance.mmProcessingRestriction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Balance#mmOpeningClosingCode
+ * Balance.mmOpeningClosingCode}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesBalance
+ * SecuritiesBalance}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -99,44 +138,6 @@ import java.util.List;
  * PortfolioBalance1.mmDetailedBalance}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesBalance
- * SecuritiesBalance}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmType
- * Balance.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmValueDate
- * Balance.mmValueDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Balance#mmCreditDebitIndicator
- * Balance.mmCreditDebitIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmAssetHolding
- * Balance.mmAssetHolding}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmCalculationDate
- * Balance.mmCalculationDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmAdjustment
- * Balance.mmAdjustment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmAccount
- * Balance.mmAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmInterest
- * Balance.mmInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmBalanceEntry
- * Balance.mmBalanceEntry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Balance#mmProcessingRestriction
- * Balance.mmProcessingRestriction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Balance#mmOpeningClosingCode
- * Balance.mmOpeningClosingCode}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -168,10 +169,6 @@ public class Balance {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode
 	 * BalanceTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Balance
-	 * Balance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -572,6 +569,10 @@ public class Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Balance
+	 * Balance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -613,7 +614,7 @@ public class Balance {
 					SettlementDetails122.mmCashSubBalanceType, SettlementDetails134.mmSecuritiesSubBalanceType, SettlementDetails134.mmCashSubBalanceType, SettlementDetails137.mmSecuritiesSubBalanceType,
 					SettlementDetails137.mmCashSubBalanceType, SettlementDetails132.mmSecuritiesSubBalanceType, SettlementDetails132.mmCashSubBalanceType, SettlementDetails138.mmSecuritiesSubBalanceType,
 					SettlementDetails138.mmCashSubBalanceType);
-			elementContext_lazy = () -> Balance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -621,6 +622,14 @@ public class Balance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BalanceTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Balance.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime valueDate;
@@ -633,10 +642,6 @@ public class Balance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Balance
-	 * Balance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -697,6 +702,10 @@ public class Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Balance
+	 * Balance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -714,7 +723,7 @@ public class Balance {
 					CashBalanceDetails3.mmValueDate, CashBalanceDetails4.mmValueDate, CashBalanceDetails5.mmValueDate, CashBalanceDetails6.mmValueDate, CashBalanceDetails7.mmValueDate, CashBalance5.mmValueDate, CashBalance6.mmValueDate,
 					CashBalance1.mmDate, CashBalance3.mmDate, CashBalance2.mmDate, ReportData1.mmValueDate, ReportData5.mmValueDate, ReportData2.mmValueDate, ReportData3.mmValueDate, ReportData4.mmValueDate,
 					FinancialInstrumentAggregateBalance1.mmItemDate, CashBalance7.mmDate);
-			elementContext_lazy = () -> Balance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
@@ -722,6 +731,14 @@ public class Balance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Balance.class.getMethod("getValueDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DebitCreditCode creditDebitIndicator;
@@ -736,10 +753,6 @@ public class Balance {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DebitCreditCode
 	 * DebitCreditCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Balance
-	 * Balance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -812,6 +825,10 @@ public class Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Balance
+	 * Balance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -831,7 +848,7 @@ public class Balance {
 					CashBalance1.mmCreditDebitIndicator, CashBalanceAvailability2.mmCreditDebitIndicator, CashBalance3.mmCreditDebitIndicator, CashBalance2.mmCreditDebitIndicator, CashAccount19.mmCreditDebitIndicator,
 					SecuritiesAccount9.mmCreditDebitIndicator, SecuritiesAccount12.mmCreditDebitIndicator, CashAccount18.mmCreditDebitIndicator, SecuritiesAccount8.mmCreditDebitIndicator, SecuritiesAccount10.mmCreditDebitIndicator,
 					ContractBalance1.mmCreditDebitIndicator, CashBalance7.mmCreditDebitIndicator, CashAvailability1.mmCreditDebitIndicator);
-			elementContext_lazy = () -> Balance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
@@ -839,6 +856,14 @@ public class Balance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Balance.class.getMethod("getCreditDebitIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.AssetHolding> assetHolding;
@@ -859,10 +884,6 @@ public class Balance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.AssetHolding
 	 * AssetHolding}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Balance
-	 * Balance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1284,6 +1305,10 @@ public class Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Balance
+	 * Balance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1342,7 +1367,7 @@ public class Balance {
 					AggregateBalanceInformation32.mmInstrumentCurrencyAmounts, AggregateBalanceInformation32.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation33.mmAccountBaseCurrencyAmounts,
 					AggregateBalanceInformation33.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace31.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace31.mmInstrumentCurrencyAmounts,
 					AggregateBalancePerSafekeepingPlace30.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace30.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace30.mmAlternateReportingCurrencyAmounts);
-			elementContext_lazy = () -> Balance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssetHolding";
@@ -1363,10 +1388,6 @@ public class Balance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Balance
-	 * Balance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1393,6 +1414,10 @@ public class Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Balance
+	 * Balance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1408,7 +1433,7 @@ public class Balance {
 		{
 			derivation_lazy = () -> Arrays.asList(ReportData1.mmDateAndTimeStamp, ReportData5.mmDateAndTimeStamp, ReportData2.mmDateAndTimeStamp, ReportData3.mmDateAndTimeStamp, ReportData4.mmDateAndTimeStamp,
 					AggregateBalanceInformation20.mmBalanceDate, CardAccount2.mmBalanceDate);
-			elementContext_lazy = () -> Balance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationDate";
@@ -1416,6 +1441,14 @@ public class Balance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Balance.class.getMethod("getCalculationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Adjustment> adjustment;
@@ -1436,10 +1469,6 @@ public class Balance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Adjustment
 	 * Adjustment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Balance
-	 * Balance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1448,6 +1477,10 @@ public class Balance {
 	 * BalanceAdjustment1.mmEarningsAdjustmentAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Balance
+	 * Balance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1462,7 +1495,7 @@ public class Balance {
 	public static final MMBusinessAssociationEnd mmAdjustment = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BalanceAdjustment1.mmEarningsAdjustmentAmount);
-			elementContext_lazy = () -> Balance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Adjustment";
@@ -1508,7 +1541,7 @@ public class Balance {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Balance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
@@ -1557,7 +1590,7 @@ public class Balance {
 	 */
 	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Balance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
@@ -1601,7 +1634,7 @@ public class Balance {
 	 */
 	public static final MMBusinessAssociationEnd mmBalanceEntry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Balance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BalanceEntry";
@@ -1643,7 +1676,7 @@ public class Balance {
 	 */
 	public static final MMBusinessAttribute mmProcessingRestriction = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Balance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProcessingRestriction";
@@ -1651,6 +1684,14 @@ public class Balance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProcessingTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Balance.class.getMethod("getProcessingRestriction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OpeningClosingCode openingClosingCode;
@@ -1664,10 +1705,6 @@ public class Balance {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OpeningClosingCode
 	 * OpeningClosingCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Balance
-	 * Balance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1698,6 +1735,10 @@ public class Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Balance
+	 * Balance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1713,7 +1754,7 @@ public class Balance {
 		{
 			derivation_lazy = () -> Arrays.asList(OpeningClosing1Choice.mmCode, OpeningClosing1Choice.mmProprietary, OpeningClosing2Choice.mmCode, OpeningClosing2Choice.mmProprietary, OpeningClosing3Choice.mmCode,
 					OpeningClosing3Choice.mmProprietary, OpeningClosing4Choice.mmCode, OpeningClosing4Choice.mmProprietary);
-			elementContext_lazy = () -> Balance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OpeningClosingCode";
@@ -1721,6 +1762,14 @@ public class Balance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OpeningClosingCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Balance.class.getMethod("getOpeningClosingCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1735,10 +1784,17 @@ public class Balance {
 						com.tools20022.repository.entity.AssetHolding.mmBalance, com.tools20022.repository.entity.Interest.mmAccountBalance);
 				derivationElement_lazy = () -> Arrays.asList(BalanceDetails5.mmDetailedBalance, PortfolioBalance1.mmSummaryBalance, PortfolioBalance1.mmDetailedBalance);
 				subType_lazy = () -> Arrays.asList(CashBalance.mmObject(), SecuritiesBalance.mmObject());
-				element_lazy = () -> Arrays.asList(Balance.mmType, Balance.mmValueDate, Balance.mmCreditDebitIndicator, Balance.mmAssetHolding, Balance.mmCalculationDate, Balance.mmAdjustment, Balance.mmAccount, Balance.mmInterest,
-						Balance.mmBalanceEntry, Balance.mmProcessingRestriction, Balance.mmOpeningClosingCode);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Balance.mmType, com.tools20022.repository.entity.Balance.mmValueDate, com.tools20022.repository.entity.Balance.mmCreditDebitIndicator,
+						com.tools20022.repository.entity.Balance.mmAssetHolding, com.tools20022.repository.entity.Balance.mmCalculationDate, com.tools20022.repository.entity.Balance.mmAdjustment,
+						com.tools20022.repository.entity.Balance.mmAccount, com.tools20022.repository.entity.Balance.mmInterest, com.tools20022.repository.entity.Balance.mmBalanceEntry,
+						com.tools20022.repository.entity.Balance.mmProcessingRestriction, com.tools20022.repository.entity.Balance.mmOpeningClosingCode);
 				derivationComponent_lazy = () -> Arrays.asList(BalanceType9Choice.mmObject(), BalanceType1Choice.mmObject(), BalanceType6Choice.mmObject(), BalanceType7Choice.mmObject(), BalanceDetails6.mmObject(),
 						BalanceDetails5.mmObject(), PortfolioBalance1.mmObject(), CashBalanceType1Choice.mmObject(), CashSubBalanceTypeAndQuantityBreakdown1.mmObject(), ContractBalanceType1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Balance.class;
 			}
 		});
 		return mmObject_lazy.get();

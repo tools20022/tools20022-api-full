@@ -29,15 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCounterType1Code
- * ATMCounterType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCounterType2Code
- * ATMCounterType2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -58,6 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ATMCounterTypeCode#mmOperation
  * ATMCounterTypeCode.mmOperation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCounterType1Code
+ * ATMCounterType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCounterType2Code
+ * ATMCounterType2Code}</li>
  * </ul>
  * </li>
  * <li>

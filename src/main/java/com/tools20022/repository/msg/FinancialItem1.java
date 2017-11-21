@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies information about a financing relation between two parties
@@ -94,6 +98,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialItem1", propOrder = {"itemContext", "financialDocumentReference", "creditDebitIndicator", "totalAmount", "dueAmount", "instalmentInformation", "additionalInformation", "associatedDocument",
+		"validationStatusInformation", "financingStatus", "proprietaryDetails"})
 public class FinancialItem1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -612,6 +619,7 @@ public class FinancialItem1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ItmCntxt", required = true)
 	public FinancialItemParameters1 getItemContext() {
 		return itemContext;
 	}
@@ -620,6 +628,7 @@ public class FinancialItem1 {
 		this.itemContext = itemContext;
 	}
 
+	@XmlElement(name = "FinDocRef")
 	public List<QualifiedDocumentInformation1> getFinancialDocumentReference() {
 		return financialDocumentReference;
 	}
@@ -628,6 +637,7 @@ public class FinancialItem1 {
 		this.financialDocumentReference = financialDocumentReference;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -636,6 +646,7 @@ public class FinancialItem1 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "TtlAmt", required = true)
 	public InvoiceTotals1 getTotalAmount() {
 		return totalAmount;
 	}
@@ -644,6 +655,7 @@ public class FinancialItem1 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "DueAmt")
 	public ActiveCurrencyAndAmount getDueAmount() {
 		return dueAmount;
 	}
@@ -652,6 +664,7 @@ public class FinancialItem1 {
 		this.dueAmount = dueAmount;
 	}
 
+	@XmlElement(name = "InstlmtInf")
 	public List<Instalment2> getInstalmentInformation() {
 		return instalmentInformation;
 	}
@@ -660,6 +673,7 @@ public class FinancialItem1 {
 		this.instalmentInformation = instalmentInformation;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max2000Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -668,6 +682,7 @@ public class FinancialItem1 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "AssoctdDoc")
 	public List<QualifiedDocumentInformation1> getAssociatedDocument() {
 		return associatedDocument;
 	}
@@ -676,6 +691,7 @@ public class FinancialItem1 {
 		this.associatedDocument = associatedDocument;
 	}
 
+	@XmlElement(name = "VldtnStsInf")
 	public ValidationStatusInformation1 getValidationStatusInformation() {
 		return validationStatusInformation;
 	}
@@ -684,6 +700,7 @@ public class FinancialItem1 {
 		this.validationStatusInformation = validationStatusInformation;
 	}
 
+	@XmlElement(name = "FincgSts")
 	public FinancingInformationAndStatus1 getFinancingStatus() {
 		return financingStatus;
 	}
@@ -692,6 +709,7 @@ public class FinancialItem1 {
 		this.financingStatus = financingStatus;
 	}
 
+	@XmlElement(name = "PrtryDtls")
 	public SupplementaryData1 getProprietaryDetails() {
 		return proprietaryDetails;
 	}

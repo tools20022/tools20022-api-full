@@ -34,6 +34,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Customer account information.
@@ -100,6 +104,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardAccount9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardAccount10", propOrder = {"accountSequenceNumber", "selectionMethod", "selectedAccountType", "accountName", "accountOwner", "currency", "accountIdentifier", "creditReference", "servicer", "balance",
+		"balanceDisplayFlag", "defaultAccountIndicator", "limits"})
 public class CardAccount10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -758,6 +765,7 @@ public class CardAccount10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctSeqNb")
 	public Number getAccountSequenceNumber() {
 		return accountSequenceNumber;
 	}
@@ -766,6 +774,7 @@ public class CardAccount10 {
 		this.accountSequenceNumber = accountSequenceNumber;
 	}
 
+	@XmlElement(name = "SelctnMtd")
 	public AccountChoiceMethod1Code getSelectionMethod() {
 		return selectionMethod;
 	}
@@ -774,6 +783,7 @@ public class CardAccount10 {
 		this.selectionMethod = selectionMethod;
 	}
 
+	@XmlElement(name = "SelctdAcctTp")
 	public CardAccountType3Code getSelectedAccountType() {
 		return selectedAccountType;
 	}
@@ -782,6 +792,7 @@ public class CardAccount10 {
 		this.selectedAccountType = selectedAccountType;
 	}
 
+	@XmlElement(name = "AcctNm")
 	public Max70Text getAccountName() {
 		return accountName;
 	}
@@ -790,6 +801,7 @@ public class CardAccount10 {
 		this.accountName = accountName;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public NameAndAddress3 getAccountOwner() {
 		return accountOwner;
 	}
@@ -798,6 +810,7 @@ public class CardAccount10 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -806,6 +819,7 @@ public class CardAccount10 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "AcctIdr")
 	public AccountIdentification31Choice getAccountIdentifier() {
 		return accountIdentifier;
 	}
@@ -814,6 +828,7 @@ public class CardAccount10 {
 		this.accountIdentifier = accountIdentifier;
 	}
 
+	@XmlElement(name = "CdtRef")
 	public Max35Text getCreditReference() {
 		return creditReference;
 	}
@@ -822,6 +837,7 @@ public class CardAccount10 {
 		this.creditReference = creditReference;
 	}
 
+	@XmlElement(name = "Svcr")
 	public PartyIdentification72Choice getServicer() {
 		return servicer;
 	}
@@ -830,6 +846,7 @@ public class CardAccount10 {
 		this.servicer = servicer;
 	}
 
+	@XmlElement(name = "Bal")
 	public AmountAndDirection43 getBalance() {
 		return balance;
 	}
@@ -838,6 +855,7 @@ public class CardAccount10 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "BalDispFlg")
 	public TrueFalseIndicator getBalanceDisplayFlag() {
 		return balanceDisplayFlag;
 	}
@@ -846,6 +864,7 @@ public class CardAccount10 {
 		this.balanceDisplayFlag = balanceDisplayFlag;
 	}
 
+	@XmlElement(name = "DfltAcctInd")
 	public TrueFalseIndicator getDefaultAccountIndicator() {
 		return defaultAccountIndicator;
 	}
@@ -854,6 +873,7 @@ public class CardAccount10 {
 		this.defaultAccountIndicator = defaultAccountIndicator;
 	}
 
+	@XmlElement(name = "Lmts")
 	public ATMTransactionAmounts8 getLimits() {
 		return limits;
 	}

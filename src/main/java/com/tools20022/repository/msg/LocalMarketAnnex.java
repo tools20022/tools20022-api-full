@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Processing information specific to a local market.
@@ -64,6 +68,8 @@ import java.util.List;
  * definition} = "Processing information specific to a local market."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LocalMarketAnnex", propOrder = {"country", "localOrderDesk"})
 public class LocalMarketAnnex {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class LocalMarketAnnex {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public List<CountryCode> getCountry() {
 		return country;
 	}
@@ -184,6 +191,7 @@ public class LocalMarketAnnex {
 		this.country = country;
 	}
 
+	@XmlElement(name = "LclOrdrDsk", required = true)
 	public OrderDeskContactDetails getLocalOrderDesk() {
 		return localOrderDesk;
 	}

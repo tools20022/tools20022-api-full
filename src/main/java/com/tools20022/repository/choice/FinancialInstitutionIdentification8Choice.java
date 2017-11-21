@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.FinancialInstitutionIdentification10;
 import com.tools20022.repository.msg.NameAndAddress5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for the identification of the financial institution.
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * FinancialInstitutionIdentification7Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstitutionIdentification8Choice", propOrder = {"nameAndAddress", "BICFI", "clearingSystemMemberIdentification", "proprietaryIdentification"})
 public class FinancialInstitutionIdentification8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -333,6 +339,7 @@ public class FinancialInstitutionIdentification8Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress5 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -341,6 +348,7 @@ public class FinancialInstitutionIdentification8Choice {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "BICFI", required = true)
 	public BICFIIdentifier getBICFI() {
 		return bICFI;
 	}
@@ -349,6 +357,7 @@ public class FinancialInstitutionIdentification8Choice {
 		this.bICFI = bICFI;
 	}
 
+	@XmlElement(name = "ClrSysMmbId", required = true)
 	public ClearingSystemMemberIdentificationChoice getClearingSystemMemberIdentification() {
 		return clearingSystemMemberIdentification;
 	}
@@ -357,6 +366,7 @@ public class FinancialInstitutionIdentification8Choice {
 		this.clearingSystemMemberIdentification = clearingSystemMemberIdentification;
 	}
 
+	@XmlElement(name = "PrtryId", required = true)
 	public Max35Text getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}

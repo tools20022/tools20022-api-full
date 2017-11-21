@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to a linked transaction.
@@ -72,6 +76,8 @@ import java.util.function.Supplier;
  * definition} = "Information related to a linked transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Linkages4", propOrder = {"processingPosition", "messageNumber", "reference", "linkedQuantity"})
 public class Linkages4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -280,6 +286,7 @@ public class Linkages4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcgPos")
 	public ProcessingPosition3Choice getProcessingPosition() {
 		return processingPosition;
 	}
@@ -288,6 +295,7 @@ public class Linkages4 {
 		this.processingPosition = processingPosition;
 	}
 
+	@XmlElement(name = "MsgNb")
 	public DocumentNumber2Choice getMessageNumber() {
 		return messageNumber;
 	}
@@ -296,6 +304,7 @@ public class Linkages4 {
 		this.messageNumber = messageNumber;
 	}
 
+	@XmlElement(name = "Ref", required = true)
 	public References12Choice getReference() {
 		return reference;
 	}
@@ -304,6 +313,7 @@ public class Linkages4 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "LkdQty")
 	public PairedOrTurnedQuantity2Choice getLinkedQuantity() {
 		return linkedQuantity;
 	}

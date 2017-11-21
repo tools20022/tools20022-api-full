@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Acceptor configuration to be downloaded from the terminal management system.
@@ -84,6 +88,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorConfiguration1", propOrder = {"POIIdentification", "terminalManagerIdentification", "dataSet"})
 public class AcceptorConfiguration1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -254,6 +260,7 @@ public class AcceptorConfiguration1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "POIId")
 	public GenericIdentification35 getPOIIdentification() {
 		return pOIIdentification;
 	}
@@ -262,6 +269,7 @@ public class AcceptorConfiguration1 {
 		this.pOIIdentification = pOIIdentification;
 	}
 
+	@XmlElement(name = "TermnlMgrId", required = true)
 	public GenericIdentification35 getTerminalManagerIdentification() {
 		return terminalManagerIdentification;
 	}
@@ -270,6 +278,7 @@ public class AcceptorConfiguration1 {
 		this.terminalManagerIdentification = terminalManagerIdentification;
 	}
 
+	@XmlElement(name = "DataSet", required = true)
 	public List<TerminalManagementDataSet3> getDataSet() {
 		return dataSet;
 	}

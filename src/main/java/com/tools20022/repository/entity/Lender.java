@@ -38,6 +38,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
+ * TradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -52,9 +55,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SyndicatedLoan1.mmLender}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
- * TradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -85,6 +85,11 @@ public class Lender extends TradePartyRole {
 				definition = "Party that has accepted under specific requirements to provide a monetary or securities loan to a borrower.";
 				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties3.mmLender, ConfirmationParties4.mmLender, ConfirmationParties2.mmLender, SyndicatedLoan1.mmLender);
 				superType_lazy = () -> TradePartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Lender.class;
 			}
 		});
 		return mmObject_lazy.get();

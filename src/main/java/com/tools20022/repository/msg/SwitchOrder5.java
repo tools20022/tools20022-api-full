@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extract of trade data for a switch order.
@@ -63,6 +67,8 @@ import java.util.List;
  * definition} = "Extract of trade data for a switch order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwitchOrder5", propOrder = {"investmentAccountDetails", "redemptionLeg", "subscriptionLeg"})
 public class SwitchOrder5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class SwitchOrder5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount30 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -236,6 +243,7 @@ public class SwitchOrder5 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "RedLeg", required = true)
 	public List<SwitchRedemptionLegOrder4> getRedemptionLeg() {
 		return redemptionLeg;
 	}
@@ -244,6 +252,7 @@ public class SwitchOrder5 {
 		this.redemptionLeg = redemptionLeg;
 	}
 
+	@XmlElement(name = "SbcptLeg", required = true)
 	public List<SwitchSubscriptionLegOrder4> getSubscriptionLeg() {
 		return subscriptionLeg;
 	}

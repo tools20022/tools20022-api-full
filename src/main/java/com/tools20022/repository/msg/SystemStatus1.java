@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SystemStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status of a system and the period of time during which the status is valid.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemStatus1", propOrder = {"status", "validityTime"})
 public class SystemStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -199,6 +205,7 @@ public class SystemStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public SystemStatus1Choice getStatus() {
 		return status;
 	}
@@ -207,6 +214,7 @@ public class SystemStatus1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "VldtyTm")
 	public DateTimePeriodChoice getValidityTime() {
 		return validityTime;
 	}

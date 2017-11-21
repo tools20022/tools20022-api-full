@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a person, or a non-financial institution.
@@ -71,6 +75,8 @@ import java.util.List;
  * definition} = "Identification of a person, or a non-financial institution."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification24", propOrder = {"name", "postalAddress", "taxIdentification", "proprietaryIdentification"})
 public class PartyIdentification24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -282,6 +288,7 @@ public class PartyIdentification24 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max70Text getName() {
 		return name;
 	}
@@ -290,6 +297,7 @@ public class PartyIdentification24 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PstlAdr")
 	public PostalAddress1 getPostalAddress() {
 		return postalAddress;
 	}
@@ -298,6 +306,7 @@ public class PartyIdentification24 {
 		this.postalAddress = postalAddress;
 	}
 
+	@XmlElement(name = "TaxId")
 	public TaxIdentification1 getTaxIdentification() {
 		return taxIdentification;
 	}
@@ -306,6 +315,7 @@ public class PartyIdentification24 {
 		this.taxIdentification = taxIdentification;
 	}
 
+	@XmlElement(name = "PrtyId")
 	public List<GenericIdentification4> getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}

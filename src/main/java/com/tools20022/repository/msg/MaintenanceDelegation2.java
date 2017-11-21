@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information on the delegation of a maintenance action or maintenance
@@ -98,6 +102,9 @@ import java.util.List;
  * MaintenanceDelegation1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MaintenanceDelegation2", propOrder = {"maintenanceService", "response", "responseReason", "POISubset", "parametersSubsetIdentification", "parametersSubsetDefinition", "delegationProof", "protectedDelegationProof",
+		"POIIdentificationAssociation"})
 public class MaintenanceDelegation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -616,6 +623,7 @@ public class MaintenanceDelegation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MntncSvc", required = true)
 	public List<DataSetCategory6Code> getMaintenanceService() {
 		return maintenanceService;
 	}
@@ -624,6 +632,7 @@ public class MaintenanceDelegation2 {
 		this.maintenanceService = maintenanceService;
 	}
 
+	@XmlElement(name = "Rspn", required = true)
 	public Response2Code getResponse() {
 		return response;
 	}
@@ -632,6 +641,7 @@ public class MaintenanceDelegation2 {
 		this.response = response;
 	}
 
+	@XmlElement(name = "RspnRsn")
 	public Max35Text getResponseReason() {
 		return responseReason;
 	}
@@ -640,6 +650,7 @@ public class MaintenanceDelegation2 {
 		this.responseReason = responseReason;
 	}
 
+	@XmlElement(name = "POISubset")
 	public List<Max35Text> getPOISubset() {
 		return pOISubset;
 	}
@@ -648,6 +659,7 @@ public class MaintenanceDelegation2 {
 		this.pOISubset = pOISubset;
 	}
 
+	@XmlElement(name = "ParamsSubsetId")
 	public Max35Text getParametersSubsetIdentification() {
 		return parametersSubsetIdentification;
 	}
@@ -656,6 +668,7 @@ public class MaintenanceDelegation2 {
 		this.parametersSubsetIdentification = parametersSubsetIdentification;
 	}
 
+	@XmlElement(name = "ParamsSubsetDef")
 	public Max3000Binary getParametersSubsetDefinition() {
 		return parametersSubsetDefinition;
 	}
@@ -664,6 +677,7 @@ public class MaintenanceDelegation2 {
 		this.parametersSubsetDefinition = parametersSubsetDefinition;
 	}
 
+	@XmlElement(name = "DlgtnProof")
 	public Max5000Binary getDelegationProof() {
 		return delegationProof;
 	}
@@ -672,6 +686,7 @@ public class MaintenanceDelegation2 {
 		this.delegationProof = delegationProof;
 	}
 
+	@XmlElement(name = "PrtctdDlgtnProof")
 	public ContentInformationType12 getProtectedDelegationProof() {
 		return protectedDelegationProof;
 	}
@@ -680,6 +695,7 @@ public class MaintenanceDelegation2 {
 		this.protectedDelegationProof = protectedDelegationProof;
 	}
 
+	@XmlElement(name = "POIIdAssoctn")
 	public List<MaintenanceIdentificationAssociation1> getPOIIdentificationAssociation() {
 		return pOIIdentificationAssociation;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Contains the requested modifications.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Contains the requested modifications."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionModification1", propOrder = {"instructionReference", "newPaymentValueSet"})
 public class TransactionModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class TransactionModification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrRef", required = true)
 	public PaymentIdentification3Choice getInstructionReference() {
 		return instructionReference;
 	}
@@ -185,6 +192,7 @@ public class TransactionModification1 {
 		this.instructionReference = instructionReference;
 	}
 
+	@XmlElement(name = "NewPmtValSet", required = true)
 	public PaymentDetails4 getNewPaymentValueSet() {
 		return newPaymentValueSet;
 	}

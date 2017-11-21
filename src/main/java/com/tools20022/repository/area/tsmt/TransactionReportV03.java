@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.TransactionReportItems3;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -44,9 +46,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.041.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -82,6 +81,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.041.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -93,6 +95,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionReportV03", propOrder = {"reportIdentification", "relatedMessageReference", "reportedItems"})
 public class TransactionReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -130,6 +134,14 @@ public class TransactionReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransactionReportV03.class.getMethod("getReportIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MessageIdentification1 relatedMessageReference;
 	/**
@@ -164,6 +176,14 @@ public class TransactionReportV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransactionReportV03.class.getMethod("getRelatedMessageReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<TransactionReportItems3> reportedItems;
@@ -202,6 +222,14 @@ public class TransactionReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> TransactionReportItems3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransactionReportV03.class.getMethod("getReportedItems", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -214,7 +242,8 @@ public class TransactionReportV03 {
 				rootElement = "Document";
 				xmlTag = "TxRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(TransactionReportV03.mmReportIdentification, TransactionReportV03.mmRelatedMessageReference, TransactionReportV03.mmReportedItems);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.TransactionReportV03.mmReportIdentification, com.tools20022.repository.area.tsmt.TransactionReportV03.mmRelatedMessageReference,
+						com.tools20022.repository.area.tsmt.TransactionReportV03.mmReportedItems);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -224,10 +253,16 @@ public class TransactionReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TransactionReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptId", required = true)
 	public MessageIdentification1 getReportIdentification() {
 		return reportIdentification;
 	}
@@ -236,6 +271,7 @@ public class TransactionReportV03 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "RltdMsgRef", required = true)
 	public MessageIdentification1 getRelatedMessageReference() {
 		return relatedMessageReference;
 	}
@@ -244,11 +280,18 @@ public class TransactionReportV03 {
 		this.relatedMessageReference = relatedMessageReference;
 	}
 
+	@XmlElement(name = "RptdItms")
 	public List<TransactionReportItems3> getReportedItems() {
 		return reportedItems;
 	}
 
 	public void setReportedItems(List<TransactionReportItems3> reportedItems) {
 		this.reportedItems = reportedItems;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.041.03.03")
+	static public class Document {
+		@XmlElement(name = "TxRpt", required = true)
+		public TransactionReportV03 messageBody;
 	}
 }

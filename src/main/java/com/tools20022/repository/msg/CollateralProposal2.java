@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CollateralProposal;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the proposal for the variation margin and optionaly
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralProposal2", propOrder = {"variationMargin", "segregatedIndependentAmount"})
 public class CollateralProposal2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class CollateralProposal2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "VartnMrgn", required = true)
 	public CollateralMovement1 getVariationMargin() {
 		return variationMargin;
 	}
@@ -188,6 +195,7 @@ public class CollateralProposal2 {
 		this.variationMargin = variationMargin;
 	}
 
+	@XmlElement(name = "SgrtdIndpdntAmt")
 	public CollateralMovement1 getSegregatedIndependentAmount() {
 		return segregatedIndependentAmount;
 	}

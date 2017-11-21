@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the participant and their operational status.
@@ -68,6 +72,8 @@ import java.util.List;
  * "Provides details on the participant and their operational status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ParticipantAndStatus1", propOrder = {"participantIdentification", "participantContactDetails", "serviceAvailability"})
 public class ParticipantAndStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -231,6 +237,7 @@ public class ParticipantAndStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtcptId", required = true)
 	public FinancialInstitutionIdentification13 getParticipantIdentification() {
 		return participantIdentification;
 	}
@@ -239,6 +246,7 @@ public class ParticipantAndStatus1 {
 		this.participantIdentification = participantIdentification;
 	}
 
+	@XmlElement(name = "PtcptCtctDtls")
 	public ContactDetails2 getParticipantContactDetails() {
 		return participantContactDetails;
 	}
@@ -247,6 +255,7 @@ public class ParticipantAndStatus1 {
 		this.participantContactDetails = participantContactDetails;
 	}
 
+	@XmlElement(name = "SvcAvlbty", required = true)
 	public List<ServiceAvailability1> getServiceAvailability() {
 		return serviceAvailability;
 	}

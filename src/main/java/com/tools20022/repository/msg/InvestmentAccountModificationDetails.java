@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provide information about the reason for the modification and about the
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccountModificationDetails", propOrder = {"modificationReason", "accountApplicationIdentification"})
 public class InvestmentAccountModificationDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -209,6 +215,7 @@ public class InvestmentAccountModificationDetails {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ModRsn")
 	public Max350Text getModificationReason() {
 		return modificationReason;
 	}
@@ -217,6 +224,7 @@ public class InvestmentAccountModificationDetails {
 		this.modificationReason = modificationReason;
 	}
 
+	@XmlElement(name = "AcctApplId")
 	public Max35Text getAccountApplicationIdentification() {
 		return accountApplicationIdentification;
 	}

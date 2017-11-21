@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.GenericIdentification144;
 import com.tools20022.repository.msg.QuantityAndAvailability2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for the balance information.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between formats for the balance information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubBalanceQuantity7Choice", propOrder = {"quantity", "proprietary", "quantityAndAvailability"})
 public class SubBalanceQuantity7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class SubBalanceQuantity7Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity15Choice getQuantity() {
 		return quantity;
 	}
@@ -238,6 +245,7 @@ public class SubBalanceQuantity7Choice {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification144 getProprietary() {
 		return proprietary;
 	}
@@ -246,6 +254,7 @@ public class SubBalanceQuantity7Choice {
 		this.proprietary = proprietary;
 	}
 
+	@XmlElement(name = "QtyAndAvlbty", required = true)
 	public QuantityAndAvailability2 getQuantityAndAvailability() {
 		return quantityAndAvailability;
 	}

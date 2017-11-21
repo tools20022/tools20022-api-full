@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Sensible data associated with the payment card performing the transaction.
@@ -86,6 +90,8 @@ import java.util.List;
  * PlainCardData1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PlainCardData4", propOrder = {"PAN", "cardSequenceNumber", "effectiveDate", "expiryDate", "serviceCode", "trackData", "cardSecurityCode"})
 public class PlainCardData4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -532,6 +538,7 @@ public class PlainCardData4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PAN", required = true)
 	public Min8Max28NumericText getPAN() {
 		return pAN;
 	}
@@ -540,6 +547,7 @@ public class PlainCardData4 {
 		this.pAN = pAN;
 	}
 
+	@XmlElement(name = "CardSeqNb")
 	public Min2Max3NumericText getCardSequenceNumber() {
 		return cardSequenceNumber;
 	}
@@ -548,6 +556,7 @@ public class PlainCardData4 {
 		this.cardSequenceNumber = cardSequenceNumber;
 	}
 
+	@XmlElement(name = "FctvDt")
 	public Max10Text getEffectiveDate() {
 		return effectiveDate;
 	}
@@ -556,6 +565,7 @@ public class PlainCardData4 {
 		this.effectiveDate = effectiveDate;
 	}
 
+	@XmlElement(name = "XpryDt", required = true)
 	public Max10Text getExpiryDate() {
 		return expiryDate;
 	}
@@ -564,6 +574,7 @@ public class PlainCardData4 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "SvcCd")
 	public Exact3NumericText getServiceCode() {
 		return serviceCode;
 	}
@@ -572,6 +583,7 @@ public class PlainCardData4 {
 		this.serviceCode = serviceCode;
 	}
 
+	@XmlElement(name = "TrckData")
 	public List<TrackData1> getTrackData() {
 		return trackData;
 	}
@@ -580,6 +592,7 @@ public class PlainCardData4 {
 		this.trackData = trackData;
 	}
 
+	@XmlElement(name = "CardSctyCd")
 	public CardSecurityInformation1 getCardSecurityCode() {
 		return cardSecurityCode;
 	}

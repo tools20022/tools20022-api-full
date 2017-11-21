@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,6 +37,30 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmHostIPAddress
+ * NetworkAccess.mmHostIPAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmHostPortNumber
+ * NetworkAccess.mmHostPortNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.NetworkAccess#mmUserName
+ * NetworkAccess.mmUserName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.NetworkAccess#mmAccessCode
+ * NetworkAccess.mmAccessCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmClientCertificate
+ * NetworkAccess.mmClientCertificate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmTerminalManagementSystem
+ * NetworkAccess.mmTerminalManagementSystem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmNetworkAddress
+ * NetworkAccess.mmNetworkAddress}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -62,30 +87,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmNetworkAccess
  * TerminalManagementSystem.mmNetworkAccess}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmHostIPAddress
- * NetworkAccess.mmHostIPAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmHostPortNumber
- * NetworkAccess.mmHostPortNumber}</li>
- * <li>{@linkplain com.tools20022.repository.entity.NetworkAccess#mmUserName
- * NetworkAccess.mmUserName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.NetworkAccess#mmAccessCode
- * NetworkAccess.mmAccessCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmClientCertificate
- * NetworkAccess.mmClientCertificate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmTerminalManagementSystem
- * NetworkAccess.mmTerminalManagementSystem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmNetworkAddress
- * NetworkAccess.mmNetworkAddress}</li>
  * </ul>
  * </li>
  * <li>
@@ -116,11 +117,6 @@ public class NetworkAccess {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess NetworkAccess}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -131,6 +127,11 @@ public class NetworkAccess {
 	 * {@linkplain com.tools20022.repository.msg.NetworkParameters1#mmSecondaryAddress
 	 * NetworkParameters1.mmSecondaryAddress}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess NetworkAccess}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -146,7 +147,7 @@ public class NetworkAccess {
 	public static final MMBusinessAttribute mmHostIPAddress = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetworkParameters1.mmPrimaryAddress, NetworkParameters1.mmSecondaryAddress);
-			elementContext_lazy = () -> NetworkAccess.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HostIPAddress";
@@ -154,6 +155,14 @@ public class NetworkAccess {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetworkAccess.class.getMethod("getHostIPAddress", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number hostPortNumber;
@@ -166,11 +175,6 @@ public class NetworkAccess {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess NetworkAccess}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -181,6 +185,11 @@ public class NetworkAccess {
 	 * {@linkplain com.tools20022.repository.msg.NetworkParameters1#mmSecondaryPortNumber
 	 * NetworkParameters1.mmSecondaryPortNumber}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess NetworkAccess}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -196,7 +205,7 @@ public class NetworkAccess {
 	public static final MMBusinessAttribute mmHostPortNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetworkParameters1.mmPrimaryPortNumber, NetworkParameters1.mmSecondaryPortNumber);
-			elementContext_lazy = () -> NetworkAccess.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HostPortNumber";
@@ -204,6 +213,14 @@ public class NetworkAccess {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetworkAccess.class.getMethod("getHostPortNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text userName;
@@ -216,11 +233,6 @@ public class NetworkAccess {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess NetworkAccess}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -236,6 +248,11 @@ public class NetworkAccess {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess NetworkAccess}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -249,7 +266,7 @@ public class NetworkAccess {
 	public static final MMBusinessAttribute mmUserName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetworkParameters1.mmUserName, NetworkParameters3.mmUserName, NetworkParameters5.mmUserName);
-			elementContext_lazy = () -> NetworkAccess.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UserName";
@@ -257,6 +274,14 @@ public class NetworkAccess {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetworkAccess.class.getMethod("getUserName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text accessCode;
@@ -269,11 +294,6 @@ public class NetworkAccess {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess NetworkAccess}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -292,6 +312,11 @@ public class NetworkAccess {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess NetworkAccess}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -305,7 +330,7 @@ public class NetworkAccess {
 	public static final MMBusinessAttribute mmAccessCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetworkParameters1.mmAccessCode, NetworkParameters3.mmAccessCode, NetworkParameters5.mmAccessCode, NetworkParameters6.mmAccess);
-			elementContext_lazy = () -> NetworkAccess.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccessCode";
@@ -313,6 +338,14 @@ public class NetworkAccess {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetworkAccess.class.getMethod("getAccessCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.SecurityCertificate> clientCertificate;
@@ -333,11 +366,6 @@ public class NetworkAccess {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecurityCertificate
 	 * SecurityCertificate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess NetworkAccess}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -345,6 +373,11 @@ public class NetworkAccess {
 	 * {@linkplain com.tools20022.repository.msg.NetworkParameters1#mmClientCertificate
 	 * NetworkParameters1.mmClientCertificate}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess NetworkAccess}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -360,7 +393,7 @@ public class NetworkAccess {
 	public static final MMBusinessAssociationEnd mmClientCertificate = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetworkParameters1.mmClientCertificate);
-			elementContext_lazy = () -> NetworkAccess.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClientCertificate";
@@ -408,7 +441,7 @@ public class NetworkAccess {
 	 */
 	public static final MMBusinessAssociationEnd mmTerminalManagementSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> NetworkAccess.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminalManagementSystem";
@@ -430,11 +463,6 @@ public class NetworkAccess {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max1025Text
 	 * Max1025Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess NetworkAccess}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -442,6 +470,11 @@ public class NetworkAccess {
 	 * {@linkplain com.tools20022.repository.msg.NetworkParameters2#mmAddress
 	 * NetworkParameters2.mmAddress}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess NetworkAccess}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -458,7 +491,7 @@ public class NetworkAccess {
 	public static final MMBusinessAttribute mmNetworkAddress = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetworkParameters2.mmAddress);
-			elementContext_lazy = () -> NetworkAccess.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetworkAddress";
@@ -466,6 +499,14 @@ public class NetworkAccess {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max1025Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetworkAccess.class.getMethod("getNetworkAddress", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -477,9 +518,15 @@ public class NetworkAccess {
 				name = "NetworkAccess";
 				definition = "Parameters used to access a network.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecurityCertificate.mmNetworkAccess, com.tools20022.repository.entity.TerminalManagementSystem.mmNetworkAccess);
-				element_lazy = () -> Arrays.asList(NetworkAccess.mmHostIPAddress, NetworkAccess.mmHostPortNumber, NetworkAccess.mmUserName, NetworkAccess.mmAccessCode, NetworkAccess.mmClientCertificate,
-						NetworkAccess.mmTerminalManagementSystem, NetworkAccess.mmNetworkAddress);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.NetworkAccess.mmHostIPAddress, com.tools20022.repository.entity.NetworkAccess.mmHostPortNumber, com.tools20022.repository.entity.NetworkAccess.mmUserName,
+						com.tools20022.repository.entity.NetworkAccess.mmAccessCode, com.tools20022.repository.entity.NetworkAccess.mmClientCertificate, com.tools20022.repository.entity.NetworkAccess.mmTerminalManagementSystem,
+						com.tools20022.repository.entity.NetworkAccess.mmNetworkAddress);
 				derivationComponent_lazy = () -> Arrays.asList(NetworkParameters1.mmObject(), NetworkParameters2.mmObject(), NetworkParameters3.mmObject(), NetworkParameters5.mmObject(), NetworkParameters6.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return NetworkAccess.class;
 			}
 		});
 		return mmObject_lazy.get();

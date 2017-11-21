@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to report on the payment.
@@ -123,6 +127,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the criteria used to report on the payment."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentReturnCriteria3", propOrder = {"messageIdentificationIndicator", "requestedExecutionDateIndicator", "instructionIndicator", "instructionStatusReturnCriteria", "instructedAmountIndicator", "creditDebitIndicator",
+		"interbankSettlementAmountIndicator", "priorityIndicator", "processingValidityTimeIndicator", "purposeIndicator", "instructionCopyIndicator", "paymentMessageTypeIndicator", "paymentTypeIndicator",
+		"transactionIdentificationIndicator", "interbankSettlementDateIndicator", "endToEndIdentificationIndicator", "paymentMethodIndicator", "debtorIndicator", "debtorAgentIndicator", "instructingReimbursementAgentIndicator",
+		"instructedReimbursementAgentIndicator", "intermediaryIndicator", "creditorAgentIndicator", "creditorIndicator"})
 public class PaymentReturnCriteria3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1184,6 +1193,7 @@ public class PaymentReturnCriteria3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgIdInd")
 	public RequestedIndicator getMessageIdentificationIndicator() {
 		return messageIdentificationIndicator;
 	}
@@ -1192,6 +1202,7 @@ public class PaymentReturnCriteria3 {
 		this.messageIdentificationIndicator = messageIdentificationIndicator;
 	}
 
+	@XmlElement(name = "ReqdExctnDtInd")
 	public RequestedIndicator getRequestedExecutionDateIndicator() {
 		return requestedExecutionDateIndicator;
 	}
@@ -1200,6 +1211,7 @@ public class PaymentReturnCriteria3 {
 		this.requestedExecutionDateIndicator = requestedExecutionDateIndicator;
 	}
 
+	@XmlElement(name = "InstrInd")
 	public RequestedIndicator getInstructionIndicator() {
 		return instructionIndicator;
 	}
@@ -1208,6 +1220,7 @@ public class PaymentReturnCriteria3 {
 		this.instructionIndicator = instructionIndicator;
 	}
 
+	@XmlElement(name = "InstrStsRtrCrit")
 	public InstructionStatusReturnCriteria getInstructionStatusReturnCriteria() {
 		return instructionStatusReturnCriteria;
 	}
@@ -1216,6 +1229,7 @@ public class PaymentReturnCriteria3 {
 		this.instructionStatusReturnCriteria = instructionStatusReturnCriteria;
 	}
 
+	@XmlElement(name = "InstdAmtInd")
 	public RequestedIndicator getInstructedAmountIndicator() {
 		return instructedAmountIndicator;
 	}
@@ -1224,6 +1238,7 @@ public class PaymentReturnCriteria3 {
 		this.instructedAmountIndicator = instructedAmountIndicator;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public RequestedIndicator getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -1232,6 +1247,7 @@ public class PaymentReturnCriteria3 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmtInd")
 	public RequestedIndicator getInterbankSettlementAmountIndicator() {
 		return interbankSettlementAmountIndicator;
 	}
@@ -1240,6 +1256,7 @@ public class PaymentReturnCriteria3 {
 		this.interbankSettlementAmountIndicator = interbankSettlementAmountIndicator;
 	}
 
+	@XmlElement(name = "PrtyInd")
 	public RequestedIndicator getPriorityIndicator() {
 		return priorityIndicator;
 	}
@@ -1248,6 +1265,7 @@ public class PaymentReturnCriteria3 {
 		this.priorityIndicator = priorityIndicator;
 	}
 
+	@XmlElement(name = "PrcgVldtyTmInd")
 	public RequestedIndicator getProcessingValidityTimeIndicator() {
 		return processingValidityTimeIndicator;
 	}
@@ -1256,6 +1274,7 @@ public class PaymentReturnCriteria3 {
 		this.processingValidityTimeIndicator = processingValidityTimeIndicator;
 	}
 
+	@XmlElement(name = "PurpInd")
 	public RequestedIndicator getPurposeIndicator() {
 		return purposeIndicator;
 	}
@@ -1264,6 +1283,7 @@ public class PaymentReturnCriteria3 {
 		this.purposeIndicator = purposeIndicator;
 	}
 
+	@XmlElement(name = "InstrCpyInd")
 	public RequestedIndicator getInstructionCopyIndicator() {
 		return instructionCopyIndicator;
 	}
@@ -1272,6 +1292,7 @@ public class PaymentReturnCriteria3 {
 		this.instructionCopyIndicator = instructionCopyIndicator;
 	}
 
+	@XmlElement(name = "PmtMTInd")
 	public RequestedIndicator getPaymentMessageTypeIndicator() {
 		return paymentMessageTypeIndicator;
 	}
@@ -1280,6 +1301,7 @@ public class PaymentReturnCriteria3 {
 		this.paymentMessageTypeIndicator = paymentMessageTypeIndicator;
 	}
 
+	@XmlElement(name = "PmtTpInd")
 	public RequestedIndicator getPaymentTypeIndicator() {
 		return paymentTypeIndicator;
 	}
@@ -1288,6 +1310,7 @@ public class PaymentReturnCriteria3 {
 		this.paymentTypeIndicator = paymentTypeIndicator;
 	}
 
+	@XmlElement(name = "TxIdInd")
 	public RequestedIndicator getTransactionIdentificationIndicator() {
 		return transactionIdentificationIndicator;
 	}
@@ -1296,6 +1319,7 @@ public class PaymentReturnCriteria3 {
 		this.transactionIdentificationIndicator = transactionIdentificationIndicator;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDtInd")
 	public RequestedIndicator getInterbankSettlementDateIndicator() {
 		return interbankSettlementDateIndicator;
 	}
@@ -1304,6 +1328,7 @@ public class PaymentReturnCriteria3 {
 		this.interbankSettlementDateIndicator = interbankSettlementDateIndicator;
 	}
 
+	@XmlElement(name = "EndToEndIdInd")
 	public RequestedIndicator getEndToEndIdentificationIndicator() {
 		return endToEndIdentificationIndicator;
 	}
@@ -1312,6 +1337,7 @@ public class PaymentReturnCriteria3 {
 		this.endToEndIdentificationIndicator = endToEndIdentificationIndicator;
 	}
 
+	@XmlElement(name = "PmtMtdInd")
 	public RequestedIndicator getPaymentMethodIndicator() {
 		return paymentMethodIndicator;
 	}
@@ -1320,6 +1346,7 @@ public class PaymentReturnCriteria3 {
 		this.paymentMethodIndicator = paymentMethodIndicator;
 	}
 
+	@XmlElement(name = "DbtrInd")
 	public RequestedIndicator getDebtorIndicator() {
 		return debtorIndicator;
 	}
@@ -1328,6 +1355,7 @@ public class PaymentReturnCriteria3 {
 		this.debtorIndicator = debtorIndicator;
 	}
 
+	@XmlElement(name = "DbtrAgtInd")
 	public RequestedIndicator getDebtorAgentIndicator() {
 		return debtorAgentIndicator;
 	}
@@ -1336,6 +1364,7 @@ public class PaymentReturnCriteria3 {
 		this.debtorAgentIndicator = debtorAgentIndicator;
 	}
 
+	@XmlElement(name = "InstgRmbrsmntAgtInd")
 	public RequestedIndicator getInstructingReimbursementAgentIndicator() {
 		return instructingReimbursementAgentIndicator;
 	}
@@ -1344,6 +1373,7 @@ public class PaymentReturnCriteria3 {
 		this.instructingReimbursementAgentIndicator = instructingReimbursementAgentIndicator;
 	}
 
+	@XmlElement(name = "InstdRmbrsmntAgtInd")
 	public RequestedIndicator getInstructedReimbursementAgentIndicator() {
 		return instructedReimbursementAgentIndicator;
 	}
@@ -1352,6 +1382,7 @@ public class PaymentReturnCriteria3 {
 		this.instructedReimbursementAgentIndicator = instructedReimbursementAgentIndicator;
 	}
 
+	@XmlElement(name = "IntrmyInd")
 	public RequestedIndicator getIntermediaryIndicator() {
 		return intermediaryIndicator;
 	}
@@ -1360,6 +1391,7 @@ public class PaymentReturnCriteria3 {
 		this.intermediaryIndicator = intermediaryIndicator;
 	}
 
+	@XmlElement(name = "CdtrAgtInd")
 	public RequestedIndicator getCreditorAgentIndicator() {
 		return creditorAgentIndicator;
 	}
@@ -1368,6 +1400,7 @@ public class PaymentReturnCriteria3 {
 		this.creditorAgentIndicator = creditorAgentIndicator;
 	}
 
+	@XmlElement(name = "CdtrInd")
 	public RequestedIndicator getCreditorIndicator() {
 		return creditorIndicator;
 	}

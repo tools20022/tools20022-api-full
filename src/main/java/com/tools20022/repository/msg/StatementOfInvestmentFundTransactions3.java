@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a statement of investment fund transactions.
@@ -87,6 +91,8 @@ import java.util.List;
  * StatementOfInvestmentFundTransactions2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatementOfInvestmentFundTransactions3", propOrder = {"statementGeneralDetails", "investmentAccountDetails", "transactionOnAccount", "subAccountDetails", "extension"})
 public class StatementOfInvestmentFundTransactions3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -370,6 +376,7 @@ public class StatementOfInvestmentFundTransactions3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtGnlDtls")
 	public Statement8 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
@@ -378,6 +385,7 @@ public class StatementOfInvestmentFundTransactions3 {
 		this.statementGeneralDetails = statementGeneralDetails;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount43 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -386,6 +394,7 @@ public class StatementOfInvestmentFundTransactions3 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "TxOnAcct")
 	public List<InvestmentFundTransactionsByFund3> getTransactionOnAccount() {
 		return transactionOnAccount;
 	}
@@ -394,6 +403,7 @@ public class StatementOfInvestmentFundTransactions3 {
 		this.transactionOnAccount = transactionOnAccount;
 	}
 
+	@XmlElement(name = "SubAcctDtls")
 	public List<SubAccountIdentification36> getSubAccountDetails() {
 		return subAccountDetails;
 	}
@@ -402,6 +412,7 @@ public class StatementOfInvestmentFundTransactions3 {
 		this.subAccountDetails = subAccountDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

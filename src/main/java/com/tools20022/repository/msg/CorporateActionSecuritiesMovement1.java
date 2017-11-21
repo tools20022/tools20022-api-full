@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the securities movements.
@@ -82,6 +86,8 @@ import java.util.List;
  * definition} = "Information about the securities movements."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionSecuritiesMovement1", propOrder = {"postingDateTime", "securityIdentification", "postingQuantity", "accountDetails"})
 public class CorporateActionSecuritiesMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -294,6 +300,7 @@ public class CorporateActionSecuritiesMovement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PstngDtTm")
 	public DateAndDateTimeChoice getPostingDateTime() {
 		return postingDateTime;
 	}
@@ -302,6 +309,7 @@ public class CorporateActionSecuritiesMovement1 {
 		this.postingDateTime = postingDateTime;
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification7 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -310,6 +318,7 @@ public class CorporateActionSecuritiesMovement1 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "PstngQty", required = true)
 	public UnitOrFaceAmount1Choice getPostingQuantity() {
 		return postingQuantity;
 	}
@@ -318,6 +327,7 @@ public class CorporateActionSecuritiesMovement1 {
 		this.postingQuantity = postingQuantity;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public List<SecuritiesAccount8> getAccountDetails() {
 		return accountDetails;
 	}

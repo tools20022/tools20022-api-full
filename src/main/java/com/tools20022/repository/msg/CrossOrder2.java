@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.CrossTrade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the order to be cancelled.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides details about the order to be cancelled."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CrossOrder2", propOrder = {"crossType", "prioritisation", "buySideDetails", "sellSideDetails", "cancellationDetails"})
 public class CrossOrder2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -316,6 +322,7 @@ public class CrossOrder2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CrossTp", required = true)
 	public CrossType1Code getCrossType() {
 		return crossType;
 	}
@@ -324,6 +331,7 @@ public class CrossOrder2 {
 		this.crossType = crossType;
 	}
 
+	@XmlElement(name = "Prtistn", required = true)
 	public Prioritisation1Code getPrioritisation() {
 		return prioritisation;
 	}
@@ -332,6 +340,7 @@ public class CrossOrder2 {
 		this.prioritisation = prioritisation;
 	}
 
+	@XmlElement(name = "BuySdDtls", required = true)
 	public Order9 getBuySideDetails() {
 		return buySideDetails;
 	}
@@ -340,6 +349,7 @@ public class CrossOrder2 {
 		this.buySideDetails = buySideDetails;
 	}
 
+	@XmlElement(name = "SellSdDtls", required = true)
 	public Order9 getSellSideDetails() {
 		return sellSideDetails;
 	}
@@ -348,6 +358,7 @@ public class CrossOrder2 {
 		this.sellSideDetails = sellSideDetails;
 	}
 
+	@XmlElement(name = "CxlDtls", required = true)
 	public CrossOrderCancel1 getCancellationDetails() {
 		return cancellationDetails;
 	}

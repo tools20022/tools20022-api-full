@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -35,6 +36,98 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmPointOfInteraction
+ * CardPaymentAcquiring.mmPointOfInteraction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardPaymentService
+ * CardPaymentAcquiring.mmCardPaymentService}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTransactionIdentification
+ * CardPaymentAcquiring.mmTransactionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTransactionDateTime
+ * CardPaymentAcquiring.mmTransactionDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmICCRelatedData
+ * CardPaymentAcquiring.mmICCRelatedData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmRelatedCardPayment
+ * CardPaymentAcquiring.mmRelatedCardPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardPresent
+ * CardPaymentAcquiring.mmCardPresent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardholderPresent
+ * CardPaymentAcquiring.mmCardholderPresent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmOnLineContext
+ * CardPaymentAcquiring.mmOnLineContext}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmAttendanceContext
+ * CardPaymentAcquiring.mmAttendanceContext}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTransactionEnvironment
+ * CardPaymentAcquiring.mmTransactionEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTransactionChannel
+ * CardPaymentAcquiring.mmTransactionChannel}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmAttendantMessageCapable
+ * CardPaymentAcquiring.mmAttendantMessageCapable}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmAttendantLanguage
+ * CardPaymentAcquiring.mmAttendantLanguage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardDataEntryMode
+ * CardPaymentAcquiring.mmCardDataEntryMode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmFallbackIndicator
+ * CardPaymentAcquiring.mmFallbackIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTMSTrigger
+ * CardPaymentAcquiring.mmTMSTrigger}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmInitiatorTransactionIdentifier
+ * CardPaymentAcquiring.mmInitiatorTransactionIdentifier}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmReversal
+ * CardPaymentAcquiring.mmReversal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmInterchangeData
+ * CardPaymentAcquiring.mmInterchangeData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmUnattendedLevelCategory
+ * CardPaymentAcquiring.mmUnattendedLevelCategory}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmValidation
+ * CardPaymentAcquiring.mmValidation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCompletionRequired
+ * CardPaymentAcquiring.mmCompletionRequired}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmActionType
+ * CardPaymentAcquiring.mmActionType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmActionMessage
+ * CardPaymentAcquiring.mmActionMessage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCaptureIndicator
+ * CardPaymentAcquiring.mmCaptureIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmRecipientTransactionIdentification
+ * CardPaymentAcquiring.mmRecipientTransactionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmLocation
+ * CardPaymentAcquiring.mmLocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCountry
+ * CardPaymentAcquiring.mmCountry}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -361,98 +454,6 @@ import java.util.List;
  * CardPaymentContext23.mmSaleContext}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmPointOfInteraction
- * CardPaymentAcquiring.mmPointOfInteraction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardPaymentService
- * CardPaymentAcquiring.mmCardPaymentService}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTransactionIdentification
- * CardPaymentAcquiring.mmTransactionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTransactionDateTime
- * CardPaymentAcquiring.mmTransactionDateTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmICCRelatedData
- * CardPaymentAcquiring.mmICCRelatedData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmRelatedCardPayment
- * CardPaymentAcquiring.mmRelatedCardPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardPresent
- * CardPaymentAcquiring.mmCardPresent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardholderPresent
- * CardPaymentAcquiring.mmCardholderPresent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmOnLineContext
- * CardPaymentAcquiring.mmOnLineContext}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmAttendanceContext
- * CardPaymentAcquiring.mmAttendanceContext}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTransactionEnvironment
- * CardPaymentAcquiring.mmTransactionEnvironment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTransactionChannel
- * CardPaymentAcquiring.mmTransactionChannel}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmAttendantMessageCapable
- * CardPaymentAcquiring.mmAttendantMessageCapable}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmAttendantLanguage
- * CardPaymentAcquiring.mmAttendantLanguage}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardDataEntryMode
- * CardPaymentAcquiring.mmCardDataEntryMode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmFallbackIndicator
- * CardPaymentAcquiring.mmFallbackIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTMSTrigger
- * CardPaymentAcquiring.mmTMSTrigger}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmInitiatorTransactionIdentifier
- * CardPaymentAcquiring.mmInitiatorTransactionIdentifier}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmReversal
- * CardPaymentAcquiring.mmReversal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmInterchangeData
- * CardPaymentAcquiring.mmInterchangeData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmUnattendedLevelCategory
- * CardPaymentAcquiring.mmUnattendedLevelCategory}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmValidation
- * CardPaymentAcquiring.mmValidation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCompletionRequired
- * CardPaymentAcquiring.mmCompletionRequired}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmActionType
- * CardPaymentAcquiring.mmActionType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmActionMessage
- * CardPaymentAcquiring.mmActionMessage}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCaptureIndicator
- * CardPaymentAcquiring.mmCaptureIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmRecipientTransactionIdentification
- * CardPaymentAcquiring.mmRecipientTransactionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmLocation
- * CardPaymentAcquiring.mmLocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCountry
- * CardPaymentAcquiring.mmCountry}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -490,11 +491,6 @@ public class CardPaymentAcquiring {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PointOfInteraction
 	 * PointOfInteraction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -725,6 +721,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -753,7 +754,7 @@ public class CardPaymentAcquiring {
 					CardPaymentEnvironment45.mmPOI, CardPaymentEnvironment55.mmPOIIdentification, CardPaymentEnvironment54.mmPOIIdentification, CardPaymentEnvironment53.mmPOI, CardPaymentEnvironment47.mmPOI, CardPaymentEnvironment61.mmPOI,
 					CardPaymentEnvironment64.mmPOIIdentification, CardPaymentEnvironment60.mmPOI, CardPaymentEnvironment65.mmPOIIdentification, CardPaymentEnvironment67.mmPOIIdentification, CardPaymentEnvironment66.mmPOIIdentification,
 					CardPaymentEnvironment62.mmPOI, CardPaymentEnvironment63.mmPOI, CardPaymentEnvironment58.mmPOI, CardPaymentEnvironment59.mmPOI, CardPaymentEnvironment57.mmPOI);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PointOfInteraction";
@@ -776,11 +777,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode
 	 * CardPaymentServiceTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1168,6 +1164,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1209,7 +1210,7 @@ public class CardPaymentAcquiring {
 					CardPaymentTransaction72.mmTransactionType, CardPaymentTransaction72.mmAdditionalService, CardPaymentTransaction72.mmServiceAttribute, CardPaymentTransaction76.mmTransactionType,
 					CardPaymentTransaction76.mmAdditionalService, CardPaymentTransaction76.mmServiceAttribute, CommonData6.mmTransactionType, CommonData6.mmAdditionalService, CommonData6.mmServiceAttribute,
 					CardPaymentTransaction69.mmTransactionType, CardPaymentTransaction69.mmAdditionalService, CardPaymentTransaction69.mmServiceAttribute);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPaymentService";
@@ -1217,6 +1218,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getCardPaymentService", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text transactionIdentification;
@@ -1230,11 +1239,6 @@ public class CardPaymentAcquiring {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1520,6 +1524,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1559,7 +1568,7 @@ public class CardPaymentAcquiring {
 					CardPaymentTransaction70.mmTransactionIdentification, CardPaymentTransaction73.mmTransactionIdentification, CardPaymentTransaction72.mmTransactionIdentification, CardPaymentTransaction76.mmTransactionIdentification,
 					CardPaymentTransaction69.mmTransactionIdentification, CardPaymentTransaction69.mmInitiatorTransactionIdentification, CardPaymentTransaction77.mmTransactionIdentification,
 					CardPaymentTransaction78.mmTransactionIdentification);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionIdentification";
@@ -1567,6 +1576,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime transactionDateTime;
@@ -1580,11 +1597,6 @@ public class CardPaymentAcquiring {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1618,6 +1630,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1635,7 +1652,7 @@ public class CardPaymentAcquiring {
 			derivation_lazy = () -> Arrays.asList(TransactionIdentifier1.mmTransactionDateTime, CardPaymentTransactionDetails8.mmTransactionDateTime, CardTransaction4.mmAcceptorTransactionDateTime,
 					CardTransaction8.mmAcceptorTransactionDateTime, CardTransaction5.mmAcceptorTransactionDateTime, CardTransaction3.mmAcceptorTransactionDateTime, CardTransaction15.mmAcceptorTransactionDateTime,
 					CardTransaction7.mmAcceptorTransactionDateTime, CardTransaction6.mmAcceptorTransactionDateTime);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionDateTime";
@@ -1643,6 +1660,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getTransactionDateTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max10000Binary iCCRelatedData;
@@ -1656,11 +1681,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max10000Binary
 	 * Max10000Binary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1793,6 +1813,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1818,7 +1843,7 @@ public class CardPaymentAcquiring {
 					CardPaymentTransactionDetails27.mmICCRelatedData, CardPaymentTransactionDetails31.mmICCRelatedData, DetailedAmount14.mmICCRelatedData, CardPaymentTransactionDetails34.mmICCRelatedData,
 					CardPaymentTransactionDetails39.mmICCRelatedData, CardPaymentTransactionDetails38.mmICCRelatedData, CardPaymentTransactionDetails41.mmICCRelatedData, CardPaymentTransactionDetails37.mmICCRelatedData,
 					CardPaymentTransactionDetails40.mmICCRelatedData, CardPaymentTransactionDetails42.mmICCRelatedData, CardPaymentTransactionDetails43.mmICCRelatedData);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ICCRelatedData";
@@ -1826,6 +1851,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getICCRelatedData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CardPayment relatedCardPayment;
@@ -1846,11 +1879,6 @@ public class CardPaymentAcquiring {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CardPayment
 	 * CardPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1869,6 +1897,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1883,7 +1916,7 @@ public class CardPaymentAcquiring {
 	public static final MMBusinessAssociationEnd mmRelatedCardPayment = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ATMCompletionAdvice1.mmTransaction, ATMCompletionAcknowledgement1.mmTransaction, ATMCompletionAdvice2.mmTransaction, ATMCompletionAcknowledgement2.mmTransaction);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCardPayment";
@@ -1907,11 +1940,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1996,6 +2024,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2015,7 +2048,7 @@ public class CardPaymentAcquiring {
 					PaymentContext12.mmCardPresent, CardTransactionContext2.mmCardPresent, PaymentContext17.mmCardPresent, PaymentContext14.mmCardPresent, PaymentContext18.mmCardPresent, PaymentContext19.mmCardPresent,
 					PaymentContext16.mmCardPresent, PaymentContext15.mmCardPresent, PaymentContext22.mmCardPresent, PaymentContext24.mmCardPresent, PaymentContext20.mmCardPresent, PaymentContext25.mmCardPresent,
 					PaymentContext21.mmCardPresent, PaymentContext23.mmCardPresent);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPresent";
@@ -2023,6 +2056,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getCardPresent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TrueFalseIndicator cardholderPresent;
@@ -2037,11 +2078,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2126,6 +2162,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2146,7 +2187,7 @@ public class CardPaymentAcquiring {
 					PaymentContext14.mmCardholderPresent, PaymentContext18.mmCardholderPresent, PaymentContext19.mmCardholderPresent, PaymentContext16.mmCardholderPresent, PaymentContext15.mmCardholderPresent,
 					PaymentContext22.mmCardholderPresent, PaymentContext24.mmCardholderPresent, PaymentContext20.mmCardholderPresent, PaymentContext25.mmCardholderPresent, PaymentContext21.mmCardholderPresent,
 					PaymentContext23.mmCardholderPresent);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardholderPresent";
@@ -2154,6 +2195,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getCardholderPresent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TrueFalseIndicator onLineContext;
@@ -2167,11 +2216,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2229,6 +2273,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2244,7 +2293,7 @@ public class CardPaymentAcquiring {
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmOnLineContext, PaymentContext1.mmOnLineContext, PaymentContext4.mmOnLineContext, PaymentContext2.mmOnLineContext, PaymentContext7.mmOnLineContext,
 					PaymentContext6.mmOnLineContext, PaymentContext10.mmOnLineContext, PaymentContext11.mmOnLineContext, PaymentContext13.mmOnLineContext, PaymentContext9.mmOnLineContext, PaymentContext12.mmOnLineContext,
 					PaymentContext17.mmOnLineContext, PaymentContext18.mmOnLineContext, PaymentContext15.mmOnLineContext, PaymentContext24.mmOnLineContext, PaymentContext21.mmOnLineContext, PaymentContext23.mmOnLineContext);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OnLineContext";
@@ -2252,6 +2301,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getOnLineContext", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AttendanceContextCode attendanceContext;
@@ -2265,11 +2322,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode
 	 * AttendanceContextCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2372,6 +2424,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2392,7 +2449,7 @@ public class CardPaymentAcquiring {
 					PaymentContext17.mmAttendanceContext, PaymentContext14.mmAttendanceContext, PaymentContext18.mmAttendanceContext, PaymentContext19.mmAttendanceContext, PaymentContext16.mmAttendanceContext,
 					PaymentContext15.mmAttendanceContext, PaymentContext22.mmAttendanceContext, PaymentContext24.mmAttendanceContext, PaymentContext20.mmAttendanceContext, PaymentContext25.mmAttendanceContext,
 					PaymentContext21.mmAttendanceContext, StatusReportContent6.mmAttendanceContext, PaymentContext23.mmAttendanceContext);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AttendanceContext";
@@ -2400,6 +2457,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AttendanceContextCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getAttendanceContext", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TransactionEnvironmentCode transactionEnvironment;
@@ -2413,11 +2478,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TransactionEnvironmentCode
 	 * TransactionEnvironmentCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2502,6 +2562,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2520,7 +2585,7 @@ public class CardPaymentAcquiring {
 					CardTransactionContext2.mmTransactionEnvironment, PaymentContext17.mmTransactionEnvironment, PaymentContext14.mmTransactionEnvironment, PaymentContext18.mmTransactionEnvironment,
 					PaymentContext19.mmTransactionEnvironment, PaymentContext16.mmTransactionEnvironment, PaymentContext15.mmTransactionEnvironment, PaymentContext22.mmTransactionEnvironment, PaymentContext24.mmTransactionEnvironment,
 					PaymentContext20.mmTransactionEnvironment, PaymentContext25.mmTransactionEnvironment, PaymentContext21.mmTransactionEnvironment, PaymentContext23.mmTransactionEnvironment);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionEnvironment";
@@ -2528,6 +2593,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionEnvironmentCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getTransactionEnvironment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TransactionChannelCode transactionChannel;
@@ -2542,11 +2615,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TransactionChannelCode
 	 * TransactionChannelCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2631,6 +2699,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2651,7 +2724,7 @@ public class CardPaymentAcquiring {
 					PaymentContext14.mmTransactionChannel, PaymentContext18.mmTransactionChannel, PaymentContext19.mmTransactionChannel, PaymentContext16.mmTransactionChannel, PaymentContext15.mmTransactionChannel,
 					PaymentContext22.mmTransactionChannel, PaymentContext24.mmTransactionChannel, PaymentContext20.mmTransactionChannel, PaymentContext25.mmTransactionChannel, PaymentContext21.mmTransactionChannel,
 					PaymentContext23.mmTransactionChannel);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionChannel";
@@ -2659,6 +2732,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionChannelCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getTransactionChannel", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TrueFalseIndicator attendantMessageCapable;
@@ -2673,11 +2754,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2735,6 +2811,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2753,7 +2834,7 @@ public class CardPaymentAcquiring {
 					PaymentContext5.mmAttendantMessageCapable, PaymentContext10.mmAttendantMessageCapable, PaymentContext8.mmAttendantMessageCapable, PaymentContext13.mmAttendantMessageCapable, PaymentContext12.mmAttendantMessageCapable,
 					PaymentContext14.mmAttendantMessageCapable, PaymentContext18.mmAttendantMessageCapable, PaymentContext19.mmAttendantMessageCapable, PaymentContext16.mmAttendantMessageCapable, PaymentContext22.mmAttendantMessageCapable,
 					PaymentContext24.mmAttendantMessageCapable, PaymentContext20.mmAttendantMessageCapable, PaymentContext25.mmAttendantMessageCapable);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AttendantMessageCapable";
@@ -2761,6 +2842,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getAttendantMessageCapable", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISO2ALanguageCode attendantLanguage;
@@ -2774,11 +2863,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ISO2ALanguageCode
 	 * ISO2ALanguageCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2836,6 +2920,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2852,7 +2941,7 @@ public class CardPaymentAcquiring {
 					PaymentContext10.mmAttendantLanguage, PaymentContext8.mmAttendantLanguage, PaymentContext13.mmAttendantLanguage, PaymentContext12.mmAttendantLanguage, PaymentContext14.mmAttendantLanguage,
 					PaymentContext18.mmAttendantLanguage, PaymentContext19.mmAttendantLanguage, PaymentContext16.mmAttendantLanguage, PaymentContext22.mmAttendantLanguage, PaymentContext24.mmAttendantLanguage,
 					PaymentContext20.mmAttendantLanguage, PaymentContext25.mmAttendantLanguage);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AttendantLanguage";
@@ -2860,6 +2949,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISO2ALanguageCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getAttendantLanguage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CardDataReadingCode cardDataEntryMode;
@@ -2873,11 +2970,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CardDataReadingCode
 	 * CardDataReadingCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2962,6 +3054,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2980,7 +3077,7 @@ public class CardPaymentAcquiring {
 					PaymentContext14.mmCardDataEntryMode, PaymentContext18.mmCardDataEntryMode, PaymentContext19.mmCardDataEntryMode, PaymentContext16.mmCardDataEntryMode, PaymentContext15.mmCardDataEntryMode,
 					PaymentContext22.mmCardDataEntryMode, PaymentContext24.mmCardDataEntryMode, PaymentContext20.mmCardDataEntryMode, PaymentContext25.mmCardDataEntryMode, PaymentContext21.mmCardDataEntryMode,
 					PaymentContext23.mmCardDataEntryMode);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardDataEntryMode";
@@ -2988,6 +3085,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardDataReadingCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getCardDataEntryMode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TrueFalseIndicator fallbackIndicator;
@@ -3001,11 +3106,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3033,6 +3133,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3047,7 +3152,7 @@ public class CardPaymentAcquiring {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmFallbackIndicator, PaymentContext1.mmFallbackIndicator, PaymentContext4.mmFallbackIndicator, PaymentContext2.mmFallbackIndicator, PaymentContext7.mmFallbackIndicator,
 					PaymentContext6.mmFallbackIndicator, PaymentContext5.mmFallbackIndicator);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FallbackIndicator";
@@ -3055,6 +3160,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getFallbackIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.TerminalManagementSystem> tMSTrigger;
@@ -3078,11 +3191,6 @@ public class CardPaymentAcquiring {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
 	 * TerminalManagementSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3155,6 +3263,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3174,7 +3287,7 @@ public class CardPaymentAcquiring {
 					AcceptorDiagnosticResponse3.mmTMSTrigger, AcceptorCancellationAdviceResponse3.mmTMSTrigger, AcceptorCompletionAdviceResponse3.mmTMSTrigger, AcceptorDiagnosticResponse4.mmTMSTrigger,
 					AcceptorCancellationAdviceResponse4.mmTMSTrigger, AcceptorCompletionAdviceResponse4.mmTMSTrigger, AuthorisationResult4.mmTMSTrigger, AuthorisationResult6.mmTMSTrigger, AcceptorCancellationAdviceResponse5.mmTMSTrigger,
 					AcceptorCompletionAdviceResponse5.mmTMSTrigger, AuthorisationResult12.mmTMSTrigger, AuthorisationResult10.mmTMSTrigger, AcceptorCancellationAdviceResponse6.mmTMSTrigger, AcceptorCompletionAdviceResponse6.mmTMSTrigger);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TMSTrigger";
@@ -3196,11 +3309,6 @@ public class CardPaymentAcquiring {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3285,6 +3393,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3308,7 +3421,7 @@ public class CardPaymentAcquiring {
 					CardTransaction6.mmInitiatorTransactionIdentification, CardPaymentTransaction52.mmInitiatorTransactionIdentification, CardPaymentTransaction60.mmInitiatorTransactionIdentification,
 					CardPaymentTransaction51.mmInitiatorTransactionIdentification, CardPaymentTransaction62.mmInitiatorTransactionIdentification, CardPaymentTransaction71.mmInitiatorTransactionIdentification,
 					CardPaymentTransaction70.mmInitiatorTransactionIdentification, CardPaymentTransaction76.mmInitiatorTransactionIdentification);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InitiatorTransactionIdentifier";
@@ -3316,6 +3429,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getInitiatorTransactionIdentifier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TrueFalseIndicator reversal;
@@ -3330,11 +3451,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3407,6 +3523,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3426,7 +3547,7 @@ public class CardPaymentAcquiring {
 					CardPaymentTransaction30.mmReversal, CardPaymentTransaction44.mmReversal, CardPaymentTransaction45.mmReversal, CardPaymentTransaction46.mmReversal, CardPaymentTransaction40.mmReversal,
 					CardPaymentTransaction60.mmReversal, CardPaymentTransaction61.mmReversal, CardPaymentTransaction59.mmReversal, CardPaymentTransaction55.mmReversal, CardPaymentTransaction75.mmReversal,
 					CardPaymentTransaction70.mmReversal, CardPaymentTransaction69.mmReversal);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reversal";
@@ -3434,6 +3555,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getReversal", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text interchangeData;
@@ -3446,11 +3575,6 @@ public class CardPaymentAcquiring {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3565,6 +3689,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3585,7 +3714,7 @@ public class CardPaymentAcquiring {
 					CardPaymentTransaction63.mmInterchangeData, CardPaymentTransaction60.mmInterchangeData, CardPaymentTransaction57.mmInterchangeData, CardPaymentTransaction61.mmInterchangeData, CardPaymentTransaction53.mmInterchangeData,
 					CardPaymentTransaction59.mmInterchangeData, CardPaymentTransaction55.mmInterchangeData, CardPaymentTransaction75.mmInterchangeData, CardPaymentTransaction70.mmInterchangeData, CardPaymentTransaction69.mmInterchangeData,
 					CardPaymentTransaction77.mmInterchangeData, CardPaymentTransaction78.mmInterchangeData);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterchangeData";
@@ -3593,6 +3722,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getInterchangeData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35NumericText unattendedLevelCategory;
@@ -3606,11 +3743,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max35NumericText
 	 * Max35NumericText}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3680,6 +3812,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3701,7 +3838,7 @@ public class CardPaymentAcquiring {
 					CardTransactionDetail1.mmUnattendedLevelCategory, CardPaymentTransactionDetails29.mmUnattendedLevelCategory, CardPaymentTransactionDetails30.mmUnattendedLevelCategory,
 					CardPaymentTransactionDetails27.mmUnattendedLevelCategory, CardPaymentTransactionDetails31.mmUnattendedLevelCategory, CardPaymentTransactionDetails39.mmUnattendedLevelCategory,
 					CardPaymentTransactionDetails38.mmUnattendedLevelCategory, CardPaymentTransactionDetails41.mmUnattendedLevelCategory, CardPaymentTransactionDetails37.mmUnattendedLevelCategory);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnattendedLevelCategory";
@@ -3709,6 +3846,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getUnattendedLevelCategory", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.CardPaymentValidation> validation;
@@ -3730,11 +3875,6 @@ public class CardPaymentAcquiring {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentValidation
 	 * CardPaymentValidation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3864,6 +4004,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3886,7 +4031,7 @@ public class CardPaymentAcquiring {
 					CardPaymentTransaction59.mmAuthorisationResult, CardPaymentTransaction54.mmAuthorisationResult, CardPaymentTransaction55.mmAuthorisationResult, CardPaymentTransaction58.mmAuthorisationResult,
 					ATMTransaction14.mmAuthorisationResult, ATMTransaction17.mmAuthorisationResult, ATMTransaction20.mmAuthorisationResult, CardPaymentTransaction75.mmAuthorisationResult, CardPaymentTransaction67.mmAuthorisationResult,
 					CardPaymentTransaction70.mmAuthorisationResult, CardPaymentTransaction68.mmAuthorisationResult, CardPaymentTransaction69.mmAuthorisationResult);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Validation";
@@ -3909,11 +4054,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3928,6 +4068,11 @@ public class CardPaymentAcquiring {
 	 * AuthorisationResult10.mmCompletionRequired}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3944,7 +4089,7 @@ public class CardPaymentAcquiring {
 	public static final MMBusinessAttribute mmCompletionRequired = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AuthorisationResult1.mmCompletionRequired, AuthorisationResult4.mmCompletionRequired, AuthorisationResult10.mmCompletionRequired);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CompletionRequired";
@@ -3952,6 +4097,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getCompletionRequired", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ActionTypeCode actionType;
@@ -3965,11 +4118,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ActionTypeCode
 	 * ActionTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3992,6 +4140,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4007,7 +4160,7 @@ public class CardPaymentAcquiring {
 	public static final MMBusinessAttribute mmActionType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Action1.mmActionType, Action2.mmActionType, Action3.mmActionType, Action4.mmActionType, Action5.mmActionType, Action6.mmActionType, Action7.mmActionType, Action8.mmActionType);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ActionType";
@@ -4015,6 +4168,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActionTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getActionType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max256Text actionMessage;
@@ -4027,11 +4188,6 @@ public class CardPaymentAcquiring {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max256Text
 	 * Max256Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4067,6 +4223,11 @@ public class CardPaymentAcquiring {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4082,7 +4243,7 @@ public class CardPaymentAcquiring {
 		{
 			derivation_lazy = () -> Arrays.asList(ActionMessage1.mmMessageContent, Action1.mmMessageToPresent, Action2.mmMessageToPresent, Action3.mmMessageToPresent, ActionMessage2.mmMessageContent, Action4.mmMessageToPresent,
 					Action5.mmMessageToPresent, ActionMessage4.mmMessage, ActionMessage3.mmContent, ActionMessage5.mmMessageContent, Action6.mmMessageToPresent, Action7.mmMessageToPresent, Action8.mmMessageToPresent);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ActionMessage";
@@ -4090,6 +4251,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getActionMessage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TrueFalseIndicator captureIndicator;
@@ -4121,7 +4290,7 @@ public class CardPaymentAcquiring {
 	 */
 	public static final MMBusinessAttribute mmCaptureIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CaptureIndicator";
@@ -4129,6 +4298,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getCaptureIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text recipientTransactionIdentification;
@@ -4162,7 +4339,7 @@ public class CardPaymentAcquiring {
 	 */
 	public static final MMBusinessAttribute mmRecipientTransactionIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RecipientTransactionIdentification";
@@ -4170,6 +4347,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getRecipientTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected LocationCategoryCode location;
@@ -4184,11 +4369,6 @@ public class CardPaymentAcquiring {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.LocationCategoryCode
 	 * LocationCategoryCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
-	 * CardPaymentAcquiring}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4197,6 +4377,11 @@ public class CardPaymentAcquiring {
 	 * CardTransactionContext2.mmLocationCategory}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
+	 * CardPaymentAcquiring}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4213,7 +4398,7 @@ public class CardPaymentAcquiring {
 	public static final MMBusinessAttribute mmLocation = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardTransactionContext2.mmLocationCategory);
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Location";
@@ -4221,6 +4406,14 @@ public class CardPaymentAcquiring {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LocationCategoryCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentAcquiring.class.getMethod("getLocation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Country country;
@@ -4259,7 +4452,7 @@ public class CardPaymentAcquiring {
 	 */
 	public static final MMBusinessAssociationEnd mmCountry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CardPaymentAcquiring.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Country";
@@ -4294,13 +4487,20 @@ public class CardPaymentAcquiring {
 						CardPaymentContext25.mmSaleContext, CardPaymentContext24.mmPaymentContext, CardPaymentContext24.mmSaleContext, CardPaymentContext20.mmPaymentContext, CardPaymentContext20.mmSaleContext,
 						CardPaymentContext21.mmPaymentContext, CardPaymentContext21.mmSaleContext, CardPaymentContext22.mmPaymentContext, CardPaymentContext22.mmSaleContext, CardPaymentContext23.mmPaymentContext,
 						CardPaymentContext23.mmSaleContext);
-				element_lazy = () -> Arrays.asList(CardPaymentAcquiring.mmPointOfInteraction, CardPaymentAcquiring.mmCardPaymentService, CardPaymentAcquiring.mmTransactionIdentification, CardPaymentAcquiring.mmTransactionDateTime,
-						CardPaymentAcquiring.mmICCRelatedData, CardPaymentAcquiring.mmRelatedCardPayment, CardPaymentAcquiring.mmCardPresent, CardPaymentAcquiring.mmCardholderPresent, CardPaymentAcquiring.mmOnLineContext,
-						CardPaymentAcquiring.mmAttendanceContext, CardPaymentAcquiring.mmTransactionEnvironment, CardPaymentAcquiring.mmTransactionChannel, CardPaymentAcquiring.mmAttendantMessageCapable,
-						CardPaymentAcquiring.mmAttendantLanguage, CardPaymentAcquiring.mmCardDataEntryMode, CardPaymentAcquiring.mmFallbackIndicator, CardPaymentAcquiring.mmTMSTrigger, CardPaymentAcquiring.mmInitiatorTransactionIdentifier,
-						CardPaymentAcquiring.mmReversal, CardPaymentAcquiring.mmInterchangeData, CardPaymentAcquiring.mmUnattendedLevelCategory, CardPaymentAcquiring.mmValidation, CardPaymentAcquiring.mmCompletionRequired,
-						CardPaymentAcquiring.mmActionType, CardPaymentAcquiring.mmActionMessage, CardPaymentAcquiring.mmCaptureIndicator, CardPaymentAcquiring.mmRecipientTransactionIdentification, CardPaymentAcquiring.mmLocation,
-						CardPaymentAcquiring.mmCountry);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPaymentAcquiring.mmPointOfInteraction, com.tools20022.repository.entity.CardPaymentAcquiring.mmCardPaymentService,
+						com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionIdentification, com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionDateTime,
+						com.tools20022.repository.entity.CardPaymentAcquiring.mmICCRelatedData, com.tools20022.repository.entity.CardPaymentAcquiring.mmRelatedCardPayment,
+						com.tools20022.repository.entity.CardPaymentAcquiring.mmCardPresent, com.tools20022.repository.entity.CardPaymentAcquiring.mmCardholderPresent, com.tools20022.repository.entity.CardPaymentAcquiring.mmOnLineContext,
+						com.tools20022.repository.entity.CardPaymentAcquiring.mmAttendanceContext, com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionEnvironment,
+						com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionChannel, com.tools20022.repository.entity.CardPaymentAcquiring.mmAttendantMessageCapable,
+						com.tools20022.repository.entity.CardPaymentAcquiring.mmAttendantLanguage, com.tools20022.repository.entity.CardPaymentAcquiring.mmCardDataEntryMode,
+						com.tools20022.repository.entity.CardPaymentAcquiring.mmFallbackIndicator, com.tools20022.repository.entity.CardPaymentAcquiring.mmTMSTrigger,
+						com.tools20022.repository.entity.CardPaymentAcquiring.mmInitiatorTransactionIdentifier, com.tools20022.repository.entity.CardPaymentAcquiring.mmReversal,
+						com.tools20022.repository.entity.CardPaymentAcquiring.mmInterchangeData, com.tools20022.repository.entity.CardPaymentAcquiring.mmUnattendedLevelCategory,
+						com.tools20022.repository.entity.CardPaymentAcquiring.mmValidation, com.tools20022.repository.entity.CardPaymentAcquiring.mmCompletionRequired, com.tools20022.repository.entity.CardPaymentAcquiring.mmActionType,
+						com.tools20022.repository.entity.CardPaymentAcquiring.mmActionMessage, com.tools20022.repository.entity.CardPaymentAcquiring.mmCaptureIndicator,
+						com.tools20022.repository.entity.CardPaymentAcquiring.mmRecipientTransactionIdentification, com.tools20022.repository.entity.CardPaymentAcquiring.mmLocation,
+						com.tools20022.repository.entity.CardPaymentAcquiring.mmCountry);
 				derivationComponent_lazy = () -> Arrays.asList(TransactionIdentifier1.mmObject(), PaymentContext3.mmObject(), PaymentContext1.mmObject(), SaleContext1.mmObject(), CardPaymentContext3.mmObject(), PaymentContext4.mmObject(),
 						CardPaymentContext4.mmObject(), ActionMessage1.mmObject(), Action1.mmObject(), Action2.mmObject(), CardPaymentContext1.mmObject(), PaymentContext2.mmObject(), CardPaymentContext2.mmObject(),
 						PaymentContext7.mmObject(), CardPaymentContext7.mmObject(), PaymentContext6.mmObject(), CardPaymentContext6.mmObject(), CardPaymentContext5.mmObject(), PaymentContext5.mmObject(), Action3.mmObject(),
@@ -4312,6 +4512,11 @@ public class CardPaymentAcquiring {
 						PaymentContext19.mmObject(), PaymentContext16.mmObject(), PaymentContext15.mmObject(), CardPaymentContext15.mmObject(), Action7.mmObject(), PaymentContext22.mmObject(), CardPaymentContext25.mmObject(),
 						CardPaymentContext24.mmObject(), PaymentContext24.mmObject(), CardPaymentContext20.mmObject(), PaymentContext20.mmObject(), Action8.mmObject(), PaymentContext25.mmObject(), CardPaymentContext21.mmObject(),
 						PaymentContext21.mmObject(), CardPaymentContext22.mmObject(), CardPaymentContext23.mmObject(), PaymentContext23.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CardPaymentAcquiring.class;
 			}
 		});
 		return mmObject_lazy.get();

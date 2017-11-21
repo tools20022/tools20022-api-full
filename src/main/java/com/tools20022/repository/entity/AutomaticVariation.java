@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.AmountAndTrigger1;
 import com.tools20022.repository.msg.AutomaticVariation1;
 import com.tools20022.repository.msg.Trigger1;
 import com.tools20022.repository.msg.UndertakingAmount4;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +39,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AutomaticVariation#mmUndertaking
+ * AutomaticVariation.mmUndertaking}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AutomaticVariation#mmType
+ * AutomaticVariation.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AutomaticVariation#mmVariationAmount
+ * AutomaticVariation.mmVariationAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AutomaticVariation#mmTrigger
+ * AutomaticVariation.mmTrigger}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -68,22 +85,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.AutomaticVariation1#mmAmountAndTrigger
  * AutomaticVariation1.mmAmountAndTrigger}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AutomaticVariation#mmUndertaking
- * AutomaticVariation.mmUndertaking}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AutomaticVariation#mmType
- * AutomaticVariation.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AutomaticVariation#mmVariationAmount
- * AutomaticVariation.mmVariationAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AutomaticVariation#mmTrigger
- * AutomaticVariation.mmTrigger}</li>
  * </ul>
  * </li>
  * <li>
@@ -143,7 +144,7 @@ public class AutomaticVariation {
 	 */
 	public static final MMBusinessAssociationEnd mmUndertaking = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AutomaticVariation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AutomaticVariation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undertaking";
@@ -166,11 +167,6 @@ public class AutomaticVariation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.VariationTypeCode
 	 * VariationTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AutomaticVariation
-	 * AutomaticVariation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -178,6 +174,11 @@ public class AutomaticVariation {
 	 * AutomaticVariation1.mmType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AutomaticVariation
+	 * AutomaticVariation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -192,7 +193,7 @@ public class AutomaticVariation {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AutomaticVariation1.mmType);
-			elementContext_lazy = () -> AutomaticVariation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AutomaticVariation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -200,6 +201,14 @@ public class AutomaticVariation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> VariationTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AutomaticVariation.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount variationAmount;
@@ -214,11 +223,6 @@ public class AutomaticVariation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AutomaticVariation
-	 * AutomaticVariation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -230,6 +234,11 @@ public class AutomaticVariation {
 	 * AmountAndTrigger1.mmAmountDetailsChoice}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AutomaticVariation
+	 * AutomaticVariation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -246,7 +255,7 @@ public class AutomaticVariation {
 	public static final MMBusinessAttribute mmVariationAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingAmount4.mmVariationAmount, AmountAndTrigger1.mmAmountDetailsChoice);
-			elementContext_lazy = () -> AutomaticVariation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AutomaticVariation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VariationAmount";
@@ -254,6 +263,14 @@ public class AutomaticVariation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AutomaticVariation.class.getMethod("getVariationAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Trigger trigger;
@@ -273,11 +290,6 @@ public class AutomaticVariation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Trigger Trigger}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AutomaticVariation
-	 * AutomaticVariation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -286,6 +298,11 @@ public class AutomaticVariation {
 	 * AmountAndTrigger1.mmTrigger}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AutomaticVariation
+	 * AutomaticVariation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -300,7 +317,7 @@ public class AutomaticVariation {
 	public static final MMBusinessAssociationEnd mmTrigger = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountAndTrigger1.mmTrigger);
-			elementContext_lazy = () -> AutomaticVariation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AutomaticVariation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trigger";
@@ -322,8 +339,14 @@ public class AutomaticVariation {
 				definition = "Predefined variations that may be attributable to an undertaking such as a guarantee or standby letter of credit.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Undertaking.mmPredefinedVariation, com.tools20022.repository.entity.Trigger.mmAutomaticVariation);
 				derivationElement_lazy = () -> Arrays.asList(AutomaticVariation1.mmAmountAndTrigger);
-				element_lazy = () -> Arrays.asList(AutomaticVariation.mmUndertaking, AutomaticVariation.mmType, AutomaticVariation.mmVariationAmount, AutomaticVariation.mmTrigger);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AutomaticVariation.mmUndertaking, com.tools20022.repository.entity.AutomaticVariation.mmType,
+						com.tools20022.repository.entity.AutomaticVariation.mmVariationAmount, com.tools20022.repository.entity.AutomaticVariation.mmTrigger);
 				derivationComponent_lazy = () -> Arrays.asList(Trigger1.mmObject(), AmountAndTrigger1.mmObject(), AutomaticVariation1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AutomaticVariation.class;
 			}
 		});
 		return mmObject_lazy.get();

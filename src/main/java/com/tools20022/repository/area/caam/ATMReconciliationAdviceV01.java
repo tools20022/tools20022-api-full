@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header21;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The ATMReconciliationAdvice message is sent by an ATM to an acquirer or its
@@ -37,9 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caam.009.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
@@ -75,6 +74,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caam.009.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -94,6 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMReconciliationAdviceV01", propOrder = {"header", "protectedATMReconciliationAdvice", "ATMReconciliationAdvice", "securityTrailer"})
 public class ATMReconciliationAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -133,6 +137,14 @@ public class ATMReconciliationAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header21.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMReconciliationAdviceV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType10 protectedATMReconciliationAdvice;
 	/**
@@ -167,6 +179,14 @@ public class ATMReconciliationAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMReconciliationAdviceV01.class.getMethod("getProtectedATMReconciliationAdvice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ATMReconciliationAdvice1 aTMReconciliationAdvice;
@@ -203,6 +223,14 @@ public class ATMReconciliationAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ATMReconciliationAdvice1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMReconciliationAdviceV01.class.getMethod("getATMReconciliationAdvice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType15 securityTrailer;
 	/**
@@ -238,6 +266,14 @@ public class ATMReconciliationAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMReconciliationAdviceV01.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -251,8 +287,8 @@ public class ATMReconciliationAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "ATMRcncltnAdvc";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ATMReconciliationAdviceV01.mmHeader, ATMReconciliationAdviceV01.mmProtectedATMReconciliationAdvice, ATMReconciliationAdviceV01.mmATMReconciliationAdvice,
-						ATMReconciliationAdviceV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.mmHeader, com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.mmProtectedATMReconciliationAdvice,
+						com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.mmATMReconciliationAdvice, com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caam";
@@ -262,10 +298,16 @@ public class ATMReconciliationAdviceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ATMReconciliationAdviceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header21 getHeader() {
 		return header;
 	}
@@ -274,6 +316,7 @@ public class ATMReconciliationAdviceV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "PrtctdATMRcncltnAdvc")
 	public ContentInformationType10 getProtectedATMReconciliationAdvice() {
 		return protectedATMReconciliationAdvice;
 	}
@@ -282,6 +325,7 @@ public class ATMReconciliationAdviceV01 {
 		this.protectedATMReconciliationAdvice = protectedATMReconciliationAdvice;
 	}
 
+	@XmlElement(name = "ATMRcncltnAdvc")
 	public ATMReconciliationAdvice1 getATMReconciliationAdvice() {
 		return aTMReconciliationAdvice;
 	}
@@ -290,11 +334,18 @@ public class ATMReconciliationAdviceV01 {
 		this.aTMReconciliationAdvice = aTMReconciliationAdvice;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType15 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caam.009.01.01")
+	static public class Document {
+		@XmlElement(name = "ATMRcncltnAdvc", required = true)
+		public ATMReconciliationAdviceV01 messageBody;
 	}
 }

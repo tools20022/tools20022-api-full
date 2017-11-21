@@ -31,6 +31,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the message reference of the message for which the status
@@ -94,6 +98,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MessageAndBusinessReference2", propOrder = {"otherReference", "previousReference", "individualOrderReference", "investmentAccount"})
 public class MessageAndBusinessReference2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -361,6 +367,7 @@ public class MessageAndBusinessReference2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OthrRef", required = true)
 	public AdditionalReference3 getOtherReference() {
 		return otherReference;
 	}
@@ -369,6 +376,7 @@ public class MessageAndBusinessReference2 {
 		this.otherReference = otherReference;
 	}
 
+	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -377,6 +385,7 @@ public class MessageAndBusinessReference2 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "IndvOrdrRef")
 	public List<Max35Text> getIndividualOrderReference() {
 		return individualOrderReference;
 	}
@@ -385,6 +394,7 @@ public class MessageAndBusinessReference2 {
 		this.individualOrderReference = individualOrderReference;
 	}
 
+	@XmlElement(name = "InvstmtAcct")
 	public InvestmentAccount13 getInvestmentAccount() {
 		return investmentAccount;
 	}

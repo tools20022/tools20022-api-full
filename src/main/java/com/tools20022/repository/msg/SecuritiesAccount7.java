@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the account identification and the account owner.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesAccount7", propOrder = {"accountOwnerIdentification", "accountIdentification"})
 public class SecuritiesAccount7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class SecuritiesAccount7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnrId")
 	public PartyIdentification2Choice getAccountOwnerIdentification() {
 		return accountOwnerIdentification;
 	}
@@ -204,6 +211,7 @@ public class SecuritiesAccount7 {
 		this.accountOwnerIdentification = accountOwnerIdentification;
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}

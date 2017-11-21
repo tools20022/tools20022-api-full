@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.PhysicalDelivery;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters of a physical delivery.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Parameters of a physical delivery."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DeliveryParameters3", propOrder = {"address", "issuedCertificateNumber"})
 public class DeliveryParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class DeliveryParameters3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Adr", required = true)
 	public NameAndAddress4 getAddress() {
 		return address;
 	}
@@ -180,6 +187,7 @@ public class DeliveryParameters3 {
 		this.address = address;
 	}
 
+	@XmlElement(name = "IssdCertNb")
 	public Max35Text getIssuedCertificateNumber() {
 		return issuedCertificateNumber;
 	}

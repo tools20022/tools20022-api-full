@@ -67,6 +67,11 @@ public class PrincipalPayingAgent extends SecuritiesPartyRole {
 				definition = "Main party appointed to distribute payment or securities on behalf of the issuer.";
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PrincipalPayingAgent.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

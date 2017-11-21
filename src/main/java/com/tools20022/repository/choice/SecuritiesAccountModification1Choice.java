@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.SystemRestriction1;
 import com.tools20022.repository.msg.SystemSecuritiesAccount2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies which information are involved by a modification request for
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesAccountModification1Choice", propOrder = {"systemSecuritiesAccount", "systemRestriction", "marketSpecificAttribute"})
 public class SecuritiesAccountModification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -216,6 +222,7 @@ public class SecuritiesAccountModification1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysSctiesAcct", required = true)
 	public SystemSecuritiesAccount2 getSystemSecuritiesAccount() {
 		return systemSecuritiesAccount;
 	}
@@ -224,6 +231,7 @@ public class SecuritiesAccountModification1Choice {
 		this.systemSecuritiesAccount = systemSecuritiesAccount;
 	}
 
+	@XmlElement(name = "SysRstrctn", required = true)
 	public SystemRestriction1 getSystemRestriction() {
 		return systemRestriction;
 	}
@@ -232,6 +240,7 @@ public class SecuritiesAccountModification1Choice {
 		this.systemRestriction = systemRestriction;
 	}
 
+	@XmlElement(name = "MktSpcfcAttr", required = true)
 	public MarketSpecificAttribute1 getMarketSpecificAttribute() {
 		return marketSpecificAttribute;
 	}

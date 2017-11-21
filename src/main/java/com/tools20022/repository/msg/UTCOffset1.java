@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.UTCOffset;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the parameters to calculate the local reporting time.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the parameters to calculate the local reporting time."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UTCOffset1", propOrder = {"sign", "numberOfHours"})
 public class UTCOffset1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class UTCOffset1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sgn", required = true)
 	public PlusOrMinusIndicator getSign() {
 		return sign;
 	}
@@ -193,6 +200,7 @@ public class UTCOffset1 {
 		this.sign = sign;
 	}
 
+	@XmlElement(name = "NbOfHrs", required = true)
 	public ISOTime getNumberOfHours() {
 		return numberOfHours;
 	}

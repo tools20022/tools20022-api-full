@@ -27,6 +27,7 @@ import com.tools20022.repository.codeset.FATCAStatusCode;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -41,6 +42,22 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.FATCAStatus#mmFATCAStatus
+ * FATCAStatus.mmFATCAStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FATCAStatus#mmFATCASourceStatus
+ * FATCAStatus.mmFATCASourceStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FATCAStatus#mmInvestmentAccountParty
+ * FATCAStatus.mmInvestmentAccountParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FATCAStatus#mmFATCAReportingDate
+ * FATCAStatus.mmFATCAReportingDate}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -64,22 +81,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmFATCAStatus
  * InvestmentAccountPartyRole.mmFATCAStatus}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.FATCAStatus#mmFATCAStatus
- * FATCAStatus.mmFATCAStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FATCAStatus#mmFATCASourceStatus
- * FATCAStatus.mmFATCASourceStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FATCAStatus#mmInvestmentAccountParty
- * FATCAStatus.mmInvestmentAccountParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FATCAStatus#mmFATCAReportingDate
- * FATCAStatus.mmFATCAReportingDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -113,10 +114,6 @@ public class FATCAStatus {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FATCAStatusCode
 	 * FATCAStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.FATCAStatus FATCAStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -133,6 +130,10 @@ public class FATCAStatus {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.FATCAStatus FATCAStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -147,7 +148,7 @@ public class FATCAStatus {
 	public static final MMBusinessAttribute mmFATCAStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FATCAStatus1.mmType, FATCAStatus1Choice.mmCode, FATCAStatus2.mmType, FATCAStatus2Choice.mmCode);
-			elementContext_lazy = () -> FATCAStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FATCAStatus";
@@ -155,6 +156,14 @@ public class FATCAStatus {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FATCAStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FATCAStatus.class.getMethod("getFATCAStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected FATCASourceStatusCode fATCASourceStatus;
@@ -168,10 +177,6 @@ public class FATCAStatus {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FATCASourceStatusCode
 	 * FATCASourceStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.FATCAStatus FATCAStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -187,6 +192,10 @@ public class FATCAStatus {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.FATCAStatus FATCAStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -201,7 +210,7 @@ public class FATCAStatus {
 	public static final MMBusinessAttribute mmFATCASourceStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FATCAStatus1.mmSource, FATCASource1Choice.mmCode, FATCAStatus2.mmSource, CRSSource1Choice.mmCode);
-			elementContext_lazy = () -> FATCAStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FATCASourceStatus";
@@ -209,6 +218,14 @@ public class FATCAStatus {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FATCASourceStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FATCAStatus.class.getMethod("getFATCASourceStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.InvestmentAccountPartyRole> investmentAccountParty;
@@ -250,7 +267,7 @@ public class FATCAStatus {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentAccountParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> FATCAStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccountParty";
@@ -273,10 +290,6 @@ public class FATCAStatus {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.FATCAStatus FATCAStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -291,6 +304,10 @@ public class FATCAStatus {
 	 * InvestmentAccountOwnershipInformation14.mmFATCAReportingDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.FATCAStatus FATCAStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -307,7 +324,7 @@ public class FATCAStatus {
 	public static final MMBusinessAttribute mmFATCAReportingDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountManagementStatusAndReason5.mmFATCAReportingDate, InvestmentAccountOwnershipInformation15.mmFATCAReportingDate, InvestmentAccountOwnershipInformation14.mmFATCAReportingDate);
-			elementContext_lazy = () -> FATCAStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FATCAReportingDate";
@@ -315,6 +332,14 @@ public class FATCAStatus {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FATCAStatus.class.getMethod("getFATCAReportingDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -326,8 +351,14 @@ public class FATCAStatus {
 				name = "FATCAStatus";
 				definition = "Foreign Account Tax Compliance Act (FATCA) status and the status source of the investor.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccountPartyRole.mmFATCAStatus);
-				element_lazy = () -> Arrays.asList(FATCAStatus.mmFATCAStatus, FATCAStatus.mmFATCASourceStatus, FATCAStatus.mmInvestmentAccountParty, FATCAStatus.mmFATCAReportingDate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.FATCAStatus.mmFATCAStatus, com.tools20022.repository.entity.FATCAStatus.mmFATCASourceStatus,
+						com.tools20022.repository.entity.FATCAStatus.mmInvestmentAccountParty, com.tools20022.repository.entity.FATCAStatus.mmFATCAReportingDate);
 				derivationComponent_lazy = () -> Arrays.asList(FATCAStatus1.mmObject(), FATCASource1Choice.mmObject(), FATCAStatus1Choice.mmObject(), FATCAStatus2.mmObject(), FATCAStatus2Choice.mmObject(), CRSSource1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FATCAStatus.class;
 			}
 		});
 		return mmObject_lazy.get();

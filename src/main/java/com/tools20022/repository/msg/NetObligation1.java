@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the amount, direction and parties involved in a payment obligation
@@ -97,6 +101,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NetObligation1", propOrder = {"obligationIdentification", "amount", "participantNettingIdentification", "obligationDirection", "counterpartyNettingIdentification", "netServiceCounterpartyIdentification",
+		"counterpartySettlementInstructions", "transactionsNumber"})
 public class NetObligation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -492,6 +499,7 @@ public class NetObligation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OblgtnId", required = true)
 	public Max35Text getObligationIdentification() {
 		return obligationIdentification;
 	}
@@ -500,6 +508,7 @@ public class NetObligation1 {
 		this.obligationIdentification = obligationIdentification;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -508,6 +517,7 @@ public class NetObligation1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "PtcptNetgId", required = true)
 	public NettingIdentification1Choice getParticipantNettingIdentification() {
 		return participantNettingIdentification;
 	}
@@ -516,6 +526,7 @@ public class NetObligation1 {
 		this.participantNettingIdentification = participantNettingIdentification;
 	}
 
+	@XmlElement(name = "OblgtnDrctn", required = true)
 	public PaymentReceipt1Code getObligationDirection() {
 		return obligationDirection;
 	}
@@ -524,6 +535,7 @@ public class NetObligation1 {
 		this.obligationDirection = obligationDirection;
 	}
 
+	@XmlElement(name = "CtrPtyNetgId", required = true)
 	public NettingIdentification1Choice getCounterpartyNettingIdentification() {
 		return counterpartyNettingIdentification;
 	}
@@ -532,6 +544,7 @@ public class NetObligation1 {
 		this.counterpartyNettingIdentification = counterpartyNettingIdentification;
 	}
 
+	@XmlElement(name = "NetSvcCtrPtyId")
 	public PartyIdentification73Choice getNetServiceCounterpartyIdentification() {
 		return netServiceCounterpartyIdentification;
 	}
@@ -540,6 +553,7 @@ public class NetObligation1 {
 		this.netServiceCounterpartyIdentification = netServiceCounterpartyIdentification;
 	}
 
+	@XmlElement(name = "CtrPtySttlmInstrs")
 	public SettlementParties29 getCounterpartySettlementInstructions() {
 		return counterpartySettlementInstructions;
 	}
@@ -548,6 +562,7 @@ public class NetObligation1 {
 		this.counterpartySettlementInstructions = counterpartySettlementInstructions;
 	}
 
+	@XmlElement(name = "TxsNb")
 	public Max10NumericText getTransactionsNumber() {
 		return transactionsNumber;
 	}

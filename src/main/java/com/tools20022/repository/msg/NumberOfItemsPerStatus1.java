@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides detailed information on the number of reported items with their
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * NumberOfTransactionsPerStatus3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NumberOfItemsPerStatus1", propOrder = {"status", "numberOfItems"})
 public class NumberOfItemsPerStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -193,6 +199,7 @@ public class NumberOfItemsPerStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public ReportItemStatus1Code getStatus() {
 		return status;
 	}
@@ -201,6 +208,7 @@ public class NumberOfItemsPerStatus1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "NbOfItms", required = true)
 	public Max15NumericText getNumberOfItems() {
 		return numberOfItems;
 	}

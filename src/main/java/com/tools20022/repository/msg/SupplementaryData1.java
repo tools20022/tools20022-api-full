@@ -27,6 +27,10 @@ import com.tools20022.repository.other.SupplementaryDataEnvelope1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional information that can not be captured in the structured fields
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SupplementaryData1", propOrder = {"placeAndName", "envelope"})
 public class SupplementaryData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -170,6 +176,7 @@ public class SupplementaryData1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -178,6 +185,7 @@ public class SupplementaryData1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "Envlp", required = true)
 	public SupplementaryDataEnvelope1 getEnvelope() {
 		return envelope;
 	}

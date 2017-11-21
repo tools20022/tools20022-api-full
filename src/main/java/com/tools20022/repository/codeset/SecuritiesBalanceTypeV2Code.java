@@ -29,26 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType11Code
- * SecuritiesBalanceType11Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
- * SecuritiesBalanceType5Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType12Code
- * SecuritiesBalanceType12Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType7Code
- * SecuritiesBalanceType7Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType13Code
- * SecuritiesBalanceType13Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType8Code
- * SecuritiesBalanceType8Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -168,6 +148,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceTypeV2Code#mmQuasiIssued
  * SecuritiesBalanceTypeV2Code.mmQuasiIssued}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType11Code
+ * SecuritiesBalanceType11Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
+ * SecuritiesBalanceType5Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType12Code
+ * SecuritiesBalanceType12Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType7Code
+ * SecuritiesBalanceType7Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType13Code
+ * SecuritiesBalanceType13Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType8Code
+ * SecuritiesBalanceType8Code}</li>
  * </ul>
  * </li>
  * <li>

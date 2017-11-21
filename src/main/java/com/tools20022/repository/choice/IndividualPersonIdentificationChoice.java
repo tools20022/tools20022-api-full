@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.GenericIdentification10;
 import com.tools20022.repository.msg.IndividualPerson4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of identification of an individual person.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualPersonIdentificationChoice", propOrder = {"identificationNumber", "personName"})
 public class IndividualPersonIdentificationChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class IndividualPersonIdentificationChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IdNb", required = true)
 	public GenericIdentification10 getIdentificationNumber() {
 		return identificationNumber;
 	}
@@ -226,6 +233,7 @@ public class IndividualPersonIdentificationChoice {
 		this.identificationNumber = identificationNumber;
 	}
 
+	@XmlElement(name = "PrsnNm", required = true)
 	public IndividualPerson4 getPersonName() {
 		return personName;
 	}

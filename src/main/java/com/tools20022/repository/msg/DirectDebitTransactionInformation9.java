@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide information specific to the individual direct
@@ -114,6 +118,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DirectDebitTransactionInformation9", propOrder = {"paymentIdentification", "paymentTypeInformation", "instructedAmount", "chargeBearer", "directDebitTransaction", "ultimateCreditor", "debtorAgent", "debtorAgentAccount",
+		"debtor", "debtorAccount", "ultimateDebtor", "instructionForCreditorAgent", "purpose", "regulatoryReporting", "tax", "relatedRemittanceInformation", "remittanceInformation"})
 public class DirectDebitTransactionInformation9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -980,6 +987,7 @@ public class DirectDebitTransactionInformation9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtId", required = true)
 	public PaymentIdentification1 getPaymentIdentification() {
 		return paymentIdentification;
 	}
@@ -988,6 +996,7 @@ public class DirectDebitTransactionInformation9 {
 		this.paymentIdentification = paymentIdentification;
 	}
 
+	@XmlElement(name = "PmtTpInf")
 	public PaymentTypeInformation20 getPaymentTypeInformation() {
 		return paymentTypeInformation;
 	}
@@ -996,6 +1005,7 @@ public class DirectDebitTransactionInformation9 {
 		this.paymentTypeInformation = paymentTypeInformation;
 	}
 
+	@XmlElement(name = "InstdAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getInstructedAmount() {
 		return instructedAmount;
 	}
@@ -1004,6 +1014,7 @@ public class DirectDebitTransactionInformation9 {
 		this.instructedAmount = instructedAmount;
 	}
 
+	@XmlElement(name = "ChrgBr")
 	public ChargeBearerType1Code getChargeBearer() {
 		return chargeBearer;
 	}
@@ -1012,6 +1023,7 @@ public class DirectDebitTransactionInformation9 {
 		this.chargeBearer = chargeBearer;
 	}
 
+	@XmlElement(name = "DrctDbtTx")
 	public DirectDebitTransaction6 getDirectDebitTransaction() {
 		return directDebitTransaction;
 	}
@@ -1020,6 +1032,7 @@ public class DirectDebitTransactionInformation9 {
 		this.directDebitTransaction = directDebitTransaction;
 	}
 
+	@XmlElement(name = "UltmtCdtr")
 	public PartyIdentification32 getUltimateCreditor() {
 		return ultimateCreditor;
 	}
@@ -1028,6 +1041,7 @@ public class DirectDebitTransactionInformation9 {
 		this.ultimateCreditor = ultimateCreditor;
 	}
 
+	@XmlElement(name = "DbtrAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification4 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -1036,6 +1050,7 @@ public class DirectDebitTransactionInformation9 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "DbtrAgtAcct")
 	public CashAccount16 getDebtorAgentAccount() {
 		return debtorAgentAccount;
 	}
@@ -1044,6 +1059,7 @@ public class DirectDebitTransactionInformation9 {
 		this.debtorAgentAccount = debtorAgentAccount;
 	}
 
+	@XmlElement(name = "Dbtr", required = true)
 	public PartyIdentification32 getDebtor() {
 		return debtor;
 	}
@@ -1052,6 +1068,7 @@ public class DirectDebitTransactionInformation9 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAcct", required = true)
 	public CashAccount16 getDebtorAccount() {
 		return debtorAccount;
 	}
@@ -1060,6 +1077,7 @@ public class DirectDebitTransactionInformation9 {
 		this.debtorAccount = debtorAccount;
 	}
 
+	@XmlElement(name = "UltmtDbtr")
 	public PartyIdentification32 getUltimateDebtor() {
 		return ultimateDebtor;
 	}
@@ -1068,6 +1086,7 @@ public class DirectDebitTransactionInformation9 {
 		this.ultimateDebtor = ultimateDebtor;
 	}
 
+	@XmlElement(name = "InstrForCdtrAgt")
 	public Max140Text getInstructionForCreditorAgent() {
 		return instructionForCreditorAgent;
 	}
@@ -1076,6 +1095,7 @@ public class DirectDebitTransactionInformation9 {
 		this.instructionForCreditorAgent = instructionForCreditorAgent;
 	}
 
+	@XmlElement(name = "Purp")
 	public Purpose2Choice getPurpose() {
 		return purpose;
 	}
@@ -1084,6 +1104,7 @@ public class DirectDebitTransactionInformation9 {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "RgltryRptg")
 	public List<RegulatoryReporting3> getRegulatoryReporting() {
 		return regulatoryReporting;
 	}
@@ -1092,6 +1113,7 @@ public class DirectDebitTransactionInformation9 {
 		this.regulatoryReporting = regulatoryReporting;
 	}
 
+	@XmlElement(name = "Tax")
 	public TaxInformation3 getTax() {
 		return tax;
 	}
@@ -1100,6 +1122,7 @@ public class DirectDebitTransactionInformation9 {
 		this.tax = tax;
 	}
 
+	@XmlElement(name = "RltdRmtInf")
 	public List<RemittanceLocation2> getRelatedRemittanceInformation() {
 		return relatedRemittanceInformation;
 	}
@@ -1108,6 +1131,7 @@ public class DirectDebitTransactionInformation9 {
 		this.relatedRemittanceInformation = relatedRemittanceInformation;
 	}
 
+	@XmlElement(name = "RmtInf")
 	public RemittanceInformation5 getRemittanceInformation() {
 		return remittanceInformation;
 	}

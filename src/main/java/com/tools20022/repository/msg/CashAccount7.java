@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information used for identifying an account.
@@ -72,6 +76,8 @@ import java.util.function.Supplier;
  * definition} = "Information used for identifying an account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccount7", propOrder = {"identification", "type", "currency", "name"})
 public class CashAccount7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -300,6 +306,7 @@ public class CashAccount7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentification3Choice getIdentification() {
 		return identification;
 	}
@@ -308,6 +315,7 @@ public class CashAccount7 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp")
 	public CashAccountType2 getType() {
 		return type;
 	}
@@ -316,6 +324,7 @@ public class CashAccount7 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -324,6 +333,7 @@ public class CashAccount7 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max70Text getName() {
 		return name;
 	}

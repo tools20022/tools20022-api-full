@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountAndDirection61;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice to define the price of the securities transaction.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice to define the price of the securities transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTransactionPrice2Choice", propOrder = {"monetaryValue", "percentage", "yield", "basisPoints"})
 public class SecuritiesTransactionPrice2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -282,6 +288,7 @@ public class SecuritiesTransactionPrice2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MntryVal", required = true)
 	public AmountAndDirection61 getMonetaryValue() {
 		return monetaryValue;
 	}
@@ -290,6 +297,7 @@ public class SecuritiesTransactionPrice2Choice {
 		this.monetaryValue = monetaryValue;
 	}
 
+	@XmlElement(name = "Pctg", required = true)
 	public PercentageRate getPercentage() {
 		return percentage;
 	}
@@ -298,6 +306,7 @@ public class SecuritiesTransactionPrice2Choice {
 		this.percentage = percentage;
 	}
 
+	@XmlElement(name = "Yld", required = true)
 	public PercentageRate getYield() {
 		return yield;
 	}
@@ -306,6 +315,7 @@ public class SecuritiesTransactionPrice2Choice {
 		this.yield = yield;
 	}
 
+	@XmlElement(name = "BsisPts", required = true)
 	public DecimalNumber getBasisPoints() {
 		return basisPoints;
 	}

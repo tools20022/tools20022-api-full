@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Restrictions, remarks or notes that may be applied to an account or
@@ -97,6 +101,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountRestrictions1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditiononalInformation12", propOrder = {"limitation", "additionalInformation", "accountValidation", "type", "regulator", "status", "period"})
 public class AdditiononalInformation12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -458,6 +464,7 @@ public class AdditiononalInformation12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Lmttn")
 	public Max350Text getLimitation() {
 		return limitation;
 	}
@@ -466,6 +473,7 @@ public class AdditiononalInformation12 {
 		this.limitation = limitation;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -474,6 +482,7 @@ public class AdditiononalInformation12 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "AcctVldtn")
 	public Max350Text getAccountValidation() {
 		return accountValidation;
 	}
@@ -482,6 +491,7 @@ public class AdditiononalInformation12 {
 		this.accountValidation = accountValidation;
 	}
 
+	@XmlElement(name = "Tp")
 	public Max35Text getType() {
 		return type;
 	}
@@ -490,6 +500,7 @@ public class AdditiononalInformation12 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Rgltr")
 	public PartyIdentification70Choice getRegulator() {
 		return regulator;
 	}
@@ -498,6 +509,7 @@ public class AdditiononalInformation12 {
 		this.regulator = regulator;
 	}
 
+	@XmlElement(name = "Sts")
 	public RestrictionStatus1Choice getStatus() {
 		return status;
 	}
@@ -506,6 +518,7 @@ public class AdditiononalInformation12 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Prd")
 	public DateTimePeriodDetails1 getPeriod() {
 		return period;
 	}

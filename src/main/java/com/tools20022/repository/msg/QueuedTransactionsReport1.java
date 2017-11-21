@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment funds transfer instructions from intraday queue.
@@ -67,6 +71,8 @@ import java.util.List;
  * definition} = "Payment funds transfer instructions from intraday queue."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QueuedTransactionsReport1", propOrder = {"queueType", "numberOfTransactions", "totalAmount", "breakdownByCounterparty"})
 public class QueuedTransactionsReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -249,6 +255,7 @@ public class QueuedTransactionsReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QTp", required = true)
 	public Max35Text getQueueType() {
 		return queueType;
 	}
@@ -257,6 +264,7 @@ public class QueuedTransactionsReport1 {
 		this.queueType = queueType;
 	}
 
+	@XmlElement(name = "NbOfTxs")
 	public Number getNumberOfTransactions() {
 		return numberOfTransactions;
 	}
@@ -265,6 +273,7 @@ public class QueuedTransactionsReport1 {
 		this.numberOfTransactions = numberOfTransactions;
 	}
 
+	@XmlElement(name = "TtlAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -273,6 +282,7 @@ public class QueuedTransactionsReport1 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "BrkdwnByCtrPty")
 	public List<QueueTransaction1> getBreakdownByCounterparty() {
 		return breakdownByCounterparty;
 	}

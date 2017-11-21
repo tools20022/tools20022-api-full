@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Environment of the diagnostic exchange.
@@ -88,6 +92,8 @@ import java.util.List;
  * CardPaymentEnvironment17}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentEnvironment29", propOrder = {"acquirer", "acquirerAvailabilityRequested", "merchantIdentification", "POIIdentification", "POIComponent"})
 public class CardPaymentEnvironment29 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -408,6 +414,7 @@ public class CardPaymentEnvironment29 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acqrr", required = true)
 	public Acquirer2 getAcquirer() {
 		return acquirer;
 	}
@@ -416,6 +423,7 @@ public class CardPaymentEnvironment29 {
 		this.acquirer = acquirer;
 	}
 
+	@XmlElement(name = "AcqrrAvlbtyReqd")
 	public TrueFalseIndicator getAcquirerAvailabilityRequested() {
 		return acquirerAvailabilityRequested;
 	}
@@ -424,6 +432,7 @@ public class CardPaymentEnvironment29 {
 		this.acquirerAvailabilityRequested = acquirerAvailabilityRequested;
 	}
 
+	@XmlElement(name = "MrchntId")
 	public GenericIdentification32 getMerchantIdentification() {
 		return merchantIdentification;
 	}
@@ -432,6 +441,7 @@ public class CardPaymentEnvironment29 {
 		this.merchantIdentification = merchantIdentification;
 	}
 
+	@XmlElement(name = "POIId")
 	public GenericIdentification32 getPOIIdentification() {
 		return pOIIdentification;
 	}
@@ -440,6 +450,7 @@ public class CardPaymentEnvironment29 {
 		this.pOIIdentification = pOIIdentification;
 	}
 
+	@XmlElement(name = "POICmpnt")
 	public List<PointOfInteractionComponent4> getPOIComponent() {
 		return pOIComponent;
 	}

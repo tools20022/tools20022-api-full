@@ -30,6 +30,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Execution of a switch order.
@@ -113,6 +117,9 @@ import java.util.List;
  * definition} = "Execution of a switch order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwitchExecution3", propOrder = {"orderDateTime", "dealReference", "orderReference", "investmentAccountDetails", "totalRedemptionAmount", "totalSubscriptionAmount", "additionalCashIn", "resultingCashOut",
+		"redemptionLegDetails", "subscriptionLegDetails", "cashSettlementDetails", "foreignExchangeDetails"})
 public class SwitchExecution3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -779,6 +786,7 @@ public class SwitchExecution3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrDtTm")
 	public ISODateTime getOrderDateTime() {
 		return orderDateTime;
 	}
@@ -787,6 +795,7 @@ public class SwitchExecution3 {
 		this.orderDateTime = orderDateTime;
 	}
 
+	@XmlElement(name = "DealRef", required = true)
 	public Max35Text getDealReference() {
 		return dealReference;
 	}
@@ -795,6 +804,7 @@ public class SwitchExecution3 {
 		this.dealReference = dealReference;
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -803,6 +813,7 @@ public class SwitchExecution3 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount13 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -811,6 +822,7 @@ public class SwitchExecution3 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "TtlRedAmt")
 	public ActiveCurrencyAndAmount getTotalRedemptionAmount() {
 		return totalRedemptionAmount;
 	}
@@ -819,6 +831,7 @@ public class SwitchExecution3 {
 		this.totalRedemptionAmount = totalRedemptionAmount;
 	}
 
+	@XmlElement(name = "TtlSbcptAmt")
 	public ActiveCurrencyAndAmount getTotalSubscriptionAmount() {
 		return totalSubscriptionAmount;
 	}
@@ -827,6 +840,7 @@ public class SwitchExecution3 {
 		this.totalSubscriptionAmount = totalSubscriptionAmount;
 	}
 
+	@XmlElement(name = "AddtlCshIn")
 	public ActiveCurrencyAndAmount getAdditionalCashIn() {
 		return additionalCashIn;
 	}
@@ -835,6 +849,7 @@ public class SwitchExecution3 {
 		this.additionalCashIn = additionalCashIn;
 	}
 
+	@XmlElement(name = "RsltgCshOut")
 	public ActiveCurrencyAndAmount getResultingCashOut() {
 		return resultingCashOut;
 	}
@@ -843,6 +858,7 @@ public class SwitchExecution3 {
 		this.resultingCashOut = resultingCashOut;
 	}
 
+	@XmlElement(name = "RedLegDtls", required = true)
 	public List<SwitchRedemptionLegExecution2> getRedemptionLegDetails() {
 		return redemptionLegDetails;
 	}
@@ -851,6 +867,7 @@ public class SwitchExecution3 {
 		this.redemptionLegDetails = redemptionLegDetails;
 	}
 
+	@XmlElement(name = "SbcptLegDtls", required = true)
 	public List<SwitchSubscriptionLegExecution2> getSubscriptionLegDetails() {
 		return subscriptionLegDetails;
 	}
@@ -859,6 +876,7 @@ public class SwitchExecution3 {
 		this.subscriptionLegDetails = subscriptionLegDetails;
 	}
 
+	@XmlElement(name = "CshSttlmDtls")
 	public PaymentTransaction14 getCashSettlementDetails() {
 		return cashSettlementDetails;
 	}
@@ -867,6 +885,7 @@ public class SwitchExecution3 {
 		this.cashSettlementDetails = cashSettlementDetails;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public List<ForeignExchangeTerms4> getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}

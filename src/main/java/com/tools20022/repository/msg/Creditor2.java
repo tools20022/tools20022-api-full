@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the creditor.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about the creditor."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Creditor2", propOrder = {"creditor", "accountIdentification", "finalAgent"})
 public class Creditor2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -235,6 +241,7 @@ public class Creditor2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cdtr")
 	public PartyIdentification2Choice getCreditor() {
 		return creditor;
 	}
@@ -243,6 +250,7 @@ public class Creditor2 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentificationAndName3 getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -251,6 +259,7 @@ public class Creditor2 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "FnlAgt", required = true)
 	public FinancialInstitutionIdentification3Choice getFinalAgent() {
 		return finalAgent;
 	}

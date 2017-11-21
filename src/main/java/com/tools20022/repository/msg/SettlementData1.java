@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on the settlement of a treasury trade.
@@ -98,6 +102,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information on the settlement of a treasury trade."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementData1", propOrder = {"cashFlowUniqueReference", "settlementSystemUniqueReference", "settlementAmount", "settledAmount", "rejectedAmount", "payingParty", "receivingParty", "settlementDate", "settlementStatus",
+		"extendedSettlementStatus", "settlementStatusSubType", "suspended", "pending"})
 public class SettlementData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -764,6 +771,7 @@ public class SettlementData1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshFlowUnqRef")
 	public Max35Text getCashFlowUniqueReference() {
 		return cashFlowUniqueReference;
 	}
@@ -772,6 +780,7 @@ public class SettlementData1 {
 		this.cashFlowUniqueReference = cashFlowUniqueReference;
 	}
 
+	@XmlElement(name = "SttlmSysUnqRef")
 	public Max35Text getSettlementSystemUniqueReference() {
 		return settlementSystemUniqueReference;
 	}
@@ -780,6 +789,7 @@ public class SettlementData1 {
 		this.settlementSystemUniqueReference = settlementSystemUniqueReference;
 	}
 
+	@XmlElement(name = "SttlmAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -788,6 +798,7 @@ public class SettlementData1 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "SttldAmt")
 	public ActiveOrHistoricCurrencyAndAmount getSettledAmount() {
 		return settledAmount;
 	}
@@ -796,6 +807,7 @@ public class SettlementData1 {
 		this.settledAmount = settledAmount;
 	}
 
+	@XmlElement(name = "RjctdAmt")
 	public ActiveOrHistoricCurrencyAndAmount getRejectedAmount() {
 		return rejectedAmount;
 	}
@@ -804,6 +816,7 @@ public class SettlementData1 {
 		this.rejectedAmount = rejectedAmount;
 	}
 
+	@XmlElement(name = "PngPty", required = true)
 	public PartyIdentification7Choice getPayingParty() {
 		return payingParty;
 	}
@@ -812,6 +825,7 @@ public class SettlementData1 {
 		this.payingParty = payingParty;
 	}
 
+	@XmlElement(name = "RcvgPty", required = true)
 	public PartyIdentification7Choice getReceivingParty() {
 		return receivingParty;
 	}
@@ -820,6 +834,7 @@ public class SettlementData1 {
 		this.receivingParty = receivingParty;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
@@ -828,6 +843,7 @@ public class SettlementData1 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "SttlmSts", required = true)
 	public SettlementStatus1Code getSettlementStatus() {
 		return settlementStatus;
 	}
@@ -836,6 +852,7 @@ public class SettlementData1 {
 		this.settlementStatus = settlementStatus;
 	}
 
+	@XmlElement(name = "XtndedSttlmSts", required = true)
 	public Extended350Code getExtendedSettlementStatus() {
 		return extendedSettlementStatus;
 	}
@@ -844,6 +861,7 @@ public class SettlementData1 {
 		this.extendedSettlementStatus = extendedSettlementStatus;
 	}
 
+	@XmlElement(name = "SttlmStsSubTp")
 	public Max70Text getSettlementStatusSubType() {
 		return settlementStatusSubType;
 	}
@@ -852,6 +870,7 @@ public class SettlementData1 {
 		this.settlementStatusSubType = settlementStatusSubType;
 	}
 
+	@XmlElement(name = "Sspd", required = true)
 	public YesNoIndicator getSuspended() {
 		return suspended;
 	}
@@ -860,6 +879,7 @@ public class SettlementData1 {
 		this.suspended = suspended;
 	}
 
+	@XmlElement(name = "Pdg", required = true)
 	public YesNoIndicator getPending() {
 		return pending;
 	}

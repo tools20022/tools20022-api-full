@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information important for the users of the message/service, which cannot be
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UserDefinedInformation1", propOrder = {"label", "information"})
 public class UserDefinedInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class UserDefinedInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Labl", required = true)
 	public Max35Text getLabel() {
 		return label;
 	}
@@ -169,6 +176,7 @@ public class UserDefinedInformation1 {
 		this.label = label;
 	}
 
+	@XmlElement(name = "Inf", required = true)
 	public Max140Text getInformation() {
 		return information;
 	}

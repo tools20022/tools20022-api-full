@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.BuyerRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to identify an organization or a person.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification72", propOrder = {"partyIdentification", "legalOrganisation", "taxParty"})
 public class PartyIdentification72 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -209,6 +215,7 @@ public class PartyIdentification72 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification43 getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -217,6 +224,7 @@ public class PartyIdentification72 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "LglOrg")
 	public LegalOrganisation1 getLegalOrganisation() {
 		return legalOrganisation;
 	}
@@ -225,6 +233,7 @@ public class PartyIdentification72 {
 		this.legalOrganisation = legalOrganisation;
 	}
 
+	@XmlElement(name = "TaxPty")
 	public TaxParty1 getTaxParty() {
 		return taxParty;
 	}

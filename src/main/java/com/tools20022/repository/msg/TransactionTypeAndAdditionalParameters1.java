@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Securities financing transaction identification information, type (repurchase
@@ -111,6 +115,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionTypeAndAdditionalParameters1", propOrder = {"securitiesFinancingTransactionType", "payment", "commonIdentification", "reconciliationIndicator"})
 public class TransactionTypeAndAdditionalParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -376,6 +382,7 @@ public class TransactionTypeAndAdditionalParameters1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesFincgTxTp", required = true)
 	public SecuritiesFinancingTransactionType1Code getSecuritiesFinancingTransactionType() {
 		return securitiesFinancingTransactionType;
 	}
@@ -384,6 +391,7 @@ public class TransactionTypeAndAdditionalParameters1 {
 		this.securitiesFinancingTransactionType = securitiesFinancingTransactionType;
 	}
 
+	@XmlElement(name = "Pmt", required = true)
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
@@ -392,6 +400,7 @@ public class TransactionTypeAndAdditionalParameters1 {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "CmonId")
 	public Max35Text getCommonIdentification() {
 		return commonIdentification;
 	}
@@ -400,6 +409,7 @@ public class TransactionTypeAndAdditionalParameters1 {
 		this.commonIdentification = commonIdentification;
 	}
 
+	@XmlElement(name = "RcncltnInd")
 	public YesNoIndicator getReconciliationIndicator() {
 		return reconciliationIndicator;
 	}

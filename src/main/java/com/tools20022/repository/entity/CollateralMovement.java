@@ -22,6 +22,7 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -35,6 +36,32 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmRelatedCollateralProposal
+ * CollateralMovement.mmRelatedCollateralProposal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmVariationMargin
+ * CollateralMovement.mmVariationMargin}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmSegregatedIndependentAmount
+ * CollateralMovement.mmSegregatedIndependentAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmMarginCall
+ * CollateralMovement.mmMarginCall}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmSecuritiesCollateralMovement
+ * CollateralMovement.mmSecuritiesCollateralMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmCashCollateralMovement
+ * CollateralMovement.mmCashCollateralMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmFinancialTransaction
+ * CollateralMovement.mmFinancialTransaction}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -74,32 +101,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.choice.MarginResult1Choice#mmDeficitAmount
  * MarginResult1Choice.mmDeficitAmount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmRelatedCollateralProposal
- * CollateralMovement.mmRelatedCollateralProposal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmVariationMargin
- * CollateralMovement.mmVariationMargin}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmSegregatedIndependentAmount
- * CollateralMovement.mmSegregatedIndependentAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmMarginCall
- * CollateralMovement.mmMarginCall}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmSecuritiesCollateralMovement
- * CollateralMovement.mmSecuritiesCollateralMovement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmCashCollateralMovement
- * CollateralMovement.mmCashCollateralMovement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmFinancialTransaction
- * CollateralMovement.mmFinancialTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -158,7 +159,7 @@ public class CollateralMovement {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCollateralProposal = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CollateralMovement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedCollateralProposal";
@@ -183,11 +184,6 @@ public class CollateralMovement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralMovement
-	 * CollateralMovement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -218,6 +214,11 @@ public class CollateralMovement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralMovement
+	 * CollateralMovement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -234,7 +235,7 @@ public class CollateralMovement {
 		{
 			derivation_lazy = () -> Arrays.asList(CollateralProposalResponse1.mmVariationMargin, CollateralProposal2.mmVariationMargin, CollateralProposal3.mmVariationMargin, CollateralProposal4.mmVariationMargin,
 					CollateralProposalResponse2.mmVariationMargin, CollateralProposal5.mmVariationMargin, CollateralProposalResponse3.mmVariationMargin, CollateralProposal6.mmVariationMargin);
-			elementContext_lazy = () -> CollateralMovement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMargin";
@@ -242,6 +243,14 @@ public class CollateralMovement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralMovement.class.getMethod("getVariationMargin", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount segregatedIndependentAmount;
@@ -257,11 +266,6 @@ public class CollateralMovement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralMovement
-	 * CollateralMovement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -316,6 +320,11 @@ public class CollateralMovement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralMovement
+	 * CollateralMovement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -336,7 +345,7 @@ public class CollateralMovement {
 					CollateralProposalResponse2.mmSegregatedIndependentAmount, CollateralProposal4Choice.mmSegregatedIndependentAmount, CollateralProposal5.mmSegregatedIndependentAmount,
 					CollateralProposalResponse3Choice.mmSegregatedIndependentAmount, CollateralProposal5Choice.mmSegregatedIndependentAmount, CollateralProposalResponse3.mmSegregatedIndependentAmount,
 					CollateralProposal6.mmSegregatedIndependentAmount);
-			elementContext_lazy = () -> CollateralMovement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
@@ -344,6 +353,14 @@ public class CollateralMovement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralMovement.class.getMethod("getSegregatedIndependentAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.MarginCall> marginCall;
@@ -382,7 +399,7 @@ public class CollateralMovement {
 	 */
 	public static final MMBusinessAssociationEnd mmMarginCall = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CollateralMovement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCall";
@@ -430,7 +447,7 @@ public class CollateralMovement {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesCollateralMovement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CollateralMovement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCollateralMovement";
@@ -477,7 +494,7 @@ public class CollateralMovement {
 	 */
 	public static final MMBusinessAssociationEnd mmCashCollateralMovement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CollateralMovement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashCollateralMovement";
@@ -527,7 +544,7 @@ public class CollateralMovement {
 	 */
 	public static final MMBusinessAssociationEnd mmFinancialTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CollateralMovement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialTransaction";
@@ -551,9 +568,16 @@ public class CollateralMovement {
 						com.tools20022.repository.entity.MarginCall.mmCollateralMovement, com.tools20022.repository.entity.CollateralProposal.mmProposedCollateralMovement,
 						com.tools20022.repository.entity.FinancialTransaction.mmCollateralMovement);
 				derivationElement_lazy = () -> Arrays.asList(MarginResult1Choice.mmExcessAmount, MarginResult1Choice.mmDeficitAmount);
-				element_lazy = () -> Arrays.asList(CollateralMovement.mmRelatedCollateralProposal, CollateralMovement.mmVariationMargin, CollateralMovement.mmSegregatedIndependentAmount, CollateralMovement.mmMarginCall,
-						CollateralMovement.mmSecuritiesCollateralMovement, CollateralMovement.mmCashCollateralMovement, CollateralMovement.mmFinancialTransaction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralMovement.mmRelatedCollateralProposal, com.tools20022.repository.entity.CollateralMovement.mmVariationMargin,
+						com.tools20022.repository.entity.CollateralMovement.mmSegregatedIndependentAmount, com.tools20022.repository.entity.CollateralMovement.mmMarginCall,
+						com.tools20022.repository.entity.CollateralMovement.mmSecuritiesCollateralMovement, com.tools20022.repository.entity.CollateralMovement.mmCashCollateralMovement,
+						com.tools20022.repository.entity.CollateralMovement.mmFinancialTransaction);
 				derivationComponent_lazy = () -> Arrays.asList(MarginResult1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CollateralMovement.class;
 			}
 		});
 		return mmObject_lazy.get();

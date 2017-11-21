@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the original notification item, to which the cancellation advice
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * OriginalItem4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalItem5", propOrder = {"originalItemIdentification", "originalEndToEndIdentification", "amount", "expectedValueDate", "originalItemReference"})
 public class OriginalItem5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -368,6 +374,7 @@ public class OriginalItem5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlItmId", required = true)
 	public Max35Text getOriginalItemIdentification() {
 		return originalItemIdentification;
 	}
@@ -376,6 +383,7 @@ public class OriginalItem5 {
 		this.originalItemIdentification = originalItemIdentification;
 	}
 
+	@XmlElement(name = "OrgnlEndToEndId")
 	public Max35Text getOriginalEndToEndIdentification() {
 		return originalEndToEndIdentification;
 	}
@@ -384,6 +392,7 @@ public class OriginalItem5 {
 		this.originalEndToEndIdentification = originalEndToEndIdentification;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -392,6 +401,7 @@ public class OriginalItem5 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "XpctdValDt")
 	public ISODate getExpectedValueDate() {
 		return expectedValueDate;
 	}
@@ -400,6 +410,7 @@ public class OriginalItem5 {
 		this.expectedValueDate = expectedValueDate;
 	}
 
+	@XmlElement(name = "OrgnlItmRef")
 	public OriginalItemReference4 getOriginalItemReference() {
 		return originalItemReference;
 	}

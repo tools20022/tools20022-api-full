@@ -54,6 +54,8 @@ public class Max2048Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max2048Text";
 				definition = "Specifies a character string with a maximum length of 2048 characters.";
+				minLength = 1;
+				maxLength = 2048;
 			}
 		});
 		return mmObject_lazy.get();

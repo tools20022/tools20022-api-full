@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Plan that allows investors to schedule periodical investments or divestments,
@@ -122,6 +126,9 @@ import java.util.List;
  * InvestmentPlan5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentPlan7", propOrder = {"frequency", "startDate", "endDate", "quantity", "grossAmountIndicator", "incomePreference", "initialNumberOfInstalment", "totalNumberOfInstalment", "roundingDirection", "securityDetails",
+		"modifiedCashSettlement", "contractReference", "relatedContractReference", "productIdentification", "SLAChargeAndCommissionReference", "insuranceCover"})
 public class InvestmentPlan7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1057,6 +1064,7 @@ public class InvestmentPlan7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Frqcy", required = true)
 	public Frequency19Choice getFrequency() {
 		return frequency;
 	}
@@ -1065,6 +1073,7 @@ public class InvestmentPlan7 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "StartDt")
 	public ISODate getStartDate() {
 		return startDate;
 	}
@@ -1073,6 +1082,7 @@ public class InvestmentPlan7 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "EndDt")
 	public ISODate getEndDate() {
 		return endDate;
 	}
@@ -1081,6 +1091,7 @@ public class InvestmentPlan7 {
 		this.endDate = endDate;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public UnitsOrAmount1Choice getQuantity() {
 		return quantity;
 	}
@@ -1089,6 +1100,7 @@ public class InvestmentPlan7 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "GrssAmtInd")
 	public YesNoIndicator getGrossAmountIndicator() {
 		return grossAmountIndicator;
 	}
@@ -1097,6 +1109,7 @@ public class InvestmentPlan7 {
 		this.grossAmountIndicator = grossAmountIndicator;
 	}
 
+	@XmlElement(name = "IncmPref")
 	public IncomePreference1Code getIncomePreference() {
 		return incomePreference;
 	}
@@ -1105,6 +1118,7 @@ public class InvestmentPlan7 {
 		this.incomePreference = incomePreference;
 	}
 
+	@XmlElement(name = "InitlNbOfInstlmt")
 	public Number getInitialNumberOfInstalment() {
 		return initialNumberOfInstalment;
 	}
@@ -1113,6 +1127,7 @@ public class InvestmentPlan7 {
 		this.initialNumberOfInstalment = initialNumberOfInstalment;
 	}
 
+	@XmlElement(name = "TtlNbOfInstlmt")
 	public Number getTotalNumberOfInstalment() {
 		return totalNumberOfInstalment;
 	}
@@ -1121,6 +1136,7 @@ public class InvestmentPlan7 {
 		this.totalNumberOfInstalment = totalNumberOfInstalment;
 	}
 
+	@XmlElement(name = "RndgDrctn")
 	public RoundingDirection1Code getRoundingDirection() {
 		return roundingDirection;
 	}
@@ -1129,6 +1145,7 @@ public class InvestmentPlan7 {
 		this.roundingDirection = roundingDirection;
 	}
 
+	@XmlElement(name = "SctyDtls", required = true)
 	public List<Repartition2> getSecurityDetails() {
 		return securityDetails;
 	}
@@ -1137,6 +1154,7 @@ public class InvestmentPlan7 {
 		this.securityDetails = securityDetails;
 	}
 
+	@XmlElement(name = "ModfdCshSttlm")
 	public List<InvestmentFundCashSettlementInformation6> getModifiedCashSettlement() {
 		return modifiedCashSettlement;
 	}
@@ -1145,6 +1163,7 @@ public class InvestmentPlan7 {
 		this.modifiedCashSettlement = modifiedCashSettlement;
 	}
 
+	@XmlElement(name = "CtrctRef")
 	public Max35Text getContractReference() {
 		return contractReference;
 	}
@@ -1153,6 +1172,7 @@ public class InvestmentPlan7 {
 		this.contractReference = contractReference;
 	}
 
+	@XmlElement(name = "RltdCtrctRef")
 	public Max35Text getRelatedContractReference() {
 		return relatedContractReference;
 	}
@@ -1161,6 +1181,7 @@ public class InvestmentPlan7 {
 		this.relatedContractReference = relatedContractReference;
 	}
 
+	@XmlElement(name = "PdctId")
 	public Max35Text getProductIdentification() {
 		return productIdentification;
 	}
@@ -1169,6 +1190,7 @@ public class InvestmentPlan7 {
 		this.productIdentification = productIdentification;
 	}
 
+	@XmlElement(name = "SLAChrgAndComssnRef")
 	public Max35Text getSLAChargeAndCommissionReference() {
 		return sLAChargeAndCommissionReference;
 	}
@@ -1177,6 +1199,7 @@ public class InvestmentPlan7 {
 		this.sLAChargeAndCommissionReference = sLAChargeAndCommissionReference;
 	}
 
+	@XmlElement(name = "InsrncCover")
 	public InsuranceType1Choice getInsuranceCover() {
 		return insuranceCover;
 	}

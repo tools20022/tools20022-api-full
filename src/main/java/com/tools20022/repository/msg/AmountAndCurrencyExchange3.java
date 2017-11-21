@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide information on the original amount.
@@ -73,6 +77,8 @@ import java.util.List;
  * "Set of elements used to provide information on the original amount."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountAndCurrencyExchange3", propOrder = {"instructedAmount", "transactionAmount", "counterValueAmount", "announcedPostingAmount", "proprietaryAmount"})
 public class AmountAndCurrencyExchange3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -348,6 +354,7 @@ public class AmountAndCurrencyExchange3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstdAmt")
 	public AmountAndCurrencyExchangeDetails3 getInstructedAmount() {
 		return instructedAmount;
 	}
@@ -356,6 +363,7 @@ public class AmountAndCurrencyExchange3 {
 		this.instructedAmount = instructedAmount;
 	}
 
+	@XmlElement(name = "TxAmt")
 	public AmountAndCurrencyExchangeDetails3 getTransactionAmount() {
 		return transactionAmount;
 	}
@@ -364,6 +372,7 @@ public class AmountAndCurrencyExchange3 {
 		this.transactionAmount = transactionAmount;
 	}
 
+	@XmlElement(name = "CntrValAmt")
 	public AmountAndCurrencyExchangeDetails3 getCounterValueAmount() {
 		return counterValueAmount;
 	}
@@ -372,6 +381,7 @@ public class AmountAndCurrencyExchange3 {
 		this.counterValueAmount = counterValueAmount;
 	}
 
+	@XmlElement(name = "AnncdPstngAmt")
 	public AmountAndCurrencyExchangeDetails3 getAnnouncedPostingAmount() {
 		return announcedPostingAmount;
 	}
@@ -380,6 +390,7 @@ public class AmountAndCurrencyExchange3 {
 		this.announcedPostingAmount = announcedPostingAmount;
 	}
 
+	@XmlElement(name = "PrtryAmt")
 	public List<AmountAndCurrencyExchangeDetails4> getProprietaryAmount() {
 		return proprietaryAmount;
 	}

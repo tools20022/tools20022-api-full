@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.QualifierCode;
 import com.tools20022.repository.codeset.QuoteTypeCode;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,44 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmQualifier
+ * SecuritiesQuoteVariable.mmQualifier}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmType
+ * SecuritiesQuoteVariable.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmQuoteTradingSession
+ * SecuritiesQuoteVariable.mmQuoteTradingSession}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmLegSwapType
+ * SecuritiesQuoteVariable.mmLegSwapType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmPriceType
+ * SecuritiesQuoteVariable.mmPriceType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmMidSide
+ * SecuritiesQuoteVariable.mmMidSide}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmBidSide
+ * SecuritiesQuoteVariable.mmBidSide}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmOfferSide
+ * SecuritiesQuoteVariable.mmOfferSide}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmRelatedQuote
+ * SecuritiesQuoteVariable.mmRelatedQuote}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmSecuritiesOrder
+ * SecuritiesQuoteVariable.mmSecuritiesOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmCommission
+ * SecuritiesQuoteVariable.mmCommission}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -100,44 +139,6 @@ import java.util.List;
  * QuoteRequest1.mmQuoteDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmQualifier
- * SecuritiesQuoteVariable.mmQualifier}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmType
- * SecuritiesQuoteVariable.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmQuoteTradingSession
- * SecuritiesQuoteVariable.mmQuoteTradingSession}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmLegSwapType
- * SecuritiesQuoteVariable.mmLegSwapType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmPriceType
- * SecuritiesQuoteVariable.mmPriceType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmMidSide
- * SecuritiesQuoteVariable.mmMidSide}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmBidSide
- * SecuritiesQuoteVariable.mmBidSide}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmOfferSide
- * SecuritiesQuoteVariable.mmOfferSide}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmRelatedQuote
- * SecuritiesQuoteVariable.mmRelatedQuote}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmSecuritiesOrder
- * SecuritiesQuoteVariable.mmSecuritiesOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmCommission
- * SecuritiesQuoteVariable.mmCommission}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -167,11 +168,6 @@ public class SecuritiesQuoteVariable {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.QualifierCode
 	 * QualifierCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
-	 * SecuritiesQuoteVariable}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -183,6 +179,11 @@ public class SecuritiesQuoteVariable {
 	 * Quote1.mmQualifier}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
+	 * SecuritiesQuoteVariable}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -197,7 +198,7 @@ public class SecuritiesQuoteVariable {
 	public static final MMBusinessAttribute mmQualifier = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SingleQuote1.mmQualifier, Quote3.mmQualifier, Quote1.mmQualifier);
-			elementContext_lazy = () -> SecuritiesQuoteVariable.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Qualifier";
@@ -205,6 +206,14 @@ public class SecuritiesQuoteVariable {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> QualifierCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesQuoteVariable.class.getMethod("getQualifier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected QuoteTypeCode type;
@@ -219,11 +228,6 @@ public class SecuritiesQuoteVariable {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.QuoteTypeCode
 	 * QuoteTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
-	 * SecuritiesQuoteVariable}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -241,6 +245,11 @@ public class SecuritiesQuoteVariable {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
+	 * SecuritiesQuoteVariable}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -256,7 +265,7 @@ public class SecuritiesQuoteVariable {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Quote3.mmType, RequestForQuote.mmQuoteType, Quote1.mmType, Quote2.mmType, Quote4.mmType);
-			elementContext_lazy = () -> SecuritiesQuoteVariable.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -264,6 +273,14 @@ public class SecuritiesQuoteVariable {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> QuoteTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesQuoteVariable.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TradingSession quoteTradingSession;
@@ -284,11 +301,6 @@ public class SecuritiesQuoteVariable {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.TradingSession
 	 * TradingSession}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
-	 * SecuritiesQuoteVariable}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -307,6 +319,11 @@ public class SecuritiesQuoteVariable {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
+	 * SecuritiesQuoteVariable}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -321,7 +338,7 @@ public class SecuritiesQuoteVariable {
 	public static final MMBusinessAssociationEnd mmQuoteTradingSession = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuoteEntry2.mmTradingSessionDetails, QuoteEntry1.mmTradingSessionDetails, BidResponsePrice1.mmTradingSession, RequestForQuote.mmTradingSession);
-			elementContext_lazy = () -> SecuritiesQuoteVariable.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuoteTradingSession";
@@ -365,7 +382,7 @@ public class SecuritiesQuoteVariable {
 	 */
 	public static final MMBusinessAttribute mmLegSwapType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> SecuritiesQuoteVariable.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LegSwapType";
@@ -373,6 +390,14 @@ public class SecuritiesQuoteVariable {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LegSwapTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesQuoteVariable.class.getMethod("getLegSwapType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PriceValueTypeCode priceType;
@@ -387,11 +412,6 @@ public class SecuritiesQuoteVariable {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode
 	 * PriceValueTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
-	 * SecuritiesQuoteVariable}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -399,6 +419,11 @@ public class SecuritiesQuoteVariable {
 	 * Quote3.mmPriceType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
+	 * SecuritiesQuoteVariable}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -415,7 +440,7 @@ public class SecuritiesQuoteVariable {
 	public static final MMBusinessAttribute mmPriceType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Quote3.mmPriceType);
-			elementContext_lazy = () -> SecuritiesQuoteVariable.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceType";
@@ -423,6 +448,14 @@ public class SecuritiesQuoteVariable {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesQuoteVariable.class.getMethod("getPriceType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Quote midSide;
@@ -443,11 +476,6 @@ public class SecuritiesQuoteVariable {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Quote Quote}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
-	 * SecuritiesQuoteVariable}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -459,6 +487,11 @@ public class SecuritiesQuoteVariable {
 	 * SingleQuote1.mmMidSide}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
+	 * SecuritiesQuoteVariable}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -475,7 +508,7 @@ public class SecuritiesQuoteVariable {
 	public static final MMBusinessAssociationEnd mmMidSide = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuoteEntry2.mmMidSide, QuoteEntry1.mmMidSide, SingleQuote1.mmMidSide);
-			elementContext_lazy = () -> SecuritiesQuoteVariable.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MidSide";
@@ -505,11 +538,6 @@ public class SecuritiesQuoteVariable {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Quote Quote}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
-	 * SecuritiesQuoteVariable}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -528,6 +556,11 @@ public class SecuritiesQuoteVariable {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
+	 * SecuritiesQuoteVariable}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -543,7 +576,7 @@ public class SecuritiesQuoteVariable {
 	public static final MMBusinessAssociationEnd mmBidSide = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuoteEntry2.mmBidSide, QuoteEntry1.mmBidSide, SingleQuote1.mmBidSide, Bid2.mmBidResponsePriceDetails, Bid3.mmBidResponsePriceDetails);
-			elementContext_lazy = () -> SecuritiesQuoteVariable.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BidSide";
@@ -573,11 +606,6 @@ public class SecuritiesQuoteVariable {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Quote Quote}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
-	 * SecuritiesQuoteVariable}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -591,6 +619,11 @@ public class SecuritiesQuoteVariable {
 	 * QuoteRequest1.mmSide}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
+	 * SecuritiesQuoteVariable}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -607,7 +640,7 @@ public class SecuritiesQuoteVariable {
 	public static final MMBusinessAssociationEnd mmOfferSide = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuoteEntry2.mmOfferSide, QuoteEntry1.mmOfferSide, SingleQuote1.mmOfferSide, QuoteRequest1.mmSide);
-			elementContext_lazy = () -> SecuritiesQuoteVariable.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfferSide";
@@ -654,7 +687,7 @@ public class SecuritiesQuoteVariable {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesQuoteVariable.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedQuote";
@@ -705,7 +738,7 @@ public class SecuritiesQuoteVariable {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesQuoteVariable.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesOrder";
@@ -735,11 +768,6 @@ public class SecuritiesQuoteVariable {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Commission
 	 * Commission}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
-	 * SecuritiesQuoteVariable}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -751,6 +779,11 @@ public class SecuritiesQuoteVariable {
 	 * BidResponsePrice2.mmCommission}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
+	 * SecuritiesQuoteVariable}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -765,7 +798,7 @@ public class SecuritiesQuoteVariable {
 	public static final MMBusinessAssociationEnd mmCommission = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BidResponsePrice1.mmCommission, BidResponsePrice2.mmCommission);
-			elementContext_lazy = () -> SecuritiesQuoteVariable.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Commission";
@@ -789,11 +822,18 @@ public class SecuritiesQuoteVariable {
 						com.tools20022.repository.entity.Quote.mmSecurityQuoteVariable);
 				derivationElement_lazy = () -> Arrays.asList(QuoteSet2.mmQuoteEntryDetails, QuoteSet1.mmQuoteEntryDetails, SingleOrMassQuote1Choice.mmSingleQuoteDetails, SingleOrMassQuote2Choice.mmSingleQuoteDetails,
 						QuoteRequest1.mmQuoteDetails);
-				element_lazy = () -> Arrays.asList(SecuritiesQuoteVariable.mmQualifier, SecuritiesQuoteVariable.mmType, SecuritiesQuoteVariable.mmQuoteTradingSession, SecuritiesQuoteVariable.mmLegSwapType,
-						SecuritiesQuoteVariable.mmPriceType, SecuritiesQuoteVariable.mmMidSide, SecuritiesQuoteVariable.mmBidSide, SecuritiesQuoteVariable.mmOfferSide, SecuritiesQuoteVariable.mmRelatedQuote,
-						SecuritiesQuoteVariable.mmSecuritiesOrder, SecuritiesQuoteVariable.mmCommission);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesQuoteVariable.mmQualifier, com.tools20022.repository.entity.SecuritiesQuoteVariable.mmType,
+						com.tools20022.repository.entity.SecuritiesQuoteVariable.mmQuoteTradingSession, com.tools20022.repository.entity.SecuritiesQuoteVariable.mmLegSwapType,
+						com.tools20022.repository.entity.SecuritiesQuoteVariable.mmPriceType, com.tools20022.repository.entity.SecuritiesQuoteVariable.mmMidSide, com.tools20022.repository.entity.SecuritiesQuoteVariable.mmBidSide,
+						com.tools20022.repository.entity.SecuritiesQuoteVariable.mmOfferSide, com.tools20022.repository.entity.SecuritiesQuoteVariable.mmRelatedQuote,
+						com.tools20022.repository.entity.SecuritiesQuoteVariable.mmSecuritiesOrder, com.tools20022.repository.entity.SecuritiesQuoteVariable.mmCommission);
 				derivationComponent_lazy = () -> Arrays.asList(QuoteEntry2.mmObject(), QuoteSet2.mmObject(), QuoteEntry1.mmObject(), QuoteSet1.mmObject(), SingleQuote1.mmObject(), Quote3.mmObject(), QuoteRequest1.mmObject(),
 						RequestForQuote.mmObject(), Quote1.mmObject(), Quote2.mmObject(), Quote4.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesQuoteVariable.class;
 			}
 		});
 		return mmObject_lazy.get();

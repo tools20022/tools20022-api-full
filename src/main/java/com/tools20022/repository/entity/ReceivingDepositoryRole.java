@@ -73,6 +73,11 @@ public class ReceivingDepositoryRole extends ReceivingSettlementParty {
 				definition = "Organisation holding securities to enable book entry transfer of securities. These organisations may also carry out centralised comparison and transaction processing such as clearing and settlement of securities. The physical securities may be immobilised by the depository, or securities may be dematerialised (so that they exist only as electronic records). Also responsible for compliance of the portfolio with legal ratios etc. The depository may delegate custody to another entity (custodian).";
 				superType_lazy = () -> com.tools20022.repository.entity.ReceivingSettlementParty.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ReceivingDepositoryRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

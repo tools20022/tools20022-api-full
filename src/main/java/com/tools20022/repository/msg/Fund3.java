@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about an investment fund.
@@ -92,6 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Fund1 Fund1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Fund3", propOrder = {"name", "legalEntityIdentifier", "identification", "currency", "estimatedTotalNAV", "previousTotalNAV", "estimatedTotalUnitsNumber", "previousTotalUnitsNumber", "estimatedPercentageOfFundTotalNAV"})
 public class Fund3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -597,6 +603,7 @@ public class Fund3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max350Text getName() {
 		return name;
 	}
@@ -605,6 +612,7 @@ public class Fund3 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "LglNttyIdr")
 	public LEIIdentifier getLegalEntityIdentifier() {
 		return legalEntityIdentifier;
 	}
@@ -613,6 +621,7 @@ public class Fund3 {
 		this.legalEntityIdentifier = legalEntityIdentifier;
 	}
 
+	@XmlElement(name = "Id")
 	public OtherIdentification4 getIdentification() {
 		return identification;
 	}
@@ -621,6 +630,7 @@ public class Fund3 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveOrHistoricCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -629,6 +639,7 @@ public class Fund3 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "EstmtdTtlNAV")
 	public ActiveOrHistoricCurrencyAndAmount getEstimatedTotalNAV() {
 		return estimatedTotalNAV;
 	}
@@ -637,6 +648,7 @@ public class Fund3 {
 		this.estimatedTotalNAV = estimatedTotalNAV;
 	}
 
+	@XmlElement(name = "PrvsTtlNAV")
 	public ActiveOrHistoricCurrencyAndAmount getPreviousTotalNAV() {
 		return previousTotalNAV;
 	}
@@ -645,6 +657,7 @@ public class Fund3 {
 		this.previousTotalNAV = previousTotalNAV;
 	}
 
+	@XmlElement(name = "EstmtdTtlUnitsNb")
 	public FinancialInstrumentQuantity1 getEstimatedTotalUnitsNumber() {
 		return estimatedTotalUnitsNumber;
 	}
@@ -653,6 +666,7 @@ public class Fund3 {
 		this.estimatedTotalUnitsNumber = estimatedTotalUnitsNumber;
 	}
 
+	@XmlElement(name = "PrvsTtlUnitsNb")
 	public FinancialInstrumentQuantity1 getPreviousTotalUnitsNumber() {
 		return previousTotalUnitsNumber;
 	}
@@ -661,6 +675,7 @@ public class Fund3 {
 		this.previousTotalUnitsNumber = previousTotalUnitsNumber;
 	}
 
+	@XmlElement(name = "EstmtdPctgOfFndTtlNAV")
 	public PercentageRate getEstimatedPercentageOfFundTotalNAV() {
 		return estimatedPercentageOfFundTotalNAV;
 	}

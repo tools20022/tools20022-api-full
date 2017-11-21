@@ -31,9 +31,11 @@ import com.tools20022.repository.msg.Extension2;
 import com.tools20022.repository.msg.Identification1;
 import com.tools20022.repository.msg.SecuritiesAccount13;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -66,9 +68,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.022.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -118,6 +117,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.022.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -137,6 +139,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesStatusOrStatementQueryStatusAdviceV01", propOrder = {"identification", "queryReference", "accountOwner", "safekeepingAccount", "statusOrStatementRequested", "processingStatus", "messageOriginator",
+		"messageRecipient", "extension"})
 public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +183,14 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification11.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatusOrStatementQueryStatusAdviceV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Identification1 queryReference;
 	/**
@@ -212,6 +225,14 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Identification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatusOrStatementQueryStatusAdviceV01.class.getMethod("getQueryReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification13Choice accountOwner;
@@ -248,6 +269,14 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification13Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatusOrStatementQueryStatusAdviceV01.class.getMethod("getAccountOwner", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesAccount13 safekeepingAccount;
 	/**
@@ -283,6 +312,14 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatusOrStatementQueryStatusAdviceV01.class.getMethod("getSafekeepingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected StatusOrStatement1Choice statusOrStatementRequested;
 	/**
@@ -317,6 +354,14 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatusOrStatement1Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatusOrStatementQueryStatusAdviceV01.class.getMethod("getStatusOrStatementRequested", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ProcessingStatus4Choice processingStatus;
@@ -354,6 +399,14 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> ProcessingStatus4Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatusOrStatementQueryStatusAdviceV01.class.getMethod("getProcessingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification10Choice messageOriginator;
 	/**
@@ -389,6 +442,14 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatusOrStatementQueryStatusAdviceV01.class.getMethod("getMessageOriginator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification10Choice messageRecipient;
@@ -428,6 +489,14 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatusOrStatementQueryStatusAdviceV01.class.getMethod("getMessageRecipient", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension2> extension;
 	/**
@@ -464,6 +533,14 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatusOrStatementQueryStatusAdviceV01.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -477,10 +554,12 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "SctiesStsOrStmtQryStsAdvc";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesStatusOrStatementQueryStatusAdviceV01.mmIdentification, SecuritiesStatusOrStatementQueryStatusAdviceV01.mmQueryReference,
-						SecuritiesStatusOrStatementQueryStatusAdviceV01.mmAccountOwner, SecuritiesStatusOrStatementQueryStatusAdviceV01.mmSafekeepingAccount, SecuritiesStatusOrStatementQueryStatusAdviceV01.mmStatusOrStatementRequested,
-						SecuritiesStatusOrStatementQueryStatusAdviceV01.mmProcessingStatus, SecuritiesStatusOrStatementQueryStatusAdviceV01.mmMessageOriginator, SecuritiesStatusOrStatementQueryStatusAdviceV01.mmMessageRecipient,
-						SecuritiesStatusOrStatementQueryStatusAdviceV01.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmIdentification,
+						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmQueryReference, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmAccountOwner,
+						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmStatusOrStatementRequested,
+						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmProcessingStatus, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -490,10 +569,16 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesStatusOrStatementQueryStatusAdviceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification11 getIdentification() {
 		return identification;
 	}
@@ -502,6 +587,7 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "QryRef", required = true)
 	public Identification1 getQueryReference() {
 		return queryReference;
 	}
@@ -510,6 +596,7 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 		this.queryReference = queryReference;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification13Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -518,6 +605,7 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -526,6 +614,7 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "StsOrStmtReqd")
 	public StatusOrStatement1Choice getStatusOrStatementRequested() {
 		return statusOrStatementRequested;
 	}
@@ -534,6 +623,7 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 		this.statusOrStatementRequested = statusOrStatementRequested;
 	}
 
+	@XmlElement(name = "PrcgSts", required = true)
 	public ProcessingStatus4Choice getProcessingStatus() {
 		return processingStatus;
 	}
@@ -542,6 +632,7 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "MsgOrgtr")
 	public PartyIdentification10Choice getMessageOriginator() {
 		return messageOriginator;
 	}
@@ -550,6 +641,7 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 		this.messageOriginator = messageOriginator;
 	}
 
+	@XmlElement(name = "MsgRcpt")
 	public PartyIdentification10Choice getMessageRecipient() {
 		return messageRecipient;
 	}
@@ -558,11 +650,18 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 		this.messageRecipient = messageRecipient;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension2> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension2> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.022.01.01")
+	static public class Document {
+		@XmlElement(name = "SctiesStsOrStmtQryStsAdvc", required = true)
+		public SecuritiesStatusOrStatementQueryStatusAdviceV01 messageBody;
 	}
 }

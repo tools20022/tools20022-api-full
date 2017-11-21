@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the processing status.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of format for the processing status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProcessingStatus8Choice", propOrder = {"acknowledgedAccepted", "rejected", "proprietary"})
 public class ProcessingStatus8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -233,6 +239,7 @@ public class ProcessingStatus8Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AckdAccptd", required = true)
 	public AcknowledgedAcceptedStatus4Choice getAcknowledgedAccepted() {
 		return acknowledgedAccepted;
 	}
@@ -241,6 +248,7 @@ public class ProcessingStatus8Choice {
 		this.acknowledgedAccepted = acknowledgedAccepted;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectionOrRepairStatus7Choice getRejected() {
 		return rejected;
 	}
@@ -249,6 +257,7 @@ public class ProcessingStatus8Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason2 getProprietary() {
 		return proprietary;
 	}

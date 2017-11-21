@@ -28,6 +28,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Order to invest the investor's principal in an investment fund.
@@ -160,6 +164,11 @@ import java.util.List;
  * "Order to invest the investor's principal in an investment fund."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionOrder6", propOrder = {"orderReference", "clientReference", "cancellationReference", "orderType", "financialInstrumentDetails", "subAccountForHolding", "unitsNumber", "grossAmount", "netAmount", "rounding",
+		"settlementAmount", "cashSettlementDate", "settlementMethod", "foreignExchangeDetails", "incomePreference", "letterIntentReference", "accumulationRightReference", "chargeDetails", "commissionDetails", "taxDetails",
+		"settlementAndCustodyDetails", "physicalDeliveryIndicator", "physicalDeliveryDetails", "requestedSettlementCurrency", "requestedNAVCurrency", "cashSettlementDetails", "nonStandardSettlementInformation", "staffClientBreakdown",
+		"financialAdvice", "negotiatedTrade", "relatedPartyDetails", "equalisation"})
 public class SubscriptionOrder6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1797,6 +1806,7 @@ public class SubscriptionOrder6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -1805,6 +1815,7 @@ public class SubscriptionOrder6 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -1813,6 +1824,7 @@ public class SubscriptionOrder6 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -1821,6 +1833,7 @@ public class SubscriptionOrder6 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "OrdrTp")
 	public List<FundOrderType2> getOrderType() {
 		return orderType;
 	}
@@ -1829,6 +1842,7 @@ public class SubscriptionOrder6 {
 		this.orderType = orderType;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument10 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -1837,6 +1851,7 @@ public class SubscriptionOrder6 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "SubAcctForHldg")
 	public SubAccount1 getSubAccountForHolding() {
 		return subAccountForHolding;
 	}
@@ -1845,6 +1860,7 @@ public class SubscriptionOrder6 {
 		this.subAccountForHolding = subAccountForHolding;
 	}
 
+	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -1853,6 +1869,7 @@ public class SubscriptionOrder6 {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "GrssAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getGrossAmount() {
 		return grossAmount;
 	}
@@ -1861,6 +1878,7 @@ public class SubscriptionOrder6 {
 		this.grossAmount = grossAmount;
 	}
 
+	@XmlElement(name = "NetAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
@@ -1869,6 +1887,7 @@ public class SubscriptionOrder6 {
 		this.netAmount = netAmount;
 	}
 
+	@XmlElement(name = "Rndg")
 	public RoundingDirection2Code getRounding() {
 		return rounding;
 	}
@@ -1877,6 +1896,7 @@ public class SubscriptionOrder6 {
 		this.rounding = rounding;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public ActiveCurrencyAndAmount getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -1885,6 +1905,7 @@ public class SubscriptionOrder6 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "CshSttlmDt")
 	public ISODate getCashSettlementDate() {
 		return cashSettlementDate;
 	}
@@ -1893,6 +1914,7 @@ public class SubscriptionOrder6 {
 		this.cashSettlementDate = cashSettlementDate;
 	}
 
+	@XmlElement(name = "SttlmMtd")
 	public DeliveryReceiptType2Code getSettlementMethod() {
 		return settlementMethod;
 	}
@@ -1901,6 +1923,7 @@ public class SubscriptionOrder6 {
 		this.settlementMethod = settlementMethod;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public ForeignExchangeTerms6 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -1909,6 +1932,7 @@ public class SubscriptionOrder6 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "IncmPref")
 	public IncomePreference1Code getIncomePreference() {
 		return incomePreference;
 	}
@@ -1917,6 +1941,7 @@ public class SubscriptionOrder6 {
 		this.incomePreference = incomePreference;
 	}
 
+	@XmlElement(name = "LttrInttRef")
 	public Max35Text getLetterIntentReference() {
 		return letterIntentReference;
 	}
@@ -1925,6 +1950,7 @@ public class SubscriptionOrder6 {
 		this.letterIntentReference = letterIntentReference;
 	}
 
+	@XmlElement(name = "AcmltnRghtRef")
 	public Max35Text getAccumulationRightReference() {
 		return accumulationRightReference;
 	}
@@ -1933,6 +1959,7 @@ public class SubscriptionOrder6 {
 		this.accumulationRightReference = accumulationRightReference;
 	}
 
+	@XmlElement(name = "ChrgDtls")
 	public List<Charge17> getChargeDetails() {
 		return chargeDetails;
 	}
@@ -1941,6 +1968,7 @@ public class SubscriptionOrder6 {
 		this.chargeDetails = chargeDetails;
 	}
 
+	@XmlElement(name = "ComssnDtls")
 	public List<Commission10> getCommissionDetails() {
 		return commissionDetails;
 	}
@@ -1949,6 +1977,7 @@ public class SubscriptionOrder6 {
 		this.commissionDetails = commissionDetails;
 	}
 
+	@XmlElement(name = "TaxDtls")
 	public List<Tax16> getTaxDetails() {
 		return taxDetails;
 	}
@@ -1957,6 +1986,7 @@ public class SubscriptionOrder6 {
 		this.taxDetails = taxDetails;
 	}
 
+	@XmlElement(name = "SttlmAndCtdyDtls")
 	public FundSettlementParameters4 getSettlementAndCustodyDetails() {
 		return settlementAndCustodyDetails;
 	}
@@ -1965,6 +1995,7 @@ public class SubscriptionOrder6 {
 		this.settlementAndCustodyDetails = settlementAndCustodyDetails;
 	}
 
+	@XmlElement(name = "PhysDlvryInd", required = true)
 	public YesNoIndicator getPhysicalDeliveryIndicator() {
 		return physicalDeliveryIndicator;
 	}
@@ -1973,6 +2004,7 @@ public class SubscriptionOrder6 {
 		this.physicalDeliveryIndicator = physicalDeliveryIndicator;
 	}
 
+	@XmlElement(name = "PhysDlvryDtls")
 	public NameAndAddress4 getPhysicalDeliveryDetails() {
 		return physicalDeliveryDetails;
 	}
@@ -1981,6 +2013,7 @@ public class SubscriptionOrder6 {
 		this.physicalDeliveryDetails = physicalDeliveryDetails;
 	}
 
+	@XmlElement(name = "ReqdSttlmCcy")
 	public ActiveCurrencyCode getRequestedSettlementCurrency() {
 		return requestedSettlementCurrency;
 	}
@@ -1989,6 +2022,7 @@ public class SubscriptionOrder6 {
 		this.requestedSettlementCurrency = requestedSettlementCurrency;
 	}
 
+	@XmlElement(name = "ReqdNAVCcy")
 	public ActiveOrHistoricCurrencyCode getRequestedNAVCurrency() {
 		return requestedNAVCurrency;
 	}
@@ -1997,6 +2031,7 @@ public class SubscriptionOrder6 {
 		this.requestedNAVCurrency = requestedNAVCurrency;
 	}
 
+	@XmlElement(name = "CshSttlmDtls")
 	public PaymentTransaction23 getCashSettlementDetails() {
 		return cashSettlementDetails;
 	}
@@ -2005,6 +2040,7 @@ public class SubscriptionOrder6 {
 		this.cashSettlementDetails = cashSettlementDetails;
 	}
 
+	@XmlElement(name = "NonStdSttlmInf")
 	public Max350Text getNonStandardSettlementInformation() {
 		return nonStandardSettlementInformation;
 	}
@@ -2013,6 +2049,7 @@ public class SubscriptionOrder6 {
 		this.nonStandardSettlementInformation = nonStandardSettlementInformation;
 	}
 
+	@XmlElement(name = "StffClntBrkdwn")
 	public List<InvestmentFundsOrderBreakdown1> getStaffClientBreakdown() {
 		return staffClientBreakdown;
 	}
@@ -2021,6 +2058,7 @@ public class SubscriptionOrder6 {
 		this.staffClientBreakdown = staffClientBreakdown;
 	}
 
+	@XmlElement(name = "FinAdvc")
 	public FinancialAdvice1Code getFinancialAdvice() {
 		return financialAdvice;
 	}
@@ -2029,6 +2067,7 @@ public class SubscriptionOrder6 {
 		this.financialAdvice = financialAdvice;
 	}
 
+	@XmlElement(name = "NgtdTrad")
 	public NegotiatedTrade1Code getNegotiatedTrade() {
 		return negotiatedTrade;
 	}
@@ -2037,6 +2076,7 @@ public class SubscriptionOrder6 {
 		this.negotiatedTrade = negotiatedTrade;
 	}
 
+	@XmlElement(name = "RltdPtyDtls")
 	public List<Intermediary8> getRelatedPartyDetails() {
 		return relatedPartyDetails;
 	}
@@ -2045,6 +2085,7 @@ public class SubscriptionOrder6 {
 		this.relatedPartyDetails = relatedPartyDetails;
 	}
 
+	@XmlElement(name = "Equlstn")
 	public Equalisation1 getEqualisation() {
 		return equalisation;
 	}

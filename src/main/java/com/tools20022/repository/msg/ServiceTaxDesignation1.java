@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Designates the tax calculation to be applied on a service.
@@ -65,6 +69,8 @@ import java.util.List;
  * definition} = "Designates the tax calculation to be applied on a service."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ServiceTaxDesignation1", propOrder = {"code", "region", "taxReason"})
 public class ServiceTaxDesignation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class ServiceTaxDesignation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public ServiceTaxDesignation1Code getCode() {
 		return code;
 	}
@@ -226,6 +233,7 @@ public class ServiceTaxDesignation1 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Rgn")
 	public Max35Text getRegion() {
 		return region;
 	}
@@ -234,6 +242,7 @@ public class ServiceTaxDesignation1 {
 		this.region = region;
 	}
 
+	@XmlElement(name = "TaxRsn")
 	public List<TaxReason1> getTaxReason() {
 		return taxReason;
 	}

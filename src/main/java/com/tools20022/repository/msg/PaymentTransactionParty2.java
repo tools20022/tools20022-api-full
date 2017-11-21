@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the party fields used to search for a payment.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the party fields used to search for a payment."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTransactionParty2", propOrder = {"debtor", "debtorAgent", "instructingReimbursementAgent", "instructedReimbursementAgent", "intermediaryAgent", "creditorAgent", "creditor"})
 public class PaymentTransactionParty2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -449,6 +455,7 @@ public class PaymentTransactionParty2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dbtr")
 	public BranchAndFinancialInstitutionIdentification5 getDebtor() {
 		return debtor;
 	}
@@ -457,6 +464,7 @@ public class PaymentTransactionParty2 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAgt")
 	public BranchAndFinancialInstitutionIdentification5 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -465,6 +473,7 @@ public class PaymentTransactionParty2 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "InstgRmbrsmntAgt")
 	public BranchAndFinancialInstitutionIdentification5 getInstructingReimbursementAgent() {
 		return instructingReimbursementAgent;
 	}
@@ -473,6 +482,7 @@ public class PaymentTransactionParty2 {
 		this.instructingReimbursementAgent = instructingReimbursementAgent;
 	}
 
+	@XmlElement(name = "InstdRmbrsmntAgt")
 	public BranchAndFinancialInstitutionIdentification5 getInstructedReimbursementAgent() {
 		return instructedReimbursementAgent;
 	}
@@ -481,6 +491,7 @@ public class PaymentTransactionParty2 {
 		this.instructedReimbursementAgent = instructedReimbursementAgent;
 	}
 
+	@XmlElement(name = "IntrmyAgt")
 	public BranchAndFinancialInstitutionIdentification5 getIntermediaryAgent() {
 		return intermediaryAgent;
 	}
@@ -489,6 +500,7 @@ public class PaymentTransactionParty2 {
 		this.intermediaryAgent = intermediaryAgent;
 	}
 
+	@XmlElement(name = "CdtrAgt")
 	public BranchAndFinancialInstitutionIdentification5 getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -497,6 +509,7 @@ public class PaymentTransactionParty2 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "Cdtr")
 	public BranchAndFinancialInstitutionIdentification5 getCreditor() {
 		return creditor;
 	}

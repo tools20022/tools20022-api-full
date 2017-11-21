@@ -31,6 +31,10 @@ import com.tools20022.repository.msg.MarketIdentification87;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of cash purpose or a securities market identifier.
@@ -83,6 +87,8 @@ import java.util.List;
  * definition} = "Choice of cash purpose or a securities market identifier."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarketIdentificationOrCashPurpose1Choice", propOrder = {"settlementInstructionMarketIdentification", "cashSSIPurpose"})
 public class MarketIdentificationOrCashPurpose1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -190,6 +196,7 @@ public class MarketIdentificationOrCashPurpose1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmInstrMktId", required = true)
 	public MarketIdentification87 getSettlementInstructionMarketIdentification() {
 		return settlementInstructionMarketIdentification;
 	}
@@ -198,6 +205,7 @@ public class MarketIdentificationOrCashPurpose1Choice {
 		this.settlementInstructionMarketIdentification = settlementInstructionMarketIdentification;
 	}
 
+	@XmlElement(name = "CshSSIPurp", required = true)
 	public List<ExternalMarketArea1Code> getCashSSIPurpose() {
 		return cashSSIPurpose;
 	}

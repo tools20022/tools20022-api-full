@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Deadline;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.EligibilityDates;
 import com.tools20022.repository.msg.EntitlementAssessment;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,8 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Deadline Deadline}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -48,6 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesRegistrationDeadline.mmRegistrationDate}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Deadline Deadline}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -76,11 +77,6 @@ public class SecuritiesRegistrationDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesRegistrationDeadline
-	 * SecuritiesRegistrationDeadline}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -92,6 +88,11 @@ public class SecuritiesRegistrationDeadline extends Deadline {
 	 * EligibilityDates.mmSecuritiesRegistrationDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesRegistrationDeadline
+	 * SecuritiesRegistrationDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -108,7 +109,7 @@ public class SecuritiesRegistrationDeadline extends Deadline {
 	public static final MMBusinessAttribute mmRegistrationDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(EntitlementAssessment.mmSecuritiesRegistrationDate, EligibilityDates.mmSecuritiesRegistrationDate);
-			elementContext_lazy = () -> SecuritiesRegistrationDeadline.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRegistrationDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationDate";
@@ -116,6 +117,14 @@ public class SecuritiesRegistrationDeadline extends Deadline {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesRegistrationDeadline.class.getMethod("getRegistrationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -127,7 +136,12 @@ public class SecuritiesRegistrationDeadline extends Deadline {
 				name = "SecuritiesRegistrationDeadline";
 				definition = "Date by which the securities have to be registered.";
 				superType_lazy = () -> Deadline.mmObject();
-				element_lazy = () -> Arrays.asList(SecuritiesRegistrationDeadline.mmRegistrationDate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesRegistrationDeadline.mmRegistrationDate);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesRegistrationDeadline.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the securities posted as collateral.
@@ -112,6 +116,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesCollateral1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesCollateral2", propOrder = {"assetNumber", "securityIdentification", "maturityDate", "collateralOwnership", "limitedCoverageIndicator", "quantity", "blockedQuantity", "price", "marketValue", "haircut",
+		"collateralValue", "valueDate", "safekeepingAccount", "safekeepingPlace"})
 public class SecuritiesCollateral2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1011,6 +1018,7 @@ public class SecuritiesCollateral2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AsstNb")
 	public Max35Text getAssetNumber() {
 		return assetNumber;
 	}
@@ -1019,6 +1027,7 @@ public class SecuritiesCollateral2 {
 		this.assetNumber = assetNumber;
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification14 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -1027,6 +1036,7 @@ public class SecuritiesCollateral2 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "MtrtyDt")
 	public DateAndDateTimeChoice getMaturityDate() {
 		return maturityDate;
 	}
@@ -1035,6 +1045,7 @@ public class SecuritiesCollateral2 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "CollOwnrsh")
 	public CollateralOwnership1 getCollateralOwnership() {
 		return collateralOwnership;
 	}
@@ -1043,6 +1054,7 @@ public class SecuritiesCollateral2 {
 		this.collateralOwnership = collateralOwnership;
 	}
 
+	@XmlElement(name = "LtdCvrgInd")
 	public YesNoIndicator getLimitedCoverageIndicator() {
 		return limitedCoverageIndicator;
 	}
@@ -1051,6 +1063,7 @@ public class SecuritiesCollateral2 {
 		this.limitedCoverageIndicator = limitedCoverageIndicator;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity1Choice getQuantity() {
 		return quantity;
 	}
@@ -1059,6 +1072,7 @@ public class SecuritiesCollateral2 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "BlckdQty")
 	public FinancialInstrumentQuantity1Choice getBlockedQuantity() {
 		return blockedQuantity;
 	}
@@ -1067,6 +1081,7 @@ public class SecuritiesCollateral2 {
 		this.blockedQuantity = blockedQuantity;
 	}
 
+	@XmlElement(name = "Pric")
 	public Price2 getPrice() {
 		return price;
 	}
@@ -1075,6 +1090,7 @@ public class SecuritiesCollateral2 {
 		this.price = price;
 	}
 
+	@XmlElement(name = "MktVal")
 	public ActiveCurrencyAndAmount getMarketValue() {
 		return marketValue;
 	}
@@ -1083,6 +1099,7 @@ public class SecuritiesCollateral2 {
 		this.marketValue = marketValue;
 	}
 
+	@XmlElement(name = "Hrcut")
 	public PercentageRate getHaircut() {
 		return haircut;
 	}
@@ -1091,6 +1108,7 @@ public class SecuritiesCollateral2 {
 		this.haircut = haircut;
 	}
 
+	@XmlElement(name = "CollVal")
 	public ActiveCurrencyAndAmount getCollateralValue() {
 		return collateralValue;
 	}
@@ -1099,6 +1117,7 @@ public class SecuritiesCollateral2 {
 		this.collateralValue = collateralValue;
 	}
 
+	@XmlElement(name = "ValDt")
 	public ISODate getValueDate() {
 		return valueDate;
 	}
@@ -1107,6 +1126,7 @@ public class SecuritiesCollateral2 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount19 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -1115,6 +1135,7 @@ public class SecuritiesCollateral2 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "SfkpgPlc", required = true)
 	public SafekeepingPlaceFormat7Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}

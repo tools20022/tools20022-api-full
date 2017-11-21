@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Contractual details related to the agreement between parties.
@@ -91,6 +95,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeAgreement6", propOrder = {"buyer", "seller", "quotationDocumentIdentification", "contractDocumentIdentification", "buyerOrderIdentificationDocument", "additionalReferenceDocument", "incoterms"})
 public class TradeAgreement6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -506,6 +512,7 @@ public class TradeAgreement6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Buyr", required = true)
 	public TradeParty1 getBuyer() {
 		return buyer;
 	}
@@ -514,6 +521,7 @@ public class TradeAgreement6 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Sellr", required = true)
 	public TradeParty1 getSeller() {
 		return seller;
 	}
@@ -522,6 +530,7 @@ public class TradeAgreement6 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "QtnDocId")
 	public DocumentIdentification22 getQuotationDocumentIdentification() {
 		return quotationDocumentIdentification;
 	}
@@ -530,6 +539,7 @@ public class TradeAgreement6 {
 		this.quotationDocumentIdentification = quotationDocumentIdentification;
 	}
 
+	@XmlElement(name = "CtrctDocId")
 	public DocumentIdentification22 getContractDocumentIdentification() {
 		return contractDocumentIdentification;
 	}
@@ -538,6 +548,7 @@ public class TradeAgreement6 {
 		this.contractDocumentIdentification = contractDocumentIdentification;
 	}
 
+	@XmlElement(name = "BuyrOrdrIdDoc")
 	public DocumentIdentification22 getBuyerOrderIdentificationDocument() {
 		return buyerOrderIdentificationDocument;
 	}
@@ -546,6 +557,7 @@ public class TradeAgreement6 {
 		this.buyerOrderIdentificationDocument = buyerOrderIdentificationDocument;
 	}
 
+	@XmlElement(name = "AddtlRefDoc")
 	public List<DocumentGeneralInformation2> getAdditionalReferenceDocument() {
 		return additionalReferenceDocument;
 	}
@@ -554,6 +566,7 @@ public class TradeAgreement6 {
 		this.additionalReferenceDocument = additionalReferenceDocument;
 	}
 
+	@XmlElement(name = "Incotrms")
 	public Incoterms3 getIncoterms() {
 		return incoterms;
 	}

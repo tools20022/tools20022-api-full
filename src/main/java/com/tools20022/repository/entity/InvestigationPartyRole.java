@@ -37,19 +37,17 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Status#mmPartyRole
- * Status.mmPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmInvestigationPartyRole
- * InvestigationCase.mmInvestigationPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationPartyRole#mmInvestigationCase
+ * InvestigationPartyRole.mmInvestigationCase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationPartyRole#mmStatus
+ * InvestigationPartyRole.mmStatus}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -60,15 +58,17 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.repository.entity.CaseCreator CaseCreator}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Status#mmPartyRole
+ * Status.mmPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationPartyRole#mmInvestigationCase
- * InvestigationPartyRole.mmInvestigationCase}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationPartyRole#mmStatus
- * InvestigationPartyRole.mmStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmInvestigationPartyRole
+ * InvestigationCase.mmInvestigationPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -126,7 +126,7 @@ public class InvestigationPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestigationCase = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestigationPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestigationCase";
@@ -172,7 +172,7 @@ public class InvestigationPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmStatus = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestigationPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
@@ -194,7 +194,12 @@ public class InvestigationPartyRole extends Role {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Status.mmPartyRole, com.tools20022.repository.entity.InvestigationCase.mmInvestigationPartyRole);
 				subType_lazy = () -> Arrays.asList(StatusOriginator.mmObject(), Assigner.mmObject(), Assignee.mmObject(), CaseCreator.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(InvestigationPartyRole.mmInvestigationCase, InvestigationPartyRole.mmStatus);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationPartyRole.mmInvestigationCase, com.tools20022.repository.entity.InvestigationPartyRole.mmStatus);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvestigationPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

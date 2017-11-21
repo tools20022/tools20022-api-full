@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.BusinessLetter1;
 import com.tools20022.repository.msg.EncapsulatedBusinessMessage1;
 import com.tools20022.repository.msg.EventDescription1;
 import com.tools20022.repository.msgset.FactoringServicesISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The PartyEventAdvice message can be sent by any party to any other party. It
@@ -46,9 +48,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.055.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -84,6 +83,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.055.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -95,6 +97,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyEventAdviceV01", propOrder = {"header", "eventNotice", "eventCount", "attachedMessage"})
 public class PartyEventAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -134,6 +138,14 @@ public class PartyEventAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> BusinessLetter1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PartyEventAdviceV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<EventDescription1> eventNotice;
 	/**
@@ -167,6 +179,14 @@ public class PartyEventAdviceV01 {
 			definition = "Description of the event.";
 			minOccurs = 1;
 			complexType_lazy = () -> EventDescription1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PartyEventAdviceV01.class.getMethod("getEventNotice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max15NumericText eventCount;
@@ -203,6 +223,14 @@ public class PartyEventAdviceV01 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PartyEventAdviceV01.class.getMethod("getEventCount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<EncapsulatedBusinessMessage1> attachedMessage;
 	/**
@@ -237,6 +265,14 @@ public class PartyEventAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PartyEventAdviceV01.class.getMethod("getAttachedMessage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -249,7 +285,8 @@ public class PartyEventAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "PtyEvtAdvc";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PartyEventAdviceV01.mmHeader, PartyEventAdviceV01.mmEventNotice, PartyEventAdviceV01.mmEventCount, PartyEventAdviceV01.mmAttachedMessage);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmHeader, com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmEventNotice,
+						com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmEventCount, com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmAttachedMessage);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -259,10 +296,16 @@ public class PartyEventAdviceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PartyEventAdviceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public BusinessLetter1 getHeader() {
 		return header;
 	}
@@ -271,6 +314,7 @@ public class PartyEventAdviceV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "EvtNtce", required = true)
 	public List<EventDescription1> getEventNotice() {
 		return eventNotice;
 	}
@@ -279,6 +323,7 @@ public class PartyEventAdviceV01 {
 		this.eventNotice = eventNotice;
 	}
 
+	@XmlElement(name = "EvtCnt")
 	public Max15NumericText getEventCount() {
 		return eventCount;
 	}
@@ -287,11 +332,18 @@ public class PartyEventAdviceV01 {
 		this.eventCount = eventCount;
 	}
 
+	@XmlElement(name = "AttchdMsg")
 	public List<EncapsulatedBusinessMessage1> getAttachedMessage() {
 		return attachedMessage;
 	}
 
 	public void setAttachedMessage(List<EncapsulatedBusinessMessage1> attachedMessage) {
 		this.attachedMessage = attachedMessage;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.055.01.01")
+	static public class Document {
+		@XmlElement(name = "PtyEvtAdvc", required = true)
+		public PartyEventAdviceV01 messageBody;
 	}
 }

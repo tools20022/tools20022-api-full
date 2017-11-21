@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to report on standing orders.
@@ -102,6 +106,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the criteria used to report on standing orders."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingOrderReturnCriteria1", propOrder = {"standingOrderIdentificationIndicator", "typeIndicator", "systemMemberIndicator", "responsiblePartyIndicator", "currencyIndicator", "debtorAccountIndicator",
+		"creditorAccountIndicator", "associatedPoolAccount", "frequencyIndicator", "executionTypeIndicator", "validityFromIndicator", "validToIndicator", "linkSetIdentificationIndicator", "linkSetOrderIdentificationIndicator",
+		"linkSetOrderSequenceIndicator", "totalAmountIndicator", "zeroSweepIndicator"})
 public class StandingOrderReturnCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -854,6 +862,7 @@ public class StandingOrderReturnCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StgOrdrIdInd")
 	public RequestedIndicator getStandingOrderIdentificationIndicator() {
 		return standingOrderIdentificationIndicator;
 	}
@@ -862,6 +871,7 @@ public class StandingOrderReturnCriteria1 {
 		this.standingOrderIdentificationIndicator = standingOrderIdentificationIndicator;
 	}
 
+	@XmlElement(name = "TpInd")
 	public RequestedIndicator getTypeIndicator() {
 		return typeIndicator;
 	}
@@ -870,6 +880,7 @@ public class StandingOrderReturnCriteria1 {
 		this.typeIndicator = typeIndicator;
 	}
 
+	@XmlElement(name = "SysMmbInd")
 	public RequestedIndicator getSystemMemberIndicator() {
 		return systemMemberIndicator;
 	}
@@ -878,6 +889,7 @@ public class StandingOrderReturnCriteria1 {
 		this.systemMemberIndicator = systemMemberIndicator;
 	}
 
+	@XmlElement(name = "RspnsblPtyInd")
 	public RequestedIndicator getResponsiblePartyIndicator() {
 		return responsiblePartyIndicator;
 	}
@@ -886,6 +898,7 @@ public class StandingOrderReturnCriteria1 {
 		this.responsiblePartyIndicator = responsiblePartyIndicator;
 	}
 
+	@XmlElement(name = "CcyInd")
 	public RequestedIndicator getCurrencyIndicator() {
 		return currencyIndicator;
 	}
@@ -894,6 +907,7 @@ public class StandingOrderReturnCriteria1 {
 		this.currencyIndicator = currencyIndicator;
 	}
 
+	@XmlElement(name = "DbtrAcctInd")
 	public RequestedIndicator getDebtorAccountIndicator() {
 		return debtorAccountIndicator;
 	}
@@ -902,6 +916,7 @@ public class StandingOrderReturnCriteria1 {
 		this.debtorAccountIndicator = debtorAccountIndicator;
 	}
 
+	@XmlElement(name = "CdtrAcctInd")
 	public RequestedIndicator getCreditorAccountIndicator() {
 		return creditorAccountIndicator;
 	}
@@ -910,6 +925,7 @@ public class StandingOrderReturnCriteria1 {
 		this.creditorAccountIndicator = creditorAccountIndicator;
 	}
 
+	@XmlElement(name = "AssoctdPoolAcct")
 	public RequestedIndicator getAssociatedPoolAccount() {
 		return associatedPoolAccount;
 	}
@@ -918,6 +934,7 @@ public class StandingOrderReturnCriteria1 {
 		this.associatedPoolAccount = associatedPoolAccount;
 	}
 
+	@XmlElement(name = "FrqcyInd")
 	public RequestedIndicator getFrequencyIndicator() {
 		return frequencyIndicator;
 	}
@@ -926,6 +943,7 @@ public class StandingOrderReturnCriteria1 {
 		this.frequencyIndicator = frequencyIndicator;
 	}
 
+	@XmlElement(name = "ExctnTpInd")
 	public RequestedIndicator getExecutionTypeIndicator() {
 		return executionTypeIndicator;
 	}
@@ -934,6 +952,7 @@ public class StandingOrderReturnCriteria1 {
 		this.executionTypeIndicator = executionTypeIndicator;
 	}
 
+	@XmlElement(name = "VldtyFrInd")
 	public RequestedIndicator getValidityFromIndicator() {
 		return validityFromIndicator;
 	}
@@ -942,6 +961,7 @@ public class StandingOrderReturnCriteria1 {
 		this.validityFromIndicator = validityFromIndicator;
 	}
 
+	@XmlElement(name = "VldToInd")
 	public RequestedIndicator getValidToIndicator() {
 		return validToIndicator;
 	}
@@ -950,6 +970,7 @@ public class StandingOrderReturnCriteria1 {
 		this.validToIndicator = validToIndicator;
 	}
 
+	@XmlElement(name = "LkSetIdInd")
 	public RequestedIndicator getLinkSetIdentificationIndicator() {
 		return linkSetIdentificationIndicator;
 	}
@@ -958,6 +979,7 @@ public class StandingOrderReturnCriteria1 {
 		this.linkSetIdentificationIndicator = linkSetIdentificationIndicator;
 	}
 
+	@XmlElement(name = "LkSetOrdrIdInd")
 	public RequestedIndicator getLinkSetOrderIdentificationIndicator() {
 		return linkSetOrderIdentificationIndicator;
 	}
@@ -966,6 +988,7 @@ public class StandingOrderReturnCriteria1 {
 		this.linkSetOrderIdentificationIndicator = linkSetOrderIdentificationIndicator;
 	}
 
+	@XmlElement(name = "LkSetOrdrSeqInd")
 	public RequestedIndicator getLinkSetOrderSequenceIndicator() {
 		return linkSetOrderSequenceIndicator;
 	}
@@ -974,6 +997,7 @@ public class StandingOrderReturnCriteria1 {
 		this.linkSetOrderSequenceIndicator = linkSetOrderSequenceIndicator;
 	}
 
+	@XmlElement(name = "TtlAmtInd")
 	public RequestedIndicator getTotalAmountIndicator() {
 		return totalAmountIndicator;
 	}
@@ -982,6 +1006,7 @@ public class StandingOrderReturnCriteria1 {
 		this.totalAmountIndicator = totalAmountIndicator;
 	}
 
+	@XmlElement(name = "ZeroSweepInd")
 	public RequestedIndicator getZeroSweepIndicator() {
 		return zeroSweepIndicator;
 	}

@@ -35,6 +35,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the settlement obligation.
@@ -102,6 +106,9 @@ import java.util.function.Supplier;
  * definition} = "Provides details about the settlement obligation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementObligation5", propOrder = {"relatedSettlementObligationIdentification", "obligationType", "description", "tradeDate", "quantity", "netPositionPrice", "tradingCurrency", "settlementAmount", "settlementDate",
+		"securitiesMovementType", "payment", "references"})
 public class SettlementObligation5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -689,6 +696,7 @@ public class SettlementObligation5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RltdSttlmOblgtnId")
 	public Max35Text getRelatedSettlementObligationIdentification() {
 		return relatedSettlementObligationIdentification;
 	}
@@ -697,6 +705,7 @@ public class SettlementObligation5 {
 		this.relatedSettlementObligationIdentification = relatedSettlementObligationIdentification;
 	}
 
+	@XmlElement(name = "OblgtnTp")
 	public ObligationType1Choice getObligationType() {
 		return obligationType;
 	}
@@ -705,6 +714,7 @@ public class SettlementObligation5 {
 		this.obligationType = obligationType;
 	}
 
+	@XmlElement(name = "Desc")
 	public Max35Text getDescription() {
 		return description;
 	}
@@ -713,6 +723,7 @@ public class SettlementObligation5 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "TradDt")
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
@@ -721,6 +732,7 @@ public class SettlementObligation5 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity1Choice getQuantity() {
 		return quantity;
 	}
@@ -729,6 +741,7 @@ public class SettlementObligation5 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "NetPosPric")
 	public Price4 getNetPositionPrice() {
 		return netPositionPrice;
 	}
@@ -737,6 +750,7 @@ public class SettlementObligation5 {
 		this.netPositionPrice = netPositionPrice;
 	}
 
+	@XmlElement(name = "TradgCcy")
 	public CurrencyCode getTradingCurrency() {
 		return tradingCurrency;
 	}
@@ -745,6 +759,7 @@ public class SettlementObligation5 {
 		this.tradingCurrency = tradingCurrency;
 	}
 
+	@XmlElement(name = "SttlmAmt", required = true)
 	public AmountAndDirection27 getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -753,6 +768,7 @@ public class SettlementObligation5 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
@@ -761,6 +777,7 @@ public class SettlementObligation5 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "SctiesMvmntTp", required = true)
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
@@ -769,6 +786,7 @@ public class SettlementObligation5 {
 		this.securitiesMovementType = securitiesMovementType;
 	}
 
+	@XmlElement(name = "Pmt", required = true)
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
@@ -777,6 +795,7 @@ public class SettlementObligation5 {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "Refs")
 	public Reference19 getReferences() {
 		return references;
 	}

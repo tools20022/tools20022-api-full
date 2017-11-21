@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on the individual tax amount(s) per period of the tax
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxRecordDetails1", propOrder = {"period", "amount"})
 public class TaxRecordDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -170,6 +176,7 @@ public class TaxRecordDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prd")
 	public TaxPeriod1 getPeriod() {
 		return period;
 	}
@@ -178,6 +185,7 @@ public class TaxRecordDetails1 {
 		this.period = period;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}

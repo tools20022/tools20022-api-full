@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Intention to transfer an ownership of a financial instrument.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Order2", propOrder = {"type", "tradingCapacity", "tradeOriginationDate", "customerCapacity", "placeOfExecution", "quantityDetails"})
 public class Order2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -384,6 +390,7 @@ public class Order2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public OrderType1Code getType() {
 		return type;
 	}
@@ -392,6 +399,7 @@ public class Order2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "TradgCpcty")
 	public TradingCapacity3Code getTradingCapacity() {
 		return tradingCapacity;
 	}
@@ -400,6 +408,7 @@ public class Order2 {
 		this.tradingCapacity = tradingCapacity;
 	}
 
+	@XmlElement(name = "TradOrgtnDt")
 	public ISODateTime getTradeOriginationDate() {
 		return tradeOriginationDate;
 	}
@@ -408,6 +417,7 @@ public class Order2 {
 		this.tradeOriginationDate = tradeOriginationDate;
 	}
 
+	@XmlElement(name = "CstmrCpcty")
 	public CustomerOrderCapacity1Code getCustomerCapacity() {
 		return customerCapacity;
 	}
@@ -416,6 +426,7 @@ public class Order2 {
 		this.customerCapacity = customerCapacity;
 	}
 
+	@XmlElement(name = "PlcOfExctn")
 	public MarketIdentification1 getPlaceOfExecution() {
 		return placeOfExecution;
 	}
@@ -424,6 +435,7 @@ public class Order2 {
 		this.placeOfExecution = placeOfExecution;
 	}
 
+	@XmlElement(name = "QtyDtls")
 	public OrderQuantity1 getQuantityDetails() {
 		return quantityDetails;
 	}

@@ -29,21 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RiskLimitType1Code
- * RiskLimitType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LimitType1Code
- * LimitType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LimitType2Code
- * LimitType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LimitType3Code
- * LimitType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LimitType4Code
- * LimitType4Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -89,6 +74,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.LimitTypeCode#mmExternalGuarantee
  * LimitTypeCode.mmExternalGuarantee}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RiskLimitType1Code
+ * RiskLimitType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LimitType1Code
+ * LimitType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LimitType2Code
+ * LimitType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LimitType3Code
+ * LimitType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LimitType4Code
+ * LimitType4Code}</li>
  * </ul>
  * </li>
  * <li>

@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a message previously sent.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identification of a message previously sent."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalMessage1", propOrder = {"messageDefinitionIdentifier", "from", "to", "businessMessageIdentifier", "creationDate", "copyDuplicate"})
 public class OriginalMessage1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -343,6 +349,7 @@ public class OriginalMessage1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgDefIdr", required = true)
 	public Max35Text getMessageDefinitionIdentifier() {
 		return messageDefinitionIdentifier;
 	}
@@ -351,6 +358,7 @@ public class OriginalMessage1 {
 		this.messageDefinitionIdentifier = messageDefinitionIdentifier;
 	}
 
+	@XmlElement(name = "Fr", required = true)
 	public Party9Choice getFrom() {
 		return from;
 	}
@@ -359,6 +367,7 @@ public class OriginalMessage1 {
 		this.from = from;
 	}
 
+	@XmlElement(name = "To", required = true)
 	public Party9Choice getTo() {
 		return to;
 	}
@@ -367,6 +376,7 @@ public class OriginalMessage1 {
 		this.to = to;
 	}
 
+	@XmlElement(name = "BizMsgIdr", required = true)
 	public Max35Text getBusinessMessageIdentifier() {
 		return businessMessageIdentifier;
 	}
@@ -375,6 +385,7 @@ public class OriginalMessage1 {
 		this.businessMessageIdentifier = businessMessageIdentifier;
 	}
 
+	@XmlElement(name = "CreDt", required = true)
 	public ISONormalisedDateTime getCreationDate() {
 		return creationDate;
 	}
@@ -383,6 +394,7 @@ public class OriginalMessage1 {
 		this.creationDate = creationDate;
 	}
 
+	@XmlElement(name = "CpyDplct")
 	public CopyDuplicate1Code getCopyDuplicate() {
 		return copyDuplicate;
 	}

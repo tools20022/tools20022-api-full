@@ -36,6 +36,16 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.StockExchange#mmMarket
+ * StockExchange.mmMarket}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
+ * TradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -43,16 +53,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.TradingMarket#mmStockExchange
  * TradingMarket.mmStockExchange}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
- * TradePartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.StockExchange#mmMarket
- * StockExchange.mmMarket}</li>
  * </ul>
  * </li>
  * <li>
@@ -109,7 +109,7 @@ public class StockExchange extends TradePartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmMarket = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> StockExchange.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.StockExchange.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Market";
@@ -130,7 +130,12 @@ public class StockExchange extends TradePartyRole {
 				definition = "Party that identifies the stock exchange.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradingMarket.mmStockExchange);
 				superType_lazy = () -> TradePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(StockExchange.mmMarket);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.StockExchange.mmMarket);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StockExchange.class;
 			}
 		});
 		return mmObject_lazy.get();

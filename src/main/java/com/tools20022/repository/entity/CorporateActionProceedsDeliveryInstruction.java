@@ -38,6 +38,27 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmRelatedDistribution
+ * CorporateActionProceedsDeliveryInstruction.mmRelatedDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmSecuritiesProceedsMovement
+ * CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmCashProceedsMovement
+ * CorporateActionProceedsDeliveryInstruction.mmCashProceedsMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmSettlementAccount
+ * CorporateActionProceedsDeliveryInstruction.mmSettlementAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmCorporateActionStandingInstruction
+ * CorporateActionProceedsDeliveryInstruction.
+ * mmCorporateActionStandingInstruction}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -69,27 +90,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmRelatedDeliveryInstructions
  * AgentCorporateActionStandingInstruction.mmRelatedDeliveryInstructions}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmRelatedDistribution
- * CorporateActionProceedsDeliveryInstruction.mmRelatedDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmSecuritiesProceedsMovement
- * CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmCashProceedsMovement
- * CorporateActionProceedsDeliveryInstruction.mmCashProceedsMovement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmSettlementAccount
- * CorporateActionProceedsDeliveryInstruction.mmSettlementAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmCorporateActionStandingInstruction
- * CorporateActionProceedsDeliveryInstruction.
- * mmCorporateActionStandingInstruction}</li>
  * </ul>
  * </li>
  * <li>
@@ -151,7 +151,7 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedDistribution";
@@ -183,11 +183,6 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation
 	 * SecuritiesDeliveryObligation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction
-	 * CorporateActionProceedsDeliveryInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -356,6 +351,11 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction
+	 * CorporateActionProceedsDeliveryInstruction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -384,7 +384,7 @@ public class CorporateActionProceedsDeliveryInstruction {
 					CorporateActionOption114.mmSecuritiesMovementDetails, CorporateActionOption126.mmSecuritiesMovementDetails, CorporateActionOption124.mmSecuritiesMovementDetails, CorporateActionOption125.mmSecuritiesMovementDetails,
 					CorporateActionOption127.mmSecuritiesMovementDetails, CorporateActionOption132.mmSecuritiesMovementDetails, CorporateActionOption130.mmSecuritiesMovementDetails, CorporateActionOption129.mmSecuritiesMovementDetails,
 					CorporateActionOption136.mmSecuritiesMovementDetails, CorporateActionOption135.mmSecuritiesMovementDetails, CorporateActionOption133.mmSecuritiesMovementDetails);
-			elementContext_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesProceedsMovement";
@@ -413,11 +413,6 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentObligation
 	 * PaymentObligation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction
-	 * CorporateActionProceedsDeliveryInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -426,6 +421,11 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * GlobalDistributionRequest1.mmCashMovement}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction
+	 * CorporateActionProceedsDeliveryInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -441,7 +441,7 @@ public class CorporateActionProceedsDeliveryInstruction {
 	public static final MMBusinessAssociationEnd mmCashProceedsMovement = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(GlobalDistributionRequest1.mmCashMovement);
-			elementContext_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashProceedsMovement";
@@ -490,7 +490,7 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 */
 	public static final MMBusinessAssociationEnd mmSettlementAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementAccount";
@@ -538,7 +538,7 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionStandingInstruction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionStandingInstruction";
@@ -561,9 +561,15 @@ public class CorporateActionProceedsDeliveryInstruction {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmRelatedProceedsDelivery, com.tools20022.repository.entity.PaymentObligation.mmRelatedCorporateAction,
 						com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmRelatedCorporateAction, com.tools20022.repository.entity.CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction,
 						com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmRelatedDeliveryInstructions);
-				element_lazy = () -> Arrays.asList(CorporateActionProceedsDeliveryInstruction.mmRelatedDistribution, CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement,
-						CorporateActionProceedsDeliveryInstruction.mmCashProceedsMovement, CorporateActionProceedsDeliveryInstruction.mmSettlementAccount, CorporateActionProceedsDeliveryInstruction.mmCorporateActionStandingInstruction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmRelatedDistribution,
+						com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement, com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmCashProceedsMovement,
+						com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmSettlementAccount, com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmCorporateActionStandingInstruction);
 				derivationComponent_lazy = () -> Arrays.asList(ProceedsDelivery1.mmObject(), SecurityMovement1.mmObject(), SecuritiesProceeds1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionProceedsDeliveryInstruction.class;
 			}
 		});
 		return mmObject_lazy.get();

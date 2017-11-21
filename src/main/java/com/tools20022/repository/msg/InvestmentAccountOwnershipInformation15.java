@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics of the ownership of an investment account.
@@ -163,6 +167,11 @@ import java.util.List;
  * InvestmentAccountOwnershipInformation13}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccountOwnershipInformation15", propOrder = {"party", "moneyLaunderingCheck", "modifiedInvestorProfileValidation", "ownershipBeneficiaryRate", "clientIdentification", "fiscalExemption", "signatoryRightIndicator",
+		"miFIDClassification", "notification", "FATCAFormType", "FATCAStatus", "FATCAReportingDate", "CRSFormType", "CRSStatus", "CRSReportingDate", "otherIdentification", "taxExemption", "taxReporting", "language", "mailType",
+		"countryAndResidentialStatus", "monetaryWealth", "equityValue", "workingCapital", "companyLink", "electronicMailingServiceReference", "primaryCommunicationAddress", "secondaryCommunicationAddress",
+		"additionalRegulatoryInformation", "accountingStatus", "additionalInformation", "controllingParty"})
 public class InvestmentAccountOwnershipInformation15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1892,6 +1901,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pty", required = true)
 	public Party33Choice getParty() {
 		return party;
 	}
@@ -1900,6 +1910,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.party = party;
 	}
 
+	@XmlElement(name = "MnyLndrgChck")
 	public MoneyLaunderingCheck1Choice getMoneyLaunderingCheck() {
 		return moneyLaunderingCheck;
 	}
@@ -1908,6 +1919,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.moneyLaunderingCheck = moneyLaunderingCheck;
 	}
 
+	@XmlElement(name = "ModfdInvstrPrflVldtn")
 	public List<ModificationScope27> getModifiedInvestorProfileValidation() {
 		return modifiedInvestorProfileValidation;
 	}
@@ -1916,6 +1928,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.modifiedInvestorProfileValidation = modifiedInvestorProfileValidation;
 	}
 
+	@XmlElement(name = "OwnrshBnfcryRate")
 	public OwnershipBeneficiaryRate1 getOwnershipBeneficiaryRate() {
 		return ownershipBeneficiaryRate;
 	}
@@ -1924,6 +1937,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.ownershipBeneficiaryRate = ownershipBeneficiaryRate;
 	}
 
+	@XmlElement(name = "ClntId")
 	public Max35Text getClientIdentification() {
 		return clientIdentification;
 	}
@@ -1932,6 +1946,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.clientIdentification = clientIdentification;
 	}
 
+	@XmlElement(name = "FsclXmptn")
 	public YesNoIndicator getFiscalExemption() {
 		return fiscalExemption;
 	}
@@ -1940,6 +1955,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.fiscalExemption = fiscalExemption;
 	}
 
+	@XmlElement(name = "SgntryRghtInd")
 	public YesNoIndicator getSignatoryRightIndicator() {
 		return signatoryRightIndicator;
 	}
@@ -1948,6 +1964,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.signatoryRightIndicator = signatoryRightIndicator;
 	}
 
+	@XmlElement(name = "MiFIDClssfctn")
 	public MiFIDClassification1 getMiFIDClassification() {
 		return miFIDClassification;
 	}
@@ -1956,6 +1973,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.miFIDClassification = miFIDClassification;
 	}
 
+	@XmlElement(name = "Ntfctn")
 	public List<Notification2> getNotification() {
 		return notification;
 	}
@@ -1964,6 +1982,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.notification = notification;
 	}
 
+	@XmlElement(name = "FATCAFormTp")
 	public List<FATCAForm1Choice> getFATCAFormType() {
 		return fATCAFormType;
 	}
@@ -1972,6 +1991,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.fATCAFormType = fATCAFormType;
 	}
 
+	@XmlElement(name = "FATCASts")
 	public List<FATCAStatus2> getFATCAStatus() {
 		return fATCAStatus;
 	}
@@ -1980,6 +2000,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.fATCAStatus = fATCAStatus;
 	}
 
+	@XmlElement(name = "FATCARptgDt")
 	public ISODate getFATCAReportingDate() {
 		return fATCAReportingDate;
 	}
@@ -1988,6 +2009,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.fATCAReportingDate = fATCAReportingDate;
 	}
 
+	@XmlElement(name = "CRSFormTp")
 	public List<CRSForm1Choice> getCRSFormType() {
 		return cRSFormType;
 	}
@@ -1996,6 +2018,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.cRSFormType = cRSFormType;
 	}
 
+	@XmlElement(name = "CRSSts")
 	public List<CRSStatus4> getCRSStatus() {
 		return cRSStatus;
 	}
@@ -2004,6 +2027,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.cRSStatus = cRSStatus;
 	}
 
+	@XmlElement(name = "CRSRptgDt")
 	public ISODate getCRSReportingDate() {
 		return cRSReportingDate;
 	}
@@ -2012,6 +2036,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.cRSReportingDate = cRSReportingDate;
 	}
 
+	@XmlElement(name = "OthrId")
 	public List<GenericIdentification82> getOtherIdentification() {
 		return otherIdentification;
 	}
@@ -2020,6 +2045,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.otherIdentification = otherIdentification;
 	}
 
+	@XmlElement(name = "TaxXmptn")
 	public TaxExemptionReason2Choice getTaxExemption() {
 		return taxExemption;
 	}
@@ -2028,6 +2054,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.taxExemption = taxExemption;
 	}
 
+	@XmlElement(name = "TaxRptg")
 	public List<TaxReporting2> getTaxReporting() {
 		return taxReporting;
 	}
@@ -2036,6 +2063,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.taxReporting = taxReporting;
 	}
 
+	@XmlElement(name = "Lang")
 	public LanguageCode getLanguage() {
 		return language;
 	}
@@ -2044,6 +2072,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.language = language;
 	}
 
+	@XmlElement(name = "MailTp")
 	public MailType1Choice getMailType() {
 		return mailType;
 	}
@@ -2052,6 +2081,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.mailType = mailType;
 	}
 
+	@XmlElement(name = "CtryAndResdtlSts")
 	public CountryAndResidentialStatusType2 getCountryAndResidentialStatus() {
 		return countryAndResidentialStatus;
 	}
@@ -2060,6 +2090,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.countryAndResidentialStatus = countryAndResidentialStatus;
 	}
 
+	@XmlElement(name = "MntryWlth")
 	public DateAndAmount1 getMonetaryWealth() {
 		return monetaryWealth;
 	}
@@ -2068,6 +2099,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.monetaryWealth = monetaryWealth;
 	}
 
+	@XmlElement(name = "EqtyVal")
 	public DateAndAmount1 getEquityValue() {
 		return equityValue;
 	}
@@ -2076,6 +2108,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.equityValue = equityValue;
 	}
 
+	@XmlElement(name = "WorkgCptl")
 	public DateAndAmount1 getWorkingCapital() {
 		return workingCapital;
 	}
@@ -2084,6 +2117,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.workingCapital = workingCapital;
 	}
 
+	@XmlElement(name = "CpnyLk")
 	public CompanyLink1Choice getCompanyLink() {
 		return companyLink;
 	}
@@ -2092,6 +2126,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.companyLink = companyLink;
 	}
 
+	@XmlElement(name = "ElctrncMlngSvcRef")
 	public Max350Text getElectronicMailingServiceReference() {
 		return electronicMailingServiceReference;
 	}
@@ -2100,6 +2135,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.electronicMailingServiceReference = electronicMailingServiceReference;
 	}
 
+	@XmlElement(name = "PmryComAdr")
 	public List<CommunicationAddress6> getPrimaryCommunicationAddress() {
 		return primaryCommunicationAddress;
 	}
@@ -2108,6 +2144,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.primaryCommunicationAddress = primaryCommunicationAddress;
 	}
 
+	@XmlElement(name = "ScndryComAdr")
 	public List<CommunicationAddress6> getSecondaryCommunicationAddress() {
 		return secondaryCommunicationAddress;
 	}
@@ -2116,6 +2153,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.secondaryCommunicationAddress = secondaryCommunicationAddress;
 	}
 
+	@XmlElement(name = "AddtlRgltryInf")
 	public RegulatoryInformation1 getAdditionalRegulatoryInformation() {
 		return additionalRegulatoryInformation;
 	}
@@ -2124,6 +2162,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.additionalRegulatoryInformation = additionalRegulatoryInformation;
 	}
 
+	@XmlElement(name = "AcctgSts")
 	public AccountingStatus1Choice getAccountingStatus() {
 		return accountingStatus;
 	}
@@ -2132,6 +2171,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.accountingStatus = accountingStatus;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<AdditiononalInformation12> getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -2140,6 +2180,7 @@ public class InvestmentAccountOwnershipInformation15 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "CtrlgPty")
 	public YesNoIndicator getControllingParty() {
 		return controllingParty;
 	}

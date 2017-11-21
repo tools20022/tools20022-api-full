@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of response status.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ResponseStatus3Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ResponseStatus4Choice", propOrder = {"consented", "rejected", "pending"})
 public class ResponseStatus4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class ResponseStatus4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cnsntd", required = true)
 	public ConsentStatus3Choice getConsented() {
 		return consented;
 	}
@@ -236,6 +243,7 @@ public class ResponseStatus4Choice {
 		this.consented = consented;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectionStatus9Choice getRejected() {
 		return rejected;
 	}
@@ -244,6 +252,7 @@ public class ResponseStatus4Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Pdg", required = true)
 	public PendingStatus20Choice getPending() {
 		return pending;
 	}

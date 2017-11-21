@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines how the CSD is linked to the security.
@@ -75,6 +79,8 @@ import java.util.List;
  * definition} = "Defines how the CSD is linked to the security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityCSDLink2", propOrder = {"financialInstrumentIdentification", "issuerInvestorCSD", "technicalIssuerCSD", "securityMaintenance", "issuanceAccount", "validFrom", "validTo"})
 public class SecurityCSDLink2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -390,6 +396,7 @@ public class SecurityCSDLink2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -398,6 +405,7 @@ public class SecurityCSDLink2 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "IssrInvstrCSD", required = true)
 	public IssuerOrInvestor1choice getIssuerInvestorCSD() {
 		return issuerInvestorCSD;
 	}
@@ -406,6 +414,7 @@ public class SecurityCSDLink2 {
 		this.issuerInvestorCSD = issuerInvestorCSD;
 	}
 
+	@XmlElement(name = "TechIssrCSD")
 	public SystemPartyIdentification1Choice getTechnicalIssuerCSD() {
 		return technicalIssuerCSD;
 	}
@@ -414,6 +423,7 @@ public class SecurityCSDLink2 {
 		this.technicalIssuerCSD = technicalIssuerCSD;
 	}
 
+	@XmlElement(name = "SctyMntnc", required = true)
 	public YesNoIndicator getSecurityMaintenance() {
 		return securityMaintenance;
 	}
@@ -422,6 +432,7 @@ public class SecurityCSDLink2 {
 		this.securityMaintenance = securityMaintenance;
 	}
 
+	@XmlElement(name = "IssncAcct")
 	public List<IssuanceAccount1> getIssuanceAccount() {
 		return issuanceAccount;
 	}
@@ -430,6 +441,7 @@ public class SecurityCSDLink2 {
 		this.issuanceAccount = issuanceAccount;
 	}
 
+	@XmlElement(name = "VldFr", required = true)
 	public DateAndDateTimeChoice getValidFrom() {
 		return validFrom;
 	}
@@ -438,6 +450,7 @@ public class SecurityCSDLink2 {
 		this.validFrom = validFrom;
 	}
 
+	@XmlElement(name = "VldTo")
 	public DateAndDateTimeChoice getValidTo() {
 		return validTo;
 	}

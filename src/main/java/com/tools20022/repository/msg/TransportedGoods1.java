@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Goods or services that are part of a commercial trade agreement.
@@ -71,6 +75,8 @@ import java.util.List;
  * "Goods or services that are part of a commercial trade agreement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportedGoods1", propOrder = {"purchaseOrderReference", "goodsDescription", "buyerDefinedInformation", "sellerDefinedInformation"})
 public class TransportedGoods1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -276,6 +282,7 @@ public class TransportedGoods1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PurchsOrdrRef", required = true)
 	public DocumentIdentification7 getPurchaseOrderReference() {
 		return purchaseOrderReference;
 	}
@@ -284,6 +291,7 @@ public class TransportedGoods1 {
 		this.purchaseOrderReference = purchaseOrderReference;
 	}
 
+	@XmlElement(name = "GoodsDesc")
 	public Max70Text getGoodsDescription() {
 		return goodsDescription;
 	}
@@ -292,6 +300,7 @@ public class TransportedGoods1 {
 		this.goodsDescription = goodsDescription;
 	}
 
+	@XmlElement(name = "BuyrDfndInf")
 	public List<UserDefinedInformation1> getBuyerDefinedInformation() {
 		return buyerDefinedInformation;
 	}
@@ -300,6 +309,7 @@ public class TransportedGoods1 {
 		this.buyerDefinedInformation = buyerDefinedInformation;
 	}
 
+	@XmlElement(name = "SellrDfndInf")
 	public List<UserDefinedInformation1> getSellerDefinedInformation() {
 		return sellerDefinedInformation;
 	}

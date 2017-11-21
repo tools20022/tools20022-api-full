@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SignedQuantityFormat4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice amongst various balance types related to unallocated payment.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionUnallocatedBalanceSD1Choice", propOrder = {"totalEligibleBalance", "borrowedBalance", "collateralInBalance", "collateralOutBalance", "onLoanBalance", "pendingDeliveryBalance", "pendingReceiptBalance"})
 public class CorporateActionUnallocatedBalanceSD1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -458,6 +464,7 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlElgblBal", required = true)
 	public SignedQuantityFormat4 getTotalEligibleBalance() {
 		return totalEligibleBalance;
 	}
@@ -466,6 +473,7 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 		this.totalEligibleBalance = totalEligibleBalance;
 	}
 
+	@XmlElement(name = "BrrwdBal", required = true)
 	public SignedQuantityFormat4 getBorrowedBalance() {
 		return borrowedBalance;
 	}
@@ -474,6 +482,7 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 		this.borrowedBalance = borrowedBalance;
 	}
 
+	@XmlElement(name = "CollInBal", required = true)
 	public SignedQuantityFormat4 getCollateralInBalance() {
 		return collateralInBalance;
 	}
@@ -482,6 +491,7 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 		this.collateralInBalance = collateralInBalance;
 	}
 
+	@XmlElement(name = "CollOutBal", required = true)
 	public SignedQuantityFormat4 getCollateralOutBalance() {
 		return collateralOutBalance;
 	}
@@ -490,6 +500,7 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 		this.collateralOutBalance = collateralOutBalance;
 	}
 
+	@XmlElement(name = "OnLnBal", required = true)
 	public SignedQuantityFormat4 getOnLoanBalance() {
 		return onLoanBalance;
 	}
@@ -498,6 +509,7 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 		this.onLoanBalance = onLoanBalance;
 	}
 
+	@XmlElement(name = "PdgDlvryBal", required = true)
 	public SignedQuantityFormat4 getPendingDeliveryBalance() {
 		return pendingDeliveryBalance;
 	}
@@ -506,6 +518,7 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 		this.pendingDeliveryBalance = pendingDeliveryBalance;
 	}
 
+	@XmlElement(name = "PdgRctBal", required = true)
 	public SignedQuantityFormat4 getPendingReceiptBalance() {
 		return pendingReceiptBalance;
 	}

@@ -29,13 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ISAType1Code ISAType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ISAType2Code ISAType2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.ISATypeCode#mmMiniEquity
@@ -46,6 +39,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * ISATypeCode.mmMiniCash}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ISATypeCode#mmAny
  * ISATypeCode.mmAny}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ISAType1Code ISAType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ISAType2Code ISAType2Code}</li>
  * </ul>
  * </li>
  * <li>

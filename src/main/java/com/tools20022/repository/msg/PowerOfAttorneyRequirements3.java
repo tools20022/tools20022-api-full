@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the conditions to be filled in to obtain a valid power of attorney.
@@ -85,6 +89,8 @@ import java.util.List;
  * PowerOfAttorneyRequirements2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PowerOfAttorneyRequirements3", propOrder = {"legalRequirement", "otherDocumentation", "documentSubmissionDeadline"})
 public class PowerOfAttorneyRequirements3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -257,6 +263,7 @@ public class PowerOfAttorneyRequirements3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LglRqrmnt")
 	public List<PowerOfAttorneyLegalisation1Code> getLegalRequirement() {
 		return legalRequirement;
 	}
@@ -265,6 +272,7 @@ public class PowerOfAttorneyRequirements3 {
 		this.legalRequirement = legalRequirement;
 	}
 
+	@XmlElement(name = "OthrDcmnttn")
 	public Max350Text getOtherDocumentation() {
 		return otherDocumentation;
 	}
@@ -273,6 +281,7 @@ public class PowerOfAttorneyRequirements3 {
 		this.otherDocumentation = otherDocumentation;
 	}
 
+	@XmlElement(name = "DocSubmissnDdln")
 	public DateFormat29Choice getDocumentSubmissionDeadline() {
 		return documentSubmissionDeadline;
 	}

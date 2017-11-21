@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money associated with a service.
@@ -89,6 +93,8 @@ import java.util.function.Supplier;
  * definition} = "Amount of money associated with a service."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Charge15", propOrder = {"type", "extendedType", "amount", "rate", "calculationBasis", "extendedCalculationBasis"})
 public class Charge15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -514,6 +520,7 @@ public class Charge15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ChargeType9Code getType() {
 		return type;
 	}
@@ -522,6 +529,7 @@ public class Charge15 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XtndedTp", required = true)
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
@@ -530,6 +538,7 @@ public class Charge15 {
 		this.extendedType = extendedType;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -538,6 +547,7 @@ public class Charge15 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -546,6 +556,7 @@ public class Charge15 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "ClctnBsis")
 	public CalculationBasis2Code getCalculationBasis() {
 		return calculationBasis;
 	}
@@ -554,6 +565,7 @@ public class Charge15 {
 		this.calculationBasis = calculationBasis;
 	}
 
+	@XmlElement(name = "XtndedClctnBsis")
 	public Extended350Code getExtendedCalculationBasis() {
 		return extendedCalculationBasis;
 	}

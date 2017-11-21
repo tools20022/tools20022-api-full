@@ -29,13 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Operation1Code
- * Operation1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.OperationCode#mmTill
@@ -44,6 +37,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * OperationCode.mmOr}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.OperationCode#mmAnd
  * OperationCode.mmAnd}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Operation1Code
+ * Operation1Code}</li>
  * </ul>
  * </li>
  * <li>

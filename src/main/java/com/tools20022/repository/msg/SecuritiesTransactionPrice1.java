@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.PriceStatus1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Descriptive fields capturing where no strike price is known.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Descriptive fields capturing where no strike price is known."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTransactionPrice1", propOrder = {"pending", "currency"})
 public class SecuritiesTransactionPrice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class SecuritiesTransactionPrice1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pdg", required = true)
 	public PriceStatus1Code getPending() {
 		return pending;
 	}
@@ -168,6 +175,7 @@ public class SecuritiesTransactionPrice1 {
 		this.pending = pending;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveOrHistoricCurrencyCode getCurrency() {
 		return currency;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.AgreedAmount1;
 import com.tools20022.repository.msg.Amount1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the agreed amount for the variation margin and the
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgreedAmount1Choice", propOrder = {"agreedAmountDetails", "segregatedIndependentAmount"})
 public class AgreedAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -202,6 +208,7 @@ public class AgreedAmount1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AgrdAmtDtls", required = true)
 	public AgreedAmount1 getAgreedAmountDetails() {
 		return agreedAmountDetails;
 	}
@@ -210,6 +217,7 @@ public class AgreedAmount1Choice {
 		this.agreedAmountDetails = agreedAmountDetails;
 	}
 
+	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
 	public Amount1 getSegregatedIndependentAmount() {
 		return segregatedIndependentAmount;
 	}

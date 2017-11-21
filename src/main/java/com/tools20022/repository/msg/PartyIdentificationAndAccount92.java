@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party and account details.
@@ -72,6 +76,8 @@ import java.util.function.Supplier;
  * definition} = "Party and account details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount92", propOrder = {"identification", "alternateIdentification", "processingIdentification", "additionalInformation"})
 public class PartyIdentificationAndAccount92 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -279,6 +285,7 @@ public class PartyIdentificationAndAccount92 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification62Choice getIdentification() {
 		return identification;
 	}
@@ -287,6 +294,7 @@ public class PartyIdentificationAndAccount92 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification3 getAlternateIdentification() {
 		return alternateIdentification;
 	}
@@ -295,6 +303,7 @@ public class PartyIdentificationAndAccount92 {
 		this.alternateIdentification = alternateIdentification;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public RestrictedFINXMax16Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -303,6 +312,7 @@ public class PartyIdentificationAndAccount92 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public PartyTextInformation3 getAdditionalInformation() {
 		return additionalInformation;
 	}

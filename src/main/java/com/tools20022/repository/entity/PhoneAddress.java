@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ContactPoint;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,19 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.VoteMethods#mmVoteByTelephone
- * VoteMethods.mmVoteByTelephone}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VoteMethods2#mmVoteByTelephone
- * VoteMethods2.mmVoteByTelephone}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.ContactPoint
- * ContactPoint}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -58,6 +46,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * PhoneAddress.mmFaxNumber}</li>
  * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress#mmMobileNumber
  * PhoneAddress.mmMobileNumber}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.ContactPoint
+ * ContactPoint}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteMethods#mmVoteByTelephone
+ * VoteMethods.mmVoteByTelephone}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteMethods2#mmVoteByTelephone
+ * VoteMethods2.mmVoteByTelephone}</li>
  * </ul>
  * </li>
  * <li>
@@ -90,10 +91,6 @@ public class PhoneAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PhoneAddress PhoneAddress}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -147,6 +144,10 @@ public class PhoneAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PhoneAddress PhoneAddress}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -164,7 +165,7 @@ public class PhoneAddress extends ContactPoint {
 			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmPhoneNumber, OrderDeskContactDetails.mmPhoneNumber, ContactAttributes1.mmPhoneNumber, CommunicationAddress3.mmPhone, ContactDetails2.mmPhoneNumber,
 					ContactIdentification2.mmPhoneNumber, ContactIdentification1.mmPhoneNumber, Contacts3.mmPhoneNumber, ContactInformation1.mmTelephoneNumber, ContactIdentification4.mmPhoneNumber, ContactIdentification3.mmPhoneNumber,
 					CommunicationAddressDetails.mmPhoneNumber, ContactDetails3.mmPhoneNumber, CommunicationAddress5.mmPhone, CommunicationAddress5.mmCustomerService, CommunicationAddress6.mmPhone);
-			elementContext_lazy = () -> PhoneAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhoneNumber";
@@ -172,6 +173,14 @@ public class PhoneAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PhoneAddress.class.getMethod("getPhoneNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text faxNumber;
@@ -186,10 +195,6 @@ public class PhoneAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PhoneAddress PhoneAddress}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -237,6 +242,10 @@ public class PhoneAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PhoneAddress PhoneAddress}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -254,7 +263,7 @@ public class PhoneAddress extends ContactPoint {
 			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmFaxNumber, OrderDeskContactDetails.mmFaxNumber, ContactAttributes1.mmFaxNumber, CommunicationAddress3.mmFaxNumber, ContactDetails2.mmFaxNumber,
 					ContactIdentification2.mmFaxNumber, ContactIdentification1.mmFaxNumber, Contacts3.mmFaxNumber, ContactInformation1.mmFaxNumber, ContactIdentification4.mmFaxNumber, ContactIdentification3.mmFaxNumber,
 					CommunicationAddressDetails.mmFaxNumber, ContactDetails3.mmFaxNumber, CommunicationAddress6.mmFaxNumber);
-			elementContext_lazy = () -> PhoneAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FaxNumber";
@@ -262,6 +271,14 @@ public class PhoneAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PhoneAddress.class.getMethod("getFaxNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text mobileNumber;
@@ -276,10 +293,6 @@ public class PhoneAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PhoneAddress PhoneAddress}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -303,6 +316,10 @@ public class PhoneAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PhoneAddress PhoneAddress}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -319,7 +336,7 @@ public class PhoneAddress extends ContactPoint {
 		{
 			derivation_lazy = () -> Arrays.asList(CommunicationAddress3.mmMobile, ContactDetails2.mmMobileNumber, ContactIdentification2.mmMobileNumber, Contacts3.mmMobileNumber, ContactDetails3.mmMobileNumber,
 					CommunicationAddress6.mmMobile);
-			elementContext_lazy = () -> PhoneAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MobileNumber";
@@ -327,6 +344,14 @@ public class PhoneAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PhoneAddress.class.getMethod("getMobileNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -339,7 +364,12 @@ public class PhoneAddress extends ContactPoint {
 				definition = "Collection of information that identifies a phone address.";
 				derivationElement_lazy = () -> Arrays.asList(VoteMethods.mmVoteByTelephone, VoteMethods2.mmVoteByTelephone);
 				superType_lazy = () -> ContactPoint.mmObject();
-				element_lazy = () -> Arrays.asList(PhoneAddress.mmPhoneNumber, PhoneAddress.mmFaxNumber, PhoneAddress.mmMobileNumber);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PhoneAddress.mmPhoneNumber, com.tools20022.repository.entity.PhoneAddress.mmFaxNumber, com.tools20022.repository.entity.PhoneAddress.mmMobileNumber);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PhoneAddress.class;
 			}
 		});
 		return mmObject_lazy.get();

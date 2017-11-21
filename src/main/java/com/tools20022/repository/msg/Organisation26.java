@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Merchant performing the transaction.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Organisation25}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Organisation26", propOrder = {"commonName", "address", "countryCode", "merchantCategoryCode", "registeredIdentifier"})
 public class Organisation26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -314,6 +320,7 @@ public class Organisation26 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CmonNm", required = true)
 	public Max70Text getCommonName() {
 		return commonName;
 	}
@@ -322,6 +329,7 @@ public class Organisation26 {
 		this.commonName = commonName;
 	}
 
+	@XmlElement(name = "Adr")
 	public Max140Text getAddress() {
 		return address;
 	}
@@ -330,6 +338,7 @@ public class Organisation26 {
 		this.address = address;
 	}
 
+	@XmlElement(name = "CtryCd", required = true)
 	public ISO3NumericCountryCode getCountryCode() {
 		return countryCode;
 	}
@@ -338,6 +347,7 @@ public class Organisation26 {
 		this.countryCode = countryCode;
 	}
 
+	@XmlElement(name = "MrchntCtgyCd", required = true)
 	public Min3Max4Text getMerchantCategoryCode() {
 		return merchantCategoryCode;
 	}
@@ -346,6 +356,7 @@ public class Organisation26 {
 		this.merchantCategoryCode = merchantCategoryCode;
 	}
 
+	@XmlElement(name = "RegdIdr", required = true)
 	public Max35Text getRegisteredIdentifier() {
 		return registeredIdentifier;
 	}

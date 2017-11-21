@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Return criteria for information to be returned in the report deriving from a
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesAccountReturnCriteria", propOrder = {"accountIdentification", "partyIdentification", "partyType", "accountServicer", "accountType", "openingDate", "closingDate", "endInvestorFlag", "pricingScheme"})
 public class SecuritiesAccountReturnCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -490,6 +496,7 @@ public class SecuritiesAccountReturnCriteria {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId")
 	public RequestedIndicator getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -498,6 +505,7 @@ public class SecuritiesAccountReturnCriteria {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "PtyId")
 	public RequestedIndicator getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -506,6 +514,7 @@ public class SecuritiesAccountReturnCriteria {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "PtyTp")
 	public RequestedIndicator getPartyType() {
 		return partyType;
 	}
@@ -514,6 +523,7 @@ public class SecuritiesAccountReturnCriteria {
 		this.partyType = partyType;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public RequestedIndicator getAccountServicer() {
 		return accountServicer;
 	}
@@ -522,6 +532,7 @@ public class SecuritiesAccountReturnCriteria {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "AcctTp")
 	public RequestedIndicator getAccountType() {
 		return accountType;
 	}
@@ -530,6 +541,7 @@ public class SecuritiesAccountReturnCriteria {
 		this.accountType = accountType;
 	}
 
+	@XmlElement(name = "OpngDt")
 	public RequestedIndicator getOpeningDate() {
 		return openingDate;
 	}
@@ -538,6 +550,7 @@ public class SecuritiesAccountReturnCriteria {
 		this.openingDate = openingDate;
 	}
 
+	@XmlElement(name = "ClsgDt")
 	public RequestedIndicator getClosingDate() {
 		return closingDate;
 	}
@@ -546,6 +559,7 @@ public class SecuritiesAccountReturnCriteria {
 		this.closingDate = closingDate;
 	}
 
+	@XmlElement(name = "EndInvstrFlg")
 	public RequestedIndicator getEndInvestorFlag() {
 		return endInvestorFlag;
 	}
@@ -554,6 +568,7 @@ public class SecuritiesAccountReturnCriteria {
 		this.endInvestorFlag = endInvestorFlag;
 	}
 
+	@XmlElement(name = "PricgSchme")
 	public RequestedIndicator getPricingScheme() {
 		return pricingScheme;
 	}

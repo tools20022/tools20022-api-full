@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique and unambiguous identifier of the group of transactions as assigned by
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalGroupInformation3", propOrder = {"originalMessageIdentification", "originalMessageNameIdentification", "originalCreationDateTime"})
 public class OriginalGroupInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -263,6 +269,7 @@ public class OriginalGroupInformation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMsgId", required = true)
 	public Max35Text getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}
@@ -271,6 +278,7 @@ public class OriginalGroupInformation3 {
 		this.originalMessageIdentification = originalMessageIdentification;
 	}
 
+	@XmlElement(name = "OrgnlMsgNmId", required = true)
 	public Max35Text getOriginalMessageNameIdentification() {
 		return originalMessageNameIdentification;
 	}
@@ -279,6 +287,7 @@ public class OriginalGroupInformation3 {
 		this.originalMessageNameIdentification = originalMessageNameIdentification;
 	}
 
+	@XmlElement(name = "OrgnlCreDtTm")
 	public ISODateTime getOriginalCreationDateTime() {
 		return originalCreationDateTime;
 	}

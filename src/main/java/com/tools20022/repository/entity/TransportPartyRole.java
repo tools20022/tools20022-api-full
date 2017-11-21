@@ -35,16 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#mmPartyRole
- * Transport.mmPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TransportPartyRole#mmTransport
+ * TransportPartyRole.mmTransport}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -54,12 +52,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.entity.CarrierAgent CarrierAgent}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TransportPartyRole#mmTransport
- * TransportPartyRole.mmTransport}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Transport#mmPartyRole
+ * Transport.mmPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -117,7 +117,7 @@ public class TransportPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmTransport = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TransportPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TransportPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Transport";
@@ -140,7 +140,12 @@ public class TransportPartyRole extends Role {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Transport.mmPartyRole);
 				subType_lazy = () -> Arrays.asList(Consignor.mmObject(), Consignee.mmObject(), Carrier.mmObject(), CarrierAgent.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(TransportPartyRole.mmTransport);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransportPartyRole.mmTransport);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TransportPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

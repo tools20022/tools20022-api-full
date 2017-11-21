@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the type of request or instruction.
@@ -85,6 +89,8 @@ import java.util.List;
  * AccountManagementConfirmation3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountManagementConfirmation4", propOrder = {"confirmationType", "accountApplicationIdentification", "clientReference", "counterpartyReference", "existingAccountIdentification"})
 public class AccountManagementConfirmation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -361,6 +367,7 @@ public class AccountManagementConfirmation4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ConfTp", required = true)
 	public ConfirmationType1Choice getConfirmationType() {
 		return confirmationType;
 	}
@@ -369,6 +376,7 @@ public class AccountManagementConfirmation4 {
 		this.confirmationType = confirmationType;
 	}
 
+	@XmlElement(name = "AcctApplId")
 	public Max35Text getAccountApplicationIdentification() {
 		return accountApplicationIdentification;
 	}
@@ -377,6 +385,7 @@ public class AccountManagementConfirmation4 {
 		this.accountApplicationIdentification = accountApplicationIdentification;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -385,6 +394,7 @@ public class AccountManagementConfirmation4 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CtrPtyRef")
 	public AdditionalReference6 getCounterpartyReference() {
 		return counterpartyReference;
 	}
@@ -393,6 +403,7 @@ public class AccountManagementConfirmation4 {
 		this.counterpartyReference = counterpartyReference;
 	}
 
+	@XmlElement(name = "ExstgAcctId")
 	public List<Account23> getExistingAccountIdentification() {
 		return existingAccountIdentification;
 	}

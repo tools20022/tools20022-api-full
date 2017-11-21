@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account to or from which a cash entry is made.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Account to or from which a cash entry is made."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccount21", propOrder = {"servicer", "identification"})
 public class CashAccount21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -182,6 +188,7 @@ public class CashAccount21 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Svcr")
 	public BICIdentifier getServicer() {
 		return servicer;
 	}
@@ -190,6 +197,7 @@ public class CashAccount21 {
 		this.servicer = servicer;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentification5Choice getIdentification() {
 		return identification;
 	}

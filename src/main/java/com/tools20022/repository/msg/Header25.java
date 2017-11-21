@@ -32,6 +32,10 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics related to the transfer of transactions.
@@ -94,6 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Header12}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Header25", propOrder = {"downloadTransfer", "formatVersion", "exchangeIdentification", "creationDateTime", "initiatingParty", "recipientParty"})
 public class Header25 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -397,6 +403,7 @@ public class Header25 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DwnldTrf", required = true)
 	public TrueFalseIndicator getDownloadTransfer() {
 		return downloadTransfer;
 	}
@@ -405,6 +412,7 @@ public class Header25 {
 		this.downloadTransfer = downloadTransfer;
 	}
 
+	@XmlElement(name = "FrmtVrsn", required = true)
 	public Max6Text getFormatVersion() {
 		return formatVersion;
 	}
@@ -413,6 +421,7 @@ public class Header25 {
 		this.formatVersion = formatVersion;
 	}
 
+	@XmlElement(name = "XchgId", required = true)
 	public Number getExchangeIdentification() {
 		return exchangeIdentification;
 	}
@@ -421,6 +430,7 @@ public class Header25 {
 		this.exchangeIdentification = exchangeIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -429,6 +439,7 @@ public class Header25 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "InitgPty", required = true)
 	public GenericIdentification53 getInitiatingParty() {
 		return initiatingParty;
 	}
@@ -437,6 +448,7 @@ public class Header25 {
 		this.initiatingParty = initiatingParty;
 	}
 
+	@XmlElement(name = "RcptPty")
 	public GenericIdentification94 getRecipientParty() {
 		return recipientParty;
 	}

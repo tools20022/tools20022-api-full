@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Response;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Card payment completion advice response from the acquirer.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentTransactionAdviceResponse3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransactionAdviceResponse4", propOrder = {"saleReferenceIdentification", "transactionIdentification", "reconciliationIdentification", "response"})
 public class CardPaymentTransactionAdviceResponse4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -342,6 +348,7 @@ public class CardPaymentTransactionAdviceResponse4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SaleRefId")
 	public Max35Text getSaleReferenceIdentification() {
 		return saleReferenceIdentification;
 	}
@@ -350,6 +357,7 @@ public class CardPaymentTransactionAdviceResponse4 {
 		this.saleReferenceIdentification = saleReferenceIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -358,6 +366,7 @@ public class CardPaymentTransactionAdviceResponse4 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "RcncltnId")
 	public Max35Text getReconciliationIdentification() {
 		return reconciliationIdentification;
 	}
@@ -366,6 +375,7 @@ public class CardPaymentTransactionAdviceResponse4 {
 		this.reconciliationIdentification = reconciliationIdentification;
 	}
 
+	@XmlElement(name = "Rspn", required = true)
 	public Response1Code getResponse() {
 		return response;
 	}

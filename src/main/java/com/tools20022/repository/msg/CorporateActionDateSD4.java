@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action date details.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides additional information regarding corporate action date details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionDateSD4", propOrder = {"placeAndName", "interimAccountingStartDate", "delistingDate", "exercisePeriodBeginDate", "objectionDate", "exclusionDate", "proofOfClaimFilingDate"})
 public class CorporateActionDateSD4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -392,6 +398,7 @@ public class CorporateActionDateSD4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -400,6 +407,7 @@ public class CorporateActionDateSD4 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "IntrmAcctgStartDt")
 	public ISODate getInterimAccountingStartDate() {
 		return interimAccountingStartDate;
 	}
@@ -408,6 +416,7 @@ public class CorporateActionDateSD4 {
 		this.interimAccountingStartDate = interimAccountingStartDate;
 	}
 
+	@XmlElement(name = "DlistgDt")
 	public ISODate getDelistingDate() {
 		return delistingDate;
 	}
@@ -416,6 +425,7 @@ public class CorporateActionDateSD4 {
 		this.delistingDate = delistingDate;
 	}
 
+	@XmlElement(name = "ExrcPrdBegnDt")
 	public ISODate getExercisePeriodBeginDate() {
 		return exercisePeriodBeginDate;
 	}
@@ -424,6 +434,7 @@ public class CorporateActionDateSD4 {
 		this.exercisePeriodBeginDate = exercisePeriodBeginDate;
 	}
 
+	@XmlElement(name = "ObjctnDt")
 	public ISODate getObjectionDate() {
 		return objectionDate;
 	}
@@ -432,6 +443,7 @@ public class CorporateActionDateSD4 {
 		this.objectionDate = objectionDate;
 	}
 
+	@XmlElement(name = "ExclsnDt")
 	public ISODate getExclusionDate() {
 		return exclusionDate;
 	}
@@ -440,6 +452,7 @@ public class CorporateActionDateSD4 {
 		this.exclusionDate = exclusionDate;
 	}
 
+	@XmlElement(name = "ProofOfClmFilgDt")
 	public ISODate getProofOfClaimFilingDate() {
 		return proofOfClaimFilingDate;
 	}

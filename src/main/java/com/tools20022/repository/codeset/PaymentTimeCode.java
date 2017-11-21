@@ -29,19 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTime1Code
- * PaymentTime1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTime2Code
- * PaymentTime2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTime3Code
- * PaymentTime3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTime4Code
- * PaymentTime4Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -83,6 +70,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PaymentTimeCode#mmEndOfPeriodAfterInvoiceDate
  * PaymentTimeCode.mmEndOfPeriodAfterInvoiceDate}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTime1Code
+ * PaymentTime1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTime2Code
+ * PaymentTime2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTime3Code
+ * PaymentTime3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTime4Code
+ * PaymentTime4Code}</li>
  * </ul>
  * </li>
  * <li>

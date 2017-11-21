@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Entity involved in an activity.
@@ -74,6 +78,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradePartyIdentification5", propOrder = {"submittingParty", "tradeParty", "fundIdentification"})
 public class TradePartyIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -244,6 +250,7 @@ public class TradePartyIdentification5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SubmitgPty", required = true)
 	public PartyIdentification19Choice getSubmittingParty() {
 		return submittingParty;
 	}
@@ -252,6 +259,7 @@ public class TradePartyIdentification5 {
 		this.submittingParty = submittingParty;
 	}
 
+	@XmlElement(name = "TradPty", required = true)
 	public PartyIdentification19Choice getTradeParty() {
 		return tradeParty;
 	}
@@ -260,6 +268,7 @@ public class TradePartyIdentification5 {
 		this.tradeParty = tradeParty;
 	}
 
+	@XmlElement(name = "FndId")
 	public List<FundIdentification3> getFundIdentification() {
 		return fundIdentification;
 	}

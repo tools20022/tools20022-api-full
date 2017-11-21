@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.AcceptorCompletionAdvice1;
 import com.tools20022.repository.msg.ContentInformationType3;
 import com.tools20022.repository.msg.Header2;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.003.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive
@@ -82,6 +81,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.003.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -101,6 +103,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorCompletionAdviceV01", propOrder = {"header", "completionAdvice", "securityTrailer"})
 public class AcceptorCompletionAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -137,6 +141,14 @@ public class AcceptorCompletionAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorCompletionAdviceV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AcceptorCompletionAdvice1 completionAdvice;
 	/**
@@ -171,6 +183,14 @@ public class AcceptorCompletionAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorCompletionAdvice1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorCompletionAdviceV01.class.getMethod("getCompletionAdvice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ContentInformationType3 securityTrailer;
@@ -207,6 +227,14 @@ public class AcceptorCompletionAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorCompletionAdviceV01.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -220,7 +248,8 @@ public class AcceptorCompletionAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "AccptrCmpltnAdvc";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorCompletionAdviceV01.mmHeader, AcceptorCompletionAdviceV01.mmCompletionAdvice, AcceptorCompletionAdviceV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV01.mmHeader, com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV01.mmCompletionAdvice,
+						com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";
@@ -230,10 +259,16 @@ public class AcceptorCompletionAdviceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcceptorCompletionAdviceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header2 getHeader() {
 		return header;
 	}
@@ -242,6 +277,7 @@ public class AcceptorCompletionAdviceV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "CmpltnAdvc", required = true)
 	public AcceptorCompletionAdvice1 getCompletionAdvice() {
 		return completionAdvice;
 	}
@@ -250,11 +286,18 @@ public class AcceptorCompletionAdviceV01 {
 		this.completionAdvice = completionAdvice;
 	}
 
+	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType3 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType3 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.003.01.01")
+	static public class Document {
+		@XmlElement(name = "AccptrCmpltnAdvc", required = true)
+		public AcceptorCompletionAdviceV01 messageBody;
 	}
 }

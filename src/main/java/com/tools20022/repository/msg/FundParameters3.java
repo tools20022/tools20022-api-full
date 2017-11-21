@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.NetAssetValueCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Fund parameters.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Fund parameters."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundParameters3", propOrder = {"financialInstrumentDetails", "valuationDateTime"})
 public class FundParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class FundParameters3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument17 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -189,6 +196,7 @@ public class FundParameters3 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "ValtnDtTm")
 	public DateAndDateTimeChoice getValuationDateTime() {
 		return valuationDateTime;
 	}

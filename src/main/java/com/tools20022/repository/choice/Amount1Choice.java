@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.UndertakingAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of amounts.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of amounts."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Amount1Choice", propOrder = {"increaseAmount", "decreaseAmount"})
 public class Amount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class Amount1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IncrAmt", required = true)
 	public ActiveCurrencyAndAmount getIncreaseAmount() {
 		return increaseAmount;
 	}
@@ -184,6 +191,7 @@ public class Amount1Choice {
 		this.increaseAmount = increaseAmount;
 	}
 
+	@XmlElement(name = "DcrAmt", required = true)
 	public ActiveCurrencyAndAmount getDecreaseAmount() {
 		return decreaseAmount;
 	}

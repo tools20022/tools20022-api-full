@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the rejected collateral substitution.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides details about the rejected collateral substitution."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralSubstitutionResponse2", propOrder = {"collateralSubstitutionRequestIdentification", "rejectedAmount", "rejectionReason", "rejectionReasonInformation"})
 public class CollateralSubstitutionResponse2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -281,6 +287,7 @@ public class CollateralSubstitutionResponse2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CollSbstitnReqId", required = true)
 	public Max35Text getCollateralSubstitutionRequestIdentification() {
 		return collateralSubstitutionRequestIdentification;
 	}
@@ -289,6 +296,7 @@ public class CollateralSubstitutionResponse2 {
 		this.collateralSubstitutionRequestIdentification = collateralSubstitutionRequestIdentification;
 	}
 
+	@XmlElement(name = "RjctdAmt", required = true)
 	public ActiveCurrencyAndAmount getRejectedAmount() {
 		return rejectedAmount;
 	}
@@ -297,6 +305,7 @@ public class CollateralSubstitutionResponse2 {
 		this.rejectedAmount = rejectedAmount;
 	}
 
+	@XmlElement(name = "RjctnRsn", required = true)
 	public RejectionReasonV021Code getRejectionReason() {
 		return rejectionReason;
 	}
@@ -305,6 +314,7 @@ public class CollateralSubstitutionResponse2 {
 		this.rejectionReason = rejectionReason;
 	}
 
+	@XmlElement(name = "RjctnRsnInf")
 	public Max140Text getRejectionReasonInformation() {
 		return rejectionReasonInformation;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.codeset.AssetClassSubProductType10Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines commodity sub-product attributes of an environmental derivative of
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EnvironmentalCommodityEmission1", propOrder = {"baseProduct", "subProduct", "additionalSubProduct"})
 public class EnvironmentalCommodityEmission1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -214,6 +220,7 @@ public class EnvironmentalCommodityEmission1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BasePdct", required = true)
 	public AssetClassProductType3Code getBaseProduct() {
 		return baseProduct;
 	}
@@ -222,6 +229,7 @@ public class EnvironmentalCommodityEmission1 {
 		this.baseProduct = baseProduct;
 	}
 
+	@XmlElement(name = "SubPdct", required = true)
 	public AssetClassSubProductType10Code getSubProduct() {
 		return subProduct;
 	}
@@ -230,6 +238,7 @@ public class EnvironmentalCommodityEmission1 {
 		this.subProduct = subProduct;
 	}
 
+	@XmlElement(name = "AddtlSubPdct")
 	public AssetClassDetailedSubProductType8Code getAdditionalSubProduct() {
 		return additionalSubProduct;
 	}

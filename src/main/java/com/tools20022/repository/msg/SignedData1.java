@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Digital signature of data, with an asymmetric key.
@@ -71,6 +75,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SignedData1", propOrder = {"version", "digestAlgorithm", "encapsulatedContent", "certificate", "signer"})
 public class SignedData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -288,6 +294,7 @@ public class SignedData1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Number getVersion() {
 		return version;
 	}
@@ -296,6 +303,7 @@ public class SignedData1 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "DgstAlgo", required = true)
 	public List<AlgorithmIdentification1> getDigestAlgorithm() {
 		return digestAlgorithm;
 	}
@@ -304,6 +312,7 @@ public class SignedData1 {
 		this.digestAlgorithm = digestAlgorithm;
 	}
 
+	@XmlElement(name = "NcpsltdCntt", required = true)
 	public EncapsulatedContent1 getEncapsulatedContent() {
 		return encapsulatedContent;
 	}
@@ -312,6 +321,7 @@ public class SignedData1 {
 		this.encapsulatedContent = encapsulatedContent;
 	}
 
+	@XmlElement(name = "Cert")
 	public List<Max3000Binary> getCertificate() {
 		return certificate;
 	}
@@ -320,6 +330,7 @@ public class SignedData1 {
 		this.certificate = certificate;
 	}
 
+	@XmlElement(name = "Sgnr", required = true)
 	public List<Signer1> getSigner() {
 		return signer;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Invoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Report on cancelled billing data.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Report on cancelled billing data."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingCancellationReport1", propOrder = {"regulatoryData", "invoiceDate", "billingIdentification", "billingPeriod", "cancellationReason"})
 public class BillingCancellationReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -326,6 +332,7 @@ public class BillingCancellationReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RgltryData")
 	public InvoiceLegalIssue1 getRegulatoryData() {
 		return regulatoryData;
 	}
@@ -334,6 +341,7 @@ public class BillingCancellationReport1 {
 		this.regulatoryData = regulatoryData;
 	}
 
+	@XmlElement(name = "InvcDt", required = true)
 	public ISODate getInvoiceDate() {
 		return invoiceDate;
 	}
@@ -342,6 +350,7 @@ public class BillingCancellationReport1 {
 		this.invoiceDate = invoiceDate;
 	}
 
+	@XmlElement(name = "BllgId", required = true)
 	public Max35Text getBillingIdentification() {
 		return billingIdentification;
 	}
@@ -350,6 +359,7 @@ public class BillingCancellationReport1 {
 		this.billingIdentification = billingIdentification;
 	}
 
+	@XmlElement(name = "BllgPrd", required = true)
 	public DatePeriodDetails getBillingPeriod() {
 		return billingPeriod;
 	}
@@ -358,6 +368,7 @@ public class BillingCancellationReport1 {
 		this.billingPeriod = billingPeriod;
 	}
 
+	@XmlElement(name = "CxlRsn", required = true)
 	public CancellationReason16Choice getCancellationReason() {
 		return cancellationReason;
 	}

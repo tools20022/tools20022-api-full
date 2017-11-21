@@ -24,9 +24,11 @@ import com.tools20022.repository.msg.CorporateActionInformation1;
 import com.tools20022.repository.msg.CorporateActionSecuritiesMovement1;
 import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -61,9 +63,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.021.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -118,6 +117,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.021.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -129,6 +131,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgentCAMovementConfirmationV01", propOrder = {"identification", "agentCAMovementInstructionIdentification", "agentCAElectionStatusAdviceIdentification", "agentCAGlobalDistributionStatusAdviceIdentification",
+		"corporateActionGeneralInformation", "securitiesMovementDetails", "cashMovementDetails"})
 public class AgentCAMovementConfirmationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -139,6 +144,10 @@ public class AgentCAMovementConfirmationV01 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01
+	 * AgentCAMovementConfirmationV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -157,10 +166,6 @@ public class AgentCAMovementConfirmationV01 {
 	 * mmAgentCAGlobalDistributionStatusAdviceIdentification}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01
-	 * AgentCAMovementConfirmationV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -181,9 +186,10 @@ public class AgentCAMovementConfirmationV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementInstructionIDOrElectionStatusAdviceIDOrGlobalDistributionStatusAdviceIDRule";
 			definition = "Either AgentCAMovementInstructionIdentification or AgentCAElectionStatusAdviceIdentification or AgentCAGlobalDistributionStatusAdviceIdentification must be present.";
-			messageDefinition_lazy = () -> AgentCAMovementConfirmationV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(AgentCAMovementConfirmationV01.mmAgentCAMovementInstructionIdentification, AgentCAMovementConfirmationV01.mmAgentCAElectionStatusAdviceIdentification,
-					AgentCAMovementConfirmationV01.mmAgentCAGlobalDistributionStatusAdviceIdentification);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAMovementInstructionIdentification,
+					com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAElectionStatusAdviceIdentification,
+					com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAGlobalDistributionStatusAdviceIdentification);
 		}
 	};
 	protected DocumentIdentification8 identification;
@@ -223,6 +229,14 @@ public class AgentCAMovementConfirmationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAMovementConfirmationV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification8 agentCAMovementInstructionIdentification;
 	/**
@@ -260,6 +274,14 @@ public class AgentCAMovementConfirmationV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAMovementConfirmationV01.class.getMethod("getAgentCAMovementInstructionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DocumentIdentification8 agentCAElectionStatusAdviceIdentification;
@@ -299,6 +321,14 @@ public class AgentCAMovementConfirmationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAMovementConfirmationV01.class.getMethod("getAgentCAElectionStatusAdviceIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification8 agentCAGlobalDistributionStatusAdviceIdentification;
 	/**
@@ -337,6 +367,14 @@ public class AgentCAMovementConfirmationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAMovementConfirmationV01.class.getMethod("getAgentCAGlobalDistributionStatusAdviceIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
@@ -372,6 +410,14 @@ public class AgentCAMovementConfirmationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAMovementConfirmationV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<CorporateActionSecuritiesMovement1> securitiesMovementDetails;
 	/**
@@ -406,6 +452,14 @@ public class AgentCAMovementConfirmationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionSecuritiesMovement1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAMovementConfirmationV01.class.getMethod("getSecuritiesMovementDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<CashMovement3> cashMovementDetails;
 	/**
@@ -439,6 +493,14 @@ public class AgentCAMovementConfirmationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> CashMovement3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAMovementConfirmationV01.class.getMethod("getCashMovementDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -448,13 +510,16 @@ public class AgentCAMovementConfirmationV01 {
 				name = "AgentCAMovementConfirmationV01";
 				definition = "Scope\r\nThis message is sent by a CSD to an issuer (or its agent) to confirm the settlement of resource movements.\r\nUsage\r\nThis message is used to confirm the settlement of the movements resulting from an:\r\n- Agent Corporate Action Movement Instruction message. It confirms the settlement of the exercised resources and/or proceeds movements in which case the building block Agent Corporate Action Movement Instruction Identification must be present. An Agent Corporate Action Movement Instruction message may be responded to by more than one Agent Corporate Action Movement Confirmation messages.\r\n- Agent Corporate Action Global Distribution Status Advice authorising the global distribution. It confirms the settlement of the exercised resources and/or proceeds movements. The building block Agent Corporate Action Global Distribution Status Advice Identification must be present. An Agent Corporate Action Global Distribution Status Advice message may be responded to by more than one Agent Corporate Action Movement Confirmation messages.\r\n- Agent Corporate Action Election Status Advice that rejects an election advice. It confirms the return of the exercised resources. The building block Agent Corporate Action Election Status Advice Identification must be present. An Agent Corporate Action Election Status Advice message may be responded to by more than one Agent Corporate Action Movement Confirmation messages.\r\n- Agent Corporate Action Election Status Advice where an election cancellation request has been accepted. It confirms the return of the exercised resources. The building block Agent Corporate Action Election Status Advice Identification must be present. An Agent Corporate Action Election Status Advice message may be responded to by more than one Agent Corporate Action Movement Confirmation messages.";
 				messageSet_lazy = () -> Arrays.asList(IssuersAgentsCommunicationISOLatestversion.mmObject());
-				xors_lazy = () -> Arrays.asList(AgentCAMovementConfirmationV01.mmMovementInstructionIDOrElectionStatusAdviceIDOrGlobalDistributionStatusAdviceIDRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmMovementInstructionIDOrElectionStatusAdviceIDOrGlobalDistributionStatusAdviceIDRule);
 				rootElement = "Document";
 				xmlTag = "AgtCAMvmntConf";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAMovementConfirmationV01.mmIdentification, AgentCAMovementConfirmationV01.mmAgentCAMovementInstructionIdentification,
-						AgentCAMovementConfirmationV01.mmAgentCAElectionStatusAdviceIdentification, AgentCAMovementConfirmationV01.mmAgentCAGlobalDistributionStatusAdviceIdentification,
-						AgentCAMovementConfirmationV01.mmCorporateActionGeneralInformation, AgentCAMovementConfirmationV01.mmSecuritiesMovementDetails, AgentCAMovementConfirmationV01.mmCashMovementDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAMovementInstructionIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAElectionStatusAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAGlobalDistributionStatusAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmSecuritiesMovementDetails,
+						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmCashMovementDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -464,10 +529,16 @@ public class AgentCAMovementConfirmationV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AgentCAMovementConfirmationV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
@@ -476,6 +547,7 @@ public class AgentCAMovementConfirmationV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AgtCAMvmntInstrId", required = true)
 	public DocumentIdentification8 getAgentCAMovementInstructionIdentification() {
 		return agentCAMovementInstructionIdentification;
 	}
@@ -484,6 +556,7 @@ public class AgentCAMovementConfirmationV01 {
 		this.agentCAMovementInstructionIdentification = agentCAMovementInstructionIdentification;
 	}
 
+	@XmlElement(name = "AgtCAElctnStsAdvcId", required = true)
 	public DocumentIdentification8 getAgentCAElectionStatusAdviceIdentification() {
 		return agentCAElectionStatusAdviceIdentification;
 	}
@@ -492,6 +565,7 @@ public class AgentCAMovementConfirmationV01 {
 		this.agentCAElectionStatusAdviceIdentification = agentCAElectionStatusAdviceIdentification;
 	}
 
+	@XmlElement(name = "AgtCAGblDstrbtnStsAdvcId", required = true)
 	public DocumentIdentification8 getAgentCAGlobalDistributionStatusAdviceIdentification() {
 		return agentCAGlobalDistributionStatusAdviceIdentification;
 	}
@@ -500,6 +574,7 @@ public class AgentCAMovementConfirmationV01 {
 		this.agentCAGlobalDistributionStatusAdviceIdentification = agentCAGlobalDistributionStatusAdviceIdentification;
 	}
 
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
@@ -508,6 +583,7 @@ public class AgentCAMovementConfirmationV01 {
 		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
 	}
 
+	@XmlElement(name = "SctiesMvmntDtls")
 	public List<CorporateActionSecuritiesMovement1> getSecuritiesMovementDetails() {
 		return securitiesMovementDetails;
 	}
@@ -516,11 +592,18 @@ public class AgentCAMovementConfirmationV01 {
 		this.securitiesMovementDetails = securitiesMovementDetails;
 	}
 
+	@XmlElement(name = "CshMvmntDtls")
 	public List<CashMovement3> getCashMovementDetails() {
 		return cashMovementDetails;
 	}
 
 	public void setCashMovementDetails(List<CashMovement3> cashMovementDetails) {
 		this.cashMovementDetails = cashMovementDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.021.01.01")
+	static public class Document {
+		@XmlElement(name = "AgtCAMvmntConf", required = true)
+		public AgentCAMovementConfirmationV01 messageBody;
 	}
 }

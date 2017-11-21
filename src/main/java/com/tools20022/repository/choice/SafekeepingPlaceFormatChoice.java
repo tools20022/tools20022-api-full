@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.GenericIdentification5;
 import com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for the place of safekeeping.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of formats for the place of safekeeping."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SafekeepingPlaceFormatChoice", propOrder = {"identification", "identificationAsDSS", "identificationAsCountry"})
 public class SafekeepingPlaceFormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class SafekeepingPlaceFormatChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SafekeepingPlaceAsCodeAndPartyIdentification getIdentification() {
 		return identification;
 	}
@@ -238,6 +245,7 @@ public class SafekeepingPlaceFormatChoice {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "IdAsDSS", required = true)
 	public GenericIdentification5 getIdentificationAsDSS() {
 		return identificationAsDSS;
 	}
@@ -246,6 +254,7 @@ public class SafekeepingPlaceFormatChoice {
 		this.identificationAsDSS = identificationAsDSS;
 	}
 
+	@XmlElement(name = "IdAsCtry", required = true)
 	public CountryCode getIdentificationAsCountry() {
 		return identificationAsCountry;
 	}

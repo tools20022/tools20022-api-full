@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.Dispute1;
 import com.tools20022.repository.msg.DisputeNotification1;
 import com.tools20022.repository.msg.SegregatedIndependentAmountDispute1;
 import com.tools20022.repository.msg.VariationMarginDispute1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -42,6 +43,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DisputeManagement#mmDisputedAmount
+ * DisputeManagement.mmDisputedAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DisputeManagement#mmDisputeDate
+ * DisputeManagement.mmDisputeDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DisputeManagement#mmDisputeResolutionType
+ * DisputeManagement.mmDisputeResolutionType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DisputeManagement#mmRelatedManagementProcess
+ * DisputeManagement.mmRelatedManagementProcess}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -85,23 +103,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * DisputeNotification1Choice.mmDisputeNotificationDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DisputeManagement#mmDisputedAmount
- * DisputeManagement.mmDisputedAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DisputeManagement#mmDisputeDate
- * DisputeManagement.mmDisputeDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DisputeManagement#mmDisputeResolutionType
- * DisputeManagement.mmDisputeResolutionType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DisputeManagement#mmRelatedManagementProcess
- * DisputeManagement.mmRelatedManagementProcess}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -133,11 +134,6 @@ public class DisputeManagement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DisputeManagement
-	 * DisputeManagement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -145,6 +141,11 @@ public class DisputeManagement {
 	 * Dispute1.mmDisputedAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DisputeManagement
+	 * DisputeManagement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -159,7 +160,7 @@ public class DisputeManagement {
 	public static final MMBusinessAttribute mmDisputedAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Dispute1.mmDisputedAmount);
-			elementContext_lazy = () -> DisputeManagement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DisputeManagement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputedAmount";
@@ -167,6 +168,14 @@ public class DisputeManagement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DisputeManagement.class.getMethod("getDisputedAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODate disputeDate;
@@ -179,11 +188,6 @@ public class DisputeManagement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DisputeManagement
-	 * DisputeManagement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -191,6 +195,11 @@ public class DisputeManagement {
 	 * Dispute1.mmDisputeDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DisputeManagement
+	 * DisputeManagement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -205,7 +214,7 @@ public class DisputeManagement {
 	public static final MMBusinessAttribute mmDisputeDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Dispute1.mmDisputeDate);
-			elementContext_lazy = () -> DisputeManagement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DisputeManagement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeDate";
@@ -213,6 +222,14 @@ public class DisputeManagement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DisputeManagement.class.getMethod("getDisputeDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DisputeResolutionTypeCode disputeResolutionType;
@@ -227,11 +244,6 @@ public class DisputeManagement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode
 	 * DisputeResolutionTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DisputeManagement
-	 * DisputeManagement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -253,6 +265,11 @@ public class DisputeManagement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DisputeManagement
+	 * DisputeManagement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -269,7 +286,7 @@ public class DisputeManagement {
 		{
 			derivation_lazy = () -> Arrays.asList(DisputeResolutionType2Choice.mmCode, DisputeResolutionType2Choice.mmProprietaryIdentification, VariationMarginDispute1.mmResolutionTypeDetails, DisputeResolutionType1Choice.mmCode,
 					DisputeResolutionType1Choice.mmProprietaryIdentification);
-			elementContext_lazy = () -> DisputeManagement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DisputeManagement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeResolutionType";
@@ -277,6 +294,14 @@ public class DisputeManagement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DisputeResolutionTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DisputeManagement.class.getMethod("getDisputeResolutionType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CollateralManagement relatedManagementProcess;
@@ -317,7 +342,7 @@ public class DisputeManagement {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedManagementProcess = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> DisputeManagement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DisputeManagement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedManagementProcess";
@@ -339,9 +364,15 @@ public class DisputeManagement {
 				definition = "Provides the dispute details on the variation margin and/or the segregated independent amount.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralManagement.mmDisputeManagement);
 				derivationElement_lazy = () -> Arrays.asList(VariationMarginDispute1.mmDisputeDetails, DisputeNotification1Choice.mmDisputeNotificationDetails);
-				element_lazy = () -> Arrays.asList(DisputeManagement.mmDisputedAmount, DisputeManagement.mmDisputeDate, DisputeManagement.mmDisputeResolutionType, DisputeManagement.mmRelatedManagementProcess);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DisputeManagement.mmDisputedAmount, com.tools20022.repository.entity.DisputeManagement.mmDisputeDate,
+						com.tools20022.repository.entity.DisputeManagement.mmDisputeResolutionType, com.tools20022.repository.entity.DisputeManagement.mmRelatedManagementProcess);
 				derivationComponent_lazy = () -> Arrays.asList(Dispute1.mmObject(), DisputeResolutionType2Choice.mmObject(), VariationMarginDispute1.mmObject(), DisputeResolutionType1Choice.mmObject(),
 						SegregatedIndependentAmountDispute1.mmObject(), DisputeNotification1.mmObject(), DisputeNotification1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DisputeManagement.class;
 			}
 		});
 		return mmObject_lazy.get();

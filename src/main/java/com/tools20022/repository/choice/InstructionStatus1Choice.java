@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.DetailedInstructionStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status applying to the instruction request received.
@@ -73,6 +77,8 @@ import java.util.List;
  * definition} = "Status applying to the instruction request received."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructionStatus1Choice", propOrder = {"globalInstructionStatus", "detailedInstructionStatus"})
 public class InstructionStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -191,6 +197,7 @@ public class InstructionStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GblInstrSts", required = true)
 	public InstructionStatus2Choice getGlobalInstructionStatus() {
 		return globalInstructionStatus;
 	}
@@ -199,6 +206,7 @@ public class InstructionStatus1Choice {
 		this.globalInstructionStatus = globalInstructionStatus;
 	}
 
+	@XmlElement(name = "DtldInstrSts", required = true)
 	public List<DetailedInstructionStatus1> getDetailedInstructionStatus() {
 		return detailedInstructionStatus;
 	}

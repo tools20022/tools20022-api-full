@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides transaction type and identification information.
@@ -103,6 +107,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides transaction type and identification information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementTypeAndAdditionalParameters20", propOrder = {"securitiesMovementType", "payment", "commonIdentification", "corporateActionEventIdentification", "reconciliationIndicator",
+		"clientCollateralInstructionIdentification", "clientCollateralTransactionIdentification", "tripartyAgentServiceProviderCollateralTransactionIdentification", "tripartyAgentServiceProviderCollateralInstructionIdentification"})
 public class SettlementTypeAndAdditionalParameters20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -555,6 +562,7 @@ public class SettlementTypeAndAdditionalParameters20 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesMvmntTp", required = true)
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
@@ -563,6 +571,7 @@ public class SettlementTypeAndAdditionalParameters20 {
 		this.securitiesMovementType = securitiesMovementType;
 	}
 
+	@XmlElement(name = "Pmt", required = true)
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
@@ -571,6 +580,7 @@ public class SettlementTypeAndAdditionalParameters20 {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "CmonId")
 	public RestrictedFINXMax16Text getCommonIdentification() {
 		return commonIdentification;
 	}
@@ -579,6 +589,7 @@ public class SettlementTypeAndAdditionalParameters20 {
 		this.commonIdentification = commonIdentification;
 	}
 
+	@XmlElement(name = "CorpActnEvtId")
 	public RestrictedFINXMax16Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -587,6 +598,7 @@ public class SettlementTypeAndAdditionalParameters20 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "RcncltnInd")
 	public YesNoIndicator getReconciliationIndicator() {
 		return reconciliationIndicator;
 	}
@@ -595,6 +607,7 @@ public class SettlementTypeAndAdditionalParameters20 {
 		this.reconciliationIndicator = reconciliationIndicator;
 	}
 
+	@XmlElement(name = "ClntCollInstrId")
 	public RestrictedFINXMax16Text getClientCollateralInstructionIdentification() {
 		return clientCollateralInstructionIdentification;
 	}
@@ -603,6 +616,7 @@ public class SettlementTypeAndAdditionalParameters20 {
 		this.clientCollateralInstructionIdentification = clientCollateralInstructionIdentification;
 	}
 
+	@XmlElement(name = "ClntCollTxId")
 	public RestrictedFINXMax16Text getClientCollateralTransactionIdentification() {
 		return clientCollateralTransactionIdentification;
 	}
@@ -611,6 +625,7 @@ public class SettlementTypeAndAdditionalParameters20 {
 		this.clientCollateralTransactionIdentification = clientCollateralTransactionIdentification;
 	}
 
+	@XmlElement(name = "TrptyAgtSvcPrvdrCollTxId")
 	public RestrictedFINXMax16Text getTripartyAgentServiceProviderCollateralTransactionIdentification() {
 		return tripartyAgentServiceProviderCollateralTransactionIdentification;
 	}
@@ -619,6 +634,7 @@ public class SettlementTypeAndAdditionalParameters20 {
 		this.tripartyAgentServiceProviderCollateralTransactionIdentification = tripartyAgentServiceProviderCollateralTransactionIdentification;
 	}
 
+	@XmlElement(name = "TrptyAgtSvcPrvdrCollInstrId")
 	public RestrictedFINXMax16Text getTripartyAgentServiceProviderCollateralInstructionIdentification() {
 		return tripartyAgentServiceProviderCollateralInstructionIdentification;
 	}

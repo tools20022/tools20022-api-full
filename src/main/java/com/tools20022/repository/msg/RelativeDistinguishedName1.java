@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Relative distinguished name defined by X.500 and X.509.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RelativeDistinguishedName1", propOrder = {"attributeType", "attributeValue"})
 public class RelativeDistinguishedName1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class RelativeDistinguishedName1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AttrTp", required = true)
 	public AttributeType1Code getAttributeType() {
 		return attributeType;
 	}
@@ -193,6 +200,7 @@ public class RelativeDistinguishedName1 {
 		this.attributeType = attributeType;
 	}
 
+	@XmlElement(name = "AttrVal", required = true)
 	public Max140Text getAttributeValue() {
 		return attributeValue;
 	}

@@ -66,6 +66,11 @@ public class Drawer extends ChequePartyRole {
 				definition = "Account owner that issues a cheque ordering the drawee bank to pay a specific amount, upon demand, to the payee.";
 				superType_lazy = () -> ChequePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Drawer.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Purchased item.
@@ -98,6 +102,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * Product1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Product3", propOrder = {"itemIdentification", "productCode", "additionalProductCode", "unitOfMeasure", "productQuantity", "unitPrice", "unitPriceSign", "productAmount", "productAmountSign", "valueAddedTax", "taxType",
+		"productDescription", "deliveryLocation", "deliveryService"})
 public class Product3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -810,6 +817,7 @@ public class Product3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ItmId")
 	public Max35Text getItemIdentification() {
 		return itemIdentification;
 	}
@@ -818,6 +826,7 @@ public class Product3 {
 		this.itemIdentification = itemIdentification;
 	}
 
+	@XmlElement(name = "PdctCd", required = true)
 	public Max70Text getProductCode() {
 		return productCode;
 	}
@@ -826,6 +835,7 @@ public class Product3 {
 		this.productCode = productCode;
 	}
 
+	@XmlElement(name = "AddtlPdctCd")
 	public Max70Text getAdditionalProductCode() {
 		return additionalProductCode;
 	}
@@ -834,6 +844,7 @@ public class Product3 {
 		this.additionalProductCode = additionalProductCode;
 	}
 
+	@XmlElement(name = "UnitOfMeasr")
 	public UnitOfMeasure6Code getUnitOfMeasure() {
 		return unitOfMeasure;
 	}
@@ -842,6 +853,7 @@ public class Product3 {
 		this.unitOfMeasure = unitOfMeasure;
 	}
 
+	@XmlElement(name = "PdctQty")
 	public DecimalNumber getProductQuantity() {
 		return productQuantity;
 	}
@@ -850,6 +862,7 @@ public class Product3 {
 		this.productQuantity = productQuantity;
 	}
 
+	@XmlElement(name = "UnitPric")
 	public ImpliedCurrencyAndAmount getUnitPrice() {
 		return unitPrice;
 	}
@@ -858,6 +871,7 @@ public class Product3 {
 		this.unitPrice = unitPrice;
 	}
 
+	@XmlElement(name = "UnitPricSgn")
 	public PlusOrMinusIndicator getUnitPriceSign() {
 		return unitPriceSign;
 	}
@@ -866,6 +880,7 @@ public class Product3 {
 		this.unitPriceSign = unitPriceSign;
 	}
 
+	@XmlElement(name = "PdctAmt", required = true)
 	public ImpliedCurrencyAndAmount getProductAmount() {
 		return productAmount;
 	}
@@ -874,6 +889,7 @@ public class Product3 {
 		this.productAmount = productAmount;
 	}
 
+	@XmlElement(name = "PdctAmtSgn")
 	public PlusOrMinusIndicator getProductAmountSign() {
 		return productAmountSign;
 	}
@@ -882,6 +898,7 @@ public class Product3 {
 		this.productAmountSign = productAmountSign;
 	}
 
+	@XmlElement(name = "ValAddedTax")
 	public ImpliedCurrencyAndAmount getValueAddedTax() {
 		return valueAddedTax;
 	}
@@ -890,6 +907,7 @@ public class Product3 {
 		this.valueAddedTax = valueAddedTax;
 	}
 
+	@XmlElement(name = "TaxTp")
 	public Max35Text getTaxType() {
 		return taxType;
 	}
@@ -898,6 +916,7 @@ public class Product3 {
 		this.taxType = taxType;
 	}
 
+	@XmlElement(name = "PdctDesc")
 	public Max140Text getProductDescription() {
 		return productDescription;
 	}
@@ -906,6 +925,7 @@ public class Product3 {
 		this.productDescription = productDescription;
 	}
 
+	@XmlElement(name = "DlvryLctn")
 	public Max10Text getDeliveryLocation() {
 		return deliveryLocation;
 	}
@@ -914,6 +934,7 @@ public class Product3 {
 		this.deliveryLocation = deliveryLocation;
 	}
 
+	@XmlElement(name = "DlvrySvc")
 	public AttendanceContext2Code getDeliveryService() {
 		return deliveryService;
 	}

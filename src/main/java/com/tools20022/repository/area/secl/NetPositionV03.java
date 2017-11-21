@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.Pagination;
 import com.tools20022.repository.msg.ReportParameters1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -47,9 +49,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code secl.004.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
@@ -91,6 +90,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code secl.004.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -102,6 +104,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NetPositionV03", propOrder = {"reportParameters", "pagination", "clearingMember", "clearingSegment", "netPositionReport", "supplementaryData"})
 public class NetPositionV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -142,6 +146,14 @@ public class NetPositionV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> ReportParameters1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetPositionV03.class.getMethod("getReportParameters", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Pagination pagination;
 	/**
@@ -175,6 +187,14 @@ public class NetPositionV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetPositionV03.class.getMethod("getPagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification35Choice clearingMember;
@@ -213,6 +233,14 @@ public class NetPositionV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetPositionV03.class.getMethod("getClearingMember", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification35Choice clearingSegment;
@@ -256,6 +284,14 @@ public class NetPositionV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetPositionV03.class.getMethod("getClearingSegment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<NetPosition3> netPositionReport;
 	/**
@@ -291,6 +327,14 @@ public class NetPositionV03 {
 			definition = "Provides the net position details such as the average deal price and net quantity.";
 			minOccurs = 1;
 			complexType_lazy = () -> NetPosition3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetPositionV03.class.getMethod("getNetPositionReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -329,6 +373,14 @@ public class NetPositionV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetPositionV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -341,8 +393,9 @@ public class NetPositionV03 {
 				rootElement = "Document";
 				xmlTag = "NetPos";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(NetPositionV03.mmReportParameters, NetPositionV03.mmPagination, NetPositionV03.mmClearingMember, NetPositionV03.mmClearingSegment, NetPositionV03.mmNetPositionReport,
-						NetPositionV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.NetPositionV03.mmReportParameters, com.tools20022.repository.area.secl.NetPositionV03.mmPagination,
+						com.tools20022.repository.area.secl.NetPositionV03.mmClearingMember, com.tools20022.repository.area.secl.NetPositionV03.mmClearingSegment, com.tools20022.repository.area.secl.NetPositionV03.mmNetPositionReport,
+						com.tools20022.repository.area.secl.NetPositionV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "secl";
@@ -352,10 +405,16 @@ public class NetPositionV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return NetPositionV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptParams", required = true)
 	public ReportParameters1 getReportParameters() {
 		return reportParameters;
 	}
@@ -364,6 +423,7 @@ public class NetPositionV03 {
 		this.reportParameters = reportParameters;
 	}
 
+	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
@@ -372,6 +432,7 @@ public class NetPositionV03 {
 		this.pagination = pagination;
 	}
 
+	@XmlElement(name = "ClrMmb", required = true)
 	public PartyIdentification35Choice getClearingMember() {
 		return clearingMember;
 	}
@@ -380,6 +441,7 @@ public class NetPositionV03 {
 		this.clearingMember = clearingMember;
 	}
 
+	@XmlElement(name = "ClrSgmt")
 	public PartyIdentification35Choice getClearingSegment() {
 		return clearingSegment;
 	}
@@ -388,6 +450,7 @@ public class NetPositionV03 {
 		this.clearingSegment = clearingSegment;
 	}
 
+	@XmlElement(name = "NetPosRpt", required = true)
 	public List<NetPosition3> getNetPositionReport() {
 		return netPositionReport;
 	}
@@ -396,11 +459,18 @@ public class NetPositionV03 {
 		this.netPositionReport = netPositionReport;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:secl.004.03.03")
+	static public class Document {
+		@XmlElement(name = "NetPos", required = true)
+		public NetPositionV03 messageBody;
 	}
 }

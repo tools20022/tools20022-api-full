@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Margin amount payable by one party to the other party.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Margin amount payable by one party to the other party."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Amount1", propOrder = {"agreedAmount", "marginCallRequestIdentification", "additionalInformation"})
 public class Amount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -212,6 +218,7 @@ public class Amount1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AgrdAmt", required = true)
 	public ActiveCurrencyAndAmount getAgreedAmount() {
 		return agreedAmount;
 	}
@@ -220,6 +227,7 @@ public class Amount1 {
 		this.agreedAmount = agreedAmount;
 	}
 
+	@XmlElement(name = "MrgnCallReqId", required = true)
 	public Max35Text getMarginCallRequestIdentification() {
 		return marginCallRequestIdentification;
 	}
@@ -228,6 +236,7 @@ public class Amount1 {
 		this.marginCallRequestIdentification = marginCallRequestIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max210Text getAdditionalInformation() {
 		return additionalInformation;
 	}

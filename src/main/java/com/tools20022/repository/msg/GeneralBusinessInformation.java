@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SystemBusinessInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details about business information related to a system.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details about business information related to a system."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GeneralBusinessInformation", propOrder = {"qualifier", "subject", "subjectDetails"})
 public class GeneralBusinessInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -232,6 +238,7 @@ public class GeneralBusinessInformation {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Qlfr")
 	public InformationQualifierType getQualifier() {
 		return qualifier;
 	}
@@ -240,6 +247,7 @@ public class GeneralBusinessInformation {
 		this.qualifier = qualifier;
 	}
 
+	@XmlElement(name = "Sbjt")
 	public Max35Text getSubject() {
 		return subject;
 	}
@@ -248,6 +256,7 @@ public class GeneralBusinessInformation {
 		this.subject = subject;
 	}
 
+	@XmlElement(name = "SbjtDtls")
 	public Max350Text getSubjectDetails() {
 		return subjectDetails;
 	}

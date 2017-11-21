@@ -25,8 +25,10 @@ import com.tools20022.repository.area.TradeServicesLatestVersion;
 import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msg.UndertakingDemandWithdrawal1;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The DemandWithdrawalNotification message is sent by the beneficiary to the
@@ -37,9 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsrv.017.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
@@ -69,6 +68,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsrv.017.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -80,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DemandWithdrawalNotificationV01", propOrder = {"demandWithdrawalNotificationDetails", "digitalSignature"})
 public class DemandWithdrawalNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -117,6 +121,14 @@ public class DemandWithdrawalNotificationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> UndertakingDemandWithdrawal1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DemandWithdrawalNotificationV01.class.getMethod("getDemandWithdrawalNotificationDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyAndSignature2 digitalSignature;
 	/**
@@ -152,6 +164,14 @@ public class DemandWithdrawalNotificationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DemandWithdrawalNotificationV01.class.getMethod("getDigitalSignature", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -164,7 +184,8 @@ public class DemandWithdrawalNotificationV01 {
 				rootElement = "Document";
 				xmlTag = "DmndWdrwlNtfctn";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(DemandWithdrawalNotificationV01.mmDemandWithdrawalNotificationDetails, DemandWithdrawalNotificationV01.mmDigitalSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.DemandWithdrawalNotificationV01.mmDemandWithdrawalNotificationDetails,
+						com.tools20022.repository.area.tsrv.DemandWithdrawalNotificationV01.mmDigitalSignature);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsrv";
@@ -174,10 +195,16 @@ public class DemandWithdrawalNotificationV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DemandWithdrawalNotificationV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DmndWdrwlNtfctnDtls", required = true)
 	public UndertakingDemandWithdrawal1 getDemandWithdrawalNotificationDetails() {
 		return demandWithdrawalNotificationDetails;
 	}
@@ -186,11 +213,18 @@ public class DemandWithdrawalNotificationV01 {
 		this.demandWithdrawalNotificationDetails = demandWithdrawalNotificationDetails;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public PartyAndSignature2 getDigitalSignature() {
 		return digitalSignature;
 	}
 
 	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
 		this.digitalSignature = digitalSignature;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.017.01.01")
+	static public class Document {
+		@XmlElement(name = "DmndWdrwlNtfctn", required = true)
+		public DemandWithdrawalNotificationV01 messageBody;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.DebitCreditCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmFromAmount
+ * AmountRange.mmFromAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmToAmount
+ * AmountRange.mmToAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmEqualAmount
+ * AmountRange.mmEqualAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AmountRange#mmNotEqualAmount
+ * AmountRange.mmNotEqualAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AmountRange#mmCreditDebitIndicator
+ * AmountRange.mmCreditDebitIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmCurrency
+ * AmountRange.mmCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AmountRange#mmRelatedInterest
+ * AmountRange.mmRelatedInterest}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -130,28 +153,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ActiveOrHistoricAmountRange1Choice.mmCurrencyAndAmountRange}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmFromAmount
- * AmountRange.mmFromAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmToAmount
- * AmountRange.mmToAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmEqualAmount
- * AmountRange.mmEqualAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AmountRange#mmNotEqualAmount
- * AmountRange.mmNotEqualAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AmountRange#mmCreditDebitIndicator
- * AmountRange.mmCreditDebitIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmCurrency
- * AmountRange.mmCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AmountRange#mmRelatedInterest
- * AmountRange.mmRelatedInterest}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -188,10 +189,6 @@ public class AmountRange {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.AmountRangeBoundary
 	 * AmountRangeBoundary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRange AmountRange}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -203,6 +200,10 @@ public class AmountRange {
 	 * ImpliedCurrencyAmountRangeChoice.mmFromAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AmountRange AmountRange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -217,7 +218,7 @@ public class AmountRange {
 	public static final MMBusinessAssociationEnd mmFromAmount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FromToAmountRange.mmFromAmount, ImpliedCurrencyAmountRangeChoice.mmFromAmount);
-			elementContext_lazy = () -> AmountRange.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountRange.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FromAmount";
@@ -247,10 +248,6 @@ public class AmountRange {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.AmountRangeBoundary
 	 * AmountRangeBoundary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRange AmountRange}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -262,6 +259,10 @@ public class AmountRange {
 	 * ImpliedCurrencyAmountRangeChoice.mmToAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AmountRange AmountRange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -276,7 +277,7 @@ public class AmountRange {
 	public static final MMBusinessAssociationEnd mmToAmount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FromToAmountRange.mmToAmount, ImpliedCurrencyAmountRangeChoice.mmToAmount);
-			elementContext_lazy = () -> AmountRange.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountRange.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ToAmount";
@@ -299,10 +300,6 @@ public class AmountRange {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRange AmountRange}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -311,6 +308,10 @@ public class AmountRange {
 	 * ImpliedCurrencyAmountRangeChoice.mmEqualAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AmountRange AmountRange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -325,7 +326,7 @@ public class AmountRange {
 	public static final MMBusinessAttribute mmEqualAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ImpliedCurrencyAmountRangeChoice.mmEqualAmount);
-			elementContext_lazy = () -> AmountRange.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountRange.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EqualAmount";
@@ -333,6 +334,14 @@ public class AmountRange {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmountRange.class.getMethod("getEqualAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount notEqualAmount;
@@ -346,10 +355,6 @@ public class AmountRange {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRange AmountRange}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -358,6 +363,10 @@ public class AmountRange {
 	 * ImpliedCurrencyAmountRangeChoice.mmNotEqualAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AmountRange AmountRange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -373,7 +382,7 @@ public class AmountRange {
 	public static final MMBusinessAttribute mmNotEqualAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ImpliedCurrencyAmountRangeChoice.mmNotEqualAmount);
-			elementContext_lazy = () -> AmountRange.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountRange.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotEqualAmount";
@@ -381,6 +390,14 @@ public class AmountRange {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmountRange.class.getMethod("getNotEqualAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DebitCreditCode creditDebitIndicator;
@@ -394,10 +411,6 @@ public class AmountRange {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DebitCreditCode
 	 * DebitCreditCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRange AmountRange}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -422,6 +435,10 @@ public class AmountRange {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AmountRange AmountRange}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -437,7 +454,7 @@ public class AmountRange {
 		{
 			derivation_lazy = () -> Arrays.asList(ImpliedCurrencyAndAmountRange.mmCreditDebitIndicator, CurrencyAndAmountRange.mmCreditDebitIndicator, CurrencyAndAmountRange2.mmCreditDebitIndicator,
 					ActiveCurrencyAndAmountRange1.mmCreditDebitIndicator, ActiveOrHistoricCurrencyAndAmountRange1.mmCreditDebitIndicator, InterestRecord1.mmCreditDebitIndicator);
-			elementContext_lazy = () -> AmountRange.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountRange.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
@@ -445,6 +462,14 @@ public class AmountRange {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmountRange.class.getMethod("getCreditDebitIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyCode currency;
@@ -457,10 +482,6 @@ public class AmountRange {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRange AmountRange}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -479,6 +500,10 @@ public class AmountRange {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AmountRange AmountRange}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -492,7 +517,7 @@ public class AmountRange {
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CurrencyAndAmountRange.mmCurrency, CurrencyAndAmountRange2.mmCurrency, ActiveCurrencyAndAmountRange1.mmCurrency, ActiveOrHistoricCurrencyAndAmountRange1.mmCurrency);
-			elementContext_lazy = () -> AmountRange.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountRange.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
@@ -500,6 +525,14 @@ public class AmountRange {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmountRange.class.getMethod("getCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InterestCalculation relatedInterest;
@@ -537,7 +570,7 @@ public class AmountRange {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AmountRange.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountRange.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInterest";
@@ -563,11 +596,17 @@ public class AmountRange {
 						AmountRange2Choice.mmImpliedCurrencyAndAmountRange, AmountRange2Choice.mmCurrencyAndAmountRange, AmountRangeChoice.mmImpliedCurrencyAndAmountRange, AmountRangeChoice.mmCurrencyAndAmountRange,
 						ActiveCurrencyAndAmountRange1.mmAmount, ActiveAmountRange1Choice.mmImpliedCurrencyAndAmountRange, ActiveAmountRange1Choice.mmCurrencyAndAmountRange, ActiveOrHistoricCurrencyAndAmountRange1.mmAmount,
 						ActiveOrHistoricAmountRange1Choice.mmImpliedCurrencyAndAmountRange, ActiveOrHistoricAmountRange1Choice.mmCurrencyAndAmountRange);
-				element_lazy = () -> Arrays.asList(AmountRange.mmFromAmount, AmountRange.mmToAmount, AmountRange.mmEqualAmount, AmountRange.mmNotEqualAmount, AmountRange.mmCreditDebitIndicator, AmountRange.mmCurrency,
-						AmountRange.mmRelatedInterest);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AmountRange.mmFromAmount, com.tools20022.repository.entity.AmountRange.mmToAmount, com.tools20022.repository.entity.AmountRange.mmEqualAmount,
+						com.tools20022.repository.entity.AmountRange.mmNotEqualAmount, com.tools20022.repository.entity.AmountRange.mmCreditDebitIndicator, com.tools20022.repository.entity.AmountRange.mmCurrency,
+						com.tools20022.repository.entity.AmountRange.mmRelatedInterest);
 				derivationComponent_lazy = () -> Arrays.asList(FromToAmountRange.mmObject(), ImpliedCurrencyAmountRangeChoice.mmObject(), ImpliedCurrencyAndAmountRange.mmObject(), CurrencyAndAmountRange.mmObject(),
 						CurrencyAndAmountRange2.mmObject(), AmountRange2Choice.mmObject(), AmountRangeChoice.mmObject(), ActiveCurrencyAndAmountRange1.mmObject(), ActiveAmountRange1Choice.mmObject(),
 						ActiveOrHistoricCurrencyAndAmountRange1.mmObject(), ActiveOrHistoricAmountRange1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AmountRange.class;
 			}
 		});
 		return mmObject_lazy.get();

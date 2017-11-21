@@ -32,6 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} = "Banco de Portugal; PortugueseNCC"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "PT[0-9]{8,8}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -68,6 +70,7 @@ public class PortugueseNCCIdentifier {
 				name = "PortugueseNCCIdentifier";
 				definition = "Portuguese National Clearing Code. Identifies Portuguese financial institutions on the Portuguese national clearing system.";
 				identificationScheme = "Banco de Portugal; PortugueseNCC";
+				pattern = "PT[0-9]{8,8}";
 			}
 		});
 		return mmObject_lazy.get();

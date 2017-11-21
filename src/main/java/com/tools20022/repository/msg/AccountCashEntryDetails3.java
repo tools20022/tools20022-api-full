@@ -36,6 +36,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Posting of an item to a cash account, in the context of a cash transaction,
@@ -96,6 +100,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountCashEntryDetails3", propOrder = {"accountIdentification", "accountCurrency", "accountType", "entryReference", "entryAmount", "entryDate", "entryStatus", "accountOwner", "accountServicer"})
 public class AccountCashEntryDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -566,6 +572,7 @@ public class AccountCashEntryDetails3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentification1Choice getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -574,6 +581,7 @@ public class AccountCashEntryDetails3 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctCcy")
 	public CurrencyCode getAccountCurrency() {
 		return accountCurrency;
 	}
@@ -582,6 +590,7 @@ public class AccountCashEntryDetails3 {
 		this.accountCurrency = accountCurrency;
 	}
 
+	@XmlElement(name = "AcctTp")
 	public CashAccountType2Code getAccountType() {
 		return accountType;
 	}
@@ -590,6 +599,7 @@ public class AccountCashEntryDetails3 {
 		this.accountType = accountType;
 	}
 
+	@XmlElement(name = "NtryRef")
 	public Max35Text getEntryReference() {
 		return entryReference;
 	}
@@ -598,6 +608,7 @@ public class AccountCashEntryDetails3 {
 		this.entryReference = entryReference;
 	}
 
+	@XmlElement(name = "NtryAmt")
 	public CurrencyAndAmount getEntryAmount() {
 		return entryAmount;
 	}
@@ -606,6 +617,7 @@ public class AccountCashEntryDetails3 {
 		this.entryAmount = entryAmount;
 	}
 
+	@XmlElement(name = "NtryDt")
 	public DateAndDateTimeChoice getEntryDate() {
 		return entryDate;
 	}
@@ -614,6 +626,7 @@ public class AccountCashEntryDetails3 {
 		this.entryDate = entryDate;
 	}
 
+	@XmlElement(name = "NtrySts")
 	public EntryStatus1Code getEntryStatus() {
 		return entryStatus;
 	}
@@ -622,6 +635,7 @@ public class AccountCashEntryDetails3 {
 		this.entryStatus = entryStatus;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public AnyBICIdentifier getAccountOwner() {
 		return accountOwner;
 	}
@@ -630,6 +644,7 @@ public class AccountCashEntryDetails3 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public BICIdentifier getAccountServicer() {
 		return accountServicer;
 	}

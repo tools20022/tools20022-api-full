@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money associated with a service.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Charge20}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Charge27", propOrder = {"type", "amount", "chargeBasis", "chargeBearer", "recipientIdentification"})
 public class Charge27 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -392,6 +398,7 @@ public class Charge27 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ChargeType4Choice getType() {
 		return type;
 	}
@@ -400,6 +407,7 @@ public class Charge27 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -408,6 +416,7 @@ public class Charge27 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "ChrgBsis")
 	public ChargeBasisType1Choice getChargeBasis() {
 		return chargeBasis;
 	}
@@ -416,6 +425,7 @@ public class Charge27 {
 		this.chargeBasis = chargeBasis;
 	}
 
+	@XmlElement(name = "ChrgBr")
 	public ChargeBearer1Code getChargeBearer() {
 		return chargeBearer;
 	}
@@ -424,6 +434,7 @@ public class Charge27 {
 		this.chargeBearer = chargeBearer;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification2Choice getRecipientIdentification() {
 		return recipientIdentification;
 	}

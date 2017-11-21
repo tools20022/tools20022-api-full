@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies a ratio: amount price per financial instrument quantity.
@@ -81,6 +85,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountPricePerFinancialInstrumentQuantity3", propOrder = {"amountPriceType", "priceValue", "financialInstrumentQuantity"})
 public class AmountPricePerFinancialInstrumentQuantity3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -280,6 +286,7 @@ public class AmountPricePerFinancialInstrumentQuantity3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AmtPricTp", required = true)
 	public AmountPriceType1Code getAmountPriceType() {
 		return amountPriceType;
 	}
@@ -288,6 +295,7 @@ public class AmountPricePerFinancialInstrumentQuantity3 {
 		this.amountPriceType = amountPriceType;
 	}
 
+	@XmlElement(name = "PricVal", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getPriceValue() {
 		return priceValue;
 	}
@@ -296,6 +304,7 @@ public class AmountPricePerFinancialInstrumentQuantity3 {
 		this.priceValue = priceValue;
 	}
 
+	@XmlElement(name = "FinInstrmQty", required = true)
 	public FinancialInstrumentQuantity1Choice getFinancialInstrumentQuantity() {
 		return financialInstrumentQuantity;
 	}

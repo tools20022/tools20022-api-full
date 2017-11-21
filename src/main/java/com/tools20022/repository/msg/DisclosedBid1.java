@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.SecuritiesTradeExecution;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * List trading by which the buy-side details the exact stocks and sizes to be
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DisclosedBid1", propOrder = {"side", "grossIndicator", "listIdentification", "tradingSession", "biddingAccount", "settlementDetails"})
 public class DisclosedBid1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -388,6 +394,7 @@ public class DisclosedBid1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sd")
 	public Side1Code getSide() {
 		return side;
 	}
@@ -396,6 +403,7 @@ public class DisclosedBid1 {
 		this.side = side;
 	}
 
+	@XmlElement(name = "GrssInd", required = true)
 	public TrueFalseIndicator getGrossIndicator() {
 		return grossIndicator;
 	}
@@ -404,6 +412,7 @@ public class DisclosedBid1 {
 		this.grossIndicator = grossIndicator;
 	}
 
+	@XmlElement(name = "ListId")
 	public Max35Text getListIdentification() {
 		return listIdentification;
 	}
@@ -412,6 +421,7 @@ public class DisclosedBid1 {
 		this.listIdentification = listIdentification;
 	}
 
+	@XmlElement(name = "TradgSsn")
 	public TradingSession1 getTradingSession() {
 		return tradingSession;
 	}
@@ -420,6 +430,7 @@ public class DisclosedBid1 {
 		this.tradingSession = tradingSession;
 	}
 
+	@XmlElement(name = "BiddgAcct")
 	public SecuritiesAccount2 getBiddingAccount() {
 		return biddingAccount;
 	}
@@ -428,6 +439,7 @@ public class DisclosedBid1 {
 		this.biddingAccount = biddingAccount;
 	}
 
+	@XmlElement(name = "SttlmDtls")
 	public SecuritiesSettlement2 getSettlementDetails() {
 		return settlementDetails;
 	}

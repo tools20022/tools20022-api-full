@@ -27,6 +27,7 @@ import com.tools20022.repository.codeset.AssetClassSubProductTypeCode;
 import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -44,6 +45,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Commodity#mmBaseProduct
+ * Commodity.mmBaseProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Commodity#mmDetailedSubProduct
+ * Commodity.mmDetailedSubProduct}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+ * Commodity.mmSubProduct}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -189,20 +204,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CommodityDerivate2Choice.mmEnergy}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Commodity#mmBaseProduct
- * Commodity.mmBaseProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Commodity#mmDetailedSubProduct
- * Commodity.mmDetailedSubProduct}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
- * Commodity.mmSubProduct}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -234,10 +235,6 @@ public class Commodity extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode
 	 * AssetClassProductTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Commodity
-	 * Commodity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -409,6 +406,10 @@ public class Commodity extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Commodity
+	 * Commodity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -435,7 +436,7 @@ public class Commodity extends Asset {
 					AssetClassCommodity3Choice.mmFreight, AssetClassCommodity3Choice.mmIndustrialProduct, AssetClassCommodity3Choice.mmMetal, AssetClassCommodity3Choice.mmOtherC10, AssetClassCommodity3Choice.mmPaper,
 					AssetClassCommodity3Choice.mmPolypropylene, AssetClassCommodity3Choice.mmInflation, AssetClassCommodity3Choice.mmMultiCommodityExotic, AssetClassCommodity3Choice.mmOfficialEconomicStatistics,
 					AssetClassCommodity3Choice.mmOther, OtherC10CommodityNonDeliverable2.mmBaseProduct);
-			elementContext_lazy = () -> Commodity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commodity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BaseProduct";
@@ -443,6 +444,14 @@ public class Commodity extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Commodity.class.getMethod("getBaseProduct", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AssetClassDetailedSubProductTypeCode detailedSubProduct;
@@ -457,10 +466,6 @@ public class Commodity extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode
 	 * AssetClassDetailedSubProductTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Commodity
-	 * Commodity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -469,6 +474,10 @@ public class Commodity extends Asset {
 	 * AgriculturalCommoditySoft1.mmAdditionalSubProduct}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Commodity
+	 * Commodity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -485,7 +494,7 @@ public class Commodity extends Asset {
 	public static final MMBusinessAttribute mmDetailedSubProduct = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AgriculturalCommoditySoft1.mmAdditionalSubProduct);
-			elementContext_lazy = () -> Commodity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commodity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DetailedSubProduct";
@@ -493,6 +502,14 @@ public class Commodity extends Asset {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Commodity.class.getMethod("getDetailedSubProduct", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AssetClassSubProductTypeCode subProduct;
@@ -507,10 +524,6 @@ public class Commodity extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode
 	 * AssetClassSubProductTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Commodity
-	 * Commodity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -739,6 +752,10 @@ public class Commodity extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Commodity
+	 * Commodity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -770,7 +787,7 @@ public class Commodity extends Asset {
 					AssetClassCommodityFertilizer1Choice.mmUreaAndAmmoniumNitrate, AssetClassCommodityIndustrialProduct1Choice.mmConstruction, AssetClassCommodityIndustrialProduct1Choice.mmManufacturing,
 					AssetClassCommodityPolypropylene1Choice.mmPlastic, FertilizerCommodityPotash1.mmSubProduct, FertilizerCommodityUrea1.mmSubProduct, ForeignExchangeDerivative2.mmContractSubType,
 					OtherC10CommodityDeliverable2.mmSubProduct, AssetClassCommodityOtherC102Choice.mmDeliverable, AssetClassCommodityOtherC102Choice.mmNonDeliverable, OtherC10CommodityNonDeliverable2.mmSubProduct);
-			elementContext_lazy = () -> Commodity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commodity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubProduct";
@@ -778,6 +795,14 @@ public class Commodity extends Asset {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Commodity.class.getMethod("getSubProduct", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -791,7 +816,7 @@ public class Commodity extends Asset {
 				derivationElement_lazy = () -> Arrays.asList(TransparencyDataReport10.mmEmissionAllowanceType, DerivativeCommodity2.mmProduct, CommodityDerivate4.mmClassSpecific, CommodityDerivate2Choice.mmFreight,
 						CommodityDerivate2Choice.mmEnergy);
 				superType_lazy = () -> Asset.mmObject();
-				element_lazy = () -> Arrays.asList(Commodity.mmBaseProduct, Commodity.mmDetailedSubProduct, Commodity.mmSubProduct);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Commodity.mmBaseProduct, com.tools20022.repository.entity.Commodity.mmDetailedSubProduct, com.tools20022.repository.entity.Commodity.mmSubProduct);
 				derivationComponent_lazy = () -> Arrays.asList(AssetClassCommodityEnvironmental1Choice.mmObject(), MetalCommodityPrecious1.mmObject(), AgriculturalCommodityOliveOil1.mmObject(), AssetClassCommodityMetal1Choice.mmObject(),
 						MetalCommodityNonPrecious1.mmObject(), AgriculturalCommodityGrain1.mmObject(), EnergyCommodityOil1.mmObject(), AssetClassCommodityEnergy1Choice.mmObject(), AssetClassCommodityAgricultural1Choice.mmObject(),
 						EnergyCommodityNaturalGas1.mmObject(), EnergyCommodityElectricity1.mmObject(), AgriculturalCommoditySoft1.mmObject(), AgriculturalCommodityOilSeed1.mmObject(), EnergyCommodityDistillates1.mmObject(),
@@ -804,6 +829,11 @@ public class Commodity extends Asset {
 						AssetClassCommodityIndustrialProduct1Choice.mmObject(), AssetClassCommodityOfficialEconomicStatistics1.mmObject(), AssetClassCommodityPolypropylene1Choice.mmObject(), FertilizerCommodityPotash1.mmObject(),
 						FertilizerCommodityUrea1.mmObject(), CommodityDerivate6.mmObject(), OtherC10CommodityDeliverable2.mmObject(), AssetClassCommodity3Choice.mmObject(), AssetClassCommodityOtherC102Choice.mmObject(),
 						OtherC10CommodityNonDeliverable2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Commodity.class;
 			}
 		});
 		return mmObject_lazy.get();

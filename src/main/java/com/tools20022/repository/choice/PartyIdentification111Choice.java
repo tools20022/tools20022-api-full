@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.NameAndAddress12;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique and unambiguous way to identify an organisation.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Unique and unambiguous way to identify an organisation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification111Choice", propOrder = {"anyBIC", "nameAndAddress", "country"})
 public class PartyIdentification111Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class PartyIdentification111Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AnyBIC", required = true)
 	public AnyBICIdentifier getAnyBIC() {
 		return anyBIC;
 	}
@@ -238,6 +245,7 @@ public class PartyIdentification111Choice {
 		this.anyBIC = anyBIC;
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress12 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -246,6 +254,7 @@ public class PartyIdentification111Choice {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}

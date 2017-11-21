@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters to be used by the various cryptographic key commands.
@@ -72,6 +76,8 @@ import java.util.List;
  * ATMConfigurationParameter1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMConfigurationParameter2", propOrder = {"keyCategory", "hostChallenge", "certificate", "keyProperties"})
 public class ATMConfigurationParameter2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -259,6 +265,7 @@ public class ATMConfigurationParameter2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "KeyCtgy")
 	public CryptographicKeyType4Code getKeyCategory() {
 		return keyCategory;
 	}
@@ -267,6 +274,7 @@ public class ATMConfigurationParameter2 {
 		this.keyCategory = keyCategory;
 	}
 
+	@XmlElement(name = "HstChllng")
 	public Max140Binary getHostChallenge() {
 		return hostChallenge;
 	}
@@ -275,6 +283,7 @@ public class ATMConfigurationParameter2 {
 		this.hostChallenge = hostChallenge;
 	}
 
+	@XmlElement(name = "Cert")
 	public List<Max5000Binary> getCertificate() {
 		return certificate;
 	}
@@ -283,6 +292,7 @@ public class ATMConfigurationParameter2 {
 		this.certificate = certificate;
 	}
 
+	@XmlElement(name = "KeyProps")
 	public List<KEKIdentifier4> getKeyProperties() {
 		return keyProperties;
 	}

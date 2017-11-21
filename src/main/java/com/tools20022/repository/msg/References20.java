@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SecuritiesTradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference to the transaction identifier issued by the counterparty. Building
@@ -92,6 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * References15}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References20", propOrder = {"poolReference", "previousReference", "relatedReference"})
 public class References20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -256,6 +262,7 @@ public class References20 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference6 getPoolReference() {
 		return poolReference;
 	}
@@ -264,6 +271,7 @@ public class References20 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference6 getPreviousReference() {
 		return previousReference;
 	}
@@ -272,6 +280,7 @@ public class References20 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference6 getRelatedReference() {
 		return relatedReference;
 	}

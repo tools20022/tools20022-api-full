@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.MessageAndBusinessReference4;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -68,9 +70,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.018.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
@@ -103,6 +102,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.018.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -126,6 +128,8 @@ import java.util.List;
  * RequestForOrderStatusReportV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestForOrderStatusReportV03", propOrder = {"messageIdentification", "requestDetails", "extension"})
 public class RequestForOrderStatusReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +179,14 @@ public class RequestForOrderStatusReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RequestForOrderStatusReportV03.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<MessageAndBusinessReference4> requestDetails;
 	/**
@@ -219,6 +231,14 @@ public class RequestForOrderStatusReportV03 {
 			nextVersions_lazy = () -> Arrays.asList(RequestForOrderStatusReportV04.mmRequestDetails);
 			minOccurs = 1;
 			complexType_lazy = () -> MessageAndBusinessReference4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RequestForOrderStatusReportV03.class.getMethod("getRequestDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -265,6 +285,14 @@ public class RequestForOrderStatusReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RequestForOrderStatusReportV03.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -279,7 +307,8 @@ public class RequestForOrderStatusReportV03 {
 				rootElement = "Document";
 				xmlTag = "ReqForOrdrStsRptV03";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(RequestForOrderStatusReportV03.mmMessageIdentification, RequestForOrderStatusReportV03.mmRequestDetails, RequestForOrderStatusReportV03.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RequestForOrderStatusReportV03.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RequestForOrderStatusReportV03.mmRequestDetails, com.tools20022.repository.area.setr.RequestForOrderStatusReportV03.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -289,10 +318,16 @@ public class RequestForOrderStatusReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RequestForOrderStatusReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -301,6 +336,7 @@ public class RequestForOrderStatusReportV03 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "ReqDtls", required = true)
 	public List<MessageAndBusinessReference4> getRequestDetails() {
 		return requestDetails;
 	}
@@ -309,11 +345,18 @@ public class RequestForOrderStatusReportV03 {
 		this.requestDetails = requestDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.018.03.03")
+	static public class Document {
+		@XmlElement(name = "ReqForOrdrStsRptV03", required = true)
+		public RequestForOrderStatusReportV03 messageBody;
 	}
 }

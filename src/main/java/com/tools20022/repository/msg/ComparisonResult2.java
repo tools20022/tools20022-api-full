@@ -28,6 +28,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the comparison between the currently established baseline elements
@@ -91,6 +95,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ComparisonResult2", propOrder = {"elementSequenceNumber", "elementPath", "elementName", "replacement", "deletion", "addition"})
 public class ComparisonResult2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -410,6 +416,7 @@ public class ComparisonResult2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ElmtSeqNb", required = true)
 	public Number getElementSequenceNumber() {
 		return elementSequenceNumber;
 	}
@@ -418,6 +425,7 @@ public class ComparisonResult2 {
 		this.elementSequenceNumber = elementSequenceNumber;
 	}
 
+	@XmlElement(name = "ElmtPth", required = true)
 	public Max350Text getElementPath() {
 		return elementPath;
 	}
@@ -426,6 +434,7 @@ public class ComparisonResult2 {
 		this.elementPath = elementPath;
 	}
 
+	@XmlElement(name = "ElmtNm", required = true)
 	public Max35Text getElementName() {
 		return elementName;
 	}
@@ -434,6 +443,7 @@ public class ComparisonResult2 {
 		this.elementName = elementName;
 	}
 
+	@XmlElement(name = "Rplcmnt", required = true)
 	public Replacement2 getReplacement() {
 		return replacement;
 	}
@@ -442,6 +452,7 @@ public class ComparisonResult2 {
 		this.replacement = replacement;
 	}
 
+	@XmlElement(name = "Deltn", required = true)
 	public Deletion2 getDeletion() {
 		return deletion;
 	}
@@ -450,6 +461,7 @@ public class ComparisonResult2 {
 		this.deletion = deletion;
 	}
 
+	@XmlElement(name = "Addtn", required = true)
 	public Addition2 getAddition() {
 		return addition;
 	}

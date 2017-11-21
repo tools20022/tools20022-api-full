@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details on the margin report per clearing member, and optionaly
@@ -70,6 +74,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarginReport1", propOrder = {"marginAccount", "nonClearingMember", "marginProduct", "marginDetails"})
 public class MarginReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -275,6 +281,7 @@ public class MarginReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MrgnAcct", required = true)
 	public SecuritiesAccount18 getMarginAccount() {
 		return marginAccount;
 	}
@@ -283,6 +290,7 @@ public class MarginReport1 {
 		this.marginAccount = marginAccount;
 	}
 
+	@XmlElement(name = "NonClrMmb")
 	public List<PartyIdentificationAndAccount31> getNonClearingMember() {
 		return nonClearingMember;
 	}
@@ -291,6 +299,7 @@ public class MarginReport1 {
 		this.nonClearingMember = nonClearingMember;
 	}
 
+	@XmlElement(name = "MrgnPdct", required = true)
 	public List<MarginProductType1Choice> getMarginProduct() {
 		return marginProduct;
 	}
@@ -299,6 +308,7 @@ public class MarginReport1 {
 		this.marginProduct = marginProduct;
 	}
 
+	@XmlElement(name = "MrgnDtls", required = true)
 	public List<Margin2> getMarginDetails() {
 		return marginDetails;
 	}

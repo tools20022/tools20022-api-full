@@ -29,21 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.UserInterface2Code
- * UserInterface2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UserInterface1Code
- * UserInterface1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UserInterface4Code
- * UserInterface4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UserInterface3Code
- * UserInterface3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UserInterface5Code
- * UserInterface5Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -68,6 +53,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode#mmOtherCardholderInterface
  * UserInterfaceCode.mmOtherCardholderInterface}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.UserInterface2Code
+ * UserInterface2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UserInterface1Code
+ * UserInterface1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UserInterface4Code
+ * UserInterface4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UserInterface3Code
+ * UserInterface3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UserInterface5Code
+ * UserInterface5Code}</li>
  * </ul>
  * </li>
  * <li>

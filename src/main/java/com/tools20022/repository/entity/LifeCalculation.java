@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.CalculationTypeCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,18 +37,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmLifeCalculation
- * SecuritiesPricing.mmLifeCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.VariableInterest#mmLifeCalculation
- * VariableInterest.mmLifeCalculation}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -67,6 +56,18 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.LifeCalculation#mmValuePeriod
  * LifeCalculation.mmValuePeriod}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmLifeCalculation
+ * SecuritiesPricing.mmLifeCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.VariableInterest#mmLifeCalculation
+ * VariableInterest.mmLifeCalculation}</li>
  * </ul>
  * </li>
  * <li>
@@ -126,7 +127,7 @@ public class LifeCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesPricing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> LifeCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.LifeCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesPricing";
@@ -174,7 +175,7 @@ public class LifeCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmVariableInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> LifeCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.LifeCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VariableInterest";
@@ -214,7 +215,7 @@ public class LifeCalculation {
 	 */
 	public static final MMBusinessAttribute mmYears = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> LifeCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.LifeCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Years";
@@ -222,6 +223,14 @@ public class LifeCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return LifeCalculation.class.getMethod("getYears", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CalculationTypeCode calculationType;
@@ -253,7 +262,7 @@ public class LifeCalculation {
 	 */
 	public static final MMBusinessAttribute mmCalculationType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> LifeCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.LifeCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationType";
@@ -261,6 +270,14 @@ public class LifeCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CalculationTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return LifeCalculation.class.getMethod("getCalculationType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime valueDate;
@@ -294,7 +311,7 @@ public class LifeCalculation {
 	 */
 	public static final MMBusinessAttribute mmValueDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> LifeCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.LifeCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
@@ -302,6 +319,14 @@ public class LifeCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return LifeCalculation.class.getMethod("getValueDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DateTimePeriod valuePeriod;
@@ -333,7 +358,7 @@ public class LifeCalculation {
 	 */
 	public static final MMBusinessAttribute mmValuePeriod = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> LifeCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.LifeCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValuePeriod";
@@ -341,6 +366,14 @@ public class LifeCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return LifeCalculation.class.getMethod("getValuePeriod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -352,8 +385,14 @@ public class LifeCalculation {
 				name = "LifeCalculation";
 				definition = "Estimate of the number of terms to maturity, taking the possibility of early payments into account.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmLifeCalculation, com.tools20022.repository.entity.VariableInterest.mmLifeCalculation);
-				element_lazy = () -> Arrays.asList(LifeCalculation.mmSecuritiesPricing, LifeCalculation.mmVariableInterest, LifeCalculation.mmYears, LifeCalculation.mmCalculationType, LifeCalculation.mmValueDate,
-						LifeCalculation.mmValuePeriod);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.LifeCalculation.mmSecuritiesPricing, com.tools20022.repository.entity.LifeCalculation.mmVariableInterest,
+						com.tools20022.repository.entity.LifeCalculation.mmYears, com.tools20022.repository.entity.LifeCalculation.mmCalculationType, com.tools20022.repository.entity.LifeCalculation.mmValueDate,
+						com.tools20022.repository.entity.LifeCalculation.mmValuePeriod);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return LifeCalculation.class;
 			}
 		});
 		return mmObject_lazy.get();

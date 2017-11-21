@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of status.
@@ -95,6 +99,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Status10Choice", propOrder = {"affirmationStatus", "allocationStatus", "repoCallRequestStatus", "corporateActionEventProcessingStatus", "corporateActionEventStage", "inferredMatchingStatus", "instructionProcessingStatus",
+		"matchingStatus", "registrationProcessingStatus", "responseStatus", "replacementProcessingStatus", "cancellationProcessingStatus", "settlementStatus", "settlementConditionModificationStatus"})
 public class Status10Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -805,6 +812,7 @@ public class Status10Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AffirmSts", required = true)
 	public AffirmationStatus2Choice getAffirmationStatus() {
 		return affirmationStatus;
 	}
@@ -813,6 +821,7 @@ public class Status10Choice {
 		this.affirmationStatus = affirmationStatus;
 	}
 
+	@XmlElement(name = "AllcnSts", required = true)
 	public AllocationSatus2Choice getAllocationStatus() {
 		return allocationStatus;
 	}
@@ -821,6 +830,7 @@ public class Status10Choice {
 		this.allocationStatus = allocationStatus;
 	}
 
+	@XmlElement(name = "RepoCallReqSts", required = true)
 	public RepoCallRequestStatus3Choice getRepoCallRequestStatus() {
 		return repoCallRequestStatus;
 	}
@@ -829,6 +839,7 @@ public class Status10Choice {
 		this.repoCallRequestStatus = repoCallRequestStatus;
 	}
 
+	@XmlElement(name = "CorpActnEvtPrcgSts", required = true)
 	public CorporateActionEventProcessingStatus2Choice getCorporateActionEventProcessingStatus() {
 		return corporateActionEventProcessingStatus;
 	}
@@ -837,6 +848,7 @@ public class Status10Choice {
 		this.corporateActionEventProcessingStatus = corporateActionEventProcessingStatus;
 	}
 
+	@XmlElement(name = "CorpActnEvtStag", required = true)
 	public CorporateActionEventStage2Choice getCorporateActionEventStage() {
 		return corporateActionEventStage;
 	}
@@ -845,6 +857,7 @@ public class Status10Choice {
 		this.corporateActionEventStage = corporateActionEventStage;
 	}
 
+	@XmlElement(name = "IfrrdMtchgSts", required = true)
 	public MatchingStatus5Choice getInferredMatchingStatus() {
 		return inferredMatchingStatus;
 	}
@@ -853,6 +866,7 @@ public class Status10Choice {
 		this.inferredMatchingStatus = inferredMatchingStatus;
 	}
 
+	@XmlElement(name = "InstrPrcgSts", required = true)
 	public InstructionProcessingStatus5Choice getInstructionProcessingStatus() {
 		return instructionProcessingStatus;
 	}
@@ -861,6 +875,7 @@ public class Status10Choice {
 		this.instructionProcessingStatus = instructionProcessingStatus;
 	}
 
+	@XmlElement(name = "MtchgSts", required = true)
 	public MatchingStatus5Choice getMatchingStatus() {
 		return matchingStatus;
 	}
@@ -869,6 +884,7 @@ public class Status10Choice {
 		this.matchingStatus = matchingStatus;
 	}
 
+	@XmlElement(name = "RegnPrcgSts", required = true)
 	public RegistrationProcessingStatus2Choice getRegistrationProcessingStatus() {
 		return registrationProcessingStatus;
 	}
@@ -877,6 +893,7 @@ public class Status10Choice {
 		this.registrationProcessingStatus = registrationProcessingStatus;
 	}
 
+	@XmlElement(name = "RspnSts", required = true)
 	public ResponseStatus2Choice getResponseStatus() {
 		return responseStatus;
 	}
@@ -885,6 +902,7 @@ public class Status10Choice {
 		this.responseStatus = responseStatus;
 	}
 
+	@XmlElement(name = "RplcmntPrcgSts", required = true)
 	public ReplacementProcessingStatus2Choice getReplacementProcessingStatus() {
 		return replacementProcessingStatus;
 	}
@@ -893,6 +911,7 @@ public class Status10Choice {
 		this.replacementProcessingStatus = replacementProcessingStatus;
 	}
 
+	@XmlElement(name = "CxlPrcgSts", required = true)
 	public CancellationProcessingStatus2Choice getCancellationProcessingStatus() {
 		return cancellationProcessingStatus;
 	}
@@ -901,6 +920,7 @@ public class Status10Choice {
 		this.cancellationProcessingStatus = cancellationProcessingStatus;
 	}
 
+	@XmlElement(name = "SttlmSts", required = true)
 	public SettlementStatus6Choice getSettlementStatus() {
 		return settlementStatus;
 	}
@@ -909,6 +929,7 @@ public class Status10Choice {
 		this.settlementStatus = settlementStatus;
 	}
 
+	@XmlElement(name = "SttlmCondModSts", required = true)
 	public SettlementConditionModificationStatus2Choice getSettlementConditionModificationStatus() {
 		return settlementConditionModificationStatus;
 	}

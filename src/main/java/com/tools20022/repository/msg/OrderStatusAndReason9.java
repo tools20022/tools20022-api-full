@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status report of a bulk or multiple or switch order cancellation instruction
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * OrderStatusAndReason8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderStatusAndReason9", propOrder = {"masterReference", "cancellationStatus", "statusInitiator"})
 public class OrderStatusAndReason9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -246,6 +252,7 @@ public class OrderStatusAndReason9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -254,6 +261,7 @@ public class OrderStatusAndReason9 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "CxlSts", required = true)
 	public CancellationStatus22Choice getCancellationStatus() {
 		return cancellationStatus;
 	}
@@ -262,6 +270,7 @@ public class OrderStatusAndReason9 {
 		this.cancellationStatus = cancellationStatus;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification113 getStatusInitiator() {
 		return statusInitiator;
 	}

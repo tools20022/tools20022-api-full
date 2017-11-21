@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the reason for cancelling a meeting.
@@ -89,6 +93,8 @@ import java.util.function.Supplier;
  * definition} = "Specifies the reason for cancelling a meeting."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingCancellationReason1", propOrder = {"code", "extendedCode", "cancellationReason"})
 public class MeetingCancellationReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -305,6 +311,7 @@ public class MeetingCancellationReason1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public MeetingCancellationReason2Code getCode() {
 		return code;
 	}
@@ -313,6 +320,7 @@ public class MeetingCancellationReason1 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "XtndedCd", required = true)
 	public Extended350Code getExtendedCode() {
 		return extendedCode;
 	}
@@ -321,6 +329,7 @@ public class MeetingCancellationReason1 {
 		this.extendedCode = extendedCode;
 	}
 
+	@XmlElement(name = "CxlRsn")
 	public Max140Text getCancellationReason() {
 		return cancellationReason;
 	}

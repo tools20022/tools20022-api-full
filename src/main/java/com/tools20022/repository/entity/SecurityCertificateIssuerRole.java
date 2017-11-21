@@ -65,6 +65,11 @@ public class SecurityCertificateIssuerRole extends SecurityCertificatePartyRole 
 				definition = "Party that issues security certificates.";
 				superType_lazy = () -> SecurityCertificatePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecurityCertificateIssuerRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

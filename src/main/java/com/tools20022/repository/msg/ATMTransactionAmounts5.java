@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Deposit limits for the account.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMTransactionAmounts4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransactionAmounts5", propOrder = {"displayFlag", "maximumAmount"})
 public class ATMTransactionAmounts5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class ATMTransactionAmounts5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DispFlg")
 	public TrueFalseIndicator getDisplayFlag() {
 		return displayFlag;
 	}
@@ -185,6 +192,7 @@ public class ATMTransactionAmounts5 {
 		this.displayFlag = displayFlag;
 	}
 
+	@XmlElement(name = "MaxAmt")
 	public ImpliedCurrencyAndAmount getMaximumAmount() {
 		return maximumAmount;
 	}

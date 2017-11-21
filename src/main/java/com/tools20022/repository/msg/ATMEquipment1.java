@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * ATM terminal equipment.
@@ -79,6 +83,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMEquipment1", propOrder = {"manufacturer", "model", "serialNumber", "applicationProvider", "applicationName", "applicationVersion", "approvalNumber", "configurationParameter"})
 public class ATMEquipment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -472,6 +478,7 @@ public class ATMEquipment1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Manfctr")
 	public Max35Text getManufacturer() {
 		return manufacturer;
 	}
@@ -480,6 +487,7 @@ public class ATMEquipment1 {
 		this.manufacturer = manufacturer;
 	}
 
+	@XmlElement(name = "Mdl")
 	public Max35Text getModel() {
 		return model;
 	}
@@ -488,6 +496,7 @@ public class ATMEquipment1 {
 		this.model = model;
 	}
 
+	@XmlElement(name = "SrlNb")
 	public Max35Text getSerialNumber() {
 		return serialNumber;
 	}
@@ -496,6 +505,7 @@ public class ATMEquipment1 {
 		this.serialNumber = serialNumber;
 	}
 
+	@XmlElement(name = "ApplPrvdr")
 	public Max35Text getApplicationProvider() {
 		return applicationProvider;
 	}
@@ -504,6 +514,7 @@ public class ATMEquipment1 {
 		this.applicationProvider = applicationProvider;
 	}
 
+	@XmlElement(name = "ApplNm")
 	public Max35Text getApplicationName() {
 		return applicationName;
 	}
@@ -512,6 +523,7 @@ public class ATMEquipment1 {
 		this.applicationName = applicationName;
 	}
 
+	@XmlElement(name = "ApplVrsn")
 	public Max35Text getApplicationVersion() {
 		return applicationVersion;
 	}
@@ -520,6 +532,7 @@ public class ATMEquipment1 {
 		this.applicationVersion = applicationVersion;
 	}
 
+	@XmlElement(name = "ApprvlNb")
 	public Max35Text getApprovalNumber() {
 		return approvalNumber;
 	}
@@ -528,6 +541,7 @@ public class ATMEquipment1 {
 		this.approvalNumber = approvalNumber;
 	}
 
+	@XmlElement(name = "CfgtnParam")
 	public List<ATMConfigurationParameter1> getConfigurationParameter() {
 		return configurationParameter;
 	}

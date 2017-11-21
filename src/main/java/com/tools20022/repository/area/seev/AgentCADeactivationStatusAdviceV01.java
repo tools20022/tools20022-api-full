@@ -24,9 +24,11 @@ import com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatu
 import com.tools20022.repository.msg.CorporateActionInformation1;
 import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -39,9 +41,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.030.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -97,6 +96,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.030.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -108,6 +110,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgentCADeactivationStatusAdviceV01", propOrder = {"identification", "agentCADeactivationInstructionIdentification", "agentCADeactivationCancellationRequestIdentification", "corporateActionGeneralInformation",
+		"deactivationInstructionStatus", "deactivationCancellationRequestStatus"})
 public class AgentCADeactivationStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -117,6 +122,10 @@ public class AgentCADeactivationStatusAdviceV01 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01
+	 * AgentCADeactivationStatusAdviceV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -131,10 +140,6 @@ public class AgentCADeactivationStatusAdviceV01 {
 	 * mmAgentCADeactivationCancellationRequestIdentification}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01
-	 * AgentCADeactivationStatusAdviceV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -154,9 +159,9 @@ public class AgentCADeactivationStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeactivationInstructionIDOrDeactivationCancellationRequestIDRule";
 			definition = "Either AgentCADeactivationInstructionIdentification or AgentCADeactivationCancellationRequestIdentification must be present.";
-			messageDefinition_lazy = () -> AgentCADeactivationStatusAdviceV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationInstructionIdentification,
-					AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationCancellationRequestIdentification);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationInstructionIdentification,
+					com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationCancellationRequestIdentification);
 		}
 	};
 	/**
@@ -165,6 +170,10 @@ public class AgentCADeactivationStatusAdviceV01 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01
+	 * AgentCADeactivationStatusAdviceV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -178,10 +187,6 @@ public class AgentCADeactivationStatusAdviceV01 {
 	 * mmDeactivationCancellationRequestStatus}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01
-	 * AgentCADeactivationStatusAdviceV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -202,8 +207,9 @@ public class AgentCADeactivationStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeactivationInstructionStatusOrDeactivationCancellationRequestStatusRule";
 			definition = "Either DeactivationInstructionStatus or DeactivationCancellationRequestStatus must be present.";
-			messageDefinition_lazy = () -> AgentCADeactivationStatusAdviceV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(AgentCADeactivationStatusAdviceV01.mmDeactivationInstructionStatus, AgentCADeactivationStatusAdviceV01.mmDeactivationCancellationRequestStatus);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmDeactivationInstructionStatus,
+					com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmDeactivationCancellationRequestStatus);
 		}
 	};
 	protected DocumentIdentification8 identification;
@@ -243,6 +249,14 @@ public class AgentCADeactivationStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCADeactivationStatusAdviceV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification8 agentCADeactivationInstructionIdentification;
 	/**
@@ -280,6 +294,14 @@ public class AgentCADeactivationStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCADeactivationStatusAdviceV01.class.getMethod("getAgentCADeactivationInstructionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DocumentIdentification8 agentCADeactivationCancellationRequestIdentification;
@@ -319,6 +341,14 @@ public class AgentCADeactivationStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCADeactivationStatusAdviceV01.class.getMethod("getAgentCADeactivationCancellationRequestIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
@@ -354,6 +384,14 @@ public class AgentCADeactivationStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCADeactivationStatusAdviceV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<CorporateActionDeactivationInstructionStatus1> deactivationInstructionStatus;
 	/**
@@ -388,6 +426,14 @@ public class AgentCADeactivationStatusAdviceV01 {
 			definition = "Status of the deactivation instruction sent by the issuer (agent).";
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionDeactivationInstructionStatus1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCADeactivationStatusAdviceV01.class.getMethod("getDeactivationInstructionStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionDeactivationCancellationStatus1Choice deactivationCancellationRequestStatus;
@@ -427,6 +473,14 @@ public class AgentCADeactivationStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionDeactivationCancellationStatus1Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCADeactivationStatusAdviceV01.class.getMethod("getDeactivationCancellationRequestStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -436,14 +490,16 @@ public class AgentCADeactivationStatusAdviceV01 {
 				name = "AgentCADeactivationStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent by a CSD to an issuer (or its agent) to report the status, or a change in status, of a corporate action deactivation instruction or the status of a deactivation cancellation request.\r\nUsage\r\nThis message is used to provide a status on the deactivation instruction, especially to confirm the deactivation of a Corporate Action event or option.";
 				messageSet_lazy = () -> Arrays.asList(IssuersAgentsCommunicationISOLatestversion.mmObject());
-				xors_lazy = () -> Arrays.asList(AgentCADeactivationStatusAdviceV01.mmDeactivationInstructionIDOrDeactivationCancellationRequestIDRule,
-						AgentCADeactivationStatusAdviceV01.mmDeactivationInstructionStatusOrDeactivationCancellationRequestStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmDeactivationInstructionIDOrDeactivationCancellationRequestIDRule,
+						com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmDeactivationInstructionStatusOrDeactivationCancellationRequestStatusRule);
 				rootElement = "Document";
 				xmlTag = "AgtCADeactvtnStsAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCADeactivationStatusAdviceV01.mmIdentification, AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationInstructionIdentification,
-						AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationCancellationRequestIdentification, AgentCADeactivationStatusAdviceV01.mmCorporateActionGeneralInformation,
-						AgentCADeactivationStatusAdviceV01.mmDeactivationInstructionStatus, AgentCADeactivationStatusAdviceV01.mmDeactivationCancellationRequestStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationInstructionIdentification,
+						com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationCancellationRequestIdentification,
+						com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmDeactivationInstructionStatus,
+						com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmDeactivationCancellationRequestStatus);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -453,10 +509,16 @@ public class AgentCADeactivationStatusAdviceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AgentCADeactivationStatusAdviceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
@@ -465,6 +527,7 @@ public class AgentCADeactivationStatusAdviceV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AgtCADeactvtnInstrId", required = true)
 	public DocumentIdentification8 getAgentCADeactivationInstructionIdentification() {
 		return agentCADeactivationInstructionIdentification;
 	}
@@ -473,6 +536,7 @@ public class AgentCADeactivationStatusAdviceV01 {
 		this.agentCADeactivationInstructionIdentification = agentCADeactivationInstructionIdentification;
 	}
 
+	@XmlElement(name = "AgtCADeactvtnCxlReqId", required = true)
 	public DocumentIdentification8 getAgentCADeactivationCancellationRequestIdentification() {
 		return agentCADeactivationCancellationRequestIdentification;
 	}
@@ -481,6 +545,7 @@ public class AgentCADeactivationStatusAdviceV01 {
 		this.agentCADeactivationCancellationRequestIdentification = agentCADeactivationCancellationRequestIdentification;
 	}
 
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
@@ -489,6 +554,7 @@ public class AgentCADeactivationStatusAdviceV01 {
 		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
 	}
 
+	@XmlElement(name = "DeactvtnInstrSts", required = true)
 	public List<CorporateActionDeactivationInstructionStatus1> getDeactivationInstructionStatus() {
 		return deactivationInstructionStatus;
 	}
@@ -497,11 +563,18 @@ public class AgentCADeactivationStatusAdviceV01 {
 		this.deactivationInstructionStatus = deactivationInstructionStatus;
 	}
 
+	@XmlElement(name = "DeactvtnCxlReqSts", required = true)
 	public CorporateActionDeactivationCancellationStatus1Choice getDeactivationCancellationRequestStatus() {
 		return deactivationCancellationRequestStatus;
 	}
 
 	public void setDeactivationCancellationRequestStatus(CorporateActionDeactivationCancellationStatus1Choice deactivationCancellationRequestStatus) {
 		this.deactivationCancellationRequestStatus = deactivationCancellationRequestStatus;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.030.01.01")
+	static public class Document {
+		@XmlElement(name = "AgtCADeactvtnStsAdvc", required = true)
+		public AgentCADeactivationStatusAdviceV01 messageBody;
 	}
 }

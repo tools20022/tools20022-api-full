@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of partners involved in exchange from the merchant to the
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Traceability2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Traceability5", propOrder = {"relayIdentification", "protocolName", "protocolVersion", "traceDateTimeIn", "traceDateTimeOut"})
 public class Traceability5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -313,6 +319,7 @@ public class Traceability5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RlayId", required = true)
 	public GenericIdentification76 getRelayIdentification() {
 		return relayIdentification;
 	}
@@ -321,6 +328,7 @@ public class Traceability5 {
 		this.relayIdentification = relayIdentification;
 	}
 
+	@XmlElement(name = "PrtcolNm")
 	public Max35Text getProtocolName() {
 		return protocolName;
 	}
@@ -329,6 +337,7 @@ public class Traceability5 {
 		this.protocolName = protocolName;
 	}
 
+	@XmlElement(name = "PrtcolVrsn")
 	public Max6Text getProtocolVersion() {
 		return protocolVersion;
 	}
@@ -337,6 +346,7 @@ public class Traceability5 {
 		this.protocolVersion = protocolVersion;
 	}
 
+	@XmlElement(name = "TracDtTmIn", required = true)
 	public ISODateTime getTraceDateTimeIn() {
 		return traceDateTimeIn;
 	}
@@ -345,6 +355,7 @@ public class Traceability5 {
 		this.traceDateTimeIn = traceDateTimeIn;
 	}
 
+	@XmlElement(name = "TracDtTmOut", required = true)
 	public ISODateTime getTraceDateTimeOut() {
 		return traceDateTimeOut;
 	}

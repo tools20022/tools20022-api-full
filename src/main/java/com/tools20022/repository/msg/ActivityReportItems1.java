@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the events that occurred for one transaction.
@@ -68,6 +72,8 @@ import java.util.List;
  * definition} = "Describes the events that occurred for one transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ActivityReportItems1", propOrder = {"transactionIdentification", "userTransactionReference", "reportedEntity", "reportedItem", "pendingRequestForAction"})
 public class ActivityReportItems1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -297,6 +303,7 @@ public class ActivityReportItems1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId")
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -305,6 +312,7 @@ public class ActivityReportItems1 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "UsrTxRef", required = true)
 	public List<DocumentIdentification5> getUserTransactionReference() {
 		return userTransactionReference;
 	}
@@ -313,6 +321,7 @@ public class ActivityReportItems1 {
 		this.userTransactionReference = userTransactionReference;
 	}
 
+	@XmlElement(name = "RptdNtty", required = true)
 	public BICIdentification1 getReportedEntity() {
 		return reportedEntity;
 	}
@@ -321,6 +330,7 @@ public class ActivityReportItems1 {
 		this.reportedEntity = reportedEntity;
 	}
 
+	@XmlElement(name = "RptdItm", required = true)
 	public List<ActivityDetails1> getReportedItem() {
 		return reportedItem;
 	}
@@ -329,6 +339,7 @@ public class ActivityReportItems1 {
 		this.reportedItem = reportedItem;
 	}
 
+	@XmlElement(name = "PdgReqForActn")
 	public List<PendingActivity1> getPendingRequestForAction() {
 		return pendingRequestForAction;
 	}

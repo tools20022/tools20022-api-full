@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information that locates and identifies a specific address, as defined by
@@ -95,6 +99,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PostalAddress11", propOrder = {"addressType", "department", "subDepartment", "streetName", "buildingNumber", "postCode", "townName", "countrySubDivision", "country", "addressLine", "floor", "postBox", "buildingName",
+		"room"})
 public class PostalAddress11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -777,6 +784,7 @@ public class PostalAddress11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AdrTp")
 	public AddressType2Code getAddressType() {
 		return addressType;
 	}
@@ -785,6 +793,7 @@ public class PostalAddress11 {
 		this.addressType = addressType;
 	}
 
+	@XmlElement(name = "Dept")
 	public Max70Text getDepartment() {
 		return department;
 	}
@@ -793,6 +802,7 @@ public class PostalAddress11 {
 		this.department = department;
 	}
 
+	@XmlElement(name = "SubDept")
 	public Max70Text getSubDepartment() {
 		return subDepartment;
 	}
@@ -801,6 +811,7 @@ public class PostalAddress11 {
 		this.subDepartment = subDepartment;
 	}
 
+	@XmlElement(name = "StrtNm")
 	public Max70Text getStreetName() {
 		return streetName;
 	}
@@ -809,6 +820,7 @@ public class PostalAddress11 {
 		this.streetName = streetName;
 	}
 
+	@XmlElement(name = "BldgNb")
 	public Max16Text getBuildingNumber() {
 		return buildingNumber;
 	}
@@ -817,6 +829,7 @@ public class PostalAddress11 {
 		this.buildingNumber = buildingNumber;
 	}
 
+	@XmlElement(name = "PstCd")
 	public Max16Text getPostCode() {
 		return postCode;
 	}
@@ -825,6 +838,7 @@ public class PostalAddress11 {
 		this.postCode = postCode;
 	}
 
+	@XmlElement(name = "TwnNm")
 	public Max35Text getTownName() {
 		return townName;
 	}
@@ -833,6 +847,7 @@ public class PostalAddress11 {
 		this.townName = townName;
 	}
 
+	@XmlElement(name = "CtrySubDvsn")
 	public Max35Text getCountrySubDivision() {
 		return countrySubDivision;
 	}
@@ -841,6 +856,7 @@ public class PostalAddress11 {
 		this.countrySubDivision = countrySubDivision;
 	}
 
+	@XmlElement(name = "Ctry")
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -849,6 +865,7 @@ public class PostalAddress11 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "AdrLine")
 	public List<Max70Text> getAddressLine() {
 		return addressLine;
 	}
@@ -857,6 +874,7 @@ public class PostalAddress11 {
 		this.addressLine = addressLine;
 	}
 
+	@XmlElement(name = "Flr")
 	public Max70Text getFloor() {
 		return floor;
 	}
@@ -865,6 +883,7 @@ public class PostalAddress11 {
 		this.floor = floor;
 	}
 
+	@XmlElement(name = "PstBx")
 	public Max16Text getPostBox() {
 		return postBox;
 	}
@@ -873,6 +892,7 @@ public class PostalAddress11 {
 		this.postBox = postBox;
 	}
 
+	@XmlElement(name = "BldgNm")
 	public Max70Text getBuildingName() {
 		return buildingName;
 	}
@@ -881,6 +901,7 @@ public class PostalAddress11 {
 		this.buildingName = buildingName;
 	}
 
+	@XmlElement(name = "Room")
 	public Max70Text getRoom() {
 		return room;
 	}

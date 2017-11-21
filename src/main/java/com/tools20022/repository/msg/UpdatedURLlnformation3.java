@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.RestrictedFINZMax256Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional information with update description and date.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Additional information with update description and date."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UpdatedURLlnformation3", propOrder = {"updateDescription", "updateDate", "URLAddress"})
 public class UpdatedURLlnformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -210,6 +216,7 @@ public class UpdatedURLlnformation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UpdDesc")
 	public RestrictedFINXMax140Text getUpdateDescription() {
 		return updateDescription;
 	}
@@ -218,6 +225,7 @@ public class UpdatedURLlnformation3 {
 		this.updateDescription = updateDescription;
 	}
 
+	@XmlElement(name = "UpdDt")
 	public ISODate getUpdateDate() {
 		return updateDate;
 	}
@@ -226,6 +234,7 @@ public class UpdatedURLlnformation3 {
 		this.updateDate = updateDate;
 	}
 
+	@XmlElement(name = "URLAdr", required = true)
 	public RestrictedFINZMax256Text getURLAddress() {
 		return uRLAddress;
 	}

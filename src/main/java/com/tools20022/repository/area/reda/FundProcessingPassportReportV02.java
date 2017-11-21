@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.FundProcessingPassport1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -59,9 +61,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code reda.004.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
@@ -94,6 +93,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code reda.004.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -105,6 +107,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundProcessingPassportReportV02", propOrder = {"messageIdentification", "fundProcessingPassport"})
 public class FundProcessingPassportReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -145,6 +149,14 @@ public class FundProcessingPassportReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FundProcessingPassportReportV02.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<FundProcessingPassport1> fundProcessingPassport;
 	/**
@@ -184,6 +196,14 @@ public class FundProcessingPassportReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> FundProcessingPassport1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FundProcessingPassportReportV02.class.getMethod("getFundProcessingPassport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -196,7 +216,8 @@ public class FundProcessingPassportReportV02 {
 				rootElement = "Document";
 				xmlTag = "FndPrcgPsptRpt";
 				businessArea_lazy = () -> ReferenceDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FundProcessingPassportReportV02.mmMessageIdentification, FundProcessingPassportReportV02.mmFundProcessingPassport);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.FundProcessingPassportReportV02.mmMessageIdentification,
+						com.tools20022.repository.area.reda.FundProcessingPassportReportV02.mmFundProcessingPassport);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "reda";
@@ -206,10 +227,16 @@ public class FundProcessingPassportReportV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FundProcessingPassportReportV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -218,11 +245,18 @@ public class FundProcessingPassportReportV02 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "FPP", required = true)
 	public List<FundProcessingPassport1> getFundProcessingPassport() {
 		return fundProcessingPassport;
 	}
 
 	public void setFundProcessingPassport(List<FundProcessingPassport1> fundProcessingPassport) {
 		this.fundProcessingPassport = fundProcessingPassport;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:reda.004.02.02")
+	static public class Document {
+		@XmlElement(name = "FndPrcgPsptRpt", required = true)
+		public FundProcessingPassportReportV02 messageBody;
 	}
 }

@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetai
 import com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specification of a risk management type current limit or a liquidity
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrentLimitChoice", propOrder = {"riskManagementCurrentLimitIdentification", "liquidityManagementCurrentLimitIdentification"})
 public class CurrentLimitChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -195,6 +201,7 @@ public class CurrentLimitChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RskMgmtCurLmtId", required = true)
 	public RiskManagementLimitIdentificationDetails getRiskManagementCurrentLimitIdentification() {
 		return riskManagementCurrentLimitIdentification;
 	}
@@ -203,6 +210,7 @@ public class CurrentLimitChoice {
 		this.riskManagementCurrentLimitIdentification = riskManagementCurrentLimitIdentification;
 	}
 
+	@XmlElement(name = "LqdtyMgmtCurLmtId", required = true)
 	public LiquidityManagementLimitIdentificationDetails getLiquidityManagementCurrentLimitIdentification() {
 		return liquidityManagementCurrentLimitIdentification;
 	}

@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the transaction with a trade reference and provides its status. If
@@ -95,6 +99,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeTransactionStatusAndReason1", propOrder = {"relatedReference", "tradeReference", "status", "rejected"})
 public class TradeTransactionStatusAndReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -353,6 +359,7 @@ public class TradeTransactionStatusAndReason1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RltdRef", required = true)
 	public Max35Text getRelatedReference() {
 		return relatedReference;
 	}
@@ -361,6 +368,7 @@ public class TradeTransactionStatusAndReason1 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "TradRef", required = true)
 	public Max70Text getTradeReference() {
 		return tradeReference;
 	}
@@ -369,6 +377,7 @@ public class TradeTransactionStatusAndReason1 {
 		this.tradeReference = tradeReference;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public Status2Code getStatus() {
 		return status;
 	}
@@ -377,6 +386,7 @@ public class TradeTransactionStatusAndReason1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public List<RejectedStatusReason9Choice> getRejected() {
 		return rejected;
 	}

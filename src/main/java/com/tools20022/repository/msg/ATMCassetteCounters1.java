@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * ATM cassette counter per unit value or globally.
@@ -83,6 +87,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCassetteCounters1", propOrder = {"unitValue", "currency", "itemType", "counter", "currentNumber", "currentAmount"})
 public class ATMCassetteCounters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -373,6 +379,7 @@ public class ATMCassetteCounters1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitVal")
 	public ImpliedCurrencyAndAmount getUnitValue() {
 		return unitValue;
 	}
@@ -381,6 +388,7 @@ public class ATMCassetteCounters1 {
 		this.unitValue = unitValue;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -389,6 +397,7 @@ public class ATMCassetteCounters1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "ItmTp")
 	public ATMNoteType2Code getItemType() {
 		return itemType;
 	}
@@ -397,6 +406,7 @@ public class ATMCassetteCounters1 {
 		this.itemType = itemType;
 	}
 
+	@XmlElement(name = "Cntr")
 	public List<ATMCassetteCounters2> getCounter() {
 		return counter;
 	}
@@ -405,6 +415,7 @@ public class ATMCassetteCounters1 {
 		this.counter = counter;
 	}
 
+	@XmlElement(name = "CurNb", required = true)
 	public Number getCurrentNumber() {
 		return currentNumber;
 	}
@@ -413,6 +424,7 @@ public class ATMCassetteCounters1 {
 		this.currentNumber = currentNumber;
 	}
 
+	@XmlElement(name = "CurAmt")
 	public ImpliedCurrencyAndAmount getCurrentAmount() {
 		return currentAmount;
 	}

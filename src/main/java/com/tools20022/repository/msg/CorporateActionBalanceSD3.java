@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action balance details.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionBalanceSD1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionBalanceSD3", propOrder = {"placeAndName", "originalBalance", "adjustedBalance", "unpledgedBalance", "investmentUnpledgedBalance", "investmentPledgedBalance", "memoSegregationBalance"})
 public class CorporateActionBalanceSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -446,6 +452,7 @@ public class CorporateActionBalanceSD3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -454,6 +461,7 @@ public class CorporateActionBalanceSD3 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "OrgnlBal")
 	public SignedQuantityFormat9 getOriginalBalance() {
 		return originalBalance;
 	}
@@ -462,6 +470,7 @@ public class CorporateActionBalanceSD3 {
 		this.originalBalance = originalBalance;
 	}
 
+	@XmlElement(name = "AdjstdBal")
 	public SignedQuantityFormat9 getAdjustedBalance() {
 		return adjustedBalance;
 	}
@@ -470,6 +479,7 @@ public class CorporateActionBalanceSD3 {
 		this.adjustedBalance = adjustedBalance;
 	}
 
+	@XmlElement(name = "UpldgdBal")
 	public SignedQuantityFormat9 getUnpledgedBalance() {
 		return unpledgedBalance;
 	}
@@ -478,6 +488,7 @@ public class CorporateActionBalanceSD3 {
 		this.unpledgedBalance = unpledgedBalance;
 	}
 
+	@XmlElement(name = "InvstmtUpldgdBal")
 	public SignedQuantityFormat9 getInvestmentUnpledgedBalance() {
 		return investmentUnpledgedBalance;
 	}
@@ -486,6 +497,7 @@ public class CorporateActionBalanceSD3 {
 		this.investmentUnpledgedBalance = investmentUnpledgedBalance;
 	}
 
+	@XmlElement(name = "InvstmtPldgdBal")
 	public SignedQuantityFormat9 getInvestmentPledgedBalance() {
 		return investmentPledgedBalance;
 	}
@@ -494,6 +506,7 @@ public class CorporateActionBalanceSD3 {
 		this.investmentPledgedBalance = investmentPledgedBalance;
 	}
 
+	@XmlElement(name = "MemoSgrtnBal")
 	public SignedQuantityFormat9 getMemoSegregationBalance() {
 		return memoSegregationBalance;
 	}

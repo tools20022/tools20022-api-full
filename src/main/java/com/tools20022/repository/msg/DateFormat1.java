@@ -26,6 +26,10 @@ import com.tools20022.repository.codeset.DateMode1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Format to express a date and a date mode.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Format to express a date and a date mode."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DateFormat1", propOrder = {"date", "dateMode"})
 public class DateFormat1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class DateFormat1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public DateFormat3Choice getDate() {
 		return date;
 	}
@@ -166,6 +173,7 @@ public class DateFormat1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "DtMd")
 	public DateMode1Code getDateMode() {
 		return dateMode;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment processes required to transfer cash from the debtor to the creditor.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentTransaction25}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTransaction71", propOrder = "cashInOrOut")
 public class PaymentTransaction71 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -134,6 +140,7 @@ public class PaymentTransaction71 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshInOrOut", required = true)
 	public CashInOrOut7Choice getCashInOrOut() {
 		return cashInOrOut;
 	}

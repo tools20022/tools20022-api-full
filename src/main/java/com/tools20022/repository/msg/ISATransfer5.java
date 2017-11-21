@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the type of product and the assets to be transferred.
@@ -93,6 +97,8 @@ import java.util.List;
  * PEPISATransfer5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ISATransfer5", propOrder = {"masterReference", "transferIdentification", "portfolio", "allOtherCash", "financialInstrumentAssetForTransfer"})
 public class ISATransfer5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -390,6 +396,7 @@ public class ISATransfer5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -398,6 +405,7 @@ public class ISATransfer5 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "TrfId", required = true)
 	public Max35Text getTransferIdentification() {
 		return transferIdentification;
 	}
@@ -406,6 +414,7 @@ public class ISATransfer5 {
 		this.transferIdentification = transferIdentification;
 	}
 
+	@XmlElement(name = "Prtfl", required = true)
 	public ISAPortfolio3Choice getPortfolio() {
 		return portfolio;
 	}
@@ -414,6 +423,7 @@ public class ISATransfer5 {
 		this.portfolio = portfolio;
 	}
 
+	@XmlElement(name = "AllOthrCsh", required = true)
 	public YesNoIndicator getAllOtherCash() {
 		return allOtherCash;
 	}
@@ -422,6 +432,7 @@ public class ISATransfer5 {
 		this.allOtherCash = allOtherCash;
 	}
 
+	@XmlElement(name = "FinInstrmAsstForTrf")
 	public List<FinancialInstrument27> getFinancialInstrumentAssetForTransfer() {
 		return financialInstrumentAssetForTransfer;
 	}

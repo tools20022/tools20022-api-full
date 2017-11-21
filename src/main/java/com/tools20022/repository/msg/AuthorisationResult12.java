@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Outcome of the authorisation.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AuthorisationResult6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AuthorisationResult12", propOrder = {"authorisationEntity", "responseToAuthorisation", "authorisationCode", "TMSTrigger"})
 public class AuthorisationResult12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -311,6 +317,7 @@ public class AuthorisationResult12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AuthstnNtty")
 	public GenericIdentification90 getAuthorisationEntity() {
 		return authorisationEntity;
 	}
@@ -319,6 +326,7 @@ public class AuthorisationResult12 {
 		this.authorisationEntity = authorisationEntity;
 	}
 
+	@XmlElement(name = "RspnToAuthstn", required = true)
 	public ResponseType5 getResponseToAuthorisation() {
 		return responseToAuthorisation;
 	}
@@ -327,6 +335,7 @@ public class AuthorisationResult12 {
 		this.responseToAuthorisation = responseToAuthorisation;
 	}
 
+	@XmlElement(name = "AuthstnCd")
 	public Min6Max8Text getAuthorisationCode() {
 		return authorisationCode;
 	}
@@ -335,6 +344,7 @@ public class AuthorisationResult12 {
 		this.authorisationCode = authorisationCode;
 	}
 
+	@XmlElement(name = "TMSTrggr")
 	public TMSTrigger1 getTMSTrigger() {
 		return tMSTrigger;
 	}

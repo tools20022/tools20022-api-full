@@ -37,6 +37,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IndividualPayment#mmBulkPayment
+ * IndividualPayment.mmBulkPayment}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequePayment ChequePayment}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DirectDebit DirectDebit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashDeposit CashDeposit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CreditTransfer
+ * CreditTransfer}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -52,28 +74,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.TransactionCertificate2#mmReferredDocument
  * TransactionCertificate2.mmReferredDocument}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ChequePayment ChequePayment}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DirectDebit DirectDebit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashDeposit CashDeposit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CreditTransfer
- * CreditTransfer}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IndividualPayment#mmBulkPayment
- * IndividualPayment.mmBulkPayment}</li>
  * </ul>
  * </li>
  * <li>
@@ -132,7 +132,7 @@ public class IndividualPayment extends Payment {
 	 */
 	public static final MMBusinessAssociationEnd mmBulkPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> IndividualPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IndividualPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BulkPayment";
@@ -156,7 +156,12 @@ public class IndividualPayment extends Payment {
 				derivationElement_lazy = () -> Arrays.asList(TransactionCertificate2.mmReferredDocument);
 				subType_lazy = () -> Arrays.asList(ChequePayment.mmObject(), CardPayment.mmObject(), DirectDebit.mmObject(), CashDeposit.mmObject(), CreditTransfer.mmObject());
 				superType_lazy = () -> Payment.mmObject();
-				element_lazy = () -> Arrays.asList(IndividualPayment.mmBulkPayment);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IndividualPayment.mmBulkPayment);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IndividualPayment.class;
 			}
 		});
 		return mmObject_lazy.get();

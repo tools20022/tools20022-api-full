@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -92,6 +96,9 @@ import java.util.List;
  * FundSettlementParameters3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundSettlementParameters12", propOrder = {"settlementDate", "settlementPlace", "safekeepingPlace", "securitiesSettlementSystemIdentification", "tradeTransactionCondition", "settlementTransactionCondition",
+		"receivingSideDetails", "deliveringSideDetails"})
 public class FundSettlementParameters12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -551,6 +558,7 @@ public class FundSettlementParameters12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmDt")
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
@@ -559,6 +567,7 @@ public class FundSettlementParameters12 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "SttlmPlc", required = true)
 	public PartyIdentification113 getSettlementPlace() {
 		return settlementPlace;
 	}
@@ -567,6 +576,7 @@ public class FundSettlementParameters12 {
 		this.settlementPlace = settlementPlace;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat8Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -575,6 +585,7 @@ public class FundSettlementParameters12 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "SctiesSttlmSysId")
 	public Max35Text getSecuritiesSettlementSystemIdentification() {
 		return securitiesSettlementSystemIdentification;
 	}
@@ -583,6 +594,7 @@ public class FundSettlementParameters12 {
 		this.securitiesSettlementSystemIdentification = securitiesSettlementSystemIdentification;
 	}
 
+	@XmlElement(name = "TradTxCond")
 	public List<TradeTransactionCondition8Choice> getTradeTransactionCondition() {
 		return tradeTransactionCondition;
 	}
@@ -591,6 +603,7 @@ public class FundSettlementParameters12 {
 		this.tradeTransactionCondition = tradeTransactionCondition;
 	}
 
+	@XmlElement(name = "SttlmTxCond")
 	public List<SettlementTransactionCondition30Choice> getSettlementTransactionCondition() {
 		return settlementTransactionCondition;
 	}
@@ -599,6 +612,7 @@ public class FundSettlementParameters12 {
 		this.settlementTransactionCondition = settlementTransactionCondition;
 	}
 
+	@XmlElement(name = "RcvgSdDtls")
 	public ReceivingPartiesAndAccount16 getReceivingSideDetails() {
 		return receivingSideDetails;
 	}
@@ -607,6 +621,7 @@ public class FundSettlementParameters12 {
 		this.receivingSideDetails = receivingSideDetails;
 	}
 
+	@XmlElement(name = "DlvrgSdDtls", required = true)
 	public DeliveringPartiesAndAccount16 getDeliveringSideDetails() {
 		return deliveringSideDetails;
 	}

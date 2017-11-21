@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Elements which allow to identify a meeting.
@@ -127,6 +131,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingReference4", propOrder = {"meetingIdentification", "issuerMeetingIdentification", "meetingDateAndTime", "type", "classification", "location"})
 public class MeetingReference4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -496,6 +502,7 @@ public class MeetingReference4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MtgId")
 	public Max35Text getMeetingIdentification() {
 		return meetingIdentification;
 	}
@@ -504,6 +511,7 @@ public class MeetingReference4 {
 		this.meetingIdentification = meetingIdentification;
 	}
 
+	@XmlElement(name = "IssrMtgId")
 	public Max35Text getIssuerMeetingIdentification() {
 		return issuerMeetingIdentification;
 	}
@@ -512,6 +520,7 @@ public class MeetingReference4 {
 		this.issuerMeetingIdentification = issuerMeetingIdentification;
 	}
 
+	@XmlElement(name = "MtgDtAndTm", required = true)
 	public ISODateTime getMeetingDateAndTime() {
 		return meetingDateAndTime;
 	}
@@ -520,6 +529,7 @@ public class MeetingReference4 {
 		this.meetingDateAndTime = meetingDateAndTime;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public MeetingType2Code getType() {
 		return type;
 	}
@@ -528,6 +538,7 @@ public class MeetingReference4 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Clssfctn")
 	public MeetingTypeClassification1Choice getClassification() {
 		return classification;
 	}
@@ -536,6 +547,7 @@ public class MeetingReference4 {
 		this.classification = classification;
 	}
 
+	@XmlElement(name = "Lctn")
 	public List<PostalAddress1> getLocation() {
 		return location;
 	}

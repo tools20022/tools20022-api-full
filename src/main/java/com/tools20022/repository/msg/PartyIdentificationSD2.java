@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.PhoneNumber;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding the existing agent component.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides additional information regarding the existing agent component."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationSD2", propOrder = {"placeAndName", "agentIdentification", "agentTelephoneNumber", "contactInformation", "agentEmailAddress", "agentAddress"})
 public class PartyIdentificationSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -338,6 +344,7 @@ public class PartyIdentificationSD2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -346,6 +353,7 @@ public class PartyIdentificationSD2 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "AgtId")
 	public Max8Text getAgentIdentification() {
 		return agentIdentification;
 	}
@@ -354,6 +362,7 @@ public class PartyIdentificationSD2 {
 		this.agentIdentification = agentIdentification;
 	}
 
+	@XmlElement(name = "AgtTelNb")
 	public PhoneNumber getAgentTelephoneNumber() {
 		return agentTelephoneNumber;
 	}
@@ -362,6 +371,7 @@ public class PartyIdentificationSD2 {
 		this.agentTelephoneNumber = agentTelephoneNumber;
 	}
 
+	@XmlElement(name = "CtctInf")
 	public PartyIdentificationSD4 getContactInformation() {
 		return contactInformation;
 	}
@@ -370,6 +380,7 @@ public class PartyIdentificationSD2 {
 		this.contactInformation = contactInformation;
 	}
 
+	@XmlElement(name = "AgtEmailAdr")
 	public Max256Text getAgentEmailAddress() {
 		return agentEmailAddress;
 	}
@@ -378,6 +389,7 @@ public class PartyIdentificationSD2 {
 		this.agentEmailAddress = agentEmailAddress;
 	}
 
+	@XmlElement(name = "AgtAdr")
 	public PostalAddress1 getAgentAddress() {
 		return agentAddress;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters to synchronise a real time clock.
@@ -59,6 +63,8 @@ import java.util.List;
  * definition} = "Parameters to synchronise a real time clock."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClockSynchronisation1", propOrder = {"POITimeZone", "synchronisationServer"})
 public class ClockSynchronisation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class ClockSynchronisation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "POITmZone", required = true)
 	public Max70Text getPOITimeZone() {
 		return pOITimeZone;
 	}
@@ -169,6 +176,7 @@ public class ClockSynchronisation1 {
 		this.pOITimeZone = pOITimeZone;
 	}
 
+	@XmlElement(name = "SynctnSvr")
 	public List<NetworkParameters2> getSynchronisationServer() {
 		return synchronisationServer;
 	}

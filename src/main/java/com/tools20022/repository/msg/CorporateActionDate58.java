@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies corporate action dates.
@@ -162,6 +166,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies corporate action dates."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionDate58", propOrder = {"announcementDate", "certificationDeadline", "courtApprovalDate", "earlyClosingDate", "effectiveDate", "equalisationDate", "furtherDetailedAnnouncementDate", "fixingDate",
+		"lotteryDate", "newMaturityDate", "meetingDate", "marginFixingDate", "prorationDate", "recordDate", "registrationDeadline", "resultsPublicationDate", "deadlineToSplit", "deadlineForTaxBreakdownInstruction", "tradingSuspendedDate",
+		"unconditionalDate", "whollyUnconditionalDate", "exDividendDate", "officialAnnouncementPublicationDate", "specialExDate", "guaranteedParticipationDate", "electionToCounterpartyMarketDeadline",
+		"electionToCounterpartyResponseDeadline", "lapsedDate", "paymentDate", "thirdPartyDeadline", "earlyThirdPartyDeadline", "marketClaimTrackingEndDate", "leadPlaintiffDeadline", "filingDate", "hearingDate"})
 public class CorporateActionDate58 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1932,6 +1941,7 @@ public class CorporateActionDate58 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AnncmntDt")
 	public DateFormat34Choice getAnnouncementDate() {
 		return announcementDate;
 	}
@@ -1940,6 +1950,7 @@ public class CorporateActionDate58 {
 		this.announcementDate = announcementDate;
 	}
 
+	@XmlElement(name = "CertfctnDdln")
 	public DateFormat34Choice getCertificationDeadline() {
 		return certificationDeadline;
 	}
@@ -1948,6 +1959,7 @@ public class CorporateActionDate58 {
 		this.certificationDeadline = certificationDeadline;
 	}
 
+	@XmlElement(name = "CrtApprvlDt")
 	public DateFormat34Choice getCourtApprovalDate() {
 		return courtApprovalDate;
 	}
@@ -1956,6 +1968,7 @@ public class CorporateActionDate58 {
 		this.courtApprovalDate = courtApprovalDate;
 	}
 
+	@XmlElement(name = "EarlyClsgDt")
 	public DateFormat34Choice getEarlyClosingDate() {
 		return earlyClosingDate;
 	}
@@ -1964,6 +1977,7 @@ public class CorporateActionDate58 {
 		this.earlyClosingDate = earlyClosingDate;
 	}
 
+	@XmlElement(name = "FctvDt")
 	public DateFormat34Choice getEffectiveDate() {
 		return effectiveDate;
 	}
@@ -1972,6 +1986,7 @@ public class CorporateActionDate58 {
 		this.effectiveDate = effectiveDate;
 	}
 
+	@XmlElement(name = "EqulstnDt")
 	public DateFormat34Choice getEqualisationDate() {
 		return equalisationDate;
 	}
@@ -1980,6 +1995,7 @@ public class CorporateActionDate58 {
 		this.equalisationDate = equalisationDate;
 	}
 
+	@XmlElement(name = "FrthrDtldAnncmntDt")
 	public DateFormat34Choice getFurtherDetailedAnnouncementDate() {
 		return furtherDetailedAnnouncementDate;
 	}
@@ -1988,6 +2004,7 @@ public class CorporateActionDate58 {
 		this.furtherDetailedAnnouncementDate = furtherDetailedAnnouncementDate;
 	}
 
+	@XmlElement(name = "FxgDt")
 	public DateFormat34Choice getFixingDate() {
 		return fixingDate;
 	}
@@ -1996,6 +2013,7 @@ public class CorporateActionDate58 {
 		this.fixingDate = fixingDate;
 	}
 
+	@XmlElement(name = "LtryDt")
 	public DateFormat34Choice getLotteryDate() {
 		return lotteryDate;
 	}
@@ -2004,6 +2022,7 @@ public class CorporateActionDate58 {
 		this.lotteryDate = lotteryDate;
 	}
 
+	@XmlElement(name = "NewMtrtyDt")
 	public DateFormat34Choice getNewMaturityDate() {
 		return newMaturityDate;
 	}
@@ -2012,6 +2031,7 @@ public class CorporateActionDate58 {
 		this.newMaturityDate = newMaturityDate;
 	}
 
+	@XmlElement(name = "MtgDt")
 	public DateFormat34Choice getMeetingDate() {
 		return meetingDate;
 	}
@@ -2020,6 +2040,7 @@ public class CorporateActionDate58 {
 		this.meetingDate = meetingDate;
 	}
 
+	@XmlElement(name = "MrgnFxgDt")
 	public DateFormat34Choice getMarginFixingDate() {
 		return marginFixingDate;
 	}
@@ -2028,6 +2049,7 @@ public class CorporateActionDate58 {
 		this.marginFixingDate = marginFixingDate;
 	}
 
+	@XmlElement(name = "PrratnDt")
 	public DateFormat34Choice getProrationDate() {
 		return prorationDate;
 	}
@@ -2036,6 +2058,7 @@ public class CorporateActionDate58 {
 		this.prorationDate = prorationDate;
 	}
 
+	@XmlElement(name = "RcrdDt")
 	public DateFormat34Choice getRecordDate() {
 		return recordDate;
 	}
@@ -2044,6 +2067,7 @@ public class CorporateActionDate58 {
 		this.recordDate = recordDate;
 	}
 
+	@XmlElement(name = "RegnDdln")
 	public DateFormat34Choice getRegistrationDeadline() {
 		return registrationDeadline;
 	}
@@ -2052,6 +2076,7 @@ public class CorporateActionDate58 {
 		this.registrationDeadline = registrationDeadline;
 	}
 
+	@XmlElement(name = "RsltsPblctnDt")
 	public DateFormat34Choice getResultsPublicationDate() {
 		return resultsPublicationDate;
 	}
@@ -2060,6 +2085,7 @@ public class CorporateActionDate58 {
 		this.resultsPublicationDate = resultsPublicationDate;
 	}
 
+	@XmlElement(name = "DdlnToSplt")
 	public DateFormat34Choice getDeadlineToSplit() {
 		return deadlineToSplit;
 	}
@@ -2068,6 +2094,7 @@ public class CorporateActionDate58 {
 		this.deadlineToSplit = deadlineToSplit;
 	}
 
+	@XmlElement(name = "DdlnForTaxBrkdwnInstr")
 	public DateFormat34Choice getDeadlineForTaxBreakdownInstruction() {
 		return deadlineForTaxBreakdownInstruction;
 	}
@@ -2076,6 +2103,7 @@ public class CorporateActionDate58 {
 		this.deadlineForTaxBreakdownInstruction = deadlineForTaxBreakdownInstruction;
 	}
 
+	@XmlElement(name = "TradgSspdDt")
 	public DateFormat34Choice getTradingSuspendedDate() {
 		return tradingSuspendedDate;
 	}
@@ -2084,6 +2112,7 @@ public class CorporateActionDate58 {
 		this.tradingSuspendedDate = tradingSuspendedDate;
 	}
 
+	@XmlElement(name = "UcondlDt")
 	public DateFormat34Choice getUnconditionalDate() {
 		return unconditionalDate;
 	}
@@ -2092,6 +2121,7 @@ public class CorporateActionDate58 {
 		this.unconditionalDate = unconditionalDate;
 	}
 
+	@XmlElement(name = "WhlyUcondlDt")
 	public DateFormat34Choice getWhollyUnconditionalDate() {
 		return whollyUnconditionalDate;
 	}
@@ -2100,6 +2130,7 @@ public class CorporateActionDate58 {
 		this.whollyUnconditionalDate = whollyUnconditionalDate;
 	}
 
+	@XmlElement(name = "ExDvddDt")
 	public DateFormat34Choice getExDividendDate() {
 		return exDividendDate;
 	}
@@ -2108,6 +2139,7 @@ public class CorporateActionDate58 {
 		this.exDividendDate = exDividendDate;
 	}
 
+	@XmlElement(name = "OffclAnncmntPblctnDt")
 	public DateFormat34Choice getOfficialAnnouncementPublicationDate() {
 		return officialAnnouncementPublicationDate;
 	}
@@ -2116,6 +2148,7 @@ public class CorporateActionDate58 {
 		this.officialAnnouncementPublicationDate = officialAnnouncementPublicationDate;
 	}
 
+	@XmlElement(name = "SpclExDt")
 	public DateFormat34Choice getSpecialExDate() {
 		return specialExDate;
 	}
@@ -2124,6 +2157,7 @@ public class CorporateActionDate58 {
 		this.specialExDate = specialExDate;
 	}
 
+	@XmlElement(name = "GrntedPrtcptnDt")
 	public DateFormat34Choice getGuaranteedParticipationDate() {
 		return guaranteedParticipationDate;
 	}
@@ -2132,6 +2166,7 @@ public class CorporateActionDate58 {
 		this.guaranteedParticipationDate = guaranteedParticipationDate;
 	}
 
+	@XmlElement(name = "ElctnToCtrPtyMktDdln")
 	public DateFormat34Choice getElectionToCounterpartyMarketDeadline() {
 		return electionToCounterpartyMarketDeadline;
 	}
@@ -2140,6 +2175,7 @@ public class CorporateActionDate58 {
 		this.electionToCounterpartyMarketDeadline = electionToCounterpartyMarketDeadline;
 	}
 
+	@XmlElement(name = "ElctnToCtrPtyRspnDdln")
 	public DateFormat34Choice getElectionToCounterpartyResponseDeadline() {
 		return electionToCounterpartyResponseDeadline;
 	}
@@ -2148,6 +2184,7 @@ public class CorporateActionDate58 {
 		this.electionToCounterpartyResponseDeadline = electionToCounterpartyResponseDeadline;
 	}
 
+	@XmlElement(name = "LpsdDt")
 	public DateFormat34Choice getLapsedDate() {
 		return lapsedDate;
 	}
@@ -2156,6 +2193,7 @@ public class CorporateActionDate58 {
 		this.lapsedDate = lapsedDate;
 	}
 
+	@XmlElement(name = "PmtDt")
 	public DateFormat34Choice getPaymentDate() {
 		return paymentDate;
 	}
@@ -2164,6 +2202,7 @@ public class CorporateActionDate58 {
 		this.paymentDate = paymentDate;
 	}
 
+	@XmlElement(name = "ThrdPtyDdln")
 	public DateFormat34Choice getThirdPartyDeadline() {
 		return thirdPartyDeadline;
 	}
@@ -2172,6 +2211,7 @@ public class CorporateActionDate58 {
 		this.thirdPartyDeadline = thirdPartyDeadline;
 	}
 
+	@XmlElement(name = "EarlyThrdPtyDdln")
 	public DateFormat34Choice getEarlyThirdPartyDeadline() {
 		return earlyThirdPartyDeadline;
 	}
@@ -2180,6 +2220,7 @@ public class CorporateActionDate58 {
 		this.earlyThirdPartyDeadline = earlyThirdPartyDeadline;
 	}
 
+	@XmlElement(name = "MktClmTrckgEndDt")
 	public DateFormat34Choice getMarketClaimTrackingEndDate() {
 		return marketClaimTrackingEndDate;
 	}
@@ -2188,6 +2229,7 @@ public class CorporateActionDate58 {
 		this.marketClaimTrackingEndDate = marketClaimTrackingEndDate;
 	}
 
+	@XmlElement(name = "LeadPlntffDdln")
 	public DateFormat34Choice getLeadPlaintiffDeadline() {
 		return leadPlaintiffDeadline;
 	}
@@ -2196,6 +2238,7 @@ public class CorporateActionDate58 {
 		this.leadPlaintiffDeadline = leadPlaintiffDeadline;
 	}
 
+	@XmlElement(name = "FilgDt")
 	public DateFormat41Choice getFilingDate() {
 		return filingDate;
 	}
@@ -2204,6 +2247,7 @@ public class CorporateActionDate58 {
 		this.filingDate = filingDate;
 	}
 
+	@XmlElement(name = "HrgDt")
 	public DateFormat41Choice getHearingDate() {
 		return hearingDate;
 	}

@@ -22,9 +22,11 @@ import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.AdditionalReference2;
 import com.tools20022.repository.msg.CancellationStatusAndReason;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -42,9 +44,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.010.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -84,6 +83,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.010.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -103,6 +105,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "sese.010.001.01", propOrder = {"relatedReference", "otherReference", "statusReport"})
 public class TransferCancellationStatusReport {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -112,6 +116,10 @@ public class TransferCancellationStatusReport {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport
+	 * TransferCancellationStatusReport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -124,10 +132,6 @@ public class TransferCancellationStatusReport {
 	 * TransferCancellationStatusReport.mmOtherReference}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport
-	 * TransferCancellationStatusReport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -146,8 +150,9 @@ public class TransferCancellationStatusReport {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
 			definition = "If OtherReference is not present, then RelatedReference is mandatory. If OtherReference is present, then RelatedReference is not allowed.";
-			messageDefinition_lazy = () -> TransferCancellationStatusReport.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(TransferCancellationStatusReport.mmRelatedReference, TransferCancellationStatusReport.mmOtherReference);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.TransferCancellationStatusReport.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReport.mmRelatedReference,
+					com.tools20022.repository.area.sese.TransferCancellationStatusReport.mmOtherReference);
 		}
 	};
 	protected List<AdditionalReference2> relatedReference;
@@ -184,6 +189,14 @@ public class TransferCancellationStatusReport {
 			maxOccurs = 2;
 			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferCancellationStatusReport.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference2 otherReference;
@@ -223,6 +236,14 @@ public class TransferCancellationStatusReport {
 			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferCancellationStatusReport.class.getMethod("getOtherReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CancellationStatusAndReason statusReport;
 	/**
@@ -258,6 +279,14 @@ public class TransferCancellationStatusReport {
 			minOccurs = 1;
 			complexType_lazy = () -> CancellationStatusAndReason.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferCancellationStatusReport.class.getMethod("getStatusReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -268,12 +297,13 @@ public class TransferCancellationStatusReport {
 				definition = "Scope\r\nThe TransferCancellationStatusReport message is sent by an executing party to the instructing party.\r\nThe message gives the status of a transfer cancellation instruction that was previously sent by the instructing party.\r\nUsage\r\nThe TransferCancellationStatusReport message is sent by an executing party to the instructing party. The message can be used to report that either\r\n- the cancellation has been acted upon or\r\n- the cancellation is rejected.\r\nIn both cases, the reason must be specified using either a code or unstructured information.";
 				nextVersions_lazy = () -> Arrays.asList(TransferCancellationStatusReportV02.mmObject());
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(TransferCancellationStatusReport.mmRelatedReferenceOrOtherReferenceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReport.mmRelatedReferenceOrOtherReferenceRule);
 				rootElement = "Document";
 				xmlTag = "sese.010.001.01";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
 				xmlName = "sese.010.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(TransferCancellationStatusReport.mmRelatedReference, TransferCancellationStatusReport.mmOtherReference, TransferCancellationStatusReport.mmStatusReport);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReport.mmRelatedReference, com.tools20022.repository.area.sese.TransferCancellationStatusReport.mmOtherReference,
+						com.tools20022.repository.area.sese.TransferCancellationStatusReport.mmStatusReport);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -283,10 +313,16 @@ public class TransferCancellationStatusReport {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TransferCancellationStatusReport.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RltdRef", required = true)
 	public List<AdditionalReference2> getRelatedReference() {
 		return relatedReference;
 	}
@@ -295,6 +331,7 @@ public class TransferCancellationStatusReport {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "OthrRef", required = true)
 	public AdditionalReference2 getOtherReference() {
 		return otherReference;
 	}
@@ -303,11 +340,18 @@ public class TransferCancellationStatusReport {
 		this.otherReference = otherReference;
 	}
 
+	@XmlElement(name = "StsRpt", required = true)
 	public CancellationStatusAndReason getStatusReport() {
 		return statusReport;
 	}
 
 	public void setStatusReport(CancellationStatusAndReason statusReport) {
 		this.statusReport = statusReport;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.010.01.01")
+	static public class Document {
+		@XmlElement(name = "sese.010.001.01", required = true)
+		public TransferCancellationStatusReport messageBody;
 	}
 }

@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional references linked to the quote status report.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Additional references linked to the quote status report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reference7", propOrder = {"quoteIdentification", "quoteStatusRequestIdentification", "quoteRequestIdentification", "quoteResponseIdentification"})
 public class Reference7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -240,6 +246,7 @@ public class Reference7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QtId", required = true)
 	public Max35Text getQuoteIdentification() {
 		return quoteIdentification;
 	}
@@ -248,6 +255,7 @@ public class Reference7 {
 		this.quoteIdentification = quoteIdentification;
 	}
 
+	@XmlElement(name = "QtStsReqId")
 	public Max35Text getQuoteStatusRequestIdentification() {
 		return quoteStatusRequestIdentification;
 	}
@@ -256,6 +264,7 @@ public class Reference7 {
 		this.quoteStatusRequestIdentification = quoteStatusRequestIdentification;
 	}
 
+	@XmlElement(name = "QtReqId")
 	public Max35Text getQuoteRequestIdentification() {
 		return quoteRequestIdentification;
 	}
@@ -264,6 +273,7 @@ public class Reference7 {
 		this.quoteRequestIdentification = quoteRequestIdentification;
 	}
 
+	@XmlElement(name = "QtRspnId")
 	public Max35Text getQuoteResponseIdentification() {
 		return quoteResponseIdentification;
 	}

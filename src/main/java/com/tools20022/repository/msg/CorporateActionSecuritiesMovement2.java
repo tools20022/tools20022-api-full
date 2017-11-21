@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the securities movement resulting from the
@@ -79,6 +83,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionSecuritiesMovement2", propOrder = {"securityIdentification", "postingDateTime", "postingIdentification", "postingQuantity", "accountDetails"})
 public class CorporateActionSecuritiesMovement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -334,6 +340,7 @@ public class CorporateActionSecuritiesMovement2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification7 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -342,6 +349,7 @@ public class CorporateActionSecuritiesMovement2 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "PstngDtTm")
 	public DateAndDateTimeChoice getPostingDateTime() {
 		return postingDateTime;
 	}
@@ -350,6 +358,7 @@ public class CorporateActionSecuritiesMovement2 {
 		this.postingDateTime = postingDateTime;
 	}
 
+	@XmlElement(name = "PstngId")
 	public Max35Text getPostingIdentification() {
 		return postingIdentification;
 	}
@@ -358,6 +367,7 @@ public class CorporateActionSecuritiesMovement2 {
 		this.postingIdentification = postingIdentification;
 	}
 
+	@XmlElement(name = "PstngQty", required = true)
 	public UnitOrFaceAmount1Choice getPostingQuantity() {
 		return postingQuantity;
 	}
@@ -366,6 +376,7 @@ public class CorporateActionSecuritiesMovement2 {
 		this.postingQuantity = postingQuantity;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public List<SecuritiesAccount9> getAccountDetails() {
 		return accountDetails;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Report information about securities reference data.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Report information about securities reference data."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesAuditTrailReport1", propOrder = {"securitiesAuditTrailOrError", "datePeriod", "financialInstrumentIdentification"})
 public class SecuritiesAuditTrailReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -208,6 +214,7 @@ public class SecuritiesAuditTrailReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesAudtTrlOrErr", required = true)
 	public AuditTrailOrBusinessError1Choice getSecuritiesAuditTrailOrError() {
 		return securitiesAuditTrailOrError;
 	}
@@ -216,6 +223,7 @@ public class SecuritiesAuditTrailReport1 {
 		this.securitiesAuditTrailOrError = securitiesAuditTrailOrError;
 	}
 
+	@XmlElement(name = "DtPrd")
 	public DateSearchChoice getDatePeriod() {
 		return datePeriod;
 	}
@@ -224,6 +232,7 @@ public class SecuritiesAuditTrailReport1 {
 		this.datePeriod = datePeriod;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}

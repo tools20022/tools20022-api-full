@@ -29,6 +29,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[0-9a-zA-Z!\"%&amp;\\*;&lt;&gt; \\.,\\(\\)\\n\\r/='\\+:\\?@#\\{\\-_]{1,8000}"
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -57,6 +60,9 @@ public class RestrictedFINZMax8000Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RestrictedFINZMax8000Text";
 				definition = "Specifies a character string with a maximum length of 8000 characters limited to character set Z, that is, a-z A-Z / - ? : ( ) . , ‘ += ! “ % & * < > ; @ #  .";
+				minLength = 1;
+				maxLength = 8000;
+				pattern = "[0-9a-zA-Z!\"%&\\*;<> \\.,\\(\\)\\n\\r/='\\+:\\?@#\\{\\-_]{1,8000}";
 			}
 		});
 		return mmObject_lazy.get();

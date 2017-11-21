@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of breakdown of a quantity.
@@ -73,6 +77,8 @@ import java.util.function.Supplier;
  * QuantityBreakdown9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuantityBreakdown22", propOrder = {"lotNumber", "lotQuantity", "cashSubBalanceType"})
 public class QuantityBreakdown22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -250,6 +256,7 @@ public class QuantityBreakdown22 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LotNb")
 	public GenericIdentification37 getLotNumber() {
 		return lotNumber;
 	}
@@ -258,6 +265,7 @@ public class QuantityBreakdown22 {
 		this.lotNumber = lotNumber;
 	}
 
+	@XmlElement(name = "LotQty")
 	public FinancialInstrumentQuantity1Choice getLotQuantity() {
 		return lotQuantity;
 	}
@@ -266,6 +274,7 @@ public class QuantityBreakdown22 {
 		this.lotQuantity = lotQuantity;
 	}
 
+	@XmlElement(name = "CshSubBalTp")
 	public GenericIdentification20 getCashSubBalanceType() {
 		return cashSubBalanceType;
 	}

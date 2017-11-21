@@ -27,6 +27,10 @@ import com.tools20022.repository.choice.References46Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to a linked transaction.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Linkages27}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Linkages39", propOrder = {"processingPosition", "messageNumber", "reference", "referenceOwner"})
 public class Linkages39 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -276,6 +282,7 @@ public class Linkages39 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcgPos")
 	public ProcessingPosition8Choice getProcessingPosition() {
 		return processingPosition;
 	}
@@ -284,6 +291,7 @@ public class Linkages39 {
 		this.processingPosition = processingPosition;
 	}
 
+	@XmlElement(name = "MsgNb")
 	public DocumentNumber5Choice getMessageNumber() {
 		return messageNumber;
 	}
@@ -292,6 +300,7 @@ public class Linkages39 {
 		this.messageNumber = messageNumber;
 	}
 
+	@XmlElement(name = "Ref", required = true)
 	public References46Choice getReference() {
 		return reference;
 	}
@@ -300,6 +309,7 @@ public class Linkages39 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "RefOwnr")
 	public PartyIdentification92Choice getReferenceOwner() {
 		return referenceOwner;
 	}

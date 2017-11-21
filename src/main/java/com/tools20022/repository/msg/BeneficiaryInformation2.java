@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the beneficial owner.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about the beneficial owner."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BeneficiaryInformation2", propOrder = {"beneficiaryIdentification", "ERISAEligibility", "ERISARate", "benefitPlanDeclarationIndicator", "noChangeToBeneficiaryDetailsIndicator"})
 public class BeneficiaryInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -332,6 +338,7 @@ public class BeneficiaryInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BnfcryId")
 	public IndividualPerson15 getBeneficiaryIdentification() {
 		return beneficiaryIdentification;
 	}
@@ -340,6 +347,7 @@ public class BeneficiaryInformation2 {
 		this.beneficiaryIdentification = beneficiaryIdentification;
 	}
 
+	@XmlElement(name = "ERISAElgblty")
 	public ERISAEligibility1Code getERISAEligibility() {
 		return eRISAEligibility;
 	}
@@ -348,6 +356,7 @@ public class BeneficiaryInformation2 {
 		this.eRISAEligibility = eRISAEligibility;
 	}
 
+	@XmlElement(name = "ERISARate")
 	public PercentageRate getERISARate() {
 		return eRISARate;
 	}
@@ -356,6 +365,7 @@ public class BeneficiaryInformation2 {
 		this.eRISARate = eRISARate;
 	}
 
+	@XmlElement(name = "BnftPlanDclrtnInd")
 	public YesNoIndicator getBenefitPlanDeclarationIndicator() {
 		return benefitPlanDeclarationIndicator;
 	}
@@ -364,6 +374,7 @@ public class BeneficiaryInformation2 {
 		this.benefitPlanDeclarationIndicator = benefitPlanDeclarationIndicator;
 	}
 
+	@XmlElement(name = "NoChngToBnfcryDtlsInd")
 	public YesNoIndicator getNoChangeToBeneficiaryDetailsIndicator() {
 		return noChangeToBeneficiaryDetailsIndicator;
 	}

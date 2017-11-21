@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.TransportByAir;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the transportation of goods by air.
@@ -92,6 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransportByAir2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportByAir4", propOrder = {"departureAirport", "destinationAirport", "flightNumber", "airCarrierName", "airCarrierCountry", "carrierAgentName", "carrierAgentCountry"})
 public class TransportByAir4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -531,6 +537,7 @@ public class TransportByAir4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DprtureAirprt", required = true)
 	public AirportName1Choice getDepartureAirport() {
 		return departureAirport;
 	}
@@ -539,6 +546,7 @@ public class TransportByAir4 {
 		this.departureAirport = departureAirport;
 	}
 
+	@XmlElement(name = "DstnAirprt", required = true)
 	public AirportName1Choice getDestinationAirport() {
 		return destinationAirport;
 	}
@@ -547,6 +555,7 @@ public class TransportByAir4 {
 		this.destinationAirport = destinationAirport;
 	}
 
+	@XmlElement(name = "FlghtNb")
 	public Max35Text getFlightNumber() {
 		return flightNumber;
 	}
@@ -555,6 +564,7 @@ public class TransportByAir4 {
 		this.flightNumber = flightNumber;
 	}
 
+	@XmlElement(name = "AirCrrierNm")
 	public Max70Text getAirCarrierName() {
 		return airCarrierName;
 	}
@@ -563,6 +573,7 @@ public class TransportByAir4 {
 		this.airCarrierName = airCarrierName;
 	}
 
+	@XmlElement(name = "AirCrrierCtry")
 	public CountryCode getAirCarrierCountry() {
 		return airCarrierCountry;
 	}
@@ -571,6 +582,7 @@ public class TransportByAir4 {
 		this.airCarrierCountry = airCarrierCountry;
 	}
 
+	@XmlElement(name = "CrrierAgtNm")
 	public Max70Text getCarrierAgentName() {
 		return carrierAgentName;
 	}
@@ -579,6 +591,7 @@ public class TransportByAir4 {
 		this.carrierAgentName = carrierAgentName;
 	}
 
+	@XmlElement(name = "CrrierAgtCtry")
 	public CountryCode getCarrierAgentCountry() {
 		return carrierAgentCountry;
 	}

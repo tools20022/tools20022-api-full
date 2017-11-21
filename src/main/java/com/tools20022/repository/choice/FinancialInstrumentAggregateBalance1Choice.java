@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of holding indicator and aggregated position of holdings.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice of holding indicator and aggregated position of holdings."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentAggregateBalance1Choice", propOrder = {"holdingsIndicator", "holdingBalance"})
 public class FinancialInstrumentAggregateBalance1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class FinancialInstrumentAggregateBalance1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "HldgsInd", required = true)
 	public YesNoIndicator getHoldingsIndicator() {
 		return holdingsIndicator;
 	}
@@ -174,6 +181,7 @@ public class FinancialInstrumentAggregateBalance1Choice {
 		this.holdingsIndicator = holdingsIndicator;
 	}
 
+	@XmlElement(name = "HldgBal", required = true)
 	public FinancialInstrumentAggregateBalance2 getHoldingBalance() {
 		return holdingBalance;
 	}

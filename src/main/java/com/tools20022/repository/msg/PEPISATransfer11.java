@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a transfer instruction.
@@ -109,6 +113,9 @@ import java.util.List;
  * PEPISATransfer7}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PEPISATransfer11", propOrder = {"primaryIndividualInvestor", "secondaryIndividualInvestor", "otherIndividualInvestor", "primaryCorporateInvestor", "secondaryCorporateInvestor", "otherCorporateInvestor",
+		"transferorAccount", "nomineeAccount", "transferee", "cashAccount", "productTransfer", "extension"})
 public class PEPISATransfer11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -712,6 +719,7 @@ public class PEPISATransfer11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmryIndvInvstr")
 	public IndividualPerson8 getPrimaryIndividualInvestor() {
 		return primaryIndividualInvestor;
 	}
@@ -720,6 +728,7 @@ public class PEPISATransfer11 {
 		this.primaryIndividualInvestor = primaryIndividualInvestor;
 	}
 
+	@XmlElement(name = "ScndryIndvInvstr")
 	public IndividualPerson8 getSecondaryIndividualInvestor() {
 		return secondaryIndividualInvestor;
 	}
@@ -728,6 +737,7 @@ public class PEPISATransfer11 {
 		this.secondaryIndividualInvestor = secondaryIndividualInvestor;
 	}
 
+	@XmlElement(name = "OthrIndvInvstr")
 	public List<IndividualPerson8> getOtherIndividualInvestor() {
 		return otherIndividualInvestor;
 	}
@@ -736,6 +746,7 @@ public class PEPISATransfer11 {
 		this.otherIndividualInvestor = otherIndividualInvestor;
 	}
 
+	@XmlElement(name = "PmryCorpInvstr")
 	public Organisation4 getPrimaryCorporateInvestor() {
 		return primaryCorporateInvestor;
 	}
@@ -744,6 +755,7 @@ public class PEPISATransfer11 {
 		this.primaryCorporateInvestor = primaryCorporateInvestor;
 	}
 
+	@XmlElement(name = "ScndryCorpInvstr")
 	public Organisation4 getSecondaryCorporateInvestor() {
 		return secondaryCorporateInvestor;
 	}
@@ -752,6 +764,7 @@ public class PEPISATransfer11 {
 		this.secondaryCorporateInvestor = secondaryCorporateInvestor;
 	}
 
+	@XmlElement(name = "OthrCorpInvstr")
 	public List<Organisation4> getOtherCorporateInvestor() {
 		return otherCorporateInvestor;
 	}
@@ -760,6 +773,7 @@ public class PEPISATransfer11 {
 		this.otherCorporateInvestor = otherCorporateInvestor;
 	}
 
+	@XmlElement(name = "TrfrAcct", required = true)
 	public Account5 getTransferorAccount() {
 		return transferorAccount;
 	}
@@ -768,6 +782,7 @@ public class PEPISATransfer11 {
 		this.transferorAccount = transferorAccount;
 	}
 
+	@XmlElement(name = "NmneeAcct")
 	public Account6 getNomineeAccount() {
 		return nomineeAccount;
 	}
@@ -776,6 +791,7 @@ public class PEPISATransfer11 {
 		this.nomineeAccount = nomineeAccount;
 	}
 
+	@XmlElement(name = "Trfee", required = true)
 	public PartyIdentification2Choice getTransferee() {
 		return transferee;
 	}
@@ -784,6 +800,7 @@ public class PEPISATransfer11 {
 		this.transferee = transferee;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccount11 getCashAccount() {
 		return cashAccount;
 	}
@@ -792,6 +809,7 @@ public class PEPISATransfer11 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "PdctTrf", required = true)
 	public List<ISATransfer3> getProductTransfer() {
 		return productTransfer;
 	}
@@ -800,6 +818,7 @@ public class PEPISATransfer11 {
 		this.productTransfer = productTransfer;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

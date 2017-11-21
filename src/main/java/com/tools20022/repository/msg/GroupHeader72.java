@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics shared by all individual transactions included in the
@@ -109,6 +113,9 @@ import java.util.List;
  * GroupHeader54}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GroupHeader72", propOrder = {"messageIdentification", "creationDateTime", "authorisation", "batchBooking", "numberOfTransactions", "controlSum", "groupReturn", "totalReturnedInterbankSettlementAmount",
+		"interbankSettlementDate", "settlementInformation", "instructingAgent", "instructedAgent"})
 public class GroupHeader72 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -780,6 +787,7 @@ public class GroupHeader72 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -788,6 +796,7 @@ public class GroupHeader72 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -796,6 +805,7 @@ public class GroupHeader72 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "Authstn")
 	public List<Authorisation1Choice> getAuthorisation() {
 		return authorisation;
 	}
@@ -804,6 +814,7 @@ public class GroupHeader72 {
 		this.authorisation = authorisation;
 	}
 
+	@XmlElement(name = "BtchBookg")
 	public BatchBookingIndicator getBatchBooking() {
 		return batchBooking;
 	}
@@ -812,6 +823,7 @@ public class GroupHeader72 {
 		this.batchBooking = batchBooking;
 	}
 
+	@XmlElement(name = "NbOfTxs", required = true)
 	public Max15NumericText getNumberOfTransactions() {
 		return numberOfTransactions;
 	}
@@ -820,6 +832,7 @@ public class GroupHeader72 {
 		this.numberOfTransactions = numberOfTransactions;
 	}
 
+	@XmlElement(name = "CtrlSum")
 	public DecimalNumber getControlSum() {
 		return controlSum;
 	}
@@ -828,6 +841,7 @@ public class GroupHeader72 {
 		this.controlSum = controlSum;
 	}
 
+	@XmlElement(name = "GrpRtr")
 	public TrueFalseIndicator getGroupReturn() {
 		return groupReturn;
 	}
@@ -836,6 +850,7 @@ public class GroupHeader72 {
 		this.groupReturn = groupReturn;
 	}
 
+	@XmlElement(name = "TtlRtrdIntrBkSttlmAmt")
 	public ActiveCurrencyAndAmount getTotalReturnedInterbankSettlementAmount() {
 		return totalReturnedInterbankSettlementAmount;
 	}
@@ -844,6 +859,7 @@ public class GroupHeader72 {
 		this.totalReturnedInterbankSettlementAmount = totalReturnedInterbankSettlementAmount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDt")
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}
@@ -852,6 +868,7 @@ public class GroupHeader72 {
 		this.interbankSettlementDate = interbankSettlementDate;
 	}
 
+	@XmlElement(name = "SttlmInf", required = true)
 	public SettlementInstruction4 getSettlementInformation() {
 		return settlementInformation;
 	}
@@ -860,6 +877,7 @@ public class GroupHeader72 {
 		this.settlementInformation = settlementInformation;
 	}
 
+	@XmlElement(name = "InstgAgt")
 	public BranchAndFinancialInstitutionIdentification5 getInstructingAgent() {
 		return instructingAgent;
 	}
@@ -868,6 +886,7 @@ public class GroupHeader72 {
 		this.instructingAgent = instructingAgent;
 	}
 
+	@XmlElement(name = "InstdAgt")
 	public BranchAndFinancialInstitutionIdentification5 getInstructedAgent() {
 		return instructedAgent;
 	}

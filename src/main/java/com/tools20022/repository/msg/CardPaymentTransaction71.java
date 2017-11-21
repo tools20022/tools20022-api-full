@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data associated with the transaction to authorise.
@@ -112,6 +116,9 @@ import java.util.List;
  * CardPaymentTransaction62}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransaction71", propOrder = {"transactionCapture", "transactionType", "additionalService", "serviceAttribute", "merchantCategoryCode", "customerConsent", "cardProgrammeProposed", "cardProgrammeApplied",
+		"saleReferenceIdentification", "transactionIdentification", "originalTransaction", "initiatorTransactionIdentification", "reconciliationIdentification", "transactionDetails", "additionalTransactionData"})
 public class CardPaymentTransaction71 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -918,6 +925,7 @@ public class CardPaymentTransaction71 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxCaptr", required = true)
 	public TrueFalseIndicator getTransactionCapture() {
 		return transactionCapture;
 	}
@@ -926,6 +934,7 @@ public class CardPaymentTransaction71 {
 		this.transactionCapture = transactionCapture;
 	}
 
+	@XmlElement(name = "TxTp")
 	public CardPaymentServiceType5Code getTransactionType() {
 		return transactionType;
 	}
@@ -934,6 +943,7 @@ public class CardPaymentTransaction71 {
 		this.transactionType = transactionType;
 	}
 
+	@XmlElement(name = "AddtlSvc")
 	public List<CardPaymentServiceType9Code> getAdditionalService() {
 		return additionalService;
 	}
@@ -942,6 +952,7 @@ public class CardPaymentTransaction71 {
 		this.additionalService = additionalService;
 	}
 
+	@XmlElement(name = "SvcAttr")
 	public CardPaymentServiceType3Code getServiceAttribute() {
 		return serviceAttribute;
 	}
@@ -950,6 +961,7 @@ public class CardPaymentTransaction71 {
 		this.serviceAttribute = serviceAttribute;
 	}
 
+	@XmlElement(name = "MrchntCtgyCd")
 	public Min3Max4Text getMerchantCategoryCode() {
 		return merchantCategoryCode;
 	}
@@ -958,6 +970,7 @@ public class CardPaymentTransaction71 {
 		this.merchantCategoryCode = merchantCategoryCode;
 	}
 
+	@XmlElement(name = "CstmrCnsnt")
 	public List<TrueFalseIndicator> getCustomerConsent() {
 		return customerConsent;
 	}
@@ -966,6 +979,7 @@ public class CardPaymentTransaction71 {
 		this.customerConsent = customerConsent;
 	}
 
+	@XmlElement(name = "CardPrgrmmPropsd")
 	public List<Max35Text> getCardProgrammeProposed() {
 		return cardProgrammeProposed;
 	}
@@ -974,6 +988,7 @@ public class CardPaymentTransaction71 {
 		this.cardProgrammeProposed = cardProgrammeProposed;
 	}
 
+	@XmlElement(name = "CardPrgrmmApld")
 	public List<Max35Text> getCardProgrammeApplied() {
 		return cardProgrammeApplied;
 	}
@@ -982,6 +997,7 @@ public class CardPaymentTransaction71 {
 		this.cardProgrammeApplied = cardProgrammeApplied;
 	}
 
+	@XmlElement(name = "SaleRefId")
 	public Max35Text getSaleReferenceIdentification() {
 		return saleReferenceIdentification;
 	}
@@ -990,6 +1006,7 @@ public class CardPaymentTransaction71 {
 		this.saleReferenceIdentification = saleReferenceIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -998,6 +1015,7 @@ public class CardPaymentTransaction71 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlTx")
 	public CardPaymentTransaction52 getOriginalTransaction() {
 		return originalTransaction;
 	}
@@ -1006,6 +1024,7 @@ public class CardPaymentTransaction71 {
 		this.originalTransaction = originalTransaction;
 	}
 
+	@XmlElement(name = "InitrTxId")
 	public Max35Text getInitiatorTransactionIdentification() {
 		return initiatorTransactionIdentification;
 	}
@@ -1014,6 +1033,7 @@ public class CardPaymentTransaction71 {
 		this.initiatorTransactionIdentification = initiatorTransactionIdentification;
 	}
 
+	@XmlElement(name = "RcncltnId")
 	public Max35Text getReconciliationIdentification() {
 		return reconciliationIdentification;
 	}
@@ -1022,6 +1042,7 @@ public class CardPaymentTransaction71 {
 		this.reconciliationIdentification = reconciliationIdentification;
 	}
 
+	@XmlElement(name = "TxDtls", required = true)
 	public CardPaymentTransactionDetails39 getTransactionDetails() {
 		return transactionDetails;
 	}
@@ -1030,6 +1051,7 @@ public class CardPaymentTransaction71 {
 		this.transactionDetails = transactionDetails;
 	}
 
+	@XmlElement(name = "AddtlTxData")
 	public List<Max70Text> getAdditionalTransactionData() {
 		return additionalTransactionData;
 	}

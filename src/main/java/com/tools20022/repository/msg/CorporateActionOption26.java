@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the corporate action option.
@@ -111,6 +115,9 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionOption26", propOrder = {"optionNumber", "optionType", "accountOwner", "safekeepingAccount", "cashAccount", "safekeepingPlace", "securityIdentification", "totalEligibleBalance", "instructedBalance",
+		"uninstructedBalance", "statusQuantityOrQuantityToReceive"})
 public class CorporateActionOption26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -665,6 +672,7 @@ public class CorporateActionOption26 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OptnNb", required = true)
 	public OptionNumber1Choice getOptionNumber() {
 		return optionNumber;
 	}
@@ -673,6 +681,7 @@ public class CorporateActionOption26 {
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption5Choice getOptionType() {
 		return optionType;
 	}
@@ -681,6 +690,7 @@ public class CorporateActionOption26 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification36Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -689,6 +699,7 @@ public class CorporateActionOption26 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public Max35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -697,6 +708,7 @@ public class CorporateActionOption26 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccountIdentification5Choice getCashAccount() {
 		return cashAccount;
 	}
@@ -705,6 +717,7 @@ public class CorporateActionOption26 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat2Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -713,6 +726,7 @@ public class CorporateActionOption26 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "SctyId")
 	public SecurityIdentification14 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -721,6 +735,7 @@ public class CorporateActionOption26 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "TtlElgblBal")
 	public SignedQuantityFormat1 getTotalEligibleBalance() {
 		return totalEligibleBalance;
 	}
@@ -729,6 +744,7 @@ public class CorporateActionOption26 {
 		this.totalEligibleBalance = totalEligibleBalance;
 	}
 
+	@XmlElement(name = "InstdBal")
 	public SignedQuantityFormat1 getInstructedBalance() {
 		return instructedBalance;
 	}
@@ -737,6 +753,7 @@ public class CorporateActionOption26 {
 		this.instructedBalance = instructedBalance;
 	}
 
+	@XmlElement(name = "UinstdBal")
 	public SignedQuantityFormat1 getUninstructedBalance() {
 		return uninstructedBalance;
 	}
@@ -745,6 +762,7 @@ public class CorporateActionOption26 {
 		this.uninstructedBalance = uninstructedBalance;
 	}
 
+	@XmlElement(name = "StsQtyOrQtyToRcv")
 	public StatusOrQuantityToReceive1Choice getStatusQuantityOrQuantityToReceive() {
 		return statusQuantityOrQuantityToReceive;
 	}

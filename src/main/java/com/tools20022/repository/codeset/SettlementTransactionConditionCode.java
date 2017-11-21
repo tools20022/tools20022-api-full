@@ -30,35 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition2Code
- * SettlementTransactionCondition2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
- * SettlementTransactionCondition6Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition8Code
- * SettlementTransactionCondition8Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition5Code
- * SettlementTransactionCondition5Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code
- * SettlementTransactionCondition3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition4Code
- * SettlementTransactionCondition4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition10Code
- * SettlementTransactionCondition10Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition11Code
- * SettlementTransactionCondition11Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -149,6 +120,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SettlementTransactionConditionCode#mmNotAccountingRelated
  * SettlementTransactionConditionCode.mmNotAccountingRelated}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition2Code
+ * SettlementTransactionCondition2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
+ * SettlementTransactionCondition6Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition8Code
+ * SettlementTransactionCondition8Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition5Code
+ * SettlementTransactionCondition5Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code
+ * SettlementTransactionCondition3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition4Code
+ * SettlementTransactionCondition4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition10Code
+ * SettlementTransactionCondition10Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition11Code
+ * SettlementTransactionCondition11Code}</li>
  * </ul>
  * </li>
  * <li>

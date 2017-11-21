@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.FutureOrOptionDetails1;
 import com.tools20022.repository.msg.SecuritiesFinancing10;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the choice of the two leg transaction type.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the choice of the two leg transaction type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TwoLegTransactionType1Choice", propOrder = {"futureOrOptionDetails", "securitiesFinancingDetails"})
 public class TwoLegTransactionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -182,6 +188,7 @@ public class TwoLegTransactionType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FutrOrOptnDtls", required = true)
 	public FutureOrOptionDetails1 getFutureOrOptionDetails() {
 		return futureOrOptionDetails;
 	}
@@ -190,6 +197,7 @@ public class TwoLegTransactionType1Choice {
 		this.futureOrOptionDetails = futureOrOptionDetails;
 	}
 
+	@XmlElement(name = "SctiesFincgDtls", required = true)
 	public SecuritiesFinancing10 getSecuritiesFinancingDetails() {
 		return securitiesFinancingDetails;
 	}

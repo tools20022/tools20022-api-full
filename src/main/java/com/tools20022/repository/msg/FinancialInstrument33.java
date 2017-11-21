@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Security that is a sub-set of an investment fund, and is governed by the same
@@ -104,6 +108,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * FinancialInstrument24}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrument33", propOrder = {"identification", "name", "transferType", "quantity", "averageAcquisitionPrice", "totalBookValue", "transfereeAccount", "receivingAgentDetails", "deliveringAgentDetails",
+		"requestedSettlementDate"})
 public class FinancialInstrument33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -721,6 +728,7 @@ public class FinancialInstrument33 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification3Choice getIdentification() {
 		return identification;
 	}
@@ -729,6 +737,7 @@ public class FinancialInstrument33 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max350Text getName() {
 		return name;
 	}
@@ -737,6 +746,7 @@ public class FinancialInstrument33 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "TrfTp", required = true)
 	public TransferType1Code getTransferType() {
 		return transferType;
 	}
@@ -745,6 +755,7 @@ public class FinancialInstrument33 {
 		this.transferType = transferType;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public Quantity14Choice getQuantity() {
 		return quantity;
 	}
@@ -753,6 +764,7 @@ public class FinancialInstrument33 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "AvrgAcqstnPric")
 	public ActiveCurrencyAndAmount getAverageAcquisitionPrice() {
 		return averageAcquisitionPrice;
 	}
@@ -761,6 +773,7 @@ public class FinancialInstrument33 {
 		this.averageAcquisitionPrice = averageAcquisitionPrice;
 	}
 
+	@XmlElement(name = "TtlBookVal")
 	public ActiveOrHistoricCurrencyAndAmount getTotalBookValue() {
 		return totalBookValue;
 	}
@@ -769,6 +782,7 @@ public class FinancialInstrument33 {
 		this.totalBookValue = totalBookValue;
 	}
 
+	@XmlElement(name = "TrfeeAcct")
 	public Account6 getTransfereeAccount() {
 		return transfereeAccount;
 	}
@@ -777,6 +791,7 @@ public class FinancialInstrument33 {
 		this.transfereeAccount = transfereeAccount;
 	}
 
+	@XmlElement(name = "RcvgAgtDtls")
 	public PartyIdentificationAndAccount93 getReceivingAgentDetails() {
 		return receivingAgentDetails;
 	}
@@ -785,6 +800,7 @@ public class FinancialInstrument33 {
 		this.receivingAgentDetails = receivingAgentDetails;
 	}
 
+	@XmlElement(name = "DlvrgAgtDtls")
 	public PartyIdentificationAndAccount93 getDeliveringAgentDetails() {
 		return deliveringAgentDetails;
 	}
@@ -793,6 +809,7 @@ public class FinancialInstrument33 {
 		this.deliveringAgentDetails = deliveringAgentDetails;
 	}
 
+	@XmlElement(name = "ReqdSttlmDt")
 	public ISODate getRequestedSettlementDate() {
 		return requestedSettlementDate;
 	}

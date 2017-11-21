@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CaseForwardingNotification;
 import com.tools20022.repository.msg.CaseForwardingNotification2;
 import com.tools20022.repository.msg.CaseForwardingNotification3;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,6 +38,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Reassignment#mmJustification
+ * Reassignment.mmJustification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Reassignment#mmReassignedCase
+ * Reassignment.mmReassignedCase}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestigationResolution
+ * InvestigationResolution}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -56,21 +72,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmReassignment
  * InvestigationCase.mmReassignment}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestigationResolution
- * InvestigationResolution}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Reassignment#mmJustification
- * Reassignment.mmJustification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Reassignment#mmReassignedCase
- * Reassignment.mmReassignedCase}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,10 +105,6 @@ public class Reassignment extends InvestigationResolution {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CaseForwardingNotificationCode
 	 * CaseForwardingNotificationCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Reassignment Reassignment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -123,6 +120,10 @@ public class Reassignment extends InvestigationResolution {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Reassignment Reassignment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -136,7 +137,7 @@ public class Reassignment extends InvestigationResolution {
 	public static final MMBusinessAttribute mmJustification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CaseForwardingNotification.mmJustification, CaseForwardingNotification2.mmJustification, CaseForwardingNotification3.mmJustification);
-			elementContext_lazy = () -> Reassignment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reassignment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Justification";
@@ -144,6 +145,14 @@ public class Reassignment extends InvestigationResolution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CaseForwardingNotificationCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Reassignment.class.getMethod("getJustification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestigationCase reassignedCase;
@@ -181,7 +190,7 @@ public class Reassignment extends InvestigationResolution {
 	 */
 	public static final MMBusinessAssociationEnd mmReassignedCase = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Reassignment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reassignment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReassignedCase";
@@ -203,8 +212,13 @@ public class Reassignment extends InvestigationResolution {
 				definition = "Action that consists in forwarding an investigation case assignment to another party which becomes the new assignee.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationCase.mmReassignment);
 				superType_lazy = () -> InvestigationResolution.mmObject();
-				element_lazy = () -> Arrays.asList(Reassignment.mmJustification, Reassignment.mmReassignedCase);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Reassignment.mmJustification, com.tools20022.repository.entity.Reassignment.mmReassignedCase);
 				derivationComponent_lazy = () -> Arrays.asList(CaseForwardingNotification.mmObject(), CaseForwardingNotification2.mmObject(), CaseForwardingNotification3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Reassignment.class;
 			}
 		});
 		return mmObject_lazy.get();

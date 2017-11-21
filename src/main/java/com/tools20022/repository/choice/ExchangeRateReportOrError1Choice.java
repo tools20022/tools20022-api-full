@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * It is used to provide information on static data maintained by the
@@ -63,6 +67,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExchangeRateReportOrError1Choice", propOrder = {"currencyExchangeReport", "operationalError"})
 public class ExchangeRateReportOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -164,6 +170,7 @@ public class ExchangeRateReportOrError1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CcyXchgRpt", required = true)
 	public List<CurrencyExchangeReport3> getCurrencyExchangeReport() {
 		return currencyExchangeReport;
 	}
@@ -172,6 +179,7 @@ public class ExchangeRateReportOrError1Choice {
 		this.currencyExchangeReport = currencyExchangeReport;
 	}
 
+	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
 		return operationalError;
 	}

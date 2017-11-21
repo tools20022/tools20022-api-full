@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action movement option
@@ -86,6 +90,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OptionTransactionDetailsSD1", propOrder = {"placeAndName", "transactionIdentification", "transactionSequenceNumber", "transactionIdentificationDate", "transactionIdentificationQuantity", "entitledAmount",
+		"entitledQuantity", "agentEnteredQuantity", "agentRemainingQuantity", "customerReferenceIdentification"})
 public class OptionTransactionDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -545,6 +552,7 @@ public class OptionTransactionDetailsSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -553,6 +561,7 @@ public class OptionTransactionDetailsSD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max15Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -561,6 +570,7 @@ public class OptionTransactionDetailsSD1 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "TxSeqNb")
 	public Max3NumericText getTransactionSequenceNumber() {
 		return transactionSequenceNumber;
 	}
@@ -569,6 +579,7 @@ public class OptionTransactionDetailsSD1 {
 		this.transactionSequenceNumber = transactionSequenceNumber;
 	}
 
+	@XmlElement(name = "TxIdDt", required = true)
 	public ISODateTime getTransactionIdentificationDate() {
 		return transactionIdentificationDate;
 	}
@@ -577,6 +588,7 @@ public class OptionTransactionDetailsSD1 {
 		this.transactionIdentificationDate = transactionIdentificationDate;
 	}
 
+	@XmlElement(name = "TxIdQty", required = true)
 	public FinancialInstrumentQuantity15Choice getTransactionIdentificationQuantity() {
 		return transactionIdentificationQuantity;
 	}
@@ -585,6 +597,7 @@ public class OptionTransactionDetailsSD1 {
 		this.transactionIdentificationQuantity = transactionIdentificationQuantity;
 	}
 
+	@XmlElement(name = "EntitldAmt")
 	public RestrictedFINActiveCurrencyAndAmount getEntitledAmount() {
 		return entitledAmount;
 	}
@@ -593,6 +606,7 @@ public class OptionTransactionDetailsSD1 {
 		this.entitledAmount = entitledAmount;
 	}
 
+	@XmlElement(name = "EntitldQty")
 	public FinancialInstrumentQuantity15Choice getEntitledQuantity() {
 		return entitledQuantity;
 	}
@@ -601,6 +615,7 @@ public class OptionTransactionDetailsSD1 {
 		this.entitledQuantity = entitledQuantity;
 	}
 
+	@XmlElement(name = "AgtNtrdQty")
 	public FinancialInstrumentQuantity15Choice getAgentEnteredQuantity() {
 		return agentEnteredQuantity;
 	}
@@ -609,6 +624,7 @@ public class OptionTransactionDetailsSD1 {
 		this.agentEnteredQuantity = agentEnteredQuantity;
 	}
 
+	@XmlElement(name = "AgtRmngQty")
 	public FinancialInstrumentQuantity15Choice getAgentRemainingQuantity() {
 		return agentRemainingQuantity;
 	}
@@ -617,6 +633,7 @@ public class OptionTransactionDetailsSD1 {
 		this.agentRemainingQuantity = agentRemainingQuantity;
 	}
 
+	@XmlElement(name = "CstmrRefId")
 	public Max15Text getCustomerReferenceIdentification() {
 		return customerReferenceIdentification;
 	}

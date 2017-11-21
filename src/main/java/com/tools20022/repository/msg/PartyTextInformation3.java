@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding the party, eg, the contact unit or
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyTextInformation3", propOrder = {"declarationDetails", "partyContactDetails", "registrationDetails"})
 public class PartyTextInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -238,6 +244,7 @@ public class PartyTextInformation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DclrtnDtls")
 	public RestrictedFINXMax350Text getDeclarationDetails() {
 		return declarationDetails;
 	}
@@ -246,6 +253,7 @@ public class PartyTextInformation3 {
 		this.declarationDetails = declarationDetails;
 	}
 
+	@XmlElement(name = "PtyCtctDtls")
 	public RestrictedFINXMax140Text getPartyContactDetails() {
 		return partyContactDetails;
 	}
@@ -254,6 +262,7 @@ public class PartyTextInformation3 {
 		this.partyContactDetails = partyContactDetails;
 	}
 
+	@XmlElement(name = "RegnDtls")
 	public RestrictedFINXMax350Text getRegistrationDetails() {
 		return registrationDetails;
 	}

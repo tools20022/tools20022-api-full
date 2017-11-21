@@ -37,6 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RepresentativeOfficer#mmOrganisation
+ * RepresentativeOfficer.mmOrganisation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
+ * AccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -44,17 +55,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Organisation#mmRepresentativeOfficer
  * Organisation.mmRepresentativeOfficer}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
- * AccountPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RepresentativeOfficer#mmOrganisation
- * RepresentativeOfficer.mmOrganisation}</li>
  * </ul>
  * </li>
  * <li>
@@ -114,7 +114,7 @@ public class RepresentativeOfficer extends AccountPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmOrganisation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RepresentativeOfficer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RepresentativeOfficer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Organisation";
@@ -136,7 +136,12 @@ public class RepresentativeOfficer extends AccountPartyRole {
 				definition = "Officer who has some rights to represent a given organisation. In account management, it is the person to be contacted by the account servicer.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Organisation.mmRepresentativeOfficer);
 				superType_lazy = () -> AccountPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(RepresentativeOfficer.mmOrganisation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RepresentativeOfficer.mmOrganisation);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RepresentativeOfficer.class;
 			}
 		});
 		return mmObject_lazy.get();

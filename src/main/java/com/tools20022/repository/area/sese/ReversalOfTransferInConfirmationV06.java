@@ -29,9 +29,11 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.References15;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -58,9 +60,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.008.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
@@ -100,6 +99,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.008.001.06}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -123,6 +125,8 @@ import java.util.List;
  * ReversalOfTransferInConfirmationV05}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReversalOfTransferInConfirmationV06", propOrder = {"messageIdentification", "references", "reversal", "marketPracticeVersion", "copyDetails"})
 public class ReversalOfTransferInConfirmationV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +182,14 @@ public class ReversalOfTransferInConfirmationV06 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ReversalOfTransferInConfirmationV06.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<References15> references;
 	/**
@@ -230,6 +242,14 @@ public class ReversalOfTransferInConfirmationV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> References15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ReversalOfTransferInConfirmationV06.class.getMethod("getReferences", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Reversal6Choice reversal;
 	/**
@@ -280,6 +300,14 @@ public class ReversalOfTransferInConfirmationV06 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Reversal6Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ReversalOfTransferInConfirmationV06.class.getMethod("getReversal", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MarketPracticeVersion1 marketPracticeVersion;
@@ -332,6 +360,14 @@ public class ReversalOfTransferInConfirmationV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ReversalOfTransferInConfirmationV06.class.getMethod("getMarketPracticeVersion", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CopyInformation2 copyDetails;
 	/**
@@ -383,6 +419,14 @@ public class ReversalOfTransferInConfirmationV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ReversalOfTransferInConfirmationV06.class.getMethod("getCopyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -397,8 +441,9 @@ public class ReversalOfTransferInConfirmationV06 {
 				rootElement = "Document";
 				xmlTag = "RvslOfTrfInConf";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ReversalOfTransferInConfirmationV06.mmMessageIdentification, ReversalOfTransferInConfirmationV06.mmReferences, ReversalOfTransferInConfirmationV06.mmReversal,
-						ReversalOfTransferInConfirmationV06.mmMarketPracticeVersion, ReversalOfTransferInConfirmationV06.mmCopyDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV06.mmMessageIdentification,
+						com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV06.mmReferences, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV06.mmReversal,
+						com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV06.mmMarketPracticeVersion, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV06.mmCopyDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -408,10 +453,16 @@ public class ReversalOfTransferInConfirmationV06 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ReversalOfTransferInConfirmationV06.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -420,6 +471,7 @@ public class ReversalOfTransferInConfirmationV06 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "Refs")
 	public List<References15> getReferences() {
 		return references;
 	}
@@ -428,6 +480,7 @@ public class ReversalOfTransferInConfirmationV06 {
 		this.references = references;
 	}
 
+	@XmlElement(name = "Rvsl", required = true)
 	public Reversal6Choice getReversal() {
 		return reversal;
 	}
@@ -436,6 +489,7 @@ public class ReversalOfTransferInConfirmationV06 {
 		this.reversal = reversal;
 	}
 
+	@XmlElement(name = "MktPrctcVrsn")
 	public MarketPracticeVersion1 getMarketPracticeVersion() {
 		return marketPracticeVersion;
 	}
@@ -444,11 +498,18 @@ public class ReversalOfTransferInConfirmationV06 {
 		this.marketPracticeVersion = marketPracticeVersion;
 	}
 
+	@XmlElement(name = "CpyDtls")
 	public CopyInformation2 getCopyDetails() {
 		return copyDetails;
 	}
 
 	public void setCopyDetails(CopyInformation2 copyDetails) {
 		this.copyDetails = copyDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.008.06.06")
+	static public class Document {
+		@XmlElement(name = "RvslOfTrfInConf", required = true)
+		public ReversalOfTransferInConfirmationV06 messageBody;
 	}
 }

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment instrument between a debtor and a creditor, which flows through one
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CreditTransfer7", propOrder = {"debtorAgent", "debtorAgentAccount", "creditorAgent", "creditorAgentAccount", "creditor", "creditorAccount"})
 public class CreditTransfer7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -394,6 +400,7 @@ public class CreditTransfer7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DbtrAgt")
 	public FinancialInstitutionIdentification6Choice getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -402,6 +409,7 @@ public class CreditTransfer7 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "DbtrAgtAcct")
 	public AccountIdentificationAndName4 getDebtorAgentAccount() {
 		return debtorAgentAccount;
 	}
@@ -410,6 +418,7 @@ public class CreditTransfer7 {
 		this.debtorAgentAccount = debtorAgentAccount;
 	}
 
+	@XmlElement(name = "CdtrAgt", required = true)
 	public FinancialInstitutionIdentification6Choice getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -418,6 +427,7 @@ public class CreditTransfer7 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "CdtrAgtAcct")
 	public AccountIdentificationAndName4 getCreditorAgentAccount() {
 		return creditorAgentAccount;
 	}
@@ -426,6 +436,7 @@ public class CreditTransfer7 {
 		this.creditorAgentAccount = creditorAgentAccount;
 	}
 
+	@XmlElement(name = "Cdtr", required = true)
 	public PartyIdentification26Choice getCreditor() {
 		return creditor;
 	}
@@ -434,6 +445,7 @@ public class CreditTransfer7 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAcct", required = true)
 	public AccountIdentificationAndName4 getCreditorAccount() {
 		return creditorAccount;
 	}

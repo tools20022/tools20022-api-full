@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information that locates and identifies a specific address, as defined by
@@ -108,6 +112,9 @@ import java.util.List;
  * PostalAddress3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PostalAddress21", propOrder = {"addressType", "mailingIndicator", "registrationAddressIndicator", "careOf", "addressLine", "streetName", "buildingNumber", "buildingName", "postBox", "sideInBuilding", "floor",
+		"suiteIdentification", "postCode", "districtName", "village", "townName", "state", "country"})
 public class PostalAddress21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1005,6 +1012,7 @@ public class PostalAddress21 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AdrTp")
 	public AddressType2Choice getAddressType() {
 		return addressType;
 	}
@@ -1013,6 +1021,7 @@ public class PostalAddress21 {
 		this.addressType = addressType;
 	}
 
+	@XmlElement(name = "MlngInd")
 	public YesNoIndicator getMailingIndicator() {
 		return mailingIndicator;
 	}
@@ -1021,6 +1030,7 @@ public class PostalAddress21 {
 		this.mailingIndicator = mailingIndicator;
 	}
 
+	@XmlElement(name = "RegnAdrInd")
 	public YesNoIndicator getRegistrationAddressIndicator() {
 		return registrationAddressIndicator;
 	}
@@ -1029,6 +1039,7 @@ public class PostalAddress21 {
 		this.registrationAddressIndicator = registrationAddressIndicator;
 	}
 
+	@XmlElement(name = "CareOf")
 	public Max70Text getCareOf() {
 		return careOf;
 	}
@@ -1037,6 +1048,7 @@ public class PostalAddress21 {
 		this.careOf = careOf;
 	}
 
+	@XmlElement(name = "AdrLine")
 	public List<Max70Text> getAddressLine() {
 		return addressLine;
 	}
@@ -1045,6 +1057,7 @@ public class PostalAddress21 {
 		this.addressLine = addressLine;
 	}
 
+	@XmlElement(name = "StrtNm")
 	public Max70Text getStreetName() {
 		return streetName;
 	}
@@ -1053,6 +1066,7 @@ public class PostalAddress21 {
 		this.streetName = streetName;
 	}
 
+	@XmlElement(name = "BldgNb")
 	public Max16Text getBuildingNumber() {
 		return buildingNumber;
 	}
@@ -1061,6 +1075,7 @@ public class PostalAddress21 {
 		this.buildingNumber = buildingNumber;
 	}
 
+	@XmlElement(name = "BldgNm")
 	public Max35Text getBuildingName() {
 		return buildingName;
 	}
@@ -1069,6 +1084,7 @@ public class PostalAddress21 {
 		this.buildingName = buildingName;
 	}
 
+	@XmlElement(name = "PstBx")
 	public Max10Text getPostBox() {
 		return postBox;
 	}
@@ -1077,6 +1093,7 @@ public class PostalAddress21 {
 		this.postBox = postBox;
 	}
 
+	@XmlElement(name = "SdInBldg")
 	public Max35Text getSideInBuilding() {
 		return sideInBuilding;
 	}
@@ -1085,6 +1102,7 @@ public class PostalAddress21 {
 		this.sideInBuilding = sideInBuilding;
 	}
 
+	@XmlElement(name = "Flr")
 	public Max70Text getFloor() {
 		return floor;
 	}
@@ -1093,6 +1111,7 @@ public class PostalAddress21 {
 		this.floor = floor;
 	}
 
+	@XmlElement(name = "SuiteId")
 	public Max10Text getSuiteIdentification() {
 		return suiteIdentification;
 	}
@@ -1101,6 +1120,7 @@ public class PostalAddress21 {
 		this.suiteIdentification = suiteIdentification;
 	}
 
+	@XmlElement(name = "PstCd")
 	public Max16Text getPostCode() {
 		return postCode;
 	}
@@ -1109,6 +1129,7 @@ public class PostalAddress21 {
 		this.postCode = postCode;
 	}
 
+	@XmlElement(name = "DstrctNm")
 	public Max35Text getDistrictName() {
 		return districtName;
 	}
@@ -1117,6 +1138,7 @@ public class PostalAddress21 {
 		this.districtName = districtName;
 	}
 
+	@XmlElement(name = "Vllg")
 	public Max70Text getVillage() {
 		return village;
 	}
@@ -1125,6 +1147,7 @@ public class PostalAddress21 {
 		this.village = village;
 	}
 
+	@XmlElement(name = "TwnNm")
 	public Max35Text getTownName() {
 		return townName;
 	}
@@ -1133,6 +1156,7 @@ public class PostalAddress21 {
 		this.townName = townName;
 	}
 
+	@XmlElement(name = "Stat")
 	public Max70Text getState() {
 		return state;
 	}
@@ -1141,6 +1165,7 @@ public class PostalAddress21 {
 		this.state = state;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}

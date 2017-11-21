@@ -38,6 +38,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExecutingBrokerRole#mmExecutingTrader
+ * ExecutingBrokerRole.mmExecutingTrader}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Broker Broker}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -57,16 +67,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.ConfirmationParties2#mmExecutingBroker
  * ConfirmationParties2.mmExecutingBroker}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Broker Broker}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExecutingBrokerRole#mmExecutingTrader
- * ExecutingBrokerRole.mmExecutingTrader}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,7 +125,7 @@ public class ExecutingBrokerRole extends Broker {
 	 */
 	public static final MMBusinessAssociationEnd mmExecutingTrader = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ExecutingBrokerRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExecutingBrokerRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExecutingTrader";
@@ -148,7 +148,12 @@ public class ExecutingBrokerRole extends Broker {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExecutingTrader.mmExecutingBroker);
 				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties4.mmExecutingBroker, ConfirmationParties2.mmExecutingBroker);
 				superType_lazy = () -> Broker.mmObject();
-				element_lazy = () -> Arrays.asList(ExecutingBrokerRole.mmExecutingTrader);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExecutingBrokerRole.mmExecutingTrader);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ExecutingBrokerRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CutOffData1;
 import com.tools20022.repository.msg.NetObligation1;
 import com.tools20022.repository.msg.NettingCutOff1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,28 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Netting#mmAverageDealPrice
+ * Netting.mmAverageDealPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Netting#mmRelatedSecuritiesClearingProcess
+ * Netting.mmRelatedSecuritiesClearingProcess}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Netting#mmNetPositionAmount
+ * Netting.mmNetPositionAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Netting#mmAmountDirection
+ * Netting.mmAmountDirection}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Netting#mmNetQuantity
+ * Netting.mmNetQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Netting#mmPositionAmount
+ * Netting.mmPositionAmount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
+ * ObligationFulfilment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -69,28 +92,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CutOffData1#mmNettingCutOffDetails
  * CutOffData1.mmNettingCutOffDetails}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
- * ObligationFulfilment}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Netting#mmAverageDealPrice
- * Netting.mmAverageDealPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Netting#mmRelatedSecuritiesClearingProcess
- * Netting.mmRelatedSecuritiesClearingProcess}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Netting#mmNetPositionAmount
- * Netting.mmNetPositionAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Netting#mmAmountDirection
- * Netting.mmAmountDirection}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Netting#mmNetQuantity
- * Netting.mmNetQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Netting#mmPositionAmount
- * Netting.mmPositionAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -146,7 +147,7 @@ public class Netting extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmAverageDealPrice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Netting.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AverageDealPrice";
@@ -192,7 +193,7 @@ public class Netting extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSecuritiesClearingProcess = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Netting.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesClearingProcess";
@@ -232,7 +233,7 @@ public class Netting extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmNetPositionAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Netting.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetPositionAmount";
@@ -240,6 +241,14 @@ public class Netting extends ObligationFulfilment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Netting.class.getMethod("getNetPositionAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DebitCreditCode amountDirection;
@@ -253,10 +262,6 @@ public class Netting extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DebitCreditCode
 	 * DebitCreditCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Netting
-	 * Netting}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -265,6 +270,10 @@ public class Netting extends ObligationFulfilment {
 	 * NetObligation1.mmObligationDirection}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Netting
+	 * Netting}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -279,7 +288,7 @@ public class Netting extends ObligationFulfilment {
 	public static final MMBusinessAttribute mmAmountDirection = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetObligation1.mmObligationDirection);
-			elementContext_lazy = () -> Netting.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmountDirection";
@@ -287,6 +296,14 @@ public class Netting extends ObligationFulfilment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Netting.class.getMethod("getAmountDirection", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesQuantity netQuantity;
@@ -324,7 +341,7 @@ public class Netting extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmNetQuantity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Netting.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetQuantity";
@@ -364,7 +381,7 @@ public class Netting extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmPositionAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Netting.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PositionAmount";
@@ -372,6 +389,14 @@ public class Netting extends ObligationFulfilment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Netting.class.getMethod("getPositionAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -385,8 +410,15 @@ public class Netting extends ObligationFulfilment {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesQuantity.mmNetting, com.tools20022.repository.entity.Price.mmNetting, com.tools20022.repository.entity.SecuritiesClearing.mmNetting);
 				derivationElement_lazy = () -> Arrays.asList(CutOffData1.mmNettingCutOffDetails);
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(Netting.mmAverageDealPrice, Netting.mmRelatedSecuritiesClearingProcess, Netting.mmNetPositionAmount, Netting.mmAmountDirection, Netting.mmNetQuantity, Netting.mmPositionAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Netting.mmAverageDealPrice, com.tools20022.repository.entity.Netting.mmRelatedSecuritiesClearingProcess,
+						com.tools20022.repository.entity.Netting.mmNetPositionAmount, com.tools20022.repository.entity.Netting.mmAmountDirection, com.tools20022.repository.entity.Netting.mmNetQuantity,
+						com.tools20022.repository.entity.Netting.mmPositionAmount);
 				derivationComponent_lazy = () -> Arrays.asList(NettingCutOff1.mmObject(), CutOffData1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Netting.class;
 			}
 		});
 		return mmObject_lazy.get();

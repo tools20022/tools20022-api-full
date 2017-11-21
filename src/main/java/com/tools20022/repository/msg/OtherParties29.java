@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Other parties information.
@@ -114,6 +118,8 @@ import java.util.List;
  * definition} = "Other parties information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherParties29", propOrder = {"investor", "qualifiedForeignIntermediary", "stockExchange", "tradeRegulator", "tripartyAgent", "broker"})
 public class OtherParties29 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -435,6 +441,7 @@ public class OtherParties29 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Invstr")
 	public List<PartyIdentificationAndAccount135> getInvestor() {
 		return investor;
 	}
@@ -443,6 +450,7 @@ public class OtherParties29 {
 		this.investor = investor;
 	}
 
+	@XmlElement(name = "QlfdFrgnIntrmy")
 	public PartyIdentificationAndAccount136 getQualifiedForeignIntermediary() {
 		return qualifiedForeignIntermediary;
 	}
@@ -451,6 +459,7 @@ public class OtherParties29 {
 		this.qualifiedForeignIntermediary = qualifiedForeignIntermediary;
 	}
 
+	@XmlElement(name = "StockXchg")
 	public PartyIdentificationAndAccount137 getStockExchange() {
 		return stockExchange;
 	}
@@ -459,6 +468,7 @@ public class OtherParties29 {
 		this.stockExchange = stockExchange;
 	}
 
+	@XmlElement(name = "TradRgltr")
 	public PartyIdentificationAndAccount137 getTradeRegulator() {
 		return tradeRegulator;
 	}
@@ -467,6 +477,7 @@ public class OtherParties29 {
 		this.tradeRegulator = tradeRegulator;
 	}
 
+	@XmlElement(name = "TrptyAgt")
 	public PartyIdentificationAndAccount136 getTripartyAgent() {
 		return tripartyAgent;
 	}
@@ -475,6 +486,7 @@ public class OtherParties29 {
 		this.tripartyAgent = tripartyAgent;
 	}
 
+	@XmlElement(name = "Brkr")
 	public PartyIdentificationAndAccount136 getBroker() {
 		return broker;
 	}

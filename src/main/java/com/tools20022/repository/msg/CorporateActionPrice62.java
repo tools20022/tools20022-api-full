@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Issuance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies prices related to a corporate action option.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies prices related to a corporate action option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionPrice62", propOrder = {"indicativeOrMarketPrice", "issuePrice", "genericCashPriceReceivedPerProduct", "genericCashPricePaidPerProduct"})
 public class CorporateActionPrice62 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -285,6 +291,7 @@ public class CorporateActionPrice62 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IndctvOrMktPric")
 	public IndicativeOrMarketPrice9Choice getIndicativeOrMarketPrice() {
 		return indicativeOrMarketPrice;
 	}
@@ -293,6 +300,7 @@ public class CorporateActionPrice62 {
 		this.indicativeOrMarketPrice = indicativeOrMarketPrice;
 	}
 
+	@XmlElement(name = "IssePric")
 	public PriceFormat52Choice getIssuePrice() {
 		return issuePrice;
 	}
@@ -301,6 +309,7 @@ public class CorporateActionPrice62 {
 		this.issuePrice = issuePrice;
 	}
 
+	@XmlElement(name = "GncCshPricRcvdPerPdct")
 	public PriceFormat53Choice getGenericCashPriceReceivedPerProduct() {
 		return genericCashPriceReceivedPerProduct;
 	}
@@ -309,6 +318,7 @@ public class CorporateActionPrice62 {
 		this.genericCashPriceReceivedPerProduct = genericCashPriceReceivedPerProduct;
 	}
 
+	@XmlElement(name = "GncCshPricPdPerPdct")
 	public PriceFormat52Choice getGenericCashPricePaidPerProduct() {
 		return genericCashPricePaidPerProduct;
 	}

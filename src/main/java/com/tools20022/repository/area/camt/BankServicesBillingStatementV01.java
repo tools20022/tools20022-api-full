@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.ReportHeader3;
 import com.tools20022.repository.msg.StatementGroup1;
 import com.tools20022.repository.msgset.BankServicesBillingISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * Scope The BankServicesBillingStatement message is used to send from a
@@ -62,9 +64,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.086.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
@@ -95,6 +94,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.086.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -114,6 +116,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BankServicesBillingStatementV01", propOrder = {"reportHeader", "billingStatementGroup"})
 public class BankServicesBillingStatementV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +162,14 @@ public class BankServicesBillingStatementV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ReportHeader3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BankServicesBillingStatementV01.class.getMethod("getReportHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<StatementGroup1> billingStatementGroup;
@@ -204,6 +216,14 @@ public class BankServicesBillingStatementV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> StatementGroup1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BankServicesBillingStatementV01.class.getMethod("getBillingStatementGroup", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -217,7 +237,8 @@ public class BankServicesBillingStatementV01 {
 				rootElement = "Document";
 				xmlTag = "BkSvcsBllgStmt";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(BankServicesBillingStatementV01.mmReportHeader, BankServicesBillingStatementV01.mmBillingStatementGroup);
+				messageBuildingBlock_lazy = () -> Arrays
+						.asList(com.tools20022.repository.area.camt.BankServicesBillingStatementV01.mmReportHeader, com.tools20022.repository.area.camt.BankServicesBillingStatementV01.mmBillingStatementGroup);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -227,10 +248,16 @@ public class BankServicesBillingStatementV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BankServicesBillingStatementV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptHdr", required = true)
 	public ReportHeader3 getReportHeader() {
 		return reportHeader;
 	}
@@ -239,11 +266,18 @@ public class BankServicesBillingStatementV01 {
 		this.reportHeader = reportHeader;
 	}
 
+	@XmlElement(name = "BllgStmtGrp", required = true)
 	public List<StatementGroup1> getBillingStatementGroup() {
 		return billingStatementGroup;
 	}
 
 	public void setBillingStatementGroup(List<StatementGroup1> billingStatementGroup) {
 		this.billingStatementGroup = billingStatementGroup;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.086.01.01")
+	static public class Document {
+		@XmlElement(name = "BkSvcsBllgStmt", required = true)
+		public BankServicesBillingStatementV01 messageBody;
 	}
 }

@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Execution of a subscription order.
@@ -157,6 +161,11 @@ import java.util.List;
  * definition} = "Execution of a subscription order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionExecution7", propOrder = {"masterReference", "orderReference", "clientReference", "dealReference", "requestedTradeDate", "hedgeFundOrderType", "investmentAccountDetails", "beneficiaryDetails",
+		"financialInstrumentDetails", "orderedAmount", "executedAmount", "unitsNumber", "dealingPriceDetails", "informativePriceDetails", "sidePocketDetails", "tradeDateTime", "NAVDate", "cashSettlementDate", "requestedSettlementCurrency",
+		"paymentReference", "letterIntentReference", "foreignExchangeDetails", "totalCharges", "taxGeneralDetails", "equalisation", "interimProfitAmount", "refund", "subscriptionInterest", "partiallyExecutedIndicator",
+		"partialSettlementOfUnits", "partialSettlementOfCash", "relatedPartyDetails"})
 public class SubscriptionExecution7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1756,6 +1765,7 @@ public class SubscriptionExecution7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -1764,6 +1774,7 @@ public class SubscriptionExecution7 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -1772,6 +1783,7 @@ public class SubscriptionExecution7 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -1780,6 +1792,7 @@ public class SubscriptionExecution7 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "DealRef", required = true)
 	public Max35Text getDealReference() {
 		return dealReference;
 	}
@@ -1788,6 +1801,7 @@ public class SubscriptionExecution7 {
 		this.dealReference = dealReference;
 	}
 
+	@XmlElement(name = "ReqdTradDt")
 	public ISODate getRequestedTradeDate() {
 		return requestedTradeDate;
 	}
@@ -1796,6 +1810,7 @@ public class SubscriptionExecution7 {
 		this.requestedTradeDate = requestedTradeDate;
 	}
 
+	@XmlElement(name = "HdgFndOrdrTp")
 	public List<HedgeFundOrderType1Code> getHedgeFundOrderType() {
 		return hedgeFundOrderType;
 	}
@@ -1804,6 +1819,7 @@ public class SubscriptionExecution7 {
 		this.hedgeFundOrderType = hedgeFundOrderType;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount30 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -1812,6 +1828,7 @@ public class SubscriptionExecution7 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "BnfcryDtls")
 	public BeneficiaryInformation2 getBeneficiaryDetails() {
 		return beneficiaryDetails;
 	}
@@ -1820,6 +1837,7 @@ public class SubscriptionExecution7 {
 		this.beneficiaryDetails = beneficiaryDetails;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument18 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -1828,6 +1846,7 @@ public class SubscriptionExecution7 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "OrdrdAmt")
 	public ActiveCurrencyAndAmount getOrderedAmount() {
 		return orderedAmount;
 	}
@@ -1836,6 +1855,7 @@ public class SubscriptionExecution7 {
 		this.orderedAmount = orderedAmount;
 	}
 
+	@XmlElement(name = "ExctdAmt", required = true)
 	public ActiveCurrencyAndAmount getExecutedAmount() {
 		return executedAmount;
 	}
@@ -1844,6 +1864,7 @@ public class SubscriptionExecution7 {
 		this.executedAmount = executedAmount;
 	}
 
+	@XmlElement(name = "UnitsNb")
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -1852,6 +1873,7 @@ public class SubscriptionExecution7 {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "DealgPricDtls")
 	public UnitPrice16 getDealingPriceDetails() {
 		return dealingPriceDetails;
 	}
@@ -1860,6 +1882,7 @@ public class SubscriptionExecution7 {
 		this.dealingPriceDetails = dealingPriceDetails;
 	}
 
+	@XmlElement(name = "InftvPricDtls")
 	public List<UnitPrice16> getInformativePriceDetails() {
 		return informativePriceDetails;
 	}
@@ -1868,6 +1891,7 @@ public class SubscriptionExecution7 {
 		this.informativePriceDetails = informativePriceDetails;
 	}
 
+	@XmlElement(name = "SdPcktDtls")
 	public SidePocketInformation2 getSidePocketDetails() {
 		return sidePocketDetails;
 	}
@@ -1876,6 +1900,7 @@ public class SubscriptionExecution7 {
 		this.sidePocketDetails = sidePocketDetails;
 	}
 
+	@XmlElement(name = "TradDtTm", required = true)
 	public DateAndDateTimeChoice getTradeDateTime() {
 		return tradeDateTime;
 	}
@@ -1884,6 +1909,7 @@ public class SubscriptionExecution7 {
 		this.tradeDateTime = tradeDateTime;
 	}
 
+	@XmlElement(name = "NAVDt", required = true)
 	public ISODate getNAVDate() {
 		return nAVDate;
 	}
@@ -1892,6 +1918,7 @@ public class SubscriptionExecution7 {
 		this.nAVDate = nAVDate;
 	}
 
+	@XmlElement(name = "CshSttlmDt")
 	public ISODate getCashSettlementDate() {
 		return cashSettlementDate;
 	}
@@ -1900,6 +1927,7 @@ public class SubscriptionExecution7 {
 		this.cashSettlementDate = cashSettlementDate;
 	}
 
+	@XmlElement(name = "ReqdSttlmCcy")
 	public ActiveCurrencyCode getRequestedSettlementCurrency() {
 		return requestedSettlementCurrency;
 	}
@@ -1908,6 +1936,7 @@ public class SubscriptionExecution7 {
 		this.requestedSettlementCurrency = requestedSettlementCurrency;
 	}
 
+	@XmlElement(name = "PmtRef")
 	public Max35Text getPaymentReference() {
 		return paymentReference;
 	}
@@ -1916,6 +1945,7 @@ public class SubscriptionExecution7 {
 		this.paymentReference = paymentReference;
 	}
 
+	@XmlElement(name = "LttrInttRef")
 	public Max35Text getLetterIntentReference() {
 		return letterIntentReference;
 	}
@@ -1924,6 +1954,7 @@ public class SubscriptionExecution7 {
 		this.letterIntentReference = letterIntentReference;
 	}
 
+	@XmlElement(name = "FrgnXchgDtls")
 	public List<ForeignExchangeTerms7> getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -1932,6 +1963,7 @@ public class SubscriptionExecution7 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "TtlChrgs")
 	public TotalCharges4 getTotalCharges() {
 		return totalCharges;
 	}
@@ -1940,6 +1972,7 @@ public class SubscriptionExecution7 {
 		this.totalCharges = totalCharges;
 	}
 
+	@XmlElement(name = "TaxGnlDtls")
 	public TotalTaxes4 getTaxGeneralDetails() {
 		return taxGeneralDetails;
 	}
@@ -1948,6 +1981,7 @@ public class SubscriptionExecution7 {
 		this.taxGeneralDetails = taxGeneralDetails;
 	}
 
+	@XmlElement(name = "Equlstn")
 	public Equalisation2 getEqualisation() {
 		return equalisation;
 	}
@@ -1956,6 +1990,7 @@ public class SubscriptionExecution7 {
 		this.equalisation = equalisation;
 	}
 
+	@XmlElement(name = "IntrmPrftAmt")
 	public ProfitAndLoss1Choice getInterimProfitAmount() {
 		return interimProfitAmount;
 	}
@@ -1964,6 +1999,7 @@ public class SubscriptionExecution7 {
 		this.interimProfitAmount = interimProfitAmount;
 	}
 
+	@XmlElement(name = "Rfnd")
 	public ActiveCurrencyAndAmount getRefund() {
 		return refund;
 	}
@@ -1972,6 +2008,7 @@ public class SubscriptionExecution7 {
 		this.refund = refund;
 	}
 
+	@XmlElement(name = "SbcptIntrst")
 	public ActiveCurrencyAndAmount getSubscriptionInterest() {
 		return subscriptionInterest;
 	}
@@ -1980,6 +2017,7 @@ public class SubscriptionExecution7 {
 		this.subscriptionInterest = subscriptionInterest;
 	}
 
+	@XmlElement(name = "PrtlyExctdInd")
 	public YesNoIndicator getPartiallyExecutedIndicator() {
 		return partiallyExecutedIndicator;
 	}
@@ -1988,6 +2026,7 @@ public class SubscriptionExecution7 {
 		this.partiallyExecutedIndicator = partiallyExecutedIndicator;
 	}
 
+	@XmlElement(name = "PrtlSttlmOfUnits")
 	public PercentageRate getPartialSettlementOfUnits() {
 		return partialSettlementOfUnits;
 	}
@@ -1996,6 +2035,7 @@ public class SubscriptionExecution7 {
 		this.partialSettlementOfUnits = partialSettlementOfUnits;
 	}
 
+	@XmlElement(name = "PrtlSttlmOfCsh")
 	public PercentageRate getPartialSettlementOfCash() {
 		return partialSettlementOfCash;
 	}
@@ -2004,6 +2044,7 @@ public class SubscriptionExecution7 {
 		this.partialSettlementOfCash = partialSettlementOfCash;
 	}
 
+	@XmlElement(name = "RltdPtyDtls")
 	public List<Intermediary16> getRelatedPartyDetails() {
 		return relatedPartyDetails;
 	}

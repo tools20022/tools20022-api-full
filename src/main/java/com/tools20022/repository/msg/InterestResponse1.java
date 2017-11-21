@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the reponse to the interest payment request.
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides details about the reponse to the interest payment request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestResponse1", propOrder = {"responseType", "rejectionReason", "rejectionReasonInformation", "interestPaymentRequestIdentification"})
 public class InterestResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -293,6 +299,7 @@ public class InterestResponse1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RspnTp", required = true)
 	public Status4Code getResponseType() {
 		return responseType;
 	}
@@ -301,6 +308,7 @@ public class InterestResponse1 {
 		this.responseType = responseType;
 	}
 
+	@XmlElement(name = "RjctnRsn")
 	public RejectionReason21FormatChoice getRejectionReason() {
 		return rejectionReason;
 	}
@@ -309,6 +317,7 @@ public class InterestResponse1 {
 		this.rejectionReason = rejectionReason;
 	}
 
+	@XmlElement(name = "RjctnRsnInf")
 	public Max140Text getRejectionReasonInformation() {
 		return rejectionReasonInformation;
 	}
@@ -317,6 +326,7 @@ public class InterestResponse1 {
 		this.rejectionReasonInformation = rejectionReasonInformation;
 	}
 
+	@XmlElement(name = "IntrstPmtReqId", required = true)
 	public Max35Text getInterestPaymentRequestIdentification() {
 		return interestPaymentRequestIdentification;
 	}

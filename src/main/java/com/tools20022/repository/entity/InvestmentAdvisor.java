@@ -63,6 +63,11 @@ public class InvestmentAdvisor extends AssetPartyRole {
 				definition = "The party that provides investment guidance at a fee.";
 				superType_lazy = () -> AssetPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvestmentAdvisor.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

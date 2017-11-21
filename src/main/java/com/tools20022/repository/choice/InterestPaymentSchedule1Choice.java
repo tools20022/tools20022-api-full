@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.InterestPaymentDateRange2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between expected/due interest payment date and a interest payment
@@ -62,6 +66,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestPaymentSchedule1Choice", propOrder = {"dateRange", "subSchedule"})
 public class InterestPaymentSchedule1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +173,7 @@ public class InterestPaymentSchedule1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtRg", required = true)
 	public InterestPaymentDateRange1 getDateRange() {
 		return dateRange;
 	}
@@ -175,6 +182,7 @@ public class InterestPaymentSchedule1Choice {
 		this.dateRange = dateRange;
 	}
 
+	@XmlElement(name = "SubSchdl", required = true)
 	public List<InterestPaymentDateRange2> getSubSchedule() {
 		return subSchedule;
 	}

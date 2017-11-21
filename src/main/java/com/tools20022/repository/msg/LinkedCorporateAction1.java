@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies linkage information of a corporate action message.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies linkage information of a corporate action message."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LinkedCorporateAction1", propOrder = {"notificationType", "linkedAgentCANotificationAdviceIdentification", "linkageType", "linkedIssuerCorporateActionIdentification", "linkedCorporateActionProcessingIdentification"})
 public class LinkedCorporateAction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -310,6 +316,7 @@ public class LinkedCorporateAction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NtfctnTp", required = true)
 	public CorporateActionNotificationType1Code getNotificationType() {
 		return notificationType;
 	}
@@ -318,6 +325,7 @@ public class LinkedCorporateAction1 {
 		this.notificationType = notificationType;
 	}
 
+	@XmlElement(name = "LkdAgtCANtfctnAdvcId")
 	public DocumentIdentification8 getLinkedAgentCANotificationAdviceIdentification() {
 		return linkedAgentCANotificationAdviceIdentification;
 	}
@@ -326,6 +334,7 @@ public class LinkedCorporateAction1 {
 		this.linkedAgentCANotificationAdviceIdentification = linkedAgentCANotificationAdviceIdentification;
 	}
 
+	@XmlElement(name = "LkgTp")
 	public ProcessingPosition2FormatChoice getLinkageType() {
 		return linkageType;
 	}
@@ -334,6 +343,7 @@ public class LinkedCorporateAction1 {
 		this.linkageType = linkageType;
 	}
 
+	@XmlElement(name = "LkdIssrCorpActnId")
 	public Max35Text getLinkedIssuerCorporateActionIdentification() {
 		return linkedIssuerCorporateActionIdentification;
 	}
@@ -342,6 +352,7 @@ public class LinkedCorporateAction1 {
 		this.linkedIssuerCorporateActionIdentification = linkedIssuerCorporateActionIdentification;
 	}
 
+	@XmlElement(name = "LkdCorpActnPrcgId")
 	public Max35Text getLinkedCorporateActionProcessingIdentification() {
 		return linkedCorporateActionProcessingIdentification;
 	}

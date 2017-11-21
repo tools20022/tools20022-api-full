@@ -30,6 +30,10 @@ import com.tools20022.repository.codeset.ContentType1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General cryptographic message syntax (CMS) containing protected data.
@@ -104,6 +108,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContentInformationType1", propOrder = {"contentType", "envelopedData", "authenticatedData", "signedData", "digestedData", "namedKeyEncryptedData"})
 public class ContentInformationType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -375,6 +381,7 @@ public class ContentInformationType1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CnttTp", required = true)
 	public ContentType1Code getContentType() {
 		return contentType;
 	}
@@ -383,6 +390,7 @@ public class ContentInformationType1 {
 		this.contentType = contentType;
 	}
 
+	@XmlElement(name = "EnvlpdData")
 	public EnvelopedData1 getEnvelopedData() {
 		return envelopedData;
 	}
@@ -391,6 +399,7 @@ public class ContentInformationType1 {
 		this.envelopedData = envelopedData;
 	}
 
+	@XmlElement(name = "AuthntcdData")
 	public AuthenticatedData1 getAuthenticatedData() {
 		return authenticatedData;
 	}
@@ -399,6 +408,7 @@ public class ContentInformationType1 {
 		this.authenticatedData = authenticatedData;
 	}
 
+	@XmlElement(name = "SgndData")
 	public SignedData1 getSignedData() {
 		return signedData;
 	}
@@ -407,6 +417,7 @@ public class ContentInformationType1 {
 		this.signedData = signedData;
 	}
 
+	@XmlElement(name = "DgstdData")
 	public DigestedData1 getDigestedData() {
 		return digestedData;
 	}
@@ -415,6 +426,7 @@ public class ContentInformationType1 {
 		this.digestedData = digestedData;
 	}
 
+	@XmlElement(name = "NmdKeyNcrptdData")
 	public NamedKeyEncryptedData1 getNamedKeyEncryptedData() {
 		return namedKeyEncryptedData;
 	}

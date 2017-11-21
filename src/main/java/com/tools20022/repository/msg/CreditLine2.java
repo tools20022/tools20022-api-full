@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide details of the credit line.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Set of elements used to provide details of the credit line."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CreditLine2", propOrder = {"included", "amount"})
 public class CreditLine2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -169,6 +175,7 @@ public class CreditLine2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Incl", required = true)
 	public TrueFalseIndicator getIncluded() {
 		return included;
 	}
@@ -177,6 +184,7 @@ public class CreditLine2 {
 		this.included = included;
 	}
 
+	@XmlElement(name = "Amt")
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}

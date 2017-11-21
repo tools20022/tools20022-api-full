@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transaction and document identification details.
@@ -70,6 +74,8 @@ import java.util.function.Supplier;
  * definition} = "Transaction and document identification details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionAndDocumentIdentification2", propOrder = {"transactionIdentification", "documentIdentification", "creationDateTime", "copyDuplicate"})
 public class TransactionAndDocumentIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -275,6 +281,7 @@ public class TransactionAndDocumentIdentification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public RestrictedFINXMax16Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -283,6 +290,7 @@ public class TransactionAndDocumentIdentification2 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "DocId")
 	public RestrictedFINXMax16Text getDocumentIdentification() {
 		return documentIdentification;
 	}
@@ -291,6 +299,7 @@ public class TransactionAndDocumentIdentification2 {
 		this.documentIdentification = documentIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm")
 	public DateAndDateTimeChoice getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -299,6 +308,7 @@ public class TransactionAndDocumentIdentification2 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "CpyDplct")
 	public CopyDuplicate1Code getCopyDuplicate() {
 		return copyDuplicate;
 	}

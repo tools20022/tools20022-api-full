@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesEventsArchive;
 import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -45,9 +47,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.007.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
@@ -88,6 +87,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.007.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -107,6 +109,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingVoteExecutionConfirmationV02", propOrder = {"voteExecutionConfirmationIdentification", "relatedReference", "meetingReference", "reportingParty", "securityIdentification", "voteInstruction"})
 public class MeetingVoteExecutionConfirmationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -144,6 +148,14 @@ public class MeetingVoteExecutionConfirmationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingVoteExecutionConfirmationV02.class.getMethod("getVoteExecutionConfirmationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MessageIdentification relatedReference;
 	/**
@@ -178,6 +190,14 @@ public class MeetingVoteExecutionConfirmationV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingVoteExecutionConfirmationV02.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MeetingReference3 meetingReference;
@@ -214,6 +234,14 @@ public class MeetingVoteExecutionConfirmationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingVoteExecutionConfirmationV02.class.getMethod("getMeetingReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification9Choice reportingParty;
 	/**
@@ -248,6 +276,14 @@ public class MeetingVoteExecutionConfirmationV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingVoteExecutionConfirmationV02.class.getMethod("getReportingParty", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecurityIdentification3 securityIdentification;
@@ -285,6 +321,14 @@ public class MeetingVoteExecutionConfirmationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingVoteExecutionConfirmationV02.class.getMethod("getSecurityIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<DetailedInstructionStatus2> voteInstruction;
 	/**
@@ -319,6 +363,14 @@ public class MeetingVoteExecutionConfirmationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> DetailedInstructionStatus2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingVoteExecutionConfirmationV02.class.getMethod("getVoteInstruction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -332,9 +384,10 @@ public class MeetingVoteExecutionConfirmationV02 {
 				rootElement = "Document";
 				xmlTag = "MtgVoteExctnConf";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingVoteExecutionConfirmationV02.mmVoteExecutionConfirmationIdentification, MeetingVoteExecutionConfirmationV02.mmRelatedReference,
-						MeetingVoteExecutionConfirmationV02.mmMeetingReference, MeetingVoteExecutionConfirmationV02.mmReportingParty, MeetingVoteExecutionConfirmationV02.mmSecurityIdentification,
-						MeetingVoteExecutionConfirmationV02.mmVoteInstruction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02.mmVoteExecutionConfirmationIdentification,
+						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02.mmRelatedReference, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02.mmMeetingReference,
+						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02.mmReportingParty, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02.mmSecurityIdentification,
+						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02.mmVoteInstruction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -344,10 +397,16 @@ public class MeetingVoteExecutionConfirmationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingVoteExecutionConfirmationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "VoteExctnConfId", required = true)
 	public MessageIdentification1 getVoteExecutionConfirmationIdentification() {
 		return voteExecutionConfirmationIdentification;
 	}
@@ -356,6 +415,7 @@ public class MeetingVoteExecutionConfirmationV02 {
 		this.voteExecutionConfirmationIdentification = voteExecutionConfirmationIdentification;
 	}
 
+	@XmlElement(name = "RltdRef", required = true)
 	public MessageIdentification getRelatedReference() {
 		return relatedReference;
 	}
@@ -364,6 +424,7 @@ public class MeetingVoteExecutionConfirmationV02 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "MtgRef", required = true)
 	public MeetingReference3 getMeetingReference() {
 		return meetingReference;
 	}
@@ -372,6 +433,7 @@ public class MeetingVoteExecutionConfirmationV02 {
 		this.meetingReference = meetingReference;
 	}
 
+	@XmlElement(name = "RptgPty", required = true)
 	public PartyIdentification9Choice getReportingParty() {
 		return reportingParty;
 	}
@@ -380,6 +442,7 @@ public class MeetingVoteExecutionConfirmationV02 {
 		this.reportingParty = reportingParty;
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification3 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -388,11 +451,18 @@ public class MeetingVoteExecutionConfirmationV02 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "VoteInstr", required = true)
 	public List<DetailedInstructionStatus2> getVoteInstruction() {
 		return voteInstruction;
 	}
 
 	public void setVoteInstruction(List<DetailedInstructionStatus2> voteInstruction) {
 		this.voteInstruction = voteInstruction;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.007.02.02")
+	static public class Document {
+		@XmlElement(name = "MtgVoteExctnConf", required = true)
+		public MeetingVoteExecutionConfirmationV02 messageBody;
 	}
 }

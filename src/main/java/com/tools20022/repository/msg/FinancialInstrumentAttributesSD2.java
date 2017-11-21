@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding security that will be distributed
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentAttributesSD2", propOrder = {"declaredDisbursedSecurityIdentification", "declaredDisbursedSecurityDescription"})
 public class FinancialInstrumentAttributesSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -164,6 +170,7 @@ public class FinancialInstrumentAttributesSD2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DclrdDsbrsdSctyId")
 	public SecurityIdentification15 getDeclaredDisbursedSecurityIdentification() {
 		return declaredDisbursedSecurityIdentification;
 	}
@@ -172,6 +179,7 @@ public class FinancialInstrumentAttributesSD2 {
 		this.declaredDisbursedSecurityIdentification = declaredDisbursedSecurityIdentification;
 	}
 
+	@XmlElement(name = "DclrdDsbrsdSctyDesc")
 	public Max140Text getDeclaredDisbursedSecurityDescription() {
 		return declaredDisbursedSecurityDescription;
 	}

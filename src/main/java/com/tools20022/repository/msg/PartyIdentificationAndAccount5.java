@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party involved in the settlement chain.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount5", propOrder = {"partyIdentification", "accountIdentification", "processingReference", "processingDate"})
 public class PartyIdentificationAndAccount5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -320,6 +326,7 @@ public class PartyIdentificationAndAccount5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification2Choice getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -328,6 +335,7 @@ public class PartyIdentificationAndAccount5 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "AcctId")
 	public AccountIdentification1 getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -336,6 +344,7 @@ public class PartyIdentificationAndAccount5 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "PrcgRef")
 	public Max35Text getProcessingReference() {
 		return processingReference;
 	}
@@ -344,6 +353,7 @@ public class PartyIdentificationAndAccount5 {
 		this.processingReference = processingReference;
 	}
 
+	@XmlElement(name = "PrcgDt")
 	public DateAndDateTimeChoice getProcessingDate() {
 		return processingDate;
 	}

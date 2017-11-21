@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.PersonName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data related to the cardholder.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Cardholder8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Cardholder11", propOrder = {"identification", "name", "language", "billingAddress", "shippingAddress", "tripNumber", "vehicle", "personalData"})
 public class Cardholder11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -454,6 +460,7 @@ public class Cardholder11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public PersonIdentification11 getIdentification() {
 		return identification;
 	}
@@ -462,6 +469,7 @@ public class Cardholder11 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max45Text getName() {
 		return name;
 	}
@@ -470,6 +478,7 @@ public class Cardholder11 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Lang")
 	public LanguageCode getLanguage() {
 		return language;
 	}
@@ -478,6 +487,7 @@ public class Cardholder11 {
 		this.language = language;
 	}
 
+	@XmlElement(name = "BllgAdr")
 	public PostalAddress18 getBillingAddress() {
 		return billingAddress;
 	}
@@ -486,6 +496,7 @@ public class Cardholder11 {
 		this.billingAddress = billingAddress;
 	}
 
+	@XmlElement(name = "ShppgAdr")
 	public PostalAddress18 getShippingAddress() {
 		return shippingAddress;
 	}
@@ -494,6 +505,7 @@ public class Cardholder11 {
 		this.shippingAddress = shippingAddress;
 	}
 
+	@XmlElement(name = "TripNb")
 	public Max35Text getTripNumber() {
 		return tripNumber;
 	}
@@ -502,6 +514,7 @@ public class Cardholder11 {
 		this.tripNumber = tripNumber;
 	}
 
+	@XmlElement(name = "Vhcl")
 	public Vehicle1 getVehicle() {
 		return vehicle;
 	}
@@ -510,6 +523,7 @@ public class Cardholder11 {
 		this.vehicle = vehicle;
 	}
 
+	@XmlElement(name = "PrsnlData")
 	public Max70Text getPersonalData() {
 		return personalData;
 	}

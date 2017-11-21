@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesTradePreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -90,9 +92,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.013.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
@@ -137,6 +136,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.013.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -159,6 +161,8 @@ import java.util.List;
  * SwitchOrderV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwitchOrderV03", propOrder = {"messageIdentification", "poolReference", "previousReference", "messagePagination", "switchOrderDetails", "copyDetails", "extension"})
 public class SwitchOrderV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -208,6 +212,14 @@ public class SwitchOrderV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderV03.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -252,6 +264,14 @@ public class SwitchOrderV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderV03.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference3> previousReference;
 	/**
@@ -294,6 +314,14 @@ public class SwitchOrderV03 {
 			nextVersions_lazy = () -> Arrays.asList(SwitchOrderV04.mmPreviousReference);
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderV03.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Pagination messagePagination;
@@ -338,6 +366,14 @@ public class SwitchOrderV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderV03.class.getMethod("getMessagePagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SwitchOrder4> switchOrderDetails;
 	/**
@@ -379,6 +415,14 @@ public class SwitchOrderV03 {
 			nextVersions_lazy = () -> Arrays.asList(SwitchOrderV04.mmSwitchOrderDetails);
 			minOccurs = 1;
 			complexType_lazy = () -> SwitchOrder4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderV03.class.getMethod("getSwitchOrderDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CopyInformation2 copyDetails;
@@ -425,6 +469,14 @@ public class SwitchOrderV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderV03.class.getMethod("getCopyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension1> extension;
 	/**
@@ -470,6 +522,14 @@ public class SwitchOrderV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderV03.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -484,8 +544,9 @@ public class SwitchOrderV03 {
 				rootElement = "Document";
 				xmlTag = "SwtchOrdrV03";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SwitchOrderV03.mmMessageIdentification, SwitchOrderV03.mmPoolReference, SwitchOrderV03.mmPreviousReference, SwitchOrderV03.mmMessagePagination,
-						SwitchOrderV03.mmSwitchOrderDetails, SwitchOrderV03.mmCopyDetails, SwitchOrderV03.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV03.mmMessageIdentification, com.tools20022.repository.area.setr.SwitchOrderV03.mmPoolReference,
+						com.tools20022.repository.area.setr.SwitchOrderV03.mmPreviousReference, com.tools20022.repository.area.setr.SwitchOrderV03.mmMessagePagination,
+						com.tools20022.repository.area.setr.SwitchOrderV03.mmSwitchOrderDetails, com.tools20022.repository.area.setr.SwitchOrderV03.mmCopyDetails, com.tools20022.repository.area.setr.SwitchOrderV03.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -495,10 +556,16 @@ public class SwitchOrderV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SwitchOrderV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -507,6 +574,7 @@ public class SwitchOrderV03 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -515,6 +583,7 @@ public class SwitchOrderV03 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference3> getPreviousReference() {
 		return previousReference;
 	}
@@ -523,6 +592,7 @@ public class SwitchOrderV03 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "MsgPgntn")
 	public Pagination getMessagePagination() {
 		return messagePagination;
 	}
@@ -531,6 +601,7 @@ public class SwitchOrderV03 {
 		this.messagePagination = messagePagination;
 	}
 
+	@XmlElement(name = "SwtchOrdrDtls", required = true)
 	public List<SwitchOrder4> getSwitchOrderDetails() {
 		return switchOrderDetails;
 	}
@@ -539,6 +610,7 @@ public class SwitchOrderV03 {
 		this.switchOrderDetails = switchOrderDetails;
 	}
 
+	@XmlElement(name = "CpyDtls")
 	public CopyInformation2 getCopyDetails() {
 		return copyDetails;
 	}
@@ -547,11 +619,18 @@ public class SwitchOrderV03 {
 		this.copyDetails = copyDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.013.03.03")
+	static public class Document {
+		@XmlElement(name = "SwtchOrdrV03", required = true)
+		public SwitchOrderV03 messageBody;
 	}
 }

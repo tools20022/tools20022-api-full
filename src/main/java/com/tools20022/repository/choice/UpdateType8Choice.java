@@ -25,6 +25,10 @@ import com.tools20022.repository.msg.SecurityAttributes2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between action to request on a security.
@@ -57,6 +61,8 @@ import java.util.List;
  * definition} = "Choice between action to request on a security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UpdateType8Choice", propOrder = {"updateType", "replace"})
 public class UpdateType8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -156,6 +162,7 @@ public class UpdateType8Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UpdTp", required = true)
 	public List<UpdateType7Choice> getUpdateType() {
 		return updateType;
 	}
@@ -164,6 +171,7 @@ public class UpdateType8Choice {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "Rplc", required = true)
 	public SecurityAttributes2 getReplace() {
 		return replace;
 	}

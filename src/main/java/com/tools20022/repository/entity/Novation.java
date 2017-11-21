@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.ForeignExchangeSwapTransaction3;
 import com.tools20022.repository.msg.OvernightIndexSwapTransaction4;
 import com.tools20022.repository.msg.SecuredMarketTransaction4;
 import com.tools20022.repository.msg.UnsecuredMarketTransaction4;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,19 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesClearing#mmNovation
- * SecuritiesClearing.mmNovation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
- * ObligationFulfilment}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -59,6 +47,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * Novation.mmSecuritiesClearing}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Novation#mmNovationStatus
  * Novation.mmNovationStatus}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
+ * ObligationFulfilment}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesClearing#mmNovation
+ * SecuritiesClearing.mmNovation}</li>
  * </ul>
  * </li>
  * <li>
@@ -116,7 +117,7 @@ public class Novation extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesClearing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Novation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Novation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesClearing";
@@ -139,10 +140,6 @@ public class Novation extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.NovationStatusCode
 	 * NovationStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Novation
-	 * Novation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -161,6 +158,10 @@ public class Novation extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Novation
+	 * Novation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -174,7 +175,7 @@ public class Novation extends ObligationFulfilment {
 	public static final MMBusinessAttribute mmNovationStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuredMarketTransaction4.mmNovationStatus, ForeignExchangeSwapTransaction3.mmNovationStatus, OvernightIndexSwapTransaction4.mmNovationStatus, UnsecuredMarketTransaction4.mmNovationStatus);
-			elementContext_lazy = () -> Novation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Novation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NovationStatus";
@@ -182,6 +183,14 @@ public class Novation extends ObligationFulfilment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NovationStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Novation.class.getMethod("getNovationStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -194,7 +203,12 @@ public class Novation extends ObligationFulfilment {
 				definition = "Act of either replacing an obligation to perform with a new obligation, or replacing a party to an agreement with a new party.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesClearing.mmNovation);
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(Novation.mmSecuritiesClearing, Novation.mmNovationStatus);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Novation.mmSecuritiesClearing, com.tools20022.repository.entity.Novation.mmNovationStatus);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Novation.class;
 			}
 		});
 		return mmObject_lazy.get();

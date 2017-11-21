@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the commercial details of the underlying transaction.
@@ -88,6 +92,9 @@ import java.util.List;
  * "Specifies the commercial details of the underlying transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Baseline2", propOrder = {"submitterBaselineIdentification", "serviceCode", "purchaseOrderReference", "buyer", "seller", "buyerBank", "sellerBank", "billTo", "shipTo", "consignee", "goods", "paymentTerms",
+		"settlementTerms", "dataSetRequired"})
 public class Baseline2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -746,6 +753,7 @@ public class Baseline2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SubmitrBaselnId", required = true)
 	public DocumentIdentification1 getSubmitterBaselineIdentification() {
 		return submitterBaselineIdentification;
 	}
@@ -754,6 +762,7 @@ public class Baseline2 {
 		this.submitterBaselineIdentification = submitterBaselineIdentification;
 	}
 
+	@XmlElement(name = "SvcCd", required = true)
 	public TradeFinanceService2Code getServiceCode() {
 		return serviceCode;
 	}
@@ -762,6 +771,7 @@ public class Baseline2 {
 		this.serviceCode = serviceCode;
 	}
 
+	@XmlElement(name = "PurchsOrdrRef", required = true)
 	public DocumentIdentification7 getPurchaseOrderReference() {
 		return purchaseOrderReference;
 	}
@@ -770,6 +780,7 @@ public class Baseline2 {
 		this.purchaseOrderReference = purchaseOrderReference;
 	}
 
+	@XmlElement(name = "Buyr", required = true)
 	public PartyIdentification9 getBuyer() {
 		return buyer;
 	}
@@ -778,6 +789,7 @@ public class Baseline2 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Sellr", required = true)
 	public PartyIdentification9 getSeller() {
 		return seller;
 	}
@@ -786,6 +798,7 @@ public class Baseline2 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "BuyrBk", required = true)
 	public BICIdentification1 getBuyerBank() {
 		return buyerBank;
 	}
@@ -794,6 +807,7 @@ public class Baseline2 {
 		this.buyerBank = buyerBank;
 	}
 
+	@XmlElement(name = "SellrBk", required = true)
 	public BICIdentification1 getSellerBank() {
 		return sellerBank;
 	}
@@ -802,6 +816,7 @@ public class Baseline2 {
 		this.sellerBank = sellerBank;
 	}
 
+	@XmlElement(name = "BllTo")
 	public PartyIdentification9 getBillTo() {
 		return billTo;
 	}
@@ -810,6 +825,7 @@ public class Baseline2 {
 		this.billTo = billTo;
 	}
 
+	@XmlElement(name = "ShipTo")
 	public PartyIdentification9 getShipTo() {
 		return shipTo;
 	}
@@ -818,6 +834,7 @@ public class Baseline2 {
 		this.shipTo = shipTo;
 	}
 
+	@XmlElement(name = "Consgn")
 	public PartyIdentification9 getConsignee() {
 		return consignee;
 	}
@@ -826,6 +843,7 @@ public class Baseline2 {
 		this.consignee = consignee;
 	}
 
+	@XmlElement(name = "Goods", required = true)
 	public LineItem5 getGoods() {
 		return goods;
 	}
@@ -834,6 +852,7 @@ public class Baseline2 {
 		this.goods = goods;
 	}
 
+	@XmlElement(name = "PmtTerms", required = true)
 	public List<PaymentTerms1> getPaymentTerms() {
 		return paymentTerms;
 	}
@@ -842,6 +861,7 @@ public class Baseline2 {
 		this.paymentTerms = paymentTerms;
 	}
 
+	@XmlElement(name = "SttlmTerms")
 	public SettlementTerms1 getSettlementTerms() {
 		return settlementTerms;
 	}
@@ -850,6 +870,7 @@ public class Baseline2 {
 		this.settlementTerms = settlementTerms;
 	}
 
+	@XmlElement(name = "DataSetReqrd")
 	public RequiredSubmission1 getDataSetRequired() {
 		return dataSetRequired;
 	}

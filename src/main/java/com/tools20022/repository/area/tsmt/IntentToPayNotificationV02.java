@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.IntentToPay2;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.SimpleIdentificationInformation;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -45,9 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.044.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -89,6 +88,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.044.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -104,6 +106,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * IntentToPayNotificationV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntentToPayNotificationV02", propOrder = {"notificationIdentification", "transactionIdentification", "submitterTransactionReference", "buyerBank", "sellerBank", "intentToPay"})
 public class IntentToPayNotificationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -146,6 +150,14 @@ public class IntentToPayNotificationV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntentToPayNotificationV02.class.getMethod("getNotificationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -192,6 +204,14 @@ public class IntentToPayNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntentToPayNotificationV02.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
@@ -233,6 +253,14 @@ public class IntentToPayNotificationV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntentToPayNotificationV02.class.getMethod("getSubmitterTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BICIdentification1 buyerBank;
@@ -277,6 +305,14 @@ public class IntentToPayNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntentToPayNotificationV02.class.getMethod("getBuyerBank", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected BICIdentification1 sellerBank;
 	/**
@@ -320,6 +356,14 @@ public class IntentToPayNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntentToPayNotificationV02.class.getMethod("getSellerBank", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected IntentToPay2 intentToPay;
 	/**
@@ -360,6 +404,14 @@ public class IntentToPayNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> IntentToPay2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntentToPayNotificationV02.class.getMethod("getIntentToPay", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -373,8 +425,10 @@ public class IntentToPayNotificationV02 {
 				rootElement = "Document";
 				xmlTag = "InttToPayNtfctn";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(IntentToPayNotificationV02.mmNotificationIdentification, IntentToPayNotificationV02.mmTransactionIdentification, IntentToPayNotificationV02.mmSubmitterTransactionReference,
-						IntentToPayNotificationV02.mmBuyerBank, IntentToPayNotificationV02.mmSellerBank, IntentToPayNotificationV02.mmIntentToPay);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmNotificationIdentification,
+						com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmTransactionIdentification, com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmSubmitterTransactionReference,
+						com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmBuyerBank, com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmSellerBank,
+						com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmIntentToPay);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -384,10 +438,16 @@ public class IntentToPayNotificationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IntentToPayNotificationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NtfctnId", required = true)
 	public MessageIdentification1 getNotificationIdentification() {
 		return notificationIdentification;
 	}
@@ -396,6 +456,7 @@ public class IntentToPayNotificationV02 {
 		this.notificationIdentification = notificationIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -404,6 +465,7 @@ public class IntentToPayNotificationV02 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "SubmitrTxRef")
 	public SimpleIdentificationInformation getSubmitterTransactionReference() {
 		return submitterTransactionReference;
 	}
@@ -412,6 +474,7 @@ public class IntentToPayNotificationV02 {
 		this.submitterTransactionReference = submitterTransactionReference;
 	}
 
+	@XmlElement(name = "BuyrBk", required = true)
 	public BICIdentification1 getBuyerBank() {
 		return buyerBank;
 	}
@@ -420,6 +483,7 @@ public class IntentToPayNotificationV02 {
 		this.buyerBank = buyerBank;
 	}
 
+	@XmlElement(name = "SellrBk", required = true)
 	public BICIdentification1 getSellerBank() {
 		return sellerBank;
 	}
@@ -428,11 +492,18 @@ public class IntentToPayNotificationV02 {
 		this.sellerBank = sellerBank;
 	}
 
+	@XmlElement(name = "InttToPay", required = true)
 	public IntentToPay2 getIntentToPay() {
 		return intentToPay;
 	}
 
 	public void setIntentToPay(IntentToPay2 intentToPay) {
 		this.intentToPay = intentToPay;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.044.02.02")
+	static public class Document {
+		@XmlElement(name = "InttToPayNtfctn", required = true)
+		public IntentToPayNotificationV02 messageBody;
 	}
 }

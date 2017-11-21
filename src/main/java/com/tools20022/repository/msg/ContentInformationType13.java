@@ -28,6 +28,10 @@ import com.tools20022.repository.codeset.ContentType2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General cryptographic message syntax (CMS) containing data. protected by a
@@ -107,6 +111,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ContentInformationType12}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContentInformationType13", propOrder = {"contentType", "authenticatedData", "signedData"})
 public class ContentInformationType13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -270,6 +276,7 @@ public class ContentInformationType13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CnttTp", required = true)
 	public ContentType2Code getContentType() {
 		return contentType;
 	}
@@ -278,6 +285,7 @@ public class ContentInformationType13 {
 		this.contentType = contentType;
 	}
 
+	@XmlElement(name = "AuthntcdData")
 	public AuthenticatedData4 getAuthenticatedData() {
 		return authenticatedData;
 	}
@@ -286,6 +294,7 @@ public class ContentInformationType13 {
 		this.authenticatedData = authenticatedData;
 	}
 
+	@XmlElement(name = "SgndData")
 	public SignedData4 getSignedData() {
 		return signedData;
 	}

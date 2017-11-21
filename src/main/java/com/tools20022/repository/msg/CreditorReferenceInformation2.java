@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference information provided by the creditor to allow the identification of
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CreditorReferenceInformation2", propOrder = {"type", "reference"})
 public class CreditorReferenceInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -184,6 +190,7 @@ public class CreditorReferenceInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public CreditorReferenceType2 getType() {
 		return type;
 	}
@@ -192,6 +199,7 @@ public class CreditorReferenceInformation2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Ref")
 	public Max35Text getReference() {
 		return reference;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics shared by all individual transactions included in the
@@ -101,6 +105,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GroupHeader3", propOrder = {"messageIdentification", "creationDateTime", "authorisation", "batchBooking", "numberOfTransactions", "controlSum", "totalInterbankSettlementAmount", "interbankSettlementDate",
+		"settlementInformation", "paymentTypeInformation", "instructingAgent", "instructedAgent"})
 public class GroupHeader3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -702,6 +709,7 @@ public class GroupHeader3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -710,6 +718,7 @@ public class GroupHeader3 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -718,6 +727,7 @@ public class GroupHeader3 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "Authstn")
 	public List<Max128Text> getAuthorisation() {
 		return authorisation;
 	}
@@ -726,6 +736,7 @@ public class GroupHeader3 {
 		this.authorisation = authorisation;
 	}
 
+	@XmlElement(name = "BtchBookg")
 	public BatchBookingIndicator getBatchBooking() {
 		return batchBooking;
 	}
@@ -734,6 +745,7 @@ public class GroupHeader3 {
 		this.batchBooking = batchBooking;
 	}
 
+	@XmlElement(name = "NbOfTxs", required = true)
 	public Max15NumericText getNumberOfTransactions() {
 		return numberOfTransactions;
 	}
@@ -742,6 +754,7 @@ public class GroupHeader3 {
 		this.numberOfTransactions = numberOfTransactions;
 	}
 
+	@XmlElement(name = "CtrlSum")
 	public DecimalNumber getControlSum() {
 		return controlSum;
 	}
@@ -750,6 +763,7 @@ public class GroupHeader3 {
 		this.controlSum = controlSum;
 	}
 
+	@XmlElement(name = "TtlIntrBkSttlmAmt")
 	public CurrencyAndAmount getTotalInterbankSettlementAmount() {
 		return totalInterbankSettlementAmount;
 	}
@@ -758,6 +772,7 @@ public class GroupHeader3 {
 		this.totalInterbankSettlementAmount = totalInterbankSettlementAmount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDt")
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}
@@ -766,6 +781,7 @@ public class GroupHeader3 {
 		this.interbankSettlementDate = interbankSettlementDate;
 	}
 
+	@XmlElement(name = "SttlmInf", required = true)
 	public SettlementInformation2 getSettlementInformation() {
 		return settlementInformation;
 	}
@@ -774,6 +790,7 @@ public class GroupHeader3 {
 		this.settlementInformation = settlementInformation;
 	}
 
+	@XmlElement(name = "PmtTpInf")
 	public PaymentTypeInformation4 getPaymentTypeInformation() {
 		return paymentTypeInformation;
 	}
@@ -782,6 +799,7 @@ public class GroupHeader3 {
 		this.paymentTypeInformation = paymentTypeInformation;
 	}
 
+	@XmlElement(name = "InstgAgt")
 	public BranchAndFinancialInstitutionIdentification3 getInstructingAgent() {
 		return instructingAgent;
 	}
@@ -790,6 +808,7 @@ public class GroupHeader3 {
 		this.instructingAgent = instructingAgent;
 	}
 
+	@XmlElement(name = "InstdAgt")
 	public BranchAndFinancialInstitutionIdentification3 getInstructedAgent() {
 		return instructedAgent;
 	}

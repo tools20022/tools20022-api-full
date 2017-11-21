@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.NotificationCancellationProcessingStatus1;
 import com.tools20022.repository.msg.NotificationCancellationRejectionReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between various statuses.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between various statuses."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NotificationCancellationRequestStatus1Choice", propOrder = {"processedStatus", "rejectedStatus"})
 public class NotificationCancellationRequestStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class NotificationCancellationRequestStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcdSts", required = true)
 	public NotificationCancellationProcessingStatus1 getProcessedStatus() {
 		return processedStatus;
 	}
@@ -181,6 +188,7 @@ public class NotificationCancellationRequestStatus1Choice {
 		this.processedStatus = processedStatus;
 	}
 
+	@XmlElement(name = "RjctdSts", required = true)
 	public NotificationCancellationRejectionReason1 getRejectedStatus() {
 		return rejectedStatus;
 	}

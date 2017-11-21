@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Product;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,15 +40,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Product Product}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.FinancialService
- * FinancialService}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -61,6 +53,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * Service.mmRate}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.FinancialService
+ * FinancialService}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Product Product}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -90,10 +91,6 @@ public class Service extends Product {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Service
-	 * Service}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -136,6 +133,10 @@ public class Service extends Product {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Service
+	 * Service}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -151,7 +152,7 @@ public class Service extends Product {
 			derivation_lazy = () -> Arrays.asList(BillingCompensation1.mmValue, BillingServicesAmount1.mmHostAmount, BillingServicesAmount2.mmHostAmount, BillingServicesAmount2.mmSettlementAmount,
 					BillingService1.mmOriginalChargeSettlementAmount, BillingServicesAmount3.mmSourceAmount, BillingServicesAmount3.mmHostAmount, TaxCalculation1.mmTotalTaxableServiceChargeHostAmount, BillingServiceAdjustment1.mmAmount,
 					BillingServiceAdjustment1.mmOriginalChargeAmount, BillingServiceAdjustment1.mmNewChargeAmount, BillingService2.mmOriginalChargeSettlementAmount);
-			elementContext_lazy = () -> Service.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Service.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -159,6 +160,14 @@ public class Service extends Product {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Service.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text type;
@@ -171,10 +180,6 @@ public class Service extends Product {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Service
-	 * Service}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -183,6 +188,10 @@ public class Service extends Product {
 	 * BillingServiceAdjustment1.mmType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Service
+	 * Service}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -197,7 +206,7 @@ public class Service extends Product {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingServiceAdjustment1.mmType);
-			elementContext_lazy = () -> Service.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Service.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -205,6 +214,14 @@ public class Service extends Product {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Service.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ServiceTaxDesignationCode taxDesignation;
@@ -235,7 +252,7 @@ public class Service extends Product {
 	 */
 	public static final MMBusinessAttribute mmTaxDesignation = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Service.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Service.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxDesignation";
@@ -243,6 +260,14 @@ public class Service extends Product {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ServiceTaxDesignationCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Service.class.getMethod("getTaxDesignation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate rate;
@@ -274,7 +299,7 @@ public class Service extends Product {
 	 */
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Service.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Service.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
@@ -282,6 +307,14 @@ public class Service extends Product {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Service.class.getMethod("getRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -294,7 +327,13 @@ public class Service extends Product {
 				definition = "Service is the intangible equivalent of a good.";
 				subType_lazy = () -> Arrays.asList(FinancialService.mmObject());
 				superType_lazy = () -> Product.mmObject();
-				element_lazy = () -> Arrays.asList(Service.mmAmount, Service.mmType, Service.mmTaxDesignation, Service.mmRate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Service.mmAmount, com.tools20022.repository.entity.Service.mmType, com.tools20022.repository.entity.Service.mmTaxDesignation,
+						com.tools20022.repository.entity.Service.mmRate);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Service.class;
 			}
 		});
 		return mmObject_lazy.get();

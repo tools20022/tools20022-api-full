@@ -29,15 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InterestType2Code
- * InterestType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InterestType3Code
- * InterestType3Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -62,6 +53,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * InterestTypeCode.mmFloatingRateNote}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.InterestTypeCode#mmFixed
  * InterestTypeCode.mmFixed}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.InterestType2Code
+ * InterestType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InterestType3Code
+ * InterestType3Code}</li>
  * </ul>
  * </li>
  * <li>

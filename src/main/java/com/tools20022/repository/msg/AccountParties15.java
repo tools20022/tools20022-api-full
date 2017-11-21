@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a party's account.
@@ -113,6 +117,9 @@ import java.util.List;
  * {@linkplain com.tools20022.repository.msg.AccountParties13 AccountParties13}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountParties15", propOrder = {"principalAccountParty", "secondaryOwner", "beneficiary", "powerOfAttorney", "legalGuardian", "custodianForMinor", "successorOnDeath", "administrator", "otherParty", "granter", "settlor",
+		"seniorManagingOfficial", "protector", "registeredShareholderName"})
 public class AccountParties15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -905,6 +912,7 @@ public class AccountParties15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrncplAcctPty", required = true)
 	public AccountParties10Choice getPrincipalAccountParty() {
 		return principalAccountParty;
 	}
@@ -913,6 +921,7 @@ public class AccountParties15 {
 		this.principalAccountParty = principalAccountParty;
 	}
 
+	@XmlElement(name = "ScndryOwnr")
 	public List<InvestmentAccountOwnershipInformation14> getSecondaryOwner() {
 		return secondaryOwner;
 	}
@@ -921,6 +930,7 @@ public class AccountParties15 {
 		this.secondaryOwner = secondaryOwner;
 	}
 
+	@XmlElement(name = "Bnfcry")
 	public List<InvestmentAccountOwnershipInformation14> getBeneficiary() {
 		return beneficiary;
 	}
@@ -929,6 +939,7 @@ public class AccountParties15 {
 		this.beneficiary = beneficiary;
 	}
 
+	@XmlElement(name = "PwrOfAttny")
 	public List<InvestmentAccountOwnershipInformation14> getPowerOfAttorney() {
 		return powerOfAttorney;
 	}
@@ -937,6 +948,7 @@ public class AccountParties15 {
 		this.powerOfAttorney = powerOfAttorney;
 	}
 
+	@XmlElement(name = "LglGuardn")
 	public List<InvestmentAccountOwnershipInformation14> getLegalGuardian() {
 		return legalGuardian;
 	}
@@ -945,6 +957,7 @@ public class AccountParties15 {
 		this.legalGuardian = legalGuardian;
 	}
 
+	@XmlElement(name = "CtdnForMnr")
 	public InvestmentAccountOwnershipInformation14 getCustodianForMinor() {
 		return custodianForMinor;
 	}
@@ -953,6 +966,7 @@ public class AccountParties15 {
 		this.custodianForMinor = custodianForMinor;
 	}
 
+	@XmlElement(name = "SucssrOnDth")
 	public List<InvestmentAccountOwnershipInformation14> getSuccessorOnDeath() {
 		return successorOnDeath;
 	}
@@ -961,6 +975,7 @@ public class AccountParties15 {
 		this.successorOnDeath = successorOnDeath;
 	}
 
+	@XmlElement(name = "Admstr")
 	public List<InvestmentAccountOwnershipInformation14> getAdministrator() {
 		return administrator;
 	}
@@ -969,6 +984,7 @@ public class AccountParties15 {
 		this.administrator = administrator;
 	}
 
+	@XmlElement(name = "OthrPty")
 	public List<ExtendedParty11> getOtherParty() {
 		return otherParty;
 	}
@@ -977,6 +993,7 @@ public class AccountParties15 {
 		this.otherParty = otherParty;
 	}
 
+	@XmlElement(name = "Grntr")
 	public List<InvestmentAccountOwnershipInformation14> getGranter() {
 		return granter;
 	}
@@ -985,6 +1002,7 @@ public class AccountParties15 {
 		this.granter = granter;
 	}
 
+	@XmlElement(name = "Sttlr")
 	public List<InvestmentAccountOwnershipInformation14> getSettlor() {
 		return settlor;
 	}
@@ -993,6 +1011,7 @@ public class AccountParties15 {
 		this.settlor = settlor;
 	}
 
+	@XmlElement(name = "SnrMggOffcl")
 	public List<InvestmentAccountOwnershipInformation14> getSeniorManagingOfficial() {
 		return seniorManagingOfficial;
 	}
@@ -1001,6 +1020,7 @@ public class AccountParties15 {
 		this.seniorManagingOfficial = seniorManagingOfficial;
 	}
 
+	@XmlElement(name = "Prtctr")
 	public List<InvestmentAccountOwnershipInformation14> getProtector() {
 		return protector;
 	}
@@ -1009,6 +1029,7 @@ public class AccountParties15 {
 		this.protector = protector;
 	}
 
+	@XmlElement(name = "RegdShrhldrNm")
 	public RegisteredShareholderName1Choice getRegisteredShareholderName() {
 		return registeredShareholderName;
 	}

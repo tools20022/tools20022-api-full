@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.DecimalNumberFraction5;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Detail the number and the volume, defined by currency amount, for use in a
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NumberAndVolume2", propOrder = {"number", "volume"})
 public class NumberAndVolume2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class NumberAndVolume2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nb", required = true)
 	public DecimalNumberFraction5 getNumber() {
 		return number;
 	}
@@ -171,6 +178,7 @@ public class NumberAndVolume2 {
 		this.number = number;
 	}
 
+	@XmlElement(name = "Vol", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getVolume() {
 		return volume;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the payment terms of the underlying transaction.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentTerms2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTerms4", propOrder = {"paymentTerms", "amountOrPercentage"})
 public class PaymentTerms4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class PaymentTerms4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtTerms", required = true)
 	public PaymentCodeOrOther1Choice getPaymentTerms() {
 		return paymentTerms;
 	}
@@ -204,6 +211,7 @@ public class PaymentTerms4 {
 		this.paymentTerms = paymentTerms;
 	}
 
+	@XmlElement(name = "AmtOrPctg", required = true)
 	public AmountOrPercentage2Choice getAmountOrPercentage() {
 		return amountOrPercentage;
 	}

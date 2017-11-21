@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of settlement of a transaction.
@@ -84,6 +88,8 @@ import java.util.List;
  * SettlementDetails4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementDetails100", propOrder = {"settlementTransactionCondition", "registration", "legalRestrictions", "securitiesRTGS", "settlementSystemMethod", "taxCapacity", "stampDutyTaxBasis"})
 public class SettlementDetails100 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -491,6 +497,7 @@ public class SettlementDetails100 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmTxCond")
 	public List<SettlementTransactionCondition19Choice> getSettlementTransactionCondition() {
 		return settlementTransactionCondition;
 	}
@@ -499,6 +506,7 @@ public class SettlementDetails100 {
 		this.settlementTransactionCondition = settlementTransactionCondition;
 	}
 
+	@XmlElement(name = "Regn")
 	public Registration9Choice getRegistration() {
 		return registration;
 	}
@@ -507,6 +515,7 @@ public class SettlementDetails100 {
 		this.registration = registration;
 	}
 
+	@XmlElement(name = "LglRstrctns")
 	public Restriction5Choice getLegalRestrictions() {
 		return legalRestrictions;
 	}
@@ -515,6 +524,7 @@ public class SettlementDetails100 {
 		this.legalRestrictions = legalRestrictions;
 	}
 
+	@XmlElement(name = "SctiesRTGS")
 	public SecuritiesRTGS4Choice getSecuritiesRTGS() {
 		return securitiesRTGS;
 	}
@@ -523,6 +533,7 @@ public class SettlementDetails100 {
 		this.securitiesRTGS = securitiesRTGS;
 	}
 
+	@XmlElement(name = "SttlmSysMtd")
 	public SettlementSystemMethod4Choice getSettlementSystemMethod() {
 		return settlementSystemMethod;
 	}
@@ -531,6 +542,7 @@ public class SettlementDetails100 {
 		this.settlementSystemMethod = settlementSystemMethod;
 	}
 
+	@XmlElement(name = "TaxCpcty")
 	public TaxCapacityParty4Choice getTaxCapacity() {
 		return taxCapacity;
 	}
@@ -539,6 +551,7 @@ public class SettlementDetails100 {
 		this.taxCapacity = taxCapacity;
 	}
 
+	@XmlElement(name = "StmpDtyTaxBsis")
 	public GenericIdentification30 getStampDutyTaxBasis() {
 		return stampDutyTaxBasis;
 	}

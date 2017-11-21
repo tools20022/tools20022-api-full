@@ -34,6 +34,10 @@ import com.tools20022.repository.entity.ReconciliationTransaction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Individual card transaction entry details.
@@ -104,6 +108,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardIndividualTransaction1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardIndividualTransaction2", propOrder = {"ICCRelatedData", "paymentContext", "additionalService", "transactionCategory", "saleReconciliationIdentification", "saleReferenceNumber", "rePresentmentReason", "sequenceNumber",
+		"transactionIdentification", "product", "validationDate", "validationSequenceNumber"})
 public class CardIndividualTransaction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -741,6 +748,7 @@ public class CardIndividualTransaction2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max1025Text getICCRelatedData() {
 		return iCCRelatedData;
 	}
@@ -749,6 +757,7 @@ public class CardIndividualTransaction2 {
 		this.iCCRelatedData = iCCRelatedData;
 	}
 
+	@XmlElement(name = "PmtCntxt")
 	public PaymentContext3 getPaymentContext() {
 		return paymentContext;
 	}
@@ -757,6 +766,7 @@ public class CardIndividualTransaction2 {
 		this.paymentContext = paymentContext;
 	}
 
+	@XmlElement(name = "AddtlSvc")
 	public CardPaymentServiceType2Code getAdditionalService() {
 		return additionalService;
 	}
@@ -765,6 +775,7 @@ public class CardIndividualTransaction2 {
 		this.additionalService = additionalService;
 	}
 
+	@XmlElement(name = "TxCtgy")
 	public ExternalCardTransactionCategory1Code getTransactionCategory() {
 		return transactionCategory;
 	}
@@ -773,6 +784,7 @@ public class CardIndividualTransaction2 {
 		this.transactionCategory = transactionCategory;
 	}
 
+	@XmlElement(name = "SaleRcncltnId")
 	public Max35Text getSaleReconciliationIdentification() {
 		return saleReconciliationIdentification;
 	}
@@ -781,6 +793,7 @@ public class CardIndividualTransaction2 {
 		this.saleReconciliationIdentification = saleReconciliationIdentification;
 	}
 
+	@XmlElement(name = "SaleRefNb")
 	public Max35Text getSaleReferenceNumber() {
 		return saleReferenceNumber;
 	}
@@ -789,6 +802,7 @@ public class CardIndividualTransaction2 {
 		this.saleReferenceNumber = saleReferenceNumber;
 	}
 
+	@XmlElement(name = "RePresntmntRsn")
 	public ExternalRePresentmentReason1Code getRePresentmentReason() {
 		return rePresentmentReason;
 	}
@@ -797,6 +811,7 @@ public class CardIndividualTransaction2 {
 		this.rePresentmentReason = rePresentmentReason;
 	}
 
+	@XmlElement(name = "SeqNb")
 	public Max35Text getSequenceNumber() {
 		return sequenceNumber;
 	}
@@ -805,6 +820,7 @@ public class CardIndividualTransaction2 {
 		this.sequenceNumber = sequenceNumber;
 	}
 
+	@XmlElement(name = "TxId")
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -813,6 +829,7 @@ public class CardIndividualTransaction2 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "Pdct")
 	public Product2 getProduct() {
 		return product;
 	}
@@ -821,6 +838,7 @@ public class CardIndividualTransaction2 {
 		this.product = product;
 	}
 
+	@XmlElement(name = "VldtnDt")
 	public ISODate getValidationDate() {
 		return validationDate;
 	}
@@ -829,6 +847,7 @@ public class CardIndividualTransaction2 {
 		this.validationDate = validationDate;
 	}
 
+	@XmlElement(name = "VldtnSeqNb")
 	public Max35Text getValidationSequenceNumber() {
 		return validationSequenceNumber;
 	}

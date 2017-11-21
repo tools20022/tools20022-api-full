@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesProceedsDefinition;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies rate details.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies rate details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionRate6", propOrder = {"additionalQuantityForSubscribedResultantSecurities", "additionalQuantityForExistingSecurities", "newToOld", "newSecuritiesToUnderlyingSecurities"})
 public class CorporateActionRate6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -297,6 +303,7 @@ public class CorporateActionRate6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlQtyForSbcbdRsltntScties")
 	public RatioFormat3Choice getAdditionalQuantityForSubscribedResultantSecurities() {
 		return additionalQuantityForSubscribedResultantSecurities;
 	}
@@ -305,6 +312,7 @@ public class CorporateActionRate6 {
 		this.additionalQuantityForSubscribedResultantSecurities = additionalQuantityForSubscribedResultantSecurities;
 	}
 
+	@XmlElement(name = "AddtlQtyForExstgScties")
 	public RatioFormat3Choice getAdditionalQuantityForExistingSecurities() {
 		return additionalQuantityForExistingSecurities;
 	}
@@ -313,6 +321,7 @@ public class CorporateActionRate6 {
 		this.additionalQuantityForExistingSecurities = additionalQuantityForExistingSecurities;
 	}
 
+	@XmlElement(name = "NewToOd")
 	public RatioFormat4Choice getNewToOld() {
 		return newToOld;
 	}
@@ -321,6 +330,7 @@ public class CorporateActionRate6 {
 		this.newToOld = newToOld;
 	}
 
+	@XmlElement(name = "NewSctiesToUndrlygScties")
 	public RatioFormat4Choice getNewSecuritiesToUnderlyingSecurities() {
 		return newSecuritiesToUnderlyingSecurities;
 	}

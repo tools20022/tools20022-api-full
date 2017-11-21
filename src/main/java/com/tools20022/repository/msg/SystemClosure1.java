@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SystemClosureInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about inactivity of a system.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about inactivity of a system."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemClosure1", propOrder = {"period", "reason"})
 public class SystemClosure1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +173,7 @@ public class SystemClosure1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prd")
 	public DateTimePeriodChoice getPeriod() {
 		return period;
 	}
@@ -175,6 +182,7 @@ public class SystemClosure1 {
 		this.period = period;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public ClosureReason2Choice getReason() {
 		return reason;
 	}

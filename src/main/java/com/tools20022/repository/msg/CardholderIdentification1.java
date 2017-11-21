@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.PersonIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of the cardholder involved in a transaction.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identification of the cardholder involved in a transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardholderIdentification1", propOrder = {"cardholderIdentificationValue", "cardholderIdentificationType"})
 public class CardholderIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class CardholderIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CrdhldrIdVal", required = true)
 	public Max35Text getCardholderIdentificationValue() {
 		return cardholderIdentificationValue;
 	}
@@ -186,6 +193,7 @@ public class CardholderIdentification1 {
 		this.cardholderIdentificationValue = cardholderIdentificationValue;
 	}
 
+	@XmlElement(name = "CrdhldrIdTp", required = true)
 	public PersonIdentificationType4Code getCardholderIdentificationType() {
 		return cardholderIdentificationType;
 	}

@@ -65,6 +65,11 @@ public class UndertakingInstructingParty extends UndertakingPartyRole {
 				definition = "Party that instructs the issuance of the undertaking.";
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UndertakingInstructingParty.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

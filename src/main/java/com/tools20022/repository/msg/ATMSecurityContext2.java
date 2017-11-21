@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.ATMSecurityScheme1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Context of the ATM for the key download.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMSecurityContext1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMSecurityContext2", propOrder = {"currentSecurityScheme", "deviceProperty", "currentConfiguration"})
 public class ATMSecurityContext2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -220,6 +226,7 @@ public class ATMSecurityContext2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CurSctySchme", required = true)
 	public ATMSecurityScheme1Code getCurrentSecurityScheme() {
 		return currentSecurityScheme;
 	}
@@ -228,6 +235,7 @@ public class ATMSecurityContext2 {
 		this.currentSecurityScheme = currentSecurityScheme;
 	}
 
+	@XmlElement(name = "DvcPrprty")
 	public ATMEquipment3 getDeviceProperty() {
 		return deviceProperty;
 	}
@@ -236,6 +244,7 @@ public class ATMSecurityContext2 {
 		this.deviceProperty = deviceProperty;
 	}
 
+	@XmlElement(name = "CurCfgtn")
 	public ATMSecurityConfiguration1 getCurrentConfiguration() {
 		return currentConfiguration;
 	}

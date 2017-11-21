@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related for the transportation of goods by sea.
@@ -84,6 +88,8 @@ import java.util.List;
  * TransportBySea5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportBySea6", propOrder = {"portOfLoading", "portOfDischarge", "vesselName", "seaCarrierName", "seaCarrierCountry", "carrierAgentName", "carrierAgentCountry"})
 public class TransportBySea6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -482,6 +488,7 @@ public class TransportBySea6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PortOfLoadng")
 	public List<Max35Text> getPortOfLoading() {
 		return portOfLoading;
 	}
@@ -490,6 +497,7 @@ public class TransportBySea6 {
 		this.portOfLoading = portOfLoading;
 	}
 
+	@XmlElement(name = "PortOfDschrge", required = true)
 	public List<Max35Text> getPortOfDischarge() {
 		return portOfDischarge;
 	}
@@ -498,6 +506,7 @@ public class TransportBySea6 {
 		this.portOfDischarge = portOfDischarge;
 	}
 
+	@XmlElement(name = "VsslNm")
 	public Max70Text getVesselName() {
 		return vesselName;
 	}
@@ -506,6 +515,7 @@ public class TransportBySea6 {
 		this.vesselName = vesselName;
 	}
 
+	@XmlElement(name = "SeaCrrierNm")
 	public Max70Text getSeaCarrierName() {
 		return seaCarrierName;
 	}
@@ -514,6 +524,7 @@ public class TransportBySea6 {
 		this.seaCarrierName = seaCarrierName;
 	}
 
+	@XmlElement(name = "SeaCrrierCtry")
 	public CountryCode getSeaCarrierCountry() {
 		return seaCarrierCountry;
 	}
@@ -522,6 +533,7 @@ public class TransportBySea6 {
 		this.seaCarrierCountry = seaCarrierCountry;
 	}
 
+	@XmlElement(name = "CrrierAgtNm")
 	public Max70Text getCarrierAgentName() {
 		return carrierAgentName;
 	}
@@ -530,6 +542,7 @@ public class TransportBySea6 {
 		this.carrierAgentName = carrierAgentName;
 	}
 
+	@XmlElement(name = "CrrierAgtCtry")
 	public CountryCode getCarrierAgentCountry() {
 		return carrierAgentCountry;
 	}

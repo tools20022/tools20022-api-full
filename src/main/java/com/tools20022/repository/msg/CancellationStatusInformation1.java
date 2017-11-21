@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the business status of a cancellation request message.
@@ -69,6 +73,8 @@ import java.util.List;
  * "Information about the business status of a cancellation request message."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancellationStatusInformation1", propOrder = {"status", "statusReason", "additionalStatusReasonInformation"})
 public class CancellationStatusInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class CancellationStatusInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public CancellationStatus4Code getStatus() {
 		return status;
 	}
@@ -237,6 +244,7 @@ public class CancellationStatusInformation1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "StsRsn")
 	public StatusReason4Choice getStatusReason() {
 		return statusReason;
 	}
@@ -245,6 +253,7 @@ public class CancellationStatusInformation1 {
 		this.statusReason = statusReason;
 	}
 
+	@XmlElement(name = "AddtlStsRsnInf")
 	public List<Max105Text> getAdditionalStatusReasonInformation() {
 		return additionalStatusReasonInformation;
 	}

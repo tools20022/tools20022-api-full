@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics shared by all individual items included in the currency
@@ -90,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyControlHeader2", propOrder = {"messageIdentification", "creationDateTime", "numberOfItems", "receivingParty", "registrationAgent"})
 public class CurrencyControlHeader2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -321,6 +327,7 @@ public class CurrencyControlHeader2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -329,6 +336,7 @@ public class CurrencyControlHeader2 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -337,6 +345,7 @@ public class CurrencyControlHeader2 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "NbOfItms", required = true)
 	public Max15NumericText getNumberOfItems() {
 		return numberOfItems;
 	}
@@ -345,6 +354,7 @@ public class CurrencyControlHeader2 {
 		this.numberOfItems = numberOfItems;
 	}
 
+	@XmlElement(name = "RcvgPty", required = true)
 	public PartyIdentification77 getReceivingParty() {
 		return receivingParty;
 	}
@@ -353,6 +363,7 @@ public class CurrencyControlHeader2 {
 		this.receivingParty = receivingParty;
 	}
 
+	@XmlElement(name = "RegnAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getRegistrationAgent() {
 		return registrationAgent;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies information about a blocked holding.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BlockedHoldingDetails1", propOrder = {"blockedHolding", "partialHoldingUnits", "holdingCertificateNumber"})
 public class BlockedHoldingDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -269,6 +275,7 @@ public class BlockedHoldingDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BlckdHldg", required = true)
 	public Holding1Code getBlockedHolding() {
 		return blockedHolding;
 	}
@@ -277,6 +284,7 @@ public class BlockedHoldingDetails1 {
 		this.blockedHolding = blockedHolding;
 	}
 
+	@XmlElement(name = "PrtlHldgUnits")
 	public DecimalNumber getPartialHoldingUnits() {
 		return partialHoldingUnits;
 	}
@@ -285,6 +293,7 @@ public class BlockedHoldingDetails1 {
 		this.partialHoldingUnits = partialHoldingUnits;
 	}
 
+	@XmlElement(name = "HldgCertNb")
 	public Max35Text getHoldingCertificateNumber() {
 		return holdingCertificateNumber;
 	}

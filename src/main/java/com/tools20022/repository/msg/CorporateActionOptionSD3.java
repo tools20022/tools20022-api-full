@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action option details.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides additional information regarding corporate action option details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionOptionSD3", propOrder = {"placeAndName", "extendedOptionFeatures", "DTCDefaultOptionFlag", "issuerSupportedFlag", "DTCTaxControlNumberRequiredFlag"})
 public class CorporateActionOptionSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -309,6 +315,7 @@ public class CorporateActionOptionSD3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -317,6 +324,7 @@ public class CorporateActionOptionSD3 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "XtndedOptnFeatrs")
 	public ExtendedOptionFeature1Code getExtendedOptionFeatures() {
 		return extendedOptionFeatures;
 	}
@@ -325,6 +333,7 @@ public class CorporateActionOptionSD3 {
 		this.extendedOptionFeatures = extendedOptionFeatures;
 	}
 
+	@XmlElement(name = "DTCDfltOptnFlg")
 	public YesNoIndicator getDTCDefaultOptionFlag() {
 		return dTCDefaultOptionFlag;
 	}
@@ -333,6 +342,7 @@ public class CorporateActionOptionSD3 {
 		this.dTCDefaultOptionFlag = dTCDefaultOptionFlag;
 	}
 
+	@XmlElement(name = "IssrSpprtdFlg")
 	public YesNoIndicator getIssuerSupportedFlag() {
 		return issuerSupportedFlag;
 	}
@@ -341,6 +351,7 @@ public class CorporateActionOptionSD3 {
 		this.issuerSupportedFlag = issuerSupportedFlag;
 	}
 
+	@XmlElement(name = "DTCTaxCtrlNbReqrdFlg")
 	public YesNoIndicator getDTCTaxControlNumberRequiredFlag() {
 		return dTCTaxControlNumberRequiredFlag;
 	}

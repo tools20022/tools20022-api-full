@@ -30,6 +30,10 @@ import com.tools20022.repository.msg.UnderlyingPaymentTransaction1;
 import com.tools20022.repository.msg.UnderlyingStatementEntry1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the details of the underlying transaction on which the
@@ -92,6 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnderlyingTransaction1Choice", propOrder = {"initiation", "interbank", "statementEntry"})
 public class UnderlyingTransaction1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -261,6 +267,7 @@ public class UnderlyingTransaction1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Initn", required = true)
 	public UnderlyingPaymentInstruction1 getInitiation() {
 		return initiation;
 	}
@@ -269,6 +276,7 @@ public class UnderlyingTransaction1Choice {
 		this.initiation = initiation;
 	}
 
+	@XmlElement(name = "IntrBk", required = true)
 	public UnderlyingPaymentTransaction1 getInterbank() {
 		return interbank;
 	}
@@ -277,6 +285,7 @@ public class UnderlyingTransaction1Choice {
 		this.interbank = interbank;
 	}
 
+	@XmlElement(name = "StmtNtry", required = true)
 	public UnderlyingStatementEntry1 getStatementEntry() {
 		return statementEntry;
 	}

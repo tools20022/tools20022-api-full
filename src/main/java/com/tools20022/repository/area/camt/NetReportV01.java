@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.NetReportData1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The Net Report message is sent to a participant by a central system to
@@ -39,9 +41,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.088.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
@@ -83,6 +82,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.088.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -94,6 +96,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NetReportV01", propOrder = {"netReportData", "netServiceParticipantIdentification", "netServiceCounterpartyIdentification", "netObligation", "supplementaryData"})
 public class NetReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -130,6 +134,14 @@ public class NetReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> NetReportData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetReportV01.class.getMethod("getNetReportData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification73Choice netServiceParticipantIdentification;
 	/**
@@ -164,6 +176,14 @@ public class NetReportV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetReportV01.class.getMethod("getNetServiceParticipantIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification73Choice netServiceCounterpartyIdentification;
@@ -203,6 +223,14 @@ public class NetReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetReportV01.class.getMethod("getNetServiceCounterpartyIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<NetObligation1> netObligation;
 	/**
@@ -238,6 +266,14 @@ public class NetReportV01 {
 			definition = "Provides the amount, direct parties or netting groups involved in the obligation.";
 			minOccurs = 1;
 			complexType_lazy = () -> NetObligation1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetReportV01.class.getMethod("getNetObligation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -276,6 +312,14 @@ public class NetReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NetReportV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -288,8 +332,9 @@ public class NetReportV01 {
 				rootElement = "Document";
 				xmlTag = "NetRpt";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(NetReportV01.mmNetReportData, NetReportV01.mmNetServiceParticipantIdentification, NetReportV01.mmNetServiceCounterpartyIdentification, NetReportV01.mmNetObligation,
-						NetReportV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NetReportV01.mmNetReportData, com.tools20022.repository.area.camt.NetReportV01.mmNetServiceParticipantIdentification,
+						com.tools20022.repository.area.camt.NetReportV01.mmNetServiceCounterpartyIdentification, com.tools20022.repository.area.camt.NetReportV01.mmNetObligation,
+						com.tools20022.repository.area.camt.NetReportV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -299,10 +344,16 @@ public class NetReportV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return NetReportV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NetRptData", required = true)
 	public NetReportData1 getNetReportData() {
 		return netReportData;
 	}
@@ -311,6 +362,7 @@ public class NetReportV01 {
 		this.netReportData = netReportData;
 	}
 
+	@XmlElement(name = "NetSvcPtcptId", required = true)
 	public PartyIdentification73Choice getNetServiceParticipantIdentification() {
 		return netServiceParticipantIdentification;
 	}
@@ -319,6 +371,7 @@ public class NetReportV01 {
 		this.netServiceParticipantIdentification = netServiceParticipantIdentification;
 	}
 
+	@XmlElement(name = "NetSvcCtrPtyId")
 	public PartyIdentification73Choice getNetServiceCounterpartyIdentification() {
 		return netServiceCounterpartyIdentification;
 	}
@@ -327,6 +380,7 @@ public class NetReportV01 {
 		this.netServiceCounterpartyIdentification = netServiceCounterpartyIdentification;
 	}
 
+	@XmlElement(name = "NetOblgtn", required = true)
 	public List<NetObligation1> getNetObligation() {
 		return netObligation;
 	}
@@ -335,11 +389,18 @@ public class NetReportV01 {
 		this.netObligation = netObligation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.088.01.01")
+	static public class Document {
+		@XmlElement(name = "NetRpt", required = true)
+		public NetReportV01 messageBody;
 	}
 }

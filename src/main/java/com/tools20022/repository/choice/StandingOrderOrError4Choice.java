@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.StandingOrder2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the standing order details or a business error when the
@@ -66,6 +70,8 @@ import java.util.List;
  * StandingOrderOrError2Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingOrderOrError4Choice", propOrder = {"standingOrder", "businessError"})
 public class StandingOrderOrError4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class StandingOrderOrError4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StgOrdr", required = true)
 	public StandingOrder2 getStandingOrder() {
 		return standingOrder;
 	}
@@ -185,6 +192,7 @@ public class StandingOrderOrError4Choice {
 		this.standingOrder = standingOrder;
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling4> getBusinessError() {
 		return businessError;
 	}

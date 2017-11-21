@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information on the charges related to the payment transaction.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information on the charges related to the payment transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ChargesInformation3", propOrder = {"totalChargesAndTaxAmount", "amount", "type", "rate", "bearer", "party", "tax"})
 public class ChargesInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -436,6 +442,7 @@ public class ChargesInformation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlChrgsAndTaxAmt")
 	public CurrencyAndAmount getTotalChargesAndTaxAmount() {
 		return totalChargesAndTaxAmount;
 	}
@@ -444,6 +451,7 @@ public class ChargesInformation3 {
 		this.totalChargesAndTaxAmount = totalChargesAndTaxAmount;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -452,6 +460,7 @@ public class ChargesInformation3 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Tp")
 	public ChargeTypeChoice getType() {
 		return type;
 	}
@@ -460,6 +469,7 @@ public class ChargesInformation3 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -468,6 +478,7 @@ public class ChargesInformation3 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "Br")
 	public ChargeBearerType1Code getBearer() {
 		return bearer;
 	}
@@ -476,6 +487,7 @@ public class ChargesInformation3 {
 		this.bearer = bearer;
 	}
 
+	@XmlElement(name = "Pty")
 	public BranchAndFinancialInstitutionIdentification3 getParty() {
 		return party;
 	}
@@ -484,6 +496,7 @@ public class ChargesInformation3 {
 		this.party = party;
 	}
 
+	@XmlElement(name = "Tax")
 	public TaxCharges1 getTax() {
 		return tax;
 	}

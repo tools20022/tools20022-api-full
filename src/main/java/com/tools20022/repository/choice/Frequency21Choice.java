@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FrequencyPeriod1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for a frequency, for example, the frequency of payment.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Frequency11Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Frequency21Choice", propOrder = {"type", "period"})
 public class Frequency21Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -201,6 +207,7 @@ public class Frequency21Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public Frequency6Code getType() {
 		return type;
 	}
@@ -209,6 +216,7 @@ public class Frequency21Choice {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Prd", required = true)
 	public FrequencyPeriod1 getPeriod() {
 		return period;
 	}

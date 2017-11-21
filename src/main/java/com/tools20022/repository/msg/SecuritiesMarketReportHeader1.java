@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the securities market transaction report related header details.
@@ -107,6 +111,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides the securities market transaction report related header details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesMarketReportHeader1", propOrder = {"reportingEntity", "reportingPeriod", "submissionDateTime"})
 public class SecuritiesMarketReportHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -256,6 +262,7 @@ public class SecuritiesMarketReportHeader1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptgNtty", required = true)
 	public TradingVenueIdentification1Choice getReportingEntity() {
 		return reportingEntity;
 	}
@@ -264,6 +271,7 @@ public class SecuritiesMarketReportHeader1 {
 		this.reportingEntity = reportingEntity;
 	}
 
+	@XmlElement(name = "RptgPrd", required = true)
 	public Period4Choice getReportingPeriod() {
 		return reportingPeriod;
 	}
@@ -272,6 +280,7 @@ public class SecuritiesMarketReportHeader1 {
 		this.reportingPeriod = reportingPeriod;
 	}
 
+	@XmlElement(name = "SubmissnDtTm")
 	public ISODateTime getSubmissionDateTime() {
 		return submissionDateTime;
 	}

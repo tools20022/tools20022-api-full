@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to report on a system or a member of the system.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Defines the criteria used to report on a system or a member of the system."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemReturnCriteria2", propOrder = {"systemIdentificationIndicator", "memberIdentificationIndicator", "countryIdentificationIndicator", "accountIdentificationIndicator"})
 public class SystemReturnCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -254,6 +260,7 @@ public class SystemReturnCriteria2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysIdInd")
 	public RequestedIndicator getSystemIdentificationIndicator() {
 		return systemIdentificationIndicator;
 	}
@@ -262,6 +269,7 @@ public class SystemReturnCriteria2 {
 		this.systemIdentificationIndicator = systemIdentificationIndicator;
 	}
 
+	@XmlElement(name = "MmbIdInd")
 	public RequestedIndicator getMemberIdentificationIndicator() {
 		return memberIdentificationIndicator;
 	}
@@ -270,6 +278,7 @@ public class SystemReturnCriteria2 {
 		this.memberIdentificationIndicator = memberIdentificationIndicator;
 	}
 
+	@XmlElement(name = "CtryIdInd")
 	public RequestedIndicator getCountryIdentificationIndicator() {
 		return countryIdentificationIndicator;
 	}
@@ -278,6 +287,7 @@ public class SystemReturnCriteria2 {
 		this.countryIdentificationIndicator = countryIdentificationIndicator;
 	}
 
+	@XmlElement(name = "AcctIdInd")
 	public RequestedIndicator getAccountIdentificationIndicator() {
 		return accountIdentificationIndicator;
 	}

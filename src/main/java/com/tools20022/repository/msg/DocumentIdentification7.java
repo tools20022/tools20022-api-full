@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies a document by a unique identification and a date of issue.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Identifies a document by a unique identification and a date of issue."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DocumentIdentification7", propOrder = {"identification", "dateOfIssue"})
 public class DocumentIdentification7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class DocumentIdentification7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -183,6 +190,7 @@ public class DocumentIdentification7 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "DtOfIsse", required = true)
 	public ISODate getDateOfIssue() {
 		return dateOfIssue;
 	}

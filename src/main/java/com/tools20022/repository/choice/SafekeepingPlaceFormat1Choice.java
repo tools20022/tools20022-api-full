@@ -30,6 +30,10 @@ import com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1;
 import com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for the place of safekeeping.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of formats for the place of safekeeping."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SafekeepingPlaceFormat1Choice", propOrder = {"typeAndIdentification", "type", "proprietary", "country"})
 public class SafekeepingPlaceFormat1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -289,6 +295,7 @@ public class SafekeepingPlaceFormat1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TpAndId", required = true)
 	public SafekeepingPlaceTypeAndAnyBICIdentifier1 getTypeAndIdentification() {
 		return typeAndIdentification;
 	}
@@ -297,6 +304,7 @@ public class SafekeepingPlaceFormat1Choice {
 		this.typeAndIdentification = typeAndIdentification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public SafekeepingPlaceTypeAndText1 getType() {
 		return type;
 	}
@@ -305,6 +313,7 @@ public class SafekeepingPlaceFormat1Choice {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification14 getProprietary() {
 		return proprietary;
 	}
@@ -313,6 +322,7 @@ public class SafekeepingPlaceFormat1Choice {
 		this.proprietary = proprietary;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}

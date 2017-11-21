@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of value type.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of value type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "YieldedOrValueType1Choice", propOrder = {"yielded", "valueType"})
 public class YieldedOrValueType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class YieldedOrValueType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Yldd", required = true)
 	public YesNoIndicator getYielded() {
 		return yielded;
 	}
@@ -184,6 +191,7 @@ public class YieldedOrValueType1Choice {
 		this.yielded = yielded;
 	}
 
+	@XmlElement(name = "ValTp", required = true)
 	public PriceValueType1Code getValueType() {
 		return valueType;
 	}

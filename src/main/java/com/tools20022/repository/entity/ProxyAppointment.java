@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,6 +38,25 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProxyAppointment#mmProxyType
+ * ProxyAppointment.mmProxyType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProxyAppointment#mmRelatedMeetingInstruction
+ * ProxyAppointment.mmRelatedMeetingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProxyAppointment#mmIdentification
+ * ProxyAppointment.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ProxyAppointment#mmVote
+ * ProxyAppointment.mmVote}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProxyAppointment#mmAdditionalParticipationCost
+ * ProxyAppointment.mmAdditionalParticipationCost}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -60,25 +80,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmProxyAppointment
  * InstructionForMeeting.mmProxyAppointment}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProxyAppointment#mmProxyType
- * ProxyAppointment.mmProxyType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProxyAppointment#mmRelatedMeetingInstruction
- * ProxyAppointment.mmRelatedMeetingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProxyAppointment#mmIdentification
- * ProxyAppointment.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ProxyAppointment#mmVote
- * ProxyAppointment.mmVote}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProxyAppointment#mmAdditionalParticipationCost
- * ProxyAppointment.mmAdditionalParticipationCost}</li>
  * </ul>
  * </li>
  * <li>
@@ -112,11 +113,6 @@ public class ProxyAppointment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ProxyTypeCode
 	 * ProxyTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProxyAppointment
-	 * ProxyAppointment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -137,6 +133,11 @@ public class ProxyAppointment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProxyAppointment
+	 * ProxyAppointment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -150,7 +151,7 @@ public class ProxyAppointment {
 	public static final MMBusinessAttribute mmProxyType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Proxy.mmProxyType, Proxy1.mmProxyType, Proxy3.mmProxyType, Proxy2.mmProxyType, Proxy4.mmProxyType, Proxy5.mmProxyType, Proxy6.mmProxyType);
-			elementContext_lazy = () -> ProxyAppointment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProxyAppointment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProxyType";
@@ -158,6 +159,14 @@ public class ProxyAppointment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProxyTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProxyAppointment.class.getMethod("getProxyType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InstructionForMeeting relatedMeetingInstruction;
@@ -199,7 +208,7 @@ public class ProxyAppointment {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedMeetingInstruction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProxyAppointment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProxyAppointment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedMeetingInstruction";
@@ -239,7 +248,7 @@ public class ProxyAppointment {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> ProxyAppointment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProxyAppointment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -247,6 +256,14 @@ public class ProxyAppointment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProxyAppointment.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.VoteInstructionRequest> vote;
@@ -286,7 +303,7 @@ public class ProxyAppointment {
 	 */
 	public static final MMBusinessAssociationEnd mmVote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProxyAppointment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProxyAppointment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Vote";
@@ -329,7 +346,7 @@ public class ProxyAppointment {
 	 */
 	public static final MMBusinessAttribute mmAdditionalParticipationCost = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> ProxyAppointment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProxyAppointment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdditionalParticipationCost";
@@ -337,6 +354,14 @@ public class ProxyAppointment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProxyAppointment.class.getMethod("getAdditionalParticipationCost", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -348,8 +373,14 @@ public class ProxyAppointment {
 				name = "ProxyAppointment";
 				definition = "Specifies that a proxy has been appointed  to represent a party authorised to vote at a general meeting.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.VoteInstructionRequest.mmRelatedProxyAppointment, com.tools20022.repository.entity.InstructionForMeeting.mmProxyAppointment);
-				element_lazy = () -> Arrays.asList(ProxyAppointment.mmProxyType, ProxyAppointment.mmRelatedMeetingInstruction, ProxyAppointment.mmIdentification, ProxyAppointment.mmVote, ProxyAppointment.mmAdditionalParticipationCost);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProxyAppointment.mmProxyType, com.tools20022.repository.entity.ProxyAppointment.mmRelatedMeetingInstruction,
+						com.tools20022.repository.entity.ProxyAppointment.mmIdentification, com.tools20022.repository.entity.ProxyAppointment.mmVote, com.tools20022.repository.entity.ProxyAppointment.mmAdditionalParticipationCost);
 				derivationComponent_lazy = () -> Arrays.asList(Proxy.mmObject(), Proxy1.mmObject(), Proxy3.mmObject(), Proxy2.mmObject(), Proxy4.mmObject(), Proxy5.mmObject(), Proxy6.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ProxyAppointment.class;
 			}
 		});
 		return mmObject_lazy.get();

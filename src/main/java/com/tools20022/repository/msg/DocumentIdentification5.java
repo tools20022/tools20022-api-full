@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies a document by a unique identification and its issuer.
@@ -152,6 +156,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Identifies a document by a unique identification and its issuer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DocumentIdentification5", propOrder = {"identification", "identificationIssuer"})
 public class DocumentIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -276,6 +282,7 @@ public class DocumentIdentification5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -284,6 +291,7 @@ public class DocumentIdentification5 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "IdIssr", required = true)
 	public BICIdentification1 getIdentificationIssuer() {
 		return identificationIssuer;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SystemPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the non guaranteed trade details.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NonGuaranteedTrade2", propOrder = {"tradeCounterpartyMemberIdentification", "tradeCounterpartyClearingMemberIdentification", "deliveringParties", "receivingParties"})
 public class NonGuaranteedTrade2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -340,6 +346,7 @@ public class NonGuaranteedTrade2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradCtrPtyMmbId", required = true)
 	public PartyIdentification35Choice getTradeCounterpartyMemberIdentification() {
 		return tradeCounterpartyMemberIdentification;
 	}
@@ -348,6 +355,7 @@ public class NonGuaranteedTrade2 {
 		this.tradeCounterpartyMemberIdentification = tradeCounterpartyMemberIdentification;
 	}
 
+	@XmlElement(name = "TradCtrPtyClrMmbId", required = true)
 	public PartyIdentification35Choice getTradeCounterpartyClearingMemberIdentification() {
 		return tradeCounterpartyClearingMemberIdentification;
 	}
@@ -356,6 +364,7 @@ public class NonGuaranteedTrade2 {
 		this.tradeCounterpartyClearingMemberIdentification = tradeCounterpartyClearingMemberIdentification;
 	}
 
+	@XmlElement(name = "DlvrgPties")
 	public DeliveringPartiesAndAccount7 getDeliveringParties() {
 		return deliveringParties;
 	}
@@ -364,6 +373,7 @@ public class NonGuaranteedTrade2 {
 		this.deliveringParties = deliveringParties;
 	}
 
+	@XmlElement(name = "RcvgPties")
 	public ReceivingPartiesAndAccount7 getReceivingParties() {
 		return receivingParties;
 	}

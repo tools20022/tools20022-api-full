@@ -63,6 +63,11 @@ public class Payee extends ChequePartyRole {
 				definition = "Party to which a cheque is made payable.";
 				superType_lazy = () -> ChequePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Payee.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

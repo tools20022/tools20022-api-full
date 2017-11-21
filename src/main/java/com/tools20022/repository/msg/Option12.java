@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Option;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details for a call/put option.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the details for a call/put option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Option12", propOrder = {"type", "dateOrPeriod"})
 public class Option12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -171,6 +177,7 @@ public class Option12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public OptionType1Code getType() {
 		return type;
 	}
@@ -179,6 +186,7 @@ public class Option12 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "DtOrPrd", required = true)
 	public OptionDateOrPeriod1Choice getDateOrPeriod() {
 		return dateOrPeriod;
 	}

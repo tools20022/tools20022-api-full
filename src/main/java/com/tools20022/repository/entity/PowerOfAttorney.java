@@ -35,22 +35,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Party#mmPowerOfAttorney
- * Party.mmPowerOfAttorney}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedPowerOfAttorney
- * SecuritiesAccount.mmRelatedPowerOfAttorney}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements#mmPowerOfAttorney
- * PowerOfAttorneyRequirements.mmPowerOfAttorney}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -63,6 +47,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.PowerOfAttorney#mmAuthorisedAccount
  * PowerOfAttorney.mmAuthorisedAccount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Party#mmPowerOfAttorney
+ * Party.mmPowerOfAttorney}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedPowerOfAttorney
+ * SecuritiesAccount.mmRelatedPowerOfAttorney}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements#mmPowerOfAttorney
+ * PowerOfAttorneyRequirements.mmPowerOfAttorney}</li>
  * </ul>
  * </li>
  * <li>
@@ -119,7 +119,7 @@ public class PowerOfAttorney extends Mandate {
 	 */
 	public static final MMBusinessAssociationEnd mmAuthorisedParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PowerOfAttorney.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PowerOfAttorney.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthorisedParty";
@@ -169,7 +169,7 @@ public class PowerOfAttorney extends Mandate {
 	 */
 	public static final MMBusinessAssociationEnd mmPowerOfAttorneyRequirements = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PowerOfAttorney.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PowerOfAttorney.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PowerOfAttorneyRequirements";
@@ -219,7 +219,7 @@ public class PowerOfAttorney extends Mandate {
 	 */
 	public static final MMBusinessAssociationEnd mmAuthorisedAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PowerOfAttorney.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PowerOfAttorney.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthorisedAccount";
@@ -242,7 +242,13 @@ public class PowerOfAttorney extends Mandate {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Party.mmPowerOfAttorney, com.tools20022.repository.entity.SecuritiesAccount.mmRelatedPowerOfAttorney,
 						com.tools20022.repository.entity.PowerOfAttorneyRequirements.mmPowerOfAttorney);
 				superType_lazy = () -> Mandate.mmObject();
-				element_lazy = () -> Arrays.asList(PowerOfAttorney.mmAuthorisedParty, PowerOfAttorney.mmPowerOfAttorneyRequirements, PowerOfAttorney.mmAuthorisedAccount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PowerOfAttorney.mmAuthorisedParty, com.tools20022.repository.entity.PowerOfAttorney.mmPowerOfAttorneyRequirements,
+						com.tools20022.repository.entity.PowerOfAttorney.mmAuthorisedAccount);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PowerOfAttorney.class;
 			}
 		});
 		return mmObject_lazy.get();

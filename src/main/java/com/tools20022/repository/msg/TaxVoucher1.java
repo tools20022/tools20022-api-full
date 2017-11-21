@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the tax voucher.
@@ -119,6 +123,10 @@ import java.util.function.Supplier;
  * definition} = "Provides information about the tax voucher."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxVoucher1", propOrder = {"taxVoucherRate", "taxCredit", "taxDeduction", "grossAmount", "netAmount", "recordDateHolding", "taxCreditRate", "withholdingTaxAmount", "withholdingTaxRate",
+		"scripDividendReinvestmentPricePerShare", "cashAmountBroughtForward", "allotedSharesCost", "cashAmountCarriedForward", "notionalTax", "notionalDividendPayable", "bargainDate", "bargainSettlementDate", "stampDutyAmount",
+		"chargeAmount", "commissionAmount", "foreignExchangeDetails"})
 public class TaxVoucher1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1156,6 +1164,7 @@ public class TaxVoucher1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TaxVchrRate", required = true)
 	public BaseOneRate getTaxVoucherRate() {
 		return taxVoucherRate;
 	}
@@ -1164,6 +1173,7 @@ public class TaxVoucher1 {
 		this.taxVoucherRate = taxVoucherRate;
 	}
 
+	@XmlElement(name = "TaxCdt", required = true)
 	public ActiveCurrencyAndAmount getTaxCredit() {
 		return taxCredit;
 	}
@@ -1172,6 +1182,7 @@ public class TaxVoucher1 {
 		this.taxCredit = taxCredit;
 	}
 
+	@XmlElement(name = "TaxDdctn", required = true)
 	public ActiveCurrencyAndAmount getTaxDeduction() {
 		return taxDeduction;
 	}
@@ -1180,6 +1191,7 @@ public class TaxVoucher1 {
 		this.taxDeduction = taxDeduction;
 	}
 
+	@XmlElement(name = "GrssAmt", required = true)
 	public ActiveCurrencyAndAmount getGrossAmount() {
 		return grossAmount;
 	}
@@ -1188,6 +1200,7 @@ public class TaxVoucher1 {
 		this.grossAmount = grossAmount;
 	}
 
+	@XmlElement(name = "NetAmt", required = true)
 	public ActiveCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
@@ -1196,6 +1209,7 @@ public class TaxVoucher1 {
 		this.netAmount = netAmount;
 	}
 
+	@XmlElement(name = "RcrdDtHldg", required = true)
 	public UnitOrFaceAmount1Choice getRecordDateHolding() {
 		return recordDateHolding;
 	}
@@ -1204,6 +1218,7 @@ public class TaxVoucher1 {
 		this.recordDateHolding = recordDateHolding;
 	}
 
+	@XmlElement(name = "TaxCdtRate")
 	public PercentageRate getTaxCreditRate() {
 		return taxCreditRate;
 	}
@@ -1212,6 +1227,7 @@ public class TaxVoucher1 {
 		this.taxCreditRate = taxCreditRate;
 	}
 
+	@XmlElement(name = "WhldgTaxAmt")
 	public ActiveCurrencyAndAmount getWithholdingTaxAmount() {
 		return withholdingTaxAmount;
 	}
@@ -1220,6 +1236,7 @@ public class TaxVoucher1 {
 		this.withholdingTaxAmount = withholdingTaxAmount;
 	}
 
+	@XmlElement(name = "WhldgTaxRate")
 	public PercentageRate getWithholdingTaxRate() {
 		return withholdingTaxRate;
 	}
@@ -1228,6 +1245,7 @@ public class TaxVoucher1 {
 		this.withholdingTaxRate = withholdingTaxRate;
 	}
 
+	@XmlElement(name = "ScripDvddRinvstmtPricPerShr")
 	public PriceValue1 getScripDividendReinvestmentPricePerShare() {
 		return scripDividendReinvestmentPricePerShare;
 	}
@@ -1236,6 +1254,7 @@ public class TaxVoucher1 {
 		this.scripDividendReinvestmentPricePerShare = scripDividendReinvestmentPricePerShare;
 	}
 
+	@XmlElement(name = "CshAmtBrghtFwd")
 	public ActiveCurrencyAndAmount getCashAmountBroughtForward() {
 		return cashAmountBroughtForward;
 	}
@@ -1244,6 +1263,7 @@ public class TaxVoucher1 {
 		this.cashAmountBroughtForward = cashAmountBroughtForward;
 	}
 
+	@XmlElement(name = "AlltdShrsCost")
 	public PriceValue1 getAllotedSharesCost() {
 		return allotedSharesCost;
 	}
@@ -1252,6 +1272,7 @@ public class TaxVoucher1 {
 		this.allotedSharesCost = allotedSharesCost;
 	}
 
+	@XmlElement(name = "CshAmtCrrdFwd")
 	public ActiveCurrencyAndAmount getCashAmountCarriedForward() {
 		return cashAmountCarriedForward;
 	}
@@ -1260,6 +1281,7 @@ public class TaxVoucher1 {
 		this.cashAmountCarriedForward = cashAmountCarriedForward;
 	}
 
+	@XmlElement(name = "NtnlTax")
 	public ActiveCurrencyAndAmount getNotionalTax() {
 		return notionalTax;
 	}
@@ -1268,6 +1290,7 @@ public class TaxVoucher1 {
 		this.notionalTax = notionalTax;
 	}
 
+	@XmlElement(name = "NtnlDvddPybl")
 	public ActiveCurrencyAndAmount getNotionalDividendPayable() {
 		return notionalDividendPayable;
 	}
@@ -1276,6 +1299,7 @@ public class TaxVoucher1 {
 		this.notionalDividendPayable = notionalDividendPayable;
 	}
 
+	@XmlElement(name = "BrgnDt")
 	public ISODate getBargainDate() {
 		return bargainDate;
 	}
@@ -1284,6 +1308,7 @@ public class TaxVoucher1 {
 		this.bargainDate = bargainDate;
 	}
 
+	@XmlElement(name = "BrgnSttlmDt")
 	public ISODate getBargainSettlementDate() {
 		return bargainSettlementDate;
 	}
@@ -1292,6 +1317,7 @@ public class TaxVoucher1 {
 		this.bargainSettlementDate = bargainSettlementDate;
 	}
 
+	@XmlElement(name = "StmpDtyAmt")
 	public ActiveCurrencyAndAmount getStampDutyAmount() {
 		return stampDutyAmount;
 	}
@@ -1300,6 +1326,7 @@ public class TaxVoucher1 {
 		this.stampDutyAmount = stampDutyAmount;
 	}
 
+	@XmlElement(name = "ChrgAmt")
 	public ActiveCurrencyAndAmount getChargeAmount() {
 		return chargeAmount;
 	}
@@ -1308,6 +1335,7 @@ public class TaxVoucher1 {
 		this.chargeAmount = chargeAmount;
 	}
 
+	@XmlElement(name = "ComssnAmt")
 	public ActiveCurrencyAndAmount getCommissionAmount() {
 		return commissionAmount;
 	}
@@ -1316,6 +1344,7 @@ public class TaxVoucher1 {
 		this.commissionAmount = commissionAmount;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public ForeignExchangeTerms9 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}

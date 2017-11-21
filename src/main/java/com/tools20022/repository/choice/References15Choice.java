@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of reference.
@@ -91,6 +95,9 @@ import java.util.function.Supplier;
  * definition} = "Choice of reference."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References15Choice", propOrder = {"securitiesSettlementTransactionIdentification", "intraPositionMovementIdentification", "intraBalanceMovementIdentification", "accountServicerTransactionIdentification",
+		"marketInfrastructureTransactionIdentification", "poolIdentification", "commonIdentification", "tradeIdentification", "otherTransactionIdentification"})
 public class References15Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -561,6 +568,7 @@ public class References15Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesSttlmTxId")
 	public Max35Text getSecuritiesSettlementTransactionIdentification() {
 		return securitiesSettlementTransactionIdentification;
 	}
@@ -569,6 +577,7 @@ public class References15Choice {
 		this.securitiesSettlementTransactionIdentification = securitiesSettlementTransactionIdentification;
 	}
 
+	@XmlElement(name = "IntraPosMvmntId")
 	public Max35Text getIntraPositionMovementIdentification() {
 		return intraPositionMovementIdentification;
 	}
@@ -577,6 +586,7 @@ public class References15Choice {
 		this.intraPositionMovementIdentification = intraPositionMovementIdentification;
 	}
 
+	@XmlElement(name = "IntraBalMvmntId")
 	public RestrictedFINXMax16Text getIntraBalanceMovementIdentification() {
 		return intraBalanceMovementIdentification;
 	}
@@ -585,6 +595,7 @@ public class References15Choice {
 		this.intraBalanceMovementIdentification = intraBalanceMovementIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrTxId", required = true)
 	public RestrictedFINXMax16Text getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
@@ -593,6 +604,7 @@ public class References15Choice {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
 	}
 
+	@XmlElement(name = "MktInfrstrctrTxId", required = true)
 	public RestrictedFINXMax16Text getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}
@@ -601,6 +613,7 @@ public class References15Choice {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
 	}
 
+	@XmlElement(name = "PoolId", required = true)
 	public RestrictedFINXMax16Text getPoolIdentification() {
 		return poolIdentification;
 	}
@@ -609,6 +622,7 @@ public class References15Choice {
 		this.poolIdentification = poolIdentification;
 	}
 
+	@XmlElement(name = "CmonId", required = true)
 	public RestrictedFINXMax16Text getCommonIdentification() {
 		return commonIdentification;
 	}
@@ -617,6 +631,7 @@ public class References15Choice {
 		this.commonIdentification = commonIdentification;
 	}
 
+	@XmlElement(name = "TradId", required = true)
 	public RestrictedFINXMax16Text getTradeIdentification() {
 		return tradeIdentification;
 	}
@@ -625,6 +640,7 @@ public class References15Choice {
 		this.tradeIdentification = tradeIdentification;
 	}
 
+	@XmlElement(name = "OthrTxId")
 	public Max35Text getOtherTransactionIdentification() {
 		return otherTransactionIdentification;
 	}

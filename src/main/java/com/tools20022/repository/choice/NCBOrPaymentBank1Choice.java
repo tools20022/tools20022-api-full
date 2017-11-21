@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SystemPartyIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a national central bank or a payment bank.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between a national central bank or a payment bank."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NCBOrPaymentBank1Choice", propOrder = {"NCBIdentification", "paymentBankIdentification"})
 public class NCBOrPaymentBank1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class NCBOrPaymentBank1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NCBId", required = true)
 	public BICFIIdentifier getNCBIdentification() {
 		return nCBIdentification;
 	}
@@ -174,6 +181,7 @@ public class NCBOrPaymentBank1Choice {
 		this.nCBIdentification = nCBIdentification;
 	}
 
+	@XmlElement(name = "PmtBkId", required = true)
 	public SystemPartyIdentification3 getPaymentBankIdentification() {
 		return paymentBankIdentification;
 	}

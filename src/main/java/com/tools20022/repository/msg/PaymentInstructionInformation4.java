@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics that apply to the credit side of the payment
@@ -123,6 +127,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstructionInformation4", propOrder = {"paymentInformationIdentification", "paymentMethod", "batchBooking", "numberOfTransactions", "controlSum", "paymentTypeInformation", "requestedCollectionDate", "creditor",
+		"creditorAccount", "creditorAgent", "creditorAgentAccount", "ultimateCreditor", "chargeBearer", "chargesAccount", "chargesAccountAgent", "creditorSchemeIdentification", "directDebitTransactionInformation"})
 public class PaymentInstructionInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -972,6 +979,7 @@ public class PaymentInstructionInformation4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtInfId", required = true)
 	public Max35Text getPaymentInformationIdentification() {
 		return paymentInformationIdentification;
 	}
@@ -980,6 +988,7 @@ public class PaymentInstructionInformation4 {
 		this.paymentInformationIdentification = paymentInformationIdentification;
 	}
 
+	@XmlElement(name = "PmtMtd", required = true)
 	public PaymentMethod2Code getPaymentMethod() {
 		return paymentMethod;
 	}
@@ -988,6 +997,7 @@ public class PaymentInstructionInformation4 {
 		this.paymentMethod = paymentMethod;
 	}
 
+	@XmlElement(name = "BtchBookg")
 	public BatchBookingIndicator getBatchBooking() {
 		return batchBooking;
 	}
@@ -996,6 +1006,7 @@ public class PaymentInstructionInformation4 {
 		this.batchBooking = batchBooking;
 	}
 
+	@XmlElement(name = "NbOfTxs")
 	public Max15NumericText getNumberOfTransactions() {
 		return numberOfTransactions;
 	}
@@ -1004,6 +1015,7 @@ public class PaymentInstructionInformation4 {
 		this.numberOfTransactions = numberOfTransactions;
 	}
 
+	@XmlElement(name = "CtrlSum")
 	public DecimalNumber getControlSum() {
 		return controlSum;
 	}
@@ -1012,6 +1024,7 @@ public class PaymentInstructionInformation4 {
 		this.controlSum = controlSum;
 	}
 
+	@XmlElement(name = "PmtTpInf")
 	public PaymentTypeInformation20 getPaymentTypeInformation() {
 		return paymentTypeInformation;
 	}
@@ -1020,6 +1033,7 @@ public class PaymentInstructionInformation4 {
 		this.paymentTypeInformation = paymentTypeInformation;
 	}
 
+	@XmlElement(name = "ReqdColltnDt", required = true)
 	public ISODate getRequestedCollectionDate() {
 		return requestedCollectionDate;
 	}
@@ -1028,6 +1042,7 @@ public class PaymentInstructionInformation4 {
 		this.requestedCollectionDate = requestedCollectionDate;
 	}
 
+	@XmlElement(name = "Cdtr", required = true)
 	public PartyIdentification32 getCreditor() {
 		return creditor;
 	}
@@ -1036,6 +1051,7 @@ public class PaymentInstructionInformation4 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAcct", required = true)
 	public CashAccount16 getCreditorAccount() {
 		return creditorAccount;
 	}
@@ -1044,6 +1060,7 @@ public class PaymentInstructionInformation4 {
 		this.creditorAccount = creditorAccount;
 	}
 
+	@XmlElement(name = "CdtrAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification4 getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -1052,6 +1069,7 @@ public class PaymentInstructionInformation4 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "CdtrAgtAcct")
 	public CashAccount16 getCreditorAgentAccount() {
 		return creditorAgentAccount;
 	}
@@ -1060,6 +1078,7 @@ public class PaymentInstructionInformation4 {
 		this.creditorAgentAccount = creditorAgentAccount;
 	}
 
+	@XmlElement(name = "UltmtCdtr")
 	public PartyIdentification32 getUltimateCreditor() {
 		return ultimateCreditor;
 	}
@@ -1068,6 +1087,7 @@ public class PaymentInstructionInformation4 {
 		this.ultimateCreditor = ultimateCreditor;
 	}
 
+	@XmlElement(name = "ChrgBr")
 	public ChargeBearerType1Code getChargeBearer() {
 		return chargeBearer;
 	}
@@ -1076,6 +1096,7 @@ public class PaymentInstructionInformation4 {
 		this.chargeBearer = chargeBearer;
 	}
 
+	@XmlElement(name = "ChrgsAcct")
 	public CashAccount16 getChargesAccount() {
 		return chargesAccount;
 	}
@@ -1084,6 +1105,7 @@ public class PaymentInstructionInformation4 {
 		this.chargesAccount = chargesAccount;
 	}
 
+	@XmlElement(name = "ChrgsAcctAgt")
 	public BranchAndFinancialInstitutionIdentification4 getChargesAccountAgent() {
 		return chargesAccountAgent;
 	}
@@ -1092,6 +1114,7 @@ public class PaymentInstructionInformation4 {
 		this.chargesAccountAgent = chargesAccountAgent;
 	}
 
+	@XmlElement(name = "CdtrSchmeId")
 	public PartyIdentification32 getCreditorSchemeIdentification() {
 		return creditorSchemeIdentification;
 	}
@@ -1100,6 +1123,7 @@ public class PaymentInstructionInformation4 {
 		this.creditorSchemeIdentification = creditorSchemeIdentification;
 	}
 
+	@XmlElement(name = "DrctDbtTxInf", required = true)
 	public List<DirectDebitTransactionInformation9> getDirectDebitTransactionInformation() {
 		return directDebitTransactionInformation;
 	}

@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -98,9 +100,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.055.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -137,6 +136,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.055.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -160,6 +162,8 @@ import java.util.List;
  * CustomerPaymentCancellationRequestV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustomerPaymentCancellationRequestV02", propOrder = {"assignment", "case", "controlData", "underlying", "supplementaryData"})
 public class CustomerPaymentCancellationRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -200,6 +204,14 @@ public class CustomerPaymentCancellationRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentCancellationRequestV02.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case3 case_;
 	/**
@@ -232,6 +244,14 @@ public class CustomerPaymentCancellationRequestV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Case3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentCancellationRequestV02.class.getMethod("getCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ControlData1 controlData;
@@ -270,6 +290,14 @@ public class CustomerPaymentCancellationRequestV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ControlData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentCancellationRequestV02.class.getMethod("getControlData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<UnderlyingTransaction6> underlying;
 	/**
@@ -303,6 +331,14 @@ public class CustomerPaymentCancellationRequestV02 {
 			definition = "Identifies the payment instruction to be cancelled.";
 			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTransaction6.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentCancellationRequestV02.class.getMethod("getUnderlying", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -341,6 +377,14 @@ public class CustomerPaymentCancellationRequestV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentCancellationRequestV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -355,8 +399,9 @@ public class CustomerPaymentCancellationRequestV02 {
 				rootElement = "Document";
 				xmlTag = "CstmrPmtCxlReq";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentCancellationRequestV02.mmAssignment, CustomerPaymentCancellationRequestV02.mmCase, CustomerPaymentCancellationRequestV02.mmControlData,
-						CustomerPaymentCancellationRequestV02.mmUnderlying, CustomerPaymentCancellationRequestV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV02.mmAssignment, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV02.mmCase,
+						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV02.mmControlData, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV02.mmUnderlying,
+						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -366,10 +411,16 @@ public class CustomerPaymentCancellationRequestV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CustomerPaymentCancellationRequestV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment3 getAssignment() {
 		return assignment;
 	}
@@ -378,6 +429,7 @@ public class CustomerPaymentCancellationRequestV02 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "Case")
 	public Case3 getCase() {
 		return case_;
 	}
@@ -386,6 +438,7 @@ public class CustomerPaymentCancellationRequestV02 {
 		this.case_ = case_;
 	}
 
+	@XmlElement(name = "CtrlData")
 	public ControlData1 getControlData() {
 		return controlData;
 	}
@@ -394,6 +447,7 @@ public class CustomerPaymentCancellationRequestV02 {
 		this.controlData = controlData;
 	}
 
+	@XmlElement(name = "Undrlyg", required = true)
 	public List<UnderlyingTransaction6> getUnderlying() {
 		return underlying;
 	}
@@ -402,11 +456,18 @@ public class CustomerPaymentCancellationRequestV02 {
 		this.underlying = underlying;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.055.02.02")
+	static public class Document {
+		@XmlElement(name = "CstmrPmtCxlReq", required = true)
+		public CustomerPaymentCancellationRequestV02 messageBody;
 	}
 }

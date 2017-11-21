@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MarketIdentification92;
 import com.tools20022.repository.msg.Trade1;
 import com.tools20022.repository.msg.Trade2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Market#mmTrade
+ * Market.mmTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Market#mmJurisdiction
+ * Market.mmJurisdiction}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Market#mmCountry
+ * Market.mmCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Market#mmGeographicalEnvironment
+ * Market.mmGeographicalEnvironment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Market#mmIdentification
+ * Market.mmIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
+ * </li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -58,29 +82,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Jurisdiction#mmRelatedMarket
  * Jurisdiction.mmRelatedMarket}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
- * </li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Market#mmTrade
- * Market.mmTrade}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Market#mmJurisdiction
- * Market.mmJurisdiction}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Market#mmCountry
- * Market.mmCountry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Market#mmGeographicalEnvironment
- * Market.mmGeographicalEnvironment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Market#mmIdentification
- * Market.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -135,7 +136,7 @@ public class Market {
 	 */
 	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Market.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Market.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
@@ -185,7 +186,7 @@ public class Market {
 	 */
 	public static final MMBusinessAssociationEnd mmJurisdiction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Market.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Market.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Jurisdiction";
@@ -214,10 +215,6 @@ public class Market {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Country Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Market
-	 * Market}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -226,6 +223,10 @@ public class Market {
 	 * MarketIdentification92.mmCountry}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Market
+	 * Market}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -240,7 +241,7 @@ public class Market {
 	public static final MMBusinessAssociationEnd mmCountry = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(MarketIdentification92.mmCountry);
-			elementContext_lazy = () -> Market.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Market.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Country";
@@ -265,10 +266,6 @@ public class Market {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.GeographicalEnvironmentCode
 	 * GeographicalEnvironmentCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Market
-	 * Market}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -280,6 +277,10 @@ public class Market {
 	 * Trade1.mmPlaceOfConfirmation}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Market
+	 * Market}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -296,7 +297,7 @@ public class Market {
 	public static final MMBusinessAttribute mmGeographicalEnvironment = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Trade2.mmPlaceOfConfirmation, Trade1.mmPlaceOfConfirmation);
-			elementContext_lazy = () -> Market.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Market.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GeographicalEnvironment";
@@ -304,6 +305,14 @@ public class Market {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> GeographicalEnvironmentCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Market.class.getMethod("getGeographicalEnvironment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentificationInformation identification;
@@ -325,10 +334,6 @@ public class Market {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
 	 * PartyIdentificationInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Market
-	 * Market}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -347,6 +352,10 @@ public class Market {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Market
+	 * Market}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -360,7 +369,7 @@ public class Market {
 	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeMarket1Choice.mmCode, TradeMarket1Choice.mmProprietary, MarketIdentification92.mmOperating, MarketIdentification92.mmSegment);
-			elementContext_lazy = () -> Market.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Market.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -383,8 +392,14 @@ public class Market {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.mmMarket, com.tools20022.repository.entity.PartyIdentificationInformation.mmIdentifiedMarket,
 						com.tools20022.repository.entity.Trade.mmMarket, com.tools20022.repository.entity.Jurisdiction.mmRelatedMarket);
 				subType_lazy = () -> Arrays.asList(TradingMarket.mmObject());
-				element_lazy = () -> Arrays.asList(Market.mmTrade, Market.mmJurisdiction, Market.mmCountry, Market.mmGeographicalEnvironment, Market.mmIdentification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Market.mmTrade, com.tools20022.repository.entity.Market.mmJurisdiction, com.tools20022.repository.entity.Market.mmCountry,
+						com.tools20022.repository.entity.Market.mmGeographicalEnvironment, com.tools20022.repository.entity.Market.mmIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(MarketIdentification92.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Market.class;
 			}
 		});
 		return mmObject_lazy.get();

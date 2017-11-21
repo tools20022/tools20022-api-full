@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional information with update description and date.
@@ -73,6 +77,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UpdatedURLlnformation", propOrder = {"updateDescription", "updateDate", "URLAddress"})
 public class UpdatedURLlnformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -254,6 +260,7 @@ public class UpdatedURLlnformation {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UpdDesc")
 	public Max140Text getUpdateDescription() {
 		return updateDescription;
 	}
@@ -262,6 +269,7 @@ public class UpdatedURLlnformation {
 		this.updateDescription = updateDescription;
 	}
 
+	@XmlElement(name = "UpdDt")
 	public ISODate getUpdateDate() {
 		return updateDate;
 	}
@@ -270,6 +278,7 @@ public class UpdatedURLlnformation {
 		this.updateDate = updateDate;
 	}
 
+	@XmlElement(name = "URLAdr", required = true)
 	public Max256Text getURLAddress() {
 		return uRLAddress;
 	}

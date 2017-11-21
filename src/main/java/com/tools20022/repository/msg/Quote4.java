@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SecuritiesQuoteVariable;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Proposition of price for a financial instrument.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Proposition of price for a financial instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Quote4", propOrder = {"quoteResponseType", "responseLevel", "type", "quoteOriginator", "quoteOriginatorRole", "requestorEligibility", "quoteChoice"})
 public class Quote4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -409,6 +415,7 @@ public class Quote4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QtRspnTp")
 	public QuoteResponseType1Code getQuoteResponseType() {
 		return quoteResponseType;
 	}
@@ -417,6 +424,7 @@ public class Quote4 {
 		this.quoteResponseType = quoteResponseType;
 	}
 
+	@XmlElement(name = "RspnLvl")
 	public ResponseLevel1Code getResponseLevel() {
 		return responseLevel;
 	}
@@ -425,6 +433,7 @@ public class Quote4 {
 		this.responseLevel = responseLevel;
 	}
 
+	@XmlElement(name = "Tp")
 	public QuoteType1Code getType() {
 		return type;
 	}
@@ -433,6 +442,7 @@ public class Quote4 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "QtOrgtr")
 	public PartyIdentification24Choice getQuoteOriginator() {
 		return quoteOriginator;
 	}
@@ -441,6 +451,7 @@ public class Quote4 {
 		this.quoteOriginator = quoteOriginator;
 	}
 
+	@XmlElement(name = "QtOrgtrRole")
 	public OriginatorRole1Code getQuoteOriginatorRole() {
 		return quoteOriginatorRole;
 	}
@@ -449,6 +460,7 @@ public class Quote4 {
 		this.quoteOriginatorRole = quoteOriginatorRole;
 	}
 
+	@XmlElement(name = "RqstrElgblty")
 	public Eligibility1Code getRequestorEligibility() {
 		return requestorEligibility;
 	}
@@ -457,6 +469,7 @@ public class Quote4 {
 		this.requestorEligibility = requestorEligibility;
 	}
 
+	@XmlElement(name = "QtChc", required = true)
 	public SingleOrMassQuote2Choice getQuoteChoice() {
 		return quoteChoice;
 	}

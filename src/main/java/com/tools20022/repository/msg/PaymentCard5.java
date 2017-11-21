@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment card performing the transaction.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentCard1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentCard5", propOrder = {"protectedCardData", "plainCardData", "cardCountryCode", "cardProductProfile", "cardBrand", "additionalCardData"})
 public class PaymentCard5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -429,6 +435,7 @@ public class PaymentCard5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrtctdCardData")
 	public ContentInformationType5 getProtectedCardData() {
 		return protectedCardData;
 	}
@@ -437,6 +444,7 @@ public class PaymentCard5 {
 		this.protectedCardData = protectedCardData;
 	}
 
+	@XmlElement(name = "PlainCardData")
 	public PlainCardData1 getPlainCardData() {
 		return plainCardData;
 	}
@@ -445,6 +453,7 @@ public class PaymentCard5 {
 		this.plainCardData = plainCardData;
 	}
 
+	@XmlElement(name = "CardCtryCd")
 	public Max3Text getCardCountryCode() {
 		return cardCountryCode;
 	}
@@ -453,6 +462,7 @@ public class PaymentCard5 {
 		this.cardCountryCode = cardCountryCode;
 	}
 
+	@XmlElement(name = "CardPdctPrfl")
 	public Exact4NumericText getCardProductProfile() {
 		return cardProductProfile;
 	}
@@ -461,6 +471,7 @@ public class PaymentCard5 {
 		this.cardProductProfile = cardProductProfile;
 	}
 
+	@XmlElement(name = "CardBrnd")
 	public Max35Text getCardBrand() {
 		return cardBrand;
 	}
@@ -469,6 +480,7 @@ public class PaymentCard5 {
 		this.cardBrand = cardBrand;
 	}
 
+	@XmlElement(name = "AddtlCardData")
 	public Max70Text getAdditionalCardData() {
 		return additionalCardData;
 	}

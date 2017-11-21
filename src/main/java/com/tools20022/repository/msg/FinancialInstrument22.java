@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Security that is a sub-set of an investment fund, and is governed by the same
@@ -98,6 +102,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrument22", propOrder = {"classType", "securitiesForm", "distributionPolicy", "productGroup", "umbrellaName", "baseCurrency", "denominationCurrency", "requestedNAVCurrency", "dualFundIndicator",
+		"countryOfDomicile", "registeredDistributionCountry"})
 public class FinancialInstrument22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -658,6 +665,7 @@ public class FinancialInstrument22 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClssTp")
 	public Max35Text getClassType() {
 		return classType;
 	}
@@ -666,6 +674,7 @@ public class FinancialInstrument22 {
 		this.classType = classType;
 	}
 
+	@XmlElement(name = "SctiesForm")
 	public FormOfSecurity1Code getSecuritiesForm() {
 		return securitiesForm;
 	}
@@ -674,6 +683,7 @@ public class FinancialInstrument22 {
 		this.securitiesForm = securitiesForm;
 	}
 
+	@XmlElement(name = "DstrbtnPlcy")
 	public DistributionPolicy1Code getDistributionPolicy() {
 		return distributionPolicy;
 	}
@@ -682,6 +692,7 @@ public class FinancialInstrument22 {
 		this.distributionPolicy = distributionPolicy;
 	}
 
+	@XmlElement(name = "PdctGrp")
 	public RestrictedFINXMax140Text getProductGroup() {
 		return productGroup;
 	}
@@ -690,6 +701,7 @@ public class FinancialInstrument22 {
 		this.productGroup = productGroup;
 	}
 
+	@XmlElement(name = "UmbrllNm")
 	public Max35Text getUmbrellaName() {
 		return umbrellaName;
 	}
@@ -698,6 +710,7 @@ public class FinancialInstrument22 {
 		this.umbrellaName = umbrellaName;
 	}
 
+	@XmlElement(name = "BaseCcy")
 	public ActiveCurrencyCode getBaseCurrency() {
 		return baseCurrency;
 	}
@@ -706,6 +719,7 @@ public class FinancialInstrument22 {
 		this.baseCurrency = baseCurrency;
 	}
 
+	@XmlElement(name = "DnmtnCcy")
 	public ActiveCurrencyCode getDenominationCurrency() {
 		return denominationCurrency;
 	}
@@ -714,6 +728,7 @@ public class FinancialInstrument22 {
 		this.denominationCurrency = denominationCurrency;
 	}
 
+	@XmlElement(name = "ReqdNAVCcy")
 	public ActiveOrHistoricCurrencyCode getRequestedNAVCurrency() {
 		return requestedNAVCurrency;
 	}
@@ -722,6 +737,7 @@ public class FinancialInstrument22 {
 		this.requestedNAVCurrency = requestedNAVCurrency;
 	}
 
+	@XmlElement(name = "DualFndInd")
 	public YesNoIndicator getDualFundIndicator() {
 		return dualFundIndicator;
 	}
@@ -730,6 +746,7 @@ public class FinancialInstrument22 {
 		this.dualFundIndicator = dualFundIndicator;
 	}
 
+	@XmlElement(name = "CtryOfDmcl")
 	public CountryCode getCountryOfDomicile() {
 		return countryOfDomicile;
 	}
@@ -738,6 +755,7 @@ public class FinancialInstrument22 {
 		this.countryOfDomicile = countryOfDomicile;
 	}
 
+	@XmlElement(name = "RegdDstrbtnCtry")
 	public List<CountryCode> getRegisteredDistributionCountry() {
 		return registeredDistributionCountry;
 	}

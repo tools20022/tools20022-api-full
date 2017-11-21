@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies totals related to the invoice.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies totals related to the invoice."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ServiceItemTotals1", propOrder = {"itemType", "quantity", "unitPrice", "totalTaxableAmount", "totalTaxAmount", "totalInvoiceAmount"})
 public class ServiceItemTotals1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -383,6 +389,7 @@ public class ServiceItemTotals1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ItmTp", required = true)
 	public Max4AlphaNumericText getItemType() {
 		return itemType;
 	}
@@ -391,6 +398,7 @@ public class ServiceItemTotals1 {
 		this.itemType = itemType;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public Number getQuantity() {
 		return quantity;
 	}
@@ -399,6 +407,7 @@ public class ServiceItemTotals1 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "UnitPric")
 	public ActiveCurrencyAndAmount getUnitPrice() {
 		return unitPrice;
 	}
@@ -407,6 +416,7 @@ public class ServiceItemTotals1 {
 		this.unitPrice = unitPrice;
 	}
 
+	@XmlElement(name = "TtlTaxblAmt")
 	public ActiveCurrencyAndAmount getTotalTaxableAmount() {
 		return totalTaxableAmount;
 	}
@@ -415,6 +425,7 @@ public class ServiceItemTotals1 {
 		this.totalTaxableAmount = totalTaxableAmount;
 	}
 
+	@XmlElement(name = "TtlTaxAmt")
 	public ActiveCurrencyAndAmount getTotalTaxAmount() {
 		return totalTaxAmount;
 	}
@@ -423,6 +434,7 @@ public class ServiceItemTotals1 {
 		this.totalTaxAmount = totalTaxAmount;
 	}
 
+	@XmlElement(name = "TtlInvcAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalInvoiceAmount() {
 		return totalInvoiceAmount;
 	}

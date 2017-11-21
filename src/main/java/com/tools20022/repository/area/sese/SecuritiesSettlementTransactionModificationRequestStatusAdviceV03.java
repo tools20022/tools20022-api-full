@@ -27,9 +27,11 @@ import com.tools20022.repository.choice.PartyIdentification36Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * Scope An account servicer sends a
@@ -57,9 +59,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.039.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
@@ -112,6 +111,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.039.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -135,6 +137,9 @@ import java.util.List;
  * SecuritiesSettlementTransactionModificationRequestStatusAdviceV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesSettlementTransactionModificationRequestStatusAdviceV03", propOrder = {"modificationRequestReference", "accountOwner", "safekeepingAccount", "transactionIdentification", "modificationProcessingStatus",
+		"transactionDetails", "supplementaryData"})
 public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -191,6 +196,14 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Identification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.class.getMethod("getModificationRequestReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification36Choice accountOwner;
 	/**
@@ -243,6 +256,14 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification36Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.class.getMethod("getAccountOwner", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesAccount13 safekeepingAccount;
 	/**
@@ -294,6 +315,14 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.class.getMethod("getSafekeepingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TransactionIdentifications25 transactionIdentification;
@@ -348,6 +377,14 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> TransactionIdentifications25.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ModificationProcessingStatus4Choice modificationProcessingStatus;
 	/**
@@ -401,6 +438,14 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> ModificationProcessingStatus4Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.class.getMethod("getModificationProcessingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionDetails45 transactionDetails;
 	/**
@@ -452,6 +497,14 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TransactionDetails45.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.class.getMethod("getTransactionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -507,6 +560,14 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -521,10 +582,13 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxModReqStsAdvc";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmModificationRequestReference,
-						SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmAccountOwner, SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmSafekeepingAccount,
-						SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmTransactionIdentification, SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmModificationProcessingStatus,
-						SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmTransactionDetails, SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmModificationRequestReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmAccountOwner,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmModificationProcessingStatus,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmTransactionDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -534,10 +598,16 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ModReqRef", required = true)
 	public Identification1 getModificationRequestReference() {
 		return modificationRequestReference;
 	}
@@ -546,6 +616,7 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 		this.modificationRequestReference = modificationRequestReference;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification36Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -554,6 +625,7 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -562,6 +634,7 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "TxId")
 	public TransactionIdentifications25 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -570,6 +643,7 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "ModPrcgSts", required = true)
 	public ModificationProcessingStatus4Choice getModificationProcessingStatus() {
 		return modificationProcessingStatus;
 	}
@@ -578,6 +652,7 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 		this.modificationProcessingStatus = modificationProcessingStatus;
 	}
 
+	@XmlElement(name = "TxDtls")
 	public TransactionDetails45 getTransactionDetails() {
 		return transactionDetails;
 	}
@@ -586,11 +661,18 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 {
 		this.transactionDetails = transactionDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.039.03.03")
+	static public class Document {
+		@XmlElement(name = "SctiesSttlmTxModReqStsAdvc", required = true)
+		public SecuritiesSettlementTransactionModificationRequestStatusAdviceV03 messageBody;
 	}
 }

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Dividend;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extension for updated additional information
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UpdatedAdditionalInformation5SD1", propOrder = {"placeAndName", "distributionAmountPerShare", "netAssetDecreaseRatio", "accumulatedProfitPerShare", "deemedDividendPerShare", "residualDistributionAmountPerShare"})
 public class UpdatedAdditionalInformation5SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -421,6 +427,7 @@ public class UpdatedAdditionalInformation5SD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -429,6 +436,7 @@ public class UpdatedAdditionalInformation5SD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "DstrbtnAmtPerShr")
 	public RateAndAmountFormat2Choice getDistributionAmountPerShare() {
 		return distributionAmountPerShare;
 	}
@@ -437,6 +445,7 @@ public class UpdatedAdditionalInformation5SD1 {
 		this.distributionAmountPerShare = distributionAmountPerShare;
 	}
 
+	@XmlElement(name = "NetAsstDcrRatio")
 	public PercentageRate getNetAssetDecreaseRatio() {
 		return netAssetDecreaseRatio;
 	}
@@ -445,6 +454,7 @@ public class UpdatedAdditionalInformation5SD1 {
 		this.netAssetDecreaseRatio = netAssetDecreaseRatio;
 	}
 
+	@XmlElement(name = "AcmltdPrftPerShr")
 	public RateAndAmountFormat2Choice getAccumulatedProfitPerShare() {
 		return accumulatedProfitPerShare;
 	}
@@ -453,6 +463,7 @@ public class UpdatedAdditionalInformation5SD1 {
 		this.accumulatedProfitPerShare = accumulatedProfitPerShare;
 	}
 
+	@XmlElement(name = "DmdDvddPerShr")
 	public RateAndAmountFormat2Choice getDeemedDividendPerShare() {
 		return deemedDividendPerShare;
 	}
@@ -461,6 +472,7 @@ public class UpdatedAdditionalInformation5SD1 {
 		this.deemedDividendPerShare = deemedDividendPerShare;
 	}
 
+	@XmlElement(name = "RsdlDstrbtnAmtPerShr")
 	public RateAndAmountFormat2Choice getResidualDistributionAmountPerShare() {
 		return residualDistributionAmountPerShare;
 	}

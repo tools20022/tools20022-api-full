@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the quantity.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of format for the quantity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuantitySearch1Choice", propOrder = {"quantity", "originalAndCurrentFace"})
 public class QuantitySearch1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class QuantitySearch1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantitySearch1Choice getQuantity() {
 		return quantity;
 	}
@@ -174,6 +181,7 @@ public class QuantitySearch1Choice {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "OrgnlAndCurFace", required = true)
 	public FinancialInstrumentQuantitySearch1 getOriginalAndCurrentFace() {
 		return originalAndCurrentFace;
 	}

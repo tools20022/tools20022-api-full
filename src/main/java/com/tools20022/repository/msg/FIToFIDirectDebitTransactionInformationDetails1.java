@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements providing information specific to the individual direct
@@ -63,6 +67,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FIToFIDirectDebitTransactionInformationDetails1", propOrder = {"groupHeader", "creditInstruction", "supplementaryData"})
 public class FIToFIDirectDebitTransactionInformationDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -212,6 +218,7 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader63 getGroupHeader() {
 		return groupHeader;
 	}
@@ -220,6 +227,7 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "CdtInstr", required = true)
 	public List<CreditTransferTransaction9> getCreditInstruction() {
 		return creditInstruction;
 	}
@@ -228,6 +236,7 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 		this.creditInstruction = creditInstruction;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

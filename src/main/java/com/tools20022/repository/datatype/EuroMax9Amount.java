@@ -36,6 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * currencyIdentifierSet} =
  * {@linkplain com.tools20022.repository.codeset.EuroCurrencyCode
  * EuroCurrencyCode}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMDecimal#getMinInclusive
+ * minInclusive} = "0.01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMDecimal#getMaxInclusive
+ * maxInclusive} = "999999999.99"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -72,6 +76,10 @@ public class EuroMax9Amount {
 				name = "EuroMax9Amount";
 				definition = "Number of monetary units specified in a currency, where the unit of currency is the EUR and compliant with ISO 4217.  The decimal separator is a dot, of maximum 9 digits before the dot and 2 after.\nNote: A zero amount is not allowed";
 				currencyIdentifierSet_lazy = () -> EuroCurrencyCode.mmObject();
+				minInclusive = "0.01";
+				maxInclusive = "999999999.99";
+				totalDigits = 11;
+				fractionDigits = 2;
 			}
 		});
 		return mmObject_lazy.get();

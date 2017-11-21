@@ -24,17 +24,16 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SupplementaryDataLatestVersion;
 import com.tools20022.repository.msg.TransactionData1;
 import com.tools20022.repository.msgset.SupplementaryDataISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * Supplementary data for payment message definitions.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code supl.017.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SupplementaryDataLatestVersion
@@ -61,6 +60,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code supl.017.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -70,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Supplementary data for payment message definitions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentSD1V01", propOrder = "cardRemittanceInformation")
 public class PaymentSD1V01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -108,6 +112,14 @@ public class PaymentSD1V01 {
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentSD1V01.class.getMethod("getCardRemittanceInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -120,7 +132,7 @@ public class PaymentSD1V01 {
 				rootElement = "Document";
 				xmlTag = "PmtSD1";
 				businessArea_lazy = () -> SupplementaryDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PaymentSD1V01.mmCardRemittanceInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.supl.PaymentSD1V01.mmCardRemittanceInformation);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "supl";
@@ -130,15 +142,27 @@ public class PaymentSD1V01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PaymentSD1V01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CardRmtInf", required = true)
 	public TransactionData1 getCardRemittanceInformation() {
 		return cardRemittanceInformation;
 	}
 
 	public void setCardRemittanceInformation(TransactionData1 cardRemittanceInformation) {
 		this.cardRemittanceInformation = cardRemittanceInformation;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:supl.017.01.01")
+	static public class Document {
+		@XmlElement(name = "PmtSD1", required = true)
+		public PaymentSD1V01 messageBody;
 	}
 }

@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Independent undertaking, such as a demand guarantee or standby letter of
@@ -163,6 +167,11 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Undertaking1", propOrder = {"applicantReferenceNumber", "purpose", "name", "type", "obligor", "applicant", "issuer", "beneficiary", "advisingParty", "secondAdvisingParty", "confirmer", "confirmationIndicator",
+		"counterUndertakingIndicator", "counterUndertaking", "undertakingAmount", "expiryDetails", "additionalParty", "governanceRulesAndLaw", "underlyingTransaction", "presentationDetails", "undertakingWording", "multipleDemandIndicator",
+		"partialDemandIndicator", "transferIndicator", "transferChargesPayableBy", "confirmationChargesPayableBy", "automaticAmountVariation", "deliveryChannel", "obligorLiabilityAccount", "obligorChargeAccount",
+		"obligorSettlementAccount", "enclosedFile", "additionalApplicationInformation"})
 public class Undertaking1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1749,6 +1758,7 @@ public class Undertaking1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ApplcntRefNb", required = true)
 	public Max35Text getApplicantReferenceNumber() {
 		return applicantReferenceNumber;
 	}
@@ -1757,6 +1767,7 @@ public class Undertaking1 {
 		this.applicantReferenceNumber = applicantReferenceNumber;
 	}
 
+	@XmlElement(name = "Purp", required = true)
 	public Max350Text getPurpose() {
 		return purpose;
 	}
@@ -1765,6 +1776,7 @@ public class Undertaking1 {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public UndertakingName1Code getName() {
 		return name;
 	}
@@ -1773,6 +1785,7 @@ public class Undertaking1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public UndertakingType1Choice getType() {
 		return type;
 	}
@@ -1781,6 +1794,7 @@ public class Undertaking1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Oblgr", required = true)
 	public PartyIdentification43 getObligor() {
 		return obligor;
 	}
@@ -1789,6 +1803,7 @@ public class Undertaking1 {
 		this.obligor = obligor;
 	}
 
+	@XmlElement(name = "Applcnt")
 	public List<PartyIdentification43> getApplicant() {
 		return applicant;
 	}
@@ -1797,6 +1812,7 @@ public class Undertaking1 {
 		this.applicant = applicant;
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public PartyIdentification43 getIssuer() {
 		return issuer;
 	}
@@ -1805,6 +1821,7 @@ public class Undertaking1 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "Bnfcry", required = true)
 	public List<PartyIdentification43> getBeneficiary() {
 		return beneficiary;
 	}
@@ -1813,6 +1830,7 @@ public class Undertaking1 {
 		this.beneficiary = beneficiary;
 	}
 
+	@XmlElement(name = "AdvsgPty")
 	public PartyIdentification43 getAdvisingParty() {
 		return advisingParty;
 	}
@@ -1821,6 +1839,7 @@ public class Undertaking1 {
 		this.advisingParty = advisingParty;
 	}
 
+	@XmlElement(name = "ScndAdvsgPty")
 	public PartyIdentification43 getSecondAdvisingParty() {
 		return secondAdvisingParty;
 	}
@@ -1829,6 +1848,7 @@ public class Undertaking1 {
 		this.secondAdvisingParty = secondAdvisingParty;
 	}
 
+	@XmlElement(name = "Cnfrmr")
 	public PartyIdentification43 getConfirmer() {
 		return confirmer;
 	}
@@ -1837,6 +1857,7 @@ public class Undertaking1 {
 		this.confirmer = confirmer;
 	}
 
+	@XmlElement(name = "ConfInd")
 	public YesNoIndicator getConfirmationIndicator() {
 		return confirmationIndicator;
 	}
@@ -1845,6 +1866,7 @@ public class Undertaking1 {
 		this.confirmationIndicator = confirmationIndicator;
 	}
 
+	@XmlElement(name = "CntrUdrtkgInd", required = true)
 	public YesNoIndicator getCounterUndertakingIndicator() {
 		return counterUndertakingIndicator;
 	}
@@ -1853,6 +1875,7 @@ public class Undertaking1 {
 		this.counterUndertakingIndicator = counterUndertakingIndicator;
 	}
 
+	@XmlElement(name = "CntrUdrtkg")
 	public Undertaking2 getCounterUndertaking() {
 		return counterUndertaking;
 	}
@@ -1861,6 +1884,7 @@ public class Undertaking1 {
 		this.counterUndertaking = counterUndertaking;
 	}
 
+	@XmlElement(name = "UdrtkgAmt", required = true)
 	public UndertakingAmount1 getUndertakingAmount() {
 		return undertakingAmount;
 	}
@@ -1869,6 +1893,7 @@ public class Undertaking1 {
 		this.undertakingAmount = undertakingAmount;
 	}
 
+	@XmlElement(name = "XpryDtls", required = true)
 	public ExpiryDetails2 getExpiryDetails() {
 		return expiryDetails;
 	}
@@ -1877,6 +1902,7 @@ public class Undertaking1 {
 		this.expiryDetails = expiryDetails;
 	}
 
+	@XmlElement(name = "AddtlPty")
 	public List<PartyAndType1> getAdditionalParty() {
 		return additionalParty;
 	}
@@ -1885,6 +1911,7 @@ public class Undertaking1 {
 		this.additionalParty = additionalParty;
 	}
 
+	@XmlElement(name = "GovncRulesAndLaw", required = true)
 	public GovernanceRules1 getGovernanceRulesAndLaw() {
 		return governanceRulesAndLaw;
 	}
@@ -1893,6 +1920,7 @@ public class Undertaking1 {
 		this.governanceRulesAndLaw = governanceRulesAndLaw;
 	}
 
+	@XmlElement(name = "UndrlygTx")
 	public List<UnderlyingTradeTransaction1> getUnderlyingTransaction() {
 		return underlyingTransaction;
 	}
@@ -1901,6 +1929,7 @@ public class Undertaking1 {
 		this.underlyingTransaction = underlyingTransaction;
 	}
 
+	@XmlElement(name = "PresntnDtls")
 	public Presentation4 getPresentationDetails() {
 		return presentationDetails;
 	}
@@ -1909,6 +1938,7 @@ public class Undertaking1 {
 		this.presentationDetails = presentationDetails;
 	}
 
+	@XmlElement(name = "UdrtkgWrdg", required = true)
 	public UndertakingWording1 getUndertakingWording() {
 		return undertakingWording;
 	}
@@ -1917,6 +1947,7 @@ public class Undertaking1 {
 		this.undertakingWording = undertakingWording;
 	}
 
+	@XmlElement(name = "MltplDmndInd")
 	public YesNoIndicator getMultipleDemandIndicator() {
 		return multipleDemandIndicator;
 	}
@@ -1925,6 +1956,7 @@ public class Undertaking1 {
 		this.multipleDemandIndicator = multipleDemandIndicator;
 	}
 
+	@XmlElement(name = "PrtlDmndInd")
 	public YesNoIndicator getPartialDemandIndicator() {
 		return partialDemandIndicator;
 	}
@@ -1933,6 +1965,7 @@ public class Undertaking1 {
 		this.partialDemandIndicator = partialDemandIndicator;
 	}
 
+	@XmlElement(name = "TrfInd")
 	public YesNoIndicator getTransferIndicator() {
 		return transferIndicator;
 	}
@@ -1941,6 +1974,7 @@ public class Undertaking1 {
 		this.transferIndicator = transferIndicator;
 	}
 
+	@XmlElement(name = "TrfChrgsPyblBy")
 	public ExternalTypeOfParty1Code getTransferChargesPayableBy() {
 		return transferChargesPayableBy;
 	}
@@ -1949,6 +1983,7 @@ public class Undertaking1 {
 		this.transferChargesPayableBy = transferChargesPayableBy;
 	}
 
+	@XmlElement(name = "ConfChrgsPyblBy")
 	public ExternalTypeOfParty1Code getConfirmationChargesPayableBy() {
 		return confirmationChargesPayableBy;
 	}
@@ -1957,6 +1992,7 @@ public class Undertaking1 {
 		this.confirmationChargesPayableBy = confirmationChargesPayableBy;
 	}
 
+	@XmlElement(name = "AutomtcAmtVartn")
 	public List<AutomaticVariation1> getAutomaticAmountVariation() {
 		return automaticAmountVariation;
 	}
@@ -1965,6 +2001,7 @@ public class Undertaking1 {
 		this.automaticAmountVariation = automaticAmountVariation;
 	}
 
+	@XmlElement(name = "DlvryChanl", required = true)
 	public CommunicationChannel1 getDeliveryChannel() {
 		return deliveryChannel;
 	}
@@ -1973,6 +2010,7 @@ public class Undertaking1 {
 		this.deliveryChannel = deliveryChannel;
 	}
 
+	@XmlElement(name = "OblgrLbltyAcct")
 	public CashAccount28 getObligorLiabilityAccount() {
 		return obligorLiabilityAccount;
 	}
@@ -1981,6 +2019,7 @@ public class Undertaking1 {
 		this.obligorLiabilityAccount = obligorLiabilityAccount;
 	}
 
+	@XmlElement(name = "OblgrChrgAcct")
 	public CashAccount28 getObligorChargeAccount() {
 		return obligorChargeAccount;
 	}
@@ -1989,6 +2028,7 @@ public class Undertaking1 {
 		this.obligorChargeAccount = obligorChargeAccount;
 	}
 
+	@XmlElement(name = "OblgrSttlmAcct")
 	public CashAccount28 getObligorSettlementAccount() {
 		return obligorSettlementAccount;
 	}
@@ -1997,6 +2037,7 @@ public class Undertaking1 {
 		this.obligorSettlementAccount = obligorSettlementAccount;
 	}
 
+	@XmlElement(name = "NclsdFile")
 	public List<Document9> getEnclosedFile() {
 		return enclosedFile;
 	}
@@ -2005,6 +2046,7 @@ public class Undertaking1 {
 		this.enclosedFile = enclosedFile;
 	}
 
+	@XmlElement(name = "AddtlApplInf")
 	public List<Max2000Text> getAdditionalApplicationInformation() {
 		return additionalApplicationInformation;
 	}

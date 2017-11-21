@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details specific to the individual direct debit
@@ -101,6 +105,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DirectDebitTransactionInformation15", propOrder = {"paymentIdentification", "paymentTypeInformation", "interbankSettlementAmount", "interbankSettlementDate", "settlementPriority", "settlementTimeRequest", "ultimateDebtor",
+		"debtor", "debtorAccount", "debtorAgent", "debtorAgentAccount", "instructionForDebtorAgent", "remittanceInformation"})
 public class DirectDebitTransactionInformation15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -778,6 +785,7 @@ public class DirectDebitTransactionInformation15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtId", required = true)
 	public PaymentIdentification3 getPaymentIdentification() {
 		return paymentIdentification;
 	}
@@ -786,6 +794,7 @@ public class DirectDebitTransactionInformation15 {
 		this.paymentIdentification = paymentIdentification;
 	}
 
+	@XmlElement(name = "PmtTpInf")
 	public PaymentTypeInformation21 getPaymentTypeInformation() {
 		return paymentTypeInformation;
 	}
@@ -794,6 +803,7 @@ public class DirectDebitTransactionInformation15 {
 		this.paymentTypeInformation = paymentTypeInformation;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmt", required = true)
 	public ActiveCurrencyAndAmount getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
@@ -802,6 +812,7 @@ public class DirectDebitTransactionInformation15 {
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDt")
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}
@@ -810,6 +821,7 @@ public class DirectDebitTransactionInformation15 {
 		this.interbankSettlementDate = interbankSettlementDate;
 	}
 
+	@XmlElement(name = "SttlmPrty")
 	public Priority3Code getSettlementPriority() {
 		return settlementPriority;
 	}
@@ -818,6 +830,7 @@ public class DirectDebitTransactionInformation15 {
 		this.settlementPriority = settlementPriority;
 	}
 
+	@XmlElement(name = "SttlmTmReq")
 	public SettlementTimeRequest2 getSettlementTimeRequest() {
 		return settlementTimeRequest;
 	}
@@ -826,6 +839,7 @@ public class DirectDebitTransactionInformation15 {
 		this.settlementTimeRequest = settlementTimeRequest;
 	}
 
+	@XmlElement(name = "UltmtDbtr")
 	public BranchAndFinancialInstitutionIdentification5 getUltimateDebtor() {
 		return ultimateDebtor;
 	}
@@ -834,6 +848,7 @@ public class DirectDebitTransactionInformation15 {
 		this.ultimateDebtor = ultimateDebtor;
 	}
 
+	@XmlElement(name = "Dbtr", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getDebtor() {
 		return debtor;
 	}
@@ -842,6 +857,7 @@ public class DirectDebitTransactionInformation15 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAcct")
 	public CashAccount24 getDebtorAccount() {
 		return debtorAccount;
 	}
@@ -850,6 +866,7 @@ public class DirectDebitTransactionInformation15 {
 		this.debtorAccount = debtorAccount;
 	}
 
+	@XmlElement(name = "DbtrAgt")
 	public BranchAndFinancialInstitutionIdentification5 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -858,6 +875,7 @@ public class DirectDebitTransactionInformation15 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "DbtrAgtAcct")
 	public CashAccount24 getDebtorAgentAccount() {
 		return debtorAgentAccount;
 	}
@@ -866,6 +884,7 @@ public class DirectDebitTransactionInformation15 {
 		this.debtorAgentAccount = debtorAgentAccount;
 	}
 
+	@XmlElement(name = "InstrForDbtrAgt")
 	public Max210Text getInstructionForDebtorAgent() {
 		return instructionForDebtorAgent;
 	}
@@ -874,6 +893,7 @@ public class DirectDebitTransactionInformation15 {
 		this.instructionForDebtorAgent = instructionForDebtorAgent;
 	}
 
+	@XmlElement(name = "RmtInf")
 	public RemittanceInformation2 getRemittanceInformation() {
 		return remittanceInformation;
 	}

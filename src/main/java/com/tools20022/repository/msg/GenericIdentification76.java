@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.OrganisationName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of an entity.
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * GenericIdentification31}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericIdentification76", propOrder = {"identification", "type", "issuer", "country", "shortName"})
 public class GenericIdentification76 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -426,6 +432,7 @@ public class GenericIdentification76 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -434,6 +441,7 @@ public class GenericIdentification76 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public PartyType3Code getType() {
 		return type;
 	}
@@ -442,6 +450,7 @@ public class GenericIdentification76 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Issr")
 	public PartyType4Code getIssuer() {
 		return issuer;
 	}
@@ -450,6 +459,7 @@ public class GenericIdentification76 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "Ctry")
 	public Min2Max3AlphaText getCountry() {
 		return country;
 	}
@@ -458,6 +468,7 @@ public class GenericIdentification76 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "ShrtNm")
 	public Max35Text getShortName() {
 		return shortName;
 	}

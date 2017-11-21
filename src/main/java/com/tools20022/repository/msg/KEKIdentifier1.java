@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Min5Max16Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a key encryption key (KEK), using previously distributed
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "KEKIdentifier1", propOrder = {"keyIdentification", "keyVersion", "derivationIdentification"})
 public class KEKIdentifier1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -239,6 +245,7 @@ public class KEKIdentifier1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "KeyId", required = true)
 	public Max140Text getKeyIdentification() {
 		return keyIdentification;
 	}
@@ -247,6 +254,7 @@ public class KEKIdentifier1 {
 		this.keyIdentification = keyIdentification;
 	}
 
+	@XmlElement(name = "KeyVrsn", required = true)
 	public Exact10Text getKeyVersion() {
 		return keyVersion;
 	}
@@ -255,6 +263,7 @@ public class KEKIdentifier1 {
 		this.keyVersion = keyVersion;
 	}
 
+	@XmlElement(name = "DerivtnId")
 	public Min5Max16Binary getDerivationIdentification() {
 		return derivationIdentification;
 	}

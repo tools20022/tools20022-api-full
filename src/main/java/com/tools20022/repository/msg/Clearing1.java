@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the clearing details.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the clearing details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Clearing1", propOrder = {"nonClearingMember", "settlementNettingEligibleCode", "clearingSegment", "guaranteedTrade", "nonGuaranteedTrade"})
 public class Clearing1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -344,6 +350,7 @@ public class Clearing1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NonClrMmb")
 	public PartyIdentificationAndAccount31 getNonClearingMember() {
 		return nonClearingMember;
 	}
@@ -352,6 +359,7 @@ public class Clearing1 {
 		this.nonClearingMember = nonClearingMember;
 	}
 
+	@XmlElement(name = "SttlmNetgElgblCd", required = true)
 	public NettingEligible1Code getSettlementNettingEligibleCode() {
 		return settlementNettingEligibleCode;
 	}
@@ -360,6 +368,7 @@ public class Clearing1 {
 		this.settlementNettingEligibleCode = settlementNettingEligibleCode;
 	}
 
+	@XmlElement(name = "ClrSgmt")
 	public PartyIdentification35Choice getClearingSegment() {
 		return clearingSegment;
 	}
@@ -368,6 +377,7 @@ public class Clearing1 {
 		this.clearingSegment = clearingSegment;
 	}
 
+	@XmlElement(name = "GrntedTrad")
 	public YesNoIndicator getGuaranteedTrade() {
 		return guaranteedTrade;
 	}
@@ -376,6 +386,7 @@ public class Clearing1 {
 		this.guaranteedTrade = guaranteedTrade;
 	}
 
+	@XmlElement(name = "NonGrntedTrad")
 	public NonGuaranteedTrade1 getNonGuaranteedTrade() {
 		return nonGuaranteedTrade;
 	}

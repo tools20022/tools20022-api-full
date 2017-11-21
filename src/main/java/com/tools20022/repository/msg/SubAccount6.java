@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Business relationship between two entities; one entity is the account owner,
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SubAccount5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubAccount6", propOrder = {"identification", "name", "characteristic", "accountDesignation"})
 public class SubAccount6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -304,6 +310,7 @@ public class SubAccount6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -312,6 +319,7 @@ public class SubAccount6 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max35Text getName() {
 		return name;
 	}
@@ -320,6 +328,7 @@ public class SubAccount6 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Chrtc")
 	public Max35Text getCharacteristic() {
 		return characteristic;
 	}
@@ -328,6 +337,7 @@ public class SubAccount6 {
 		this.characteristic = characteristic;
 	}
 
+	@XmlElement(name = "AcctDsgnt")
 	public Max35Text getAccountDesignation() {
 		return accountDesignation;
 	}

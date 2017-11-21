@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,6 +38,48 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+ * OrganisationIdentification.mmBICFI}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+ * OrganisationIdentification.mmAnyBIC}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmOrganisationName
+ * OrganisationIdentification.mmOrganisationName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmOrganisation
+ * OrganisationIdentification.mmOrganisation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmClearingSystemMemberIdentificationType
+ * OrganisationIdentification.mmClearingSystemMemberIdentificationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICNonFI
+ * OrganisationIdentification.mmBICNonFI}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmEANGLN
+ * OrganisationIdentification.mmEANGLN}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmCHIPSUniversalIdentifier
+ * OrganisationIdentification.mmCHIPSUniversalIdentifier}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmDUNS
+ * OrganisationIdentification.mmDUNS}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBankPartyIdentification
+ * OrganisationIdentification.mmBankPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmMIC
+ * OrganisationIdentification.mmMIC}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
+ * PartyIdentificationInformation}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -272,48 +315,6 @@ import java.util.List;
  * FinancialInstitutionIdentification8Choice.mmNameAndAddress}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
- * PartyIdentificationInformation}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
- * OrganisationIdentification.mmBICFI}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
- * OrganisationIdentification.mmAnyBIC}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmOrganisationName
- * OrganisationIdentification.mmOrganisationName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmOrganisation
- * OrganisationIdentification.mmOrganisation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmClearingSystemMemberIdentificationType
- * OrganisationIdentification.mmClearingSystemMemberIdentificationType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICNonFI
- * OrganisationIdentification.mmBICNonFI}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmEANGLN
- * OrganisationIdentification.mmEANGLN}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmCHIPSUniversalIdentifier
- * OrganisationIdentification.mmCHIPSUniversalIdentifier}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmDUNS
- * OrganisationIdentification.mmDUNS}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBankPartyIdentification
- * OrganisationIdentification.mmBankPartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmMIC
- * OrganisationIdentification.mmMIC}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -346,11 +347,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.BICFIIdentifier
 	 * BICFIIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
-	 * OrganisationIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -604,6 +600,11 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
+	 * OrganisationIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -636,7 +637,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 					LimitUtilisationJournalSearchCriteria1.mmAccountOwner, Baseline4.mmBuyerSideSubmittingBank, Baseline4.mmSellerSideSubmittingBank, FinancialInstitutionIdentification13.mmBICFI, Baseline5.mmBuyerSideSubmittingBank,
 					Baseline5.mmSellerSideSubmittingBank, PartyIdentification88Choice.mmBICFI, PartyIdentification94Choice.mmBICFI, FinancialInstitutionIdentification7Choice.mmBICFI, PartyIdentification102Choice.mmAnyBIC,
 					PartyIdentification101Choice.mmBIC, PartyIdentification113Choice.mmBICFI, FinancialInstitutionIdentification8Choice.mmBICFI);
-			elementContext_lazy = () -> OrganisationIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BICFI";
@@ -644,6 +645,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrganisationIdentification.class.getMethod("getBICFI", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AnyBICIdentifier anyBIC;
@@ -660,11 +669,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.AnyBICIdentifier
 	 * AnyBICIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
-	 * OrganisationIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1252,6 +1256,11 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
+	 * OrganisationIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1305,7 +1314,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 					SecuritiesTradeDetails65.mmPlaceOfClearing, SecuritiesTradeDetails66.mmPlaceOfClearing, PartyIdentification115Choice.mmAnyBIC, PartyIdentification114Choice.mmAnyBIC, PartyIdentification95Choice.mmAnyBIC,
 					SecuritiesTradeDetails67.mmPlaceOfClearing, SecuritiesTradeDetails68.mmPlaceOfClearing, TransactionDetails97.mmPlaceOfClearing, TransactionDetails96.mmPlaceOfClearing, TransactionDetails95.mmPlaceOfClearing,
 					SecuritiesTradeDetails69.mmPlaceOfClearing, SecuritiesTradeDetails70.mmPlaceOfClearing, TransactionDetails100.mmPlaceOfClearing, TransactionDetails99.mmPlaceOfClearing, TransactionDetails98.mmPlaceOfClearing);
-			elementContext_lazy = () -> OrganisationIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AnyBIC";
@@ -1313,6 +1322,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrganisationIdentification.class.getMethod("getAnyBIC", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.OrganisationName> organisationName;
@@ -1335,11 +1352,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.OrganisationName
 	 * OrganisationName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
-	 * OrganisationIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1353,6 +1365,11 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * Organisation21.mmName}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
+	 * OrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1369,7 +1386,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	public static final MMBusinessAssociationEnd mmOrganisationName = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Organisation2.mmName, Organisation4.mmName, Organisation3.mmName, Organisation21.mmName);
-			elementContext_lazy = () -> OrganisationIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrganisationName";
@@ -1416,7 +1433,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 */
 	public static final MMBusinessAssociationEnd mmOrganisation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> OrganisationIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Organisation";
@@ -1448,11 +1465,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
-	 * OrganisationIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1508,6 +1520,11 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
+	 * OrganisationIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1528,7 +1545,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 					FinancialInstitutionIdentification1.mmClearingSystemMemberIdentification, FinancialInstitutionIdentification6.mmClearingSystemMemberIdentification,
 					FinancialInstitutionIdentification9.mmClearingSystemMemberIdentification, FinancialInstitutionIdentification7Choice.mmClearingSystemMemberIdentification,
 					FinancialInstitutionIdentification8Choice.mmClearingSystemMemberIdentification);
-			elementContext_lazy = () -> OrganisationIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingSystemMemberIdentificationType";
@@ -1553,11 +1570,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.BICNonFIIdentifier
 	 * BICNonFIIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
-	 * OrganisationIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1586,6 +1598,11 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
+	 * OrganisationIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1602,7 +1619,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 		{
 			derivation_lazy = () -> Arrays.asList(OrganisationIdentification2.mmIBEI, OrganisationIdentification2.mmBEI, FinancialInstrumentStipulations.mmIssuerIdentification, FinancialInstrumentStipulations2.mmIssuerIdentification,
 					NonFinancialInstitutionIdentification1.mmBEI, PartyIdentification25.mmBEI, PartyIdentification9.mmBEI, PartyIdentification5.mmBEI);
-			elementContext_lazy = () -> OrganisationIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BICNonFI";
@@ -1610,6 +1627,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICNonFIIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrganisationIdentification.class.getMethod("getBICNonFI", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected EANGLNIdentifier eANGLN;
@@ -1627,11 +1652,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.EANGLNIdentifier
 	 * EANGLNIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
-	 * OrganisationIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1643,6 +1663,11 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * NonFinancialInstitutionIdentification1.mmEANGLN}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
+	 * OrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1659,7 +1684,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	public static final MMBusinessAttribute mmEANGLN = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrganisationIdentification2.mmEANGLN, NonFinancialInstitutionIdentification1.mmEANGLN);
-			elementContext_lazy = () -> OrganisationIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EANGLN";
@@ -1667,6 +1692,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EANGLNIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrganisationIdentification.class.getMethod("getEANGLN", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CHIPSUniversalIdentifier cHIPSUniversalIdentifier;
@@ -1683,11 +1716,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CHIPSUniversalIdentifier
 	 * CHIPSUniversalIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
-	 * OrganisationIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1699,6 +1727,11 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * NonFinancialInstitutionIdentification1.mmCHIPSUniversalIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
+	 * OrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1715,7 +1748,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	public static final MMBusinessAttribute mmCHIPSUniversalIdentifier = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrganisationIdentification2.mmCHIPSUniversalIdentification, NonFinancialInstitutionIdentification1.mmCHIPSUniversalIdentification);
-			elementContext_lazy = () -> OrganisationIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CHIPSUniversalIdentifier";
@@ -1723,6 +1756,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> com.tools20022.repository.datatype.CHIPSUniversalIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrganisationIdentification.class.getMethod("getCHIPSUniversalIdentifier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DunsIdentifier dUNS;
@@ -1737,11 +1778,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.DunsIdentifier
 	 * DunsIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
-	 * OrganisationIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1753,6 +1789,11 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * NonFinancialInstitutionIdentification1.mmDUNS}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
+	 * OrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1769,7 +1810,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	public static final MMBusinessAttribute mmDUNS = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrganisationIdentification2.mmDUNS, NonFinancialInstitutionIdentification1.mmDUNS);
-			elementContext_lazy = () -> OrganisationIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DUNS";
@@ -1777,6 +1818,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DunsIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrganisationIdentification.class.getMethod("getDUNS", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text bankPartyIdentification;
@@ -1790,11 +1839,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
-	 * OrganisationIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1806,6 +1850,11 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * NonFinancialInstitutionIdentification1.mmBankPartyIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
+	 * OrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1822,7 +1871,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	public static final MMBusinessAttribute mmBankPartyIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrganisationIdentification2.mmBankPartyIdentification, NonFinancialInstitutionIdentification1.mmBankPartyIdentification);
-			elementContext_lazy = () -> OrganisationIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BankPartyIdentification";
@@ -1830,6 +1879,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrganisationIdentification.class.getMethod("getBankPartyIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MICIdentifier mIC;
@@ -1845,11 +1902,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.MICIdentifier
 	 * MICIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
-	 * OrganisationIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1942,6 +1994,11 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
+	 * OrganisationIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1963,7 +2020,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 					SecurityInstrumentDescription1.mmPlaceOfListing, PartyIdentification24Choice.mmMIC, PartyIdentification11Choice.mmCentralCounterparty, SecurityInstrumentDescription2.mmPlaceOfListing,
 					PlaceOfTradeIdentification3Choice.mmExchange, Issuance1.mmIssuePlace, TradingParameters1.mmMarketIdentification, MeetingContactPerson2.mmPlaceOfListing, TradingVenueIdentification1Choice.mmMarketIdentificationCode,
 					TradingVenueAttributes1.mmIdentification, PersonOrOrganisation1Choice.mmMIC, Organisation30.mmPlaceOfListing, Organisation29.mmPlaceOfListing, MarketDetail2.mmIdentification);
-			elementContext_lazy = () -> OrganisationIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MIC";
@@ -1971,6 +2028,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrganisationIdentification.class.getMethod("getMIC", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1993,9 +2058,12 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 						CashAccountCharacteristics2.mmAccountServicer, Party29Choice.mmOrganisationIdentification, Party29Choice.mmFinancialInstitutionIdentification, Party1.mmOrganisationIdentification,
 						FinancialInstitutionIdentification7Choice.mmNameAndAddress, FinancialInstitutionIdentification10.mmParty, FinancialInstitutionIdentification8Choice.mmNameAndAddress);
 				superType_lazy = () -> PartyIdentificationInformation.mmObject();
-				element_lazy = () -> Arrays.asList(OrganisationIdentification.mmBICFI, OrganisationIdentification.mmAnyBIC, OrganisationIdentification.mmOrganisationName, OrganisationIdentification.mmOrganisation,
-						OrganisationIdentification.mmClearingSystemMemberIdentificationType, OrganisationIdentification.mmBICNonFI, OrganisationIdentification.mmEANGLN, OrganisationIdentification.mmCHIPSUniversalIdentifier,
-						OrganisationIdentification.mmDUNS, OrganisationIdentification.mmBankPartyIdentification, OrganisationIdentification.mmMIC);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.OrganisationIdentification.mmBICFI, com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC,
+						com.tools20022.repository.entity.OrganisationIdentification.mmOrganisationName, com.tools20022.repository.entity.OrganisationIdentification.mmOrganisation,
+						com.tools20022.repository.entity.OrganisationIdentification.mmClearingSystemMemberIdentificationType, com.tools20022.repository.entity.OrganisationIdentification.mmBICNonFI,
+						com.tools20022.repository.entity.OrganisationIdentification.mmEANGLN, com.tools20022.repository.entity.OrganisationIdentification.mmCHIPSUniversalIdentifier,
+						com.tools20022.repository.entity.OrganisationIdentification.mmDUNS, com.tools20022.repository.entity.OrganisationIdentification.mmBankPartyIdentification,
+						com.tools20022.repository.entity.OrganisationIdentification.mmMIC);
 				derivationComponent_lazy = () -> Arrays.asList(BranchData.mmObject(), FinancialInstitutionIdentification3Choice.mmObject(), GenericFinancialIdentification1.mmObject(), FinancialInstitutionIdentification8.mmObject(),
 						BranchData2.mmObject(), OrganisationIdentification2.mmObject(), OrganisationIdentificationSchemeName1Choice.mmObject(), GenericOrganisationIdentification1.mmObject(), OrganisationIdentification4.mmObject(),
 						OrganisationIdentification8.mmObject(), FinancialInstitutionIdentification3.mmObject(), FinancialInstitutionIdentification5Choice.mmObject(), FinancialInstitutionIdentification7.mmObject(),
@@ -2006,6 +2074,11 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 						OrganisationIdentificationSD1.mmObject(), FinancialInstitutionIdentification13.mmObject(), TradingVenueIdentification1Choice.mmObject(), SecuritiesTransactionTransmission2.mmObject(), Party1.mmObject(),
 						OrganisationIdentification26.mmObject(), FinancialInstitutionIdentification7Choice.mmObject(), TradingVenueIdentification2.mmObject(), TaxOrganisationIdentification1.mmObject(),
 						FinancialInstitutionIdentification10.mmObject(), FinancialInstitutionIdentification8Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return OrganisationIdentification.class;
 			}
 		});
 		return mmObject_lazy.get();

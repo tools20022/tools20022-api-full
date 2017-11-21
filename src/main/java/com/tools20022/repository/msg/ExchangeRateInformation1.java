@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Further detailed information on the exchange rate that has been used in the
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExchangeRateInformation1", propOrder = {"exchangeRate", "rateType", "contractIdentification"})
 public class ExchangeRateInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -238,6 +244,7 @@ public class ExchangeRateInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XchgRate")
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -246,6 +253,7 @@ public class ExchangeRateInformation1 {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "RateTp")
 	public ExchangeRateType1Code getRateType() {
 		return rateType;
 	}
@@ -254,6 +262,7 @@ public class ExchangeRateInformation1 {
 		this.rateType = rateType;
 	}
 
+	@XmlElement(name = "CtrctId")
 	public Max35Text getContractIdentification() {
 		return contractIdentification;
 	}

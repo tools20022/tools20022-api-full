@@ -28,6 +28,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "REFUSED"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -56,6 +58,8 @@ public class Refused7Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Refused7Text";
 				definition = "Specifies an alphanumeric string with a length of 7 characters and a fixed value of 'REFUSED'.";
+				pattern = "REFUSED";
+				length = 7;
 			}
 		});
 		return mmObject_lazy.get();

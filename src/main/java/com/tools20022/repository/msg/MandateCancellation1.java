@@ -25,6 +25,10 @@ import com.tools20022.repository.choice.OriginalMandate1Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the mandate to be cancelled.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the mandate to be cancelled."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MandateCancellation1", propOrder = {"originalMessageInformation", "cancellationReason", "originalMandate"})
 public class MandateCancellation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -219,6 +225,7 @@ public class MandateCancellation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMsgInf")
 	public OriginalMessageInformation1 getOriginalMessageInformation() {
 		return originalMessageInformation;
 	}
@@ -227,6 +234,7 @@ public class MandateCancellation1 {
 		this.originalMessageInformation = originalMessageInformation;
 	}
 
+	@XmlElement(name = "CxlRsn", required = true)
 	public CancellationReasonInformation2 getCancellationReason() {
 		return cancellationReason;
 	}
@@ -235,6 +243,7 @@ public class MandateCancellation1 {
 		this.cancellationReason = cancellationReason;
 	}
 
+	@XmlElement(name = "OrgnlMndt", required = true)
 	public OriginalMandate1Choice getOriginalMandate() {
 		return originalMandate;
 	}

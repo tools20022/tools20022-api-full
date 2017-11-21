@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account to or from which a securities entry is made.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Account to or from which a securities entry is made."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesAccount18", propOrder = {"identification", "type", "name"})
 public class SecuritiesAccount18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -251,6 +257,7 @@ public class SecuritiesAccount18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -259,6 +266,7 @@ public class SecuritiesAccount18 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ClearingAccountType1Code getType() {
 		return type;
 	}
@@ -267,6 +275,7 @@ public class SecuritiesAccount18 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max70Text getName() {
 		return name;
 	}

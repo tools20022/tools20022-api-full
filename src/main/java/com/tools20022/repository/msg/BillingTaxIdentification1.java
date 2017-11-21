@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.TaxPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the tax identification related to a service to be billed.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the tax identification related to a service to be billed."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingTaxIdentification1", propOrder = {"VATRegistrationNumber", "taxRegistrationNumber", "taxContact"})
 public class BillingTaxIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class BillingTaxIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "VATRegnNb")
 	public Max35Text getVATRegistrationNumber() {
 		return vATRegistrationNumber;
 	}
@@ -236,6 +243,7 @@ public class BillingTaxIdentification1 {
 		this.vATRegistrationNumber = vATRegistrationNumber;
 	}
 
+	@XmlElement(name = "TaxRegnNb")
 	public Max35Text getTaxRegistrationNumber() {
 		return taxRegistrationNumber;
 	}
@@ -244,6 +252,7 @@ public class BillingTaxIdentification1 {
 		this.taxRegistrationNumber = taxRegistrationNumber;
 	}
 
+	@XmlElement(name = "TaxCtct")
 	public ContactDetails3 getTaxContact() {
 		return taxContact;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Customer involved in a withdrawal transaction.
@@ -65,6 +69,8 @@ import java.util.List;
  * definition} = "Customer involved in a withdrawal transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCustomer6", propOrder = {"profile", "selectedLanguage", "authenticationResult"})
 public class ATMCustomer6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -207,6 +213,7 @@ public class ATMCustomer6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prfl")
 	public ATMCustomerProfile4 getProfile() {
 		return profile;
 	}
@@ -215,6 +222,7 @@ public class ATMCustomer6 {
 		this.profile = profile;
 	}
 
+	@XmlElement(name = "SelctdLang")
 	public LanguageCode getSelectedLanguage() {
 		return selectedLanguage;
 	}
@@ -223,6 +231,7 @@ public class ATMCustomer6 {
 		this.selectedLanguage = selectedLanguage;
 	}
 
+	@XmlElement(name = "AuthntcnRslt", required = true)
 	public List<TransactionVerificationResult5> getAuthenticationResult() {
 		return authenticationResult;
 	}

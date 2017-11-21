@@ -30,56 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason17Code
- * RejectionReason17Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason4Code
- * PendingCancellationReason4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason28Code
- * RejectionReason28Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason1Code
- * RejectionReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason2Code
- * RejectionReason2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason11Code
- * RejectionReason11Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason6Code
- * RejectionReason6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason18Code
- * RejectionReason18Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason9Code
- * RejectionReason9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason8Code
- * RejectionReason8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason19Code
- * RejectionReason19Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason13Code
- * RejectionReason13Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason14Code
- * RejectionReason14Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason15Code
- * RejectionReason15Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason20Code
- * RejectionReason20Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason10Code
- * RejectionReason10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason12Code
- * RejectionReason12Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason7Code
- * RejectionReason7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason3Code
- * RejectionReason3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason5Code
- * RejectionReason5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason4Code
- * RejectionReason4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason45Code
- * RejectionReason45Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -590,6 +540,56 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.RejectionReasonCode#mmOther
  * RejectionReasonCode.mmOther}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason17Code
+ * RejectionReason17Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason4Code
+ * PendingCancellationReason4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason28Code
+ * RejectionReason28Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason1Code
+ * RejectionReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason2Code
+ * RejectionReason2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason11Code
+ * RejectionReason11Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason6Code
+ * RejectionReason6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason18Code
+ * RejectionReason18Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason9Code
+ * RejectionReason9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason8Code
+ * RejectionReason8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason19Code
+ * RejectionReason19Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason13Code
+ * RejectionReason13Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason14Code
+ * RejectionReason14Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason15Code
+ * RejectionReason15Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason20Code
+ * RejectionReason20Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason10Code
+ * RejectionReason10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason12Code
+ * RejectionReason12Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason7Code
+ * RejectionReason7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason3Code
+ * RejectionReason3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason5Code
+ * RejectionReason5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason4Code
+ * RejectionReason4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason45Code
+ * RejectionReason45Code}</li>
  * </ul>
  * </li>
  * <li>

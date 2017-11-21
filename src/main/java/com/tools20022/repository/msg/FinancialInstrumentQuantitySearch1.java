@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for the quantity of security.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between formats for the quantity of security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentQuantitySearch1", propOrder = {"faceAmount", "amortisedValue"})
 public class FinancialInstrumentQuantitySearch1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class FinancialInstrumentQuantitySearch1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FaceAmt", required = true)
 	public ImpliedCurrencyAmountRangeChoice getFaceAmount() {
 		return faceAmount;
 	}
@@ -191,6 +198,7 @@ public class FinancialInstrumentQuantitySearch1 {
 		this.faceAmount = faceAmount;
 	}
 
+	@XmlElement(name = "AmtsdVal", required = true)
 	public ImpliedCurrencyAmountRangeChoice getAmortisedValue() {
 		return amortisedValue;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.TreasuryTrade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Date and identification of a trade.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeAgreement3", propOrder = {"tradeDate", "notificationIdentification", "commonReference", "operationType", "operationScope"})
 public class TradeAgreement3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -316,6 +322,7 @@ public class TradeAgreement3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
@@ -324,6 +331,7 @@ public class TradeAgreement3 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "NtfctnId", required = true)
 	public Max35Text getNotificationIdentification() {
 		return notificationIdentification;
 	}
@@ -332,6 +340,7 @@ public class TradeAgreement3 {
 		this.notificationIdentification = notificationIdentification;
 	}
 
+	@XmlElement(name = "CmonRef")
 	public Max35Text getCommonReference() {
 		return commonReference;
 	}
@@ -340,6 +349,7 @@ public class TradeAgreement3 {
 		this.commonReference = commonReference;
 	}
 
+	@XmlElement(name = "OprTp")
 	public Max4Text getOperationType() {
 		return operationType;
 	}
@@ -348,6 +358,7 @@ public class TradeAgreement3 {
 		this.operationType = operationType;
 	}
 
+	@XmlElement(name = "OprScp")
 	public Max4Text getOperationScope() {
 		return operationScope;
 	}

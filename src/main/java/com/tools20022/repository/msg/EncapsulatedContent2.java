@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max100KBinary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data to authenticate.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * EncapsulatedContent1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EncapsulatedContent2", propOrder = {"contentType", "content"})
 public class EncapsulatedContent2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -201,6 +207,7 @@ public class EncapsulatedContent2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CnttTp", required = true)
 	public ContentType1Code getContentType() {
 		return contentType;
 	}
@@ -209,6 +216,7 @@ public class EncapsulatedContent2 {
 		this.contentType = contentType;
 	}
 
+	@XmlElement(name = "Cntt")
 	public Max100KBinary getContent() {
 		return content;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.ShipmentDateRange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Further details on the shipment conditions.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Further details on the shipment conditions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ShipmentAttribute1", propOrder = {"conditions", "expectedDate", "countryOfCounterParty"})
 public class ShipmentAttribute1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -227,6 +233,7 @@ public class ShipmentAttribute1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Conds")
 	public ExternalShipmentCondition1Code getConditions() {
 		return conditions;
 	}
@@ -235,6 +242,7 @@ public class ShipmentAttribute1 {
 		this.conditions = conditions;
 	}
 
+	@XmlElement(name = "XpctdDt")
 	public ISODate getExpectedDate() {
 		return expectedDate;
 	}
@@ -243,6 +251,7 @@ public class ShipmentAttribute1 {
 		this.expectedDate = expectedDate;
 	}
 
+	@XmlElement(name = "CtryOfCntrPty", required = true)
 	public CountryCode getCountryOfCounterParty() {
 		return countryOfCounterParty;
 	}

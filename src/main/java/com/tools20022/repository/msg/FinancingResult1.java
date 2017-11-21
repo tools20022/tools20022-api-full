@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * The final result of a single invoice financing request.
@@ -74,6 +78,8 @@ import java.util.List;
  * definition} = "The final result of a single invoice financing request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancingResult1", propOrder = {"financingRequestStatus", "statusReason", "additionalStatusReasonInformation", "financedAmount"})
 public class FinancingResult1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -287,6 +293,7 @@ public class FinancingResult1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FincgReqSts", required = true)
 	public RequestStatus1Code getFinancingRequestStatus() {
 		return financingRequestStatus;
 	}
@@ -295,6 +302,7 @@ public class FinancingResult1 {
 		this.financingRequestStatus = financingRequestStatus;
 	}
 
+	@XmlElement(name = "StsRsn")
 	public StatusReason4Choice getStatusReason() {
 		return statusReason;
 	}
@@ -303,6 +311,7 @@ public class FinancingResult1 {
 		this.statusReason = statusReason;
 	}
 
+	@XmlElement(name = "AddtlStsRsnInf")
 	public List<Max105Text> getAdditionalStatusReasonInformation() {
 		return additionalStatusReasonInformation;
 	}
@@ -311,6 +320,7 @@ public class FinancingResult1 {
 		this.additionalStatusReasonInformation = additionalStatusReasonInformation;
 	}
 
+	@XmlElement(name = "FincdAmt")
 	public FinancingRateOrAmountChoice getFinancedAmount() {
 		return financedAmount;
 	}

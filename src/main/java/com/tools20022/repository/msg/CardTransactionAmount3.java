@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amounts of the transaction expressed within the terminal currency.
@@ -79,6 +83,8 @@ import java.util.List;
  * CardTransactionAmount1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransactionAmount3", propOrder = {"totalAmount", "amountQualifier", "cardholderBillingTransactionAmount", "reconciliationTransactionAmount", "detailedAmount"})
 public class CardTransactionAmount3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -377,6 +383,7 @@ public class CardTransactionAmount3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlAmt", required = true)
 	public CurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -385,6 +392,7 @@ public class CardTransactionAmount3 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "AmtQlfr")
 	public TypeOfAmount1Code getAmountQualifier() {
 		return amountQualifier;
 	}
@@ -393,6 +401,7 @@ public class CardTransactionAmount3 {
 		this.amountQualifier = amountQualifier;
 	}
 
+	@XmlElement(name = "CrdhldrBllgTxAmt")
 	public DetailedAmount8 getCardholderBillingTransactionAmount() {
 		return cardholderBillingTransactionAmount;
 	}
@@ -401,6 +410,7 @@ public class CardTransactionAmount3 {
 		this.cardholderBillingTransactionAmount = cardholderBillingTransactionAmount;
 	}
 
+	@XmlElement(name = "RcncltnTxAmt")
 	public DetailedAmount8 getReconciliationTransactionAmount() {
 		return reconciliationTransactionAmount;
 	}
@@ -409,6 +419,7 @@ public class CardTransactionAmount3 {
 		this.reconciliationTransactionAmount = reconciliationTransactionAmount;
 	}
 
+	@XmlElement(name = "DtldAmt")
 	public List<DetailedAmount9> getDetailedAmount() {
 		return detailedAmount;
 	}

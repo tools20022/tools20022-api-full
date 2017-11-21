@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.CaseAssignment2;
 import com.tools20022.repository.msg.ControlData1;
 import com.tools20022.repository.msg.UnderlyingTransaction1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -69,9 +71,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.055.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -105,6 +104,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.055.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -128,6 +130,8 @@ import java.util.List;
  * PaymentCancellationRequestV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustomerPaymentCancellationRequestV01", propOrder = {"assignment", "case", "controlData", "underlying"})
 public class CustomerPaymentCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -168,6 +172,14 @@ public class CustomerPaymentCancellationRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentCancellationRequestV01.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case2 case_;
 	/**
@@ -200,6 +212,14 @@ public class CustomerPaymentCancellationRequestV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Case2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentCancellationRequestV01.class.getMethod("getCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ControlData1 controlData;
@@ -238,6 +258,14 @@ public class CustomerPaymentCancellationRequestV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ControlData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentCancellationRequestV01.class.getMethod("getControlData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<UnderlyingTransaction1> underlying;
 	/**
@@ -272,6 +300,14 @@ public class CustomerPaymentCancellationRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTransaction1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentCancellationRequestV01.class.getMethod("getUnderlying", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -286,8 +322,8 @@ public class CustomerPaymentCancellationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "CstmrPmtCxlReq";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentCancellationRequestV01.mmAssignment, CustomerPaymentCancellationRequestV01.mmCase, CustomerPaymentCancellationRequestV01.mmControlData,
-						CustomerPaymentCancellationRequestV01.mmUnderlying);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01.mmAssignment, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01.mmCase,
+						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01.mmControlData, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01.mmUnderlying);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -297,10 +333,16 @@ public class CustomerPaymentCancellationRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CustomerPaymentCancellationRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment2 getAssignment() {
 		return assignment;
 	}
@@ -309,6 +351,7 @@ public class CustomerPaymentCancellationRequestV01 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "Case")
 	public Case2 getCase() {
 		return case_;
 	}
@@ -317,6 +360,7 @@ public class CustomerPaymentCancellationRequestV01 {
 		this.case_ = case_;
 	}
 
+	@XmlElement(name = "CtrlData")
 	public ControlData1 getControlData() {
 		return controlData;
 	}
@@ -325,11 +369,18 @@ public class CustomerPaymentCancellationRequestV01 {
 		this.controlData = controlData;
 	}
 
+	@XmlElement(name = "Undrlyg", required = true)
 	public List<UnderlyingTransaction1> getUnderlying() {
 		return underlying;
 	}
 
 	public void setUnderlying(List<UnderlyingTransaction1> underlying) {
 		this.underlying = underlying;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.055.01.01")
+	static public class Document {
+		@XmlElement(name = "CstmrPmtCxlReq", required = true)
+		public CustomerPaymentCancellationRequestV01 messageBody;
 	}
 }

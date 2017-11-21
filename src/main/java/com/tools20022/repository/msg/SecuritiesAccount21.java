@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unambiguous identification for the account between the account owner and the
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesAccount21", propOrder = {"account", "subAccount", "baseCurrency", "reportingCurrency", "foreignExchangeRate"})
 public class SecuritiesAccount21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -349,6 +355,7 @@ public class SecuritiesAccount21 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public AccountIdentification5 getAccount() {
 		return account;
 	}
@@ -357,6 +364,7 @@ public class SecuritiesAccount21 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "SubAcct")
 	public AccountIdentification5 getSubAccount() {
 		return subAccount;
 	}
@@ -365,6 +373,7 @@ public class SecuritiesAccount21 {
 		this.subAccount = subAccount;
 	}
 
+	@XmlElement(name = "BaseCcy")
 	public ActiveOrHistoricCurrencyCode getBaseCurrency() {
 		return baseCurrency;
 	}
@@ -373,6 +382,7 @@ public class SecuritiesAccount21 {
 		this.baseCurrency = baseCurrency;
 	}
 
+	@XmlElement(name = "RptgCcy")
 	public ActiveOrHistoricCurrencyCode getReportingCurrency() {
 		return reportingCurrency;
 	}
@@ -381,6 +391,7 @@ public class SecuritiesAccount21 {
 		this.reportingCurrency = reportingCurrency;
 	}
 
+	@XmlElement(name = "FXRate")
 	public BaseOneRate getForeignExchangeRate() {
 		return foreignExchangeRate;
 	}

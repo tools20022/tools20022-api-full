@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information needed to process a currency exchange or conversion.
@@ -88,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ForeignExchangeTerms7}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ForeignExchangeTerms26", propOrder = {"toAmount", "fromAmount", "unitCurrency", "quotedCurrency", "exchangeRate", "quotationDate", "quotingInstitution"})
 public class ForeignExchangeTerms26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -494,6 +500,7 @@ public class ForeignExchangeTerms26 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ToAmt")
 	public ActiveCurrencyAnd13DecimalAmount getToAmount() {
 		return toAmount;
 	}
@@ -502,6 +509,7 @@ public class ForeignExchangeTerms26 {
 		this.toAmount = toAmount;
 	}
 
+	@XmlElement(name = "FrAmt")
 	public ActiveCurrencyAndAmount getFromAmount() {
 		return fromAmount;
 	}
@@ -510,6 +518,7 @@ public class ForeignExchangeTerms26 {
 		this.fromAmount = fromAmount;
 	}
 
+	@XmlElement(name = "UnitCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getUnitCurrency() {
 		return unitCurrency;
 	}
@@ -518,6 +527,7 @@ public class ForeignExchangeTerms26 {
 		this.unitCurrency = unitCurrency;
 	}
 
+	@XmlElement(name = "QtdCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getQuotedCurrency() {
 		return quotedCurrency;
 	}
@@ -526,6 +536,7 @@ public class ForeignExchangeTerms26 {
 		this.quotedCurrency = quotedCurrency;
 	}
 
+	@XmlElement(name = "XchgRate", required = true)
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -534,6 +545,7 @@ public class ForeignExchangeTerms26 {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "QtnDt")
 	public ISODateTime getQuotationDate() {
 		return quotationDate;
 	}
@@ -542,6 +554,7 @@ public class ForeignExchangeTerms26 {
 		this.quotationDate = quotationDate;
 	}
 
+	@XmlElement(name = "QtgInstn")
 	public PartyIdentification70Choice getQuotingInstitution() {
 		return quotingInstitution;
 	}

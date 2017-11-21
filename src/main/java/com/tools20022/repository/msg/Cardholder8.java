@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PersonName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data related to the cardholder.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Cardholder6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Cardholder8", propOrder = {"identification", "name", "personalData"})
 public class Cardholder8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -271,6 +277,7 @@ public class Cardholder8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public PersonIdentification7 getIdentification() {
 		return identification;
 	}
@@ -279,6 +286,7 @@ public class Cardholder8 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max45Text getName() {
 		return name;
 	}
@@ -287,6 +295,7 @@ public class Cardholder8 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PrsnlData")
 	public Max70Text getPersonalData() {
 		return personalData;
 	}

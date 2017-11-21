@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates how the amount of the investment plan is split amongst the funds.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Repartition1", propOrder = {"percentage", "financialInstrument"})
 public class Repartition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -174,6 +180,7 @@ public class Repartition1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pctg", required = true)
 	public PercentageRate getPercentage() {
 		return percentage;
 	}
@@ -182,6 +189,7 @@ public class Repartition1 {
 		this.percentage = percentage;
 	}
 
+	@XmlElement(name = "FinInstrm", required = true)
 	public FinancialInstrument10 getFinancialInstrument() {
 		return financialInstrument;
 	}

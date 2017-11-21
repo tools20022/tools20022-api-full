@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a switch order.
@@ -78,6 +82,8 @@ import java.util.List;
  * definition} = "Information about a switch order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwitchOrderInstruction1", propOrder = {"switchOrderDetails", "intermediaryDetails", "copyDetails", "extension"})
 public class SwitchOrderInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -275,6 +281,7 @@ public class SwitchOrderInstruction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SwtchOrdrDtls", required = true)
 	public SwitchOrder2 getSwitchOrderDetails() {
 		return switchOrderDetails;
 	}
@@ -283,6 +290,7 @@ public class SwitchOrderInstruction1 {
 		this.switchOrderDetails = switchOrderDetails;
 	}
 
+	@XmlElement(name = "IntrmyDtls")
 	public List<Intermediary4> getIntermediaryDetails() {
 		return intermediaryDetails;
 	}
@@ -291,6 +299,7 @@ public class SwitchOrderInstruction1 {
 		this.intermediaryDetails = intermediaryDetails;
 	}
 
+	@XmlElement(name = "CpyDtls")
 	public CopyInformation1 getCopyDetails() {
 		return copyDetails;
 	}
@@ -299,6 +308,7 @@ public class SwitchOrderInstruction1 {
 		this.copyDetails = copyDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

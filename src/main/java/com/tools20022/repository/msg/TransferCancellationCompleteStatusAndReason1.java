@@ -28,6 +28,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status of the transfer cancellation is complete.
@@ -77,6 +81,8 @@ import java.util.function.Supplier;
  * definition} = "Status of the transfer cancellation is complete."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferCancellationCompleteStatusAndReason1", propOrder = {"reason", "extendedReason", "dataSourceScheme"})
 public class TransferCancellationCompleteStatusAndReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -290,6 +296,7 @@ public class TransferCancellationCompleteStatusAndReason1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public CancelledStatusReason1Code getReason() {
 		return reason;
 	}
@@ -298,6 +305,7 @@ public class TransferCancellationCompleteStatusAndReason1 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "XtndedRsn", required = true)
 	public Extended350Code getExtendedReason() {
 		return extendedReason;
 	}
@@ -306,6 +314,7 @@ public class TransferCancellationCompleteStatusAndReason1 {
 		this.extendedReason = extendedReason;
 	}
 
+	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}

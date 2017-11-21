@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Content of the management plan.
@@ -70,6 +74,8 @@ import java.util.List;
  * ManagementPlanContent1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ManagementPlanContent2", propOrder = "action")
 public class ManagementPlanContent2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -141,6 +147,7 @@ public class ManagementPlanContent2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Actn", required = true)
 	public List<TMSAction2> getAction() {
 		return action;
 	}

@@ -29,27 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason1Code
- * FailureReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason2Code
- * FailureReason2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason3Code
- * FailureReason3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason4Code
- * FailureReason4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason6Code
- * FailureReason6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason5Code
- * FailureReason5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason8Code
- * FailureReason8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason7Code
- * FailureReason7Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -133,6 +112,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.FailureReasonCode#mmCustomerTimeOut
  * FailureReasonCode.mmCustomerTimeOut}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason1Code
+ * FailureReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason2Code
+ * FailureReason2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason3Code
+ * FailureReason3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason4Code
+ * FailureReason4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason6Code
+ * FailureReason6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason5Code
+ * FailureReason5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason8Code
+ * FailureReason8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason7Code
+ * FailureReason7Code}</li>
  * </ul>
  * </li>
  * <li>

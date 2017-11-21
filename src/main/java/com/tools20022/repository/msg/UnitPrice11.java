@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money for which goods or services are offered, sold, or bought.
@@ -84,6 +88,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnitPrice11", propOrder = {"type", "extendedType", "value", "priceMethod"})
 public class UnitPrice11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -352,6 +358,7 @@ public class UnitPrice11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TypeOfPrice10Code getType() {
 		return type;
 	}
@@ -360,6 +367,7 @@ public class UnitPrice11 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XtndedTp", required = true)
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
@@ -368,6 +376,7 @@ public class UnitPrice11 {
 		this.extendedType = extendedType;
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public PriceValue1 getValue() {
 		return value;
 	}
@@ -376,6 +385,7 @@ public class UnitPrice11 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "PricMtd")
 	public PriceMethod1Code getPriceMethod() {
 		return priceMethod;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding underlying security details.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides additional information regarding underlying security details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentAttributesSD9", propOrder = {"placeAndName", "originatingSecurityIdentification"})
 public class FinancialInstrumentAttributesSD9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -165,6 +171,7 @@ public class FinancialInstrumentAttributesSD9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -173,6 +180,7 @@ public class FinancialInstrumentAttributesSD9 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "OrgtgSctyId")
 	public OtherIdentification2 getOriginatingSecurityIdentification() {
 		return originatingSecurityIdentification;
 	}

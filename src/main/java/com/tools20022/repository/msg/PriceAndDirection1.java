@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Price and an indication of whether it is a increase or a decrease.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Price and an indication of whether it is a increase or a decrease."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceAndDirection1", propOrder = {"value", "sign"})
 public class PriceAndDirection1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -169,6 +175,7 @@ public class PriceAndDirection1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getValue() {
 		return value;
 	}
@@ -177,6 +184,7 @@ public class PriceAndDirection1 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "Sgn")
 	public PlusOrMinusIndicator getSign() {
 		return sign;
 	}

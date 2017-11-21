@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,49 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSettlement
+ * StandingSettlementInstruction.mmSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmFXStandingInstruction
+ * StandingSettlementInstruction.mmFXStandingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSettlementStandingInstructionDatabase
+ * StandingSettlementInstruction.mmSettlementStandingInstructionDatabase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmIdentification
+ * StandingSettlementInstruction.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmRelatedCollateralAgreement
+ * StandingSettlementInstruction.mmRelatedCollateralAgreement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSSIDatabaseName
+ * StandingSettlementInstruction.mmSSIDatabaseName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSSIDatabaseProvider
+ * StandingSettlementInstruction.mmSSIDatabaseProvider}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmValidityPeriod
+ * StandingSettlementInstruction.mmValidityPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmCurrency
+ * StandingSettlementInstruction.mmCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmAsset
+ * StandingSettlementInstruction.mmAsset}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction
+ * AgentCorporateActionStandingInstruction}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -160,49 +204,6 @@ import java.util.List;
  * StandingSettlementInstruction12.mmSettlementStandingInstructionDatabase}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction
- * AgentCorporateActionStandingInstruction}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSettlement
- * StandingSettlementInstruction.mmSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmFXStandingInstruction
- * StandingSettlementInstruction.mmFXStandingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSettlementStandingInstructionDatabase
- * StandingSettlementInstruction.mmSettlementStandingInstructionDatabase}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmIdentification
- * StandingSettlementInstruction.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmRelatedCollateralAgreement
- * StandingSettlementInstruction.mmRelatedCollateralAgreement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSSIDatabaseName
- * StandingSettlementInstruction.mmSSIDatabaseName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSSIDatabaseProvider
- * StandingSettlementInstruction.mmSSIDatabaseProvider}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmValidityPeriod
- * StandingSettlementInstruction.mmValidityPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmCurrency
- * StandingSettlementInstruction.mmCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmAsset
- * StandingSettlementInstruction.mmAsset}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -259,7 +260,7 @@ public class StandingSettlementInstruction {
 	 */
 	public static final MMBusinessAssociationEnd mmSettlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Settlement";
@@ -281,11 +282,6 @@ public class StandingSettlementInstruction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction
-	 * StandingSettlementInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -322,6 +318,11 @@ public class StandingSettlementInstruction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction
+	 * StandingSettlementInstruction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -339,7 +340,7 @@ public class StandingSettlementInstruction {
 			derivation_lazy = () -> Arrays.asList(FXStandingInstruction1Choice.mmIndicator, FXStandingInstruction1Choice.mmProprietary, FXStandingInstruction2Choice.mmIndicator, FXStandingInstruction2Choice.mmProprietary,
 					FXStandingInstruction3Choice.mmIndicator, FXStandingInstruction3Choice.mmProprietary, FXStandingInstruction4Choice.mmIndicator, FXStandingInstruction4Choice.mmProprietary, FXStandingInstruction5Choice.mmIndicator,
 					FXStandingInstruction5Choice.mmProprietary);
-			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FXStandingInstruction";
@@ -347,6 +348,14 @@ public class StandingSettlementInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingSettlementInstruction.class.getMethod("getFXStandingInstruction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SettlementStandingInstructionDatabaseCode settlementStandingInstructionDatabase;
@@ -361,11 +370,6 @@ public class StandingSettlementInstruction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementStandingInstructionDatabaseCode
 	 * SettlementStandingInstructionDatabaseCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction
-	 * StandingSettlementInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -402,6 +406,11 @@ public class StandingSettlementInstruction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction
+	 * StandingSettlementInstruction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -420,7 +429,7 @@ public class StandingSettlementInstruction {
 					SettlementStandingInstructionDatabase2Choice.mmProprietary, SettlementStandingInstructionDatabase3Choice.mmCode, SettlementStandingInstructionDatabase3Choice.mmProprietary,
 					SettlementStandingInstructionDatabase4Choice.mmCode, SettlementStandingInstructionDatabase4Choice.mmProprietary, SettlementStandingInstructionDatabase5Choice.mmCode,
 					SettlementStandingInstructionDatabase5Choice.mmProprietary);
-			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementStandingInstructionDatabase";
@@ -428,6 +437,14 @@ public class StandingSettlementInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementStandingInstructionDatabaseCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingSettlementInstruction.class.getMethod("getSettlementStandingInstructionDatabase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text identification;
@@ -440,11 +457,6 @@ public class StandingSettlementInstruction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction
-	 * StandingSettlementInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -454,6 +466,11 @@ public class StandingSettlementInstruction {
 	 * mmClientStandingInstructionIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction
+	 * StandingSettlementInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -468,7 +485,7 @@ public class StandingSettlementInstruction {
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionStandingInstructionGeneralInformation1.mmClientStandingInstructionIdentification);
-			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -476,6 +493,14 @@ public class StandingSettlementInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingSettlementInstruction.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CollateralAgreement relatedCollateralAgreement;
@@ -517,7 +542,7 @@ public class StandingSettlementInstruction {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCollateralAgreement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedCollateralAgreement";
@@ -560,7 +585,7 @@ public class StandingSettlementInstruction {
 	 */
 	public static final MMBusinessAttribute mmSSIDatabaseName = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SSIDatabaseName";
@@ -568,6 +593,14 @@ public class StandingSettlementInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingSettlementInstruction.class.getMethod("getSSIDatabaseName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SSIDatabaseProvider sSIDatabaseProvider;
@@ -609,7 +642,7 @@ public class StandingSettlementInstruction {
 	 */
 	public static final MMBusinessAssociationEnd mmSSIDatabaseProvider = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SSIDatabaseProvider";
@@ -657,7 +690,7 @@ public class StandingSettlementInstruction {
 	 */
 	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityPeriod";
@@ -697,7 +730,7 @@ public class StandingSettlementInstruction {
 	 */
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
@@ -705,6 +738,14 @@ public class StandingSettlementInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StandingSettlementInstruction.class.getMethod("getCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Asset asset;
@@ -743,7 +784,7 @@ public class StandingSettlementInstruction {
 	 */
 	public static final MMBusinessAssociationEnd mmAsset = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Asset";
@@ -772,15 +813,22 @@ public class StandingSettlementInstruction {
 						StandingSettlementInstruction8.mmSettlementStandingInstructionDatabase, StandingSettlementInstruction11.mmSettlementStandingInstructionDatabase,
 						StandingSettlementInstruction12.mmSettlementStandingInstructionDatabase);
 				subType_lazy = () -> Arrays.asList(AgentCorporateActionStandingInstruction.mmObject());
-				element_lazy = () -> Arrays.asList(StandingSettlementInstruction.mmSettlement, StandingSettlementInstruction.mmFXStandingInstruction, StandingSettlementInstruction.mmSettlementStandingInstructionDatabase,
-						StandingSettlementInstruction.mmIdentification, StandingSettlementInstruction.mmRelatedCollateralAgreement, StandingSettlementInstruction.mmSSIDatabaseName, StandingSettlementInstruction.mmSSIDatabaseProvider,
-						StandingSettlementInstruction.mmValidityPeriod, StandingSettlementInstruction.mmCurrency, StandingSettlementInstruction.mmAsset);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.StandingSettlementInstruction.mmSettlement, com.tools20022.repository.entity.StandingSettlementInstruction.mmFXStandingInstruction,
+						com.tools20022.repository.entity.StandingSettlementInstruction.mmSettlementStandingInstructionDatabase, com.tools20022.repository.entity.StandingSettlementInstruction.mmIdentification,
+						com.tools20022.repository.entity.StandingSettlementInstruction.mmRelatedCollateralAgreement, com.tools20022.repository.entity.StandingSettlementInstruction.mmSSIDatabaseName,
+						com.tools20022.repository.entity.StandingSettlementInstruction.mmSSIDatabaseProvider, com.tools20022.repository.entity.StandingSettlementInstruction.mmValidityPeriod,
+						com.tools20022.repository.entity.StandingSettlementInstruction.mmCurrency, com.tools20022.repository.entity.StandingSettlementInstruction.mmAsset);
 				derivationComponent_lazy = () -> Arrays.asList(FXStandingInstruction1Choice.mmObject(), SettlementStandingInstructionDatabase1Choice.mmObject(), StandingSettlementInstruction1.mmObject(),
 						StandingSettlementInstruction4.mmObject(), FXStandingInstruction2Choice.mmObject(), SettlementStandingInstructionDatabase2Choice.mmObject(), StandingSettlementInstruction7.mmObject(),
 						StandingSettlementInstruction2.mmObject(), StandingSettlementInstruction3.mmObject(), StandingSettlementInstruction6.mmObject(), FXStandingInstruction3Choice.mmObject(),
 						SettlementStandingInstructionDatabase3Choice.mmObject(), StandingSettlementInstruction9.mmObject(), StandingSettlementInstruction5.mmObject(), StandingSettlementInstruction8.mmObject(),
 						StandingSettlementInstruction11.mmObject(), SettlementStandingInstructionDatabase4Choice.mmObject(), FXStandingInstruction4Choice.mmObject(), StandingSettlementInstruction12.mmObject(),
 						FXStandingInstruction5Choice.mmObject(), SettlementStandingInstructionDatabase5Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StandingSettlementInstruction.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference of an order and of an order cancellation.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestmentFundOrder2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentFundOrder8", propOrder = {"masterReference", "orderReference", "clientReference", "cancellationReference", "dealReference", "investmentAccountDetails", "financialInstrumentDetails"})
 public class InvestmentFundOrder8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -494,6 +500,7 @@ public class InvestmentFundOrder8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -502,6 +509,7 @@ public class InvestmentFundOrder8 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -510,6 +518,7 @@ public class InvestmentFundOrder8 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -518,6 +527,7 @@ public class InvestmentFundOrder8 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -526,6 +536,7 @@ public class InvestmentFundOrder8 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "DealRef")
 	public Max35Text getDealReference() {
 		return dealReference;
 	}
@@ -534,6 +545,7 @@ public class InvestmentFundOrder8 {
 		this.dealReference = dealReference;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount58 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -542,6 +554,7 @@ public class InvestmentFundOrder8 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "FinInstrmDtls")
 	public FinancialInstrument57 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between an indicative price or a market price.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between an indicative price or a market price."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndicativeOrMarketPrice1Choice", propOrder = {"indicativePrice", "marketPrice"})
 public class IndicativeOrMarketPrice1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class IndicativeOrMarketPrice1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IndctvPric", required = true)
 	public PriceFormat11Choice getIndicativePrice() {
 		return indicativePrice;
 	}
@@ -171,6 +178,7 @@ public class IndicativeOrMarketPrice1Choice {
 		this.indicativePrice = indicativePrice;
 	}
 
+	@XmlElement(name = "MktPric", required = true)
 	public PriceFormat11Choice getMarketPrice() {
 		return marketPrice;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.ElectronicAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies possible agreement clauses related to invoice financing.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies possible agreement clauses related to invoice financing."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgreementClauses1", propOrder = {"description", "documentURL"})
 public class AgreementClauses1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class AgreementClauses1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Desc")
 	public Max256Text getDescription() {
 		return description;
 	}
@@ -181,6 +188,7 @@ public class AgreementClauses1 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "DocURL")
 	public Max350Text getDocumentURL() {
 		return documentURL;
 	}

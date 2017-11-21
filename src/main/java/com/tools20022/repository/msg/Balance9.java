@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Net position of a segregated holding, in a single security, within the
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Balance8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Balance9", propOrder = {"shortLongIndicator", "quantity"})
 public class Balance9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -210,6 +216,7 @@ public class Balance9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ShrtLngInd")
 	public ShortLong1Code getShortLongIndicator() {
 		return shortLongIndicator;
 	}
@@ -218,6 +225,7 @@ public class Balance9 {
 		this.shortLongIndicator = shortLongIndicator;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public SubBalanceQuantity6Choice getQuantity() {
 		return quantity;
 	}

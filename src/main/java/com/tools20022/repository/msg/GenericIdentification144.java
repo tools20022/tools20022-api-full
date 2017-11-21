@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Scheme;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Proprietary information related to a balance.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Proprietary information related to a balance."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericIdentification144", propOrder = {"identification", "issuer", "schemeName", "balance"})
 public class GenericIdentification144 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -278,6 +284,7 @@ public class GenericIdentification144 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Exact4AlphaNumericText getIdentification() {
 		return identification;
 	}
@@ -286,6 +293,7 @@ public class GenericIdentification144 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public Max4AlphaNumericText getIssuer() {
 		return issuer;
 	}
@@ -294,6 +302,7 @@ public class GenericIdentification144 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "SchmeNm")
 	public Max4AlphaNumericText getSchemeName() {
 		return schemeName;
 	}
@@ -302,6 +311,7 @@ public class GenericIdentification144 {
 		this.schemeName = schemeName;
 	}
 
+	@XmlElement(name = "Bal", required = true)
 	public RestrictedFINDecimalNumber getBalance() {
 		return balance;
 	}

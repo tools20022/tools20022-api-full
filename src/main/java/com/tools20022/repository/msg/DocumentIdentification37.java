@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a document and type of link.
@@ -110,6 +114,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identification of a document and type of link."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DocumentIdentification37", propOrder = {"identification", "linkageType"})
 public class DocumentIdentification37 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -227,6 +233,7 @@ public class DocumentIdentification37 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public RestrictedFINXMax16Text getIdentification() {
 		return identification;
 	}
@@ -235,6 +242,7 @@ public class DocumentIdentification37 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "LkgTp")
 	public ProcessingPosition10Choice getLinkageType() {
 		return linkageType;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the underlying securities movement.
@@ -78,6 +82,8 @@ import java.util.List;
  * "Provides information about the underlying securities movement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnderlyingSecurityMovement1", propOrder = {"securityIdentification", "securitiesQuantity", "accountDetails"})
 public class UnderlyingSecurityMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -241,6 +247,7 @@ public class UnderlyingSecurityMovement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification7 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -249,6 +256,7 @@ public class UnderlyingSecurityMovement1 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "SctiesQty", required = true)
 	public UnitOrFaceAmount1Choice getSecuritiesQuantity() {
 		return securitiesQuantity;
 	}
@@ -257,6 +265,7 @@ public class UnderlyingSecurityMovement1 {
 		this.securitiesQuantity = securitiesQuantity;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public List<SecuritiesAccount8> getAccountDetails() {
 		return accountDetails;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max25Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transparency calculation specific details for a freight commodity.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Transparency calculation specific details for a freight commodity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CommodityDerivate5", propOrder = {"size", "averageTimeCharter"})
 public class CommodityDerivate5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +168,7 @@ public class CommodityDerivate5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sz", required = true)
 	public Max25Text getSize() {
 		return size;
 	}
@@ -170,6 +177,7 @@ public class CommodityDerivate5 {
 		this.size = size;
 	}
 
+	@XmlElement(name = "AvrgTmChrtr", required = true)
 	public Max25Text getAverageTimeCharter() {
 		return averageTimeCharter;
 	}

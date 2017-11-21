@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status applying to individual instructions of a MeetingInstruction.
@@ -98,6 +102,8 @@ import java.util.List;
  * DetailedInstructionStatus9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DetailedInstructionStatus10", propOrder = {"instructionIdentification", "accountIdentification", "accountOwner", "subAccountIdentification", "rightsHolder", "standingInstruction", "votePerResolution"})
 public class DetailedInstructionStatus10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -482,6 +488,7 @@ public class DetailedInstructionStatus10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrId", required = true)
 	public Max35Text getInstructionIdentification() {
 		return instructionIdentification;
 	}
@@ -490,6 +497,7 @@ public class DetailedInstructionStatus10 {
 		this.instructionIdentification = instructionIdentification;
 	}
 
+	@XmlElement(name = "AcctId")
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -498,6 +506,7 @@ public class DetailedInstructionStatus10 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification40Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -506,6 +515,7 @@ public class DetailedInstructionStatus10 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SubAcctId")
 	public Max35Text getSubAccountIdentification() {
 		return subAccountIdentification;
 	}
@@ -514,6 +524,7 @@ public class DetailedInstructionStatus10 {
 		this.subAccountIdentification = subAccountIdentification;
 	}
 
+	@XmlElement(name = "RghtsHldr")
 	public List<PartyIdentification40Choice> getRightsHolder() {
 		return rightsHolder;
 	}
@@ -522,6 +533,7 @@ public class DetailedInstructionStatus10 {
 		this.rightsHolder = rightsHolder;
 	}
 
+	@XmlElement(name = "StgInstr", required = true)
 	public YesNoIndicator getStandingInstruction() {
 		return standingInstruction;
 	}
@@ -530,6 +542,7 @@ public class DetailedInstructionStatus10 {
 		this.standingInstruction = standingInstruction;
 	}
 
+	@XmlElement(name = "VotePerRsltn")
 	public List<Vote6> getVotePerResolution() {
 		return votePerResolution;
 	}

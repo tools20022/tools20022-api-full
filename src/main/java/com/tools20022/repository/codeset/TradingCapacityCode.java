@@ -29,21 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacity4Code
- * TradingCapacity4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacity6Code
- * TradingCapacity6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacity3Code
- * TradingCapacity3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacity5Code
- * TradingCapacity5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacity8Code
- * TradingCapacity8Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -91,6 +76,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmTransferAgent
  * TradingCapacityCode.mmTransferAgent}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacity4Code
+ * TradingCapacity4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacity6Code
+ * TradingCapacity6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacity3Code
+ * TradingCapacity3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacity5Code
+ * TradingCapacity5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacity8Code
+ * TradingCapacity8Code}</li>
  * </ul>
  * </li>
  * <li>

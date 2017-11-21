@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.MeetingParticipation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the level of participation to a shareholders meeting.
@@ -91,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Participation3", propOrder = {"totalNumberOfVotingRights", "percentageOfVotingRights", "totalNumberOfSecuritiesOutstanding", "calculationDate"})
 public class Participation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -334,6 +340,7 @@ public class Participation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlNbOfVtngRghts")
 	public Number getTotalNumberOfVotingRights() {
 		return totalNumberOfVotingRights;
 	}
@@ -342,6 +349,7 @@ public class Participation3 {
 		this.totalNumberOfVotingRights = totalNumberOfVotingRights;
 	}
 
+	@XmlElement(name = "PctgOfVtngRghts")
 	public PercentageRate getPercentageOfVotingRights() {
 		return percentageOfVotingRights;
 	}
@@ -350,6 +358,7 @@ public class Participation3 {
 		this.percentageOfVotingRights = percentageOfVotingRights;
 	}
 
+	@XmlElement(name = "TtlNbOfSctiesOutsdng")
 	public ActiveCurrencyAndAmount getTotalNumberOfSecuritiesOutstanding() {
 		return totalNumberOfSecuritiesOutstanding;
 	}
@@ -358,6 +367,7 @@ public class Participation3 {
 		this.totalNumberOfSecuritiesOutstanding = totalNumberOfSecuritiesOutstanding;
 	}
 
+	@XmlElement(name = "ClctnDt")
 	public ISODate getCalculationDate() {
 		return calculationDate;
 	}

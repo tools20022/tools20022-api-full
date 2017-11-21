@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.TaxRecipient;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information for tax reporting.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TaxReporting1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxReporting2", propOrder = {"taxationCountry", "taxRate", "taxPayer", "taxRecipient", "cashAccountDetails", "description"})
 public class TaxReporting2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -403,6 +409,7 @@ public class TaxReporting2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TaxtnCtry", required = true)
 	public CountryCode getTaxationCountry() {
 		return taxationCountry;
 	}
@@ -411,6 +418,7 @@ public class TaxReporting2 {
 		this.taxationCountry = taxationCountry;
 	}
 
+	@XmlElement(name = "TaxRate")
 	public PercentageRate getTaxRate() {
 		return taxRate;
 	}
@@ -419,6 +427,7 @@ public class TaxReporting2 {
 		this.taxRate = taxRate;
 	}
 
+	@XmlElement(name = "TaxPyer")
 	public PartyIdentification70Choice getTaxPayer() {
 		return taxPayer;
 	}
@@ -427,6 +436,7 @@ public class TaxReporting2 {
 		this.taxPayer = taxPayer;
 	}
 
+	@XmlElement(name = "TaxRcpt")
 	public PartyIdentification70Choice getTaxRecipient() {
 		return taxRecipient;
 	}
@@ -435,6 +445,7 @@ public class TaxReporting2 {
 		this.taxRecipient = taxRecipient;
 	}
 
+	@XmlElement(name = "CshAcctDtls")
 	public CashAccount33 getCashAccountDetails() {
 		return cashAccountDetails;
 	}
@@ -443,6 +454,7 @@ public class TaxReporting2 {
 		this.cashAccountDetails = cashAccountDetails;
 	}
 
+	@XmlElement(name = "Desc")
 	public Max350Text getDescription() {
 		return description;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Configuration parameters to communicate with a host.
@@ -79,6 +83,8 @@ import java.util.List;
  * HostCommunicationParameter1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "HostCommunicationParameter2", propOrder = {"hostIdentification", "address", "key"})
 public class HostCommunicationParameter2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -260,6 +266,7 @@ public class HostCommunicationParameter2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "HstId", required = true)
 	public Max35Text getHostIdentification() {
 		return hostIdentification;
 	}
@@ -268,6 +275,7 @@ public class HostCommunicationParameter2 {
 		this.hostIdentification = hostIdentification;
 	}
 
+	@XmlElement(name = "Adr")
 	public NetworkParameters1 getAddress() {
 		return address;
 	}
@@ -276,6 +284,7 @@ public class HostCommunicationParameter2 {
 		this.address = address;
 	}
 
+	@XmlElement(name = "Key")
 	public List<CryptographicKey3> getKey() {
 		return key;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates the price of the bid response.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the price of the bid response."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BidResponsePrice1", propOrder = {"price", "commission", "grossIndicator", "side", "fairValue", "country", "tradingSession", "settlementDetails"})
 public class BidResponsePrice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -482,6 +488,7 @@ public class BidResponsePrice1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pric")
 	public Price1 getPrice() {
 		return price;
 	}
@@ -490,6 +497,7 @@ public class BidResponsePrice1 {
 		this.price = price;
 	}
 
+	@XmlElement(name = "Comssn", required = true)
 	public Commission2 getCommission() {
 		return commission;
 	}
@@ -498,6 +506,7 @@ public class BidResponsePrice1 {
 		this.commission = commission;
 	}
 
+	@XmlElement(name = "GrssInd", required = true)
 	public TrueFalseIndicator getGrossIndicator() {
 		return grossIndicator;
 	}
@@ -506,6 +515,7 @@ public class BidResponsePrice1 {
 		this.grossIndicator = grossIndicator;
 	}
 
+	@XmlElement(name = "Sd", required = true)
 	public Side1Code getSide() {
 		return side;
 	}
@@ -514,6 +524,7 @@ public class BidResponsePrice1 {
 		this.side = side;
 	}
 
+	@XmlElement(name = "FairVal")
 	public ActiveCurrencyAndAmount getFairValue() {
 		return fairValue;
 	}
@@ -522,6 +533,7 @@ public class BidResponsePrice1 {
 		this.fairValue = fairValue;
 	}
 
+	@XmlElement(name = "Ctry")
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -530,6 +542,7 @@ public class BidResponsePrice1 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "TradgSsn")
 	public TradingSession1 getTradingSession() {
 		return tradingSession;
 	}
@@ -538,6 +551,7 @@ public class BidResponsePrice1 {
 		this.tradingSession = tradingSession;
 	}
 
+	@XmlElement(name = "SttlmDtls")
 	public SecuritiesSettlement2 getSettlementDetails() {
 		return settlementDetails;
 	}

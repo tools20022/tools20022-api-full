@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SystemPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique identification, as assigned by the executing system, to unambiguously
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemPartyIdentification4", propOrder = {"identification", "responsiblePartyIdentification"})
 public class SystemPartyIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -186,6 +192,7 @@ public class SystemPartyIdentification4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public BICFIIdentifier getIdentification() {
 		return identification;
 	}
@@ -194,6 +201,7 @@ public class SystemPartyIdentification4 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "RspnsblPtyId")
 	public CSDOrNCB1Choice getResponsiblePartyIdentification() {
 		return responsiblePartyIdentification;
 	}

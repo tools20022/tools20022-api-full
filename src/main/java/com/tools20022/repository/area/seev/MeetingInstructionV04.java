@@ -26,9 +26,11 @@ import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.ProxyVotingISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.004.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousVersion
@@ -94,6 +93,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.004.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -116,6 +118,8 @@ import java.util.List;
  * MeetingInstructionV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingInstructionV04", propOrder = {"identification", "meetingReference", "instructingParty", "securityIdentification", "instruction", "extension"})
 public class MeetingInstructionV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -152,6 +156,14 @@ public class MeetingInstructionV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionV04.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MeetingReference4 meetingReference;
@@ -197,6 +209,14 @@ public class MeetingInstructionV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionV04.class.getMethod("getMeetingReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification9Choice instructingParty;
 	/**
@@ -231,6 +251,14 @@ public class MeetingInstructionV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionV04.class.getMethod("getInstructingParty", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecurityIdentification11 securityIdentification;
@@ -277,6 +305,14 @@ public class MeetingInstructionV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification11.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionV04.class.getMethod("getSecurityIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Instruction2> instruction;
 	/**
@@ -322,6 +358,14 @@ public class MeetingInstructionV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> Instruction2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionV04.class.getMethod("getInstruction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension2> extension;
 	/**
@@ -358,6 +402,14 @@ public class MeetingInstructionV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionV04.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -372,8 +424,9 @@ public class MeetingInstructionV04 {
 				rootElement = "Document";
 				xmlTag = "MtgInstr";
 				businessArea_lazy = () -> SecuritiesEventsPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionV04.mmIdentification, MeetingInstructionV04.mmMeetingReference, MeetingInstructionV04.mmInstructingParty, MeetingInstructionV04.mmSecurityIdentification,
-						MeetingInstructionV04.mmInstruction, MeetingInstructionV04.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionV04.mmIdentification, com.tools20022.repository.area.seev.MeetingInstructionV04.mmMeetingReference,
+						com.tools20022.repository.area.seev.MeetingInstructionV04.mmInstructingParty, com.tools20022.repository.area.seev.MeetingInstructionV04.mmSecurityIdentification,
+						com.tools20022.repository.area.seev.MeetingInstructionV04.mmInstruction, com.tools20022.repository.area.seev.MeetingInstructionV04.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -383,10 +436,16 @@ public class MeetingInstructionV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingInstructionV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public MessageIdentification1 getIdentification() {
 		return identification;
 	}
@@ -395,6 +454,7 @@ public class MeetingInstructionV04 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "MtgRef", required = true)
 	public MeetingReference4 getMeetingReference() {
 		return meetingReference;
 	}
@@ -403,6 +463,7 @@ public class MeetingInstructionV04 {
 		this.meetingReference = meetingReference;
 	}
 
+	@XmlElement(name = "InstgPty", required = true)
 	public PartyIdentification9Choice getInstructingParty() {
 		return instructingParty;
 	}
@@ -411,6 +472,7 @@ public class MeetingInstructionV04 {
 		this.instructingParty = instructingParty;
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification11 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -419,6 +481,7 @@ public class MeetingInstructionV04 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "Instr", required = true)
 	public List<Instruction2> getInstruction() {
 		return instruction;
 	}
@@ -427,11 +490,18 @@ public class MeetingInstructionV04 {
 		this.instruction = instruction;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension2> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension2> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.004.04.04")
+	static public class Document {
+		@XmlElement(name = "MtgInstr", required = true)
+		public MeetingInstructionV04 messageBody;
 	}
 }

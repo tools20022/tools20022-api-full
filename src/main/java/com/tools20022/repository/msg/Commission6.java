@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money due to a party as compensation for a service.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Commission6", propOrder = {"type", "basis", "amount", "rate", "recipientIdentification", "commercialAgreementReference", "waivingDetails"})
 public class Commission6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -427,6 +433,7 @@ public class Commission6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public CommissionType1 getType() {
 		return type;
 	}
@@ -435,6 +442,7 @@ public class Commission6 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Bsis")
 	public TaxationBasis1 getBasis() {
 		return basis;
 	}
@@ -443,6 +451,7 @@ public class Commission6 {
 		this.basis = basis;
 	}
 
+	@XmlElement(name = "Amt")
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -451,6 +460,7 @@ public class Commission6 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -459,6 +469,7 @@ public class Commission6 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification2Choice getRecipientIdentification() {
 		return recipientIdentification;
 	}
@@ -467,6 +478,7 @@ public class Commission6 {
 		this.recipientIdentification = recipientIdentification;
 	}
 
+	@XmlElement(name = "ComrclAgrmtRef")
 	public Max35Text getCommercialAgreementReference() {
 		return commercialAgreementReference;
 	}
@@ -475,6 +487,7 @@ public class Commission6 {
 		this.commercialAgreementReference = commercialAgreementReference;
 	}
 
+	@XmlElement(name = "WvgDtls")
 	public CommissionWaiver2 getWaivingDetails() {
 		return waivingDetails;
 	}

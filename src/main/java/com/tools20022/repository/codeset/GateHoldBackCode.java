@@ -29,13 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.GateHoldBack1Code
- * GateHoldBack1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -43,6 +36,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * GateHoldBackCode.mmHoldBack}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.GateHoldBackCode#mmGating
  * GateHoldBackCode.mmGating}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.GateHoldBack1Code
+ * GateHoldBack1Code}</li>
  * </ul>
  * </li>
  * <li>

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on the system restriction.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information on the system restriction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemRestriction1", propOrder = {"validFrom", "validTo", "type"})
 public class SystemRestriction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -198,6 +204,7 @@ public class SystemRestriction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "VldFr", required = true)
 	public ISODateTime getValidFrom() {
 		return validFrom;
 	}
@@ -206,6 +213,7 @@ public class SystemRestriction1 {
 		this.validFrom = validFrom;
 	}
 
+	@XmlElement(name = "VldTo")
 	public ISODateTime getValidTo() {
 		return validTo;
 	}
@@ -214,6 +222,7 @@ public class SystemRestriction1 {
 		this.validTo = validTo;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public Max35Text getType() {
 		return type;
 	}

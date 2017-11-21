@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information used to calculate the tax.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information used to calculate the tax."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxCalculationInformation2", propOrder = {"EUCapitalGain", "percentageOfDebtClaim", "percentageGrandfatheredDebt"})
 public class TaxCalculationInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -236,6 +242,7 @@ public class TaxCalculationInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EUCptlGn")
 	public EUCapitalGain1 getEUCapitalGain() {
 		return eUCapitalGain;
 	}
@@ -244,6 +251,7 @@ public class TaxCalculationInformation2 {
 		this.eUCapitalGain = eUCapitalGain;
 	}
 
+	@XmlElement(name = "PctgOfDebtClm")
 	public PercentageRate getPercentageOfDebtClaim() {
 		return percentageOfDebtClaim;
 	}
@@ -252,6 +260,7 @@ public class TaxCalculationInformation2 {
 		this.percentageOfDebtClaim = percentageOfDebtClaim;
 	}
 
+	@XmlElement(name = "PctgGrdfthdDebt")
 	public PercentageRate getPercentageGrandfatheredDebt() {
 		return percentageGrandfatheredDebt;
 	}

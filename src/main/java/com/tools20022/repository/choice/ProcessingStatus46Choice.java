@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.ProprietaryReason2;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the processing status.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of format for the processing status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProcessingStatus46Choice", propOrder = {"acknowledgedAccepted", "rejected", "completed", "denied", "pending", "proprietary"})
 public class ProcessingStatus46Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -389,6 +395,7 @@ public class ProcessingStatus46Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AckdAccptd", required = true)
 	public AcknowledgedAcceptedStatus20Choice getAcknowledgedAccepted() {
 		return acknowledgedAccepted;
 	}
@@ -397,6 +404,7 @@ public class ProcessingStatus46Choice {
 		this.acknowledgedAccepted = acknowledgedAccepted;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectionOrRepairStatus20Choice getRejected() {
 		return rejected;
 	}
@@ -405,6 +413,7 @@ public class ProcessingStatus46Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Cmpltd", required = true)
 	public ProprietaryReason2 getCompleted() {
 		return completed;
 	}
@@ -413,6 +422,7 @@ public class ProcessingStatus46Choice {
 		this.completed = completed;
 	}
 
+	@XmlElement(name = "Dnd", required = true)
 	public DeniedStatus11Choice getDenied() {
 		return denied;
 	}
@@ -421,6 +431,7 @@ public class ProcessingStatus46Choice {
 		this.denied = denied;
 	}
 
+	@XmlElement(name = "Pdg", required = true)
 	public PendingStatus24Choice getPending() {
 		return pending;
 	}
@@ -429,6 +440,7 @@ public class ProcessingStatus46Choice {
 		this.pending = pending;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason2 getProprietary() {
 		return proprietary;
 	}

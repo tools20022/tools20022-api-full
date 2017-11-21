@@ -37,6 +37,34 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmDeliveryPeriod
+ * ProductDelivery.mmDeliveryPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ProductDelivery#mmRouting
+ * ProductDelivery.mmRouting}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmTradeSettlement
+ * ProductDelivery.mmTradeSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmObligation
+ * ProductDelivery.mmObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmTradeCertificate
+ * ProductDelivery.mmTradeCertificate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmInsuranceCertificate
+ * ProductDelivery.mmInsuranceCertificate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ProductDelivery#mmProduct
+ * ProductDelivery.mmProduct}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
+ * ObligationFulfilment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -68,34 +96,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.ProductDeliveryObligation#mmProductDeliveryOffset
  * ProductDeliveryObligation.mmProductDeliveryOffset}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
- * ObligationFulfilment}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmDeliveryPeriod
- * ProductDelivery.mmDeliveryPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ProductDelivery#mmRouting
- * ProductDelivery.mmRouting}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmTradeSettlement
- * ProductDelivery.mmTradeSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmObligation
- * ProductDelivery.mmObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmTradeCertificate
- * ProductDelivery.mmTradeCertificate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmInsuranceCertificate
- * ProductDelivery.mmInsuranceCertificate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ProductDelivery#mmProduct
- * ProductDelivery.mmProduct}</li>
  * </ul>
  * </li>
  * <li>
@@ -135,11 +135,6 @@ public class ProductDelivery extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProductDelivery
-	 * ProductDelivery}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -151,6 +146,11 @@ public class ProductDelivery extends ObligationFulfilment {
 	 * TradeDelivery2.mmDeliveryPeriod}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProductDelivery
+	 * ProductDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -165,7 +165,7 @@ public class ProductDelivery extends ObligationFulfilment {
 	public static final MMBusinessAssociationEnd mmDeliveryPeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeDelivery1.mmDeliveryPeriod, TradeDelivery2.mmDeliveryPeriod);
-			elementContext_lazy = () -> ProductDelivery.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliveryPeriod";
@@ -195,11 +195,6 @@ public class ProductDelivery extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Transport Transport}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProductDelivery
-	 * ProductDelivery}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -237,6 +232,11 @@ public class ProductDelivery extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProductDelivery
+	 * ProductDelivery}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -251,7 +251,7 @@ public class ProductDelivery extends ObligationFulfilment {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeDelivery1.mmConsignment, LineItemDetails4.mmRoutingSummary, LineItem5.mmRoutingSummary, LineItemDetails7.mmRoutingSummary, LineItem7.mmRoutingSummary, CertificateDataSet1.mmTransport,
 					LineItem11.mmRoutingSummary, LineItemDetails10.mmRoutingSummary, LineItemDetails13.mmRoutingSummary, LineItem13.mmRoutingSummary, TradeDelivery2.mmConsignment);
-			elementContext_lazy = () -> ProductDelivery.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Routing";
@@ -302,7 +302,7 @@ public class ProductDelivery extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmTradeSettlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductDelivery.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeSettlement";
@@ -352,7 +352,7 @@ public class ProductDelivery extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductDelivery.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Obligation";
@@ -403,7 +403,7 @@ public class ProductDelivery extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmTradeCertificate = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductDelivery.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeCertificate";
@@ -454,7 +454,7 @@ public class ProductDelivery extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmInsuranceCertificate = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductDelivery.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsuranceCertificate";
@@ -482,11 +482,6 @@ public class ProductDelivery extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Product Product}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProductDelivery
-	 * ProductDelivery}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -495,6 +490,11 @@ public class ProductDelivery extends ObligationFulfilment {
 	 * CertificateDataSet2.mmCertifiedCharacteristics}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProductDelivery
+	 * ProductDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -510,7 +510,7 @@ public class ProductDelivery extends ObligationFulfilment {
 	public static final MMBusinessAssociationEnd mmProduct = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CertificateDataSet2.mmCertifiedCharacteristics);
-			elementContext_lazy = () -> ProductDelivery.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Product";
@@ -534,9 +534,15 @@ public class ProductDelivery extends ObligationFulfilment {
 						com.tools20022.repository.entity.InsuranceCertificate.mmProductDelivery, com.tools20022.repository.entity.Transport.mmProductDelivery, com.tools20022.repository.entity.CommercialTradeSettlement.mmProductDelivery,
 						com.tools20022.repository.entity.TradeCertificate.mmProductDelivery, com.tools20022.repository.entity.ProductDeliveryObligation.mmProductDeliveryOffset);
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(ProductDelivery.mmDeliveryPeriod, ProductDelivery.mmRouting, ProductDelivery.mmTradeSettlement, ProductDelivery.mmObligation, ProductDelivery.mmTradeCertificate,
-						ProductDelivery.mmInsuranceCertificate, ProductDelivery.mmProduct);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProductDelivery.mmDeliveryPeriod, com.tools20022.repository.entity.ProductDelivery.mmRouting,
+						com.tools20022.repository.entity.ProductDelivery.mmTradeSettlement, com.tools20022.repository.entity.ProductDelivery.mmObligation, com.tools20022.repository.entity.ProductDelivery.mmTradeCertificate,
+						com.tools20022.repository.entity.ProductDelivery.mmInsuranceCertificate, com.tools20022.repository.entity.ProductDelivery.mmProduct);
 				derivationComponent_lazy = () -> Arrays.asList(TradeDelivery1.mmObject(), TradeDelivery2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ProductDelivery.class;
 			}
 		});
 		return mmObject_lazy.get();

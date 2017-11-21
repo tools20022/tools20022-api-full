@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,6 +38,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RedemptionOrder#mmHoldingsRedemptionRate
+ * RedemptionOrder.mmHoldingsRedemptionRate}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.SwitchRedemptionLeg
+ * SwitchRedemptionLeg}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder
+ * InvestmentFundOrder}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -173,25 +193,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * RedemptionExecution15.mmStaffClientBreakdown}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder
- * InvestmentFundOrder}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SwitchRedemptionLeg
- * SwitchRedemptionLeg}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RedemptionOrder#mmHoldingsRedemptionRate
- * RedemptionOrder.mmHoldingsRedemptionRate}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -224,11 +225,6 @@ public class RedemptionOrder extends InvestmentFundOrder {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.RedemptionOrder
-	 * RedemptionOrder}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -301,6 +297,11 @@ public class RedemptionOrder extends InvestmentFundOrder {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.RedemptionOrder
+	 * RedemptionOrder}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -321,7 +322,7 @@ public class RedemptionOrder extends InvestmentFundOrder {
 					FinancialInstrumentQuantity5Choice.mmHoldingsRedemptionRate, SwitchRedemptionLegExecution2.mmHoldingsRedemptionRate, SwitchRedemptionLegExecution3.mmHoldingsRedemptionRate,
 					FinancialInstrumentQuantity3.mmHoldingsRedemptionRate, FundOrderData5.mmHoldingsRedemptionRate, FinancialInstrumentQuantity29Choice.mmHoldingsRedemptionRate, FinancialInstrumentQuantity28Choice.mmHoldingsRedemptionRate,
 					RedemptionExecution16.mmHoldingsRedemptionRate, RedemptionExecution15.mmHoldingsRedemptionRate, SwitchRedemptionLegExecution4.mmHoldingsRedemptionRate);
-			elementContext_lazy = () -> RedemptionOrder.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RedemptionOrder.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HoldingsRedemptionRate";
@@ -329,6 +330,14 @@ public class RedemptionOrder extends InvestmentFundOrder {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RedemptionOrder.class.getMethod("getHoldingsRedemptionRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -348,12 +357,17 @@ public class RedemptionOrder extends InvestmentFundOrder {
 						RedemptionExecution16.mmStaffClientBreakdown, RedemptionExecution15.mmStaffClientBreakdown);
 				subType_lazy = () -> Arrays.asList(SwitchRedemptionLeg.mmObject());
 				superType_lazy = () -> InvestmentFundOrder.mmObject();
-				element_lazy = () -> Arrays.asList(RedemptionOrder.mmHoldingsRedemptionRate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RedemptionOrder.mmHoldingsRedemptionRate);
 				derivationComponent_lazy = () -> Arrays.asList(RedemptionOrder3.mmObject(), RedemptionBulkOrder2.mmObject(), RedemptionBulkOrderInstruction1.mmObject(), RedemptionOrder5.mmObject(), RedemptionBulkOrder3.mmObject(),
 						RedemptionBulkOrderInstruction2.mmObject(), RedemptionOrder7.mmObject(), RedemptionBulkOrder4.mmObject(), RedemptionOrder4.mmObject(), RedemptionMultipleOrder2.mmObject(),
 						RedemptionMultipleOrderInstruction1.mmObject(), RedemptionOrder6.mmObject(), RedemptionMultipleOrder3.mmObject(), RedemptionMultipleOrderInstruction2.mmObject(), RedemptionOrder8.mmObject(),
 						RedemptionMultipleOrder4.mmObject(), RedemptionOrder9.mmObject(), RedemptionOrder10.mmObject(), RedemptionOrder11.mmObject(), RedemptionMultipleOrder5.mmObject(), RedemptionMultipleOrder6.mmObject(),
 						RedemptionBulkOrder6.mmObject(), RedemptionOrder14.mmObject(), RedemptionOrder15.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RedemptionOrder.class;
 			}
 		});
 		return mmObject_lazy.get();

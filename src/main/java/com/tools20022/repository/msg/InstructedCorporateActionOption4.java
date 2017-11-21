@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides corporate action option details about total instructed balance.
@@ -94,6 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * InstructedCorporateActionOption1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructedCorporateActionOption4", propOrder = {"optionNumber", "optionType", "instructedBalance", "defaultAction", "deadlineDateTime", "deadlineType"})
 public class InstructedCorporateActionOption4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -454,6 +460,7 @@ public class InstructedCorporateActionOption4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OptnNb")
 	public Exact3NumericText getOptionNumber() {
 		return optionNumber;
 	}
@@ -462,6 +469,7 @@ public class InstructedCorporateActionOption4 {
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption10Choice getOptionType() {
 		return optionType;
 	}
@@ -470,6 +478,7 @@ public class InstructedCorporateActionOption4 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "InstdBal", required = true)
 	public BalanceFormat1Choice getInstructedBalance() {
 		return instructedBalance;
 	}
@@ -478,6 +487,7 @@ public class InstructedCorporateActionOption4 {
 		this.instructedBalance = instructedBalance;
 	}
 
+	@XmlElement(name = "DfltActn")
 	public DefaultProcessingOrStandingInstruction1Choice getDefaultAction() {
 		return defaultAction;
 	}
@@ -486,6 +496,7 @@ public class InstructedCorporateActionOption4 {
 		this.defaultAction = defaultAction;
 	}
 
+	@XmlElement(name = "DdlnDtTm", required = true)
 	public ISODateTime getDeadlineDateTime() {
 		return deadlineDateTime;
 	}
@@ -494,6 +505,7 @@ public class InstructedCorporateActionOption4 {
 		this.deadlineDateTime = deadlineDateTime;
 	}
 
+	@XmlElement(name = "DdlnTp", required = true)
 	public DeadlineCode1Choice getDeadlineType() {
 		return deadlineType;
 	}

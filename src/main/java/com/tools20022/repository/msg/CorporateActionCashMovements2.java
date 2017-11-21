@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the cash movement resulting from the election
@@ -74,6 +78,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionCashMovements2", propOrder = {"postingIdentification", "postingDateTime", "postingAmount", "accountDetails"})
 public class CorporateActionCashMovements2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -280,6 +286,7 @@ public class CorporateActionCashMovements2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PstngId")
 	public Max35Text getPostingIdentification() {
 		return postingIdentification;
 	}
@@ -288,6 +295,7 @@ public class CorporateActionCashMovements2 {
 		this.postingIdentification = postingIdentification;
 	}
 
+	@XmlElement(name = "PstngDtTm")
 	public DateAndDateTimeChoice getPostingDateTime() {
 		return postingDateTime;
 	}
@@ -296,6 +304,7 @@ public class CorporateActionCashMovements2 {
 		this.postingDateTime = postingDateTime;
 	}
 
+	@XmlElement(name = "PstngAmt", required = true)
 	public ActiveCurrencyAndAmount getPostingAmount() {
 		return postingAmount;
 	}
@@ -304,6 +313,7 @@ public class CorporateActionCashMovements2 {
 		this.postingAmount = postingAmount;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public List<CashAccount19> getAccountDetails() {
 		return accountDetails;
 	}

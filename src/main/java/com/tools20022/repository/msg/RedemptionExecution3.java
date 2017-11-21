@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Execution of a redemption order.
@@ -140,6 +144,10 @@ import java.util.List;
  * definition} = "Execution of a redemption order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RedemptionExecution3", propOrder = {"orderReference", "dealReference", "orderType", "investmentAccountDetails", "beneficiaryDetails", "unitsNumber", "rounding", "netAmount", "holdingsRedemptionRate", "grossAmount",
+		"tradeDateTime", "priceDetails", "partiallyExecutedIndicator", "cumDividendIndicator", "interimProfitAmount", "foreignExchangeDetails", "incomePreference", "group1Or2Units", "chargeGeneralDetails", "commissionGeneralDetails",
+		"taxGeneralDetails", "settlementAndCustodyDetails", "physicalDeliveryIndicator", "physicalDeliveryDetails", "cashSettlementDetails"})
 public class RedemptionExecution3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1389,6 +1397,7 @@ public class RedemptionExecution3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -1397,6 +1406,7 @@ public class RedemptionExecution3 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "DealRef", required = true)
 	public Max35Text getDealReference() {
 		return dealReference;
 	}
@@ -1405,6 +1415,7 @@ public class RedemptionExecution3 {
 		this.dealReference = dealReference;
 	}
 
+	@XmlElement(name = "OrdrTp")
 	public List<FundOrderType1> getOrderType() {
 		return orderType;
 	}
@@ -1413,6 +1424,7 @@ public class RedemptionExecution3 {
 		this.orderType = orderType;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount13 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -1421,6 +1433,7 @@ public class RedemptionExecution3 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "BnfcryDtls")
 	public IndividualPerson2 getBeneficiaryDetails() {
 		return beneficiaryDetails;
 	}
@@ -1429,6 +1442,7 @@ public class RedemptionExecution3 {
 		this.beneficiaryDetails = beneficiaryDetails;
 	}
 
+	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -1437,6 +1451,7 @@ public class RedemptionExecution3 {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "Rndg")
 	public RoundingDirection2Code getRounding() {
 		return rounding;
 	}
@@ -1445,6 +1460,7 @@ public class RedemptionExecution3 {
 		this.rounding = rounding;
 	}
 
+	@XmlElement(name = "NetAmt", required = true)
 	public ActiveCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
@@ -1453,6 +1469,7 @@ public class RedemptionExecution3 {
 		this.netAmount = netAmount;
 	}
 
+	@XmlElement(name = "HldgsRedRate")
 	public PercentageRate getHoldingsRedemptionRate() {
 		return holdingsRedemptionRate;
 	}
@@ -1461,6 +1478,7 @@ public class RedemptionExecution3 {
 		this.holdingsRedemptionRate = holdingsRedemptionRate;
 	}
 
+	@XmlElement(name = "GrssAmt")
 	public ActiveCurrencyAndAmount getGrossAmount() {
 		return grossAmount;
 	}
@@ -1469,6 +1487,7 @@ public class RedemptionExecution3 {
 		this.grossAmount = grossAmount;
 	}
 
+	@XmlElement(name = "TradDtTm", required = true)
 	public DateAndDateTimeChoice getTradeDateTime() {
 		return tradeDateTime;
 	}
@@ -1477,6 +1496,7 @@ public class RedemptionExecution3 {
 		this.tradeDateTime = tradeDateTime;
 	}
 
+	@XmlElement(name = "PricDtls", required = true)
 	public UnitPrice5 getPriceDetails() {
 		return priceDetails;
 	}
@@ -1485,6 +1505,7 @@ public class RedemptionExecution3 {
 		this.priceDetails = priceDetails;
 	}
 
+	@XmlElement(name = "PrtlyExctdInd", required = true)
 	public YesNoIndicator getPartiallyExecutedIndicator() {
 		return partiallyExecutedIndicator;
 	}
@@ -1493,6 +1514,7 @@ public class RedemptionExecution3 {
 		this.partiallyExecutedIndicator = partiallyExecutedIndicator;
 	}
 
+	@XmlElement(name = "CumDvddInd", required = true)
 	public YesNoIndicator getCumDividendIndicator() {
 		return cumDividendIndicator;
 	}
@@ -1501,6 +1523,7 @@ public class RedemptionExecution3 {
 		this.cumDividendIndicator = cumDividendIndicator;
 	}
 
+	@XmlElement(name = "IntrmPrftAmt")
 	public ProfitAndLoss1Choice getInterimProfitAmount() {
 		return interimProfitAmount;
 	}
@@ -1509,6 +1532,7 @@ public class RedemptionExecution3 {
 		this.interimProfitAmount = interimProfitAmount;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public List<ForeignExchangeTerms4> getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -1517,6 +1541,7 @@ public class RedemptionExecution3 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "IncmPref")
 	public IncomePreference1Code getIncomePreference() {
 		return incomePreference;
 	}
@@ -1525,6 +1550,7 @@ public class RedemptionExecution3 {
 		this.incomePreference = incomePreference;
 	}
 
+	@XmlElement(name = "Grp1Or2Units")
 	public UKTaxGroupUnitCode getGroup1Or2Units() {
 		return group1Or2Units;
 	}
@@ -1533,6 +1559,7 @@ public class RedemptionExecution3 {
 		this.group1Or2Units = group1Or2Units;
 	}
 
+	@XmlElement(name = "ChrgGnlDtls")
 	public TotalCharges2 getChargeGeneralDetails() {
 		return chargeGeneralDetails;
 	}
@@ -1541,6 +1568,7 @@ public class RedemptionExecution3 {
 		this.chargeGeneralDetails = chargeGeneralDetails;
 	}
 
+	@XmlElement(name = "ComssnGnlDtls")
 	public TotalCommissions2 getCommissionGeneralDetails() {
 		return commissionGeneralDetails;
 	}
@@ -1549,6 +1577,7 @@ public class RedemptionExecution3 {
 		this.commissionGeneralDetails = commissionGeneralDetails;
 	}
 
+	@XmlElement(name = "TaxGnlDtls")
 	public TotalTaxes2 getTaxGeneralDetails() {
 		return taxGeneralDetails;
 	}
@@ -1557,6 +1586,7 @@ public class RedemptionExecution3 {
 		this.taxGeneralDetails = taxGeneralDetails;
 	}
 
+	@XmlElement(name = "SttlmAndCtdyDtls")
 	public FundSettlementParameters3 getSettlementAndCustodyDetails() {
 		return settlementAndCustodyDetails;
 	}
@@ -1565,6 +1595,7 @@ public class RedemptionExecution3 {
 		this.settlementAndCustodyDetails = settlementAndCustodyDetails;
 	}
 
+	@XmlElement(name = "PhysDlvryInd", required = true)
 	public YesNoIndicator getPhysicalDeliveryIndicator() {
 		return physicalDeliveryIndicator;
 	}
@@ -1573,6 +1604,7 @@ public class RedemptionExecution3 {
 		this.physicalDeliveryIndicator = physicalDeliveryIndicator;
 	}
 
+	@XmlElement(name = "PhysDlvryDtls")
 	public DeliveryParameters3 getPhysicalDeliveryDetails() {
 		return physicalDeliveryDetails;
 	}
@@ -1581,6 +1613,7 @@ public class RedemptionExecution3 {
 		this.physicalDeliveryDetails = physicalDeliveryDetails;
 	}
 
+	@XmlElement(name = "CshSttlmDtls")
 	public PaymentTransaction18 getCashSettlementDetails() {
 		return cashSettlementDetails;
 	}

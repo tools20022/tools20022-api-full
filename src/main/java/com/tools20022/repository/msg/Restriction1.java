@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Restriction on capability or operations allowed.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Restriction on capability or operations allowed."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Restriction1", propOrder = {"restrictionType", "validFrom", "validUntil"})
 public class Restriction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -220,6 +226,7 @@ public class Restriction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RstrctnTp", required = true)
 	public CodeOrProprietary1Choice getRestrictionType() {
 		return restrictionType;
 	}
@@ -228,6 +235,7 @@ public class Restriction1 {
 		this.restrictionType = restrictionType;
 	}
 
+	@XmlElement(name = "VldFr", required = true)
 	public ISODateTime getValidFrom() {
 		return validFrom;
 	}
@@ -236,6 +244,7 @@ public class Restriction1 {
 		this.validFrom = validFrom;
 	}
 
+	@XmlElement(name = "VldUntil")
 	public ISODateTime getValidUntil() {
 		return validUntil;
 	}

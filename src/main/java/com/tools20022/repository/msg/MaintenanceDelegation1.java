@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information on the delegation of a maintenance action or maintenance
@@ -99,6 +103,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MaintenanceDelegation1", propOrder = {"maintenanceService", "partialDelegation", "POISubset", "delegatedAction", "parametersSubsetIdentification", "parametersSubsetDefinition", "certificate",
+		"POIIdentificationAssociation", "symmetricKey", "parameterDataSet"})
 public class MaintenanceDelegation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -654,6 +661,7 @@ public class MaintenanceDelegation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MntncSvc", required = true)
 	public List<DataSetCategory6Code> getMaintenanceService() {
 		return maintenanceService;
 	}
@@ -662,6 +670,7 @@ public class MaintenanceDelegation1 {
 		this.maintenanceService = maintenanceService;
 	}
 
+	@XmlElement(name = "PrtlDlgtn")
 	public TrueFalseIndicator getPartialDelegation() {
 		return partialDelegation;
 	}
@@ -670,6 +679,7 @@ public class MaintenanceDelegation1 {
 		this.partialDelegation = partialDelegation;
 	}
 
+	@XmlElement(name = "POISubset")
 	public List<Max35Text> getPOISubset() {
 		return pOISubset;
 	}
@@ -678,6 +688,7 @@ public class MaintenanceDelegation1 {
 		this.pOISubset = pOISubset;
 	}
 
+	@XmlElement(name = "DlgtdActn")
 	public MaintenanceDelegateAction1 getDelegatedAction() {
 		return delegatedAction;
 	}
@@ -686,6 +697,7 @@ public class MaintenanceDelegation1 {
 		this.delegatedAction = delegatedAction;
 	}
 
+	@XmlElement(name = "ParamsSubsetId")
 	public Max35Text getParametersSubsetIdentification() {
 		return parametersSubsetIdentification;
 	}
@@ -694,6 +706,7 @@ public class MaintenanceDelegation1 {
 		this.parametersSubsetIdentification = parametersSubsetIdentification;
 	}
 
+	@XmlElement(name = "ParamsSubsetDef")
 	public Max3000Binary getParametersSubsetDefinition() {
 		return parametersSubsetDefinition;
 	}
@@ -702,6 +715,7 @@ public class MaintenanceDelegation1 {
 		this.parametersSubsetDefinition = parametersSubsetDefinition;
 	}
 
+	@XmlElement(name = "Cert")
 	public List<Max5000Binary> getCertificate() {
 		return certificate;
 	}
@@ -710,6 +724,7 @@ public class MaintenanceDelegation1 {
 		this.certificate = certificate;
 	}
 
+	@XmlElement(name = "POIIdAssoctn")
 	public List<MaintenanceIdentificationAssociation1> getPOIIdentificationAssociation() {
 		return pOIIdentificationAssociation;
 	}
@@ -718,6 +733,7 @@ public class MaintenanceDelegation1 {
 		this.pOIIdentificationAssociation = pOIIdentificationAssociation;
 	}
 
+	@XmlElement(name = "SmmtrcKey")
 	public List<KEKIdentifier2> getSymmetricKey() {
 		return symmetricKey;
 	}
@@ -726,6 +742,7 @@ public class MaintenanceDelegation1 {
 		this.symmetricKey = symmetricKey;
 	}
 
+	@XmlElement(name = "ParamDataSet")
 	public TerminalManagementDataSet14 getParameterDataSet() {
 		return parameterDataSet;
 	}

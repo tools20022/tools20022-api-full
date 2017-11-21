@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header31;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The ATMPINManagementResponse message is sent by an ATM manager or its agent
@@ -37,9 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catp.011.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
@@ -75,6 +74,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catp.011.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -90,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMPINManagementResponseV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMPINManagementResponseV02", propOrder = {"header", "protectedATMPINManagementResponse", "ATMPINManagementResponse", "securityTrailer"})
 public class ATMPINManagementResponseV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -129,6 +133,14 @@ public class ATMPINManagementResponseV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header31.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMPINManagementResponseV02.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType10 protectedATMPINManagementResponse;
 	/**
@@ -163,6 +175,14 @@ public class ATMPINManagementResponseV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMPINManagementResponseV02.class.getMethod("getProtectedATMPINManagementResponse", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ATMPINManagementResponse2 aTMPINManagementResponse;
@@ -202,6 +222,14 @@ public class ATMPINManagementResponseV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ATMPINManagementResponse2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMPINManagementResponseV02.class.getMethod("getATMPINManagementResponse", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType15 securityTrailer;
 	/**
@@ -237,6 +265,14 @@ public class ATMPINManagementResponseV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMPINManagementResponseV02.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -250,8 +286,8 @@ public class ATMPINManagementResponseV02 {
 				rootElement = "Document";
 				xmlTag = "ATMPINMgmtRspn";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ATMPINManagementResponseV02.mmHeader, ATMPINManagementResponseV02.mmProtectedATMPINManagementResponse, ATMPINManagementResponseV02.mmATMPINManagementResponse,
-						ATMPINManagementResponseV02.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMPINManagementResponseV02.mmHeader, com.tools20022.repository.area.catp.ATMPINManagementResponseV02.mmProtectedATMPINManagementResponse,
+						com.tools20022.repository.area.catp.ATMPINManagementResponseV02.mmATMPINManagementResponse, com.tools20022.repository.area.catp.ATMPINManagementResponseV02.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catp";
@@ -261,10 +297,16 @@ public class ATMPINManagementResponseV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ATMPINManagementResponseV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header31 getHeader() {
 		return header;
 	}
@@ -273,6 +315,7 @@ public class ATMPINManagementResponseV02 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "PrtctdATMPINMgmtRspn")
 	public ContentInformationType10 getProtectedATMPINManagementResponse() {
 		return protectedATMPINManagementResponse;
 	}
@@ -281,6 +324,7 @@ public class ATMPINManagementResponseV02 {
 		this.protectedATMPINManagementResponse = protectedATMPINManagementResponse;
 	}
 
+	@XmlElement(name = "ATMPINMgmtRspn")
 	public ATMPINManagementResponse2 getATMPINManagementResponse() {
 		return aTMPINManagementResponse;
 	}
@@ -289,11 +333,18 @@ public class ATMPINManagementResponseV02 {
 		this.aTMPINManagementResponse = aTMPINManagementResponse;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType15 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catp.011.02.02")
+	static public class Document {
+		@XmlElement(name = "ATMPINMgmtRspn", required = true)
+		public ATMPINManagementResponseV02 messageBody;
 	}
 }

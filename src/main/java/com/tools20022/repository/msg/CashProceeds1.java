@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the cash proceeds.
@@ -67,6 +71,8 @@ import java.util.List;
  * definition} = "Provides information about the cash proceeds."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashProceeds1", propOrder = {"postingAmount", "reconciliationDetails", "accountDetails"})
 public class CashProceeds1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class CashProceeds1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PstngAmt", required = true)
 	public ActiveCurrencyAndAmount getPostingAmount() {
 		return postingAmount;
 	}
@@ -226,6 +233,7 @@ public class CashProceeds1 {
 		this.postingAmount = postingAmount;
 	}
 
+	@XmlElement(name = "RcncltnDtls")
 	public Max350Text getReconciliationDetails() {
 		return reconciliationDetails;
 	}
@@ -234,6 +242,7 @@ public class CashProceeds1 {
 		this.reconciliationDetails = reconciliationDetails;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public List<CashAccount19> getAccountDetails() {
 		return accountDetails;
 	}

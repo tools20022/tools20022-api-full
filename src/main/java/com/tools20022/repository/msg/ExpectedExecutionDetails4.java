@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Expected trade date and expected settlement date of the order execution.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ExpectedExecutionDetails2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExpectedExecutionDetails4", propOrder = {"expectedTradeDateTime", "expectedCashSettlementDate"})
 public class ExpectedExecutionDetails4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -199,6 +205,7 @@ public class ExpectedExecutionDetails4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XpctdTradDtTm")
 	public DateAndDateTimeChoice getExpectedTradeDateTime() {
 		return expectedTradeDateTime;
 	}
@@ -207,6 +214,7 @@ public class ExpectedExecutionDetails4 {
 		this.expectedTradeDateTime = expectedTradeDateTime;
 	}
 
+	@XmlElement(name = "XpctdCshSttlmDt")
 	public ISODate getExpectedCashSettlementDate() {
 		return expectedCashSettlementDate;
 	}

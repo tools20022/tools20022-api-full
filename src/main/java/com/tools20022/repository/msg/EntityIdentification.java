@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a business entity, eg, corporate or financial institution.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EntityIdentification", propOrder = {"type", "entityIdentifier"})
 public class EntityIdentification {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class EntityIdentification {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Type", required = true)
 	public Max4Text getType() {
 		return type;
 	}
@@ -166,6 +173,7 @@ public class EntityIdentification {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max30Text getEntityIdentifier() {
 		return entityIdentifier;
 	}

@@ -26,9 +26,11 @@ import com.tools20022.repository.choice.PartyIdentification103Choice;
 import com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -52,9 +54,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.015.002.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementPreviousversionsubsetvariant
@@ -102,6 +101,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.015.002.05}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -121,6 +123,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionMovementConfirmation002V05", propOrder = {"additionalParameters", "accountOwner", "safekeepingAccount", "safekeepingPlace", "financialInstrumentIdentification", "financialInstrumentAttributes",
+		"intraPositionDetails", "supplementaryData"})
 public class IntraPositionMovementConfirmation002V05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +163,14 @@ public class IntraPositionMovementConfirmation002V05 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalParameters25.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementConfirmation002V05.class.getMethod("getAdditionalParameters", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification103Choice accountOwner;
 	/**
@@ -193,6 +206,14 @@ public class IntraPositionMovementConfirmation002V05 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification103Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementConfirmation002V05.class.getMethod("getAccountOwner", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesAccount27 safekeepingAccount;
 	/**
@@ -227,6 +248,14 @@ public class IntraPositionMovementConfirmation002V05 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount27.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementConfirmation002V05.class.getMethod("getSafekeepingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SafekeepingPlaceFormat17Choice safekeepingPlace;
@@ -268,6 +297,14 @@ public class IntraPositionMovementConfirmation002V05 {
 			minOccurs = 0;
 			complexType_lazy = () -> SafekeepingPlaceFormat17Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementConfirmation002V05.class.getMethod("getSafekeepingPlace", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecurityIdentification20 financialInstrumentIdentification;
 	/**
@@ -306,6 +343,14 @@ public class IntraPositionMovementConfirmation002V05 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification20.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementConfirmation002V05.class.getMethod("getFinancialInstrumentIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected FinancialInstrumentAttributes75 financialInstrumentAttributes;
 	/**
@@ -341,6 +386,14 @@ public class IntraPositionMovementConfirmation002V05 {
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentAttributes75.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementConfirmation002V05.class.getMethod("getFinancialInstrumentAttributes", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected IntraPositionDetails35 intraPositionDetails;
 	/**
@@ -375,6 +428,14 @@ public class IntraPositionMovementConfirmation002V05 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> IntraPositionDetails35.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementConfirmation002V05.class.getMethod("getIntraPositionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -413,6 +474,14 @@ public class IntraPositionMovementConfirmation002V05 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementConfirmation002V05.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -426,9 +495,11 @@ public class IntraPositionMovementConfirmation002V05 {
 				rootElement = "Document";
 				xmlTag = "IntraPosMvmntConf";
 				businessArea_lazy = () -> SecuritiesManagementPreviousversionsubsetvariant.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementConfirmation002V05.mmAdditionalParameters, IntraPositionMovementConfirmation002V05.mmAccountOwner,
-						IntraPositionMovementConfirmation002V05.mmSafekeepingAccount, IntraPositionMovementConfirmation002V05.mmSafekeepingPlace, IntraPositionMovementConfirmation002V05.mmFinancialInstrumentIdentification,
-						IntraPositionMovementConfirmation002V05.mmFinancialInstrumentAttributes, IntraPositionMovementConfirmation002V05.mmIntraPositionDetails, IntraPositionMovementConfirmation002V05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05.mmAdditionalParameters,
+						com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05.mmAccountOwner, com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05.mmSafekeepingPlace, com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05.mmFinancialInstrumentAttributes, com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05.mmIntraPositionDetails,
+						com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -438,10 +509,16 @@ public class IntraPositionMovementConfirmation002V05 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IntraPositionMovementConfirmation002V05.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlParams")
 	public AdditionalParameters25 getAdditionalParameters() {
 		return additionalParameters;
 	}
@@ -450,6 +527,7 @@ public class IntraPositionMovementConfirmation002V05 {
 		this.additionalParameters = additionalParameters;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification103Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -458,6 +536,7 @@ public class IntraPositionMovementConfirmation002V05 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount27 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -466,6 +545,7 @@ public class IntraPositionMovementConfirmation002V05 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat17Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -474,6 +554,7 @@ public class IntraPositionMovementConfirmation002V05 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification20 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -482,6 +563,7 @@ public class IntraPositionMovementConfirmation002V05 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public FinancialInstrumentAttributes75 getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -490,6 +572,7 @@ public class IntraPositionMovementConfirmation002V05 {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "IntraPosDtls", required = true)
 	public IntraPositionDetails35 getIntraPositionDetails() {
 		return intraPositionDetails;
 	}
@@ -498,11 +581,18 @@ public class IntraPositionMovementConfirmation002V05 {
 		this.intraPositionDetails = intraPositionDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.015.05.05")
+	static public class Document {
+		@XmlElement(name = "IntraPosMvmntConf", required = true)
+		public IntraPositionMovementConfirmation002V05 messageBody;
 	}
 }

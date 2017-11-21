@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.SignatureEnvelope;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Application specific information defined by the service provider.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Application specific information defined by the service provider."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ApplicationSpecifics1", propOrder = {"systemUser", "signature", "totalNumberOfDocuments"})
 public class ApplicationSpecifics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -216,6 +222,7 @@ public class ApplicationSpecifics1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysUsr")
 	public Max140Text getSystemUser() {
 		return systemUser;
 	}
@@ -224,6 +231,7 @@ public class ApplicationSpecifics1 {
 		this.systemUser = systemUser;
 	}
 
+	@XmlElement(name = "Sgntr")
 	public SignatureEnvelope getSignature() {
 		return signature;
 	}
@@ -232,6 +240,7 @@ public class ApplicationSpecifics1 {
 		this.signature = signature;
 	}
 
+	@XmlElement(name = "TtlNbOfDocs", required = true)
 	public Number getTotalNumberOfDocuments() {
 		return totalNumberOfDocuments;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action notification.
@@ -99,6 +103,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides additional information regarding corporate action notification."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNotificationSD2", propOrder = {"placeAndName", "derivativeWorkflowStatus", "derivativeExchange", "derivativePublicationDate", "derivativeAdjustmentDate", "derivativeCalculationMethod", "derivativeFactor",
+		"lotSizeChangeFlag", "lotAdjustmentMethod", "strikePriceChangeFlag", "strikePriceRoundingMethod", "residualCashFlag", "referencePrice", "referencePriceCurrency", "approvedFlag"})
 public class CorporateActionNotificationSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -780,6 +787,7 @@ public class CorporateActionNotificationSD2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -788,6 +796,7 @@ public class CorporateActionNotificationSD2 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "DerivWorkflwSts", required = true)
 	public DerivativeWorkflowStatus1Code getDerivativeWorkflowStatus() {
 		return derivativeWorkflowStatus;
 	}
@@ -796,6 +805,7 @@ public class CorporateActionNotificationSD2 {
 		this.derivativeWorkflowStatus = derivativeWorkflowStatus;
 	}
 
+	@XmlElement(name = "DerivXchg", required = true)
 	public Max4AlphaNumericText getDerivativeExchange() {
 		return derivativeExchange;
 	}
@@ -804,6 +814,7 @@ public class CorporateActionNotificationSD2 {
 		this.derivativeExchange = derivativeExchange;
 	}
 
+	@XmlElement(name = "DerivPblctnDt")
 	public ISODate getDerivativePublicationDate() {
 		return derivativePublicationDate;
 	}
@@ -812,6 +823,7 @@ public class CorporateActionNotificationSD2 {
 		this.derivativePublicationDate = derivativePublicationDate;
 	}
 
+	@XmlElement(name = "DerivAdjstmntDt", required = true)
 	public ISODate getDerivativeAdjustmentDate() {
 		return derivativeAdjustmentDate;
 	}
@@ -820,6 +832,7 @@ public class CorporateActionNotificationSD2 {
 		this.derivativeAdjustmentDate = derivativeAdjustmentDate;
 	}
 
+	@XmlElement(name = "DerivClctnMtd")
 	public Max1025Text getDerivativeCalculationMethod() {
 		return derivativeCalculationMethod;
 	}
@@ -828,6 +841,7 @@ public class CorporateActionNotificationSD2 {
 		this.derivativeCalculationMethod = derivativeCalculationMethod;
 	}
 
+	@XmlElement(name = "DerivFctr")
 	public DecimalNumber getDerivativeFactor() {
 		return derivativeFactor;
 	}
@@ -836,6 +850,7 @@ public class CorporateActionNotificationSD2 {
 		this.derivativeFactor = derivativeFactor;
 	}
 
+	@XmlElement(name = "LotSzChngFlg")
 	public YesNoIndicator getLotSizeChangeFlag() {
 		return lotSizeChangeFlag;
 	}
@@ -844,6 +859,7 @@ public class CorporateActionNotificationSD2 {
 		this.lotSizeChangeFlag = lotSizeChangeFlag;
 	}
 
+	@XmlElement(name = "LotAdjstmntMtd")
 	public Max1025Text getLotAdjustmentMethod() {
 		return lotAdjustmentMethod;
 	}
@@ -852,6 +868,7 @@ public class CorporateActionNotificationSD2 {
 		this.lotAdjustmentMethod = lotAdjustmentMethod;
 	}
 
+	@XmlElement(name = "StrkPricChngFlg")
 	public YesNoIndicator getStrikePriceChangeFlag() {
 		return strikePriceChangeFlag;
 	}
@@ -860,6 +877,7 @@ public class CorporateActionNotificationSD2 {
 		this.strikePriceChangeFlag = strikePriceChangeFlag;
 	}
 
+	@XmlElement(name = "StrkPricRndgMtd")
 	public Max500Text getStrikePriceRoundingMethod() {
 		return strikePriceRoundingMethod;
 	}
@@ -868,6 +886,7 @@ public class CorporateActionNotificationSD2 {
 		this.strikePriceRoundingMethod = strikePriceRoundingMethod;
 	}
 
+	@XmlElement(name = "RsdlCshFlg")
 	public YesNoIndicator getResidualCashFlag() {
 		return residualCashFlag;
 	}
@@ -876,6 +895,7 @@ public class CorporateActionNotificationSD2 {
 		this.residualCashFlag = residualCashFlag;
 	}
 
+	@XmlElement(name = "RefPric")
 	public DecimalNumber getReferencePrice() {
 		return referencePrice;
 	}
@@ -884,6 +904,7 @@ public class CorporateActionNotificationSD2 {
 		this.referencePrice = referencePrice;
 	}
 
+	@XmlElement(name = "RefPricCcy")
 	public ActiveCurrencyCode getReferencePriceCurrency() {
 		return referencePriceCurrency;
 	}
@@ -892,6 +913,7 @@ public class CorporateActionNotificationSD2 {
 		this.referencePriceCurrency = referencePriceCurrency;
 	}
 
+	@XmlElement(name = "ApprvdFlg")
 	public YesNoIndicator getApprovedFlag() {
 		return approvedFlag;
 	}

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,6 +38,76 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+ * Status.mmStatusReason}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Status#mmStatusDateTime
+ * Status.mmStatusDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Status#mmValidityTime
+ * Status.mmValidityTime}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Status#mmStatusDescription
+ * Status.mmStatusDescription}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Status#mmInstructionProcessingStatus
+ * Status.mmInstructionProcessingStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Status#mmPartyRole
+ * Status.mmPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Status#mmSettlementStatus
+ * Status.mmSettlementStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Status#mmCancellationProcessingStatus
+ * Status.mmCancellationProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+ * Status.mmTransactionProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Status#mmModificationProcessingStatus
+ * Status.mmModificationProcessingStatus}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountStatus AccountStatus}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentStatus PaymentStatus}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemStatus SystemStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LimitStatus LimitStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
+ * SecuritiesTradeStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CorporateActionStatus
+ * CorporateActionStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesStatus
+ * SecuritiesStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.UndertakingStatus
+ * UndertakingStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MandateStatus MandateStatus}
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
+ * TreasuryTradeSettlementStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CardPaymentStatus
+ * CardPaymentStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
+ * SecuritiesOrderStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestigationCaseStatus
+ * InvestigationCaseStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MeetingStatus MeetingStatus}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.CollateralStatus
+ * CollateralStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus
+ * InvoiceFinancingStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BaselineStatus
+ * BaselineStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.QuoteStatus QuoteStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvoiceStatus InvoiceStatus}
+ * </li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -529,76 +600,6 @@ import java.util.List;
  * StatusAndReason33.mmStatusAndReason}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AccountStatus AccountStatus}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentStatus PaymentStatus}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemStatus SystemStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LimitStatus LimitStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
- * SecuritiesTradeStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CorporateActionStatus
- * CorporateActionStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesStatus
- * SecuritiesStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.UndertakingStatus
- * UndertakingStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MandateStatus MandateStatus}
- * </li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
- * TreasuryTradeSettlementStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CardPaymentStatus
- * CardPaymentStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
- * SecuritiesOrderStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestigationCaseStatus
- * InvestigationCaseStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MeetingStatus MeetingStatus}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.CollateralStatus
- * CollateralStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus
- * InvoiceFinancingStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BaselineStatus
- * BaselineStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.QuoteStatus QuoteStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvoiceStatus InvoiceStatus}
- * </li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Status#mmStatusReason
- * Status.mmStatusReason}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Status#mmStatusDateTime
- * Status.mmStatusDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Status#mmValidityTime
- * Status.mmValidityTime}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Status#mmStatusDescription
- * Status.mmStatusDescription}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Status#mmInstructionProcessingStatus
- * Status.mmInstructionProcessingStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Status#mmPartyRole
- * Status.mmPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Status#mmSettlementStatus
- * Status.mmSettlementStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Status#mmCancellationProcessingStatus
- * Status.mmCancellationProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
- * Status.mmTransactionProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Status#mmModificationProcessingStatus
- * Status.mmModificationProcessingStatus}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -635,10 +636,6 @@ public class Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.StatusReason
 	 * StatusReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
-	 * Status}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1085,6 +1082,10 @@ public class Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
+	 * Status}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1131,7 +1132,7 @@ public class Status {
 					OriginalPaymentInstruction23.mmStatusReasonInformation, OriginalPaymentInstruction21.mmReversalReasonInformation, MandateAmendment5.mmAmendmentReason, OriginalPaymentInstruction24.mmStatusReasonInformation,
 					OriginalGroupInformation28.mmStatusReasonInformation, PaymentTransaction76.mmReturnReasonInformation, OriginalPaymentInstruction20.mmCancellationReasonInformation, PaymentTransaction83.mmStatusReasonInformation,
 					PaymentTransaction77.mmReversalReasonInformation, PaymentTransaction82.mmStatusReasonInformation, MandateSuspensionReason1.mmReason);
-			elementContext_lazy = () -> Status.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StatusReason";
@@ -1152,10 +1153,6 @@ public class Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
-	 * Status}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1283,6 +1280,10 @@ public class Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
+	 * Status}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1304,7 +1305,7 @@ public class Status {
 					CurrencyControlGroupStatus1.mmStatusDateTime, CurrencyControlPackageStatus1.mmStatusDateTime, RegisteredContractJournal1.mmClosureDate, CurrencyControlRecordStatus1.mmStatusDateTime, StatusTrail6.mmStatusDate,
 					InvestmentAccount50.mmStatusDate, StatusTrail7.mmStatusDate, InvestmentAccount62.mmStatusDate, TradeData14.mmCurrentStatusDateTime, TradeData12.mmCurrentStatusDateTime, TradeData15.mmCurrentStatusDateTime,
 					TradeData15.mmPreviousStatusDateTime, TradeData16.mmCurrentStatusDateTime);
-			elementContext_lazy = () -> Status.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StatusDateTime";
@@ -1312,6 +1313,14 @@ public class Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Status.class.getMethod("getStatusDateTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DateTimePeriod validityTime;
@@ -1332,10 +1341,6 @@ public class Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
-	 * Status}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1354,6 +1359,10 @@ public class Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
+	 * Status}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1367,7 +1376,7 @@ public class Status {
 	public static final MMBusinessAssociationEnd mmValidityTime = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SystemStatusDetails1.mmValidityTime, SystemStatus1.mmValidityTime, IntraPositionQueryStatus1.mmDatePeriod, SystemStatus2.mmValidityTime);
-			elementContext_lazy = () -> Status.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityTime";
@@ -1389,10 +1398,6 @@ public class Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
-	 * Status}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1500,6 +1505,10 @@ public class Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
+	 * Status}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1523,7 +1532,7 @@ public class Status {
 					CorporateActionDeactivationCancellationProcessingStatus1.mmAdditionalInformation, CorporateActionDeactivationCancellationRejectionStatus1.mmAdditionalInformation,
 					CancellationStatusInformation1.mmAdditionalStatusReasonInformation, CollateralCancellationStatus1.mmAdditionalInformation, GenericValidationRuleIdentification1.mmDescription, CurrencyControlGroupStatus1.mmStatus,
 					ValidationStatusReason1.mmValidationRule, ValidationStatusReason1.mmAdditionalInformation, CurrencyControlRecordStatus1.mmStatus);
-			elementContext_lazy = () -> Status.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StatusDescription";
@@ -1531,6 +1540,14 @@ public class Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Status.class.getMethod("getStatusDescription", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected StatusCode instructionProcessingStatus;
@@ -1543,10 +1560,6 @@ public class Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.StatusCode
 	 * StatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
-	 * Status}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1634,6 +1647,10 @@ public class Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
+	 * Status}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1653,7 +1670,7 @@ public class Status {
 					CollateralStatusReason1.mmStatus, AccountLinkStatus1.mmStatus, TradeLeg8.mmStatus, InstructionTypeStatus2Choice.mmInstructionStatus, InstructionStatus5Choice.mmGlobalInstructionStatus,
 					InstructionStatus5Choice.mmDetailedInstructionStatus, InstructionStatus6Choice.mmProcessingStatus, DetailedInstructionStatus11.mmInstructionStatus, InstructionProcessingStatus3.mmStatus,
 					CurrencyControlPackageStatus1.mmStatus);
-			elementContext_lazy = () -> Status.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstructionProcessingStatus";
@@ -1661,6 +1678,14 @@ public class Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Status.class.getMethod("getInstructionProcessingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestigationPartyRole partyRole;
@@ -1700,7 +1725,7 @@ public class Status {
 	 */
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Status.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
@@ -1723,10 +1748,6 @@ public class Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatusCode
 	 * SecuritiesSettlementStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
-	 * Status}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1865,6 +1886,10 @@ public class Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
+	 * Status}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1885,7 +1910,7 @@ public class Status {
 					StatusAndReason19.mmSettlementStatus, StatusAndReason20.mmSettlementStatus, Status16Choice.mmSettlementStatus, StatusTrail4.mmSettlementStatus, StatusTrail5.mmSettlementStatus, StatusAndReason28.mmSettlementStatus,
 					StatusTrail6.mmSettlementStatus, Status18Choice.mmSettlementStatus, Status19Choice.mmSettlementStatus, SettlementStatus19Choice.mmCode, SettlementStatus19Choice.mmProprietary, StatusAndReason29.mmSettlementStatus,
 					StatusTrail7.mmSettlementStatus, Status22Choice.mmSettlementStatus, SettlementStatus25Choice.mmCode, SettlementStatus25Choice.mmProprietary, Status23Choice.mmSettlementStatus);
-			elementContext_lazy = () -> Status.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementStatus";
@@ -1893,6 +1918,14 @@ public class Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesSettlementStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Status.class.getMethod("getSettlementStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CancellationProcessingStatusCode cancellationProcessingStatus;
@@ -1906,10 +1939,6 @@ public class Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CancellationProcessingStatusCode
 	 * CancellationProcessingStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
-	 * Status}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1964,6 +1993,10 @@ public class Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
+	 * Status}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1980,7 +2013,7 @@ public class Status {
 					CancellationProcessingStatus2Choice.mmCode, CancellationProcessingStatus2Choice.mmProprietary, Status3Choice.mmCancellationProcessingStatus, Status10Choice.mmCancellationProcessingStatus,
 					CancellationProcessingStatus3Choice.mmCode, CancellationProcessingStatus3Choice.mmProprietary, Status19Choice.mmCancellationProcessingStatus, CancellationProcessingStatus7Choice.mmCode,
 					CancellationProcessingStatus7Choice.mmProprietary, CancellationProcessingStatus8Choice.mmCode, CancellationProcessingStatus8Choice.mmProprietary, Status22Choice.mmCancellationProcessingStatus);
-			elementContext_lazy = () -> Status.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CancellationProcessingStatus";
@@ -1988,6 +2021,14 @@ public class Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancellationProcessingStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Status.class.getMethod("getCancellationProcessingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InstructionProcessingStatusCode transactionProcessingStatus;
@@ -2001,10 +2042,6 @@ public class Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode
 	 * InstructionProcessingStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
-	 * Status}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2191,6 +2228,10 @@ public class Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
+	 * Status}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2219,7 +2260,7 @@ public class Status {
 					InstructionProcessingStatus23Choice.mmProprietary, Status19Choice.mmInstructionProcessingStatus, Status19Choice.mmRegistrationProcessingStatus, Status19Choice.mmReplacementProcessingStatus,
 					AdditionalInformation12.mmProcessingStatus, Status22Choice.mmInstructionProcessingStatus, Status22Choice.mmRegistrationProcessingStatus, Status22Choice.mmReplacementProcessingStatus,
 					InstructionProcessingStatus26Choice.mmCode, InstructionProcessingStatus26Choice.mmProprietary, Status23Choice.mmInstructionProcessingStatus);
-			elementContext_lazy = () -> Status.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionProcessingStatus";
@@ -2227,6 +2268,14 @@ public class Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InstructionProcessingStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Status.class.getMethod("getTransactionProcessingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ModificationProcessingStatusCode modificationProcessingStatus;
@@ -2240,10 +2289,6 @@ public class Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ModificationProcessingStatusCode
 	 * ModificationProcessingStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
-	 * Status}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2255,6 +2300,10 @@ public class Status {
 	 * ModificationProcessingStatus1Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
+	 * Status}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2269,7 +2318,7 @@ public class Status {
 	public static final MMBusinessAttribute mmModificationProcessingStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ModificationProcessingStatus1Choice.mmCode, ModificationProcessingStatus1Choice.mmProprietary);
-			elementContext_lazy = () -> Status.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationProcessingStatus";
@@ -2277,6 +2326,14 @@ public class Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ModificationProcessingStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Status.class.getMethod("getModificationProcessingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -2308,8 +2365,10 @@ public class Status {
 				subType_lazy = () -> Arrays.asList(AccountStatus.mmObject(), PaymentStatus.mmObject(), SystemStatus.mmObject(), LimitStatus.mmObject(), SecuritiesTradeStatus.mmObject(), CorporateActionStatus.mmObject(),
 						SecuritiesStatus.mmObject(), UndertakingStatus.mmObject(), MandateStatus.mmObject(), TreasuryTradeSettlementStatus.mmObject(), CardPaymentStatus.mmObject(), SecuritiesOrderStatus.mmObject(),
 						InvestigationCaseStatus.mmObject(), MeetingStatus.mmObject(), CollateralStatus.mmObject(), InvoiceFinancingStatus.mmObject(), BaselineStatus.mmObject(), QuoteStatus.mmObject(), InvoiceStatus.mmObject());
-				element_lazy = () -> Arrays.asList(Status.mmStatusReason, Status.mmStatusDateTime, Status.mmValidityTime, Status.mmStatusDescription, Status.mmInstructionProcessingStatus, Status.mmPartyRole, Status.mmSettlementStatus,
-						Status.mmCancellationProcessingStatus, Status.mmTransactionProcessingStatus, Status.mmModificationProcessingStatus);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Status.mmStatusReason, com.tools20022.repository.entity.Status.mmStatusDateTime, com.tools20022.repository.entity.Status.mmValidityTime,
+						com.tools20022.repository.entity.Status.mmStatusDescription, com.tools20022.repository.entity.Status.mmInstructionProcessingStatus, com.tools20022.repository.entity.Status.mmPartyRole,
+						com.tools20022.repository.entity.Status.mmSettlementStatus, com.tools20022.repository.entity.Status.mmCancellationProcessingStatus, com.tools20022.repository.entity.Status.mmTransactionProcessingStatus,
+						com.tools20022.repository.entity.Status.mmModificationProcessingStatus);
 				derivationComponent_lazy = () -> Arrays.asList(ProprietaryStatusAndReason1.mmObject(), ModificationProcessingStatus2Choice.mmObject(), StatusTrail2.mmObject(), ProprietaryStatusAndReason2.mmObject(),
 						ModificationProcessingStatus3Choice.mmObject(), StatusTrail3.mmObject(), DeliveryReturn1Choice.mmObject(), DeliveryReturn2Choice.mmObject(), MatchingDenied1Choice.mmObject(), MatchingDenied2Choice.mmObject(),
 						StatusAndReason3.mmObject(), StatusAndReason6.mmObject(), StatusAndReason12.mmObject(), StatusAndReason14.mmObject(), Status2Choice.mmObject(), StatusAndReason1.mmObject(), StatusAndReason2.mmObject(),
@@ -2330,6 +2389,11 @@ public class Status {
 						StatusAndReason29.mmObject(), StatusTrail7.mmObject(), MatchingDenied4Choice.mmObject(), Status22Choice.mmObject(), RegistrationProcessingStatus4Choice.mmObject(), ResponseStatus7Choice.mmObject(),
 						SettlementConditionModificationStatus4Choice.mmObject(), ReplacementProcessingStatus9Choice.mmObject(), DeliveryReturn4Choice.mmObject(), ModificationProcessingStatus8Choice.mmObject(),
 						PointOfInteractionComponent6.mmObject(), StatusAndReason32.mmObject(), StatusAndReason33.mmObject(), PointOfInteractionComponent7.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Status.class;
 			}
 		});
 		return mmObject_lazy.get();

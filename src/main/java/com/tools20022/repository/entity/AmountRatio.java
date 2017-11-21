@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountToAmountRatio1;
 import com.tools20022.repository.msg.AmountToAmountRatio2;
 import com.tools20022.repository.msg.AmountToAmountRatio3;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AmountRatio#mmSecuritiesPricing
+ * AmountRatio.mmSecuritiesPricing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountRatio#mmAmount1
+ * AmountRatio.mmAmount1}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountRatio#mmAmount2
+ * AmountRatio.mmAmount2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -135,18 +148,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * RatioFormat21Choice.mmAmountToAmount}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AmountRatio#mmSecuritiesPricing
- * AmountRatio.mmSecuritiesPricing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AmountRatio#mmAmount1
- * AmountRatio.mmAmount1}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AmountRatio#mmAmount2
- * AmountRatio.mmAmount2}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -200,7 +201,7 @@ public class AmountRatio {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesPricing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AmountRatio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountRatio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesPricing";
@@ -223,10 +224,6 @@ public class AmountRatio {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRatio AmountRatio}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -242,6 +239,10 @@ public class AmountRatio {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AmountRatio AmountRatio}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -255,7 +256,7 @@ public class AmountRatio {
 	public static final MMBusinessAttribute mmAmount1 = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountToAmountRatio2.mmAmount1, AmountToAmountRatio3.mmAmount1, AmountToAmountRatio1.mmAmount1);
-			elementContext_lazy = () -> AmountRatio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountRatio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount1";
@@ -263,6 +264,14 @@ public class AmountRatio {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmountRatio.class.getMethod("getAmount1", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ActiveCurrencyAndAmount amount2;
@@ -276,10 +285,6 @@ public class AmountRatio {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRatio AmountRatio}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -295,6 +300,10 @@ public class AmountRatio {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AmountRatio AmountRatio}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -308,7 +317,7 @@ public class AmountRatio {
 	public static final MMBusinessAttribute mmAmount2 = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountToAmountRatio2.mmAmount2, AmountToAmountRatio3.mmAmount2, AmountToAmountRatio1.mmAmount2);
-			elementContext_lazy = () -> AmountRatio.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountRatio.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount2";
@@ -316,6 +325,14 @@ public class AmountRatio {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmountRatio.class.getMethod("getAmount2", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -332,8 +349,13 @@ public class AmountRatio {
 						RatioFormat10Choice.mmAmountToAmount, RatioFormat11Choice.mmAmountToAmount, RatioFormat12Choice.mmAmountToAmount, RatioFormat13Choice.mmAmountToAmount, RatioFormat14Choice.mmAmountToAmount,
 						RatioFormat2Choice.mmAmountToAmount, RatioFormat1Choice.mmAmountToAmount, RatioFormat19Choice.mmAmountToAmount, RatioFormat17Choice.mmAmountToAmount, RatioFormat18Choice.mmAmountToAmount,
 						RatioFormat20Choice.mmAmountToAmount, RatioFormat22Choice.mmAmountToAmount, RatioFormat24Choice.mmAmountToAmount, RatioFormat23Choice.mmAmountToAmount, RatioFormat21Choice.mmAmountToAmount);
-				element_lazy = () -> Arrays.asList(AmountRatio.mmSecuritiesPricing, AmountRatio.mmAmount1, AmountRatio.mmAmount2);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AmountRatio.mmSecuritiesPricing, com.tools20022.repository.entity.AmountRatio.mmAmount1, com.tools20022.repository.entity.AmountRatio.mmAmount2);
 				derivationComponent_lazy = () -> Arrays.asList(AmountToAmountRatio2.mmObject(), AmountToAmountRatio3.mmObject(), AmountToAmountRatio1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AmountRatio.class;
 			}
 		});
 		return mmObject_lazy.get();

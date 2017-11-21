@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies a payment instrument type as the search criteria for the financial
@@ -68,6 +72,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstrumentType1", propOrder = {"cardNumber", "authorityRequestType", "additionalInformation"})
 public class PaymentInstrumentType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -213,6 +219,7 @@ public class PaymentInstrumentType1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CardNb", required = true)
 	public Min8Max28NumericText getCardNumber() {
 		return cardNumber;
 	}
@@ -221,6 +228,7 @@ public class PaymentInstrumentType1 {
 		this.cardNumber = cardNumber;
 	}
 
+	@XmlElement(name = "AuthrtyReqTp", required = true)
 	public List<AuthorityRequestType1> getAuthorityRequestType() {
 		return authorityRequestType;
 	}
@@ -229,6 +237,7 @@ public class PaymentInstrumentType1 {
 		this.authorityRequestType = authorityRequestType;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max500Text getAdditionalInformation() {
 		return additionalInformation;
 	}

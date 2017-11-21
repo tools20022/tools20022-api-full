@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.FromToQuantityRange1;
 import com.tools20022.repository.msg.QuantityRangeBoundary1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between ranges of values in which a quantity is considered valid or a
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuantityRange1Choice", propOrder = {"fromQuantity", "toQuantity", "fromToQuantity", "equalQuantity", "notEqualQuantity"})
 public class QuantityRange1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -300,6 +306,7 @@ public class QuantityRange1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrQty", required = true)
 	public QuantityRangeBoundary1 getFromQuantity() {
 		return fromQuantity;
 	}
@@ -308,6 +315,7 @@ public class QuantityRange1Choice {
 		this.fromQuantity = fromQuantity;
 	}
 
+	@XmlElement(name = "ToQty", required = true)
 	public QuantityRangeBoundary1 getToQuantity() {
 		return toQuantity;
 	}
@@ -316,6 +324,7 @@ public class QuantityRange1Choice {
 		this.toQuantity = toQuantity;
 	}
 
+	@XmlElement(name = "FrToQty", required = true)
 	public FromToQuantityRange1 getFromToQuantity() {
 		return fromToQuantity;
 	}
@@ -324,6 +333,7 @@ public class QuantityRange1Choice {
 		this.fromToQuantity = fromToQuantity;
 	}
 
+	@XmlElement(name = "EQQty", required = true)
 	public DecimalNumber getEqualQuantity() {
 		return equalQuantity;
 	}
@@ -332,6 +342,7 @@ public class QuantityRange1Choice {
 		this.equalQuantity = equalQuantity;
 	}
 
+	@XmlElement(name = "NEQQty", required = true)
 	public DecimalNumber getNotEqualQuantity() {
 		return notEqualQuantity;
 	}

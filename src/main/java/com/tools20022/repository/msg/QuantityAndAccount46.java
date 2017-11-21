@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details on the quantity, account and other related information involved in a
@@ -104,6 +108,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuantityAndAccount46", propOrder = {"settledQuantity", "previouslySettledQuantity", "remainingToBeSettledQuantity", "previouslySettledAmount", "remainingToBeSettledAmount", "accountOwner", "safekeepingAccount",
+		"cashAccount", "safekeepingPlace"})
 public class QuantityAndAccount46 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -639,6 +646,7 @@ public class QuantityAndAccount46 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttldQty", required = true)
 	public Quantity10Choice getSettledQuantity() {
 		return settledQuantity;
 	}
@@ -647,6 +655,7 @@ public class QuantityAndAccount46 {
 		this.settledQuantity = settledQuantity;
 	}
 
+	@XmlElement(name = "PrevslySttldQty")
 	public FinancialInstrumentQuantity15Choice getPreviouslySettledQuantity() {
 		return previouslySettledQuantity;
 	}
@@ -655,6 +664,7 @@ public class QuantityAndAccount46 {
 		this.previouslySettledQuantity = previouslySettledQuantity;
 	}
 
+	@XmlElement(name = "RmngToBeSttldQty")
 	public FinancialInstrumentQuantity15Choice getRemainingToBeSettledQuantity() {
 		return remainingToBeSettledQuantity;
 	}
@@ -663,6 +673,7 @@ public class QuantityAndAccount46 {
 		this.remainingToBeSettledQuantity = remainingToBeSettledQuantity;
 	}
 
+	@XmlElement(name = "PrevslySttldAmt")
 	public AmountAndDirection19 getPreviouslySettledAmount() {
 		return previouslySettledAmount;
 	}
@@ -671,6 +682,7 @@ public class QuantityAndAccount46 {
 		this.previouslySettledAmount = previouslySettledAmount;
 	}
 
+	@XmlElement(name = "RmngToBeSttldAmt")
 	public AmountAndDirection19 getRemainingToBeSettledAmount() {
 		return remainingToBeSettledAmount;
 	}
@@ -679,6 +691,7 @@ public class QuantityAndAccount46 {
 		this.remainingToBeSettledAmount = remainingToBeSettledAmount;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification109 getAccountOwner() {
 		return accountOwner;
 	}
@@ -687,6 +700,7 @@ public class QuantityAndAccount46 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount30 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -695,6 +709,7 @@ public class QuantityAndAccount46 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccountIdentification6Choice getCashAccount() {
 		return cashAccount;
 	}
@@ -703,6 +718,7 @@ public class QuantityAndAccount46 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafeKeepingPlace2 getSafekeepingPlace() {
 		return safekeepingPlace;
 	}

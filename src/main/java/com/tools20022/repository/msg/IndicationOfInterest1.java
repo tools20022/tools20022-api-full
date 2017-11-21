@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Intention to buy or sell a financial Instrument.
@@ -138,6 +142,10 @@ import java.util.List;
  * definition} = "Intention to buy or sell a financial Instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndicationOfInterest1", propOrder = {"side", "IOIQuantity", "price", "validUntilDateTime", "qualityIndication", "naturalIndicator", "qualifier", "linkedURLAddress", "numberOfLegs", "financialInstrumentDetails",
+		"financialInstrumentAttributes", "stipulations", "underlyingFinancialInstrumentDetails", "underlyingFinancialInstrumentAttributes", "underlyingStipulations", "instrumentLegGroupDetails", "yieldDetails", "orderQuantity",
+		"spreadAndBenchmarkCurveDetails", "twoLegTransactionDetails", "tradingParties", "cashParties", "receivingSettlementParties", "deliveringSettlementParties", "otherBusinessParties"})
 public class IndicationOfInterest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1380,6 +1388,7 @@ public class IndicationOfInterest1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sd", required = true)
 	public IOISideTypeCode getSide() {
 		return side;
 	}
@@ -1388,6 +1397,7 @@ public class IndicationOfInterest1 {
 		this.side = side;
 	}
 
+	@XmlElement(name = "IOIQty", required = true)
 	public Quantity1Choice getIOIQuantity() {
 		return iOIQuantity;
 	}
@@ -1396,6 +1406,7 @@ public class IndicationOfInterest1 {
 		this.iOIQuantity = iOIQuantity;
 	}
 
+	@XmlElement(name = "Pric")
 	public Price1 getPrice() {
 		return price;
 	}
@@ -1404,6 +1415,7 @@ public class IndicationOfInterest1 {
 		this.price = price;
 	}
 
+	@XmlElement(name = "VldUntilDtTm")
 	public ISODateTime getValidUntilDateTime() {
 		return validUntilDateTime;
 	}
@@ -1412,6 +1424,7 @@ public class IndicationOfInterest1 {
 		this.validUntilDateTime = validUntilDateTime;
 	}
 
+	@XmlElement(name = "QltyIndctn")
 	public QualityIndication1Code getQualityIndication() {
 		return qualityIndication;
 	}
@@ -1420,6 +1433,7 @@ public class IndicationOfInterest1 {
 		this.qualityIndication = qualityIndication;
 	}
 
+	@XmlElement(name = "NtrlInd")
 	public TrueFalseIndicator getNaturalIndicator() {
 		return naturalIndicator;
 	}
@@ -1428,6 +1442,7 @@ public class IndicationOfInterest1 {
 		this.naturalIndicator = naturalIndicator;
 	}
 
+	@XmlElement(name = "Qlfr")
 	public List<Qualifier1Code> getQualifier() {
 		return qualifier;
 	}
@@ -1436,6 +1451,7 @@ public class IndicationOfInterest1 {
 		this.qualifier = qualifier;
 	}
 
+	@XmlElement(name = "LkdURLAdr")
 	public Max256Text getLinkedURLAddress() {
 		return linkedURLAddress;
 	}
@@ -1444,6 +1460,7 @@ public class IndicationOfInterest1 {
 		this.linkedURLAddress = linkedURLAddress;
 	}
 
+	@XmlElement(name = "NbOfLegs")
 	public DecimalNumber getNumberOfLegs() {
 		return numberOfLegs;
 	}
@@ -1452,6 +1469,7 @@ public class IndicationOfInterest1 {
 		this.numberOfLegs = numberOfLegs;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public SecurityIdentification7 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -1460,6 +1478,7 @@ public class IndicationOfInterest1 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public FinancialInstrumentAttributes1 getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -1468,6 +1487,7 @@ public class IndicationOfInterest1 {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "Stiptns")
 	public FinancialInstrumentStipulations getStipulations() {
 		return stipulations;
 	}
@@ -1476,6 +1496,7 @@ public class IndicationOfInterest1 {
 		this.stipulations = stipulations;
 	}
 
+	@XmlElement(name = "UndrlygFinInstrmDtls")
 	public List<SecurityIdentification7> getUnderlyingFinancialInstrumentDetails() {
 		return underlyingFinancialInstrumentDetails;
 	}
@@ -1484,6 +1505,7 @@ public class IndicationOfInterest1 {
 		this.underlyingFinancialInstrumentDetails = underlyingFinancialInstrumentDetails;
 	}
 
+	@XmlElement(name = "UndrlygFinInstrmAttrbts")
 	public List<FinancialInstrumentAttributes1> getUnderlyingFinancialInstrumentAttributes() {
 		return underlyingFinancialInstrumentAttributes;
 	}
@@ -1492,6 +1514,7 @@ public class IndicationOfInterest1 {
 		this.underlyingFinancialInstrumentAttributes = underlyingFinancialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "UndrlygStiptns")
 	public List<FinancialInstrumentStipulations> getUnderlyingStipulations() {
 		return underlyingStipulations;
 	}
@@ -1500,6 +1523,7 @@ public class IndicationOfInterest1 {
 		this.underlyingStipulations = underlyingStipulations;
 	}
 
+	@XmlElement(name = "InstrmLegGrpDtls")
 	public List<InstrumentLeg1> getInstrumentLegGroupDetails() {
 		return instrumentLegGroupDetails;
 	}
@@ -1508,6 +1532,7 @@ public class IndicationOfInterest1 {
 		this.instrumentLegGroupDetails = instrumentLegGroupDetails;
 	}
 
+	@XmlElement(name = "YldDtls")
 	public YieldCalculation1 getYieldDetails() {
 		return yieldDetails;
 	}
@@ -1516,6 +1541,7 @@ public class IndicationOfInterest1 {
 		this.yieldDetails = yieldDetails;
 	}
 
+	@XmlElement(name = "OrdrQty")
 	public OrderQuantity1 getOrderQuantity() {
 		return orderQuantity;
 	}
@@ -1524,6 +1550,7 @@ public class IndicationOfInterest1 {
 		this.orderQuantity = orderQuantity;
 	}
 
+	@XmlElement(name = "SprdAndBchmkCrvDtls")
 	public BenchmarkCurve1 getSpreadAndBenchmarkCurveDetails() {
 		return spreadAndBenchmarkCurveDetails;
 	}
@@ -1532,6 +1559,7 @@ public class IndicationOfInterest1 {
 		this.spreadAndBenchmarkCurveDetails = spreadAndBenchmarkCurveDetails;
 	}
 
+	@XmlElement(name = "TwoLegTxDtls")
 	public SecuritiesFinancing1 getTwoLegTransactionDetails() {
 		return twoLegTransactionDetails;
 	}
@@ -1540,6 +1568,7 @@ public class IndicationOfInterest1 {
 		this.twoLegTransactionDetails = twoLegTransactionDetails;
 	}
 
+	@XmlElement(name = "TradgPties")
 	public List<Intermediary14> getTradingParties() {
 		return tradingParties;
 	}
@@ -1548,6 +1577,7 @@ public class IndicationOfInterest1 {
 		this.tradingParties = tradingParties;
 	}
 
+	@XmlElement(name = "CshPties")
 	public CashParties1 getCashParties() {
 		return cashParties;
 	}
@@ -1556,6 +1586,7 @@ public class IndicationOfInterest1 {
 		this.cashParties = cashParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties3 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -1564,6 +1595,7 @@ public class IndicationOfInterest1 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties3 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -1572,6 +1604,7 @@ public class IndicationOfInterest1 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "OthrBizPties")
 	public OtherParties1 getOtherBusinessParties() {
 		return otherBusinessParties;
 	}

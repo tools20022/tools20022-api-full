@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.StructuredLongPostalAddress1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information that locates and identifies a specific address, as defined by
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LongPostalAddress1Choice", propOrder = {"unstructured", "structured"})
 public class LongPostalAddress1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -184,6 +190,7 @@ public class LongPostalAddress1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ustrd", required = true)
 	public Max140Text getUnstructured() {
 		return unstructured;
 	}
@@ -192,6 +199,7 @@ public class LongPostalAddress1Choice {
 		this.unstructured = unstructured;
 	}
 
+	@XmlElement(name = "Strd", required = true)
 	public StructuredLongPostalAddress1 getStructured() {
 		return structured;
 	}

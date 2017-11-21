@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the payment instruction.
@@ -108,6 +112,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstruction1", propOrder = {"messageIdentification", "requestedExecutionDate", "status", "instructedAmount", "interbankSettlementAmount", "purpose", "paymentMethod", "priority", "processingValidityTime",
+		"instructionCopy", "type", "generatedOrder", "transactionIdentification", "interbankSettlementDate", "endToEndIdentification", "parties"})
 public class PaymentInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1071,6 +1078,7 @@ public class PaymentInstruction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId")
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -1079,6 +1087,7 @@ public class PaymentInstruction1 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "ReqdExctnDt")
 	public DateAndDateTimeChoice getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -1087,6 +1096,7 @@ public class PaymentInstruction1 {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "Sts")
 	public List<PaymentStatus1> getStatus() {
 		return status;
 	}
@@ -1095,6 +1105,7 @@ public class PaymentInstruction1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "InstdAmt")
 	public Amount3Choice getInstructedAmount() {
 		return instructedAmount;
 	}
@@ -1103,6 +1114,7 @@ public class PaymentInstruction1 {
 		this.instructedAmount = instructedAmount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmt")
 	public Amount2Choice getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
@@ -1111,6 +1123,7 @@ public class PaymentInstruction1 {
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
 
+	@XmlElement(name = "Purp")
 	public Max10Text getPurpose() {
 		return purpose;
 	}
@@ -1119,6 +1132,7 @@ public class PaymentInstruction1 {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "PmtMtd")
 	public PaymentOrigin1Choice getPaymentMethod() {
 		return paymentMethod;
 	}
@@ -1127,6 +1141,7 @@ public class PaymentInstruction1 {
 		this.paymentMethod = paymentMethod;
 	}
 
+	@XmlElement(name = "Prty")
 	public PriorityCodeChoice getPriority() {
 		return priority;
 	}
@@ -1135,6 +1150,7 @@ public class PaymentInstruction1 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "PrcgVldtyTm")
 	public DateTimePeriodChoice getProcessingValidityTime() {
 		return processingValidityTime;
 	}
@@ -1143,6 +1159,7 @@ public class PaymentInstruction1 {
 		this.processingValidityTime = processingValidityTime;
 	}
 
+	@XmlElement(name = "InstrCpy")
 	public Max20000Text getInstructionCopy() {
 		return instructionCopy;
 	}
@@ -1151,6 +1168,7 @@ public class PaymentInstruction1 {
 		this.instructionCopy = instructionCopy;
 	}
 
+	@XmlElement(name = "Tp")
 	public PaymentType3Choice getType() {
 		return type;
 	}
@@ -1159,6 +1177,7 @@ public class PaymentInstruction1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "GnrtdOrdr")
 	public TrueFalseIndicator getGeneratedOrder() {
 		return generatedOrder;
 	}
@@ -1167,6 +1186,7 @@ public class PaymentInstruction1 {
 		this.generatedOrder = generatedOrder;
 	}
 
+	@XmlElement(name = "TxId")
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -1175,6 +1195,7 @@ public class PaymentInstruction1 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDt")
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}
@@ -1183,6 +1204,7 @@ public class PaymentInstruction1 {
 		this.interbankSettlementDate = interbankSettlementDate;
 	}
 
+	@XmlElement(name = "EndToEndId")
 	public Max35Text getEndToEndIdentification() {
 		return endToEndIdentification;
 	}
@@ -1191,6 +1213,7 @@ public class PaymentInstruction1 {
 		this.endToEndIdentification = endToEndIdentification;
 	}
 
+	@XmlElement(name = "Pties")
 	public PaymentTransactionParty2 getParties() {
 		return parties;
 	}

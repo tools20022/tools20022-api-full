@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CommissionWaiver;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Non-enforcement of the right to all or part of a commission by the party
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CommissionWaiver2", propOrder = {"instructionBasis", "waivedRate"})
 public class CommissionWaiver2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class CommissionWaiver2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrBsis", required = true)
 	public WaivingType1 getInstructionBasis() {
 		return instructionBasis;
 	}
@@ -187,6 +194,7 @@ public class CommissionWaiver2 {
 		this.instructionBasis = instructionBasis;
 	}
 
+	@XmlElement(name = "WvdRate", required = true)
 	public PercentageRate getWaivedRate() {
 		return waivedRate;
 	}

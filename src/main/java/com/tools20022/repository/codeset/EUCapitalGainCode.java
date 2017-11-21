@@ -32,15 +32,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EUCapitalGain1Code
- * EUCapitalGain1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EUCapitalGain2Code
- * EUCapitalGain2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -54,6 +45,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * EUCapitalGainCode.mmCapitalGainUnknown}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.EUCapitalGainCode#mmOther
  * EUCapitalGainCode.mmOther}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EUCapitalGain1Code
+ * EUCapitalGain1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EUCapitalGain2Code
+ * EUCapitalGain2Code}</li>
  * </ul>
  * </li>
  * <li>

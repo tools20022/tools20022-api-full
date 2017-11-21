@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BenchmarkCurve1;
 import com.tools20022.repository.msg.BenchmarkCurve2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,6 +38,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Curve#mmCurrency
+ * Curve.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Curve#mmName Curve.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Curve#mmPoint Curve.mmPoint}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.Curve#mmSpread
+ * Curve.mmSpread}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -53,18 +66,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.entity.Spread#mmBenchmarkCurve
  * Spread.mmBenchmarkCurve}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Curve#mmCurrency
- * Curve.mmCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Curve#mmName Curve.mmName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Curve#mmPoint Curve.mmPoint}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.Curve#mmSpread
- * Curve.mmSpread}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,10 +96,6 @@ public class Curve {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Curve
-	 * Curve}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -110,6 +107,10 @@ public class Curve {
 	 * BenchmarkCurve1.mmBenchmarkCurveCurrency}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Curve
+	 * Curve}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -124,7 +125,7 @@ public class Curve {
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BenchmarkCurve2.mmBenchmarkCurveCurrency, BenchmarkCurve1.mmBenchmarkCurveCurrency);
-			elementContext_lazy = () -> Curve.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Curve.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
@@ -132,6 +133,14 @@ public class Curve {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Curve.class.getMethod("getCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BenchmarkCurveNameCode name;
@@ -145,10 +154,6 @@ public class Curve {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.BenchmarkCurveNameCode
 	 * BenchmarkCurveNameCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Curve
-	 * Curve}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -188,6 +193,10 @@ public class Curve {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Curve
+	 * Curve}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -202,7 +211,7 @@ public class Curve {
 		{
 			derivation_lazy = () -> Arrays.asList(BenchmarkCurveName2Choice.mmCode, BenchmarkCurveName2Choice.mmProprietary, BenchmarkCurve2.mmBenchmarkCurveName, BenchmarkCurve1.mmBenchmarkCurveName, InflationIndex1Choice.mmName,
 					BenchmarkCurveName4Choice.mmIndex, BenchmarkCurveName4Choice.mmName, BenchmarkCurveName5Choice.mmIndex, BenchmarkCurveName5Choice.mmName, BenchmarkCurveName6Choice.mmIndex, BenchmarkCurveName6Choice.mmName);
-			elementContext_lazy = () -> Curve.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Curve.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Name";
@@ -210,6 +219,14 @@ public class Curve {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BenchmarkCurveNameCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Curve.class.getMethod("getName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max256Text point;
@@ -223,10 +240,6 @@ public class Curve {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max256Text
 	 * Max256Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Curve
-	 * Curve}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -238,6 +251,10 @@ public class Curve {
 	 * BenchmarkCurve1.mmBenchmarkCurvePoint}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Curve
+	 * Curve}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -254,7 +271,7 @@ public class Curve {
 	public static final MMBusinessAttribute mmPoint = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BenchmarkCurve2.mmBenchmarkCurvePoint, BenchmarkCurve1.mmBenchmarkCurvePoint);
-			elementContext_lazy = () -> Curve.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Curve.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Point";
@@ -262,6 +279,14 @@ public class Curve {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Curve.class.getMethod("getPoint", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Spread spread;
@@ -281,10 +306,6 @@ public class Curve {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Spread Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Curve
-	 * Curve}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -294,6 +315,10 @@ public class Curve {
 	 * BenchmarkCurve1.mmSpread}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Curve
+	 * Curve}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -308,7 +333,7 @@ public class Curve {
 	public static final MMBusinessAssociationEnd mmSpread = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BenchmarkCurve2.mmSpread, BenchmarkCurve1.mmSpread);
-			elementContext_lazy = () -> Curve.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Curve.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Spread";
@@ -329,8 +354,14 @@ public class Curve {
 				name = "Curve";
 				definition = "Describes a benchmark curve.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Spread.mmBenchmarkCurve);
-				element_lazy = () -> Arrays.asList(Curve.mmCurrency, Curve.mmName, Curve.mmPoint, Curve.mmSpread);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Curve.mmCurrency, com.tools20022.repository.entity.Curve.mmName, com.tools20022.repository.entity.Curve.mmPoint,
+						com.tools20022.repository.entity.Curve.mmSpread);
 				derivationComponent_lazy = () -> Arrays.asList(BenchmarkCurve2.mmObject(), BenchmarkCurve1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Curve.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extension to specify additional information related to the type of dividend.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DividendTypeFormat4SD1", propOrder = {"placeAndName", "provisionalDividendFlag", "commemorativeDividendFlag", "specialDividendFlag"})
 public class DividendTypeFormat4SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -270,6 +276,7 @@ public class DividendTypeFormat4SD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -278,6 +285,7 @@ public class DividendTypeFormat4SD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "PrvsnlDvddFlg", required = true)
 	public YesNoIndicator getProvisionalDividendFlag() {
 		return provisionalDividendFlag;
 	}
@@ -286,6 +294,7 @@ public class DividendTypeFormat4SD1 {
 		this.provisionalDividendFlag = provisionalDividendFlag;
 	}
 
+	@XmlElement(name = "CommrtvDvddFlg", required = true)
 	public YesNoIndicator getCommemorativeDividendFlag() {
 		return commemorativeDividendFlag;
 	}
@@ -294,6 +303,7 @@ public class DividendTypeFormat4SD1 {
 		this.commemorativeDividendFlag = commemorativeDividendFlag;
 	}
 
+	@XmlElement(name = "SpclDvddFlg", required = true)
 	public YesNoIndicator getSpecialDividendFlag() {
 		return specialDividendFlag;
 	}

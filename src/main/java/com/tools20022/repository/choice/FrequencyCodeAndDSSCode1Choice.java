@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for the frequency.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between formats for the frequency."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FrequencyCodeAndDSSCode1Choice", propOrder = {"frequencyAsCode", "frequencyAsDSS"})
 public class FrequencyCodeAndDSSCode1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +168,7 @@ public class FrequencyCodeAndDSSCode1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrqcyAsCd", required = true)
 	public EventFrequency1Code getFrequencyAsCode() {
 		return frequencyAsCode;
 	}
@@ -170,6 +177,7 @@ public class FrequencyCodeAndDSSCode1Choice {
 		this.frequencyAsCode = frequencyAsCode;
 	}
 
+	@XmlElement(name = "FrqcyAsDSS", required = true)
 	public GenericIdentification7 getFrequencyAsDSS() {
 		return frequencyAsDSS;
 	}

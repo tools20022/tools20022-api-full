@@ -65,6 +65,11 @@ public class ClearingExceptionPartyRole extends TradePartyRole {
 				definition = "Identifies the party that is exempt from a clearing obligation.";
 				superType_lazy = () -> TradePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ClearingExceptionPartyRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

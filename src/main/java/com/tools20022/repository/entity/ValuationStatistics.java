@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.TypeOfPriceCode;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,6 +36,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmCurrency
+ * ValuationStatistics.mmCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmPriceTypeChangeBasis
+ * ValuationStatistics.mmPriceTypeChangeBasis}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmPriceChange
+ * ValuationStatistics.mmPriceChange}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ValuationStatistics#mmYield
+ * ValuationStatistics.mmYield}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmHighestPriceValue
+ * ValuationStatistics.mmHighestPriceValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmLowestPriceValue
+ * ValuationStatistics.mmLowestPriceValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmPeriod
+ * ValuationStatistics.mmPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmNetAssetValueCalculation
+ * ValuationStatistics.mmNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmNetAssetValueChangeRate
+ * ValuationStatistics.mmNetAssetValueChangeRate}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -78,37 +110,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * DateTimePeriod.mmValuationStatistics}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmCurrency
- * ValuationStatistics.mmCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmPriceTypeChangeBasis
- * ValuationStatistics.mmPriceTypeChangeBasis}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmPriceChange
- * ValuationStatistics.mmPriceChange}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ValuationStatistics#mmYield
- * ValuationStatistics.mmYield}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmHighestPriceValue
- * ValuationStatistics.mmHighestPriceValue}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmLowestPriceValue
- * ValuationStatistics.mmLowestPriceValue}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmPeriod
- * ValuationStatistics.mmPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmNetAssetValueCalculation
- * ValuationStatistics.mmNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmNetAssetValueChangeRate
- * ValuationStatistics.mmNetAssetValueChangeRate}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -137,11 +138,6 @@ public class ValuationStatistics {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
-	 * ValuationStatistics}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -153,6 +149,11 @@ public class ValuationStatistics {
 	 * ValuationStatistics3.mmCurrency}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
+	 * ValuationStatistics}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -167,7 +168,7 @@ public class ValuationStatistics {
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ValuationStatistics2.mmCurrency, ValuationStatistics3.mmCurrency);
-			elementContext_lazy = () -> ValuationStatistics.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
@@ -175,6 +176,14 @@ public class ValuationStatistics {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ValuationStatistics.class.getMethod("getCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TypeOfPriceCode priceTypeChangeBasis;
@@ -189,11 +198,6 @@ public class ValuationStatistics {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TypeOfPriceCode
 	 * TypeOfPriceCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
-	 * ValuationStatistics}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -205,6 +209,11 @@ public class ValuationStatistics {
 	 * ValuationStatistics3.mmPriceTypeChangeBasis}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
+	 * ValuationStatistics}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -221,7 +230,7 @@ public class ValuationStatistics {
 	public static final MMBusinessAttribute mmPriceTypeChangeBasis = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ValuationStatistics2.mmPriceTypeChangeBasis, ValuationStatistics3.mmPriceTypeChangeBasis);
-			elementContext_lazy = () -> ValuationStatistics.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceTypeChangeBasis";
@@ -229,6 +238,14 @@ public class ValuationStatistics {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfPriceCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ValuationStatistics.class.getMethod("getPriceTypeChangeBasis", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesPricing priceChange;
@@ -249,11 +266,6 @@ public class ValuationStatistics {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
-	 * ValuationStatistics}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -290,6 +302,11 @@ public class ValuationStatistics {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
+	 * ValuationStatistics}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -305,7 +322,7 @@ public class ValuationStatistics {
 			derivation_lazy = () -> Arrays.asList(StatisticsByPredefinedTimePeriods1.mmOneYearPriceChange, StatisticsByPredefinedTimePeriods1.mmThreeYearPriceChange, StatisticsByPredefinedTimePeriods1.mmFiveYearPriceChange,
 					StatisticsByUserDefinedTimePeriod1.mmPriceChange, ValuationStatistics2.mmPriceChange, StatisticsByPredefinedTimePeriods2.mmOneYearPriceChange, StatisticsByPredefinedTimePeriods2.mmThreeYearPriceChange,
 					StatisticsByPredefinedTimePeriods2.mmFiveYearPriceChange, StatisticsByUserDefinedTimePeriod2.mmPriceChange, ValuationStatistics3.mmPriceChange);
-			elementContext_lazy = () -> ValuationStatistics.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceChange";
@@ -330,11 +347,6 @@ public class ValuationStatistics {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
-	 * ValuationStatistics}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -353,6 +365,11 @@ public class ValuationStatistics {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
+	 * ValuationStatistics}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -368,7 +385,7 @@ public class ValuationStatistics {
 	public static final MMBusinessAttribute mmYield = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(StatisticsByUserDefinedTimePeriod1.mmYield, ValuationStatistics2.mmYield, StatisticsByUserDefinedTimePeriod2.mmYield, ValuationStatistics3.mmYield);
-			elementContext_lazy = () -> ValuationStatistics.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Yield";
@@ -376,6 +393,14 @@ public class ValuationStatistics {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ValuationStatistics.class.getMethod("getYield", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesPricing highestPriceValue;
@@ -396,11 +421,6 @@ public class ValuationStatistics {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
-	 * ValuationStatistics}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -419,6 +439,11 @@ public class ValuationStatistics {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
+	 * ValuationStatistics}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -433,7 +458,7 @@ public class ValuationStatistics {
 		{
 			derivation_lazy = () -> Arrays.asList(StatisticsByPredefinedTimePeriods1.mmHighestPriceValue12Months, StatisticsByUserDefinedTimePeriod1.mmHighestPriceValue, StatisticsByPredefinedTimePeriods2.mmHighestPriceValue12Months,
 					StatisticsByUserDefinedTimePeriod2.mmHighestPriceValue);
-			elementContext_lazy = () -> ValuationStatistics.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HighestPriceValue";
@@ -463,11 +488,6 @@ public class ValuationStatistics {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
-	 * ValuationStatistics}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -486,6 +506,11 @@ public class ValuationStatistics {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
+	 * ValuationStatistics}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -500,7 +525,7 @@ public class ValuationStatistics {
 		{
 			derivation_lazy = () -> Arrays.asList(StatisticsByPredefinedTimePeriods1.mmLowestPriceValue12Months, StatisticsByUserDefinedTimePeriod1.mmLowestPriceValue, StatisticsByPredefinedTimePeriods2.mmLowestPriceValue12Months,
 					StatisticsByUserDefinedTimePeriod2.mmLowestPriceValue);
-			elementContext_lazy = () -> ValuationStatistics.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LowestPriceValue";
@@ -530,11 +555,6 @@ public class ValuationStatistics {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
-	 * ValuationStatistics}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -546,6 +566,11 @@ public class ValuationStatistics {
 	 * StatisticsByUserDefinedTimePeriod2.mmPeriod}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
+	 * ValuationStatistics}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -560,7 +585,7 @@ public class ValuationStatistics {
 	public static final MMBusinessAssociationEnd mmPeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(StatisticsByUserDefinedTimePeriod1.mmPeriod, StatisticsByUserDefinedTimePeriod2.mmPeriod);
-			elementContext_lazy = () -> ValuationStatistics.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Period";
@@ -611,7 +636,7 @@ public class ValuationStatistics {
 	 */
 	public static final MMBusinessAssociationEnd mmNetAssetValueCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ValuationStatistics.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAssetValueCalculation";
@@ -634,11 +659,6 @@ public class ValuationStatistics {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
-	 * ValuationStatistics}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -681,6 +701,11 @@ public class ValuationStatistics {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics
+	 * ValuationStatistics}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -697,7 +722,7 @@ public class ValuationStatistics {
 					EstimatedFundCashForecast2.mmEstimatedTotalNAVChangeRate, EstimatedFundCashForecast4.mmEstimatedTotalNAVChangeRate, EstimatedFundCashForecast1.mmEstimatedTotalNAVChangeRate,
 					EstimatedFundCashForecast3.mmEstimatedTotalNAVChangeRate, FundCashForecast7.mmTotalNAVChangeRate, EstimatedFundCashForecast6.mmEstimatedTotalNAVChangeRate, FundCashForecast6.mmTotalNAVChangeRate,
 					EstimatedFundCashForecast5.mmEstimatedTotalNAVChangeRate);
-			elementContext_lazy = () -> ValuationStatistics.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAssetValueChangeRate";
@@ -705,6 +730,14 @@ public class ValuationStatistics {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ValuationStatistics.class.getMethod("getNetAssetValueChangeRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -718,10 +751,17 @@ public class ValuationStatistics {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationStatistics, com.tools20022.repository.entity.SecuritiesPricing.mmPriceChangeRelatedStatistics,
 						com.tools20022.repository.entity.SecuritiesPricing.mmHighestPriceValueRelatedStatistics, com.tools20022.repository.entity.SecuritiesPricing.mmLowestPriceValueRelatedStatistics,
 						com.tools20022.repository.entity.DateTimePeriod.mmValuationStatistics);
-				element_lazy = () -> Arrays.asList(ValuationStatistics.mmCurrency, ValuationStatistics.mmPriceTypeChangeBasis, ValuationStatistics.mmPriceChange, ValuationStatistics.mmYield, ValuationStatistics.mmHighestPriceValue,
-						ValuationStatistics.mmLowestPriceValue, ValuationStatistics.mmPeriod, ValuationStatistics.mmNetAssetValueCalculation, ValuationStatistics.mmNetAssetValueChangeRate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ValuationStatistics.mmCurrency, com.tools20022.repository.entity.ValuationStatistics.mmPriceTypeChangeBasis,
+						com.tools20022.repository.entity.ValuationStatistics.mmPriceChange, com.tools20022.repository.entity.ValuationStatistics.mmYield, com.tools20022.repository.entity.ValuationStatistics.mmHighestPriceValue,
+						com.tools20022.repository.entity.ValuationStatistics.mmLowestPriceValue, com.tools20022.repository.entity.ValuationStatistics.mmPeriod,
+						com.tools20022.repository.entity.ValuationStatistics.mmNetAssetValueCalculation, com.tools20022.repository.entity.ValuationStatistics.mmNetAssetValueChangeRate);
 				derivationComponent_lazy = () -> Arrays.asList(StatisticsByPredefinedTimePeriods1.mmObject(), StatisticsByUserDefinedTimePeriod1.mmObject(), ValuationStatistics2.mmObject(), StatisticsByPredefinedTimePeriods2.mmObject(),
 						StatisticsByUserDefinedTimePeriod2.mmObject(), ValuationStatistics3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ValuationStatistics.class;
 			}
 		});
 		return mmObject_lazy.get();

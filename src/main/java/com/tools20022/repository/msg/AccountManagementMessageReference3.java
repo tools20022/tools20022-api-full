@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the references of an account management instruction
@@ -94,6 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountManagementMessageReference2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountManagementMessageReference3", propOrder = {"linkedReference", "statusRequestType", "accountApplicationIdentification", "existingAccountIdentification", "investmentAccount"})
 public class AccountManagementMessageReference3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -400,6 +406,7 @@ public class AccountManagementMessageReference3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LkdRef")
 	public LinkedMessage3Choice getLinkedReference() {
 		return linkedReference;
 	}
@@ -408,6 +415,7 @@ public class AccountManagementMessageReference3 {
 		this.linkedReference = linkedReference;
 	}
 
+	@XmlElement(name = "StsReqTp", required = true)
 	public AccountManagementType1Code getStatusRequestType() {
 		return statusRequestType;
 	}
@@ -416,6 +424,7 @@ public class AccountManagementMessageReference3 {
 		this.statusRequestType = statusRequestType;
 	}
 
+	@XmlElement(name = "AcctApplId")
 	public Max35Text getAccountApplicationIdentification() {
 		return accountApplicationIdentification;
 	}
@@ -424,6 +433,7 @@ public class AccountManagementMessageReference3 {
 		this.accountApplicationIdentification = accountApplicationIdentification;
 	}
 
+	@XmlElement(name = "ExstgAcctId")
 	public Max35Text getExistingAccountIdentification() {
 		return existingAccountIdentification;
 	}
@@ -432,6 +442,7 @@ public class AccountManagementMessageReference3 {
 		this.existingAccountIdentification = existingAccountIdentification;
 	}
 
+	@XmlElement(name = "InvstmtAcct")
 	public InvestmentAccount53 getInvestmentAccount() {
 		return investmentAccount;
 	}

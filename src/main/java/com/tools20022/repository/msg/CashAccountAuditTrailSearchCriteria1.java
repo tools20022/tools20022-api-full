@@ -24,6 +24,10 @@ import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes search criteria for cash account audit trail query.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccountAuditTrailSearchCriteria1", propOrder = {"cashAccountIdentification", "datePeriod"})
 public class CashAccountAuditTrailSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class CashAccountAuditTrailSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshAcctId")
 	public CashAccount16 getCashAccountIdentification() {
 		return cashAccountIdentification;
 	}
@@ -166,6 +173,7 @@ public class CashAccountAuditTrailSearchCriteria1 {
 		this.cashAccountIdentification = cashAccountIdentification;
 	}
 
+	@XmlElement(name = "DtPrd")
 	public DateSearchChoice getDatePeriod() {
 		return datePeriod;
 	}

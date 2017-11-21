@@ -64,6 +64,11 @@ public class QuotingInstitution extends InformationPartyRole {
 				definition = "Source of the quote, party that proposes a rate.";
 				superType_lazy = () -> InformationPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return QuotingInstitution.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

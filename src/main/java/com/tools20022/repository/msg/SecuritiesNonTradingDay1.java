@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details the date and reason for a non working day.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details the date and reason for a non working day."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesNonTradingDay1", propOrder = {"technicalRecordIdentification", "date", "reason"})
 public class SecuritiesNonTradingDay1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -209,6 +215,7 @@ public class SecuritiesNonTradingDay1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TechRcrdId")
 	public Max35Text getTechnicalRecordIdentification() {
 		return technicalRecordIdentification;
 	}
@@ -217,6 +224,7 @@ public class SecuritiesNonTradingDay1 {
 		this.technicalRecordIdentification = technicalRecordIdentification;
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
@@ -225,6 +233,7 @@ public class SecuritiesNonTradingDay1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Rsn")
 	public NonTradingDayReason1Code getReason() {
 		return reason;
 	}

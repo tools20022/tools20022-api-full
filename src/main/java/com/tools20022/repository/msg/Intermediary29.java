@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party that provides services to investors relating to financial products.
@@ -75,6 +79,8 @@ import java.util.List;
  * Intermediary8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Intermediary29", propOrder = {"identification", "role", "orderOriginatorEligibility", "supplementaryData"})
 public class Intermediary29 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -280,6 +286,7 @@ public class Intermediary29 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification100 getIdentification() {
 		return identification;
 	}
@@ -288,6 +295,7 @@ public class Intermediary29 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Role", required = true)
 	public Role5Choice getRole() {
 		return role;
 	}
@@ -296,6 +304,7 @@ public class Intermediary29 {
 		this.role = role;
 	}
 
+	@XmlElement(name = "OrdrOrgtrElgblty")
 	public OrderOriginatorEligibility1Code getOrderOriginatorEligibility() {
 		return orderOriginatorEligibility;
 	}
@@ -304,6 +313,7 @@ public class Intermediary29 {
 		this.orderOriginatorEligibility = orderOriginatorEligibility;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the token data on which the signature is calculated by the LRCI
@@ -66,6 +70,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelEpaymentTokenResponse1", propOrder = {"LRCITransactionIdentification", "paymentInformation", "serverSignature"})
 public class IsabelEpaymentTokenResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -217,6 +223,7 @@ public class IsabelEpaymentTokenResponse1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LRCITxId", required = true)
 	public Max50Binary getLRCITransactionIdentification() {
 		return lRCITransactionIdentification;
 	}
@@ -225,6 +232,7 @@ public class IsabelEpaymentTokenResponse1 {
 		this.lRCITransactionIdentification = lRCITransactionIdentification;
 	}
 
+	@XmlElement(name = "PmtInf", required = true)
 	public List<IsabelLRCIPaymentInformation1> getPaymentInformation() {
 		return paymentInformation;
 	}
@@ -233,6 +241,7 @@ public class IsabelEpaymentTokenResponse1 {
 		this.paymentInformation = paymentInformation;
 	}
 
+	@XmlElement(name = "SvrSgntr", required = true)
 	public Max1kBinary getServerSignature() {
 		return serverSignature;
 	}

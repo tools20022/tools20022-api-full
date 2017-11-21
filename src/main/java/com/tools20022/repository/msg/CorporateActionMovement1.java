@@ -36,6 +36,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the movement instruction.
@@ -100,6 +104,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information about the movement instruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionMovement1", propOrder = {"orderType", "highPriorityIndicator", "optionNumber", "optionType", "requestedExecutionDate", "accountOwnerIdentification", "accountIdentification",
+		"confirmedBalanceSecuritiesQuantity"})
 public class CorporateActionMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -512,6 +519,7 @@ public class CorporateActionMovement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrTp", required = true)
 	public DistributionInstructionType1Code getOrderType() {
 		return orderType;
 	}
@@ -520,6 +528,7 @@ public class CorporateActionMovement1 {
 		this.orderType = orderType;
 	}
 
+	@XmlElement(name = "HghPrtyInd", required = true)
 	public YesNoIndicator getHighPriorityIndicator() {
 		return highPriorityIndicator;
 	}
@@ -528,6 +537,7 @@ public class CorporateActionMovement1 {
 		this.highPriorityIndicator = highPriorityIndicator;
 	}
 
+	@XmlElement(name = "OptnNb")
 	public Exact3NumericText getOptionNumber() {
 		return optionNumber;
 	}
@@ -536,6 +546,7 @@ public class CorporateActionMovement1 {
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "OptnTp")
 	public CorporateActionOption1FormatChoice getOptionType() {
 		return optionType;
 	}
@@ -544,6 +555,7 @@ public class CorporateActionMovement1 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "ReqdExctnDt", required = true)
 	public ISODate getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -552,6 +564,7 @@ public class CorporateActionMovement1 {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "AcctOwnrId")
 	public PartyIdentification2Choice getAccountOwnerIdentification() {
 		return accountOwnerIdentification;
 	}
@@ -560,6 +573,7 @@ public class CorporateActionMovement1 {
 		this.accountOwnerIdentification = accountOwnerIdentification;
 	}
 
+	@XmlElement(name = "AcctId")
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -568,6 +582,7 @@ public class CorporateActionMovement1 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "ConfdBalSctiesQty")
 	public UnitOrFaceAmount1Choice getConfirmedBalanceSecuritiesQuantity() {
 		return confirmedBalanceSecuritiesQuantity;
 	}

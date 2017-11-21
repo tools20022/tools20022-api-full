@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Lottery;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action details.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionSD10}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionSD16", propOrder = {"placeAndName", "lotterySequenceNumber", "lotteryDate", "processToDate"})
 public class CorporateActionSD16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -287,6 +293,7 @@ public class CorporateActionSD16 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -295,6 +302,7 @@ public class CorporateActionSD16 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "LtrySeqNb")
 	public Max3NumericText getLotterySequenceNumber() {
 		return lotterySequenceNumber;
 	}
@@ -303,6 +311,7 @@ public class CorporateActionSD16 {
 		this.lotterySequenceNumber = lotterySequenceNumber;
 	}
 
+	@XmlElement(name = "LtryDt")
 	public ISODate getLotteryDate() {
 		return lotteryDate;
 	}
@@ -311,6 +320,7 @@ public class CorporateActionSD16 {
 		this.lotteryDate = lotteryDate;
 	}
 
+	@XmlElement(name = "PrcToDt")
 	public ISODate getProcessToDate() {
 		return processToDate;
 	}

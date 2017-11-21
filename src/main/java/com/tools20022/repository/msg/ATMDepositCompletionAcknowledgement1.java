@@ -24,6 +24,10 @@ import com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV0
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the acknowledgement of an ATM deposit transaction from
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMDepositCompletionAcknowledgement1", propOrder = {"ATM", "context", "transaction"})
 public class ATMDepositCompletionAcknowledgement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -215,6 +221,7 @@ public class ATMDepositCompletionAcknowledgement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ATM", required = true)
 	public AutomatedTellerMachine3 getATM() {
 		return aTM;
 	}
@@ -223,6 +230,7 @@ public class ATMDepositCompletionAcknowledgement1 {
 		this.aTM = aTM;
 	}
 
+	@XmlElement(name = "Cntxt", required = true)
 	public ATMContext12 getContext() {
 		return context;
 	}
@@ -231,6 +239,7 @@ public class ATMDepositCompletionAcknowledgement1 {
 		this.context = context;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public ATMTransaction18 getTransaction() {
 		return transaction;
 	}

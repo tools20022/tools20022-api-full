@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.PaymentTypeCode;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.Distribution;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -35,21 +36,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCurrencyExchangeForCashDistribution
- * CurrencyExchange.mmCurrencyExchangeForCashDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAndCashDistribution#mmCashDistribution
- * SecuritiesAndCashDistribution.mmCashDistribution}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Distribution
- * Distribution}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -91,6 +77,21 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CashDistribution#mmCashDistributionAmount
  * CashDistribution.mmCashDistributionAmount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Distribution
+ * Distribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCurrencyExchangeForCashDistribution
+ * CurrencyExchange.mmCurrencyExchangeForCashDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAndCashDistribution#mmCashDistribution
+ * SecuritiesAndCashDistribution.mmCashDistribution}</li>
  * </ul>
  * </li>
  * <li>
@@ -149,7 +150,7 @@ public class CashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmDistributionCurrencyExchangeInformation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashDistribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDistribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DistributionCurrencyExchangeInformation";
@@ -198,7 +199,7 @@ public class CashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesAndCashDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashDistribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDistribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesAndCashDistribution";
@@ -241,7 +242,7 @@ public class CashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAttribute mmAmortisedRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CashDistribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDistribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmortisedRate";
@@ -249,6 +250,14 @@ public class CashDistribution extends Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashDistribution.class.getMethod("getAmortisedRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate rate;
@@ -283,7 +292,7 @@ public class CashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CashDistribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDistribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
@@ -291,6 +300,14 @@ public class CashDistribution extends Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashDistribution.class.getMethod("getRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate cashIndemnityRate;
@@ -323,7 +340,7 @@ public class CashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAttribute mmCashIndemnityRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CashDistribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDistribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashIndemnityRate";
@@ -331,6 +348,14 @@ public class CashDistribution extends Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashDistribution.class.getMethod("getCashIndemnityRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator dividendReinvestmentIndicator;
@@ -365,7 +390,7 @@ public class CashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAttribute mmDividendReinvestmentIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CashDistribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDistribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendReinvestmentIndicator";
@@ -373,6 +398,14 @@ public class CashDistribution extends Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashDistribution.class.getMethod("getDividendReinvestmentIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount interestAmount;
@@ -407,7 +440,7 @@ public class CashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAttribute mmInterestAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CashDistribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDistribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestAmount";
@@ -415,6 +448,14 @@ public class CashDistribution extends Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashDistribution.class.getMethod("getInterestAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate interestRate;
@@ -449,7 +490,7 @@ public class CashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAttribute mmInterestRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CashDistribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDistribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestRate";
@@ -457,6 +498,14 @@ public class CashDistribution extends Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashDistribution.class.getMethod("getInterestRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator loyaltyPremiumIndicator;
@@ -491,7 +540,7 @@ public class CashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAttribute mmLoyaltyPremiumIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CashDistribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDistribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LoyaltyPremiumIndicator";
@@ -499,6 +548,14 @@ public class CashDistribution extends Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashDistribution.class.getMethod("getLoyaltyPremiumIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PaymentTypeCode paymentType;
@@ -533,7 +590,7 @@ public class CashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAttribute mmPaymentType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CashDistribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDistribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentType";
@@ -541,6 +598,14 @@ public class CashDistribution extends Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashDistribution.class.getMethod("getPaymentType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime selectionDate;
@@ -574,7 +639,7 @@ public class CashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAttribute mmSelectionDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CashDistribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDistribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SelectionDate";
@@ -582,6 +647,14 @@ public class CashDistribution extends Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashDistribution.class.getMethod("getSelectionDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate cashDistributionRate;
@@ -616,7 +689,7 @@ public class CashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAttribute mmCashDistributionRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CashDistribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDistribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashDistributionRate";
@@ -624,6 +697,14 @@ public class CashDistribution extends Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashDistribution.class.getMethod("getCashDistributionRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount cashDistributionAmount;
@@ -655,7 +736,7 @@ public class CashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAttribute mmCashDistributionAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CashDistribution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDistribution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashDistributionAmount";
@@ -663,6 +744,14 @@ public class CashDistribution extends Distribution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashDistribution.class.getMethod("getCashDistributionAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -675,9 +764,18 @@ public class CashDistribution extends Distribution {
 				definition = "Distribution of cash pay-out.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CurrencyExchange.mmCurrencyExchangeForCashDistribution, com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmCashDistribution);
 				superType_lazy = () -> Distribution.mmObject();
-				element_lazy = () -> Arrays.asList(CashDistribution.mmDistributionCurrencyExchangeInformation, CashDistribution.mmSecuritiesAndCashDistribution, CashDistribution.mmAmortisedRate, CashDistribution.mmRate,
-						CashDistribution.mmCashIndemnityRate, CashDistribution.mmDividendReinvestmentIndicator, CashDistribution.mmInterestAmount, CashDistribution.mmInterestRate, CashDistribution.mmLoyaltyPremiumIndicator,
-						CashDistribution.mmPaymentType, CashDistribution.mmSelectionDate, CashDistribution.mmCashDistributionRate, CashDistribution.mmCashDistributionAmount);
+				element_lazy = () -> Arrays
+						.asList(com.tools20022.repository.entity.CashDistribution.mmDistributionCurrencyExchangeInformation, com.tools20022.repository.entity.CashDistribution.mmSecuritiesAndCashDistribution,
+								com.tools20022.repository.entity.CashDistribution.mmAmortisedRate, com.tools20022.repository.entity.CashDistribution.mmRate, com.tools20022.repository.entity.CashDistribution.mmCashIndemnityRate,
+								com.tools20022.repository.entity.CashDistribution.mmDividendReinvestmentIndicator, com.tools20022.repository.entity.CashDistribution.mmInterestAmount,
+								com.tools20022.repository.entity.CashDistribution.mmInterestRate, com.tools20022.repository.entity.CashDistribution.mmLoyaltyPremiumIndicator, com.tools20022.repository.entity.CashDistribution.mmPaymentType,
+								com.tools20022.repository.entity.CashDistribution.mmSelectionDate, com.tools20022.repository.entity.CashDistribution.mmCashDistributionRate,
+								com.tools20022.repository.entity.CashDistribution.mmCashDistributionAmount);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CashDistribution.class;
 			}
 		});
 		return mmObject_lazy.get();

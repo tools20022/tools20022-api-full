@@ -64,6 +64,11 @@ public class VoteDeadline extends MeetingDeadline {
 				definition = "Date and time by which the vote instructions should be submitted.";
 				superType_lazy = () -> MeetingDeadline.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return VoteDeadline.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

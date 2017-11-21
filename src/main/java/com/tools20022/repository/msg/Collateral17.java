@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the collateral that will be either delivered, returned or
@@ -82,6 +86,9 @@ import java.util.List;
  * Collateral11}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Collateral17", propOrder = {"marginCallRequestIdentification", "marginCallResponseIdentification", "standardSettlementInstructions", "collateralProposalResponseIdentification", "securitiesCollateral", "cashCollateral",
+		"otherCollateral"})
 public class Collateral17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -455,6 +462,7 @@ public class Collateral17 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MrgnCallReqId", required = true)
 	public Max35Text getMarginCallRequestIdentification() {
 		return marginCallRequestIdentification;
 	}
@@ -463,6 +471,7 @@ public class Collateral17 {
 		this.marginCallRequestIdentification = marginCallRequestIdentification;
 	}
 
+	@XmlElement(name = "MrgnCallRspnId")
 	public Max35Text getMarginCallResponseIdentification() {
 		return marginCallResponseIdentification;
 	}
@@ -471,6 +480,7 @@ public class Collateral17 {
 		this.marginCallResponseIdentification = marginCallResponseIdentification;
 	}
 
+	@XmlElement(name = "StdSttlmInstrs")
 	public Max140Text getStandardSettlementInstructions() {
 		return standardSettlementInstructions;
 	}
@@ -479,6 +489,7 @@ public class Collateral17 {
 		this.standardSettlementInstructions = standardSettlementInstructions;
 	}
 
+	@XmlElement(name = "CollPrpslRspnId")
 	public Max35Text getCollateralProposalResponseIdentification() {
 		return collateralProposalResponseIdentification;
 	}
@@ -487,6 +498,7 @@ public class Collateral17 {
 		this.collateralProposalResponseIdentification = collateralProposalResponseIdentification;
 	}
 
+	@XmlElement(name = "SctiesColl")
 	public List<SecuritiesCollateral8> getSecuritiesCollateral() {
 		return securitiesCollateral;
 	}
@@ -495,6 +507,7 @@ public class Collateral17 {
 		this.securitiesCollateral = securitiesCollateral;
 	}
 
+	@XmlElement(name = "CshColl")
 	public List<CashCollateral2> getCashCollateral() {
 		return cashCollateral;
 	}
@@ -503,6 +516,7 @@ public class Collateral17 {
 		this.cashCollateral = cashCollateral;
 	}
 
+	@XmlElement(name = "OthrColl")
 	public List<OtherCollateral5> getOtherCollateral() {
 		return otherCollateral;
 	}

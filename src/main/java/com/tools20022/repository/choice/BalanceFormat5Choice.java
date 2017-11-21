@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.SignedQuantityFormat6;
 import com.tools20022.repository.msg.SignedQuantityFormat7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between balance, eligible balance and not eligible balance formats.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * BalanceFormat1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BalanceFormat5Choice", propOrder = {"balance", "eligibleBalance", "notEligibleBalance"})
 public class BalanceFormat5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -251,6 +257,7 @@ public class BalanceFormat5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Bal", required = true)
 	public SignedQuantityFormat7 getBalance() {
 		return balance;
 	}
@@ -259,6 +266,7 @@ public class BalanceFormat5Choice {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "ElgblBal", required = true)
 	public SignedQuantityFormat6 getEligibleBalance() {
 		return eligibleBalance;
 	}
@@ -267,6 +275,7 @@ public class BalanceFormat5Choice {
 		this.eligibleBalance = eligibleBalance;
 	}
 
+	@XmlElement(name = "NotElgblBal", required = true)
 	public SignedQuantityFormat6 getNotEligibleBalance() {
 		return notEligibleBalance;
 	}

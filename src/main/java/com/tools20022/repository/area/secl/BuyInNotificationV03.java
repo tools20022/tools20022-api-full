@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.BuyIn4;
 import com.tools20022.repository.msg.SettlementObligation7;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code secl.007.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
@@ -90,6 +89,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code secl.007.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -101,6 +103,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BuyInNotificationV03", propOrder = {"transactionIdentification", "clearingMember", "notificationDetails", "originalSettlementObligation", "supplementaryData"})
 public class BuyInNotificationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -140,6 +144,14 @@ public class BuyInNotificationV03 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BuyInNotificationV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification35Choice clearingMember;
 	/**
@@ -178,6 +190,14 @@ public class BuyInNotificationV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BuyInNotificationV03.class.getMethod("getClearingMember", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected BuyIn4 notificationDetails;
 	/**
@@ -213,6 +233,14 @@ public class BuyInNotificationV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> BuyIn4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BuyInNotificationV03.class.getMethod("getNotificationDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SettlementObligation7 originalSettlementObligation;
@@ -252,6 +280,14 @@ public class BuyInNotificationV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> SettlementObligation7.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BuyInNotificationV03.class.getMethod("getOriginalSettlementObligation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -289,6 +325,14 @@ public class BuyInNotificationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BuyInNotificationV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -301,8 +345,9 @@ public class BuyInNotificationV03 {
 				rootElement = "Document";
 				xmlTag = "BuyInNtfctn";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(BuyInNotificationV03.mmTransactionIdentification, BuyInNotificationV03.mmClearingMember, BuyInNotificationV03.mmNotificationDetails,
-						BuyInNotificationV03.mmOriginalSettlementObligation, BuyInNotificationV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.BuyInNotificationV03.mmTransactionIdentification, com.tools20022.repository.area.secl.BuyInNotificationV03.mmClearingMember,
+						com.tools20022.repository.area.secl.BuyInNotificationV03.mmNotificationDetails, com.tools20022.repository.area.secl.BuyInNotificationV03.mmOriginalSettlementObligation,
+						com.tools20022.repository.area.secl.BuyInNotificationV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "secl";
@@ -312,10 +357,16 @@ public class BuyInNotificationV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BuyInNotificationV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId")
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -324,6 +375,7 @@ public class BuyInNotificationV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "ClrMmb", required = true)
 	public PartyIdentification35Choice getClearingMember() {
 		return clearingMember;
 	}
@@ -332,6 +384,7 @@ public class BuyInNotificationV03 {
 		this.clearingMember = clearingMember;
 	}
 
+	@XmlElement(name = "NtfctnDtls")
 	public BuyIn4 getNotificationDetails() {
 		return notificationDetails;
 	}
@@ -340,6 +393,7 @@ public class BuyInNotificationV03 {
 		this.notificationDetails = notificationDetails;
 	}
 
+	@XmlElement(name = "OrgnlSttlmOblgtn", required = true)
 	public SettlementObligation7 getOriginalSettlementObligation() {
 		return originalSettlementObligation;
 	}
@@ -348,11 +402,18 @@ public class BuyInNotificationV03 {
 		this.originalSettlementObligation = originalSettlementObligation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:secl.007.03.03")
+	static public class Document {
+		@XmlElement(name = "BuyInNtfctn", required = true)
+		public BuyInNotificationV03 messageBody;
 	}
 }

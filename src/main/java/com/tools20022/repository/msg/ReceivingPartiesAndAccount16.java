@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ReceivingPartiesAndAccount3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReceivingPartiesAndAccount16", propOrder = {"receiversCustodianDetails", "receiversIntermediary1Details", "receiversIntermediary2Details", "receivingAgentDetails"})
 public class ReceivingPartiesAndAccount16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -312,6 +318,7 @@ public class ReceivingPartiesAndAccount16 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RcvrsCtdnDtls")
 	public PartyIdentificationAndAccount147 getReceiversCustodianDetails() {
 		return receiversCustodianDetails;
 	}
@@ -320,6 +327,7 @@ public class ReceivingPartiesAndAccount16 {
 		this.receiversCustodianDetails = receiversCustodianDetails;
 	}
 
+	@XmlElement(name = "RcvrsIntrmy1Dtls")
 	public PartyIdentificationAndAccount147 getReceiversIntermediary1Details() {
 		return receiversIntermediary1Details;
 	}
@@ -328,6 +336,7 @@ public class ReceivingPartiesAndAccount16 {
 		this.receiversIntermediary1Details = receiversIntermediary1Details;
 	}
 
+	@XmlElement(name = "RcvrsIntrmy2Dtls")
 	public PartyIdentificationAndAccount147 getReceiversIntermediary2Details() {
 		return receiversIntermediary2Details;
 	}
@@ -336,6 +345,7 @@ public class ReceivingPartiesAndAccount16 {
 		this.receiversIntermediary2Details = receiversIntermediary2Details;
 	}
 
+	@XmlElement(name = "RcvgAgtDtls", required = true)
 	public PartyIdentificationAndAccount147 getReceivingAgentDetails() {
 		return receivingAgentDetails;
 	}

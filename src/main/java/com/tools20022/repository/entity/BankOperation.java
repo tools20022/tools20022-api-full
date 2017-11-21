@@ -38,6 +38,23 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankOperation#mmOperationThreshold
+ * BankOperation.mmOperationThreshold}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankOperation#mmOperationType
+ * BankOperation.mmOperationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankOperation#mmApplicablePeriod
+ * BankOperation.mmApplicablePeriod}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.CashAccountService
+ * CashAccountService}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -60,23 +77,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.msg.OperationMandate1#mmBankOperation
  * OperationMandate1.mmBankOperation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.CashAccountService
- * CashAccountService}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankOperation#mmOperationThreshold
- * BankOperation.mmOperationThreshold}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankOperation#mmOperationType
- * BankOperation.mmOperationType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankOperation#mmApplicablePeriod
- * BankOperation.mmApplicablePeriod}</li>
  * </ul>
  * </li>
  * <li>
@@ -117,11 +117,6 @@ public class BankOperation extends CashAccountService {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.OperationThreshold
 	 * OperationThreshold}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BankOperation BankOperation}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -137,6 +132,11 @@ public class BankOperation extends CashAccountService {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BankOperation BankOperation}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -150,7 +150,7 @@ public class BankOperation extends CashAccountService {
 	public static final MMBusinessAssociationEnd mmOperationThreshold = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyAndCertificate1.mmAuthorisation, PartyAndAuthorisation1.mmAuthorisation, PartyAndAuthorisation3.mmAuthorisation);
-			elementContext_lazy = () -> BankOperation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BankOperation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OperationThreshold";
@@ -180,11 +180,6 @@ public class BankOperation extends CashAccountService {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.BankTransaction
 	 * BankTransaction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BankOperation BankOperation}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -195,6 +190,11 @@ public class BankOperation extends CashAccountService {
 	 * {@linkplain com.tools20022.repository.msg.OperationMandate3#mmBankOperation
 	 * OperationMandate3.mmBankOperation}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BankOperation BankOperation}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -211,7 +211,7 @@ public class BankOperation extends CashAccountService {
 	public static final MMBusinessAssociationEnd mmOperationType = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(OperationMandate2.mmBankOperation, OperationMandate3.mmBankOperation);
-			elementContext_lazy = () -> BankOperation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BankOperation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OperationType";
@@ -242,11 +242,6 @@ public class BankOperation extends CashAccountService {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BankOperation BankOperation}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -254,6 +249,11 @@ public class BankOperation extends CashAccountService {
 	 * {@linkplain com.tools20022.repository.msg.MaximumAmountByPeriod1#mmNumberOfDays
 	 * MaximumAmountByPeriod1.mmNumberOfDays}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BankOperation BankOperation}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -271,7 +271,7 @@ public class BankOperation extends CashAccountService {
 	public static final MMBusinessAssociationEnd mmApplicablePeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(MaximumAmountByPeriod1.mmNumberOfDays);
-			elementContext_lazy = () -> BankOperation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BankOperation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApplicablePeriod";
@@ -294,7 +294,13 @@ public class BankOperation extends CashAccountService {
 						com.tools20022.repository.entity.BankTransaction.mmBankOperation);
 				derivationElement_lazy = () -> Arrays.asList(OperationMandate1.mmBankOperation);
 				superType_lazy = () -> CashAccountService.mmObject();
-				element_lazy = () -> Arrays.asList(BankOperation.mmOperationThreshold, BankOperation.mmOperationType, BankOperation.mmApplicablePeriod);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BankOperation.mmOperationThreshold, com.tools20022.repository.entity.BankOperation.mmOperationType,
+						com.tools20022.repository.entity.BankOperation.mmApplicablePeriod);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BankOperation.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Net position of a segregated holding of a single security within the overall
@@ -81,6 +85,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalBalanceInformation2", propOrder = {"quantity", "subBalanceType", "extendedSubBalanceType"})
 public class AdditionalBalanceInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -302,6 +308,7 @@ public class AdditionalBalanceInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public SubBalanceQuantity1Choice getQuantity() {
 		return quantity;
 	}
@@ -310,6 +317,7 @@ public class AdditionalBalanceInformation2 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "SubBalTp", required = true)
 	public SecuritiesBalanceType2Code getSubBalanceType() {
 		return subBalanceType;
 	}
@@ -318,6 +326,7 @@ public class AdditionalBalanceInformation2 {
 		this.subBalanceType = subBalanceType;
 	}
 
+	@XmlElement(name = "XtndedSubBalTp", required = true)
 	public Extended350Code getExtendedSubBalanceType() {
 		return extendedSubBalanceType;
 	}

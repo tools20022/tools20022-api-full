@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the request of certificate management.
@@ -90,6 +94,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CertificateManagementRequest1", propOrder = {"POIIdentification", "TMIdentification", "certificateService", "securityDomain", "binaryCertificationRequest", "certificationRequest", "clientCertificate",
+		"whiteListIdentification"})
 public class CertificateManagementRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -466,6 +473,7 @@ public class CertificateManagementRequest1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "POIId", required = true)
 	public GenericIdentification72 getPOIIdentification() {
 		return pOIIdentification;
 	}
@@ -474,6 +482,7 @@ public class CertificateManagementRequest1 {
 		this.pOIIdentification = pOIIdentification;
 	}
 
+	@XmlElement(name = "TMId")
 	public GenericIdentification72 getTMIdentification() {
 		return tMIdentification;
 	}
@@ -482,6 +491,7 @@ public class CertificateManagementRequest1 {
 		this.tMIdentification = tMIdentification;
 	}
 
+	@XmlElement(name = "CertSvc", required = true)
 	public CardPaymentServiceType10Code getCertificateService() {
 		return certificateService;
 	}
@@ -490,6 +500,7 @@ public class CertificateManagementRequest1 {
 		this.certificateService = certificateService;
 	}
 
+	@XmlElement(name = "SctyDomn")
 	public Max70Text getSecurityDomain() {
 		return securityDomain;
 	}
@@ -498,6 +509,7 @@ public class CertificateManagementRequest1 {
 		this.securityDomain = securityDomain;
 	}
 
+	@XmlElement(name = "BinryCertfctnReq")
 	public Max20000Text getBinaryCertificationRequest() {
 		return binaryCertificationRequest;
 	}
@@ -506,6 +518,7 @@ public class CertificateManagementRequest1 {
 		this.binaryCertificationRequest = binaryCertificationRequest;
 	}
 
+	@XmlElement(name = "CertfctnReq")
 	public CertificationRequest1 getCertificationRequest() {
 		return certificationRequest;
 	}
@@ -514,6 +527,7 @@ public class CertificateManagementRequest1 {
 		this.certificationRequest = certificationRequest;
 	}
 
+	@XmlElement(name = "ClntCert")
 	public Max10KBinary getClientCertificate() {
 		return clientCertificate;
 	}
@@ -522,6 +536,7 @@ public class CertificateManagementRequest1 {
 		this.clientCertificate = clientCertificate;
 	}
 
+	@XmlElement(name = "WhtListId")
 	public PointOfInteraction6 getWhiteListIdentification() {
 		return whiteListIdentification;
 	}

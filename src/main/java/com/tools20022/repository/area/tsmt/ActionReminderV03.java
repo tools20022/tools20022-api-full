@@ -25,9 +25,11 @@ import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -58,9 +60,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.024.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -108,6 +107,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.024.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -119,6 +121,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ActionReminderV03", propOrder = {"reminderIdentification", "transactionIdentification", "establishedBaselineIdentification", "transactionStatus", "userTransactionReference", "messageRequiringAction",
+		"pendingRequestForAction"})
 public class ActionReminderV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -155,6 +160,14 @@ public class ActionReminderV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ActionReminderV03.class.getMethod("getReminderIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -195,6 +208,14 @@ public class ActionReminderV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ActionReminderV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
@@ -233,6 +254,14 @@ public class ActionReminderV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ActionReminderV03.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionStatus4 transactionStatus;
 	/**
@@ -268,6 +297,14 @@ public class ActionReminderV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ActionReminderV03.class.getMethod("getTransactionStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<DocumentIdentification5> userTransactionReference;
@@ -307,6 +344,14 @@ public class ActionReminderV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ActionReminderV03.class.getMethod("getUserTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MessageIdentification1 messageRequiringAction;
 	/**
@@ -341,6 +386,14 @@ public class ActionReminderV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ActionReminderV03.class.getMethod("getMessageRequiringAction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PendingActivity2 pendingRequestForAction;
@@ -377,6 +430,14 @@ public class ActionReminderV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ActionReminderV03.class.getMethod("getPendingRequestForAction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -389,8 +450,10 @@ public class ActionReminderV03 {
 				rootElement = "Document";
 				xmlTag = "ActnRmndr";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ActionReminderV03.mmReminderIdentification, ActionReminderV03.mmTransactionIdentification, ActionReminderV03.mmEstablishedBaselineIdentification,
-						ActionReminderV03.mmTransactionStatus, ActionReminderV03.mmUserTransactionReference, ActionReminderV03.mmMessageRequiringAction, ActionReminderV03.mmPendingRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActionReminderV03.mmReminderIdentification, com.tools20022.repository.area.tsmt.ActionReminderV03.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.ActionReminderV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.ActionReminderV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.ActionReminderV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.ActionReminderV03.mmMessageRequiringAction,
+						com.tools20022.repository.area.tsmt.ActionReminderV03.mmPendingRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -400,10 +463,16 @@ public class ActionReminderV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ActionReminderV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RmndrId", required = true)
 	public MessageIdentification1 getReminderIdentification() {
 		return reminderIdentification;
 	}
@@ -412,6 +481,7 @@ public class ActionReminderV03 {
 		this.reminderIdentification = reminderIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -420,6 +490,7 @@ public class ActionReminderV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "EstblishdBaselnId")
 	public DocumentIdentification3 getEstablishedBaselineIdentification() {
 		return establishedBaselineIdentification;
 	}
@@ -428,6 +499,7 @@ public class ActionReminderV03 {
 		this.establishedBaselineIdentification = establishedBaselineIdentification;
 	}
 
+	@XmlElement(name = "TxSts", required = true)
 	public TransactionStatus4 getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -436,6 +508,7 @@ public class ActionReminderV03 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "UsrTxRef")
 	public List<DocumentIdentification5> getUserTransactionReference() {
 		return userTransactionReference;
 	}
@@ -444,6 +517,7 @@ public class ActionReminderV03 {
 		this.userTransactionReference = userTransactionReference;
 	}
 
+	@XmlElement(name = "MsgReqrngActn", required = true)
 	public MessageIdentification1 getMessageRequiringAction() {
 		return messageRequiringAction;
 	}
@@ -452,11 +526,18 @@ public class ActionReminderV03 {
 		this.messageRequiringAction = messageRequiringAction;
 	}
 
+	@XmlElement(name = "PdgReqForActn", required = true)
 	public PendingActivity2 getPendingRequestForAction() {
 		return pendingRequestForAction;
 	}
 
 	public void setPendingRequestForAction(PendingActivity2 pendingRequestForAction) {
 		this.pendingRequestForAction = pendingRequestForAction;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.024.03.03")
+	static public class Document {
+		@XmlElement(name = "ActnRmndr", required = true)
+		public ActionReminderV03 messageBody;
 	}
 }

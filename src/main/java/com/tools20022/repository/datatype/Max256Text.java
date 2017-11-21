@@ -54,6 +54,8 @@ public class Max256Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max256Text";
 				definition = "Specifies a character string with a maximum length of 256 characters.";
+				minLength = 1;
+				maxLength = 256;
 			}
 		});
 		return mmObject_lazy.get();

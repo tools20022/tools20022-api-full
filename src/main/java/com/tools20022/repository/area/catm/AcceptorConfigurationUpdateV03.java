@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.ContentInformationType9;
 import com.tools20022.repository.msg.Header4;
 import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20132014;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * Update of the acceptor configuration to be dowloaded by the terminal
@@ -36,9 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catm.003.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TerminalManagementPreviousVersion
@@ -72,6 +71,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catm.003.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -95,6 +97,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorConfigurationUpdateV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorConfigurationUpdateV03", propOrder = {"header", "acceptorConfiguration", "securityTrailer"})
 public class AcceptorConfigurationUpdateV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -149,6 +153,14 @@ public class AcceptorConfigurationUpdateV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorConfigurationUpdateV03.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AcceptorConfiguration3 acceptorConfiguration;
 	/**
@@ -202,6 +214,14 @@ public class AcceptorConfigurationUpdateV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorConfiguration3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorConfigurationUpdateV03.class.getMethod("getAcceptorConfiguration", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType9 securityTrailer;
 	/**
@@ -253,6 +273,14 @@ public class AcceptorConfigurationUpdateV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType9.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorConfigurationUpdateV03.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -267,7 +295,8 @@ public class AcceptorConfigurationUpdateV03 {
 				rootElement = "Document";
 				xmlTag = "AccptrCfgtnUpd";
 				businessArea_lazy = () -> TerminalManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV03.mmHeader, AcceptorConfigurationUpdateV03.mmAcceptorConfiguration, AcceptorConfigurationUpdateV03.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV03.mmHeader, com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV03.mmAcceptorConfiguration,
+						com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV03.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catm";
@@ -277,10 +306,16 @@ public class AcceptorConfigurationUpdateV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcceptorConfigurationUpdateV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header4 getHeader() {
 		return header;
 	}
@@ -289,6 +324,7 @@ public class AcceptorConfigurationUpdateV03 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "AccptrCfgtn", required = true)
 	public AcceptorConfiguration3 getAcceptorConfiguration() {
 		return acceptorConfiguration;
 	}
@@ -297,11 +333,18 @@ public class AcceptorConfigurationUpdateV03 {
 		this.acceptorConfiguration = acceptorConfiguration;
 	}
 
+	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType9 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType9 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catm.003.03.03")
+	static public class Document {
+		@XmlElement(name = "AccptrCfgtnUpd", required = true)
+		public AcceptorConfigurationUpdateV03 messageBody;
 	}
 }

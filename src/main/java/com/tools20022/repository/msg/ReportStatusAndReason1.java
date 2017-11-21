@@ -30,6 +30,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the related report identification and its status. If the status is
@@ -88,6 +92,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportStatusAndReason1", propOrder = {"relatedReference", "status", "rejected"})
 public class ReportStatusAndReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -289,6 +295,7 @@ public class ReportStatusAndReason1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RltdRef", required = true)
 	public Max35Text getRelatedReference() {
 		return relatedReference;
 	}
@@ -297,6 +304,7 @@ public class ReportStatusAndReason1 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public Status2Code getStatus() {
 		return status;
 	}
@@ -305,6 +313,7 @@ public class ReportStatusAndReason1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public List<RejectedStatusReason9Choice> getRejected() {
 		return rejected;
 	}

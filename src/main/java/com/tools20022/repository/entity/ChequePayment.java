@@ -41,6 +41,16 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequePayment#mmCheque
+ * ChequePayment.mmCheque}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.IndividualPayment
+ * IndividualPayment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -72,16 +82,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.choice.PaymentInstrument18Choice#mmBankersDraft
  * PaymentInstrument18Choice.mmBankersDraft}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.IndividualPayment
- * IndividualPayment}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ChequePayment#mmCheque
- * ChequePayment.mmCheque}</li>
  * </ul>
  * </li>
  * <li>
@@ -120,11 +120,6 @@ public class ChequePayment extends IndividualPayment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Cheque Cheque}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ChequePayment ChequePayment}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -132,6 +127,11 @@ public class ChequePayment extends IndividualPayment {
 	 * {@linkplain com.tools20022.repository.choice.PaymentInstrument6Choice#mmChequeDetails
 	 * PaymentInstrument6Choice.mmChequeDetails}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ChequePayment ChequePayment}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -149,7 +149,7 @@ public class ChequePayment extends IndividualPayment {
 	public static final MMBusinessAssociationEnd mmCheque = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentInstrument6Choice.mmChequeDetails);
-			elementContext_lazy = () -> ChequePayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ChequePayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cheque";
@@ -172,7 +172,12 @@ public class ChequePayment extends IndividualPayment {
 				derivationElement_lazy = () -> Arrays.asList(PaymentInstrument7.mmCheque, PaymentInstrument8.mmCheque, PaymentInstrument8.mmBankersDraft, PaymentInstrument17Choice.mmCheque, PaymentInstrument17Choice.mmBankersDraft,
 						PaymentInstrument18Choice.mmCheque, PaymentInstrument18Choice.mmBankersDraft);
 				superType_lazy = () -> IndividualPayment.mmObject();
-				element_lazy = () -> Arrays.asList(ChequePayment.mmCheque);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ChequePayment.mmCheque);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ChequePayment.class;
 			}
 		});
 		return mmObject_lazy.get();

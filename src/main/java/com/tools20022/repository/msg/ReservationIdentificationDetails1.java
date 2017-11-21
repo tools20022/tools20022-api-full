@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Liquidity set aside by the account owner for specific purposes.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Liquidity set aside by the account owner for specific purposes."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReservationIdentificationDetails1", propOrder = {"systemIdentification", "type", "accountOwner", "accountIdentification"})
 public class ReservationIdentificationDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -289,6 +295,7 @@ public class ReservationIdentificationDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysId")
 	public SystemIdentificationChoice getSystemIdentification() {
 		return systemIdentification;
 	}
@@ -297,6 +304,7 @@ public class ReservationIdentificationDetails1 {
 		this.systemIdentification = systemIdentification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ReservationType1Code getType() {
 		return type;
 	}
@@ -305,6 +313,7 @@ public class ReservationIdentificationDetails1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public BICIdentifier getAccountOwner() {
 		return accountOwner;
 	}
@@ -313,6 +322,7 @@ public class ReservationIdentificationDetails1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctId")
 	public AccountIdentification1Choice getAccountIdentification() {
 		return accountIdentification;
 	}

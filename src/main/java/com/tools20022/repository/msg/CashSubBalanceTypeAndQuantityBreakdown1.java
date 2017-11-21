@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Quantity breakdown information for a specific securities balance.
@@ -63,6 +67,8 @@ import java.util.List;
  * "Quantity breakdown information for a specific securities balance."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashSubBalanceTypeAndQuantityBreakdown1", propOrder = {"type", "quantityBreakdown"})
 public class CashSubBalanceTypeAndQuantityBreakdown1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class CashSubBalanceTypeAndQuantityBreakdown1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public CashBalanceType1Choice getType() {
 		return type;
 	}
@@ -188,6 +195,7 @@ public class CashSubBalanceTypeAndQuantityBreakdown1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "QtyBrkdwn")
 	public List<QuantityBreakdown22> getQuantityBreakdown() {
 		return quantityBreakdown;
 	}

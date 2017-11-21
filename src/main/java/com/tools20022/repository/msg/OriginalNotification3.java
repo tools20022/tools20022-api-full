@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identify the original notification and to provide the status.
@@ -91,6 +95,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalNotification3", propOrder = {"originalMessageIdentification", "originalCreationDateTime", "originalNotificationIdentification", "notificationStatus", "additionalStatusInformation", "originalNotificationReference"})
 public class OriginalNotification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -381,6 +387,7 @@ public class OriginalNotification3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMsgId", required = true)
 	public Max35Text getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}
@@ -389,6 +396,7 @@ public class OriginalNotification3 {
 		this.originalMessageIdentification = originalMessageIdentification;
 	}
 
+	@XmlElement(name = "OrgnlCreDtTm")
 	public ISODateTime getOriginalCreationDateTime() {
 		return originalCreationDateTime;
 	}
@@ -397,6 +405,7 @@ public class OriginalNotification3 {
 		this.originalCreationDateTime = originalCreationDateTime;
 	}
 
+	@XmlElement(name = "OrgnlNtfctnId", required = true)
 	public Max35Text getOriginalNotificationIdentification() {
 		return originalNotificationIdentification;
 	}
@@ -405,6 +414,7 @@ public class OriginalNotification3 {
 		this.originalNotificationIdentification = originalNotificationIdentification;
 	}
 
+	@XmlElement(name = "NtfctnSts")
 	public NotificationStatus3Code getNotificationStatus() {
 		return notificationStatus;
 	}
@@ -413,6 +423,7 @@ public class OriginalNotification3 {
 		this.notificationStatus = notificationStatus;
 	}
 
+	@XmlElement(name = "AddtlStsInf")
 	public Max140Text getAdditionalStatusInformation() {
 		return additionalStatusInformation;
 	}
@@ -421,6 +432,7 @@ public class OriginalNotification3 {
 		this.additionalStatusInformation = additionalStatusInformation;
 	}
 
+	@XmlElement(name = "OrgnlNtfctnRef")
 	public List<OriginalNotificationReference2> getOriginalNotificationReference() {
 		return originalNotificationReference;
 	}

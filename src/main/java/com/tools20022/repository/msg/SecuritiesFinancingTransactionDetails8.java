@@ -35,6 +35,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the closing of the securities financing transaction.
@@ -196,6 +200,12 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesFinancingTransactionDetails8", propOrder = {"securitiesFinancingTradeIdentification", "closingLegIdentification", "poolIdentification", "corporateActionEventIdentification",
+		"tripartyAgentCollateralTransactionIdentification", "clientTripartyCollateralTransactionIdentification", "accountOwner", "safekeepingAccount", "safekeepingPlace", "placeOfTrade", "financialInstrumentIdentification",
+		"settlementQuantity", "openingSettlementAmount", "terminationTransactionAmount", "openingSettlementDate", "terminationDate", "tradeDate", "expectedSettlementDate", "expectedValueDate", "lateDeliveryDate", "rateChangeDate",
+		"securitiesFinancingTransactionType", "securitiesMovementType", "payment", "settlementParameters", "rateType", "variableRateSupport", "repurchaseRate", "stockLoanMargin", "securitiesHaircut", "pricingRate", "spread",
+		"deliveringSettlementParties", "receivingSettlementParties", "investor", "settlementInstructionProcessingAdditionalDetails"})
 public class SecuritiesFinancingTransactionDetails8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1989,6 +1999,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesFincgTradId")
 	public Max35Text getSecuritiesFinancingTradeIdentification() {
 		return securitiesFinancingTradeIdentification;
 	}
@@ -1997,6 +2008,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.securitiesFinancingTradeIdentification = securitiesFinancingTradeIdentification;
 	}
 
+	@XmlElement(name = "ClsgLegId")
 	public Max35Text getClosingLegIdentification() {
 		return closingLegIdentification;
 	}
@@ -2005,6 +2017,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.closingLegIdentification = closingLegIdentification;
 	}
 
+	@XmlElement(name = "PoolId")
 	public Max35Text getPoolIdentification() {
 		return poolIdentification;
 	}
@@ -2013,6 +2026,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.poolIdentification = poolIdentification;
 	}
 
+	@XmlElement(name = "CorpActnEvtId")
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -2021,6 +2035,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "TrptyAgtCollTxId")
 	public Max35Text getTripartyAgentCollateralTransactionIdentification() {
 		return tripartyAgentCollateralTransactionIdentification;
 	}
@@ -2029,6 +2044,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.tripartyAgentCollateralTransactionIdentification = tripartyAgentCollateralTransactionIdentification;
 	}
 
+	@XmlElement(name = "ClntTrptyCollTxId")
 	public Max35Text getClientTripartyCollateralTransactionIdentification() {
 		return clientTripartyCollateralTransactionIdentification;
 	}
@@ -2037,6 +2053,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.clientTripartyCollateralTransactionIdentification = clientTripartyCollateralTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification36Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -2045,6 +2062,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -2053,6 +2071,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat3Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -2061,6 +2080,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public MarketIdentification4 getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -2069,6 +2089,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -2077,6 +2098,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "SttlmQty", required = true)
 	public Quantity6Choice getSettlementQuantity() {
 		return settlementQuantity;
 	}
@@ -2085,6 +2107,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.settlementQuantity = settlementQuantity;
 	}
 
+	@XmlElement(name = "OpngSttlmAmt")
 	public AmountAndDirection8 getOpeningSettlementAmount() {
 		return openingSettlementAmount;
 	}
@@ -2093,6 +2116,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.openingSettlementAmount = openingSettlementAmount;
 	}
 
+	@XmlElement(name = "TermntnTxAmt")
 	public AmountAndDirection4 getTerminationTransactionAmount() {
 		return terminationTransactionAmount;
 	}
@@ -2101,6 +2125,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.terminationTransactionAmount = terminationTransactionAmount;
 	}
 
+	@XmlElement(name = "OpngSttlmDt", required = true)
 	public SettlementDate2Choice getOpeningSettlementDate() {
 		return openingSettlementDate;
 	}
@@ -2109,6 +2134,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.openingSettlementDate = openingSettlementDate;
 	}
 
+	@XmlElement(name = "TermntnDt")
 	public TerminationDate2Choice getTerminationDate() {
 		return terminationDate;
 	}
@@ -2117,6 +2143,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.terminationDate = terminationDate;
 	}
 
+	@XmlElement(name = "TradDt")
 	public TradeDate1Choice getTradeDate() {
 		return tradeDate;
 	}
@@ -2125,6 +2152,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "XpctdSttlmDt")
 	public DateAndDateTimeChoice getExpectedSettlementDate() {
 		return expectedSettlementDate;
 	}
@@ -2133,6 +2161,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.expectedSettlementDate = expectedSettlementDate;
 	}
 
+	@XmlElement(name = "XpctdValDt")
 	public DateAndDateTimeChoice getExpectedValueDate() {
 		return expectedValueDate;
 	}
@@ -2141,6 +2170,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.expectedValueDate = expectedValueDate;
 	}
 
+	@XmlElement(name = "LateDlvryDt")
 	public DateAndDateTimeChoice getLateDeliveryDate() {
 		return lateDeliveryDate;
 	}
@@ -2149,6 +2179,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.lateDeliveryDate = lateDeliveryDate;
 	}
 
+	@XmlElement(name = "RateChngDt")
 	public DateAndDateTimeChoice getRateChangeDate() {
 		return rateChangeDate;
 	}
@@ -2157,6 +2188,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.rateChangeDate = rateChangeDate;
 	}
 
+	@XmlElement(name = "SctiesFincgTxTp", required = true)
 	public SecuritiesFinancingTransactionType1Code getSecuritiesFinancingTransactionType() {
 		return securitiesFinancingTransactionType;
 	}
@@ -2165,6 +2197,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.securitiesFinancingTransactionType = securitiesFinancingTransactionType;
 	}
 
+	@XmlElement(name = "SctiesMvmntTp", required = true)
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
@@ -2173,6 +2206,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.securitiesMovementType = securitiesMovementType;
 	}
 
+	@XmlElement(name = "Pmt", required = true)
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
@@ -2181,6 +2215,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "SttlmParams")
 	public SettlementDetails29 getSettlementParameters() {
 		return settlementParameters;
 	}
@@ -2189,6 +2224,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.settlementParameters = settlementParameters;
 	}
 
+	@XmlElement(name = "RateTp")
 	public RateType5Choice getRateType() {
 		return rateType;
 	}
@@ -2197,6 +2233,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.rateType = rateType;
 	}
 
+	@XmlElement(name = "VarblRateSpprt")
 	public RateName1 getVariableRateSupport() {
 		return variableRateSupport;
 	}
@@ -2205,6 +2242,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.variableRateSupport = variableRateSupport;
 	}
 
+	@XmlElement(name = "RpRate")
 	public Rate2 getRepurchaseRate() {
 		return repurchaseRate;
 	}
@@ -2213,6 +2251,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.repurchaseRate = repurchaseRate;
 	}
 
+	@XmlElement(name = "StockLnMrgn")
 	public Rate2 getStockLoanMargin() {
 		return stockLoanMargin;
 	}
@@ -2221,6 +2260,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.stockLoanMargin = stockLoanMargin;
 	}
 
+	@XmlElement(name = "SctiesHrcut")
 	public Rate2 getSecuritiesHaircut() {
 		return securitiesHaircut;
 	}
@@ -2229,6 +2269,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.securitiesHaircut = securitiesHaircut;
 	}
 
+	@XmlElement(name = "PricgRate")
 	public RateOrName1Choice getPricingRate() {
 		return pricingRate;
 	}
@@ -2237,6 +2278,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.pricingRate = pricingRate;
 	}
 
+	@XmlElement(name = "Sprd")
 	public Rate2 getSpread() {
 		return spread;
 	}
@@ -2245,6 +2287,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.spread = spread;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties11 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -2253,6 +2296,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties11 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -2261,6 +2305,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "Invstr")
 	public PartyIdentification37Choice getInvestor() {
 		return investor;
 	}
@@ -2269,6 +2314,7 @@ public class SecuritiesFinancingTransactionDetails8 {
 		this.investor = investor;
 	}
 
+	@XmlElement(name = "SttlmInstrPrcgAddtlDtls")
 	public Max350Text getSettlementInstructionProcessingAdditionalDetails() {
 		return settlementInstructionProcessingAdditionalDetails;
 	}

@@ -67,6 +67,11 @@ public class RecipientBank extends CommercialTradePartyRole {
 				definition = "Bank that will be paid under a payment obligation contracted between two financial institutions related to the financing of a commercial transaction.";
 				superType_lazy = () -> CommercialTradePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RecipientBank.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

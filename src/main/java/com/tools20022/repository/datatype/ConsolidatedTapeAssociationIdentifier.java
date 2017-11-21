@@ -66,6 +66,8 @@ public class ConsolidatedTapeAssociationIdentifier {
 				name = "ConsolidatedTapeAssociationIdentifier";
 				definition = "Identifier of a security assigned by the Consolidated Tape Association.";
 				identificationScheme = "CTAIdentifier; CTAIdentifier";
+				minLength = 1;
+				maxLength = 35;
 			}
 		});
 		return mmObject_lazy.get();

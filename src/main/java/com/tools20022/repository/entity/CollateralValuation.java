@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,32 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmCollateral
+ * CollateralValuation.mmCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmCollateralValuationDate
+ * CollateralValuation.mmCollateralValuationDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmRelatedManagementProcess
+ * CollateralValuation.mmRelatedManagementProcess}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmReportedCurrencyAndAmount
+ * CollateralValuation.mmReportedCurrencyAndAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmMarketValueAmount
+ * CollateralValuation.mmMarketValueAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmAdjustedRate
+ * CollateralValuation.mmAdjustedRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmCollateralValuationCurrency
+ * CollateralValuation.mmCollateralValuationCurrency}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -109,32 +136,6 @@ import java.util.List;
  * SecuredCollateral2Choice.mmOtherCollateral}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmCollateral
- * CollateralValuation.mmCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmCollateralValuationDate
- * CollateralValuation.mmCollateralValuationDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmRelatedManagementProcess
- * CollateralValuation.mmRelatedManagementProcess}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmReportedCurrencyAndAmount
- * CollateralValuation.mmReportedCurrencyAndAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmMarketValueAmount
- * CollateralValuation.mmMarketValueAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmAdjustedRate
- * CollateralValuation.mmAdjustedRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmCollateralValuationCurrency
- * CollateralValuation.mmCollateralValuationCurrency}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -173,11 +174,6 @@ public class CollateralValuation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Collateral
 	 * Collateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralValuation
-	 * CollateralValuation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -193,6 +189,11 @@ public class CollateralValuation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralValuation
+	 * CollateralValuation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -206,7 +207,7 @@ public class CollateralValuation {
 	public static final MMBusinessAssociationEnd mmCollateral = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CollateralValuation1.mmAmountDetails, CollateralValuation2.mmValuationAmounts, CollateralValuation5.mmValuationAmounts);
-			elementContext_lazy = () -> CollateralValuation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateral";
@@ -227,11 +228,6 @@ public class CollateralValuation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralValuation
-	 * CollateralValuation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -301,6 +297,11 @@ public class CollateralValuation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralValuation
+	 * CollateralValuation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -317,7 +318,7 @@ public class CollateralValuation {
 					OtherCollateral2.mmValueDate, CashCollateral3.mmValueDate, SecuritiesCollateral3.mmValueDate, OtherCollateral3.mmValueDate, CashCollateral4.mmValueDate, CashCollateral2.mmValueDate, OtherCollateral4.mmValueDate,
 					SecuritiesCollateral4.mmValueDate, CashCollateral5.mmValueDate, OtherCollateral7.mmValueDate, OtherCollateral6.mmValueDate, SecuritiesCollateral6.mmValueDate, SecuritiesCollateral5.mmValueDate,
 					OtherCollateral5.mmValueDate, SecuritiesCollateral7.mmValueDate, SecuritiesCollateral8.mmValueDate);
-			elementContext_lazy = () -> CollateralValuation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralValuationDate";
@@ -325,6 +326,14 @@ public class CollateralValuation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralValuation.class.getMethod("getCollateralValuationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CollateralManagement relatedManagementProcess;
@@ -365,7 +374,7 @@ public class CollateralValuation {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedManagementProcess = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CollateralValuation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedManagementProcess";
@@ -388,11 +397,6 @@ public class CollateralValuation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralValuation
-	 * CollateralValuation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -404,6 +408,11 @@ public class CollateralValuation {
 	 * CollateralValuePosition1.mmTotalCollateralValuation}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralValuation
+	 * CollateralValuation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -420,7 +429,7 @@ public class CollateralValuation {
 	public static final MMBusinessAttribute mmReportedCurrencyAndAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CollateralAmount1.mmReportedCurrencyAndAmount, CollateralValuePosition1.mmTotalCollateralValuation);
-			elementContext_lazy = () -> CollateralValuation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportedCurrencyAndAmount";
@@ -428,6 +437,14 @@ public class CollateralValuation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralValuation.class.getMethod("getReportedCurrencyAndAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ActiveCurrencyAndAmount marketValueAmount;
@@ -443,11 +460,6 @@ public class CollateralValuation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralValuation
-	 * CollateralValuation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -456,6 +468,11 @@ public class CollateralValuation {
 	 * CollateralAmount1.mmMarketValueAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralValuation
+	 * CollateralValuation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -472,7 +489,7 @@ public class CollateralValuation {
 	public static final MMBusinessAttribute mmMarketValueAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CollateralAmount1.mmMarketValueAmount);
-			elementContext_lazy = () -> CollateralValuation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketValueAmount";
@@ -480,6 +497,14 @@ public class CollateralValuation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralValuation.class.getMethod("getMarketValueAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BaseOneRate adjustedRate;
@@ -492,11 +517,6 @@ public class CollateralValuation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.BaseOneRate
 	 * BaseOneRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralValuation
-	 * CollateralValuation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -512,6 +532,11 @@ public class CollateralValuation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralValuation
+	 * CollateralValuation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -526,7 +551,7 @@ public class CollateralValuation {
 	public static final MMBusinessAttribute mmAdjustedRate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CollateralValuation1.mmAdjustedRate, CollateralValuation2.mmAdjustedRate, CollateralValuation5.mmAdjustedRate);
-			elementContext_lazy = () -> CollateralValuation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustedRate";
@@ -534,6 +559,14 @@ public class CollateralValuation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralValuation.class.getMethod("getAdjustedRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyCode collateralValuationCurrency;
@@ -546,11 +579,6 @@ public class CollateralValuation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralValuation
-	 * CollateralValuation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -559,6 +587,11 @@ public class CollateralValuation {
 	 * CollateralValue1.mmValuationCurrency}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralValuation
+	 * CollateralValuation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -573,7 +606,7 @@ public class CollateralValuation {
 	public static final MMBusinessAttribute mmCollateralValuationCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CollateralValue1.mmValuationCurrency);
-			elementContext_lazy = () -> CollateralValuation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralValuationCurrency";
@@ -581,6 +614,14 @@ public class CollateralValuation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralValuation.class.getMethod("getCollateralValuationCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -594,10 +635,17 @@ public class CollateralValuation {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Collateral.mmValuation, com.tools20022.repository.entity.CollateralManagement.mmCollateralValuation);
 				derivationElement_lazy = () -> Arrays.asList(SecuredCollateral1Choice.mmSingleCollateral, SecuredCollateral1Choice.mmMultipleCollateral, SecuredCollateral1Choice.mmPoolCollateral, SecuredCollateral1Choice.mmOtherCollateral,
 						SecuredCollateral2Choice.mmSingleCollateral, SecuredCollateral2Choice.mmMultipleCollateral, SecuredCollateral2Choice.mmPoolCollateral, SecuredCollateral2Choice.mmOtherCollateral);
-				element_lazy = () -> Arrays.asList(CollateralValuation.mmCollateral, CollateralValuation.mmCollateralValuationDate, CollateralValuation.mmRelatedManagementProcess, CollateralValuation.mmReportedCurrencyAndAmount,
-						CollateralValuation.mmMarketValueAmount, CollateralValuation.mmAdjustedRate, CollateralValuation.mmCollateralValuationCurrency);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralValuation.mmCollateral, com.tools20022.repository.entity.CollateralValuation.mmCollateralValuationDate,
+						com.tools20022.repository.entity.CollateralValuation.mmRelatedManagementProcess, com.tools20022.repository.entity.CollateralValuation.mmReportedCurrencyAndAmount,
+						com.tools20022.repository.entity.CollateralValuation.mmMarketValueAmount, com.tools20022.repository.entity.CollateralValuation.mmAdjustedRate,
+						com.tools20022.repository.entity.CollateralValuation.mmCollateralValuationCurrency);
 				derivationComponent_lazy = () -> Arrays.asList(CollateralValuation1.mmObject(), CollateralValuePosition1.mmObject(), CollateralValue1.mmObject(), CollateralValuation2.mmObject(), SecuredCollateral1Choice.mmObject(),
 						CollateralValuation3.mmObject(), CollateralValuation4.mmObject(), CollateralValuation5.mmObject(), CollateralValuation7.mmObject(), SecuredCollateral2Choice.mmObject(), CollateralValuation6.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CollateralValuation.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Trade settlement monetary summation specified for this supply chain trade
@@ -79,6 +83,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LineItemMonetarySummation1", propOrder = {"lineTotalAmount", "allowanceTotalAmount", "chargeTotalAmount", "taxTotalAmount", "taxBasisTotalAmount", "informationAmount"})
 public class LineItemMonetarySummation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -385,6 +391,7 @@ public class LineItemMonetarySummation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LineTtlAmt")
 	public List<CurrencyAndAmount> getLineTotalAmount() {
 		return lineTotalAmount;
 	}
@@ -393,6 +400,7 @@ public class LineItemMonetarySummation1 {
 		this.lineTotalAmount = lineTotalAmount;
 	}
 
+	@XmlElement(name = "AllwncTtlAmt")
 	public List<CurrencyAndAmount> getAllowanceTotalAmount() {
 		return allowanceTotalAmount;
 	}
@@ -401,6 +409,7 @@ public class LineItemMonetarySummation1 {
 		this.allowanceTotalAmount = allowanceTotalAmount;
 	}
 
+	@XmlElement(name = "ChrgTtlAmt")
 	public List<CurrencyAndAmount> getChargeTotalAmount() {
 		return chargeTotalAmount;
 	}
@@ -409,6 +418,7 @@ public class LineItemMonetarySummation1 {
 		this.chargeTotalAmount = chargeTotalAmount;
 	}
 
+	@XmlElement(name = "TaxTtlAmt")
 	public List<CurrencyAndAmount> getTaxTotalAmount() {
 		return taxTotalAmount;
 	}
@@ -417,6 +427,7 @@ public class LineItemMonetarySummation1 {
 		this.taxTotalAmount = taxTotalAmount;
 	}
 
+	@XmlElement(name = "TaxBsisTtlAmt")
 	public List<CurrencyAndAmount> getTaxBasisTotalAmount() {
 		return taxBasisTotalAmount;
 	}
@@ -425,6 +436,7 @@ public class LineItemMonetarySummation1 {
 		this.taxBasisTotalAmount = taxBasisTotalAmount;
 	}
 
+	@XmlElement(name = "InfAmt")
 	public List<CurrencyAndAmount> getInformationAmount() {
 		return informationAmount;
 	}

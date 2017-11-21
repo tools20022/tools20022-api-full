@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Currency conversion outcome from the service provider.
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorCurrencyConversionResponse2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorCurrencyConversionResponse3", propOrder = {"environment", "transaction", "currencyConversionResult"})
 public class AcceptorCurrencyConversionResponse3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -296,6 +302,7 @@ public class AcceptorCurrencyConversionResponse3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment46 getEnvironment() {
 		return environment;
 	}
@@ -304,6 +311,7 @@ public class AcceptorCurrencyConversionResponse3 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransaction53 getTransaction() {
 		return transaction;
 	}
@@ -312,6 +320,7 @@ public class AcceptorCurrencyConversionResponse3 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "CcyConvsRslt", required = true)
 	public CurrencyConversion7 getCurrencyConversionResult() {
 		return currencyConversionResult;
 	}

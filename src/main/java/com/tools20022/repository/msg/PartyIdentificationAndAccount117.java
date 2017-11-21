@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party and account details.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyIdentificationAndAccount44}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount117", propOrder = {"identification", "LEI", "safekeepingAccount", "processingIdentification"})
 public class PartyIdentificationAndAccount117 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -302,6 +308,7 @@ public class PartyIdentificationAndAccount117 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification71Choice getIdentification() {
 		return identification;
 	}
@@ -310,6 +317,7 @@ public class PartyIdentificationAndAccount117 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "LEI")
 	public LEIIdentifier getLEI() {
 		return lEI;
 	}
@@ -318,6 +326,7 @@ public class PartyIdentificationAndAccount117 {
 		this.lEI = lEI;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount19 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -326,6 +335,7 @@ public class PartyIdentificationAndAccount117 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public Max35Text getProcessingIdentification() {
 		return processingIdentification;
 	}

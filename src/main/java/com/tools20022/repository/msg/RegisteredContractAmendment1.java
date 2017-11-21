@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amendment details and reason related to the registered contract.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Amendment details and reason related to the registered contract."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegisteredContractAmendment1", propOrder = {"amendmentDate", "document", "startDate", "amendmentReason", "additionalInformation"})
 public class RegisteredContractAmendment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -325,6 +331,7 @@ public class RegisteredContractAmendment1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AmdmntDt", required = true)
 	public ISODate getAmendmentDate() {
 		return amendmentDate;
 	}
@@ -333,6 +340,7 @@ public class RegisteredContractAmendment1 {
 		this.amendmentDate = amendmentDate;
 	}
 
+	@XmlElement(name = "Doc", required = true)
 	public DocumentIdentification28 getDocument() {
 		return document;
 	}
@@ -341,6 +349,7 @@ public class RegisteredContractAmendment1 {
 		this.document = document;
 	}
 
+	@XmlElement(name = "StartDt")
 	public ISODate getStartDate() {
 		return startDate;
 	}
@@ -349,6 +358,7 @@ public class RegisteredContractAmendment1 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "AmdmntRsn")
 	public Max35Text getAmendmentReason() {
 		return amendmentReason;
 	}
@@ -357,6 +367,7 @@ public class RegisteredContractAmendment1 {
 		this.amendmentReason = amendmentReason;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max1025Text getAdditionalInformation() {
 		return additionalInformation;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max14AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the header information for a query file, as part of the
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelQueryHeader1", propOrder = {"actualSenderIdentification", "payloadCreationDate", "transportIdentification", "requestModeAndType"})
 public class IsabelQueryHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -259,6 +265,7 @@ public class IsabelQueryHeader1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ActlSndrId", required = true)
 	public Max13AlphaNumericText getActualSenderIdentification() {
 		return actualSenderIdentification;
 	}
@@ -267,6 +274,7 @@ public class IsabelQueryHeader1 {
 		this.actualSenderIdentification = actualSenderIdentification;
 	}
 
+	@XmlElement(name = "PyldCreDt", required = true)
 	public DateAndDateTimeChoice getPayloadCreationDate() {
 		return payloadCreationDate;
 	}
@@ -275,6 +283,7 @@ public class IsabelQueryHeader1 {
 		this.payloadCreationDate = payloadCreationDate;
 	}
 
+	@XmlElement(name = "TrnsprtId", required = true)
 	public Max14AlphaNumericText getTransportIdentification() {
 		return transportIdentification;
 	}
@@ -283,6 +292,7 @@ public class IsabelQueryHeader1 {
 		this.transportIdentification = transportIdentification;
 	}
 
+	@XmlElement(name = "ReqMdAndTp", required = true)
 	public RequestModeType1Code getRequestModeAndType() {
 		return requestModeAndType;
 	}

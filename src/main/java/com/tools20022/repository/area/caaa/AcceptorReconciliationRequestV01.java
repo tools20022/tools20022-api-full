@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.AcceptorReconciliationRequest1;
 import com.tools20022.repository.msg.ContentInformationType3;
 import com.tools20022.repository.msg.Header1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -43,9 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.009.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive
@@ -76,6 +75,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.009.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -95,6 +97,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorReconciliationRequestV01", propOrder = {"header", "reconciliationRequest", "securityTrailer"})
 public class AcceptorReconciliationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -131,6 +135,14 @@ public class AcceptorReconciliationRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorReconciliationRequestV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AcceptorReconciliationRequest1 reconciliationRequest;
 	/**
@@ -165,6 +177,14 @@ public class AcceptorReconciliationRequestV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorReconciliationRequest1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorReconciliationRequestV01.class.getMethod("getReconciliationRequest", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ContentInformationType3 securityTrailer;
@@ -201,6 +221,14 @@ public class AcceptorReconciliationRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorReconciliationRequestV01.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -214,7 +242,8 @@ public class AcceptorReconciliationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "AccptrRcncltnReq";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorReconciliationRequestV01.mmHeader, AcceptorReconciliationRequestV01.mmReconciliationRequest, AcceptorReconciliationRequestV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV01.mmHeader, com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV01.mmReconciliationRequest,
+						com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";
@@ -224,10 +253,16 @@ public class AcceptorReconciliationRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcceptorReconciliationRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header1 getHeader() {
 		return header;
 	}
@@ -236,6 +271,7 @@ public class AcceptorReconciliationRequestV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "RcncltnReq", required = true)
 	public AcceptorReconciliationRequest1 getReconciliationRequest() {
 		return reconciliationRequest;
 	}
@@ -244,11 +280,18 @@ public class AcceptorReconciliationRequestV01 {
 		this.reconciliationRequest = reconciliationRequest;
 	}
 
+	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType3 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType3 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.009.01.01")
+	static public class Document {
+		@XmlElement(name = "AccptrRcncltnReq", required = true)
+		public AcceptorReconciliationRequestV01 messageBody;
 	}
 }

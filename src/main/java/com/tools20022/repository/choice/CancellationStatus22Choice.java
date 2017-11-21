@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RejectedStatus10;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status is cancelled.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Status is cancelled."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancellationStatus22Choice", propOrder = {"status", "rejected"})
 public class CancellationStatus22Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class CancellationStatus22Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public OrderCancellationStatus2Code getStatus() {
 		return status;
 	}
@@ -181,6 +188,7 @@ public class CancellationStatus22Choice {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectedStatus10 getRejected() {
 		return rejected;
 	}

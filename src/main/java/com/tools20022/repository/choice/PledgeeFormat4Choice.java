@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1;
 import com.tools20022.repository.msg.PledgeeTypeAndText2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for the entity to which the financial instruments are
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PledgeeFormat4Choice", propOrder = {"typeAndIdentification", "identification", "proprietary"})
 public class PledgeeFormat4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -255,6 +261,7 @@ public class PledgeeFormat4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TpAndId", required = true)
 	public PledgeeTypeAndAnyBICIdentifier1 getTypeAndIdentification() {
 		return typeAndIdentification;
 	}
@@ -263,6 +270,7 @@ public class PledgeeFormat4Choice {
 		this.typeAndIdentification = typeAndIdentification;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PledgeeTypeAndText2 getIdentification() {
 		return identification;
 	}
@@ -271,6 +279,7 @@ public class PledgeeFormat4Choice {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification85 getProprietary() {
 		return proprietary;
 	}

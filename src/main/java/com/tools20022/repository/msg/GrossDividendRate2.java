@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.RateAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cash dividend amount per equity before deductions or allowances have been
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GrossDividendRate2", propOrder = {"rateType", "amount"})
 public class GrossDividendRate2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class GrossDividendRate2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RateTp", required = true)
 	public GrossDividendRateType1FormatChoice getRateType() {
 		return rateType;
 	}
@@ -188,6 +195,7 @@ public class GrossDividendRate2 {
 		this.rateType = rateType;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}

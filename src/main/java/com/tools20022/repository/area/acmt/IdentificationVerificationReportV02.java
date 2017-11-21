@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.MessageIdentification5;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.VerificationReport2;
 import com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -48,9 +50,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.024.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementLatestVersion
@@ -86,6 +85,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.024.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -101,6 +103,8 @@ import java.util.List;
  * IdentificationVerificationReportV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IdentificationVerificationReportV02", propOrder = {"assignment", "originalAssignment", "report", "supplementaryData"})
 public class IdentificationVerificationReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -138,6 +142,14 @@ public class IdentificationVerificationReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> IdentificationAssignment2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationVerificationReportV02.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MessageIdentification5 originalAssignment;
 	/**
@@ -173,6 +185,14 @@ public class IdentificationVerificationReportV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MessageIdentification5.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationVerificationReportV02.class.getMethod("getOriginalAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<VerificationReport2> report;
@@ -211,6 +231,14 @@ public class IdentificationVerificationReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> VerificationReport2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationVerificationReportV02.class.getMethod("getReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -248,6 +276,14 @@ public class IdentificationVerificationReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationVerificationReportV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -261,8 +297,9 @@ public class IdentificationVerificationReportV02 {
 				rootElement = "Document";
 				xmlTag = "IdVrfctnRpt";
 				businessArea_lazy = () -> AccountManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(IdentificationVerificationReportV02.mmAssignment, IdentificationVerificationReportV02.mmOriginalAssignment, IdentificationVerificationReportV02.mmReport,
-						IdentificationVerificationReportV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationVerificationReportV02.mmAssignment,
+						com.tools20022.repository.area.acmt.IdentificationVerificationReportV02.mmOriginalAssignment, com.tools20022.repository.area.acmt.IdentificationVerificationReportV02.mmReport,
+						com.tools20022.repository.area.acmt.IdentificationVerificationReportV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";
@@ -272,10 +309,16 @@ public class IdentificationVerificationReportV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IdentificationVerificationReportV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public IdentificationAssignment2 getAssignment() {
 		return assignment;
 	}
@@ -284,6 +327,7 @@ public class IdentificationVerificationReportV02 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "OrgnlAssgnmt")
 	public MessageIdentification5 getOriginalAssignment() {
 		return originalAssignment;
 	}
@@ -292,6 +336,7 @@ public class IdentificationVerificationReportV02 {
 		this.originalAssignment = originalAssignment;
 	}
 
+	@XmlElement(name = "Rpt", required = true)
 	public List<VerificationReport2> getReport() {
 		return report;
 	}
@@ -300,11 +345,18 @@ public class IdentificationVerificationReportV02 {
 		this.report = report;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.024.02.02")
+	static public class Document {
+		@XmlElement(name = "IdVrfctnRpt", required = true)
+		public IdentificationVerificationReportV02 messageBody;
 	}
 }

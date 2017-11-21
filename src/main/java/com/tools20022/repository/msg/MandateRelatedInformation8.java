@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.Mandate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details related to a direct debit mandate signed between the
@@ -97,6 +101,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MandateRelatedInformation8", propOrder = {"mandateIdentification", "dateOfSignature", "amendmentIndicator", "amendmentInformationDetails", "electronicSignature", "firstCollectionDate", "finalCollectionDate", "frequency"})
 public class MandateRelatedInformation8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -582,6 +588,7 @@ public class MandateRelatedInformation8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MndtId")
 	public Max35Text getMandateIdentification() {
 		return mandateIdentification;
 	}
@@ -590,6 +597,7 @@ public class MandateRelatedInformation8 {
 		this.mandateIdentification = mandateIdentification;
 	}
 
+	@XmlElement(name = "DtOfSgntr")
 	public ISODate getDateOfSignature() {
 		return dateOfSignature;
 	}
@@ -598,6 +606,7 @@ public class MandateRelatedInformation8 {
 		this.dateOfSignature = dateOfSignature;
 	}
 
+	@XmlElement(name = "AmdmntInd")
 	public TrueFalseIndicator getAmendmentIndicator() {
 		return amendmentIndicator;
 	}
@@ -606,6 +615,7 @@ public class MandateRelatedInformation8 {
 		this.amendmentIndicator = amendmentIndicator;
 	}
 
+	@XmlElement(name = "AmdmntInfDtls")
 	public AmendmentInformationDetails8 getAmendmentInformationDetails() {
 		return amendmentInformationDetails;
 	}
@@ -614,6 +624,7 @@ public class MandateRelatedInformation8 {
 		this.amendmentInformationDetails = amendmentInformationDetails;
 	}
 
+	@XmlElement(name = "ElctrncSgntr")
 	public Max1025Text getElectronicSignature() {
 		return electronicSignature;
 	}
@@ -622,6 +633,7 @@ public class MandateRelatedInformation8 {
 		this.electronicSignature = electronicSignature;
 	}
 
+	@XmlElement(name = "FrstColltnDt")
 	public ISODate getFirstCollectionDate() {
 		return firstCollectionDate;
 	}
@@ -630,6 +642,7 @@ public class MandateRelatedInformation8 {
 		this.firstCollectionDate = firstCollectionDate;
 	}
 
+	@XmlElement(name = "FnlColltnDt")
 	public ISODate getFinalCollectionDate() {
 		return finalCollectionDate;
 	}
@@ -638,6 +651,7 @@ public class MandateRelatedInformation8 {
 		this.finalCollectionDate = finalCollectionDate;
 	}
 
+	@XmlElement(name = "Frqcy")
 	public Frequency6Code getFrequency() {
 		return frequency;
 	}

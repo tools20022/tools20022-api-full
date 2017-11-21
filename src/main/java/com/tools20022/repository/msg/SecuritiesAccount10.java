@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the securities account.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information about the securities account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesAccount10", propOrder = {"creditDebitIndicator", "accountOwnerIdentification", "accountOwnerNationality", "accountIdentification", "balanceType", "securityHoldingForm"})
 public class SecuritiesAccount10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -384,6 +390,7 @@ public class SecuritiesAccount10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -392,6 +399,7 @@ public class SecuritiesAccount10 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "AcctOwnrId")
 	public PartyIdentification2Choice getAccountOwnerIdentification() {
 		return accountOwnerIdentification;
 	}
@@ -400,6 +408,7 @@ public class SecuritiesAccount10 {
 		this.accountOwnerIdentification = accountOwnerIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnrNtlty")
 	public NationalityCode getAccountOwnerNationality() {
 		return accountOwnerNationality;
 	}
@@ -408,6 +417,7 @@ public class SecuritiesAccount10 {
 		this.accountOwnerNationality = accountOwnerNationality;
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -416,6 +426,7 @@ public class SecuritiesAccount10 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "BalTp")
 	public SecuritiesBalanceType9FormatChoice getBalanceType() {
 		return balanceType;
 	}
@@ -424,6 +435,7 @@ public class SecuritiesAccount10 {
 		this.balanceType = balanceType;
 	}
 
+	@XmlElement(name = "SctyHldgForm")
 	public FormOfSecurity1Code getSecurityHoldingForm() {
 		return securityHoldingForm;
 	}

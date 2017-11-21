@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountAndPeriod1;
 import com.tools20022.repository.msg.DateAndAmount1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,6 +35,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountAndPeriod#mmPeriod
+ * AmountAndPeriod.mmPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountAndPeriod#mmAmount
+ * AmountAndPeriod.mmAmount}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -49,15 +59,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.entity.DateTimePeriod#mmAmount
  * DateTimePeriod.mmAmount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AmountAndPeriod#mmPeriod
- * AmountAndPeriod.mmPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AmountAndPeriod#mmAmount
- * AmountAndPeriod.mmAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -114,7 +115,7 @@ public class AmountAndPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AmountAndPeriod.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndPeriod.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Period";
@@ -137,11 +138,6 @@ public class AmountAndPeriod {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AmountAndPeriod
-	 * AmountAndPeriod}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -151,6 +147,11 @@ public class AmountAndPeriod {
 	 * DateAndAmount1.mmAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AmountAndPeriod
+	 * AmountAndPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -165,7 +166,7 @@ public class AmountAndPeriod {
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountAndPeriod1.mmAmount, DateAndAmount1.mmAmount);
-			elementContext_lazy = () -> AmountAndPeriod.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndPeriod.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
@@ -173,6 +174,14 @@ public class AmountAndPeriod {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmountAndPeriod.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -184,8 +193,13 @@ public class AmountAndPeriod {
 				name = "AmountAndPeriod";
 				definition = "Relates an amount to a period of time.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmAmount);
-				element_lazy = () -> Arrays.asList(AmountAndPeriod.mmPeriod, AmountAndPeriod.mmAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AmountAndPeriod.mmPeriod, com.tools20022.repository.entity.AmountAndPeriod.mmAmount);
 				derivationComponent_lazy = () -> Arrays.asList(AmountAndPeriod1.mmObject(), DateAndAmount1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AmountAndPeriod.class;
 			}
 		});
 		return mmObject_lazy.get();

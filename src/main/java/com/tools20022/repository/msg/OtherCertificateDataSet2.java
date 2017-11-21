@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Formal document used to record a fact and used as proof of the fact, in the
@@ -102,6 +106,8 @@ import java.util.List;
  * OtherCertificateDataSet1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherCertificateDataSet2", propOrder = {"dataSetIdentification", "certificateIdentification", "certificateType", "issueDate", "issuer", "certificateInformation"})
 public class OtherCertificateDataSet2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -435,6 +441,7 @@ public class OtherCertificateDataSet2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DataSetId", required = true)
 	public DocumentIdentification1 getDataSetIdentification() {
 		return dataSetIdentification;
 	}
@@ -443,6 +450,7 @@ public class OtherCertificateDataSet2 {
 		this.dataSetIdentification = dataSetIdentification;
 	}
 
+	@XmlElement(name = "CertId", required = true)
 	public Max35Text getCertificateIdentification() {
 		return certificateIdentification;
 	}
@@ -451,6 +459,7 @@ public class OtherCertificateDataSet2 {
 		this.certificateIdentification = certificateIdentification;
 	}
 
+	@XmlElement(name = "CertTp", required = true)
 	public Exact4AlphaNumericText getCertificateType() {
 		return certificateType;
 	}
@@ -459,6 +468,7 @@ public class OtherCertificateDataSet2 {
 		this.certificateType = certificateType;
 	}
 
+	@XmlElement(name = "IsseDt", required = true)
 	public ISODate getIssueDate() {
 		return issueDate;
 	}
@@ -467,6 +477,7 @@ public class OtherCertificateDataSet2 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public PartyIdentification26 getIssuer() {
 		return issuer;
 	}
@@ -475,6 +486,7 @@ public class OtherCertificateDataSet2 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "CertInf")
 	public List<Max350Text> getCertificateInformation() {
 		return certificateInformation;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Charge or commission of the original individual order details that have been
@@ -66,6 +70,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RepairedConditions3", propOrder = {"repairedCharge", "repairedCommission"})
 public class RepairedConditions3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class RepairedConditions3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RprdChrg")
 	public List<Charge19> getRepairedCharge() {
 		return repairedCharge;
 	}
@@ -191,6 +198,7 @@ public class RepairedConditions3 {
 		this.repairedCharge = repairedCharge;
 	}
 
+	@XmlElement(name = "RprdComssn")
 	public List<Commission11> getRepairedCommission() {
 		return repairedCommission;
 	}

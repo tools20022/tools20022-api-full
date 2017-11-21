@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information to log.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ActionMessage2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ActionMessage3", propOrder = {"destination", "format", "content"})
 public class ActionMessage3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -261,6 +267,7 @@ public class ActionMessage3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dstn", required = true)
 	public UserInterface3Code getDestination() {
 		return destination;
 	}
@@ -269,6 +276,7 @@ public class ActionMessage3 {
 		this.destination = destination;
 	}
 
+	@XmlElement(name = "Frmt")
 	public OutputFormat1Code getFormat() {
 		return format;
 	}
@@ -277,6 +285,7 @@ public class ActionMessage3 {
 		this.format = format;
 	}
 
+	@XmlElement(name = "Cntt", required = true)
 	public Max20000Text getContent() {
 		return content;
 	}

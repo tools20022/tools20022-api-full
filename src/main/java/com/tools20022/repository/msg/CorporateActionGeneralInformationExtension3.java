@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action general
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionGeneralInformationExtension3", propOrder = {"placeAndName", "eventType", "subEventType", "transactionCategory", "reasonCode", "DTCReasonCode"})
 public class CorporateActionGeneralInformationExtension3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -366,6 +372,7 @@ public class CorporateActionGeneralInformationExtension3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -374,6 +381,7 @@ public class CorporateActionGeneralInformationExtension3 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "EvtTp")
 	public ExtendedEventType1Code getEventType() {
 		return eventType;
 	}
@@ -382,6 +390,7 @@ public class CorporateActionGeneralInformationExtension3 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "SubEvtTp")
 	public DTCCSubEventType1Code getSubEventType() {
 		return subEventType;
 	}
@@ -390,6 +399,7 @@ public class CorporateActionGeneralInformationExtension3 {
 		this.subEventType = subEventType;
 	}
 
+	@XmlElement(name = "TxCtgy")
 	public CorporateActionTransactionCategory1Code getTransactionCategory() {
 		return transactionCategory;
 	}
@@ -398,6 +408,7 @@ public class CorporateActionGeneralInformationExtension3 {
 		this.transactionCategory = transactionCategory;
 	}
 
+	@XmlElement(name = "RsnCd")
 	public Max4AlphaNumericText getReasonCode() {
 		return reasonCode;
 	}
@@ -406,6 +417,7 @@ public class CorporateActionGeneralInformationExtension3 {
 		this.reasonCode = reasonCode;
 	}
 
+	@XmlElement(name = "DTCRsnCd")
 	public Exact5NumericText getDTCReasonCode() {
 		return dTCReasonCode;
 	}

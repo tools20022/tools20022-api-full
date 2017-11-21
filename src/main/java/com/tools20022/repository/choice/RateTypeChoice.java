@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Rate is expressed as a percentage or a text.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Rate is expressed as a percentage or a text."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RateTypeChoice", propOrder = {"percentageRate", "textualRate"})
 public class RateTypeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class RateTypeChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PctgRate", required = true)
 	public PercentageRate getPercentageRate() {
 		return percentageRate;
 	}
@@ -188,6 +195,7 @@ public class RateTypeChoice {
 		this.percentageRate = percentageRate;
 	}
 
+	@XmlElement(name = "TxtlRate", required = true)
 	public Max35Text getTextualRate() {
 		return textualRate;
 	}

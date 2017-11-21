@@ -25,8 +25,10 @@ import com.tools20022.repository.area.SecuritiesTradeArchive;
 import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.SwitchOrderInstruction1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -53,9 +55,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.014.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradeArchive
@@ -91,6 +90,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.014.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -110,6 +112,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "setr.014.001.02", propOrder = {"masterReference", "poolReference", "previousReference", "orderToBeCancelled"})
 public class SwitchOrderCancellationInstructionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -150,6 +154,14 @@ public class SwitchOrderCancellationInstructionV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderCancellationInstructionV02.class.getMethod("getMasterReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -185,6 +197,14 @@ public class SwitchOrderCancellationInstructionV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderCancellationInstructionV02.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 previousReference;
 	/**
@@ -219,6 +239,14 @@ public class SwitchOrderCancellationInstructionV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderCancellationInstructionV02.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SwitchOrderInstruction1 orderToBeCancelled;
@@ -256,6 +284,14 @@ public class SwitchOrderCancellationInstructionV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SwitchOrderInstruction1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderCancellationInstructionV02.class.getMethod("getOrderToBeCancelled", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -270,8 +306,9 @@ public class SwitchOrderCancellationInstructionV02 {
 				xmlTag = "setr.014.001.02";
 				businessArea_lazy = () -> SecuritiesTradeArchive.mmObject();
 				xmlName = "setr.014.001.02";
-				messageBuildingBlock_lazy = () -> Arrays.asList(SwitchOrderCancellationInstructionV02.mmMasterReference, SwitchOrderCancellationInstructionV02.mmPoolReference, SwitchOrderCancellationInstructionV02.mmPreviousReference,
-						SwitchOrderCancellationInstructionV02.mmOrderToBeCancelled);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02.mmMasterReference,
+						com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02.mmPoolReference, com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02.mmOrderToBeCancelled);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -281,10 +318,16 @@ public class SwitchOrderCancellationInstructionV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SwitchOrderCancellationInstructionV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public AdditionalReference3 getMasterReference() {
 		return masterReference;
 	}
@@ -293,6 +336,7 @@ public class SwitchOrderCancellationInstructionV02 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -301,6 +345,7 @@ public class SwitchOrderCancellationInstructionV02 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -309,11 +354,18 @@ public class SwitchOrderCancellationInstructionV02 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "OrdrToBeCanc")
 	public SwitchOrderInstruction1 getOrderToBeCancelled() {
 		return orderToBeCancelled;
 	}
 
 	public void setOrderToBeCancelled(SwitchOrderInstruction1 orderToBeCancelled) {
 		this.orderToBeCancelled = orderToBeCancelled;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.014.02.02")
+	static public class Document {
+		@XmlElement(name = "setr.014.001.02", required = true)
+		public SwitchOrderCancellationInstructionV02 messageBody;
 	}
 }

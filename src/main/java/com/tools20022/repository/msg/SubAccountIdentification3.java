@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account to or from which a securities entry is made.
@@ -82,6 +86,8 @@ import java.util.List;
  * definition} = "Account to or from which a securities entry is made."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubAccountIdentification3", propOrder = {"identification", "fungibleIndicator", "activityIndicator", "balanceForSubAccount"})
 public class SubAccountIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -297,6 +303,7 @@ public class SubAccountIdentification3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentificationFormatChoice getIdentification() {
 		return identification;
 	}
@@ -305,6 +312,7 @@ public class SubAccountIdentification3 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "FngbInd", required = true)
 	public YesNoIndicator getFungibleIndicator() {
 		return fungibleIndicator;
 	}
@@ -313,6 +321,7 @@ public class SubAccountIdentification3 {
 		this.fungibleIndicator = fungibleIndicator;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
@@ -321,6 +330,7 @@ public class SubAccountIdentification3 {
 		this.activityIndicator = activityIndicator;
 	}
 
+	@XmlElement(name = "BalForSubAcct")
 	public List<AggregateBalanceInformation3> getBalanceForSubAccount() {
 		return balanceForSubAccount;
 	}

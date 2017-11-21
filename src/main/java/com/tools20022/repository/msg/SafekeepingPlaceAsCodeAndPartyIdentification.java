@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of the place of safekeeping expressed as a code and a BIC.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Identification of the place of safekeeping expressed as a code and a BIC."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SafekeepingPlaceAsCodeAndPartyIdentification", propOrder = {"placeSafekeeping", "narrative", "party"})
 public class SafekeepingPlaceAsCodeAndPartyIdentification {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -216,6 +222,7 @@ public class SafekeepingPlaceAsCodeAndPartyIdentification {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcSfkpg", required = true)
 	public SafekeepingPlace1Code getPlaceSafekeeping() {
 		return placeSafekeeping;
 	}
@@ -224,6 +231,7 @@ public class SafekeepingPlaceAsCodeAndPartyIdentification {
 		this.placeSafekeeping = placeSafekeeping;
 	}
 
+	@XmlElement(name = "Nrrtv")
 	public Max35Text getNarrative() {
 		return narrative;
 	}
@@ -232,6 +240,7 @@ public class SafekeepingPlaceAsCodeAndPartyIdentification {
 		this.narrative = narrative;
 	}
 
+	@XmlElement(name = "Pty")
 	public PartyIdentification3 getParty() {
 		return party;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SettlementInstructionSystemRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details on the settlement of the instruction.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides further details on the settlement of the instruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementInstruction2", propOrder = {"settlementMethod", "settlementAccount", "clearingSystem"})
 public class SettlementInstruction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -236,6 +242,7 @@ public class SettlementInstruction2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmMtd", required = true)
 	public SettlementMethod2Code getSettlementMethod() {
 		return settlementMethod;
 	}
@@ -244,6 +251,7 @@ public class SettlementInstruction2 {
 		this.settlementMethod = settlementMethod;
 	}
 
+	@XmlElement(name = "SttlmAcct")
 	public CashAccount24 getSettlementAccount() {
 		return settlementAccount;
 	}
@@ -252,6 +260,7 @@ public class SettlementInstruction2 {
 		this.settlementAccount = settlementAccount;
 	}
 
+	@XmlElement(name = "ClrSys")
 	public ClearingSystemIdentification3Choice getClearingSystem() {
 		return clearingSystem;
 	}

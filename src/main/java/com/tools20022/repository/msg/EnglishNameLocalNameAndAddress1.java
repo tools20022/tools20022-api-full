@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Name and address details.
@@ -63,6 +67,8 @@ import java.util.List;
  * definition} = "Name and address details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EnglishNameLocalNameAndAddress1", propOrder = {"englishName", "nameAndAddress", "longAddressLine"})
 public class EnglishNameLocalNameAndAddress1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -206,6 +212,7 @@ public class EnglishNameLocalNameAndAddress1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EnNm")
 	public Max210Text getEnglishName() {
 		return englishName;
 	}
@@ -214,6 +221,7 @@ public class EnglishNameLocalNameAndAddress1 {
 		this.englishName = englishName;
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public PartyIdentification77 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -222,6 +230,7 @@ public class EnglishNameLocalNameAndAddress1 {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "LngAdrLine")
 	public List<Max256Text> getLongAddressLine() {
 		return longAddressLine;
 	}

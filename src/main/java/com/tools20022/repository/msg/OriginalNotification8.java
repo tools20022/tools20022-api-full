@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the original notification, to which the cancellation advice
@@ -99,6 +103,8 @@ import java.util.List;
  * OriginalNotification6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalNotification8", propOrder = {"originalMessageIdentification", "originalCreationDateTime", "originalNotificationIdentification", "notificationCancellation", "originalNotificationReference"})
 public class OriginalNotification8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -423,6 +429,7 @@ public class OriginalNotification8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMsgId", required = true)
 	public Max35Text getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}
@@ -431,6 +438,7 @@ public class OriginalNotification8 {
 		this.originalMessageIdentification = originalMessageIdentification;
 	}
 
+	@XmlElement(name = "OrgnlCreDtTm")
 	public ISODateTime getOriginalCreationDateTime() {
 		return originalCreationDateTime;
 	}
@@ -439,6 +447,7 @@ public class OriginalNotification8 {
 		this.originalCreationDateTime = originalCreationDateTime;
 	}
 
+	@XmlElement(name = "OrgnlNtfctnId", required = true)
 	public Max35Text getOriginalNotificationIdentification() {
 		return originalNotificationIdentification;
 	}
@@ -447,6 +456,7 @@ public class OriginalNotification8 {
 		this.originalNotificationIdentification = originalNotificationIdentification;
 	}
 
+	@XmlElement(name = "NtfctnCxl")
 	public GroupCancellationIndicator getNotificationCancellation() {
 		return notificationCancellation;
 	}
@@ -455,6 +465,7 @@ public class OriginalNotification8 {
 		this.notificationCancellation = notificationCancellation;
 	}
 
+	@XmlElement(name = "OrgnlNtfctnRef")
 	public List<OriginalNotificationReference6> getOriginalNotificationReference() {
 		return originalNotificationReference;
 	}

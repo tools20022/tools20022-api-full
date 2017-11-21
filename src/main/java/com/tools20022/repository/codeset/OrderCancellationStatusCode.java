@@ -29,17 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus1Code
- * OrderCancellationStatus1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus2Code
- * OrderCancellationStatus2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -54,6 +43,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatusCode#mmReceived
  * OrderCancellationStatusCode.mmReceived}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus1Code
+ * OrderCancellationStatus1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus2Code
+ * OrderCancellationStatus2Code}</li>
  * </ul>
  * </li>
  * <li>

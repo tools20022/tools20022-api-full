@@ -27,8 +27,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.RequestDetails19;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The Processing Request message is sent by a participant to a central system
@@ -36,9 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code admi.017.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AdministrationLatestVersion
@@ -74,6 +73,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code admi.017.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -85,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProcessingRequestV01", propOrder = {"messageIdentification", "settlementSessionIdentifier", "request"})
 public class ProcessingRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -124,6 +128,14 @@ public class ProcessingRequestV01 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProcessingRequestV01.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
@@ -162,6 +174,14 @@ public class ProcessingRequestV01 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProcessingRequestV01.class.getMethod("getSettlementSessionIdentifier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected RequestDetails19 request;
 	/**
@@ -197,6 +217,14 @@ public class ProcessingRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> RequestDetails19.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProcessingRequestV01.class.getMethod("getRequest", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -209,7 +237,8 @@ public class ProcessingRequestV01 {
 				rootElement = "Document";
 				xmlTag = "PrcgReq";
 				businessArea_lazy = () -> AdministrationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ProcessingRequestV01.mmMessageIdentification, ProcessingRequestV01.mmSettlementSessionIdentifier, ProcessingRequestV01.mmRequest);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.ProcessingRequestV01.mmMessageIdentification, com.tools20022.repository.area.admi.ProcessingRequestV01.mmSettlementSessionIdentifier,
+						com.tools20022.repository.area.admi.ProcessingRequestV01.mmRequest);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "admi";
@@ -219,10 +248,16 @@ public class ProcessingRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ProcessingRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -231,6 +266,7 @@ public class ProcessingRequestV01 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "SttlmSsnIdr")
 	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
 		return settlementSessionIdentifier;
 	}
@@ -239,11 +275,18 @@ public class ProcessingRequestV01 {
 		this.settlementSessionIdentifier = settlementSessionIdentifier;
 	}
 
+	@XmlElement(name = "Req", required = true)
 	public RequestDetails19 getRequest() {
 		return request;
 	}
 
 	public void setRequest(RequestDetails19 request) {
 		this.request = request;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:admi.017.01.01")
+	static public class Document {
+		@XmlElement(name = "PrcgReq", required = true)
+		public ProcessingRequestV01 messageBody;
 	}
 }

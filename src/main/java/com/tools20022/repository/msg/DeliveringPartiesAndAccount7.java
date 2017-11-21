@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesSettlementSystem;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Chain of parties involved in the settlement of a transaction, including
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DeliveringPartiesAndAccount7", propOrder = {"depository", "party1", "party2", "securitiesSettlementSystem"})
 public class DeliveringPartiesAndAccount7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -348,6 +354,7 @@ public class DeliveringPartiesAndAccount7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dpstry", required = true)
 	public PartyIdentification34Choice getDepository() {
 		return depository;
 	}
@@ -356,6 +363,7 @@ public class DeliveringPartiesAndAccount7 {
 		this.depository = depository;
 	}
 
+	@XmlElement(name = "Pty1", required = true)
 	public PartyIdentificationAndAccount32 getParty1() {
 		return party1;
 	}
@@ -364,6 +372,7 @@ public class DeliveringPartiesAndAccount7 {
 		this.party1 = party1;
 	}
 
+	@XmlElement(name = "Pty2")
 	public PartyIdentificationAndAccount32 getParty2() {
 		return party2;
 	}
@@ -372,6 +381,7 @@ public class DeliveringPartiesAndAccount7 {
 		this.party2 = party2;
 	}
 
+	@XmlElement(name = "SctiesSttlmSys")
 	public Max35Text getSecuritiesSettlementSystem() {
 		return securitiesSettlementSystem;
 	}

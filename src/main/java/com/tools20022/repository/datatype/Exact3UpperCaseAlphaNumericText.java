@@ -28,6 +28,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[A-Z0-9]{3}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -56,6 +58,7 @@ public class Exact3UpperCaseAlphaNumericText {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Exact3UpperCaseAlphaNumericText";
 				definition = "Specifies an upper case alphanumeric string with a length of three characters.";
+				pattern = "[A-Z0-9]{3}";
 			}
 		});
 		return mmObject_lazy.get();

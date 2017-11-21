@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a switch leg that is rejected or repaired.
@@ -77,6 +81,8 @@ import java.util.List;
  * SwitchLegReferences1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwitchLegReferences2", propOrder = {"legIdentification", "legRejectionReason", "repairedFee", "investmentAccountDetails", "financialInstrumentDetails"})
 public class SwitchLegReferences2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -357,6 +363,7 @@ public class SwitchLegReferences2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LegId", required = true)
 	public LegIdentification1Choice getLegIdentification() {
 		return legIdentification;
 	}
@@ -365,6 +372,7 @@ public class SwitchLegReferences2 {
 		this.legIdentification = legIdentification;
 	}
 
+	@XmlElement(name = "LegRjctnRsn")
 	public Max350Text getLegRejectionReason() {
 		return legRejectionReason;
 	}
@@ -373,6 +381,7 @@ public class SwitchLegReferences2 {
 		this.legRejectionReason = legRejectionReason;
 	}
 
+	@XmlElement(name = "RprdFee")
 	public List<Fee3> getRepairedFee() {
 		return repairedFee;
 	}
@@ -381,6 +390,7 @@ public class SwitchLegReferences2 {
 		this.repairedFee = repairedFee;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount58 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -389,6 +399,7 @@ public class SwitchLegReferences2 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "FinInstrmDtls")
 	public FinancialInstrument57 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}

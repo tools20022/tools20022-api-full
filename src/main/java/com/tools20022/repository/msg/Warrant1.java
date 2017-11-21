@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Warrant;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Financial instrument that gives the holder the right to purchase shares or
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Warrant1", propOrder = {"expiryDate", "multiplier", "subscriptionPrice"})
 public class Warrant1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -226,6 +232,7 @@ public class Warrant1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XpryDt")
 	public ISODateTime getExpiryDate() {
 		return expiryDate;
 	}
@@ -234,6 +241,7 @@ public class Warrant1 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "Mltplr")
 	public BaseOneRate getMultiplier() {
 		return multiplier;
 	}
@@ -242,6 +250,7 @@ public class Warrant1 {
 		this.multiplier = multiplier;
 	}
 
+	@XmlElement(name = "SbcptPric")
 	public Price1 getSubscriptionPrice() {
 		return subscriptionPrice;
 	}

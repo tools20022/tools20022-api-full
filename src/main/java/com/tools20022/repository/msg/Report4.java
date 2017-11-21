@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General characteristics of the report.
@@ -92,6 +96,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "General characteristics of the report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Report4", propOrder = {"reportNumber", "queryReference", "reportIdentification", "reportDateTime", "creationDateTime", "previousReportDateTime", "frequency", "updateType", "reportBasis", "reportPeriod", "reportSource",
+		"auditedIndicator", "activityIndicator"})
 public class Report4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -656,6 +663,7 @@ public class Report4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptNb")
 	public Max5NumericText getReportNumber() {
 		return reportNumber;
 	}
@@ -664,6 +672,7 @@ public class Report4 {
 		this.reportNumber = reportNumber;
 	}
 
+	@XmlElement(name = "QryRef")
 	public Max35Text getQueryReference() {
 		return queryReference;
 	}
@@ -672,6 +681,7 @@ public class Report4 {
 		this.queryReference = queryReference;
 	}
 
+	@XmlElement(name = "RptId")
 	public Max35Text getReportIdentification() {
 		return reportIdentification;
 	}
@@ -680,6 +690,7 @@ public class Report4 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "RptDtTm", required = true)
 	public DateAndDateTimeChoice getReportDateTime() {
 		return reportDateTime;
 	}
@@ -688,6 +699,7 @@ public class Report4 {
 		this.reportDateTime = reportDateTime;
 	}
 
+	@XmlElement(name = "CreDtTm")
 	public DateAndDateTimeChoice getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -696,6 +708,7 @@ public class Report4 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "PrvsRptDtTm")
 	public DateAndDateTimeChoice getPreviousReportDateTime() {
 		return previousReportDateTime;
 	}
@@ -704,6 +717,7 @@ public class Report4 {
 		this.previousReportDateTime = previousReportDateTime;
 	}
 
+	@XmlElement(name = "Frqcy", required = true)
 	public Frequency8Choice getFrequency() {
 		return frequency;
 	}
@@ -712,6 +726,7 @@ public class Report4 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "UpdTp", required = true)
 	public UpdateType4Choice getUpdateType() {
 		return updateType;
 	}
@@ -720,6 +735,7 @@ public class Report4 {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "RptBsis", required = true)
 	public StatementBasis6Choice getReportBasis() {
 		return reportBasis;
 	}
@@ -728,6 +744,7 @@ public class Report4 {
 		this.reportBasis = reportBasis;
 	}
 
+	@XmlElement(name = "RptPrd")
 	public DatePeriodDetails getReportPeriod() {
 		return reportPeriod;
 	}
@@ -736,6 +753,7 @@ public class Report4 {
 		this.reportPeriod = reportPeriod;
 	}
 
+	@XmlElement(name = "RptSrc")
 	public StatementSource1Choice getReportSource() {
 		return reportSource;
 	}
@@ -744,6 +762,7 @@ public class Report4 {
 		this.reportSource = reportSource;
 	}
 
+	@XmlElement(name = "AudtdInd")
 	public YesNoIndicator getAuditedIndicator() {
 		return auditedIndicator;
 	}
@@ -752,6 +771,7 @@ public class Report4 {
 		this.auditedIndicator = auditedIndicator;
 	}
 
+	@XmlElement(name = "ActvtyInd")
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}

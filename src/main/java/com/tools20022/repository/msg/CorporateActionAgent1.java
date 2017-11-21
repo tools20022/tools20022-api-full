@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the agent.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information about the agent."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionAgent1", propOrder = {"agentIdentification", "agentRole", "contactPerson"})
 public class CorporateActionAgent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -227,6 +233,7 @@ public class CorporateActionAgent1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AgtId", required = true)
 	public PartyIdentification2Choice getAgentIdentification() {
 		return agentIdentification;
 	}
@@ -235,6 +242,7 @@ public class CorporateActionAgent1 {
 		this.agentIdentification = agentIdentification;
 	}
 
+	@XmlElement(name = "AgtRole", required = true)
 	public AgentRole1FormatChoice getAgentRole() {
 		return agentRole;
 	}
@@ -243,6 +251,7 @@ public class CorporateActionAgent1 {
 		this.agentRole = agentRole;
 	}
 
+	@XmlElement(name = "CtctPrsn")
 	public NameAndAddress5 getContactPerson() {
 		return contactPerson;
 	}

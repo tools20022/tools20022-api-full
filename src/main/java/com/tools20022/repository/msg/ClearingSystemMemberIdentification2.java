@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique identification, as assigned by a clearing system, to unambiguously
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClearingSystemMemberIdentification2", propOrder = {"clearingSystemIdentification", "memberIdentification"})
 public class ClearingSystemMemberIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class ClearingSystemMemberIdentification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClrSysId")
 	public ClearingSystemIdentification2Choice getClearingSystemIdentification() {
 		return clearingSystemIdentification;
 	}
@@ -193,6 +200,7 @@ public class ClearingSystemMemberIdentification2 {
 		this.clearingSystemIdentification = clearingSystemIdentification;
 	}
 
+	@XmlElement(name = "MmbId", required = true)
 	public Max35Text getMemberIdentification() {
 		return memberIdentification;
 	}

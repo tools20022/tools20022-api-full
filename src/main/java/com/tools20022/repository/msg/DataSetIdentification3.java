@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a data set.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * DataSetIdentification2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DataSetIdentification3", propOrder = {"name", "type", "version", "creationDateTime"})
 public class DataSetIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -294,6 +300,7 @@ public class DataSetIdentification3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max256Text getName() {
 		return name;
 	}
@@ -302,6 +309,7 @@ public class DataSetIdentification3 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public DataSetCategory3Code getType() {
 		return type;
 	}
@@ -310,6 +318,7 @@ public class DataSetIdentification3 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Max256Text getVersion() {
 		return version;
 	}
@@ -318,6 +327,7 @@ public class DataSetIdentification3 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "CreDtTm")
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}

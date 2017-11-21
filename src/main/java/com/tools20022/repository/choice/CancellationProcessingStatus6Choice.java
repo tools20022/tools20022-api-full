@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.ProprietaryReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of status for the cancellation processing.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of status for the cancellation processing."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancellationProcessingStatus6Choice", propOrder = {"cancellationPending", "cancellationRequested", "cancellationCompleted", "proprietaryStatus"})
 public class CancellationProcessingStatus6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -295,6 +301,7 @@ public class CancellationProcessingStatus6Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlPdg", required = true)
 	public CancellationReason11Choice getCancellationPending() {
 		return cancellationPending;
 	}
@@ -303,6 +310,7 @@ public class CancellationProcessingStatus6Choice {
 		this.cancellationPending = cancellationPending;
 	}
 
+	@XmlElement(name = "CxlReqd", required = true)
 	public ProprietaryReason1 getCancellationRequested() {
 		return cancellationRequested;
 	}
@@ -311,6 +319,7 @@ public class CancellationProcessingStatus6Choice {
 		this.cancellationRequested = cancellationRequested;
 	}
 
+	@XmlElement(name = "CxlCmpltd", required = true)
 	public ProprietaryReason1 getCancellationCompleted() {
 		return cancellationCompleted;
 	}
@@ -319,6 +328,7 @@ public class CancellationProcessingStatus6Choice {
 		this.cancellationCompleted = cancellationCompleted;
 	}
 
+	@XmlElement(name = "PrtrySts")
 	public ProprietaryStatusAndReason1 getProprietaryStatus() {
 		return proprietaryStatus;
 	}

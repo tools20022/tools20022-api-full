@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account to or from which a cash entry is made.
@@ -77,6 +81,8 @@ import java.util.function.Supplier;
  * definition} = "Account to or from which a cash entry is made."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccount22", propOrder = {"currency", "servicer", "identification", "secondaryAccount", "accountTypeDescription"})
 public class CashAccount22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -346,6 +352,7 @@ public class CashAccount22 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -354,6 +361,7 @@ public class CashAccount22 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Svcr", required = true)
 	public BICIdentifier getServicer() {
 		return servicer;
 	}
@@ -362,6 +370,7 @@ public class CashAccount22 {
 		this.servicer = servicer;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentification5Choice getIdentification() {
 		return identification;
 	}
@@ -370,6 +379,7 @@ public class CashAccount22 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "ScndryAcct")
 	public CashAccount21 getSecondaryAccount() {
 		return secondaryAccount;
 	}
@@ -378,6 +388,7 @@ public class CashAccount22 {
 		this.secondaryAccount = secondaryAccount;
 	}
 
+	@XmlElement(name = "AcctTpDesc", required = true)
 	public Max35Text getAccountTypeDescription() {
 		return accountTypeDescription;
 	}

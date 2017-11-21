@@ -27,6 +27,10 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the market and purpose for the settlement.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the market and purpose for the settlement. "</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarketIdentification87", propOrder = {"country", "classificationType", "settlementPurpose"})
 public class MarketIdentification87 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -209,6 +215,7 @@ public class MarketIdentification87 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -217,6 +224,7 @@ public class MarketIdentification87 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "ClssfctnTp", required = true)
 	public ClassificationType1Choice getClassificationType() {
 		return classificationType;
 	}
@@ -225,6 +233,7 @@ public class MarketIdentification87 {
 		this.classificationType = classificationType;
 	}
 
+	@XmlElement(name = "SttlmPurp")
 	public Purpose3Choice getSettlementPurpose() {
 		return settlementPurpose;
 	}

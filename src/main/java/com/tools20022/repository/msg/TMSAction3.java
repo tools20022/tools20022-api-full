@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Single terminal management action to be performed by the point of
@@ -97,6 +101,8 @@ import java.util.List;
  * TMSAction2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TMSAction3", propOrder = {"type", "address", "dataSetIdentification", "trigger", "additionalProcess", "reTry", "timeCondition", "TMChallenge", "keyEnciphermentCertificate", "errorAction"})
 public class TMSAction3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -693,6 +699,7 @@ public class TMSAction3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TerminalManagementAction1Code getType() {
 		return type;
 	}
@@ -701,6 +708,7 @@ public class TMSAction3 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Adr")
 	public NetworkParameters1 getAddress() {
 		return address;
 	}
@@ -709,6 +717,7 @@ public class TMSAction3 {
 		this.address = address;
 	}
 
+	@XmlElement(name = "DataSetId")
 	public DataSetIdentification3 getDataSetIdentification() {
 		return dataSetIdentification;
 	}
@@ -717,6 +726,7 @@ public class TMSAction3 {
 		this.dataSetIdentification = dataSetIdentification;
 	}
 
+	@XmlElement(name = "Trggr", required = true)
 	public TerminalManagementActionTrigger1Code getTrigger() {
 		return trigger;
 	}
@@ -725,6 +735,7 @@ public class TMSAction3 {
 		this.trigger = trigger;
 	}
 
+	@XmlElement(name = "AddtlPrc")
 	public List<TerminalManagementAdditionalProcess1Code> getAdditionalProcess() {
 		return additionalProcess;
 	}
@@ -733,6 +744,7 @@ public class TMSAction3 {
 		this.additionalProcess = additionalProcess;
 	}
 
+	@XmlElement(name = "ReTry")
 	public ProcessRetry2 getReTry() {
 		return reTry;
 	}
@@ -741,6 +753,7 @@ public class TMSAction3 {
 		this.reTry = reTry;
 	}
 
+	@XmlElement(name = "TmCond")
 	public ProcessTiming3 getTimeCondition() {
 		return timeCondition;
 	}
@@ -749,6 +762,7 @@ public class TMSAction3 {
 		this.timeCondition = timeCondition;
 	}
 
+	@XmlElement(name = "TMChllng")
 	public Max140Binary getTMChallenge() {
 		return tMChallenge;
 	}
@@ -757,6 +771,7 @@ public class TMSAction3 {
 		this.tMChallenge = tMChallenge;
 	}
 
+	@XmlElement(name = "KeyNcphrmntCert")
 	public List<Max10KBinary> getKeyEnciphermentCertificate() {
 		return keyEnciphermentCertificate;
 	}
@@ -765,6 +780,7 @@ public class TMSAction3 {
 		this.keyEnciphermentCertificate = keyEnciphermentCertificate;
 	}
 
+	@XmlElement(name = "ErrActn")
 	public List<ErrorAction2> getErrorAction() {
 		return errorAction;
 	}

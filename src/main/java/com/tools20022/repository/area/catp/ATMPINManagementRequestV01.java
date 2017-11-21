@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header20;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The ATMPINManagementRequest message is sent by an ATM to an ATM manager to
@@ -36,9 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catp.010.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
@@ -74,6 +73,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catp.010.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -93,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMPINManagementRequestV01", propOrder = {"header", "protectedATMPINManagementRequest", "ATMPINManagementRequest", "securityTrailer"})
 public class ATMPINManagementRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -132,6 +136,14 @@ public class ATMPINManagementRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header20.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMPINManagementRequestV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType10 protectedATMPINManagementRequest;
 	/**
@@ -166,6 +178,14 @@ public class ATMPINManagementRequestV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMPINManagementRequestV01.class.getMethod("getProtectedATMPINManagementRequest", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ATMPINManagementRequest1 aTMPINManagementRequest;
@@ -203,6 +223,14 @@ public class ATMPINManagementRequestV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ATMPINManagementRequest1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMPINManagementRequestV01.class.getMethod("getATMPINManagementRequest", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType15 securityTrailer;
 	/**
@@ -238,6 +266,14 @@ public class ATMPINManagementRequestV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMPINManagementRequestV01.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -251,8 +287,8 @@ public class ATMPINManagementRequestV01 {
 				rootElement = "Document";
 				xmlTag = "ATMPINMgmtReq";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ATMPINManagementRequestV01.mmHeader, ATMPINManagementRequestV01.mmProtectedATMPINManagementRequest, ATMPINManagementRequestV01.mmATMPINManagementRequest,
-						ATMPINManagementRequestV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMPINManagementRequestV01.mmHeader, com.tools20022.repository.area.catp.ATMPINManagementRequestV01.mmProtectedATMPINManagementRequest,
+						com.tools20022.repository.area.catp.ATMPINManagementRequestV01.mmATMPINManagementRequest, com.tools20022.repository.area.catp.ATMPINManagementRequestV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catp";
@@ -262,10 +298,16 @@ public class ATMPINManagementRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ATMPINManagementRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header20 getHeader() {
 		return header;
 	}
@@ -274,6 +316,7 @@ public class ATMPINManagementRequestV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "PrtctdATMPINMgmtReq")
 	public ContentInformationType10 getProtectedATMPINManagementRequest() {
 		return protectedATMPINManagementRequest;
 	}
@@ -282,6 +325,7 @@ public class ATMPINManagementRequestV01 {
 		this.protectedATMPINManagementRequest = protectedATMPINManagementRequest;
 	}
 
+	@XmlElement(name = "ATMPINMgmtReq")
 	public ATMPINManagementRequest1 getATMPINManagementRequest() {
 		return aTMPINManagementRequest;
 	}
@@ -290,11 +334,18 @@ public class ATMPINManagementRequestV01 {
 		this.aTMPINManagementRequest = aTMPINManagementRequest;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType15 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catp.010.01.01")
+	static public class Document {
+		@XmlElement(name = "ATMPINMgmtReq", required = true)
+		public ATMPINManagementRequestV01 messageBody;
 	}
 }

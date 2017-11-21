@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the members of a system.
@@ -72,6 +76,8 @@ import java.util.List;
  * definition} = "Information about the members of a system."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Member1", propOrder = {"name", "returnAddress", "account", "type", "status", "contactReference", "communicationAddress"})
 public class Member1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -421,6 +427,7 @@ public class Member1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max35Text getName() {
 		return name;
 	}
@@ -429,6 +436,7 @@ public class Member1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "RtrAdr")
 	public List<MemberIdentification2Choice> getReturnAddress() {
 		return returnAddress;
 	}
@@ -437,6 +445,7 @@ public class Member1 {
 		this.returnAddress = returnAddress;
 	}
 
+	@XmlElement(name = "Acct")
 	public List<CashAccount24> getAccount() {
 		return account;
 	}
@@ -445,6 +454,7 @@ public class Member1 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "Tp")
 	public MemberType1Code getType() {
 		return type;
 	}
@@ -453,6 +463,7 @@ public class Member1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Sts")
 	public MemberStatus1Code getStatus() {
 		return status;
 	}
@@ -461,6 +472,7 @@ public class Member1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "CtctRef")
 	public List<ContactIdentificationAndAddress> getContactReference() {
 		return contactReference;
 	}
@@ -469,6 +481,7 @@ public class Member1 {
 		this.contactReference = contactReference;
 	}
 
+	@XmlElement(name = "ComAdr")
 	public CommunicationAddressDetails getCommunicationAddress() {
 		return communicationAddress;
 	}

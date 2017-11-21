@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the control of an ATM device.
@@ -70,6 +74,8 @@ import java.util.List;
  * definition} = "Information related to the control of an ATM device."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMDeviceControl1", propOrder = {"environment", "command"})
 public class ATMDeviceControl1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -169,6 +175,7 @@ public class ATMDeviceControl1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public ATMEnvironment7 getEnvironment() {
 		return environment;
 	}
@@ -177,6 +184,7 @@ public class ATMDeviceControl1 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Cmd")
 	public List<ATMCommand4> getCommand() {
 		return command;
 	}

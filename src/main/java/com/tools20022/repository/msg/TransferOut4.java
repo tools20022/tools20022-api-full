@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the transfer to be cancelled.
@@ -73,6 +77,8 @@ import java.util.List;
  * definition} = "Information about the transfer to be cancelled."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferOut4", propOrder = {"investor", "investorAddress", "clientAccount", "cashAccount", "newPlanManager", "productTransfer", "extension"})
 public class TransferOut4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -414,6 +420,7 @@ public class TransferOut4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Invstr", required = true)
 	public IndividualPerson3 getInvestor() {
 		return investor;
 	}
@@ -422,6 +429,7 @@ public class TransferOut4 {
 		this.investor = investor;
 	}
 
+	@XmlElement(name = "InvstrAdr", required = true)
 	public PostalAddress1 getInvestorAddress() {
 		return investorAddress;
 	}
@@ -430,6 +438,7 @@ public class TransferOut4 {
 		this.investorAddress = investorAddress;
 	}
 
+	@XmlElement(name = "ClntAcct", required = true)
 	public Account4 getClientAccount() {
 		return clientAccount;
 	}
@@ -438,6 +447,7 @@ public class TransferOut4 {
 		this.clientAccount = clientAccount;
 	}
 
+	@XmlElement(name = "CshAcct", required = true)
 	public CashAccount6 getCashAccount() {
 		return cashAccount;
 	}
@@ -446,6 +456,7 @@ public class TransferOut4 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "NewPlanMgr", required = true)
 	public PartyIdentification2Choice getNewPlanManager() {
 		return newPlanManager;
 	}
@@ -454,6 +465,7 @@ public class TransferOut4 {
 		this.newPlanManager = newPlanManager;
 	}
 
+	@XmlElement(name = "PdctTrf")
 	public List<PEPISACashTransfer1> getProductTransfer() {
 		return productTransfer;
 	}
@@ -462,6 +474,7 @@ public class TransferOut4 {
 		this.productTransfer = productTransfer;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

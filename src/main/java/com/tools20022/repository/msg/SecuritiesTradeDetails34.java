@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the securities trade.
@@ -136,6 +140,10 @@ import java.util.List;
  * SecuritiesTradeDetails26}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTradeDetails34", propOrder = {"tradeIdentification", "collateralTransactionIdentification", "placeOfTrade", "placeOfClearing", "tradeDate", "settlementDate", "lateDeliveryDate", "dealPrice",
+		"numberOfDaysAccrued", "openingClosing", "reporting", "tradeTransactionCondition", "investorCapacity", "tradeOriginatorRole", "typeOfPrice", "currencyToBuyOrSell", "matchingStatus", "affirmationStatus", "FXAdditionalDetails",
+		"settlementInstructionProcessingAdditionalDetails"})
 public class SecuritiesTradeDetails34 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1440,6 +1448,7 @@ public class SecuritiesTradeDetails34 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradId")
 	public List<Max35Text> getTradeIdentification() {
 		return tradeIdentification;
 	}
@@ -1448,6 +1457,7 @@ public class SecuritiesTradeDetails34 {
 		this.tradeIdentification = tradeIdentification;
 	}
 
+	@XmlElement(name = "CollTxId")
 	public List<Max35Text> getCollateralTransactionIdentification() {
 		return collateralTransactionIdentification;
 	}
@@ -1456,6 +1466,7 @@ public class SecuritiesTradeDetails34 {
 		this.collateralTransactionIdentification = collateralTransactionIdentification;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public MarketIdentification78 getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -1464,6 +1475,7 @@ public class SecuritiesTradeDetails34 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "PlcOfClr")
 	public AnyBICIdentifier getPlaceOfClearing() {
 		return placeOfClearing;
 	}
@@ -1472,6 +1484,7 @@ public class SecuritiesTradeDetails34 {
 		this.placeOfClearing = placeOfClearing;
 	}
 
+	@XmlElement(name = "TradDt")
 	public TradeDate1Choice getTradeDate() {
 		return tradeDate;
 	}
@@ -1480,6 +1493,7 @@ public class SecuritiesTradeDetails34 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "SttlmDt")
 	public SettlementDate1Choice getSettlementDate() {
 		return settlementDate;
 	}
@@ -1488,6 +1502,7 @@ public class SecuritiesTradeDetails34 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "LateDlvryDt")
 	public DateAndDateTimeChoice getLateDeliveryDate() {
 		return lateDeliveryDate;
 	}
@@ -1496,6 +1511,7 @@ public class SecuritiesTradeDetails34 {
 		this.lateDeliveryDate = lateDeliveryDate;
 	}
 
+	@XmlElement(name = "DealPric")
 	public Price2 getDealPrice() {
 		return dealPrice;
 	}
@@ -1504,6 +1520,7 @@ public class SecuritiesTradeDetails34 {
 		this.dealPrice = dealPrice;
 	}
 
+	@XmlElement(name = "NbOfDaysAcrd")
 	public Max3Number getNumberOfDaysAccrued() {
 		return numberOfDaysAccrued;
 	}
@@ -1512,6 +1529,7 @@ public class SecuritiesTradeDetails34 {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
 	}
 
+	@XmlElement(name = "OpngClsg")
 	public OpeningClosing1Choice getOpeningClosing() {
 		return openingClosing;
 	}
@@ -1520,6 +1538,7 @@ public class SecuritiesTradeDetails34 {
 		this.openingClosing = openingClosing;
 	}
 
+	@XmlElement(name = "Rptg")
 	public List<Reporting2Choice> getReporting() {
 		return reporting;
 	}
@@ -1528,6 +1547,7 @@ public class SecuritiesTradeDetails34 {
 		this.reporting = reporting;
 	}
 
+	@XmlElement(name = "TradTxCond")
 	public List<TradeTransactionCondition1Choice> getTradeTransactionCondition() {
 		return tradeTransactionCondition;
 	}
@@ -1536,6 +1556,7 @@ public class SecuritiesTradeDetails34 {
 		this.tradeTransactionCondition = tradeTransactionCondition;
 	}
 
+	@XmlElement(name = "InvstrCpcty")
 	public InvestorCapacity1Choice getInvestorCapacity() {
 		return investorCapacity;
 	}
@@ -1544,6 +1565,7 @@ public class SecuritiesTradeDetails34 {
 		this.investorCapacity = investorCapacity;
 	}
 
+	@XmlElement(name = "TradOrgtrRole")
 	public TradeOriginator1Choice getTradeOriginatorRole() {
 		return tradeOriginatorRole;
 	}
@@ -1552,6 +1574,7 @@ public class SecuritiesTradeDetails34 {
 		this.tradeOriginatorRole = tradeOriginatorRole;
 	}
 
+	@XmlElement(name = "TpOfPric")
 	public TypeOfPrice3Choice getTypeOfPrice() {
 		return typeOfPrice;
 	}
@@ -1560,6 +1583,7 @@ public class SecuritiesTradeDetails34 {
 		this.typeOfPrice = typeOfPrice;
 	}
 
+	@XmlElement(name = "CcyToBuyOrSell")
 	public CurrencyToBuyOrSell1Choice getCurrencyToBuyOrSell() {
 		return currencyToBuyOrSell;
 	}
@@ -1568,6 +1592,7 @@ public class SecuritiesTradeDetails34 {
 		this.currencyToBuyOrSell = currencyToBuyOrSell;
 	}
 
+	@XmlElement(name = "MtchgSts")
 	public MatchingStatus1Choice getMatchingStatus() {
 		return matchingStatus;
 	}
@@ -1576,6 +1601,7 @@ public class SecuritiesTradeDetails34 {
 		this.matchingStatus = matchingStatus;
 	}
 
+	@XmlElement(name = "AffirmSts")
 	public AffirmationStatus1Choice getAffirmationStatus() {
 		return affirmationStatus;
 	}
@@ -1584,6 +1610,7 @@ public class SecuritiesTradeDetails34 {
 		this.affirmationStatus = affirmationStatus;
 	}
 
+	@XmlElement(name = "FxAddtlDtls")
 	public Max350Text getFXAdditionalDetails() {
 		return fXAdditionalDetails;
 	}
@@ -1592,6 +1619,7 @@ public class SecuritiesTradeDetails34 {
 		this.fXAdditionalDetails = fXAdditionalDetails;
 	}
 
+	@XmlElement(name = "SttlmInstrPrcgAddtlDtls")
 	public Max350Text getSettlementInstructionProcessingAdditionalDetails() {
 		return settlementInstructionProcessingAdditionalDetails;
 	}

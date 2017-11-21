@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.IdentificationModification2;
 import com.tools20022.repository.msg.OriginalTransactionReference18;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -53,9 +55,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.022.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementLatestVersion
@@ -91,6 +90,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.022.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -106,6 +108,8 @@ import java.util.List;
  * IdentificationModificationAdviceV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IdentificationModificationAdviceV02", propOrder = {"assignment", "originalTransactionReference", "modification", "supplementaryData"})
 public class IdentificationModificationAdviceV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -143,6 +147,14 @@ public class IdentificationModificationAdviceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> IdentificationAssignment2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationModificationAdviceV02.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OriginalTransactionReference18 originalTransactionReference;
 	/**
@@ -177,6 +189,14 @@ public class IdentificationModificationAdviceV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> OriginalTransactionReference18.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationModificationAdviceV02.class.getMethod("getOriginalTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<IdentificationModification2> modification;
@@ -215,6 +235,14 @@ public class IdentificationModificationAdviceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> IdentificationModification2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationModificationAdviceV02.class.getMethod("getModification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -252,6 +280,14 @@ public class IdentificationModificationAdviceV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationModificationAdviceV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -265,8 +301,9 @@ public class IdentificationModificationAdviceV02 {
 				rootElement = "Document";
 				xmlTag = "IdModAdvc";
 				businessArea_lazy = () -> AccountManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(IdentificationModificationAdviceV02.mmAssignment, IdentificationModificationAdviceV02.mmOriginalTransactionReference, IdentificationModificationAdviceV02.mmModification,
-						IdentificationModificationAdviceV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationModificationAdviceV02.mmAssignment,
+						com.tools20022.repository.area.acmt.IdentificationModificationAdviceV02.mmOriginalTransactionReference, com.tools20022.repository.area.acmt.IdentificationModificationAdviceV02.mmModification,
+						com.tools20022.repository.area.acmt.IdentificationModificationAdviceV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";
@@ -276,10 +313,16 @@ public class IdentificationModificationAdviceV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IdentificationModificationAdviceV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public IdentificationAssignment2 getAssignment() {
 		return assignment;
 	}
@@ -288,6 +331,7 @@ public class IdentificationModificationAdviceV02 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "OrgnlTxRef")
 	public OriginalTransactionReference18 getOriginalTransactionReference() {
 		return originalTransactionReference;
 	}
@@ -296,6 +340,7 @@ public class IdentificationModificationAdviceV02 {
 		this.originalTransactionReference = originalTransactionReference;
 	}
 
+	@XmlElement(name = "Mod", required = true)
 	public List<IdentificationModification2> getModification() {
 		return modification;
 	}
@@ -304,11 +349,18 @@ public class IdentificationModificationAdviceV02 {
 		this.modification = modification;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.022.02.02")
+	static public class Document {
+		@XmlElement(name = "IdModAdvc", required = true)
+		public IdentificationModificationAdviceV02 messageBody;
 	}
 }

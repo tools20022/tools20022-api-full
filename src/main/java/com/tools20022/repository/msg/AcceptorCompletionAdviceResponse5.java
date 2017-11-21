@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Acknowledgement by the acquirer, of the completion advice of the card payment
@@ -94,6 +98,8 @@ import java.util.List;
  * AcceptorCompletionAdviceResponse4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorCompletionAdviceResponse5", propOrder = {"environment", "transaction", "TMSTrigger", "supplementaryData"})
 public class AcceptorCompletionAdviceResponse5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -361,6 +367,7 @@ public class AcceptorCompletionAdviceResponse5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment46 getEnvironment() {
 		return environment;
 	}
@@ -369,6 +376,7 @@ public class AcceptorCompletionAdviceResponse5 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransactionAdviceResponse6 getTransaction() {
 		return transaction;
 	}
@@ -377,6 +385,7 @@ public class AcceptorCompletionAdviceResponse5 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "TMSTrggr")
 	public TMSTrigger1 getTMSTrigger() {
 		return tMSTrigger;
 	}
@@ -385,6 +394,7 @@ public class AcceptorCompletionAdviceResponse5 {
 		this.tMSTrigger = tMSTrigger;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

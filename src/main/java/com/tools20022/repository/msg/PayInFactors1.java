@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Factors used in the calculation of the pay in schedule.
@@ -71,6 +75,8 @@ import java.util.List;
  * definition} = "Factors used in the calculation of the pay in schedule."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PayInFactors1", propOrder = {"aggregateShortPositionLimit", "currencyFactors"})
 public class PayInFactors1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -174,6 +180,7 @@ public class PayInFactors1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AggtShrtPosLmt", required = true)
 	public ActiveCurrencyAndAmount getAggregateShortPositionLimit() {
 		return aggregateShortPositionLimit;
 	}
@@ -182,6 +189,7 @@ public class PayInFactors1 {
 		this.aggregateShortPositionLimit = aggregateShortPositionLimit;
 	}
 
+	@XmlElement(name = "CcyFctrs", required = true)
 	public List<CurrencyFactors1> getCurrencyFactors() {
 		return currencyFactors;
 	}

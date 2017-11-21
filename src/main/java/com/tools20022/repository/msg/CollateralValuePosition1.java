@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the collateral value position/balance.
@@ -71,6 +75,8 @@ import java.util.List;
  * definition} = "Details of the collateral value position/balance."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralValuePosition1", propOrder = {"dataAccessTime", "totalCollateralValuation", "securitiesAccount", "securities"})
 public class CollateralValuePosition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -278,6 +284,7 @@ public class CollateralValuePosition1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DataAccsTm", required = true)
 	public ISODateTime getDataAccessTime() {
 		return dataAccessTime;
 	}
@@ -286,6 +293,7 @@ public class CollateralValuePosition1 {
 		this.dataAccessTime = dataAccessTime;
 	}
 
+	@XmlElement(name = "TtlCollValtn")
 	public ActiveCurrencyAndAmount getTotalCollateralValuation() {
 		return totalCollateralValuation;
 	}
@@ -294,6 +302,7 @@ public class CollateralValuePosition1 {
 		this.totalCollateralValuation = totalCollateralValuation;
 	}
 
+	@XmlElement(name = "SctiesAcct")
 	public SecuritiesAccount2 getSecuritiesAccount() {
 		return securitiesAccount;
 	}
@@ -302,6 +311,7 @@ public class CollateralValuePosition1 {
 		this.securitiesAccount = securitiesAccount;
 	}
 
+	@XmlElement(name = "Scties")
 	public List<SecurityCharacteristics1> getSecurities() {
 		return securities;
 	}

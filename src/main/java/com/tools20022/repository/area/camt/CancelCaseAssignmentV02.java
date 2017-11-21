@@ -25,8 +25,10 @@ import com.tools20022.repository.area.CashManagementPreviousVersion;
 import com.tools20022.repository.msg.Case2;
 import com.tools20022.repository.msg.CaseAssignment2;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -63,9 +65,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.032.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
@@ -93,6 +92,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.032.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -115,6 +117,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CancelCaseAssignment}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancelCaseAssignmentV02", propOrder = {"assignment", "case"})
 public class CancelCaseAssignmentV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -155,6 +159,14 @@ public class CancelCaseAssignmentV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CancelCaseAssignmentV02.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case2 case_;
 	/**
@@ -188,6 +200,14 @@ public class CancelCaseAssignmentV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> Case2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CancelCaseAssignmentV02.class.getMethod("getCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -202,7 +222,7 @@ public class CancelCaseAssignmentV02 {
 				rootElement = "Document";
 				xmlTag = "CclCaseAssgnmt";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CancelCaseAssignmentV02.mmAssignment, CancelCaseAssignmentV02.mmCase);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CancelCaseAssignmentV02.mmAssignment, com.tools20022.repository.area.camt.CancelCaseAssignmentV02.mmCase);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -212,10 +232,16 @@ public class CancelCaseAssignmentV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CancelCaseAssignmentV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment2 getAssignment() {
 		return assignment;
 	}
@@ -224,11 +250,18 @@ public class CancelCaseAssignmentV02 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "Case", required = true)
 	public Case2 getCase() {
 		return case_;
 	}
 
 	public void setCase(Case2 case_) {
 		this.case_ = case_;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.032.02.02")
+	static public class Document {
+		@XmlElement(name = "CclCaseAssgnmt", required = true)
+		public CancelCaseAssignmentV02 messageBody;
 	}
 }

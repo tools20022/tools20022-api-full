@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies security rate details.
@@ -56,6 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies security rate details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionRateSD6Choice", propOrder = {"additionalQuantityForExistingSecurities", "newToOld"})
 public class CorporateActionRateSD6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -165,6 +171,7 @@ public class CorporateActionRateSD6Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlQtyForExstgScties")
 	public RatioFormat13Choice getAdditionalQuantityForExistingSecurities() {
 		return additionalQuantityForExistingSecurities;
 	}
@@ -173,6 +180,7 @@ public class CorporateActionRateSD6Choice {
 		this.additionalQuantityForExistingSecurities = additionalQuantityForExistingSecurities;
 	}
 
+	@XmlElement(name = "NewToOd")
 	public RatioFormat14Choice getNewToOld() {
 		return newToOld;
 	}

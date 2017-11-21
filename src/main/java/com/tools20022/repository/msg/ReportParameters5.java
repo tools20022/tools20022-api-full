@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the parameters of the report.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ReportParameters2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportParameters5", propOrder = {"reportIdentification", "reportDateAndTime", "frequency", "reportCurrency", "calculationDate"})
 public class ReportParameters5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -343,6 +349,7 @@ public class ReportParameters5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptId", required = true)
 	public Max35Text getReportIdentification() {
 		return reportIdentification;
 	}
@@ -351,6 +358,7 @@ public class ReportParameters5 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "RptDtAndTm", required = true)
 	public DateAndDateTimeChoice getReportDateAndTime() {
 		return reportDateAndTime;
 	}
@@ -359,6 +367,7 @@ public class ReportParameters5 {
 		this.reportDateAndTime = reportDateAndTime;
 	}
 
+	@XmlElement(name = "Frqcy", required = true)
 	public EventFrequency6Code getFrequency() {
 		return frequency;
 	}
@@ -367,6 +376,7 @@ public class ReportParameters5 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "RptCcy", required = true)
 	public ActiveCurrencyCode getReportCurrency() {
 		return reportCurrency;
 	}
@@ -375,6 +385,7 @@ public class ReportParameters5 {
 		this.reportCurrency = reportCurrency;
 	}
 
+	@XmlElement(name = "ClctnDt")
 	public ISODateTime getCalculationDate() {
 		return calculationDate;
 	}

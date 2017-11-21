@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Description of the element that creates the mismatch.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Description of the element that creates the mismatch."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ElementIdentification1", propOrder = {"documentIndex", "elementPath", "elementName", "elementValue"})
 public class ElementIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -254,6 +260,7 @@ public class ElementIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DocIndx", required = true)
 	public Max3NumericText getDocumentIndex() {
 		return documentIndex;
 	}
@@ -262,6 +269,7 @@ public class ElementIdentification1 {
 		this.documentIndex = documentIndex;
 	}
 
+	@XmlElement(name = "ElmtPth", required = true)
 	public Max350Text getElementPath() {
 		return elementPath;
 	}
@@ -270,6 +278,7 @@ public class ElementIdentification1 {
 		this.elementPath = elementPath;
 	}
 
+	@XmlElement(name = "ElmtNm", required = true)
 	public Max35Text getElementName() {
 		return elementName;
 	}
@@ -278,6 +287,7 @@ public class ElementIdentification1 {
 		this.elementName = elementName;
 	}
 
+	@XmlElement(name = "ElmtVal")
 	public Max140Text getElementValue() {
 		return elementValue;
 	}

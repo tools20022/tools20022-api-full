@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.SimpleIdentificationInformation;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.022.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -93,6 +92,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.022.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -104,6 +106,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MisMatchRejectionV02", propOrder = {"rejectionIdentification", "transactionIdentification", "submitterTransactionReference", "dataSetMatchReportReference", "rejectionReason"})
 public class MisMatchRejectionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -140,6 +144,14 @@ public class MisMatchRejectionV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MisMatchRejectionV02.class.getMethod("getRejectionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -180,6 +192,14 @@ public class MisMatchRejectionV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MisMatchRejectionV02.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
@@ -215,6 +235,14 @@ public class MisMatchRejectionV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MisMatchRejectionV02.class.getMethod("getSubmitterTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MessageIdentification1 dataSetMatchReportReference;
@@ -254,6 +282,14 @@ public class MisMatchRejectionV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MisMatchRejectionV02.class.getMethod("getDataSetMatchReportReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected RejectionReason1Choice rejectionReason;
 	/**
@@ -289,6 +325,14 @@ public class MisMatchRejectionV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> RejectionReason1Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MisMatchRejectionV02.class.getMethod("getRejectionReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -301,8 +345,9 @@ public class MisMatchRejectionV02 {
 				rootElement = "Document";
 				xmlTag = "MisMtchRjctn";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MisMatchRejectionV02.mmRejectionIdentification, MisMatchRejectionV02.mmTransactionIdentification, MisMatchRejectionV02.mmSubmitterTransactionReference,
-						MisMatchRejectionV02.mmDataSetMatchReportReference, MisMatchRejectionV02.mmRejectionReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.MisMatchRejectionV02.mmRejectionIdentification, com.tools20022.repository.area.tsmt.MisMatchRejectionV02.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.MisMatchRejectionV02.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.MisMatchRejectionV02.mmDataSetMatchReportReference,
+						com.tools20022.repository.area.tsmt.MisMatchRejectionV02.mmRejectionReason);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -312,10 +357,16 @@ public class MisMatchRejectionV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MisMatchRejectionV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RjctnId", required = true)
 	public MessageIdentification1 getRejectionIdentification() {
 		return rejectionIdentification;
 	}
@@ -324,6 +375,7 @@ public class MisMatchRejectionV02 {
 		this.rejectionIdentification = rejectionIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -332,6 +384,7 @@ public class MisMatchRejectionV02 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "SubmitrTxRef")
 	public SimpleIdentificationInformation getSubmitterTransactionReference() {
 		return submitterTransactionReference;
 	}
@@ -340,6 +393,7 @@ public class MisMatchRejectionV02 {
 		this.submitterTransactionReference = submitterTransactionReference;
 	}
 
+	@XmlElement(name = "DataSetMtchRptRef", required = true)
 	public MessageIdentification1 getDataSetMatchReportReference() {
 		return dataSetMatchReportReference;
 	}
@@ -348,11 +402,18 @@ public class MisMatchRejectionV02 {
 		this.dataSetMatchReportReference = dataSetMatchReportReference;
 	}
 
+	@XmlElement(name = "RjctnRsn", required = true)
 	public RejectionReason1Choice getRejectionReason() {
 		return rejectionReason;
 	}
 
 	public void setRejectionReason(RejectionReason1Choice rejectionReason) {
 		this.rejectionReason = rejectionReason;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.022.02.02")
+	static public class Document {
+		@XmlElement(name = "MisMtchRjctn", required = true)
+		public MisMatchRejectionV02 messageBody;
 	}
 }

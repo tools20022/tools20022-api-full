@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reinvestment information.
@@ -76,6 +80,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reinvestment1", propOrder = {"fundDetails", "requestedNAVCurrency", "reinvestmentPercentage"})
 public class Reinvestment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -272,6 +278,7 @@ public class Reinvestment1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FndDtls", required = true)
 	public FinancialInstrument29 getFundDetails() {
 		return fundDetails;
 	}
@@ -280,6 +287,7 @@ public class Reinvestment1 {
 		this.fundDetails = fundDetails;
 	}
 
+	@XmlElement(name = "ReqdNAVCcy")
 	public CurrencyCode getRequestedNAVCurrency() {
 		return requestedNAVCurrency;
 	}
@@ -288,6 +296,7 @@ public class Reinvestment1 {
 		this.requestedNAVCurrency = requestedNAVCurrency;
 	}
 
+	@XmlElement(name = "RinvstmtPctg", required = true)
 	public PercentageRate getReinvestmentPercentage() {
 		return reinvestmentPercentage;
 	}

@@ -64,6 +64,11 @@ public class RegistrationBeneficiary extends MeetingPartyRole {
 				definition = "Party in whose name securities are registered.";
 				superType_lazy = () -> MeetingPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RegistrationBeneficiary.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies additional parameters to the message or transaction.
@@ -100,6 +104,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * AdditionalParameters17}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalParameters22", propOrder = {"preConfirmation", "partialSettlement", "previousPartialConfirmationIdentification", "tripartyAgentCollateralTransactionIdentification",
+		"clientTripartyCollateralTransactionIdentification", "clientCollateralInstructionIdentification", "tripartyCollateralInstructionIdentification"})
 public class AdditionalParameters22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -580,6 +587,7 @@ public class AdditionalParameters22 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PreConf")
 	public PreConfirmation1Code getPreConfirmation() {
 		return preConfirmation;
 	}
@@ -588,6 +596,7 @@ public class AdditionalParameters22 {
 		this.preConfirmation = preConfirmation;
 	}
 
+	@XmlElement(name = "PrtlSttlm")
 	public PartialSettlement2Code getPartialSettlement() {
 		return partialSettlement;
 	}
@@ -596,6 +605,7 @@ public class AdditionalParameters22 {
 		this.partialSettlement = partialSettlement;
 	}
 
+	@XmlElement(name = "PrvsPrtlConfId")
 	public Max35Text getPreviousPartialConfirmationIdentification() {
 		return previousPartialConfirmationIdentification;
 	}
@@ -604,6 +614,7 @@ public class AdditionalParameters22 {
 		this.previousPartialConfirmationIdentification = previousPartialConfirmationIdentification;
 	}
 
+	@XmlElement(name = "TrptyAgtCollTxId")
 	public Max35Text getTripartyAgentCollateralTransactionIdentification() {
 		return tripartyAgentCollateralTransactionIdentification;
 	}
@@ -612,6 +623,7 @@ public class AdditionalParameters22 {
 		this.tripartyAgentCollateralTransactionIdentification = tripartyAgentCollateralTransactionIdentification;
 	}
 
+	@XmlElement(name = "ClntTrptyCollTxId")
 	public Max35Text getClientTripartyCollateralTransactionIdentification() {
 		return clientTripartyCollateralTransactionIdentification;
 	}
@@ -620,6 +632,7 @@ public class AdditionalParameters22 {
 		this.clientTripartyCollateralTransactionIdentification = clientTripartyCollateralTransactionIdentification;
 	}
 
+	@XmlElement(name = "ClntCollInstrId")
 	public Max35Text getClientCollateralInstructionIdentification() {
 		return clientCollateralInstructionIdentification;
 	}
@@ -628,6 +641,7 @@ public class AdditionalParameters22 {
 		this.clientCollateralInstructionIdentification = clientCollateralInstructionIdentification;
 	}
 
+	@XmlElement(name = "TrptyCollInstrId")
 	public Max35Text getTripartyCollateralInstructionIdentification() {
 		return tripartyCollateralInstructionIdentification;
 	}

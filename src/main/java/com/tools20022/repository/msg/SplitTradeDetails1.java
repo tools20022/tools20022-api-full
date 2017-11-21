@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.TreasuryTrade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information describing the high level details of a split trade.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information describing the high level details of a split trade."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SplitTradeDetails1", propOrder = {"statusDetails", "tradeAmounts", "agreedRate"})
 public class SplitTradeDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -237,6 +243,7 @@ public class SplitTradeDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsDtls")
 	public TradeData9 getStatusDetails() {
 		return statusDetails;
 	}
@@ -245,6 +252,7 @@ public class SplitTradeDetails1 {
 		this.statusDetails = statusDetails;
 	}
 
+	@XmlElement(name = "TradAmts", required = true)
 	public AmountsAndValueDate1 getTradeAmounts() {
 		return tradeAmounts;
 	}
@@ -253,6 +261,7 @@ public class SplitTradeDetails1 {
 		this.tradeAmounts = tradeAmounts;
 	}
 
+	@XmlElement(name = "AgrdRate")
 	public AgreedRate1 getAgreedRate() {
 		return agreedRate;
 	}

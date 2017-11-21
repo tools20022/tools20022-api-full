@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Used to report between the cash account reference data or an operational
@@ -63,6 +67,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccountAuditTrailOrOperationalError1Choice", propOrder = {"cashAccountAuditTrailReport", "operationalError"})
 public class CashAccountAuditTrailOrOperationalError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshAcctAudtTrlRpt", required = true)
 	public List<CashAccountAuditTrailReport1> getCashAccountAuditTrailReport() {
 		return cashAccountAuditTrailReport;
 	}
@@ -169,6 +176,7 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 		this.cashAccountAuditTrailReport = cashAccountAuditTrailReport;
 	}
 
+	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
 		return operationalError;
 	}

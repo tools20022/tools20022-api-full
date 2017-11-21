@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party that provides services to investors relating to financial products.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Intermediary8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Intermediary40", propOrder = {"identification", "account", "orderOriginatorEligibility", "role"})
 public class Intermediary40 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -309,6 +315,7 @@ public class Intermediary40 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification113 getIdentification() {
 		return identification;
 	}
@@ -317,6 +324,7 @@ public class Intermediary40 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Acct")
 	public Account22 getAccount() {
 		return account;
 	}
@@ -325,6 +333,7 @@ public class Intermediary40 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "OrdrOrgtrElgblty")
 	public OrderOriginatorEligibility1Code getOrderOriginatorEligibility() {
 		return orderOriginatorEligibility;
 	}
@@ -333,6 +342,7 @@ public class Intermediary40 {
 		this.orderOriginatorEligibility = orderOriginatorEligibility;
 	}
 
+	@XmlElement(name = "Role")
 	public InvestmentFundRole2Choice getRole() {
 		return role;
 	}

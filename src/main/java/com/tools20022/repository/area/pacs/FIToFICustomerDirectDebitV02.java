@@ -25,9 +25,11 @@ import com.tools20022.repository.area.PaymentsClearingandSettlementArchive;
 import com.tools20022.repository.msg.DirectDebitTransactionInformation10;
 import com.tools20022.repository.msg.GroupHeader34;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -50,9 +52,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pacs.003.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementArchive
@@ -80,6 +79,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pacs.003.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -103,6 +105,8 @@ import java.util.List;
  * FIToFICustomerDirectDebitV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FIToFICustomerDirectDebitV02", propOrder = {"groupHeader", "directDebitTransactionInformation"})
 public class FIToFICustomerDirectDebitV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -142,6 +146,14 @@ public class FIToFICustomerDirectDebitV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader34.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFICustomerDirectDebitV02.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<DirectDebitTransactionInformation10> directDebitTransactionInformation;
 	/**
@@ -179,6 +191,14 @@ public class FIToFICustomerDirectDebitV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> DirectDebitTransactionInformation10.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFICustomerDirectDebitV02.class.getMethod("getDirectDebitTransactionInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -193,7 +213,8 @@ public class FIToFICustomerDirectDebitV02 {
 				rootElement = "Document";
 				xmlTag = "FIToFICstmrDrctDbt";
 				businessArea_lazy = () -> PaymentsClearingandSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FIToFICustomerDirectDebitV02.mmGroupHeader, FIToFICustomerDirectDebitV02.mmDirectDebitTransactionInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV02.mmGroupHeader,
+						com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV02.mmDirectDebitTransactionInformation);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pacs";
@@ -203,10 +224,16 @@ public class FIToFICustomerDirectDebitV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FIToFICustomerDirectDebitV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader34 getGroupHeader() {
 		return groupHeader;
 	}
@@ -215,11 +242,18 @@ public class FIToFICustomerDirectDebitV02 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "DrctDbtTxInf", required = true)
 	public List<DirectDebitTransactionInformation10> getDirectDebitTransactionInformation() {
 		return directDebitTransactionInformation;
 	}
 
 	public void setDirectDebitTransactionInformation(List<DirectDebitTransactionInformation10> directDebitTransactionInformation) {
 		this.directDebitTransactionInformation = directDebitTransactionInformation;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.003.02.02")
+	static public class Document {
+		@XmlElement(name = "FIToFICstmrDrctDbt", required = true)
+		public FIToFICustomerDirectDebitV02 messageBody;
 	}
 }

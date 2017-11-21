@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.CreditTransferTransaction7;
 import com.tools20022.repository.msg.GroupHeader49;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -63,9 +65,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pacs.008.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementArchive
@@ -96,6 +95,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pacs.008.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -119,6 +121,8 @@ import java.util.List;
  * FIToFICustomerCreditTransferV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FIToFICustomerCreditTransferV04", propOrder = {"groupHeader", "creditTransferTransactionInformation", "supplementaryData"})
 public class FIToFICustomerCreditTransferV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +171,14 @@ public class FIToFICustomerCreditTransferV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader49.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFICustomerCreditTransferV04.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<CreditTransferTransaction7> creditTransferTransactionInformation;
 	/**
@@ -212,6 +224,14 @@ public class FIToFICustomerCreditTransferV04 {
 			nextVersions_lazy = () -> Arrays.asList(FIToFICustomerCreditTransferV05.mmCreditTransferTransactionInformation);
 			minOccurs = 1;
 			complexType_lazy = () -> CreditTransferTransaction7.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFICustomerCreditTransferV04.class.getMethod("getCreditTransferTransactionInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -259,6 +279,14 @@ public class FIToFICustomerCreditTransferV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFICustomerCreditTransferV04.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -273,7 +301,8 @@ public class FIToFICustomerCreditTransferV04 {
 				rootElement = "Document";
 				xmlTag = "FIToFICstmrCdtTrf";
 				businessArea_lazy = () -> PaymentsClearingandSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FIToFICustomerCreditTransferV04.mmGroupHeader, FIToFICustomerCreditTransferV04.mmCreditTransferTransactionInformation, FIToFICustomerCreditTransferV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV04.mmGroupHeader,
+						com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV04.mmCreditTransferTransactionInformation, com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pacs";
@@ -283,10 +312,16 @@ public class FIToFICustomerCreditTransferV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FIToFICustomerCreditTransferV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader49 getGroupHeader() {
 		return groupHeader;
 	}
@@ -295,6 +330,7 @@ public class FIToFICustomerCreditTransferV04 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "CdtTrfTxInf", required = true)
 	public List<CreditTransferTransaction7> getCreditTransferTransactionInformation() {
 		return creditTransferTransactionInformation;
 	}
@@ -303,11 +339,18 @@ public class FIToFICustomerCreditTransferV04 {
 		this.creditTransferTransactionInformation = creditTransferTransactionInformation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.008.04.04")
+	static public class Document {
+		@XmlElement(name = "FIToFICstmrCdtTrf", required = true)
+		public FIToFICustomerCreditTransferV04 messageBody;
 	}
 }

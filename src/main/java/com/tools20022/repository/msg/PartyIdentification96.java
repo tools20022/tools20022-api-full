@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a person or an organisation.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyIdentification95}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification96", propOrder = {"identification", "legalEntityIdentifier"})
 public class PartyIdentification96 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -198,6 +204,7 @@ public class PartyIdentification96 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public PartyIdentification96Choice getIdentification() {
 		return identification;
 	}
@@ -206,6 +213,7 @@ public class PartyIdentification96 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "LglNttyIdr")
 	public LEIIdentifier getLegalEntityIdentifier() {
 		return legalEntityIdentifier;
 	}

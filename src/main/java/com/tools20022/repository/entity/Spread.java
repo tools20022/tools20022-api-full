@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,6 +39,36 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Spread#mmBenchmarkSecurity
+ * Spread.mmBenchmarkSecurity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Spread#mmSecuritiesFinancing
+ * Spread.mmSecuritiesFinancing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Spread#mmSpreadRate
+ * Spread.mmSpreadRate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Spread#mmBasisPointSpread
+ * Spread.mmBasisPointSpread}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Spread#mmIndex
+ * Spread.mmIndex}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Spread#mmBenchmarkPrice
+ * Spread.mmBenchmarkPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Spread#mmRelatedIndicationOfInterest
+ * Spread.mmRelatedIndicationOfInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Spread#mmIndicationOfInterest
+ * Spread.mmIndicationOfInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Spread#mmRelatedInterest
+ * Spread.mmRelatedInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Spread#mmBenchmarkCurve
+ * Spread.mmBenchmarkCurve}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Spread#mmPriceOffset
+ * Spread.mmPriceOffset}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -77,36 +108,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.msg.QuoteRequest1#mmSpreadAndBenchmarkCurveDetails
  * QuoteRequest1.mmSpreadAndBenchmarkCurveDetails}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Spread#mmBenchmarkSecurity
- * Spread.mmBenchmarkSecurity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Spread#mmSecuritiesFinancing
- * Spread.mmSecuritiesFinancing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Spread#mmSpreadRate
- * Spread.mmSpreadRate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Spread#mmBasisPointSpread
- * Spread.mmBasisPointSpread}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Spread#mmIndex
- * Spread.mmIndex}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Spread#mmBenchmarkPrice
- * Spread.mmBenchmarkPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Spread#mmRelatedIndicationOfInterest
- * Spread.mmRelatedIndicationOfInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Spread#mmIndicationOfInterest
- * Spread.mmIndicationOfInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Spread#mmRelatedInterest
- * Spread.mmRelatedInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Spread#mmBenchmarkCurve
- * Spread.mmBenchmarkCurve}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Spread#mmPriceOffset
- * Spread.mmPriceOffset}</li>
  * </ul>
  * </li>
  * <li>
@@ -162,7 +163,7 @@ public class Spread {
 	 */
 	public static final MMBusinessAssociationEnd mmBenchmarkSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Spread.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BenchmarkSecurity";
@@ -211,7 +212,7 @@ public class Spread {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesFinancing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Spread.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesFinancing";
@@ -235,10 +236,6 @@ public class Spread {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Spread
-	 * Spread}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -266,6 +263,10 @@ public class Spread {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Spread
+	 * Spread}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -282,7 +283,7 @@ public class Spread {
 		{
 			derivation_lazy = () -> Arrays.asList(InterestChange1.mmSpreadRate, SecuritiesFinancing10.mmSpreadRate, InterestCalculation1.mmSpread, InterestCalculation2.mmSpread, SecuritiesFinancing1.mmSpread, InterestCalculation3.mmSpread,
 					InterestCalculation4.mmSpread);
-			elementContext_lazy = () -> Spread.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpreadRate";
@@ -290,6 +291,14 @@ public class Spread {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Spread.class.getMethod("getSpreadRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number basisPointSpread;
@@ -302,10 +311,6 @@ public class Spread {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Spread
-	 * Spread}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -327,6 +332,10 @@ public class Spread {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Spread
+	 * Spread}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -342,7 +351,7 @@ public class Spread {
 		{
 			derivation_lazy = () -> Arrays.asList(VariableInterest1Rate.mmBasisPointSpread, FloatingRateNote1.mmBasisPointSpread, FloatingInterestRate4.mmBasisPointSpread, FloatingRateNote2.mmBasisPointSpread,
 					FloatingInterestRate6.mmBasisPointSpread);
-			elementContext_lazy = () -> Spread.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BasisPointSpread";
@@ -350,6 +359,14 @@ public class Spread {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Spread.class.getMethod("getBasisPointSpread", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Index index;
@@ -368,10 +385,6 @@ public class Spread {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Index Index}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Spread
-	 * Spread}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -387,6 +400,10 @@ public class Spread {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Spread
+	 * Spread}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -400,7 +417,7 @@ public class Spread {
 	public static final MMBusinessAssociationEnd mmIndex = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument46Choice.mmIndex, FinancialInstrument58.mmName, FinancialInstrument48Choice.mmIndex);
-			elementContext_lazy = () -> Spread.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Index";
@@ -430,10 +447,6 @@ public class Spread {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Spread
-	 * Spread}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -445,6 +458,10 @@ public class Spread {
 	 * BenchmarkCurve1.mmBenchmarkPrice}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Spread
+	 * Spread}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -459,7 +476,7 @@ public class Spread {
 	public static final MMBusinessAssociationEnd mmBenchmarkPrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BenchmarkCurve2.mmBenchmarkPrice, BenchmarkCurve1.mmBenchmarkPrice);
-			elementContext_lazy = () -> Spread.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BenchmarkPrice";
@@ -510,7 +527,7 @@ public class Spread {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedIndicationOfInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Spread.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedIndicationOfInterest";
@@ -558,7 +575,7 @@ public class Spread {
 	 */
 	public static final MMBusinessAssociationEnd mmIndicationOfInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Spread.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndicationOfInterest";
@@ -606,7 +623,7 @@ public class Spread {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Spread.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInterest";
@@ -634,10 +651,6 @@ public class Spread {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Curve Curve}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Spread
-	 * Spread}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -649,6 +662,10 @@ public class Spread {
 	 * Quote1.mmSpreadAndBenchmarkCurveDetails}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Spread
+	 * Spread}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -663,7 +680,7 @@ public class Spread {
 	public static final MMBusinessAssociationEnd mmBenchmarkCurve = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InstrumentLeg2.mmLegBenchmarkCurveDetails, Quote1.mmSpreadAndBenchmarkCurveDetails);
-			elementContext_lazy = () -> Spread.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BenchmarkCurve";
@@ -709,7 +726,7 @@ public class Spread {
 	 */
 	public static final MMBusinessAttribute mmPriceOffset = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Spread.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceOffset";
@@ -717,6 +734,14 @@ public class Spread {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Spread.class.getMethod("getPriceOffset", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -731,8 +756,15 @@ public class Spread {
 						com.tools20022.repository.entity.Index.mmSpread, com.tools20022.repository.entity.SecuritiesFinancing.mmRepurchaseSpread, com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmSpreadToBenchmark,
 						com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmSwapSpread, com.tools20022.repository.entity.Curve.mmSpread);
 				derivationElement_lazy = () -> Arrays.asList(SingleQuote1.mmSpreadAndBenchmarkCurveDetails, SingleOrder1.mmSpreadAndBenchmarkCurveDetails, QuoteRequest1.mmSpreadAndBenchmarkCurveDetails);
-				element_lazy = () -> Arrays.asList(Spread.mmBenchmarkSecurity, Spread.mmSecuritiesFinancing, Spread.mmSpreadRate, Spread.mmBasisPointSpread, Spread.mmIndex, Spread.mmBenchmarkPrice, Spread.mmRelatedIndicationOfInterest,
-						Spread.mmIndicationOfInterest, Spread.mmRelatedInterest, Spread.mmBenchmarkCurve, Spread.mmPriceOffset);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Spread.mmBenchmarkSecurity, com.tools20022.repository.entity.Spread.mmSecuritiesFinancing, com.tools20022.repository.entity.Spread.mmSpreadRate,
+						com.tools20022.repository.entity.Spread.mmBasisPointSpread, com.tools20022.repository.entity.Spread.mmIndex, com.tools20022.repository.entity.Spread.mmBenchmarkPrice,
+						com.tools20022.repository.entity.Spread.mmRelatedIndicationOfInterest, com.tools20022.repository.entity.Spread.mmIndicationOfInterest, com.tools20022.repository.entity.Spread.mmRelatedInterest,
+						com.tools20022.repository.entity.Spread.mmBenchmarkCurve, com.tools20022.repository.entity.Spread.mmPriceOffset);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Spread.class;
 			}
 		});
 		return mmObject_lazy.get();

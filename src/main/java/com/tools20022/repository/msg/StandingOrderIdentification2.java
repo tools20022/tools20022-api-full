@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the elements used to uniquely identify a standing order.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Defines the elements used to uniquely identify a standing order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingOrderIdentification2", propOrder = {"identification", "account", "accountOwner"})
 public class StandingOrderIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -234,6 +240,7 @@ public class StandingOrderIdentification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -242,6 +249,7 @@ public class StandingOrderIdentification2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CashAccount24 getAccount() {
 		return account;
 	}
@@ -250,6 +258,7 @@ public class StandingOrderIdentification2 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public BranchAndFinancialInstitutionIdentification5 getAccountOwner() {
 		return accountOwner;
 	}

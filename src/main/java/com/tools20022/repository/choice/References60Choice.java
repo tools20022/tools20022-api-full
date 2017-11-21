@@ -31,6 +31,10 @@ import com.tools20022.repository.msg.GenericDocumentIdentification6;
 import com.tools20022.repository.msg.SettlementTypeAndIdentification22;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of reference.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of reference."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References60Choice", propOrder = {"securitiesSettlementTransactionIdentification", "securitiesFinancingTransactionIdentification", "intraPositionMovementIdentification", "otherTransactionIdentification"})
 public class References60Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -302,6 +308,7 @@ public class References60Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesSttlmTxId", required = true)
 	public SettlementTypeAndIdentification22 getSecuritiesSettlementTransactionIdentification() {
 		return securitiesSettlementTransactionIdentification;
 	}
@@ -310,6 +317,7 @@ public class References60Choice {
 		this.securitiesSettlementTransactionIdentification = securitiesSettlementTransactionIdentification;
 	}
 
+	@XmlElement(name = "SctiesFincgTxId", required = true)
 	public SettlementTypeAndIdentification22 getSecuritiesFinancingTransactionIdentification() {
 		return securitiesFinancingTransactionIdentification;
 	}
@@ -318,6 +326,7 @@ public class References60Choice {
 		this.securitiesFinancingTransactionIdentification = securitiesFinancingTransactionIdentification;
 	}
 
+	@XmlElement(name = "IntraPosMvmntId", required = true)
 	public RestrictedFINXMax16Text getIntraPositionMovementIdentification() {
 		return intraPositionMovementIdentification;
 	}
@@ -326,6 +335,7 @@ public class References60Choice {
 		this.intraPositionMovementIdentification = intraPositionMovementIdentification;
 	}
 
+	@XmlElement(name = "OthrTxId", required = true)
 	public GenericDocumentIdentification6 getOtherTransactionIdentification() {
 		return otherTransactionIdentification;
 	}

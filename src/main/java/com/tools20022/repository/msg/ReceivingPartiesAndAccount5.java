@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Parameters applied to the settlement of a security transfer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReceivingPartiesAndAccount5", propOrder = {"receiversCustodianDetails", "receiversIntermediaryDetails", "receivingAgentDetails"})
 public class ReceivingPartiesAndAccount5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -237,6 +243,7 @@ public class ReceivingPartiesAndAccount5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RcvrsCtdnDtls")
 	public PartyIdentificationAndAccount13 getReceiversCustodianDetails() {
 		return receiversCustodianDetails;
 	}
@@ -245,6 +252,7 @@ public class ReceivingPartiesAndAccount5 {
 		this.receiversCustodianDetails = receiversCustodianDetails;
 	}
 
+	@XmlElement(name = "RcvrsIntrmyDtls")
 	public PartyIdentificationAndAccount13 getReceiversIntermediaryDetails() {
 		return receiversIntermediaryDetails;
 	}
@@ -253,6 +261,7 @@ public class ReceivingPartiesAndAccount5 {
 		this.receiversIntermediaryDetails = receiversIntermediaryDetails;
 	}
 
+	@XmlElement(name = "RcvgAgtDtls", required = true)
 	public PartyIdentificationAndAccount13 getReceivingAgentDetails() {
 		return receivingAgentDetails;
 	}

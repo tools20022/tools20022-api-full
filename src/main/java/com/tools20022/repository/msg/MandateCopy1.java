@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the mandate, for which a copy of the details is requested.
@@ -74,6 +78,8 @@ import java.util.List;
  * "Identifies the mandate, for which a copy of the details is requested."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MandateCopy1", propOrder = {"originalMessageInformation", "originalMandate", "mandateStatus", "supplementaryData"})
 public class MandateCopy1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -257,6 +263,7 @@ public class MandateCopy1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMsgInf")
 	public OriginalMessageInformation1 getOriginalMessageInformation() {
 		return originalMessageInformation;
 	}
@@ -265,6 +272,7 @@ public class MandateCopy1 {
 		this.originalMessageInformation = originalMessageInformation;
 	}
 
+	@XmlElement(name = "OrgnlMndt", required = true)
 	public OriginalMandate4Choice getOriginalMandate() {
 		return originalMandate;
 	}
@@ -273,6 +281,7 @@ public class MandateCopy1 {
 		this.originalMandate = originalMandate;
 	}
 
+	@XmlElement(name = "MndtSts")
 	public MandateStatus1Choice getMandateStatus() {
 		return mandateStatus;
 	}
@@ -281,6 +290,7 @@ public class MandateCopy1 {
 		this.mandateStatus = mandateStatus;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

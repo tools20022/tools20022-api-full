@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Clearing circuits information.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Clearing circuits information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClearingCircuits1", propOrder = {"clearingCircuit", "claimLimitIndicator", "clearingSchemeShortName", "clearingSchemeLongName", "allOrNothingIndicator", "guaranteeFunds", "clearingAccount", "clearingAccountOwner"})
 public class ClearingCircuits1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -431,6 +437,7 @@ public class ClearingCircuits1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClrCrct", required = true)
 	public ClearingScheme1Choice getClearingCircuit() {
 		return clearingCircuit;
 	}
@@ -439,6 +446,7 @@ public class ClearingCircuits1 {
 		this.clearingCircuit = clearingCircuit;
 	}
 
+	@XmlElement(name = "ClmLmtInd", required = true)
 	public YesNoIndicator getClaimLimitIndicator() {
 		return claimLimitIndicator;
 	}
@@ -447,6 +455,7 @@ public class ClearingCircuits1 {
 		this.claimLimitIndicator = claimLimitIndicator;
 	}
 
+	@XmlElement(name = "ClrSchmeShrtNm", required = true)
 	public Max40Text getClearingSchemeShortName() {
 		return clearingSchemeShortName;
 	}
@@ -455,6 +464,7 @@ public class ClearingCircuits1 {
 		this.clearingSchemeShortName = clearingSchemeShortName;
 	}
 
+	@XmlElement(name = "ClrSchmeLngNm", required = true)
 	public Max140Text getClearingSchemeLongName() {
 		return clearingSchemeLongName;
 	}
@@ -463,6 +473,7 @@ public class ClearingCircuits1 {
 		this.clearingSchemeLongName = clearingSchemeLongName;
 	}
 
+	@XmlElement(name = "AllOrNthgInd", required = true)
 	public YesNoIndicator getAllOrNothingIndicator() {
 		return allOrNothingIndicator;
 	}
@@ -471,6 +482,7 @@ public class ClearingCircuits1 {
 		this.allOrNothingIndicator = allOrNothingIndicator;
 	}
 
+	@XmlElement(name = "GrntFnds", required = true)
 	public GuaranteeFunds1 getGuaranteeFunds() {
 		return guaranteeFunds;
 	}
@@ -479,6 +491,7 @@ public class ClearingCircuits1 {
 		this.guaranteeFunds = guaranteeFunds;
 	}
 
+	@XmlElement(name = "ClrAcct", required = true)
 	public CashAccount24 getClearingAccount() {
 		return clearingAccount;
 	}
@@ -487,6 +500,7 @@ public class ClearingCircuits1 {
 		this.clearingAccount = clearingAccount;
 	}
 
+	@XmlElement(name = "ClrAcctOwnr", required = true)
 	public FinancialInstitutionIdentification9 getClearingAccountOwner() {
 		return clearingAccountOwner;
 	}

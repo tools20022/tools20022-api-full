@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.CardAggregated1;
 import com.tools20022.repository.msg.CardIndividualTransaction1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a acquirer globalised card transaction or an individual card
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransaction1Choice", propOrder = {"aggregated", "individual"})
 public class CardTransaction1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -208,6 +214,7 @@ public class CardTransaction1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Aggtd", required = true)
 	public CardAggregated1 getAggregated() {
 		return aggregated;
 	}
@@ -216,6 +223,7 @@ public class CardTransaction1Choice {
 		this.aggregated = aggregated;
 	}
 
+	@XmlElement(name = "Indv", required = true)
 	public CardIndividualTransaction1 getIndividual() {
 		return individual;
 	}

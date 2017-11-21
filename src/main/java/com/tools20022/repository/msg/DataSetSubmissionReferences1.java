@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides references to the submitted data set both for the TSU and for the
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DataSetSubmissionReferences1", propOrder = {"transactionIdentification", "submitterTransactionReference", "finalSubmission"})
 public class DataSetSubmissionReferences1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -219,6 +225,7 @@ public class DataSetSubmissionReferences1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -227,6 +234,7 @@ public class DataSetSubmissionReferences1 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "SubmitrTxRef", required = true)
 	public DocumentIdentification5 getSubmitterTransactionReference() {
 		return submitterTransactionReference;
 	}
@@ -235,6 +243,7 @@ public class DataSetSubmissionReferences1 {
 		this.submitterTransactionReference = submitterTransactionReference;
 	}
 
+	@XmlElement(name = "FnlSubmissn", required = true)
 	public YesNoIndicator getFinalSubmission() {
 		return finalSubmission;
 	}

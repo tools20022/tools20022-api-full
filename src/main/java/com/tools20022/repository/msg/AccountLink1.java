@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines how the securities account is linked to the cash account.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Defines how the securities account is linked to the cash account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountLink1", propOrder = {"securitiesAccount", "cashAccount", "validFrom", "validTo", "defaultIndicator", "collateralisationIndicator", "cashSettlementIndicator"})
 public class AccountLink1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -440,6 +446,7 @@ public class AccountLink1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesAcct", required = true)
 	public SecuritiesAccount13 getSecuritiesAccount() {
 		return securitiesAccount;
 	}
@@ -448,6 +455,7 @@ public class AccountLink1 {
 		this.securitiesAccount = securitiesAccount;
 	}
 
+	@XmlElement(name = "CshAcct", required = true)
 	public CashAccount24 getCashAccount() {
 		return cashAccount;
 	}
@@ -456,6 +464,7 @@ public class AccountLink1 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "VldFr", required = true)
 	public DateAndDateTimeChoice getValidFrom() {
 		return validFrom;
 	}
@@ -464,6 +473,7 @@ public class AccountLink1 {
 		this.validFrom = validFrom;
 	}
 
+	@XmlElement(name = "VldTo")
 	public DateAndDateTimeChoice getValidTo() {
 		return validTo;
 	}
@@ -472,6 +482,7 @@ public class AccountLink1 {
 		this.validTo = validTo;
 	}
 
+	@XmlElement(name = "DfltInd", required = true)
 	public YesNoIndicator getDefaultIndicator() {
 		return defaultIndicator;
 	}
@@ -480,6 +491,7 @@ public class AccountLink1 {
 		this.defaultIndicator = defaultIndicator;
 	}
 
+	@XmlElement(name = "CollstnInd", required = true)
 	public YesNoIndicator getCollateralisationIndicator() {
 		return collateralisationIndicator;
 	}
@@ -488,6 +500,7 @@ public class AccountLink1 {
 		this.collateralisationIndicator = collateralisationIndicator;
 	}
 
+	@XmlElement(name = "CshSttlmInd", required = true)
 	public YesNoIndicator getCashSettlementIndicator() {
 		return cashSettlementIndicator;
 	}

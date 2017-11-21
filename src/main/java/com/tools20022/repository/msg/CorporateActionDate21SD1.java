@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extension to cater for specific corporate action dates.
@@ -92,6 +96,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Extension to cater for specific corporate action dates."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionDate21SD1", propOrder = {"placeAndName", "webServiceNotificationDate", "previousWebServiceNotificationDate", "actualRecordDate", "boardMeetingDate", "corporateRegistrationDate",
+		"earliestPlannedDateOfIssuePrice", "latestPlannedDateOfIssuePrice", "dateOfIssuePrice", "earliestPlannedSubscriptionCostPaymentDate", "latestPlannedSubscriptionCostPaymentDate", "subsequentListingDate",
+		"newShareUnitQuantityEffectiveDate"})
 public class CorporateActionDate21SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -693,6 +701,7 @@ public class CorporateActionDate21SD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -701,6 +710,7 @@ public class CorporateActionDate21SD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "WebSvcNtfctnDt")
 	public DateFormat22Choice getWebServiceNotificationDate() {
 		return webServiceNotificationDate;
 	}
@@ -709,6 +719,7 @@ public class CorporateActionDate21SD1 {
 		this.webServiceNotificationDate = webServiceNotificationDate;
 	}
 
+	@XmlElement(name = "PrvsWebSvcNtfctnDt")
 	public DateFormat22Choice getPreviousWebServiceNotificationDate() {
 		return previousWebServiceNotificationDate;
 	}
@@ -717,6 +728,7 @@ public class CorporateActionDate21SD1 {
 		this.previousWebServiceNotificationDate = previousWebServiceNotificationDate;
 	}
 
+	@XmlElement(name = "ActlRcrdDt")
 	public DateFormat22Choice getActualRecordDate() {
 		return actualRecordDate;
 	}
@@ -725,6 +737,7 @@ public class CorporateActionDate21SD1 {
 		this.actualRecordDate = actualRecordDate;
 	}
 
+	@XmlElement(name = "BrdMtgDt")
 	public DateFormat22Choice getBoardMeetingDate() {
 		return boardMeetingDate;
 	}
@@ -733,6 +746,7 @@ public class CorporateActionDate21SD1 {
 		this.boardMeetingDate = boardMeetingDate;
 	}
 
+	@XmlElement(name = "CorpRegnDt")
 	public DateFormat22Choice getCorporateRegistrationDate() {
 		return corporateRegistrationDate;
 	}
@@ -741,6 +755,7 @@ public class CorporateActionDate21SD1 {
 		this.corporateRegistrationDate = corporateRegistrationDate;
 	}
 
+	@XmlElement(name = "EarlstPlandDtOfIssePric")
 	public DateFormat22Choice getEarliestPlannedDateOfIssuePrice() {
 		return earliestPlannedDateOfIssuePrice;
 	}
@@ -749,6 +764,7 @@ public class CorporateActionDate21SD1 {
 		this.earliestPlannedDateOfIssuePrice = earliestPlannedDateOfIssuePrice;
 	}
 
+	@XmlElement(name = "LatstPlandDtOfIssePric")
 	public DateFormat22Choice getLatestPlannedDateOfIssuePrice() {
 		return latestPlannedDateOfIssuePrice;
 	}
@@ -757,6 +773,7 @@ public class CorporateActionDate21SD1 {
 		this.latestPlannedDateOfIssuePrice = latestPlannedDateOfIssuePrice;
 	}
 
+	@XmlElement(name = "DtOfIssePric")
 	public DateFormat22Choice getDateOfIssuePrice() {
 		return dateOfIssuePrice;
 	}
@@ -765,6 +782,7 @@ public class CorporateActionDate21SD1 {
 		this.dateOfIssuePrice = dateOfIssuePrice;
 	}
 
+	@XmlElement(name = "EarlstPlandSbcptCostPmtDt")
 	public DateFormat22Choice getEarliestPlannedSubscriptionCostPaymentDate() {
 		return earliestPlannedSubscriptionCostPaymentDate;
 	}
@@ -773,6 +791,7 @@ public class CorporateActionDate21SD1 {
 		this.earliestPlannedSubscriptionCostPaymentDate = earliestPlannedSubscriptionCostPaymentDate;
 	}
 
+	@XmlElement(name = "LatstPlandSbcptCostPmtDt")
 	public DateFormat22Choice getLatestPlannedSubscriptionCostPaymentDate() {
 		return latestPlannedSubscriptionCostPaymentDate;
 	}
@@ -781,6 +800,7 @@ public class CorporateActionDate21SD1 {
 		this.latestPlannedSubscriptionCostPaymentDate = latestPlannedSubscriptionCostPaymentDate;
 	}
 
+	@XmlElement(name = "SbsqntListgDt")
 	public DateFormat22Choice getSubsequentListingDate() {
 		return subsequentListingDate;
 	}
@@ -789,6 +809,7 @@ public class CorporateActionDate21SD1 {
 		this.subsequentListingDate = subsequentListingDate;
 	}
 
+	@XmlElement(name = "NewShrUnitQtyFctvDt")
 	public DateFormat22Choice getNewShareUnitQuantityEffectiveDate() {
 		return newShareUnitQuantityEffectiveDate;
 	}

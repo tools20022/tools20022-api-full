@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.CorporateActionAgent1;
 import com.tools20022.repository.msg.CorporateActionOption1;
 import com.tools20022.repository.msg.IssuerAgent1;
 import com.tools20022.repository.msg.IssuerAgent2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -42,6 +43,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionAgent#mmAgentRole
+ * CorporateActionAgent.mmAgentRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPartyRole
+ * CorporateActionPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -61,18 +74,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmCorporateActionOtherAgentDetails
  * CorporateActionOption1.mmCorporateActionOtherAgentDetails}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.CorporateActionPartyRole
- * CorporateActionPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionAgent#mmAgentRole
- * CorporateActionAgent.mmAgentRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -106,11 +107,6 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AgentRoleCode
 	 * AgentRoleCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionAgent
-	 * CorporateActionAgent}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -130,6 +126,11 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionAgent
+	 * CorporateActionAgent}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -145,7 +146,7 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 	public static final MMBusinessAttribute mmAgentRole = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(IssuerAgent1.mmRole, AgentRole1FormatChoice.mmCode, AgentRole1FormatChoice.mmProprietary, CorporateActionAgent1.mmAgentRole, IssuerAgent2.mmRole);
-			elementContext_lazy = () -> CorporateActionAgent.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionAgent.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AgentRole";
@@ -153,6 +154,14 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AgentRoleCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionAgent.class.getMethod("getAgentRole", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -165,8 +174,13 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 				definition = "A firm authorised to act as an intermediary between issuer and shareholders. It takes care of the needs of the shareholders such as reporting, inquiries and regulatory compliance.";
 				derivationElement_lazy = () -> Arrays.asList(CorporateActionOption1.mmCorporateActionOtherAgentDetails);
 				superType_lazy = () -> CorporateActionPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(CorporateActionAgent.mmAgentRole);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionAgent.mmAgentRole);
 				derivationComponent_lazy = () -> Arrays.asList(IssuerAgent1.mmObject(), AgentRole1FormatChoice.mmObject(), CorporateActionAgent1.mmObject(), IssuerAgent2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionAgent.class;
 			}
 		});
 		return mmObject_lazy.get();

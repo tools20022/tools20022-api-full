@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max5NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Numeric characters of the cardholder's address for verification.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Numeric characters of the cardholder's address for verification."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AddressVerification1", propOrder = {"addressDigits", "postalCodeDigits"})
 public class AddressVerification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +168,7 @@ public class AddressVerification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AdrDgts")
 	public Max5NumericText getAddressDigits() {
 		return addressDigits;
 	}
@@ -170,6 +177,7 @@ public class AddressVerification1 {
 		this.addressDigits = addressDigits;
 	}
 
+	@XmlElement(name = "PstlCdDgts")
 	public Max5NumericText getPostalCodeDigits() {
 		return postalCodeDigits;
 	}

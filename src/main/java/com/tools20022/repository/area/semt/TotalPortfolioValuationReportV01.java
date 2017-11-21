@@ -25,8 +25,10 @@ import com.tools20022.repository.area.SecuritiesManagementLatestVersion;
 import com.tools20022.repository.choice.PortfolioBalance1;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TotalPortfolioValuationReportISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -48,9 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.024.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
@@ -92,6 +91,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.024.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -103,6 +105,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TotalPortfolioValuationReportV01", propOrder = {"pagination", "reportGeneralDetails", "accountDetails", "totalPortfolioValuation", "balance", "supplementaryData"})
 public class TotalPortfolioValuationReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -143,6 +147,14 @@ public class TotalPortfolioValuationReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TotalPortfolioValuationReportV01.class.getMethod("getPagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Report4 reportGeneralDetails;
 	/**
@@ -177,6 +189,14 @@ public class TotalPortfolioValuationReportV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Report4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TotalPortfolioValuationReportV01.class.getMethod("getReportGeneralDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesAccount21 accountDetails;
@@ -216,6 +236,14 @@ public class TotalPortfolioValuationReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount21.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TotalPortfolioValuationReportV01.class.getMethod("getAccountDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TotalPortfolioValuation1 totalPortfolioValuation;
 	/**
@@ -254,6 +282,14 @@ public class TotalPortfolioValuationReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> TotalPortfolioValuation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TotalPortfolioValuationReportV01.class.getMethod("getTotalPortfolioValuation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PortfolioBalance1 balance;
 	/**
@@ -288,6 +324,14 @@ public class TotalPortfolioValuationReportV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PortfolioBalance1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TotalPortfolioValuationReportV01.class.getMethod("getBalance", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SupplementaryData1 supplementaryData;
@@ -327,6 +371,14 @@ public class TotalPortfolioValuationReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TotalPortfolioValuationReportV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -339,8 +391,9 @@ public class TotalPortfolioValuationReportV01 {
 				rootElement = "Document";
 				xmlTag = "TtlPrtflValtnRpt";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(TotalPortfolioValuationReportV01.mmPagination, TotalPortfolioValuationReportV01.mmReportGeneralDetails, TotalPortfolioValuationReportV01.mmAccountDetails,
-						TotalPortfolioValuationReportV01.mmTotalPortfolioValuation, TotalPortfolioValuationReportV01.mmBalance, TotalPortfolioValuationReportV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmPagination, com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmReportGeneralDetails,
+						com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmAccountDetails, com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmTotalPortfolioValuation,
+						com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmBalance, com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -350,10 +403,16 @@ public class TotalPortfolioValuationReportV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TotalPortfolioValuationReportV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
@@ -362,6 +421,7 @@ public class TotalPortfolioValuationReportV01 {
 		this.pagination = pagination;
 	}
 
+	@XmlElement(name = "RptGnlDtls", required = true)
 	public Report4 getReportGeneralDetails() {
 		return reportGeneralDetails;
 	}
@@ -370,6 +430,7 @@ public class TotalPortfolioValuationReportV01 {
 		this.reportGeneralDetails = reportGeneralDetails;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public SecuritiesAccount21 getAccountDetails() {
 		return accountDetails;
 	}
@@ -378,6 +439,7 @@ public class TotalPortfolioValuationReportV01 {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "TtlPrtflValtn", required = true)
 	public TotalPortfolioValuation1 getTotalPortfolioValuation() {
 		return totalPortfolioValuation;
 	}
@@ -386,6 +448,7 @@ public class TotalPortfolioValuationReportV01 {
 		this.totalPortfolioValuation = totalPortfolioValuation;
 	}
 
+	@XmlElement(name = "Bal")
 	public PortfolioBalance1 getBalance() {
 		return balance;
 	}
@@ -394,11 +457,18 @@ public class TotalPortfolioValuationReportV01 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public SupplementaryData1 getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(SupplementaryData1 supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.024.01.01")
+	static public class Document {
+		@XmlElement(name = "TtlPrtflValtnRpt", required = true)
+		public TotalPortfolioValuationReportV01 messageBody;
 	}
 }

@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action instructed balance
@@ -115,6 +119,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1", propOrder = {"placeAndName", "protectIdentification", "protectSequenceNumber", "optionNumber", "protectDate", "coverProtectDate",
+		"protectIdentificationQuantity", "protectIdentificationUncoveredQuantity", "protectIdentificationOversubscriptionQuantity", "protectIdentificationStatus", "protectConditionalQuantity", "protectTenderBidPrice",
+		"customerReferenceIdentification"})
 public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -697,6 +705,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -705,6 +714,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "PrtctId", required = true)
 	public Max15Text getProtectIdentification() {
 		return protectIdentification;
 	}
@@ -713,6 +723,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 		this.protectIdentification = protectIdentification;
 	}
 
+	@XmlElement(name = "PrtctSeqNb")
 	public Max3NumericText getProtectSequenceNumber() {
 		return protectSequenceNumber;
 	}
@@ -721,6 +732,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 		this.protectSequenceNumber = protectSequenceNumber;
 	}
 
+	@XmlElement(name = "OptnNb", required = true)
 	public OptionNumber1Choice getOptionNumber() {
 		return optionNumber;
 	}
@@ -729,6 +741,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "PrtctDt", required = true)
 	public ISODateTime getProtectDate() {
 		return protectDate;
 	}
@@ -737,6 +750,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 		this.protectDate = protectDate;
 	}
 
+	@XmlElement(name = "CoverPrtctDt")
 	public ISODateTime getCoverProtectDate() {
 		return coverProtectDate;
 	}
@@ -745,6 +759,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 		this.coverProtectDate = coverProtectDate;
 	}
 
+	@XmlElement(name = "PrtctIdQty", required = true)
 	public FinancialInstrumentQuantity15Choice getProtectIdentificationQuantity() {
 		return protectIdentificationQuantity;
 	}
@@ -753,6 +768,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 		this.protectIdentificationQuantity = protectIdentificationQuantity;
 	}
 
+	@XmlElement(name = "PrtctIdUcvrdQty")
 	public FinancialInstrumentQuantity15Choice getProtectIdentificationUncoveredQuantity() {
 		return protectIdentificationUncoveredQuantity;
 	}
@@ -761,6 +777,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 		this.protectIdentificationUncoveredQuantity = protectIdentificationUncoveredQuantity;
 	}
 
+	@XmlElement(name = "PrtctIdOvrsbcptQty")
 	public FinancialInstrumentQuantity15Choice getProtectIdentificationOversubscriptionQuantity() {
 		return protectIdentificationOversubscriptionQuantity;
 	}
@@ -769,6 +786,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 		this.protectIdentificationOversubscriptionQuantity = protectIdentificationOversubscriptionQuantity;
 	}
 
+	@XmlElement(name = "PrtctIdSts")
 	public DTCProtectInstructionStatus1Code getProtectIdentificationStatus() {
 		return protectIdentificationStatus;
 	}
@@ -777,6 +795,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 		this.protectIdentificationStatus = protectIdentificationStatus;
 	}
 
+	@XmlElement(name = "PrtctCondlQty")
 	public FinancialInstrumentQuantity15Choice getProtectConditionalQuantity() {
 		return protectConditionalQuantity;
 	}
@@ -785,6 +804,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 		this.protectConditionalQuantity = protectConditionalQuantity;
 	}
 
+	@XmlElement(name = "PrtctTndrBidPric")
 	public PriceFormat57Choice getProtectTenderBidPrice() {
 		return protectTenderBidPrice;
 	}
@@ -793,6 +813,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 		this.protectTenderBidPrice = protectTenderBidPrice;
 	}
 
+	@XmlElement(name = "CstmrRefId")
 	public Max15Text getCustomerReferenceIdentification() {
 		return customerReferenceIdentification;
 	}

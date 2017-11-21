@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.VariationMarginTerm;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Elements used to calculate the collateral margin call for the variation
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "VariationMargin1", propOrder = {"thresholdAmount", "thresholdType", "minimumTransferAmount", "roundingAmount", "roundingMethod"})
 public class VariationMargin1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -349,6 +355,7 @@ public class VariationMargin1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ThrshldAmt", required = true)
 	public ActiveCurrencyAndAmount getThresholdAmount() {
 		return thresholdAmount;
 	}
@@ -357,6 +364,7 @@ public class VariationMargin1 {
 		this.thresholdAmount = thresholdAmount;
 	}
 
+	@XmlElement(name = "ThrshldTp")
 	public ThresholdType1Code getThresholdType() {
 		return thresholdType;
 	}
@@ -365,6 +373,7 @@ public class VariationMargin1 {
 		this.thresholdType = thresholdType;
 	}
 
+	@XmlElement(name = "MinTrfAmt", required = true)
 	public ActiveCurrencyAndAmount getMinimumTransferAmount() {
 		return minimumTransferAmount;
 	}
@@ -373,6 +382,7 @@ public class VariationMargin1 {
 		this.minimumTransferAmount = minimumTransferAmount;
 	}
 
+	@XmlElement(name = "RndgAmt", required = true)
 	public ActiveCurrencyAndAmount getRoundingAmount() {
 		return roundingAmount;
 	}
@@ -381,6 +391,7 @@ public class VariationMargin1 {
 		this.roundingAmount = roundingAmount;
 	}
 
+	@XmlElement(name = "RndgMtd", required = true)
 	public RoundingMethod1Code getRoundingMethod() {
 		return roundingMethod;
 	}

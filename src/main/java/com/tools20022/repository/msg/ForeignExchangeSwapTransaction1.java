@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of each individual foreign exchange swap transaction.
@@ -109,6 +113,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ForeignExchangeSwapTransaction1", propOrder = {"reportedTransactionStatus", "uniqueTransactionIdentifier", "proprietaryTransactionIdentification", "counterpartyProprietaryTransactionIdentification",
+		"counterpartyIdentification", "tradeDate", "spotValueDate", "maturityDate", "transactionType", "transactionNominalAmount", "foreignExchange", "supplementaryData"})
 public class ForeignExchangeSwapTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -852,6 +859,7 @@ public class ForeignExchangeSwapTransaction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptdTxSts", required = true)
 	public TransactionOperationType1Code getReportedTransactionStatus() {
 		return reportedTransactionStatus;
 	}
@@ -860,6 +868,7 @@ public class ForeignExchangeSwapTransaction1 {
 		this.reportedTransactionStatus = reportedTransactionStatus;
 	}
 
+	@XmlElement(name = "UnqTxIdr")
 	public Max105Text getUniqueTransactionIdentifier() {
 		return uniqueTransactionIdentifier;
 	}
@@ -868,6 +877,7 @@ public class ForeignExchangeSwapTransaction1 {
 		this.uniqueTransactionIdentifier = uniqueTransactionIdentifier;
 	}
 
+	@XmlElement(name = "PrtryTxId", required = true)
 	public Max105Text getProprietaryTransactionIdentification() {
 		return proprietaryTransactionIdentification;
 	}
@@ -876,6 +886,7 @@ public class ForeignExchangeSwapTransaction1 {
 		this.proprietaryTransactionIdentification = proprietaryTransactionIdentification;
 	}
 
+	@XmlElement(name = "CtrPtyPrtryTxId")
 	public Max105Text getCounterpartyProprietaryTransactionIdentification() {
 		return counterpartyProprietaryTransactionIdentification;
 	}
@@ -884,6 +895,7 @@ public class ForeignExchangeSwapTransaction1 {
 		this.counterpartyProprietaryTransactionIdentification = counterpartyProprietaryTransactionIdentification;
 	}
 
+	@XmlElement(name = "CtrPtyId", required = true)
 	public CounterpartyIdentification1Choice getCounterpartyIdentification() {
 		return counterpartyIdentification;
 	}
@@ -892,6 +904,7 @@ public class ForeignExchangeSwapTransaction1 {
 		this.counterpartyIdentification = counterpartyIdentification;
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public DateAndDateTimeChoice getTradeDate() {
 		return tradeDate;
 	}
@@ -900,6 +913,7 @@ public class ForeignExchangeSwapTransaction1 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "SpotValDt", required = true)
 	public ISODate getSpotValueDate() {
 		return spotValueDate;
 	}
@@ -908,6 +922,7 @@ public class ForeignExchangeSwapTransaction1 {
 		this.spotValueDate = spotValueDate;
 	}
 
+	@XmlElement(name = "MtrtyDt", required = true)
 	public ISODate getMaturityDate() {
 		return maturityDate;
 	}
@@ -916,6 +931,7 @@ public class ForeignExchangeSwapTransaction1 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "TxTp", required = true)
 	public SecuritiesTransactionType15Code getTransactionType() {
 		return transactionType;
 	}
@@ -924,6 +940,7 @@ public class ForeignExchangeSwapTransaction1 {
 		this.transactionType = transactionType;
 	}
 
+	@XmlElement(name = "TxNmnlAmt", required = true)
 	public ActiveCurrencyAndAmount getTransactionNominalAmount() {
 		return transactionNominalAmount;
 	}
@@ -932,6 +949,7 @@ public class ForeignExchangeSwapTransaction1 {
 		this.transactionNominalAmount = transactionNominalAmount;
 	}
 
+	@XmlElement(name = "FX", required = true)
 	public ForeignExchange1 getForeignExchange() {
 		return foreignExchange;
 	}
@@ -940,6 +958,7 @@ public class ForeignExchangeSwapTransaction1 {
 		this.foreignExchange = foreignExchange;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

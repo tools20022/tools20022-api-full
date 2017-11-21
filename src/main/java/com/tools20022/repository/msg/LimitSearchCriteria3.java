@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for a limit.
@@ -90,6 +94,9 @@ import java.util.List;
  * definition} = "Defines the criteria used to search for a limit."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LimitSearchCriteria3", propOrder = {"systemIdentification", "bilateralLimitCounterpartyIdentification", "defaultLimitType", "currentLimitType", "accountOwner", "accountIdentification", "usedAmount", "usedPercentage",
+		"limitCurrency", "limitAmount", "limitValidAsOfDate"})
 public class LimitSearchCriteria3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -641,6 +648,7 @@ public class LimitSearchCriteria3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysId")
 	public SystemIdentification2Choice getSystemIdentification() {
 		return systemIdentification;
 	}
@@ -649,6 +657,7 @@ public class LimitSearchCriteria3 {
 		this.systemIdentification = systemIdentification;
 	}
 
+	@XmlElement(name = "BilLmtCtrPtyId")
 	public List<BranchAndFinancialInstitutionIdentification5> getBilateralLimitCounterpartyIdentification() {
 		return bilateralLimitCounterpartyIdentification;
 	}
@@ -657,6 +666,7 @@ public class LimitSearchCriteria3 {
 		this.bilateralLimitCounterpartyIdentification = bilateralLimitCounterpartyIdentification;
 	}
 
+	@XmlElement(name = "DfltLmtTp")
 	public List<LimitType1Choice> getDefaultLimitType() {
 		return defaultLimitType;
 	}
@@ -665,6 +675,7 @@ public class LimitSearchCriteria3 {
 		this.defaultLimitType = defaultLimitType;
 	}
 
+	@XmlElement(name = "CurLmtTp")
 	public List<LimitType1Choice> getCurrentLimitType() {
 		return currentLimitType;
 	}
@@ -673,6 +684,7 @@ public class LimitSearchCriteria3 {
 		this.currentLimitType = currentLimitType;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public BranchAndFinancialInstitutionIdentification5 getAccountOwner() {
 		return accountOwner;
 	}
@@ -681,6 +693,7 @@ public class LimitSearchCriteria3 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctId")
 	public AccountIdentification4Choice getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -689,6 +702,7 @@ public class LimitSearchCriteria3 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "UsdAmt")
 	public AmountRange2Choice getUsedAmount() {
 		return usedAmount;
 	}
@@ -697,6 +711,7 @@ public class LimitSearchCriteria3 {
 		this.usedAmount = usedAmount;
 	}
 
+	@XmlElement(name = "UsdPctg")
 	public PercentageRange1Choice getUsedPercentage() {
 		return usedPercentage;
 	}
@@ -705,6 +720,7 @@ public class LimitSearchCriteria3 {
 		this.usedPercentage = usedPercentage;
 	}
 
+	@XmlElement(name = "LmtCcy")
 	public ActiveCurrencyCode getLimitCurrency() {
 		return limitCurrency;
 	}
@@ -713,6 +729,7 @@ public class LimitSearchCriteria3 {
 		this.limitCurrency = limitCurrency;
 	}
 
+	@XmlElement(name = "LmtAmt")
 	public AmountRange2Choice getLimitAmount() {
 		return limitAmount;
 	}
@@ -721,6 +738,7 @@ public class LimitSearchCriteria3 {
 		this.limitAmount = limitAmount;
 	}
 
+	@XmlElement(name = "LmtVldAsOfDt")
 	public DateAndPeriod2Choice getLimitValidAsOfDate() {
 		return limitValidAsOfDate;
 	}

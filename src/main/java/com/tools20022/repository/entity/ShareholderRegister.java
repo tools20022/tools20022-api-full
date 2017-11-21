@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +93,7 @@ public class ShareholderRegister {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> ShareholderRegister.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ShareholderRegister.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -100,6 +101,14 @@ public class ShareholderRegister {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ShareholderRegister.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DecimalNumber entry;
@@ -133,7 +142,7 @@ public class ShareholderRegister {
 	 */
 	public static final MMBusinessAttribute mmEntry = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> ShareholderRegister.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ShareholderRegister.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Entry";
@@ -141,6 +150,14 @@ public class ShareholderRegister {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ShareholderRegister.class.getMethod("getEntry", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -151,7 +168,12 @@ public class ShareholderRegister {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShareholderRegister";
 				definition = "Contains a list of owners and the quantity of securities they own.";
-				element_lazy = () -> Arrays.asList(ShareholderRegister.mmIdentification, ShareholderRegister.mmEntry);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ShareholderRegister.mmIdentification, com.tools20022.repository.entity.ShareholderRegister.mmEntry);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ShareholderRegister.class;
 			}
 		});
 		return mmObject_lazy.get();

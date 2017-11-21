@@ -66,6 +66,11 @@ public class SecuritiesTradeSystemRole extends SecuritiesTradePartyRole {
 				definition = "Role played by a system in the context of a securities trade.";
 				superType_lazy = () -> SecuritiesTradePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesTradeSystemRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

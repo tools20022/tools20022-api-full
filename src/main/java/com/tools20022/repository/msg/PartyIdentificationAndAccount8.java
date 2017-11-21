@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Entity involved in an activity.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Entity involved in an activity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount8", propOrder = {"identification", "safekeepingAccount", "cashAccount", "processingIdentification", "additionalInformation", "alternateIdentification"})
 public class PartyIdentificationAndAccount8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -376,6 +382,7 @@ public class PartyIdentificationAndAccount8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification2Choice getIdentification() {
 		return identification;
 	}
@@ -384,6 +391,7 @@ public class PartyIdentificationAndAccount8 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public Max35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -392,6 +400,7 @@ public class PartyIdentificationAndAccount8 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccountIdentification2Choice getCashAccount() {
 		return cashAccount;
 	}
@@ -400,6 +409,7 @@ public class PartyIdentificationAndAccount8 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public Max35Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -408,6 +418,7 @@ public class PartyIdentificationAndAccount8 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public PartyTextInformation1 getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -416,6 +427,7 @@ public class PartyIdentificationAndAccount8 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification1 getAlternateIdentification() {
 		return alternateIdentification;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.CorporateActionEventRegistration;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a linked corporate action event.
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identification of a linked corporate action event."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionEventReference4", propOrder = {"eventIdentification", "linkageType"})
 public class CorporateActionEventReference4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -198,6 +204,7 @@ public class CorporateActionEventReference4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EvtId", required = true)
 	public CorporateActionEventReference4Choice getEventIdentification() {
 		return eventIdentification;
 	}
@@ -206,6 +213,7 @@ public class CorporateActionEventReference4 {
 		this.eventIdentification = eventIdentification;
 	}
 
+	@XmlElement(name = "LkgTp")
 	public ProcessingPosition10Choice getLinkageType() {
 		return linkageType;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.AllegementMatchingReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the matching processing status.
@@ -70,6 +74,8 @@ import java.util.List;
  * MatchingReason3Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MatchingReason4Choice", propOrder = {"reason", "noSpecifiedReason"})
 public class MatchingReason4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class MatchingReason4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public List<AllegementMatchingReason1> getReason() {
 		return reason;
 	}
@@ -204,6 +211,7 @@ public class MatchingReason4Choice {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}

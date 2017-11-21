@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details of the account statement.
@@ -121,6 +125,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountStatement3", propOrder = {"identification", "statementPagination", "electronicSequenceNumber", "legalSequenceNumber", "creationDateTime", "fromToDate", "copyDuplicateIndicator", "reportingSource", "account",
+		"relatedAccount", "interest", "balance", "transactionsSummary", "entry", "additionalStatementInformation"})
 public class AccountStatement3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -831,6 +838,7 @@ public class AccountStatement3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -839,6 +847,7 @@ public class AccountStatement3 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "StmtPgntn")
 	public Pagination getStatementPagination() {
 		return statementPagination;
 	}
@@ -847,6 +856,7 @@ public class AccountStatement3 {
 		this.statementPagination = statementPagination;
 	}
 
+	@XmlElement(name = "ElctrncSeqNb")
 	public Number getElectronicSequenceNumber() {
 		return electronicSequenceNumber;
 	}
@@ -855,6 +865,7 @@ public class AccountStatement3 {
 		this.electronicSequenceNumber = electronicSequenceNumber;
 	}
 
+	@XmlElement(name = "LglSeqNb")
 	public Number getLegalSequenceNumber() {
 		return legalSequenceNumber;
 	}
@@ -863,6 +874,7 @@ public class AccountStatement3 {
 		this.legalSequenceNumber = legalSequenceNumber;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -871,6 +883,7 @@ public class AccountStatement3 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "FrToDt")
 	public DateTimePeriodDetails getFromToDate() {
 		return fromToDate;
 	}
@@ -879,6 +892,7 @@ public class AccountStatement3 {
 		this.fromToDate = fromToDate;
 	}
 
+	@XmlElement(name = "CpyDplctInd")
 	public CopyDuplicate1Code getCopyDuplicateIndicator() {
 		return copyDuplicateIndicator;
 	}
@@ -887,6 +901,7 @@ public class AccountStatement3 {
 		this.copyDuplicateIndicator = copyDuplicateIndicator;
 	}
 
+	@XmlElement(name = "RptgSrc")
 	public ReportingSource1Choice getReportingSource() {
 		return reportingSource;
 	}
@@ -895,6 +910,7 @@ public class AccountStatement3 {
 		this.reportingSource = reportingSource;
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CashAccount25 getAccount() {
 		return account;
 	}
@@ -903,6 +919,7 @@ public class AccountStatement3 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "RltdAcct")
 	public CashAccount24 getRelatedAccount() {
 		return relatedAccount;
 	}
@@ -911,6 +928,7 @@ public class AccountStatement3 {
 		this.relatedAccount = relatedAccount;
 	}
 
+	@XmlElement(name = "Intrst")
 	public List<AccountInterest2> getInterest() {
 		return interest;
 	}
@@ -919,6 +937,7 @@ public class AccountStatement3 {
 		this.interest = interest;
 	}
 
+	@XmlElement(name = "Bal", required = true)
 	public List<CashBalance3> getBalance() {
 		return balance;
 	}
@@ -927,6 +946,7 @@ public class AccountStatement3 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "TxsSummry")
 	public TotalTransactions2 getTransactionsSummary() {
 		return transactionsSummary;
 	}
@@ -935,6 +955,7 @@ public class AccountStatement3 {
 		this.transactionsSummary = transactionsSummary;
 	}
 
+	@XmlElement(name = "Ntry")
 	public List<ReportEntry3> getEntry() {
 		return entry;
 	}
@@ -943,6 +964,7 @@ public class AccountStatement3 {
 		this.entry = entry;
 	}
 
+	@XmlElement(name = "AddtlStmtInf")
 	public Max500Text getAdditionalStatementInformation() {
 		return additionalStatementInformation;
 	}

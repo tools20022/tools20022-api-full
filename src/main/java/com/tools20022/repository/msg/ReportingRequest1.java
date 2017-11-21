@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide details of the reporting request.
@@ -78,6 +82,8 @@ import java.util.List;
  * "Set of elements used to provide details of the reporting request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportingRequest1", propOrder = {"identification", "requestedMessageType", "account", "reportingPeriod", "requestedTransactionType", "requestedBalanceType"})
 public class ReportingRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -370,6 +376,7 @@ public class ReportingRequest1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -378,6 +385,7 @@ public class ReportingRequest1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "ReqdMsgTp")
 	public Max35Text getRequestedMessageType() {
 		return requestedMessageType;
 	}
@@ -386,6 +394,7 @@ public class ReportingRequest1 {
 		this.requestedMessageType = requestedMessageType;
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CashAccount20 getAccount() {
 		return account;
 	}
@@ -394,6 +403,7 @@ public class ReportingRequest1 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "RptgPrd")
 	public ReportingPeriod1 getReportingPeriod() {
 		return reportingPeriod;
 	}
@@ -402,6 +412,7 @@ public class ReportingRequest1 {
 		this.reportingPeriod = reportingPeriod;
 	}
 
+	@XmlElement(name = "ReqdTxTp")
 	public TransactionType1 getRequestedTransactionType() {
 		return requestedTransactionType;
 	}
@@ -410,6 +421,7 @@ public class ReportingRequest1 {
 		this.requestedTransactionType = requestedTransactionType;
 	}
 
+	@XmlElement(name = "ReqdBalTp")
 	public List<BalanceType12> getRequestedBalanceType() {
 		return requestedBalanceType;
 	}

@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additionnal details related to the leg.
@@ -67,6 +71,8 @@ import java.util.function.Supplier;
  * definition} = "Additionnal details related to the leg."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LegDetails1", propOrder = {"ratioQuantity", "side", "currency"})
 public class LegDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -240,6 +246,7 @@ public class LegDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RatioQty")
 	public PercentageRate getRatioQuantity() {
 		return ratioQuantity;
 	}
@@ -248,6 +255,7 @@ public class LegDetails1 {
 		this.ratioQuantity = ratioQuantity;
 	}
 
+	@XmlElement(name = "Sd")
 	public Side1Code getSide() {
 		return side;
 	}
@@ -256,6 +264,7 @@ public class LegDetails1 {
 		this.side = side;
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}

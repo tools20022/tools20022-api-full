@@ -37,6 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOptionTrade#mmOption
+ * SecuritiesOptionTrade.mmOption}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.SecuritiesTrade
+ * SecuritiesTrade}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -44,17 +55,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Option#mmSecuritiesOptionTrade
  * Option.mmSecuritiesOptionTrade}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.SecuritiesTrade
- * SecuritiesTrade}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOptionTrade#mmOption
- * SecuritiesOptionTrade.mmOption}</li>
  * </ul>
  * </li>
  * <li>
@@ -112,7 +112,7 @@ public class SecuritiesOptionTrade extends SecuritiesTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmOption = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesOptionTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOptionTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Option";
@@ -134,7 +134,12 @@ public class SecuritiesOptionTrade extends SecuritiesTrade {
 				definition = "Process of buying or selling an option which has securities as underlying asset.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Option.mmSecuritiesOptionTrade);
 				superType_lazy = () -> SecuritiesTrade.mmObject();
-				element_lazy = () -> Arrays.asList(SecuritiesOptionTrade.mmOption);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOptionTrade.mmOption);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesOptionTrade.class;
 			}
 		});
 		return mmObject_lazy.get();

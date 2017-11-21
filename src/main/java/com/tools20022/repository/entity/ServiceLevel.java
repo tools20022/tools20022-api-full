@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.RequestedModification;
 import com.tools20022.repository.msg.ServiceLevel4;
 import com.tools20022.repository.msg.ServiceLevel5;
 import com.tools20022.repository.msg.ServiceLevel6;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,6 +41,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ServiceLevel#mmPaymentProcessing
+ * ServiceLevel.mmPaymentProcessing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ServiceLevel#mmCode
+ * ServiceLevel.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ServiceLevel#mmOther
+ * ServiceLevel.mmOther}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ServiceLevel#mmBilateral
+ * ServiceLevel.mmBilateral}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -89,20 +104,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.ServiceLevel7Choice#mmProprietary
  * ServiceLevel7Choice.mmProprietary}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ServiceLevel#mmPaymentProcessing
- * ServiceLevel.mmPaymentProcessing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ServiceLevel#mmCode
- * ServiceLevel.mmCode}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ServiceLevel#mmOther
- * ServiceLevel.mmOther}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ServiceLevel#mmBilateral
- * ServiceLevel.mmBilateral}</li>
  * </ul>
  * </li>
  * <li>
@@ -160,7 +161,7 @@ public class ServiceLevel {
 	 */
 	public static final MMBusinessAssociationEnd mmPaymentProcessing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ServiceLevel.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ServiceLevel.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentProcessing";
@@ -184,10 +185,6 @@ public class ServiceLevel {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ServiceLevelCode
 	 * ServiceLevelCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ServiceLevel ServiceLevel}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -215,6 +212,10 @@ public class ServiceLevel {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ServiceLevel ServiceLevel}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -231,7 +232,7 @@ public class ServiceLevel {
 		{
 			derivation_lazy = () -> Arrays.asList(ServiceLevel2Choice.mmCode, ServiceLevel8Choice.mmCode, ServiceLevel3Choice.mmCode, ServiceLevel4.mmCode, ServiceLevel6Choice.mmCode, ServiceLevel6.mmCode, ServiceLevel5.mmCode,
 					ServiceLevel7Choice.mmCode);
-			elementContext_lazy = () -> ServiceLevel.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ServiceLevel.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Code";
@@ -239,6 +240,14 @@ public class ServiceLevel {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ServiceLevelCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ServiceLevel.class.getMethod("getCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SWIFTServiceLevelCode other;
@@ -252,10 +261,6 @@ public class ServiceLevel {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SWIFTServiceLevelCode
 	 * SWIFTServiceLevelCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ServiceLevel ServiceLevel}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -264,6 +269,10 @@ public class ServiceLevel {
 	 * RequestedModification.mmBankOperationCode}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ServiceLevel ServiceLevel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -279,7 +288,7 @@ public class ServiceLevel {
 	public static final MMBusinessAttribute mmOther = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RequestedModification.mmBankOperationCode);
-			elementContext_lazy = () -> ServiceLevel.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ServiceLevel.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Other";
@@ -287,6 +296,14 @@ public class ServiceLevel {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SWIFTServiceLevelCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ServiceLevel.class.getMethod("getOther", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text bilateral;
@@ -319,7 +336,7 @@ public class ServiceLevel {
 	 */
 	public static final MMBusinessAttribute mmBilateral = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> ServiceLevel.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ServiceLevel.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Bilateral";
@@ -327,6 +344,14 @@ public class ServiceLevel {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ServiceLevel.class.getMethod("getBilateral", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -339,9 +364,15 @@ public class ServiceLevel {
 				definition = "Agreement under which or rules under which the transaction should be processed.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentProcessing.mmServiceLevel);
 				derivationElement_lazy = () -> Arrays.asList(ServiceLevel2Choice.mmProprietary, ServiceLevel8Choice.mmProprietary, ServiceLevel3Choice.mmProprietary, ServiceLevel6Choice.mmProprietary, ServiceLevel7Choice.mmProprietary);
-				element_lazy = () -> Arrays.asList(ServiceLevel.mmPaymentProcessing, ServiceLevel.mmCode, ServiceLevel.mmOther, ServiceLevel.mmBilateral);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ServiceLevel.mmPaymentProcessing, com.tools20022.repository.entity.ServiceLevel.mmCode, com.tools20022.repository.entity.ServiceLevel.mmOther,
+						com.tools20022.repository.entity.ServiceLevel.mmBilateral);
 				derivationComponent_lazy = () -> Arrays.asList(ServiceLevel2Choice.mmObject(), ServiceLevel8Choice.mmObject(), ServiceLevel3Choice.mmObject(), RestrictedProprietaryChoice.mmObject(), ServiceLevel4.mmObject(),
 						ServiceLevel6Choice.mmObject(), ServiceLevel6.mmObject(), ServiceLevel5.mmObject(), ServiceLevel7Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ServiceLevel.class;
 			}
 		});
 		return mmObject_lazy.get();

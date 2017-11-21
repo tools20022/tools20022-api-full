@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Configuration parameters of data exchanges.
@@ -78,6 +82,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExchangeConfiguration1", propOrder = {"exchangePolicy", "maximumNumber", "maximumAmount", "timeCondition"})
 public class ExchangeConfiguration1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -281,6 +287,7 @@ public class ExchangeConfiguration1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XchgPlcy", required = true)
 	public List<ExchangePolicy1Code> getExchangePolicy() {
 		return exchangePolicy;
 	}
@@ -289,6 +296,7 @@ public class ExchangeConfiguration1 {
 		this.exchangePolicy = exchangePolicy;
 	}
 
+	@XmlElement(name = "MaxNb")
 	public Number getMaximumNumber() {
 		return maximumNumber;
 	}
@@ -297,6 +305,7 @@ public class ExchangeConfiguration1 {
 		this.maximumNumber = maximumNumber;
 	}
 
+	@XmlElement(name = "MaxAmt")
 	public ImpliedCurrencyAndAmount getMaximumAmount() {
 		return maximumAmount;
 	}
@@ -305,6 +314,7 @@ public class ExchangeConfiguration1 {
 		this.maximumAmount = maximumAmount;
 	}
 
+	@XmlElement(name = "TmCond")
 	public ProcessTiming1 getTimeCondition() {
 		return timeCondition;
 	}

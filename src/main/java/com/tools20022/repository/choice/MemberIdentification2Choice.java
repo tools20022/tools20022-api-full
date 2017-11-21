@@ -30,6 +30,10 @@ import com.tools20022.repository.msg.ClearingSystemMemberIdentification2;
 import com.tools20022.repository.msg.GenericFinancialIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to identify a financial institution.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Set of elements used to identify a financial institution."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MemberIdentification2Choice", propOrder = {"BICFI", "clearingSystemMemberIdentification", "other"})
 public class MemberIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -240,6 +246,7 @@ public class MemberIdentification2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BICFI", required = true)
 	public BICFIIdentifier getBICFI() {
 		return bICFI;
 	}
@@ -248,6 +255,7 @@ public class MemberIdentification2Choice {
 		this.bICFI = bICFI;
 	}
 
+	@XmlElement(name = "ClrSysMmbId", required = true)
 	public ClearingSystemMemberIdentification2 getClearingSystemMemberIdentification() {
 		return clearingSystemMemberIdentification;
 	}
@@ -256,6 +264,7 @@ public class MemberIdentification2Choice {
 		this.clearingSystemMemberIdentification = clearingSystemMemberIdentification;
 	}
 
+	@XmlElement(name = "Othr", required = true)
 	public GenericFinancialIdentification1 getOther() {
 		return other;
 	}

@@ -20,6 +20,7 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -32,14 +33,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.DateTimePeriod#mmPercentage
- * DateTimePeriod.mmPercentage}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -49,6 +42,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.PercentageAndPeriod#mmPercentage
  * PercentageAndPeriod.mmPercentage}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.DateTimePeriod#mmPercentage
+ * DateTimePeriod.mmPercentage}</li>
  * </ul>
  * </li>
  * <li>
@@ -105,7 +106,7 @@ public class PercentageAndPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PercentageAndPeriod.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PercentageAndPeriod.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
@@ -146,7 +147,7 @@ public class PercentageAndPeriod {
 	 */
 	public static final MMBusinessAttribute mmPercentage = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PercentageAndPeriod.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PercentageAndPeriod.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Percentage";
@@ -154,6 +155,14 @@ public class PercentageAndPeriod {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PercentageAndPeriod.class.getMethod("getPercentage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -165,7 +174,12 @@ public class PercentageAndPeriod {
 				name = "PercentageAndPeriod";
 				definition = "Relates a percentage to a period of time.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmPercentage);
-				element_lazy = () -> Arrays.asList(PercentageAndPeriod.mmPeriod, PercentageAndPeriod.mmPercentage);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PercentageAndPeriod.mmPeriod, com.tools20022.repository.entity.PercentageAndPeriod.mmPercentage);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PercentageAndPeriod.class;
 			}
 		});
 		return mmObject_lazy.get();

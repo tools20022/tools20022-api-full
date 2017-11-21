@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of transaction type, corporate action event or settlement transaction.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementOrCorporateActionEvent4Choice", propOrder = {"securitiesTransactionType", "corporateActionEventType"})
 public class SettlementOrCorporateActionEvent4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class SettlementOrCorporateActionEvent4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesTxTp", required = true)
 	public SecuritiesTransactionType6Choice getSecuritiesTransactionType() {
 		return securitiesTransactionType;
 	}
@@ -181,6 +188,7 @@ public class SettlementOrCorporateActionEvent4Choice {
 		this.securitiesTransactionType = securitiesTransactionType;
 	}
 
+	@XmlElement(name = "CorpActnEvtTp", required = true)
 	public CorporateActionEventType2Choice getCorporateActionEventType() {
 		return corporateActionEventType;
 	}

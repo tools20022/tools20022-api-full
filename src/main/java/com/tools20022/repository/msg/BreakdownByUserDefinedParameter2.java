@@ -27,6 +27,10 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the cash-in and cash-out flows by a user defined parameter/s.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the cash-in and cash-out flows by a user defined parameter/s."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BreakdownByUserDefinedParameter2", propOrder = {"party", "country", "currency", "userDefined"})
 public class BreakdownByUserDefinedParameter2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -251,6 +257,7 @@ public class BreakdownByUserDefinedParameter2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pty")
 	public PartyIdentification2Choice getParty() {
 		return party;
 	}
@@ -259,6 +266,7 @@ public class BreakdownByUserDefinedParameter2 {
 		this.party = party;
 	}
 
+	@XmlElement(name = "Ctry")
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -267,6 +275,7 @@ public class BreakdownByUserDefinedParameter2 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveOrHistoricCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -275,6 +284,7 @@ public class BreakdownByUserDefinedParameter2 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "UsrDfnd")
 	public DataFormat2Choice getUserDefined() {
 		return userDefined;
 	}

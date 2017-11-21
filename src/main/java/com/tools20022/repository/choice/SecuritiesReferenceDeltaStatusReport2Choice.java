@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesReferenceDataReport5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice defining financial instruments that are either new or have been
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesReferenceDeltaStatusReport2Choice", propOrder = {"modifiedRecord", "newRecord", "terminatedRecord"})
 public class SecuritiesReferenceDeltaStatusReport2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -225,6 +231,7 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ModfdRcrd", required = true)
 	public SecuritiesReferenceDataReport5 getModifiedRecord() {
 		return modifiedRecord;
 	}
@@ -233,6 +240,7 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 		this.modifiedRecord = modifiedRecord;
 	}
 
+	@XmlElement(name = "NewRcrd", required = true)
 	public SecuritiesReferenceDataReport5 getNewRecord() {
 		return newRecord;
 	}
@@ -241,6 +249,7 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 		this.newRecord = newRecord;
 	}
 
+	@XmlElement(name = "TermntdRcrd", required = true)
 	public SecuritiesReferenceDataReport5 getTerminatedRecord() {
 		return terminatedRecord;
 	}

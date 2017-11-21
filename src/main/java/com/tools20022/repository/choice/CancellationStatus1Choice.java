@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.CancellationProcessingStatus1;
 import com.tools20022.repository.msg.CancellationRejectionStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status applying to the instruction cancellation request received.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Status applying to the instruction cancellation request received."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancellationStatus1Choice", propOrder = {"processingStatus", "rejectionStatus"})
 public class CancellationStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -190,6 +196,7 @@ public class CancellationStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcgSts", required = true)
 	public CancellationProcessingStatus1 getProcessingStatus() {
 		return processingStatus;
 	}
@@ -198,6 +205,7 @@ public class CancellationStatus1Choice {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "RjctnSts", required = true)
 	public CancellationRejectionStatus1 getRejectionStatus() {
 		return rejectionStatus;
 	}

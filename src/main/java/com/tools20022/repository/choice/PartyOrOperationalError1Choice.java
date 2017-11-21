@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.PartyReport1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Report between the party reference data or an operational error.
@@ -60,6 +64,8 @@ import java.util.List;
  * "Report between the party reference data or an operational error."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyOrOperationalError1Choice", propOrder = {"partyReport", "operationalError"})
 public class PartyOrOperationalError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -157,6 +163,7 @@ public class PartyOrOperationalError1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyRpt", required = true)
 	public List<PartyReport1> getPartyReport() {
 		return partyReport;
 	}
@@ -165,6 +172,7 @@ public class PartyOrOperationalError1Choice {
 		this.partyReport = partyReport;
 	}
 
+	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
 		return operationalError;
 	}

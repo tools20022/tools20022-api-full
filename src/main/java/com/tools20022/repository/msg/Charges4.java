@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details on the charges related to the payment transaction.
@@ -67,6 +71,8 @@ import java.util.List;
  * Charges3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Charges4", propOrder = {"totalChargesAndTaxAmount", "record"})
 public class Charges4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class Charges4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlChrgsAndTaxAmt")
 	public ActiveOrHistoricCurrencyAndAmount getTotalChargesAndTaxAmount() {
 		return totalChargesAndTaxAmount;
 	}
@@ -185,6 +192,7 @@ public class Charges4 {
 		this.totalChargesAndTaxAmount = totalChargesAndTaxAmount;
 	}
 
+	@XmlElement(name = "Rcrd")
 	public List<ChargesRecord2> getRecord() {
 		return record;
 	}

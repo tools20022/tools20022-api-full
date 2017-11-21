@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PurchaseOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a payment against a purchase order.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about a payment against a purchase order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportLine1", propOrder = {"transactionIdentification", "transactionStatus", "purchaseOrderReference", "purchaseOrderTotalNetAmount", "accumulatedNetAmount"})
 public class ReportLine1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -324,6 +330,7 @@ public class ReportLine1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -332,6 +339,7 @@ public class ReportLine1 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "TxSts", required = true)
 	public TransactionStatus4 getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -340,6 +348,7 @@ public class ReportLine1 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "PurchsOrdrRef", required = true)
 	public DocumentIdentification7 getPurchaseOrderReference() {
 		return purchaseOrderReference;
 	}
@@ -348,6 +357,7 @@ public class ReportLine1 {
 		this.purchaseOrderReference = purchaseOrderReference;
 	}
 
+	@XmlElement(name = "PurchsOrdrTtlNetAmt", required = true)
 	public CurrencyAndAmount getPurchaseOrderTotalNetAmount() {
 		return purchaseOrderTotalNetAmount;
 	}
@@ -356,6 +366,7 @@ public class ReportLine1 {
 		this.purchaseOrderTotalNetAmount = purchaseOrderTotalNetAmount;
 	}
 
+	@XmlElement(name = "AcmltdNetAmt", required = true)
 	public CurrencyAndAmount getAccumulatedNetAmount() {
 		return accumulatedNetAmount;
 	}

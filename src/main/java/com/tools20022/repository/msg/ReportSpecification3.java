@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the parameters for which a transaction report must be generated.
@@ -88,6 +92,9 @@ import java.util.List;
  * "Specifies the parameters for which a transaction report must be generated."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportSpecification3", propOrder = {"transactionIdentification", "transactionStatus", "submitterTransactionReference", "entitiesToBeReported", "correspondent", "buyer", "seller", "buyerCountry", "sellerCountry",
+		"correspondentCountry", "pendingRequestForAction"})
 public class ReportSpecification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -576,6 +583,7 @@ public class ReportSpecification3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId")
 	public List<Max35Text> getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -584,6 +592,7 @@ public class ReportSpecification3 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "TxSts")
 	public List<TransactionStatus1> getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -592,6 +601,7 @@ public class ReportSpecification3 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "SubmitrTxRef")
 	public List<Max35Text> getSubmitterTransactionReference() {
 		return submitterTransactionReference;
 	}
@@ -600,6 +610,7 @@ public class ReportSpecification3 {
 		this.submitterTransactionReference = submitterTransactionReference;
 	}
 
+	@XmlElement(name = "NttiesToBeRptd")
 	public List<BICIdentification1> getEntitiesToBeReported() {
 		return entitiesToBeReported;
 	}
@@ -608,6 +619,7 @@ public class ReportSpecification3 {
 		this.entitiesToBeReported = entitiesToBeReported;
 	}
 
+	@XmlElement(name = "Crspdt")
 	public List<BICIdentification1> getCorrespondent() {
 		return correspondent;
 	}
@@ -616,6 +628,7 @@ public class ReportSpecification3 {
 		this.correspondent = correspondent;
 	}
 
+	@XmlElement(name = "Buyr")
 	public List<PartyIdentification9> getBuyer() {
 		return buyer;
 	}
@@ -624,6 +637,7 @@ public class ReportSpecification3 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Sellr")
 	public List<PartyIdentification9> getSeller() {
 		return seller;
 	}
@@ -632,6 +646,7 @@ public class ReportSpecification3 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "BuyrCtry")
 	public List<CountryCode> getBuyerCountry() {
 		return buyerCountry;
 	}
@@ -640,6 +655,7 @@ public class ReportSpecification3 {
 		this.buyerCountry = buyerCountry;
 	}
 
+	@XmlElement(name = "SellrCtry")
 	public List<CountryCode> getSellerCountry() {
 		return sellerCountry;
 	}
@@ -648,6 +664,7 @@ public class ReportSpecification3 {
 		this.sellerCountry = sellerCountry;
 	}
 
+	@XmlElement(name = "CrspdtCtry")
 	public List<CountryCode> getCorrespondentCountry() {
 		return correspondentCountry;
 	}
@@ -656,6 +673,7 @@ public class ReportSpecification3 {
 		this.correspondentCountry = correspondentCountry;
 	}
 
+	@XmlElement(name = "PdgReqForActn")
 	public List<PendingActivity1> getPendingRequestForAction() {
 		return pendingRequestForAction;
 	}

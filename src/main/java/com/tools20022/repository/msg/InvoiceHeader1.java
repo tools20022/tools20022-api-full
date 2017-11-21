@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Collection of data for that is exchanged between two or more parties in
@@ -102,6 +106,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvoiceHeader1", propOrder = {"identification", "typeCode", "name", "issueDateTime", "issuer", "languageCode", "copyIndicator", "documentPurpose", "includedNote"})
 public class InvoiceHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -609,6 +615,7 @@ public class InvoiceHeader1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -617,6 +624,7 @@ public class InvoiceHeader1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "TpCd", required = true)
 	public ExternalDocumentType1Code getTypeCode() {
 		return typeCode;
 	}
@@ -625,6 +633,7 @@ public class InvoiceHeader1 {
 		this.typeCode = typeCode;
 	}
 
+	@XmlElement(name = "Nm")
 	public List<Max35Text> getName() {
 		return name;
 	}
@@ -633,6 +642,7 @@ public class InvoiceHeader1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "IsseDtTm", required = true)
 	public ISODateTime getIssueDateTime() {
 		return issueDateTime;
 	}
@@ -641,6 +651,7 @@ public class InvoiceHeader1 {
 		this.issueDateTime = issueDateTime;
 	}
 
+	@XmlElement(name = "Issr")
 	public TradeParty1 getIssuer() {
 		return issuer;
 	}
@@ -649,6 +660,7 @@ public class InvoiceHeader1 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "LangCd")
 	public LanguageCode getLanguageCode() {
 		return languageCode;
 	}
@@ -657,6 +669,7 @@ public class InvoiceHeader1 {
 		this.languageCode = languageCode;
 	}
 
+	@XmlElement(name = "CpyInd")
 	public YesNoIndicator getCopyIndicator() {
 		return copyIndicator;
 	}
@@ -665,6 +678,7 @@ public class InvoiceHeader1 {
 		this.copyIndicator = copyIndicator;
 	}
 
+	@XmlElement(name = "DocPurp")
 	public ExternalDocumentPurpose1Code getDocumentPurpose() {
 		return documentPurpose;
 	}
@@ -673,6 +687,7 @@ public class InvoiceHeader1 {
 		this.documentPurpose = documentPurpose;
 	}
 
+	@XmlElement(name = "InclNote")
 	public List<AdditionalInformation6> getIncludedNote() {
 		return includedNote;
 	}

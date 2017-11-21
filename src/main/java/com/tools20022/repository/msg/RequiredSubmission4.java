@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the details relative to the submission of the certificate data set.
@@ -91,6 +95,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequiredSubmission4", propOrder = {"submitter", "certificateType", "matchIssuer", "matchIssueDate", "matchInspectionDate", "authorisedInspectorIndicator", "matchConsignee", "matchManufacturer", "lineItemIdentification"})
 public class RequiredSubmission4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -537,6 +543,7 @@ public class RequiredSubmission4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Submitr", required = true)
 	public List<BICIdentification1> getSubmitter() {
 		return submitter;
 	}
@@ -545,6 +552,7 @@ public class RequiredSubmission4 {
 		this.submitter = submitter;
 	}
 
+	@XmlElement(name = "CertTp", required = true)
 	public TradeCertificateType1Code getCertificateType() {
 		return certificateType;
 	}
@@ -553,6 +561,7 @@ public class RequiredSubmission4 {
 		this.certificateType = certificateType;
 	}
 
+	@XmlElement(name = "MtchIssr")
 	public PartyIdentification27 getMatchIssuer() {
 		return matchIssuer;
 	}
@@ -561,6 +570,7 @@ public class RequiredSubmission4 {
 		this.matchIssuer = matchIssuer;
 	}
 
+	@XmlElement(name = "MtchIsseDt", required = true)
 	public YesNoIndicator getMatchIssueDate() {
 		return matchIssueDate;
 	}
@@ -569,6 +579,7 @@ public class RequiredSubmission4 {
 		this.matchIssueDate = matchIssueDate;
 	}
 
+	@XmlElement(name = "MtchInspctnDt", required = true)
 	public YesNoIndicator getMatchInspectionDate() {
 		return matchInspectionDate;
 	}
@@ -577,6 +588,7 @@ public class RequiredSubmission4 {
 		this.matchInspectionDate = matchInspectionDate;
 	}
 
+	@XmlElement(name = "AuthrsdInspctrInd", required = true)
 	public YesNoIndicator getAuthorisedInspectorIndicator() {
 		return authorisedInspectorIndicator;
 	}
@@ -585,6 +597,7 @@ public class RequiredSubmission4 {
 		this.authorisedInspectorIndicator = authorisedInspectorIndicator;
 	}
 
+	@XmlElement(name = "MtchConsgn", required = true)
 	public YesNoIndicator getMatchConsignee() {
 		return matchConsignee;
 	}
@@ -593,6 +606,7 @@ public class RequiredSubmission4 {
 		this.matchConsignee = matchConsignee;
 	}
 
+	@XmlElement(name = "MtchManfctr")
 	public PartyIdentification27 getMatchManufacturer() {
 		return matchManufacturer;
 	}
@@ -601,6 +615,7 @@ public class RequiredSubmission4 {
 		this.matchManufacturer = matchManufacturer;
 	}
 
+	@XmlElement(name = "LineItmId")
 	public List<Max70Text> getLineItemIdentification() {
 		return lineItemIdentification;
 	}

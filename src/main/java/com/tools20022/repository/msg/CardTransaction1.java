@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Card transaction details.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransaction1", propOrder = {"card", "POI", "transaction"})
 public class CardTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -263,6 +269,7 @@ public class CardTransaction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Card")
 	public PaymentCard4 getCard() {
 		return card;
 	}
@@ -271,6 +278,7 @@ public class CardTransaction1 {
 		this.card = card;
 	}
 
+	@XmlElement(name = "POI")
 	public PointOfInteraction1 getPOI() {
 		return pOI;
 	}
@@ -279,6 +287,7 @@ public class CardTransaction1 {
 		this.pOI = pOI;
 	}
 
+	@XmlElement(name = "Tx")
 	public CardTransaction1Choice getTransaction() {
 		return transaction;
 	}

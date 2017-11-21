@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between ways to express the quantity of the financial instrument to be
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentQuantity13Choice", propOrder = {"unitsNumber", "orderedAmount", "netAmount", "grossAmount", "percentageOfTotalRedemptionAmount"})
 public class FinancialInstrumentQuantity13Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -348,6 +354,7 @@ public class FinancialInstrumentQuantity13Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -356,6 +363,7 @@ public class FinancialInstrumentQuantity13Choice {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "OrdrdAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getOrderedAmount() {
 		return orderedAmount;
 	}
@@ -364,6 +372,7 @@ public class FinancialInstrumentQuantity13Choice {
 		this.orderedAmount = orderedAmount;
 	}
 
+	@XmlElement(name = "NetAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
@@ -372,6 +381,7 @@ public class FinancialInstrumentQuantity13Choice {
 		this.netAmount = netAmount;
 	}
 
+	@XmlElement(name = "GrssAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getGrossAmount() {
 		return grossAmount;
 	}
@@ -380,6 +390,7 @@ public class FinancialInstrumentQuantity13Choice {
 		this.grossAmount = grossAmount;
 	}
 
+	@XmlElement(name = "PctgOfTtlRedAmt", required = true)
 	public PercentageRate getPercentageOfTotalRedemptionAmount() {
 		return percentageOfTotalRedemptionAmount;
 	}

@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Product purchased to be paid.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Product1", propOrder = {"productCode", "unitOfMeasure", "productQuantity", "unitPrice", "productAmount", "taxType", "additionalProductInformation"})
 public class Product1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -472,6 +478,7 @@ public class Product1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PdctCd", required = true)
 	public Max70Text getProductCode() {
 		return productCode;
 	}
@@ -480,6 +487,7 @@ public class Product1 {
 		this.productCode = productCode;
 	}
 
+	@XmlElement(name = "UnitOfMeasr")
 	public UnitOfMeasure1Code getUnitOfMeasure() {
 		return unitOfMeasure;
 	}
@@ -488,6 +496,7 @@ public class Product1 {
 		this.unitOfMeasure = unitOfMeasure;
 	}
 
+	@XmlElement(name = "PdctQty")
 	public DecimalNumber getProductQuantity() {
 		return productQuantity;
 	}
@@ -496,6 +505,7 @@ public class Product1 {
 		this.productQuantity = productQuantity;
 	}
 
+	@XmlElement(name = "UnitPric")
 	public ImpliedCurrencyAndAmount getUnitPrice() {
 		return unitPrice;
 	}
@@ -504,6 +514,7 @@ public class Product1 {
 		this.unitPrice = unitPrice;
 	}
 
+	@XmlElement(name = "PdctAmt", required = true)
 	public ImpliedCurrencyAndAmount getProductAmount() {
 		return productAmount;
 	}
@@ -512,6 +523,7 @@ public class Product1 {
 		this.productAmount = productAmount;
 	}
 
+	@XmlElement(name = "TaxTp")
 	public Max35Text getTaxType() {
 		return taxType;
 	}
@@ -520,6 +532,7 @@ public class Product1 {
 		this.taxType = taxType;
 	}
 
+	@XmlElement(name = "AddtlPdctInf")
 	public Max35Text getAdditionalProductInformation() {
 		return additionalProductInformation;
 	}

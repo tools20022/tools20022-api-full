@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Response;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Result of the transaction.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransactionResult1", propOrder = {"authorisationEntity", "responseToAuthorisation", "authorisationCode"})
 public class CardPaymentTransactionResult1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -267,6 +273,7 @@ public class CardPaymentTransactionResult1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AuthstnNtty")
 	public GenericIdentification33 getAuthorisationEntity() {
 		return authorisationEntity;
 	}
@@ -275,6 +282,7 @@ public class CardPaymentTransactionResult1 {
 		this.authorisationEntity = authorisationEntity;
 	}
 
+	@XmlElement(name = "RspnToAuthstn", required = true)
 	public ResponseType1 getResponseToAuthorisation() {
 		return responseToAuthorisation;
 	}
@@ -283,6 +291,7 @@ public class CardPaymentTransactionResult1 {
 		this.responseToAuthorisation = responseToAuthorisation;
 	}
 
+	@XmlElement(name = "AuthstnCd")
 	public Min6Max8Text getAuthorisationCode() {
 		return authorisationCode;
 	}

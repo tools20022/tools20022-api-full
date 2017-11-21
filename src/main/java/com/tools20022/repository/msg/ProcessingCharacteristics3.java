@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Processing characteristics linked to the instrument, ie, not to the market.
@@ -100,6 +104,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProcessingCharacteristics3", propOrder = {"dealingCurrencyAccepted", "redemptionAuthorisation", "amountIndicator", "unitsIndicator", "mainFundOrderDeskLocation", "dealingCutOffTime", "dealingCutOffTimeFrame",
+		"dealingFrequency", "dealingFrequencyDescription", "limitedPeriod", "settlementCycle"})
 public class ProcessingCharacteristics3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -658,6 +665,7 @@ public class ProcessingCharacteristics3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DealgCcyAccptd", required = true)
 	public List<ActiveCurrencyCode> getDealingCurrencyAccepted() {
 		return dealingCurrencyAccepted;
 	}
@@ -666,6 +674,7 @@ public class ProcessingCharacteristics3 {
 		this.dealingCurrencyAccepted = dealingCurrencyAccepted;
 	}
 
+	@XmlElement(name = "RedAuthstn", required = true)
 	public Forms getRedemptionAuthorisation() {
 		return redemptionAuthorisation;
 	}
@@ -674,6 +683,7 @@ public class ProcessingCharacteristics3 {
 		this.redemptionAuthorisation = redemptionAuthorisation;
 	}
 
+	@XmlElement(name = "AmtInd", required = true)
 	public YesNoIndicator getAmountIndicator() {
 		return amountIndicator;
 	}
@@ -682,6 +692,7 @@ public class ProcessingCharacteristics3 {
 		this.amountIndicator = amountIndicator;
 	}
 
+	@XmlElement(name = "UnitsInd", required = true)
 	public YesNoIndicator getUnitsIndicator() {
 		return unitsIndicator;
 	}
@@ -690,6 +701,7 @@ public class ProcessingCharacteristics3 {
 		this.unitsIndicator = unitsIndicator;
 	}
 
+	@XmlElement(name = "MainFndOrdrDskLctn", required = true)
 	public MainFundOrderDeskLocation1 getMainFundOrderDeskLocation() {
 		return mainFundOrderDeskLocation;
 	}
@@ -698,6 +710,7 @@ public class ProcessingCharacteristics3 {
 		this.mainFundOrderDeskLocation = mainFundOrderDeskLocation;
 	}
 
+	@XmlElement(name = "DealgCutOffTm", required = true)
 	public ISOTime getDealingCutOffTime() {
 		return dealingCutOffTime;
 	}
@@ -706,6 +719,7 @@ public class ProcessingCharacteristics3 {
 		this.dealingCutOffTime = dealingCutOffTime;
 	}
 
+	@XmlElement(name = "DealgCutOffTmFrame", required = true)
 	public TimeFrame3 getDealingCutOffTimeFrame() {
 		return dealingCutOffTimeFrame;
 	}
@@ -714,6 +728,7 @@ public class ProcessingCharacteristics3 {
 		this.dealingCutOffTimeFrame = dealingCutOffTimeFrame;
 	}
 
+	@XmlElement(name = "DealgFrqcy", required = true)
 	public EventFrequency5Code getDealingFrequency() {
 		return dealingFrequency;
 	}
@@ -722,6 +737,7 @@ public class ProcessingCharacteristics3 {
 		this.dealingFrequency = dealingFrequency;
 	}
 
+	@XmlElement(name = "DealgFrqcyDesc", required = true)
 	public Max350Text getDealingFrequencyDescription() {
 		return dealingFrequencyDescription;
 	}
@@ -730,6 +746,7 @@ public class ProcessingCharacteristics3 {
 		this.dealingFrequencyDescription = dealingFrequencyDescription;
 	}
 
+	@XmlElement(name = "LtdPrd")
 	public Max350Text getLimitedPeriod() {
 		return limitedPeriod;
 	}
@@ -738,6 +755,7 @@ public class ProcessingCharacteristics3 {
 		this.limitedPeriod = limitedPeriod;
 	}
 
+	@XmlElement(name = "SttlmCycl", required = true)
 	public TimeFrame4Choice getSettlementCycle() {
 		return settlementCycle;
 	}

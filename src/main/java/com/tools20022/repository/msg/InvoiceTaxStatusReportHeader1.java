@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the Invoice tax status report header details.
@@ -82,6 +86,8 @@ import java.util.List;
  * MoneyMarketStatusReportHeader1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvoiceTaxStatusReportHeader1", propOrder = {"taxAuthority", "messageIdentification", "originalMessageIdentification", "reportStatus", "validationRule"})
 public class InvoiceTaxStatusReportHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -326,6 +332,7 @@ public class InvoiceTaxStatusReportHeader1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TaxAuthrty")
 	public TaxOrganisationIdentification1 getTaxAuthority() {
 		return taxAuthority;
 	}
@@ -334,6 +341,7 @@ public class InvoiceTaxStatusReportHeader1 {
 		this.taxAuthority = taxAuthority;
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -342,6 +350,7 @@ public class InvoiceTaxStatusReportHeader1 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "OrgnlMsgId", required = true)
 	public MessageIdentification1 getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}
@@ -350,6 +359,7 @@ public class InvoiceTaxStatusReportHeader1 {
 		this.originalMessageIdentification = originalMessageIdentification;
 	}
 
+	@XmlElement(name = "RptSts", required = true)
 	public TaxReportingStatus1Code getReportStatus() {
 		return reportStatus;
 	}
@@ -358,6 +368,7 @@ public class InvoiceTaxStatusReportHeader1 {
 		this.reportStatus = reportStatus;
 	}
 
+	@XmlElement(name = "VldtnRule")
 	public List<GenericValidationRuleIdentification1> getValidationRule() {
 		return validationRule;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.AccountIdentification37;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between all accounts (GENR - General in ISO 15022) or one or more
@@ -76,6 +80,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountIdentification37Choice", propOrder = {"forAllAccounts", "accountsListAndBalanceDetails"})
 public class AccountIdentification37Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -194,6 +200,7 @@ public class AccountIdentification37Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ForAllAccts", required = true)
 	public AccountIdentification10 getForAllAccounts() {
 		return forAllAccounts;
 	}
@@ -202,6 +209,7 @@ public class AccountIdentification37Choice {
 		this.forAllAccounts = forAllAccounts;
 	}
 
+	@XmlElement(name = "AcctsListAndBalDtls", required = true)
 	public List<AccountIdentification37> getAccountsListAndBalanceDetails() {
 		return accountsListAndBalanceDetails;
 	}

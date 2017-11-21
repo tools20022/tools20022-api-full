@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.WithdrawalReason1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -43,9 +45,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code fxtr.013.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ForeignExchangeTradePreviousVersion
@@ -88,6 +87,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code fxtr.013.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -99,6 +101,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ForeignExchangeTradeWithdrawalNotificationV03", propOrder = {"messageIdentification", "matchingSystemUniqueReference", "withdrawalReason", "settlementSessionIdentifier", "supplementaryData"})
 public class ForeignExchangeTradeWithdrawalNotificationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -139,6 +143,14 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTradeWithdrawalNotificationV03.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max35Text matchingSystemUniqueReference;
 	/**
@@ -176,6 +188,14 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTradeWithdrawalNotificationV03.class.getMethod("getMatchingSystemUniqueReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected WithdrawalReason1 withdrawalReason;
 	/**
@@ -210,6 +230,14 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> WithdrawalReason1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTradeWithdrawalNotificationV03.class.getMethod("getWithdrawalReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Exact4AlphaNumericText settlementSessionIdentifier;
@@ -249,6 +277,14 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTradeWithdrawalNotificationV03.class.getMethod("getSettlementSessionIdentifier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -286,6 +322,14 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTradeWithdrawalNotificationV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -298,8 +342,10 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 				rootElement = "Document";
 				xmlTag = "FXTradWdrwlNtfctn";
 				businessArea_lazy = () -> ForeignExchangeTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeWithdrawalNotificationV03.mmMessageIdentification, ForeignExchangeTradeWithdrawalNotificationV03.mmMatchingSystemUniqueReference,
-						ForeignExchangeTradeWithdrawalNotificationV03.mmWithdrawalReason, ForeignExchangeTradeWithdrawalNotificationV03.mmSettlementSessionIdentifier, ForeignExchangeTradeWithdrawalNotificationV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.mmMessageIdentification,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.mmMatchingSystemUniqueReference,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.mmWithdrawalReason, com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.mmSettlementSessionIdentifier,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "fxtr";
@@ -309,10 +355,16 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ForeignExchangeTradeWithdrawalNotificationV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -321,6 +373,7 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "MtchgSysUnqRef", required = true)
 	public Max35Text getMatchingSystemUniqueReference() {
 		return matchingSystemUniqueReference;
 	}
@@ -329,6 +382,7 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 		this.matchingSystemUniqueReference = matchingSystemUniqueReference;
 	}
 
+	@XmlElement(name = "WdrwlRsn")
 	public WithdrawalReason1 getWithdrawalReason() {
 		return withdrawalReason;
 	}
@@ -337,6 +391,7 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 		this.withdrawalReason = withdrawalReason;
 	}
 
+	@XmlElement(name = "SttlmSsnIdr")
 	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
 		return settlementSessionIdentifier;
 	}
@@ -345,11 +400,18 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 		this.settlementSessionIdentifier = settlementSessionIdentifier;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.013.03.03")
+	static public class Document {
+		@XmlElement(name = "FXTradWdrwlNtfctn", required = true)
+		public ForeignExchangeTradeWithdrawalNotificationV03 messageBody;
 	}
 }

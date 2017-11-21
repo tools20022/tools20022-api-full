@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the request providing the changes and references of the
@@ -82,6 +86,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestDetails10", propOrder = {"reference", "linkage", "priority", "otherProcessing", "partialSettlementIndicator", "clearingChannel", "linkages"})
 public class RequestDetails10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -416,6 +422,7 @@ public class RequestDetails10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ref", required = true)
 	public References14 getReference() {
 		return reference;
 	}
@@ -424,6 +431,7 @@ public class RequestDetails10 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "Lkg")
 	public LinkageType1Choice getLinkage() {
 		return linkage;
 	}
@@ -432,6 +440,7 @@ public class RequestDetails10 {
 		this.linkage = linkage;
 	}
 
+	@XmlElement(name = "Prty")
 	public PriorityNumeric1Choice getPriority() {
 		return priority;
 	}
@@ -440,6 +449,7 @@ public class RequestDetails10 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "OthrPrcg")
 	public List<GenericIdentification30> getOtherProcessing() {
 		return otherProcessing;
 	}
@@ -448,6 +458,7 @@ public class RequestDetails10 {
 		this.otherProcessing = otherProcessing;
 	}
 
+	@XmlElement(name = "PrtlSttlmInd")
 	public YesNoIndicator getPartialSettlementIndicator() {
 		return partialSettlementIndicator;
 	}
@@ -456,6 +467,7 @@ public class RequestDetails10 {
 		this.partialSettlementIndicator = partialSettlementIndicator;
 	}
 
+	@XmlElement(name = "ClrChanl")
 	public ClearingChannel2Code getClearingChannel() {
 		return clearingChannel;
 	}
@@ -464,6 +476,7 @@ public class RequestDetails10 {
 		this.clearingChannel = clearingChannel;
 	}
 
+	@XmlElement(name = "Lnkgs")
 	public List<Linkages26> getLinkages() {
 		return linkages;
 	}

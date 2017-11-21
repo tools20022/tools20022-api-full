@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Card acceptor performing the transaction.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Organisation8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Organisation18", propOrder = {"identification", "commonName", "location", "selectedLanguage", "schemeData"})
 public class Organisation18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -386,6 +392,7 @@ public class Organisation18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public GenericIdentification32 getIdentification() {
 		return identification;
 	}
@@ -394,6 +401,7 @@ public class Organisation18 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "CmonNm", required = true)
 	public Max70Text getCommonName() {
 		return commonName;
 	}
@@ -402,6 +410,7 @@ public class Organisation18 {
 		this.commonName = commonName;
 	}
 
+	@XmlElement(name = "Lctn", required = true)
 	public CommunicationAddress5 getLocation() {
 		return location;
 	}
@@ -410,6 +419,7 @@ public class Organisation18 {
 		this.location = location;
 	}
 
+	@XmlElement(name = "SelctdLang")
 	public LanguageCode getSelectedLanguage() {
 		return selectedLanguage;
 	}
@@ -418,6 +428,7 @@ public class Organisation18 {
 		this.selectedLanguage = selectedLanguage;
 	}
 
+	@XmlElement(name = "SchmeData")
 	public Max140Text getSchemeData() {
 		return schemeData;
 	}

@@ -27,9 +27,11 @@ import com.tools20022.repository.choice.InvestigationStatus3Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -88,9 +90,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.029.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
@@ -139,6 +138,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.029.001.06}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -162,6 +164,8 @@ import java.util.List;
  * ResolutionOfInvestigationV05}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ResolutionOfInvestigationV06", propOrder = {"assignment", "resolvedCase", "status", "cancellationDetails", "statementDetails", "correctionTransaction", "resolutionRelatedInformation", "supplementaryData"})
 public class ResolutionOfInvestigationV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -217,6 +221,14 @@ public class ResolutionOfInvestigationV06 {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ResolutionOfInvestigationV06.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case3 resolvedCase;
 	/**
@@ -264,6 +276,14 @@ public class ResolutionOfInvestigationV06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Case3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ResolutionOfInvestigationV06.class.getMethod("getResolvedCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestigationStatus3Choice status;
@@ -315,6 +335,14 @@ public class ResolutionOfInvestigationV06 {
 			minOccurs = 1;
 			complexType_lazy = () -> InvestigationStatus3Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ResolutionOfInvestigationV06.class.getMethod("getStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<UnderlyingTransaction14> cancellationDetails;
 	/**
@@ -365,6 +393,14 @@ public class ResolutionOfInvestigationV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> UnderlyingTransaction14.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ResolutionOfInvestigationV06.class.getMethod("getCancellationDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected StatementResolutionEntry2 statementDetails;
 	/**
@@ -414,6 +450,14 @@ public class ResolutionOfInvestigationV06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatementResolutionEntry2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ResolutionOfInvestigationV06.class.getMethod("getStatementDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorrectiveTransaction1Choice correctionTransaction;
@@ -466,6 +510,14 @@ public class ResolutionOfInvestigationV06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CorrectiveTransaction1Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ResolutionOfInvestigationV06.class.getMethod("getCorrectionTransaction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ResolutionInformation1 resolutionRelatedInformation;
@@ -520,6 +572,14 @@ public class ResolutionOfInvestigationV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> ResolutionInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ResolutionOfInvestigationV06.class.getMethod("getResolutionRelatedInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -572,6 +632,14 @@ public class ResolutionOfInvestigationV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ResolutionOfInvestigationV06.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -586,9 +654,10 @@ public class ResolutionOfInvestigationV06 {
 				rootElement = "Document";
 				xmlTag = "RsltnOfInvstgtn";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ResolutionOfInvestigationV06.mmAssignment, ResolutionOfInvestigationV06.mmResolvedCase, ResolutionOfInvestigationV06.mmStatus,
-						ResolutionOfInvestigationV06.mmCancellationDetails, ResolutionOfInvestigationV06.mmStatementDetails, ResolutionOfInvestigationV06.mmCorrectionTransaction, ResolutionOfInvestigationV06.mmResolutionRelatedInformation,
-						ResolutionOfInvestigationV06.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmAssignment, com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmResolvedCase,
+						com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmStatus, com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmCancellationDetails,
+						com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmStatementDetails, com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmCorrectionTransaction,
+						com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmResolutionRelatedInformation, com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -598,10 +667,16 @@ public class ResolutionOfInvestigationV06 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ResolutionOfInvestigationV06.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment3 getAssignment() {
 		return assignment;
 	}
@@ -610,6 +685,7 @@ public class ResolutionOfInvestigationV06 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "RslvdCase")
 	public Case3 getResolvedCase() {
 		return resolvedCase;
 	}
@@ -618,6 +694,7 @@ public class ResolutionOfInvestigationV06 {
 		this.resolvedCase = resolvedCase;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public InvestigationStatus3Choice getStatus() {
 		return status;
 	}
@@ -626,6 +703,7 @@ public class ResolutionOfInvestigationV06 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "CxlDtls")
 	public List<UnderlyingTransaction14> getCancellationDetails() {
 		return cancellationDetails;
 	}
@@ -634,6 +712,7 @@ public class ResolutionOfInvestigationV06 {
 		this.cancellationDetails = cancellationDetails;
 	}
 
+	@XmlElement(name = "StmtDtls")
 	public StatementResolutionEntry2 getStatementDetails() {
 		return statementDetails;
 	}
@@ -642,6 +721,7 @@ public class ResolutionOfInvestigationV06 {
 		this.statementDetails = statementDetails;
 	}
 
+	@XmlElement(name = "CrrctnTx")
 	public CorrectiveTransaction1Choice getCorrectionTransaction() {
 		return correctionTransaction;
 	}
@@ -650,6 +730,7 @@ public class ResolutionOfInvestigationV06 {
 		this.correctionTransaction = correctionTransaction;
 	}
 
+	@XmlElement(name = "RsltnRltdInf")
 	public ResolutionInformation1 getResolutionRelatedInformation() {
 		return resolutionRelatedInformation;
 	}
@@ -658,11 +739,18 @@ public class ResolutionOfInvestigationV06 {
 		this.resolutionRelatedInformation = resolutionRelatedInformation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.029.06.06")
+	static public class Document {
+		@XmlElement(name = "RsltnOfInvstgtn", required = true)
+		public ResolutionOfInvestigationV06 messageBody;
 	}
 }

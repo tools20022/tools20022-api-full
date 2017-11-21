@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the status of a transaction.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ProcessingStatus39Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProcessingStatus56Choice", propOrder = {"rejected", "cancelled", "accepted"})
 public class ProcessingStatus56Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -250,6 +256,7 @@ public class ProcessingStatus56Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectedStatus17Choice getRejected() {
 		return rejected;
 	}
@@ -258,6 +265,7 @@ public class ProcessingStatus56Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Canc", required = true)
 	public CancelledStatus10Choice getCancelled() {
 		return cancelled;
 	}
@@ -266,6 +274,7 @@ public class ProcessingStatus56Choice {
 		this.cancelled = cancelled;
 	}
 
+	@XmlElement(name = "Accptd", required = true)
 	public AcceptedStatus7Choice getAccepted() {
 		return accepted;
 	}

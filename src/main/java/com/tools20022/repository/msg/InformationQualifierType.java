@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.InformationQualifier;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Further qualifies the information provided in terms of its importance and its
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InformationQualifierType", propOrder = {"isFormatted", "priority"})
 public class InformationQualifierType {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class InformationQualifierType {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IsFrmtd")
 	public YesNoIndicator getIsFormatted() {
 		return isFormatted;
 	}
@@ -187,6 +194,7 @@ public class InformationQualifierType {
 		this.isFormatted = isFormatted;
 	}
 
+	@XmlElement(name = "Prty")
 	public Priority1Code getPriority() {
 		return priority;
 	}

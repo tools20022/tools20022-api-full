@@ -36,6 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * currencyIdentifierSet} =
  * {@linkplain com.tools20022.repository.codeset.ActiveCurrencyCode
  * ActiveCurrencyCode}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMDecimal#getMinInclusive
+ * minInclusive} = "0"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -72,6 +74,9 @@ public class RestrictedFINActiveCurrencyAnd13DecimalAmount {
 				name = "RestrictedFINActiveCurrencyAnd13DecimalAmount";
 				definition = "A number of monetary units specified in an active currency where the unit of currency is explicit and compliant with ISO 4217. The number of fractional digits (or minor unit of currency) is not checked as per ISO 4217: It must be lesser than or equal to 13.\nNote: The decimal separator is a dot.";
 				currencyIdentifierSet_lazy = () -> ActiveCurrencyCode.mmObject();
+				minInclusive = "0";
+				totalDigits = 14;
+				fractionDigits = 13;
 			}
 		});
 		return mmObject_lazy.get();

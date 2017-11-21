@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference and status information concerning the original transactions,
@@ -99,6 +103,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTransactionInformation18", propOrder = {"returnIdentification", "originalGroupInformation", "originalInstructionIdentification", "originalEndToEndIdentification", "originalTransactionIdentification",
+		"originalInterbankSettlementAmount", "returnedInterbankSettlementAmount", "compensationAmount", "chargeBearer", "instructingAgent", "instructedAgent", "returnReasonInformation", "originalTransactionReference"})
 public class PaymentTransactionInformation18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -776,6 +783,7 @@ public class PaymentTransactionInformation18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RtrId", required = true)
 	public Max35Text getReturnIdentification() {
 		return returnIdentification;
 	}
@@ -784,6 +792,7 @@ public class PaymentTransactionInformation18 {
 		this.returnIdentification = returnIdentification;
 	}
 
+	@XmlElement(name = "OrgnlGrpInf")
 	public OriginalGroupInformation8 getOriginalGroupInformation() {
 		return originalGroupInformation;
 	}
@@ -792,6 +801,7 @@ public class PaymentTransactionInformation18 {
 		this.originalGroupInformation = originalGroupInformation;
 	}
 
+	@XmlElement(name = "OrgnlInstrId")
 	public Max35Text getOriginalInstructionIdentification() {
 		return originalInstructionIdentification;
 	}
@@ -800,6 +810,7 @@ public class PaymentTransactionInformation18 {
 		this.originalInstructionIdentification = originalInstructionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlEndToEndId")
 	public Max35Text getOriginalEndToEndIdentification() {
 		return originalEndToEndIdentification;
 	}
@@ -808,6 +819,7 @@ public class PaymentTransactionInformation18 {
 		this.originalEndToEndIdentification = originalEndToEndIdentification;
 	}
 
+	@XmlElement(name = "OrgnlTxId")
 	public Max35Text getOriginalTransactionIdentification() {
 		return originalTransactionIdentification;
 	}
@@ -816,6 +828,7 @@ public class PaymentTransactionInformation18 {
 		this.originalTransactionIdentification = originalTransactionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlIntrBkSttlmAmt", required = true)
 	public EuroMax9Amount getOriginalInterbankSettlementAmount() {
 		return originalInterbankSettlementAmount;
 	}
@@ -824,6 +837,7 @@ public class PaymentTransactionInformation18 {
 		this.originalInterbankSettlementAmount = originalInterbankSettlementAmount;
 	}
 
+	@XmlElement(name = "RtrdIntrBkSttlmAmt", required = true)
 	public EuroMax9Amount getReturnedInterbankSettlementAmount() {
 		return returnedInterbankSettlementAmount;
 	}
@@ -832,6 +846,7 @@ public class PaymentTransactionInformation18 {
 		this.returnedInterbankSettlementAmount = returnedInterbankSettlementAmount;
 	}
 
+	@XmlElement(name = "CompstnAmt")
 	public EuroMax9Amount getCompensationAmount() {
 		return compensationAmount;
 	}
@@ -840,6 +855,7 @@ public class PaymentTransactionInformation18 {
 		this.compensationAmount = compensationAmount;
 	}
 
+	@XmlElement(name = "ChrgBr")
 	public ChargeBearerType2Code getChargeBearer() {
 		return chargeBearer;
 	}
@@ -848,6 +864,7 @@ public class PaymentTransactionInformation18 {
 		this.chargeBearer = chargeBearer;
 	}
 
+	@XmlElement(name = "InstgAgt")
 	public FinancialInstitution2 getInstructingAgent() {
 		return instructingAgent;
 	}
@@ -856,6 +873,7 @@ public class PaymentTransactionInformation18 {
 		this.instructingAgent = instructingAgent;
 	}
 
+	@XmlElement(name = "InstdAgt")
 	public FinancialInstitution2 getInstructedAgent() {
 		return instructedAgent;
 	}
@@ -864,6 +882,7 @@ public class PaymentTransactionInformation18 {
 		this.instructedAgent = instructedAgent;
 	}
 
+	@XmlElement(name = "RtrRsnInf", required = true)
 	public ReturnReasonInformation6 getReturnReasonInformation() {
 		return returnReasonInformation;
 	}
@@ -872,6 +891,7 @@ public class PaymentTransactionInformation18 {
 		this.returnReasonInformation = returnReasonInformation;
 	}
 
+	@XmlElement(name = "OrgnlTxRef", required = true)
 	public OriginalTransactionReference10 getOriginalTransactionReference() {
 		return originalTransactionReference;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the type of file provided in the payload.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of file provided in the payload."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelHeader2Choice", propOrder = {"payment", "report", "query", "queryResponse", "notification", "administration"})
 public class IsabelHeader2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -342,6 +348,7 @@ public class IsabelHeader2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pmt", required = true)
 	public IsabelPaymentHeader2 getPayment() {
 		return payment;
 	}
@@ -350,6 +357,7 @@ public class IsabelHeader2Choice {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "Rpt", required = true)
 	public IsabelReportHeader3 getReport() {
 		return report;
 	}
@@ -358,6 +366,7 @@ public class IsabelHeader2Choice {
 		this.report = report;
 	}
 
+	@XmlElement(name = "Qry", required = true)
 	public IsabelQueryHeader1 getQuery() {
 		return query;
 	}
@@ -366,6 +375,7 @@ public class IsabelHeader2Choice {
 		this.query = query;
 	}
 
+	@XmlElement(name = "QryRspn", required = true)
 	public IsabelReportHeader4 getQueryResponse() {
 		return queryResponse;
 	}
@@ -374,6 +384,7 @@ public class IsabelHeader2Choice {
 		this.queryResponse = queryResponse;
 	}
 
+	@XmlElement(name = "Ntfctn", required = true)
 	public IsabelNotificationHeader2 getNotification() {
 		return notification;
 	}
@@ -382,6 +393,7 @@ public class IsabelHeader2Choice {
 		this.notification = notification;
 	}
 
+	@XmlElement(name = "Admstn", required = true)
 	public IsabelAdminHeader2 getAdministration() {
 		return administration;
 	}

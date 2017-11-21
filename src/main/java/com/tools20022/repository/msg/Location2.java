@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Location information.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Location1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Location2", propOrder = {"country", "countrySubDivision", "text"})
 public class Location2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -239,6 +245,7 @@ public class Location2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ctry")
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -247,6 +254,7 @@ public class Location2 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "CtrySubDvsn")
 	public CountrySubdivision1Choice getCountrySubDivision() {
 		return countrySubDivision;
 	}
@@ -255,6 +263,7 @@ public class Location2 {
 		this.countrySubDivision = countrySubDivision;
 	}
 
+	@XmlElement(name = "Txt")
 	public Max35Text getText() {
 		return text;
 	}

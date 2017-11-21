@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of each individual secured market transaction.
@@ -77,6 +81,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MoneyMarketTransactionStatus1", propOrder = {"uniqueTransactionIdentifier", "proprietaryTransactionIdentification", "status", "validationRule", "supplementaryData"})
 public class MoneyMarketTransactionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -358,6 +364,7 @@ public class MoneyMarketTransactionStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnqTxIdr")
 	public Max105Text getUniqueTransactionIdentifier() {
 		return uniqueTransactionIdentifier;
 	}
@@ -366,6 +373,7 @@ public class MoneyMarketTransactionStatus1 {
 		this.uniqueTransactionIdentifier = uniqueTransactionIdentifier;
 	}
 
+	@XmlElement(name = "PrtryTxId", required = true)
 	public Max105Text getProprietaryTransactionIdentification() {
 		return proprietaryTransactionIdentification;
 	}
@@ -374,6 +382,7 @@ public class MoneyMarketTransactionStatus1 {
 		this.proprietaryTransactionIdentification = proprietaryTransactionIdentification;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public StatisticalReportingStatus2Code getStatus() {
 		return status;
 	}
@@ -382,6 +391,7 @@ public class MoneyMarketTransactionStatus1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "VldtnRule")
 	public List<GenericValidationRuleIdentification1> getValidationRule() {
 		return validationRule;
 	}
@@ -390,6 +400,7 @@ public class MoneyMarketTransactionStatus1 {
 		this.validationRule = validationRule;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

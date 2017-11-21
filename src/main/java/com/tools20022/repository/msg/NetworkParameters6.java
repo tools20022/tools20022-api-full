@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.NetworkAccess;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters to communicate with a host.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * NetworkParameters3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NetworkParameters6", propOrder = {"type", "access"})
 public class NetworkParameters6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class NetworkParameters6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public NetworkType2Code getType() {
 		return type;
 	}
@@ -186,6 +193,7 @@ public class NetworkParameters6 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Accs", required = true)
 	public NetworkParameters5 getAccess() {
 		return access;
 	}

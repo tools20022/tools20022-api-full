@@ -66,6 +66,11 @@ public class DocumentSignatory extends DocumentPartyRole {
 				definition = "Person who binds himself or herself, or the entity he or she is authorized to represent, by his or her signature on the document.";
 				superType_lazy = () -> DocumentPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DocumentSignatory.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

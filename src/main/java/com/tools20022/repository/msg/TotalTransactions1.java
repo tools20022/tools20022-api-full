@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of element providing summary information on entries.
@@ -63,6 +67,8 @@ import java.util.List;
  * definition} = "Set of element providing summary information on entries."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TotalTransactions1", propOrder = {"totalEntries", "totalCreditEntries", "totalDebitEntries", "totalEntriesPerBankTransactionCode"})
 public class TotalTransactions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -250,6 +256,7 @@ public class TotalTransactions1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlNtries")
 	public NumberAndSumOfTransactions2 getTotalEntries() {
 		return totalEntries;
 	}
@@ -258,6 +265,7 @@ public class TotalTransactions1 {
 		this.totalEntries = totalEntries;
 	}
 
+	@XmlElement(name = "TtlCdtNtries")
 	public NumberAndSumOfTransactions1 getTotalCreditEntries() {
 		return totalCreditEntries;
 	}
@@ -266,6 +274,7 @@ public class TotalTransactions1 {
 		this.totalCreditEntries = totalCreditEntries;
 	}
 
+	@XmlElement(name = "TtlDbtNtries")
 	public NumberAndSumOfTransactions1 getTotalDebitEntries() {
 		return totalDebitEntries;
 	}
@@ -274,6 +283,7 @@ public class TotalTransactions1 {
 		this.totalDebitEntries = totalDebitEntries;
 	}
 
+	@XmlElement(name = "TtlNtriesPerBkTxCd")
 	public List<NumberAndSumOfTransactionsPerBankTransactionCode1> getTotalEntriesPerBankTransactionCode() {
 		return totalEntriesPerBankTransactionCode;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between account information or an error report.
@@ -59,6 +63,8 @@ import java.util.List;
  * definition} = "Choice between account information or an error report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountReportOrError1Choice", propOrder = {"error", "accountReport"})
 public class AccountReportOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -156,6 +162,7 @@ public class AccountReportOrError1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Err", required = true)
 	public List<ErrorHandling3> getError() {
 		return error;
 	}
@@ -164,6 +171,7 @@ public class AccountReportOrError1Choice {
 		this.error = error;
 	}
 
+	@XmlElement(name = "AcctRpt")
 	public List<AccountReport14> getAccountReport() {
 		return accountReport;
 	}

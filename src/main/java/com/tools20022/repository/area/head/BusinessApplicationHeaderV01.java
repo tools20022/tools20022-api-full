@@ -31,8 +31,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.msg.BusinessApplicationHeader1;
 import com.tools20022.repository.other.SignatureEnvelope;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The Business Layer deals with Business Messages. The behaviour of the
@@ -63,9 +65,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code head.001.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.BusinessApplicationHeaderLatestVersion
@@ -117,6 +116,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code head.001.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -128,6 +130,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BusinessApplicationHeaderV01", propOrder = {"characterSet", "from", "to", "businessMessageIdentifier", "messageDefinitionIdentifier", "businessService", "creationDate", "copyDuplicate", "possibleDuplicate", "priority",
+		"signature", "related"})
 public class BusinessApplicationHeaderV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +172,14 @@ public class BusinessApplicationHeaderV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> UnicodeChartsCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BusinessApplicationHeaderV01.class.getMethod("getCharacterSet", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Party9Choice from;
@@ -209,6 +222,14 @@ public class BusinessApplicationHeaderV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Party9Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BusinessApplicationHeaderV01.class.getMethod("getFrom", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Party9Choice to;
 	/**
@@ -250,6 +271,14 @@ public class BusinessApplicationHeaderV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Party9Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BusinessApplicationHeaderV01.class.getMethod("getTo", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max35Text businessMessageIdentifier;
 	/**
@@ -286,6 +315,14 @@ public class BusinessApplicationHeaderV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BusinessApplicationHeaderV01.class.getMethod("getBusinessMessageIdentifier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text messageDefinitionIdentifier;
@@ -325,6 +362,14 @@ public class BusinessApplicationHeaderV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BusinessApplicationHeaderV01.class.getMethod("getMessageDefinitionIdentifier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text businessService;
@@ -366,6 +411,14 @@ public class BusinessApplicationHeaderV01 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BusinessApplicationHeaderV01.class.getMethod("getBusinessService", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ISONormalisedDateTime creationDate;
 	/**
@@ -404,6 +457,14 @@ public class BusinessApplicationHeaderV01 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISONormalisedDateTime.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BusinessApplicationHeaderV01.class.getMethod("getCreationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CopyDuplicate1Code copyDuplicate;
 	/**
@@ -441,6 +502,14 @@ public class BusinessApplicationHeaderV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BusinessApplicationHeaderV01.class.getMethod("getCopyDuplicate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator possibleDuplicate;
@@ -491,6 +560,14 @@ public class BusinessApplicationHeaderV01 {
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BusinessApplicationHeaderV01.class.getMethod("getPossibleDuplicate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected BusinessMessagePriorityCode priority;
 	/**
@@ -529,6 +606,14 @@ public class BusinessApplicationHeaderV01 {
 			minOccurs = 0;
 			simpleType_lazy = () -> BusinessMessagePriorityCode.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BusinessApplicationHeaderV01.class.getMethod("getPriority", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SignatureEnvelope signature;
 	/**
@@ -566,6 +651,14 @@ public class BusinessApplicationHeaderV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SignatureEnvelope.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BusinessApplicationHeaderV01.class.getMethod("getSignature", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BusinessApplicationHeader1 related;
@@ -607,6 +700,14 @@ public class BusinessApplicationHeaderV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> BusinessApplicationHeader1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BusinessApplicationHeaderV01.class.getMethod("getRelated", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -618,9 +719,12 @@ public class BusinessApplicationHeaderV01 {
 				rootElement = "Document";
 				xmlTag = "AppHdr";
 				businessArea_lazy = () -> BusinessApplicationHeaderLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(BusinessApplicationHeaderV01.mmCharacterSet, BusinessApplicationHeaderV01.mmFrom, BusinessApplicationHeaderV01.mmTo, BusinessApplicationHeaderV01.mmBusinessMessageIdentifier,
-						BusinessApplicationHeaderV01.mmMessageDefinitionIdentifier, BusinessApplicationHeaderV01.mmBusinessService, BusinessApplicationHeaderV01.mmCreationDate, BusinessApplicationHeaderV01.mmCopyDuplicate,
-						BusinessApplicationHeaderV01.mmPossibleDuplicate, BusinessApplicationHeaderV01.mmPriority, BusinessApplicationHeaderV01.mmSignature, BusinessApplicationHeaderV01.mmRelated);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmCharacterSet, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmFrom,
+						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmTo, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmBusinessMessageIdentifier,
+						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmMessageDefinitionIdentifier, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmBusinessService,
+						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmCreationDate, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmCopyDuplicate,
+						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmPossibleDuplicate, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmPriority,
+						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmSignature, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmRelated);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "head";
@@ -630,10 +734,16 @@ public class BusinessApplicationHeaderV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BusinessApplicationHeaderV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CharSet")
 	public UnicodeChartsCode getCharacterSet() {
 		return characterSet;
 	}
@@ -642,6 +752,7 @@ public class BusinessApplicationHeaderV01 {
 		this.characterSet = characterSet;
 	}
 
+	@XmlElement(name = "Fr", required = true)
 	public Party9Choice getFrom() {
 		return from;
 	}
@@ -650,6 +761,7 @@ public class BusinessApplicationHeaderV01 {
 		this.from = from;
 	}
 
+	@XmlElement(name = "To", required = true)
 	public Party9Choice getTo() {
 		return to;
 	}
@@ -658,6 +770,7 @@ public class BusinessApplicationHeaderV01 {
 		this.to = to;
 	}
 
+	@XmlElement(name = "BizMsgIdr", required = true)
 	public Max35Text getBusinessMessageIdentifier() {
 		return businessMessageIdentifier;
 	}
@@ -666,6 +779,7 @@ public class BusinessApplicationHeaderV01 {
 		this.businessMessageIdentifier = businessMessageIdentifier;
 	}
 
+	@XmlElement(name = "MsgDefIdr", required = true)
 	public Max35Text getMessageDefinitionIdentifier() {
 		return messageDefinitionIdentifier;
 	}
@@ -674,6 +788,7 @@ public class BusinessApplicationHeaderV01 {
 		this.messageDefinitionIdentifier = messageDefinitionIdentifier;
 	}
 
+	@XmlElement(name = "BizSvc")
 	public Max35Text getBusinessService() {
 		return businessService;
 	}
@@ -682,6 +797,7 @@ public class BusinessApplicationHeaderV01 {
 		this.businessService = businessService;
 	}
 
+	@XmlElement(name = "CreDt", required = true)
 	public ISONormalisedDateTime getCreationDate() {
 		return creationDate;
 	}
@@ -690,6 +806,7 @@ public class BusinessApplicationHeaderV01 {
 		this.creationDate = creationDate;
 	}
 
+	@XmlElement(name = "CpyDplct")
 	public CopyDuplicate1Code getCopyDuplicate() {
 		return copyDuplicate;
 	}
@@ -698,6 +815,7 @@ public class BusinessApplicationHeaderV01 {
 		this.copyDuplicate = copyDuplicate;
 	}
 
+	@XmlElement(name = "PssblDplct")
 	public YesNoIndicator getPossibleDuplicate() {
 		return possibleDuplicate;
 	}
@@ -706,6 +824,7 @@ public class BusinessApplicationHeaderV01 {
 		this.possibleDuplicate = possibleDuplicate;
 	}
 
+	@XmlElement(name = "Prty")
 	public BusinessMessagePriorityCode getPriority() {
 		return priority;
 	}
@@ -714,6 +833,7 @@ public class BusinessApplicationHeaderV01 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "Sgntr")
 	public SignatureEnvelope getSignature() {
 		return signature;
 	}
@@ -722,11 +842,18 @@ public class BusinessApplicationHeaderV01 {
 		this.signature = signature;
 	}
 
+	@XmlElement(name = "Rltd")
 	public BusinessApplicationHeader1 getRelated() {
 		return related;
 	}
 
 	public void setRelated(BusinessApplicationHeader1 related) {
 		this.related = related;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:head.001.01.01")
+	static public class Document {
+		@XmlElement(name = "AppHdr", required = true)
+		public BusinessApplicationHeaderV01 messageBody;
 	}
 }

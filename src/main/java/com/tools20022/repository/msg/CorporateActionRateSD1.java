@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action details rates and
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionRateSD1", propOrder = {"placeAndName", "deferredInterestRate", "interestShortfallRate", "realisedLossRate", "americanOrGlobalDepositReceiptRatio"})
 public class CorporateActionRateSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -313,6 +319,7 @@ public class CorporateActionRateSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -321,6 +328,7 @@ public class CorporateActionRateSD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "DfrrdIntrstRate")
 	public PercentageRate getDeferredInterestRate() {
 		return deferredInterestRate;
 	}
@@ -329,6 +337,7 @@ public class CorporateActionRateSD1 {
 		this.deferredInterestRate = deferredInterestRate;
 	}
 
+	@XmlElement(name = "IntrstShrtfllRate")
 	public PercentageRate getInterestShortfallRate() {
 		return interestShortfallRate;
 	}
@@ -337,6 +346,7 @@ public class CorporateActionRateSD1 {
 		this.interestShortfallRate = interestShortfallRate;
 	}
 
+	@XmlElement(name = "RealsdLossRate")
 	public PercentageRate getRealisedLossRate() {
 		return realisedLossRate;
 	}
@@ -345,6 +355,7 @@ public class CorporateActionRateSD1 {
 		this.realisedLossRate = realisedLossRate;
 	}
 
+	@XmlElement(name = "AmrcnOrGblDpstRctRatio")
 	public CorporateActionRateSD2 getAmericanOrGlobalDepositReceiptRatio() {
 		return americanOrGlobalDepositReceiptRatio;
 	}

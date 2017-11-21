@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AlternateSecurityIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for the identification of a financial instrument.
@@ -111,6 +115,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityIdentification3Choice", propOrder = {"ISIN", "SEDOL", "CUSIP", "RIC", "tickerSymbol", "bloomberg", "CTA", "QUICK", "wertpapier", "dutch", "valoren", "sicovam", "belgian", "common", "otherProprietaryIdentification"})
 public class SecurityIdentification3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -1040,6 +1046,7 @@ public class SecurityIdentification3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ISIN", required = true)
 	public ISINIdentifier getISIN() {
 		return iSIN;
 	}
@@ -1048,6 +1055,7 @@ public class SecurityIdentification3Choice {
 		this.iSIN = iSIN;
 	}
 
+	@XmlElement(name = "SEDOL", required = true)
 	public SEDOLIdentifier getSEDOL() {
 		return sEDOL;
 	}
@@ -1056,6 +1064,7 @@ public class SecurityIdentification3Choice {
 		this.sEDOL = sEDOL;
 	}
 
+	@XmlElement(name = "CUSIP", required = true)
 	public CUSIPIdentifier getCUSIP() {
 		return cUSIP;
 	}
@@ -1064,6 +1073,7 @@ public class SecurityIdentification3Choice {
 		this.cUSIP = cUSIP;
 	}
 
+	@XmlElement(name = "RIC", required = true)
 	public RICIdentifier getRIC() {
 		return rIC;
 	}
@@ -1072,6 +1082,7 @@ public class SecurityIdentification3Choice {
 		this.rIC = rIC;
 	}
 
+	@XmlElement(name = "TckrSymb", required = true)
 	public TickerIdentifier getTickerSymbol() {
 		return tickerSymbol;
 	}
@@ -1080,6 +1091,7 @@ public class SecurityIdentification3Choice {
 		this.tickerSymbol = tickerSymbol;
 	}
 
+	@XmlElement(name = "Blmbrg", required = true)
 	public BloombergIdentifier getBloomberg() {
 		return bloomberg;
 	}
@@ -1088,6 +1100,7 @@ public class SecurityIdentification3Choice {
 		this.bloomberg = bloomberg;
 	}
 
+	@XmlElement(name = "CTA", required = true)
 	public ConsolidatedTapeAssociationIdentifier getCTA() {
 		return cTA;
 	}
@@ -1096,6 +1109,7 @@ public class SecurityIdentification3Choice {
 		this.cTA = cTA;
 	}
 
+	@XmlElement(name = "QUICK", required = true)
 	public QUICKIdentifier getQUICK() {
 		return qUICK;
 	}
@@ -1104,6 +1118,7 @@ public class SecurityIdentification3Choice {
 		this.qUICK = qUICK;
 	}
 
+	@XmlElement(name = "Wrtppr", required = true)
 	public WertpapierIdentifier getWertpapier() {
 		return wertpapier;
 	}
@@ -1112,6 +1127,7 @@ public class SecurityIdentification3Choice {
 		this.wertpapier = wertpapier;
 	}
 
+	@XmlElement(name = "Dtch", required = true)
 	public DutchIdentifier getDutch() {
 		return dutch;
 	}
@@ -1120,6 +1136,7 @@ public class SecurityIdentification3Choice {
 		this.dutch = dutch;
 	}
 
+	@XmlElement(name = "Vlrn", required = true)
 	public ValorenIdentifier getValoren() {
 		return valoren;
 	}
@@ -1128,6 +1145,7 @@ public class SecurityIdentification3Choice {
 		this.valoren = valoren;
 	}
 
+	@XmlElement(name = "SCVM", required = true)
 	public SicovamIdentifier getSicovam() {
 		return sicovam;
 	}
@@ -1136,6 +1154,7 @@ public class SecurityIdentification3Choice {
 		this.sicovam = sicovam;
 	}
 
+	@XmlElement(name = "Belgn", required = true)
 	public BelgianIdentifier getBelgian() {
 		return belgian;
 	}
@@ -1144,6 +1163,7 @@ public class SecurityIdentification3Choice {
 		this.belgian = belgian;
 	}
 
+	@XmlElement(name = "Cmon", required = true)
 	public EuroclearClearstreamIdentifier getCommon() {
 		return common;
 	}
@@ -1152,6 +1172,7 @@ public class SecurityIdentification3Choice {
 		this.common = common;
 	}
 
+	@XmlElement(name = "OthrPrtryId", required = true)
 	public AlternateSecurityIdentification1 getOtherProprietaryIdentification() {
 		return otherProprietaryIdentification;
 	}

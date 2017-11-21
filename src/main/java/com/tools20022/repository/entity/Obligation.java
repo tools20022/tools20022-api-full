@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -39,6 +40,48 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementDate
+ * Obligation.mmRequestedSettlementDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementAmount
+ * Obligation.mmRequestedSettlementAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmPriority
+ * Obligation.mmPriority}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmTrade
+ * Obligation.mmTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmTransactionRisk
+ * Obligation.mmTransactionRisk}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmParentObligation
+ * Obligation.mmParentObligation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmSubObligation
+ * Obligation.mmSubObligation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmOffset
+ * Obligation.mmOffset}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmOriginalObligationProcess
+ * Obligation.mmOriginalObligationProcess}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmExposureType
+ * Obligation.mmExposureType}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentObligation
+ * PaymentObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation
+ * SecuritiesDeliveryObligation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ProductDeliveryObligation
+ * ProductDeliveryObligation}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -79,48 +122,6 @@ import java.util.List;
  * NetObligation1.mmObligationIdentification}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentObligation
- * PaymentObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation
- * SecuritiesDeliveryObligation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ProductDeliveryObligation
- * ProductDeliveryObligation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementDate
- * Obligation.mmRequestedSettlementDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementAmount
- * Obligation.mmRequestedSettlementAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmPriority
- * Obligation.mmPriority}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmTrade
- * Obligation.mmTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Obligation#mmTransactionRisk
- * Obligation.mmTransactionRisk}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Obligation#mmParentObligation
- * Obligation.mmParentObligation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmSubObligation
- * Obligation.mmSubObligation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmOffset
- * Obligation.mmOffset}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Obligation#mmOriginalObligationProcess
- * Obligation.mmOriginalObligationProcess}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmExposureType
- * Obligation.mmExposureType}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -156,10 +157,6 @@ public class Obligation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation Obligation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1205,6 +1202,10 @@ public class Obligation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Obligation Obligation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1310,6 +1311,14 @@ public class Obligation {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Obligation.class.getMethod("getRequestedSettlementDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CurrencyAndAmount requestedSettlementAmount;
 	/**
@@ -1322,10 +1331,6 @@ public class Obligation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation Obligation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1403,6 +1408,10 @@ public class Obligation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Obligation Obligation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1430,6 +1439,14 @@ public class Obligation {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Obligation.class.getMethod("getRequestedSettlementAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max4AlphaNumericText priority;
 	/**
@@ -1442,10 +1459,6 @@ public class Obligation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max4AlphaNumericText
 	 * Max4AlphaNumericText}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation Obligation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1680,6 +1693,10 @@ public class Obligation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Obligation Obligation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1715,6 +1732,14 @@ public class Obligation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Obligation.class.getMethod("getPriority", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Trade trade;
@@ -2022,10 +2047,6 @@ public class Obligation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ExposureTypeV2Code
 	 * ExposureTypeV2Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation Obligation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2059,6 +2080,10 @@ public class Obligation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Obligation Obligation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2083,6 +2108,14 @@ public class Obligation {
 			minOccurs = 1;
 			simpleType_lazy = () -> ExposureTypeV2Code.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Obligation.class.getMethod("getExposureType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	static public MMBusinessComponent mmObject() {
@@ -2101,6 +2134,11 @@ public class Obligation {
 						com.tools20022.repository.entity.Obligation.mmParentObligation, com.tools20022.repository.entity.Obligation.mmSubObligation, com.tools20022.repository.entity.Obligation.mmOffset,
 						com.tools20022.repository.entity.Obligation.mmOriginalObligationProcess, com.tools20022.repository.entity.Obligation.mmExposureType);
 				derivationComponent_lazy = () -> Arrays.asList(PriorityNumeric3Choice.mmObject(), NetObligation1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Obligation.class;
 			}
 		});
 		return mmObject_lazy.get();

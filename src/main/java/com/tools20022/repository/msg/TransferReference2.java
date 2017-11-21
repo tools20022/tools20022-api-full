@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference of a transfer and of a transfer confirmation.
@@ -99,6 +103,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferReference2", propOrder = {"masterReference", "transferReference", "clientReference", "transferConfirmationReference"})
 public class TransferReference2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -352,6 +358,7 @@ public class TransferReference2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -360,6 +367,7 @@ public class TransferReference2 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "TrfRef")
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -368,6 +376,7 @@ public class TransferReference2 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -376,6 +385,7 @@ public class TransferReference2 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "TrfConfRef")
 	public Max35Text getTransferConfirmationReference() {
 		return transferConfirmationReference;
 	}

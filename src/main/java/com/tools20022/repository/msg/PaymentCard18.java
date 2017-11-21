@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Electronic money product that provides the cardholder with a portable and
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentCard2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentCard18", propOrder = {"type", "number", "holderName", "startDate", "expiryDate", "cardIssuerName", "cardIssuerIdentification", "securityCode", "sequenceNumber"})
 public class PaymentCard18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -591,6 +597,7 @@ public class PaymentCard18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public CardType1Code getType() {
 		return type;
 	}
@@ -599,6 +606,7 @@ public class PaymentCard18 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Nb", required = true)
 	public Max35Text getNumber() {
 		return number;
 	}
@@ -607,6 +615,7 @@ public class PaymentCard18 {
 		this.number = number;
 	}
 
+	@XmlElement(name = "HldrNm", required = true)
 	public Max35Text getHolderName() {
 		return holderName;
 	}
@@ -615,6 +624,7 @@ public class PaymentCard18 {
 		this.holderName = holderName;
 	}
 
+	@XmlElement(name = "StartDt")
 	public ISOYearMonth getStartDate() {
 		return startDate;
 	}
@@ -623,6 +633,7 @@ public class PaymentCard18 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "XpryDt", required = true)
 	public ISOYearMonth getExpiryDate() {
 		return expiryDate;
 	}
@@ -631,6 +642,7 @@ public class PaymentCard18 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "CardIssrNm")
 	public Max35Text getCardIssuerName() {
 		return cardIssuerName;
 	}
@@ -639,6 +651,7 @@ public class PaymentCard18 {
 		this.cardIssuerName = cardIssuerName;
 	}
 
+	@XmlElement(name = "CardIssrId")
 	public PartyIdentification70Choice getCardIssuerIdentification() {
 		return cardIssuerIdentification;
 	}
@@ -647,6 +660,7 @@ public class PaymentCard18 {
 		this.cardIssuerIdentification = cardIssuerIdentification;
 	}
 
+	@XmlElement(name = "SctyCd")
 	public Max35Text getSecurityCode() {
 		return securityCode;
 	}
@@ -655,6 +669,7 @@ public class PaymentCard18 {
 		this.securityCode = securityCode;
 	}
 
+	@XmlElement(name = "SeqNb")
 	public Max3Text getSequenceNumber() {
 		return sequenceNumber;
 	}

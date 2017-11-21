@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.AlternateSecurityIdentification1;
 import com.tools20022.repository.msg.SecurityInstrumentDescription1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between ISIN and an alternative format for the identification of a
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityIdentification5Choice", propOrder = {"ISIN", "otherIdentification", "instrumentDescription"})
 public class SecurityIdentification5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -247,6 +253,7 @@ public class SecurityIdentification5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ISIN", required = true)
 	public ISINIdentifier getISIN() {
 		return iSIN;
 	}
@@ -255,6 +262,7 @@ public class SecurityIdentification5Choice {
 		this.iSIN = iSIN;
 	}
 
+	@XmlElement(name = "OthrId", required = true)
 	public AlternateSecurityIdentification1 getOtherIdentification() {
 		return otherIdentification;
 	}
@@ -263,6 +271,7 @@ public class SecurityIdentification5Choice {
 		this.otherIdentification = otherIdentification;
 	}
 
+	@XmlElement(name = "InstrmDesc", required = true)
 	public SecurityInstrumentDescription1 getInstrumentDescription() {
 		return instrumentDescription;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification25;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the ModificationCancellation information.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice of format for the ModificationCancellation information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ModificationCancellationAllowed2Choice", propOrder = {"indicator", "proprietary"})
 public class ModificationCancellationAllowed2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +173,7 @@ public class ModificationCancellationAllowed2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ind", required = true)
 	public YesNoIndicator getIndicator() {
 		return indicator;
 	}
@@ -175,6 +182,7 @@ public class ModificationCancellationAllowed2Choice {
 		this.indicator = indicator;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification25 getProprietary() {
 		return proprietary;
 	}

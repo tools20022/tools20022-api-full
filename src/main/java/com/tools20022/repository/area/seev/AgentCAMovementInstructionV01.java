@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -56,9 +58,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.019.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -103,6 +102,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.019.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -114,6 +116,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgentCAMovementInstructionV01", propOrder = {"identification", "agentCAElectionAdviceIdentification", "corporateActionGeneralInformation", "movementGeneralInformation", "underlyingSecuritiesMovementDetails",
+		"underlyingCashMovementDetails", "proceedsMovementDetails"})
 public class AgentCAMovementInstructionV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -154,6 +159,14 @@ public class AgentCAMovementInstructionV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAMovementInstructionV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification8 agentCAElectionAdviceIdentification;
 	/**
@@ -192,6 +205,14 @@ public class AgentCAMovementInstructionV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAMovementInstructionV01.class.getMethod("getAgentCAElectionAdviceIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
@@ -226,6 +247,14 @@ public class AgentCAMovementInstructionV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAMovementInstructionV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionMovement1 movementGeneralInformation;
@@ -262,6 +291,14 @@ public class AgentCAMovementInstructionV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionMovement1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAMovementInstructionV01.class.getMethod("getMovementGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<UnderlyingSecurityMovement1> underlyingSecuritiesMovementDetails;
 	/**
@@ -297,6 +334,14 @@ public class AgentCAMovementInstructionV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> UnderlyingSecurityMovement1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAMovementInstructionV01.class.getMethod("getUnderlyingSecuritiesMovementDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<CashMovement2> underlyingCashMovementDetails;
 	/**
@@ -330,6 +375,14 @@ public class AgentCAMovementInstructionV01 {
 			definition = "Information related to the movement of the underlying cash.";
 			minOccurs = 0;
 			complexType_lazy = () -> CashMovement2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAMovementInstructionV01.class.getMethod("getUnderlyingCashMovementDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ProceedsMovement1 proceedsMovementDetails;
@@ -366,6 +419,14 @@ public class AgentCAMovementInstructionV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ProceedsMovement1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAMovementInstructionV01.class.getMethod("getProceedsMovementDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -378,9 +439,10 @@ public class AgentCAMovementInstructionV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCAMvmntInstr";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAMovementInstructionV01.mmIdentification, AgentCAMovementInstructionV01.mmAgentCAElectionAdviceIdentification,
-						AgentCAMovementInstructionV01.mmCorporateActionGeneralInformation, AgentCAMovementInstructionV01.mmMovementGeneralInformation, AgentCAMovementInstructionV01.mmUnderlyingSecuritiesMovementDetails,
-						AgentCAMovementInstructionV01.mmUnderlyingCashMovementDetails, AgentCAMovementInstructionV01.mmProceedsMovementDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmAgentCAElectionAdviceIdentification, com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmMovementGeneralInformation, com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmUnderlyingSecuritiesMovementDetails,
+						com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmUnderlyingCashMovementDetails, com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmProceedsMovementDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -390,10 +452,16 @@ public class AgentCAMovementInstructionV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AgentCAMovementInstructionV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
@@ -402,6 +470,7 @@ public class AgentCAMovementInstructionV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AgtCAElctnAdvcId")
 	public DocumentIdentification8 getAgentCAElectionAdviceIdentification() {
 		return agentCAElectionAdviceIdentification;
 	}
@@ -410,6 +479,7 @@ public class AgentCAMovementInstructionV01 {
 		this.agentCAElectionAdviceIdentification = agentCAElectionAdviceIdentification;
 	}
 
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
@@ -418,6 +488,7 @@ public class AgentCAMovementInstructionV01 {
 		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
 	}
 
+	@XmlElement(name = "MvmntGnlInf", required = true)
 	public CorporateActionMovement1 getMovementGeneralInformation() {
 		return movementGeneralInformation;
 	}
@@ -426,6 +497,7 @@ public class AgentCAMovementInstructionV01 {
 		this.movementGeneralInformation = movementGeneralInformation;
 	}
 
+	@XmlElement(name = "UndrlygSctiesMvmntDtls")
 	public List<UnderlyingSecurityMovement1> getUnderlyingSecuritiesMovementDetails() {
 		return underlyingSecuritiesMovementDetails;
 	}
@@ -434,6 +506,7 @@ public class AgentCAMovementInstructionV01 {
 		this.underlyingSecuritiesMovementDetails = underlyingSecuritiesMovementDetails;
 	}
 
+	@XmlElement(name = "UndrlygCshMvmntDtls")
 	public List<CashMovement2> getUnderlyingCashMovementDetails() {
 		return underlyingCashMovementDetails;
 	}
@@ -442,11 +515,18 @@ public class AgentCAMovementInstructionV01 {
 		this.underlyingCashMovementDetails = underlyingCashMovementDetails;
 	}
 
+	@XmlElement(name = "PrcdsMvmntDtls")
 	public ProceedsMovement1 getProceedsMovementDetails() {
 		return proceedsMovementDetails;
 	}
 
 	public void setProceedsMovementDetails(ProceedsMovement1 proceedsMovementDetails) {
 		this.proceedsMovementDetails = proceedsMovementDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.019.01.01")
+	static public class Document {
+		@XmlElement(name = "AgtCAMvmntInstr", required = true)
+		public AgentCAMovementInstructionV01 messageBody;
 	}
 }

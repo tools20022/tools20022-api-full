@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the details of the transaction.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the details of the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionCancellation2", propOrder = {"accountOwner", "safekeepingAccount", "processingStatus", "requestReference", "statusDate", "transactionIdentification", "underlying"})
 public class IntraPositionCancellation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -414,6 +420,7 @@ public class IntraPositionCancellation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public SystemPartyIdentification5 getAccountOwner() {
 		return accountOwner;
 	}
@@ -422,6 +429,7 @@ public class IntraPositionCancellation2 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -430,6 +438,7 @@ public class IntraPositionCancellation2 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "PrcgSts")
 	public ProcessingStatus32Choice getProcessingStatus() {
 		return processingStatus;
 	}
@@ -438,6 +447,7 @@ public class IntraPositionCancellation2 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "ReqRef", required = true)
 	public Max35Text getRequestReference() {
 		return requestReference;
 	}
@@ -446,6 +456,7 @@ public class IntraPositionCancellation2 {
 		this.requestReference = requestReference;
 	}
 
+	@XmlElement(name = "StsDt")
 	public ISODateTime getStatusDate() {
 		return statusDate;
 	}
@@ -454,6 +465,7 @@ public class IntraPositionCancellation2 {
 		this.statusDate = statusDate;
 	}
 
+	@XmlElement(name = "TxId")
 	public References14 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -462,6 +474,7 @@ public class IntraPositionCancellation2 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "Undrlyg")
 	public SettlementOrIntraPosition1Choice getUnderlying() {
 		return underlying;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SystemEventInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the availability of a service.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides details on the availability of a service."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ServiceAvailability1", propOrder = {"businessService", "availabilityStatus"})
 public class ServiceAvailability1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -169,6 +175,7 @@ public class ServiceAvailability1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BizSvc")
 	public Max35Text getBusinessService() {
 		return businessService;
 	}
@@ -177,6 +184,7 @@ public class ServiceAvailability1 {
 		this.businessService = businessService;
 	}
 
+	@XmlElement(name = "AvlbtySts", required = true)
 	public SystemEventType3Choice getAvailabilityStatus() {
 		return availabilityStatus;
 	}

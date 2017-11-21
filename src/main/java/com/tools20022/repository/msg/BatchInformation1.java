@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the underlying batches.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the underlying batches."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BatchInformation1", propOrder = {"messageIdentification", "paymentInformationIdentification", "numberOfTransactions"})
 public class BatchInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -208,6 +214,7 @@ public class BatchInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId")
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -216,6 +223,7 @@ public class BatchInformation1 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PmtInfId")
 	public Max35Text getPaymentInformationIdentification() {
 		return paymentInformationIdentification;
 	}
@@ -224,6 +232,7 @@ public class BatchInformation1 {
 		this.paymentInformationIdentification = paymentInformationIdentification;
 	}
 
+	@XmlElement(name = "NbOfTxs")
 	public Max15NumericText getNumberOfTransactions() {
 		return numberOfTransactions;
 	}

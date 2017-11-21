@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.NotificationProcessingStatus1;
 import com.tools20022.repository.msg.NotificationRejectionReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the status of a notification advice.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the status of a notification advice."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NotificationAdviceStatus1Choice", propOrder = {"processedStatus", "rejectedStatus"})
 public class NotificationAdviceStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -171,6 +177,7 @@ public class NotificationAdviceStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcdSts", required = true)
 	public NotificationProcessingStatus1 getProcessedStatus() {
 		return processedStatus;
 	}
@@ -179,6 +186,7 @@ public class NotificationAdviceStatus1Choice {
 		this.processedStatus = processedStatus;
 	}
 
+	@XmlElement(name = "RjctdSts", required = true)
 	public NotificationRejectionReason1 getRejectedStatus() {
 		return rejectedStatus;
 	}

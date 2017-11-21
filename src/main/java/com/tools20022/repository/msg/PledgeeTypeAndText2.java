@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Pledgee;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of the entity to which the financial instruments are pledged
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PledgeeTypeAndText2", propOrder = {"identification", "pledgeeType"})
 public class PledgeeTypeAndText2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class PledgeeTypeAndText2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public RestrictedFINMax30Text getIdentification() {
 		return identification;
 	}
@@ -191,6 +198,7 @@ public class PledgeeTypeAndText2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "PldgeeTp", required = true)
 	public PledgeeType1Code getPledgeeType() {
 		return pledgeeType;
 	}

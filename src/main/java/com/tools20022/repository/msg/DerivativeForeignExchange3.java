@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Attributes of non-financial instrument of type foreign exchange as
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DerivativeForeignExchange3", propOrder = {"FXType", "otherNotionalCurrency"})
 public class DerivativeForeignExchange3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -182,6 +188,7 @@ public class DerivativeForeignExchange3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FxTp")
 	public AssetFXSubProductType1Code getFXType() {
 		return fXType;
 	}
@@ -190,6 +197,7 @@ public class DerivativeForeignExchange3 {
 		this.fXType = fXType;
 	}
 
+	@XmlElement(name = "OthrNtnlCcy")
 	public ActiveOrHistoricCurrencyCode getOtherNotionalCurrency() {
 		return otherNotionalCurrency;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of the security pledge as collateral.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Collateral10", propOrder = {"valuation", "haircut", "specialCollateralIndicator"})
 public class Collateral10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -286,6 +292,7 @@ public class Collateral10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Valtn", required = true)
 	public SecuredCollateral1Choice getValuation() {
 		return valuation;
 	}
@@ -294,6 +301,7 @@ public class Collateral10 {
 		this.valuation = valuation;
 	}
 
+	@XmlElement(name = "Hrcut")
 	public PercentageRate getHaircut() {
 		return haircut;
 	}
@@ -302,6 +310,7 @@ public class Collateral10 {
 		this.haircut = haircut;
 	}
 
+	@XmlElement(name = "SpclCollInd")
 	public SpecialCollateral1Code getSpecialCollateralIndicator() {
 		return specialCollateralIndicator;
 	}

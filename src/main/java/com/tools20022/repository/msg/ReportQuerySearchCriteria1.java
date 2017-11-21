@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for a report.
@@ -78,6 +82,8 @@ import java.util.List;
  * definition} = "Defines the criteria used to search for a report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportQuerySearchCriteria1", propOrder = {"accountIdentification", "balance", "reportName", "partyIdentification", "responsiblePartyIdentification", "dateSearch", "scheduledTime"})
 public class ReportQuerySearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -397,6 +403,7 @@ public class ReportQuerySearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId")
 	public List<AccountIdentificationSearchCriteria2Choice> getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -405,6 +412,7 @@ public class ReportQuerySearchCriteria1 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "Bal")
 	public List<CashBalance4> getBalance() {
 		return balance;
 	}
@@ -413,6 +421,7 @@ public class ReportQuerySearchCriteria1 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "RptNm")
 	public Max4AlphaNumericText getReportName() {
 		return reportName;
 	}
@@ -421,6 +430,7 @@ public class ReportQuerySearchCriteria1 {
 		this.reportName = reportName;
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification71Choice getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -429,6 +439,7 @@ public class ReportQuerySearchCriteria1 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "RspnsblPtyId")
 	public PartyIdentification71Choice getResponsiblePartyIdentification() {
 		return responsiblePartyIdentification;
 	}
@@ -437,6 +448,7 @@ public class ReportQuerySearchCriteria1 {
 		this.responsiblePartyIdentification = responsiblePartyIdentification;
 	}
 
+	@XmlElement(name = "DtSch")
 	public DateSearchChoice getDateSearch() {
 		return dateSearch;
 	}
@@ -445,6 +457,7 @@ public class ReportQuerySearchCriteria1 {
 		this.dateSearch = dateSearch;
 	}
 
+	@XmlElement(name = "SchdldTm")
 	public DateTimePeriodChoice getScheduledTime() {
 		return scheduledTime;
 	}

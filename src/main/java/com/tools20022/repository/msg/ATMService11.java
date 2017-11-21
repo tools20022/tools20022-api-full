@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Deposit service provided by the ATM inside the session.
@@ -77,6 +81,8 @@ import java.util.List;
  * ATMService9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMService11", propOrder = {"serviceReference", "ATMServiceCode", "serviceType", "serviceVariantIdentification", "cashBack", "multiAccount"})
 public class ATMService11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -420,6 +426,7 @@ public class ATMService11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SvcRef")
 	public Max35Text getServiceReference() {
 		return serviceReference;
 	}
@@ -428,6 +435,7 @@ public class ATMService11 {
 		this.serviceReference = serviceReference;
 	}
 
+	@XmlElement(name = "ATMSvcCd")
 	public Max35Text getATMServiceCode() {
 		return aTMServiceCode;
 	}
@@ -436,6 +444,7 @@ public class ATMService11 {
 		this.aTMServiceCode = aTMServiceCode;
 	}
 
+	@XmlElement(name = "SvcTp", required = true)
 	public ATMServiceType6Code getServiceType() {
 		return serviceType;
 	}
@@ -444,6 +453,7 @@ public class ATMService11 {
 		this.serviceType = serviceType;
 	}
 
+	@XmlElement(name = "SvcVarntId")
 	public List<Max35Text> getServiceVariantIdentification() {
 		return serviceVariantIdentification;
 	}
@@ -452,6 +462,7 @@ public class ATMService11 {
 		this.serviceVariantIdentification = serviceVariantIdentification;
 	}
 
+	@XmlElement(name = "CshBck")
 	public TrueFalseIndicator getCashBack() {
 		return cashBack;
 	}
@@ -460,6 +471,7 @@ public class ATMService11 {
 		this.cashBack = cashBack;
 	}
 
+	@XmlElement(name = "MultiAcct")
 	public TrueFalseIndicator getMultiAccount() {
 		return multiAccount;
 	}

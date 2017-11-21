@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Calculation of the current situation of a line item as a result of the
@@ -111,6 +115,9 @@ import java.util.List;
  * {@linkplain com.tools20022.repository.msg.LineItemDetails8 LineItemDetails8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LineItemDetails12", propOrder = {"lineItemIdentification", "productName", "productIdentifier", "productCharacteristics", "productCategory", "orderedQuantity", "acceptedQuantity", "outstandingQuantity", "pendingQuantity",
+		"quantityTolerance", "orderedAmount", "acceptedAmount", "outstandingAmount", "pendingAmount", "priceTolerance"})
 public class LineItemDetails12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -901,6 +908,7 @@ public class LineItemDetails12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LineItmId", required = true)
 	public Max70Text getLineItemIdentification() {
 		return lineItemIdentification;
 	}
@@ -909,6 +917,7 @@ public class LineItemDetails12 {
 		this.lineItemIdentification = lineItemIdentification;
 	}
 
+	@XmlElement(name = "PdctNm")
 	public Max70Text getProductName() {
 		return productName;
 	}
@@ -917,6 +926,7 @@ public class LineItemDetails12 {
 		this.productName = productName;
 	}
 
+	@XmlElement(name = "PdctIdr")
 	public List<ProductIdentifier2Choice> getProductIdentifier() {
 		return productIdentifier;
 	}
@@ -925,6 +935,7 @@ public class LineItemDetails12 {
 		this.productIdentifier = productIdentifier;
 	}
 
+	@XmlElement(name = "PdctChrtcs")
 	public List<ProductCharacteristics1Choice> getProductCharacteristics() {
 		return productCharacteristics;
 	}
@@ -933,6 +944,7 @@ public class LineItemDetails12 {
 		this.productCharacteristics = productCharacteristics;
 	}
 
+	@XmlElement(name = "PdctCtgy")
 	public List<ProductCategory1Choice> getProductCategory() {
 		return productCategory;
 	}
@@ -941,6 +953,7 @@ public class LineItemDetails12 {
 		this.productCategory = productCategory;
 	}
 
+	@XmlElement(name = "OrdrdQty", required = true)
 	public Quantity9 getOrderedQuantity() {
 		return orderedQuantity;
 	}
@@ -949,6 +962,7 @@ public class LineItemDetails12 {
 		this.orderedQuantity = orderedQuantity;
 	}
 
+	@XmlElement(name = "AccptdQty", required = true)
 	public Quantity9 getAcceptedQuantity() {
 		return acceptedQuantity;
 	}
@@ -957,6 +971,7 @@ public class LineItemDetails12 {
 		this.acceptedQuantity = acceptedQuantity;
 	}
 
+	@XmlElement(name = "OutsdngQty", required = true)
 	public Quantity9 getOutstandingQuantity() {
 		return outstandingQuantity;
 	}
@@ -965,6 +980,7 @@ public class LineItemDetails12 {
 		this.outstandingQuantity = outstandingQuantity;
 	}
 
+	@XmlElement(name = "PdgQty", required = true)
 	public Quantity9 getPendingQuantity() {
 		return pendingQuantity;
 	}
@@ -973,6 +989,7 @@ public class LineItemDetails12 {
 		this.pendingQuantity = pendingQuantity;
 	}
 
+	@XmlElement(name = "QtyTlrnce")
 	public PercentageTolerance1 getQuantityTolerance() {
 		return quantityTolerance;
 	}
@@ -981,6 +998,7 @@ public class LineItemDetails12 {
 		this.quantityTolerance = quantityTolerance;
 	}
 
+	@XmlElement(name = "OrdrdAmt", required = true)
 	public CurrencyAndAmount getOrderedAmount() {
 		return orderedAmount;
 	}
@@ -989,6 +1007,7 @@ public class LineItemDetails12 {
 		this.orderedAmount = orderedAmount;
 	}
 
+	@XmlElement(name = "AccptdAmt", required = true)
 	public CurrencyAndAmount getAcceptedAmount() {
 		return acceptedAmount;
 	}
@@ -997,6 +1016,7 @@ public class LineItemDetails12 {
 		this.acceptedAmount = acceptedAmount;
 	}
 
+	@XmlElement(name = "OutsdngAmt", required = true)
 	public CurrencyAndAmount getOutstandingAmount() {
 		return outstandingAmount;
 	}
@@ -1005,6 +1025,7 @@ public class LineItemDetails12 {
 		this.outstandingAmount = outstandingAmount;
 	}
 
+	@XmlElement(name = "PdgAmt", required = true)
 	public CurrencyAndAmount getPendingAmount() {
 		return pendingAmount;
 	}
@@ -1013,6 +1034,7 @@ public class LineItemDetails12 {
 		this.pendingAmount = pendingAmount;
 	}
 
+	@XmlElement(name = "PricTlrnce")
 	public PercentageTolerance1 getPriceTolerance() {
 		return priceTolerance;
 	}

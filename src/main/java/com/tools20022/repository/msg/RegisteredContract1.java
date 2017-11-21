@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Currency control registered contract amendment details.
@@ -82,6 +86,8 @@ import java.util.List;
  * definition} = "Currency control registered contract amendment details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegisteredContract1", propOrder = {"contractRegistrationAmendmentIdentification", "reportingParty", "registrationAgent", "registeredContractAmendment", "supplementaryData"})
 public class RegisteredContract1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -337,6 +343,7 @@ public class RegisteredContract1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CtrctRegnAmdmntId", required = true)
 	public Max35Text getContractRegistrationAmendmentIdentification() {
 		return contractRegistrationAmendmentIdentification;
 	}
@@ -345,6 +352,7 @@ public class RegisteredContract1 {
 		this.contractRegistrationAmendmentIdentification = contractRegistrationAmendmentIdentification;
 	}
 
+	@XmlElement(name = "RptgPty", required = true)
 	public TradeParty2 getReportingParty() {
 		return reportingParty;
 	}
@@ -353,6 +361,7 @@ public class RegisteredContract1 {
 		this.reportingParty = reportingParty;
 	}
 
+	@XmlElement(name = "RegnAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getRegistrationAgent() {
 		return registrationAgent;
 	}
@@ -361,6 +370,7 @@ public class RegisteredContract1 {
 		this.registrationAgent = registrationAgent;
 	}
 
+	@XmlElement(name = "RegdCtrctAmdmnt", required = true)
 	public List<RegisteredContract3> getRegisteredContractAmendment() {
 		return registeredContractAmendment;
 	}
@@ -369,6 +379,7 @@ public class RegisteredContract1 {
 		this.registeredContractAmendment = registeredContractAmendment;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

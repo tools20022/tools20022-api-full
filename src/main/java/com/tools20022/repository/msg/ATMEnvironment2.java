@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Environment of the withdrawal transaction.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMEnvironment1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMEnvironment2", propOrder = {"acquirer", "ATMManager", "hostingEntity", "ATM", "customer", "protectedCardData", "plainCardData"})
 public class ATMEnvironment2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -458,6 +464,7 @@ public class ATMEnvironment2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acqrr")
 	public Acquirer7 getAcquirer() {
 		return acquirer;
 	}
@@ -466,6 +473,7 @@ public class ATMEnvironment2 {
 		this.acquirer = acquirer;
 	}
 
+	@XmlElement(name = "ATMMgr")
 	public Acquirer8 getATMManager() {
 		return aTMManager;
 	}
@@ -474,6 +482,7 @@ public class ATMEnvironment2 {
 		this.aTMManager = aTMManager;
 	}
 
+	@XmlElement(name = "HstgNtty")
 	public TerminalHosting1 getHostingEntity() {
 		return hostingEntity;
 	}
@@ -482,6 +491,7 @@ public class ATMEnvironment2 {
 		this.hostingEntity = hostingEntity;
 	}
 
+	@XmlElement(name = "ATM", required = true)
 	public AutomatedTellerMachine2 getATM() {
 		return aTM;
 	}
@@ -490,6 +500,7 @@ public class ATMEnvironment2 {
 		this.aTM = aTM;
 	}
 
+	@XmlElement(name = "Cstmr", required = true)
 	public ATMCustomer2 getCustomer() {
 		return customer;
 	}
@@ -498,6 +509,7 @@ public class ATMEnvironment2 {
 		this.customer = customer;
 	}
 
+	@XmlElement(name = "PrtctdCardData")
 	public ContentInformationType10 getProtectedCardData() {
 		return protectedCardData;
 	}
@@ -506,6 +518,7 @@ public class ATMEnvironment2 {
 		this.protectedCardData = protectedCardData;
 	}
 
+	@XmlElement(name = "PlainCardData")
 	public PlainCardData14 getPlainCardData() {
 		return plainCardData;
 	}

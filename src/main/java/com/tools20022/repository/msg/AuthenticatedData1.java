@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Message authentication code (MAC), computed on the data to protect with an
@@ -77,6 +81,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AuthenticatedData1", propOrder = {"version", "recipient", "MACAlgorithm", "encapsulatedContent", "MAC"})
 public class AuthenticatedData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -300,6 +306,7 @@ public class AuthenticatedData1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Number getVersion() {
 		return version;
 	}
@@ -308,6 +315,7 @@ public class AuthenticatedData1 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "Rcpt", required = true)
 	public List<Recipient1Choice> getRecipient() {
 		return recipient;
 	}
@@ -316,6 +324,7 @@ public class AuthenticatedData1 {
 		this.recipient = recipient;
 	}
 
+	@XmlElement(name = "MACAlgo", required = true)
 	public AlgorithmIdentification1 getMACAlgorithm() {
 		return mACAlgorithm;
 	}
@@ -324,6 +333,7 @@ public class AuthenticatedData1 {
 		this.mACAlgorithm = mACAlgorithm;
 	}
 
+	@XmlElement(name = "NcpsltdCntt", required = true)
 	public EncapsulatedContent1 getEncapsulatedContent() {
 		return encapsulatedContent;
 	}
@@ -332,6 +342,7 @@ public class AuthenticatedData1 {
 		this.encapsulatedContent = encapsulatedContent;
 	}
 
+	@XmlElement(name = "MAC", required = true)
 	public Max35Binary getMAC() {
 		return mAC;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide specific information on the direct debit
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DirectDebitTransaction6", propOrder = {"mandateRelatedInformation", "creditorSchemeIdentification", "preNotificationIdentification", "preNotificationDate"})
 public class DirectDebitTransaction6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -295,6 +301,7 @@ public class DirectDebitTransaction6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MndtRltdInf")
 	public MandateRelatedInformation6 getMandateRelatedInformation() {
 		return mandateRelatedInformation;
 	}
@@ -303,6 +310,7 @@ public class DirectDebitTransaction6 {
 		this.mandateRelatedInformation = mandateRelatedInformation;
 	}
 
+	@XmlElement(name = "CdtrSchmeId")
 	public PartyIdentification32 getCreditorSchemeIdentification() {
 		return creditorSchemeIdentification;
 	}
@@ -311,6 +319,7 @@ public class DirectDebitTransaction6 {
 		this.creditorSchemeIdentification = creditorSchemeIdentification;
 	}
 
+	@XmlElement(name = "PreNtfctnId")
 	public Max35Text getPreNotificationIdentification() {
 		return preNotificationIdentification;
 	}
@@ -319,6 +328,7 @@ public class DirectDebitTransaction6 {
 		this.preNotificationIdentification = preNotificationIdentification;
 	}
 
+	@XmlElement(name = "PreNtfctnDt")
 	public ISODate getPreNotificationDate() {
 		return preNotificationDate;
 	}

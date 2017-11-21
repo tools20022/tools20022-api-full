@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Manufacturer configuration parameters of the point of interaction (POI).
@@ -83,6 +87,8 @@ import java.util.List;
  * PaymentTerminalParameters3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTerminalParameters4", propOrder = {"actionType", "vendorIdentification", "version", "clockSynchronisation", "timeZoneLine", "localDateTime", "otherParameters"})
 public class PaymentTerminalParameters4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -443,6 +449,7 @@ public class PaymentTerminalParameters4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ActnTp", required = true)
 	public TerminalManagementAction3Code getActionType() {
 		return actionType;
 	}
@@ -451,6 +458,7 @@ public class PaymentTerminalParameters4 {
 		this.actionType = actionType;
 	}
 
+	@XmlElement(name = "VndrId")
 	public Max35Text getVendorIdentification() {
 		return vendorIdentification;
 	}
@@ -459,6 +467,7 @@ public class PaymentTerminalParameters4 {
 		this.vendorIdentification = vendorIdentification;
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Max256Text getVersion() {
 		return version;
 	}
@@ -467,6 +476,7 @@ public class PaymentTerminalParameters4 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "ClckSynctn")
 	public ClockSynchronisation1 getClockSynchronisation() {
 		return clockSynchronisation;
 	}
@@ -475,6 +485,7 @@ public class PaymentTerminalParameters4 {
 		this.clockSynchronisation = clockSynchronisation;
 	}
 
+	@XmlElement(name = "TmZoneLine")
 	public List<Max70Text> getTimeZoneLine() {
 		return timeZoneLine;
 	}
@@ -483,6 +494,7 @@ public class PaymentTerminalParameters4 {
 		this.timeZoneLine = timeZoneLine;
 	}
 
+	@XmlElement(name = "LclDtTm")
 	public List<LocalDateTime1> getLocalDateTime() {
 		return localDateTime;
 	}
@@ -491,6 +503,7 @@ public class PaymentTerminalParameters4 {
 		this.localDateTime = localDateTime;
 	}
 
+	@XmlElement(name = "OthrParams")
 	public Max10000Binary getOtherParameters() {
 		return otherParameters;
 	}

@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.SecuritiesTradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * References of an order and order cancellation.
@@ -105,6 +109,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestmentFundOrder5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentFundOrder9", propOrder = {"orderReference", "clientReference", "cancellationReference", "cancellationReason"})
 public class InvestmentFundOrder9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -374,6 +380,7 @@ public class InvestmentFundOrder9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -382,6 +389,7 @@ public class InvestmentFundOrder9 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -390,6 +398,7 @@ public class InvestmentFundOrder9 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -398,6 +407,7 @@ public class InvestmentFundOrder9 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "CxlRsn")
 	public CancellationReason32Choice getCancellationReason() {
 		return cancellationReason;
 	}

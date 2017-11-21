@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Settlement transaction numbering information
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Settlement transaction numbering information"</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TotalNumber1", propOrder = {"currentInstructionNumber", "totalOfLinkedInstructions"})
 public class TotalNumber1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class TotalNumber1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CurInstrNb", required = true)
 	public Exact3NumericText getCurrentInstructionNumber() {
 		return currentInstructionNumber;
 	}
@@ -168,6 +175,7 @@ public class TotalNumber1 {
 		this.currentInstructionNumber = currentInstructionNumber;
 	}
 
+	@XmlElement(name = "TtlOfLkdInstrs", required = true)
 	public Exact3NumericText getTotalOfLinkedInstructions() {
 		return totalOfLinkedInstructions;
 	}

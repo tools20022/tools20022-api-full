@@ -26,6 +26,10 @@ import com.tools20022.repository.codeset.RefreshTime1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about strategy order/Iceberg orders.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides details about strategy order/Iceberg orders."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DisplayInstruction1", propOrder = {"quantity", "secondaryQuantity", "method", "lowQuantity", "highQuantity", "minimumIncrement", "refreshQuantity", "refreshTime"})
 public class DisplayInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -440,6 +446,7 @@ public class DisplayInstruction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Qty")
 	public FinancialInstrumentQuantityChoice getQuantity() {
 		return quantity;
 	}
@@ -448,6 +455,7 @@ public class DisplayInstruction1 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "ScndryQty")
 	public FinancialInstrumentQuantityChoice getSecondaryQuantity() {
 		return secondaryQuantity;
 	}
@@ -456,6 +464,7 @@ public class DisplayInstruction1 {
 		this.secondaryQuantity = secondaryQuantity;
 	}
 
+	@XmlElement(name = "Mtd")
 	public DisplayMethod1Code getMethod() {
 		return method;
 	}
@@ -464,6 +473,7 @@ public class DisplayInstruction1 {
 		this.method = method;
 	}
 
+	@XmlElement(name = "LwQty")
 	public FinancialInstrumentQuantityChoice getLowQuantity() {
 		return lowQuantity;
 	}
@@ -472,6 +482,7 @@ public class DisplayInstruction1 {
 		this.lowQuantity = lowQuantity;
 	}
 
+	@XmlElement(name = "HghQty")
 	public FinancialInstrumentQuantityChoice getHighQuantity() {
 		return highQuantity;
 	}
@@ -480,6 +491,7 @@ public class DisplayInstruction1 {
 		this.highQuantity = highQuantity;
 	}
 
+	@XmlElement(name = "MinIncrmt")
 	public FinancialInstrumentQuantityChoice getMinimumIncrement() {
 		return minimumIncrement;
 	}
@@ -488,6 +500,7 @@ public class DisplayInstruction1 {
 		this.minimumIncrement = minimumIncrement;
 	}
 
+	@XmlElement(name = "RfrshQty")
 	public FinancialInstrumentQuantityChoice getRefreshQuantity() {
 		return refreshQuantity;
 	}
@@ -496,6 +509,7 @@ public class DisplayInstruction1 {
 		this.refreshQuantity = refreshQuantity;
 	}
 
+	@XmlElement(name = "RfrshTm")
 	public RefreshTime1Code getRefreshTime() {
 		return refreshTime;
 	}

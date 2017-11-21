@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Service;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Taxable service charge amount conversions to host currency.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Taxable service charge amount conversions to host currency."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingServicesAmount3", propOrder = {"sourceAmount", "hostAmount"})
 public class BillingServicesAmount3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -182,6 +188,7 @@ public class BillingServicesAmount3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SrcAmt", required = true)
 	public AmountAndDirection34 getSourceAmount() {
 		return sourceAmount;
 	}
@@ -190,6 +197,7 @@ public class BillingServicesAmount3 {
 		this.sourceAmount = sourceAmount;
 	}
 
+	@XmlElement(name = "HstAmt", required = true)
 	public AmountAndDirection34 getHostAmount() {
 		return hostAmount;
 	}

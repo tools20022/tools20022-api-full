@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the amendent request.
@@ -99,6 +103,9 @@ import java.util.List;
  * definition} = "Details of the amendent request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Amendment3", propOrder = {"applicantRequestNumber", "undertakingIdentification", "applicant", "terminationDetails", "increaseDecreaseAmount", "newExpiryDetails", "newBeneficiary", "newUndertakingTermsAndConditions",
+		"counterUndertaking", "deliveryChannel", "enclosedFile", "additionalInformation"})
 public class Amendment3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -658,6 +665,7 @@ public class Amendment3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ApplcntReqNb", required = true)
 	public Max35Text getApplicantRequestNumber() {
 		return applicantRequestNumber;
 	}
@@ -666,6 +674,7 @@ public class Amendment3 {
 		this.applicantRequestNumber = applicantRequestNumber;
 	}
 
+	@XmlElement(name = "UdrtkgId", required = true)
 	public Undertaking9 getUndertakingIdentification() {
 		return undertakingIdentification;
 	}
@@ -674,6 +683,7 @@ public class Amendment3 {
 		this.undertakingIdentification = undertakingIdentification;
 	}
 
+	@XmlElement(name = "Applcnt", required = true)
 	public PartyIdentification43 getApplicant() {
 		return applicant;
 	}
@@ -682,6 +692,7 @@ public class Amendment3 {
 		this.applicant = applicant;
 	}
 
+	@XmlElement(name = "TermntnDtls")
 	public UndertakingTermination3 getTerminationDetails() {
 		return terminationDetails;
 	}
@@ -690,6 +701,7 @@ public class Amendment3 {
 		this.terminationDetails = terminationDetails;
 	}
 
+	@XmlElement(name = "IncrDcrAmt")
 	public UndertakingAmount2 getIncreaseDecreaseAmount() {
 		return increaseDecreaseAmount;
 	}
@@ -698,6 +710,7 @@ public class Amendment3 {
 		this.increaseDecreaseAmount = increaseDecreaseAmount;
 	}
 
+	@XmlElement(name = "NewXpryDtls")
 	public ExpiryDetails2 getNewExpiryDetails() {
 		return newExpiryDetails;
 	}
@@ -706,6 +719,7 @@ public class Amendment3 {
 		this.newExpiryDetails = newExpiryDetails;
 	}
 
+	@XmlElement(name = "NewBnfcry")
 	public Beneficiary1 getNewBeneficiary() {
 		return newBeneficiary;
 	}
@@ -714,6 +728,7 @@ public class Amendment3 {
 		this.newBeneficiary = newBeneficiary;
 	}
 
+	@XmlElement(name = "NewUdrtkgTermsAndConds")
 	public List<Narrative1> getNewUndertakingTermsAndConditions() {
 		return newUndertakingTermsAndConditions;
 	}
@@ -722,6 +737,7 @@ public class Amendment3 {
 		this.newUndertakingTermsAndConditions = newUndertakingTermsAndConditions;
 	}
 
+	@XmlElement(name = "CntrUdrtkg")
 	public Undertaking10 getCounterUndertaking() {
 		return counterUndertaking;
 	}
@@ -730,6 +746,7 @@ public class Amendment3 {
 		this.counterUndertaking = counterUndertaking;
 	}
 
+	@XmlElement(name = "DlvryChanl")
 	public CommunicationChannel1 getDeliveryChannel() {
 		return deliveryChannel;
 	}
@@ -738,6 +755,7 @@ public class Amendment3 {
 		this.deliveryChannel = deliveryChannel;
 	}
 
+	@XmlElement(name = "NclsdFile")
 	public List<Document9> getEnclosedFile() {
 		return enclosedFile;
 	}
@@ -746,6 +764,7 @@ public class Amendment3 {
 		this.enclosedFile = enclosedFile;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

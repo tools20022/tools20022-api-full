@@ -27,6 +27,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[a-zA-Z0-9]{1,14}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -54,6 +56,9 @@ public class Max14AlphaNumericText {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Max14AlphaNumericText";
 				definition = "Specifies an alphanumeric string with a maximum length of 14 characters.";
+				minLength = 1;
+				maxLength = 14;
+				pattern = "[a-zA-Z0-9]{1,14}";
 			}
 		});
 		return mmObject_lazy.get();

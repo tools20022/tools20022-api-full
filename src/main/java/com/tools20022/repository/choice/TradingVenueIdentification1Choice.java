@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TradingVenueIdentification2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Trade venue related fields.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Trade venue related fields."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradingVenueIdentification1Choice", propOrder = {"marketIdentificationCode", "nationalCompetentAuthority", "other"})
 public class TradingVenueIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -239,6 +245,7 @@ public class TradingVenueIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MktIdCd", required = true)
 	public MICIdentifier getMarketIdentificationCode() {
 		return marketIdentificationCode;
 	}
@@ -247,6 +254,7 @@ public class TradingVenueIdentification1Choice {
 		this.marketIdentificationCode = marketIdentificationCode;
 	}
 
+	@XmlElement(name = "NtlCmptntAuthrty", required = true)
 	public CountryCode getNationalCompetentAuthority() {
 		return nationalCompetentAuthority;
 	}
@@ -255,6 +263,7 @@ public class TradingVenueIdentification1Choice {
 		this.nationalCompetentAuthority = nationalCompetentAuthority;
 	}
 
+	@XmlElement(name = "Othr", required = true)
 	public TradingVenueIdentification2 getOther() {
 		return other;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports on business day information.
@@ -66,6 +70,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BusinessDay1", propOrder = {"systemIdentification", "businessDayOrError"})
 public class BusinessDay1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -192,6 +198,7 @@ public class BusinessDay1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysId", required = true)
 	public List<SystemIdentification2Choice> getSystemIdentification() {
 		return systemIdentification;
 	}
@@ -200,6 +207,7 @@ public class BusinessDay1 {
 		this.systemIdentification = systemIdentification;
 	}
 
+	@XmlElement(name = "BizDayOrErr", required = true)
 	public BusinessDayReportOrError2Choice getBusinessDayOrError() {
 		return businessDayOrError;
 	}

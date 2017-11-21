@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Allows to specify other collateral type by providing a description and the
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * OtherTypeOfCollateral1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherTypeOfCollateral2", propOrder = {"description", "quantity"})
 public class OtherTypeOfCollateral2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -184,6 +190,7 @@ public class OtherTypeOfCollateral2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Desc", required = true)
 	public Max140Text getDescription() {
 		return description;
 	}
@@ -192,6 +199,7 @@ public class OtherTypeOfCollateral2 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "Qty")
 	public FinancialInstrumentQuantity1Choice getQuantity() {
 		return quantity;
 	}

@@ -24,8 +24,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TreasuryArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -38,9 +40,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code trea.006.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
  * TreasuryArchive}</li>
@@ -81,6 +80,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code trea.006.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -92,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancelNonDeliverableForwardValuationV02", propOrder = {"tradeInformation", "tradingSideIdentification", "counterpartySideIdentification", "tradeAmounts", "valuationRate", "valuationInformation"})
 public class CancelNonDeliverableForwardValuationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -131,6 +135,14 @@ public class CancelNonDeliverableForwardValuationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradeAgreement2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CancelNonDeliverableForwardValuationV02.class.getMethod("getTradeInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TradePartyIdentification3 tradingSideIdentification;
 	/**
@@ -168,6 +180,14 @@ public class CancelNonDeliverableForwardValuationV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CancelNonDeliverableForwardValuationV02.class.getMethod("getTradingSideIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TradePartyIdentification3 counterpartySideIdentification;
@@ -207,6 +227,14 @@ public class CancelNonDeliverableForwardValuationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CancelNonDeliverableForwardValuationV02.class.getMethod("getCounterpartySideIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AmountsAndValueDate1 tradeAmounts;
 	/**
@@ -245,6 +273,14 @@ public class CancelNonDeliverableForwardValuationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AmountsAndValueDate1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CancelNonDeliverableForwardValuationV02.class.getMethod("getTradeAmounts", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AgreedRate1 valuationRate;
 	/**
@@ -281,6 +317,14 @@ public class CancelNonDeliverableForwardValuationV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AgreedRate1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CancelNonDeliverableForwardValuationV02.class.getMethod("getValuationRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ValuationData2 valuationInformation;
@@ -319,6 +363,14 @@ public class CancelNonDeliverableForwardValuationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ValuationData2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CancelNonDeliverableForwardValuationV02.class.getMethod("getValuationInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -331,9 +383,10 @@ public class CancelNonDeliverableForwardValuationV02 {
 				rootElement = "Document";
 				xmlTag = "CclNDFValtnV02";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CancelNonDeliverableForwardValuationV02.mmTradeInformation, CancelNonDeliverableForwardValuationV02.mmTradingSideIdentification,
-						CancelNonDeliverableForwardValuationV02.mmCounterpartySideIdentification, CancelNonDeliverableForwardValuationV02.mmTradeAmounts, CancelNonDeliverableForwardValuationV02.mmValuationRate,
-						CancelNonDeliverableForwardValuationV02.mmValuationInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.mmTradeInformation,
+						com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.mmTradingSideIdentification, com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.mmCounterpartySideIdentification,
+						com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.mmTradeAmounts, com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.mmValuationRate,
+						com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.mmValuationInformation);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "trea";
@@ -343,10 +396,16 @@ public class CancelNonDeliverableForwardValuationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CancelNonDeliverableForwardValuationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradInf", required = true)
 	public TradeAgreement2 getTradeInformation() {
 		return tradeInformation;
 	}
@@ -355,6 +414,7 @@ public class CancelNonDeliverableForwardValuationV02 {
 		this.tradeInformation = tradeInformation;
 	}
 
+	@XmlElement(name = "TradgSdId")
 	public TradePartyIdentification3 getTradingSideIdentification() {
 		return tradingSideIdentification;
 	}
@@ -363,6 +423,7 @@ public class CancelNonDeliverableForwardValuationV02 {
 		this.tradingSideIdentification = tradingSideIdentification;
 	}
 
+	@XmlElement(name = "CtrPtySdId")
 	public TradePartyIdentification3 getCounterpartySideIdentification() {
 		return counterpartySideIdentification;
 	}
@@ -371,6 +432,7 @@ public class CancelNonDeliverableForwardValuationV02 {
 		this.counterpartySideIdentification = counterpartySideIdentification;
 	}
 
+	@XmlElement(name = "TradAmts")
 	public AmountsAndValueDate1 getTradeAmounts() {
 		return tradeAmounts;
 	}
@@ -379,6 +441,7 @@ public class CancelNonDeliverableForwardValuationV02 {
 		this.tradeAmounts = tradeAmounts;
 	}
 
+	@XmlElement(name = "ValtnRate")
 	public AgreedRate1 getValuationRate() {
 		return valuationRate;
 	}
@@ -387,11 +450,18 @@ public class CancelNonDeliverableForwardValuationV02 {
 		this.valuationRate = valuationRate;
 	}
 
+	@XmlElement(name = "ValtnInf")
 	public ValuationData2 getValuationInformation() {
 		return valuationInformation;
 	}
 
 	public void setValuationInformation(ValuationData2 valuationInformation) {
 		this.valuationInformation = valuationInformation;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:trea.006.02.02")
+	static public class Document {
+		@XmlElement(name = "CclNDFValtnV02", required = true)
+		public CancelNonDeliverableForwardValuationV02 messageBody;
 	}
 }

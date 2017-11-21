@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason for the complete status.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Reason for the complete status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferCancellationCompleteReason1", propOrder = {"structured", "additionalInformation"})
 public class TransferCancellationCompleteReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -174,6 +180,7 @@ public class TransferCancellationCompleteReason1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Strd", required = true)
 	public CancellationCompleteStatusReason1Code getStructured() {
 		return structured;
 	}
@@ -182,6 +189,7 @@ public class TransferCancellationCompleteReason1 {
 		this.structured = structured;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}

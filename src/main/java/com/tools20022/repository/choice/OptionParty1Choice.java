@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.GenericIdentification40;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for option party.
@@ -63,6 +67,8 @@ import java.util.List;
  * definition} = "Choice of format for option party."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OptionParty1Choice", propOrder = {"code", "proprietary"})
 public class OptionParty1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class OptionParty1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd")
 	public List<OptionParty1Code> getCode() {
 		return code;
 	}
@@ -184,6 +191,7 @@ public class OptionParty1Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification40 getProprietary() {
 		return proprietary;
 	}

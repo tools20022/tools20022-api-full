@@ -29,13 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode
- * PartyIssuerCode}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -295,6 +288,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * IssuerCode.mmParticipantTrustCompany}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#mmXClear
  * IssuerCode.mmXClear}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode
+ * PartyIssuerCode}</li>
  * </ul>
  * </li>
  * <li>

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the margin call, that is a description and a response
@@ -76,6 +80,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Response1", propOrder = {"responseTypeDetails", "description"})
 public class Response1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -174,6 +180,7 @@ public class Response1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RspnTpDtls", required = true)
 	public List<ResponseType1Choice> getResponseTypeDetails() {
 		return responseTypeDetails;
 	}
@@ -182,6 +189,7 @@ public class Response1 {
 		this.responseTypeDetails = responseTypeDetails;
 	}
 
+	@XmlElement(name = "Desc")
 	public Max140Text getDescription() {
 		return description;
 	}

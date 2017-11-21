@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,6 +38,42 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmNameShort
+ * Scheme.mmNameShort}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmCode Scheme.mmCode}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmIdentification
+ * Scheme.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmRating
+ * Scheme.mmRating}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmCreditorRole
+ * Scheme.mmCreditorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Scheme#mmInformationPartyRole
+ * Scheme.mmInformationPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmVersion
+ * Scheme.mmVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Scheme#mmAssessmentValidityPeriod
+ * Scheme.mmAssessmentValidityPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmNameLong
+ * Scheme.mmNameLong}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmDescription
+ * Scheme.mmDescription}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmDomainValueCode
+ * Scheme.mmDomainValueCode}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmDomainValueName
+ * Scheme.mmDomainValueName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmSector
+ * Scheme.mmSector}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Scheme#mmAssetClassification
+ * Scheme.mmAssetClassification}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -75,42 +112,6 @@ import java.util.List;
  * CreditorRole.mmSchemeIdentification}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmNameShort
- * Scheme.mmNameShort}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmCode Scheme.mmCode}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmIdentification
- * Scheme.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmRating
- * Scheme.mmRating}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmCreditorRole
- * Scheme.mmCreditorRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Scheme#mmInformationPartyRole
- * Scheme.mmInformationPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmVersion
- * Scheme.mmVersion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Scheme#mmAssessmentValidityPeriod
- * Scheme.mmAssessmentValidityPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmNameLong
- * Scheme.mmNameLong}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmDescription
- * Scheme.mmDescription}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmDomainValueCode
- * Scheme.mmDomainValueCode}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmDomainValueName
- * Scheme.mmDomainValueName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmSector
- * Scheme.mmSector}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Scheme#mmAssetClassification
- * Scheme.mmAssetClassification}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -139,10 +140,6 @@ public class Scheme {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Scheme
-	 * Scheme}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -302,6 +299,10 @@ public class Scheme {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Scheme
+	 * Scheme}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -324,7 +325,7 @@ public class Scheme {
 					GenericIdentification62.mmSchemeName, GenericIdentification60.mmSchemeName, GenericIdentification64.mmSchemeName, GenericIdentification67.mmSchemeName, SecuritiesCertificate4.mmSchemeName,
 					ProprietaryQuantity8.mmSchemeName, ProprietaryQuantity7.mmSchemeName, GenericIdentification84.mmSchemeName, ProprietaryQuantity10.mmSchemeName, ProprietaryQuantity9.mmSchemeName, GenericIdentification86.mmSchemeName,
 					SecuritiesCertificate5.mmSchemeName, GenericIdentification144.mmSchemeName, GenericIdentification163.mmSchemeName, GenericIdentification79.mmSchemeName);
-			elementContext_lazy = () -> Scheme.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NameShort";
@@ -332,6 +333,14 @@ public class Scheme {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Scheme.class.getMethod("getNameShort", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text code;
@@ -344,10 +353,6 @@ public class Scheme {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Scheme
-	 * Scheme}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -408,6 +413,10 @@ public class Scheme {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Scheme
+	 * Scheme}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -427,7 +436,7 @@ public class Scheme {
 					PersonIdentificationSchemeName1Choice.mmCode, OrganisationIdentificationSchemeName2Choice.mmCode, OrganisationIdentificationSchemeName2Choice.mmProprietary, IdentificationSource3Choice.mmCode,
 					IdentificationSource4Choice.mmCode, RestrictedIdentification2.mmIdentificationType, GenericIdentification49.mmIdentificationType, IdentificationSource5Choice.mmDomesticIdentificationSource, MandateStatus1Choice.mmCode,
 					MandateStatus1Choice.mmProprietary);
-			elementContext_lazy = () -> Scheme.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Code";
@@ -435,6 +444,14 @@ public class Scheme {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Scheme.class.getMethod("getCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.GenericIdentification> identification;
@@ -456,10 +473,6 @@ public class Scheme {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
 	 * GenericIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Scheme
-	 * Scheme}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -478,6 +491,10 @@ public class Scheme {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Scheme
+	 * Scheme}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -492,7 +509,7 @@ public class Scheme {
 	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(OtherIdentification1.mmType, OtherIdentification2.mmType, OtherIdentification3.mmType, OtherIdentification4.mmType);
-			elementContext_lazy = () -> Scheme.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -538,7 +555,7 @@ public class Scheme {
 	 */
 	public static final MMBusinessAssociationEnd mmRating = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Scheme.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rating";
@@ -586,7 +603,7 @@ public class Scheme {
 	 */
 	public static final MMBusinessAssociationEnd mmCreditorRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Scheme.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditorRole";
@@ -634,7 +651,7 @@ public class Scheme {
 	 */
 	public static final MMBusinessAssociationEnd mmInformationPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Scheme.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InformationPartyRole";
@@ -672,7 +689,7 @@ public class Scheme {
 	 */
 	public static final MMBusinessAttribute mmVersion = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Scheme.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Version";
@@ -680,6 +697,14 @@ public class Scheme {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Scheme.class.getMethod("getVersion", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DateTimePeriod assessmentValidityPeriod;
@@ -718,7 +743,7 @@ public class Scheme {
 	 */
 	public static final MMBusinessAssociationEnd mmAssessmentValidityPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Scheme.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssessmentValidityPeriod";
@@ -757,7 +782,7 @@ public class Scheme {
 	 */
 	public static final MMBusinessAttribute mmNameLong = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Scheme.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NameLong";
@@ -765,6 +790,14 @@ public class Scheme {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Scheme.class.getMethod("getNameLong", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max350Text description;
@@ -794,7 +827,7 @@ public class Scheme {
 	 */
 	public static final MMBusinessAttribute mmDescription = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Scheme.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Description";
@@ -802,6 +835,14 @@ public class Scheme {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Scheme.class.getMethod("getDescription", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text domainValueCode;
@@ -834,7 +875,7 @@ public class Scheme {
 	 */
 	public static final MMBusinessAttribute mmDomainValueCode = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Scheme.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DomainValueCode";
@@ -842,6 +883,14 @@ public class Scheme {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Scheme.class.getMethod("getDomainValueCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max70Text domainValueName;
@@ -874,7 +923,7 @@ public class Scheme {
 	 */
 	public static final MMBusinessAttribute mmDomainValueName = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Scheme.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DomainValueName";
@@ -882,6 +931,14 @@ public class Scheme {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Scheme.class.getMethod("getDomainValueName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Sector sector;
@@ -917,7 +974,7 @@ public class Scheme {
 	 */
 	public static final MMBusinessAssociationEnd mmSector = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Scheme.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sector";
@@ -964,7 +1021,7 @@ public class Scheme {
 	 */
 	public static final MMBusinessAssociationEnd mmAssetClassification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Scheme.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetClassification";
@@ -987,9 +1044,17 @@ public class Scheme {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InformationPartyRole.mmScheme, com.tools20022.repository.entity.GenericIdentification.mmScheme,
 						com.tools20022.repository.entity.DateTimePeriod.mmAssessmentValidityScheme, com.tools20022.repository.entity.AssetClassification.mmAssetClassScheme, com.tools20022.repository.entity.Rating.mmRatingScheme,
 						com.tools20022.repository.entity.Sector.mmScheme, com.tools20022.repository.entity.CreditorRole.mmSchemeIdentification);
-				element_lazy = () -> Arrays.asList(Scheme.mmNameShort, Scheme.mmCode, Scheme.mmIdentification, Scheme.mmRating, Scheme.mmCreditorRole, Scheme.mmInformationPartyRole, Scheme.mmVersion, Scheme.mmAssessmentValidityPeriod,
-						Scheme.mmNameLong, Scheme.mmDescription, Scheme.mmDomainValueCode, Scheme.mmDomainValueName, Scheme.mmSector, Scheme.mmAssetClassification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Scheme.mmNameShort, com.tools20022.repository.entity.Scheme.mmCode, com.tools20022.repository.entity.Scheme.mmIdentification,
+						com.tools20022.repository.entity.Scheme.mmRating, com.tools20022.repository.entity.Scheme.mmCreditorRole, com.tools20022.repository.entity.Scheme.mmInformationPartyRole,
+						com.tools20022.repository.entity.Scheme.mmVersion, com.tools20022.repository.entity.Scheme.mmAssessmentValidityPeriod, com.tools20022.repository.entity.Scheme.mmNameLong,
+						com.tools20022.repository.entity.Scheme.mmDescription, com.tools20022.repository.entity.Scheme.mmDomainValueCode, com.tools20022.repository.entity.Scheme.mmDomainValueName,
+						com.tools20022.repository.entity.Scheme.mmSector, com.tools20022.repository.entity.Scheme.mmAssetClassification);
 				derivationComponent_lazy = () -> Arrays.asList(FinancialIdentificationSchemeName1Choice.mmObject(), AccountSchemeName1Choice.mmObject(), MandateStatus1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Scheme.class;
 			}
 		});
 		return mmObject_lazy.get();

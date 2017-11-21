@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides securities proceeds information.
@@ -74,6 +78,8 @@ import java.util.List;
  * definition} = "Provides securities proceeds information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesProceeds1", propOrder = {"securityIdentification", "postingQuantity", "accountDetails", "reconciliationDetails"})
 public class SecuritiesProceeds1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -277,6 +283,7 @@ public class SecuritiesProceeds1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification7 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -285,6 +292,7 @@ public class SecuritiesProceeds1 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "PstngQty", required = true)
 	public UnitOrFaceAmount1Choice getPostingQuantity() {
 		return postingQuantity;
 	}
@@ -293,6 +301,7 @@ public class SecuritiesProceeds1 {
 		this.postingQuantity = postingQuantity;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public List<SecuritiesAccount10> getAccountDetails() {
 		return accountDetails;
 	}
@@ -301,6 +310,7 @@ public class SecuritiesProceeds1 {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "RcncltnDtls")
 	public Max350Text getReconciliationDetails() {
 		return reconciliationDetails;
 	}

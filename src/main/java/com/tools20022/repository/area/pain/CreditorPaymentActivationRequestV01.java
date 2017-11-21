@@ -25,9 +25,11 @@ import com.tools20022.repository.area.PaymentsInitiationArchive;
 import com.tools20022.repository.msg.GroupHeader45;
 import com.tools20022.repository.msg.PaymentInstruction5;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -37,9 +39,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.013.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
@@ -67,6 +66,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.013.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -86,6 +88,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CreditorPaymentActivationRequestV01", propOrder = {"groupHeader", "paymentInformation"})
 public class CreditorPaymentActivationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -125,6 +129,14 @@ public class CreditorPaymentActivationRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader45.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CreditorPaymentActivationRequestV01.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PaymentInstruction5> paymentInformation;
 	/**
@@ -162,6 +174,14 @@ public class CreditorPaymentActivationRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstruction5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CreditorPaymentActivationRequestV01.class.getMethod("getPaymentInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -175,7 +195,8 @@ public class CreditorPaymentActivationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "CdtrPmtActvtnReq";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestV01.mmGroupHeader, CreditorPaymentActivationRequestV01.mmPaymentInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV01.mmGroupHeader,
+						com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV01.mmPaymentInformation);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";
@@ -185,10 +206,16 @@ public class CreditorPaymentActivationRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CreditorPaymentActivationRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader45 getGroupHeader() {
 		return groupHeader;
 	}
@@ -197,11 +224,18 @@ public class CreditorPaymentActivationRequestV01 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "PmtInf", required = true)
 	public List<PaymentInstruction5> getPaymentInformation() {
 		return paymentInformation;
 	}
 
 	public void setPaymentInformation(List<PaymentInstruction5> paymentInformation) {
 		this.paymentInformation = paymentInformation;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.013.01.01")
+	static public class Document {
+		@XmlElement(name = "CdtrPmtActvtnReq", required = true)
+		public CreditorPaymentActivationRequestV01 messageBody;
 	}
 }

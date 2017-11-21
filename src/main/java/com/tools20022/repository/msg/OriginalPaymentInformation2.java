@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide information on the original transactions, to
@@ -96,6 +100,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalPaymentInformation2", propOrder = {"reversalPaymentInformationIdentification", "originalPaymentInformationIdentification", "originalNumberOfTransactions", "originalControlSum", "batchBooking",
+		"paymentInformationReversal", "reversalReasonInformation", "transactionInformation"})
 public class OriginalPaymentInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -502,6 +509,7 @@ public class OriginalPaymentInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RvslPmtInfId")
 	public Max35Text getReversalPaymentInformationIdentification() {
 		return reversalPaymentInformationIdentification;
 	}
@@ -510,6 +518,7 @@ public class OriginalPaymentInformation2 {
 		this.reversalPaymentInformationIdentification = reversalPaymentInformationIdentification;
 	}
 
+	@XmlElement(name = "OrgnlPmtInfId", required = true)
 	public Max35Text getOriginalPaymentInformationIdentification() {
 		return originalPaymentInformationIdentification;
 	}
@@ -518,6 +527,7 @@ public class OriginalPaymentInformation2 {
 		this.originalPaymentInformationIdentification = originalPaymentInformationIdentification;
 	}
 
+	@XmlElement(name = "OrgnlNbOfTxs")
 	public Max15NumericText getOriginalNumberOfTransactions() {
 		return originalNumberOfTransactions;
 	}
@@ -526,6 +536,7 @@ public class OriginalPaymentInformation2 {
 		this.originalNumberOfTransactions = originalNumberOfTransactions;
 	}
 
+	@XmlElement(name = "OrgnlCtrlSum")
 	public DecimalNumber getOriginalControlSum() {
 		return originalControlSum;
 	}
@@ -534,6 +545,7 @@ public class OriginalPaymentInformation2 {
 		this.originalControlSum = originalControlSum;
 	}
 
+	@XmlElement(name = "BtchBookg")
 	public BatchBookingIndicator getBatchBooking() {
 		return batchBooking;
 	}
@@ -542,6 +554,7 @@ public class OriginalPaymentInformation2 {
 		this.batchBooking = batchBooking;
 	}
 
+	@XmlElement(name = "PmtInfRvsl")
 	public TrueFalseIndicator getPaymentInformationReversal() {
 		return paymentInformationReversal;
 	}
@@ -550,6 +563,7 @@ public class OriginalPaymentInformation2 {
 		this.paymentInformationReversal = paymentInformationReversal;
 	}
 
+	@XmlElement(name = "RvslRsnInf")
 	public List<ReversalReasonInformation6> getReversalReasonInformation() {
 		return reversalReasonInformation;
 	}
@@ -558,6 +572,7 @@ public class OriginalPaymentInformation2 {
 		this.reversalReasonInformation = reversalReasonInformation;
 	}
 
+	@XmlElement(name = "TxInf")
 	public List<PaymentTransactionInformation28> getTransactionInformation() {
 		return transactionInformation;
 	}

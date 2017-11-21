@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies a customer identification as the search criteria for the financial
@@ -60,6 +64,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustomerIdentification1", propOrder = {"party", "authorityRequest"})
 public class CustomerIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class CustomerIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pty", required = true)
 	public PartyIdentification43 getParty() {
 		return party;
 	}
@@ -171,6 +178,7 @@ public class CustomerIdentification1 {
 		this.party = party;
 	}
 
+	@XmlElement(name = "AuthrtyReq", required = true)
 	public List<AuthorityInvestigation2> getAuthorityRequest() {
 		return authorityRequest;
 	}

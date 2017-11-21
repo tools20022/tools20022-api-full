@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PersonName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the identification of a person.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information related to the identification of a person."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PersonalInformation1", propOrder = {"nameOfFather", "maidenNameOfMother", "nameOfPartner"})
 public class PersonalInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -224,6 +230,7 @@ public class PersonalInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NmOfFthr")
 	public Max35Text getNameOfFather() {
 		return nameOfFather;
 	}
@@ -232,6 +239,7 @@ public class PersonalInformation1 {
 		this.nameOfFather = nameOfFather;
 	}
 
+	@XmlElement(name = "MdnNmOfMthr")
 	public Max35Text getMaidenNameOfMother() {
 		return maidenNameOfMother;
 	}
@@ -240,6 +248,7 @@ public class PersonalInformation1 {
 		this.maidenNameOfMother = maidenNameOfMother;
 	}
 
+	@XmlElement(name = "NmOfPrtnr")
 	public Max35Text getNameOfPartner() {
 		return nameOfPartner;
 	}

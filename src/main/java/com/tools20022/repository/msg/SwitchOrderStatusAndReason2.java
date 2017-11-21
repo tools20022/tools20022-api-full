@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status report of the individual orders of a bulk or multiple order that was
@@ -95,6 +99,8 @@ import java.util.List;
  * SwitchOrderStatusAndReason1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwitchOrderStatusAndReason2", propOrder = {"masterReference", "orderReference", "clientReference", "dealReference", "cancellationReference", "orderStatus", "legInformation", "statusInitiator", "orderData", "newDetails"})
 public class SwitchOrderStatusAndReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -644,6 +650,7 @@ public class SwitchOrderStatusAndReason2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -652,6 +659,7 @@ public class SwitchOrderStatusAndReason2 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -660,6 +668,7 @@ public class SwitchOrderStatusAndReason2 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -668,6 +677,7 @@ public class SwitchOrderStatusAndReason2 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "DealRef")
 	public Max35Text getDealReference() {
 		return dealReference;
 	}
@@ -676,6 +686,7 @@ public class SwitchOrderStatusAndReason2 {
 		this.dealReference = dealReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -684,6 +695,7 @@ public class SwitchOrderStatusAndReason2 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "OrdrSts", required = true)
 	public OrderStatus4Choice getOrderStatus() {
 		return orderStatus;
 	}
@@ -692,6 +704,7 @@ public class SwitchOrderStatusAndReason2 {
 		this.orderStatus = orderStatus;
 	}
 
+	@XmlElement(name = "LegInf")
 	public List<SwitchLegReferences2> getLegInformation() {
 		return legInformation;
 	}
@@ -700,6 +713,7 @@ public class SwitchOrderStatusAndReason2 {
 		this.legInformation = legInformation;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification113 getStatusInitiator() {
 		return statusInitiator;
 	}
@@ -708,6 +722,7 @@ public class SwitchOrderStatusAndReason2 {
 		this.statusInitiator = statusInitiator;
 	}
 
+	@XmlElement(name = "OrdrData")
 	public FundOrderData6 getOrderData() {
 		return orderData;
 	}
@@ -716,6 +731,7 @@ public class SwitchOrderStatusAndReason2 {
 		this.orderData = orderData;
 	}
 
+	@XmlElement(name = "NewDtls")
 	public ExpectedExecutionDetails2 getNewDetails() {
 		return newDetails;
 	}

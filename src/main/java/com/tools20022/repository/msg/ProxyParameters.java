@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information on the conditions to fulfill to appoint a proxy.
@@ -75,6 +79,8 @@ import java.util.List;
  * definition} = "Information on the conditions to fulfill to appoint a proxy."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProxyParameters", propOrder = {"authorisedProxy", "proxyAppointmentInformation", "proxyAppointmentDeadline", "proxyAppointmentElectronicDeadline", "proxyAppointmentMarketDeadline"})
 public class ProxyParameters {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -332,6 +338,7 @@ public class ProxyParameters {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AuthrsdPrxy")
 	public List<Proxy> getAuthorisedProxy() {
 		return authorisedProxy;
 	}
@@ -340,6 +347,7 @@ public class ProxyParameters {
 		this.authorisedProxy = authorisedProxy;
 	}
 
+	@XmlElement(name = "PrxyAppntmntInf")
 	public Max350Text getProxyAppointmentInformation() {
 		return proxyAppointmentInformation;
 	}
@@ -348,6 +356,7 @@ public class ProxyParameters {
 		this.proxyAppointmentInformation = proxyAppointmentInformation;
 	}
 
+	@XmlElement(name = "PrxyAppntmntDdln")
 	public ISODateTime getProxyAppointmentDeadline() {
 		return proxyAppointmentDeadline;
 	}
@@ -356,6 +365,7 @@ public class ProxyParameters {
 		this.proxyAppointmentDeadline = proxyAppointmentDeadline;
 	}
 
+	@XmlElement(name = "PrxyAppntmntElctrncDdln")
 	public ISODateTime getProxyAppointmentElectronicDeadline() {
 		return proxyAppointmentElectronicDeadline;
 	}
@@ -364,6 +374,7 @@ public class ProxyParameters {
 		this.proxyAppointmentElectronicDeadline = proxyAppointmentElectronicDeadline;
 	}
 
+	@XmlElement(name = "PrxyAppntmntMktDdln")
 	public ISODateTime getProxyAppointmentMarketDeadline() {
 		return proxyAppointmentMarketDeadline;
 	}

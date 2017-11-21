@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Charges related to a payment obligation contracted between two financial
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentObligation2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Charges5", propOrder = {"chargesPayer", "chargesPayee", "amount", "percentage", "type"})
 public class Charges5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -335,6 +341,7 @@ public class Charges5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ChrgsPyer", required = true)
 	public BankRole1Code getChargesPayer() {
 		return chargesPayer;
 	}
@@ -343,6 +350,7 @@ public class Charges5 {
 		this.chargesPayer = chargesPayer;
 	}
 
+	@XmlElement(name = "ChrgsPyee", required = true)
 	public BankRole1Code getChargesPayee() {
 		return chargesPayee;
 	}
@@ -351,6 +359,7 @@ public class Charges5 {
 		this.chargesPayee = chargesPayee;
 	}
 
+	@XmlElement(name = "Amt")
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -359,6 +368,7 @@ public class Charges5 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Pctg")
 	public PercentageRate getPercentage() {
 		return percentage;
 	}
@@ -367,6 +377,7 @@ public class Charges5 {
 		this.percentage = percentage;
 	}
 
+	@XmlElement(name = "Tp")
 	public Max35Text getType() {
 		return type;
 	}

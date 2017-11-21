@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide security position details.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Set of elements used to provide security position details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesPosition1", propOrder = {"type", "quantity"})
 public class SecuritiesPosition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class SecuritiesPosition1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public Max4AlphaNumericText getType() {
 		return type;
 	}
@@ -169,6 +176,7 @@ public class SecuritiesPosition1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public SubBalanceQuantity2Choice getQuantity() {
 		return quantity;
 	}

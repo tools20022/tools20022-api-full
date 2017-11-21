@@ -37,6 +37,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the trade leg details.
@@ -115,6 +119,9 @@ import java.util.function.Supplier;
  * definition} = "Provides the trade leg details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeLeg3", propOrder = {"tradeLegIdentification", "tradeIdentification", "tradeExecutionIdentification", "marginAccount", "deliveryAccount", "tradingParty", "nonClearingMember", "tradeDate", "settlementDate", "dealPrice",
+		"accruedInterestAmount", "tradingCurrency", "tradeType", "tradingCapacity", "buySellIndicator", "financialInstrumentIdentification", "tradeQuantity", "placeOfTrade", "settlementDetails", "clearingDetails", "placeOfListing"})
 public class TradeLeg3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1129,6 +1136,7 @@ public class TradeLeg3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradLegId", required = true)
 	public Max35Text getTradeLegIdentification() {
 		return tradeLegIdentification;
 	}
@@ -1137,6 +1145,7 @@ public class TradeLeg3 {
 		this.tradeLegIdentification = tradeLegIdentification;
 	}
 
+	@XmlElement(name = "TradId")
 	public Max35Text getTradeIdentification() {
 		return tradeIdentification;
 	}
@@ -1145,6 +1154,7 @@ public class TradeLeg3 {
 		this.tradeIdentification = tradeIdentification;
 	}
 
+	@XmlElement(name = "TradExctnId", required = true)
 	public Max35Text getTradeExecutionIdentification() {
 		return tradeExecutionIdentification;
 	}
@@ -1153,6 +1163,7 @@ public class TradeLeg3 {
 		this.tradeExecutionIdentification = tradeExecutionIdentification;
 	}
 
+	@XmlElement(name = "MrgnAcct")
 	public SecuritiesAccount19 getMarginAccount() {
 		return marginAccount;
 	}
@@ -1161,6 +1172,7 @@ public class TradeLeg3 {
 		this.marginAccount = marginAccount;
 	}
 
+	@XmlElement(name = "DlvryAcct")
 	public SecuritiesAccount19 getDeliveryAccount() {
 		return deliveryAccount;
 	}
@@ -1169,6 +1181,7 @@ public class TradeLeg3 {
 		this.deliveryAccount = deliveryAccount;
 	}
 
+	@XmlElement(name = "TradgPty", required = true)
 	public PartyIdentification35Choice getTradingParty() {
 		return tradingParty;
 	}
@@ -1177,6 +1190,7 @@ public class TradeLeg3 {
 		this.tradingParty = tradingParty;
 	}
 
+	@XmlElement(name = "NonClrMmb")
 	public PartyIdentificationAndAccount31 getNonClearingMember() {
 		return nonClearingMember;
 	}
@@ -1185,6 +1199,7 @@ public class TradeLeg3 {
 		this.nonClearingMember = nonClearingMember;
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public ISODateTime getTradeDate() {
 		return tradeDate;
 	}
@@ -1193,6 +1208,7 @@ public class TradeLeg3 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public DateFormat15Choice getSettlementDate() {
 		return settlementDate;
 	}
@@ -1201,6 +1217,7 @@ public class TradeLeg3 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "DealPric", required = true)
 	public Price4 getDealPrice() {
 		return dealPrice;
 	}
@@ -1209,6 +1226,7 @@ public class TradeLeg3 {
 		this.dealPrice = dealPrice;
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt")
 	public AmountAndDirection21 getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -1217,6 +1235,7 @@ public class TradeLeg3 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "TradgCcy")
 	public CurrencyCode getTradingCurrency() {
 		return tradingCurrency;
 	}
@@ -1225,6 +1244,7 @@ public class TradeLeg3 {
 		this.tradingCurrency = tradingCurrency;
 	}
 
+	@XmlElement(name = "TradTp", required = true)
 	public TradeType1Code getTradeType() {
 		return tradeType;
 	}
@@ -1233,6 +1253,7 @@ public class TradeLeg3 {
 		this.tradeType = tradeType;
 	}
 
+	@XmlElement(name = "TradgCpcty", required = true)
 	public TradingCapacity5Code getTradingCapacity() {
 		return tradingCapacity;
 	}
@@ -1241,6 +1262,7 @@ public class TradeLeg3 {
 		this.tradingCapacity = tradingCapacity;
 	}
 
+	@XmlElement(name = "BuySellInd", required = true)
 	public Side1Code getBuySellIndicator() {
 		return buySellIndicator;
 	}
@@ -1249,6 +1271,7 @@ public class TradeLeg3 {
 		this.buySellIndicator = buySellIndicator;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -1257,6 +1280,7 @@ public class TradeLeg3 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "TradQty", required = true)
 	public FinancialInstrumentQuantity1Choice getTradeQuantity() {
 		return tradeQuantity;
 	}
@@ -1265,6 +1289,7 @@ public class TradeLeg3 {
 		this.tradeQuantity = tradeQuantity;
 	}
 
+	@XmlElement(name = "PlcOfTrad", required = true)
 	public MarketIdentification20 getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -1273,6 +1298,7 @@ public class TradeLeg3 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "SttlmDtls")
 	public SettlementDetails21 getSettlementDetails() {
 		return settlementDetails;
 	}
@@ -1281,6 +1307,7 @@ public class TradeLeg3 {
 		this.settlementDetails = settlementDetails;
 	}
 
+	@XmlElement(name = "ClrDtls", required = true)
 	public Clearing1 getClearingDetails() {
 		return clearingDetails;
 	}
@@ -1289,6 +1316,7 @@ public class TradeLeg3 {
 		this.clearingDetails = clearingDetails;
 	}
 
+	@XmlElement(name = "PlcOfListg")
 	public MarketIdentification21 getPlaceOfListing() {
 		return placeOfListing;
 	}

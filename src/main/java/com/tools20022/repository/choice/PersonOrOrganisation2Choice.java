@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PersonIdentification10;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the identification of a person or an organisation.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PersonOrOrganisation1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PersonOrOrganisation2Choice", propOrder = {"LEI", "person"})
 public class PersonOrOrganisation2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -195,6 +201,7 @@ public class PersonOrOrganisation2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LEI", required = true)
 	public LEIIdentifier getLEI() {
 		return lEI;
 	}
@@ -203,6 +210,7 @@ public class PersonOrOrganisation2Choice {
 		this.lEI = lEI;
 	}
 
+	@XmlElement(name = "Prsn", required = true)
 	public PersonIdentification10 getPerson() {
 		return person;
 	}

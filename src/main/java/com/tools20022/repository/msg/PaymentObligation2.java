@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment obligation contracted between two financial institutions related to
@@ -102,6 +106,8 @@ import java.util.List;
  * PaymentObligation1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentObligation2", propOrder = {"obligorBank", "recipientBank", "paymentObligationAmount", "charges", "expiryDate", "applicableRules", "applicableLaw", "placeOfJurisdiction", "paymentTerms", "settlementTerms"})
 public class PaymentObligation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -634,6 +640,7 @@ public class PaymentObligation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OblgrBk", required = true)
 	public BICIdentification1 getObligorBank() {
 		return obligorBank;
 	}
@@ -642,6 +649,7 @@ public class PaymentObligation2 {
 		this.obligorBank = obligorBank;
 	}
 
+	@XmlElement(name = "RcptBk", required = true)
 	public BICIdentification1 getRecipientBank() {
 		return recipientBank;
 	}
@@ -650,6 +658,7 @@ public class PaymentObligation2 {
 		this.recipientBank = recipientBank;
 	}
 
+	@XmlElement(name = "PmtOblgtnAmt", required = true)
 	public AmountOrPercentage2Choice getPaymentObligationAmount() {
 		return paymentObligationAmount;
 	}
@@ -658,6 +667,7 @@ public class PaymentObligation2 {
 		this.paymentObligationAmount = paymentObligationAmount;
 	}
 
+	@XmlElement(name = "Chrgs")
 	public List<Charges5> getCharges() {
 		return charges;
 	}
@@ -666,6 +676,7 @@ public class PaymentObligation2 {
 		this.charges = charges;
 	}
 
+	@XmlElement(name = "XpryDt", required = true)
 	public ISODate getExpiryDate() {
 		return expiryDate;
 	}
@@ -674,6 +685,7 @@ public class PaymentObligation2 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "AplblRules")
 	public BPOApplicableRules1Choice getApplicableRules() {
 		return applicableRules;
 	}
@@ -682,6 +694,7 @@ public class PaymentObligation2 {
 		this.applicableRules = applicableRules;
 	}
 
+	@XmlElement(name = "AplblLaw")
 	public CountryCode getApplicableLaw() {
 		return applicableLaw;
 	}
@@ -690,6 +703,7 @@ public class PaymentObligation2 {
 		this.applicableLaw = applicableLaw;
 	}
 
+	@XmlElement(name = "PlcOfJursdctn")
 	public Location2 getPlaceOfJurisdiction() {
 		return placeOfJurisdiction;
 	}
@@ -698,6 +712,7 @@ public class PaymentObligation2 {
 		this.placeOfJurisdiction = placeOfJurisdiction;
 	}
 
+	@XmlElement(name = "PmtTerms")
 	public List<PaymentTerms4> getPaymentTerms() {
 		return paymentTerms;
 	}
@@ -706,6 +721,7 @@ public class PaymentObligation2 {
 		this.paymentTerms = paymentTerms;
 	}
 
+	@XmlElement(name = "SttlmTerms")
 	public SettlementTerms3 getSettlementTerms() {
 		return settlementTerms;
 	}

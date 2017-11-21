@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.ShipmentDateRange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies a shipment schedule, that is the quantity that must be shipped no
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ShipmentDateRange2", propOrder = {"subQuantityValue", "earliestShipmentDate", "latestShipmentDate"})
 public class ShipmentDateRange2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -226,6 +232,7 @@ public class ShipmentDateRange2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SubQtyVal", required = true)
 	public DecimalNumber getSubQuantityValue() {
 		return subQuantityValue;
 	}
@@ -234,6 +241,7 @@ public class ShipmentDateRange2 {
 		this.subQuantityValue = subQuantityValue;
 	}
 
+	@XmlElement(name = "EarlstShipmntDt")
 	public ISODate getEarliestShipmentDate() {
 		return earliestShipmentDate;
 	}
@@ -242,6 +250,7 @@ public class ShipmentDateRange2 {
 		this.earliestShipmentDate = earliestShipmentDate;
 	}
 
+	@XmlElement(name = "LatstShipmntDt")
 	public ISODate getLatestShipmentDate() {
 		return latestShipmentDate;
 	}

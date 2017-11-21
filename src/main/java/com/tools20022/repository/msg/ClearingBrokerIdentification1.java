@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.ClearingBrokerIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the reference number assigned by the clearing broker. A distinction
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClearingBrokerIdentification1", propOrder = {"sideIndicator", "clearingBrokerIdentification"})
 public class ClearingBrokerIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -184,6 +190,7 @@ public class ClearingBrokerIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SdInd", required = true)
 	public SideIndicator1Code getSideIndicator() {
 		return sideIndicator;
 	}
@@ -192,6 +199,7 @@ public class ClearingBrokerIdentification1 {
 		this.sideIndicator = sideIndicator;
 	}
 
+	@XmlElement(name = "ClrBrkrId", required = true)
 	public Max35Text getClearingBrokerIdentification() {
 		return clearingBrokerIdentification;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Numerical representation of the net increases and decreases in an account at
@@ -75,6 +79,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BalanceDetails2", propOrder = {"balanceType", "counterpartyType", "counterpartyIdentification", "balanceValueDate"})
 public class BalanceDetails2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -286,6 +292,7 @@ public class BalanceDetails2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BalTp")
 	public List<BalanceType4Code> getBalanceType() {
 		return balanceType;
 	}
@@ -294,6 +301,7 @@ public class BalanceDetails2 {
 		this.balanceType = balanceType;
 	}
 
+	@XmlElement(name = "CtrPtyTp", required = true)
 	public BalanceCounterparty1Code getCounterpartyType() {
 		return counterpartyType;
 	}
@@ -302,6 +310,7 @@ public class BalanceDetails2 {
 		this.counterpartyType = counterpartyType;
 	}
 
+	@XmlElement(name = "CtrPtyId")
 	public List<MemberIdentificationChoice> getCounterpartyIdentification() {
 		return counterpartyIdentification;
 	}
@@ -310,6 +319,7 @@ public class BalanceDetails2 {
 		this.counterpartyIdentification = counterpartyIdentification;
 	}
 
+	@XmlElement(name = "BalValDt")
 	public List<DateAndDateTimeSearchChoice> getBalanceValueDate() {
 		return balanceValueDate;
 	}

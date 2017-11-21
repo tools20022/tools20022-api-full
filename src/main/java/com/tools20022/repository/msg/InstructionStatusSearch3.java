@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria which are used to search for the status of the payment.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructionStatusSearch3", propOrder = {"paymentInstructionStatus", "paymentInstructionStatusDateTime", "proprietaryStatusReason"})
 public class InstructionStatusSearch3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -236,6 +242,7 @@ public class InstructionStatusSearch3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtInstrSts")
 	public PaymentStatusCodeSearch2Choice getPaymentInstructionStatus() {
 		return paymentInstructionStatus;
 	}
@@ -244,6 +251,7 @@ public class InstructionStatusSearch3 {
 		this.paymentInstructionStatus = paymentInstructionStatus;
 	}
 
+	@XmlElement(name = "PmtInstrStsDtTm")
 	public DateTimePeriodChoice getPaymentInstructionStatusDateTime() {
 		return paymentInstructionStatusDateTime;
 	}
@@ -252,6 +260,7 @@ public class InstructionStatusSearch3 {
 		this.paymentInstructionStatusDateTime = paymentInstructionStatusDateTime;
 	}
 
+	@XmlElement(name = "PrtryStsRsn")
 	public Max4AlphaNumericText getProprietaryStatusReason() {
 		return proprietaryStatusReason;
 	}

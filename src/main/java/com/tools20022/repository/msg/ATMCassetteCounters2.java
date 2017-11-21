@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Counters of media inside an ATM cassette.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMCassetteCounters1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCassetteCounters2", propOrder = {"type", "addedNumber", "removedNumber", "dispensedNumber", "depositNumber", "recycledNumber", "retractedNumber", "rejectedNumber", "presentedNumber"})
 public class ATMCassetteCounters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -473,6 +479,7 @@ public class ATMCassetteCounters2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ATMCounterType1Code getType() {
 		return type;
 	}
@@ -481,6 +488,7 @@ public class ATMCassetteCounters2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "AddedNb")
 	public Number getAddedNumber() {
 		return addedNumber;
 	}
@@ -489,6 +497,7 @@ public class ATMCassetteCounters2 {
 		this.addedNumber = addedNumber;
 	}
 
+	@XmlElement(name = "RmvdNb")
 	public Number getRemovedNumber() {
 		return removedNumber;
 	}
@@ -497,6 +506,7 @@ public class ATMCassetteCounters2 {
 		this.removedNumber = removedNumber;
 	}
 
+	@XmlElement(name = "DspnsdNb")
 	public Number getDispensedNumber() {
 		return dispensedNumber;
 	}
@@ -505,6 +515,7 @@ public class ATMCassetteCounters2 {
 		this.dispensedNumber = dispensedNumber;
 	}
 
+	@XmlElement(name = "DpstNb")
 	public Number getDepositNumber() {
 		return depositNumber;
 	}
@@ -513,6 +524,7 @@ public class ATMCassetteCounters2 {
 		this.depositNumber = depositNumber;
 	}
 
+	@XmlElement(name = "RcycldNb")
 	public Number getRecycledNumber() {
 		return recycledNumber;
 	}
@@ -521,6 +533,7 @@ public class ATMCassetteCounters2 {
 		this.recycledNumber = recycledNumber;
 	}
 
+	@XmlElement(name = "RtrctdNb")
 	public Number getRetractedNumber() {
 		return retractedNumber;
 	}
@@ -529,6 +542,7 @@ public class ATMCassetteCounters2 {
 		this.retractedNumber = retractedNumber;
 	}
 
+	@XmlElement(name = "RjctdNb")
 	public Number getRejectedNumber() {
 		return rejectedNumber;
 	}
@@ -537,6 +551,7 @@ public class ATMCassetteCounters2 {
 		this.rejectedNumber = rejectedNumber;
 	}
 
+	@XmlElement(name = "PresntdNb")
 	public Number getPresentedNumber() {
 		return presentedNumber;
 	}

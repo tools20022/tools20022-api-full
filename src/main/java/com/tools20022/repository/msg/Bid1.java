@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Attempt to buy or sell a large number of financial instruments contained in
@@ -94,6 +98,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Bid1", propOrder = {"clientBidIdentification", "listName", "bidIdentification", "totalNumberSecurities", "exchangeForPhysicalIndicator", "foreignExchangeExecutionRequestedIndicator", "tradeType", "totalNumberTickets",
+		"progressReportIndicator", "progressPeriodInterval", "totalNumberOfBidders", "tradeDate", "strikeTime", "basisPriceType", "liquidityAndStatistics"})
 public class Bid1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -797,6 +804,7 @@ public class Bid1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClntBidId", required = true)
 	public Max35Text getClientBidIdentification() {
 		return clientBidIdentification;
 	}
@@ -805,6 +813,7 @@ public class Bid1 {
 		this.clientBidIdentification = clientBidIdentification;
 	}
 
+	@XmlElement(name = "ListNm")
 	public Max128Text getListName() {
 		return listName;
 	}
@@ -813,6 +822,7 @@ public class Bid1 {
 		this.listName = listName;
 	}
 
+	@XmlElement(name = "BidId")
 	public Max35Text getBidIdentification() {
 		return bidIdentification;
 	}
@@ -821,6 +831,7 @@ public class Bid1 {
 		this.bidIdentification = bidIdentification;
 	}
 
+	@XmlElement(name = "TtlNbScties", required = true)
 	public Number getTotalNumberSecurities() {
 		return totalNumberSecurities;
 	}
@@ -829,6 +840,7 @@ public class Bid1 {
 		this.totalNumberSecurities = totalNumberSecurities;
 	}
 
+	@XmlElement(name = "XchgForPhysInd", required = true)
 	public YesNoIndicator getExchangeForPhysicalIndicator() {
 		return exchangeForPhysicalIndicator;
 	}
@@ -837,6 +849,7 @@ public class Bid1 {
 		this.exchangeForPhysicalIndicator = exchangeForPhysicalIndicator;
 	}
 
+	@XmlElement(name = "FrgnXchgExctnReqdInd", required = true)
 	public YesNoIndicator getForeignExchangeExecutionRequestedIndicator() {
 		return foreignExchangeExecutionRequestedIndicator;
 	}
@@ -845,6 +858,7 @@ public class Bid1 {
 		this.foreignExchangeExecutionRequestedIndicator = foreignExchangeExecutionRequestedIndicator;
 	}
 
+	@XmlElement(name = "TradTp", required = true)
 	public TradeType2Code getTradeType() {
 		return tradeType;
 	}
@@ -853,6 +867,7 @@ public class Bid1 {
 		this.tradeType = tradeType;
 	}
 
+	@XmlElement(name = "TtlNbTckts")
 	public Number getTotalNumberTickets() {
 		return totalNumberTickets;
 	}
@@ -861,6 +876,7 @@ public class Bid1 {
 		this.totalNumberTickets = totalNumberTickets;
 	}
 
+	@XmlElement(name = "PrgrsRptInd")
 	public YesNoIndicator getProgressReportIndicator() {
 		return progressReportIndicator;
 	}
@@ -869,6 +885,7 @@ public class Bid1 {
 		this.progressReportIndicator = progressReportIndicator;
 	}
 
+	@XmlElement(name = "PrgrsPrdIntrvl")
 	public ISOTime getProgressPeriodInterval() {
 		return progressPeriodInterval;
 	}
@@ -877,6 +894,7 @@ public class Bid1 {
 		this.progressPeriodInterval = progressPeriodInterval;
 	}
 
+	@XmlElement(name = "TtlNbOfBddrs")
 	public Number getTotalNumberOfBidders() {
 		return totalNumberOfBidders;
 	}
@@ -885,6 +903,7 @@ public class Bid1 {
 		this.totalNumberOfBidders = totalNumberOfBidders;
 	}
 
+	@XmlElement(name = "TradDt")
 	public ISODateTime getTradeDate() {
 		return tradeDate;
 	}
@@ -893,6 +912,7 @@ public class Bid1 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "StrkTm")
 	public ISODateTime getStrikeTime() {
 		return strikeTime;
 	}
@@ -901,6 +921,7 @@ public class Bid1 {
 		this.strikeTime = strikeTime;
 	}
 
+	@XmlElement(name = "BsisPricTp", required = true)
 	public BasisPriceType1Choice getBasisPriceType() {
 		return basisPriceType;
 	}
@@ -909,6 +930,7 @@ public class Bid1 {
 		this.basisPriceType = basisPriceType;
 	}
 
+	@XmlElement(name = "LqdtyAndSttstcs", required = true)
 	public LiquidityAndStatistics1 getLiquidityAndStatistics() {
 		return liquidityAndStatistics;
 	}

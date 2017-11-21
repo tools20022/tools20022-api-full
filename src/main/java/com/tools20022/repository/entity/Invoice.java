@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.FinancialDocument;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,61 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Invoice#mmCreditDebitNoteAmount
+ * Invoice.mmCreditDebitNoteAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmTotalTaxAmount
+ * Invoice.mmTotalTaxAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Invoice#mmTotalInvoiceAmount
+ * Invoice.mmTotalInvoiceAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmInvoiceCurrency
+ * Invoice.mmInvoiceCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmPeriodCovered
+ * Invoice.mmPeriodCovered}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmTradeSettlement
+ * Invoice.mmTradeSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmTotalCharge
+ * Invoice.mmTotalCharge}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Invoice#mmTotalPrepaidAmount
+ * Invoice.mmTotalPrepaidAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmLineItem
+ * Invoice.mmLineItem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmTotalNetAmount
+ * Invoice.mmTotalNetAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmCurrencyExchange
+ * Invoice.mmCurrencyExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Invoice#mmBillingCompensationType
+ * Invoice.mmBillingCompensationType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmInvoicePartyRole
+ * Invoice.mmInvoicePartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmOriginalInvoice
+ * Invoice.mmOriginalInvoice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmRelatedInvoice
+ * Invoice.mmRelatedInvoice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Invoice#mmInvoiceFinancingTransaction
+ * Invoice.mmInvoiceFinancingTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Invoice#mmBillingCompensationAmount
+ * Invoice.mmBillingCompensationAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmInvoiceStatus
+ * Invoice.mmInvoiceStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmPayment
+ * Invoice.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Invoice#mmCreditDebitIndicator
+ * Invoice.mmCreditDebitIndicator}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.FinancialDocument
+ * FinancialDocument}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -140,61 +196,6 @@ import java.util.List;
  * FinancialItemParameters1.mmRelatedItem}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.FinancialDocument
- * FinancialDocument}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Invoice#mmCreditDebitNoteAmount
- * Invoice.mmCreditDebitNoteAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmTotalTaxAmount
- * Invoice.mmTotalTaxAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Invoice#mmTotalInvoiceAmount
- * Invoice.mmTotalInvoiceAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmInvoiceCurrency
- * Invoice.mmInvoiceCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmPeriodCovered
- * Invoice.mmPeriodCovered}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmTradeSettlement
- * Invoice.mmTradeSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmTotalCharge
- * Invoice.mmTotalCharge}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Invoice#mmTotalPrepaidAmount
- * Invoice.mmTotalPrepaidAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmLineItem
- * Invoice.mmLineItem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmTotalNetAmount
- * Invoice.mmTotalNetAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmCurrencyExchange
- * Invoice.mmCurrencyExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Invoice#mmBillingCompensationType
- * Invoice.mmBillingCompensationType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmInvoicePartyRole
- * Invoice.mmInvoicePartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmOriginalInvoice
- * Invoice.mmOriginalInvoice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmRelatedInvoice
- * Invoice.mmRelatedInvoice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Invoice#mmInvoiceFinancingTransaction
- * Invoice.mmInvoiceFinancingTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Invoice#mmBillingCompensationAmount
- * Invoice.mmBillingCompensationAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmInvoiceStatus
- * Invoice.mmInvoiceStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmPayment
- * Invoice.mmPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Invoice#mmCreditDebitIndicator
- * Invoice.mmCreditDebitIndicator}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -226,10 +227,6 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
-	 * Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -244,6 +241,10 @@ public class Invoice extends FinancialDocument {
 	 * InvoiceRequestInformation1.mmCreditDebitNoteAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
+	 * Invoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -267,6 +268,14 @@ public class Invoice extends FinancialDocument {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Invoice.class.getMethod("getCreditDebitNoteAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CurrencyAndAmount totalTaxAmount;
 	/**
@@ -280,10 +289,6 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
-	 * Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -298,6 +303,10 @@ public class Invoice extends FinancialDocument {
 	 * SettlementMonetarySummation1.mmTaxTotalAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
+	 * Invoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -323,6 +332,14 @@ public class Invoice extends FinancialDocument {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Invoice.class.getMethod("getTotalTaxAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CurrencyAndAmount totalInvoiceAmount;
 	/**
@@ -337,10 +354,6 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
-	 * Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -409,6 +422,10 @@ public class Invoice extends FinancialDocument {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
+	 * Invoice}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -436,6 +453,14 @@ public class Invoice extends FinancialDocument {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Invoice.class.getMethod("getTotalInvoiceAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CurrencyCode invoiceCurrency;
 	/**
@@ -447,10 +472,6 @@ public class Invoice extends FinancialDocument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
-	 * Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -462,6 +483,10 @@ public class Invoice extends FinancialDocument {
 	 * FinancialItemParameters1.mmCurrency}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
+	 * Invoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -485,6 +510,14 @@ public class Invoice extends FinancialDocument {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Invoice.class.getMethod("getInvoiceCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<com.tools20022.repository.entity.DateTimePeriod> periodCovered;
 	/**
@@ -505,10 +538,6 @@ public class Invoice extends FinancialDocument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
-	 * Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -532,6 +561,10 @@ public class Invoice extends FinancialDocument {
 	 * BillingStatement2.mmFromToDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
+	 * Invoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -619,10 +652,6 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
-	 * Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -631,6 +660,10 @@ public class Invoice extends FinancialDocument {
 	 * SettlementMonetarySummation1.mmChargeTotalAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
+	 * Invoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -654,6 +687,14 @@ public class Invoice extends FinancialDocument {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Invoice.class.getMethod("getTotalCharge", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CurrencyAndAmount totalPrepaidAmount;
 	/**
@@ -667,10 +708,6 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
-	 * Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -679,6 +716,10 @@ public class Invoice extends FinancialDocument {
 	 * SettlementMonetarySummation1.mmTotalPrepaidAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
+	 * Invoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -704,6 +745,14 @@ public class Invoice extends FinancialDocument {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Invoice.class.getMethod("getTotalPrepaidAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<com.tools20022.repository.entity.LineItem> lineItem;
 	/**
@@ -723,10 +772,6 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.LineItem LineItem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
-	 * Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -778,6 +823,10 @@ public class Invoice extends FinancialDocument {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
+	 * Invoice}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -817,10 +866,6 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
-	 * Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -835,6 +880,10 @@ public class Invoice extends FinancialDocument {
 	 * LineItem14.mmOrderedTotalNetAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
+	 * Invoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -858,6 +907,14 @@ public class Invoice extends FinancialDocument {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Invoice.class.getMethod("getTotalNetAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<com.tools20022.repository.entity.CurrencyExchange> currencyExchange;
 	/**
@@ -878,10 +935,6 @@ public class Invoice extends FinancialDocument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
 	 * CurrencyExchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
-	 * Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -899,6 +952,10 @@ public class Invoice extends FinancialDocument {
 	 * BillingStatement2.mmCurrencyExchange}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
+	 * Invoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -937,10 +994,6 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ExternalBillingCompensationTypeCode
 	 * ExternalBillingCompensationTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
-	 * Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -955,6 +1008,10 @@ public class Invoice extends FinancialDocument {
 	 * BillingCompensation1.mmType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
+	 * Invoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -977,6 +1034,14 @@ public class Invoice extends FinancialDocument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalBillingCompensationTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Invoice.class.getMethod("getBillingCompensationType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.InvoicePartyRole> invoicePartyRole;
@@ -1042,10 +1107,6 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Invoice Invoice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
-	 * Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1054,6 +1115,10 @@ public class Invoice extends FinancialDocument {
 	 * InvoiceFinancingDetails1.mmOriginalInvoiceInformation}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
+	 * Invoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1147,10 +1212,6 @@ public class Invoice extends FinancialDocument {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
 	 * InvoiceFinancingAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
-	 * Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1162,6 +1223,10 @@ public class Invoice extends FinancialDocument {
 	 * FinancialItem1.mmFinancingStatus}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
+	 * Invoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1225,6 +1290,14 @@ public class Invoice extends FinancialDocument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Invoice.class.getMethod("getBillingCompensationAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvoiceStatus invoiceStatus;
@@ -1291,10 +1364,6 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
-	 * Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1303,6 +1372,10 @@ public class Invoice extends FinancialDocument {
 	 * ReconciliationList1.mmPaymentMeans}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
+	 * Invoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1339,10 +1412,6 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DebitCreditCode
 	 * DebitCreditCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
-	 * Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1351,6 +1420,10 @@ public class Invoice extends FinancialDocument {
 	 * FinancialItem1.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
+	 * Invoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1373,6 +1446,14 @@ public class Invoice extends FinancialDocument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Invoice.class.getMethod("getCreditDebitIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1401,6 +1482,11 @@ public class Invoice extends FinancialDocument {
 				derivationComponent_lazy = () -> Arrays.asList(InvoiceTotals1.mmObject(), OriginalInvoiceInformation1.mmObject(), InvoiceFinancingDetails1.mmObject(), SettlementMonetarySummation1.mmObject(),
 						InvoiceIdentification1.mmObject(), BillingCompensationType1Choice.mmObject(), BillingStatement1.mmObject(), InvoiceLegalIssue1.mmObject(), InvoiceTotals2.mmObject(), ServiceCategoryTotals1.mmObject(),
 						BillingReport1.mmObject(), BillingCancellationReport1.mmObject(), BillingSearchCriteria1.mmObject(), FinancingItemList1.mmObject(), FinancialItemParameters1.mmObject(), BillingStatement2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Invoice.class;
 			}
 		});
 		return mmObject_lazy.get();

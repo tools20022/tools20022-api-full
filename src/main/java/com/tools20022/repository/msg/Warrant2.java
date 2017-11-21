@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Financial instrument that gives the holder the right to purchase shares or
@@ -69,6 +73,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Warrant2", propOrder = {"multiplier", "subscriptionPrice", "type", "warrantAgent"})
 public class Warrant2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -278,6 +284,7 @@ public class Warrant2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Mltplr")
 	public BaseOneRate getMultiplier() {
 		return multiplier;
 	}
@@ -286,6 +293,7 @@ public class Warrant2 {
 		this.multiplier = multiplier;
 	}
 
+	@XmlElement(name = "SbcptPric")
 	public Price1 getSubscriptionPrice() {
 		return subscriptionPrice;
 	}
@@ -294,6 +302,7 @@ public class Warrant2 {
 		this.subscriptionPrice = subscriptionPrice;
 	}
 
+	@XmlElement(name = "Tp")
 	public WarrantStyle2Choice getType() {
 		return type;
 	}
@@ -302,6 +311,7 @@ public class Warrant2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "WarrtAgt")
 	public List<Organisation2> getWarrantAgent() {
 		return warrantAgent;
 	}

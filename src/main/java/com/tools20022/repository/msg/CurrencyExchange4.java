@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information needed to process a currency exchange or conversion.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information needed to process a currency exchange or conversion."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyExchange4", propOrder = {"exchangeRate", "resultingAmount", "sourceAndTargetCurrency"})
 public class CurrencyExchange4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -234,6 +240,7 @@ public class CurrencyExchange4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XchgRate", required = true)
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -242,6 +249,7 @@ public class CurrencyExchange4 {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "RsltgAmt", required = true)
 	public ActiveCurrencyAndAmount getResultingAmount() {
 		return resultingAmount;
 	}
@@ -250,6 +258,7 @@ public class CurrencyExchange4 {
 		this.resultingAmount = resultingAmount;
 	}
 
+	@XmlElement(name = "SrcAndTrgtCcy", required = true)
 	public CurrencyReferenceDetails getSourceAndTargetCurrency() {
 		return sourceAndTargetCurrency;
 	}

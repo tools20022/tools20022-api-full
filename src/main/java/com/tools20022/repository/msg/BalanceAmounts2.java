@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amounts linked to a securities balance, for example, holding value.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Amounts linked to a securities balance, for example, holding value."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BalanceAmounts2", propOrder = {"holdingValue", "bookValue", "unrealisedGainLoss"})
 public class BalanceAmounts2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class BalanceAmounts2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "HldgVal", required = true)
 	public AmountAndDirection6 getHoldingValue() {
 		return holdingValue;
 	}
@@ -238,6 +245,7 @@ public class BalanceAmounts2 {
 		this.holdingValue = holdingValue;
 	}
 
+	@XmlElement(name = "BookVal")
 	public AmountAndDirection6 getBookValue() {
 		return bookValue;
 	}
@@ -246,6 +254,7 @@ public class BalanceAmounts2 {
 		this.bookValue = bookValue;
 	}
 
+	@XmlElement(name = "UrlsdGnLoss")
 	public AmountAndDirection6 getUnrealisedGainLoss() {
 		return unrealisedGainLoss;
 	}

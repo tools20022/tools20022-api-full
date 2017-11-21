@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Entity involved in an activity.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Entity involved in an activity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount10", propOrder = {"identification", "safekeepingAccount", "alternateIdentification", "processingDate", "processingIdentification", "additionalInformation"})
 public class PartyIdentificationAndAccount10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -367,6 +373,7 @@ public class PartyIdentificationAndAccount10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification2Choice getIdentification() {
 		return identification;
 	}
@@ -375,6 +382,7 @@ public class PartyIdentificationAndAccount10 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount2 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -383,6 +391,7 @@ public class PartyIdentificationAndAccount10 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification1 getAlternateIdentification() {
 		return alternateIdentification;
 	}
@@ -391,6 +400,7 @@ public class PartyIdentificationAndAccount10 {
 		this.alternateIdentification = alternateIdentification;
 	}
 
+	@XmlElement(name = "PrcgDt")
 	public DateAndDateTimeChoice getProcessingDate() {
 		return processingDate;
 	}
@@ -399,6 +409,7 @@ public class PartyIdentificationAndAccount10 {
 		this.processingDate = processingDate;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public Max35Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -407,6 +418,7 @@ public class PartyIdentificationAndAccount10 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public PartyTextInformation1 getAdditionalInformation() {
 		return additionalInformation;
 	}

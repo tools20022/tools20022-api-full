@@ -29,19 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis2Code
- * TaxationBasis2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis4Code
- * TaxationBasis4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis3Code
- * TaxationBasis3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis5Code
- * TaxationBasis5Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasisCode#mmFlat
@@ -72,6 +59,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#mmNetAssetValuePrice
  * TaxationBasisCode.mmNetAssetValuePrice}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis2Code
+ * TaxationBasis2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis4Code
+ * TaxationBasis4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis3Code
+ * TaxationBasis3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis5Code
+ * TaxationBasis5Code}</li>
  * </ul>
  * </li>
  * <li>

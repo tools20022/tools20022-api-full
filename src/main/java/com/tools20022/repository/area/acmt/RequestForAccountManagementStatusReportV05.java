@@ -25,8 +25,10 @@ import com.tools20022.repository.area.AccountManagementLatestVersion;
 import com.tools20022.repository.msg.AccountManagementMessageReference4;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -43,9 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.005.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementLatestVersion
@@ -75,6 +74,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.005.001.05}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -90,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * RequestForAccountManagementStatusReportV04}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestForAccountManagementStatusReportV05", propOrder = {"messageIdentification", "requestDetails"})
 public class RequestForAccountManagementStatusReportV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -136,6 +140,14 @@ public class RequestForAccountManagementStatusReportV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RequestForAccountManagementStatusReportV05.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AccountManagementMessageReference4 requestDetails;
 	/**
@@ -180,6 +192,14 @@ public class RequestForAccountManagementStatusReportV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> AccountManagementMessageReference4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RequestForAccountManagementStatusReportV05.class.getMethod("getRequestDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -193,7 +213,8 @@ public class RequestForAccountManagementStatusReportV05 {
 				rootElement = "Document";
 				xmlTag = "ReqForAcctMgmtStsRpt";
 				businessArea_lazy = () -> AccountManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(RequestForAccountManagementStatusReportV05.mmMessageIdentification, RequestForAccountManagementStatusReportV05.mmRequestDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV05.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV05.mmRequestDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";
@@ -203,10 +224,16 @@ public class RequestForAccountManagementStatusReportV05 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RequestForAccountManagementStatusReportV05.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -215,11 +242,18 @@ public class RequestForAccountManagementStatusReportV05 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "ReqDtls", required = true)
 	public AccountManagementMessageReference4 getRequestDetails() {
 		return requestDetails;
 	}
 
 	public void setRequestDetails(AccountManagementMessageReference4 requestDetails) {
 		this.requestDetails = requestDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.005.05.05")
+	static public class Document {
+		@XmlElement(name = "ReqForAcctMgmtStsRpt", required = true)
+		public RequestForAccountManagementStatusReportV05 messageBody;
 	}
 }

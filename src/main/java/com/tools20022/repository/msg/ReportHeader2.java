@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies generic information about an investigation report.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies generic information about an investigation report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportHeader2", propOrder = {"identification", "from", "to", "creationDateTime"})
 public class ReportHeader2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -262,6 +268,7 @@ public class ReportHeader2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -270,6 +277,7 @@ public class ReportHeader2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Fr", required = true)
 	public Party7Choice getFrom() {
 		return from;
 	}
@@ -278,6 +286,7 @@ public class ReportHeader2 {
 		this.from = from;
 	}
 
+	@XmlElement(name = "To", required = true)
 	public Party7Choice getTo() {
 		return to;
 	}
@@ -286,6 +295,7 @@ public class ReportHeader2 {
 		this.to = to;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}

@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Elements which allow to identify a meeting.
@@ -99,6 +103,8 @@ import java.util.List;
  * definition} = "Elements which allow to identify a meeting."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingReference2", propOrder = {"meetingIdentification", "issuerMeetingIdentification", "meetingDateAndTime", "type", "classification", "extendedClassification", "location"})
 public class MeetingReference2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -513,6 +519,7 @@ public class MeetingReference2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MtgId", required = true)
 	public Max35Text getMeetingIdentification() {
 		return meetingIdentification;
 	}
@@ -521,6 +528,7 @@ public class MeetingReference2 {
 		this.meetingIdentification = meetingIdentification;
 	}
 
+	@XmlElement(name = "IssrMtgId")
 	public Max35Text getIssuerMeetingIdentification() {
 		return issuerMeetingIdentification;
 	}
@@ -529,6 +537,7 @@ public class MeetingReference2 {
 		this.issuerMeetingIdentification = issuerMeetingIdentification;
 	}
 
+	@XmlElement(name = "MtgDtAndTm")
 	public ISODateTime getMeetingDateAndTime() {
 		return meetingDateAndTime;
 	}
@@ -537,6 +546,7 @@ public class MeetingReference2 {
 		this.meetingDateAndTime = meetingDateAndTime;
 	}
 
+	@XmlElement(name = "Tp")
 	public MeetingType2Code getType() {
 		return type;
 	}
@@ -545,6 +555,7 @@ public class MeetingReference2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Clssfctn")
 	public MeetingTypeClassification1Code getClassification() {
 		return classification;
 	}
@@ -553,6 +564,7 @@ public class MeetingReference2 {
 		this.classification = classification;
 	}
 
+	@XmlElement(name = "XtndedClssfctn")
 	public Extended350Code getExtendedClassification() {
 		return extendedClassification;
 	}
@@ -561,6 +573,7 @@ public class MeetingReference2 {
 		this.extendedClassification = extendedClassification;
 	}
 
+	@XmlElement(name = "Lctn")
 	public List<PostalAddress1> getLocation() {
 		return location;
 	}

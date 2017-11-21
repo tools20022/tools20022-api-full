@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a statement of investment fund transactions.
@@ -85,6 +89,8 @@ import java.util.List;
  * "Information about a statement of investment fund transactions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatementOfInvestmentFundTransactions1", propOrder = {"messagePagination", "statementGeneralDetails", "investmentAccountDetails", "transactionOnAccount", "subAccountDetails", "extension"})
 public class StatementOfInvestmentFundTransactions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -379,6 +385,7 @@ public class StatementOfInvestmentFundTransactions1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgPgntn", required = true)
 	public Pagination getMessagePagination() {
 		return messagePagination;
 	}
@@ -387,6 +394,7 @@ public class StatementOfInvestmentFundTransactions1 {
 		this.messagePagination = messagePagination;
 	}
 
+	@XmlElement(name = "StmtGnlDtls")
 	public Statement5 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
@@ -395,6 +403,7 @@ public class StatementOfInvestmentFundTransactions1 {
 		this.statementGeneralDetails = statementGeneralDetails;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount12 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -403,6 +412,7 @@ public class StatementOfInvestmentFundTransactions1 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "TxOnAcct")
 	public List<InvestmentFundTransactionsByFund1> getTransactionOnAccount() {
 		return transactionOnAccount;
 	}
@@ -411,6 +421,7 @@ public class StatementOfInvestmentFundTransactions1 {
 		this.transactionOnAccount = transactionOnAccount;
 	}
 
+	@XmlElement(name = "SubAcctDtls", required = true)
 	public SubAccountIdentification4 getSubAccountDetails() {
 		return subAccountDetails;
 	}
@@ -419,6 +430,7 @@ public class StatementOfInvestmentFundTransactions1 {
 		this.subAccountDetails = subAccountDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

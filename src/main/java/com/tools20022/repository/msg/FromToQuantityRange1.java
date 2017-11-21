@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Range of quantities.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FromToQuantityRange1", propOrder = {"fromQuantity", "toQuantity"})
 public class FromToQuantityRange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class FromToQuantityRange1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrQty", required = true)
 	public QuantityRangeBoundary1 getFromQuantity() {
 		return fromQuantity;
 	}
@@ -191,6 +198,7 @@ public class FromToQuantityRange1 {
 		this.fromQuantity = fromQuantity;
 	}
 
+	@XmlElement(name = "ToQty", required = true)
 	public QuantityRangeBoundary1 getToQuantity() {
 		return toQuantity;
 	}

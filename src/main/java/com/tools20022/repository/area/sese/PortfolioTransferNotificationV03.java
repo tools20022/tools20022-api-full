@@ -29,9 +29,11 @@ import com.tools20022.repository.msg.SecuritiesTradeDetails24;
 import com.tools20022.repository.msg.Statement19;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * Scope An account servicer sends a PortfolioTransferNotification to another
@@ -66,9 +68,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.037.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
@@ -108,6 +107,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.037.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -131,6 +133,8 @@ import java.util.List;
  * PortfolioTransferNotificationV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PortfolioTransferNotificationV03", propOrder = {"pagination", "statementGeneralDetails", "accountOwner", "safekeepingAccount", "transferNotificationDetails"})
 public class PortfolioTransferNotificationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +184,14 @@ public class PortfolioTransferNotificationV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferNotificationV03.class.getMethod("getPagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Statement19 statementGeneralDetails;
 	/**
@@ -222,6 +234,14 @@ public class PortfolioTransferNotificationV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Statement19.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferNotificationV03.class.getMethod("getStatementGeneralDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification36Choice accountOwner;
@@ -267,6 +287,14 @@ public class PortfolioTransferNotificationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification36Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferNotificationV03.class.getMethod("getAccountOwner", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesAccount13 safekeepingAccount;
 	/**
@@ -311,6 +339,14 @@ public class PortfolioTransferNotificationV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferNotificationV03.class.getMethod("getSafekeepingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SecuritiesTradeDetails24> transferNotificationDetails;
 	/**
@@ -354,6 +390,14 @@ public class PortfolioTransferNotificationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesTradeDetails24.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferNotificationV03.class.getMethod("getTransferNotificationDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -368,8 +412,9 @@ public class PortfolioTransferNotificationV03 {
 				rootElement = "Document";
 				xmlTag = "PrtflTrfNtfctn";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PortfolioTransferNotificationV03.mmPagination, PortfolioTransferNotificationV03.mmStatementGeneralDetails, PortfolioTransferNotificationV03.mmAccountOwner,
-						PortfolioTransferNotificationV03.mmSafekeepingAccount, PortfolioTransferNotificationV03.mmTransferNotificationDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.mmPagination,
+						com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.mmStatementGeneralDetails, com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.mmAccountOwner,
+						com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.mmSafekeepingAccount, com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.mmTransferNotificationDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -379,10 +424,16 @@ public class PortfolioTransferNotificationV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PortfolioTransferNotificationV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
@@ -391,6 +442,7 @@ public class PortfolioTransferNotificationV03 {
 		this.pagination = pagination;
 	}
 
+	@XmlElement(name = "StmtGnlDtls", required = true)
 	public Statement19 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
@@ -399,6 +451,7 @@ public class PortfolioTransferNotificationV03 {
 		this.statementGeneralDetails = statementGeneralDetails;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification36Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -407,6 +460,7 @@ public class PortfolioTransferNotificationV03 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -415,11 +469,18 @@ public class PortfolioTransferNotificationV03 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "TrfNtfctnDtls")
 	public List<SecuritiesTradeDetails24> getTransferNotificationDetails() {
 		return transferNotificationDetails;
 	}
 
 	public void setTransferNotificationDetails(List<SecuritiesTradeDetails24> transferNotificationDetails) {
 		this.transferNotificationDetails = transferNotificationDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.037.03.03")
+	static public class Document {
+		@XmlElement(name = "PrtflTrfNtfctn", required = true)
+		public PortfolioTransferNotificationV03 messageBody;
 	}
 }

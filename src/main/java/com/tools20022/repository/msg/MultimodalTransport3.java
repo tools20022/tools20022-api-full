@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to multimodal transportation of goods.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information related to multimodal transportation of goods."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MultimodalTransport3", propOrder = {"takingInCharge", "placeOfFinalDestination"})
 public class MultimodalTransport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class MultimodalTransport3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TakngInChrg", required = true)
 	public Max35Text getTakingInCharge() {
 		return takingInCharge;
 	}
@@ -184,6 +191,7 @@ public class MultimodalTransport3 {
 		this.takingInCharge = takingInCharge;
 	}
 
+	@XmlElement(name = "PlcOfFnlDstn", required = true)
 	public Max35Text getPlaceOfFinalDestination() {
 		return placeOfFinalDestination;
 	}

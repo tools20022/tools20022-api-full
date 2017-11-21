@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a turnaround and pair-off quantity for instructing a one to
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PairedOrTurnedQuantity1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PairedOrTurnedQuantity3Choice", propOrder = {"pairedOffQuantity", "turnedQuantity"})
 public class PairedOrTurnedQuantity3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -200,6 +206,7 @@ public class PairedOrTurnedQuantity3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PairdOffQty")
 	public FinancialInstrumentQuantity1Choice getPairedOffQuantity() {
 		return pairedOffQuantity;
 	}
@@ -208,6 +215,7 @@ public class PairedOrTurnedQuantity3Choice {
 		this.pairedOffQuantity = pairedOffQuantity;
 	}
 
+	@XmlElement(name = "TrndQty")
 	public FinancialInstrumentQuantity1Choice getTurnedQuantity() {
 		return turnedQuantity;
 	}

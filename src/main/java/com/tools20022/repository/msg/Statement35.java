@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to report on the securities account positions.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Defines the criteria used to report on the securities account positions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Statement35", propOrder = {"dateOrPeriod", "historicData"})
 public class Statement35 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class Statement35 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtOrPrd")
 	public DateAndPeriod1Choice getDateOrPeriod() {
 		return dateOrPeriod;
 	}
@@ -168,6 +175,7 @@ public class Statement35 {
 		this.dateOrPeriod = dateOrPeriod;
 	}
 
+	@XmlElement(name = "HistrcData", required = true)
 	public TrueFalseIndicator getHistoricData() {
 		return historicData;
 	}

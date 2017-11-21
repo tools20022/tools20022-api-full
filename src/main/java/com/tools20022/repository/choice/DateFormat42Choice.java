@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for a date.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of formats for a date."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DateFormat42Choice", propOrder = {"yearMonth", "yearMonthDay"})
 public class DateFormat42Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -171,6 +177,7 @@ public class DateFormat42Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "YrMnth", required = true)
 	public ISOYearMonth getYearMonth() {
 		return yearMonth;
 	}
@@ -179,6 +186,7 @@ public class DateFormat42Choice {
 		this.yearMonth = yearMonth;
 	}
 
+	@XmlElement(name = "YrMnthDay", required = true)
 	public ISODate getYearMonthDay() {
 		return yearMonthDay;
 	}

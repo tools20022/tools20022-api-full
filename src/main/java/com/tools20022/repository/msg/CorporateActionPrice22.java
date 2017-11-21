@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies prices.
@@ -66,6 +70,8 @@ import java.util.List;
  * definition} = "Specifies prices."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionPrice22", propOrder = {"genericCashPriceReceivedPerProduct", "cashInLieuOfSharePrice", "overSubscriptionDepositPrice"})
 public class CorporateActionPrice22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -233,6 +239,7 @@ public class CorporateActionPrice22 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GncCshPricRcvdPerPdct")
 	public List<PriceFormat13Choice> getGenericCashPriceReceivedPerProduct() {
 		return genericCashPriceReceivedPerProduct;
 	}
@@ -241,6 +248,7 @@ public class CorporateActionPrice22 {
 		this.genericCashPriceReceivedPerProduct = genericCashPriceReceivedPerProduct;
 	}
 
+	@XmlElement(name = "CshInLieuOfShrPric")
 	public PriceFormat17Choice getCashInLieuOfSharePrice() {
 		return cashInLieuOfSharePrice;
 	}
@@ -249,6 +257,7 @@ public class CorporateActionPrice22 {
 		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
 	}
 
+	@XmlElement(name = "OverSbcptDpstPric")
 	public PriceFormat17Choice getOverSubscriptionDepositPrice() {
 		return overSubscriptionDepositPrice;
 	}

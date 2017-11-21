@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.FinancialDocument;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -39,23 +40,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashAccount#mmCheque
- * CashAccount.mmCheque}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ChequePayment#mmCheque
- * ChequePayment.mmCheque}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ChequeIssue#mmCheque
- * ChequeIssue.mmCheque}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ChequePartyRole#mmCheque
- * ChequePartyRole.mmCheque}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.FinancialDocument
- * FinancialDocument}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -80,6 +64,23 @@ import java.util.List;
  * Cheque.mmChequePartyRole}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Cheque#mmCashAccount
  * Cheque.mmCashAccount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.FinancialDocument
+ * FinancialDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashAccount#mmCheque
+ * CashAccount.mmCheque}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequePayment#mmCheque
+ * ChequePayment.mmCheque}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequeIssue#mmCheque
+ * ChequeIssue.mmCheque}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequePartyRole#mmCheque
+ * ChequePartyRole.mmCheque}</li>
  * </ul>
  * </li>
  * <li>
@@ -138,7 +139,7 @@ public class Cheque extends FinancialDocument {
 	 */
 	public static final MMBusinessAssociationEnd mmChequeDelivery = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Cheque.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChequeDelivery";
@@ -161,10 +162,6 @@ public class Cheque extends FinancialDocument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Cheque
-	 * Cheque}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -179,6 +176,10 @@ public class Cheque extends FinancialDocument {
 	 * TransactionReferences3.mmChequeNumber}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Cheque
+	 * Cheque}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -195,7 +196,7 @@ public class Cheque extends FinancialDocument {
 	public static final MMBusinessAttribute mmNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionReferences1.mmChequeNumber, TransactionReferences2.mmChequeNumber, TransactionReferences3.mmChequeNumber);
-			elementContext_lazy = () -> Cheque.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Number";
@@ -203,6 +204,14 @@ public class Cheque extends FinancialDocument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Cheque.class.getMethod("getNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ChequeTypeCode chequeType;
@@ -216,10 +225,6 @@ public class Cheque extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode
 	 * ChequeTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Cheque
-	 * Cheque}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -231,6 +236,10 @@ public class Cheque extends FinancialDocument {
 	 * Cheque7.mmChequeType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Cheque
+	 * Cheque}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -245,7 +254,7 @@ public class Cheque extends FinancialDocument {
 	public static final MMBusinessAttribute mmChequeType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmChequeType, Cheque6.mmChequeType, Cheque7.mmChequeType);
-			elementContext_lazy = () -> Cheque.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChequeType";
@@ -253,6 +262,14 @@ public class Cheque extends FinancialDocument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ChequeTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Cheque.class.getMethod("getChequeType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODate maturityDate;
@@ -265,10 +282,6 @@ public class Cheque extends FinancialDocument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Cheque
-	 * Cheque}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -283,6 +296,10 @@ public class Cheque extends FinancialDocument {
 	 * Cheque7.mmChequeMaturityDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Cheque
+	 * Cheque}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -299,7 +316,7 @@ public class Cheque extends FinancialDocument {
 	public static final MMBusinessAttribute mmMaturityDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmChequeMaturityDate, Cheque6.mmChequeMaturityDate, Cheque7.mmChequeMaturityDate);
-			elementContext_lazy = () -> Cheque.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaturityDate";
@@ -307,6 +324,14 @@ public class Cheque extends FinancialDocument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Cheque.class.getMethod("getMaturityDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text formsCode;
@@ -321,10 +346,6 @@ public class Cheque extends FinancialDocument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Cheque
-	 * Cheque}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -336,6 +357,10 @@ public class Cheque extends FinancialDocument {
 	 * Cheque7.mmFormsCode}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Cheque
+	 * Cheque}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -352,7 +377,7 @@ public class Cheque extends FinancialDocument {
 	public static final MMBusinessAttribute mmFormsCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmFormsCode, Cheque6.mmFormsCode, Cheque7.mmFormsCode);
-			elementContext_lazy = () -> Cheque.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FormsCode";
@@ -360,6 +385,14 @@ public class Cheque extends FinancialDocument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Cheque.class.getMethod("getFormsCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text memoField;
@@ -373,10 +406,6 @@ public class Cheque extends FinancialDocument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Cheque
-	 * Cheque}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -388,6 +417,10 @@ public class Cheque extends FinancialDocument {
 	 * Cheque7.mmMemoField}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Cheque
+	 * Cheque}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -404,7 +437,7 @@ public class Cheque extends FinancialDocument {
 	public static final MMBusinessAttribute mmMemoField = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmMemoField, Cheque6.mmMemoField, Cheque7.mmMemoField);
-			elementContext_lazy = () -> Cheque.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MemoField";
@@ -412,6 +445,14 @@ public class Cheque extends FinancialDocument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Cheque.class.getMethod("getMemoField", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text regionalClearingZone;
@@ -425,10 +466,6 @@ public class Cheque extends FinancialDocument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Cheque
-	 * Cheque}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -443,6 +480,10 @@ public class Cheque extends FinancialDocument {
 	 * Cheque7.mmRegionalClearingZone}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Cheque
+	 * Cheque}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -459,7 +500,7 @@ public class Cheque extends FinancialDocument {
 	public static final MMBusinessAttribute mmRegionalClearingZone = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmRegionalClearingZone, Cheque6.mmRegionalClearingZone, Cheque7.mmRegionalClearingZone);
-			elementContext_lazy = () -> Cheque.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegionalClearingZone";
@@ -467,6 +508,14 @@ public class Cheque extends FinancialDocument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Cheque.class.getMethod("getRegionalClearingZone", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.ChequePayment> relatedPayment;
@@ -504,7 +553,7 @@ public class Cheque extends FinancialDocument {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Cheque.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPayment";
@@ -552,7 +601,7 @@ public class Cheque extends FinancialDocument {
 	 */
 	public static final MMBusinessAssociationEnd mmChequePartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Cheque.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChequePartyRole";
@@ -598,7 +647,7 @@ public class Cheque extends FinancialDocument {
 	 */
 	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Cheque.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
@@ -621,8 +670,15 @@ public class Cheque extends FinancialDocument {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmCheque, com.tools20022.repository.entity.ChequePayment.mmCheque, com.tools20022.repository.entity.ChequeIssue.mmCheque,
 						com.tools20022.repository.entity.ChequePartyRole.mmCheque);
 				superType_lazy = () -> FinancialDocument.mmObject();
-				element_lazy = () -> Arrays.asList(Cheque.mmChequeDelivery, Cheque.mmNumber, Cheque.mmChequeType, Cheque.mmMaturityDate, Cheque.mmFormsCode, Cheque.mmMemoField, Cheque.mmRegionalClearingZone, Cheque.mmRelatedPayment,
-						Cheque.mmChequePartyRole, Cheque.mmCashAccount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Cheque.mmChequeDelivery, com.tools20022.repository.entity.Cheque.mmNumber, com.tools20022.repository.entity.Cheque.mmChequeType,
+						com.tools20022.repository.entity.Cheque.mmMaturityDate, com.tools20022.repository.entity.Cheque.mmFormsCode, com.tools20022.repository.entity.Cheque.mmMemoField,
+						com.tools20022.repository.entity.Cheque.mmRegionalClearingZone, com.tools20022.repository.entity.Cheque.mmRelatedPayment, com.tools20022.repository.entity.Cheque.mmChequePartyRole,
+						com.tools20022.repository.entity.Cheque.mmCashAccount);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Cheque.class;
 			}
 		});
 		return mmObject_lazy.get();

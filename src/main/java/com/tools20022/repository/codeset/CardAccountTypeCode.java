@@ -29,17 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CardAccountType1Code
- * CardAccountType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CardAccountType2Code
- * CardAccountType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CardAccountType3Code
- * CardAccountType3Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -108,6 +97,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CardAccountTypeCode#mmFleetCard
  * CardAccountTypeCode.mmFleetCard}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardAccountType1Code
+ * CardAccountType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardAccountType2Code
+ * CardAccountType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardAccountType3Code
+ * CardAccountType3Code}</li>
  * </ul>
  * </li>
  * <li>

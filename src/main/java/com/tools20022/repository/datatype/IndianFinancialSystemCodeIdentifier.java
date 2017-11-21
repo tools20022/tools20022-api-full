@@ -32,6 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} = "Indian Financial System; Payment Routing Number"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "IN[a-zA-Z0-9]{11,11}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -68,6 +70,7 @@ public class IndianFinancialSystemCodeIdentifier {
 				name = "IndianFinancialSystemCodeIdentifier";
 				definition = "Indian Financial System Code Identifier. Identifies Indian financial institutions on the Indian national clearing system.";
 				identificationScheme = "Indian Financial System; Payment Routing Number";
+				pattern = "IN[a-zA-Z0-9]{11,11}";
 			}
 		});
 		return mmObject_lazy.get();

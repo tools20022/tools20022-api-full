@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a CFI code or an other type of identification for the
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityClassificationType1Choice", propOrder = {"CFI", "alternateClassification"})
 public class SecurityClassificationType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class SecurityClassificationType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CFI", required = true)
 	public CFIIdentifier getCFI() {
 		return cFI;
 	}
@@ -191,6 +198,7 @@ public class SecurityClassificationType1Choice {
 		this.cFI = cFI;
 	}
 
+	@XmlElement(name = "AltrnClssfctn", required = true)
 	public GenericIdentification3 getAlternateClassification() {
 		return alternateClassification;
 	}

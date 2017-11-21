@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extension to specify corporate action dates.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Extension to specify corporate action dates."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionGeneralInformation32SD1", propOrder = {"placeAndName", "webServiceNotificationDate", "previousWebServiceNotificationDate"})
 public class CorporateActionGeneralInformation32SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -233,6 +239,7 @@ public class CorporateActionGeneralInformation32SD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -241,6 +248,7 @@ public class CorporateActionGeneralInformation32SD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "WebSvcNtfctnDt")
 	public DateFormat22Choice getWebServiceNotificationDate() {
 		return webServiceNotificationDate;
 	}
@@ -249,6 +257,7 @@ public class CorporateActionGeneralInformation32SD1 {
 		this.webServiceNotificationDate = webServiceNotificationDate;
 	}
 
+	@XmlElement(name = "PrvsWebSvcNtfctnDt")
 	public DateFormat22Choice getPreviousWebServiceNotificationDate() {
 		return previousWebServiceNotificationDate;
 	}

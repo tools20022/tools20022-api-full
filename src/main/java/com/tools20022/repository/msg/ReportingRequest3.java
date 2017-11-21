@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details on the reporting request.
@@ -91,6 +95,8 @@ import java.util.List;
  * definition} = "Provides further details on the reporting request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportingRequest3", propOrder = {"identification", "requestedMessageNameIdentification", "account", "accountOwner", "accountServicer", "reportingPeriod", "requestedTransactionType", "requestedBalanceType"})
 public class ReportingRequest3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -486,6 +492,7 @@ public class ReportingRequest3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -494,6 +501,7 @@ public class ReportingRequest3 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "ReqdMsgNmId", required = true)
 	public Max35Text getRequestedMessageNameIdentification() {
 		return requestedMessageNameIdentification;
 	}
@@ -502,6 +510,7 @@ public class ReportingRequest3 {
 		this.requestedMessageNameIdentification = requestedMessageNameIdentification;
 	}
 
+	@XmlElement(name = "Acct")
 	public CashAccount24 getAccount() {
 		return account;
 	}
@@ -510,6 +519,7 @@ public class ReportingRequest3 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "AcctOwnr", required = true)
 	public Party12Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -518,6 +528,7 @@ public class ReportingRequest3 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
 		return accountServicer;
 	}
@@ -526,6 +537,7 @@ public class ReportingRequest3 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "RptgPrd")
 	public ReportingPeriod1 getReportingPeriod() {
 		return reportingPeriod;
 	}
@@ -534,6 +546,7 @@ public class ReportingRequest3 {
 		this.reportingPeriod = reportingPeriod;
 	}
 
+	@XmlElement(name = "ReqdTxTp")
 	public TransactionType1 getRequestedTransactionType() {
 		return requestedTransactionType;
 	}
@@ -542,6 +555,7 @@ public class ReportingRequest3 {
 		this.requestedTransactionType = requestedTransactionType;
 	}
 
+	@XmlElement(name = "ReqdBalTp")
 	public List<BalanceType12> getRequestedBalanceType() {
 		return requestedBalanceType;
 	}

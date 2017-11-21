@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.MarginCallResult2;
 import com.tools20022.repository.msg.Result1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice to provide the summation of the call amounts for the variation margin
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarginCallResult2Choice", propOrder = {"marginCallResultDetails", "marginCallAmount", "segregatedIndependentAmount"})
 public class MarginCallResult2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class MarginCallResult2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MrgnCallRsltDtls", required = true)
 	public MarginCallResult2 getMarginCallResultDetails() {
 		return marginCallResultDetails;
 	}
@@ -238,6 +245,7 @@ public class MarginCallResult2Choice {
 		this.marginCallResultDetails = marginCallResultDetails;
 	}
 
+	@XmlElement(name = "MrgnCallAmt", required = true)
 	public Result1 getMarginCallAmount() {
 		return marginCallAmount;
 	}
@@ -246,6 +254,7 @@ public class MarginCallResult2Choice {
 		this.marginCallAmount = marginCallAmount;
 	}
 
+	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
 	public Result1 getSegregatedIndependentAmount() {
 		return segregatedIndependentAmount;
 	}

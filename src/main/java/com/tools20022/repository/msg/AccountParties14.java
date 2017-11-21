@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a party's account.
@@ -114,6 +118,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.msg.AccountParties11 AccountParties11}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountParties14", propOrder = {"modificationScopeIndication", "principalAccountParty", "secondaryOwner", "beneficiary", "powerOfAttorney", "legalGuardian", "custodianForMinor", "successorOnDeath", "administrator",
+		"otherParty", "granter", "settlor", "registeredShareholderName"})
 public class AccountParties14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -956,6 +963,7 @@ public class AccountParties14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ModScpIndctn", required = true)
 	public DataModification1Code getModificationScopeIndication() {
 		return modificationScopeIndication;
 	}
@@ -964,6 +972,7 @@ public class AccountParties14 {
 		this.modificationScopeIndication = modificationScopeIndication;
 	}
 
+	@XmlElement(name = "PrncplAcctPty")
 	public AccountParties9Choice getPrincipalAccountParty() {
 		return principalAccountParty;
 	}
@@ -972,6 +981,7 @@ public class AccountParties14 {
 		this.principalAccountParty = principalAccountParty;
 	}
 
+	@XmlElement(name = "ScndryOwnr")
 	public InvestmentAccountOwnershipInformation13 getSecondaryOwner() {
 		return secondaryOwner;
 	}
@@ -980,6 +990,7 @@ public class AccountParties14 {
 		this.secondaryOwner = secondaryOwner;
 	}
 
+	@XmlElement(name = "Bnfcry")
 	public InvestmentAccountOwnershipInformation13 getBeneficiary() {
 		return beneficiary;
 	}
@@ -988,6 +999,7 @@ public class AccountParties14 {
 		this.beneficiary = beneficiary;
 	}
 
+	@XmlElement(name = "PwrOfAttny")
 	public InvestmentAccountOwnershipInformation13 getPowerOfAttorney() {
 		return powerOfAttorney;
 	}
@@ -996,6 +1008,7 @@ public class AccountParties14 {
 		this.powerOfAttorney = powerOfAttorney;
 	}
 
+	@XmlElement(name = "LglGuardn")
 	public InvestmentAccountOwnershipInformation13 getLegalGuardian() {
 		return legalGuardian;
 	}
@@ -1004,6 +1017,7 @@ public class AccountParties14 {
 		this.legalGuardian = legalGuardian;
 	}
 
+	@XmlElement(name = "CtdnForMnr")
 	public InvestmentAccountOwnershipInformation13 getCustodianForMinor() {
 		return custodianForMinor;
 	}
@@ -1012,6 +1026,7 @@ public class AccountParties14 {
 		this.custodianForMinor = custodianForMinor;
 	}
 
+	@XmlElement(name = "SucssrOnDth")
 	public InvestmentAccountOwnershipInformation13 getSuccessorOnDeath() {
 		return successorOnDeath;
 	}
@@ -1020,6 +1035,7 @@ public class AccountParties14 {
 		this.successorOnDeath = successorOnDeath;
 	}
 
+	@XmlElement(name = "Admstr")
 	public InvestmentAccountOwnershipInformation13 getAdministrator() {
 		return administrator;
 	}
@@ -1028,6 +1044,7 @@ public class AccountParties14 {
 		this.administrator = administrator;
 	}
 
+	@XmlElement(name = "OthrPty")
 	public ExtendedParty10 getOtherParty() {
 		return otherParty;
 	}
@@ -1036,6 +1053,7 @@ public class AccountParties14 {
 		this.otherParty = otherParty;
 	}
 
+	@XmlElement(name = "Grntr")
 	public InvestmentAccountOwnershipInformation13 getGranter() {
 		return granter;
 	}
@@ -1044,6 +1062,7 @@ public class AccountParties14 {
 		this.granter = granter;
 	}
 
+	@XmlElement(name = "Sttlr")
 	public InvestmentAccountOwnershipInformation13 getSettlor() {
 		return settlor;
 	}
@@ -1052,6 +1071,7 @@ public class AccountParties14 {
 		this.settlor = settlor;
 	}
 
+	@XmlElement(name = "RegdShrhldrNm")
 	public RegisteredShareholderName1Choice getRegisteredShareholderName() {
 		return registeredShareholderName;
 	}

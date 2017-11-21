@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money for which goods or services are offered, sold, or bought.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * UnitPrice12}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnitPrice21", propOrder = {"type", "value", "priceMethod", "accruedInterestNAV", "numberOfDaysAccrued", "taxableIncomePerShare"})
 public class UnitPrice21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -427,6 +433,7 @@ public class UnitPrice21 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TypeOfPrice31Choice getType() {
 		return type;
 	}
@@ -435,6 +442,7 @@ public class UnitPrice21 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public PriceValue1 getValue() {
 		return value;
 	}
@@ -443,6 +451,7 @@ public class UnitPrice21 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "PricMtd")
 	public PriceMethod1Code getPriceMethod() {
 		return priceMethod;
 	}
@@ -451,6 +460,7 @@ public class UnitPrice21 {
 		this.priceMethod = priceMethod;
 	}
 
+	@XmlElement(name = "AcrdIntrstNAV")
 	public ActiveOrHistoricCurrencyAndAmount getAccruedInterestNAV() {
 		return accruedInterestNAV;
 	}
@@ -459,6 +469,7 @@ public class UnitPrice21 {
 		this.accruedInterestNAV = accruedInterestNAV;
 	}
 
+	@XmlElement(name = "NbOfDaysAcrd")
 	public Number getNumberOfDaysAccrued() {
 		return numberOfDaysAccrued;
 	}
@@ -467,6 +478,7 @@ public class UnitPrice21 {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
 	}
 
+	@XmlElement(name = "TaxblIncmPerShr")
 	public ActiveCurrencyAnd13DecimalAmount getTaxableIncomePerShare() {
 		return taxableIncomePerShare;
 	}

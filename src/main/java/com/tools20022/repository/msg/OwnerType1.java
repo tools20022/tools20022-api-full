@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the owner type and mandate type.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the owner type and mandate type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OwnerType1", propOrder = {"type", "mandateType", "proprietary"})
 public class OwnerType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -227,6 +233,7 @@ public class OwnerType1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public AccountOwnerType1Code getType() {
 		return type;
 	}
@@ -235,6 +242,7 @@ public class OwnerType1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "MndtTp")
 	public AccountPermissionType1Code getMandateType() {
 		return mandateType;
 	}
@@ -243,6 +251,7 @@ public class OwnerType1 {
 		this.mandateType = mandateType;
 	}
 
+	@XmlElement(name = "Prtry")
 	public GenericIdentification1 getProprietary() {
 		return proprietary;
 	}

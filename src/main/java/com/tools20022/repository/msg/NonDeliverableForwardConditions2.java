@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.FixingCondition;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the opening and valuation conditions for the non deliverable
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * NonDeliverableForwardConditions1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NonDeliverableForwardConditions2", propOrder = {"openingConditions", "fixingConditions"})
 public class NonDeliverableForwardConditions2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class NonDeliverableForwardConditions2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OpngConds", required = true)
 	public OpeningConditions1 getOpeningConditions() {
 		return openingConditions;
 	}
@@ -204,6 +211,7 @@ public class NonDeliverableForwardConditions2 {
 		this.openingConditions = openingConditions;
 	}
 
+	@XmlElement(name = "FxgConds")
 	public FixingConditions1 getFixingConditions() {
 		return fixingConditions;
 	}

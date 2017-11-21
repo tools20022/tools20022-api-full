@@ -37,6 +37,16 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradeCertificatePartyRole#mmTradeCertificate
+ * TradeCertificatePartyRole.mmTradeCertificate}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -44,16 +54,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.TradeCertificate#mmTradeCertificatePartyRole
  * TradeCertificate.mmTradeCertificatePartyRole}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradeCertificatePartyRole#mmTradeCertificate
- * TradeCertificatePartyRole.mmTradeCertificate}</li>
  * </ul>
  * </li>
  * <li>
@@ -111,7 +111,7 @@ public class TradeCertificatePartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmTradeCertificate = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradeCertificatePartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradeCertificatePartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeCertificate";
@@ -132,7 +132,12 @@ public class TradeCertificatePartyRole extends Role {
 				definition = "Role played by a party in the context of issuing trade certificates.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradeCertificate.mmTradeCertificatePartyRole);
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(TradeCertificatePartyRole.mmTradeCertificate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradeCertificatePartyRole.mmTradeCertificate);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TradeCertificatePartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

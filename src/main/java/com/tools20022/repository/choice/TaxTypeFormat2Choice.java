@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Type of tax expressed in structured or free text form.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of tax expressed in structured or free text form."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxTypeFormat2Choice", propOrder = {"unstructured", "structured"})
 public class TaxTypeFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class TaxTypeFormat2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ustrd", required = true)
 	public Max35Text getUnstructured() {
 		return unstructured;
 	}
@@ -174,6 +181,7 @@ public class TaxTypeFormat2Choice {
 		this.unstructured = unstructured;
 	}
 
+	@XmlElement(name = "Strd", required = true)
 	public TaxType2Code getStructured() {
 		return structured;
 	}

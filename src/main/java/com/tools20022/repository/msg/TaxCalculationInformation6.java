@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information used to calculate the tax.
@@ -79,6 +83,8 @@ import java.util.function.Supplier;
  * definition} = "Information used to calculate the tax."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxCalculationInformation6", propOrder = {"basis", "extendedBasis", "taxableAmount"})
 public class TaxCalculationInformation6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -292,6 +298,7 @@ public class TaxCalculationInformation6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Bsis")
 	public TaxationBasis2Code getBasis() {
 		return basis;
 	}
@@ -300,6 +307,7 @@ public class TaxCalculationInformation6 {
 		this.basis = basis;
 	}
 
+	@XmlElement(name = "XtndedBsis")
 	public Extended350Code getExtendedBasis() {
 		return extendedBasis;
 	}
@@ -308,6 +316,7 @@ public class TaxCalculationInformation6 {
 		this.extendedBasis = extendedBasis;
 	}
 
+	@XmlElement(name = "TaxblAmt")
 	public ActiveCurrencyAnd13DecimalAmount getTaxableAmount() {
 		return taxableAmount;
 	}

@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.MoneyMarketTransactionStatus2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOLatestversion;
 import com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The MoneyMarketStatisticalReportStatusAdvice message is sent by the relevant
@@ -38,9 +40,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.028.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -76,6 +75,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.028.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -87,6 +89,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MoneyMarketStatisticalReportStatusAdviceV01", propOrder = {"statusReportHeader", "transactionStatus", "supplementaryData"})
 public class MoneyMarketStatisticalReportStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -123,6 +127,14 @@ public class MoneyMarketStatisticalReportStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MoneyMarketStatusReportHeader1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MoneyMarketStatisticalReportStatusAdviceV01.class.getMethod("getStatusReportHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<MoneyMarketTransactionStatus2> transactionStatus;
@@ -161,6 +173,14 @@ public class MoneyMarketStatisticalReportStatusAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> MoneyMarketTransactionStatus2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MoneyMarketStatisticalReportStatusAdviceV01.class.getMethod("getTransactionStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -198,6 +218,14 @@ public class MoneyMarketStatisticalReportStatusAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MoneyMarketStatisticalReportStatusAdviceV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -210,8 +238,8 @@ public class MoneyMarketStatisticalReportStatusAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "MnyMktSttstclRptStsAdvc";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MoneyMarketStatisticalReportStatusAdviceV01.mmStatusReportHeader, MoneyMarketStatisticalReportStatusAdviceV01.mmTransactionStatus,
-						MoneyMarketStatisticalReportStatusAdviceV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01.mmStatusReportHeader,
+						com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01.mmTransactionStatus, com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -221,10 +249,16 @@ public class MoneyMarketStatisticalReportStatusAdviceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MoneyMarketStatisticalReportStatusAdviceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsRptHdr", required = true)
 	public MoneyMarketStatusReportHeader1 getStatusReportHeader() {
 		return statusReportHeader;
 	}
@@ -233,6 +267,7 @@ public class MoneyMarketStatisticalReportStatusAdviceV01 {
 		this.statusReportHeader = statusReportHeader;
 	}
 
+	@XmlElement(name = "TxSts")
 	public List<MoneyMarketTransactionStatus2> getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -241,11 +276,18 @@ public class MoneyMarketStatisticalReportStatusAdviceV01 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.028.01.01")
+	static public class Document {
+		@XmlElement(name = "MnyMktSttstclRptStsAdvc", required = true)
+		public MoneyMarketStatisticalReportStatusAdviceV01 messageBody;
 	}
 }

@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money due to a party as compensation for a service.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Commission16", propOrder = {"type", "commission", "recipientIdentification", "calculationDate", "totalCommission", "totalVATAmount", "VATRate"})
 public class Commission16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -425,6 +431,7 @@ public class Commission16 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public CommissionType2Choice getType() {
 		return type;
 	}
@@ -433,6 +440,7 @@ public class Commission16 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Comssn", required = true)
 	public AmountOrRate2Choice getCommission() {
 		return commission;
 	}
@@ -441,6 +449,7 @@ public class Commission16 {
 		this.commission = commission;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification54 getRecipientIdentification() {
 		return recipientIdentification;
 	}
@@ -449,6 +458,7 @@ public class Commission16 {
 		this.recipientIdentification = recipientIdentification;
 	}
 
+	@XmlElement(name = "ClctnDt")
 	public ISODate getCalculationDate() {
 		return calculationDate;
 	}
@@ -457,6 +467,7 @@ public class Commission16 {
 		this.calculationDate = calculationDate;
 	}
 
+	@XmlElement(name = "TtlComssn")
 	public AmountAndDirection29 getTotalCommission() {
 		return totalCommission;
 	}
@@ -465,6 +476,7 @@ public class Commission16 {
 		this.totalCommission = totalCommission;
 	}
 
+	@XmlElement(name = "TtlVATAmt")
 	public ActiveCurrencyAndAmount getTotalVATAmount() {
 		return totalVATAmount;
 	}
@@ -473,6 +485,7 @@ public class Commission16 {
 		this.totalVATAmount = totalVATAmount;
 	}
 
+	@XmlElement(name = "VATRate")
 	public BaseOneRate getVATRate() {
 		return vATRate;
 	}

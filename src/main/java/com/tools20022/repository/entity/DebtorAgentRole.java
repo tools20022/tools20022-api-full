@@ -63,6 +63,11 @@ public class DebtorAgentRole extends PaymentPartyRole {
 				definition = "Financial institution servicing an account for the debtor.";
 				superType_lazy = () -> PaymentPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DebtorAgentRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

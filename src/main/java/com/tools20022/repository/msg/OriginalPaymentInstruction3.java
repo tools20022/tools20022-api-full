@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details on the reference and status of the original
@@ -101,6 +105,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalPaymentInstruction3", propOrder = {"originalPaymentInformationCancellationIdentification", "resolvedCase", "originalPaymentInformationIdentification", "originalGroupInformation", "originalNumberOfTransactions",
+		"originalControlSum", "paymentInformationCancellationStatus", "cancellationStatusReasonInformation", "numberOfTransactionsPerCancellationStatus", "transactionInformationAndStatus"})
 public class OriginalPaymentInstruction3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -690,6 +697,7 @@ public class OriginalPaymentInstruction3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlPmtInfCxlId")
 	public Max35Text getOriginalPaymentInformationCancellationIdentification() {
 		return originalPaymentInformationCancellationIdentification;
 	}
@@ -698,6 +706,7 @@ public class OriginalPaymentInstruction3 {
 		this.originalPaymentInformationCancellationIdentification = originalPaymentInformationCancellationIdentification;
 	}
 
+	@XmlElement(name = "RslvdCase")
 	public Case3 getResolvedCase() {
 		return resolvedCase;
 	}
@@ -706,6 +715,7 @@ public class OriginalPaymentInstruction3 {
 		this.resolvedCase = resolvedCase;
 	}
 
+	@XmlElement(name = "OrgnlPmtInfId", required = true)
 	public Max35Text getOriginalPaymentInformationIdentification() {
 		return originalPaymentInformationIdentification;
 	}
@@ -714,6 +724,7 @@ public class OriginalPaymentInstruction3 {
 		this.originalPaymentInformationIdentification = originalPaymentInformationIdentification;
 	}
 
+	@XmlElement(name = "OrgnlGrpInf")
 	public OriginalGroupInformation3 getOriginalGroupInformation() {
 		return originalGroupInformation;
 	}
@@ -722,6 +733,7 @@ public class OriginalPaymentInstruction3 {
 		this.originalGroupInformation = originalGroupInformation;
 	}
 
+	@XmlElement(name = "OrgnlNbOfTxs")
 	public Max15NumericText getOriginalNumberOfTransactions() {
 		return originalNumberOfTransactions;
 	}
@@ -730,6 +742,7 @@ public class OriginalPaymentInstruction3 {
 		this.originalNumberOfTransactions = originalNumberOfTransactions;
 	}
 
+	@XmlElement(name = "OrgnlCtrlSum")
 	public DecimalNumber getOriginalControlSum() {
 		return originalControlSum;
 	}
@@ -738,6 +751,7 @@ public class OriginalPaymentInstruction3 {
 		this.originalControlSum = originalControlSum;
 	}
 
+	@XmlElement(name = "PmtInfCxlSts")
 	public GroupCancellationStatus1Code getPaymentInformationCancellationStatus() {
 		return paymentInformationCancellationStatus;
 	}
@@ -746,6 +760,7 @@ public class OriginalPaymentInstruction3 {
 		this.paymentInformationCancellationStatus = paymentInformationCancellationStatus;
 	}
 
+	@XmlElement(name = "CxlStsRsnInf")
 	public List<CancellationStatusReason2> getCancellationStatusReasonInformation() {
 		return cancellationStatusReasonInformation;
 	}
@@ -754,6 +769,7 @@ public class OriginalPaymentInstruction3 {
 		this.cancellationStatusReasonInformation = cancellationStatusReasonInformation;
 	}
 
+	@XmlElement(name = "NbOfTxsPerCxlSts")
 	public List<NumberOfCancellationsPerStatus1> getNumberOfTransactionsPerCancellationStatus() {
 		return numberOfTransactionsPerCancellationStatus;
 	}
@@ -762,6 +778,7 @@ public class OriginalPaymentInstruction3 {
 		this.numberOfTransactionsPerCancellationStatus = numberOfTransactionsPerCancellationStatus;
 	}
 
+	@XmlElement(name = "TxInfAndSts")
 	public List<PaymentTransaction39> getTransactionInformationAndStatus() {
 		return transactionInformationAndStatus;
 	}

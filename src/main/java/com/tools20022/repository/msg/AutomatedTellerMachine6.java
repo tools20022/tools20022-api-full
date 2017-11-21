@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * ATM information.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AutomatedTellerMachine1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AutomatedTellerMachine6", propOrder = {"identification", "additionalIdentification", "sequenceNumber", "location", "locationCategory", "equipment"})
 public class AutomatedTellerMachine6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -413,6 +419,7 @@ public class AutomatedTellerMachine6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -421,6 +428,7 @@ public class AutomatedTellerMachine6 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AddtlId")
 	public Max35Text getAdditionalIdentification() {
 		return additionalIdentification;
 	}
@@ -429,6 +437,7 @@ public class AutomatedTellerMachine6 {
 		this.additionalIdentification = additionalIdentification;
 	}
 
+	@XmlElement(name = "SeqNb")
 	public Max35Text getSequenceNumber() {
 		return sequenceNumber;
 	}
@@ -437,6 +446,7 @@ public class AutomatedTellerMachine6 {
 		this.sequenceNumber = sequenceNumber;
 	}
 
+	@XmlElement(name = "Lctn")
 	public PostalAddress17 getLocation() {
 		return location;
 	}
@@ -445,6 +455,7 @@ public class AutomatedTellerMachine6 {
 		this.location = location;
 	}
 
+	@XmlElement(name = "LctnCtgy")
 	public TransactionEnvironment2Code getLocationCategory() {
 		return locationCategory;
 	}
@@ -453,6 +464,7 @@ public class AutomatedTellerMachine6 {
 		this.locationCategory = locationCategory;
 	}
 
+	@XmlElement(name = "Eqpmnt")
 	public ATMEquipment1 getEquipment() {
 		return equipment;
 	}

@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Certificate in which all currency control transactions are registered.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Certificate in which all currency control transactions are registered."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionCertificate2", propOrder = {"referredDocument", "transactionDate", "transactionType", "localInstrument", "amount"})
 public class TransactionCertificate2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -343,6 +349,7 @@ public class TransactionCertificate2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RfrdDoc", required = true)
 	public CertificateReference1 getReferredDocument() {
 		return referredDocument;
 	}
@@ -351,6 +358,7 @@ public class TransactionCertificate2 {
 		this.referredDocument = referredDocument;
 	}
 
+	@XmlElement(name = "TxDt", required = true)
 	public ISODate getTransactionDate() {
 		return transactionDate;
 	}
@@ -359,6 +367,7 @@ public class TransactionCertificate2 {
 		this.transactionDate = transactionDate;
 	}
 
+	@XmlElement(name = "TxTp", required = true)
 	public Exact1NumericText getTransactionType() {
 		return transactionType;
 	}
@@ -367,6 +376,7 @@ public class TransactionCertificate2 {
 		this.transactionType = transactionType;
 	}
 
+	@XmlElement(name = "LclInstrm", required = true)
 	public Exact5NumericText getLocalInstrument() {
 		return localInstrument;
 	}
@@ -375,6 +385,7 @@ public class TransactionCertificate2 {
 		this.localInstrument = localInstrument;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}

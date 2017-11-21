@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the card transaction.
@@ -74,6 +78,8 @@ import java.util.List;
  * CardTransactionDetail2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransactionDetail6", propOrder = {"transactionAmounts", "transactionFees", "additionalAmounts", "ICCRelatedData"})
 public class CardTransactionDetail6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -296,6 +302,7 @@ public class CardTransactionDetail6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxAmts", required = true)
 	public CardTransactionAmount5 getTransactionAmounts() {
 		return transactionAmounts;
 	}
@@ -304,6 +311,7 @@ public class CardTransactionDetail6 {
 		this.transactionAmounts = transactionAmounts;
 	}
 
+	@XmlElement(name = "TxFees")
 	public List<DetailedAmount11> getTransactionFees() {
 		return transactionFees;
 	}
@@ -312,6 +320,7 @@ public class CardTransactionDetail6 {
 		this.transactionFees = transactionFees;
 	}
 
+	@XmlElement(name = "AddtlAmts")
 	public List<DetailedAmount10> getAdditionalAmounts() {
 		return additionalAmounts;
 	}
@@ -320,6 +329,7 @@ public class CardTransactionDetail6 {
 		this.additionalAmounts = additionalAmounts;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}

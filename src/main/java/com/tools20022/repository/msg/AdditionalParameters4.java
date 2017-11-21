@@ -35,6 +35,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies additional parameters to the message or transaction.
@@ -91,6 +95,8 @@ import java.util.function.Supplier;
  * "Specifies additional parameters to the message or transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalParameters4", propOrder = {"preConfirmation", "partialSettlement", "tripartyAgentCollateralTransactionIdentification", "clientTripartyCollateralTransactionIdentification"})
 public class AdditionalParameters4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -316,6 +322,7 @@ public class AdditionalParameters4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PreConf")
 	public PreConfirmation1Code getPreConfirmation() {
 		return preConfirmation;
 	}
@@ -324,6 +331,7 @@ public class AdditionalParameters4 {
 		this.preConfirmation = preConfirmation;
 	}
 
+	@XmlElement(name = "PrtlSttlm")
 	public PartialSettlement1Code getPartialSettlement() {
 		return partialSettlement;
 	}
@@ -332,6 +340,7 @@ public class AdditionalParameters4 {
 		this.partialSettlement = partialSettlement;
 	}
 
+	@XmlElement(name = "TrptyAgtCollTxId")
 	public Max35Text getTripartyAgentCollateralTransactionIdentification() {
 		return tripartyAgentCollateralTransactionIdentification;
 	}
@@ -340,6 +349,7 @@ public class AdditionalParameters4 {
 		this.tripartyAgentCollateralTransactionIdentification = tripartyAgentCollateralTransactionIdentification;
 	}
 
+	@XmlElement(name = "ClntTrptyCollTxId")
 	public Max35Text getClientTripartyCollateralTransactionIdentification() {
 		return clientTripartyCollateralTransactionIdentification;
 	}

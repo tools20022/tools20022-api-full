@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Common details for all payment instruction.
@@ -84,6 +88,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentCommon1", propOrder = {"paymentFrom", "paymentTo", "commonStatus", "requestedExecutionDate", "entryDate", "creditDebitIndicator", "paymentMethod"})
 public class PaymentCommon1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -488,6 +494,7 @@ public class PaymentCommon1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtFr")
 	public System1 getPaymentFrom() {
 		return paymentFrom;
 	}
@@ -496,6 +503,7 @@ public class PaymentCommon1 {
 		this.paymentFrom = paymentFrom;
 	}
 
+	@XmlElement(name = "PmtTo")
 	public System1 getPaymentTo() {
 		return paymentTo;
 	}
@@ -504,6 +512,7 @@ public class PaymentCommon1 {
 		this.paymentTo = paymentTo;
 	}
 
+	@XmlElement(name = "CmonSts")
 	public List<PaymentStatus1> getCommonStatus() {
 		return commonStatus;
 	}
@@ -512,6 +521,7 @@ public class PaymentCommon1 {
 		this.commonStatus = commonStatus;
 	}
 
+	@XmlElement(name = "ReqdExctnDt")
 	public DateAndDateTimeChoice getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -520,6 +530,7 @@ public class PaymentCommon1 {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "NtryDt")
 	public DateAndDateTimeChoice getEntryDate() {
 		return entryDate;
 	}
@@ -528,6 +539,7 @@ public class PaymentCommon1 {
 		this.entryDate = entryDate;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -536,6 +548,7 @@ public class PaymentCommon1 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "PmtMtd")
 	public PaymentOrigin1Choice getPaymentMethod() {
 		return paymentMethod;
 	}

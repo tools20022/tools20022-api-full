@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Tax region that levies a tax on the services in a statement.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Tax region that levies a tax on the services in a statement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingTaxRegion1", propOrder = {"regionNumber", "regionName", "customerTaxIdentification", "pointDate", "sendingFinancialInstitution", "invoiceNumber", "methodC", "settlementAmount", "taxDueToRegion"})
 public class BillingTaxRegion1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -551,6 +557,7 @@ public class BillingTaxRegion1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RgnNb", required = true)
 	public Max40Text getRegionNumber() {
 		return regionNumber;
 	}
@@ -559,6 +566,7 @@ public class BillingTaxRegion1 {
 		this.regionNumber = regionNumber;
 	}
 
+	@XmlElement(name = "RgnNm", required = true)
 	public Max40Text getRegionName() {
 		return regionName;
 	}
@@ -567,6 +575,7 @@ public class BillingTaxRegion1 {
 		this.regionName = regionName;
 	}
 
+	@XmlElement(name = "CstmrTaxId", required = true)
 	public Max40Text getCustomerTaxIdentification() {
 		return customerTaxIdentification;
 	}
@@ -575,6 +584,7 @@ public class BillingTaxRegion1 {
 		this.customerTaxIdentification = customerTaxIdentification;
 	}
 
+	@XmlElement(name = "PtDt")
 	public ISODate getPointDate() {
 		return pointDate;
 	}
@@ -583,6 +593,7 @@ public class BillingTaxRegion1 {
 		this.pointDate = pointDate;
 	}
 
+	@XmlElement(name = "SndgFI")
 	public BillingTaxIdentification1 getSendingFinancialInstitution() {
 		return sendingFinancialInstitution;
 	}
@@ -591,6 +602,7 @@ public class BillingTaxRegion1 {
 		this.sendingFinancialInstitution = sendingFinancialInstitution;
 	}
 
+	@XmlElement(name = "InvcNb")
 	public Max40Text getInvoiceNumber() {
 		return invoiceNumber;
 	}
@@ -599,6 +611,7 @@ public class BillingTaxRegion1 {
 		this.invoiceNumber = invoiceNumber;
 	}
 
+	@XmlElement(name = "MtdC")
 	public BillingMethod4 getMethodC() {
 		return methodC;
 	}
@@ -607,6 +620,7 @@ public class BillingTaxRegion1 {
 		this.methodC = methodC;
 	}
 
+	@XmlElement(name = "SttlmAmt", required = true)
 	public AmountAndDirection34 getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -615,6 +629,7 @@ public class BillingTaxRegion1 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "TaxDueToRgn", required = true)
 	public AmountAndDirection34 getTaxDueToRegion() {
 		return taxDueToRegion;
 	}

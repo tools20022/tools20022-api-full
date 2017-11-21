@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies security rate details.
@@ -82,6 +86,9 @@ import java.util.List;
  * definition} = "Specifies security rate details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionRate33", propOrder = {"additionalQuantityForSubscribedResultantSecurities", "additionalQuantityForExistingSecurities", "newToOld", "transformationRate", "chargesFees", "fiscalStamp", "applicableRate",
+		"taxCreditRate"})
 public class CorporateActionRate33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -505,6 +512,7 @@ public class CorporateActionRate33 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlQtyForSbcbdRsltntScties")
 	public RatioFormat13Choice getAdditionalQuantityForSubscribedResultantSecurities() {
 		return additionalQuantityForSubscribedResultantSecurities;
 	}
@@ -513,6 +521,7 @@ public class CorporateActionRate33 {
 		this.additionalQuantityForSubscribedResultantSecurities = additionalQuantityForSubscribedResultantSecurities;
 	}
 
+	@XmlElement(name = "AddtlQtyForExstgScties")
 	public RatioFormat13Choice getAdditionalQuantityForExistingSecurities() {
 		return additionalQuantityForExistingSecurities;
 	}
@@ -521,6 +530,7 @@ public class CorporateActionRate33 {
 		this.additionalQuantityForExistingSecurities = additionalQuantityForExistingSecurities;
 	}
 
+	@XmlElement(name = "NewToOd")
 	public RatioFormat14Choice getNewToOld() {
 		return newToOld;
 	}
@@ -529,6 +539,7 @@ public class CorporateActionRate33 {
 		this.newToOld = newToOld;
 	}
 
+	@XmlElement(name = "TrfrmatnRate")
 	public PercentageRate getTransformationRate() {
 		return transformationRate;
 	}
@@ -537,6 +548,7 @@ public class CorporateActionRate33 {
 		this.transformationRate = transformationRate;
 	}
 
+	@XmlElement(name = "ChrgsFees")
 	public RateAndAmountFormat16Choice getChargesFees() {
 		return chargesFees;
 	}
@@ -545,6 +557,7 @@ public class CorporateActionRate33 {
 		this.chargesFees = chargesFees;
 	}
 
+	@XmlElement(name = "FsclStmp")
 	public RateFormat6Choice getFiscalStamp() {
 		return fiscalStamp;
 	}
@@ -553,6 +566,7 @@ public class CorporateActionRate33 {
 		this.fiscalStamp = fiscalStamp;
 	}
 
+	@XmlElement(name = "AplblRate")
 	public RateFormat6Choice getApplicableRate() {
 		return applicableRate;
 	}
@@ -561,6 +575,7 @@ public class CorporateActionRate33 {
 		this.applicableRate = applicableRate;
 	}
 
+	@XmlElement(name = "TaxCdtRate")
 	public List<TaxCreditRateFormat6Choice> getTaxCreditRate() {
 		return taxCreditRate;
 	}

@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details on the quantity, account and other related information involved in a
@@ -82,6 +86,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuantityAndAccount32", propOrder = {"denominationChoice", "accountOwner", "cashAccount", "safekeepingPlace", "quantityBreakdown"})
 public class QuantityAndAccount32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -355,6 +361,7 @@ public class QuantityAndAccount32 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DnmtnChc")
 	public RestrictedFINXMax210Text getDenominationChoice() {
 		return denominationChoice;
 	}
@@ -363,6 +370,7 @@ public class QuantityAndAccount32 {
 		this.denominationChoice = denominationChoice;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification51Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -371,6 +379,7 @@ public class QuantityAndAccount32 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccountIdentification6Choice getCashAccount() {
 		return cashAccount;
 	}
@@ -379,6 +388,7 @@ public class QuantityAndAccount32 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat4Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -387,6 +397,7 @@ public class QuantityAndAccount32 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "QtyBrkdwn")
 	public List<QuantityBreakdown18> getQuantityBreakdown() {
 		return quantityBreakdown;
 	}

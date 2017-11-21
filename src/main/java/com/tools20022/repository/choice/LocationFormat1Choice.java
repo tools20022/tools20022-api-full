@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PostalAddress1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the formats to indicate the location of the meeting.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between the formats to indicate the location of the meeting."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LocationFormat1Choice", propOrder = {"address", "locationCode"})
 public class LocationFormat1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class LocationFormat1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Adr", required = true)
 	public PostalAddress1 getAddress() {
 		return address;
 	}
@@ -180,6 +187,7 @@ public class LocationFormat1Choice {
 		this.address = address;
 	}
 
+	@XmlElement(name = "LctnCd", required = true)
 	public PlaceType1Code getLocationCode() {
 		return locationCode;
 	}

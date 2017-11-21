@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide reference and status information on the
@@ -88,6 +92,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTransactionInformation28", propOrder = {"reversalIdentification", "originalInstructionIdentification", "originalEndToEndIdentification", "originalInstructedAmount", "reversedInstructedAmount", "chargeBearer",
+		"reversalReasonInformation", "originalTransactionReference"})
 public class PaymentTransactionInformation28 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -513,6 +520,7 @@ public class PaymentTransactionInformation28 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RvslId")
 	public Max35Text getReversalIdentification() {
 		return reversalIdentification;
 	}
@@ -521,6 +529,7 @@ public class PaymentTransactionInformation28 {
 		this.reversalIdentification = reversalIdentification;
 	}
 
+	@XmlElement(name = "OrgnlInstrId")
 	public Max35Text getOriginalInstructionIdentification() {
 		return originalInstructionIdentification;
 	}
@@ -529,6 +538,7 @@ public class PaymentTransactionInformation28 {
 		this.originalInstructionIdentification = originalInstructionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlEndToEndId")
 	public Max35Text getOriginalEndToEndIdentification() {
 		return originalEndToEndIdentification;
 	}
@@ -537,6 +547,7 @@ public class PaymentTransactionInformation28 {
 		this.originalEndToEndIdentification = originalEndToEndIdentification;
 	}
 
+	@XmlElement(name = "OrgnlInstdAmt")
 	public ActiveOrHistoricCurrencyAndAmount getOriginalInstructedAmount() {
 		return originalInstructedAmount;
 	}
@@ -545,6 +556,7 @@ public class PaymentTransactionInformation28 {
 		this.originalInstructedAmount = originalInstructedAmount;
 	}
 
+	@XmlElement(name = "RvsdInstdAmt")
 	public ActiveOrHistoricCurrencyAndAmount getReversedInstructedAmount() {
 		return reversedInstructedAmount;
 	}
@@ -553,6 +565,7 @@ public class PaymentTransactionInformation28 {
 		this.reversedInstructedAmount = reversedInstructedAmount;
 	}
 
+	@XmlElement(name = "ChrgBr")
 	public ChargeBearerType1Code getChargeBearer() {
 		return chargeBearer;
 	}
@@ -561,6 +574,7 @@ public class PaymentTransactionInformation28 {
 		this.chargeBearer = chargeBearer;
 	}
 
+	@XmlElement(name = "RvslRsnInf")
 	public List<ReversalReasonInformation6> getReversalReasonInformation() {
 		return reversalReasonInformation;
 	}
@@ -569,6 +583,7 @@ public class PaymentTransactionInformation28 {
 		this.reversalReasonInformation = reversalReasonInformation;
 	}
 
+	@XmlElement(name = "OrgnlTxRef")
 	public OriginalTransactionReference13 getOriginalTransactionReference() {
 		return originalTransactionReference;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria which are used to report on the payment status.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Defines the criteria which are used to report on the payment status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructionStatusReturnCriteria", propOrder = {"paymentInstructionStatusIndicator", "paymentInstructionStatusDateTimeIndicator", "paymentInstructionStatusReasonIndicator"})
 public class InstructionStatusReturnCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -205,6 +211,7 @@ public class InstructionStatusReturnCriteria {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtInstrStsInd", required = true)
 	public RequestedIndicator getPaymentInstructionStatusIndicator() {
 		return paymentInstructionStatusIndicator;
 	}
@@ -213,6 +220,7 @@ public class InstructionStatusReturnCriteria {
 		this.paymentInstructionStatusIndicator = paymentInstructionStatusIndicator;
 	}
 
+	@XmlElement(name = "PmtInstrStsDtTmInd")
 	public RequestedIndicator getPaymentInstructionStatusDateTimeIndicator() {
 		return paymentInstructionStatusDateTimeIndicator;
 	}
@@ -221,6 +229,7 @@ public class InstructionStatusReturnCriteria {
 		this.paymentInstructionStatusDateTimeIndicator = paymentInstructionStatusDateTimeIndicator;
 	}
 
+	@XmlElement(name = "PmtInstrStsRsnInd")
 	public RequestedIndicator getPaymentInstructionStatusReasonIndicator() {
 		return paymentInstructionStatusReasonIndicator;
 	}

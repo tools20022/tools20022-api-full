@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Switch order confirmation details.
@@ -77,6 +81,8 @@ import java.util.List;
  * definition} = "Switch order confirmation details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwitchOrderConfirmation1", propOrder = {"amendmentIndicator", "switchExecutionDetails", "extension"})
 public class SwitchOrderConfirmation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class SwitchOrderConfirmation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AmdmntInd", required = true)
 	public YesNoIndicator getAmendmentIndicator() {
 		return amendmentIndicator;
 	}
@@ -237,6 +244,7 @@ public class SwitchOrderConfirmation1 {
 		this.amendmentIndicator = amendmentIndicator;
 	}
 
+	@XmlElement(name = "SwtchExctnDtls", required = true)
 	public List<SwitchExecution4> getSwitchExecutionDetails() {
 		return switchExecutionDetails;
 	}
@@ -245,6 +253,7 @@ public class SwitchOrderConfirmation1 {
 		this.switchExecutionDetails = switchExecutionDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.codeset.ATMStatus1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Global status of the ATM.
@@ -55,6 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Global status of the ATM."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMStatus1", propOrder = {"currentStatus", "demandedStatus"})
 public class ATMStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -157,6 +163,7 @@ public class ATMStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CurSts", required = true)
 	public ATMStatus1Code getCurrentStatus() {
 		return currentStatus;
 	}
@@ -165,6 +172,7 @@ public class ATMStatus1 {
 		this.currentStatus = currentStatus;
 	}
 
+	@XmlElement(name = "DmnddSts")
 	public ATMStatus1Code getDemandedStatus() {
 		return demandedStatus;
 	}

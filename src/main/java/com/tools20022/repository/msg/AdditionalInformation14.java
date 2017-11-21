@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional specific modification criteria.
@@ -103,6 +107,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Additional specific modification criteria."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalInformation14", propOrder = {"accountOwnerTransactionIdentification", "classificationType", "safekeepingAccount", "financialInstrumentIdentification", "quantity", "effectiveDate", "expiryDate", "cutOffDate",
+		"investor", "deliveringParty1", "receivingParty1"})
 public class AdditionalInformation14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -656,6 +663,7 @@ public class AdditionalInformation14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnrTxId")
 	public RestrictedFINXMax16Text getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
@@ -664,6 +672,7 @@ public class AdditionalInformation14 {
 		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
 	}
 
+	@XmlElement(name = "ClssfctnTp")
 	public ClassificationType33Choice getClassificationType() {
 		return classificationType;
 	}
@@ -672,6 +681,7 @@ public class AdditionalInformation14 {
 		this.classificationType = classificationType;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount30 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -680,6 +690,7 @@ public class AdditionalInformation14 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public SecurityIdentification20 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -688,6 +699,7 @@ public class AdditionalInformation14 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "Qty")
 	public FinancialInstrumentQuantity15Choice getQuantity() {
 		return quantity;
 	}
@@ -696,6 +708,7 @@ public class AdditionalInformation14 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "FctvDt")
 	public DateAndDateTimeChoice getEffectiveDate() {
 		return effectiveDate;
 	}
@@ -704,6 +717,7 @@ public class AdditionalInformation14 {
 		this.effectiveDate = effectiveDate;
 	}
 
+	@XmlElement(name = "XpryDt")
 	public DateAndDateTimeChoice getExpiryDate() {
 		return expiryDate;
 	}
@@ -712,6 +726,7 @@ public class AdditionalInformation14 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "CutOffDt")
 	public DateAndDateTimeChoice getCutOffDate() {
 		return cutOffDate;
 	}
@@ -720,6 +735,7 @@ public class AdditionalInformation14 {
 		this.cutOffDate = cutOffDate;
 	}
 
+	@XmlElement(name = "Invstr")
 	public PartyIdentification111 getInvestor() {
 		return investor;
 	}
@@ -728,6 +744,7 @@ public class AdditionalInformation14 {
 		this.investor = investor;
 	}
 
+	@XmlElement(name = "DlvrgPty1")
 	public PartyIdentificationAndAccount146 getDeliveringParty1() {
 		return deliveringParty1;
 	}
@@ -736,6 +753,7 @@ public class AdditionalInformation14 {
 		this.deliveringParty1 = deliveringParty1;
 	}
 
+	@XmlElement(name = "RcvgPty1")
 	public PartyIdentificationAndAccount146 getReceivingParty1() {
 		return receivingParty1;
 	}

@@ -40,6 +40,19 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ContactPersonRole#mmRole
+ * ContactPersonRole.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ContactPersonRole#mmMeeting
+ * ContactPersonRole.mmMeeting}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ContactPersonRole#mmPerson
+ * ContactPersonRole.mmPerson}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -107,19 +120,6 @@ import java.util.List;
  * PartyIdentificationAndAccount126.mmContactPerson}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ContactPersonRole#mmRole
- * ContactPersonRole.mmRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ContactPersonRole#mmMeeting
- * ContactPersonRole.mmMeeting}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ContactPersonRole#mmPerson
- * ContactPersonRole.mmPerson}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -157,11 +157,6 @@ public class ContactPersonRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ContactPersonRole
-	 * ContactPersonRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -170,6 +165,11 @@ public class ContactPersonRole extends Role {
 	 * ContactIdentification1.mmRole}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ContactPersonRole
+	 * ContactPersonRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -304,6 +304,11 @@ public class ContactPersonRole extends Role {
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ContactPersonRole.mmRole, com.tools20022.repository.entity.ContactPersonRole.mmMeeting, com.tools20022.repository.entity.ContactPersonRole.mmPerson);
 				derivationComponent_lazy = () -> Arrays.asList(ContactIdentification2.mmObject(), ContactIdentification1.mmObject(), ContactIdentification4.mmObject(), ContactPerson1.mmObject(), ContactIdentification3.mmObject(),
 						BankContactPerson1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ContactPersonRole.class;
 			}
 		});
 		return mmObject_lazy.get();

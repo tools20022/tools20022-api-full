@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the value expressed as a rate and an amount.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * RateTypeAndAmountAndStatus11}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RateTypeAndAmountAndStatus26", propOrder = {"rateType", "amount", "rateStatus"})
 public class RateTypeAndAmountAndStatus26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -250,6 +256,7 @@ public class RateTypeAndAmountAndStatus26 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RateTp", required = true)
 	public RateType36Choice getRateType() {
 		return rateType;
 	}
@@ -258,6 +265,7 @@ public class RateTypeAndAmountAndStatus26 {
 		this.rateType = rateType;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -266,6 +274,7 @@ public class RateTypeAndAmountAndStatus26 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "RateSts")
 	public RateStatus3Choice getRateStatus() {
 		return rateStatus;
 	}

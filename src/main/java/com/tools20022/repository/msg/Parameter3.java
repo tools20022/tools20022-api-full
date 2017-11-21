@@ -24,6 +24,10 @@ import com.tools20022.repository.codeset.Algorithm5Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters associated to a mask generator cryptographic function.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Parameter1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Parameter3", propOrder = "digestAlgorithm")
 public class Parameter3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -132,6 +138,7 @@ public class Parameter3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DgstAlgo")
 	public Algorithm5Code getDigestAlgorithm() {
 		return digestAlgorithm;
 	}

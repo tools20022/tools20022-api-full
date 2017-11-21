@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the instruction processing status.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of format for the instruction processing status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructionProcessingStatus27Choice", propOrder = {"pendingProcessing", "cancellationRequested", "acknowledgedAccepted", "cancelled", "generated", "repair", "pendingCancellation", "modificationRequested"})
 public class InstructionProcessingStatus27Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -496,6 +502,7 @@ public class InstructionProcessingStatus27Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PdgPrcg", required = true)
 	public PendingProcessingStatus15Choice getPendingProcessing() {
 		return pendingProcessing;
 	}
@@ -504,6 +511,7 @@ public class InstructionProcessingStatus27Choice {
 		this.pendingProcessing = pendingProcessing;
 	}
 
+	@XmlElement(name = "CxlReqd", required = true)
 	public ProprietaryReason5 getCancellationRequested() {
 		return cancellationRequested;
 	}
@@ -512,6 +520,7 @@ public class InstructionProcessingStatus27Choice {
 		this.cancellationRequested = cancellationRequested;
 	}
 
+	@XmlElement(name = "AckdAccptd", required = true)
 	public AcknowledgedAcceptedStatus25Choice getAcknowledgedAccepted() {
 		return acknowledgedAccepted;
 	}
@@ -520,6 +529,7 @@ public class InstructionProcessingStatus27Choice {
 		this.acknowledgedAccepted = acknowledgedAccepted;
 	}
 
+	@XmlElement(name = "Canc", required = true)
 	public CancellationStatus17Choice getCancelled() {
 		return cancelled;
 	}
@@ -528,6 +538,7 @@ public class InstructionProcessingStatus27Choice {
 		this.cancelled = cancelled;
 	}
 
+	@XmlElement(name = "Gnrtd", required = true)
 	public GeneratedStatus8Choice getGenerated() {
 		return generated;
 	}
@@ -536,6 +547,7 @@ public class InstructionProcessingStatus27Choice {
 		this.generated = generated;
 	}
 
+	@XmlElement(name = "Rpr", required = true)
 	public RepairStatus16Choice getRepair() {
 		return repair;
 	}
@@ -544,6 +556,7 @@ public class InstructionProcessingStatus27Choice {
 		this.repair = repair;
 	}
 
+	@XmlElement(name = "PdgCxl", required = true)
 	public PendingStatus46Choice getPendingCancellation() {
 		return pendingCancellation;
 	}
@@ -552,6 +565,7 @@ public class InstructionProcessingStatus27Choice {
 		this.pendingCancellation = pendingCancellation;
 	}
 
+	@XmlElement(name = "ModReqd", required = true)
 	public ProprietaryReason5 getModificationRequested() {
 		return modificationRequested;
 	}

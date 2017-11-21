@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Profile of the customer selected by an ATM.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMCustomerProfile1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCustomerProfile2", propOrder = {"profileReference", "customerIdentification"})
 public class ATMCustomerProfile2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -199,6 +205,7 @@ public class ATMCustomerProfile2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrflRef")
 	public Max35Text getProfileReference() {
 		return profileReference;
 	}
@@ -207,6 +214,7 @@ public class ATMCustomerProfile2 {
 		this.profileReference = profileReference;
 	}
 
+	@XmlElement(name = "CstmrId")
 	public Max35Text getCustomerIdentification() {
 		return customerIdentification;
 	}

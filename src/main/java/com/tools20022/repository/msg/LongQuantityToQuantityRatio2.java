@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.QuantityRatio;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Ratio expressed as a quotient of quantities.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Ratio expressed as a quotient of quantities."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LongQuantityToQuantityRatio2", propOrder = {"longQuantity1", "longQuantity2"})
 public class LongQuantityToQuantityRatio2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class LongQuantityToQuantityRatio2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LngQty1", required = true)
 	public LongDecimalNumber getLongQuantity1() {
 		return longQuantity1;
 	}
@@ -184,6 +191,7 @@ public class LongQuantityToQuantityRatio2 {
 		this.longQuantity1 = longQuantity1;
 	}
 
+	@XmlElement(name = "LngQty2", required = true)
 	public LongDecimalNumber getLongQuantity2() {
 		return longQuantity2;
 	}

@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifiers of account and account owner.
@@ -56,6 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifiers of account and account owner."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountOwnerAndIdentification1", propOrder = {"account", "accountOwner"})
 public class AccountOwnerAndIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -156,6 +162,7 @@ public class AccountOwnerAndIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CashAccount24 getAccount() {
 		return account;
 	}
@@ -164,6 +171,7 @@ public class AccountOwnerAndIdentification1 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "AcctOwnr", required = true)
 	public FinancialInstitutionIdentification9 getAccountOwner() {
 		return accountOwner;
 	}

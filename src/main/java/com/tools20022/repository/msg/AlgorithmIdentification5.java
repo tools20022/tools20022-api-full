@@ -24,6 +24,10 @@ import com.tools20022.repository.codeset.Algorithm5Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cryptographic algorithm and parameters for digests.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AlgorithmIdentification4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AlgorithmIdentification5", propOrder = "algorithm")
 public class AlgorithmIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -137,6 +143,7 @@ public class AlgorithmIdentification5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Algo", required = true)
 	public Algorithm5Code getAlgorithm() {
 		return algorithm;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Environment of the transaction.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentEnvironment20}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentEnvironment30", propOrder = {"acquirerIdentification", "merchantIdentification", "POI", "card", "cardholderLanguage"})
 public class CardPaymentEnvironment30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -395,6 +401,7 @@ public class CardPaymentEnvironment30 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcqrrId")
 	public GenericIdentification32 getAcquirerIdentification() {
 		return acquirerIdentification;
 	}
@@ -403,6 +410,7 @@ public class CardPaymentEnvironment30 {
 		this.acquirerIdentification = acquirerIdentification;
 	}
 
+	@XmlElement(name = "MrchntId")
 	public GenericIdentification32 getMerchantIdentification() {
 		return merchantIdentification;
 	}
@@ -411,6 +419,7 @@ public class CardPaymentEnvironment30 {
 		this.merchantIdentification = merchantIdentification;
 	}
 
+	@XmlElement(name = "POI", required = true)
 	public PointOfInteraction3 getPOI() {
 		return pOI;
 	}
@@ -419,6 +428,7 @@ public class CardPaymentEnvironment30 {
 		this.pOI = pOI;
 	}
 
+	@XmlElement(name = "Card", required = true)
 	public PaymentCard7 getCard() {
 		return card;
 	}
@@ -427,6 +437,7 @@ public class CardPaymentEnvironment30 {
 		this.card = card;
 	}
 
+	@XmlElement(name = "CrdhldrLang")
 	public ISO2ALanguageCode getCardholderLanguage() {
 		return cardholderLanguage;
 	}

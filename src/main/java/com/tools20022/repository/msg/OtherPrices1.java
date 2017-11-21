@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the type of price and information about the price.
@@ -108,6 +112,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherPrices1", propOrder = {"maximum", "transaction", "marketBrokerCommission", "markedUp", "markedDown", "netDisclosed", "netUndisclosed", "notionalGross", "benchmarkWeightedAverage", "allMarketsWeightedAverage",
+		"benchmark", "otherPrice", "indexPrice", "reportedPrice", "referencePrice"})
 public class OtherPrices1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -944,6 +951,7 @@ public class OtherPrices1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Max")
 	public Price4 getMaximum() {
 		return maximum;
 	}
@@ -952,6 +960,7 @@ public class OtherPrices1 {
 		this.maximum = maximum;
 	}
 
+	@XmlElement(name = "Tx")
 	public Price4 getTransaction() {
 		return transaction;
 	}
@@ -960,6 +969,7 @@ public class OtherPrices1 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "MktBrkrComssn")
 	public Price4 getMarketBrokerCommission() {
 		return marketBrokerCommission;
 	}
@@ -968,6 +978,7 @@ public class OtherPrices1 {
 		this.marketBrokerCommission = marketBrokerCommission;
 	}
 
+	@XmlElement(name = "MrkdUp")
 	public Price4 getMarkedUp() {
 		return markedUp;
 	}
@@ -976,6 +987,7 @@ public class OtherPrices1 {
 		this.markedUp = markedUp;
 	}
 
+	@XmlElement(name = "MrkdDwn")
 	public Price4 getMarkedDown() {
 		return markedDown;
 	}
@@ -984,6 +996,7 @@ public class OtherPrices1 {
 		this.markedDown = markedDown;
 	}
 
+	@XmlElement(name = "NetDscld")
 	public Price4 getNetDisclosed() {
 		return netDisclosed;
 	}
@@ -992,6 +1005,7 @@ public class OtherPrices1 {
 		this.netDisclosed = netDisclosed;
 	}
 
+	@XmlElement(name = "NetUdscld")
 	public Price4 getNetUndisclosed() {
 		return netUndisclosed;
 	}
@@ -1000,6 +1014,7 @@ public class OtherPrices1 {
 		this.netUndisclosed = netUndisclosed;
 	}
 
+	@XmlElement(name = "NtnlGrss")
 	public Price4 getNotionalGross() {
 		return notionalGross;
 	}
@@ -1008,6 +1023,7 @@ public class OtherPrices1 {
 		this.notionalGross = notionalGross;
 	}
 
+	@XmlElement(name = "BchmkWghtdAvrg")
 	public Price4 getBenchmarkWeightedAverage() {
 		return benchmarkWeightedAverage;
 	}
@@ -1016,6 +1032,7 @@ public class OtherPrices1 {
 		this.benchmarkWeightedAverage = benchmarkWeightedAverage;
 	}
 
+	@XmlElement(name = "AllMktsWghtdAvrg")
 	public Price4 getAllMarketsWeightedAverage() {
 		return allMarketsWeightedAverage;
 	}
@@ -1024,6 +1041,7 @@ public class OtherPrices1 {
 		this.allMarketsWeightedAverage = allMarketsWeightedAverage;
 	}
 
+	@XmlElement(name = "Bchmk")
 	public Price4 getBenchmark() {
 		return benchmark;
 	}
@@ -1032,6 +1050,7 @@ public class OtherPrices1 {
 		this.benchmark = benchmark;
 	}
 
+	@XmlElement(name = "OthrPric")
 	public Price4 getOtherPrice() {
 		return otherPrice;
 	}
@@ -1040,6 +1059,7 @@ public class OtherPrices1 {
 		this.otherPrice = otherPrice;
 	}
 
+	@XmlElement(name = "IndxPric")
 	public Price4 getIndexPrice() {
 		return indexPrice;
 	}
@@ -1048,6 +1068,7 @@ public class OtherPrices1 {
 		this.indexPrice = indexPrice;
 	}
 
+	@XmlElement(name = "RptdPric")
 	public Price4 getReportedPrice() {
 		return reportedPrice;
 	}
@@ -1056,6 +1077,7 @@ public class OtherPrices1 {
 		this.reportedPrice = reportedPrice;
 	}
 
+	@XmlElement(name = "RefPric")
 	public PriceInformation9 getReferencePrice() {
 		return referencePrice;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Device used by the customer to perform the payment.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Device used by the customer to perform the payment."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustomerDevice1", propOrder = {"identification", "type", "provider"})
 public class CustomerDevice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -198,6 +204,7 @@ public class CustomerDevice1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -206,6 +213,7 @@ public class CustomerDevice1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp")
 	public Max35Text getType() {
 		return type;
 	}
@@ -214,6 +222,7 @@ public class CustomerDevice1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Prvdr")
 	public Max35Text getProvider() {
 		return provider;
 	}

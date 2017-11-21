@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MeetingNotice1;
 import com.tools20022.repository.msg.MeetingNotice2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,15 +36,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Meeting#mmResolutionProposalConditions
- * Meeting.mmResolutionProposalConditions}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -56,6 +48,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.ResolutionProposal#mmMeeting
  * ResolutionProposal.mmMeeting}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Meeting#mmResolutionProposalConditions
+ * Meeting.mmResolutionProposalConditions}</li>
  * </ul>
  * </li>
  * <li>
@@ -87,11 +88,6 @@ public class ResolutionProposal {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ResolutionProposal
-	 * ResolutionProposal}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -103,6 +99,11 @@ public class ResolutionProposal {
 	 * MeetingNotice2.mmResolutionProposalThreshold}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ResolutionProposal
+	 * ResolutionProposal}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -119,7 +120,7 @@ public class ResolutionProposal {
 	public static final MMBusinessAttribute mmResolutionProposalThreshold = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(MeetingNotice1.mmResolutionProposalThreshold, MeetingNotice2.mmResolutionProposalThreshold);
-			elementContext_lazy = () -> ResolutionProposal.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ResolutionProposal.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResolutionProposalThreshold";
@@ -127,6 +128,14 @@ public class ResolutionProposal {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ResolutionProposal.class.getMethod("getResolutionProposalThreshold", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate resolutionProposalThresholdPercentage;
@@ -142,11 +151,6 @@ public class ResolutionProposal {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ResolutionProposal
-	 * ResolutionProposal}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -158,6 +162,11 @@ public class ResolutionProposal {
 	 * MeetingNotice2.mmResolutionProposalThresholdPercentage}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ResolutionProposal
+	 * ResolutionProposal}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -174,7 +183,7 @@ public class ResolutionProposal {
 	public static final MMBusinessAttribute mmResolutionProposalThresholdPercentage = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(MeetingNotice1.mmResolutionProposalThresholdPercentage, MeetingNotice2.mmResolutionProposalThresholdPercentage);
-			elementContext_lazy = () -> ResolutionProposal.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ResolutionProposal.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResolutionProposalThresholdPercentage";
@@ -182,6 +191,14 @@ public class ResolutionProposal {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ResolutionProposal.class.getMethod("getResolutionProposalThresholdPercentage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Meeting meeting;
@@ -220,7 +237,7 @@ public class ResolutionProposal {
 	 */
 	public static final MMBusinessAssociationEnd mmMeeting = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ResolutionProposal.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ResolutionProposal.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Meeting";
@@ -241,7 +258,13 @@ public class ResolutionProposal {
 				name = "ResolutionProposal";
 				definition = "Conditions that must be met to propose a resolution.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Meeting.mmResolutionProposalConditions);
-				element_lazy = () -> Arrays.asList(ResolutionProposal.mmResolutionProposalThreshold, ResolutionProposal.mmResolutionProposalThresholdPercentage, ResolutionProposal.mmMeeting);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ResolutionProposal.mmResolutionProposalThreshold, com.tools20022.repository.entity.ResolutionProposal.mmResolutionProposalThresholdPercentage,
+						com.tools20022.repository.entity.ResolutionProposal.mmMeeting);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ResolutionProposal.class;
 			}
 		});
 		return mmObject_lazy.get();

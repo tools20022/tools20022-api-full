@@ -29,9 +29,11 @@ import com.tools20022.repository.msg.SubstitutionResponse1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CollateralManagementISOLatestversion;
 import com.tools20022.repository.msgset.CollateralManagementMaintenance20162017;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -54,9 +56,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code colr.011.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CollateralManagementLatestVersion
@@ -98,6 +97,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code colr.011.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -113,6 +115,8 @@ import java.util.List;
  * CollateralSubstitutionResponseV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralSubstitutionResponseV04", propOrder = {"transactionIdentification", "obligation", "agreement", "substitutionResponse", "supplementaryData"})
 public class CollateralSubstitutionResponseV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +162,14 @@ public class CollateralSubstitutionResponseV04 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralSubstitutionResponseV04.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Obligation4 obligation;
 	/**
@@ -202,6 +214,14 @@ public class CollateralSubstitutionResponseV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> Obligation4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralSubstitutionResponseV04.class.getMethod("getObligation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Agreement4 agreement;
 	/**
@@ -241,6 +261,14 @@ public class CollateralSubstitutionResponseV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Agreement4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralSubstitutionResponseV04.class.getMethod("getAgreement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SubstitutionResponse1 substitutionResponse;
@@ -283,6 +311,14 @@ public class CollateralSubstitutionResponseV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SubstitutionResponse1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralSubstitutionResponseV04.class.getMethod("getSubstitutionResponse", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -327,6 +363,14 @@ public class CollateralSubstitutionResponseV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralSubstitutionResponseV04.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -340,8 +384,9 @@ public class CollateralSubstitutionResponseV04 {
 				rootElement = "Document";
 				xmlTag = "CollSbstitnRspn";
 				businessArea_lazy = () -> CollateralManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralSubstitutionResponseV04.mmTransactionIdentification, CollateralSubstitutionResponseV04.mmObligation, CollateralSubstitutionResponseV04.mmAgreement,
-						CollateralSubstitutionResponseV04.mmSubstitutionResponse, CollateralSubstitutionResponseV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralSubstitutionResponseV04.mmTransactionIdentification,
+						com.tools20022.repository.area.colr.CollateralSubstitutionResponseV04.mmObligation, com.tools20022.repository.area.colr.CollateralSubstitutionResponseV04.mmAgreement,
+						com.tools20022.repository.area.colr.CollateralSubstitutionResponseV04.mmSubstitutionResponse, com.tools20022.repository.area.colr.CollateralSubstitutionResponseV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "colr";
@@ -351,10 +396,16 @@ public class CollateralSubstitutionResponseV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CollateralSubstitutionResponseV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -363,6 +414,7 @@ public class CollateralSubstitutionResponseV04 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "Oblgtn", required = true)
 	public Obligation4 getObligation() {
 		return obligation;
 	}
@@ -371,6 +423,7 @@ public class CollateralSubstitutionResponseV04 {
 		this.obligation = obligation;
 	}
 
+	@XmlElement(name = "Agrmt")
 	public Agreement4 getAgreement() {
 		return agreement;
 	}
@@ -379,6 +432,7 @@ public class CollateralSubstitutionResponseV04 {
 		this.agreement = agreement;
 	}
 
+	@XmlElement(name = "SbstitnRspn", required = true)
 	public SubstitutionResponse1 getSubstitutionResponse() {
 		return substitutionResponse;
 	}
@@ -387,11 +441,18 @@ public class CollateralSubstitutionResponseV04 {
 		this.substitutionResponse = substitutionResponse;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:colr.011.04.04")
+	static public class Document {
+		@XmlElement(name = "CollSbstitnRspn", required = true)
+		public CollateralSubstitutionResponseV04 messageBody;
 	}
 }

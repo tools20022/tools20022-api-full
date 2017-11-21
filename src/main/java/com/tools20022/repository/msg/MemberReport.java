@@ -26,6 +26,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports either on a member or a business error.
@@ -72,6 +76,8 @@ import java.util.function.Supplier;
  * definition} = "Reports either on a member or a business error."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MemberReport", propOrder = {"memberIdentification", "businessError", "memberInformation"})
 public class MemberReport {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -275,6 +281,7 @@ public class MemberReport {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MmbId", required = true)
 	public MemberIdentificationChoice getMemberIdentification() {
 		return memberIdentification;
 	}
@@ -283,6 +290,7 @@ public class MemberReport {
 		this.memberIdentification = memberIdentification;
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public ErrorHandling2 getBusinessError() {
 		return businessError;
 	}
@@ -291,6 +299,7 @@ public class MemberReport {
 		this.businessError = businessError;
 	}
 
+	@XmlElement(name = "MmbInf", required = true)
 	public MemberDetails getMemberInformation() {
 		return memberInformation;
 	}

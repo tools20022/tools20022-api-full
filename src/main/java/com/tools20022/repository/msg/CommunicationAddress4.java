@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.ElectronicAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Communication device number or electronic address used for communication.
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Communication device number or electronic address used for communication."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CommunicationAddress4", propOrder = {"emailAddress", "URLAddress"})
 public class CommunicationAddress4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -202,6 +208,7 @@ public class CommunicationAddress4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EmailAdr")
 	public Max256Text getEmailAddress() {
 		return emailAddress;
 	}
@@ -210,6 +217,7 @@ public class CommunicationAddress4 {
 		this.emailAddress = emailAddress;
 	}
 
+	@XmlElement(name = "URLAdr")
 	public Max256Text getURLAddress() {
 		return uRLAddress;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.VotingCondition;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * List of the different methods that can be used to vote.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "List of the different methods that can be used to vote."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "VoteMethods", propOrder = {"voteThroughNetwork", "voteByMail", "electronicVote", "voteByTelephone"})
 public class VoteMethods {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -277,6 +283,7 @@ public class VoteMethods {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "VoteThrghNtwk")
 	public AnyBICIdentifier getVoteThroughNetwork() {
 		return voteThroughNetwork;
 	}
@@ -285,6 +292,7 @@ public class VoteMethods {
 		this.voteThroughNetwork = voteThroughNetwork;
 	}
 
+	@XmlElement(name = "VoteByMail")
 	public PostalAddress1 getVoteByMail() {
 		return voteByMail;
 	}
@@ -293,6 +301,7 @@ public class VoteMethods {
 		this.voteByMail = voteByMail;
 	}
 
+	@XmlElement(name = "ElctrncVote")
 	public CommunicationAddress4 getElectronicVote() {
 		return electronicVote;
 	}
@@ -301,6 +310,7 @@ public class VoteMethods {
 		this.electronicVote = electronicVote;
 	}
 
+	@XmlElement(name = "VoteByTel")
 	public Max35Text getVoteByTelephone() {
 		return voteByTelephone;
 	}

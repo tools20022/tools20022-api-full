@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Intention to transfer an ownership of a financial instrument.
@@ -176,6 +180,12 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Order16", propOrder = {"businessProcessType", "orderIdentification", "clientOrderIdentification", "secondaryClientOrderIdentification", "listIdentification", "financialInstrumentIdentification", "side", "payment",
+		"tradeTransactionType", "tradeTransactionCondition", "preAdvice", "placeOfTrade", "orderBookingDate", "tradeOriginationDate", "tradeDate", "processingDate", "settlementDate", "NAVDate", "partialFillDetails", "confirmationQuantity",
+		"quantityBreakdown", "grossTradeAmount", "dealPrice", "typeOfPrice", "cashMargin", "commission", "numberOfDaysAccrued", "giveUpNumberOfDays", "interestType", "accruedInterestPercentage", "tradeRegulatoryConditionsType",
+		"currencyToBuyOrSell", "orderOriginatorEligibility", "positionEffect", "derivativeCovered", "chargeTaxBasisType", "capitalGainType", "matchStatus", "callInType", "yieldType", "reporting", "additionalPhysicalOrRegistrationDetails",
+		"additionalTradeInstructionProcessingInformation", "accruedInterestAmount"})
 public class Order16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -2690,6 +2700,7 @@ public class Order16 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BizPrcTp")
 	public BusinessProcessType1Choice getBusinessProcessType() {
 		return businessProcessType;
 	}
@@ -2698,6 +2709,7 @@ public class Order16 {
 		this.businessProcessType = businessProcessType;
 	}
 
+	@XmlElement(name = "OrdrId")
 	public List<Max35Text> getOrderIdentification() {
 		return orderIdentification;
 	}
@@ -2706,6 +2718,7 @@ public class Order16 {
 		this.orderIdentification = orderIdentification;
 	}
 
+	@XmlElement(name = "ClntOrdrId")
 	public List<Max35Text> getClientOrderIdentification() {
 		return clientOrderIdentification;
 	}
@@ -2714,6 +2727,7 @@ public class Order16 {
 		this.clientOrderIdentification = clientOrderIdentification;
 	}
 
+	@XmlElement(name = "ScndryClntOrdrId")
 	public List<Max35Text> getSecondaryClientOrderIdentification() {
 		return secondaryClientOrderIdentification;
 	}
@@ -2722,6 +2736,7 @@ public class Order16 {
 		this.secondaryClientOrderIdentification = secondaryClientOrderIdentification;
 	}
 
+	@XmlElement(name = "ListId")
 	public List<Max35Text> getListIdentification() {
 		return listIdentification;
 	}
@@ -2730,6 +2745,7 @@ public class Order16 {
 		this.listIdentification = listIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -2738,6 +2754,7 @@ public class Order16 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "Sd", required = true)
 	public Side3Code getSide() {
 		return side;
 	}
@@ -2746,6 +2763,7 @@ public class Order16 {
 		this.side = side;
 	}
 
+	@XmlElement(name = "Pmt")
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
@@ -2754,6 +2772,7 @@ public class Order16 {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "TradTxTp")
 	public TradeType3Choice getTradeTransactionType() {
 		return tradeTransactionType;
 	}
@@ -2762,6 +2781,7 @@ public class Order16 {
 		this.tradeTransactionType = tradeTransactionType;
 	}
 
+	@XmlElement(name = "TradTxCond")
 	public List<TradeTransactionCondition4Choice> getTradeTransactionCondition() {
 		return tradeTransactionCondition;
 	}
@@ -2770,6 +2790,7 @@ public class Order16 {
 		this.tradeTransactionCondition = tradeTransactionCondition;
 	}
 
+	@XmlElement(name = "PreAdvc")
 	public YesNoIndicator getPreAdvice() {
 		return preAdvice;
 	}
@@ -2778,6 +2799,7 @@ public class Order16 {
 		this.preAdvice = preAdvice;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public MarketIdentification77 getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -2786,6 +2808,7 @@ public class Order16 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "OrdrBookgDt")
 	public ISODate getOrderBookingDate() {
 		return orderBookingDate;
 	}
@@ -2794,6 +2817,7 @@ public class Order16 {
 		this.orderBookingDate = orderBookingDate;
 	}
 
+	@XmlElement(name = "TradOrgtnDt")
 	public ISODateTime getTradeOriginationDate() {
 		return tradeOriginationDate;
 	}
@@ -2802,6 +2826,7 @@ public class Order16 {
 		this.tradeOriginationDate = tradeOriginationDate;
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public TradeDate4Choice getTradeDate() {
 		return tradeDate;
 	}
@@ -2810,6 +2835,7 @@ public class Order16 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "PrcgDt")
 	public TradeDate4Choice getProcessingDate() {
 		return processingDate;
 	}
@@ -2818,6 +2844,7 @@ public class Order16 {
 		this.processingDate = processingDate;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public SettlementDate8Choice getSettlementDate() {
 		return settlementDate;
 	}
@@ -2826,6 +2853,7 @@ public class Order16 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "NAVDt")
 	public DateAndDateTime1Choice getNAVDate() {
 		return nAVDate;
 	}
@@ -2834,6 +2862,7 @@ public class Order16 {
 		this.nAVDate = nAVDate;
 	}
 
+	@XmlElement(name = "PrtlFillDtls")
 	public List<PartialFill1> getPartialFillDetails() {
 		return partialFillDetails;
 	}
@@ -2842,6 +2871,7 @@ public class Order16 {
 		this.partialFillDetails = partialFillDetails;
 	}
 
+	@XmlElement(name = "ConfQty", required = true)
 	public Quantity6Choice getConfirmationQuantity() {
 		return confirmationQuantity;
 	}
@@ -2850,6 +2880,7 @@ public class Order16 {
 		this.confirmationQuantity = confirmationQuantity;
 	}
 
+	@XmlElement(name = "QtyBrkdwn")
 	public List<QuantityBreakdown11> getQuantityBreakdown() {
 		return quantityBreakdown;
 	}
@@ -2858,6 +2889,7 @@ public class Order16 {
 		this.quantityBreakdown = quantityBreakdown;
 	}
 
+	@XmlElement(name = "GrssTradAmt")
 	public AmountAndDirection29 getGrossTradeAmount() {
 		return grossTradeAmount;
 	}
@@ -2866,6 +2898,7 @@ public class Order16 {
 		this.grossTradeAmount = grossTradeAmount;
 	}
 
+	@XmlElement(name = "DealPric", required = true)
 	public Price4 getDealPrice() {
 		return dealPrice;
 	}
@@ -2874,6 +2907,7 @@ public class Order16 {
 		this.dealPrice = dealPrice;
 	}
 
+	@XmlElement(name = "TpOfPric")
 	public TypeOfPrice10Choice getTypeOfPrice() {
 		return typeOfPrice;
 	}
@@ -2882,6 +2916,7 @@ public class Order16 {
 		this.typeOfPrice = typeOfPrice;
 	}
 
+	@XmlElement(name = "CshMrgn")
 	public CashMarginOrder1Code getCashMargin() {
 		return cashMargin;
 	}
@@ -2890,6 +2925,7 @@ public class Order16 {
 		this.cashMargin = cashMargin;
 	}
 
+	@XmlElement(name = "Comssn")
 	public Commission16 getCommission() {
 		return commission;
 	}
@@ -2898,6 +2934,7 @@ public class Order16 {
 		this.commission = commission;
 	}
 
+	@XmlElement(name = "NbOfDaysAcrd")
 	public Max3Number getNumberOfDaysAccrued() {
 		return numberOfDaysAccrued;
 	}
@@ -2906,6 +2943,7 @@ public class Order16 {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
 	}
 
+	@XmlElement(name = "GvUpNbOfDays")
 	public Max3Number getGiveUpNumberOfDays() {
 		return giveUpNumberOfDays;
 	}
@@ -2914,6 +2952,7 @@ public class Order16 {
 		this.giveUpNumberOfDays = giveUpNumberOfDays;
 	}
 
+	@XmlElement(name = "IntrstTp")
 	public InterestType2Code getInterestType() {
 		return interestType;
 	}
@@ -2922,6 +2961,7 @@ public class Order16 {
 		this.interestType = interestType;
 	}
 
+	@XmlElement(name = "AcrdIntrstPctg")
 	public PercentageRate getAccruedInterestPercentage() {
 		return accruedInterestPercentage;
 	}
@@ -2930,6 +2970,7 @@ public class Order16 {
 		this.accruedInterestPercentage = accruedInterestPercentage;
 	}
 
+	@XmlElement(name = "TradRgltryCondsTp")
 	public TradeRegulatoryConditions1Code getTradeRegulatoryConditionsType() {
 		return tradeRegulatoryConditionsType;
 	}
@@ -2938,6 +2979,7 @@ public class Order16 {
 		this.tradeRegulatoryConditionsType = tradeRegulatoryConditionsType;
 	}
 
+	@XmlElement(name = "CcyToBuyOrSell")
 	public CurrencyToBuyOrSell1Choice getCurrencyToBuyOrSell() {
 		return currencyToBuyOrSell;
 	}
@@ -2946,6 +2988,7 @@ public class Order16 {
 		this.currencyToBuyOrSell = currencyToBuyOrSell;
 	}
 
+	@XmlElement(name = "OrdrOrgtrElgblty")
 	public Eligibility1Code getOrderOriginatorEligibility() {
 		return orderOriginatorEligibility;
 	}
@@ -2954,6 +2997,7 @@ public class Order16 {
 		this.orderOriginatorEligibility = orderOriginatorEligibility;
 	}
 
+	@XmlElement(name = "PosFct")
 	public PositionEffect2Code getPositionEffect() {
 		return positionEffect;
 	}
@@ -2962,6 +3006,7 @@ public class Order16 {
 		this.positionEffect = positionEffect;
 	}
 
+	@XmlElement(name = "DerivCvrd")
 	public YesNoIndicator getDerivativeCovered() {
 		return derivativeCovered;
 	}
@@ -2970,6 +3015,7 @@ public class Order16 {
 		this.derivativeCovered = derivativeCovered;
 	}
 
+	@XmlElement(name = "ChrgTaxBsisTp")
 	public ChargeTaxBasisType1Choice getChargeTaxBasisType() {
 		return chargeTaxBasisType;
 	}
@@ -2978,6 +3024,7 @@ public class Order16 {
 		this.chargeTaxBasisType = chargeTaxBasisType;
 	}
 
+	@XmlElement(name = "CptlGnTp")
 	public EUCapitalGainType2Choice getCapitalGainType() {
 		return capitalGainType;
 	}
@@ -2986,6 +3033,7 @@ public class Order16 {
 		this.capitalGainType = capitalGainType;
 	}
 
+	@XmlElement(name = "MtchSts")
 	public MatchingStatus8Choice getMatchStatus() {
 		return matchStatus;
 	}
@@ -2994,6 +3042,7 @@ public class Order16 {
 		this.matchStatus = matchStatus;
 	}
 
+	@XmlElement(name = "CallInTp")
 	public CallIn1Code getCallInType() {
 		return callInType;
 	}
@@ -3002,6 +3051,7 @@ public class Order16 {
 		this.callInType = callInType;
 	}
 
+	@XmlElement(name = "YldTp")
 	public YieldCalculation2 getYieldType() {
 		return yieldType;
 	}
@@ -3010,6 +3060,7 @@ public class Order16 {
 		this.yieldType = yieldType;
 	}
 
+	@XmlElement(name = "Rptg")
 	public List<Reporting5Choice> getReporting() {
 		return reporting;
 	}
@@ -3018,6 +3069,7 @@ public class Order16 {
 		this.reporting = reporting;
 	}
 
+	@XmlElement(name = "AddtlPhysOrRegnDtls")
 	public RegistrationParameters3 getAdditionalPhysicalOrRegistrationDetails() {
 		return additionalPhysicalOrRegistrationDetails;
 	}
@@ -3026,6 +3078,7 @@ public class Order16 {
 		this.additionalPhysicalOrRegistrationDetails = additionalPhysicalOrRegistrationDetails;
 	}
 
+	@XmlElement(name = "AddtlTradInstrPrcgInf")
 	public Max350Text getAdditionalTradeInstructionProcessingInformation() {
 		return additionalTradeInstructionProcessingInformation;
 	}
@@ -3034,6 +3087,7 @@ public class Order16 {
 		this.additionalTradeInstructionProcessingInformation = additionalTradeInstructionProcessingInformation;
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt")
 	public AmountAndDirection29 getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}

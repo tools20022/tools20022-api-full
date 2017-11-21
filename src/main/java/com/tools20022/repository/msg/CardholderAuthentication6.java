@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Authentication;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data related to the authentication of the cardholder.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardholderAuthentication5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardholderAuthentication6", propOrder = {"authenticationMethod", "authenticationValue", "protectedAuthenticationValue", "cardholderOnLinePIN", "addressVerification"})
 public class CardholderAuthentication6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -397,6 +403,7 @@ public class CardholderAuthentication6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AuthntcnMtd", required = true)
 	public AuthenticationMethod3Code getAuthenticationMethod() {
 		return authenticationMethod;
 	}
@@ -405,6 +412,7 @@ public class CardholderAuthentication6 {
 		this.authenticationMethod = authenticationMethod;
 	}
 
+	@XmlElement(name = "AuthntcnVal")
 	public Max5000Binary getAuthenticationValue() {
 		return authenticationValue;
 	}
@@ -413,6 +421,7 @@ public class CardholderAuthentication6 {
 		this.authenticationValue = authenticationValue;
 	}
 
+	@XmlElement(name = "PrtctdAuthntcnVal")
 	public ContentInformationType10 getProtectedAuthenticationValue() {
 		return protectedAuthenticationValue;
 	}
@@ -421,6 +430,7 @@ public class CardholderAuthentication6 {
 		this.protectedAuthenticationValue = protectedAuthenticationValue;
 	}
 
+	@XmlElement(name = "CrdhldrOnLinePIN")
 	public OnLinePIN4 getCardholderOnLinePIN() {
 		return cardholderOnLinePIN;
 	}
@@ -429,6 +439,7 @@ public class CardholderAuthentication6 {
 		this.cardholderOnLinePIN = cardholderOnLinePIN;
 	}
 
+	@XmlElement(name = "AdrVrfctn")
 	public AddressVerification1 getAddressVerification() {
 		return addressVerification;
 	}

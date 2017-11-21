@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Key encryption key (KEK), encrypted with a previously distributed asymmetric
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * KeyTransport1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "KeyTransport2", propOrder = {"version", "recipientIdentification", "keyEncryptionAlgorithm", "encryptedKey"})
 public class KeyTransport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -292,6 +298,7 @@ public class KeyTransport2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Vrsn", required = true)
 	public Number getVersion() {
 		return version;
 	}
@@ -300,6 +307,7 @@ public class KeyTransport2 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "RcptId", required = true)
 	public CertificateIdentifier1 getRecipientIdentification() {
 		return recipientIdentification;
 	}
@@ -308,6 +316,7 @@ public class KeyTransport2 {
 		this.recipientIdentification = recipientIdentification;
 	}
 
+	@XmlElement(name = "KeyNcrptnAlgo", required = true)
 	public AlgorithmIdentification7 getKeyEncryptionAlgorithm() {
 		return keyEncryptionAlgorithm;
 	}
@@ -316,6 +325,7 @@ public class KeyTransport2 {
 		this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
 	}
 
+	@XmlElement(name = "NcrptdKey", required = true)
 	public Max140Binary getEncryptedKey() {
 		return encryptedKey;
 	}

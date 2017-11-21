@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about identification of the party .
@@ -72,6 +76,8 @@ import java.util.List;
  * PartyIdentification102}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification120", propOrder = {"identification", "processingIdentification", "alternateIdentification"})
 public class PartyIdentification120 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -249,6 +255,7 @@ public class PartyIdentification120 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification58Choice getIdentification() {
 		return identification;
 	}
@@ -257,6 +264,7 @@ public class PartyIdentification120 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public RestrictedFINXMax16Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -265,6 +273,7 @@ public class PartyIdentification120 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public List<AlternatePartyIdentification9> getAlternateIdentification() {
 		return alternateIdentification;
 	}

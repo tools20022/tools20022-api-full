@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status report of an individual order of a bulk or multiple or switch order
@@ -88,6 +92,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * IndividualOrderStatusAndReason4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualOrderStatusAndReason8", propOrder = {"masterReference", "orderReference", "clientReference", "cancellationReference", "cancellationStatus", "statusInitiator", "investmentAccountDetails",
+		"financialInstrumentDetails"})
 public class IndividualOrderStatusAndReason8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -536,6 +543,7 @@ public class IndividualOrderStatusAndReason8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -544,6 +552,7 @@ public class IndividualOrderStatusAndReason8 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -552,6 +561,7 @@ public class IndividualOrderStatusAndReason8 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -560,6 +570,7 @@ public class IndividualOrderStatusAndReason8 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -568,6 +579,7 @@ public class IndividualOrderStatusAndReason8 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "CxlSts", required = true)
 	public CancellationStatus22Choice getCancellationStatus() {
 		return cancellationStatus;
 	}
@@ -576,6 +588,7 @@ public class IndividualOrderStatusAndReason8 {
 		this.cancellationStatus = cancellationStatus;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification113 getStatusInitiator() {
 		return statusInitiator;
 	}
@@ -584,6 +597,7 @@ public class IndividualOrderStatusAndReason8 {
 		this.statusInitiator = statusInitiator;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount58 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -592,6 +606,7 @@ public class IndividualOrderStatusAndReason8 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "FinInstrmDtls")
 	public FinancialInstrument57 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}

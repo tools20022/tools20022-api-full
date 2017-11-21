@@ -25,9 +25,11 @@ import com.tools20022.repository.area.ReferenceDataArchive;
 import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.PriceCorrection2;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -46,9 +48,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code reda.003.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ReferenceDataArchive
@@ -81,6 +80,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code reda.003.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -99,6 +101,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "reda.003.001.02", propOrder = {"poolReference", "previousReference", "priceCorrectionDetails"})
 public class PriceReportCorrectionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -136,6 +140,14 @@ public class PriceReportCorrectionV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCorrectionV02.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 previousReference;
 	/**
@@ -170,6 +182,14 @@ public class PriceReportCorrectionV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCorrectionV02.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<PriceCorrection2> priceCorrectionDetails;
@@ -208,6 +228,14 @@ public class PriceReportCorrectionV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> PriceCorrection2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCorrectionV02.class.getMethod("getPriceCorrectionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -222,7 +250,8 @@ public class PriceReportCorrectionV02 {
 				xmlTag = "reda.003.001.02";
 				businessArea_lazy = () -> ReferenceDataArchive.mmObject();
 				xmlName = "reda.003.001.02";
-				messageBuildingBlock_lazy = () -> Arrays.asList(PriceReportCorrectionV02.mmPoolReference, PriceReportCorrectionV02.mmPreviousReference, PriceReportCorrectionV02.mmPriceCorrectionDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCorrectionV02.mmPoolReference, com.tools20022.repository.area.reda.PriceReportCorrectionV02.mmPreviousReference,
+						com.tools20022.repository.area.reda.PriceReportCorrectionV02.mmPriceCorrectionDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "reda";
@@ -232,10 +261,16 @@ public class PriceReportCorrectionV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PriceReportCorrectionV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -244,6 +279,7 @@ public class PriceReportCorrectionV02 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -252,11 +288,18 @@ public class PriceReportCorrectionV02 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "PricCrrctnDtls", required = true)
 	public List<PriceCorrection2> getPriceCorrectionDetails() {
 		return priceCorrectionDetails;
 	}
 
 	public void setPriceCorrectionDetails(List<PriceCorrection2> priceCorrectionDetails) {
 		this.priceCorrectionDetails = priceCorrectionDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:reda.003.02.02")
+	static public class Document {
+		@XmlElement(name = "reda.003.001.02", required = true)
+		public PriceReportCorrectionV02 messageBody;
 	}
 }

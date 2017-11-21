@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the request.
@@ -56,6 +60,8 @@ import java.util.List;
  * definition} = "Provides details on the request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Receipt1", propOrder = {"originalMessageIdentification", "requestHandling"})
 public class Receipt1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -153,6 +159,7 @@ public class Receipt1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMsgId", required = true)
 	public OriginalMessageAndIssuer1 getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}
@@ -161,6 +168,7 @@ public class Receipt1 {
 		this.originalMessageIdentification = originalMessageIdentification;
 	}
 
+	@XmlElement(name = "ReqHdlg")
 	public List<RequestHandling> getRequestHandling() {
 		return requestHandling;
 	}

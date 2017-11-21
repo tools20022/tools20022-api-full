@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,6 +37,28 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#mmAcquisitionDate
+ * SecuritiesEntry.mmAcquisitionDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#mmFinancialInstrumentQuantity
+ * SecuritiesEntry.mmFinancialInstrumentQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#mmSecuritiesAccount
+ * SecuritiesEntry.mmSecuritiesAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#mmSecuritiesBalance
+ * SecuritiesEntry.mmSecuritiesBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#mmTriggeringSecuritiesTransfer
+ * SecuritiesEntry.mmTriggeringSecuritiesTransfer}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Entry Entry}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -60,28 +83,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesEntry
  * SecuritiesBalance.mmSecuritiesEntry}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Entry Entry}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#mmAcquisitionDate
- * SecuritiesEntry.mmAcquisitionDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#mmFinancialInstrumentQuantity
- * SecuritiesEntry.mmFinancialInstrumentQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#mmSecuritiesAccount
- * SecuritiesEntry.mmSecuritiesAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#mmSecuritiesBalance
- * SecuritiesEntry.mmSecuritiesBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#mmTriggeringSecuritiesTransfer
- * SecuritiesEntry.mmTriggeringSecuritiesTransfer}</li>
  * </ul>
  * </li>
  * <li>
@@ -114,11 +115,6 @@ public class SecuritiesEntry extends Entry {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesEntry
-	 * SecuritiesEntry}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -130,6 +126,11 @@ public class SecuritiesEntry extends Entry {
 	 * Unit6.mmAcquisitionDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesEntry
+	 * SecuritiesEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -145,7 +146,7 @@ public class SecuritiesEntry extends Entry {
 	public static final MMBusinessAttribute mmAcquisitionDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Unit1.mmAcquisitionDate, Unit3.mmAcquisitionDate, Unit6.mmAcquisitionDate);
-			elementContext_lazy = () -> SecuritiesEntry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AcquisitionDate";
@@ -153,6 +154,14 @@ public class SecuritiesEntry extends Entry {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesEntry.class.getMethod("getAcquisitionDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesQuantity financialInstrumentQuantity;
@@ -173,11 +182,6 @@ public class SecuritiesEntry extends Entry {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesEntry
-	 * SecuritiesEntry}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -205,6 +209,11 @@ public class SecuritiesEntry extends Entry {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesEntry
+	 * SecuritiesEntry}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -219,7 +228,7 @@ public class SecuritiesEntry extends Entry {
 		{
 			derivation_lazy = () -> Arrays.asList(EntryTransaction1.mmRelatedQuantities, EntryTransaction2.mmRelatedQuantities, EntryTransaction3.mmRelatedQuantities, EntryTransaction4.mmRelatedQuantities,
 					UnderlyingSecurityMovement1.mmSecuritiesQuantity, EntryTransaction7.mmRelatedQuantities, EntryTransaction8.mmRelatedQuantities);
-			elementContext_lazy = () -> SecuritiesEntry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialInstrumentQuantity";
@@ -250,11 +259,6 @@ public class SecuritiesEntry extends Entry {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesAccount
 	 * SecuritiesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesEntry
-	 * SecuritiesEntry}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -266,6 +270,11 @@ public class SecuritiesEntry extends Entry {
 	 * UnderlyingSecurityMovement1.mmAccountDetails}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesEntry
+	 * SecuritiesEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -282,7 +291,7 @@ public class SecuritiesEntry extends Entry {
 	public static final MMBusinessAssociationEnd mmSecuritiesAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CustodyStatementOfHoldings2.mmAccountDetails, UnderlyingSecurityMovement1.mmAccountDetails);
-			elementContext_lazy = () -> SecuritiesEntry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesAccount";
@@ -332,7 +341,7 @@ public class SecuritiesEntry extends Entry {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesBalance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesEntry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesBalance";
@@ -382,7 +391,7 @@ public class SecuritiesEntry extends Entry {
 	 */
 	public static final MMBusinessAssociationEnd mmTriggeringSecuritiesTransfer = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesEntry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TriggeringSecuritiesTransfer";
@@ -405,9 +414,15 @@ public class SecuritiesEntry extends Entry {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesEntry, com.tools20022.repository.entity.SecuritiesQuantity.mmEntry,
 						com.tools20022.repository.entity.SecuritiesTransfer.mmBookEntry, com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesEntry);
 				superType_lazy = () -> Entry.mmObject();
-				element_lazy = () -> Arrays.asList(SecuritiesEntry.mmAcquisitionDate, SecuritiesEntry.mmFinancialInstrumentQuantity, SecuritiesEntry.mmSecuritiesAccount, SecuritiesEntry.mmSecuritiesBalance,
-						SecuritiesEntry.mmTriggeringSecuritiesTransfer);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesEntry.mmAcquisitionDate, com.tools20022.repository.entity.SecuritiesEntry.mmFinancialInstrumentQuantity,
+						com.tools20022.repository.entity.SecuritiesEntry.mmSecuritiesAccount, com.tools20022.repository.entity.SecuritiesEntry.mmSecuritiesBalance,
+						com.tools20022.repository.entity.SecuritiesEntry.mmTriggeringSecuritiesTransfer);
 				derivationComponent_lazy = () -> Arrays.asList(UnderlyingSecurityMovement1.mmObject(), ReportItem1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesEntry.class;
 			}
 		});
 		return mmObject_lazy.get();

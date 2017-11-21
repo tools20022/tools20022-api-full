@@ -35,6 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
+ * UndertakingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -46,10 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Undertaking3.mmConfirmationPartyType}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
- * UndertakingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -78,6 +78,11 @@ public class UndertakingConfirmer extends UndertakingPartyRole {
 				definition = "Party that adds its confirmation to the undertaking.";
 				derivationElement_lazy = () -> Arrays.asList(Undertaking1.mmConfirmer, Undertaking3.mmConfirmationPartyType);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UndertakingConfirmer.class;
 			}
 		});
 		return mmObject_lazy.get();

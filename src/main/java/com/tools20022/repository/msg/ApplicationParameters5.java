@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Acceptor parameters dedicated to a payment application of the point of
@@ -89,6 +93,8 @@ import java.util.List;
  * ApplicationParameters4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ApplicationParameters5", propOrder = {"actionType", "applicationIdentification", "version", "parameters", "encryptedParameters"})
 public class ApplicationParameters5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -397,6 +403,7 @@ public class ApplicationParameters5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ActnTp", required = true)
 	public TerminalManagementAction3Code getActionType() {
 		return actionType;
 	}
@@ -405,6 +412,7 @@ public class ApplicationParameters5 {
 		this.actionType = actionType;
 	}
 
+	@XmlElement(name = "ApplId", required = true)
 	public Max35Text getApplicationIdentification() {
 		return applicationIdentification;
 	}
@@ -413,6 +421,7 @@ public class ApplicationParameters5 {
 		this.applicationIdentification = applicationIdentification;
 	}
 
+	@XmlElement(name = "Vrsn", required = true)
 	public Max256Text getVersion() {
 		return version;
 	}
@@ -421,6 +430,7 @@ public class ApplicationParameters5 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "Params")
 	public List<Max100KBinary> getParameters() {
 		return parameters;
 	}
@@ -429,6 +439,7 @@ public class ApplicationParameters5 {
 		this.parameters = parameters;
 	}
 
+	@XmlElement(name = "NcrptdParams")
 	public ContentInformationType10 getEncryptedParameters() {
 		return encryptedParameters;
 	}

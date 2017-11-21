@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Communication information.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CommunicationAddress3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CommunicationAddress5", propOrder = {"postalAddress", "email", "URLAddress", "phone", "customerService", "additionalContactInformation"})
 public class CommunicationAddress5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -403,6 +409,7 @@ public class CommunicationAddress5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PstlAdr")
 	public PostalAddress18 getPostalAddress() {
 		return postalAddress;
 	}
@@ -411,6 +418,7 @@ public class CommunicationAddress5 {
 		this.postalAddress = postalAddress;
 	}
 
+	@XmlElement(name = "Email")
 	public Max256Text getEmail() {
 		return email;
 	}
@@ -419,6 +427,7 @@ public class CommunicationAddress5 {
 		this.email = email;
 	}
 
+	@XmlElement(name = "URLAdr")
 	public Max256Text getURLAddress() {
 		return uRLAddress;
 	}
@@ -427,6 +436,7 @@ public class CommunicationAddress5 {
 		this.uRLAddress = uRLAddress;
 	}
 
+	@XmlElement(name = "Phne")
 	public PhoneNumber getPhone() {
 		return phone;
 	}
@@ -435,6 +445,7 @@ public class CommunicationAddress5 {
 		this.phone = phone;
 	}
 
+	@XmlElement(name = "CstmrSvc")
 	public PhoneNumber getCustomerService() {
 		return customerService;
 	}
@@ -443,6 +454,7 @@ public class CommunicationAddress5 {
 		this.customerService = customerService;
 	}
 
+	@XmlElement(name = "AddtlCtctInf")
 	public Max256Text getAdditionalContactInformation() {
 		return additionalContactInformation;
 	}

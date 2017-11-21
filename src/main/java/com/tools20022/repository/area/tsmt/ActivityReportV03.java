@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.ActivityReportItems2;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -48,9 +50,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.002.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementPreviousVersion
@@ -84,6 +83,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.002.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -102,6 +104,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ActivityReportV03", propOrder = {"reportIdentification", "relatedMessageReference", "report"})
 public class ActivityReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -148,6 +152,14 @@ public class ActivityReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ActivityReportV03.class.getMethod("getReportIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MessageIdentification1 relatedMessageReference;
 	/**
@@ -192,6 +204,14 @@ public class ActivityReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ActivityReportV03.class.getMethod("getRelatedMessageReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ActivityReportItems2> report;
 	/**
@@ -235,6 +255,14 @@ public class ActivityReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> ActivityReportItems2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ActivityReportV03.class.getMethod("getReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -248,7 +276,8 @@ public class ActivityReportV03 {
 				rootElement = "Document";
 				xmlTag = "ActvtyRpt";
 				businessArea_lazy = () -> TradeServicesManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ActivityReportV03.mmReportIdentification, ActivityReportV03.mmRelatedMessageReference, ActivityReportV03.mmReport);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActivityReportV03.mmReportIdentification, com.tools20022.repository.area.tsmt.ActivityReportV03.mmRelatedMessageReference,
+						com.tools20022.repository.area.tsmt.ActivityReportV03.mmReport);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -258,10 +287,16 @@ public class ActivityReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ActivityReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptId", required = true)
 	public MessageIdentification1 getReportIdentification() {
 		return reportIdentification;
 	}
@@ -270,6 +305,7 @@ public class ActivityReportV03 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "RltdMsgRef")
 	public MessageIdentification1 getRelatedMessageReference() {
 		return relatedMessageReference;
 	}
@@ -278,11 +314,18 @@ public class ActivityReportV03 {
 		this.relatedMessageReference = relatedMessageReference;
 	}
 
+	@XmlElement(name = "Rpt")
 	public List<ActivityReportItems2> getReport() {
 		return report;
 	}
 
 	public void setReport(List<ActivityReportItems2> report) {
 		this.report = report;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.002.03.03")
+	static public class Document {
+		@XmlElement(name = "ActvtyRpt", required = true)
+		public ActivityReportV03 messageBody;
 	}
 }

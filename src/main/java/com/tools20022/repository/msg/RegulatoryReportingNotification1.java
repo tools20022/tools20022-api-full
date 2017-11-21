@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details on the regulatory notification.
@@ -79,6 +83,8 @@ import java.util.List;
  * definition} = "Provides the details on the regulatory notification."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegulatoryReportingNotification1", propOrder = {"transactionNotificationIdentification", "accountOwner", "accountServicer", "transactionCertificate"})
 public class RegulatoryReportingNotification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -297,6 +303,7 @@ public class RegulatoryReportingNotification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxNtfctnId", required = true)
 	public Max35Text getTransactionNotificationIdentification() {
 		return transactionNotificationIdentification;
 	}
@@ -305,6 +312,7 @@ public class RegulatoryReportingNotification1 {
 		this.transactionNotificationIdentification = transactionNotificationIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnr", required = true)
 	public PartyIdentification77 getAccountOwner() {
 		return accountOwner;
 	}
@@ -313,6 +321,7 @@ public class RegulatoryReportingNotification1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
 		return accountServicer;
 	}
@@ -321,6 +330,7 @@ public class RegulatoryReportingNotification1 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "TxCert", required = true)
 	public List<TransactionCertificate1> getTransactionCertificate() {
 		return transactionCertificate;
 	}

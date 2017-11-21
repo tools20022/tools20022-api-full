@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,18 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmClassAction
- * DateTimePeriod.mmClassAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRelatedClassAction
- * CorporateActionEvent.mmRelatedClassAction}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -69,6 +58,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.ClassAction#mmCorporateEvent
  * ClassAction.mmCorporateEvent}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmClassAction
+ * DateTimePeriod.mmClassAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRelatedClassAction
+ * CorporateActionEvent.mmRelatedClassAction}</li>
  * </ul>
  * </li>
  * <li>
@@ -101,10 +102,6 @@ public class ClassAction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -327,6 +324,10 @@ public class ClassAction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -363,7 +364,7 @@ public class ClassAction {
 					CorporateActionGeneralInformation105.mmClassActionNumber, CorporateActionGeneralInformation106.mmClassActionNumber, CorporateActionGeneralInformation108.mmClassActionNumber,
 					CorporateActionGeneralInformation114.mmClassActionNumber, CorporateActionGeneralInformation120.mmClassActionNumber, CorporateActionGeneralInformation118.mmClassActionNumber,
 					CorporateActionGeneralInformation123.mmClassActionNumber, CorporateActionGeneralInformation117.mmClassActionNumber, CorporateActionGeneralInformation113.mmClassActionNumber);
-			elementContext_lazy = () -> ClassAction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ClassAction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClassActionNumber";
@@ -371,6 +372,14 @@ public class ClassAction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ClassAction.class.getMethod("getClassActionNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime leadPlaintiffDeadline;
@@ -383,10 +392,6 @@ public class ClassAction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -423,6 +428,10 @@ public class ClassAction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -438,7 +447,7 @@ public class ClassAction {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate8.mmLeadPlaintiffDeadline, CorporateActionDate11.mmLeadPlaintiffDeadline, CorporateActionDate14.mmLeadPlaintiffDeadline, CorporateActionDate21.mmLeadPlaintiffDeadline,
 					CorporateActionDate22.mmLeadPlaintiffDeadline, CorporateActionDate25.mmLeadPlaintiffDeadline, CorporateActionDate27.mmLeadPlaintiffDeadline, CorporateActionDate28.mmLeadPlaintiffDeadline,
 					CorporateActionDate44.mmLeadPlaintiffDeadline, CorporateActionDate58.mmLeadPlaintiffDeadline);
-			elementContext_lazy = () -> ClassAction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ClassAction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LeadPlaintiffDeadline";
@@ -446,6 +455,14 @@ public class ClassAction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ClassAction.class.getMethod("getLeadPlaintiffDeadline", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime courtApprovalDate;
@@ -458,10 +475,6 @@ public class ClassAction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -501,6 +514,10 @@ public class ClassAction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -516,7 +533,7 @@ public class ClassAction {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmCourtApprovalDate, CorporateActionDate13.mmCourtApprovalDate, CorporateActionDate14.mmCourtApprovalDate, CorporateActionDate21.mmCourtApprovalDate,
 					CorporateActionDate22.mmCourtApprovalDate, CorporateActionDate25.mmCourtApprovalDate, CorporateActionDate27.mmCourtApprovalDate, CorporateActionDate28.mmCourtApprovalDate, CorporateActionDate2.mmCourtApprovalDate,
 					CorporateActionDate44.mmCourtApprovalDate, CorporateActionDate58.mmCourtApprovalDate);
-			elementContext_lazy = () -> ClassAction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ClassAction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CourtApprovalDate";
@@ -524,6 +541,14 @@ public class ClassAction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ClassAction.class.getMethod("getCourtApprovalDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DateTimePeriod claimPeriod;
@@ -546,10 +571,6 @@ public class ClassAction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -568,6 +589,10 @@ public class ClassAction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -583,7 +608,7 @@ public class ClassAction {
 	public static final MMBusinessAssociationEnd mmClaimPeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmClaimPeriod, CorporateActionPeriod6.mmClaimPeriod, CorporateActionPeriod8.mmClaimPeriod, CorporateActionPeriod10.mmClaimPeriod);
-			elementContext_lazy = () -> ClassAction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ClassAction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClaimPeriod";
@@ -605,10 +630,6 @@ public class ClassAction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -633,6 +654,10 @@ public class ClassAction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -648,7 +673,7 @@ public class ClassAction {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate22.mmFilingDate, CorporateActionDate25.mmFilingDate, CorporateActionDate27.mmFilingDate, CorporateActionDate28.mmFilingDate, CorporateActionDate44.mmFilingDate,
 					CorporateActionDate58.mmFilingDate);
-			elementContext_lazy = () -> ClassAction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ClassAction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FilingDate";
@@ -656,6 +681,14 @@ public class ClassAction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ClassAction.class.getMethod("getFilingDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime hearingDate;
@@ -669,10 +702,6 @@ public class ClassAction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -697,6 +726,10 @@ public class ClassAction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -713,7 +746,7 @@ public class ClassAction {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate22.mmHearingDate, CorporateActionDate25.mmHearingDate, CorporateActionDate27.mmHearingDate, CorporateActionDate28.mmHearingDate, CorporateActionDate44.mmHearingDate,
 					CorporateActionDate58.mmHearingDate);
-			elementContext_lazy = () -> ClassAction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ClassAction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HearingDate";
@@ -721,6 +754,14 @@ public class ClassAction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ClassAction.class.getMethod("getHearingDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionEvent corporateEvent;
@@ -759,7 +800,7 @@ public class ClassAction {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ClassAction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ClassAction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateEvent";
@@ -780,8 +821,14 @@ public class ClassAction {
 				name = "ClassAction";
 				definition = "Form of lawsuit in which a group of shareholders collectively bring a claim to court, mainly because it would be too expensive for each individual shareholder to launch their own lawsuit.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmClassAction, com.tools20022.repository.entity.CorporateActionEvent.mmRelatedClassAction);
-				element_lazy = () -> Arrays.asList(ClassAction.mmClassActionNumber, ClassAction.mmLeadPlaintiffDeadline, ClassAction.mmCourtApprovalDate, ClassAction.mmClaimPeriod, ClassAction.mmFilingDate, ClassAction.mmHearingDate,
-						ClassAction.mmCorporateEvent);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ClassAction.mmClassActionNumber, com.tools20022.repository.entity.ClassAction.mmLeadPlaintiffDeadline,
+						com.tools20022.repository.entity.ClassAction.mmCourtApprovalDate, com.tools20022.repository.entity.ClassAction.mmClaimPeriod, com.tools20022.repository.entity.ClassAction.mmFilingDate,
+						com.tools20022.repository.entity.ClassAction.mmHearingDate, com.tools20022.repository.entity.ClassAction.mmCorporateEvent);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ClassAction.class;
 			}
 		});
 		return mmObject_lazy.get();

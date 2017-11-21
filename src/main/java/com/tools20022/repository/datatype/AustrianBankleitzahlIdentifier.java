@@ -33,6 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} =
  * "Oesterreichische NationalBank; Austrian Bankleitzahl"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "AT[0-9]{5,5}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -69,6 +71,7 @@ public class AustrianBankleitzahlIdentifier {
 				name = "AustrianBankleitzahlIdentifier";
 				definition = "Austrian Bankleitzahl. Identifies Austrian financial institutions on the Austrian national clearing system.";
 				identificationScheme = "Oesterreichische NationalBank; Austrian Bankleitzahl";
+				pattern = "AT[0-9]{5,5}";
 			}
 		});
 		return mmObject_lazy.get();

@@ -33,6 +33,10 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extra dates, amounts and related indicators.
@@ -144,6 +148,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Extra dates, amounts and related indicators."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DateAndAmountSD1", propOrder = {"placeAndName", "firstSettlementDateOfDeferredTrades", "typeOfPaymentDate", "equivalentLocalAmountAnnouncementDate", "typeOfEquivalentLocalAmountAnnouncementDate",
+		"equivalentForeignAmountAnnouncementDate", "typeOfEquivalentForeignAmountAnnouncementDate", "typeOfIssueDate", "pariPassuFromIssueDateIndicator", "lodgementOfSecurityHolderResolutionDate",
+		"typeOfLodgementOfSecurityHolderResolutionDate", "selectiveReturnOfCapitalIndicator", "specialAmountPerSecurityAnnouncementDate", "typeOfSpecialAmountPerSecurityAnnouncementDate", "scripAmountPerSecurityAnnouncementDate",
+		"typeOfScripAmountPerSecurityAnnouncementDate", "supplementaryAmountPerSecurityAnnouncementDate", "typeOfSupplementaryAmountPerSecurityAnnouncementDate", "amountPerSecurityAnnouncementDate",
+		"typeOfAmountPerSecurityAnnouncementDate", "typeOfGrossDividendRate", "endDateOfDividendPeriod", "lastTradingDayForOriginalSecurities", "earliestPostConsolidationNotificationDate", "minimumAmountForParticipation",
+		"maximumAmountForParticipation", "reinvestmentDiscountRate", "reinvestmentPlanType"})
 public class DateAndAmountSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1404,6 +1415,7 @@ public class DateAndAmountSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -1412,6 +1424,7 @@ public class DateAndAmountSD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "FrstSttlmDtOfDfrrdTrds")
 	public DateFormat22Choice getFirstSettlementDateOfDeferredTrades() {
 		return firstSettlementDateOfDeferredTrades;
 	}
@@ -1420,6 +1433,7 @@ public class DateAndAmountSD1 {
 		this.firstSettlementDateOfDeferredTrades = firstSettlementDateOfDeferredTrades;
 	}
 
+	@XmlElement(name = "TpOfPmtDt")
 	public TypeOfDate1Code getTypeOfPaymentDate() {
 		return typeOfPaymentDate;
 	}
@@ -1428,6 +1442,7 @@ public class DateAndAmountSD1 {
 		this.typeOfPaymentDate = typeOfPaymentDate;
 	}
 
+	@XmlElement(name = "EqvtLclAmtAnncmntDt")
 	public DateFormat22Choice getEquivalentLocalAmountAnnouncementDate() {
 		return equivalentLocalAmountAnnouncementDate;
 	}
@@ -1436,6 +1451,7 @@ public class DateAndAmountSD1 {
 		this.equivalentLocalAmountAnnouncementDate = equivalentLocalAmountAnnouncementDate;
 	}
 
+	@XmlElement(name = "TpOfEqvtLclAmtAnncmntDt")
 	public TypeOfAmount4Code getTypeOfEquivalentLocalAmountAnnouncementDate() {
 		return typeOfEquivalentLocalAmountAnnouncementDate;
 	}
@@ -1444,6 +1460,7 @@ public class DateAndAmountSD1 {
 		this.typeOfEquivalentLocalAmountAnnouncementDate = typeOfEquivalentLocalAmountAnnouncementDate;
 	}
 
+	@XmlElement(name = "EqvtFrgnAmtAnncmntDt")
 	public DateFormat22Choice getEquivalentForeignAmountAnnouncementDate() {
 		return equivalentForeignAmountAnnouncementDate;
 	}
@@ -1452,6 +1469,7 @@ public class DateAndAmountSD1 {
 		this.equivalentForeignAmountAnnouncementDate = equivalentForeignAmountAnnouncementDate;
 	}
 
+	@XmlElement(name = "TpOfEqvtFrgnAmtAnncmntDt")
 	public TypeOfAmount4Code getTypeOfEquivalentForeignAmountAnnouncementDate() {
 		return typeOfEquivalentForeignAmountAnnouncementDate;
 	}
@@ -1460,6 +1478,7 @@ public class DateAndAmountSD1 {
 		this.typeOfEquivalentForeignAmountAnnouncementDate = typeOfEquivalentForeignAmountAnnouncementDate;
 	}
 
+	@XmlElement(name = "TpOfIsseDt")
 	public TypeOfDate1Code getTypeOfIssueDate() {
 		return typeOfIssueDate;
 	}
@@ -1468,6 +1487,7 @@ public class DateAndAmountSD1 {
 		this.typeOfIssueDate = typeOfIssueDate;
 	}
 
+	@XmlElement(name = "PrpssFrIsseDtInd")
 	public TrueFalseIndicator getPariPassuFromIssueDateIndicator() {
 		return pariPassuFromIssueDateIndicator;
 	}
@@ -1476,6 +1496,7 @@ public class DateAndAmountSD1 {
 		this.pariPassuFromIssueDateIndicator = pariPassuFromIssueDateIndicator;
 	}
 
+	@XmlElement(name = "LdgmntOfSctyHldrRsltnDt")
 	public DateFormat22Choice getLodgementOfSecurityHolderResolutionDate() {
 		return lodgementOfSecurityHolderResolutionDate;
 	}
@@ -1484,6 +1505,7 @@ public class DateAndAmountSD1 {
 		this.lodgementOfSecurityHolderResolutionDate = lodgementOfSecurityHolderResolutionDate;
 	}
 
+	@XmlElement(name = "TpOfLdgmntOfSctyHldrRsltnDt")
 	public TypeOfDate1Code getTypeOfLodgementOfSecurityHolderResolutionDate() {
 		return typeOfLodgementOfSecurityHolderResolutionDate;
 	}
@@ -1492,6 +1514,7 @@ public class DateAndAmountSD1 {
 		this.typeOfLodgementOfSecurityHolderResolutionDate = typeOfLodgementOfSecurityHolderResolutionDate;
 	}
 
+	@XmlElement(name = "SelctvRtrOfCptlInd")
 	public TrueFalseIndicator getSelectiveReturnOfCapitalIndicator() {
 		return selectiveReturnOfCapitalIndicator;
 	}
@@ -1500,6 +1523,7 @@ public class DateAndAmountSD1 {
 		this.selectiveReturnOfCapitalIndicator = selectiveReturnOfCapitalIndicator;
 	}
 
+	@XmlElement(name = "SpclAmtPerSctyAnncmntDt")
 	public DateFormat22Choice getSpecialAmountPerSecurityAnnouncementDate() {
 		return specialAmountPerSecurityAnnouncementDate;
 	}
@@ -1508,6 +1532,7 @@ public class DateAndAmountSD1 {
 		this.specialAmountPerSecurityAnnouncementDate = specialAmountPerSecurityAnnouncementDate;
 	}
 
+	@XmlElement(name = "TpOfSpclAmtPerSctyAnncmntDt")
 	public TypeOfDateCode getTypeOfSpecialAmountPerSecurityAnnouncementDate() {
 		return typeOfSpecialAmountPerSecurityAnnouncementDate;
 	}
@@ -1516,6 +1541,7 @@ public class DateAndAmountSD1 {
 		this.typeOfSpecialAmountPerSecurityAnnouncementDate = typeOfSpecialAmountPerSecurityAnnouncementDate;
 	}
 
+	@XmlElement(name = "ScripAmtPerSctyAnncmntDt")
 	public DateFormat22Choice getScripAmountPerSecurityAnnouncementDate() {
 		return scripAmountPerSecurityAnnouncementDate;
 	}
@@ -1524,6 +1550,7 @@ public class DateAndAmountSD1 {
 		this.scripAmountPerSecurityAnnouncementDate = scripAmountPerSecurityAnnouncementDate;
 	}
 
+	@XmlElement(name = "TpOfScripAmtPerSctyAnncmntDt")
 	public TypeOfDateCode getTypeOfScripAmountPerSecurityAnnouncementDate() {
 		return typeOfScripAmountPerSecurityAnnouncementDate;
 	}
@@ -1532,6 +1559,7 @@ public class DateAndAmountSD1 {
 		this.typeOfScripAmountPerSecurityAnnouncementDate = typeOfScripAmountPerSecurityAnnouncementDate;
 	}
 
+	@XmlElement(name = "SplmtryAmtPerSctyAnncmntDt")
 	public DateFormat22Choice getSupplementaryAmountPerSecurityAnnouncementDate() {
 		return supplementaryAmountPerSecurityAnnouncementDate;
 	}
@@ -1540,6 +1568,7 @@ public class DateAndAmountSD1 {
 		this.supplementaryAmountPerSecurityAnnouncementDate = supplementaryAmountPerSecurityAnnouncementDate;
 	}
 
+	@XmlElement(name = "TpOfSplmtryAmtPerSctyAnncmntDt")
 	public TypeOfDateCode getTypeOfSupplementaryAmountPerSecurityAnnouncementDate() {
 		return typeOfSupplementaryAmountPerSecurityAnnouncementDate;
 	}
@@ -1548,6 +1577,7 @@ public class DateAndAmountSD1 {
 		this.typeOfSupplementaryAmountPerSecurityAnnouncementDate = typeOfSupplementaryAmountPerSecurityAnnouncementDate;
 	}
 
+	@XmlElement(name = "AmtPerSctyAnncmntDt")
 	public DateFormat22Choice getAmountPerSecurityAnnouncementDate() {
 		return amountPerSecurityAnnouncementDate;
 	}
@@ -1556,6 +1586,7 @@ public class DateAndAmountSD1 {
 		this.amountPerSecurityAnnouncementDate = amountPerSecurityAnnouncementDate;
 	}
 
+	@XmlElement(name = "TpOfAmtPerSctyAnncmntDt")
 	public TypeOfDateCode getTypeOfAmountPerSecurityAnnouncementDate() {
 		return typeOfAmountPerSecurityAnnouncementDate;
 	}
@@ -1564,6 +1595,7 @@ public class DateAndAmountSD1 {
 		this.typeOfAmountPerSecurityAnnouncementDate = typeOfAmountPerSecurityAnnouncementDate;
 	}
 
+	@XmlElement(name = "TpOfGrssDvddRate")
 	public TypeOfAmount4Code getTypeOfGrossDividendRate() {
 		return typeOfGrossDividendRate;
 	}
@@ -1572,6 +1604,7 @@ public class DateAndAmountSD1 {
 		this.typeOfGrossDividendRate = typeOfGrossDividendRate;
 	}
 
+	@XmlElement(name = "EndDtOfDvddPrd")
 	public DateFormat22Choice getEndDateOfDividendPeriod() {
 		return endDateOfDividendPeriod;
 	}
@@ -1580,6 +1613,7 @@ public class DateAndAmountSD1 {
 		this.endDateOfDividendPeriod = endDateOfDividendPeriod;
 	}
 
+	@XmlElement(name = "LastTradgDayForOrgnlScties")
 	public DateFormat22Choice getLastTradingDayForOriginalSecurities() {
 		return lastTradingDayForOriginalSecurities;
 	}
@@ -1588,6 +1622,7 @@ public class DateAndAmountSD1 {
 		this.lastTradingDayForOriginalSecurities = lastTradingDayForOriginalSecurities;
 	}
 
+	@XmlElement(name = "EarlstPstCnsldtnNtfctnDt")
 	public DateFormat22Choice getEarliestPostConsolidationNotificationDate() {
 		return earliestPostConsolidationNotificationDate;
 	}
@@ -1596,6 +1631,7 @@ public class DateAndAmountSD1 {
 		this.earliestPostConsolidationNotificationDate = earliestPostConsolidationNotificationDate;
 	}
 
+	@XmlElement(name = "MinAmtForPrtcptn")
 	public ActiveCurrencyAnd13DecimalAmount getMinimumAmountForParticipation() {
 		return minimumAmountForParticipation;
 	}
@@ -1604,6 +1640,7 @@ public class DateAndAmountSD1 {
 		this.minimumAmountForParticipation = minimumAmountForParticipation;
 	}
 
+	@XmlElement(name = "MaxAmtForPrtcptn")
 	public ActiveCurrencyAnd13DecimalAmount getMaximumAmountForParticipation() {
 		return maximumAmountForParticipation;
 	}
@@ -1612,6 +1649,7 @@ public class DateAndAmountSD1 {
 		this.maximumAmountForParticipation = maximumAmountForParticipation;
 	}
 
+	@XmlElement(name = "RinvstmtDscntRate")
 	public RateFormat6Choice getReinvestmentDiscountRate() {
 		return reinvestmentDiscountRate;
 	}
@@ -1620,6 +1658,7 @@ public class DateAndAmountSD1 {
 		this.reinvestmentDiscountRate = reinvestmentDiscountRate;
 	}
 
+	@XmlElement(name = "RinvstmtPlanTp")
 	public ReinvestmentPlan1Code getReinvestmentPlanType() {
 		return reinvestmentPlanType;
 	}

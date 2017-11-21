@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Group of parties with their related security certificate.
@@ -74,6 +78,8 @@ import java.util.List;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Group1 Group1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Group2", propOrder = {"modificationCode", "groupIdentification", "party"})
 public class Group2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -215,6 +221,7 @@ public class Group2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ModCd")
 	public Modification1Code getModificationCode() {
 		return modificationCode;
 	}
@@ -223,6 +230,7 @@ public class Group2 {
 		this.modificationCode = modificationCode;
 	}
 
+	@XmlElement(name = "GrpId", required = true)
 	public Max4AlphaNumericText getGroupIdentification() {
 		return groupIdentification;
 	}
@@ -231,6 +239,7 @@ public class Group2 {
 		this.groupIdentification = groupIdentification;
 	}
 
+	@XmlElement(name = "Pty", required = true)
 	public List<PartyAndCertificate3> getParty() {
 		return party;
 	}

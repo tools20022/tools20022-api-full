@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Detailed information about single invoice/instalment financing result, such
@@ -72,6 +76,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvoiceFinancingDetails1", propOrder = {"originalInvoiceInformation", "supplier", "invoiceFinancingResult", "instalmentFinancingInformation"})
 public class InvoiceFinancingDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -288,6 +294,7 @@ public class InvoiceFinancingDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlInvcInf", required = true)
 	public OriginalInvoiceInformation1 getOriginalInvoiceInformation() {
 		return originalInvoiceInformation;
 	}
@@ -296,6 +303,7 @@ public class InvoiceFinancingDetails1 {
 		this.originalInvoiceInformation = originalInvoiceInformation;
 	}
 
+	@XmlElement(name = "Spplr")
 	public PartyIdentification8 getSupplier() {
 		return supplier;
 	}
@@ -304,6 +312,7 @@ public class InvoiceFinancingDetails1 {
 		this.supplier = supplier;
 	}
 
+	@XmlElement(name = "InvcFincgRslt", required = true)
 	public FinancingResult1 getInvoiceFinancingResult() {
 		return invoiceFinancingResult;
 	}
@@ -312,6 +321,7 @@ public class InvoiceFinancingDetails1 {
 		this.invoiceFinancingResult = invoiceFinancingResult;
 	}
 
+	@XmlElement(name = "InstlmtFincgInf")
 	public List<InstalmentFinancingInformation1> getInstalmentFinancingInformation() {
 		return instalmentFinancingInformation;
 	}

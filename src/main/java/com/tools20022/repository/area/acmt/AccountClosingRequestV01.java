@@ -25,9 +25,11 @@ import com.tools20022.repository.area.AccountManagementPreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.BankAccountManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -40,9 +42,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.019.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementPreviousVersion
@@ -91,6 +90,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.019.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -109,6 +111,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountClosingRequestV01", propOrder = {"references", "accountIdentification", "accountServicerIdentification", "organisationIdentification", "contractDates", "balanceTransferAccount",
+		"transferAccountServicerIdentification", "digitalSignature"})
 public class AccountClosingRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -148,6 +153,14 @@ public class AccountClosingRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> References4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountClosingRequestV01.class.getMethod("getReferences", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AccountForAction1 accountIdentification;
 	/**
@@ -185,6 +198,14 @@ public class AccountClosingRequestV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountForAction1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountClosingRequestV01.class.getMethod("getAccountIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BranchAndFinancialInstitutionIdentification4 accountServicerIdentification;
@@ -224,6 +245,14 @@ public class AccountClosingRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountClosingRequestV01.class.getMethod("getAccountServicerIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<OrganisationIdentification6> organisationIdentification;
 	/**
@@ -259,6 +288,14 @@ public class AccountClosingRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> OrganisationIdentification6.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountClosingRequestV01.class.getMethod("getOrganisationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AccountContract4 contractDates;
 	/**
@@ -293,6 +330,14 @@ public class AccountClosingRequestV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountContract4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountClosingRequestV01.class.getMethod("getContractDates", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AccountForAction1 balanceTransferAccount;
@@ -338,6 +383,14 @@ public class AccountClosingRequestV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> AccountForAction1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountClosingRequestV01.class.getMethod("getBalanceTransferAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected BranchAndFinancialInstitutionIdentification4 transferAccountServicerIdentification;
 	/**
@@ -377,6 +430,14 @@ public class AccountClosingRequestV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountClosingRequestV01.class.getMethod("getTransferAccountServicerIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PartyAndSignature1> digitalSignature;
 	/**
@@ -414,6 +475,14 @@ public class AccountClosingRequestV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountClosingRequestV01.class.getMethod("getDigitalSignature", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -427,9 +496,10 @@ public class AccountClosingRequestV01 {
 				rootElement = "Document";
 				xmlTag = "AcctClsgReq";
 				businessArea_lazy = () -> AccountManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AccountClosingRequestV01.mmReferences, AccountClosingRequestV01.mmAccountIdentification, AccountClosingRequestV01.mmAccountServicerIdentification,
-						AccountClosingRequestV01.mmOrganisationIdentification, AccountClosingRequestV01.mmContractDates, AccountClosingRequestV01.mmBalanceTransferAccount, AccountClosingRequestV01.mmTransferAccountServicerIdentification,
-						AccountClosingRequestV01.mmDigitalSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmAccountIdentification,
+						com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmAccountServicerIdentification, com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmOrganisationIdentification,
+						com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmContractDates, com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmBalanceTransferAccount,
+						com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmTransferAccountServicerIdentification, com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmDigitalSignature);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";
@@ -439,10 +509,16 @@ public class AccountClosingRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountClosingRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Refs", required = true)
 	public References4 getReferences() {
 		return references;
 	}
@@ -451,6 +527,7 @@ public class AccountClosingRequestV01 {
 		this.references = references;
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public AccountForAction1 getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -459,6 +536,7 @@ public class AccountClosingRequestV01 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrId", required = true)
 	public BranchAndFinancialInstitutionIdentification4 getAccountServicerIdentification() {
 		return accountServicerIdentification;
 	}
@@ -467,6 +545,7 @@ public class AccountClosingRequestV01 {
 		this.accountServicerIdentification = accountServicerIdentification;
 	}
 
+	@XmlElement(name = "OrgId", required = true)
 	public List<OrganisationIdentification6> getOrganisationIdentification() {
 		return organisationIdentification;
 	}
@@ -475,6 +554,7 @@ public class AccountClosingRequestV01 {
 		this.organisationIdentification = organisationIdentification;
 	}
 
+	@XmlElement(name = "CtrctDts")
 	public AccountContract4 getContractDates() {
 		return contractDates;
 	}
@@ -483,6 +563,7 @@ public class AccountClosingRequestV01 {
 		this.contractDates = contractDates;
 	}
 
+	@XmlElement(name = "BalTrfAcct")
 	public AccountForAction1 getBalanceTransferAccount() {
 		return balanceTransferAccount;
 	}
@@ -491,6 +572,7 @@ public class AccountClosingRequestV01 {
 		this.balanceTransferAccount = balanceTransferAccount;
 	}
 
+	@XmlElement(name = "TrfAcctSvcrId")
 	public BranchAndFinancialInstitutionIdentification4 getTransferAccountServicerIdentification() {
 		return transferAccountServicerIdentification;
 	}
@@ -499,11 +581,18 @@ public class AccountClosingRequestV01 {
 		this.transferAccountServicerIdentification = transferAccountServicerIdentification;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public List<PartyAndSignature1> getDigitalSignature() {
 		return digitalSignature;
 	}
 
 	public void setDigitalSignature(List<PartyAndSignature1> digitalSignature) {
 		this.digitalSignature = digitalSignature;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.019.01.01")
+	static public class Document {
+		@XmlElement(name = "AcctClsgReq", required = true)
+		public AccountClosingRequestV01 messageBody;
 	}
 }

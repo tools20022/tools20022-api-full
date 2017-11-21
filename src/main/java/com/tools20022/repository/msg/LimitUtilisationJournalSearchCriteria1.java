@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for a limit.
@@ -80,6 +84,8 @@ import java.util.List;
  * definition} = "Defines the criteria used to search for a limit."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LimitUtilisationJournalSearchCriteria1", propOrder = {"limitType", "journalActivityDate", "accountIdentification", "limitCurrency", "accountOwner", "bilateralLimitCounterpartyIdentification"})
 public class LimitUtilisationJournalSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -383,6 +389,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LmtTp")
 	public List<LimitType4Code> getLimitType() {
 		return limitType;
 	}
@@ -391,6 +398,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 		this.limitType = limitType;
 	}
 
+	@XmlElement(name = "JrnlActvtyDt", required = true)
 	public ISODate getJournalActivityDate() {
 		return journalActivityDate;
 	}
@@ -399,6 +407,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 		this.journalActivityDate = journalActivityDate;
 	}
 
+	@XmlElement(name = "AcctId")
 	public AccountIdentification4Choice getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -407,6 +416,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "LmtCcy")
 	public ActiveCurrencyCode getLimitCurrency() {
 		return limitCurrency;
 	}
@@ -415,6 +425,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 		this.limitCurrency = limitCurrency;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public BICFIIdentifier getAccountOwner() {
 		return accountOwner;
 	}
@@ -423,6 +434,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "BilLmtCtrPtyId", required = true)
 	public SystemPartyIdentification4 getBilateralLimitCounterpartyIdentification() {
 		return bilateralLimitCounterpartyIdentification;
 	}

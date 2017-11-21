@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about identification and account of the party .
@@ -81,6 +85,8 @@ import java.util.function.Supplier;
  * "Provides information about identification and account of the party ."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount18", propOrder = {"identification", "cashAccount", "processingIdentification", "additionalInformation", "alternateIdentification"})
 public class PartyIdentificationAndAccount18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -337,6 +343,7 @@ public class PartyIdentificationAndAccount18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification30Choice getIdentification() {
 		return identification;
 	}
@@ -345,6 +352,7 @@ public class PartyIdentificationAndAccount18 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccountIdentification5Choice getCashAccount() {
 		return cashAccount;
 	}
@@ -353,6 +361,7 @@ public class PartyIdentificationAndAccount18 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public Max35Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -361,6 +370,7 @@ public class PartyIdentificationAndAccount18 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -369,6 +379,7 @@ public class PartyIdentificationAndAccount18 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification2 getAlternateIdentification() {
 		return alternateIdentification;
 	}

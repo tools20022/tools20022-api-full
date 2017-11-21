@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the characteristics of the cash account.
@@ -107,6 +111,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccountCharacteristics1", propOrder = {"accountLevel", "cashAccount", "accountServicer", "parentAccount", "compensationMethod", "debitAccount", "delayedDebitDate", "settlementAdvice", "accountBalanceCurrencyCode",
+		"settlementCurrencyCode", "hostCurrencyCode", "tax", "accountServicerContact"})
 public class CashAccountCharacteristics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -878,6 +885,7 @@ public class CashAccountCharacteristics1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctLvl", required = true)
 	public AccountLevel2Code getAccountLevel() {
 		return accountLevel;
 	}
@@ -886,6 +894,7 @@ public class CashAccountCharacteristics1 {
 		this.accountLevel = accountLevel;
 	}
 
+	@XmlElement(name = "CshAcct", required = true)
 	public CashAccount16 getCashAccount() {
 		return cashAccount;
 	}
@@ -894,6 +903,7 @@ public class CashAccountCharacteristics1 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
 		return accountServicer;
 	}
@@ -902,6 +912,7 @@ public class CashAccountCharacteristics1 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "PrntAcct")
 	public ParentCashAccount1 getParentAccount() {
 		return parentAccount;
 	}
@@ -910,6 +921,7 @@ public class CashAccountCharacteristics1 {
 		this.parentAccount = parentAccount;
 	}
 
+	@XmlElement(name = "CompstnMtd", required = true)
 	public CompensationMethod1Code getCompensationMethod() {
 		return compensationMethod;
 	}
@@ -918,6 +930,7 @@ public class CashAccountCharacteristics1 {
 		this.compensationMethod = compensationMethod;
 	}
 
+	@XmlElement(name = "DbtAcct")
 	public AccountIdentification4Choice getDebitAccount() {
 		return debitAccount;
 	}
@@ -926,6 +939,7 @@ public class CashAccountCharacteristics1 {
 		this.debitAccount = debitAccount;
 	}
 
+	@XmlElement(name = "DelydDbtDt")
 	public ISODate getDelayedDebitDate() {
 		return delayedDebitDate;
 	}
@@ -934,6 +948,7 @@ public class CashAccountCharacteristics1 {
 		this.delayedDebitDate = delayedDebitDate;
 	}
 
+	@XmlElement(name = "SttlmAdvc")
 	public Max105Text getSettlementAdvice() {
 		return settlementAdvice;
 	}
@@ -942,6 +957,7 @@ public class CashAccountCharacteristics1 {
 		this.settlementAdvice = settlementAdvice;
 	}
 
+	@XmlElement(name = "AcctBalCcyCd", required = true)
 	public ActiveOrHistoricCurrencyCode getAccountBalanceCurrencyCode() {
 		return accountBalanceCurrencyCode;
 	}
@@ -950,6 +966,7 @@ public class CashAccountCharacteristics1 {
 		this.accountBalanceCurrencyCode = accountBalanceCurrencyCode;
 	}
 
+	@XmlElement(name = "SttlmCcyCd")
 	public ActiveOrHistoricCurrencyCode getSettlementCurrencyCode() {
 		return settlementCurrencyCode;
 	}
@@ -958,6 +975,7 @@ public class CashAccountCharacteristics1 {
 		this.settlementCurrencyCode = settlementCurrencyCode;
 	}
 
+	@XmlElement(name = "HstCcyCd")
 	public ActiveOrHistoricCurrencyCode getHostCurrencyCode() {
 		return hostCurrencyCode;
 	}
@@ -966,6 +984,7 @@ public class CashAccountCharacteristics1 {
 		this.hostCurrencyCode = hostCurrencyCode;
 	}
 
+	@XmlElement(name = "Tax")
 	public AccountTax1 getTax() {
 		return tax;
 	}
@@ -974,6 +993,7 @@ public class CashAccountCharacteristics1 {
 		this.tax = tax;
 	}
 
+	@XmlElement(name = "AcctSvcrCtct", required = true)
 	public ContactDetails3 getAccountServicerContact() {
 		return accountServicerContact;
 	}

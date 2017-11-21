@@ -29,15 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.WaivingInstruction2Code
- * WaivingInstruction2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.WaivingInstruction1Code
- * WaivingInstruction1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -49,6 +40,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.WaivingInstructionCode#mmOther
  * WaivingInstructionCode.mmOther}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.WaivingInstruction2Code
+ * WaivingInstruction2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.WaivingInstruction1Code
+ * WaivingInstruction1Code}</li>
  * </ul>
  * </li>
  * <li>

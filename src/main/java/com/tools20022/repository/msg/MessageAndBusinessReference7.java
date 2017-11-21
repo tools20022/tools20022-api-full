@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the message reference of the message for which the status
@@ -100,6 +104,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * MessageAndBusinessReference6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MessageAndBusinessReference7", propOrder = {"reference", "masterReference", "transferReference", "clientReference", "cancellationReference", "investmentAccountDetails"})
 public class MessageAndBusinessReference7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -506,6 +512,7 @@ public class MessageAndBusinessReference7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ref")
 	public References39Choice getReference() {
 		return reference;
 	}
@@ -514,6 +521,7 @@ public class MessageAndBusinessReference7 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -522,6 +530,7 @@ public class MessageAndBusinessReference7 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -530,6 +539,7 @@ public class MessageAndBusinessReference7 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -538,6 +548,7 @@ public class MessageAndBusinessReference7 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -546,6 +557,7 @@ public class MessageAndBusinessReference7 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount40 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}

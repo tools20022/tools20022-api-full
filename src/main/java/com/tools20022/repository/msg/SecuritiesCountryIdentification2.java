@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details an individual country including its name and country code.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Details an individual country including its name and country code."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesCountryIdentification2", propOrder = {"country", "EEACountry", "modification", "validityPeriod", "lastUpdated"})
 public class SecuritiesCountryIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -312,6 +318,7 @@ public class SecuritiesCountryIdentification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCodeAndName3 getCountry() {
 		return country;
 	}
@@ -320,6 +327,7 @@ public class SecuritiesCountryIdentification2 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "EEACtry", required = true)
 	public TrueFalseIndicator getEEACountry() {
 		return eEACountry;
 	}
@@ -328,6 +336,7 @@ public class SecuritiesCountryIdentification2 {
 		this.eEACountry = eEACountry;
 	}
 
+	@XmlElement(name = "Mod")
 	public Modification1Code getModification() {
 		return modification;
 	}
@@ -336,6 +345,7 @@ public class SecuritiesCountryIdentification2 {
 		this.modification = modification;
 	}
 
+	@XmlElement(name = "VldtyPrd", required = true)
 	public Period4Choice getValidityPeriod() {
 		return validityPeriod;
 	}
@@ -344,6 +354,7 @@ public class SecuritiesCountryIdentification2 {
 		this.validityPeriod = validityPeriod;
 	}
 
+	@XmlElement(name = "LastUpdtd")
 	public ISODate getLastUpdated() {
 		return lastUpdated;
 	}

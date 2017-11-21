@@ -32,6 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} = "Swiss Interbank Clearing Ltd; SIC Identifier"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "SW[0-9]{6,6}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -68,6 +70,7 @@ public class SwissSICIdentifier {
 				name = "SwissSICIdentifier";
 				definition = "Swiss Interbank Clearing (SIC) Code. Identifies Swiss financial institutions domestically, on the Swiss national clearing system.";
 				identificationScheme = "Swiss Interbank Clearing Ltd; SIC Identifier";
+				pattern = "SW[0-9]{6,6}";
 			}
 		});
 		return mmObject_lazy.get();

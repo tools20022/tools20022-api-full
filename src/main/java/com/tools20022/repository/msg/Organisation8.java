@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Merchant performing the transaction.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Organisation5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Organisation8", propOrder = {"identification", "commonName", "locationCategory", "address", "countryCode", "schemeData"})
 public class Organisation8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -427,6 +433,7 @@ public class Organisation8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public GenericIdentification32 getIdentification() {
 		return identification;
 	}
@@ -435,6 +442,7 @@ public class Organisation8 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "CmonNm")
 	public Max70Text getCommonName() {
 		return commonName;
 	}
@@ -443,6 +451,7 @@ public class Organisation8 {
 		this.commonName = commonName;
 	}
 
+	@XmlElement(name = "LctnCtgy")
 	public LocationCategory1Code getLocationCategory() {
 		return locationCategory;
 	}
@@ -451,6 +460,7 @@ public class Organisation8 {
 		this.locationCategory = locationCategory;
 	}
 
+	@XmlElement(name = "Adr")
 	public Max140Text getAddress() {
 		return address;
 	}
@@ -459,6 +469,7 @@ public class Organisation8 {
 		this.address = address;
 	}
 
+	@XmlElement(name = "CtryCd")
 	public ISO3NumericCountryCode getCountryCode() {
 		return countryCode;
 	}
@@ -467,6 +478,7 @@ public class Organisation8 {
 		this.countryCode = countryCode;
 	}
 
+	@XmlElement(name = "SchmeData")
 	public Max140Text getSchemeData() {
 		return schemeData;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SecuritiesPostTradeBooking;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information used to book the executions of a trade.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information used to book the executions of a trade."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Booking1", propOrder = {"dayBooking", "bookingUnit", "preAllocationMethod", "bookingType"})
 public class Booking1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -276,6 +282,7 @@ public class Booking1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DayBookg")
 	public DayBookingInstruction1Code getDayBooking() {
 		return dayBooking;
 	}
@@ -284,6 +291,7 @@ public class Booking1 {
 		this.dayBooking = dayBooking;
 	}
 
+	@XmlElement(name = "BookgUnit")
 	public BookingUnit1Choice getBookingUnit() {
 		return bookingUnit;
 	}
@@ -292,6 +300,7 @@ public class Booking1 {
 		this.bookingUnit = bookingUnit;
 	}
 
+	@XmlElement(name = "PreAllcnMtd")
 	public PreAllocationMethod1Code getPreAllocationMethod() {
 		return preAllocationMethod;
 	}
@@ -300,6 +309,7 @@ public class Booking1 {
 		this.preAllocationMethod = preAllocationMethod;
 	}
 
+	@XmlElement(name = "BookgTp")
 	public BookingType1Code getBookingType() {
 		return bookingType;
 	}

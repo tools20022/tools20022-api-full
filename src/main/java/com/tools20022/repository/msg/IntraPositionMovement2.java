@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies additional details of the transaction.
@@ -119,6 +123,10 @@ import java.util.List;
  * definition} = "Identifies additional details of the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionMovement2", propOrder = {"balanceFrom", "balanceTo", "financialInstrumentIdentification", "financialInstrumentAttributes", "settlementQuantity", "settledQuantity", "previouslySettledQuantity",
+		"remainingToBeSettledQuantity", "intendedSettlementDate", "effectiveSettlementDate", "statusDate", "linkages", "securitiesSubBalanceIdentification", "priority", "corporateActionEventType", "messageOriginator", "creationDateTime",
+		"instructionProcessingAdditionalDetails", "supplementaryData"})
 public class IntraPositionMovement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -950,6 +958,7 @@ public class IntraPositionMovement2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BalFr", required = true)
 	public SecuritiesSubBalanceTypeAndQuantityBreakdown1 getBalanceFrom() {
 		return balanceFrom;
 	}
@@ -958,6 +967,7 @@ public class IntraPositionMovement2 {
 		this.balanceFrom = balanceFrom;
 	}
 
+	@XmlElement(name = "BalTo", required = true)
 	public SecuritiesSubBalanceTypeAndQuantityBreakdown1 getBalanceTo() {
 		return balanceTo;
 	}
@@ -966,6 +976,7 @@ public class IntraPositionMovement2 {
 		this.balanceTo = balanceTo;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -974,6 +985,7 @@ public class IntraPositionMovement2 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public FinancialInstrumentAttributes36 getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -982,6 +994,7 @@ public class IntraPositionMovement2 {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "SttlmQty", required = true)
 	public FinancialInstrumentQuantity1Choice getSettlementQuantity() {
 		return settlementQuantity;
 	}
@@ -990,6 +1003,7 @@ public class IntraPositionMovement2 {
 		this.settlementQuantity = settlementQuantity;
 	}
 
+	@XmlElement(name = "SttldQty")
 	public FinancialInstrumentQuantity1Choice getSettledQuantity() {
 		return settledQuantity;
 	}
@@ -998,6 +1012,7 @@ public class IntraPositionMovement2 {
 		this.settledQuantity = settledQuantity;
 	}
 
+	@XmlElement(name = "PrevslySttldQty")
 	public FinancialInstrumentQuantity1Choice getPreviouslySettledQuantity() {
 		return previouslySettledQuantity;
 	}
@@ -1006,6 +1021,7 @@ public class IntraPositionMovement2 {
 		this.previouslySettledQuantity = previouslySettledQuantity;
 	}
 
+	@XmlElement(name = "RmngToBeSttldQty")
 	public FinancialInstrumentQuantity1Choice getRemainingToBeSettledQuantity() {
 		return remainingToBeSettledQuantity;
 	}
@@ -1014,6 +1030,7 @@ public class IntraPositionMovement2 {
 		this.remainingToBeSettledQuantity = remainingToBeSettledQuantity;
 	}
 
+	@XmlElement(name = "IntnddSttlmDt", required = true)
 	public DateAndDateTimeChoice getIntendedSettlementDate() {
 		return intendedSettlementDate;
 	}
@@ -1022,6 +1039,7 @@ public class IntraPositionMovement2 {
 		this.intendedSettlementDate = intendedSettlementDate;
 	}
 
+	@XmlElement(name = "FctvSttlmDt")
 	public DateAndDateTimeChoice getEffectiveSettlementDate() {
 		return effectiveSettlementDate;
 	}
@@ -1030,6 +1048,7 @@ public class IntraPositionMovement2 {
 		this.effectiveSettlementDate = effectiveSettlementDate;
 	}
 
+	@XmlElement(name = "StsDt")
 	public ISODateTime getStatusDate() {
 		return statusDate;
 	}
@@ -1038,6 +1057,7 @@ public class IntraPositionMovement2 {
 		this.statusDate = statusDate;
 	}
 
+	@XmlElement(name = "Lnkgs")
 	public List<Linkages26> getLinkages() {
 		return linkages;
 	}
@@ -1046,6 +1066,7 @@ public class IntraPositionMovement2 {
 		this.linkages = linkages;
 	}
 
+	@XmlElement(name = "SctiesSubBalId")
 	public GenericIdentification37 getSecuritiesSubBalanceIdentification() {
 		return securitiesSubBalanceIdentification;
 	}
@@ -1054,6 +1075,7 @@ public class IntraPositionMovement2 {
 		this.securitiesSubBalanceIdentification = securitiesSubBalanceIdentification;
 	}
 
+	@XmlElement(name = "Prty")
 	public PriorityNumeric1Choice getPriority() {
 		return priority;
 	}
@@ -1062,6 +1084,7 @@ public class IntraPositionMovement2 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "CorpActnEvtTp")
 	public CorporateActionEventType3Choice getCorporateActionEventType() {
 		return corporateActionEventType;
 	}
@@ -1070,6 +1093,7 @@ public class IntraPositionMovement2 {
 		this.corporateActionEventType = corporateActionEventType;
 	}
 
+	@XmlElement(name = "MsgOrgtr")
 	public SystemPartyIdentification5 getMessageOriginator() {
 		return messageOriginator;
 	}
@@ -1078,6 +1102,7 @@ public class IntraPositionMovement2 {
 		this.messageOriginator = messageOriginator;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -1086,6 +1111,7 @@ public class IntraPositionMovement2 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "InstrPrcgAddtlDtls")
 	public Max350Text getInstructionProcessingAdditionalDetails() {
 		return instructionProcessingAdditionalDetails;
 	}
@@ -1094,6 +1120,7 @@ public class IntraPositionMovement2 {
 		this.instructionProcessingAdditionalDetails = instructionProcessingAdditionalDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -52,9 +54,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code reda.005.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
@@ -93,6 +92,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code reda.005.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -104,6 +106,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentFundReportRequestV02", propOrder = {"messageIdentification", "previousReference", "relatedReference", "fundProcessingPassportReport"})
 public class InvestmentFundReportRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -144,6 +148,14 @@ public class InvestmentFundReportRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundReportRequestV02.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 previousReference;
 	/**
@@ -178,6 +190,14 @@ public class InvestmentFundReportRequestV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundReportRequestV02.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 relatedReference;
@@ -215,6 +235,14 @@ public class InvestmentFundReportRequestV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundReportRequestV02.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<FundParameters3Choice> fundProcessingPassportReport;
 	/**
@@ -250,6 +278,14 @@ public class InvestmentFundReportRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> FundParameters3Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentFundReportRequestV02.class.getMethod("getFundProcessingPassportReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -262,8 +298,9 @@ public class InvestmentFundReportRequestV02 {
 				rootElement = "Document";
 				xmlTag = "InvstmtFndRptReq";
 				businessArea_lazy = () -> ReferenceDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(InvestmentFundReportRequestV02.mmMessageIdentification, InvestmentFundReportRequestV02.mmPreviousReference, InvestmentFundReportRequestV02.mmRelatedReference,
-						InvestmentFundReportRequestV02.mmFundProcessingPassportReport);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.mmMessageIdentification,
+						com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.mmPreviousReference, com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.mmRelatedReference,
+						com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.mmFundProcessingPassportReport);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "reda";
@@ -273,10 +310,16 @@ public class InvestmentFundReportRequestV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvestmentFundReportRequestV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -285,6 +328,7 @@ public class InvestmentFundReportRequestV02 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -293,6 +337,7 @@ public class InvestmentFundReportRequestV02 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
@@ -301,11 +346,18 @@ public class InvestmentFundReportRequestV02 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "FPPRpt", required = true)
 	public List<FundParameters3Choice> getFundProcessingPassportReport() {
 		return fundProcessingPassportReport;
 	}
 
 	public void setFundProcessingPassportReport(List<FundParameters3Choice> fundProcessingPassportReport) {
 		this.fundProcessingPassportReport = fundProcessingPassportReport;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:reda.005.02.02")
+	static public class Document {
+		@XmlElement(name = "InvstmtFndRptReq", required = true)
+		public InvestmentFundReportRequestV02 messageBody;
 	}
 }

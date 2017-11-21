@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.OrganisationIdentification6;
 import com.tools20022.repository.msg.PersonIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Nature or use of the account.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Nature or use of the account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Party8Choice", propOrder = {"organisationIdentification", "privateIdentification"})
 public class Party8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class Party8Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgId", required = true)
 	public OrganisationIdentification6 getOrganisationIdentification() {
 		return organisationIdentification;
 	}
@@ -185,6 +192,7 @@ public class Party8Choice {
 		this.organisationIdentification = organisationIdentification;
 	}
 
+	@XmlElement(name = "PrvtId", required = true)
 	public PersonIdentification5 getPrivateIdentification() {
 		return privateIdentification;
 	}

@@ -63,6 +63,8 @@ public class RestrictedFINDecimalNumber {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RestrictedFINDecimalNumber";
 				definition = "Number of objects represented as a decimal number, for example, 0.75 or 45.6.";
+				totalDigits = 14;
+				fractionDigits = 14;
 			}
 		});
 		return mmObject_lazy.get();

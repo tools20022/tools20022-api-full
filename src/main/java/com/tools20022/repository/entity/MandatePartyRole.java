@@ -37,16 +37,13 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmMandatePartyRole
- * Mandate.mmMandatePartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MandatePartyRole#mmMandate
+ * MandatePartyRole.mmMandate}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -56,11 +53,14 @@ import java.util.List;
  * </li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.MandatePartyRole#mmMandate
- * MandatePartyRole.mmMandate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmMandatePartyRole
+ * Mandate.mmMandatePartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,11 +98,6 @@ public class MandatePartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.MandatePartyRole
-	 * MandatePartyRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -110,6 +105,11 @@ public class MandatePartyRole extends Role {
 	 * OwnerType1.mmMandateType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.MandatePartyRole
+	 * MandatePartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -124,7 +124,7 @@ public class MandatePartyRole extends Role {
 	public static final MMBusinessAssociationEnd mmMandate = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(OwnerType1.mmMandateType);
-			elementContext_lazy = () -> MandatePartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MandatePartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Mandate";
@@ -146,7 +146,12 @@ public class MandatePartyRole extends Role {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Mandate.mmMandatePartyRole);
 				subType_lazy = () -> Arrays.asList(MandateHolder.mmObject(), MandateIssuer.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(MandatePartyRole.mmMandate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MandatePartyRole.mmMandate);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MandatePartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

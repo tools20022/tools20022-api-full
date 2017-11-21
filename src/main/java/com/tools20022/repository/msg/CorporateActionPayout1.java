@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding the securities or cash payout.
@@ -116,6 +120,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides additional information regarding the securities or cash payout."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionPayout1", propOrder = {"payoutNumber", "payoutType", "DTCCashRate", "projectedAmount", "DTCDisbursedSecurity", "DTCDisbursedSecurityDescription", "subReasonCode", "DTCSecurityRate", "cashInLieuOfSharePrice",
+		"payingAgent", "securityIdentification", "securityDescription", "DTCAssetClass", "DTCAssetType", "declaredPayableDate", "eventType", "subEventType", "position", "fractionalPosition", "DTCPositionCaptureDate",
+		"participantCrossReference"})
 public class CorporateActionPayout1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1061,6 +1069,7 @@ public class CorporateActionPayout1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PyoutNb", required = true)
 	public Exact3NumericText getPayoutNumber() {
 		return payoutNumber;
 	}
@@ -1069,6 +1078,7 @@ public class CorporateActionPayout1 {
 		this.payoutNumber = payoutNumber;
 	}
 
+	@XmlElement(name = "PyoutTp", required = true)
 	public DTCCPayoutType2Code getPayoutType() {
 		return payoutType;
 	}
@@ -1077,6 +1087,7 @@ public class CorporateActionPayout1 {
 		this.payoutType = payoutType;
 	}
 
+	@XmlElement(name = "DTCCshRate")
 	public DecimalNumber getDTCCashRate() {
 		return dTCCashRate;
 	}
@@ -1085,6 +1096,7 @@ public class CorporateActionPayout1 {
 		this.dTCCashRate = dTCCashRate;
 	}
 
+	@XmlElement(name = "PrjctdAmt")
 	public DecimalNumber getProjectedAmount() {
 		return projectedAmount;
 	}
@@ -1093,6 +1105,7 @@ public class CorporateActionPayout1 {
 		this.projectedAmount = projectedAmount;
 	}
 
+	@XmlElement(name = "DTCDsbrsdScty")
 	public CUSIPIdentification1 getDTCDisbursedSecurity() {
 		return dTCDisbursedSecurity;
 	}
@@ -1101,6 +1114,7 @@ public class CorporateActionPayout1 {
 		this.dTCDisbursedSecurity = dTCDisbursedSecurity;
 	}
 
+	@XmlElement(name = "DTCDsbrsdSctyDesc")
 	public RestrictedFINMax31Text getDTCDisbursedSecurityDescription() {
 		return dTCDisbursedSecurityDescription;
 	}
@@ -1109,6 +1123,7 @@ public class CorporateActionPayout1 {
 		this.dTCDisbursedSecurityDescription = dTCDisbursedSecurityDescription;
 	}
 
+	@XmlElement(name = "SubRsnCd", required = true)
 	public Max4AlphaNumericText getSubReasonCode() {
 		return subReasonCode;
 	}
@@ -1117,6 +1132,7 @@ public class CorporateActionPayout1 {
 		this.subReasonCode = subReasonCode;
 	}
 
+	@XmlElement(name = "DTCSctyRate")
 	public DecimalNumber getDTCSecurityRate() {
 		return dTCSecurityRate;
 	}
@@ -1125,6 +1141,7 @@ public class CorporateActionPayout1 {
 		this.dTCSecurityRate = dTCSecurityRate;
 	}
 
+	@XmlElement(name = "CshInLieuOfShrPric")
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getCashInLieuOfSharePrice() {
 		return cashInLieuOfSharePrice;
 	}
@@ -1133,6 +1150,7 @@ public class CorporateActionPayout1 {
 		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
 	}
 
+	@XmlElement(name = "PngAgt")
 	public Max8Text getPayingAgent() {
 		return payingAgent;
 	}
@@ -1141,6 +1159,7 @@ public class CorporateActionPayout1 {
 		this.payingAgent = payingAgent;
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public CUSIPIdentification1 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -1149,6 +1168,7 @@ public class CorporateActionPayout1 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "SctyDesc")
 	public RestrictedFINMax31Text getSecurityDescription() {
 		return securityDescription;
 	}
@@ -1157,6 +1177,7 @@ public class CorporateActionPayout1 {
 		this.securityDescription = securityDescription;
 	}
 
+	@XmlElement(name = "DTCAsstClss")
 	public AssetClass1Code getDTCAssetClass() {
 		return dTCAssetClass;
 	}
@@ -1165,6 +1186,7 @@ public class CorporateActionPayout1 {
 		this.dTCAssetClass = dTCAssetClass;
 	}
 
+	@XmlElement(name = "DTCAsstTp")
 	public DTCAssetType1Code getDTCAssetType() {
 		return dTCAssetType;
 	}
@@ -1173,6 +1195,7 @@ public class CorporateActionPayout1 {
 		this.dTCAssetType = dTCAssetType;
 	}
 
+	@XmlElement(name = "DclrdPyblDt")
 	public ISODate getDeclaredPayableDate() {
 		return declaredPayableDate;
 	}
@@ -1181,6 +1204,7 @@ public class CorporateActionPayout1 {
 		this.declaredPayableDate = declaredPayableDate;
 	}
 
+	@XmlElement(name = "EvtTp")
 	public ExtendedEventType1Code getEventType() {
 		return eventType;
 	}
@@ -1189,6 +1213,7 @@ public class CorporateActionPayout1 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "SubEvtTp")
 	public DTCCSubEventType1Code getSubEventType() {
 		return subEventType;
 	}
@@ -1197,6 +1222,7 @@ public class CorporateActionPayout1 {
 		this.subEventType = subEventType;
 	}
 
+	@XmlElement(name = "Pos")
 	public SignedQuantityFormat4 getPosition() {
 		return position;
 	}
@@ -1205,6 +1231,7 @@ public class CorporateActionPayout1 {
 		this.position = position;
 	}
 
+	@XmlElement(name = "FrctnlPos")
 	public SignedQuantityFormat4 getFractionalPosition() {
 		return fractionalPosition;
 	}
@@ -1213,6 +1240,7 @@ public class CorporateActionPayout1 {
 		this.fractionalPosition = fractionalPosition;
 	}
 
+	@XmlElement(name = "DTCPosCaptrDt")
 	public ISODate getDTCPositionCaptureDate() {
 		return dTCPositionCaptureDate;
 	}
@@ -1221,6 +1249,7 @@ public class CorporateActionPayout1 {
 		this.dTCPositionCaptureDate = dTCPositionCaptureDate;
 	}
 
+	@XmlElement(name = "PtcptCrossRef")
 	public Max16Text getParticipantCrossReference() {
 		return participantCrossReference;
 	}

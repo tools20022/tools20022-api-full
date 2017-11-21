@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.ProceedsDefinition;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -43,6 +44,75 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmSecuritiesQuantity
+ * SecuritiesProceedsDefinition.mmSecuritiesQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmConditionalQuantity
+ * SecuritiesProceedsDefinition.mmConditionalQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmOverAndAboveNormalEnsuredEntitlementQuantity
+ * SecuritiesProceedsDefinition.mmOverAndAboveNormalEnsuredEntitlementQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmQuantityToReceive
+ * SecuritiesProceedsDefinition.mmQuantityToReceive}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmStatusQuantity
+ * SecuritiesProceedsDefinition.mmStatusQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmParallelTradingPeriod
+ * SecuritiesProceedsDefinition.mmParallelTradingPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmAdditionalQuantityForSubscribedResultantSecurities
+ * SecuritiesProceedsDefinition.
+ * mmAdditionalQuantityForSubscribedResultantSecurities}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmAdditionalQuantityForExistingSecurities
+ * SecuritiesProceedsDefinition.mmAdditionalQuantityForExistingSecurities}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmNewToOld
+ * SecuritiesProceedsDefinition.mmNewToOld}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmNewSecuritiesToUnderlyingSecurities
+ * SecuritiesProceedsDefinition.mmNewSecuritiesToUnderlyingSecurities}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmReinvestmentAmount
+ * SecuritiesProceedsDefinition.mmReinvestmentAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmIntermediateSecuritiesDistributionType
+ * SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmBoardLotSecuritiesQuantity
+ * SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmNewDenominationSecuritiesQuantity
+ * SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmIntermediateSecuritiesToUnderlyingRatio
+ * SecuritiesProceedsDefinition.mmIntermediateSecuritiesToUnderlyingRatio}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmReinvestmentDiscountToMarket
+ * SecuritiesProceedsDefinition.mmReinvestmentDiscountToMarket}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmRedemptionDate
+ * SecuritiesProceedsDefinition.mmRedemptionDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmAssentedLinePeriod
+ * SecuritiesProceedsDefinition.mmAssentedLinePeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmSellThruIssuerPeriod
+ * SecuritiesProceedsDefinition.mmSellThruIssuerPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmShareRanking
+ * SecuritiesProceedsDefinition.mmShareRanking}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.ProceedsDefinition
+ * ProceedsDefinition}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -151,75 +221,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * QuantityRatio.mmIntermediateSecuritiesProceedsDefinition}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.ProceedsDefinition
- * ProceedsDefinition}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmSecuritiesQuantity
- * SecuritiesProceedsDefinition.mmSecuritiesQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmConditionalQuantity
- * SecuritiesProceedsDefinition.mmConditionalQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmOverAndAboveNormalEnsuredEntitlementQuantity
- * SecuritiesProceedsDefinition.mmOverAndAboveNormalEnsuredEntitlementQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmQuantityToReceive
- * SecuritiesProceedsDefinition.mmQuantityToReceive}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmStatusQuantity
- * SecuritiesProceedsDefinition.mmStatusQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmParallelTradingPeriod
- * SecuritiesProceedsDefinition.mmParallelTradingPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmAdditionalQuantityForSubscribedResultantSecurities
- * SecuritiesProceedsDefinition.
- * mmAdditionalQuantityForSubscribedResultantSecurities}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmAdditionalQuantityForExistingSecurities
- * SecuritiesProceedsDefinition.mmAdditionalQuantityForExistingSecurities}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmNewToOld
- * SecuritiesProceedsDefinition.mmNewToOld}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmNewSecuritiesToUnderlyingSecurities
- * SecuritiesProceedsDefinition.mmNewSecuritiesToUnderlyingSecurities}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmReinvestmentAmount
- * SecuritiesProceedsDefinition.mmReinvestmentAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmIntermediateSecuritiesDistributionType
- * SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmBoardLotSecuritiesQuantity
- * SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmNewDenominationSecuritiesQuantity
- * SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmIntermediateSecuritiesToUnderlyingRatio
- * SecuritiesProceedsDefinition.mmIntermediateSecuritiesToUnderlyingRatio}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmReinvestmentDiscountToMarket
- * SecuritiesProceedsDefinition.mmReinvestmentDiscountToMarket}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmRedemptionDate
- * SecuritiesProceedsDefinition.mmRedemptionDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmAssentedLinePeriod
- * SecuritiesProceedsDefinition.mmAssentedLinePeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmSellThruIssuerPeriod
- * SecuritiesProceedsDefinition.mmSellThruIssuerPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmShareRanking
- * SecuritiesProceedsDefinition.mmShareRanking}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -258,11 +259,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -404,6 +400,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -427,7 +428,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					CorporateActionOption118.mmSecuritiesQuantity, CorporateActionOption115.mmSecuritiesQuantity, CorporateActionOption114.mmSecuritiesQuantity, CorporateActionOption125.mmSecuritiesQuantity,
 					CorporateActionOption123.mmSecuritiesQuantity, CorporateActionOption127.mmSecuritiesQuantity, CorporateActionOption130.mmSecuritiesQuantity, CorporateActionOption131.mmSecuritiesQuantityOrInstructedAmount,
 					CorporateActionOption129.mmSecuritiesQuantity, CorporateActionOption134.mmSecuritiesQuantityOrInstructedAmount, CorporateActionOption135.mmSecuritiesQuantity, CorporateActionOption133.mmSecuritiesQuantity);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesQuantity";
@@ -459,11 +460,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -482,6 +478,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -497,7 +498,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	public static final MMBusinessAssociationEnd mmConditionalQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesOption2.mmConditionalQuantity, SecuritiesOption7.mmConditionalQuantity, SecuritiesOption52.mmConditionalQuantity, SecuritiesOption54.mmConditionalQuantity);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConditionalQuantity";
@@ -528,11 +529,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -544,6 +540,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * SecuritiesOption7.mmOverAndAboveNormalEnsuredEntitlementQuantity}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -560,7 +561,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	public static final MMBusinessAssociationEnd mmOverAndAboveNormalEnsuredEntitlementQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesOption2.mmOverAndAboveNormalEnsuredEntitlementQuantity, SecuritiesOption7.mmOverAndAboveNormalEnsuredEntitlementQuantity);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OverAndAboveNormalEnsuredEntitlementQuantity";
@@ -591,11 +592,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -614,6 +610,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -630,7 +631,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 		{
 			derivation_lazy = () -> Arrays.asList(InstructedOrQuantityToReceive1Choice.mmQuantityToReceive, InstructedOrQuantityToReceive2Choice.mmQuantityToReceive, StatusOrQuantityToReceive1Choice.mmQuantityToReceive,
 					StatusOrQuantityToReceive2Choice.mmQuantityToReceive);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuantityToReceive";
@@ -660,11 +661,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -683,6 +679,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -697,7 +698,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	public static final MMBusinessAssociationEnd mmStatusQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(StatusOrQuantityToReceive1Choice.mmStatusQuantity, StatusOrQuantityToReceive2Choice.mmStatusQuantity, CorporateActionOption116.mmStatusQuantity, CorporateActionOption121.mmStatusQuantity);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StatusQuantity";
@@ -728,11 +729,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -757,6 +753,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -773,7 +774,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod4.mmParallelTradingPeriod, CorporateActionPeriod9.mmParallelTradingPeriod, CorporateActionPeriod5.mmParallelTradingPeriod,
 					CorporateActionPeriod7.mmParallelTradingPeriod, CorporateActionPeriod2.mmParallelTradingPeriod, CorporateActionPeriod11.mmParallelTradingPeriod);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ParallelTradingPeriod";
@@ -805,11 +806,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
 	 * QuantityRatio}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -903,6 +899,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -928,7 +929,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					CorporateActionRate58.mmAdditionalQuantityForSubscribedResultantSecurities, CorporateActionRate65.mmAdditionalQuantityForSubscribedResultantSecurities,
 					CorporateActionRate69.mmAdditionalQuantityForSubscribedResultantSecurities, CorporateActionRate72.mmAdditionalQuantityForSubscribedResultantSecurities,
 					CorporateActionRate77.mmAdditionalQuantityForSubscribedResultantSecurities, CorporateActionRate75.mmAdditionalQuantityForSubscribedResultantSecurities);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdditionalQuantityForSubscribedResultantSecurities";
@@ -962,11 +963,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
 	 * QuantityRatio}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1039,6 +1035,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1061,7 +1062,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					CorporateActionRate48.mmAdditionalQuantityForExistingSecurities, CorporateActionRate49.mmAdditionalQuantityForExistingSecurities, CorporateActionRate58.mmAdditionalQuantityForExistingSecurities,
 					CorporateActionRate65.mmAdditionalQuantityForExistingSecurities, CorporateActionRate69.mmAdditionalQuantityForExistingSecurities, CorporateActionRate72.mmAdditionalQuantityForExistingSecurities,
 					CorporateActionRate77.mmAdditionalQuantityForExistingSecurities, CorporateActionRate75.mmAdditionalQuantityForExistingSecurities);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdditionalQuantityForExistingSecurities";
@@ -1094,11 +1095,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
 	 * QuantityRatio}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1168,6 +1164,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1186,7 +1187,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					CorporateActionRate34.mmNewToOld, CorporateActionRate7.mmNewToOld, CorporateActionRate13.mmNewToOld, CorporateActionRate17.mmNewToOld, CorporateActionRate19.mmNewToOld, CorporateActionRate28.mmNewToOld,
 					CorporateActionRate33.mmNewToOld, CorporateActionRate2.mmNewToOld, CorporateActionRate48.mmNewToOld, CorporateActionRate49.mmNewToOld, CorporateActionRate58.mmNewToOld, CorporateActionRate65.mmNewToOld,
 					CorporateActionRate69.mmNewToOld, CorporateActionRate72.mmNewToOld, CorporateActionRate77.mmNewToOld, CorporateActionRate75.mmNewToOld);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewToOld";
@@ -1217,11 +1218,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
 	 * QuantityRatio}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1243,6 +1239,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1259,7 +1260,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate6.mmNewSecuritiesToUnderlyingSecurities, CorporateActionRate11.mmNewSecuritiesToUnderlyingSecurities, CorporateActionRate7.mmNewSecuritiesToUnderlyingSecurities,
 					CorporateActionRate13.mmNewSecuritiesToUnderlyingSecurities, CorporateActionRate2.mmNewSecuritiesToUnderlyingSecurities);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewSecuritiesToUnderlyingSecurities";
@@ -1282,11 +1283,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1404,6 +1400,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1426,7 +1427,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					CorporateActionAmounts33.mmReinvestmentAmount, CorporateActionAmounts32.mmReinvestmentAmount, CorporateActionAmounts35.mmReinvestmentAmount, CorporateActionAmounts37.mmReinvestmentAmount,
 					CorporateActionAmounts36.mmReinvestmentAmount, CorporateActionAmounts38.mmReinvestmentAmount, CorporateActionAmounts39.mmReinvestmentAmount, CorporateActionAmounts41.mmReinvestmentAmount,
 					CorporateActionAmounts40.mmReinvestmentAmount);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReinvestmentAmount";
@@ -1434,6 +1435,14 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesProceedsDefinition.class.getMethod("getReinvestmentAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected IntermediateSecurityDistributionTypeCode intermediateSecuritiesDistributionType;
@@ -1448,11 +1457,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionTypeCode
 	 * IntermediateSecurityDistributionTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1695,6 +1699,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1735,7 +1744,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					IntermediateSecuritiesDistributionTypeFormat18Choice.mmCode, IntermediateSecuritiesDistributionTypeFormat18Choice.mmProprietary, IntermediateSecuritiesDistributionTypeFormat17Choice.mmCode,
 					IntermediateSecuritiesDistributionTypeFormat17Choice.mmProprietary, CorporateActionGeneralInformation111.mmIntermediateSecuritiesDistributionType, CorporateActionOption129.mmIntermediateSecuritiesDistributionType,
 					CorporateActionGeneralInformation118.mmIntermediateSecuritiesDistributionType, CorporateActionOption135.mmIntermediateSecuritiesDistributionType);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntermediateSecuritiesDistributionType";
@@ -1743,6 +1752,14 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IntermediateSecurityDistributionTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesProceedsDefinition.class.getMethod("getIntermediateSecuritiesDistributionType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesQuantity boardLotSecuritiesQuantity;
@@ -1763,11 +1780,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1828,6 +1840,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1845,7 +1862,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					CorporateActionQuantity3.mmNewBoardLotQuantity, CorporateActionQuantity4.mmNewBoardLotQuantity, CorporateActionQuantity5.mmNewBoardLotQuantity, CorporateActionQuantity6.mmNewBoardLotQuantity,
 					CorporateAction2.mmNewBoardLotSecuritiesQuantity, SecurityOption1.mmNewBoardLotSecuritiesQuantity, SecuritiesOption51.mmNewBoardLotQuantity, CorporateActionQuantity7.mmNewBoardLotQuantity,
 					SecuritiesOption56.mmNewBoardLotQuantity, CorporateActionQuantity8.mmNewBoardLotQuantity);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BoardLotSecuritiesQuantity";
@@ -1876,11 +1893,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1941,6 +1953,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1960,7 +1977,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					CorporateActionQuantity3.mmNewDenominationQuantity, CorporateActionQuantity4.mmNewDenominationQuantity, CorporateActionQuantity5.mmNewDenominationQuantity, CorporateActionQuantity6.mmNewDenominationQuantity,
 					CorporateAction2.mmNewDenominationSecuritiesQuantity, SecurityOption1.mmNewDenominationSecuritiesQuantity, SecuritiesOption51.mmNewDenominationQuantity, CorporateActionQuantity7.mmNewDenominationQuantity,
 					SecuritiesOption56.mmNewDenominationQuantity, CorporateActionQuantity8.mmNewDenominationQuantity);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewDenominationSecuritiesQuantity";
@@ -1991,11 +2008,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
 	 * QuantityRatio}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2034,6 +2046,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2052,7 +2069,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					FinancialInstrumentAttributes17.mmIntermediateSecuritiesToUnderlyingRatio, FinancialInstrumentAttributes25.mmIntermediateSecuritiesToUnderlyingRatio,
 					FinancialInstrumentAttributes46.mmIntermediateSecuritiesToUnderlyingRatio, FinancialInstrumentAttributes47.mmIntermediateSecuritiesToUnderlyingRatio,
 					FinancialInstrumentAttributes68.mmIntermediateSecuritiesToUnderlyingRatio, FinancialInstrumentAttributes73.mmIntermediateSecuritiesToUnderlyingRatio);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntermediateSecuritiesToUnderlyingRatio";
@@ -2076,11 +2093,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2126,6 +2138,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2145,7 +2162,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					CorporateActionRate35.mmReinvestmentDiscountRateToMarket, CorporateActionRate41.mmReinvestmentDiscountRateToMarket, CorporateActionRate1.mmReinvestmentDiscountToMarket,
 					CorporateActionRate43.mmReinvestmentDiscountRateToMarket, CorporateActionRate56.mmReinvestmentDiscountRateToMarket, CorporateActionRate66.mmReinvestmentDiscountRateToMarket,
 					CorporateActionRate78.mmReinvestmentDiscountRateToMarket);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReinvestmentDiscountToMarket";
@@ -2153,6 +2170,14 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesProceedsDefinition.class.getMethod("getReinvestmentDiscountToMarket", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime redemptionDate;
@@ -2166,11 +2191,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2179,6 +2199,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * CorporateActionDate2.mmRedemptionDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2195,7 +2220,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	public static final MMBusinessAttribute mmRedemptionDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate2.mmRedemptionDate);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RedemptionDate";
@@ -2203,6 +2228,14 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesProceedsDefinition.class.getMethod("getRedemptionDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DateTimePeriod assentedLinePeriod;
@@ -2223,11 +2256,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2236,6 +2264,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * CorporateActionPeriod2.mmAssentedLinePeriod}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2250,7 +2283,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	public static final MMBusinessAssociationEnd mmAssentedLinePeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod2.mmAssentedLinePeriod);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssentedLinePeriod";
@@ -2281,11 +2314,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2294,6 +2322,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * CorporateActionPeriod2.mmSellThruIssuerPeriod}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2310,7 +2343,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	public static final MMBusinessAssociationEnd mmSellThruIssuerPeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod2.mmSellThruIssuerPeriod);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SellThruIssuerPeriod";
@@ -2333,11 +2366,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ShareRankingCode
 	 * ShareRankingCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
-	 * SecuritiesProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2346,6 +2374,11 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * SecurityOption1.mmShareRanking}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+	 * SecuritiesProceedsDefinition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2361,7 +2394,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	public static final MMBusinessAttribute mmShareRanking = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecurityOption1.mmShareRanking);
-			elementContext_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShareRanking";
@@ -2369,6 +2402,14 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ShareRankingCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesProceedsDefinition.class.getMethod("getShareRanking", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -2388,19 +2429,28 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 						com.tools20022.repository.entity.QuantityRatio.mmAdditionalQuantityForSubscribedSecuritiesProceedsDefinition, com.tools20022.repository.entity.QuantityRatio.mmNewToOldProceedsDefinition,
 						com.tools20022.repository.entity.QuantityRatio.mmNewToUnderlyingProceedsDefinition, com.tools20022.repository.entity.QuantityRatio.mmIntermediateSecuritiesProceedsDefinition);
 				superType_lazy = () -> ProceedsDefinition.mmObject();
-				element_lazy = () -> Arrays.asList(SecuritiesProceedsDefinition.mmSecuritiesQuantity, SecuritiesProceedsDefinition.mmConditionalQuantity, SecuritiesProceedsDefinition.mmOverAndAboveNormalEnsuredEntitlementQuantity,
-						SecuritiesProceedsDefinition.mmQuantityToReceive, SecuritiesProceedsDefinition.mmStatusQuantity, SecuritiesProceedsDefinition.mmParallelTradingPeriod,
-						SecuritiesProceedsDefinition.mmAdditionalQuantityForSubscribedResultantSecurities, SecuritiesProceedsDefinition.mmAdditionalQuantityForExistingSecurities, SecuritiesProceedsDefinition.mmNewToOld,
-						SecuritiesProceedsDefinition.mmNewSecuritiesToUnderlyingSecurities, SecuritiesProceedsDefinition.mmReinvestmentAmount, SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType,
-						SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity, SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity, SecuritiesProceedsDefinition.mmIntermediateSecuritiesToUnderlyingRatio,
-						SecuritiesProceedsDefinition.mmReinvestmentDiscountToMarket, SecuritiesProceedsDefinition.mmRedemptionDate, SecuritiesProceedsDefinition.mmAssentedLinePeriod, SecuritiesProceedsDefinition.mmSellThruIssuerPeriod,
-						SecuritiesProceedsDefinition.mmShareRanking);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmSecuritiesQuantity, com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmConditionalQuantity,
+						com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmOverAndAboveNormalEnsuredEntitlementQuantity, com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmQuantityToReceive,
+						com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmStatusQuantity, com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmParallelTradingPeriod,
+						com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmAdditionalQuantityForSubscribedResultantSecurities,
+						com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmAdditionalQuantityForExistingSecurities, com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmNewToOld,
+						com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmNewSecuritiesToUnderlyingSecurities, com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmReinvestmentAmount,
+						com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType, com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity,
+						com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity, com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmIntermediateSecuritiesToUnderlyingRatio,
+						com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmReinvestmentDiscountToMarket, com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmRedemptionDate,
+						com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmAssentedLinePeriod, com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmSellThruIssuerPeriod,
+						com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmShareRanking);
 				derivationComponent_lazy = () -> Arrays.asList(IntermediateSecuritiesDistributionTypeFormat2Choice.mmObject(), IntermediateSecuritiesDistributionTypeFormat6Choice.mmObject(),
 						IntermediateSecuritiesDistributionTypeFormat7Choice.mmObject(), IntermediateSecuritiesDistributionTypeFormat4Choice.mmObject(), IntermediateSecuritiesDistributionTypeFormat1Choice.mmObject(),
 						IntermediateSecuritiesDistributionTypeFormat5Choice.mmObject(), IntermediateSecuritiesDistributionTypeFormat9Choice.mmObject(), IntermediateSecuritiesDistributionTypeFormat10Choice.mmObject(),
 						IntermediateSecuritiesDistributionTypeFormat3Choice.mmObject(), IntermediateSecuritiesDistributionTypeFormat8Choice.mmObject(), IntermediateSecurityDistributionType1FormatChoice.mmObject(),
 						IntermediateSecuritiesDistributionTypeFormat13Choice.mmObject(), IntermediateSecuritiesDistributionTypeFormat14Choice.mmObject(), IntermediateSecuritiesDistributionTypeFormat16Choice.mmObject(),
 						IntermediateSecuritiesDistributionTypeFormat15Choice.mmObject(), IntermediateSecuritiesDistributionTypeFormat18Choice.mmObject(), IntermediateSecuritiesDistributionTypeFormat17Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesProceedsDefinition.class;
 			}
 		});
 		return mmObject_lazy.get();

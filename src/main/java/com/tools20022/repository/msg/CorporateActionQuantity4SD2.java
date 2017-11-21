@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extension to specify corporate action quantities.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Extension to specify corporate action quantities."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionQuantity4SD2", propOrder = {"placeAndName", "plannedQuantity", "plannedExcessPurchaseQuantity", "minimumQuantityCode", "maximumQuantityCode", "oldShareUnitQuantity", "newShareUnitQuantity"})
 public class CorporateActionQuantity4SD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -403,6 +409,7 @@ public class CorporateActionQuantity4SD2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -411,6 +418,7 @@ public class CorporateActionQuantity4SD2 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "PlandQty")
 	public PlannedQuantity1Choice getPlannedQuantity() {
 		return plannedQuantity;
 	}
@@ -419,6 +427,7 @@ public class CorporateActionQuantity4SD2 {
 		this.plannedQuantity = plannedQuantity;
 	}
 
+	@XmlElement(name = "PlandXcssPurchsQty")
 	public PlannedQuantity1Choice getPlannedExcessPurchaseQuantity() {
 		return plannedExcessPurchaseQuantity;
 	}
@@ -427,6 +436,7 @@ public class CorporateActionQuantity4SD2 {
 		this.plannedExcessPurchaseQuantity = plannedExcessPurchaseQuantity;
 	}
 
+	@XmlElement(name = "MinQtyCd")
 	public SecuritiesQuantity1Code getMinimumQuantityCode() {
 		return minimumQuantityCode;
 	}
@@ -435,6 +445,7 @@ public class CorporateActionQuantity4SD2 {
 		this.minimumQuantityCode = minimumQuantityCode;
 	}
 
+	@XmlElement(name = "MaxQtyCd")
 	public SecuritiesQuantity1Code getMaximumQuantityCode() {
 		return maximumQuantityCode;
 	}
@@ -443,6 +454,7 @@ public class CorporateActionQuantity4SD2 {
 		this.maximumQuantityCode = maximumQuantityCode;
 	}
 
+	@XmlElement(name = "OdShrUnitQty")
 	public FinancialInstrumentQuantity15Choice getOldShareUnitQuantity() {
 		return oldShareUnitQuantity;
 	}
@@ -451,6 +463,7 @@ public class CorporateActionQuantity4SD2 {
 		this.oldShareUnitQuantity = oldShareUnitQuantity;
 	}
 
+	@XmlElement(name = "NewShrUnitQty")
 	public FinancialInstrumentQuantity15Choice getNewShareUnitQuantity() {
 		return newShareUnitQuantity;
 	}

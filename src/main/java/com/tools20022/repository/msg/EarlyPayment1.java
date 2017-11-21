@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the payment terms of the underlying transaction.
@@ -80,6 +84,8 @@ import java.util.List;
  * PaymentTerms3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EarlyPayment1", propOrder = {"earlyPaymentDate", "discountPercent", "discountAmount", "earlyPaymentTaxSpecification", "earlyPaymentTaxTotal", "duePayableAmountWithEarlyPayment"})
 public class EarlyPayment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -378,6 +384,7 @@ public class EarlyPayment1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EarlyPmtDt", required = true)
 	public ISODate getEarlyPaymentDate() {
 		return earlyPaymentDate;
 	}
@@ -386,6 +393,7 @@ public class EarlyPayment1 {
 		this.earlyPaymentDate = earlyPaymentDate;
 	}
 
+	@XmlElement(name = "DscntPct", required = true)
 	public PercentageRate getDiscountPercent() {
 		return discountPercent;
 	}
@@ -394,6 +402,7 @@ public class EarlyPayment1 {
 		this.discountPercent = discountPercent;
 	}
 
+	@XmlElement(name = "DscntAmt", required = true)
 	public CurrencyAndAmount getDiscountAmount() {
 		return discountAmount;
 	}
@@ -402,6 +411,7 @@ public class EarlyPayment1 {
 		this.discountAmount = discountAmount;
 	}
 
+	@XmlElement(name = "EarlyPmtTaxSpcfctn")
 	public List<EarlyPaymentsVAT1> getEarlyPaymentTaxSpecification() {
 		return earlyPaymentTaxSpecification;
 	}
@@ -410,6 +420,7 @@ public class EarlyPayment1 {
 		this.earlyPaymentTaxSpecification = earlyPaymentTaxSpecification;
 	}
 
+	@XmlElement(name = "EarlyPmtTaxTtl")
 	public CurrencyAndAmount getEarlyPaymentTaxTotal() {
 		return earlyPaymentTaxTotal;
 	}
@@ -418,6 +429,7 @@ public class EarlyPayment1 {
 		this.earlyPaymentTaxTotal = earlyPaymentTaxTotal;
 	}
 
+	@XmlElement(name = "DuePyblAmtWthEarlyPmt")
 	public CurrencyAndAmount getDuePayableAmountWithEarlyPayment() {
 		return duePayableAmountWithEarlyPayment;
 	}

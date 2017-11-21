@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Product;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on the status of a trade.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeData5", propOrder = {"matchingSystemUniqueReference", "notificationIdentification", "matchingSystemMatchingReference", "currentStatusDateTime", "productType"})
 public class TradeData5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -312,6 +318,7 @@ public class TradeData5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MtchgSysUnqRef", required = true)
 	public Max35Text getMatchingSystemUniqueReference() {
 		return matchingSystemUniqueReference;
 	}
@@ -320,6 +327,7 @@ public class TradeData5 {
 		this.matchingSystemUniqueReference = matchingSystemUniqueReference;
 	}
 
+	@XmlElement(name = "NtfctnId")
 	public Max35Text getNotificationIdentification() {
 		return notificationIdentification;
 	}
@@ -328,6 +336,7 @@ public class TradeData5 {
 		this.notificationIdentification = notificationIdentification;
 	}
 
+	@XmlElement(name = "MtchgSysMtchgRef")
 	public Max35Text getMatchingSystemMatchingReference() {
 		return matchingSystemMatchingReference;
 	}
@@ -336,6 +345,7 @@ public class TradeData5 {
 		this.matchingSystemMatchingReference = matchingSystemMatchingReference;
 	}
 
+	@XmlElement(name = "CurStsDtTm")
 	public ISODateTime getCurrentStatusDateTime() {
 		return currentStatusDateTime;
 	}
@@ -344,6 +354,7 @@ public class TradeData5 {
 		this.currentStatusDateTime = currentStatusDateTime;
 	}
 
+	@XmlElement(name = "PdctTp")
 	public Max35Text getProductType() {
 		return productType;
 	}

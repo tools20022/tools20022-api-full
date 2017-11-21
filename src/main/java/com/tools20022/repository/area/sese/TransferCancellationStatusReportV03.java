@@ -21,9 +21,11 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -51,9 +53,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.010.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -100,6 +99,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.010.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -123,6 +125,8 @@ import java.util.List;
  * TransferCancellationStatusReportV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferCancellationStatusReportV03", propOrder = {"messageIdentification", "counterpartyReference", "relatedReference", "otherReference", "statusReport", "extension"})
 public class TransferCancellationStatusReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -131,6 +135,10 @@ public class TransferCancellationStatusReportV03 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV03
+	 * TransferCancellationStatusReportV03}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -143,10 +151,6 @@ public class TransferCancellationStatusReportV03 {
 	 * TransferCancellationStatusReportV03.mmOtherReference}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV03
-	 * TransferCancellationStatusReportV03}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -159,8 +163,9 @@ public class TransferCancellationStatusReportV03 {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Operation1";
-			messageDefinition_lazy = () -> TransferCancellationStatusReportV03.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(TransferCancellationStatusReportV03.mmRelatedReference, TransferCancellationStatusReportV03.mmOtherReference);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmRelatedReference,
+					com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmOtherReference);
 		}
 	};
 	protected MessageIdentification1 messageIdentification;
@@ -209,6 +214,14 @@ public class TransferCancellationStatusReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferCancellationStatusReportV03.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference2 counterpartyReference;
 	/**
@@ -255,6 +268,14 @@ public class TransferCancellationStatusReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferCancellationStatusReportV03.class.getMethod("getCounterpartyReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference3> relatedReference;
 	/**
@@ -290,6 +311,14 @@ public class TransferCancellationStatusReportV03 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferCancellationStatusReportV03.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<AdditionalReference3> otherReference;
@@ -328,6 +357,14 @@ public class TransferCancellationStatusReportV03 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferCancellationStatusReportV03.class.getMethod("getOtherReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CancellationStatusAndReason2 statusReport;
@@ -372,6 +409,14 @@ public class TransferCancellationStatusReportV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CancellationStatusAndReason2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferCancellationStatusReportV03.class.getMethod("getStatusReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -418,6 +463,14 @@ public class TransferCancellationStatusReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferCancellationStatusReportV03.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -429,12 +482,14 @@ public class TransferCancellationStatusReportV03 {
 				nextVersions_lazy = () -> Arrays.asList(TransferCancellationStatusReportV04.mmObject());
 				previousVersion_lazy = () -> TransferCancellationStatusReportV02.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(TransferCancellationStatusReportV03.mmOperation1);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmOperation1);
 				rootElement = "Document";
 				xmlTag = "TrfCxlStsRpt";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(TransferCancellationStatusReportV03.mmMessageIdentification, TransferCancellationStatusReportV03.mmCounterpartyReference,
-						TransferCancellationStatusReportV03.mmRelatedReference, TransferCancellationStatusReportV03.mmOtherReference, TransferCancellationStatusReportV03.mmStatusReport, TransferCancellationStatusReportV03.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmCounterpartyReference, com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmOtherReference, com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmStatusReport,
+						com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -444,10 +499,16 @@ public class TransferCancellationStatusReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TransferCancellationStatusReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -456,6 +517,7 @@ public class TransferCancellationStatusReportV03 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CtrPtyRef")
 	public AdditionalReference2 getCounterpartyReference() {
 		return counterpartyReference;
 	}
@@ -464,6 +526,7 @@ public class TransferCancellationStatusReportV03 {
 		this.counterpartyReference = counterpartyReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public List<AdditionalReference3> getRelatedReference() {
 		return relatedReference;
 	}
@@ -472,6 +535,7 @@ public class TransferCancellationStatusReportV03 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "OthrRef")
 	public List<AdditionalReference3> getOtherReference() {
 		return otherReference;
 	}
@@ -480,6 +544,7 @@ public class TransferCancellationStatusReportV03 {
 		this.otherReference = otherReference;
 	}
 
+	@XmlElement(name = "StsRpt", required = true)
 	public CancellationStatusAndReason2 getStatusReport() {
 		return statusReport;
 	}
@@ -488,11 +553,18 @@ public class TransferCancellationStatusReportV03 {
 		this.statusReport = statusReport;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.010.03.03")
+	static public class Document {
+		@XmlElement(name = "TrfCxlStsRpt", required = true)
+		public TransferCancellationStatusReportV03 messageBody;
 	}
 }

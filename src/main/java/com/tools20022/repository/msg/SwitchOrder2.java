@@ -30,6 +30,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transfer from one investment fund/fund class to another investment fund or
@@ -117,6 +121,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwitchOrder2", propOrder = {"orderDateTime", "orderReference", "investmentAccountDetails", "totalRedemptionAmount", "totalSubscriptionAmount", "expiryDateTime", "additionalCashIn", "resultingCashOut", "cancellationRight",
+		"redemptionLegDetails", "subscriptionLegDetails", "cashSettlementDetails", "foreignExchangeDetails"})
 public class SwitchOrder2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -820,6 +827,7 @@ public class SwitchOrder2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrDtTm")
 	public ISODateTime getOrderDateTime() {
 		return orderDateTime;
 	}
@@ -828,6 +836,7 @@ public class SwitchOrder2 {
 		this.orderDateTime = orderDateTime;
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -836,6 +845,7 @@ public class SwitchOrder2 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount13 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -844,6 +854,7 @@ public class SwitchOrder2 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "TtlRedAmt")
 	public ActiveOrHistoricCurrencyAndAmount getTotalRedemptionAmount() {
 		return totalRedemptionAmount;
 	}
@@ -852,6 +863,7 @@ public class SwitchOrder2 {
 		this.totalRedemptionAmount = totalRedemptionAmount;
 	}
 
+	@XmlElement(name = "TtlSbcptAmt")
 	public ActiveOrHistoricCurrencyAndAmount getTotalSubscriptionAmount() {
 		return totalSubscriptionAmount;
 	}
@@ -860,6 +872,7 @@ public class SwitchOrder2 {
 		this.totalSubscriptionAmount = totalSubscriptionAmount;
 	}
 
+	@XmlElement(name = "XpryDtTm")
 	public ISODateTime getExpiryDateTime() {
 		return expiryDateTime;
 	}
@@ -868,6 +881,7 @@ public class SwitchOrder2 {
 		this.expiryDateTime = expiryDateTime;
 	}
 
+	@XmlElement(name = "AddtlCshIn")
 	public ActiveOrHistoricCurrencyAndAmount getAdditionalCashIn() {
 		return additionalCashIn;
 	}
@@ -876,6 +890,7 @@ public class SwitchOrder2 {
 		this.additionalCashIn = additionalCashIn;
 	}
 
+	@XmlElement(name = "RsltgCshOut")
 	public ActiveOrHistoricCurrencyAndAmount getResultingCashOut() {
 		return resultingCashOut;
 	}
@@ -884,6 +899,7 @@ public class SwitchOrder2 {
 		this.resultingCashOut = resultingCashOut;
 	}
 
+	@XmlElement(name = "CxlRght")
 	public CancellationRight1 getCancellationRight() {
 		return cancellationRight;
 	}
@@ -892,6 +908,7 @@ public class SwitchOrder2 {
 		this.cancellationRight = cancellationRight;
 	}
 
+	@XmlElement(name = "RedLegDtls", required = true)
 	public List<SwitchRedemptionLegOrder2> getRedemptionLegDetails() {
 		return redemptionLegDetails;
 	}
@@ -900,6 +917,7 @@ public class SwitchOrder2 {
 		this.redemptionLegDetails = redemptionLegDetails;
 	}
 
+	@XmlElement(name = "SbcptLegDtls", required = true)
 	public List<SwitchSubscriptionLegOrder2> getSubscriptionLegDetails() {
 		return subscriptionLegDetails;
 	}
@@ -908,6 +926,7 @@ public class SwitchOrder2 {
 		this.subscriptionLegDetails = subscriptionLegDetails;
 	}
 
+	@XmlElement(name = "CshSttlmDtls")
 	public PaymentTransaction20 getCashSettlementDetails() {
 		return cashSettlementDetails;
 	}
@@ -916,6 +935,7 @@ public class SwitchOrder2 {
 		this.cashSettlementDetails = cashSettlementDetails;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public ForeignExchangeTerms5 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}

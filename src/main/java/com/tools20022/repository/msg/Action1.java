@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of actions to be performed by the POI (Point Of Interaction) system.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Action1", propOrder = {"actionType", "messageToPresent"})
 public class Action1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -182,6 +188,7 @@ public class Action1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ActnTp", required = true)
 	public ActionType1Code getActionType() {
 		return actionType;
 	}
@@ -190,6 +197,7 @@ public class Action1 {
 		this.actionType = actionType;
 	}
 
+	@XmlElement(name = "MsgToPres")
 	public ActionMessage1 getMessageToPresent() {
 		return messageToPresent;
 	}

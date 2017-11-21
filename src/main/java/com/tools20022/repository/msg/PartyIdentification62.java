@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a party.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification62", propOrder = {"BICFI", "proprietaryIdentification", "nameAndAddress"})
 public class PartyIdentification62 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -265,6 +271,7 @@ public class PartyIdentification62 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BICFI")
 	public BICFIIdentifier getBICFI() {
 		return bICFI;
 	}
@@ -273,6 +280,7 @@ public class PartyIdentification62 {
 		this.bICFI = bICFI;
 	}
 
+	@XmlElement(name = "PrtryId")
 	public GenericIdentification1 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
@@ -281,6 +289,7 @@ public class PartyIdentification62 {
 		this.proprietaryIdentification = proprietaryIdentification;
 	}
 
+	@XmlElement(name = "NmAndAdr")
 	public NameAndAddress5 getNameAndAddress() {
 		return nameAndAddress;
 	}

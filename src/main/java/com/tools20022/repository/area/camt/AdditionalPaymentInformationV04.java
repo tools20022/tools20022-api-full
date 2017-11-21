@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.CaseAssignment3;
 import com.tools20022.repository.msg.PaymentComplementaryInformation3;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -80,9 +82,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.028.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -119,6 +118,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.028.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -142,6 +144,8 @@ import java.util.List;
  * AdditionalPaymentInformationV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalPaymentInformationV04", propOrder = {"assignment", "case", "underlying", "information", "supplementaryData"})
 public class AdditionalPaymentInformationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -191,6 +195,14 @@ public class AdditionalPaymentInformationV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AdditionalPaymentInformationV04.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case3 case_;
 	/**
@@ -232,6 +244,14 @@ public class AdditionalPaymentInformationV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Case3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AdditionalPaymentInformationV04.class.getMethod("getCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected UnderlyingTransaction2Choice underlying;
@@ -277,6 +297,14 @@ public class AdditionalPaymentInformationV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTransaction2Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AdditionalPaymentInformationV04.class.getMethod("getUnderlying", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PaymentComplementaryInformation3 information;
 	/**
@@ -321,6 +349,14 @@ public class AdditionalPaymentInformationV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentComplementaryInformation3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AdditionalPaymentInformationV04.class.getMethod("getInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -368,6 +404,14 @@ public class AdditionalPaymentInformationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AdditionalPaymentInformationV04.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -382,8 +426,9 @@ public class AdditionalPaymentInformationV04 {
 				rootElement = "Document";
 				xmlTag = "AddtlPmtInf";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AdditionalPaymentInformationV04.mmAssignment, AdditionalPaymentInformationV04.mmCase, AdditionalPaymentInformationV04.mmUnderlying,
-						AdditionalPaymentInformationV04.mmInformation, AdditionalPaymentInformationV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.AdditionalPaymentInformationV04.mmAssignment, com.tools20022.repository.area.camt.AdditionalPaymentInformationV04.mmCase,
+						com.tools20022.repository.area.camt.AdditionalPaymentInformationV04.mmUnderlying, com.tools20022.repository.area.camt.AdditionalPaymentInformationV04.mmInformation,
+						com.tools20022.repository.area.camt.AdditionalPaymentInformationV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -393,10 +438,16 @@ public class AdditionalPaymentInformationV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AdditionalPaymentInformationV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment3 getAssignment() {
 		return assignment;
 	}
@@ -405,6 +456,7 @@ public class AdditionalPaymentInformationV04 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "Case", required = true)
 	public Case3 getCase() {
 		return case_;
 	}
@@ -413,6 +465,7 @@ public class AdditionalPaymentInformationV04 {
 		this.case_ = case_;
 	}
 
+	@XmlElement(name = "Undrlyg", required = true)
 	public UnderlyingTransaction2Choice getUnderlying() {
 		return underlying;
 	}
@@ -421,6 +474,7 @@ public class AdditionalPaymentInformationV04 {
 		this.underlying = underlying;
 	}
 
+	@XmlElement(name = "Inf", required = true)
 	public PaymentComplementaryInformation3 getInformation() {
 		return information;
 	}
@@ -429,11 +483,18 @@ public class AdditionalPaymentInformationV04 {
 		this.information = information;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.028.04.04")
+	static public class Document {
+		@XmlElement(name = "AddtlPmtInf", required = true)
+		public AdditionalPaymentInformationV04 messageBody;
 	}
 }

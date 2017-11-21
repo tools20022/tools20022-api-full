@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Further information on the return reason of the transaction.
@@ -69,6 +73,8 @@ import java.util.List;
  * definition} = "Further information on the return reason of the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReturnReasonInformation1", propOrder = {"returnOriginator", "returnReason", "additionalReturnReasonInformation"})
 public class ReturnReasonInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -221,6 +227,7 @@ public class ReturnReasonInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RtrOrgtr")
 	public PartyIdentification8 getReturnOriginator() {
 		return returnOriginator;
 	}
@@ -229,6 +236,7 @@ public class ReturnReasonInformation1 {
 		this.returnOriginator = returnOriginator;
 	}
 
+	@XmlElement(name = "RtrRsn")
 	public ReturnReason1Choice getReturnReason() {
 		return returnReason;
 	}
@@ -237,6 +245,7 @@ public class ReturnReasonInformation1 {
 		this.returnReason = returnReason;
 	}
 
+	@XmlElement(name = "AddtlRtrRsnInf")
 	public List<Max105Text> getAdditionalReturnReasonInformation() {
 		return additionalReturnReasonInformation;
 	}

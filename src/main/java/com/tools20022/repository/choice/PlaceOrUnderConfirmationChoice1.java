@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PlaceOfPresentation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a location and codified form.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between a location and codified form."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PlaceOrUnderConfirmationChoice1", propOrder = {"placeOfPresentation", "presentationUnderConfirmation"})
 public class PlaceOrUnderConfirmationChoice1 {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -171,6 +177,7 @@ public class PlaceOrUnderConfirmationChoice1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcOfPresntn", required = true)
 	public PlaceOfPresentation1 getPlaceOfPresentation() {
 		return placeOfPresentation;
 	}
@@ -179,6 +186,7 @@ public class PlaceOrUnderConfirmationChoice1 {
 		this.placeOfPresentation = placeOfPresentation;
 	}
 
+	@XmlElement(name = "PresntnUdrConf", required = true)
 	public PresentationParty1Code getPresentationUnderConfirmation() {
 		return presentationUnderConfirmation;
 	}

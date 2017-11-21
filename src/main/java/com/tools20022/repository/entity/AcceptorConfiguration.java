@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +39,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmApplicationIdentification
+ * AcceptorConfiguration.mmApplicationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmFinancialCapture
+ * AcceptorConfiguration.mmFinancialCapture}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmBatchTransferContent
+ * AcceptorConfiguration.mmBatchTransferContent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmExchangePolicy
+ * AcceptorConfiguration.mmExchangePolicy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmMaximumNumber
+ * AcceptorConfiguration.mmMaximumNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmMaximumAmount
+ * AcceptorConfiguration.mmMaximumAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmReconciliationByAcquirer
+ * AcceptorConfiguration.mmReconciliationByAcquirer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmTotalsPerCurrency
+ * AcceptorConfiguration.mmTotalsPerCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmProtectCardData
+ * AcceptorConfiguration.mmProtectCardData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmRetailerParameters
+ * AcceptorConfiguration.mmRetailerParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmApplicationParameters
+ * AcceptorConfiguration.mmApplicationParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmTerminalManagementSystem
+ * AcceptorConfiguration.mmTerminalManagementSystem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmApplicationVersion
+ * AcceptorConfiguration.mmApplicationVersion}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -205,50 +250,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcquirerProtocolParameters10.mmOnLineTransaction}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmApplicationIdentification
- * AcceptorConfiguration.mmApplicationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmFinancialCapture
- * AcceptorConfiguration.mmFinancialCapture}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmBatchTransferContent
- * AcceptorConfiguration.mmBatchTransferContent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmExchangePolicy
- * AcceptorConfiguration.mmExchangePolicy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmMaximumNumber
- * AcceptorConfiguration.mmMaximumNumber}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmMaximumAmount
- * AcceptorConfiguration.mmMaximumAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmReconciliationByAcquirer
- * AcceptorConfiguration.mmReconciliationByAcquirer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmTotalsPerCurrency
- * AcceptorConfiguration.mmTotalsPerCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmProtectCardData
- * AcceptorConfiguration.mmProtectCardData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmRetailerParameters
- * AcceptorConfiguration.mmRetailerParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmApplicationParameters
- * AcceptorConfiguration.mmApplicationParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmTerminalManagementSystem
- * AcceptorConfiguration.mmTerminalManagementSystem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmApplicationVersion
- * AcceptorConfiguration.mmApplicationVersion}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -278,11 +279,6 @@ public class AcceptorConfiguration {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
-	 * AcceptorConfiguration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -325,6 +321,11 @@ public class AcceptorConfiguration {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
+	 * AcceptorConfiguration}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -341,7 +342,7 @@ public class AcceptorConfiguration {
 					ApplicationParameters2.mmApplicationIdentification, AcquirerProtocolParameters6.mmApplicationIdentification, ApplicationParameters3.mmApplicationIdentification, AcquirerProtocolParameters7.mmApplicationIdentification,
 					ApplicationParameters4.mmApplicationIdentification, ApplicationParameters5.mmApplicationIdentification, AcquirerProtocolParameters9.mmApplicationIdentification, ApplicationParameters6.mmApplicationIdentification,
 					AcquirerProtocolParameters10.mmApplicationIdentification);
-			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApplicationIdentification";
@@ -349,6 +350,14 @@ public class AcceptorConfiguration {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorConfiguration.class.getMethod("getApplicationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected FinancialCaptureCode financialCapture;
@@ -362,11 +371,6 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialCaptureCode
 	 * FinancialCaptureCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
-	 * AcceptorConfiguration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -385,6 +389,11 @@ public class AcceptorConfiguration {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
+	 * AcceptorConfiguration}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -400,7 +409,7 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(AcquirerProtocolParameters2.mmFinancialCapture, AcquirerProtocolParameters4.mmFinancialCapture, AcquirerProtocolParameters5.mmFinancialCapture,
 					AcquirerProtocolParameters8.mmFinancialCapture);
-			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialCapture";
@@ -408,6 +417,14 @@ public class AcceptorConfiguration {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FinancialCaptureCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorConfiguration.class.getMethod("getFinancialCapture", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BatchTransactionTypeCode batchTransferContent;
@@ -421,11 +438,6 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.BatchTransactionTypeCode
 	 * BatchTransactionTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
-	 * AcceptorConfiguration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -462,6 +474,11 @@ public class AcceptorConfiguration {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
+	 * AcceptorConfiguration}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -477,7 +494,7 @@ public class AcceptorConfiguration {
 			derivation_lazy = () -> Arrays.asList(AcquirerProtocolParameters2.mmBatchTransfer, AcquirerProtocolParameters1.mmBatchTransferContent, AcquirerProtocolParameters4.mmBatchTransfer,
 					AcquirerProtocolParameters3.mmBatchTransferContent, AcquirerProtocolParameters6.mmBatchTransferContent, AcquirerProtocolParameters5.mmBatchTransfer, AcquirerProtocolParameters7.mmBatchTransferContent,
 					AcquirerProtocolParameters8.mmBatchTransfer, AcquirerProtocolParameters9.mmBatchTransferContent, AcquirerProtocolParameters10.mmBatchTransferContent);
-			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BatchTransferContent";
@@ -485,6 +502,14 @@ public class AcceptorConfiguration {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BatchTransactionTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorConfiguration.class.getMethod("getBatchTransferContent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ExchangePolicyCode exchangePolicy;
@@ -498,11 +523,6 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ExchangePolicyCode
 	 * ExchangePolicyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
-	 * AcceptorConfiguration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -530,6 +550,11 @@ public class AcceptorConfiguration {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
+	 * AcceptorConfiguration}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -544,7 +569,7 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(ExchangeConfiguration1.mmExchangePolicy, ExchangeConfiguration2.mmExchangePolicy, ExchangeConfiguration3.mmExchangePolicy, ExchangeConfiguration5.mmExchangePolicy,
 					ExchangeConfiguration4.mmExchangePolicy, ExchangeConfiguration6.mmExchangePolicy, ExchangeConfiguration7.mmExchangePolicy);
-			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangePolicy";
@@ -552,6 +577,14 @@ public class AcceptorConfiguration {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExchangePolicyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorConfiguration.class.getMethod("getExchangePolicy", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number maximumNumber;
@@ -564,11 +597,6 @@ public class AcceptorConfiguration {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
-	 * AcceptorConfiguration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -596,6 +624,11 @@ public class AcceptorConfiguration {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
+	 * AcceptorConfiguration}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -610,7 +643,7 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(ExchangeConfiguration1.mmMaximumNumber, ExchangeConfiguration2.mmMaximumNumber, ExchangeConfiguration3.mmMaximumNumber, ExchangeConfiguration5.mmMaximumNumber,
 					ExchangeConfiguration4.mmMaximumNumber, ExchangeConfiguration6.mmMaximumNumber, ExchangeConfiguration7.mmMaximumNumber);
-			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumNumber";
@@ -618,6 +651,14 @@ public class AcceptorConfiguration {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorConfiguration.class.getMethod("getMaximumNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ImpliedCurrencyAndAmount maximumAmount;
@@ -631,11 +672,6 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ImpliedCurrencyAndAmount
 	 * ImpliedCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
-	 * AcceptorConfiguration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -663,6 +699,11 @@ public class AcceptorConfiguration {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
+	 * AcceptorConfiguration}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -678,7 +719,7 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(ExchangeConfiguration1.mmMaximumAmount, ExchangeConfiguration2.mmMaximumAmount, ExchangeConfiguration3.mmMaximumAmount, ExchangeConfiguration5.mmMaximumAmount,
 					ExchangeConfiguration4.mmMaximumAmount, ExchangeConfiguration6.mmMaximumAmount, ExchangeConfiguration7.mmMaximumAmount);
-			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumAmount";
@@ -686,6 +727,14 @@ public class AcceptorConfiguration {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorConfiguration.class.getMethod("getMaximumAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TrueFalseIndicator reconciliationByAcquirer;
@@ -700,11 +749,6 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
-	 * AcceptorConfiguration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -729,6 +773,11 @@ public class AcceptorConfiguration {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
+	 * AcceptorConfiguration}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -745,7 +794,7 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(AcquirerProtocolParameters1.mmReconciliationByAcquirer, AcquirerProtocolParameters3.mmReconciliationByAcquirer, AcquirerProtocolParameters6.mmReconciliationByAcquirer,
 					AcquirerProtocolParameters7.mmReconciliationByAcquirer, AcquirerProtocolParameters9.mmReconciliationByAcquirer, AcquirerProtocolParameters10.mmReconciliationByAcquirer);
-			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReconciliationByAcquirer";
@@ -753,6 +802,14 @@ public class AcceptorConfiguration {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorConfiguration.class.getMethod("getReconciliationByAcquirer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TrueFalseIndicator totalsPerCurrency;
@@ -766,11 +823,6 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
-	 * AcceptorConfiguration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -795,6 +847,11 @@ public class AcceptorConfiguration {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
+	 * AcceptorConfiguration}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -810,7 +867,7 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(AcquirerProtocolParameters1.mmTotalsPerCurrency, AcquirerProtocolParameters3.mmTotalsPerCurrency, AcquirerProtocolParameters6.mmTotalsPerCurrency,
 					AcquirerProtocolParameters7.mmTotalsPerCurrency, AcquirerProtocolParameters9.mmTotalsPerCurrency, AcquirerProtocolParameters10.mmTotalsPerCurrency);
-			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalsPerCurrency";
@@ -818,6 +875,14 @@ public class AcceptorConfiguration {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorConfiguration.class.getMethod("getTotalsPerCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TrueFalseIndicator protectCardData;
@@ -831,11 +896,6 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
-	 * AcceptorConfiguration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -860,6 +920,11 @@ public class AcceptorConfiguration {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
+	 * AcceptorConfiguration}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -875,7 +940,7 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(AcquirerProtocolParameters1.mmProtectCardData, AcquirerProtocolParameters3.mmProtectCardData, AcquirerProtocolParameters6.mmProtectCardData, AcquirerProtocolParameters7.mmProtectCardData,
 					AcquirerProtocolParameters9.mmProtectCardData, AcquirerProtocolParameters10.mmProtectCardData);
-			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProtectCardData";
@@ -883,6 +948,14 @@ public class AcceptorConfiguration {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorConfiguration.class.getMethod("getProtectCardData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max10000Binary retailerParameters;
@@ -896,11 +969,6 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max10000Binary
 	 * Max10000Binary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
-	 * AcceptorConfiguration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -916,6 +984,11 @@ public class AcceptorConfiguration {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
+	 * AcceptorConfiguration}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -929,7 +1002,7 @@ public class AcceptorConfiguration {
 	public static final MMBusinessAttribute mmRetailerParameters = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AcceptorConfigurationContent1.mmMerchantParameters, AcceptorConfigurationContent2.mmMerchantParameters, AcceptorConfigurationContent3.mmMerchantParameters);
-			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RetailerParameters";
@@ -937,6 +1010,14 @@ public class AcceptorConfiguration {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorConfiguration.class.getMethod("getRetailerParameters", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max10000Binary applicationParameters;
@@ -950,11 +1031,6 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max10000Binary
 	 * Max10000Binary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
-	 * AcceptorConfiguration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -979,6 +1055,11 @@ public class AcceptorConfiguration {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
+	 * AcceptorConfiguration}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -994,7 +1075,7 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(AcceptorConfigurationContent1.mmApplicationParameters, AcceptorConfigurationContent2.mmApplicationParameters, AcceptorConfigurationContent3.mmApplicationParameters,
 					AcceptorConfigurationContent4.mmApplicationParameters, AcceptorConfigurationContent5.mmApplicationParameters, AcceptorConfigurationContent6.mmApplicationParameters);
-			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApplicationParameters";
@@ -1002,6 +1083,14 @@ public class AcceptorConfiguration {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorConfiguration.class.getMethod("getApplicationParameters", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TerminalManagementSystem terminalManagementSystem;
@@ -1024,11 +1113,6 @@ public class AcceptorConfiguration {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
 	 * TerminalManagementSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
-	 * AcceptorConfiguration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1071,6 +1155,11 @@ public class AcceptorConfiguration {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
+	 * AcceptorConfiguration}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1089,7 +1178,7 @@ public class AcceptorConfiguration {
 					AcceptorConfigurationContent2.mmHostCommunicationParameters, AcceptorConfigurationContent3.mmHostCommunicationParameters, AcquirerProtocolParameters6.mmHost, AcquirerProtocolParameters7.mmHost,
 					AcceptorConfigurationContent4.mmHostCommunicationParameters, AcquirerProtocolParameters9.mmHost, AcceptorConfigurationContent5.mmHostCommunicationParameters, AcceptorConfigurationContent6.mmHostCommunicationParameters,
 					AcquirerProtocolParameters10.mmHost);
-			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminalManagementSystem";
@@ -1129,7 +1218,7 @@ public class AcceptorConfiguration {
 	 */
 	public static final MMBusinessAttribute mmApplicationVersion = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApplicationVersion";
@@ -1137,6 +1226,14 @@ public class AcceptorConfiguration {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorConfiguration.class.getMethod("getApplicationVersion", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1154,9 +1251,13 @@ public class AcceptorConfiguration {
 						AcceptorConfiguration2.mmDataSet, AcceptorConfigurationContent3.mmAcquirerProtocolParameters, AcquirerProtocolParameters6.mmOnLineTransaction, AcquirerProtocolParameters7.mmOnLineTransaction,
 						AcceptorConfigurationContent4.mmAcquirerProtocolParameters, AcquirerProtocolParameters9.mmOnLineTransaction, AcceptorConfigurationContent5.mmAcquirerProtocolParameters,
 						AcceptorConfigurationContent6.mmAcquirerProtocolParameters, AcquirerProtocolParameters10.mmOnLineTransaction);
-				element_lazy = () -> Arrays.asList(AcceptorConfiguration.mmApplicationIdentification, AcceptorConfiguration.mmFinancialCapture, AcceptorConfiguration.mmBatchTransferContent, AcceptorConfiguration.mmExchangePolicy,
-						AcceptorConfiguration.mmMaximumNumber, AcceptorConfiguration.mmMaximumAmount, AcceptorConfiguration.mmReconciliationByAcquirer, AcceptorConfiguration.mmTotalsPerCurrency, AcceptorConfiguration.mmProtectCardData,
-						AcceptorConfiguration.mmRetailerParameters, AcceptorConfiguration.mmApplicationParameters, AcceptorConfiguration.mmTerminalManagementSystem, AcceptorConfiguration.mmApplicationVersion);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AcceptorConfiguration.mmApplicationIdentification, com.tools20022.repository.entity.AcceptorConfiguration.mmFinancialCapture,
+						com.tools20022.repository.entity.AcceptorConfiguration.mmBatchTransferContent, com.tools20022.repository.entity.AcceptorConfiguration.mmExchangePolicy,
+						com.tools20022.repository.entity.AcceptorConfiguration.mmMaximumNumber, com.tools20022.repository.entity.AcceptorConfiguration.mmMaximumAmount,
+						com.tools20022.repository.entity.AcceptorConfiguration.mmReconciliationByAcquirer, com.tools20022.repository.entity.AcceptorConfiguration.mmTotalsPerCurrency,
+						com.tools20022.repository.entity.AcceptorConfiguration.mmProtectCardData, com.tools20022.repository.entity.AcceptorConfiguration.mmRetailerParameters,
+						com.tools20022.repository.entity.AcceptorConfiguration.mmApplicationParameters, com.tools20022.repository.entity.AcceptorConfiguration.mmTerminalManagementSystem,
+						com.tools20022.repository.entity.AcceptorConfiguration.mmApplicationVersion);
 				derivationComponent_lazy = () -> Arrays.asList(TerminalManagementDataSet2.mmObject(), TerminalManagementDataSet1.mmObject(), ExchangeConfiguration1.mmObject(), AcquirerProtocolParameters2.mmObject(),
 						AcquirerProtocolParameters1.mmObject(), ApplicationParameters1.mmObject(), AcceptorConfigurationContent1.mmObject(), TerminalManagementDataSet3.mmObject(), AcceptorConfiguration1.mmObject(),
 						ExchangeConfiguration2.mmObject(), ExchangeConfiguration3.mmObject(), AcquirerProtocolParameters4.mmObject(), AcquirerProtocolParameters3.mmObject(), ApplicationParameters2.mmObject(),
@@ -1166,6 +1267,11 @@ public class AcceptorConfiguration {
 						ExchangeConfiguration7.mmObject(), TerminalManagementDataSet14.mmObject(), AcceptorConfigurationContent4.mmObject(), ApplicationParameters4.mmObject(), AcceptorConfiguration5.mmObject(),
 						ApplicationParameters5.mmObject(), TerminalManagementDataSet19.mmObject(), AcquirerProtocolParameters9.mmObject(), AcceptorConfigurationContent5.mmObject(), AcceptorConfiguration6.mmObject(),
 						TerminalManagementDataSet20.mmObject(), ApplicationParameters6.mmObject(), AcceptorConfigurationContent6.mmObject(), AcquirerProtocolParameters10.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcceptorConfiguration.class;
 			}
 		});
 		return mmObject_lazy.get();

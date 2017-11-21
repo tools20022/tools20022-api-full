@@ -31,6 +31,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} = "EntryType; EntryTypeValue"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[BEOVW]{1,1}[0-9]{2,2}|DUM"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -67,6 +69,7 @@ public class EntryTypeIdentifier {
 				name = "EntryTypeIdentifier";
 				definition = "Identifier providing additional system specific information about the entry.";
 				identificationScheme = "EntryType; EntryTypeValue";
+				pattern = "[BEOVW]{1,1}[0-9]{2,2}|DUM";
 			}
 		});
 		return mmObject_lazy.get();

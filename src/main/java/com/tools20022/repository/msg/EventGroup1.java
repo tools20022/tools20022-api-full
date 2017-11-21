@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the significant events scheduled during the life of a security. Eg,
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EventGroup1", propOrder = {"type", "date", "price", "description"})
 public class EventGroup1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -242,6 +248,7 @@ public class EventGroup1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public EventType1Code getType() {
 		return type;
 	}
@@ -250,6 +257,7 @@ public class EventGroup1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODateTime getDate() {
 		return date;
 	}
@@ -258,6 +266,7 @@ public class EventGroup1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Pric")
 	public Price1 getPrice() {
 		return price;
 	}
@@ -266,6 +275,7 @@ public class EventGroup1 {
 		this.price = price;
 	}
 
+	@XmlElement(name = "Desc")
 	public Max350Text getDescription() {
 		return description;
 	}

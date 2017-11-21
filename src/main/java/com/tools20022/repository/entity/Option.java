@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,66 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Option#mmInstrumentAssignmentMethod
+ * Option.mmInstrumentAssignmentMethod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmSettleStyle
+ * Option.mmSettleStyle}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmStandardisation
+ * Option.mmStandardisation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmPositionLimit
+ * Option.mmPositionLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmUnderlyingType
+ * Option.mmUnderlyingType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmCoverIndicator
+ * Option.mmCoverIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Option#mmOptionConversionInformation
+ * Option.mmOptionConversionInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmOptionRatio
+ * Option.mmOptionRatio}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Option#mmSecuritiesOptionTrade
+ * Option.mmSecuritiesOptionTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmSettlementType
+ * Option.mmSettlementType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmStrikeMultiplier
+ * Option.mmStrikeMultiplier}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmExpiryLocation
+ * Option.mmExpiryLocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Option#mmFinalSettlementDate
+ * Option.mmFinalSettlementDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmOptionStyle
+ * Option.mmOptionStyle}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmCurrencyOption
+ * Option.mmCurrencyOption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Option#mmEarliestExerciseDate
+ * Option.mmEarliestExerciseDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmSettlementDays
+ * Option.mmSettlementDays}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmStrikePrice
+ * Option.mmStrikePrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmOptionStartDate
+ * Option.mmOptionStartDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmExpiryDateAndTime
+ * Option.mmExpiryDateAndTime}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmOptionType
+ * Option.mmOptionType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmStrikeValue
+ * Option.mmStrikeValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Option#mmSettlementPeriodType
+ * Option.mmSettlementPeriodType}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Derivative
+ * Derivative}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -121,66 +182,6 @@ import java.util.List;
  * UnsecuredMarketTransaction4.mmCallPutOption}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Derivative
- * Derivative}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Option#mmInstrumentAssignmentMethod
- * Option.mmInstrumentAssignmentMethod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmSettleStyle
- * Option.mmSettleStyle}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmStandardisation
- * Option.mmStandardisation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmPositionLimit
- * Option.mmPositionLimit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmUnderlyingType
- * Option.mmUnderlyingType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmCoverIndicator
- * Option.mmCoverIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Option#mmOptionConversionInformation
- * Option.mmOptionConversionInformation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmOptionRatio
- * Option.mmOptionRatio}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Option#mmSecuritiesOptionTrade
- * Option.mmSecuritiesOptionTrade}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmSettlementType
- * Option.mmSettlementType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmStrikeMultiplier
- * Option.mmStrikeMultiplier}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmExpiryLocation
- * Option.mmExpiryLocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Option#mmFinalSettlementDate
- * Option.mmFinalSettlementDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmOptionStyle
- * Option.mmOptionStyle}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmCurrencyOption
- * Option.mmCurrencyOption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Option#mmEarliestExerciseDate
- * Option.mmEarliestExerciseDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmSettlementDays
- * Option.mmSettlementDays}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmStrikePrice
- * Option.mmStrikePrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmOptionStartDate
- * Option.mmOptionStartDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmExpiryDateAndTime
- * Option.mmExpiryDateAndTime}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmOptionType
- * Option.mmOptionType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#mmStrikeValue
- * Option.mmStrikeValue}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Option#mmSettlementPeriodType
- * Option.mmSettlementPeriodType}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -212,10 +213,6 @@ public class Option extends Derivative {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AssignmentMethodCode
 	 * AssignmentMethodCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
-	 * Option}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -234,6 +231,10 @@ public class Option extends Derivative {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
+	 * Option}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -247,7 +248,7 @@ public class Option extends Derivative {
 	public static final MMBusinessAttribute mmInstrumentAssignmentMethod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Option1.mmInstrumentAssignmentMethod, AssignmentMethod1Choice.mmCode, AssignmentMethod1Choice.mmProprietary, Option7.mmInstrumentAssignmentMethod);
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstrumentAssignmentMethod";
@@ -255,6 +256,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssignmentMethodCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getInstrumentAssignmentMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SettleStyleCode settleStyle;
@@ -269,10 +278,6 @@ public class Option extends Derivative {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SettleStyleCode
 	 * SettleStyleCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
-	 * Option}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -293,6 +298,10 @@ public class Option extends Derivative {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
+	 * Option}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -308,7 +317,7 @@ public class Option extends Derivative {
 	public static final MMBusinessAttribute mmSettleStyle = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Option1.mmSettleStyle, FinancialInstrumentAttributes1.mmSettleStyle, SettleStyle1Choice.mmCode, SettleStyle1Choice.mmProprietary, Option7.mmOptionSettlementStyle);
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettleStyle";
@@ -316,6 +325,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettleStyleCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getSettleStyle", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected StandardisationCode standardisation;
@@ -331,10 +348,6 @@ public class Option extends Derivative {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.StandardisationCode
 	 * StandardisationCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
-	 * Option}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -342,6 +355,10 @@ public class Option extends Derivative {
 	 * Option1.mmStandardisation}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
+	 * Option}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -358,7 +375,7 @@ public class Option extends Derivative {
 	public static final MMBusinessAttribute mmStandardisation = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Option1.mmStandardisation);
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Standardisation";
@@ -366,6 +383,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StandardisationCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getStandardisation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number positionLimit;
@@ -380,10 +405,6 @@ public class Option extends Derivative {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
-	 * Option}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -395,6 +416,10 @@ public class Option extends Derivative {
 	 * FutureOrOptionDetails1.mmPositionLimit}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
+	 * Option}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -411,7 +436,7 @@ public class Option extends Derivative {
 	public static final MMBusinessAttribute mmPositionLimit = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmPositionLimit, FutureOrOptionDetails1.mmPositionLimit);
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PositionLimit";
@@ -419,6 +444,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getPositionLimit", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected UnderlyingTypeCode underlyingType;
@@ -450,7 +483,7 @@ public class Option extends Derivative {
 	 */
 	public static final MMBusinessAttribute mmUnderlyingType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnderlyingType";
@@ -458,6 +491,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnderlyingTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getUnderlyingType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator coverIndicator;
@@ -491,7 +532,7 @@ public class Option extends Derivative {
 	 */
 	public static final MMBusinessAttribute mmCoverIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CoverIndicator";
@@ -499,6 +540,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getCoverIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesConversion> optionConversionInformation;
@@ -540,7 +589,7 @@ public class Option extends Derivative {
 	 */
 	public static final MMBusinessAssociationEnd mmOptionConversionInformation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionConversionInformation";
@@ -564,10 +613,6 @@ public class Option extends Derivative {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
-	 * Option}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -579,6 +624,10 @@ public class Option extends Derivative {
 	 * InstrumentLeg3.mmLegOptionRatio}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
+	 * Option}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -595,7 +644,7 @@ public class Option extends Derivative {
 	public static final MMBusinessAttribute mmOptionRatio = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InstrumentLeg2.mmLegOptionRatio, InstrumentLeg3.mmLegOptionRatio);
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionRatio";
@@ -603,6 +652,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getOptionRatio", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesOptionTrade securitiesOptionTrade;
@@ -641,7 +698,7 @@ public class Option extends Derivative {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesOptionTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesOptionTrade";
@@ -665,10 +722,6 @@ public class Option extends Derivative {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTypeCode
 	 * SettlementTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
-	 * Option}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -691,6 +744,10 @@ public class Option extends Derivative {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
+	 * Option}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -707,7 +764,7 @@ public class Option extends Derivative {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmSettlementType, Option2.mmSettlementType, Option3.mmSettlementType, UnderlyingAttributes2.mmSettlementType, Option4.mmSettlementType, Option5.mmSettlementType,
 					Option6.mmSettlementType);
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementType";
@@ -715,6 +772,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getSettlementType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number strikeMultiplier;
@@ -728,10 +793,6 @@ public class Option extends Derivative {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
-	 * Option}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -748,6 +809,10 @@ public class Option extends Derivative {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
+	 * Option}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -763,7 +828,7 @@ public class Option extends Derivative {
 	public static final MMBusinessAttribute mmStrikeMultiplier = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Option1.mmStrikeMultiplier, Option7.mmStrikeMultiplier, DerivativeInstrument5.mmPriceMultiplier, DerivativeInstrument6.mmPriceMultiplier);
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StrikeMultiplier";
@@ -771,6 +836,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getStrikeMultiplier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max4AlphaNumericText expiryLocation;
@@ -784,10 +857,6 @@ public class Option extends Derivative {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max4AlphaNumericText
 	 * Max4AlphaNumericText}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
-	 * Option}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -810,6 +879,10 @@ public class Option extends Derivative {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
+	 * Option}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -824,7 +897,7 @@ public class Option extends Derivative {
 		{
 			derivation_lazy = () -> Arrays.asList(Option1.mmExpiryLocation, Option2.mmExpiryLocation, Option3.mmExpiryLocation, Option7.mmExpiryLocation, Option4.mmExpiryLocation, Option5.mmExpiryLocation, Option6.mmExpiryLocation,
 					Option10.mmExpiryLocation);
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryLocation";
@@ -832,6 +905,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getExpiryLocation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODate finalSettlementDate;
@@ -844,10 +925,6 @@ public class Option extends Derivative {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
-	 * Option}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -866,6 +943,10 @@ public class Option extends Derivative {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
+	 * Option}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -880,7 +961,7 @@ public class Option extends Derivative {
 	public static final MMBusinessAttribute mmFinalSettlementDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountsAndValueDate2.mmFinalSettlementDate, AmountsAndValueDate3.mmFinalSettlementDate, AmountsAndValueDate4.mmFinalSettlementDate, AmountsAndValueDate5.mmFinalSettlementDate);
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinalSettlementDate";
@@ -888,6 +969,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getFinalSettlementDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OptionStyleCode optionStyle;
@@ -901,10 +990,6 @@ public class Option extends Derivative {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OptionStyleCode
 	 * OptionStyleCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
-	 * Option}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1120,6 +1205,10 @@ public class Option extends Derivative {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
+	 * Option}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1150,7 +1239,7 @@ public class Option extends Derivative {
 					FinancialInstrumentAttributes70.mmOptionStyle, OptionStyle9Choice.mmCode, OptionStyle9Choice.mmProprietary, FinancialInstrumentAttributes71.mmOptionStyle, FinancialInstrumentAttributes75.mmOptionStyle,
 					FinancialInstrumentAttributes78.mmOptionStyle, DerivativeInstrument5.mmOptionExerciseStyle, DerivativeInstrument6.mmOptionExerciseStyle, FinancialInstrumentAttributes79.mmOptionStyle,
 					FinancialInstrumentAttributes80.mmOptionStyle, FinancialInstrumentAttributes85.mmOptionStyle, FinancialInstrumentAttributes83.mmOptionStyle);
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionStyle";
@@ -1158,6 +1247,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionStyleCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getOptionStyle", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.CurrencyOption> currencyOption;
@@ -1195,7 +1292,7 @@ public class Option extends Derivative {
 	 */
 	public static final MMBusinessAssociationEnd mmCurrencyOption = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyOption";
@@ -1216,10 +1313,6 @@ public class Option extends Derivative {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
-	 * Option}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1244,6 +1337,10 @@ public class Option extends Derivative {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
+	 * Option}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1258,7 +1355,7 @@ public class Option extends Derivative {
 		{
 			derivation_lazy = () -> Arrays.asList(Option2.mmEarliestExerciseDate, Option3.mmEarliestExerciseDate, Option4.mmEarliestExerciseDate, Option5.mmEarliestExerciseDate, Option6.mmEarliestExerciseDate,
 					OptionDateOrPeriod1Choice.mmEarliestExerciseDate);
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarliestExerciseDate";
@@ -1266,6 +1363,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getEarliestExerciseDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number settlementDays;
@@ -1298,7 +1403,7 @@ public class Option extends Derivative {
 	 */
 	public static final MMBusinessAttribute mmSettlementDays = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementDays";
@@ -1306,6 +1411,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getSettlementDays", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Price strikePrice;
@@ -1325,10 +1438,6 @@ public class Option extends Derivative {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Price Price}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
-	 * Option}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1340,6 +1449,10 @@ public class Option extends Derivative {
 	 * DerivativeInstrument6.mmStrikePrice}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
+	 * Option}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1356,7 +1469,7 @@ public class Option extends Derivative {
 	public static final MMBusinessAssociationEnd mmStrikePrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(DerivativeInstrument5.mmStrikePrice, DerivativeInstrument6.mmStrikePrice);
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StrikePrice";
@@ -1395,7 +1508,7 @@ public class Option extends Derivative {
 	 */
 	public static final MMBusinessAttribute mmOptionStartDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionStartDate";
@@ -1403,6 +1516,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getOptionStartDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime expiryDateAndTime;
@@ -1417,10 +1538,6 @@ public class Option extends Derivative {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
-	 * Option}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1445,6 +1562,10 @@ public class Option extends Derivative {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
+	 * Option}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1460,7 +1581,7 @@ public class Option extends Derivative {
 	public static final MMBusinessAttribute mmExpiryDateAndTime = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Option2.mmExpiryDateAndTime, Option3.mmExpiryDateAndTime, Option4.mmExpiryDateAndTime, Option5.mmExpiryDateAndTime, Option6.mmExpiryDateAndTime, Option10.mmExpiryDateAndTime);
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryDateAndTime";
@@ -1468,6 +1589,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getExpiryDateAndTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OptionDefinitionTypeCode optionType;
@@ -1483,10 +1612,6 @@ public class Option extends Derivative {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OptionDefinitionTypeCode
 	 * OptionDefinitionTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
-	 * Option}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1624,6 +1749,10 @@ public class Option extends Derivative {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
+	 * Option}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1647,7 +1776,7 @@ public class Option extends Derivative {
 					FinancialInstrumentAttributes29.mmOptionType, OptionType5Choice.mmCode, OptionType5Choice.mmProprietary, Option7.mmOptionType, FinancialInstrumentAttributes2.mmOptionType, Option12.mmType, Option10.mmOptionType,
 					FinancialInstrumentAttributes63.mmOptionType, FinancialInstrumentAttributes64.mmOptionType, OptionType6Choice.mmCode, OptionType6Choice.mmProprietary, FinancialInstrumentAttributes75.mmOptionType,
 					FinancialInstrumentAttributes78.mmOptionType, OptionType7Choice.mmCode, OptionType7Choice.mmProprietary, DerivativeInstrument5.mmOptionType, DerivativeInstrument6.mmOptionType);
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionType";
@@ -1655,6 +1784,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionDefinitionTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getOptionType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number strikeValue;
@@ -1668,10 +1805,6 @@ public class Option extends Derivative {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
-	 * Option}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1681,6 +1814,10 @@ public class Option extends Derivative {
 	 * Option7.mmStrikeValue}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Option
+	 * Option}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1697,7 +1834,7 @@ public class Option extends Derivative {
 	public static final MMBusinessAttribute mmStrikeValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Option1.mmStrikeValue, Option7.mmStrikeValue);
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StrikeValue";
@@ -1705,6 +1842,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getStrikeValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text settlementPeriodType;
@@ -1737,7 +1882,7 @@ public class Option extends Derivative {
 	 */
 	public static final MMBusinessAttribute mmSettlementPeriodType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Option.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementPeriodType";
@@ -1745,6 +1890,14 @@ public class Option extends Derivative {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Option.class.getMethod("getSettlementPeriodType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1760,14 +1913,23 @@ public class Option extends Derivative {
 				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentProperties1Choice.mmOption, UnsecuredMarketTransaction1.mmCallPutOption, UnsecuredMarketTransaction2.mmCallPutOption,
 						UnsecuredMarketTransaction3.mmCallPutOption, UnsecuredMarketTransaction4.mmCallPutOption);
 				superType_lazy = () -> com.tools20022.repository.entity.Derivative.mmObject();
-				element_lazy = () -> Arrays.asList(Option.mmInstrumentAssignmentMethod, Option.mmSettleStyle, Option.mmStandardisation, Option.mmPositionLimit, Option.mmUnderlyingType, Option.mmCoverIndicator,
-						Option.mmOptionConversionInformation, Option.mmOptionRatio, Option.mmSecuritiesOptionTrade, Option.mmSettlementType, Option.mmStrikeMultiplier, Option.mmExpiryLocation, Option.mmFinalSettlementDate,
-						Option.mmOptionStyle, Option.mmCurrencyOption, Option.mmEarliestExerciseDate, Option.mmSettlementDays, Option.mmStrikePrice, Option.mmOptionStartDate, Option.mmExpiryDateAndTime, Option.mmOptionType,
-						Option.mmStrikeValue, Option.mmSettlementPeriodType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Option.mmInstrumentAssignmentMethod, com.tools20022.repository.entity.Option.mmSettleStyle, com.tools20022.repository.entity.Option.mmStandardisation,
+						com.tools20022.repository.entity.Option.mmPositionLimit, com.tools20022.repository.entity.Option.mmUnderlyingType, com.tools20022.repository.entity.Option.mmCoverIndicator,
+						com.tools20022.repository.entity.Option.mmOptionConversionInformation, com.tools20022.repository.entity.Option.mmOptionRatio, com.tools20022.repository.entity.Option.mmSecuritiesOptionTrade,
+						com.tools20022.repository.entity.Option.mmSettlementType, com.tools20022.repository.entity.Option.mmStrikeMultiplier, com.tools20022.repository.entity.Option.mmExpiryLocation,
+						com.tools20022.repository.entity.Option.mmFinalSettlementDate, com.tools20022.repository.entity.Option.mmOptionStyle, com.tools20022.repository.entity.Option.mmCurrencyOption,
+						com.tools20022.repository.entity.Option.mmEarliestExerciseDate, com.tools20022.repository.entity.Option.mmSettlementDays, com.tools20022.repository.entity.Option.mmStrikePrice,
+						com.tools20022.repository.entity.Option.mmOptionStartDate, com.tools20022.repository.entity.Option.mmExpiryDateAndTime, com.tools20022.repository.entity.Option.mmOptionType,
+						com.tools20022.repository.entity.Option.mmStrikeValue, com.tools20022.repository.entity.Option.mmSettlementPeriodType);
 				derivationComponent_lazy = () -> Arrays.asList(OptionStyle4Choice.mmObject(), OptionType1Choice.mmObject(), OptionType2Choice.mmObject(), OptionStyle5Choice.mmObject(), OptionType3Choice.mmObject(),
 						OptionStyle1Choice.mmObject(), Option1.mmObject(), OptionStyle6Choice.mmObject(), OptionType4Choice.mmObject(), SettleStyle1Choice.mmObject(), OptionType5Choice.mmObject(), AssignmentMethod1Choice.mmObject(),
 						Option7.mmObject(), OptionStyle2Choice.mmObject(), Option12.mmObject(), OptionDateOrPeriod1Choice.mmObject(), OptionStyle8Choice.mmObject(), OptionType6Choice.mmObject(), OptionStyle9Choice.mmObject(),
 						OptionType7Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Option.class;
 			}
 		});
 		return mmObject_lazy.get();

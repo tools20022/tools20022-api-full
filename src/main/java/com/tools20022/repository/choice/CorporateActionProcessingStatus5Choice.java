@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.CorporateActionEventStatus1;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the status of the details of the corporate action event.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionProcessingStatus4Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionProcessingStatus5Choice", propOrder = {"code", "proprietary"})
 public class CorporateActionProcessingStatus5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -225,6 +231,7 @@ public class CorporateActionProcessingStatus5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public CorporateActionEventStatus1 getCode() {
 		return code;
 	}
@@ -233,6 +240,7 @@ public class CorporateActionProcessingStatus5Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification30 getProprietary() {
 		return proprietary;
 	}

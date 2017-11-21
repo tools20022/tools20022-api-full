@@ -29,41 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType1Code
- * PartyType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType3Code
- * PartyType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType4Code
- * PartyType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType5Code
- * PartyType5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType6Code
- * PartyType6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType7Code
- * PartyType7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType2Code
- * PartyType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType9Code
- * PartyType9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType10Code
- * PartyType10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType11Code
- * PartyType11Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType12Code
- * PartyType12Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType13Code
- * PartyType13Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType15Code
- * PartyType15Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType14Code
- * PartyType14Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType16Code
- * PartyType16Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.PartyTypeCode#mmSaleSystem
@@ -192,6 +157,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PartyTypeCode#mmAccountToBank
  * PartyTypeCode.mmAccountToBank}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType1Code
+ * PartyType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType3Code
+ * PartyType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType4Code
+ * PartyType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType5Code
+ * PartyType5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType6Code
+ * PartyType6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType7Code
+ * PartyType7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType2Code
+ * PartyType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType9Code
+ * PartyType9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType10Code
+ * PartyType10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType11Code
+ * PartyType11Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType12Code
+ * PartyType12Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType13Code
+ * PartyType13Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType15Code
+ * PartyType15Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType14Code
+ * PartyType14Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType16Code
+ * PartyType16Code}</li>
  * </ul>
  * </li>
  * <li>

@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.SecuritiesAccountReport1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to report between the securities account reference data
@@ -62,6 +66,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesAccountOrOperationalError1Choice", propOrder = {"securitiesAccountReport", "operationalError"})
 public class SecuritiesAccountOrOperationalError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class SecuritiesAccountOrOperationalError1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesAcctRpt", required = true)
 	public List<SecuritiesAccountReport1> getSecuritiesAccountReport() {
 		return securitiesAccountReport;
 	}
@@ -169,6 +176,7 @@ public class SecuritiesAccountOrOperationalError1Choice {
 		this.securitiesAccountReport = securitiesAccountReport;
 	}
 
+	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
 		return operationalError;
 	}

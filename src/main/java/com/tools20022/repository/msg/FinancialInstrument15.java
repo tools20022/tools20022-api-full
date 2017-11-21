@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the financial instrument.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the financial instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrument15", propOrder = {"identification", "instrumentDescription", "underlyingInstrumentIdentification"})
 public class FinancialInstrument15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -235,6 +241,7 @@ public class FinancialInstrument15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification6Choice getIdentification() {
 		return identification;
 	}
@@ -243,6 +250,7 @@ public class FinancialInstrument15 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "InstrmDesc")
 	public SecurityInstrumentDescription2 getInstrumentDescription() {
 		return instrumentDescription;
 	}
@@ -251,6 +259,7 @@ public class FinancialInstrument15 {
 		this.instrumentDescription = instrumentDescription;
 	}
 
+	@XmlElement(name = "UndrlygInstrmId")
 	public SecurityIdentification6Choice getUnderlyingInstrumentIdentification() {
 		return underlyingInstrumentIdentification;
 	}

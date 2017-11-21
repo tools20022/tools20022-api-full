@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.Pagination;
 import com.tools20022.repository.msg.PriceCorrection3;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -48,9 +50,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code reda.003.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ReferenceDataArchive
@@ -87,6 +86,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code reda.003.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -102,6 +104,8 @@ import java.util.List;
  * PriceReportCorrectionV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceReportCorrectionV03", propOrder = {"messageIdentification", "poolReference", "previousReference", "messagePagination", "priceCorrectionDetails"})
 public class PriceReportCorrectionV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -142,6 +146,14 @@ public class PriceReportCorrectionV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCorrectionV03.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -176,6 +188,14 @@ public class PriceReportCorrectionV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCorrectionV03.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 previousReference;
@@ -212,6 +232,14 @@ public class PriceReportCorrectionV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCorrectionV03.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Pagination messagePagination;
 	/**
@@ -245,6 +273,14 @@ public class PriceReportCorrectionV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCorrectionV03.class.getMethod("getMessagePagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<PriceCorrection3> priceCorrectionDetails;
@@ -283,6 +319,14 @@ public class PriceReportCorrectionV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> PriceCorrection3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PriceReportCorrectionV03.class.getMethod("getPriceCorrectionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -296,8 +340,9 @@ public class PriceReportCorrectionV03 {
 				rootElement = "Document";
 				xmlTag = "PricRptCrrctnV03";
 				businessArea_lazy = () -> ReferenceDataArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PriceReportCorrectionV03.mmMessageIdentification, PriceReportCorrectionV03.mmPoolReference, PriceReportCorrectionV03.mmPreviousReference,
-						PriceReportCorrectionV03.mmMessagePagination, PriceReportCorrectionV03.mmPriceCorrectionDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmMessageIdentification, com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmPoolReference,
+						com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmPreviousReference, com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmMessagePagination,
+						com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmPriceCorrectionDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "reda";
@@ -307,10 +352,16 @@ public class PriceReportCorrectionV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PriceReportCorrectionV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -319,6 +370,7 @@ public class PriceReportCorrectionV03 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -327,6 +379,7 @@ public class PriceReportCorrectionV03 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -335,6 +388,7 @@ public class PriceReportCorrectionV03 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "MsgPgntn", required = true)
 	public Pagination getMessagePagination() {
 		return messagePagination;
 	}
@@ -343,11 +397,18 @@ public class PriceReportCorrectionV03 {
 		this.messagePagination = messagePagination;
 	}
 
+	@XmlElement(name = "PricCrrctnDtls", required = true)
 	public List<PriceCorrection3> getPriceCorrectionDetails() {
 		return priceCorrectionDetails;
 	}
 
 	public void setPriceCorrectionDetails(List<PriceCorrection3> priceCorrectionDetails) {
 		this.priceCorrectionDetails = priceCorrectionDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:reda.003.03.03")
+	static public class Document {
+		@XmlElement(name = "PricRptCrrctnV03", required = true)
+		public PriceReportCorrectionV03 messageBody;
 	}
 }

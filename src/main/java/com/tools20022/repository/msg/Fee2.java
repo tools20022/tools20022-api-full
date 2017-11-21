@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money associated with a service.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Charge18}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Fee2", propOrder = {"type", "basis", "standardAmount", "standardRate", "discountDetails", "appliedAmount", "appliedRate", "nonStandardSLAReference", "recipientIdentification", "informativeIndicator"})
 public class Fee2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -605,6 +611,7 @@ public class Fee2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ChargeType5Choice getType() {
 		return type;
 	}
@@ -613,6 +620,7 @@ public class Fee2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Bsis")
 	public ChargeBasis2Choice getBasis() {
 		return basis;
 	}
@@ -621,6 +629,7 @@ public class Fee2 {
 		this.basis = basis;
 	}
 
+	@XmlElement(name = "StdAmt")
 	public ActiveCurrencyAndAmount getStandardAmount() {
 		return standardAmount;
 	}
@@ -629,6 +638,7 @@ public class Fee2 {
 		this.standardAmount = standardAmount;
 	}
 
+	@XmlElement(name = "StdRate")
 	public PercentageRate getStandardRate() {
 		return standardRate;
 	}
@@ -637,6 +647,7 @@ public class Fee2 {
 		this.standardRate = standardRate;
 	}
 
+	@XmlElement(name = "DscntDtls")
 	public ChargeOrCommissionDiscount1 getDiscountDetails() {
 		return discountDetails;
 	}
@@ -645,6 +656,7 @@ public class Fee2 {
 		this.discountDetails = discountDetails;
 	}
 
+	@XmlElement(name = "ApldAmt")
 	public ActiveCurrencyAndAmount getAppliedAmount() {
 		return appliedAmount;
 	}
@@ -653,6 +665,7 @@ public class Fee2 {
 		this.appliedAmount = appliedAmount;
 	}
 
+	@XmlElement(name = "ApldRate")
 	public PercentageRate getAppliedRate() {
 		return appliedRate;
 	}
@@ -661,6 +674,7 @@ public class Fee2 {
 		this.appliedRate = appliedRate;
 	}
 
+	@XmlElement(name = "NonStdSLARef")
 	public Max35Text getNonStandardSLAReference() {
 		return nonStandardSLAReference;
 	}
@@ -669,6 +683,7 @@ public class Fee2 {
 		this.nonStandardSLAReference = nonStandardSLAReference;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification113 getRecipientIdentification() {
 		return recipientIdentification;
 	}
@@ -677,6 +692,7 @@ public class Fee2 {
 		this.recipientIdentification = recipientIdentification;
 	}
 
+	@XmlElement(name = "InftvInd", required = true)
 	public YesNoIndicator getInformativeIndicator() {
 		return informativeIndicator;
 	}

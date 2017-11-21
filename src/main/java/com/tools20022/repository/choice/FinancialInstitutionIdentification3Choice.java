@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for the identification of the financial institution.
@@ -86,6 +90,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstitutionIdentification3Choice", propOrder = {"nameAndAddress", "BIC", "clearingSystemMemberIdentification", "proprietaryIdentification"})
 public class FinancialInstitutionIdentification3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -346,6 +352,7 @@ public class FinancialInstitutionIdentification3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress5 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -354,6 +361,7 @@ public class FinancialInstitutionIdentification3Choice {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "BIC", required = true)
 	public BICIdentifier getBIC() {
 		return bIC;
 	}
@@ -362,6 +370,7 @@ public class FinancialInstitutionIdentification3Choice {
 		this.bIC = bIC;
 	}
 
+	@XmlElement(name = "ClrSysMmbId", required = true)
 	public ClearingSystemMemberIdentificationChoice getClearingSystemMemberIdentification() {
 		return clearingSystemMemberIdentification;
 	}
@@ -370,6 +379,7 @@ public class FinancialInstitutionIdentification3Choice {
 		this.clearingSystemMemberIdentification = clearingSystemMemberIdentification;
 	}
 
+	@XmlElement(name = "PrtryId", required = true)
 	public SimpleIdentificationInformation getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}

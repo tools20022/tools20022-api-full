@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max50Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies a record holding the LRCI required data related to a payment file.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelLRCIPaymentInformation1", propOrder = {"imageHash", "paymentHash"})
 public class IsabelLRCIPaymentInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +173,7 @@ public class IsabelLRCIPaymentInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ImgHash", required = true)
 	public Max50Binary getImageHash() {
 		return imageHash;
 	}
@@ -175,6 +182,7 @@ public class IsabelLRCIPaymentInformation1 {
 		this.imageHash = imageHash;
 	}
 
+	@XmlElement(name = "PmtHash", required = true)
 	public Max50Binary getPaymentHash() {
 		return paymentHash;
 	}

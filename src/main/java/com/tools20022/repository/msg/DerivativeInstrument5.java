@@ -34,6 +34,10 @@ import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the derivative instrument.
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the derivative instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DerivativeInstrument5", propOrder = {"expiryDate", "priceMultiplier", "underlyingInstrument", "optionType", "strikePrice", "optionExerciseStyle", "deliveryType", "assetClassSpecificAttributes"})
 public class DerivativeInstrument5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -523,6 +529,7 @@ public class DerivativeInstrument5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XpryDt")
 	public ISODate getExpiryDate() {
 		return expiryDate;
 	}
@@ -531,6 +538,7 @@ public class DerivativeInstrument5 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "PricMltplr")
 	public NonNegativeDecimalNumber getPriceMultiplier() {
 		return priceMultiplier;
 	}
@@ -539,6 +547,7 @@ public class DerivativeInstrument5 {
 		this.priceMultiplier = priceMultiplier;
 	}
 
+	@XmlElement(name = "UndrlygInstrm")
 	public FinancialInstrumentIdentification5Choice getUnderlyingInstrument() {
 		return underlyingInstrument;
 	}
@@ -547,6 +556,7 @@ public class DerivativeInstrument5 {
 		this.underlyingInstrument = underlyingInstrument;
 	}
 
+	@XmlElement(name = "OptnTp")
 	public OptionType2Code getOptionType() {
 		return optionType;
 	}
@@ -555,6 +565,7 @@ public class DerivativeInstrument5 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "StrkPric")
 	public SecuritiesTransactionPrice4Choice getStrikePrice() {
 		return strikePrice;
 	}
@@ -563,6 +574,7 @@ public class DerivativeInstrument5 {
 		this.strikePrice = strikePrice;
 	}
 
+	@XmlElement(name = "OptnExrcStyle")
 	public OptionStyle7Code getOptionExerciseStyle() {
 		return optionExerciseStyle;
 	}
@@ -571,6 +583,7 @@ public class DerivativeInstrument5 {
 		this.optionExerciseStyle = optionExerciseStyle;
 	}
 
+	@XmlElement(name = "DlvryTp")
 	public PhysicalTransferType4Code getDeliveryType() {
 		return deliveryType;
 	}
@@ -579,6 +592,7 @@ public class DerivativeInstrument5 {
 		this.deliveryType = deliveryType;
 	}
 
+	@XmlElement(name = "AsstClssSpcfcAttrbts")
 	public AssetClass2 getAssetClassSpecificAttributes() {
 		return assetClassSpecificAttributes;
 	}

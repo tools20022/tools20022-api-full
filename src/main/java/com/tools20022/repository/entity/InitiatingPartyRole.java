@@ -39,6 +39,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
+ * PaymentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -51,9 +54,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * OriginalMessage3.mmOriginalSender}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
- * PaymentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -84,6 +84,11 @@ public class InitiatingPartyRole extends PaymentPartyRole {
 				definition = "Party initiating the payment to an agent. In the payment context, this can either be the debtor (in a credit transfer), the creditor (in a direct debit), or a party that initiates the payment on behalf of the debtor or creditor. In the context of treasury, the party that instructs the trading party to execute a treasury deal on its behalf.";
 				derivationElement_lazy = () -> Arrays.asList(OriginalMessage2.mmOriginalSender, OriginalMessage3.mmOriginalSender);
 				superType_lazy = () -> PaymentPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InitiatingPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

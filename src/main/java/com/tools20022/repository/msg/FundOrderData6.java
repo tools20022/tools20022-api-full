@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.SwitchOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extract of trade data for an investment fund switch order.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * FundOrderData2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundOrderData6", propOrder = {"settlementAmount", "settlementMethod", "additionalAmount", "unitCurrency", "quotedCurrency"})
 public class FundOrderData6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -367,6 +373,7 @@ public class FundOrderData6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public ActiveCurrencyAndAmount getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -375,6 +382,7 @@ public class FundOrderData6 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "SttlmMtd")
 	public DeliveryReceiptType2Code getSettlementMethod() {
 		return settlementMethod;
 	}
@@ -383,6 +391,7 @@ public class FundOrderData6 {
 		this.settlementMethod = settlementMethod;
 	}
 
+	@XmlElement(name = "AddtlAmt")
 	public AdditionalAmount1Choice getAdditionalAmount() {
 		return additionalAmount;
 	}
@@ -391,6 +400,7 @@ public class FundOrderData6 {
 		this.additionalAmount = additionalAmount;
 	}
 
+	@XmlElement(name = "UnitCcy")
 	public ActiveCurrencyCode getUnitCurrency() {
 		return unitCurrency;
 	}
@@ -399,6 +409,7 @@ public class FundOrderData6 {
 		this.unitCurrency = unitCurrency;
 	}
 
+	@XmlElement(name = "QtdCcy")
 	public ActiveCurrencyCode getQuotedCurrency() {
 		return quotedCurrency;
 	}

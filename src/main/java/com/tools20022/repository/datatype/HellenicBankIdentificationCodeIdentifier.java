@@ -32,6 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} = "Hellenic Central Bank; Payment Routing Number"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "GR[0-9]{7,7}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -68,6 +70,7 @@ public class HellenicBankIdentificationCodeIdentifier {
 				name = "HellenicBankIdentificationCodeIdentifier";
 				definition = "Hellenic Bank Identification Code Identifier. Identifies Greek financial institutions on the greek national clearing system.";
 				identificationScheme = "Hellenic Central Bank; Payment Routing Number";
+				pattern = "GR[0-9]{7,7}";
 			}
 		});
 		return mmObject_lazy.get();

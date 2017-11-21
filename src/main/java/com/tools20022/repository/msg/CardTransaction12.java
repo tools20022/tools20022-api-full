@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Network management transaction.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardTransaction11}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransaction12", propOrder = {"networkManagementType", "initiatorDateTime", "numberOfMessages", "maximumNumberOfMessages", "transactionResponse"})
 public class CardTransaction12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -327,6 +333,7 @@ public class CardTransaction12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NtwkMgmtTp", required = true)
 	public CardServiceType2Code getNetworkManagementType() {
 		return networkManagementType;
 	}
@@ -335,6 +342,7 @@ public class CardTransaction12 {
 		this.networkManagementType = networkManagementType;
 	}
 
+	@XmlElement(name = "InitrDtTm")
 	public ISODateTime getInitiatorDateTime() {
 		return initiatorDateTime;
 	}
@@ -343,6 +351,7 @@ public class CardTransaction12 {
 		this.initiatorDateTime = initiatorDateTime;
 	}
 
+	@XmlElement(name = "NbOfMsgs")
 	public Number getNumberOfMessages() {
 		return numberOfMessages;
 	}
@@ -351,6 +360,7 @@ public class CardTransaction12 {
 		this.numberOfMessages = numberOfMessages;
 	}
 
+	@XmlElement(name = "MaxNbOfMsgs")
 	public Number getMaximumNumberOfMessages() {
 		return maximumNumberOfMessages;
 	}
@@ -359,6 +369,7 @@ public class CardTransaction12 {
 		this.maximumNumberOfMessages = maximumNumberOfMessages;
 	}
 
+	@XmlElement(name = "TxRspn", required = true)
 	public ResponseType2 getTransactionResponse() {
 		return transactionResponse;
 	}

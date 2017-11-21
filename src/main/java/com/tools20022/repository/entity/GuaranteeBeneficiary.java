@@ -63,6 +63,11 @@ public class GuaranteeBeneficiary extends GuaranteePartyRole {
 				definition = "Party that is the beneficiary of the guarantee.";
 				superType_lazy = () -> GuaranteePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return GuaranteeBeneficiary.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

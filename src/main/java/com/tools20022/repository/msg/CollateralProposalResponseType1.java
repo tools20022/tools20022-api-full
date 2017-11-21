@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the response for a collateral proposal.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralProposalResponseType1", propOrder = {"collateralProposalIdentification", "type", "responseType", "rejectionReason", "rejectionInformation"})
 public class CollateralProposalResponseType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -362,6 +368,7 @@ public class CollateralProposalResponseType1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CollPrpslId", required = true)
 	public Max35Text getCollateralProposalIdentification() {
 		return collateralProposalIdentification;
 	}
@@ -370,6 +377,7 @@ public class CollateralProposalResponseType1 {
 		this.collateralProposalIdentification = collateralProposalIdentification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public CollateralProposalResponse1Code getType() {
 		return type;
 	}
@@ -378,6 +386,7 @@ public class CollateralProposalResponseType1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "RspnTp", required = true)
 	public Status4Code getResponseType() {
 		return responseType;
 	}
@@ -386,6 +395,7 @@ public class CollateralProposalResponseType1 {
 		this.responseType = responseType;
 	}
 
+	@XmlElement(name = "RjctnRsn")
 	public RejectionReasonV021Code getRejectionReason() {
 		return rejectionReason;
 	}
@@ -394,6 +404,7 @@ public class CollateralProposalResponseType1 {
 		this.rejectionReason = rejectionReason;
 	}
 
+	@XmlElement(name = "RjctnInf")
 	public Max35Text getRejectionInformation() {
 		return rejectionInformation;
 	}

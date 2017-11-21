@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -76,6 +80,8 @@ import java.util.function.Supplier;
  * definition} = "Parameters applied to the settlement of a security transfer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesSettlement1", propOrder = {"currency", "date", "dateCode", "placeOfSettlement", "safekeepingAccountDetails"})
 public class SecuritiesSettlement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -340,6 +346,7 @@ public class SecuritiesSettlement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -348,6 +355,7 @@ public class SecuritiesSettlement1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODate getDate() {
 		return date;
 	}
@@ -356,6 +364,7 @@ public class SecuritiesSettlement1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "DtCd")
 	public DateType1Choice getDateCode() {
 		return dateCode;
 	}
@@ -364,6 +373,7 @@ public class SecuritiesSettlement1 {
 		this.dateCode = dateCode;
 	}
 
+	@XmlElement(name = "PlcOfSttlm")
 	public PartyIdentification23 getPlaceOfSettlement() {
 		return placeOfSettlement;
 	}
@@ -372,6 +382,7 @@ public class SecuritiesSettlement1 {
 		this.placeOfSettlement = placeOfSettlement;
 	}
 
+	@XmlElement(name = "SfkpgAcctDtls")
 	public SecuritiesAccount2 getSafekeepingAccountDetails() {
 		return safekeepingAccountDetails;
 	}

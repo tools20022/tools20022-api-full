@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Report on account transactions to reconcile documents of the day of
@@ -71,6 +75,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reconciliation1", propOrder = {"reportIdentification", "reportPagination", "bankToCustomerAccountReportCopy", "initialMessageIdentification", "controlCode"})
 public class Reconciliation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -305,6 +311,7 @@ public class Reconciliation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptId", required = true)
 	public Max35Text getReportIdentification() {
 		return reportIdentification;
 	}
@@ -313,6 +320,7 @@ public class Reconciliation1 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "RptPgntn")
 	public Pagination getReportPagination() {
 		return reportPagination;
 	}
@@ -321,6 +329,7 @@ public class Reconciliation1 {
 		this.reportPagination = reportPagination;
 	}
 
+	@XmlElement(name = "BkToCstmrAcctRptCpy", required = true)
 	public BankToCustomerAccountReportCopy1 getBankToCustomerAccountReportCopy() {
 		return bankToCustomerAccountReportCopy;
 	}
@@ -329,6 +338,7 @@ public class Reconciliation1 {
 		this.bankToCustomerAccountReportCopy = bankToCustomerAccountReportCopy;
 	}
 
+	@XmlElement(name = "InitlMsgId")
 	public Max35Text getInitialMessageIdentification() {
 		return initialMessageIdentification;
 	}
@@ -337,6 +347,7 @@ public class Reconciliation1 {
 		this.initialMessageIdentification = initialMessageIdentification;
 	}
 
+	@XmlElement(name = "CtrlCd")
 	public List<Max4NumericText> getControlCode() {
 		return controlCode;
 	}

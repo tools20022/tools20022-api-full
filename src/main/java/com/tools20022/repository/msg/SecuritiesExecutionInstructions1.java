@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the instructions for order handling.
@@ -148,6 +152,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the instructions for order handling."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesExecutionInstructions1", propOrder = {"allOrNone", "callFirst", "cross", "customerDisplay", "hold", "increase", "institutionsOnly", "nonNegotiable", "overTheDay", "participateDontInitiate", "percentOfVolume",
+		"scale", "stayOnSide", "work", "goAlong", "tryScale", "doNotReduce", "cancelOnSystemFailure", "cancelOnTradingHalt", "tradeAlong", "strictLimit", "ignorePriceValidityChecks", "reinstateOnSystemFailure", "reinstateOnTradingHalt",
+		"cancelIfNotBest", "externalRoutingAllowed", "externalRoutingNotAllowed", "imbalanceOnly", "intermarketSweep", "netting"})
 public class SecuritiesExecutionInstructions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1726,6 +1734,7 @@ public class SecuritiesExecutionInstructions1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AllOrNn")
 	public AllOrNoneIndicator getAllOrNone() {
 		return allOrNone;
 	}
@@ -1734,6 +1743,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.allOrNone = allOrNone;
 	}
 
+	@XmlElement(name = "CallFrst")
 	public YesNoIndicator getCallFirst() {
 		return callFirst;
 	}
@@ -1742,6 +1752,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.callFirst = callFirst;
 	}
 
+	@XmlElement(name = "Cross")
 	public YesNoIndicator getCross() {
 		return cross;
 	}
@@ -1750,6 +1761,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.cross = cross;
 	}
 
+	@XmlElement(name = "CstmrDisp")
 	public YesNoIndicator getCustomerDisplay() {
 		return customerDisplay;
 	}
@@ -1758,6 +1770,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.customerDisplay = customerDisplay;
 	}
 
+	@XmlElement(name = "Hld")
 	public YesNoIndicator getHold() {
 		return hold;
 	}
@@ -1766,6 +1779,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.hold = hold;
 	}
 
+	@XmlElement(name = "Incr")
 	public YesNoIndicator getIncrease() {
 		return increase;
 	}
@@ -1774,6 +1788,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.increase = increase;
 	}
 
+	@XmlElement(name = "InstnsOnly")
 	public YesNoIndicator getInstitutionsOnly() {
 		return institutionsOnly;
 	}
@@ -1782,6 +1797,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.institutionsOnly = institutionsOnly;
 	}
 
+	@XmlElement(name = "NonNgtbl")
 	public YesNoIndicator getNonNegotiable() {
 		return nonNegotiable;
 	}
@@ -1790,6 +1806,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.nonNegotiable = nonNegotiable;
 	}
 
+	@XmlElement(name = "OverTheDay")
 	public YesNoIndicator getOverTheDay() {
 		return overTheDay;
 	}
@@ -1798,6 +1815,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.overTheDay = overTheDay;
 	}
 
+	@XmlElement(name = "PtcpDontInit")
 	public YesNoIndicator getParticipateDontInitiate() {
 		return participateDontInitiate;
 	}
@@ -1806,6 +1824,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.participateDontInitiate = participateDontInitiate;
 	}
 
+	@XmlElement(name = "PctOfVol")
 	public YesNoIndicator getPercentOfVolume() {
 		return percentOfVolume;
 	}
@@ -1814,6 +1833,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.percentOfVolume = percentOfVolume;
 	}
 
+	@XmlElement(name = "Scale")
 	public YesNoIndicator getScale() {
 		return scale;
 	}
@@ -1822,6 +1842,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.scale = scale;
 	}
 
+	@XmlElement(name = "StayOnSd")
 	public StayOnSideType1Code getStayOnSide() {
 		return stayOnSide;
 	}
@@ -1830,6 +1851,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.stayOnSide = stayOnSide;
 	}
 
+	@XmlElement(name = "Work")
 	public YesNoIndicator getWork() {
 		return work;
 	}
@@ -1838,6 +1860,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.work = work;
 	}
 
+	@XmlElement(name = "GoAlong")
 	public YesNoIndicator getGoAlong() {
 		return goAlong;
 	}
@@ -1846,6 +1869,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.goAlong = goAlong;
 	}
 
+	@XmlElement(name = "TryScale")
 	public YesNoIndicator getTryScale() {
 		return tryScale;
 	}
@@ -1854,6 +1878,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.tryScale = tryScale;
 	}
 
+	@XmlElement(name = "DoNotRdc")
 	public YesNoIndicator getDoNotReduce() {
 		return doNotReduce;
 	}
@@ -1862,6 +1887,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.doNotReduce = doNotReduce;
 	}
 
+	@XmlElement(name = "CclOnSysFailr")
 	public YesNoIndicator getCancelOnSystemFailure() {
 		return cancelOnSystemFailure;
 	}
@@ -1870,6 +1896,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.cancelOnSystemFailure = cancelOnSystemFailure;
 	}
 
+	@XmlElement(name = "CclOnTradgHalt")
 	public YesNoIndicator getCancelOnTradingHalt() {
 		return cancelOnTradingHalt;
 	}
@@ -1878,6 +1905,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.cancelOnTradingHalt = cancelOnTradingHalt;
 	}
 
+	@XmlElement(name = "TradAlong")
 	public YesNoIndicator getTradeAlong() {
 		return tradeAlong;
 	}
@@ -1886,6 +1914,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.tradeAlong = tradeAlong;
 	}
 
+	@XmlElement(name = "StrctLmt")
 	public YesNoIndicator getStrictLimit() {
 		return strictLimit;
 	}
@@ -1894,6 +1923,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.strictLimit = strictLimit;
 	}
 
+	@XmlElement(name = "IgnrPricVldtyChcks")
 	public YesNoIndicator getIgnorePriceValidityChecks() {
 		return ignorePriceValidityChecks;
 	}
@@ -1902,6 +1932,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.ignorePriceValidityChecks = ignorePriceValidityChecks;
 	}
 
+	@XmlElement(name = "RinsttOnSysFailr")
 	public YesNoIndicator getReinstateOnSystemFailure() {
 		return reinstateOnSystemFailure;
 	}
@@ -1910,6 +1941,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.reinstateOnSystemFailure = reinstateOnSystemFailure;
 	}
 
+	@XmlElement(name = "RinsttOnTradgHalt")
 	public YesNoIndicator getReinstateOnTradingHalt() {
 		return reinstateOnTradingHalt;
 	}
@@ -1918,6 +1950,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.reinstateOnTradingHalt = reinstateOnTradingHalt;
 	}
 
+	@XmlElement(name = "CclIfNotBest")
 	public YesNoIndicator getCancelIfNotBest() {
 		return cancelIfNotBest;
 	}
@@ -1926,6 +1959,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.cancelIfNotBest = cancelIfNotBest;
 	}
 
+	@XmlElement(name = "XtrnlRtgAllwd")
 	public YesNoIndicator getExternalRoutingAllowed() {
 		return externalRoutingAllowed;
 	}
@@ -1934,6 +1968,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.externalRoutingAllowed = externalRoutingAllowed;
 	}
 
+	@XmlElement(name = "XtrnlRtgNotAllwd")
 	public YesNoIndicator getExternalRoutingNotAllowed() {
 		return externalRoutingNotAllowed;
 	}
@@ -1942,6 +1977,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.externalRoutingNotAllowed = externalRoutingNotAllowed;
 	}
 
+	@XmlElement(name = "ImbalOnly")
 	public YesNoIndicator getImbalanceOnly() {
 		return imbalanceOnly;
 	}
@@ -1950,6 +1986,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.imbalanceOnly = imbalanceOnly;
 	}
 
+	@XmlElement(name = "IntrmktSweep")
 	public YesNoIndicator getIntermarketSweep() {
 		return intermarketSweep;
 	}
@@ -1958,6 +1995,7 @@ public class SecuritiesExecutionInstructions1 {
 		this.intermarketSweep = intermarketSweep;
 	}
 
+	@XmlElement(name = "Netg")
 	public YesNoIndicator getNetting() {
 		return netting;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about short positions.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about short positions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ShortPositionsReportDetails1", propOrder = {"participantIdentification", "participantAccount", "shortPositionAmount"})
 public class ShortPositionsReportDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -203,6 +209,7 @@ public class ShortPositionsReportDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtcptId", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getParticipantIdentification() {
 		return participantIdentification;
 	}
@@ -211,6 +218,7 @@ public class ShortPositionsReportDetails1 {
 		this.participantIdentification = participantIdentification;
 	}
 
+	@XmlElement(name = "PtcptAcct", required = true)
 	public CashAccount24 getParticipantAccount() {
 		return participantAccount;
 	}
@@ -219,6 +227,7 @@ public class ShortPositionsReportDetails1 {
 		this.participantAccount = participantAccount;
 	}
 
+	@XmlElement(name = "ShrtPosAmt", required = true)
 	public ActiveCurrencyAndAmount getShortPositionAmount() {
 		return shortPositionAmount;
 	}

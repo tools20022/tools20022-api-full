@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information such as the default fund account identification or the
@@ -74,6 +78,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DefaultFund1", propOrder = {"defaultFundAccount", "totalDefaultFundAmount", "contribution", "increaseCoverageAmount"})
 public class DefaultFund1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -291,6 +297,7 @@ public class DefaultFund1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DfltFndAcct", required = true)
 	public AccountIdentification4Choice getDefaultFundAccount() {
 		return defaultFundAccount;
 	}
@@ -299,6 +306,7 @@ public class DefaultFund1 {
 		this.defaultFundAccount = defaultFundAccount;
 	}
 
+	@XmlElement(name = "TtlDfltFndAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalDefaultFundAmount() {
 		return totalDefaultFundAmount;
 	}
@@ -307,6 +315,7 @@ public class DefaultFund1 {
 		this.totalDefaultFundAmount = totalDefaultFundAmount;
 	}
 
+	@XmlElement(name = "Cntrbtn")
 	public List<Contribution1> getContribution() {
 		return contribution;
 	}
@@ -315,6 +324,7 @@ public class DefaultFund1 {
 		this.contribution = contribution;
 	}
 
+	@XmlElement(name = "IncrCvrgAmt")
 	public ActiveCurrencyAndAmount getIncreaseCoverageAmount() {
 		return increaseCoverageAmount;
 	}

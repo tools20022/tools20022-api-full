@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters defining the timing conditions to process an action.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProcessTiming1", propOrder = {"waitingTime", "startTime", "endTime", "period", "maximumNumber", "reTry"})
 public class ProcessTiming1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -341,6 +347,7 @@ public class ProcessTiming1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "WtgTm")
 	public Max9NumericText getWaitingTime() {
 		return waitingTime;
 	}
@@ -349,6 +356,7 @@ public class ProcessTiming1 {
 		this.waitingTime = waitingTime;
 	}
 
+	@XmlElement(name = "StartTm")
 	public ISODateTime getStartTime() {
 		return startTime;
 	}
@@ -357,6 +365,7 @@ public class ProcessTiming1 {
 		this.startTime = startTime;
 	}
 
+	@XmlElement(name = "EndTm")
 	public ISODateTime getEndTime() {
 		return endTime;
 	}
@@ -365,6 +374,7 @@ public class ProcessTiming1 {
 		this.endTime = endTime;
 	}
 
+	@XmlElement(name = "Prd")
 	public Max9NumericText getPeriod() {
 		return period;
 	}
@@ -373,6 +383,7 @@ public class ProcessTiming1 {
 		this.period = period;
 	}
 
+	@XmlElement(name = "MaxNb")
 	public Number getMaximumNumber() {
 		return maximumNumber;
 	}
@@ -381,6 +392,7 @@ public class ProcessTiming1 {
 		this.maximumNumber = maximumNumber;
 	}
 
+	@XmlElement(name = "ReTry")
 	public ProcessRetry1 getReTry() {
 		return reTry;
 	}

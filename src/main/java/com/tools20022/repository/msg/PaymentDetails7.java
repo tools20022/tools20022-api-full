@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the payment transaction details.
@@ -102,6 +106,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information related to the payment transaction details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentDetails7", propOrder = {"transactionReference", "transferValueDate", "instructionStatus", "instructedAmount", "interbankSettlementAmount", "purpose", "paymentMethod", "priority", "processingValidityTime",
+		"instructionCopy", "paymentType", "paymentInstructionReference", "interbankValueDate", "relatedReference", "paymentTransactionParty"})
 public class PaymentDetails7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -853,6 +860,7 @@ public class PaymentDetails7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxRef")
 	public Max35Text getTransactionReference() {
 		return transactionReference;
 	}
@@ -861,6 +869,7 @@ public class PaymentDetails7 {
 		this.transactionReference = transactionReference;
 	}
 
+	@XmlElement(name = "TrfValDt")
 	public DateAndDateTimeChoice getTransferValueDate() {
 		return transferValueDate;
 	}
@@ -869,6 +878,7 @@ public class PaymentDetails7 {
 		this.transferValueDate = transferValueDate;
 	}
 
+	@XmlElement(name = "InstrSts")
 	public PaymentStatusDetails4 getInstructionStatus() {
 		return instructionStatus;
 	}
@@ -877,6 +887,7 @@ public class PaymentDetails7 {
 		this.instructionStatus = instructionStatus;
 	}
 
+	@XmlElement(name = "InstdAmt")
 	public AmountChoice getInstructedAmount() {
 		return instructedAmount;
 	}
@@ -885,6 +896,7 @@ public class PaymentDetails7 {
 		this.instructedAmount = instructedAmount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmt")
 	public AmountChoice getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
@@ -893,6 +905,7 @@ public class PaymentDetails7 {
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
 
+	@XmlElement(name = "Purp")
 	public Max10Text getPurpose() {
 		return purpose;
 	}
@@ -901,6 +914,7 @@ public class PaymentDetails7 {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "PmtMtd")
 	public PaymentOrigin1Choice getPaymentMethod() {
 		return paymentMethod;
 	}
@@ -909,6 +923,7 @@ public class PaymentDetails7 {
 		this.paymentMethod = paymentMethod;
 	}
 
+	@XmlElement(name = "Prty")
 	public PriorityCodeChoice getPriority() {
 		return priority;
 	}
@@ -917,6 +932,7 @@ public class PaymentDetails7 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "PrcgVldtyTm")
 	public DateTimePeriodChoice getProcessingValidityTime() {
 		return processingValidityTime;
 	}
@@ -925,6 +941,7 @@ public class PaymentDetails7 {
 		this.processingValidityTime = processingValidityTime;
 	}
 
+	@XmlElement(name = "InstrCpy")
 	public Max20000Text getInstructionCopy() {
 		return instructionCopy;
 	}
@@ -933,6 +950,7 @@ public class PaymentDetails7 {
 		this.instructionCopy = instructionCopy;
 	}
 
+	@XmlElement(name = "PmtTp")
 	public PaymentType2Choice getPaymentType() {
 		return paymentType;
 	}
@@ -941,6 +959,7 @@ public class PaymentDetails7 {
 		this.paymentType = paymentType;
 	}
 
+	@XmlElement(name = "PmtInstrRef")
 	public Max35Text getPaymentInstructionReference() {
 		return paymentInstructionReference;
 	}
@@ -949,6 +968,7 @@ public class PaymentDetails7 {
 		this.paymentInstructionReference = paymentInstructionReference;
 	}
 
+	@XmlElement(name = "IntrBkValDt")
 	public ISODate getInterbankValueDate() {
 		return interbankValueDate;
 	}
@@ -957,6 +977,7 @@ public class PaymentDetails7 {
 		this.interbankValueDate = interbankValueDate;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public Max35Text getRelatedReference() {
 		return relatedReference;
 	}
@@ -965,6 +986,7 @@ public class PaymentDetails7 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "PmtTxPty")
 	public PaymentTransactionParty getPaymentTransactionParty() {
 		return paymentTransactionParty;
 	}

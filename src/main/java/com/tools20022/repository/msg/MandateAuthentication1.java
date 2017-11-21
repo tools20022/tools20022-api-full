@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.ObligationFulfilment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the transport authentication details related to the mandate.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the transport authentication details related to the mandate."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MandateAuthentication1", propOrder = {"messageAuthenticationCode", "date", "channel"})
 public class MandateAuthentication1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -232,6 +238,7 @@ public class MandateAuthentication1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgAuthntcnCd")
 	public Max16Text getMessageAuthenticationCode() {
 		return messageAuthenticationCode;
 	}
@@ -240,6 +247,7 @@ public class MandateAuthentication1 {
 		this.messageAuthenticationCode = messageAuthenticationCode;
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODate getDate() {
 		return date;
 	}
@@ -248,6 +256,7 @@ public class MandateAuthentication1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Chanl")
 	public AuthenticationChannel1Choice getChannel() {
 		return channel;
 	}

@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.AcquirerKeyExchangeResponse1;
 import com.tools20022.repository.msg.ContentInformationType12;
 import com.tools20022.repository.msg.Header17;
 import com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The KeyExchangeResponse message is sent by an acquirer, an issuer or an agent
@@ -36,9 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code cain.012.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcquirertoIssuerCardTransactionLatestVersion
@@ -71,6 +70,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code cain.012.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -82,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "KeyExchangeResponse", propOrder = {"header", "keyExchangeResponse", "securityTrailer"})
 public class KeyExchangeResponse {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -118,6 +122,14 @@ public class KeyExchangeResponse {
 			minOccurs = 1;
 			complexType_lazy = () -> Header17.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return KeyExchangeResponse.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AcquirerKeyExchangeResponse1 keyExchangeResponse;
 	/**
@@ -152,6 +164,14 @@ public class KeyExchangeResponse {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcquirerKeyExchangeResponse1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return KeyExchangeResponse.class.getMethod("getKeyExchangeResponse", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ContentInformationType12 securityTrailer;
@@ -189,6 +209,14 @@ public class KeyExchangeResponse {
 			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType12.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return KeyExchangeResponse.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -201,7 +229,8 @@ public class KeyExchangeResponse {
 				rootElement = "Document";
 				xmlTag = "KeyXchgRspn";
 				businessArea_lazy = () -> AcquirertoIssuerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(KeyExchangeResponse.mmHeader, KeyExchangeResponse.mmKeyExchangeResponse, KeyExchangeResponse.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.KeyExchangeResponse.mmHeader, com.tools20022.repository.area.cain.KeyExchangeResponse.mmKeyExchangeResponse,
+						com.tools20022.repository.area.cain.KeyExchangeResponse.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "cain";
@@ -211,10 +240,16 @@ public class KeyExchangeResponse {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return KeyExchangeResponse.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header17 getHeader() {
 		return header;
 	}
@@ -223,6 +258,7 @@ public class KeyExchangeResponse {
 		this.header = header;
 	}
 
+	@XmlElement(name = "KeyXchgRspn", required = true)
 	public AcquirerKeyExchangeResponse1 getKeyExchangeResponse() {
 		return keyExchangeResponse;
 	}
@@ -231,11 +267,18 @@ public class KeyExchangeResponse {
 		this.keyExchangeResponse = keyExchangeResponse;
 	}
 
+	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType12 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType12 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:cain.012.01.01")
+	static public class Document {
+		@XmlElement(name = "KeyXchgRspn", required = true)
+		public KeyExchangeResponse messageBody;
 	}
 }

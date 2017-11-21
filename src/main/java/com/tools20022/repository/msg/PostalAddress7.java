@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information that locates and identifies a specific address, as defined by
@@ -71,6 +75,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PostalAddress7", propOrder = {"addressLine", "postCode", "townName", "country"})
 public class PostalAddress7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -278,6 +284,7 @@ public class PostalAddress7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AdrLine")
 	public List<RestrictedFINMax35Text> getAddressLine() {
 		return addressLine;
 	}
@@ -286,6 +293,7 @@ public class PostalAddress7 {
 		this.addressLine = addressLine;
 	}
 
+	@XmlElement(name = "PstCd")
 	public RestrictedFINMax8Text getPostCode() {
 		return postCode;
 	}
@@ -294,6 +302,7 @@ public class PostalAddress7 {
 		this.postCode = postCode;
 	}
 
+	@XmlElement(name = "TwnNm")
 	public RestrictedFINMax23Text getTownName() {
 		return townName;
 	}
@@ -302,6 +311,7 @@ public class PostalAddress7 {
 		this.townName = townName;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}

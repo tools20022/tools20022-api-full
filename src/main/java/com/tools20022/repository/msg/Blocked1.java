@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies information about blocked accounts.
@@ -72,6 +76,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Blocked1", propOrder = {"orderType", "blocked", "reason"})
 public class Blocked1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -256,6 +262,7 @@ public class Blocked1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrTp", required = true)
 	public List<FundOrderType1Choice> getOrderType() {
 		return orderType;
 	}
@@ -264,6 +271,7 @@ public class Blocked1 {
 		this.orderType = orderType;
 	}
 
+	@XmlElement(name = "Blckd", required = true)
 	public YesNoIndicator getBlocked() {
 		return blocked;
 	}
@@ -272,6 +280,7 @@ public class Blocked1 {
 		this.blocked = blocked;
 	}
 
+	@XmlElement(name = "Rsn")
 	public BlockedReason1Choice getReason() {
 		return reason;
 	}

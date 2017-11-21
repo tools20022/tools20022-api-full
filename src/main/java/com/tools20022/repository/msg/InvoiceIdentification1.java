@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Invoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies a document by a unique identification and a date of issue.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Identifies a document by a unique identification and a date of issue."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvoiceIdentification1", propOrder = {"invoiceNumber", "issueDate"})
 public class InvoiceIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class InvoiceIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InvcNb", required = true)
 	public Max35Text getInvoiceNumber() {
 		return invoiceNumber;
 	}
@@ -184,6 +191,7 @@ public class InvoiceIdentification1 {
 		this.invoiceNumber = invoiceNumber;
 	}
 
+	@XmlElement(name = "IsseDt", required = true)
 	public ISODate getIssueDate() {
 		return issueDate;
 	}

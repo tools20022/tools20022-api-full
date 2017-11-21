@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the original transactions, to which the status report
@@ -101,6 +105,9 @@ import java.util.List;
  * OriginalPaymentInstruction19}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalPaymentInstruction24", propOrder = {"originalPaymentInformationIdentification", "originalNumberOfTransactions", "originalControlSum", "paymentInformationStatus", "statusReasonInformation",
+		"numberOfTransactionsPerStatus", "transactionInformationAndStatus"})
 public class OriginalPaymentInstruction24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -492,6 +499,7 @@ public class OriginalPaymentInstruction24 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlPmtInfId", required = true)
 	public Max35Text getOriginalPaymentInformationIdentification() {
 		return originalPaymentInformationIdentification;
 	}
@@ -500,6 +508,7 @@ public class OriginalPaymentInstruction24 {
 		this.originalPaymentInformationIdentification = originalPaymentInformationIdentification;
 	}
 
+	@XmlElement(name = "OrgnlNbOfTxs")
 	public Max15NumericText getOriginalNumberOfTransactions() {
 		return originalNumberOfTransactions;
 	}
@@ -508,6 +517,7 @@ public class OriginalPaymentInstruction24 {
 		this.originalNumberOfTransactions = originalNumberOfTransactions;
 	}
 
+	@XmlElement(name = "OrgnlCtrlSum")
 	public DecimalNumber getOriginalControlSum() {
 		return originalControlSum;
 	}
@@ -516,6 +526,7 @@ public class OriginalPaymentInstruction24 {
 		this.originalControlSum = originalControlSum;
 	}
 
+	@XmlElement(name = "PmtInfSts")
 	public ExternalPaymentGroupStatus1Code getPaymentInformationStatus() {
 		return paymentInformationStatus;
 	}
@@ -524,6 +535,7 @@ public class OriginalPaymentInstruction24 {
 		this.paymentInformationStatus = paymentInformationStatus;
 	}
 
+	@XmlElement(name = "StsRsnInf")
 	public List<StatusReasonInformation9> getStatusReasonInformation() {
 		return statusReasonInformation;
 	}
@@ -532,6 +544,7 @@ public class OriginalPaymentInstruction24 {
 		this.statusReasonInformation = statusReasonInformation;
 	}
 
+	@XmlElement(name = "NbOfTxsPerSts")
 	public List<NumberOfTransactionsPerStatus5> getNumberOfTransactionsPerStatus() {
 		return numberOfTransactionsPerStatus;
 	}
@@ -540,6 +553,7 @@ public class OriginalPaymentInstruction24 {
 		this.numberOfTransactionsPerStatus = numberOfTransactionsPerStatus;
 	}
 
+	@XmlElement(name = "TxInfAndSts")
 	public List<PaymentTransaction83> getTransactionInformationAndStatus() {
 		return transactionInformationAndStatus;
 	}

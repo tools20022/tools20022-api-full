@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies a party that notifies a financial document, the party to be
@@ -65,6 +69,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancingNotificationParties1", propOrder = {"notifyingParty", "notificationReceiver", "acknowledgementReceiver"})
 public class FinancingNotificationParties1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class FinancingNotificationParties1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NtifngPty", required = true)
 	public QualifiedPartyIdentification1 getNotifyingParty() {
 		return notifyingParty;
 	}
@@ -236,6 +243,7 @@ public class FinancingNotificationParties1 {
 		this.notifyingParty = notifyingParty;
 	}
 
+	@XmlElement(name = "NtfctnRcvr", required = true)
 	public QualifiedPartyIdentification1 getNotificationReceiver() {
 		return notificationReceiver;
 	}
@@ -244,6 +252,7 @@ public class FinancingNotificationParties1 {
 		this.notificationReceiver = notificationReceiver;
 	}
 
+	@XmlElement(name = "AckRcvr")
 	public List<QualifiedPartyIdentification1> getAcknowledgementReceiver() {
 		return acknowledgementReceiver;
 	}

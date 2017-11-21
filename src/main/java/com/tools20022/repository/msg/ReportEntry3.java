@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details on an entry in the report.
@@ -112,6 +116,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportEntry3", propOrder = {"entryReference", "amount", "creditDebitIndicator", "reversalIndicator", "status", "bookingDate", "valueDate", "accountServicerReference", "availability", "bankTransactionCode",
+		"commissionWaiverIndicator", "additionalInformationIndicator", "amountDetails", "charges", "technicalInputChannel", "interest", "cardTransaction", "entryDetails", "additionalEntryInformation"})
 public class ReportEntry3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1057,6 +1064,7 @@ public class ReportEntry3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NtryRef")
 	public Max35Text getEntryReference() {
 		return entryReference;
 	}
@@ -1065,6 +1073,7 @@ public class ReportEntry3 {
 		this.entryReference = entryReference;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -1073,6 +1082,7 @@ public class ReportEntry3 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -1081,6 +1091,7 @@ public class ReportEntry3 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "RvslInd")
 	public TrueFalseIndicator getReversalIndicator() {
 		return reversalIndicator;
 	}
@@ -1089,6 +1100,7 @@ public class ReportEntry3 {
 		this.reversalIndicator = reversalIndicator;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public EntryStatus2Code getStatus() {
 		return status;
 	}
@@ -1097,6 +1109,7 @@ public class ReportEntry3 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "BookgDt")
 	public DateAndDateTimeChoice getBookingDate() {
 		return bookingDate;
 	}
@@ -1105,6 +1118,7 @@ public class ReportEntry3 {
 		this.bookingDate = bookingDate;
 	}
 
+	@XmlElement(name = "ValDt")
 	public DateAndDateTimeChoice getValueDate() {
 		return valueDate;
 	}
@@ -1113,6 +1127,7 @@ public class ReportEntry3 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "AcctSvcrRef")
 	public Max35Text getAccountServicerReference() {
 		return accountServicerReference;
 	}
@@ -1121,6 +1136,7 @@ public class ReportEntry3 {
 		this.accountServicerReference = accountServicerReference;
 	}
 
+	@XmlElement(name = "Avlbty")
 	public List<CashBalanceAvailability2> getAvailability() {
 		return availability;
 	}
@@ -1129,6 +1145,7 @@ public class ReportEntry3 {
 		this.availability = availability;
 	}
 
+	@XmlElement(name = "BkTxCd", required = true)
 	public BankTransactionCodeStructure4 getBankTransactionCode() {
 		return bankTransactionCode;
 	}
@@ -1137,6 +1154,7 @@ public class ReportEntry3 {
 		this.bankTransactionCode = bankTransactionCode;
 	}
 
+	@XmlElement(name = "ComssnWvrInd")
 	public YesNoIndicator getCommissionWaiverIndicator() {
 		return commissionWaiverIndicator;
 	}
@@ -1145,6 +1163,7 @@ public class ReportEntry3 {
 		this.commissionWaiverIndicator = commissionWaiverIndicator;
 	}
 
+	@XmlElement(name = "AddtlInfInd")
 	public MessageIdentification2 getAdditionalInformationIndicator() {
 		return additionalInformationIndicator;
 	}
@@ -1153,6 +1172,7 @@ public class ReportEntry3 {
 		this.additionalInformationIndicator = additionalInformationIndicator;
 	}
 
+	@XmlElement(name = "AmtDtls")
 	public AmountAndCurrencyExchange3 getAmountDetails() {
 		return amountDetails;
 	}
@@ -1161,6 +1181,7 @@ public class ReportEntry3 {
 		this.amountDetails = amountDetails;
 	}
 
+	@XmlElement(name = "Chrgs")
 	public List<Charges3> getCharges() {
 		return charges;
 	}
@@ -1169,6 +1190,7 @@ public class ReportEntry3 {
 		this.charges = charges;
 	}
 
+	@XmlElement(name = "TechInptChanl")
 	public TechnicalInputChannel1Choice getTechnicalInputChannel() {
 		return technicalInputChannel;
 	}
@@ -1177,6 +1199,7 @@ public class ReportEntry3 {
 		this.technicalInputChannel = technicalInputChannel;
 	}
 
+	@XmlElement(name = "Intrst")
 	public List<TransactionInterest3> getInterest() {
 		return interest;
 	}
@@ -1185,6 +1208,7 @@ public class ReportEntry3 {
 		this.interest = interest;
 	}
 
+	@XmlElement(name = "CardTx")
 	public CardEntry1 getCardTransaction() {
 		return cardTransaction;
 	}
@@ -1193,6 +1217,7 @@ public class ReportEntry3 {
 		this.cardTransaction = cardTransaction;
 	}
 
+	@XmlElement(name = "NtryDtls")
 	public List<EntryDetails2> getEntryDetails() {
 		return entryDetails;
 	}
@@ -1201,6 +1226,7 @@ public class ReportEntry3 {
 		this.entryDetails = entryDetails;
 	}
 
+	@XmlElement(name = "AddtlNtryInf")
 	public Max500Text getAdditionalEntryInformation() {
 		return additionalEntryInformation;
 	}

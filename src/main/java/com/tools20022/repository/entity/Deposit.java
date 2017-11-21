@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.DepositTypeCode;
 import com.tools20022.repository.entity.Money;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,23 +38,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmDeposit
- * Interest.mmDeposit}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Money Money}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashLoanDeposit
- * CashLoanDeposit}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -61,6 +45,23 @@ import java.util.List;
  * Deposit.mmDepositType}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Deposit#mmInterest
  * Deposit.mmInterest}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashLoanDeposit
+ * CashLoanDeposit}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Money Money}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmDeposit
+ * Interest.mmDeposit}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,10 +95,6 @@ public class Deposit extends Money {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DepositTypeCode
 	 * DepositTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Deposit
-	 * Deposit}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -119,6 +116,10 @@ public class Deposit extends Money {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Deposit
+	 * Deposit}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -133,7 +134,7 @@ public class Deposit extends Money {
 	public static final MMBusinessAttribute mmDepositType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashCollateral1.mmDepositType, CashCollateral3.mmDepositType, CashCollateral4.mmDepositType, CashCollateral2.mmDepositType, CashCollateral5.mmDepositType);
-			elementContext_lazy = () -> Deposit.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Deposit.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositType";
@@ -141,6 +142,14 @@ public class Deposit extends Money {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DepositTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Deposit.class.getMethod("getDepositType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Interest> interest;
@@ -180,7 +189,7 @@ public class Deposit extends Money {
 	 */
 	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Deposit.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Deposit.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
@@ -202,7 +211,12 @@ public class Deposit extends Money {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Interest.mmDeposit);
 				subType_lazy = () -> Arrays.asList(CashLoanDeposit.mmObject());
 				superType_lazy = () -> Money.mmObject();
-				element_lazy = () -> Arrays.asList(Deposit.mmDepositType, Deposit.mmInterest);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Deposit.mmDepositType, com.tools20022.repository.entity.Deposit.mmInterest);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Deposit.class;
 			}
 		});
 		return mmObject_lazy.get();

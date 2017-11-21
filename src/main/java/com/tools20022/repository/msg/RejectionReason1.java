@@ -28,6 +28,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason to reject the message.
@@ -89,6 +93,8 @@ import java.util.function.Supplier;
  * definition} = "Reason to reject the message."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RejectionReason1", propOrder = {"reason", "additionalInformation", "linkedMessagePreviousReference", "linkedMessageOtherReference", "linkedMessageRelatedReference"})
 public class RejectionReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -391,6 +397,7 @@ public class RejectionReason1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public MessageRejectedReason1Code getReason() {
 		return reason;
 	}
@@ -399,6 +406,7 @@ public class RejectionReason1 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max140Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -407,6 +415,7 @@ public class RejectionReason1 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "LkdMsgPrvsRef")
 	public AdditionalReference2 getLinkedMessagePreviousReference() {
 		return linkedMessagePreviousReference;
 	}
@@ -415,6 +424,7 @@ public class RejectionReason1 {
 		this.linkedMessagePreviousReference = linkedMessagePreviousReference;
 	}
 
+	@XmlElement(name = "LkdMsgOthrRef")
 	public AdditionalReference2 getLinkedMessageOtherReference() {
 		return linkedMessageOtherReference;
 	}
@@ -423,6 +433,7 @@ public class RejectionReason1 {
 		this.linkedMessageOtherReference = linkedMessageOtherReference;
 	}
 
+	@XmlElement(name = "LkdMsgRltdRef")
 	public AdditionalReference2 getLinkedMessageRelatedReference() {
 		return linkedMessageRelatedReference;
 	}

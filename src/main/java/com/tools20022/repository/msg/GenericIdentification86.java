@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Scheme;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification using a proprietary scheme.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identification using a proprietary scheme."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericIdentification86", propOrder = {"identification", "issuer", "schemeName"})
 public class GenericIdentification86 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -232,6 +238,7 @@ public class GenericIdentification86 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public RestrictedFINXMax30Text getIdentification() {
 		return identification;
 	}
@@ -240,6 +247,7 @@ public class GenericIdentification86 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public Max4AlphaNumericText getIssuer() {
 		return issuer;
 	}
@@ -248,6 +256,7 @@ public class GenericIdentification86 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "SchmeNm")
 	public Max4AlphaNumericText getSchemeName() {
 		return schemeName;
 	}

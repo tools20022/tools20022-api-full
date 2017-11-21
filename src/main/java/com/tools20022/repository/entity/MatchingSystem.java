@@ -65,6 +65,11 @@ public class MatchingSystem extends System {
 				definition = "System which compares two sets of data and provides the comparison result to its users.";
 				superType_lazy = () -> System.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MatchingSystem.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

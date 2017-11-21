@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Certification request PKCS#10 (Public Key Certificate Standard 10) for
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CertificationRequest1", propOrder = {"certificateRequestInformation", "keyIdentification", "keyVersion"})
 public class CertificationRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -221,6 +227,7 @@ public class CertificationRequest1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CertReqInf", required = true)
 	public CertificationRequest2 getCertificateRequestInformation() {
 		return certificateRequestInformation;
 	}
@@ -229,6 +236,7 @@ public class CertificationRequest1 {
 		this.certificateRequestInformation = certificateRequestInformation;
 	}
 
+	@XmlElement(name = "KeyId")
 	public Max140Text getKeyIdentification() {
 		return keyIdentification;
 	}
@@ -237,6 +245,7 @@ public class CertificationRequest1 {
 		this.keyIdentification = keyIdentification;
 	}
 
+	@XmlElement(name = "KeyVrsn")
 	public Max140Text getKeyVersion() {
 		return keyVersion;
 	}

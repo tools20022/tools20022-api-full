@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies reasons for the cancelled status.
@@ -69,6 +73,8 @@ import java.util.function.Supplier;
  * definition} = "Specifies reasons for the cancelled status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancelledStatusReason7", propOrder = {"reasonCode", "additionalReasonInformation"})
 public class CancelledStatusReason7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -194,6 +200,7 @@ public class CancelledStatusReason7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RsnCd", required = true)
 	public CancelledReason4Choice getReasonCode() {
 		return reasonCode;
 	}
@@ -202,6 +209,7 @@ public class CancelledStatusReason7 {
 		this.reasonCode = reasonCode;
 	}
 
+	@XmlElement(name = "AddtlRsnInf")
 	public RestrictedFINXMax210Text getAdditionalReasonInformation() {
 		return additionalReasonInformation;
 	}

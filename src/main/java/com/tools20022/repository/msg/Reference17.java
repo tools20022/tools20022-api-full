@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to a linked transaction.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information related to a linked transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reference17", propOrder = {"collateralSubstitutionRequestIdentification", "collateralSubstitutionResponseIdentification"})
 public class Reference17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -154,6 +160,7 @@ public class Reference17 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CollSbstitnReqId", required = true)
 	public Max35Text getCollateralSubstitutionRequestIdentification() {
 		return collateralSubstitutionRequestIdentification;
 	}
@@ -162,6 +169,7 @@ public class Reference17 {
 		this.collateralSubstitutionRequestIdentification = collateralSubstitutionRequestIdentification;
 	}
 
+	@XmlElement(name = "CollSbstitnRspnId")
 	public Max35Text getCollateralSubstitutionResponseIdentification() {
 		return collateralSubstitutionResponseIdentification;
 	}

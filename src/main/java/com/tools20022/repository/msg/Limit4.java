@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details on the limits.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details on the limits."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Limit4", propOrder = {"amount", "creditDebitIndicator", "status", "startDateTime", "usedAmount", "usedAmountCreditDebitIndicator", "usedPercentage", "remainingAmount"})
 public class Limit4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -475,6 +481,7 @@ public class Limit4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public Amount2Choice getAmount() {
 		return amount;
 	}
@@ -483,6 +490,7 @@ public class Limit4 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -491,6 +499,7 @@ public class Limit4 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Sts")
 	public LimitStatus1Code getStatus() {
 		return status;
 	}
@@ -499,6 +508,7 @@ public class Limit4 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "StartDtTm")
 	public DateAndDateTimeChoice getStartDateTime() {
 		return startDateTime;
 	}
@@ -507,6 +517,7 @@ public class Limit4 {
 		this.startDateTime = startDateTime;
 	}
 
+	@XmlElement(name = "UsdAmt")
 	public Amount2Choice getUsedAmount() {
 		return usedAmount;
 	}
@@ -515,6 +526,7 @@ public class Limit4 {
 		this.usedAmount = usedAmount;
 	}
 
+	@XmlElement(name = "UsdAmtCdtDbtInd")
 	public CreditDebitCode getUsedAmountCreditDebitIndicator() {
 		return usedAmountCreditDebitIndicator;
 	}
@@ -523,6 +535,7 @@ public class Limit4 {
 		this.usedAmountCreditDebitIndicator = usedAmountCreditDebitIndicator;
 	}
 
+	@XmlElement(name = "UsdPctg")
 	public PercentageRate getUsedPercentage() {
 		return usedPercentage;
 	}
@@ -531,6 +544,7 @@ public class Limit4 {
 		this.usedPercentage = usedPercentage;
 	}
 
+	@XmlElement(name = "RmngAmt")
 	public Amount2Choice getRemainingAmount() {
 		return remainingAmount;
 	}

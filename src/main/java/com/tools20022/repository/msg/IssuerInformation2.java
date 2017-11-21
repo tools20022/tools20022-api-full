@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique and unambiguous way to identify an organisation.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * IssuerInformation1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IssuerInformation2", propOrder = {"identification", "URLAddress"})
 public class IssuerInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -209,6 +215,7 @@ public class IssuerInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification40Choice getIdentification() {
 		return identification;
 	}
@@ -217,6 +224,7 @@ public class IssuerInformation2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "URLAdr")
 	public Max256Text getURLAddress() {
 		return uRLAddress;
 	}

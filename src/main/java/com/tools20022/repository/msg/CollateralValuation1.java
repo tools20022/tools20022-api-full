@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the valuation of each piece of collateral that is
@@ -107,6 +111,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralValuation1", propOrder = {"collateralReference", "collateralType", "settlementStatus", "numberOfDaysAccrued", "amountDetails", "dayCountBasis", "exchangeRate", "currencyHaircut", "adjustedRate",
+		"securitiesCollateralDetails", "cashCollateralDetails", "otherCollateralDetails"})
 public class CollateralValuation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -807,6 +814,7 @@ public class CollateralValuation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CollRef", required = true)
 	public Max35Text getCollateralReference() {
 		return collateralReference;
 	}
@@ -815,6 +823,7 @@ public class CollateralValuation1 {
 		this.collateralReference = collateralReference;
 	}
 
+	@XmlElement(name = "CollTp", required = true)
 	public CollateralType1Code getCollateralType() {
 		return collateralType;
 	}
@@ -823,6 +832,7 @@ public class CollateralValuation1 {
 		this.collateralType = collateralType;
 	}
 
+	@XmlElement(name = "SttlmSts", required = true)
 	public SettlementStatus2Code getSettlementStatus() {
 		return settlementStatus;
 	}
@@ -831,6 +841,7 @@ public class CollateralValuation1 {
 		this.settlementStatus = settlementStatus;
 	}
 
+	@XmlElement(name = "NbOfDaysAcrd", required = true)
 	public Number getNumberOfDaysAccrued() {
 		return numberOfDaysAccrued;
 	}
@@ -839,6 +850,7 @@ public class CollateralValuation1 {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
 	}
 
+	@XmlElement(name = "AmtDtls", required = true)
 	public CollateralAmount1 getAmountDetails() {
 		return amountDetails;
 	}
@@ -847,6 +859,7 @@ public class CollateralValuation1 {
 		this.amountDetails = amountDetails;
 	}
 
+	@XmlElement(name = "DayCntBsis", required = true)
 	public InterestComputationMethod2Code getDayCountBasis() {
 		return dayCountBasis;
 	}
@@ -855,6 +868,7 @@ public class CollateralValuation1 {
 		this.dayCountBasis = dayCountBasis;
 	}
 
+	@XmlElement(name = "XchgRate")
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -863,6 +877,7 @@ public class CollateralValuation1 {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "CcyHrcut")
 	public BaseOneRate getCurrencyHaircut() {
 		return currencyHaircut;
 	}
@@ -871,6 +886,7 @@ public class CollateralValuation1 {
 		this.currencyHaircut = currencyHaircut;
 	}
 
+	@XmlElement(name = "AdjstdRate")
 	public BaseOneRate getAdjustedRate() {
 		return adjustedRate;
 	}
@@ -879,6 +895,7 @@ public class CollateralValuation1 {
 		this.adjustedRate = adjustedRate;
 	}
 
+	@XmlElement(name = "SctiesCollDtls")
 	public SecuritiesCollateral1 getSecuritiesCollateralDetails() {
 		return securitiesCollateralDetails;
 	}
@@ -887,6 +904,7 @@ public class CollateralValuation1 {
 		this.securitiesCollateralDetails = securitiesCollateralDetails;
 	}
 
+	@XmlElement(name = "CshCollDtls")
 	public CashCollateral1 getCashCollateralDetails() {
 		return cashCollateralDetails;
 	}
@@ -895,6 +913,7 @@ public class CollateralValuation1 {
 		this.cashCollateralDetails = cashCollateralDetails;
 	}
 
+	@XmlElement(name = "OthrCollDtls")
 	public OtherCollateral1 getOtherCollateralDetails() {
 		return otherCollateralDetails;
 	}

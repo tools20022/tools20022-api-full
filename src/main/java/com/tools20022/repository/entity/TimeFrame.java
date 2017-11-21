@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.ProcessingCharacteristics1;
 import com.tools20022.repository.msg.ProcessingCharacteristics2;
 import com.tools20022.repository.msg.ProcessingCharacteristics3;
 import com.tools20022.repository.msg.TimeFrame3;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,6 +41,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.TimeFrame#mmTradeMinus
+ * TimeFrame.mmTradeMinus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TimeFrame#mmRenunciationMinus
+ * TimeFrame.mmRenunciationMinus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TimeFrame#mmSubscriptionSettlementRelatedFundProcessing
+ * TimeFrame.mmSubscriptionSettlementRelatedFundProcessing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TimeFrame#mmTradePlus
+ * TimeFrame.mmTradePlus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TimeFrame#mmRenunciationPlus
+ * TimeFrame.mmRenunciationPlus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TimeFrame#mmPrepayment
+ * TimeFrame.mmPrepayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TimeFrame#mmOtherTimeFrameDescription
+ * TimeFrame.mmOtherTimeFrameDescription}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TimeFrame#mmRelatedProcessingCharacteristics
+ * TimeFrame.mmRelatedProcessingCharacteristics}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -84,32 +111,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ProcessingCharacteristics3.mmDealingCutOffTimeFrame}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.TimeFrame#mmTradeMinus
- * TimeFrame.mmTradeMinus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TimeFrame#mmRenunciationMinus
- * TimeFrame.mmRenunciationMinus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TimeFrame#mmSubscriptionSettlementRelatedFundProcessing
- * TimeFrame.mmSubscriptionSettlementRelatedFundProcessing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TimeFrame#mmTradePlus
- * TimeFrame.mmTradePlus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TimeFrame#mmRenunciationPlus
- * TimeFrame.mmRenunciationPlus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TimeFrame#mmPrepayment
- * TimeFrame.mmPrepayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TimeFrame#mmOtherTimeFrameDescription
- * TimeFrame.mmOtherTimeFrameDescription}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TimeFrame#mmRelatedProcessingCharacteristics
- * TimeFrame.mmRelatedProcessingCharacteristics}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -142,10 +143,6 @@ public class TimeFrame {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.TimeFrame
-	 * TimeFrame}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -159,6 +156,10 @@ public class TimeFrame {
 	 * TimeFrame1Choice.mmTradeMinus}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.TimeFrame
+	 * TimeFrame}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -175,7 +176,7 @@ public class TimeFrame {
 	public static final MMBusinessAttribute mmTradeMinus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TimeFrame3Choice.mmTradeMinus, TimeFrame3.mmTradeMinus, TimeFrame1Choice.mmTradeMinus);
-			elementContext_lazy = () -> TimeFrame.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeMinus";
@@ -183,6 +184,14 @@ public class TimeFrame {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TimeFrame.class.getMethod("getTradeMinus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number renunciationMinus;
@@ -196,10 +205,6 @@ public class TimeFrame {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.TimeFrame
-	 * TimeFrame}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -211,6 +216,10 @@ public class TimeFrame {
 	 * TimeFrame1Choice.mmRenunciationMinus}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.TimeFrame
+	 * TimeFrame}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -227,7 +236,7 @@ public class TimeFrame {
 	public static final MMBusinessAttribute mmRenunciationMinus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TimeFrame3Choice.mmRenunciationMinus, TimeFrame1Choice.mmRenunciationMinus);
-			elementContext_lazy = () -> TimeFrame.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RenunciationMinus";
@@ -235,6 +244,14 @@ public class TimeFrame {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TimeFrame.class.getMethod("getRenunciationMinus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentFundClassProcessingCharacteristics subscriptionSettlementRelatedFundProcessing;
@@ -274,7 +291,7 @@ public class TimeFrame {
 	 */
 	public static final MMBusinessAssociationEnd mmSubscriptionSettlementRelatedFundProcessing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TimeFrame.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionSettlementRelatedFundProcessing";
@@ -298,10 +315,6 @@ public class TimeFrame {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.TimeFrame
-	 * TimeFrame}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -320,6 +333,10 @@ public class TimeFrame {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.TimeFrame
+	 * TimeFrame}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -335,7 +352,7 @@ public class TimeFrame {
 	public static final MMBusinessAttribute mmTradePlus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Timeframe2Choice.mmTradePlus, TimeFrame5Choice.mmTradePlus, TimeFrame4Choice.mmTradePlus, TimeFrame1Choice.mmTradePlus);
-			elementContext_lazy = () -> TimeFrame.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradePlus";
@@ -343,6 +360,14 @@ public class TimeFrame {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TimeFrame.class.getMethod("getTradePlus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number renunciationPlus;
@@ -357,10 +382,6 @@ public class TimeFrame {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.TimeFrame
-	 * TimeFrame}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -375,6 +396,10 @@ public class TimeFrame {
 	 * TimeFrame1Choice.mmRenunciationPlus}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.TimeFrame
+	 * TimeFrame}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -391,7 +416,7 @@ public class TimeFrame {
 	public static final MMBusinessAttribute mmRenunciationPlus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Timeframe2Choice.mmRenunciationPlus, TimeFrame4Choice.mmRenunciationPlus, TimeFrame1Choice.mmRenunciationPlus);
-			elementContext_lazy = () -> TimeFrame.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RenunciationPlus";
@@ -399,6 +424,14 @@ public class TimeFrame {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TimeFrame.class.getMethod("getRenunciationPlus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator prepayment;
@@ -412,10 +445,6 @@ public class TimeFrame {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.TimeFrame
-	 * TimeFrame}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -427,6 +456,10 @@ public class TimeFrame {
 	 * TimeFrame5Choice.mmPrepayment}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.TimeFrame
+	 * TimeFrame}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -441,7 +474,7 @@ public class TimeFrame {
 	public static final MMBusinessAttribute mmPrepayment = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Timeframe2Choice.mmPrepayment, TimeFrame5Choice.mmPrepayment);
-			elementContext_lazy = () -> TimeFrame.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Prepayment";
@@ -449,6 +482,14 @@ public class TimeFrame {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TimeFrame.class.getMethod("getPrepayment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max350Text otherTimeFrameDescription;
@@ -462,10 +503,6 @@ public class TimeFrame {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.TimeFrame
-	 * TimeFrame}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -474,6 +511,10 @@ public class TimeFrame {
 	 * TimeFrame3.mmOtherTimeFrameDescription}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.TimeFrame
+	 * TimeFrame}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -490,7 +531,7 @@ public class TimeFrame {
 	public static final MMBusinessAttribute mmOtherTimeFrameDescription = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TimeFrame3.mmOtherTimeFrameDescription);
-			elementContext_lazy = () -> TimeFrame.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OtherTimeFrameDescription";
@@ -498,6 +539,14 @@ public class TimeFrame {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TimeFrame.class.getMethod("getOtherTimeFrameDescription", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentFundClassProcessingCharacteristics relatedProcessingCharacteristics;
@@ -538,7 +587,7 @@ public class TimeFrame {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedProcessingCharacteristics = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TimeFrame.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedProcessingCharacteristics";
@@ -561,9 +610,15 @@ public class TimeFrame {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmSettlementCycle,
 						com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmDealingCutOffTimeFrame);
 				derivationElement_lazy = () -> Arrays.asList(ProcessingCharacteristics1.mmDealingCutOffTimeFrame, ProcessingCharacteristics2.mmDealingCutOffTimeFrame, ProcessingCharacteristics3.mmDealingCutOffTimeFrame);
-				element_lazy = () -> Arrays.asList(TimeFrame.mmTradeMinus, TimeFrame.mmRenunciationMinus, TimeFrame.mmSubscriptionSettlementRelatedFundProcessing, TimeFrame.mmTradePlus, TimeFrame.mmRenunciationPlus, TimeFrame.mmPrepayment,
-						TimeFrame.mmOtherTimeFrameDescription, TimeFrame.mmRelatedProcessingCharacteristics);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TimeFrame.mmTradeMinus, com.tools20022.repository.entity.TimeFrame.mmRenunciationMinus,
+						com.tools20022.repository.entity.TimeFrame.mmSubscriptionSettlementRelatedFundProcessing, com.tools20022.repository.entity.TimeFrame.mmTradePlus, com.tools20022.repository.entity.TimeFrame.mmRenunciationPlus,
+						com.tools20022.repository.entity.TimeFrame.mmPrepayment, com.tools20022.repository.entity.TimeFrame.mmOtherTimeFrameDescription, com.tools20022.repository.entity.TimeFrame.mmRelatedProcessingCharacteristics);
 				derivationComponent_lazy = () -> Arrays.asList(TimeFrame3Choice.mmObject(), Timeframe2Choice.mmObject(), TimeFrame3.mmObject(), TimeFrame5Choice.mmObject(), TimeFrame4Choice.mmObject(), TimeFrame1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TimeFrame.class;
 			}
 		});
 		return mmObject_lazy.get();

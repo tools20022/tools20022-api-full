@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about an investment fund.
@@ -109,6 +113,9 @@ import java.util.List;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Fund1 Fund1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Fund2", propOrder = {"name", "legalEntityIdentifier", "identification", "currency", "tradeDateTime", "previousTradeDateTime", "totalNAV", "previousTotalNAV", "totalUnitsNumber", "previousTotalUnitsNumber",
+		"percentageOfFundTotalNAV", "cashInForecastDetails", "cashOutForecastDetails", "netCashForecastDetails"})
 public class Fund2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -896,6 +903,7 @@ public class Fund2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max350Text getName() {
 		return name;
 	}
@@ -904,6 +912,7 @@ public class Fund2 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "LglNttyIdr")
 	public LEIIdentifier getLegalEntityIdentifier() {
 		return legalEntityIdentifier;
 	}
@@ -912,6 +921,7 @@ public class Fund2 {
 		this.legalEntityIdentifier = legalEntityIdentifier;
 	}
 
+	@XmlElement(name = "Id")
 	public OtherIdentification4 getIdentification() {
 		return identification;
 	}
@@ -920,6 +930,7 @@ public class Fund2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveOrHistoricCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -928,6 +939,7 @@ public class Fund2 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "TradDtTm")
 	public DateAndDateTimeChoice getTradeDateTime() {
 		return tradeDateTime;
 	}
@@ -936,6 +948,7 @@ public class Fund2 {
 		this.tradeDateTime = tradeDateTime;
 	}
 
+	@XmlElement(name = "PrvsTradDtTm")
 	public DateAndDateTimeChoice getPreviousTradeDateTime() {
 		return previousTradeDateTime;
 	}
@@ -944,6 +957,7 @@ public class Fund2 {
 		this.previousTradeDateTime = previousTradeDateTime;
 	}
 
+	@XmlElement(name = "TtlNAV")
 	public ActiveOrHistoricCurrencyAndAmount getTotalNAV() {
 		return totalNAV;
 	}
@@ -952,6 +966,7 @@ public class Fund2 {
 		this.totalNAV = totalNAV;
 	}
 
+	@XmlElement(name = "PrvsTtlNAV")
 	public ActiveOrHistoricCurrencyAndAmount getPreviousTotalNAV() {
 		return previousTotalNAV;
 	}
@@ -960,6 +975,7 @@ public class Fund2 {
 		this.previousTotalNAV = previousTotalNAV;
 	}
 
+	@XmlElement(name = "TtlUnitsNb")
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
@@ -968,6 +984,7 @@ public class Fund2 {
 		this.totalUnitsNumber = totalUnitsNumber;
 	}
 
+	@XmlElement(name = "PrvsTtlUnitsNb")
 	public FinancialInstrumentQuantity1 getPreviousTotalUnitsNumber() {
 		return previousTotalUnitsNumber;
 	}
@@ -976,6 +993,7 @@ public class Fund2 {
 		this.previousTotalUnitsNumber = previousTotalUnitsNumber;
 	}
 
+	@XmlElement(name = "PctgOfFndTtlNAV")
 	public PercentageRate getPercentageOfFundTotalNAV() {
 		return percentageOfFundTotalNAV;
 	}
@@ -984,6 +1002,7 @@ public class Fund2 {
 		this.percentageOfFundTotalNAV = percentageOfFundTotalNAV;
 	}
 
+	@XmlElement(name = "CshInFcstDtls")
 	public List<CashInOutForecast7> getCashInForecastDetails() {
 		return cashInForecastDetails;
 	}
@@ -992,6 +1011,7 @@ public class Fund2 {
 		this.cashInForecastDetails = cashInForecastDetails;
 	}
 
+	@XmlElement(name = "CshOutFcstDtls")
 	public List<CashInOutForecast7> getCashOutForecastDetails() {
 		return cashOutForecastDetails;
 	}
@@ -1000,6 +1020,7 @@ public class Fund2 {
 		this.cashOutForecastDetails = cashOutForecastDetails;
 	}
 
+	@XmlElement(name = "NetCshFcstDtls")
 	public List<NetCashForecast5> getNetCashForecastDetails() {
 		return netCashForecastDetails;
 	}

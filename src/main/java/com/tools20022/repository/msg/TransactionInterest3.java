@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provide further details on transaction specific interest information that
@@ -65,6 +69,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionInterest3", propOrder = {"totalInterestAndTaxAmount", "record"})
 public class TransactionInterest3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class TransactionInterest3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlIntrstAndTaxAmt")
 	public ActiveOrHistoricCurrencyAndAmount getTotalInterestAndTaxAmount() {
 		return totalInterestAndTaxAmount;
 	}
@@ -180,6 +187,7 @@ public class TransactionInterest3 {
 		this.totalInterestAndTaxAmount = totalInterestAndTaxAmount;
 	}
 
+	@XmlElement(name = "Rcrd")
 	public List<InterestRecord1> getRecord() {
 		return record;
 	}

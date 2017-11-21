@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Consideration, such as amount of money, paid or received in exchange for an
@@ -91,6 +95,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestCalculation1", propOrder = {"calculationDate", "effectivePrincipalAmount", "principalAmount", "movementAmount", "movementDirection", "effectiveRate", "interestRate", "spread", "accruedInterestAmount",
+		"aggregatedInterestAmount"})
 public class InterestCalculation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -604,6 +611,7 @@ public class InterestCalculation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClctnDt", required = true)
 	public ISODate getCalculationDate() {
 		return calculationDate;
 	}
@@ -612,6 +620,7 @@ public class InterestCalculation1 {
 		this.calculationDate = calculationDate;
 	}
 
+	@XmlElement(name = "FctvPrncplAmt", required = true)
 	public ActiveCurrencyAndAmount getEffectivePrincipalAmount() {
 		return effectivePrincipalAmount;
 	}
@@ -620,6 +629,7 @@ public class InterestCalculation1 {
 		this.effectivePrincipalAmount = effectivePrincipalAmount;
 	}
 
+	@XmlElement(name = "PrncplAmt")
 	public ActiveCurrencyAndAmount getPrincipalAmount() {
 		return principalAmount;
 	}
@@ -628,6 +638,7 @@ public class InterestCalculation1 {
 		this.principalAmount = principalAmount;
 	}
 
+	@XmlElement(name = "MvmntAmt")
 	public ActiveCurrencyAndAmount getMovementAmount() {
 		return movementAmount;
 	}
@@ -636,6 +647,7 @@ public class InterestCalculation1 {
 		this.movementAmount = movementAmount;
 	}
 
+	@XmlElement(name = "MvmntDrctn")
 	public CreditDebitCode getMovementDirection() {
 		return movementDirection;
 	}
@@ -644,6 +656,7 @@ public class InterestCalculation1 {
 		this.movementDirection = movementDirection;
 	}
 
+	@XmlElement(name = "FctvRate", required = true)
 	public PercentageRate getEffectiveRate() {
 		return effectiveRate;
 	}
@@ -652,6 +665,7 @@ public class InterestCalculation1 {
 		this.effectiveRate = effectiveRate;
 	}
 
+	@XmlElement(name = "IntrstRate")
 	public PercentageRate getInterestRate() {
 		return interestRate;
 	}
@@ -660,6 +674,7 @@ public class InterestCalculation1 {
 		this.interestRate = interestRate;
 	}
 
+	@XmlElement(name = "Sprd")
 	public PercentageRate getSpread() {
 		return spread;
 	}
@@ -668,6 +683,7 @@ public class InterestCalculation1 {
 		this.spread = spread;
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt", required = true)
 	public ActiveCurrencyAndAmount getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -676,6 +692,7 @@ public class InterestCalculation1 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "AggtdIntrstAmt")
 	public ActiveCurrencyAndAmount getAggregatedInterestAmount() {
 		return aggregatedInterestAmount;
 	}

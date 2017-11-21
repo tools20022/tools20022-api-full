@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Entity involved in an activity.
@@ -79,6 +83,8 @@ import java.util.function.Supplier;
  * definition} = "Entity involved in an activity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification9", propOrder = {"name", "BEI", "otherScheme", "postalAddress"})
 public class PartyIdentification9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -340,6 +346,7 @@ public class PartyIdentification9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max70Text getName() {
 		return name;
 	}
@@ -348,6 +355,7 @@ public class PartyIdentification9 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "BEI", required = true)
 	public BEIIdentifier getBEI() {
 		return bEI;
 	}
@@ -356,6 +364,7 @@ public class PartyIdentification9 {
 		this.bEI = bEI;
 	}
 
+	@XmlElement(name = "OthrSchme", required = true)
 	public Max70Text getOtherScheme() {
 		return otherScheme;
 	}
@@ -364,6 +373,7 @@ public class PartyIdentification9 {
 		this.otherScheme = otherScheme;
 	}
 
+	@XmlElement(name = "PstlAdr", required = true)
 	public PostalAddress2 getPostalAddress() {
 		return postalAddress;
 	}

@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestigationPartyRole
+ * InvestigationPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -62,10 +66,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * MandateSuspensionReason1.mmOriginator}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestigationPartyRole
- * InvestigationPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -97,6 +97,11 @@ public class StatusOriginator extends InvestigationPartyRole {
 				derivationElement_lazy = () -> Arrays.asList(PaymentReturnReason2.mmOriginator, PaymentReturnReason1.mmOriginator, TradeData1.mmStatusOriginator, TradeData4.mmStatusOriginator, TradeData3.mmStatusOriginator,
 						TradeData2.mmStatusOriginator, TradeData6.mmStatusOriginator, ValidationStatusReason1.mmOriginator, MandateSuspensionReason1.mmOriginator);
 				superType_lazy = () -> InvestigationPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StatusOriginator.class;
 			}
 		});
 		return mmObject_lazy.get();

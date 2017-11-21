@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique and unambiguous identifier of a financial institution, as assigned
@@ -75,6 +79,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstitutionIdentification6", propOrder = {"clearingSystemMemberIdentification", "proprietaryIdentification", "BIC"})
 public class FinancialInstitutionIdentification6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -254,6 +260,7 @@ public class FinancialInstitutionIdentification6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClrSysMmbId")
 	public ClearingSystemMemberIdentification2Choice getClearingSystemMemberIdentification() {
 		return clearingSystemMemberIdentification;
 	}
@@ -262,6 +269,7 @@ public class FinancialInstitutionIdentification6 {
 		this.clearingSystemMemberIdentification = clearingSystemMemberIdentification;
 	}
 
+	@XmlElement(name = "PrtryId")
 	public GenericIdentification4 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
@@ -270,6 +278,7 @@ public class FinancialInstitutionIdentification6 {
 		this.proprietaryIdentification = proprietaryIdentification;
 	}
 
+	@XmlElement(name = "BIC")
 	public BICIdentifier getBIC() {
 		return bIC;
 	}

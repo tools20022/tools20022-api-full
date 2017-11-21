@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies an entity involved in a trade activity.
@@ -72,6 +76,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeParty1", propOrder = {"partyIdentification", "legalOrganisation", "taxParty"})
 public class TradeParty1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -263,6 +269,7 @@ public class TradeParty1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification45 getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -271,6 +278,7 @@ public class TradeParty1 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "LglOrg")
 	public LegalOrganisation1 getLegalOrganisation() {
 		return legalOrganisation;
 	}
@@ -279,6 +287,7 @@ public class TradeParty1 {
 		this.legalOrganisation = legalOrganisation;
 	}
 
+	@XmlElement(name = "TaxPty")
 	public List<TaxParty3> getTaxParty() {
 		return taxParty;
 	}

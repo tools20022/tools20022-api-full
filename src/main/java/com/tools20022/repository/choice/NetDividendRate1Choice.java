@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.NetDividendRate2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format to express a net dividend.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of format to express a net dividend."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NetDividendRate1Choice", propOrder = {"notSpecifiedRate", "amount", "rateTypeAmount"})
 public class NetDividendRate1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -223,6 +229,7 @@ public class NetDividendRate1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NotSpcfdRate", required = true)
 	public RateValueType6FormatChoice getNotSpecifiedRate() {
 		return notSpecifiedRate;
 	}
@@ -231,6 +238,7 @@ public class NetDividendRate1Choice {
 		this.notSpecifiedRate = notSpecifiedRate;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -239,6 +247,7 @@ public class NetDividendRate1Choice {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "RateTpAmt", required = true)
 	public NetDividendRate2 getRateTypeAmount() {
 		return rateTypeAmount;
 	}

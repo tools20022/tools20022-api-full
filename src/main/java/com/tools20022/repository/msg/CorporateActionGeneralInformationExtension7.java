@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action general
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionGeneralInformationExtension7", propOrder = {"placeAndName", "eventType", "subEventType", "eventSecurity", "participantName"})
 public class CorporateActionGeneralInformationExtension7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -316,6 +322,7 @@ public class CorporateActionGeneralInformationExtension7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -324,6 +331,7 @@ public class CorporateActionGeneralInformationExtension7 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "EvtTp")
 	public ExtendedEventType1Code getEventType() {
 		return eventType;
 	}
@@ -332,6 +340,7 @@ public class CorporateActionGeneralInformationExtension7 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "SubEvtTp")
 	public DTCCSubEventType1Code getSubEventType() {
 		return subEventType;
 	}
@@ -340,6 +349,7 @@ public class CorporateActionGeneralInformationExtension7 {
 		this.subEventType = subEventType;
 	}
 
+	@XmlElement(name = "EvtScty")
 	public SecurityIdentification12Choice getEventSecurity() {
 		return eventSecurity;
 	}
@@ -348,6 +358,7 @@ public class CorporateActionGeneralInformationExtension7 {
 		this.eventSecurity = eventSecurity;
 	}
 
+	@XmlElement(name = "PtcptNm")
 	public Max10Text getParticipantName() {
 		return participantName;
 	}

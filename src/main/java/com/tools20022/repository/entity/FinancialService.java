@@ -33,8 +33,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Service Service}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -46,6 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CustodyService}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Service Service}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -74,6 +74,11 @@ public class FinancialService extends Service {
 				definition = "Services provided by a financial institution to its clients.";
 				subType_lazy = () -> Arrays.asList(AccountService.mmObject(), CorporateActionServicing.mmObject(), CustodyService.mmObject());
 				superType_lazy = () -> Service.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FinancialService.class;
 			}
 		});
 		return mmObject_lazy.get();

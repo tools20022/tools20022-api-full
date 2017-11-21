@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SystemEventInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information that describes a netting cut off held at a central system.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information that describes a netting cut off held at a central system."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CutOff1", propOrder = {"cutOffUpdateIdentification", "currency", "cutOffTime", "valueDateOffset"})
 public class CutOff1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -271,6 +277,7 @@ public class CutOff1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CutOffUpdId", required = true)
 	public Max35Text getCutOffUpdateIdentification() {
 		return cutOffUpdateIdentification;
 	}
@@ -279,6 +286,7 @@ public class CutOff1 {
 		this.cutOffUpdateIdentification = cutOffUpdateIdentification;
 	}
 
+	@XmlElement(name = "Ccy", required = true)
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -287,6 +295,7 @@ public class CutOff1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "CutOffTm", required = true)
 	public ISOTime getCutOffTime() {
 		return cutOffTime;
 	}
@@ -295,6 +304,7 @@ public class CutOff1 {
 		this.cutOffTime = cutOffTime;
 	}
 
+	@XmlElement(name = "ValDtOffset", required = true)
 	public DateOffsetText getValueDateOffset() {
 		return valueDateOffset;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Tax identification information.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TaxIdentification1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxIdentification2", propOrder = {"identification", "taxIdentificationType", "issuer", "issueDate", "expiryDate", "issuerCountry"})
 public class TaxIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -375,6 +381,7 @@ public class TaxIdentification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -383,6 +390,7 @@ public class TaxIdentification2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "TaxIdTp", required = true)
 	public TaxIdentificationType1Choice getTaxIdentificationType() {
 		return taxIdentificationType;
 	}
@@ -391,6 +399,7 @@ public class TaxIdentification2 {
 		this.taxIdentificationType = taxIdentificationType;
 	}
 
+	@XmlElement(name = "Issr")
 	public Max35Text getIssuer() {
 		return issuer;
 	}
@@ -399,6 +408,7 @@ public class TaxIdentification2 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "IsseDt")
 	public ISODate getIssueDate() {
 		return issueDate;
 	}
@@ -407,6 +417,7 @@ public class TaxIdentification2 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "XpryDt")
 	public ISODate getExpiryDate() {
 		return expiryDate;
 	}
@@ -415,6 +426,7 @@ public class TaxIdentification2 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "IssrCtry", required = true)
 	public CountryCode getIssuerCountry() {
 		return issuerCountry;
 	}

@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements defining the balance details.
@@ -75,6 +79,8 @@ import java.util.List;
  * definition} = "Set of elements defining the balance details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashBalance1", propOrder = {"type", "creditLine", "amount", "creditDebitIndicator", "date", "availability"})
 public class CashBalance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -385,6 +391,7 @@ public class CashBalance1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public BalanceType1Choice getType() {
 		return type;
 	}
@@ -393,6 +400,7 @@ public class CashBalance1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "CdtLine")
 	public CreditLine1 getCreditLine() {
 		return creditLine;
 	}
@@ -401,6 +409,7 @@ public class CashBalance1 {
 		this.creditLine = creditLine;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -409,6 +418,7 @@ public class CashBalance1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -417,6 +427,7 @@ public class CashBalance1 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public DateAndDateTimeChoice getDate() {
 		return date;
 	}
@@ -425,6 +436,7 @@ public class CashBalance1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Avlbty")
 	public List<CashBalanceAvailability1> getAvailability() {
 		return availability;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details of many status advice reports where many received reports
@@ -78,6 +82,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MessageReportHeader4", propOrder = {"messageReportIdentifier", "messageStatus", "recordStatus", "supplementaryData"})
 public class MessageReportHeader4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -272,6 +278,7 @@ public class MessageReportHeader4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgRptIdr")
 	public Max140Text getMessageReportIdentifier() {
 		return messageReportIdentifier;
 	}
@@ -280,6 +287,7 @@ public class MessageReportHeader4 {
 		this.messageReportIdentifier = messageReportIdentifier;
 	}
 
+	@XmlElement(name = "MsgSts")
 	public StatusAdviceReport3 getMessageStatus() {
 		return messageStatus;
 	}
@@ -288,6 +296,7 @@ public class MessageReportHeader4 {
 		this.messageStatus = messageStatus;
 	}
 
+	@XmlElement(name = "RcrdSts")
 	public List<StatusReportRecord3> getRecordStatus() {
 		return recordStatus;
 	}
@@ -296,6 +305,7 @@ public class MessageReportHeader4 {
 		this.recordStatus = recordStatus;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

@@ -31,6 +31,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Any party who is related to an investment account.
@@ -123,6 +127,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountParties5", propOrder = {"primaryOwner", "trustee", "custodianForMinor", "nominee", "jointOwner", "secondaryOwner", "beneficiary", "powerOfAttorney", "legalGuardian", "successorOnDeath", "administrator",
+		"otherParty", "granter", "settler"})
 public class AccountParties5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -905,6 +912,7 @@ public class AccountParties5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmryOwnr", required = true)
 	public InvestmentAccountOwnershipInformation5 getPrimaryOwner() {
 		return primaryOwner;
 	}
@@ -913,6 +921,7 @@ public class AccountParties5 {
 		this.primaryOwner = primaryOwner;
 	}
 
+	@XmlElement(name = "Trstee", required = true)
 	public List<InvestmentAccountOwnershipInformation5> getTrustee() {
 		return trustee;
 	}
@@ -921,6 +930,7 @@ public class AccountParties5 {
 		this.trustee = trustee;
 	}
 
+	@XmlElement(name = "CtdnForMnr", required = true)
 	public InvestmentAccountOwnershipInformation5 getCustodianForMinor() {
 		return custodianForMinor;
 	}
@@ -929,6 +939,7 @@ public class AccountParties5 {
 		this.custodianForMinor = custodianForMinor;
 	}
 
+	@XmlElement(name = "Nmnee", required = true)
 	public InvestmentAccountOwnershipInformation5 getNominee() {
 		return nominee;
 	}
@@ -937,6 +948,7 @@ public class AccountParties5 {
 		this.nominee = nominee;
 	}
 
+	@XmlElement(name = "JntOwnr", required = true)
 	public List<InvestmentAccountOwnershipInformation5> getJointOwner() {
 		return jointOwner;
 	}
@@ -945,6 +957,7 @@ public class AccountParties5 {
 		this.jointOwner = jointOwner;
 	}
 
+	@XmlElement(name = "ScndryOwnr")
 	public List<InvestmentAccountOwnershipInformation5> getSecondaryOwner() {
 		return secondaryOwner;
 	}
@@ -953,6 +966,7 @@ public class AccountParties5 {
 		this.secondaryOwner = secondaryOwner;
 	}
 
+	@XmlElement(name = "Bnfcry")
 	public List<InvestmentAccountOwnershipInformation5> getBeneficiary() {
 		return beneficiary;
 	}
@@ -961,6 +975,7 @@ public class AccountParties5 {
 		this.beneficiary = beneficiary;
 	}
 
+	@XmlElement(name = "PwrOfAttny")
 	public List<InvestmentAccountOwnershipInformation5> getPowerOfAttorney() {
 		return powerOfAttorney;
 	}
@@ -969,6 +984,7 @@ public class AccountParties5 {
 		this.powerOfAttorney = powerOfAttorney;
 	}
 
+	@XmlElement(name = "LglGuardn")
 	public List<InvestmentAccountOwnershipInformation5> getLegalGuardian() {
 		return legalGuardian;
 	}
@@ -977,6 +993,7 @@ public class AccountParties5 {
 		this.legalGuardian = legalGuardian;
 	}
 
+	@XmlElement(name = "SucssrOnDth")
 	public List<InvestmentAccountOwnershipInformation5> getSuccessorOnDeath() {
 		return successorOnDeath;
 	}
@@ -985,6 +1002,7 @@ public class AccountParties5 {
 		this.successorOnDeath = successorOnDeath;
 	}
 
+	@XmlElement(name = "Admstr")
 	public InvestmentAccountOwnershipInformation5 getAdministrator() {
 		return administrator;
 	}
@@ -993,6 +1011,7 @@ public class AccountParties5 {
 		this.administrator = administrator;
 	}
 
+	@XmlElement(name = "OthrPty")
 	public List<ExtendedParty2> getOtherParty() {
 		return otherParty;
 	}
@@ -1001,6 +1020,7 @@ public class AccountParties5 {
 		this.otherParty = otherParty;
 	}
 
+	@XmlElement(name = "Grntr")
 	public List<InvestmentAccountOwnershipInformation5> getGranter() {
 		return granter;
 	}
@@ -1009,6 +1029,7 @@ public class AccountParties5 {
 		this.granter = granter;
 	}
 
+	@XmlElement(name = "Sttlr")
 	public List<InvestmentAccountOwnershipInformation5> getSettler() {
 		return settler;
 	}

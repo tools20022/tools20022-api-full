@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of status.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Status9Choice", propOrder = {"proprietary", "matchingStatus", "inferredMatchingStatus", "settlementStatus", "instructionProcessingStatus"})
 public class Status9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -383,6 +389,7 @@ public class Status9Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason1 getProprietary() {
 		return proprietary;
 	}
@@ -391,6 +398,7 @@ public class Status9Choice {
 		this.proprietary = proprietary;
 	}
 
+	@XmlElement(name = "MtchgSts", required = true)
 	public MatchingStatus7Choice getMatchingStatus() {
 		return matchingStatus;
 	}
@@ -399,6 +407,7 @@ public class Status9Choice {
 		this.matchingStatus = matchingStatus;
 	}
 
+	@XmlElement(name = "IfrrdMtchgSts", required = true)
 	public MatchingStatus7Choice getInferredMatchingStatus() {
 		return inferredMatchingStatus;
 	}
@@ -407,6 +416,7 @@ public class Status9Choice {
 		this.inferredMatchingStatus = inferredMatchingStatus;
 	}
 
+	@XmlElement(name = "SttlmSts", required = true)
 	public SettlementStatus7Choice getSettlementStatus() {
 		return settlementStatus;
 	}
@@ -415,6 +425,7 @@ public class Status9Choice {
 		this.settlementStatus = settlementStatus;
 	}
 
+	@XmlElement(name = "InstrPrcgSts", required = true)
 	public InstructionProcessingStatus10Choice getInstructionProcessingStatus() {
 		return instructionProcessingStatus;
 	}

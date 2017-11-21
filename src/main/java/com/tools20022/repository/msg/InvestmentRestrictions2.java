@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteris
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Investment restrictions linked to the instrument.
@@ -91,6 +95,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Investment restrictions linked to the instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentRestrictions2", propOrder = {"minimumInitialSubscriptionAmount", "minimumInitialSubscriptionUnits", "minimumSubsequentSubscriptionAmount", "minimumSubsequentSubscriptionUnits", "maximumRedemptionAmount",
+		"maximumRedemptionUnits", "otherRedemptionRestrictions", "minimumHoldingAmount", "minimumHoldingUnits", "minimumHoldingPeriod", "holdingTransferable"})
 public class InvestmentRestrictions2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -663,6 +670,7 @@ public class InvestmentRestrictions2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MinInitlSbcptAmt")
 	public ActiveCurrencyAndAmount getMinimumInitialSubscriptionAmount() {
 		return minimumInitialSubscriptionAmount;
 	}
@@ -671,6 +679,7 @@ public class InvestmentRestrictions2 {
 		this.minimumInitialSubscriptionAmount = minimumInitialSubscriptionAmount;
 	}
 
+	@XmlElement(name = "MinInitlSbcptUnits")
 	public Number getMinimumInitialSubscriptionUnits() {
 		return minimumInitialSubscriptionUnits;
 	}
@@ -679,6 +688,7 @@ public class InvestmentRestrictions2 {
 		this.minimumInitialSubscriptionUnits = minimumInitialSubscriptionUnits;
 	}
 
+	@XmlElement(name = "MinSbsqntSbcptAmt")
 	public ActiveCurrencyAndAmount getMinimumSubsequentSubscriptionAmount() {
 		return minimumSubsequentSubscriptionAmount;
 	}
@@ -687,6 +697,7 @@ public class InvestmentRestrictions2 {
 		this.minimumSubsequentSubscriptionAmount = minimumSubsequentSubscriptionAmount;
 	}
 
+	@XmlElement(name = "MinSbsqntSbcptUnits")
 	public Number getMinimumSubsequentSubscriptionUnits() {
 		return minimumSubsequentSubscriptionUnits;
 	}
@@ -695,6 +706,7 @@ public class InvestmentRestrictions2 {
 		this.minimumSubsequentSubscriptionUnits = minimumSubsequentSubscriptionUnits;
 	}
 
+	@XmlElement(name = "MaxRedAmt")
 	public ActiveCurrencyAndAmount getMaximumRedemptionAmount() {
 		return maximumRedemptionAmount;
 	}
@@ -703,6 +715,7 @@ public class InvestmentRestrictions2 {
 		this.maximumRedemptionAmount = maximumRedemptionAmount;
 	}
 
+	@XmlElement(name = "MaxRedUnits")
 	public Number getMaximumRedemptionUnits() {
 		return maximumRedemptionUnits;
 	}
@@ -711,6 +724,7 @@ public class InvestmentRestrictions2 {
 		this.maximumRedemptionUnits = maximumRedemptionUnits;
 	}
 
+	@XmlElement(name = "OthrRedRstrctns")
 	public Max350Text getOtherRedemptionRestrictions() {
 		return otherRedemptionRestrictions;
 	}
@@ -719,6 +733,7 @@ public class InvestmentRestrictions2 {
 		this.otherRedemptionRestrictions = otherRedemptionRestrictions;
 	}
 
+	@XmlElement(name = "MinHldgAmt")
 	public ActiveCurrencyAndAmount getMinimumHoldingAmount() {
 		return minimumHoldingAmount;
 	}
@@ -727,6 +742,7 @@ public class InvestmentRestrictions2 {
 		this.minimumHoldingAmount = minimumHoldingAmount;
 	}
 
+	@XmlElement(name = "MinHldgUnits")
 	public DecimalNumber getMinimumHoldingUnits() {
 		return minimumHoldingUnits;
 	}
@@ -735,6 +751,7 @@ public class InvestmentRestrictions2 {
 		this.minimumHoldingUnits = minimumHoldingUnits;
 	}
 
+	@XmlElement(name = "MinHldgPrd")
 	public Max70Text getMinimumHoldingPeriod() {
 		return minimumHoldingPeriod;
 	}
@@ -743,6 +760,7 @@ public class InvestmentRestrictions2 {
 		this.minimumHoldingPeriod = minimumHoldingPeriod;
 	}
 
+	@XmlElement(name = "HldgTrfbl", required = true)
 	public HoldingTransferable1Code getHoldingTransferable() {
 		return holdingTransferable;
 	}

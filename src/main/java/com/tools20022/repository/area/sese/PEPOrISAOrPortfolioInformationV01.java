@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -42,9 +44,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.018.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -111,6 +110,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.018.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -130,6 +132,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PEPOrISAOrPortfolioInformationV01", propOrder = {"messageReference", "poolReference", "previousReference", "relatedReference", "primaryIndividualInvestor", "secondaryIndividualInvestor", "otherIndividualInvestor",
+		"primaryCorporateInvestor", "secondaryCorporateInvestor", "otherCorporateInvestor", "clientAccount", "nomineeAccount", "newPlanManager", "productTransfer", "extension"})
 public class PEPOrISAOrPortfolioInformationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +172,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioInformationV01.class.getMethod("getMessageReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -201,6 +214,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioInformationV01.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 previousReference;
@@ -237,6 +258,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioInformationV01.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 relatedReference;
 	/**
@@ -272,6 +301,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioInformationV01.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected IndividualPerson8 primaryIndividualInvestor;
@@ -311,6 +348,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioInformationV01.class.getMethod("getPrimaryIndividualInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected IndividualPerson8 secondaryIndividualInvestor;
 	/**
@@ -349,6 +394,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioInformationV01.class.getMethod("getSecondaryIndividualInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<IndividualPerson8> otherIndividualInvestor;
 	/**
@@ -385,6 +438,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 			definition = "Information identifying other individual investors, eg, name, address, social security number and date of birth.";
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioInformationV01.class.getMethod("getOtherIndividualInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Organisation4 primaryCorporateInvestor;
@@ -423,6 +484,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioInformationV01.class.getMethod("getPrimaryCorporateInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Organisation4 secondaryCorporateInvestor;
 	/**
@@ -460,6 +529,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioInformationV01.class.getMethod("getSecondaryCorporateInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Organisation4> otherCorporateInvestor;
 	/**
@@ -495,6 +572,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 			definition = "Information identifying the other corporate investors, eg, name and address.";
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioInformationV01.class.getMethod("getOtherCorporateInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Account5 clientAccount;
@@ -533,6 +618,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Account5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioInformationV01.class.getMethod("getClientAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Account6 nomineeAccount;
 	/**
@@ -569,6 +662,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Account6.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioInformationV01.class.getMethod("getNomineeAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification2Choice newPlanManager;
@@ -608,6 +709,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioInformationV01.class.getMethod("getNewPlanManager", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PEPISATransfer6> productTransfer;
 	/**
@@ -641,6 +750,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 			definition = "Provides information related to the asset(s) transferred.";
 			minOccurs = 1;
 			complexType_lazy = () -> PEPISATransfer6.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioInformationV01.class.getMethod("getProductTransfer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -678,6 +795,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioInformationV01.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -691,11 +816,14 @@ public class PEPOrISAOrPortfolioInformationV01 {
 				rootElement = "Document";
 				xmlTag = "PEPOrISAOrPrtflInfV01";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PEPOrISAOrPortfolioInformationV01.mmMessageReference, PEPOrISAOrPortfolioInformationV01.mmPoolReference, PEPOrISAOrPortfolioInformationV01.mmPreviousReference,
-						PEPOrISAOrPortfolioInformationV01.mmRelatedReference, PEPOrISAOrPortfolioInformationV01.mmPrimaryIndividualInvestor, PEPOrISAOrPortfolioInformationV01.mmSecondaryIndividualInvestor,
-						PEPOrISAOrPortfolioInformationV01.mmOtherIndividualInvestor, PEPOrISAOrPortfolioInformationV01.mmPrimaryCorporateInvestor, PEPOrISAOrPortfolioInformationV01.mmSecondaryCorporateInvestor,
-						PEPOrISAOrPortfolioInformationV01.mmOtherCorporateInvestor, PEPOrISAOrPortfolioInformationV01.mmClientAccount, PEPOrISAOrPortfolioInformationV01.mmNomineeAccount, PEPOrISAOrPortfolioInformationV01.mmNewPlanManager,
-						PEPOrISAOrPortfolioInformationV01.mmProductTransfer, PEPOrISAOrPortfolioInformationV01.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmMessageReference,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmPoolReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmPreviousReference,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmRelatedReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmPrimaryIndividualInvestor,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmSecondaryIndividualInvestor, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmOtherIndividualInvestor,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmPrimaryCorporateInvestor, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmSecondaryCorporateInvestor,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmOtherCorporateInvestor, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmClientAccount,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmNomineeAccount, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmNewPlanManager,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmProductTransfer, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -705,10 +833,16 @@ public class PEPOrISAOrPortfolioInformationV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PEPOrISAOrPortfolioInformationV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgRef", required = true)
 	public MessageIdentification1 getMessageReference() {
 		return messageReference;
 	}
@@ -717,6 +851,7 @@ public class PEPOrISAOrPortfolioInformationV01 {
 		this.messageReference = messageReference;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -725,6 +860,7 @@ public class PEPOrISAOrPortfolioInformationV01 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -733,6 +869,7 @@ public class PEPOrISAOrPortfolioInformationV01 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
@@ -741,6 +878,7 @@ public class PEPOrISAOrPortfolioInformationV01 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "PmryIndvInvstr")
 	public IndividualPerson8 getPrimaryIndividualInvestor() {
 		return primaryIndividualInvestor;
 	}
@@ -749,6 +887,7 @@ public class PEPOrISAOrPortfolioInformationV01 {
 		this.primaryIndividualInvestor = primaryIndividualInvestor;
 	}
 
+	@XmlElement(name = "ScndryIndvInvstr")
 	public IndividualPerson8 getSecondaryIndividualInvestor() {
 		return secondaryIndividualInvestor;
 	}
@@ -757,6 +896,7 @@ public class PEPOrISAOrPortfolioInformationV01 {
 		this.secondaryIndividualInvestor = secondaryIndividualInvestor;
 	}
 
+	@XmlElement(name = "OthrIndvInvstr")
 	public List<IndividualPerson8> getOtherIndividualInvestor() {
 		return otherIndividualInvestor;
 	}
@@ -765,6 +905,7 @@ public class PEPOrISAOrPortfolioInformationV01 {
 		this.otherIndividualInvestor = otherIndividualInvestor;
 	}
 
+	@XmlElement(name = "PmryCorpInvstr")
 	public Organisation4 getPrimaryCorporateInvestor() {
 		return primaryCorporateInvestor;
 	}
@@ -773,6 +914,7 @@ public class PEPOrISAOrPortfolioInformationV01 {
 		this.primaryCorporateInvestor = primaryCorporateInvestor;
 	}
 
+	@XmlElement(name = "ScndryCorpInvstr")
 	public Organisation4 getSecondaryCorporateInvestor() {
 		return secondaryCorporateInvestor;
 	}
@@ -781,6 +923,7 @@ public class PEPOrISAOrPortfolioInformationV01 {
 		this.secondaryCorporateInvestor = secondaryCorporateInvestor;
 	}
 
+	@XmlElement(name = "OthrCorpInvstr")
 	public List<Organisation4> getOtherCorporateInvestor() {
 		return otherCorporateInvestor;
 	}
@@ -789,6 +932,7 @@ public class PEPOrISAOrPortfolioInformationV01 {
 		this.otherCorporateInvestor = otherCorporateInvestor;
 	}
 
+	@XmlElement(name = "ClntAcct", required = true)
 	public Account5 getClientAccount() {
 		return clientAccount;
 	}
@@ -797,6 +941,7 @@ public class PEPOrISAOrPortfolioInformationV01 {
 		this.clientAccount = clientAccount;
 	}
 
+	@XmlElement(name = "NmneeAcct")
 	public Account6 getNomineeAccount() {
 		return nomineeAccount;
 	}
@@ -805,6 +950,7 @@ public class PEPOrISAOrPortfolioInformationV01 {
 		this.nomineeAccount = nomineeAccount;
 	}
 
+	@XmlElement(name = "NewPlanMgr", required = true)
 	public PartyIdentification2Choice getNewPlanManager() {
 		return newPlanManager;
 	}
@@ -813,6 +959,7 @@ public class PEPOrISAOrPortfolioInformationV01 {
 		this.newPlanManager = newPlanManager;
 	}
 
+	@XmlElement(name = "PdctTrf", required = true)
 	public List<PEPISATransfer6> getProductTransfer() {
 		return productTransfer;
 	}
@@ -821,11 +968,18 @@ public class PEPOrISAOrPortfolioInformationV01 {
 		this.productTransfer = productTransfer;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.018.01.01")
+	static public class Document {
+		@XmlElement(name = "PEPOrISAOrPrtflInfV01", required = true)
+		public PEPOrISAOrPortfolioInformationV01 messageBody;
 	}
 }

@@ -28,8 +28,10 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.Pagination;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -46,9 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.005.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
@@ -90,6 +89,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.005.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -105,6 +107,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountingStatementOfHoldingsCancellation}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountingStatementOfHoldingsCancellationV02", propOrder = {"messageIdentification", "previousReference", "relatedReference", "messagePagination", "statementToBeCancelled"})
 public class AccountingStatementOfHoldingsCancellationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -145,6 +149,14 @@ public class AccountingStatementOfHoldingsCancellationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountingStatementOfHoldingsCancellationV02.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference2 previousReference;
 	/**
@@ -179,6 +191,14 @@ public class AccountingStatementOfHoldingsCancellationV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountingStatementOfHoldingsCancellationV02.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference2 relatedReference;
@@ -216,6 +236,14 @@ public class AccountingStatementOfHoldingsCancellationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountingStatementOfHoldingsCancellationV02.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Pagination messagePagination;
 	/**
@@ -249,6 +277,14 @@ public class AccountingStatementOfHoldingsCancellationV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountingStatementOfHoldingsCancellationV02.class.getMethod("getMessagePagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AccountingStatementOfHoldings2 statementToBeCancelled;
@@ -285,6 +321,14 @@ public class AccountingStatementOfHoldingsCancellationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AccountingStatementOfHoldings2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountingStatementOfHoldingsCancellationV02.class.getMethod("getStatementToBeCancelled", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -298,8 +342,9 @@ public class AccountingStatementOfHoldingsCancellationV02 {
 				rootElement = "Document";
 				xmlTag = "AcctgStmtOfHldgsCxlV02";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AccountingStatementOfHoldingsCancellationV02.mmMessageIdentification, AccountingStatementOfHoldingsCancellationV02.mmPreviousReference,
-						AccountingStatementOfHoldingsCancellationV02.mmRelatedReference, AccountingStatementOfHoldingsCancellationV02.mmMessagePagination, AccountingStatementOfHoldingsCancellationV02.mmStatementToBeCancelled);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02.mmMessageIdentification,
+						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02.mmPreviousReference, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02.mmRelatedReference,
+						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02.mmMessagePagination, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02.mmStatementToBeCancelled);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -309,10 +354,16 @@ public class AccountingStatementOfHoldingsCancellationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountingStatementOfHoldingsCancellationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -321,6 +372,7 @@ public class AccountingStatementOfHoldingsCancellationV02 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference2 getPreviousReference() {
 		return previousReference;
 	}
@@ -329,6 +381,7 @@ public class AccountingStatementOfHoldingsCancellationV02 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference2 getRelatedReference() {
 		return relatedReference;
 	}
@@ -337,6 +390,7 @@ public class AccountingStatementOfHoldingsCancellationV02 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "MsgPgntn", required = true)
 	public Pagination getMessagePagination() {
 		return messagePagination;
 	}
@@ -345,11 +399,18 @@ public class AccountingStatementOfHoldingsCancellationV02 {
 		this.messagePagination = messagePagination;
 	}
 
+	@XmlElement(name = "StmtToBeCanc")
 	public AccountingStatementOfHoldings2 getStatementToBeCancelled() {
 		return statementToBeCancelled;
 	}
 
 	public void setStatementToBeCancelled(AccountingStatementOfHoldings2 statementToBeCancelled) {
 		this.statementToBeCancelled = statementToBeCancelled;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.005.02.02")
+	static public class Document {
+		@XmlElement(name = "AcctgStmtOfHldgsCxlV02", required = true)
+		public AccountingStatementOfHoldingsCancellationV02 messageBody;
 	}
 }

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of instruction type status.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * InstructionTypeStatus1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructionTypeStatus2Choice", propOrder = {"instructionStatus", "cancellationStatus"})
 public class InstructionTypeStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -210,6 +216,7 @@ public class InstructionTypeStatus2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrSts", required = true)
 	public InstructionStatus5Choice getInstructionStatus() {
 		return instructionStatus;
 	}
@@ -218,6 +225,7 @@ public class InstructionTypeStatus2Choice {
 		this.instructionStatus = instructionStatus;
 	}
 
+	@XmlElement(name = "CxlSts", required = true)
 	public CancellationStatus2Choice getCancellationStatus() {
 		return cancellationStatus;
 	}

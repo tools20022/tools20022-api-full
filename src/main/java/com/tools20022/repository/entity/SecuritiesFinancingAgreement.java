@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Agreement;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Agreement1;
 import com.tools20022.repository.msg.Agreement3;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,26 +40,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement3 Agreement3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement1 Agreement1}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmFinancingAgreement
- * SecuritiesFinancing.mmFinancingAgreement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Agreement
- * Agreement}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -77,6 +58,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement#mmMarginRatio
  * SecuritiesFinancingAgreement.mmMarginRatio}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Agreement
+ * Agreement}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Agreement3 Agreement3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Agreement1 Agreement1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmFinancingAgreement
+ * SecuritiesFinancing.mmFinancingAgreement}</li>
  * </ul>
  * </li>
  * <li>
@@ -134,7 +135,7 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesFinancingTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesFinancingAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesFinancingTrade";
@@ -158,11 +159,6 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement
-	 * SecuritiesFinancingAgreement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -172,6 +168,11 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 * Agreement1.mmCurrency}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement
+	 * SecuritiesFinancingAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -188,7 +189,7 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement3.mmCurrency, Agreement1.mmCurrency);
-			elementContext_lazy = () -> SecuritiesFinancingAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
@@ -196,6 +197,14 @@ public class SecuritiesFinancingAgreement extends Agreement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesFinancingAgreement.class.getMethod("getCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TerminationTypeCode terminationType;
@@ -209,11 +218,6 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TerminationTypeCode
 	 * TerminationTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement
-	 * SecuritiesFinancingAgreement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -224,6 +228,11 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 * Agreement1.mmTerminationType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement
+	 * SecuritiesFinancingAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -238,7 +247,7 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	public static final MMBusinessAttribute mmTerminationType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement3.mmClosingType, Agreement1.mmTerminationType);
-			elementContext_lazy = () -> SecuritiesFinancingAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminationType";
@@ -246,6 +255,14 @@ public class SecuritiesFinancingAgreement extends Agreement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminationTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesFinancingAgreement.class.getMethod("getTerminationType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DeliveryTypeCode deliveryType;
@@ -259,11 +276,6 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DeliveryTypeCode
 	 * DeliveryTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement
-	 * SecuritiesFinancingAgreement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -273,6 +285,11 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 * Agreement1.mmDeliveryType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement
+	 * SecuritiesFinancingAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -287,7 +304,7 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	public static final MMBusinessAttribute mmDeliveryType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement3.mmDeliveryType, Agreement1.mmDeliveryType);
-			elementContext_lazy = () -> SecuritiesFinancingAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliveryType";
@@ -295,6 +312,14 @@ public class SecuritiesFinancingAgreement extends Agreement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesFinancingAgreement.class.getMethod("getDeliveryType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate marginRatio;
@@ -311,11 +336,6 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement
-	 * SecuritiesFinancingAgreement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -325,6 +345,11 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 * Agreement1.mmMarginRatio}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement
+	 * SecuritiesFinancingAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -341,7 +366,7 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	public static final MMBusinessAttribute mmMarginRatio = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement3.mmMarginRatio, Agreement1.mmMarginRatio);
-			elementContext_lazy = () -> SecuritiesFinancingAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarginRatio";
@@ -349,6 +374,14 @@ public class SecuritiesFinancingAgreement extends Agreement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesFinancingAgreement.class.getMethod("getMarginRatio", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -361,9 +394,15 @@ public class SecuritiesFinancingAgreement extends Agreement {
 				definition = "Contractual details related to the agreement between parties.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesFinancing.mmFinancingAgreement);
 				superType_lazy = () -> Agreement.mmObject();
-				element_lazy = () -> Arrays.asList(SecuritiesFinancingAgreement.mmSecuritiesFinancingTrade, SecuritiesFinancingAgreement.mmCurrency, SecuritiesFinancingAgreement.mmTerminationType,
-						SecuritiesFinancingAgreement.mmDeliveryType, SecuritiesFinancingAgreement.mmMarginRatio);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmSecuritiesFinancingTrade, com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmCurrency,
+						com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmTerminationType, com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmDeliveryType,
+						com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmMarginRatio);
 				derivationComponent_lazy = () -> Arrays.asList(Agreement3.mmObject(), Agreement1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesFinancingAgreement.class;
 			}
 		});
 		return mmObject_lazy.get();

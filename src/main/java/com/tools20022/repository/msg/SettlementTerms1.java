@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the beneficiary's account information for the settlement of a
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementTerms1", propOrder = {"finalAgent", "beneficiaryAccount"})
 public class SettlementTerms1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class SettlementTerms1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FnlAgt")
 	public FinancialInstitutionIdentification4Choice getFinalAgent() {
 		return finalAgent;
 	}
@@ -191,6 +198,7 @@ public class SettlementTerms1 {
 		this.finalAgent = finalAgent;
 	}
 
+	@XmlElement(name = "BnfcryAcct", required = true)
 	public AccountIdentificationOrNameChoice getBeneficiaryAccount() {
 		return beneficiaryAccount;
 	}

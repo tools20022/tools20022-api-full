@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information needed due to regulatory and statutory requirements.
@@ -80,6 +84,8 @@ import java.util.List;
  * "Information needed due to regulatory and statutory requirements."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StructuredRegulatoryReporting3", propOrder = {"type", "date", "country", "code", "amount", "information"})
 public class StructuredRegulatoryReporting3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -394,6 +400,7 @@ public class StructuredRegulatoryReporting3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public Max35Text getType() {
 		return type;
 	}
@@ -402,6 +409,7 @@ public class StructuredRegulatoryReporting3 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODate getDate() {
 		return date;
 	}
@@ -410,6 +418,7 @@ public class StructuredRegulatoryReporting3 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Ctry")
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -418,6 +427,7 @@ public class StructuredRegulatoryReporting3 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "Cd")
 	public Max10Text getCode() {
 		return code;
 	}
@@ -426,6 +436,7 @@ public class StructuredRegulatoryReporting3 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Amt")
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -434,6 +445,7 @@ public class StructuredRegulatoryReporting3 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Inf")
 	public List<Max35Text> getInformation() {
 		return information;
 	}

@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of identification of a party. The party can be identified by providing
@@ -75,6 +79,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification11Choice", propOrder = {"BICOrBEI", "centralCounterparty", "proprietaryIdentification"})
 public class PartyIdentification11Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -257,6 +263,7 @@ public class PartyIdentification11Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BICOrBEI", required = true)
 	public AnyBICIdentifier getBICOrBEI() {
 		return bICOrBEI;
 	}
@@ -265,6 +272,7 @@ public class PartyIdentification11Choice {
 		this.bICOrBEI = bICOrBEI;
 	}
 
+	@XmlElement(name = "CntrlCtrPty", required = true)
 	public MICIdentifier getCentralCounterparty() {
 		return centralCounterparty;
 	}
@@ -273,6 +281,7 @@ public class PartyIdentification11Choice {
 		this.centralCounterparty = centralCounterparty;
 	}
 
+	@XmlElement(name = "PrtryId", required = true)
 	public GenericIdentification1 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}

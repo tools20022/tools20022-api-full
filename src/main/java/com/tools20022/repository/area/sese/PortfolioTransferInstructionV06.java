@@ -26,9 +26,11 @@ import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -54,9 +56,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.012.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
@@ -132,6 +131,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.012.001.06}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -155,6 +157,9 @@ import java.util.List;
  * PortfolioTransferInstructionV05}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PortfolioTransferInstructionV06", propOrder = {"messageReference", "poolReference", "previousReference", "relatedReference", "primaryIndividualInvestor", "secondaryIndividualInvestor", "otherIndividualInvestor",
+		"primaryCorporateInvestor", "secondaryCorporateInvestor", "otherCorporateInvestor", "transferorAccount", "nomineeAccount", "transferee", "cashAccount", "productTransfer", "marketPracticeVersion", "extension"})
 public class PortfolioTransferInstructionV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -207,6 +212,14 @@ public class PortfolioTransferInstructionV06 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getMessageReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -256,6 +269,14 @@ public class PortfolioTransferInstructionV06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 previousReference;
@@ -307,6 +328,14 @@ public class PortfolioTransferInstructionV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 relatedReference;
 	/**
@@ -357,6 +386,14 @@ public class PortfolioTransferInstructionV06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected IndividualPerson8 primaryIndividualInvestor;
@@ -411,6 +448,14 @@ public class PortfolioTransferInstructionV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getPrimaryIndividualInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected IndividualPerson8 secondaryIndividualInvestor;
 	/**
@@ -464,6 +509,14 @@ public class PortfolioTransferInstructionV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getSecondaryIndividualInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<IndividualPerson8> otherIndividualInvestor;
 	/**
@@ -515,6 +568,14 @@ public class PortfolioTransferInstructionV06 {
 			previousVersion_lazy = () -> PortfolioTransferInstructionV05.mmOtherIndividualInvestor;
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getOtherIndividualInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Organisation4 primaryCorporateInvestor;
@@ -568,6 +629,14 @@ public class PortfolioTransferInstructionV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getPrimaryCorporateInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Organisation4 secondaryCorporateInvestor;
 	/**
@@ -620,6 +689,14 @@ public class PortfolioTransferInstructionV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getSecondaryCorporateInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Organisation4> otherCorporateInvestor;
 	/**
@@ -670,6 +747,14 @@ public class PortfolioTransferInstructionV06 {
 			previousVersion_lazy = () -> PortfolioTransferInstructionV05.mmOtherCorporateInvestor;
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getOtherCorporateInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Account15 transferorAccount;
@@ -723,6 +808,14 @@ public class PortfolioTransferInstructionV06 {
 			minOccurs = 1;
 			complexType_lazy = () -> Account15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getTransferorAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Account16 nomineeAccount;
 	/**
@@ -774,6 +867,14 @@ public class PortfolioTransferInstructionV06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Account16.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getNomineeAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification2Choice transferee;
@@ -828,6 +929,14 @@ public class PortfolioTransferInstructionV06 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getTransferee", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CashAccount29 cashAccount;
 	/**
@@ -880,6 +989,14 @@ public class PortfolioTransferInstructionV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> CashAccount29.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getCashAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ISATransfer18> productTransfer;
 	/**
@@ -928,6 +1045,14 @@ public class PortfolioTransferInstructionV06 {
 			previousVersion_lazy = () -> PortfolioTransferInstructionV05.mmProductTransfer;
 			minOccurs = 1;
 			complexType_lazy = () -> ISATransfer18.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getProductTransfer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MarketPracticeVersion1 marketPracticeVersion;
@@ -980,6 +1105,14 @@ public class PortfolioTransferInstructionV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getMarketPracticeVersion", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension1> extension;
 	/**
@@ -1031,6 +1164,14 @@ public class PortfolioTransferInstructionV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferInstructionV06.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -1045,11 +1186,15 @@ public class PortfolioTransferInstructionV06 {
 				rootElement = "Document";
 				xmlTag = "PrtflTrfInstr";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PortfolioTransferInstructionV06.mmMessageReference, PortfolioTransferInstructionV06.mmPoolReference, PortfolioTransferInstructionV06.mmPreviousReference,
-						PortfolioTransferInstructionV06.mmRelatedReference, PortfolioTransferInstructionV06.mmPrimaryIndividualInvestor, PortfolioTransferInstructionV06.mmSecondaryIndividualInvestor,
-						PortfolioTransferInstructionV06.mmOtherIndividualInvestor, PortfolioTransferInstructionV06.mmPrimaryCorporateInvestor, PortfolioTransferInstructionV06.mmSecondaryCorporateInvestor,
-						PortfolioTransferInstructionV06.mmOtherCorporateInvestor, PortfolioTransferInstructionV06.mmTransferorAccount, PortfolioTransferInstructionV06.mmNomineeAccount, PortfolioTransferInstructionV06.mmTransferee,
-						PortfolioTransferInstructionV06.mmCashAccount, PortfolioTransferInstructionV06.mmProductTransfer, PortfolioTransferInstructionV06.mmMarketPracticeVersion, PortfolioTransferInstructionV06.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmMessageReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmPoolReference,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmPreviousReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmRelatedReference,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmPrimaryIndividualInvestor, com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmSecondaryIndividualInvestor,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmOtherIndividualInvestor, com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmPrimaryCorporateInvestor,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmSecondaryCorporateInvestor, com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmOtherCorporateInvestor,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmTransferorAccount, com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmNomineeAccount,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmTransferee, com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmCashAccount,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmProductTransfer, com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmMarketPracticeVersion,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -1059,10 +1204,16 @@ public class PortfolioTransferInstructionV06 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PortfolioTransferInstructionV06.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgRef", required = true)
 	public MessageIdentification1 getMessageReference() {
 		return messageReference;
 	}
@@ -1071,6 +1222,7 @@ public class PortfolioTransferInstructionV06 {
 		this.messageReference = messageReference;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -1079,6 +1231,7 @@ public class PortfolioTransferInstructionV06 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -1087,6 +1240,7 @@ public class PortfolioTransferInstructionV06 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
@@ -1095,6 +1249,7 @@ public class PortfolioTransferInstructionV06 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "PmryIndvInvstr")
 	public IndividualPerson8 getPrimaryIndividualInvestor() {
 		return primaryIndividualInvestor;
 	}
@@ -1103,6 +1258,7 @@ public class PortfolioTransferInstructionV06 {
 		this.primaryIndividualInvestor = primaryIndividualInvestor;
 	}
 
+	@XmlElement(name = "ScndryIndvInvstr")
 	public IndividualPerson8 getSecondaryIndividualInvestor() {
 		return secondaryIndividualInvestor;
 	}
@@ -1111,6 +1267,7 @@ public class PortfolioTransferInstructionV06 {
 		this.secondaryIndividualInvestor = secondaryIndividualInvestor;
 	}
 
+	@XmlElement(name = "OthrIndvInvstr")
 	public List<IndividualPerson8> getOtherIndividualInvestor() {
 		return otherIndividualInvestor;
 	}
@@ -1119,6 +1276,7 @@ public class PortfolioTransferInstructionV06 {
 		this.otherIndividualInvestor = otherIndividualInvestor;
 	}
 
+	@XmlElement(name = "PmryCorpInvstr")
 	public Organisation4 getPrimaryCorporateInvestor() {
 		return primaryCorporateInvestor;
 	}
@@ -1127,6 +1285,7 @@ public class PortfolioTransferInstructionV06 {
 		this.primaryCorporateInvestor = primaryCorporateInvestor;
 	}
 
+	@XmlElement(name = "ScndryCorpInvstr")
 	public Organisation4 getSecondaryCorporateInvestor() {
 		return secondaryCorporateInvestor;
 	}
@@ -1135,6 +1294,7 @@ public class PortfolioTransferInstructionV06 {
 		this.secondaryCorporateInvestor = secondaryCorporateInvestor;
 	}
 
+	@XmlElement(name = "OthrCorpInvstr")
 	public List<Organisation4> getOtherCorporateInvestor() {
 		return otherCorporateInvestor;
 	}
@@ -1143,6 +1303,7 @@ public class PortfolioTransferInstructionV06 {
 		this.otherCorporateInvestor = otherCorporateInvestor;
 	}
 
+	@XmlElement(name = "TrfrAcct", required = true)
 	public Account15 getTransferorAccount() {
 		return transferorAccount;
 	}
@@ -1151,6 +1312,7 @@ public class PortfolioTransferInstructionV06 {
 		this.transferorAccount = transferorAccount;
 	}
 
+	@XmlElement(name = "NmneeAcct")
 	public Account16 getNomineeAccount() {
 		return nomineeAccount;
 	}
@@ -1159,6 +1321,7 @@ public class PortfolioTransferInstructionV06 {
 		this.nomineeAccount = nomineeAccount;
 	}
 
+	@XmlElement(name = "Trfee", required = true)
 	public PartyIdentification2Choice getTransferee() {
 		return transferee;
 	}
@@ -1167,6 +1330,7 @@ public class PortfolioTransferInstructionV06 {
 		this.transferee = transferee;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccount29 getCashAccount() {
 		return cashAccount;
 	}
@@ -1175,6 +1339,7 @@ public class PortfolioTransferInstructionV06 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "PdctTrf", required = true)
 	public List<ISATransfer18> getProductTransfer() {
 		return productTransfer;
 	}
@@ -1183,6 +1348,7 @@ public class PortfolioTransferInstructionV06 {
 		this.productTransfer = productTransfer;
 	}
 
+	@XmlElement(name = "MktPrctcVrsn")
 	public MarketPracticeVersion1 getMarketPracticeVersion() {
 		return marketPracticeVersion;
 	}
@@ -1191,11 +1357,18 @@ public class PortfolioTransferInstructionV06 {
 		this.marketPracticeVersion = marketPracticeVersion;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.012.06.06")
+	static public class Document {
+		@XmlElement(name = "PrtflTrfInstr", required = true)
+		public PortfolioTransferInstructionV06 messageBody;
 	}
 }

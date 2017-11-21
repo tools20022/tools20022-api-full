@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the original request. Identifies the message being
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReceiptAcknowledgementReport1", propOrder = {"relatedReference", "requestHandling", "originalMessageIdentification"})
 public class ReceiptAcknowledgementReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -205,6 +211,7 @@ public class ReceiptAcknowledgementReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RltdRef", required = true)
 	public AdditionalReferences getRelatedReference() {
 		return relatedReference;
 	}
@@ -213,6 +220,7 @@ public class ReceiptAcknowledgementReport1 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "ReqHdlg", required = true)
 	public RequestHandling1 getRequestHandling() {
 		return requestHandling;
 	}
@@ -221,6 +229,7 @@ public class ReceiptAcknowledgementReport1 {
 		this.requestHandling = requestHandling;
 	}
 
+	@XmlElement(name = "OrgnlMsgId")
 	public MessageIdentification6 getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}

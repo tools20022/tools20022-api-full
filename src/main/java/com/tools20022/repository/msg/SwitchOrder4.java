@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transfer from one investment fund/fund class to another investment fund or
@@ -155,6 +159,10 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwitchOrder4", propOrder = {"masterReference", "orderDateTime", "orderReference", "clientReference", "investmentAccountDetails", "totalRedemptionAmount", "totalSubscriptionAmount", "requestedFutureTradeDate",
+		"settlementAmount", "cashSettlementDate", "settlementMethod", "expiryDateTime", "additionalCashIn", "resultingCashOut", "relatedPartyDetails", "cancellationRight", "extendedCancellationRight", "redemptionLegDetails",
+		"subscriptionLegDetails", "cashSettlementDetails", "foreignExchangeDetails", "financialAdvice", "negotiatedTrade"})
 public class SwitchOrder4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1553,6 +1561,7 @@ public class SwitchOrder4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -1561,6 +1570,7 @@ public class SwitchOrder4 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrDtTm")
 	public ISODateTime getOrderDateTime() {
 		return orderDateTime;
 	}
@@ -1569,6 +1579,7 @@ public class SwitchOrder4 {
 		this.orderDateTime = orderDateTime;
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -1577,6 +1588,7 @@ public class SwitchOrder4 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -1585,6 +1597,7 @@ public class SwitchOrder4 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount21 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -1593,6 +1606,7 @@ public class SwitchOrder4 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "TtlRedAmt")
 	public ActiveOrHistoricCurrencyAndAmount getTotalRedemptionAmount() {
 		return totalRedemptionAmount;
 	}
@@ -1601,6 +1615,7 @@ public class SwitchOrder4 {
 		this.totalRedemptionAmount = totalRedemptionAmount;
 	}
 
+	@XmlElement(name = "TtlSbcptAmt")
 	public ActiveOrHistoricCurrencyAndAmount getTotalSubscriptionAmount() {
 		return totalSubscriptionAmount;
 	}
@@ -1609,6 +1624,7 @@ public class SwitchOrder4 {
 		this.totalSubscriptionAmount = totalSubscriptionAmount;
 	}
 
+	@XmlElement(name = "ReqdFutrTradDt")
 	public ISODate getRequestedFutureTradeDate() {
 		return requestedFutureTradeDate;
 	}
@@ -1617,6 +1633,7 @@ public class SwitchOrder4 {
 		this.requestedFutureTradeDate = requestedFutureTradeDate;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public ActiveCurrencyAndAmount getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -1625,6 +1642,7 @@ public class SwitchOrder4 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "CshSttlmDt")
 	public ISODate getCashSettlementDate() {
 		return cashSettlementDate;
 	}
@@ -1633,6 +1651,7 @@ public class SwitchOrder4 {
 		this.cashSettlementDate = cashSettlementDate;
 	}
 
+	@XmlElement(name = "SttlmMtd")
 	public DeliveryReceiptType2Code getSettlementMethod() {
 		return settlementMethod;
 	}
@@ -1641,6 +1660,7 @@ public class SwitchOrder4 {
 		this.settlementMethod = settlementMethod;
 	}
 
+	@XmlElement(name = "XpryDtTm")
 	public DateAndDateTimeChoice getExpiryDateTime() {
 		return expiryDateTime;
 	}
@@ -1649,6 +1669,7 @@ public class SwitchOrder4 {
 		this.expiryDateTime = expiryDateTime;
 	}
 
+	@XmlElement(name = "AddtlCshIn")
 	public ActiveOrHistoricCurrencyAndAmount getAdditionalCashIn() {
 		return additionalCashIn;
 	}
@@ -1657,6 +1678,7 @@ public class SwitchOrder4 {
 		this.additionalCashIn = additionalCashIn;
 	}
 
+	@XmlElement(name = "RsltgCshOut")
 	public ActiveOrHistoricCurrencyAndAmount getResultingCashOut() {
 		return resultingCashOut;
 	}
@@ -1665,6 +1687,7 @@ public class SwitchOrder4 {
 		this.resultingCashOut = resultingCashOut;
 	}
 
+	@XmlElement(name = "RltdPtyDtls")
 	public List<Intermediary8> getRelatedPartyDetails() {
 		return relatedPartyDetails;
 	}
@@ -1673,6 +1696,7 @@ public class SwitchOrder4 {
 		this.relatedPartyDetails = relatedPartyDetails;
 	}
 
+	@XmlElement(name = "CxlRght")
 	public CancellationRight1Code getCancellationRight() {
 		return cancellationRight;
 	}
@@ -1681,6 +1705,7 @@ public class SwitchOrder4 {
 		this.cancellationRight = cancellationRight;
 	}
 
+	@XmlElement(name = "XtndedCxlRght")
 	public Extended350Code getExtendedCancellationRight() {
 		return extendedCancellationRight;
 	}
@@ -1689,6 +1714,7 @@ public class SwitchOrder4 {
 		this.extendedCancellationRight = extendedCancellationRight;
 	}
 
+	@XmlElement(name = "RedLegDtls", required = true)
 	public List<SwitchRedemptionLegOrder3> getRedemptionLegDetails() {
 		return redemptionLegDetails;
 	}
@@ -1697,6 +1723,7 @@ public class SwitchOrder4 {
 		this.redemptionLegDetails = redemptionLegDetails;
 	}
 
+	@XmlElement(name = "SbcptLegDtls", required = true)
 	public List<SwitchSubscriptionLegOrder3> getSubscriptionLegDetails() {
 		return subscriptionLegDetails;
 	}
@@ -1705,6 +1732,7 @@ public class SwitchOrder4 {
 		this.subscriptionLegDetails = subscriptionLegDetails;
 	}
 
+	@XmlElement(name = "CshSttlmDtls")
 	public PaymentTransaction25 getCashSettlementDetails() {
 		return cashSettlementDetails;
 	}
@@ -1713,6 +1741,7 @@ public class SwitchOrder4 {
 		this.cashSettlementDetails = cashSettlementDetails;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public ForeignExchangeTerms6 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -1721,6 +1750,7 @@ public class SwitchOrder4 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "FinAdvc")
 	public FinancialAdvice1Code getFinancialAdvice() {
 		return financialAdvice;
 	}
@@ -1729,6 +1759,7 @@ public class SwitchOrder4 {
 		this.financialAdvice = financialAdvice;
 	}
 
+	@XmlElement(name = "NgtdTrad")
 	public NegotiatedTrade1Code getNegotiatedTrade() {
 		return negotiatedTrade;
 	}

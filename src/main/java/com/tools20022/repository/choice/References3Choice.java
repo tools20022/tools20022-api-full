@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of reference.
@@ -105,6 +109,11 @@ import java.util.function.Supplier;
  * definition} = "Choice of reference."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References3Choice", propOrder = {"securitiesSettlementTransactionConfirmationIdentification", "intraPositionMovementConfirmationIdentification", "securitiesBalanceAccountingReportIdentification",
+		"securitiesBalanceCustodyReportIdentification", "intraPositionMovementPostingReportIdentification", "securitiesFinancingConfirmationIdentification", "securitiesTransactionPendingReportIdentification",
+		"securitiesTransactionPostingReportIdentification", "securitiesSettlementTransactionAllegementReportIdentification", "securitiesSettlementTransactionAllegementNotificationTransactionIdentification",
+		"portfolioTransferNotificationIdentification", "securitiesSettlementTransactionGenerationNotificationIdentification", "otherMessageIdentification"})
 public class References3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -713,6 +722,7 @@ public class References3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesSttlmTxConfId", required = true)
 	public Max35Text getSecuritiesSettlementTransactionConfirmationIdentification() {
 		return securitiesSettlementTransactionConfirmationIdentification;
 	}
@@ -721,6 +731,7 @@ public class References3Choice {
 		this.securitiesSettlementTransactionConfirmationIdentification = securitiesSettlementTransactionConfirmationIdentification;
 	}
 
+	@XmlElement(name = "IntraPosMvmntConfId", required = true)
 	public Max35Text getIntraPositionMovementConfirmationIdentification() {
 		return intraPositionMovementConfirmationIdentification;
 	}
@@ -729,6 +740,7 @@ public class References3Choice {
 		this.intraPositionMovementConfirmationIdentification = intraPositionMovementConfirmationIdentification;
 	}
 
+	@XmlElement(name = "SctiesBalAcctgRptId", required = true)
 	public Max35Text getSecuritiesBalanceAccountingReportIdentification() {
 		return securitiesBalanceAccountingReportIdentification;
 	}
@@ -737,6 +749,7 @@ public class References3Choice {
 		this.securitiesBalanceAccountingReportIdentification = securitiesBalanceAccountingReportIdentification;
 	}
 
+	@XmlElement(name = "SctiesBalCtdyRptId", required = true)
 	public Max35Text getSecuritiesBalanceCustodyReportIdentification() {
 		return securitiesBalanceCustodyReportIdentification;
 	}
@@ -745,6 +758,7 @@ public class References3Choice {
 		this.securitiesBalanceCustodyReportIdentification = securitiesBalanceCustodyReportIdentification;
 	}
 
+	@XmlElement(name = "IntraPosMvmntPstngRptId", required = true)
 	public Max35Text getIntraPositionMovementPostingReportIdentification() {
 		return intraPositionMovementPostingReportIdentification;
 	}
@@ -753,6 +767,7 @@ public class References3Choice {
 		this.intraPositionMovementPostingReportIdentification = intraPositionMovementPostingReportIdentification;
 	}
 
+	@XmlElement(name = "SctiesFincgConfId", required = true)
 	public Max35Text getSecuritiesFinancingConfirmationIdentification() {
 		return securitiesFinancingConfirmationIdentification;
 	}
@@ -761,6 +776,7 @@ public class References3Choice {
 		this.securitiesFinancingConfirmationIdentification = securitiesFinancingConfirmationIdentification;
 	}
 
+	@XmlElement(name = "SctiesTxPdgRptId", required = true)
 	public Max35Text getSecuritiesTransactionPendingReportIdentification() {
 		return securitiesTransactionPendingReportIdentification;
 	}
@@ -769,6 +785,7 @@ public class References3Choice {
 		this.securitiesTransactionPendingReportIdentification = securitiesTransactionPendingReportIdentification;
 	}
 
+	@XmlElement(name = "SctiesTxPstngRptId", required = true)
 	public Max35Text getSecuritiesTransactionPostingReportIdentification() {
 		return securitiesTransactionPostingReportIdentification;
 	}
@@ -777,6 +794,7 @@ public class References3Choice {
 		this.securitiesTransactionPostingReportIdentification = securitiesTransactionPostingReportIdentification;
 	}
 
+	@XmlElement(name = "SctiesSttlmTxAllgmtRptId", required = true)
 	public Max35Text getSecuritiesSettlementTransactionAllegementReportIdentification() {
 		return securitiesSettlementTransactionAllegementReportIdentification;
 	}
@@ -785,6 +803,7 @@ public class References3Choice {
 		this.securitiesSettlementTransactionAllegementReportIdentification = securitiesSettlementTransactionAllegementReportIdentification;
 	}
 
+	@XmlElement(name = "SctiesSttlmTxAllgmtNtfctnTxId", required = true)
 	public Max35Text getSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification() {
 		return securitiesSettlementTransactionAllegementNotificationTransactionIdentification;
 	}
@@ -793,6 +812,7 @@ public class References3Choice {
 		this.securitiesSettlementTransactionAllegementNotificationTransactionIdentification = securitiesSettlementTransactionAllegementNotificationTransactionIdentification;
 	}
 
+	@XmlElement(name = "PrtflTrfNtfctnId", required = true)
 	public Max35Text getPortfolioTransferNotificationIdentification() {
 		return portfolioTransferNotificationIdentification;
 	}
@@ -801,6 +821,7 @@ public class References3Choice {
 		this.portfolioTransferNotificationIdentification = portfolioTransferNotificationIdentification;
 	}
 
+	@XmlElement(name = "SctiesSttlmTxGnrtnNtfctnId", required = true)
 	public Max35Text getSecuritiesSettlementTransactionGenerationNotificationIdentification() {
 		return securitiesSettlementTransactionGenerationNotificationIdentification;
 	}
@@ -809,6 +830,7 @@ public class References3Choice {
 		this.securitiesSettlementTransactionGenerationNotificationIdentification = securitiesSettlementTransactionGenerationNotificationIdentification;
 	}
 
+	@XmlElement(name = "OthrMsgId", required = true)
 	public Max35Text getOtherMessageIdentification() {
 		return otherMessageIdentification;
 	}

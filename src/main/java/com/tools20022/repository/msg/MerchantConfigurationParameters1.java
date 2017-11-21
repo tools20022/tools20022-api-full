@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Acceptor parameters dedicated to the merchant.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MerchantConfigurationParameters1", propOrder = {"merchantIdentification", "version", "parameters"})
 public class MerchantConfigurationParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -242,6 +248,7 @@ public class MerchantConfigurationParameters1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MrchntId")
 	public Max35Text getMerchantIdentification() {
 		return merchantIdentification;
 	}
@@ -250,6 +257,7 @@ public class MerchantConfigurationParameters1 {
 		this.merchantIdentification = merchantIdentification;
 	}
 
+	@XmlElement(name = "Vrsn", required = true)
 	public Max256Text getVersion() {
 		return version;
 	}
@@ -258,6 +266,7 @@ public class MerchantConfigurationParameters1 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "Params", required = true)
 	public Max10000Binary getParameters() {
 		return parameters;
 	}

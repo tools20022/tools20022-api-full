@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.Contract;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,48 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Mandate#mmSignatureConditions
+ * Mandate.mmSignatureConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Mandate#mmMandateIdentification
+ * Mandate.mmMandateIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmOriginalMandate
+ * Mandate.mmOriginalMandate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmAmendment
+ * Mandate.mmAmendment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmMandatePartyRole
+ * Mandate.mmMandatePartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmMandateStatus
+ * Mandate.mmMandateStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmAccountContract
+ * Mandate.mmAccountContract}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmAuthentication
+ * Mandate.mmAuthentication}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmTrackingDays
+ * Mandate.mmTrackingDays}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmTrackingIndicator
+ * Mandate.mmTrackingIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmRate
+ * Mandate.mmRate}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashAccountMandate
+ * CashAccountMandate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DirectDebitMandate
+ * DirectDebitMandate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PowerOfAttorney
+ * PowerOfAttorney}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Contract Contract}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -113,48 +156,6 @@ import java.util.List;
  * MandateAmendment5.mmOriginalMandate}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Contract Contract}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashAccountMandate
- * CashAccountMandate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DirectDebitMandate
- * DirectDebitMandate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PowerOfAttorney
- * PowerOfAttorney}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Mandate#mmSignatureConditions
- * Mandate.mmSignatureConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Mandate#mmMandateIdentification
- * Mandate.mmMandateIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmOriginalMandate
- * Mandate.mmOriginalMandate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmAmendment
- * Mandate.mmAmendment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmMandatePartyRole
- * Mandate.mmMandatePartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmMandateStatus
- * Mandate.mmMandateStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmAccountContract
- * Mandate.mmAccountContract}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmAuthentication
- * Mandate.mmAuthentication}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmTrackingDays
- * Mandate.mmTrackingDays}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmTrackingIndicator
- * Mandate.mmTrackingIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmRate
- * Mandate.mmRate}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -193,10 +194,6 @@ public class Mandate extends Contract {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SignatureCondition
 	 * SignatureCondition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
-	 * Mandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -205,6 +202,10 @@ public class Mandate extends Contract {
 	 * OperationMandate1.mmRequiredSignatureNumber}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
+	 * Mandate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -241,10 +242,6 @@ public class Mandate extends Contract {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
-	 * Mandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -329,6 +326,10 @@ public class Mandate extends Contract {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
+	 * Mandate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -359,6 +360,14 @@ public class Mandate extends Contract {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Mandate.class.getMethod("getMandateIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Mandate originalMandate;
 	/**
@@ -377,10 +386,6 @@ public class Mandate extends Contract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
-	 * Mandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -401,6 +406,10 @@ public class Mandate extends Contract {
 	 * MandateAcceptance5.mmOriginalMandate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
+	 * Mandate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -444,10 +453,6 @@ public class Mandate extends Contract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
-	 * Mandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -488,6 +493,10 @@ public class Mandate extends Contract {
 	 * Mandate8.mmAdjustment}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
+	 * Mandate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -583,10 +592,6 @@ public class Mandate extends Contract {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.MandateStatus
 	 * MandateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
-	 * Mandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -607,6 +612,10 @@ public class Mandate extends Contract {
 	 * MandateAcceptance5.mmAcceptanceResult}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
+	 * Mandate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -698,10 +707,6 @@ public class Mandate extends Contract {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Authentication
 	 * Authentication}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
-	 * Mandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -715,6 +720,10 @@ public class Mandate extends Contract {
 	 * Mandate8.mmAuthentication}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
+	 * Mandate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -753,10 +762,6 @@ public class Mandate extends Contract {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max35NumericText
 	 * Max35NumericText}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
-	 * Mandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -768,6 +773,10 @@ public class Mandate extends Contract {
 	 * AmendmentInformationDetails11.mmOriginalTrackingDays}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
+	 * Mandate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -792,6 +801,14 @@ public class Mandate extends Contract {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Mandate.class.getMethod("getTrackingDays", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TrueFalseIndicator trackingIndicator;
 	/**
@@ -805,10 +822,6 @@ public class Mandate extends Contract {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
-	 * Mandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -826,6 +839,10 @@ public class Mandate extends Contract {
 	 * Mandate8.mmTrackingIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
+	 * Mandate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -851,6 +868,14 @@ public class Mandate extends Contract {
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Mandate.class.getMethod("getTrackingIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PercentageRate rate;
 	/**
@@ -864,10 +889,6 @@ public class Mandate extends Contract {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
-	 * Mandate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -875,6 +896,10 @@ public class Mandate extends Contract {
 	 * MandateAdjustment1.mmRate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Mandate
+	 * Mandate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -900,6 +925,14 @@ public class Mandate extends Contract {
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return Mandate.class.getMethod("getRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	static public MMBusinessComponent mmObject() {
@@ -923,6 +956,11 @@ public class Mandate extends Contract {
 				derivationComponent_lazy = () -> Arrays.asList(MandateTypeInformation1.mmObject(), OriginalMandate1Choice.mmObject(), OriginalMandate2Choice.mmObject(), MandateAmendment1.mmObject(), MandateAmendment2.mmObject(),
 						MandateAmendment3.mmObject(), MandateAmendment4.mmObject(), OriginalMandate3Choice.mmObject(), MandateAmendment5.mmObject(), MandateTypeInformation2.mmObject(), OriginalMandate4Choice.mmObject(),
 						OriginalMandate5Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Mandate.class;
 			}
 		});
 		return mmObject_lazy.get();

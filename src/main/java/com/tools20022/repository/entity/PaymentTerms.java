@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmAmount
+ * PaymentTerms.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmPercentage
+ * PaymentTerms.mmPercentage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmPaymentPeriod
+ * PaymentTerms.mmPaymentPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmRelatedPaymentObligation
+ * PaymentTerms.mmRelatedPaymentObligation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmPaymentTime
+ * PaymentTerms.mmPaymentTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmRelatedPaymentScheduleType
+ * PaymentTerms.mmRelatedPaymentScheduleType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmRelatedLoan
+ * PaymentTerms.mmRelatedLoan}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -77,28 +100,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentCodeOrOther2Choice.mmPaymentCode}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmAmount
- * PaymentTerms.mmAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmPercentage
- * PaymentTerms.mmPercentage}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmPaymentPeriod
- * PaymentTerms.mmPaymentPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmRelatedPaymentObligation
- * PaymentTerms.mmRelatedPaymentObligation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmPaymentTime
- * PaymentTerms.mmPaymentTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmRelatedPaymentScheduleType
- * PaymentTerms.mmRelatedPaymentScheduleType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmRelatedLoan
- * PaymentTerms.mmRelatedLoan}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -128,10 +129,6 @@ public class PaymentTerms {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentTerms PaymentTerms}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -148,6 +145,10 @@ public class PaymentTerms {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentTerms PaymentTerms}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -161,7 +162,7 @@ public class PaymentTerms {
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentTerms1.mmAmount, PaymentTerms2.mmAmount, LoanContractTranche1.mmAmount, InterestPaymentDateRange2.mmAmount);
-			elementContext_lazy = () -> PaymentTerms.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -169,6 +170,14 @@ public class PaymentTerms {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentTerms.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate percentage;
@@ -183,10 +192,6 @@ public class PaymentTerms {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentTerms PaymentTerms}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -203,6 +208,10 @@ public class PaymentTerms {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentTerms PaymentTerms}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -218,7 +227,7 @@ public class PaymentTerms {
 	public static final MMBusinessAttribute mmPercentage = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentTerms3.mmPartialPaymentPercent, PaymentTerms1.mmPercentage, PaymentTerms2.mmPercentage, LoanContract1.mmInterestRate);
-			elementContext_lazy = () -> PaymentTerms.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Percentage";
@@ -226,6 +235,14 @@ public class PaymentTerms {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentTerms.class.getMethod("getPercentage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DateTimePeriod paymentPeriod;
@@ -246,10 +263,6 @@ public class PaymentTerms {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentTerms PaymentTerms}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -258,6 +271,10 @@ public class PaymentTerms {
 	 * PaymentTerms3.mmPaymentPeriod}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentTerms PaymentTerms}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -272,7 +289,7 @@ public class PaymentTerms {
 	public static final MMBusinessAssociationEnd mmPaymentPeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentTerms3.mmPaymentPeriod);
-			elementContext_lazy = () -> PaymentTerms.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentPeriod";
@@ -320,7 +337,7 @@ public class PaymentTerms {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPaymentObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PaymentTerms.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPaymentObligation";
@@ -344,10 +361,6 @@ public class PaymentTerms {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentTimeCode
 	 * PaymentTimeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentTerms PaymentTerms}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -361,6 +374,10 @@ public class PaymentTerms {
 	 * PaymentPeriod3.mmCode}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentTerms PaymentTerms}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -377,7 +394,7 @@ public class PaymentTerms {
 	public static final MMBusinessAttribute mmPaymentTime = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentPeriod1.mmCode, PaymentPeriod2.mmCode, PaymentPeriod4.mmCode, PaymentPeriod3.mmCode);
-			elementContext_lazy = () -> PaymentTerms.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentTime";
@@ -385,6 +402,14 @@ public class PaymentTerms {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentTimeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentTerms.class.getMethod("getPaymentTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RegisteredContract relatedPaymentScheduleType;
@@ -423,7 +448,7 @@ public class PaymentTerms {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPaymentScheduleType = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PaymentTerms.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPaymentScheduleType";
@@ -470,7 +495,7 @@ public class PaymentTerms {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedLoan = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PaymentTerms.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedLoan";
@@ -493,10 +518,16 @@ public class PaymentTerms {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmRelatedPaymentTerms, com.tools20022.repository.entity.PaymentObligation.mmPaymentTerms,
 						com.tools20022.repository.entity.RegisteredContract.mmPaymentScheduleType, com.tools20022.repository.entity.Loan.mmInterestPaymentsSchedule);
 				derivationElement_lazy = () -> Arrays.asList(PaymentCodeOrOther2Choice.mmPaymentCode);
-				element_lazy = () -> Arrays.asList(PaymentTerms.mmAmount, PaymentTerms.mmPercentage, PaymentTerms.mmPaymentPeriod, PaymentTerms.mmRelatedPaymentObligation, PaymentTerms.mmPaymentTime,
-						PaymentTerms.mmRelatedPaymentScheduleType, PaymentTerms.mmRelatedLoan);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentTerms.mmAmount, com.tools20022.repository.entity.PaymentTerms.mmPercentage, com.tools20022.repository.entity.PaymentTerms.mmPaymentPeriod,
+						com.tools20022.repository.entity.PaymentTerms.mmRelatedPaymentObligation, com.tools20022.repository.entity.PaymentTerms.mmPaymentTime, com.tools20022.repository.entity.PaymentTerms.mmRelatedPaymentScheduleType,
+						com.tools20022.repository.entity.PaymentTerms.mmRelatedLoan);
 				derivationComponent_lazy = () -> Arrays.asList(PaymentPeriod1.mmObject(), PaymentPeriod2.mmObject(), PaymentPeriod4.mmObject(), PaymentPeriod3.mmObject(), PaymentCodeOrOther2Choice.mmObject(),
 						InterestPaymentDateRange2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PaymentTerms.class;
 			}
 		});
 		return mmObject_lazy.get();

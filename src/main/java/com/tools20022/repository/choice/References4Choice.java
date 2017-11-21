@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of reference.
@@ -77,6 +81,8 @@ import java.util.function.Supplier;
  * definition} = "Choice of reference."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References4Choice", propOrder = {"otherTransactionIdentification", "securitiesFinancingTransactionIdentification", "securitiesSettlementTransactionIdentification", "intraPositionMovementIdentification"})
 public class References4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -300,6 +306,7 @@ public class References4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OthrTxId", required = true)
 	public GenericDocumentIdentification1 getOtherTransactionIdentification() {
 		return otherTransactionIdentification;
 	}
@@ -308,6 +315,7 @@ public class References4Choice {
 		this.otherTransactionIdentification = otherTransactionIdentification;
 	}
 
+	@XmlElement(name = "SctiesFincgTxId", required = true)
 	public SettlementTypeAndIdentification4 getSecuritiesFinancingTransactionIdentification() {
 		return securitiesFinancingTransactionIdentification;
 	}
@@ -316,6 +324,7 @@ public class References4Choice {
 		this.securitiesFinancingTransactionIdentification = securitiesFinancingTransactionIdentification;
 	}
 
+	@XmlElement(name = "SctiesSttlmTxId", required = true)
 	public SettlementTypeAndIdentification4 getSecuritiesSettlementTransactionIdentification() {
 		return securitiesSettlementTransactionIdentification;
 	}
@@ -324,6 +333,7 @@ public class References4Choice {
 		this.securitiesSettlementTransactionIdentification = securitiesSettlementTransactionIdentification;
 	}
 
+	@XmlElement(name = "IntraPosMvmntId", required = true)
 	public Max35Text getIntraPositionMovementIdentification() {
 		return intraPositionMovementIdentification;
 	}

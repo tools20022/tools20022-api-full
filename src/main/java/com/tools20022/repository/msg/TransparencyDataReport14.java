@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides for reporting calculation results of non equity instruments as part
@@ -106,6 +110,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransparencyDataReport14", propOrder = {"technicalRecordIdentification", "identification", "fullName", "tradingVenue", "reportingPeriod", "liquidity", "preTradeLargeInScaleThreshold", "postTradeLargeInScaleThreshold",
+		"preTradeInstrumentSizeSpecificThreshold", "postTradeInstrumentSizeSpecificThreshold", "statistics"})
 public class TransparencyDataReport14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -621,6 +628,7 @@ public class TransparencyDataReport14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TechRcrdId")
 	public Max35Text getTechnicalRecordIdentification() {
 		return technicalRecordIdentification;
 	}
@@ -629,6 +637,7 @@ public class TransparencyDataReport14 {
 		this.technicalRecordIdentification = technicalRecordIdentification;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public ISINOct2015Identifier getIdentification() {
 		return identification;
 	}
@@ -637,6 +646,7 @@ public class TransparencyDataReport14 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "FullNm")
 	public Max350Text getFullName() {
 		return fullName;
 	}
@@ -645,6 +655,7 @@ public class TransparencyDataReport14 {
 		this.fullName = fullName;
 	}
 
+	@XmlElement(name = "TradgVn")
 	public MICIdentifier getTradingVenue() {
 		return tradingVenue;
 	}
@@ -653,6 +664,7 @@ public class TransparencyDataReport14 {
 		this.tradingVenue = tradingVenue;
 	}
 
+	@XmlElement(name = "RptgPrd")
 	public Period4Choice getReportingPeriod() {
 		return reportingPeriod;
 	}
@@ -661,6 +673,7 @@ public class TransparencyDataReport14 {
 		this.reportingPeriod = reportingPeriod;
 	}
 
+	@XmlElement(name = "Lqdty")
 	public TrueFalseIndicator getLiquidity() {
 		return liquidity;
 	}
@@ -669,6 +682,7 @@ public class TransparencyDataReport14 {
 		this.liquidity = liquidity;
 	}
 
+	@XmlElement(name = "PreTradLrgInScaleThrshld")
 	public TonsOrCurrency2Choice getPreTradeLargeInScaleThreshold() {
 		return preTradeLargeInScaleThreshold;
 	}
@@ -677,6 +691,7 @@ public class TransparencyDataReport14 {
 		this.preTradeLargeInScaleThreshold = preTradeLargeInScaleThreshold;
 	}
 
+	@XmlElement(name = "PstTradLrgInScaleThrshld")
 	public TonsOrCurrency2Choice getPostTradeLargeInScaleThreshold() {
 		return postTradeLargeInScaleThreshold;
 	}
@@ -685,6 +700,7 @@ public class TransparencyDataReport14 {
 		this.postTradeLargeInScaleThreshold = postTradeLargeInScaleThreshold;
 	}
 
+	@XmlElement(name = "PreTradInstrmSzSpcfcThrshld")
 	public TonsOrCurrency2Choice getPreTradeInstrumentSizeSpecificThreshold() {
 		return preTradeInstrumentSizeSpecificThreshold;
 	}
@@ -693,6 +709,7 @@ public class TransparencyDataReport14 {
 		this.preTradeInstrumentSizeSpecificThreshold = preTradeInstrumentSizeSpecificThreshold;
 	}
 
+	@XmlElement(name = "PstTradInstrmSzSpcfcThrshld")
 	public TonsOrCurrency2Choice getPostTradeInstrumentSizeSpecificThreshold() {
 		return postTradeInstrumentSizeSpecificThreshold;
 	}
@@ -701,6 +718,7 @@ public class TransparencyDataReport14 {
 		this.postTradeInstrumentSizeSpecificThreshold = postTradeInstrumentSizeSpecificThreshold;
 	}
 
+	@XmlElement(name = "Sttstcs")
 	public StatisticsTransparency2 getStatistics() {
 		return statistics;
 	}

@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.CorporateActionStandingInstruction1;
 import com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1;
 import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.025.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -88,6 +87,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.025.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -99,6 +101,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgentCAStandingInstructionRequestV01", propOrder = {"identification", "standingInstructionGeneralInformation", "standingInstructionDetails", "contactDetails"})
 public class AgentCAStandingInstructionRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -139,6 +143,14 @@ public class AgentCAStandingInstructionRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAStandingInstructionRequestV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionStandingInstructionGeneralInformation1 standingInstructionGeneralInformation;
 	/**
@@ -173,6 +185,14 @@ public class AgentCAStandingInstructionRequestV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionStandingInstructionGeneralInformation1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAStandingInstructionRequestV01.class.getMethod("getStandingInstructionGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionStandingInstruction1 standingInstructionDetails;
@@ -210,6 +230,14 @@ public class AgentCAStandingInstructionRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionStandingInstruction1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAStandingInstructionRequestV01.class.getMethod("getStandingInstructionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContactPerson1 contactDetails;
 	/**
@@ -245,6 +273,14 @@ public class AgentCAStandingInstructionRequestV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContactPerson1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAStandingInstructionRequestV01.class.getMethod("getContactDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -257,8 +293,9 @@ public class AgentCAStandingInstructionRequestV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCAStgInstrReq";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAStandingInstructionRequestV01.mmIdentification, AgentCAStandingInstructionRequestV01.mmStandingInstructionGeneralInformation,
-						AgentCAStandingInstructionRequestV01.mmStandingInstructionDetails, AgentCAStandingInstructionRequestV01.mmContactDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionRequestV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionRequestV01.mmStandingInstructionGeneralInformation,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionRequestV01.mmStandingInstructionDetails, com.tools20022.repository.area.seev.AgentCAStandingInstructionRequestV01.mmContactDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -268,10 +305,16 @@ public class AgentCAStandingInstructionRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AgentCAStandingInstructionRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
@@ -280,6 +323,7 @@ public class AgentCAStandingInstructionRequestV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "StgInstrGnlInf", required = true)
 	public CorporateActionStandingInstructionGeneralInformation1 getStandingInstructionGeneralInformation() {
 		return standingInstructionGeneralInformation;
 	}
@@ -288,6 +332,7 @@ public class AgentCAStandingInstructionRequestV01 {
 		this.standingInstructionGeneralInformation = standingInstructionGeneralInformation;
 	}
 
+	@XmlElement(name = "StgInstrDtls", required = true)
 	public CorporateActionStandingInstruction1 getStandingInstructionDetails() {
 		return standingInstructionDetails;
 	}
@@ -296,11 +341,18 @@ public class AgentCAStandingInstructionRequestV01 {
 		this.standingInstructionDetails = standingInstructionDetails;
 	}
 
+	@XmlElement(name = "CtctDtls")
 	public ContactPerson1 getContactDetails() {
 		return contactDetails;
 	}
 
 	public void setContactDetails(ContactPerson1 contactDetails) {
 		this.contactDetails = contactDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.025.01.01")
+	static public class Document {
+		@XmlElement(name = "AgtCAStgInstrReq", required = true)
+		public AgentCAStandingInstructionRequestV01 messageBody;
 	}
 }

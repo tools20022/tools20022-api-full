@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.ProductQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies a unit of measure with a code or free text.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies a unit of measure with a code or free text."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnitOfMeasure3Choice", propOrder = {"unitOfMeasureCode", "otherUnitOfMeasure"})
 public class UnitOfMeasure3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class UnitOfMeasure3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitOfMeasrCd", required = true)
 	public UnitOfMeasure4Code getUnitOfMeasureCode() {
 		return unitOfMeasureCode;
 	}
@@ -187,6 +194,7 @@ public class UnitOfMeasure3Choice {
 		this.unitOfMeasureCode = unitOfMeasureCode;
 	}
 
+	@XmlElement(name = "OthrUnitOfMeasr", required = true)
 	public Max35Text getOtherUnitOfMeasure() {
 		return otherUnitOfMeasure;
 	}

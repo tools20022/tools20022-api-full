@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference information concerning the original transaction, to which the
@@ -81,6 +85,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnderlyingPaymentTransaction2", propOrder = {"originalGroupInformation", "originalInstructionIdentification", "originalEndToEndIdentification", "originalTransactionIdentification", "originalInterbankSettlementAmount",
+		"originalInterbankSettlementDate"})
 public class UnderlyingPaymentTransaction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -397,6 +404,7 @@ public class UnderlyingPaymentTransaction2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlGrpInf")
 	public UnderlyingGroupInformation1 getOriginalGroupInformation() {
 		return originalGroupInformation;
 	}
@@ -405,6 +413,7 @@ public class UnderlyingPaymentTransaction2 {
 		this.originalGroupInformation = originalGroupInformation;
 	}
 
+	@XmlElement(name = "OrgnlInstrId")
 	public Max35Text getOriginalInstructionIdentification() {
 		return originalInstructionIdentification;
 	}
@@ -413,6 +422,7 @@ public class UnderlyingPaymentTransaction2 {
 		this.originalInstructionIdentification = originalInstructionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlEndToEndId")
 	public Max35Text getOriginalEndToEndIdentification() {
 		return originalEndToEndIdentification;
 	}
@@ -421,6 +431,7 @@ public class UnderlyingPaymentTransaction2 {
 		this.originalEndToEndIdentification = originalEndToEndIdentification;
 	}
 
+	@XmlElement(name = "OrgnlTxId")
 	public Max35Text getOriginalTransactionIdentification() {
 		return originalTransactionIdentification;
 	}
@@ -429,6 +440,7 @@ public class UnderlyingPaymentTransaction2 {
 		this.originalTransactionIdentification = originalTransactionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlIntrBkSttlmAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getOriginalInterbankSettlementAmount() {
 		return originalInterbankSettlementAmount;
 	}
@@ -437,6 +449,7 @@ public class UnderlyingPaymentTransaction2 {
 		this.originalInterbankSettlementAmount = originalInterbankSettlementAmount;
 	}
 
+	@XmlElement(name = "OrgnlIntrBkSttlmDt", required = true)
 	public ISODate getOriginalInterbankSettlementDate() {
 		return originalInterbankSettlementDate;
 	}

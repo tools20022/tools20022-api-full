@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.CashAccountContract;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies target dates dates related to account opening and closing.
@@ -88,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies target dates dates related to account opening and closing."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountContract4", propOrder = {"targetClosingDate", "urgencyFlag", "removalIndicator"})
 public class AccountContract4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -262,6 +268,7 @@ public class AccountContract4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrgtClsgDt")
 	public ISODate getTargetClosingDate() {
 		return targetClosingDate;
 	}
@@ -270,6 +277,7 @@ public class AccountContract4 {
 		this.targetClosingDate = targetClosingDate;
 	}
 
+	@XmlElement(name = "UrgcyFlg")
 	public YesNoIndicator getUrgencyFlag() {
 		return urgencyFlag;
 	}
@@ -278,6 +286,7 @@ public class AccountContract4 {
 		this.urgencyFlag = urgencyFlag;
 	}
 
+	@XmlElement(name = "RmvlInd")
 	public YesNoIndicator getRemovalIndicator() {
 		return removalIndicator;
 	}

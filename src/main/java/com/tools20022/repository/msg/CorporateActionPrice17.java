@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CorporateActionPrice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies prices of a corporate action.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionPrice17", propOrder = {"maximumPrice", "minimumPrice"})
 public class CorporateActionPrice17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -206,6 +212,7 @@ public class CorporateActionPrice17 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MaxPric")
 	public PriceFormat19Choice getMaximumPrice() {
 		return maximumPrice;
 	}
@@ -214,6 +221,7 @@ public class CorporateActionPrice17 {
 		this.maximumPrice = maximumPrice;
 	}
 
+	@XmlElement(name = "MinPric")
 	public PriceFormat19Choice getMinimumPrice() {
 		return minimumPrice;
 	}

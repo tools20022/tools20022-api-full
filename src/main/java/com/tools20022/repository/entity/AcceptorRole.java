@@ -64,6 +64,11 @@ public class AcceptorRole extends CardPaymentPartyRole {
 				definition = "Entity accepting payment related cards.";
 				superType_lazy = () -> CardPaymentPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcceptorRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

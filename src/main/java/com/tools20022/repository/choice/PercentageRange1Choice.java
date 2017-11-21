@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.FromToPercentageRange1;
 import com.tools20022.repository.msg.PercentageRangeBoundary1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between ranges of rates in which a percentage rate is considered valid
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PercentageRange1Choice", propOrder = {"from", "to", "fromTo", "equal", "notEqual"})
 public class PercentageRange1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -299,6 +305,7 @@ public class PercentageRange1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Fr", required = true)
 	public PercentageRangeBoundary1 getFrom() {
 		return from;
 	}
@@ -307,6 +314,7 @@ public class PercentageRange1Choice {
 		this.from = from;
 	}
 
+	@XmlElement(name = "To", required = true)
 	public PercentageRangeBoundary1 getTo() {
 		return to;
 	}
@@ -315,6 +323,7 @@ public class PercentageRange1Choice {
 		this.to = to;
 	}
 
+	@XmlElement(name = "FrTo", required = true)
 	public FromToPercentageRange1 getFromTo() {
 		return fromTo;
 	}
@@ -323,6 +332,7 @@ public class PercentageRange1Choice {
 		this.fromTo = fromTo;
 	}
 
+	@XmlElement(name = "EQ", required = true)
 	public PercentageRate getEqual() {
 		return equal;
 	}
@@ -331,6 +341,7 @@ public class PercentageRange1Choice {
 		this.equal = equal;
 	}
 
+	@XmlElement(name = "NEQ", required = true)
 	public PercentageRate getNotEqual() {
 		return notEqual;
 	}

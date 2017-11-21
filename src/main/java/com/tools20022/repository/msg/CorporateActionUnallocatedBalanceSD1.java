@@ -24,6 +24,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Balance types related to an unallocated redemption payment.
@@ -78,6 +82,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Balance types related to an unallocated redemption payment."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionUnallocatedBalanceSD1", propOrder = {"totalEligibleBalance", "affectedBalance", "unaffectedBalance", "obligatedBalance", "originalBalance", "pledgedBalance", "unpledgedBalance", "investmentPledgedBalance",
+		"investmentUnpledgedBalance"})
 public class CorporateActionUnallocatedBalanceSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -500,6 +507,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlElgblBal")
 	public SignedQuantityFormat4 getTotalEligibleBalance() {
 		return totalEligibleBalance;
 	}
@@ -508,6 +516,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 		this.totalEligibleBalance = totalEligibleBalance;
 	}
 
+	@XmlElement(name = "AfctdBal")
 	public SignedQuantityFormat4 getAffectedBalance() {
 		return affectedBalance;
 	}
@@ -516,6 +525,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 		this.affectedBalance = affectedBalance;
 	}
 
+	@XmlElement(name = "UafctdBal")
 	public SignedQuantityFormat4 getUnaffectedBalance() {
 		return unaffectedBalance;
 	}
@@ -524,6 +534,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 		this.unaffectedBalance = unaffectedBalance;
 	}
 
+	@XmlElement(name = "OblgtdBal")
 	public SignedQuantityFormat4 getObligatedBalance() {
 		return obligatedBalance;
 	}
@@ -532,6 +543,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 		this.obligatedBalance = obligatedBalance;
 	}
 
+	@XmlElement(name = "OrgnlBal")
 	public SignedQuantityFormat4 getOriginalBalance() {
 		return originalBalance;
 	}
@@ -540,6 +552,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 		this.originalBalance = originalBalance;
 	}
 
+	@XmlElement(name = "PldgdBal")
 	public SignedQuantityFormat4 getPledgedBalance() {
 		return pledgedBalance;
 	}
@@ -548,6 +561,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 		this.pledgedBalance = pledgedBalance;
 	}
 
+	@XmlElement(name = "UpldgdBal")
 	public SignedQuantityFormat4 getUnpledgedBalance() {
 		return unpledgedBalance;
 	}
@@ -556,6 +570,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 		this.unpledgedBalance = unpledgedBalance;
 	}
 
+	@XmlElement(name = "InvstmtPldgdBal")
 	public SignedQuantityFormat4 getInvestmentPledgedBalance() {
 		return investmentPledgedBalance;
 	}
@@ -564,6 +579,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 		this.investmentPledgedBalance = investmentPledgedBalance;
 	}
 
+	@XmlElement(name = "InvstmtUpldgdBal")
 	public SignedQuantityFormat4 getInvestmentUnpledgedBalance() {
 		return investmentUnpledgedBalance;
 	}

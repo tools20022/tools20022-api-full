@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the legal basis of the request.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides details on the legal basis of the request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LegalMandate1", propOrder = {"paragraph", "disclaimer"})
 public class LegalMandate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -170,6 +176,7 @@ public class LegalMandate1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prgrph", required = true)
 	public Max35Text getParagraph() {
 		return paragraph;
 	}
@@ -178,6 +185,7 @@ public class LegalMandate1 {
 		this.paragraph = paragraph;
 	}
 
+	@XmlElement(name = "Dsclmr")
 	public Max350Text getDisclaimer() {
 		return disclaimer;
 	}

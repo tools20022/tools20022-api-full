@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.IntraBalanceCancellation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the report data or an operational error.
@@ -62,6 +66,8 @@ import java.util.List;
  * definition} = "Choice between the report data or an operational error."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraBalanceOrOperationalError2Choice", propOrder = {"cancellations", "operationalError"})
 public class IntraBalanceOrOperationalError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class IntraBalanceOrOperationalError2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cxls", required = true)
 	public List<IntraBalanceCancellation1> getCancellations() {
 		return cancellations;
 	}
@@ -174,6 +181,7 @@ public class IntraBalanceOrOperationalError2Choice {
 		this.cancellations = cancellations;
 	}
 
+	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
 		return operationalError;
 	}

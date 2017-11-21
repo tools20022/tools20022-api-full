@@ -23,6 +23,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AggregatedIndependentAmount1;
 import com.tools20022.repository.msg.IndependentAmount1;
 import com.tools20022.repository.msg.IndependentAmount2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IndependentAmount#mmRelatedRiskCalculation
+ * IndependentAmount.mmRelatedRiskCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IndependentAmount#mmIndependentAmountPerTrade
+ * IndependentAmount.mmIndependentAmountPerTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IndependentAmount#mmIndependentAmountValueAtRisk
+ * IndependentAmount.mmIndependentAmountValueAtRisk}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IndependentAmount#mmIndependentAmountNetOpenPosition
+ * IndependentAmount.mmIndependentAmountNetOpenPosition}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -68,23 +86,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.AggregatedIndependentAmount1#mmOtherAmount
  * AggregatedIndependentAmount1.mmOtherAmount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IndependentAmount#mmRelatedRiskCalculation
- * IndependentAmount.mmRelatedRiskCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IndependentAmount#mmIndependentAmountPerTrade
- * IndependentAmount.mmIndependentAmountPerTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IndependentAmount#mmIndependentAmountValueAtRisk
- * IndependentAmount.mmIndependentAmountValueAtRisk}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IndependentAmount#mmIndependentAmountNetOpenPosition
- * IndependentAmount.mmIndependentAmountNetOpenPosition}</li>
  * </ul>
  * </li>
  * <li>
@@ -144,7 +145,7 @@ public class IndependentAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedRiskCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> IndependentAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IndependentAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedRiskCalculation";
@@ -168,11 +169,6 @@ public class IndependentAmount {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.IndependentAmount
-	 * IndependentAmount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -181,6 +177,11 @@ public class IndependentAmount {
 	 * AggregatedIndependentAmount1.mmTrade}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.IndependentAmount
+	 * IndependentAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -197,7 +198,7 @@ public class IndependentAmount {
 	public static final MMBusinessAttribute mmIndependentAmountPerTrade = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AggregatedIndependentAmount1.mmTrade);
-			elementContext_lazy = () -> IndependentAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IndependentAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndependentAmountPerTrade";
@@ -205,6 +206,14 @@ public class IndependentAmount {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IndependentAmount.class.getMethod("getIndependentAmountPerTrade", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ActiveCurrencyAndAmount independentAmountValueAtRisk;
@@ -220,11 +229,6 @@ public class IndependentAmount {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.IndependentAmount
-	 * IndependentAmount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -233,6 +237,11 @@ public class IndependentAmount {
 	 * AggregatedIndependentAmount1.mmValueAtRisk}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.IndependentAmount
+	 * IndependentAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -249,7 +258,7 @@ public class IndependentAmount {
 	public static final MMBusinessAttribute mmIndependentAmountValueAtRisk = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AggregatedIndependentAmount1.mmValueAtRisk);
-			elementContext_lazy = () -> IndependentAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IndependentAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndependentAmountValueAtRisk";
@@ -257,6 +266,14 @@ public class IndependentAmount {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IndependentAmount.class.getMethod("getIndependentAmountValueAtRisk", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ActiveCurrencyAndAmount independentAmountNetOpenPosition;
@@ -273,11 +290,6 @@ public class IndependentAmount {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.IndependentAmount
-	 * IndependentAmount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -286,6 +298,11 @@ public class IndependentAmount {
 	 * AggregatedIndependentAmount1.mmNetOpenPosition}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.IndependentAmount
+	 * IndependentAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -302,7 +319,7 @@ public class IndependentAmount {
 	public static final MMBusinessAttribute mmIndependentAmountNetOpenPosition = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AggregatedIndependentAmount1.mmNetOpenPosition);
-			elementContext_lazy = () -> IndependentAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IndependentAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndependentAmountNetOpenPosition";
@@ -310,6 +327,14 @@ public class IndependentAmount {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IndependentAmount.class.getMethod("getIndependentAmountNetOpenPosition", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -322,9 +347,14 @@ public class IndependentAmount {
 				definition = "Amount applied as an add-on to the exposure usually intended to cover a possible increase in exposure before the next valuation date.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExposureCalculation.mmCurrentIndependentAmount);
 				derivationElement_lazy = () -> Arrays.asList(IndependentAmount1.mmAmount, IndependentAmount2.mmAmount, AggregatedIndependentAmount1.mmOtherAmount);
-				element_lazy = () -> Arrays.asList(IndependentAmount.mmRelatedRiskCalculation, IndependentAmount.mmIndependentAmountPerTrade, IndependentAmount.mmIndependentAmountValueAtRisk,
-						IndependentAmount.mmIndependentAmountNetOpenPosition);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IndependentAmount.mmRelatedRiskCalculation, com.tools20022.repository.entity.IndependentAmount.mmIndependentAmountPerTrade,
+						com.tools20022.repository.entity.IndependentAmount.mmIndependentAmountValueAtRisk, com.tools20022.repository.entity.IndependentAmount.mmIndependentAmountNetOpenPosition);
 				derivationComponent_lazy = () -> Arrays.asList(IndependentAmount1.mmObject(), IndependentAmount2.mmObject(), AggregatedIndependentAmount1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IndependentAmount.class;
 			}
 		});
 		return mmObject_lazy.get();

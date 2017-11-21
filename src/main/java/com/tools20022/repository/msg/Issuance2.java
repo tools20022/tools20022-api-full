@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Preparation/bringing to market of a security (also known as primary market or
@@ -83,6 +87,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Issuance2", propOrder = {"issuePlace", "countryOfIssue", "issueDate", "announcementDate", "issuerOrganisation", "issueNominalAmount", "fullIssuedAmount", "issueSize", "issuePrice", "issuanceDistribution", "governingLaw"})
 public class Issuance2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -561,6 +567,7 @@ public class Issuance2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IssePlc")
 	public MICIdentifier getIssuePlace() {
 		return issuePlace;
 	}
@@ -569,6 +576,7 @@ public class Issuance2 {
 		this.issuePlace = issuePlace;
 	}
 
+	@XmlElement(name = "CtryOfIsse")
 	public CountryCode getCountryOfIssue() {
 		return countryOfIssue;
 	}
@@ -577,6 +585,7 @@ public class Issuance2 {
 		this.countryOfIssue = countryOfIssue;
 	}
 
+	@XmlElement(name = "IsseDt")
 	public ISODate getIssueDate() {
 		return issueDate;
 	}
@@ -585,6 +594,7 @@ public class Issuance2 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "AnncmntDt")
 	public ISODateTime getAnnouncementDate() {
 		return announcementDate;
 	}
@@ -593,6 +603,7 @@ public class Issuance2 {
 		this.announcementDate = announcementDate;
 	}
 
+	@XmlElement(name = "IssrOrg")
 	public Organisation2 getIssuerOrganisation() {
 		return issuerOrganisation;
 	}
@@ -601,6 +612,7 @@ public class Issuance2 {
 		this.issuerOrganisation = issuerOrganisation;
 	}
 
+	@XmlElement(name = "IsseNmnlAmt")
 	public FinancialInstrumentQuantity1Choice getIssueNominalAmount() {
 		return issueNominalAmount;
 	}
@@ -609,6 +621,7 @@ public class Issuance2 {
 		this.issueNominalAmount = issueNominalAmount;
 	}
 
+	@XmlElement(name = "FullIssdAmt")
 	public ActiveCurrencyAndAmount getFullIssuedAmount() {
 		return fullIssuedAmount;
 	}
@@ -617,6 +630,7 @@ public class Issuance2 {
 		this.fullIssuedAmount = fullIssuedAmount;
 	}
 
+	@XmlElement(name = "IsseSz")
 	public Number getIssueSize() {
 		return issueSize;
 	}
@@ -625,6 +639,7 @@ public class Issuance2 {
 		this.issueSize = issueSize;
 	}
 
+	@XmlElement(name = "IssePric")
 	public PriceValue1 getIssuePrice() {
 		return issuePrice;
 	}
@@ -633,6 +648,7 @@ public class Issuance2 {
 		this.issuePrice = issuePrice;
 	}
 
+	@XmlElement(name = "IssncDstrbtn")
 	public SecuritiesTransactionType17Choice getIssuanceDistribution() {
 		return issuanceDistribution;
 	}
@@ -641,6 +657,7 @@ public class Issuance2 {
 		this.issuanceDistribution = issuanceDistribution;
 	}
 
+	@XmlElement(name = "GovngLaw")
 	public List<Jurisdiction1> getGoverningLaw() {
 		return governingLaw;
 	}

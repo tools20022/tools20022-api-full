@@ -36,6 +36,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Customer account information.
@@ -90,6 +94,8 @@ import java.util.List;
  * definition} = "Customer account information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardAccount12", propOrder = {"accountType", "accountName", "currency", "accountIdentifier", "creditReference", "servicer", "balance", "balanceDisplayFlag", "defaultAccountIndicator", "allowedService"})
 public class CardAccount12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -560,6 +566,7 @@ public class CardAccount12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctTp")
 	public CardAccountType3Code getAccountType() {
 		return accountType;
 	}
@@ -568,6 +575,7 @@ public class CardAccount12 {
 		this.accountType = accountType;
 	}
 
+	@XmlElement(name = "AcctNm")
 	public Max70Text getAccountName() {
 		return accountName;
 	}
@@ -576,6 +584,7 @@ public class CardAccount12 {
 		this.accountName = accountName;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -584,6 +593,7 @@ public class CardAccount12 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "AcctIdr")
 	public AccountIdentification31Choice getAccountIdentifier() {
 		return accountIdentifier;
 	}
@@ -592,6 +602,7 @@ public class CardAccount12 {
 		this.accountIdentifier = accountIdentifier;
 	}
 
+	@XmlElement(name = "CdtRef")
 	public Max35Text getCreditReference() {
 		return creditReference;
 	}
@@ -600,6 +611,7 @@ public class CardAccount12 {
 		this.creditReference = creditReference;
 	}
 
+	@XmlElement(name = "Svcr")
 	public PartyIdentification72Choice getServicer() {
 		return servicer;
 	}
@@ -608,6 +620,7 @@ public class CardAccount12 {
 		this.servicer = servicer;
 	}
 
+	@XmlElement(name = "Bal")
 	public AmountAndDirection43 getBalance() {
 		return balance;
 	}
@@ -616,6 +629,7 @@ public class CardAccount12 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "BalDispFlg")
 	public TrueFalseIndicator getBalanceDisplayFlag() {
 		return balanceDisplayFlag;
 	}
@@ -624,6 +638,7 @@ public class CardAccount12 {
 		this.balanceDisplayFlag = balanceDisplayFlag;
 	}
 
+	@XmlElement(name = "DfltAcctInd")
 	public TrueFalseIndicator getDefaultAccountIndicator() {
 		return defaultAccountIndicator;
 	}
@@ -632,6 +647,7 @@ public class CardAccount12 {
 		this.defaultAccountIndicator = defaultAccountIndicator;
 	}
 
+	@XmlElement(name = "AllwdSvc")
 	public List<ATMService19> getAllowedService() {
 		return allowedService;
 	}

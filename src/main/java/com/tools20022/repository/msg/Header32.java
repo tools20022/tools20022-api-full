@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the protocol management on a segment of the path from
@@ -117,6 +121,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Header32", propOrder = {"messageFunction", "protocolVersion", "exchangeIdentification", "reTransmissionCounter", "creationDateTime", "initiatingParty", "recipientParty", "processState", "traceability"})
 public class Header32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -508,6 +514,7 @@ public class Header32 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgFctn", required = true)
 	public ATMMessageFunction2 getMessageFunction() {
 		return messageFunction;
 	}
@@ -516,6 +523,7 @@ public class Header32 {
 		this.messageFunction = messageFunction;
 	}
 
+	@XmlElement(name = "PrtcolVrsn", required = true)
 	public Max6Text getProtocolVersion() {
 		return protocolVersion;
 	}
@@ -524,6 +532,7 @@ public class Header32 {
 		this.protocolVersion = protocolVersion;
 	}
 
+	@XmlElement(name = "XchgId", required = true)
 	public Max3NumericText getExchangeIdentification() {
 		return exchangeIdentification;
 	}
@@ -532,6 +541,7 @@ public class Header32 {
 		this.exchangeIdentification = exchangeIdentification;
 	}
 
+	@XmlElement(name = "ReTrnsmssnCntr")
 	public Number getReTransmissionCounter() {
 		return reTransmissionCounter;
 	}
@@ -540,6 +550,7 @@ public class Header32 {
 		this.reTransmissionCounter = reTransmissionCounter;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -548,6 +559,7 @@ public class Header32 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "InitgPty", required = true)
 	public Max35Text getInitiatingParty() {
 		return initiatingParty;
 	}
@@ -556,6 +568,7 @@ public class Header32 {
 		this.initiatingParty = initiatingParty;
 	}
 
+	@XmlElement(name = "RcptPty")
 	public Max35Text getRecipientParty() {
 		return recipientParty;
 	}
@@ -564,6 +577,7 @@ public class Header32 {
 		this.recipientParty = recipientParty;
 	}
 
+	@XmlElement(name = "PrcStat")
 	public Max35Text getProcessState() {
 		return processState;
 	}
@@ -572,6 +586,7 @@ public class Header32 {
 		this.processState = processState;
 	}
 
+	@XmlElement(name = "Tracblt")
 	public List<Traceability4> getTraceability() {
 		return traceability;
 	}

@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.CaseAssignment2;
 import com.tools20022.repository.msg.CaseForwardingNotification3;
 import com.tools20022.repository.msg.ReportHeader2;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -64,9 +66,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.030.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
@@ -100,6 +99,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.030.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -119,6 +121,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NotificationOfCaseAssignmentV03", propOrder = {"header", "case", "assignment", "notification"})
 public class NotificationOfCaseAssignmentV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +162,14 @@ public class NotificationOfCaseAssignmentV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> ReportHeader2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationOfCaseAssignmentV03.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case2 case_;
 	/**
@@ -190,6 +202,14 @@ public class NotificationOfCaseAssignmentV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Case2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationOfCaseAssignmentV03.class.getMethod("getCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CaseAssignment2 assignment;
@@ -229,6 +249,14 @@ public class NotificationOfCaseAssignmentV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationOfCaseAssignmentV03.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CaseForwardingNotification3 notification;
 	/**
@@ -264,6 +292,14 @@ public class NotificationOfCaseAssignmentV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseForwardingNotification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationOfCaseAssignmentV03.class.getMethod("getNotification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -277,7 +313,8 @@ public class NotificationOfCaseAssignmentV03 {
 				rootElement = "Document";
 				xmlTag = "NtfctnOfCaseAssgnmt";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(NotificationOfCaseAssignmentV03.mmHeader, NotificationOfCaseAssignmentV03.mmCase, NotificationOfCaseAssignmentV03.mmAssignment, NotificationOfCaseAssignmentV03.mmNotification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV03.mmHeader, com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV03.mmCase,
+						com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV03.mmAssignment, com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV03.mmNotification);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -287,10 +324,16 @@ public class NotificationOfCaseAssignmentV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return NotificationOfCaseAssignmentV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public ReportHeader2 getHeader() {
 		return header;
 	}
@@ -299,6 +342,7 @@ public class NotificationOfCaseAssignmentV03 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "Case", required = true)
 	public Case2 getCase() {
 		return case_;
 	}
@@ -307,6 +351,7 @@ public class NotificationOfCaseAssignmentV03 {
 		this.case_ = case_;
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment2 getAssignment() {
 		return assignment;
 	}
@@ -315,11 +360,18 @@ public class NotificationOfCaseAssignmentV03 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "Ntfctn", required = true)
 	public CaseForwardingNotification3 getNotification() {
 		return notification;
 	}
 
 	public void setNotification(CaseForwardingNotification3 notification) {
 		this.notification = notification;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.030.03.03")
+	static public class Document {
+		@XmlElement(name = "NtfctnOfCaseAssgnmt", required = true)
+		public NotificationOfCaseAssignmentV03 messageBody;
 	}
 }

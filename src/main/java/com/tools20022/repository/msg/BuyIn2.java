@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.BuyIn;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies elements related to the confirmation sent by the central
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BuyIn2", propOrder = {"buyInNotificationIdentification", "buyInIdentification", "date", "price", "securitiesBuyIn", "requiredCashCompensation"})
 public class BuyIn2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -372,6 +378,7 @@ public class BuyIn2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BuyInNtfctnId")
 	public Max35Text getBuyInNotificationIdentification() {
 		return buyInNotificationIdentification;
 	}
@@ -380,6 +387,7 @@ public class BuyIn2 {
 		this.buyInNotificationIdentification = buyInNotificationIdentification;
 	}
 
+	@XmlElement(name = "BuyInId", required = true)
 	public Max35Text getBuyInIdentification() {
 		return buyInIdentification;
 	}
@@ -388,6 +396,7 @@ public class BuyIn2 {
 		this.buyInIdentification = buyInIdentification;
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
@@ -396,6 +405,7 @@ public class BuyIn2 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Pric")
 	public Price4 getPrice() {
 		return price;
 	}
@@ -404,6 +414,7 @@ public class BuyIn2 {
 		this.price = price;
 	}
 
+	@XmlElement(name = "SctiesBuyIn")
 	public SecuritiesCompensation1 getSecuritiesBuyIn() {
 		return securitiesBuyIn;
 	}
@@ -412,6 +423,7 @@ public class BuyIn2 {
 		this.securitiesBuyIn = securitiesBuyIn;
 	}
 
+	@XmlElement(name = "ReqrdCshCompstn")
 	public CashCompensation1 getRequiredCashCompensation() {
 		return requiredCashCompensation;
 	}

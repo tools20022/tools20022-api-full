@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a transfer in transaction.
@@ -79,6 +83,8 @@ import java.util.List;
  * TransferIn13}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferIn15", propOrder = {"requestedTransferDate", "masterReference", "transferAndReferences", "accountDetails", "settlementDetails", "extension"})
 public class TransferIn15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -417,6 +423,7 @@ public class TransferIn15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqdTrfDt")
 	public DateFormat1Choice getRequestedTransferDate() {
 		return requestedTransferDate;
 	}
@@ -425,6 +432,7 @@ public class TransferIn15 {
 		this.requestedTransferDate = requestedTransferDate;
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -433,6 +441,7 @@ public class TransferIn15 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "TrfAndRefs", required = true)
 	public List<TransferIn16> getTransferAndReferences() {
 		return transferAndReferences;
 	}
@@ -441,6 +450,7 @@ public class TransferIn15 {
 		this.transferAndReferences = transferAndReferences;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public InvestmentAccount56 getAccountDetails() {
 		return accountDetails;
 	}
@@ -449,6 +459,7 @@ public class TransferIn15 {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "SttlmDtls")
 	public DeliverInformation16 getSettlementDetails() {
 		return settlementDetails;
 	}
@@ -457,6 +468,7 @@ public class TransferIn15 {
 		this.settlementDetails = settlementDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

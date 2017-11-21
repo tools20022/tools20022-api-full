@@ -26,6 +26,10 @@ import com.tools20022.repository.codeset.FailureReason5Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Hardware security module of the ATM.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Hardware security module of the ATM."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMSecurityDevice1", propOrder = {"deviceProperty", "currentConfiguration", "supportedConfiguration", "currentStatus", "incident"})
 public class ATMSecurityDevice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -298,6 +304,7 @@ public class ATMSecurityDevice1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DvcPrprty")
 	public ATMEquipment2 getDeviceProperty() {
 		return deviceProperty;
 	}
@@ -306,6 +313,7 @@ public class ATMSecurityDevice1 {
 		this.deviceProperty = deviceProperty;
 	}
 
+	@XmlElement(name = "CurCfgtn", required = true)
 	public ATMSecurityConfiguration1 getCurrentConfiguration() {
 		return currentConfiguration;
 	}
@@ -314,6 +322,7 @@ public class ATMSecurityDevice1 {
 		this.currentConfiguration = currentConfiguration;
 	}
 
+	@XmlElement(name = "SpprtdCfgtn")
 	public ATMSecurityConfiguration1 getSupportedConfiguration() {
 		return supportedConfiguration;
 	}
@@ -322,6 +331,7 @@ public class ATMSecurityDevice1 {
 		this.supportedConfiguration = supportedConfiguration;
 	}
 
+	@XmlElement(name = "CurSts", required = true)
 	public ATMStatus2Code getCurrentStatus() {
 		return currentStatus;
 	}
@@ -330,6 +340,7 @@ public class ATMSecurityDevice1 {
 		this.currentStatus = currentStatus;
 	}
 
+	@XmlElement(name = "Incdnt")
 	public FailureReason5Code getIncident() {
 		return incident;
 	}

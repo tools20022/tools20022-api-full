@@ -33,6 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} =
  * "Irish Payment Services Organisation (IPSO); Irish National Sort Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "IE[0-9]{6,6}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -69,6 +71,7 @@ public class IrishNSCIdentifier {
 				name = "IrishNSCIdentifier";
 				definition = "Irish National Sorting Code. Identifies Irish financial institutions on the Irish national clearing system.";
 				identificationScheme = "Irish Payment Services Organisation (IPSO); Irish National Sort Code";
+				pattern = "IE[0-9]{6,6}";
 			}
 		});
 		return mmObject_lazy.get();

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Exchange rate and calculated amount to be presented to the customer when the
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CurrencyConversion1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyConversion5", propOrder = {"sourceCurrency", "sourceCurrencyNumeric", "targetCurrency", "targetCurrencyNumeric", "rate", "calculatedAmount"})
 public class CurrencyConversion5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -426,6 +432,7 @@ public class CurrencyConversion5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SrcCcy", required = true)
 	public ActiveCurrencyCode getSourceCurrency() {
 		return sourceCurrency;
 	}
@@ -434,6 +441,7 @@ public class CurrencyConversion5 {
 		this.sourceCurrency = sourceCurrency;
 	}
 
+	@XmlElement(name = "SrcCcyNmrc", required = true)
 	public ActiveCurrencyCode getSourceCurrencyNumeric() {
 		return sourceCurrencyNumeric;
 	}
@@ -442,6 +450,7 @@ public class CurrencyConversion5 {
 		this.sourceCurrencyNumeric = sourceCurrencyNumeric;
 	}
 
+	@XmlElement(name = "TrgtCcy", required = true)
 	public ActiveCurrencyCode getTargetCurrency() {
 		return targetCurrency;
 	}
@@ -450,6 +459,7 @@ public class CurrencyConversion5 {
 		this.targetCurrency = targetCurrency;
 	}
 
+	@XmlElement(name = "TrgtCcyNmrc", required = true)
 	public Exact3NumericText getTargetCurrencyNumeric() {
 		return targetCurrencyNumeric;
 	}
@@ -458,6 +468,7 @@ public class CurrencyConversion5 {
 		this.targetCurrencyNumeric = targetCurrencyNumeric;
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public BaseOneRate getRate() {
 		return rate;
 	}
@@ -466,6 +477,7 @@ public class CurrencyConversion5 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "ClctdAmt", required = true)
 	public ImpliedCurrencyAndAmount getCalculatedAmount() {
 		return calculatedAmount;
 	}

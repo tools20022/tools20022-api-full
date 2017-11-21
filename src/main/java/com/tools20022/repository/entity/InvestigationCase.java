@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,6 +37,47 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmAssignmentIdentification
+ * InvestigationCase.mmAssignmentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmCreationDateTime
+ * InvestigationCase.mmCreationDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmIdentification
+ * InvestigationCase.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestigationCase#mmStatus
+ * InvestigationCase.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmInvestigationPartyRole
+ * InvestigationCase.mmInvestigationPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmDuplicateCaseResolution
+ * InvestigationCase.mmDuplicateCaseResolution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmInvestigationResolution
+ * InvestigationCase.mmInvestigationResolution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmOriginalInvestigationCase
+ * InvestigationCase.mmOriginalInvestigationCase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmLinkedCase
+ * InvestigationCase.mmLinkedCase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmReassignment
+ * InvestigationCase.mmReassignment}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentInvestigationCase
+ * PaymentInvestigationCase}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -77,47 +119,6 @@ import java.util.List;
  * DuplicateCase.mmDuplicatedCase}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentInvestigationCase
- * PaymentInvestigationCase}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmAssignmentIdentification
- * InvestigationCase.mmAssignmentIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmCreationDateTime
- * InvestigationCase.mmCreationDateTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmIdentification
- * InvestigationCase.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestigationCase#mmStatus
- * InvestigationCase.mmStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmInvestigationPartyRole
- * InvestigationCase.mmInvestigationPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmDuplicateCaseResolution
- * InvestigationCase.mmDuplicateCaseResolution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmInvestigationResolution
- * InvestigationCase.mmInvestigationResolution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmOriginalInvestigationCase
- * InvestigationCase.mmOriginalInvestigationCase}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmLinkedCase
- * InvestigationCase.mmLinkedCase}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmReassignment
- * InvestigationCase.mmReassignment}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -148,11 +149,6 @@ public class InvestigationCase {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestigationCase
-	 * InvestigationCase}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -167,6 +163,11 @@ public class InvestigationCase {
 	 * CaseAssignment3.mmIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestigationCase
+	 * InvestigationCase}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -190,6 +191,14 @@ public class InvestigationCase {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestigationCase.class.getMethod("getAssignmentIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ISODateTime creationDateTime;
 	/**
@@ -201,11 +210,6 @@ public class InvestigationCase {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestigationCase
-	 * InvestigationCase}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -220,6 +224,11 @@ public class InvestigationCase {
 	 * CaseAssignment3.mmCreationDateTime}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestigationCase
+	 * InvestigationCase}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -243,6 +252,14 @@ public class InvestigationCase {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestigationCase.class.getMethod("getCreationDateTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max35Text identification;
 	/**
@@ -254,11 +271,6 @@ public class InvestigationCase {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestigationCase
-	 * InvestigationCase}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -270,6 +282,11 @@ public class InvestigationCase {
 	 * Case3.mmIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestigationCase
+	 * InvestigationCase}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -293,6 +310,14 @@ public class InvestigationCase {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestigationCase.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<com.tools20022.repository.entity.InvestigationCaseStatus> status;
 	/**
@@ -314,11 +339,6 @@ public class InvestigationCase {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.InvestigationCaseStatus
 	 * InvestigationCaseStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestigationCase
-	 * InvestigationCase}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -378,6 +398,11 @@ public class InvestigationCase {
 	 * PaymentTransaction79.mmCancellationStatusReasonInformation}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestigationCase
+	 * InvestigationCase}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -529,11 +554,6 @@ public class InvestigationCase {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.InvestigationResolution
 	 * InvestigationResolution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestigationCase
-	 * InvestigationCase}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -542,6 +562,11 @@ public class InvestigationCase {
 	 * CancellationStatusReason2.mmReason}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestigationCase
+	 * InvestigationCase}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -731,6 +756,11 @@ public class InvestigationCase {
 						com.tools20022.repository.entity.InvestigationCase.mmDuplicateCaseResolution, com.tools20022.repository.entity.InvestigationCase.mmInvestigationResolution,
 						com.tools20022.repository.entity.InvestigationCase.mmOriginalInvestigationCase, com.tools20022.repository.entity.InvestigationCase.mmLinkedCase, com.tools20022.repository.entity.InvestigationCase.mmReassignment);
 				derivationComponent_lazy = () -> Arrays.asList(CaseAssignment.mmObject(), CaseAssignment2.mmObject(), Case.mmObject(), Case2.mmObject(), CaseAssignment3.mmObject(), Case3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvestigationCase.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of the identification assignment.
@@ -90,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the details of the identification assignment."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IdentificationAssignment2", propOrder = {"messageIdentification", "creationDateTime", "creator", "firstAgent", "assigner", "assignee"})
 public class IdentificationAssignment2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -372,6 +378,7 @@ public class IdentificationAssignment2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -380,6 +387,7 @@ public class IdentificationAssignment2 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -388,6 +396,7 @@ public class IdentificationAssignment2 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "Cretr")
 	public Party12Choice getCreator() {
 		return creator;
 	}
@@ -396,6 +405,7 @@ public class IdentificationAssignment2 {
 		this.creator = creator;
 	}
 
+	@XmlElement(name = "FrstAgt")
 	public BranchAndFinancialInstitutionIdentification5 getFirstAgent() {
 		return firstAgent;
 	}
@@ -404,6 +414,7 @@ public class IdentificationAssignment2 {
 		this.firstAgent = firstAgent;
 	}
 
+	@XmlElement(name = "Assgnr", required = true)
 	public Party12Choice getAssigner() {
 		return assigner;
 	}
@@ -412,6 +423,7 @@ public class IdentificationAssignment2 {
 		this.assigner = assigner;
 	}
 
+	@XmlElement(name = "Assgne", required = true)
 	public Party12Choice getAssignee() {
 		return assignee;
 	}

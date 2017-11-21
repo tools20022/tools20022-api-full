@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.TradingSessionCode;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,6 +36,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingSession#mmTradingSessionName
+ * TradingSession.mmTradingSessionName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingSession#mmTimeBracket
+ * TradingSession.mmTimeBracket}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradingSession#mmMarket
+ * TradingSession.mmMarket}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradingSession#mmQuote
+ * TradingSession.mmQuote}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingSession#mmSecuritiesOrder
+ * TradingSession.mmSecuritiesOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingSession#mmTradingSessionIndicator
+ * TradingSession.mmTradingSessionIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingSession#mmTradingSessionPhase
+ * TradingSession.mmTradingSessionPhase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingSession#mmUSFuturesTradingSession
+ * TradingSession.mmUSFuturesTradingSession}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingSession#mmListTrading
+ * TradingSession.mmListTrading}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -79,36 +110,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * QuoteRequest1.mmTradingSessionDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingSession#mmTradingSessionName
- * TradingSession.mmTradingSessionName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingSession#mmTimeBracket
- * TradingSession.mmTimeBracket}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradingSession#mmMarket
- * TradingSession.mmMarket}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradingSession#mmQuote
- * TradingSession.mmQuote}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingSession#mmSecuritiesOrder
- * TradingSession.mmSecuritiesOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingSession#mmTradingSessionIndicator
- * TradingSession.mmTradingSessionIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingSession#mmTradingSessionPhase
- * TradingSession.mmTradingSessionPhase}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingSession#mmUSFuturesTradingSession
- * TradingSession.mmUSFuturesTradingSession}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingSession#mmListTrading
- * TradingSession.mmListTrading}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -138,11 +139,6 @@ public class TradingSession {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max140Text
 	 * Max140Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradingSession
-	 * TradingSession}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -154,6 +150,11 @@ public class TradingSession {
 	 * TradingSession1.mmTradingSessionSubIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradingSession
+	 * TradingSession}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -170,7 +171,7 @@ public class TradingSession {
 	public static final MMBusinessAttribute mmTradingSessionName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradingSession1.mmTradingSessionIdentification, TradingSession1.mmTradingSessionSubIdentification);
-			elementContext_lazy = () -> TradingSession.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingSession.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingSessionName";
@@ -178,6 +179,14 @@ public class TradingSession {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradingSession.class.getMethod("getTradingSessionName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DateTimePeriod timeBracket;
@@ -219,7 +228,7 @@ public class TradingSession {
 	 */
 	public static final MMBusinessAssociationEnd mmTimeBracket = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradingSession.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingSession.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TimeBracket";
@@ -249,11 +258,6 @@ public class TradingSession {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.TradingMarket
 	 * TradingMarket}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradingSession
-	 * TradingSession}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -262,6 +266,11 @@ public class TradingSession {
 	 * PartialFill2.mmPlaceOfTrade}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradingSession
+	 * TradingSession}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -277,7 +286,7 @@ public class TradingSession {
 	public static final MMBusinessAssociationEnd mmMarket = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PartialFill2.mmPlaceOfTrade);
-			elementContext_lazy = () -> TradingSession.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingSession.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Market";
@@ -326,7 +335,7 @@ public class TradingSession {
 	 */
 	public static final MMBusinessAssociationEnd mmQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradingSession.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingSession.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quote";
@@ -374,7 +383,7 @@ public class TradingSession {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradingSession.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingSession.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesOrder";
@@ -418,7 +427,7 @@ public class TradingSession {
 	 */
 	public static final MMBusinessAttribute mmTradingSessionIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> TradingSession.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingSession.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingSessionIndicator";
@@ -426,6 +435,14 @@ public class TradingSession {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradingSessionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradingSession.class.getMethod("getTradingSessionIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TradeExecutionSessionCode tradingSessionPhase;
@@ -462,7 +479,7 @@ public class TradingSession {
 	 */
 	public static final MMBusinessAttribute mmTradingSessionPhase = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> TradingSession.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingSession.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingSessionPhase";
@@ -470,6 +487,14 @@ public class TradingSession {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeExecutionSessionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradingSession.class.getMethod("getTradingSessionPhase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max140Text uSFuturesTradingSession;
@@ -503,7 +528,7 @@ public class TradingSession {
 	 */
 	public static final MMBusinessAttribute mmUSFuturesTradingSession = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> TradingSession.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingSession.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "USFuturesTradingSession";
@@ -511,6 +536,14 @@ public class TradingSession {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradingSession.class.getMethod("getUSFuturesTradingSession", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ListTrading listTrading;
@@ -550,7 +583,7 @@ public class TradingSession {
 	 */
 	public static final MMBusinessAssociationEnd mmListTrading = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradingSession.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingSession.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ListTrading";
@@ -574,9 +607,16 @@ public class TradingSession {
 						com.tools20022.repository.entity.SecuritiesOrder.mmSecuritiesOrderTradingSession, com.tools20022.repository.entity.ListTrading.mmListTradingSession,
 						com.tools20022.repository.entity.SecuritiesQuoteVariable.mmQuoteTradingSession);
 				derivationElement_lazy = () -> Arrays.asList(TriggeringInstructions.mmTradingSessionDetails, SingleQuote1.mmTradingSessionDetails, QuoteRequest1.mmTradingSessionDetails);
-				element_lazy = () -> Arrays.asList(TradingSession.mmTradingSessionName, TradingSession.mmTimeBracket, TradingSession.mmMarket, TradingSession.mmQuote, TradingSession.mmSecuritiesOrder,
-						TradingSession.mmTradingSessionIndicator, TradingSession.mmTradingSessionPhase, TradingSession.mmUSFuturesTradingSession, TradingSession.mmListTrading);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradingSession.mmTradingSessionName, com.tools20022.repository.entity.TradingSession.mmTimeBracket,
+						com.tools20022.repository.entity.TradingSession.mmMarket, com.tools20022.repository.entity.TradingSession.mmQuote, com.tools20022.repository.entity.TradingSession.mmSecuritiesOrder,
+						com.tools20022.repository.entity.TradingSession.mmTradingSessionIndicator, com.tools20022.repository.entity.TradingSession.mmTradingSessionPhase,
+						com.tools20022.repository.entity.TradingSession.mmUSFuturesTradingSession, com.tools20022.repository.entity.TradingSession.mmListTrading);
 				derivationComponent_lazy = () -> Arrays.asList(TradingSession1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TradingSession.class;
 			}
 		});
 		return mmObject_lazy.get();

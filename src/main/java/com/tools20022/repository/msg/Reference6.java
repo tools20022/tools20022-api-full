@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional references linked to the quote status request.
@@ -54,6 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Additional references linked to the quote status request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reference6", propOrder = "quoteIdentification")
 public class Reference6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -111,6 +117,7 @@ public class Reference6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QtId")
 	public Max35Text getQuoteIdentification() {
 		return quoteIdentification;
 	}

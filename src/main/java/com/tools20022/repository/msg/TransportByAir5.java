@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the transportation of goods by air.
@@ -83,6 +87,8 @@ import java.util.List;
  * TransportByAir4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportByAir5", propOrder = {"departureAirport", "destinationAirport", "airCarrierName", "airCarrierCountry", "carrierAgentName", "carrierAgentCountry"})
 public class TransportByAir5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -433,6 +439,7 @@ public class TransportByAir5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DprtureAirprt")
 	public List<AirportName1Choice> getDepartureAirport() {
 		return departureAirport;
 	}
@@ -441,6 +448,7 @@ public class TransportByAir5 {
 		this.departureAirport = departureAirport;
 	}
 
+	@XmlElement(name = "DstnAirprt", required = true)
 	public List<AirportName1Choice> getDestinationAirport() {
 		return destinationAirport;
 	}
@@ -449,6 +457,7 @@ public class TransportByAir5 {
 		this.destinationAirport = destinationAirport;
 	}
 
+	@XmlElement(name = "AirCrrierNm")
 	public Max70Text getAirCarrierName() {
 		return airCarrierName;
 	}
@@ -457,6 +466,7 @@ public class TransportByAir5 {
 		this.airCarrierName = airCarrierName;
 	}
 
+	@XmlElement(name = "AirCrrierCtry")
 	public CountryCode getAirCarrierCountry() {
 		return airCarrierCountry;
 	}
@@ -465,6 +475,7 @@ public class TransportByAir5 {
 		this.airCarrierCountry = airCarrierCountry;
 	}
 
+	@XmlElement(name = "CrrierAgtNm")
 	public Max70Text getCarrierAgentName() {
 		return carrierAgentName;
 	}
@@ -473,6 +484,7 @@ public class TransportByAir5 {
 		this.carrierAgentName = carrierAgentName;
 	}
 
+	@XmlElement(name = "CrrierAgtCtry")
 	public CountryCode getCarrierAgentCountry() {
 		return carrierAgentCountry;
 	}

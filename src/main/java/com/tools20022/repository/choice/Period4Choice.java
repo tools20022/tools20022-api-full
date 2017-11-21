@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Period2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between date and date-time for the specification of a period.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between date and date-time for the specification of a period."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Period4Choice", propOrder = {"date", "fromDate", "toDate", "fromDateToDate"})
 public class Period4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -283,6 +289,7 @@ public class Period4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
@@ -291,6 +298,7 @@ public class Period4Choice {
 		this.date = date;
 	}
 
+	@XmlElement(name = "FrDt", required = true)
 	public ISODate getFromDate() {
 		return fromDate;
 	}
@@ -299,6 +307,7 @@ public class Period4Choice {
 		this.fromDate = fromDate;
 	}
 
+	@XmlElement(name = "ToDt", required = true)
 	public ISODate getToDate() {
 		return toDate;
 	}
@@ -307,6 +316,7 @@ public class Period4Choice {
 		this.toDate = toDate;
 	}
 
+	@XmlElement(name = "FrDtToDt", required = true)
 	public Period2 getFromDateToDate() {
 		return fromDateToDate;
 	}

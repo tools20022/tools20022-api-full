@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Order6;
 import com.tools20022.repository.msg.Order9;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,15 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmLegalParameters
- * SecuritiesOrder.mmLegalParameters}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -57,6 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesRegulatoryDetails#mmRelatedOrder
  * SecuritiesRegulatoryDetails.mmRelatedOrder}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmLegalParameters
+ * SecuritiesOrder.mmLegalParameters}</li>
  * </ul>
  * </li>
  * <li>
@@ -90,11 +91,6 @@ public class SecuritiesRegulatoryDetails {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode
 	 * OrderClassificationCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesRegulatoryDetails
-	 * SecuritiesRegulatoryDetails}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -104,6 +100,11 @@ public class SecuritiesRegulatoryDetails {
 	 * Order6.mmOrderRestrictions}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesRegulatoryDetails
+	 * SecuritiesRegulatoryDetails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -120,7 +121,7 @@ public class SecuritiesRegulatoryDetails {
 	public static final MMBusinessAttribute mmOrderRestrictions = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order9.mmOrderRestrictions, Order6.mmOrderRestrictions);
-			elementContext_lazy = () -> SecuritiesRegulatoryDetails.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderRestrictions";
@@ -128,6 +129,14 @@ public class SecuritiesRegulatoryDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderClassificationCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesRegulatoryDetails.class.getMethod("getOrderRestrictions", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator brokerSolicitedTrade;
@@ -163,7 +172,7 @@ public class SecuritiesRegulatoryDetails {
 	 */
 	public static final MMBusinessAttribute mmBrokerSolicitedTrade = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> SecuritiesRegulatoryDetails.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BrokerSolicitedTrade";
@@ -171,6 +180,14 @@ public class SecuritiesRegulatoryDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesRegulatoryDetails.class.getMethod("getBrokerSolicitedTrade", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesOrder relatedOrder;
@@ -209,7 +226,7 @@ public class SecuritiesRegulatoryDetails {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesRegulatoryDetails.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOrder";
@@ -230,7 +247,13 @@ public class SecuritiesRegulatoryDetails {
 				name = "SecuritiesRegulatoryDetails";
 				definition = "Information related to order and required for regulatory purposes.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrder.mmLegalParameters);
-				element_lazy = () -> Arrays.asList(SecuritiesRegulatoryDetails.mmOrderRestrictions, SecuritiesRegulatoryDetails.mmBrokerSolicitedTrade, SecuritiesRegulatoryDetails.mmRelatedOrder);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmOrderRestrictions, com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmBrokerSolicitedTrade,
+						com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmRelatedOrder);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesRegulatoryDetails.class;
 			}
 		});
 		return mmObject_lazy.get();

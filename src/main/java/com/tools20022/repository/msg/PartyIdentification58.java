@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the details of an organisation.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Describes the details of an organisation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification58", propOrder = {"name", "legalName", "postalAddress", "identification", "countryOfResidence", "contactDetails"})
 public class PartyIdentification58 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -390,6 +396,7 @@ public class PartyIdentification58 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max140Text getName() {
 		return name;
 	}
@@ -398,6 +405,7 @@ public class PartyIdentification58 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "LglNm")
 	public Max140Text getLegalName() {
 		return legalName;
 	}
@@ -406,6 +414,7 @@ public class PartyIdentification58 {
 		this.legalName = legalName;
 	}
 
+	@XmlElement(name = "PstlAdr")
 	public PostalAddress11 getPostalAddress() {
 		return postalAddress;
 	}
@@ -414,6 +423,7 @@ public class PartyIdentification58 {
 		this.postalAddress = postalAddress;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Party13Choice getIdentification() {
 		return identification;
 	}
@@ -422,6 +432,7 @@ public class PartyIdentification58 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "CtryOfRes")
 	public CountryCode getCountryOfResidence() {
 		return countryOfResidence;
 	}
@@ -430,6 +441,7 @@ public class PartyIdentification58 {
 		this.countryOfResidence = countryOfResidence;
 	}
 
+	@XmlElement(name = "CtctDtls")
 	public ContactDetails3 getContactDetails() {
 		return contactDetails;
 	}

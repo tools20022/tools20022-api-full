@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the processing request.
@@ -74,6 +78,8 @@ import java.util.List;
  * RequestDetails3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestDetails19", propOrder = {"type", "requestorIdentification", "additionalRequestInformation"})
 public class RequestDetails19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class RequestDetails19 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public Max35Text getType() {
 		return type;
 	}
@@ -238,6 +245,7 @@ public class RequestDetails19 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "RqstrId")
 	public PartyIdentification73Choice getRequestorIdentification() {
 		return requestorIdentification;
 	}
@@ -246,6 +254,7 @@ public class RequestDetails19 {
 		this.requestorIdentification = requestorIdentification;
 	}
 
+	@XmlElement(name = "AddtlReqInf")
 	public List<Max35Text> getAdditionalRequestInformation() {
 		return additionalRequestInformation;
 	}

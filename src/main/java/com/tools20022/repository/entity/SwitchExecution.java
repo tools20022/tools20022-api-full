@@ -38,6 +38,21 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SwitchExecution#mmRedemptionLeg
+ * SwitchExecution.mmRedemptionLeg}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SwitchExecution#mmSubscriptionLeg
+ * SwitchExecution.mmSubscriptionLeg}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
+ * InvestmentFundOrderExecution}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -78,21 +93,6 @@ import java.util.List;
  * SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmSwitchDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
- * InvestmentFundOrderExecution}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SwitchExecution#mmRedemptionLeg
- * SwitchExecution.mmRedemptionLeg}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SwitchExecution#mmSubscriptionLeg
- * SwitchExecution.mmSubscriptionLeg}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -130,11 +130,6 @@ public class SwitchExecution extends InvestmentFundOrderExecution {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SwitchExecutionRedemptionLeg
 	 * SwitchExecutionRedemptionLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SwitchExecution
-	 * SwitchExecution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -153,6 +148,11 @@ public class SwitchExecution extends InvestmentFundOrderExecution {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SwitchExecution
+	 * SwitchExecution}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -166,7 +166,7 @@ public class SwitchExecution extends InvestmentFundOrderExecution {
 	public static final MMBusinessAssociationEnd mmRedemptionLeg = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SwitchExecution3.mmRedemptionLegDetails, SwitchExecution4.mmRedemptionLegDetails, SwitchExecution5.mmRedemptionLeg, SwitchExecution7.mmRedemptionLegDetails);
-			elementContext_lazy = () -> SwitchExecution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchExecution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RedemptionLeg";
@@ -196,11 +196,6 @@ public class SwitchExecution extends InvestmentFundOrderExecution {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg
 	 * SwitchExecutionSubscriptionLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SwitchExecution
-	 * SwitchExecution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -219,6 +214,11 @@ public class SwitchExecution extends InvestmentFundOrderExecution {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SwitchExecution
+	 * SwitchExecution}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -232,7 +232,7 @@ public class SwitchExecution extends InvestmentFundOrderExecution {
 	public static final MMBusinessAssociationEnd mmSubscriptionLeg = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SwitchExecution3.mmSubscriptionLegDetails, SwitchExecution4.mmSubscriptionLegDetails, SwitchExecution5.mmSubscriptionLeg, SwitchExecution7.mmSubscriptionLegDetails);
-			elementContext_lazy = () -> SwitchExecution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchExecution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionLeg";
@@ -254,8 +254,13 @@ public class SwitchExecution extends InvestmentFundOrderExecution {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SwitchExecutionRedemptionLeg.mmRelatedSwitchExecution, com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg.mmRelatedSwitchExecution);
 				derivationElement_lazy = () -> Arrays.asList(SwitchOrderConfirmation1.mmSwitchExecutionDetails, SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmSwitchDetails);
 				superType_lazy = () -> InvestmentFundOrderExecution.mmObject();
-				element_lazy = () -> Arrays.asList(SwitchExecution.mmRedemptionLeg, SwitchExecution.mmSubscriptionLeg);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SwitchExecution.mmRedemptionLeg, com.tools20022.repository.entity.SwitchExecution.mmSubscriptionLeg);
 				derivationComponent_lazy = () -> Arrays.asList(SwitchExecution3.mmObject(), SwitchExecution4.mmObject(), SwitchOrderConfirmation1.mmObject(), SwitchExecution5.mmObject(), SwitchExecution7.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SwitchExecution.class;
 			}
 		});
 		return mmObject_lazy.get();

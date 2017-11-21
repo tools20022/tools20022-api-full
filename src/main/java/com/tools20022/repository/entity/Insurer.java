@@ -66,6 +66,11 @@ public class Insurer extends InsurancePartyRole {
 				definition = "Insurance company that issues a particular insurance policy to an assured party.";
 				superType_lazy = () -> InsurancePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Insurer.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

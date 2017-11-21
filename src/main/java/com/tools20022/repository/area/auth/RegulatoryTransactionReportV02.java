@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.TransactionDetails3;
 import com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -46,9 +48,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.008.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -87,6 +86,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.008.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -98,6 +100,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegulatoryTransactionReportV02", propOrder = {"identification", "transactionDetails", "reportingInstitution", "reportingAgent", "extension"})
 public class RegulatoryTransactionReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -134,6 +138,14 @@ public class RegulatoryTransactionReportV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RegulatoryTransactionReportV02.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<TransactionDetails3> transactionDetails;
@@ -172,6 +184,14 @@ public class RegulatoryTransactionReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionDetails3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RegulatoryTransactionReportV02.class.getMethod("getTransactionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification23Choice reportingInstitution;
 	/**
@@ -209,6 +229,14 @@ public class RegulatoryTransactionReportV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification23Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RegulatoryTransactionReportV02.class.getMethod("getReportingInstitution", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification24Choice reportingAgent;
@@ -249,6 +277,14 @@ public class RegulatoryTransactionReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification24Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RegulatoryTransactionReportV02.class.getMethod("getReportingAgent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension1> extension;
 	/**
@@ -285,6 +321,14 @@ public class RegulatoryTransactionReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RegulatoryTransactionReportV02.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -297,8 +341,9 @@ public class RegulatoryTransactionReportV02 {
 				rootElement = "Document";
 				xmlTag = "RgltryTxRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(RegulatoryTransactionReportV02.mmIdentification, RegulatoryTransactionReportV02.mmTransactionDetails, RegulatoryTransactionReportV02.mmReportingInstitution,
-						RegulatoryTransactionReportV02.mmReportingAgent, RegulatoryTransactionReportV02.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.mmIdentification, com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.mmTransactionDetails,
+						com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.mmReportingInstitution, com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.mmReportingAgent,
+						com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -308,10 +353,16 @@ public class RegulatoryTransactionReportV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RegulatoryTransactionReportV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
@@ -320,6 +371,7 @@ public class RegulatoryTransactionReportV02 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "TxDtls", required = true)
 	public List<TransactionDetails3> getTransactionDetails() {
 		return transactionDetails;
 	}
@@ -328,6 +380,7 @@ public class RegulatoryTransactionReportV02 {
 		this.transactionDetails = transactionDetails;
 	}
 
+	@XmlElement(name = "RptgInstn", required = true)
 	public PartyIdentification23Choice getReportingInstitution() {
 		return reportingInstitution;
 	}
@@ -336,6 +389,7 @@ public class RegulatoryTransactionReportV02 {
 		this.reportingInstitution = reportingInstitution;
 	}
 
+	@XmlElement(name = "RptgAgt")
 	public PartyIdentification24Choice getReportingAgent() {
 		return reportingAgent;
 	}
@@ -344,11 +398,18 @@ public class RegulatoryTransactionReportV02 {
 		this.reportingAgent = reportingAgent;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.008.02.02")
+	static public class Document {
+		@XmlElement(name = "RgltryTxRpt", required = true)
+		public RegulatoryTransactionReportV02 messageBody;
 	}
 }

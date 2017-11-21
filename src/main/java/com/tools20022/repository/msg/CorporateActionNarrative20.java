@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information such as the taxation conditions.
@@ -94,6 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionNarrative5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNarrative20", propOrder = {"additionalText", "narrativeVersion", "informationConditions", "informationToComplyWith", "securityRestriction", "taxationConditions", "disclaimer", "certificationBreakdown"})
 public class CorporateActionNarrative20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -576,6 +582,7 @@ public class CorporateActionNarrative20 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlTxt")
 	public UpdatedAdditionalInformation3 getAdditionalText() {
 		return additionalText;
 	}
@@ -584,6 +591,7 @@ public class CorporateActionNarrative20 {
 		this.additionalText = additionalText;
 	}
 
+	@XmlElement(name = "NrrtvVrsn")
 	public UpdatedAdditionalInformation3 getNarrativeVersion() {
 		return narrativeVersion;
 	}
@@ -592,6 +600,7 @@ public class CorporateActionNarrative20 {
 		this.narrativeVersion = narrativeVersion;
 	}
 
+	@XmlElement(name = "InfConds")
 	public UpdatedAdditionalInformation1 getInformationConditions() {
 		return informationConditions;
 	}
@@ -600,6 +609,7 @@ public class CorporateActionNarrative20 {
 		this.informationConditions = informationConditions;
 	}
 
+	@XmlElement(name = "InfToCmplyWth")
 	public UpdatedAdditionalInformation1 getInformationToComplyWith() {
 		return informationToComplyWith;
 	}
@@ -608,6 +618,7 @@ public class CorporateActionNarrative20 {
 		this.informationToComplyWith = informationToComplyWith;
 	}
 
+	@XmlElement(name = "SctyRstrctn")
 	public UpdatedAdditionalInformation1 getSecurityRestriction() {
 		return securityRestriction;
 	}
@@ -616,6 +627,7 @@ public class CorporateActionNarrative20 {
 		this.securityRestriction = securityRestriction;
 	}
 
+	@XmlElement(name = "TaxtnConds")
 	public UpdatedAdditionalInformation1 getTaxationConditions() {
 		return taxationConditions;
 	}
@@ -624,6 +636,7 @@ public class CorporateActionNarrative20 {
 		this.taxationConditions = taxationConditions;
 	}
 
+	@XmlElement(name = "Dsclmr")
 	public UpdatedAdditionalInformation1 getDisclaimer() {
 		return disclaimer;
 	}
@@ -632,6 +645,7 @@ public class CorporateActionNarrative20 {
 		this.disclaimer = disclaimer;
 	}
 
+	@XmlElement(name = "CertfctnBrkdwn")
 	public UpdatedAdditionalInformation1 getCertificationBreakdown() {
 		return certificationBreakdown;
 	}

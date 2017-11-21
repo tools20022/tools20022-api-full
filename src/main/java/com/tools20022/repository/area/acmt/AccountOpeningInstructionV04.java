@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AccountManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -47,9 +49,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.001.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementArchive
@@ -116,6 +115,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.001.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -139,6 +141,9 @@ import java.util.List;
  * AccountOpeningInstructionV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountOpeningInstructionV04", propOrder = {"messageIdentification", "orderReference", "previousReference", "instructionDetails", "investmentAccount", "accountParties", "intermediaries", "placement", "newIssueAllocation",
+		"savingsInvestmentPlan", "withdrawalInvestmentPlan", "cashSettlement", "serviceLevelAgreement", "marketPracticeVersion", "extension"})
 public class AccountOpeningInstructionV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -191,6 +196,14 @@ public class AccountOpeningInstructionV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountOpeningInstructionV04.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected InvestmentFundOrder4 orderReference;
 	/**
@@ -241,6 +254,14 @@ public class AccountOpeningInstructionV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundOrder4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountOpeningInstructionV04.class.getMethod("getOrderReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 previousReference;
 	/**
@@ -290,6 +311,14 @@ public class AccountOpeningInstructionV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountOpeningInstructionV04.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentAccountOpeningDetails instructionDetails;
@@ -342,6 +371,14 @@ public class AccountOpeningInstructionV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccountOpeningDetails.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountOpeningInstructionV04.class.getMethod("getInstructionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected InvestmentAccount37 investmentAccount;
 	/**
@@ -392,6 +429,14 @@ public class AccountOpeningInstructionV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccount37.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountOpeningInstructionV04.class.getMethod("getInvestmentAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AccountParties9 accountParties;
@@ -445,6 +490,14 @@ public class AccountOpeningInstructionV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> AccountParties9.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountOpeningInstructionV04.class.getMethod("getAccountParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Intermediary24> intermediaries;
 	/**
@@ -494,6 +547,14 @@ public class AccountOpeningInstructionV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> Intermediary24.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountOpeningInstructionV04.class.getMethod("getIntermediaries", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ReferredAgent1 placement;
 	/**
@@ -542,6 +603,14 @@ public class AccountOpeningInstructionV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ReferredAgent1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountOpeningInstructionV04.class.getMethod("getPlacement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected NewIssueAllocation1 newIssueAllocation;
@@ -596,6 +665,14 @@ public class AccountOpeningInstructionV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> NewIssueAllocation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountOpeningInstructionV04.class.getMethod("getNewIssueAllocation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<InvestmentPlan9> savingsInvestmentPlan;
 	/**
@@ -649,6 +726,14 @@ public class AccountOpeningInstructionV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentPlan9.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountOpeningInstructionV04.class.getMethod("getSavingsInvestmentPlan", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<InvestmentPlan9> withdrawalInvestmentPlan;
 	/**
@@ -700,6 +785,14 @@ public class AccountOpeningInstructionV04 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentPlan9.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountOpeningInstructionV04.class.getMethod("getWithdrawalInvestmentPlan", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<InvestmentFundCashSettlementInformation7> cashSettlement;
@@ -754,6 +847,14 @@ public class AccountOpeningInstructionV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundCashSettlementInformation7.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountOpeningInstructionV04.class.getMethod("getCashSettlement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<DocumentToSend1> serviceLevelAgreement;
 	/**
@@ -804,6 +905,14 @@ public class AccountOpeningInstructionV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentToSend1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountOpeningInstructionV04.class.getMethod("getServiceLevelAgreement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
@@ -848,6 +957,14 @@ public class AccountOpeningInstructionV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountOpeningInstructionV04.class.getMethod("getMarketPracticeVersion", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -900,6 +1017,14 @@ public class AccountOpeningInstructionV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountOpeningInstructionV04.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -914,10 +1039,14 @@ public class AccountOpeningInstructionV04 {
 				rootElement = "Document";
 				xmlTag = "AcctOpngInstr";
 				businessArea_lazy = () -> AccountManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AccountOpeningInstructionV04.mmMessageIdentification, AccountOpeningInstructionV04.mmOrderReference, AccountOpeningInstructionV04.mmPreviousReference,
-						AccountOpeningInstructionV04.mmInstructionDetails, AccountOpeningInstructionV04.mmInvestmentAccount, AccountOpeningInstructionV04.mmAccountParties, AccountOpeningInstructionV04.mmIntermediaries,
-						AccountOpeningInstructionV04.mmPlacement, AccountOpeningInstructionV04.mmNewIssueAllocation, AccountOpeningInstructionV04.mmSavingsInvestmentPlan, AccountOpeningInstructionV04.mmWithdrawalInvestmentPlan,
-						AccountOpeningInstructionV04.mmCashSettlement, AccountOpeningInstructionV04.mmServiceLevelAgreement, AccountOpeningInstructionV04.mmMarketPracticeVersion, AccountOpeningInstructionV04.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmOrderReference,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmPreviousReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmInstructionDetails,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmInvestmentAccount, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmAccountParties,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmIntermediaries, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmPlacement,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmNewIssueAllocation, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmSavingsInvestmentPlan,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmWithdrawalInvestmentPlan, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmCashSettlement,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmServiceLevelAgreement, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmMarketPracticeVersion,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";
@@ -927,10 +1056,16 @@ public class AccountOpeningInstructionV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountOpeningInstructionV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -939,6 +1074,7 @@ public class AccountOpeningInstructionV04 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "OrdrRef")
 	public InvestmentFundOrder4 getOrderReference() {
 		return orderReference;
 	}
@@ -947,6 +1083,7 @@ public class AccountOpeningInstructionV04 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -955,6 +1092,7 @@ public class AccountOpeningInstructionV04 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "InstrDtls", required = true)
 	public InvestmentAccountOpeningDetails getInstructionDetails() {
 		return instructionDetails;
 	}
@@ -963,6 +1101,7 @@ public class AccountOpeningInstructionV04 {
 		this.instructionDetails = instructionDetails;
 	}
 
+	@XmlElement(name = "InvstmtAcct", required = true)
 	public InvestmentAccount37 getInvestmentAccount() {
 		return investmentAccount;
 	}
@@ -971,6 +1110,7 @@ public class AccountOpeningInstructionV04 {
 		this.investmentAccount = investmentAccount;
 	}
 
+	@XmlElement(name = "AcctPties", required = true)
 	public AccountParties9 getAccountParties() {
 		return accountParties;
 	}
@@ -979,6 +1119,7 @@ public class AccountOpeningInstructionV04 {
 		this.accountParties = accountParties;
 	}
 
+	@XmlElement(name = "Intrmies")
 	public List<Intermediary24> getIntermediaries() {
 		return intermediaries;
 	}
@@ -987,6 +1128,7 @@ public class AccountOpeningInstructionV04 {
 		this.intermediaries = intermediaries;
 	}
 
+	@XmlElement(name = "Plcmnt")
 	public ReferredAgent1 getPlacement() {
 		return placement;
 	}
@@ -995,6 +1137,7 @@ public class AccountOpeningInstructionV04 {
 		this.placement = placement;
 	}
 
+	@XmlElement(name = "NewIsseAllcn")
 	public NewIssueAllocation1 getNewIssueAllocation() {
 		return newIssueAllocation;
 	}
@@ -1003,6 +1146,7 @@ public class AccountOpeningInstructionV04 {
 		this.newIssueAllocation = newIssueAllocation;
 	}
 
+	@XmlElement(name = "SvgsInvstmtPlan")
 	public List<InvestmentPlan9> getSavingsInvestmentPlan() {
 		return savingsInvestmentPlan;
 	}
@@ -1011,6 +1155,7 @@ public class AccountOpeningInstructionV04 {
 		this.savingsInvestmentPlan = savingsInvestmentPlan;
 	}
 
+	@XmlElement(name = "WdrwlInvstmtPlan")
 	public List<InvestmentPlan9> getWithdrawalInvestmentPlan() {
 		return withdrawalInvestmentPlan;
 	}
@@ -1019,6 +1164,7 @@ public class AccountOpeningInstructionV04 {
 		this.withdrawalInvestmentPlan = withdrawalInvestmentPlan;
 	}
 
+	@XmlElement(name = "CshSttlm")
 	public List<InvestmentFundCashSettlementInformation7> getCashSettlement() {
 		return cashSettlement;
 	}
@@ -1027,6 +1173,7 @@ public class AccountOpeningInstructionV04 {
 		this.cashSettlement = cashSettlement;
 	}
 
+	@XmlElement(name = "SvcLvlAgrmt")
 	public List<DocumentToSend1> getServiceLevelAgreement() {
 		return serviceLevelAgreement;
 	}
@@ -1035,6 +1182,7 @@ public class AccountOpeningInstructionV04 {
 		this.serviceLevelAgreement = serviceLevelAgreement;
 	}
 
+	@XmlElement(name = "MktPrctcVrsn")
 	public MarketPracticeVersion1 getMarketPracticeVersion() {
 		return marketPracticeVersion;
 	}
@@ -1043,11 +1191,18 @@ public class AccountOpeningInstructionV04 {
 		this.marketPracticeVersion = marketPracticeVersion;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.001.04.04")
+	static public class Document {
+		@XmlElement(name = "AcctOpngInstr", required = true)
+		public AccountOpeningInstructionV04 messageBody;
 	}
 }

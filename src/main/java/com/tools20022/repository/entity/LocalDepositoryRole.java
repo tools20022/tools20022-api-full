@@ -67,6 +67,11 @@ public class LocalDepositoryRole extends DepositoryRole {
 				definition = "Place where securities are deposited, that is company, bank or institution that holds and facilitates the exchange of securities at a local/national level.";
 				superType_lazy = () -> DepositoryRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return LocalDepositoryRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

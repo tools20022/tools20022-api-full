@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.TransferIn7;
 import com.tools20022.repository.msg.TransferReference1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between cancellation by reference or by transfer details.
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Cancellation1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Cancellation2Choice", propOrder = {"reference", "transferInDetails"})
 public class Cancellation2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -219,6 +225,7 @@ public class Cancellation2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ref", required = true)
 	public TransferReference1 getReference() {
 		return reference;
 	}
@@ -227,6 +234,7 @@ public class Cancellation2Choice {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "TrfInDtls", required = true)
 	public TransferIn7 getTransferInDetails() {
 		return transferInDetails;
 	}

@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Execution of a redemption order.
@@ -114,6 +118,9 @@ import java.util.List;
  * RedemptionBulkExecution3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RedemptionBulkExecution5", propOrder = {"amendmentIndicator", "masterReference", "placeOfTrade", "orderDateTime", "receivedDateTime", "requestedFutureTradeDate", "cancellationRight", "financialInstrumentDetails",
+		"individualExecutionDetails", "requestedSettlementCurrency", "requestedNAVCurrency", "totalSettlementAmount", "bulkCashSettlementDetails"})
 public class RedemptionBulkExecution5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -832,6 +839,7 @@ public class RedemptionBulkExecution5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AmdmntInd")
 	public YesNoIndicator getAmendmentIndicator() {
 		return amendmentIndicator;
 	}
@@ -840,6 +848,7 @@ public class RedemptionBulkExecution5 {
 		this.amendmentIndicator = amendmentIndicator;
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -848,6 +857,7 @@ public class RedemptionBulkExecution5 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public PlaceOfTradeIdentification1Choice getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -856,6 +866,7 @@ public class RedemptionBulkExecution5 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "OrdrDtTm")
 	public ISODateTime getOrderDateTime() {
 		return orderDateTime;
 	}
@@ -864,6 +875,7 @@ public class RedemptionBulkExecution5 {
 		this.orderDateTime = orderDateTime;
 	}
 
+	@XmlElement(name = "RcvdDtTm")
 	public ISODateTime getReceivedDateTime() {
 		return receivedDateTime;
 	}
@@ -872,6 +884,7 @@ public class RedemptionBulkExecution5 {
 		this.receivedDateTime = receivedDateTime;
 	}
 
+	@XmlElement(name = "ReqdFutrTradDt")
 	public ISODate getRequestedFutureTradeDate() {
 		return requestedFutureTradeDate;
 	}
@@ -880,6 +893,7 @@ public class RedemptionBulkExecution5 {
 		this.requestedFutureTradeDate = requestedFutureTradeDate;
 	}
 
+	@XmlElement(name = "CxlRght")
 	public CancellationRight1Choice getCancellationRight() {
 		return cancellationRight;
 	}
@@ -888,6 +902,7 @@ public class RedemptionBulkExecution5 {
 		this.cancellationRight = cancellationRight;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument57 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -896,6 +911,7 @@ public class RedemptionBulkExecution5 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "IndvExctnDtls", required = true)
 	public List<RedemptionExecution16> getIndividualExecutionDetails() {
 		return individualExecutionDetails;
 	}
@@ -904,6 +920,7 @@ public class RedemptionBulkExecution5 {
 		this.individualExecutionDetails = individualExecutionDetails;
 	}
 
+	@XmlElement(name = "ReqdSttlmCcy")
 	public ActiveCurrencyCode getRequestedSettlementCurrency() {
 		return requestedSettlementCurrency;
 	}
@@ -912,6 +929,7 @@ public class RedemptionBulkExecution5 {
 		this.requestedSettlementCurrency = requestedSettlementCurrency;
 	}
 
+	@XmlElement(name = "ReqdNAVCcy")
 	public ActiveOrHistoricCurrencyCode getRequestedNAVCurrency() {
 		return requestedNAVCurrency;
 	}
@@ -920,6 +938,7 @@ public class RedemptionBulkExecution5 {
 		this.requestedNAVCurrency = requestedNAVCurrency;
 	}
 
+	@XmlElement(name = "TtlSttlmAmt")
 	public ActiveCurrencyAndAmount getTotalSettlementAmount() {
 		return totalSettlementAmount;
 	}
@@ -928,6 +947,7 @@ public class RedemptionBulkExecution5 {
 		this.totalSettlementAmount = totalSettlementAmount;
 	}
 
+	@XmlElement(name = "BlkCshSttlmDtls")
 	public PaymentTransaction72 getBulkCashSettlementDetails() {
 		return bulkCashSettlementDetails;
 	}

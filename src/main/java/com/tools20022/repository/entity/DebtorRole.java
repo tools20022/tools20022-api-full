@@ -36,6 +36,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
+ * PaymentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -43,9 +46,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.msg.Debtor2 Debtor2}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
- * PaymentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -76,6 +76,11 @@ public class DebtorRole extends PaymentPartyRole {
 				definition = "Party that owes an amount of money to the (ultimate) creditor. For example, as a result of receipt of goods, assets, services, gifts, or charity payments.";
 				superType_lazy = () -> PaymentPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(Debtor2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DebtorRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -31,6 +31,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics of the ownership of an investment account.
@@ -108,6 +112,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccountOwnershipInformation5", propOrder = {"organisation", "individualPerson", "moneyLaunderingCheck", "extendedMoneyLaunderingCheck", "investorProfileValidation", "ownershipBeneficiaryRate",
+		"clientIdentification", "fiscalExemption", "signatoryRightIndicator"})
 public class InvestmentAccountOwnershipInformation5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -667,6 +674,7 @@ public class InvestmentAccountOwnershipInformation5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Org", required = true)
 	public Organisation2 getOrganisation() {
 		return organisation;
 	}
@@ -675,6 +683,7 @@ public class InvestmentAccountOwnershipInformation5 {
 		this.organisation = organisation;
 	}
 
+	@XmlElement(name = "IndvPrsn", required = true)
 	public IndividualPerson10 getIndividualPerson() {
 		return individualPerson;
 	}
@@ -683,6 +692,7 @@ public class InvestmentAccountOwnershipInformation5 {
 		this.individualPerson = individualPerson;
 	}
 
+	@XmlElement(name = "MnyLndrgChck")
 	public MoneyLaunderingCheck1Code getMoneyLaunderingCheck() {
 		return moneyLaunderingCheck;
 	}
@@ -691,6 +701,7 @@ public class InvestmentAccountOwnershipInformation5 {
 		this.moneyLaunderingCheck = moneyLaunderingCheck;
 	}
 
+	@XmlElement(name = "XtndedMnyLndrgChck")
 	public Extended350Code getExtendedMoneyLaunderingCheck() {
 		return extendedMoneyLaunderingCheck;
 	}
@@ -699,6 +710,7 @@ public class InvestmentAccountOwnershipInformation5 {
 		this.extendedMoneyLaunderingCheck = extendedMoneyLaunderingCheck;
 	}
 
+	@XmlElement(name = "InvstrPrflVldtn")
 	public List<PartyProfileInformation1> getInvestorProfileValidation() {
 		return investorProfileValidation;
 	}
@@ -707,6 +719,7 @@ public class InvestmentAccountOwnershipInformation5 {
 		this.investorProfileValidation = investorProfileValidation;
 	}
 
+	@XmlElement(name = "OwnrshBnfcryRate")
 	public PercentageRate getOwnershipBeneficiaryRate() {
 		return ownershipBeneficiaryRate;
 	}
@@ -715,6 +728,7 @@ public class InvestmentAccountOwnershipInformation5 {
 		this.ownershipBeneficiaryRate = ownershipBeneficiaryRate;
 	}
 
+	@XmlElement(name = "ClntId")
 	public Max35Text getClientIdentification() {
 		return clientIdentification;
 	}
@@ -723,6 +737,7 @@ public class InvestmentAccountOwnershipInformation5 {
 		this.clientIdentification = clientIdentification;
 	}
 
+	@XmlElement(name = "FsclXmptn")
 	public YesNoIndicator getFiscalExemption() {
 		return fiscalExemption;
 	}
@@ -731,6 +746,7 @@ public class InvestmentAccountOwnershipInformation5 {
 		this.fiscalExemption = fiscalExemption;
 	}
 
+	@XmlElement(name = "SgntryRghtInd")
 	public YesNoIndicator getSignatoryRightIndicator() {
 		return signatoryRightIndicator;
 	}

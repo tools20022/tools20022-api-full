@@ -27,6 +27,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Contact person at the party organising the meeting, at the issuer or at an
@@ -66,6 +70,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContactInformation3", propOrder = {"contactPerson", "employingParty"})
 public class ContactInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -188,6 +194,7 @@ public class ContactInformation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CtctPrsn")
 	public ContactIdentification1 getContactPerson() {
 		return contactPerson;
 	}
@@ -196,6 +203,7 @@ public class ContactInformation3 {
 		this.contactPerson = contactPerson;
 	}
 
+	@XmlElement(name = "EmplngPty")
 	public PartyIdentificationSD3 getEmployingParty() {
 		return employingParty;
 	}

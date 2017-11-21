@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.CorporateActionDeactivationCancellationProc
 import com.tools20022.repository.msg.CorporateActionDeactivationCancellationRejectionStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the different statuses of a deactivation cancellation request.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionDeactivationCancellationStatus1Choice", propOrder = {"processedStatus", "rejectedStatus"})
 public class CorporateActionDeactivationCancellationStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -192,6 +198,7 @@ public class CorporateActionDeactivationCancellationStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcdSts", required = true)
 	public CorporateActionDeactivationCancellationProcessingStatus1 getProcessedStatus() {
 		return processedStatus;
 	}
@@ -200,6 +207,7 @@ public class CorporateActionDeactivationCancellationStatus1Choice {
 		this.processedStatus = processedStatus;
 	}
 
+	@XmlElement(name = "RjctdSts", required = true)
 	public CorporateActionDeactivationCancellationRejectionStatus1 getRejectedStatus() {
 		return rejectedStatus;
 	}

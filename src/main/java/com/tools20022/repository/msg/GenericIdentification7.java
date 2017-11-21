@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.IdentificationIssuerRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information expressed in a proprietary manner.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information expressed in a proprietary manner."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericIdentification7", propOrder = {"issuer", "information"})
 public class GenericIdentification7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class GenericIdentification7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public Max8Text getIssuer() {
 		return issuer;
 	}
@@ -180,6 +187,7 @@ public class GenericIdentification7 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "Inf", required = true)
 	public Max35Text getInformation() {
 		return information;
 	}

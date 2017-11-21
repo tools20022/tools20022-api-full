@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extract of trade data for an investment fund order.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Extract of trade data for an investment fund order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundOrderData3", propOrder = {"requestedTradeDate", "investmentAccountDetails", "financialInstrumentDetails", "financialInstrumentQuantity"})
 public class FundOrderData3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -283,6 +289,7 @@ public class FundOrderData3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqdTradDt")
 	public ISODate getRequestedTradeDate() {
 		return requestedTradeDate;
 	}
@@ -291,6 +298,7 @@ public class FundOrderData3 {
 		this.requestedTradeDate = requestedTradeDate;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount30 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -299,6 +307,7 @@ public class FundOrderData3 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "FinInstrmDtls")
 	public FinancialInstrument18 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -307,6 +316,7 @@ public class FundOrderData3 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "FinInstrmQty")
 	public FinancialInstrumentQuantity11Choice getFinancialInstrumentQuantity() {
 		return financialInstrumentQuantity;
 	}

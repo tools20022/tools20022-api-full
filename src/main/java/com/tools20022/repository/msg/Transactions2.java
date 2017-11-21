@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports on transactions.
@@ -57,6 +61,8 @@ import java.util.List;
  * definition} = "Reports on transactions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Transactions2", propOrder = {"paymentCommonInformation", "transactionReport"})
 public class Transactions2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -155,6 +161,7 @@ public class Transactions2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtCmonInf")
 	public PaymentCommonDetails2 getPaymentCommonInformation() {
 		return paymentCommonInformation;
 	}
@@ -163,6 +170,7 @@ public class Transactions2 {
 		this.paymentCommonInformation = paymentCommonInformation;
 	}
 
+	@XmlElement(name = "TxRpt", required = true)
 	public List<TransactionReportDetails3> getTransactionReport() {
 		return transactionReport;
 	}

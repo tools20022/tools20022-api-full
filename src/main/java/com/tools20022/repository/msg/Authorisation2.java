@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Autorisation of the mandate holder.
@@ -69,6 +73,8 @@ import java.util.List;
  * Authorisation1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Authorisation2", propOrder = {"maximumAmountByTransaction", "maximumAmountByPeriod", "maximumAmountByBulkSubmission"})
 public class Authorisation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class Authorisation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MaxAmtByTx")
 	public FixedAmountOrUnlimited1Choice getMaximumAmountByTransaction() {
 		return maximumAmountByTransaction;
 	}
@@ -236,6 +243,7 @@ public class Authorisation2 {
 		this.maximumAmountByTransaction = maximumAmountByTransaction;
 	}
 
+	@XmlElement(name = "MaxAmtByPrd")
 	public List<MaximumAmountByPeriod1> getMaximumAmountByPeriod() {
 		return maximumAmountByPeriod;
 	}
@@ -244,6 +252,7 @@ public class Authorisation2 {
 		this.maximumAmountByPeriod = maximumAmountByPeriod;
 	}
 
+	@XmlElement(name = "MaxAmtByBlkSubmissn")
 	public FixedAmountOrUnlimited1Choice getMaximumAmountByBulkSubmission() {
 		return maximumAmountByBulkSubmission;
 	}

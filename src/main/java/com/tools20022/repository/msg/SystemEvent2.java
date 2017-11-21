@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SystemEventInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on an event occurring in a system, whether planned or
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemEvent2", propOrder = {"type", "scheduledTime", "effectiveTime", "startTime", "endTime"})
 public class SystemEvent2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -319,6 +325,7 @@ public class SystemEvent2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public SystemEventType2Choice getType() {
 		return type;
 	}
@@ -327,6 +334,7 @@ public class SystemEvent2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "SchdldTm", required = true)
 	public ISODateTime getScheduledTime() {
 		return scheduledTime;
 	}
@@ -335,6 +343,7 @@ public class SystemEvent2 {
 		this.scheduledTime = scheduledTime;
 	}
 
+	@XmlElement(name = "FctvTm")
 	public ISODateTime getEffectiveTime() {
 		return effectiveTime;
 	}
@@ -343,6 +352,7 @@ public class SystemEvent2 {
 		this.effectiveTime = effectiveTime;
 	}
 
+	@XmlElement(name = "StartTm")
 	public ISODateTime getStartTime() {
 		return startTime;
 	}
@@ -351,6 +361,7 @@ public class SystemEvent2 {
 		this.startTime = startTime;
 	}
 
+	@XmlElement(name = "EndTm")
 	public ISODateTime getEndTime() {
 		return endTime;
 	}

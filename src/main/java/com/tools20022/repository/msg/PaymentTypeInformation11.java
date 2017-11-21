@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements that further details the information related to the type of
@@ -90,6 +94,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTypeInformation11", propOrder = {"instructionPriority", "serviceLevel", "clearingChannel", "localInstrument", "sequenceType", "categoryPurpose"})
 public class PaymentTypeInformation11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -466,6 +472,7 @@ public class PaymentTypeInformation11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrPrty")
 	public Priority2Code getInstructionPriority() {
 		return instructionPriority;
 	}
@@ -474,6 +481,7 @@ public class PaymentTypeInformation11 {
 		this.instructionPriority = instructionPriority;
 	}
 
+	@XmlElement(name = "SvcLvl")
 	public ServiceLevel7Choice getServiceLevel() {
 		return serviceLevel;
 	}
@@ -482,6 +490,7 @@ public class PaymentTypeInformation11 {
 		this.serviceLevel = serviceLevel;
 	}
 
+	@XmlElement(name = "ClrChanl")
 	public ClearingChannel2Code getClearingChannel() {
 		return clearingChannel;
 	}
@@ -490,6 +499,7 @@ public class PaymentTypeInformation11 {
 		this.clearingChannel = clearingChannel;
 	}
 
+	@XmlElement(name = "LclInstrm")
 	public LocalInstrument1Choice getLocalInstrument() {
 		return localInstrument;
 	}
@@ -498,6 +508,7 @@ public class PaymentTypeInformation11 {
 		this.localInstrument = localInstrument;
 	}
 
+	@XmlElement(name = "SeqTp")
 	public SequenceType1Code getSequenceType() {
 		return sequenceType;
 	}
@@ -506,6 +517,7 @@ public class PaymentTypeInformation11 {
 		this.sequenceType = sequenceType;
 	}
 
+	@XmlElement(name = "CtgyPurp")
 	public PaymentCategoryPurpose1Code getCategoryPurpose() {
 		return categoryPurpose;
 	}

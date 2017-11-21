@@ -54,6 +54,8 @@ public class Max2000Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max2000Text";
 				definition = "Specifies a character string with a maximum length of 2000 characters.";
+				minLength = 1;
+				maxLength = 2000;
 			}
 		});
 		return mmObject_lazy.get();

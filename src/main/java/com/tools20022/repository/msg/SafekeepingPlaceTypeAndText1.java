@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of the place of safekeeping expressed as a code and a
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SafekeepingPlaceTypeAndText1", propOrder = {"safekeepingPlaceType", "identification"})
 public class SafekeepingPlaceTypeAndText1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class SafekeepingPlaceTypeAndText1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SfkpgPlcTp", required = true)
 	public SafekeepingPlace3Code getSafekeepingPlaceType() {
 		return safekeepingPlaceType;
 	}
@@ -187,6 +194,7 @@ public class SafekeepingPlaceTypeAndText1 {
 		this.safekeepingPlaceType = safekeepingPlaceType;
 	}
 
+	@XmlElement(name = "Id")
 	public Max35Text getIdentification() {
 		return identification;
 	}

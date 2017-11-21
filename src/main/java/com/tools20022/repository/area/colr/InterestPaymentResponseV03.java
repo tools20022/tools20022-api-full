@@ -26,9 +26,11 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CollateralManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -51,9 +53,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code colr.014.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CollateralManagementPreviousVersion
@@ -99,6 +98,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code colr.014.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -118,6 +120,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestPaymentResponseV03", propOrder = {"transactionIdentification", "obligation", "agreement", "interestDueToA", "interestDueToB", "interestResponse", "supplementaryData"})
 public class InterestPaymentResponseV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +170,14 @@ public class InterestPaymentResponseV03 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InterestPaymentResponseV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Obligation3 obligation;
 	/**
@@ -213,6 +225,14 @@ public class InterestPaymentResponseV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Obligation3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InterestPaymentResponseV03.class.getMethod("getObligation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Agreement2 agreement;
 	/**
@@ -255,6 +275,14 @@ public class InterestPaymentResponseV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Agreement2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InterestPaymentResponseV03.class.getMethod("getAgreement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InterestAmount2 interestDueToA;
@@ -299,6 +327,14 @@ public class InterestPaymentResponseV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> InterestAmount2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InterestPaymentResponseV03.class.getMethod("getInterestDueToA", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected InterestAmount2 interestDueToB;
 	/**
@@ -341,6 +377,14 @@ public class InterestPaymentResponseV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InterestAmount2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InterestPaymentResponseV03.class.getMethod("getInterestDueToB", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InterestResponse1 interestResponse;
@@ -386,6 +430,14 @@ public class InterestPaymentResponseV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> InterestResponse1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InterestPaymentResponseV03.class.getMethod("getInterestResponse", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -433,6 +485,14 @@ public class InterestPaymentResponseV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InterestPaymentResponseV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -446,8 +506,10 @@ public class InterestPaymentResponseV03 {
 				rootElement = "Document";
 				xmlTag = "IntrstPmtRspn";
 				businessArea_lazy = () -> CollateralManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(InterestPaymentResponseV03.mmTransactionIdentification, InterestPaymentResponseV03.mmObligation, InterestPaymentResponseV03.mmAgreement,
-						InterestPaymentResponseV03.mmInterestDueToA, InterestPaymentResponseV03.mmInterestDueToB, InterestPaymentResponseV03.mmInterestResponse, InterestPaymentResponseV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmTransactionIdentification, com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmObligation,
+						com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmAgreement, com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmInterestDueToA,
+						com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmInterestDueToB, com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmInterestResponse,
+						com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "colr";
@@ -457,10 +519,16 @@ public class InterestPaymentResponseV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InterestPaymentResponseV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -469,6 +537,7 @@ public class InterestPaymentResponseV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "Oblgtn", required = true)
 	public Obligation3 getObligation() {
 		return obligation;
 	}
@@ -477,6 +546,7 @@ public class InterestPaymentResponseV03 {
 		this.obligation = obligation;
 	}
 
+	@XmlElement(name = "Agrmt", required = true)
 	public Agreement2 getAgreement() {
 		return agreement;
 	}
@@ -485,6 +555,7 @@ public class InterestPaymentResponseV03 {
 		this.agreement = agreement;
 	}
 
+	@XmlElement(name = "IntrstDueToA")
 	public InterestAmount2 getInterestDueToA() {
 		return interestDueToA;
 	}
@@ -493,6 +564,7 @@ public class InterestPaymentResponseV03 {
 		this.interestDueToA = interestDueToA;
 	}
 
+	@XmlElement(name = "IntrstDueToB")
 	public InterestAmount2 getInterestDueToB() {
 		return interestDueToB;
 	}
@@ -501,6 +573,7 @@ public class InterestPaymentResponseV03 {
 		this.interestDueToB = interestDueToB;
 	}
 
+	@XmlElement(name = "IntrstRspn", required = true)
 	public InterestResponse1 getInterestResponse() {
 		return interestResponse;
 	}
@@ -509,11 +582,18 @@ public class InterestPaymentResponseV03 {
 		this.interestResponse = interestResponse;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:colr.014.03.03")
+	static public class Document {
+		@XmlElement(name = "IntrstPmtRspn", required = true)
+		public InterestPaymentResponseV03 messageBody;
 	}
 }

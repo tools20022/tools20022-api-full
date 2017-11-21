@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between an instructed quantity or a quantity to receive.
@@ -67,6 +71,8 @@ import java.util.function.Supplier;
  * "Choice between an instructed quantity or a quantity to receive."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructedOrQuantityToReceive2Choice", propOrder = {"instructedQuantity", "quantityToReceive"})
 public class InstructedOrQuantityToReceive2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -190,6 +196,7 @@ public class InstructedOrQuantityToReceive2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstdQty", required = true)
 	public Quantity11Choice getInstructedQuantity() {
 		return instructedQuantity;
 	}
@@ -198,6 +205,7 @@ public class InstructedOrQuantityToReceive2Choice {
 		this.instructedQuantity = instructedQuantity;
 	}
 
+	@XmlElement(name = "QtyToRcv", required = true)
 	public Quantity11Choice getQuantityToReceive() {
 		return quantityToReceive;
 	}

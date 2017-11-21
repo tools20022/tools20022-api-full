@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OrganisationIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Ancillary identification information about the party.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Ancillary identification information about the party."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyAdditionalIdentification2Choice", propOrder = {"birthDate", "registrationIdentification"})
 public class PartyAdditionalIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -170,6 +176,7 @@ public class PartyAdditionalIdentification2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BirthDt", required = true)
 	public ISODate getBirthDate() {
 		return birthDate;
 	}
@@ -178,6 +185,7 @@ public class PartyAdditionalIdentification2Choice {
 		this.birthDate = birthDate;
 	}
 
+	@XmlElement(name = "RegnId", required = true)
 	public OrganisationIdentification5 getRegistrationIdentification() {
 		return registrationIdentification;
 	}

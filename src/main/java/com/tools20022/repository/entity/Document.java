@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -41,6 +42,80 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmIssueDate
+ * Document.mmIssueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmCopyDuplicate
+ * Document.mmCopyDuplicate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmPlaceOfStorage
+ * Document.mmPlaceOfStorage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Document#mmPaymentObligation
+ * Document.mmPaymentObligation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmType
+ * Document.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmAmount
+ * Document.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmAgreement
+ * Document.mmAgreement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmPlaceOfIssue
+ * Document.mmPlaceOfIssue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmDocumentVersion
+ * Document.mmDocumentVersion}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmStatus
+ * Document.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmReconciliation
+ * Document.mmReconciliation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmLetterOfCredit
+ * Document.mmLetterOfCredit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmPartyRole
+ * Document.mmPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmDataSetType
+ * Document.mmDataSetType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmTransport
+ * Document.mmTransport}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmSignedIndicator
+ * Document.mmSignedIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmRemittedAmount
+ * Document.mmRemittedAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmGuarantee
+ * Document.mmGuarantee}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmLanguage
+ * Document.mmLanguage}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmPurpose
+ * Document.mmPurpose}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Document#mmDocumentIdentification
+ * Document.mmDocumentIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmEvidence
+ * Document.mmEvidence}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmCommercialTrade
+ * Document.mmCommercialTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmPresentation
+ * Document.mmPresentation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmRelatedContract
+ * Document.mmRelatedContract}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PrivateCertificate
+ * PrivateCertificate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InsuranceCertificate
+ * InsuranceCertificate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecurityCertificate
+ * SecurityCertificate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradeCertificate
+ * TradeCertificate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Assessment Assessment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DeliveryNote DeliveryNote}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FinancialDocument
+ * FinancialDocument}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -538,80 +613,6 @@ import java.util.List;
  * RemittanceInformation13.mmStructured}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PrivateCertificate
- * PrivateCertificate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InsuranceCertificate
- * InsuranceCertificate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecurityCertificate
- * SecurityCertificate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradeCertificate
- * TradeCertificate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Assessment Assessment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DeliveryNote DeliveryNote}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FinancialDocument
- * FinancialDocument}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmIssueDate
- * Document.mmIssueDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmCopyDuplicate
- * Document.mmCopyDuplicate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmPlaceOfStorage
- * Document.mmPlaceOfStorage}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Document#mmPaymentObligation
- * Document.mmPaymentObligation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmType
- * Document.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmAmount
- * Document.mmAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmAgreement
- * Document.mmAgreement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmPlaceOfIssue
- * Document.mmPlaceOfIssue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmDocumentVersion
- * Document.mmDocumentVersion}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmStatus
- * Document.mmStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmReconciliation
- * Document.mmReconciliation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmLetterOfCredit
- * Document.mmLetterOfCredit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmPartyRole
- * Document.mmPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmDataSetType
- * Document.mmDataSetType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmTransport
- * Document.mmTransport}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmSignedIndicator
- * Document.mmSignedIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmRemittedAmount
- * Document.mmRemittedAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmGuarantee
- * Document.mmGuarantee}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmLanguage
- * Document.mmLanguage}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmPurpose
- * Document.mmPurpose}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Document#mmDocumentIdentification
- * Document.mmDocumentIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmEvidence
- * Document.mmEvidence}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmCommercialTrade
- * Document.mmCommercialTrade}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmPresentation
- * Document.mmPresentation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmRelatedContract
- * Document.mmRelatedContract}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -642,10 +643,6 @@ public class Document {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -792,6 +789,10 @@ public class Document {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -814,7 +815,7 @@ public class Document {
 					FinancingItemList1.mmIssueDate, ReconciliationList1.mmDate, EventDescription1.mmDate, QualifiedDocumentInformation1.mmDate, FinancialItemParameters1.mmIssueDate, SupportingDocumentRequestOrLetter1.mmDate,
 					SupportingDocumentRequestOrLetter1.mmDueDate, DocumentIdentification29.mmDateOfIssue, DocumentGeneralInformation3.mmIssueDate, DocumentIdentification28.mmDateOfIssue, ReferredDocumentInformation7.mmRelatedDate,
 					BillingStatement2.mmCreationDateTime, InvoiceHeader2.mmIssueDateTime, ReferredMandateDocument1.mmRelatedDate);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssueDate";
@@ -822,6 +823,14 @@ public class Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Document.class.getMethod("getIssueDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CopyDuplicateCode copyDuplicate;
@@ -836,10 +845,6 @@ public class Document {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CopyDuplicateCode
 	 * CopyDuplicateCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -861,6 +866,10 @@ public class Document {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -877,7 +886,7 @@ public class Document {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentIdentification11.mmCopyDuplicate, DocumentIdentification16.mmCopyDuplicate, DocumentIdentification12.mmCopyDuplicate, DocumentIdentification18.mmCopyDuplicate,
 					DocumentIdentification27.mmCopyDuplicate);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CopyDuplicate";
@@ -885,6 +894,14 @@ public class Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CopyDuplicateCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Document.class.getMethod("getCopyDuplicate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.ContactPoint> placeOfStorage;
@@ -905,10 +922,6 @@ public class Document {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.ContactPoint
 	 * ContactPoint}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1005,6 +1018,10 @@ public class Document {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1027,7 +1044,7 @@ public class Document {
 					EntryTransaction7.mmRelatedRemittanceInformation, DirectDebitTransactionInformation20.mmRelatedRemittanceInformation, OriginalItemReference4.mmRelatedRemittanceInformation,
 					DirectDebitTransactionInformation19.mmRelatedRemittanceInformation, EntryTransaction8.mmRelatedRemittanceInformation, NotificationItem6.mmRelatedRemittanceInformation,
 					DirectDebitTransactionInformation21.mmRelatedRemittanceInformation, DirectDebitTransactionInformation22.mmRelatedRemittanceInformation);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlaceOfStorage";
@@ -1056,10 +1073,6 @@ public class Document {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentObligation
 	 * PaymentObligation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1068,6 +1081,10 @@ public class Document {
 	 * ReconciliationList1.mmPaymentTerms}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1082,7 +1099,7 @@ public class Document {
 	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ReconciliationList1.mmPaymentTerms);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
@@ -1105,10 +1122,6 @@ public class Document {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DocumentTypeCode
 	 * DocumentTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1209,6 +1222,10 @@ public class Document {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1229,7 +1246,7 @@ public class Document {
 					GarnishmentType1Choice.mmProprietary, ReferredDocumentType3Choice.mmCode, ReferredDocumentType3Choice.mmProprietary, ReferredDocumentInformation6.mmType, QualifiedDocumentInformation1.mmDocumentType,
 					SupportingDocumentRequestOrLetter1.mmType, SupportingDocumentEntry1.mmDocumentType, DocumentGeneralInformation3.mmDocumentType, ReferredDocumentInformation7.mmType, InvoiceHeader2.mmTypeCode,
 					ReferredMandateDocument1.mmType);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -1237,6 +1254,14 @@ public class Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DocumentTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Document.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ActiveCurrencyAndAmount amount;
@@ -1253,10 +1278,6 @@ public class Document {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1317,6 +1338,10 @@ public class Document {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1336,7 +1361,7 @@ public class Document {
 					ServiceItemTotals1.mmTotalInvoiceAmount, InvoiceTotals2.mmTotalInvoiceAmount, ServiceCategoryTotals1.mmTotalInvoiceAmount, DocumentLineInformation1.mmAmount, StructuredRemittanceInformation12.mmReferredDocumentAmount,
 					SupportingDocumentEntry1.mmTotalAmount, SupportingDocumentEntry1.mmTotalAmountAfterShipment, SupportingDocumentEntry1.mmTotalAmountInContractCurrency,
 					SupportingDocumentEntry1.mmTotalAmountAfterShipmentInContractCurrency, TransactionCertificateContract1.mmTransactionAmountInContractCurrency, StructuredRemittanceInformation13.mmReferredDocumentAmount);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -1344,6 +1369,14 @@ public class Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Document.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Agreement> agreement;
@@ -1364,10 +1397,6 @@ public class Document {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Agreement Agreement}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1383,6 +1412,10 @@ public class Document {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1396,7 +1429,7 @@ public class Document {
 	public static final MMBusinessAssociationEnd mmAgreement = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BusinessLetter1.mmGoverningContract, EventDescription1.mmGoverningContract, FinancialItemParameters1.mmGoverningContract);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Agreement";
@@ -1424,10 +1457,6 @@ public class Document {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Location Location}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1443,6 +1472,10 @@ public class Document {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1456,7 +1489,7 @@ public class Document {
 	public static final MMBusinessAssociationEnd mmPlaceOfIssue = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking3.mmPlaceOfIssue, CertificateDataSet1.mmPlaceOfIssue, CertificateDataSet2.mmPlaceOfIssue);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlaceOfIssue";
@@ -1478,10 +1511,6 @@ public class Document {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1506,6 +1535,10 @@ public class Document {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1520,7 +1553,7 @@ public class Document {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentIdentification3.mmVersion, DocumentIdentification1.mmVersion, DocumentIdentification4.mmVersion, DocumentIdentification6.mmVersion, DocumentIdentification2.mmVersion,
 					DocumentIdentification10.mmVersion);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DocumentVersion";
@@ -1528,6 +1561,14 @@ public class Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Document.class.getMethod("getDocumentVersion", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max140Text status;
@@ -1540,10 +1581,6 @@ public class Document {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max140Text
 	 * Max140Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1556,6 +1593,10 @@ public class Document {
 	 * BillingStatement2.mmStatus}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1570,7 +1611,7 @@ public class Document {
 	public static final MMBusinessAttribute mmStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingStatement1.mmStatus, ContractRegistrationStatement1.mmRegulatoryRuleValidation, BillingStatement2.mmStatus);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
@@ -1578,6 +1619,14 @@ public class Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Document.class.getMethod("getStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Reconciliation> reconciliation;
@@ -1616,7 +1665,7 @@ public class Document {
 	 */
 	public static final MMBusinessAssociationEnd mmReconciliation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reconciliation";
@@ -1663,7 +1712,7 @@ public class Document {
 	 */
 	public static final MMBusinessAssociationEnd mmLetterOfCredit = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LetterOfCredit";
@@ -1694,10 +1743,6 @@ public class Document {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DocumentPartyRole
 	 * DocumentPartyRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1709,6 +1754,10 @@ public class Document {
 	 * FinancingItemList1.mmNotificationInformation}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1725,7 +1774,7 @@ public class Document {
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancingAgreementList1.mmNotificationInformation, FinancingItemList1.mmNotificationInformation);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
@@ -1747,10 +1796,6 @@ public class Document {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DataSetTypeCode
 	 * DataSetTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1759,6 +1804,10 @@ public class Document {
 	 * DocumentIdentification2.mmType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1774,7 +1823,7 @@ public class Document {
 	public static final MMBusinessAttribute mmDataSetType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentIdentification2.mmType);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DataSetType";
@@ -1782,6 +1831,14 @@ public class Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataSetTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Document.class.getMethod("getDataSetType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Transport transport;
@@ -1802,10 +1859,6 @@ public class Document {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Transport Transport}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1821,6 +1874,10 @@ public class Document {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1835,7 +1892,7 @@ public class Document {
 	public static final MMBusinessAssociationEnd mmTransport = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(RequiredSubmission3.mmMatchTransport, InsuranceDataSet1.mmTransport, CertificateDataSet2.mmTransport);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Transport";
@@ -1875,7 +1932,7 @@ public class Document {
 	 */
 	public static final MMBusinessAttribute mmSignedIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SignedIndicator";
@@ -1883,6 +1940,14 @@ public class Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Document.class.getMethod("getSignedIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount remittedAmount;
@@ -1896,10 +1961,6 @@ public class Document {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1921,6 +1982,10 @@ public class Document {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1935,7 +2000,7 @@ public class Document {
 		{
 			derivation_lazy = () -> Arrays.asList(ReferredDocumentAmount1Choice.mmRemittedAmount, RemittanceAmount1.mmRemittedAmount, RemittanceAmount2.mmRemittedAmount, StructuredRemittanceInformation10.mmReferredDocumentAmount,
 					Garnishment1.mmRemittedAmount);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RemittedAmount";
@@ -1943,6 +2008,14 @@ public class Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Document.class.getMethod("getRemittedAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Guarantee> guarantee;
@@ -1980,7 +2053,7 @@ public class Document {
 	 */
 	public static final MMBusinessAssociationEnd mmGuarantee = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Guarantee";
@@ -2001,10 +2074,6 @@ public class Document {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.LanguageCode
 	 * LanguageCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2023,6 +2092,10 @@ public class Document {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2036,7 +2109,7 @@ public class Document {
 	public static final MMBusinessAttribute mmLanguage = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvoiceHeader1.mmLanguageCode, EventDescription1.mmLanguageCode, FinancialItemParameters1.mmLanguageCode, InvoiceHeader2.mmLanguageCode);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Language";
@@ -2044,6 +2117,14 @@ public class Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LanguageCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Document.class.getMethod("getLanguage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text purpose;
@@ -2056,10 +2137,6 @@ public class Document {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2078,6 +2155,10 @@ public class Document {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2091,7 +2172,7 @@ public class Document {
 	public static final MMBusinessAttribute mmPurpose = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvoiceHeader1.mmDocumentPurpose, FinancialItemParameters1.mmDocumentPurpose, SupportingDocumentRequestOrLetter1.mmSubject, InvoiceHeader2.mmDocumentPurpose);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Purpose";
@@ -2099,6 +2180,14 @@ public class Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Document.class.getMethod("getPurpose", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected GenericIdentification documentIdentification;
@@ -2121,10 +2210,6 @@ public class Document {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
 	 * GenericIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2186,6 +2271,10 @@ public class Document {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2205,7 +2294,7 @@ public class Document {
 					TransactionCertificateContract1.mmContractReference, ContractRegistrationReference1Choice.mmContract, CurrencyControlRecordStatus1.mmDocumentIdentification, OtherCollateral7.mmLetterOfCreditIdentification,
 					OtherCollateral5.mmLetterOfCreditIdentification, InvoiceHeader2.mmName, Mandate10.mmMandateReference, Mandate9.mmMandateReference, Mandate11.mmMandateReference, ReferredMandateDocument1.mmCreditorReference,
 					Mandate8.mmMandateReference);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DocumentIdentification";
@@ -2251,7 +2340,7 @@ public class Document {
 	 */
 	public static final MMBusinessAssociationEnd mmEvidence = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Evidence";
@@ -2297,7 +2386,7 @@ public class Document {
 	 */
 	public static final MMBusinessAssociationEnd mmCommercialTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommercialTrade";
@@ -2326,10 +2415,6 @@ public class Document {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Presentation
 	 * Presentation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
-	 * Document}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2341,6 +2426,10 @@ public class Document {
 	 * Document8.mmElectronicDetails}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Document
+	 * Document}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2355,7 +2444,7 @@ public class Document {
 	public static final MMBusinessAssociationEnd mmPresentation = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Document11.mmElectronicDetails, Document8.mmElectronicDetails);
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Presentation";
@@ -2402,7 +2491,7 @@ public class Document {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedContract = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Document.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedContract";
@@ -2445,10 +2534,15 @@ public class Document {
 						TradeAgreement13.mmAdditionalReferenceDocument, RequestedModification6.mmRemittanceInformation, RemittanceInformation13.mmStructured);
 				subType_lazy = () -> Arrays.asList(PrivateCertificate.mmObject(), InsuranceCertificate.mmObject(), SecurityCertificate.mmObject(), TradeCertificate.mmObject(), Assessment.mmObject(), DeliveryNote.mmObject(),
 						FinancialDocument.mmObject());
-				element_lazy = () -> Arrays.asList(Document.mmIssueDate, Document.mmCopyDuplicate, Document.mmPlaceOfStorage, Document.mmPaymentObligation, Document.mmType, Document.mmAmount, Document.mmAgreement, Document.mmPlaceOfIssue,
-						Document.mmDocumentVersion, Document.mmStatus, Document.mmReconciliation, Document.mmLetterOfCredit, Document.mmPartyRole, Document.mmDataSetType, Document.mmTransport, Document.mmSignedIndicator,
-						Document.mmRemittedAmount, Document.mmGuarantee, Document.mmLanguage, Document.mmPurpose, Document.mmDocumentIdentification, Document.mmEvidence, Document.mmCommercialTrade, Document.mmPresentation,
-						Document.mmRelatedContract);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Document.mmIssueDate, com.tools20022.repository.entity.Document.mmCopyDuplicate, com.tools20022.repository.entity.Document.mmPlaceOfStorage,
+						com.tools20022.repository.entity.Document.mmPaymentObligation, com.tools20022.repository.entity.Document.mmType, com.tools20022.repository.entity.Document.mmAmount,
+						com.tools20022.repository.entity.Document.mmAgreement, com.tools20022.repository.entity.Document.mmPlaceOfIssue, com.tools20022.repository.entity.Document.mmDocumentVersion,
+						com.tools20022.repository.entity.Document.mmStatus, com.tools20022.repository.entity.Document.mmReconciliation, com.tools20022.repository.entity.Document.mmLetterOfCredit,
+						com.tools20022.repository.entity.Document.mmPartyRole, com.tools20022.repository.entity.Document.mmDataSetType, com.tools20022.repository.entity.Document.mmTransport,
+						com.tools20022.repository.entity.Document.mmSignedIndicator, com.tools20022.repository.entity.Document.mmRemittedAmount, com.tools20022.repository.entity.Document.mmGuarantee,
+						com.tools20022.repository.entity.Document.mmLanguage, com.tools20022.repository.entity.Document.mmPurpose, com.tools20022.repository.entity.Document.mmDocumentIdentification,
+						com.tools20022.repository.entity.Document.mmEvidence, com.tools20022.repository.entity.Document.mmCommercialTrade, com.tools20022.repository.entity.Document.mmPresentation,
+						com.tools20022.repository.entity.Document.mmRelatedContract);
 				derivationComponent_lazy = () -> Arrays.asList(DocumentIdentification11.mmObject(), DocumentIdentification16.mmObject(), DocumentIdentification9.mmObject(), DocumentIdentification1Choice.mmObject(),
 						DocumentIdentification14.mmObject(), DocumentIdentification17.mmObject(), DocumentIdentification2Choice.mmObject(), DocumentIdentification21.mmObject(), DocumentIdentification12.mmObject(),
 						DocumentIdentification15.mmObject(), DocumentIdentification13.mmObject(), DocumentIdentification18.mmObject(), DocumentIdentification19.mmObject(), DocumentIdentification20.mmObject(),
@@ -2471,6 +2565,11 @@ public class Document {
 						DocumentIdentification31.mmObject(), DocumentIdentification32.mmObject(), DocumentIdentification33.mmObject(), DocumentIdentification3Choice.mmObject(), DocumentIdentification38.mmObject(),
 						DocumentIdentification37.mmObject(), DocumentIdentification34.mmObject(), DocumentIdentification4Choice.mmObject(), DocumentNumber14.mmObject(), DocumentIdentification48.mmObject(), DocumentNumber15.mmObject(),
 						DocumentIdentification49.mmObject(), InvoiceHeader2.mmObject(), RemittanceInformation13.mmObject(), ReferredMandateDocument1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Document.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines how the CSD is linked to the security.
@@ -72,6 +76,8 @@ import java.util.List;
  * definition} = "Defines how the CSD is linked to the security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityCSDLink1", propOrder = {"validFrom", "validTo", "securityMaintenance", "issuerCSD", "investorCSD", "technicalIssuerCSD", "issuanceAccount"})
 public class SecurityCSDLink1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -388,6 +394,7 @@ public class SecurityCSDLink1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "VldFr", required = true)
 	public DateAndDateTimeChoice getValidFrom() {
 		return validFrom;
 	}
@@ -396,6 +403,7 @@ public class SecurityCSDLink1 {
 		this.validFrom = validFrom;
 	}
 
+	@XmlElement(name = "VldTo")
 	public DateAndDateTimeChoice getValidTo() {
 		return validTo;
 	}
@@ -404,6 +412,7 @@ public class SecurityCSDLink1 {
 		this.validTo = validTo;
 	}
 
+	@XmlElement(name = "SctyMntnc")
 	public YesNoIndicator getSecurityMaintenance() {
 		return securityMaintenance;
 	}
@@ -412,6 +421,7 @@ public class SecurityCSDLink1 {
 		this.securityMaintenance = securityMaintenance;
 	}
 
+	@XmlElement(name = "IssrCSD")
 	public SystemPartyIdentification1Choice getIssuerCSD() {
 		return issuerCSD;
 	}
@@ -420,6 +430,7 @@ public class SecurityCSDLink1 {
 		this.issuerCSD = issuerCSD;
 	}
 
+	@XmlElement(name = "InvstrCSD")
 	public SystemPartyIdentification1Choice getInvestorCSD() {
 		return investorCSD;
 	}
@@ -428,6 +439,7 @@ public class SecurityCSDLink1 {
 		this.investorCSD = investorCSD;
 	}
 
+	@XmlElement(name = "TechIssrCSD")
 	public SystemPartyIdentification1Choice getTechnicalIssuerCSD() {
 		return technicalIssuerCSD;
 	}
@@ -436,6 +448,7 @@ public class SecurityCSDLink1 {
 		this.technicalIssuerCSD = technicalIssuerCSD;
 	}
 
+	@XmlElement(name = "IssncAcct")
 	public List<IssuanceAccount1> getIssuanceAccount() {
 		return issuanceAccount;
 	}

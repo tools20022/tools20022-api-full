@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional details of the intra-balance movements data.
@@ -109,6 +113,9 @@ import java.util.List;
  * "Provides additional details of the intra-balance movements data."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraBalanceMovement2", propOrder = {"balanceFrom", "balanceTo", "settlementAmount", "settledAmount", "previouslySettledAmount", "remainingSettlementAmount", "intendedSettlementDate", "effectiveSettlementDate",
+		"statusDate", "cashSubBalanceIdentification", "linkages", "priority", "messageOriginator", "creationDateTime", "instructionProcessingAdditionalDetails", "supplementaryData"})
 public class IntraBalanceMovement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -870,6 +877,7 @@ public class IntraBalanceMovement2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BalFr", required = true)
 	public CashSubBalanceTypeAndQuantityBreakdown1 getBalanceFrom() {
 		return balanceFrom;
 	}
@@ -878,6 +886,7 @@ public class IntraBalanceMovement2 {
 		this.balanceFrom = balanceFrom;
 	}
 
+	@XmlElement(name = "BalTo", required = true)
 	public CashSubBalanceTypeAndQuantityBreakdown1 getBalanceTo() {
 		return balanceTo;
 	}
@@ -886,6 +895,7 @@ public class IntraBalanceMovement2 {
 		this.balanceTo = balanceTo;
 	}
 
+	@XmlElement(name = "SttlmAmt", required = true)
 	public Amount2Choice getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -894,6 +904,7 @@ public class IntraBalanceMovement2 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "SttldAmt")
 	public Amount2Choice getSettledAmount() {
 		return settledAmount;
 	}
@@ -902,6 +913,7 @@ public class IntraBalanceMovement2 {
 		this.settledAmount = settledAmount;
 	}
 
+	@XmlElement(name = "PrevslySttldAmt")
 	public Amount2Choice getPreviouslySettledAmount() {
 		return previouslySettledAmount;
 	}
@@ -910,6 +922,7 @@ public class IntraBalanceMovement2 {
 		this.previouslySettledAmount = previouslySettledAmount;
 	}
 
+	@XmlElement(name = "RmngSttlmAmt")
 	public Amount2Choice getRemainingSettlementAmount() {
 		return remainingSettlementAmount;
 	}
@@ -918,6 +931,7 @@ public class IntraBalanceMovement2 {
 		this.remainingSettlementAmount = remainingSettlementAmount;
 	}
 
+	@XmlElement(name = "IntnddSttlmDt", required = true)
 	public DateAndDateTimeChoice getIntendedSettlementDate() {
 		return intendedSettlementDate;
 	}
@@ -926,6 +940,7 @@ public class IntraBalanceMovement2 {
 		this.intendedSettlementDate = intendedSettlementDate;
 	}
 
+	@XmlElement(name = "FctvSttlmDt")
 	public DateAndDateTimeChoice getEffectiveSettlementDate() {
 		return effectiveSettlementDate;
 	}
@@ -934,6 +949,7 @@ public class IntraBalanceMovement2 {
 		this.effectiveSettlementDate = effectiveSettlementDate;
 	}
 
+	@XmlElement(name = "StsDt")
 	public ISODateTime getStatusDate() {
 		return statusDate;
 	}
@@ -942,6 +958,7 @@ public class IntraBalanceMovement2 {
 		this.statusDate = statusDate;
 	}
 
+	@XmlElement(name = "CshSubBalId")
 	public GenericIdentification37 getCashSubBalanceIdentification() {
 		return cashSubBalanceIdentification;
 	}
@@ -950,6 +967,7 @@ public class IntraBalanceMovement2 {
 		this.cashSubBalanceIdentification = cashSubBalanceIdentification;
 	}
 
+	@XmlElement(name = "Lnkgs")
 	public List<Linkages26> getLinkages() {
 		return linkages;
 	}
@@ -958,6 +976,7 @@ public class IntraBalanceMovement2 {
 		this.linkages = linkages;
 	}
 
+	@XmlElement(name = "Prty")
 	public PriorityNumeric1Choice getPriority() {
 		return priority;
 	}
@@ -966,6 +985,7 @@ public class IntraBalanceMovement2 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "MsgOrgtr")
 	public SystemPartyIdentification5 getMessageOriginator() {
 		return messageOriginator;
 	}
@@ -974,6 +994,7 @@ public class IntraBalanceMovement2 {
 		this.messageOriginator = messageOriginator;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -982,6 +1003,7 @@ public class IntraBalanceMovement2 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "InstrPrcgAddtlDtls")
 	public Max350Text getInstructionProcessingAdditionalDetails() {
 		return instructionProcessingAdditionalDetails;
 	}
@@ -990,6 +1012,7 @@ public class IntraBalanceMovement2 {
 		this.instructionProcessingAdditionalDetails = instructionProcessingAdditionalDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

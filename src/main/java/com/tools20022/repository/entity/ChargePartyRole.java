@@ -36,17 +36,14 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargesPartyRole
- * Adjustment.mmChargesPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.ChargePartyRole#mmAdjustment
+ * ChargePartyRole.mmAdjustment}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -58,12 +55,15 @@ import java.util.List;
  * ChargeRecipient}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ChargePartyRole#mmAdjustment
- * ChargePartyRole.mmAdjustment}</li>
+ * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargesPartyRole
+ * Adjustment.mmChargesPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -122,7 +122,7 @@ public class ChargePartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmAdjustment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ChargePartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ChargePartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Adjustment";
@@ -144,7 +144,12 @@ public class ChargePartyRole extends Role {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Adjustment.mmChargesPartyRole);
 				subType_lazy = () -> Arrays.asList(ChargeAccountAgent.mmObject(), ChargeAgent.mmObject(), ChargeBearer.mmObject(), ChargeRecipient.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(ChargePartyRole.mmAdjustment);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ChargePartyRole.mmAdjustment);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ChargePartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

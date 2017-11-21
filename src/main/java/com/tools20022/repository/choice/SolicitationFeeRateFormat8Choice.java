@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountAndQuantityRatio4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a rate or an unspecified rate.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between a rate or an unspecified rate."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SolicitationFeeRateFormat8Choice", propOrder = {"rate", "amountToQuantity", "amount"})
 public class SolicitationFeeRateFormat8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class SolicitationFeeRateFormat8Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -238,6 +245,7 @@ public class SolicitationFeeRateFormat8Choice {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "AmtToQty", required = true)
 	public AmountAndQuantityRatio4 getAmountToQuantity() {
 		return amountToQuantity;
 	}
@@ -246,6 +254,7 @@ public class SolicitationFeeRateFormat8Choice {
 		this.amountToQuantity = amountToQuantity;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.FundOrderType1;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for the specification of the fund order type.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * FundOrderType1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundOrderType1Choice", propOrder = {"type", "proprietary"})
 public class FundOrderType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -206,6 +212,7 @@ public class FundOrderType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public FundOrderType6Code getType() {
 		return type;
 	}
@@ -214,6 +221,7 @@ public class FundOrderType1Choice {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification47 getProprietary() {
 		return proprietary;
 	}

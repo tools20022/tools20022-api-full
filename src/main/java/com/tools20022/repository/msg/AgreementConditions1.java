@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.MasterAgreement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the type, date and version of the agreement.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type, date and version of the agreement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgreementConditions1", propOrder = {"agreementCode", "date", "version"})
 public class AgreementConditions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -226,6 +232,7 @@ public class AgreementConditions1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AgrmtCd", required = true)
 	public Max6AlphaText getAgreementCode() {
 		return agreementCode;
 	}
@@ -234,6 +241,7 @@ public class AgreementConditions1 {
 		this.agreementCode = agreementCode;
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODate getDate() {
 		return date;
 	}
@@ -242,6 +250,7 @@ public class AgreementConditions1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Exact4NumericText getVersion() {
 		return version;
 	}

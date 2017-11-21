@@ -30,6 +30,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specification of the request for report.
@@ -89,6 +93,9 @@ import java.util.List;
  * definition} = "Specification of the request for report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestParameters", propOrder = {"previousReference", "relatedReference", "fundCashForecastReport", "fundProcessingPassportReport", "priceReport", "statementByAccount", "statementByAccountAndFinancialInstrument",
+		"userDefinedReport"})
 public class RequestParameters {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -512,6 +519,7 @@ public class RequestParameters {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -520,6 +528,7 @@ public class RequestParameters {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
@@ -528,6 +537,7 @@ public class RequestParameters {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "FndCshFcstRpt", required = true)
 	public FundCashForecastParameters1 getFundCashForecastReport() {
 		return fundCashForecastReport;
 	}
@@ -536,6 +546,7 @@ public class RequestParameters {
 		this.fundCashForecastReport = fundCashForecastReport;
 	}
 
+	@XmlElement(name = "FndPrcgPsptRpt", required = true)
 	public List<FundParameters1Choice> getFundProcessingPassportReport() {
 		return fundProcessingPassportReport;
 	}
@@ -544,6 +555,7 @@ public class RequestParameters {
 		this.fundProcessingPassportReport = fundProcessingPassportReport;
 	}
 
+	@XmlElement(name = "PricRpt", required = true)
 	public FundParameters2Choice getPriceReport() {
 		return priceReport;
 	}
@@ -552,6 +564,7 @@ public class RequestParameters {
 		this.priceReport = priceReport;
 	}
 
+	@XmlElement(name = "StmtByAcct", required = true)
 	public StatementDetails getStatementByAccount() {
 		return statementByAccount;
 	}
@@ -560,6 +573,7 @@ public class RequestParameters {
 		this.statementByAccount = statementByAccount;
 	}
 
+	@XmlElement(name = "StmtByAcctAndFinInstrm", required = true)
 	public StatementAndFinancialInstrumentDetails getStatementByAccountAndFinancialInstrument() {
 		return statementByAccountAndFinancialInstrument;
 	}
@@ -568,6 +582,7 @@ public class RequestParameters {
 		this.statementByAccountAndFinancialInstrument = statementByAccountAndFinancialInstrument;
 	}
 
+	@XmlElement(name = "UsrDfndRpt", required = true)
 	public GenericReportParameters getUserDefinedReport() {
 		return userDefinedReport;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amendment identification.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Amendment identification."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Amendment8", propOrder = {"identification", "sequenceNumber", "beneficiaryReferenceNumber", "issuer"})
 public class Amendment8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -267,6 +273,7 @@ public class Amendment8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -275,6 +282,7 @@ public class Amendment8 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SeqNb", required = true)
 	public Max4AlphaNumericText getSequenceNumber() {
 		return sequenceNumber;
 	}
@@ -283,6 +291,7 @@ public class Amendment8 {
 		this.sequenceNumber = sequenceNumber;
 	}
 
+	@XmlElement(name = "BnfcryRefNb")
 	public Max35Text getBeneficiaryReferenceNumber() {
 		return beneficiaryReferenceNumber;
 	}
@@ -291,6 +300,7 @@ public class Amendment8 {
 		this.beneficiaryReferenceNumber = beneficiaryReferenceNumber;
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public PartyIdentification43 getIssuer() {
 		return issuer;
 	}

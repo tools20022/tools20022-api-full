@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.GroupHeader5;
 import com.tools20022.repository.msg.OriginalGroupInformation1;
 import com.tools20022.repository.msg.PaymentTransactionInformation1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -57,9 +59,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.002.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
@@ -92,6 +91,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.002.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -111,6 +113,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "pain.002.001.02", propOrder = {"groupHeader", "originalGroupInformationAndStatus", "transactionInformationAndStatus"})
 public class PaymentStatusReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -150,6 +154,14 @@ public class PaymentStatusReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentStatusReportV02.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OriginalGroupInformation1 originalGroupInformationAndStatus;
 	/**
@@ -188,6 +200,14 @@ public class PaymentStatusReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> OriginalGroupInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentStatusReportV02.class.getMethod("getOriginalGroupInformationAndStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PaymentTransactionInformation1> transactionInformationAndStatus;
 	/**
@@ -225,6 +245,14 @@ public class PaymentStatusReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentTransactionInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentStatusReportV02.class.getMethod("getTransactionInformationAndStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -239,7 +267,8 @@ public class PaymentStatusReportV02 {
 				xmlTag = "pain.002.001.02";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
 				xmlName = "pain.002.001.02";
-				messageBuildingBlock_lazy = () -> Arrays.asList(PaymentStatusReportV02.mmGroupHeader, PaymentStatusReportV02.mmOriginalGroupInformationAndStatus, PaymentStatusReportV02.mmTransactionInformationAndStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.PaymentStatusReportV02.mmGroupHeader, com.tools20022.repository.area.pain.PaymentStatusReportV02.mmOriginalGroupInformationAndStatus,
+						com.tools20022.repository.area.pain.PaymentStatusReportV02.mmTransactionInformationAndStatus);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";
@@ -249,10 +278,16 @@ public class PaymentStatusReportV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PaymentStatusReportV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader5 getGroupHeader() {
 		return groupHeader;
 	}
@@ -261,6 +296,7 @@ public class PaymentStatusReportV02 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
 	public OriginalGroupInformation1 getOriginalGroupInformationAndStatus() {
 		return originalGroupInformationAndStatus;
 	}
@@ -269,11 +305,18 @@ public class PaymentStatusReportV02 {
 		this.originalGroupInformationAndStatus = originalGroupInformationAndStatus;
 	}
 
+	@XmlElement(name = "TxInfAndSts")
 	public List<PaymentTransactionInformation1> getTransactionInformationAndStatus() {
 		return transactionInformationAndStatus;
 	}
 
 	public void setTransactionInformationAndStatus(List<PaymentTransactionInformation1> transactionInformationAndStatus) {
 		this.transactionInformationAndStatus = transactionInformationAndStatus;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.002.02.02")
+	static public class Document {
+		@XmlElement(name = "pain.002.001.02", required = true)
+		public PaymentStatusReportV02 messageBody;
 	}
 }

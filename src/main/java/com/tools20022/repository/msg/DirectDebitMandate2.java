@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instruction, initiated by the creditor, to debit a debtor's account in favour
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DirectDebitMandate2", propOrder = {"debtorAccountIdentification", "debtorIdentification", "creditorIdentification", "firstAgent", "finalAgent", "registrationIdentification", "mandateIdentification"})
 public class DirectDebitMandate2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -459,6 +465,7 @@ public class DirectDebitMandate2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DbtrAcctId", required = true)
 	public CashAccountIdentification1Choice getDebtorAccountIdentification() {
 		return debtorAccountIdentification;
 	}
@@ -467,6 +474,7 @@ public class DirectDebitMandate2 {
 		this.debtorAccountIdentification = debtorAccountIdentification;
 	}
 
+	@XmlElement(name = "DbtrId")
 	public PartyIdentification2Choice getDebtorIdentification() {
 		return debtorIdentification;
 	}
@@ -475,6 +483,7 @@ public class DirectDebitMandate2 {
 		this.debtorIdentification = debtorIdentification;
 	}
 
+	@XmlElement(name = "CdtrId")
 	public PartyIdentification2Choice getCreditorIdentification() {
 		return creditorIdentification;
 	}
@@ -483,6 +492,7 @@ public class DirectDebitMandate2 {
 		this.creditorIdentification = creditorIdentification;
 	}
 
+	@XmlElement(name = "FrstAgt", required = true)
 	public FinancialInstitutionIdentification3Choice getFirstAgent() {
 		return firstAgent;
 	}
@@ -491,6 +501,7 @@ public class DirectDebitMandate2 {
 		this.firstAgent = firstAgent;
 	}
 
+	@XmlElement(name = "FnlAgt")
 	public FinancialInstitutionIdentification3Choice getFinalAgent() {
 		return finalAgent;
 	}
@@ -499,6 +510,7 @@ public class DirectDebitMandate2 {
 		this.finalAgent = finalAgent;
 	}
 
+	@XmlElement(name = "RegnId")
 	public Max35Text getRegistrationIdentification() {
 		return registrationIdentification;
 	}
@@ -507,6 +519,7 @@ public class DirectDebitMandate2 {
 		this.registrationIdentification = registrationIdentification;
 	}
 
+	@XmlElement(name = "MndtId")
 	public Max35Text getMandateIdentification() {
 		return mandateIdentification;
 	}

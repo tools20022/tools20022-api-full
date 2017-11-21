@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about code and number of event of fund transfer.
@@ -56,6 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about code and number of event of fund transfer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferEvent1", propOrder = {"eventCode", "eventNumber"})
 public class TransferEvent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -154,6 +160,7 @@ public class TransferEvent1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EvtCd", required = true)
 	public Max4Text getEventCode() {
 		return eventCode;
 	}
@@ -162,6 +169,7 @@ public class TransferEvent1 {
 		this.eventCode = eventCode;
 	}
 
+	@XmlElement(name = "EvtNb")
 	public Max3NumericText getEventNumber() {
 		return eventNumber;
 	}

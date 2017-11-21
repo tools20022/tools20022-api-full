@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.NoSpecifiedReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between different instruction cancellation request statuses.
@@ -97,6 +101,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * InstructionCancellationRequestStatus5Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructionCancellationRequestStatus7Choice", propOrder = {"cancellationCompleted", "accepted", "rejected", "pendingCancellation", "proprietaryStatus"})
 public class InstructionCancellationRequestStatus7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -444,6 +450,7 @@ public class InstructionCancellationRequestStatus7Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlCmpltd", required = true)
 	public CancelledStatus7Choice getCancellationCompleted() {
 		return cancellationCompleted;
 	}
@@ -452,6 +459,7 @@ public class InstructionCancellationRequestStatus7Choice {
 		this.cancellationCompleted = cancellationCompleted;
 	}
 
+	@XmlElement(name = "Accptd", required = true)
 	public NoSpecifiedReason1 getAccepted() {
 		return accepted;
 	}
@@ -460,6 +468,7 @@ public class InstructionCancellationRequestStatus7Choice {
 		this.accepted = accepted;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectedStatus14Choice getRejected() {
 		return rejected;
 	}
@@ -468,6 +477,7 @@ public class InstructionCancellationRequestStatus7Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "PdgCxl", required = true)
 	public PendingCancellationStatus3Choice getPendingCancellation() {
 		return pendingCancellation;
 	}
@@ -476,6 +486,7 @@ public class InstructionCancellationRequestStatus7Choice {
 		this.pendingCancellation = pendingCancellation;
 	}
 
+	@XmlElement(name = "PrtrySts", required = true)
 	public ProprietaryStatusAndReason1 getProprietaryStatus() {
 		return proprietaryStatus;
 	}

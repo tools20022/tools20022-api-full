@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies rates.
@@ -87,6 +91,9 @@ import java.util.List;
  * definition} = "Specifies rates."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionRate22", propOrder = {"grossDividendRate", "indexFactor", "interestRateUsedForPayment", "maximumAllowedOversubscriptionRate", "prorationRate", "taxRelatedRate", "withholdingTaxRate", "additionalTax",
+		"taxableIncomePerDividendShare"})
 public class CorporateActionRate22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -554,6 +561,7 @@ public class CorporateActionRate22 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrssDvddRate")
 	public List<GrossDividendRateFormat3Choice> getGrossDividendRate() {
 		return grossDividendRate;
 	}
@@ -562,6 +570,7 @@ public class CorporateActionRate22 {
 		this.grossDividendRate = grossDividendRate;
 	}
 
+	@XmlElement(name = "IndxFctr")
 	public RateAndAmountFormat6Choice getIndexFactor() {
 		return indexFactor;
 	}
@@ -570,6 +579,7 @@ public class CorporateActionRate22 {
 		this.indexFactor = indexFactor;
 	}
 
+	@XmlElement(name = "IntrstRateUsdForPmt")
 	public List<InterestRateUsedForPaymentFormat3Choice> getInterestRateUsedForPayment() {
 		return interestRateUsedForPayment;
 	}
@@ -578,6 +588,7 @@ public class CorporateActionRate22 {
 		this.interestRateUsedForPayment = interestRateUsedForPayment;
 	}
 
+	@XmlElement(name = "MaxAllwdOvrsbcptRate")
 	public PercentageRate getMaximumAllowedOversubscriptionRate() {
 		return maximumAllowedOversubscriptionRate;
 	}
@@ -586,6 +597,7 @@ public class CorporateActionRate22 {
 		this.maximumAllowedOversubscriptionRate = maximumAllowedOversubscriptionRate;
 	}
 
+	@XmlElement(name = "PrratnRate")
 	public PercentageRate getProrationRate() {
 		return prorationRate;
 	}
@@ -594,6 +606,7 @@ public class CorporateActionRate22 {
 		this.prorationRate = prorationRate;
 	}
 
+	@XmlElement(name = "TaxRltdRate")
 	public List<RateTypeAndAmountAndStatus10> getTaxRelatedRate() {
 		return taxRelatedRate;
 	}
@@ -602,6 +615,7 @@ public class CorporateActionRate22 {
 		this.taxRelatedRate = taxRelatedRate;
 	}
 
+	@XmlElement(name = "WhldgTaxRate")
 	public PercentageRate getWithholdingTaxRate() {
 		return withholdingTaxRate;
 	}
@@ -610,6 +624,7 @@ public class CorporateActionRate22 {
 		this.withholdingTaxRate = withholdingTaxRate;
 	}
 
+	@XmlElement(name = "AddtlTax")
 	public RateAndAmountFormat6Choice getAdditionalTax() {
 		return additionalTax;
 	}
@@ -618,6 +633,7 @@ public class CorporateActionRate22 {
 		this.additionalTax = additionalTax;
 	}
 
+	@XmlElement(name = "TaxblIncmPerDvddShr")
 	public List<RateTypeAndAmountAndStatus12> getTaxableIncomePerDividendShare() {
 		return taxableIncomePerDividendShare;
 	}

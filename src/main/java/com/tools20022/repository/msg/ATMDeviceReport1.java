@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the report from an ATM device.
@@ -79,6 +83,8 @@ import java.util.List;
  * definition} = "Information related to the report from an ATM device."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMDeviceReport1", propOrder = {"environment", "ATMGlobalStatus", "commandResult", "commandContext", "ATMSecurityContext"})
 public class ATMDeviceReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -301,6 +307,7 @@ public class ATMDeviceReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public ATMEnvironment6 getEnvironment() {
 		return environment;
 	}
@@ -309,6 +316,7 @@ public class ATMDeviceReport1 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "ATMGblSts", required = true)
 	public ATMStatus1 getATMGlobalStatus() {
 		return aTMGlobalStatus;
 	}
@@ -317,6 +325,7 @@ public class ATMDeviceReport1 {
 		this.aTMGlobalStatus = aTMGlobalStatus;
 	}
 
+	@XmlElement(name = "CmdRslt")
 	public List<ATMCommand2> getCommandResult() {
 		return commandResult;
 	}
@@ -325,6 +334,7 @@ public class ATMDeviceReport1 {
 		this.commandResult = commandResult;
 	}
 
+	@XmlElement(name = "CmdCntxt")
 	public ATMCommand3 getCommandContext() {
 		return commandContext;
 	}
@@ -333,6 +343,7 @@ public class ATMDeviceReport1 {
 		this.commandContext = commandContext;
 	}
 
+	@XmlElement(name = "ATMSctyCntxt")
 	public ATMSecurityContext1 getATMSecurityContext() {
 		return aTMSecurityContext;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of each individual invoice tax report transaction.
@@ -81,6 +85,8 @@ import java.util.List;
  * MoneyMarketTransactionStatus2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvoiceTaxReportTransactionStatus1", propOrder = {"taxReportIdentification", "status", "validationRule", "supplementaryData"})
 public class InvoiceTaxReportTransactionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -296,6 +302,7 @@ public class InvoiceTaxReportTransactionStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TaxRptId", required = true)
 	public Max35Text getTaxReportIdentification() {
 		return taxReportIdentification;
 	}
@@ -304,6 +311,7 @@ public class InvoiceTaxReportTransactionStatus1 {
 		this.taxReportIdentification = taxReportIdentification;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public TaxReportingStatus2Code getStatus() {
 		return status;
 	}
@@ -312,6 +320,7 @@ public class InvoiceTaxReportTransactionStatus1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "VldtnRule")
 	public List<GenericValidationRuleIdentification1> getValidationRule() {
 		return validationRule;
 	}
@@ -320,6 +329,7 @@ public class InvoiceTaxReportTransactionStatus1 {
 		this.validationRule = validationRule;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

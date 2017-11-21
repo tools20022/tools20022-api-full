@@ -25,6 +25,10 @@ import com.tools20022.repository.msg.KEK1;
 import com.tools20022.repository.msg.KeyTransport1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transport key or key encryption key (KEK) for the recipient.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Recipient1Choice", propOrder = {"keyTransport", "KEK"})
 public class Recipient1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -165,6 +171,7 @@ public class Recipient1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "KeyTrnsprt")
 	public KeyTransport1 getKeyTransport() {
 		return keyTransport;
 	}
@@ -173,6 +180,7 @@ public class Recipient1Choice {
 		this.keyTransport = keyTransport;
 	}
 
+	@XmlElement(name = "KEK")
 	public KEK1 getKEK() {
 		return kEK;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status information of the report item.
@@ -72,6 +76,8 @@ import java.util.List;
  * RejectionOrRepairStatus14Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportItemStatus1", propOrder = {"exception", "additionalReasonInformation", "reportItem"})
 public class ReportItemStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class ReportItemStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Xcptn", required = true)
 	public ReportItemRejectionReason1Choice getException() {
 		return exception;
 	}
@@ -237,6 +244,7 @@ public class ReportItemStatus1 {
 		this.exception = exception;
 	}
 
+	@XmlElement(name = "AddtlRsnInf")
 	public Max210Text getAdditionalReasonInformation() {
 		return additionalReasonInformation;
 	}
@@ -245,6 +253,7 @@ public class ReportItemStatus1 {
 		this.additionalReasonInformation = additionalReasonInformation;
 	}
 
+	@XmlElement(name = "RptItm")
 	public List<ReportItem1> getReportItem() {
 		return reportItem;
 	}

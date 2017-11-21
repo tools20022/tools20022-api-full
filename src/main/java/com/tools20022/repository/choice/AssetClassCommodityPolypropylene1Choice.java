@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PolypropyleneCommodityPlastic1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines commodity attributes of a derivative where the type is polypropylene.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AssetClassCommodityPolypropylene1Choice", propOrder = "plastic")
 public class AssetClassCommodityPolypropylene1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -125,6 +131,7 @@ public class AssetClassCommodityPolypropylene1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Plstc", required = true)
 	public PolypropyleneCommodityPlastic1 getPlastic() {
 		return plastic;
 	}

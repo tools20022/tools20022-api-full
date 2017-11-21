@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.DocumentNumber12;
 import com.tools20022.repository.msg.DocumentNumber13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the status or statement that is requested.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * StatusOrStatement5Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusOrStatement7Choice", propOrder = {"statusAdvice", "statement"})
 public class StatusOrStatement7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -195,6 +201,7 @@ public class StatusOrStatement7Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsAdvc", required = true)
 	public DocumentNumber12 getStatusAdvice() {
 		return statusAdvice;
 	}
@@ -203,6 +210,7 @@ public class StatusOrStatement7Choice {
 		this.statusAdvice = statusAdvice;
 	}
 
+	@XmlElement(name = "Stmt", required = true)
 	public DocumentNumber13 getStatement() {
 		return statement;
 	}

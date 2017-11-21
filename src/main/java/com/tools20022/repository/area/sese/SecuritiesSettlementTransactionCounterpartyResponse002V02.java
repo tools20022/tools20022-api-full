@@ -29,9 +29,11 @@ import com.tools20022.repository.msg.TransactionIdentification7;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -65,9 +67,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.040.002.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestversionsubsetvariant
@@ -112,6 +111,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.040.002.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -123,6 +125,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesSettlementTransactionCounterpartyResponse002V02", propOrder = {"transactionIdentification", "responseStatus", "transactionDetails", "supplementaryData"})
 public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +164,14 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionIdentification7.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionCounterpartyResponse002V02.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ResponseStatus8Choice responseStatus;
@@ -199,6 +211,14 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 			minOccurs = 1;
 			complexType_lazy = () -> ResponseStatus8Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionCounterpartyResponse002V02.class.getMethod("getResponseStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionDetails92 transactionDetails;
 	/**
@@ -233,6 +253,14 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TransactionDetails92.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionCounterpartyResponse002V02.class.getMethod("getTransactionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -271,6 +299,14 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementTransactionCounterpartyResponse002V02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -284,8 +320,10 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxCtrPtyRspn";
 				businessArea_lazy = () -> SecuritiesSettlementLatestversionsubsetvariant.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionCounterpartyResponse002V02.mmTransactionIdentification, SecuritiesSettlementTransactionCounterpartyResponse002V02.mmResponseStatus,
-						SecuritiesSettlementTransactionCounterpartyResponse002V02.mmTransactionDetails, SecuritiesSettlementTransactionCounterpartyResponse002V02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponse002V02.mmTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponse002V02.mmResponseStatus,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponse002V02.mmTransactionDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponse002V02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -295,10 +333,16 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesSettlementTransactionCounterpartyResponse002V02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentification7 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -307,6 +351,7 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "RspnSts", required = true)
 	public ResponseStatus8Choice getResponseStatus() {
 		return responseStatus;
 	}
@@ -315,6 +360,7 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 		this.responseStatus = responseStatus;
 	}
 
+	@XmlElement(name = "TxDtls")
 	public TransactionDetails92 getTransactionDetails() {
 		return transactionDetails;
 	}
@@ -323,11 +369,18 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 		this.transactionDetails = transactionDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.040.02.02")
+	static public class Document {
+		@XmlElement(name = "SctiesSttlmTxCtrPtyRspn", required = true)
+		public SecuritiesSettlementTransactionCounterpartyResponse002V02 messageBody;
 	}
 }

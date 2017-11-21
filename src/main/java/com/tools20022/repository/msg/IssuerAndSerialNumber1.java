@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Certificate issuer name and serial number (see X.509).
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Certificate issuer name and serial number  (see X.509)."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IssuerAndSerialNumber1", propOrder = {"issuer", "serialNumber"})
 public class IssuerAndSerialNumber1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -157,6 +163,7 @@ public class IssuerAndSerialNumber1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public CertificateIssuer1 getIssuer() {
 		return issuer;
 	}
@@ -165,6 +172,7 @@ public class IssuerAndSerialNumber1 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "SrlNb", required = true)
 	public Max35Binary getSerialNumber() {
 		return serialNumber;
 	}

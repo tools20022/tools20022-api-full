@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment processes required to transfer cash from the debtor to the creditor.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Transaction3", propOrder = {"paymentTo", "paymentFrom", "creditDebitIndicator", "payment", "accountEntry"})
 public class Transaction3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -330,6 +336,7 @@ public class Transaction3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtTo")
 	public SystemDetails2 getPaymentTo() {
 		return paymentTo;
 	}
@@ -338,6 +345,7 @@ public class Transaction3 {
 		this.paymentTo = paymentTo;
 	}
 
+	@XmlElement(name = "PmtFr")
 	public SystemDetails2 getPaymentFrom() {
 		return paymentFrom;
 	}
@@ -346,6 +354,7 @@ public class Transaction3 {
 		this.paymentFrom = paymentFrom;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -354,6 +363,7 @@ public class Transaction3 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Pmt")
 	public PaymentDetails5 getPayment() {
 		return payment;
 	}
@@ -362,6 +372,7 @@ public class Transaction3 {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "AcctNtry")
 	public AccountCashEntryDetails3 getAccountEntry() {
 		return accountEntry;
 	}

@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information describing how the voting process is organised.
@@ -129,6 +133,10 @@ import java.util.List;
  * definition} = "Information describing how the voting process is organised."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "VoteParameters2", propOrder = {"securitiesQuantityRequiredToVote", "partialVoteAllowed", "splitVoteAllowed", "voteDeadline", "voteSTPDeadline", "voteMarketDeadline", "voteMethods", "votingBallotElectronicAddress",
+		"votingBallotRequestAddress", "revocabilityDeadline", "revocabilitySTPDeadline", "revocabilityMarketDeadline", "beneficialOwnerDisclosure", "voteInstructionType", "incentivePremium", "voteWithPremiumDeadline",
+		"voteWithPremiumSTPDeadline", "voteWithPremiumMarketDeadline", "additionalVotingRequirements"})
 public class VoteParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1102,6 +1110,7 @@ public class VoteParameters2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesQtyReqrdToVote")
 	public DecimalNumber getSecuritiesQuantityRequiredToVote() {
 		return securitiesQuantityRequiredToVote;
 	}
@@ -1110,6 +1119,7 @@ public class VoteParameters2 {
 		this.securitiesQuantityRequiredToVote = securitiesQuantityRequiredToVote;
 	}
 
+	@XmlElement(name = "PrtlVoteAllwd", required = true)
 	public YesNoIndicator getPartialVoteAllowed() {
 		return partialVoteAllowed;
 	}
@@ -1118,6 +1128,7 @@ public class VoteParameters2 {
 		this.partialVoteAllowed = partialVoteAllowed;
 	}
 
+	@XmlElement(name = "SpltVoteAllwd", required = true)
 	public YesNoIndicator getSplitVoteAllowed() {
 		return splitVoteAllowed;
 	}
@@ -1126,6 +1137,7 @@ public class VoteParameters2 {
 		this.splitVoteAllowed = splitVoteAllowed;
 	}
 
+	@XmlElement(name = "VoteDdln")
 	public DateFormat2Choice getVoteDeadline() {
 		return voteDeadline;
 	}
@@ -1134,6 +1146,7 @@ public class VoteParameters2 {
 		this.voteDeadline = voteDeadline;
 	}
 
+	@XmlElement(name = "VoteSTPDdln")
 	public DateFormat2Choice getVoteSTPDeadline() {
 		return voteSTPDeadline;
 	}
@@ -1142,6 +1155,7 @@ public class VoteParameters2 {
 		this.voteSTPDeadline = voteSTPDeadline;
 	}
 
+	@XmlElement(name = "VoteMktDdln")
 	public DateFormat2Choice getVoteMarketDeadline() {
 		return voteMarketDeadline;
 	}
@@ -1150,6 +1164,7 @@ public class VoteParameters2 {
 		this.voteMarketDeadline = voteMarketDeadline;
 	}
 
+	@XmlElement(name = "VoteMthds")
 	public VoteMethods getVoteMethods() {
 		return voteMethods;
 	}
@@ -1158,6 +1173,7 @@ public class VoteParameters2 {
 		this.voteMethods = voteMethods;
 	}
 
+	@XmlElement(name = "VtngBlltElctrncAdr")
 	public CommunicationAddress4 getVotingBallotElectronicAddress() {
 		return votingBallotElectronicAddress;
 	}
@@ -1166,6 +1182,7 @@ public class VoteParameters2 {
 		this.votingBallotElectronicAddress = votingBallotElectronicAddress;
 	}
 
+	@XmlElement(name = "VtngBlltReqAdr")
 	public PostalAddress1 getVotingBallotRequestAddress() {
 		return votingBallotRequestAddress;
 	}
@@ -1174,6 +1191,7 @@ public class VoteParameters2 {
 		this.votingBallotRequestAddress = votingBallotRequestAddress;
 	}
 
+	@XmlElement(name = "RvcbltyDdln")
 	public DateFormat2Choice getRevocabilityDeadline() {
 		return revocabilityDeadline;
 	}
@@ -1182,6 +1200,7 @@ public class VoteParameters2 {
 		this.revocabilityDeadline = revocabilityDeadline;
 	}
 
+	@XmlElement(name = "RvcbltySTPDdln")
 	public DateFormat2Choice getRevocabilitySTPDeadline() {
 		return revocabilitySTPDeadline;
 	}
@@ -1190,6 +1209,7 @@ public class VoteParameters2 {
 		this.revocabilitySTPDeadline = revocabilitySTPDeadline;
 	}
 
+	@XmlElement(name = "RvcbltyMktDdln")
 	public DateFormat2Choice getRevocabilityMarketDeadline() {
 		return revocabilityMarketDeadline;
 	}
@@ -1198,6 +1218,7 @@ public class VoteParameters2 {
 		this.revocabilityMarketDeadline = revocabilityMarketDeadline;
 	}
 
+	@XmlElement(name = "BnfclOwnrDsclsr", required = true)
 	public YesNoIndicator getBeneficialOwnerDisclosure() {
 		return beneficialOwnerDisclosure;
 	}
@@ -1206,6 +1227,7 @@ public class VoteParameters2 {
 		this.beneficialOwnerDisclosure = beneficialOwnerDisclosure;
 	}
 
+	@XmlElement(name = "VoteInstrTp")
 	public List<VoteInstruction2Code> getVoteInstructionType() {
 		return voteInstructionType;
 	}
@@ -1214,6 +1236,7 @@ public class VoteParameters2 {
 		this.voteInstructionType = voteInstructionType;
 	}
 
+	@XmlElement(name = "IncntivPrm")
 	public IncentivePremium3 getIncentivePremium() {
 		return incentivePremium;
 	}
@@ -1222,6 +1245,7 @@ public class VoteParameters2 {
 		this.incentivePremium = incentivePremium;
 	}
 
+	@XmlElement(name = "VoteWthPrmDdln")
 	public DateFormat2Choice getVoteWithPremiumDeadline() {
 		return voteWithPremiumDeadline;
 	}
@@ -1230,6 +1254,7 @@ public class VoteParameters2 {
 		this.voteWithPremiumDeadline = voteWithPremiumDeadline;
 	}
 
+	@XmlElement(name = "VoteWthPrmSTPDdln")
 	public DateFormat2Choice getVoteWithPremiumSTPDeadline() {
 		return voteWithPremiumSTPDeadline;
 	}
@@ -1238,6 +1263,7 @@ public class VoteParameters2 {
 		this.voteWithPremiumSTPDeadline = voteWithPremiumSTPDeadline;
 	}
 
+	@XmlElement(name = "VoteWthPrmMktDdln")
 	public DateFormat2Choice getVoteWithPremiumMarketDeadline() {
 		return voteWithPremiumMarketDeadline;
 	}
@@ -1246,6 +1272,7 @@ public class VoteParameters2 {
 		this.voteWithPremiumMarketDeadline = voteWithPremiumMarketDeadline;
 	}
 
+	@XmlElement(name = "AddtlVtngRqrmnts")
 	public Max350Text getAdditionalVotingRequirements() {
 		return additionalVotingRequirements;
 	}

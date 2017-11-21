@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Subbalances providing additional information on a specific position but that
@@ -91,6 +95,8 @@ import java.util.List;
  * AdditionalBalanceInformation5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalBalanceInformation9", propOrder = {"subBalanceType", "quantity", "subBalanceAdditionalDetails", "quantityBreakdown"})
 public class AdditionalBalanceInformation9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -305,6 +311,7 @@ public class AdditionalBalanceInformation9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SubBalTp", required = true)
 	public SubBalanceType6Choice getSubBalanceType() {
 		return subBalanceType;
 	}
@@ -313,6 +320,7 @@ public class AdditionalBalanceInformation9 {
 		this.subBalanceType = subBalanceType;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public SubBalanceQuantity3Choice getQuantity() {
 		return quantity;
 	}
@@ -321,6 +329,7 @@ public class AdditionalBalanceInformation9 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "SubBalAddtlDtls")
 	public Max140Text getSubBalanceAdditionalDetails() {
 		return subBalanceAdditionalDetails;
 	}
@@ -329,6 +338,7 @@ public class AdditionalBalanceInformation9 {
 		this.subBalanceAdditionalDetails = subBalanceAdditionalDetails;
 	}
 
+	@XmlElement(name = "QtyBrkdwn")
 	public List<QuantityBreakdown13> getQuantityBreakdown() {
 		return quantityBreakdown;
 	}

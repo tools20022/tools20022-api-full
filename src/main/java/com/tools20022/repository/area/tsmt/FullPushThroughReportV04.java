@@ -25,9 +25,11 @@ import com.tools20022.repository.area.TradeServicesManagementPreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -46,9 +48,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.018.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementPreviousVersion
@@ -112,6 +111,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.018.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -134,6 +136,9 @@ import java.util.List;
  * FullPushThroughReportV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FullPushThroughReportV04", propOrder = {"reportIdentification", "transactionIdentification", "establishedBaselineIdentification", "transactionStatus", "userTransactionReference", "reportPurpose", "pushedThroughBaseline",
+		"buyerContactPerson", "sellerContactPerson", "buyerBankContactPerson", "sellerBankContactPerson", "otherBankContactPerson", "requestForAction"})
 public class FullPushThroughReportV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +190,14 @@ public class FullPushThroughReportV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FullPushThroughReportV04.class.getMethod("getReportIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -240,6 +253,14 @@ public class FullPushThroughReportV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FullPushThroughReportV04.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
@@ -293,6 +314,14 @@ public class FullPushThroughReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FullPushThroughReportV04.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionStatus4 transactionStatus;
 	/**
@@ -343,6 +372,14 @@ public class FullPushThroughReportV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FullPushThroughReportV04.class.getMethod("getTransactionStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<DocumentIdentification5> userTransactionReference;
@@ -397,6 +434,14 @@ public class FullPushThroughReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FullPushThroughReportV04.class.getMethod("getUserTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ReportType1 reportPurpose;
 	/**
@@ -445,6 +490,14 @@ public class FullPushThroughReportV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ReportType1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FullPushThroughReportV04.class.getMethod("getReportPurpose", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Baseline4 pushedThroughBaseline;
@@ -496,6 +549,14 @@ public class FullPushThroughReportV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> Baseline4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FullPushThroughReportV04.class.getMethod("getPushedThroughBaseline", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ContactIdentification1> buyerContactPerson;
 	/**
@@ -545,6 +606,14 @@ public class FullPushThroughReportV04 {
 			previousVersion_lazy = () -> FullPushThroughReportV03.mmBuyerContactPerson;
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FullPushThroughReportV04.class.getMethod("getBuyerContactPerson", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<ContactIdentification1> sellerContactPerson;
@@ -596,6 +665,14 @@ public class FullPushThroughReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FullPushThroughReportV04.class.getMethod("getSellerContactPerson", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ContactIdentification1> buyerBankContactPerson;
 	/**
@@ -645,6 +722,14 @@ public class FullPushThroughReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FullPushThroughReportV04.class.getMethod("getBuyerBankContactPerson", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ContactIdentification1> sellerBankContactPerson;
 	/**
@@ -693,6 +778,14 @@ public class FullPushThroughReportV04 {
 			previousVersion_lazy = () -> FullPushThroughReportV03.mmSellerBankContactPerson;
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FullPushThroughReportV04.class.getMethod("getSellerBankContactPerson", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<ContactIdentification3> otherBankContactPerson;
@@ -745,6 +838,14 @@ public class FullPushThroughReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FullPushThroughReportV04.class.getMethod("getOtherBankContactPerson", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PendingActivity2 requestForAction;
 	/**
@@ -795,6 +896,14 @@ public class FullPushThroughReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FullPushThroughReportV04.class.getMethod("getRequestForAction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -809,10 +918,13 @@ public class FullPushThroughReportV04 {
 				rootElement = "Document";
 				xmlTag = "FullPushThrghRpt";
 				businessArea_lazy = () -> TradeServicesManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FullPushThroughReportV04.mmReportIdentification, FullPushThroughReportV04.mmTransactionIdentification, FullPushThroughReportV04.mmEstablishedBaselineIdentification,
-						FullPushThroughReportV04.mmTransactionStatus, FullPushThroughReportV04.mmUserTransactionReference, FullPushThroughReportV04.mmReportPurpose, FullPushThroughReportV04.mmPushedThroughBaseline,
-						FullPushThroughReportV04.mmBuyerContactPerson, FullPushThroughReportV04.mmSellerContactPerson, FullPushThroughReportV04.mmBuyerBankContactPerson, FullPushThroughReportV04.mmSellerBankContactPerson,
-						FullPushThroughReportV04.mmOtherBankContactPerson, FullPushThroughReportV04.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmReportIdentification, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmUserTransactionReference, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmReportPurpose,
+						com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmPushedThroughBaseline, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmBuyerContactPerson,
+						com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmSellerContactPerson, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmBuyerBankContactPerson,
+						com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmSellerBankContactPerson, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmOtherBankContactPerson,
+						com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -822,10 +934,16 @@ public class FullPushThroughReportV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FullPushThroughReportV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptId", required = true)
 	public MessageIdentification1 getReportIdentification() {
 		return reportIdentification;
 	}
@@ -834,6 +952,7 @@ public class FullPushThroughReportV04 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -842,6 +961,7 @@ public class FullPushThroughReportV04 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "EstblishdBaselnId")
 	public DocumentIdentification3 getEstablishedBaselineIdentification() {
 		return establishedBaselineIdentification;
 	}
@@ -850,6 +970,7 @@ public class FullPushThroughReportV04 {
 		this.establishedBaselineIdentification = establishedBaselineIdentification;
 	}
 
+	@XmlElement(name = "TxSts", required = true)
 	public TransactionStatus4 getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -858,6 +979,7 @@ public class FullPushThroughReportV04 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "UsrTxRef")
 	public List<DocumentIdentification5> getUserTransactionReference() {
 		return userTransactionReference;
 	}
@@ -866,6 +988,7 @@ public class FullPushThroughReportV04 {
 		this.userTransactionReference = userTransactionReference;
 	}
 
+	@XmlElement(name = "RptPurp", required = true)
 	public ReportType1 getReportPurpose() {
 		return reportPurpose;
 	}
@@ -874,6 +997,7 @@ public class FullPushThroughReportV04 {
 		this.reportPurpose = reportPurpose;
 	}
 
+	@XmlElement(name = "PushdThrghBaseln", required = true)
 	public Baseline4 getPushedThroughBaseline() {
 		return pushedThroughBaseline;
 	}
@@ -882,6 +1006,7 @@ public class FullPushThroughReportV04 {
 		this.pushedThroughBaseline = pushedThroughBaseline;
 	}
 
+	@XmlElement(name = "BuyrCtctPrsn")
 	public List<ContactIdentification1> getBuyerContactPerson() {
 		return buyerContactPerson;
 	}
@@ -890,6 +1015,7 @@ public class FullPushThroughReportV04 {
 		this.buyerContactPerson = buyerContactPerson;
 	}
 
+	@XmlElement(name = "SellrCtctPrsn")
 	public List<ContactIdentification1> getSellerContactPerson() {
 		return sellerContactPerson;
 	}
@@ -898,6 +1024,7 @@ public class FullPushThroughReportV04 {
 		this.sellerContactPerson = sellerContactPerson;
 	}
 
+	@XmlElement(name = "BuyrBkCtctPrsn")
 	public List<ContactIdentification1> getBuyerBankContactPerson() {
 		return buyerBankContactPerson;
 	}
@@ -906,6 +1033,7 @@ public class FullPushThroughReportV04 {
 		this.buyerBankContactPerson = buyerBankContactPerson;
 	}
 
+	@XmlElement(name = "SellrBkCtctPrsn")
 	public List<ContactIdentification1> getSellerBankContactPerson() {
 		return sellerBankContactPerson;
 	}
@@ -914,6 +1042,7 @@ public class FullPushThroughReportV04 {
 		this.sellerBankContactPerson = sellerBankContactPerson;
 	}
 
+	@XmlElement(name = "OthrBkCtctPrsn")
 	public List<ContactIdentification3> getOtherBankContactPerson() {
 		return otherBankContactPerson;
 	}
@@ -922,11 +1051,18 @@ public class FullPushThroughReportV04 {
 		this.otherBankContactPerson = otherBankContactPerson;
 	}
 
+	@XmlElement(name = "ReqForActn")
 	public PendingActivity2 getRequestForAction() {
 		return requestForAction;
 	}
 
 	public void setRequestForAction(PendingActivity2 requestForAction) {
 		this.requestForAction = requestForAction;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.018.04.04")
+	static public class Document {
+		@XmlElement(name = "FullPushThrghRpt", required = true)
+		public FullPushThroughReportV04 messageBody;
 	}
 }

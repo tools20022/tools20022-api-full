@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.SupplementaryDataEnvelope1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the investigation results.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the investigation results."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestigationResult1Choice", propOrder = {"result", "investigationStatus"})
 public class InvestigationResult1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +165,7 @@ public class InvestigationResult1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rslt", required = true)
 	public SupplementaryDataEnvelope1 getResult() {
 		return result;
 	}
@@ -167,6 +174,7 @@ public class InvestigationResult1Choice {
 		this.result = result;
 	}
 
+	@XmlElement(name = "InvstgtnSts", required = true)
 	public InvestigationStatus1Code getInvestigationStatus() {
 		return investigationStatus;
 	}

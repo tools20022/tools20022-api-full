@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money due to the government or tax authority, according to various
@@ -74,6 +78,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Tax12", propOrder = {"type", "otherTaxType", "amount"})
 public class Tax12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -276,6 +282,7 @@ public class Tax12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TaxType9Code getType() {
 		return type;
 	}
@@ -284,6 +291,7 @@ public class Tax12 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "OthrTaxTp", required = true)
 	public Max35Text getOtherTaxType() {
 		return otherTaxType;
 	}
@@ -292,6 +300,7 @@ public class Tax12 {
 		this.otherTaxType = otherTaxType;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}

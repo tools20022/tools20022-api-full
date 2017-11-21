@@ -67,6 +67,11 @@ public class IndividualInvestor extends InvestmentAccountPartyRole {
 				definition = "Individual person which makes investment decisions in relation with its investment account.";
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IndividualInvestor.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

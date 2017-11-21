@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.StandingOrder4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the standing order details or an operational error when the
@@ -66,6 +70,8 @@ import java.util.List;
  * StandingOrderOrError1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingOrderOrError3Choice", propOrder = {"report", "operationalError"})
 public class StandingOrderOrError3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class StandingOrderOrError3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rpt", required = true)
 	public List<StandingOrder4> getReport() {
 		return report;
 	}
@@ -188,6 +195,7 @@ public class StandingOrderOrError3Choice {
 		this.report = report;
 	}
 
+	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling4> getOperationalError() {
 		return operationalError;
 	}

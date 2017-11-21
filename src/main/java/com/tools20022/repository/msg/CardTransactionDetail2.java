@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the card transaction.
@@ -89,6 +93,8 @@ import java.util.List;
  * CardTransactionDetail1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransactionDetail2", propOrder = {"transactionAmounts", "additionalAmounts", "accountAndBalance", "transactionVerificationResult", "validityDate", "ICCRelatedData"})
 public class CardTransactionDetail2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -483,6 +489,7 @@ public class CardTransactionDetail2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxAmts", required = true)
 	public CardTransactionAmount2 getTransactionAmounts() {
 		return transactionAmounts;
 	}
@@ -491,6 +498,7 @@ public class CardTransactionDetail2 {
 		this.transactionAmounts = transactionAmounts;
 	}
 
+	@XmlElement(name = "AddtlAmts")
 	public List<DetailedAmount10> getAdditionalAmounts() {
 		return additionalAmounts;
 	}
@@ -499,6 +507,7 @@ public class CardTransactionDetail2 {
 		this.additionalAmounts = additionalAmounts;
 	}
 
+	@XmlElement(name = "AcctAndBal")
 	public List<CardAccount2> getAccountAndBalance() {
 		return accountAndBalance;
 	}
@@ -507,6 +516,7 @@ public class CardTransactionDetail2 {
 		this.accountAndBalance = accountAndBalance;
 	}
 
+	@XmlElement(name = "TxVrfctnRslt")
 	public List<TransactionVerificationResult4> getTransactionVerificationResult() {
 		return transactionVerificationResult;
 	}
@@ -515,6 +525,7 @@ public class CardTransactionDetail2 {
 		this.transactionVerificationResult = transactionVerificationResult;
 	}
 
+	@XmlElement(name = "VldtyDt")
 	public ISODate getValidityDate() {
 		return validityDate;
 	}
@@ -523,6 +534,7 @@ public class CardTransactionDetail2 {
 		this.validityDate = validityDate;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}

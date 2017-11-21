@@ -24,8 +24,10 @@ import com.tools20022.repository.choice.StandingInstructionStatus1Choice;
 import com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1;
 import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -42,9 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.027.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -105,6 +104,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.027.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -116,6 +118,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgentCAStandingInstructionStatusAdviceV01", propOrder = {"identification", "agentCAStandingInstructionRequestIdentification", "agentCAStandingInstructionCancellationRequestIdentification",
+		"standingInstructionGeneralInformation", "standingInstructionRequestStatus", "standingInstructionCancellationRequestStatus"})
 public class AgentCAStandingInstructionStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -126,6 +131,10 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01
+	 * AgentCAStandingInstructionStatusAdviceV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -140,10 +149,6 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	 * mmAgentCAStandingInstructionCancellationRequestIdentification}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01
-	 * AgentCAStandingInstructionStatusAdviceV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -164,9 +169,9 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstructionRequestIdentificationOrStandingInstructionCancellationIdentificationRule";
 			definition = "Either AgentCAStandingInstructionRequestIdentification or AgentCAStandingInstructionCancellationRequestIdentification must be present, but not both.";
-			messageDefinition_lazy = () -> AgentCAStandingInstructionStatusAdviceV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionRequestIdentification,
-					AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionCancellationRequestIdentification);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionRequestIdentification,
+					com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionCancellationRequestIdentification);
 		}
 	};
 	/**
@@ -176,6 +181,10 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01
+	 * AgentCAStandingInstructionStatusAdviceV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -190,10 +199,6 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	 * mmStandingInstructionCancellationRequestStatus}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01
-	 * AgentCAStandingInstructionStatusAdviceV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -214,8 +219,9 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstructionRequestStatusOrStandingInstructionCancellationRequestStatusRule";
 			definition = "Either StandingInstructionRequestStatus or StandingInstructionCancellationRequestStatus must be present, but not both.";
-			messageDefinition_lazy = () -> AgentCAStandingInstructionStatusAdviceV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestStatus, AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionCancellationRequestStatus);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestStatus,
+					com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionCancellationRequestStatus);
 		}
 	};
 	protected DocumentIdentification8 identification;
@@ -255,6 +261,14 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAStandingInstructionStatusAdviceV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification8 agentCAStandingInstructionRequestIdentification;
 	/**
@@ -292,6 +306,14 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAStandingInstructionStatusAdviceV01.class.getMethod("getAgentCAStandingInstructionRequestIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DocumentIdentification8 agentCAStandingInstructionCancellationRequestIdentification;
@@ -331,6 +353,14 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAStandingInstructionStatusAdviceV01.class.getMethod("getAgentCAStandingInstructionCancellationRequestIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionStandingInstructionGeneralInformation1 standingInstructionGeneralInformation;
 	/**
@@ -366,6 +396,14 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionStandingInstructionGeneralInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAStandingInstructionStatusAdviceV01.class.getMethod("getStandingInstructionGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected StandingInstructionStatus1Choice standingInstructionRequestStatus;
 	/**
@@ -400,6 +438,14 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> StandingInstructionStatus1Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAStandingInstructionStatusAdviceV01.class.getMethod("getStandingInstructionRequestStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected StandingInstructionCancellationStatus1Choice standingInstructionCancellationRequestStatus;
@@ -439,6 +485,14 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> StandingInstructionCancellationStatus1Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAStandingInstructionStatusAdviceV01.class.getMethod("getStandingInstructionCancellationRequestStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -448,14 +502,17 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 				name = "AgentCAStandingInstructionStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent by an issuer (or its agent) to the CSD to report the status, or a change in status, of a standing instruction request or the status of a standing instruction cancellation request.\r\nUsage\r\nWhen this message is used to report the status of a standing instruction request, the building block Standing Instruction Request Identification must be present.\r\nWhen this message is used to report the status of a standing instruction cancellation request, the building block Standing Instruction Cancellation Request Identification must be present.";
 				messageSet_lazy = () -> Arrays.asList(IssuersAgentsCommunicationISOLatestversion.mmObject());
-				xors_lazy = () -> Arrays.asList(AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestIdentificationOrStandingInstructionCancellationIdentificationRule,
-						AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestStatusOrStandingInstructionCancellationRequestStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestIdentificationOrStandingInstructionCancellationIdentificationRule,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestStatusOrStandingInstructionCancellationRequestStatusRule);
 				rootElement = "Document";
 				xmlTag = "AgtCAStgInstrStsAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAStandingInstructionStatusAdviceV01.mmIdentification, AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionRequestIdentification,
-						AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionCancellationRequestIdentification, AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionGeneralInformation,
-						AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestStatus, AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionCancellationRequestStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionRequestIdentification,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionCancellationRequestIdentification,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionGeneralInformation,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestStatus,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionCancellationRequestStatus);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -465,10 +522,16 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AgentCAStandingInstructionStatusAdviceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
@@ -477,6 +540,7 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AgtCAStgInstrReqId", required = true)
 	public DocumentIdentification8 getAgentCAStandingInstructionRequestIdentification() {
 		return agentCAStandingInstructionRequestIdentification;
 	}
@@ -485,6 +549,7 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 		this.agentCAStandingInstructionRequestIdentification = agentCAStandingInstructionRequestIdentification;
 	}
 
+	@XmlElement(name = "AgtCAStgInstrCxlReqId", required = true)
 	public DocumentIdentification8 getAgentCAStandingInstructionCancellationRequestIdentification() {
 		return agentCAStandingInstructionCancellationRequestIdentification;
 	}
@@ -493,6 +558,7 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 		this.agentCAStandingInstructionCancellationRequestIdentification = agentCAStandingInstructionCancellationRequestIdentification;
 	}
 
+	@XmlElement(name = "StgInstrGnlInf", required = true)
 	public CorporateActionStandingInstructionGeneralInformation1 getStandingInstructionGeneralInformation() {
 		return standingInstructionGeneralInformation;
 	}
@@ -501,6 +567,7 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 		this.standingInstructionGeneralInformation = standingInstructionGeneralInformation;
 	}
 
+	@XmlElement(name = "StgInstrReqSts", required = true)
 	public StandingInstructionStatus1Choice getStandingInstructionRequestStatus() {
 		return standingInstructionRequestStatus;
 	}
@@ -509,11 +576,18 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 		this.standingInstructionRequestStatus = standingInstructionRequestStatus;
 	}
 
+	@XmlElement(name = "StgInstrCxlReqSts", required = true)
 	public StandingInstructionCancellationStatus1Choice getStandingInstructionCancellationRequestStatus() {
 		return standingInstructionCancellationRequestStatus;
 	}
 
 	public void setStandingInstructionCancellationRequestStatus(StandingInstructionCancellationStatus1Choice standingInstructionCancellationRequestStatus) {
 		this.standingInstructionCancellationRequestStatus = standingInstructionCancellationRequestStatus;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.027.01.01")
+	static public class Document {
+		@XmlElement(name = "AgtCAStgInstrStsAdvc", required = true)
+		public AgentCAStandingInstructionStatusAdviceV01 messageBody;
 	}
 }

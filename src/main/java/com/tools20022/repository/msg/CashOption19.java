@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the cash option.
@@ -88,6 +92,8 @@ import java.util.function.Supplier;
  * CashOption5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashOption19", propOrder = {"creditDebitIndicator", "account", "postingDate", "originalPostingDate", "valueDate", "postingAmount"})
 public class CashOption19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -454,6 +460,7 @@ public class CashOption19 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -462,6 +469,7 @@ public class CashOption19 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Acct")
 	public Account8Choice getAccount() {
 		return account;
 	}
@@ -470,6 +478,7 @@ public class CashOption19 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "PstngDt", required = true)
 	public DateAndDateTimeChoice getPostingDate() {
 		return postingDate;
 	}
@@ -478,6 +487,7 @@ public class CashOption19 {
 		this.postingDate = postingDate;
 	}
 
+	@XmlElement(name = "OrgnlPstngDt")
 	public DateAndDateTimeChoice getOriginalPostingDate() {
 		return originalPostingDate;
 	}
@@ -486,6 +496,7 @@ public class CashOption19 {
 		this.originalPostingDate = originalPostingDate;
 	}
 
+	@XmlElement(name = "ValDt")
 	public DateAndDateTimeChoice getValueDate() {
 		return valueDate;
 	}
@@ -494,6 +505,7 @@ public class CashOption19 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "PstngAmt", required = true)
 	public ActiveCurrencyAndAmount getPostingAmount() {
 		return postingAmount;
 	}

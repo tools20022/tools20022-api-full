@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SourceOfPrice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money for which goods or services are offered, sold, or bought.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceInformation9", propOrder = {"value", "quotationDate", "priceCalculationPeriod", "sourceOfPrice"})
 public class PriceInformation9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -327,6 +333,7 @@ public class PriceInformation9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public Price4 getValue() {
 		return value;
 	}
@@ -335,6 +342,7 @@ public class PriceInformation9 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "QtnDt")
 	public DateAndDateTime1Choice getQuotationDate() {
 		return quotationDate;
 	}
@@ -343,6 +351,7 @@ public class PriceInformation9 {
 		this.quotationDate = quotationDate;
 	}
 
+	@XmlElement(name = "PricClctnPrd")
 	public DateTimePeriodChoice getPriceCalculationPeriod() {
 		return priceCalculationPeriod;
 	}
@@ -351,6 +360,7 @@ public class PriceInformation9 {
 		this.priceCalculationPeriod = priceCalculationPeriod;
 	}
 
+	@XmlElement(name = "SrcOfPric")
 	public MarketIdentification77 getSourceOfPrice() {
 		return sourceOfPrice;
 	}

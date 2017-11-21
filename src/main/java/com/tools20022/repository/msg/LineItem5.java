@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Commercial details of a trade transaction between a buyer and a seller.
@@ -93,6 +97,9 @@ import java.util.List;
  * "Commercial details of a trade transaction between a buyer and a seller."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LineItem5", propOrder = {"goodsDescription", "partialShipment", "transShipment", "latestShipmentDate", "lineItemDetails", "lineItemsTotalAmount", "routingSummary", "incoterms", "adjustment", "freightCharges", "tax",
+		"totalNetAmount", "buyerDefinedInformation", "sellerDefinedInformation"})
 public class LineItem5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -763,6 +770,7 @@ public class LineItem5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GoodsDesc")
 	public Max70Text getGoodsDescription() {
 		return goodsDescription;
 	}
@@ -771,6 +779,7 @@ public class LineItem5 {
 		this.goodsDescription = goodsDescription;
 	}
 
+	@XmlElement(name = "PrtlShipmnt", required = true)
 	public YesNoIndicator getPartialShipment() {
 		return partialShipment;
 	}
@@ -779,6 +788,7 @@ public class LineItem5 {
 		this.partialShipment = partialShipment;
 	}
 
+	@XmlElement(name = "TrnsShipmnt")
 	public YesNoIndicator getTransShipment() {
 		return transShipment;
 	}
@@ -787,6 +797,7 @@ public class LineItem5 {
 		this.transShipment = transShipment;
 	}
 
+	@XmlElement(name = "LatstShipmntDt")
 	public ISODate getLatestShipmentDate() {
 		return latestShipmentDate;
 	}
@@ -795,6 +806,7 @@ public class LineItem5 {
 		this.latestShipmentDate = latestShipmentDate;
 	}
 
+	@XmlElement(name = "LineItmDtls", required = true)
 	public List<LineItemDetails4> getLineItemDetails() {
 		return lineItemDetails;
 	}
@@ -803,6 +815,7 @@ public class LineItem5 {
 		this.lineItemDetails = lineItemDetails;
 	}
 
+	@XmlElement(name = "LineItmsTtlAmt", required = true)
 	public CurrencyAndAmount getLineItemsTotalAmount() {
 		return lineItemsTotalAmount;
 	}
@@ -811,6 +824,7 @@ public class LineItem5 {
 		this.lineItemsTotalAmount = lineItemsTotalAmount;
 	}
 
+	@XmlElement(name = "RtgSummry")
 	public TransportMeans1Choice getRoutingSummary() {
 		return routingSummary;
 	}
@@ -819,6 +833,7 @@ public class LineItem5 {
 		this.routingSummary = routingSummary;
 	}
 
+	@XmlElement(name = "Incotrms")
 	public List<Incoterms1> getIncoterms() {
 		return incoterms;
 	}
@@ -827,6 +842,7 @@ public class LineItem5 {
 		this.incoterms = incoterms;
 	}
 
+	@XmlElement(name = "Adjstmnt")
 	public List<Adjustment3> getAdjustment() {
 		return adjustment;
 	}
@@ -835,6 +851,7 @@ public class LineItem5 {
 		this.adjustment = adjustment;
 	}
 
+	@XmlElement(name = "FrghtChrgs")
 	public Charge12 getFreightCharges() {
 		return freightCharges;
 	}
@@ -843,6 +860,7 @@ public class LineItem5 {
 		this.freightCharges = freightCharges;
 	}
 
+	@XmlElement(name = "Tax")
 	public List<Tax13> getTax() {
 		return tax;
 	}
@@ -851,6 +869,7 @@ public class LineItem5 {
 		this.tax = tax;
 	}
 
+	@XmlElement(name = "TtlNetAmt", required = true)
 	public CurrencyAndAmount getTotalNetAmount() {
 		return totalNetAmount;
 	}
@@ -859,6 +878,7 @@ public class LineItem5 {
 		this.totalNetAmount = totalNetAmount;
 	}
 
+	@XmlElement(name = "BuyrDfndInf")
 	public List<UserDefinedInformation1> getBuyerDefinedInformation() {
 		return buyerDefinedInformation;
 	}
@@ -867,6 +887,7 @@ public class LineItem5 {
 		this.buyerDefinedInformation = buyerDefinedInformation;
 	}
 
+	@XmlElement(name = "SellrDfndInf")
 	public List<UserDefinedInformation1> getSellerDefinedInformation() {
 		return sellerDefinedInformation;
 	}

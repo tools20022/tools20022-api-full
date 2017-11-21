@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.Collateral7;
 import com.tools20022.repository.msg.CollateralMovement6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the collateral movement direction that is a delivery and optionaly a
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CollateralMovement2Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralMovement3Choice", propOrder = {"collateralMovementDirection", "return"})
 public class CollateralMovement3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -224,6 +230,7 @@ public class CollateralMovement3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CollMvmntDrctn", required = true)
 	public CollateralMovement6 getCollateralMovementDirection() {
 		return collateralMovementDirection;
 	}
@@ -232,6 +239,7 @@ public class CollateralMovement3Choice {
 		this.collateralMovementDirection = collateralMovementDirection;
 	}
 
+	@XmlElement(name = "Rtr", required = true)
 	public Collateral7 getReturn() {
 		return return_;
 	}

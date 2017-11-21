@@ -31,17 +31,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxWithholdingMethod1Code
- * TaxWithholdingMethod1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxWithholdingMethod2Code
- * TaxWithholdingMethod2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxWithholdingMethod3Code
- * TaxWithholdingMethod3Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -71,6 +60,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TaxWithholdingMethodCode#mmMinorityInterestTax
  * TaxWithholdingMethodCode.mmMinorityInterestTax}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxWithholdingMethod1Code
+ * TaxWithholdingMethod1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxWithholdingMethod2Code
+ * TaxWithholdingMethod2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxWithholdingMethod3Code
+ * TaxWithholdingMethod3Code}</li>
  * </ul>
  * </li>
  * <li>

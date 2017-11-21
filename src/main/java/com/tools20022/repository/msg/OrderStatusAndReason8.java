@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status report of a bulk or multiple or switch order cancellation instruction
@@ -100,6 +104,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderStatusAndReason8", propOrder = {"masterReference", "status", "rejected", "statusInitiator"})
 public class OrderStatusAndReason8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -380,6 +386,7 @@ public class OrderStatusAndReason8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -388,6 +395,7 @@ public class OrderStatusAndReason8 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public OrderCancellationStatus1Code getStatus() {
 		return status;
 	}
@@ -396,6 +404,7 @@ public class OrderStatusAndReason8 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectedStatus7 getRejected() {
 		return rejected;
 	}
@@ -404,6 +413,7 @@ public class OrderStatusAndReason8 {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification2Choice getStatusInitiator() {
 		return statusInitiator;
 	}

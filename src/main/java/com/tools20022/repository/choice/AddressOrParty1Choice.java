@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.NameAndAddress10;
 import com.tools20022.repository.msg.PostalAddress6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of either address, or name and address.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of either address, or name and address."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AddressOrParty1Choice", propOrder = {"newAddress", "newBeneficiary"})
 public class AddressOrParty1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class AddressOrParty1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NewAdr", required = true)
 	public PostalAddress6 getNewAddress() {
 		return newAddress;
 	}
@@ -183,6 +190,7 @@ public class AddressOrParty1Choice {
 		this.newAddress = newAddress;
 	}
 
+	@XmlElement(name = "NewBnfcry", required = true)
 	public NameAndAddress10 getNewBeneficiary() {
 		return newBeneficiary;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies totals related to the invoice.
@@ -80,6 +84,8 @@ import java.util.List;
  * definition} = "Specifies totals related to the invoice."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ServiceCategoryTotals1", propOrder = {"accountIdentification", "billedCustomerIdentification", "totalTaxableAmount", "totalTaxAmount", "totalInvoiceAmount", "serviceCategory", "serviceItemTotals"})
 public class ServiceCategoryTotals1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -436,6 +442,7 @@ public class ServiceCategoryTotals1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId")
 	public AccountIdentification20Choice getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -444,6 +451,7 @@ public class ServiceCategoryTotals1 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "BlldCstmrId")
 	public BICFIIdentifier getBilledCustomerIdentification() {
 		return billedCustomerIdentification;
 	}
@@ -452,6 +460,7 @@ public class ServiceCategoryTotals1 {
 		this.billedCustomerIdentification = billedCustomerIdentification;
 	}
 
+	@XmlElement(name = "TtlTaxblAmt")
 	public ActiveCurrencyAndAmount getTotalTaxableAmount() {
 		return totalTaxableAmount;
 	}
@@ -460,6 +469,7 @@ public class ServiceCategoryTotals1 {
 		this.totalTaxableAmount = totalTaxableAmount;
 	}
 
+	@XmlElement(name = "TtlTaxAmt")
 	public ActiveCurrencyAndAmount getTotalTaxAmount() {
 		return totalTaxAmount;
 	}
@@ -468,6 +478,7 @@ public class ServiceCategoryTotals1 {
 		this.totalTaxAmount = totalTaxAmount;
 	}
 
+	@XmlElement(name = "TtlInvcAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalInvoiceAmount() {
 		return totalInvoiceAmount;
 	}
@@ -476,6 +487,7 @@ public class ServiceCategoryTotals1 {
 		this.totalInvoiceAmount = totalInvoiceAmount;
 	}
 
+	@XmlElement(name = "SvcCtgy", required = true)
 	public Max4AlphaNumericText getServiceCategory() {
 		return serviceCategory;
 	}
@@ -484,6 +496,7 @@ public class ServiceCategoryTotals1 {
 		this.serviceCategory = serviceCategory;
 	}
 
+	@XmlElement(name = "SvcItmTtls")
 	public List<ServiceItemTotals1> getServiceItemTotals() {
 		return serviceItemTotals;
 	}

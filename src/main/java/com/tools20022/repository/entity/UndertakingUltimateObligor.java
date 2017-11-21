@@ -38,6 +38,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingUltimateObligor#mmCashAccount
+ * UndertakingUltimateObligor.mmCashAccount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
+ * UndertakingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -55,18 +67,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Undertaking1.mmObligor}</li>
  * <li>{@linkplain com.tools20022.repository.msg.UndertakingAdvice2#mmObligor
  * UndertakingAdvice2.mmObligor}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
- * UndertakingPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingUltimateObligor#mmCashAccount
- * UndertakingUltimateObligor.mmCashAccount}</li>
  * </ul>
  * </li>
  * <li>
@@ -107,11 +107,6 @@ public class UndertakingUltimateObligor extends UndertakingPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingUltimateObligor
-	 * UndertakingUltimateObligor}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -126,6 +121,11 @@ public class UndertakingUltimateObligor extends UndertakingPartyRole {
 	 * Undertaking1.mmObligorSettlementAccount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.UndertakingUltimateObligor
+	 * UndertakingUltimateObligor}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -142,7 +142,7 @@ public class UndertakingUltimateObligor extends UndertakingPartyRole {
 	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmObligorLiabilityAccount, Undertaking1.mmObligorChargeAccount, Undertaking1.mmObligorSettlementAccount);
-			elementContext_lazy = () -> UndertakingUltimateObligor.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingUltimateObligor.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
@@ -165,7 +165,12 @@ public class UndertakingUltimateObligor extends UndertakingPartyRole {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmUltimateObligor);
 				derivationElement_lazy = () -> Arrays.asList(Undertaking1.mmObligor, UndertakingAdvice2.mmObligor);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(UndertakingUltimateObligor.mmCashAccount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UndertakingUltimateObligor.mmCashAccount);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UndertakingUltimateObligor.class;
 			}
 		});
 		return mmObject_lazy.get();

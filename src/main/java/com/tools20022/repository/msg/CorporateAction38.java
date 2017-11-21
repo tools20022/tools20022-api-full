@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Lottery;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the corporate action event.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information about the corporate action event."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateAction38", propOrder = {"dateDetails", "eventStage", "additionalBusinessProcessIndicator", "lotteryType"})
 public class CorporateAction38 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -294,6 +300,7 @@ public class CorporateAction38 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtDtls")
 	public CorporateActionDate54 getDateDetails() {
 		return dateDetails;
 	}
@@ -302,6 +309,7 @@ public class CorporateAction38 {
 		this.dateDetails = dateDetails;
 	}
 
+	@XmlElement(name = "EvtStag")
 	public CorporateActionEventStageFormat15Choice getEventStage() {
 		return eventStage;
 	}
@@ -310,6 +318,7 @@ public class CorporateAction38 {
 		this.eventStage = eventStage;
 	}
 
+	@XmlElement(name = "AddtlBizPrcInd")
 	public AdditionalBusinessProcessFormat13Choice getAdditionalBusinessProcessIndicator() {
 		return additionalBusinessProcessIndicator;
 	}
@@ -318,6 +327,7 @@ public class CorporateAction38 {
 		this.additionalBusinessProcessIndicator = additionalBusinessProcessIndicator;
 	}
 
+	@XmlElement(name = "LtryTp")
 	public LotteryTypeFormat5Choice getLotteryType() {
 		return lotteryType;
 	}

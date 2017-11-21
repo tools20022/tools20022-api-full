@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the collateral that will be substituted.
@@ -92,6 +96,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralSubstitution1", propOrder = {"collateralSubstitutionSequence", "substitutionRequirement", "collateralSubstitutionType", "standardSettlementInstructions", "otherCollateral", "cashCollateral",
+		"securitiesCollateral", "referenceDetails"})
 public class CollateralSubstitution1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -560,6 +567,7 @@ public class CollateralSubstitution1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CollSbstitnSeq", required = true)
 	public CollateralSubstitutionSequence1Code getCollateralSubstitutionSequence() {
 		return collateralSubstitutionSequence;
 	}
@@ -568,6 +576,7 @@ public class CollateralSubstitution1 {
 		this.collateralSubstitutionSequence = collateralSubstitutionSequence;
 	}
 
+	@XmlElement(name = "SbstitnRqrmnt", required = true)
 	public ActiveCurrencyAndAmount getSubstitutionRequirement() {
 		return substitutionRequirement;
 	}
@@ -576,6 +585,7 @@ public class CollateralSubstitution1 {
 		this.substitutionRequirement = substitutionRequirement;
 	}
 
+	@XmlElement(name = "CollSbstitnTp", required = true)
 	public CollateralSubstitutionType1Code getCollateralSubstitutionType() {
 		return collateralSubstitutionType;
 	}
@@ -584,6 +594,7 @@ public class CollateralSubstitution1 {
 		this.collateralSubstitutionType = collateralSubstitutionType;
 	}
 
+	@XmlElement(name = "StdSttlmInstrs")
 	public Max140Text getStandardSettlementInstructions() {
 		return standardSettlementInstructions;
 	}
@@ -592,6 +603,7 @@ public class CollateralSubstitution1 {
 		this.standardSettlementInstructions = standardSettlementInstructions;
 	}
 
+	@XmlElement(name = "OthrColl")
 	public List<OtherCollateral1> getOtherCollateral() {
 		return otherCollateral;
 	}
@@ -600,6 +612,7 @@ public class CollateralSubstitution1 {
 		this.otherCollateral = otherCollateral;
 	}
 
+	@XmlElement(name = "CshColl")
 	public List<CashCollateral1> getCashCollateral() {
 		return cashCollateral;
 	}
@@ -608,6 +621,7 @@ public class CollateralSubstitution1 {
 		this.cashCollateral = cashCollateral;
 	}
 
+	@XmlElement(name = "SctiesColl")
 	public List<SecuritiesCollateral1> getSecuritiesCollateral() {
 		return securitiesCollateral;
 	}
@@ -616,6 +630,7 @@ public class CollateralSubstitution1 {
 		this.securitiesCollateral = securitiesCollateral;
 	}
 
+	@XmlElement(name = "RefDtls")
 	public Reference17 getReferenceDetails() {
 		return referenceDetails;
 	}

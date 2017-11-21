@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max5000Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Value of the public component of a RSA key.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PublicRSAKey1", propOrder = {"modulus", "exponent"})
 public class PublicRSAKey1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class PublicRSAKey1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Mdlus", required = true)
 	public Max5000Binary getModulus() {
 		return modulus;
 	}
@@ -169,6 +176,7 @@ public class PublicRSAKey1 {
 		this.modulus = modulus;
 	}
 
+	@XmlElement(name = "Expnt", required = true)
 	public Max5000Binary getExponent() {
 		return exponent;
 	}

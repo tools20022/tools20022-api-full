@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the list of criteria to be returned in the contract registration
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContractRegistrationStatementCriteria1", propOrder = {"transactionJournal", "supportingDocumentJournal", "additionalSupportingDocumentJournal", "regulatoryRuleValidation"})
 public class ContractRegistrationStatementCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -265,6 +271,7 @@ public class ContractRegistrationStatementCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxJrnl")
 	public TrueFalseIndicator getTransactionJournal() {
 		return transactionJournal;
 	}
@@ -273,6 +280,7 @@ public class ContractRegistrationStatementCriteria1 {
 		this.transactionJournal = transactionJournal;
 	}
 
+	@XmlElement(name = "SpprtgDocJrnl")
 	public TrueFalseIndicator getSupportingDocumentJournal() {
 		return supportingDocumentJournal;
 	}
@@ -281,6 +289,7 @@ public class ContractRegistrationStatementCriteria1 {
 		this.supportingDocumentJournal = supportingDocumentJournal;
 	}
 
+	@XmlElement(name = "AddtlSpprtgDocJrnl")
 	public TrueFalseIndicator getAdditionalSupportingDocumentJournal() {
 		return additionalSupportingDocumentJournal;
 	}
@@ -289,6 +298,7 @@ public class ContractRegistrationStatementCriteria1 {
 		this.additionalSupportingDocumentJournal = additionalSupportingDocumentJournal;
 	}
 
+	@XmlElement(name = "RgltryRuleVldtn")
 	public TrueFalseIndicator getRegulatoryRuleValidation() {
 		return regulatoryRuleValidation;
 	}

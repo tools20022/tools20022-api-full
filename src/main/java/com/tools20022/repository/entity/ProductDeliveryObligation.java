@@ -37,6 +37,20 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductDeliveryObligation#mmProductDeliveryOffset
+ * ProductDeliveryObligation.mmProductDeliveryOffset}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductDeliveryObligation#mmCommercialTrade
+ * ProductDeliveryObligation.mmCommercialTrade}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Obligation
+ * Obligation}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -47,20 +61,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmObligation
  * ProductDelivery.mmObligation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Obligation
- * Obligation}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductDeliveryObligation#mmProductDeliveryOffset
- * ProductDeliveryObligation.mmProductDeliveryOffset}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductDeliveryObligation#mmCommercialTrade
- * ProductDeliveryObligation.mmCommercialTrade}</li>
  * </ul>
  * </li>
  * <li>
@@ -122,7 +122,7 @@ public class ProductDeliveryObligation extends Obligation {
 	 */
 	public static final MMBusinessAssociationEnd mmProductDeliveryOffset = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductDeliveryObligation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductDeliveryObligation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProductDeliveryOffset";
@@ -172,7 +172,7 @@ public class ProductDeliveryObligation extends Obligation {
 	 */
 	public static final MMBusinessAssociationEnd mmCommercialTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductDeliveryObligation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductDeliveryObligation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommercialTrade";
@@ -194,7 +194,12 @@ public class ProductDeliveryObligation extends Obligation {
 				definition = "Obligation for the seller  to deliver goods or services to the buyer.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CommercialTrade.mmProductDeliveryObligation, com.tools20022.repository.entity.ProductDelivery.mmObligation);
 				superType_lazy = () -> Obligation.mmObject();
-				element_lazy = () -> Arrays.asList(ProductDeliveryObligation.mmProductDeliveryOffset, ProductDeliveryObligation.mmCommercialTrade);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProductDeliveryObligation.mmProductDeliveryOffset, com.tools20022.repository.entity.ProductDeliveryObligation.mmCommercialTrade);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ProductDeliveryObligation.class;
 			}
 		});
 		return mmObject_lazy.get();

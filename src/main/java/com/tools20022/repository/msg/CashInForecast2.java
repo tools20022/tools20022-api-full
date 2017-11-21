@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cash movements into a fund as a result of investment funds transactions, eg,
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashInForecast2", propOrder = {"settlementDate", "subTotalAmount", "subTotalUnitsNumber", "exceptionalCashFlowIndicator"})
 public class CashInForecast2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -285,6 +291,7 @@ public class CashInForecast2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
@@ -293,6 +300,7 @@ public class CashInForecast2 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "SubTtlAmt")
 	public ActiveOrHistoricCurrencyAndAmount getSubTotalAmount() {
 		return subTotalAmount;
 	}
@@ -301,6 +309,7 @@ public class CashInForecast2 {
 		this.subTotalAmount = subTotalAmount;
 	}
 
+	@XmlElement(name = "SubTtlUnitsNb")
 	public FinancialInstrumentQuantity1 getSubTotalUnitsNumber() {
 		return subTotalUnitsNumber;
 	}
@@ -309,6 +318,7 @@ public class CashInForecast2 {
 		this.subTotalUnitsNumber = subTotalUnitsNumber;
 	}
 
+	@XmlElement(name = "XcptnlCshFlowInd")
 	public YesNoIndicator getExceptionalCashFlowIndicator() {
 		return exceptionalCashFlowIndicator;
 	}

@@ -34,6 +34,10 @@ import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a settlement party by a choice between a BIC or a name and
@@ -149,6 +153,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SettlementParties9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementParties29", propOrder = {"deliveryAgent", "intermediary", "receivingAgent", "beneficiaryInstitution"})
 public class SettlementParties29 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -376,6 +382,7 @@ public class SettlementParties29 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DlvryAgt")
 	public PartyIdentification73Choice getDeliveryAgent() {
 		return deliveryAgent;
 	}
@@ -384,6 +391,7 @@ public class SettlementParties29 {
 		this.deliveryAgent = deliveryAgent;
 	}
 
+	@XmlElement(name = "Intrmy")
 	public PartyIdentification73Choice getIntermediary() {
 		return intermediary;
 	}
@@ -392,6 +400,7 @@ public class SettlementParties29 {
 		this.intermediary = intermediary;
 	}
 
+	@XmlElement(name = "RcvgAgt", required = true)
 	public PartyIdentification73Choice getReceivingAgent() {
 		return receivingAgent;
 	}
@@ -400,6 +409,7 @@ public class SettlementParties29 {
 		this.receivingAgent = receivingAgent;
 	}
 
+	@XmlElement(name = "BnfcryInstn")
 	public PartyIdentification73Choice getBeneficiaryInstitution() {
 		return beneficiaryInstitution;
 	}

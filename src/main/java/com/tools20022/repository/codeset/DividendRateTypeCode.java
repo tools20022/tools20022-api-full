@@ -29,25 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code
- * GrossDividendRateType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.NetDividendRateType1Code
- * NetDividendRateType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DividendRateType1Code
- * DividendRateType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.GrossDividendRateType3Code
- * GrossDividendRateType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.NetDividendRateType3Code
- * NetDividendRateType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.GrossDividendRateType2Code
- * GrossDividendRateType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code
- * NetDividendRateType2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -92,6 +73,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#mmRealEstatePropertyIncomePortion
  * DividendRateTypeCode.mmRealEstatePropertyIncomePortion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code
+ * GrossDividendRateType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NetDividendRateType1Code
+ * NetDividendRateType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DividendRateType1Code
+ * DividendRateType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.GrossDividendRateType3Code
+ * GrossDividendRateType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NetDividendRateType3Code
+ * NetDividendRateType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.GrossDividendRateType2Code
+ * GrossDividendRateType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code
+ * NetDividendRateType2Code}</li>
  * </ul>
  * </li>
  * <li>

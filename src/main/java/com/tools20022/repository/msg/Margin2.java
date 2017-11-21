@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the calculation of the margin.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides details on the calculation of the margin."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Margin2", propOrder = {"financialInstrumentIdentification", "exposureAmount", "totalMarginAmount", "variationMargin", "initialMargin", "increaseCoverage", "minimumRequirementDeposit", "collateralOnDeposit", "marginResult"})
 public class Margin2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -535,6 +541,7 @@ public class Margin2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -543,6 +550,7 @@ public class Margin2 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "XpsrAmt")
 	public Amount2 getExposureAmount() {
 		return exposureAmount;
 	}
@@ -551,6 +559,7 @@ public class Margin2 {
 		this.exposureAmount = exposureAmount;
 	}
 
+	@XmlElement(name = "TtlMrgnAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalMarginAmount() {
 		return totalMarginAmount;
 	}
@@ -559,6 +568,7 @@ public class Margin2 {
 		this.totalMarginAmount = totalMarginAmount;
 	}
 
+	@XmlElement(name = "VartnMrgn", required = true)
 	public VariationMargin2 getVariationMargin() {
 		return variationMargin;
 	}
@@ -567,6 +577,7 @@ public class Margin2 {
 		this.variationMargin = variationMargin;
 	}
 
+	@XmlElement(name = "InitlMrgn", required = true)
 	public Amount2 getInitialMargin() {
 		return initialMargin;
 	}
@@ -575,6 +586,7 @@ public class Margin2 {
 		this.initialMargin = initialMargin;
 	}
 
+	@XmlElement(name = "IncrCvrg")
 	public ActiveCurrencyAndAmount getIncreaseCoverage() {
 		return increaseCoverage;
 	}
@@ -583,6 +595,7 @@ public class Margin2 {
 		this.increaseCoverage = increaseCoverage;
 	}
 
+	@XmlElement(name = "MinRqrmntDpst")
 	public ActiveCurrencyAndAmount getMinimumRequirementDeposit() {
 		return minimumRequirementDeposit;
 	}
@@ -591,6 +604,7 @@ public class Margin2 {
 		this.minimumRequirementDeposit = minimumRequirementDeposit;
 	}
 
+	@XmlElement(name = "CollOnDpst")
 	public Collateral3 getCollateralOnDeposit() {
 		return collateralOnDeposit;
 	}
@@ -599,6 +613,7 @@ public class Margin2 {
 		this.collateralOnDeposit = collateralOnDeposit;
 	}
 
+	@XmlElement(name = "MrgnRslt")
 	public MarginResult1Choice getMarginResult() {
 		return marginResult;
 	}

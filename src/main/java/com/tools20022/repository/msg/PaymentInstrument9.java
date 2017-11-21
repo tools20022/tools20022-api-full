@@ -29,6 +29,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instrument that has or represents monetary value and is used to process a
@@ -88,6 +92,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstrument9", propOrder = {"settlementCurrency", "cashAccountDetails", "chequeDetails", "bankersDraftDetails"})
 public class PaymentInstrument9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -349,6 +355,7 @@ public class PaymentInstrument9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -357,6 +364,7 @@ public class PaymentInstrument9 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "CshAcctDtls", required = true)
 	public List<CashAccount4> getCashAccountDetails() {
 		return cashAccountDetails;
 	}
@@ -365,6 +373,7 @@ public class PaymentInstrument9 {
 		this.cashAccountDetails = cashAccountDetails;
 	}
 
+	@XmlElement(name = "ChqDtls", required = true)
 	public Cheque4 getChequeDetails() {
 		return chequeDetails;
 	}
@@ -373,6 +382,7 @@ public class PaymentInstrument9 {
 		this.chequeDetails = chequeDetails;
 	}
 
+	@XmlElement(name = "BkrsDrftDtls", required = true)
 	public Cheque4 getBankersDraftDetails() {
 		return bankersDraftDetails;
 	}

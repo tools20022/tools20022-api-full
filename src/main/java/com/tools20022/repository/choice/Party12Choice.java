@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification
 import com.tools20022.repository.msg.PartyIdentification43;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a person, an organisation or a financial institution.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Party12Choice", propOrder = {"party", "agent"})
 public class Party12Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -200,6 +206,7 @@ public class Party12Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pty", required = true)
 	public PartyIdentification43 getParty() {
 		return party;
 	}
@@ -208,6 +215,7 @@ public class Party12Choice {
 		this.party = party;
 	}
 
+	@XmlElement(name = "Agt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getAgent() {
 		return agent;
 	}

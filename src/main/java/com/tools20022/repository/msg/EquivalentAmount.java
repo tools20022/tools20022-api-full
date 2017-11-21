@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money to be transferred between the debtor and creditor, before
@@ -68,6 +72,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EquivalentAmount", propOrder = {"amount", "currencyOfTransfer"})
 public class EquivalentAmount {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -201,6 +207,7 @@ public class EquivalentAmount {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -209,6 +216,7 @@ public class EquivalentAmount {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CcyOfTrf", required = true)
 	public CurrencyCode getCurrencyOfTransfer() {
 		return currencyOfTransfer;
 	}

@@ -67,6 +67,11 @@ public class PlaceOfRegistry extends SecuritiesPartyRole {
 				definition = "Location at which records of ownership are maintained for a financial instrument, and at which ownership changes must be recorded.";
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PlaceOfRegistry.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

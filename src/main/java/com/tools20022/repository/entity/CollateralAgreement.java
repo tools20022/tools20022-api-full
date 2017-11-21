@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.FrequencyCode;
 import com.tools20022.repository.entity.Agreement;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,6 +39,38 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmBaseCurrency
+ * CollateralAgreement.mmBaseCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmAssociatedMasterAgreement
+ * CollateralAgreement.mmAssociatedMasterAgreement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmStandingSettlementInstructions
+ * CollateralAgreement.mmStandingSettlementInstructions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmMarginConvention
+ * CollateralAgreement.mmMarginConvention}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmExposureTerm
+ * CollateralAgreement.mmExposureTerm}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmCallFrequency
+ * CollateralAgreement.mmCallFrequency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmCollateral
+ * CollateralAgreement.mmCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmRiskCoverage
+ * CollateralAgreement.mmRiskCoverage}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Agreement
+ * Agreement}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -72,38 +105,6 @@ import java.util.List;
  * CollateralManagement.mmAgreedTerms}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Agreement
- * Agreement}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmBaseCurrency
- * CollateralAgreement.mmBaseCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmAssociatedMasterAgreement
- * CollateralAgreement.mmAssociatedMasterAgreement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmStandingSettlementInstructions
- * CollateralAgreement.mmStandingSettlementInstructions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmMarginConvention
- * CollateralAgreement.mmMarginConvention}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmExposureTerm
- * CollateralAgreement.mmExposureTerm}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmCallFrequency
- * CollateralAgreement.mmCallFrequency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmCollateral
- * CollateralAgreement.mmCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmRiskCoverage
- * CollateralAgreement.mmRiskCoverage}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -134,11 +135,6 @@ public class CollateralAgreement extends Agreement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement
-	 * CollateralAgreement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -148,6 +144,11 @@ public class CollateralAgreement extends Agreement {
 	 * Agreement4.mmBaseCurrency}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement
+	 * CollateralAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -162,7 +163,7 @@ public class CollateralAgreement extends Agreement {
 	public static final MMBusinessAttribute mmBaseCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement2.mmBaseCurrency, Agreement4.mmBaseCurrency);
-			elementContext_lazy = () -> CollateralAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseCurrency";
@@ -170,6 +171,14 @@ public class CollateralAgreement extends Agreement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralAgreement.class.getMethod("getBaseCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.MasterAgreement> associatedMasterAgreement;
@@ -191,11 +200,6 @@ public class CollateralAgreement extends Agreement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.MasterAgreement
 	 * MasterAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement
-	 * CollateralAgreement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -207,6 +211,11 @@ public class CollateralAgreement extends Agreement {
 	 * Agreement4.mmAgreementFramework}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement
+	 * CollateralAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -223,7 +232,7 @@ public class CollateralAgreement extends Agreement {
 	public static final MMBusinessAssociationEnd mmAssociatedMasterAgreement = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement2.mmAgreementFramework, Agreement4.mmAgreementFramework);
-			elementContext_lazy = () -> CollateralAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssociatedMasterAgreement";
@@ -254,11 +263,6 @@ public class CollateralAgreement extends Agreement {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction
 	 * StandingSettlementInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement
-	 * CollateralAgreement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -304,6 +308,11 @@ public class CollateralAgreement extends Agreement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement
+	 * CollateralAgreement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -322,7 +331,7 @@ public class CollateralAgreement extends Agreement {
 					CollateralSubstitution2.mmStandardSettlementInstructions, Collateral7.mmStandardSettlementInstructions, Collateral8.mmStandardSettlementInstructions, CollateralSubstitution3.mmStandardSettlementInstructions,
 					CollateralSubstitution5.mmStandardSettlementInstructions, CollateralSubstitution4.mmStandardSettlementInstructions, Collateral11.mmStandardSettlementInstructions, Collateral12.mmStandardSettlementInstructions,
 					Collateral16.mmStandardSettlementInstructions, Collateral17.mmStandardSettlementInstructions);
-			elementContext_lazy = () -> CollateralAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingSettlementInstructions";
@@ -345,11 +354,6 @@ public class CollateralAgreement extends Agreement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ExposureConventionTypeCode
 	 * ExposureConventionTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement
-	 * CollateralAgreement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -358,6 +362,11 @@ public class CollateralAgreement extends Agreement {
 	 * MarginCall1.mmExposureConvention}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement
+	 * CollateralAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -374,7 +383,7 @@ public class CollateralAgreement extends Agreement {
 	public static final MMBusinessAttribute mmMarginConvention = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(MarginCall1.mmExposureConvention);
-			elementContext_lazy = () -> CollateralAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginConvention";
@@ -382,6 +391,14 @@ public class CollateralAgreement extends Agreement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExposureConventionTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralAgreement.class.getMethod("getMarginConvention", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.ExposureTerm> exposureTerm;
@@ -422,7 +439,7 @@ public class CollateralAgreement extends Agreement {
 	 */
 	public static final MMBusinessAssociationEnd mmExposureTerm = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CollateralAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExposureTerm";
@@ -465,7 +482,7 @@ public class CollateralAgreement extends Agreement {
 	 */
 	public static final MMBusinessAttribute mmCallFrequency = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CollateralAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallFrequency";
@@ -473,6 +490,14 @@ public class CollateralAgreement extends Agreement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FrequencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CollateralAgreement.class.getMethod("getCallFrequency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Collateral> collateral;
@@ -493,11 +518,6 @@ public class CollateralAgreement extends Agreement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Collateral
 	 * Collateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement
-	 * CollateralAgreement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -505,6 +525,11 @@ public class CollateralAgreement extends Agreement {
 	 * LoanContract1.mmCollateral}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement
+	 * CollateralAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -520,7 +545,7 @@ public class CollateralAgreement extends Agreement {
 	public static final MMBusinessAssociationEnd mmCollateral = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(LoanContract1.mmCollateral);
-			elementContext_lazy = () -> CollateralAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateral";
@@ -571,7 +596,7 @@ public class CollateralAgreement extends Agreement {
 	 */
 	public static final MMBusinessAssociationEnd mmRiskCoverage = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CollateralAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RiskCoverage";
@@ -594,9 +619,16 @@ public class CollateralAgreement extends Agreement {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExposureTerm.mmRelatedCollateralAgreement, com.tools20022.repository.entity.StandingSettlementInstruction.mmRelatedCollateralAgreement,
 						com.tools20022.repository.entity.Collateral.mmCollateralAgreement, com.tools20022.repository.entity.MasterAgreement.mmCollateralAgreement, com.tools20022.repository.entity.CollateralManagement.mmAgreedTerms);
 				superType_lazy = () -> Agreement.mmObject();
-				element_lazy = () -> Arrays.asList(CollateralAgreement.mmBaseCurrency, CollateralAgreement.mmAssociatedMasterAgreement, CollateralAgreement.mmStandingSettlementInstructions, CollateralAgreement.mmMarginConvention,
-						CollateralAgreement.mmExposureTerm, CollateralAgreement.mmCallFrequency, CollateralAgreement.mmCollateral, CollateralAgreement.mmRiskCoverage);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralAgreement.mmBaseCurrency, com.tools20022.repository.entity.CollateralAgreement.mmAssociatedMasterAgreement,
+						com.tools20022.repository.entity.CollateralAgreement.mmStandingSettlementInstructions, com.tools20022.repository.entity.CollateralAgreement.mmMarginConvention,
+						com.tools20022.repository.entity.CollateralAgreement.mmExposureTerm, com.tools20022.repository.entity.CollateralAgreement.mmCallFrequency, com.tools20022.repository.entity.CollateralAgreement.mmCollateral,
+						com.tools20022.repository.entity.CollateralAgreement.mmRiskCoverage);
 				derivationComponent_lazy = () -> Arrays.asList(Obligation1.mmObject(), Agreement2.mmObject(), Obligation2.mmObject(), Obligation3.mmObject(), Obligation4.mmObject(), Agreement4.mmObject(), Obligation5.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CollateralAgreement.class;
 			}
 		});
 		return mmObject_lazy.get();

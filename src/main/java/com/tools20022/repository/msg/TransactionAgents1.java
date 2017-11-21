@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements providing information specific to the individual
@@ -88,6 +92,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionAgents1", propOrder = {"debtorAgent", "creditorAgent", "intermediaryAgent1", "intermediaryAgent2", "intermediaryAgent3", "receivingAgent", "deliveringAgent", "issuingAgent", "settlementPlace", "proprietary"})
 public class TransactionAgents1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -619,6 +625,7 @@ public class TransactionAgents1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DbtrAgt")
 	public BranchAndFinancialInstitutionIdentification3 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -627,6 +634,7 @@ public class TransactionAgents1 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "CdtrAgt")
 	public BranchAndFinancialInstitutionIdentification3 getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -635,6 +643,7 @@ public class TransactionAgents1 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "IntrmyAgt1")
 	public BranchAndFinancialInstitutionIdentification3 getIntermediaryAgent1() {
 		return intermediaryAgent1;
 	}
@@ -643,6 +652,7 @@ public class TransactionAgents1 {
 		this.intermediaryAgent1 = intermediaryAgent1;
 	}
 
+	@XmlElement(name = "IntrmyAgt2")
 	public BranchAndFinancialInstitutionIdentification3 getIntermediaryAgent2() {
 		return intermediaryAgent2;
 	}
@@ -651,6 +661,7 @@ public class TransactionAgents1 {
 		this.intermediaryAgent2 = intermediaryAgent2;
 	}
 
+	@XmlElement(name = "IntrmyAgt3")
 	public BranchAndFinancialInstitutionIdentification3 getIntermediaryAgent3() {
 		return intermediaryAgent3;
 	}
@@ -659,6 +670,7 @@ public class TransactionAgents1 {
 		this.intermediaryAgent3 = intermediaryAgent3;
 	}
 
+	@XmlElement(name = "RcvgAgt")
 	public BranchAndFinancialInstitutionIdentification3 getReceivingAgent() {
 		return receivingAgent;
 	}
@@ -667,6 +679,7 @@ public class TransactionAgents1 {
 		this.receivingAgent = receivingAgent;
 	}
 
+	@XmlElement(name = "DlvrgAgt")
 	public BranchAndFinancialInstitutionIdentification3 getDeliveringAgent() {
 		return deliveringAgent;
 	}
@@ -675,6 +688,7 @@ public class TransactionAgents1 {
 		this.deliveringAgent = deliveringAgent;
 	}
 
+	@XmlElement(name = "IssgAgt")
 	public BranchAndFinancialInstitutionIdentification3 getIssuingAgent() {
 		return issuingAgent;
 	}
@@ -683,6 +697,7 @@ public class TransactionAgents1 {
 		this.issuingAgent = issuingAgent;
 	}
 
+	@XmlElement(name = "SttlmPlc")
 	public BranchAndFinancialInstitutionIdentification3 getSettlementPlace() {
 		return settlementPlace;
 	}
@@ -691,6 +706,7 @@ public class TransactionAgents1 {
 		this.settlementPlace = settlementPlace;
 	}
 
+	@XmlElement(name = "Prtry")
 	public List<ProprietaryAgent1> getProprietary() {
 		return proprietary;
 	}

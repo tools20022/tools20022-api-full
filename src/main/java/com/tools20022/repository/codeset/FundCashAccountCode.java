@@ -29,19 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.FundCashAccount2Code
- * FundCashAccount2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundCashAccount3Code
- * FundCashAccount3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundCashAccount1Code
- * FundCashAccount1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundCashAccount4Code
- * FundCashAccount4Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -83,6 +70,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#mmCSDOmnibusAccount
  * FundCashAccountCode.mmCSDOmnibusAccount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundCashAccount2Code
+ * FundCashAccount2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundCashAccount3Code
+ * FundCashAccount3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundCashAccount1Code
+ * FundCashAccount1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundCashAccount4Code
+ * FundCashAccount4Code}</li>
  * </ul>
  * </li>
  * <li>

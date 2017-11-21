@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements providing information specific to the individual
@@ -99,6 +103,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CreditTransferTransactionInformation6", propOrder = {"paymentIdentification", "paymentTypeInformation", "interbankSettlementAmount", "chargeBearer", "instructingAgent", "instructedAgent", "debtor", "debtorAccount",
+		"debtorAgent", "creditorAgent", "creditor", "creditorAccount", "remittanceInformation"})
 public class CreditTransferTransactionInformation6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -761,6 +768,7 @@ public class CreditTransferTransactionInformation6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtId", required = true)
 	public PaymentIdentification2 getPaymentIdentification() {
 		return paymentIdentification;
 	}
@@ -769,6 +777,7 @@ public class CreditTransferTransactionInformation6 {
 		this.paymentIdentification = paymentIdentification;
 	}
 
+	@XmlElement(name = "PmtTpInf")
 	public PaymentTypeInformation7 getPaymentTypeInformation() {
 		return paymentTypeInformation;
 	}
@@ -777,6 +786,7 @@ public class CreditTransferTransactionInformation6 {
 		this.paymentTypeInformation = paymentTypeInformation;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmt", required = true)
 	public EuroMax9Amount getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
@@ -785,6 +795,7 @@ public class CreditTransferTransactionInformation6 {
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
 
+	@XmlElement(name = "ChrgBr", required = true)
 	public ChargeBearerType2Code getChargeBearer() {
 		return chargeBearer;
 	}
@@ -793,6 +804,7 @@ public class CreditTransferTransactionInformation6 {
 		this.chargeBearer = chargeBearer;
 	}
 
+	@XmlElement(name = "InstgAgt")
 	public FinancialInstitution2 getInstructingAgent() {
 		return instructingAgent;
 	}
@@ -801,6 +813,7 @@ public class CreditTransferTransactionInformation6 {
 		this.instructingAgent = instructingAgent;
 	}
 
+	@XmlElement(name = "InstdAgt")
 	public FinancialInstitution2 getInstructedAgent() {
 		return instructedAgent;
 	}
@@ -809,6 +822,7 @@ public class CreditTransferTransactionInformation6 {
 		this.instructedAgent = instructedAgent;
 	}
 
+	@XmlElement(name = "Dbtr", required = true)
 	public PartyIdentification19 getDebtor() {
 		return debtor;
 	}
@@ -817,6 +831,7 @@ public class CreditTransferTransactionInformation6 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAcct", required = true)
 	public CashAccount8 getDebtorAccount() {
 		return debtorAccount;
 	}
@@ -825,6 +840,7 @@ public class CreditTransferTransactionInformation6 {
 		this.debtorAccount = debtorAccount;
 	}
 
+	@XmlElement(name = "DbtrAgt", required = true)
 	public FinancialInstitution2 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -833,6 +849,7 @@ public class CreditTransferTransactionInformation6 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "CdtrAgt", required = true)
 	public FinancialInstitution2 getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -841,6 +858,7 @@ public class CreditTransferTransactionInformation6 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "Cdtr", required = true)
 	public PartyIdentification19 getCreditor() {
 		return creditor;
 	}
@@ -849,6 +867,7 @@ public class CreditTransferTransactionInformation6 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAcct", required = true)
 	public CashAccount8 getCreditorAccount() {
 		return creditorAccount;
 	}
@@ -857,6 +876,7 @@ public class CreditTransferTransactionInformation6 {
 		this.creditorAccount = creditorAccount;
 	}
 
+	@XmlElement(name = "RmtInf")
 	public RemittanceInformation3 getRemittanceInformation() {
 		return remittanceInformation;
 	}

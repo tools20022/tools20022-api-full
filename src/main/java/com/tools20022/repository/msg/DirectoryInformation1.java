@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Participant details from National BIC directory.
@@ -62,6 +66,8 @@ import java.util.List;
  * definition} = "Participant details from National BIC directory."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DirectoryInformation1", propOrder = {"participantInformation", "participantSWIFTIdentifiersList", "accounts"})
 public class DirectoryInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -203,6 +209,7 @@ public class DirectoryInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtcptInf", required = true)
 	public DirectoryParticipantInformation1 getParticipantInformation() {
 		return participantInformation;
 	}
@@ -211,6 +218,7 @@ public class DirectoryInformation1 {
 		this.participantInformation = participantInformation;
 	}
 
+	@XmlElement(name = "PtcptSwiftIdrsList")
 	public List<BICFIIdentifier> getParticipantSWIFTIdentifiersList() {
 		return participantSWIFTIdentifiersList;
 	}
@@ -219,6 +227,7 @@ public class DirectoryInformation1 {
 		this.participantSWIFTIdentifiersList = participantSWIFTIdentifiersList;
 	}
 
+	@XmlElement(name = "Accts")
 	public List<DirectoryAccountInformation1> getAccounts() {
 		return accounts;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Limit of amounts for the customer.
@@ -76,6 +80,8 @@ import java.util.List;
  * ATMTransactionAmounts6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransactionAmounts8", propOrder = {"currency", "maximumPossibleAmount", "minimumPossibleAmount", "additionalAmount", "depositLimits"})
 public class ATMTransactionAmounts8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -347,6 +353,7 @@ public class ATMTransactionAmounts8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -355,6 +362,7 @@ public class ATMTransactionAmounts8 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "MaxPssblAmt")
 	public ImpliedCurrencyAndAmount getMaximumPossibleAmount() {
 		return maximumPossibleAmount;
 	}
@@ -363,6 +371,7 @@ public class ATMTransactionAmounts8 {
 		this.maximumPossibleAmount = maximumPossibleAmount;
 	}
 
+	@XmlElement(name = "MinPssblAmt")
 	public ImpliedCurrencyAndAmount getMinimumPossibleAmount() {
 		return minimumPossibleAmount;
 	}
@@ -371,6 +380,7 @@ public class ATMTransactionAmounts8 {
 		this.minimumPossibleAmount = minimumPossibleAmount;
 	}
 
+	@XmlElement(name = "AddtlAmt")
 	public List<ATMTransactionAmounts7> getAdditionalAmount() {
 		return additionalAmount;
 	}
@@ -379,6 +389,7 @@ public class ATMTransactionAmounts8 {
 		this.additionalAmount = additionalAmount;
 	}
 
+	@XmlElement(name = "DpstLmts")
 	public List<ATMTransactionAmounts9> getDepositLimits() {
 		return depositLimits;
 	}

@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instruction to pay an amount of money to an ultimate beneficiary, on behalf
@@ -114,6 +118,9 @@ import java.util.List;
  * PaymentInstruction17}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstruction19", propOrder = {"paymentInformationIdentification", "paymentMethod", "paymentTypeInformation", "requestedExecutionDate", "debtor", "debtorAccount", "debtorAgent", "ultimateDebtor", "chargeBearer",
+		"creditTransferTransaction"})
 public class PaymentInstruction19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -786,6 +793,7 @@ public class PaymentInstruction19 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtInfId")
 	public Max35Text getPaymentInformationIdentification() {
 		return paymentInformationIdentification;
 	}
@@ -794,6 +802,7 @@ public class PaymentInstruction19 {
 		this.paymentInformationIdentification = paymentInformationIdentification;
 	}
 
+	@XmlElement(name = "PmtMtd", required = true)
 	public PaymentMethod7Code getPaymentMethod() {
 		return paymentMethod;
 	}
@@ -802,6 +811,7 @@ public class PaymentInstruction19 {
 		this.paymentMethod = paymentMethod;
 	}
 
+	@XmlElement(name = "PmtTpInf")
 	public PaymentTypeInformation19 getPaymentTypeInformation() {
 		return paymentTypeInformation;
 	}
@@ -810,6 +820,7 @@ public class PaymentInstruction19 {
 		this.paymentTypeInformation = paymentTypeInformation;
 	}
 
+	@XmlElement(name = "ReqdExctnDt", required = true)
 	public ISODate getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -818,6 +829,7 @@ public class PaymentInstruction19 {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "Dbtr", required = true)
 	public PartyIdentification43 getDebtor() {
 		return debtor;
 	}
@@ -826,6 +838,7 @@ public class PaymentInstruction19 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAcct")
 	public CashAccount24 getDebtorAccount() {
 		return debtorAccount;
 	}
@@ -834,6 +847,7 @@ public class PaymentInstruction19 {
 		this.debtorAccount = debtorAccount;
 	}
 
+	@XmlElement(name = "DbtrAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -842,6 +856,7 @@ public class PaymentInstruction19 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "UltmtDbtr")
 	public PartyIdentification43 getUltimateDebtor() {
 		return ultimateDebtor;
 	}
@@ -850,6 +865,7 @@ public class PaymentInstruction19 {
 		this.ultimateDebtor = ultimateDebtor;
 	}
 
+	@XmlElement(name = "ChrgBr")
 	public ChargeBearerType1Code getChargeBearer() {
 		return chargeBearer;
 	}
@@ -858,6 +874,7 @@ public class PaymentInstruction19 {
 		this.chargeBearer = chargeBearer;
 	}
 
+	@XmlElement(name = "CdtTrfTx", required = true)
 	public List<CreditTransferTransaction22> getCreditTransferTransaction() {
 		return creditTransferTransaction;
 	}

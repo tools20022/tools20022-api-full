@@ -26,8 +26,10 @@ import com.tools20022.repository.choice.Cancellation3Choice;
 import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -51,9 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.014.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -90,6 +89,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.014.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -113,6 +115,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PortfolioTransferCancellationRequestV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PortfolioTransferCancellationRequestV04", propOrder = {"messageReference", "poolReference", "previousReference", "relatedReference", "cancellation"})
 public class PortfolioTransferCancellationRequestV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +163,14 @@ public class PortfolioTransferCancellationRequestV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferCancellationRequestV04.class.getMethod("getMessageReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -203,6 +215,14 @@ public class PortfolioTransferCancellationRequestV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferCancellationRequestV04.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 previousReference;
 	/**
@@ -246,6 +266,14 @@ public class PortfolioTransferCancellationRequestV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferCancellationRequestV04.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 relatedReference;
@@ -292,6 +320,14 @@ public class PortfolioTransferCancellationRequestV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferCancellationRequestV04.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Cancellation3Choice cancellation;
 	/**
@@ -337,6 +373,14 @@ public class PortfolioTransferCancellationRequestV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> Cancellation3Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferCancellationRequestV04.class.getMethod("getCancellation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -351,8 +395,9 @@ public class PortfolioTransferCancellationRequestV04 {
 				rootElement = "Document";
 				xmlTag = "PrtflTrfCxlReq";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PortfolioTransferCancellationRequestV04.mmMessageReference, PortfolioTransferCancellationRequestV04.mmPoolReference,
-						PortfolioTransferCancellationRequestV04.mmPreviousReference, PortfolioTransferCancellationRequestV04.mmRelatedReference, PortfolioTransferCancellationRequestV04.mmCancellation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04.mmMessageReference,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04.mmPoolReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04.mmPreviousReference,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04.mmRelatedReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04.mmCancellation);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -362,10 +407,16 @@ public class PortfolioTransferCancellationRequestV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PortfolioTransferCancellationRequestV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgRef", required = true)
 	public MessageIdentification1 getMessageReference() {
 		return messageReference;
 	}
@@ -374,6 +425,7 @@ public class PortfolioTransferCancellationRequestV04 {
 		this.messageReference = messageReference;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -382,6 +434,7 @@ public class PortfolioTransferCancellationRequestV04 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -390,6 +443,7 @@ public class PortfolioTransferCancellationRequestV04 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
@@ -398,11 +452,18 @@ public class PortfolioTransferCancellationRequestV04 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "Cxl", required = true)
 	public Cancellation3Choice getCancellation() {
 		return cancellation;
 	}
 
 	public void setCancellation(Cancellation3Choice cancellation) {
 		this.cancellation = cancellation;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.014.04.04")
+	static public class Document {
+		@XmlElement(name = "PrtflTrfCxlReq", required = true)
+		public PortfolioTransferCancellationRequestV04 messageBody;
 	}
 }

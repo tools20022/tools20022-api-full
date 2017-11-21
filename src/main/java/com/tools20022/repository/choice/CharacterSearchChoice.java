@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characters to be matched to be considered as valid.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Set of characters to be matched to be considered as valid."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CharacterSearchChoice", propOrder = {"equal", "notEqual", "contain", "notContain"})
 public class CharacterSearchChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -247,6 +253,7 @@ public class CharacterSearchChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EQ", required = true)
 	public Max35Text getEqual() {
 		return equal;
 	}
@@ -255,6 +262,7 @@ public class CharacterSearchChoice {
 		this.equal = equal;
 	}
 
+	@XmlElement(name = "NEQ", required = true)
 	public Max35Text getNotEqual() {
 		return notEqual;
 	}
@@ -263,6 +271,7 @@ public class CharacterSearchChoice {
 		this.notEqual = notEqual;
 	}
 
+	@XmlElement(name = "CT", required = true)
 	public Max35Text getContain() {
 		return contain;
 	}
@@ -271,6 +280,7 @@ public class CharacterSearchChoice {
 		this.contain = contain;
 	}
 
+	@XmlElement(name = "NCT", required = true)
 	public Max35Text getNotContain() {
 		return notContain;
 	}

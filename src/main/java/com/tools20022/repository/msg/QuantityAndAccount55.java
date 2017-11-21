@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details on the quantity, account and other related information involved in a
@@ -90,6 +94,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuantityAndAccount55", propOrder = {"settlementQuantity", "denominationChoice", "accountOwner", "safekeepingAccount", "cashAccount", "safekeepingPlace", "quantityBreakdown"})
 public class QuantityAndAccount55 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -512,6 +518,7 @@ public class QuantityAndAccount55 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmQty")
 	public Quantity10Choice getSettlementQuantity() {
 		return settlementQuantity;
 	}
@@ -520,6 +527,7 @@ public class QuantityAndAccount55 {
 		this.settlementQuantity = settlementQuantity;
 	}
 
+	@XmlElement(name = "DnmtnChc")
 	public RestrictedFINXMax210Text getDenominationChoice() {
 		return denominationChoice;
 	}
@@ -528,6 +536,7 @@ public class QuantityAndAccount55 {
 		this.denominationChoice = denominationChoice;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification109 getAccountOwner() {
 		return accountOwner;
 	}
@@ -536,6 +545,7 @@ public class QuantityAndAccount55 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount30 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -544,6 +554,7 @@ public class QuantityAndAccount55 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccountIdentification6Choice getCashAccount() {
 		return cashAccount;
 	}
@@ -552,6 +563,7 @@ public class QuantityAndAccount55 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafeKeepingPlace2 getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -560,6 +572,7 @@ public class QuantityAndAccount55 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "QtyBrkdwn")
 	public List<QuantityBreakdown38> getQuantityBreakdown() {
 		return quantityBreakdown;
 	}

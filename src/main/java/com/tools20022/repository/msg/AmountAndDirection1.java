@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money debited or credited on the books of an account servicer.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Amount of money debited or credited on the books of an account servicer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountAndDirection1", propOrder = {"amount", "originalCurrencyAndOrderedAmount", "creditDebit", "exchange"})
 public class AmountAndDirection1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -282,6 +288,7 @@ public class AmountAndDirection1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -290,6 +297,7 @@ public class AmountAndDirection1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "OrgnlCcyAndOrdrdAmt")
 	public ActiveCurrencyAndAmount getOriginalCurrencyAndOrderedAmount() {
 		return originalCurrencyAndOrderedAmount;
 	}
@@ -298,6 +306,7 @@ public class AmountAndDirection1 {
 		this.originalCurrencyAndOrderedAmount = originalCurrencyAndOrderedAmount;
 	}
 
+	@XmlElement(name = "CdtDbt")
 	public CreditDebitCode getCreditDebit() {
 		return creditDebit;
 	}
@@ -306,6 +315,7 @@ public class AmountAndDirection1 {
 		this.creditDebit = creditDebit;
 	}
 
+	@XmlElement(name = "Xchg")
 	public CurrencyExchange4 getExchange() {
 		return exchange;
 	}

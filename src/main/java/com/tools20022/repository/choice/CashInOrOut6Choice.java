@@ -27,6 +27,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of a payment instrument for the cash-in flow or cash-out flow.
@@ -64,6 +68,8 @@ import java.util.function.Supplier;
  * "Choice of a payment instrument for the cash-in flow or cash-out flow."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashInOrOut6Choice", propOrder = {"cashInPaymentInstrument", "cashOutPaymentInstrument"})
 public class CashInOrOut6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class CashInOrOut6Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshInPmtInstrm", required = true)
 	public PaymentInstrument12Choice getCashInPaymentInstrument() {
 		return cashInPaymentInstrument;
 	}
@@ -191,6 +198,7 @@ public class CashInOrOut6Choice {
 		this.cashInPaymentInstrument = cashInPaymentInstrument;
 	}
 
+	@XmlElement(name = "CshOutPmtInstrm", required = true)
 	public PaymentInstrument11Choice getCashOutPaymentInstrument() {
 		return cashOutPaymentInstrument;
 	}

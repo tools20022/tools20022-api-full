@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Original and corrected price information of an investment fund.
@@ -70,6 +74,8 @@ import java.util.List;
  * "Original and corrected price information of an investment fund."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceCorrection2", propOrder = {"previouslySentPriceDetails", "correctedPriceDetails", "extension"})
 public class PriceCorrection2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class PriceCorrection2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrevslySntPricDtls", required = true)
 	public PriceValuation2 getPreviouslySentPriceDetails() {
 		return previouslySentPriceDetails;
 	}
@@ -226,6 +233,7 @@ public class PriceCorrection2 {
 		this.previouslySentPriceDetails = previouslySentPriceDetails;
 	}
 
+	@XmlElement(name = "CrrctdPricDtls")
 	public PriceValuation2 getCorrectedPriceDetails() {
 		return correctedPriceDetails;
 	}
@@ -234,6 +242,7 @@ public class PriceCorrection2 {
 		this.correctedPriceDetails = correctedPriceDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

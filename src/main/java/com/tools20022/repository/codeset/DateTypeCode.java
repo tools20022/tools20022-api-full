@@ -30,6 +30,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmOpen
+ * DateTypeCode.mmOpen}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmUnknown
+ * DateTypeCode.mmUnknown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmOngoing
+ * DateTypeCode.mmOngoing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmVarious
+ * DateTypeCode.mmVarious}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
  * =
  * <ul>
@@ -49,18 +61,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * DateType4Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.DateType2Code
  * DateType2Code}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmOpen
- * DateTypeCode.mmOpen}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmUnknown
- * DateTypeCode.mmUnknown}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmOngoing
- * DateTypeCode.mmOngoing}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmVarious
- * DateTypeCode.mmVarious}</li>
  * </ul>
  * </li>
  * <li>

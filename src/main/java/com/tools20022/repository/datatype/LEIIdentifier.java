@@ -32,6 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} = "SWIFT and DTCC; LEIIdentifier"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[A-Z0-9]{18,18}[0-9]{2,2}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -68,6 +70,7 @@ public class LEIIdentifier {
 				name = "LEIIdentifier";
 				definition = "Legal Entity Identifier is a code allocated to a party as described in ISO 17442 \"Financial Services - Legal Entity Identifier (LEI)\".";
 				identificationScheme = "SWIFT and DTCC; LEIIdentifier";
+				pattern = "[A-Z0-9]{18,18}[0-9]{2,2}";
 			}
 		});
 		return mmObject_lazy.get();

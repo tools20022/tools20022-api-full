@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies a number of quotes, order and settlement conditions for a specific
@@ -106,6 +110,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuoteEntry1", propOrder = {"identification", "orderType", "validUntilDateTime", "currency", "instrumentLegGroupDetails", "offerSide", "midSide", "bidSide", "financialInstrumentDetails", "financialInstrumentAttributes",
+		"instrumentLegDetails", "legFinancialInstrumentAttributes", "legStipulations", "tradingSessionDetails", "settlementDetails"})
 public class QuoteEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -834,6 +841,7 @@ public class QuoteEntry1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -842,6 +850,7 @@ public class QuoteEntry1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "OrdrTp")
 	public OrderType1Code getOrderType() {
 		return orderType;
 	}
@@ -850,6 +859,7 @@ public class QuoteEntry1 {
 		this.orderType = orderType;
 	}
 
+	@XmlElement(name = "VldUntilDtTm")
 	public ISODateTime getValidUntilDateTime() {
 		return validUntilDateTime;
 	}
@@ -858,6 +868,7 @@ public class QuoteEntry1 {
 		this.validUntilDateTime = validUntilDateTime;
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -866,6 +877,7 @@ public class QuoteEntry1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "InstrmLegGrpDtls")
 	public InstrumentLeg2 getInstrumentLegGroupDetails() {
 		return instrumentLegGroupDetails;
 	}
@@ -874,6 +886,7 @@ public class QuoteEntry1 {
 		this.instrumentLegGroupDetails = instrumentLegGroupDetails;
 	}
 
+	@XmlElement(name = "OfferSd")
 	public List<QuoteSide1> getOfferSide() {
 		return offerSide;
 	}
@@ -882,6 +895,7 @@ public class QuoteEntry1 {
 		this.offerSide = offerSide;
 	}
 
+	@XmlElement(name = "MidSd")
 	public List<QuoteSide1> getMidSide() {
 		return midSide;
 	}
@@ -890,6 +904,7 @@ public class QuoteEntry1 {
 		this.midSide = midSide;
 	}
 
+	@XmlElement(name = "BidSd")
 	public List<QuoteSide1> getBidSide() {
 		return bidSide;
 	}
@@ -898,6 +913,7 @@ public class QuoteEntry1 {
 		this.bidSide = bidSide;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public SecurityIdentification7 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -906,6 +922,7 @@ public class QuoteEntry1 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public FinancialInstrumentAttributes1 getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -914,6 +931,7 @@ public class QuoteEntry1 {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "InstrmLegDtls")
 	public List<SecurityIdentification7> getInstrumentLegDetails() {
 		return instrumentLegDetails;
 	}
@@ -922,6 +940,7 @@ public class QuoteEntry1 {
 		this.instrumentLegDetails = instrumentLegDetails;
 	}
 
+	@XmlElement(name = "LegFinInstrmAttrbts")
 	public List<FinancialInstrumentAttributes1> getLegFinancialInstrumentAttributes() {
 		return legFinancialInstrumentAttributes;
 	}
@@ -930,6 +949,7 @@ public class QuoteEntry1 {
 		this.legFinancialInstrumentAttributes = legFinancialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "LegStiptns")
 	public List<FinancialInstrumentStipulations> getLegStipulations() {
 		return legStipulations;
 	}
@@ -938,6 +958,7 @@ public class QuoteEntry1 {
 		this.legStipulations = legStipulations;
 	}
 
+	@XmlElement(name = "TradgSsnDtls")
 	public TradingSession1 getTradingSessionDetails() {
 		return tradingSessionDetails;
 	}
@@ -946,6 +967,7 @@ public class QuoteEntry1 {
 		this.tradingSessionDetails = tradingSessionDetails;
 	}
 
+	@XmlElement(name = "SttlmDtls")
 	public SecuritiesSettlement1 getSettlementDetails() {
 		return settlementDetails;
 	}

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.Market;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,68 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmTradedSecurity
+ * TradingMarket.mmTradedSecurity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradingMarket#mmType
+ * TradingMarket.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmListedSecurity
+ * TradingMarket.mmListedSecurity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmSourceOfPrice
+ * TradingMarket.mmSourceOfPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmTradeLotSize
+ * TradingMarket.mmTradeLotSize}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmMinimumTradedNominalQuantity
+ * TradingMarket.mmMinimumTradedNominalQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradingMarket#mmListingDate
+ * TradingMarket.mmListingDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmRelatedOrder
+ * TradingMarket.mmRelatedOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmTradingCurrency
+ * TradingMarket.mmTradingCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmMaximumTradedNominalQuantity
+ * TradingMarket.mmMaximumTradedNominalQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmStockExchange
+ * TradingMarket.mmStockExchange}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradingMarket#mmQuoteLot
+ * TradingMarket.mmQuoteLot}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradingMarket#mmRoundLot
+ * TradingMarket.mmRoundLot}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmTradingSession
+ * TradingMarket.mmTradingSession}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmListedSecurityTradingIdentification
+ * TradingMarket.mmListedSecurityTradingIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmDefaultCurrency
+ * TradingMarket.mmDefaultCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmFirstTradingDate
+ * TradingMarket.mmFirstTradingDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmLastTradingDate
+ * TradingMarket.mmLastTradingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradingMarket#mmIssuance
+ * TradingMarket.mmIssuance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmRelatedPlaceOfSettlement
+ * TradingMarket.mmRelatedPlaceOfSettlement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Market Market}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -364,68 +427,6 @@ import java.util.List;
  * SubscriptionMultipleExecution5.mmPlaceOfTrade}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Market Market}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#mmTradedSecurity
- * TradingMarket.mmTradedSecurity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradingMarket#mmType
- * TradingMarket.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#mmListedSecurity
- * TradingMarket.mmListedSecurity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#mmSourceOfPrice
- * TradingMarket.mmSourceOfPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#mmTradeLotSize
- * TradingMarket.mmTradeLotSize}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#mmMinimumTradedNominalQuantity
- * TradingMarket.mmMinimumTradedNominalQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradingMarket#mmListingDate
- * TradingMarket.mmListingDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#mmRelatedOrder
- * TradingMarket.mmRelatedOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#mmTradingCurrency
- * TradingMarket.mmTradingCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#mmMaximumTradedNominalQuantity
- * TradingMarket.mmMaximumTradedNominalQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#mmStockExchange
- * TradingMarket.mmStockExchange}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradingMarket#mmQuoteLot
- * TradingMarket.mmQuoteLot}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradingMarket#mmRoundLot
- * TradingMarket.mmRoundLot}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#mmTradingSession
- * TradingMarket.mmTradingSession}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#mmListedSecurityTradingIdentification
- * TradingMarket.mmListedSecurityTradingIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#mmDefaultCurrency
- * TradingMarket.mmDefaultCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#mmFirstTradingDate
- * TradingMarket.mmFirstTradingDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#mmLastTradingDate
- * TradingMarket.mmLastTradingDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradingMarket#mmIssuance
- * TradingMarket.mmIssuance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#mmRelatedPlaceOfSettlement
- * TradingMarket.mmRelatedPlaceOfSettlement}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -481,7 +482,7 @@ public class TradingMarket extends Market {
 	 */
 	public static final MMBusinessAssociationEnd mmTradedSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradedSecurity";
@@ -503,11 +504,6 @@ public class TradingMarket extends Market {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.MarketTypeCode
 	 * MarketTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -682,6 +678,11 @@ public class TradingMarket extends Market {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -703,7 +704,7 @@ public class TradingMarket extends Market {
 					MarketIdentification78.mmType, MarketIdentification79.mmType, MarketIdentification80.mmType, MarketIdentification82.mmType, MarketIdentification84.mmType, MarketIdentification85.mmType, MarketIdentification89.mmType,
 					MarketType15Choice.mmCode, MarketType15Choice.mmProprietary, MarketIdentification90.mmType, MarketType16Choice.mmCode, MarketType16Choice.mmProprietary, MarketType17Choice.mmCode, MarketType17Choice.mmProprietary,
 					MarketIdentification91.mmType, MarketIdentification92.mmCategory);
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -711,6 +712,14 @@ public class TradingMarket extends Market {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MarketTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradingMarket.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Security> listedSecurity;
@@ -748,7 +757,7 @@ public class TradingMarket extends Market {
 	 */
 	public static final MMBusinessAssociationEnd mmListedSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ListedSecurity";
@@ -795,7 +804,7 @@ public class TradingMarket extends Market {
 	 */
 	public static final MMBusinessAssociationEnd mmSourceOfPrice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SourceOfPrice";
@@ -825,11 +834,6 @@ public class TradingMarket extends Market {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.LotBreakdown
 	 * LotBreakdown}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -840,6 +844,11 @@ public class TradingMarket extends Market {
 	 * {@linkplain com.tools20022.repository.msg.TradingParameters1#mmTradeLotSize
 	 * TradingParameters1.mmTradeLotSize}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -856,7 +865,7 @@ public class TradingMarket extends Market {
 	public static final MMBusinessAssociationEnd mmTradeLotSize = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmTradeLotSize, TradingParameters1.mmTradeLotSize);
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeLotSize";
@@ -886,11 +895,6 @@ public class TradingMarket extends Market {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -903,6 +907,11 @@ public class TradingMarket extends Market {
 	 * {@linkplain com.tools20022.repository.msg.TradingParameters1#mmMinimumTradedNominalQuantity
 	 * TradingParameters1.mmMinimumTradedNominalQuantity}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -918,7 +927,7 @@ public class TradingMarket extends Market {
 	public static final MMBusinessAssociationEnd mmMinimumTradedNominalQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmMinimumTradedNominalQuantity, Debt2.mmMinimumQuantity, TradingParameters1.mmMinimumTradedNominalQuantity);
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumTradedNominalQuantity";
@@ -940,11 +949,6 @@ public class TradingMarket extends Market {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -955,6 +959,11 @@ public class TradingMarket extends Market {
 	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmListingDate
 	 * CommonFinancialInstrumentAttributes1.mmListingDate}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -971,7 +980,7 @@ public class TradingMarket extends Market {
 	public static final MMBusinessAttribute mmListingDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmListingDate, CommonFinancialInstrumentAttributes1.mmListingDate);
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ListingDate";
@@ -979,6 +988,14 @@ public class TradingMarket extends Market {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradingMarket.class.getMethod("getListingDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesOrder relatedOrder;
@@ -1017,7 +1034,7 @@ public class TradingMarket extends Market {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOrder";
@@ -1039,11 +1056,6 @@ public class TradingMarket extends Market {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1090,6 +1102,11 @@ public class TradingMarket extends Market {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1105,7 +1122,7 @@ public class TradingMarket extends Market {
 			derivation_lazy = () -> Arrays.asList(SettlementObligation3.mmTradingCurrency, SettlementObligation5.mmTradingCurrency, TradeLeg2.mmTradingCurrency, TradeLeg5.mmTradingCurrency, TradeLeg1.mmTradingCurrency,
 					TradeLeg3.mmTradingCurrency, TradeLeg6.mmTradingCurrency, TradeLeg4.mmTradingCurrency, TradeLeg7.mmTradingCurrency, TradeLeg8.mmTradingCurrency, TradeLeg10.mmTradingCurrency, TradeLeg9.mmTradingCurrency,
 					Trade2.mmTradingCurrency, Trade1.mmTradingCurrency);
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingCurrency";
@@ -1113,6 +1130,14 @@ public class TradingMarket extends Market {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradingMarket.class.getMethod("getTradingCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesQuantity maximumTradedNominalQuantity;
@@ -1133,11 +1158,6 @@ public class TradingMarket extends Market {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1145,6 +1165,11 @@ public class TradingMarket extends Market {
 	 * {@linkplain com.tools20022.repository.msg.TradingParameters1#mmMaximumTradedNominalQuantity
 	 * TradingParameters1.mmMaximumTradedNominalQuantity}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1160,7 +1185,7 @@ public class TradingMarket extends Market {
 	public static final MMBusinessAssociationEnd mmMaximumTradedNominalQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradingParameters1.mmMaximumTradedNominalQuantity);
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumTradedNominalQuantity";
@@ -1208,7 +1233,7 @@ public class TradingMarket extends Market {
 	 */
 	public static final MMBusinessAssociationEnd mmStockExchange = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StockExchange";
@@ -1261,7 +1286,7 @@ public class TradingMarket extends Market {
 	 */
 	public static final MMBusinessAssociationEnd mmQuoteLot = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuoteLot";
@@ -1294,11 +1319,6 @@ public class TradingMarket extends Market {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.LotBreakdown
 	 * LotBreakdown}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1306,6 +1326,11 @@ public class TradingMarket extends Market {
 	 * {@linkplain com.tools20022.repository.msg.TradingParameters1#mmRoundLot
 	 * TradingParameters1.mmRoundLot}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1323,7 +1348,7 @@ public class TradingMarket extends Market {
 	public static final MMBusinessAssociationEnd mmRoundLot = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradingParameters1.mmRoundLot);
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundLot";
@@ -1371,7 +1396,7 @@ public class TradingMarket extends Market {
 	 */
 	public static final MMBusinessAssociationEnd mmTradingSession = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingSession";
@@ -1419,7 +1444,7 @@ public class TradingMarket extends Market {
 	 */
 	public static final MMBusinessAssociationEnd mmListedSecurityTradingIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ListedSecurityTradingIdentification";
@@ -1460,7 +1485,7 @@ public class TradingMarket extends Market {
 	 */
 	public static final MMBusinessAttribute mmDefaultCurrency = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DefaultCurrency";
@@ -1468,6 +1493,14 @@ public class TradingMarket extends Market {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradingMarket.class.getMethod("getDefaultCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime firstTradingDate;
@@ -1499,7 +1532,7 @@ public class TradingMarket extends Market {
 	 */
 	public static final MMBusinessAttribute mmFirstTradingDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstTradingDate";
@@ -1507,6 +1540,14 @@ public class TradingMarket extends Market {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradingMarket.class.getMethod("getFirstTradingDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime lastTradingDate;
@@ -1538,7 +1579,7 @@ public class TradingMarket extends Market {
 	 */
 	public static final MMBusinessAttribute mmLastTradingDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LastTradingDate";
@@ -1546,6 +1587,14 @@ public class TradingMarket extends Market {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradingMarket.class.getMethod("getLastTradingDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Issuance issuance;
@@ -1583,7 +1632,7 @@ public class TradingMarket extends Market {
 	 */
 	public static final MMBusinessAssociationEnd mmIssuance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Issuance";
@@ -1632,7 +1681,7 @@ public class TradingMarket extends Market {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPlaceOfSettlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradingMarket.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPlaceOfSettlement";
@@ -1671,10 +1720,13 @@ public class TradingMarket extends Market {
 						RedemptionMultipleExecution5.mmPlaceOfTrade, RedemptionMultipleOrder6.mmPlaceOfTrade, SubscriptionMultipleOrder6.mmPlaceOfTrade, SubscriptionBulkExecution4.mmPlaceOfTrade, SwitchOrder7.mmPlaceOfTrade,
 						RedemptionBulkOrder6.mmPlaceOfTrade, SubscriptionMultipleExecution5.mmPlaceOfTrade);
 				superType_lazy = () -> Market.mmObject();
-				element_lazy = () -> Arrays.asList(TradingMarket.mmTradedSecurity, TradingMarket.mmType, TradingMarket.mmListedSecurity, TradingMarket.mmSourceOfPrice, TradingMarket.mmTradeLotSize,
-						TradingMarket.mmMinimumTradedNominalQuantity, TradingMarket.mmListingDate, TradingMarket.mmRelatedOrder, TradingMarket.mmTradingCurrency, TradingMarket.mmMaximumTradedNominalQuantity, TradingMarket.mmStockExchange,
-						TradingMarket.mmQuoteLot, TradingMarket.mmRoundLot, TradingMarket.mmTradingSession, TradingMarket.mmListedSecurityTradingIdentification, TradingMarket.mmDefaultCurrency, TradingMarket.mmFirstTradingDate,
-						TradingMarket.mmLastTradingDate, TradingMarket.mmIssuance, TradingMarket.mmRelatedPlaceOfSettlement);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradingMarket.mmTradedSecurity, com.tools20022.repository.entity.TradingMarket.mmType, com.tools20022.repository.entity.TradingMarket.mmListedSecurity,
+						com.tools20022.repository.entity.TradingMarket.mmSourceOfPrice, com.tools20022.repository.entity.TradingMarket.mmTradeLotSize, com.tools20022.repository.entity.TradingMarket.mmMinimumTradedNominalQuantity,
+						com.tools20022.repository.entity.TradingMarket.mmListingDate, com.tools20022.repository.entity.TradingMarket.mmRelatedOrder, com.tools20022.repository.entity.TradingMarket.mmTradingCurrency,
+						com.tools20022.repository.entity.TradingMarket.mmMaximumTradedNominalQuantity, com.tools20022.repository.entity.TradingMarket.mmStockExchange, com.tools20022.repository.entity.TradingMarket.mmQuoteLot,
+						com.tools20022.repository.entity.TradingMarket.mmRoundLot, com.tools20022.repository.entity.TradingMarket.mmTradingSession, com.tools20022.repository.entity.TradingMarket.mmListedSecurityTradingIdentification,
+						com.tools20022.repository.entity.TradingMarket.mmDefaultCurrency, com.tools20022.repository.entity.TradingMarket.mmFirstTradingDate, com.tools20022.repository.entity.TradingMarket.mmLastTradingDate,
+						com.tools20022.repository.entity.TradingMarket.mmIssuance, com.tools20022.repository.entity.TradingMarket.mmRelatedPlaceOfSettlement);
 				derivationComponent_lazy = () -> Arrays.asList(LocalMarketAnnex.mmObject(), LocalMarketAnnex2.mmObject(), MarketIdentification1Choice.mmObject(), MarketType3Choice.mmObject(), MarketIdentification4.mmObject(),
 						MarketType2Choice.mmObject(), MarketIdentification5.mmObject(), MarketIdentification3Choice.mmObject(), MarketIdentification2Choice.mmObject(), MarketType6Choice.mmObject(), MarketIdentification8.mmObject(),
 						MarketIdentification4Choice.mmObject(), MarketTypeFormat1Choice.mmObject(), MarketIdentification2.mmObject(), MarketTypeFormat2Choice.mmObject(), MarketIdentification7.mmObject(), MarketType5Choice.mmObject(),
@@ -1684,6 +1736,11 @@ public class TradingMarket extends Market {
 						PlaceOfTradeIdentification3Choice.mmObject(), TradingParameters1.mmObject(), MarketType1Choice.mmObject(), MarketIdentification3.mmObject(), MarketIdentification78.mmObject(), MarketIdentification79.mmObject(),
 						MarketIdentification80.mmObject(), MarketIdentification82.mmObject(), MarketIdentification84.mmObject(), MarketIdentification85.mmObject(), TradingVenueAttributes1.mmObject(), MarketIdentification89.mmObject(),
 						MarketType15Choice.mmObject(), MarketIdentification90.mmObject(), MarketType16Choice.mmObject(), MarketType17Choice.mmObject(), MarketIdentification91.mmObject(), MarketDetail2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TradingMarket.class;
 			}
 		});
 		return mmObject_lazy.get();

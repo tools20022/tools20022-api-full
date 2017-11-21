@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the intra-balance movement.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details of the intra-balance movement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraBalance1", propOrder = {"settlementAmount", "settlementDate", "balanceFrom", "balanceTo", "cashSubBalanceIdentification", "priority", "instructionProcessingAdditionalDetails"})
 public class IntraBalance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -419,6 +425,7 @@ public class IntraBalance1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmAmt", required = true)
 	public Amount2Choice getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -427,6 +434,7 @@ public class IntraBalance1 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public DateAndDateTimeChoice getSettlementDate() {
 		return settlementDate;
 	}
@@ -435,6 +443,7 @@ public class IntraBalance1 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "BalFr", required = true)
 	public CashSubBalanceTypeAndQuantityBreakdown1 getBalanceFrom() {
 		return balanceFrom;
 	}
@@ -443,6 +452,7 @@ public class IntraBalance1 {
 		this.balanceFrom = balanceFrom;
 	}
 
+	@XmlElement(name = "BalTo", required = true)
 	public CashSubBalanceTypeAndQuantityBreakdown1 getBalanceTo() {
 		return balanceTo;
 	}
@@ -451,6 +461,7 @@ public class IntraBalance1 {
 		this.balanceTo = balanceTo;
 	}
 
+	@XmlElement(name = "CshSubBalId")
 	public GenericIdentification37 getCashSubBalanceIdentification() {
 		return cashSubBalanceIdentification;
 	}
@@ -459,6 +470,7 @@ public class IntraBalance1 {
 		this.cashSubBalanceIdentification = cashSubBalanceIdentification;
 	}
 
+	@XmlElement(name = "Prty")
 	public PriorityNumeric1Choice getPriority() {
 		return priority;
 	}
@@ -467,6 +479,7 @@ public class IntraBalance1 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "InstrPrcgAddtlDtls")
 	public Max350Text getInstructionProcessingAdditionalDetails() {
 		return instructionProcessingAdditionalDetails;
 	}

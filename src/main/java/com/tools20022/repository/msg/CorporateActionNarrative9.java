@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information such as the information conditions.
@@ -71,6 +75,8 @@ import java.util.List;
  * "Provides additional information such as the information conditions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNarrative9", propOrder = {"additionalText", "informationConditions", "informationToComplyWith", "partyContactNarrative"})
 public class CorporateActionNarrative9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -285,6 +291,7 @@ public class CorporateActionNarrative9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlTxt")
 	public List<Max350Text> getAdditionalText() {
 		return additionalText;
 	}
@@ -293,6 +300,7 @@ public class CorporateActionNarrative9 {
 		this.additionalText = additionalText;
 	}
 
+	@XmlElement(name = "InfConds")
 	public List<Max350Text> getInformationConditions() {
 		return informationConditions;
 	}
@@ -301,6 +309,7 @@ public class CorporateActionNarrative9 {
 		this.informationConditions = informationConditions;
 	}
 
+	@XmlElement(name = "InfToCmplyWth")
 	public List<Max350Text> getInformationToComplyWith() {
 		return informationToComplyWith;
 	}
@@ -309,6 +318,7 @@ public class CorporateActionNarrative9 {
 		this.informationToComplyWith = informationToComplyWith;
 	}
 
+	@XmlElement(name = "PtyCtctNrrtv")
 	public List<Max350Text> getPartyContactNarrative() {
 		return partyContactNarrative;
 	}

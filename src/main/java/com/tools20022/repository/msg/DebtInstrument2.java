@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the debit instrument.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DebtInstrument2", propOrder = {"totalIssuedNominalAmount", "maturityDate", "nominalValuePerUnit", "interestRate", "debtSeniority"})
 public class DebtInstrument2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -338,6 +344,7 @@ public class DebtInstrument2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlIssdNmnlAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getTotalIssuedNominalAmount() {
 		return totalIssuedNominalAmount;
 	}
@@ -346,6 +353,7 @@ public class DebtInstrument2 {
 		this.totalIssuedNominalAmount = totalIssuedNominalAmount;
 	}
 
+	@XmlElement(name = "MtrtyDt")
 	public ISODate getMaturityDate() {
 		return maturityDate;
 	}
@@ -354,6 +362,7 @@ public class DebtInstrument2 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "NmnlValPerUnit", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getNominalValuePerUnit() {
 		return nominalValuePerUnit;
 	}
@@ -362,6 +371,7 @@ public class DebtInstrument2 {
 		this.nominalValuePerUnit = nominalValuePerUnit;
 	}
 
+	@XmlElement(name = "IntrstRate", required = true)
 	public InterestRate6Choice getInterestRate() {
 		return interestRate;
 	}
@@ -370,6 +380,7 @@ public class DebtInstrument2 {
 		this.interestRate = interestRate;
 	}
 
+	@XmlElement(name = "DebtSnrty")
 	public DebtInstrumentSeniorityType1Code getDebtSeniority() {
 		return debtSeniority;
 	}

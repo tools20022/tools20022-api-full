@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Tangible output or service produced by human or mechanical effort, or by a
@@ -87,6 +91,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeProduct1", propOrder = {"identification", "name", "description", "countryOfOrigin", "productCharacteristics", "productCategory", "globalSerialIdentifier"})
 public class TradeProduct1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -492,6 +498,7 @@ public class TradeProduct1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public List<ProductIdentifier2Choice> getIdentification() {
 		return identification;
 	}
@@ -500,6 +507,7 @@ public class TradeProduct1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max35Text getName() {
 		return name;
 	}
@@ -508,6 +516,7 @@ public class TradeProduct1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Desc")
 	public Max140Text getDescription() {
 		return description;
 	}
@@ -516,6 +525,7 @@ public class TradeProduct1 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "CtryOfOrgn")
 	public List<CountryCodeAndName1> getCountryOfOrigin() {
 		return countryOfOrigin;
 	}
@@ -524,6 +534,7 @@ public class TradeProduct1 {
 		this.countryOfOrigin = countryOfOrigin;
 	}
 
+	@XmlElement(name = "PdctChrtcs")
 	public List<ProductCharacteristics2> getProductCharacteristics() {
 		return productCharacteristics;
 	}
@@ -532,6 +543,7 @@ public class TradeProduct1 {
 		this.productCharacteristics = productCharacteristics;
 	}
 
+	@XmlElement(name = "PdctCtgy")
 	public List<ProductCategory1Choice> getProductCategory() {
 		return productCategory;
 	}
@@ -540,6 +552,7 @@ public class TradeProduct1 {
 		this.productCategory = productCategory;
 	}
 
+	@XmlElement(name = "GblSrlIdr")
 	public List<Max35Text> getGlobalSerialIdentifier() {
 		return globalSerialIdentifier;
 	}

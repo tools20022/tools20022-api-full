@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.SystemStatusCode;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +39,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemStatus#mmStatus
+ * SystemStatus.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemStatus#mmMemberStatus
+ * SystemStatus.mmMemberStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemStatus#mmSystem
+ * SystemStatus.mmSystem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemStatus#mmSystemMemberRole
+ * SystemStatus.mmSystemMemberRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -100,22 +117,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * PointOfInteractionComponent7.mmStatus}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SystemStatus#mmStatus
- * SystemStatus.mmStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemStatus#mmMemberStatus
- * SystemStatus.mmMemberStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemStatus#mmSystem
- * SystemStatus.mmSystem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemStatus#mmSystemMemberRole
- * SystemStatus.mmSystemMemberRole}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -147,10 +148,6 @@ public class SystemStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SystemStatusCode
 	 * SystemStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SystemStatus SystemStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -184,6 +181,10 @@ public class SystemStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SystemStatus SystemStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -198,7 +199,7 @@ public class SystemStatus extends Status {
 		{
 			derivation_lazy = () -> Arrays.asList(SystemStatusDetails1.mmStatus, SystemStatus1Choice.mmCode, SystemStatus1Choice.mmProprietary, SystemStatus1.mmStatus, PointOfInteractionComponentStatus1.mmStatus, SystemStatus2.mmStatus,
 					SystemStatus2Choice.mmCode, SystemStatus2Choice.mmProprietary, PointOfInteractionComponentStatus2.mmStatus, PointOfInteractionComponentStatus3.mmStatus);
-			elementContext_lazy = () -> SystemStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
@@ -206,6 +207,14 @@ public class SystemStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SystemStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SystemStatus.class.getMethod("getStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MemberStatusCode memberStatus;
@@ -219,10 +228,6 @@ public class SystemStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.MemberStatusCode
 	 * MemberStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SystemStatus SystemStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -232,6 +237,10 @@ public class SystemStatus extends Status {
 	 * Member1.mmStatus}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SystemStatus SystemStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -246,7 +255,7 @@ public class SystemStatus extends Status {
 	public static final MMBusinessAttribute mmMemberStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(MemberDetails.mmStatus, Member1.mmStatus);
-			elementContext_lazy = () -> SystemStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MemberStatus";
@@ -254,6 +263,14 @@ public class SystemStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MemberStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SystemStatus.class.getMethod("getMemberStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected System system;
@@ -289,7 +306,7 @@ public class SystemStatus extends Status {
 	 */
 	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SystemStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
@@ -337,7 +354,7 @@ public class SystemStatus extends Status {
 	 */
 	public static final MMBusinessAssociationEnd mmSystemMemberRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SystemStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemMemberRole";
@@ -361,9 +378,15 @@ public class SystemStatus extends Status {
 				derivationElement_lazy = () -> Arrays.asList(SystemAvailabilityAndEvents1.mmClosureInformation, PointOfInteractionComponent3.mmStatus, PointOfInteractionComponent4.mmStatus, PointOfInteractionComponent5.mmStatus,
 						PointOfInteractionComponent6.mmStatus, PointOfInteractionComponent7.mmStatus);
 				superType_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
-				element_lazy = () -> Arrays.asList(SystemStatus.mmStatus, SystemStatus.mmMemberStatus, SystemStatus.mmSystem, SystemStatus.mmSystemMemberRole);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemStatus.mmStatus, com.tools20022.repository.entity.SystemStatus.mmMemberStatus, com.tools20022.repository.entity.SystemStatus.mmSystem,
+						com.tools20022.repository.entity.SystemStatus.mmSystemMemberRole);
 				derivationComponent_lazy = () -> Arrays.asList(SystemStatusDetails1.mmObject(), ClosureReasonChoice.mmObject(), SystemStatus1Choice.mmObject(), SystemStatus1.mmObject(), ClosureReason2Choice.mmObject(),
 						PointOfInteractionComponentStatus1.mmObject(), SystemStatus2.mmObject(), SystemStatus2Choice.mmObject(), PointOfInteractionComponentStatus2.mmObject(), PointOfInteractionComponentStatus3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SystemStatus.class;
 			}
 		});
 		return mmObject_lazy.get();

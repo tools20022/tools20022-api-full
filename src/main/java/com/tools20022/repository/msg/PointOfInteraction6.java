@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a point of interaction.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identification of a point of interaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PointOfInteraction6", propOrder = {"manufacturerIdentifier", "model", "serialNumber"})
 public class PointOfInteraction6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -199,6 +205,7 @@ public class PointOfInteraction6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ManfctrIdr", required = true)
 	public Max35Text getManufacturerIdentifier() {
 		return manufacturerIdentifier;
 	}
@@ -207,6 +214,7 @@ public class PointOfInteraction6 {
 		this.manufacturerIdentifier = manufacturerIdentifier;
 	}
 
+	@XmlElement(name = "Mdl", required = true)
 	public Max35Text getModel() {
 		return model;
 	}
@@ -215,6 +223,7 @@ public class PointOfInteraction6 {
 		this.model = model;
 	}
 
+	@XmlElement(name = "SrlNb", required = true)
 	public Max35Text getSerialNumber() {
 		return serialNumber;
 	}

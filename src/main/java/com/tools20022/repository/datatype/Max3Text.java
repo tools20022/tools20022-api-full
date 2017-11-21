@@ -54,6 +54,8 @@ public class Max3Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max3Text";
 				definition = "Specifies a character string with a maximum length of 3 characters.";
+				minLength = 1;
+				maxLength = 3;
 			}
 		});
 		return mmObject_lazy.get();

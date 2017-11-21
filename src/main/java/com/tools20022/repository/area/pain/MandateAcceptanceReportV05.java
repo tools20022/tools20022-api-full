@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.MX_Payment_Maintenance_2016_2017;
 import com.tools20022.repository.msgset.PaymentsMandatesISOLatestversion;
 import com.tools20022.repository.msgset.PaymentsMandatesMaintenance20162017;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -53,9 +55,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.012.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationLatestVersion
@@ -94,6 +93,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.012.001.05}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -109,6 +111,8 @@ import java.util.List;
  * MandateAcceptanceReportV04}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MandateAcceptanceReportV05", propOrder = {"groupHeader", "underlyingAcceptanceDetails", "supplementaryData"})
 public class MandateAcceptanceReportV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -154,6 +158,14 @@ public class MandateAcceptanceReportV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader47.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateAcceptanceReportV05.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<MandateAcceptance5> underlyingAcceptanceDetails;
 	/**
@@ -196,6 +208,14 @@ public class MandateAcceptanceReportV05 {
 			previousVersion_lazy = () -> MandateAcceptanceReportV04.mmUnderlyingAcceptanceDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> MandateAcceptance5.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateAcceptanceReportV05.class.getMethod("getUnderlyingAcceptanceDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -240,6 +260,14 @@ public class MandateAcceptanceReportV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateAcceptanceReportV05.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -253,7 +281,8 @@ public class MandateAcceptanceReportV05 {
 				rootElement = "Document";
 				xmlTag = "MndtAccptncRpt";
 				businessArea_lazy = () -> PaymentsInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MandateAcceptanceReportV05.mmGroupHeader, MandateAcceptanceReportV05.mmUnderlyingAcceptanceDetails, MandateAcceptanceReportV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAcceptanceReportV05.mmGroupHeader, com.tools20022.repository.area.pain.MandateAcceptanceReportV05.mmUnderlyingAcceptanceDetails,
+						com.tools20022.repository.area.pain.MandateAcceptanceReportV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";
@@ -263,10 +292,16 @@ public class MandateAcceptanceReportV05 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MandateAcceptanceReportV05.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader47 getGroupHeader() {
 		return groupHeader;
 	}
@@ -275,6 +310,7 @@ public class MandateAcceptanceReportV05 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "UndrlygAccptncDtls", required = true)
 	public List<MandateAcceptance5> getUnderlyingAcceptanceDetails() {
 		return underlyingAcceptanceDetails;
 	}
@@ -283,11 +319,18 @@ public class MandateAcceptanceReportV05 {
 		this.underlyingAcceptanceDetails = underlyingAcceptanceDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.012.05.05")
+	static public class Document {
+		@XmlElement(name = "MndtAccptncRpt", required = true)
+		public MandateAcceptanceReportV05 messageBody;
 	}
 }

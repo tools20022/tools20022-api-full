@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to report on a payment transaction.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionReturnCriteria3", propOrder = {"paymentToReturnCriteria", "paymentFromReturnCriteria", "accountCashEntryReturnCriteria", "paymentReturnCriteria"})
 public class TransactionReturnCriteria3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -248,6 +254,7 @@ public class TransactionReturnCriteria3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtToRtrCrit")
 	public SystemReturnCriteria2 getPaymentToReturnCriteria() {
 		return paymentToReturnCriteria;
 	}
@@ -256,6 +263,7 @@ public class TransactionReturnCriteria3 {
 		this.paymentToReturnCriteria = paymentToReturnCriteria;
 	}
 
+	@XmlElement(name = "PmtFrRtrCrit")
 	public SystemReturnCriteria2 getPaymentFromReturnCriteria() {
 		return paymentFromReturnCriteria;
 	}
@@ -264,6 +272,7 @@ public class TransactionReturnCriteria3 {
 		this.paymentFromReturnCriteria = paymentFromReturnCriteria;
 	}
 
+	@XmlElement(name = "AcctCshNtryRtrCrit")
 	public AccountCashEntryReturnCriteria2 getAccountCashEntryReturnCriteria() {
 		return accountCashEntryReturnCriteria;
 	}
@@ -272,6 +281,7 @@ public class TransactionReturnCriteria3 {
 		this.accountCashEntryReturnCriteria = accountCashEntryReturnCriteria;
 	}
 
+	@XmlElement(name = "PmtRtrCrit")
 	public PaymentReturnCriteria3 getPaymentReturnCriteria() {
 		return paymentReturnCriteria;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports to a corporate on the actual set up up of the account, related
@@ -96,6 +100,8 @@ import java.util.List;
  * AccountReport1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountReport15", propOrder = {"account", "underlyingMasterAgreement", "contractDates", "mandate", "group", "referenceAccount", "balanceTransferAccount", "transferAccountServicerIdentification"})
 public class AccountReport15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -495,6 +501,7 @@ public class AccountReport15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CustomerAccount5 getAccount() {
 		return account;
 	}
@@ -503,6 +510,7 @@ public class AccountReport15 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "UndrlygMstrAgrmt")
 	public ContractDocument1 getUnderlyingMasterAgreement() {
 		return underlyingMasterAgreement;
 	}
@@ -511,6 +519,7 @@ public class AccountReport15 {
 		this.underlyingMasterAgreement = underlyingMasterAgreement;
 	}
 
+	@XmlElement(name = "CtrctDts")
 	public AccountContract3 getContractDates() {
 		return contractDates;
 	}
@@ -519,6 +528,7 @@ public class AccountReport15 {
 		this.contractDates = contractDates;
 	}
 
+	@XmlElement(name = "Mndt")
 	public List<OperationMandate2> getMandate() {
 		return mandate;
 	}
@@ -527,6 +537,7 @@ public class AccountReport15 {
 		this.mandate = mandate;
 	}
 
+	@XmlElement(name = "Grp")
 	public List<Group1> getGroup() {
 		return group;
 	}
@@ -535,6 +546,7 @@ public class AccountReport15 {
 		this.group = group;
 	}
 
+	@XmlElement(name = "RefAcct")
 	public CashAccount24 getReferenceAccount() {
 		return referenceAccount;
 	}
@@ -543,6 +555,7 @@ public class AccountReport15 {
 		this.referenceAccount = referenceAccount;
 	}
 
+	@XmlElement(name = "BalTrfAcct")
 	public AccountForAction1 getBalanceTransferAccount() {
 		return balanceTransferAccount;
 	}
@@ -551,6 +564,7 @@ public class AccountReport15 {
 		this.balanceTransferAccount = balanceTransferAccount;
 	}
 
+	@XmlElement(name = "TrfAcctSvcrId")
 	public BranchAndFinancialInstitutionIdentification5 getTransferAccountServicerIdentification() {
 		return transferAccountServicerIdentification;
 	}

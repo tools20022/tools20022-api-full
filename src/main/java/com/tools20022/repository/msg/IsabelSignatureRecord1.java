@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the individual record of the file signature.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelSignatureRecord1", propOrder = {"signatureType", "serialNumber", "certificate", "signature", "algorithm", "signerIdentification"})
 public class IsabelSignatureRecord1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -409,6 +415,7 @@ public class IsabelSignatureRecord1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SgntrTp", required = true)
 	public SignatureOriginType1Code getSignatureType() {
 		return signatureType;
 	}
@@ -417,6 +424,7 @@ public class IsabelSignatureRecord1 {
 		this.signatureType = signatureType;
 	}
 
+	@XmlElement(name = "SrlNb", required = true)
 	public Max20AlphaNumericText getSerialNumber() {
 		return serialNumber;
 	}
@@ -425,6 +433,7 @@ public class IsabelSignatureRecord1 {
 		this.serialNumber = serialNumber;
 	}
 
+	@XmlElement(name = "Cert", required = true)
 	public Max4kBinary getCertificate() {
 		return certificate;
 	}
@@ -433,6 +442,7 @@ public class IsabelSignatureRecord1 {
 		this.certificate = certificate;
 	}
 
+	@XmlElement(name = "Sgntr", required = true)
 	public Max1kBinary getSignature() {
 		return signature;
 	}
@@ -441,6 +451,7 @@ public class IsabelSignatureRecord1 {
 		this.signature = signature;
 	}
 
+	@XmlElement(name = "Algo", required = true)
 	public Max105Text getAlgorithm() {
 		return algorithm;
 	}
@@ -449,6 +460,7 @@ public class IsabelSignatureRecord1 {
 		this.algorithm = algorithm;
 	}
 
+	@XmlElement(name = "SgnrId", required = true)
 	public Max13AlphaNumericText getSignerIdentification() {
 		return signerIdentification;
 	}

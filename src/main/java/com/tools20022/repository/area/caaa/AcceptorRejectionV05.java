@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.Header26;
 import com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20152016;
 import com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20162017;
 import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The AcceptorRejection message is sent by the acquirer (or its agent) to
@@ -37,9 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.015.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVersion
@@ -75,6 +74,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.015.001.05}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -90,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorRejectionV04}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorRejectionV05", propOrder = {"header", "reject"})
 public class AcceptorRejectionV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -132,6 +136,14 @@ public class AcceptorRejectionV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header26.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorRejectionV05.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AcceptorRejection2 reject;
 	/**
@@ -173,6 +185,14 @@ public class AcceptorRejectionV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorRejection2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorRejectionV05.class.getMethod("getReject", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -186,7 +206,7 @@ public class AcceptorRejectionV05 {
 				rootElement = "Document";
 				xmlTag = "AccptrRjctn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorRejectionV05.mmHeader, AcceptorRejectionV05.mmReject);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorRejectionV05.mmHeader, com.tools20022.repository.area.caaa.AcceptorRejectionV05.mmReject);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";
@@ -196,10 +216,16 @@ public class AcceptorRejectionV05 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcceptorRejectionV05.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header26 getHeader() {
 		return header;
 	}
@@ -208,11 +234,18 @@ public class AcceptorRejectionV05 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "Rjct", required = true)
 	public AcceptorRejection2 getReject() {
 		return reject;
 	}
 
 	public void setReject(AcceptorRejection2 reject) {
 		this.reject = reject;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.015.05.05")
+	static public class Document {
+		@XmlElement(name = "AccptrRjctn", required = true)
+		public AcceptorRejectionV05 messageBody;
 	}
 }

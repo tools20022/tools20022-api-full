@@ -36,6 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CreditorRole#mmSchemeIdentification
+ * CreditorRole.mmSchemeIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
+ * PaymentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -49,17 +60,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmCreditorRole
  * Scheme.mmCreditorRole}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
- * PaymentPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CreditorRole#mmSchemeIdentification
- * CreditorRole.mmSchemeIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -114,7 +114,7 @@ public class CreditorRole extends PaymentPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmSchemeIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CreditorRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CreditorRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SchemeIdentification";
@@ -136,8 +136,13 @@ public class CreditorRole extends PaymentPartyRole {
 				definition = "Party to which an amount of money is due.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Scheme.mmCreditorRole);
 				superType_lazy = () -> PaymentPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(CreditorRole.mmSchemeIdentification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CreditorRole.mmSchemeIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(Creditor2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CreditorRole.class;
 			}
 		});
 		return mmObject_lazy.get();

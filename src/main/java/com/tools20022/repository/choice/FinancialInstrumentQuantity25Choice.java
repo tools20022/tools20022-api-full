@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the format for the quantity of security.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the format for the quantity of security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentQuantity25Choice", propOrder = {"unit", "nominalValue", "monetaryValue"})
 public class FinancialInstrumentQuantity25Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class FinancialInstrumentQuantity25Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Unit", required = true)
 	public DecimalNumber getUnit() {
 		return unit;
 	}
@@ -237,6 +244,7 @@ public class FinancialInstrumentQuantity25Choice {
 		this.unit = unit;
 	}
 
+	@XmlElement(name = "NmnlVal", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getNominalValue() {
 		return nominalValue;
 	}
@@ -245,6 +253,7 @@ public class FinancialInstrumentQuantity25Choice {
 		this.nominalValue = nominalValue;
 	}
 
+	@XmlElement(name = "MntryVal", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getMonetaryValue() {
 		return monetaryValue;
 	}

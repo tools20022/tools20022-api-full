@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmCorporateActionEventIdentification
+ * CorporateActionEventRegistration.mmCorporateActionEventIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmOfficialCorporateActionEventIdentification
+ * CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmOfficialAnnouncementPublicationDate
+ * CorporateActionEventRegistration.mmOfficialAnnouncementPublicationDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmCorporateActionEvent
+ * CorporateActionEventRegistration.mmCorporateActionEvent}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -71,24 +90,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionEvent.mmCorporateActionEventRegistration}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmCorporateActionEventIdentification
- * CorporateActionEventRegistration.mmCorporateActionEventIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmOfficialCorporateActionEventIdentification
- * CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification
- * }</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmOfficialAnnouncementPublicationDate
- * CorporateActionEventRegistration.mmOfficialAnnouncementPublicationDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmCorporateActionEvent
- * CorporateActionEventRegistration.mmCorporateActionEvent}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -117,11 +118,6 @@ public class CorporateActionEventRegistration {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration
-	 * CorporateActionEventRegistration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1046,6 +1042,11 @@ public class CorporateActionEventRegistration {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration
+	 * CorporateActionEventRegistration}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1157,7 +1158,7 @@ public class CorporateActionEventRegistration {
 					SecuritiesFinancingTransactionDetails36.mmCorporateActionEventIdentification, CorporateActionGeneralInformation113.mmCorporateActionEventIdentification,
 					SettlementTypeAndAdditionalParameters20.mmCorporateActionEventIdentification, EventInformation10.mmCorporateActionEventIdentification, Transaction56.mmCorporateActionEventIdentification,
 					TransactionDetails100.mmCorporateActionEventIdentification, Transaction55.mmCorporateActionEventIdentification);
-			elementContext_lazy = () -> CorporateActionEventRegistration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionEventIdentification";
@@ -1165,6 +1166,14 @@ public class CorporateActionEventRegistration {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionEventRegistration.class.getMethod("getCorporateActionEventIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text officialCorporateActionEventIdentification;
@@ -1178,11 +1187,6 @@ public class CorporateActionEventRegistration {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration
-	 * CorporateActionEventRegistration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1655,6 +1659,11 @@ public class CorporateActionEventRegistration {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration
+	 * CorporateActionEventRegistration}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1728,7 +1737,7 @@ public class CorporateActionEventRegistration {
 					CorporateActionGeneralInformation121.mmOfficialCorporateActionEventIdentification, CorporateActionGeneralInformation123.mmOfficialCorporateActionEventIdentification,
 					CorporateActionGeneralInformation117.mmOfficialCorporateActionEventIdentification, CorporateActionGeneralInformation113.mmOfficialCorporateActionEventIdentification,
 					EventInformation10.mmOfficialCorporateActionEventIdentification);
-			elementContext_lazy = () -> CorporateActionEventRegistration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfficialCorporateActionEventIdentification";
@@ -1736,6 +1745,14 @@ public class CorporateActionEventRegistration {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionEventRegistration.class.getMethod("getOfficialCorporateActionEventIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime officialAnnouncementPublicationDate;
@@ -1749,11 +1766,6 @@ public class CorporateActionEventRegistration {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration
-	 * CorporateActionEventRegistration}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1793,6 +1805,11 @@ public class CorporateActionEventRegistration {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration
+	 * CorporateActionEventRegistration}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1811,7 +1828,7 @@ public class CorporateActionEventRegistration {
 					CorporateActionDate21.mmOfficialAnnouncementPublicationDate, CorporateActionDate22.mmOfficialAnnouncementPublicationDate, CorporateActionDate25.mmOfficialAnnouncementPublicationDate,
 					CorporateActionDate27.mmOfficialAnnouncementPublicationDate, CorporateActionDate28.mmOfficialAnnouncementPublicationDate, CorporateActionNotification1.mmOfficialAnnouncementPublicationDate,
 					CorporateActionDate44.mmOfficialAnnouncementPublicationDate, CorporateActionDate58.mmOfficialAnnouncementPublicationDate);
-			elementContext_lazy = () -> CorporateActionEventRegistration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfficialAnnouncementPublicationDate";
@@ -1819,6 +1836,14 @@ public class CorporateActionEventRegistration {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionEventRegistration.class.getMethod("getOfficialAnnouncementPublicationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionEvent corporateActionEvent;
@@ -1858,7 +1883,7 @@ public class CorporateActionEventRegistration {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionEventRegistration.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionEvent";
@@ -1879,11 +1904,17 @@ public class CorporateActionEventRegistration {
 				name = "CorporateActionEventRegistration";
 				definition = "Specifies the official date and identification of the event.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionEventRegistration);
-				element_lazy = () -> Arrays.asList(CorporateActionEventRegistration.mmCorporateActionEventIdentification, CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification,
-						CorporateActionEventRegistration.mmOfficialAnnouncementPublicationDate, CorporateActionEventRegistration.mmCorporateActionEvent);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEventIdentification,
+						com.tools20022.repository.entity.CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification,
+						com.tools20022.repository.entity.CorporateActionEventRegistration.mmOfficialAnnouncementPublicationDate, com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEvent);
 				derivationComponent_lazy = () -> Arrays.asList(CorporateActionEventReference1Choice.mmObject(), CorporateActionEventReference1.mmObject(), CorporateActionEventReference2Choice.mmObject(),
 						CorporateActionEventReference2.mmObject(), CorporateActionEventReference3.mmObject(), CorporateActionEventReference3Choice.mmObject(), CorporateActionEventReference4.mmObject(),
 						CorporateActionEventReference4Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionEventRegistration.class;
 			}
 		});
 		return mmObject_lazy.get();

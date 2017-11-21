@@ -30,17 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxExemptReason1Code
- * TaxExemptReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxExemptReason2Code
- * TaxExemptReason2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxExemptReason3Code
- * TaxExemptReason3Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.TaxExemptReasonCode#mmNone
@@ -174,6 +163,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TaxExemptReasonCode#mmAdministrator
  * TaxExemptReasonCode.mmAdministrator}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxExemptReason1Code
+ * TaxExemptReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxExemptReason2Code
+ * TaxExemptReason2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxExemptReason3Code
+ * TaxExemptReason3Code}</li>
  * </ul>
  * </li>
  * <li>

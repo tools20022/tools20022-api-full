@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.SimpleIdentificationInformation;
 import com.tools20022.repository.msg.TransactionStatus5;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -46,9 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.035.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -87,6 +86,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.035.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -98,6 +100,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusExtensionRequestV03", propOrder = {"requestIdentification", "transactionIdentification", "submitterTransactionReference", "statusToBeExtended"})
 public class StatusExtensionRequestV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -134,6 +138,14 @@ public class StatusExtensionRequestV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusExtensionRequestV03.class.getMethod("getRequestIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -174,6 +186,14 @@ public class StatusExtensionRequestV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusExtensionRequestV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
@@ -209,6 +229,14 @@ public class StatusExtensionRequestV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusExtensionRequestV03.class.getMethod("getSubmitterTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TransactionStatus5 statusToBeExtended;
@@ -246,6 +274,14 @@ public class StatusExtensionRequestV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusExtensionRequestV03.class.getMethod("getStatusToBeExtended", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -258,8 +294,9 @@ public class StatusExtensionRequestV03 {
 				rootElement = "Document";
 				xmlTag = "StsXtnsnReq";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(StatusExtensionRequestV03.mmRequestIdentification, StatusExtensionRequestV03.mmTransactionIdentification, StatusExtensionRequestV03.mmSubmitterTransactionReference,
-						StatusExtensionRequestV03.mmStatusToBeExtended);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusExtensionRequestV03.mmRequestIdentification,
+						com.tools20022.repository.area.tsmt.StatusExtensionRequestV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.StatusExtensionRequestV03.mmSubmitterTransactionReference,
+						com.tools20022.repository.area.tsmt.StatusExtensionRequestV03.mmStatusToBeExtended);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -269,10 +306,16 @@ public class StatusExtensionRequestV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StatusExtensionRequestV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqId", required = true)
 	public MessageIdentification1 getRequestIdentification() {
 		return requestIdentification;
 	}
@@ -281,6 +324,7 @@ public class StatusExtensionRequestV03 {
 		this.requestIdentification = requestIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -289,6 +333,7 @@ public class StatusExtensionRequestV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "SubmitrTxRef")
 	public SimpleIdentificationInformation getSubmitterTransactionReference() {
 		return submitterTransactionReference;
 	}
@@ -297,11 +342,18 @@ public class StatusExtensionRequestV03 {
 		this.submitterTransactionReference = submitterTransactionReference;
 	}
 
+	@XmlElement(name = "StsToBeXtnded", required = true)
 	public TransactionStatus5 getStatusToBeExtended() {
 		return statusToBeExtended;
 	}
 
 	public void setStatusToBeExtended(TransactionStatus5 statusToBeExtended) {
 		this.statusToBeExtended = statusToBeExtended;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.035.03.03")
+	static public class Document {
+		@XmlElement(name = "StsXtnsnReq", required = true)
+		public StatusExtensionRequestV03 messageBody;
 	}
 }

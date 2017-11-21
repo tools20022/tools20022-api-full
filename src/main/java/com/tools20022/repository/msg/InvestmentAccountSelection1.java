@@ -23,6 +23,10 @@ import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a unique account identification and a set of account selection
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccountSelection1", propOrder = {"accountIdentification", "otherAccountSelectionData"})
 public class InvestmentAccountSelection1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -231,6 +237,7 @@ public class InvestmentAccountSelection1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentification1 getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -239,6 +246,7 @@ public class InvestmentAccountSelection1 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "OthrAcctSelctnData", required = true)
 	public InvestmentAccount19 getOtherAccountSelectionData() {
 		return otherAccountSelectionData;
 	}

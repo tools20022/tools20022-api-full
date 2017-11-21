@@ -37,6 +37,17 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagerRole#mmTerminalManagementSystem
+ * TerminalManagerRole.mmTerminalManagementSystem}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.SystemPartyRole
+ * SystemPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -44,17 +55,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmTerminalManagerRole
  * TerminalManagementSystem.mmTerminalManagerRole}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.SystemPartyRole
- * SystemPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagerRole#mmTerminalManagementSystem
- * TerminalManagerRole.mmTerminalManagementSystem}</li>
  * </ul>
  * </li>
  * <li>
@@ -116,7 +116,7 @@ public class TerminalManagerRole extends SystemPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmTerminalManagementSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TerminalManagerRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TerminalManagerRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminalManagementSystem";
@@ -137,7 +137,12 @@ public class TerminalManagerRole extends SystemPartyRole {
 				definition = "Identifies the party which is the terminal manager (TM) to contact for the maintenance.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TerminalManagementSystem.mmTerminalManagerRole);
 				superType_lazy = () -> SystemPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(TerminalManagerRole.mmTerminalManagementSystem);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TerminalManagerRole.mmTerminalManagementSystem);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TerminalManagerRole.class;
 			}
 		});
 		return mmObject_lazy.get();

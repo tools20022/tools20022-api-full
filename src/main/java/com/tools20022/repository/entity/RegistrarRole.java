@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,6 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegistrarRole#mmRegistrarAccount
+ * RegistrarRole.mmRegistrarAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegistrarRole#mmRegisterName
+ * RegistrarRole.mmRegisterName}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
+ * SecuritiesPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -50,21 +66,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapSingleName2#mmReferenceParty
  * CreditDefaultSwapSingleName2.mmReferenceParty}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
- * SecuritiesPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegistrarRole#mmRegistrarAccount
- * RegistrarRole.mmRegistrarAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegistrarRole#mmRegisterName
- * RegistrarRole.mmRegisterName}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,11 +105,6 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesAccount
 	 * SecuritiesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.RegistrarRole RegistrarRole}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -127,6 +123,11 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.RegistrarRole RegistrarRole}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -141,7 +142,7 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	public static final MMBusinessAssociationEnd mmRegistrarAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(RegistrationParameters1.mmRegistrarAccount, RegistrationParameters2.mmRegistrarAccount, RegistrationParameters4.mmRegistrarAccount, RegistrationParameters5.mmRegistrarAccount);
-			elementContext_lazy = () -> RegistrarRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RegistrarRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrarAccount";
@@ -163,11 +164,6 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.RegistrarRole RegistrarRole}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -175,6 +171,11 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification5#mmRegisterName
 	 * OrganisationIdentification5.mmRegisterName}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.RegistrarRole RegistrarRole}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -191,7 +192,7 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	public static final MMBusinessAttribute mmRegisterName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrganisationIdentification5.mmRegisterName);
-			elementContext_lazy = () -> RegistrarRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RegistrarRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegisterName";
@@ -199,6 +200,14 @@ public class RegistrarRole extends SecuritiesPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RegistrarRole.class.getMethod("getRegisterName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -212,7 +221,12 @@ public class RegistrarRole extends SecuritiesPartyRole {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesAccount.mmRelatedRegistrar);
 				derivationElement_lazy = () -> Arrays.asList(CreditDefaultSwapSingleName2.mmReferenceParty);
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(RegistrarRole.mmRegistrarAccount, RegistrarRole.mmRegisterName);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RegistrarRole.mmRegistrarAccount, com.tools20022.repository.entity.RegistrarRole.mmRegisterName);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RegistrarRole.class;
 			}
 		});
 		return mmObject_lazy.get();

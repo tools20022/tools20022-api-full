@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.SecuritiesQuoteVariable;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Proposition of price for a financial instrument.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Proposition of price for a financial instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Quote2", propOrder = {"type", "quoteOriginator", "quoteOriginatorRole", "requestorEligibility", "responseLevel", "quoteChoice"})
 public class Quote2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -360,6 +366,7 @@ public class Quote2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public QuoteType1Code getType() {
 		return type;
 	}
@@ -368,6 +375,7 @@ public class Quote2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "QtOrgtr")
 	public PartyIdentification24Choice getQuoteOriginator() {
 		return quoteOriginator;
 	}
@@ -376,6 +384,7 @@ public class Quote2 {
 		this.quoteOriginator = quoteOriginator;
 	}
 
+	@XmlElement(name = "QtOrgtrRole")
 	public OriginatorRole1Code getQuoteOriginatorRole() {
 		return quoteOriginatorRole;
 	}
@@ -384,6 +393,7 @@ public class Quote2 {
 		this.quoteOriginatorRole = quoteOriginatorRole;
 	}
 
+	@XmlElement(name = "RqstrElgblty")
 	public Eligibility1Code getRequestorEligibility() {
 		return requestorEligibility;
 	}
@@ -392,6 +402,7 @@ public class Quote2 {
 		this.requestorEligibility = requestorEligibility;
 	}
 
+	@XmlElement(name = "RspnLvl")
 	public ResponseLevel1Code getResponseLevel() {
 		return responseLevel;
 	}
@@ -400,6 +411,7 @@ public class Quote2 {
 		this.responseLevel = responseLevel;
 	}
 
+	@XmlElement(name = "QtChc", required = true)
 	public SingleOrMassQuote1Choice getQuoteChoice() {
 		return quoteChoice;
 	}

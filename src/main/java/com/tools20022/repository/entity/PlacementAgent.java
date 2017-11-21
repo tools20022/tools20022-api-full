@@ -68,6 +68,11 @@ public class PlacementAgent extends InvestmentFundPartyRole {
 				definition = "Party that helps hedge funds to refine their strategy. May also introduce partners such as fund of funds, pension funds, insurance companies and family offices.";
 				superType_lazy = () -> InvestmentFundPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PlacementAgent.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies periods of a corporate action.
@@ -114,6 +118,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionPeriod6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionPeriod8", propOrder = {"priceCalculationPeriod", "interestPeriod", "compulsoryPurchasePeriod", "blockingPeriod", "claimPeriod", "depositorySuspensionPeriodForBookEntryTransfer",
+		"depositorySuspensionPeriodForDepositAtAgent", "depositorySuspensionPeriodForDeposit", "depositorySuspensionPeriodForPledge", "depositorySuspensionPeriodForSegregation", "depositorySuspensionPeriodForWithdrawalAtAgent",
+		"depositorySuspensionPeriodForWithdrawalInNomineeName", "depositorySuspensionPeriodForWithdrawalInStreetName", "bookClosurePeriod", "coDepositoriesSuspensionPeriod"})
 public class CorporateActionPeriod8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1030,6 +1038,7 @@ public class CorporateActionPeriod8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PricClctnPrd")
 	public Period3Choice getPriceCalculationPeriod() {
 		return priceCalculationPeriod;
 	}
@@ -1038,6 +1047,7 @@ public class CorporateActionPeriod8 {
 		this.priceCalculationPeriod = priceCalculationPeriod;
 	}
 
+	@XmlElement(name = "IntrstPrd")
 	public Period3Choice getInterestPeriod() {
 		return interestPeriod;
 	}
@@ -1046,6 +1056,7 @@ public class CorporateActionPeriod8 {
 		this.interestPeriod = interestPeriod;
 	}
 
+	@XmlElement(name = "CmplsryPurchsPrd")
 	public Period3Choice getCompulsoryPurchasePeriod() {
 		return compulsoryPurchasePeriod;
 	}
@@ -1054,6 +1065,7 @@ public class CorporateActionPeriod8 {
 		this.compulsoryPurchasePeriod = compulsoryPurchasePeriod;
 	}
 
+	@XmlElement(name = "BlckgPrd")
 	public Period3Choice getBlockingPeriod() {
 		return blockingPeriod;
 	}
@@ -1062,6 +1074,7 @@ public class CorporateActionPeriod8 {
 		this.blockingPeriod = blockingPeriod;
 	}
 
+	@XmlElement(name = "ClmPrd")
 	public Period3Choice getClaimPeriod() {
 		return claimPeriod;
 	}
@@ -1070,6 +1083,7 @@ public class CorporateActionPeriod8 {
 		this.claimPeriod = claimPeriod;
 	}
 
+	@XmlElement(name = "DpstrySspnsnPrdForBookNtryTrf")
 	public Period3Choice getDepositorySuspensionPeriodForBookEntryTransfer() {
 		return depositorySuspensionPeriodForBookEntryTransfer;
 	}
@@ -1078,6 +1092,7 @@ public class CorporateActionPeriod8 {
 		this.depositorySuspensionPeriodForBookEntryTransfer = depositorySuspensionPeriodForBookEntryTransfer;
 	}
 
+	@XmlElement(name = "DpstrySspnsnPrdForDpstAtAgt")
 	public Period3Choice getDepositorySuspensionPeriodForDepositAtAgent() {
 		return depositorySuspensionPeriodForDepositAtAgent;
 	}
@@ -1086,6 +1101,7 @@ public class CorporateActionPeriod8 {
 		this.depositorySuspensionPeriodForDepositAtAgent = depositorySuspensionPeriodForDepositAtAgent;
 	}
 
+	@XmlElement(name = "DpstrySspnsnPrdForDpst")
 	public Period3Choice getDepositorySuspensionPeriodForDeposit() {
 		return depositorySuspensionPeriodForDeposit;
 	}
@@ -1094,6 +1110,7 @@ public class CorporateActionPeriod8 {
 		this.depositorySuspensionPeriodForDeposit = depositorySuspensionPeriodForDeposit;
 	}
 
+	@XmlElement(name = "DpstrySspnsnPrdForPldg")
 	public Period3Choice getDepositorySuspensionPeriodForPledge() {
 		return depositorySuspensionPeriodForPledge;
 	}
@@ -1102,6 +1119,7 @@ public class CorporateActionPeriod8 {
 		this.depositorySuspensionPeriodForPledge = depositorySuspensionPeriodForPledge;
 	}
 
+	@XmlElement(name = "DpstrySspnsnPrdForSgrtn")
 	public Period3Choice getDepositorySuspensionPeriodForSegregation() {
 		return depositorySuspensionPeriodForSegregation;
 	}
@@ -1110,6 +1128,7 @@ public class CorporateActionPeriod8 {
 		this.depositorySuspensionPeriodForSegregation = depositorySuspensionPeriodForSegregation;
 	}
 
+	@XmlElement(name = "DpstrySspnsnPrdForWdrwlAtAgt")
 	public Period3Choice getDepositorySuspensionPeriodForWithdrawalAtAgent() {
 		return depositorySuspensionPeriodForWithdrawalAtAgent;
 	}
@@ -1118,6 +1137,7 @@ public class CorporateActionPeriod8 {
 		this.depositorySuspensionPeriodForWithdrawalAtAgent = depositorySuspensionPeriodForWithdrawalAtAgent;
 	}
 
+	@XmlElement(name = "DpstrySspnsnPrdForWdrwlInNmneeNm")
 	public Period3Choice getDepositorySuspensionPeriodForWithdrawalInNomineeName() {
 		return depositorySuspensionPeriodForWithdrawalInNomineeName;
 	}
@@ -1126,6 +1146,7 @@ public class CorporateActionPeriod8 {
 		this.depositorySuspensionPeriodForWithdrawalInNomineeName = depositorySuspensionPeriodForWithdrawalInNomineeName;
 	}
 
+	@XmlElement(name = "DpstrySspnsnPrdForWdrwlInStrtNm")
 	public Period3Choice getDepositorySuspensionPeriodForWithdrawalInStreetName() {
 		return depositorySuspensionPeriodForWithdrawalInStreetName;
 	}
@@ -1134,6 +1155,7 @@ public class CorporateActionPeriod8 {
 		this.depositorySuspensionPeriodForWithdrawalInStreetName = depositorySuspensionPeriodForWithdrawalInStreetName;
 	}
 
+	@XmlElement(name = "BookClsrPrd")
 	public Period3Choice getBookClosurePeriod() {
 		return bookClosurePeriod;
 	}
@@ -1142,6 +1164,7 @@ public class CorporateActionPeriod8 {
 		this.bookClosurePeriod = bookClosurePeriod;
 	}
 
+	@XmlElement(name = "CoDpstriesSspnsnPrd")
 	public Period3Choice getCoDepositoriesSuspensionPeriod() {
 		return coDepositoriesSuspensionPeriod;
 	}

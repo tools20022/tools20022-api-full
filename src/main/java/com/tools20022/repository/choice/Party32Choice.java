@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.IndividualPerson34;
 import com.tools20022.repository.msg.Organisation30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for the specification of the party.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.choice.Party31Choice Party31Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Party32Choice", propOrder = {"organisation", "individualPerson"})
 public class Party32Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class Party32Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Org", required = true)
 	public Organisation30 getOrganisation() {
 		return organisation;
 	}
@@ -204,6 +211,7 @@ public class Party32Choice {
 		this.organisation = organisation;
 	}
 
+	@XmlElement(name = "IndvPrsn", required = true)
 	public IndividualPerson34 getIndividualPerson() {
 		return individualPerson;
 	}

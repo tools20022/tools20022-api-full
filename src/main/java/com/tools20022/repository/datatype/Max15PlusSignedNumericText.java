@@ -28,6 +28,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[\\+]{0,1}[0-9]{1,15}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -56,6 +58,7 @@ public class Max15PlusSignedNumericText {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max15PlusSignedNumericText";
 				definition = "Specifies a numeric string with a maximum length of 15 digits and may be prefixed with a plus sign.";
+				pattern = "[\\+]{0,1}[0-9]{1,15}";
 			}
 		});
 		return mmObject_lazy.get();

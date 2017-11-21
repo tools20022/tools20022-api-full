@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to report on business information.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the criteria used to report on business information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GeneralBusinessInformationReturnCriteria", propOrder = {"qualifierIndicator", "subjectIndicator", "subjectDetailsIndicator"})
 public class GeneralBusinessInformationReturnCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -204,6 +210,7 @@ public class GeneralBusinessInformationReturnCriteria {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QlfrInd")
 	public RequestedIndicator getQualifierIndicator() {
 		return qualifierIndicator;
 	}
@@ -212,6 +219,7 @@ public class GeneralBusinessInformationReturnCriteria {
 		this.qualifierIndicator = qualifierIndicator;
 	}
 
+	@XmlElement(name = "SbjtInd")
 	public RequestedIndicator getSubjectIndicator() {
 		return subjectIndicator;
 	}
@@ -220,6 +228,7 @@ public class GeneralBusinessInformationReturnCriteria {
 		this.subjectIndicator = subjectIndicator;
 	}
 
+	@XmlElement(name = "SbjtDtlsInd")
 	public RequestedIndicator getSubjectDetailsIndicator() {
 		return subjectDetailsIndicator;
 	}

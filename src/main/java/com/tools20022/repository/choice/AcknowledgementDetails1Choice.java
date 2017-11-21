@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ConfirmationDetails1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference of the PayInSchedule or the PayInCall being acknowledged. This is
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ConfirmationDetails1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcknowledgementDetails1Choice", propOrder = {"payInScheduleReference", "payInCallReference"})
 public class AcknowledgementDetails1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class AcknowledgementDetails1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PayInSchdlRef", required = true)
 	public Max35Text getPayInScheduleReference() {
 		return payInScheduleReference;
 	}
@@ -186,6 +193,7 @@ public class AcknowledgementDetails1Choice {
 		this.payInScheduleReference = payInScheduleReference;
 	}
 
+	@XmlElement(name = "PayInCallRef", required = true)
 	public Max35Text getPayInCallReference() {
 		return payInCallReference;
 	}

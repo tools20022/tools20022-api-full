@@ -37,16 +37,13 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmAssetPartyRole
- * Asset.mmAssetPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetPartyRole#mmAsset
+ * AssetPartyRole.mmAsset}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -60,11 +57,14 @@ import java.util.List;
  * InvestmentAdvisor}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AssetPartyRole#mmAsset
- * AssetPartyRole.mmAsset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmAssetPartyRole
+ * Asset.mmAssetPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -122,7 +122,7 @@ public class AssetPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmAsset = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AssetPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Asset";
@@ -144,7 +144,12 @@ public class AssetPartyRole extends Role {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Asset.mmAssetPartyRole);
 				subType_lazy = () -> Arrays.asList(SecuritiesPartyRole.mmObject(), IssuerRole.mmObject(), WarrantAgent.mmObject(), PortfolioManagerRole.mmObject(), InvestmentAdvisor.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(AssetPartyRole.mmAsset);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AssetPartyRole.mmAsset);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AssetPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -36,6 +36,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the standing instruction.
@@ -106,6 +110,9 @@ import java.util.List;
  * definition} = "Provides information about the standing instruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionStandingInstructionGeneralInformation1", propOrder = {"standingInstructionType", "eventType", "instructingPartyIdentification", "clientStandingInstructionIdentification", "accountDetails",
+		"underlyingSecurity"})
 public class CorporateActionStandingInstructionGeneralInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -414,6 +421,7 @@ public class CorporateActionStandingInstructionGeneralInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StgInstrTp", required = true)
 	public StandingInstructionType1Code getStandingInstructionType() {
 		return standingInstructionType;
 	}
@@ -422,6 +430,7 @@ public class CorporateActionStandingInstructionGeneralInformation1 {
 		this.standingInstructionType = standingInstructionType;
 	}
 
+	@XmlElement(name = "EvtTp")
 	public List<CorporateActionEventType2FormatChoice> getEventType() {
 		return eventType;
 	}
@@ -430,6 +439,7 @@ public class CorporateActionStandingInstructionGeneralInformation1 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "InstgPtyId", required = true)
 	public PartyIdentification2Choice getInstructingPartyIdentification() {
 		return instructingPartyIdentification;
 	}
@@ -438,6 +448,7 @@ public class CorporateActionStandingInstructionGeneralInformation1 {
 		this.instructingPartyIdentification = instructingPartyIdentification;
 	}
 
+	@XmlElement(name = "ClntStgInstrId", required = true)
 	public Max35Text getClientStandingInstructionIdentification() {
 		return clientStandingInstructionIdentification;
 	}
@@ -446,6 +457,7 @@ public class CorporateActionStandingInstructionGeneralInformation1 {
 		this.clientStandingInstructionIdentification = clientStandingInstructionIdentification;
 	}
 
+	@XmlElement(name = "AcctDtls")
 	public List<IncludedAccount1> getAccountDetails() {
 		return accountDetails;
 	}
@@ -454,6 +466,7 @@ public class CorporateActionStandingInstructionGeneralInformation1 {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "UndrlygScty")
 	public FinancialInstrumentDescription3 getUnderlyingSecurity() {
 		return underlyingSecurity;
 	}

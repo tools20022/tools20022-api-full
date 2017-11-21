@@ -27,6 +27,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[a-zA-Z0-9]{32}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -54,6 +56,7 @@ public class Exact32AlphaNumericText {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Exact32AlphaNumericText";
 				definition = "Specifies an alphanumeric string with a length of 32 characters.";
+				pattern = "[a-zA-Z0-9]{32}";
 			}
 		});
 		return mmObject_lazy.get();

@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.CardPaymentDataSetTransaction12;
 import com.tools20022.repository.msg.CardPaymentDataSetTransaction13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Card payment transaction choice between cancellation, authorisation request
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentDataSetTransaction2Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentDataSetTransaction3Choice", propOrder = {"completion", "cancellation", "authorisationRequest", "authorisationResponse"})
 public class CardPaymentDataSetTransaction3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -331,6 +337,7 @@ public class CardPaymentDataSetTransaction3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cmpltn", required = true)
 	public CardPaymentDataSetTransaction10 getCompletion() {
 		return completion;
 	}
@@ -339,6 +346,7 @@ public class CardPaymentDataSetTransaction3Choice {
 		this.completion = completion;
 	}
 
+	@XmlElement(name = "Cxl", required = true)
 	public CardPaymentDataSetTransaction11 getCancellation() {
 		return cancellation;
 	}
@@ -347,6 +355,7 @@ public class CardPaymentDataSetTransaction3Choice {
 		this.cancellation = cancellation;
 	}
 
+	@XmlElement(name = "AuthstnReq", required = true)
 	public CardPaymentDataSetTransaction12 getAuthorisationRequest() {
 		return authorisationRequest;
 	}
@@ -355,6 +364,7 @@ public class CardPaymentDataSetTransaction3Choice {
 		this.authorisationRequest = authorisationRequest;
 	}
 
+	@XmlElement(name = "AuthstnRspn", required = true)
 	public CardPaymentDataSetTransaction13 getAuthorisationResponse() {
 		return authorisationResponse;
 	}

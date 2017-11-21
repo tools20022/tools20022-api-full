@@ -77,6 +77,8 @@ public class BloombergIdentifier {
 				name = "BloombergIdentifier";
 				definition = "An identifier of a security assigned by the Bloomberg organisation.";
 				identificationScheme = "Bloomberg;  BloombergIdentifier";
+				minLength = 1;
+				maxLength = 35;
 			}
 		});
 		return mmObject_lazy.get();

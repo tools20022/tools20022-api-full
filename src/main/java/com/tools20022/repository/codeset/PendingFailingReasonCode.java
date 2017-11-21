@@ -32,56 +32,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason1Code
- * PendingProcessingReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason6Code
- * PendingReason6Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code
- * PendingProcessingReason2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason1Code
- * PendingReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailingReason1Code
- * FailingReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason2Code
- * PendingReason2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailingReason2Code
- * FailingReason2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code
- * PendingProcessingReason3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason9Code
- * PendingReason9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason4Code
- * PendingReason4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason5Code
- * PendingReason5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason7Code
- * PendingReason7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason3Code
- * PendingReason3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason8Code
- * PendingReason8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason10Code
- * PendingReason10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailingReason3Code
- * FailingReason3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason1Code
- * PendingCancellationReason1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code
- * PendingCancellationReason2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason11Code
- * PendingReason11Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason13Code
- * PendingReason13Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -414,6 +364,56 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PendingFailingReasonCode#mmPendingBeneficiaryOwnerDetails
  * PendingFailingReasonCode.mmPendingBeneficiaryOwnerDetails}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason1Code
+ * PendingProcessingReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason6Code
+ * PendingReason6Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code
+ * PendingProcessingReason2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason1Code
+ * PendingReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailingReason1Code
+ * FailingReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason2Code
+ * PendingReason2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailingReason2Code
+ * FailingReason2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code
+ * PendingProcessingReason3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason9Code
+ * PendingReason9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason4Code
+ * PendingReason4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason5Code
+ * PendingReason5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason7Code
+ * PendingReason7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason3Code
+ * PendingReason3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason8Code
+ * PendingReason8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason10Code
+ * PendingReason10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailingReason3Code
+ * FailingReason3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason1Code
+ * PendingCancellationReason1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code
+ * PendingCancellationReason2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason11Code
+ * PendingReason11Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason13Code
+ * PendingReason13Code}</li>
  * </ul>
  * </li>
  * <li>

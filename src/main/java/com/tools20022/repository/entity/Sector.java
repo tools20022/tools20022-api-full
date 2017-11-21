@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.NameAndLocation1;
 import com.tools20022.repository.msg.ReportedPartyIdentification1;
 import com.tools20022.repository.msg.SectorAndLocation1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,20 +38,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmSector
- * Security.mmSector}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmSector
- * Organisation.mmSector}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmSector
- * Scheme.mmSector}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SectorStrategy#mmSector
- * SectorStrategy.mmSector}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -64,6 +51,20 @@ import java.util.List;
  * Sector.mmIdentification}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Sector#mmStrategy
  * Sector.mmStrategy}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmSector
+ * Security.mmSector}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmSector
+ * Organisation.mmSector}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmSector
+ * Scheme.mmSector}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SectorStrategy#mmSector
+ * SectorStrategy.mmSector}</li>
  * </ul>
  * </li>
  * <li>
@@ -119,7 +120,7 @@ public class Sector {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Sector.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
@@ -165,7 +166,7 @@ public class Sector {
 	 */
 	public static final MMBusinessAssociationEnd mmScheme = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Sector.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Scheme";
@@ -212,7 +213,7 @@ public class Sector {
 	 */
 	public static final MMBusinessAssociationEnd mmOrganisation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Sector.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Organisation";
@@ -234,10 +235,6 @@ public class Sector {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Sector
-	 * Sector}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -258,6 +255,10 @@ public class Sector {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Sector
+	 * Sector}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -272,7 +273,7 @@ public class Sector {
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SectorAndLocation1.mmSector, NameOrSector1Choice.mmName, NameOrSector1Choice.mmSector, ReportedPartyIdentification1.mmNameOrSector, NameAndLocation1.mmName);
-			elementContext_lazy = () -> Sector.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -280,6 +281,14 @@ public class Sector {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Sector.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.SectorStrategy> strategy;
@@ -317,7 +326,7 @@ public class Sector {
 	 */
 	public static final MMBusinessAssociationEnd mmStrategy = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Sector.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Strategy";
@@ -338,7 +347,13 @@ public class Sector {
 				definition = "Type of business of the organisation, for example, pharmaceutical.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmSector, com.tools20022.repository.entity.Organisation.mmSector, com.tools20022.repository.entity.Scheme.mmSector,
 						com.tools20022.repository.entity.SectorStrategy.mmSector);
-				element_lazy = () -> Arrays.asList(Sector.mmSecurity, Sector.mmScheme, Sector.mmOrganisation, Sector.mmIdentification, Sector.mmStrategy);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Sector.mmSecurity, com.tools20022.repository.entity.Sector.mmScheme, com.tools20022.repository.entity.Sector.mmOrganisation,
+						com.tools20022.repository.entity.Sector.mmIdentification, com.tools20022.repository.entity.Sector.mmStrategy);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Sector.class;
 			}
 		});
 		return mmObject_lazy.get();

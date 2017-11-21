@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information such as the information conditions.
@@ -83,6 +87,8 @@ import java.util.List;
  * "Provides additional information such as the information conditions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNarrative19", propOrder = {"additionalText", "partyContactNarrative"})
 public class CorporateActionNarrative19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -199,6 +205,7 @@ public class CorporateActionNarrative19 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlTxt")
 	public List<RestrictedFINXMax350Text> getAdditionalText() {
 		return additionalText;
 	}
@@ -207,6 +214,7 @@ public class CorporateActionNarrative19 {
 		this.additionalText = additionalText;
 	}
 
+	@XmlElement(name = "PtyCtctNrrtv")
 	public List<RestrictedFINXMax350Text> getPartyContactNarrative() {
 		return partyContactNarrative;
 	}

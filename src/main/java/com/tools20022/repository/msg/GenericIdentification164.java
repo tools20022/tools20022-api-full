@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PersonIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to an identification, for example, party identification
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * GenericIdentification11}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericIdentification164", propOrder = {"identification", "identificationType", "issuer"})
 public class GenericIdentification164 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -256,6 +262,7 @@ public class GenericIdentification164 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -264,6 +271,7 @@ public class GenericIdentification164 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "IdTp", required = true)
 	public OtherIdentification3Choice getIdentificationType() {
 		return identificationType;
 	}
@@ -272,6 +280,7 @@ public class GenericIdentification164 {
 		this.identificationType = identificationType;
 	}
 
+	@XmlElement(name = "Issr")
 	public Max35Text getIssuer() {
 		return issuer;
 	}

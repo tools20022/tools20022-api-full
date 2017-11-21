@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CashSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Pre-agreed offering between clearing agents, or the channel through which the
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentSchemeChoice", propOrder = {"code", "proprietaryInformation"})
 public class PaymentSchemeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class PaymentSchemeChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public CashClearingSystem2Code getCode() {
 		return code;
 	}
@@ -185,6 +192,7 @@ public class PaymentSchemeChoice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "PrtryInf", required = true)
 	public Max35Text getProprietaryInformation() {
 		return proprietaryInformation;
 	}

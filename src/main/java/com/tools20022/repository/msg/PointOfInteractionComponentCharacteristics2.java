@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Physical and logical characteristics of a POI component (Point of
@@ -83,6 +87,8 @@ import java.util.List;
  * PointOfInteractionComponentCharacteristics1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PointOfInteractionComponentCharacteristics2", propOrder = {"memory", "communication", "securityAccessModules", "subscriberIdentityModules", "keyCheckValue"})
 public class PointOfInteractionComponentCharacteristics2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -387,6 +393,7 @@ public class PointOfInteractionComponentCharacteristics2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Mmry")
 	public List<MemoryCharacteristics1> getMemory() {
 		return memory;
 	}
@@ -395,6 +402,7 @@ public class PointOfInteractionComponentCharacteristics2 {
 		this.memory = memory;
 	}
 
+	@XmlElement(name = "Com")
 	public List<CommunicationCharacteristics2> getCommunication() {
 		return communication;
 	}
@@ -403,6 +411,7 @@ public class PointOfInteractionComponentCharacteristics2 {
 		this.communication = communication;
 	}
 
+	@XmlElement(name = "SctyAccsMdls")
 	public Number getSecurityAccessModules() {
 		return securityAccessModules;
 	}
@@ -411,6 +420,7 @@ public class PointOfInteractionComponentCharacteristics2 {
 		this.securityAccessModules = securityAccessModules;
 	}
 
+	@XmlElement(name = "SbcbrIdntyMdls")
 	public Number getSubscriberIdentityModules() {
 		return subscriberIdentityModules;
 	}
@@ -419,6 +429,7 @@ public class PointOfInteractionComponentCharacteristics2 {
 		this.subscriberIdentityModules = subscriberIdentityModules;
 	}
 
+	@XmlElement(name = "KeyChckVal")
 	public Max35Binary getKeyCheckValue() {
 		return keyCheckValue;
 	}

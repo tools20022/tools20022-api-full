@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.MeetingStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies if the occurrence of the event contained in the notification is
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * NotificationStatus1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NotificationStatus2", propOrder = "status")
 public class NotificationStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -151,6 +157,7 @@ public class NotificationStatus2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public NotificationStatus2Code getStatus() {
 		return status;
 	}

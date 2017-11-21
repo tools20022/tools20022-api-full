@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SubscriptionExecution;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extract of trade data for a subscription order execution.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Extract of trade data for a subscription order execution."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionExecution8", propOrder = {"investmentAccountDetails", "financialInstrumentDetails", "financialInstrumentQuantity"})
 public class SubscriptionExecution8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -231,6 +237,7 @@ public class SubscriptionExecution8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount30 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -239,6 +246,7 @@ public class SubscriptionExecution8 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "FinInstrmDtls")
 	public FinancialInstrument18 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -247,6 +255,7 @@ public class SubscriptionExecution8 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "FinInstrmQty")
 	public FinancialInstrumentQuantity2 getFinancialInstrumentQuantity() {
 		return financialInstrumentQuantity;
 	}

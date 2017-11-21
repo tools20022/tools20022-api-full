@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details related to each single order being part of the list order.
@@ -88,6 +92,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderStatus3", propOrder = {"clientOrderIdentification", "secondaryClientOrderIdentification", "side", "workingIndicator", "remainingQuantity", "cumulativeQuantity", "cancelledQuantity", "averagePrice",
+		"singleOrderStatusDetails"})
 public class OrderStatus3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -532,6 +539,7 @@ public class OrderStatus3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClntOrdrId", required = true)
 	public Max35Text getClientOrderIdentification() {
 		return clientOrderIdentification;
 	}
@@ -540,6 +548,7 @@ public class OrderStatus3 {
 		this.clientOrderIdentification = clientOrderIdentification;
 	}
 
+	@XmlElement(name = "ScndryClntOrdrId")
 	public Max35Text getSecondaryClientOrderIdentification() {
 		return secondaryClientOrderIdentification;
 	}
@@ -548,6 +557,7 @@ public class OrderStatus3 {
 		this.secondaryClientOrderIdentification = secondaryClientOrderIdentification;
 	}
 
+	@XmlElement(name = "Sd", required = true)
 	public Side1Code getSide() {
 		return side;
 	}
@@ -556,6 +566,7 @@ public class OrderStatus3 {
 		this.side = side;
 	}
 
+	@XmlElement(name = "WorkgInd", required = true)
 	public YesNoIndicator getWorkingIndicator() {
 		return workingIndicator;
 	}
@@ -564,6 +575,7 @@ public class OrderStatus3 {
 		this.workingIndicator = workingIndicator;
 	}
 
+	@XmlElement(name = "RmngQty", required = true)
 	public FinancialInstrumentQuantityChoice getRemainingQuantity() {
 		return remainingQuantity;
 	}
@@ -572,6 +584,7 @@ public class OrderStatus3 {
 		this.remainingQuantity = remainingQuantity;
 	}
 
+	@XmlElement(name = "CmltvQty", required = true)
 	public FinancialInstrumentQuantityChoice getCumulativeQuantity() {
 		return cumulativeQuantity;
 	}
@@ -580,6 +593,7 @@ public class OrderStatus3 {
 		this.cumulativeQuantity = cumulativeQuantity;
 	}
 
+	@XmlElement(name = "CancQty")
 	public FinancialInstrumentQuantityChoice getCancelledQuantity() {
 		return cancelledQuantity;
 	}
@@ -588,6 +602,7 @@ public class OrderStatus3 {
 		this.cancelledQuantity = cancelledQuantity;
 	}
 
+	@XmlElement(name = "AvrgPric")
 	public Price1 getAveragePrice() {
 		return averagePrice;
 	}
@@ -596,6 +611,7 @@ public class OrderStatus3 {
 		this.averagePrice = averagePrice;
 	}
 
+	@XmlElement(name = "SnglOrdrStsDtls", required = true)
 	public OrderStatusAndReason5 getSingleOrderStatusDetails() {
 		return singleOrderStatusDetails;
 	}

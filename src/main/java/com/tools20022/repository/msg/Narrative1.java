@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Narrative information for an undertaking.
@@ -57,6 +61,8 @@ import java.util.List;
  * definition} = "Narrative information for an undertaking."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Narrative1", propOrder = {"type", "text"})
 public class Narrative1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -156,6 +162,7 @@ public class Narrative1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public NarrativeType1Choice getType() {
 		return type;
 	}
@@ -164,6 +171,7 @@ public class Narrative1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Txt", required = true)
 	public List<Max20000Text> getText() {
 		return text;
 	}

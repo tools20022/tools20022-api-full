@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PaymentInstructionReferenceDetails2;
 import com.tools20022.repository.msg.ShortPaymentIdentification1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +39,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InstructingAgentRole#mmPrevious
+ * InstructingAgentRole.mmPrevious}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
+ * PaymentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -48,17 +60,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.ShortPaymentIdentification1#mmInstructingAgent
  * ShortPaymentIdentification1.mmInstructingAgent}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
- * PaymentPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InstructingAgentRole#mmPrevious
- * InstructingAgentRole.mmPrevious}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,7 +111,7 @@ public class InstructingAgentRole extends PaymentPartyRole {
 	 */
 	public static final MMBusinessAttribute mmPrevious = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> InstructingAgentRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InstructingAgentRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Previous";
@@ -118,6 +119,14 @@ public class InstructingAgentRole extends PaymentPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InstructingAgentRole.class.getMethod("getPrevious", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -130,7 +139,12 @@ public class InstructingAgentRole extends PaymentPartyRole {
 				definition = "Agent that instructs the next party in the chain to carry out the (set of) instruction(s).";
 				derivationElement_lazy = () -> Arrays.asList(PaymentInstructionReferenceDetails2.mmInstructingAgentIdentification, ShortPaymentIdentification1.mmInstructingAgent);
 				superType_lazy = () -> PaymentPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(InstructingAgentRole.mmPrevious);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InstructingAgentRole.mmPrevious);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InstructingAgentRole.class;
 			}
 		});
 		return mmObject_lazy.get();

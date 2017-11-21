@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SystemMemberRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about a system and about a member of a system.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides details about a system and about a member of a system."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemMember2", propOrder = {"systemIdentification", "memberIdentification"})
 public class SystemMember2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class SystemMember2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysId")
 	public SystemIdentification2Choice getSystemIdentification() {
 		return systemIdentification;
 	}
@@ -188,6 +195,7 @@ public class SystemMember2 {
 		this.systemIdentification = systemIdentification;
 	}
 
+	@XmlElement(name = "MmbId", required = true)
 	public MemberIdentification2Choice getMemberIdentification() {
 		return memberIdentification;
 	}

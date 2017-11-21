@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Quantity of a security.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Quantity of a security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SidePocketQuantityAndAmount1", propOrder = {"unitsNumber", "orderedAmount", "holdingsRate"})
 public class SidePocketQuantityAndAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -236,6 +242,7 @@ public class SidePocketQuantityAndAmount1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitsNb")
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -244,6 +251,7 @@ public class SidePocketQuantityAndAmount1 {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "OrdrdAmt")
 	public ActiveCurrencyAndAmount getOrderedAmount() {
 		return orderedAmount;
 	}
@@ -252,6 +260,7 @@ public class SidePocketQuantityAndAmount1 {
 		this.orderedAmount = orderedAmount;
 	}
 
+	@XmlElement(name = "HldgsRate")
 	public PercentageRate getHoldingsRate() {
 		return holdingsRate;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.area.tsmt.TimeOutNotificationV03;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the time-out consequences.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Describes the time-out consequences."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TimeOutResult2", propOrder = "transactionFutureStatus")
 public class TimeOutResult2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -124,6 +130,7 @@ public class TimeOutResult2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxFutrSts", required = true)
 	public TransactionStatus5 getTransactionFutureStatus() {
 		return transactionFutureStatus;
 	}

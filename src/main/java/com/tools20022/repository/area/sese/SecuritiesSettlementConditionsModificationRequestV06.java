@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -67,9 +69,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.030.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
@@ -109,6 +108,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.030.001.06}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -132,6 +134,8 @@ import java.util.List;
  * SecuritiesSettlementConditionsModificationRequestV05}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesSettlementConditionsModificationRequestV06", propOrder = {"accountOwner", "safekeepingAccount", "requestDetails", "additionalInformation", "supplementaryData"})
 public class SecuritiesSettlementConditionsModificationRequestV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +187,14 @@ public class SecuritiesSettlementConditionsModificationRequestV06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification98.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementConditionsModificationRequestV06.class.getMethod("getAccountOwner", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesAccount19 safekeepingAccount;
@@ -236,6 +248,14 @@ public class SecuritiesSettlementConditionsModificationRequestV06 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount19.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementConditionsModificationRequestV06.class.getMethod("getSafekeepingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<RequestDetails15> requestDetails;
 	/**
@@ -284,6 +304,14 @@ public class SecuritiesSettlementConditionsModificationRequestV06 {
 			previousVersion_lazy = () -> SecuritiesSettlementConditionsModificationRequestV05.mmRequestDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> RequestDetails15.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementConditionsModificationRequestV06.class.getMethod("getRequestDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<AdditionalInformation11> additionalInformation;
@@ -339,6 +367,14 @@ public class SecuritiesSettlementConditionsModificationRequestV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalInformation11.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementConditionsModificationRequestV06.class.getMethod("getAdditionalInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -393,6 +429,14 @@ public class SecuritiesSettlementConditionsModificationRequestV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementConditionsModificationRequestV06.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -407,9 +451,11 @@ public class SecuritiesSettlementConditionsModificationRequestV06 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmCondsModReq";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementConditionsModificationRequestV06.mmAccountOwner, SecuritiesSettlementConditionsModificationRequestV06.mmSafekeepingAccount,
-						SecuritiesSettlementConditionsModificationRequestV06.mmRequestDetails, SecuritiesSettlementConditionsModificationRequestV06.mmAdditionalInformation,
-						SecuritiesSettlementConditionsModificationRequestV06.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.mmAccountOwner,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.mmRequestDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.mmAdditionalInformation,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -419,10 +465,16 @@ public class SecuritiesSettlementConditionsModificationRequestV06 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesSettlementConditionsModificationRequestV06.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification98 getAccountOwner() {
 		return accountOwner;
 	}
@@ -431,6 +483,7 @@ public class SecuritiesSettlementConditionsModificationRequestV06 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount19 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -439,6 +492,7 @@ public class SecuritiesSettlementConditionsModificationRequestV06 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "ReqDtls", required = true)
 	public List<RequestDetails15> getRequestDetails() {
 		return requestDetails;
 	}
@@ -447,6 +501,7 @@ public class SecuritiesSettlementConditionsModificationRequestV06 {
 		this.requestDetails = requestDetails;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<AdditionalInformation11> getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -455,11 +510,18 @@ public class SecuritiesSettlementConditionsModificationRequestV06 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.030.06.06")
+	static public class Document {
+		@XmlElement(name = "SctiesSttlmCondsModReq", required = true)
+		public SecuritiesSettlementConditionsModificationRequestV06 messageBody;
 	}
 }

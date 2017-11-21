@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Net position of a segregated holding of a single security within the overall
@@ -94,6 +98,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AggregateBalanceInformation5", propOrder = {"aggregateQuantity", "holdingValue", "previousHoldingValue", "bookValue", "financialInstrumentDetails", "balanceBreakdownDetails", "subBalanceInformation", "priceDetails",
+		"equalisationBalance", "foreignExchangeDetails"})
 public class AggregateBalanceInformation5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -606,6 +613,7 @@ public class AggregateBalanceInformation5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AggtQty", required = true)
 	public BalanceQuantity1Choice getAggregateQuantity() {
 		return aggregateQuantity;
 	}
@@ -614,6 +622,7 @@ public class AggregateBalanceInformation5 {
 		this.aggregateQuantity = aggregateQuantity;
 	}
 
+	@XmlElement(name = "HldgVal")
 	public List<ActiveOrHistoricCurrencyAndAmount> getHoldingValue() {
 		return holdingValue;
 	}
@@ -622,6 +631,7 @@ public class AggregateBalanceInformation5 {
 		this.holdingValue = holdingValue;
 	}
 
+	@XmlElement(name = "PrvsHldgVal")
 	public ActiveOrHistoricCurrencyAndAmount getPreviousHoldingValue() {
 		return previousHoldingValue;
 	}
@@ -630,6 +640,7 @@ public class AggregateBalanceInformation5 {
 		this.previousHoldingValue = previousHoldingValue;
 	}
 
+	@XmlElement(name = "BookVal")
 	public ActiveOrHistoricCurrencyAndAmount getBookValue() {
 		return bookValue;
 	}
@@ -638,6 +649,7 @@ public class AggregateBalanceInformation5 {
 		this.bookValue = bookValue;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument18 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -646,6 +658,7 @@ public class AggregateBalanceInformation5 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "BalBrkdwnDtls")
 	public List<AdditionalBalanceInformation3> getBalanceBreakdownDetails() {
 		return balanceBreakdownDetails;
 	}
@@ -654,6 +667,7 @@ public class AggregateBalanceInformation5 {
 		this.balanceBreakdownDetails = balanceBreakdownDetails;
 	}
 
+	@XmlElement(name = "SubBalInf")
 	public List<SubBalanceInformation3> getSubBalanceInformation() {
 		return subBalanceInformation;
 	}
@@ -662,6 +676,7 @@ public class AggregateBalanceInformation5 {
 		this.subBalanceInformation = subBalanceInformation;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public List<PriceInformation3> getPriceDetails() {
 		return priceDetails;
 	}
@@ -670,6 +685,7 @@ public class AggregateBalanceInformation5 {
 		this.priceDetails = priceDetails;
 	}
 
+	@XmlElement(name = "EqulstnBal")
 	public Equalisation2 getEqualisationBalance() {
 		return equalisationBalance;
 	}
@@ -678,6 +694,7 @@ public class AggregateBalanceInformation5 {
 		this.equalisationBalance = equalisationBalance;
 	}
 
+	@XmlElement(name = "FrgnXchgDtls")
 	public ForeignExchangeTerms6 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}

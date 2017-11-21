@@ -28,6 +28,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[0-9a-zA-Z/\\-\\?:\\(\\)\\.,'\\+ ]{1,31}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -56,6 +58,9 @@ public class RestrictedFINXMax31Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RestrictedFINXMax31Text";
 				definition = "Specifies a character string with a maximum length of 31 characters limited to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + .";
+				minLength = 1;
+				maxLength = 31;
+				pattern = "[0-9a-zA-Z/\\-\\?:\\(\\)\\.,'\\+ ]{1,31}";
 			}
 		});
 		return mmObject_lazy.get();

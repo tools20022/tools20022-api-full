@@ -29,15 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CashSettlementSystem2Code
- * CashSettlementSystem2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CashSettlementSystem1Code
- * CashSettlementSystem1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -61,6 +52,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#mmFedWireUS
  * CashSettlementSystemCode.mmFedWireUS}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CashSettlementSystem2Code
+ * CashSettlementSystem2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CashSettlementSystem1Code
+ * CashSettlementSystem1Code}</li>
  * </ul>
  * </li>
  * <li>

@@ -24,9 +24,11 @@ import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.TransferStatusAndReason2;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -58,9 +60,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.011.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -104,6 +103,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.011.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -127,6 +129,8 @@ import java.util.List;
  * TransferInstructionStatusReport}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferInstructionStatusReportV02", propOrder = {"messageIdentification", "relatedReference", "otherReference", "statusReport", "extension"})
 public class TransferInstructionStatusReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -136,6 +140,10 @@ public class TransferInstructionStatusReportV02 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV02
+	 * TransferInstructionStatusReportV02}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -148,10 +156,6 @@ public class TransferInstructionStatusReportV02 {
 	 * TransferInstructionStatusReportV02.mmOtherReference}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV02
-	 * TransferInstructionStatusReportV02}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -170,8 +174,9 @@ public class TransferInstructionStatusReportV02 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
 			definition = "Occurrences of either RelatedReference or OtherReference may be present, but not occurrences of both.";
-			messageDefinition_lazy = () -> TransferInstructionStatusReportV02.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(TransferInstructionStatusReportV02.mmRelatedReference, TransferInstructionStatusReportV02.mmOtherReference);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.mmRelatedReference,
+					com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.mmOtherReference);
 		}
 	};
 	protected MessageIdentification1 messageIdentification;
@@ -211,6 +216,14 @@ public class TransferInstructionStatusReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInstructionStatusReportV02.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference3> relatedReference;
 	/**
@@ -246,6 +259,14 @@ public class TransferInstructionStatusReportV02 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInstructionStatusReportV02.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<AdditionalReference3> otherReference;
@@ -285,6 +306,14 @@ public class TransferInstructionStatusReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInstructionStatusReportV02.class.getMethod("getOtherReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransferStatusAndReason2 statusReport;
 	/**
@@ -319,6 +348,14 @@ public class TransferInstructionStatusReportV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransferStatusAndReason2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInstructionStatusReportV02.class.getMethod("getStatusReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -356,6 +393,14 @@ public class TransferInstructionStatusReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInstructionStatusReportV02.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -367,12 +412,13 @@ public class TransferInstructionStatusReportV02 {
 				nextVersions_lazy = () -> Arrays.asList(TransferInstructionStatusReportV03.mmObject());
 				previousVersion_lazy = () -> TransferInstructionStatusReport.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(TransferInstructionStatusReportV02.mmRelatedReferenceOrOtherReferenceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.mmRelatedReferenceOrOtherReferenceRule);
 				rootElement = "Document";
 				xmlTag = "TrfInstrStsRptV02";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInstructionStatusReportV02.mmMessageIdentification, TransferInstructionStatusReportV02.mmRelatedReference, TransferInstructionStatusReportV02.mmOtherReference,
-						TransferInstructionStatusReportV02.mmStatusReport, TransferInstructionStatusReportV02.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.mmRelatedReference, com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.mmOtherReference,
+						com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.mmStatusReport, com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -382,10 +428,16 @@ public class TransferInstructionStatusReportV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TransferInstructionStatusReportV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -394,6 +446,7 @@ public class TransferInstructionStatusReportV02 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public List<AdditionalReference3> getRelatedReference() {
 		return relatedReference;
 	}
@@ -402,6 +455,7 @@ public class TransferInstructionStatusReportV02 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "OthrRef")
 	public List<AdditionalReference3> getOtherReference() {
 		return otherReference;
 	}
@@ -410,6 +464,7 @@ public class TransferInstructionStatusReportV02 {
 		this.otherReference = otherReference;
 	}
 
+	@XmlElement(name = "StsRpt", required = true)
 	public TransferStatusAndReason2 getStatusReport() {
 		return statusReport;
 	}
@@ -418,11 +473,18 @@ public class TransferInstructionStatusReportV02 {
 		this.statusReport = statusReport;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.011.02.02")
+	static public class Document {
+		@XmlElement(name = "TrfInstrStsRptV02", required = true)
+		public TransferInstructionStatusReportV02 messageBody;
 	}
 }

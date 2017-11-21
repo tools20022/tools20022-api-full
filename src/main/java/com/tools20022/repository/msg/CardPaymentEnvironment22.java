@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Environment of the transaction.
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentEnvironment10}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentEnvironment22", propOrder = {"acquirer", "merchant", "POI", "card", "cardholder", "protectedCardholderData"})
 public class CardPaymentEnvironment22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -484,6 +490,7 @@ public class CardPaymentEnvironment22 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acqrr")
 	public Acquirer2 getAcquirer() {
 		return acquirer;
 	}
@@ -492,6 +499,7 @@ public class CardPaymentEnvironment22 {
 		this.acquirer = acquirer;
 	}
 
+	@XmlElement(name = "Mrchnt")
 	public Organisation8 getMerchant() {
 		return merchant;
 	}
@@ -500,6 +508,7 @@ public class CardPaymentEnvironment22 {
 		this.merchant = merchant;
 	}
 
+	@XmlElement(name = "POI", required = true)
 	public PointOfInteraction3 getPOI() {
 		return pOI;
 	}
@@ -508,6 +517,7 @@ public class CardPaymentEnvironment22 {
 		this.pOI = pOI;
 	}
 
+	@XmlElement(name = "Card")
 	public PaymentCard8 getCard() {
 		return card;
 	}
@@ -516,6 +526,7 @@ public class CardPaymentEnvironment22 {
 		this.card = card;
 	}
 
+	@XmlElement(name = "Crdhldr")
 	public Cardholder6 getCardholder() {
 		return cardholder;
 	}
@@ -524,6 +535,7 @@ public class CardPaymentEnvironment22 {
 		this.cardholder = cardholder;
 	}
 
+	@XmlElement(name = "PrtctdCrdhldrData")
 	public ContentInformationType7 getProtectedCardholderData() {
 		return protectedCardholderData;
 	}

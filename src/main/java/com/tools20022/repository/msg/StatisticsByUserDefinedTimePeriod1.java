@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.ValuationStatistics;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Statistical data related to the price change of a security.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Statistical data related to the price change of a security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatisticsByUserDefinedTimePeriod1", propOrder = {"period", "highestPriceValue", "lowestPriceValue", "priceChange", "yield"})
 public class StatisticsByUserDefinedTimePeriod1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -330,6 +336,7 @@ public class StatisticsByUserDefinedTimePeriod1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prd", required = true)
 	public DateTimePeriodDetails getPeriod() {
 		return period;
 	}
@@ -338,6 +345,7 @@ public class StatisticsByUserDefinedTimePeriod1 {
 		this.period = period;
 	}
 
+	@XmlElement(name = "HghstPricVal")
 	public PriceValue1 getHighestPriceValue() {
 		return highestPriceValue;
 	}
@@ -346,6 +354,7 @@ public class StatisticsByUserDefinedTimePeriod1 {
 		this.highestPriceValue = highestPriceValue;
 	}
 
+	@XmlElement(name = "LwstPricVal")
 	public PriceValue1 getLowestPriceValue() {
 		return lowestPriceValue;
 	}
@@ -354,6 +363,7 @@ public class StatisticsByUserDefinedTimePeriod1 {
 		this.lowestPriceValue = lowestPriceValue;
 	}
 
+	@XmlElement(name = "PricChng")
 	public PriceValue2 getPriceChange() {
 		return priceChange;
 	}
@@ -362,6 +372,7 @@ public class StatisticsByUserDefinedTimePeriod1 {
 		this.priceChange = priceChange;
 	}
 
+	@XmlElement(name = "Yld")
 	public PercentageRate getYield() {
 		return yield;
 	}

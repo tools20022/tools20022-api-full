@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates how to register a proxy.
@@ -76,6 +80,8 @@ import java.util.List;
  * definition} = "Indicates how to register a proxy."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProxyAppointmentInformation1", propOrder = {"registrationMethod", "deadline", "STPDeadline", "marketDeadline", "authorisedProxy"})
 public class ProxyAppointmentInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -330,6 +336,7 @@ public class ProxyAppointmentInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RegnMtd")
 	public Max350Text getRegistrationMethod() {
 		return registrationMethod;
 	}
@@ -338,6 +345,7 @@ public class ProxyAppointmentInformation1 {
 		this.registrationMethod = registrationMethod;
 	}
 
+	@XmlElement(name = "Ddln")
 	public DateFormat2Choice getDeadline() {
 		return deadline;
 	}
@@ -346,6 +354,7 @@ public class ProxyAppointmentInformation1 {
 		this.deadline = deadline;
 	}
 
+	@XmlElement(name = "STPDdln")
 	public DateFormat2Choice getSTPDeadline() {
 		return sTPDeadline;
 	}
@@ -354,6 +363,7 @@ public class ProxyAppointmentInformation1 {
 		this.sTPDeadline = sTPDeadline;
 	}
 
+	@XmlElement(name = "MktDdln")
 	public DateFormat2Choice getMarketDeadline() {
 		return marketDeadline;
 	}
@@ -362,6 +372,7 @@ public class ProxyAppointmentInformation1 {
 		this.marketDeadline = marketDeadline;
 	}
 
+	@XmlElement(name = "AuthrsdPrxy")
 	public List<Proxy1> getAuthorisedProxy() {
 		return authorisedProxy;
 	}

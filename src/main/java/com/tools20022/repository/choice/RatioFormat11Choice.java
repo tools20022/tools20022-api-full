@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format to expressed a ratio.
@@ -76,6 +80,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RatioFormat11Choice", propOrder = {"quantityToQuantity", "notSpecifiedRate", "amountToAmount"})
 public class RatioFormat11Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -264,6 +270,7 @@ public class RatioFormat11Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QtyToQty", required = true)
 	public QuantityToQuantityRatio1 getQuantityToQuantity() {
 		return quantityToQuantity;
 	}
@@ -272,6 +279,7 @@ public class RatioFormat11Choice {
 		this.quantityToQuantity = quantityToQuantity;
 	}
 
+	@XmlElement(name = "NotSpcfdRate", required = true)
 	public RateValueType7Code getNotSpecifiedRate() {
 		return notSpecifiedRate;
 	}
@@ -280,6 +288,7 @@ public class RatioFormat11Choice {
 		this.notSpecifiedRate = notSpecifiedRate;
 	}
 
+	@XmlElement(name = "AmtToAmt", required = true)
 	public AmountToAmountRatio2 getAmountToAmount() {
 		return amountToAmount;
 	}

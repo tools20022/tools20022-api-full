@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesProceedsDefinition;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies corporate action quantities.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionQuantity5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionQuantity7", propOrder = {"maximumQuantity", "minimumQuantitySought", "newBoardLotQuantity", "newDenominationQuantity", "baseDenomination", "incrementalDenomination"})
 public class CorporateActionQuantity7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -441,6 +447,7 @@ public class CorporateActionQuantity7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MaxQty")
 	public FinancialInstrumentQuantity19Choice getMaximumQuantity() {
 		return maximumQuantity;
 	}
@@ -449,6 +456,7 @@ public class CorporateActionQuantity7 {
 		this.maximumQuantity = maximumQuantity;
 	}
 
+	@XmlElement(name = "MinQtySght")
 	public FinancialInstrumentQuantity19Choice getMinimumQuantitySought() {
 		return minimumQuantitySought;
 	}
@@ -457,6 +465,7 @@ public class CorporateActionQuantity7 {
 		this.minimumQuantitySought = minimumQuantitySought;
 	}
 
+	@XmlElement(name = "NewBrdLotQty")
 	public FinancialInstrumentQuantity20Choice getNewBoardLotQuantity() {
 		return newBoardLotQuantity;
 	}
@@ -465,6 +474,7 @@ public class CorporateActionQuantity7 {
 		this.newBoardLotQuantity = newBoardLotQuantity;
 	}
 
+	@XmlElement(name = "NewDnmtnQty")
 	public FinancialInstrumentQuantity20Choice getNewDenominationQuantity() {
 		return newDenominationQuantity;
 	}
@@ -473,6 +483,7 @@ public class CorporateActionQuantity7 {
 		this.newDenominationQuantity = newDenominationQuantity;
 	}
 
+	@XmlElement(name = "BaseDnmtn")
 	public FinancialInstrumentQuantity20Choice getBaseDenomination() {
 		return baseDenomination;
 	}
@@ -481,6 +492,7 @@ public class CorporateActionQuantity7 {
 		this.baseDenomination = baseDenomination;
 	}
 
+	@XmlElement(name = "IncrmtlDnmtn")
 	public FinancialInstrumentQuantity20Choice getIncrementalDenomination() {
 		return incrementalDenomination;
 	}

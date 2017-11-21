@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OriginalAndCurrentQuantities1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between different formats of securities quantity.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Quantity20Choice", propOrder = {"code", "originalAndCurrentFaceAmount", "quantity"})
 public class Quantity20Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -253,6 +259,7 @@ public class Quantity20Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public Quantity1Code getCode() {
 		return code;
 	}
@@ -261,6 +268,7 @@ public class Quantity20Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "OrgnlAndCurFaceAmt", required = true)
 	public OriginalAndCurrentQuantities1 getOriginalAndCurrentFaceAmount() {
 		return originalAndCurrentFaceAmount;
 	}
@@ -269,6 +277,7 @@ public class Quantity20Choice {
 		this.originalAndCurrentFaceAmount = originalAndCurrentFaceAmount;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity1Choice getQuantity() {
 		return quantity;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification references of the underlying transaction.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransactionReferences2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CertificateIdentification1", propOrder = {"messageIdentification", "accountServicerReference", "paymentInformationIdentification", "instructionIdentification", "endToEndIdentification", "proprietary"})
 public class CertificateIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -436,6 +442,7 @@ public class CertificateIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId")
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -444,6 +451,7 @@ public class CertificateIdentification1 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrRef")
 	public Max35Text getAccountServicerReference() {
 		return accountServicerReference;
 	}
@@ -452,6 +460,7 @@ public class CertificateIdentification1 {
 		this.accountServicerReference = accountServicerReference;
 	}
 
+	@XmlElement(name = "PmtInfId")
 	public Max35Text getPaymentInformationIdentification() {
 		return paymentInformationIdentification;
 	}
@@ -460,6 +469,7 @@ public class CertificateIdentification1 {
 		this.paymentInformationIdentification = paymentInformationIdentification;
 	}
 
+	@XmlElement(name = "InstrId")
 	public Max35Text getInstructionIdentification() {
 		return instructionIdentification;
 	}
@@ -468,6 +478,7 @@ public class CertificateIdentification1 {
 		this.instructionIdentification = instructionIdentification;
 	}
 
+	@XmlElement(name = "EndToEndId")
 	public Max35Text getEndToEndIdentification() {
 		return endToEndIdentification;
 	}
@@ -476,6 +487,7 @@ public class CertificateIdentification1 {
 		this.endToEndIdentification = endToEndIdentification;
 	}
 
+	@XmlElement(name = "Prtry")
 	public ProprietaryReference1 getProprietary() {
 		return proprietary;
 	}

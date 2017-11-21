@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Investor;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Conditions applicable when the investor is not covered by the "de minimis"
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DeMinimusNotApplicable1", propOrder = "restrictedPersonReason")
 public class DeMinimusNotApplicable1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -125,6 +131,7 @@ public class DeMinimusNotApplicable1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RstrctdPrsnRsn", required = true)
 	public Max350Text getRestrictedPersonReason() {
 		return restrictedPersonReason;
 	}

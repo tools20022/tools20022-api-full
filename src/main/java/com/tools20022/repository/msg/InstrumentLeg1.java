@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additionnal details related to the leg.
@@ -76,6 +80,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstrumentLeg1", propOrder = {"legIOIQuantity", "instrumentLegDetails", "legStipulations", "legFinancialInstrumentAttributes"})
 public class InstrumentLeg1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -288,6 +294,7 @@ public class InstrumentLeg1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LegIOIQty", required = true)
 	public Quantity1Choice getLegIOIQuantity() {
 		return legIOIQuantity;
 	}
@@ -296,6 +303,7 @@ public class InstrumentLeg1 {
 		this.legIOIQuantity = legIOIQuantity;
 	}
 
+	@XmlElement(name = "InstrmLegDtls")
 	public SecurityIdentification7 getInstrumentLegDetails() {
 		return instrumentLegDetails;
 	}
@@ -304,6 +312,7 @@ public class InstrumentLeg1 {
 		this.instrumentLegDetails = instrumentLegDetails;
 	}
 
+	@XmlElement(name = "LegStiptns")
 	public FinancialInstrumentStipulations getLegStipulations() {
 		return legStipulations;
 	}
@@ -312,6 +321,7 @@ public class InstrumentLeg1 {
 		this.legStipulations = legStipulations;
 	}
 
+	@XmlElement(name = "LegFinInstrmAttrbts")
 	public List<FinancialInstrumentAttributes1> getLegFinancialInstrumentAttributes() {
 		return legFinancialInstrumentAttributes;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the billing price of a service.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the billing price of a service."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingPrice1", propOrder = {"currency", "unitPrice", "method", "rule"})
 public class BillingPrice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -277,6 +283,7 @@ public class BillingPrice1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveOrHistoricCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -285,6 +292,7 @@ public class BillingPrice1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "UnitPric")
 	public AmountAndDirection34 getUnitPrice() {
 		return unitPrice;
 	}
@@ -293,6 +301,7 @@ public class BillingPrice1 {
 		this.unitPrice = unitPrice;
 	}
 
+	@XmlElement(name = "Mtd")
 	public BillingChargeMethod1Code getMethod() {
 		return method;
 	}
@@ -301,6 +310,7 @@ public class BillingPrice1 {
 		this.method = method;
 	}
 
+	@XmlElement(name = "Rule")
 	public Max20Text getRule() {
 		return rule;
 	}

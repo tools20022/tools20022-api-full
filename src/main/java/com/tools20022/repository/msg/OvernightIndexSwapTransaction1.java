@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of each individual overnight index swap transaction.
@@ -101,6 +105,9 @@ import java.util.List;
  * "Provides the details of each individual overnight index swap transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OvernightIndexSwapTransaction1", propOrder = {"reportedTransactionStatus", "uniqueTransactionIdentifier", "proprietaryTransactionIdentification", "counterpartyProprietaryTransactionIdentification",
+		"counterpartyIdentification", "tradeDate", "startDate", "maturityDate", "fixedInterestRate", "transactionType", "transactionNominalAmount", "supplementaryData"})
 public class OvernightIndexSwapTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -722,6 +729,7 @@ public class OvernightIndexSwapTransaction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptdTxSts", required = true)
 	public TransactionOperationType1Code getReportedTransactionStatus() {
 		return reportedTransactionStatus;
 	}
@@ -730,6 +738,7 @@ public class OvernightIndexSwapTransaction1 {
 		this.reportedTransactionStatus = reportedTransactionStatus;
 	}
 
+	@XmlElement(name = "UnqTxIdr")
 	public Max105Text getUniqueTransactionIdentifier() {
 		return uniqueTransactionIdentifier;
 	}
@@ -738,6 +747,7 @@ public class OvernightIndexSwapTransaction1 {
 		this.uniqueTransactionIdentifier = uniqueTransactionIdentifier;
 	}
 
+	@XmlElement(name = "PrtryTxId", required = true)
 	public Max105Text getProprietaryTransactionIdentification() {
 		return proprietaryTransactionIdentification;
 	}
@@ -746,6 +756,7 @@ public class OvernightIndexSwapTransaction1 {
 		this.proprietaryTransactionIdentification = proprietaryTransactionIdentification;
 	}
 
+	@XmlElement(name = "CtrPtyPrtryTxId")
 	public Max105Text getCounterpartyProprietaryTransactionIdentification() {
 		return counterpartyProprietaryTransactionIdentification;
 	}
@@ -754,6 +765,7 @@ public class OvernightIndexSwapTransaction1 {
 		this.counterpartyProprietaryTransactionIdentification = counterpartyProprietaryTransactionIdentification;
 	}
 
+	@XmlElement(name = "CtrPtyId", required = true)
 	public CounterpartyIdentification1Choice getCounterpartyIdentification() {
 		return counterpartyIdentification;
 	}
@@ -762,6 +774,7 @@ public class OvernightIndexSwapTransaction1 {
 		this.counterpartyIdentification = counterpartyIdentification;
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public DateAndDateTimeChoice getTradeDate() {
 		return tradeDate;
 	}
@@ -770,6 +783,7 @@ public class OvernightIndexSwapTransaction1 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "StartDt", required = true)
 	public ISODate getStartDate() {
 		return startDate;
 	}
@@ -778,6 +792,7 @@ public class OvernightIndexSwapTransaction1 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "MtrtyDt", required = true)
 	public ISODate getMaturityDate() {
 		return maturityDate;
 	}
@@ -786,6 +801,7 @@ public class OvernightIndexSwapTransaction1 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "FxdIntrstRate", required = true)
 	public Rate2 getFixedInterestRate() {
 		return fixedInterestRate;
 	}
@@ -794,6 +810,7 @@ public class OvernightIndexSwapTransaction1 {
 		this.fixedInterestRate = fixedInterestRate;
 	}
 
+	@XmlElement(name = "TxTp", required = true)
 	public OvernightIndexSwapType1Code getTransactionType() {
 		return transactionType;
 	}
@@ -802,6 +819,7 @@ public class OvernightIndexSwapTransaction1 {
 		this.transactionType = transactionType;
 	}
 
+	@XmlElement(name = "TxNmnlAmt", required = true)
 	public ActiveCurrencyAndAmount getTransactionNominalAmount() {
 		return transactionNominalAmount;
 	}
@@ -810,6 +828,7 @@ public class OvernightIndexSwapTransaction1 {
 		this.transactionNominalAmount = transactionNominalAmount;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

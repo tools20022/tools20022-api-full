@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Card transaction information to be transferred.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Card transaction information to be transferred."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionData1", propOrder = {"cardBrand", "cardData", "pointOfInteraction", "transactionDetails", "prePaidAccount"})
 public class TransactionData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -335,6 +341,7 @@ public class TransactionData1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CardBrnd")
 	public Max35Text getCardBrand() {
 		return cardBrand;
 	}
@@ -343,6 +350,7 @@ public class TransactionData1 {
 		this.cardBrand = cardBrand;
 	}
 
+	@XmlElement(name = "CardData")
 	public PlainCardData3 getCardData() {
 		return cardData;
 	}
@@ -351,6 +359,7 @@ public class TransactionData1 {
 		this.cardData = cardData;
 	}
 
+	@XmlElement(name = "PtOfIntractn")
 	public PointOfInteraction1 getPointOfInteraction() {
 		return pointOfInteraction;
 	}
@@ -359,6 +368,7 @@ public class TransactionData1 {
 		this.pointOfInteraction = pointOfInteraction;
 	}
 
+	@XmlElement(name = "TxDtls")
 	public CardPaymentTransactionDetails8 getTransactionDetails() {
 		return transactionDetails;
 	}
@@ -367,6 +377,7 @@ public class TransactionData1 {
 		this.transactionDetails = transactionDetails;
 	}
 
+	@XmlElement(name = "PrePdAcct")
 	public CashAccount24 getPrePaidAccount() {
 		return prePaidAccount;
 	}

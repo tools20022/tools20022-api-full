@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Human entity, as distinguished from a corporate entity (which is sometimes
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * IndividualPerson17}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualPerson26", propOrder = {"birthName", "givenName", "identification", "address", "employingParty", "attendanceCardDetails"})
 public class IndividualPerson26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -423,6 +429,7 @@ public class IndividualPerson26 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BirthNm", required = true)
 	public Max35Text getBirthName() {
 		return birthName;
 	}
@@ -431,6 +438,7 @@ public class IndividualPerson26 {
 		this.birthName = birthName;
 	}
 
+	@XmlElement(name = "GvnNm")
 	public Max35Text getGivenName() {
 		return givenName;
 	}
@@ -439,6 +447,7 @@ public class IndividualPerson26 {
 		this.givenName = givenName;
 	}
 
+	@XmlElement(name = "Id")
 	public PersonIdentification6 getIdentification() {
 		return identification;
 	}
@@ -447,6 +456,7 @@ public class IndividualPerson26 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Adr")
 	public LongPostalAddress2Choice getAddress() {
 		return address;
 	}
@@ -455,6 +465,7 @@ public class IndividualPerson26 {
 		this.address = address;
 	}
 
+	@XmlElement(name = "EmplngPty")
 	public PartyIdentification40Choice getEmployingParty() {
 		return employingParty;
 	}
@@ -463,6 +474,7 @@ public class IndividualPerson26 {
 		this.employingParty = employingParty;
 	}
 
+	@XmlElement(name = "AttndncCardDtls", required = true)
 	public AttendanceCard2 getAttendanceCardDetails() {
 		return attendanceCardDetails;
 	}

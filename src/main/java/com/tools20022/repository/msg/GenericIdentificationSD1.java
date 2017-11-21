@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification information expressed as a country of fiscal domicile and a
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericIdentificationSD1", propOrder = {"fiscalDomicile", "accountServicerIdentification", "accountOwnerIdentification"})
 public class GenericIdentificationSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -220,6 +226,7 @@ public class GenericIdentificationSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FsclDmcl", required = true)
 	public CountryCode getFiscalDomicile() {
 		return fiscalDomicile;
 	}
@@ -228,6 +235,7 @@ public class GenericIdentificationSD1 {
 		this.fiscalDomicile = fiscalDomicile;
 	}
 
+	@XmlElement(name = "AcctSvcrId")
 	public Max35Text getAccountServicerIdentification() {
 		return accountServicerIdentification;
 	}
@@ -236,6 +244,7 @@ public class GenericIdentificationSD1 {
 		this.accountServicerIdentification = accountServicerIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnrId")
 	public Max35Text getAccountOwnerIdentification() {
 		return accountOwnerIdentification;
 	}

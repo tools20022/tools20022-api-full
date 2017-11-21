@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the type of opening instruction and identification of the
@@ -88,6 +92,8 @@ import java.util.List;
  * InvestmentAccountOpening2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccountOpening3", propOrder = {"openingType", "accountApplicationIdentification", "clientReference", "counterpartyReference", "existingAccountIdentification"})
 public class InvestmentAccountOpening3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -367,6 +373,7 @@ public class InvestmentAccountOpening3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OpngTp", required = true)
 	public AccountOpeningType1Choice getOpeningType() {
 		return openingType;
 	}
@@ -375,6 +382,7 @@ public class InvestmentAccountOpening3 {
 		this.openingType = openingType;
 	}
 
+	@XmlElement(name = "AcctApplId")
 	public Max35Text getAccountApplicationIdentification() {
 		return accountApplicationIdentification;
 	}
@@ -383,6 +391,7 @@ public class InvestmentAccountOpening3 {
 		this.accountApplicationIdentification = accountApplicationIdentification;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -391,6 +400,7 @@ public class InvestmentAccountOpening3 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CtrPtyRef")
 	public AdditionalReference6 getCounterpartyReference() {
 		return counterpartyReference;
 	}
@@ -399,6 +409,7 @@ public class InvestmentAccountOpening3 {
 		this.counterpartyReference = counterpartyReference;
 	}
 
+	@XmlElement(name = "ExstgAcctId")
 	public List<Account23> getExistingAccountIdentification() {
 		return existingAccountIdentification;
 	}

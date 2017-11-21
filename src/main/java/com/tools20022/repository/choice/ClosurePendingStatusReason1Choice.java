@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.ClosurePendingStatusReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for a closure pending status reason.
@@ -64,6 +68,8 @@ import java.util.List;
  * ClosedStatusReason1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClosurePendingStatusReason1Choice", propOrder = {"noSpecifiedReason", "reason"})
 public class ClosurePendingStatusReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class ClosurePendingStatusReason1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
@@ -186,6 +193,7 @@ public class ClosurePendingStatusReason1Choice {
 		this.noSpecifiedReason = noSpecifiedReason;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public List<ClosurePendingStatusReason1> getReason() {
 		return reason;
 	}

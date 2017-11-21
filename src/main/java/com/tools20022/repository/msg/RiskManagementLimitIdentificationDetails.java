@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.TransactionAdministrator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cash management feature limiting the maximum risk a party accepts to take
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RiskManagementLimitIdentificationDetails", propOrder = {"systemIdentification", "type", "bilateralLimitCounterpartyIdentification"})
 public class RiskManagementLimitIdentificationDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -243,6 +249,7 @@ public class RiskManagementLimitIdentificationDetails {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysId")
 	public SystemIdentificationChoice getSystemIdentification() {
 		return systemIdentification;
 	}
@@ -251,6 +258,7 @@ public class RiskManagementLimitIdentificationDetails {
 		this.systemIdentification = systemIdentification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public RiskLimitType1Code getType() {
 		return type;
 	}
@@ -259,6 +267,7 @@ public class RiskManagementLimitIdentificationDetails {
 		this.type = type;
 	}
 
+	@XmlElement(name = "BilLmtCtrPtyId")
 	public MemberIdentificationChoice getBilateralLimitCounterpartyIdentification() {
 		return bilateralLimitCounterpartyIdentification;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Statistics for a financial instrument generated as part of transparency
@@ -80,6 +84,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatisticsTransparency3", propOrder = {"averageDailyTurnover", "averageTransactionValue", "largeInScale", "standardMarketSize", "averageDailyNumberOfTransactions", "totalNumberOfTransactionsExecuted",
+		"totalVolumeOfTransactionsExecuted", "totalNumberOfTradingDays"})
 public class StatisticsTransparency3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -454,6 +461,7 @@ public class StatisticsTransparency3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AvrgDalyTrnvr")
 	public ActiveCurrencyAndAmount getAverageDailyTurnover() {
 		return averageDailyTurnover;
 	}
@@ -462,6 +470,7 @@ public class StatisticsTransparency3 {
 		this.averageDailyTurnover = averageDailyTurnover;
 	}
 
+	@XmlElement(name = "AvrgTxVal")
 	public ActiveCurrencyAndAmount getAverageTransactionValue() {
 		return averageTransactionValue;
 	}
@@ -470,6 +479,7 @@ public class StatisticsTransparency3 {
 		this.averageTransactionValue = averageTransactionValue;
 	}
 
+	@XmlElement(name = "LrgInScale")
 	public DecimalNumber getLargeInScale() {
 		return largeInScale;
 	}
@@ -478,6 +488,7 @@ public class StatisticsTransparency3 {
 		this.largeInScale = largeInScale;
 	}
 
+	@XmlElement(name = "StdMktSz")
 	public DecimalNumber getStandardMarketSize() {
 		return standardMarketSize;
 	}
@@ -486,6 +497,7 @@ public class StatisticsTransparency3 {
 		this.standardMarketSize = standardMarketSize;
 	}
 
+	@XmlElement(name = "AvrgDalyNbOfTxs")
 	public DecimalNumber getAverageDailyNumberOfTransactions() {
 		return averageDailyNumberOfTransactions;
 	}
@@ -494,6 +506,7 @@ public class StatisticsTransparency3 {
 		this.averageDailyNumberOfTransactions = averageDailyNumberOfTransactions;
 	}
 
+	@XmlElement(name = "TtlNbOfTxsExctd")
 	public DecimalNumber getTotalNumberOfTransactionsExecuted() {
 		return totalNumberOfTransactionsExecuted;
 	}
@@ -502,6 +515,7 @@ public class StatisticsTransparency3 {
 		this.totalNumberOfTransactionsExecuted = totalNumberOfTransactionsExecuted;
 	}
 
+	@XmlElement(name = "TtlVolOfTxsExctd")
 	public DecimalNumber getTotalVolumeOfTransactionsExecuted() {
 		return totalVolumeOfTransactionsExecuted;
 	}
@@ -510,6 +524,7 @@ public class StatisticsTransparency3 {
 		this.totalVolumeOfTransactionsExecuted = totalVolumeOfTransactionsExecuted;
 	}
 
+	@XmlElement(name = "TtlNbOfTradgDays")
 	public Number getTotalNumberOfTradingDays() {
 		return totalNumberOfTradingDays;
 	}

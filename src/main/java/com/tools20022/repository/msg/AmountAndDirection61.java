@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money expressed with an optional currency code and debit/credit
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AmountAndDirection34}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountAndDirection61", propOrder = {"amount", "sign"})
 public class AmountAndDirection61 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -190,6 +196,7 @@ public class AmountAndDirection61 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -198,6 +205,7 @@ public class AmountAndDirection61 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Sgn")
 	public PlusOrMinusIndicator getSign() {
 		return sign;
 	}

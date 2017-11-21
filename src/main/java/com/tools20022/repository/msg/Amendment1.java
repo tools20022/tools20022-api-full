@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the amendment.
@@ -110,6 +114,9 @@ import java.util.List;
  * definition} = "Details of the amendment."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Amendment1", propOrder = {"sequenceNumber", "dateOfIssuance", "undertakingIdentification", "advisingParty", "secondAdvisingParty", "terminationDetails", "undertakingAmountAdjustment", "newExpiryDetails", "newBeneficiary",
+		"newUndertakingTermsAndConditions", "localUndertaking", "beneficiaryConsentRequestIndicator", "deliveryChannel", "enclosedFile", "additionalInformation"})
 public class Amendment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -813,6 +820,7 @@ public class Amendment1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SeqNb", required = true)
 	public Max4AlphaNumericText getSequenceNumber() {
 		return sequenceNumber;
 	}
@@ -821,6 +829,7 @@ public class Amendment1 {
 		this.sequenceNumber = sequenceNumber;
 	}
 
+	@XmlElement(name = "DtOfIssnc", required = true)
 	public ISODate getDateOfIssuance() {
 		return dateOfIssuance;
 	}
@@ -829,6 +838,7 @@ public class Amendment1 {
 		this.dateOfIssuance = dateOfIssuance;
 	}
 
+	@XmlElement(name = "UdrtkgId", required = true)
 	public Undertaking7 getUndertakingIdentification() {
 		return undertakingIdentification;
 	}
@@ -837,6 +847,7 @@ public class Amendment1 {
 		this.undertakingIdentification = undertakingIdentification;
 	}
 
+	@XmlElement(name = "AdvsgPty")
 	public PartyIdentification43 getAdvisingParty() {
 		return advisingParty;
 	}
@@ -845,6 +856,7 @@ public class Amendment1 {
 		this.advisingParty = advisingParty;
 	}
 
+	@XmlElement(name = "ScndAdvsgPty")
 	public PartyIdentification43 getSecondAdvisingParty() {
 		return secondAdvisingParty;
 	}
@@ -853,6 +865,7 @@ public class Amendment1 {
 		this.secondAdvisingParty = secondAdvisingParty;
 	}
 
+	@XmlElement(name = "TermntnDtls")
 	public UndertakingTermination3 getTerminationDetails() {
 		return terminationDetails;
 	}
@@ -861,6 +874,7 @@ public class Amendment1 {
 		this.terminationDetails = terminationDetails;
 	}
 
+	@XmlElement(name = "UdrtkgAmtAdjstmnt")
 	public UndertakingAmount2 getUndertakingAmountAdjustment() {
 		return undertakingAmountAdjustment;
 	}
@@ -869,6 +883,7 @@ public class Amendment1 {
 		this.undertakingAmountAdjustment = undertakingAmountAdjustment;
 	}
 
+	@XmlElement(name = "NewXpryDtls")
 	public ExpiryDetails1 getNewExpiryDetails() {
 		return newExpiryDetails;
 	}
@@ -877,6 +892,7 @@ public class Amendment1 {
 		this.newExpiryDetails = newExpiryDetails;
 	}
 
+	@XmlElement(name = "NewBnfcry")
 	public PartyIdentification43 getNewBeneficiary() {
 		return newBeneficiary;
 	}
@@ -885,6 +901,7 @@ public class Amendment1 {
 		this.newBeneficiary = newBeneficiary;
 	}
 
+	@XmlElement(name = "NewUdrtkgTermsAndConds")
 	public List<Narrative1> getNewUndertakingTermsAndConditions() {
 		return newUndertakingTermsAndConditions;
 	}
@@ -893,6 +910,7 @@ public class Amendment1 {
 		this.newUndertakingTermsAndConditions = newUndertakingTermsAndConditions;
 	}
 
+	@XmlElement(name = "LclUdrtkg")
 	public Undertaking11 getLocalUndertaking() {
 		return localUndertaking;
 	}
@@ -901,6 +919,7 @@ public class Amendment1 {
 		this.localUndertaking = localUndertaking;
 	}
 
+	@XmlElement(name = "BnfcryCnsntReqInd")
 	public YesNoIndicator getBeneficiaryConsentRequestIndicator() {
 		return beneficiaryConsentRequestIndicator;
 	}
@@ -909,6 +928,7 @@ public class Amendment1 {
 		this.beneficiaryConsentRequestIndicator = beneficiaryConsentRequestIndicator;
 	}
 
+	@XmlElement(name = "DlvryChanl")
 	public CommunicationChannel1 getDeliveryChannel() {
 		return deliveryChannel;
 	}
@@ -917,6 +937,7 @@ public class Amendment1 {
 		this.deliveryChannel = deliveryChannel;
 	}
 
+	@XmlElement(name = "NclsdFile")
 	public List<Document9> getEnclosedFile() {
 		return enclosedFile;
 	}
@@ -925,6 +946,7 @@ public class Amendment1 {
 		this.enclosedFile = enclosedFile;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

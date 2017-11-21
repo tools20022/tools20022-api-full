@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Security that is a sub-set of an investment fund, and is governed by the same
@@ -83,6 +87,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityIdentification1", propOrder = {"identification", "name", "classType", "umbrellaName", "baseCurrency", "countryOfDomicile", "registeredDistributionCountry"})
 public class SecurityIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -442,6 +448,7 @@ public class SecurityIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification7 getIdentification() {
 		return identification;
 	}
@@ -450,6 +457,7 @@ public class SecurityIdentification1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max350Text getName() {
 		return name;
 	}
@@ -458,6 +466,7 @@ public class SecurityIdentification1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "ClssTp")
 	public Max35Text getClassType() {
 		return classType;
 	}
@@ -466,6 +475,7 @@ public class SecurityIdentification1 {
 		this.classType = classType;
 	}
 
+	@XmlElement(name = "UmbrllNm")
 	public Max35Text getUmbrellaName() {
 		return umbrellaName;
 	}
@@ -474,6 +484,7 @@ public class SecurityIdentification1 {
 		this.umbrellaName = umbrellaName;
 	}
 
+	@XmlElement(name = "BaseCcy", required = true)
 	public ActiveCurrencyCode getBaseCurrency() {
 		return baseCurrency;
 	}
@@ -482,6 +493,7 @@ public class SecurityIdentification1 {
 		this.baseCurrency = baseCurrency;
 	}
 
+	@XmlElement(name = "CtryOfDmcl", required = true)
 	public CountryCode getCountryOfDomicile() {
 		return countryOfDomicile;
 	}
@@ -490,6 +502,7 @@ public class SecurityIdentification1 {
 		this.countryOfDomicile = countryOfDomicile;
 	}
 
+	@XmlElement(name = "RegdDstrbtnCtry", required = true)
 	public List<CountryCode> getRegisteredDistributionCountry() {
 		return registeredDistributionCountry;
 	}

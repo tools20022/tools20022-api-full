@@ -38,36 +38,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmAccountService
- * Account.mmAccountService}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountContract#mmAccountService
- * AccountContract.mmAccountService}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Reservation#mmAccountService
- * Reservation.mmAccountService}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#mmServices
- * Charges.mmServices}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.FinancialService
- * FinancialService}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ReportingService
- * ReportingService}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashAccountService
- * CashAccountService}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentAccountService
- * InvestmentAccountService}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -82,6 +52,36 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.AccountService#mmAccountAdministrationCharge
  * AccountService.mmAccountAdministrationCharge}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ReportingService
+ * ReportingService}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashAccountService
+ * CashAccountService}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentAccountService
+ * InvestmentAccountService}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.FinancialService
+ * FinancialService}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmAccountService
+ * Account.mmAccountService}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountContract#mmAccountService
+ * AccountContract.mmAccountService}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Reservation#mmAccountService
+ * Reservation.mmAccountService}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmServices
+ * Charges.mmServices}</li>
  * </ul>
  * </li>
  * <li>
@@ -141,7 +141,7 @@ public class AccountService extends FinancialService {
 	 */
 	public static final MMBusinessAssociationEnd mmAccountContract = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AccountService.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountService.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountContract";
@@ -190,7 +190,7 @@ public class AccountService extends FinancialService {
 	 */
 	public static final MMBusinessAssociationEnd mmReservation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AccountService.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountService.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reservation";
@@ -237,7 +237,7 @@ public class AccountService extends FinancialService {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AccountService.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountService.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
@@ -266,11 +266,6 @@ public class AccountService extends FinancialService {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Charges Charges}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AccountService
-	 * AccountService}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -279,6 +274,11 @@ public class AccountService extends FinancialService {
 	 * BillingServiceParameters2.mmServiceChargeAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AccountService
+	 * AccountService}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -293,7 +293,7 @@ public class AccountService extends FinancialService {
 	public static final MMBusinessAssociationEnd mmAccountAdministrationCharge = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingServiceParameters2.mmServiceChargeAmount);
-			elementContext_lazy = () -> AccountService.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AccountService.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountAdministrationCharge";
@@ -317,7 +317,13 @@ public class AccountService extends FinancialService {
 						com.tools20022.repository.entity.Reservation.mmAccountService, com.tools20022.repository.entity.Charges.mmServices);
 				subType_lazy = () -> Arrays.asList(ReportingService.mmObject(), CashAccountService.mmObject(), InvestmentAccountService.mmObject());
 				superType_lazy = () -> FinancialService.mmObject();
-				element_lazy = () -> Arrays.asList(AccountService.mmAccountContract, AccountService.mmReservation, AccountService.mmAccount, AccountService.mmAccountAdministrationCharge);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountService.mmAccountContract, com.tools20022.repository.entity.AccountService.mmReservation, com.tools20022.repository.entity.AccountService.mmAccount,
+						com.tools20022.repository.entity.AccountService.mmAccountAdministrationCharge);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountService.class;
 			}
 		});
 		return mmObject_lazy.get();

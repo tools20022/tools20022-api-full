@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.ISOTime;
 import com.tools20022.repository.datatype.PlusOrMinusIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.UTCOffset1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,6 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.UTCOffset#mmSign
+ * UTCOffset.mmSign}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.UTCOffset#mmNumberOfHours
+ * UTCOffset.mmNumberOfHours}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.UTCOffset#mmLocation
+ * UTCOffset.mmLocation}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -47,17 +59,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.entity.Location#mmTimeZone
  * Location.mmTimeZone}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.UTCOffset#mmSign
- * UTCOffset.mmSign}</li>
- * <li>{@linkplain com.tools20022.repository.entity.UTCOffset#mmNumberOfHours
- * UTCOffset.mmNumberOfHours}</li>
- * <li>{@linkplain com.tools20022.repository.entity.UTCOffset#mmLocation
- * UTCOffset.mmLocation}</li>
  * </ul>
  * </li>
  * <li>
@@ -89,10 +90,6 @@ public class UTCOffset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PlusOrMinusIndicator
 	 * PlusOrMinusIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.UTCOffset
-	 * UTCOffset}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -100,6 +97,10 @@ public class UTCOffset {
 	 * UTCOffset1.mmSign}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.UTCOffset
+	 * UTCOffset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -115,7 +116,7 @@ public class UTCOffset {
 	public static final MMBusinessAttribute mmSign = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UTCOffset1.mmSign);
-			elementContext_lazy = () -> UTCOffset.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UTCOffset.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sign";
@@ -123,6 +124,14 @@ public class UTCOffset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UTCOffset.class.getMethod("getSign", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISOTime numberOfHours;
@@ -135,10 +144,6 @@ public class UTCOffset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISOTime
 	 * ISOTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.UTCOffset
-	 * UTCOffset}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -146,6 +151,10 @@ public class UTCOffset {
 	 * UTCOffset1.mmNumberOfHours}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.UTCOffset
+	 * UTCOffset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -162,7 +171,7 @@ public class UTCOffset {
 	public static final MMBusinessAttribute mmNumberOfHours = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UTCOffset1.mmNumberOfHours);
-			elementContext_lazy = () -> UTCOffset.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UTCOffset.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfHours";
@@ -170,6 +179,14 @@ public class UTCOffset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UTCOffset.class.getMethod("getNumberOfHours", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Location location;
@@ -206,7 +223,7 @@ public class UTCOffset {
 	 */
 	public static final MMBusinessAssociationEnd mmLocation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> UTCOffset.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UTCOffset.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Location";
@@ -227,8 +244,13 @@ public class UTCOffset {
 				name = "UTCOffset";
 				definition = "Offset of the time before or after 00:00 hour UTC.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Location.mmTimeZone);
-				element_lazy = () -> Arrays.asList(UTCOffset.mmSign, UTCOffset.mmNumberOfHours, UTCOffset.mmLocation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UTCOffset.mmSign, com.tools20022.repository.entity.UTCOffset.mmNumberOfHours, com.tools20022.repository.entity.UTCOffset.mmLocation);
 				derivationComponent_lazy = () -> Arrays.asList(UTCOffset1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UTCOffset.class;
 			}
 		});
 		return mmObject_lazy.get();

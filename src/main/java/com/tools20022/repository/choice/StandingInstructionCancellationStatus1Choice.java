@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.CorporateActionStandingInstructionCancellat
 import com.tools20022.repository.msg.CorporateActionStandingInstructionCancellationRejectionStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the status of a standing instruction cancellation
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingInstructionCancellationStatus1Choice", propOrder = {"processedStatus", "rejectedStatus"})
 public class StandingInstructionCancellationStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -194,6 +200,7 @@ public class StandingInstructionCancellationStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcdSts", required = true)
 	public CorporateActionStandingInstructionCancellationProcessingStatus1 getProcessedStatus() {
 		return processedStatus;
 	}
@@ -202,6 +209,7 @@ public class StandingInstructionCancellationStatus1Choice {
 		this.processedStatus = processedStatus;
 	}
 
+	@XmlElement(name = "RjctdSts", required = true)
 	public CorporateActionStandingInstructionCancellationRejectionStatus1 getRejectedStatus() {
 		return rejectedStatus;
 	}

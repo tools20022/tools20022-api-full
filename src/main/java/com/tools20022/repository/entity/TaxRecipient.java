@@ -36,6 +36,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TaxPartyRole
+ * TaxPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -46,9 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TaxReporting2.mmTaxRecipient}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TaxPartyRole
- * TaxPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -79,6 +79,11 @@ public class TaxRecipient extends TaxPartyRole {
 				definition = "Party that receives the tax. The recipient of, and the party entitled to, the tax may be two different parties.";
 				derivationElement_lazy = () -> Arrays.asList(TaxReporting1.mmTaxRecipient, TaxReporting2.mmTaxRecipient);
 				superType_lazy = () -> TaxPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TaxRecipient.class;
 			}
 		});
 		return mmObject_lazy.get();

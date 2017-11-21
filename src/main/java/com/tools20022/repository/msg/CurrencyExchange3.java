@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information needed to process a currency exchange or conversion.
@@ -82,6 +86,8 @@ import java.util.function.Supplier;
  * "Information needed to process a currency exchange or conversion."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyExchange3", propOrder = {"sourceCurrency", "targetCurrency", "unitCurrency", "exchangeRate", "contractIdentification", "quotationDate"})
 public class CurrencyExchange3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -405,6 +411,7 @@ public class CurrencyExchange3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SrcCcy", required = true)
 	public CurrencyCode getSourceCurrency() {
 		return sourceCurrency;
 	}
@@ -413,6 +420,7 @@ public class CurrencyExchange3 {
 		this.sourceCurrency = sourceCurrency;
 	}
 
+	@XmlElement(name = "TrgtCcy")
 	public CurrencyCode getTargetCurrency() {
 		return targetCurrency;
 	}
@@ -421,6 +429,7 @@ public class CurrencyExchange3 {
 		this.targetCurrency = targetCurrency;
 	}
 
+	@XmlElement(name = "UnitCcy")
 	public CurrencyCode getUnitCurrency() {
 		return unitCurrency;
 	}
@@ -429,6 +438,7 @@ public class CurrencyExchange3 {
 		this.unitCurrency = unitCurrency;
 	}
 
+	@XmlElement(name = "XchgRate", required = true)
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -437,6 +447,7 @@ public class CurrencyExchange3 {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "CtrctId")
 	public Max35Text getContractIdentification() {
 		return contractIdentification;
 	}
@@ -445,6 +456,7 @@ public class CurrencyExchange3 {
 		this.contractIdentification = contractIdentification;
 	}
 
+	@XmlElement(name = "QtnDt")
 	public ISODateTime getQuotationDate() {
 		return quotationDate;
 	}

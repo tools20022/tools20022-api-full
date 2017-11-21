@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.DateTimePeriodDetails;
 import com.tools20022.repository.msg.Period2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between date and date-time for the specification of a period.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between date and date-time for the specification of a period."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Period2Choice", propOrder = {"fromDateTimeToDateTime", "fromDateToDate"})
 public class Period2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class Period2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrDtTmToDtTm", required = true)
 	public DateTimePeriodDetails getFromDateTimeToDateTime() {
 		return fromDateTimeToDateTime;
 	}
@@ -184,6 +191,7 @@ public class Period2Choice {
 		this.fromDateTimeToDateTime = fromDateTimeToDateTime;
 	}
 
+	@XmlElement(name = "FrDtToDt", required = true)
 	public Period2 getFromDateToDate() {
 		return fromDateToDate;
 	}

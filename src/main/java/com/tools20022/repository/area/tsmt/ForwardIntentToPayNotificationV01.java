@@ -25,9 +25,11 @@ import com.tools20022.repository.area.TradeServicesManagementPreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -44,9 +46,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.045.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementPreviousVersion
@@ -98,6 +97,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.045.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -117,6 +119,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ForwardIntentToPayNotificationV01", propOrder = {"notificationIdentification", "transactionIdentification", "establishedBaselineIdentification", "transactionStatus", "userTransactionReference", "buyerBank", "sellerBank",
+		"intentToPay", "requestForAction"})
 public class ForwardIntentToPayNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +167,14 @@ public class ForwardIntentToPayNotificationV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardIntentToPayNotificationV01.class.getMethod("getNotificationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -211,6 +224,14 @@ public class ForwardIntentToPayNotificationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardIntentToPayNotificationV01.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
@@ -258,6 +279,14 @@ public class ForwardIntentToPayNotificationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardIntentToPayNotificationV01.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionStatus4 transactionStatus;
 	/**
@@ -302,6 +331,14 @@ public class ForwardIntentToPayNotificationV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardIntentToPayNotificationV01.class.getMethod("getTransactionStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<DocumentIdentification5> userTransactionReference;
@@ -350,6 +387,14 @@ public class ForwardIntentToPayNotificationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardIntentToPayNotificationV01.class.getMethod("getUserTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected BICIdentification1 buyerBank;
 	/**
@@ -395,6 +440,14 @@ public class ForwardIntentToPayNotificationV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardIntentToPayNotificationV01.class.getMethod("getBuyerBank", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BICIdentification1 sellerBank;
@@ -442,6 +495,14 @@ public class ForwardIntentToPayNotificationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardIntentToPayNotificationV01.class.getMethod("getSellerBank", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected IntentToPay1 intentToPay;
 	/**
@@ -484,6 +545,14 @@ public class ForwardIntentToPayNotificationV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> IntentToPay1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardIntentToPayNotificationV01.class.getMethod("getIntentToPay", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PendingActivity2 requestForAction;
@@ -529,6 +598,14 @@ public class ForwardIntentToPayNotificationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForwardIntentToPayNotificationV01.class.getMethod("getRequestForAction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -542,9 +619,11 @@ public class ForwardIntentToPayNotificationV01 {
 				rootElement = "Document";
 				xmlTag = "FwdInttToPayNtfctn";
 				businessArea_lazy = () -> TradeServicesManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ForwardIntentToPayNotificationV01.mmNotificationIdentification, ForwardIntentToPayNotificationV01.mmTransactionIdentification,
-						ForwardIntentToPayNotificationV01.mmEstablishedBaselineIdentification, ForwardIntentToPayNotificationV01.mmTransactionStatus, ForwardIntentToPayNotificationV01.mmUserTransactionReference,
-						ForwardIntentToPayNotificationV01.mmBuyerBank, ForwardIntentToPayNotificationV01.mmSellerBank, ForwardIntentToPayNotificationV01.mmIntentToPay, ForwardIntentToPayNotificationV01.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmNotificationIdentification,
+						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmTransactionIdentification, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmTransactionStatus, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmBuyerBank, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmSellerBank,
+						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmIntentToPay, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -554,10 +633,16 @@ public class ForwardIntentToPayNotificationV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ForwardIntentToPayNotificationV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NtfctnId", required = true)
 	public MessageIdentification1 getNotificationIdentification() {
 		return notificationIdentification;
 	}
@@ -566,6 +651,7 @@ public class ForwardIntentToPayNotificationV01 {
 		this.notificationIdentification = notificationIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -574,6 +660,7 @@ public class ForwardIntentToPayNotificationV01 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "EstblishdBaselnId", required = true)
 	public DocumentIdentification3 getEstablishedBaselineIdentification() {
 		return establishedBaselineIdentification;
 	}
@@ -582,6 +669,7 @@ public class ForwardIntentToPayNotificationV01 {
 		this.establishedBaselineIdentification = establishedBaselineIdentification;
 	}
 
+	@XmlElement(name = "TxSts", required = true)
 	public TransactionStatus4 getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -590,6 +678,7 @@ public class ForwardIntentToPayNotificationV01 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "UsrTxRef")
 	public List<DocumentIdentification5> getUserTransactionReference() {
 		return userTransactionReference;
 	}
@@ -598,6 +687,7 @@ public class ForwardIntentToPayNotificationV01 {
 		this.userTransactionReference = userTransactionReference;
 	}
 
+	@XmlElement(name = "BuyrBk", required = true)
 	public BICIdentification1 getBuyerBank() {
 		return buyerBank;
 	}
@@ -606,6 +696,7 @@ public class ForwardIntentToPayNotificationV01 {
 		this.buyerBank = buyerBank;
 	}
 
+	@XmlElement(name = "SellrBk", required = true)
 	public BICIdentification1 getSellerBank() {
 		return sellerBank;
 	}
@@ -614,6 +705,7 @@ public class ForwardIntentToPayNotificationV01 {
 		this.sellerBank = sellerBank;
 	}
 
+	@XmlElement(name = "InttToPay", required = true)
 	public IntentToPay1 getIntentToPay() {
 		return intentToPay;
 	}
@@ -622,11 +714,18 @@ public class ForwardIntentToPayNotificationV01 {
 		this.intentToPay = intentToPay;
 	}
 
+	@XmlElement(name = "ReqForActn")
 	public PendingActivity2 getRequestForAction() {
 		return requestForAction;
 	}
 
 	public void setRequestForAction(PendingActivity2 requestForAction) {
 		this.requestForAction = requestForAction;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.045.01.01")
+	static public class Document {
+		@XmlElement(name = "FwdInttToPayNtfctn", required = true)
+		public ForwardIntentToPayNotificationV01 messageBody;
 	}
 }

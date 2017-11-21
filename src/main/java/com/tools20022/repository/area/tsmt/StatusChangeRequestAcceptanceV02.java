@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.SimpleIdentificationInformation;
 import com.tools20022.repository.msg.TransactionStatus3;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -48,9 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.027.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -89,6 +88,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.027.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -100,6 +102,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusChangeRequestAcceptanceV02", propOrder = {"acceptanceIdentification", "transactionIdentification", "submitterTransactionReference", "acceptedStatus"})
 public class StatusChangeRequestAcceptanceV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -136,6 +140,14 @@ public class StatusChangeRequestAcceptanceV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusChangeRequestAcceptanceV02.class.getMethod("getAcceptanceIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -176,6 +188,14 @@ public class StatusChangeRequestAcceptanceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusChangeRequestAcceptanceV02.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
@@ -212,6 +232,14 @@ public class StatusChangeRequestAcceptanceV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusChangeRequestAcceptanceV02.class.getMethod("getSubmitterTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionStatus3 acceptedStatus;
 	/**
@@ -247,6 +275,14 @@ public class StatusChangeRequestAcceptanceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusChangeRequestAcceptanceV02.class.getMethod("getAcceptedStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -259,8 +295,9 @@ public class StatusChangeRequestAcceptanceV02 {
 				rootElement = "Document";
 				xmlTag = "StsChngReqAccptnc";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(StatusChangeRequestAcceptanceV02.mmAcceptanceIdentification, StatusChangeRequestAcceptanceV02.mmTransactionIdentification,
-						StatusChangeRequestAcceptanceV02.mmSubmitterTransactionReference, StatusChangeRequestAcceptanceV02.mmAcceptedStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusChangeRequestAcceptanceV02.mmAcceptanceIdentification,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestAcceptanceV02.mmTransactionIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestAcceptanceV02.mmSubmitterTransactionReference,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestAcceptanceV02.mmAcceptedStatus);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -270,10 +307,16 @@ public class StatusChangeRequestAcceptanceV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StatusChangeRequestAcceptanceV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AccptncId", required = true)
 	public MessageIdentification1 getAcceptanceIdentification() {
 		return acceptanceIdentification;
 	}
@@ -282,6 +325,7 @@ public class StatusChangeRequestAcceptanceV02 {
 		this.acceptanceIdentification = acceptanceIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -290,6 +334,7 @@ public class StatusChangeRequestAcceptanceV02 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "SubmitrTxRef")
 	public SimpleIdentificationInformation getSubmitterTransactionReference() {
 		return submitterTransactionReference;
 	}
@@ -298,11 +343,18 @@ public class StatusChangeRequestAcceptanceV02 {
 		this.submitterTransactionReference = submitterTransactionReference;
 	}
 
+	@XmlElement(name = "AccptdSts", required = true)
 	public TransactionStatus3 getAcceptedStatus() {
 		return acceptedStatus;
 	}
 
 	public void setAcceptedStatus(TransactionStatus3 acceptedStatus) {
 		this.acceptedStatus = acceptedStatus;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.027.02.02")
+	static public class Document {
+		@XmlElement(name = "StsChngReqAccptnc", required = true)
+		public StatusChangeRequestAcceptanceV02 messageBody;
 	}
 }

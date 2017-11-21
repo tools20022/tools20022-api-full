@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data related to a component of the POI (Point Of Interaction) performing the
@@ -81,6 +85,8 @@ import java.util.List;
  * PointOfInteractionComponent6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PointOfInteractionComponent7", propOrder = {"type", "identification", "status", "standardCompliance", "characteristics", "assessment"})
 public class PointOfInteractionComponent7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -397,6 +403,7 @@ public class PointOfInteractionComponent7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public POIComponentType4Code getType() {
 		return type;
 	}
@@ -405,6 +412,7 @@ public class PointOfInteractionComponent7 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PointOfInteractionComponentIdentification1 getIdentification() {
 		return identification;
 	}
@@ -413,6 +421,7 @@ public class PointOfInteractionComponent7 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Sts")
 	public PointOfInteractionComponentStatus3 getStatus() {
 		return status;
 	}
@@ -421,6 +430,7 @@ public class PointOfInteractionComponent7 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "StdCmplc")
 	public List<GenericIdentification48> getStandardCompliance() {
 		return standardCompliance;
 	}
@@ -429,6 +439,7 @@ public class PointOfInteractionComponent7 {
 		this.standardCompliance = standardCompliance;
 	}
 
+	@XmlElement(name = "Chrtcs")
 	public PointOfInteractionComponentCharacteristics3 getCharacteristics() {
 		return characteristics;
 	}
@@ -437,6 +448,7 @@ public class PointOfInteractionComponent7 {
 		this.characteristics = characteristics;
 	}
 
+	@XmlElement(name = "Assmnt")
 	public List<PointOfInteractionComponentAssessment1> getAssessment() {
 		return assessment;
 	}

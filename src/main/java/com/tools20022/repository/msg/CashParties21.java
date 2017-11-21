@@ -28,6 +28,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies cash parties in the framework of a corporate action event.
@@ -76,6 +80,8 @@ import java.util.function.Supplier;
  * CashParties10}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashParties21", propOrder = {"creditor", "creditorAgent", "marketClaimCounterparty"})
 public class CashParties21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -292,6 +298,7 @@ public class CashParties21 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cdtr")
 	public PartyIdentificationAndAccount52 getCreditor() {
 		return creditor;
 	}
@@ -300,6 +307,7 @@ public class CashParties21 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAgt")
 	public PartyIdentificationAndAccount101 getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -308,6 +316,7 @@ public class CashParties21 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "MktClmCtrPty")
 	public PartyIdentificationAndAccount52 getMarketClaimCounterparty() {
 		return marketClaimCounterparty;
 	}

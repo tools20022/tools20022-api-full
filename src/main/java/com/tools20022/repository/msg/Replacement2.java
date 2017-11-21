@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Replacement of an existing content by a different one.
@@ -55,6 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Replacement of an existing content by a different one."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Replacement2", propOrder = {"currentValue", "proposedValue"})
 public class Replacement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -152,6 +158,7 @@ public class Replacement2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CurVal", required = true)
 	public Max350Text getCurrentValue() {
 		return currentValue;
 	}
@@ -160,6 +167,7 @@ public class Replacement2 {
 		this.currentValue = currentValue;
 	}
 
+	@XmlElement(name = "PropsdVal", required = true)
 	public Max350Text getProposedValue() {
 		return proposedValue;
 	}

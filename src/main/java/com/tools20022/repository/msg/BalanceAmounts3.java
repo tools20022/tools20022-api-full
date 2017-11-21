@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amounts linked to a securities balance, for example, holding value.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Amounts linked to a securities balance, for example, holding value."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BalanceAmounts3", propOrder = {"holdingValue", "previousHoldingValue", "bookValue", "eligibleCollateralValue", "accruedInterestAmount"})
 public class BalanceAmounts3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -338,6 +344,7 @@ public class BalanceAmounts3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "HldgVal")
 	public AmountAndDirection6 getHoldingValue() {
 		return holdingValue;
 	}
@@ -346,6 +353,7 @@ public class BalanceAmounts3 {
 		this.holdingValue = holdingValue;
 	}
 
+	@XmlElement(name = "PrvsHldgVal")
 	public AmountAndDirection6 getPreviousHoldingValue() {
 		return previousHoldingValue;
 	}
@@ -354,6 +362,7 @@ public class BalanceAmounts3 {
 		this.previousHoldingValue = previousHoldingValue;
 	}
 
+	@XmlElement(name = "BookVal")
 	public AmountAndDirection6 getBookValue() {
 		return bookValue;
 	}
@@ -362,6 +371,7 @@ public class BalanceAmounts3 {
 		this.bookValue = bookValue;
 	}
 
+	@XmlElement(name = "ElgblCollVal")
 	public AmountAndDirection6 getEligibleCollateralValue() {
 		return eligibleCollateralValue;
 	}
@@ -370,6 +380,7 @@ public class BalanceAmounts3 {
 		this.eligibleCollateralValue = eligibleCollateralValue;
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt")
 	public AmountAndDirection6 getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}

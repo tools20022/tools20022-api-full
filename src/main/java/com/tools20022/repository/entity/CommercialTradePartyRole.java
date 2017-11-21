@@ -37,17 +37,14 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade#mmPartyRole
- * CommercialTrade.mmPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTradePartyRole#mmCommercialTrade
+ * CommercialTradePartyRole.mmCommercialTrade}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
- * TradePartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -59,12 +56,15 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.repository.entity.BillTo BillTo}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
+ * TradePartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTradePartyRole#mmCommercialTrade
- * CommercialTradePartyRole.mmCommercialTrade}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade#mmPartyRole
+ * CommercialTrade.mmPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -121,7 +121,7 @@ public class CommercialTradePartyRole extends TradePartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmCommercialTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CommercialTradePartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CommercialTradePartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommercialTrade";
@@ -143,7 +143,12 @@ public class CommercialTradePartyRole extends TradePartyRole {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CommercialTrade.mmPartyRole);
 				subType_lazy = () -> Arrays.asList(ShipFrom.mmObject(), ShipTo.mmObject(), ObligorBank.mmObject(), RecipientBank.mmObject(), BillTo.mmObject());
 				superType_lazy = () -> TradePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(CommercialTradePartyRole.mmCommercialTrade);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CommercialTradePartyRole.mmCommercialTrade);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CommercialTradePartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information to support the Know Your Customer processes.
@@ -109,6 +113,9 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyProfileInformation1", propOrder = {"certificationIndicator", "validatingParty", "checkingParty", "responsibleParty", "certificateType", "extendedCertificateType", "checkingDate", "checkingFrequency",
+		"nextRevisionDate", "salaryRange", "sourceOfWealth"})
 public class PartyProfileInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -708,6 +715,7 @@ public class PartyProfileInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CertfctnInd", required = true)
 	public YesNoIndicator getCertificationIndicator() {
 		return certificationIndicator;
 	}
@@ -716,6 +724,7 @@ public class PartyProfileInformation1 {
 		this.certificationIndicator = certificationIndicator;
 	}
 
+	@XmlElement(name = "VldtngPty")
 	public Max140Text getValidatingParty() {
 		return validatingParty;
 	}
@@ -724,6 +733,7 @@ public class PartyProfileInformation1 {
 		this.validatingParty = validatingParty;
 	}
 
+	@XmlElement(name = "ChckngPty")
 	public Max140Text getCheckingParty() {
 		return checkingParty;
 	}
@@ -732,6 +742,7 @@ public class PartyProfileInformation1 {
 		this.checkingParty = checkingParty;
 	}
 
+	@XmlElement(name = "RspnsblPty")
 	public Max140Text getResponsibleParty() {
 		return responsibleParty;
 	}
@@ -740,6 +751,7 @@ public class PartyProfileInformation1 {
 		this.responsibleParty = responsibleParty;
 	}
 
+	@XmlElement(name = "CertTp", required = true)
 	public CertificateType1Code getCertificateType() {
 		return certificateType;
 	}
@@ -748,6 +760,7 @@ public class PartyProfileInformation1 {
 		this.certificateType = certificateType;
 	}
 
+	@XmlElement(name = "XtndedCertTp", required = true)
 	public Extended350Code getExtendedCertificateType() {
 		return extendedCertificateType;
 	}
@@ -756,6 +769,7 @@ public class PartyProfileInformation1 {
 		this.extendedCertificateType = extendedCertificateType;
 	}
 
+	@XmlElement(name = "ChckngDt")
 	public ISODate getCheckingDate() {
 		return checkingDate;
 	}
@@ -764,6 +778,7 @@ public class PartyProfileInformation1 {
 		this.checkingDate = checkingDate;
 	}
 
+	@XmlElement(name = "ChckngFrqcy")
 	public EventFrequency1Code getCheckingFrequency() {
 		return checkingFrequency;
 	}
@@ -772,6 +787,7 @@ public class PartyProfileInformation1 {
 		this.checkingFrequency = checkingFrequency;
 	}
 
+	@XmlElement(name = "NxtRvsnDt")
 	public ISODate getNextRevisionDate() {
 		return nextRevisionDate;
 	}
@@ -780,6 +796,7 @@ public class PartyProfileInformation1 {
 		this.nextRevisionDate = nextRevisionDate;
 	}
 
+	@XmlElement(name = "SlryRg")
 	public Max35Text getSalaryRange() {
 		return salaryRange;
 	}
@@ -788,6 +805,7 @@ public class PartyProfileInformation1 {
 		this.salaryRange = salaryRange;
 	}
 
+	@XmlElement(name = "SrcOfWlth")
 	public Max140Text getSourceOfWealth() {
 		return sourceOfWealth;
 	}

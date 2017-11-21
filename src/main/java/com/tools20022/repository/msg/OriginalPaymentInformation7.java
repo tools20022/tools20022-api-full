@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on the original payment transaction, to which the
@@ -100,6 +104,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * OriginalPaymentInformation6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalPaymentInformation7", propOrder = {"references", "paymentTypeInformation", "amount", "exchangeRateInformation", "requestedExecutionDate", "requestedCollectionDate", "debtor", "debtorAccount", "debtorAgent",
+		"creditor", "creditorAccount", "creditorAgent"})
 public class OriginalPaymentInformation7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -782,6 +789,7 @@ public class OriginalPaymentInformation7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Refs", required = true)
 	public TransactionReferences4 getReferences() {
 		return references;
 	}
@@ -790,6 +798,7 @@ public class OriginalPaymentInformation7 {
 		this.references = references;
 	}
 
+	@XmlElement(name = "PmtTpInf")
 	public PaymentTypeInformation19 getPaymentTypeInformation() {
 		return paymentTypeInformation;
 	}
@@ -798,6 +807,7 @@ public class OriginalPaymentInformation7 {
 		this.paymentTypeInformation = paymentTypeInformation;
 	}
 
+	@XmlElement(name = "Amt")
 	public AmountType3Choice getAmount() {
 		return amount;
 	}
@@ -806,6 +816,7 @@ public class OriginalPaymentInformation7 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "XchgRateInf")
 	public ExchangeRate1 getExchangeRateInformation() {
 		return exchangeRateInformation;
 	}
@@ -814,6 +825,7 @@ public class OriginalPaymentInformation7 {
 		this.exchangeRateInformation = exchangeRateInformation;
 	}
 
+	@XmlElement(name = "ReqdExctnDt")
 	public DateAndDateTimeChoice getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -822,6 +834,7 @@ public class OriginalPaymentInformation7 {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "ReqdColltnDt")
 	public ISODate getRequestedCollectionDate() {
 		return requestedCollectionDate;
 	}
@@ -830,6 +843,7 @@ public class OriginalPaymentInformation7 {
 		this.requestedCollectionDate = requestedCollectionDate;
 	}
 
+	@XmlElement(name = "Dbtr")
 	public PartyIdentification43 getDebtor() {
 		return debtor;
 	}
@@ -838,6 +852,7 @@ public class OriginalPaymentInformation7 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAcct")
 	public CashAccount24 getDebtorAccount() {
 		return debtorAccount;
 	}
@@ -846,6 +861,7 @@ public class OriginalPaymentInformation7 {
 		this.debtorAccount = debtorAccount;
 	}
 
+	@XmlElement(name = "DbtrAgt")
 	public BranchAndFinancialInstitutionIdentification5 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -854,6 +870,7 @@ public class OriginalPaymentInformation7 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "Cdtr")
 	public PartyIdentification43 getCreditor() {
 		return creditor;
 	}
@@ -862,6 +879,7 @@ public class OriginalPaymentInformation7 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAcct")
 	public CashAccount24 getCreditorAccount() {
 		return creditorAccount;
 	}
@@ -870,6 +888,7 @@ public class OriginalPaymentInformation7 {
 		this.creditorAccount = creditorAccount;
 	}
 
+	@XmlElement(name = "CdtrAgt")
 	public BranchAndFinancialInstitutionIdentification5 getCreditorAgent() {
 		return creditorAgent;
 	}

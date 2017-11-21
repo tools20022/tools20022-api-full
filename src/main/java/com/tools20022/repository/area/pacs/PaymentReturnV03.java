@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.OriginalGroupHeader2;
 import com.tools20022.repository.msg.PaymentTransaction34;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -54,9 +56,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pacs.004.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementArchive
@@ -90,6 +89,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pacs.004.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -112,6 +114,8 @@ import java.util.List;
  * PaymentReturnV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentReturnV03", propOrder = {"groupHeader", "originalGroupInformation", "transactionInformation", "supplementaryData"})
 public class PaymentReturnV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -151,6 +155,14 @@ public class PaymentReturnV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader54.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentReturnV03.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OriginalGroupHeader2 originalGroupInformation;
 	/**
@@ -189,6 +201,14 @@ public class PaymentReturnV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> OriginalGroupHeader2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentReturnV03.class.getMethod("getOriginalGroupInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PaymentTransaction34> transactionInformation;
 	/**
@@ -225,6 +245,14 @@ public class PaymentReturnV03 {
 			definition = "Information concerning the original transactions, to which the return message refers.";
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentTransaction34.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentReturnV03.class.getMethod("getTransactionInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -263,6 +291,14 @@ public class PaymentReturnV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentReturnV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -277,7 +313,8 @@ public class PaymentReturnV03 {
 				rootElement = "Document";
 				xmlTag = "PmtRtr";
 				businessArea_lazy = () -> PaymentsClearingandSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PaymentReturnV03.mmGroupHeader, PaymentReturnV03.mmOriginalGroupInformation, PaymentReturnV03.mmTransactionInformation, PaymentReturnV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.PaymentReturnV03.mmGroupHeader, com.tools20022.repository.area.pacs.PaymentReturnV03.mmOriginalGroupInformation,
+						com.tools20022.repository.area.pacs.PaymentReturnV03.mmTransactionInformation, com.tools20022.repository.area.pacs.PaymentReturnV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pacs";
@@ -287,10 +324,16 @@ public class PaymentReturnV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PaymentReturnV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader54 getGroupHeader() {
 		return groupHeader;
 	}
@@ -299,6 +342,7 @@ public class PaymentReturnV03 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "OrgnlGrpInf")
 	public OriginalGroupHeader2 getOriginalGroupInformation() {
 		return originalGroupInformation;
 	}
@@ -307,6 +351,7 @@ public class PaymentReturnV03 {
 		this.originalGroupInformation = originalGroupInformation;
 	}
 
+	@XmlElement(name = "TxInf")
 	public List<PaymentTransaction34> getTransactionInformation() {
 		return transactionInformation;
 	}
@@ -315,11 +360,18 @@ public class PaymentReturnV03 {
 		this.transactionInformation = transactionInformation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.004.03.03")
+	static public class Document {
+		@XmlElement(name = "PmtRtr", required = true)
+		public PaymentReturnV03 messageBody;
 	}
 }

@@ -65,6 +65,8 @@ public class BaseOne14Rate {
 				name = "BaseOne14Rate";
 				definition = "Rate expressed as a decimal, for example, 0.7 is 7/10 and 70% with 13 fractional digits maximum and 14 total digits.";
 				baseValue = 1.0;
+				totalDigits = 14;
+				fractionDigits = 13;
 			}
 		});
 		return mmObject_lazy.get();

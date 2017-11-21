@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -42,6 +43,67 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+ * Adjustment.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmChargeRate
+ * Adjustment.mmChargeRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Adjustment#mmCalculationMethod
+ * Adjustment.mmCalculationMethod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmPayment
+ * Adjustment.mmPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmDirection
+ * Adjustment.mmDirection}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmReason
+ * Adjustment.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Adjustment#mmRelatedLineItem
+ * Adjustment.mmRelatedLineItem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Adjustment#mmAllowanceChargeIndicator
+ * Adjustment.mmAllowanceChargeIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmPrice
+ * Adjustment.mmPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargeIndicator
+ * Adjustment.mmChargeIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmType
+ * Adjustment.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Adjustment#mmCollateralManagement
+ * Adjustment.mmCollateralManagement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Adjustment#mmAdjustedBalance
+ * Adjustment.mmAdjustedBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargesPartyRole
+ * Adjustment.mmChargesPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Adjustment#mmEffectivePeriod
+ * Adjustment.mmEffectivePeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Adjustment#mmCurrencyExchange
+ * Adjustment.mmCurrencyExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Adjustment#mmSecuritiesOrder
+ * Adjustment.mmSecuritiesOrder}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmTax
+ * Adjustment.mmTax}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Commission Commission}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges Charges}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Discount Discount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Allowance Allowance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Penalty Penalty}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -110,67 +172,6 @@ import java.util.List;
  * RemittanceAmount3.mmAdjustmentAmountAndReason}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Commission Commission}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges Charges}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Discount Discount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Allowance Allowance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Penalty Penalty}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
- * Adjustment.mmAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmChargeRate
- * Adjustment.mmChargeRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Adjustment#mmCalculationMethod
- * Adjustment.mmCalculationMethod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmPayment
- * Adjustment.mmPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmDirection
- * Adjustment.mmDirection}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmReason
- * Adjustment.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Adjustment#mmRelatedLineItem
- * Adjustment.mmRelatedLineItem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Adjustment#mmAllowanceChargeIndicator
- * Adjustment.mmAllowanceChargeIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmPrice
- * Adjustment.mmPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargeIndicator
- * Adjustment.mmChargeIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmType
- * Adjustment.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Adjustment#mmCollateralManagement
- * Adjustment.mmCollateralManagement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Adjustment#mmAdjustedBalance
- * Adjustment.mmAdjustedBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargesPartyRole
- * Adjustment.mmChargesPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Adjustment#mmEffectivePeriod
- * Adjustment.mmEffectivePeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Adjustment#mmCurrencyExchange
- * Adjustment.mmCurrencyExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Adjustment#mmSecuritiesOrder
- * Adjustment.mmSecuritiesOrder}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmTax
- * Adjustment.mmTax}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -203,10 +204,6 @@ public class Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1145,6 +1142,10 @@ public class Adjustment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1225,7 +1226,7 @@ public class Adjustment {
 					OtherAmounts38.mmExecutingBrokerAmount, OtherAmounts38.mmLocalBrokerCommission, OtherAmounts36.mmChargesFees, OtherAmounts36.mmExecutingBrokerAmount, OtherAmounts36.mmLocalBrokerCommission, OtherAmounts33.mmChargesFees,
 					LineItemAllowanceCharge2.mmActualAmount, TotalFeesAndTaxes40.mmTotalOverheadApplied, Fee3.mmRepairedStandardAmount, Fee3.mmRepairedDiscountAmount, Fee3.mmRepairedRequestedAmount, Fee2.mmStandardAmount,
 					Fee2.mmAppliedAmount, Fee1.mmStandardAmount, Fee1.mmRequestedAmount, PaymentTransaction81.mmCompensationAmount, PaymentTransaction76.mmCompensationAmount);
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -1233,6 +1234,14 @@ public class Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Adjustment.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate chargeRate;
@@ -1247,10 +1256,6 @@ public class Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1341,6 +1346,10 @@ public class Adjustment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1360,7 +1369,7 @@ public class Adjustment {
 					PaymentObligation1.mmChargesPercentage, AmountRate1Choice.mmRate, Charge23.mmRate, Charge22.mmRate, Charges5.mmPercentage, AmountOrRate3Choice.mmRate, PaymentTerms6.mmDiscountPercentRate,
 					PaymentTerms6.mmPenaltyPercentRate, EarlyPayment1.mmDiscountPercent, LineItemAllowanceCharge2.mmCalculationPercent, Fee3.mmRepairedStandardRate, Fee3.mmRepairedDiscountRate, Fee3.mmRepairedRequestedRate,
 					Fee2.mmStandardRate, Fee2.mmAppliedRate, ChargeOrCommissionDiscount1.mmRate, Fee1.mmStandardRate, Fee1.mmRequestedRate);
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargeRate";
@@ -1368,6 +1377,14 @@ public class Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Adjustment.class.getMethod("getChargeRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TaxationBasisCode calculationMethod;
@@ -1382,10 +1399,6 @@ public class Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode
 	 * TaxationBasisCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1431,6 +1444,10 @@ public class Adjustment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1448,7 +1465,7 @@ public class Adjustment {
 			derivation_lazy = () -> Arrays.asList(Charge4.mmChargeBasis, Charge20.mmChargeBasis, Charge20.mmExtendedChargeBasis, Charge8.mmChargeBasis, Charge17.mmChargeBasis, Charge17.mmExtendedChargeBasis, Charge10.mmChargeBasis,
 					Charge18.mmChargeBasis, Charge18.mmExtendedChargeBasis, CommissionBasis1Choice.mmCode, CommissionBasis1Choice.mmProprietary, Charge27.mmChargeBasis, Charge29.mmChargeBasis, ChargeBasis2Choice.mmCode,
 					ChargeBasis2Choice.mmProprietary, Fee2.mmBasis, Fee1.mmBasis);
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationMethod";
@@ -1456,6 +1473,14 @@ public class Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxationBasisCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Adjustment.class.getMethod("getCalculationMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Payment> payment;
@@ -1495,7 +1520,7 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
@@ -1518,10 +1543,6 @@ public class Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AdjustmentDirectionCode
 	 * AdjustmentDirectionCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1544,6 +1565,10 @@ public class Adjustment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1560,7 +1585,7 @@ public class Adjustment {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentAdjustment1.mmCreditDebitIndicator, Adjustment5.mmDirection, DocumentAdjustment2.mmCreditDebitIndicator, Adjustment4.mmDirection, Adjustment3.mmDirection, Adjustment6.mmDirection,
 					Adjustment7.mmDirection);
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Direction";
@@ -1568,6 +1593,14 @@ public class Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AdjustmentDirectionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Adjustment.class.getMethod("getDirection", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max4AlphaNumericText reason;
@@ -1581,10 +1614,6 @@ public class Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max4AlphaNumericText
 	 * Max4AlphaNumericText}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1606,6 +1635,10 @@ public class Adjustment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1619,7 +1652,7 @@ public class Adjustment {
 	public static final MMBusinessAttribute mmReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentAdjustment1.mmReason, SettlementAllowanceCharge1.mmReason, DocumentAdjustment2.mmReason, LineItemAllowanceCharge1.mmReason, LineItemAllowanceCharge2.mmReason);
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reason";
@@ -1627,6 +1660,14 @@ public class Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Adjustment.class.getMethod("getReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected LineItem relatedLineItem;
@@ -1664,7 +1705,7 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedLineItem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedLineItem";
@@ -1689,10 +1730,6 @@ public class Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1701,6 +1738,10 @@ public class Adjustment {
 	 * SettlementAllowanceCharge1.mmAllowanceChargeIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1717,7 +1758,7 @@ public class Adjustment {
 	public static final MMBusinessAttribute mmAllowanceChargeIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementAllowanceCharge1.mmAllowanceChargeIndicator);
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllowanceChargeIndicator";
@@ -1725,6 +1766,14 @@ public class Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Adjustment.class.getMethod("getAllowanceChargeIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Price price;
@@ -1744,10 +1793,6 @@ public class Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Price Price}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1759,6 +1804,10 @@ public class Adjustment {
 	 * OtherPrices2.mmMarketBrokerCommission}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1773,7 +1822,7 @@ public class Adjustment {
 	public static final MMBusinessAssociationEnd mmPrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(OtherPrices1.mmMarketBrokerCommission, OtherPrices2.mmMarketBrokerCommission);
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Price";
@@ -1796,10 +1845,6 @@ public class Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1811,6 +1856,10 @@ public class Adjustment {
 	 * LineItemAllowanceCharge2.mmChargeIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1826,7 +1875,7 @@ public class Adjustment {
 	public static final MMBusinessAttribute mmChargeIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItemAllowanceCharge1.mmChargeIndicator, LineItemAllowanceCharge2.mmChargeIndicator);
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargeIndicator";
@@ -1834,6 +1883,14 @@ public class Adjustment {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Adjustment.class.getMethod("getChargeIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdjustmentTypeCode type;
@@ -1848,10 +1905,6 @@ public class Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AdjustmentTypeCode
 	 * AdjustmentTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1878,6 +1931,10 @@ public class Adjustment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1894,7 +1951,7 @@ public class Adjustment {
 		{
 			derivation_lazy = () -> Arrays.asList(Adjustment4.mmType, Adjustment4.mmOtherAdjustmentType, Adjustment3.mmType, Adjustment3.mmOtherAdjustmentType, Adjustment6.mmType, Adjustment7.mmType, AdjustmentType1Choice.mmType,
 					AdjustmentType1Choice.mmOtherAdjustmentType);
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -1902,6 +1959,14 @@ public class Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AdjustmentTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Adjustment.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CollateralManagement collateralManagement;
@@ -1941,7 +2006,7 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmCollateralManagement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralManagement";
@@ -1987,7 +2052,7 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmAdjustedBalance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdjustedBalance";
@@ -2034,7 +2099,7 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmChargesPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargesPartyRole";
@@ -2080,7 +2145,7 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmEffectivePeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EffectivePeriod";
@@ -2130,7 +2195,7 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmCurrencyExchange = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchange";
@@ -2177,7 +2242,7 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesOrder";
@@ -2208,10 +2273,6 @@ public class Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2225,6 +2286,10 @@ public class Adjustment {
 	 * ChargesRecord2.mmTax}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2241,7 +2306,7 @@ public class Adjustment {
 	public static final MMBusinessAssociationEnd mmTax = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ChargesInformation3.mmTax, ChargesInformation6.mmTax, ChargesRecord1.mmTax, ChargesRecord2.mmTax);
-			elementContext_lazy = () -> Adjustment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tax";
@@ -2267,12 +2332,20 @@ public class Adjustment {
 						com.tools20022.repository.entity.CollateralManagement.mmFeesAndCommissions);
 				derivationElement_lazy = () -> Arrays.asList(RemittanceAmount3.mmAdjustmentAmountAndReason);
 				subType_lazy = () -> Arrays.asList(Commission.mmObject(), Charges.mmObject(), Discount.mmObject(), Allowance.mmObject(), Penalty.mmObject());
-				element_lazy = () -> Arrays.asList(Adjustment.mmAmount, Adjustment.mmChargeRate, Adjustment.mmCalculationMethod, Adjustment.mmPayment, Adjustment.mmDirection, Adjustment.mmReason, Adjustment.mmRelatedLineItem,
-						Adjustment.mmAllowanceChargeIndicator, Adjustment.mmPrice, Adjustment.mmChargeIndicator, Adjustment.mmType, Adjustment.mmCollateralManagement, Adjustment.mmAdjustedBalance, Adjustment.mmChargesPartyRole,
-						Adjustment.mmEffectivePeriod, Adjustment.mmCurrencyExchange, Adjustment.mmSecuritiesOrder, Adjustment.mmTax);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Adjustment.mmAmount, com.tools20022.repository.entity.Adjustment.mmChargeRate, com.tools20022.repository.entity.Adjustment.mmCalculationMethod,
+						com.tools20022.repository.entity.Adjustment.mmPayment, com.tools20022.repository.entity.Adjustment.mmDirection, com.tools20022.repository.entity.Adjustment.mmReason,
+						com.tools20022.repository.entity.Adjustment.mmRelatedLineItem, com.tools20022.repository.entity.Adjustment.mmAllowanceChargeIndicator, com.tools20022.repository.entity.Adjustment.mmPrice,
+						com.tools20022.repository.entity.Adjustment.mmChargeIndicator, com.tools20022.repository.entity.Adjustment.mmType, com.tools20022.repository.entity.Adjustment.mmCollateralManagement,
+						com.tools20022.repository.entity.Adjustment.mmAdjustedBalance, com.tools20022.repository.entity.Adjustment.mmChargesPartyRole, com.tools20022.repository.entity.Adjustment.mmEffectivePeriod,
+						com.tools20022.repository.entity.Adjustment.mmCurrencyExchange, com.tools20022.repository.entity.Adjustment.mmSecuritiesOrder, com.tools20022.repository.entity.Adjustment.mmTax);
 				derivationComponent_lazy = () -> Arrays.asList(ChargeTaxBasisType1Choice.mmObject(), DocumentAdjustment1.mmObject(), Adjustment5.mmObject(), DiscountOrChargeType1Choice.mmObject(), DocumentAdjustment2.mmObject(),
 						LineItemAllowanceCharge1.mmObject(), Adjustment4.mmObject(), Adjustment3.mmObject(), Adjustment6.mmObject(), Adjustment7.mmObject(), AdjustmentType1Choice.mmObject(), ChargeBasisType1Choice.mmObject(),
 						LineItemAllowanceCharge2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Adjustment.class;
 			}
 		});
 		return mmObject_lazy.get();

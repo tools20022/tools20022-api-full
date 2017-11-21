@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a unit in decimal number, a face amount in currency and amount
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnitOrFaceAmountOrCodeChoice", propOrder = {"unit", "faceAmount", "code"})
 public class UnitOrFaceAmountOrCodeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -235,6 +241,7 @@ public class UnitOrFaceAmountOrCodeChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Unit", required = true)
 	public DecimalNumber getUnit() {
 		return unit;
 	}
@@ -243,6 +250,7 @@ public class UnitOrFaceAmountOrCodeChoice {
 		this.unit = unit;
 	}
 
+	@XmlElement(name = "FaceAmt", required = true)
 	public CurrencyAndAmount getFaceAmount() {
 		return faceAmount;
 	}
@@ -251,6 +259,7 @@ public class UnitOrFaceAmountOrCodeChoice {
 		this.faceAmount = faceAmount;
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public Quantity1Code getCode() {
 		return code;
 	}

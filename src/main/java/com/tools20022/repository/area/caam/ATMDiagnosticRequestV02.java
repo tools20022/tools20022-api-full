@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header31;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The ATMDiagnosticRequest message is sent from an ATM to an acquirer to verify
@@ -37,9 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caam.005.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
@@ -75,6 +74,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caam.005.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -90,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMDiagnosticRequestV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMDiagnosticRequestV02", propOrder = {"header", "protectedATMDiagnosticRequest", "ATMDiagnosticRequest", "securityTrailer"})
 public class ATMDiagnosticRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -129,6 +133,14 @@ public class ATMDiagnosticRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header31.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMDiagnosticRequestV02.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType10 protectedATMDiagnosticRequest;
 	/**
@@ -163,6 +175,14 @@ public class ATMDiagnosticRequestV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMDiagnosticRequestV02.class.getMethod("getProtectedATMDiagnosticRequest", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ATMDiagnosticRequest2 aTMDiagnosticRequest;
@@ -200,6 +220,14 @@ public class ATMDiagnosticRequestV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ATMDiagnosticRequest2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMDiagnosticRequestV02.class.getMethod("getATMDiagnosticRequest", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType15 securityTrailer;
 	/**
@@ -235,6 +263,14 @@ public class ATMDiagnosticRequestV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMDiagnosticRequestV02.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -248,8 +284,8 @@ public class ATMDiagnosticRequestV02 {
 				rootElement = "Document";
 				xmlTag = "ATMDgnstcReq";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ATMDiagnosticRequestV02.mmHeader, ATMDiagnosticRequestV02.mmProtectedATMDiagnosticRequest, ATMDiagnosticRequestV02.mmATMDiagnosticRequest,
-						ATMDiagnosticRequestV02.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMDiagnosticRequestV02.mmHeader, com.tools20022.repository.area.caam.ATMDiagnosticRequestV02.mmProtectedATMDiagnosticRequest,
+						com.tools20022.repository.area.caam.ATMDiagnosticRequestV02.mmATMDiagnosticRequest, com.tools20022.repository.area.caam.ATMDiagnosticRequestV02.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caam";
@@ -259,10 +295,16 @@ public class ATMDiagnosticRequestV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ATMDiagnosticRequestV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header31 getHeader() {
 		return header;
 	}
@@ -271,6 +313,7 @@ public class ATMDiagnosticRequestV02 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "PrtctdATMDgnstcReq")
 	public ContentInformationType10 getProtectedATMDiagnosticRequest() {
 		return protectedATMDiagnosticRequest;
 	}
@@ -279,6 +322,7 @@ public class ATMDiagnosticRequestV02 {
 		this.protectedATMDiagnosticRequest = protectedATMDiagnosticRequest;
 	}
 
+	@XmlElement(name = "ATMDgnstcReq")
 	public ATMDiagnosticRequest2 getATMDiagnosticRequest() {
 		return aTMDiagnosticRequest;
 	}
@@ -287,11 +331,18 @@ public class ATMDiagnosticRequestV02 {
 		this.aTMDiagnosticRequest = aTMDiagnosticRequest;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType15 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caam.005.02.02")
+	static public class Document {
+		@XmlElement(name = "ATMDgnstcReq", required = true)
+		public ATMDiagnosticRequestV02 messageBody;
 	}
 }

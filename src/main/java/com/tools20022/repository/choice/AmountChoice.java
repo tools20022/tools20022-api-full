@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount may be defined with or without the currency.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Amount may be defined with or without the currency."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountChoice", propOrder = {"amountWithCurrency", "amountWithoutCurrency"})
 public class AmountChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class AmountChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AmtWthCcy", required = true)
 	public CurrencyAndAmount getAmountWithCurrency() {
 		return amountWithCurrency;
 	}
@@ -171,6 +178,7 @@ public class AmountChoice {
 		this.amountWithCurrency = amountWithCurrency;
 	}
 
+	@XmlElement(name = "AmtWthtCcy", required = true)
 	public ImpliedCurrencyAndAmount getAmountWithoutCurrency() {
 		return amountWithoutCurrency;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports on reservations.
@@ -68,6 +72,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrentAndDefaultReservation1", propOrder = {"currentReservation", "defaultReservation"})
 public class CurrentAndDefaultReservation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -195,6 +201,7 @@ public class CurrentAndDefaultReservation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CurRsvatn")
 	public List<ReservationReport3> getCurrentReservation() {
 		return currentReservation;
 	}
@@ -203,6 +210,7 @@ public class CurrentAndDefaultReservation1 {
 		this.currentReservation = currentReservation;
 	}
 
+	@XmlElement(name = "DfltRsvatn")
 	public List<ReservationReport3> getDefaultReservation() {
 		return defaultReservation;
 	}

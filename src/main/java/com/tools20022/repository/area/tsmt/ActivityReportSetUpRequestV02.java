@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.UTCOffset1;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -44,9 +46,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.004.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -79,6 +78,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.004.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -90,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ActivityReportSetUpRequestV02", propOrder = {"requestIdentification", "UTCOffset"})
 public class ActivityReportSetUpRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -127,6 +131,14 @@ public class ActivityReportSetUpRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ActivityReportSetUpRequestV02.class.getMethod("getRequestIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected UTCOffset1 uTCOffset;
 	/**
@@ -162,6 +174,14 @@ public class ActivityReportSetUpRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> UTCOffset1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ActivityReportSetUpRequestV02.class.getMethod("getUTCOffset", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -174,7 +194,7 @@ public class ActivityReportSetUpRequestV02 {
 				rootElement = "Document";
 				xmlTag = "ActvtyRptSetUpReq";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ActivityReportSetUpRequestV02.mmRequestIdentification, ActivityReportSetUpRequestV02.mmUTCOffset);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02.mmRequestIdentification, com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02.mmUTCOffset);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -184,10 +204,16 @@ public class ActivityReportSetUpRequestV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ActivityReportSetUpRequestV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqId", required = true)
 	public MessageIdentification1 getRequestIdentification() {
 		return requestIdentification;
 	}
@@ -196,11 +222,18 @@ public class ActivityReportSetUpRequestV02 {
 		this.requestIdentification = requestIdentification;
 	}
 
+	@XmlElement(name = "UTCOffset", required = true)
 	public UTCOffset1 getUTCOffset() {
 		return uTCOffset;
 	}
 
 	public void setUTCOffset(UTCOffset1 uTCOffset) {
 		this.uTCOffset = uTCOffset;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.004.02.02")
+	static public class Document {
+		@XmlElement(name = "ActvtyRptSetUpReq", required = true)
+		public ActivityReportSetUpRequestV02 messageBody;
 	}
 }

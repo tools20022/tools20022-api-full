@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,48 +41,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction1
- * EntryTransaction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction2
- * EntryTransaction2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction3
- * EntryTransaction3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction4
- * EntryTransaction4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnderlyingStatementEntry1
- * UnderlyingStatementEntry1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction7
- * EntryTransaction7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction8
- * EntryTransaction8}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Role#mmEntry Role.mmEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmEntry
- * Account.mmEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmBalanceEntry
- * Balance.mmBalanceEntry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankTransaction#mmRelatedEntry
- * BankTransaction.mmRelatedEntry}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashEntry CashEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesEntry
- * SecuritiesEntry}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -116,6 +75,48 @@ import java.util.List;
  * Entry.mmEntryType}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashEntry CashEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesEntry
+ * SecuritiesEntry}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction1
+ * EntryTransaction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction2
+ * EntryTransaction2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction3
+ * EntryTransaction3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction4
+ * EntryTransaction4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnderlyingStatementEntry1
+ * UnderlyingStatementEntry1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction7
+ * EntryTransaction7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction8
+ * EntryTransaction8}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Role#mmEntry Role.mmEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmEntry
+ * Account.mmEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmBalanceEntry
+ * Balance.mmBalanceEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankTransaction#mmRelatedEntry
+ * BankTransaction.mmRelatedEntry}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -147,10 +148,6 @@ public class Entry {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DebitCreditCode
 	 * DebitCreditCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
-	 * Entry}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -226,6 +223,10 @@ public class Entry {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
+	 * Entry}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -243,7 +244,7 @@ public class Entry {
 					ReportEntry3.mmCreditDebitIndicator, AmountAndDirection35.mmCreditDebitIndicator, EntryTransaction4.mmCreditDebitIndicator, ReportEntry4.mmCreditDebitIndicator, NotificationEntry1.mmCreditDebitIndicator,
 					StatementEntry1.mmCreditDebitIndicator, TransactionType1.mmCreditDebitIndicator, Equalisation2.mmCreditDebitIndicator, CashAccountEntrySearch4.mmCreditDebitIndicator, PaymentCommon2.mmCreditDebitIndicator,
 					ReportEntry7.mmCreditDebitIndicator, EntryTransaction7.mmCreditDebitIndicator, ReportEntry8.mmCreditDebitIndicator, EntryTransaction8.mmCreditDebitIndicator);
-			elementContext_lazy = () -> Entry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
@@ -251,6 +252,14 @@ public class Entry {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Entry.class.getMethod("getCreditDebitIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime entryDate;
@@ -264,10 +273,6 @@ public class Entry {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
-	 * Entry}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -339,6 +344,10 @@ public class Entry {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
+	 * Entry}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -357,7 +366,7 @@ public class Entry {
 					PaymentCommonDetails4.mmEntryDate, PaymentCommon1.mmEntryDate, CashEntry1.mmDate, ReportEntry1.mmBookingDate, ReportEntry2.mmBookingDate, ReportEntry3.mmBookingDate, ReportEntry4.mmBookingDate,
 					NotificationEntry1.mmBookingDate, StatementEntry1.mmBookingDate, CorporateActionCashMovements2.mmPostingDateTime, CashMovement3.mmPostingDateTime, FinancingDateDetails1.mmBookDate, FinancingDateDetails1.mmCreditDate,
 					FinancingDateDetails1.mmDebitDate, BalanceAdjustment1.mmPostingDate, CashAccountEntrySearch4.mmEntryDate, PaymentCommon2.mmEntryDate, ReportEntry7.mmBookingDate, ReportItem1.mmItemDate, ReportEntry8.mmBookingDate);
-			elementContext_lazy = () -> Entry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntryDate";
@@ -365,6 +374,14 @@ public class Entry {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Entry.class.getMethod("getEntryDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text identification;
@@ -378,10 +395,6 @@ public class Entry {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
-	 * Entry}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -442,6 +455,10 @@ public class Entry {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
+	 * Entry}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -460,7 +477,7 @@ public class Entry {
 					ReportEntry2.mmEntryReference, ReportEntry2.mmAccountServicerReference, EntryTransaction3.mmReferences, ReportEntry3.mmEntryReference, ReportEntry3.mmAccountServicerReference, EntryTransaction4.mmReferences,
 					ReportEntry4.mmEntryReference, UnderlyingStatementEntry1.mmOriginalEntryIdentification, ReportEntry7.mmEntryReference, EntryTransaction7.mmReferences, CertificateIdentification1.mmAccountServicerReference,
 					ReportEntry8.mmEntryReference, EntryTransaction8.mmReferences);
-			elementContext_lazy = () -> Entry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -468,6 +485,14 @@ public class Entry {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Entry.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text accountOwnerTransactionIdentification;
@@ -481,10 +506,6 @@ public class Entry {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
-	 * Entry}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1100,6 +1121,10 @@ public class Entry {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
+	 * Entry}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1179,7 +1204,7 @@ public class Entry {
 					Transaction52.mmAccountOwnerTransactionIdentification, TransactionTypeAndAdditionalParameters19.mmAccountOwnerTransactionIdentification, SecuritiesTradeDetails69.mmAccountOwnerTransactionIdentification,
 					TransactionTypeAndAdditionalParameters20.mmAccountOwnerTransactionIdentification, AdditionalInformation14.mmAccountOwnerTransactionIdentification, Transaction57.mmAccountOwnerTransactionIdentification,
 					Transaction56.mmAccountOwnerTransactionIdentification, Transaction55.mmAccountOwnerTransactionIdentification, TransactionDetails101.mmAccountOwnerTransactionIdentification);
-			elementContext_lazy = () -> Entry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountOwnerTransactionIdentification";
@@ -1187,6 +1212,14 @@ public class Entry {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Entry.class.getMethod("getAccountOwnerTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text accountServicerTransactionIdentification;
@@ -1200,10 +1233,6 @@ public class Entry {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
-	 * Entry}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1909,6 +1938,10 @@ public class Entry {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
+	 * Entry}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2001,7 +2034,7 @@ public class Entry {
 					TransactionTypeAndAdditionalParameters19.mmAccountServicerTransactionIdentification, SecuritiesTradeDetails69.mmAccountServicerTransactionIdentification,
 					TransactionTypeAndAdditionalParameters20.mmAccountServicerTransactionIdentification, Transaction57.mmAccountServicerTransactionIdentification, Transaction56.mmAccountServicerTransactionIdentification,
 					Transaction55.mmAccountServicerTransactionIdentification, TransactionDetails101.mmAccountServicerTransactionIdentification);
-			elementContext_lazy = () -> Entry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountServicerTransactionIdentification";
@@ -2009,6 +2042,14 @@ public class Entry {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Entry.class.getMethod("getAccountServicerTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TrueFalseIndicator reversalIndicator;
@@ -2022,10 +2063,6 @@ public class Entry {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
-	 * Entry}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2056,6 +2093,10 @@ public class Entry {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
+	 * Entry}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2071,7 +2112,7 @@ public class Entry {
 		{
 			derivation_lazy = () -> Arrays.asList(ReportEntry1.mmReversalIndicator, ReportEntry2.mmReversalIndicator, ReportEntry3.mmReversalIndicator, ReportEntry4.mmReversalIndicator, NotificationEntry1.mmReversalIndicator,
 					StatementEntry1.mmReversalIndicator, ReportEntry7.mmReversalIndicator, ReportEntry8.mmReversalIndicator);
-			elementContext_lazy = () -> Entry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReversalIndicator";
@@ -2079,6 +2120,14 @@ public class Entry {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Entry.class.getMethod("getReversalIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime valueDate;
@@ -2092,10 +2141,6 @@ public class Entry {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
-	 * Entry}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2150,6 +2195,10 @@ public class Entry {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
+	 * Entry}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2168,7 +2217,7 @@ public class Entry {
 					PaymentDetails6.mmTransferValueDate, PaymentCommonDetails4.mmTransferValueDate, PaymentDetails7.mmTransferValueDate, ReportEntry1.mmValueDate, ReportEntry2.mmValueDate, ReportEntry3.mmValueDate,
 					ReportEntry4.mmValueDate, NotificationEntry1.mmValueDate, StatementEntry1.mmValueDate, CashAccountCharacteristics1.mmDelayedDebitDate, IntraBalanceMovement2.mmEffectiveSettlementDate, ReportEntry7.mmValueDate,
 					CashAccountCharacteristics2.mmDelayedDebitDate, ReportEntry8.mmValueDate);
-			elementContext_lazy = () -> Entry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
@@ -2176,6 +2225,14 @@ public class Entry {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Entry.class.getMethod("getValueDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BankTransaction bankTransactionCode;
@@ -2196,10 +2253,6 @@ public class Entry {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.BankTransaction
 	 * BankTransaction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
-	 * Entry}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2257,6 +2310,10 @@ public class Entry {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
+	 * Entry}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2273,7 +2330,7 @@ public class Entry {
 					EntryTransaction2.mmBankTransactionCode, ReportEntry2.mmBankTransactionCode, EntryTransaction3.mmBankTransactionCode, ReportEntry3.mmBankTransactionCode, EntryTransaction4.mmBankTransactionCode,
 					ReportEntry4.mmBankTransactionCode, NotificationEntry1.mmBankTransactionCode, StatementEntry1.mmBankTransactionCode, ReportEntry7.mmBankTransactionCode, EntryTransaction7.mmBankTransactionCode,
 					ReportEntry8.mmBankTransactionCode, BillingServiceIdentification3.mmBankTransactionCode, EntryTransaction8.mmBankTransactionCode);
-			elementContext_lazy = () -> Entry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BankTransactionCode";
@@ -2296,10 +2353,6 @@ public class Entry {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
-	 * Entry}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2330,6 +2383,10 @@ public class Entry {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
+	 * Entry}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2345,7 +2402,7 @@ public class Entry {
 		{
 			derivation_lazy = () -> Arrays.asList(ReportEntry1.mmCommissionWaiverIndicator, ReportEntry2.mmCommissionWaiverIndicator, ReportEntry3.mmCommissionWaiverIndicator, ReportEntry4.mmCommissionWaiverIndicator,
 					NotificationEntry1.mmCommissionWaiverIndicator, StatementEntry1.mmCommissionWaiverIndicator, ReportEntry7.mmCommissionWaiverIndicator, ReportEntry8.mmCommissionWaiverIndicator);
-			elementContext_lazy = () -> Entry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommissionWaiverIndicator";
@@ -2353,6 +2410,14 @@ public class Entry {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Entry.class.getMethod("getCommissionWaiverIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Role> role;
@@ -2391,7 +2456,7 @@ public class Entry {
 	 */
 	public static final MMBusinessAssociationEnd mmRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Entry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Role";
@@ -2419,10 +2484,6 @@ public class Entry {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
-	 * Entry}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2431,6 +2492,10 @@ public class Entry {
 	 * Transaction25.mmSafekeepingAccount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Entry
+	 * Entry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2447,7 +2512,7 @@ public class Entry {
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Transaction25.mmSafekeepingAccount);
-			elementContext_lazy = () -> Entry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
@@ -2495,7 +2560,7 @@ public class Entry {
 	 */
 	public static final MMBusinessAssociationEnd mmBalance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Entry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Balance";
@@ -2533,7 +2598,7 @@ public class Entry {
 	 */
 	public static final MMBusinessAttribute mmEntryType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Entry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntryType";
@@ -2541,6 +2606,14 @@ public class Entry {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EntryCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Entry.class.getMethod("getEntryType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -2554,10 +2627,18 @@ public class Entry {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Role.mmEntry, com.tools20022.repository.entity.Account.mmEntry, com.tools20022.repository.entity.Balance.mmBalanceEntry,
 						com.tools20022.repository.entity.BankTransaction.mmRelatedEntry);
 				subType_lazy = () -> Arrays.asList(CashEntry.mmObject(), SecuritiesEntry.mmObject());
-				element_lazy = () -> Arrays.asList(Entry.mmCreditDebitIndicator, Entry.mmEntryDate, Entry.mmIdentification, Entry.mmAccountOwnerTransactionIdentification, Entry.mmAccountServicerTransactionIdentification,
-						Entry.mmReversalIndicator, Entry.mmValueDate, Entry.mmBankTransactionCode, Entry.mmCommissionWaiverIndicator, Entry.mmRole, Entry.mmAccount, Entry.mmBalance, Entry.mmEntryType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Entry.mmCreditDebitIndicator, com.tools20022.repository.entity.Entry.mmEntryDate, com.tools20022.repository.entity.Entry.mmIdentification,
+						com.tools20022.repository.entity.Entry.mmAccountOwnerTransactionIdentification, com.tools20022.repository.entity.Entry.mmAccountServicerTransactionIdentification,
+						com.tools20022.repository.entity.Entry.mmReversalIndicator, com.tools20022.repository.entity.Entry.mmValueDate, com.tools20022.repository.entity.Entry.mmBankTransactionCode,
+						com.tools20022.repository.entity.Entry.mmCommissionWaiverIndicator, com.tools20022.repository.entity.Entry.mmRole, com.tools20022.repository.entity.Entry.mmAccount, com.tools20022.repository.entity.Entry.mmBalance,
+						com.tools20022.repository.entity.Entry.mmEntryType);
 				derivationComponent_lazy = () -> Arrays.asList(EntryTransaction1.mmObject(), EntryTransaction2.mmObject(), EntryTransaction3.mmObject(), EntryTransaction4.mmObject(), UnderlyingStatementEntry1.mmObject(),
 						EntryTransaction7.mmObject(), EntryTransaction8.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Entry.class;
 			}
 		});
 		return mmObject_lazy.get();

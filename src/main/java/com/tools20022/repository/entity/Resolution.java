@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,25 +40,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Resolution1 Resolution1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Resolution2 Resolution2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Resolution3 Resolution3}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmAgendaItem
- * Meeting.mmAgendaItem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Vote#mmResolution
- * Vote.mmResolution}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -90,6 +72,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Resolution1 Resolution1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Resolution2 Resolution2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Resolution3 Resolution3}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmAgendaItem
+ * Meeting.mmAgendaItem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Vote#mmResolution
+ * Vote.mmResolution}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -119,10 +120,6 @@ public class Resolution {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -153,6 +150,10 @@ public class Resolution {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -168,7 +169,7 @@ public class Resolution {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmIssuerLabel, Resolution2.mmIssuerLabel, Vote1.mmIssuerLabel, Vote3.mmIssuerLabel, Vote4.mmIssuerLabel, Vote2.mmIssuerLabel, Vote5.mmIssuerLabel, Vote7.mmIssuerLabel,
 					Resolution3.mmIssuerLabel, Vote6.mmIssuerLabel, Vote9.mmIssuerLabel, Vote8.mmIssuerLabel);
-			elementContext_lazy = () -> Resolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuerLabel";
@@ -176,6 +177,14 @@ public class Resolution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Resolution.class.getMethod("getIssuerLabel", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max350Text description;
@@ -188,10 +197,6 @@ public class Resolution {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -203,6 +208,10 @@ public class Resolution {
 	 * Resolution3.mmDescription}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -217,7 +226,7 @@ public class Resolution {
 	public static final MMBusinessAttribute mmDescription = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmDescription, Resolution2.mmDescription, Resolution3.mmDescription);
-			elementContext_lazy = () -> Resolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Description";
@@ -225,6 +234,14 @@ public class Resolution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Resolution.class.getMethod("getDescription", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max350Text title;
@@ -237,10 +254,6 @@ public class Resolution {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -252,6 +265,10 @@ public class Resolution {
 	 * Resolution3.mmTitle}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -266,7 +283,7 @@ public class Resolution {
 	public static final MMBusinessAttribute mmTitle = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmTitle, Resolution2.mmTitle, Resolution3.mmTitle);
-			elementContext_lazy = () -> Resolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Title";
@@ -274,6 +291,14 @@ public class Resolution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Resolution.class.getMethod("getTitle", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ResolutionTypeCode type;
@@ -287,10 +312,6 @@ public class Resolution {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ResolutionTypeCode
 	 * ResolutionTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -302,6 +323,10 @@ public class Resolution {
 	 * Resolution3.mmType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -317,7 +342,7 @@ public class Resolution {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmType, Resolution2.mmType, Resolution3.mmType);
-			elementContext_lazy = () -> Resolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -325,6 +350,14 @@ public class Resolution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ResolutionTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Resolution.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator forInformationOnly;
@@ -338,10 +371,6 @@ public class Resolution {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -356,6 +385,10 @@ public class Resolution {
 	 * Resolution3.mmForInformationOnly}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -372,7 +405,7 @@ public class Resolution {
 	public static final MMBusinessAttribute mmForInformationOnly = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmForInformationOnly, Resolution2.mmForInformationOnly, Resolution3.mmForInformationOnly);
-			elementContext_lazy = () -> Resolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForInformationOnly";
@@ -380,6 +413,14 @@ public class Resolution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Resolution.class.getMethod("getForInformationOnly", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator submittedBySecurityHolder;
@@ -394,10 +435,6 @@ public class Resolution {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -412,6 +449,10 @@ public class Resolution {
 	 * Resolution3.mmSubmittedBySecurityHolder}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -428,7 +469,7 @@ public class Resolution {
 	public static final MMBusinessAttribute mmSubmittedBySecurityHolder = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmSubmittedBySecurityHolder, Resolution2.mmSubmittedBySecurityHolder, Resolution3.mmSubmittedBySecurityHolder);
-			elementContext_lazy = () -> Resolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubmittedBySecurityHolder";
@@ -436,6 +477,14 @@ public class Resolution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Resolution.class.getMethod("getSubmittedBySecurityHolder", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected VoteInstructionCode managementRecommendation;
@@ -450,10 +499,6 @@ public class Resolution {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.VoteInstructionCode
 	 * VoteInstructionCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -468,6 +513,10 @@ public class Resolution {
 	 * Resolution3.mmManagementRecommendation}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -484,7 +533,7 @@ public class Resolution {
 	public static final MMBusinessAttribute mmManagementRecommendation = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmManagementRecommendation, Resolution2.mmManagementRecommendation, Resolution3.mmManagementRecommendation);
-			elementContext_lazy = () -> Resolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ManagementRecommendation";
@@ -492,6 +541,14 @@ public class Resolution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> VoteInstructionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Resolution.class.getMethod("getManagementRecommendation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected VoteInstructionCode notifyingPartyRecommendation;
@@ -506,10 +563,6 @@ public class Resolution {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.VoteInstructionCode
 	 * VoteInstructionCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -524,6 +577,10 @@ public class Resolution {
 	 * Resolution3.mmNotifyingPartyRecommendation}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Resolution Resolution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -540,7 +597,7 @@ public class Resolution {
 	public static final MMBusinessAttribute mmNotifyingPartyRecommendation = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmNotifyingPartyRecommendation, Resolution2.mmNotifyingPartyRecommendation, Resolution3.mmNotifyingPartyRecommendation);
-			elementContext_lazy = () -> Resolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotifyingPartyRecommendation";
@@ -548,6 +605,14 @@ public class Resolution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> VoteInstructionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Resolution.class.getMethod("getNotifyingPartyRecommendation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Vote castVotes;
@@ -587,7 +652,7 @@ public class Resolution {
 	 */
 	public static final MMBusinessAssociationEnd mmCastVotes = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Resolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CastVotes";
@@ -633,7 +698,7 @@ public class Resolution {
 	 */
 	public static final MMBusinessAssociationEnd mmMeeting = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Resolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Meeting";
@@ -676,7 +741,7 @@ public class Resolution {
 	 */
 	public static final MMBusinessAttribute mmVoteOptions = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Resolution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteOptions";
@@ -684,6 +749,14 @@ public class Resolution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> VoteInstructionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Resolution.class.getMethod("getVoteOptions", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -695,9 +768,16 @@ public class Resolution {
 				name = "Resolution";
 				definition = "Specifies an item in the agenda of the meeting. Some resolutions are submitted to the vote of the security holders, some are presented for information only.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Meeting.mmAgendaItem, com.tools20022.repository.entity.Vote.mmResolution);
-				element_lazy = () -> Arrays.asList(Resolution.mmIssuerLabel, Resolution.mmDescription, Resolution.mmTitle, Resolution.mmType, Resolution.mmForInformationOnly, Resolution.mmSubmittedBySecurityHolder,
-						Resolution.mmManagementRecommendation, Resolution.mmNotifyingPartyRecommendation, Resolution.mmCastVotes, Resolution.mmMeeting, Resolution.mmVoteOptions);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Resolution.mmIssuerLabel, com.tools20022.repository.entity.Resolution.mmDescription, com.tools20022.repository.entity.Resolution.mmTitle,
+						com.tools20022.repository.entity.Resolution.mmType, com.tools20022.repository.entity.Resolution.mmForInformationOnly, com.tools20022.repository.entity.Resolution.mmSubmittedBySecurityHolder,
+						com.tools20022.repository.entity.Resolution.mmManagementRecommendation, com.tools20022.repository.entity.Resolution.mmNotifyingPartyRecommendation, com.tools20022.repository.entity.Resolution.mmCastVotes,
+						com.tools20022.repository.entity.Resolution.mmMeeting, com.tools20022.repository.entity.Resolution.mmVoteOptions);
 				derivationComponent_lazy = () -> Arrays.asList(Resolution1.mmObject(), Resolution2.mmObject(), Resolution3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Resolution.class;
 			}
 		});
 		return mmObject_lazy.get();

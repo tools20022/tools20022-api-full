@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max10000Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Encrypted data with an encryption key.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EncryptedContent1", propOrder = {"contentType", "contentEncryptionAlgorithm", "encryptedData"})
 public class EncryptedContent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -213,6 +219,7 @@ public class EncryptedContent1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CnttTp", required = true)
 	public ContentType1Code getContentType() {
 		return contentType;
 	}
@@ -221,6 +228,7 @@ public class EncryptedContent1 {
 		this.contentType = contentType;
 	}
 
+	@XmlElement(name = "CnttNcrptnAlgo", required = true)
 	public AlgorithmIdentification1 getContentEncryptionAlgorithm() {
 		return contentEncryptionAlgorithm;
 	}
@@ -229,6 +237,7 @@ public class EncryptedContent1 {
 		this.contentEncryptionAlgorithm = contentEncryptionAlgorithm;
 	}
 
+	@XmlElement(name = "NcrptdData", required = true)
 	public Max10000Binary getEncryptedData() {
 		return encryptedData;
 	}

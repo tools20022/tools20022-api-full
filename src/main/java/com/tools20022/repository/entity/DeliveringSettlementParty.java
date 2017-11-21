@@ -40,6 +40,28 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#mmDeliveringSettlementParty
+ * DeliveringSettlementParty.mmDeliveringSettlementParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#mmNextParty
+ * DeliveringSettlementParty.mmNextParty}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.DeliveringDepositoryRole
+ * DeliveringDepositoryRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole
+ * SecuritiesSettlementPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -316,28 +338,6 @@ import java.util.List;
  * SecuritiesSettlementTransactionDetails31.mmDeliveringSettlementParties}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole
- * SecuritiesSettlementPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.DeliveringDepositoryRole
- * DeliveringDepositoryRole}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#mmDeliveringSettlementParty
- * DeliveringSettlementParty.mmDeliveringSettlementParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#mmNextParty
- * DeliveringSettlementParty.mmNextParty}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -499,6 +499,11 @@ public class DeliveringSettlementParty extends SecuritiesSettlementPartyRole {
 				subType_lazy = () -> Arrays.asList(DeliveringDepositoryRole.mmObject());
 				superType_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DeliveringSettlementParty.mmDeliveringSettlementParty, com.tools20022.repository.entity.DeliveringSettlementParty.mmNextParty);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DeliveringSettlementParty.class;
 			}
 		});
 		return mmObject_lazy.get();

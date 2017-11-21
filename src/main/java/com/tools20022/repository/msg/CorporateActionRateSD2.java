@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Ratio of the American or Global Depository Receipt(s) per ordinary share(s).
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionRateSD2", propOrder = {"receiptBaseQuantity", "ordinaryShare"})
 public class CorporateActionRateSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class CorporateActionRateSD2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RctBaseQty")
 	public DecimalNumber getReceiptBaseQuantity() {
 		return receiptBaseQuantity;
 	}
@@ -174,6 +181,7 @@ public class CorporateActionRateSD2 {
 		this.receiptBaseQuantity = receiptBaseQuantity;
 	}
 
+	@XmlElement(name = "OrdnryShr")
 	public DecimalNumber getOrdinaryShare() {
 		return ordinaryShare;
 	}

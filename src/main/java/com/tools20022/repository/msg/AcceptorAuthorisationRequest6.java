@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Authorisation request from an acceptor.
@@ -81,6 +85,8 @@ import java.util.List;
  * AcceptorAuthorisationRequest5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorAuthorisationRequest6", propOrder = {"environment", "context", "transaction", "supplementaryData"})
 public class AcceptorAuthorisationRequest6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -309,6 +315,7 @@ public class AcceptorAuthorisationRequest6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment57 getEnvironment() {
 		return environment;
 	}
@@ -317,6 +324,7 @@ public class AcceptorAuthorisationRequest6 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Cntxt", required = true)
 	public CardPaymentContext20 getContext() {
 		return context;
 	}
@@ -325,6 +333,7 @@ public class AcceptorAuthorisationRequest6 {
 		this.context = context;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransaction76 getTransaction() {
 		return transaction;
 	}
@@ -333,6 +342,7 @@ public class AcceptorAuthorisationRequest6 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

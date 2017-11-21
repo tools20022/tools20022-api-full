@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding underlying security details.
@@ -67,6 +71,8 @@ import java.util.function.Supplier;
  * "Provides additional information regarding underlying security details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnderlyingSecurityExtension4", propOrder = {"placeAndName", "DTCAssetType", "DTCAssetClass"})
 public class UnderlyingSecurityExtension4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -222,6 +228,7 @@ public class UnderlyingSecurityExtension4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -230,6 +237,7 @@ public class UnderlyingSecurityExtension4 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "DTCAsstTp")
 	public DTCAssetType1Code getDTCAssetType() {
 		return dTCAssetType;
 	}
@@ -238,6 +246,7 @@ public class UnderlyingSecurityExtension4 {
 		this.dTCAssetType = dTCAssetType;
 	}
 
+	@XmlElement(name = "DTCAsstClss")
 	public AssetClass1Code getDTCAssetClass() {
 		return dTCAssetClass;
 	}

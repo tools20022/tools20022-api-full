@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Environment of the transaction.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardTransactionEnvironment1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransactionEnvironment2", propOrder = {"acquirerIdentification", "cardSchemeIdentification", "acceptorIdentification", "terminalIdentification", "card", "paymentToken", "shippingAddress"})
 public class CardTransactionEnvironment2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -453,6 +459,7 @@ public class CardTransactionEnvironment2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcqrrId", required = true)
 	public Max35Text getAcquirerIdentification() {
 		return acquirerIdentification;
 	}
@@ -461,6 +468,7 @@ public class CardTransactionEnvironment2 {
 		this.acquirerIdentification = acquirerIdentification;
 	}
 
+	@XmlElement(name = "CardSchmeId")
 	public Max35Text getCardSchemeIdentification() {
 		return cardSchemeIdentification;
 	}
@@ -469,6 +477,7 @@ public class CardTransactionEnvironment2 {
 		this.cardSchemeIdentification = cardSchemeIdentification;
 	}
 
+	@XmlElement(name = "AccptrId")
 	public Max35Text getAcceptorIdentification() {
 		return acceptorIdentification;
 	}
@@ -477,6 +486,7 @@ public class CardTransactionEnvironment2 {
 		this.acceptorIdentification = acceptorIdentification;
 	}
 
+	@XmlElement(name = "TermnlId")
 	public Max35Text getTerminalIdentification() {
 		return terminalIdentification;
 	}
@@ -485,6 +495,7 @@ public class CardTransactionEnvironment2 {
 		this.terminalIdentification = terminalIdentification;
 	}
 
+	@XmlElement(name = "Card", required = true)
 	public PaymentCard13 getCard() {
 		return card;
 	}
@@ -493,6 +504,7 @@ public class CardTransactionEnvironment2 {
 		this.card = card;
 	}
 
+	@XmlElement(name = "PmtTkn")
 	public CardPaymentToken2 getPaymentToken() {
 		return paymentToken;
 	}
@@ -501,6 +513,7 @@ public class CardTransactionEnvironment2 {
 		this.paymentToken = paymentToken;
 	}
 
+	@XmlElement(name = "ShppgAdr")
 	public PostalAddress18 getShippingAddress() {
 		return shippingAddress;
 	}

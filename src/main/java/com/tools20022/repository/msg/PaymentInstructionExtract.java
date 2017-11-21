@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of a payment instruction. The information contained in this component
@@ -102,6 +106,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstructionExtract", propOrder = {"assignerInstructionIdentification", "assigneeInstructionIdentification", "currencyAmount", "valueDate"})
 public class PaymentInstructionExtract {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -322,6 +328,7 @@ public class PaymentInstructionExtract {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AssgnrInstrId")
 	public Max35Text getAssignerInstructionIdentification() {
 		return assignerInstructionIdentification;
 	}
@@ -330,6 +337,7 @@ public class PaymentInstructionExtract {
 		this.assignerInstructionIdentification = assignerInstructionIdentification;
 	}
 
+	@XmlElement(name = "AssgneInstrId")
 	public Max35Text getAssigneeInstructionIdentification() {
 		return assigneeInstructionIdentification;
 	}
@@ -338,6 +346,7 @@ public class PaymentInstructionExtract {
 		this.assigneeInstructionIdentification = assigneeInstructionIdentification;
 	}
 
+	@XmlElement(name = "CcyAmt")
 	public CurrencyAndAmount getCurrencyAmount() {
 		return currencyAmount;
 	}
@@ -346,6 +355,7 @@ public class PaymentInstructionExtract {
 		this.currencyAmount = currencyAmount;
 	}
 
+	@XmlElement(name = "ValDt")
 	public ISODateTime getValueDate() {
 		return valueDate;
 	}

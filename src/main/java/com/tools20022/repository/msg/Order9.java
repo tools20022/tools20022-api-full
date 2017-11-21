@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Intention to transfer an ownership of a financial instrument.
@@ -134,6 +138,11 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Order9", propOrder = {"clientOrderIdentification", "clientOrderLinkIdentification", "secondaryClientOrderIdentification", "cashMargin", "tradeOriginationDate", "tradingCapacity", "positionEffect", "derivativeCovered",
+		"solicitedOrder", "complianceIdentification", "orderRestrictions", "tradeDate", "clearingFeeType", "sideTimeInForce", "customerCapacity", "foreignExchangeExecutionRequested", "settlementCurrency", "orderOriginatorEligibility",
+		"placeOfExecution", "sideOrderQuantityDetails", "preAllocationDetails", "commissionDetails", "bookingDetails", "tradingParties", "settlementDetails", "cashParties", "otherBusinessParties", "receivingSettlementParties",
+		"deliveringSettlementParties", "amountsDetails"})
 public class Order9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1609,6 +1618,7 @@ public class Order9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClntOrdrId", required = true)
 	public Max35Text getClientOrderIdentification() {
 		return clientOrderIdentification;
 	}
@@ -1617,6 +1627,7 @@ public class Order9 {
 		this.clientOrderIdentification = clientOrderIdentification;
 	}
 
+	@XmlElement(name = "ClntOrdrLkId")
 	public Max35Text getClientOrderLinkIdentification() {
 		return clientOrderLinkIdentification;
 	}
@@ -1625,6 +1636,7 @@ public class Order9 {
 		this.clientOrderLinkIdentification = clientOrderLinkIdentification;
 	}
 
+	@XmlElement(name = "ScndryClntOrdrId")
 	public Max35Text getSecondaryClientOrderIdentification() {
 		return secondaryClientOrderIdentification;
 	}
@@ -1633,6 +1645,7 @@ public class Order9 {
 		this.secondaryClientOrderIdentification = secondaryClientOrderIdentification;
 	}
 
+	@XmlElement(name = "CshMrgn")
 	public CashMarginOrder1Code getCashMargin() {
 		return cashMargin;
 	}
@@ -1641,6 +1654,7 @@ public class Order9 {
 		this.cashMargin = cashMargin;
 	}
 
+	@XmlElement(name = "TradOrgtnDt")
 	public ISODateTime getTradeOriginationDate() {
 		return tradeOriginationDate;
 	}
@@ -1649,6 +1663,7 @@ public class Order9 {
 		this.tradeOriginationDate = tradeOriginationDate;
 	}
 
+	@XmlElement(name = "TradgCpcty")
 	public TradingCapacity3Code getTradingCapacity() {
 		return tradingCapacity;
 	}
@@ -1657,6 +1672,7 @@ public class Order9 {
 		this.tradingCapacity = tradingCapacity;
 	}
 
+	@XmlElement(name = "PosFct")
 	public PositionEffect1Code getPositionEffect() {
 		return positionEffect;
 	}
@@ -1665,6 +1681,7 @@ public class Order9 {
 		this.positionEffect = positionEffect;
 	}
 
+	@XmlElement(name = "DerivCvrd")
 	public YesNoIndicator getDerivativeCovered() {
 		return derivativeCovered;
 	}
@@ -1673,6 +1690,7 @@ public class Order9 {
 		this.derivativeCovered = derivativeCovered;
 	}
 
+	@XmlElement(name = "SlctdOrdr", required = true)
 	public YesNoIndicator getSolicitedOrder() {
 		return solicitedOrder;
 	}
@@ -1681,6 +1699,7 @@ public class Order9 {
 		this.solicitedOrder = solicitedOrder;
 	}
 
+	@XmlElement(name = "CmplcId")
 	public Max35Text getComplianceIdentification() {
 		return complianceIdentification;
 	}
@@ -1689,6 +1708,7 @@ public class Order9 {
 		this.complianceIdentification = complianceIdentification;
 	}
 
+	@XmlElement(name = "OrdrRstrctns")
 	public List<OrderRestrictions1Code> getOrderRestrictions() {
 		return orderRestrictions;
 	}
@@ -1697,6 +1717,7 @@ public class Order9 {
 		this.orderRestrictions = orderRestrictions;
 	}
 
+	@XmlElement(name = "TradDt")
 	public ISODateTime getTradeDate() {
 		return tradeDate;
 	}
@@ -1705,6 +1726,7 @@ public class Order9 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "ClrFeeTp")
 	public ClearingFeeType1Code getClearingFeeType() {
 		return clearingFeeType;
 	}
@@ -1713,6 +1735,7 @@ public class Order9 {
 		this.clearingFeeType = clearingFeeType;
 	}
 
+	@XmlElement(name = "SdTmInForce", required = true)
 	public ExecutionTimeLimit1Code getSideTimeInForce() {
 		return sideTimeInForce;
 	}
@@ -1721,6 +1744,7 @@ public class Order9 {
 		this.sideTimeInForce = sideTimeInForce;
 	}
 
+	@XmlElement(name = "CstmrCpcty")
 	public CustomerOrderCapacity1Code getCustomerCapacity() {
 		return customerCapacity;
 	}
@@ -1729,6 +1753,7 @@ public class Order9 {
 		this.customerCapacity = customerCapacity;
 	}
 
+	@XmlElement(name = "FrgnXchgExctnReqd", required = true)
 	public YesNoIndicator getForeignExchangeExecutionRequested() {
 		return foreignExchangeExecutionRequested;
 	}
@@ -1737,6 +1762,7 @@ public class Order9 {
 		this.foreignExchangeExecutionRequested = foreignExchangeExecutionRequested;
 	}
 
+	@XmlElement(name = "SttlmCcy")
 	public CurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -1745,6 +1771,7 @@ public class Order9 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "OrdrOrgtrElgblty")
 	public Eligibility1Code getOrderOriginatorEligibility() {
 		return orderOriginatorEligibility;
 	}
@@ -1753,6 +1780,7 @@ public class Order9 {
 		this.orderOriginatorEligibility = orderOriginatorEligibility;
 	}
 
+	@XmlElement(name = "PlcOfExctn")
 	public MarketIdentification1 getPlaceOfExecution() {
 		return placeOfExecution;
 	}
@@ -1761,6 +1789,7 @@ public class Order9 {
 		this.placeOfExecution = placeOfExecution;
 	}
 
+	@XmlElement(name = "SdOrdrQtyDtls")
 	public OrderQuantity1 getSideOrderQuantityDetails() {
 		return sideOrderQuantityDetails;
 	}
@@ -1769,6 +1798,7 @@ public class Order9 {
 		this.sideOrderQuantityDetails = sideOrderQuantityDetails;
 	}
 
+	@XmlElement(name = "PreAllcnDtls")
 	public List<PreAllocation1> getPreAllocationDetails() {
 		return preAllocationDetails;
 	}
@@ -1777,6 +1807,7 @@ public class Order9 {
 		this.preAllocationDetails = preAllocationDetails;
 	}
 
+	@XmlElement(name = "ComssnDtls")
 	public List<Commission2> getCommissionDetails() {
 		return commissionDetails;
 	}
@@ -1785,6 +1816,7 @@ public class Order9 {
 		this.commissionDetails = commissionDetails;
 	}
 
+	@XmlElement(name = "BookgDtls")
 	public Booking1 getBookingDetails() {
 		return bookingDetails;
 	}
@@ -1793,6 +1825,7 @@ public class Order9 {
 		this.bookingDetails = bookingDetails;
 	}
 
+	@XmlElement(name = "TradgPties")
 	public List<Intermediary14> getTradingParties() {
 		return tradingParties;
 	}
@@ -1801,6 +1834,7 @@ public class Order9 {
 		this.tradingParties = tradingParties;
 	}
 
+	@XmlElement(name = "SttlmDtls")
 	public SecuritiesSettlement1 getSettlementDetails() {
 		return settlementDetails;
 	}
@@ -1809,6 +1843,7 @@ public class Order9 {
 		this.settlementDetails = settlementDetails;
 	}
 
+	@XmlElement(name = "CshPties", required = true)
 	public CashParties1 getCashParties() {
 		return cashParties;
 	}
@@ -1817,6 +1852,7 @@ public class Order9 {
 		this.cashParties = cashParties;
 	}
 
+	@XmlElement(name = "OthrBizPties")
 	public OtherParties1 getOtherBusinessParties() {
 		return otherBusinessParties;
 	}
@@ -1825,6 +1861,7 @@ public class Order9 {
 		this.otherBusinessParties = otherBusinessParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties3 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -1833,6 +1870,7 @@ public class Order9 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties", required = true)
 	public SettlementParties3 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -1841,6 +1879,7 @@ public class Order9 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "AmtsDtls")
 	public List<OtherAmounts1> getAmountsDetails() {
 		return amountsDetails;
 	}

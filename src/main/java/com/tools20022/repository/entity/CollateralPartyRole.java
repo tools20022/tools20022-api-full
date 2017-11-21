@@ -38,6 +38,27 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralPartyRole#mmCollateral
+ * CollateralPartyRole.mmCollateral}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ServicingPartyRole
+ * ServicingPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.GiverRole GiverRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TakerRole TakerRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TripartyAgent TripartyAgent}
+ * </li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -67,27 +88,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CollateralOwnership2#mmClientName
  * CollateralOwnership2.mmClientName}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ServicingPartyRole
- * ServicingPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.GiverRole GiverRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TakerRole TakerRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TripartyAgent TripartyAgent}
- * </li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralPartyRole#mmCollateral
- * CollateralPartyRole.mmCollateral}</li>
  * </ul>
  * </li>
  * <li>
@@ -144,7 +144,7 @@ public class CollateralPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmCollateral = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CollateralPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateral";
@@ -167,8 +167,13 @@ public class CollateralPartyRole extends Role {
 				derivationElement_lazy = () -> Arrays.asList(CollateralOwnership1.mmClientName, CollateralOwnership2.mmClientName);
 				subType_lazy = () -> Arrays.asList(ServicingPartyRole.mmObject(), GiverRole.mmObject(), TakerRole.mmObject(), TripartyAgent.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(CollateralPartyRole.mmCollateral);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralPartyRole.mmCollateral);
 				derivationComponent_lazy = () -> Arrays.asList(CollateralOwnership1.mmObject(), CollateralOwnership2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CollateralPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General characteristics related to a statement which reports information for
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Statement9", propOrder = {"reference", "statementDateTime", "creationDateTime", "reportNumber", "statementType", "amendmentIndicator", "investmentAccountDetails"})
 public class Statement9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -383,6 +389,7 @@ public class Statement9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ref", required = true)
 	public Max35Text getReference() {
 		return reference;
 	}
@@ -391,6 +398,7 @@ public class Statement9 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "StmtDtTm", required = true)
 	public DateAndDateTimeChoice getStatementDateTime() {
 		return statementDateTime;
 	}
@@ -399,6 +407,7 @@ public class Statement9 {
 		this.statementDateTime = statementDateTime;
 	}
 
+	@XmlElement(name = "CreDtTm")
 	public DateAndDateTimeChoice getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -407,6 +416,7 @@ public class Statement9 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "RptNb")
 	public Max5NumericText getReportNumber() {
 		return reportNumber;
 	}
@@ -415,6 +425,7 @@ public class Statement9 {
 		this.reportNumber = reportNumber;
 	}
 
+	@XmlElement(name = "StmtTp", required = true)
 	public StatementType1Code getStatementType() {
 		return statementType;
 	}
@@ -423,6 +434,7 @@ public class Statement9 {
 		this.statementType = statementType;
 	}
 
+	@XmlElement(name = "AmdmntInd")
 	public YesNoIndicator getAmendmentIndicator() {
 		return amendmentIndicator;
 	}
@@ -431,6 +443,7 @@ public class Statement9 {
 		this.amendmentIndicator = amendmentIndicator;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount30 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}

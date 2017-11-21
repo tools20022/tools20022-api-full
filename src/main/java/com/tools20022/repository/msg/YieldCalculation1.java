@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.YieldCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Return provided by a financial instrument.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Return provided by a financial instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "YieldCalculation1", propOrder = {"value", "calculationType", "redemptionPrice", "valueDateTime", "valuePeriod", "calculationDate"})
 public class YieldCalculation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -384,6 +390,7 @@ public class YieldCalculation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public PercentageRate getValue() {
 		return value;
 	}
@@ -392,6 +399,7 @@ public class YieldCalculation1 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "ClctnTp")
 	public CalculationType1Code getCalculationType() {
 		return calculationType;
 	}
@@ -400,6 +408,7 @@ public class YieldCalculation1 {
 		this.calculationType = calculationType;
 	}
 
+	@XmlElement(name = "RedPric")
 	public Price1 getRedemptionPrice() {
 		return redemptionPrice;
 	}
@@ -408,6 +417,7 @@ public class YieldCalculation1 {
 		this.redemptionPrice = redemptionPrice;
 	}
 
+	@XmlElement(name = "ValDtTm", required = true)
 	public ISODateTime getValueDateTime() {
 		return valueDateTime;
 	}
@@ -416,6 +426,7 @@ public class YieldCalculation1 {
 		this.valueDateTime = valueDateTime;
 	}
 
+	@XmlElement(name = "ValPrd", required = true)
 	public DateTimePeriodChoice getValuePeriod() {
 		return valuePeriod;
 	}
@@ -424,6 +435,7 @@ public class YieldCalculation1 {
 		this.valuePeriod = valuePeriod;
 	}
 
+	@XmlElement(name = "ClctnDt", required = true)
 	public ISODateTime getCalculationDate() {
 		return calculationDate;
 	}

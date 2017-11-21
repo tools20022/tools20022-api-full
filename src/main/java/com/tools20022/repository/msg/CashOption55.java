@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the cash option.
@@ -96,6 +100,9 @@ import java.util.List;
  * definition} = "Provides information about the cash option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashOption55", propOrder = {"creditDebitIndicator", "contractualPaymentIndicator", "issuerOfferorTaxabilityIndicator", "incomeType", "exemptionType", "countryOfIncomeSource", "account", "cashParties", "amountDetails",
+		"dateDetails", "foreignExchangeDetails", "taxVoucherDetails", "rateAndAmountDetails", "priceDetails"})
 public class CashOption55 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -777,6 +784,7 @@ public class CashOption55 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -785,6 +793,7 @@ public class CashOption55 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "CtrctlPmtInd")
 	public Payment1Code getContractualPaymentIndicator() {
 		return contractualPaymentIndicator;
 	}
@@ -793,6 +802,7 @@ public class CashOption55 {
 		this.contractualPaymentIndicator = contractualPaymentIndicator;
 	}
 
+	@XmlElement(name = "IssrOfferrTaxbltyInd")
 	public IssuerOfferorTaxabilityIndicator1Choice getIssuerOfferorTaxabilityIndicator() {
 		return issuerOfferorTaxabilityIndicator;
 	}
@@ -801,6 +811,7 @@ public class CashOption55 {
 		this.issuerOfferorTaxabilityIndicator = issuerOfferorTaxabilityIndicator;
 	}
 
+	@XmlElement(name = "IncmTp")
 	public GenericIdentification47 getIncomeType() {
 		return incomeType;
 	}
@@ -809,6 +820,7 @@ public class CashOption55 {
 		this.incomeType = incomeType;
 	}
 
+	@XmlElement(name = "XmptnTp")
 	public List<GenericIdentification47> getExemptionType() {
 		return exemptionType;
 	}
@@ -817,6 +829,7 @@ public class CashOption55 {
 		this.exemptionType = exemptionType;
 	}
 
+	@XmlElement(name = "CtryOfIncmSrc")
 	public CountryCode getCountryOfIncomeSource() {
 		return countryOfIncomeSource;
 	}
@@ -825,6 +838,7 @@ public class CashOption55 {
 		this.countryOfIncomeSource = countryOfIncomeSource;
 	}
 
+	@XmlElement(name = "Acct")
 	public Account9Choice getAccount() {
 		return account;
 	}
@@ -833,6 +847,7 @@ public class CashOption55 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "CshPties")
 	public CashParties29 getCashParties() {
 		return cashParties;
 	}
@@ -841,6 +856,7 @@ public class CashOption55 {
 		this.cashParties = cashParties;
 	}
 
+	@XmlElement(name = "AmtDtls", required = true)
 	public CorporateActionAmounts39 getAmountDetails() {
 		return amountDetails;
 	}
@@ -849,6 +865,7 @@ public class CashOption55 {
 		this.amountDetails = amountDetails;
 	}
 
+	@XmlElement(name = "DtDtls", required = true)
 	public CorporateActionDate24 getDateDetails() {
 		return dateDetails;
 	}
@@ -857,6 +874,7 @@ public class CashOption55 {
 		this.dateDetails = dateDetails;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public ForeignExchangeTerms27 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -865,6 +883,7 @@ public class CashOption55 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "TaxVchrDtls")
 	public TaxVoucher3 getTaxVoucherDetails() {
 		return taxVoucherDetails;
 	}
@@ -873,6 +892,7 @@ public class CashOption55 {
 		this.taxVoucherDetails = taxVoucherDetails;
 	}
 
+	@XmlElement(name = "RateAndAmtDtls")
 	public RateDetails30 getRateAndAmountDetails() {
 		return rateAndAmountDetails;
 	}
@@ -881,6 +901,7 @@ public class CashOption55 {
 		this.rateAndAmountDetails = rateAndAmountDetails;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public PriceDetails24 getPriceDetails() {
 		return priceDetails;
 	}

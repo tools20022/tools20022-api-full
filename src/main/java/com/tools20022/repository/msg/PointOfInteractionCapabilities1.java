@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Capabilities of the POI performing the transaction.
@@ -82,6 +86,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PointOfInteractionCapabilities1", propOrder = {"cardReadingCapabilities", "cardholderVerificationCapabilities", "onLineCapabilities", "displayCapabilities", "printLineWidth"})
 public class PointOfInteractionCapabilities1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -389,6 +395,7 @@ public class PointOfInteractionCapabilities1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CardRdngCpblties")
 	public List<CardDataReading1Code> getCardReadingCapabilities() {
 		return cardReadingCapabilities;
 	}
@@ -397,6 +404,7 @@ public class PointOfInteractionCapabilities1 {
 		this.cardReadingCapabilities = cardReadingCapabilities;
 	}
 
+	@XmlElement(name = "CrdhldrVrfctnCpblties")
 	public List<CardholderVerificationCapability1Code> getCardholderVerificationCapabilities() {
 		return cardholderVerificationCapabilities;
 	}
@@ -405,6 +413,7 @@ public class PointOfInteractionCapabilities1 {
 		this.cardholderVerificationCapabilities = cardholderVerificationCapabilities;
 	}
 
+	@XmlElement(name = "OnLineCpblties")
 	public OnLineCapability1Code getOnLineCapabilities() {
 		return onLineCapabilities;
 	}
@@ -413,6 +422,7 @@ public class PointOfInteractionCapabilities1 {
 		this.onLineCapabilities = onLineCapabilities;
 	}
 
+	@XmlElement(name = "DispCpblties")
 	public List<DisplayCapabilities1> getDisplayCapabilities() {
 		return displayCapabilities;
 	}
@@ -421,6 +431,7 @@ public class PointOfInteractionCapabilities1 {
 		this.displayCapabilities = displayCapabilities;
 	}
 
+	@XmlElement(name = "PrtLineWidth")
 	public Max3NumericText getPrintLineWidth() {
 		return printLineWidth;
 	}

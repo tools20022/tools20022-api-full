@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information like the identification of the party or parties
@@ -94,6 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Obligation4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Obligation5", propOrder = {"partyA", "servicingPartyA", "partyB", "servicingPartyB", "collateralAccountIdentification", "exposureType", "valuationDate"})
 public class Obligation5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -503,6 +509,7 @@ public class Obligation5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyA", required = true)
 	public PartyIdentification100Choice getPartyA() {
 		return partyA;
 	}
@@ -511,6 +518,7 @@ public class Obligation5 {
 		this.partyA = partyA;
 	}
 
+	@XmlElement(name = "SvcgPtyA")
 	public PartyIdentification100Choice getServicingPartyA() {
 		return servicingPartyA;
 	}
@@ -519,6 +527,7 @@ public class Obligation5 {
 		this.servicingPartyA = servicingPartyA;
 	}
 
+	@XmlElement(name = "PtyB", required = true)
 	public PartyIdentification100Choice getPartyB() {
 		return partyB;
 	}
@@ -527,6 +536,7 @@ public class Obligation5 {
 		this.partyB = partyB;
 	}
 
+	@XmlElement(name = "SvcgPtyB")
 	public PartyIdentification100Choice getServicingPartyB() {
 		return servicingPartyB;
 	}
@@ -535,6 +545,7 @@ public class Obligation5 {
 		this.servicingPartyB = servicingPartyB;
 	}
 
+	@XmlElement(name = "CollAcctId")
 	public CollateralAccount3 getCollateralAccountIdentification() {
 		return collateralAccountIdentification;
 	}
@@ -543,6 +554,7 @@ public class Obligation5 {
 		this.collateralAccountIdentification = collateralAccountIdentification;
 	}
 
+	@XmlElement(name = "XpsrTp")
 	public ExposureType5Code getExposureType() {
 		return exposureType;
 	}
@@ -551,6 +563,7 @@ public class Obligation5 {
 		this.exposureType = exposureType;
 	}
 
+	@XmlElement(name = "ValtnDt", required = true)
 	public DateAndDateTimeChoice getValuationDate() {
 		return valuationDate;
 	}

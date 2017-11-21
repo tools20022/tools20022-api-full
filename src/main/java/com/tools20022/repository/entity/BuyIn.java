@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.ObligationFulfilment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -39,6 +40,28 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BuyIn#mmSecuritiesCompensation
+ * BuyIn.mmSecuritiesCompensation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmBuyinDate
+ * BuyIn.mmBuyinDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmBuyInPrice
+ * BuyIn.mmBuyInPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmFees BuyIn.mmFees}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmCashCompensation
+ * BuyIn.mmCashCompensation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BuyIn#mmRelatedSecuritiesClearingProcess
+ * BuyIn.mmRelatedSecuritiesClearingProcess}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
+ * ObligationFulfilment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -66,28 +89,6 @@ import java.util.List;
  * SecuritiesQuantity.mmRelatedBuyIn}</li>
  * <li>{@linkplain com.tools20022.repository.entity.SecuritiesClearing#mmBuyIn
  * SecuritiesClearing.mmBuyIn}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
- * ObligationFulfilment}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BuyIn#mmSecuritiesCompensation
- * BuyIn.mmSecuritiesCompensation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmBuyinDate
- * BuyIn.mmBuyinDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmBuyInPrice
- * BuyIn.mmBuyInPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmFees BuyIn.mmFees}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmCashCompensation
- * BuyIn.mmCashCompensation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BuyIn#mmRelatedSecuritiesClearingProcess
- * BuyIn.mmRelatedSecuritiesClearingProcess}</li>
  * </ul>
  * </li>
  * <li>
@@ -128,10 +129,6 @@ public class BuyIn extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.BuyIn
-	 * BuyIn}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -143,6 +140,10 @@ public class BuyIn extends ObligationFulfilment {
 	 * BuyIn2.mmSecuritiesBuyIn}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.BuyIn
+	 * BuyIn}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -157,7 +158,7 @@ public class BuyIn extends ObligationFulfilment {
 	public static final MMBusinessAssociationEnd mmSecuritiesCompensation = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BuyIn3.mmInitialQuantity, BuyIn3.mmUncoveredQuantity, BuyIn2.mmSecuritiesBuyIn);
-			elementContext_lazy = () -> BuyIn.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesCompensation";
@@ -178,10 +179,6 @@ public class BuyIn extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.BuyIn
-	 * BuyIn}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -193,6 +190,10 @@ public class BuyIn extends ObligationFulfilment {
 	 * BuyIn4.mmExpectedBuyInDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.BuyIn
+	 * BuyIn}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -207,7 +208,7 @@ public class BuyIn extends ObligationFulfilment {
 	public static final MMBusinessAttribute mmBuyinDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BuyIn2.mmDate, BuyIn1.mmExpectedBuyInDate, BuyIn4.mmExpectedBuyInDate);
-			elementContext_lazy = () -> BuyIn.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuyinDate";
@@ -215,6 +216,14 @@ public class BuyIn extends ObligationFulfilment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BuyIn.class.getMethod("getBuyinDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesPricing> buyInPrice;
@@ -235,10 +244,6 @@ public class BuyIn extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.BuyIn
-	 * BuyIn}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -246,6 +251,10 @@ public class BuyIn extends ObligationFulfilment {
 	 * BuyIn2.mmPrice}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.BuyIn
+	 * BuyIn}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -260,7 +269,7 @@ public class BuyIn extends ObligationFulfilment {
 	public static final MMBusinessAssociationEnd mmBuyInPrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BuyIn2.mmPrice);
-			elementContext_lazy = () -> BuyIn.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuyInPrice";
@@ -283,10 +292,6 @@ public class BuyIn extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.BuyIn
-	 * BuyIn}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -297,6 +302,10 @@ public class BuyIn extends ObligationFulfilment {
 	 * CashCompensation1.mmFees}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.BuyIn
+	 * BuyIn}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -313,7 +322,7 @@ public class BuyIn extends ObligationFulfilment {
 	public static final MMBusinessAttribute mmFees = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesCompensation1.mmFees, CashCompensation1.mmFees);
-			elementContext_lazy = () -> BuyIn.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Fees";
@@ -321,6 +330,14 @@ public class BuyIn extends ObligationFulfilment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BuyIn.class.getMethod("getFees", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.PaymentObligation> cashCompensation;
@@ -344,10 +361,6 @@ public class BuyIn extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentObligation
 	 * PaymentObligation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.BuyIn
-	 * BuyIn}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -356,6 +369,10 @@ public class BuyIn extends ObligationFulfilment {
 	 * BuyIn2.mmRequiredCashCompensation}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.BuyIn
+	 * BuyIn}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -372,7 +389,7 @@ public class BuyIn extends ObligationFulfilment {
 	public static final MMBusinessAssociationEnd mmCashCompensation = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BuyIn2.mmRequiredCashCompensation);
-			elementContext_lazy = () -> BuyIn.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashCompensation";
@@ -418,7 +435,7 @@ public class BuyIn extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSecuritiesClearingProcess = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> BuyIn.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesClearingProcess";
@@ -441,8 +458,14 @@ public class BuyIn extends ObligationFulfilment {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmRelatedBuyIn, com.tools20022.repository.entity.PaymentObligation.mmPaymentSourceBuyIn,
 						com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedBuyIn, com.tools20022.repository.entity.SecuritiesClearing.mmBuyIn);
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(BuyIn.mmSecuritiesCompensation, BuyIn.mmBuyinDate, BuyIn.mmBuyInPrice, BuyIn.mmFees, BuyIn.mmCashCompensation, BuyIn.mmRelatedSecuritiesClearingProcess);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BuyIn.mmSecuritiesCompensation, com.tools20022.repository.entity.BuyIn.mmBuyinDate, com.tools20022.repository.entity.BuyIn.mmBuyInPrice,
+						com.tools20022.repository.entity.BuyIn.mmFees, com.tools20022.repository.entity.BuyIn.mmCashCompensation, com.tools20022.repository.entity.BuyIn.mmRelatedSecuritiesClearingProcess);
 				derivationComponent_lazy = () -> Arrays.asList(BuyIn3.mmObject(), CashCompensation1.mmObject(), BuyIn2.mmObject(), BuyIn1.mmObject(), BuyIn4.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BuyIn.class;
 			}
 		});
 		return mmObject_lazy.get();

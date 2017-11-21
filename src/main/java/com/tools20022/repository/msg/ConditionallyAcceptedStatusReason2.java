@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of the reason for the conditionally accepted status.
@@ -93,6 +97,8 @@ import java.util.function.Supplier;
  * ConditionallyAcceptedStatusReason3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ConditionallyAcceptedStatusReason2", propOrder = {"reason", "extendedReason", "dataSourceScheme", "additionalInformation"})
 public class ConditionallyAcceptedStatusReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -356,6 +362,7 @@ public class ConditionallyAcceptedStatusReason2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public ConditionallyAcceptedStatusReason2Code getReason() {
 		return reason;
 	}
@@ -364,6 +371,7 @@ public class ConditionallyAcceptedStatusReason2 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "XtndedRsn", required = true)
 	public Extended350Code getExtendedReason() {
 		return extendedReason;
 	}
@@ -372,6 +380,7 @@ public class ConditionallyAcceptedStatusReason2 {
 		this.extendedReason = extendedReason;
 	}
 
+	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}
@@ -380,6 +389,7 @@ public class ConditionallyAcceptedStatusReason2 {
 		this.dataSourceScheme = dataSourceScheme;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}

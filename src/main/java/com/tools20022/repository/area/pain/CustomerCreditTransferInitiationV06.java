@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.GroupHeader48;
 import com.tools20022.repository.msg.PaymentInstruction16;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -62,9 +64,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.001.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
@@ -95,6 +94,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.001.001.06}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -118,6 +120,8 @@ import java.util.List;
  * CustomerCreditTransferInitiationV05}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustomerCreditTransferInitiationV06", propOrder = {"groupHeader", "paymentInformation", "supplementaryData"})
 public class CustomerCreditTransferInitiationV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +176,14 @@ public class CustomerCreditTransferInitiationV06 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader48.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerCreditTransferInitiationV06.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PaymentInstruction16> paymentInformation;
 	/**
@@ -223,6 +235,14 @@ public class CustomerCreditTransferInitiationV06 {
 			previousVersion_lazy = () -> CustomerCreditTransferInitiationV05.mmPaymentInformation;
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstruction16.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerCreditTransferInitiationV06.class.getMethod("getPaymentInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -276,6 +296,14 @@ public class CustomerCreditTransferInitiationV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerCreditTransferInitiationV06.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -290,7 +318,8 @@ public class CustomerCreditTransferInitiationV06 {
 				rootElement = "Document";
 				xmlTag = "CstmrCdtTrfInitn";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerCreditTransferInitiationV06.mmGroupHeader, CustomerCreditTransferInitiationV06.mmPaymentInformation, CustomerCreditTransferInitiationV06.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV06.mmGroupHeader,
+						com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV06.mmPaymentInformation, com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV06.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";
@@ -300,10 +329,16 @@ public class CustomerCreditTransferInitiationV06 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CustomerCreditTransferInitiationV06.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader48 getGroupHeader() {
 		return groupHeader;
 	}
@@ -312,6 +347,7 @@ public class CustomerCreditTransferInitiationV06 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "PmtInf", required = true)
 	public List<PaymentInstruction16> getPaymentInformation() {
 		return paymentInformation;
 	}
@@ -320,11 +356,18 @@ public class CustomerCreditTransferInitiationV06 {
 		this.paymentInformation = paymentInformation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.001.06.06")
+	static public class Document {
+		@XmlElement(name = "CstmrCdtTrfInitn", required = true)
+		public CustomerCreditTransferInitiationV06 messageBody;
 	}
 }

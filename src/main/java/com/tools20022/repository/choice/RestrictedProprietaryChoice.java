@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.ServiceLevel;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies a service level restricted to the proprietary element.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies a service level restricted to the proprietary element."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RestrictedProprietaryChoice", propOrder = "proprietary")
 public class RestrictedProprietaryChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -121,6 +127,7 @@ public class RestrictedProprietaryChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public Max35Text getProprietary() {
 		return proprietary;
 	}

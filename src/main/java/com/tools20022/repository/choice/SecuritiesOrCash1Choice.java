@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.CashParties24;
 import com.tools20022.repository.msg.SettlementParties35;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of securities or cash parties.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of securities or cash parties."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesOrCash1Choice", propOrder = {"securitiesDetails", "cashPartiesDetails"})
 public class SecuritiesOrCash1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -169,6 +175,7 @@ public class SecuritiesOrCash1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesDtls", required = true)
 	public SettlementParties35 getSecuritiesDetails() {
 		return securitiesDetails;
 	}
@@ -177,6 +184,7 @@ public class SecuritiesOrCash1Choice {
 		this.securitiesDetails = securitiesDetails;
 	}
 
+	@XmlElement(name = "CshPtiesDtls", required = true)
 	public CashParties24 getCashPartiesDetails() {
 		return cashPartiesDetails;
 	}

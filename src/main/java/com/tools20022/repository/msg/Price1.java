@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money for which goods or services are offered, sold, or bought.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Amount of money for which goods or services are offered, sold, or bought."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Price1", propOrder = {"valueType", "value", "priceType"})
 public class Price1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -216,6 +222,7 @@ public class Price1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ValTp")
 	public PriceValueType3Code getValueType() {
 		return valueType;
 	}
@@ -224,6 +231,7 @@ public class Price1 {
 		this.valueType = valueType;
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public PriceRateOrAmountChoice getValue() {
 		return value;
 	}
@@ -232,6 +240,7 @@ public class Price1 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "PricTp")
 	public TypeOfPrice1Code getPriceType() {
 		return priceType;
 	}

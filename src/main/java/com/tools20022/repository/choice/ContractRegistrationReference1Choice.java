@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DocumentIdentification28;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference details of the contract registration.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Reference details of the contract registration."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContractRegistrationReference1Choice", propOrder = {"registeredContractIdentification", "contract"})
 public class ContractRegistrationReference1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class ContractRegistrationReference1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RegdCtrctId", required = true)
 	public Max35Text getRegisteredContractIdentification() {
 		return registeredContractIdentification;
 	}
@@ -186,6 +193,7 @@ public class ContractRegistrationReference1Choice {
 		this.registeredContractIdentification = registeredContractIdentification;
 	}
 
+	@XmlElement(name = "Ctrct", required = true)
 	public DocumentIdentification28 getContract() {
 		return contract;
 	}

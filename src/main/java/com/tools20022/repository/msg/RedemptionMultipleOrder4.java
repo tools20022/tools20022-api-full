@@ -31,6 +31,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instruction from an investor to sell investment fund units back to the fund.
@@ -126,6 +130,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RedemptionMultipleOrder4", propOrder = {"masterReference", "placeOfTrade", "orderDateTime", "expiryDateTime", "requestedFutureTradeDate", "cancellationRight", "extendedCancellationRight", "investmentAccountDetails",
+		"beneficiaryDetails", "individualOrderDetails", "bulkCashSettlementDetails", "totalSettlementAmount", "cashSettlementDate"})
 public class RedemptionMultipleOrder4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -937,6 +944,7 @@ public class RedemptionMultipleOrder4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -945,6 +953,7 @@ public class RedemptionMultipleOrder4 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public PlaceOfTradeIdentification1Choice getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -953,6 +962,7 @@ public class RedemptionMultipleOrder4 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "OrdrDtTm")
 	public ISODateTime getOrderDateTime() {
 		return orderDateTime;
 	}
@@ -961,6 +971,7 @@ public class RedemptionMultipleOrder4 {
 		this.orderDateTime = orderDateTime;
 	}
 
+	@XmlElement(name = "XpryDtTm")
 	public DateAndDateTimeChoice getExpiryDateTime() {
 		return expiryDateTime;
 	}
@@ -969,6 +980,7 @@ public class RedemptionMultipleOrder4 {
 		this.expiryDateTime = expiryDateTime;
 	}
 
+	@XmlElement(name = "ReqdFutrTradDt")
 	public ISODate getRequestedFutureTradeDate() {
 		return requestedFutureTradeDate;
 	}
@@ -977,6 +989,7 @@ public class RedemptionMultipleOrder4 {
 		this.requestedFutureTradeDate = requestedFutureTradeDate;
 	}
 
+	@XmlElement(name = "CxlRght")
 	public CancellationRight1Code getCancellationRight() {
 		return cancellationRight;
 	}
@@ -985,6 +998,7 @@ public class RedemptionMultipleOrder4 {
 		this.cancellationRight = cancellationRight;
 	}
 
+	@XmlElement(name = "XtndedCxlRght")
 	public Extended350Code getExtendedCancellationRight() {
 		return extendedCancellationRight;
 	}
@@ -993,6 +1007,7 @@ public class RedemptionMultipleOrder4 {
 		this.extendedCancellationRight = extendedCancellationRight;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount21 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -1001,6 +1016,7 @@ public class RedemptionMultipleOrder4 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "BnfcryDtls")
 	public IndividualPerson12 getBeneficiaryDetails() {
 		return beneficiaryDetails;
 	}
@@ -1009,6 +1025,7 @@ public class RedemptionMultipleOrder4 {
 		this.beneficiaryDetails = beneficiaryDetails;
 	}
 
+	@XmlElement(name = "IndvOrdrDtls", required = true)
 	public List<RedemptionOrder8> getIndividualOrderDetails() {
 		return individualOrderDetails;
 	}
@@ -1017,6 +1034,7 @@ public class RedemptionMultipleOrder4 {
 		this.individualOrderDetails = individualOrderDetails;
 	}
 
+	@XmlElement(name = "BlkCshSttlmDtls")
 	public PaymentTransaction21 getBulkCashSettlementDetails() {
 		return bulkCashSettlementDetails;
 	}
@@ -1025,6 +1043,7 @@ public class RedemptionMultipleOrder4 {
 		this.bulkCashSettlementDetails = bulkCashSettlementDetails;
 	}
 
+	@XmlElement(name = "TtlSttlmAmt")
 	public ActiveCurrencyAndAmount getTotalSettlementAmount() {
 		return totalSettlementAmount;
 	}
@@ -1033,6 +1052,7 @@ public class RedemptionMultipleOrder4 {
 		this.totalSettlementAmount = totalSettlementAmount;
 	}
 
+	@XmlElement(name = "CshSttlmDt")
 	public ISODate getCashSettlementDate() {
 		return cashSettlementDate;
 	}

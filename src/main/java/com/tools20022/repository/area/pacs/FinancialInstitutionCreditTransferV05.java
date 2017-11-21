@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.GroupHeader49;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -50,9 +52,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pacs.009.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementPreviousVersion
@@ -87,6 +86,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pacs.009.001.05}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -110,6 +112,8 @@ import java.util.List;
  * FinancialInstitutionCreditTransferV04}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstitutionCreditTransferV05", propOrder = {"groupHeader", "creditTransferTransactionInformation", "supplementaryData"})
 public class FinancialInstitutionCreditTransferV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +167,14 @@ public class FinancialInstitutionCreditTransferV05 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader49.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstitutionCreditTransferV05.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<CreditTransferTransaction17> creditTransferTransactionInformation;
@@ -218,6 +230,14 @@ public class FinancialInstitutionCreditTransferV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> CreditTransferTransaction17.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstitutionCreditTransferV05.class.getMethod("getCreditTransferTransactionInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -270,6 +290,14 @@ public class FinancialInstitutionCreditTransferV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstitutionCreditTransferV05.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -284,8 +312,8 @@ public class FinancialInstitutionCreditTransferV05 {
 				rootElement = "Document";
 				xmlTag = "FICdtTrf";
 				businessArea_lazy = () -> PaymentsClearingandSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstitutionCreditTransferV05.mmGroupHeader, FinancialInstitutionCreditTransferV05.mmCreditTransferTransactionInformation,
-						FinancialInstitutionCreditTransferV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05.mmGroupHeader,
+						com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05.mmCreditTransferTransactionInformation, com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pacs";
@@ -295,10 +323,16 @@ public class FinancialInstitutionCreditTransferV05 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FinancialInstitutionCreditTransferV05.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader49 getGroupHeader() {
 		return groupHeader;
 	}
@@ -307,6 +341,7 @@ public class FinancialInstitutionCreditTransferV05 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "CdtTrfTxInf", required = true)
 	public List<CreditTransferTransaction17> getCreditTransferTransactionInformation() {
 		return creditTransferTransactionInformation;
 	}
@@ -315,11 +350,18 @@ public class FinancialInstitutionCreditTransferV05 {
 		this.creditTransferTransactionInformation = creditTransferTransactionInformation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.009.05.05")
+	static public class Document {
+		@XmlElement(name = "FICdtTrf", required = true)
+		public FinancialInstitutionCreditTransferV05 messageBody;
 	}
 }

@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,6 +40,55 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmCardPaymentAcquiring
+ * PointOfInteraction.mmCardPaymentAcquiring}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmCardReadingCapabilities
+ * PointOfInteraction.mmCardReadingCapabilities}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmCardholderVerificationCapabilities
+ * PointOfInteraction.mmCardholderVerificationCapabilities}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmOnLineCapabilities
+ * PointOfInteraction.mmOnLineCapabilities}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmDisplayCapabilities
+ * PointOfInteraction.mmDisplayCapabilities}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmPrintLineWidth
+ * PointOfInteraction.mmPrintLineWidth}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmComponent
+ * PointOfInteraction.mmComponent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmComponentIdentification
+ * PointOfInteraction.mmComponentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmGroupIdentifier
+ * PointOfInteraction.mmGroupIdentifier}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmLineWidth
+ * PointOfInteraction.mmLineWidth}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmNumberOfLines
+ * PointOfInteraction.mmNumberOfLines}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmErrorLog
+ * PointOfInteraction.mmErrorLog}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmComponentVersionNumber
+ * PointOfInteraction.mmComponentVersionNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmControllingTerminalManagementSystem
+ * PointOfInteraction.mmControllingTerminalManagementSystem}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.System System}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -146,55 +196,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * StatusReportContent6.mmPOICapabilities}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.System System}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmCardPaymentAcquiring
- * PointOfInteraction.mmCardPaymentAcquiring}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmCardReadingCapabilities
- * PointOfInteraction.mmCardReadingCapabilities}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmCardholderVerificationCapabilities
- * PointOfInteraction.mmCardholderVerificationCapabilities}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmOnLineCapabilities
- * PointOfInteraction.mmOnLineCapabilities}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmDisplayCapabilities
- * PointOfInteraction.mmDisplayCapabilities}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmPrintLineWidth
- * PointOfInteraction.mmPrintLineWidth}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmComponent
- * PointOfInteraction.mmComponent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmComponentIdentification
- * PointOfInteraction.mmComponentIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmGroupIdentifier
- * PointOfInteraction.mmGroupIdentifier}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmLineWidth
- * PointOfInteraction.mmLineWidth}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmNumberOfLines
- * PointOfInteraction.mmNumberOfLines}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmErrorLog
- * PointOfInteraction.mmErrorLog}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmComponentVersionNumber
- * PointOfInteraction.mmComponentVersionNumber}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmControllingTerminalManagementSystem
- * PointOfInteraction.mmControllingTerminalManagementSystem}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -252,7 +253,7 @@ public class PointOfInteraction extends System {
 	 */
 	public static final MMBusinessAssociationEnd mmCardPaymentAcquiring = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PointOfInteraction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPaymentAcquiring";
@@ -275,11 +276,6 @@ public class PointOfInteraction extends System {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CardDataReadingCode
 	 * CardDataReadingCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction
-	 * PointOfInteraction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -325,6 +321,11 @@ public class PointOfInteraction extends System {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction
+	 * PointOfInteraction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -342,7 +343,7 @@ public class PointOfInteraction extends System {
 					PointOfInteractionCapabilities4.mmCardReadingCapabilities, PointOfInteractionCapabilities4.mmCardWrittingCapabilities, AutomatedTellerMachine4.mmCapabilities, PointOfInteractionCapabilities5.mmCardReadData,
 					PointOfInteractionCapabilities5.mmCardWriteData, CardAcceptorTerminal1.mmCapabilities, PointOfInteractionCapabilities6.mmCardReadingCapabilities, AutomatedTellerMachine10.mmCapabilities,
 					PointOfInteractionCapabilities7.mmCardReadData, PointOfInteractionCapabilities7.mmCardWriteData);
-			elementContext_lazy = () -> PointOfInteraction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardReadingCapabilities";
@@ -350,6 +351,14 @@ public class PointOfInteraction extends System {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardDataReadingCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PointOfInteraction.class.getMethod("getCardReadingCapabilities", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CardholderVerificationCapabilityCode cardholderVerificationCapabilities;
@@ -364,11 +373,6 @@ public class PointOfInteraction extends System {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapabilityCode
 	 * CardholderVerificationCapabilityCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction
-	 * PointOfInteraction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -396,6 +400,11 @@ public class PointOfInteraction extends System {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction
+	 * PointOfInteraction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -413,7 +422,7 @@ public class PointOfInteraction extends System {
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionCapabilities1.mmCardholderVerificationCapabilities, PointOfInteractionCapabilities2.mmCardholderVerificationCapabilities,
 					PointOfInteractionCapabilities3.mmCardholderVerificationCapabilities, PointOfInteractionCapabilities4.mmCardholderVerificationCapabilities, PointOfInteractionCapabilities5.mmAuthentication,
 					PointOfInteractionCapabilities6.mmCardholderVerificationCapabilities, PointOfInteractionCapabilities7.mmAuthentication);
-			elementContext_lazy = () -> PointOfInteraction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardholderVerificationCapabilities";
@@ -421,6 +430,14 @@ public class PointOfInteraction extends System {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PointOfInteraction.class.getMethod("getCardholderVerificationCapabilities", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OnLineCapabilityCode onLineCapabilities;
@@ -434,11 +451,6 @@ public class PointOfInteraction extends System {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OnLineCapabilityCode
 	 * OnLineCapabilityCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction
-	 * PointOfInteraction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -460,6 +472,11 @@ public class PointOfInteraction extends System {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction
+	 * PointOfInteraction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -474,7 +491,7 @@ public class PointOfInteraction extends System {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionCapabilities1.mmOnLineCapabilities, PointOfInteractionCapabilities2.mmOnLineCapabilities, PointOfInteractionCapabilities3.mmOnLineCapabilities,
 					PointOfInteractionCapabilities4.mmOnLineCapabilities, PointOfInteractionCapabilities6.mmOnLineCapabilities);
-			elementContext_lazy = () -> PointOfInteraction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OnLineCapabilities";
@@ -482,6 +499,14 @@ public class PointOfInteraction extends System {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OnLineCapabilityCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PointOfInteraction.class.getMethod("getOnLineCapabilities", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected UserInterfaceCode displayCapabilities;
@@ -495,11 +520,6 @@ public class PointOfInteraction extends System {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode
 	 * UserInterfaceCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction
-	 * PointOfInteraction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -515,6 +535,11 @@ public class PointOfInteraction extends System {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction
+	 * PointOfInteraction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -528,7 +553,7 @@ public class PointOfInteraction extends System {
 	public static final MMBusinessAttribute mmDisplayCapabilities = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionCapabilities1.mmDisplayCapabilities, PointOfInteractionCapabilities2.mmDisplayCapabilities, PointOfInteractionCapabilities3.mmDisplayCapabilities);
-			elementContext_lazy = () -> PointOfInteraction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisplayCapabilities";
@@ -536,6 +561,14 @@ public class PointOfInteraction extends System {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UserInterfaceCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PointOfInteraction.class.getMethod("getDisplayCapabilities", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max3NumericText printLineWidth;
@@ -549,11 +582,6 @@ public class PointOfInteraction extends System {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max3NumericText
 	 * Max3NumericText}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction
-	 * PointOfInteraction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -562,6 +590,11 @@ public class PointOfInteraction extends System {
 	 * PointOfInteractionCapabilities1.mmPrintLineWidth}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction
+	 * PointOfInteraction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -576,7 +609,7 @@ public class PointOfInteraction extends System {
 	public static final MMBusinessAttribute mmPrintLineWidth = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionCapabilities1.mmPrintLineWidth);
-			elementContext_lazy = () -> PointOfInteraction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PrintLineWidth";
@@ -584,6 +617,14 @@ public class PointOfInteraction extends System {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PointOfInteraction.class.getMethod("getPrintLineWidth", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected POIComponentTypeCode component;
@@ -597,11 +638,6 @@ public class PointOfInteraction extends System {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.POIComponentTypeCode
 	 * POIComponentTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction
-	 * PointOfInteraction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -644,6 +680,11 @@ public class PointOfInteraction extends System {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction
+	 * PointOfInteraction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -659,7 +700,7 @@ public class PointOfInteraction extends System {
 			derivation_lazy = () -> Arrays.asList(PointOfInteraction1.mmComponent, StatusReportContent1.mmPOIComponent, StatusReportContent2.mmPOIComponent, PointOfInteraction2.mmComponent, PointOfInteraction3.mmComponent,
 					StatusReportContent3.mmPOIComponent, PointOfInteraction4.mmComponent, StatusReportContent4.mmPOIComponent, StatusReportContent5.mmPOIComponent, PointOfInteraction5.mmComponent, PointOfInteraction7.mmComponent,
 					StatusReportContent6.mmPOIComponent);
-			elementContext_lazy = () -> PointOfInteraction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Component";
@@ -667,6 +708,14 @@ public class PointOfInteraction extends System {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> POIComponentTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PointOfInteraction.class.getMethod("getComponent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text componentIdentification;
@@ -679,11 +728,6 @@ public class PointOfInteraction extends System {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction
-	 * PointOfInteraction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -692,6 +736,11 @@ public class PointOfInteraction extends System {
 	 * PointOfInteractionComponentIdentification1.mmIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction
+	 * PointOfInteraction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -707,7 +756,7 @@ public class PointOfInteraction extends System {
 	public static final MMBusinessAttribute mmComponentIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponentIdentification1.mmIdentification);
-			elementContext_lazy = () -> PointOfInteraction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ComponentIdentification";
@@ -715,6 +764,14 @@ public class PointOfInteraction extends System {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PointOfInteraction.class.getMethod("getComponentIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text groupIdentifier;
@@ -748,7 +805,7 @@ public class PointOfInteraction extends System {
 	 */
 	public static final MMBusinessAttribute mmGroupIdentifier = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PointOfInteraction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GroupIdentifier";
@@ -756,6 +813,14 @@ public class PointOfInteraction extends System {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PointOfInteraction.class.getMethod("getGroupIdentifier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max3NumericText lineWidth;
@@ -787,7 +852,7 @@ public class PointOfInteraction extends System {
 	 */
 	public static final MMBusinessAttribute mmLineWidth = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PointOfInteraction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LineWidth";
@@ -795,6 +860,14 @@ public class PointOfInteraction extends System {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PointOfInteraction.class.getMethod("getLineWidth", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max2NumericText numberOfLines;
@@ -826,7 +899,7 @@ public class PointOfInteraction extends System {
 	 */
 	public static final MMBusinessAttribute mmNumberOfLines = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PointOfInteraction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfLines";
@@ -834,6 +907,14 @@ public class PointOfInteraction extends System {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max2NumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PointOfInteraction.class.getMethod("getNumberOfLines", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max140Text errorLog;
@@ -867,7 +948,7 @@ public class PointOfInteraction extends System {
 	 */
 	public static final MMBusinessAttribute mmErrorLog = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PointOfInteraction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ErrorLog";
@@ -875,6 +956,14 @@ public class PointOfInteraction extends System {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PointOfInteraction.class.getMethod("getErrorLog", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max16Text componentVersionNumber;
@@ -906,7 +995,7 @@ public class PointOfInteraction extends System {
 	 */
 	public static final MMBusinessAttribute mmComponentVersionNumber = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PointOfInteraction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ComponentVersionNumber";
@@ -914,6 +1003,14 @@ public class PointOfInteraction extends System {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PointOfInteraction.class.getMethod("getComponentVersionNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TerminalManagementSystem controllingTerminalManagementSystem;
@@ -955,7 +1052,7 @@ public class PointOfInteraction extends System {
 	 */
 	public static final MMBusinessAssociationEnd mmControllingTerminalManagementSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PointOfInteraction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ControllingTerminalManagementSystem";
@@ -980,13 +1077,21 @@ public class PointOfInteraction extends System {
 						PointOfInteraction3.mmCapabilities, StatusReportContent3.mmPOICapabilities, PointOfInteraction4.mmCapabilities, StatusReportContent4.mmPOICapabilities, ATMCommandIdentification1.mmOrigin,
 						StatusReportContent5.mmPOICapabilities, PointOfInteraction5.mmCapabilities, PointOfInteraction7.mmCapabilities, StatusReportContent6.mmPOICapabilities);
 				superType_lazy = () -> System.mmObject();
-				element_lazy = () -> Arrays.asList(PointOfInteraction.mmCardPaymentAcquiring, PointOfInteraction.mmCardReadingCapabilities, PointOfInteraction.mmCardholderVerificationCapabilities, PointOfInteraction.mmOnLineCapabilities,
-						PointOfInteraction.mmDisplayCapabilities, PointOfInteraction.mmPrintLineWidth, PointOfInteraction.mmComponent, PointOfInteraction.mmComponentIdentification, PointOfInteraction.mmGroupIdentifier,
-						PointOfInteraction.mmLineWidth, PointOfInteraction.mmNumberOfLines, PointOfInteraction.mmErrorLog, PointOfInteraction.mmComponentVersionNumber, PointOfInteraction.mmControllingTerminalManagementSystem);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PointOfInteraction.mmCardPaymentAcquiring, com.tools20022.repository.entity.PointOfInteraction.mmCardReadingCapabilities,
+						com.tools20022.repository.entity.PointOfInteraction.mmCardholderVerificationCapabilities, com.tools20022.repository.entity.PointOfInteraction.mmOnLineCapabilities,
+						com.tools20022.repository.entity.PointOfInteraction.mmDisplayCapabilities, com.tools20022.repository.entity.PointOfInteraction.mmPrintLineWidth, com.tools20022.repository.entity.PointOfInteraction.mmComponent,
+						com.tools20022.repository.entity.PointOfInteraction.mmComponentIdentification, com.tools20022.repository.entity.PointOfInteraction.mmGroupIdentifier, com.tools20022.repository.entity.PointOfInteraction.mmLineWidth,
+						com.tools20022.repository.entity.PointOfInteraction.mmNumberOfLines, com.tools20022.repository.entity.PointOfInteraction.mmErrorLog, com.tools20022.repository.entity.PointOfInteraction.mmComponentVersionNumber,
+						com.tools20022.repository.entity.PointOfInteraction.mmControllingTerminalManagementSystem);
 				derivationComponent_lazy = () -> Arrays.asList(PointOfInteractionCapabilities1.mmObject(), PointOfInteractionComponent1.mmObject(), PointOfInteraction1.mmObject(), PointOfInteractionComponent2.mmObject(),
 						PointOfInteractionComponentIdentification1.mmObject(), PointOfInteraction2.mmObject(), PointOfInteraction3.mmObject(), PointOfInteractionCapabilities2.mmObject(), PointOfInteraction4.mmObject(),
 						PointOfInteractionCapabilities3.mmObject(), PointOfInteractionCapabilities4.mmObject(), ATMCommandIdentification1.mmObject(), PointOfInteractionCapabilities5.mmObject(), CardAcceptorTerminal1.mmObject(),
 						PointOfInteractionCapabilities6.mmObject(), PointOfInteraction5.mmObject(), PointOfInteractionCapabilities7.mmObject(), PointOfInteraction7.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PointOfInteraction.class;
 			}
 		});
 		return mmObject_lazy.get();

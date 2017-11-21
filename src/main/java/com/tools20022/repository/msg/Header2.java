@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics related to the protocol.
@@ -111,6 +115,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Header2", propOrder = {"messageFunction", "protocolVersion", "exchangeIdentification", "reTransmissionCounter", "creationDateTime", "initiatingParty", "recipientParty", "traceability"})
 public class Header2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -529,6 +535,7 @@ public class Header2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgFctn", required = true)
 	public MessageFunction1Code getMessageFunction() {
 		return messageFunction;
 	}
@@ -537,6 +544,7 @@ public class Header2 {
 		this.messageFunction = messageFunction;
 	}
 
+	@XmlElement(name = "PrtcolVrsn", required = true)
 	public Max6Text getProtocolVersion() {
 		return protocolVersion;
 	}
@@ -545,6 +553,7 @@ public class Header2 {
 		this.protocolVersion = protocolVersion;
 	}
 
+	@XmlElement(name = "XchgId", required = true)
 	public Max3NumericText getExchangeIdentification() {
 		return exchangeIdentification;
 	}
@@ -553,6 +562,7 @@ public class Header2 {
 		this.exchangeIdentification = exchangeIdentification;
 	}
 
+	@XmlElement(name = "ReTrnsmssnCntr")
 	public Max3NumericText getReTransmissionCounter() {
 		return reTransmissionCounter;
 	}
@@ -561,6 +571,7 @@ public class Header2 {
 		this.reTransmissionCounter = reTransmissionCounter;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -569,6 +580,7 @@ public class Header2 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "InitgPty", required = true)
 	public GenericIdentification32 getInitiatingParty() {
 		return initiatingParty;
 	}
@@ -577,6 +589,7 @@ public class Header2 {
 		this.initiatingParty = initiatingParty;
 	}
 
+	@XmlElement(name = "RcptPty")
 	public GenericIdentification32 getRecipientParty() {
 		return recipientParty;
 	}
@@ -585,6 +598,7 @@ public class Header2 {
 		this.recipientParty = recipientParty;
 	}
 
+	@XmlElement(name = "Tracblt")
 	public List<Traceability1> getTraceability() {
 		return traceability;
 	}

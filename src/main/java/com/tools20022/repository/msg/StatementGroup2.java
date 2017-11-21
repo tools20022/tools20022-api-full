@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Group of the statement header reporting the bank services billing and the
@@ -85,6 +89,8 @@ import java.util.List;
  * StatementGroup1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatementGroup2", propOrder = {"groupIdentification", "sender", "senderIndividualContact", "receiver", "receiverIndividualContact", "billingStatement"})
 public class StatementGroup2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -397,6 +403,7 @@ public class StatementGroup2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpId", required = true)
 	public Max35Text getGroupIdentification() {
 		return groupIdentification;
 	}
@@ -405,6 +412,7 @@ public class StatementGroup2 {
 		this.groupIdentification = groupIdentification;
 	}
 
+	@XmlElement(name = "Sndr", required = true)
 	public PartyIdentification58 getSender() {
 		return sender;
 	}
@@ -413,6 +421,7 @@ public class StatementGroup2 {
 		this.sender = sender;
 	}
 
+	@XmlElement(name = "SndrIndvCtct")
 	public List<ContactDetails3> getSenderIndividualContact() {
 		return senderIndividualContact;
 	}
@@ -421,6 +430,7 @@ public class StatementGroup2 {
 		this.senderIndividualContact = senderIndividualContact;
 	}
 
+	@XmlElement(name = "Rcvr", required = true)
 	public PartyIdentification58 getReceiver() {
 		return receiver;
 	}
@@ -429,6 +439,7 @@ public class StatementGroup2 {
 		this.receiver = receiver;
 	}
 
+	@XmlElement(name = "RcvrIndvCtct")
 	public List<ContactDetails3> getReceiverIndividualContact() {
 		return receiverIndividualContact;
 	}
@@ -437,6 +448,7 @@ public class StatementGroup2 {
 		this.receiverIndividualContact = receiverIndividualContact;
 	}
 
+	@XmlElement(name = "BllgStmt", required = true)
 	public List<BillingStatement2> getBillingStatement() {
 		return billingStatement;
 	}

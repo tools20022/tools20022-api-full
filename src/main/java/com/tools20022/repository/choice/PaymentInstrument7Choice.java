@@ -30,6 +30,10 @@ import com.tools20022.repository.msg.CreditTransfer3;
 import com.tools20022.repository.msg.InvestmentAccount15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between types of payment instrument, ie, cheque, credit transfer or
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstrument7Choice", propOrder = {"creditTransferDetails", "chequeDetails", "accountDetails"})
 public class PaymentInstrument7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -236,6 +242,7 @@ public class PaymentInstrument7Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CdtTrfDtls", required = true)
 	public CreditTransfer3 getCreditTransferDetails() {
 		return creditTransferDetails;
 	}
@@ -244,6 +251,7 @@ public class PaymentInstrument7Choice {
 		this.creditTransferDetails = creditTransferDetails;
 	}
 
+	@XmlElement(name = "ChqDtls", required = true)
 	public Cheque3 getChequeDetails() {
 		return chequeDetails;
 	}
@@ -252,6 +260,7 @@ public class PaymentInstrument7Choice {
 		this.chequeDetails = chequeDetails;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public InvestmentAccount15 getAccountDetails() {
 		return accountDetails;
 	}

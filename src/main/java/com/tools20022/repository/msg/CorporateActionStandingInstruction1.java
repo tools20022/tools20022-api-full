@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the standing instruction.
@@ -96,6 +100,8 @@ import java.util.function.Supplier;
  * definition} = "Provides information about the standing instruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionStandingInstruction1", propOrder = {"netOrGross", "cashDistributionDetails", "securitiesDistributionDetails", "additionalInformation"})
 public class CorporateActionStandingInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -360,6 +366,7 @@ public class CorporateActionStandingInstruction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NetOrGrss", required = true)
 	public StandingInstructionGrossNet1Code getNetOrGross() {
 		return netOrGross;
 	}
@@ -368,6 +375,7 @@ public class CorporateActionStandingInstruction1 {
 		this.netOrGross = netOrGross;
 	}
 
+	@XmlElement(name = "CshDstrbtnDtls", required = true)
 	public CashAccount17 getCashDistributionDetails() {
 		return cashDistributionDetails;
 	}
@@ -376,6 +384,7 @@ public class CorporateActionStandingInstruction1 {
 		this.cashDistributionDetails = cashDistributionDetails;
 	}
 
+	@XmlElement(name = "SctiesDstrbtnDtls", required = true)
 	public SecuritiesAccount6 getSecuritiesDistributionDetails() {
 		return securitiesDistributionDetails;
 	}
@@ -384,6 +393,7 @@ public class CorporateActionStandingInstruction1 {
 		this.securitiesDistributionDetails = securitiesDistributionDetails;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}

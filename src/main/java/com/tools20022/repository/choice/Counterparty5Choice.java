@@ -28,6 +28,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between buyer and seller.
@@ -63,6 +67,8 @@ import java.util.function.Supplier;
  * definition} = "Choice between buyer and seller."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Counterparty5Choice", propOrder = {"seller", "buyer"})
 public class Counterparty5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -186,6 +192,7 @@ public class Counterparty5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sellr", required = true)
 	public PartyIdentificationAndAccount45 getSeller() {
 		return seller;
 	}
@@ -194,6 +201,7 @@ public class Counterparty5Choice {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "Buyr", required = true)
 	public PartyIdentificationAndAccount45 getBuyer() {
 		return buyer;
 	}

@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmCorporateActionCancellationReason
+ * CorporateActionStatusReason.mmCorporateActionCancellationReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmCorporateActionStatus
+ * CorporateActionStatusReason.mmCorporateActionStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmAcceptedReason
+ * CorporateActionStatusReason.mmAcceptedReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmReversalReason
+ * CorporateActionStatusReason.mmReversalReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmMovementFailureReason
+ * CorporateActionStatusReason.mmMovementFailureReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmMovementRejectionReason
+ * CorporateActionStatusReason.mmMovementRejectionReason}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.StatusReason
+ * StatusReason}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -622,32 +649,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * InstructionProcessingStatus30Choice.mmStandingInstruction}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.StatusReason
- * StatusReason}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmCorporateActionCancellationReason
- * CorporateActionStatusReason.mmCorporateActionCancellationReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmCorporateActionStatus
- * CorporateActionStatusReason.mmCorporateActionStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmAcceptedReason
- * CorporateActionStatusReason.mmAcceptedReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmReversalReason
- * CorporateActionStatusReason.mmReversalReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmMovementFailureReason
- * CorporateActionStatusReason.mmMovementFailureReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmMovementRejectionReason
- * CorporateActionStatusReason.mmMovementRejectionReason}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -678,11 +679,6 @@ public class CorporateActionStatusReason extends StatusReason {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionCancellationReasonCode
 	 * CorporateActionCancellationReasonCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason
-	 * CorporateActionStatusReason}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -704,6 +700,11 @@ public class CorporateActionStatusReason extends StatusReason {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason
+	 * CorporateActionStatusReason}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -719,7 +720,7 @@ public class CorporateActionStatusReason extends StatusReason {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionCancellation3.mmCancellationReasonCode, CorporateActionCancellation3.mmCancellationReason, CorporateActionCancellation4.mmCancellationReasonCode,
 					CorporateActionCancellation4.mmCancellationReason, CorporateActionCancellation2SD1.mmLocalLanguageCancellationReason);
-			elementContext_lazy = () -> CorporateActionStatusReason.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionCancellationReason";
@@ -727,6 +728,14 @@ public class CorporateActionStatusReason extends StatusReason {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionCancellationReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionStatusReason.class.getMethod("getCorporateActionCancellationReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionStatus corporateActionStatus;
@@ -766,7 +775,7 @@ public class CorporateActionStatusReason extends StatusReason {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionStatus = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CorporateActionStatusReason.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionStatus";
@@ -789,11 +798,6 @@ public class CorporateActionStatusReason extends StatusReason {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode
 	 * AcknowledgementReasonCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason
-	 * CorporateActionStatusReason}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -938,6 +942,11 @@ public class CorporateActionStatusReason extends StatusReason {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason
+	 * CorporateActionStatusReason}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -964,7 +973,7 @@ public class CorporateActionStatusReason extends StatusReason {
 					InstructionCancellationRequestStatus10Choice.mmAccepted, InstructionProcessingStatus25Choice.mmAcceptedForFurtherProcessing, AcceptedStatusReason10.mmReasonCode, AcceptedReason11Choice.mmCode,
 					AcceptedReason11Choice.mmProprietary, InstructionCancellationRequestStatus11Choice.mmAccepted, InstructionProcessingStatus29Choice.mmAcceptedForFurtherProcessing, InstructionCancellationRequestStatus12Choice.mmAccepted,
 					InstructionProcessingStatus30Choice.mmAcceptedForFurtherProcessing);
-			elementContext_lazy = () -> CorporateActionStatusReason.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AcceptedReason";
@@ -972,6 +981,14 @@ public class CorporateActionStatusReason extends StatusReason {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AcknowledgementReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionStatusReason.class.getMethod("getAcceptedReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionReversalReasonCode reversalReason;
@@ -985,11 +1002,6 @@ public class CorporateActionStatusReason extends StatusReason {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReasonCode
 	 * CorporateActionReversalReasonCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason
-	 * CorporateActionStatusReason}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1020,6 +1032,11 @@ public class CorporateActionStatusReason extends StatusReason {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason
+	 * CorporateActionStatusReason}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1035,7 +1052,7 @@ public class CorporateActionStatusReason extends StatusReason {
 			derivation_lazy = () -> Arrays.asList(CorporateActionReversalReason1Choice.mmCode, CorporateActionReversalReason1Choice.mmProprietary, CorporateActionReversalReason2Choice.mmCode,
 					CorporateActionReversalReason2Choice.mmProprietary, CorporateActionReversalReason3Choice.mmCode, CorporateActionReversalReason3Choice.mmProprietary, CorporateActionReversalReason4Choice.mmCode,
 					CorporateActionReversalReason4Choice.mmProprietary);
-			elementContext_lazy = () -> CorporateActionStatusReason.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReversalReason";
@@ -1043,6 +1060,14 @@ public class CorporateActionStatusReason extends StatusReason {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionReversalReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionStatusReason.class.getMethod("getReversalReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected FailedSettlementReasonCode movementFailureReason;
@@ -1056,11 +1081,6 @@ public class CorporateActionStatusReason extends StatusReason {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FailedSettlementReasonCode
 	 * FailedSettlementReasonCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason
-	 * CorporateActionStatusReason}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1075,6 +1095,11 @@ public class CorporateActionStatusReason extends StatusReason {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason
+	 * CorporateActionStatusReason}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1088,7 +1113,7 @@ public class CorporateActionStatusReason extends StatusReason {
 	public static final MMBusinessAttribute mmMovementFailureReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FailedSettlementReason1FormatChoice.mmCode, FailedSettlementReason1FormatChoice.mmProprietary, FailedMovement1.mmReason);
-			elementContext_lazy = () -> CorporateActionStatusReason.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MovementFailureReason";
@@ -1096,6 +1121,14 @@ public class CorporateActionStatusReason extends StatusReason {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FailedSettlementReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionStatusReason.class.getMethod("getMovementFailureReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RejectionReasonCode movementRejectionReason;
@@ -1127,7 +1160,7 @@ public class CorporateActionStatusReason extends StatusReason {
 	 */
 	public static final MMBusinessAttribute mmMovementRejectionReason = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CorporateActionStatusReason.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MovementRejectionReason";
@@ -1135,6 +1168,14 @@ public class CorporateActionStatusReason extends StatusReason {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionStatusReason.class.getMethod("getMovementRejectionReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1159,8 +1200,9 @@ public class CorporateActionStatusReason extends StatusReason {
 						InstructionProcessingStatus29Choice.mmDefaultAction, InstructionProcessingStatus29Choice.mmStandingInstruction, InstructionProcessingStatus30Choice.mmDefaultAction,
 						InstructionProcessingStatus30Choice.mmStandingInstruction);
 				superType_lazy = () -> StatusReason.mmObject();
-				element_lazy = () -> Arrays.asList(CorporateActionStatusReason.mmCorporateActionCancellationReason, CorporateActionStatusReason.mmCorporateActionStatus, CorporateActionStatusReason.mmAcceptedReason,
-						CorporateActionStatusReason.mmReversalReason, CorporateActionStatusReason.mmMovementFailureReason, CorporateActionStatusReason.mmMovementRejectionReason);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionStatusReason.mmCorporateActionCancellationReason, com.tools20022.repository.entity.CorporateActionStatusReason.mmCorporateActionStatus,
+						com.tools20022.repository.entity.CorporateActionStatusReason.mmAcceptedReason, com.tools20022.repository.entity.CorporateActionStatusReason.mmReversalReason,
+						com.tools20022.repository.entity.CorporateActionStatusReason.mmMovementFailureReason, com.tools20022.repository.entity.CorporateActionStatusReason.mmMovementRejectionReason);
 				derivationComponent_lazy = () -> Arrays.asList(PendingReason4Choice.mmObject(), PendingStatusReason2.mmObject(), PendingStatus2Choice.mmObject(), PendingReason5Choice.mmObject(), PendingStatusReason3.mmObject(),
 						PendingStatus5Choice.mmObject(), CancelledReason1Choice.mmObject(), CancelledStatusReason4.mmObject(), CancelledStatus1Choice.mmObject(), AcceptedReason1Choice.mmObject(), AcceptedStatusReason1.mmObject(),
 						AcceptedStatus1Choice.mmObject(), RejectedReason1Choice.mmObject(), RejectedStatusReason8.mmObject(), RejectedStatus1Choice.mmObject(), PendingCancellationReason1Choice.mmObject(),
@@ -1199,6 +1241,11 @@ public class CorporateActionStatusReason extends StatusReason {
 						RejectedReason22Choice.mmObject(), PendingStatusReason13.mmObject(), InstructionProcessingStatus30Choice.mmObject(), RejectedStatusReason22.mmObject(), RejectedReason23Choice.mmObject(),
 						PendingCancellationStatus8Choice.mmObject(), PendingCancellationStatusReason8.mmObject(), RejectedStatus24Choice.mmObject(), PendingStatus53Choice.mmObject(), PendingReason49Choice.mmObject(),
 						PendingCancellationReason6Choice.mmObject(), PendingStatusReason15.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionStatusReason.class;
 			}
 		});
 		return mmObject_lazy.get();

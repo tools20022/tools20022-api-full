@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Withdrawal limits for the account.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMTransactionAmounts2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransactionAmounts4", propOrder = {"displayFlag", "availableAmount", "dailyBalance", "weeklyBalance", "monthlyBalance"})
 public class ATMTransactionAmounts4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -387,6 +393,7 @@ public class ATMTransactionAmounts4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DispFlg")
 	public TrueFalseIndicator getDisplayFlag() {
 		return displayFlag;
 	}
@@ -395,6 +402,7 @@ public class ATMTransactionAmounts4 {
 		this.displayFlag = displayFlag;
 	}
 
+	@XmlElement(name = "AvlblAmt")
 	public ImpliedCurrencyAndAmount getAvailableAmount() {
 		return availableAmount;
 	}
@@ -403,6 +411,7 @@ public class ATMTransactionAmounts4 {
 		this.availableAmount = availableAmount;
 	}
 
+	@XmlElement(name = "DalyBal")
 	public DetailedAmount4 getDailyBalance() {
 		return dailyBalance;
 	}
@@ -411,6 +420,7 @@ public class ATMTransactionAmounts4 {
 		this.dailyBalance = dailyBalance;
 	}
 
+	@XmlElement(name = "WklyBal")
 	public DetailedAmount4 getWeeklyBalance() {
 		return weeklyBalance;
 	}
@@ -419,6 +429,7 @@ public class ATMTransactionAmounts4 {
 		this.weeklyBalance = weeklyBalance;
 	}
 
+	@XmlElement(name = "MnthlyBal")
 	public DetailedAmount4 getMonthlyBalance() {
 		return monthlyBalance;
 	}

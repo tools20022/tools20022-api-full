@@ -24,6 +24,10 @@ import com.tools20022.repository.codeset.WorkflowStatus1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details about the lottery.
@@ -54,6 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details about the lottery."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionSD6", propOrder = "lotteryRecordStatus")
 public class CorporateActionSD6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -113,6 +119,7 @@ public class CorporateActionSD6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LtryRcrdSts", required = true)
 	public WorkflowStatus1Code getLotteryRecordStatus() {
 		return lotteryRecordStatus;
 	}

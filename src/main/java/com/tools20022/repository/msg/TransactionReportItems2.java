@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Detailed description of the items that correspond to the parameters set in a
@@ -97,6 +101,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionReportItems2", propOrder = {"transactionIdentification", "TSUBaselineIdentification", "transactionStatus", "userTransactionReference", "purchaseOrderReference", "buyer", "seller", "buyerBank",
+		"buyerBankCountry", "sellerBank", "sellerBankCountry", "outstandingAmount", "pendingRequestForAction"})
 public class TransactionReportItems2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -667,6 +674,7 @@ public class TransactionReportItems2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -675,6 +683,7 @@ public class TransactionReportItems2 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "TSUBaselnId")
 	public DocumentIdentification3 getTSUBaselineIdentification() {
 		return tSUBaselineIdentification;
 	}
@@ -683,6 +692,7 @@ public class TransactionReportItems2 {
 		this.tSUBaselineIdentification = tSUBaselineIdentification;
 	}
 
+	@XmlElement(name = "TxSts", required = true)
 	public TransactionStatus1 getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -691,6 +701,7 @@ public class TransactionReportItems2 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "UsrTxRef", required = true)
 	public List<DocumentIdentification5> getUserTransactionReference() {
 		return userTransactionReference;
 	}
@@ -699,6 +710,7 @@ public class TransactionReportItems2 {
 		this.userTransactionReference = userTransactionReference;
 	}
 
+	@XmlElement(name = "PurchsOrdrRef", required = true)
 	public DocumentIdentification7 getPurchaseOrderReference() {
 		return purchaseOrderReference;
 	}
@@ -707,6 +719,7 @@ public class TransactionReportItems2 {
 		this.purchaseOrderReference = purchaseOrderReference;
 	}
 
+	@XmlElement(name = "Buyr", required = true)
 	public PartyIdentification9 getBuyer() {
 		return buyer;
 	}
@@ -715,6 +728,7 @@ public class TransactionReportItems2 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Sellr", required = true)
 	public PartyIdentification9 getSeller() {
 		return seller;
 	}
@@ -723,6 +737,7 @@ public class TransactionReportItems2 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "BuyrBk", required = true)
 	public BICIdentification1 getBuyerBank() {
 		return buyerBank;
 	}
@@ -731,6 +746,7 @@ public class TransactionReportItems2 {
 		this.buyerBank = buyerBank;
 	}
 
+	@XmlElement(name = "BuyrBkCtry", required = true)
 	public CountryCode getBuyerBankCountry() {
 		return buyerBankCountry;
 	}
@@ -739,6 +755,7 @@ public class TransactionReportItems2 {
 		this.buyerBankCountry = buyerBankCountry;
 	}
 
+	@XmlElement(name = "SellrBk", required = true)
 	public BICIdentification1 getSellerBank() {
 		return sellerBank;
 	}
@@ -747,6 +764,7 @@ public class TransactionReportItems2 {
 		this.sellerBank = sellerBank;
 	}
 
+	@XmlElement(name = "SellrBkCtry", required = true)
 	public CountryCode getSellerBankCountry() {
 		return sellerBankCountry;
 	}
@@ -755,6 +773,7 @@ public class TransactionReportItems2 {
 		this.sellerBankCountry = sellerBankCountry;
 	}
 
+	@XmlElement(name = "OutsdngAmt", required = true)
 	public CurrencyAndAmount getOutstandingAmount() {
 		return outstandingAmount;
 	}
@@ -763,6 +782,7 @@ public class TransactionReportItems2 {
 		this.outstandingAmount = outstandingAmount;
 	}
 
+	@XmlElement(name = "PdgReqForActn")
 	public List<PendingActivity1> getPendingRequestForAction() {
 		return pendingRequestForAction;
 	}

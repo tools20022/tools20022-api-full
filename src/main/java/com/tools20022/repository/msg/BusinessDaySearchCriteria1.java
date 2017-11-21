@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for system business day information.
@@ -73,6 +77,8 @@ import java.util.List;
  * "Defines the criteria used to search for system business day information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BusinessDaySearchCriteria1", propOrder = {"systemDate", "systemIdentification", "systemCurrency", "eventType", "closurePeriod"})
 public class BusinessDaySearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -304,6 +310,7 @@ public class BusinessDaySearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysDt")
 	public ISODate getSystemDate() {
 		return systemDate;
 	}
@@ -312,6 +319,7 @@ public class BusinessDaySearchCriteria1 {
 		this.systemDate = systemDate;
 	}
 
+	@XmlElement(name = "SysId")
 	public List<SystemIdentification2Choice> getSystemIdentification() {
 		return systemIdentification;
 	}
@@ -320,6 +328,7 @@ public class BusinessDaySearchCriteria1 {
 		this.systemIdentification = systemIdentification;
 	}
 
+	@XmlElement(name = "SysCcy")
 	public List<ActiveCurrencyCode> getSystemCurrency() {
 		return systemCurrency;
 	}
@@ -328,6 +337,7 @@ public class BusinessDaySearchCriteria1 {
 		this.systemCurrency = systemCurrency;
 	}
 
+	@XmlElement(name = "EvtTp")
 	public SystemEventType2Choice getEventType() {
 		return eventType;
 	}
@@ -336,6 +346,7 @@ public class BusinessDaySearchCriteria1 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "ClsrPrd")
 	public DateTimePeriodChoice getClosurePeriod() {
 		return closurePeriod;
 	}

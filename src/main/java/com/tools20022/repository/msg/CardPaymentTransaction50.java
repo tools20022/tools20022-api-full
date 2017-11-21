@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SystemIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of the original transaction.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentTransaction33}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransaction50", propOrder = {"saleReferenceIdentification", "transactionIdentification", "POIIdentification", "currencyConversion"})
 public class CardPaymentTransaction50 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -353,6 +359,7 @@ public class CardPaymentTransaction50 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SaleRefId")
 	public Max35Text getSaleReferenceIdentification() {
 		return saleReferenceIdentification;
 	}
@@ -361,6 +368,7 @@ public class CardPaymentTransaction50 {
 		this.saleReferenceIdentification = saleReferenceIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -369,6 +377,7 @@ public class CardPaymentTransaction50 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "POIId", required = true)
 	public GenericIdentification32 getPOIIdentification() {
 		return pOIIdentification;
 	}
@@ -377,6 +386,7 @@ public class CardPaymentTransaction50 {
 		this.pOIIdentification = pOIIdentification;
 	}
 
+	@XmlElement(name = "CcyConvs", required = true)
 	public CurrencyConversion3 getCurrencyConversion() {
 		return currencyConversion;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Demand;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the demand withdrawal notification.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details of the demand withdrawal notification."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingDemandWithdrawal1", propOrder = {"undertakingIdentification", "advisingPartyReferenceNumber", "demandDetails", "confirmerReferenceNumber"})
 public class UndertakingDemandWithdrawal1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -278,6 +284,7 @@ public class UndertakingDemandWithdrawal1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UdrtkgId", required = true)
 	public Undertaking6 getUndertakingIdentification() {
 		return undertakingIdentification;
 	}
@@ -286,6 +293,7 @@ public class UndertakingDemandWithdrawal1 {
 		this.undertakingIdentification = undertakingIdentification;
 	}
 
+	@XmlElement(name = "AdvsgPtyRefNb")
 	public Max35Text getAdvisingPartyReferenceNumber() {
 		return advisingPartyReferenceNumber;
 	}
@@ -294,6 +302,7 @@ public class UndertakingDemandWithdrawal1 {
 		this.advisingPartyReferenceNumber = advisingPartyReferenceNumber;
 	}
 
+	@XmlElement(name = "DmndDtls", required = true)
 	public Demand3 getDemandDetails() {
 		return demandDetails;
 	}
@@ -302,6 +311,7 @@ public class UndertakingDemandWithdrawal1 {
 		this.demandDetails = demandDetails;
 	}
 
+	@XmlElement(name = "CnfrmrRefNb")
 	public Max35Text getConfirmerReferenceNumber() {
 		return confirmerReferenceNumber;
 	}

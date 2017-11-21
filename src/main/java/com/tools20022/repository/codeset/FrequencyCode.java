@@ -29,27 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Frequency1Code
- * Frequency1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Frequency2Code
- * Frequency2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Frequency3Code
- * Frequency3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Frequency7Code
- * Frequency7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Frequency6Code
- * Frequency6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Frequency4Code
- * Frequency4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Frequency5Code
- * Frequency5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Frequency10Code
- * Frequency10Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.FrequencyCode#mmAnnual
@@ -82,6 +61,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * FrequencyCode.mmNever}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.FrequencyCode#mmRate
  * FrequencyCode.mmRate}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Frequency1Code
+ * Frequency1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Frequency2Code
+ * Frequency2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Frequency3Code
+ * Frequency3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Frequency7Code
+ * Frequency7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Frequency6Code
+ * Frequency6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Frequency4Code
+ * Frequency4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Frequency5Code
+ * Frequency5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Frequency10Code
+ * Frequency10Code}</li>
  * </ul>
  * </li>
  * <li>

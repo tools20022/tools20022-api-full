@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the transaction in the authorisation response contained in a
@@ -98,6 +102,8 @@ import java.util.List;
  * CardPaymentTransactionDetails2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransactionDetails11", propOrder = {"currency", "totalAmount", "detailedAmount", "validityDate", "accountType", "ICCRelatedData"})
 public class CardPaymentTransactionDetails11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -466,6 +472,7 @@ public class CardPaymentTransactionDetails11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -474,6 +481,7 @@ public class CardPaymentTransactionDetails11 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "TtlAmt", required = true)
 	public ImpliedCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -482,6 +490,7 @@ public class CardPaymentTransactionDetails11 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "DtldAmt")
 	public List<DetailedAmount2> getDetailedAmount() {
 		return detailedAmount;
 	}
@@ -490,6 +499,7 @@ public class CardPaymentTransactionDetails11 {
 		this.detailedAmount = detailedAmount;
 	}
 
+	@XmlElement(name = "VldtyDt")
 	public ISODate getValidityDate() {
 		return validityDate;
 	}
@@ -498,6 +508,7 @@ public class CardPaymentTransactionDetails11 {
 		this.validityDate = validityDate;
 	}
 
+	@XmlElement(name = "AcctTp")
 	public CardAccountType1Code getAccountType() {
 		return accountType;
 	}
@@ -506,6 +517,7 @@ public class CardPaymentTransactionDetails11 {
 		this.accountType = accountType;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}

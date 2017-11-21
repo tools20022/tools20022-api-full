@@ -25,9 +25,11 @@ import com.tools20022.repository.area.CashManagementPreviousVersion;
 import com.tools20022.repository.msg.GroupHeader43;
 import com.tools20022.repository.msg.ReportingRequest2;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -44,9 +46,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.060.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
@@ -74,6 +73,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.060.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -93,6 +95,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountReportingRequestV02", propOrder = {"groupHeader", "reportingRequest"})
 public class AccountReportingRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -130,6 +134,14 @@ public class AccountReportingRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader43.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountReportingRequestV02.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ReportingRequest2> reportingRequest;
 	/**
@@ -166,6 +178,14 @@ public class AccountReportingRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> ReportingRequest2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountReportingRequestV02.class.getMethod("getReportingRequest", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -179,7 +199,7 @@ public class AccountReportingRequestV02 {
 				rootElement = "Document";
 				xmlTag = "AcctRptgReq";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AccountReportingRequestV02.mmGroupHeader, AccountReportingRequestV02.mmReportingRequest);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.AccountReportingRequestV02.mmGroupHeader, com.tools20022.repository.area.camt.AccountReportingRequestV02.mmReportingRequest);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -189,10 +209,16 @@ public class AccountReportingRequestV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountReportingRequestV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader43 getGroupHeader() {
 		return groupHeader;
 	}
@@ -201,11 +227,18 @@ public class AccountReportingRequestV02 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "RptgReq", required = true)
 	public List<ReportingRequest2> getReportingRequest() {
 		return reportingRequest;
 	}
 
 	public void setReportingRequest(List<ReportingRequest2> reportingRequest) {
 		this.reportingRequest = reportingRequest;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.060.02.02")
+	static public class Document {
+		@XmlElement(name = "AcctRptgReq", required = true)
+		public AccountReportingRequestV02 messageBody;
 	}
 }

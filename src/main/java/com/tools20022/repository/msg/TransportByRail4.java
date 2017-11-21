@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.TransportByRail;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the transportation of goods by rail.
@@ -88,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.msg.TransportByRail2 TransportByRail2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportByRail4", propOrder = {"placeOfReceipt", "placeOfDelivery", "railCarrierName", "railCarrierCountry", "carrierAgentName", "carrierAgentCountry"})
 public class TransportByRail4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -479,6 +485,7 @@ public class TransportByRail4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcOfRct", required = true)
 	public Max35Text getPlaceOfReceipt() {
 		return placeOfReceipt;
 	}
@@ -487,6 +494,7 @@ public class TransportByRail4 {
 		this.placeOfReceipt = placeOfReceipt;
 	}
 
+	@XmlElement(name = "PlcOfDlvry", required = true)
 	public Max35Text getPlaceOfDelivery() {
 		return placeOfDelivery;
 	}
@@ -495,6 +503,7 @@ public class TransportByRail4 {
 		this.placeOfDelivery = placeOfDelivery;
 	}
 
+	@XmlElement(name = "RailCrrierNm")
 	public Max70Text getRailCarrierName() {
 		return railCarrierName;
 	}
@@ -503,6 +512,7 @@ public class TransportByRail4 {
 		this.railCarrierName = railCarrierName;
 	}
 
+	@XmlElement(name = "RailCrrierCtry")
 	public CountryCode getRailCarrierCountry() {
 		return railCarrierCountry;
 	}
@@ -511,6 +521,7 @@ public class TransportByRail4 {
 		this.railCarrierCountry = railCarrierCountry;
 	}
 
+	@XmlElement(name = "CrrierAgtNm")
 	public Max70Text getCarrierAgentName() {
 		return carrierAgentName;
 	}
@@ -519,6 +530,7 @@ public class TransportByRail4 {
 		this.carrierAgentName = carrierAgentName;
 	}
 
+	@XmlElement(name = "CrrierAgtCtry")
 	public CountryCode getCarrierAgentCountry() {
 		return carrierAgentCountry;
 	}

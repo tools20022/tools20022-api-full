@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies a multi-leg interest derivative.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies a multi-leg interest derivative."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DerivativeInterest3", propOrder = {"interestRate", "firstLegInterestRate", "otherNotionalCurrency", "otherLegInterestRate"})
 public class DerivativeInterest3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -285,6 +291,7 @@ public class DerivativeInterest3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IntrstRate", required = true)
 	public FloatingInterestRate8 getInterestRate() {
 		return interestRate;
 	}
@@ -293,6 +300,7 @@ public class DerivativeInterest3 {
 		this.interestRate = interestRate;
 	}
 
+	@XmlElement(name = "FrstLegIntrstRate")
 	public InterestRate8Choice getFirstLegInterestRate() {
 		return firstLegInterestRate;
 	}
@@ -301,6 +309,7 @@ public class DerivativeInterest3 {
 		this.firstLegInterestRate = firstLegInterestRate;
 	}
 
+	@XmlElement(name = "OthrNtnlCcy")
 	public ActiveOrHistoricCurrencyCode getOtherNotionalCurrency() {
 		return otherNotionalCurrency;
 	}
@@ -309,6 +318,7 @@ public class DerivativeInterest3 {
 		this.otherNotionalCurrency = otherNotionalCurrency;
 	}
 
+	@XmlElement(name = "OthrLegIntrstRate")
 	public InterestRate8Choice getOtherLegInterestRate() {
 		return otherLegInterestRate;
 	}

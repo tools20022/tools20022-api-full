@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.entity.ForeignExchangeTrade;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,25 +37,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmOpeningLegRelatedNonDeliverableTrade
- * ForeignExchangeTrade.mmOpeningLegRelatedNonDeliverableTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmClosingLegRelatedNonDeliverableTrade
- * ForeignExchangeTrade.mmClosingLegRelatedNonDeliverableTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FixingCondition#mmNonDeliverableTrade
- * FixingCondition.mmNonDeliverableTrade}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
- * ForeignExchangeTrade}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -70,6 +52,25 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade#mmClosingLeg
  * NonDeliverableTrade.mmClosingLeg}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
+ * ForeignExchangeTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmOpeningLegRelatedNonDeliverableTrade
+ * ForeignExchangeTrade.mmOpeningLegRelatedNonDeliverableTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmClosingLegRelatedNonDeliverableTrade
+ * ForeignExchangeTrade.mmClosingLegRelatedNonDeliverableTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FixingCondition#mmNonDeliverableTrade
+ * FixingCondition.mmNonDeliverableTrade}</li>
  * </ul>
  * </li>
  * <li>
@@ -102,11 +103,6 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade
-	 * NonDeliverableTrade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -125,6 +121,11 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade
+	 * NonDeliverableTrade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -139,7 +140,7 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 		{
 			derivation_lazy = () -> Arrays.asList(NonDeliverableForwardValuationConditions1.mmSettlementCurrency, NonDeliverableForwardValuationConditions2.mmSettlementCurrency, ValuationData1.mmSettlementCurrency,
 					ValuationData2.mmSettlementCurrency);
-			elementContext_lazy = () -> NonDeliverableTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementCurrency";
@@ -147,6 +148,14 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NonDeliverableTrade.class.getMethod("getSettlementCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected FixingCondition fixingConditions;
@@ -168,11 +177,6 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.FixingCondition
 	 * FixingCondition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade
-	 * NonDeliverableTrade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -184,6 +188,11 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	 * OpeningData2.mmValuationConditions}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade
+	 * NonDeliverableTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -200,7 +209,7 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	public static final MMBusinessAssociationEnd mmFixingConditions = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(OpeningData1.mmValuationConditions, OpeningData2.mmValuationConditions);
-			elementContext_lazy = () -> NonDeliverableTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FixingConditions";
@@ -252,7 +261,7 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmOpeningLeg = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> NonDeliverableTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OpeningLeg";
@@ -304,7 +313,7 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmClosingLeg = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> NonDeliverableTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosingLeg";
@@ -326,7 +335,13 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 				associationDomain_lazy = () -> Arrays.asList(ForeignExchangeTrade.mmOpeningLegRelatedNonDeliverableTrade, ForeignExchangeTrade.mmClosingLegRelatedNonDeliverableTrade,
 						com.tools20022.repository.entity.FixingCondition.mmNonDeliverableTrade);
 				superType_lazy = () -> ForeignExchangeTrade.mmObject();
-				element_lazy = () -> Arrays.asList(NonDeliverableTrade.mmSettlementCurrency, NonDeliverableTrade.mmFixingConditions, NonDeliverableTrade.mmOpeningLeg, NonDeliverableTrade.mmClosingLeg);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.NonDeliverableTrade.mmSettlementCurrency, com.tools20022.repository.entity.NonDeliverableTrade.mmFixingConditions,
+						com.tools20022.repository.entity.NonDeliverableTrade.mmOpeningLeg, com.tools20022.repository.entity.NonDeliverableTrade.mmClosingLeg);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return NonDeliverableTrade.class;
 			}
 		});
 		return mmObject_lazy.get();

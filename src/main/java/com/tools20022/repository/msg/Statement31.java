@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides statement details such as the account owner identification (ie, the
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Statement31", propOrder = {"statementIdentification", "statementDateAndTime", "updateType", "frequency", "reportNumber", "activityIndicator"})
 public class Statement31 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -354,6 +360,7 @@ public class Statement31 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtId", required = true)
 	public Max35Text getStatementIdentification() {
 		return statementIdentification;
 	}
@@ -362,6 +369,7 @@ public class Statement31 {
 		this.statementIdentification = statementIdentification;
 	}
 
+	@XmlElement(name = "StmtDtAndTm", required = true)
 	public DateAndDateTimeChoice getStatementDateAndTime() {
 		return statementDateAndTime;
 	}
@@ -370,6 +378,7 @@ public class Statement31 {
 		this.statementDateAndTime = statementDateAndTime;
 	}
 
+	@XmlElement(name = "UpdTp", required = true)
 	public StatementUpdateType1Code getUpdateType() {
 		return updateType;
 	}
@@ -378,6 +387,7 @@ public class Statement31 {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "Frqcy", required = true)
 	public EventFrequency6Code getFrequency() {
 		return frequency;
 	}
@@ -386,6 +396,7 @@ public class Statement31 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "RptNb")
 	public Exact5NumericText getReportNumber() {
 		return reportNumber;
 	}
@@ -394,6 +405,7 @@ public class Statement31 {
 		this.reportNumber = reportNumber;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}

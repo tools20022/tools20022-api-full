@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security.
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundSettlementParameters4", propOrder = {"settlementDate", "settlementPlace", "safekeepingPlace", "securitiesSettlementSystemIdentification", "receivingSideDetails", "deliveringSideDetails"})
 public class FundSettlementParameters4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -464,6 +470,7 @@ public class FundSettlementParameters4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmDt")
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
@@ -472,6 +479,7 @@ public class FundSettlementParameters4 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "SttlmPlc", required = true)
 	public PartyIdentification2Choice getSettlementPlace() {
 		return settlementPlace;
 	}
@@ -480,6 +488,7 @@ public class FundSettlementParameters4 {
 		this.settlementPlace = settlementPlace;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public PartyIdentification2Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -488,6 +497,7 @@ public class FundSettlementParameters4 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "SctiesSttlmSysId")
 	public Max35Text getSecuritiesSettlementSystemIdentification() {
 		return securitiesSettlementSystemIdentification;
 	}
@@ -496,6 +506,7 @@ public class FundSettlementParameters4 {
 		this.securitiesSettlementSystemIdentification = securitiesSettlementSystemIdentification;
 	}
 
+	@XmlElement(name = "RcvgSdDtls", required = true)
 	public ReceivingPartiesAndAccount3 getReceivingSideDetails() {
 		return receivingSideDetails;
 	}
@@ -504,6 +515,7 @@ public class FundSettlementParameters4 {
 		this.receivingSideDetails = receivingSideDetails;
 	}
 
+	@XmlElement(name = "DlvrgSdDtls")
 	public DeliveringPartiesAndAccount3 getDeliveringSideDetails() {
 		return deliveringSideDetails;
 	}

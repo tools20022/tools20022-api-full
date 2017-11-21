@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Outcome of the authorisation.
@@ -81,6 +85,8 @@ import java.util.List;
  * AuthorisationResult6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AuthorisationResult7", propOrder = {"authorisationEntity", "transactionResponse", "authorisationCode", "additionalInformation"})
 public class AuthorisationResult7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -332,6 +338,7 @@ public class AuthorisationResult7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AuthstnNtty")
 	public GenericIdentification75 getAuthorisationEntity() {
 		return authorisationEntity;
 	}
@@ -340,6 +347,7 @@ public class AuthorisationResult7 {
 		this.authorisationEntity = authorisationEntity;
 	}
 
+	@XmlElement(name = "TxRspn", required = true)
 	public ResponseType2 getTransactionResponse() {
 		return transactionResponse;
 	}
@@ -348,6 +356,7 @@ public class AuthorisationResult7 {
 		this.transactionResponse = transactionResponse;
 	}
 
+	@XmlElement(name = "AuthstnCd")
 	public Min6Max8Text getAuthorisationCode() {
 		return authorisationCode;
 	}
@@ -356,6 +365,7 @@ public class AuthorisationResult7 {
 		this.authorisationCode = authorisationCode;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<ActionMessage3> getAdditionalInformation() {
 		return additionalInformation;
 	}

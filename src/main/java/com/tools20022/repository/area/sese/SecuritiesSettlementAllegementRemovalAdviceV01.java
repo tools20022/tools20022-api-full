@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.DocumentIdentification11;
 import com.tools20022.repository.msg.Extension2;
 import com.tools20022.repository.msg.TransactionDetails13;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -62,9 +64,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.029.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -101,6 +100,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.029.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -120,6 +122,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesSettlementAllegementRemovalAdviceV01", propOrder = {"identification", "details", "messageOriginator", "messageRecipient", "extension"})
 public class SecuritiesSettlementAllegementRemovalAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +165,14 @@ public class SecuritiesSettlementAllegementRemovalAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification11.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementAllegementRemovalAdviceV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionDetails13 details;
 	/**
@@ -195,6 +207,14 @@ public class SecuritiesSettlementAllegementRemovalAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionDetails13.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementAllegementRemovalAdviceV01.class.getMethod("getDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification10Choice messageOriginator;
@@ -231,6 +251,14 @@ public class SecuritiesSettlementAllegementRemovalAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementAllegementRemovalAdviceV01.class.getMethod("getMessageOriginator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification10Choice messageRecipient;
@@ -270,6 +298,14 @@ public class SecuritiesSettlementAllegementRemovalAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementAllegementRemovalAdviceV01.class.getMethod("getMessageRecipient", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension2> extension;
 	/**
@@ -306,6 +342,14 @@ public class SecuritiesSettlementAllegementRemovalAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesSettlementAllegementRemovalAdviceV01.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -319,8 +363,9 @@ public class SecuritiesSettlementAllegementRemovalAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmAllgmtRmvlAdvc";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementAllegementRemovalAdviceV01.mmIdentification, SecuritiesSettlementAllegementRemovalAdviceV01.mmDetails,
-						SecuritiesSettlementAllegementRemovalAdviceV01.mmMessageOriginator, SecuritiesSettlementAllegementRemovalAdviceV01.mmMessageRecipient, SecuritiesSettlementAllegementRemovalAdviceV01.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01.mmIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01.mmDetails, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -330,10 +375,16 @@ public class SecuritiesSettlementAllegementRemovalAdviceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesSettlementAllegementRemovalAdviceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification11 getIdentification() {
 		return identification;
 	}
@@ -342,6 +393,7 @@ public class SecuritiesSettlementAllegementRemovalAdviceV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Dtls", required = true)
 	public TransactionDetails13 getDetails() {
 		return details;
 	}
@@ -350,6 +402,7 @@ public class SecuritiesSettlementAllegementRemovalAdviceV01 {
 		this.details = details;
 	}
 
+	@XmlElement(name = "MsgOrgtr")
 	public PartyIdentification10Choice getMessageOriginator() {
 		return messageOriginator;
 	}
@@ -358,6 +411,7 @@ public class SecuritiesSettlementAllegementRemovalAdviceV01 {
 		this.messageOriginator = messageOriginator;
 	}
 
+	@XmlElement(name = "MsgRcpt")
 	public PartyIdentification10Choice getMessageRecipient() {
 		return messageRecipient;
 	}
@@ -366,11 +420,18 @@ public class SecuritiesSettlementAllegementRemovalAdviceV01 {
 		this.messageRecipient = messageRecipient;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension2> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension2> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.029.01.01")
+	static public class Document {
+		@XmlElement(name = "SctiesSttlmAllgmtRmvlAdvc", required = true)
+		public SecuritiesSettlementAllegementRemovalAdviceV01 messageBody;
 	}
 }

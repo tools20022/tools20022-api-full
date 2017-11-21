@@ -24,6 +24,10 @@ import com.tools20022.repository.area.catp.ATMInquiryResponseV02;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the response of an ATM inquiry from an ATM manager.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information related to the response of an ATM inquiry from an ATM manager."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMInquiryResponse2", propOrder = {"environment", "context", "transaction"})
 public class ATMInquiryResponse2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -210,6 +216,7 @@ public class ATMInquiryResponse2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public ATMEnvironment12 getEnvironment() {
 		return environment;
 	}
@@ -218,6 +225,7 @@ public class ATMInquiryResponse2 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Cntxt", required = true)
 	public ATMContext15 getContext() {
 		return context;
 	}
@@ -226,6 +234,7 @@ public class ATMInquiryResponse2 {
 		this.context = context;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public ATMTransaction21 getTransaction() {
 		return transaction;
 	}

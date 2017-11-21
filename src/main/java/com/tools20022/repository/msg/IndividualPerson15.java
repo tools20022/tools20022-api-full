@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.PersonName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Human entity, as distinguished from a corporate entity (which is sometimes
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualPerson15", propOrder = {"name", "birthDate", "countryAndResidentialStatus", "otherIdentification", "beneficiaryCertificationCompletion"})
 public class IndividualPerson15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -345,6 +351,7 @@ public class IndividualPerson15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max350Text getName() {
 		return name;
 	}
@@ -353,6 +360,7 @@ public class IndividualPerson15 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "BirthDt")
 	public ISODate getBirthDate() {
 		return birthDate;
 	}
@@ -361,6 +369,7 @@ public class IndividualPerson15 {
 		this.birthDate = birthDate;
 	}
 
+	@XmlElement(name = "CtryAndResdtlSts")
 	public CountryAndResidentialStatusType1 getCountryAndResidentialStatus() {
 		return countryAndResidentialStatus;
 	}
@@ -369,6 +378,7 @@ public class IndividualPerson15 {
 		this.countryAndResidentialStatus = countryAndResidentialStatus;
 	}
 
+	@XmlElement(name = "OthrId")
 	public GenericIdentification12 getOtherIdentification() {
 		return otherIdentification;
 	}
@@ -377,6 +387,7 @@ public class IndividualPerson15 {
 		this.otherIdentification = otherIdentification;
 	}
 
+	@XmlElement(name = "BnfcryCertfctnCmpltn")
 	public BeneficiaryCertificationCompletion1Code getBeneficiaryCertificationCompletion() {
 		return beneficiaryCertificationCompletion;
 	}

@@ -30,6 +30,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status report of the individual orders of a bulk or multiple order that was
@@ -136,6 +140,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualOrderStatusAndReason2", propOrder = {"masterReference", "orderReference", "clientReference", "dealReference", "cancellationReference", "status", "cancelled", "conditionallyAccepted", "rejected", "suspended",
+		"inRepair", "partiallySettled", "repairedConditions", "statusInitiator", "orderData", "newDetails"})
 public class IndividualOrderStatusAndReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1074,6 +1081,7 @@ public class IndividualOrderStatusAndReason2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -1082,6 +1090,7 @@ public class IndividualOrderStatusAndReason2 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -1090,6 +1099,7 @@ public class IndividualOrderStatusAndReason2 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -1098,6 +1108,7 @@ public class IndividualOrderStatusAndReason2 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "DealRef")
 	public Max35Text getDealReference() {
 		return dealReference;
 	}
@@ -1106,6 +1117,7 @@ public class IndividualOrderStatusAndReason2 {
 		this.dealReference = dealReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -1114,6 +1126,7 @@ public class IndividualOrderStatusAndReason2 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public OrderStatus4Code getStatus() {
 		return status;
 	}
@@ -1122,6 +1135,7 @@ public class IndividualOrderStatusAndReason2 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Canc", required = true)
 	public CancelledStatus2 getCancelled() {
 		return cancelled;
 	}
@@ -1130,6 +1144,7 @@ public class IndividualOrderStatusAndReason2 {
 		this.cancelled = cancelled;
 	}
 
+	@XmlElement(name = "CondlyAccptd", required = true)
 	public ConditionallyAcceptedStatus2 getConditionallyAccepted() {
 		return conditionallyAccepted;
 	}
@@ -1138,6 +1153,7 @@ public class IndividualOrderStatusAndReason2 {
 		this.conditionallyAccepted = conditionallyAccepted;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public List<RejectedStatus6> getRejected() {
 		return rejected;
 	}
@@ -1146,6 +1162,7 @@ public class IndividualOrderStatusAndReason2 {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Sspd", required = true)
 	public SuspendedStatus2 getSuspended() {
 		return suspended;
 	}
@@ -1154,6 +1171,7 @@ public class IndividualOrderStatusAndReason2 {
 		this.suspended = suspended;
 	}
 
+	@XmlElement(name = "InRpr", required = true)
 	public InRepairStatus2 getInRepair() {
 		return inRepair;
 	}
@@ -1162,6 +1180,7 @@ public class IndividualOrderStatusAndReason2 {
 		this.inRepair = inRepair;
 	}
 
+	@XmlElement(name = "PrtlySttld", required = true)
 	public PartiallySettledStatus1 getPartiallySettled() {
 		return partiallySettled;
 	}
@@ -1170,6 +1189,7 @@ public class IndividualOrderStatusAndReason2 {
 		this.partiallySettled = partiallySettled;
 	}
 
+	@XmlElement(name = "RprdConds")
 	public RepairedConditions3 getRepairedConditions() {
 		return repairedConditions;
 	}
@@ -1178,6 +1198,7 @@ public class IndividualOrderStatusAndReason2 {
 		this.repairedConditions = repairedConditions;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification2Choice getStatusInitiator() {
 		return statusInitiator;
 	}
@@ -1186,6 +1207,7 @@ public class IndividualOrderStatusAndReason2 {
 		this.statusInitiator = statusInitiator;
 	}
 
+	@XmlElement(name = "OrdrData")
 	public FundOrderData1 getOrderData() {
 		return orderData;
 	}
@@ -1194,6 +1216,7 @@ public class IndividualOrderStatusAndReason2 {
 		this.orderData = orderData;
 	}
 
+	@XmlElement(name = "NewDtls")
 	public ExpectedExecutionDetails2 getNewDetails() {
 		return newDetails;
 	}

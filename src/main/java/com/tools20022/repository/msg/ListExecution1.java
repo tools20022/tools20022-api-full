@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Negotiation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about of a list that must be executed.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides details about of a list that must be executed."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ListExecution1", propOrder = {"listIdentification", "clientBidIdentification", "bidIdentification"})
 public class ListExecution1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -222,6 +228,7 @@ public class ListExecution1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ListId", required = true)
 	public Max35Text getListIdentification() {
 		return listIdentification;
 	}
@@ -230,6 +237,7 @@ public class ListExecution1 {
 		this.listIdentification = listIdentification;
 	}
 
+	@XmlElement(name = "ClntBidId")
 	public Max35Text getClientBidIdentification() {
 		return clientBidIdentification;
 	}
@@ -238,6 +246,7 @@ public class ListExecution1 {
 		this.clientBidIdentification = clientBidIdentification;
 	}
 
+	@XmlElement(name = "BidId", required = true)
 	public Max35Text getBidIdentification() {
 		return bidIdentification;
 	}

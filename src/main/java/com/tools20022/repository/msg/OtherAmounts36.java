@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies other amounts pertaining to the transaction.
@@ -99,6 +103,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies other amounts pertaining to the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherAmounts36", propOrder = {"accruedInterestAmount", "chargesFees", "tradeAmount", "executingBrokerAmount", "localTax", "localBrokerCommission", "other", "stampDuty", "transactionTax", "withholdingTax", "consumptionTax"})
 public class OtherAmounts36 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -625,6 +631,7 @@ public class OtherAmounts36 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt")
 	public AmountAndDirection72 getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -633,6 +640,7 @@ public class OtherAmounts36 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "ChrgsFees")
 	public AmountAndDirection72 getChargesFees() {
 		return chargesFees;
 	}
@@ -641,6 +649,7 @@ public class OtherAmounts36 {
 		this.chargesFees = chargesFees;
 	}
 
+	@XmlElement(name = "TradAmt")
 	public AmountAndDirection72 getTradeAmount() {
 		return tradeAmount;
 	}
@@ -649,6 +658,7 @@ public class OtherAmounts36 {
 		this.tradeAmount = tradeAmount;
 	}
 
+	@XmlElement(name = "ExctgBrkrAmt")
 	public AmountAndDirection72 getExecutingBrokerAmount() {
 		return executingBrokerAmount;
 	}
@@ -657,6 +667,7 @@ public class OtherAmounts36 {
 		this.executingBrokerAmount = executingBrokerAmount;
 	}
 
+	@XmlElement(name = "LclTax")
 	public AmountAndDirection72 getLocalTax() {
 		return localTax;
 	}
@@ -665,6 +676,7 @@ public class OtherAmounts36 {
 		this.localTax = localTax;
 	}
 
+	@XmlElement(name = "LclBrkrComssn")
 	public AmountAndDirection72 getLocalBrokerCommission() {
 		return localBrokerCommission;
 	}
@@ -673,6 +685,7 @@ public class OtherAmounts36 {
 		this.localBrokerCommission = localBrokerCommission;
 	}
 
+	@XmlElement(name = "Othr")
 	public AmountAndDirection72 getOther() {
 		return other;
 	}
@@ -681,6 +694,7 @@ public class OtherAmounts36 {
 		this.other = other;
 	}
 
+	@XmlElement(name = "StmpDty")
 	public AmountAndDirection72 getStampDuty() {
 		return stampDuty;
 	}
@@ -689,6 +703,7 @@ public class OtherAmounts36 {
 		this.stampDuty = stampDuty;
 	}
 
+	@XmlElement(name = "TxTax")
 	public AmountAndDirection72 getTransactionTax() {
 		return transactionTax;
 	}
@@ -697,6 +712,7 @@ public class OtherAmounts36 {
 		this.transactionTax = transactionTax;
 	}
 
+	@XmlElement(name = "WhldgTax")
 	public AmountAndDirection72 getWithholdingTax() {
 		return withholdingTax;
 	}
@@ -705,6 +721,7 @@ public class OtherAmounts36 {
 		this.withholdingTax = withholdingTax;
 	}
 
+	@XmlElement(name = "CsmptnTax")
 	public AmountAndDirection72 getConsumptionTax() {
 		return consumptionTax;
 	}

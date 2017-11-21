@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the interest rate derivative specific elements for interest rate
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestRateDerivative5", propOrder = {"underlyingType", "underlyingBond", "swaptionNotionalCurrency", "underlyingSwapMaturityDate", "inflationIndex", "interestRateReference"})
 public class InterestRateDerivative5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -387,6 +393,7 @@ public class InterestRateDerivative5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UndrlygTp", required = true)
 	public InterestRateDerivative2Choice getUnderlyingType() {
 		return underlyingType;
 	}
@@ -395,6 +402,7 @@ public class InterestRateDerivative5 {
 		this.underlyingType = underlyingType;
 	}
 
+	@XmlElement(name = "UndrlygBd")
 	public BondDerivative2 getUnderlyingBond() {
 		return underlyingBond;
 	}
@@ -403,6 +411,7 @@ public class InterestRateDerivative5 {
 		this.underlyingBond = underlyingBond;
 	}
 
+	@XmlElement(name = "SwptnNtnlCcy")
 	public ActiveCurrencyCode getSwaptionNotionalCurrency() {
 		return swaptionNotionalCurrency;
 	}
@@ -411,6 +420,7 @@ public class InterestRateDerivative5 {
 		this.swaptionNotionalCurrency = swaptionNotionalCurrency;
 	}
 
+	@XmlElement(name = "UndrlygSwpMtrtyDt")
 	public ISODate getUnderlyingSwapMaturityDate() {
 		return underlyingSwapMaturityDate;
 	}
@@ -419,6 +429,7 @@ public class InterestRateDerivative5 {
 		this.underlyingSwapMaturityDate = underlyingSwapMaturityDate;
 	}
 
+	@XmlElement(name = "InfltnIndx")
 	public InflationIndex1Choice getInflationIndex() {
 		return inflationIndex;
 	}
@@ -427,6 +438,7 @@ public class InterestRateDerivative5 {
 		this.inflationIndex = inflationIndex;
 	}
 
+	@XmlElement(name = "IntrstRateRef", required = true)
 	public FloatingInterestRate8 getInterestRateReference() {
 		return interestRateReference;
 	}

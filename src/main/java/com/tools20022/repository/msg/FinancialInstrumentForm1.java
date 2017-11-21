@@ -25,6 +25,10 @@ import com.tools20022.repository.choice.FormOfSecurity5Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates the form of the financial Instrument.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the form of the financial Instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentForm1", propOrder = {"bookingAppearance", "legalForm"})
 public class FinancialInstrumentForm1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class FinancialInstrumentForm1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BookgApprnc")
 	public Appearance2Choice getBookingAppearance() {
 		return bookingAppearance;
 	}
@@ -168,6 +175,7 @@ public class FinancialInstrumentForm1 {
 		this.bookingAppearance = bookingAppearance;
 	}
 
+	@XmlElement(name = "LglForm")
 	public FormOfSecurity5Choice getLegalForm() {
 		return legalForm;
 	}

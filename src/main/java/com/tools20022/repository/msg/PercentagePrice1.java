@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Price expressed as a percentage price.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Price expressed as a percentage price."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PercentagePrice1", propOrder = {"percentagePriceType", "priceValue"})
 public class PercentagePrice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class PercentagePrice1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PctgPricTp", required = true)
 	public PriceRateType3Code getPercentagePriceType() {
 		return percentagePriceType;
 	}
@@ -183,6 +190,7 @@ public class PercentagePrice1 {
 		this.percentagePriceType = percentagePriceType;
 	}
 
+	@XmlElement(name = "PricVal", required = true)
 	public PercentageRate getPriceValue() {
 		return priceValue;
 	}

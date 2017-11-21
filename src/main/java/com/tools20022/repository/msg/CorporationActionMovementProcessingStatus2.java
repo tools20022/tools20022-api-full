@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides processing status of the movement cancellation request.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides processing status of the movement cancellation request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporationActionMovementProcessingStatus2", propOrder = {"status", "additionalInformation"})
 public class CorporationActionMovementProcessingStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class CorporationActionMovementProcessingStatus2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public ProcessedStatus2FormatChoice getStatus() {
 		return status;
 	}
@@ -181,6 +188,7 @@ public class CorporationActionMovementProcessingStatus2 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}

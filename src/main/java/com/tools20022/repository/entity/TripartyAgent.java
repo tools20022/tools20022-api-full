@@ -67,6 +67,11 @@ public class TripartyAgent extends CollateralPartyRole {
 				definition = "Agent which acts as an intermediary between two parties for the administration of tri-party collateral transactions.";
 				superType_lazy = () -> CollateralPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TripartyAgent.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.AccountNotification13;
 import com.tools20022.repository.msg.GroupHeader59;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.NotificationtoReceiveISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -44,9 +46,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.057.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
@@ -79,6 +78,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.057.001.05}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -94,6 +96,8 @@ import java.util.List;
  * NotificationToReceiveV04}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NotificationToReceiveV05", propOrder = {"groupHeader", "notification", "supplementaryData"})
 public class NotificationToReceiveV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -136,6 +140,14 @@ public class NotificationToReceiveV05 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader59.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationToReceiveV05.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AccountNotification13 notification;
@@ -181,6 +193,14 @@ public class NotificationToReceiveV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> AccountNotification13.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationToReceiveV05.class.getMethod("getNotification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -224,6 +244,14 @@ public class NotificationToReceiveV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationToReceiveV05.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -237,7 +265,8 @@ public class NotificationToReceiveV05 {
 				rootElement = "Document";
 				xmlTag = "NtfctnToRcv";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(NotificationToReceiveV05.mmGroupHeader, NotificationToReceiveV05.mmNotification, NotificationToReceiveV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveV05.mmGroupHeader, com.tools20022.repository.area.camt.NotificationToReceiveV05.mmNotification,
+						com.tools20022.repository.area.camt.NotificationToReceiveV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -247,10 +276,16 @@ public class NotificationToReceiveV05 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return NotificationToReceiveV05.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader59 getGroupHeader() {
 		return groupHeader;
 	}
@@ -259,6 +294,7 @@ public class NotificationToReceiveV05 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "Ntfctn", required = true)
 	public AccountNotification13 getNotification() {
 		return notification;
 	}
@@ -267,11 +303,18 @@ public class NotificationToReceiveV05 {
 		this.notification = notification;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.057.05.05")
+	static public class Document {
+		@XmlElement(name = "NtfctnToRcv", required = true)
+		public NotificationToReceiveV05 messageBody;
 	}
 }

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a party. The party can be identified by providing the
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification59", propOrder = {"partyName", "anyBIC", "accountNumber", "address", "clearingSystemIdentification", "legalEntityIdentifier"})
 public class PartyIdentification59 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -392,6 +398,7 @@ public class PartyIdentification59 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyNm")
 	public Max34Text getPartyName() {
 		return partyName;
 	}
@@ -400,6 +407,7 @@ public class PartyIdentification59 {
 		this.partyName = partyName;
 	}
 
+	@XmlElement(name = "AnyBIC")
 	public PartyIdentification44 getAnyBIC() {
 		return anyBIC;
 	}
@@ -408,6 +416,7 @@ public class PartyIdentification59 {
 		this.anyBIC = anyBIC;
 	}
 
+	@XmlElement(name = "AcctNb")
 	public Max34Text getAccountNumber() {
 		return accountNumber;
 	}
@@ -416,6 +425,7 @@ public class PartyIdentification59 {
 		this.accountNumber = accountNumber;
 	}
 
+	@XmlElement(name = "Adr")
 	public Max105Text getAddress() {
 		return address;
 	}
@@ -424,6 +434,7 @@ public class PartyIdentification59 {
 		this.address = address;
 	}
 
+	@XmlElement(name = "ClrSysId")
 	public ClearingSystemIdentification2Choice getClearingSystemIdentification() {
 		return clearingSystemIdentification;
 	}
@@ -432,6 +443,7 @@ public class PartyIdentification59 {
 		this.clearingSystemIdentification = clearingSystemIdentification;
 	}
 
+	@XmlElement(name = "LglNttyIdr")
 	public LEIIdentifier getLegalEntityIdentifier() {
 		return legalEntityIdentifier;
 	}

@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details on a trading venue as per ISO 10383.
@@ -115,6 +119,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details on a trading venue as per ISO 10383."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarketIdentification92", propOrder = {"operating", "segment", "type", "category", "institutionName", "acronym", "city", "country", "authorityName", "webSite", "note", "modification", "creationDate", "validityPeriod",
+		"statusDate", "lastUpdatedDate"})
 public class MarketIdentification92 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -858,6 +865,7 @@ public class MarketIdentification92 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Oprg", required = true)
 	public MICIdentifier getOperating() {
 		return operating;
 	}
@@ -866,6 +874,7 @@ public class MarketIdentification92 {
 		this.operating = operating;
 	}
 
+	@XmlElement(name = "Sgmt", required = true)
 	public MICIdentifier getSegment() {
 		return segment;
 	}
@@ -874,6 +883,7 @@ public class MarketIdentification92 {
 		this.segment = segment;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public MarketIdentification1Code getType() {
 		return type;
 	}
@@ -882,6 +892,7 @@ public class MarketIdentification92 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Ctgy")
 	public TradingVenue1Code getCategory() {
 		return category;
 	}
@@ -890,6 +901,7 @@ public class MarketIdentification92 {
 		this.category = category;
 	}
 
+	@XmlElement(name = "InstnNm", required = true)
 	public Max450Text getInstitutionName() {
 		return institutionName;
 	}
@@ -898,6 +910,7 @@ public class MarketIdentification92 {
 		this.institutionName = institutionName;
 	}
 
+	@XmlElement(name = "Acrnm")
 	public Max35Text getAcronym() {
 		return acronym;
 	}
@@ -906,6 +919,7 @@ public class MarketIdentification92 {
 		this.acronym = acronym;
 	}
 
+	@XmlElement(name = "City")
 	public Max35Text getCity() {
 		return city;
 	}
@@ -914,6 +928,7 @@ public class MarketIdentification92 {
 		this.city = city;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCodeAndName3 getCountry() {
 		return country;
 	}
@@ -922,6 +937,7 @@ public class MarketIdentification92 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "AuthrtyNm")
 	public Max450Text getAuthorityName() {
 		return authorityName;
 	}
@@ -930,6 +946,7 @@ public class MarketIdentification92 {
 		this.authorityName = authorityName;
 	}
 
+	@XmlElement(name = "WebSite")
 	public Max210Text getWebSite() {
 		return webSite;
 	}
@@ -938,6 +955,7 @@ public class MarketIdentification92 {
 		this.webSite = webSite;
 	}
 
+	@XmlElement(name = "Note")
 	public Max450Text getNote() {
 		return note;
 	}
@@ -946,6 +964,7 @@ public class MarketIdentification92 {
 		this.note = note;
 	}
 
+	@XmlElement(name = "Mod")
 	public Modification1Code getModification() {
 		return modification;
 	}
@@ -954,6 +973,7 @@ public class MarketIdentification92 {
 		this.modification = modification;
 	}
 
+	@XmlElement(name = "CreDt")
 	public ISODate getCreationDate() {
 		return creationDate;
 	}
@@ -962,6 +982,7 @@ public class MarketIdentification92 {
 		this.creationDate = creationDate;
 	}
 
+	@XmlElement(name = "VldtyPrd", required = true)
 	public Period4Choice getValidityPeriod() {
 		return validityPeriod;
 	}
@@ -970,6 +991,7 @@ public class MarketIdentification92 {
 		this.validityPeriod = validityPeriod;
 	}
 
+	@XmlElement(name = "StsDt")
 	public ISODate getStatusDate() {
 		return statusDate;
 	}
@@ -978,6 +1000,7 @@ public class MarketIdentification92 {
 		this.statusDate = statusDate;
 	}
 
+	@XmlElement(name = "LastUpdtdDt")
 	public ISODateTime getLastUpdatedDate() {
 		return lastUpdatedDate;
 	}

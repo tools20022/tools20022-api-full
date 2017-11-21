@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details for the tax calculation method D.
@@ -62,6 +66,8 @@ import java.util.List;
  * definition} = "Provides the details for the tax calculation method D."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingMethod3", propOrder = {"serviceTaxPriceAmount", "taxIdentification"})
 public class BillingMethod3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class BillingMethod3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SvcTaxPricAmt", required = true)
 	public AmountAndDirection34 getServiceTaxPriceAmount() {
 		return serviceTaxPriceAmount;
 	}
@@ -188,6 +195,7 @@ public class BillingMethod3 {
 		this.serviceTaxPriceAmount = serviceTaxPriceAmount;
 	}
 
+	@XmlElement(name = "TaxId", required = true)
 	public List<BillingServicesTax2> getTaxIdentification() {
 		return taxIdentification;
 	}

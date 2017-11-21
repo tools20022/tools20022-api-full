@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.ConfirmationRejectedStatus2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status of the confirmation.
@@ -67,6 +71,8 @@ import java.util.List;
  * definition} = "Status of the confirmation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ConfirmationStatus1Choice", propOrder = {"confirmationRejected", "amendmentRejected", "status"})
 public class ConfirmationStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -233,6 +239,7 @@ public class ConfirmationStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ConfRjctd", required = true)
 	public List<ConfirmationRejectedStatus2> getConfirmationRejected() {
 		return confirmationRejected;
 	}
@@ -241,6 +248,7 @@ public class ConfirmationStatus1Choice {
 		this.confirmationRejected = confirmationRejected;
 	}
 
+	@XmlElement(name = "AmdmntRjctd", required = true)
 	public List<ConfirmationRejectedStatus2> getAmendmentRejected() {
 		return amendmentRejected;
 	}
@@ -249,6 +257,7 @@ public class ConfirmationStatus1Choice {
 		this.amendmentRejected = amendmentRejected;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public OrderConfirmationStatus1Code getStatus() {
 		return status;
 	}

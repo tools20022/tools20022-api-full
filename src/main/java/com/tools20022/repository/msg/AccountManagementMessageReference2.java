@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the message reference of the account management instruction
@@ -91,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountManagementMessageReference1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountManagementMessageReference2", propOrder = {"linkedReference", "statusRequestType", "accountApplicationIdentification", "investmentAccount"})
 public class AccountManagementMessageReference2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -341,6 +347,7 @@ public class AccountManagementMessageReference2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LkdRef")
 	public LinkedMessage2Choice getLinkedReference() {
 		return linkedReference;
 	}
@@ -349,6 +356,7 @@ public class AccountManagementMessageReference2 {
 		this.linkedReference = linkedReference;
 	}
 
+	@XmlElement(name = "StsReqTp", required = true)
 	public AccountManagementType1Code getStatusRequestType() {
 		return statusRequestType;
 	}
@@ -357,6 +365,7 @@ public class AccountManagementMessageReference2 {
 		this.statusRequestType = statusRequestType;
 	}
 
+	@XmlElement(name = "AcctApplId")
 	public Max35Text getAccountApplicationIdentification() {
 		return accountApplicationIdentification;
 	}
@@ -365,6 +374,7 @@ public class AccountManagementMessageReference2 {
 		this.accountApplicationIdentification = accountApplicationIdentification;
 	}
 
+	@XmlElement(name = "InvstmtAcct")
 	public InvestmentAccount45 getInvestmentAccount() {
 		return investmentAccount;
 	}

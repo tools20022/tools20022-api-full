@@ -67,6 +67,11 @@ public class ETCServiceProvider extends SecuritiesTradePartyRole {
 				definition = "Party that provides electronic trade confirmation services to its clients. For example, trade and allocation matching.";
 				superType_lazy = () -> SecuritiesTradePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ETCServiceProvider.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

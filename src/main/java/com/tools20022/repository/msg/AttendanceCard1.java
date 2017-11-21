@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies details related to the attendance card.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies details related to the attendance card."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AttendanceCard1", propOrder = {"attendanceCardLabelling", "deliveryMethod", "otherAddress"})
 public class AttendanceCard1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -226,6 +232,7 @@ public class AttendanceCard1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AttndncCardLbllg")
 	public Max105Text getAttendanceCardLabelling() {
 		return attendanceCardLabelling;
 	}
@@ -234,6 +241,7 @@ public class AttendanceCard1 {
 		this.attendanceCardLabelling = attendanceCardLabelling;
 	}
 
+	@XmlElement(name = "DlvryMtd", required = true)
 	public DeliveryPlace1Code getDeliveryMethod() {
 		return deliveryMethod;
 	}
@@ -242,6 +250,7 @@ public class AttendanceCard1 {
 		this.deliveryMethod = deliveryMethod;
 	}
 
+	@XmlElement(name = "OthrAdr")
 	public NameAndAddress9 getOtherAddress() {
 		return otherAddress;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a document as well as the document number.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identification of a document as well as the document number."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DocumentIdentification21", propOrder = {"identification", "documentNumber"})
 public class DocumentIdentification21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class DocumentIdentification21 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification2Choice getIdentification() {
 		return identification;
 	}
@@ -181,6 +188,7 @@ public class DocumentIdentification21 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "DocNb")
 	public DocumentNumber2Choice getDocumentNumber() {
 		return documentNumber;
 	}

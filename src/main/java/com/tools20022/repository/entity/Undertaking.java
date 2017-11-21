@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -42,6 +43,83 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmElectronicSignature
+ * Undertaking.mmElectronicSignature}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingStatus
+ * Undertaking.mmUndertakingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmIdentification
+ * Undertaking.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmDemand
+ * Undertaking.mmDemand}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmTerminationDate
+ * Undertaking.mmTerminationDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingAmount
+ * Undertaking.mmUndertakingAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmExpiry
+ * Undertaking.mmExpiry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmPartyRole
+ * Undertaking.mmPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingAmendment
+ * Undertaking.mmUndertakingAmendment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmSpecifiedDocument
+ * Undertaking.mmSpecifiedDocument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmDateOfAdvice
+ * Undertaking.mmDateOfAdvice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmPurpose
+ * Undertaking.mmPurpose}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingName
+ * Undertaking.mmUndertakingName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmType
+ * Undertaking.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmConfirmationIndicator
+ * Undertaking.mmConfirmationIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmCounterUndertakingIndicator
+ * Undertaking.mmCounterUndertakingIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmRelatedChargesPayableBy
+ * Undertaking.mmRelatedChargesPayableBy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmStandardClaimDocumentIndicator
+ * Undertaking.mmStandardClaimDocumentIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmUnderlyingTransaction
+ * Undertaking.mmUnderlyingTransaction}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmModelForm
+ * Undertaking.mmModelForm}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmMultipleDemandIndicator
+ * Undertaking.mmMultipleDemandIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmPartialDemandIndicator
+ * Undertaking.mmPartialDemandIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmTransferIndicator
+ * Undertaking.mmTransferIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmPredefinedVariation
+ * Undertaking.mmPredefinedVariation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmCharges
+ * Undertaking.mmCharges}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmPresentation
+ * Undertaking.mmPresentation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingExtension
+ * Undertaking.mmUndertakingExtension}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -145,83 +223,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * UndertakingNonExtensionRequest1.mmUndertakingIdentification}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmElectronicSignature
- * Undertaking.mmElectronicSignature}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingStatus
- * Undertaking.mmUndertakingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmIdentification
- * Undertaking.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmDemand
- * Undertaking.mmDemand}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmTerminationDate
- * Undertaking.mmTerminationDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingAmount
- * Undertaking.mmUndertakingAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmExpiry
- * Undertaking.mmExpiry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmPartyRole
- * Undertaking.mmPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingAmendment
- * Undertaking.mmUndertakingAmendment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmSpecifiedDocument
- * Undertaking.mmSpecifiedDocument}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmDateOfAdvice
- * Undertaking.mmDateOfAdvice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmPurpose
- * Undertaking.mmPurpose}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingName
- * Undertaking.mmUndertakingName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmType
- * Undertaking.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmConfirmationIndicator
- * Undertaking.mmConfirmationIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmCounterUndertakingIndicator
- * Undertaking.mmCounterUndertakingIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmRelatedChargesPayableBy
- * Undertaking.mmRelatedChargesPayableBy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmStandardClaimDocumentIndicator
- * Undertaking.mmStandardClaimDocumentIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmUnderlyingTransaction
- * Undertaking.mmUnderlyingTransaction}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmModelForm
- * Undertaking.mmModelForm}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmMultipleDemandIndicator
- * Undertaking.mmMultipleDemandIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmPartialDemandIndicator
- * Undertaking.mmPartialDemandIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmTransferIndicator
- * Undertaking.mmTransferIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmPredefinedVariation
- * Undertaking.mmPredefinedVariation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmCharges
- * Undertaking.mmCharges}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmPresentation
- * Undertaking.mmPresentation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingExtension
- * Undertaking.mmUndertakingExtension}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -260,10 +261,6 @@ public class Undertaking {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.ElectronicSignature
 	 * ElectronicSignature}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -288,6 +285,10 @@ public class Undertaking {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -302,7 +303,7 @@ public class Undertaking {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyAndSignature1.mmSignature, UndertakingAmendmentMessage1.mmDigitalSignature, Amendment2.mmDigitalSignature, UndertakingAmendmentResponseMessage1.mmDigitalSignature,
 					UndertakingIssuanceMessage.mmDigitalSignature, UndertakingAdvice1.mmDigitalSignature);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ElectronicSignature";
@@ -332,10 +333,6 @@ public class Undertaking {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.UndertakingStatus
 	 * UndertakingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -351,6 +348,10 @@ public class Undertaking {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -364,7 +365,7 @@ public class Undertaking {
 	public static final MMBusinessAssociationEnd mmUndertakingStatus = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Amendment1.mmTerminationDetails, Amendment3.mmTerminationDetails, Amendment7.mmAmendmentStatus);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UndertakingStatus";
@@ -388,10 +389,6 @@ public class Undertaking {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -416,6 +413,10 @@ public class Undertaking {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -432,7 +433,7 @@ public class Undertaking {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking9.mmIdentification, Undertaking6.mmIdentification, Undertaking7.mmIdentification, Amendment1.mmUndertakingIdentification, Undertaking3.mmIdentification,
 					Undertaking8.mmIdentification);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -440,6 +441,14 @@ public class Undertaking {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Undertaking.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Demand demand;
@@ -460,10 +469,6 @@ public class Undertaking {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Demand Demand}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -478,6 +483,10 @@ public class Undertaking {
 	 * ExtendOrPayQuery2.mmDemandDetails}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -494,7 +503,7 @@ public class Undertaking {
 	public static final MMBusinessAssociationEnd mmDemand = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(DemandRefusal1.mmDemandDetails, ExtendOrPayQuery1.mmDemandDetails, ExtendOrPayQuery2.mmDemandDetails);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Demand";
@@ -516,10 +525,6 @@ public class Undertaking {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -528,6 +533,10 @@ public class Undertaking {
 	 * UndertakingTermination3.mmEffectiveDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -542,7 +551,7 @@ public class Undertaking {
 	public static final MMBusinessAttribute mmTerminationDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingTermination3.mmEffectiveDate);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminationDate";
@@ -550,6 +559,14 @@ public class Undertaking {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Undertaking.class.getMethod("getTerminationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected UndertakingAmount undertakingAmount;
@@ -570,10 +587,6 @@ public class Undertaking {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.UndertakingAmount
 	 * UndertakingAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -607,6 +620,10 @@ public class Undertaking {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -621,7 +638,7 @@ public class Undertaking {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking11.mmNewUndertakingAmount, Amendment1.mmUndertakingAmountAdjustment, Undertaking10.mmNewUndertakingAmount, Amendment3.mmIncreaseDecreaseAmount,
 					Undertaking2.mmCounterUndertakingAmount, Undertaking1.mmUndertakingAmount, Undertaking4.mmLocalUndertakingAmount, Undertaking3.mmUndertakingAmount, PaymentObligation2.mmPaymentObligationAmount);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UndertakingAmount";
@@ -650,10 +667,6 @@ public class Undertaking {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Expiry Expiry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -690,6 +703,10 @@ public class Undertaking {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -704,7 +721,7 @@ public class Undertaking {
 		{
 			derivation_lazy = () -> Arrays.asList(ExpiryDetails1.mmExpiryTerms, Undertaking11.mmNewExpiryDetails, Amendment1.mmNewExpiryDetails, ExpiryDetails2.mmExpiryTerms, Undertaking10.mmNewExpiryDetails, Amendment3.mmNewExpiryDetails,
 					Undertaking2.mmExpiryDetails, Undertaking1.mmExpiryDetails, Undertaking4.mmExpiryDetails, Undertaking3.mmExpiryDetails);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Expiry";
@@ -736,10 +753,6 @@ public class Undertaking {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
 	 * UndertakingPartyRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -754,6 +767,10 @@ public class Undertaking {
 	 * Undertaking3.mmAdditionalParty}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -770,7 +787,7 @@ public class Undertaking {
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmAdditionalParty, Undertaking4.mmAdditionalParty, Undertaking3.mmAdditionalParty);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
@@ -821,7 +838,7 @@ public class Undertaking {
 	 */
 	public static final MMBusinessAssociationEnd mmUndertakingAmendment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UndertakingAmendment";
@@ -851,10 +868,6 @@ public class Undertaking {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.UndertakingDocument
 	 * UndertakingDocument}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -883,6 +896,10 @@ public class Undertaking {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -897,7 +914,7 @@ public class Undertaking {
 		{
 			derivation_lazy = () -> Arrays.asList(Amendment1.mmEnclosedFile, Amendment3.mmEnclosedFile, Trigger1.mmDocumentaryEvent, Undertaking1.mmEnclosedFile, Undertaking3.mmEnclosedFile, UndertakingAdvice2.mmEnclosedFile,
 					UndertakingStatusAdvice1.mmEnclosedFile, UndertakingTerminationNotice1.mmEnclosedFile);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecifiedDocument";
@@ -919,10 +936,6 @@ public class Undertaking {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -931,6 +944,10 @@ public class Undertaking {
 	 * UndertakingConfirmation1.mmDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -946,7 +963,7 @@ public class Undertaking {
 	public static final MMBusinessAttribute mmDateOfAdvice = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingConfirmation1.mmDate);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DateOfAdvice";
@@ -954,6 +971,14 @@ public class Undertaking {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Undertaking.class.getMethod("getDateOfAdvice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text purpose;
@@ -966,10 +991,6 @@ public class Undertaking {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -977,6 +998,10 @@ public class Undertaking {
 	 * Undertaking1.mmPurpose}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -991,7 +1016,7 @@ public class Undertaking {
 	public static final MMBusinessAttribute mmPurpose = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmPurpose);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Purpose";
@@ -999,6 +1024,14 @@ public class Undertaking {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Undertaking.class.getMethod("getPurpose", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected UndertakingNameCode undertakingName;
@@ -1012,10 +1045,6 @@ public class Undertaking {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.UndertakingNameCode
 	 * UndertakingNameCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1029,6 +1058,10 @@ public class Undertaking {
 	 * Undertaking3.mmName}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1045,7 +1078,7 @@ public class Undertaking {
 	public static final MMBusinessAttribute mmUndertakingName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking2.mmName, Undertaking1.mmName, Undertaking4.mmName, Undertaking3.mmName);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UndertakingName";
@@ -1053,6 +1086,14 @@ public class Undertaking {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UndertakingNameCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Undertaking.class.getMethod("getUndertakingName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ExternalUndertakingTypeCode type;
@@ -1067,10 +1108,6 @@ public class Undertaking {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ExternalUndertakingTypeCode
 	 * ExternalUndertakingTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1089,6 +1126,10 @@ public class Undertaking {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1104,7 +1145,7 @@ public class Undertaking {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingType1Choice.mmCode, UndertakingType1Choice.mmProprietary, Undertaking1.mmType, Undertaking4.mmType, Undertaking3.mmType);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -1112,6 +1153,14 @@ public class Undertaking {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalUndertakingTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Undertaking.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator confirmationIndicator;
@@ -1126,10 +1175,6 @@ public class Undertaking {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1144,6 +1189,10 @@ public class Undertaking {
 	 * Undertaking3.mmConfirmationIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1160,7 +1209,7 @@ public class Undertaking {
 	public static final MMBusinessAttribute mmConfirmationIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmConfirmationIndicator, Undertaking4.mmConfirmationIndicator, Undertaking3.mmConfirmationIndicator);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConfirmationIndicator";
@@ -1168,6 +1217,14 @@ public class Undertaking {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Undertaking.class.getMethod("getConfirmationIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator counterUndertakingIndicator;
@@ -1181,10 +1238,6 @@ public class Undertaking {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1193,6 +1246,10 @@ public class Undertaking {
 	 * Undertaking1.mmCounterUndertakingIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1208,7 +1265,7 @@ public class Undertaking {
 	public static final MMBusinessAttribute mmCounterUndertakingIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmCounterUndertakingIndicator);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CounterUndertakingIndicator";
@@ -1216,6 +1273,14 @@ public class Undertaking {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Undertaking.class.getMethod("getCounterUndertakingIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ExternalTypeOfPartyCode relatedChargesPayableBy;
@@ -1230,10 +1295,6 @@ public class Undertaking {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ExternalTypeOfPartyCode
 	 * ExternalTypeOfPartyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1261,6 +1322,10 @@ public class Undertaking {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1277,7 +1342,7 @@ public class Undertaking {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking2.mmConfirmationChargesPayableBy, Undertaking1.mmTransferChargesPayableBy, Undertaking1.mmConfirmationChargesPayableBy, Undertaking4.mmConfirmationChargesPayableBy,
 					Undertaking4.mmTransferChargesPayableBy, Undertaking3.mmConfirmationChargesPayableBy, Undertaking3.mmTransferChargesPayableBy);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedChargesPayableBy";
@@ -1285,6 +1350,14 @@ public class Undertaking {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalTypeOfPartyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Undertaking.class.getMethod("getRelatedChargesPayableBy", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator standardClaimDocumentIndicator;
@@ -1299,10 +1372,6 @@ public class Undertaking {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1311,6 +1380,10 @@ public class Undertaking {
 	 * Undertaking2.mmStandardClaimDocumentIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1327,7 +1400,7 @@ public class Undertaking {
 	public static final MMBusinessAttribute mmStandardClaimDocumentIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking2.mmStandardClaimDocumentIndicator);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StandardClaimDocumentIndicator";
@@ -1335,6 +1408,14 @@ public class Undertaking {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Undertaking.class.getMethod("getStandardClaimDocumentIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected UnderlyingTransaction underlyingTransaction;
@@ -1357,10 +1438,6 @@ public class Undertaking {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
 	 * UnderlyingTransaction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1375,6 +1452,10 @@ public class Undertaking {
 	 * Undertaking3.mmUnderlyingTransaction}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1391,7 +1472,7 @@ public class Undertaking {
 	public static final MMBusinessAssociationEnd mmUnderlyingTransaction = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmUnderlyingTransaction, Undertaking4.mmUnderlyingTransaction, Undertaking3.mmUnderlyingTransaction);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnderlyingTransaction";
@@ -1422,10 +1503,6 @@ public class Undertaking {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.ModelForm ModelForm}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1437,6 +1514,10 @@ public class Undertaking {
 	 * Undertaking4.mmUndertakingWording}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1453,7 +1534,7 @@ public class Undertaking {
 	public static final MMBusinessAssociationEnd mmModelForm = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmUndertakingWording, Undertaking4.mmUndertakingWording);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ModelForm";
@@ -1476,10 +1557,6 @@ public class Undertaking {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1494,6 +1571,10 @@ public class Undertaking {
 	 * Undertaking3.mmMultipleDemandIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1510,7 +1591,7 @@ public class Undertaking {
 	public static final MMBusinessAttribute mmMultipleDemandIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmMultipleDemandIndicator, Undertaking4.mmMultipleDemandIndicator, Undertaking3.mmMultipleDemandIndicator);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MultipleDemandIndicator";
@@ -1518,6 +1599,14 @@ public class Undertaking {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Undertaking.class.getMethod("getMultipleDemandIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator partialDemandIndicator;
@@ -1532,10 +1621,6 @@ public class Undertaking {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1550,6 +1635,10 @@ public class Undertaking {
 	 * Undertaking3.mmPartialDemandIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1566,7 +1655,7 @@ public class Undertaking {
 	public static final MMBusinessAttribute mmPartialDemandIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmPartialDemandIndicator, Undertaking4.mmPartialDemandIndicator, Undertaking3.mmPartialDemandIndicator);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialDemandIndicator";
@@ -1574,6 +1663,14 @@ public class Undertaking {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Undertaking.class.getMethod("getPartialDemandIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator transferIndicator;
@@ -1587,10 +1684,6 @@ public class Undertaking {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1606,6 +1699,10 @@ public class Undertaking {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1619,7 +1716,7 @@ public class Undertaking {
 	public static final MMBusinessAttribute mmTransferIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmTransferIndicator, Undertaking4.mmTransferIndicator, Undertaking3.mmTransferIndicator);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferIndicator";
@@ -1627,6 +1724,14 @@ public class Undertaking {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Undertaking.class.getMethod("getTransferIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AutomaticVariation predefinedVariation;
@@ -1648,10 +1753,6 @@ public class Undertaking {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.AutomaticVariation
 	 * AutomaticVariation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1666,6 +1767,10 @@ public class Undertaking {
 	 * Undertaking3.mmAutomaticAmountVariation}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1682,7 +1787,7 @@ public class Undertaking {
 	public static final MMBusinessAssociationEnd mmPredefinedVariation = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmAutomaticAmountVariation, Undertaking4.mmAutomaticAmountVariation, Undertaking3.mmAutomaticAmountVariation);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PredefinedVariation";
@@ -1728,7 +1833,7 @@ public class Undertaking {
 	 */
 	public static final MMBusinessAssociationEnd mmCharges = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Charges";
@@ -1758,10 +1863,6 @@ public class Undertaking {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Presentation
 	 * Presentation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1780,6 +1881,10 @@ public class Undertaking {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1793,7 +1898,7 @@ public class Undertaking {
 	public static final MMBusinessAssociationEnd mmPresentation = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmPresentationDetails, Demand1.mmPresentationDetails, Undertaking4.mmPresentationDetails, Undertaking3.mmPresentationDetails);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Presentation";
@@ -1824,10 +1929,6 @@ public class Undertaking {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension
 	 * UndertakingExtension}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1836,6 +1937,10 @@ public class Undertaking {
 	 * ExpiryTerms1.mmAutoExtension}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Undertaking Undertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1851,7 +1956,7 @@ public class Undertaking {
 	public static final MMBusinessAssociationEnd mmUndertakingExtension = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ExpiryTerms1.mmAutoExtension);
-			elementContext_lazy = () -> Undertaking.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UndertakingExtension";
@@ -1878,14 +1983,24 @@ public class Undertaking {
 						com.tools20022.repository.entity.ModelForm.mmUndertaking, com.tools20022.repository.entity.UnderlyingTransaction.mmUndertaking, com.tools20022.repository.entity.AutomaticVariation.mmUndertaking);
 				derivationElement_lazy = () -> Arrays.asList(ExtendOrPayQuery1.mmUndertakingIdentification, Undertaking1.mmCounterUndertaking, Demand1.mmUndertakingIdentification, UndertakingIssuanceMessage.mmUndertakingDetails,
 						UndertakingAdvice1.mmUndertakingIssuanceMessage, UndertakingAdvice2.mmUndertakingIssuanceMessage, UndertakingNonExtensionRequest1.mmUndertakingIdentification);
-				element_lazy = () -> Arrays.asList(Undertaking.mmElectronicSignature, Undertaking.mmUndertakingStatus, Undertaking.mmIdentification, Undertaking.mmDemand, Undertaking.mmTerminationDate, Undertaking.mmUndertakingAmount,
-						Undertaking.mmExpiry, Undertaking.mmPartyRole, Undertaking.mmUndertakingAmendment, Undertaking.mmSpecifiedDocument, Undertaking.mmDateOfAdvice, Undertaking.mmPurpose, Undertaking.mmUndertakingName,
-						Undertaking.mmType, Undertaking.mmConfirmationIndicator, Undertaking.mmCounterUndertakingIndicator, Undertaking.mmRelatedChargesPayableBy, Undertaking.mmStandardClaimDocumentIndicator,
-						Undertaking.mmUnderlyingTransaction, Undertaking.mmModelForm, Undertaking.mmMultipleDemandIndicator, Undertaking.mmPartialDemandIndicator, Undertaking.mmTransferIndicator, Undertaking.mmPredefinedVariation,
-						Undertaking.mmCharges, Undertaking.mmPresentation, Undertaking.mmUndertakingExtension);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Undertaking.mmElectronicSignature, com.tools20022.repository.entity.Undertaking.mmUndertakingStatus,
+						com.tools20022.repository.entity.Undertaking.mmIdentification, com.tools20022.repository.entity.Undertaking.mmDemand, com.tools20022.repository.entity.Undertaking.mmTerminationDate,
+						com.tools20022.repository.entity.Undertaking.mmUndertakingAmount, com.tools20022.repository.entity.Undertaking.mmExpiry, com.tools20022.repository.entity.Undertaking.mmPartyRole,
+						com.tools20022.repository.entity.Undertaking.mmUndertakingAmendment, com.tools20022.repository.entity.Undertaking.mmSpecifiedDocument, com.tools20022.repository.entity.Undertaking.mmDateOfAdvice,
+						com.tools20022.repository.entity.Undertaking.mmPurpose, com.tools20022.repository.entity.Undertaking.mmUndertakingName, com.tools20022.repository.entity.Undertaking.mmType,
+						com.tools20022.repository.entity.Undertaking.mmConfirmationIndicator, com.tools20022.repository.entity.Undertaking.mmCounterUndertakingIndicator,
+						com.tools20022.repository.entity.Undertaking.mmRelatedChargesPayableBy, com.tools20022.repository.entity.Undertaking.mmStandardClaimDocumentIndicator,
+						com.tools20022.repository.entity.Undertaking.mmUnderlyingTransaction, com.tools20022.repository.entity.Undertaking.mmModelForm, com.tools20022.repository.entity.Undertaking.mmMultipleDemandIndicator,
+						com.tools20022.repository.entity.Undertaking.mmPartialDemandIndicator, com.tools20022.repository.entity.Undertaking.mmTransferIndicator, com.tools20022.repository.entity.Undertaking.mmPredefinedVariation,
+						com.tools20022.repository.entity.Undertaking.mmCharges, com.tools20022.repository.entity.Undertaking.mmPresentation, com.tools20022.repository.entity.Undertaking.mmUndertakingExtension);
 				derivationComponent_lazy = () -> Arrays.asList(Undertaking9.mmObject(), Undertaking6.mmObject(), ExtendOrPayQuery1.mmObject(), Undertaking7.mmObject(), Undertaking11.mmObject(), UndertakingConfirmation1.mmObject(),
 						Undertaking10.mmObject(), UndertakingType1Choice.mmObject(), Undertaking2.mmObject(), Undertaking1.mmObject(), Undertaking4.mmObject(), Undertaking3.mmObject(), UndertakingIssuanceMessage.mmObject(),
 						UndertakingAdvice1.mmObject(), UndertakingAdvice2.mmObject(), UndertakingNonExtensionRequest1.mmObject(), Undertaking8.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Undertaking.class;
 			}
 		});
 		return mmObject_lazy.get();

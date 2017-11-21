@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DateTimePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between various date time patterns.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between various date time patterns."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DateTimePeriodChoice", propOrder = {"fromDateTime", "toDateTime", "dateTimeRange"})
 public class DateTimePeriodChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -226,6 +232,7 @@ public class DateTimePeriodChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrDtTm", required = true)
 	public ISODateTime getFromDateTime() {
 		return fromDateTime;
 	}
@@ -234,6 +241,7 @@ public class DateTimePeriodChoice {
 		this.fromDateTime = fromDateTime;
 	}
 
+	@XmlElement(name = "ToDtTm", required = true)
 	public ISODateTime getToDateTime() {
 		return toDateTime;
 	}
@@ -242,6 +250,7 @@ public class DateTimePeriodChoice {
 		this.toDateTime = toDateTime;
 	}
 
+	@XmlElement(name = "DtTmRg", required = true)
 	public DateTimePeriodDetails getDateTimeRange() {
 		return dateTimeRange;
 	}

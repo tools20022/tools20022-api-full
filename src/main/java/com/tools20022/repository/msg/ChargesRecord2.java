@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further individual record details on the charges related to the
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ChargesRecord1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ChargesRecord2", propOrder = {"amount", "creditDebitIndicator", "chargeIncludedIndicator", "type", "rate", "bearer", "agent", "tax"})
 public class ChargesRecord2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -491,6 +497,7 @@ public class ChargesRecord2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -499,6 +506,7 @@ public class ChargesRecord2 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -507,6 +515,7 @@ public class ChargesRecord2 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "ChrgInclInd")
 	public ChargeIncludedIndicator getChargeIncludedIndicator() {
 		return chargeIncludedIndicator;
 	}
@@ -515,6 +524,7 @@ public class ChargesRecord2 {
 		this.chargeIncludedIndicator = chargeIncludedIndicator;
 	}
 
+	@XmlElement(name = "Tp")
 	public ChargeType3Choice getType() {
 		return type;
 	}
@@ -523,6 +533,7 @@ public class ChargesRecord2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -531,6 +542,7 @@ public class ChargesRecord2 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "Br")
 	public ChargeBearerType1Code getBearer() {
 		return bearer;
 	}
@@ -539,6 +551,7 @@ public class ChargesRecord2 {
 		this.bearer = bearer;
 	}
 
+	@XmlElement(name = "Agt")
 	public BranchAndFinancialInstitutionIdentification5 getAgent() {
 		return agent;
 	}
@@ -547,6 +560,7 @@ public class ChargesRecord2 {
 		this.agent = agent;
 	}
 
+	@XmlElement(name = "Tax")
 	public TaxCharges2 getTax() {
 		return tax;
 	}

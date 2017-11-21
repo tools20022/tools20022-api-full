@@ -30,9 +30,11 @@ import com.tools20022.repository.msg.DueDate1;
 import com.tools20022.repository.msg.LegalMandate1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.AuthoritiesFinancialInvestigationsISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * This message is sent by the authorities (police, customs, tax authorities,
@@ -45,9 +47,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.001.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -92,6 +91,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.001.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -103,6 +105,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InformationRequestOpeningV01", propOrder = {"investigationIdentification", "legalMandateBasis", "confidentialityStatus", "dueDate", "investigationPeriod", "searchCriteria", "supplementaryData"})
 public class InformationRequestOpeningV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -142,6 +146,14 @@ public class InformationRequestOpeningV01 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationRequestOpeningV01.class.getMethod("getInvestigationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected LegalMandate1 legalMandateBasis;
 	/**
@@ -175,6 +187,14 @@ public class InformationRequestOpeningV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> LegalMandate1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationRequestOpeningV01.class.getMethod("getLegalMandateBasis", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator confidentialityStatus;
@@ -211,6 +231,14 @@ public class InformationRequestOpeningV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationRequestOpeningV01.class.getMethod("getConfidentialityStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DueDate1 dueDate;
@@ -249,6 +277,14 @@ public class InformationRequestOpeningV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> DueDate1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationRequestOpeningV01.class.getMethod("getDueDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DateOrDateTimePeriodChoice investigationPeriod;
 	/**
@@ -286,6 +322,14 @@ public class InformationRequestOpeningV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateOrDateTimePeriodChoice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationRequestOpeningV01.class.getMethod("getInvestigationPeriod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SearchCriteria1Choice searchCriteria;
@@ -326,6 +370,14 @@ public class InformationRequestOpeningV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> SearchCriteria1Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationRequestOpeningV01.class.getMethod("getSearchCriteria", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -363,6 +415,14 @@ public class InformationRequestOpeningV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InformationRequestOpeningV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -375,8 +435,10 @@ public class InformationRequestOpeningV01 {
 				rootElement = "Document";
 				xmlTag = "InfReqOpng";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(InformationRequestOpeningV01.mmInvestigationIdentification, InformationRequestOpeningV01.mmLegalMandateBasis, InformationRequestOpeningV01.mmConfidentialityStatus,
-						InformationRequestOpeningV01.mmDueDate, InformationRequestOpeningV01.mmInvestigationPeriod, InformationRequestOpeningV01.mmSearchCriteria, InformationRequestOpeningV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmInvestigationIdentification,
+						com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmLegalMandateBasis, com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmConfidentialityStatus,
+						com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmDueDate, com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmInvestigationPeriod,
+						com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmSearchCriteria, com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -386,10 +448,16 @@ public class InformationRequestOpeningV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InformationRequestOpeningV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InvstgtnId", required = true)
 	public Max35Text getInvestigationIdentification() {
 		return investigationIdentification;
 	}
@@ -398,6 +466,7 @@ public class InformationRequestOpeningV01 {
 		this.investigationIdentification = investigationIdentification;
 	}
 
+	@XmlElement(name = "LglMndtBsis", required = true)
 	public LegalMandate1 getLegalMandateBasis() {
 		return legalMandateBasis;
 	}
@@ -406,6 +475,7 @@ public class InformationRequestOpeningV01 {
 		this.legalMandateBasis = legalMandateBasis;
 	}
 
+	@XmlElement(name = "CnfdtltySts", required = true)
 	public YesNoIndicator getConfidentialityStatus() {
 		return confidentialityStatus;
 	}
@@ -414,6 +484,7 @@ public class InformationRequestOpeningV01 {
 		this.confidentialityStatus = confidentialityStatus;
 	}
 
+	@XmlElement(name = "DueDt")
 	public DueDate1 getDueDate() {
 		return dueDate;
 	}
@@ -422,6 +493,7 @@ public class InformationRequestOpeningV01 {
 		this.dueDate = dueDate;
 	}
 
+	@XmlElement(name = "InvstgtnPrd", required = true)
 	public DateOrDateTimePeriodChoice getInvestigationPeriod() {
 		return investigationPeriod;
 	}
@@ -430,6 +502,7 @@ public class InformationRequestOpeningV01 {
 		this.investigationPeriod = investigationPeriod;
 	}
 
+	@XmlElement(name = "SchCrit", required = true)
 	public SearchCriteria1Choice getSearchCriteria() {
 		return searchCriteria;
 	}
@@ -438,11 +511,18 @@ public class InformationRequestOpeningV01 {
 		this.searchCriteria = searchCriteria;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.001.01.01")
+	static public class Document {
+		@XmlElement(name = "InfReqOpng", required = true)
+		public InformationRequestOpeningV01 messageBody;
 	}
 }

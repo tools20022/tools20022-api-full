@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.CreditInstrument;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -39,6 +40,31 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.BookEntry#mmCashEntry
+ * BookEntry.mmCashEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BookEntry#mmDebitEntry
+ * BookEntry.mmDebitEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BookEntry#mmCreditEntry
+ * BookEntry.mmCreditEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BookEntry#mmTransferAdvice
+ * BookEntry.mmTransferAdvice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BookEntry#mmFundSubscriptionCashInFlow
+ * BookEntry.mmFundSubscriptionCashInFlow}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BookEntry#mmFundRedemptionCashOutFlow
+ * BookEntry.mmFundRedemptionCashOutFlow}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BookEntry#mmRelatedSettlementInstruction
+ * BookEntry.mmRelatedSettlementInstruction}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.CreditInstrument
+ * CreditInstrument}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -157,31 +183,6 @@ import java.util.List;
  * IntraBalanceOrOperationalError3Choice.mmModifications}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.CreditInstrument
- * CreditInstrument}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.BookEntry#mmCashEntry
- * BookEntry.mmCashEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BookEntry#mmDebitEntry
- * BookEntry.mmDebitEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BookEntry#mmCreditEntry
- * BookEntry.mmCreditEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BookEntry#mmTransferAdvice
- * BookEntry.mmTransferAdvice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BookEntry#mmFundSubscriptionCashInFlow
- * BookEntry.mmFundSubscriptionCashInFlow}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BookEntry#mmFundRedemptionCashOutFlow
- * BookEntry.mmFundRedemptionCashOutFlow}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BookEntry#mmRelatedSettlementInstruction
- * BookEntry.mmRelatedSettlementInstruction}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -222,10 +223,6 @@ public class BookEntry extends CreditInstrument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashEntry CashEntry}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.BookEntry
-	 * BookEntry}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -250,6 +247,10 @@ public class BookEntry extends CreditInstrument {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.BookEntry
+	 * BookEntry}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -266,7 +267,7 @@ public class BookEntry extends CreditInstrument {
 		{
 			derivation_lazy = () -> Arrays.asList(Transaction3.mmAccountEntry, Transaction4.mmAccountEntry, Transaction5.mmAccountEntry, Transaction24.mmAccountEntry, CorporateActionElection3.mmCashMovementDetails,
 					Transaction33.mmAccountEntry);
-			elementContext_lazy = () -> BookEntry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BookEntry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashEntry";
@@ -313,7 +314,7 @@ public class BookEntry extends CreditInstrument {
 	 */
 	public static final MMBusinessAssociationEnd mmDebitEntry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> BookEntry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BookEntry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitEntry";
@@ -360,7 +361,7 @@ public class BookEntry extends CreditInstrument {
 	 */
 	public static final MMBusinessAssociationEnd mmCreditEntry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> BookEntry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BookEntry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditEntry";
@@ -403,7 +404,7 @@ public class BookEntry extends CreditInstrument {
 	 */
 	public static final MMBusinessAttribute mmTransferAdvice = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> BookEntry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BookEntry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferAdvice";
@@ -411,6 +412,14 @@ public class BookEntry extends CreditInstrument {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BookEntry.class.getMethod("getTransferAdvice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected FundsCashFlow fundSubscriptionCashInFlow;
@@ -449,7 +458,7 @@ public class BookEntry extends CreditInstrument {
 	 */
 	public static final MMBusinessAssociationEnd mmFundSubscriptionCashInFlow = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> BookEntry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BookEntry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundSubscriptionCashInFlow";
@@ -497,7 +506,7 @@ public class BookEntry extends CreditInstrument {
 	 */
 	public static final MMBusinessAssociationEnd mmFundRedemptionCashOutFlow = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> BookEntry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BookEntry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundRedemptionCashOutFlow";
@@ -545,7 +554,7 @@ public class BookEntry extends CreditInstrument {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSettlementInstruction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> BookEntry.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BookEntry.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedSettlementInstruction";
@@ -573,12 +582,18 @@ public class BookEntry extends CreditInstrument {
 						IntraBalanceMovements1.mmMovement, IntraBalanceOrOperationalError1Choice.mmMovements, IntraBalancePending1.mmMovement, IntraBalanceModification2.mmUnderlyingIntraBalance, IntraBalanceModification1.mmModification,
 						IntraBalanceOrOperationalError3Choice.mmModifications);
 				superType_lazy = () -> CreditInstrument.mmObject();
-				element_lazy = () -> Arrays.asList(BookEntry.mmCashEntry, BookEntry.mmDebitEntry, BookEntry.mmCreditEntry, BookEntry.mmTransferAdvice, BookEntry.mmFundSubscriptionCashInFlow, BookEntry.mmFundRedemptionCashOutFlow,
-						BookEntry.mmRelatedSettlementInstruction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BookEntry.mmCashEntry, com.tools20022.repository.entity.BookEntry.mmDebitEntry, com.tools20022.repository.entity.BookEntry.mmCreditEntry,
+						com.tools20022.repository.entity.BookEntry.mmTransferAdvice, com.tools20022.repository.entity.BookEntry.mmFundSubscriptionCashInFlow, com.tools20022.repository.entity.BookEntry.mmFundRedemptionCashOutFlow,
+						com.tools20022.repository.entity.BookEntry.mmRelatedSettlementInstruction);
 				derivationComponent_lazy = () -> Arrays.asList(FinancingDateDetails1.mmObject(), IntraBalance2.mmObject(), IntraBalance1.mmObject(), IntraBalanceCancellation2.mmObject(), IntraBalanceCancellation1.mmObject(),
 						IntraBalanceOrOperationalError2Choice.mmObject(), IntraBalanceMovement2.mmObject(), IntraBalanceMovement1.mmObject(), IntraBalanceMovements1.mmObject(), IntraBalanceOrOperationalError1Choice.mmObject(),
 						IntraBalanceQueryCriteria2.mmObject(), IntraBalancePending2.mmObject(), IntraBalancePending1.mmObject(), IntraBalancePosting2.mmObject(), IntraBalancePosting1.mmObject(), IntraBalanceType1.mmObject(),
 						IntraBalanceModification2.mmObject(), IntraBalanceModification1.mmObject(), IntraBalanceOrOperationalError3Choice.mmObject(), IntraBalanceQueryCriteria3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BookEntry.class;
 			}
 		});
 		return mmObject_lazy.get();

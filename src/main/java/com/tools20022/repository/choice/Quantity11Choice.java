@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between different quantity of security formats.
@@ -68,6 +72,8 @@ import java.util.function.Supplier;
  * definition} = "Choice between different quantity of security formats."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Quantity11Choice", propOrder = {"code", "originalAndCurrentFaceAmount", "quantity"})
 public class Quantity11Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -241,6 +247,7 @@ public class Quantity11Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public Quantity1Code getCode() {
 		return code;
 	}
@@ -249,6 +256,7 @@ public class Quantity11Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "OrgnlAndCurFaceAmt", required = true)
 	public OriginalAndCurrentQuantities4 getOriginalAndCurrentFaceAmount() {
 		return originalAndCurrentFaceAmount;
 	}
@@ -257,6 +265,7 @@ public class Quantity11Choice {
 		this.originalAndCurrentFaceAmount = originalAndCurrentFaceAmount;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity15Choice getQuantity() {
 		return quantity;
 	}

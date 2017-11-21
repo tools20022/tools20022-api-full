@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SettlementTimeRequest1;
 import com.tools20022.repository.msg.SettlementTimeRequest2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +39,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmPayment
+ * SettlementTimeRequest.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmCLSTime
+ * SettlementTimeRequest.mmCLSTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmTillTime
+ * SettlementTimeRequest.mmTillTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmFromTime
+ * SettlementTimeRequest.mmFromTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmRejectTime
+ * SettlementTimeRequest.mmRejectTime}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -71,26 +92,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.SettlementDate8Choice#mmCode
  * SettlementDate8Choice.mmCode}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmPayment
- * SettlementTimeRequest.mmPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmCLSTime
- * SettlementTimeRequest.mmCLSTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmTillTime
- * SettlementTimeRequest.mmTillTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmFromTime
- * SettlementTimeRequest.mmFromTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmRejectTime
- * SettlementTimeRequest.mmRejectTime}</li>
  * </ul>
  * </li>
  * <li>
@@ -148,7 +149,7 @@ public class SettlementTimeRequest {
 	 */
 	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SettlementTimeRequest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
@@ -172,11 +173,6 @@ public class SettlementTimeRequest {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest
-	 * SettlementTimeRequest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -188,6 +184,11 @@ public class SettlementTimeRequest {
 	 * SettlementTimeRequest2.mmCLSTime}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest
+	 * SettlementTimeRequest}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -204,7 +205,7 @@ public class SettlementTimeRequest {
 	public static final MMBusinessAttribute mmCLSTime = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementTimeRequest1.mmCLSTime, SettlementTimeRequest2.mmCLSTime);
-			elementContext_lazy = () -> SettlementTimeRequest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CLSTime";
@@ -212,6 +213,14 @@ public class SettlementTimeRequest {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SettlementTimeRequest.class.getMethod("getCLSTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime tillTime;
@@ -224,11 +233,6 @@ public class SettlementTimeRequest {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest
-	 * SettlementTimeRequest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -237,6 +241,11 @@ public class SettlementTimeRequest {
 	 * SettlementTimeRequest2.mmTillTime}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest
+	 * SettlementTimeRequest}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -251,7 +260,7 @@ public class SettlementTimeRequest {
 	public static final MMBusinessAttribute mmTillTime = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementTimeRequest2.mmTillTime);
-			elementContext_lazy = () -> SettlementTimeRequest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TillTime";
@@ -259,6 +268,14 @@ public class SettlementTimeRequest {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SettlementTimeRequest.class.getMethod("getTillTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime fromTime;
@@ -271,11 +288,6 @@ public class SettlementTimeRequest {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest
-	 * SettlementTimeRequest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -284,6 +296,11 @@ public class SettlementTimeRequest {
 	 * SettlementTimeRequest2.mmFromTime}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest
+	 * SettlementTimeRequest}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -298,7 +315,7 @@ public class SettlementTimeRequest {
 	public static final MMBusinessAttribute mmFromTime = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementTimeRequest2.mmFromTime);
-			elementContext_lazy = () -> SettlementTimeRequest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FromTime";
@@ -306,6 +323,14 @@ public class SettlementTimeRequest {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SettlementTimeRequest.class.getMethod("getFromTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime rejectTime;
@@ -318,11 +343,6 @@ public class SettlementTimeRequest {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest
-	 * SettlementTimeRequest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -331,6 +351,11 @@ public class SettlementTimeRequest {
 	 * SettlementTimeRequest2.mmRejectTime}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest
+	 * SettlementTimeRequest}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -346,7 +371,7 @@ public class SettlementTimeRequest {
 	public static final MMBusinessAttribute mmRejectTime = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementTimeRequest2.mmRejectTime);
-			elementContext_lazy = () -> SettlementTimeRequest.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RejectTime";
@@ -354,6 +379,14 @@ public class SettlementTimeRequest {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SettlementTimeRequest.class.getMethod("getRejectTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -366,8 +399,14 @@ public class SettlementTimeRequest {
 				definition = "Provides information on the requested settlement time(s) of the payment instruction.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.mmSettlementTimeRequest);
 				derivationElement_lazy = () -> Arrays.asList(SettlementDate8Choice.mmDate, SettlementDate8Choice.mmCode);
-				element_lazy = () -> Arrays.asList(SettlementTimeRequest.mmPayment, SettlementTimeRequest.mmCLSTime, SettlementTimeRequest.mmTillTime, SettlementTimeRequest.mmFromTime, SettlementTimeRequest.mmRejectTime);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SettlementTimeRequest.mmPayment, com.tools20022.repository.entity.SettlementTimeRequest.mmCLSTime,
+						com.tools20022.repository.entity.SettlementTimeRequest.mmTillTime, com.tools20022.repository.entity.SettlementTimeRequest.mmFromTime, com.tools20022.repository.entity.SettlementTimeRequest.mmRejectTime);
 				derivationComponent_lazy = () -> Arrays.asList(SettlementDateCode5Choice.mmObject(), SettlementDate8Choice.mmObject(), SettlementTimeRequest1.mmObject(), SettlementTimeRequest2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SettlementTimeRequest.class;
 			}
 		});
 		return mmObject_lazy.get();

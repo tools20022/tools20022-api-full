@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria based on which information is included.
@@ -146,6 +150,11 @@ import java.util.List;
  * definition} = "Defines the criteria based on which information is included."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementInstructionQueryCriteria1", propOrder = {"references", "status", "securitiesMovementType", "payment", "securitiesTransactionType", "financialInstrumentIdentification", "priority", "safekeepingAccount",
+		"cashAccount", "tradeDate", "settlementQuantity", "settledQuantity", "settlementAmount", "settledAmount", "intendedSettlementDate", "effectiveSettlementDate", "settlementCurrency", "safekeepingAccountOwner", "messageOriginator",
+		"counterpartSettlementParties", "deliveringSettlementParties", "receivingSettlementParties", "tradeTransactionCondition", "securitiesTransactionCondition", "partialSettlementIndicator", "conditionalSecuritiesDelivery",
+		"countryOfIssue", "issuerCSD", "holdIndicator"})
 public class SettlementInstructionQueryCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1412,6 +1421,7 @@ public class SettlementInstructionQueryCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Refs")
 	public List<References35Choice> getReferences() {
 		return references;
 	}
@@ -1420,6 +1430,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.references = references;
 	}
 
+	@XmlElement(name = "Sts")
 	public List<SettlementInstructionQueryStatus1> getStatus() {
 		return status;
 	}
@@ -1428,6 +1439,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "SctiesMvmntTp")
 	public List<ReceiveDelivery1Code> getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
@@ -1436,6 +1448,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.securitiesMovementType = securitiesMovementType;
 	}
 
+	@XmlElement(name = "Pmt")
 	public List<DeliveryReceiptType2Code> getPayment() {
 		return payment;
 	}
@@ -1444,6 +1457,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "SctiesTxTp")
 	public List<SecuritiesTransactionType10Choice> getSecuritiesTransactionType() {
 		return securitiesTransactionType;
 	}
@@ -1452,6 +1466,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.securitiesTransactionType = securitiesTransactionType;
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public List<SecurityIdentification14> getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -1460,6 +1475,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "Prty")
 	public List<PriorityNumeric1Choice> getPriority() {
 		return priority;
 	}
@@ -1468,6 +1484,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public List<SecuritiesAccount13> getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -1476,6 +1493,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public List<AccountIdentificationSearchCriteria2Choice> getCashAccount() {
 		return cashAccount;
 	}
@@ -1484,6 +1502,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "TradDt")
 	public DateAndDateTimeSearch2Choice getTradeDate() {
 		return tradeDate;
 	}
@@ -1492,6 +1511,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "SttlmQty")
 	public QuantitySearch1Choice getSettlementQuantity() {
 		return settlementQuantity;
 	}
@@ -1500,6 +1520,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.settlementQuantity = settlementQuantity;
 	}
 
+	@XmlElement(name = "SttldQty")
 	public QuantitySearch1Choice getSettledQuantity() {
 		return settledQuantity;
 	}
@@ -1508,6 +1529,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.settledQuantity = settledQuantity;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public ActiveCurrencyAndAmountRange1 getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -1516,6 +1538,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "SttldAmt")
 	public ActiveCurrencyAndAmountRange1 getSettledAmount() {
 		return settledAmount;
 	}
@@ -1524,6 +1547,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.settledAmount = settledAmount;
 	}
 
+	@XmlElement(name = "IntnddSttlmDt")
 	public DateAndDateTimeSearch2Choice getIntendedSettlementDate() {
 		return intendedSettlementDate;
 	}
@@ -1532,6 +1556,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.intendedSettlementDate = intendedSettlementDate;
 	}
 
+	@XmlElement(name = "FctvSttlmDt")
 	public DateAndDateTimeSearch2Choice getEffectiveSettlementDate() {
 		return effectiveSettlementDate;
 	}
@@ -1540,6 +1565,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.effectiveSettlementDate = effectiveSettlementDate;
 	}
 
+	@XmlElement(name = "SttlmCcy")
 	public List<ActiveOrHistoricCurrencyCode> getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -1548,6 +1574,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "SfkpgAcctOwnr")
 	public List<PartyIdentification46> getSafekeepingAccountOwner() {
 		return safekeepingAccountOwner;
 	}
@@ -1556,6 +1583,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.safekeepingAccountOwner = safekeepingAccountOwner;
 	}
 
+	@XmlElement(name = "MsgOrgtr")
 	public List<SystemPartyIdentification5> getMessageOriginator() {
 		return messageOriginator;
 	}
@@ -1564,6 +1592,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.messageOriginator = messageOriginator;
 	}
 
+	@XmlElement(name = "CntrptSttlmPties")
 	public List<SettlementParties13> getCounterpartSettlementParties() {
 		return counterpartSettlementParties;
 	}
@@ -1572,6 +1601,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.counterpartSettlementParties = counterpartSettlementParties;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public List<SettlementParties13> getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -1580,6 +1610,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public List<SettlementParties13> getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -1588,6 +1619,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "TradTxCond")
 	public List<TradeTransactionCondition1Code> getTradeTransactionCondition() {
 		return tradeTransactionCondition;
 	}
@@ -1596,6 +1628,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.tradeTransactionCondition = tradeTransactionCondition;
 	}
 
+	@XmlElement(name = "SctiesTxCond")
 	public List<SettlementTransactionCondition12Choice> getSecuritiesTransactionCondition() {
 		return securitiesTransactionCondition;
 	}
@@ -1604,6 +1637,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.securitiesTransactionCondition = securitiesTransactionCondition;
 	}
 
+	@XmlElement(name = "PrtlSttlmInd")
 	public SettlementTransactionCondition5Code getPartialSettlementIndicator() {
 		return partialSettlementIndicator;
 	}
@@ -1612,6 +1646,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.partialSettlementIndicator = partialSettlementIndicator;
 	}
 
+	@XmlElement(name = "CondlSctiesDlvry")
 	public YesNoIndicator getConditionalSecuritiesDelivery() {
 		return conditionalSecuritiesDelivery;
 	}
@@ -1620,6 +1655,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.conditionalSecuritiesDelivery = conditionalSecuritiesDelivery;
 	}
 
+	@XmlElement(name = "CtryOfIsse")
 	public List<CountryCode> getCountryOfIssue() {
 		return countryOfIssue;
 	}
@@ -1628,6 +1664,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.countryOfIssue = countryOfIssue;
 	}
 
+	@XmlElement(name = "IssrCSD")
 	public List<PartyIdentification71Choice> getIssuerCSD() {
 		return issuerCSD;
 	}
@@ -1636,6 +1673,7 @@ public class SettlementInstructionQueryCriteria1 {
 		this.issuerCSD = issuerCSD;
 	}
 
+	@XmlElement(name = "HldInd")
 	public List<Registration3Choice> getHoldIndicator() {
 		return holdIndicator;
 	}

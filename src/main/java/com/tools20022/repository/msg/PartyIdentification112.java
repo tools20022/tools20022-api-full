@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to identify a person or an organisation.
@@ -79,6 +83,8 @@ import java.util.List;
  * PartyIdentification45}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification112", propOrder = {"identification", "name", "postalAddress", "countryOfResidence", "contactDetails"})
 public class PartyIdentification112 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -374,6 +380,7 @@ public class PartyIdentification112 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public Party10Choice getIdentification() {
 		return identification;
 	}
@@ -382,6 +389,7 @@ public class PartyIdentification112 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max35Text getName() {
 		return name;
 	}
@@ -390,6 +398,7 @@ public class PartyIdentification112 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PstlAdr")
 	public PostalAddress6 getPostalAddress() {
 		return postalAddress;
 	}
@@ -398,6 +407,7 @@ public class PartyIdentification112 {
 		this.postalAddress = postalAddress;
 	}
 
+	@XmlElement(name = "CtryOfRes")
 	public CountryCode getCountryOfResidence() {
 		return countryOfResidence;
 	}
@@ -406,6 +416,7 @@ public class PartyIdentification112 {
 		this.countryOfResidence = countryOfResidence;
 	}
 
+	@XmlElement(name = "CtctDtls")
 	public List<Contacts3> getContactDetails() {
 		return contactDetails;
 	}

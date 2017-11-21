@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.ValuationStatistics;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Statistical data related to the price change of a security.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Statistical data related to the price change of a security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatisticsByPredefinedTimePeriods2", propOrder = {"highestPriceValue12Months", "lowestPriceValue12Months", "oneYearPriceChange", "threeYearPriceChange", "fiveYearPriceChange"})
 public class StatisticsByPredefinedTimePeriods2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -326,6 +332,7 @@ public class StatisticsByPredefinedTimePeriods2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "HghstPricVal12Mnths")
 	public PriceValue5 getHighestPriceValue12Months() {
 		return highestPriceValue12Months;
 	}
@@ -334,6 +341,7 @@ public class StatisticsByPredefinedTimePeriods2 {
 		this.highestPriceValue12Months = highestPriceValue12Months;
 	}
 
+	@XmlElement(name = "LwstPricVal12Mnths")
 	public PriceValue5 getLowestPriceValue12Months() {
 		return lowestPriceValue12Months;
 	}
@@ -342,6 +350,7 @@ public class StatisticsByPredefinedTimePeriods2 {
 		this.lowestPriceValue12Months = lowestPriceValue12Months;
 	}
 
+	@XmlElement(name = "OneYrPricChng")
 	public PriceValueChange1 getOneYearPriceChange() {
 		return oneYearPriceChange;
 	}
@@ -350,6 +359,7 @@ public class StatisticsByPredefinedTimePeriods2 {
 		this.oneYearPriceChange = oneYearPriceChange;
 	}
 
+	@XmlElement(name = "ThreeYrPricChng")
 	public PriceValueChange1 getThreeYearPriceChange() {
 		return threeYearPriceChange;
 	}
@@ -358,6 +368,7 @@ public class StatisticsByPredefinedTimePeriods2 {
 		this.threeYearPriceChange = threeYearPriceChange;
 	}
 
+	@XmlElement(name = "FiveYrPricChng")
 	public PriceValueChange1 getFiveYearPriceChange() {
 		return fiveYearPriceChange;
 	}

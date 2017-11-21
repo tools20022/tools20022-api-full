@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information such as the taxation conditions.
@@ -134,6 +138,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNarrative4", propOrder = {"declarationDetails", "additionalText", "narrativeVersion", "registrationDetails", "informationConditions", "informationToComplyWith", "partyContactNarrative", "taxationConditions",
+		"basketOrIndexInformation"})
 public class CorporateActionNarrative4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -630,6 +637,7 @@ public class CorporateActionNarrative4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DclrtnDtls")
 	public List<Max350Text> getDeclarationDetails() {
 		return declarationDetails;
 	}
@@ -638,6 +646,7 @@ public class CorporateActionNarrative4 {
 		this.declarationDetails = declarationDetails;
 	}
 
+	@XmlElement(name = "AddtlTxt")
 	public List<Max350Text> getAdditionalText() {
 		return additionalText;
 	}
@@ -646,6 +655,7 @@ public class CorporateActionNarrative4 {
 		this.additionalText = additionalText;
 	}
 
+	@XmlElement(name = "NrrtvVrsn")
 	public List<Max350Text> getNarrativeVersion() {
 		return narrativeVersion;
 	}
@@ -654,6 +664,7 @@ public class CorporateActionNarrative4 {
 		this.narrativeVersion = narrativeVersion;
 	}
 
+	@XmlElement(name = "RegnDtls")
 	public List<Max350Text> getRegistrationDetails() {
 		return registrationDetails;
 	}
@@ -662,6 +673,7 @@ public class CorporateActionNarrative4 {
 		this.registrationDetails = registrationDetails;
 	}
 
+	@XmlElement(name = "InfConds")
 	public List<Max350Text> getInformationConditions() {
 		return informationConditions;
 	}
@@ -670,6 +682,7 @@ public class CorporateActionNarrative4 {
 		this.informationConditions = informationConditions;
 	}
 
+	@XmlElement(name = "InfToCmplyWth")
 	public List<Max350Text> getInformationToComplyWith() {
 		return informationToComplyWith;
 	}
@@ -678,6 +691,7 @@ public class CorporateActionNarrative4 {
 		this.informationToComplyWith = informationToComplyWith;
 	}
 
+	@XmlElement(name = "PtyCtctNrrtv")
 	public List<Max350Text> getPartyContactNarrative() {
 		return partyContactNarrative;
 	}
@@ -686,6 +700,7 @@ public class CorporateActionNarrative4 {
 		this.partyContactNarrative = partyContactNarrative;
 	}
 
+	@XmlElement(name = "TaxtnConds")
 	public List<Max350Text> getTaxationConditions() {
 		return taxationConditions;
 	}
@@ -694,6 +709,7 @@ public class CorporateActionNarrative4 {
 		this.taxationConditions = taxationConditions;
 	}
 
+	@XmlElement(name = "BsktOrIndxInf")
 	public List<Max350Text> getBasketOrIndexInformation() {
 		return basketOrIndexInformation;
 	}

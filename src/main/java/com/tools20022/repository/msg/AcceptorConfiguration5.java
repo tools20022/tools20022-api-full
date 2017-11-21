@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Acceptor configuration to be downloaded from the terminal management system.
@@ -85,6 +89,8 @@ import java.util.List;
  * AcceptorConfiguration4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorConfiguration5", propOrder = {"terminalManagerIdentification", "dataSet"})
 public class AcceptorConfiguration5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -231,6 +237,7 @@ public class AcceptorConfiguration5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TermnlMgrId", required = true)
 	public GenericIdentification71 getTerminalManagerIdentification() {
 		return terminalManagerIdentification;
 	}
@@ -239,6 +246,7 @@ public class AcceptorConfiguration5 {
 		this.terminalManagerIdentification = terminalManagerIdentification;
 	}
 
+	@XmlElement(name = "DataSet", required = true)
 	public List<TerminalManagementDataSet19> getDataSet() {
 		return dataSet;
 	}

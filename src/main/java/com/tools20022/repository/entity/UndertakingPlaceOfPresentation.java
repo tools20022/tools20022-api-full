@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1;
 import com.tools20022.repository.codeset.PresentationPartyCode;
 import com.tools20022.repository.entity.UndertakingPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,6 +38,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingPlaceOfPresentation#mmPresentationUnderConfirmation
+ * UndertakingPlaceOfPresentation.mmPresentationUnderConfirmation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
+ * UndertakingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -53,18 +66,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1#mmPlaceOfPresentation
  * PlaceOrUnderConfirmationChoice1.mmPlaceOfPresentation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
- * UndertakingPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingPlaceOfPresentation#mmPresentationUnderConfirmation
- * UndertakingPlaceOfPresentation.mmPresentationUnderConfirmation}</li>
  * </ul>
  * </li>
  * <li>
@@ -117,7 +118,7 @@ public class UndertakingPlaceOfPresentation extends UndertakingPartyRole {
 	 */
 	public static final MMBusinessAttribute mmPresentationUnderConfirmation = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> UndertakingPlaceOfPresentation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingPlaceOfPresentation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresentationUnderConfirmation";
@@ -125,6 +126,14 @@ public class UndertakingPlaceOfPresentation extends UndertakingPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PresentationPartyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingPlaceOfPresentation.class.getMethod("getPresentationUnderConfirmation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -137,8 +146,13 @@ public class UndertakingPlaceOfPresentation extends UndertakingPartyRole {
 				definition = "Place at which the documents must be presented.";
 				derivationElement_lazy = () -> Arrays.asList(PlaceOrUnderConfirmationChoice1.mmPlaceOfPresentation);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(UndertakingPlaceOfPresentation.mmPresentationUnderConfirmation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UndertakingPlaceOfPresentation.mmPresentationUnderConfirmation);
 				derivationComponent_lazy = () -> Arrays.asList(PlaceOrUnderConfirmationChoice1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UndertakingPlaceOfPresentation.class;
 			}
 		});
 		return mmObject_lazy.get();

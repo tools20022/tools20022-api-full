@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.CashAccountContract;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports either on the account information or on a business error.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountReport13", propOrder = {"accountIdentification", "accountOrError"})
 public class AccountReport13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -211,6 +217,7 @@ public class AccountReport13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentification4Choice getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -219,6 +226,7 @@ public class AccountReport13 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctOrErr", required = true)
 	public AccountOrBusinessError1Choice getAccountOrError() {
 		return accountOrError;
 	}

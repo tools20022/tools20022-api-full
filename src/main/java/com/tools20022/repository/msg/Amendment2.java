@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the amendment.
@@ -82,6 +86,8 @@ import java.util.List;
  * definition} = "Details of the amendment."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Amendment2", propOrder = {"undertakingAmendmentMessage", "firstAdvisingPartyAdditionalInformation", "secondAdvisingPartyAdditionalInformation", "confirmationDetails", "digitalSignature"})
 public class Amendment2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -342,6 +348,7 @@ public class Amendment2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UdrtkgAmdmntMsg", required = true)
 	public UndertakingAmendmentMessage1 getUndertakingAmendmentMessage() {
 		return undertakingAmendmentMessage;
 	}
@@ -350,6 +357,7 @@ public class Amendment2 {
 		this.undertakingAmendmentMessage = undertakingAmendmentMessage;
 	}
 
+	@XmlElement(name = "FrstAdvsgPtyAddtlInf")
 	public AdvisingPartyAdditionalInformation1 getFirstAdvisingPartyAdditionalInformation() {
 		return firstAdvisingPartyAdditionalInformation;
 	}
@@ -358,6 +366,7 @@ public class Amendment2 {
 		this.firstAdvisingPartyAdditionalInformation = firstAdvisingPartyAdditionalInformation;
 	}
 
+	@XmlElement(name = "ScndAdvsgPtyAddtlInf")
 	public AdvisingPartyAdditionalInformation1 getSecondAdvisingPartyAdditionalInformation() {
 		return secondAdvisingPartyAdditionalInformation;
 	}
@@ -366,6 +375,7 @@ public class Amendment2 {
 		this.secondAdvisingPartyAdditionalInformation = secondAdvisingPartyAdditionalInformation;
 	}
 
+	@XmlElement(name = "ConfDtls")
 	public UndertakingConfirmation1 getConfirmationDetails() {
 		return confirmationDetails;
 	}
@@ -374,6 +384,7 @@ public class Amendment2 {
 		this.confirmationDetails = confirmationDetails;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public List<PartyAndSignature2> getDigitalSignature() {
 		return digitalSignature;
 	}

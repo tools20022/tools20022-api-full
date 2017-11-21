@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.GroupHeader36;
 import com.tools20022.repository.msg.OriginalGroupInformation20;
 import com.tools20022.repository.msg.OriginalPaymentInformation1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -54,9 +56,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.002.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
@@ -87,6 +86,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.002.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -110,6 +112,8 @@ import java.util.List;
  * PaymentStatusReportV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustomerPaymentStatusReportV03", propOrder = {"groupHeader", "originalGroupInformationAndStatus", "originalPaymentInformationAndStatus"})
 public class CustomerPaymentStatusReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -149,6 +153,14 @@ public class CustomerPaymentStatusReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader36.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentStatusReportV03.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OriginalGroupInformation20 originalGroupInformationAndStatus;
 	/**
@@ -187,6 +199,14 @@ public class CustomerPaymentStatusReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> OriginalGroupInformation20.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentStatusReportV03.class.getMethod("getOriginalGroupInformationAndStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<OriginalPaymentInformation1> originalPaymentInformationAndStatus;
 	/**
@@ -224,6 +244,14 @@ public class CustomerPaymentStatusReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> OriginalPaymentInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerPaymentStatusReportV03.class.getMethod("getOriginalPaymentInformationAndStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -238,8 +266,8 @@ public class CustomerPaymentStatusReportV03 {
 				rootElement = "Document";
 				xmlTag = "CstmrPmtStsRpt";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentStatusReportV03.mmGroupHeader, CustomerPaymentStatusReportV03.mmOriginalGroupInformationAndStatus,
-						CustomerPaymentStatusReportV03.mmOriginalPaymentInformationAndStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentStatusReportV03.mmGroupHeader,
+						com.tools20022.repository.area.pain.CustomerPaymentStatusReportV03.mmOriginalGroupInformationAndStatus, com.tools20022.repository.area.pain.CustomerPaymentStatusReportV03.mmOriginalPaymentInformationAndStatus);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";
@@ -249,10 +277,16 @@ public class CustomerPaymentStatusReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CustomerPaymentStatusReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader36 getGroupHeader() {
 		return groupHeader;
 	}
@@ -261,6 +295,7 @@ public class CustomerPaymentStatusReportV03 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
 	public OriginalGroupInformation20 getOriginalGroupInformationAndStatus() {
 		return originalGroupInformationAndStatus;
 	}
@@ -269,11 +304,18 @@ public class CustomerPaymentStatusReportV03 {
 		this.originalGroupInformationAndStatus = originalGroupInformationAndStatus;
 	}
 
+	@XmlElement(name = "OrgnlPmtInfAndSts")
 	public List<OriginalPaymentInformation1> getOriginalPaymentInformationAndStatus() {
 		return originalPaymentInformationAndStatus;
 	}
 
 	public void setOriginalPaymentInformationAndStatus(List<OriginalPaymentInformation1> originalPaymentInformationAndStatus) {
 		this.originalPaymentInformationAndStatus = originalPaymentInformationAndStatus;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.002.03.03")
+	static public class Document {
+		@XmlElement(name = "CstmrPmtStsRpt", required = true)
+		public CustomerPaymentStatusReportV03 messageBody;
 	}
 }

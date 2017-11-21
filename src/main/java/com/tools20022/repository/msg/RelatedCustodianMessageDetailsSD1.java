@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides selected corporate action events message details extracted from the
@@ -85,6 +89,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RelatedCustodianMessageDetailsSD1", propOrder = {"receivedEventType", "receivedMandatoryVoluntaryEventType", "receivedCorporateActionEventIdentification", "receivedDate", "receivedTime", "inboundISOMessageType",
+		"inboundISOMessageReceiverBIC", "receivedRelatedReference", "receivedSenderMessageReference", "inboundISOMessageSenderBIC"})
 public class RelatedCustodianMessageDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -553,6 +560,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RcvdEvtTp", required = true)
 	public Max4AlphaNumericText getReceivedEventType() {
 		return receivedEventType;
 	}
@@ -561,6 +569,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 		this.receivedEventType = receivedEventType;
 	}
 
+	@XmlElement(name = "RcvdMndtryVlntryEvtTp", required = true)
 	public Max4AlphaNumericText getReceivedMandatoryVoluntaryEventType() {
 		return receivedMandatoryVoluntaryEventType;
 	}
@@ -569,6 +578,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 		this.receivedMandatoryVoluntaryEventType = receivedMandatoryVoluntaryEventType;
 	}
 
+	@XmlElement(name = "RcvdCorpActnEvtId", required = true)
 	public RestrictedFINXMax16Text getReceivedCorporateActionEventIdentification() {
 		return receivedCorporateActionEventIdentification;
 	}
@@ -577,6 +587,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 		this.receivedCorporateActionEventIdentification = receivedCorporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "RcvdDt", required = true)
 	public ISODate getReceivedDate() {
 		return receivedDate;
 	}
@@ -585,6 +596,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 		this.receivedDate = receivedDate;
 	}
 
+	@XmlElement(name = "RcvdTm")
 	public ISOTime getReceivedTime() {
 		return receivedTime;
 	}
@@ -593,6 +605,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 		this.receivedTime = receivedTime;
 	}
 
+	@XmlElement(name = "InbndISOMT", required = true)
 	public Exact3NumericText getInboundISOMessageType() {
 		return inboundISOMessageType;
 	}
@@ -601,6 +614,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 		this.inboundISOMessageType = inboundISOMessageType;
 	}
 
+	@XmlElement(name = "InbndISOMsgRcvrBIC", required = true)
 	public AnyBICIdentifier getInboundISOMessageReceiverBIC() {
 		return inboundISOMessageReceiverBIC;
 	}
@@ -609,6 +623,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 		this.inboundISOMessageReceiverBIC = inboundISOMessageReceiverBIC;
 	}
 
+	@XmlElement(name = "RcvdRltdRef", required = true)
 	public RestrictedFINXMax16Text getReceivedRelatedReference() {
 		return receivedRelatedReference;
 	}
@@ -617,6 +632,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 		this.receivedRelatedReference = receivedRelatedReference;
 	}
 
+	@XmlElement(name = "RcvdSndrMsgRef", required = true)
 	public RestrictedFINXMax16Text getReceivedSenderMessageReference() {
 		return receivedSenderMessageReference;
 	}
@@ -625,6 +641,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 		this.receivedSenderMessageReference = receivedSenderMessageReference;
 	}
 
+	@XmlElement(name = "InbndISOMsgSndrBIC", required = true)
 	public AnyBICIdentifier getInboundISOMessageSenderBIC() {
 		return inboundISOMessageSenderBIC;
 	}

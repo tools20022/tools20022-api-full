@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.SecuritiesFinancing;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OtherAmounts16;
 import com.tools20022.repository.msg.SecuritiesFinancing10;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -47,48 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.LendingTransactionMethod1Choice
- * LendingTransactionMethod1Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesLendingType1Choice
- * SecuritiesLendingType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversible1Choice
- * Reversible1Choice}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmSecuritiesLending
- * SecuritiesDeliveryObligation.mmSecuritiesLending}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmLendingTransactionMethod
- * SecuritiesFinancing10.mmLendingTransactionMethod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmSecuritiesLendingType
- * SecuritiesFinancing10.mmSecuritiesLendingType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmReversible
- * SecuritiesFinancing10.mmReversible}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
- * SecuritiesFinancing}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -133,6 +92,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesLending.mmSecuritiesDeliveryObligation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
+ * SecuritiesFinancing}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.LendingTransactionMethod1Choice
+ * LendingTransactionMethod1Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesLendingType1Choice
+ * SecuritiesLendingType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversible1Choice
+ * Reversible1Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmSecuritiesLending
+ * SecuritiesDeliveryObligation.mmSecuritiesLending}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmLendingTransactionMethod
+ * SecuritiesFinancing10.mmLendingTransactionMethod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmSecuritiesLendingType
+ * SecuritiesFinancing10.mmSecuritiesLendingType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmReversible
+ * SecuritiesFinancing10.mmReversible}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -165,11 +166,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
-	 * SecuritiesLending}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -178,6 +174,11 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * OtherAmounts16.mmBorrowingFee}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
+	 * SecuritiesLending}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -194,7 +195,7 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	public static final MMBusinessAttribute mmBorrowingFee = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(OtherAmounts16.mmBorrowingFee);
-			elementContext_lazy = () -> SecuritiesLending.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BorrowingFee";
@@ -202,6 +203,14 @@ public class SecuritiesLending extends SecuritiesFinancing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesLending.class.getMethod("getBorrowingFee", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator callableTradeIndicator;
@@ -215,11 +224,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
-	 * SecuritiesLending}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -228,6 +232,11 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * SecuritiesFinancing10.mmCallableTradeIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
+	 * SecuritiesLending}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -242,7 +251,7 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	public static final MMBusinessAttribute mmCallableTradeIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmCallableTradeIndicator);
-			elementContext_lazy = () -> SecuritiesLending.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CallableTradeIndicator";
@@ -250,6 +259,14 @@ public class SecuritiesLending extends SecuritiesFinancing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesLending.class.getMethod("getCallableTradeIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected LendingTransactionMethodCode lendingTransactionMethod;
@@ -263,11 +280,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.LendingTransactionMethodCode
 	 * LendingTransactionMethodCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
-	 * SecuritiesLending}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -279,6 +291,11 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * LendingTransactionMethod1Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
+	 * SecuritiesLending}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -293,7 +310,7 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	public static final MMBusinessAttribute mmLendingTransactionMethod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LendingTransactionMethod1Choice.mmCode, LendingTransactionMethod1Choice.mmProprietary);
-			elementContext_lazy = () -> SecuritiesLending.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LendingTransactionMethod";
@@ -301,6 +318,14 @@ public class SecuritiesLending extends SecuritiesFinancing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LendingTransactionMethodCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesLending.class.getMethod("getLendingTransactionMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BorrowingReasonCode borrowingReason;
@@ -315,11 +340,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.BorrowingReasonCode
 	 * BorrowingReasonCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
-	 * SecuritiesLending}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -331,6 +351,11 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * BorrowingReason1Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
+	 * SecuritiesLending}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -347,7 +372,7 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	public static final MMBusinessAttribute mmBorrowingReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BorrowingReason1Choice.mmCode, BorrowingReason1Choice.mmProprietary);
-			elementContext_lazy = () -> SecuritiesLending.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BorrowingReason";
@@ -355,6 +380,14 @@ public class SecuritiesLending extends SecuritiesFinancing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BorrowingReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesLending.class.getMethod("getBorrowingReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ReversibleCode reversible;
@@ -369,11 +402,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ReversibleCode
 	 * ReversibleCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
-	 * SecuritiesLending}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -385,6 +413,11 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * Reversible1Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
+	 * SecuritiesLending}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -401,7 +434,7 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	public static final MMBusinessAttribute mmReversible = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Reversible1Choice.mmCode, Reversible1Choice.mmProprietary);
-			elementContext_lazy = () -> SecuritiesLending.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reversible";
@@ -409,6 +442,14 @@ public class SecuritiesLending extends SecuritiesFinancing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReversibleCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesLending.class.getMethod("getReversible", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesLendingTypeCode securitiesLendingType;
@@ -422,11 +463,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesLendingTypeCode
 	 * SecuritiesLendingTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
-	 * SecuritiesLending}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -438,6 +474,11 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * SecuritiesLendingType1Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
+	 * SecuritiesLending}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -452,7 +493,7 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	public static final MMBusinessAttribute mmSecuritiesLendingType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesLendingType1Choice.mmCode, SecuritiesLendingType1Choice.mmProprietary);
-			elementContext_lazy = () -> SecuritiesLending.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesLendingType";
@@ -460,6 +501,14 @@ public class SecuritiesLending extends SecuritiesFinancing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesLendingTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesLending.class.getMethod("getSecuritiesLendingType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator lendingWithCollateral;
@@ -473,11 +522,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
-	 * SecuritiesLending}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -486,6 +530,11 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * SecuritiesFinancing10.mmLendingWithCollateral}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
+	 * SecuritiesLending}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -502,7 +551,7 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	public static final MMBusinessAttribute mmLendingWithCollateral = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmLendingWithCollateral);
-			elementContext_lazy = () -> SecuritiesLending.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LendingWithCollateral";
@@ -510,6 +559,14 @@ public class SecuritiesLending extends SecuritiesFinancing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesLending.class.getMethod("getLendingWithCollateral", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODate minimumDateForCallBack;
@@ -523,11 +580,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
-	 * SecuritiesLending}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -536,6 +588,11 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * SecuritiesFinancing10.mmMinimumDateForCallBack}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
+	 * SecuritiesLending}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -552,7 +609,7 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	public static final MMBusinessAttribute mmMinimumDateForCallBack = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmMinimumDateForCallBack);
-			elementContext_lazy = () -> SecuritiesLending.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumDateForCallBack";
@@ -560,6 +617,14 @@ public class SecuritiesLending extends SecuritiesFinancing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesLending.class.getMethod("getMinimumDateForCallBack", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max4NumericText numberOfDaysLendingBorrowing;
@@ -574,11 +639,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max4NumericText
 	 * Max4NumericText}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
-	 * SecuritiesLending}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -587,6 +647,11 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * SecuritiesFinancing10.mmNumberOfDaysLendingBorrowing}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
+	 * SecuritiesLending}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -603,7 +668,7 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	public static final MMBusinessAttribute mmNumberOfDaysLendingBorrowing = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmNumberOfDaysLendingBorrowing);
-			elementContext_lazy = () -> SecuritiesLending.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfDaysLendingBorrowing";
@@ -611,6 +676,14 @@ public class SecuritiesLending extends SecuritiesFinancing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4NumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesLending.class.getMethod("getNumberOfDaysLendingBorrowing", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator periodicPayment;
@@ -645,7 +718,7 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 */
 	public static final MMBusinessAttribute mmPeriodicPayment = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> SecuritiesLending.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PeriodicPayment";
@@ -653,6 +726,14 @@ public class SecuritiesLending extends SecuritiesFinancing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesLending.class.getMethod("getPeriodicPayment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator rollover;
@@ -666,11 +747,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
-	 * SecuritiesLending}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -679,6 +755,11 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * SecuritiesFinancing10.mmRollOver}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
+	 * SecuritiesLending}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -693,7 +774,7 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	public static final MMBusinessAttribute mmRollover = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmRollOver);
-			elementContext_lazy = () -> SecuritiesLending.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rollover";
@@ -701,6 +782,14 @@ public class SecuritiesLending extends SecuritiesFinancing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesLending.class.getMethod("getRollover", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate borrowingRate;
@@ -733,7 +822,7 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 */
 	public static final MMBusinessAttribute mmBorrowingRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> SecuritiesLending.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BorrowingRate";
@@ -741,6 +830,14 @@ public class SecuritiesLending extends SecuritiesFinancing {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesLending.class.getMethod("getBorrowingRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesDeliveryObligation securitiesDeliveryObligation;
@@ -780,7 +877,7 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesDeliveryObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesLending.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesDeliveryObligation";
@@ -803,10 +900,18 @@ public class SecuritiesLending extends SecuritiesFinancing {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSecuritiesLending);
 				derivationElement_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmLendingTransactionMethod, SecuritiesFinancing10.mmSecuritiesLendingType, SecuritiesFinancing10.mmReversible);
 				superType_lazy = () -> SecuritiesFinancing.mmObject();
-				element_lazy = () -> Arrays.asList(SecuritiesLending.mmBorrowingFee, SecuritiesLending.mmCallableTradeIndicator, SecuritiesLending.mmLendingTransactionMethod, SecuritiesLending.mmBorrowingReason,
-						SecuritiesLending.mmReversible, SecuritiesLending.mmSecuritiesLendingType, SecuritiesLending.mmLendingWithCollateral, SecuritiesLending.mmMinimumDateForCallBack, SecuritiesLending.mmNumberOfDaysLendingBorrowing,
-						SecuritiesLending.mmPeriodicPayment, SecuritiesLending.mmRollover, SecuritiesLending.mmBorrowingRate, SecuritiesLending.mmSecuritiesDeliveryObligation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesLending.mmBorrowingFee, com.tools20022.repository.entity.SecuritiesLending.mmCallableTradeIndicator,
+						com.tools20022.repository.entity.SecuritiesLending.mmLendingTransactionMethod, com.tools20022.repository.entity.SecuritiesLending.mmBorrowingReason, com.tools20022.repository.entity.SecuritiesLending.mmReversible,
+						com.tools20022.repository.entity.SecuritiesLending.mmSecuritiesLendingType, com.tools20022.repository.entity.SecuritiesLending.mmLendingWithCollateral,
+						com.tools20022.repository.entity.SecuritiesLending.mmMinimumDateForCallBack, com.tools20022.repository.entity.SecuritiesLending.mmNumberOfDaysLendingBorrowing,
+						com.tools20022.repository.entity.SecuritiesLending.mmPeriodicPayment, com.tools20022.repository.entity.SecuritiesLending.mmRollover, com.tools20022.repository.entity.SecuritiesLending.mmBorrowingRate,
+						com.tools20022.repository.entity.SecuritiesLending.mmSecuritiesDeliveryObligation);
 				derivationComponent_lazy = () -> Arrays.asList(LendingTransactionMethod1Choice.mmObject(), SecuritiesLendingType1Choice.mmObject(), Reversible1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesLending.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.TradingMarket;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Execution of a redemption order.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Execution of a redemption order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RedemptionMultipleExecution4", propOrder = {"masterReference", "placeOfTrade", "investmentAccountDetails", "individualExecutionDetails"})
 public class RedemptionMultipleExecution4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -287,6 +293,7 @@ public class RedemptionMultipleExecution4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public RestrictedFINMax16Text getMasterReference() {
 		return masterReference;
 	}
@@ -295,6 +302,7 @@ public class RedemptionMultipleExecution4 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public PlaceOfTradeIdentification3Choice getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -303,6 +311,7 @@ public class RedemptionMultipleExecution4 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount33 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -311,6 +320,7 @@ public class RedemptionMultipleExecution4 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "IndvExctnDtls", required = true)
 	public RedemptionExecution12 getIndividualExecutionDetails() {
 		return individualExecutionDetails;
 	}

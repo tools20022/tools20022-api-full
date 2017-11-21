@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.CorporateActionAmendmentProcessingStatus1;
 import com.tools20022.repository.msg.CorporateActionAmendmentRejectionStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the different statuses of an election amendment request.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between the different statuses of an election amendment request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ElectionAmendmentStatus1Choice", propOrder = {"processedStatus", "rejectedStatus"})
 public class ElectionAmendmentStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -189,6 +195,7 @@ public class ElectionAmendmentStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcdSts", required = true)
 	public CorporateActionAmendmentProcessingStatus1 getProcessedStatus() {
 		return processedStatus;
 	}
@@ -197,6 +204,7 @@ public class ElectionAmendmentStatus1Choice {
 		this.processedStatus = processedStatus;
 	}
 
+	@XmlElement(name = "RjctdSts", required = true)
 	public CorporateActionAmendmentRejectionStatus1 getRejectedStatus() {
 		return rejectedStatus;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the type of action to be performed in the request.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the type of action to be performed in the request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestType2Choice", propOrder = {"paymentControl", "enquiry", "proprietary"})
 public class RequestType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -207,6 +213,7 @@ public class RequestType2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtCtrl", required = true)
 	public RequestType1Code getPaymentControl() {
 		return paymentControl;
 	}
@@ -215,6 +222,7 @@ public class RequestType2Choice {
 		this.paymentControl = paymentControl;
 	}
 
+	@XmlElement(name = "Enqry", required = true)
 	public RequestType2Code getEnquiry() {
 		return enquiry;
 	}
@@ -223,6 +231,7 @@ public class RequestType2Choice {
 		this.enquiry = enquiry;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification1 getProprietary() {
 		return proprietary;
 	}

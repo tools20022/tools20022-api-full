@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the valuation of a collateral, identified through an ISIN.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralValuation3", propOrder = {"nominalAmount", "ISIN"})
 public class CollateralValuation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -216,6 +222,7 @@ public class CollateralValuation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NmnlAmt")
 	public ActiveCurrencyAndAmount getNominalAmount() {
 		return nominalAmount;
 	}
@@ -224,6 +231,7 @@ public class CollateralValuation3 {
 		this.nominalAmount = nominalAmount;
 	}
 
+	@XmlElement(name = "ISIN", required = true)
 	public ISINIdentifier getISIN() {
 		return iSIN;
 	}

@@ -39,6 +39,15 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.BulkPayment#mmGroups
+ * BulkPayment.mmGroups}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -148,15 +157,6 @@ import java.util.List;
  * SubscriptionMultipleExecution5.mmBulkCashSettlementDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.BulkPayment#mmGroups
- * BulkPayment.mmGroups}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -215,7 +215,7 @@ public class BulkPayment extends Payment {
 	 */
 	public static final MMBusinessAssociationEnd mmGroups = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> BulkPayment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BulkPayment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Groups";
@@ -245,8 +245,13 @@ public class BulkPayment extends Payment {
 						RedemptionMultipleOrder6.mmBulkCashSettlementDetails, SubscriptionMultipleOrder6.mmBulkCashSettlementDetails, SubscriptionBulkExecution4.mmBulkCashSettlementDetails, RedemptionBulkOrder6.mmBulkCashSettlementDetails,
 						SubscriptionMultipleExecution5.mmBulkCashSettlementDetails);
 				superType_lazy = () -> Payment.mmObject();
-				element_lazy = () -> Arrays.asList(BulkPayment.mmGroups);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BulkPayment.mmGroups);
 				derivationComponent_lazy = () -> Arrays.asList(AggregationTransaction1.mmObject(), AggregationTransaction2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BulkPayment.class;
 			}
 		});
 		return mmObject_lazy.get();

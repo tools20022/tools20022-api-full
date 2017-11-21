@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment instrument between a debtor and a creditor, which flows through one
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CreditTransfer3", propOrder = {"reference", "creditorDetails", "debtorDetails"})
 public class CreditTransfer3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -236,6 +242,7 @@ public class CreditTransfer3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ref")
 	public Max35Text getReference() {
 		return reference;
 	}
@@ -244,6 +251,7 @@ public class CreditTransfer3 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "CdtrDtls", required = true)
 	public Creditor2 getCreditorDetails() {
 		return creditorDetails;
 	}
@@ -252,6 +260,7 @@ public class CreditTransfer3 {
 		this.creditorDetails = creditorDetails;
 	}
 
+	@XmlElement(name = "DbtrDtls")
 	public Debtor2 getDebtorDetails() {
 		return debtorDetails;
 	}

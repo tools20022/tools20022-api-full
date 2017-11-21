@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.LocalName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about hold back and gating.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * HoldBackInformation2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "HoldBackInformation3", propOrder = {"type", "amount", "expectedReleaseDate", "financialInstrumentIdentification", "financialInstrumentName", "redemptionCompletion"})
 public class HoldBackInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -420,6 +426,7 @@ public class HoldBackInformation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public GateHoldBack1Code getType() {
 		return type;
 	}
@@ -428,6 +435,7 @@ public class HoldBackInformation3 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Amt")
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -436,6 +444,7 @@ public class HoldBackInformation3 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "XpctdRlsDt")
 	public ISODate getExpectedReleaseDate() {
 		return expectedReleaseDate;
 	}
@@ -444,6 +453,7 @@ public class HoldBackInformation3 {
 		this.expectedReleaseDate = expectedReleaseDate;
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public SecurityIdentification25Choice getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -452,6 +462,7 @@ public class HoldBackInformation3 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmNm")
 	public Max350Text getFinancialInstrumentName() {
 		return financialInstrumentName;
 	}
@@ -460,6 +471,7 @@ public class HoldBackInformation3 {
 		this.financialInstrumentName = financialInstrumentName;
 	}
 
+	@XmlElement(name = "RedCmpltn")
 	public RedemptionCompletion1Code getRedemptionCompletion() {
 		return redemptionCompletion;
 	}

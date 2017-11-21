@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.TreasuryTrade;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,6 +39,57 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmAgreedRate
+ * ForeignExchangeTrade.mmAgreedRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmTypeOfProduct
+ * ForeignExchangeTrade.mmTypeOfProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmBuyAmount
+ * ForeignExchangeTrade.mmBuyAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmSellAmount
+ * ForeignExchangeTrade.mmSellAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmResultingSettlement
+ * ForeignExchangeTrade.mmResultingSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmCurrencyExchangeForSecuritiesSettlement
+ * ForeignExchangeTrade.mmCurrencyExchangeForSecuritiesSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmOpeningLegRelatedNonDeliverableTrade
+ * ForeignExchangeTrade.mmOpeningLegRelatedNonDeliverableTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmClosingLegRelatedNonDeliverableTrade
+ * ForeignExchangeTrade.mmClosingLegRelatedNonDeliverableTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmRelatedSwap
+ * ForeignExchangeTrade.mmRelatedSwap}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmRelatedOption
+ * ForeignExchangeTrade.mmRelatedOption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmCurrencyExchangeForTaxVoucher
+ * ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmExchangeForwardPoint
+ * ForeignExchangeTrade.mmExchangeForwardPoint}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.NonDeliverableTrade
+ * NonDeliverableTrade}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TreasuryTrade
+ * TreasuryTrade}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -97,57 +149,6 @@ import java.util.List;
  * SplitTradeDetails3.mmTradeAmounts}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TreasuryTrade
- * TreasuryTrade}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.NonDeliverableTrade
- * NonDeliverableTrade}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmAgreedRate
- * ForeignExchangeTrade.mmAgreedRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmTypeOfProduct
- * ForeignExchangeTrade.mmTypeOfProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmBuyAmount
- * ForeignExchangeTrade.mmBuyAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmSellAmount
- * ForeignExchangeTrade.mmSellAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmResultingSettlement
- * ForeignExchangeTrade.mmResultingSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmCurrencyExchangeForSecuritiesSettlement
- * ForeignExchangeTrade.mmCurrencyExchangeForSecuritiesSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmOpeningLegRelatedNonDeliverableTrade
- * ForeignExchangeTrade.mmOpeningLegRelatedNonDeliverableTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmClosingLegRelatedNonDeliverableTrade
- * ForeignExchangeTrade.mmClosingLegRelatedNonDeliverableTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmRelatedSwap
- * ForeignExchangeTrade.mmRelatedSwap}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmRelatedOption
- * ForeignExchangeTrade.mmRelatedOption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmCurrencyExchangeForTaxVoucher
- * ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmExchangeForwardPoint
- * ForeignExchangeTrade.mmExchangeForwardPoint}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -187,11 +188,6 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
 	 * CurrencyExchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
-	 * ForeignExchangeTrade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -484,6 +480,11 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
+	 * ForeignExchangeTrade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -521,7 +522,7 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 					SwitchOrder7.mmForeignExchangeDetails, RedemptionOrder14.mmForeignExchangeDetails, SubscriptionExecution13.mmForeignExchangeDetails, SubscriptionExecution12.mmForeignExchangeDetails,
 					SubscriptionOrder15.mmForeignExchangeDetails, RedemptionOrder15.mmForeignExchangeDetails, RedemptionExecution16.mmForeignExchangeDetails, SubscriptionOrder14.mmForeignExchangeDetails,
 					RedemptionExecution15.mmForeignExchangeDetails, SplitTradeDetails3.mmAgreedRate, ForeignExchangeSwapTransaction3.mmForeignExchange);
-			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AgreedRate";
@@ -543,11 +544,6 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
-	 * ForeignExchangeTrade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -578,6 +574,11 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
+	 * ForeignExchangeTrade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -592,7 +593,7 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeData10.mmProductType, TradeData8.mmProductType, TradeAgreement9.mmProductType, TradeData7.mmProductType, TradeAgreement12.mmProductType, TradeData11.mmProductType,
 					TradeAgreement15.mmProductType, TradeData12.mmProductType, TradeAgreement14.mmProductType, TradeData15.mmProductType);
-			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TypeOfProduct";
@@ -600,6 +601,14 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTrade.class.getMethod("getTypeOfProduct", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount buyAmount;
@@ -613,11 +622,6 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
-	 * ForeignExchangeTrade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -645,6 +649,11 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
+	 * ForeignExchangeTrade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -659,7 +668,7 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountsAndValueDate1.mmTradingSideBuyAmount, ForeignExchangeTerms4.mmBuyAmount, ForeignExchangeTerms7.mmToAmount, ForeignExchangeTerms10.mmToAmount, ForeignExchangeTerms26.mmToAmount,
 					ForeignExchangeTerms33.mmToAmount, FixingConditions1.mmTradingSideBuyAmount);
-			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuyAmount";
@@ -667,6 +676,14 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTrade.class.getMethod("getBuyAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount sellAmount;
@@ -680,11 +697,6 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
-	 * ForeignExchangeTrade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -712,6 +724,11 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
+	 * ForeignExchangeTrade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -726,7 +743,7 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountsAndValueDate1.mmTradingSideSellAmount, ForeignExchangeTerms4.mmSellAmount, ForeignExchangeTerms7.mmFromAmount, ForeignExchangeTerms10.mmFromAmount,
 					ForeignExchangeTerms26.mmFromAmount, ForeignExchangeTerms33.mmFromAmount, FixingConditions1.mmTradingSideSellAmount);
-			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SellAmount";
@@ -734,6 +751,14 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTrade.class.getMethod("getSellAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.PaymentObligation> resultingSettlement;
@@ -777,7 +802,7 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmResultingSettlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResultingSettlement";
@@ -827,7 +852,7 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmCurrencyExchangeForSecuritiesSettlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchangeForSecuritiesSettlement";
@@ -876,7 +901,7 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmOpeningLegRelatedNonDeliverableTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OpeningLegRelatedNonDeliverableTrade";
@@ -925,7 +950,7 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmClosingLegRelatedNonDeliverableTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosingLegRelatedNonDeliverableTrade";
@@ -973,7 +998,7 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSwap = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSwap";
@@ -1021,7 +1046,7 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedOption = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOption";
@@ -1070,7 +1095,7 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmCurrencyExchangeForTaxVoucher = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchangeForTaxVoucher";
@@ -1095,11 +1120,6 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.DecimalNumber
 	 * DecimalNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
-	 * ForeignExchangeTrade}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1108,6 +1128,11 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 * ForeignExchange1.mmExchangeForwardPoint}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
+	 * ForeignExchangeTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1124,7 +1149,7 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	public static final MMBusinessAttribute mmExchangeForwardPoint = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ForeignExchange1.mmExchangeForwardPoint);
-			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangeForwardPoint";
@@ -1132,6 +1157,14 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTrade.class.getMethod("getExchangeForwardPoint", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1149,10 +1182,18 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 				derivationElement_lazy = () -> Arrays.asList(SplitTradeDetails1.mmTradeAmounts, OpeningData1.mmTradeAmounts, OpeningData2.mmTradeAmounts, Option10.mmOptionAmounts, SplitTradeDetails3.mmTradeAmounts);
 				subType_lazy = () -> Arrays.asList(com.tools20022.repository.entity.NonDeliverableTrade.mmObject());
 				superType_lazy = () -> TreasuryTrade.mmObject();
-				element_lazy = () -> Arrays.asList(ForeignExchangeTrade.mmAgreedRate, ForeignExchangeTrade.mmTypeOfProduct, ForeignExchangeTrade.mmBuyAmount, ForeignExchangeTrade.mmSellAmount, ForeignExchangeTrade.mmResultingSettlement,
-						ForeignExchangeTrade.mmCurrencyExchangeForSecuritiesSettlement, ForeignExchangeTrade.mmOpeningLegRelatedNonDeliverableTrade, ForeignExchangeTrade.mmClosingLegRelatedNonDeliverableTrade,
-						ForeignExchangeTrade.mmRelatedSwap, ForeignExchangeTrade.mmRelatedOption, ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher, ForeignExchangeTrade.mmExchangeForwardPoint);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate, com.tools20022.repository.entity.ForeignExchangeTrade.mmTypeOfProduct,
+						com.tools20022.repository.entity.ForeignExchangeTrade.mmBuyAmount, com.tools20022.repository.entity.ForeignExchangeTrade.mmSellAmount, com.tools20022.repository.entity.ForeignExchangeTrade.mmResultingSettlement,
+						com.tools20022.repository.entity.ForeignExchangeTrade.mmCurrencyExchangeForSecuritiesSettlement, com.tools20022.repository.entity.ForeignExchangeTrade.mmOpeningLegRelatedNonDeliverableTrade,
+						com.tools20022.repository.entity.ForeignExchangeTrade.mmClosingLegRelatedNonDeliverableTrade, com.tools20022.repository.entity.ForeignExchangeTrade.mmRelatedSwap,
+						com.tools20022.repository.entity.ForeignExchangeTrade.mmRelatedOption, com.tools20022.repository.entity.ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher,
+						com.tools20022.repository.entity.ForeignExchangeTrade.mmExchangeForwardPoint);
 				derivationComponent_lazy = () -> Arrays.asList(AmountsAndValueDate1.mmObject(), OpeningData1.mmObject(), OpeningData2.mmObject(), Trade3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ForeignExchangeTrade.class;
 			}
 		});
 		return mmObject_lazy.get();

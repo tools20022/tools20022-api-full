@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the designation of a currency.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about the designation of a currency."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyDesignation1", propOrder = {"currencyDesignation", "location", "additionalInformation"})
 public class CurrencyDesignation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -209,6 +215,7 @@ public class CurrencyDesignation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CcyDsgnt")
 	public CurrencyDesignation1Code getCurrencyDesignation() {
 		return currencyDesignation;
 	}
@@ -217,6 +224,7 @@ public class CurrencyDesignation1 {
 		this.currencyDesignation = currencyDesignation;
 	}
 
+	@XmlElement(name = "Lctn")
 	public CountryCode getLocation() {
 		return location;
 	}
@@ -225,6 +233,7 @@ public class CurrencyDesignation1 {
 		this.location = location;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}

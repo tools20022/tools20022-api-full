@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Gives the name and the reference of the query.
@@ -56,6 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Gives the name and the reference of the query."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QueryReference", propOrder = {"queryReference", "queryName"})
 public class QueryReference {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -153,6 +159,7 @@ public class QueryReference {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QryRef", required = true)
 	public Max35Text getQueryReference() {
 		return queryReference;
 	}
@@ -161,6 +168,7 @@ public class QueryReference {
 		this.queryReference = queryReference;
 	}
 
+	@XmlElement(name = "QryNm")
 	public Max35Text getQueryName() {
 		return queryName;
 	}

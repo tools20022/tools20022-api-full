@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Net position of a segregated holding of a single financial instrument within
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubBalanceBreakdown1", propOrder = {"subBalanceType", "quantity"})
 public class SubBalanceBreakdown1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class SubBalanceBreakdown1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SubBalTp", required = true)
 	public SubBalanceType9Choice getSubBalanceType() {
 		return subBalanceType;
 	}
@@ -188,6 +195,7 @@ public class SubBalanceBreakdown1 {
 		this.subBalanceType = subBalanceType;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public SubBalanceQuantity5Choice getQuantity() {
 		return quantity;
 	}

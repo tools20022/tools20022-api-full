@@ -43,6 +43,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RepurchaseAgreement#mmPaymentObligation
+ * RepurchaseAgreement.mmPaymentObligation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
+ * SecuritiesFinancing}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -82,18 +94,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction4#mmFloatingRateRepurchaseAgreement
  * SecuredMarketTransaction4.mmFloatingRateRepurchaseAgreement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
- * SecuritiesFinancing}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RepurchaseAgreement#mmPaymentObligation
- * RepurchaseAgreement.mmPaymentObligation}</li>
  * </ul>
  * </li>
  * <li>
@@ -152,7 +152,7 @@ public class RepurchaseAgreement extends SecuritiesFinancing {
 	 */
 	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RepurchaseAgreement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RepurchaseAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
@@ -176,8 +176,13 @@ public class RepurchaseAgreement extends SecuritiesFinancing {
 				derivationElement_lazy = () -> Arrays.asList(SecuredMarketTransaction1.mmFloatingRateRepurchaseAgreement, SecuredMarketTransaction2.mmFloatingRateRepurchaseAgreement,
 						SecuredMarketTransaction3.mmFloatingRateRepurchaseAgreement, SecuredMarketTransaction4.mmFloatingRateRepurchaseAgreement);
 				superType_lazy = () -> SecuritiesFinancing.mmObject();
-				element_lazy = () -> Arrays.asList(RepurchaseAgreement.mmPaymentObligation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RepurchaseAgreement.mmPaymentObligation);
 				derivationComponent_lazy = () -> Arrays.asList(SecuredMarketTransaction1.mmObject(), SecuredMarketTransaction2.mmObject(), SecuredMarketTransaction3.mmObject(), SecuredMarketTransaction4.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RepurchaseAgreement.class;
 			}
 		});
 		return mmObject_lazy.get();

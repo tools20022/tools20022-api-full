@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General Information, indicating the function of the message.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GeneralInformation3", propOrder = {"messageIdentification", "messageFunction", "requestReference"})
 public class GeneralInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -208,6 +214,7 @@ public class GeneralInformation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -216,6 +223,7 @@ public class GeneralInformation3 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "MsgFctn", required = true)
 	public MessageFunction2Code getMessageFunction() {
 		return messageFunction;
 	}
@@ -224,6 +232,7 @@ public class GeneralInformation3 {
 		this.messageFunction = messageFunction;
 	}
 
+	@XmlElement(name = "ReqRef")
 	public Max35Text getRequestReference() {
 		return requestReference;
 	}

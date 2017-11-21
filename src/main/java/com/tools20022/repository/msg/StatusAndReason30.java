@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status and reason of an instructed order.
@@ -71,6 +75,8 @@ import java.util.List;
  * definition} = "Status and reason of an instructed order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusAndReason30", propOrder = {"statusAndReason", "transaction"})
 public class StatusAndReason30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class StatusAndReason30 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsAndRsn", required = true)
 	public Status23Choice getStatusAndReason() {
 		return statusAndReason;
 	}
@@ -184,6 +191,7 @@ public class StatusAndReason30 {
 		this.statusAndReason = statusAndReason;
 	}
 
+	@XmlElement(name = "Tx")
 	public List<Transaction48> getTransaction() {
 		return transaction;
 	}

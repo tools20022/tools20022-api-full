@@ -38,23 +38,20 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmPartyRole
- * Security.mmPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccount#mmSecuritiesPartyRole
- * CashAccount.mmSecuritiesPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole#mmSecuritiesAccount
+ * SecuritiesPartyRole.mmSecuritiesAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesPartyRole
- * SecuritiesAccount.mmSecuritiesPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole#mmCashAccount
+ * SecuritiesPartyRole.mmCashAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole#mmSecurity
+ * SecuritiesPartyRole.mmSecurity}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.AssetPartyRole
- * AssetPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -92,18 +89,21 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.repository.entity.Pledgee Pledgee}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.AssetPartyRole
+ * AssetPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmPartyRole
+ * Security.mmPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole#mmSecuritiesAccount
- * SecuritiesPartyRole.mmSecuritiesAccount}</li>
+ * {@linkplain com.tools20022.repository.entity.CashAccount#mmSecuritiesPartyRole
+ * CashAccount.mmSecuritiesPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole#mmCashAccount
- * SecuritiesPartyRole.mmCashAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole#mmSecurity
- * SecuritiesPartyRole.mmSecurity}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesPartyRole
+ * SecuritiesAccount.mmSecuritiesPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -146,11 +146,6 @@ public class SecuritiesPartyRole extends AssetPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesAccount
 	 * SecuritiesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
-	 * SecuritiesPartyRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -159,6 +154,11 @@ public class SecuritiesPartyRole extends AssetPartyRole {
 	 * RegistrationParameters3.mmRegistrarAccount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
+	 * SecuritiesPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -175,7 +175,7 @@ public class SecuritiesPartyRole extends AssetPartyRole {
 	public static final MMBusinessAssociationEnd mmSecuritiesAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(RegistrationParameters3.mmRegistrarAccount);
-			elementContext_lazy = () -> SecuritiesPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesAccount";
@@ -226,7 +226,7 @@ public class SecuritiesPartyRole extends AssetPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
@@ -272,7 +272,7 @@ public class SecuritiesPartyRole extends AssetPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
@@ -297,7 +297,13 @@ public class SecuritiesPartyRole extends AssetPartyRole {
 						DeterminationAgent.mmObject(), LeadUnderwriter.mmObject(), LegalAdvisor.mmObject(), PlaceOfRegistry.mmObject(), PrimaryPlaceOfDeposit.mmObject(), PrincipalCollectionAgent.mmObject(), PrincipalPayingAgent.mmObject(),
 						RemarketingAgent.mmObject(), UnderwriterRole.mmObject(), DepositoryRole.mmObject(), Pledgee.mmObject());
 				superType_lazy = () -> AssetPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(SecuritiesPartyRole.mmSecuritiesAccount, SecuritiesPartyRole.mmCashAccount, SecuritiesPartyRole.mmSecurity);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPartyRole.mmSecuritiesAccount, com.tools20022.repository.entity.SecuritiesPartyRole.mmCashAccount,
+						com.tools20022.repository.entity.SecuritiesPartyRole.mmSecurity);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

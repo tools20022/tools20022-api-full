@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the underlying transaction.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransactionReferences3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionReferences4", propOrder = {"paymentInformationIdentification", "instructionIdentification", "endToEndIdentification", "transactionIdentification", "mandateIdentification", "creditorSchemeIdentification"})
 public class TransactionReferences4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -442,6 +448,7 @@ public class TransactionReferences4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtInfId")
 	public Max35Text getPaymentInformationIdentification() {
 		return paymentInformationIdentification;
 	}
@@ -450,6 +457,7 @@ public class TransactionReferences4 {
 		this.paymentInformationIdentification = paymentInformationIdentification;
 	}
 
+	@XmlElement(name = "InstrId")
 	public Max35Text getInstructionIdentification() {
 		return instructionIdentification;
 	}
@@ -458,6 +466,7 @@ public class TransactionReferences4 {
 		this.instructionIdentification = instructionIdentification;
 	}
 
+	@XmlElement(name = "EndToEndId", required = true)
 	public Max35Text getEndToEndIdentification() {
 		return endToEndIdentification;
 	}
@@ -466,6 +475,7 @@ public class TransactionReferences4 {
 		this.endToEndIdentification = endToEndIdentification;
 	}
 
+	@XmlElement(name = "TxId")
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -474,6 +484,7 @@ public class TransactionReferences4 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "MndtId")
 	public Max35Text getMandateIdentification() {
 		return mandateIdentification;
 	}
@@ -482,6 +493,7 @@ public class TransactionReferences4 {
 		this.mandateIdentification = mandateIdentification;
 	}
 
+	@XmlElement(name = "CdtrSchmeId")
 	public PartyIdentification43 getCreditorSchemeIdentification() {
 		return creditorSchemeIdentification;
 	}

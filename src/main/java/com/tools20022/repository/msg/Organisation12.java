@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information which describes the organisation.
@@ -126,6 +130,9 @@ import java.util.List;
  * Organisation6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Organisation12", propOrder = {"fullLegalName", "tradingName", "countryOfOperation", "registrationDate", "operationalAddress", "businessAddress", "legalAddress", "billingAddress", "organisationIdentification",
+		"representativeOfficer", "treasuryManager", "mainMandateHolder", "sender", "legalRepresentative"})
 public class Organisation12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -819,6 +826,7 @@ public class Organisation12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FullLglNm", required = true)
 	public Max350Text getFullLegalName() {
 		return fullLegalName;
 	}
@@ -827,6 +835,7 @@ public class Organisation12 {
 		this.fullLegalName = fullLegalName;
 	}
 
+	@XmlElement(name = "TradgNm")
 	public Max350Text getTradingName() {
 		return tradingName;
 	}
@@ -835,6 +844,7 @@ public class Organisation12 {
 		this.tradingName = tradingName;
 	}
 
+	@XmlElement(name = "CtryOfOpr", required = true)
 	public CountryCode getCountryOfOperation() {
 		return countryOfOperation;
 	}
@@ -843,6 +853,7 @@ public class Organisation12 {
 		this.countryOfOperation = countryOfOperation;
 	}
 
+	@XmlElement(name = "RegnDt")
 	public ISODate getRegistrationDate() {
 		return registrationDate;
 	}
@@ -851,6 +862,7 @@ public class Organisation12 {
 		this.registrationDate = registrationDate;
 	}
 
+	@XmlElement(name = "OprlAdr")
 	public PostalAddress6 getOperationalAddress() {
 		return operationalAddress;
 	}
@@ -859,6 +871,7 @@ public class Organisation12 {
 		this.operationalAddress = operationalAddress;
 	}
 
+	@XmlElement(name = "BizAdr")
 	public PostalAddress6 getBusinessAddress() {
 		return businessAddress;
 	}
@@ -867,6 +880,7 @@ public class Organisation12 {
 		this.businessAddress = businessAddress;
 	}
 
+	@XmlElement(name = "LglAdr", required = true)
 	public PostalAddress6 getLegalAddress() {
 		return legalAddress;
 	}
@@ -875,6 +889,7 @@ public class Organisation12 {
 		this.legalAddress = legalAddress;
 	}
 
+	@XmlElement(name = "BllgAdr")
 	public PostalAddress6 getBillingAddress() {
 		return billingAddress;
 	}
@@ -883,6 +898,7 @@ public class Organisation12 {
 		this.billingAddress = billingAddress;
 	}
 
+	@XmlElement(name = "OrgId", required = true)
 	public OrganisationIdentification8 getOrganisationIdentification() {
 		return organisationIdentification;
 	}
@@ -891,6 +907,7 @@ public class Organisation12 {
 		this.organisationIdentification = organisationIdentification;
 	}
 
+	@XmlElement(name = "RprtvOffcr")
 	public List<PartyIdentification40> getRepresentativeOfficer() {
 		return representativeOfficer;
 	}
@@ -899,6 +916,7 @@ public class Organisation12 {
 		this.representativeOfficer = representativeOfficer;
 	}
 
+	@XmlElement(name = "TrsrMgr")
 	public PartyIdentification40 getTreasuryManager() {
 		return treasuryManager;
 	}
@@ -907,6 +925,7 @@ public class Organisation12 {
 		this.treasuryManager = treasuryManager;
 	}
 
+	@XmlElement(name = "MainMndtHldr")
 	public List<PartyIdentification40> getMainMandateHolder() {
 		return mainMandateHolder;
 	}
@@ -915,6 +934,7 @@ public class Organisation12 {
 		this.mainMandateHolder = mainMandateHolder;
 	}
 
+	@XmlElement(name = "Sndr")
 	public List<PartyIdentification40> getSender() {
 		return sender;
 	}
@@ -923,6 +943,7 @@ public class Organisation12 {
 		this.sender = sender;
 	}
 
+	@XmlElement(name = "LglRprtv")
 	public List<PartyIdentification40> getLegalRepresentative() {
 		return legalRepresentative;
 	}

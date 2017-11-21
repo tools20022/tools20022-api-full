@@ -35,6 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.SwitchSubscriptionLeg
+ * SwitchSubscriptionLeg}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder
+ * InvestmentFundOrder}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -171,17 +182,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SubscriptionOrder14.mmStaffClientBreakdown}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder
- * InvestmentFundOrder}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SwitchSubscriptionLeg
- * SwitchSubscriptionLeg}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -223,6 +223,11 @@ public class SubscriptionOrder extends InvestmentFundOrder {
 						SubscriptionMultipleOrder2.mmObject(), SubscriptionMultipleOrderInstruction1.mmObject(), SubscriptionOrder6.mmObject(), SubscriptionMultipleOrder3.mmObject(), SubscriptionMultipleOrderInstruction2.mmObject(),
 						SubscriptionOrder8.mmObject(), SubscriptionMultipleOrder4.mmObject(), SubscriptionOrder9.mmObject(), SubscriptionOrder10.mmObject(), SubscriptionOrder11.mmObject(), SubscriptionMultipleOrder5.mmObject(),
 						SubscriptionBulkOrder5.mmObject(), SubscriptionMultipleOrder6.mmObject(), SubscriptionOrder15.mmObject(), SubscriptionOrder14.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SubscriptionOrder.class;
 			}
 		});
 		return mmObject_lazy.get();

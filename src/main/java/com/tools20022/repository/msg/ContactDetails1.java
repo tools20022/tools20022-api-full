@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Communication device number or electronic address used for communication.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Communication device number or electronic address used for communication."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContactDetails1", propOrder = {"name", "fundManagerPostalAddress", "phoneNumber", "faxNumber", "emailAddress", "URLAddress", "identification"})
 public class ContactDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -444,6 +450,7 @@ public class ContactDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max350Text getName() {
 		return name;
 	}
@@ -452,6 +459,7 @@ public class ContactDetails1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "FndMgrPstlAdr", required = true)
 	public PostalAddress1 getFundManagerPostalAddress() {
 		return fundManagerPostalAddress;
 	}
@@ -460,6 +468,7 @@ public class ContactDetails1 {
 		this.fundManagerPostalAddress = fundManagerPostalAddress;
 	}
 
+	@XmlElement(name = "PhneNb", required = true)
 	public PhoneNumber getPhoneNumber() {
 		return phoneNumber;
 	}
@@ -468,6 +477,7 @@ public class ContactDetails1 {
 		this.phoneNumber = phoneNumber;
 	}
 
+	@XmlElement(name = "FaxNb")
 	public PhoneNumber getFaxNumber() {
 		return faxNumber;
 	}
@@ -476,6 +486,7 @@ public class ContactDetails1 {
 		this.faxNumber = faxNumber;
 	}
 
+	@XmlElement(name = "EmailAdr")
 	public Max256Text getEmailAddress() {
 		return emailAddress;
 	}
@@ -484,6 +495,7 @@ public class ContactDetails1 {
 		this.emailAddress = emailAddress;
 	}
 
+	@XmlElement(name = "URLAdr")
 	public Max256Text getURLAddress() {
 		return uRLAddress;
 	}
@@ -492,6 +504,7 @@ public class ContactDetails1 {
 		this.uRLAddress = uRLAddress;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public BICIdentifier getIdentification() {
 		return identification;
 	}

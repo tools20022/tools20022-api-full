@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.PersonIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the identification of an individual person.
@@ -91,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * GenericIdentification44}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericIdentification55", propOrder = {"identification", "type", "issuer", "issueDate", "expiryDate", "issuerCountry"})
 public class GenericIdentification55 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -500,6 +506,7 @@ public class GenericIdentification55 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -508,6 +515,7 @@ public class GenericIdentification55 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public OtherIdentification2Choice getType() {
 		return type;
 	}
@@ -516,6 +524,7 @@ public class GenericIdentification55 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Issr")
 	public Max35Text getIssuer() {
 		return issuer;
 	}
@@ -524,6 +533,7 @@ public class GenericIdentification55 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "IsseDt")
 	public ISODate getIssueDate() {
 		return issueDate;
 	}
@@ -532,6 +542,7 @@ public class GenericIdentification55 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "XpryDt")
 	public ISODate getExpiryDate() {
 		return expiryDate;
 	}
@@ -540,6 +551,7 @@ public class GenericIdentification55 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "IssrCtry")
 	public CountryCode getIssuerCountry() {
 		return issuerCountry;
 	}

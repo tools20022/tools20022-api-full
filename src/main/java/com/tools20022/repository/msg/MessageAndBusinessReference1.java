@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the message reference of the message for which the status
@@ -93,6 +97,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MessageAndBusinessReference1", propOrder = {"previousReference", "otherReference", "investmentAccountDetails", "transferReference"})
 public class MessageAndBusinessReference1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -358,6 +364,7 @@ public class MessageAndBusinessReference1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference2 getPreviousReference() {
 		return previousReference;
 	}
@@ -366,6 +373,7 @@ public class MessageAndBusinessReference1 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "OthrRef", required = true)
 	public AdditionalReference2 getOtherReference() {
 		return otherReference;
 	}
@@ -374,6 +382,7 @@ public class MessageAndBusinessReference1 {
 		this.otherReference = otherReference;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount10 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -382,6 +391,7 @@ public class MessageAndBusinessReference1 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "TrfRef")
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}

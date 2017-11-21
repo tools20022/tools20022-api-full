@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DatePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Date or period that the statement is requested for.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Date or period that the statement is requested for."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatementTerm1Choice", propOrder = {"statementDate", "statementPeriod"})
 public class StatementTerm1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -168,6 +174,7 @@ public class StatementTerm1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtDt", required = true)
 	public ISODate getStatementDate() {
 		return statementDate;
 	}
@@ -176,6 +183,7 @@ public class StatementTerm1Choice {
 		this.statementDate = statementDate;
 	}
 
+	@XmlElement(name = "StmtPrd", required = true)
 	public DatePeriodDetails getStatementPeriod() {
 		return statementPeriod;
 	}

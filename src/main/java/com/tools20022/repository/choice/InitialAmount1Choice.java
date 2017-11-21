@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of an initial amount or number of pre-paid instalments.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice of an initial amount or number of pre-paid instalments."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InitialAmount1Choice", propOrder = {"initialNumberOfInstalments", "amount"})
 public class InitialAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class InitialAmount1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InitlNbOfInstlmts", required = true)
 	public Number getInitialNumberOfInstalments() {
 		return initialNumberOfInstalments;
 	}
@@ -189,6 +196,7 @@ public class InitialAmount1Choice {
 		this.initialNumberOfInstalments = initialNumberOfInstalments;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a list of pending statuses, final statuses or all statuses.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentStatusCodeSearchChoice", propOrder = {"pendingStatus", "finalStatus", "pendingAndFinalStatus"})
 public class PaymentStatusCodeSearchChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class PaymentStatusCodeSearchChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PdgSts", required = true)
 	public PendingStatus1Code getPendingStatus() {
 		return pendingStatus;
 	}
@@ -238,6 +245,7 @@ public class PaymentStatusCodeSearchChoice {
 		this.pendingStatus = pendingStatus;
 	}
 
+	@XmlElement(name = "FnlSts", required = true)
 	public FinalStatusCode getFinalStatus() {
 		return finalStatus;
 	}
@@ -246,6 +254,7 @@ public class PaymentStatusCodeSearchChoice {
 		this.finalStatus = finalStatus;
 	}
 
+	@XmlElement(name = "PdgAndFnlSts", required = true)
 	public CashPaymentStatus2Code getPendingAndFinalStatus() {
 		return pendingAndFinalStatus;
 	}

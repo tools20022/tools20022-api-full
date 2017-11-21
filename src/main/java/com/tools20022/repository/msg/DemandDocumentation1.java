@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Document presented for examination.
@@ -68,6 +72,8 @@ import java.util.List;
  * definition} = "Document presented for examination."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DemandDocumentation1", propOrder = {"completeIndicator", "completionInformation", "enclosedFile", "demandNarrative"})
 public class DemandDocumentation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -255,6 +261,7 @@ public class DemandDocumentation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CmpltInd", required = true)
 	public YesNoIndicator getCompleteIndicator() {
 		return completeIndicator;
 	}
@@ -263,6 +270,7 @@ public class DemandDocumentation1 {
 		this.completeIndicator = completeIndicator;
 	}
 
+	@XmlElement(name = "CmpltnInf")
 	public Max2000Text getCompletionInformation() {
 		return completionInformation;
 	}
@@ -271,6 +279,7 @@ public class DemandDocumentation1 {
 		this.completionInformation = completionInformation;
 	}
 
+	@XmlElement(name = "NclsdFile")
 	public List<Document9> getEnclosedFile() {
 		return enclosedFile;
 	}
@@ -279,6 +288,7 @@ public class DemandDocumentation1 {
 		this.enclosedFile = enclosedFile;
 	}
 
+	@XmlElement(name = "DmndNrrtv")
 	public Max20000Text getDemandNarrative() {
 		return demandNarrative;
 	}

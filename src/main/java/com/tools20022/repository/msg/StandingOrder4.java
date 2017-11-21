@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the detailed attributes of a standing order.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * StandingOrder3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingOrder4", propOrder = {"standingOrderIdentification", "standingOrderOrError"})
 public class StandingOrder4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -191,6 +197,7 @@ public class StandingOrder4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StgOrdrId", required = true)
 	public StandingOrderIdentification2 getStandingOrderIdentification() {
 		return standingOrderIdentification;
 	}
@@ -199,6 +206,7 @@ public class StandingOrder4 {
 		this.standingOrderIdentification = standingOrderIdentification;
 	}
 
+	@XmlElement(name = "StgOrdrOrErr", required = true)
 	public StandingOrderOrError4Choice getStandingOrderOrError() {
 		return standingOrderOrError;
 	}

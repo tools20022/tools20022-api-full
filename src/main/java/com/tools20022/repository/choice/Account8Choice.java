@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a cash account, a charges account or a tax account.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between a cash account, a charges account or a tax account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Account8Choice", propOrder = {"cashAccount", "chargesAccount", "taxAccount"})
 public class Account8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class Account8Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshAcct", required = true)
 	public CashAccountIdentification5Choice getCashAccount() {
 		return cashAccount;
 	}
@@ -238,6 +245,7 @@ public class Account8Choice {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "ChrgsAcct", required = true)
 	public CashAccountIdentification5Choice getChargesAccount() {
 		return chargesAccount;
 	}
@@ -246,6 +254,7 @@ public class Account8Choice {
 		this.chargesAccount = chargesAccount;
 	}
 
+	@XmlElement(name = "TaxAcct", required = true)
 	public CashAccountIdentification5Choice getTaxAccount() {
 		return taxAccount;
 	}

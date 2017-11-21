@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Result of the captured set of transactions.
@@ -82,6 +86,8 @@ import java.util.List;
  * CardPaymentDataSet5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentDataSet9", propOrder = {"dataSetIdentification", "dataSetResult", "removeDataSet", "dataSetInitiator", "transactionTotals", "rejectedTransaction"})
 public class CardPaymentDataSet9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -442,6 +448,7 @@ public class CardPaymentDataSet9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DataSetId", required = true)
 	public DataSetIdentification1 getDataSetIdentification() {
 		return dataSetIdentification;
 	}
@@ -450,6 +457,7 @@ public class CardPaymentDataSet9 {
 		this.dataSetIdentification = dataSetIdentification;
 	}
 
+	@XmlElement(name = "DataSetRslt", required = true)
 	public ResponseType1 getDataSetResult() {
 		return dataSetResult;
 	}
@@ -458,6 +466,7 @@ public class CardPaymentDataSet9 {
 		this.dataSetResult = dataSetResult;
 	}
 
+	@XmlElement(name = "RmvDataSet", required = true)
 	public TrueFalseIndicator getRemoveDataSet() {
 		return removeDataSet;
 	}
@@ -466,6 +475,7 @@ public class CardPaymentDataSet9 {
 		this.removeDataSet = removeDataSet;
 	}
 
+	@XmlElement(name = "DataSetInitr")
 	public GenericIdentification32 getDataSetInitiator() {
 		return dataSetInitiator;
 	}
@@ -474,6 +484,7 @@ public class CardPaymentDataSet9 {
 		this.dataSetInitiator = dataSetInitiator;
 	}
 
+	@XmlElement(name = "TxTtls", required = true)
 	public List<TransactionTotals2> getTransactionTotals() {
 		return transactionTotals;
 	}
@@ -482,6 +493,7 @@ public class CardPaymentDataSet9 {
 		this.transactionTotals = transactionTotals;
 	}
 
+	@XmlElement(name = "RjctdTx")
 	public List<CardPaymentDataSet8> getRejectedTransaction() {
 		return rejectedTransaction;
 	}

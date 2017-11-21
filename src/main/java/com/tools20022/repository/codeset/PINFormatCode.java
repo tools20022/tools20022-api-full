@@ -29,19 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code
- * PINFormat1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormat2Code
- * PINFormat2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormat3Code
- * PINFormat3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormat4Code
- * PINFormat4Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmISO0
@@ -78,6 +65,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * PINFormatCode.mmVISA2}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmVISA3
  * PINFormatCode.mmVISA3}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code
+ * PINFormat1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormat2Code
+ * PINFormat2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormat3Code
+ * PINFormat3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormat4Code
+ * PINFormat4Code}</li>
  * </ul>
  * </li>
  * <li>

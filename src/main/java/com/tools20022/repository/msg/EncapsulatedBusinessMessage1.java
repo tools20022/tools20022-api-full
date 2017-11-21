@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.StrictPayload;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines an encapsulated form of an ISO 20022 message and, if present, its
@@ -121,6 +125,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EncapsulatedBusinessMessage1", propOrder = {"header", "prefix", "partial", "message"})
 public class EncapsulatedBusinessMessage1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -327,6 +333,7 @@ public class EncapsulatedBusinessMessage1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr")
 	public BusinessApplicationHeader1 getHeader() {
 		return header;
 	}
@@ -335,6 +342,7 @@ public class EncapsulatedBusinessMessage1 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "Prfx")
 	public ID getPrefix() {
 		return prefix;
 	}
@@ -343,6 +351,7 @@ public class EncapsulatedBusinessMessage1 {
 		this.prefix = prefix;
 	}
 
+	@XmlElement(name = "Prtl", required = true)
 	public YesNoIndicator getPartial() {
 		return partial;
 	}
@@ -351,6 +360,7 @@ public class EncapsulatedBusinessMessage1 {
 		this.partial = partial;
 	}
 
+	@XmlElement(name = "Msg", required = true)
 	public StrictPayload getMessage() {
 		return message;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Description of the financial instrument.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Description of the financial instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentDescription3", propOrder = {"securityIdentification", "placeOfListing", "safekeepingPlace"})
 public class FinancialInstrumentDescription3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class FinancialInstrumentDescription3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification7 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -236,6 +243,7 @@ public class FinancialInstrumentDescription3 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "PlcOfListg")
 	public MICIdentifier getPlaceOfListing() {
 		return placeOfListing;
 	}
@@ -244,6 +252,7 @@ public class FinancialInstrumentDescription3 {
 		this.placeOfListing = placeOfListing;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public PartyIdentification2Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}

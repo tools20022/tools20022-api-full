@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides transaction specific interest information that applies to the
@@ -78,6 +82,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionInterest1", propOrder = {"amount", "creditDebitIndicator", "type", "rate", "fromToDate", "reason"})
 public class TransactionInterest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -380,6 +386,7 @@ public class TransactionInterest1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -388,6 +395,7 @@ public class TransactionInterest1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -396,6 +404,7 @@ public class TransactionInterest1 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Tp")
 	public InterestType1Choice getType() {
 		return type;
 	}
@@ -404,6 +413,7 @@ public class TransactionInterest1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Rate")
 	public List<Rate1> getRate() {
 		return rate;
 	}
@@ -412,6 +422,7 @@ public class TransactionInterest1 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "FrToDt")
 	public DateTimePeriodDetails getFromToDate() {
 		return fromToDate;
 	}
@@ -420,6 +431,7 @@ public class TransactionInterest1 {
 		this.fromToDate = fromToDate;
 	}
 
+	@XmlElement(name = "Rsn")
 	public Max35Text getReason() {
 		return reason;
 	}

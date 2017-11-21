@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the payment terms of the underlying transaction.
@@ -81,6 +85,9 @@ import java.util.List;
  * definition} = "Specifies the payment terms of the underlying transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTerms6", propOrder = {"dueDate", "paymentPeriod", "description", "partialPaymentPercent", "directDebitMandateIdentification", "basisAmount", "discountAmount", "discountPercentRate", "penaltyAmount",
+		"penaltyPercentRate"})
 public class PaymentTerms6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -559,6 +566,7 @@ public class PaymentTerms6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DueDt")
 	public ISODate getDueDate() {
 		return dueDate;
 	}
@@ -567,6 +575,7 @@ public class PaymentTerms6 {
 		this.dueDate = dueDate;
 	}
 
+	@XmlElement(name = "PmtPrd")
 	public PaymentPeriod1 getPaymentPeriod() {
 		return paymentPeriod;
 	}
@@ -575,6 +584,7 @@ public class PaymentTerms6 {
 		this.paymentPeriod = paymentPeriod;
 	}
 
+	@XmlElement(name = "Desc")
 	public List<Max140Text> getDescription() {
 		return description;
 	}
@@ -583,6 +593,7 @@ public class PaymentTerms6 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "PrtlPmtPct")
 	public PercentageRate getPartialPaymentPercent() {
 		return partialPaymentPercent;
 	}
@@ -591,6 +602,7 @@ public class PaymentTerms6 {
 		this.partialPaymentPercent = partialPaymentPercent;
 	}
 
+	@XmlElement(name = "DrctDbtMndtId")
 	public List<Max35Text> getDirectDebitMandateIdentification() {
 		return directDebitMandateIdentification;
 	}
@@ -599,6 +611,7 @@ public class PaymentTerms6 {
 		this.directDebitMandateIdentification = directDebitMandateIdentification;
 	}
 
+	@XmlElement(name = "BsisAmt")
 	public CurrencyAndAmount getBasisAmount() {
 		return basisAmount;
 	}
@@ -607,6 +620,7 @@ public class PaymentTerms6 {
 		this.basisAmount = basisAmount;
 	}
 
+	@XmlElement(name = "DscntAmt")
 	public CurrencyAndAmount getDiscountAmount() {
 		return discountAmount;
 	}
@@ -615,6 +629,7 @@ public class PaymentTerms6 {
 		this.discountAmount = discountAmount;
 	}
 
+	@XmlElement(name = "DscntPctRate")
 	public PercentageRate getDiscountPercentRate() {
 		return discountPercentRate;
 	}
@@ -623,6 +638,7 @@ public class PaymentTerms6 {
 		this.discountPercentRate = discountPercentRate;
 	}
 
+	@XmlElement(name = "PnltyAmt")
 	public CurrencyAndAmount getPenaltyAmount() {
 		return penaltyAmount;
 	}
@@ -631,6 +647,7 @@ public class PaymentTerms6 {
 		this.penaltyAmount = penaltyAmount;
 	}
 
+	@XmlElement(name = "PnltyPctRate")
 	public PercentageRate getPenaltyPercentRate() {
 		return penaltyPercentRate;
 	}

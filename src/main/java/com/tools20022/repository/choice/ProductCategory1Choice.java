@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.GenericIdentification4;
 import com.tools20022.repository.msg.ProductCategory1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies that the category of a product may be indicated by a code or by
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProductCategory1Choice", propOrder = {"structuredProductCategory", "otherProductCategory"})
 public class ProductCategory1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class ProductCategory1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StrdPdctCtgy", required = true)
 	public ProductCategory1 getStructuredProductCategory() {
 		return structuredProductCategory;
 	}
@@ -186,6 +193,7 @@ public class ProductCategory1Choice {
 		this.structuredProductCategory = structuredProductCategory;
 	}
 
+	@XmlElement(name = "OthrPdctCtgy", required = true)
 	public GenericIdentification4 getOtherProductCategory() {
 		return otherProductCategory;
 	}

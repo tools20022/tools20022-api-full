@@ -29,41 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason6Code
- * RejectedStatusReason6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason4Code
- * RejectedStatusReason4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason8Code
- * RejectedStatusReason8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason5Code
- * RejectedStatusReason5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason7Code
- * RejectedStatusReason7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageRejectedReason1Code
- * MessageRejectedReason1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRejectedReason1Code
- * CancellationRejectedReason1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason1Code
- * TransferRejectedStatusReason1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
- * TransferRejectedStatusReason2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason9Code
- * RejectedStatusReason9Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code
- * RejectedCancellationStatusReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code
- * RejectedStatusReason10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason11Code
- * RejectedStatusReason11Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -300,6 +265,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.RejectedStatusReasonCode#mmUnacceptableSwitchCombination
  * RejectedStatusReasonCode.mmUnacceptableSwitchCombination}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason6Code
+ * RejectedStatusReason6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason4Code
+ * RejectedStatusReason4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason8Code
+ * RejectedStatusReason8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason5Code
+ * RejectedStatusReason5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason7Code
+ * RejectedStatusReason7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageRejectedReason1Code
+ * MessageRejectedReason1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRejectedReason1Code
+ * CancellationRejectedReason1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason1Code
+ * TransferRejectedStatusReason1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
+ * TransferRejectedStatusReason2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason9Code
+ * RejectedStatusReason9Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code
+ * RejectedCancellationStatusReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code
+ * RejectedStatusReason10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectedStatusReason11Code
+ * RejectedStatusReason11Code}</li>
  * </ul>
  * </li>
  * <li>

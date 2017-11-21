@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the subtotal calculated tax applicable for this settlement.
@@ -76,6 +80,8 @@ import java.util.List;
  * "Specifies  the subtotal calculated tax applicable for this settlement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementSubTotalCalculatedTax1", propOrder = {"typeCode", "categoryCode", "calculatedAmount", "basisAmount", "calculatedRate", "exemptionReason"})
 public class SettlementSubTotalCalculatedTax1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -384,6 +390,7 @@ public class SettlementSubTotalCalculatedTax1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TpCd")
 	public Max4Text getTypeCode() {
 		return typeCode;
 	}
@@ -392,6 +399,7 @@ public class SettlementSubTotalCalculatedTax1 {
 		this.typeCode = typeCode;
 	}
 
+	@XmlElement(name = "CtgyCd")
 	public Max4Text getCategoryCode() {
 		return categoryCode;
 	}
@@ -400,6 +408,7 @@ public class SettlementSubTotalCalculatedTax1 {
 		this.categoryCode = categoryCode;
 	}
 
+	@XmlElement(name = "ClctdAmt")
 	public List<CurrencyAndAmount> getCalculatedAmount() {
 		return calculatedAmount;
 	}
@@ -408,6 +417,7 @@ public class SettlementSubTotalCalculatedTax1 {
 		this.calculatedAmount = calculatedAmount;
 	}
 
+	@XmlElement(name = "BsisAmt")
 	public List<CurrencyAndAmount> getBasisAmount() {
 		return basisAmount;
 	}
@@ -416,6 +426,7 @@ public class SettlementSubTotalCalculatedTax1 {
 		this.basisAmount = basisAmount;
 	}
 
+	@XmlElement(name = "ClctdRate")
 	public PercentageRate getCalculatedRate() {
 		return calculatedRate;
 	}
@@ -424,6 +435,7 @@ public class SettlementSubTotalCalculatedTax1 {
 		this.calculatedRate = calculatedRate;
 	}
 
+	@XmlElement(name = "XmptnRsn")
 	public TaxExemptionReason1 getExemptionReason() {
 		return exemptionReason;
 	}

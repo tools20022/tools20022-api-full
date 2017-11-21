@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Completion of a securities settlement instruction, wherein securities are
@@ -96,6 +100,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PEPISACashTransfer2", propOrder = {"transferConfirmationIdentification", "transferInstructionReference", "tradeDate", "settlementDate", "type", "percentageToBeTransferred", "amountToBeTransferred", "year", "assets"})
 public class PEPISACashTransfer2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -586,6 +592,7 @@ public class PEPISACashTransfer2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrfConfId", required = true)
 	public Max35Text getTransferConfirmationIdentification() {
 		return transferConfirmationIdentification;
 	}
@@ -594,6 +601,7 @@ public class PEPISACashTransfer2 {
 		this.transferConfirmationIdentification = transferConfirmationIdentification;
 	}
 
+	@XmlElement(name = "TrfInstrRef", required = true)
 	public Max35Text getTransferInstructionReference() {
 		return transferInstructionReference;
 	}
@@ -602,6 +610,7 @@ public class PEPISACashTransfer2 {
 		this.transferInstructionReference = transferInstructionReference;
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
@@ -610,6 +619,7 @@ public class PEPISACashTransfer2 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
@@ -618,6 +628,7 @@ public class PEPISACashTransfer2 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public PEPISA1Code getType() {
 		return type;
 	}
@@ -626,6 +637,7 @@ public class PEPISACashTransfer2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "PctgToBeTrfd", required = true)
 	public PercentageRate getPercentageToBeTransferred() {
 		return percentageToBeTransferred;
 	}
@@ -634,6 +646,7 @@ public class PEPISACashTransfer2 {
 		this.percentageToBeTransferred = percentageToBeTransferred;
 	}
 
+	@XmlElement(name = "AmtToBeTrfd", required = true)
 	public ImpliedCurrencyAndAmount getAmountToBeTransferred() {
 		return amountToBeTransferred;
 	}
@@ -642,6 +655,7 @@ public class PEPISACashTransfer2 {
 		this.amountToBeTransferred = amountToBeTransferred;
 	}
 
+	@XmlElement(name = "Yr", required = true)
 	public PEPOrISAChoice getYear() {
 		return year;
 	}
@@ -650,6 +664,7 @@ public class PEPISACashTransfer2 {
 		this.year = year;
 	}
 
+	@XmlElement(name = "Assts", required = true)
 	public List<UnitsAndCash> getAssets() {
 		return assets;
 	}

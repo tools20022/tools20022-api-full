@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the billing adjustments for a specific service.
@@ -105,6 +109,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the billing adjustments for a specific service."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingServiceAdjustment1", propOrder = {"type", "description", "amount", "balanceRequiredAmount", "errorDate", "adjustmentIdentification", "subService", "priceChange", "originalPrice", "newPrice", "volumeChange",
+		"originalVolume", "newVolume", "originalChargeAmount", "newChargeAmount"})
 public class BillingServiceAdjustment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -851,6 +858,7 @@ public class BillingServiceAdjustment1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ServiceAdjustmentType1Code getType() {
 		return type;
 	}
@@ -859,6 +867,7 @@ public class BillingServiceAdjustment1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Desc", required = true)
 	public Max140Text getDescription() {
 		return description;
 	}
@@ -867,6 +876,7 @@ public class BillingServiceAdjustment1 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public AmountAndDirection34 getAmount() {
 		return amount;
 	}
@@ -875,6 +885,7 @@ public class BillingServiceAdjustment1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "BalReqrdAmt")
 	public AmountAndDirection34 getBalanceRequiredAmount() {
 		return balanceRequiredAmount;
 	}
@@ -883,6 +894,7 @@ public class BillingServiceAdjustment1 {
 		this.balanceRequiredAmount = balanceRequiredAmount;
 	}
 
+	@XmlElement(name = "ErrDt")
 	public ISODate getErrorDate() {
 		return errorDate;
 	}
@@ -891,6 +903,7 @@ public class BillingServiceAdjustment1 {
 		this.errorDate = errorDate;
 	}
 
+	@XmlElement(name = "AdjstmntId")
 	public Max35Text getAdjustmentIdentification() {
 		return adjustmentIdentification;
 	}
@@ -899,6 +912,7 @@ public class BillingServiceAdjustment1 {
 		this.adjustmentIdentification = adjustmentIdentification;
 	}
 
+	@XmlElement(name = "SubSvc")
 	public BillingSubServiceIdentification1 getSubService() {
 		return subService;
 	}
@@ -907,6 +921,7 @@ public class BillingServiceAdjustment1 {
 		this.subService = subService;
 	}
 
+	@XmlElement(name = "PricChng")
 	public AmountAndDirection34 getPriceChange() {
 		return priceChange;
 	}
@@ -915,6 +930,7 @@ public class BillingServiceAdjustment1 {
 		this.priceChange = priceChange;
 	}
 
+	@XmlElement(name = "OrgnlPric")
 	public AmountAndDirection34 getOriginalPrice() {
 		return originalPrice;
 	}
@@ -923,6 +939,7 @@ public class BillingServiceAdjustment1 {
 		this.originalPrice = originalPrice;
 	}
 
+	@XmlElement(name = "NewPric")
 	public AmountAndDirection34 getNewPrice() {
 		return newPrice;
 	}
@@ -931,6 +948,7 @@ public class BillingServiceAdjustment1 {
 		this.newPrice = newPrice;
 	}
 
+	@XmlElement(name = "VolChng")
 	public DecimalNumber getVolumeChange() {
 		return volumeChange;
 	}
@@ -939,6 +957,7 @@ public class BillingServiceAdjustment1 {
 		this.volumeChange = volumeChange;
 	}
 
+	@XmlElement(name = "OrgnlVol")
 	public DecimalNumber getOriginalVolume() {
 		return originalVolume;
 	}
@@ -947,6 +966,7 @@ public class BillingServiceAdjustment1 {
 		this.originalVolume = originalVolume;
 	}
 
+	@XmlElement(name = "NewVol")
 	public DecimalNumber getNewVolume() {
 		return newVolume;
 	}
@@ -955,6 +975,7 @@ public class BillingServiceAdjustment1 {
 		this.newVolume = newVolume;
 	}
 
+	@XmlElement(name = "OrgnlChrgAmt")
 	public AmountAndDirection34 getOriginalChargeAmount() {
 		return originalChargeAmount;
 	}
@@ -963,6 +984,7 @@ public class BillingServiceAdjustment1 {
 		this.originalChargeAmount = originalChargeAmount;
 	}
 
+	@XmlElement(name = "NewChrgAmt")
 	public AmountAndDirection34 getNewChargeAmount() {
 		return newChargeAmount;
 	}

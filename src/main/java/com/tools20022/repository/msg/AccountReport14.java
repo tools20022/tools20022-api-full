@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports on the actual set up up of the account, related services and
@@ -81,6 +85,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountReport14", propOrder = {"account", "underlyingMasterAgreement", "contractDates", "mandate", "referenceAccount", "balanceTransferAccount", "transferAccountServicerIdentification", "accountOwner", "proprietary"})
 public class AccountReport14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -527,6 +533,7 @@ public class AccountReport14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CustomerAccount3 getAccount() {
 		return account;
 	}
@@ -535,6 +542,7 @@ public class AccountReport14 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "UndrlygMstrAgrmt")
 	public ContractDocument1 getUnderlyingMasterAgreement() {
 		return underlyingMasterAgreement;
 	}
@@ -543,6 +551,7 @@ public class AccountReport14 {
 		this.underlyingMasterAgreement = underlyingMasterAgreement;
 	}
 
+	@XmlElement(name = "CtrctDts")
 	public AccountContract3 getContractDates() {
 		return contractDates;
 	}
@@ -551,6 +560,7 @@ public class AccountReport14 {
 		this.contractDates = contractDates;
 	}
 
+	@XmlElement(name = "Mndt")
 	public List<OperationMandate1> getMandate() {
 		return mandate;
 	}
@@ -559,6 +569,7 @@ public class AccountReport14 {
 		this.mandate = mandate;
 	}
 
+	@XmlElement(name = "RefAcct")
 	public CashAccount16 getReferenceAccount() {
 		return referenceAccount;
 	}
@@ -567,6 +578,7 @@ public class AccountReport14 {
 		this.referenceAccount = referenceAccount;
 	}
 
+	@XmlElement(name = "BalTrfAcct")
 	public AccountForAction1 getBalanceTransferAccount() {
 		return balanceTransferAccount;
 	}
@@ -575,6 +587,7 @@ public class AccountReport14 {
 		this.balanceTransferAccount = balanceTransferAccount;
 	}
 
+	@XmlElement(name = "TrfAcctSvcrId")
 	public BranchAndFinancialInstitutionIdentification4 getTransferAccountServicerIdentification() {
 		return transferAccountServicerIdentification;
 	}
@@ -583,6 +596,7 @@ public class AccountReport14 {
 		this.transferAccountServicerIdentification = transferAccountServicerIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public OrganisationIdentification6 getAccountOwner() {
 		return accountOwner;
 	}
@@ -591,6 +605,7 @@ public class AccountReport14 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "Prtry")
 	public List<GenericIdentification1> getProprietary() {
 		return proprietary;
 	}

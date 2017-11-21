@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Magnetic track or equivalent payment card data.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Magnetic track or equivalent payment card data."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TrackData1", propOrder = {"trackNumber", "trackValue"})
 public class TrackData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -165,6 +171,7 @@ public class TrackData1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrckNb")
 	public Exact1NumericText getTrackNumber() {
 		return trackNumber;
 	}
@@ -173,6 +180,7 @@ public class TrackData1 {
 		this.trackNumber = trackNumber;
 	}
 
+	@XmlElement(name = "TrckVal", required = true)
 	public Max140Text getTrackValue() {
 		return trackValue;
 	}

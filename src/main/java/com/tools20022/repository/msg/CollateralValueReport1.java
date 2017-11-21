@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports either on the collateral value report or on a business error.
@@ -66,6 +70,8 @@ import java.util.List;
  * "Reports either on the collateral value report or on a business error."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralValueReport1", propOrder = {"account", "securitiesAccountOwner", "securitiesAccountServicer", "collateralValueReport"})
 public class CollateralValueReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -259,6 +265,7 @@ public class CollateralValueReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CashAccount25 getAccount() {
 		return account;
 	}
@@ -267,6 +274,7 @@ public class CollateralValueReport1 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "SctiesAcctOwnr")
 	public PartyIdentification71Choice getSecuritiesAccountOwner() {
 		return securitiesAccountOwner;
 	}
@@ -275,6 +283,7 @@ public class CollateralValueReport1 {
 		this.securitiesAccountOwner = securitiesAccountOwner;
 	}
 
+	@XmlElement(name = "SctiesAcctSvcr")
 	public PartyIdentification71Choice getSecuritiesAccountServicer() {
 		return securitiesAccountServicer;
 	}
@@ -283,6 +292,7 @@ public class CollateralValueReport1 {
 		this.securitiesAccountServicer = securitiesAccountServicer;
 	}
 
+	@XmlElement(name = "CollValRpt")
 	public List<CollateralValueReportOrError2Choice> getCollateralValueReport() {
 		return collateralValueReport;
 	}

@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Year in which the ISA plan is issued.
@@ -82,6 +86,8 @@ import java.util.function.Supplier;
  * definition} = "Year in which the ISA plan is issued."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ISAYearsOfIssue3", propOrder = {"currentYearType", "extendedCurrentYearType", "cashComponentIndicator", "currentYearSubscriptionDetails", "previousYears"})
 public class ISAYearsOfIssue3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -397,6 +403,7 @@ public class ISAYearsOfIssue3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CurYrTp")
 	public ISAType1Code getCurrentYearType() {
 		return currentYearType;
 	}
@@ -405,6 +412,7 @@ public class ISAYearsOfIssue3 {
 		this.currentYearType = currentYearType;
 	}
 
+	@XmlElement(name = "XtndedCurYrTp")
 	public Extended350Code getExtendedCurrentYearType() {
 		return extendedCurrentYearType;
 	}
@@ -413,6 +421,7 @@ public class ISAYearsOfIssue3 {
 		this.extendedCurrentYearType = extendedCurrentYearType;
 	}
 
+	@XmlElement(name = "CshCmpntInd", required = true)
 	public YesNoIndicator getCashComponentIndicator() {
 		return cashComponentIndicator;
 	}
@@ -421,6 +430,7 @@ public class ISAYearsOfIssue3 {
 		this.cashComponentIndicator = cashComponentIndicator;
 	}
 
+	@XmlElement(name = "CurYrSbcptDtls", required = true)
 	public SubscriptionInformation1 getCurrentYearSubscriptionDetails() {
 		return currentYearSubscriptionDetails;
 	}
@@ -429,6 +439,7 @@ public class ISAYearsOfIssue3 {
 		this.currentYearSubscriptionDetails = currentYearSubscriptionDetails;
 	}
 
+	@XmlElement(name = "PrvsYrs")
 	public PreviousYear1 getPreviousYears() {
 		return previousYears;
 	}

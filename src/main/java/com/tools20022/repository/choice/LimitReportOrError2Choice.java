@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.Limits5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between details of one or more limits set by the member (or on behalf
@@ -67,6 +71,8 @@ import java.util.List;
  * LimitReportOrError1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LimitReportOrError2Choice", propOrder = {"businessReport", "operationalError"})
 public class LimitReportOrError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class LimitReportOrError2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BizRpt", required = true)
 	public Limits5 getBusinessReport() {
 		return businessReport;
 	}
@@ -188,6 +195,7 @@ public class LimitReportOrError2Choice {
 		this.businessReport = businessReport;
 	}
 
+	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling4> getOperationalError() {
 		return operationalError;
 	}

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,14 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmCouponAttached
- * Security.mmCouponAttached}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -60,6 +53,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CouponAttached#mmIdentification
  * CouponAttached.mmIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmCouponAttached
+ * Security.mmCouponAttached}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,11 +93,6 @@ public class CouponAttached {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CouponAttached
-	 * CouponAttached}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -176,6 +172,11 @@ public class CouponAttached {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CouponAttached
+	 * CouponAttached}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -194,7 +195,7 @@ public class CouponAttached {
 					FinancialInstrumentAttributes30.mmCouponDate, FinancialInstrumentAttributes28.mmCouponDate, Debt1.mmNextCouponDate, FinancialInstrumentAttributes31.mmCouponDate, FinancialInstrumentAttributes44.mmCouponDate,
 					FinancialInstrumentAttributes15.mmCouponDate, FinancialInstrumentAttributes29.mmCouponDate, Debt2.mmNextCouponDate, FinancialInstrumentAttributes2.mmCouponDate, FinancialInstrumentAttributes63.mmCouponDate,
 					FinancialInstrumentAttributes64.mmCouponDate, FinancialInstrumentAttributes75.mmCouponDate, FinancialInstrumentAttributes78.mmCouponDate);
-			elementContext_lazy = () -> CouponAttached.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Date";
@@ -202,6 +203,14 @@ public class CouponAttached {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CouponAttached.class.getMethod("getDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max3NumericText number;
@@ -215,11 +224,6 @@ public class CouponAttached {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max3NumericText
 	 * Max3NumericText}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CouponAttached
-	 * CouponAttached}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -340,6 +344,11 @@ public class CouponAttached {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CouponAttached
+	 * CouponAttached}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -363,7 +372,7 @@ public class CouponAttached {
 					FinancialInstrumentAttributes2.mmCouponAttachedNumber, CorporateAction12.mmCouponNumber, CorporateAction17.mmCouponNumber, FinancialInstrumentAttributes63.mmCouponAttachedNumber,
 					FinancialInstrumentAttributes64.mmCouponAttachedNumber, CorporateAction31.mmCouponNumber, CorporateAction40.mmCouponNumber, FinancialInstrumentAttributes75.mmCouponAttachedNumber,
 					FinancialInstrumentAttributes78.mmCouponAttachedNumber);
-			elementContext_lazy = () -> CouponAttached.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Number";
@@ -371,6 +380,14 @@ public class CouponAttached {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CouponAttached.class.getMethod("getNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Security security;
@@ -408,7 +425,7 @@ public class CouponAttached {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CouponAttached.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
@@ -431,11 +448,6 @@ public class CouponAttached {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CouponAttached
-	 * CouponAttached}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -444,6 +456,11 @@ public class CouponAttached {
 	 * CorporateActionDate4.mmCouponClippingDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CouponAttached
+	 * CouponAttached}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -460,7 +477,7 @@ public class CouponAttached {
 	public static final MMBusinessAttribute mmCouponClippingDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate4.mmCouponClippingDate);
-			elementContext_lazy = () -> CouponAttached.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CouponClippingDate";
@@ -468,6 +485,14 @@ public class CouponAttached {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CouponAttached.class.getMethod("getCouponClippingDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text identification;
@@ -498,7 +523,7 @@ public class CouponAttached {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CouponAttached.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -506,6 +531,14 @@ public class CouponAttached {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CouponAttached.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -517,7 +550,13 @@ public class CouponAttached {
 				name = "CouponAttached";
 				definition = "Physical certificates representing rights attached to the physical certificates representing a security.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmCouponAttached);
-				element_lazy = () -> Arrays.asList(CouponAttached.mmDate, CouponAttached.mmNumber, CouponAttached.mmSecurity, CouponAttached.mmCouponClippingDate, CouponAttached.mmIdentification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CouponAttached.mmDate, com.tools20022.repository.entity.CouponAttached.mmNumber, com.tools20022.repository.entity.CouponAttached.mmSecurity,
+						com.tools20022.repository.entity.CouponAttached.mmCouponClippingDate, com.tools20022.repository.entity.CouponAttached.mmIdentification);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CouponAttached.class;
 			}
 		});
 		return mmObject_lazy.get();

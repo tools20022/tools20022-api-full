@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instrument that has or represents monetary value and is used to process a
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentInstrument9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstrument10", propOrder = {"settlementCurrency", "paymentInstrument", "dividendPercentage"})
 public class PaymentInstrument10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -271,6 +277,7 @@ public class PaymentInstrument10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -279,6 +286,7 @@ public class PaymentInstrument10 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "PmtInstrm", required = true)
 	public PaymentInstrument16Choice getPaymentInstrument() {
 		return paymentInstrument;
 	}
@@ -287,6 +295,7 @@ public class PaymentInstrument10 {
 		this.paymentInstrument = paymentInstrument;
 	}
 
+	@XmlElement(name = "DvddPctg")
 	public PercentageBoundedRate getDividendPercentage() {
 		return dividendPercentage;
 	}

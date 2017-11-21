@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.AssetClassCommodityOfficialEconomicStatisti
 import com.tools20022.repository.msg.AssetClassCommodityOther1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice to define commodity specific attributes of a derivative.
@@ -100,6 +104,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice to define commodity specific attributes of a derivative."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AssetClassCommodity3Choice", propOrder = {"agricultural", "energy", "environmental", "fertilizer", "freight", "industrialProduct", "metal", "otherC10", "paper", "polypropylene", "inflation", "multiCommodityExotic",
+		"officialEconomicStatistics", "other"})
 public class AssetClassCommodity3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -793,6 +800,7 @@ public class AssetClassCommodity3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Agrcltrl", required = true)
 	public AssetClassCommodityAgricultural1Choice getAgricultural() {
 		return agricultural;
 	}
@@ -801,6 +809,7 @@ public class AssetClassCommodity3Choice {
 		this.agricultural = agricultural;
 	}
 
+	@XmlElement(name = "Nrgy", required = true)
 	public AssetClassCommodityEnergy1Choice getEnergy() {
 		return energy;
 	}
@@ -809,6 +818,7 @@ public class AssetClassCommodity3Choice {
 		this.energy = energy;
 	}
 
+	@XmlElement(name = "Envttl", required = true)
 	public AssetClassCommodityEnvironmental1Choice getEnvironmental() {
 		return environmental;
 	}
@@ -817,6 +827,7 @@ public class AssetClassCommodity3Choice {
 		this.environmental = environmental;
 	}
 
+	@XmlElement(name = "Frtlzr", required = true)
 	public AssetClassCommodityFertilizer1Choice getFertilizer() {
 		return fertilizer;
 	}
@@ -825,6 +836,7 @@ public class AssetClassCommodity3Choice {
 		this.fertilizer = fertilizer;
 	}
 
+	@XmlElement(name = "Frght", required = true)
 	public AssetClassCommodityFreight1Choice getFreight() {
 		return freight;
 	}
@@ -833,6 +845,7 @@ public class AssetClassCommodity3Choice {
 		this.freight = freight;
 	}
 
+	@XmlElement(name = "IndstrlPdct", required = true)
 	public AssetClassCommodityIndustrialProduct1Choice getIndustrialProduct() {
 		return industrialProduct;
 	}
@@ -841,6 +854,7 @@ public class AssetClassCommodity3Choice {
 		this.industrialProduct = industrialProduct;
 	}
 
+	@XmlElement(name = "Metl", required = true)
 	public AssetClassCommodityMetal1Choice getMetal() {
 		return metal;
 	}
@@ -849,6 +863,7 @@ public class AssetClassCommodity3Choice {
 		this.metal = metal;
 	}
 
+	@XmlElement(name = "OthrC10", required = true)
 	public AssetClassCommodityOtherC102Choice getOtherC10() {
 		return otherC10;
 	}
@@ -857,6 +872,7 @@ public class AssetClassCommodity3Choice {
 		this.otherC10 = otherC10;
 	}
 
+	@XmlElement(name = "Ppr", required = true)
 	public AssetClassCommodityPaper1Choice getPaper() {
 		return paper;
 	}
@@ -865,6 +881,7 @@ public class AssetClassCommodity3Choice {
 		this.paper = paper;
 	}
 
+	@XmlElement(name = "Plprpln", required = true)
 	public AssetClassCommodityPolypropylene1Choice getPolypropylene() {
 		return polypropylene;
 	}
@@ -873,6 +890,7 @@ public class AssetClassCommodity3Choice {
 		this.polypropylene = polypropylene;
 	}
 
+	@XmlElement(name = "Infltn", required = true)
 	public AssetClassCommodityInflation1 getInflation() {
 		return inflation;
 	}
@@ -881,6 +899,7 @@ public class AssetClassCommodity3Choice {
 		this.inflation = inflation;
 	}
 
+	@XmlElement(name = "MultiCmmdtyExtc", required = true)
 	public AssetClassCommodityMultiCommodityExotic1 getMultiCommodityExotic() {
 		return multiCommodityExotic;
 	}
@@ -889,6 +908,7 @@ public class AssetClassCommodity3Choice {
 		this.multiCommodityExotic = multiCommodityExotic;
 	}
 
+	@XmlElement(name = "OffclEcnmcSttstcs", required = true)
 	public AssetClassCommodityOfficialEconomicStatistics1 getOfficialEconomicStatistics() {
 		return officialEconomicStatistics;
 	}
@@ -897,6 +917,7 @@ public class AssetClassCommodity3Choice {
 		this.officialEconomicStatistics = officialEconomicStatistics;
 	}
 
+	@XmlElement(name = "Othr", required = true)
 	public AssetClassCommodityOther1 getOther() {
 		return other;
 	}

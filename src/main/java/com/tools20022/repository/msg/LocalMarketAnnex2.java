@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Context, or geographic environment, in which trading parties may meet in
@@ -74,6 +78,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LocalMarketAnnex2", propOrder = {"country", "localOrderDesk", "subscriptionProcessingCharacteristics", "redemptionProcessingCharacteristics", "settlementDetails"})
 public class LocalMarketAnnex2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -335,6 +341,7 @@ public class LocalMarketAnnex2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public List<CountryCode> getCountry() {
 		return country;
 	}
@@ -343,6 +350,7 @@ public class LocalMarketAnnex2 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "LclOrdrDsk", required = true)
 	public ContactAttributes1 getLocalOrderDesk() {
 		return localOrderDesk;
 	}
@@ -351,6 +359,7 @@ public class LocalMarketAnnex2 {
 		this.localOrderDesk = localOrderDesk;
 	}
 
+	@XmlElement(name = "SbcptPrcgChrtcs", required = true)
 	public ProcessingCharacteristics2 getSubscriptionProcessingCharacteristics() {
 		return subscriptionProcessingCharacteristics;
 	}
@@ -359,6 +368,7 @@ public class LocalMarketAnnex2 {
 		this.subscriptionProcessingCharacteristics = subscriptionProcessingCharacteristics;
 	}
 
+	@XmlElement(name = "RedPrcgChrtcs", required = true)
 	public ProcessingCharacteristics3 getRedemptionProcessingCharacteristics() {
 		return redemptionProcessingCharacteristics;
 	}
@@ -367,6 +377,7 @@ public class LocalMarketAnnex2 {
 		this.redemptionProcessingCharacteristics = redemptionProcessingCharacteristics;
 	}
 
+	@XmlElement(name = "SttlmDtls", required = true)
 	public List<CashAccount22> getSettlementDetails() {
 		return settlementDetails;
 	}

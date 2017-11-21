@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the transactions in the report.
@@ -71,6 +75,8 @@ import java.util.List;
  * definition} = "Provides the transactions in the report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionCancellation1", propOrder = {"accountOwner", "safekeepingAccount", "processingStatus", "cancellation"})
 public class IntraPositionCancellation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -280,6 +286,7 @@ public class IntraPositionCancellation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public SystemPartyIdentification5 getAccountOwner() {
 		return accountOwner;
 	}
@@ -288,6 +295,7 @@ public class IntraPositionCancellation1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -296,6 +304,7 @@ public class IntraPositionCancellation1 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "PrcgSts")
 	public ProcessingStatus32Choice getProcessingStatus() {
 		return processingStatus;
 	}
@@ -304,6 +313,7 @@ public class IntraPositionCancellation1 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "Cxl", required = true)
 	public List<IntraPositionCancellation2> getCancellation() {
 		return cancellation;
 	}

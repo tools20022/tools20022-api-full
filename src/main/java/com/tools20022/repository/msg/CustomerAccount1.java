@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account owned by a customer.
@@ -131,6 +135,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustomerAccount1", propOrder = {"identification", "name", "status", "type", "currency", "monthlyPaymentValue", "monthlyReceivedValue", "monthlyTransactionNumber", "averageBalance", "accountPurpose",
+		"floorNotificationAmount", "ceilingNotificationAmount", "statementCycle", "closingDate", "restriction"})
 public class CustomerAccount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -892,6 +899,7 @@ public class CustomerAccount1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentification4Choice getIdentification() {
 		return identification;
 	}
@@ -900,6 +908,7 @@ public class CustomerAccount1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max70Text getName() {
 		return name;
 	}
@@ -908,6 +917,7 @@ public class CustomerAccount1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Sts")
 	public AccountStatus3Code getStatus() {
 		return status;
 	}
@@ -916,6 +926,7 @@ public class CustomerAccount1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Tp")
 	public CashAccountType2 getType() {
 		return type;
 	}
@@ -924,6 +935,7 @@ public class CustomerAccount1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Ccy", required = true)
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -932,6 +944,7 @@ public class CustomerAccount1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "MnthlyPmtVal")
 	public ImpliedCurrencyAndAmount getMonthlyPaymentValue() {
 		return monthlyPaymentValue;
 	}
@@ -940,6 +953,7 @@ public class CustomerAccount1 {
 		this.monthlyPaymentValue = monthlyPaymentValue;
 	}
 
+	@XmlElement(name = "MnthlyRcvdVal")
 	public ImpliedCurrencyAndAmount getMonthlyReceivedValue() {
 		return monthlyReceivedValue;
 	}
@@ -948,6 +962,7 @@ public class CustomerAccount1 {
 		this.monthlyReceivedValue = monthlyReceivedValue;
 	}
 
+	@XmlElement(name = "MnthlyTxNb")
 	public Max5NumericText getMonthlyTransactionNumber() {
 		return monthlyTransactionNumber;
 	}
@@ -956,6 +971,7 @@ public class CustomerAccount1 {
 		this.monthlyTransactionNumber = monthlyTransactionNumber;
 	}
 
+	@XmlElement(name = "AvrgBal")
 	public ImpliedCurrencyAndAmount getAverageBalance() {
 		return averageBalance;
 	}
@@ -964,6 +980,7 @@ public class CustomerAccount1 {
 		this.averageBalance = averageBalance;
 	}
 
+	@XmlElement(name = "AcctPurp")
 	public Max140Text getAccountPurpose() {
 		return accountPurpose;
 	}
@@ -972,6 +989,7 @@ public class CustomerAccount1 {
 		this.accountPurpose = accountPurpose;
 	}
 
+	@XmlElement(name = "FlrNtfctnAmt")
 	public ImpliedCurrencyAndAmount getFloorNotificationAmount() {
 		return floorNotificationAmount;
 	}
@@ -980,6 +998,7 @@ public class CustomerAccount1 {
 		this.floorNotificationAmount = floorNotificationAmount;
 	}
 
+	@XmlElement(name = "ClngNtfctnAmt")
 	public ImpliedCurrencyAndAmount getCeilingNotificationAmount() {
 		return ceilingNotificationAmount;
 	}
@@ -988,6 +1007,7 @@ public class CustomerAccount1 {
 		this.ceilingNotificationAmount = ceilingNotificationAmount;
 	}
 
+	@XmlElement(name = "StmtCycl")
 	public Frequency3Code getStatementCycle() {
 		return statementCycle;
 	}
@@ -996,6 +1016,7 @@ public class CustomerAccount1 {
 		this.statementCycle = statementCycle;
 	}
 
+	@XmlElement(name = "ClsgDt")
 	public ISODate getClosingDate() {
 		return closingDate;
 	}
@@ -1004,6 +1025,7 @@ public class CustomerAccount1 {
 		this.closingDate = closingDate;
 	}
 
+	@XmlElement(name = "Rstrctn")
 	public List<Restriction1> getRestriction() {
 		return restriction;
 	}

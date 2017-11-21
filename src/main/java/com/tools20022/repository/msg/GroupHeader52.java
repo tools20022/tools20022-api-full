@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics shared by all individual transactions included in the
@@ -97,6 +101,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GroupHeader52", propOrder = {"messageIdentification", "creationDateTime", "initiatingParty", "forwardingAgent", "debtorAgent", "creditorAgent"})
 public class GroupHeader52 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -408,6 +414,7 @@ public class GroupHeader52 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -416,6 +423,7 @@ public class GroupHeader52 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -424,6 +432,7 @@ public class GroupHeader52 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "InitgPty")
 	public PartyIdentification43 getInitiatingParty() {
 		return initiatingParty;
 	}
@@ -432,6 +441,7 @@ public class GroupHeader52 {
 		this.initiatingParty = initiatingParty;
 	}
 
+	@XmlElement(name = "FwdgAgt")
 	public BranchAndFinancialInstitutionIdentification5 getForwardingAgent() {
 		return forwardingAgent;
 	}
@@ -440,6 +450,7 @@ public class GroupHeader52 {
 		this.forwardingAgent = forwardingAgent;
 	}
 
+	@XmlElement(name = "DbtrAgt")
 	public BranchAndFinancialInstitutionIdentification5 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -448,6 +459,7 @@ public class GroupHeader52 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "CdtrAgt")
 	public BranchAndFinancialInstitutionIdentification5 getCreditorAgent() {
 		return creditorAgent;
 	}

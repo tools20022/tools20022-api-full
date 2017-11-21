@@ -65,6 +65,11 @@ public class Sponsor extends SecuritiesPartyRole {
 				definition = "The party that advises a company on how to issue new shares or bonds.";
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Sponsor.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

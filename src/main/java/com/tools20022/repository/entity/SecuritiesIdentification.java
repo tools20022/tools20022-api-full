@@ -22,6 +22,7 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,6 +38,80 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmIdentifiedSecurity
+ * SecuritiesIdentification.mmIdentifiedSecurity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
+ * SecuritiesIdentification.mmSecurityIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmRIC
+ * SecuritiesIdentification.mmRIC}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmTickerSymbol
+ * SecuritiesIdentification.mmTickerSymbol}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmBloomberg
+ * SecuritiesIdentification.mmBloomberg}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmCTA
+ * SecuritiesIdentification.mmCTA}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmCommon
+ * SecuritiesIdentification.mmCommon}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmName
+ * SecuritiesIdentification.mmName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSEDOL
+ * SecuritiesIdentification.mmSEDOL}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmCUSIP
+ * SecuritiesIdentification.mmCUSIP}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmQUICK
+ * SecuritiesIdentification.mmQUICK}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmWertpapier
+ * SecuritiesIdentification.mmWertpapier}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmDutch
+ * SecuritiesIdentification.mmDutch}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmValoren
+ * SecuritiesIdentification.mmValoren}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSicovam
+ * SecuritiesIdentification.mmSicovam}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmBelgian
+ * SecuritiesIdentification.mmBelgian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmIdentificationSuffix
+ * SecuritiesIdentification.mmIdentificationSuffix}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmGenericIdentification
+ * SecuritiesIdentification.mmGenericIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmValidityPeriod
+ * SecuritiesIdentification.mmValidityPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmApplicableTradingMarket
+ * SecuritiesIdentification.mmApplicableTradingMarket}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmPrimeIdentification
+ * SecuritiesIdentification.mmPrimeIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmRelatedOtherIdentification
+ * SecuritiesIdentification.mmRelatedOtherIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmTradingIdentification
+ * SecuritiesIdentification.mmTradingIdentification}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -331,80 +406,6 @@ import java.util.List;
  * SwapLegIdentification2.mmSwapOut}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmIdentifiedSecurity
- * SecuritiesIdentification.mmIdentifiedSecurity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
- * SecuritiesIdentification.mmSecurityIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmRIC
- * SecuritiesIdentification.mmRIC}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmTickerSymbol
- * SecuritiesIdentification.mmTickerSymbol}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmBloomberg
- * SecuritiesIdentification.mmBloomberg}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmCTA
- * SecuritiesIdentification.mmCTA}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmCommon
- * SecuritiesIdentification.mmCommon}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmName
- * SecuritiesIdentification.mmName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSEDOL
- * SecuritiesIdentification.mmSEDOL}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmCUSIP
- * SecuritiesIdentification.mmCUSIP}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmQUICK
- * SecuritiesIdentification.mmQUICK}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmWertpapier
- * SecuritiesIdentification.mmWertpapier}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmDutch
- * SecuritiesIdentification.mmDutch}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmValoren
- * SecuritiesIdentification.mmValoren}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSicovam
- * SecuritiesIdentification.mmSicovam}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmBelgian
- * SecuritiesIdentification.mmBelgian}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmIdentificationSuffix
- * SecuritiesIdentification.mmIdentificationSuffix}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmGenericIdentification
- * SecuritiesIdentification.mmGenericIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmValidityPeriod
- * SecuritiesIdentification.mmValidityPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmApplicableTradingMarket
- * SecuritiesIdentification.mmApplicableTradingMarket}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmPrimeIdentification
- * SecuritiesIdentification.mmPrimeIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmRelatedOtherIdentification
- * SecuritiesIdentification.mmRelatedOtherIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmTradingIdentification
- * SecuritiesIdentification.mmTradingIdentification}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -442,11 +443,6 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -473,6 +469,11 @@ public class SecuritiesIdentification {
 	 * FinancialInstrumentIdentification5Choice.mmBasket}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -510,11 +511,6 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ISINOct2015Identifier
 	 * ISINOct2015Identifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -667,6 +663,11 @@ public class SecuritiesIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -698,6 +699,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getSecurityIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected RICIdentifier rIC;
 	/**
@@ -714,11 +723,6 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.RICIdentifier
 	 * RICIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -739,6 +743,11 @@ public class SecuritiesIdentification {
 	 * SecurityIdentification25Choice.mmRIC}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -764,6 +773,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> RICIdentifier.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getRIC", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TickerIdentifier tickerSymbol;
 	/**
@@ -778,11 +795,6 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TickerIdentifier
 	 * TickerIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -806,6 +818,11 @@ public class SecuritiesIdentification {
 	 * SecurityIdentification25Choice.mmTickerSymbol}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -832,6 +849,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> TickerIdentifier.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getTickerSymbol", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Bloomberg2Identifier bloomberg;
 	/**
@@ -844,11 +869,6 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Bloomberg2Identifier
 	 * Bloomberg2Identifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -869,6 +889,11 @@ public class SecuritiesIdentification {
 	 * SecurityIdentification25Choice.mmBloomberg}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -894,6 +919,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> Bloomberg2Identifier.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getBloomberg", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ConsolidatedTapeAssociationIdentifier cTA;
 	/**
@@ -906,11 +939,6 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ConsolidatedTapeAssociationIdentifier
 	 * ConsolidatedTapeAssociationIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -931,6 +959,11 @@ public class SecuritiesIdentification {
 	 * SecurityIdentification25Choice.mmCTA}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -956,6 +989,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> ConsolidatedTapeAssociationIdentifier.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getCTA", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected EuroclearClearstreamIdentifier common;
 	/**
@@ -969,11 +1010,6 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.EuroclearClearstreamIdentifier
 	 * EuroclearClearstreamIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -994,6 +1030,11 @@ public class SecuritiesIdentification {
 	 * SecurityIdentification25Choice.mmCommon}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1020,6 +1061,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> EuroclearClearstreamIdentifier.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getCommon", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected LocalName name;
 	/**
@@ -1039,11 +1088,6 @@ public class SecuritiesIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.LocalName LocalName}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1064,6 +1108,11 @@ public class SecuritiesIdentification {
 	 * InvestmentFundTransactionsByFund3.mmName}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1104,11 +1153,6 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.SEDOLIdentifier
 	 * SEDOLIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1129,6 +1173,11 @@ public class SecuritiesIdentification {
 	 * SecurityIdentification25Choice.mmSEDOL}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1155,6 +1204,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> SEDOLIdentifier.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getSEDOL", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CUSIPIdentifier cUSIP;
 	/**
@@ -1171,11 +1228,6 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CUSIPIdentifier
 	 * CUSIPIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1193,6 +1245,11 @@ public class SecuritiesIdentification {
 	 * SecurityIdentification25Choice.mmCUSIP}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1218,6 +1275,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> CUSIPIdentifier.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getCUSIP", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected QUICKIdentifier qUICK;
 	/**
@@ -1231,11 +1296,6 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.QUICKIdentifier
 	 * QUICKIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1253,6 +1313,11 @@ public class SecuritiesIdentification {
 	 * SecurityIdentification25Choice.mmQUICK}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1278,6 +1343,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> QUICKIdentifier.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getQUICK", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected WertpapierIdentifier wertpapier;
 	/**
@@ -1293,11 +1366,6 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.WertpapierIdentifier
 	 * WertpapierIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1312,6 +1380,11 @@ public class SecuritiesIdentification {
 	 * SecurityIdentification25Choice.mmWertpapier}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1337,6 +1410,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> WertpapierIdentifier.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getWertpapier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DutchIdentifier dutch;
 	/**
@@ -1349,11 +1430,6 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.DutchIdentifier
 	 * DutchIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1368,6 +1444,11 @@ public class SecuritiesIdentification {
 	 * SecurityIdentification25Choice.mmDutch}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1391,6 +1472,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> DutchIdentifier.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getDutch", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ValorenIdentifier valoren;
 	/**
@@ -1404,11 +1493,6 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ValorenIdentifier
 	 * ValorenIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1423,6 +1507,11 @@ public class SecuritiesIdentification {
 	 * SecurityIdentification25Choice.mmValoren}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1448,6 +1537,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> ValorenIdentifier.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getValoren", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SicovamIdentifier sicovam;
 	/**
@@ -1462,11 +1559,6 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.SicovamIdentifier
 	 * SicovamIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1481,6 +1573,11 @@ public class SecuritiesIdentification {
 	 * SecurityIdentification25Choice.mmSicovam}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1506,6 +1603,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> SicovamIdentifier.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getSicovam", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected BelgianIdentifier belgian;
 	/**
@@ -1518,11 +1623,6 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.BelgianIdentifier
 	 * BelgianIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1537,6 +1637,11 @@ public class SecuritiesIdentification {
 	 * SecurityIdentification25Choice.mmBelgian}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1560,6 +1665,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> BelgianIdentifier.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getBelgian", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max35Text identificationSuffix;
 	/**
@@ -1571,11 +1684,6 @@ public class SecuritiesIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1590,6 +1698,11 @@ public class SecuritiesIdentification {
 	 * OtherIdentification3.mmSuffix}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1613,6 +1726,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getIdentificationSuffix", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected GenericIdentification genericIdentification;
 	/**
@@ -1634,11 +1755,6 @@ public class SecuritiesIdentification {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
 	 * GenericIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
-	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1650,6 +1766,11 @@ public class SecuritiesIdentification {
 	 * FinancialInstrumentAttributes3Choice.mmOther}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
+	 * SecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1913,6 +2034,14 @@ public class SecuritiesIdentification {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesIdentification.class.getMethod("getTradingIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	static public MMBusinessComponent mmObject() {
@@ -1959,6 +2088,11 @@ public class SecuritiesIdentification {
 						SecurityIdentification22Choice.mmObject(), AlternateSecurityIdentification7.mmObject(), SecurityIdentification23Choice.mmObject(), SecurityIdentification19.mmObject(), SecurityIdentification20.mmObject(),
 						SecurityIdentification32.mmObject(), SecurityIdentification21.mmObject(), SecurityIdentification25Choice.mmObject(), FinancialInstrumentIdentification6Choice.mmObject(), BasketDescription3.mmObject(),
 						FinancialInstrumentIdentification7Choice.mmObject(), FinancialInstrumentIdentification5Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesIdentification.class;
 			}
 		});
 		return mmObject_lazy.get();

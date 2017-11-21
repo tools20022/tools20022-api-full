@@ -37,6 +37,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Organisation
+ * Organisation}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -120,9 +123,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Party28Choice.mmAgent}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Organisation
- * Organisation}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -157,6 +157,11 @@ public class FinancialInstitution extends Organisation {
 						Party28Choice.mmAgent);
 				superType_lazy = () -> Organisation.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(BICIdentification1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FinancialInstitution.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Regulatory information.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Regulatory information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegulatoryInformation1", propOrder = {"sector", "branch", "group", "other"})
 public class RegulatoryInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -245,6 +251,7 @@ public class RegulatoryInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sctr")
 	public Max35Text getSector() {
 		return sector;
 	}
@@ -253,6 +260,7 @@ public class RegulatoryInformation1 {
 		this.sector = sector;
 	}
 
+	@XmlElement(name = "Brnch")
 	public Max35Text getBranch() {
 		return branch;
 	}
@@ -261,6 +269,7 @@ public class RegulatoryInformation1 {
 		this.branch = branch;
 	}
 
+	@XmlElement(name = "Grp")
 	public Max35Text getGroup() {
 		return group;
 	}
@@ -269,6 +278,7 @@ public class RegulatoryInformation1 {
 		this.group = group;
 	}
 
+	@XmlElement(name = "Othr")
 	public Max35Text getOther() {
 		return other;
 	}

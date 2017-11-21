@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information that serves as a basis to debit an account.
@@ -117,6 +121,9 @@ import java.util.List;
  * Mandate4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Mandate7", propOrder = {"mandateIdentification", "mandateRequestIdentification", "type", "occurrences", "collectionAmount", "maximumAmount", "reason", "creditorSchemeIdentification", "creditor", "creditorAccount",
+		"creditorAgent", "ultimateCreditor", "debtor", "debtorAccount", "debtorAgent", "ultimateDebtor", "referredDocument", "supplementaryData"})
 public class Mandate7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1248,6 +1255,7 @@ public class Mandate7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MndtId")
 	public List<Max35Text> getMandateIdentification() {
 		return mandateIdentification;
 	}
@@ -1256,6 +1264,7 @@ public class Mandate7 {
 		this.mandateIdentification = mandateIdentification;
 	}
 
+	@XmlElement(name = "MndtReqId", required = true)
 	public Max35Text getMandateRequestIdentification() {
 		return mandateRequestIdentification;
 	}
@@ -1264,6 +1273,7 @@ public class Mandate7 {
 		this.mandateRequestIdentification = mandateRequestIdentification;
 	}
 
+	@XmlElement(name = "Tp")
 	public MandateTypeInformation1 getType() {
 		return type;
 	}
@@ -1272,6 +1282,7 @@ public class Mandate7 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Ocrncs")
 	public MandateOccurrences3 getOccurrences() {
 		return occurrences;
 	}
@@ -1280,6 +1291,7 @@ public class Mandate7 {
 		this.occurrences = occurrences;
 	}
 
+	@XmlElement(name = "ColltnAmt")
 	public ActiveCurrencyAndAmount getCollectionAmount() {
 		return collectionAmount;
 	}
@@ -1288,6 +1300,7 @@ public class Mandate7 {
 		this.collectionAmount = collectionAmount;
 	}
 
+	@XmlElement(name = "MaxAmt")
 	public ActiveCurrencyAndAmount getMaximumAmount() {
 		return maximumAmount;
 	}
@@ -1296,6 +1309,7 @@ public class Mandate7 {
 		this.maximumAmount = maximumAmount;
 	}
 
+	@XmlElement(name = "Rsn")
 	public MandateSetupReason1Choice getReason() {
 		return reason;
 	}
@@ -1304,6 +1318,7 @@ public class Mandate7 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "CdtrSchmeId")
 	public PartyIdentification43 getCreditorSchemeIdentification() {
 		return creditorSchemeIdentification;
 	}
@@ -1312,6 +1327,7 @@ public class Mandate7 {
 		this.creditorSchemeIdentification = creditorSchemeIdentification;
 	}
 
+	@XmlElement(name = "Cdtr", required = true)
 	public PartyIdentification43 getCreditor() {
 		return creditor;
 	}
@@ -1320,6 +1336,7 @@ public class Mandate7 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAcct")
 	public CashAccount24 getCreditorAccount() {
 		return creditorAccount;
 	}
@@ -1328,6 +1345,7 @@ public class Mandate7 {
 		this.creditorAccount = creditorAccount;
 	}
 
+	@XmlElement(name = "CdtrAgt")
 	public BranchAndFinancialInstitutionIdentification5 getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -1336,6 +1354,7 @@ public class Mandate7 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "UltmtCdtr")
 	public PartyIdentification43 getUltimateCreditor() {
 		return ultimateCreditor;
 	}
@@ -1344,6 +1363,7 @@ public class Mandate7 {
 		this.ultimateCreditor = ultimateCreditor;
 	}
 
+	@XmlElement(name = "Dbtr", required = true)
 	public PartyIdentification43 getDebtor() {
 		return debtor;
 	}
@@ -1352,6 +1372,7 @@ public class Mandate7 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAcct")
 	public CashAccount24 getDebtorAccount() {
 		return debtorAccount;
 	}
@@ -1360,6 +1381,7 @@ public class Mandate7 {
 		this.debtorAccount = debtorAccount;
 	}
 
+	@XmlElement(name = "DbtrAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -1368,6 +1390,7 @@ public class Mandate7 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "UltmtDbtr")
 	public PartyIdentification43 getUltimateDebtor() {
 		return ultimateDebtor;
 	}
@@ -1376,6 +1399,7 @@ public class Mandate7 {
 		this.ultimateDebtor = ultimateDebtor;
 	}
 
+	@XmlElement(name = "RfrdDoc")
 	public List<ReferredDocumentInformation6> getReferredDocument() {
 		return referredDocument;
 	}
@@ -1384,6 +1408,7 @@ public class Mandate7 {
 		this.referredDocument = referredDocument;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

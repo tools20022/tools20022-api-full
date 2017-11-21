@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide information on the underlying statement
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnderlyingStatementEntry1", propOrder = {"originalGroupInformation", "originalStatementIdentification", "originalEntryIdentification"})
 public class UnderlyingStatementEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -222,6 +228,7 @@ public class UnderlyingStatementEntry1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlGrpInf")
 	public OriginalGroupInformation3 getOriginalGroupInformation() {
 		return originalGroupInformation;
 	}
@@ -230,6 +237,7 @@ public class UnderlyingStatementEntry1 {
 		this.originalGroupInformation = originalGroupInformation;
 	}
 
+	@XmlElement(name = "OrgnlStmtId")
 	public Max35Text getOriginalStatementIdentification() {
 		return originalStatementIdentification;
 	}
@@ -238,6 +246,7 @@ public class UnderlyingStatementEntry1 {
 		this.originalStatementIdentification = originalStatementIdentification;
 	}
 
+	@XmlElement(name = "OrgnlNtryId")
 	public Max35Text getOriginalEntryIdentification() {
 		return originalEntryIdentification;
 	}

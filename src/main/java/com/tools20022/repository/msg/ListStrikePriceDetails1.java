@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details for negotiating and trading a large number of securities
@@ -103,6 +107,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ListStrikePriceDetails1", propOrder = {"clientOrderIdentification", "strikePrice", "secondaryClientOrderIdentification", "previousClosingPrice", "side", "underlyingFinancialInstrument", "stipulations",
+		"underlyingStipulations", "financialInstrumentAttributes", "underlyingFinancialInstrumentAttributes", "financialInstrument"})
 public class ListStrikePriceDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -667,6 +674,7 @@ public class ListStrikePriceDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClntOrdrId", required = true)
 	public Max35Text getClientOrderIdentification() {
 		return clientOrderIdentification;
 	}
@@ -675,6 +683,7 @@ public class ListStrikePriceDetails1 {
 		this.clientOrderIdentification = clientOrderIdentification;
 	}
 
+	@XmlElement(name = "StrkPric", required = true)
 	public Price1 getStrikePrice() {
 		return strikePrice;
 	}
@@ -683,6 +692,7 @@ public class ListStrikePriceDetails1 {
 		this.strikePrice = strikePrice;
 	}
 
+	@XmlElement(name = "ScndryClntOrdrId")
 	public Max35Text getSecondaryClientOrderIdentification() {
 		return secondaryClientOrderIdentification;
 	}
@@ -691,6 +701,7 @@ public class ListStrikePriceDetails1 {
 		this.secondaryClientOrderIdentification = secondaryClientOrderIdentification;
 	}
 
+	@XmlElement(name = "PrvsClsgPric")
 	public Price1 getPreviousClosingPrice() {
 		return previousClosingPrice;
 	}
@@ -699,6 +710,7 @@ public class ListStrikePriceDetails1 {
 		this.previousClosingPrice = previousClosingPrice;
 	}
 
+	@XmlElement(name = "Sd")
 	public Side1Code getSide() {
 		return side;
 	}
@@ -707,6 +719,7 @@ public class ListStrikePriceDetails1 {
 		this.side = side;
 	}
 
+	@XmlElement(name = "UndrlygFinInstrm")
 	public List<SecurityIdentification7> getUnderlyingFinancialInstrument() {
 		return underlyingFinancialInstrument;
 	}
@@ -715,6 +728,7 @@ public class ListStrikePriceDetails1 {
 		this.underlyingFinancialInstrument = underlyingFinancialInstrument;
 	}
 
+	@XmlElement(name = "Stiptns")
 	public FinancialInstrumentStipulations getStipulations() {
 		return stipulations;
 	}
@@ -723,6 +737,7 @@ public class ListStrikePriceDetails1 {
 		this.stipulations = stipulations;
 	}
 
+	@XmlElement(name = "UndrlygStiptns")
 	public List<FinancialInstrumentStipulations> getUnderlyingStipulations() {
 		return underlyingStipulations;
 	}
@@ -731,6 +746,7 @@ public class ListStrikePriceDetails1 {
 		this.underlyingStipulations = underlyingStipulations;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public FinancialInstrumentAttributes1 getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -739,6 +755,7 @@ public class ListStrikePriceDetails1 {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "UndrlygFinInstrmAttrbts")
 	public List<FinancialInstrumentAttributes1> getUnderlyingFinancialInstrumentAttributes() {
 		return underlyingFinancialInstrumentAttributes;
 	}
@@ -747,6 +764,7 @@ public class ListStrikePriceDetails1 {
 		this.underlyingFinancialInstrumentAttributes = underlyingFinancialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "FinInstrm", required = true)
 	public SecurityIdentification7 getFinancialInstrument() {
 		return financialInstrument;
 	}

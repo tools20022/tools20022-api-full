@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Parameters applied to the settlement of a security transfer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesSettlement2", propOrder = {"date", "dateCode", "placeOfSettlement"})
 public class SecuritiesSettlement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -225,6 +231,7 @@ public class SecuritiesSettlement2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODate getDate() {
 		return date;
 	}
@@ -233,6 +240,7 @@ public class SecuritiesSettlement2 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "DtCd")
 	public DateType1Choice getDateCode() {
 		return dateCode;
 	}
@@ -241,6 +249,7 @@ public class SecuritiesSettlement2 {
 		this.dateCode = dateCode;
 	}
 
+	@XmlElement(name = "PlcOfSttlm")
 	public PartyIdentification23 getPlaceOfSettlement() {
 		return placeOfSettlement;
 	}

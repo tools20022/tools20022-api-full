@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.PositiveNumber;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the LRCI protocol extension details.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the LRCI protocol extension details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelLRCIExtension1", propOrder = {"imageHashAlgorithm", "tokenResponse", "tokenResponsePaymentInformationIndex"})
 public class IsabelLRCIExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -212,6 +218,7 @@ public class IsabelLRCIExtension1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ImgHashAlgo", required = true)
 	public Max105Text getImageHashAlgorithm() {
 		return imageHashAlgorithm;
 	}
@@ -220,6 +227,7 @@ public class IsabelLRCIExtension1 {
 		this.imageHashAlgorithm = imageHashAlgorithm;
 	}
 
+	@XmlElement(name = "TknRspn", required = true)
 	public IsabelEpaymentTokenResponse1 getTokenResponse() {
 		return tokenResponse;
 	}
@@ -228,6 +236,7 @@ public class IsabelLRCIExtension1 {
 		this.tokenResponse = tokenResponse;
 	}
 
+	@XmlElement(name = "TknRspnPmtInfIndx", required = true)
 	public PositiveNumber getTokenResponsePaymentInformationIndex() {
 		return tokenResponsePaymentInformationIndex;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to identify an account owner and the associated decision
@@ -70,6 +74,8 @@ import java.util.List;
  * PartyIdentification76}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification79", propOrder = {"accountOwner", "decisionMaker"})
 public class PartyIdentification79 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -187,6 +193,7 @@ public class PartyIdentification79 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnr", required = true)
 	public List<PartyIdentification76> getAccountOwner() {
 		return accountOwner;
 	}
@@ -195,6 +202,7 @@ public class PartyIdentification79 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "DcsnMakr")
 	public List<PersonOrOrganisation2Choice> getDecisionMaker() {
 		return decisionMaker;
 	}

@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Modification on the value of goods and / or services. For example: rebate,
@@ -86,6 +90,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Adjustment3", propOrder = {"type", "otherAdjustmentType", "amount", "rate", "direction"})
 public class Adjustment3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -434,6 +440,7 @@ public class Adjustment3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public AdjustmentType2Code getType() {
 		return type;
 	}
@@ -442,6 +449,7 @@ public class Adjustment3 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "OthrAdjstmntTp", required = true)
 	public Max35Text getOtherAdjustmentType() {
 		return otherAdjustmentType;
 	}
@@ -450,6 +458,7 @@ public class Adjustment3 {
 		this.otherAdjustmentType = otherAdjustmentType;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -458,6 +467,7 @@ public class Adjustment3 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -466,6 +476,7 @@ public class Adjustment3 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "Drctn", required = true)
 	public AdjustmentDirection1Code getDirection() {
 		return direction;
 	}

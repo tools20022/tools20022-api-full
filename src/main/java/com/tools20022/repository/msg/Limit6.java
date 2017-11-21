@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details on the limits.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details on the limits."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Limit6", propOrder = {"startDateTime", "amount", "creditDebitIndicator"})
 public class Limit6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -223,6 +229,7 @@ public class Limit6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StartDtTm")
 	public DateAndDateTimeChoice getStartDateTime() {
 		return startDateTime;
 	}
@@ -231,6 +238,7 @@ public class Limit6 {
 		this.startDateTime = startDateTime;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public Amount2Choice getAmount() {
 		return amount;
 	}
@@ -239,6 +247,7 @@ public class Limit6 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}

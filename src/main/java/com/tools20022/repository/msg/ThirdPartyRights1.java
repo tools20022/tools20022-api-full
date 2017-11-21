@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about third party rights.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about third party rights."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ThirdPartyRights1", propOrder = {"type", "dateTime", "holder", "legalEntityIdentifier", "amount", "description"})
 public class ThirdPartyRights1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -345,6 +351,7 @@ public class ThirdPartyRights1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public Max35Text getType() {
 		return type;
 	}
@@ -353,6 +360,7 @@ public class ThirdPartyRights1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "DtTm")
 	public ISODateTime getDateTime() {
 		return dateTime;
 	}
@@ -361,6 +369,7 @@ public class ThirdPartyRights1 {
 		this.dateTime = dateTime;
 	}
 
+	@XmlElement(name = "Hldr")
 	public PartyIdentification70Choice getHolder() {
 		return holder;
 	}
@@ -369,6 +378,7 @@ public class ThirdPartyRights1 {
 		this.holder = holder;
 	}
 
+	@XmlElement(name = "LglNttyIdr")
 	public LEIIdentifier getLegalEntityIdentifier() {
 		return legalEntityIdentifier;
 	}
@@ -377,6 +387,7 @@ public class ThirdPartyRights1 {
 		this.legalEntityIdentifier = legalEntityIdentifier;
 	}
 
+	@XmlElement(name = "Amt")
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -385,6 +396,7 @@ public class ThirdPartyRights1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Desc")
 	public Max350Text getDescription() {
 		return description;
 	}

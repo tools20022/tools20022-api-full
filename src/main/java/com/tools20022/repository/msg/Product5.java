@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.ProductQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Product to purchase.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Product3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Product5", propOrder = {"productCode", "additionalProductCode", "amountLimit", "quantityLimit", "unitOfMeasure"})
 public class Product5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -343,6 +349,7 @@ public class Product5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PdctCd", required = true)
 	public Max70Text getProductCode() {
 		return productCode;
 	}
@@ -351,6 +358,7 @@ public class Product5 {
 		this.productCode = productCode;
 	}
 
+	@XmlElement(name = "AddtlPdctCd")
 	public Max70Text getAdditionalProductCode() {
 		return additionalProductCode;
 	}
@@ -359,6 +367,7 @@ public class Product5 {
 		this.additionalProductCode = additionalProductCode;
 	}
 
+	@XmlElement(name = "AmtLmt")
 	public ImpliedCurrencyAndAmount getAmountLimit() {
 		return amountLimit;
 	}
@@ -367,6 +376,7 @@ public class Product5 {
 		this.amountLimit = amountLimit;
 	}
 
+	@XmlElement(name = "QtyLmt")
 	public DecimalNumber getQuantityLimit() {
 		return quantityLimit;
 	}
@@ -375,6 +385,7 @@ public class Product5 {
 		this.quantityLimit = quantityLimit;
 	}
 
+	@XmlElement(name = "UnitOfMeasr")
 	public UnitOfMeasure6Code getUnitOfMeasure() {
 		return unitOfMeasure;
 	}

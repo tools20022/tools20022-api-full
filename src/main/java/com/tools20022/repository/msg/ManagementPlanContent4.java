@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Content of the management plan.
@@ -79,6 +83,8 @@ import java.util.List;
  * ManagementPlanContent3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ManagementPlanContent4", propOrder = {"TMChallenge", "keyEnciphermentCertificate", "action"})
 public class ManagementPlanContent4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -261,6 +267,7 @@ public class ManagementPlanContent4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TMChllng")
 	public Max140Binary getTMChallenge() {
 		return tMChallenge;
 	}
@@ -269,6 +276,7 @@ public class ManagementPlanContent4 {
 		this.tMChallenge = tMChallenge;
 	}
 
+	@XmlElement(name = "KeyNcphrmntCert")
 	public List<Max10KBinary> getKeyEnciphermentCertificate() {
 		return keyEnciphermentCertificate;
 	}
@@ -277,6 +285,7 @@ public class ManagementPlanContent4 {
 		this.keyEnciphermentCertificate = keyEnciphermentCertificate;
 	}
 
+	@XmlElement(name = "Actn", required = true)
 	public List<TMSAction4> getAction() {
 		return action;
 	}

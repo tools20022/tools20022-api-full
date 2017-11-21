@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the statement reporting the bank services billing.
@@ -99,6 +103,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingStatement1", propOrder = {"statementIdentification", "fromToDate", "creationDateTime", "status", "accountCharacteristics", "rateData", "currencyExchange", "balance", "compensation", "service", "taxRegion",
+		"balanceAdjustment", "serviceAdjustment"})
 public class BillingStatement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -859,6 +866,7 @@ public class BillingStatement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtId", required = true)
 	public Max35Text getStatementIdentification() {
 		return statementIdentification;
 	}
@@ -867,6 +875,7 @@ public class BillingStatement1 {
 		this.statementIdentification = statementIdentification;
 	}
 
+	@XmlElement(name = "FrToDt", required = true)
 	public DatePeriod1 getFromToDate() {
 		return fromToDate;
 	}
@@ -875,6 +884,7 @@ public class BillingStatement1 {
 		this.fromToDate = fromToDate;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -883,6 +893,7 @@ public class BillingStatement1 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public BillingStatementStatus1Code getStatus() {
 		return status;
 	}
@@ -891,6 +902,7 @@ public class BillingStatement1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "AcctChrtcs", required = true)
 	public CashAccountCharacteristics1 getAccountCharacteristics() {
 		return accountCharacteristics;
 	}
@@ -899,6 +911,7 @@ public class BillingStatement1 {
 		this.accountCharacteristics = accountCharacteristics;
 	}
 
+	@XmlElement(name = "RateData")
 	public List<BillingRate1> getRateData() {
 		return rateData;
 	}
@@ -907,6 +920,7 @@ public class BillingStatement1 {
 		this.rateData = rateData;
 	}
 
+	@XmlElement(name = "CcyXchg")
 	public List<CurrencyExchange6> getCurrencyExchange() {
 		return currencyExchange;
 	}
@@ -915,6 +929,7 @@ public class BillingStatement1 {
 		this.currencyExchange = currencyExchange;
 	}
 
+	@XmlElement(name = "Bal")
 	public List<BillingBalance1> getBalance() {
 		return balance;
 	}
@@ -923,6 +938,7 @@ public class BillingStatement1 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "Compstn")
 	public List<BillingCompensation1> getCompensation() {
 		return compensation;
 	}
@@ -931,6 +947,7 @@ public class BillingStatement1 {
 		this.compensation = compensation;
 	}
 
+	@XmlElement(name = "Svc")
 	public List<BillingService1> getService() {
 		return service;
 	}
@@ -939,6 +956,7 @@ public class BillingStatement1 {
 		this.service = service;
 	}
 
+	@XmlElement(name = "TaxRgn")
 	public List<BillingTaxRegion1> getTaxRegion() {
 		return taxRegion;
 	}
@@ -947,6 +965,7 @@ public class BillingStatement1 {
 		this.taxRegion = taxRegion;
 	}
 
+	@XmlElement(name = "BalAdjstmnt")
 	public List<BalanceAdjustment1> getBalanceAdjustment() {
 		return balanceAdjustment;
 	}
@@ -955,6 +974,7 @@ public class BillingStatement1 {
 		this.balanceAdjustment = balanceAdjustment;
 	}
 
+	@XmlElement(name = "SvcAdjstmnt")
 	public List<BillingServiceAdjustment1> getServiceAdjustment() {
 		return serviceAdjustment;
 	}

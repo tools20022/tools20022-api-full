@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a document identification provided either by the account owner
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DocumentIdentification4Choice", propOrder = {"accountServicerDocumentIdentification", "accountOwnerDocumentIdentification"})
 public class DocumentIdentification4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class DocumentIdentification4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctSvcrDocId", required = true)
 	public RestrictedFINXMax16Text getAccountServicerDocumentIdentification() {
 		return accountServicerDocumentIdentification;
 	}
@@ -188,6 +195,7 @@ public class DocumentIdentification4Choice {
 		this.accountServicerDocumentIdentification = accountServicerDocumentIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnrDocId", required = true)
 	public RestrictedFINXMax16Text getAccountOwnerDocumentIdentification() {
 		return accountOwnerDocumentIdentification;
 	}

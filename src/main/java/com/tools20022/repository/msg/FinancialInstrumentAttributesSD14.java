@@ -31,6 +31,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding underlying security details.
@@ -93,6 +97,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * FinancialInstrumentAttributesSD12}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentAttributesSD14", propOrder = {"placeAndName", "incomeSourceCountry", "DTCAssetClass", "DTCAssetType", "securityEligibilityIndicator", "tickerSymbol", "linkedSecurity",
+		"originatingSecurityIdentification", "DIVANNSecurityDescription", "foreignIssueFlag"})
 public class FinancialInstrumentAttributesSD14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -609,6 +616,7 @@ public class FinancialInstrumentAttributesSD14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -617,6 +625,7 @@ public class FinancialInstrumentAttributesSD14 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "IncmSrcCtry")
 	public CountryCode getIncomeSourceCountry() {
 		return incomeSourceCountry;
 	}
@@ -625,6 +634,7 @@ public class FinancialInstrumentAttributesSD14 {
 		this.incomeSourceCountry = incomeSourceCountry;
 	}
 
+	@XmlElement(name = "DTCAsstClss")
 	public AssetClass1Code getDTCAssetClass() {
 		return dTCAssetClass;
 	}
@@ -633,6 +643,7 @@ public class FinancialInstrumentAttributesSD14 {
 		this.dTCAssetClass = dTCAssetClass;
 	}
 
+	@XmlElement(name = "DTCAsstTp")
 	public DTCAssetType2Code getDTCAssetType() {
 		return dTCAssetType;
 	}
@@ -641,6 +652,7 @@ public class FinancialInstrumentAttributesSD14 {
 		this.dTCAssetType = dTCAssetType;
 	}
 
+	@XmlElement(name = "SctyElgbltyInd")
 	public YesNoIndicator getSecurityEligibilityIndicator() {
 		return securityEligibilityIndicator;
 	}
@@ -649,6 +661,7 @@ public class FinancialInstrumentAttributesSD14 {
 		this.securityEligibilityIndicator = securityEligibilityIndicator;
 	}
 
+	@XmlElement(name = "TckrSymb")
 	public Max35Text getTickerSymbol() {
 		return tickerSymbol;
 	}
@@ -657,6 +670,7 @@ public class FinancialInstrumentAttributesSD14 {
 		this.tickerSymbol = tickerSymbol;
 	}
 
+	@XmlElement(name = "LkdScty")
 	public SecurityIdentification15 getLinkedSecurity() {
 		return linkedSecurity;
 	}
@@ -665,6 +679,7 @@ public class FinancialInstrumentAttributesSD14 {
 		this.linkedSecurity = linkedSecurity;
 	}
 
+	@XmlElement(name = "OrgtgSctyId")
 	public OtherIdentification2 getOriginatingSecurityIdentification() {
 		return originatingSecurityIdentification;
 	}
@@ -673,6 +688,7 @@ public class FinancialInstrumentAttributesSD14 {
 		this.originatingSecurityIdentification = originatingSecurityIdentification;
 	}
 
+	@XmlElement(name = "DIVANNSctyDesc")
 	public Max50Text getDIVANNSecurityDescription() {
 		return dIVANNSecurityDescription;
 	}
@@ -681,6 +697,7 @@ public class FinancialInstrumentAttributesSD14 {
 		this.dIVANNSecurityDescription = dIVANNSecurityDescription;
 	}
 
+	@XmlElement(name = "FrgnIsseFlg")
 	public YesNoIndicator getForeignIssueFlag() {
 		return foreignIssueFlag;
 	}

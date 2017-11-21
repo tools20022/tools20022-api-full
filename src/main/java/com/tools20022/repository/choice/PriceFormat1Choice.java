@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.AmountPricePerAmount1;
 import com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats to express a price.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of formats to express a price."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceFormat1Choice", propOrder = {"amount", "rate", "amountPricePerFinancialInstrumentQuantity", "amountPricePerAmount", "notSpecified"})
 public class PriceFormat1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -325,6 +331,7 @@ public class PriceFormat1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public AmountPrice1 getAmount() {
 		return amount;
 	}
@@ -333,6 +340,7 @@ public class PriceFormat1Choice {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -341,6 +349,7 @@ public class PriceFormat1Choice {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "AmtPricPerFinInstrmQty", required = true)
 	public AmountPricePerFinancialInstrumentQuantity1 getAmountPricePerFinancialInstrumentQuantity() {
 		return amountPricePerFinancialInstrumentQuantity;
 	}
@@ -349,6 +358,7 @@ public class PriceFormat1Choice {
 		this.amountPricePerFinancialInstrumentQuantity = amountPricePerFinancialInstrumentQuantity;
 	}
 
+	@XmlElement(name = "AmtPricPerAmt", required = true)
 	public AmountPricePerAmount1 getAmountPricePerAmount() {
 		return amountPricePerAmount;
 	}
@@ -357,6 +367,7 @@ public class PriceFormat1Choice {
 		this.amountPricePerAmount = amountPricePerAmount;
 	}
 
+	@XmlElement(name = "NotSpcfd", required = true)
 	public PriceValueType6FormatChoice getNotSpecified() {
 		return notSpecified;
 	}

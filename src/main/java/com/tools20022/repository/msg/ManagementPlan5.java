@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Sequence of terminal management actions to be performed by a point of
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ManagementPlan4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ManagementPlan5", propOrder = {"POIIdentification", "terminalManagerIdentification", "dataSet"})
 public class ManagementPlan5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -304,6 +310,7 @@ public class ManagementPlan5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "POIId")
 	public GenericIdentification71 getPOIIdentification() {
 		return pOIIdentification;
 	}
@@ -312,6 +319,7 @@ public class ManagementPlan5 {
 		this.pOIIdentification = pOIIdentification;
 	}
 
+	@XmlElement(name = "TermnlMgrId", required = true)
 	public GenericIdentification71 getTerminalManagerIdentification() {
 		return terminalManagerIdentification;
 	}
@@ -320,6 +328,7 @@ public class ManagementPlan5 {
 		this.terminalManagerIdentification = terminalManagerIdentification;
 	}
 
+	@XmlElement(name = "DataSet", required = true)
 	public TerminalManagementDataSet18 getDataSet() {
 		return dataSet;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Configuration parameters in use by the security device.
@@ -83,6 +87,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMSecurityConfiguration1", propOrder = {"keys", "encryption", "MACAlgorithm", "digestAlgorithm", "digitalSignature", "PIN", "messageProtection"})
 public class ATMSecurityConfiguration1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -403,6 +409,7 @@ public class ATMSecurityConfiguration1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Keys")
 	public ATMSecurityConfiguration2 getKeys() {
 		return keys;
 	}
@@ -411,6 +418,7 @@ public class ATMSecurityConfiguration1 {
 		this.keys = keys;
 	}
 
+	@XmlElement(name = "Ncrptn")
 	public ATMSecurityConfiguration3 getEncryption() {
 		return encryption;
 	}
@@ -419,6 +427,7 @@ public class ATMSecurityConfiguration1 {
 		this.encryption = encryption;
 	}
 
+	@XmlElement(name = "MACAlgo")
 	public List<Algorithm12Code> getMACAlgorithm() {
 		return mACAlgorithm;
 	}
@@ -427,6 +436,7 @@ public class ATMSecurityConfiguration1 {
 		this.mACAlgorithm = mACAlgorithm;
 	}
 
+	@XmlElement(name = "DgstAlgo")
 	public List<Algorithm11Code> getDigestAlgorithm() {
 		return digestAlgorithm;
 	}
@@ -435,6 +445,7 @@ public class ATMSecurityConfiguration1 {
 		this.digestAlgorithm = digestAlgorithm;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public ATMSecurityConfiguration4 getDigitalSignature() {
 		return digitalSignature;
 	}
@@ -443,6 +454,7 @@ public class ATMSecurityConfiguration1 {
 		this.digitalSignature = digitalSignature;
 	}
 
+	@XmlElement(name = "PIN")
 	public ATMSecurityConfiguration5 getPIN() {
 		return pIN;
 	}
@@ -451,6 +463,7 @@ public class ATMSecurityConfiguration1 {
 		this.pIN = pIN;
 	}
 
+	@XmlElement(name = "MsgPrtcn")
 	public List<MessageProtection1Code> getMessageProtection() {
 		return messageProtection;
 	}

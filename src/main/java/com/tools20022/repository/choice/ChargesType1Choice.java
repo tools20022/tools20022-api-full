@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the type of charges as a code or free text.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of charges as a code or free text."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ChargesType1Choice", propOrder = {"type", "otherChargesType"})
 public class ChargesType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class ChargesType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ChargeType8Code getType() {
 		return type;
 	}
@@ -181,6 +188,7 @@ public class ChargesType1Choice {
 		this.type = type;
 	}
 
+	@XmlElement(name = "OthrChrgsTp", required = true)
 	public Max35Text getOtherChargesType() {
 		return otherChargesType;
 	}

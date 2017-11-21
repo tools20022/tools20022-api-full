@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about an order confirmation.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about an order confirmation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentFundOrderExecution3", propOrder = {"masterReference", "orderReference", "clientReference", "dealReference", "confirmationType", "amendmentIndicator", "orderExecutionDetails"})
 public class InvestmentFundOrderExecution3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -447,6 +453,7 @@ public class InvestmentFundOrderExecution3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -455,6 +462,7 @@ public class InvestmentFundOrderExecution3 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrRef")
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -463,6 +471,7 @@ public class InvestmentFundOrderExecution3 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -471,6 +480,7 @@ public class InvestmentFundOrderExecution3 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "DealRef")
 	public Max35Text getDealReference() {
 		return dealReference;
 	}
@@ -479,6 +489,7 @@ public class InvestmentFundOrderExecution3 {
 		this.dealReference = dealReference;
 	}
 
+	@XmlElement(name = "ConfTp", required = true)
 	public FundOrderType1Code getConfirmationType() {
 		return confirmationType;
 	}
@@ -487,6 +498,7 @@ public class InvestmentFundOrderExecution3 {
 		this.confirmationType = confirmationType;
 	}
 
+	@XmlElement(name = "AmdmntInd")
 	public YesNoIndicator getAmendmentIndicator() {
 		return amendmentIndicator;
 	}
@@ -495,6 +507,7 @@ public class InvestmentFundOrderExecution3 {
 		this.amendmentIndicator = amendmentIndicator;
 	}
 
+	@XmlElement(name = "OrdrExctnDtls")
 	public SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice getOrderExecutionDetails() {
 		return orderExecutionDetails;
 	}

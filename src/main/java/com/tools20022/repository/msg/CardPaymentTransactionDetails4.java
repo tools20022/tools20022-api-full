@@ -36,6 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the transaction to capture.
@@ -105,6 +109,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransactionDetails4", propOrder = {"currency", "totalAmount", "amountQualifier", "detailedAmount", "validityDate", "unattendedLevelCategory", "accountType", "recurringTransaction", "product", "ICCRelatedData"})
 public class CardPaymentTransactionDetails4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -693,6 +699,7 @@ public class CardPaymentTransactionDetails4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -701,6 +708,7 @@ public class CardPaymentTransactionDetails4 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "TtlAmt", required = true)
 	public ImpliedCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -709,6 +717,7 @@ public class CardPaymentTransactionDetails4 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "AmtQlfr")
 	public TypeOfAmount1Code getAmountQualifier() {
 		return amountQualifier;
 	}
@@ -717,6 +726,7 @@ public class CardPaymentTransactionDetails4 {
 		this.amountQualifier = amountQualifier;
 	}
 
+	@XmlElement(name = "DtldAmt")
 	public List<DetailedAmount1> getDetailedAmount() {
 		return detailedAmount;
 	}
@@ -725,6 +735,7 @@ public class CardPaymentTransactionDetails4 {
 		this.detailedAmount = detailedAmount;
 	}
 
+	@XmlElement(name = "VldtyDt")
 	public ISODate getValidityDate() {
 		return validityDate;
 	}
@@ -733,6 +744,7 @@ public class CardPaymentTransactionDetails4 {
 		this.validityDate = validityDate;
 	}
 
+	@XmlElement(name = "UattnddLvlCtgy")
 	public Max35NumericText getUnattendedLevelCategory() {
 		return unattendedLevelCategory;
 	}
@@ -741,6 +753,7 @@ public class CardPaymentTransactionDetails4 {
 		this.unattendedLevelCategory = unattendedLevelCategory;
 	}
 
+	@XmlElement(name = "AcctTp")
 	public CardAccountType1Code getAccountType() {
 		return accountType;
 	}
@@ -749,6 +762,7 @@ public class CardPaymentTransactionDetails4 {
 		this.accountType = accountType;
 	}
 
+	@XmlElement(name = "RcrngTx")
 	public RecurringTransaction1 getRecurringTransaction() {
 		return recurringTransaction;
 	}
@@ -757,6 +771,7 @@ public class CardPaymentTransactionDetails4 {
 		this.recurringTransaction = recurringTransaction;
 	}
 
+	@XmlElement(name = "Pdct")
 	public List<Product1> getProduct() {
 		return product;
 	}
@@ -765,6 +780,7 @@ public class CardPaymentTransactionDetails4 {
 		this.product = product;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}

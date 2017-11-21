@@ -69,6 +69,8 @@ public class TickerIdentifier {
 				name = "TickerIdentifier";
 				definition = "Letters that identify a stock traded on a stock exchange. The Ticker Symbol is a short and convenient way of identifying a stock, eg, RTR.L for Reuters quoted in London.";
 				identificationScheme = "Bloomberg;  BloombergIdentifier";
+				minLength = 1;
+				maxLength = 35;
 			}
 		});
 		return mmObject_lazy.get();

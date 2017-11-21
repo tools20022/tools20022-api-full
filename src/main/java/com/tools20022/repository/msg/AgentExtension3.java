@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.PhoneNumber;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding agent details for existing agent
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgentExtension3", propOrder = {"placeAndName", "agentIdentification", "agentAddress", "agentTelephoneNumber", "agentEmailAddress", "contactInformation"})
 public class AgentExtension3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -338,6 +344,7 @@ public class AgentExtension3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -346,6 +353,7 @@ public class AgentExtension3 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "AgtId")
 	public Max8Text getAgentIdentification() {
 		return agentIdentification;
 	}
@@ -354,6 +362,7 @@ public class AgentExtension3 {
 		this.agentIdentification = agentIdentification;
 	}
 
+	@XmlElement(name = "AgtAdr")
 	public PostalAddress1 getAgentAddress() {
 		return agentAddress;
 	}
@@ -362,6 +371,7 @@ public class AgentExtension3 {
 		this.agentAddress = agentAddress;
 	}
 
+	@XmlElement(name = "AgtTelNb")
 	public PhoneNumber getAgentTelephoneNumber() {
 		return agentTelephoneNumber;
 	}
@@ -370,6 +380,7 @@ public class AgentExtension3 {
 		this.agentTelephoneNumber = agentTelephoneNumber;
 	}
 
+	@XmlElement(name = "AgtEmailAdr")
 	public Max256Text getAgentEmailAddress() {
 		return agentEmailAddress;
 	}
@@ -378,6 +389,7 @@ public class AgentExtension3 {
 		this.agentEmailAddress = agentEmailAddress;
 	}
 
+	@XmlElement(name = "CtctInf")
 	public ContactInformation3 getContactInformation() {
 		return contactInformation;
 	}

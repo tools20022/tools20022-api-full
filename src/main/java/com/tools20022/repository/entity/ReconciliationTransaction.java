@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.Reconciliation;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -41,6 +42,35 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmReconciliationIdentification
+ * ReconciliationTransaction.mmReconciliationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmCurrency
+ * ReconciliationTransaction.mmCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmTransactionType
+ * ReconciliationTransaction.mmTransactionType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmTotalNumber
+ * ReconciliationTransaction.mmTotalNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmCumulativeAmount
+ * ReconciliationTransaction.mmCumulativeAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmClosePeriod
+ * ReconciliationTransaction.mmClosePeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmCardPaymentTotal
+ * ReconciliationTransaction.mmCardPaymentTotal}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Reconciliation
+ * Reconciliation}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -106,35 +136,6 @@ import java.util.List;
  * AcceptorReconciliationRequest6.mmTransaction}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Reconciliation
- * Reconciliation}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmReconciliationIdentification
- * ReconciliationTransaction.mmReconciliationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmCurrency
- * ReconciliationTransaction.mmCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmTransactionType
- * ReconciliationTransaction.mmTransactionType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmTotalNumber
- * ReconciliationTransaction.mmTotalNumber}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmCumulativeAmount
- * ReconciliationTransaction.mmCumulativeAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmClosePeriod
- * ReconciliationTransaction.mmClosePeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmCardPaymentTotal
- * ReconciliationTransaction.mmCardPaymentTotal}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -168,11 +169,6 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
-	 * ReconciliationTransaction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -398,6 +394,11 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
+	 * ReconciliationTransaction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -434,7 +435,7 @@ public class ReconciliationTransaction extends Reconciliation {
 					CardPaymentTransaction71.mmReconciliationIdentification, CardPaymentTransaction75.mmReconciliationIdentification, CardPaymentTransaction74.mmReconciliationIdentification,
 					CardPaymentTransaction70.mmReconciliationIdentification, CardPaymentTransaction76.mmReconciliationIdentification, CommonData6.mmReconciliationIdentification, CardPaymentTransaction69.mmReconciliationIdentification,
 					CardPaymentTransaction77.mmReconciliationIdentification, CardPaymentTransaction78.mmReconciliationIdentification);
-			elementContext_lazy = () -> ReconciliationTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReconciliationIdentification";
@@ -442,6 +443,14 @@ public class ReconciliationTransaction extends Reconciliation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ReconciliationTransaction.class.getMethod("getReconciliationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyCode currency;
@@ -454,11 +463,6 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
-	 * ReconciliationTransaction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -477,6 +481,11 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
+	 * ReconciliationTransaction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -490,7 +499,7 @@ public class ReconciliationTransaction extends Reconciliation {
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionTotals1.mmCurrency, TransactionTotals2.mmCurrency, TransactionTotals3.mmCurrency, TransactionTotals7.mmCurrency);
-			elementContext_lazy = () -> ReconciliationTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
@@ -498,6 +507,14 @@ public class ReconciliationTransaction extends Reconciliation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ReconciliationTransaction.class.getMethod("getCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TypeTransactionTotalsCode transactionType;
@@ -511,11 +528,6 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TypeTransactionTotalsCode
 	 * TypeTransactionTotalsCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
-	 * ReconciliationTransaction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -530,6 +542,11 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
+	 * ReconciliationTransaction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -543,7 +560,7 @@ public class ReconciliationTransaction extends Reconciliation {
 	public static final MMBusinessAttribute mmTransactionType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionTotals1.mmType, TransactionTotals2.mmType, TransactionTotals3.mmType, TransactionTotals7.mmType);
-			elementContext_lazy = () -> ReconciliationTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionType";
@@ -551,6 +568,14 @@ public class ReconciliationTransaction extends Reconciliation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeTransactionTotalsCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ReconciliationTransaction.class.getMethod("getTransactionType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text totalNumber;
@@ -563,11 +588,6 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
-	 * ReconciliationTransaction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -579,6 +599,11 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * TransactionTotals2.mmTotalNumber}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
+	 * ReconciliationTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -594,7 +619,7 @@ public class ReconciliationTransaction extends Reconciliation {
 	public static final MMBusinessAttribute mmTotalNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionTotals1.mmTotalNumber, TransactionTotals2.mmTotalNumber);
-			elementContext_lazy = () -> ReconciliationTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalNumber";
@@ -602,6 +627,14 @@ public class ReconciliationTransaction extends Reconciliation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ReconciliationTransaction.class.getMethod("getTotalNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ImpliedCurrencyAndAmount cumulativeAmount;
@@ -615,11 +648,6 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ImpliedCurrencyAndAmount
 	 * ImpliedCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
-	 * ReconciliationTransaction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -638,6 +666,11 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
+	 * ReconciliationTransaction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -651,7 +684,7 @@ public class ReconciliationTransaction extends Reconciliation {
 	public static final MMBusinessAttribute mmCumulativeAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionTotals1.mmCumulativeAmount, TransactionTotals2.mmCumulativeAmount, TransactionTotals3.mmCumulativeAmount, TransactionTotals7.mmCumulativeAmount);
-			elementContext_lazy = () -> ReconciliationTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CumulativeAmount";
@@ -659,6 +692,14 @@ public class ReconciliationTransaction extends Reconciliation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ReconciliationTransaction.class.getMethod("getCumulativeAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TrueFalseIndicator closePeriod;
@@ -673,11 +714,6 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
-	 * ReconciliationTransaction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -686,6 +722,11 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * TransactionReconciliation1.mmClosePeriod}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
+	 * ReconciliationTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -702,7 +743,7 @@ public class ReconciliationTransaction extends Reconciliation {
 	public static final MMBusinessAttribute mmClosePeriod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionReconciliation1.mmClosePeriod);
-			elementContext_lazy = () -> ReconciliationTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosePeriod";
@@ -710,6 +751,14 @@ public class ReconciliationTransaction extends Reconciliation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ReconciliationTransaction.class.getMethod("getClosePeriod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.CardPayment> cardPaymentTotal;
@@ -731,11 +780,6 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CardPayment
 	 * CardPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
-	 * ReconciliationTransaction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -760,6 +804,11 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
+	 * ReconciliationTransaction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -776,7 +825,7 @@ public class ReconciliationTransaction extends Reconciliation {
 		{
 			derivation_lazy = () -> Arrays.asList(AcceptorReconciliationRequest1.mmEnvironment, AcceptorReconciliationRequest2.mmEnvironment, AcceptorReconciliationRequest3.mmEnvironment, AcceptorReconciliationRequest4.mmEnvironment,
 					AcceptorReconciliationRequest5.mmEnvironment, AcceptorReconciliationRequest6.mmEnvironment);
-			elementContext_lazy = () -> ReconciliationTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPaymentTotal";
@@ -799,11 +848,18 @@ public class ReconciliationTransaction extends Reconciliation {
 				derivationElement_lazy = () -> Arrays.asList(AcceptorReconciliationRequest1.mmTransaction, AcceptorReconciliationRequest2.mmTransaction, AcceptorReconciliationRequest3.mmTransaction,
 						AcceptorReconciliationRequest4.mmTransaction, AcceptorReconciliationRequest5.mmTransaction, AcceptorReconciliationRequest6.mmTransaction);
 				superType_lazy = () -> Reconciliation.mmObject();
-				element_lazy = () -> Arrays.asList(ReconciliationTransaction.mmReconciliationIdentification, ReconciliationTransaction.mmCurrency, ReconciliationTransaction.mmTransactionType, ReconciliationTransaction.mmTotalNumber,
-						ReconciliationTransaction.mmCumulativeAmount, ReconciliationTransaction.mmClosePeriod, ReconciliationTransaction.mmCardPaymentTotal);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ReconciliationTransaction.mmReconciliationIdentification, com.tools20022.repository.entity.ReconciliationTransaction.mmCurrency,
+						com.tools20022.repository.entity.ReconciliationTransaction.mmTransactionType, com.tools20022.repository.entity.ReconciliationTransaction.mmTotalNumber,
+						com.tools20022.repository.entity.ReconciliationTransaction.mmCumulativeAmount, com.tools20022.repository.entity.ReconciliationTransaction.mmClosePeriod,
+						com.tools20022.repository.entity.ReconciliationTransaction.mmCardPaymentTotal);
 				derivationComponent_lazy = () -> Arrays.asList(TransactionTotals1.mmObject(), TransactionReconciliation1.mmObject(), AcceptorReconciliationRequest1.mmObject(), TransactionReconciliation2.mmObject(),
 						AcceptorReconciliationRequest2.mmObject(), AcceptorReconciliationRequest3.mmObject(), AcceptorReconciliationRequest4.mmObject(), TransactionReconciliation3.mmObject(), CardTransaction10.mmObject(),
 						CardTransaction9.mmObject(), AcceptorReconciliationRequest5.mmObject(), TransactionReconciliation4.mmObject(), AcceptorReconciliationRequest6.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ReconciliationTransaction.class;
 			}
 		});
 		return mmObject_lazy.get();

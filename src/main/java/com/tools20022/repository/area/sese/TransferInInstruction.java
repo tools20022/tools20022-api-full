@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -43,9 +45,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.005.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -93,6 +92,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.005.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -111,6 +113,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "sese.005.001.01", propOrder = {"poolReference", "previousReference", "relatedReference", "transferDetails", "financialInstrumentDetails", "accountDetails", "settlementDetails", "extension"})
 public class TransferInInstruction {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -148,6 +152,14 @@ public class TransferInInstruction {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInInstruction.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference2 previousReference;
 	/**
@@ -183,6 +195,14 @@ public class TransferInInstruction {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInInstruction.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference2 relatedReference;
@@ -220,6 +240,14 @@ public class TransferInInstruction {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInInstruction.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Transfer3 transferDetails;
 	/**
@@ -256,6 +284,14 @@ public class TransferInInstruction {
 			minOccurs = 1;
 			complexType_lazy = () -> Transfer3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInInstruction.class.getMethod("getTransferDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected FinancialInstrument3 financialInstrumentDetails;
 	/**
@@ -291,6 +327,14 @@ public class TransferInInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrument3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInInstruction.class.getMethod("getFinancialInstrumentDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentAccount10 accountDetails;
@@ -330,6 +374,14 @@ public class TransferInInstruction {
 			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccount10.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInInstruction.class.getMethod("getAccountDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DeliverInformation1 settlementDetails;
 	/**
@@ -365,6 +417,14 @@ public class TransferInInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DeliverInformation1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInInstruction.class.getMethod("getSettlementDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -402,6 +462,14 @@ public class TransferInInstruction {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferInInstruction.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -416,8 +484,10 @@ public class TransferInInstruction {
 				xmlTag = "sese.005.001.01";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
 				xmlName = "sese.005.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInInstruction.mmPoolReference, TransferInInstruction.mmPreviousReference, TransferInInstruction.mmRelatedReference, TransferInInstruction.mmTransferDetails,
-						TransferInInstruction.mmFinancialInstrumentDetails, TransferInInstruction.mmAccountDetails, TransferInInstruction.mmSettlementDetails, TransferInInstruction.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstruction.mmPoolReference, com.tools20022.repository.area.sese.TransferInInstruction.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferInInstruction.mmRelatedReference, com.tools20022.repository.area.sese.TransferInInstruction.mmTransferDetails,
+						com.tools20022.repository.area.sese.TransferInInstruction.mmFinancialInstrumentDetails, com.tools20022.repository.area.sese.TransferInInstruction.mmAccountDetails,
+						com.tools20022.repository.area.sese.TransferInInstruction.mmSettlementDetails, com.tools20022.repository.area.sese.TransferInInstruction.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -427,10 +497,16 @@ public class TransferInInstruction {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TransferInInstruction.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference2 getPoolReference() {
 		return poolReference;
 	}
@@ -439,6 +515,7 @@ public class TransferInInstruction {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference2 getPreviousReference() {
 		return previousReference;
 	}
@@ -447,6 +524,7 @@ public class TransferInInstruction {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference2 getRelatedReference() {
 		return relatedReference;
 	}
@@ -455,6 +533,7 @@ public class TransferInInstruction {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "TrfDtls", required = true)
 	public Transfer3 getTransferDetails() {
 		return transferDetails;
 	}
@@ -463,6 +542,7 @@ public class TransferInInstruction {
 		this.transferDetails = transferDetails;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument3 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -471,6 +551,7 @@ public class TransferInInstruction {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public InvestmentAccount10 getAccountDetails() {
 		return accountDetails;
 	}
@@ -479,6 +560,7 @@ public class TransferInInstruction {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "SttlmDtls", required = true)
 	public DeliverInformation1 getSettlementDetails() {
 		return settlementDetails;
 	}
@@ -487,11 +569,18 @@ public class TransferInInstruction {
 		this.settlementDetails = settlementDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.005.01.01")
+	static public class Document {
+		@XmlElement(name = "sese.005.001.01", required = true)
+		public TransferInInstruction messageBody;
 	}
 }

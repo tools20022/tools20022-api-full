@@ -29,37 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction3Code
- * MessageFunction3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction1Code
- * MessageFunction1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction2Code
- * MessageFunction2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction4Code
- * MessageFunction4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction6Code
- * MessageFunction6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction5Code
- * MessageFunction5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction7Code
- * MessageFunction7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction8Code
- * MessageFunction8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction9Code
- * MessageFunction9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction10Code
- * MessageFunction10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction11Code
- * MessageFunction11Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction12Code
- * MessageFunction12Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction13Code
- * MessageFunction13Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -380,6 +349,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmCurrencyConversionAdviceResponse
  * MessageFunctionCode.mmCurrencyConversionAdviceResponse}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction3Code
+ * MessageFunction3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction1Code
+ * MessageFunction1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction2Code
+ * MessageFunction2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction4Code
+ * MessageFunction4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction6Code
+ * MessageFunction6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction5Code
+ * MessageFunction5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction7Code
+ * MessageFunction7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction8Code
+ * MessageFunction8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction9Code
+ * MessageFunction9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction10Code
+ * MessageFunction10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction11Code
+ * MessageFunction11Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction12Code
+ * MessageFunction12Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction13Code
+ * MessageFunction13Code}</li>
  * </ul>
  * </li>
  * <li>

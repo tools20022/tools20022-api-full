@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.BasicSecuritiesRegistration;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason of registration.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Reason of registration."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegistrationReason6", propOrder = {"code", "additionalInformation"})
 public class RegistrationReason6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -174,6 +180,7 @@ public class RegistrationReason6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public Registration12Choice getCode() {
 		return code;
 	}
@@ -182,6 +189,7 @@ public class RegistrationReason6 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public RestrictedFINXMax210Text getAdditionalInformation() {
 		return additionalInformation;
 	}

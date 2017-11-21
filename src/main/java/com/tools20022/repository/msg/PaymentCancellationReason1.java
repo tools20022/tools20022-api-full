@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details on the reason of the mandate cancellation request.
@@ -70,6 +74,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentCancellationReason1", propOrder = {"originator", "reason", "additionalInformation"})
 public class PaymentCancellationReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -223,6 +229,7 @@ public class PaymentCancellationReason1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Orgtr")
 	public PartyIdentification43 getOriginator() {
 		return originator;
 	}
@@ -231,6 +238,7 @@ public class PaymentCancellationReason1 {
 		this.originator = originator;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public MandateReason1Choice getReason() {
 		return reason;
 	}
@@ -239,6 +247,7 @@ public class PaymentCancellationReason1 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max105Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

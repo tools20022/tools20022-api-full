@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the transportation of goods by road.
@@ -67,6 +71,8 @@ import java.util.List;
  * definition} = "Information related to the transportation of goods by road."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportByRoad3", propOrder = {"placeOfReceipt", "placeOfDelivery", "roadCarrierName"})
 public class TransportByRoad3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class TransportByRoad3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcOfRct")
 	public List<Max35Text> getPlaceOfReceipt() {
 		return placeOfReceipt;
 	}
@@ -237,6 +244,7 @@ public class TransportByRoad3 {
 		this.placeOfReceipt = placeOfReceipt;
 	}
 
+	@XmlElement(name = "PlcOfDlvry", required = true)
 	public List<Max35Text> getPlaceOfDelivery() {
 		return placeOfDelivery;
 	}
@@ -245,6 +253,7 @@ public class TransportByRoad3 {
 		this.placeOfDelivery = placeOfDelivery;
 	}
 
+	@XmlElement(name = "RoadCrrierNm")
 	public Max35Text getRoadCarrierName() {
 		return roadCarrierName;
 	}

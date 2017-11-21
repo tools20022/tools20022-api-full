@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Valuation information of the portfolio.
@@ -110,6 +114,9 @@ import java.util.List;
  * definition} = "Valuation information of the portfolio."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TotalPortfolioValuation1", propOrder = {"totalPortfolioValue", "previousTotalPortfolioValue", "totalPortfolioValueChange", "totalBookValue", "previousTotalBookValue", "totalBookValueChange", "totalReceipts",
+		"totalDisbursements", "incomeReceived", "expensesPaid", "unrealisedGainOrLoss", "realisedGainOrLoss", "accruedIncome", "investmentFundDetails"})
 public class TotalPortfolioValuation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -802,6 +809,7 @@ public class TotalPortfolioValuation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlPrtflVal", required = true)
 	public AmountAndDirection30 getTotalPortfolioValue() {
 		return totalPortfolioValue;
 	}
@@ -810,6 +818,7 @@ public class TotalPortfolioValuation1 {
 		this.totalPortfolioValue = totalPortfolioValue;
 	}
 
+	@XmlElement(name = "PrvsTtlPrtflVal")
 	public AmountAndDirection30 getPreviousTotalPortfolioValue() {
 		return previousTotalPortfolioValue;
 	}
@@ -818,6 +827,7 @@ public class TotalPortfolioValuation1 {
 		this.previousTotalPortfolioValue = previousTotalPortfolioValue;
 	}
 
+	@XmlElement(name = "TtlPrtflValChng")
 	public AmountAndRate2 getTotalPortfolioValueChange() {
 		return totalPortfolioValueChange;
 	}
@@ -826,6 +836,7 @@ public class TotalPortfolioValuation1 {
 		this.totalPortfolioValueChange = totalPortfolioValueChange;
 	}
 
+	@XmlElement(name = "TtlBookVal", required = true)
 	public AmountAndDirection30 getTotalBookValue() {
 		return totalBookValue;
 	}
@@ -834,6 +845,7 @@ public class TotalPortfolioValuation1 {
 		this.totalBookValue = totalBookValue;
 	}
 
+	@XmlElement(name = "PrvsTtlBookVal")
 	public AmountAndDirection30 getPreviousTotalBookValue() {
 		return previousTotalBookValue;
 	}
@@ -842,6 +854,7 @@ public class TotalPortfolioValuation1 {
 		this.previousTotalBookValue = previousTotalBookValue;
 	}
 
+	@XmlElement(name = "TtlBookValChng")
 	public AmountAndRate2 getTotalBookValueChange() {
 		return totalBookValueChange;
 	}
@@ -850,6 +863,7 @@ public class TotalPortfolioValuation1 {
 		this.totalBookValueChange = totalBookValueChange;
 	}
 
+	@XmlElement(name = "TtlRcts")
 	public AmountAndDirection30 getTotalReceipts() {
 		return totalReceipts;
 	}
@@ -858,6 +872,7 @@ public class TotalPortfolioValuation1 {
 		this.totalReceipts = totalReceipts;
 	}
 
+	@XmlElement(name = "TtlDsbrsmnts")
 	public AmountAndDirection30 getTotalDisbursements() {
 		return totalDisbursements;
 	}
@@ -866,6 +881,7 @@ public class TotalPortfolioValuation1 {
 		this.totalDisbursements = totalDisbursements;
 	}
 
+	@XmlElement(name = "IncmRcvd")
 	public AmountAndDirection30 getIncomeReceived() {
 		return incomeReceived;
 	}
@@ -874,6 +890,7 @@ public class TotalPortfolioValuation1 {
 		this.incomeReceived = incomeReceived;
 	}
 
+	@XmlElement(name = "ExpnssPd")
 	public AmountAndDirection30 getExpensesPaid() {
 		return expensesPaid;
 	}
@@ -882,6 +899,7 @@ public class TotalPortfolioValuation1 {
 		this.expensesPaid = expensesPaid;
 	}
 
+	@XmlElement(name = "UrlsdGnOrLoss")
 	public AmountAndDirection31 getUnrealisedGainOrLoss() {
 		return unrealisedGainOrLoss;
 	}
@@ -890,6 +908,7 @@ public class TotalPortfolioValuation1 {
 		this.unrealisedGainOrLoss = unrealisedGainOrLoss;
 	}
 
+	@XmlElement(name = "RealsdGnOrLoss")
 	public AmountAndDirection31 getRealisedGainOrLoss() {
 		return realisedGainOrLoss;
 	}
@@ -898,6 +917,7 @@ public class TotalPortfolioValuation1 {
 		this.realisedGainOrLoss = realisedGainOrLoss;
 	}
 
+	@XmlElement(name = "AcrdIncm")
 	public AmountAndDirection30 getAccruedIncome() {
 		return accruedIncome;
 	}
@@ -906,6 +926,7 @@ public class TotalPortfolioValuation1 {
 		this.accruedIncome = accruedIncome;
 	}
 
+	@XmlElement(name = "InvstmtFndDtls")
 	public List<InvestmentFund1> getInvestmentFundDetails() {
 		return investmentFundDetails;
 	}

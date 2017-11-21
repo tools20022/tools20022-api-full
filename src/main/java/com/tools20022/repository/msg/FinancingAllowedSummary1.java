@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.InvoiceFinancingPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Summary information about amount financed.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Summary information about amount financed."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancingAllowedSummary1", propOrder = {"financedItemNumber", "totalAcceptedItemsAmount", "appliedPercentage", "totalFinancedAmount", "financingDateDetails", "creditAccount", "financingAccount"})
 public class FinancingAllowedSummary1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -440,6 +446,7 @@ public class FinancingAllowedSummary1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FincdItmNb", required = true)
 	public Number getFinancedItemNumber() {
 		return financedItemNumber;
 	}
@@ -448,6 +455,7 @@ public class FinancingAllowedSummary1 {
 		this.financedItemNumber = financedItemNumber;
 	}
 
+	@XmlElement(name = "TtlAccptdItmsAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalAcceptedItemsAmount() {
 		return totalAcceptedItemsAmount;
 	}
@@ -456,6 +464,7 @@ public class FinancingAllowedSummary1 {
 		this.totalAcceptedItemsAmount = totalAcceptedItemsAmount;
 	}
 
+	@XmlElement(name = "ApldPctg")
 	public PercentageRate getAppliedPercentage() {
 		return appliedPercentage;
 	}
@@ -464,6 +473,7 @@ public class FinancingAllowedSummary1 {
 		this.appliedPercentage = appliedPercentage;
 	}
 
+	@XmlElement(name = "TtlFincdAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalFinancedAmount() {
 		return totalFinancedAmount;
 	}
@@ -472,6 +482,7 @@ public class FinancingAllowedSummary1 {
 		this.totalFinancedAmount = totalFinancedAmount;
 	}
 
+	@XmlElement(name = "FincgDtDtls")
 	public FinancingDateDetails1 getFinancingDateDetails() {
 		return financingDateDetails;
 	}
@@ -480,6 +491,7 @@ public class FinancingAllowedSummary1 {
 		this.financingDateDetails = financingDateDetails;
 	}
 
+	@XmlElement(name = "CdtAcct")
 	public CashAccount7 getCreditAccount() {
 		return creditAccount;
 	}
@@ -488,6 +500,7 @@ public class FinancingAllowedSummary1 {
 		this.creditAccount = creditAccount;
 	}
 
+	@XmlElement(name = "FincgAcct")
 	public CashAccount7 getFinancingAccount() {
 		return financingAccount;
 	}

@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PersonIdentification10;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the identification of a person or an organisation.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PersonOrOrganisation1Choice", propOrder = {"LEI", "MIC", "person", "internal"})
 public class PersonOrOrganisation1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -309,6 +315,7 @@ public class PersonOrOrganisation1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LEI", required = true)
 	public LEIIdentifier getLEI() {
 		return lEI;
 	}
@@ -317,6 +324,7 @@ public class PersonOrOrganisation1Choice {
 		this.lEI = lEI;
 	}
 
+	@XmlElement(name = "MIC", required = true)
 	public MICIdentifier getMIC() {
 		return mIC;
 	}
@@ -325,6 +333,7 @@ public class PersonOrOrganisation1Choice {
 		this.mIC = mIC;
 	}
 
+	@XmlElement(name = "Prsn", required = true)
 	public PersonIdentification10 getPerson() {
 		return person;
 	}
@@ -333,6 +342,7 @@ public class PersonOrOrganisation1Choice {
 		this.person = person;
 	}
 
+	@XmlElement(name = "Intl", required = true)
 	public InternalPartyRole1Code getInternal() {
 		return internal;
 	}

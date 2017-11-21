@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Summary details about CBRF electronic informational message in the report.
@@ -69,6 +73,8 @@ import java.util.List;
  * "Summary details about CBRF electronic informational message in the report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MessageDetails1", propOrder = {"reportIdentification", "reportPagination", "totalNumberOfEntries", "sentEntry", "receivedEntry"})
 public class MessageDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -301,6 +307,7 @@ public class MessageDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptId")
 	public Max35Text getReportIdentification() {
 		return reportIdentification;
 	}
@@ -309,6 +316,7 @@ public class MessageDetails1 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "RptPgntn")
 	public Pagination getReportPagination() {
 		return reportPagination;
 	}
@@ -317,6 +325,7 @@ public class MessageDetails1 {
 		this.reportPagination = reportPagination;
 	}
 
+	@XmlElement(name = "TtlNbOfNtries", required = true)
 	public Max9NumericText getTotalNumberOfEntries() {
 		return totalNumberOfEntries;
 	}
@@ -325,6 +334,7 @@ public class MessageDetails1 {
 		this.totalNumberOfEntries = totalNumberOfEntries;
 	}
 
+	@XmlElement(name = "SntNtry")
 	public List<CBRFReportEntry1> getSentEntry() {
 		return sentEntry;
 	}
@@ -333,6 +343,7 @@ public class MessageDetails1 {
 		this.sentEntry = sentEntry;
 	}
 
+	@XmlElement(name = "RcvdNtry")
 	public List<CBRFReportEntry1> getReceivedEntry() {
 		return receivedEntry;
 	}

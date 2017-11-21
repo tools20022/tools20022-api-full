@@ -30,6 +30,10 @@ import com.tools20022.repository.msg.PaymentInstructionReferenceDetails4;
 import com.tools20022.repository.msg.QueueTransactionIdentificationDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between ways of identifying a payment instruction by its references
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentIdentification3Choice", propOrder = {"paymentInstructionReference", "queueIdentification", "longBusinessIdentification", "shortBusinessIdentification", "proprietaryReference"})
 public class PaymentIdentification3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -338,6 +344,7 @@ public class PaymentIdentification3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtInstrRef", required = true)
 	public Max35Text getPaymentInstructionReference() {
 		return paymentInstructionReference;
 	}
@@ -346,6 +353,7 @@ public class PaymentIdentification3Choice {
 		this.paymentInstructionReference = paymentInstructionReference;
 	}
 
+	@XmlElement(name = "QId", required = true)
 	public QueueTransactionIdentificationDetails getQueueIdentification() {
 		return queueIdentification;
 	}
@@ -354,6 +362,7 @@ public class PaymentIdentification3Choice {
 		this.queueIdentification = queueIdentification;
 	}
 
+	@XmlElement(name = "LngBizId", required = true)
 	public PaymentInstructionReferenceDetails4 getLongBusinessIdentification() {
 		return longBusinessIdentification;
 	}
@@ -362,6 +371,7 @@ public class PaymentIdentification3Choice {
 		this.longBusinessIdentification = longBusinessIdentification;
 	}
 
+	@XmlElement(name = "ShrtBizId", required = true)
 	public PaymentInstructionReferenceDetails2 getShortBusinessIdentification() {
 		return shortBusinessIdentification;
 	}
@@ -370,6 +380,7 @@ public class PaymentIdentification3Choice {
 		this.shortBusinessIdentification = shortBusinessIdentification;
 	}
 
+	@XmlElement(name = "PrtryRef", required = true)
 	public Max70Text getProprietaryReference() {
 		return proprietaryReference;
 	}

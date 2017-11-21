@@ -34,6 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} =
  * "Australian Payments Clearing Association (APCA); Australian BSB"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "AU[0-9]{6,6}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -70,6 +72,7 @@ public class ExtensiveBranchNetworkIdentifier {
 				name = "ExtensiveBranchNetworkIdentifier";
 				definition = "The extensive branch network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions, as assigned by the Australian Payments Clearing Association (APCA).";
 				identificationScheme = "Australian Payments Clearing Association (APCA); Australian BSB";
+				pattern = "AU[0-9]{6,6}";
 			}
 		});
 		return mmObject_lazy.get();

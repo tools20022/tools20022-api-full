@@ -39,6 +39,39 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole#mmAccount
+ * InvestmentFundPartyRole.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole#mmInvestmentFund
+ * InvestmentFundPartyRole.mmInvestmentFund}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Grantor Grantor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Settlor Settlor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FundManagerRole
+ * FundManagerRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Auditor Auditor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FundAccountantRole
+ * FundAccountantRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FundAdministratorRole
+ * FundAdministratorRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FundOrderDesk FundOrderDesk}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.PlacementAgent
+ * PlacementAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TransferAgentRole
+ * TransferAgentRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -74,39 +107,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.choice.IntermediaryRoleChoice1#mmProprietary
  * IntermediaryRoleChoice1.mmProprietary}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Grantor Grantor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Settlor Settlor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FundManagerRole
- * FundManagerRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Auditor Auditor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FundAccountantRole
- * FundAccountantRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FundAdministratorRole
- * FundAdministratorRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FundOrderDesk FundOrderDesk}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.PlacementAgent
- * PlacementAgent}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TransferAgentRole
- * TransferAgentRole}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole#mmAccount
- * InvestmentFundPartyRole.mmAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole#mmInvestmentFund
- * InvestmentFundPartyRole.mmInvestmentFund}</li>
  * </ul>
  * </li>
  * <li>
@@ -168,7 +168,7 @@ public class InvestmentFundPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentFundPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
@@ -215,7 +215,7 @@ public class InvestmentFundPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentFund = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentFundPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFund";
@@ -239,9 +239,14 @@ public class InvestmentFundPartyRole extends Role {
 				subType_lazy = () -> Arrays.asList(Grantor.mmObject(), Settlor.mmObject(), FundManagerRole.mmObject(), Auditor.mmObject(), FundAccountantRole.mmObject(), FundAdministratorRole.mmObject(), FundOrderDesk.mmObject(),
 						PlacementAgent.mmObject(), TransferAgentRole.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(InvestmentFundPartyRole.mmAccount, InvestmentFundPartyRole.mmInvestmentFund);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundPartyRole.mmAccount, com.tools20022.repository.entity.InvestmentFundPartyRole.mmInvestmentFund);
 				derivationComponent_lazy = () -> Arrays.asList(Role2Choice.mmObject(), Role3Choice.mmObject(), IntermediaryRoleChoice1.mmObject(), Role1Choice.mmObject(), Role5Choice.mmObject(), Role6Choice.mmObject(),
 						Role7Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvestmentFundPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

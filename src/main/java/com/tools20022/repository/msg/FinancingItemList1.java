@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies a list of financing items exchanged between two parties, for
@@ -129,6 +133,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancingItemList1", propOrder = {"identifier", "issueDate", "relatedDocument", "amountCutOffDate", "assignee", "assigner", "notificationInformation", "financialItem", "itemCount", "controlSum", "totalRequestAmount",
+		"totalRequestFinancing", "agreedRate", "financingInstalment", "additionalInformation", "validationStatusInformation", "financingStatus"})
 public class FinancingItemList1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -955,6 +962,7 @@ public class FinancingItemList1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Idr", required = true)
 	public Max35Text getIdentifier() {
 		return identifier;
 	}
@@ -963,6 +971,7 @@ public class FinancingItemList1 {
 		this.identifier = identifier;
 	}
 
+	@XmlElement(name = "IsseDt", required = true)
 	public ISODate getIssueDate() {
 		return issueDate;
 	}
@@ -971,6 +980,7 @@ public class FinancingItemList1 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "RltdDoc")
 	public List<QualifiedDocumentInformation1> getRelatedDocument() {
 		return relatedDocument;
 	}
@@ -979,6 +989,7 @@ public class FinancingItemList1 {
 		this.relatedDocument = relatedDocument;
 	}
 
+	@XmlElement(name = "AmtCutOffDt")
 	public ISODate getAmountCutOffDate() {
 		return amountCutOffDate;
 	}
@@ -987,6 +998,7 @@ public class FinancingItemList1 {
 		this.amountCutOffDate = amountCutOffDate;
 	}
 
+	@XmlElement(name = "Assgne", required = true)
 	public QualifiedPartyIdentification1 getAssignee() {
 		return assignee;
 	}
@@ -995,6 +1007,7 @@ public class FinancingItemList1 {
 		this.assignee = assignee;
 	}
 
+	@XmlElement(name = "Assgnr", required = true)
 	public QualifiedPartyIdentification1 getAssigner() {
 		return assigner;
 	}
@@ -1003,6 +1016,7 @@ public class FinancingItemList1 {
 		this.assigner = assigner;
 	}
 
+	@XmlElement(name = "NtfctnInf")
 	public List<FinancingNotificationParties1> getNotificationInformation() {
 		return notificationInformation;
 	}
@@ -1011,6 +1025,7 @@ public class FinancingItemList1 {
 		this.notificationInformation = notificationInformation;
 	}
 
+	@XmlElement(name = "FinItm")
 	public List<FinancialItem1> getFinancialItem() {
 		return financialItem;
 	}
@@ -1019,6 +1034,7 @@ public class FinancingItemList1 {
 		this.financialItem = financialItem;
 	}
 
+	@XmlElement(name = "ItmCnt", required = true)
 	public Max15NumericText getItemCount() {
 		return itemCount;
 	}
@@ -1027,6 +1043,7 @@ public class FinancingItemList1 {
 		this.itemCount = itemCount;
 	}
 
+	@XmlElement(name = "CtrlSum")
 	public DecimalNumber getControlSum() {
 		return controlSum;
 	}
@@ -1035,6 +1052,7 @@ public class FinancingItemList1 {
 		this.controlSum = controlSum;
 	}
 
+	@XmlElement(name = "TtlReqAmt")
 	public ActiveCurrencyAndAmount getTotalRequestAmount() {
 		return totalRequestAmount;
 	}
@@ -1043,6 +1061,7 @@ public class FinancingItemList1 {
 		this.totalRequestAmount = totalRequestAmount;
 	}
 
+	@XmlElement(name = "TtlReqFincg")
 	public FinancingRateOrAmountChoice getTotalRequestFinancing() {
 		return totalRequestFinancing;
 	}
@@ -1051,6 +1070,7 @@ public class FinancingItemList1 {
 		this.totalRequestFinancing = totalRequestFinancing;
 	}
 
+	@XmlElement(name = "AgrdRate")
 	public AgreedRate1 getAgreedRate() {
 		return agreedRate;
 	}
@@ -1059,6 +1079,7 @@ public class FinancingItemList1 {
 		this.agreedRate = agreedRate;
 	}
 
+	@XmlElement(name = "FincgInstlmt")
 	public List<Instalment2> getFinancingInstalment() {
 		return financingInstalment;
 	}
@@ -1067,6 +1088,7 @@ public class FinancingItemList1 {
 		this.financingInstalment = financingInstalment;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max2000Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -1075,6 +1097,7 @@ public class FinancingItemList1 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "VldtnStsInf")
 	public ValidationStatusInformation1 getValidationStatusInformation() {
 		return validationStatusInformation;
 	}
@@ -1083,6 +1106,7 @@ public class FinancingItemList1 {
 		this.validationStatusInformation = validationStatusInformation;
 	}
 
+	@XmlElement(name = "FincgSts")
 	public FinancingInformationAndStatus1 getFinancingStatus() {
 		return financingStatus;
 	}

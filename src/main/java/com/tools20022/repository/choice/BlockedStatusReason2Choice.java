@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.BlockedStatusReason2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for a blocked status reason.
@@ -60,6 +64,8 @@ import java.util.List;
  * definition} = "Choice of formats for a blocked status reason."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BlockedStatusReason2Choice", propOrder = {"noSpecifiedReason", "reason"})
 public class BlockedStatusReason2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class BlockedStatusReason2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
@@ -171,6 +178,7 @@ public class BlockedStatusReason2Choice {
 		this.noSpecifiedReason = noSpecifiedReason;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public List<BlockedStatusReason2> getReason() {
 		return reason;
 	}

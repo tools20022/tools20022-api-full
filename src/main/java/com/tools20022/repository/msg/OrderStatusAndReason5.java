@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status and reason of an instructed order.
@@ -87,6 +91,9 @@ import java.util.List;
  * definition} = "Status and reason of an instructed order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderStatusAndReason5", propOrder = {"status", "rejectionReason", "orderStatusDetails", "financialInstrument", "underlyingFinancialInstrument", "tradingParties", "cashParties", "receivingSettlementParties",
+		"deliveringSettlementParties", "otherBusinessParties"})
 public class OrderStatusAndReason5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -581,6 +588,7 @@ public class OrderStatusAndReason5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public OrderStatus1Code getStatus() {
 		return status;
 	}
@@ -589,6 +597,7 @@ public class OrderStatusAndReason5 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "RjctnRsn")
 	public RejectionReason3Choice getRejectionReason() {
 		return rejectionReason;
 	}
@@ -597,6 +606,7 @@ public class OrderStatusAndReason5 {
 		this.rejectionReason = rejectionReason;
 	}
 
+	@XmlElement(name = "OrdrStsDtls")
 	public OrderStatus1 getOrderStatusDetails() {
 		return orderStatusDetails;
 	}
@@ -605,6 +615,7 @@ public class OrderStatusAndReason5 {
 		this.orderStatusDetails = orderStatusDetails;
 	}
 
+	@XmlElement(name = "FinInstrm", required = true)
 	public SecurityIdentification7 getFinancialInstrument() {
 		return financialInstrument;
 	}
@@ -613,6 +624,7 @@ public class OrderStatusAndReason5 {
 		this.financialInstrument = financialInstrument;
 	}
 
+	@XmlElement(name = "UndrlygFinInstrm")
 	public List<SecurityIdentification7> getUnderlyingFinancialInstrument() {
 		return underlyingFinancialInstrument;
 	}
@@ -621,6 +633,7 @@ public class OrderStatusAndReason5 {
 		this.underlyingFinancialInstrument = underlyingFinancialInstrument;
 	}
 
+	@XmlElement(name = "TradgPties")
 	public Intermediary14 getTradingParties() {
 		return tradingParties;
 	}
@@ -629,6 +642,7 @@ public class OrderStatusAndReason5 {
 		this.tradingParties = tradingParties;
 	}
 
+	@XmlElement(name = "CshPties")
 	public CashParties1 getCashParties() {
 		return cashParties;
 	}
@@ -637,6 +651,7 @@ public class OrderStatusAndReason5 {
 		this.cashParties = cashParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties3 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -645,6 +660,7 @@ public class OrderStatusAndReason5 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties3 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -653,6 +669,7 @@ public class OrderStatusAndReason5 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "OthrBizPties")
 	public OtherParties1 getOtherBusinessParties() {
 		return otherBusinessParties;
 	}

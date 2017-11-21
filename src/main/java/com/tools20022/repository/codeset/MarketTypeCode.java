@@ -30,25 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType2Code
- * MarketType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType5Code
- * MarketType5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType3Code
- * MarketType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType4Code
- * MarketType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType1Code
- * MarketType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType6Code
- * MarketType6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType8Code
- * MarketType8Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -85,6 +66,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * MarketTypeCode.mmInterBank}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.MarketTypeCode#mmCounter
  * MarketTypeCode.mmCounter}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType2Code
+ * MarketType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType5Code
+ * MarketType5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType3Code
+ * MarketType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType4Code
+ * MarketType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType1Code
+ * MarketType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType6Code
+ * MarketType6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType8Code
+ * MarketType8Code}</li>
  * </ul>
  * </li>
  * <li>

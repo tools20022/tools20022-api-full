@@ -37,6 +37,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Contractual details related to the agreement between parties.
@@ -86,6 +90,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Agreement1", propOrder = {"description", "identification", "date", "currency", "terminationType", "startDate", "deliveryType", "marginRatio"})
 public class Agreement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -504,6 +510,7 @@ public class Agreement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Desc")
 	public Max350Text getDescription() {
 		return description;
 	}
@@ -512,6 +519,7 @@ public class Agreement1 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "Id")
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -520,6 +528,7 @@ public class Agreement1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODateTime getDate() {
 		return date;
 	}
@@ -528,6 +537,7 @@ public class Agreement1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -536,6 +546,7 @@ public class Agreement1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "TermntnTp")
 	public TerminationType1Code getTerminationType() {
 		return terminationType;
 	}
@@ -544,6 +555,7 @@ public class Agreement1 {
 		this.terminationType = terminationType;
 	}
 
+	@XmlElement(name = "StartDt")
 	public ISODateTime getStartDate() {
 		return startDate;
 	}
@@ -552,6 +564,7 @@ public class Agreement1 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "DlvryTp")
 	public DeliveryType1Code getDeliveryType() {
 		return deliveryType;
 	}
@@ -560,6 +573,7 @@ public class Agreement1 {
 		this.deliveryType = deliveryType;
 	}
 
+	@XmlElement(name = "MrgnRatio")
 	public PercentageRate getMarginRatio() {
 		return marginRatio;
 	}

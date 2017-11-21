@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.SettlementTimeRequest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on the requested settlement time(s) of the payment
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementTimeRequest2", propOrder = {"CLSTime", "tillTime", "fromTime", "rejectTime"})
 public class SettlementTimeRequest2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -281,6 +287,7 @@ public class SettlementTimeRequest2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CLSTm")
 	public ISOTime getCLSTime() {
 		return cLSTime;
 	}
@@ -289,6 +296,7 @@ public class SettlementTimeRequest2 {
 		this.cLSTime = cLSTime;
 	}
 
+	@XmlElement(name = "TillTm")
 	public ISOTime getTillTime() {
 		return tillTime;
 	}
@@ -297,6 +305,7 @@ public class SettlementTimeRequest2 {
 		this.tillTime = tillTime;
 	}
 
+	@XmlElement(name = "FrTm")
 	public ISOTime getFromTime() {
 		return fromTime;
 	}
@@ -305,6 +314,7 @@ public class SettlementTimeRequest2 {
 		this.fromTime = fromTime;
 	}
 
+	@XmlElement(name = "RjctTm")
 	public ISOTime getRejectTime() {
 		return rejectTime;
 	}

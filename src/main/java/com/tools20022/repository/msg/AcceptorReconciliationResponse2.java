@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.CardPaymentValidation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reconciliation response from the acquirer.
@@ -91,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorReconciliationResponse1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorReconciliationResponse2", propOrder = {"environment", "transactionResponse", "transaction"})
 public class AcceptorReconciliationResponse2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -284,6 +290,7 @@ public class AcceptorReconciliationResponse2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment19 getEnvironment() {
 		return environment;
 	}
@@ -292,6 +299,7 @@ public class AcceptorReconciliationResponse2 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "TxRspn", required = true)
 	public ResponseType1 getTransactionResponse() {
 		return transactionResponse;
 	}
@@ -300,6 +308,7 @@ public class AcceptorReconciliationResponse2 {
 		this.transactionResponse = transactionResponse;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public TransactionReconciliation2 getTransaction() {
 		return transaction;
 	}

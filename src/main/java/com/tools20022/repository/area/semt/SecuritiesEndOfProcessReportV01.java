@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.023.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
@@ -93,6 +92,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.023.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -104,6 +106,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesEndOfProcessReportV01", propOrder = {"pagination", "reportGeneralDetails", "confirmationParties", "investor", "supplementaryData"})
 public class SecuritiesEndOfProcessReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -143,6 +147,14 @@ public class SecuritiesEndOfProcessReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesEndOfProcessReportV01.class.getMethod("getPagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Report3 reportGeneralDetails;
 	/**
@@ -176,6 +188,14 @@ public class SecuritiesEndOfProcessReportV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Report3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesEndOfProcessReportV01.class.getMethod("getReportGeneralDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<ConfirmationParties2> confirmationParties;
@@ -212,6 +232,14 @@ public class SecuritiesEndOfProcessReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ConfirmationParties2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesEndOfProcessReportV01.class.getMethod("getConfirmationParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PartyIdentificationAndAccount79> investor;
 	/**
@@ -245,6 +273,14 @@ public class SecuritiesEndOfProcessReportV01 {
 			definition = "Party that identifies the underlying investor.";
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentificationAndAccount79.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesEndOfProcessReportV01.class.getMethod("getInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -283,6 +319,14 @@ public class SecuritiesEndOfProcessReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesEndOfProcessReportV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -295,8 +339,9 @@ public class SecuritiesEndOfProcessReportV01 {
 				rootElement = "Document";
 				xmlTag = "SctiesEndOfPrcRpt";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesEndOfProcessReportV01.mmPagination, SecuritiesEndOfProcessReportV01.mmReportGeneralDetails, SecuritiesEndOfProcessReportV01.mmConfirmationParties,
-						SecuritiesEndOfProcessReportV01.mmInvestor, SecuritiesEndOfProcessReportV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.mmPagination, com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.mmReportGeneralDetails,
+						com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.mmConfirmationParties, com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.mmInvestor,
+						com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -306,10 +351,16 @@ public class SecuritiesEndOfProcessReportV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesEndOfProcessReportV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pgntn")
 	public List<Pagination> getPagination() {
 		return pagination;
 	}
@@ -318,6 +369,7 @@ public class SecuritiesEndOfProcessReportV01 {
 		this.pagination = pagination;
 	}
 
+	@XmlElement(name = "RptGnlDtls", required = true)
 	public Report3 getReportGeneralDetails() {
 		return reportGeneralDetails;
 	}
@@ -326,6 +378,7 @@ public class SecuritiesEndOfProcessReportV01 {
 		this.reportGeneralDetails = reportGeneralDetails;
 	}
 
+	@XmlElement(name = "ConfPties")
 	public List<ConfirmationParties2> getConfirmationParties() {
 		return confirmationParties;
 	}
@@ -334,6 +387,7 @@ public class SecuritiesEndOfProcessReportV01 {
 		this.confirmationParties = confirmationParties;
 	}
 
+	@XmlElement(name = "Invstr")
 	public List<PartyIdentificationAndAccount79> getInvestor() {
 		return investor;
 	}
@@ -342,11 +396,18 @@ public class SecuritiesEndOfProcessReportV01 {
 		this.investor = investor;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.023.01.01")
+	static public class Document {
+		@XmlElement(name = "SctiesEndOfPrcRpt", required = true)
+		public SecuritiesEndOfProcessReportV01 messageBody;
 	}
 }

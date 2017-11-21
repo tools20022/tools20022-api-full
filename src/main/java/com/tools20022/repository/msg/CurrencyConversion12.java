@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Conversion between the currency of a card acceptor and the currency of a card
@@ -105,6 +109,9 @@ import java.util.List;
  * CurrencyConversion6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyConversion12", propOrder = {"currencyConversionIdentification", "targetCurrency", "resultingAmount", "exchangeRate", "invertedExchangeRate", "quotationDate", "validUntil", "sourceCurrency", "originalAmount",
+		"commissionDetails", "markUpDetails", "declarationDetails"})
 public class CurrencyConversion12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -763,6 +770,7 @@ public class CurrencyConversion12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CcyConvsId")
 	public Max35Text getCurrencyConversionIdentification() {
 		return currencyConversionIdentification;
 	}
@@ -771,6 +779,7 @@ public class CurrencyConversion12 {
 		this.currencyConversionIdentification = currencyConversionIdentification;
 	}
 
+	@XmlElement(name = "TrgtCcy", required = true)
 	public CurrencyDetails1 getTargetCurrency() {
 		return targetCurrency;
 	}
@@ -779,6 +788,7 @@ public class CurrencyConversion12 {
 		this.targetCurrency = targetCurrency;
 	}
 
+	@XmlElement(name = "RsltgAmt", required = true)
 	public ImpliedCurrencyAndAmount getResultingAmount() {
 		return resultingAmount;
 	}
@@ -787,6 +797,7 @@ public class CurrencyConversion12 {
 		this.resultingAmount = resultingAmount;
 	}
 
+	@XmlElement(name = "XchgRate", required = true)
 	public PercentageRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -795,6 +806,7 @@ public class CurrencyConversion12 {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "NvrtdXchgRate")
 	public PercentageRate getInvertedExchangeRate() {
 		return invertedExchangeRate;
 	}
@@ -803,6 +815,7 @@ public class CurrencyConversion12 {
 		this.invertedExchangeRate = invertedExchangeRate;
 	}
 
+	@XmlElement(name = "QtnDt")
 	public ISODateTime getQuotationDate() {
 		return quotationDate;
 	}
@@ -811,6 +824,7 @@ public class CurrencyConversion12 {
 		this.quotationDate = quotationDate;
 	}
 
+	@XmlElement(name = "VldUntil")
 	public ISODateTime getValidUntil() {
 		return validUntil;
 	}
@@ -819,6 +833,7 @@ public class CurrencyConversion12 {
 		this.validUntil = validUntil;
 	}
 
+	@XmlElement(name = "SrcCcy", required = true)
 	public CurrencyDetails1 getSourceCurrency() {
 		return sourceCurrency;
 	}
@@ -827,6 +842,7 @@ public class CurrencyConversion12 {
 		this.sourceCurrency = sourceCurrency;
 	}
 
+	@XmlElement(name = "OrgnlAmt", required = true)
 	public OriginalAmountDetails1 getOriginalAmount() {
 		return originalAmount;
 	}
@@ -835,6 +851,7 @@ public class CurrencyConversion12 {
 		this.originalAmount = originalAmount;
 	}
 
+	@XmlElement(name = "ComssnDtls")
 	public List<Commission19> getCommissionDetails() {
 		return commissionDetails;
 	}
@@ -843,6 +860,7 @@ public class CurrencyConversion12 {
 		this.commissionDetails = commissionDetails;
 	}
 
+	@XmlElement(name = "MrkUpDtls")
 	public List<Commission18> getMarkUpDetails() {
 		return markUpDetails;
 	}
@@ -851,6 +869,7 @@ public class CurrencyConversion12 {
 		this.markUpDetails = markUpDetails;
 	}
 
+	@XmlElement(name = "DclrtnDtls")
 	public ActionMessage5 getDeclarationDetails() {
 		return declarationDetails;
 	}

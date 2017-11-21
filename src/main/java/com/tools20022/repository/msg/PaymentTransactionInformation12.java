@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information concerning the original transactions, to which the status report
@@ -86,6 +90,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTransactionInformation12", propOrder = {"statusIdentification", "originalInstructionIdentification", "originalEndToEndIdentification", "originalTransactionIdentification", "transactionStatus",
+		"statusReasonInformation", "instructingAgent", "instructedAgent", "originalTransactionReference"})
 public class PaymentTransactionInformation12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -552,6 +559,7 @@ public class PaymentTransactionInformation12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsId", required = true)
 	public Max35Text getStatusIdentification() {
 		return statusIdentification;
 	}
@@ -560,6 +568,7 @@ public class PaymentTransactionInformation12 {
 		this.statusIdentification = statusIdentification;
 	}
 
+	@XmlElement(name = "OrgnlInstrId")
 	public Max35Text getOriginalInstructionIdentification() {
 		return originalInstructionIdentification;
 	}
@@ -568,6 +577,7 @@ public class PaymentTransactionInformation12 {
 		this.originalInstructionIdentification = originalInstructionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlEndToEndId", required = true)
 	public Max35Text getOriginalEndToEndIdentification() {
 		return originalEndToEndIdentification;
 	}
@@ -576,6 +586,7 @@ public class PaymentTransactionInformation12 {
 		this.originalEndToEndIdentification = originalEndToEndIdentification;
 	}
 
+	@XmlElement(name = "OrgnlTxId", required = true)
 	public Max35Text getOriginalTransactionIdentification() {
 		return originalTransactionIdentification;
 	}
@@ -584,6 +595,7 @@ public class PaymentTransactionInformation12 {
 		this.originalTransactionIdentification = originalTransactionIdentification;
 	}
 
+	@XmlElement(name = "TxSts")
 	public TransactionIndividualStatus2Code getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -592,6 +604,7 @@ public class PaymentTransactionInformation12 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "StsRsnInf")
 	public StatusReasonInformation4 getStatusReasonInformation() {
 		return statusReasonInformation;
 	}
@@ -600,6 +613,7 @@ public class PaymentTransactionInformation12 {
 		this.statusReasonInformation = statusReasonInformation;
 	}
 
+	@XmlElement(name = "InstgAgt")
 	public FinancialInstitution2 getInstructingAgent() {
 		return instructingAgent;
 	}
@@ -608,6 +622,7 @@ public class PaymentTransactionInformation12 {
 		this.instructingAgent = instructingAgent;
 	}
 
+	@XmlElement(name = "InstdAgt")
 	public FinancialInstitution2 getInstructedAgent() {
 		return instructedAgent;
 	}
@@ -616,6 +631,7 @@ public class PaymentTransactionInformation12 {
 		this.instructedAgent = instructedAgent;
 	}
 
+	@XmlElement(name = "OrgnlTxRef", required = true)
 	public OriginalTransactionReference8 getOriginalTransactionReference() {
 		return originalTransactionReference;
 	}

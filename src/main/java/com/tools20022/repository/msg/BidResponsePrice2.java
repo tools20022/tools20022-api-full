@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details for negotiating and trading a large number of securities
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BidResponsePrice2", propOrder = {"commission", "grossIndicator", "price", "side", "nonDisclosedBidDetails"})
 public class BidResponsePrice2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -339,6 +345,7 @@ public class BidResponsePrice2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Comssn", required = true)
 	public Commission2 getCommission() {
 		return commission;
 	}
@@ -347,6 +354,7 @@ public class BidResponsePrice2 {
 		this.commission = commission;
 	}
 
+	@XmlElement(name = "GrssInd", required = true)
 	public TrueFalseIndicator getGrossIndicator() {
 		return grossIndicator;
 	}
@@ -355,6 +363,7 @@ public class BidResponsePrice2 {
 		this.grossIndicator = grossIndicator;
 	}
 
+	@XmlElement(name = "Pric")
 	public Price1 getPrice() {
 		return price;
 	}
@@ -363,6 +372,7 @@ public class BidResponsePrice2 {
 		this.price = price;
 	}
 
+	@XmlElement(name = "Sd")
 	public Side1Code getSide() {
 		return side;
 	}
@@ -371,6 +381,7 @@ public class BidResponsePrice2 {
 		this.side = side;
 	}
 
+	@XmlElement(name = "NonDscldBidDtls")
 	public NonDisclosedBid2 getNonDisclosedBidDetails() {
 		return nonDisclosedBidDetails;
 	}

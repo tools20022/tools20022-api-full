@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Document that a user must file with an authorized servicer for each contract
@@ -92,6 +96,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegisteredContract2", propOrder = {"registeredContractClosureIdentification", "reportingParty", "registrationAgent", "originalRegisteredContract", "priority", "closureReason", "supplementaryData"})
 public class RegisteredContract2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -443,6 +449,7 @@ public class RegisteredContract2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RegdCtrctClsrId", required = true)
 	public Max35Text getRegisteredContractClosureIdentification() {
 		return registeredContractClosureIdentification;
 	}
@@ -451,6 +458,7 @@ public class RegisteredContract2 {
 		this.registeredContractClosureIdentification = registeredContractClosureIdentification;
 	}
 
+	@XmlElement(name = "RptgPty", required = true)
 	public TradeParty2 getReportingParty() {
 		return reportingParty;
 	}
@@ -459,6 +467,7 @@ public class RegisteredContract2 {
 		this.reportingParty = reportingParty;
 	}
 
+	@XmlElement(name = "RegnAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getRegistrationAgent() {
 		return registrationAgent;
 	}
@@ -467,6 +476,7 @@ public class RegisteredContract2 {
 		this.registrationAgent = registrationAgent;
 	}
 
+	@XmlElement(name = "OrgnlRegdCtrct", required = true)
 	public DocumentIdentification29 getOriginalRegisteredContract() {
 		return originalRegisteredContract;
 	}
@@ -475,6 +485,7 @@ public class RegisteredContract2 {
 		this.originalRegisteredContract = originalRegisteredContract;
 	}
 
+	@XmlElement(name = "Prty", required = true)
 	public Priority2Code getPriority() {
 		return priority;
 	}
@@ -483,6 +494,7 @@ public class RegisteredContract2 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "ClsrRsn", required = true)
 	public ContractClosureReason1Choice getClosureReason() {
 		return closureReason;
 	}
@@ -491,6 +503,7 @@ public class RegisteredContract2 {
 		this.closureReason = closureReason;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

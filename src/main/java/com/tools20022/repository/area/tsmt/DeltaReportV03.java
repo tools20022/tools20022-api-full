@@ -25,9 +25,11 @@ import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -52,9 +54,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.015.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -118,6 +117,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.015.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -129,6 +131,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DeltaReportV03", propOrder = {"reportIdentification", "transactionIdentification", "establishedBaselineIdentification", "transactionStatus", "amendmentNumber", "userTransactionReference", "buyer", "seller", "buyerBank",
+		"sellerBank", "submitterProposedBaselineReference", "updatedElement", "requestForAction"})
 public class DeltaReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -165,6 +170,14 @@ public class DeltaReportV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DeltaReportV03.class.getMethod("getReportIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -205,6 +218,14 @@ public class DeltaReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DeltaReportV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
@@ -243,6 +264,14 @@ public class DeltaReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DeltaReportV03.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionStatus4 transactionStatus;
 	/**
@@ -279,6 +308,14 @@ public class DeltaReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DeltaReportV03.class.getMethod("getTransactionStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Count1 amendmentNumber;
 	/**
@@ -311,6 +348,14 @@ public class DeltaReportV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Count1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DeltaReportV03.class.getMethod("getAmendmentNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<DocumentIdentification5> userTransactionReference;
@@ -350,6 +395,14 @@ public class DeltaReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DeltaReportV03.class.getMethod("getUserTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification26 buyer;
 	/**
@@ -386,6 +439,14 @@ public class DeltaReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DeltaReportV03.class.getMethod("getBuyer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification26 seller;
 	/**
@@ -421,6 +482,14 @@ public class DeltaReportV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DeltaReportV03.class.getMethod("getSeller", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BICIdentification1 buyerBank;
@@ -459,6 +528,14 @@ public class DeltaReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DeltaReportV03.class.getMethod("getBuyerBank", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected BICIdentification1 sellerBank;
 	/**
@@ -495,6 +572,14 @@ public class DeltaReportV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DeltaReportV03.class.getMethod("getSellerBank", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DocumentIdentification1 submitterProposedBaselineReference;
@@ -534,6 +619,14 @@ public class DeltaReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DeltaReportV03.class.getMethod("getSubmitterProposedBaselineReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ComparisonResult2> updatedElement;
 	/**
@@ -571,6 +664,14 @@ public class DeltaReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> ComparisonResult2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DeltaReportV03.class.getMethod("getUpdatedElement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PendingActivity2 requestForAction;
 	/**
@@ -606,6 +707,14 @@ public class DeltaReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return DeltaReportV03.class.getMethod("getRequestForAction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -618,9 +727,12 @@ public class DeltaReportV03 {
 				rootElement = "Document";
 				xmlTag = "DltaRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(DeltaReportV03.mmReportIdentification, DeltaReportV03.mmTransactionIdentification, DeltaReportV03.mmEstablishedBaselineIdentification, DeltaReportV03.mmTransactionStatus,
-						DeltaReportV03.mmAmendmentNumber, DeltaReportV03.mmUserTransactionReference, DeltaReportV03.mmBuyer, DeltaReportV03.mmSeller, DeltaReportV03.mmBuyerBank, DeltaReportV03.mmSellerBank,
-						DeltaReportV03.mmSubmitterProposedBaselineReference, DeltaReportV03.mmUpdatedElement, DeltaReportV03.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DeltaReportV03.mmReportIdentification, com.tools20022.repository.area.tsmt.DeltaReportV03.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.DeltaReportV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.DeltaReportV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.DeltaReportV03.mmAmendmentNumber, com.tools20022.repository.area.tsmt.DeltaReportV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.DeltaReportV03.mmBuyer,
+						com.tools20022.repository.area.tsmt.DeltaReportV03.mmSeller, com.tools20022.repository.area.tsmt.DeltaReportV03.mmBuyerBank, com.tools20022.repository.area.tsmt.DeltaReportV03.mmSellerBank,
+						com.tools20022.repository.area.tsmt.DeltaReportV03.mmSubmitterProposedBaselineReference, com.tools20022.repository.area.tsmt.DeltaReportV03.mmUpdatedElement,
+						com.tools20022.repository.area.tsmt.DeltaReportV03.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -630,10 +742,16 @@ public class DeltaReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DeltaReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptId", required = true)
 	public MessageIdentification1 getReportIdentification() {
 		return reportIdentification;
 	}
@@ -642,6 +760,7 @@ public class DeltaReportV03 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -650,6 +769,7 @@ public class DeltaReportV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "EstblishdBaselnId", required = true)
 	public DocumentIdentification3 getEstablishedBaselineIdentification() {
 		return establishedBaselineIdentification;
 	}
@@ -658,6 +778,7 @@ public class DeltaReportV03 {
 		this.establishedBaselineIdentification = establishedBaselineIdentification;
 	}
 
+	@XmlElement(name = "TxSts", required = true)
 	public TransactionStatus4 getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -666,6 +787,7 @@ public class DeltaReportV03 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "AmdmntNb", required = true)
 	public Count1 getAmendmentNumber() {
 		return amendmentNumber;
 	}
@@ -674,6 +796,7 @@ public class DeltaReportV03 {
 		this.amendmentNumber = amendmentNumber;
 	}
 
+	@XmlElement(name = "UsrTxRef")
 	public List<DocumentIdentification5> getUserTransactionReference() {
 		return userTransactionReference;
 	}
@@ -682,6 +805,7 @@ public class DeltaReportV03 {
 		this.userTransactionReference = userTransactionReference;
 	}
 
+	@XmlElement(name = "Buyr", required = true)
 	public PartyIdentification26 getBuyer() {
 		return buyer;
 	}
@@ -690,6 +814,7 @@ public class DeltaReportV03 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Sellr", required = true)
 	public PartyIdentification26 getSeller() {
 		return seller;
 	}
@@ -698,6 +823,7 @@ public class DeltaReportV03 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "BuyrBk", required = true)
 	public BICIdentification1 getBuyerBank() {
 		return buyerBank;
 	}
@@ -706,6 +832,7 @@ public class DeltaReportV03 {
 		this.buyerBank = buyerBank;
 	}
 
+	@XmlElement(name = "SellrBk", required = true)
 	public BICIdentification1 getSellerBank() {
 		return sellerBank;
 	}
@@ -714,6 +841,7 @@ public class DeltaReportV03 {
 		this.sellerBank = sellerBank;
 	}
 
+	@XmlElement(name = "SubmitrPropsdBaselnRef", required = true)
 	public DocumentIdentification1 getSubmitterProposedBaselineReference() {
 		return submitterProposedBaselineReference;
 	}
@@ -722,6 +850,7 @@ public class DeltaReportV03 {
 		this.submitterProposedBaselineReference = submitterProposedBaselineReference;
 	}
 
+	@XmlElement(name = "UpdtdElmt", required = true)
 	public List<ComparisonResult2> getUpdatedElement() {
 		return updatedElement;
 	}
@@ -730,11 +859,18 @@ public class DeltaReportV03 {
 		this.updatedElement = updatedElement;
 	}
 
+	@XmlElement(name = "ReqForActn")
 	public PendingActivity2 getRequestForAction() {
 		return requestForAction;
 	}
 
 	public void setRequestForAction(PendingActivity2 requestForAction) {
 		this.requestForAction = requestForAction;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.015.03.03")
+	static public class Document {
+		@XmlElement(name = "DltaRpt", required = true)
+		public DeltaReportV03 messageBody;
 	}
 }

@@ -76,6 +76,8 @@ public class Percentage {
 				name = "Percentage";
 				definition = "field representing a percentage (e.g. 0.05 represents 5% and 0.9525 represents 95.25%). Note the number of decimal places may vary.";
 				baseValue = 100.0;
+				totalDigits = 11;
+				fractionDigits = 10;
 			}
 		});
 		return mmObject_lazy.get();

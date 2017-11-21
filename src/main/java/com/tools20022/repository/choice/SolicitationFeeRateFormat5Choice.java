@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a rate or an unspecified rate.
@@ -88,6 +92,8 @@ import java.util.function.Supplier;
  * SolicitationFeeRateFormat3Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SolicitationFeeRateFormat5Choice", propOrder = {"rate", "amountToQuantity", "amount", "notSpecifiedRate"})
 public class SolicitationFeeRateFormat5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -338,6 +344,7 @@ public class SolicitationFeeRateFormat5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -346,6 +353,7 @@ public class SolicitationFeeRateFormat5Choice {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "AmtToQty", required = true)
 	public AmountAndQuantityRatio2 getAmountToQuantity() {
 		return amountToQuantity;
 	}
@@ -354,6 +362,7 @@ public class SolicitationFeeRateFormat5Choice {
 		this.amountToQuantity = amountToQuantity;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -362,6 +371,7 @@ public class SolicitationFeeRateFormat5Choice {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "NotSpcfdRate", required = true)
 	public RateValueType7Code getNotSpecifiedRate() {
 		return notSpecifiedRate;
 	}

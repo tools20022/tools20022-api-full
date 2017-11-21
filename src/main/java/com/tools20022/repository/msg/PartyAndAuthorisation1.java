@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SignatureCondition;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party and related authorisation.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyAndAuthorisation1", propOrder = {"partyOrGroup", "signatureOrder", "authorisation"})
 public class PartyAndAuthorisation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -234,6 +240,7 @@ public class PartyAndAuthorisation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyOrGrp", required = true)
 	public PartyOrGroup1Choice getPartyOrGroup() {
 		return partyOrGroup;
 	}
@@ -242,6 +249,7 @@ public class PartyAndAuthorisation1 {
 		this.partyOrGroup = partyOrGroup;
 	}
 
+	@XmlElement(name = "SgntrOrdr")
 	public Max15PlusSignedNumericText getSignatureOrder() {
 		return signatureOrder;
 	}
@@ -250,6 +258,7 @@ public class PartyAndAuthorisation1 {
 		this.signatureOrder = signatureOrder;
 	}
 
+	@XmlElement(name = "Authstn", required = true)
 	public Authorisation2 getAuthorisation() {
 		return authorisation;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.GenericIdentification84;
 import com.tools20022.repository.msg.NameAndAddress12;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of identification of a party.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of identification of a party."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification113Choice", propOrder = {"BICFI", "nameAndAddress", "proprietaryIdentification"})
 public class PartyIdentification113Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -241,6 +247,7 @@ public class PartyIdentification113Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BICFI", required = true)
 	public BICFIIdentifier getBICFI() {
 		return bICFI;
 	}
@@ -249,6 +256,7 @@ public class PartyIdentification113Choice {
 		this.bICFI = bICFI;
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress12 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -257,6 +265,7 @@ public class PartyIdentification113Choice {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "PrtryId", required = true)
 	public GenericIdentification84 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}

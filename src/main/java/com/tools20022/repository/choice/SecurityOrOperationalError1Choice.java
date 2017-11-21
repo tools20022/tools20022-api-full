@@ -25,6 +25,10 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the financial instruments details or the operational error details.
@@ -60,6 +64,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityOrOperationalError1Choice", propOrder = {"securityReportOrBusinessError", "operationalError"})
 public class SecurityOrOperationalError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class SecurityOrOperationalError1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctyRptOrBizErr", required = true)
 	public SecurityOrBusinessError1Choice getSecurityReportOrBusinessError() {
 		return securityReportOrBusinessError;
 	}
@@ -168,6 +175,7 @@ public class SecurityOrOperationalError1Choice {
 		this.securityReportOrBusinessError = securityReportOrBusinessError;
 	}
 
+	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
 		return operationalError;
 	}

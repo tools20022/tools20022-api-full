@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Tax exempt election details.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Tax exempt election details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxExemptQuantitySD1", propOrder = {"placeAndName", "controlIdentification", "quantity"})
 public class TaxExemptQuantitySD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -203,6 +209,7 @@ public class TaxExemptQuantitySD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -211,6 +218,7 @@ public class TaxExemptQuantitySD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "CtrlId", required = true)
 	public Max6Text getControlIdentification() {
 		return controlIdentification;
 	}
@@ -219,6 +227,7 @@ public class TaxExemptQuantitySD1 {
 		this.controlIdentification = controlIdentification;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity15Choice getQuantity() {
 		return quantity;
 	}

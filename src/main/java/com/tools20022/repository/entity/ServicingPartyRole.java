@@ -67,6 +67,11 @@ public class ServicingPartyRole extends CollateralPartyRole {
 				definition = "Party that is acting on behalf of another party and that offers collateral management services.";
 				superType_lazy = () -> CollateralPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ServicingPartyRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesTradeLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -48,9 +50,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.010.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
@@ -92,6 +91,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.010.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -107,6 +109,8 @@ import java.util.List;
  * SubscriptionOrderV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionOrderV04", propOrder = {"messageIdentification", "poolReference", "previousReference", "multipleOrderDetails", "copyDetails", "extension"})
 public class SubscriptionOrderV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -153,6 +157,14 @@ public class SubscriptionOrderV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionOrderV04.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference9 poolReference;
 	/**
@@ -194,6 +206,14 @@ public class SubscriptionOrderV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference9.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionOrderV04.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference8> previousReference;
 	/**
@@ -233,6 +253,14 @@ public class SubscriptionOrderV04 {
 			previousVersion_lazy = () -> SubscriptionOrderV03.mmPreviousReference;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionOrderV04.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SubscriptionMultipleOrder6 multipleOrderDetails;
@@ -274,6 +302,14 @@ public class SubscriptionOrderV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SubscriptionMultipleOrder6.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionOrderV04.class.getMethod("getMultipleOrderDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CopyInformation4 copyDetails;
@@ -317,6 +353,14 @@ public class SubscriptionOrderV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionOrderV04.class.getMethod("getCopyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension1> extension;
 	/**
@@ -359,6 +403,14 @@ public class SubscriptionOrderV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionOrderV04.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -372,8 +424,9 @@ public class SubscriptionOrderV04 {
 				rootElement = "Document";
 				xmlTag = "SbcptOrdr";
 				businessArea_lazy = () -> SecuritiesTradeLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SubscriptionOrderV04.mmMessageIdentification, SubscriptionOrderV04.mmPoolReference, SubscriptionOrderV04.mmPreviousReference, SubscriptionOrderV04.mmMultipleOrderDetails,
-						SubscriptionOrderV04.mmCopyDetails, SubscriptionOrderV04.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderV04.mmMessageIdentification, com.tools20022.repository.area.setr.SubscriptionOrderV04.mmPoolReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderV04.mmPreviousReference, com.tools20022.repository.area.setr.SubscriptionOrderV04.mmMultipleOrderDetails,
+						com.tools20022.repository.area.setr.SubscriptionOrderV04.mmCopyDetails, com.tools20022.repository.area.setr.SubscriptionOrderV04.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -383,10 +436,16 @@ public class SubscriptionOrderV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SubscriptionOrderV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -395,6 +454,7 @@ public class SubscriptionOrderV04 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference9 getPoolReference() {
 		return poolReference;
 	}
@@ -403,6 +463,7 @@ public class SubscriptionOrderV04 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference8> getPreviousReference() {
 		return previousReference;
 	}
@@ -411,6 +472,7 @@ public class SubscriptionOrderV04 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "MltplOrdrDtls", required = true)
 	public SubscriptionMultipleOrder6 getMultipleOrderDetails() {
 		return multipleOrderDetails;
 	}
@@ -419,6 +481,7 @@ public class SubscriptionOrderV04 {
 		this.multipleOrderDetails = multipleOrderDetails;
 	}
 
+	@XmlElement(name = "CpyDtls")
 	public CopyInformation4 getCopyDetails() {
 		return copyDetails;
 	}
@@ -427,11 +490,18 @@ public class SubscriptionOrderV04 {
 		this.copyDetails = copyDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.010.04.04")
+	static public class Document {
+		@XmlElement(name = "SbcptOrdr", required = true)
+		public SubscriptionOrderV04 messageBody;
 	}
 }

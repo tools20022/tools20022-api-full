@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Non-extension information.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Non-extension information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NonExtension1", propOrder = {"notificationPeriod", "notificationMethod", "notificationRecipientType", "notificationRecipientName", "notificationRecipientAddress"})
 public class NonExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -338,6 +344,7 @@ public class NonExtension1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NtfctnPrd")
 	public Number getNotificationPeriod() {
 		return notificationPeriod;
 	}
@@ -346,6 +353,7 @@ public class NonExtension1 {
 		this.notificationPeriod = notificationPeriod;
 	}
 
+	@XmlElement(name = "NtfctnMtd")
 	public CommunicationMethod1Choice getNotificationMethod() {
 		return notificationMethod;
 	}
@@ -354,6 +362,7 @@ public class NonExtension1 {
 		this.notificationMethod = notificationMethod;
 	}
 
+	@XmlElement(name = "NtfctnRcptTp")
 	public PartyType1Choice getNotificationRecipientType() {
 		return notificationRecipientType;
 	}
@@ -362,6 +371,7 @@ public class NonExtension1 {
 		this.notificationRecipientType = notificationRecipientType;
 	}
 
+	@XmlElement(name = "NtfctnRcptNm")
 	public Max140Text getNotificationRecipientName() {
 		return notificationRecipientName;
 	}
@@ -370,6 +380,7 @@ public class NonExtension1 {
 		this.notificationRecipientName = notificationRecipientName;
 	}
 
+	@XmlElement(name = "NtfctnRcptAdr")
 	public PostalAddress6 getNotificationRecipientAddress() {
 		return notificationRecipientAddress;
 	}

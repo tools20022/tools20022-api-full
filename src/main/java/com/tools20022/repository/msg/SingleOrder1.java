@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the single order.
@@ -82,6 +86,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides details about the single order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SingleOrder1", propOrder = {"manualOrderIndicator", "directedOrder", "receivedDepartment", "customerHandlingInstruction", "orderDetails", "spreadAndBenchmarkCurveDetails", "yieldDetails", "twoLegTransactionDetails",
+		"tradeRegulatoryTimeStampsDetails"})
 public class SingleOrder1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -526,6 +533,7 @@ public class SingleOrder1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MnlOrdrInd")
 	public YesNoIndicator getManualOrderIndicator() {
 		return manualOrderIndicator;
 	}
@@ -534,6 +542,7 @@ public class SingleOrder1 {
 		this.manualOrderIndicator = manualOrderIndicator;
 	}
 
+	@XmlElement(name = "DrctdOrdr")
 	public YesNoIndicator getDirectedOrder() {
 		return directedOrder;
 	}
@@ -542,6 +551,7 @@ public class SingleOrder1 {
 		this.directedOrder = directedOrder;
 	}
 
+	@XmlElement(name = "RcvdDptmt")
 	public Max35Text getReceivedDepartment() {
 		return receivedDepartment;
 	}
@@ -550,6 +560,7 @@ public class SingleOrder1 {
 		this.receivedDepartment = receivedDepartment;
 	}
 
+	@XmlElement(name = "CstmrHdlgInstr")
 	public CustomerHandlingInstructionChoice getCustomerHandlingInstruction() {
 		return customerHandlingInstruction;
 	}
@@ -558,6 +569,7 @@ public class SingleOrder1 {
 		this.customerHandlingInstruction = customerHandlingInstruction;
 	}
 
+	@XmlElement(name = "OrdrDtls", required = true)
 	public Order3 getOrderDetails() {
 		return orderDetails;
 	}
@@ -566,6 +578,7 @@ public class SingleOrder1 {
 		this.orderDetails = orderDetails;
 	}
 
+	@XmlElement(name = "SprdAndBchmkCrvDtls")
 	public BenchmarkCurve1 getSpreadAndBenchmarkCurveDetails() {
 		return spreadAndBenchmarkCurveDetails;
 	}
@@ -574,6 +587,7 @@ public class SingleOrder1 {
 		this.spreadAndBenchmarkCurveDetails = spreadAndBenchmarkCurveDetails;
 	}
 
+	@XmlElement(name = "YldDtls")
 	public YieldCalculation1 getYieldDetails() {
 		return yieldDetails;
 	}
@@ -582,6 +596,7 @@ public class SingleOrder1 {
 		this.yieldDetails = yieldDetails;
 	}
 
+	@XmlElement(name = "TwoLegTxDtls")
 	public SecuritiesFinancing1 getTwoLegTransactionDetails() {
 		return twoLegTransactionDetails;
 	}
@@ -590,6 +605,7 @@ public class SingleOrder1 {
 		this.twoLegTransactionDetails = twoLegTransactionDetails;
 	}
 
+	@XmlElement(name = "TradRgltryTmStmpsDtls")
 	public TradeRegulatoryTimeStampGroup getTradeRegulatoryTimeStampsDetails() {
 		return tradeRegulatoryTimeStampsDetails;
 	}

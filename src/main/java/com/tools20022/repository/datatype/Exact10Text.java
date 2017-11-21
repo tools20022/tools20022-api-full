@@ -54,6 +54,7 @@ public class Exact10Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Exact10Text";
 				definition = "Specifies a character string with an exact length of 10 characters.";
+				length = 10;
 			}
 		});
 		return mmObject_lazy.get();

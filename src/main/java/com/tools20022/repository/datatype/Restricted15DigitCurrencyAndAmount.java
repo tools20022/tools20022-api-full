@@ -33,6 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMAmount#getCurrencyIdentifierSet
  * currencyIdentifierSet} =
  * {@linkplain com.tools20022.repository.codeset.CurrencyCode CurrencyCode}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMDecimal#getMinInclusive
+ * minInclusive} = "0"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -62,6 +64,9 @@ public class Restricted15DigitCurrencyAndAmount {
 				name = "Restricted15DigitCurrencyAndAmount";
 				definition = "Number of monetary units specified in a currency, where the unit of currency is explicit and compliant with ISO 4217. The maximum number of digits must not exceed 15, including a maximum of 5 fractional digits.  ";
 				currencyIdentifierSet_lazy = () -> CurrencyCode.mmObject();
+				minInclusive = "0";
+				totalDigits = 15;
+				fractionDigits = 5;
 			}
 		});
 		return mmObject_lazy.get();

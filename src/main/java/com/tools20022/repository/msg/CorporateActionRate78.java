@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies rates of a corporate action.
@@ -88,6 +92,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies rates of a corporate action."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionRate78", propOrder = {"interest", "percentageSought", "relatedIndex", "spread", "bidInterval", "previousFactor", "nextFactor", "reinvestmentDiscountRateToMarket", "interestShortfall", "realisedLoss",
+		"declaredRate"})
 public class CorporateActionRate78 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -651,6 +658,7 @@ public class CorporateActionRate78 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Intrst")
 	public RateAndAmountFormat46Choice getInterest() {
 		return interest;
 	}
@@ -659,6 +667,7 @@ public class CorporateActionRate78 {
 		this.interest = interest;
 	}
 
+	@XmlElement(name = "PctgSght")
 	public RateFormat7Choice getPercentageSought() {
 		return percentageSought;
 	}
@@ -667,6 +676,7 @@ public class CorporateActionRate78 {
 		this.percentageSought = percentageSought;
 	}
 
+	@XmlElement(name = "RltdIndx")
 	public RateFormat3Choice getRelatedIndex() {
 		return relatedIndex;
 	}
@@ -675,6 +685,7 @@ public class CorporateActionRate78 {
 		this.relatedIndex = relatedIndex;
 	}
 
+	@XmlElement(name = "Sprd")
 	public RateFormat3Choice getSpread() {
 		return spread;
 	}
@@ -683,6 +694,7 @@ public class CorporateActionRate78 {
 		this.spread = spread;
 	}
 
+	@XmlElement(name = "BidIntrvl")
 	public RateAndAmountFormat50Choice getBidInterval() {
 		return bidInterval;
 	}
@@ -691,6 +703,7 @@ public class CorporateActionRate78 {
 		this.bidInterval = bidInterval;
 	}
 
+	@XmlElement(name = "PrvsFctr")
 	public RateFormat12Choice getPreviousFactor() {
 		return previousFactor;
 	}
@@ -699,6 +712,7 @@ public class CorporateActionRate78 {
 		this.previousFactor = previousFactor;
 	}
 
+	@XmlElement(name = "NxtFctr")
 	public RateFormat12Choice getNextFactor() {
 		return nextFactor;
 	}
@@ -707,6 +721,7 @@ public class CorporateActionRate78 {
 		this.nextFactor = nextFactor;
 	}
 
+	@XmlElement(name = "RinvstmtDscntRateToMkt")
 	public RateFormat3Choice getReinvestmentDiscountRateToMarket() {
 		return reinvestmentDiscountRateToMarket;
 	}
@@ -715,6 +730,7 @@ public class CorporateActionRate78 {
 		this.reinvestmentDiscountRateToMarket = reinvestmentDiscountRateToMarket;
 	}
 
+	@XmlElement(name = "IntrstShrtfll")
 	public RateAndAmountFormat43Choice getInterestShortfall() {
 		return interestShortfall;
 	}
@@ -723,6 +739,7 @@ public class CorporateActionRate78 {
 		this.interestShortfall = interestShortfall;
 	}
 
+	@XmlElement(name = "RealsdLoss")
 	public RateAndAmountFormat43Choice getRealisedLoss() {
 		return realisedLoss;
 	}
@@ -731,6 +748,7 @@ public class CorporateActionRate78 {
 		this.realisedLoss = realisedLoss;
 	}
 
+	@XmlElement(name = "DclrdRate")
 	public RateAndAmountFormat43Choice getDeclaredRate() {
 		return declaredRate;
 	}

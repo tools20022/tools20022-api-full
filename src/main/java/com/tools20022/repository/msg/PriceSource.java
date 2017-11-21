@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SourceOfPrice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Source of a price quotation when it is not the local market.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Source of a price quotation when it is not the local market."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceSource", propOrder = {"priceSource", "narrative"})
 public class PriceSource {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +165,7 @@ public class PriceSource {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PricSrc", required = true)
 	public PriceSource1Code getPriceSource() {
 		return priceSource;
 	}
@@ -167,6 +174,7 @@ public class PriceSource {
 		this.priceSource = priceSource;
 	}
 
+	@XmlElement(name = "Nrrtv")
 	public Max35Text getNarrative() {
 		return narrative;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification19;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between either a short, long or a proprietary identification format.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IdentificationFormat1Choice", propOrder = {"shortIdentification", "longIdentification", "proprietaryIdentification"})
 public class IdentificationFormat1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -242,6 +248,7 @@ public class IdentificationFormat1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ShrtId", required = true)
 	public Exact3UpperCaseAlphaNumericText getShortIdentification() {
 		return shortIdentification;
 	}
@@ -250,6 +257,7 @@ public class IdentificationFormat1Choice {
 		this.shortIdentification = shortIdentification;
 	}
 
+	@XmlElement(name = "LngId", required = true)
 	public Max30Text getLongIdentification() {
 		return longIdentification;
 	}
@@ -258,6 +266,7 @@ public class IdentificationFormat1Choice {
 		this.longIdentification = longIdentification;
 	}
 
+	@XmlElement(name = "PrtryId", required = true)
 	public GenericIdentification19 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}

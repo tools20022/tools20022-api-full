@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for an account.
@@ -76,6 +80,8 @@ import java.util.List;
  * definition} = "Defines the criteria used to search for an account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralValueSearchCriteria1", propOrder = {"accountIdentification", "currency", "accountOwner", "accountServicer", "financialInstrumentIdentification", "securitiesAccountOwner", "securitiesAccountServicer"})
 public class CollateralValueSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -399,6 +405,7 @@ public class CollateralValueSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId")
 	public AccountIdentification4Choice getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -407,6 +414,7 @@ public class CollateralValueSearchCriteria1 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "Ccy")
 	public List<ActiveOrHistoricCurrencyCode> getCurrency() {
 		return currency;
 	}
@@ -415,6 +423,7 @@ public class CollateralValueSearchCriteria1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification71Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -423,6 +432,7 @@ public class CollateralValueSearchCriteria1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public PartyIdentification71Choice getAccountServicer() {
 		return accountServicer;
 	}
@@ -431,6 +441,7 @@ public class CollateralValueSearchCriteria1 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public List<SecurityIdentification14> getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -439,6 +450,7 @@ public class CollateralValueSearchCriteria1 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "SctiesAcctOwnr")
 	public PartyIdentification71Choice getSecuritiesAccountOwner() {
 		return securitiesAccountOwner;
 	}
@@ -447,6 +459,7 @@ public class CollateralValueSearchCriteria1 {
 		this.securitiesAccountOwner = securitiesAccountOwner;
 	}
 
+	@XmlElement(name = "SctiesAcctSvcr")
 	public PartyIdentification71Choice getSecuritiesAccountServicer() {
 		return securitiesAccountServicer;
 	}

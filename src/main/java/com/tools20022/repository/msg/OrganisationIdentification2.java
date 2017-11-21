@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique and unambiguous way to identify an organisation.
@@ -89,6 +93,8 @@ import java.util.function.Supplier;
  * definition} = "Unique and unambiguous way to identify an organisation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrganisationIdentification2", propOrder = {"BIC", "IBEI", "BEI", "EANGLN", "CHIPSUniversalIdentification", "DUNS", "bankPartyIdentification", "taxIdentificationNumber", "proprietaryIdentification"})
 public class OrganisationIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -579,6 +585,7 @@ public class OrganisationIdentification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BIC")
 	public BICIdentifier getBIC() {
 		return bIC;
 	}
@@ -587,6 +594,7 @@ public class OrganisationIdentification2 {
 		this.bIC = bIC;
 	}
 
+	@XmlElement(name = "IBEI")
 	public IBEIIdentifier getIBEI() {
 		return iBEI;
 	}
@@ -595,6 +603,7 @@ public class OrganisationIdentification2 {
 		this.iBEI = iBEI;
 	}
 
+	@XmlElement(name = "BEI")
 	public BEIIdentifier getBEI() {
 		return bEI;
 	}
@@ -603,6 +612,7 @@ public class OrganisationIdentification2 {
 		this.bEI = bEI;
 	}
 
+	@XmlElement(name = "EANGLN")
 	public EANGLNIdentifier getEANGLN() {
 		return eANGLN;
 	}
@@ -611,6 +621,7 @@ public class OrganisationIdentification2 {
 		this.eANGLN = eANGLN;
 	}
 
+	@XmlElement(name = "USCHU")
 	public CHIPSUniversalIdentifier getCHIPSUniversalIdentification() {
 		return cHIPSUniversalIdentification;
 	}
@@ -619,6 +630,7 @@ public class OrganisationIdentification2 {
 		this.cHIPSUniversalIdentification = cHIPSUniversalIdentification;
 	}
 
+	@XmlElement(name = "DUNS")
 	public DunsIdentifier getDUNS() {
 		return dUNS;
 	}
@@ -627,6 +639,7 @@ public class OrganisationIdentification2 {
 		this.dUNS = dUNS;
 	}
 
+	@XmlElement(name = "BkPtyId")
 	public Max35Text getBankPartyIdentification() {
 		return bankPartyIdentification;
 	}
@@ -635,6 +648,7 @@ public class OrganisationIdentification2 {
 		this.bankPartyIdentification = bankPartyIdentification;
 	}
 
+	@XmlElement(name = "TaxIdNb")
 	public Max35Text getTaxIdentificationNumber() {
 		return taxIdentificationNumber;
 	}
@@ -643,6 +657,7 @@ public class OrganisationIdentification2 {
 		this.taxIdentificationNumber = taxIdentificationNumber;
 	}
 
+	@XmlElement(name = "PrtryId")
 	public GenericIdentification3 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}

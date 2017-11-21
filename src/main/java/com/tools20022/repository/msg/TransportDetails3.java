@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information on the shipment date, the charges, the routing and the goods
@@ -89,6 +93,8 @@ import java.util.List;
  * TransportDetails2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportDetails3", propOrder = {"transportDocumentReference", "transportedGoods", "consignment", "routingSummary", "shipmentDate", "freightCharges", "incoterms"})
 public class TransportDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -530,6 +536,7 @@ public class TransportDetails3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrnsprtDocRef", required = true)
 	public List<DocumentIdentification7> getTransportDocumentReference() {
 		return transportDocumentReference;
 	}
@@ -538,6 +545,7 @@ public class TransportDetails3 {
 		this.transportDocumentReference = transportDocumentReference;
 	}
 
+	@XmlElement(name = "TrnsprtdGoods", required = true)
 	public List<TransportedGoods1> getTransportedGoods() {
 		return transportedGoods;
 	}
@@ -546,6 +554,7 @@ public class TransportDetails3 {
 		this.transportedGoods = transportedGoods;
 	}
 
+	@XmlElement(name = "Consgnmt")
 	public Consignment3 getConsignment() {
 		return consignment;
 	}
@@ -554,6 +563,7 @@ public class TransportDetails3 {
 		this.consignment = consignment;
 	}
 
+	@XmlElement(name = "RtgSummry", required = true)
 	public TransportMeans4 getRoutingSummary() {
 		return routingSummary;
 	}
@@ -562,6 +572,7 @@ public class TransportDetails3 {
 		this.routingSummary = routingSummary;
 	}
 
+	@XmlElement(name = "ShipmntDt", required = true)
 	public ShipmentDate1Choice getShipmentDate() {
 		return shipmentDate;
 	}
@@ -570,6 +581,7 @@ public class TransportDetails3 {
 		this.shipmentDate = shipmentDate;
 	}
 
+	@XmlElement(name = "FrghtChrgs")
 	public Charge25 getFreightCharges() {
 		return freightCharges;
 	}
@@ -578,6 +590,7 @@ public class TransportDetails3 {
 		this.freightCharges = freightCharges;
 	}
 
+	@XmlElement(name = "Incotrms")
 	public Incoterms4 getIncoterms() {
 		return incoterms;
 	}

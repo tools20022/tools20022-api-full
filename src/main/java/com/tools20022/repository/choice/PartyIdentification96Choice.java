@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.NameAndAddress15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for the identification of a party.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyIdentification90Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification96Choice", propOrder = {"anyBIC", "proprietaryIdentification", "nameAndAddress", "taxIdentificationNumber", "nationalRegistrationNumber"})
 public class PartyIdentification96Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -359,6 +365,7 @@ public class PartyIdentification96Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AnyBIC", required = true)
 	public AnyBICIdentifier getAnyBIC() {
 		return anyBIC;
 	}
@@ -367,6 +374,7 @@ public class PartyIdentification96Choice {
 		this.anyBIC = anyBIC;
 	}
 
+	@XmlElement(name = "PrtryId", required = true)
 	public GenericIdentification1 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
@@ -375,6 +383,7 @@ public class PartyIdentification96Choice {
 		this.proprietaryIdentification = proprietaryIdentification;
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress15 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -383,6 +392,7 @@ public class PartyIdentification96Choice {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "TaxIdNb", required = true)
 	public Max35Text getTaxIdentificationNumber() {
 		return taxIdentificationNumber;
 	}
@@ -391,6 +401,7 @@ public class PartyIdentification96Choice {
 		this.taxIdentificationNumber = taxIdentificationNumber;
 	}
 
+	@XmlElement(name = "NtlRegnNb", required = true)
 	public Max35Text getNationalRegistrationNumber() {
 		return nationalRegistrationNumber;
 	}

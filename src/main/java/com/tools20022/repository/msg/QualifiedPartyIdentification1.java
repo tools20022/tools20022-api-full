@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines and associates identifications for a party as a list of other global
@@ -84,6 +88,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QualifiedPartyIdentification1", propOrder = {"identification", "party", "shortIdentification", "role", "roleDescription"})
 public class QualifiedPartyIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -329,6 +335,7 @@ public class QualifiedPartyIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public ID getIdentification() {
 		return identification;
 	}
@@ -337,6 +344,7 @@ public class QualifiedPartyIdentification1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Pty", required = true)
 	public List<SingleQualifiedPartyIdentification1> getParty() {
 		return party;
 	}
@@ -345,6 +353,7 @@ public class QualifiedPartyIdentification1 {
 		this.party = party;
 	}
 
+	@XmlElement(name = "ShrtId")
 	public PartyIdentification2Choice getShortIdentification() {
 		return shortIdentification;
 	}
@@ -353,6 +362,7 @@ public class QualifiedPartyIdentification1 {
 		this.shortIdentification = shortIdentification;
 	}
 
+	@XmlElement(name = "Role")
 	public GenericIdentification1 getRole() {
 		return role;
 	}
@@ -361,6 +371,7 @@ public class QualifiedPartyIdentification1 {
 		this.role = role;
 	}
 
+	@XmlElement(name = "RoleDesc")
 	public Max256Text getRoleDescription() {
 		return roleDescription;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of an EU dividen status type.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EUDividendStatusType1Choice", propOrder = {"EUDividendStatus", "proprietary"})
 public class EUDividendStatusType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -212,6 +218,7 @@ public class EUDividendStatusType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EUDvddSts", required = true)
 	public EUDividendStatus1Code getEUDividendStatus() {
 		return eUDividendStatus;
 	}
@@ -220,6 +227,7 @@ public class EUDividendStatusType1Choice {
 		this.eUDividendStatus = eUDividendStatus;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification13 getProprietary() {
 		return proprietary;
 	}

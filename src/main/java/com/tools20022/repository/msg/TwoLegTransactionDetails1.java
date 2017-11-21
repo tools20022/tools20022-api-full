@@ -38,6 +38,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the details of the first leg in a two leg transaction process.
@@ -117,6 +121,9 @@ import java.util.List;
  * "Specifies the details of the first leg in a two leg transaction process."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TwoLegTransactionDetails1", propOrder = {"tradeDate", "openingLegIdentification", "closingLegIdentification", "grossTradeAmount", "otherAmounts", "secondLegNarrative", "endPrice", "closingDate", "closingSettlementAmount",
+		"processingDate", "twoLegTransactionType"})
 public class TwoLegTransactionDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -660,6 +667,7 @@ public class TwoLegTransactionDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradDt")
 	public TradeDate1Choice getTradeDate() {
 		return tradeDate;
 	}
@@ -668,6 +676,7 @@ public class TwoLegTransactionDetails1 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "OpngLegId")
 	public Max35Text getOpeningLegIdentification() {
 		return openingLegIdentification;
 	}
@@ -676,6 +685,7 @@ public class TwoLegTransactionDetails1 {
 		this.openingLegIdentification = openingLegIdentification;
 	}
 
+	@XmlElement(name = "ClsgLegId")
 	public Max35Text getClosingLegIdentification() {
 		return closingLegIdentification;
 	}
@@ -684,6 +694,7 @@ public class TwoLegTransactionDetails1 {
 		this.closingLegIdentification = closingLegIdentification;
 	}
 
+	@XmlElement(name = "GrssTradAmt")
 	public AmountAndDirection29 getGrossTradeAmount() {
 		return grossTradeAmount;
 	}
@@ -692,6 +703,7 @@ public class TwoLegTransactionDetails1 {
 		this.grossTradeAmount = grossTradeAmount;
 	}
 
+	@XmlElement(name = "OthrAmts")
 	public List<OtherAmounts16> getOtherAmounts() {
 		return otherAmounts;
 	}
@@ -700,6 +712,7 @@ public class TwoLegTransactionDetails1 {
 		this.otherAmounts = otherAmounts;
 	}
 
+	@XmlElement(name = "ScndLegNrrtv")
 	public Max140Text getSecondLegNarrative() {
 		return secondLegNarrative;
 	}
@@ -708,6 +721,7 @@ public class TwoLegTransactionDetails1 {
 		this.secondLegNarrative = secondLegNarrative;
 	}
 
+	@XmlElement(name = "EndPric")
 	public Price4 getEndPrice() {
 		return endPrice;
 	}
@@ -716,6 +730,7 @@ public class TwoLegTransactionDetails1 {
 		this.endPrice = endPrice;
 	}
 
+	@XmlElement(name = "ClsgDt")
 	public ClosingDate1Choice getClosingDate() {
 		return closingDate;
 	}
@@ -724,6 +739,7 @@ public class TwoLegTransactionDetails1 {
 		this.closingDate = closingDate;
 	}
 
+	@XmlElement(name = "ClsgSttlmAmt")
 	public AmountAndDirection5 getClosingSettlementAmount() {
 		return closingSettlementAmount;
 	}
@@ -732,6 +748,7 @@ public class TwoLegTransactionDetails1 {
 		this.closingSettlementAmount = closingSettlementAmount;
 	}
 
+	@XmlElement(name = "PrcgDt")
 	public TradeDate4Choice getProcessingDate() {
 		return processingDate;
 	}
@@ -740,6 +757,7 @@ public class TwoLegTransactionDetails1 {
 		this.processingDate = processingDate;
 	}
 
+	@XmlElement(name = "TwoLegTxTp")
 	public TwoLegTransactionType1Choice getTwoLegTransactionType() {
 		return twoLegTransactionType;
 	}

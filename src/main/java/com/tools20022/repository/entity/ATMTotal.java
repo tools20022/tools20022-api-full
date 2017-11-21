@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ATMTotals1;
 import com.tools20022.repository.msg.ATMTotals3;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,6 +38,24 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMBalance
+ * ATMTotal.mmATMBalance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmCurrency
+ * ATMTotal.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMCurrentNumber
+ * ATMTotal.mmATMCurrentNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMBalanceNumber
+ * ATMTotal.mmATMBalanceNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMCurrent
+ * ATMTotal.mmATMCurrent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ATMTotal#mmRelatedCardPayment
+ * ATMTotal.mmRelatedCardPayment}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -59,24 +78,6 @@ import java.util.List;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.ATMTotals3#mmPeriod
  * ATMTotals3.mmPeriod}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMBalance
- * ATMTotal.mmATMBalance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmCurrency
- * ATMTotal.mmCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMCurrentNumber
- * ATMTotal.mmATMCurrentNumber}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMBalanceNumber
- * ATMTotal.mmATMBalanceNumber}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMCurrent
- * ATMTotal.mmATMCurrent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ATMTotal#mmRelatedCardPayment
- * ATMTotal.mmRelatedCardPayment}</li>
  * </ul>
  * </li>
  * <li>
@@ -109,10 +110,6 @@ public class ATMTotal {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ImpliedCurrencyAndAmount
 	 * ImpliedCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.ATMTotal
-	 * ATMTotal}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -120,6 +117,10 @@ public class ATMTotal {
 	 * ATMTotals1.mmATMBalance}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.ATMTotal
+	 * ATMTotal}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -136,7 +137,7 @@ public class ATMTotal {
 	public static final MMBusinessAttribute mmATMBalance = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ATMTotals1.mmATMBalance);
-			elementContext_lazy = () -> ATMTotal.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ATMBalance";
@@ -144,6 +145,14 @@ public class ATMTotal {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMTotal.class.getMethod("getATMBalance", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyCode currency;
@@ -156,10 +165,6 @@ public class ATMTotal {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.ATMTotal
-	 * ATMTotal}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -169,6 +174,10 @@ public class ATMTotal {
 	 * ATMTotals3.mmCurrency}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.ATMTotal
+	 * ATMTotal}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -183,7 +192,7 @@ public class ATMTotal {
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ATMTotals1.mmCurrency, ATMTotals3.mmCurrency);
-			elementContext_lazy = () -> ATMTotal.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
@@ -191,6 +200,14 @@ public class ATMTotal {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMTotal.class.getMethod("getCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number aTMCurrentNumber;
@@ -203,10 +220,6 @@ public class ATMTotal {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.ATMTotal
-	 * ATMTotal}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -217,6 +230,10 @@ public class ATMTotal {
 	 * ATMTotals3.mmCount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.ATMTotal
+	 * ATMTotal}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -232,7 +249,7 @@ public class ATMTotal {
 	public static final MMBusinessAttribute mmATMCurrentNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ATMTotals1.mmATMCurrentNumber, ATMTotals3.mmCount);
-			elementContext_lazy = () -> ATMTotal.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ATMCurrentNumber";
@@ -240,6 +257,14 @@ public class ATMTotal {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMTotal.class.getMethod("getATMCurrentNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number aTMBalanceNumber;
@@ -252,10 +277,6 @@ public class ATMTotal {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.ATMTotal
-	 * ATMTotal}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -264,6 +285,10 @@ public class ATMTotal {
 	 * ATMTotals1.mmATMBalanceNumber}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.ATMTotal
+	 * ATMTotal}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -279,7 +304,7 @@ public class ATMTotal {
 	public static final MMBusinessAttribute mmATMBalanceNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ATMTotals1.mmATMBalanceNumber);
-			elementContext_lazy = () -> ATMTotal.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ATMBalanceNumber";
@@ -287,6 +312,14 @@ public class ATMTotal {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMTotal.class.getMethod("getATMBalanceNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ImpliedCurrencyAndAmount aTMCurrent;
@@ -300,10 +333,6 @@ public class ATMTotal {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ImpliedCurrencyAndAmount
 	 * ImpliedCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.ATMTotal
-	 * ATMTotal}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -313,6 +342,10 @@ public class ATMTotal {
 	 * ATMTotals3.mmAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.ATMTotal
+	 * ATMTotal}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -327,7 +360,7 @@ public class ATMTotal {
 	public static final MMBusinessAttribute mmATMCurrent = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ATMTotals1.mmATMCurrent, ATMTotals3.mmAmount);
-			elementContext_lazy = () -> ATMTotal.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ATMCurrent";
@@ -335,6 +368,14 @@ public class ATMTotal {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMTotal.class.getMethod("getATMCurrent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.CardPayment> relatedCardPayment;
@@ -373,7 +414,7 @@ public class ATMTotal {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCardPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ATMTotal.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCardPayment";
@@ -394,8 +435,14 @@ public class ATMTotal {
 				definition = "Current totals of the ATM.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPayment.mmATMTotal);
 				derivationElement_lazy = () -> Arrays.asList(ATMTotals3.mmPeriod);
-				element_lazy = () -> Arrays.asList(ATMTotal.mmATMBalance, ATMTotal.mmCurrency, ATMTotal.mmATMCurrentNumber, ATMTotal.mmATMBalanceNumber, ATMTotal.mmATMCurrent, ATMTotal.mmRelatedCardPayment);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ATMTotal.mmATMBalance, com.tools20022.repository.entity.ATMTotal.mmCurrency, com.tools20022.repository.entity.ATMTotal.mmATMCurrentNumber,
+						com.tools20022.repository.entity.ATMTotal.mmATMBalanceNumber, com.tools20022.repository.entity.ATMTotal.mmATMCurrent, com.tools20022.repository.entity.ATMTotal.mmRelatedCardPayment);
 				derivationComponent_lazy = () -> Arrays.asList(ATMTotals1.mmObject(), ATMTotals3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ATMTotal.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provide information on the status reason of the record.
@@ -74,6 +78,8 @@ import java.util.List;
  * StatusReasonInformation9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ValidationStatusReason1", propOrder = {"originator", "reason", "validationRule", "additionalInformation"})
 public class ValidationStatusReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -304,6 +310,7 @@ public class ValidationStatusReason1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Orgtr")
 	public PartyIdentification77 getOriginator() {
 		return originator;
 	}
@@ -312,6 +319,7 @@ public class ValidationStatusReason1 {
 		this.originator = originator;
 	}
 
+	@XmlElement(name = "Rsn")
 	public StatusReason6Choice getReason() {
 		return reason;
 	}
@@ -320,6 +328,7 @@ public class ValidationStatusReason1 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "VldtnRule")
 	public List<GenericValidationRuleIdentification1> getValidationRule() {
 		return validationRule;
 	}
@@ -328,6 +337,7 @@ public class ValidationStatusReason1 {
 		this.validationRule = validationRule;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max105Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

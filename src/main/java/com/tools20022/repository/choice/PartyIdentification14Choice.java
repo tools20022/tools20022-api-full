@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of identification of a party.
@@ -77,6 +81,8 @@ import java.util.function.Supplier;
  * definition} = "Choice of identification of a party."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification14Choice", propOrder = {"BICOrBEI", "proprietaryIdentification", "nameAndAddress", "country"})
 public class PartyIdentification14Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -304,6 +310,7 @@ public class PartyIdentification14Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BICOrBEI", required = true)
 	public AnyBICIdentifier getBICOrBEI() {
 		return bICOrBEI;
 	}
@@ -312,6 +319,7 @@ public class PartyIdentification14Choice {
 		this.bICOrBEI = bICOrBEI;
 	}
 
+	@XmlElement(name = "PrtryId", required = true)
 	public GenericIdentification19 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
@@ -320,6 +328,7 @@ public class PartyIdentification14Choice {
 		this.proprietaryIdentification = proprietaryIdentification;
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress5 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -328,6 +337,7 @@ public class PartyIdentification14Choice {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}

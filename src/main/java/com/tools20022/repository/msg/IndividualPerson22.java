@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Human entity, as distinguished from a corporate entity (which is sometimes
@@ -142,6 +146,10 @@ import java.util.List;
  * IndividualPerson20}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualPerson22", propOrder = {"namePrefix", "givenName", "middleName", "name", "nameSuffix", "gender", "language", "birthDate", "countryOfBirth", "provinceOfBirth", "cityOfBirth", "profession", "taxationCountry",
+		"countryAndResidentialStatus", "postalAddress", "citizenship", "employingCompany", "businessFunction", "primaryCommunicationAddress", "secondaryCommunicationAddress", "otherIdentification", "additionalRegulatoryInformation",
+		"politicallyExposedPersonType"})
 public class IndividualPerson22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1618,6 +1626,7 @@ public class IndividualPerson22 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NmPrfx")
 	public NamePrefix1Choice getNamePrefix() {
 		return namePrefix;
 	}
@@ -1626,6 +1635,7 @@ public class IndividualPerson22 {
 		this.namePrefix = namePrefix;
 	}
 
+	@XmlElement(name = "GvnNm", required = true)
 	public Max35Text getGivenName() {
 		return givenName;
 	}
@@ -1634,6 +1644,7 @@ public class IndividualPerson22 {
 		this.givenName = givenName;
 	}
 
+	@XmlElement(name = "MddlNm")
 	public Max35Text getMiddleName() {
 		return middleName;
 	}
@@ -1642,6 +1653,7 @@ public class IndividualPerson22 {
 		this.middleName = middleName;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max350Text getName() {
 		return name;
 	}
@@ -1650,6 +1662,7 @@ public class IndividualPerson22 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "NmSfx")
 	public Max35Text getNameSuffix() {
 		return nameSuffix;
 	}
@@ -1658,6 +1671,7 @@ public class IndividualPerson22 {
 		this.nameSuffix = nameSuffix;
 	}
 
+	@XmlElement(name = "Gndr")
 	public GenderCode getGender() {
 		return gender;
 	}
@@ -1666,6 +1680,7 @@ public class IndividualPerson22 {
 		this.gender = gender;
 	}
 
+	@XmlElement(name = "Lang")
 	public LanguageCode getLanguage() {
 		return language;
 	}
@@ -1674,6 +1689,7 @@ public class IndividualPerson22 {
 		this.language = language;
 	}
 
+	@XmlElement(name = "BirthDt", required = true)
 	public ISODate getBirthDate() {
 		return birthDate;
 	}
@@ -1682,6 +1698,7 @@ public class IndividualPerson22 {
 		this.birthDate = birthDate;
 	}
 
+	@XmlElement(name = "CtryOfBirth")
 	public CountryCode getCountryOfBirth() {
 		return countryOfBirth;
 	}
@@ -1690,6 +1707,7 @@ public class IndividualPerson22 {
 		this.countryOfBirth = countryOfBirth;
 	}
 
+	@XmlElement(name = "PrvcOfBirth")
 	public Max35Text getProvinceOfBirth() {
 		return provinceOfBirth;
 	}
@@ -1698,6 +1716,7 @@ public class IndividualPerson22 {
 		this.provinceOfBirth = provinceOfBirth;
 	}
 
+	@XmlElement(name = "CityOfBirth")
 	public Max35Text getCityOfBirth() {
 		return cityOfBirth;
 	}
@@ -1706,6 +1725,7 @@ public class IndividualPerson22 {
 		this.cityOfBirth = cityOfBirth;
 	}
 
+	@XmlElement(name = "Prfssn")
 	public Max35Text getProfession() {
 		return profession;
 	}
@@ -1714,6 +1734,7 @@ public class IndividualPerson22 {
 		this.profession = profession;
 	}
 
+	@XmlElement(name = "TaxtnCtry")
 	public CountryCode getTaxationCountry() {
 		return taxationCountry;
 	}
@@ -1722,6 +1743,7 @@ public class IndividualPerson22 {
 		this.taxationCountry = taxationCountry;
 	}
 
+	@XmlElement(name = "CtryAndResdtlSts")
 	public CountryAndResidentialStatusType1 getCountryAndResidentialStatus() {
 		return countryAndResidentialStatus;
 	}
@@ -1730,6 +1752,7 @@ public class IndividualPerson22 {
 		this.countryAndResidentialStatus = countryAndResidentialStatus;
 	}
 
+	@XmlElement(name = "PstlAdr", required = true)
 	public List<PostalAddress3> getPostalAddress() {
 		return postalAddress;
 	}
@@ -1738,6 +1761,7 @@ public class IndividualPerson22 {
 		this.postalAddress = postalAddress;
 	}
 
+	@XmlElement(name = "Ctznsh", required = true)
 	public List<CitizenshipInformation> getCitizenship() {
 		return citizenship;
 	}
@@ -1746,6 +1770,7 @@ public class IndividualPerson22 {
 		this.citizenship = citizenship;
 	}
 
+	@XmlElement(name = "EmplngCpny")
 	public Max140Text getEmployingCompany() {
 		return employingCompany;
 	}
@@ -1754,6 +1779,7 @@ public class IndividualPerson22 {
 		this.employingCompany = employingCompany;
 	}
 
+	@XmlElement(name = "BizFctn")
 	public Max35Text getBusinessFunction() {
 		return businessFunction;
 	}
@@ -1762,6 +1788,7 @@ public class IndividualPerson22 {
 		this.businessFunction = businessFunction;
 	}
 
+	@XmlElement(name = "PmryComAdr")
 	public CommunicationAddress3 getPrimaryCommunicationAddress() {
 		return primaryCommunicationAddress;
 	}
@@ -1770,6 +1797,7 @@ public class IndividualPerson22 {
 		this.primaryCommunicationAddress = primaryCommunicationAddress;
 	}
 
+	@XmlElement(name = "ScndryComAdr")
 	public CommunicationAddress3 getSecondaryCommunicationAddress() {
 		return secondaryCommunicationAddress;
 	}
@@ -1778,6 +1806,7 @@ public class IndividualPerson22 {
 		this.secondaryCommunicationAddress = secondaryCommunicationAddress;
 	}
 
+	@XmlElement(name = "OthrId")
 	public List<GenericIdentification44> getOtherIdentification() {
 		return otherIdentification;
 	}
@@ -1786,6 +1815,7 @@ public class IndividualPerson22 {
 		this.otherIdentification = otherIdentification;
 	}
 
+	@XmlElement(name = "AddtlRgltryInf")
 	public RegulatoryInformation1 getAdditionalRegulatoryInformation() {
 		return additionalRegulatoryInformation;
 	}
@@ -1794,6 +1824,7 @@ public class IndividualPerson22 {
 		this.additionalRegulatoryInformation = additionalRegulatoryInformation;
 	}
 
+	@XmlElement(name = "PltclyXpsdPrsnTp")
 	public PoliticalExposureType1Choice getPoliticallyExposedPersonType() {
 		return politicallyExposedPersonType;
 	}

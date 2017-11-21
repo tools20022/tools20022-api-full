@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details specific to the liquidity debit transfer, used to transfer
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LiquidityDebitTransfer1", propOrder = {"liquidityTransferIdentification", "creditor", "creditorAccount", "transferredAmount", "debtor", "debtorAccount", "settlementDate"})
 public class LiquidityDebitTransfer1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -432,6 +438,7 @@ public class LiquidityDebitTransfer1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LqdtyTrfId")
 	public PaymentIdentification1 getLiquidityTransferIdentification() {
 		return liquidityTransferIdentification;
 	}
@@ -440,6 +447,7 @@ public class LiquidityDebitTransfer1 {
 		this.liquidityTransferIdentification = liquidityTransferIdentification;
 	}
 
+	@XmlElement(name = "Cdtr")
 	public BranchAndFinancialInstitutionIdentification5 getCreditor() {
 		return creditor;
 	}
@@ -448,6 +456,7 @@ public class LiquidityDebitTransfer1 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAcct")
 	public CashAccount24 getCreditorAccount() {
 		return creditorAccount;
 	}
@@ -456,6 +465,7 @@ public class LiquidityDebitTransfer1 {
 		this.creditorAccount = creditorAccount;
 	}
 
+	@XmlElement(name = "TrfdAmt", required = true)
 	public Amount2Choice getTransferredAmount() {
 		return transferredAmount;
 	}
@@ -464,6 +474,7 @@ public class LiquidityDebitTransfer1 {
 		this.transferredAmount = transferredAmount;
 	}
 
+	@XmlElement(name = "Dbtr")
 	public BranchAndFinancialInstitutionIdentification5 getDebtor() {
 		return debtor;
 	}
@@ -472,6 +483,7 @@ public class LiquidityDebitTransfer1 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAcct")
 	public CashAccount24 getDebtorAccount() {
 		return debtorAccount;
 	}
@@ -480,6 +492,7 @@ public class LiquidityDebitTransfer1 {
 		this.debtorAccount = debtorAccount;
 	}
 
+	@XmlElement(name = "SttlmDt")
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}

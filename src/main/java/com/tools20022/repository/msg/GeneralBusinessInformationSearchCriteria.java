@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for business information.
@@ -69,6 +73,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GeneralBusinessInformationSearchCriteria", propOrder = {"reference", "subject", "qualifier"})
 public class GeneralBusinessInformationSearchCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -236,6 +242,7 @@ public class GeneralBusinessInformationSearchCriteria {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ref")
 	public List<Max35Text> getReference() {
 		return reference;
 	}
@@ -244,6 +251,7 @@ public class GeneralBusinessInformationSearchCriteria {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "Sbjt")
 	public List<CharacterSearchChoice> getSubject() {
 		return subject;
 	}
@@ -252,6 +260,7 @@ public class GeneralBusinessInformationSearchCriteria {
 		this.subject = subject;
 	}
 
+	@XmlElement(name = "Qlfr")
 	public List<InformationQualifierType> getQualifier() {
 		return qualifier;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.EquivalentAmount2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the amount of money to be moved between the debtor and creditor,
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AmountType3Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountType4Choice", propOrder = {"instructedAmount", "equivalentAmount"})
 public class AmountType4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -207,6 +213,7 @@ public class AmountType4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstdAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getInstructedAmount() {
 		return instructedAmount;
 	}
@@ -215,6 +222,7 @@ public class AmountType4Choice {
 		this.instructedAmount = instructedAmount;
 	}
 
+	@XmlElement(name = "EqvtAmt", required = true)
 	public EquivalentAmount2 getEquivalentAmount() {
 		return equivalentAmount;
 	}

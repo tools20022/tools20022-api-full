@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Entity involved in an activity.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Entity involved in an activity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount34", propOrder = {"identification", "additionalInformation", "alternateIdentification", "safekeepingAccount"})
 public class PartyIdentificationAndAccount34 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -285,6 +291,7 @@ public class PartyIdentificationAndAccount34 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification32Choice getIdentification() {
 		return identification;
 	}
@@ -293,6 +300,7 @@ public class PartyIdentificationAndAccount34 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -301,6 +309,7 @@ public class PartyIdentificationAndAccount34 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification5 getAlternateIdentification() {
 		return alternateIdentification;
 	}
@@ -309,6 +318,7 @@ public class PartyIdentificationAndAccount34 {
 		this.alternateIdentification = alternateIdentification;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public Max35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the elements that identify a proxy appointed to represent a party
@@ -66,6 +70,8 @@ import java.util.List;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Proxy3 Proxy3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Proxy5", propOrder = {"proxyType", "preassignedProxy"})
 public class Proxy5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -187,6 +193,7 @@ public class Proxy5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrxyTp", required = true)
 	public List<ProxyType2Code> getProxyType() {
 		return proxyType;
 	}
@@ -195,6 +202,7 @@ public class Proxy5 {
 		this.proxyType = proxyType;
 	}
 
+	@XmlElement(name = "PrssgndPrxy")
 	public IndividualPerson25 getPreassignedProxy() {
 		return preassignedProxy;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics defining the type of tax.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Set of characteristics defining the type of tax."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxDetails", propOrder = {"certificateIdentification", "taxType"})
 public class TaxDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -171,6 +177,7 @@ public class TaxDetails {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CertId")
 	public Max35Text getCertificateIdentification() {
 		return certificateIdentification;
 	}
@@ -179,6 +186,7 @@ public class TaxDetails {
 		this.certificateIdentification = certificateIdentification;
 	}
 
+	@XmlElement(name = "TaxTp")
 	public TaxType getTaxType() {
 		return taxType;
 	}

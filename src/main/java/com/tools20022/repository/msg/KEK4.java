@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Key encryption key (KEK), using previously distributed symmetric key.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.KEK3 KEK3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "KEK4", propOrder = {"version", "KEKIdentification", "keyEncryptionAlgorithm", "encryptedKey"})
 public class KEK4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -262,6 +268,7 @@ public class KEK4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Number getVersion() {
 		return version;
 	}
@@ -270,6 +277,7 @@ public class KEK4 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "KEKId", required = true)
 	public KEKIdentifier2 getKEKIdentification() {
 		return kEKIdentification;
 	}
@@ -278,6 +286,7 @@ public class KEK4 {
 		this.kEKIdentification = kEKIdentification;
 	}
 
+	@XmlElement(name = "KeyNcrptnAlgo", required = true)
 	public AlgorithmIdentification13 getKeyEncryptionAlgorithm() {
 		return keyEncryptionAlgorithm;
 	}
@@ -286,6 +295,7 @@ public class KEK4 {
 		this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
 	}
 
+	@XmlElement(name = "NcrptdKey", required = true)
 	public Max500Binary getEncryptedKey() {
 		return encryptedKey;
 	}

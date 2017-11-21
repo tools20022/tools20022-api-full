@@ -65,6 +65,11 @@ public class ProxyAppointmentDeadline extends MeetingDeadline {
 				definition = "Date by which the information on proxy assignment must be received.";
 				superType_lazy = () -> MeetingDeadline.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ProxyAppointmentDeadline.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

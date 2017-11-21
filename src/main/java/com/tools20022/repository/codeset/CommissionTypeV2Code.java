@@ -29,19 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CommissionType7Code
- * CommissionType7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CommissionType9Code
- * CommissionType9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CommissionType6Code
- * CommissionType6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CommissionType8Code
- * CommissionType8Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -119,6 +106,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmPercentageCommissionWaivedAsAdditionalUnits
  * CommissionTypeV2Code.mmPercentageCommissionWaivedAsAdditionalUnits}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionType7Code
+ * CommissionType7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionType9Code
+ * CommissionType9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionType6Code
+ * CommissionType6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionType8Code
+ * CommissionType8Code}</li>
  * </ul>
  * </li>
  * <li>

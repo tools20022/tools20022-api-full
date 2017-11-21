@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status applying to individual instructions of a MeetingInstruction.
@@ -77,6 +81,9 @@ import java.util.List;
  * "Status applying to individual instructions of a MeetingInstruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingInstructionDetailedStatus", propOrder = {"accountIdentification", "participationRegistrationConfirmation", "votingInstructionConfirmation", "proxyAssignmentConfirmation", "meetingAttendanceConfirmation",
+		"securitiesRegistrationConfirmation"})
 public class MeetingInstructionDetailedStatus {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -384,6 +391,7 @@ public class MeetingInstructionDetailedStatus {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId")
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -392,6 +400,7 @@ public class MeetingInstructionDetailedStatus {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "PrtcptnRegnConf")
 	public List<DetailedInstructionConfirmation> getParticipationRegistrationConfirmation() {
 		return participationRegistrationConfirmation;
 	}
@@ -400,6 +409,7 @@ public class MeetingInstructionDetailedStatus {
 		this.participationRegistrationConfirmation = participationRegistrationConfirmation;
 	}
 
+	@XmlElement(name = "VtngInstrConf")
 	public List<DetailedInstructionConfirmation> getVotingInstructionConfirmation() {
 		return votingInstructionConfirmation;
 	}
@@ -408,6 +418,7 @@ public class MeetingInstructionDetailedStatus {
 		this.votingInstructionConfirmation = votingInstructionConfirmation;
 	}
 
+	@XmlElement(name = "PrxyAssgnmtConf")
 	public List<DetailedInstructionConfirmation> getProxyAssignmentConfirmation() {
 		return proxyAssignmentConfirmation;
 	}
@@ -416,6 +427,7 @@ public class MeetingInstructionDetailedStatus {
 		this.proxyAssignmentConfirmation = proxyAssignmentConfirmation;
 	}
 
+	@XmlElement(name = "MtgAttndncConf")
 	public List<DetailedInstructionConfirmation> getMeetingAttendanceConfirmation() {
 		return meetingAttendanceConfirmation;
 	}
@@ -424,6 +436,7 @@ public class MeetingInstructionDetailedStatus {
 		this.meetingAttendanceConfirmation = meetingAttendanceConfirmation;
 	}
 
+	@XmlElement(name = "SctiesRegnConf")
 	public List<DetailedInstructionConfirmation> getSecuritiesRegistrationConfirmation() {
 		return securitiesRegistrationConfirmation;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Record where all transactions are originally entered. The journal details
@@ -63,6 +67,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LimitJournal1", propOrder = {"limit", "journalActivityDate", "journalEntry"})
 public class LimitJournal1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -204,6 +210,7 @@ public class LimitJournal1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Lmt", required = true)
 	public LimitAmount1 getLimit() {
 		return limit;
 	}
@@ -212,6 +219,7 @@ public class LimitJournal1 {
 		this.limit = limit;
 	}
 
+	@XmlElement(name = "JrnlActvtyDt", required = true)
 	public ISODate getJournalActivityDate() {
 		return journalActivityDate;
 	}
@@ -220,6 +228,7 @@ public class LimitJournal1 {
 		this.journalActivityDate = journalActivityDate;
 	}
 
+	@XmlElement(name = "JrnlNtry")
 	public List<LimitJournalEntry1> getJournalEntry() {
 		return journalEntry;
 	}

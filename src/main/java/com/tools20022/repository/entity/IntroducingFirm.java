@@ -37,6 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderPartyRole
+ * SecuritiesOrderPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -49,10 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ConfirmationParties2.mmIntroducingFirm}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderPartyRole
- * SecuritiesOrderPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -83,6 +83,11 @@ public class IntroducingFirm extends SecuritiesOrderPartyRole {
 				definition = "Party (broker or other intermediary) that owns the relationship with the investor. It can relay an order directly to the trading floor, or give clients direct access to the floor.";
 				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties4.mmIntroducingFirm, ConfirmationParties2.mmIntroducingFirm);
 				superType_lazy = () -> SecuritiesOrderPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IntroducingFirm.class;
 			}
 		});
 		return mmObject_lazy.get();

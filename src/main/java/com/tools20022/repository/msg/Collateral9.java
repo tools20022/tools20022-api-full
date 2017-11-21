@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides for each collateral account the report summary and the valuation of
@@ -85,6 +89,8 @@ import java.util.List;
  * Collateral5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Collateral9", propOrder = {"accountIdentification", "reportSummary", "collateralValuation"})
 public class Collateral9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -287,6 +293,7 @@ public class Collateral9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public CollateralAccount1 getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -295,6 +302,7 @@ public class Collateral9 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "RptSummry", required = true)
 	public Summary1 getReportSummary() {
 		return reportSummary;
 	}
@@ -303,6 +311,7 @@ public class Collateral9 {
 		this.reportSummary = reportSummary;
 	}
 
+	@XmlElement(name = "CollValtn")
 	public List<CollateralValuation2> getCollateralValuation() {
 		return collateralValuation;
 	}

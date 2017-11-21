@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status and reason of a transaction.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Status and reason of a transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusAndReason6", propOrder = {"processingStatus", "inferredMatchingStatus", "matchingStatus", "settlementStatus"})
 public class StatusAndReason6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -284,6 +290,7 @@ public class StatusAndReason6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcgSts")
 	public ProcessingStatus12Choice getProcessingStatus() {
 		return processingStatus;
 	}
@@ -292,6 +299,7 @@ public class StatusAndReason6 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "IfrrdMtchgSts")
 	public MatchingStatus6Choice getInferredMatchingStatus() {
 		return inferredMatchingStatus;
 	}
@@ -300,6 +308,7 @@ public class StatusAndReason6 {
 		this.inferredMatchingStatus = inferredMatchingStatus;
 	}
 
+	@XmlElement(name = "MtchgSts")
 	public MatchingStatus6Choice getMatchingStatus() {
 		return matchingStatus;
 	}
@@ -308,6 +317,7 @@ public class StatusAndReason6 {
 		this.matchingStatus = matchingStatus;
 	}
 
+	@XmlElement(name = "SttlmSts")
 	public SettlementStatus4Choice getSettlementStatus() {
 		return settlementStatus;
 	}

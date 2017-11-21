@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about a movement that failed the settlement.
@@ -80,6 +84,8 @@ import java.util.function.Supplier;
  * "Provides information about  a movement that failed the settlement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FailedMovement1", propOrder = {"cashAmount", "securitiesQuantity", "securityIdentification", "reason"})
 public class FailedMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -338,6 +344,7 @@ public class FailedMovement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshAmt", required = true)
 	public ActiveCurrencyAndAmount getCashAmount() {
 		return cashAmount;
 	}
@@ -346,6 +353,7 @@ public class FailedMovement1 {
 		this.cashAmount = cashAmount;
 	}
 
+	@XmlElement(name = "SctiesQty", required = true)
 	public UnitOrFaceAmount1Choice getSecuritiesQuantity() {
 		return securitiesQuantity;
 	}
@@ -354,6 +362,7 @@ public class FailedMovement1 {
 		this.securitiesQuantity = securitiesQuantity;
 	}
 
+	@XmlElement(name = "SctyId")
 	public SecurityIdentification7 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -362,6 +371,7 @@ public class FailedMovement1 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public FailedSettlementReason1FormatChoice getReason() {
 		return reason;
 	}

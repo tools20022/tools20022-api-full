@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information needed to process a currency exchange or conversion.
@@ -67,6 +71,8 @@ import java.util.function.Supplier;
  * "Information needed to process a currency exchange or conversion."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgreedRate2", propOrder = {"exchangeRate", "unitCurrency", "quotedCurrency"})
 public class AgreedRate2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -240,6 +246,7 @@ public class AgreedRate2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XchgRate", required = true)
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -248,6 +255,7 @@ public class AgreedRate2 {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "UnitCcy", required = true)
 	public CurrencyCode getUnitCurrency() {
 		return unitCurrency;
 	}
@@ -256,6 +264,7 @@ public class AgreedRate2 {
 		this.unitCurrency = unitCurrency;
 	}
 
+	@XmlElement(name = "QtdCcy", required = true)
 	public CurrencyCode getQuotedCurrency() {
 		return quotedCurrency;
 	}

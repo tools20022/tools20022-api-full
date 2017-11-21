@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amendment information details providing the list of direct debit mandate
@@ -91,6 +95,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmendmentInformationDetails5", propOrder = {"originalMandateIdentification", "originalCreditorSchemeIdentification", "originalCreditorAgent", "originalCreditorAgentAccount", "originalDebtor", "originalDebtorAccount",
+		"originalDebtorAgent", "originalDebtorAgentAccount", "originalFinalCollectionDate", "originalFrequency"})
 public class AmendmentInformationDetails5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -584,6 +591,7 @@ public class AmendmentInformationDetails5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMndtId")
 	public Max35Text getOriginalMandateIdentification() {
 		return originalMandateIdentification;
 	}
@@ -592,6 +600,7 @@ public class AmendmentInformationDetails5 {
 		this.originalMandateIdentification = originalMandateIdentification;
 	}
 
+	@XmlElement(name = "OrgnlCdtrSchmeId")
 	public PartyIdentification18 getOriginalCreditorSchemeIdentification() {
 		return originalCreditorSchemeIdentification;
 	}
@@ -600,6 +609,7 @@ public class AmendmentInformationDetails5 {
 		this.originalCreditorSchemeIdentification = originalCreditorSchemeIdentification;
 	}
 
+	@XmlElement(name = "OrgnlCdtrAgt")
 	public FinancialInstitution2 getOriginalCreditorAgent() {
 		return originalCreditorAgent;
 	}
@@ -608,6 +618,7 @@ public class AmendmentInformationDetails5 {
 		this.originalCreditorAgent = originalCreditorAgent;
 	}
 
+	@XmlElement(name = "OrgnlCdtrAgtAcct")
 	public CashAccount7 getOriginalCreditorAgentAccount() {
 		return originalCreditorAgentAccount;
 	}
@@ -616,6 +627,7 @@ public class AmendmentInformationDetails5 {
 		this.originalCreditorAgentAccount = originalCreditorAgentAccount;
 	}
 
+	@XmlElement(name = "OrgnlDbtr")
 	public PartyIdentification20 getOriginalDebtor() {
 		return originalDebtor;
 	}
@@ -624,6 +636,7 @@ public class AmendmentInformationDetails5 {
 		this.originalDebtor = originalDebtor;
 	}
 
+	@XmlElement(name = "OrgnlDbtrAcct")
 	public CashAccount8 getOriginalDebtorAccount() {
 		return originalDebtorAccount;
 	}
@@ -632,6 +645,7 @@ public class AmendmentInformationDetails5 {
 		this.originalDebtorAccount = originalDebtorAccount;
 	}
 
+	@XmlElement(name = "OrgnlDbtrAgt")
 	public FinancialInstitution3 getOriginalDebtorAgent() {
 		return originalDebtorAgent;
 	}
@@ -640,6 +654,7 @@ public class AmendmentInformationDetails5 {
 		this.originalDebtorAgent = originalDebtorAgent;
 	}
 
+	@XmlElement(name = "OrgnlDbtrAgtAcct")
 	public CashAccount7 getOriginalDebtorAgentAccount() {
 		return originalDebtorAgentAccount;
 	}
@@ -648,6 +663,7 @@ public class AmendmentInformationDetails5 {
 		this.originalDebtorAgentAccount = originalDebtorAgentAccount;
 	}
 
+	@XmlElement(name = "OrgnlFnlColltnDt")
 	public ISODate getOriginalFinalCollectionDate() {
 		return originalFinalCollectionDate;
 	}
@@ -656,6 +672,7 @@ public class AmendmentInformationDetails5 {
 		this.originalFinalCollectionDate = originalFinalCollectionDate;
 	}
 
+	@XmlElement(name = "OrgnlFrqcy")
 	public Frequency1Code getOriginalFrequency() {
 		return originalFrequency;
 	}

@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.Case2;
 import com.tools20022.repository.msg.CaseAssignment2;
 import com.tools20022.repository.msg.ProprietaryData4;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -45,9 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.035.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
@@ -78,6 +77,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.035.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -97,6 +99,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProprietaryFormatInvestigationV02", propOrder = {"assignment", "case", "proprietaryData"})
 public class ProprietaryFormatInvestigationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -137,6 +141,14 @@ public class ProprietaryFormatInvestigationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProprietaryFormatInvestigationV02.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case2 case_;
 	/**
@@ -169,6 +181,14 @@ public class ProprietaryFormatInvestigationV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Case2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProprietaryFormatInvestigationV02.class.getMethod("getCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ProprietaryData4 proprietaryData;
@@ -205,6 +225,14 @@ public class ProprietaryFormatInvestigationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> ProprietaryData4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProprietaryFormatInvestigationV02.class.getMethod("getProprietaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -218,7 +246,8 @@ public class ProprietaryFormatInvestigationV02 {
 				rootElement = "Document";
 				xmlTag = "PrtryFrmtInvstgtn";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ProprietaryFormatInvestigationV02.mmAssignment, ProprietaryFormatInvestigationV02.mmCase, ProprietaryFormatInvestigationV02.mmProprietaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.mmAssignment, com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.mmCase,
+						com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.mmProprietaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -228,10 +257,16 @@ public class ProprietaryFormatInvestigationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ProprietaryFormatInvestigationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment2 getAssignment() {
 		return assignment;
 	}
@@ -240,6 +275,7 @@ public class ProprietaryFormatInvestigationV02 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "Case", required = true)
 	public Case2 getCase() {
 		return case_;
 	}
@@ -248,11 +284,18 @@ public class ProprietaryFormatInvestigationV02 {
 		this.case_ = case_;
 	}
 
+	@XmlElement(name = "PrtryData", required = true)
 	public ProprietaryData4 getProprietaryData() {
 		return proprietaryData;
 	}
 
 	public void setProprietaryData(ProprietaryData4 proprietaryData) {
 		this.proprietaryData = proprietaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.035.02.02")
+	static public class Document {
+		@XmlElement(name = "PrtryFrmtInvstgtn", required = true)
+		public ProprietaryFormatInvestigationV02 messageBody;
 	}
 }

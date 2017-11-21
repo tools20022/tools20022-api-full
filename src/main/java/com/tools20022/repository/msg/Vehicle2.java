@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional information related to a vehicle.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Vehicle1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Vehicle2", propOrder = {"type", "entryMode", "data"})
 public class Vehicle2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -212,6 +218,7 @@ public class Vehicle2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public Max35Text getType() {
 		return type;
 	}
@@ -220,6 +227,7 @@ public class Vehicle2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "NtryMd")
 	public CardDataReading5Code getEntryMode() {
 		return entryMode;
 	}
@@ -228,6 +236,7 @@ public class Vehicle2 {
 		this.entryMode = entryMode;
 	}
 
+	@XmlElement(name = "Data", required = true)
 	public Max35Text getData() {
 		return data;
 	}

@@ -28,9 +28,11 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CollateralManagementISOLatestversion;
 import com.tools20022.repository.msgset.CollateralManagementMaintenance20162017;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -53,9 +55,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code colr.003.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CollateralManagementLatestVersion
@@ -118,6 +117,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code colr.003.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -133,6 +135,9 @@ import java.util.List;
  * MarginCallRequestV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarginCallRequestV04", propOrder = {"transactionIdentification", "obligation", "agreement", "marginCallResult", "marginDetailsDueToA", "marginDetailsDueToB", "requirementDetailsDueToA", "requirementDetailsDueToB",
+		"expectedCollateralDueToA", "expectedCollateralDueToB", "marginCallDetails", "supplementaryData"})
 public class MarginCallRequestV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +183,14 @@ public class MarginCallRequestV04 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallRequestV04.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Obligation4 obligation;
 	/**
@@ -222,6 +235,14 @@ public class MarginCallRequestV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> Obligation4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallRequestV04.class.getMethod("getObligation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Agreement4 agreement;
 	/**
@@ -261,6 +282,14 @@ public class MarginCallRequestV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Agreement4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallRequestV04.class.getMethod("getAgreement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MarginCallResult3 marginCallResult;
@@ -308,6 +337,14 @@ public class MarginCallRequestV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> MarginCallResult3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallRequestV04.class.getMethod("getMarginCallResult", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MarginCall1 marginDetailsDueToA;
 	/**
@@ -351,6 +388,14 @@ public class MarginCallRequestV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> MarginCall1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallRequestV04.class.getMethod("getMarginDetailsDueToA", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MarginCall1 marginDetailsDueToB;
 	/**
@@ -393,6 +438,14 @@ public class MarginCallRequestV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MarginCall1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallRequestV04.class.getMethod("getMarginDetailsDueToB", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MarginRequirement1Choice requirementDetailsDueToA;
@@ -438,6 +491,14 @@ public class MarginCallRequestV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> MarginRequirement1Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallRequestV04.class.getMethod("getRequirementDetailsDueToA", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MarginRequirement1Choice requirementDetailsDueToB;
 	/**
@@ -481,6 +542,14 @@ public class MarginCallRequestV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MarginRequirement1Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallRequestV04.class.getMethod("getRequirementDetailsDueToB", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ExpectedCollateral2Choice expectedCollateralDueToA;
@@ -526,6 +595,14 @@ public class MarginCallRequestV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> ExpectedCollateral2Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallRequestV04.class.getMethod("getExpectedCollateralDueToA", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ExpectedCollateral2Choice expectedCollateralDueToB;
 	/**
@@ -570,6 +647,14 @@ public class MarginCallRequestV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> ExpectedCollateral2Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallRequestV04.class.getMethod("getExpectedCollateralDueToB", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<MarginCall2> marginCallDetails;
 	/**
@@ -606,6 +691,14 @@ public class MarginCallRequestV04 {
 			definition = "Allows the reporting of the margin requirements for multiple accounts and report a single margin call amount made up of the aggregate of all the individual requirement amounts.";
 			minOccurs = 0;
 			complexType_lazy = () -> MarginCall2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallRequestV04.class.getMethod("getMarginCallDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -650,6 +743,14 @@ public class MarginCallRequestV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarginCallRequestV04.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -663,9 +764,12 @@ public class MarginCallRequestV04 {
 				rootElement = "Document";
 				xmlTag = "MrgnCallReq";
 				businessArea_lazy = () -> CollateralManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MarginCallRequestV04.mmTransactionIdentification, MarginCallRequestV04.mmObligation, MarginCallRequestV04.mmAgreement, MarginCallRequestV04.mmMarginCallResult,
-						MarginCallRequestV04.mmMarginDetailsDueToA, MarginCallRequestV04.mmMarginDetailsDueToB, MarginCallRequestV04.mmRequirementDetailsDueToA, MarginCallRequestV04.mmRequirementDetailsDueToB,
-						MarginCallRequestV04.mmExpectedCollateralDueToA, MarginCallRequestV04.mmExpectedCollateralDueToB, MarginCallRequestV04.mmMarginCallDetails, MarginCallRequestV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallRequestV04.mmTransactionIdentification, com.tools20022.repository.area.colr.MarginCallRequestV04.mmObligation,
+						com.tools20022.repository.area.colr.MarginCallRequestV04.mmAgreement, com.tools20022.repository.area.colr.MarginCallRequestV04.mmMarginCallResult,
+						com.tools20022.repository.area.colr.MarginCallRequestV04.mmMarginDetailsDueToA, com.tools20022.repository.area.colr.MarginCallRequestV04.mmMarginDetailsDueToB,
+						com.tools20022.repository.area.colr.MarginCallRequestV04.mmRequirementDetailsDueToA, com.tools20022.repository.area.colr.MarginCallRequestV04.mmRequirementDetailsDueToB,
+						com.tools20022.repository.area.colr.MarginCallRequestV04.mmExpectedCollateralDueToA, com.tools20022.repository.area.colr.MarginCallRequestV04.mmExpectedCollateralDueToB,
+						com.tools20022.repository.area.colr.MarginCallRequestV04.mmMarginCallDetails, com.tools20022.repository.area.colr.MarginCallRequestV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "colr";
@@ -675,10 +779,16 @@ public class MarginCallRequestV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MarginCallRequestV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -687,6 +797,7 @@ public class MarginCallRequestV04 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "Oblgtn", required = true)
 	public Obligation4 getObligation() {
 		return obligation;
 	}
@@ -695,6 +806,7 @@ public class MarginCallRequestV04 {
 		this.obligation = obligation;
 	}
 
+	@XmlElement(name = "Agrmt")
 	public Agreement4 getAgreement() {
 		return agreement;
 	}
@@ -703,6 +815,7 @@ public class MarginCallRequestV04 {
 		this.agreement = agreement;
 	}
 
+	@XmlElement(name = "MrgnCallRslt", required = true)
 	public MarginCallResult3 getMarginCallResult() {
 		return marginCallResult;
 	}
@@ -711,6 +824,7 @@ public class MarginCallRequestV04 {
 		this.marginCallResult = marginCallResult;
 	}
 
+	@XmlElement(name = "MrgnDtlsDueToA")
 	public MarginCall1 getMarginDetailsDueToA() {
 		return marginDetailsDueToA;
 	}
@@ -719,6 +833,7 @@ public class MarginCallRequestV04 {
 		this.marginDetailsDueToA = marginDetailsDueToA;
 	}
 
+	@XmlElement(name = "MrgnDtlsDueToB")
 	public MarginCall1 getMarginDetailsDueToB() {
 		return marginDetailsDueToB;
 	}
@@ -727,6 +842,7 @@ public class MarginCallRequestV04 {
 		this.marginDetailsDueToB = marginDetailsDueToB;
 	}
 
+	@XmlElement(name = "RqrmntDtlsDueToA")
 	public MarginRequirement1Choice getRequirementDetailsDueToA() {
 		return requirementDetailsDueToA;
 	}
@@ -735,6 +851,7 @@ public class MarginCallRequestV04 {
 		this.requirementDetailsDueToA = requirementDetailsDueToA;
 	}
 
+	@XmlElement(name = "RqrmntDtlsDueToB")
 	public MarginRequirement1Choice getRequirementDetailsDueToB() {
 		return requirementDetailsDueToB;
 	}
@@ -743,6 +860,7 @@ public class MarginCallRequestV04 {
 		this.requirementDetailsDueToB = requirementDetailsDueToB;
 	}
 
+	@XmlElement(name = "XpctdCollDueToA")
 	public ExpectedCollateral2Choice getExpectedCollateralDueToA() {
 		return expectedCollateralDueToA;
 	}
@@ -751,6 +869,7 @@ public class MarginCallRequestV04 {
 		this.expectedCollateralDueToA = expectedCollateralDueToA;
 	}
 
+	@XmlElement(name = "XpctdCollDueToB")
 	public ExpectedCollateral2Choice getExpectedCollateralDueToB() {
 		return expectedCollateralDueToB;
 	}
@@ -759,6 +878,7 @@ public class MarginCallRequestV04 {
 		this.expectedCollateralDueToB = expectedCollateralDueToB;
 	}
 
+	@XmlElement(name = "MrgnCallDtls")
 	public List<MarginCall2> getMarginCallDetails() {
 		return marginCallDetails;
 	}
@@ -767,11 +887,18 @@ public class MarginCallRequestV04 {
 		this.marginCallDetails = marginCallDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:colr.003.04.04")
+	static public class Document {
+		@XmlElement(name = "MrgnCallReq", required = true)
+		public MarginCallRequestV04 messageBody;
 	}
 }

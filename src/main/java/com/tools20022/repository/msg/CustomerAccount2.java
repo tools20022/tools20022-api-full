@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account owned by a customer.
@@ -132,6 +136,10 @@ import java.util.List;
  * definition} = "Account owned by a customer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustomerAccount2", propOrder = {"identification", "name", "status", "type", "currency", "minimumMonthlyPaymentValue", "maximumMonthlyPaymentValue", "minimumMonthlyReceivedValue", "maximumMonthlyReceivedValue",
+		"minimumMonthlyTransactionNumber", "maximumMonthlyTransactionNumber", "minimumAverageBalance", "maximumAverageBalance", "accountPurpose", "minimumFloorNotificationAmount", "maximumFloorNotificationAmount",
+		"minimumCeilingNotificationAmount", "maximumCeilingNotificationAmount", "statementCycle", "restriction", "closingDate", "openingDate", "referenceAccountIdentification", "proprietary", "accountOwner"})
 public class CustomerAccount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1391,6 +1399,7 @@ public class CustomerAccount2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public AccountIdentification4Choice getIdentification() {
 		return identification;
 	}
@@ -1399,6 +1408,7 @@ public class CustomerAccount2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max70Text getName() {
 		return name;
 	}
@@ -1407,6 +1417,7 @@ public class CustomerAccount2 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Sts")
 	public AccountStatus3Code getStatus() {
 		return status;
 	}
@@ -1415,6 +1426,7 @@ public class CustomerAccount2 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Tp")
 	public CashAccountType2 getType() {
 		return type;
 	}
@@ -1423,6 +1435,7 @@ public class CustomerAccount2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -1431,6 +1444,7 @@ public class CustomerAccount2 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "MinMnthlyPmtVal")
 	public ImpliedCurrencyAndAmount getMinimumMonthlyPaymentValue() {
 		return minimumMonthlyPaymentValue;
 	}
@@ -1439,6 +1453,7 @@ public class CustomerAccount2 {
 		this.minimumMonthlyPaymentValue = minimumMonthlyPaymentValue;
 	}
 
+	@XmlElement(name = "MaxMnthlyPmtVal")
 	public ImpliedCurrencyAndAmount getMaximumMonthlyPaymentValue() {
 		return maximumMonthlyPaymentValue;
 	}
@@ -1447,6 +1462,7 @@ public class CustomerAccount2 {
 		this.maximumMonthlyPaymentValue = maximumMonthlyPaymentValue;
 	}
 
+	@XmlElement(name = "MinMnthlyRcvdVal")
 	public ImpliedCurrencyAndAmount getMinimumMonthlyReceivedValue() {
 		return minimumMonthlyReceivedValue;
 	}
@@ -1455,6 +1471,7 @@ public class CustomerAccount2 {
 		this.minimumMonthlyReceivedValue = minimumMonthlyReceivedValue;
 	}
 
+	@XmlElement(name = "MaxMnthlyRcvdVal")
 	public ImpliedCurrencyAndAmount getMaximumMonthlyReceivedValue() {
 		return maximumMonthlyReceivedValue;
 	}
@@ -1463,6 +1480,7 @@ public class CustomerAccount2 {
 		this.maximumMonthlyReceivedValue = maximumMonthlyReceivedValue;
 	}
 
+	@XmlElement(name = "MinMnthlyTxNb")
 	public Max5NumericText getMinimumMonthlyTransactionNumber() {
 		return minimumMonthlyTransactionNumber;
 	}
@@ -1471,6 +1489,7 @@ public class CustomerAccount2 {
 		this.minimumMonthlyTransactionNumber = minimumMonthlyTransactionNumber;
 	}
 
+	@XmlElement(name = "MaxMnthlyTxNb")
 	public Max5NumericText getMaximumMonthlyTransactionNumber() {
 		return maximumMonthlyTransactionNumber;
 	}
@@ -1479,6 +1498,7 @@ public class CustomerAccount2 {
 		this.maximumMonthlyTransactionNumber = maximumMonthlyTransactionNumber;
 	}
 
+	@XmlElement(name = "MinAvrgBal")
 	public ImpliedCurrencyAndAmount getMinimumAverageBalance() {
 		return minimumAverageBalance;
 	}
@@ -1487,6 +1507,7 @@ public class CustomerAccount2 {
 		this.minimumAverageBalance = minimumAverageBalance;
 	}
 
+	@XmlElement(name = "MaxAvrgBal")
 	public ImpliedCurrencyAndAmount getMaximumAverageBalance() {
 		return maximumAverageBalance;
 	}
@@ -1495,6 +1516,7 @@ public class CustomerAccount2 {
 		this.maximumAverageBalance = maximumAverageBalance;
 	}
 
+	@XmlElement(name = "AcctPurp")
 	public Max140Text getAccountPurpose() {
 		return accountPurpose;
 	}
@@ -1503,6 +1525,7 @@ public class CustomerAccount2 {
 		this.accountPurpose = accountPurpose;
 	}
 
+	@XmlElement(name = "MinFlrNtfctnAmt")
 	public ImpliedCurrencyAndAmount getMinimumFloorNotificationAmount() {
 		return minimumFloorNotificationAmount;
 	}
@@ -1511,6 +1534,7 @@ public class CustomerAccount2 {
 		this.minimumFloorNotificationAmount = minimumFloorNotificationAmount;
 	}
 
+	@XmlElement(name = "MaxFlrNtfctnAmt")
 	public ImpliedCurrencyAndAmount getMaximumFloorNotificationAmount() {
 		return maximumFloorNotificationAmount;
 	}
@@ -1519,6 +1543,7 @@ public class CustomerAccount2 {
 		this.maximumFloorNotificationAmount = maximumFloorNotificationAmount;
 	}
 
+	@XmlElement(name = "MinClngNtfctnAmt")
 	public ImpliedCurrencyAndAmount getMinimumCeilingNotificationAmount() {
 		return minimumCeilingNotificationAmount;
 	}
@@ -1527,6 +1552,7 @@ public class CustomerAccount2 {
 		this.minimumCeilingNotificationAmount = minimumCeilingNotificationAmount;
 	}
 
+	@XmlElement(name = "MaxClngNtfctnAmt")
 	public ImpliedCurrencyAndAmount getMaximumCeilingNotificationAmount() {
 		return maximumCeilingNotificationAmount;
 	}
@@ -1535,6 +1561,7 @@ public class CustomerAccount2 {
 		this.maximumCeilingNotificationAmount = maximumCeilingNotificationAmount;
 	}
 
+	@XmlElement(name = "StmtCycl")
 	public Frequency3Code getStatementCycle() {
 		return statementCycle;
 	}
@@ -1543,6 +1570,7 @@ public class CustomerAccount2 {
 		this.statementCycle = statementCycle;
 	}
 
+	@XmlElement(name = "Rstrctn")
 	public List<Restriction1> getRestriction() {
 		return restriction;
 	}
@@ -1551,6 +1579,7 @@ public class CustomerAccount2 {
 		this.restriction = restriction;
 	}
 
+	@XmlElement(name = "ClsgDt")
 	public DateSearchChoice getClosingDate() {
 		return closingDate;
 	}
@@ -1559,6 +1588,7 @@ public class CustomerAccount2 {
 		this.closingDate = closingDate;
 	}
 
+	@XmlElement(name = "OpngDt")
 	public DateSearchChoice getOpeningDate() {
 		return openingDate;
 	}
@@ -1567,6 +1597,7 @@ public class CustomerAccount2 {
 		this.openingDate = openingDate;
 	}
 
+	@XmlElement(name = "RefAcctId")
 	public AccountIdentification4Choice getReferenceAccountIdentification() {
 		return referenceAccountIdentification;
 	}
@@ -1575,6 +1606,7 @@ public class CustomerAccount2 {
 		this.referenceAccountIdentification = referenceAccountIdentification;
 	}
 
+	@XmlElement(name = "Prtry")
 	public List<GenericIdentification1> getProprietary() {
 		return proprietary;
 	}
@@ -1583,6 +1615,7 @@ public class CustomerAccount2 {
 		this.proprietary = proprietary;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public OrganisationIdentification6 getAccountOwner() {
 		return accountOwner;
 	}

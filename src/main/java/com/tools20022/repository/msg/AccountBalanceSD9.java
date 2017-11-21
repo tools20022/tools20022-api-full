@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding account balance. Contains
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountBalanceSD4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountBalanceSD9", propOrder = {"placeAndName", "originalBalance", "unpledgedBalance", "investmentUnpledgedBalance", "investmentPledgedBalance", "acceptedBalance", "unacceptedBalance", "oversubscriptionBalance"})
 public class AccountBalanceSD9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -486,6 +492,7 @@ public class AccountBalanceSD9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -494,6 +501,7 @@ public class AccountBalanceSD9 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "OrgnlBal")
 	public SignedQuantityFormat9 getOriginalBalance() {
 		return originalBalance;
 	}
@@ -502,6 +510,7 @@ public class AccountBalanceSD9 {
 		this.originalBalance = originalBalance;
 	}
 
+	@XmlElement(name = "UpldgdBal")
 	public SignedQuantityFormat9 getUnpledgedBalance() {
 		return unpledgedBalance;
 	}
@@ -510,6 +519,7 @@ public class AccountBalanceSD9 {
 		this.unpledgedBalance = unpledgedBalance;
 	}
 
+	@XmlElement(name = "InvstmtUpldgdBal")
 	public SignedQuantityFormat9 getInvestmentUnpledgedBalance() {
 		return investmentUnpledgedBalance;
 	}
@@ -518,6 +528,7 @@ public class AccountBalanceSD9 {
 		this.investmentUnpledgedBalance = investmentUnpledgedBalance;
 	}
 
+	@XmlElement(name = "InvstmtPldgdBal")
 	public SignedQuantityFormat9 getInvestmentPledgedBalance() {
 		return investmentPledgedBalance;
 	}
@@ -526,6 +537,7 @@ public class AccountBalanceSD9 {
 		this.investmentPledgedBalance = investmentPledgedBalance;
 	}
 
+	@XmlElement(name = "AccptdBal")
 	public SignedQuantityFormat9 getAcceptedBalance() {
 		return acceptedBalance;
 	}
@@ -534,6 +546,7 @@ public class AccountBalanceSD9 {
 		this.acceptedBalance = acceptedBalance;
 	}
 
+	@XmlElement(name = "UaccptdBal")
 	public SignedQuantityFormat9 getUnacceptedBalance() {
 		return unacceptedBalance;
 	}
@@ -542,6 +555,7 @@ public class AccountBalanceSD9 {
 		this.unacceptedBalance = unacceptedBalance;
 	}
 
+	@XmlElement(name = "OvrsbcptBal")
 	public SignedQuantityFormat9 getOversubscriptionBalance() {
 		return oversubscriptionBalance;
 	}

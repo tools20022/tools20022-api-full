@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies corporate action dates.
@@ -88,6 +92,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies corporate action dates."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionDate4", propOrder = {"couponClippingDate", "consentExpirationDate", "consentRecordDate", "paymentDate", "earliestPaymentDate", "marketDeadline", "responseDeadline", "deadlineToSplit", "expiryDate",
+		"quotationSettingDate", "subscriptionCostDebitDate"})
 public class CorporateActionDate4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -672,6 +679,7 @@ public class CorporateActionDate4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CpnClpngDt")
 	public DateFormat4Choice getCouponClippingDate() {
 		return couponClippingDate;
 	}
@@ -680,6 +688,7 @@ public class CorporateActionDate4 {
 		this.couponClippingDate = couponClippingDate;
 	}
 
+	@XmlElement(name = "CnsntXprtnDt")
 	public DateFormat4Choice getConsentExpirationDate() {
 		return consentExpirationDate;
 	}
@@ -688,6 +697,7 @@ public class CorporateActionDate4 {
 		this.consentExpirationDate = consentExpirationDate;
 	}
 
+	@XmlElement(name = "CnsntRcrdDt")
 	public DateFormat4Choice getConsentRecordDate() {
 		return consentRecordDate;
 	}
@@ -696,6 +706,7 @@ public class CorporateActionDate4 {
 		this.consentRecordDate = consentRecordDate;
 	}
 
+	@XmlElement(name = "PmtDt")
 	public DateFormat4Choice getPaymentDate() {
 		return paymentDate;
 	}
@@ -704,6 +715,7 @@ public class CorporateActionDate4 {
 		this.paymentDate = paymentDate;
 	}
 
+	@XmlElement(name = "EarlstPmtDt")
 	public DateFormat4Choice getEarliestPaymentDate() {
 		return earliestPaymentDate;
 	}
@@ -712,6 +724,7 @@ public class CorporateActionDate4 {
 		this.earliestPaymentDate = earliestPaymentDate;
 	}
 
+	@XmlElement(name = "MktDdln")
 	public DateFormat4Choice getMarketDeadline() {
 		return marketDeadline;
 	}
@@ -720,6 +733,7 @@ public class CorporateActionDate4 {
 		this.marketDeadline = marketDeadline;
 	}
 
+	@XmlElement(name = "RspnDdln")
 	public DateFormat4Choice getResponseDeadline() {
 		return responseDeadline;
 	}
@@ -728,6 +742,7 @@ public class CorporateActionDate4 {
 		this.responseDeadline = responseDeadline;
 	}
 
+	@XmlElement(name = "DdlnToSplt")
 	public DateFormat4Choice getDeadlineToSplit() {
 		return deadlineToSplit;
 	}
@@ -736,6 +751,7 @@ public class CorporateActionDate4 {
 		this.deadlineToSplit = deadlineToSplit;
 	}
 
+	@XmlElement(name = "XpryDt")
 	public DateFormat4Choice getExpiryDate() {
 		return expiryDate;
 	}
@@ -744,6 +760,7 @@ public class CorporateActionDate4 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "QtnSetngDt")
 	public DateFormat4Choice getQuotationSettingDate() {
 		return quotationSettingDate;
 	}
@@ -752,6 +769,7 @@ public class CorporateActionDate4 {
 		this.quotationSettingDate = quotationSettingDate;
 	}
 
+	@XmlElement(name = "SbcptCostDbtDt")
 	public DateFormat4Choice getSubscriptionCostDebitDate() {
 		return subscriptionCostDebitDate;
 	}

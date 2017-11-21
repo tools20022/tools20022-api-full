@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes account taxing parameters.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Describes account taxing parameters."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountTax1", propOrder = {"calculationMethod", "region", "nonResidenceCountry"})
 public class AccountTax1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -226,6 +232,7 @@ public class AccountTax1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClctnMtd", required = true)
 	public BillingTaxCalculationMethod1Code getCalculationMethod() {
 		return calculationMethod;
 	}
@@ -234,6 +241,7 @@ public class AccountTax1 {
 		this.calculationMethod = calculationMethod;
 	}
 
+	@XmlElement(name = "Rgn")
 	public Max40Text getRegion() {
 		return region;
 	}
@@ -242,6 +250,7 @@ public class AccountTax1 {
 		this.region = region;
 	}
 
+	@XmlElement(name = "NonResCtry")
 	public ResidenceLocation1Choice getNonResidenceCountry() {
 		return nonResidenceCountry;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between netting group identification of an individual trading party.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NettingIdentification1Choice", propOrder = {"tradeParty", "nettingGroupIdentification"})
 public class NettingIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class NettingIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradPty", required = true)
 	public PartyIdentification73Choice getTradeParty() {
 		return tradeParty;
 	}
@@ -168,6 +175,7 @@ public class NettingIdentification1Choice {
 		this.tradeParty = tradeParty;
 	}
 
+	@XmlElement(name = "NetgGrpId", required = true)
 	public Max35Text getNettingGroupIdentification() {
 		return nettingGroupIdentification;
 	}

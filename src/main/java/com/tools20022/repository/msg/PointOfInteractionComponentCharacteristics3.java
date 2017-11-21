@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Physical and logical characteristics of a POI component (Point of
@@ -83,6 +87,8 @@ import java.util.List;
  * PointOfInteractionComponentCharacteristics2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PointOfInteractionComponentCharacteristics3", propOrder = {"memory", "communication", "securityAccessModules", "subscriberIdentityModules", "keyCheckValue", "keyCharacteristic", "encryptedKey"})
 public class PointOfInteractionComponentCharacteristics3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -428,6 +434,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Mmry")
 	public List<MemoryCharacteristics1> getMemory() {
 		return memory;
 	}
@@ -436,6 +443,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 		this.memory = memory;
 	}
 
+	@XmlElement(name = "Com")
 	public List<CommunicationCharacteristics3> getCommunication() {
 		return communication;
 	}
@@ -444,6 +452,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 		this.communication = communication;
 	}
 
+	@XmlElement(name = "SctyAccsMdls")
 	public Number getSecurityAccessModules() {
 		return securityAccessModules;
 	}
@@ -452,6 +461,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 		this.securityAccessModules = securityAccessModules;
 	}
 
+	@XmlElement(name = "SbcbrIdntyMdls")
 	public Number getSubscriberIdentityModules() {
 		return subscriberIdentityModules;
 	}
@@ -460,6 +470,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 		this.subscriberIdentityModules = subscriberIdentityModules;
 	}
 
+	@XmlElement(name = "KeyChckVal")
 	public Max35Binary getKeyCheckValue() {
 		return keyCheckValue;
 	}
@@ -468,6 +479,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 		this.keyCheckValue = keyCheckValue;
 	}
 
+	@XmlElement(name = "KeyChrtc")
 	public KEKIdentifier5 getKeyCharacteristic() {
 		return keyCharacteristic;
 	}
@@ -476,6 +488,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 		this.keyCharacteristic = keyCharacteristic;
 	}
 
+	@XmlElement(name = "NcrptdKey")
 	public Max5000Binary getEncryptedKey() {
 		return encryptedKey;
 	}

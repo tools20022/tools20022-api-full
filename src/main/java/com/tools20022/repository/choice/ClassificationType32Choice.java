@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification36;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the classification.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ClassificationType30Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClassificationType32Choice", propOrder = {"classificationFinancialInstrument", "alternateClassification"})
 public class ClassificationType32Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -193,6 +199,7 @@ public class ClassificationType32Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClssfctnFinInstrm", required = true)
 	public CFIOct2015Identifier getClassificationFinancialInstrument() {
 		return classificationFinancialInstrument;
 	}
@@ -201,6 +208,7 @@ public class ClassificationType32Choice {
 		this.classificationFinancialInstrument = classificationFinancialInstrument;
 	}
 
+	@XmlElement(name = "AltrnClssfctn", required = true)
 	public GenericIdentification36 getAlternateClassification() {
 		return alternateClassification;
 	}

@@ -28,6 +28,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between quantity formats for the balance information.
@@ -72,6 +76,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BalanceQuantity4Choice", propOrder = {"quantity", "proprietary"})
 public class BalanceQuantity4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -212,6 +218,7 @@ public class BalanceQuantity4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public Quantity6Choice getQuantity() {
 		return quantity;
 	}
@@ -220,6 +227,7 @@ public class BalanceQuantity4Choice {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification22 getProprietary() {
 		return proprietary;
 	}

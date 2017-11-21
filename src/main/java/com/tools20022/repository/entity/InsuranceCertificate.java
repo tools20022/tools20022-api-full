@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.InsuranceDataSet1;
 import com.tools20022.repository.msg.RequiredSubmission3;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -44,39 +45,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.InsuranceType1Choice
- * InsuranceType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission3
- * RequiredSubmission3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InsuranceDataSet1
- * InsuranceDataSet1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.InsuranceType2Choice
- * InsuranceType2Choice}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Location#mmInsuranceCertificate
- * Location.mmInsuranceCertificate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmInsurance
- * InvestmentPlan.mmInsurance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmInsuranceCertificate
- * ProductDelivery.mmInsuranceCertificate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InsurancePartyRole#mmInsuranceCertificate
- * InsurancePartyRole.mmInsuranceCertificate}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -112,6 +80,39 @@ import java.util.List;
  * InsuranceCertificate.mmRelatedInvestmentPlan}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.InsuranceType1Choice
+ * InsuranceType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission3
+ * RequiredSubmission3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InsuranceDataSet1
+ * InsuranceDataSet1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.InsuranceType2Choice
+ * InsuranceType2Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Location#mmInsuranceCertificate
+ * Location.mmInsuranceCertificate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmInsurance
+ * InvestmentPlan.mmInsurance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmInsuranceCertificate
+ * ProductDelivery.mmInsuranceCertificate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InsurancePartyRole#mmInsuranceCertificate
+ * InsurancePartyRole.mmInsuranceCertificate}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -142,11 +143,6 @@ public class InsuranceCertificate extends Document {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate
-	 * InsuranceCertificate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -155,6 +151,11 @@ public class InsuranceCertificate extends Document {
 	 * InsuranceDataSet1.mmEffectiveDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate
+	 * InsuranceCertificate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -170,7 +171,7 @@ public class InsuranceCertificate extends Document {
 	public static final MMBusinessAttribute mmEffectiveDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InsuranceDataSet1.mmEffectiveDate);
-			elementContext_lazy = () -> InsuranceCertificate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EffectiveDate";
@@ -178,6 +179,14 @@ public class InsuranceCertificate extends Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InsuranceCertificate.class.getMethod("getEffectiveDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount insuredAmount;
@@ -191,11 +200,6 @@ public class InsuranceCertificate extends Document {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate
-	 * InsuranceCertificate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -204,6 +208,11 @@ public class InsuranceCertificate extends Document {
 	 * InsuranceDataSet1.mmInsuredAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate
+	 * InsuranceCertificate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -219,7 +228,7 @@ public class InsuranceCertificate extends Document {
 	public static final MMBusinessAttribute mmInsuredAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InsuranceDataSet1.mmInsuredAmount);
-			elementContext_lazy = () -> InsuranceCertificate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsuredAmount";
@@ -227,6 +236,14 @@ public class InsuranceCertificate extends Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InsuranceCertificate.class.getMethod("getInsuredAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max350Text insuranceConditions;
@@ -240,11 +257,6 @@ public class InsuranceCertificate extends Document {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate
-	 * InsuranceCertificate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -253,6 +265,11 @@ public class InsuranceCertificate extends Document {
 	 * InsuranceDataSet1.mmInsuranceConditions}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate
+	 * InsuranceCertificate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -269,7 +286,7 @@ public class InsuranceCertificate extends Document {
 	public static final MMBusinessAttribute mmInsuranceConditions = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InsuranceDataSet1.mmInsuranceConditions);
-			elementContext_lazy = () -> InsuranceCertificate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsuranceConditions";
@@ -277,6 +294,14 @@ public class InsuranceCertificate extends Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InsuranceCertificate.class.getMethod("getInsuranceConditions", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InsuranceClausesCode insuranceClauses;
@@ -291,11 +316,6 @@ public class InsuranceCertificate extends Document {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.InsuranceClausesCode
 	 * InsuranceClausesCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate
-	 * InsuranceCertificate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -307,6 +327,11 @@ public class InsuranceCertificate extends Document {
 	 * InsuranceDataSet1.mmInsuranceClauses}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate
+	 * InsuranceCertificate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -323,7 +348,7 @@ public class InsuranceCertificate extends Document {
 	public static final MMBusinessAttribute mmInsuranceClauses = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RequiredSubmission3.mmClausesRequired, InsuranceDataSet1.mmInsuranceClauses);
-			elementContext_lazy = () -> InsuranceCertificate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsuranceClauses";
@@ -331,6 +356,14 @@ public class InsuranceCertificate extends Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InsuranceClausesCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InsuranceCertificate.class.getMethod("getInsuranceClauses", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Location claimsPayableAt;
@@ -350,11 +383,6 @@ public class InsuranceCertificate extends Document {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Location Location}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate
-	 * InsuranceCertificate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -363,6 +391,11 @@ public class InsuranceCertificate extends Document {
 	 * InsuranceDataSet1.mmClaimsPayableAt}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate
+	 * InsuranceCertificate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -378,7 +411,7 @@ public class InsuranceCertificate extends Document {
 	public static final MMBusinessAssociationEnd mmClaimsPayableAt = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InsuranceDataSet1.mmClaimsPayableAt);
-			elementContext_lazy = () -> InsuranceCertificate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClaimsPayableAt";
@@ -400,11 +433,6 @@ public class InsuranceCertificate extends Document {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate
-	 * InsuranceCertificate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -413,6 +441,11 @@ public class InsuranceCertificate extends Document {
 	 * InsuranceDataSet1.mmClaimsPayableIn}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate
+	 * InsuranceCertificate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -427,7 +460,7 @@ public class InsuranceCertificate extends Document {
 	public static final MMBusinessAttribute mmClaimsPayableIn = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InsuranceDataSet1.mmClaimsPayableIn);
-			elementContext_lazy = () -> InsuranceCertificate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClaimsPayableIn";
@@ -435,6 +468,14 @@ public class InsuranceCertificate extends Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InsuranceCertificate.class.getMethod("getClaimsPayableIn", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.InsurancePartyRole> insurancePartyRole;
@@ -473,7 +514,7 @@ public class InsuranceCertificate extends Document {
 	 */
 	public static final MMBusinessAssociationEnd mmInsurancePartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InsuranceCertificate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsurancePartyRole";
@@ -520,7 +561,7 @@ public class InsuranceCertificate extends Document {
 	 */
 	public static final MMBusinessAssociationEnd mmProductDelivery = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InsuranceCertificate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProductDelivery";
@@ -543,11 +584,6 @@ public class InsuranceCertificate extends Document {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.InsuranceCode
 	 * InsuranceCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate
-	 * InsuranceCertificate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -566,6 +602,11 @@ public class InsuranceCertificate extends Document {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate
+	 * InsuranceCertificate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -579,7 +620,7 @@ public class InsuranceCertificate extends Document {
 	public static final MMBusinessAttribute mmInsuranceType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InsuranceType1Choice.mmCode, InsuranceType1Choice.mmProprietary, InsuranceType2Choice.mmCode, InsuranceType2Choice.mmProprietary);
-			elementContext_lazy = () -> InsuranceCertificate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsuranceType";
@@ -587,6 +628,14 @@ public class InsuranceCertificate extends Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InsuranceCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InsuranceCertificate.class.getMethod("getInsuranceType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentPlan relatedInvestmentPlan;
@@ -625,7 +674,7 @@ public class InsuranceCertificate extends Document {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedInvestmentPlan = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InsuranceCertificate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestmentPlan";
@@ -648,10 +697,17 @@ public class InsuranceCertificate extends Document {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Location.mmInsuranceCertificate, com.tools20022.repository.entity.InvestmentPlan.mmInsurance,
 						com.tools20022.repository.entity.ProductDelivery.mmInsuranceCertificate, com.tools20022.repository.entity.InsurancePartyRole.mmInsuranceCertificate);
 				superType_lazy = () -> Document.mmObject();
-				element_lazy = () -> Arrays.asList(InsuranceCertificate.mmEffectiveDate, InsuranceCertificate.mmInsuredAmount, InsuranceCertificate.mmInsuranceConditions, InsuranceCertificate.mmInsuranceClauses,
-						InsuranceCertificate.mmClaimsPayableAt, InsuranceCertificate.mmClaimsPayableIn, InsuranceCertificate.mmInsurancePartyRole, InsuranceCertificate.mmProductDelivery, InsuranceCertificate.mmInsuranceType,
-						InsuranceCertificate.mmRelatedInvestmentPlan);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InsuranceCertificate.mmEffectiveDate, com.tools20022.repository.entity.InsuranceCertificate.mmInsuredAmount,
+						com.tools20022.repository.entity.InsuranceCertificate.mmInsuranceConditions, com.tools20022.repository.entity.InsuranceCertificate.mmInsuranceClauses,
+						com.tools20022.repository.entity.InsuranceCertificate.mmClaimsPayableAt, com.tools20022.repository.entity.InsuranceCertificate.mmClaimsPayableIn,
+						com.tools20022.repository.entity.InsuranceCertificate.mmInsurancePartyRole, com.tools20022.repository.entity.InsuranceCertificate.mmProductDelivery,
+						com.tools20022.repository.entity.InsuranceCertificate.mmInsuranceType, com.tools20022.repository.entity.InsuranceCertificate.mmRelatedInvestmentPlan);
 				derivationComponent_lazy = () -> Arrays.asList(InsuranceType1Choice.mmObject(), RequiredSubmission3.mmObject(), InsuranceDataSet1.mmObject(), InsuranceType2Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InsuranceCertificate.class;
 			}
 		});
 		return mmObject_lazy.get();

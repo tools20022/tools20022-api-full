@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extension to capture new to old ratio with extra digits
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Extension to capture new to old ratio with extra digits"</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionRate19SD1", propOrder = {"placeAndName", "longQuantityToQuantity"})
 public class CorporateActionRate19SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class CorporateActionRate19SD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -171,6 +178,7 @@ public class CorporateActionRate19SD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "LngQtyToQty", required = true)
 	public LongQuantityToQuantityRatio2 getLongQuantityToQuantity() {
 		return longQuantityToQuantity;
 	}

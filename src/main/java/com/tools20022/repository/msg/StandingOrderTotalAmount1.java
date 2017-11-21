@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the overall amount of "not yet executed" predefined
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingOrderTotalAmount1", propOrder = {"setPredefinedOrder", "pendingPredefinedOrder", "setStandingOrder", "pendingStandingOrder"})
 public class StandingOrderTotalAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -256,6 +262,7 @@ public class StandingOrderTotalAmount1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SetPrdfndOrdr", required = true)
 	public TotalAmountAndCurrency1 getSetPredefinedOrder() {
 		return setPredefinedOrder;
 	}
@@ -264,6 +271,7 @@ public class StandingOrderTotalAmount1 {
 		this.setPredefinedOrder = setPredefinedOrder;
 	}
 
+	@XmlElement(name = "PdgPrdfndOrdr", required = true)
 	public TotalAmountAndCurrency1 getPendingPredefinedOrder() {
 		return pendingPredefinedOrder;
 	}
@@ -272,6 +280,7 @@ public class StandingOrderTotalAmount1 {
 		this.pendingPredefinedOrder = pendingPredefinedOrder;
 	}
 
+	@XmlElement(name = "SetStgOrdr", required = true)
 	public TotalAmountAndCurrency1 getSetStandingOrder() {
 		return setStandingOrder;
 	}
@@ -280,6 +289,7 @@ public class StandingOrderTotalAmount1 {
 		this.setStandingOrder = setStandingOrder;
 	}
 
+	@XmlElement(name = "PdgStgOrdr", required = true)
 	public TotalAmountAndCurrency1 getPendingStandingOrder() {
 		return pendingStandingOrder;
 	}

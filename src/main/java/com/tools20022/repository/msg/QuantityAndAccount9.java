@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details on the quantity, account and other related information involved in a
@@ -85,6 +89,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuantityAndAccount9", propOrder = {"settlementQuantity", "denominationChoice", "certificateNumber", "cashAccount", "quantityBreakdown", "safekeepingPlace"})
 public class QuantityAndAccount9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -407,6 +413,7 @@ public class QuantityAndAccount9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmQty", required = true)
 	public FinancialInstrumentQuantity15Choice getSettlementQuantity() {
 		return settlementQuantity;
 	}
@@ -415,6 +422,7 @@ public class QuantityAndAccount9 {
 		this.settlementQuantity = settlementQuantity;
 	}
 
+	@XmlElement(name = "DnmtnChc")
 	public RestrictedFINXMax210Text getDenominationChoice() {
 		return denominationChoice;
 	}
@@ -423,6 +431,7 @@ public class QuantityAndAccount9 {
 		this.denominationChoice = denominationChoice;
 	}
 
+	@XmlElement(name = "CertNb")
 	public List<SecuritiesCertificate2> getCertificateNumber() {
 		return certificateNumber;
 	}
@@ -431,6 +440,7 @@ public class QuantityAndAccount9 {
 		this.certificateNumber = certificateNumber;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccountIdentification6Choice getCashAccount() {
 		return cashAccount;
 	}
@@ -439,6 +449,7 @@ public class QuantityAndAccount9 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "QtyBrkdwn")
 	public List<QuantityBreakdown7> getQuantityBreakdown() {
 		return quantityBreakdown;
 	}
@@ -447,6 +458,7 @@ public class QuantityAndAccount9 {
 		this.quantityBreakdown = quantityBreakdown;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat4Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}

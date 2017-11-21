@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Firms or vendor maintained list of identifiers for the purpose of message
@@ -63,6 +67,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Routing1", propOrder = {"list", "firm", "routingType"})
 public class Routing1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -208,6 +214,7 @@ public class Routing1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "List")
 	public List<Max35Text> getList() {
 		return list;
 	}
@@ -216,6 +223,7 @@ public class Routing1 {
 		this.list = list;
 	}
 
+	@XmlElement(name = "Firm")
 	public List<PartyIdentification23> getFirm() {
 		return firm;
 	}
@@ -224,6 +232,7 @@ public class Routing1 {
 		this.firm = firm;
 	}
 
+	@XmlElement(name = "RtgTp", required = true)
 	public RoutingType1Code getRoutingType() {
 		return routingType;
 	}

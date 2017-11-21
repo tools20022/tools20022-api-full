@@ -37,6 +37,16 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.EmployingPartyRole#mmEmployee
+ * EmployingPartyRole.mmEmployee}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -105,16 +115,6 @@ import java.util.List;
  * IndividualPerson34.mmEmployingCompany}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.EmployingPartyRole#mmEmployee
- * EmployingPartyRole.mmEmployee}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -169,7 +169,7 @@ public class EmployingPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmEmployee = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> EmployingPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.EmployingPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Employee";
@@ -194,7 +194,12 @@ public class EmployingPartyRole extends Role {
 						IndividualPerson22.mmEmployingCompany, IndividualPerson23.mmEmployingCompany, IndividualPerson24.mmEmployingCompany, IndividualPerson25.mmEmployingParty, IndividualPerson26.mmEmployingParty,
 						IndividualPerson28.mmEmployingCompany, IndividualPerson27.mmEmployingCompany, IndividualPerson33.mmEmployingCompany, IndividualPerson34.mmEmployingCompany);
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(EmployingPartyRole.mmEmployee);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.EmployingPartyRole.mmEmployee);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return EmployingPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -26,9 +26,11 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.msg.Demand1;
 import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The UndertakingDemand message and other required documents are sent by the
@@ -41,9 +43,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsrv.013.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
@@ -76,6 +75,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsrv.013.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -87,6 +89,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingDemandV01", propOrder = {"undertakingDemandDetails", "bankToBankInformation", "digitalSignature"})
 public class UndertakingDemandV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -123,6 +127,14 @@ public class UndertakingDemandV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Demand1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingDemandV01.class.getMethod("getUndertakingDemandDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Max2000Text> bankToBankInformation;
 	/**
@@ -157,6 +169,14 @@ public class UndertakingDemandV01 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingDemandV01.class.getMethod("getBankToBankInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyAndSignature2 digitalSignature;
@@ -193,6 +213,14 @@ public class UndertakingDemandV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingDemandV01.class.getMethod("getDigitalSignature", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -205,7 +233,8 @@ public class UndertakingDemandV01 {
 				rootElement = "Document";
 				xmlTag = "UdrtkgDmnd";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingDemandV01.mmUndertakingDemandDetails, UndertakingDemandV01.mmBankToBankInformation, UndertakingDemandV01.mmDigitalSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingDemandV01.mmUndertakingDemandDetails, com.tools20022.repository.area.tsrv.UndertakingDemandV01.mmBankToBankInformation,
+						com.tools20022.repository.area.tsrv.UndertakingDemandV01.mmDigitalSignature);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsrv";
@@ -215,10 +244,16 @@ public class UndertakingDemandV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UndertakingDemandV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UdrtkgDmndDtls", required = true)
 	public Demand1 getUndertakingDemandDetails() {
 		return undertakingDemandDetails;
 	}
@@ -227,6 +262,7 @@ public class UndertakingDemandV01 {
 		this.undertakingDemandDetails = undertakingDemandDetails;
 	}
 
+	@XmlElement(name = "BkToBkInf")
 	public List<Max2000Text> getBankToBankInformation() {
 		return bankToBankInformation;
 	}
@@ -235,11 +271,18 @@ public class UndertakingDemandV01 {
 		this.bankToBankInformation = bankToBankInformation;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public PartyAndSignature2 getDigitalSignature() {
 		return digitalSignature;
 	}
 
 	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
 		this.digitalSignature = digitalSignature;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.013.01.01")
+	static public class Document {
+		@XmlElement(name = "UdrtkgDmnd", required = true)
+		public UndertakingDemandV01 messageBody;
 	}
 }

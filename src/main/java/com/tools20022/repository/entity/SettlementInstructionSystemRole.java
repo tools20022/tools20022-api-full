@@ -39,6 +39,18 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SettlementInstructionSystemRole#mmSystem
+ * SettlementInstructionSystemRole.mmSystem}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.CashSettlementInstructionPartyRole
+ * CashSettlementInstructionPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -61,18 +73,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SettlementInstruction2#mmClearingSystem
  * SettlementInstruction2.mmClearingSystem}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.CashSettlementInstructionPartyRole
- * CashSettlementInstructionPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementInstructionSystemRole#mmSystem
- * SettlementInstructionSystemRole.mmSystem}</li>
  * </ul>
  * </li>
  * <li>
@@ -113,11 +113,6 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashClearingSystem
 	 * CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SettlementInstructionSystemRole
-	 * SettlementInstructionSystemRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -481,6 +476,11 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SettlementInstructionSystemRole
+	 * SettlementInstructionSystemRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -519,7 +519,7 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 					SettlementDetails120.mmCashClearingSystem, SettlementDetails119.mmCashClearingSystem, SettlementDetails125.mmCashClearingSystem, SettlementDetails126.mmCashClearingSystem, SettlementDetails122.mmCashClearingSystem,
 					SettlementDetails127.mmCashClearingSystem, SettlementDetails121.mmCashClearingSystem, SettlementDetails134.mmCashClearingSystem, SettlementDetails137.mmCashClearingSystem, SettlementDetails132.mmCashClearingSystem,
 					SettlementDetails138.mmCashClearingSystem, SettlementDetails130.mmCashClearingSystem, SettlementDetails131.mmCashClearingSystem, SettlementDetails133.mmCashClearingSystem, SettlementDetails139.mmCashClearingSystem);
-			elementContext_lazy = () -> SettlementInstructionSystemRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SettlementInstructionSystemRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
@@ -541,7 +541,12 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashClearingSystem.mmSystemRole);
 				derivationElement_lazy = () -> Arrays.asList(SettlementInstruction4.mmClearingSystem, SettlementInstruction1.mmClearingSystem, SettlementInstruction2.mmClearingSystem);
 				superType_lazy = () -> CashSettlementInstructionPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(SettlementInstructionSystemRole.mmSystem);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SettlementInstructionSystemRole.mmSystem);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SettlementInstructionSystemRole.class;
 			}
 		});
 		return mmObject_lazy.get();

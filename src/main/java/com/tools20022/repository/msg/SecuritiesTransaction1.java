@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of the reported transaction.
@@ -93,6 +97,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the details of the reported transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTransaction1", propOrder = {"tradeDate", "tradingCapacity", "quantity", "derivativeNotionalChange", "price", "netAmount", "tradeVenue", "countryOfBranch", "upFrontPayment", "tradePlaceMatchingIdentification",
+		"complexTradeComponentIdentification"})
 public class SecuritiesTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -711,6 +718,7 @@ public class SecuritiesTransaction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public ISODateTime getTradeDate() {
 		return tradeDate;
 	}
@@ -719,6 +727,7 @@ public class SecuritiesTransaction1 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "TradgCpcty", required = true)
 	public RegulatoryTradingCapacity1Code getTradingCapacity() {
 		return tradingCapacity;
 	}
@@ -727,6 +736,7 @@ public class SecuritiesTransaction1 {
 		this.tradingCapacity = tradingCapacity;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity25Choice getQuantity() {
 		return quantity;
 	}
@@ -735,6 +745,7 @@ public class SecuritiesTransaction1 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "DerivNtnlChng")
 	public VariationType1Code getDerivativeNotionalChange() {
 		return derivativeNotionalChange;
 	}
@@ -743,6 +754,7 @@ public class SecuritiesTransaction1 {
 		this.derivativeNotionalChange = derivativeNotionalChange;
 	}
 
+	@XmlElement(name = "Pric", required = true)
 	public SecuritiesTransactionPrice4Choice getPrice() {
 		return price;
 	}
@@ -751,6 +763,7 @@ public class SecuritiesTransaction1 {
 		this.price = price;
 	}
 
+	@XmlElement(name = "NetAmt")
 	public ImpliedCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
@@ -759,6 +772,7 @@ public class SecuritiesTransaction1 {
 		this.netAmount = netAmount;
 	}
 
+	@XmlElement(name = "TradVn", required = true)
 	public MICIdentifier getTradeVenue() {
 		return tradeVenue;
 	}
@@ -767,6 +781,7 @@ public class SecuritiesTransaction1 {
 		this.tradeVenue = tradeVenue;
 	}
 
+	@XmlElement(name = "CtryOfBrnch")
 	public CountryCode getCountryOfBranch() {
 		return countryOfBranch;
 	}
@@ -775,6 +790,7 @@ public class SecuritiesTransaction1 {
 		this.countryOfBranch = countryOfBranch;
 	}
 
+	@XmlElement(name = "UpFrntPmt")
 	public AmountAndDirection53 getUpFrontPayment() {
 		return upFrontPayment;
 	}
@@ -783,6 +799,7 @@ public class SecuritiesTransaction1 {
 		this.upFrontPayment = upFrontPayment;
 	}
 
+	@XmlElement(name = "TradPlcMtchgId")
 	public Max52Text getTradePlaceMatchingIdentification() {
 		return tradePlaceMatchingIdentification;
 	}
@@ -791,6 +808,7 @@ public class SecuritiesTransaction1 {
 		this.tradePlaceMatchingIdentification = tradePlaceMatchingIdentification;
 	}
 
+	@XmlElement(name = "CmplxTradCmpntId")
 	public Max35Text getComplexTradeComponentIdentification() {
 		return complexTradeComponentIdentification;
 	}

@@ -68,6 +68,11 @@ public class SponsoringFirm extends SecuritiesOrderPartyRole {
 				definition = "Member of an exchange that is sponsoring an entering entity to send orders to the exchange. The sponsoring member firm permits sponsorees to enter orders directly to the exchange via automated means.";
 				superType_lazy = () -> SecuritiesOrderPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SponsoringFirm.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

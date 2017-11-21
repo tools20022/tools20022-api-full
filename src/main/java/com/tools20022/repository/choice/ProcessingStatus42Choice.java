@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.ProprietaryReason2;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the processing status.
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of format for the processing status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProcessingStatus42Choice", propOrder = {"acknowledgedAccepted", "pendingProcessing", "rejected", "repair", "cancelled", "pendingCancellation", "proprietary", "cancellationRequested", "modificationRequested"})
 public class ProcessingStatus42Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -558,6 +564,7 @@ public class ProcessingStatus42Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AckdAccptd", required = true)
 	public AcknowledgedAcceptedStatus20Choice getAcknowledgedAccepted() {
 		return acknowledgedAccepted;
 	}
@@ -566,6 +573,7 @@ public class ProcessingStatus42Choice {
 		this.acknowledgedAccepted = acknowledgedAccepted;
 	}
 
+	@XmlElement(name = "PdgPrcg", required = true)
 	public PendingProcessingStatus9Choice getPendingProcessing() {
 		return pendingProcessing;
 	}
@@ -574,6 +582,7 @@ public class ProcessingStatus42Choice {
 		this.pendingProcessing = pendingProcessing;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectionStatus16Choice getRejected() {
 		return rejected;
 	}
@@ -582,6 +591,7 @@ public class ProcessingStatus42Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Rpr", required = true)
 	public RepairStatus10Choice getRepair() {
 		return repair;
 	}
@@ -590,6 +600,7 @@ public class ProcessingStatus42Choice {
 		this.repair = repair;
 	}
 
+	@XmlElement(name = "Canc", required = true)
 	public CancellationStatus11Choice getCancelled() {
 		return cancelled;
 	}
@@ -598,6 +609,7 @@ public class ProcessingStatus42Choice {
 		this.cancelled = cancelled;
 	}
 
+	@XmlElement(name = "PdgCxl", required = true)
 	public PendingStatus24Choice getPendingCancellation() {
 		return pendingCancellation;
 	}
@@ -606,6 +618,7 @@ public class ProcessingStatus42Choice {
 		this.pendingCancellation = pendingCancellation;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason2 getProprietary() {
 		return proprietary;
 	}
@@ -614,6 +627,7 @@ public class ProcessingStatus42Choice {
 		this.proprietary = proprietary;
 	}
 
+	@XmlElement(name = "CxlReqd", required = true)
 	public ProprietaryReason2 getCancellationRequested() {
 		return cancellationRequested;
 	}
@@ -622,6 +636,7 @@ public class ProcessingStatus42Choice {
 		this.cancellationRequested = cancellationRequested;
 	}
 
+	@XmlElement(name = "ModReqd", required = true)
 	public ProprietaryReason2 getModificationRequested() {
 		return modificationRequested;
 	}

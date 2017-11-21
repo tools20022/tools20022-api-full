@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Execution of a redemption order.
@@ -109,6 +113,9 @@ import java.util.List;
  * RedemptionMultipleExecution3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RedemptionMultipleExecution5", propOrder = {"amendmentIndicator", "masterReference", "placeOfTrade", "orderDateTime", "receivedDateTime", "requestedFutureTradeDate", "cancellationRight", "investmentAccountDetails",
+		"beneficiaryDetails", "individualExecutionDetails", "totalSettlementAmount", "bulkCashSettlementDetails"})
 public class RedemptionMultipleExecution5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -763,6 +770,7 @@ public class RedemptionMultipleExecution5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AmdmntInd")
 	public YesNoIndicator getAmendmentIndicator() {
 		return amendmentIndicator;
 	}
@@ -771,6 +779,7 @@ public class RedemptionMultipleExecution5 {
 		this.amendmentIndicator = amendmentIndicator;
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -779,6 +788,7 @@ public class RedemptionMultipleExecution5 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public PlaceOfTradeIdentification1Choice getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -787,6 +797,7 @@ public class RedemptionMultipleExecution5 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "OrdrDtTm")
 	public ISODateTime getOrderDateTime() {
 		return orderDateTime;
 	}
@@ -795,6 +806,7 @@ public class RedemptionMultipleExecution5 {
 		this.orderDateTime = orderDateTime;
 	}
 
+	@XmlElement(name = "RcvdDtTm")
 	public ISODateTime getReceivedDateTime() {
 		return receivedDateTime;
 	}
@@ -803,6 +815,7 @@ public class RedemptionMultipleExecution5 {
 		this.receivedDateTime = receivedDateTime;
 	}
 
+	@XmlElement(name = "ReqdFutrTradDt")
 	public ISODate getRequestedFutureTradeDate() {
 		return requestedFutureTradeDate;
 	}
@@ -811,6 +824,7 @@ public class RedemptionMultipleExecution5 {
 		this.requestedFutureTradeDate = requestedFutureTradeDate;
 	}
 
+	@XmlElement(name = "CxlRght")
 	public CancellationRight1Choice getCancellationRight() {
 		return cancellationRight;
 	}
@@ -819,6 +833,7 @@ public class RedemptionMultipleExecution5 {
 		this.cancellationRight = cancellationRight;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount58 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -827,6 +842,7 @@ public class RedemptionMultipleExecution5 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "BnfcryDtls")
 	public List<IndividualPerson32> getBeneficiaryDetails() {
 		return beneficiaryDetails;
 	}
@@ -835,6 +851,7 @@ public class RedemptionMultipleExecution5 {
 		this.beneficiaryDetails = beneficiaryDetails;
 	}
 
+	@XmlElement(name = "IndvExctnDtls", required = true)
 	public List<RedemptionExecution15> getIndividualExecutionDetails() {
 		return individualExecutionDetails;
 	}
@@ -843,6 +860,7 @@ public class RedemptionMultipleExecution5 {
 		this.individualExecutionDetails = individualExecutionDetails;
 	}
 
+	@XmlElement(name = "TtlSttlmAmt")
 	public ActiveCurrencyAndAmount getTotalSettlementAmount() {
 		return totalSettlementAmount;
 	}
@@ -851,6 +869,7 @@ public class RedemptionMultipleExecution5 {
 		this.totalSettlementAmount = totalSettlementAmount;
 	}
 
+	@XmlElement(name = "BlkCshSttlmDtls")
 	public PaymentTransaction72 getBulkCashSettlementDetails() {
 		return bulkCashSettlementDetails;
 	}

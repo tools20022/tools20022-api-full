@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProxyAppointmentInformation3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of proxy allowance.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Proxy1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Proxy2Choice", propOrder = {"proxy", "proxyNotAllowed"})
 public class Proxy2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class Proxy2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prxy", required = true)
 	public ProxyAppointmentInformation3 getProxy() {
 		return proxy;
 	}
@@ -193,6 +200,7 @@ public class Proxy2Choice {
 		this.proxy = proxy;
 	}
 
+	@XmlElement(name = "PrxyNotAllwd", required = true)
 	public ProxyNotAllowedCode getProxyNotAllowed() {
 		return proxyNotAllowed;
 	}

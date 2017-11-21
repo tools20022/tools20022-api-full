@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the cash option.
@@ -89,6 +93,9 @@ import java.util.function.Supplier;
  * definition} = "Provides information about the cash option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashOption22", propOrder = {"creditDebitIndicator", "contractualPaymentIndicator", "incomeType", "account", "cashParties", "amountDetails", "dateDetails", "foreignExchangeDetails", "taxVoucherDetails",
+		"rateAndAmountDetails", "priceDetails"})
 public class CashOption22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -640,6 +647,7 @@ public class CashOption22 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -648,6 +656,7 @@ public class CashOption22 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "CtrctlPmtInd")
 	public Payment1Code getContractualPaymentIndicator() {
 		return contractualPaymentIndicator;
 	}
@@ -656,6 +665,7 @@ public class CashOption22 {
 		this.contractualPaymentIndicator = contractualPaymentIndicator;
 	}
 
+	@XmlElement(name = "IncmTp")
 	public GenericIdentification25 getIncomeType() {
 		return incomeType;
 	}
@@ -664,6 +674,7 @@ public class CashOption22 {
 		this.incomeType = incomeType;
 	}
 
+	@XmlElement(name = "Acct")
 	public Account9Choice getAccount() {
 		return account;
 	}
@@ -672,6 +683,7 @@ public class CashOption22 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "CshPties")
 	public CashParties12 getCashParties() {
 		return cashParties;
 	}
@@ -680,6 +692,7 @@ public class CashOption22 {
 		this.cashParties = cashParties;
 	}
 
+	@XmlElement(name = "AmtDtls", required = true)
 	public CorporateActionAmounts20 getAmountDetails() {
 		return amountDetails;
 	}
@@ -688,6 +701,7 @@ public class CashOption22 {
 		this.amountDetails = amountDetails;
 	}
 
+	@XmlElement(name = "DtDtls", required = true)
 	public CorporateActionDate24 getDateDetails() {
 		return dateDetails;
 	}
@@ -696,6 +710,7 @@ public class CashOption22 {
 		this.dateDetails = dateDetails;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public ForeignExchangeTerms12 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -704,6 +719,7 @@ public class CashOption22 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "TaxVchrDtls")
 	public TaxVoucher3 getTaxVoucherDetails() {
 		return taxVoucherDetails;
 	}
@@ -712,6 +728,7 @@ public class CashOption22 {
 		this.taxVoucherDetails = taxVoucherDetails;
 	}
 
+	@XmlElement(name = "RateAndAmtDtls")
 	public RateDetails9 getRateAndAmountDetails() {
 		return rateAndAmountDetails;
 	}
@@ -720,6 +737,7 @@ public class CashOption22 {
 		this.rateAndAmountDetails = rateAndAmountDetails;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public PriceDetails9 getPriceDetails() {
 		return priceDetails;
 	}

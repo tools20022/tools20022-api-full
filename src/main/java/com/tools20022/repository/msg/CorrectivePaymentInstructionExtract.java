@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of a correction of a payment instruction. The information contained
@@ -92,6 +96,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorrectivePaymentInstructionExtract", propOrder = {"instructionIdentification", "instructedAmount", "interbankSettlementAmount", "requestedExecutionDate", "interbankSettlementDate"})
 public class CorrectivePaymentInstructionExtract {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -461,6 +467,7 @@ public class CorrectivePaymentInstructionExtract {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrId", required = true)
 	public Max35Text getInstructionIdentification() {
 		return instructionIdentification;
 	}
@@ -469,6 +476,7 @@ public class CorrectivePaymentInstructionExtract {
 		this.instructionIdentification = instructionIdentification;
 	}
 
+	@XmlElement(name = "InstdAmt", required = true)
 	public CurrencyAndAmount getInstructedAmount() {
 		return instructedAmount;
 	}
@@ -477,6 +485,7 @@ public class CorrectivePaymentInstructionExtract {
 		this.instructedAmount = instructedAmount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmt", required = true)
 	public CurrencyAndAmount getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
@@ -485,6 +494,7 @@ public class CorrectivePaymentInstructionExtract {
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
 
+	@XmlElement(name = "ReqdExctnDt", required = true)
 	public ISODate getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -493,6 +503,7 @@ public class CorrectivePaymentInstructionExtract {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDt", required = true)
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Underlying reason for the payment transaction, eg, a charity payment, or a
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PurposeChoice", propOrder = {"proprietary", "code"})
 public class PurposeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -182,6 +188,7 @@ public class PurposeChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public Max35Text getProprietary() {
 		return proprietary;
 	}
@@ -190,6 +197,7 @@ public class PurposeChoice {
 		this.proprietary = proprietary;
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public PaymentPurpose1Code getCode() {
 		return code;
 	}

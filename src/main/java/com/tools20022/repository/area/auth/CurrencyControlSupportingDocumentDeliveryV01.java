@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.CurrencyControlHeader3;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.SupportingDocument1;
 import com.tools20022.repository.msgset.CrossBorderTransactionsCurrencyControlReportingISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The CurrencyControlSupportingDocumentDelivery message is sent by either the
@@ -38,9 +40,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.025.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -73,6 +72,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.025.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -84,6 +86,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyControlSupportingDocumentDeliveryV01", propOrder = {"groupHeader", "supportingDocument", "supplementaryData"})
 public class CurrencyControlSupportingDocumentDeliveryV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -123,6 +127,14 @@ public class CurrencyControlSupportingDocumentDeliveryV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CurrencyControlHeader3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CurrencyControlSupportingDocumentDeliveryV01.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupportingDocument1> supportingDocument;
 	/**
@@ -158,6 +170,14 @@ public class CurrencyControlSupportingDocumentDeliveryV01 {
 			definition = "Details of the supporting document provided for the registered contract.";
 			minOccurs = 1;
 			complexType_lazy = () -> SupportingDocument1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CurrencyControlSupportingDocumentDeliveryV01.class.getMethod("getSupportingDocument", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -196,6 +216,14 @@ public class CurrencyControlSupportingDocumentDeliveryV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CurrencyControlSupportingDocumentDeliveryV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -208,8 +236,8 @@ public class CurrencyControlSupportingDocumentDeliveryV01 {
 				rootElement = "Document";
 				xmlTag = "CcyCtrlSpprtgDocDlvry";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CurrencyControlSupportingDocumentDeliveryV01.mmGroupHeader, CurrencyControlSupportingDocumentDeliveryV01.mmSupportingDocument,
-						CurrencyControlSupportingDocumentDeliveryV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.CurrencyControlSupportingDocumentDeliveryV01.mmGroupHeader,
+						com.tools20022.repository.area.auth.CurrencyControlSupportingDocumentDeliveryV01.mmSupportingDocument, com.tools20022.repository.area.auth.CurrencyControlSupportingDocumentDeliveryV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -219,10 +247,16 @@ public class CurrencyControlSupportingDocumentDeliveryV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CurrencyControlSupportingDocumentDeliveryV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public CurrencyControlHeader3 getGroupHeader() {
 		return groupHeader;
 	}
@@ -231,6 +265,7 @@ public class CurrencyControlSupportingDocumentDeliveryV01 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "SpprtgDoc", required = true)
 	public List<SupportingDocument1> getSupportingDocument() {
 		return supportingDocument;
 	}
@@ -239,11 +274,18 @@ public class CurrencyControlSupportingDocumentDeliveryV01 {
 		this.supportingDocument = supportingDocument;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.025.01.01")
+	static public class Document {
+		@XmlElement(name = "CcyCtrlSpprtgDocDlvry", required = true)
+		public CurrencyControlSupportingDocumentDeliveryV01 messageBody;
 	}
 }

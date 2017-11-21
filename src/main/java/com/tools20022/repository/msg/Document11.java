@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a document.
@@ -65,6 +69,8 @@ import java.util.List;
  * definition} = "Information about a document."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Document11", propOrder = {"type", "wording", "electronicDetails"})
 public class Document11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -216,6 +222,7 @@ public class Document11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public PresentationDocumentFormat1Choice getType() {
 		return type;
 	}
@@ -224,6 +231,7 @@ public class Document11 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Wrdg")
 	public Max20000Text getWording() {
 		return wording;
 	}
@@ -232,6 +240,7 @@ public class Document11 {
 		this.wording = wording;
 	}
 
+	@XmlElement(name = "ElctrncDtls")
 	public List<Presentation3> getElectronicDetails() {
 		return electronicDetails;
 	}

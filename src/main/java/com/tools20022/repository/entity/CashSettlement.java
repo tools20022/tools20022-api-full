@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.entity.Settlement;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -42,6 +43,50 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementAmount
+ * CashSettlement.mmInterbankSettlementAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementDate
+ * CashSettlement.mmInterbankSettlementDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashSettlement#mmRTGS
+ * CashSettlement.mmRTGS}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmCreditDateTime
+ * CashSettlement.mmCreditDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmRelatedPaymentInstruction
+ * CashSettlement.mmRelatedPaymentInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmSettlementMethod
+ * CashSettlement.mmSettlementMethod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmSettlementAccount
+ * CashSettlement.mmSettlementAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmDebitDateTime
+ * CashSettlement.mmDebitDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashSettlement#mmPartyRole
+ * CashSettlement.mmPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmRelatedTransactionAdministrator
+ * CashSettlement.mmRelatedTransactionAdministrator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashSettlement#mmBookEntry
+ * CashSettlement.mmBookEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmRelatedInvestigationCase
+ * CashSettlement.mmRelatedInvestigationCase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmReservation
+ * CashSettlement.mmReservation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Settlement
+ * Settlement}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -141,50 +186,6 @@ import java.util.List;
  * RequestedModification6.mmSettlementInformation}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Settlement
- * Settlement}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementAmount
- * CashSettlement.mmInterbankSettlementAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementDate
- * CashSettlement.mmInterbankSettlementDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashSettlement#mmRTGS
- * CashSettlement.mmRTGS}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmCreditDateTime
- * CashSettlement.mmCreditDateTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmRelatedPaymentInstruction
- * CashSettlement.mmRelatedPaymentInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmSettlementMethod
- * CashSettlement.mmSettlementMethod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmSettlementAccount
- * CashSettlement.mmSettlementAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmDebitDateTime
- * CashSettlement.mmDebitDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashSettlement#mmPartyRole
- * CashSettlement.mmPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmRelatedTransactionAdministrator
- * CashSettlement.mmRelatedTransactionAdministrator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashSettlement#mmBookEntry
- * CashSettlement.mmBookEntry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmRelatedInvestigationCase
- * CashSettlement.mmRelatedInvestigationCase}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmReservation
- * CashSettlement.mmReservation}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -217,11 +218,6 @@ public class CashSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement
-	 * CashSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -723,6 +719,11 @@ public class CashSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement
+	 * CashSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -790,7 +791,7 @@ public class CashSettlement extends Settlement {
 					PaymentTransaction81.mmReversedInterbankSettlementAmount, RequestedModification6.mmInterbankSettlementAmount, PaymentTransaction76.mmOriginalInterbankSettlementAmount,
 					PaymentTransaction76.mmReturnedInterbankSettlementAmount, OriginalTransactionReference24.mmInterbankSettlementAmount, PaymentTransaction75.mmOriginalInterbankSettlementAmount,
 					PaymentTransaction79.mmOriginalInterbankSettlementAmount, PaymentComplementaryInformation6.mmInterbankSettlementAmount);
-			elementContext_lazy = () -> CashSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterbankSettlementAmount";
@@ -798,6 +799,14 @@ public class CashSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashSettlement.class.getMethod("getInterbankSettlementAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime interbankSettlementDate;
@@ -812,11 +821,6 @@ public class CashSettlement extends Settlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement
-	 * CashSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1255,6 +1259,11 @@ public class CashSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement
+	 * CashSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1307,7 +1316,7 @@ public class CashSettlement extends Settlement {
 					DirectDebitTransactionInformation21.mmInterbankSettlementDate, PaymentTransaction81.mmInterbankSettlementDate, RequestedModification6.mmInterbankSettlementDate, PaymentTransaction76.mmInterbankSettlementDate,
 					OriginalTransactionReference24.mmInterbankSettlementDate, PaymentTransaction75.mmOriginalInterbankSettlementDate, PaymentTransaction79.mmOriginalInterbankSettlementDate,
 					PaymentComplementaryInformation6.mmInterbankSettlementDate);
-			elementContext_lazy = () -> CashSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterbankSettlementDate";
@@ -1315,6 +1324,14 @@ public class CashSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashSettlement.class.getMethod("getInterbankSettlementDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max4AlphaNumericText rTGS;
@@ -1328,11 +1345,6 @@ public class CashSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max4AlphaNumericText
 	 * Max4AlphaNumericText}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement
-	 * CashSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1344,6 +1356,11 @@ public class CashSettlement extends Settlement {
 	 * PaymentStatusCode6Choice.mmRTGS}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement
+	 * CashSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1358,7 +1375,7 @@ public class CashSettlement extends Settlement {
 	public static final MMBusinessAttribute mmRTGS = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentStatusCode5Choice.mmRTGS, PaymentStatusCode6Choice.mmRTGS);
-			elementContext_lazy = () -> CashSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RTGS";
@@ -1366,6 +1383,14 @@ public class CashSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashSettlement.class.getMethod("getRTGS", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime creditDateTime;
@@ -1379,11 +1404,6 @@ public class CashSettlement extends Settlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement
-	 * CashSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1395,6 +1415,11 @@ public class CashSettlement extends Settlement {
 	 * PaymentTransactionInformation31.mmOriginalInterbankSettlementDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement
+	 * CashSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1411,7 +1436,7 @@ public class CashSettlement extends Settlement {
 	public static final MMBusinessAttribute mmCreditDateTime = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementDateTimeIndication1.mmCreditDateTime, PaymentTransactionInformation31.mmOriginalInterbankSettlementDate);
-			elementContext_lazy = () -> CashSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDateTime";
@@ -1419,6 +1444,14 @@ public class CashSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashSettlement.class.getMethod("getCreditDateTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PaymentInstruction relatedPaymentInstruction;
@@ -1458,7 +1491,7 @@ public class CashSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPaymentInstruction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPaymentInstruction";
@@ -1481,11 +1514,6 @@ public class CashSettlement extends Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementMethodCode
 	 * SettlementMethodCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement
-	 * CashSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1537,6 +1565,11 @@ public class CashSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement
+	 * CashSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1554,7 +1587,7 @@ public class CashSettlement extends Settlement {
 					SettlementInstruction1.mmSettlementMethod, SettlementInformation2.mmSettlementMethod, SettlementInformation14.mmSettlementMethod, SettlementInstruction2.mmSettlementMethod, SettlementInformation16.mmSettlementMethod,
 					SettlementInformation10.mmSettlementMethod, SettlementInformation6.mmSettlementMethod, SettlementInformation11.mmSettlementMethod, SettlementInformation12.mmSettlementMethod, SettlementInformation8.mmSettlementMethod,
 					SettlementInformation9.mmSettlementMethod);
-			elementContext_lazy = () -> CashSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementMethod";
@@ -1562,6 +1595,14 @@ public class CashSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementMethodCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashSettlement.class.getMethod("getSettlementMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CashAccount settlementAccount;
@@ -1583,11 +1624,6 @@ public class CashSettlement extends Settlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement
-	 * CashSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1651,6 +1687,11 @@ public class CashSettlement extends Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement
+	 * CashSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1670,7 +1711,7 @@ public class CashSettlement extends Settlement {
 					SettlementInstruction2.mmSettlementAccount, Demand1.mmSettlementAccount, SettlementInformation16.mmSettlementAccount, PaymentComplementaryInformation.mmNostroVostroAccount, PaymentInformation15.mmPaymentAccount,
 					SettlementInformation10.mmSettlementAccount, SettlementInformation6.mmSettlementAccount, SettlementInformation11.mmSettlementAccount, SettlementInformation12.mmSettlementAccount,
 					SettlementInformation8.mmSettlementAccount, SettlementInformation9.mmSettlementAccount);
-			elementContext_lazy = () -> CashSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementAccount";
@@ -1693,11 +1734,6 @@ public class CashSettlement extends Settlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement
-	 * CashSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1706,6 +1742,11 @@ public class CashSettlement extends Settlement {
 	 * SettlementDateTimeIndication1.mmDebitDateTime}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement
+	 * CashSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1722,7 +1763,7 @@ public class CashSettlement extends Settlement {
 	public static final MMBusinessAttribute mmDebitDateTime = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementDateTimeIndication1.mmDebitDateTime);
-			elementContext_lazy = () -> CashSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitDateTime";
@@ -1730,6 +1771,14 @@ public class CashSettlement extends Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashSettlement.class.getMethod("getDebitDateTime", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.CashSettlementInstructionPartyRole> partyRole;
@@ -1752,11 +1801,6 @@ public class CashSettlement extends Settlement {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CashSettlementInstructionPartyRole
 	 * CashSettlementInstructionPartyRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement
-	 * CashSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1767,6 +1811,11 @@ public class CashSettlement extends Settlement {
 	 * BillingSearchCriteria1.mmCSDOrNCB}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement
+	 * CashSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1783,7 +1832,7 @@ public class CashSettlement extends Settlement {
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingReport1.mmCSDOrNCB, BillingSearchCriteria1.mmCSDOrNCB);
-			elementContext_lazy = () -> CashSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
@@ -1834,7 +1883,7 @@ public class CashSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedTransactionAdministrator = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedTransactionAdministrator";
@@ -1884,7 +1933,7 @@ public class CashSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmBookEntry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BookEntry";
@@ -1936,7 +1985,7 @@ public class CashSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedInvestigationCase = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestigationCase";
@@ -1984,7 +2033,7 @@ public class CashSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmReservation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashSettlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reservation";
@@ -2011,14 +2060,21 @@ public class CashSettlement extends Settlement {
 				derivationElement_lazy = () -> Arrays.asList(RequestedModification3.mmSettlementInformation, RequestedModification4.mmSettlementInformation, RequestedModification5.mmSettlementInformation,
 						RequestedModification6.mmSettlementInformation);
 				superType_lazy = () -> Settlement.mmObject();
-				element_lazy = () -> Arrays.asList(CashSettlement.mmInterbankSettlementAmount, CashSettlement.mmInterbankSettlementDate, CashSettlement.mmRTGS, CashSettlement.mmCreditDateTime, CashSettlement.mmRelatedPaymentInstruction,
-						CashSettlement.mmSettlementMethod, CashSettlement.mmSettlementAccount, CashSettlement.mmDebitDateTime, CashSettlement.mmPartyRole, CashSettlement.mmRelatedTransactionAdministrator, CashSettlement.mmBookEntry,
-						CashSettlement.mmRelatedInvestigationCase, CashSettlement.mmReservation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount, com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate,
+						com.tools20022.repository.entity.CashSettlement.mmRTGS, com.tools20022.repository.entity.CashSettlement.mmCreditDateTime, com.tools20022.repository.entity.CashSettlement.mmRelatedPaymentInstruction,
+						com.tools20022.repository.entity.CashSettlement.mmSettlementMethod, com.tools20022.repository.entity.CashSettlement.mmSettlementAccount, com.tools20022.repository.entity.CashSettlement.mmDebitDateTime,
+						com.tools20022.repository.entity.CashSettlement.mmPartyRole, com.tools20022.repository.entity.CashSettlement.mmRelatedTransactionAdministrator, com.tools20022.repository.entity.CashSettlement.mmBookEntry,
+						com.tools20022.repository.entity.CashSettlement.mmRelatedInvestigationCase, com.tools20022.repository.entity.CashSettlement.mmReservation);
 				derivationComponent_lazy = () -> Arrays.asList(SettlementInformation3.mmObject(), SettlementInformation1.mmObject(), SettlementInformation13.mmObject(), SettlementInstruction4.mmObject(),
 						SettlementDateTimeIndication1.mmObject(), SettlementInstruction1.mmObject(), SettlementInformation2.mmObject(), SettlementInformation14.mmObject(), SettlementInstruction2.mmObject(),
 						SettlementInformation16.mmObject(), PaymentSchemeChoice.mmObject(), ReturnInformation1.mmObject(), SettlementInformation15.mmObject(), ResolutionInformation1.mmObject(), SettlementTerms1.mmObject(),
 						SettlementTerms2.mmObject(), SettlementInstruction3.mmObject(), SettlementInformation10.mmObject(), SettlementInformation6.mmObject(), SettlementInformation11.mmObject(), SettlementInformation12.mmObject(),
 						SettlementInformation8.mmObject(), SettlementInformation9.mmObject(), SettlementTerms3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CashSettlement.class;
 			}
 		});
 		return mmObject_lazy.get();

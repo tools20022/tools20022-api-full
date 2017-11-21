@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about instructions specific to pegged orders.
@@ -90,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides details about instructions specific to pegged orders."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PegOrderInstructions1", propOrder = {"offset", "relatedPriceType", "moveType", "offsetType", "limitType", "roundDirection", "scope", "offsetSign", "pegSecurityDetails"})
 public class PegOrderInstructions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -553,6 +559,7 @@ public class PegOrderInstructions1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Offset")
 	public ActiveCurrencyAndAmount getOffset() {
 		return offset;
 	}
@@ -561,6 +568,7 @@ public class PegOrderInstructions1 {
 		this.offset = offset;
 	}
 
+	@XmlElement(name = "RltdPricTp")
 	public PegType1Code getRelatedPriceType() {
 		return relatedPriceType;
 	}
@@ -569,6 +577,7 @@ public class PegOrderInstructions1 {
 		this.relatedPriceType = relatedPriceType;
 	}
 
+	@XmlElement(name = "MvTp")
 	public MoveType1Code getMoveType() {
 		return moveType;
 	}
@@ -577,6 +586,7 @@ public class PegOrderInstructions1 {
 		this.moveType = moveType;
 	}
 
+	@XmlElement(name = "OffsetTp")
 	public OffsetType1Code getOffsetType() {
 		return offsetType;
 	}
@@ -585,6 +595,7 @@ public class PegOrderInstructions1 {
 		this.offsetType = offsetType;
 	}
 
+	@XmlElement(name = "LmtTp")
 	public Max35Text getLimitType() {
 		return limitType;
 	}
@@ -593,6 +604,7 @@ public class PegOrderInstructions1 {
 		this.limitType = limitType;
 	}
 
+	@XmlElement(name = "RndDrctn")
 	public Max35Text getRoundDirection() {
 		return roundDirection;
 	}
@@ -601,6 +613,7 @@ public class PegOrderInstructions1 {
 		this.roundDirection = roundDirection;
 	}
 
+	@XmlElement(name = "Scp")
 	public PriceProtectionScope2Code getScope() {
 		return scope;
 	}
@@ -609,6 +622,7 @@ public class PegOrderInstructions1 {
 		this.scope = scope;
 	}
 
+	@XmlElement(name = "OffsetSgn")
 	public PlusOrMinusIndicator getOffsetSign() {
 		return offsetSign;
 	}
@@ -617,6 +631,7 @@ public class PegOrderInstructions1 {
 		this.offsetSign = offsetSign;
 	}
 
+	@XmlElement(name = "PegSctyDtls")
 	public SecurityIdentification7 getPegSecurityDetails() {
 		return pegSecurityDetails;
 	}

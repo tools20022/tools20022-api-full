@@ -68,6 +68,11 @@ public class CorporateActionOfferor extends CorporateActionPartyRole {
 				definition = "Provides the entity making the offer and that is different from the issuing company.";
 				superType_lazy = () -> CorporateActionPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionOfferor.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

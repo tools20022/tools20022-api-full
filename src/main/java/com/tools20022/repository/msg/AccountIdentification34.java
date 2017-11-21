@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides account identification information.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides account identification information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountIdentification34", propOrder = {"safekeepingAccount", "accountOwner", "safekeepingPlace"})
 public class AccountIdentification34 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -232,6 +238,7 @@ public class AccountIdentification34 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public RestrictedFINXMax35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -240,6 +247,7 @@ public class AccountIdentification34 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification103Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -248,6 +256,7 @@ public class AccountIdentification34 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat11Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}

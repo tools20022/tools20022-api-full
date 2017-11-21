@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max8Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding instruction processing status
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructionProcessingStatus2", propOrder = {"placeAndName", "rejectCode", "outputRejectIndicator"})
 public class InstructionProcessingStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -208,6 +214,7 @@ public class InstructionProcessingStatus2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -216,6 +223,7 @@ public class InstructionProcessingStatus2 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "RjctCd")
 	public Max8Text getRejectCode() {
 		return rejectCode;
 	}
@@ -224,6 +232,7 @@ public class InstructionProcessingStatus2 {
 		this.rejectCode = rejectCode;
 	}
 
+	@XmlElement(name = "OutptRjctInd")
 	public Max1NumericText getOutputRejectIndicator() {
 		return outputRejectIndicator;
 	}

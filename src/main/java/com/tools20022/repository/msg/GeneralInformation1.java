@@ -34,6 +34,10 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information concerning the negotiation process leading to a treasury trade.
@@ -100,6 +104,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GeneralInformation1", propOrder = {"blockIndicator", "relatedTradeReference", "dealingMethod", "brokerIdentification", "counterpartyReference", "brokersCommission", "senderToReceiverInformation",
+		"dealingBranchTradingSide", "dealingBranchCounterpartySide", "contactInformation"})
 public class GeneralInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -596,6 +603,7 @@ public class GeneralInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BlckInd")
 	public YesNoIndicator getBlockIndicator() {
 		return blockIndicator;
 	}
@@ -604,6 +612,7 @@ public class GeneralInformation1 {
 		this.blockIndicator = blockIndicator;
 	}
 
+	@XmlElement(name = "RltdTradRef")
 	public Max35Text getRelatedTradeReference() {
 		return relatedTradeReference;
 	}
@@ -612,6 +621,7 @@ public class GeneralInformation1 {
 		this.relatedTradeReference = relatedTradeReference;
 	}
 
+	@XmlElement(name = "DealgMtd")
 	public Trading1MethodCode getDealingMethod() {
 		return dealingMethod;
 	}
@@ -620,6 +630,7 @@ public class GeneralInformation1 {
 		this.dealingMethod = dealingMethod;
 	}
 
+	@XmlElement(name = "BrkrId")
 	public PartyIdentification8Choice getBrokerIdentification() {
 		return brokerIdentification;
 	}
@@ -628,6 +639,7 @@ public class GeneralInformation1 {
 		this.brokerIdentification = brokerIdentification;
 	}
 
+	@XmlElement(name = "CtrPtyRef")
 	public Max35Text getCounterpartyReference() {
 		return counterpartyReference;
 	}
@@ -636,6 +648,7 @@ public class GeneralInformation1 {
 		this.counterpartyReference = counterpartyReference;
 	}
 
+	@XmlElement(name = "BrkrsComssn")
 	public ActiveCurrencyAndAmount getBrokersCommission() {
 		return brokersCommission;
 	}
@@ -644,6 +657,7 @@ public class GeneralInformation1 {
 		this.brokersCommission = brokersCommission;
 	}
 
+	@XmlElement(name = "SndrToRcvrInf")
 	public Max140Text getSenderToReceiverInformation() {
 		return senderToReceiverInformation;
 	}
@@ -652,6 +666,7 @@ public class GeneralInformation1 {
 		this.senderToReceiverInformation = senderToReceiverInformation;
 	}
 
+	@XmlElement(name = "DealgBrnchTradgSd")
 	public PartyIdentification8Choice getDealingBranchTradingSide() {
 		return dealingBranchTradingSide;
 	}
@@ -660,6 +675,7 @@ public class GeneralInformation1 {
 		this.dealingBranchTradingSide = dealingBranchTradingSide;
 	}
 
+	@XmlElement(name = "DealgBrnchCtrPtySd")
 	public PartyIdentification8Choice getDealingBranchCounterpartySide() {
 		return dealingBranchCounterpartySide;
 	}
@@ -668,6 +684,7 @@ public class GeneralInformation1 {
 		this.dealingBranchCounterpartySide = dealingBranchCounterpartySide;
 	}
 
+	@XmlElement(name = "CtctInf")
 	public ContactInformation1 getContactInformation() {
 		return contactInformation;
 	}

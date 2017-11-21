@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about a corporate action election.
@@ -99,6 +103,9 @@ import java.util.List;
  * definition} = "Provides information about a corporate action election."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionElection3", propOrder = {"accountDetails", "optionType", "optionNumber", "instructedUnderlyingSecuritiesQuantity", "instructedSecuritiesQuantityToReceive", "proposedRate", "cashMovementDetails",
+		"securitiesMovementDetails"})
 public class CorporateActionElection3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -513,6 +520,7 @@ public class CorporateActionElection3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctDtls")
 	public SecuritiesAccount7 getAccountDetails() {
 		return accountDetails;
 	}
@@ -521,6 +529,7 @@ public class CorporateActionElection3 {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "OptnTp")
 	public CorporateActionOption1FormatChoice getOptionType() {
 		return optionType;
 	}
@@ -529,6 +538,7 @@ public class CorporateActionElection3 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "OptnNb")
 	public Exact3NumericText getOptionNumber() {
 		return optionNumber;
 	}
@@ -537,6 +547,7 @@ public class CorporateActionElection3 {
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "InstdUndrlygSctiesQty")
 	public UnitOrFaceAmount1Choice getInstructedUnderlyingSecuritiesQuantity() {
 		return instructedUnderlyingSecuritiesQuantity;
 	}
@@ -545,6 +556,7 @@ public class CorporateActionElection3 {
 		this.instructedUnderlyingSecuritiesQuantity = instructedUnderlyingSecuritiesQuantity;
 	}
 
+	@XmlElement(name = "InstdSctiesQtyToRcv")
 	public UnitOrFaceAmount1Choice getInstructedSecuritiesQuantityToReceive() {
 		return instructedSecuritiesQuantityToReceive;
 	}
@@ -553,6 +565,7 @@ public class CorporateActionElection3 {
 		this.instructedSecuritiesQuantityToReceive = instructedSecuritiesQuantityToReceive;
 	}
 
+	@XmlElement(name = "PropsdRate")
 	public PercentageRate getProposedRate() {
 		return proposedRate;
 	}
@@ -561,6 +574,7 @@ public class CorporateActionElection3 {
 		this.proposedRate = proposedRate;
 	}
 
+	@XmlElement(name = "CshMvmntDtls")
 	public List<CorporateActionCashMovements2> getCashMovementDetails() {
 		return cashMovementDetails;
 	}
@@ -569,6 +583,7 @@ public class CorporateActionElection3 {
 		this.cashMovementDetails = cashMovementDetails;
 	}
 
+	@XmlElement(name = "SctiesMvmntDtls")
 	public List<CorporateActionSecuritiesMovement2> getSecuritiesMovementDetails() {
 		return securitiesMovementDetails;
 	}

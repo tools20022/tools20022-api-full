@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Lottery;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action details.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionSD10", propOrder = {"placeAndName", "lotterySequenceNumber", "lotteryDate"})
 public class CorporateActionSD10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -252,6 +258,7 @@ public class CorporateActionSD10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -260,6 +267,7 @@ public class CorporateActionSD10 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "LtrySeqNb")
 	public Max3NumericText getLotterySequenceNumber() {
 		return lotterySequenceNumber;
 	}
@@ -268,6 +276,7 @@ public class CorporateActionSD10 {
 		this.lotterySequenceNumber = lotterySequenceNumber;
 	}
 
+	@XmlElement(name = "LtryDt")
 	public ISODate getLotteryDate() {
 		return lotteryDate;
 	}

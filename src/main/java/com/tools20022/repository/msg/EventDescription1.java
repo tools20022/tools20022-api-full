@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes an event not covered by other formal messages, for example a trace
@@ -108,6 +112,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EventDescription1", propOrder = {"identifier", "date", "recipient", "advisor", "otherParty", "languageCode", "description", "relatedDocument", "relatedLetter", "relatedMessage", "associatedDocument", "governingContract",
+		"legalContext"})
 public class EventDescription1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -726,6 +733,7 @@ public class EventDescription1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Idr", required = true)
 	public Max35Text getIdentifier() {
 		return identifier;
 	}
@@ -734,6 +742,7 @@ public class EventDescription1 {
 		this.identifier = identifier;
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODateTime getDate() {
 		return date;
 	}
@@ -742,6 +751,7 @@ public class EventDescription1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Rcpt", required = true)
 	public QualifiedPartyIdentification1 getRecipient() {
 		return recipient;
 	}
@@ -750,6 +760,7 @@ public class EventDescription1 {
 		this.recipient = recipient;
 	}
 
+	@XmlElement(name = "Advsr", required = true)
 	public QualifiedPartyIdentification1 getAdvisor() {
 		return advisor;
 	}
@@ -758,6 +769,7 @@ public class EventDescription1 {
 		this.advisor = advisor;
 	}
 
+	@XmlElement(name = "OthrPty")
 	public List<QualifiedPartyIdentification1> getOtherParty() {
 		return otherParty;
 	}
@@ -766,6 +778,7 @@ public class EventDescription1 {
 		this.otherParty = otherParty;
 	}
 
+	@XmlElement(name = "LangCd", required = true)
 	public LanguageCode getLanguageCode() {
 		return languageCode;
 	}
@@ -774,6 +787,7 @@ public class EventDescription1 {
 		this.languageCode = languageCode;
 	}
 
+	@XmlElement(name = "Desc", required = true)
 	public Max2000Text getDescription() {
 		return description;
 	}
@@ -782,6 +796,7 @@ public class EventDescription1 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "RltdDoc")
 	public List<QualifiedDocumentInformation1> getRelatedDocument() {
 		return relatedDocument;
 	}
@@ -790,6 +805,7 @@ public class EventDescription1 {
 		this.relatedDocument = relatedDocument;
 	}
 
+	@XmlElement(name = "RltdLttr")
 	public List<QualifiedDocumentInformation1> getRelatedLetter() {
 		return relatedLetter;
 	}
@@ -798,6 +814,7 @@ public class EventDescription1 {
 		this.relatedLetter = relatedLetter;
 	}
 
+	@XmlElement(name = "RltdMsg")
 	public List<QualifiedDocumentInformation1> getRelatedMessage() {
 		return relatedMessage;
 	}
@@ -806,6 +823,7 @@ public class EventDescription1 {
 		this.relatedMessage = relatedMessage;
 	}
 
+	@XmlElement(name = "AssoctdDoc")
 	public List<QualifiedDocumentInformation1> getAssociatedDocument() {
 		return associatedDocument;
 	}
@@ -814,6 +832,7 @@ public class EventDescription1 {
 		this.associatedDocument = associatedDocument;
 	}
 
+	@XmlElement(name = "GovngCtrct")
 	public List<QualifiedDocumentInformation1> getGoverningContract() {
 		return governingContract;
 	}
@@ -822,6 +841,7 @@ public class EventDescription1 {
 		this.governingContract = governingContract;
 	}
 
+	@XmlElement(name = "LglCntxt")
 	public GovernanceRules2 getLegalContext() {
 		return legalContext;
 	}

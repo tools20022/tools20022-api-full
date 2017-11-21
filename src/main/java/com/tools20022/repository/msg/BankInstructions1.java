@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the instructions from the bank.
@@ -58,6 +62,8 @@ import java.util.List;
  * definition} = "Details of the instructions from the bank."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BankInstructions1", propOrder = {"text", "lastDateForResponse"})
 public class BankInstructions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -157,6 +163,7 @@ public class BankInstructions1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Txt")
 	public List<Max2000Text> getText() {
 		return text;
 	}
@@ -165,6 +172,7 @@ public class BankInstructions1 {
 		this.text = text;
 	}
 
+	@XmlElement(name = "LastDtForRspn")
 	public ISODate getLastDateForResponse() {
 		return lastDateForResponse;
 	}

@@ -29,33 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code
- * RateType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateValueType6Code
- * RateValueType6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateValueType7Code
- * RateValueType7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType5Code
- * RateType5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType12Code
- * RateType12Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType13Code
- * RateType13Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType9Code
- * RateType9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType10Code
- * RateType10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateValueType2Code
- * RateValueType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code
- * RateType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType8Code
- * RateType8Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.RateTypeCode#mmFixed
@@ -125,6 +98,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * RateTypeCode.mmUnscheduled}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.RateTypeCode#mmAnyAndAll
  * RateTypeCode.mmAnyAndAll}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code
+ * RateType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateValueType6Code
+ * RateValueType6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateValueType7Code
+ * RateValueType7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType5Code
+ * RateType5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType12Code
+ * RateType12Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType13Code
+ * RateType13Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType9Code
+ * RateType9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType10Code
+ * RateType10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateValueType2Code
+ * RateValueType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code
+ * RateType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType8Code
+ * RateType8Code}</li>
  * </ul>
  * </li>
  * <li>

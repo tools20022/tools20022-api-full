@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.RegulatoryReporting1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TradeData7;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * Scope <br>
@@ -42,9 +44,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code fxtr.008.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} = {@linkplain com.tools20022.repository.area.OtherMessages
  * OtherMessages}</li>
@@ -74,6 +73,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code fxtr.008.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -85,6 +87,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ForeignExchangeTradeStatusNotificationV04", propOrder = {"tradeData", "regulatoryReporting", "supplementaryData"})
 public class ForeignExchangeTradeStatusNotificationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -121,6 +125,14 @@ public class ForeignExchangeTradeStatusNotificationV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TradeData7.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTradeStatusNotificationV04.class.getMethod("getTradeData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RegulatoryReporting1 regulatoryReporting;
@@ -161,6 +173,14 @@ public class ForeignExchangeTradeStatusNotificationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> RegulatoryReporting1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTradeStatusNotificationV04.class.getMethod("getRegulatoryReporting", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -198,6 +218,14 @@ public class ForeignExchangeTradeStatusNotificationV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ForeignExchangeTradeStatusNotificationV04.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -210,8 +238,8 @@ public class ForeignExchangeTradeStatusNotificationV04 {
 				rootElement = "Document";
 				xmlTag = "FXTradStsNtfctn";
 				businessArea_lazy = () -> OtherMessages.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeStatusNotificationV04.mmTradeData, ForeignExchangeTradeStatusNotificationV04.mmRegulatoryReporting,
-						ForeignExchangeTradeStatusNotificationV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.other.ForeignExchangeTradeStatusNotificationV04.mmTradeData,
+						com.tools20022.repository.area.other.ForeignExchangeTradeStatusNotificationV04.mmRegulatoryReporting, com.tools20022.repository.area.other.ForeignExchangeTradeStatusNotificationV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "fxtr";
@@ -221,10 +249,16 @@ public class ForeignExchangeTradeStatusNotificationV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ForeignExchangeTradeStatusNotificationV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradData", required = true)
 	public TradeData7 getTradeData() {
 		return tradeData;
 	}
@@ -233,6 +267,7 @@ public class ForeignExchangeTradeStatusNotificationV04 {
 		this.tradeData = tradeData;
 	}
 
+	@XmlElement(name = "RgltryRptg")
 	public RegulatoryReporting1 getRegulatoryReporting() {
 		return regulatoryReporting;
 	}
@@ -241,11 +276,18 @@ public class ForeignExchangeTradeStatusNotificationV04 {
 		this.regulatoryReporting = regulatoryReporting;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.008.04.04")
+	static public class Document {
+		@XmlElement(name = "FXTradStsNtfctn", required = true)
+		public ForeignExchangeTradeStatusNotificationV04 messageBody;
 	}
 }

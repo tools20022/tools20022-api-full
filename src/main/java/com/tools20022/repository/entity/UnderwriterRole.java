@@ -68,6 +68,11 @@ public class UnderwriterRole extends SecuritiesPartyRole {
 				definition = "The party that forms, together with the lead underwriter, a syndicate of co-lead managers, co-managers and underwriters in order to raise money for a borrower via a new issue.";
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UnderwriterRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

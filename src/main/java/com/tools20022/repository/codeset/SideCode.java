@@ -29,18 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Side1Code Side1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side3Code Side3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderDriverCode
- * OrderDriverCode}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IOISideTypeCode
- * IOISideTypeCode}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side5Code Side5Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmBuy
@@ -76,6 +64,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * SideCode.mmBorrow}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmOptionExercise
  * SideCode.mmOptionExercise}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side1Code Side1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side3Code Side3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderDriverCode
+ * OrderDriverCode}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IOISideTypeCode
+ * IOISideTypeCode}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side5Code Side5Code}</li>
  * </ul>
  * </li>
  * <li>

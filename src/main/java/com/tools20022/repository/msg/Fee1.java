@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money associated with a service.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Charge17}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Fee1", propOrder = {"type", "basis", "standardAmount", "standardRate", "discountDetails", "requestedAmount", "requestedRate", "nonStandardSLAReference", "recipientIdentification"})
 public class Fee1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -572,6 +578,7 @@ public class Fee1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ChargeType5Choice getType() {
 		return type;
 	}
@@ -580,6 +587,7 @@ public class Fee1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Bsis")
 	public ChargeBasis2Choice getBasis() {
 		return basis;
 	}
@@ -588,6 +596,7 @@ public class Fee1 {
 		this.basis = basis;
 	}
 
+	@XmlElement(name = "StdAmt")
 	public ActiveCurrencyAndAmount getStandardAmount() {
 		return standardAmount;
 	}
@@ -596,6 +605,7 @@ public class Fee1 {
 		this.standardAmount = standardAmount;
 	}
 
+	@XmlElement(name = "StdRate")
 	public PercentageRate getStandardRate() {
 		return standardRate;
 	}
@@ -604,6 +614,7 @@ public class Fee1 {
 		this.standardRate = standardRate;
 	}
 
+	@XmlElement(name = "DscntDtls")
 	public ChargeOrCommissionDiscount1 getDiscountDetails() {
 		return discountDetails;
 	}
@@ -612,6 +623,7 @@ public class Fee1 {
 		this.discountDetails = discountDetails;
 	}
 
+	@XmlElement(name = "ReqdAmt")
 	public ActiveCurrencyAndAmount getRequestedAmount() {
 		return requestedAmount;
 	}
@@ -620,6 +632,7 @@ public class Fee1 {
 		this.requestedAmount = requestedAmount;
 	}
 
+	@XmlElement(name = "ReqdRate")
 	public PercentageRate getRequestedRate() {
 		return requestedRate;
 	}
@@ -628,6 +641,7 @@ public class Fee1 {
 		this.requestedRate = requestedRate;
 	}
 
+	@XmlElement(name = "NonStdSLARef")
 	public Max35Text getNonStandardSLAReference() {
 		return nonStandardSLAReference;
 	}
@@ -636,6 +650,7 @@ public class Fee1 {
 		this.nonStandardSLAReference = nonStandardSLAReference;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification113 getRecipientIdentification() {
 		return recipientIdentification;
 	}

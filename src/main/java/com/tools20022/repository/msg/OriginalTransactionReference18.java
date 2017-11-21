@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides reference information to the original message.
@@ -78,6 +82,8 @@ import java.util.List;
  * definition} = "Provides reference information to the original message."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalTransactionReference18", propOrder = {"messageIdentification", "messageNameIdentification", "creationDateTime", "originalTransaction"})
 public class OriginalTransactionReference18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -274,6 +280,7 @@ public class OriginalTransactionReference18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId")
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -282,6 +289,7 @@ public class OriginalTransactionReference18 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "MsgNmId")
 	public Max35Text getMessageNameIdentification() {
 		return messageNameIdentification;
 	}
@@ -290,6 +298,7 @@ public class OriginalTransactionReference18 {
 		this.messageNameIdentification = messageNameIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm")
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -298,6 +307,7 @@ public class OriginalTransactionReference18 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "OrgnlTx")
 	public List<PaymentIdentification4> getOriginalTransaction() {
 		return originalTransaction;
 	}

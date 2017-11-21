@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines commodity attributes of a derivative where the type is energy.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Defines commodity attributes of a derivative where the type is energy."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AssetClassCommodityEnergy1Choice", propOrder = {"electricity", "naturalGas", "oil", "coal", "interEnergy", "renewableEnergy", "lightEnd", "distillates"})
 public class AssetClassCommodityEnergy1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -480,6 +486,7 @@ public class AssetClassCommodityEnergy1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Elctrcty", required = true)
 	public EnergyCommodityElectricity1 getElectricity() {
 		return electricity;
 	}
@@ -488,6 +495,7 @@ public class AssetClassCommodityEnergy1Choice {
 		this.electricity = electricity;
 	}
 
+	@XmlElement(name = "NtrlGas", required = true)
 	public EnergyCommodityNaturalGas1 getNaturalGas() {
 		return naturalGas;
 	}
@@ -496,6 +504,7 @@ public class AssetClassCommodityEnergy1Choice {
 		this.naturalGas = naturalGas;
 	}
 
+	@XmlElement(name = "Oil", required = true)
 	public EnergyCommodityOil1 getOil() {
 		return oil;
 	}
@@ -504,6 +513,7 @@ public class AssetClassCommodityEnergy1Choice {
 		this.oil = oil;
 	}
 
+	@XmlElement(name = "Coal", required = true)
 	public EnergyCommodityCoal1 getCoal() {
 		return coal;
 	}
@@ -512,6 +522,7 @@ public class AssetClassCommodityEnergy1Choice {
 		this.coal = coal;
 	}
 
+	@XmlElement(name = "IntrNrgy", required = true)
 	public EnergyCommodityInterEnergy1 getInterEnergy() {
 		return interEnergy;
 	}
@@ -520,6 +531,7 @@ public class AssetClassCommodityEnergy1Choice {
 		this.interEnergy = interEnergy;
 	}
 
+	@XmlElement(name = "RnwblNrgy", required = true)
 	public EnergyCommodityRenewableEnergy1 getRenewableEnergy() {
 		return renewableEnergy;
 	}
@@ -528,6 +540,7 @@ public class AssetClassCommodityEnergy1Choice {
 		this.renewableEnergy = renewableEnergy;
 	}
 
+	@XmlElement(name = "LghtEnd", required = true)
 	public EnergyCommodityLightEnd1 getLightEnd() {
 		return lightEnd;
 	}
@@ -536,6 +549,7 @@ public class AssetClassCommodityEnergy1Choice {
 		this.lightEnd = lightEnd;
 	}
 
+	@XmlElement(name = "Dstllts", required = true)
 	public EnergyCommodityDistillates1 getDistillates() {
 		return distillates;
 	}

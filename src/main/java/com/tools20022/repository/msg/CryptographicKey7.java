@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cryptographic Key component.
@@ -103,6 +107,9 @@ import java.util.List;
  * CryptographicKey6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CryptographicKey7", propOrder = {"name", "identification", "securityDomainIdentification", "additionalIdentification", "version", "sequenceCounter", "type", "function", "activationDate", "deactivationDate",
+		"keyCheckValue", "currentStatus", "failureReason"})
 public class CryptographicKey7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -791,6 +798,7 @@ public class CryptographicKey7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max140Text getName() {
 		return name;
 	}
@@ -799,6 +807,7 @@ public class CryptographicKey7 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Id")
 	public Max140Text getIdentification() {
 		return identification;
 	}
@@ -807,6 +816,7 @@ public class CryptographicKey7 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SctyDomnId")
 	public Max35Text getSecurityDomainIdentification() {
 		return securityDomainIdentification;
 	}
@@ -815,6 +825,7 @@ public class CryptographicKey7 {
 		this.securityDomainIdentification = securityDomainIdentification;
 	}
 
+	@XmlElement(name = "AddtlId")
 	public Max35Binary getAdditionalIdentification() {
 		return additionalIdentification;
 	}
@@ -823,6 +834,7 @@ public class CryptographicKey7 {
 		this.additionalIdentification = additionalIdentification;
 	}
 
+	@XmlElement(name = "Vrsn", required = true)
 	public Max256Text getVersion() {
 		return version;
 	}
@@ -831,6 +843,7 @@ public class CryptographicKey7 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "SeqCntr")
 	public Number getSequenceCounter() {
 		return sequenceCounter;
 	}
@@ -839,6 +852,7 @@ public class CryptographicKey7 {
 		this.sequenceCounter = sequenceCounter;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public CryptographicKeyType3Code getType() {
 		return type;
 	}
@@ -847,6 +861,7 @@ public class CryptographicKey7 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Fctn", required = true)
 	public List<KeyUsage1Code> getFunction() {
 		return function;
 	}
@@ -855,6 +870,7 @@ public class CryptographicKey7 {
 		this.function = function;
 	}
 
+	@XmlElement(name = "ActvtnDt")
 	public ISODateTime getActivationDate() {
 		return activationDate;
 	}
@@ -863,6 +879,7 @@ public class CryptographicKey7 {
 		this.activationDate = activationDate;
 	}
 
+	@XmlElement(name = "DeactvtnDt")
 	public ISODateTime getDeactivationDate() {
 		return deactivationDate;
 	}
@@ -871,6 +888,7 @@ public class CryptographicKey7 {
 		this.deactivationDate = deactivationDate;
 	}
 
+	@XmlElement(name = "KeyChckVal")
 	public Max35Binary getKeyCheckValue() {
 		return keyCheckValue;
 	}
@@ -879,6 +897,7 @@ public class CryptographicKey7 {
 		this.keyCheckValue = keyCheckValue;
 	}
 
+	@XmlElement(name = "CurSts", required = true)
 	public ATMStatus3Code getCurrentStatus() {
 		return currentStatus;
 	}
@@ -887,6 +906,7 @@ public class CryptographicKey7 {
 		this.currentStatus = currentStatus;
 	}
 
+	@XmlElement(name = "FailrRsn")
 	public FailureReason6Code getFailureReason() {
 		return failureReason;
 	}

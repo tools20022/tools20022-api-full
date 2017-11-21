@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AccountManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.BankAccountManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The AccountRequestRejection message is sent from a financial institution to
@@ -35,9 +37,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.011.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementLatestVersion
@@ -82,6 +81,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.011.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -97,6 +99,8 @@ import java.util.List;
  * AccountRequestRejectionV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountRequestRejectionV02", propOrder = {"references", "from", "accountServicerIdentification", "accountIdentification", "organisationIdentification", "digitalSignature", "supplementaryData"})
 public class AccountRequestRejectionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -136,6 +140,14 @@ public class AccountRequestRejectionV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> References6.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountRequestRejectionV02.class.getMethod("getReferences", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OrganisationIdentification8 from;
 	/**
@@ -173,6 +185,14 @@ public class AccountRequestRejectionV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> OrganisationIdentification8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountRequestRejectionV02.class.getMethod("getFrom", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BranchAndFinancialInstitutionIdentification5 accountServicerIdentification;
@@ -212,6 +232,14 @@ public class AccountRequestRejectionV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountRequestRejectionV02.class.getMethod("getAccountServicerIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AccountForAction1> accountIdentification;
 	/**
@@ -249,6 +277,14 @@ public class AccountRequestRejectionV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AccountForAction1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountRequestRejectionV02.class.getMethod("getAccountIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OrganisationIdentification8 organisationIdentification;
 	/**
@@ -283,6 +319,14 @@ public class AccountRequestRejectionV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> OrganisationIdentification8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountRequestRejectionV02.class.getMethod("getOrganisationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<PartyAndSignature2> digitalSignature;
@@ -321,6 +365,14 @@ public class AccountRequestRejectionV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountRequestRejectionV02.class.getMethod("getDigitalSignature", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -358,6 +410,14 @@ public class AccountRequestRejectionV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountRequestRejectionV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -371,8 +431,10 @@ public class AccountRequestRejectionV02 {
 				rootElement = "Document";
 				xmlTag = "AcctReqRjctn";
 				businessArea_lazy = () -> AccountManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AccountRequestRejectionV02.mmReferences, AccountRequestRejectionV02.mmFrom, AccountRequestRejectionV02.mmAccountServicerIdentification,
-						AccountRequestRejectionV02.mmAccountIdentification, AccountRequestRejectionV02.mmOrganisationIdentification, AccountRequestRejectionV02.mmDigitalSignature, AccountRequestRejectionV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountRequestRejectionV02.mmReferences, com.tools20022.repository.area.acmt.AccountRequestRejectionV02.mmFrom,
+						com.tools20022.repository.area.acmt.AccountRequestRejectionV02.mmAccountServicerIdentification, com.tools20022.repository.area.acmt.AccountRequestRejectionV02.mmAccountIdentification,
+						com.tools20022.repository.area.acmt.AccountRequestRejectionV02.mmOrganisationIdentification, com.tools20022.repository.area.acmt.AccountRequestRejectionV02.mmDigitalSignature,
+						com.tools20022.repository.area.acmt.AccountRequestRejectionV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";
@@ -382,10 +444,16 @@ public class AccountRequestRejectionV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountRequestRejectionV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Refs", required = true)
 	public References6 getReferences() {
 		return references;
 	}
@@ -394,6 +462,7 @@ public class AccountRequestRejectionV02 {
 		this.references = references;
 	}
 
+	@XmlElement(name = "Fr")
 	public OrganisationIdentification8 getFrom() {
 		return from;
 	}
@@ -402,6 +471,7 @@ public class AccountRequestRejectionV02 {
 		this.from = from;
 	}
 
+	@XmlElement(name = "AcctSvcrId", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getAccountServicerIdentification() {
 		return accountServicerIdentification;
 	}
@@ -410,6 +480,7 @@ public class AccountRequestRejectionV02 {
 		this.accountServicerIdentification = accountServicerIdentification;
 	}
 
+	@XmlElement(name = "AcctId")
 	public List<AccountForAction1> getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -418,6 +489,7 @@ public class AccountRequestRejectionV02 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "OrgId", required = true)
 	public OrganisationIdentification8 getOrganisationIdentification() {
 		return organisationIdentification;
 	}
@@ -426,6 +498,7 @@ public class AccountRequestRejectionV02 {
 		this.organisationIdentification = organisationIdentification;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public List<PartyAndSignature2> getDigitalSignature() {
 		return digitalSignature;
 	}
@@ -434,11 +507,18 @@ public class AccountRequestRejectionV02 {
 		this.digitalSignature = digitalSignature;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.011.02.02")
+	static public class Document {
+		@XmlElement(name = "AcctReqRjctn", required = true)
+		public AccountRequestRejectionV02 messageBody;
 	}
 }

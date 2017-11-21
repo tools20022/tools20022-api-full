@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Card performing the withdrawal transaction.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentCard16}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentCard17", propOrder = {"cardDataEntryMode", "fallbackIndicator", "protectedCardData", "plainCardData", "cardCountryCode", "cardCurrencyCode", "retainedCardBalance"})
 public class PaymentCard17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -449,6 +455,7 @@ public class PaymentCard17 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CardDataNtryMd", required = true)
 	public CardDataReading1Code getCardDataEntryMode() {
 		return cardDataEntryMode;
 	}
@@ -457,6 +464,7 @@ public class PaymentCard17 {
 		this.cardDataEntryMode = cardDataEntryMode;
 	}
 
+	@XmlElement(name = "FllbckInd")
 	public CardFallback1Code getFallbackIndicator() {
 		return fallbackIndicator;
 	}
@@ -465,6 +473,7 @@ public class PaymentCard17 {
 		this.fallbackIndicator = fallbackIndicator;
 	}
 
+	@XmlElement(name = "PrtctdCardData")
 	public ContentInformationType10 getProtectedCardData() {
 		return protectedCardData;
 	}
@@ -473,6 +482,7 @@ public class PaymentCard17 {
 		this.protectedCardData = protectedCardData;
 	}
 
+	@XmlElement(name = "PlainCardData")
 	public PlainCardData14 getPlainCardData() {
 		return plainCardData;
 	}
@@ -481,6 +491,7 @@ public class PaymentCard17 {
 		this.plainCardData = plainCardData;
 	}
 
+	@XmlElement(name = "CardCtryCd")
 	public Max3Text getCardCountryCode() {
 		return cardCountryCode;
 	}
@@ -489,6 +500,7 @@ public class PaymentCard17 {
 		this.cardCountryCode = cardCountryCode;
 	}
 
+	@XmlElement(name = "CardCcyCd")
 	public Exact3AlphaNumericText getCardCurrencyCode() {
 		return cardCurrencyCode;
 	}
@@ -497,6 +509,7 @@ public class PaymentCard17 {
 		this.cardCurrencyCode = cardCurrencyCode;
 	}
 
+	@XmlElement(name = "RtndCardBal")
 	public CurrencyAndAmount getRetainedCardBalance() {
 		return retainedCardBalance;
 	}

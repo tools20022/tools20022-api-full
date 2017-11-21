@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parties used for acting parties that apply either to the whole message or to
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ConfirmationPartyDetails2", propOrder = {"identification", "alternateIdentification", "processingIdentification", "additionalInformation", "investorCapacity", "tradingPartyCapacity"})
 public class ConfirmationPartyDetails2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -395,6 +401,7 @@ public class ConfirmationPartyDetails2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification32Choice getIdentification() {
 		return identification;
 	}
@@ -403,6 +410,7 @@ public class ConfirmationPartyDetails2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification5 getAlternateIdentification() {
 		return alternateIdentification;
 	}
@@ -411,6 +419,7 @@ public class ConfirmationPartyDetails2 {
 		this.alternateIdentification = alternateIdentification;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public Max35Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -419,6 +428,7 @@ public class ConfirmationPartyDetails2 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public PartyTextInformation5 getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -427,6 +437,7 @@ public class ConfirmationPartyDetails2 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "InvstrCpcty")
 	public InvestorCapacity3Choice getInvestorCapacity() {
 		return investorCapacity;
 	}
@@ -435,6 +446,7 @@ public class ConfirmationPartyDetails2 {
 		this.investorCapacity = investorCapacity;
 	}
 
+	@XmlElement(name = "TradgPtyCpcty")
 	public TradingPartyCapacity1Choice getTradingPartyCapacity() {
 		return tradingPartyCapacity;
 	}

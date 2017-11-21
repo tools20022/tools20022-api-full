@@ -37,6 +37,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.DocumentPartyRole
+ * DocumentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -61,9 +64,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvoiceHeader2.mmIssuer}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.DocumentPartyRole
- * DocumentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -95,6 +95,11 @@ public class DocumentIssuer extends DocumentPartyRole {
 				derivationElement_lazy = () -> Arrays.asList(ReferredDocumentType1.mmIssuer, CreditorReferenceType1.mmIssuer, ReferredDocumentType2.mmIssuer, CreditorReferenceType2.mmIssuer, InvoiceHeader1.mmIssuer,
 						GarnishmentType1.mmIssuer, ReferredDocumentType4.mmIssuer, InvoiceHeader2.mmIssuer);
 				superType_lazy = () -> DocumentPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DocumentIssuer.class;
 			}
 		});
 		return mmObject_lazy.get();

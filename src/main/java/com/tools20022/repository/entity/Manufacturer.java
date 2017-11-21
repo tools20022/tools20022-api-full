@@ -63,6 +63,11 @@ public class Manufacturer extends GoodsPartyRole {
 				definition = "Manufacturer of the goods.";
 				superType_lazy = () -> GoodsPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Manufacturer.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

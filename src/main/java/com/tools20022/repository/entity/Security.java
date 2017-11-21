@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -40,6 +41,165 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmIdentification
+ * Security.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmRegisteredDistributionCountry
+ * Security.mmRegisteredDistributionCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmDenominationCurrency
+ * Security.mmDenominationCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmRegistrationForm
+ * Security.mmRegistrationForm}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmDematerialisedIndicator
+ * Security.mmDematerialisedIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmEUSavingsDirective
+ * Security.mmEUSavingsDirective}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesQuantity
+ * Security.mmSecuritiesQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmFees
+ * Security.mmFees}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmPricing
+ * Security.mmPricing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesAccount
+ * Security.mmSecuritiesAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmTradingMarket
+ * Security.mmTradingMarket}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmPlaceOfListing
+ * Security.mmPlaceOfListing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmRegistration
+ * Security.mmRegistration}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmRestriction
+ * Security.mmRestriction}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmCorporateEvent
+ * Security.mmCorporateEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmTemporaryFinancialInstrumentIndicator
+ * Security.mmTemporaryFinancialInstrumentIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmAvailableDate
+ * Security.mmAvailableDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmDeclarationDetails
+ * Security.mmDeclarationDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmSpread
+ * Security.mmSpread}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmDividend
+ * Security.mmDividend}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmBalance
+ * Security.mmBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmFungibleIndicator
+ * Security.mmFungibleIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmAppearance
+ * Security.mmAppearance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmNearTermPositionLimit
+ * Security.mmNearTermPositionLimit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmContractSettlementMonth
+ * Security.mmContractSettlementMonth}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmMinimumTradingPricingIncrement
+ * Security.mmMinimumTradingPricingIncrement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmRating
+ * Security.mmRating}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmCouponAttached
+ * Security.mmCouponAttached}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmSector
+ * Security.mmSector}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmWarrantAttachedOnDelivery
+ * Security.mmWarrantAttachedOnDelivery}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmStrippableIndicator
+ * Security.mmStrippableIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmFirstDealingDate
+ * Security.mmFirstDealingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmTaxDetails
+ * Security.mmTaxDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmSecuritiesTrade
+ * Security.mmSecuritiesTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmRegistrationJurisdiction
+ * Security.mmRegistrationJurisdiction}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmPartyRole
+ * Security.mmPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmSecurityStatus
+ * Security.mmSecurityStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmModification
+ * Security.mmModification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmRedemptionSchedule
+ * Security.mmRedemptionSchedule}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesSettlement
+ * Security.mmSecuritiesSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesTransfer
+ * Security.mmSecuritiesTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmCorporateActionStandingInstructions
+ * Security.mmCorporateActionStandingInstructions}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmQuote
+ * Security.mmQuote}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmSecuritiesOrder
+ * Security.mmSecuritiesOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmRelatedVariableInterest
+ * Security.mmRelatedVariableInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmConversion
+ * Security.mmConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmComponentSecurity
+ * Security.mmComponentSecurity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmRecompositionIndicator
+ * Security.mmRecompositionIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmSeries
+ * Security.mmSeries}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmPercentageOfDebtClaim
+ * Security.mmPercentageOfDebtClaim}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmCoverRate
+ * Security.mmCoverRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmMaturityRedemption
+ * Security.mmMaturityRedemption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmRelatedMarginCall
+ * Security.mmRelatedMarginCall}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmCloseLink
+ * Security.mmCloseLink}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmPotentialEuroSystemEligibility
+ * Security.mmPotentialEuroSystemEligibility}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmMinimumQuantity
+ * Security.mmMinimumQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmRestrictedIndicator
+ * Security.mmRestrictedIndicator}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentFundClass
+ * InvestmentFundClass}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Debt Debt}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Equity Equity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Warrant Warrant}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Entitlement Entitlement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -514,165 +674,6 @@ import java.util.List;
  * FinancialInstrumentDetails26.mmFinancialInstrumentAttributes}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentFundClass
- * InvestmentFundClass}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Debt Debt}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Equity Equity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Warrant Warrant}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Entitlement Entitlement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmIdentification
- * Security.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmRegisteredDistributionCountry
- * Security.mmRegisteredDistributionCountry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmDenominationCurrency
- * Security.mmDenominationCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmRegistrationForm
- * Security.mmRegistrationForm}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmDematerialisedIndicator
- * Security.mmDematerialisedIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmEUSavingsDirective
- * Security.mmEUSavingsDirective}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesQuantity
- * Security.mmSecuritiesQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmFees
- * Security.mmFees}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmPricing
- * Security.mmPricing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesAccount
- * Security.mmSecuritiesAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmTradingMarket
- * Security.mmTradingMarket}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmPlaceOfListing
- * Security.mmPlaceOfListing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmRegistration
- * Security.mmRegistration}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmRestriction
- * Security.mmRestriction}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmCorporateEvent
- * Security.mmCorporateEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmTemporaryFinancialInstrumentIndicator
- * Security.mmTemporaryFinancialInstrumentIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmAvailableDate
- * Security.mmAvailableDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmDeclarationDetails
- * Security.mmDeclarationDetails}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmSpread
- * Security.mmSpread}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmDividend
- * Security.mmDividend}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmBalance
- * Security.mmBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmFungibleIndicator
- * Security.mmFungibleIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmAppearance
- * Security.mmAppearance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmNearTermPositionLimit
- * Security.mmNearTermPositionLimit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmContractSettlementMonth
- * Security.mmContractSettlementMonth}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmMinimumTradingPricingIncrement
- * Security.mmMinimumTradingPricingIncrement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmRating
- * Security.mmRating}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmCouponAttached
- * Security.mmCouponAttached}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmSector
- * Security.mmSector}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmWarrantAttachedOnDelivery
- * Security.mmWarrantAttachedOnDelivery}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmStrippableIndicator
- * Security.mmStrippableIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmFirstDealingDate
- * Security.mmFirstDealingDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmTaxDetails
- * Security.mmTaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmSecuritiesTrade
- * Security.mmSecuritiesTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmRegistrationJurisdiction
- * Security.mmRegistrationJurisdiction}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmPartyRole
- * Security.mmPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmSecurityStatus
- * Security.mmSecurityStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmModification
- * Security.mmModification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmRedemptionSchedule
- * Security.mmRedemptionSchedule}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesSettlement
- * Security.mmSecuritiesSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesTransfer
- * Security.mmSecuritiesTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmCorporateActionStandingInstructions
- * Security.mmCorporateActionStandingInstructions}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmQuote
- * Security.mmQuote}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmSecuritiesOrder
- * Security.mmSecuritiesOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmRelatedVariableInterest
- * Security.mmRelatedVariableInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmConversion
- * Security.mmConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmComponentSecurity
- * Security.mmComponentSecurity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmRecompositionIndicator
- * Security.mmRecompositionIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmSeries
- * Security.mmSeries}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmPercentageOfDebtClaim
- * Security.mmPercentageOfDebtClaim}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmCoverRate
- * Security.mmCoverRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmMaturityRedemption
- * Security.mmMaturityRedemption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmRelatedMarginCall
- * Security.mmRelatedMarginCall}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmCloseLink
- * Security.mmCloseLink}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmPotentialEuroSystemEligibility
- * Security.mmPotentialEuroSystemEligibility}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmMinimumQuantity
- * Security.mmMinimumQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmRestrictedIndicator
- * Security.mmRestrictedIndicator}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -712,12 +713,12 @@ public class Security extends Asset {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} = List of 520 elements</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
 	 * Security}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} = List of 520 elements</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -732,7 +733,7 @@ public class Security extends Asset {
 	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> ListBuilderForSecurity_00.addElems(new ArrayList<>());
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -753,10 +754,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CountryCode
 	 * CountryCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -775,6 +772,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -789,7 +790,7 @@ public class Security extends Asset {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmRegisteredDistributionCountry, SecurityIdentification1.mmRegisteredDistributionCountry, FinancialInstrument21.mmRegisteredDistributionCountry,
 					FinancialInstrument22.mmRegisteredDistributionCountry);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegisteredDistributionCountry";
@@ -797,6 +798,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getRegisteredDistributionCountry", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyCode denominationCurrency;
@@ -809,10 +818,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1029,6 +1034,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1063,7 +1072,7 @@ public class Security extends Asset {
 					FinancialInstrumentAttributes71.mmDenominationCurrency, FinancialInstrumentAttributes75.mmDenominationCurrency, FinancialInstrumentAttributes78.mmDenominationCurrency,
 					FinancialInstrumentAttributes79.mmDenominationCurrency, FinancialInstrumentAttributes81.mmDenominationCurrency, FinancialInstrumentAttributes80.mmDenominationCurrency,
 					FinancialInstrumentAttributes85.mmDenominationCurrency, FinancialInstrumentAttributes84.mmDenominationCurrency, FinancialInstrumentAttributes83.mmDenominationCurrency);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DenominationCurrency";
@@ -1071,6 +1080,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getDenominationCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected FormOfSecurityCode registrationForm;
@@ -1084,10 +1101,6 @@ public class Security extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FormOfSecurityCode
 	 * FormOfSecurityCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1322,6 +1335,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1351,7 +1368,7 @@ public class Security extends Asset {
 					InvestmentAccount54.mmSecuritiesForm, InvestmentAccount56.mmSecuritiesForm, FinancialInstrument51.mmSecuritiesForm, InvestmentAccount55.mmSecuritiesForm, FinancialInstrument45.mmSecuritiesForm,
 					FinancialInstrument49.mmSecuritiesForm, InvestmentAccount57.mmSecuritiesForm, FinancialInstrumentAttributes75.mmRegistrationForm, FinancialInstrumentAttributes78.mmRegistrationForm, FormOfSecurity7Choice.mmCode,
 					FormOfSecurity7Choice.mmProprietary, FinancialInstrument57.mmSecuritiesForm, FinancialInstrument56.mmSecuritiesForm, FinancialInstrument55.mmSecuritiesForm);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationForm";
@@ -1359,6 +1376,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FormOfSecurityCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getRegistrationForm", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator dematerialisedIndicator;
@@ -1373,10 +1398,6 @@ public class Security extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1416,6 +1437,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1433,7 +1458,7 @@ public class Security extends Asset {
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmDematerialisedIndicator, InvestmentAccount10.mmDematerialisedIndicator, InvestmentAccount11.mmDematerialisedIndicator, InvestmentAccount22.mmDematerialisedIndicator,
 					InvestmentAccount24.mmDematerialisedIndicator, InvestmentAccount40.mmDematerialisedIndicator, InvestmentAccount41.mmDematerialisedIndicator, InvestmentAccount54.mmDematerialisedIndicator,
 					InvestmentAccount56.mmDematerialisedIndicator, InvestmentAccount55.mmDematerialisedIndicator, InvestmentAccount57.mmDematerialisedIndicator);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DematerialisedIndicator";
@@ -1441,6 +1466,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getDematerialisedIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected EUSavingsDirectiveCode eUSavingsDirective;
@@ -1455,10 +1488,6 @@ public class Security extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.EUSavingsDirectiveCode
 	 * EUSavingsDirectiveCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1470,6 +1499,10 @@ public class Security extends Asset {
 	 * FinancialInstrument20.mmEUSavingsDirective}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1486,7 +1519,7 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmEUSavingsDirective = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmEUSavingsDirective, FinancialInstrument20.mmEUSavingsDirective);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EUSavingsDirective";
@@ -1494,6 +1527,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EUSavingsDirectiveCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getEUSavingsDirective", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesQuantity> securitiesQuantity;
@@ -1514,10 +1555,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1734,6 +1771,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1761,7 +1802,7 @@ public class Security extends Asset {
 					OtherCollateral6.mmBlockedQuantity, SecuritiesCollateral6.mmQuantity, SecuritiesCollateral6.mmBlockedQuantity, SecuritiesCollateral5.mmQuantity, SecuritiesCollateral7.mmQuantity,
 					PartyIdentification101.mmOwnedSecuritiesQuantity, FinancialInstrumentAttributes73.mmQuantity, AmountPricePerFinancialInstrumentQuantity7.mmFinancialInstrumentQuantity, AdditionalInformation12.mmQuantity,
 					AdditionalInformation13.mmQuantity, SecuritiesCollateral8.mmQuantity, AdditionalInformation14.mmQuantity);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesQuantity";
@@ -1791,10 +1832,6 @@ public class Security extends Asset {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees
 	 * SecuritiesRelatedFees}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1904,6 +1941,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1923,7 +1964,7 @@ public class Security extends Asset {
 					OtherAmounts16.mmMatchingConfirmationFee, OtherAmounts16.mmMarketMemberFeeAmount, OtherAmounts16.mmOddLotFee, ReceiveInformation13.mmChargeDetails, ReceiveInformation12.mmChargeDetails,
 					DeliverInformation12.mmChargeDetails, DeliverInformation13.mmChargeDetails, DeliverInformation15.mmChargeDetails, DeliverInformation14.mmChargeDetails, ReceiveInformation15.mmChargeDetails,
 					ReceiveInformation14.mmChargeDetails, ReceiveInformation17.mmChargeDetails, ReceiveInformation16.mmChargeDetails, DeliverInformation16.mmChargeDetails, DeliverInformation17.mmChargeDetails);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Fees";
@@ -1952,10 +1993,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2291,6 +2328,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2329,7 +2370,7 @@ public class Security extends Asset {
 					SecuritiesCollateral5.mmPrice, SecuritiesCollateral7.mmPrice, FinancialInstrumentAttributes71.mmIssuePrice, FinancialInstrumentDetails23.mmPriceDetails, AggregateBalanceInformation32.mmPriceDetails,
 					AggregateBalanceInformation33.mmPriceDetails, AggregateBalancePerSafekeepingPlace31.mmPriceDetails, AggregateBalancePerSafekeepingPlace30.mmPriceDetails, FinancialInstrumentAttributes80.mmIssuePrice,
 					FinancialInstrumentDetails25.mmPriceDetails, SecuritiesCollateral8.mmPrice, FinancialInstrumentDetails27.mmPriceDetails, FinancialInstrumentAttributes83.mmIssuePrice);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pricing";
@@ -2358,10 +2399,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesAccount
 	 * SecuritiesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2560,6 +2597,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2586,7 +2627,7 @@ public class Security extends Asset {
 					SecuritiesCollateral7.mmSafekeepingAccount, AdditionalInformation12.mmSafekeepingAccount, TransactionDetails88.mmSafekeepingAccount, TransactionDetails92.mmSafekeepingAccount, TransactionDetails85.mmSafekeepingAccount,
 					TransactionDetails87.mmSafekeepingAccount, TransactionDetails97.mmSafekeepingAccount, AdditionalInformation13.mmSafekeepingAccount, SecuritiesCollateral8.mmSafekeepingAccount,
 					AdditionalInformation14.mmSafekeepingAccount, TransactionDetails100.mmSafekeepingAccount, TransactionDetails101.mmSafekeepingAccount);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesAccount";
@@ -2616,10 +2657,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.TradingMarket
 	 * TradingMarket}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3055,6 +3092,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3097,7 +3138,7 @@ public class Security extends Asset {
 					TransactionDetails97.mmPlaceOfTrade, SecuritiesFinancingTransactionDetails35.mmPlaceOfTrade, TransactionDetails96.mmPlaceOfTrade, TransactionDetails95.mmPlaceOfTrade, SecuritiesTradeDetails69.mmPlaceOfTrade,
 					CorporateActionOption136.mmPlaceOfTrade, SecuritiesTradeDetails70.mmPlaceOfTrade, SecuritiesFinancingTransactionDetails36.mmPlaceOfTrade, TransactionDetails100.mmPlaceOfTrade, TransactionDetails99.mmPlaceOfTrade,
 					TransactionDetails98.mmPlaceOfTrade);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingMarket";
@@ -3126,10 +3167,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.TradingMarket
 	 * TradingMarket}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3463,6 +3500,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3504,7 +3545,7 @@ public class Security extends Asset {
 					TransparencyDataReport12.mmRelevantMarket, TransparencyDataReport15.mmTradingVenue, TransparencyDataReport10.mmTradingVenue, TransparencyDataReport14.mmTradingVenue, FinancialInstrumentAttributes79.mmPlaceOfListing,
 					FinancialInstrumentAttributes81.mmPlaceOfListing, FinancialInstrumentAttributes80.mmPlaceOfListing, FinancialInstrumentAttributes85.mmPlaceOfListing, FinancialInstrumentAttributes84.mmPlaceOfListing,
 					FinancialInstrumentAttributes83.mmPlaceOfListing);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlaceOfListing";
@@ -3534,10 +3575,6 @@ public class Security extends Asset {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration
 	 * BasicSecuritiesRegistration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3967,6 +4004,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4011,7 +4052,7 @@ public class Security extends Asset {
 					SettlementDetails134.mmRegistration, SettlementDetails137.mmRegistration, SettlementDetails132.mmRegistration, SecuritiesSettlementTransactionDetails30.mmAdditionalPhysicalOrRegistrationDetails,
 					SettlementDetails138.mmRegistration, SettlementDetails130.mmRegistration, SettlementDetails131.mmRegistration, SettlementDetails133.mmRegistration,
 					SecuritiesSettlementTransactionDetails29.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionDetails31.mmAdditionalPhysicalOrRegistrationDetails, SettlementDetails139.mmRegistration);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Registration";
@@ -4041,10 +4082,6 @@ public class Security extends Asset {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesRestriction
 	 * SecuritiesRestriction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4417,6 +4454,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4455,7 +4496,7 @@ public class Security extends Asset {
 					SettlementDetails126.mmLegalRestrictions, SettlementDetails122.mmLegalRestrictions, SettlementDetails127.mmLegalRestrictions, SettlementDetails121.mmLegalRestrictions, SettlementDetails134.mmLegalRestrictions,
 					SettlementDetails137.mmLegalRestrictions, SettlementDetails132.mmLegalRestrictions, SettlementDetails138.mmLegalRestrictions, SettlementDetails130.mmLegalRestrictions, SettlementDetails133.mmLegalRestrictions,
 					SettlementDetails139.mmLegalRestrictions);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Restriction";
@@ -4485,10 +4526,6 @@ public class Security extends Asset {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent
 	 * CorporateActionEvent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4585,6 +4622,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4605,7 +4646,7 @@ public class Security extends Asset {
 					EntryTransaction4.mmCorporateAction, EntryTransaction7.mmCorporateAction, IntraPositionDetails34.mmCorporateActionEventType, EntryTransaction8.mmCorporateAction, AccountIdentification33.mmCorporateActionEventAndBalance,
 					AccountIdentification35.mmCorporateActionEventAndBalance, IntraPositionDetails35.mmCorporateActionEventType, AccountIdentification40.mmCorporateActionEventAndBalance, IntraPositionDetails41.mmCorporateActionEventType,
 					IntraPositionDetails43.mmCorporateActionEventType, AccountIdentification41.mmCorporateActionEventAndBalance);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateEvent";
@@ -4627,10 +4668,6 @@ public class Security extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4772,6 +4809,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4799,7 +4840,7 @@ public class Security extends Asset {
 					SecuritiesOption50.mmTemporaryFinancialInstrumentIndicator, SecuritiesOption55.mmTemporaryFinancialInstrumentIndicator, SecuritiesOption57.mmTemporaryFinancialInstrumentIndicator,
 					TemporaryFinancialInstrumentIndicator4Choice.mmTemporaryIndicator, TemporaryFinancialInstrumentIndicator4Choice.mmProprietary, SecuritiesOption60.mmTemporaryFinancialInstrumentIndicator,
 					SecuritiesOption59.mmTemporaryFinancialInstrumentIndicator, SecuritiesOption61.mmTemporaryFinancialInstrumentIndicator, SecuritiesOption63.mmTemporaryFinancialInstrumentIndicator);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TemporaryFinancialInstrumentIndicator";
@@ -4807,6 +4848,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getTemporaryFinancialInstrumentIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime availableDate;
@@ -4819,10 +4868,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4952,6 +4997,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4973,7 +5022,7 @@ public class Security extends Asset {
 					IntraPositionMovementDetails11.mmAvailableDate, SecurityDate12.mmAvailableDate, SecurityDate11.mmAvailableDate, SecurityDate14.mmAvailableDate, SecurityDate13.mmAvailableDate, IntraPositionDetails35.mmAvailableDate,
 					IntraPositionMovementDetails12.mmAvailableDate, IntraPositionDetails41.mmAvailableDate, IntraPositionMovementDetails13.mmAvailableDate, IntraPositionDetails43.mmAvailableDate,
 					IntraPositionMovementDetails14.mmAvailableDate);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AvailableDate";
@@ -4981,6 +5030,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getAvailableDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max350Text declarationDetails;
@@ -4994,10 +5051,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5031,6 +5084,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5048,7 +5105,7 @@ public class Security extends Asset {
 			derivation_lazy = () -> Arrays.asList(CorporateActionNarrative4.mmDeclarationDetails, CorporateActionNarrative14.mmDeclarationDetails, CorporateActionNarrative6.mmDeclarationDetails,
 					CorporateActionNarrative16.mmDeclarationDetails, CorporateActionNarrative11.mmDeclarationDetails, CorporateActionNarrative17.mmDeclarationDetails, CorporateActionNarrative2.mmDeclarationDetails,
 					BeneficialOwner1.mmDeclarationDetails, BeneficialOwner2.mmDeclarationDetails);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeclarationDetails";
@@ -5056,6 +5113,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getDeclarationDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Spread spread;
@@ -5075,10 +5140,6 @@ public class Security extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Spread Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5124,6 +5185,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5139,7 +5204,7 @@ public class Security extends Asset {
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate3.mmSpread, CorporateActionRate14.mmSpread, CorporateActionRate16.mmSpread, CorporateActionRate24.mmSpread, CorporateActionRate27.mmSpread,
 					CorporateActionRate32.mmSpread, CorporateActionRate35.mmSpread, CorporateActionRate41.mmSpread, CorporateActionRate1.mmSpread, CorporateActionRate43.mmSpread, CorporateActionRate56.mmSpread,
 					CorporateActionRate66.mmSpread, CorporateActionRate78.mmSpread);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Spread";
@@ -5168,10 +5233,6 @@ public class Security extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Dividend Dividend}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5214,6 +5275,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5229,7 +5294,7 @@ public class Security extends Asset {
 			derivation_lazy = () -> Arrays.asList(CorporateAction3.mmDividendType, CorporateAction4.mmDividendType, CorporateAction7.mmDividendType, CorporateAction8.mmDividendType, CorporateAction10.mmDividendType,
 					CorporateAction11.mmDividendType, CorporateAction2.mmDividendType, CorporateAction12.mmDividendType, CorporateAction17.mmDividendType, CorporateActionSD13.mmDividendType, CorporateAction31.mmDividendType,
 					CorporateAction40.mmDividendType);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Dividend";
@@ -5275,7 +5340,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmBalance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Balance";
@@ -5299,10 +5364,6 @@ public class Security extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5327,6 +5388,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5343,7 +5408,7 @@ public class Security extends Asset {
 		{
 			derivation_lazy = () -> Arrays.asList(SafekeepingAccount1.mmFungibleIndicator, SubAccountIdentification2.mmFungibleIndicator, SafekeepingAccount2.mmFungibleIndicator, SubAccountIdentification3.mmFungibleIndicator,
 					SubAccountIdentification1.mmFungibleIndicator, SubAccountIdentification5.mmFungibleIndicator);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FungibleIndicator";
@@ -5351,6 +5416,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getFungibleIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AppearanceCode appearance;
@@ -5364,10 +5437,6 @@ public class Security extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AppearanceCode
 	 * AppearanceCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5386,6 +5455,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5399,7 +5472,7 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmAppearance = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmAppearance, FutureOrOptionDetails1.mmAppearance, Appearance2Choice.mmCode, Appearance2Choice.mmProprietary);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Appearance";
@@ -5407,6 +5480,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AppearanceCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getAppearance", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number nearTermPositionLimit;
@@ -5420,10 +5501,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5438,6 +5515,10 @@ public class Security extends Asset {
 	 * CommonFinancialInstrumentAttributes1.mmNearTermPositionLimit}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -5454,7 +5535,7 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmNearTermPositionLimit = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmNTPositionLimit, FutureOrOptionDetails1.mmNearTermPositionLimit, CommonFinancialInstrumentAttributes1.mmNearTermPositionLimit);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NearTermPositionLimit";
@@ -5462,6 +5543,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getNearTermPositionLimit", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISOYearMonth contractSettlementMonth;
@@ -5475,10 +5564,6 @@ public class Security extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ISOYearMonth ISOYearMonth}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5490,6 +5575,10 @@ public class Security extends Asset {
 	 * FutureOrOptionDetails1.mmContractSettlementMonth}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -5504,7 +5593,7 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmContractSettlementMonth = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmContractSettlementMonth, FutureOrOptionDetails1.mmContractSettlementMonth);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ContractSettlementMonth";
@@ -5512,6 +5601,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getContractSettlementMonth", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number minimumTradingPricingIncrement;
@@ -5524,10 +5621,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5543,6 +5636,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5557,7 +5654,7 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmMinimumTradingPricingIncrement = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmMinimumTradingPricingIncrement, FutureOrOptionDetails1.mmMinimumTradingPricingIncrement, TradingParameters1.mmMinimumTradingPricingIncrement);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumTradingPricingIncrement";
@@ -5565,6 +5662,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getMinimumTradingPricingIncrement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Rating> rating;
@@ -5584,10 +5689,6 @@ public class Security extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Rating Rating}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5612,6 +5713,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5626,7 +5731,7 @@ public class Security extends Asset {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmRating, FinancialInstrumentStipulations.mmRating, FinancialInstrumentAttributes31.mmRating, FinancialInstrumentStipulations2.mmRating,
 					FutureOrOptionDetails1.mmRating, FinancialInstrumentAttributes44.mmRating);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rating";
@@ -5655,10 +5760,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CouponAttached
 	 * CouponAttached}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5670,6 +5771,10 @@ public class Security extends Asset {
 	 * FinancialInstrumentStipulations2.mmCouponRange}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -5684,7 +5789,7 @@ public class Security extends Asset {
 	public static final MMBusinessAssociationEnd mmCouponAttached = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmCouponRange, FinancialInstrumentStipulations2.mmCouponRange);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CouponAttached";
@@ -5713,10 +5818,6 @@ public class Security extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Sector Sector}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5730,6 +5831,10 @@ public class Security extends Asset {
 	 * Debt2.mmSector}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -5746,7 +5851,7 @@ public class Security extends Asset {
 	public static final MMBusinessAssociationEnd mmSector = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmSector, FinancialInstrumentStipulations2.mmSector, Debt2.mmSector);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sector";
@@ -5770,10 +5875,6 @@ public class Security extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5788,6 +5889,10 @@ public class Security extends Asset {
 	 * FinancialInstrumentAttributes2.mmWarrantAttachedOnDelivery}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -5804,7 +5909,7 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmWarrantAttachedOnDelivery = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes31.mmWarrantAttachedOnDelivery, FinancialInstrumentAttributes44.mmWarrantAttachedOnDelivery, FinancialInstrumentAttributes2.mmWarrantAttachedOnDelivery);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WarrantAttachedOnDelivery";
@@ -5812,6 +5917,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getWarrantAttachedOnDelivery", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator strippableIndicator;
@@ -5825,10 +5938,6 @@ public class Security extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5837,6 +5946,10 @@ public class Security extends Asset {
 	 * FutureOrOptionDetails1.mmStrippableIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -5852,7 +5965,7 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmStrippableIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FutureOrOptionDetails1.mmStrippableIndicator);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StrippableIndicator";
@@ -5860,6 +5973,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getStrippableIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime firstDealingDate;
@@ -5872,10 +5993,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5887,6 +6004,10 @@ public class Security extends Asset {
 	 * CorporateActionDate3.mmFirstDealingDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -5901,7 +6022,7 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmFirstDealingDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FutureOrOptionDetails1.mmFirstDealingDate, CorporateActionDate3.mmFirstDealingDate);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstDealingDate";
@@ -5909,6 +6030,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getFirstDealingDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesTax> taxDetails;
@@ -5929,10 +6058,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesTax
 	 * SecuritiesTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -5941,6 +6066,10 @@ public class Security extends Asset {
 	 * SecuritiesAccount8.mmStampDuty}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -5955,7 +6084,7 @@ public class Security extends Asset {
 	public static final MMBusinessAssociationEnd mmTaxDetails = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesAccount8.mmStampDuty);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxDetails";
@@ -6001,7 +6130,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTrade";
@@ -6051,7 +6180,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmRegistrationJurisdiction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationJurisdiction";
@@ -6101,7 +6230,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
@@ -6130,10 +6259,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesStatus
 	 * SecuritiesStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -6142,6 +6267,10 @@ public class Security extends Asset {
 	 * CommonFinancialInstrumentAttributes1.mmSecurityStatus}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -6157,7 +6286,7 @@ public class Security extends Asset {
 	public static final MMBusinessAssociationEnd mmSecurityStatus = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CommonFinancialInstrumentAttributes1.mmSecurityStatus);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecurityStatus";
@@ -6205,7 +6334,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmModification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Modification";
@@ -6252,7 +6381,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmRedemptionSchedule = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RedemptionSchedule";
@@ -6282,10 +6411,6 @@ public class Security extends Asset {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
 	 * SecuritiesSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -6307,6 +6432,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -6321,7 +6450,7 @@ public class Security extends Asset {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesCollateral3.mmSettlementParameters, SecuritiesCollateral4.mmSettlementParameters, SecuritiesCollateral5.mmSettlementParameters, SecuritiesCollateral7.mmSettlementParameters,
 					SecuritiesCollateral8.mmSettlementParameters);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesSettlement";
@@ -6367,7 +6496,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTransfer = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransfer";
@@ -6418,7 +6547,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionStandingInstructions = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionStandingInstructions";
@@ -6463,7 +6592,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quote";
@@ -6510,7 +6639,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesOrder";
@@ -6560,7 +6689,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedVariableInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedVariableInterest";
@@ -6612,7 +6741,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmConversion = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Conversion";
@@ -6658,7 +6787,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmComponentSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ComponentSecurity";
@@ -6700,7 +6829,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAttribute mmRecompositionIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RecompositionIndicator";
@@ -6708,6 +6837,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getRecompositionIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text series;
@@ -6737,7 +6874,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAttribute mmSeries = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Series";
@@ -6745,6 +6882,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getSeries", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate percentageOfDebtClaim;
@@ -6759,10 +6904,6 @@ public class Security extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -6817,6 +6958,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -6837,7 +6982,7 @@ public class Security extends Asset {
 					FinancialInstrumentAttributes44.mmPercentageOfDebtClaims, FinancialInstrumentAttributes48.mmPercentageOfDebtClaim, FinancialInstrumentAttributes55.mmPercentageOfDebtClaim,
 					FinancialInstrumentAttributes66.mmPercentageOfDebtClaim, FinancialInstrumentAttributes70.mmPercentageOfDebtClaim, FinancialInstrumentAttributes79.mmPercentageOfDebtClaim,
 					FinancialInstrumentAttributes85.mmPercentageOfDebtClaim);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfDebtClaim";
@@ -6845,6 +6990,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getPercentageOfDebtClaim", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate coverRate;
@@ -6878,7 +7031,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAttribute mmCoverRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CoverRate";
@@ -6886,6 +7039,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getCoverRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MaturityRedemptionTypeCode maturityRedemption;
@@ -6917,7 +7078,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAttribute mmMaturityRedemption = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityRedemption";
@@ -6925,6 +7086,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MaturityRedemptionTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getMaturityRedemption", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MarginCall relatedMarginCall;
@@ -6963,7 +7132,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedMarginCall = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedMarginCall";
@@ -6994,10 +7163,6 @@ public class Security extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Party Party}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -7006,6 +7171,10 @@ public class Security extends Asset {
 	 * CloseLink1.mmSecurityIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -7022,7 +7191,7 @@ public class Security extends Asset {
 	public static final MMBusinessAssociationEnd mmCloseLink = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CloseLink1.mmSecurityIdentification);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CloseLink";
@@ -7065,7 +7234,7 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAttribute mmPotentialEuroSystemEligibility = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PotentialEuroSystemEligibility";
@@ -7073,6 +7242,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getPotentialEuroSystemEligibility", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesQuantity minimumQuantity;
@@ -7093,10 +7270,6 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -7292,6 +7465,10 @@ public class Security extends Asset {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -7325,7 +7502,7 @@ public class Security extends Asset {
 					FinancialInstrumentAttributes75.mmMinimumNominalQuantity, FinancialInstrumentAttributes78.mmMinimumNominalQuantity, FinancialInstrumentAttributes79.mmMinimumNominalQuantity,
 					FinancialInstrumentAttributes81.mmMinimumNominalQuantity, FinancialInstrumentAttributes80.mmMinimumNominalQuantity, FinancialInstrumentAttributes85.mmMinimumNominalQuantity,
 					FinancialInstrumentAttributes84.mmMinimumNominalQuantity, FinancialInstrumentAttributes83.mmMinimumNominalQuantity);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumQuantity";
@@ -7350,10 +7527,6 @@ public class Security extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
-	 * Security}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -7362,6 +7535,10 @@ public class Security extends Asset {
 	 * Debt2.mmRestrictedIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
+	 * Security}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -7378,7 +7555,7 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmRestrictedIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt2.mmRestrictedIndicator);
-			elementContext_lazy = () -> Security.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RestrictedIndicator";
@@ -7386,6 +7563,14 @@ public class Security extends Asset {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Security.class.getMethod("getRestrictedIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -7427,15 +7612,26 @@ public class Security extends Asset {
 						FinancialInstrumentDetails26.mmFinancialInstrumentAttributes);
 				subType_lazy = () -> Arrays.asList(InvestmentFundClass.mmObject(), Debt.mmObject(), Equity.mmObject(), Warrant.mmObject(), Entitlement.mmObject());
 				superType_lazy = () -> Asset.mmObject();
-				element_lazy = () -> Arrays.asList(Security.mmIdentification, Security.mmRegisteredDistributionCountry, Security.mmDenominationCurrency, Security.mmRegistrationForm, Security.mmDematerialisedIndicator,
-						Security.mmEUSavingsDirective, Security.mmSecuritiesQuantity, Security.mmFees, Security.mmPricing, Security.mmSecuritiesAccount, Security.mmTradingMarket, Security.mmPlaceOfListing, Security.mmRegistration,
-						Security.mmRestriction, Security.mmCorporateEvent, Security.mmTemporaryFinancialInstrumentIndicator, Security.mmAvailableDate, Security.mmDeclarationDetails, Security.mmSpread, Security.mmDividend,
-						Security.mmBalance, Security.mmFungibleIndicator, Security.mmAppearance, Security.mmNearTermPositionLimit, Security.mmContractSettlementMonth, Security.mmMinimumTradingPricingIncrement, Security.mmRating,
-						Security.mmCouponAttached, Security.mmSector, Security.mmWarrantAttachedOnDelivery, Security.mmStrippableIndicator, Security.mmFirstDealingDate, Security.mmTaxDetails, Security.mmSecuritiesTrade,
-						Security.mmRegistrationJurisdiction, Security.mmPartyRole, Security.mmSecurityStatus, Security.mmModification, Security.mmRedemptionSchedule, Security.mmSecuritiesSettlement, Security.mmSecuritiesTransfer,
-						Security.mmCorporateActionStandingInstructions, Security.mmQuote, Security.mmSecuritiesOrder, Security.mmRelatedVariableInterest, Security.mmConversion, Security.mmComponentSecurity,
-						Security.mmRecompositionIndicator, Security.mmSeries, Security.mmPercentageOfDebtClaim, Security.mmCoverRate, Security.mmMaturityRedemption, Security.mmRelatedMarginCall, Security.mmCloseLink,
-						Security.mmPotentialEuroSystemEligibility, Security.mmMinimumQuantity, Security.mmRestrictedIndicator);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmIdentification, com.tools20022.repository.entity.Security.mmRegisteredDistributionCountry,
+						com.tools20022.repository.entity.Security.mmDenominationCurrency, com.tools20022.repository.entity.Security.mmRegistrationForm, com.tools20022.repository.entity.Security.mmDematerialisedIndicator,
+						com.tools20022.repository.entity.Security.mmEUSavingsDirective, com.tools20022.repository.entity.Security.mmSecuritiesQuantity, com.tools20022.repository.entity.Security.mmFees,
+						com.tools20022.repository.entity.Security.mmPricing, com.tools20022.repository.entity.Security.mmSecuritiesAccount, com.tools20022.repository.entity.Security.mmTradingMarket,
+						com.tools20022.repository.entity.Security.mmPlaceOfListing, com.tools20022.repository.entity.Security.mmRegistration, com.tools20022.repository.entity.Security.mmRestriction,
+						com.tools20022.repository.entity.Security.mmCorporateEvent, com.tools20022.repository.entity.Security.mmTemporaryFinancialInstrumentIndicator, com.tools20022.repository.entity.Security.mmAvailableDate,
+						com.tools20022.repository.entity.Security.mmDeclarationDetails, com.tools20022.repository.entity.Security.mmSpread, com.tools20022.repository.entity.Security.mmDividend,
+						com.tools20022.repository.entity.Security.mmBalance, com.tools20022.repository.entity.Security.mmFungibleIndicator, com.tools20022.repository.entity.Security.mmAppearance,
+						com.tools20022.repository.entity.Security.mmNearTermPositionLimit, com.tools20022.repository.entity.Security.mmContractSettlementMonth, com.tools20022.repository.entity.Security.mmMinimumTradingPricingIncrement,
+						com.tools20022.repository.entity.Security.mmRating, com.tools20022.repository.entity.Security.mmCouponAttached, com.tools20022.repository.entity.Security.mmSector,
+						com.tools20022.repository.entity.Security.mmWarrantAttachedOnDelivery, com.tools20022.repository.entity.Security.mmStrippableIndicator, com.tools20022.repository.entity.Security.mmFirstDealingDate,
+						com.tools20022.repository.entity.Security.mmTaxDetails, com.tools20022.repository.entity.Security.mmSecuritiesTrade, com.tools20022.repository.entity.Security.mmRegistrationJurisdiction,
+						com.tools20022.repository.entity.Security.mmPartyRole, com.tools20022.repository.entity.Security.mmSecurityStatus, com.tools20022.repository.entity.Security.mmModification,
+						com.tools20022.repository.entity.Security.mmRedemptionSchedule, com.tools20022.repository.entity.Security.mmSecuritiesSettlement, com.tools20022.repository.entity.Security.mmSecuritiesTransfer,
+						com.tools20022.repository.entity.Security.mmCorporateActionStandingInstructions, com.tools20022.repository.entity.Security.mmQuote, com.tools20022.repository.entity.Security.mmSecuritiesOrder,
+						com.tools20022.repository.entity.Security.mmRelatedVariableInterest, com.tools20022.repository.entity.Security.mmConversion, com.tools20022.repository.entity.Security.mmComponentSecurity,
+						com.tools20022.repository.entity.Security.mmRecompositionIndicator, com.tools20022.repository.entity.Security.mmSeries, com.tools20022.repository.entity.Security.mmPercentageOfDebtClaim,
+						com.tools20022.repository.entity.Security.mmCoverRate, com.tools20022.repository.entity.Security.mmMaturityRedemption, com.tools20022.repository.entity.Security.mmRelatedMarginCall,
+						com.tools20022.repository.entity.Security.mmCloseLink, com.tools20022.repository.entity.Security.mmPotentialEuroSystemEligibility, com.tools20022.repository.entity.Security.mmMinimumQuantity,
+						com.tools20022.repository.entity.Security.mmRestrictedIndicator);
 				derivationComponent_lazy = () -> Arrays.asList(FormOfSecurity1Choice.mmObject(), FormOfSecurity2Choice.mmObject(), PaymentDirection1Choice.mmObject(), PaymentDirection2Choice.mmObject(), FormOfSecurity3Choice.mmObject(),
 						UnderlyingSecurity1.mmObject(), UnderlyingSecurity2.mmObject(), UnderlyingSecurity3.mmObject(), TemporaryFinancialInstrumentIndicator1Choice.mmObject(), TemporaryFinancialInstrumentIndicator2Choice.mmObject(),
 						SecurityDate9.mmObject(), SecurityDate10.mmObject(), PaymentDirection3Choice.mmObject(), FinancialInstrumentDetails1.mmObject(), FinancialInstrumentDetails4.mmObject(), FinancialInstrumentDetails6.mmObject(),
@@ -7454,6 +7650,11 @@ public class Security extends Asset {
 						TransparencyDataReport10.mmObject(), TransparencyDataReport14.mmObject(), FinancialInstrument58.mmObject(), FinancialInstrument48Choice.mmObject(), FinancialInstrumentAttributes3Choice.mmObject(),
 						SecurityInstrumentDescription13.mmObject(), FinancialInstrumentDetails25.mmObject(), FinancialInstrumentDetails24.mmObject(), SecuritiesCollateral8.mmObject(), FinancialInstrumentDetails27.mmObject(),
 						FinancialInstrumentDetails26.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Security.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.MessageAndBusinessReference6;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -43,9 +45,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.009.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -76,6 +75,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.009.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -99,6 +101,8 @@ import java.util.List;
  * RequestForTransferStatusReport}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestForTransferStatusReportV02", propOrder = {"messageIdentification", "requestDetails", "extension"})
 public class RequestForTransferStatusReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -139,6 +143,14 @@ public class RequestForTransferStatusReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RequestForTransferStatusReportV02.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<MessageAndBusinessReference6> requestDetails;
 	/**
@@ -174,6 +186,14 @@ public class RequestForTransferStatusReportV02 {
 			definition = "Information to identify the transfer for which the status is requested.\n";
 			minOccurs = 1;
 			complexType_lazy = () -> MessageAndBusinessReference6.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RequestForTransferStatusReportV02.class.getMethod("getRequestDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -211,6 +231,14 @@ public class RequestForTransferStatusReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RequestForTransferStatusReportV02.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -225,7 +253,8 @@ public class RequestForTransferStatusReportV02 {
 				rootElement = "Document";
 				xmlTag = "ReqForTrfStsRptV02";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(RequestForTransferStatusReportV02.mmMessageIdentification, RequestForTransferStatusReportV02.mmRequestDetails, RequestForTransferStatusReportV02.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.RequestForTransferStatusReportV02.mmMessageIdentification,
+						com.tools20022.repository.area.sese.RequestForTransferStatusReportV02.mmRequestDetails, com.tools20022.repository.area.sese.RequestForTransferStatusReportV02.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -235,10 +264,16 @@ public class RequestForTransferStatusReportV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RequestForTransferStatusReportV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -247,6 +282,7 @@ public class RequestForTransferStatusReportV02 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "ReqDtls", required = true)
 	public List<MessageAndBusinessReference6> getRequestDetails() {
 		return requestDetails;
 	}
@@ -255,11 +291,18 @@ public class RequestForTransferStatusReportV02 {
 		this.requestDetails = requestDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.009.02.02")
+	static public class Document {
+		@XmlElement(name = "ReqForTrfStsRptV02", required = true)
+		public RequestForTransferStatusReportV02 messageBody;
 	}
 }

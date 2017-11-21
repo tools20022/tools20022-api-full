@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Plan that allows investors to schedule periodical investments or divestments,
@@ -131,6 +135,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentPlan4", propOrder = {"frequency", "extendedFrequency", "startDate", "endDate", "amount", "grossAmountIndicator", "incomePreference", "initialNumberOfInstalment", "totalNumberOfInstalment", "roundingDirection",
+		"securityDetails", "cashSettlement"})
 public class InvestmentPlan4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -796,6 +803,7 @@ public class InvestmentPlan4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Frqcy", required = true)
 	public EventFrequency1Code getFrequency() {
 		return frequency;
 	}
@@ -804,6 +812,7 @@ public class InvestmentPlan4 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "XtndedFrqcy", required = true)
 	public Extended350Code getExtendedFrequency() {
 		return extendedFrequency;
 	}
@@ -812,6 +821,7 @@ public class InvestmentPlan4 {
 		this.extendedFrequency = extendedFrequency;
 	}
 
+	@XmlElement(name = "StartDt", required = true)
 	public ISODate getStartDate() {
 		return startDate;
 	}
@@ -820,6 +830,7 @@ public class InvestmentPlan4 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "EndDt")
 	public ISODate getEndDate() {
 		return endDate;
 	}
@@ -828,6 +839,7 @@ public class InvestmentPlan4 {
 		this.endDate = endDate;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -836,6 +848,7 @@ public class InvestmentPlan4 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "GrssAmtInd")
 	public YesNoIndicator getGrossAmountIndicator() {
 		return grossAmountIndicator;
 	}
@@ -844,6 +857,7 @@ public class InvestmentPlan4 {
 		this.grossAmountIndicator = grossAmountIndicator;
 	}
 
+	@XmlElement(name = "IncmPref")
 	public IncomePreference1Code getIncomePreference() {
 		return incomePreference;
 	}
@@ -852,6 +866,7 @@ public class InvestmentPlan4 {
 		this.incomePreference = incomePreference;
 	}
 
+	@XmlElement(name = "InitlNbOfInstlmt")
 	public Number getInitialNumberOfInstalment() {
 		return initialNumberOfInstalment;
 	}
@@ -860,6 +875,7 @@ public class InvestmentPlan4 {
 		this.initialNumberOfInstalment = initialNumberOfInstalment;
 	}
 
+	@XmlElement(name = "TtlNbOfInstlmt")
 	public Number getTotalNumberOfInstalment() {
 		return totalNumberOfInstalment;
 	}
@@ -868,6 +884,7 @@ public class InvestmentPlan4 {
 		this.totalNumberOfInstalment = totalNumberOfInstalment;
 	}
 
+	@XmlElement(name = "RndgDrctn")
 	public RoundingDirection1Code getRoundingDirection() {
 		return roundingDirection;
 	}
@@ -876,6 +893,7 @@ public class InvestmentPlan4 {
 		this.roundingDirection = roundingDirection;
 	}
 
+	@XmlElement(name = "SctyDtls", required = true)
 	public List<Repartition1> getSecurityDetails() {
 		return securityDetails;
 	}
@@ -884,6 +902,7 @@ public class InvestmentPlan4 {
 		this.securityDetails = securityDetails;
 	}
 
+	@XmlElement(name = "CshSttlm")
 	public InvestmentFundCashSettlementInformation3 getCashSettlement() {
 		return cashSettlement;
 	}

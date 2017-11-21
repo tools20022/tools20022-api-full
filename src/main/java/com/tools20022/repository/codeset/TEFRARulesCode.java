@@ -30,19 +30,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TEFRARules1Code
- * TEFRARules1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.TEFRARulesCode#mmC
  * TEFRARulesCode.mmC}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.TEFRARulesCode#mmD
  * TEFRARulesCode.mmD}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TEFRARules1Code
+ * TEFRARules1Code}</li>
  * </ul>
  * </li>
  * <li>

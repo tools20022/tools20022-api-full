@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the details of the transaction.
@@ -124,6 +128,10 @@ import java.util.List;
  * definition} = "Identifies the details of the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionDetails16", propOrder = {"transactionActivity", "settlementTransactionOrCorporateActionEventType", "securitiesMovementType", "payment", "settlementParameters", "placeOfTrade", "safekeepingPlace",
+		"placeOfClearing", "financialInstrumentIdentification", "postingQuantity", "postingAmount", "tradeDate", "expectedSettlementDate", "settlementDate", "lateDeliveryDate", "expectedValueDate", "deliveringSettlementParties",
+		"receivingSettlementParties", "transactionAdditionalDetails", "extension"})
 public class TransactionDetails16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1123,6 +1131,7 @@ public class TransactionDetails16 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxActvty", required = true)
 	public TransactionActivity2Choice getTransactionActivity() {
 		return transactionActivity;
 	}
@@ -1131,6 +1140,7 @@ public class TransactionDetails16 {
 		this.transactionActivity = transactionActivity;
 	}
 
+	@XmlElement(name = "SttlmTxOrCorpActnEvtTp")
 	public SettlementOrCorporateActionEvent3Choice getSettlementTransactionOrCorporateActionEventType() {
 		return settlementTransactionOrCorporateActionEventType;
 	}
@@ -1139,6 +1149,7 @@ public class TransactionDetails16 {
 		this.settlementTransactionOrCorporateActionEventType = settlementTransactionOrCorporateActionEventType;
 	}
 
+	@XmlElement(name = "SctiesMvmntTp", required = true)
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
@@ -1147,6 +1158,7 @@ public class TransactionDetails16 {
 		this.securitiesMovementType = securitiesMovementType;
 	}
 
+	@XmlElement(name = "Pmt", required = true)
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
@@ -1155,6 +1167,7 @@ public class TransactionDetails16 {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "SttlmParams")
 	public SettlementDetails12 getSettlementParameters() {
 		return settlementParameters;
 	}
@@ -1163,6 +1176,7 @@ public class TransactionDetails16 {
 		this.settlementParameters = settlementParameters;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public MarketIdentification8 getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -1171,6 +1185,7 @@ public class TransactionDetails16 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat4Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -1179,6 +1194,7 @@ public class TransactionDetails16 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "PlcOfClr")
 	public AnyBICIdentifier getPlaceOfClearing() {
 		return placeOfClearing;
 	}
@@ -1187,6 +1203,7 @@ public class TransactionDetails16 {
 		this.placeOfClearing = placeOfClearing;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification12 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -1195,6 +1212,7 @@ public class TransactionDetails16 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "PstngQty", required = true)
 	public Quantity10Choice getPostingQuantity() {
 		return postingQuantity;
 	}
@@ -1203,6 +1221,7 @@ public class TransactionDetails16 {
 		this.postingQuantity = postingQuantity;
 	}
 
+	@XmlElement(name = "PstngAmt")
 	public AmountAndDirection12 getPostingAmount() {
 		return postingAmount;
 	}
@@ -1211,6 +1230,7 @@ public class TransactionDetails16 {
 		this.postingAmount = postingAmount;
 	}
 
+	@XmlElement(name = "TradDt")
 	public TradeDate2Choice getTradeDate() {
 		return tradeDate;
 	}
@@ -1219,6 +1239,7 @@ public class TransactionDetails16 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "XpctdSttlmDt")
 	public DateAndDateTimeChoice getExpectedSettlementDate() {
 		return expectedSettlementDate;
 	}
@@ -1227,6 +1248,7 @@ public class TransactionDetails16 {
 		this.expectedSettlementDate = expectedSettlementDate;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public SettlementDate6Choice getSettlementDate() {
 		return settlementDate;
 	}
@@ -1235,6 +1257,7 @@ public class TransactionDetails16 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "LateDlvryDt")
 	public DateAndDateTimeChoice getLateDeliveryDate() {
 		return lateDeliveryDate;
 	}
@@ -1243,6 +1266,7 @@ public class TransactionDetails16 {
 		this.lateDeliveryDate = lateDeliveryDate;
 	}
 
+	@XmlElement(name = "XpctdValDt")
 	public DateAndDateTimeChoice getExpectedValueDate() {
 		return expectedValueDate;
 	}
@@ -1251,6 +1275,7 @@ public class TransactionDetails16 {
 		this.expectedValueDate = expectedValueDate;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties6 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -1259,6 +1284,7 @@ public class TransactionDetails16 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties6 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -1267,6 +1293,7 @@ public class TransactionDetails16 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "TxAddtlDtls")
 	public RestrictedFINXMax350Text getTransactionAdditionalDetails() {
 		return transactionAdditionalDetails;
 	}
@@ -1275,6 +1302,7 @@ public class TransactionDetails16 {
 		this.transactionAdditionalDetails = transactionAdditionalDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension2> getExtension() {
 		return extension;
 	}

@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Investment fund transactions for a specific financial instrument.
@@ -105,6 +109,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentFundTransactionsByFund2", propOrder = {"identification", "name", "supplementaryIdentification", "securitiesForm", "classType", "distributionPolicy", "transactionDetails", "balanceByPage"})
 public class InvestmentFundTransactionsByFund2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -581,6 +587,7 @@ public class InvestmentFundTransactionsByFund2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification3Choice getIdentification() {
 		return identification;
 	}
@@ -589,6 +596,7 @@ public class InvestmentFundTransactionsByFund2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max350Text getName() {
 		return name;
 	}
@@ -597,6 +605,7 @@ public class InvestmentFundTransactionsByFund2 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "SplmtryId")
 	public Max35Text getSupplementaryIdentification() {
 		return supplementaryIdentification;
 	}
@@ -605,6 +614,7 @@ public class InvestmentFundTransactionsByFund2 {
 		this.supplementaryIdentification = supplementaryIdentification;
 	}
 
+	@XmlElement(name = "SctiesForm")
 	public FormOfSecurity1Code getSecuritiesForm() {
 		return securitiesForm;
 	}
@@ -613,6 +623,7 @@ public class InvestmentFundTransactionsByFund2 {
 		this.securitiesForm = securitiesForm;
 	}
 
+	@XmlElement(name = "ClssTp")
 	public Max35Text getClassType() {
 		return classType;
 	}
@@ -621,6 +632,7 @@ public class InvestmentFundTransactionsByFund2 {
 		this.classType = classType;
 	}
 
+	@XmlElement(name = "DstrbtnPlcy")
 	public DistributionPolicy1Code getDistributionPolicy() {
 		return distributionPolicy;
 	}
@@ -629,6 +641,7 @@ public class InvestmentFundTransactionsByFund2 {
 		this.distributionPolicy = distributionPolicy;
 	}
 
+	@XmlElement(name = "TxDtls", required = true)
 	public List<InvestmentFundTransaction3> getTransactionDetails() {
 		return transactionDetails;
 	}
@@ -637,6 +650,7 @@ public class InvestmentFundTransactionsByFund2 {
 		this.transactionDetails = transactionDetails;
 	}
 
+	@XmlElement(name = "BalByPg")
 	public PaginationBalance1 getBalanceByPage() {
 		return balanceByPage;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PersonName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Human entity, as distinguished from a corporate entity (which is sometimes
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * IndividualPerson30}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IndividualPerson35", propOrder = {"givenName", "middleName", "name", "gender", "birthDate"})
 public class IndividualPerson35 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -363,6 +369,7 @@ public class IndividualPerson35 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GvnNm")
 	public Max35Text getGivenName() {
 		return givenName;
 	}
@@ -371,6 +378,7 @@ public class IndividualPerson35 {
 		this.givenName = givenName;
 	}
 
+	@XmlElement(name = "MddlNm")
 	public Max35Text getMiddleName() {
 		return middleName;
 	}
@@ -379,6 +387,7 @@ public class IndividualPerson35 {
 		this.middleName = middleName;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max350Text getName() {
 		return name;
 	}
@@ -387,6 +396,7 @@ public class IndividualPerson35 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Gndr")
 	public Gender1Code getGender() {
 		return gender;
 	}
@@ -395,6 +405,7 @@ public class IndividualPerson35 {
 		this.gender = gender;
 	}
 
+	@XmlElement(name = "BirthDt")
 	public ISODate getBirthDate() {
 		return birthDate;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Deadline;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies corporate action date.
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionDate18}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionDate46", propOrder = {"responseDeadline", "subscriptionCostDebitDate", "marketDeadline", "expiryDate", "coverExpirationDate", "protectDate", "tradingDate"})
 public class CorporateActionDate46 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -495,6 +501,7 @@ public class CorporateActionDate46 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RspnDdln")
 	public DateFormat31Choice getResponseDeadline() {
 		return responseDeadline;
 	}
@@ -503,6 +510,7 @@ public class CorporateActionDate46 {
 		this.responseDeadline = responseDeadline;
 	}
 
+	@XmlElement(name = "SbcptCostDbtDt")
 	public DateFormat31Choice getSubscriptionCostDebitDate() {
 		return subscriptionCostDebitDate;
 	}
@@ -511,6 +519,7 @@ public class CorporateActionDate46 {
 		this.subscriptionCostDebitDate = subscriptionCostDebitDate;
 	}
 
+	@XmlElement(name = "MktDdln")
 	public DateFormat31Choice getMarketDeadline() {
 		return marketDeadline;
 	}
@@ -519,6 +528,7 @@ public class CorporateActionDate46 {
 		this.marketDeadline = marketDeadline;
 	}
 
+	@XmlElement(name = "XpryDt")
 	public DateFormat31Choice getExpiryDate() {
 		return expiryDate;
 	}
@@ -527,6 +537,7 @@ public class CorporateActionDate46 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "CoverXprtnDt")
 	public DateFormat31Choice getCoverExpirationDate() {
 		return coverExpirationDate;
 	}
@@ -535,6 +546,7 @@ public class CorporateActionDate46 {
 		this.coverExpirationDate = coverExpirationDate;
 	}
 
+	@XmlElement(name = "PrtctDt")
 	public DateFormat31Choice getProtectDate() {
 		return protectDate;
 	}
@@ -543,6 +555,7 @@ public class CorporateActionDate46 {
 		this.protectDate = protectDate;
 	}
 
+	@XmlElement(name = "TradgDt")
 	public DateFormat31Choice getTradingDate() {
 		return tradingDate;
 	}

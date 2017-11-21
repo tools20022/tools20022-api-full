@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification38;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of an EU capital gain type.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EUCapitalGainType2Choice", propOrder = {"EUCapitalGain", "proprietary"})
 public class EUCapitalGainType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -212,6 +218,7 @@ public class EUCapitalGainType2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EUCptlGn", required = true)
 	public EUCapitalGain2Code getEUCapitalGain() {
 		return eUCapitalGain;
 	}
@@ -220,6 +227,7 @@ public class EUCapitalGainType2Choice {
 		this.eUCapitalGain = eUCapitalGain;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification38 getProprietary() {
 		return proprietary;
 	}

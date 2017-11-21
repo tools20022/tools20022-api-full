@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Further information related to the processing of the payment instruction that
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructionForNextAgent1", propOrder = {"code", "instructionInformation"})
 public class InstructionForNextAgent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -182,6 +188,7 @@ public class InstructionForNextAgent1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd")
 	public Instruction4Code getCode() {
 		return code;
 	}
@@ -190,6 +197,7 @@ public class InstructionForNextAgent1 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "InstrInf")
 	public Max140Text getInstructionInformation() {
 		return instructionInformation;
 	}

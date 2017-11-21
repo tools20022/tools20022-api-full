@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of the account expressed with an account number and a code.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Identification of the account expressed with an account number and a code."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountIdentificationAndPurpose", propOrder = {"identification", "purpose"})
 public class AccountIdentificationAndPurpose {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class AccountIdentificationAndPurpose {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentification1 getIdentification() {
 		return identification;
 	}
@@ -188,6 +195,7 @@ public class AccountIdentificationAndPurpose {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Purp", required = true)
 	public SecuritiesAccountPurposeType1Code getPurpose() {
 		return purpose;
 	}

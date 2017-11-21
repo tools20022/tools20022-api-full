@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.ProductQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money for which goods or services are offered, sold, or bought.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * UnitPrice9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnitPrice18", propOrder = {"unitPrice", "amount", "factor"})
 public class UnitPrice18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -243,6 +249,7 @@ public class UnitPrice18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitPric", required = true)
 	public UnitOfMeasure3Choice getUnitPrice() {
 		return unitPrice;
 	}
@@ -251,6 +258,7 @@ public class UnitPrice18 {
 		this.unitPrice = unitPrice;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -259,6 +267,7 @@ public class UnitPrice18 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Fctr")
 	public Max15NumericText getFactor() {
 		return factor;
 	}

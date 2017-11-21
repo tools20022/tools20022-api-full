@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.ISOTime;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the type of execution to be performed in the request.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExecutionType1Choice", propOrder = {"time", "event"})
 public class ExecutionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class ExecutionType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tm", required = true)
 	public ISOTime getTime() {
 		return time;
 	}
@@ -166,6 +173,7 @@ public class ExecutionType1Choice {
 		this.time = time;
 	}
 
+	@XmlElement(name = "Evt", required = true)
 	public EventType1Choice getEvent() {
 		return event;
 	}

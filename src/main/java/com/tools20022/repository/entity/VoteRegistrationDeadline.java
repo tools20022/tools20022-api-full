@@ -67,6 +67,11 @@ public class VoteRegistrationDeadline extends MeetingDeadline {
 				definition = "Date/time by which the beneficial owner or agent must notify of their intention to participate in a meeting.";
 				superType_lazy = () -> MeetingDeadline.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return VoteRegistrationDeadline.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

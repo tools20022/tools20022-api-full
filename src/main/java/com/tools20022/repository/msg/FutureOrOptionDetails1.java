@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters for contracts which obligate the buyer to receive and the seller
@@ -127,6 +131,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FutureOrOptionDetails1", propOrder = {"futureAndOptionContractType", "lastDeliveryDate", "unitOfMeasure", "futureDate", "minimumSize", "announcementDate", "appearance", "strippableIndicator", "positionLimit",
+		"nearTermPositionLimit", "minimumTradingPricingIncrement", "purpose", "contractSettlementMonth", "firstDealingDate", "ratio", "rating", "issuePrice", "optionRights", "lastTransaction", "spreadTransaction"})
 public class FutureOrOptionDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1109,6 +1116,7 @@ public class FutureOrOptionDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FutrAndOptnCtrctTp")
 	public FutureAndOptionContractType1Code getFutureAndOptionContractType() {
 		return futureAndOptionContractType;
 	}
@@ -1117,6 +1125,7 @@ public class FutureOrOptionDetails1 {
 		this.futureAndOptionContractType = futureAndOptionContractType;
 	}
 
+	@XmlElement(name = "LastDlvryDt")
 	public ISODateTime getLastDeliveryDate() {
 		return lastDeliveryDate;
 	}
@@ -1125,6 +1134,7 @@ public class FutureOrOptionDetails1 {
 		this.lastDeliveryDate = lastDeliveryDate;
 	}
 
+	@XmlElement(name = "UnitOfMeasr")
 	public UnitOfMeasure1Code getUnitOfMeasure() {
 		return unitOfMeasure;
 	}
@@ -1133,6 +1143,7 @@ public class FutureOrOptionDetails1 {
 		this.unitOfMeasure = unitOfMeasure;
 	}
 
+	@XmlElement(name = "FutrDt")
 	public ISODateTime getFutureDate() {
 		return futureDate;
 	}
@@ -1141,6 +1152,7 @@ public class FutureOrOptionDetails1 {
 		this.futureDate = futureDate;
 	}
 
+	@XmlElement(name = "MinSz")
 	public ActiveCurrencyAndAmount getMinimumSize() {
 		return minimumSize;
 	}
@@ -1149,6 +1161,7 @@ public class FutureOrOptionDetails1 {
 		this.minimumSize = minimumSize;
 	}
 
+	@XmlElement(name = "AnncmntDt")
 	public ISODateTime getAnnouncementDate() {
 		return announcementDate;
 	}
@@ -1157,6 +1170,7 @@ public class FutureOrOptionDetails1 {
 		this.announcementDate = announcementDate;
 	}
 
+	@XmlElement(name = "Apprnc")
 	public Appearance1Code getAppearance() {
 		return appearance;
 	}
@@ -1165,6 +1179,7 @@ public class FutureOrOptionDetails1 {
 		this.appearance = appearance;
 	}
 
+	@XmlElement(name = "StrpblInd")
 	public YesNoIndicator getStrippableIndicator() {
 		return strippableIndicator;
 	}
@@ -1173,6 +1188,7 @@ public class FutureOrOptionDetails1 {
 		this.strippableIndicator = strippableIndicator;
 	}
 
+	@XmlElement(name = "PosLmt")
 	public Number getPositionLimit() {
 		return positionLimit;
 	}
@@ -1181,6 +1197,7 @@ public class FutureOrOptionDetails1 {
 		this.positionLimit = positionLimit;
 	}
 
+	@XmlElement(name = "NearTermPosLmt")
 	public Number getNearTermPositionLimit() {
 		return nearTermPositionLimit;
 	}
@@ -1189,6 +1206,7 @@ public class FutureOrOptionDetails1 {
 		this.nearTermPositionLimit = nearTermPositionLimit;
 	}
 
+	@XmlElement(name = "MinTradgPricgIncrmt")
 	public Number getMinimumTradingPricingIncrement() {
 		return minimumTradingPricingIncrement;
 	}
@@ -1197,6 +1215,7 @@ public class FutureOrOptionDetails1 {
 		this.minimumTradingPricingIncrement = minimumTradingPricingIncrement;
 	}
 
+	@XmlElement(name = "Purp")
 	public Max256Text getPurpose() {
 		return purpose;
 	}
@@ -1205,6 +1224,7 @@ public class FutureOrOptionDetails1 {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "CtrctSttlmMnth")
 	public ISOYearMonth getContractSettlementMonth() {
 		return contractSettlementMonth;
 	}
@@ -1213,6 +1233,7 @@ public class FutureOrOptionDetails1 {
 		this.contractSettlementMonth = contractSettlementMonth;
 	}
 
+	@XmlElement(name = "FrstDealgDt")
 	public DateAndDateTime1Choice getFirstDealingDate() {
 		return firstDealingDate;
 	}
@@ -1221,6 +1242,7 @@ public class FutureOrOptionDetails1 {
 		this.firstDealingDate = firstDealingDate;
 	}
 
+	@XmlElement(name = "Ratio")
 	public List<UnderlyingRatio1> getRatio() {
 		return ratio;
 	}
@@ -1229,6 +1251,7 @@ public class FutureOrOptionDetails1 {
 		this.ratio = ratio;
 	}
 
+	@XmlElement(name = "Ratg")
 	public List<Rating1> getRating() {
 		return rating;
 	}
@@ -1237,6 +1260,7 @@ public class FutureOrOptionDetails1 {
 		this.rating = rating;
 	}
 
+	@XmlElement(name = "IssePric")
 	public Price4 getIssuePrice() {
 		return issuePrice;
 	}
@@ -1245,6 +1269,7 @@ public class FutureOrOptionDetails1 {
 		this.issuePrice = issuePrice;
 	}
 
+	@XmlElement(name = "OptnRghts")
 	public OptionRight1Choice getOptionRights() {
 		return optionRights;
 	}
@@ -1253,6 +1278,7 @@ public class FutureOrOptionDetails1 {
 		this.optionRights = optionRights;
 	}
 
+	@XmlElement(name = "LastTx")
 	public YesNoIndicator getLastTransaction() {
 		return lastTransaction;
 	}
@@ -1261,6 +1287,7 @@ public class FutureOrOptionDetails1 {
 		this.lastTransaction = lastTransaction;
 	}
 
+	@XmlElement(name = "SprdTx")
 	public YesNoIndicator getSpreadTransaction() {
 		return spreadTransaction;
 	}

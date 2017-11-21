@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding the corporate action event.
@@ -76,6 +80,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionUnallocatedDetailsSD1", propOrder = {"safekeepingAccount", "unallocatedBalance", "unallocatedSecuritiesTransactionDetails", "unallocatedCashTransactionDetails"})
 public class CorporateActionUnallocatedDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -304,6 +310,7 @@ public class CorporateActionUnallocatedDetailsSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public RestrictedFINXMax35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -312,6 +319,7 @@ public class CorporateActionUnallocatedDetailsSD1 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "UallctdBal")
 	public CorporateActionUnallocatedBalanceSD1Choice getUnallocatedBalance() {
 		return unallocatedBalance;
 	}
@@ -320,6 +328,7 @@ public class CorporateActionUnallocatedDetailsSD1 {
 		this.unallocatedBalance = unallocatedBalance;
 	}
 
+	@XmlElement(name = "UallctdSctiesTxDtls")
 	public List<CorporateActionUnallocatedSecuritiesTransactionDetailsSD1> getUnallocatedSecuritiesTransactionDetails() {
 		return unallocatedSecuritiesTransactionDetails;
 	}
@@ -328,6 +337,7 @@ public class CorporateActionUnallocatedDetailsSD1 {
 		this.unallocatedSecuritiesTransactionDetails = unallocatedSecuritiesTransactionDetails;
 	}
 
+	@XmlElement(name = "UallctdCshTxDtls")
 	public List<CorporateActionUnallocatedCashTransactionDetailsSD1> getUnallocatedCashTransactionDetails() {
 		return unallocatedCashTransactionDetails;
 	}

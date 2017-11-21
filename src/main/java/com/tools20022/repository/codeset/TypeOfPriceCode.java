@@ -29,43 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice6Code
- * TypeOfPrice6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice8Code
- * TypeOfPrice8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code
- * TypeOfPrice9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code
- * TypeOfPrice2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice12Code
- * TypeOfPrice12Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice14Code
- * TypeOfPrice14Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice11Code
- * TypeOfPrice11Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code
- * TypeOfPrice5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice16Code
- * TypeOfPrice16Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code
- * TypeOfPrice1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice3Code
- * TypeOfPrice3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code
- * TypeOfPrice7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice10Code
- * TypeOfPrice10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice30Code
- * TypeOfPrice30Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice13Code
- * TypeOfPrice13Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code
- * TypeOfPrice15Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPriceCode#mmAverage
@@ -192,6 +155,43 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TypeOfPriceCode#mmTaxableIncomePerShareCalculated
  * TypeOfPriceCode.mmTaxableIncomePerShareCalculated}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice6Code
+ * TypeOfPrice6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice8Code
+ * TypeOfPrice8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code
+ * TypeOfPrice9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code
+ * TypeOfPrice2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice12Code
+ * TypeOfPrice12Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice14Code
+ * TypeOfPrice14Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice11Code
+ * TypeOfPrice11Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code
+ * TypeOfPrice5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice16Code
+ * TypeOfPrice16Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code
+ * TypeOfPrice1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice3Code
+ * TypeOfPrice3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code
+ * TypeOfPrice7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice10Code
+ * TypeOfPrice10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice30Code
+ * TypeOfPrice30Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice13Code
+ * TypeOfPrice13Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code
+ * TypeOfPrice15Code}</li>
  * </ul>
  * </li>
  * <li>

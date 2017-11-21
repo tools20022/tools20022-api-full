@@ -25,9 +25,11 @@ import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.AccountStatement2;
 import com.tools20022.repository.msg.GroupHeader42;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -53,9 +55,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.053.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -83,6 +82,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.053.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -106,6 +108,8 @@ import java.util.List;
  * BankToCustomerStatementV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BankToCustomerStatementV02", propOrder = {"groupHeader", "statement"})
 public class BankToCustomerStatementV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -142,6 +146,14 @@ public class BankToCustomerStatementV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader42.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BankToCustomerStatementV02.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AccountStatement2> statement;
 	/**
@@ -177,6 +189,14 @@ public class BankToCustomerStatementV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> AccountStatement2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return BankToCustomerStatementV02.class.getMethod("getStatement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -191,7 +211,7 @@ public class BankToCustomerStatementV02 {
 				rootElement = "Document";
 				xmlTag = "BkToCstmrStmt";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(BankToCustomerStatementV02.mmGroupHeader, BankToCustomerStatementV02.mmStatement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerStatementV02.mmGroupHeader, com.tools20022.repository.area.camt.BankToCustomerStatementV02.mmStatement);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -201,10 +221,16 @@ public class BankToCustomerStatementV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BankToCustomerStatementV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader42 getGroupHeader() {
 		return groupHeader;
 	}
@@ -213,11 +239,18 @@ public class BankToCustomerStatementV02 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "Stmt", required = true)
 	public List<AccountStatement2> getStatement() {
 		return statement;
 	}
 
 	public void setStatement(List<AccountStatement2> statement) {
 		this.statement = statement;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.053.02.02")
+	static public class Document {
+		@XmlElement(name = "BkToCstmrStmt", required = true)
+		public BankToCustomerStatementV02 messageBody;
 	}
 }

@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.RatingValueIdentifier;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Rating1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,6 +35,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Rating#mmSecurity
+ * Rating.mmSecurity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Rating#mmRatingScheme
+ * Rating.mmRatingScheme}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Rating#mmValueDate
+ * Rating.mmValueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Rating#mmValue
+ * Rating.mmValue}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -49,19 +63,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Security.mmRating}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmRating
  * Scheme.mmRating}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Rating#mmSecurity
- * Rating.mmSecurity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Rating#mmRatingScheme
- * Rating.mmRatingScheme}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Rating#mmValueDate
- * Rating.mmValueDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Rating#mmValue
- * Rating.mmValue}</li>
  * </ul>
  * </li>
  * <li>
@@ -116,7 +117,7 @@ public class Rating {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Rating.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Rating.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
@@ -144,10 +145,6 @@ public class Rating {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Scheme Scheme}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Rating
-	 * Rating}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -155,6 +152,10 @@ public class Rating {
 	 * Rating1.mmRatingScheme}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Rating
+	 * Rating}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -170,7 +171,7 @@ public class Rating {
 	public static final MMBusinessAssociationEnd mmRatingScheme = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Rating1.mmRatingScheme);
-			elementContext_lazy = () -> Rating.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Rating.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RatingScheme";
@@ -192,10 +193,6 @@ public class Rating {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Rating
-	 * Rating}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -203,6 +200,10 @@ public class Rating {
 	 * Rating1.mmValueDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Rating
+	 * Rating}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -217,7 +218,7 @@ public class Rating {
 	public static final MMBusinessAttribute mmValueDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Rating1.mmValueDate);
-			elementContext_lazy = () -> Rating.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Rating.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
@@ -225,6 +226,14 @@ public class Rating {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Rating.class.getMethod("getValueDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RatingValueIdentifier value;
@@ -239,10 +248,6 @@ public class Rating {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.RatingValueIdentifier
 	 * RatingValueIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Rating
-	 * Rating}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -251,6 +256,10 @@ public class Rating {
 	 * Rating1.mmValueIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Rating
+	 * Rating}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -267,7 +276,7 @@ public class Rating {
 	public static final MMBusinessAttribute mmValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Rating1.mmValueIdentification);
-			elementContext_lazy = () -> Rating.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Rating.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Value";
@@ -275,6 +284,14 @@ public class Rating {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RatingValueIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Rating.class.getMethod("getValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -286,8 +303,14 @@ public class Rating {
 				name = "Rating";
 				definition = "Assessment of securities credit and investment risk.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmRating, com.tools20022.repository.entity.Scheme.mmRating);
-				element_lazy = () -> Arrays.asList(Rating.mmSecurity, Rating.mmRatingScheme, Rating.mmValueDate, Rating.mmValue);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Rating.mmSecurity, com.tools20022.repository.entity.Rating.mmRatingScheme, com.tools20022.repository.entity.Rating.mmValueDate,
+						com.tools20022.repository.entity.Rating.mmValue);
 				derivationComponent_lazy = () -> Arrays.asList(Rating1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Rating.class;
 			}
 		});
 		return mmObject_lazy.get();

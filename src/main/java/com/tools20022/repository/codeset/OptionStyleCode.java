@@ -29,21 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle2Code
- * OptionStyle2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code
- * OptionStyle1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle4Code
- * OptionStyle4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle3Code
- * OptionStyle3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle7Code
- * OptionStyle7Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.OptionStyleCode#mmAmerican
@@ -58,6 +43,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * OptionStyleCode.mmCanary}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.OptionStyleCode#mmOther
  * OptionStyleCode.mmOther}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle2Code
+ * OptionStyle2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code
+ * OptionStyle1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle4Code
+ * OptionStyle4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle3Code
+ * OptionStyle3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle7Code
+ * OptionStyle7Code}</li>
  * </ul>
  * </li>
  * <li>

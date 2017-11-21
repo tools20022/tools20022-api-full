@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.ProductIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Product to purchase.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Product3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Product4", propOrder = {"productCode", "additionalProductCode"})
 public class Product4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class Product4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PdctCd", required = true)
 	public Max70Text getProductCode() {
 		return productCode;
 	}
@@ -188,6 +195,7 @@ public class Product4 {
 		this.productCode = productCode;
 	}
 
+	@XmlElement(name = "AddtlPdctCd")
 	public Max70Text getAdditionalProductCode() {
 		return additionalProductCode;
 	}

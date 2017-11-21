@@ -26,9 +26,11 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -50,9 +52,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.055.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
@@ -100,6 +99,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.055.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -115,6 +117,8 @@ import java.util.List;
  * SwitchOrderConfirmationCancellationInstructionV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SwitchOrderConfirmationCancellationInstructionV02", propOrder = {"messageIdentification", "poolReference", "previousReference", "relatedReference", "amendmentIndicator", "masterReference", "orderReferences", "copyDetails"})
 public class SwitchOrderConfirmationCancellationInstructionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +166,14 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationCancellationInstructionV02.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference9 poolReference;
 	/**
@@ -203,6 +215,14 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference9.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationCancellationInstructionV02.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference8> previousReference;
 	/**
@@ -242,6 +262,14 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 			previousVersion_lazy = () -> SwitchOrderConfirmationCancellationInstructionV01.mmPreviousReference;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationCancellationInstructionV02.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference8 relatedReference;
@@ -285,6 +313,14 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationCancellationInstructionV02.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected YesNoIndicator amendmentIndicator;
 	/**
@@ -323,6 +359,14 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationCancellationInstructionV02.class.getMethod("getAmendmentIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max35Text masterReference;
 	/**
@@ -360,6 +404,14 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationCancellationInstructionV02.class.getMethod("getMasterReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<InvestmentFundOrder11> orderReferences;
 	/**
@@ -394,6 +446,14 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 			definition = "Identification of the individual order confirmation to be cancelled.";
 			minOccurs = 1;
 			complexType_lazy = () -> InvestmentFundOrder11.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationCancellationInstructionV02.class.getMethod("getOrderReferences", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CopyInformation4 copyDetails;
@@ -437,6 +497,14 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SwitchOrderConfirmationCancellationInstructionV02.class.getMethod("getCopyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -450,9 +518,11 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 				rootElement = "Document";
 				xmlTag = "SwtchOrdrConfCxlInstr";
 				businessArea_lazy = () -> SecuritiesTradeLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SwitchOrderConfirmationCancellationInstructionV02.mmMessageIdentification, SwitchOrderConfirmationCancellationInstructionV02.mmPoolReference,
-						SwitchOrderConfirmationCancellationInstructionV02.mmPreviousReference, SwitchOrderConfirmationCancellationInstructionV02.mmRelatedReference, SwitchOrderConfirmationCancellationInstructionV02.mmAmendmentIndicator,
-						SwitchOrderConfirmationCancellationInstructionV02.mmMasterReference, SwitchOrderConfirmationCancellationInstructionV02.mmOrderReferences, SwitchOrderConfirmationCancellationInstructionV02.mmCopyDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmPoolReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmRelatedReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmAmendmentIndicator,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmMasterReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmOrderReferences,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmCopyDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -462,10 +532,16 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SwitchOrderConfirmationCancellationInstructionV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -474,6 +550,7 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference9 getPoolReference() {
 		return poolReference;
 	}
@@ -482,6 +559,7 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference8> getPreviousReference() {
 		return previousReference;
 	}
@@ -490,6 +568,7 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference8 getRelatedReference() {
 		return relatedReference;
 	}
@@ -498,6 +577,7 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "AmdmntInd", required = true)
 	public YesNoIndicator getAmendmentIndicator() {
 		return amendmentIndicator;
 	}
@@ -506,6 +586,7 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 		this.amendmentIndicator = amendmentIndicator;
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -514,6 +595,7 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrRefs", required = true)
 	public List<InvestmentFundOrder11> getOrderReferences() {
 		return orderReferences;
 	}
@@ -522,11 +604,18 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 		this.orderReferences = orderReferences;
 	}
 
+	@XmlElement(name = "CpyDtls")
 	public CopyInformation4 getCopyDetails() {
 		return copyDetails;
 	}
 
 	public void setCopyDetails(CopyInformation4 copyDetails) {
 		this.copyDetails = copyDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.055.02.02")
+	static public class Document {
+		@XmlElement(name = "SwtchOrdrConfCxlInstr", required = true)
+		public SwitchOrderConfirmationCancellationInstructionV02 messageBody;
 	}
 }

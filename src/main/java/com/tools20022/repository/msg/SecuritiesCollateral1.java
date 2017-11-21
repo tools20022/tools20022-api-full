@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the securities posted as collateral.
@@ -89,6 +93,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesCollateral1", propOrder = {"securityIdentification", "maturityDate", "quantity", "price", "marketValue", "haircut", "collateralValue", "valueDate"})
 public class SecuritiesCollateral1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -564,6 +570,7 @@ public class SecuritiesCollateral1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification14 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -572,6 +579,7 @@ public class SecuritiesCollateral1 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "MtrtyDt")
 	public DateAndDateTimeChoice getMaturityDate() {
 		return maturityDate;
 	}
@@ -580,6 +588,7 @@ public class SecuritiesCollateral1 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity1Choice getQuantity() {
 		return quantity;
 	}
@@ -588,6 +597,7 @@ public class SecuritiesCollateral1 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "Pric")
 	public Price2 getPrice() {
 		return price;
 	}
@@ -596,6 +606,7 @@ public class SecuritiesCollateral1 {
 		this.price = price;
 	}
 
+	@XmlElement(name = "MktVal")
 	public ActiveCurrencyAndAmount getMarketValue() {
 		return marketValue;
 	}
@@ -604,6 +615,7 @@ public class SecuritiesCollateral1 {
 		this.marketValue = marketValue;
 	}
 
+	@XmlElement(name = "Hrcut")
 	public PercentageRate getHaircut() {
 		return haircut;
 	}
@@ -612,6 +624,7 @@ public class SecuritiesCollateral1 {
 		this.haircut = haircut;
 	}
 
+	@XmlElement(name = "CollVal")
 	public ActiveCurrencyAndAmount getCollateralValue() {
 		return collateralValue;
 	}
@@ -620,6 +633,7 @@ public class SecuritiesCollateral1 {
 		this.collateralValue = collateralValue;
 	}
 
+	@XmlElement(name = "ValDt")
 	public ISODate getValueDate() {
 		return valueDate;
 	}

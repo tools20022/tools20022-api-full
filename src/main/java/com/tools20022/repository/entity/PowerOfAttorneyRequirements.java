@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PowerOfAttorneyRequirements1;
 import com.tools20022.repository.msg.PowerOfAttorneyRequirements2;
 import com.tools20022.repository.msg.PowerOfAttorneyRequirements3;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,6 +39,23 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements#mmLegalRequirement
+ * PowerOfAttorneyRequirements.mmLegalRequirement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements#mmOtherDocumentation
+ * PowerOfAttorneyRequirements.mmOtherDocumentation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements#mmPowerOfAttorney
+ * PowerOfAttorneyRequirements.mmPowerOfAttorney}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements#mmMeeting
+ * PowerOfAttorneyRequirements.mmMeeting}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -60,23 +78,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.PowerOfAttorney#mmPowerOfAttorneyRequirements
  * PowerOfAttorney.mmPowerOfAttorneyRequirements}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements#mmLegalRequirement
- * PowerOfAttorneyRequirements.mmLegalRequirement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements#mmOtherDocumentation
- * PowerOfAttorneyRequirements.mmOtherDocumentation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements#mmPowerOfAttorney
- * PowerOfAttorneyRequirements.mmPowerOfAttorney}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements#mmMeeting
- * PowerOfAttorneyRequirements.mmMeeting}</li>
  * </ul>
  * </li>
  * <li>
@@ -111,11 +112,6 @@ public class PowerOfAttorneyRequirements {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisationCode
 	 * PowerOfAttorneyLegalisationCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements
-	 * PowerOfAttorneyRequirements}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -130,6 +126,11 @@ public class PowerOfAttorneyRequirements {
 	 * PowerOfAttorneyRequirements3.mmLegalRequirement}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements
+	 * PowerOfAttorneyRequirements}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -146,7 +147,7 @@ public class PowerOfAttorneyRequirements {
 	public static final MMBusinessAttribute mmLegalRequirement = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PowerOfAttorneyRequirements1.mmLegalRequirement, PowerOfAttorneyRequirements2.mmLegalRequirement, PowerOfAttorneyRequirements3.mmLegalRequirement);
-			elementContext_lazy = () -> PowerOfAttorneyRequirements.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PowerOfAttorneyRequirements.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LegalRequirement";
@@ -154,6 +155,14 @@ public class PowerOfAttorneyRequirements {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PowerOfAttorneyLegalisationCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PowerOfAttorneyRequirements.class.getMethod("getLegalRequirement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max350Text otherDocumentation;
@@ -166,11 +175,6 @@ public class PowerOfAttorneyRequirements {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements
-	 * PowerOfAttorneyRequirements}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -186,6 +190,11 @@ public class PowerOfAttorneyRequirements {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements
+	 * PowerOfAttorneyRequirements}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -200,7 +209,7 @@ public class PowerOfAttorneyRequirements {
 	public static final MMBusinessAttribute mmOtherDocumentation = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PowerOfAttorneyRequirements1.mmOtherDocumentation, PowerOfAttorneyRequirements2.mmOtherDocumentation, PowerOfAttorneyRequirements3.mmOtherDocumentation);
-			elementContext_lazy = () -> PowerOfAttorneyRequirements.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PowerOfAttorneyRequirements.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OtherDocumentation";
@@ -208,6 +217,14 @@ public class PowerOfAttorneyRequirements {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PowerOfAttorneyRequirements.class.getMethod("getOtherDocumentation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PowerOfAttorney powerOfAttorney;
@@ -247,7 +264,7 @@ public class PowerOfAttorneyRequirements {
 	 */
 	public static final MMBusinessAssociationEnd mmPowerOfAttorney = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PowerOfAttorneyRequirements.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PowerOfAttorneyRequirements.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PowerOfAttorney";
@@ -295,7 +312,7 @@ public class PowerOfAttorneyRequirements {
 	 */
 	public static final MMBusinessAssociationEnd mmMeeting = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PowerOfAttorneyRequirements.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PowerOfAttorneyRequirements.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Meeting";
@@ -315,8 +332,14 @@ public class PowerOfAttorneyRequirements {
 				name = "PowerOfAttorneyRequirements";
 				definition = "Specifies the conditions to be filled in to obtain a valid power of attorney.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Meeting.mmPowerOfAttorneyRequirements, com.tools20022.repository.entity.PowerOfAttorney.mmPowerOfAttorneyRequirements);
-				element_lazy = () -> Arrays.asList(PowerOfAttorneyRequirements.mmLegalRequirement, PowerOfAttorneyRequirements.mmOtherDocumentation, PowerOfAttorneyRequirements.mmPowerOfAttorney, PowerOfAttorneyRequirements.mmMeeting);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PowerOfAttorneyRequirements.mmLegalRequirement, com.tools20022.repository.entity.PowerOfAttorneyRequirements.mmOtherDocumentation,
+						com.tools20022.repository.entity.PowerOfAttorneyRequirements.mmPowerOfAttorney, com.tools20022.repository.entity.PowerOfAttorneyRequirements.mmMeeting);
 				derivationComponent_lazy = () -> Arrays.asList(PowerOfAttorneyRequirements1.mmObject(), PowerOfAttorneyRequirements2.mmObject(), PowerOfAttorneyRequirements3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PowerOfAttorneyRequirements.class;
 			}
 		});
 		return mmObject_lazy.get();

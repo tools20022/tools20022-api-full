@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the details of the transaction.
@@ -87,6 +91,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the details of the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionMovement1", propOrder = {"accountOwner", "safekeepingAccount", "statusAndReason", "accountOwnerTransactionIdentification", "accountServicerTransactionIdentification",
+		"marketInfrastructureTransactionIdentification", "processorTransactionIdentification", "poolIdentification", "corporateActionEventIdentification", "movementDetails"})
 public class IntraPositionMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -538,6 +545,7 @@ public class IntraPositionMovement1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public SystemPartyIdentification5 getAccountOwner() {
 		return accountOwner;
 	}
@@ -546,6 +554,7 @@ public class IntraPositionMovement1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -554,6 +563,7 @@ public class IntraPositionMovement1 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "StsAndRsn")
 	public IntraPositionStatusAndReason1 getStatusAndReason() {
 		return statusAndReason;
 	}
@@ -562,6 +572,7 @@ public class IntraPositionMovement1 {
 		this.statusAndReason = statusAndReason;
 	}
 
+	@XmlElement(name = "AcctOwnrTxId", required = true)
 	public Max35Text getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
@@ -570,6 +581,7 @@ public class IntraPositionMovement1 {
 		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrTxId")
 	public Max35Text getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
@@ -578,6 +590,7 @@ public class IntraPositionMovement1 {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
 	}
 
+	@XmlElement(name = "MktInfrstrctrTxId")
 	public Max35Text getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}
@@ -586,6 +599,7 @@ public class IntraPositionMovement1 {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
 	}
 
+	@XmlElement(name = "PrcrTxId")
 	public Max35Text getProcessorTransactionIdentification() {
 		return processorTransactionIdentification;
 	}
@@ -594,6 +608,7 @@ public class IntraPositionMovement1 {
 		this.processorTransactionIdentification = processorTransactionIdentification;
 	}
 
+	@XmlElement(name = "PoolId")
 	public Max35Text getPoolIdentification() {
 		return poolIdentification;
 	}
@@ -602,6 +617,7 @@ public class IntraPositionMovement1 {
 		this.poolIdentification = poolIdentification;
 	}
 
+	@XmlElement(name = "CorpActnEvtId")
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -610,6 +626,7 @@ public class IntraPositionMovement1 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "MvmntDtls")
 	public IntraPositionMovement2 getMovementDetails() {
 		return movementDetails;
 	}

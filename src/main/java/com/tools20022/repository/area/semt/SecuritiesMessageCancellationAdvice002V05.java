@@ -29,9 +29,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -68,9 +70,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.020.002.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestversionsubsetvariant
@@ -112,6 +111,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.020.002.05}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -123,6 +125,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesMessageCancellationAdvice002V05", propOrder = {"reference", "accountOwner", "safekeepingAccount", "supplementaryData"})
 public class SecuritiesMessageCancellationAdvice002V05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +166,14 @@ public class SecuritiesMessageCancellationAdvice002V05 {
 			minOccurs = 1;
 			complexType_lazy = () -> References53Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesMessageCancellationAdvice002V05.class.getMethod("getReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification109 accountOwner;
 	/**
@@ -197,6 +209,14 @@ public class SecuritiesMessageCancellationAdvice002V05 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification109.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesMessageCancellationAdvice002V05.class.getMethod("getAccountOwner", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesAccount27 safekeepingAccount;
 	/**
@@ -231,6 +251,14 @@ public class SecuritiesMessageCancellationAdvice002V05 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount27.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesMessageCancellationAdvice002V05.class.getMethod("getSafekeepingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -269,6 +297,14 @@ public class SecuritiesMessageCancellationAdvice002V05 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesMessageCancellationAdvice002V05.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -282,8 +318,9 @@ public class SecuritiesMessageCancellationAdvice002V05 {
 				rootElement = "Document";
 				xmlTag = "SctiesMsgCxlAdvc";
 				businessArea_lazy = () -> SecuritiesManagementLatestversionsubsetvariant.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesMessageCancellationAdvice002V05.mmReference, SecuritiesMessageCancellationAdvice002V05.mmAccountOwner,
-						SecuritiesMessageCancellationAdvice002V05.mmSafekeepingAccount, SecuritiesMessageCancellationAdvice002V05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdvice002V05.mmReference,
+						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdvice002V05.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdvice002V05.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdvice002V05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -293,10 +330,16 @@ public class SecuritiesMessageCancellationAdvice002V05 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesMessageCancellationAdvice002V05.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ref", required = true)
 	public References53Choice getReference() {
 		return reference;
 	}
@@ -305,6 +348,7 @@ public class SecuritiesMessageCancellationAdvice002V05 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification109 getAccountOwner() {
 		return accountOwner;
 	}
@@ -313,6 +357,7 @@ public class SecuritiesMessageCancellationAdvice002V05 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount27 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -321,11 +366,18 @@ public class SecuritiesMessageCancellationAdvice002V05 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.020.05.05")
+	static public class Document {
+		@XmlElement(name = "SctiesMsgCxlAdvc", required = true)
+		public SecuritiesMessageCancellationAdvice002V05 messageBody;
 	}
 }

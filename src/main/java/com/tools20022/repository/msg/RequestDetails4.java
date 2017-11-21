@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of one or several keys of the request.
@@ -57,6 +61,8 @@ import java.util.List;
  * definition} = "Details of one or several keys of the request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestDetails4", propOrder = {"key", "reportData"})
 public class RequestDetails4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -156,6 +162,7 @@ public class RequestDetails4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Key", required = true)
 	public Max35Text getKey() {
 		return key;
 	}
@@ -164,6 +171,7 @@ public class RequestDetails4 {
 		this.key = key;
 	}
 
+	@XmlElement(name = "RptData")
 	public List<ReportParameter1> getReportData() {
 		return reportData;
 	}

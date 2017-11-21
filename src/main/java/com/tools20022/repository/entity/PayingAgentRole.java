@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +93,7 @@ public class PayingAgentRole {
 	 */
 	public static final MMBusinessAttribute mmCommissionAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PayingAgentRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PayingAgentRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommissionAmount";
@@ -100,6 +101,14 @@ public class PayingAgentRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PayingAgentRole.class.getMethod("getCommissionAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -110,7 +119,12 @@ public class PayingAgentRole {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PayingAgentRole";
 				definition = "Additional party appointed to distribute payment or securities on behalf of the issuer.";
-				element_lazy = () -> Arrays.asList(PayingAgentRole.mmCommissionAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PayingAgentRole.mmCommissionAmount);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PayingAgentRole.class;
 			}
 		});
 		return mmObject_lazy.get();

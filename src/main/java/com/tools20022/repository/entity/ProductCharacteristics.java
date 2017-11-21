@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProductCharacteristics1;
 import com.tools20022.repository.msg.ProductCharacteristics2;
 import com.tools20022.repository.msg.ProductCharacteristics3;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +39,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#mmProduct
+ * ProductCharacteristics.mmProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#mmCharacteristics
+ * ProductCharacteristics.mmCharacteristics}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#mmType
+ * ProductCharacteristics.mmType}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -71,20 +86,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.ProductCharacteristics1Choice#mmOtherProductCharacteristics
  * ProductCharacteristics1Choice.mmOtherProductCharacteristics}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#mmProduct
- * ProductCharacteristics.mmProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#mmCharacteristics
- * ProductCharacteristics.mmCharacteristics}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#mmType
- * ProductCharacteristics.mmType}</li>
  * </ul>
  * </li>
  * <li>
@@ -141,7 +142,7 @@ public class ProductCharacteristics {
 	 */
 	public static final MMBusinessAssociationEnd mmProduct = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProductCharacteristics.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductCharacteristics.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Product";
@@ -163,11 +164,6 @@ public class ProductCharacteristics {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProductCharacteristics
-	 * ProductCharacteristics}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -183,6 +179,11 @@ public class ProductCharacteristics {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProductCharacteristics
+	 * ProductCharacteristics}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -196,7 +197,7 @@ public class ProductCharacteristics {
 	public static final MMBusinessAttribute mmCharacteristics = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ProductCharacteristics1.mmCharacteristics, ProductCharacteristics2.mmCharacteristic, ProductCharacteristics3.mmCharacteristic);
-			elementContext_lazy = () -> ProductCharacteristics.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductCharacteristics.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Characteristics";
@@ -204,6 +205,14 @@ public class ProductCharacteristics {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProductCharacteristics.class.getMethod("getCharacteristics", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ProductCharacteristicsCode type;
@@ -217,11 +226,6 @@ public class ProductCharacteristics {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode
 	 * ProductCharacteristicsCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProductCharacteristics
-	 * ProductCharacteristics}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -230,6 +234,11 @@ public class ProductCharacteristics {
 	 * ProductCharacteristics1.mmType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProductCharacteristics
+	 * ProductCharacteristics}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -245,7 +254,7 @@ public class ProductCharacteristics {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ProductCharacteristics1.mmType);
-			elementContext_lazy = () -> ProductCharacteristics.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProductCharacteristics.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -253,6 +262,14 @@ public class ProductCharacteristics {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProductCharacteristicsCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProductCharacteristics.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -265,8 +282,14 @@ public class ProductCharacteristics {
 				definition = "Identifies the characteristic of a product.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Product.mmCharacteristics);
 				derivationElement_lazy = () -> Arrays.asList(ProductCharacteristics1Choice.mmStructuredProductCharacteristics, ProductCharacteristics1Choice.mmOtherProductCharacteristics);
-				element_lazy = () -> Arrays.asList(ProductCharacteristics.mmProduct, ProductCharacteristics.mmCharacteristics, ProductCharacteristics.mmType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProductCharacteristics.mmProduct, com.tools20022.repository.entity.ProductCharacteristics.mmCharacteristics,
+						com.tools20022.repository.entity.ProductCharacteristics.mmType);
 				derivationComponent_lazy = () -> Arrays.asList(ProductCharacteristics1.mmObject(), ProductCharacteristics1Choice.mmObject(), ProductCharacteristics2.mmObject(), ProductCharacteristics3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ProductCharacteristics.class;
 			}
 		});
 		return mmObject_lazy.get();

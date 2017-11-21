@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information such as the taxation conditions.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides additional information such as the taxation conditions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNarrative18", propOrder = {"offeror", "newCompanyName", "URLAddress"})
 public class CorporateActionNarrative18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class CorporateActionNarrative18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Offerr")
 	public UpdatedAdditionalInformation6 getOfferor() {
 		return offeror;
 	}
@@ -237,6 +244,7 @@ public class CorporateActionNarrative18 {
 		this.offeror = offeror;
 	}
 
+	@XmlElement(name = "NewCpnyNm")
 	public UpdatedAdditionalInformation6 getNewCompanyName() {
 		return newCompanyName;
 	}
@@ -245,6 +253,7 @@ public class CorporateActionNarrative18 {
 		this.newCompanyName = newCompanyName;
 	}
 
+	@XmlElement(name = "URLAdr")
 	public UpdatedURLlnformation1 getURLAddress() {
 		return uRLAddress;
 	}

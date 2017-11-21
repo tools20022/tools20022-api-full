@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status of a transfer cancellation instruction and the reason for the status.
@@ -92,6 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CancellationStatusAndReason2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancellationStatusAndReason3", propOrder = {"masterReference", "transferReference", "clientReference", "cancellationReference", "status", "statusInitiator"})
 public class CancellationStatusAndReason3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -434,6 +440,7 @@ public class CancellationStatusAndReason3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -442,6 +449,7 @@ public class CancellationStatusAndReason3 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -450,6 +458,7 @@ public class CancellationStatusAndReason3 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public AdditionalReference7 getClientReference() {
 		return clientReference;
 	}
@@ -458,6 +467,7 @@ public class CancellationStatusAndReason3 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -466,6 +476,7 @@ public class CancellationStatusAndReason3 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public Status21Choice getStatus() {
 		return status;
 	}
@@ -474,6 +485,7 @@ public class CancellationStatusAndReason3 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification70Choice getStatusInitiator() {
 		return statusInitiator;
 	}

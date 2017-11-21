@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -41,6 +42,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationType
+ * BeneficialOwner.mmCertificationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmNonDomicileCountry
+ * BeneficialOwner.mmNonDomicileCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationIndicator
+ * BeneficialOwner.mmCertificationIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationFormat
+ * BeneficialOwner.mmCertificationFormat}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmERISAEligibility
+ * BeneficialOwner.mmERISAEligibility}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BeneficialOwner#mmERISARate
+ * BeneficialOwner.mmERISARate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmBenefitPlanDeclarationIndicator
+ * BeneficialOwner.mmBenefitPlanDeclarationIndicator}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
+ * SecuritiesPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -235,35 +265,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountSubLevel14.mmBeneficialOwner}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
- * SecuritiesPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationType
- * BeneficialOwner.mmCertificationType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmNonDomicileCountry
- * BeneficialOwner.mmNonDomicileCountry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationIndicator
- * BeneficialOwner.mmCertificationIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationFormat
- * BeneficialOwner.mmCertificationFormat}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmERISAEligibility
- * BeneficialOwner.mmERISAEligibility}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BeneficialOwner#mmERISARate
- * BeneficialOwner.mmERISARate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmBenefitPlanDeclarationIndicator
- * BeneficialOwner.mmBenefitPlanDeclarationIndicator}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -295,11 +296,6 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationTypeCode
 	 * BeneficiaryCertificationTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
-	 * BeneficialOwner}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -543,6 +539,11 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
+	 * BeneficialOwner}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -575,7 +576,7 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 					CorporateAction40.mmCertificationType, BeneficiaryCertificationType11Choice.mmCode, BeneficiaryCertificationType11Choice.mmProprietary, BeneficiaryCertificationType12Choice.mmCode,
 					BeneficiaryCertificationType12Choice.mmProprietary, CorporateActionOption130.mmCertificationBreakdownType, CorporateActionOption129.mmCertificationBreakdownType, CorporateActionOption135.mmCertificationBreakdownType,
 					CorporateActionOption133.mmCertificationBreakdownType);
-			elementContext_lazy = () -> BeneficialOwner.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificationType";
@@ -583,6 +584,14 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BeneficiaryCertificationTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BeneficialOwner.class.getMethod("getCertificationType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Country nonDomicileCountry;
@@ -603,11 +612,6 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Country Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
-	 * BeneficialOwner}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -704,6 +708,11 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
+	 * BeneficialOwner}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -726,7 +735,7 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 					CorporateActionOption106.mmNonDomicileCountry, BeneficialOwner2.mmNonDomicileCountry, CorporateActionOption115.mmNonDomicileCountry, CorporateActionOption114.mmNonDomicileCountry,
 					CorporateActionOption125.mmNonDomicileCountry, CorporateActionOption127.mmNonDomicileCountry, CorporateActionOption130.mmNonDomicileCountry, CorporateActionOption129.mmNonDomicileCountry,
 					CorporateActionOption135.mmNonDomicileCountry, CorporateActionOption133.mmNonDomicileCountry);
-			elementContext_lazy = () -> BeneficialOwner.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonDomicileCountry";
@@ -753,11 +762,6 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
-	 * BeneficialOwner}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -899,6 +903,11 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
+	 * BeneficialOwner}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -927,7 +936,7 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 					CorporateActionOption125.mmCertificationBreakdownIndicator, CorporateActionOption127.mmCertificationBreakdownIndicator, CorporateAction40.mmCertificationBreakdownIndicator,
 					CorporateActionOption130.mmCertificationBreakdownIndicator, CorporateActionOption129.mmCertificationBreakdownIndicator, CorporateActionOption135.mmCertificationBreakdownIndicator,
 					CorporateActionOption133.mmCertificationBreakdownIndicator);
-			elementContext_lazy = () -> BeneficialOwner.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificationIndicator";
@@ -935,6 +944,14 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BeneficialOwner.class.getMethod("getCertificationIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CertificationFormatTypeCode certificationFormat;
@@ -949,11 +966,6 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CertificationFormatTypeCode
 	 * CertificationFormatTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
-	 * BeneficialOwner}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -990,6 +1002,11 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
+	 * BeneficialOwner}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1007,7 +1024,7 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 			derivation_lazy = () -> Arrays.asList(CertificationTypeFormat1Choice.mmCode, CertificationTypeFormat1Choice.mmProprietary, CertificationTypeFormat2Choice.mmCode, CertificationTypeFormat2Choice.mmProprietary,
 					CertificationType1FormatChoice.mmCode, CertificationType1FormatChoice.mmProprietary, CertificationTypeFormat3Choice.mmCode, CertificationTypeFormat3Choice.mmProprietary, CertificationTypeFormat4Choice.mmCode,
 					CertificationTypeFormat4Choice.mmProprietary);
-			elementContext_lazy = () -> BeneficialOwner.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificationFormat";
@@ -1015,6 +1032,14 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CertificationFormatTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BeneficialOwner.class.getMethod("getCertificationFormat", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ERISAEligibilityCode eRISAEligibility;
@@ -1028,11 +1053,6 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ERISAEligibilityCode
 	 * ERISAEligibilityCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
-	 * BeneficialOwner}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1044,6 +1064,11 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * BeneficiaryInformation1.mmERISAEligibility}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
+	 * BeneficialOwner}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1059,7 +1084,7 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	public static final MMBusinessAttribute mmERISAEligibility = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BeneficiaryInformation2.mmERISAEligibility, BeneficiaryInformation1.mmERISAEligibility);
-			elementContext_lazy = () -> BeneficialOwner.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ERISAEligibility";
@@ -1067,6 +1092,14 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ERISAEligibilityCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BeneficialOwner.class.getMethod("getERISAEligibility", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate eRISARate;
@@ -1080,11 +1113,6 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
-	 * BeneficialOwner}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1096,6 +1124,11 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * BeneficiaryInformation1.mmERISARate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
+	 * BeneficialOwner}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1111,7 +1144,7 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	public static final MMBusinessAttribute mmERISARate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BeneficiaryInformation2.mmERISARate, BeneficiaryInformation1.mmERISARate);
-			elementContext_lazy = () -> BeneficialOwner.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ERISARate";
@@ -1119,6 +1152,14 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BeneficialOwner.class.getMethod("getERISARate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator benefitPlanDeclarationIndicator;
@@ -1132,11 +1173,6 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
-	 * BeneficialOwner}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1148,6 +1184,11 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * BeneficiaryInformation1.mmBenefitPlanDeclarationIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
+	 * BeneficialOwner}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1163,7 +1204,7 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	public static final MMBusinessAttribute mmBenefitPlanDeclarationIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BeneficiaryInformation2.mmBenefitPlanDeclarationIndicator, BeneficiaryInformation1.mmBenefitPlanDeclarationIndicator);
-			elementContext_lazy = () -> BeneficialOwner.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BenefitPlanDeclarationIndicator";
@@ -1171,6 +1212,14 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BeneficialOwner.class.getMethod("getBenefitPlanDeclarationIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1193,13 +1242,19 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 						AccountSubLevel19.mmBeneficialOwner, AccountSubLevel11.mmBeneficialOwner, AccountSubLevel12.mmBeneficialOwner, AccountSubLevel17.mmBeneficialOwner, AccountSubLevel13.mmBeneficialOwner,
 						AccountSubLevel14.mmBeneficialOwner);
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(BeneficialOwner.mmCertificationType, BeneficialOwner.mmNonDomicileCountry, BeneficialOwner.mmCertificationIndicator, BeneficialOwner.mmCertificationFormat,
-						BeneficialOwner.mmERISAEligibility, BeneficialOwner.mmERISARate, BeneficialOwner.mmBenefitPlanDeclarationIndicator);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BeneficialOwner.mmCertificationType, com.tools20022.repository.entity.BeneficialOwner.mmNonDomicileCountry,
+						com.tools20022.repository.entity.BeneficialOwner.mmCertificationIndicator, com.tools20022.repository.entity.BeneficialOwner.mmCertificationFormat, com.tools20022.repository.entity.BeneficialOwner.mmERISAEligibility,
+						com.tools20022.repository.entity.BeneficialOwner.mmERISARate, com.tools20022.repository.entity.BeneficialOwner.mmBenefitPlanDeclarationIndicator);
 				derivationComponent_lazy = () -> Arrays.asList(BeneficiaryCertificationType2Choice.mmObject(), BeneficiaryCertificationType4Choice.mmObject(), BeneficiaryCertificationType6Choice.mmObject(),
 						BeneficiaryCertificationType8Choice.mmObject(), BeneficiaryCertificationType1Choice.mmObject(), BeneficiaryCertificationType3Choice.mmObject(), BeneficiaryCertificationType5Choice.mmObject(),
 						BeneficiaryCertificationType7Choice.mmObject(), BeneficiaryCertificationType1FormatChoice.mmObject(), BeneficialOwner1.mmObject(), BeneficiaryInformation2.mmObject(), BeneficiaryInformation1.mmObject(),
 						BeneficialOwner2.mmObject(), BeneficiaryCertificationType9Choice.mmObject(), BeneficiaryCertificationType10Choice.mmObject(), BeneficiaryCertificationType11Choice.mmObject(),
 						BeneficiaryCertificationType12Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BeneficialOwner.class;
 			}
 		});
 		return mmObject_lazy.get();

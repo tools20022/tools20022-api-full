@@ -20,6 +20,7 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -33,15 +34,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmRelatedOrderBook
- * SecuritiesOrder.mmRelatedOrderBook}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -50,6 +42,15 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.OrderBook#mmPriceTimePriority
  * OrderBook.mmPriceTimePriority}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmRelatedOrderBook
+ * SecuritiesOrder.mmRelatedOrderBook}</li>
  * </ul>
  * </li>
  * <li>
@@ -106,7 +107,7 @@ public class OrderBook {
 	 */
 	public static final MMBusinessAssociationEnd mmOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> OrderBook.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrderBook.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Order";
@@ -146,7 +147,7 @@ public class OrderBook {
 	 */
 	public static final MMBusinessAttribute mmPriceTimePriority = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> OrderBook.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrderBook.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceTimePriority";
@@ -154,6 +155,14 @@ public class OrderBook {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderBook.class.getMethod("getPriceTimePriority", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -165,7 +174,12 @@ public class OrderBook {
 				name = "OrderBook";
 				definition = "Record of orders to buy and sell a financial instrument.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrder.mmRelatedOrderBook);
-				element_lazy = () -> Arrays.asList(OrderBook.mmOrder, OrderBook.mmPriceTimePriority);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.OrderBook.mmOrder, com.tools20022.repository.entity.OrderBook.mmPriceTimePriority);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return OrderBook.class;
 			}
 		});
 		return mmObject_lazy.get();

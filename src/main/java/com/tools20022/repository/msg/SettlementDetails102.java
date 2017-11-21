@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters which explicitly state the conditions that must be fulfilled
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SettlementDetails88}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementDetails102", propOrder = {"tradeDate", "settlementParties", "collateralOwnership"})
 public class SettlementDetails102 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -297,6 +303,7 @@ public class SettlementDetails102 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public ISODateTime getTradeDate() {
 		return tradeDate;
 	}
@@ -305,6 +312,7 @@ public class SettlementDetails102 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "SttlmPties")
 	public SettlementParties5Choice getSettlementParties() {
 		return settlementParties;
 	}
@@ -313,6 +321,7 @@ public class SettlementDetails102 {
 		this.settlementParties = settlementParties;
 	}
 
+	@XmlElement(name = "CollOwnrsh", required = true)
 	public CollateralOwnership2 getCollateralOwnership() {
 		return collateralOwnership;
 	}

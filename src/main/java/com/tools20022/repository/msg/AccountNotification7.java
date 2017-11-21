@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details of the account notification.
@@ -125,6 +129,9 @@ import java.util.List;
  * AccountNotification5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountNotification7", propOrder = {"identification", "notificationPagination", "electronicSequenceNumber", "legalSequenceNumber", "creationDateTime", "fromToDate", "copyDuplicateIndicator", "reportingSource", "account",
+		"relatedAccount", "interest", "transactionsSummary", "entry", "additionalNotificationInformation"})
 public class AccountNotification7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -913,6 +920,7 @@ public class AccountNotification7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -921,6 +929,7 @@ public class AccountNotification7 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "NtfctnPgntn")
 	public Pagination getNotificationPagination() {
 		return notificationPagination;
 	}
@@ -929,6 +938,7 @@ public class AccountNotification7 {
 		this.notificationPagination = notificationPagination;
 	}
 
+	@XmlElement(name = "ElctrncSeqNb")
 	public Number getElectronicSequenceNumber() {
 		return electronicSequenceNumber;
 	}
@@ -937,6 +947,7 @@ public class AccountNotification7 {
 		this.electronicSequenceNumber = electronicSequenceNumber;
 	}
 
+	@XmlElement(name = "LglSeqNb")
 	public Number getLegalSequenceNumber() {
 		return legalSequenceNumber;
 	}
@@ -945,6 +956,7 @@ public class AccountNotification7 {
 		this.legalSequenceNumber = legalSequenceNumber;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -953,6 +965,7 @@ public class AccountNotification7 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "FrToDt")
 	public DateTimePeriodDetails getFromToDate() {
 		return fromToDate;
 	}
@@ -961,6 +974,7 @@ public class AccountNotification7 {
 		this.fromToDate = fromToDate;
 	}
 
+	@XmlElement(name = "CpyDplctInd")
 	public CopyDuplicate1Code getCopyDuplicateIndicator() {
 		return copyDuplicateIndicator;
 	}
@@ -969,6 +983,7 @@ public class AccountNotification7 {
 		this.copyDuplicateIndicator = copyDuplicateIndicator;
 	}
 
+	@XmlElement(name = "RptgSrc")
 	public ReportingSource1Choice getReportingSource() {
 		return reportingSource;
 	}
@@ -977,6 +992,7 @@ public class AccountNotification7 {
 		this.reportingSource = reportingSource;
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CashAccount25 getAccount() {
 		return account;
 	}
@@ -985,6 +1001,7 @@ public class AccountNotification7 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "RltdAcct")
 	public CashAccount24 getRelatedAccount() {
 		return relatedAccount;
 	}
@@ -993,6 +1010,7 @@ public class AccountNotification7 {
 		this.relatedAccount = relatedAccount;
 	}
 
+	@XmlElement(name = "Intrst")
 	public List<AccountInterest2> getInterest() {
 		return interest;
 	}
@@ -1001,6 +1019,7 @@ public class AccountNotification7 {
 		this.interest = interest;
 	}
 
+	@XmlElement(name = "TxsSummry")
 	public TotalTransactions4 getTransactionsSummary() {
 		return transactionsSummary;
 	}
@@ -1009,6 +1028,7 @@ public class AccountNotification7 {
 		this.transactionsSummary = transactionsSummary;
 	}
 
+	@XmlElement(name = "Ntry")
 	public List<ReportEntry4> getEntry() {
 		return entry;
 	}
@@ -1017,6 +1037,7 @@ public class AccountNotification7 {
 		this.entry = entry;
 	}
 
+	@XmlElement(name = "AddtlNtfctnInf")
 	public Max500Text getAdditionalNotificationInformation() {
 		return additionalNotificationInformation;
 	}

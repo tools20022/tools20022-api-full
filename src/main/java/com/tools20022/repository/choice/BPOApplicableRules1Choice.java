@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.MasterAgreement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Rules which apply to the BPO (Bank Payment Obligation).
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Rules which apply to the BPO (Bank Payment Obligation)."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BPOApplicableRules1Choice", propOrder = {"URBPOVersion", "otherRulesAndVersion"})
 public class BPOApplicableRules1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -174,6 +180,7 @@ public class BPOApplicableRules1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "URBPOVrsn", required = true)
 	public DecimalNumber getURBPOVersion() {
 		return uRBPOVersion;
 	}
@@ -182,6 +189,7 @@ public class BPOApplicableRules1Choice {
 		this.uRBPOVersion = uRBPOVersion;
 	}
 
+	@XmlElement(name = "OthrRulesAndVrsn", required = true)
 	public Max35Text getOtherRulesAndVersion() {
 		return otherRulesAndVersion;
 	}

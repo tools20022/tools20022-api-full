@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.ProprietaryReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of status for the replacement processing.
@@ -103,6 +107,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of status for the replacement processing."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReplacementProcessingStatus7Choice", propOrder = {"accepted", "completed", "denied", "inRepair", "partialReplacementAccepted", "pending", "receivedAtIntermediary", "receivedAtStockExchange", "rejected",
+		"modificationRequested", "proprietaryStatus"})
 public class ReplacementProcessingStatus7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -647,6 +654,7 @@ public class ReplacementProcessingStatus7Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Accptd", required = true)
 	public ProprietaryReason1 getAccepted() {
 		return accepted;
 	}
@@ -655,6 +663,7 @@ public class ReplacementProcessingStatus7Choice {
 		this.accepted = accepted;
 	}
 
+	@XmlElement(name = "Cmpltd", required = true)
 	public ProprietaryReason1 getCompleted() {
 		return completed;
 	}
@@ -663,6 +672,7 @@ public class ReplacementProcessingStatus7Choice {
 		this.completed = completed;
 	}
 
+	@XmlElement(name = "Dnd", required = true)
 	public ProprietaryReason1 getDenied() {
 		return denied;
 	}
@@ -671,6 +681,7 @@ public class ReplacementProcessingStatus7Choice {
 		this.denied = denied;
 	}
 
+	@XmlElement(name = "InRpr", required = true)
 	public ProprietaryReason1 getInRepair() {
 		return inRepair;
 	}
@@ -679,6 +690,7 @@ public class ReplacementProcessingStatus7Choice {
 		this.inRepair = inRepair;
 	}
 
+	@XmlElement(name = "PrtlRplcmntAccptd", required = true)
 	public ProprietaryReason1 getPartialReplacementAccepted() {
 		return partialReplacementAccepted;
 	}
@@ -687,6 +699,7 @@ public class ReplacementProcessingStatus7Choice {
 		this.partialReplacementAccepted = partialReplacementAccepted;
 	}
 
+	@XmlElement(name = "Pdg", required = true)
 	public ProprietaryReason1 getPending() {
 		return pending;
 	}
@@ -695,6 +708,7 @@ public class ReplacementProcessingStatus7Choice {
 		this.pending = pending;
 	}
 
+	@XmlElement(name = "RcvdAtIntrmy", required = true)
 	public ProprietaryReason1 getReceivedAtIntermediary() {
 		return receivedAtIntermediary;
 	}
@@ -703,6 +717,7 @@ public class ReplacementProcessingStatus7Choice {
 		this.receivedAtIntermediary = receivedAtIntermediary;
 	}
 
+	@XmlElement(name = "RcvdAtStockXchg", required = true)
 	public ProprietaryReason1 getReceivedAtStockExchange() {
 		return receivedAtStockExchange;
 	}
@@ -711,6 +726,7 @@ public class ReplacementProcessingStatus7Choice {
 		this.receivedAtStockExchange = receivedAtStockExchange;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public ProprietaryReason1 getRejected() {
 		return rejected;
 	}
@@ -719,6 +735,7 @@ public class ReplacementProcessingStatus7Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "ModReqd", required = true)
 	public ProprietaryReason1 getModificationRequested() {
 		return modificationRequested;
 	}
@@ -727,6 +744,7 @@ public class ReplacementProcessingStatus7Choice {
 		this.modificationRequested = modificationRequested;
 	}
 
+	@XmlElement(name = "PrtrySts")
 	public ProprietaryStatusAndReason1 getProprietaryStatus() {
 		return proprietaryStatus;
 	}

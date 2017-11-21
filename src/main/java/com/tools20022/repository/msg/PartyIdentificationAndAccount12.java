@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Entity involved in an activity.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Entity involved in an activity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount12", propOrder = {"identification", "alternateIdentification", "cashAccount", "chargesAccount", "commissionAccount", "taxAccount", "additionalInformation"})
 public class PartyIdentificationAndAccount12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -440,6 +446,7 @@ public class PartyIdentificationAndAccount12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification3Choice getIdentification() {
 		return identification;
 	}
@@ -448,6 +455,7 @@ public class PartyIdentificationAndAccount12 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification1 getAlternateIdentification() {
 		return alternateIdentification;
 	}
@@ -456,6 +464,7 @@ public class PartyIdentificationAndAccount12 {
 		this.alternateIdentification = alternateIdentification;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccountIdentification2Choice getCashAccount() {
 		return cashAccount;
 	}
@@ -464,6 +473,7 @@ public class PartyIdentificationAndAccount12 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "ChrgsAcct")
 	public CashAccountIdentification2Choice getChargesAccount() {
 		return chargesAccount;
 	}
@@ -472,6 +482,7 @@ public class PartyIdentificationAndAccount12 {
 		this.chargesAccount = chargesAccount;
 	}
 
+	@XmlElement(name = "ComssnAcct")
 	public CashAccountIdentification2Choice getCommissionAccount() {
 		return commissionAccount;
 	}
@@ -480,6 +491,7 @@ public class PartyIdentificationAndAccount12 {
 		this.commissionAccount = commissionAccount;
 	}
 
+	@XmlElement(name = "TaxAcct")
 	public CashAccountIdentification2Choice getTaxAccount() {
 		return taxAccount;
 	}
@@ -488,6 +500,7 @@ public class PartyIdentificationAndAccount12 {
 		this.taxAccount = taxAccount;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public PartyTextInformation1 getAdditionalInformation() {
 		return additionalInformation;
 	}

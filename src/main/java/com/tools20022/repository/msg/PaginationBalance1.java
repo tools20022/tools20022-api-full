@@ -27,6 +27,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Balance of a financial instrument for a specific statement page.
@@ -85,6 +89,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaginationBalance1", propOrder = {"firstOpeningBalance", "intermediaryOpeningBalance", "finalClosingBalance", "intermediaryClosingBalance"})
 public class PaginationBalance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -373,6 +379,7 @@ public class PaginationBalance1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrstOpngBal")
 	public FinancialInstrumentQuantity1 getFirstOpeningBalance() {
 		return firstOpeningBalance;
 	}
@@ -381,6 +388,7 @@ public class PaginationBalance1 {
 		this.firstOpeningBalance = firstOpeningBalance;
 	}
 
+	@XmlElement(name = "IntrmyOpngBal")
 	public FinancialInstrumentQuantity1 getIntermediaryOpeningBalance() {
 		return intermediaryOpeningBalance;
 	}
@@ -389,6 +397,7 @@ public class PaginationBalance1 {
 		this.intermediaryOpeningBalance = intermediaryOpeningBalance;
 	}
 
+	@XmlElement(name = "FnlClsgBal")
 	public FinancialInstrumentQuantity1 getFinalClosingBalance() {
 		return finalClosingBalance;
 	}
@@ -397,6 +406,7 @@ public class PaginationBalance1 {
 		this.finalClosingBalance = finalClosingBalance;
 	}
 
+	@XmlElement(name = "IntrmyClsgBal")
 	public FinancialInstrumentQuantity1 getIntermediaryClosingBalance() {
 		return intermediaryClosingBalance;
 	}

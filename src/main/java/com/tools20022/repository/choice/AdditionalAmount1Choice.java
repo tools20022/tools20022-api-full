@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.SwitchOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between additional cash in or resulting cash out.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between additional cash in or resulting cash out."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalAmount1Choice", propOrder = {"additionalCashIn", "resultingCashOut"})
 public class AdditionalAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class AdditionalAmount1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlCshIn", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAdditionalCashIn() {
 		return additionalCashIn;
 	}
@@ -185,6 +192,7 @@ public class AdditionalAmount1Choice {
 		this.additionalCashIn = additionalCashIn;
 	}
 
+	@XmlElement(name = "RsltgCshOut", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getResultingCashOut() {
 		return resultingCashOut;
 	}

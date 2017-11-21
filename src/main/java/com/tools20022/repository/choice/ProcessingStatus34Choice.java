@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the processing status.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of format for the processing status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProcessingStatus34Choice", propOrder = {"acknowledgedAccepted", "repair", "cancelled", "proprietary"})
 public class ProcessingStatus34Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -288,6 +294,7 @@ public class ProcessingStatus34Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AckdAccptd", required = true)
 	public AcknowledgedAcceptedStatus3Choice getAcknowledgedAccepted() {
 		return acknowledgedAccepted;
 	}
@@ -296,6 +303,7 @@ public class ProcessingStatus34Choice {
 		this.acknowledgedAccepted = acknowledgedAccepted;
 	}
 
+	@XmlElement(name = "Rpr", required = true)
 	public RejectionOrRepairStatus26Choice getRepair() {
 		return repair;
 	}
@@ -304,6 +312,7 @@ public class ProcessingStatus34Choice {
 		this.repair = repair;
 	}
 
+	@XmlElement(name = "Canc", required = true)
 	public CancellationStatus7Choice getCancelled() {
 		return cancelled;
 	}
@@ -312,6 +321,7 @@ public class ProcessingStatus34Choice {
 		this.cancelled = cancelled;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason1 getProprietary() {
 		return proprietary;
 	}

@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Consideration, such as amount of money, paid or received in exchange for an
@@ -94,6 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestResult1", propOrder = {"interestDueToA", "interestDueToB", "valueDate", "interestMethod", "openingCollateralBalance", "closingCollateralBalance"})
 public class InterestResult1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -402,6 +408,7 @@ public class InterestResult1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IntrstDueToA")
 	public ActiveCurrencyAndAmount getInterestDueToA() {
 		return interestDueToA;
 	}
@@ -410,6 +417,7 @@ public class InterestResult1 {
 		this.interestDueToA = interestDueToA;
 	}
 
+	@XmlElement(name = "IntrstDueToB")
 	public ActiveCurrencyAndAmount getInterestDueToB() {
 		return interestDueToB;
 	}
@@ -418,6 +426,7 @@ public class InterestResult1 {
 		this.interestDueToB = interestDueToB;
 	}
 
+	@XmlElement(name = "ValDt", required = true)
 	public ISODate getValueDate() {
 		return valueDate;
 	}
@@ -426,6 +435,7 @@ public class InterestResult1 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "IntrstMtd", required = true)
 	public InterestMethod1Code getInterestMethod() {
 		return interestMethod;
 	}
@@ -434,6 +444,7 @@ public class InterestResult1 {
 		this.interestMethod = interestMethod;
 	}
 
+	@XmlElement(name = "OpngCollBal")
 	public CollateralBalance1 getOpeningCollateralBalance() {
 		return openingCollateralBalance;
 	}
@@ -442,6 +453,7 @@ public class InterestResult1 {
 		this.openingCollateralBalance = openingCollateralBalance;
 	}
 
+	@XmlElement(name = "ClsgCollBal", required = true)
 	public CollateralBalance1 getClosingCollateralBalance() {
 		return closingCollateralBalance;
 	}

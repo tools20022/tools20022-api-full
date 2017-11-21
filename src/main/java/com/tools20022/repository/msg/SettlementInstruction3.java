@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details on the settlement of the instruction.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides further details on the settlement of the instruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementInstruction3", propOrder = {"instructingReimbursementAgent", "instructingReimbursementAgentAccount", "instructedReimbursementAgent", "instructedReimbursementAgentAccount"})
 public class SettlementInstruction3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -297,6 +303,7 @@ public class SettlementInstruction3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstgRmbrsmntAgt")
 	public BranchAndFinancialInstitutionIdentification5 getInstructingReimbursementAgent() {
 		return instructingReimbursementAgent;
 	}
@@ -305,6 +312,7 @@ public class SettlementInstruction3 {
 		this.instructingReimbursementAgent = instructingReimbursementAgent;
 	}
 
+	@XmlElement(name = "InstgRmbrsmntAgtAcct")
 	public CashAccount24 getInstructingReimbursementAgentAccount() {
 		return instructingReimbursementAgentAccount;
 	}
@@ -313,6 +321,7 @@ public class SettlementInstruction3 {
 		this.instructingReimbursementAgentAccount = instructingReimbursementAgentAccount;
 	}
 
+	@XmlElement(name = "InstdRmbrsmntAgt")
 	public BranchAndFinancialInstitutionIdentification5 getInstructedReimbursementAgent() {
 		return instructedReimbursementAgent;
 	}
@@ -321,6 +330,7 @@ public class SettlementInstruction3 {
 		this.instructedReimbursementAgent = instructedReimbursementAgent;
 	}
 
+	@XmlElement(name = "InstdRmbrsmntAgtAcct")
 	public CashAccount24 getInstructedReimbursementAgentAccount() {
 		return instructedReimbursementAgentAccount;
 	}

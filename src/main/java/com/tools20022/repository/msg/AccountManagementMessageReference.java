@@ -23,6 +23,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the message reference of the account management instruction
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountManagementMessageReference", propOrder = {"otherReference", "previousReference", "statusRequestType", "accountApplicationIdentification", "investmentAccount"})
 public class AccountManagementMessageReference {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -355,6 +361,7 @@ public class AccountManagementMessageReference {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OthrRef", required = true)
 	public AdditionalReference3 getOtherReference() {
 		return otherReference;
 	}
@@ -363,6 +370,7 @@ public class AccountManagementMessageReference {
 		this.otherReference = otherReference;
 	}
 
+	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -371,6 +379,7 @@ public class AccountManagementMessageReference {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "StsReqTp", required = true)
 	public AccountManagementType1Code getStatusRequestType() {
 		return statusRequestType;
 	}
@@ -379,6 +388,7 @@ public class AccountManagementMessageReference {
 		this.statusRequestType = statusRequestType;
 	}
 
+	@XmlElement(name = "AcctApplId")
 	public Max35Text getAccountApplicationIdentification() {
 		return accountApplicationIdentification;
 	}
@@ -387,6 +397,7 @@ public class AccountManagementMessageReference {
 		this.accountApplicationIdentification = accountApplicationIdentification;
 	}
 
+	@XmlElement(name = "InvstmtAcct")
 	public InvestmentAccount14 getInvestmentAccount() {
 		return investmentAccount;
 	}

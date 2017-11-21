@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the type of the document line identification.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of the document line identification."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DocumentLineType1", propOrder = {"codeOrProprietary", "issuer"})
 public class DocumentLineType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -191,6 +197,7 @@ public class DocumentLineType1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CdOrPrtry", required = true)
 	public DocumentLineType1Choice getCodeOrProprietary() {
 		return codeOrProprietary;
 	}
@@ -199,6 +206,7 @@ public class DocumentLineType1 {
 		this.codeOrProprietary = codeOrProprietary;
 	}
 
+	@XmlElement(name = "Issr")
 	public Max35Text getIssuer() {
 		return issuer;
 	}

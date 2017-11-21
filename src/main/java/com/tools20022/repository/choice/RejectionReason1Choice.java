@@ -31,6 +31,10 @@ import com.tools20022.repository.msg.RejectedElement1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Allows the sender of the rejection message to indicate only one rejection
@@ -88,6 +92,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RejectionReason1Choice", propOrder = {"globalRejectionReason", "rejectedElement"})
 public class RejectionReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -194,6 +200,7 @@ public class RejectionReason1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GblRjctnRsn", required = true)
 	public Reason2 getGlobalRejectionReason() {
 		return globalRejectionReason;
 	}
@@ -202,6 +209,7 @@ public class RejectionReason1Choice {
 		this.globalRejectionReason = globalRejectionReason;
 	}
 
+	@XmlElement(name = "RjctdElmt", required = true)
 	public List<RejectedElement1> getRejectedElement() {
 		return rejectedElement;
 	}

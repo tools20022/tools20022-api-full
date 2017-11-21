@@ -35,17 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Guarantee#mmGuaranteePartyRole
- * Guarantee.mmGuaranteePartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.GuaranteePartyRole#mmGuarantee
+ * GuaranteePartyRole.mmGuarantee}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -55,12 +52,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * GuaranteeBeneficiary}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.GuaranteePartyRole#mmGuarantee
- * GuaranteePartyRole.mmGuarantee}</li>
+ * {@linkplain com.tools20022.repository.entity.Guarantee#mmGuaranteePartyRole
+ * Guarantee.mmGuaranteePartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -117,7 +117,7 @@ public class GuaranteePartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmGuarantee = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GuaranteePartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GuaranteePartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Guarantee";
@@ -140,7 +140,12 @@ public class GuaranteePartyRole extends Role {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Guarantee.mmGuaranteePartyRole);
 				subType_lazy = () -> Arrays.asList(GuarantorRole.mmObject(), GuaranteeBeneficiary.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(GuaranteePartyRole.mmGuarantee);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GuaranteePartyRole.mmGuarantee);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return GuaranteePartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

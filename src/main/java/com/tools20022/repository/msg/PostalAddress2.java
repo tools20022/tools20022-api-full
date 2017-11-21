@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Address of a party expressed in a formal structure, usually according to the
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PostalAddress2", propOrder = {"streetName", "postCodeIdentification", "townName", "countrySubDivision", "country"})
 public class PostalAddress2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -329,6 +335,7 @@ public class PostalAddress2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StrtNm")
 	public Max70Text getStreetName() {
 		return streetName;
 	}
@@ -337,6 +344,7 @@ public class PostalAddress2 {
 		this.streetName = streetName;
 	}
 
+	@XmlElement(name = "PstCdId", required = true)
 	public Max16Text getPostCodeIdentification() {
 		return postCodeIdentification;
 	}
@@ -345,6 +353,7 @@ public class PostalAddress2 {
 		this.postCodeIdentification = postCodeIdentification;
 	}
 
+	@XmlElement(name = "TwnNm", required = true)
 	public Max35Text getTownName() {
 		return townName;
 	}
@@ -353,6 +362,7 @@ public class PostalAddress2 {
 		this.townName = townName;
 	}
 
+	@XmlElement(name = "CtrySubDvsn")
 	public Max35Text getCountrySubDivision() {
 		return countrySubDivision;
 	}
@@ -361,6 +371,7 @@ public class PostalAddress2 {
 		this.countrySubDivision = countrySubDivision;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}

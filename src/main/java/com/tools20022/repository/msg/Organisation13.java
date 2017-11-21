@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Organised structure that is set up for a particular purpose, eg, a business,
@@ -107,6 +111,9 @@ import java.util.List;
  * Organisation2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Organisation13", propOrder = {"name", "identification", "purpose", "taxationCountry", "registrationCountry", "registrationDate", "taxIdentificationNumber", "nationalRegistrationNumber", "postalAddress",
+		"primaryCommunicationAddress", "secondaryCommunicationAddress", "additionalRegulatoryInformation"})
 public class Organisation13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -835,6 +842,7 @@ public class Organisation13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max140Text getName() {
 		return name;
 	}
@@ -843,6 +851,7 @@ public class Organisation13 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Id")
 	public PartyIdentification4Choice getIdentification() {
 		return identification;
 	}
@@ -851,6 +860,7 @@ public class Organisation13 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Purp")
 	public Max35Text getPurpose() {
 		return purpose;
 	}
@@ -859,6 +869,7 @@ public class Organisation13 {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "TaxtnCtry")
 	public CountryCode getTaxationCountry() {
 		return taxationCountry;
 	}
@@ -867,6 +878,7 @@ public class Organisation13 {
 		this.taxationCountry = taxationCountry;
 	}
 
+	@XmlElement(name = "RegnCtry")
 	public CountryCode getRegistrationCountry() {
 		return registrationCountry;
 	}
@@ -875,6 +887,7 @@ public class Organisation13 {
 		this.registrationCountry = registrationCountry;
 	}
 
+	@XmlElement(name = "RegnDt")
 	public ISODate getRegistrationDate() {
 		return registrationDate;
 	}
@@ -883,6 +896,7 @@ public class Organisation13 {
 		this.registrationDate = registrationDate;
 	}
 
+	@XmlElement(name = "TaxIdNb")
 	public Max35Text getTaxIdentificationNumber() {
 		return taxIdentificationNumber;
 	}
@@ -891,6 +905,7 @@ public class Organisation13 {
 		this.taxIdentificationNumber = taxIdentificationNumber;
 	}
 
+	@XmlElement(name = "NtlRegnNb")
 	public Max35Text getNationalRegistrationNumber() {
 		return nationalRegistrationNumber;
 	}
@@ -899,6 +914,7 @@ public class Organisation13 {
 		this.nationalRegistrationNumber = nationalRegistrationNumber;
 	}
 
+	@XmlElement(name = "PstlAdr", required = true)
 	public List<PostalAddress3> getPostalAddress() {
 		return postalAddress;
 	}
@@ -907,6 +923,7 @@ public class Organisation13 {
 		this.postalAddress = postalAddress;
 	}
 
+	@XmlElement(name = "PmryComAdr")
 	public CommunicationAddress3 getPrimaryCommunicationAddress() {
 		return primaryCommunicationAddress;
 	}
@@ -915,6 +932,7 @@ public class Organisation13 {
 		this.primaryCommunicationAddress = primaryCommunicationAddress;
 	}
 
+	@XmlElement(name = "ScndryComAdr")
 	public CommunicationAddress3 getSecondaryCommunicationAddress() {
 		return secondaryCommunicationAddress;
 	}
@@ -923,6 +941,7 @@ public class Organisation13 {
 		this.secondaryCommunicationAddress = secondaryCommunicationAddress;
 	}
 
+	@XmlElement(name = "AddtlRgltryInf")
 	public RegulatoryInformation1 getAdditionalRegulatoryInformation() {
 		return additionalRegulatoryInformation;
 	}

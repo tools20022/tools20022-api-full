@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General information about the corporate action event.
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionGeneralInformation90}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionGeneralInformation110", propOrder = {"corporateActionEventIdentification", "officialCorporateActionEventIdentification", "eventType", "financialInstrumentIdentification"})
 public class CorporateActionGeneralInformation110 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -333,6 +339,7 @@ public class CorporateActionGeneralInformation110 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CorpActnEvtId", required = true)
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -341,6 +348,7 @@ public class CorporateActionGeneralInformation110 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "OffclCorpActnEvtId")
 	public Max35Text getOfficialCorporateActionEventIdentification() {
 		return officialCorporateActionEventIdentification;
 	}
@@ -349,6 +357,7 @@ public class CorporateActionGeneralInformation110 {
 		this.officialCorporateActionEventIdentification = officialCorporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "EvtTp", required = true)
 	public CorporateActionEventType52Choice getEventType() {
 		return eventType;
 	}
@@ -357,6 +366,7 @@ public class CorporateActionGeneralInformation110 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public SecurityIdentification19 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}

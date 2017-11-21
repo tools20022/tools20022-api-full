@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements providing the total sum of entries.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * NumberAndSumOfTransactions3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NumberAndSumOfTransactions4", propOrder = {"numberOfEntries", "sum", "totalNetEntry"})
 public class NumberAndSumOfTransactions4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -212,6 +218,7 @@ public class NumberAndSumOfTransactions4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NbOfNtries")
 	public Max15NumericText getNumberOfEntries() {
 		return numberOfEntries;
 	}
@@ -220,6 +227,7 @@ public class NumberAndSumOfTransactions4 {
 		this.numberOfEntries = numberOfEntries;
 	}
 
+	@XmlElement(name = "Sum")
 	public DecimalNumber getSum() {
 		return sum;
 	}
@@ -228,6 +236,7 @@ public class NumberAndSumOfTransactions4 {
 		this.sum = sum;
 	}
 
+	@XmlElement(name = "TtlNetNtry")
 	public AmountAndDirection35 getTotalNetEntry() {
 		return totalNetEntry;
 	}

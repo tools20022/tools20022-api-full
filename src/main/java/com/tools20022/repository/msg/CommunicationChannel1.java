@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.UndertakingDeliveryToParty;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Communication channel information.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Communication channel information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CommunicationChannel1", propOrder = {"method", "deliverToPartyType", "deliverToName", "deliverToAddress"})
 public class CommunicationChannel1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -292,6 +298,7 @@ public class CommunicationChannel1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Mtd", required = true)
 	public ExternalChannel1Code getMethod() {
 		return method;
 	}
@@ -300,6 +307,7 @@ public class CommunicationChannel1 {
 		this.method = method;
 	}
 
+	@XmlElement(name = "DlvrToPtyTp", required = true)
 	public PartyType1Choice getDeliverToPartyType() {
 		return deliverToPartyType;
 	}
@@ -308,6 +316,7 @@ public class CommunicationChannel1 {
 		this.deliverToPartyType = deliverToPartyType;
 	}
 
+	@XmlElement(name = "DlvrToNm")
 	public Max140Text getDeliverToName() {
 		return deliverToName;
 	}
@@ -316,6 +325,7 @@ public class CommunicationChannel1 {
 		this.deliverToName = deliverToName;
 	}
 
+	@XmlElement(name = "DlvrToAdr")
 	public PostalAddress6 getDeliverToAddress() {
 		return deliverToAddress;
 	}

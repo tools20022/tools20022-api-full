@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Represents a party to be identified as eligible for the instructing party.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Represents a party to be identified as eligible for the instructing party."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EligibleCounterpart1", propOrder = {"issuerIdentification", "eligibleCounterpartIdentification", "validFrom", "validTo", "eligibilityType", "eligibilityIdentification"})
 public class EligibleCounterpart1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -347,6 +353,7 @@ public class EligibleCounterpart1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IssrId", required = true)
 	public SystemPartyIdentification1Choice getIssuerIdentification() {
 		return issuerIdentification;
 	}
@@ -355,6 +362,7 @@ public class EligibleCounterpart1 {
 		this.issuerIdentification = issuerIdentification;
 	}
 
+	@XmlElement(name = "ElgblCntrptId", required = true)
 	public SystemPartyIdentification1Choice getEligibleCounterpartIdentification() {
 		return eligibleCounterpartIdentification;
 	}
@@ -363,6 +371,7 @@ public class EligibleCounterpart1 {
 		this.eligibleCounterpartIdentification = eligibleCounterpartIdentification;
 	}
 
+	@XmlElement(name = "VldFr", required = true)
 	public ISODate getValidFrom() {
 		return validFrom;
 	}
@@ -371,6 +380,7 @@ public class EligibleCounterpart1 {
 		this.validFrom = validFrom;
 	}
 
+	@XmlElement(name = "VldTo")
 	public ISODate getValidTo() {
 		return validTo;
 	}
@@ -379,6 +389,7 @@ public class EligibleCounterpart1 {
 		this.validTo = validTo;
 	}
 
+	@XmlElement(name = "ElgbltyTp", required = true)
 	public EligibilityType1Code getEligibilityType() {
 		return eligibilityType;
 	}
@@ -387,6 +398,7 @@ public class EligibleCounterpart1 {
 		this.eligibilityType = eligibilityType;
 	}
 
+	@XmlElement(name = "ElgbltyId", required = true)
 	public EligibilityIdentification1Choice getEligibilityIdentification() {
 		return eligibilityIdentification;
 	}

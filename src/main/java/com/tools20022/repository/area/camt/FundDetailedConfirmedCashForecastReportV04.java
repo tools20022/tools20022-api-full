@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CashManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -65,9 +67,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.043.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
@@ -118,6 +117,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.043.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -133,6 +135,9 @@ import java.util.List;
  * FundDetailedConfirmedCashForecastReportV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundDetailedConfirmedCashForecastReportV04", propOrder = {"messageIdentification", "poolReference", "previousReference", "relatedReference", "messagePagination", "fundOrSubFundDetails", "fundCashForecastDetails",
+		"consolidatedNetCashForecast", "extension"})
 public class FundDetailedConfirmedCashForecastReportV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +181,14 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FundDetailedConfirmedCashForecastReportV04.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -217,6 +230,14 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FundDetailedConfirmedCashForecastReportV04.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference3> previousReference;
 	/**
@@ -256,6 +277,14 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			previousVersion_lazy = () -> FundDetailedConfirmedCashForecastReportV03.mmPreviousReference;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FundDetailedConfirmedCashForecastReportV04.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<AdditionalReference3> relatedReference;
@@ -298,6 +327,14 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FundDetailedConfirmedCashForecastReportV04.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Pagination messagePagination;
 	/**
@@ -338,6 +375,14 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FundDetailedConfirmedCashForecastReportV04.class.getMethod("getMessagePagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Fund4 fundOrSubFundDetails;
 	/**
@@ -373,6 +418,14 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Fund4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FundDetailedConfirmedCashForecastReportV04.class.getMethod("getFundOrSubFundDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<FundCashForecast6> fundCashForecastDetails;
@@ -420,6 +473,14 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> FundCashForecast6.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FundDetailedConfirmedCashForecastReportV04.class.getMethod("getFundCashForecastDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected NetCashForecast3 consolidatedNetCashForecast;
 	/**
@@ -465,6 +526,14 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> NetCashForecast3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FundDetailedConfirmedCashForecastReportV04.class.getMethod("getConsolidatedNetCashForecast", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension1> extension;
 	/**
@@ -507,6 +576,14 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FundDetailedConfirmedCashForecastReportV04.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -520,10 +597,11 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 				rootElement = "Document";
 				xmlTag = "FndDtldConfdCshFcstRpt";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FundDetailedConfirmedCashForecastReportV04.mmMessageIdentification, FundDetailedConfirmedCashForecastReportV04.mmPoolReference,
-						FundDetailedConfirmedCashForecastReportV04.mmPreviousReference, FundDetailedConfirmedCashForecastReportV04.mmRelatedReference, FundDetailedConfirmedCashForecastReportV04.mmMessagePagination,
-						FundDetailedConfirmedCashForecastReportV04.mmFundOrSubFundDetails, FundDetailedConfirmedCashForecastReportV04.mmFundCashForecastDetails, FundDetailedConfirmedCashForecastReportV04.mmConsolidatedNetCashForecast,
-						FundDetailedConfirmedCashForecastReportV04.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmMessageIdentification,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmPoolReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmPreviousReference,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmRelatedReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmMessagePagination,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmFundOrSubFundDetails, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmFundCashForecastDetails,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmConsolidatedNetCashForecast, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -533,10 +611,16 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FundDetailedConfirmedCashForecastReportV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -545,6 +629,7 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -553,6 +638,7 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference3> getPreviousReference() {
 		return previousReference;
 	}
@@ -561,6 +647,7 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public List<AdditionalReference3> getRelatedReference() {
 		return relatedReference;
 	}
@@ -569,6 +656,7 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "MsgPgntn", required = true)
 	public Pagination getMessagePagination() {
 		return messagePagination;
 	}
@@ -577,6 +665,7 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 		this.messagePagination = messagePagination;
 	}
 
+	@XmlElement(name = "FndOrSubFndDtls")
 	public Fund4 getFundOrSubFundDetails() {
 		return fundOrSubFundDetails;
 	}
@@ -585,6 +674,7 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 		this.fundOrSubFundDetails = fundOrSubFundDetails;
 	}
 
+	@XmlElement(name = "FndCshFcstDtls", required = true)
 	public List<FundCashForecast6> getFundCashForecastDetails() {
 		return fundCashForecastDetails;
 	}
@@ -593,6 +683,7 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 		this.fundCashForecastDetails = fundCashForecastDetails;
 	}
 
+	@XmlElement(name = "CnsltdNetCshFcst")
 	public NetCashForecast3 getConsolidatedNetCashForecast() {
 		return consolidatedNetCashForecast;
 	}
@@ -601,11 +692,18 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 		this.consolidatedNetCashForecast = consolidatedNetCashForecast;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.043.04.04")
+	static public class Document {
+		@XmlElement(name = "FndDtldConfdCshFcstRpt", required = true)
+		public FundDetailedConfirmedCashForecastReportV04 messageBody;
 	}
 }

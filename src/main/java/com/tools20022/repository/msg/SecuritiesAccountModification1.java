@@ -26,6 +26,10 @@ import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the kind of modification request for securities account
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesAccountModification1", propOrder = {"scopeIndication", "requestedModification"})
 public class SecuritiesAccountModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class SecuritiesAccountModification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ScpIndctn", required = true)
 	public DataModification1Code getScopeIndication() {
 		return scopeIndication;
 	}
@@ -174,6 +181,7 @@ public class SecuritiesAccountModification1 {
 		this.scopeIndication = scopeIndication;
 	}
 
+	@XmlElement(name = "ReqdMod", required = true)
 	public SecuritiesAccountModification1Choice getRequestedModification() {
 		return requestedModification;
 	}

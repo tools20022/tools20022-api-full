@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.CurrencyControlHeader1;
 import com.tools20022.repository.msg.RegisteredContract1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CrossBorderTransactionsCurrencyControlReportingISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The ContractRegistrationAmendmentRequest message is sent by the reporting
@@ -37,9 +39,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.021.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -72,6 +71,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.021.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -83,6 +85,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContractRegistrationAmendmentRequestV01", propOrder = {"groupHeader", "contractRegistrationAmendment", "supplementaryData"})
 public class ContractRegistrationAmendmentRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -122,6 +126,14 @@ public class ContractRegistrationAmendmentRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CurrencyControlHeader1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ContractRegistrationAmendmentRequestV01.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<RegisteredContract1> contractRegistrationAmendment;
 	/**
@@ -155,6 +167,14 @@ public class ContractRegistrationAmendmentRequestV01 {
 			definition = "Details on the amendment of the registered contract.";
 			minOccurs = 1;
 			complexType_lazy = () -> RegisteredContract1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ContractRegistrationAmendmentRequestV01.class.getMethod("getContractRegistrationAmendment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -193,6 +213,14 @@ public class ContractRegistrationAmendmentRequestV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ContractRegistrationAmendmentRequestV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -205,8 +233,8 @@ public class ContractRegistrationAmendmentRequestV01 {
 				rootElement = "Document";
 				xmlTag = "CtrctRegnAmdmntReq";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ContractRegistrationAmendmentRequestV01.mmGroupHeader, ContractRegistrationAmendmentRequestV01.mmContractRegistrationAmendment,
-						ContractRegistrationAmendmentRequestV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.ContractRegistrationAmendmentRequestV01.mmGroupHeader,
+						com.tools20022.repository.area.auth.ContractRegistrationAmendmentRequestV01.mmContractRegistrationAmendment, com.tools20022.repository.area.auth.ContractRegistrationAmendmentRequestV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -216,10 +244,16 @@ public class ContractRegistrationAmendmentRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ContractRegistrationAmendmentRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public CurrencyControlHeader1 getGroupHeader() {
 		return groupHeader;
 	}
@@ -228,6 +262,7 @@ public class ContractRegistrationAmendmentRequestV01 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "CtrctRegnAmdmnt", required = true)
 	public List<RegisteredContract1> getContractRegistrationAmendment() {
 		return contractRegistrationAmendment;
 	}
@@ -236,11 +271,18 @@ public class ContractRegistrationAmendmentRequestV01 {
 		this.contractRegistrationAmendment = contractRegistrationAmendment;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.021.01.01")
+	static public class Document {
+		@XmlElement(name = "CtrctRegnAmdmntReq", required = true)
+		public ContractRegistrationAmendmentRequestV01 messageBody;
 	}
 }

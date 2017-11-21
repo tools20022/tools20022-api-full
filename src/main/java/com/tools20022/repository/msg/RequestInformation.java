@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Request to execute instructions.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Request to execute instructions."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestInformation", propOrder = {"identification", "requestedExecutionDate", "quantityOfSecurity"})
 public class RequestInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -220,6 +226,7 @@ public class RequestInformation {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -228,6 +235,7 @@ public class RequestInformation {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "ReqdExctnDt")
 	public ISODateTime getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -236,6 +244,7 @@ public class RequestInformation {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "QtyOfScty")
 	public Number getQuantityOfSecurity() {
 		return quantityOfSecurity;
 	}

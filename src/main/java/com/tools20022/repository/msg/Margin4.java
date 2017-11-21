@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the type of margin amounts.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides details on the type of margin amounts."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Margin4", propOrder = {"type", "amount", "creditDebitIndicator"})
 public class Margin4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class Margin4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public MarginType1Choice getType() {
 		return type;
 	}
@@ -226,6 +233,7 @@ public class Margin4 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public Amount2 getAmount() {
 		return amount;
 	}
@@ -234,6 +242,7 @@ public class Margin4 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}

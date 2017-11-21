@@ -64,6 +64,11 @@ public class DataSetInitiator extends CardPaymentPartyRole {
 				definition = "Initiator of a data set.";
 				superType_lazy = () -> CardPaymentPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DataSetInitiator.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

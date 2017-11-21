@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.CollateralProposal;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the response for a collateral proposal.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CollateralProposalResponseType2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralProposalResponseType3", propOrder = {"collateralProposalIdentification", "type", "response"})
 public class CollateralProposalResponseType3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -247,6 +253,7 @@ public class CollateralProposalResponseType3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CollPrpslId", required = true)
 	public Max35Text getCollateralProposalIdentification() {
 		return collateralProposalIdentification;
 	}
@@ -255,6 +262,7 @@ public class CollateralProposalResponseType3 {
 		this.collateralProposalIdentification = collateralProposalIdentification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public CollateralProposalResponse1Code getType() {
 		return type;
 	}
@@ -263,6 +271,7 @@ public class CollateralProposalResponseType3 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Rspn", required = true)
 	public CollateralResponse2 getResponse() {
 		return response;
 	}

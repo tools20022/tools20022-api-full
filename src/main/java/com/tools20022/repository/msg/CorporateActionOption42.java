@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the corporate action option.
@@ -99,6 +103,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionOption21}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionOption42", propOrder = {"optionNumber", "optionType", "instructedOrQuantityToReceive"})
 public class CorporateActionOption42 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -287,6 +293,7 @@ public class CorporateActionOption42 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OptnNb", required = true)
 	public OptionNumber1Choice getOptionNumber() {
 		return optionNumber;
 	}
@@ -295,6 +302,7 @@ public class CorporateActionOption42 {
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption12Choice getOptionType() {
 		return optionType;
 	}
@@ -303,6 +311,7 @@ public class CorporateActionOption42 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "InstdOrQtyToRcv", required = true)
 	public InstructedOrQuantityToReceive1Choice getInstructedOrQuantityToReceive() {
 		return instructedOrQuantityToReceive;
 	}

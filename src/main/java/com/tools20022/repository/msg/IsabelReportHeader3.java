@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the header information for a report file.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the header information for a report file."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelReportHeader3", propOrder = {"actualSenderIdentification", "payloadCreationDate", "file", "sendTimeStamp", "bankReference", "DIVFileDescription", "EBanking"})
 public class IsabelReportHeader3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -388,6 +394,7 @@ public class IsabelReportHeader3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ActlSndrId", required = true)
 	public Max13AlphaNumericText getActualSenderIdentification() {
 		return actualSenderIdentification;
 	}
@@ -396,6 +403,7 @@ public class IsabelReportHeader3 {
 		this.actualSenderIdentification = actualSenderIdentification;
 	}
 
+	@XmlElement(name = "PyldCreDt", required = true)
 	public DateAndDateTimeChoice getPayloadCreationDate() {
 		return payloadCreationDate;
 	}
@@ -404,6 +412,7 @@ public class IsabelReportHeader3 {
 		this.payloadCreationDate = payloadCreationDate;
 	}
 
+	@XmlElement(name = "File", required = true)
 	public IsabelFile4 getFile() {
 		return file;
 	}
@@ -412,6 +421,7 @@ public class IsabelReportHeader3 {
 		this.file = file;
 	}
 
+	@XmlElement(name = "SndTmStmp", required = true)
 	public ISODateTime getSendTimeStamp() {
 		return sendTimeStamp;
 	}
@@ -420,6 +430,7 @@ public class IsabelReportHeader3 {
 		this.sendTimeStamp = sendTimeStamp;
 	}
 
+	@XmlElement(name = "BkRef", required = true)
 	public Max64Text getBankReference() {
 		return bankReference;
 	}
@@ -428,6 +439,7 @@ public class IsabelReportHeader3 {
 		this.bankReference = bankReference;
 	}
 
+	@XmlElement(name = "DIVFileDesc")
 	public Max70Text getDIVFileDescription() {
 		return dIVFileDescription;
 	}
@@ -436,6 +448,7 @@ public class IsabelReportHeader3 {
 		this.dIVFileDescription = dIVFileDescription;
 	}
 
+	@XmlElement(name = "EBkg")
 	public IsabelEbanking1Choice getEBanking() {
 		return eBanking;
 	}

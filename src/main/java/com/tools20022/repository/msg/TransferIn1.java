@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the confirmation of a transfer in transaction.
@@ -80,6 +84,8 @@ import java.util.List;
  * "Information about the confirmation of a transfer in transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferIn1", propOrder = {"transferDetails", "financialInstrumentDetails", "accountDetails", "settlementDetails", "extension"})
 public class TransferIn1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -329,6 +335,7 @@ public class TransferIn1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrfDtls", required = true)
 	public Transfer4 getTransferDetails() {
 		return transferDetails;
 	}
@@ -337,6 +344,7 @@ public class TransferIn1 {
 		this.transferDetails = transferDetails;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument3 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -345,6 +353,7 @@ public class TransferIn1 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public InvestmentAccount10 getAccountDetails() {
 		return accountDetails;
 	}
@@ -353,6 +362,7 @@ public class TransferIn1 {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "SttlmDtls", required = true)
 	public DeliverInformation2 getSettlementDetails() {
 		return settlementDetails;
 	}
@@ -361,6 +371,7 @@ public class TransferIn1 {
 		this.settlementDetails = settlementDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

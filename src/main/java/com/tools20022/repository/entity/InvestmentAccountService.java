@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.AccountService;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,30 +41,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ReportingService#mmRelatedInvestmentAccountService
- * ReportingService.mmRelatedInvestmentAccountService}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountContract#mmServices
- * InvestmentAccountContract.mmServices}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmInvestmentAccountService
- * RoundingParameters.mmInvestmentAccountService}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentPlan#mmRelatedService
- * InvestmentPlan.mmRelatedService}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Reinvestment#mmRelatedinvestmentAccountService
- * Reinvestment.mmRelatedinvestmentAccountService}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.AccountService
- * AccountService}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -94,6 +71,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#mmReinvestment
  * InvestmentAccountService.mmReinvestment}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.AccountService
+ * AccountService}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ReportingService#mmRelatedInvestmentAccountService
+ * ReportingService.mmRelatedInvestmentAccountService}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountContract#mmServices
+ * InvestmentAccountContract.mmServices}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmInvestmentAccountService
+ * RoundingParameters.mmInvestmentAccountService}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentPlan#mmRelatedService
+ * InvestmentPlan.mmRelatedService}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Reinvestment#mmRelatedinvestmentAccountService
+ * Reinvestment.mmRelatedinvestmentAccountService}</li>
  * </ul>
  * </li>
  * <li>
@@ -128,11 +129,6 @@ public class InvestmentAccountService extends AccountService {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.IncomePreferenceCode
 	 * IncomePreferenceCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService
-	 * InvestmentAccountService}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -403,6 +399,11 @@ public class InvestmentAccountService extends AccountService {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService
+	 * InvestmentAccountService}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -436,7 +437,7 @@ public class InvestmentAccountService extends AccountService {
 					InvestmentPlan15.mmIncomePreference, SubscriptionExecution13.mmIncomePreference, SubscriptionExecution12.mmIncomePreference, SubscriptionOrder15.mmIncomePreference, SwitchRedemptionLegOrder6.mmIncomePreference,
 					RedemptionOrder15.mmIncomePreference, RedemptionExecution16.mmIncomePreference, SubscriptionOrder14.mmIncomePreference, SwitchSubscriptionLegExecution4.mmIncomePreference, RedemptionExecution15.mmIncomePreference,
 					SwitchRedemptionLegExecution4.mmIncomePreference);
-			elementContext_lazy = () -> InvestmentAccountService.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncomePreference";
@@ -444,6 +445,14 @@ public class InvestmentAccountService extends AccountService {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IncomePreferenceCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentAccountService.class.getMethod("getIncomePreference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TaxWithholdingMethodCode taxWithholdingMethod;
@@ -459,11 +468,6 @@ public class InvestmentAccountService extends AccountService {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TaxWithholdingMethodCode
 	 * TaxWithholdingMethodCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService
-	 * InvestmentAccountService}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -530,6 +534,11 @@ public class InvestmentAccountService extends AccountService {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService
+	 * InvestmentAccountService}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -549,7 +558,7 @@ public class InvestmentAccountService extends AccountService {
 					InvestmentAccount38.mmTaxWithholdingMethod, InvestmentAccount37.mmTaxWithholdingMethod, InvestmentAccount39.mmTaxWithholdingMethod, InvestmentAccount46.mmTaxWithholdingMethod, InvestmentAccount47.mmTaxWithholdingMethod,
 					InvestmentAccount49.mmTaxWithholdingMethod, InvestmentAccount51.mmTaxWithholdingMethod, InvestmentAccount50.mmTaxWithholdingMethod, InvestmentAccount61.mmTaxWithholdingMethod, InvestmentAccount63.mmTaxWithholdingMethod,
 					InvestmentAccount62.mmTaxWithholdingMethod);
-			elementContext_lazy = () -> InvestmentAccountService.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxWithholdingMethod";
@@ -557,6 +566,14 @@ public class InvestmentAccountService extends AccountService {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxWithholdingMethodCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentAccountService.class.getMethod("getTaxWithholdingMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RoundingParameters roundingMethod;
@@ -577,11 +594,6 @@ public class InvestmentAccountService extends AccountService {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.RoundingParameters
 	 * RoundingParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService
-	 * InvestmentAccountService}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -648,6 +660,11 @@ public class InvestmentAccountService extends AccountService {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService
+	 * InvestmentAccountService}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -667,7 +684,7 @@ public class InvestmentAccountService extends AccountService {
 					InvestmentAccount38.mmRoundingDetails, InvestmentAccount37.mmRoundingDetails, InvestmentAccount39.mmRoundingDetails, InvestmentAccount46.mmRoundingDetails, InvestmentAccount47.mmRoundingDetails,
 					InvestmentAccount49.mmRoundingDetails, InvestmentAccount51.mmRoundingDetails, InvestmentAccount50.mmRoundingDetails, InvestmentAccount61.mmRoundingDetails, InvestmentAccount63.mmRoundingDetails,
 					InvestmentAccount62.mmRoundingDetails);
-			elementContext_lazy = () -> InvestmentAccountService.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundingMethod";
@@ -692,11 +709,6 @@ public class InvestmentAccountService extends AccountService {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService
-	 * InvestmentAccountService}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -708,6 +720,11 @@ public class InvestmentAccountService extends AccountService {
 	 * InvestmentAccount11.mmBeneficiaryCertificationIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService
+	 * InvestmentAccountService}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -724,7 +741,7 @@ public class InvestmentAccountService extends AccountService {
 	public static final MMBusinessAttribute mmBeneficiaryCertificationIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentAccount10.mmBeneficiaryCertificationIndicator, InvestmentAccount11.mmBeneficiaryCertificationIndicator);
-			elementContext_lazy = () -> InvestmentAccountService.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BeneficiaryCertificationIndicator";
@@ -732,6 +749,14 @@ public class InvestmentAccountService extends AccountService {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentAccountService.class.getMethod("getBeneficiaryCertificationIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BeneficiaryCertificationCompletionCode beneficiaryCertificationCompletion;
@@ -746,11 +771,6 @@ public class InvestmentAccountService extends AccountService {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationCompletionCode
 	 * BeneficiaryCertificationCompletionCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService
-	 * InvestmentAccountService}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -790,6 +810,11 @@ public class InvestmentAccountService extends AccountService {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService
+	 * InvestmentAccountService}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -808,7 +833,7 @@ public class InvestmentAccountService extends AccountService {
 					IndividualPerson15.mmBeneficiaryCertificationCompletion, InvestmentAccount40.mmBeneficiaryCertificationCompletion, InvestmentAccount41.mmBeneficiaryCertificationCompletion,
 					InvestmentAccount54.mmBeneficiaryCertificationCompletion, InvestmentAccount56.mmBeneficiaryCertificationCompletion, InvestmentAccount55.mmBeneficiaryCertificationCompletion,
 					InvestmentAccount57.mmBeneficiaryCertificationCompletion, IndividualPerson31.mmBeneficiaryCertificationCompletion);
-			elementContext_lazy = () -> InvestmentAccountService.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BeneficiaryCertificationCompletion";
@@ -816,6 +841,14 @@ public class InvestmentAccountService extends AccountService {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BeneficiaryCertificationCompletionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestmentAccountService.class.getMethod("getBeneficiaryCertificationCompletion", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentPlan systematicInvestmentPlan;
@@ -854,7 +887,7 @@ public class InvestmentAccountService extends AccountService {
 	 */
 	public static final MMBusinessAssociationEnd mmSystematicInvestmentPlan = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentAccountService.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystematicInvestmentPlan";
@@ -904,7 +937,7 @@ public class InvestmentAccountService extends AccountService {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentAccountContract = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentAccountService.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccountContract";
@@ -952,7 +985,7 @@ public class InvestmentAccountService extends AccountService {
 	 */
 	public static final MMBusinessAssociationEnd mmReportingService = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> InvestmentAccountService.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReportingService";
@@ -982,11 +1015,6 @@ public class InvestmentAccountService extends AccountService {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Reinvestment
 	 * Reinvestment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService
-	 * InvestmentAccountService}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1026,6 +1054,11 @@ public class InvestmentAccountService extends AccountService {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService
+	 * InvestmentAccountService}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1042,7 +1075,7 @@ public class InvestmentAccountService extends AccountService {
 			derivation_lazy = () -> Arrays.asList(InvestmentAccount38.mmReinvestmentDetails, InvestmentAccount37.mmReinvestmentDetails, InvestmentAccount39.mmReinvestmentDetails, InvestmentAccount46.mmReinvestmentDetails,
 					InvestmentAccount47.mmReinvestmentDetails, InvestmentAccount49.mmReinvestmentDetails, InvestmentAccount51.mmReinvestmentDetails, InvestmentAccount50.mmReinvestmentDetails, InvestmentAccount61.mmReinvestmentDetails,
 					InvestmentAccount63.mmReinvestmentDetails, InvestmentAccount62.mmReinvestmentDetails);
-			elementContext_lazy = () -> InvestmentAccountService.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reinvestment";
@@ -1066,9 +1099,16 @@ public class InvestmentAccountService extends AccountService {
 						com.tools20022.repository.entity.RoundingParameters.mmInvestmentAccountService, com.tools20022.repository.entity.InvestmentPlan.mmRelatedService,
 						com.tools20022.repository.entity.Reinvestment.mmRelatedinvestmentAccountService);
 				superType_lazy = () -> AccountService.mmObject();
-				element_lazy = () -> Arrays.asList(InvestmentAccountService.mmIncomePreference, InvestmentAccountService.mmTaxWithholdingMethod, InvestmentAccountService.mmRoundingMethod,
-						InvestmentAccountService.mmBeneficiaryCertificationIndicator, InvestmentAccountService.mmBeneficiaryCertificationCompletion, InvestmentAccountService.mmSystematicInvestmentPlan,
-						InvestmentAccountService.mmInvestmentAccountContract, InvestmentAccountService.mmReportingService, InvestmentAccountService.mmReinvestment);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccountService.mmIncomePreference, com.tools20022.repository.entity.InvestmentAccountService.mmTaxWithholdingMethod,
+						com.tools20022.repository.entity.InvestmentAccountService.mmRoundingMethod, com.tools20022.repository.entity.InvestmentAccountService.mmBeneficiaryCertificationIndicator,
+						com.tools20022.repository.entity.InvestmentAccountService.mmBeneficiaryCertificationCompletion, com.tools20022.repository.entity.InvestmentAccountService.mmSystematicInvestmentPlan,
+						com.tools20022.repository.entity.InvestmentAccountService.mmInvestmentAccountContract, com.tools20022.repository.entity.InvestmentAccountService.mmReportingService,
+						com.tools20022.repository.entity.InvestmentAccountService.mmReinvestment);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvestmentAccountService.class;
 			}
 		});
 		return mmObject_lazy.get();

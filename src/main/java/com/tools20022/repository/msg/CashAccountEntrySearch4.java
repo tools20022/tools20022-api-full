@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for a cash entry.
@@ -92,6 +96,8 @@ import java.util.List;
  * CashAccountEntrySearch3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccountEntrySearch4", propOrder = {"accountIdentification", "entryAmount", "entryAmountCurrency", "creditDebitIndicator", "entryStatus", "entryDate", "accountOwner", "accountServicer"})
 public class CashAccountEntrySearch4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -544,6 +550,7 @@ public class CashAccountEntrySearch4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId")
 	public List<AccountIdentificationSearchCriteria2Choice> getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -552,6 +559,7 @@ public class CashAccountEntrySearch4 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "NtryAmt")
 	public List<ActiveOrHistoricAmountRange1Choice> getEntryAmount() {
 		return entryAmount;
 	}
@@ -560,6 +568,7 @@ public class CashAccountEntrySearch4 {
 		this.entryAmount = entryAmount;
 	}
 
+	@XmlElement(name = "NtryAmtCcy")
 	public List<ActiveOrHistoricCurrencyCode> getEntryAmountCurrency() {
 		return entryAmountCurrency;
 	}
@@ -568,6 +577,7 @@ public class CashAccountEntrySearch4 {
 		this.entryAmountCurrency = entryAmountCurrency;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -576,6 +586,7 @@ public class CashAccountEntrySearch4 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "NtrySts")
 	public List<EntryStatus1Code> getEntryStatus() {
 		return entryStatus;
 	}
@@ -584,6 +595,7 @@ public class CashAccountEntrySearch4 {
 		this.entryStatus = entryStatus;
 	}
 
+	@XmlElement(name = "NtryDt")
 	public List<DateAndDateTimeSearchChoice> getEntryDate() {
 		return entryDate;
 	}
@@ -592,6 +604,7 @@ public class CashAccountEntrySearch4 {
 		this.entryDate = entryDate;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification43 getAccountOwner() {
 		return accountOwner;
 	}
@@ -600,6 +613,7 @@ public class CashAccountEntrySearch4 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
 		return accountServicer;
 	}

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,15 +34,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSystemName
- * SystemIdentification.mmSystemName}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -50,6 +42,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SystemName#mmSystemIdentification
  * SystemName.mmSystemIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSystemName
+ * SystemIdentification.mmSystemName}</li>
  * </ul>
  * </li>
  * <li>
@@ -81,10 +82,6 @@ public class SystemName {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SystemName SystemName}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -109,6 +106,10 @@ public class SystemName {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SystemName SystemName}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -125,7 +126,7 @@ public class SystemName {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteraction1.mmSystemName, PointOfInteraction2.mmSystemName, PointOfInteraction3.mmSystemName, PointOfInteraction4.mmSystemName, PointOfInteraction5.mmSystemName,
 					PointOfInteraction7.mmSystemName);
-			elementContext_lazy = () -> SystemName.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemName.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Name";
@@ -133,6 +134,14 @@ public class SystemName {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SystemName.class.getMethod("getName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SystemIdentification systemIdentification;
@@ -171,7 +180,7 @@ public class SystemName {
 	 */
 	public static final MMBusinessAssociationEnd mmSystemIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SystemName.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemName.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemIdentification";
@@ -192,7 +201,12 @@ public class SystemName {
 				name = "SystemName";
 				definition = "Name of a system.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemIdentification.mmSystemName);
-				element_lazy = () -> Arrays.asList(SystemName.mmName, SystemName.mmSystemIdentification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemName.mmName, com.tools20022.repository.entity.SystemName.mmSystemIdentification);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SystemName.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique identifier of an account, as assigned by the account servicer.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Unique identifier of an account, as assigned by the account servicer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccountIdentification6Choice", propOrder = {"IBAN", "proprietary"})
 public class CashAccountIdentification6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -187,6 +193,7 @@ public class CashAccountIdentification6Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IBAN", required = true)
 	public IBAN2007Identifier getIBAN() {
 		return iBAN;
 	}
@@ -195,6 +202,7 @@ public class CashAccountIdentification6Choice {
 		this.iBAN = iBAN;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public RestrictedFINX2Max34Text getProprietary() {
 		return proprietary;
 	}

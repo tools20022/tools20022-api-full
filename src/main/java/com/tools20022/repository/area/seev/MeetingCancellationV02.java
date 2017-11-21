@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesEventsArchive;
 import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -45,9 +47,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.002.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
@@ -87,6 +86,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.002.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -105,6 +107,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingCancellationV02", propOrder = {"cancellationIdentification", "messageCancellation", "meetingReference", "notifyingParty", "security", "reason"})
 public class MeetingCancellationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -141,6 +145,14 @@ public class MeetingCancellationV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingCancellationV02.class.getMethod("getCancellationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AmendInformation1 messageCancellation;
@@ -180,6 +192,14 @@ public class MeetingCancellationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AmendInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingCancellationV02.class.getMethod("getMessageCancellation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MeetingReference2 meetingReference;
 	/**
@@ -215,6 +235,14 @@ public class MeetingCancellationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingCancellationV02.class.getMethod("getMeetingReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification9Choice notifyingParty;
 	/**
@@ -249,6 +277,14 @@ public class MeetingCancellationV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingCancellationV02.class.getMethod("getNotifyingParty", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SecurityPosition5> security;
@@ -286,6 +322,14 @@ public class MeetingCancellationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SecurityPosition5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingCancellationV02.class.getMethod("getSecurity", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MeetingCancellationReason1 reason;
 	/**
@@ -321,6 +365,14 @@ public class MeetingCancellationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MeetingCancellationReason1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingCancellationV02.class.getMethod("getReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -334,8 +386,9 @@ public class MeetingCancellationV02 {
 				rootElement = "Document";
 				xmlTag = "MtgCxl";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingCancellationV02.mmCancellationIdentification, MeetingCancellationV02.mmMessageCancellation, MeetingCancellationV02.mmMeetingReference,
-						MeetingCancellationV02.mmNotifyingParty, MeetingCancellationV02.mmSecurity, MeetingCancellationV02.mmReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingCancellationV02.mmCancellationIdentification, com.tools20022.repository.area.seev.MeetingCancellationV02.mmMessageCancellation,
+						com.tools20022.repository.area.seev.MeetingCancellationV02.mmMeetingReference, com.tools20022.repository.area.seev.MeetingCancellationV02.mmNotifyingParty,
+						com.tools20022.repository.area.seev.MeetingCancellationV02.mmSecurity, com.tools20022.repository.area.seev.MeetingCancellationV02.mmReason);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -345,10 +398,16 @@ public class MeetingCancellationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingCancellationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlId", required = true)
 	public MessageIdentification1 getCancellationIdentification() {
 		return cancellationIdentification;
 	}
@@ -357,6 +416,7 @@ public class MeetingCancellationV02 {
 		this.cancellationIdentification = cancellationIdentification;
 	}
 
+	@XmlElement(name = "MsgCxl")
 	public AmendInformation1 getMessageCancellation() {
 		return messageCancellation;
 	}
@@ -365,6 +425,7 @@ public class MeetingCancellationV02 {
 		this.messageCancellation = messageCancellation;
 	}
 
+	@XmlElement(name = "MtgRef", required = true)
 	public MeetingReference2 getMeetingReference() {
 		return meetingReference;
 	}
@@ -373,6 +434,7 @@ public class MeetingCancellationV02 {
 		this.meetingReference = meetingReference;
 	}
 
+	@XmlElement(name = "NtifngPty")
 	public PartyIdentification9Choice getNotifyingParty() {
 		return notifyingParty;
 	}
@@ -381,6 +443,7 @@ public class MeetingCancellationV02 {
 		this.notifyingParty = notifyingParty;
 	}
 
+	@XmlElement(name = "Scty")
 	public List<SecurityPosition5> getSecurity() {
 		return security;
 	}
@@ -389,11 +452,18 @@ public class MeetingCancellationV02 {
 		this.security = security;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public MeetingCancellationReason1 getReason() {
 		return reason;
 	}
 
 	public void setReason(MeetingCancellationReason1 reason) {
 		this.reason = reason;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.002.02.02")
+	static public class Document {
+		@XmlElement(name = "MtgCxl", required = true)
+		public MeetingCancellationV02 messageBody;
 	}
 }

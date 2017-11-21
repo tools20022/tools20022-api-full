@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * References a related message or provides another reference, such as a pool
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalReference5", propOrder = {"reference", "messageName"})
 public class AdditionalReference5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class AdditionalReference5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ref", required = true)
 	public RestrictedFINMax16Text getReference() {
 		return reference;
 	}
@@ -187,6 +194,7 @@ public class AdditionalReference5 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "MsgNm")
 	public RestrictedFINMax15Text getMessageName() {
 		return messageName;
 	}

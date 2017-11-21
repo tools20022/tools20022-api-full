@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the settlement condition modification request
@@ -112,6 +116,9 @@ import java.util.List;
  * definition} = "Details of the settlement condition modification request"</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestDetails16", propOrder = {"reference", "automaticBorrowing", "retainIndicator", "linkage", "priority", "otherProcessing", "partialSettlementIndicator", "securitiesRTGS", "holdIndicator", "matchingDenial",
+		"unilateralSplit", "linkages"})
 public class RequestDetails16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -692,6 +699,7 @@ public class RequestDetails16 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ref", required = true)
 	public References21 getReference() {
 		return reference;
 	}
@@ -700,6 +708,7 @@ public class RequestDetails16 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "AutomtcBrrwg")
 	public AutomaticBorrowing11Choice getAutomaticBorrowing() {
 		return automaticBorrowing;
 	}
@@ -708,6 +717,7 @@ public class RequestDetails16 {
 		this.automaticBorrowing = automaticBorrowing;
 	}
 
+	@XmlElement(name = "RtnInd")
 	public YesNoIndicator getRetainIndicator() {
 		return retainIndicator;
 	}
@@ -716,6 +726,7 @@ public class RequestDetails16 {
 		this.retainIndicator = retainIndicator;
 	}
 
+	@XmlElement(name = "Lkg")
 	public LinkageType4Choice getLinkage() {
 		return linkage;
 	}
@@ -724,6 +735,7 @@ public class RequestDetails16 {
 		this.linkage = linkage;
 	}
 
+	@XmlElement(name = "Prty")
 	public PriorityNumeric5Choice getPriority() {
 		return priority;
 	}
@@ -732,6 +744,7 @@ public class RequestDetails16 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "OthrPrcg")
 	public List<GenericIdentification47> getOtherProcessing() {
 		return otherProcessing;
 	}
@@ -740,6 +753,7 @@ public class RequestDetails16 {
 		this.otherProcessing = otherProcessing;
 	}
 
+	@XmlElement(name = "PrtlSttlmInd")
 	public SettlementTransactionCondition5Code getPartialSettlementIndicator() {
 		return partialSettlementIndicator;
 	}
@@ -748,6 +762,7 @@ public class RequestDetails16 {
 		this.partialSettlementIndicator = partialSettlementIndicator;
 	}
 
+	@XmlElement(name = "SctiesRTGS")
 	public SecuritiesRTGS5Choice getSecuritiesRTGS() {
 		return securitiesRTGS;
 	}
@@ -756,6 +771,7 @@ public class RequestDetails16 {
 		this.securitiesRTGS = securitiesRTGS;
 	}
 
+	@XmlElement(name = "HldInd")
 	public HoldIndicator7 getHoldIndicator() {
 		return holdIndicator;
 	}
@@ -764,6 +780,7 @@ public class RequestDetails16 {
 		this.holdIndicator = holdIndicator;
 	}
 
+	@XmlElement(name = "MtchgDnl")
 	public MatchingDenied4Choice getMatchingDenial() {
 		return matchingDenial;
 	}
@@ -772,6 +789,7 @@ public class RequestDetails16 {
 		this.matchingDenial = matchingDenial;
 	}
 
+	@XmlElement(name = "UnltrlSplt")
 	public UnilateralSplit4Choice getUnilateralSplit() {
 		return unilateralSplit;
 	}
@@ -780,6 +798,7 @@ public class RequestDetails16 {
 		this.unilateralSplit = unilateralSplit;
 	}
 
+	@XmlElement(name = "Lnkgs")
 	public List<Linkages44> getLinkages() {
 		return linkages;
 	}

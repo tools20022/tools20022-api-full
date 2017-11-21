@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Completion of a securities settlement instruction, wherein securities are
@@ -89,6 +93,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DeliverInformation2", propOrder = {"chargeDetails", "taxDetails", "settlementPartiesDetails", "physicalTransferIndicator", "physicalTransferDetails"})
 public class DeliverInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -346,6 +352,7 @@ public class DeliverInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ChrgDtls")
 	public List<Charge4> getChargeDetails() {
 		return chargeDetails;
 	}
@@ -354,6 +361,7 @@ public class DeliverInformation2 {
 		this.chargeDetails = chargeDetails;
 	}
 
+	@XmlElement(name = "TaxDtls")
 	public List<Tax3> getTaxDetails() {
 		return taxDetails;
 	}
@@ -362,6 +370,7 @@ public class DeliverInformation2 {
 		this.taxDetails = taxDetails;
 	}
 
+	@XmlElement(name = "SttlmPtiesDtls", required = true)
 	public DeliveringPartiesAndAccount1 getSettlementPartiesDetails() {
 		return settlementPartiesDetails;
 	}
@@ -370,6 +379,7 @@ public class DeliverInformation2 {
 		this.settlementPartiesDetails = settlementPartiesDetails;
 	}
 
+	@XmlElement(name = "PhysTrfInd", required = true)
 	public YesNoIndicator getPhysicalTransferIndicator() {
 		return physicalTransferIndicator;
 	}
@@ -378,6 +388,7 @@ public class DeliverInformation2 {
 		this.physicalTransferIndicator = physicalTransferIndicator;
 	}
 
+	@XmlElement(name = "PhysTrfDtls")
 	public DeliveryParameters2 getPhysicalTransferDetails() {
 		return physicalTransferDetails;
 	}

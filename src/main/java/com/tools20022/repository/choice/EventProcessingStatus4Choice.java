@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.NoSpecifiedReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the status of a corporate action or the status of
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EventProcessingStatus4Choice", propOrder = {"complete", "reconciled", "pending", "proprietaryStatus"})
 public class EventProcessingStatus4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -293,6 +299,7 @@ public class EventProcessingStatus4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cmplt", required = true)
 	public NoSpecifiedReason1 getComplete() {
 		return complete;
 	}
@@ -301,6 +308,7 @@ public class EventProcessingStatus4Choice {
 		this.complete = complete;
 	}
 
+	@XmlElement(name = "Rcncld", required = true)
 	public NoSpecifiedReason1 getReconciled() {
 		return reconciled;
 	}
@@ -309,6 +317,7 @@ public class EventProcessingStatus4Choice {
 		this.reconciled = reconciled;
 	}
 
+	@XmlElement(name = "Pdg", required = true)
 	public PendingStatus43Choice getPending() {
 		return pending;
 	}
@@ -317,6 +326,7 @@ public class EventProcessingStatus4Choice {
 		this.pending = pending;
 	}
 
+	@XmlElement(name = "PrtrySts", required = true)
 	public ProprietaryStatusAndReason7 getProprietaryStatus() {
 		return proprietaryStatus;
 	}

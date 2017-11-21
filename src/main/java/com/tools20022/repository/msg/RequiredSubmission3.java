@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the details relative to the submission of the insurance data set.
@@ -85,6 +89,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequiredSubmission3", propOrder = {"submitter", "matchIssuer", "matchIssueDate", "matchTransport", "matchAmount", "clausesRequired", "matchAssuredParty"})
 public class RequiredSubmission3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -437,6 +443,7 @@ public class RequiredSubmission3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Submitr", required = true)
 	public List<BICIdentification1> getSubmitter() {
 		return submitter;
 	}
@@ -445,6 +452,7 @@ public class RequiredSubmission3 {
 		this.submitter = submitter;
 	}
 
+	@XmlElement(name = "MtchIssr")
 	public PartyIdentification27 getMatchIssuer() {
 		return matchIssuer;
 	}
@@ -453,6 +461,7 @@ public class RequiredSubmission3 {
 		this.matchIssuer = matchIssuer;
 	}
 
+	@XmlElement(name = "MtchIsseDt", required = true)
 	public YesNoIndicator getMatchIssueDate() {
 		return matchIssueDate;
 	}
@@ -461,6 +470,7 @@ public class RequiredSubmission3 {
 		this.matchIssueDate = matchIssueDate;
 	}
 
+	@XmlElement(name = "MtchTrnsprt", required = true)
 	public YesNoIndicator getMatchTransport() {
 		return matchTransport;
 	}
@@ -469,6 +479,7 @@ public class RequiredSubmission3 {
 		this.matchTransport = matchTransport;
 	}
 
+	@XmlElement(name = "MtchAmt", required = true)
 	public YesNoIndicator getMatchAmount() {
 		return matchAmount;
 	}
@@ -477,6 +488,7 @@ public class RequiredSubmission3 {
 		this.matchAmount = matchAmount;
 	}
 
+	@XmlElement(name = "ClausesReqrd")
 	public List<InsuranceClauses1Code> getClausesRequired() {
 		return clausesRequired;
 	}
@@ -485,6 +497,7 @@ public class RequiredSubmission3 {
 		this.clausesRequired = clausesRequired;
 	}
 
+	@XmlElement(name = "MtchAssrdPty")
 	public AssuredType1Code getMatchAssuredParty() {
 		return matchAssuredParty;
 	}

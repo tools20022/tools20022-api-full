@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.BalanceDetails6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Balance breakdown information.
@@ -72,6 +76,8 @@ import java.util.List;
  * definition} = "Balance breakdown information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PortfolioBalance1", propOrder = {"summaryBalance", "detailedBalance"})
 public class PortfolioBalance1 {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class PortfolioBalance1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SummryBal", required = true)
 	public List<BalanceDetails5> getSummaryBalance() {
 		return summaryBalance;
 	}
@@ -189,6 +196,7 @@ public class PortfolioBalance1 {
 		this.summaryBalance = summaryBalance;
 	}
 
+	@XmlElement(name = "DtldBal", required = true)
 	public List<BalanceDetails6> getDetailedBalance() {
 		return detailedBalance;
 	}

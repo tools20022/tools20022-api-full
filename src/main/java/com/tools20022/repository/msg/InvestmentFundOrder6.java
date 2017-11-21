@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * An investor's instruction to either subscribe or redeem an amount of money or
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentFundOrder6", propOrder = {"masterReference", "orderReference", "clientReference", "cancellationReference", "orderType", "amendmentIndicator", "orderDetails"})
 public class InvestmentFundOrder6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -447,6 +453,7 @@ public class InvestmentFundOrder6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -455,6 +462,7 @@ public class InvestmentFundOrder6 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -463,6 +471,7 @@ public class InvestmentFundOrder6 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -471,6 +480,7 @@ public class InvestmentFundOrder6 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -479,6 +489,7 @@ public class InvestmentFundOrder6 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "OrdrTp", required = true)
 	public FundOrderType1Code getOrderType() {
 		return orderType;
 	}
@@ -487,6 +498,7 @@ public class InvestmentFundOrder6 {
 		this.orderType = orderType;
 	}
 
+	@XmlElement(name = "AmdmntInd")
 	public YesNoIndicator getAmendmentIndicator() {
 		return amendmentIndicator;
 	}
@@ -495,6 +507,7 @@ public class InvestmentFundOrder6 {
 		this.amendmentIndicator = amendmentIndicator;
 	}
 
+	@XmlElement(name = "OrdrDtls")
 	public SubscriptionOrRedemptionOrSwitchOrderDataChoice getOrderDetails() {
 		return orderDetails;
 	}

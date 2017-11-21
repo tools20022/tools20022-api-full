@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a cash forecast report.
@@ -72,6 +76,8 @@ import java.util.List;
  * definition} = "Information about a cash forecast report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundDetailedConfirmedCashForecastReport1", propOrder = {"fundCashForecastDetails", "extension"})
 public class FundDetailedConfirmedCashForecastReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class FundDetailedConfirmedCashForecastReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FndCshFcstDtls", required = true)
 	public List<FundCashForecast2> getFundCashForecastDetails() {
 		return fundCashForecastDetails;
 	}
@@ -193,6 +200,7 @@ public class FundDetailedConfirmedCashForecastReport1 {
 		this.fundCashForecastDetails = fundCashForecastDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

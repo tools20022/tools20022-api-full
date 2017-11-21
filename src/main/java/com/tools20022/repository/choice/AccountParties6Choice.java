@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a party's account.
@@ -83,6 +87,8 @@ import java.util.List;
  * AccountParties3Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountParties6Choice", propOrder = {"primaryOwner", "trustee", "custodianForMinor", "nominee", "jointOwner"})
 public class AccountParties6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -423,6 +429,7 @@ public class AccountParties6Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmryOwnr", required = true)
 	public InvestmentAccountOwnershipInformation11 getPrimaryOwner() {
 		return primaryOwner;
 	}
@@ -431,6 +438,7 @@ public class AccountParties6Choice {
 		this.primaryOwner = primaryOwner;
 	}
 
+	@XmlElement(name = "Trstee", required = true)
 	public List<InvestmentAccountOwnershipInformation11> getTrustee() {
 		return trustee;
 	}
@@ -439,6 +447,7 @@ public class AccountParties6Choice {
 		this.trustee = trustee;
 	}
 
+	@XmlElement(name = "CtdnForMnr", required = true)
 	public InvestmentAccountOwnershipInformation11 getCustodianForMinor() {
 		return custodianForMinor;
 	}
@@ -447,6 +456,7 @@ public class AccountParties6Choice {
 		this.custodianForMinor = custodianForMinor;
 	}
 
+	@XmlElement(name = "Nmnee", required = true)
 	public InvestmentAccountOwnershipInformation11 getNominee() {
 		return nominee;
 	}
@@ -455,6 +465,7 @@ public class AccountParties6Choice {
 		this.nominee = nominee;
 	}
 
+	@XmlElement(name = "JntOwnr", required = true)
 	public List<InvestmentAccountOwnershipInformation11> getJointOwner() {
 		return jointOwner;
 	}

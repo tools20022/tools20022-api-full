@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the parameters for an Isabel reporting file.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the parameters for an Isabel reporting file."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelFile4", propOrder = {"format", "name", "MIMEType"})
 public class IsabelFile4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -197,6 +203,7 @@ public class IsabelFile4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Frmt", required = true)
 	public Max16Text getFormat() {
 		return format;
 	}
@@ -205,6 +212,7 @@ public class IsabelFile4 {
 		this.format = format;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max100AlphaNumericUnderscoreText getName() {
 		return name;
 	}
@@ -213,6 +221,7 @@ public class IsabelFile4 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "MIMETp")
 	public Max256Text getMIMEType() {
 		return mIMEType;
 	}

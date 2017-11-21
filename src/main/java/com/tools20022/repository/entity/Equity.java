@@ -31,6 +31,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -49,6 +50,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Equity#mmPreferenceToIncome
+ * Equity.mmPreferenceToIncome}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Equity#mmConvertibleIndicator
+ * Equity.mmConvertibleIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Equity#mmNonPaidAmount
+ * Equity.mmNonPaidAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Equity#mmParValue
+ * Equity.mmParValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Equity#mmVotingRightsPerShare
+ * Equity.mmVotingRightsPerShare}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -65,25 +85,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * FinancialInstrumentProperties1Choice.mmEquity}</li>
  * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument28#mmEquity
  * FinancialInstrument28.mmEquity}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Equity#mmPreferenceToIncome
- * Equity.mmPreferenceToIncome}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Equity#mmConvertibleIndicator
- * Equity.mmConvertibleIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Equity#mmNonPaidAmount
- * Equity.mmNonPaidAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Equity#mmParValue
- * Equity.mmParValue}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Equity#mmVotingRightsPerShare
- * Equity.mmVotingRightsPerShare}</li>
  * </ul>
  * </li>
  * <li>
@@ -120,10 +121,6 @@ public class Equity extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PreferenceToIncomeCode
 	 * PreferenceToIncomeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Equity
-	 * Equity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -193,6 +190,10 @@ public class Equity extends Security {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Equity
+	 * Equity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -214,7 +215,7 @@ public class Equity extends Security {
 							FinancialInstrumentAttributes27.mmPreferenceToIncome, FinancialInstrumentAttributes14.mmPreferenceToIncome, FinancialInstrumentAttributes30.mmPreferenceToIncome,
 							FinancialInstrumentAttributes28.mmPreferenceToIncome, Equity1.mmPreferenceToIncome, FinancialInstrumentAttributes15.mmPreferenceToIncome, FinancialInstrumentAttributes29.mmPreferenceToIncome,
 							Equity2.mmPreferenceToIncome, FinancialInstrumentAttributes2.mmPreferenceToIncome);
-			elementContext_lazy = () -> Equity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreferenceToIncome";
@@ -222,6 +223,14 @@ public class Equity extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PreferenceToIncomeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Equity.class.getMethod("getPreferenceToIncome", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator convertibleIndicator;
@@ -235,10 +244,6 @@ public class Equity extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Equity
-	 * Equity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -247,6 +252,10 @@ public class Equity extends Security {
 	 * Equity1.mmConvertibleIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Equity
+	 * Equity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -262,7 +271,7 @@ public class Equity extends Security {
 	public static final MMBusinessAttribute mmConvertibleIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Equity1.mmConvertibleIndicator);
-			elementContext_lazy = () -> Equity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConvertibleIndicator";
@@ -270,6 +279,14 @@ public class Equity extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Equity.class.getMethod("getConvertibleIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount nonPaidAmount;
@@ -283,10 +300,6 @@ public class Equity extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Equity
-	 * Equity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -296,6 +309,10 @@ public class Equity extends Security {
 	 * Equity2.mmNonPaidAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Equity
+	 * Equity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -310,7 +327,7 @@ public class Equity extends Security {
 	public static final MMBusinessAttribute mmNonPaidAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Equity1.mmNonPaidAmount, Equity2.mmNonPaidAmount);
-			elementContext_lazy = () -> Equity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonPaidAmount";
@@ -318,6 +335,14 @@ public class Equity extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Equity.class.getMethod("getNonPaidAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount parValue;
@@ -331,10 +356,6 @@ public class Equity extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Equity
-	 * Equity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -344,6 +365,10 @@ public class Equity extends Security {
 	 * Equity2.mmParValue}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Equity
+	 * Equity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -358,7 +383,7 @@ public class Equity extends Security {
 	public static final MMBusinessAttribute mmParValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Equity1.mmParValue, Equity2.mmParValue);
-			elementContext_lazy = () -> Equity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ParValue";
@@ -366,6 +391,14 @@ public class Equity extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Equity.class.getMethod("getParValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number votingRightsPerShare;
@@ -378,10 +411,6 @@ public class Equity extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Equity
-	 * Equity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -393,6 +422,10 @@ public class Equity extends Security {
 	 * Equity2.mmVotingRightsPerShare}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Equity
+	 * Equity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -407,7 +440,7 @@ public class Equity extends Security {
 	public static final MMBusinessAttribute mmVotingRightsPerShare = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Equity1.mmVotingRightsPerShare, Equity2.mmVotingRightsPerShare);
-			elementContext_lazy = () -> Equity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VotingRightsPerShare";
@@ -415,6 +448,14 @@ public class Equity extends Security {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Equity.class.getMethod("getVotingRightsPerShare", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -427,8 +468,14 @@ public class Equity extends Security {
 				definition = "Financial instrument that represents a title of ownership in a company. That is, the shareholder is entitled to a part of the company's profit - usually by payment of a dividend - and to voting rights, if any. Each company issues generally different classes of shares, for example, ordinary or common shares, which have no guaranteed amount of dividend but carry voting rights, or preferred shares, which receive dividends before ordinary shares but have no voting right.";
 				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentProperties1Choice.mmEquity, FinancialInstrument28.mmEquity);
 				superType_lazy = () -> Security.mmObject();
-				element_lazy = () -> Arrays.asList(Equity.mmPreferenceToIncome, Equity.mmConvertibleIndicator, Equity.mmNonPaidAmount, Equity.mmParValue, Equity.mmVotingRightsPerShare);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Equity.mmPreferenceToIncome, com.tools20022.repository.entity.Equity.mmConvertibleIndicator, com.tools20022.repository.entity.Equity.mmNonPaidAmount,
+						com.tools20022.repository.entity.Equity.mmParValue, com.tools20022.repository.entity.Equity.mmVotingRightsPerShare);
 				derivationComponent_lazy = () -> Arrays.asList(Equity1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Equity.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * ATM information.
@@ -95,6 +99,8 @@ import java.util.List;
  * AutomatedTellerMachine4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AutomatedTellerMachine5", propOrder = {"identification", "additionalIdentification", "sequenceNumber", "baseCurrency", "location", "locationCategory", "equipment", "outOfServiceDevice", "messageProtection"})
 public class AutomatedTellerMachine5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -600,6 +606,7 @@ public class AutomatedTellerMachine5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -608,6 +615,7 @@ public class AutomatedTellerMachine5 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AddtlId")
 	public Max35Text getAdditionalIdentification() {
 		return additionalIdentification;
 	}
@@ -616,6 +624,7 @@ public class AutomatedTellerMachine5 {
 		this.additionalIdentification = additionalIdentification;
 	}
 
+	@XmlElement(name = "SeqNb")
 	public Max35Text getSequenceNumber() {
 		return sequenceNumber;
 	}
@@ -624,6 +633,7 @@ public class AutomatedTellerMachine5 {
 		this.sequenceNumber = sequenceNumber;
 	}
 
+	@XmlElement(name = "BaseCcy", required = true)
 	public ActiveCurrencyCode getBaseCurrency() {
 		return baseCurrency;
 	}
@@ -632,6 +642,7 @@ public class AutomatedTellerMachine5 {
 		this.baseCurrency = baseCurrency;
 	}
 
+	@XmlElement(name = "Lctn")
 	public PostalAddress17 getLocation() {
 		return location;
 	}
@@ -640,6 +651,7 @@ public class AutomatedTellerMachine5 {
 		this.location = location;
 	}
 
+	@XmlElement(name = "LctnCtgy")
 	public TransactionEnvironment2Code getLocationCategory() {
 		return locationCategory;
 	}
@@ -648,6 +660,7 @@ public class AutomatedTellerMachine5 {
 		this.locationCategory = locationCategory;
 	}
 
+	@XmlElement(name = "Eqpmnt")
 	public ATMEquipment1 getEquipment() {
 		return equipment;
 	}
@@ -656,6 +669,7 @@ public class AutomatedTellerMachine5 {
 		this.equipment = equipment;
 	}
 
+	@XmlElement(name = "OutOfSvcDvc")
 	public List<ATMDevice2Code> getOutOfServiceDevice() {
 		return outOfServiceDevice;
 	}
@@ -664,6 +678,7 @@ public class AutomatedTellerMachine5 {
 		this.outOfServiceDevice = outOfServiceDevice;
 	}
 
+	@XmlElement(name = "MsgPrtcn")
 	public MessageProtection1Code getMessageProtection() {
 		return messageProtection;
 	}

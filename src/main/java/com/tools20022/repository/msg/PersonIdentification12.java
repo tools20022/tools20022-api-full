@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PersonIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the identification of a person.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyIdentification76}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PersonIdentification12", propOrder = {"countryOfBranch", "other"})
 public class PersonIdentification12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class PersonIdentification12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CtryOfBrnch", required = true)
 	public CountryCode getCountryOfBranch() {
 		return countryOfBranch;
 	}
@@ -204,6 +211,7 @@ public class PersonIdentification12 {
 		this.countryOfBranch = countryOfBranch;
 	}
 
+	@XmlElement(name = "Othr", required = true)
 	public GenericPersonIdentification1 getOther() {
 		return other;
 	}

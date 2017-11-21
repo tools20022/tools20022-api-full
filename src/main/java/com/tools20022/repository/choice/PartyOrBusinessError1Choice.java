@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.SystemParty3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Report between the party reference data or a business error.
@@ -59,6 +63,8 @@ import java.util.List;
  * definition} = "Report between the party reference data or a business error."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyOrBusinessError1Choice", propOrder = {"businessError", "systemParty"})
 public class PartyOrBusinessError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -157,6 +163,7 @@ public class PartyOrBusinessError1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling3> getBusinessError() {
 		return businessError;
 	}
@@ -165,6 +172,7 @@ public class PartyOrBusinessError1Choice {
 		this.businessError = businessError;
 	}
 
+	@XmlElement(name = "SysPty", required = true)
 	public SystemParty3 getSystemParty() {
 		return systemParty;
 	}

@@ -36,6 +36,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information about the delivery details, beneficial owner
@@ -105,6 +109,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionAdditionalInformation1", propOrder = {"beneficialOwnerDetails", "registrationDetails", "receiverIdentification", "certificationIndicator", "certificationType", "deliveryDetails", "additionalInstruction"})
 public class CorporateActionAdditionalInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -463,6 +469,7 @@ public class CorporateActionAdditionalInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BnfclOwnrDtls")
 	public List<BeneficialOwner1> getBeneficialOwnerDetails() {
 		return beneficialOwnerDetails;
 	}
@@ -471,6 +478,7 @@ public class CorporateActionAdditionalInformation1 {
 		this.beneficialOwnerDetails = beneficialOwnerDetails;
 	}
 
+	@XmlElement(name = "RegnDtls")
 	public Max350Text getRegistrationDetails() {
 		return registrationDetails;
 	}
@@ -479,6 +487,7 @@ public class CorporateActionAdditionalInformation1 {
 		this.registrationDetails = registrationDetails;
 	}
 
+	@XmlElement(name = "RcvrId")
 	public PartyIdentification2Choice getReceiverIdentification() {
 		return receiverIdentification;
 	}
@@ -487,6 +496,7 @@ public class CorporateActionAdditionalInformation1 {
 		this.receiverIdentification = receiverIdentification;
 	}
 
+	@XmlElement(name = "CertfctnInd")
 	public YesNoIndicator getCertificationIndicator() {
 		return certificationIndicator;
 	}
@@ -495,6 +505,7 @@ public class CorporateActionAdditionalInformation1 {
 		this.certificationIndicator = certificationIndicator;
 	}
 
+	@XmlElement(name = "CertfctnTp")
 	public BeneficiaryCertificationType1FormatChoice getCertificationType() {
 		return certificationType;
 	}
@@ -503,6 +514,7 @@ public class CorporateActionAdditionalInformation1 {
 		this.certificationType = certificationType;
 	}
 
+	@XmlElement(name = "DlvryDtls")
 	public List<ProceedsDelivery1> getDeliveryDetails() {
 		return deliveryDetails;
 	}
@@ -511,6 +523,7 @@ public class CorporateActionAdditionalInformation1 {
 		this.deliveryDetails = deliveryDetails;
 	}
 
+	@XmlElement(name = "AddtlInstr")
 	public Max350Text getAdditionalInstruction() {
 		return additionalInstruction;
 	}

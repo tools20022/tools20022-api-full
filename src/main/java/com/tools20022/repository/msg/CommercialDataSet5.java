@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Goods or services that are part of a commercial trade agreement.
@@ -97,6 +101,8 @@ import java.util.List;
  * CommercialDataSet4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CommercialDataSet5", propOrder = {"dataSetIdentification", "commercialDocumentReference", "buyer", "seller", "billTo", "goods", "paymentTerms", "settlementTerms"})
 public class CommercialDataSet5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -535,6 +541,7 @@ public class CommercialDataSet5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DataSetId", required = true)
 	public DocumentIdentification1 getDataSetIdentification() {
 		return dataSetIdentification;
 	}
@@ -543,6 +550,7 @@ public class CommercialDataSet5 {
 		this.dataSetIdentification = dataSetIdentification;
 	}
 
+	@XmlElement(name = "ComrclDocRef", required = true)
 	public InvoiceIdentification1 getCommercialDocumentReference() {
 		return commercialDocumentReference;
 	}
@@ -551,6 +559,7 @@ public class CommercialDataSet5 {
 		this.commercialDocumentReference = commercialDocumentReference;
 	}
 
+	@XmlElement(name = "Buyr", required = true)
 	public PartyIdentification26 getBuyer() {
 		return buyer;
 	}
@@ -559,6 +568,7 @@ public class CommercialDataSet5 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Sellr", required = true)
 	public PartyIdentification26 getSeller() {
 		return seller;
 	}
@@ -567,6 +577,7 @@ public class CommercialDataSet5 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "BllTo")
 	public PartyIdentification26 getBillTo() {
 		return billTo;
 	}
@@ -575,6 +586,7 @@ public class CommercialDataSet5 {
 		this.billTo = billTo;
 	}
 
+	@XmlElement(name = "Goods", required = true)
 	public List<LineItem15> getGoods() {
 		return goods;
 	}
@@ -583,6 +595,7 @@ public class CommercialDataSet5 {
 		this.goods = goods;
 	}
 
+	@XmlElement(name = "PmtTerms", required = true)
 	public List<PaymentTerms4> getPaymentTerms() {
 		return paymentTerms;
 	}
@@ -591,6 +604,7 @@ public class CommercialDataSet5 {
 		this.paymentTerms = paymentTerms;
 	}
 
+	@XmlElement(name = "SttlmTerms", required = true)
 	public SettlementTerms3 getSettlementTerms() {
 		return settlementTerms;
 	}

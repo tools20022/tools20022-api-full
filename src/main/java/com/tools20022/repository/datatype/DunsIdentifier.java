@@ -32,6 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} = "Dun &amp; Bradstreet; DunsIdentifier"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[0-9]{9,9}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -68,6 +70,7 @@ public class DunsIdentifier {
 				name = "DunsIdentifier";
 				definition = "Data Universal Numbering System. A unique identification number provided by Dun & Bradstreet to identify an organization.";
 				identificationScheme = "Dun & Bradstreet; DunsIdentifier";
+				pattern = "[0-9]{9,9}";
 			}
 		});
 		return mmObject_lazy.get();

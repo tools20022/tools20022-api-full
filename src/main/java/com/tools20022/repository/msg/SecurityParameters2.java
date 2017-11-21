@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Point of interaction parameters related to the security of software
@@ -75,6 +79,8 @@ import java.util.List;
  * SecurityParameters1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityParameters2", propOrder = {"POIChallenge", "TMChallenge", "symmetricKey"})
 public class SecurityParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -269,6 +275,7 @@ public class SecurityParameters2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "POIChllng")
 	public Max140Binary getPOIChallenge() {
 		return pOIChallenge;
 	}
@@ -277,6 +284,7 @@ public class SecurityParameters2 {
 		this.pOIChallenge = pOIChallenge;
 	}
 
+	@XmlElement(name = "TMChllng")
 	public Max140Binary getTMChallenge() {
 		return tMChallenge;
 	}
@@ -285,6 +293,7 @@ public class SecurityParameters2 {
 		this.tMChallenge = tMChallenge;
 	}
 
+	@XmlElement(name = "SmmtrcKey")
 	public List<CryptographicKey4> getSymmetricKey() {
 		return symmetricKey;
 	}

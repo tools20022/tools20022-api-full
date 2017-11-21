@@ -36,27 +36,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmReconciliation
- * Account.mmReconciliation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmReconciliation
- * Trade.mmReconciliation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmReconciliation
- * Document.mmReconciliation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmReconciliation
- * System.mmReconciliation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ReconciliationTransaction
- * ReconciliationTransaction}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -69,6 +48,27 @@ import java.util.List;
  * Reconciliation.mmReconciledTrades}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Reconciliation#mmAccount
  * Reconciliation.mmAccount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ReconciliationTransaction
+ * ReconciliationTransaction}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmReconciliation
+ * Account.mmReconciliation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmReconciliation
+ * Trade.mmReconciliation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmReconciliation
+ * Document.mmReconciliation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmReconciliation
+ * System.mmReconciliation}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,7 +125,7 @@ public class Reconciliation {
 	 */
 	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Reconciliation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reconciliation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
@@ -171,7 +171,7 @@ public class Reconciliation {
 	 */
 	public static final MMBusinessAssociationEnd mmDocument = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Reconciliation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reconciliation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Document";
@@ -218,7 +218,7 @@ public class Reconciliation {
 	 */
 	public static final MMBusinessAssociationEnd mmReconciledTrades = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Reconciliation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reconciliation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReconciledTrades";
@@ -247,11 +247,6 @@ public class Reconciliation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Reconciliation
-	 * Reconciliation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -260,6 +255,11 @@ public class Reconciliation {
 	 * TransactionCertificate1.mmAccount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Reconciliation
+	 * Reconciliation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -274,7 +274,7 @@ public class Reconciliation {
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionCertificate1.mmAccount);
-			elementContext_lazy = () -> Reconciliation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reconciliation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
@@ -297,7 +297,13 @@ public class Reconciliation {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmReconciliation, com.tools20022.repository.entity.Trade.mmReconciliation, com.tools20022.repository.entity.Document.mmReconciliation,
 						com.tools20022.repository.entity.System.mmReconciliation);
 				subType_lazy = () -> Arrays.asList(ReconciliationTransaction.mmObject());
-				element_lazy = () -> Arrays.asList(Reconciliation.mmSystem, Reconciliation.mmDocument, Reconciliation.mmReconciledTrades, Reconciliation.mmAccount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Reconciliation.mmSystem, com.tools20022.repository.entity.Reconciliation.mmDocument, com.tools20022.repository.entity.Reconciliation.mmReconciledTrades,
+						com.tools20022.repository.entity.Reconciliation.mmAccount);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Reconciliation.class;
 			}
 		});
 		return mmObject_lazy.get();

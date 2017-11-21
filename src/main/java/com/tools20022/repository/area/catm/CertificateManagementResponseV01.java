@@ -28,8 +28,10 @@ import com.tools20022.repository.msg.Header29;
 import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20152016;
 import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017;
 import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The CertificateManagementResponse is sent by a terminal manager in response
@@ -38,9 +40,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catm.008.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
@@ -79,6 +78,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catm.008.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -90,6 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CertificateManagementResponseV01", propOrder = {"header", "certificateManagementResponse", "securityTrailer"})
 public class CertificateManagementResponseV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -125,6 +129,14 @@ public class CertificateManagementResponseV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header29.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CertificateManagementResponseV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CertificateManagementResponse1 certificateManagementResponse;
@@ -163,6 +175,14 @@ public class CertificateManagementResponseV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CertificateManagementResponse1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CertificateManagementResponseV01.class.getMethod("getCertificateManagementResponse", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType13 securityTrailer;
 	/**
@@ -199,6 +219,14 @@ public class CertificateManagementResponseV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType13.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CertificateManagementResponseV01.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -211,7 +239,8 @@ public class CertificateManagementResponseV01 {
 				rootElement = "Document";
 				xmlTag = "CertMgmtRspn";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CertificateManagementResponseV01.mmHeader, CertificateManagementResponseV01.mmCertificateManagementResponse, CertificateManagementResponseV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.CertificateManagementResponseV01.mmHeader,
+						com.tools20022.repository.area.catm.CertificateManagementResponseV01.mmCertificateManagementResponse, com.tools20022.repository.area.catm.CertificateManagementResponseV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catm";
@@ -221,10 +250,16 @@ public class CertificateManagementResponseV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CertificateManagementResponseV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header29 getHeader() {
 		return header;
 	}
@@ -233,6 +268,7 @@ public class CertificateManagementResponseV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "CertMgmtRspn", required = true)
 	public CertificateManagementResponse1 getCertificateManagementResponse() {
 		return certificateManagementResponse;
 	}
@@ -241,11 +277,18 @@ public class CertificateManagementResponseV01 {
 		this.certificateManagementResponse = certificateManagementResponse;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType13 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType13 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catm.008.01.01")
+	static public class Document {
+		@XmlElement(name = "CertMgmtRspn", required = true)
+		public CertificateManagementResponseV01 messageBody;
 	}
 }

@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.IndependentAmount1;
 import com.tools20022.repository.msg.IndependentAmount2;
 import com.tools20022.repository.msg.Margin1;
 import com.tools20022.repository.msg.SegregatedIndependentAmountMargin1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -41,6 +42,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IndependentAmountTerm#mmConvention
+ * IndependentAmountTerm.mmConvention}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.ExposureTerm
+ * ExposureTerm}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -60,17 +72,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.MarginTerms1Choice#mmSegregatedIndependentAmountMargin
  * MarginTerms1Choice.mmSegregatedIndependentAmountMargin}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.ExposureTerm
- * ExposureTerm}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IndependentAmountTerm#mmConvention
- * IndependentAmountTerm.mmConvention}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,11 +111,6 @@ public class IndependentAmountTerm extends ExposureTerm {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.IndependentAmountConventionTypeCode
 	 * IndependentAmountConventionTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.IndependentAmountTerm
-	 * IndependentAmountTerm}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -126,6 +122,11 @@ public class IndependentAmountTerm extends ExposureTerm {
 	 * IndependentAmount2.mmConvention}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.IndependentAmountTerm
+	 * IndependentAmountTerm}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -142,7 +143,7 @@ public class IndependentAmountTerm extends ExposureTerm {
 	public static final MMBusinessAttribute mmConvention = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndependentAmount1.mmConvention, IndependentAmount2.mmConvention);
-			elementContext_lazy = () -> IndependentAmountTerm.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IndependentAmountTerm.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Convention";
@@ -150,6 +151,14 @@ public class IndependentAmountTerm extends ExposureTerm {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IndependentAmountConventionTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IndependentAmountTerm.class.getMethod("getConvention", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -162,8 +171,13 @@ public class IndependentAmountTerm extends ExposureTerm {
 				definition = "Defines the specific terms used to calculate an independent amount.";
 				derivationElement_lazy = () -> Arrays.asList(Margin1.mmSegregatedIndependentAmountMargin, MarginTerms1Choice.mmSegregatedIndependentAmountMargin);
 				superType_lazy = () -> ExposureTerm.mmObject();
-				element_lazy = () -> Arrays.asList(IndependentAmountTerm.mmConvention);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IndependentAmountTerm.mmConvention);
 				derivationComponent_lazy = () -> Arrays.asList(SegregatedIndependentAmountMargin1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IndependentAmountTerm.class;
 			}
 		});
 		return mmObject_lazy.get();

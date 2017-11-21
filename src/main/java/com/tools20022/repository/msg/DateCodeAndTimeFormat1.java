@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.ISOTime;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies a date code and a time.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DateCodeAndTimeFormat1", propOrder = {"dateCode", "time"})
 public class DateCodeAndTimeFormat1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class DateCodeAndTimeFormat1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtCd", required = true)
 	public DateCode4Choice getDateCode() {
 		return dateCode;
 	}
@@ -191,6 +198,7 @@ public class DateCodeAndTimeFormat1 {
 		this.dateCode = dateCode;
 	}
 
+	@XmlElement(name = "Tm", required = true)
 	public ISOTime getTime() {
 		return time;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Intention to transfer an ownership of a financial instrument.
@@ -109,6 +113,10 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Order11", propOrder = {"clientOrderIdentification", "secondaryClientOrderIdentification", "clientOrderLinkIdentification", "side", "complianceIdentification", "placeOfExecution", "financialInstrument",
+		"financialInstrumentAttributes", "stipulations", "underlyingFinancialInstrument", "underlyingFinancialInstrumentAttributes", "underlyingStipulations", "quantityDetails", "twoLegTransactionDetails", "tradingParties", "cashParties",
+		"receivingSettlementParties", "deliveringSettlementParties", "otherBusinessParties", "amountsDetails"})
 public class Order11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1082,6 +1090,7 @@ public class Order11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClntOrdrId", required = true)
 	public Max35Text getClientOrderIdentification() {
 		return clientOrderIdentification;
 	}
@@ -1090,6 +1099,7 @@ public class Order11 {
 		this.clientOrderIdentification = clientOrderIdentification;
 	}
 
+	@XmlElement(name = "ScndryClntOrdrId")
 	public Max35Text getSecondaryClientOrderIdentification() {
 		return secondaryClientOrderIdentification;
 	}
@@ -1098,6 +1108,7 @@ public class Order11 {
 		this.secondaryClientOrderIdentification = secondaryClientOrderIdentification;
 	}
 
+	@XmlElement(name = "ClntOrdrLkId")
 	public Max35Text getClientOrderLinkIdentification() {
 		return clientOrderLinkIdentification;
 	}
@@ -1106,6 +1117,7 @@ public class Order11 {
 		this.clientOrderLinkIdentification = clientOrderLinkIdentification;
 	}
 
+	@XmlElement(name = "Sd", required = true)
 	public Side1Code getSide() {
 		return side;
 	}
@@ -1114,6 +1126,7 @@ public class Order11 {
 		this.side = side;
 	}
 
+	@XmlElement(name = "CmplcId")
 	public Max35Text getComplianceIdentification() {
 		return complianceIdentification;
 	}
@@ -1122,6 +1135,7 @@ public class Order11 {
 		this.complianceIdentification = complianceIdentification;
 	}
 
+	@XmlElement(name = "PlcOfExctn")
 	public MarketIdentification1 getPlaceOfExecution() {
 		return placeOfExecution;
 	}
@@ -1130,6 +1144,7 @@ public class Order11 {
 		this.placeOfExecution = placeOfExecution;
 	}
 
+	@XmlElement(name = "FinInstrm", required = true)
 	public SecurityIdentification7 getFinancialInstrument() {
 		return financialInstrument;
 	}
@@ -1138,6 +1153,7 @@ public class Order11 {
 		this.financialInstrument = financialInstrument;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public FinancialInstrumentAttributes1 getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -1146,6 +1162,7 @@ public class Order11 {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "Stiptns")
 	public FinancialInstrumentStipulations getStipulations() {
 		return stipulations;
 	}
@@ -1154,6 +1171,7 @@ public class Order11 {
 		this.stipulations = stipulations;
 	}
 
+	@XmlElement(name = "UndrlygFinInstrm")
 	public List<SecurityIdentification7> getUnderlyingFinancialInstrument() {
 		return underlyingFinancialInstrument;
 	}
@@ -1162,6 +1180,7 @@ public class Order11 {
 		this.underlyingFinancialInstrument = underlyingFinancialInstrument;
 	}
 
+	@XmlElement(name = "UndrlygFinInstrmAttrbts")
 	public List<FinancialInstrumentAttributes1> getUnderlyingFinancialInstrumentAttributes() {
 		return underlyingFinancialInstrumentAttributes;
 	}
@@ -1170,6 +1189,7 @@ public class Order11 {
 		this.underlyingFinancialInstrumentAttributes = underlyingFinancialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "UndrlygStiptns")
 	public List<FinancialInstrumentStipulations> getUnderlyingStipulations() {
 		return underlyingStipulations;
 	}
@@ -1178,6 +1198,7 @@ public class Order11 {
 		this.underlyingStipulations = underlyingStipulations;
 	}
 
+	@XmlElement(name = "QtyDtls", required = true)
 	public OrderQuantity1 getQuantityDetails() {
 		return quantityDetails;
 	}
@@ -1186,6 +1207,7 @@ public class Order11 {
 		this.quantityDetails = quantityDetails;
 	}
 
+	@XmlElement(name = "TwoLegTxDtls")
 	public SecuritiesFinancing1 getTwoLegTransactionDetails() {
 		return twoLegTransactionDetails;
 	}
@@ -1194,6 +1216,7 @@ public class Order11 {
 		this.twoLegTransactionDetails = twoLegTransactionDetails;
 	}
 
+	@XmlElement(name = "TradgPties")
 	public List<Intermediary14> getTradingParties() {
 		return tradingParties;
 	}
@@ -1202,6 +1225,7 @@ public class Order11 {
 		this.tradingParties = tradingParties;
 	}
 
+	@XmlElement(name = "CshPties")
 	public CashParties1 getCashParties() {
 		return cashParties;
 	}
@@ -1210,6 +1234,7 @@ public class Order11 {
 		this.cashParties = cashParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties3 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -1218,6 +1243,7 @@ public class Order11 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties3 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -1226,6 +1252,7 @@ public class Order11 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "OthrBizPties")
 	public OtherParties1 getOtherBusinessParties() {
 		return otherBusinessParties;
 	}
@@ -1234,6 +1261,7 @@ public class Order11 {
 		this.otherBusinessParties = otherBusinessParties;
 	}
 
+	@XmlElement(name = "AmtsDtls")
 	public List<OtherAmounts1> getAmountsDetails() {
 		return amountsDetails;
 	}

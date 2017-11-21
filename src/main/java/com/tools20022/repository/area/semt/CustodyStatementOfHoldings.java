@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -68,9 +70,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.002.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
@@ -121,6 +120,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.002.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -140,6 +142,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "semt.002.001.01", propOrder = {"previousReference", "relatedReference", "messagePagination", "statementGeneralDetails", "accountDetails", "balanceForAccount", "subAccountDetails", "totalValues", "extension"})
 public class CustodyStatementOfHoldings {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +180,14 @@ public class CustodyStatementOfHoldings {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustodyStatementOfHoldings.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference2> relatedReference;
 	/**
@@ -211,6 +223,14 @@ public class CustodyStatementOfHoldings {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustodyStatementOfHoldings.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Pagination messagePagination;
 	/**
@@ -244,6 +264,14 @@ public class CustodyStatementOfHoldings {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustodyStatementOfHoldings.class.getMethod("getMessagePagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Statement3 statementGeneralDetails;
@@ -280,6 +308,14 @@ public class CustodyStatementOfHoldings {
 			minOccurs = 1;
 			complexType_lazy = () -> Statement3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustodyStatementOfHoldings.class.getMethod("getStatementGeneralDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SafekeepingAccount1 accountDetails;
 	/**
@@ -314,6 +350,14 @@ public class CustodyStatementOfHoldings {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SafekeepingAccount1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustodyStatementOfHoldings.class.getMethod("getAccountDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<AggregateBalanceInformation1> balanceForAccount;
@@ -352,6 +396,14 @@ public class CustodyStatementOfHoldings {
 			minOccurs = 0;
 			complexType_lazy = () -> AggregateBalanceInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustodyStatementOfHoldings.class.getMethod("getBalanceForAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SubAccountIdentification1> subAccountDetails;
 	/**
@@ -387,6 +439,14 @@ public class CustodyStatementOfHoldings {
 			minOccurs = 0;
 			complexType_lazy = () -> SubAccountIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustodyStatementOfHoldings.class.getMethod("getSubAccountDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TotalValueInPageAndStatement totalValues;
 	/**
@@ -421,6 +481,14 @@ public class CustodyStatementOfHoldings {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TotalValueInPageAndStatement.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustodyStatementOfHoldings.class.getMethod("getTotalValues", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -458,6 +526,14 @@ public class CustodyStatementOfHoldings {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustodyStatementOfHoldings.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -472,9 +548,11 @@ public class CustodyStatementOfHoldings {
 				xmlTag = "semt.002.001.01";
 				businessArea_lazy = () -> SecuritiesManagementArchive.mmObject();
 				xmlName = "semt.002.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(CustodyStatementOfHoldings.mmPreviousReference, CustodyStatementOfHoldings.mmRelatedReference, CustodyStatementOfHoldings.mmMessagePagination,
-						CustodyStatementOfHoldings.mmStatementGeneralDetails, CustodyStatementOfHoldings.mmAccountDetails, CustodyStatementOfHoldings.mmBalanceForAccount, CustodyStatementOfHoldings.mmSubAccountDetails,
-						CustodyStatementOfHoldings.mmTotalValues, CustodyStatementOfHoldings.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmPreviousReference, com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmRelatedReference,
+						com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmMessagePagination, com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmStatementGeneralDetails,
+						com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmAccountDetails, com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmBalanceForAccount,
+						com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmSubAccountDetails, com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmTotalValues,
+						com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -484,10 +562,16 @@ public class CustodyStatementOfHoldings {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CustodyStatementOfHoldings.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference2> getPreviousReference() {
 		return previousReference;
 	}
@@ -496,6 +580,7 @@ public class CustodyStatementOfHoldings {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public List<AdditionalReference2> getRelatedReference() {
 		return relatedReference;
 	}
@@ -504,6 +589,7 @@ public class CustodyStatementOfHoldings {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "MsgPgntn", required = true)
 	public Pagination getMessagePagination() {
 		return messagePagination;
 	}
@@ -512,6 +598,7 @@ public class CustodyStatementOfHoldings {
 		this.messagePagination = messagePagination;
 	}
 
+	@XmlElement(name = "StmtGnlDtls", required = true)
 	public Statement3 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
@@ -520,6 +607,7 @@ public class CustodyStatementOfHoldings {
 		this.statementGeneralDetails = statementGeneralDetails;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public SafekeepingAccount1 getAccountDetails() {
 		return accountDetails;
 	}
@@ -528,6 +616,7 @@ public class CustodyStatementOfHoldings {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "BalForAcct")
 	public List<AggregateBalanceInformation1> getBalanceForAccount() {
 		return balanceForAccount;
 	}
@@ -536,6 +625,7 @@ public class CustodyStatementOfHoldings {
 		this.balanceForAccount = balanceForAccount;
 	}
 
+	@XmlElement(name = "SubAcctDtls")
 	public List<SubAccountIdentification1> getSubAccountDetails() {
 		return subAccountDetails;
 	}
@@ -544,6 +634,7 @@ public class CustodyStatementOfHoldings {
 		this.subAccountDetails = subAccountDetails;
 	}
 
+	@XmlElement(name = "TtlVals")
 	public TotalValueInPageAndStatement getTotalValues() {
 		return totalValues;
 	}
@@ -552,11 +643,18 @@ public class CustodyStatementOfHoldings {
 		this.totalValues = totalValues;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.002.01.01")
+	static public class Document {
+		@XmlElement(name = "semt.002.001.01", required = true)
+		public CustodyStatementOfHoldings messageBody;
 	}
 }

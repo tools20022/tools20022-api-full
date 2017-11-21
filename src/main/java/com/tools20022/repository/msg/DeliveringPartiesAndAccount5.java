@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesSettlementSystem;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Chain of parties involved in the settlement of a transaction, including
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DeliveringPartiesAndAccount5", propOrder = {"deliveringAgent", "depository", "securitiesSettlementSystem"})
 public class DeliveringPartiesAndAccount5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -238,6 +244,7 @@ public class DeliveringPartiesAndAccount5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DlvrgAgt", required = true)
 	public PartyIdentificationAndAccount32 getDeliveringAgent() {
 		return deliveringAgent;
 	}
@@ -246,6 +253,7 @@ public class DeliveringPartiesAndAccount5 {
 		this.deliveringAgent = deliveringAgent;
 	}
 
+	@XmlElement(name = "Dpstry", required = true)
 	public PartyIdentification34Choice getDepository() {
 		return depository;
 	}
@@ -254,6 +262,7 @@ public class DeliveringPartiesAndAccount5 {
 		this.depository = depository;
 	}
 
+	@XmlElement(name = "SctiesSttlmSys")
 	public Max35Text getSecuritiesSettlementSystem() {
 		return securitiesSettlementSystem;
 	}

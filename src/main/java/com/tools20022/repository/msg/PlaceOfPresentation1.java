@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.UndertakingDeliveryToParty;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Location of a presentation.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Location of a presentation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PlaceOfPresentation1", propOrder = {"place", "country"})
 public class PlaceOfPresentation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class PlaceOfPresentation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Plc", required = true)
 	public ExternalTypeOfParty1Code getPlace() {
 		return place;
 	}
@@ -184,6 +191,7 @@ public class PlaceOfPresentation1 {
 		this.place = place;
 	}
 
+	@XmlElement(name = "Ctry")
 	public CountryCode getCountry() {
 		return country;
 	}

@@ -29,23 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ProcessedStatus2Code
- * ProcessedStatus2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code
- * ProcessedStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProcessedStatus3Code
- * ProcessedStatus3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProcessedStatus5Code
- * ProcessedStatus5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProcessedStatus4Code
- * ProcessedStatus4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProcessedStatus6Code
- * ProcessedStatus6Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -69,6 +52,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode#mmAcceptedWithWarning
  * CorporateActionProcessedStatusCode.mmAcceptedWithWarning}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProcessedStatus2Code
+ * ProcessedStatus2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code
+ * ProcessedStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProcessedStatus3Code
+ * ProcessedStatus3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProcessedStatus5Code
+ * ProcessedStatus5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProcessedStatus4Code
+ * ProcessedStatus4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProcessedStatus6Code
+ * ProcessedStatus6Code}</li>
  * </ul>
  * </li>
  * <li>

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between channel mode and terminal identification.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between channel mode and terminal identification."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CommunicationChannel1Choice", propOrder = {"channelMode", "terminalIdentification"})
 public class CommunicationChannel1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class CommunicationChannel1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ChanlMd", required = true)
 	public Exact1NumericText getChannelMode() {
 		return channelMode;
 	}
@@ -166,6 +173,7 @@ public class CommunicationChannel1Choice {
 		this.channelMode = channelMode;
 	}
 
+	@XmlElement(name = "TermnlId", required = true)
 	public Max35Text getTerminalIdentification() {
 		return terminalIdentification;
 	}

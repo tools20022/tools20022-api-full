@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information from the National BIC Directory.
@@ -89,6 +93,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information from the National BIC Directory."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DirectoryParticipantInformation1", propOrder = {"participantNameAndAddress", "accountServicer", "directParticipant", "entryCreationDate", "entryDeletionDate", "servicerType", "serviceType", "exchangeType",
+		"restrictionType", "restrictionEffectiveDate", "participantIdentification", "migrationDetails"})
 public class DirectoryParticipantInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -607,6 +614,7 @@ public class DirectoryParticipantInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtcptNmAndAdr")
 	public EnglishNameLocalNameAndAddress1 getParticipantNameAndAddress() {
 		return participantNameAndAddress;
 	}
@@ -615,6 +623,7 @@ public class DirectoryParticipantInformation1 {
 		this.participantNameAndAddress = participantNameAndAddress;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
 		return accountServicer;
 	}
@@ -623,6 +632,7 @@ public class DirectoryParticipantInformation1 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "DrctPtcpt")
 	public FinancialInstitutionIdentification9 getDirectParticipant() {
 		return directParticipant;
 	}
@@ -631,6 +641,7 @@ public class DirectoryParticipantInformation1 {
 		this.directParticipant = directParticipant;
 	}
 
+	@XmlElement(name = "NtryCreDt", required = true)
 	public ISODateTime getEntryCreationDate() {
 		return entryCreationDate;
 	}
@@ -639,6 +650,7 @@ public class DirectoryParticipantInformation1 {
 		this.entryCreationDate = entryCreationDate;
 	}
 
+	@XmlElement(name = "NtryDeltnDt")
 	public ISODateTime getEntryDeletionDate() {
 		return entryDeletionDate;
 	}
@@ -647,6 +659,7 @@ public class DirectoryParticipantInformation1 {
 		this.entryDeletionDate = entryDeletionDate;
 	}
 
+	@XmlElement(name = "SvcrTp", required = true)
 	public Max35Text getServicerType() {
 		return servicerType;
 	}
@@ -655,6 +668,7 @@ public class DirectoryParticipantInformation1 {
 		this.servicerType = servicerType;
 	}
 
+	@XmlElement(name = "SvcTp", required = true)
 	public Max35Text getServiceType() {
 		return serviceType;
 	}
@@ -663,6 +677,7 @@ public class DirectoryParticipantInformation1 {
 		this.serviceType = serviceType;
 	}
 
+	@XmlElement(name = "XchgTp", required = true)
 	public Max35Text getExchangeType() {
 		return exchangeType;
 	}
@@ -671,6 +686,7 @@ public class DirectoryParticipantInformation1 {
 		this.exchangeType = exchangeType;
 	}
 
+	@XmlElement(name = "RstrctnTp", required = true)
 	public Max35Text getRestrictionType() {
 		return restrictionType;
 	}
@@ -679,6 +695,7 @@ public class DirectoryParticipantInformation1 {
 		this.restrictionType = restrictionType;
 	}
 
+	@XmlElement(name = "RstrctnFctvDt")
 	public ISODateTime getRestrictionEffectiveDate() {
 		return restrictionEffectiveDate;
 	}
@@ -687,6 +704,7 @@ public class DirectoryParticipantInformation1 {
 		this.restrictionEffectiveDate = restrictionEffectiveDate;
 	}
 
+	@XmlElement(name = "PtcptId", required = true)
 	public FinancialInstitutionIdentification9 getParticipantIdentification() {
 		return participantIdentification;
 	}
@@ -695,6 +713,7 @@ public class DirectoryParticipantInformation1 {
 		this.participantIdentification = participantIdentification;
 	}
 
+	@XmlElement(name = "MgrtnDtls", required = true)
 	public SystemMigration1 getMigrationDetails() {
 		return migrationDetails;
 	}

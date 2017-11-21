@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details about tax paid, or to be paid, to the government in accordance with
@@ -95,6 +99,8 @@ import java.util.List;
  * TaxInformation3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxInformation4", propOrder = {"creditor", "debtor", "ultimateDebtor", "administrationZone", "referenceNumber", "method", "totalTaxableBaseAmount", "totalTaxAmount", "date", "sequenceNumber", "record"})
 public class TaxInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -692,6 +698,7 @@ public class TaxInformation4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cdtr")
 	public TaxParty1 getCreditor() {
 		return creditor;
 	}
@@ -700,6 +707,7 @@ public class TaxInformation4 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "Dbtr")
 	public TaxParty2 getDebtor() {
 		return debtor;
 	}
@@ -708,6 +716,7 @@ public class TaxInformation4 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "UltmtDbtr")
 	public TaxParty2 getUltimateDebtor() {
 		return ultimateDebtor;
 	}
@@ -716,6 +725,7 @@ public class TaxInformation4 {
 		this.ultimateDebtor = ultimateDebtor;
 	}
 
+	@XmlElement(name = "AdmstnZone")
 	public Max35Text getAdministrationZone() {
 		return administrationZone;
 	}
@@ -724,6 +734,7 @@ public class TaxInformation4 {
 		this.administrationZone = administrationZone;
 	}
 
+	@XmlElement(name = "RefNb")
 	public Max140Text getReferenceNumber() {
 		return referenceNumber;
 	}
@@ -732,6 +743,7 @@ public class TaxInformation4 {
 		this.referenceNumber = referenceNumber;
 	}
 
+	@XmlElement(name = "Mtd")
 	public Max35Text getMethod() {
 		return method;
 	}
@@ -740,6 +752,7 @@ public class TaxInformation4 {
 		this.method = method;
 	}
 
+	@XmlElement(name = "TtlTaxblBaseAmt")
 	public ActiveOrHistoricCurrencyAndAmount getTotalTaxableBaseAmount() {
 		return totalTaxableBaseAmount;
 	}
@@ -748,6 +761,7 @@ public class TaxInformation4 {
 		this.totalTaxableBaseAmount = totalTaxableBaseAmount;
 	}
 
+	@XmlElement(name = "TtlTaxAmt")
 	public ActiveOrHistoricCurrencyAndAmount getTotalTaxAmount() {
 		return totalTaxAmount;
 	}
@@ -756,6 +770,7 @@ public class TaxInformation4 {
 		this.totalTaxAmount = totalTaxAmount;
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODate getDate() {
 		return date;
 	}
@@ -764,6 +779,7 @@ public class TaxInformation4 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "SeqNb")
 	public Number getSequenceNumber() {
 		return sequenceNumber;
 	}
@@ -772,6 +788,7 @@ public class TaxInformation4 {
 		this.sequenceNumber = sequenceNumber;
 	}
 
+	@XmlElement(name = "Rcrd")
 	public List<TaxRecord1> getRecord() {
 		return record;
 	}

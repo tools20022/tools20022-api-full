@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -56,9 +58,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.021.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
@@ -103,6 +102,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.021.001.06}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -118,6 +120,8 @@ import java.util.List;
  * SecuritiesStatementQueryV05}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesStatementQueryV06", propOrder = {"statementRequested", "statementGeneralDetails", "accountOwner", "safekeepingAccount", "additionalQueryParameters", "supplementaryData"})
 public class SecuritiesStatementQueryV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +165,14 @@ public class SecuritiesStatementQueryV06 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentNumber13.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatementQueryV06.class.getMethod("getStatementRequested", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Statement42 statementGeneralDetails;
 	/**
@@ -200,6 +212,14 @@ public class SecuritiesStatementQueryV06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Statement42.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatementQueryV06.class.getMethod("getStatementGeneralDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification98 accountOwner;
@@ -242,6 +262,14 @@ public class SecuritiesStatementQueryV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification98.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatementQueryV06.class.getMethod("getAccountOwner", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesAccount24 safekeepingAccount;
 	/**
@@ -283,6 +311,14 @@ public class SecuritiesStatementQueryV06 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount24.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatementQueryV06.class.getMethod("getSafekeepingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalQueryParameters11> additionalQueryParameters;
 	/**
@@ -322,6 +358,14 @@ public class SecuritiesStatementQueryV06 {
 			previousVersion_lazy = () -> SecuritiesStatementQueryV05.mmAdditionalQueryParameters;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalQueryParameters11.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatementQueryV06.class.getMethod("getAdditionalQueryParameters", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -366,6 +410,14 @@ public class SecuritiesStatementQueryV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesStatementQueryV06.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -379,8 +431,10 @@ public class SecuritiesStatementQueryV06 {
 				rootElement = "Document";
 				xmlTag = "SctiesStmtQry";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesStatementQueryV06.mmStatementRequested, SecuritiesStatementQueryV06.mmStatementGeneralDetails, SecuritiesStatementQueryV06.mmAccountOwner,
-						SecuritiesStatementQueryV06.mmSafekeepingAccount, SecuritiesStatementQueryV06.mmAdditionalQueryParameters, SecuritiesStatementQueryV06.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV06.mmStatementRequested,
+						com.tools20022.repository.area.semt.SecuritiesStatementQueryV06.mmStatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesStatementQueryV06.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesStatementQueryV06.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesStatementQueryV06.mmAdditionalQueryParameters,
+						com.tools20022.repository.area.semt.SecuritiesStatementQueryV06.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -390,10 +444,16 @@ public class SecuritiesStatementQueryV06 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesStatementQueryV06.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtReqd", required = true)
 	public DocumentNumber13 getStatementRequested() {
 		return statementRequested;
 	}
@@ -402,6 +462,7 @@ public class SecuritiesStatementQueryV06 {
 		this.statementRequested = statementRequested;
 	}
 
+	@XmlElement(name = "StmtGnlDtls")
 	public Statement42 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
@@ -410,6 +471,7 @@ public class SecuritiesStatementQueryV06 {
 		this.statementGeneralDetails = statementGeneralDetails;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification98 getAccountOwner() {
 		return accountOwner;
 	}
@@ -418,6 +480,7 @@ public class SecuritiesStatementQueryV06 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount24 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -426,6 +489,7 @@ public class SecuritiesStatementQueryV06 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "AddtlQryParams")
 	public List<AdditionalQueryParameters11> getAdditionalQueryParameters() {
 		return additionalQueryParameters;
 	}
@@ -434,11 +498,18 @@ public class SecuritiesStatementQueryV06 {
 		this.additionalQueryParameters = additionalQueryParameters;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.021.06.06")
+	static public class Document {
+		@XmlElement(name = "SctiesStmtQry", required = true)
+		public SecuritiesStatementQueryV06 messageBody;
 	}
 }

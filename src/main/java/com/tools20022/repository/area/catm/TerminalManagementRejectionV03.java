@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.AcceptorRejection3;
 import com.tools20022.repository.msg.Header15;
 import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20142015;
 import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The TerminalManagementRejection message is sent by the terminal manager to
@@ -36,9 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catm.004.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
@@ -71,6 +70,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catm.004.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -94,6 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TerminalManagementRejectionV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TerminalManagementRejectionV03", propOrder = {"header", "reject"})
 public class TerminalManagementRejectionV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -145,6 +149,14 @@ public class TerminalManagementRejectionV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TerminalManagementRejectionV03.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AcceptorRejection3 reject;
 	/**
@@ -195,6 +207,14 @@ public class TerminalManagementRejectionV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorRejection3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TerminalManagementRejectionV03.class.getMethod("getReject", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -209,7 +229,7 @@ public class TerminalManagementRejectionV03 {
 				rootElement = "Document";
 				xmlTag = "TermnlMgmtRjctn";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(TerminalManagementRejectionV03.mmHeader, TerminalManagementRejectionV03.mmReject);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.TerminalManagementRejectionV03.mmHeader, com.tools20022.repository.area.catm.TerminalManagementRejectionV03.mmReject);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catm";
@@ -219,10 +239,16 @@ public class TerminalManagementRejectionV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TerminalManagementRejectionV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header15 getHeader() {
 		return header;
 	}
@@ -231,11 +257,18 @@ public class TerminalManagementRejectionV03 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "Rjct", required = true)
 	public AcceptorRejection3 getReject() {
 		return reject;
 	}
 
 	public void setReject(AcceptorRejection3 reject) {
 		this.reject = reject;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catm.004.03.03")
+	static public class Document {
+		@XmlElement(name = "TermnlMgmtRjctn", required = true)
+		public TerminalManagementRejectionV03 messageBody;
 	}
 }

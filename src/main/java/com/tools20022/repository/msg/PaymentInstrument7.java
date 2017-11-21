@@ -28,6 +28,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instrument that has or represents monetary value and is used to process a
@@ -82,6 +86,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstrument7", propOrder = {"settlementCurrency", "cashAccount", "cheque", "paymentCard", "directDebit"})
 public class PaymentInstrument7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -396,6 +402,7 @@ public class PaymentInstrument7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmCcy", required = true)
 	public CurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -404,6 +411,7 @@ public class PaymentInstrument7 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "CshAcct", required = true)
 	public List<CashAccount4> getCashAccount() {
 		return cashAccount;
 	}
@@ -412,6 +420,7 @@ public class PaymentInstrument7 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "Chq", required = true)
 	public YesNoIndicator getCheque() {
 		return cheque;
 	}
@@ -420,6 +429,7 @@ public class PaymentInstrument7 {
 		this.cheque = cheque;
 	}
 
+	@XmlElement(name = "PmtCard", required = true)
 	public PaymentCard2 getPaymentCard() {
 		return paymentCard;
 	}
@@ -428,6 +438,7 @@ public class PaymentInstrument7 {
 		this.paymentCard = paymentCard;
 	}
 
+	@XmlElement(name = "DrctDbt", required = true)
 	public DirectDebitMandate3 getDirectDebit() {
 		return directDebit;
 	}

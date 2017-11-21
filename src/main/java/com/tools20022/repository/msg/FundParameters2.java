@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Fund parameters.
@@ -74,6 +78,8 @@ import java.util.List;
  * definition} = "Fund parameters."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundParameters2", propOrder = {"financialInstrumentDetails", "fundManagementCompany", "dateFrom", "countryOfDomicile", "registeredDistributionCountry"})
 public class FundParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -325,6 +331,7 @@ public class FundParameters2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmDtls")
 	public List<FinancialInstrument17> getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -333,6 +340,7 @@ public class FundParameters2 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "FndMgmtCpny")
 	public PartyIdentification2Choice getFundManagementCompany() {
 		return fundManagementCompany;
 	}
@@ -341,6 +349,7 @@ public class FundParameters2 {
 		this.fundManagementCompany = fundManagementCompany;
 	}
 
+	@XmlElement(name = "DtFr")
 	public ISODate getDateFrom() {
 		return dateFrom;
 	}
@@ -349,6 +358,7 @@ public class FundParameters2 {
 		this.dateFrom = dateFrom;
 	}
 
+	@XmlElement(name = "CtryOfDmcl")
 	public CountryCode getCountryOfDomicile() {
 		return countryOfDomicile;
 	}
@@ -357,6 +367,7 @@ public class FundParameters2 {
 		this.countryOfDomicile = countryOfDomicile;
 	}
 
+	@XmlElement(name = "RegdDstrbtnCtry")
 	public CountryCode getRegisteredDistributionCountry() {
 		return registeredDistributionCountry;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements for the identification of the message and related references.
@@ -100,6 +104,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References3", propOrder = {"messageIdentification", "requestToBeCompletedIdentification", "processIdentification", "requestReason", "attachedDocumentName"})
 public class References3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -330,6 +336,7 @@ public class References3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -338,6 +345,7 @@ public class References3 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "ReqToBeCmpltdId", required = true)
 	public MessageIdentification1 getRequestToBeCompletedIdentification() {
 		return requestToBeCompletedIdentification;
 	}
@@ -346,6 +354,7 @@ public class References3 {
 		this.requestToBeCompletedIdentification = requestToBeCompletedIdentification;
 	}
 
+	@XmlElement(name = "PrcId", required = true)
 	public MessageIdentification1 getProcessIdentification() {
 		return processIdentification;
 	}
@@ -354,6 +363,7 @@ public class References3 {
 		this.processIdentification = processIdentification;
 	}
 
+	@XmlElement(name = "ReqRsn", required = true)
 	public List<Max35Text> getRequestReason() {
 		return requestReason;
 	}
@@ -362,6 +372,7 @@ public class References3 {
 		this.requestReason = requestReason;
 	}
 
+	@XmlElement(name = "AttchdDocNm")
 	public List<Max70Text> getAttachedDocumentName() {
 		return attachedDocumentName;
 	}

@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of identification of a party.
@@ -73,6 +77,8 @@ import java.util.function.Supplier;
  * definition} = "Choice of identification of a party."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification31Choice", propOrder = {"BIC", "nameAndAddress", "proprietaryIdentification"})
 public class PartyIdentification31Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -250,6 +256,7 @@ public class PartyIdentification31Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BIC", required = true)
 	public BICIdentifier getBIC() {
 		return bIC;
 	}
@@ -258,6 +265,7 @@ public class PartyIdentification31Choice {
 		this.bIC = bIC;
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress12 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -266,6 +274,7 @@ public class PartyIdentification31Choice {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "PrtryId", required = true)
 	public GenericIdentification24 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}

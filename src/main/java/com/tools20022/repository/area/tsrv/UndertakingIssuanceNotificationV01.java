@@ -25,8 +25,10 @@ import com.tools20022.repository.area.TradeServicesLatestVersion;
 import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msg.UndertakingAdvice2;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The UndertakingIssuanceNotification message is sent by the party that issued
@@ -41,9 +43,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsrv.003.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
@@ -73,6 +72,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsrv.003.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -84,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingIssuanceNotificationV01", propOrder = {"undertakingIssuanceNotificationDetails", "digitalSignature"})
 public class UndertakingIssuanceNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -122,6 +126,14 @@ public class UndertakingIssuanceNotificationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> UndertakingAdvice2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingIssuanceNotificationV01.class.getMethod("getUndertakingIssuanceNotificationDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyAndSignature2 digitalSignature;
 	/**
@@ -157,6 +169,14 @@ public class UndertakingIssuanceNotificationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return UndertakingIssuanceNotificationV01.class.getMethod("getDigitalSignature", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -169,7 +189,8 @@ public class UndertakingIssuanceNotificationV01 {
 				rootElement = "Document";
 				xmlTag = "UdrtkgIssncNtfctn";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingIssuanceNotificationV01.mmUndertakingIssuanceNotificationDetails, UndertakingIssuanceNotificationV01.mmDigitalSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingIssuanceNotificationV01.mmUndertakingIssuanceNotificationDetails,
+						com.tools20022.repository.area.tsrv.UndertakingIssuanceNotificationV01.mmDigitalSignature);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsrv";
@@ -179,10 +200,16 @@ public class UndertakingIssuanceNotificationV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UndertakingIssuanceNotificationV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UdrtkgIssncNtfctnDtls", required = true)
 	public UndertakingAdvice2 getUndertakingIssuanceNotificationDetails() {
 		return undertakingIssuanceNotificationDetails;
 	}
@@ -191,11 +218,18 @@ public class UndertakingIssuanceNotificationV01 {
 		this.undertakingIssuanceNotificationDetails = undertakingIssuanceNotificationDetails;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public PartyAndSignature2 getDigitalSignature() {
 		return digitalSignature;
 	}
 
 	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
 		this.digitalSignature = digitalSignature;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.003.01.01")
+	static public class Document {
+		@XmlElement(name = "UdrtkgIssncNtfctn", required = true)
+		public UndertakingIssuanceNotificationV01 messageBody;
 	}
 }

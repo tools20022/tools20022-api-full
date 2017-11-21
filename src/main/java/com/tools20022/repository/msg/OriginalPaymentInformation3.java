@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide reference and status information on the
@@ -96,6 +100,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalPaymentInformation3", propOrder = {"originalPaymentInformationCancellationIdentification", "resolvedCase", "originalPaymentInformationIdentification", "originalGroupInformation", "originalNumberOfTransactions",
+		"originalControlSum", "paymentInformationCancellationStatus", "cancellationStatusReasonInformation", "numberOfTransactionsPerCancellationStatus", "transactionInformationAndStatus"})
 public class OriginalPaymentInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -596,6 +603,7 @@ public class OriginalPaymentInformation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlPmtInfCxlId")
 	public Max35Text getOriginalPaymentInformationCancellationIdentification() {
 		return originalPaymentInformationCancellationIdentification;
 	}
@@ -604,6 +612,7 @@ public class OriginalPaymentInformation3 {
 		this.originalPaymentInformationCancellationIdentification = originalPaymentInformationCancellationIdentification;
 	}
 
+	@XmlElement(name = "RslvdCase")
 	public Case2 getResolvedCase() {
 		return resolvedCase;
 	}
@@ -612,6 +621,7 @@ public class OriginalPaymentInformation3 {
 		this.resolvedCase = resolvedCase;
 	}
 
+	@XmlElement(name = "OrgnlPmtInfId", required = true)
 	public Max35Text getOriginalPaymentInformationIdentification() {
 		return originalPaymentInformationIdentification;
 	}
@@ -620,6 +630,7 @@ public class OriginalPaymentInformation3 {
 		this.originalPaymentInformationIdentification = originalPaymentInformationIdentification;
 	}
 
+	@XmlElement(name = "OrgnlGrpInf")
 	public OriginalGroupInformation3 getOriginalGroupInformation() {
 		return originalGroupInformation;
 	}
@@ -628,6 +639,7 @@ public class OriginalPaymentInformation3 {
 		this.originalGroupInformation = originalGroupInformation;
 	}
 
+	@XmlElement(name = "OrgnlNbOfTxs")
 	public Max15NumericText getOriginalNumberOfTransactions() {
 		return originalNumberOfTransactions;
 	}
@@ -636,6 +648,7 @@ public class OriginalPaymentInformation3 {
 		this.originalNumberOfTransactions = originalNumberOfTransactions;
 	}
 
+	@XmlElement(name = "OrgnlCtrlSum")
 	public DecimalNumber getOriginalControlSum() {
 		return originalControlSum;
 	}
@@ -644,6 +657,7 @@ public class OriginalPaymentInformation3 {
 		this.originalControlSum = originalControlSum;
 	}
 
+	@XmlElement(name = "PmtInfCxlSts")
 	public GroupCancellationStatus1Code getPaymentInformationCancellationStatus() {
 		return paymentInformationCancellationStatus;
 	}
@@ -652,6 +666,7 @@ public class OriginalPaymentInformation3 {
 		this.paymentInformationCancellationStatus = paymentInformationCancellationStatus;
 	}
 
+	@XmlElement(name = "CxlStsRsnInf")
 	public List<CancellationStatusReasonInformation1> getCancellationStatusReasonInformation() {
 		return cancellationStatusReasonInformation;
 	}
@@ -660,6 +675,7 @@ public class OriginalPaymentInformation3 {
 		this.cancellationStatusReasonInformation = cancellationStatusReasonInformation;
 	}
 
+	@XmlElement(name = "NbOfTxsPerCxlSts")
 	public List<NumberOfCancellationsPerStatus1> getNumberOfTransactionsPerCancellationStatus() {
 		return numberOfTransactionsPerCancellationStatus;
 	}
@@ -668,6 +684,7 @@ public class OriginalPaymentInformation3 {
 		this.numberOfTransactionsPerCancellationStatus = numberOfTransactionsPerCancellationStatus;
 	}
 
+	@XmlElement(name = "TxInfAndSts")
 	public List<PaymentTransactionInformation32> getTransactionInformationAndStatus() {
 		return transactionInformationAndStatus;
 	}

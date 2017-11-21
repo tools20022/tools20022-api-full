@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the intra-position movement.
@@ -98,6 +102,8 @@ import java.util.function.Supplier;
  * definition} = "Details of the intra-position movement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionDetails4", propOrder = {"poolIdentification", "accountOwner", "safekeepingAccount", "financialInstrumentIdentification", "settledQuantity", "settlementDate", "balanceFrom", "balanceTo"})
 public class IntraPositionDetails4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -504,6 +510,7 @@ public class IntraPositionDetails4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PoolId")
 	public Max35Text getPoolIdentification() {
 		return poolIdentification;
 	}
@@ -512,6 +519,7 @@ public class IntraPositionDetails4 {
 		this.poolIdentification = poolIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification13Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -520,6 +528,7 @@ public class IntraPositionDetails4 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -528,6 +537,7 @@ public class IntraPositionDetails4 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification11 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -536,6 +546,7 @@ public class IntraPositionDetails4 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "SttldQty", required = true)
 	public FinancialInstrumentQuantity1Choice getSettledQuantity() {
 		return settledQuantity;
 	}
@@ -544,6 +555,7 @@ public class IntraPositionDetails4 {
 		this.settledQuantity = settledQuantity;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public DateAndDateTimeChoice getSettlementDate() {
 		return settlementDate;
 	}
@@ -552,6 +564,7 @@ public class IntraPositionDetails4 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "BalFr")
 	public SecuritiesBalanceType2Choice getBalanceFrom() {
 		return balanceFrom;
 	}
@@ -560,6 +573,7 @@ public class IntraPositionDetails4 {
 		this.balanceFrom = balanceFrom;
 	}
 
+	@XmlElement(name = "BalTo")
 	public SecuritiesBalanceType2Choice getBalanceTo() {
 		return balanceTo;
 	}

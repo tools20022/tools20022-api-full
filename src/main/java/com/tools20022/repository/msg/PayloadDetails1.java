@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * This component identifies the instance of the document exchanged.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "This component identifies the instance of the document exchanged."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PayloadDetails1", propOrder = {"payloadIdentifier", "creationDateAndTime", "possibleDuplicateFlag"})
 public class PayloadDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -211,6 +217,7 @@ public class PayloadDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PyldIdr", required = true)
 	public Max35Text getPayloadIdentifier() {
 		return payloadIdentifier;
 	}
@@ -219,6 +226,7 @@ public class PayloadDetails1 {
 		this.payloadIdentifier = payloadIdentifier;
 	}
 
+	@XmlElement(name = "CreDtAndTm", required = true)
 	public ISODateTime getCreationDateAndTime() {
 		return creationDateAndTime;
 	}
@@ -227,6 +235,7 @@ public class PayloadDetails1 {
 		this.creationDateAndTime = creationDateAndTime;
 	}
 
+	@XmlElement(name = "PssblDplctFlg")
 	public TrueFalseIndicator getPossibleDuplicateFlag() {
 		return possibleDuplicateFlag;
 	}

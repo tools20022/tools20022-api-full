@@ -35,6 +35,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extract of trade data for an investment fund switch order.
@@ -102,6 +106,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundOrderData2", propOrder = {"totalRedemptionAmount", "totalSubscriptionAmount", "settlementAmount", "settlementMethod", "additionalCashIn", "resultingCashOut", "unitCurrency", "quotedCurrency"})
 public class FundOrderData2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -604,6 +610,7 @@ public class FundOrderData2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlRedAmt")
 	public ActiveOrHistoricCurrencyAndAmount getTotalRedemptionAmount() {
 		return totalRedemptionAmount;
 	}
@@ -612,6 +619,7 @@ public class FundOrderData2 {
 		this.totalRedemptionAmount = totalRedemptionAmount;
 	}
 
+	@XmlElement(name = "TtlSbcptAmt")
 	public ActiveOrHistoricCurrencyAndAmount getTotalSubscriptionAmount() {
 		return totalSubscriptionAmount;
 	}
@@ -620,6 +628,7 @@ public class FundOrderData2 {
 		this.totalSubscriptionAmount = totalSubscriptionAmount;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public ActiveCurrencyAndAmount getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -628,6 +637,7 @@ public class FundOrderData2 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "SttlmMtd")
 	public DeliveryReceiptType2Code getSettlementMethod() {
 		return settlementMethod;
 	}
@@ -636,6 +646,7 @@ public class FundOrderData2 {
 		this.settlementMethod = settlementMethod;
 	}
 
+	@XmlElement(name = "AddtlCshIn")
 	public ActiveOrHistoricCurrencyAndAmount getAdditionalCashIn() {
 		return additionalCashIn;
 	}
@@ -644,6 +655,7 @@ public class FundOrderData2 {
 		this.additionalCashIn = additionalCashIn;
 	}
 
+	@XmlElement(name = "RsltgCshOut")
 	public ActiveOrHistoricCurrencyAndAmount getResultingCashOut() {
 		return resultingCashOut;
 	}
@@ -652,6 +664,7 @@ public class FundOrderData2 {
 		this.resultingCashOut = resultingCashOut;
 	}
 
+	@XmlElement(name = "UnitCcy")
 	public ActiveOrHistoricCurrencyCode getUnitCurrency() {
 		return unitCurrency;
 	}
@@ -660,6 +673,7 @@ public class FundOrderData2 {
 		this.unitCurrency = unitCurrency;
 	}
 
+	@XmlElement(name = "QtdCcy")
 	public ActiveOrHistoricCurrencyCode getQuotedCurrency() {
 		return quotedCurrency;
 	}

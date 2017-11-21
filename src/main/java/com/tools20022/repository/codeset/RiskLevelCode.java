@@ -29,13 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code
- * RiskLevel1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.RiskLevelCode#mmHigh
@@ -44,6 +37,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * RiskLevelCode.mmMedium}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.RiskLevelCode#mmLow
  * RiskLevelCode.mmLow}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code
+ * RiskLevel1Code}</li>
  * </ul>
  * </li>
  * <li>

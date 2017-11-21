@@ -18,6 +18,7 @@
 package com.tools20022.metamodel;
 
 import com.tools20022.core.metamodel.Derived;
+import com.tools20022.core.metamodel.RuntimePropertyAware;
 import com.tools20022.core.metamodel.Metamodel.MetamodelAttribute;
 import com.tools20022.core.metamodel.Metamodel.MetamodelConstraint;
 import com.tools20022.core.metamodel.Metamodel.MetamodelType;
@@ -38,7 +39,7 @@ import java.util.Optional;
  * A BusinessElement, typed by a BusinessComponent or a DataType (contrary to a
  * BusinessAssociationEnd, which is always typed by another BusinessComponent)
  */
-public class MMBusinessAttribute implements MMBusinessElement {
+public class MMBusinessAttribute implements RuntimePropertyAware, MMBusinessElement {
 
 	/**
 	 * Expresses that the content model of a BusinessAttribute may be specified

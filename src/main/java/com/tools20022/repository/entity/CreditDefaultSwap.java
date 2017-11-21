@@ -30,6 +30,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CreditDefaultSwapDerivative4;
 import com.tools20022.repository.msg.CreditDefaultSwapIndex2;
 import com.tools20022.repository.msg.CreditDefaultSwapSingleName2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -43,6 +44,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CreditDefaultSwap#mmRollDate
+ * CreditDefaultSwap.mmRollDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CreditDefaultSwap#mmRollMonth
+ * CreditDefaultSwap.mmRollMonth}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CreditDefaultSwap#mmSeries
+ * CreditDefaultSwap.mmSeries}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Swaps Swaps}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -81,21 +97,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CreditDefaultSwapsDerivative3Choice.mmCreditDefaultSwapIndexDerivative}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Swaps Swaps}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CreditDefaultSwap#mmRollDate
- * CreditDefaultSwap.mmRollDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CreditDefaultSwap#mmRollMonth
- * CreditDefaultSwap.mmRollMonth}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CreditDefaultSwap#mmSeries
- * CreditDefaultSwap.mmSeries}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -126,11 +127,6 @@ public class CreditDefaultSwap extends Swaps {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CreditDefaultSwap
-	 * CreditDefaultSwap}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -139,6 +135,11 @@ public class CreditDefaultSwap extends Swaps {
 	 * CreditDefaultSwapIndex2.mmNextRollDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CreditDefaultSwap
+	 * CreditDefaultSwap}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -154,7 +155,7 @@ public class CreditDefaultSwap extends Swaps {
 	public static final MMBusinessAttribute mmRollDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CreditDefaultSwapIndex2.mmNextRollDate);
-			elementContext_lazy = () -> CreditDefaultSwap.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CreditDefaultSwap.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RollDate";
@@ -162,6 +163,14 @@ public class CreditDefaultSwap extends Swaps {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CreditDefaultSwap.class.getMethod("getRollDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISOYearMonth rollMonth;
@@ -194,7 +203,7 @@ public class CreditDefaultSwap extends Swaps {
 	 */
 	public static final MMBusinessAttribute mmRollMonth = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CreditDefaultSwap.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CreditDefaultSwap.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RollMonth";
@@ -202,6 +211,14 @@ public class CreditDefaultSwap extends Swaps {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CreditDefaultSwap.class.getMethod("getRollMonth", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number series;
@@ -214,11 +231,6 @@ public class CreditDefaultSwap extends Swaps {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CreditDefaultSwap
-	 * CreditDefaultSwap}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -227,6 +239,11 @@ public class CreditDefaultSwap extends Swaps {
 	 * CreditDefaultSwapIndex2.mmSeries}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CreditDefaultSwap
+	 * CreditDefaultSwap}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -242,7 +259,7 @@ public class CreditDefaultSwap extends Swaps {
 	public static final MMBusinessAttribute mmSeries = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CreditDefaultSwapIndex2.mmSeries);
-			elementContext_lazy = () -> CreditDefaultSwap.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CreditDefaultSwap.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Series";
@@ -250,6 +267,14 @@ public class CreditDefaultSwap extends Swaps {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CreditDefaultSwap.class.getMethod("getSeries", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -263,8 +288,13 @@ public class CreditDefaultSwap extends Swaps {
 				derivationElement_lazy = () -> Arrays.asList(CreditDefaultSwapDerivative4.mmSingleName, Derivative2Choice.mmCredit, CreditDefaultSwapsDerivative3Choice.mmSingleNameCreditDefaultSwap,
 						CreditDefaultSwapsDerivative3Choice.mmCreditDefaultSwapIndex, CreditDefaultSwapsDerivative3Choice.mmSingleNameCreditDefaultSwapDerivative, CreditDefaultSwapsDerivative3Choice.mmCreditDefaultSwapIndexDerivative);
 				superType_lazy = () -> Swaps.mmObject();
-				element_lazy = () -> Arrays.asList(CreditDefaultSwap.mmRollDate, CreditDefaultSwap.mmRollMonth, CreditDefaultSwap.mmSeries);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CreditDefaultSwap.mmRollDate, com.tools20022.repository.entity.CreditDefaultSwap.mmRollMonth, com.tools20022.repository.entity.CreditDefaultSwap.mmSeries);
 				derivationComponent_lazy = () -> Arrays.asList(CreditDefaultSwapSingleName2.mmObject(), CreditDefaultSwapIndex2.mmObject(), CreditDefaultSwapDerivative4.mmObject(), CreditDefaultSwapsDerivative3Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CreditDefaultSwap.class;
 			}
 		});
 		return mmObject_lazy.get();

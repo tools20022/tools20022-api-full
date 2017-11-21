@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the treasury trade captured.
@@ -94,6 +98,9 @@ import java.util.List;
  * definition} = "Details of the treasury trade captured."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Trade1", propOrder = {"tradeIdentification", "dateAndTime", "foreignExchangeTradeProduct", "tradingCurrency", "settlementCurrency", "tradingMethod", "tradingMode", "clearingMethod", "executionType", "symbol",
+		"placeOfConfirmation", "transactionTime", "foreignExchangeDetails", "swapLeg", "option", "productIdentification"})
 public class Trade1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -797,6 +804,7 @@ public class Trade1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradId", required = true)
 	public Max35Text getTradeIdentification() {
 		return tradeIdentification;
 	}
@@ -805,6 +813,7 @@ public class Trade1 {
 		this.tradeIdentification = tradeIdentification;
 	}
 
+	@XmlElement(name = "DtAndTm", required = true)
 	public ISODateTime getDateAndTime() {
 		return dateAndTime;
 	}
@@ -813,6 +822,7 @@ public class Trade1 {
 		this.dateAndTime = dateAndTime;
 	}
 
+	@XmlElement(name = "FXTradPdct")
 	public UnderlyingProductIdentifier1Code getForeignExchangeTradeProduct() {
 		return foreignExchangeTradeProduct;
 	}
@@ -821,6 +831,7 @@ public class Trade1 {
 		this.foreignExchangeTradeProduct = foreignExchangeTradeProduct;
 	}
 
+	@XmlElement(name = "TradgCcy")
 	public CurrencyCode getTradingCurrency() {
 		return tradingCurrency;
 	}
@@ -829,6 +840,7 @@ public class Trade1 {
 		this.tradingCurrency = tradingCurrency;
 	}
 
+	@XmlElement(name = "SttlmCcy")
 	public CurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -837,6 +849,7 @@ public class Trade1 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "TradgMtd", required = true)
 	public TradingMethodType1Code getTradingMethod() {
 		return tradingMethod;
 	}
@@ -845,6 +858,7 @@ public class Trade1 {
 		this.tradingMethod = tradingMethod;
 	}
 
+	@XmlElement(name = "TradgMd")
 	public TradingModeType1Code getTradingMode() {
 		return tradingMode;
 	}
@@ -853,6 +867,7 @@ public class Trade1 {
 		this.tradingMode = tradingMode;
 	}
 
+	@XmlElement(name = "ClrMtd", required = true)
 	public ClearingMethod1Code getClearingMethod() {
 		return clearingMethod;
 	}
@@ -861,6 +876,7 @@ public class Trade1 {
 		this.clearingMethod = clearingMethod;
 	}
 
+	@XmlElement(name = "ExctnTp", required = true)
 	public OrderStatus8Code getExecutionType() {
 		return executionType;
 	}
@@ -869,6 +885,7 @@ public class Trade1 {
 		this.executionType = executionType;
 	}
 
+	@XmlElement(name = "Symb", required = true)
 	public Max35Text getSymbol() {
 		return symbol;
 	}
@@ -877,6 +894,7 @@ public class Trade1 {
 		this.symbol = symbol;
 	}
 
+	@XmlElement(name = "PlcOfConf")
 	public Max35Text getPlaceOfConfirmation() {
 		return placeOfConfirmation;
 	}
@@ -885,6 +903,7 @@ public class Trade1 {
 		this.placeOfConfirmation = placeOfConfirmation;
 	}
 
+	@XmlElement(name = "TxTm")
 	public ISODateTime getTransactionTime() {
 		return transactionTime;
 	}
@@ -893,6 +912,7 @@ public class Trade1 {
 		this.transactionTime = transactionTime;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public Trade3 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -901,6 +921,7 @@ public class Trade1 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "SwpLeg")
 	public List<InstrumentLeg6> getSwapLeg() {
 		return swapLeg;
 	}
@@ -909,6 +930,7 @@ public class Trade1 {
 		this.swapLeg = swapLeg;
 	}
 
+	@XmlElement(name = "Optn")
 	public Option10 getOption() {
 		return option;
 	}
@@ -917,6 +939,7 @@ public class Trade1 {
 		this.option = option;
 	}
 
+	@XmlElement(name = "PdctId")
 	public SecurityIdentification22Choice getProductIdentification() {
 		return productIdentification;
 	}

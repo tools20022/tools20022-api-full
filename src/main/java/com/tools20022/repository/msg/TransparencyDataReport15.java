@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides for reporting quantitative data of non-equity instruments for
@@ -94,6 +98,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransparencyDataReport15", propOrder = {"technicalRecordIdentification", "identification", "reportingDate", "tradingVenue", "suspension", "numberTransactions", "aggregatedQuantitativeData"})
 public class TransparencyDataReport15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -441,6 +447,7 @@ public class TransparencyDataReport15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TechRcrdId")
 	public Max35Text getTechnicalRecordIdentification() {
 		return technicalRecordIdentification;
 	}
@@ -449,6 +456,7 @@ public class TransparencyDataReport15 {
 		this.technicalRecordIdentification = technicalRecordIdentification;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public ISINOct2015Identifier getIdentification() {
 		return identification;
 	}
@@ -457,6 +465,7 @@ public class TransparencyDataReport15 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "RptgDt")
 	public ISODate getReportingDate() {
 		return reportingDate;
 	}
@@ -465,6 +474,7 @@ public class TransparencyDataReport15 {
 		this.reportingDate = reportingDate;
 	}
 
+	@XmlElement(name = "TradgVn")
 	public MICIdentifier getTradingVenue() {
 		return tradingVenue;
 	}
@@ -473,6 +483,7 @@ public class TransparencyDataReport15 {
 		this.tradingVenue = tradingVenue;
 	}
 
+	@XmlElement(name = "Sspnsn", required = true)
 	public TrueFalseIndicator getSuspension() {
 		return suspension;
 	}
@@ -481,6 +492,7 @@ public class TransparencyDataReport15 {
 		this.suspension = suspension;
 	}
 
+	@XmlElement(name = "NbTxs")
 	public Number getNumberTransactions() {
 		return numberTransactions;
 	}
@@ -489,6 +501,7 @@ public class TransparencyDataReport15 {
 		this.numberTransactions = numberTransactions;
 	}
 
+	@XmlElement(name = "AggtdQttvData")
 	public List<TransactionsBin2> getAggregatedQuantitativeData() {
 		return aggregatedQuantitativeData;
 	}

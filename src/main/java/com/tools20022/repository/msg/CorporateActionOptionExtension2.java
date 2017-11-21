@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action option.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides additional information regarding corporate action option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionOptionExtension2", propOrder = {"placeAndName", "DTCCOptionType"})
 public class CorporateActionOptionExtension2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -165,6 +171,7 @@ public class CorporateActionOptionExtension2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -173,6 +180,7 @@ public class CorporateActionOptionExtension2 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "DTCCOptnTp")
 	public Max4AlphaNumericText getDTCCOptionType() {
 		return dTCCOptionType;
 	}

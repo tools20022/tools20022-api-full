@@ -36,6 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Regroups identification parameters for trade items.
@@ -117,6 +121,9 @@ import java.util.List;
  * definition} = "Regroups identification parameters for trade items."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialItemParameters1", propOrder = {"identifier", "issueDate", "relatedItem", "documentPurpose", "languageCode", "issuer", "recipient", "buyer", "seller", "sellerFinancialAgent", "buyerFinancialAgent",
+		"governingContract", "legalContext", "currency", "debitAccount", "creditAccount", "tradeMarket"})
 public class FinancialItemParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -967,6 +974,7 @@ public class FinancialItemParameters1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Idr", required = true)
 	public Max35Text getIdentifier() {
 		return identifier;
 	}
@@ -975,6 +983,7 @@ public class FinancialItemParameters1 {
 		this.identifier = identifier;
 	}
 
+	@XmlElement(name = "IsseDt", required = true)
 	public ISODate getIssueDate() {
 		return issueDate;
 	}
@@ -983,6 +992,7 @@ public class FinancialItemParameters1 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "RltdItm")
 	public List<QualifiedDocumentInformation1> getRelatedItem() {
 		return relatedItem;
 	}
@@ -991,6 +1001,7 @@ public class FinancialItemParameters1 {
 		this.relatedItem = relatedItem;
 	}
 
+	@XmlElement(name = "DocPurp")
 	public ExternalDocumentPurpose1Code getDocumentPurpose() {
 		return documentPurpose;
 	}
@@ -999,6 +1010,7 @@ public class FinancialItemParameters1 {
 		this.documentPurpose = documentPurpose;
 	}
 
+	@XmlElement(name = "LangCd")
 	public LanguageCode getLanguageCode() {
 		return languageCode;
 	}
@@ -1007,6 +1019,7 @@ public class FinancialItemParameters1 {
 		this.languageCode = languageCode;
 	}
 
+	@XmlElement(name = "Issr")
 	public QualifiedPartyIdentification1 getIssuer() {
 		return issuer;
 	}
@@ -1015,6 +1028,7 @@ public class FinancialItemParameters1 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "Rcpt")
 	public QualifiedPartyIdentification1 getRecipient() {
 		return recipient;
 	}
@@ -1023,6 +1037,7 @@ public class FinancialItemParameters1 {
 		this.recipient = recipient;
 	}
 
+	@XmlElement(name = "Buyr")
 	public QualifiedPartyIdentification1 getBuyer() {
 		return buyer;
 	}
@@ -1031,6 +1046,7 @@ public class FinancialItemParameters1 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Sellr")
 	public QualifiedPartyIdentification1 getSeller() {
 		return seller;
 	}
@@ -1039,6 +1055,7 @@ public class FinancialItemParameters1 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "SellrFinAgt")
 	public QualifiedPartyIdentification1 getSellerFinancialAgent() {
 		return sellerFinancialAgent;
 	}
@@ -1047,6 +1064,7 @@ public class FinancialItemParameters1 {
 		this.sellerFinancialAgent = sellerFinancialAgent;
 	}
 
+	@XmlElement(name = "BuyrFinAgt")
 	public QualifiedPartyIdentification1 getBuyerFinancialAgent() {
 		return buyerFinancialAgent;
 	}
@@ -1055,6 +1073,7 @@ public class FinancialItemParameters1 {
 		this.buyerFinancialAgent = buyerFinancialAgent;
 	}
 
+	@XmlElement(name = "GovngCtrct")
 	public List<QualifiedDocumentInformation1> getGoverningContract() {
 		return governingContract;
 	}
@@ -1063,6 +1082,7 @@ public class FinancialItemParameters1 {
 		this.governingContract = governingContract;
 	}
 
+	@XmlElement(name = "LglCntxt")
 	public GovernanceRules2 getLegalContext() {
 		return legalContext;
 	}
@@ -1071,6 +1091,7 @@ public class FinancialItemParameters1 {
 		this.legalContext = legalContext;
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -1079,6 +1100,7 @@ public class FinancialItemParameters1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "DbtAcct")
 	public AccountIdentification4Choice getDebitAccount() {
 		return debitAccount;
 	}
@@ -1087,6 +1109,7 @@ public class FinancialItemParameters1 {
 		this.debitAccount = debitAccount;
 	}
 
+	@XmlElement(name = "CdtAcct")
 	public AccountIdentification4Choice getCreditAccount() {
 		return creditAccount;
 	}
@@ -1095,6 +1118,7 @@ public class FinancialItemParameters1 {
 		this.creditAccount = creditAccount;
 	}
 
+	@XmlElement(name = "TradMkt")
 	public TradeMarket1Choice getTradeMarket() {
 		return tradeMarket;
 	}

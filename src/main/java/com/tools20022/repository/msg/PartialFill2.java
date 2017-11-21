@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Intention to transfer an ownership of a financial instrument.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartialFill1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartialFill2", propOrder = {"confirmationQuantity", "dealPrice", "tradeDate", "placeOfTrade", "originalOrderedQuantity", "previouslyExecutedQuantity", "remainingQuantity", "matchIncrementQuantity"})
 public class PartialFill2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -533,6 +539,7 @@ public class PartialFill2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ConfQty", required = true)
 	public Quantity6Choice getConfirmationQuantity() {
 		return confirmationQuantity;
 	}
@@ -541,6 +548,7 @@ public class PartialFill2 {
 		this.confirmationQuantity = confirmationQuantity;
 	}
 
+	@XmlElement(name = "DealPric", required = true)
 	public Price4 getDealPrice() {
 		return dealPrice;
 	}
@@ -549,6 +557,7 @@ public class PartialFill2 {
 		this.dealPrice = dealPrice;
 	}
 
+	@XmlElement(name = "TradDt")
 	public TradeDate4Choice getTradeDate() {
 		return tradeDate;
 	}
@@ -557,6 +566,7 @@ public class PartialFill2 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public MarketIdentification80 getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -565,6 +575,7 @@ public class PartialFill2 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "OrgnlOrdrdQty", required = true)
 	public QuantityOrAmount1Choice getOriginalOrderedQuantity() {
 		return originalOrderedQuantity;
 	}
@@ -573,6 +584,7 @@ public class PartialFill2 {
 		this.originalOrderedQuantity = originalOrderedQuantity;
 	}
 
+	@XmlElement(name = "PrevslyExctdQty", required = true)
 	public QuantityOrAmount1Choice getPreviouslyExecutedQuantity() {
 		return previouslyExecutedQuantity;
 	}
@@ -581,6 +593,7 @@ public class PartialFill2 {
 		this.previouslyExecutedQuantity = previouslyExecutedQuantity;
 	}
 
+	@XmlElement(name = "RmngQty", required = true)
 	public QuantityOrAmount1Choice getRemainingQuantity() {
 		return remainingQuantity;
 	}
@@ -589,6 +602,7 @@ public class PartialFill2 {
 		this.remainingQuantity = remainingQuantity;
 	}
 
+	@XmlElement(name = "MtchIncrmtQty")
 	public QuantityOrAmount1Choice getMatchIncrementQuantity() {
 		return matchIncrementQuantity;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details on the reference and status on the original
@@ -139,6 +143,10 @@ import java.util.List;
  * PaymentTransaction34}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTransaction44", propOrder = {"returnIdentification", "originalGroupInformation", "originalInstructionIdentification", "originalEndToEndIdentification", "originalTransactionIdentification",
+		"originalClearingSystemReference", "originalInterbankSettlementAmount", "returnedInterbankSettlementAmount", "interbankSettlementDate", "returnedInstructedAmount", "exchangeRate", "compensationAmount", "chargeBearer",
+		"chargesInformation", "instructingAgent", "instructedAgent", "returnReasonInformation", "originalTransactionReference", "supplementaryData"})
 public class PaymentTransaction44 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1289,6 +1297,7 @@ public class PaymentTransaction44 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RtrId")
 	public Max35Text getReturnIdentification() {
 		return returnIdentification;
 	}
@@ -1297,6 +1306,7 @@ public class PaymentTransaction44 {
 		this.returnIdentification = returnIdentification;
 	}
 
+	@XmlElement(name = "OrgnlGrpInf")
 	public OriginalGroupInformation3 getOriginalGroupInformation() {
 		return originalGroupInformation;
 	}
@@ -1305,6 +1315,7 @@ public class PaymentTransaction44 {
 		this.originalGroupInformation = originalGroupInformation;
 	}
 
+	@XmlElement(name = "OrgnlInstrId")
 	public Max35Text getOriginalInstructionIdentification() {
 		return originalInstructionIdentification;
 	}
@@ -1313,6 +1324,7 @@ public class PaymentTransaction44 {
 		this.originalInstructionIdentification = originalInstructionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlEndToEndId")
 	public Max35Text getOriginalEndToEndIdentification() {
 		return originalEndToEndIdentification;
 	}
@@ -1321,6 +1333,7 @@ public class PaymentTransaction44 {
 		this.originalEndToEndIdentification = originalEndToEndIdentification;
 	}
 
+	@XmlElement(name = "OrgnlTxId")
 	public Max35Text getOriginalTransactionIdentification() {
 		return originalTransactionIdentification;
 	}
@@ -1329,6 +1342,7 @@ public class PaymentTransaction44 {
 		this.originalTransactionIdentification = originalTransactionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlClrSysRef")
 	public Max35Text getOriginalClearingSystemReference() {
 		return originalClearingSystemReference;
 	}
@@ -1337,6 +1351,7 @@ public class PaymentTransaction44 {
 		this.originalClearingSystemReference = originalClearingSystemReference;
 	}
 
+	@XmlElement(name = "OrgnlIntrBkSttlmAmt")
 	public ActiveOrHistoricCurrencyAndAmount getOriginalInterbankSettlementAmount() {
 		return originalInterbankSettlementAmount;
 	}
@@ -1345,6 +1360,7 @@ public class PaymentTransaction44 {
 		this.originalInterbankSettlementAmount = originalInterbankSettlementAmount;
 	}
 
+	@XmlElement(name = "RtrdIntrBkSttlmAmt", required = true)
 	public ActiveCurrencyAndAmount getReturnedInterbankSettlementAmount() {
 		return returnedInterbankSettlementAmount;
 	}
@@ -1353,6 +1369,7 @@ public class PaymentTransaction44 {
 		this.returnedInterbankSettlementAmount = returnedInterbankSettlementAmount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDt")
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}
@@ -1361,6 +1378,7 @@ public class PaymentTransaction44 {
 		this.interbankSettlementDate = interbankSettlementDate;
 	}
 
+	@XmlElement(name = "RtrdInstdAmt")
 	public ActiveOrHistoricCurrencyAndAmount getReturnedInstructedAmount() {
 		return returnedInstructedAmount;
 	}
@@ -1369,6 +1387,7 @@ public class PaymentTransaction44 {
 		this.returnedInstructedAmount = returnedInstructedAmount;
 	}
 
+	@XmlElement(name = "XchgRate")
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -1377,6 +1396,7 @@ public class PaymentTransaction44 {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "CompstnAmt")
 	public ActiveOrHistoricCurrencyAndAmount getCompensationAmount() {
 		return compensationAmount;
 	}
@@ -1385,6 +1405,7 @@ public class PaymentTransaction44 {
 		this.compensationAmount = compensationAmount;
 	}
 
+	@XmlElement(name = "ChrgBr")
 	public ChargeBearerType1Code getChargeBearer() {
 		return chargeBearer;
 	}
@@ -1393,6 +1414,7 @@ public class PaymentTransaction44 {
 		this.chargeBearer = chargeBearer;
 	}
 
+	@XmlElement(name = "ChrgsInf")
 	public List<Charges2> getChargesInformation() {
 		return chargesInformation;
 	}
@@ -1401,6 +1423,7 @@ public class PaymentTransaction44 {
 		this.chargesInformation = chargesInformation;
 	}
 
+	@XmlElement(name = "InstgAgt")
 	public BranchAndFinancialInstitutionIdentification5 getInstructingAgent() {
 		return instructingAgent;
 	}
@@ -1409,6 +1432,7 @@ public class PaymentTransaction44 {
 		this.instructingAgent = instructingAgent;
 	}
 
+	@XmlElement(name = "InstdAgt")
 	public BranchAndFinancialInstitutionIdentification5 getInstructedAgent() {
 		return instructedAgent;
 	}
@@ -1417,6 +1441,7 @@ public class PaymentTransaction44 {
 		this.instructedAgent = instructedAgent;
 	}
 
+	@XmlElement(name = "RtrRsnInf")
 	public List<PaymentReturnReason1> getReturnReasonInformation() {
 		return returnReasonInformation;
 	}
@@ -1425,6 +1450,7 @@ public class PaymentTransaction44 {
 		this.returnReasonInformation = returnReasonInformation;
 	}
 
+	@XmlElement(name = "OrgnlTxRef")
 	public OriginalTransactionReference16 getOriginalTransactionReference() {
 		return originalTransactionReference;
 	}
@@ -1433,6 +1459,7 @@ public class PaymentTransaction44 {
 		this.originalTransactionReference = originalTransactionReference;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

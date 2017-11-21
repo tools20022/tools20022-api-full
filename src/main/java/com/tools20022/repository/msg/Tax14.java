@@ -35,6 +35,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Tax related to an investment fund order.
@@ -100,6 +104,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Tax14", propOrder = {"type", "extendedType", "amount", "rate", "country", "recipientIdentification", "exemptionIndicator", "exemptionReason", "extendedExemptionReason", "taxCalculationDetails"})
 public class Tax14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -718,6 +724,7 @@ public class Tax14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TaxType11Code getType() {
 		return type;
 	}
@@ -726,6 +733,7 @@ public class Tax14 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XtndedTp", required = true)
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
@@ -734,6 +742,7 @@ public class Tax14 {
 		this.extendedType = extendedType;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -742,6 +751,7 @@ public class Tax14 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -750,6 +760,7 @@ public class Tax14 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "Ctry")
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -758,6 +769,7 @@ public class Tax14 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification2Choice getRecipientIdentification() {
 		return recipientIdentification;
 	}
@@ -766,6 +778,7 @@ public class Tax14 {
 		this.recipientIdentification = recipientIdentification;
 	}
 
+	@XmlElement(name = "XmptnInd", required = true)
 	public YesNoIndicator getExemptionIndicator() {
 		return exemptionIndicator;
 	}
@@ -774,6 +787,7 @@ public class Tax14 {
 		this.exemptionIndicator = exemptionIndicator;
 	}
 
+	@XmlElement(name = "XmptnRsn")
 	public TaxExemptReason1Code getExemptionReason() {
 		return exemptionReason;
 	}
@@ -782,6 +796,7 @@ public class Tax14 {
 		this.exemptionReason = exemptionReason;
 	}
 
+	@XmlElement(name = "XtndedXmptnRsn")
 	public Extended350Code getExtendedExemptionReason() {
 		return extendedExemptionReason;
 	}
@@ -790,6 +805,7 @@ public class Tax14 {
 		this.extendedExemptionReason = extendedExemptionReason;
 	}
 
+	@XmlElement(name = "TaxClctnDtls")
 	public TaxCalculationInformation6 getTaxCalculationDetails() {
 		return taxCalculationDetails;
 	}

@@ -35,6 +35,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TaxPartyRole
+ * TaxPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -45,9 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TaxInformation4.mmCreditor}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TaxPartyRole
- * TaxPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -77,6 +77,11 @@ public class CreditSideTaxDebtor extends TaxPartyRole {
 				definition = "Party on the credit side of the transaction to which the tax applies.";
 				derivationElement_lazy = () -> Arrays.asList(TaxInformation3.mmCreditor, TaxInformation4.mmCreditor);
 				superType_lazy = () -> TaxPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CreditSideTaxDebtor.class;
 			}
 		});
 		return mmObject_lazy.get();

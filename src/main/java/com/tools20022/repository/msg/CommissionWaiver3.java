@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Non-enforcement of the right to all or part of a commission by the party
@@ -87,6 +91,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CommissionWaiver3", propOrder = {"instructionBasis", "extendedInstructionBasis", "waivedRate"})
 public class CommissionWaiver3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -313,6 +319,7 @@ public class CommissionWaiver3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrBsis", required = true)
 	public WaivingInstruction1Code getInstructionBasis() {
 		return instructionBasis;
 	}
@@ -321,6 +328,7 @@ public class CommissionWaiver3 {
 		this.instructionBasis = instructionBasis;
 	}
 
+	@XmlElement(name = "XtndedInstrBsis", required = true)
 	public Extended350Code getExtendedInstructionBasis() {
 		return extendedInstructionBasis;
 	}
@@ -329,6 +337,7 @@ public class CommissionWaiver3 {
 		this.extendedInstructionBasis = extendedInstructionBasis;
 	}
 
+	@XmlElement(name = "WvdRate", required = true)
 	public PercentageRate getWaivedRate() {
 		return waivedRate;
 	}

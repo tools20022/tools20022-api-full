@@ -22,6 +22,7 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,6 +37,33 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Settlement#mmCentralCounterpartyEligibilityIndicator
+ * Settlement.mmCentralCounterpartyEligibilityIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Settlement#mmStandingSettlementInstruction
+ * Settlement.mmStandingSettlementInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Settlement#mmSettlementPartyRole
+ * Settlement.mmSettlementPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Settlement#mmTrade
+ * Settlement.mmTrade}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashSettlement
+ * CashSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+ * SecuritiesSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CommercialTradeSettlement
+ * CommercialTradeSettlement}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -71,33 +99,6 @@ import java.util.List;
  * StandingSettlementInstruction.mmSettlement}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashSettlement
- * CashSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesSettlement
- * SecuritiesSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CommercialTradeSettlement
- * CommercialTradeSettlement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Settlement#mmCentralCounterpartyEligibilityIndicator
- * Settlement.mmCentralCounterpartyEligibilityIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Settlement#mmStandingSettlementInstruction
- * Settlement.mmStandingSettlementInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Settlement#mmSettlementPartyRole
- * Settlement.mmSettlementPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Settlement#mmTrade
- * Settlement.mmTrade}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -130,10 +131,6 @@ public class Settlement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Settlement Settlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -167,6 +164,10 @@ public class Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Settlement Settlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -184,7 +185,7 @@ public class Settlement {
 			derivation_lazy = () -> Arrays.asList(CentralCounterPartyEligibility1Choice.mmIndicator, CentralCounterPartyEligibility1Choice.mmProprietary, CentralCounterPartyEligibility2Choice.mmIndicator,
 					CentralCounterPartyEligibility2Choice.mmProprietary, CentralCounterPartyEligibility3Choice.mmIndicator, CentralCounterPartyEligibility4Choice.mmIndicator, CentralCounterPartyEligibility4Choice.mmProprietary,
 					CentralCounterPartyEligibility5Choice.mmIndicator, CentralCounterPartyEligibility5Choice.mmProprietary);
-			elementContext_lazy = () -> Settlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Settlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CentralCounterpartyEligibilityIndicator";
@@ -192,6 +193,14 @@ public class Settlement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Settlement.class.getMethod("getCentralCounterpartyEligibilityIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected StandingSettlementInstruction standingSettlementInstruction;
@@ -213,10 +222,6 @@ public class Settlement {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction
 	 * StandingSettlementInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Settlement Settlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -463,6 +468,10 @@ public class Settlement {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Settlement Settlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -498,7 +507,7 @@ public class Settlement {
 					SecuritiesSettlementTransactionDetails28.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails26.mmStandingSettlementInstructionDetails, SettlementDetails122.mmFXStandingInstruction,
 					SettlementDetails137.mmFXStandingInstruction, SettlementDetails132.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails30.mmStandingSettlementInstructionDetails, SettlementDetails138.mmFXStandingInstruction,
 					SecuritiesSettlementTransactionDetails29.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails31.mmStandingSettlementInstructionDetails);
-			elementContext_lazy = () -> Settlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Settlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StandingSettlementInstruction";
@@ -528,10 +537,6 @@ public class Settlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SettlementPartyRole
 	 * SettlementPartyRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Settlement Settlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -540,6 +545,10 @@ public class Settlement {
 	 * NetObligation1.mmCounterpartySettlementInstructions}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Settlement Settlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -555,7 +564,7 @@ public class Settlement {
 	public static final MMBusinessAssociationEnd mmSettlementPartyRole = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetObligation1.mmCounterpartySettlementInstructions);
-			elementContext_lazy = () -> Settlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Settlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementPartyRole";
@@ -600,7 +609,7 @@ public class Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Settlement.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Settlement.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
@@ -623,9 +632,15 @@ public class Settlement {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.mmSettlement, com.tools20022.repository.entity.SettlementPartyRole.mmSettlement,
 						com.tools20022.repository.entity.StandingSettlementInstruction.mmSettlement);
 				subType_lazy = () -> Arrays.asList(CashSettlement.mmObject(), SecuritiesSettlement.mmObject(), CommercialTradeSettlement.mmObject());
-				element_lazy = () -> Arrays.asList(Settlement.mmCentralCounterpartyEligibilityIndicator, Settlement.mmStandingSettlementInstruction, Settlement.mmSettlementPartyRole, Settlement.mmTrade);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Settlement.mmCentralCounterpartyEligibilityIndicator, com.tools20022.repository.entity.Settlement.mmStandingSettlementInstruction,
+						com.tools20022.repository.entity.Settlement.mmSettlementPartyRole, com.tools20022.repository.entity.Settlement.mmTrade);
 				derivationComponent_lazy = () -> Arrays.asList(CentralCounterPartyEligibility1Choice.mmObject(), CentralCounterPartyEligibility2Choice.mmObject(), CentralCounterPartyEligibility3Choice.mmObject(),
 						CentralCounterPartyEligibility4Choice.mmObject(), CentralCounterPartyEligibility5Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Settlement.class;
 			}
 		});
 		return mmObject_lazy.get();

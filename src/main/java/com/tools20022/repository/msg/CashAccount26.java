@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account to or from which a cash entry is made.
@@ -84,6 +88,8 @@ import java.util.List;
  * CashAccount4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccount26", propOrder = {"identification", "accountOwner", "accountServicer", "accountServicerBranch", "investmentAccountType", "accountOwnerOtherIdentification"})
 public class CashAccount26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -471,6 +477,7 @@ public class CashAccount26 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentificationAndName3 getIdentification() {
 		return identification;
 	}
@@ -479,6 +486,7 @@ public class CashAccount26 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification2Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -487,6 +495,7 @@ public class CashAccount26 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public PartyIdentification2Choice getAccountServicer() {
 		return accountServicer;
 	}
@@ -495,6 +504,7 @@ public class CashAccount26 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "AcctSvcrBrnch")
 	public BranchData getAccountServicerBranch() {
 		return accountServicerBranch;
 	}
@@ -503,6 +513,7 @@ public class CashAccount26 {
 		this.accountServicerBranch = accountServicerBranch;
 	}
 
+	@XmlElement(name = "InvstmtAcctTp")
 	public InvestmentAccountType1Choice getInvestmentAccountType() {
 		return investmentAccountType;
 	}
@@ -511,6 +522,7 @@ public class CashAccount26 {
 		this.investmentAccountType = investmentAccountType;
 	}
 
+	@XmlElement(name = "AcctOwnrOthrId")
 	public List<GenericIdentification46> getAccountOwnerOtherIdentification() {
 		return accountOwnerOtherIdentification;
 	}

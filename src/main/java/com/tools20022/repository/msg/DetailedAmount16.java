@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amounts of the deposit transaction.
@@ -85,6 +89,8 @@ import java.util.List;
  * {@linkplain com.tools20022.repository.msg.DetailedAmount12 DetailedAmount12}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DetailedAmount16", propOrder = {"accountSequenceNumber", "amountToDeposit", "currency", "cashBackAmount", "fees", "donation"})
 public class DetailedAmount16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -440,6 +446,7 @@ public class DetailedAmount16 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctSeqNb")
 	public Number getAccountSequenceNumber() {
 		return accountSequenceNumber;
 	}
@@ -448,6 +455,7 @@ public class DetailedAmount16 {
 		this.accountSequenceNumber = accountSequenceNumber;
 	}
 
+	@XmlElement(name = "AmtToDpst")
 	public ImpliedCurrencyAndAmount getAmountToDeposit() {
 		return amountToDeposit;
 	}
@@ -456,6 +464,7 @@ public class DetailedAmount16 {
 		this.amountToDeposit = amountToDeposit;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -464,6 +473,7 @@ public class DetailedAmount16 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "CshBckAmt")
 	public ImpliedCurrencyAndAmount getCashBackAmount() {
 		return cashBackAmount;
 	}
@@ -472,6 +482,7 @@ public class DetailedAmount16 {
 		this.cashBackAmount = cashBackAmount;
 	}
 
+	@XmlElement(name = "Fees")
 	public List<DetailedAmount13> getFees() {
 		return fees;
 	}
@@ -480,6 +491,7 @@ public class DetailedAmount16 {
 		this.fees = fees;
 	}
 
+	@XmlElement(name = "Dontn")
 	public List<DetailedAmount13> getDonation() {
 		return donation;
 	}

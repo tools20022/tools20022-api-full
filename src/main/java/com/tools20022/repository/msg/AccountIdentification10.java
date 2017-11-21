@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides account identification information.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides account identification information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountIdentification10", propOrder = "identificationCode")
 public class AccountIdentification10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -127,6 +133,7 @@ public class AccountIdentification10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IdCd", required = true)
 	public SafekeepingAccountIdentification1Code getIdentificationCode() {
 		return identificationCode;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Scheme;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between source of identification of a financial instrument.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * IdentificationSource3Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IdentificationSource5Choice", propOrder = {"domesticIdentificationSource", "proprietaryIdentificationSource"})
 public class IdentificationSource5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -195,6 +201,7 @@ public class IdentificationSource5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DmstIdSrc", required = true)
 	public CountryCode getDomesticIdentificationSource() {
 		return domesticIdentificationSource;
 	}
@@ -203,6 +210,7 @@ public class IdentificationSource5Choice {
 		this.domesticIdentificationSource = domesticIdentificationSource;
 	}
 
+	@XmlElement(name = "PrtryIdSrc", required = true)
 	public Max35Text getProprietaryIdentificationSource() {
 		return proprietaryIdentificationSource;
 	}

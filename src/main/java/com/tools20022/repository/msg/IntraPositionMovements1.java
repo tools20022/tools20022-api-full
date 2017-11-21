@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the transactions in the response.
@@ -69,6 +73,8 @@ import java.util.List;
  * definition} = "Provides the transactions in the response."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionMovements1", propOrder = {"accountOwner", "safekeepingAccount", "statusAndReason", "movement"})
 public class IntraPositionMovements1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -270,6 +276,7 @@ public class IntraPositionMovements1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public SystemPartyIdentification5 getAccountOwner() {
 		return accountOwner;
 	}
@@ -278,6 +285,7 @@ public class IntraPositionMovements1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -286,6 +294,7 @@ public class IntraPositionMovements1 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "StsAndRsn")
 	public IntraPositionStatusAndReason1 getStatusAndReason() {
 		return statusAndReason;
 	}
@@ -294,6 +303,7 @@ public class IntraPositionMovements1 {
 		this.statusAndReason = statusAndReason;
 	}
 
+	@XmlElement(name = "Mvmnt", required = true)
 	public List<IntraPositionMovement1> getMovement() {
 		return movement;
 	}

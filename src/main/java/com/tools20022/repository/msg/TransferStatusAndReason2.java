@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the status of a transfer instruction and its reason.
@@ -137,6 +141,9 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferStatusAndReason2", propOrder = {"masterReference", "transferReference", "clientReference", "cancellationReference", "status", "pendingSettlement", "unmatched", "inRepair", "rejected", "failedSettlement",
+		"cancelled", "reversed", "cancellationPending", "tradeDate", "sendOutDate", "statusInitiator"})
 public class TransferStatusAndReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1067,6 +1074,7 @@ public class TransferStatusAndReason2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -1075,6 +1083,7 @@ public class TransferStatusAndReason2 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -1083,6 +1092,7 @@ public class TransferStatusAndReason2 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -1091,6 +1101,7 @@ public class TransferStatusAndReason2 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -1099,6 +1110,7 @@ public class TransferStatusAndReason2 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public TransferInstructionStatus2 getStatus() {
 		return status;
 	}
@@ -1107,6 +1119,7 @@ public class TransferStatusAndReason2 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "PdgSttlm", required = true)
 	public PendingSettlementStatus2 getPendingSettlement() {
 		return pendingSettlement;
 	}
@@ -1115,6 +1128,7 @@ public class TransferStatusAndReason2 {
 		this.pendingSettlement = pendingSettlement;
 	}
 
+	@XmlElement(name = "Umtchd", required = true)
 	public TransferUnmatchedStatus2 getUnmatched() {
 		return unmatched;
 	}
@@ -1123,6 +1137,7 @@ public class TransferStatusAndReason2 {
 		this.unmatched = unmatched;
 	}
 
+	@XmlElement(name = "InRpr", required = true)
 	public InRepairStatus3 getInRepair() {
 		return inRepair;
 	}
@@ -1131,6 +1146,7 @@ public class TransferStatusAndReason2 {
 		this.inRepair = inRepair;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectedStatus8Choice getRejected() {
 		return rejected;
 	}
@@ -1139,6 +1155,7 @@ public class TransferStatusAndReason2 {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "FaildSttlm", required = true)
 	public FailedSettlementStatus1 getFailedSettlement() {
 		return failedSettlement;
 	}
@@ -1147,6 +1164,7 @@ public class TransferStatusAndReason2 {
 		this.failedSettlement = failedSettlement;
 	}
 
+	@XmlElement(name = "Canc", required = true)
 	public CancelledStatus3 getCancelled() {
 		return cancelled;
 	}
@@ -1155,6 +1173,7 @@ public class TransferStatusAndReason2 {
 		this.cancelled = cancelled;
 	}
 
+	@XmlElement(name = "Rvsd", required = true)
 	public ReversedStatus1 getReversed() {
 		return reversed;
 	}
@@ -1163,6 +1182,7 @@ public class TransferStatusAndReason2 {
 		this.reversed = reversed;
 	}
 
+	@XmlElement(name = "CxlPdg", required = true)
 	public CancellationPendingStatus1 getCancellationPending() {
 		return cancellationPending;
 	}
@@ -1171,6 +1191,7 @@ public class TransferStatusAndReason2 {
 		this.cancellationPending = cancellationPending;
 	}
 
+	@XmlElement(name = "TradDt")
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
@@ -1179,6 +1200,7 @@ public class TransferStatusAndReason2 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "SndOutDt")
 	public ISODate getSendOutDate() {
 		return sendOutDate;
 	}
@@ -1187,6 +1209,7 @@ public class TransferStatusAndReason2 {
 		this.sendOutDate = sendOutDate;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification2Choice getStatusInitiator() {
 		return statusInitiator;
 	}

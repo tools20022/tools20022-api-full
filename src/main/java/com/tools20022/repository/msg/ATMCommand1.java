@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.TerminalManagementSystem;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Maintenance command to perform on an ATM.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCommand1", propOrder = {"type", "urgency", "dateTime", "commandIdentification", "commandParameters"})
 public class ATMCommand1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -358,6 +364,7 @@ public class ATMCommand1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ATMCommand1Code getType() {
 		return type;
 	}
@@ -366,6 +373,7 @@ public class ATMCommand1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Urgcy", required = true)
 	public TMSContactLevel2Code getUrgency() {
 		return urgency;
 	}
@@ -374,6 +382,7 @@ public class ATMCommand1 {
 		this.urgency = urgency;
 	}
 
+	@XmlElement(name = "DtTm")
 	public ISODateTime getDateTime() {
 		return dateTime;
 	}
@@ -382,6 +391,7 @@ public class ATMCommand1 {
 		this.dateTime = dateTime;
 	}
 
+	@XmlElement(name = "CmdId")
 	public ATMCommandIdentification1 getCommandIdentification() {
 		return commandIdentification;
 	}
@@ -390,6 +400,7 @@ public class ATMCommand1 {
 		this.commandIdentification = commandIdentification;
 	}
 
+	@XmlElement(name = "CmdParams")
 	public ATMCommandParameters1Choice getCommandParameters() {
 		return commandParameters;
 	}

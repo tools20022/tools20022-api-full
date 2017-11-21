@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AlternateSecurityIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * ISIN and an alternative format for the identification of a security. ISIN is
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityIdentification10Choice", propOrder = {"ISIN", "otherIdentification"})
 public class SecurityIdentification10Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -191,6 +197,7 @@ public class SecurityIdentification10Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ISIN", required = true)
 	public ISINIdentifier getISIN() {
 		return iSIN;
 	}
@@ -199,6 +206,7 @@ public class SecurityIdentification10Choice {
 		this.iSIN = iSIN;
 	}
 
+	@XmlElement(name = "OthrId", required = true)
 	public AlternateSecurityIdentification3 getOtherIdentification() {
 		return otherIdentification;
 	}

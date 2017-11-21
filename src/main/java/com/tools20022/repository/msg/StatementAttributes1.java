@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.ReportingService;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account and statement parameters for which a statement is requested.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Account and statement parameters for which a statement is requested."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatementAttributes1", propOrder = {"accountIdentification", "subAccountIdentification", "accountOwner", "statementType", "statementTerm", "frequency", "updateType", "statementBasis"})
 public class StatementAttributes1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -472,6 +478,7 @@ public class StatementAttributes1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentificationFormatChoice getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -480,6 +487,7 @@ public class StatementAttributes1 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "SubAcctId")
 	public AccountIdentificationFormatChoice getSubAccountIdentification() {
 		return subAccountIdentification;
 	}
@@ -488,6 +496,7 @@ public class StatementAttributes1 {
 		this.subAccountIdentification = subAccountIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification2Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -496,6 +505,7 @@ public class StatementAttributes1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "StmtTp", required = true)
 	public StatementType1Choice getStatementType() {
 		return statementType;
 	}
@@ -504,6 +514,7 @@ public class StatementAttributes1 {
 		this.statementType = statementType;
 	}
 
+	@XmlElement(name = "StmtTerm")
 	public StatementTerm1Choice getStatementTerm() {
 		return statementTerm;
 	}
@@ -512,6 +523,7 @@ public class StatementAttributes1 {
 		this.statementTerm = statementTerm;
 	}
 
+	@XmlElement(name = "Frqcy")
 	public FrequencyCodeAndDSSCode1Choice getFrequency() {
 		return frequency;
 	}
@@ -520,6 +532,7 @@ public class StatementAttributes1 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "UpdTp")
 	public StatementUpdateTypeCodeAndDSSCodeChoice getUpdateType() {
 		return updateType;
 	}
@@ -528,6 +541,7 @@ public class StatementAttributes1 {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "StmtBsis")
 	public StatementBasisCodeAndDSSCodeChoice getStatementBasis() {
 		return statementBasis;
 	}

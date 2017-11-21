@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.SystemSecuritiesAccount3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to report between the securities account reference data
@@ -62,6 +66,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesAccountOrBusinessError1Choice", propOrder = {"securitiesAccount", "businessError"})
 public class SecuritiesAccountOrBusinessError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -164,6 +170,7 @@ public class SecuritiesAccountOrBusinessError1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesAcct", required = true)
 	public SystemSecuritiesAccount3 getSecuritiesAccount() {
 		return securitiesAccount;
 	}
@@ -172,6 +179,7 @@ public class SecuritiesAccountOrBusinessError1Choice {
 		this.securitiesAccount = securitiesAccount;
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling3> getBusinessError() {
 		return businessError;
 	}

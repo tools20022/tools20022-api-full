@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between different instruction cancellation request statuses.
@@ -96,6 +100,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructionCancellationRequestStatus3Choice", propOrder = {"cancellationCompleted", "accepted", "rejected", "pendingCancellation", "proprietaryStatus"})
 public class InstructionCancellationRequestStatus3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -375,6 +381,7 @@ public class InstructionCancellationRequestStatus3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlCmpltd", required = true)
 	public CancelledStatus3Choice getCancellationCompleted() {
 		return cancellationCompleted;
 	}
@@ -383,6 +390,7 @@ public class InstructionCancellationRequestStatus3Choice {
 		this.cancellationCompleted = cancellationCompleted;
 	}
 
+	@XmlElement(name = "Accptd", required = true)
 	public AcceptedStatus1Choice getAccepted() {
 		return accepted;
 	}
@@ -391,6 +399,7 @@ public class InstructionCancellationRequestStatus3Choice {
 		this.accepted = accepted;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectedStatus1Choice getRejected() {
 		return rejected;
 	}
@@ -399,6 +408,7 @@ public class InstructionCancellationRequestStatus3Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "PdgCxl", required = true)
 	public PendingCancellationStatus1Choice getPendingCancellation() {
 		return pendingCancellation;
 	}
@@ -407,6 +417,7 @@ public class InstructionCancellationRequestStatus3Choice {
 		this.pendingCancellation = pendingCancellation;
 	}
 
+	@XmlElement(name = "PrtrySts", required = true)
 	public ProprietaryStatusAndReason1 getProprietaryStatus() {
 		return proprietaryStatus;
 	}

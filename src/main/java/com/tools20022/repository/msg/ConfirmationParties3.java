@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parties used for acting parties that apply either to the whole message or to
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ConfirmationParties3", propOrder = {"affirmingParty", "buyer", "borrower", "seller", "lender", "tradeBeneficiaryParty"})
 public class ConfirmationParties3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -404,6 +410,7 @@ public class ConfirmationParties3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AffrmgPty", required = true)
 	public ConfirmationPartyDetails4 getAffirmingParty() {
 		return affirmingParty;
 	}
@@ -412,6 +419,7 @@ public class ConfirmationParties3 {
 		this.affirmingParty = affirmingParty;
 	}
 
+	@XmlElement(name = "Buyr")
 	public ConfirmationPartyDetails2 getBuyer() {
 		return buyer;
 	}
@@ -420,6 +428,7 @@ public class ConfirmationParties3 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Brrwr")
 	public ConfirmationPartyDetails2 getBorrower() {
 		return borrower;
 	}
@@ -428,6 +437,7 @@ public class ConfirmationParties3 {
 		this.borrower = borrower;
 	}
 
+	@XmlElement(name = "Sellr")
 	public ConfirmationPartyDetails2 getSeller() {
 		return seller;
 	}
@@ -436,6 +446,7 @@ public class ConfirmationParties3 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "Lndr")
 	public ConfirmationPartyDetails2 getLender() {
 		return lender;
 	}
@@ -444,6 +455,7 @@ public class ConfirmationParties3 {
 		this.lender = lender;
 	}
 
+	@XmlElement(name = "TradBnfcryPty")
 	public ConfirmationPartyDetails3 getTradeBeneficiaryParty() {
 		return tradeBeneficiaryParty;
 	}

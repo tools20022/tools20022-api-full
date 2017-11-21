@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about total instructed balance.
@@ -69,6 +73,8 @@ import java.util.List;
  * InstructedBalanceDetails3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructedBalanceDetails5", propOrder = {"totalInstructedBalance", "optionDetails"})
 public class InstructedBalanceDetails5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class InstructedBalanceDetails5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlInstdBal", required = true)
 	public BalanceFormat5Choice getTotalInstructedBalance() {
 		return totalInstructedBalance;
 	}
@@ -204,6 +211,7 @@ public class InstructedBalanceDetails5 {
 		this.totalInstructedBalance = totalInstructedBalance;
 	}
 
+	@XmlElement(name = "OptnDtls")
 	public List<InstructedCorporateActionOption6> getOptionDetails() {
 		return optionDetails;
 	}

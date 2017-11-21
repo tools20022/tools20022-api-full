@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account between an investor(s) and a fund manager or a fund. The account can
@@ -162,6 +166,10 @@ import java.util.List;
  * InvestmentAccount34}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccount37", propOrder = {"identification", "name", "designation", "type", "ownershipType", "taxExemption", "statementFrequency", "referenceCurrency", "language", "incomePreference", "reinvestmentDetails",
+		"taxWithholdingMethod", "letterIntentDetails", "accumulationRightReference", "requiredSignatoriesNumber", "fundFamilyName", "fundDetails", "roundingDetails", "accountServicer", "blockedStatus", "accountUsageType",
+		"foreignStatusCertification", "accountSignatureDateTime", "transactionChannelType", "investmentAccountCategory"})
 public class InvestmentAccount37 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1778,6 +1786,7 @@ public class InvestmentAccount37 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public AccountIdentification1 getIdentification() {
 		return identification;
 	}
@@ -1786,6 +1795,7 @@ public class InvestmentAccount37 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max35Text getName() {
 		return name;
 	}
@@ -1794,6 +1804,7 @@ public class InvestmentAccount37 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Dsgnt")
 	public Max35Text getDesignation() {
 		return designation;
 	}
@@ -1802,6 +1813,7 @@ public class InvestmentAccount37 {
 		this.designation = designation;
 	}
 
+	@XmlElement(name = "Tp")
 	public AccountType1Choice getType() {
 		return type;
 	}
@@ -1810,6 +1822,7 @@ public class InvestmentAccount37 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "OwnrshTp", required = true)
 	public OwnershipType1Choice getOwnershipType() {
 		return ownershipType;
 	}
@@ -1818,6 +1831,7 @@ public class InvestmentAccount37 {
 		this.ownershipType = ownershipType;
 	}
 
+	@XmlElement(name = "TaxXmptn")
 	public TaxExemptionReason1Choice getTaxExemption() {
 		return taxExemption;
 	}
@@ -1826,6 +1840,7 @@ public class InvestmentAccount37 {
 		this.taxExemption = taxExemption;
 	}
 
+	@XmlElement(name = "StmtFrqcy")
 	public StatementFrequencyReason1Choice getStatementFrequency() {
 		return statementFrequency;
 	}
@@ -1834,6 +1849,7 @@ public class InvestmentAccount37 {
 		this.statementFrequency = statementFrequency;
 	}
 
+	@XmlElement(name = "RefCcy")
 	public ActiveCurrencyCode getReferenceCurrency() {
 		return referenceCurrency;
 	}
@@ -1842,6 +1858,7 @@ public class InvestmentAccount37 {
 		this.referenceCurrency = referenceCurrency;
 	}
 
+	@XmlElement(name = "Lang")
 	public LanguageCode getLanguage() {
 		return language;
 	}
@@ -1850,6 +1867,7 @@ public class InvestmentAccount37 {
 		this.language = language;
 	}
 
+	@XmlElement(name = "IncmPref")
 	public IncomePreference1Code getIncomePreference() {
 		return incomePreference;
 	}
@@ -1858,6 +1876,7 @@ public class InvestmentAccount37 {
 		this.incomePreference = incomePreference;
 	}
 
+	@XmlElement(name = "RinvstmtDtls")
 	public List<Reinvestment1> getReinvestmentDetails() {
 		return reinvestmentDetails;
 	}
@@ -1866,6 +1885,7 @@ public class InvestmentAccount37 {
 		this.reinvestmentDetails = reinvestmentDetails;
 	}
 
+	@XmlElement(name = "TaxWhldgMtd")
 	public TaxWithholdingMethod2Code getTaxWithholdingMethod() {
 		return taxWithholdingMethod;
 	}
@@ -1874,6 +1894,7 @@ public class InvestmentAccount37 {
 		this.taxWithholdingMethod = taxWithholdingMethod;
 	}
 
+	@XmlElement(name = "LttrInttDtls")
 	public LetterIntent1 getLetterIntentDetails() {
 		return letterIntentDetails;
 	}
@@ -1882,6 +1903,7 @@ public class InvestmentAccount37 {
 		this.letterIntentDetails = letterIntentDetails;
 	}
 
+	@XmlElement(name = "AcmltnRghtRef")
 	public Max35Text getAccumulationRightReference() {
 		return accumulationRightReference;
 	}
@@ -1890,6 +1912,7 @@ public class InvestmentAccount37 {
 		this.accumulationRightReference = accumulationRightReference;
 	}
 
+	@XmlElement(name = "ReqrdSgntriesNb")
 	public Number getRequiredSignatoriesNumber() {
 		return requiredSignatoriesNumber;
 	}
@@ -1898,6 +1921,7 @@ public class InvestmentAccount37 {
 		this.requiredSignatoriesNumber = requiredSignatoriesNumber;
 	}
 
+	@XmlElement(name = "FndFmlyNm")
 	public Max350Text getFundFamilyName() {
 		return fundFamilyName;
 	}
@@ -1906,6 +1930,7 @@ public class InvestmentAccount37 {
 		this.fundFamilyName = fundFamilyName;
 	}
 
+	@XmlElement(name = "FndDtls")
 	public List<FinancialInstrument29> getFundDetails() {
 		return fundDetails;
 	}
@@ -1914,6 +1939,7 @@ public class InvestmentAccount37 {
 		this.fundDetails = fundDetails;
 	}
 
+	@XmlElement(name = "RndgDtls")
 	public RoundingParameters1 getRoundingDetails() {
 		return roundingDetails;
 	}
@@ -1922,6 +1948,7 @@ public class InvestmentAccount37 {
 		this.roundingDetails = roundingDetails;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public PartyIdentification2Choice getAccountServicer() {
 		return accountServicer;
 	}
@@ -1930,6 +1957,7 @@ public class InvestmentAccount37 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "BlckdSts")
 	public List<Blocked1> getBlockedStatus() {
 		return blockedStatus;
 	}
@@ -1938,6 +1966,7 @@ public class InvestmentAccount37 {
 		this.blockedStatus = blockedStatus;
 	}
 
+	@XmlElement(name = "AcctUsgTp")
 	public AccountUsageType1Choice getAccountUsageType() {
 		return accountUsageType;
 	}
@@ -1946,6 +1975,7 @@ public class InvestmentAccount37 {
 		this.accountUsageType = accountUsageType;
 	}
 
+	@XmlElement(name = "FrgnStsCertfctn")
 	public Provided1Code getForeignStatusCertification() {
 		return foreignStatusCertification;
 	}
@@ -1954,6 +1984,7 @@ public class InvestmentAccount37 {
 		this.foreignStatusCertification = foreignStatusCertification;
 	}
 
+	@XmlElement(name = "AcctSgntrDtTm")
 	public DateAndDateTimeChoice getAccountSignatureDateTime() {
 		return accountSignatureDateTime;
 	}
@@ -1962,6 +1993,7 @@ public class InvestmentAccount37 {
 		this.accountSignatureDateTime = accountSignatureDateTime;
 	}
 
+	@XmlElement(name = "TxChanlTp")
 	public TransactionChannelType1Choice getTransactionChannelType() {
 		return transactionChannelType;
 	}
@@ -1970,6 +2002,7 @@ public class InvestmentAccount37 {
 		this.transactionChannelType = transactionChannelType;
 	}
 
+	@XmlElement(name = "InvstmtAcctCtgy")
 	public InvestmentAccountCategory1Choice getInvestmentAccountCategory() {
 		return investmentAccountCategory;
 	}

@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of data which contains the link to the opening of the non deliverable
@@ -93,6 +97,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ValuationData2", propOrder = {"valuationReference", "settlementCurrency", "additionalValuationInformation", "settlementParty"})
 public class ValuationData2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -297,6 +303,7 @@ public class ValuationData2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ValtnRef", required = true)
 	public Max35Text getValuationReference() {
 		return valuationReference;
 	}
@@ -305,6 +312,7 @@ public class ValuationData2 {
 		this.valuationReference = valuationReference;
 	}
 
+	@XmlElement(name = "SttlmCcy")
 	public ActiveOrHistoricCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -313,6 +321,7 @@ public class ValuationData2 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "AddtlValtnInf")
 	public Max140Text getAdditionalValuationInformation() {
 		return additionalValuationInformation;
 	}
@@ -321,6 +330,7 @@ public class ValuationData2 {
 		this.additionalValuationInformation = additionalValuationInformation;
 	}
 
+	@XmlElement(name = "SttlmPty")
 	public PartyIdentification8Choice getSettlementParty() {
 		return settlementParty;
 	}

@@ -40,6 +40,19 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccountMandate#mmServices
+ * CashAccountMandate.mmServices}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccountMandate#mmCashAccountContract
+ * CashAccountMandate.mmCashAccountContract}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -62,19 +75,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CashAccountService#mmCashAccountMandate
  * CashAccountService.mmCashAccountMandate}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccountMandate#mmServices
- * CashAccountMandate.mmServices}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccountMandate#mmCashAccountContract
- * CashAccountMandate.mmCashAccountContract}</li>
  * </ul>
  * </li>
  * <li>
@@ -134,7 +134,7 @@ public class CashAccountMandate extends Mandate {
 	 */
 	public static final MMBusinessAssociationEnd mmServices = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashAccountMandate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountMandate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Services";
@@ -181,7 +181,7 @@ public class CashAccountMandate extends Mandate {
 	 */
 	public static final MMBusinessAssociationEnd mmCashAccountContract = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashAccountMandate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountMandate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccountContract";
@@ -202,8 +202,13 @@ public class CashAccountMandate extends Mandate {
 				definition = "Authorisation given to a mandate holder to perform some operation on an account.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccountContract.mmCashAccountMandate, com.tools20022.repository.entity.CashAccountService.mmCashAccountMandate);
 				superType_lazy = () -> Mandate.mmObject();
-				element_lazy = () -> Arrays.asList(CashAccountMandate.mmServices, CashAccountMandate.mmCashAccountContract);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccountMandate.mmServices, com.tools20022.repository.entity.CashAccountMandate.mmCashAccountContract);
 				derivationComponent_lazy = () -> Arrays.asList(OperationMandate1.mmObject(), OperationMandate2.mmObject(), OperationMandate3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CashAccountMandate.class;
 			}
 		});
 		return mmObject_lazy.get();

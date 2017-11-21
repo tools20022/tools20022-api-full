@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Chain of parties involved in the settlement of a transaction, including
@@ -66,6 +70,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementParties35", propOrder = {"standingSettlementParties", "localMarketIdentification", "registrationDetails"})
 public class SettlementParties35 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -219,6 +225,7 @@ public class SettlementParties35 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StgSttlmPties", required = true)
 	public SettlementParties32 getStandingSettlementParties() {
 		return standingSettlementParties;
 	}
@@ -227,6 +234,7 @@ public class SettlementParties35 {
 		this.standingSettlementParties = standingSettlementParties;
 	}
 
+	@XmlElement(name = "LclMktId")
 	public List<GenericIdentification49> getLocalMarketIdentification() {
 		return localMarketIdentification;
 	}
@@ -235,6 +243,7 @@ public class SettlementParties35 {
 		this.localMarketIdentification = localMarketIdentification;
 	}
 
+	@XmlElement(name = "RegnDtls")
 	public PartyIdentification99Choice getRegistrationDetails() {
 		return registrationDetails;
 	}

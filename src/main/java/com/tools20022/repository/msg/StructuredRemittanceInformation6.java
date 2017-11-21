@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Structured information supplied to enable the matching, i.e. reconciliation,
@@ -86,6 +90,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StructuredRemittanceInformation6", propOrder = {"referredDocumentInformation", "referredDocumentRelatedDate", "referredDocumentAmount", "creditorReferenceInformation", "invoicer", "invoicee",
+		"additionalRemittanceInformation"})
 public class StructuredRemittanceInformation6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -454,6 +461,7 @@ public class StructuredRemittanceInformation6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RfrdDocInf")
 	public ReferredDocumentInformation1 getReferredDocumentInformation() {
 		return referredDocumentInformation;
 	}
@@ -462,6 +470,7 @@ public class StructuredRemittanceInformation6 {
 		this.referredDocumentInformation = referredDocumentInformation;
 	}
 
+	@XmlElement(name = "RfrdDocRltdDt")
 	public ISODate getReferredDocumentRelatedDate() {
 		return referredDocumentRelatedDate;
 	}
@@ -470,6 +479,7 @@ public class StructuredRemittanceInformation6 {
 		this.referredDocumentRelatedDate = referredDocumentRelatedDate;
 	}
 
+	@XmlElement(name = "RfrdDocAmt")
 	public List<ReferredDocumentAmount1Choice> getReferredDocumentAmount() {
 		return referredDocumentAmount;
 	}
@@ -478,6 +488,7 @@ public class StructuredRemittanceInformation6 {
 		this.referredDocumentAmount = referredDocumentAmount;
 	}
 
+	@XmlElement(name = "CdtrRefInf")
 	public CreditorReferenceInformation1 getCreditorReferenceInformation() {
 		return creditorReferenceInformation;
 	}
@@ -486,6 +497,7 @@ public class StructuredRemittanceInformation6 {
 		this.creditorReferenceInformation = creditorReferenceInformation;
 	}
 
+	@XmlElement(name = "Invcr")
 	public PartyIdentification8 getInvoicer() {
 		return invoicer;
 	}
@@ -494,6 +506,7 @@ public class StructuredRemittanceInformation6 {
 		this.invoicer = invoicer;
 	}
 
+	@XmlElement(name = "Invcee")
 	public PartyIdentification8 getInvoicee() {
 		return invoicee;
 	}
@@ -502,6 +515,7 @@ public class StructuredRemittanceInformation6 {
 		this.invoicee = invoicee;
 	}
 
+	@XmlElement(name = "AddtlRmtInf")
 	public Max140Text getAdditionalRemittanceInformation() {
 		return additionalRemittanceInformation;
 	}

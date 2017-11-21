@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.GeneratedReason3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of generated status.
@@ -77,6 +81,8 @@ import java.util.List;
  * GeneratedStatus3Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GeneratedStatus5Choice", propOrder = {"noSpecifiedReason", "reason"})
 public class GeneratedStatus5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -221,6 +227,7 @@ public class GeneratedStatus5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
@@ -229,6 +236,7 @@ public class GeneratedStatus5Choice {
 		this.noSpecifiedReason = noSpecifiedReason;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public List<GeneratedReason3> getReason() {
 		return reason;
 	}

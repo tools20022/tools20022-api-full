@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.StandingSettlementInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the standing settlement instruction to be applied.
@@ -92,6 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingSettlementInstruction9", propOrder = {"settlementStandingInstructionDatabase", "vendor", "otherDeliveringSettlementParties", "otherReceivingSettlementParties"})
 public class StandingSettlementInstruction9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -317,6 +323,7 @@ public class StandingSettlementInstruction9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmStgInstrDB", required = true)
 	public SettlementStandingInstructionDatabase3Choice getSettlementStandingInstructionDatabase() {
 		return settlementStandingInstructionDatabase;
 	}
@@ -325,6 +332,7 @@ public class StandingSettlementInstruction9 {
 		this.settlementStandingInstructionDatabase = settlementStandingInstructionDatabase;
 	}
 
+	@XmlElement(name = "Vndr")
 	public PartyIdentification32Choice getVendor() {
 		return vendor;
 	}
@@ -333,6 +341,7 @@ public class StandingSettlementInstruction9 {
 		this.vendor = vendor;
 	}
 
+	@XmlElement(name = "OthrDlvrgSttlmPties")
 	public SettlementParties23 getOtherDeliveringSettlementParties() {
 		return otherDeliveringSettlementParties;
 	}
@@ -341,6 +350,7 @@ public class StandingSettlementInstruction9 {
 		this.otherDeliveringSettlementParties = otherDeliveringSettlementParties;
 	}
 
+	@XmlElement(name = "OthrRcvgSttlmPties")
 	public SettlementParties23 getOtherReceivingSettlementParties() {
 		return otherReceivingSettlementParties;
 	}

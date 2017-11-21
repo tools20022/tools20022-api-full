@@ -70,6 +70,11 @@ public class InstructingReimbursementAgent extends CashSettlementInstructionPart
 				definition = "Specifies the agent through which the instructing agent will reimburse the instructed agent.\nUsage: If the instructing and instructed agents have the same reimbursement agent, then only InstructingReimbursementAgent must be used.";
 				superType_lazy = () -> CashSettlementInstructionPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InstructingReimbursementAgent.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

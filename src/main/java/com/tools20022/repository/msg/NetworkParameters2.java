@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.NetworkAccess;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Configuration parameters to communicate with a host.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * NetworkParameters1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NetworkParameters2", propOrder = {"address", "portNumber", "delay"})
 public class NetworkParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -217,6 +223,7 @@ public class NetworkParameters2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Adr", required = true)
 	public Max35Text getAddress() {
 		return address;
 	}
@@ -225,6 +232,7 @@ public class NetworkParameters2 {
 		this.address = address;
 	}
 
+	@XmlElement(name = "PortNb")
 	public Number getPortNumber() {
 		return portNumber;
 	}
@@ -233,6 +241,7 @@ public class NetworkParameters2 {
 		this.portNumber = portNumber;
 	}
 
+	@XmlElement(name = "Dely")
 	public ISOTime getDelay() {
 		return delay;
 	}

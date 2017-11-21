@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about identification and account of the party .
@@ -82,6 +86,8 @@ import java.util.List;
  * "Provides information about identification and account of the party ."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount56", propOrder = {"identification", "safekeepingAccount", "processingIdentification", "additionalInformation", "alternateIdentification"})
 public class PartyIdentificationAndAccount56 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -339,6 +345,7 @@ public class PartyIdentificationAndAccount56 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification54Choice getIdentification() {
 		return identification;
 	}
@@ -347,6 +354,7 @@ public class PartyIdentificationAndAccount56 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public RestrictedFINXMax35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -355,6 +363,7 @@ public class PartyIdentificationAndAccount56 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public RestrictedFINXMax16Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -363,6 +372,7 @@ public class PartyIdentificationAndAccount56 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public RestrictedFINXMax350Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -371,6 +381,7 @@ public class PartyIdentificationAndAccount56 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public List<AlternatePartyIdentification3> getAlternateIdentification() {
 		return alternateIdentification;
 	}

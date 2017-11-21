@@ -35,6 +35,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TaxPartyRole
+ * TaxPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -51,9 +54,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TaxReporting2.mmTaxPayer}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TaxPartyRole
- * TaxPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -84,6 +84,11 @@ public class TaxPayer extends TaxPartyRole {
 				definition = "Party that settles tax amounts. May be different from the tax debtor and tax creditor.";
 				derivationElement_lazy = () -> Arrays.asList(TaxParty1.mmTaxType, TaxParty2.mmTaxType, TaxParty3.mmTaxType, TaxReporting1.mmTaxPayer, TaxReporting2.mmTaxPayer);
 				superType_lazy = () -> TaxPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TaxPayer.class;
 			}
 		});
 		return mmObject_lazy.get();

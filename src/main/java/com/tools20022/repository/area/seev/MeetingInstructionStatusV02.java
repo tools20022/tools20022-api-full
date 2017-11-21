@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.MessageIdentification;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.SecurityIdentification3;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -59,9 +61,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.006.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
@@ -118,6 +117,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.006.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -137,6 +139,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingInstructionStatusV02", propOrder = {"meetingInstructionStatusIdentification", "instructionIdentification", "instructionCancellationIdentification", "meetingReference", "reportingParty", "securityIdentification",
+		"instructionStatus", "cancellationStatus"})
 public class MeetingInstructionStatusV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -146,6 +151,10 @@ public class MeetingInstructionStatusV02 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV02
+	 * MeetingInstructionStatusV02}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -158,10 +167,6 @@ public class MeetingInstructionStatusV02 {
 	 * MeetingInstructionStatusV02.mmInstructionCancellationIdentification}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV02
-	 * MeetingInstructionStatusV02}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -180,8 +185,9 @@ public class MeetingInstructionStatusV02 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionOrInstructionCancellationIdentificationRule";
 			definition = "Either the InstructionIdentification or the InstructionCancellationIdentification must be present, but not both.";
-			messageDefinition_lazy = () -> MeetingInstructionStatusV02.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(MeetingInstructionStatusV02.mmInstructionIdentification, MeetingInstructionStatusV02.mmInstructionCancellationIdentification);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmInstructionIdentification,
+					com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmInstructionCancellationIdentification);
 		}
 	};
 	/**
@@ -190,6 +196,10 @@ public class MeetingInstructionStatusV02 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV02
+	 * MeetingInstructionStatusV02}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -202,10 +212,6 @@ public class MeetingInstructionStatusV02 {
 	 * MeetingInstructionStatusV02.mmCancellationStatus}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV02
-	 * MeetingInstructionStatusV02}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -224,8 +230,8 @@ public class MeetingInstructionStatusV02 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionOrCancellationStatusRule";
 			definition = "Either the InstructionStatus or the CancellationStatus must be present, but not both.";
-			messageDefinition_lazy = () -> MeetingInstructionStatusV02.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(MeetingInstructionStatusV02.mmInstructionStatus, MeetingInstructionStatusV02.mmCancellationStatus);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmInstructionStatus, com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmCancellationStatus);
 		}
 	};
 	protected MessageIdentification1 meetingInstructionStatusIdentification;
@@ -261,6 +267,14 @@ public class MeetingInstructionStatusV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionStatusV02.class.getMethod("getMeetingInstructionStatusIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MessageIdentification instructionIdentification;
@@ -300,6 +314,14 @@ public class MeetingInstructionStatusV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionStatusV02.class.getMethod("getInstructionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MessageIdentification instructionCancellationIdentification;
 	/**
@@ -338,6 +360,14 @@ public class MeetingInstructionStatusV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionStatusV02.class.getMethod("getInstructionCancellationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MeetingReference3 meetingReference;
 	/**
@@ -372,6 +402,14 @@ public class MeetingInstructionStatusV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionStatusV02.class.getMethod("getMeetingReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification9Choice reportingParty;
@@ -408,6 +446,14 @@ public class MeetingInstructionStatusV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionStatusV02.class.getMethod("getReportingParty", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecurityIdentification3 securityIdentification;
 	/**
@@ -443,6 +489,14 @@ public class MeetingInstructionStatusV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionStatusV02.class.getMethod("getSecurityIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InstructionStatus1Choice instructionStatus;
@@ -481,6 +535,14 @@ public class MeetingInstructionStatusV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> InstructionStatus1Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionStatusV02.class.getMethod("getInstructionStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CancellationStatus1Choice cancellationStatus;
@@ -521,6 +583,14 @@ public class MeetingInstructionStatusV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> CancellationStatus1Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionStatusV02.class.getMethod("getCancellationStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -531,13 +601,16 @@ public class MeetingInstructionStatusV02 {
 				definition = "Scope\r\nThe Receiver of the MeetingInstruction or MeetingInstructionCancellationRequest sends the MeetingInstructionStatus message to the Sender of these messages.\r\nThe message gives the status of a complete message or of one or more specific instructions within the message.\r\nUsage\r\nThe MeetingInstructionStatus message is used for four purposes.\r\nFirst, it provides the status on the processing of a MeetingInstructionCancellationRequest message, ie, whether the request message is rejected or accepted.\r\nSecond, it is used to provide a global processing or rejection status of a MeetingInstruction message.\r\nThird, it is used to provide a detailed processing or rejection status of a MeetingInstruction message, ie, for each instruction in the MeetingInstruction message the processing or rejection status is individually reported by using the InstructionIdentification element. This identification allows the receiver of the status message to link the status confirmation to its original instruction.\r\nThe blocking of securities should be confirmed via an MT 508 (Intra-Position Advice).\r\nFourth, it is used as a reminder to request voting instructions. This is done by indicating NONREF in the Identification element of the InstructionIdentification component and by using the status code NotReceived in the ProcessingStatus.";
 				nextVersions_lazy = () -> Arrays.asList(MeetingInstructionStatusV03.mmObject());
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(MeetingInstructionStatusV02.mmInstructionOrInstructionCancellationIdentificationRule, MeetingInstructionStatusV02.mmInstructionOrCancellationStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmInstructionOrInstructionCancellationIdentificationRule,
+						com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmInstructionOrCancellationStatusRule);
 				rootElement = "Document";
 				xmlTag = "MtgInstrSts";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionStatusV02.mmMeetingInstructionStatusIdentification, MeetingInstructionStatusV02.mmInstructionIdentification,
-						MeetingInstructionStatusV02.mmInstructionCancellationIdentification, MeetingInstructionStatusV02.mmMeetingReference, MeetingInstructionStatusV02.mmReportingParty,
-						MeetingInstructionStatusV02.mmSecurityIdentification, MeetingInstructionStatusV02.mmInstructionStatus, MeetingInstructionStatusV02.mmCancellationStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmMeetingInstructionStatusIdentification,
+						com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmInstructionIdentification, com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmInstructionCancellationIdentification,
+						com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmMeetingReference, com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmReportingParty,
+						com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmSecurityIdentification, com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmInstructionStatus,
+						com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmCancellationStatus);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -547,10 +620,16 @@ public class MeetingInstructionStatusV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingInstructionStatusV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MtgInstrStsId", required = true)
 	public MessageIdentification1 getMeetingInstructionStatusIdentification() {
 		return meetingInstructionStatusIdentification;
 	}
@@ -559,6 +638,7 @@ public class MeetingInstructionStatusV02 {
 		this.meetingInstructionStatusIdentification = meetingInstructionStatusIdentification;
 	}
 
+	@XmlElement(name = "InstrId", required = true)
 	public MessageIdentification getInstructionIdentification() {
 		return instructionIdentification;
 	}
@@ -567,6 +647,7 @@ public class MeetingInstructionStatusV02 {
 		this.instructionIdentification = instructionIdentification;
 	}
 
+	@XmlElement(name = "InstrCxlId", required = true)
 	public MessageIdentification getInstructionCancellationIdentification() {
 		return instructionCancellationIdentification;
 	}
@@ -575,6 +656,7 @@ public class MeetingInstructionStatusV02 {
 		this.instructionCancellationIdentification = instructionCancellationIdentification;
 	}
 
+	@XmlElement(name = "MtgRef", required = true)
 	public MeetingReference3 getMeetingReference() {
 		return meetingReference;
 	}
@@ -583,6 +665,7 @@ public class MeetingInstructionStatusV02 {
 		this.meetingReference = meetingReference;
 	}
 
+	@XmlElement(name = "RptgPty", required = true)
 	public PartyIdentification9Choice getReportingParty() {
 		return reportingParty;
 	}
@@ -591,6 +674,7 @@ public class MeetingInstructionStatusV02 {
 		this.reportingParty = reportingParty;
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification3 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -599,6 +683,7 @@ public class MeetingInstructionStatusV02 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "InstrSts", required = true)
 	public InstructionStatus1Choice getInstructionStatus() {
 		return instructionStatus;
 	}
@@ -607,11 +692,18 @@ public class MeetingInstructionStatusV02 {
 		this.instructionStatus = instructionStatus;
 	}
 
+	@XmlElement(name = "CxlSts", required = true)
 	public CancellationStatus1Choice getCancellationStatus() {
 		return cancellationStatus;
 	}
 
 	public void setCancellationStatus(CancellationStatus1Choice cancellationStatus) {
 		this.cancellationStatus = cancellationStatus;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.006.02.02")
+	static public class Document {
+		@XmlElement(name = "MtgInstrSts", required = true)
+		public MeetingInstructionStatusV02 messageBody;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Future1;
 import com.tools20022.repository.msg.Future2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,14 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Future#mmFutureRule
- * Future.mmFutureRule}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -61,6 +54,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.FutureRule#mmBaseInterestRate
  * FutureRule.mmBaseInterestRate}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Future#mmFutureRule
+ * Future.mmFutureRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -91,10 +92,6 @@ public class FutureRule {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.TimeUnitCode
 	 * TimeUnitCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.FutureRule FutureRule}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -104,6 +101,10 @@ public class FutureRule {
 	 * Future2.mmTimeUnit}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.FutureRule FutureRule}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -119,7 +120,7 @@ public class FutureRule {
 	public static final MMBusinessAttribute mmTimeType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Future1.mmTimeUnit, Future2.mmTimeUnit);
-			elementContext_lazy = () -> FutureRule.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FutureRule.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TimeType";
@@ -127,6 +128,14 @@ public class FutureRule {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TimeUnitCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FutureRule.class.getMethod("getTimeType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Future relatedFutureInstrument;
@@ -163,7 +172,7 @@ public class FutureRule {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedFutureInstrument = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> FutureRule.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FutureRule.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedFutureInstrument";
@@ -204,7 +213,7 @@ public class FutureRule {
 	 */
 	public static final MMBusinessAttribute mmMaximumTimeToMaturity = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> FutureRule.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FutureRule.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumTimeToMaturity";
@@ -212,6 +221,14 @@ public class FutureRule {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FutureRule.class.getMethod("getMaximumTimeToMaturity", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number minimumTimeToMaturity;
@@ -243,7 +260,7 @@ public class FutureRule {
 	 */
 	public static final MMBusinessAttribute mmMinimumTimeToMaturity = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> FutureRule.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FutureRule.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumTimeToMaturity";
@@ -251,6 +268,14 @@ public class FutureRule {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FutureRule.class.getMethod("getMinimumTimeToMaturity", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate baseInterestRate;
@@ -281,7 +306,7 @@ public class FutureRule {
 	 */
 	public static final MMBusinessAttribute mmBaseInterestRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> FutureRule.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FutureRule.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BaseInterestRate";
@@ -289,6 +314,14 @@ public class FutureRule {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FutureRule.class.getMethod("getBaseInterestRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -300,7 +333,13 @@ public class FutureRule {
 				name = "FutureRule";
 				definition = "Timing characteristics of the maturity of the future.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Future.mmFutureRule);
-				element_lazy = () -> Arrays.asList(FutureRule.mmTimeType, FutureRule.mmRelatedFutureInstrument, FutureRule.mmMaximumTimeToMaturity, FutureRule.mmMinimumTimeToMaturity, FutureRule.mmBaseInterestRate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.FutureRule.mmTimeType, com.tools20022.repository.entity.FutureRule.mmRelatedFutureInstrument,
+						com.tools20022.repository.entity.FutureRule.mmMaximumTimeToMaturity, com.tools20022.repository.entity.FutureRule.mmMinimumTimeToMaturity, com.tools20022.repository.entity.FutureRule.mmBaseInterestRate);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FutureRule.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the terms of the foreign exchange transaction.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides information about the terms of the foreign exchange transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ForeignExchangeTerms19", propOrder = {"unitCurrency", "quotedCurrency", "exchangeRate"})
 public class ForeignExchangeTerms19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -239,6 +245,7 @@ public class ForeignExchangeTerms19 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitCcy", required = true)
 	public ActiveCurrencyCode getUnitCurrency() {
 		return unitCurrency;
 	}
@@ -247,6 +254,7 @@ public class ForeignExchangeTerms19 {
 		this.unitCurrency = unitCurrency;
 	}
 
+	@XmlElement(name = "QtdCcy", required = true)
 	public ActiveCurrencyCode getQuotedCurrency() {
 		return quotedCurrency;
 	}
@@ -255,6 +263,7 @@ public class ForeignExchangeTerms19 {
 		this.quotedCurrency = quotedCurrency;
 	}
 
+	@XmlElement(name = "XchgRate", required = true)
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}

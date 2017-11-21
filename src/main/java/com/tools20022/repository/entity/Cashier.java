@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max2NumericText;
 import com.tools20022.repository.entity.CardPaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,10 +36,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole
- * CardPaymentPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -46,6 +43,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * Cashier.mmShiftNumber}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole
+ * CardPaymentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -92,7 +93,7 @@ public class Cashier extends CardPaymentPartyRole {
 	 */
 	public static final MMBusinessAttribute mmShiftNumber = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Cashier.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cashier.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShiftNumber";
@@ -100,6 +101,14 @@ public class Cashier extends CardPaymentPartyRole {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2NumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Cashier.class.getMethod("getShiftNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -111,7 +120,12 @@ public class Cashier extends CardPaymentPartyRole {
 				name = "Cashier";
 				definition = "Cashier who carried out the payment card transaction.";
 				superType_lazy = () -> CardPaymentPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(Cashier.mmShiftNumber);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Cashier.mmShiftNumber);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Cashier.class;
 			}
 		});
 		return mmObject_lazy.get();

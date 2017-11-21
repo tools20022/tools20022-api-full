@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides transaction specific interest information that applies to the
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestRecord1", propOrder = {"amount", "creditDebitIndicator", "type", "rate", "fromToDate", "reason", "tax"})
 public class InterestRecord1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -428,6 +434,7 @@ public class InterestRecord1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -436,6 +443,7 @@ public class InterestRecord1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -444,6 +452,7 @@ public class InterestRecord1 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Tp")
 	public InterestType1Choice getType() {
 		return type;
 	}
@@ -452,6 +461,7 @@ public class InterestRecord1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Rate")
 	public Rate3 getRate() {
 		return rate;
 	}
@@ -460,6 +470,7 @@ public class InterestRecord1 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "FrToDt")
 	public DateTimePeriodDetails getFromToDate() {
 		return fromToDate;
 	}
@@ -468,6 +479,7 @@ public class InterestRecord1 {
 		this.fromToDate = fromToDate;
 	}
 
+	@XmlElement(name = "Rsn")
 	public Max35Text getReason() {
 		return reason;
 	}
@@ -476,6 +488,7 @@ public class InterestRecord1 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "Tax")
 	public TaxCharges2 getTax() {
 		return tax;
 	}

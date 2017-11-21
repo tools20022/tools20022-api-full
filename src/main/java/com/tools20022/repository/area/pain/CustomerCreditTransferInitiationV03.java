@@ -25,9 +25,11 @@ import com.tools20022.repository.area.PaymentsInitiationArchive;
 import com.tools20022.repository.msg.GroupHeader32;
 import com.tools20022.repository.msg.PaymentInstructionInformation3;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -61,9 +63,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.001.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
@@ -91,6 +90,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.001.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -114,6 +116,8 @@ import java.util.List;
  * CustomerCreditTransferInitiationV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustomerCreditTransferInitiationV03", propOrder = {"groupHeader", "paymentInformation"})
 public class CustomerCreditTransferInitiationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -153,6 +157,14 @@ public class CustomerCreditTransferInitiationV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader32.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerCreditTransferInitiationV03.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PaymentInstructionInformation3> paymentInformation;
 	/**
@@ -190,6 +202,14 @@ public class CustomerCreditTransferInitiationV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstructionInformation3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerCreditTransferInitiationV03.class.getMethod("getPaymentInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -204,7 +224,8 @@ public class CustomerCreditTransferInitiationV03 {
 				rootElement = "Document";
 				xmlTag = "CstmrCdtTrfInitn";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerCreditTransferInitiationV03.mmGroupHeader, CustomerCreditTransferInitiationV03.mmPaymentInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV03.mmGroupHeader,
+						com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV03.mmPaymentInformation);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";
@@ -214,10 +235,16 @@ public class CustomerCreditTransferInitiationV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CustomerCreditTransferInitiationV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader32 getGroupHeader() {
 		return groupHeader;
 	}
@@ -226,11 +253,18 @@ public class CustomerCreditTransferInitiationV03 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "PmtInf", required = true)
 	public List<PaymentInstructionInformation3> getPaymentInformation() {
 		return paymentInformation;
 	}
 
 	public void setPaymentInformation(List<PaymentInstructionInformation3> paymentInformation) {
 		this.paymentInformation = paymentInformation;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.001.03.03")
+	static public class Document {
+		@XmlElement(name = "CstmrCdtTrfInitn", required = true)
+		public CustomerCreditTransferInitiationV03 messageBody;
 	}
 }

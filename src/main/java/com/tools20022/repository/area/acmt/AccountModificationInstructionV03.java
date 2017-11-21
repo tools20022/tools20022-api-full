@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AccountManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -55,9 +57,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.003.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementArchive
@@ -121,6 +120,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.003.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -144,6 +146,9 @@ import java.util.List;
  * AccountModificationInstructionV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountModificationInstructionV03", propOrder = {"messageIdentification", "previousReference", "instructionDetails", "investmentAccountSelection", "modifiedInvestmentAccount", "modifiedAccountParties",
+		"modifiedIntermediaries", "modifiedPlacement", "modifiedIssueAllocation", "modifiedSavingsInvestmentPlan", "modifiedWithdrawalInvestmentPlan", "modifiedCashSettlement", "modifiedServiceLevelAgreement", "extension"})
 public class AccountModificationInstructionV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -190,6 +195,14 @@ public class AccountModificationInstructionV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountModificationInstructionV03.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 previousReference;
 	/**
@@ -233,6 +246,14 @@ public class AccountModificationInstructionV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountModificationInstructionV03.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentAccountModificationDetails instructionDetails;
@@ -281,6 +302,14 @@ public class AccountModificationInstructionV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentAccountModificationDetails.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountModificationInstructionV03.class.getMethod("getInstructionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected InvestmentAccountSelection2 investmentAccountSelection;
 	/**
@@ -327,6 +356,14 @@ public class AccountModificationInstructionV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccountSelection2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountModificationInstructionV03.class.getMethod("getInvestmentAccountSelection", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestmentAccount36 modifiedInvestmentAccount;
@@ -375,6 +412,14 @@ public class AccountModificationInstructionV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentAccount36.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountModificationInstructionV03.class.getMethod("getModifiedInvestmentAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AccountParties7> modifiedAccountParties;
 	/**
@@ -420,6 +465,14 @@ public class AccountModificationInstructionV03 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountParties7.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountModificationInstructionV03.class.getMethod("getModifiedAccountParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<ModificationScope7> modifiedIntermediaries;
@@ -467,6 +520,14 @@ public class AccountModificationInstructionV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope7.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountModificationInstructionV03.class.getMethod("getModifiedIntermediaries", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ReferredAgent1 modifiedPlacement;
 	/**
@@ -512,6 +573,14 @@ public class AccountModificationInstructionV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ReferredAgent1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountModificationInstructionV03.class.getMethod("getModifiedPlacement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ModificationScope9 modifiedIssueAllocation;
@@ -560,6 +629,14 @@ public class AccountModificationInstructionV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope9.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountModificationInstructionV03.class.getMethod("getModifiedIssueAllocation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ModificationScope16> modifiedSavingsInvestmentPlan;
 	/**
@@ -606,6 +683,14 @@ public class AccountModificationInstructionV03 {
 			maxOccurs = 50;
 			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope16.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountModificationInstructionV03.class.getMethod("getModifiedSavingsInvestmentPlan", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<ModificationScope16> modifiedWithdrawalInvestmentPlan;
@@ -654,6 +739,14 @@ public class AccountModificationInstructionV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope16.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountModificationInstructionV03.class.getMethod("getModifiedWithdrawalInvestmentPlan", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<InvestmentFundCashSettlementInformation6> modifiedCashSettlement;
 	/**
@@ -701,6 +794,14 @@ public class AccountModificationInstructionV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundCashSettlementInformation6.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountModificationInstructionV03.class.getMethod("getModifiedCashSettlement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ModificationScope10> modifiedServiceLevelAgreement;
 	/**
@@ -745,6 +846,14 @@ public class AccountModificationInstructionV03 {
 			maxOccurs = 30;
 			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope10.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountModificationInstructionV03.class.getMethod("getModifiedServiceLevelAgreement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -791,6 +900,14 @@ public class AccountModificationInstructionV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AccountModificationInstructionV03.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -805,11 +922,14 @@ public class AccountModificationInstructionV03 {
 				rootElement = "Document";
 				xmlTag = "AcctModInstr";
 				businessArea_lazy = () -> AccountManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AccountModificationInstructionV03.mmMessageIdentification, AccountModificationInstructionV03.mmPreviousReference, AccountModificationInstructionV03.mmInstructionDetails,
-						AccountModificationInstructionV03.mmInvestmentAccountSelection, AccountModificationInstructionV03.mmModifiedInvestmentAccount, AccountModificationInstructionV03.mmModifiedAccountParties,
-						AccountModificationInstructionV03.mmModifiedIntermediaries, AccountModificationInstructionV03.mmModifiedPlacement, AccountModificationInstructionV03.mmModifiedIssueAllocation,
-						AccountModificationInstructionV03.mmModifiedSavingsInvestmentPlan, AccountModificationInstructionV03.mmModifiedWithdrawalInvestmentPlan, AccountModificationInstructionV03.mmModifiedCashSettlement,
-						AccountModificationInstructionV03.mmModifiedServiceLevelAgreement, AccountModificationInstructionV03.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmPreviousReference, com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmInstructionDetails,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmInvestmentAccountSelection, com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmModifiedInvestmentAccount,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmModifiedAccountParties, com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmModifiedIntermediaries,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmModifiedPlacement, com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmModifiedIssueAllocation,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmModifiedSavingsInvestmentPlan, com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmModifiedWithdrawalInvestmentPlan,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmModifiedCashSettlement, com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmModifiedServiceLevelAgreement,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";
@@ -819,10 +939,16 @@ public class AccountModificationInstructionV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountModificationInstructionV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -831,6 +957,7 @@ public class AccountModificationInstructionV03 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -839,6 +966,7 @@ public class AccountModificationInstructionV03 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "InstrDtls")
 	public InvestmentAccountModificationDetails getInstructionDetails() {
 		return instructionDetails;
 	}
@@ -847,6 +975,7 @@ public class AccountModificationInstructionV03 {
 		this.instructionDetails = instructionDetails;
 	}
 
+	@XmlElement(name = "InvstmtAcctSelctn", required = true)
 	public InvestmentAccountSelection2 getInvestmentAccountSelection() {
 		return investmentAccountSelection;
 	}
@@ -855,6 +984,7 @@ public class AccountModificationInstructionV03 {
 		this.investmentAccountSelection = investmentAccountSelection;
 	}
 
+	@XmlElement(name = "ModfdInvstmtAcct")
 	public InvestmentAccount36 getModifiedInvestmentAccount() {
 		return modifiedInvestmentAccount;
 	}
@@ -863,6 +993,7 @@ public class AccountModificationInstructionV03 {
 		this.modifiedInvestmentAccount = modifiedInvestmentAccount;
 	}
 
+	@XmlElement(name = "ModfdAcctPties")
 	public List<AccountParties7> getModifiedAccountParties() {
 		return modifiedAccountParties;
 	}
@@ -871,6 +1002,7 @@ public class AccountModificationInstructionV03 {
 		this.modifiedAccountParties = modifiedAccountParties;
 	}
 
+	@XmlElement(name = "ModfdIntrmies")
 	public List<ModificationScope7> getModifiedIntermediaries() {
 		return modifiedIntermediaries;
 	}
@@ -879,6 +1011,7 @@ public class AccountModificationInstructionV03 {
 		this.modifiedIntermediaries = modifiedIntermediaries;
 	}
 
+	@XmlElement(name = "ModfdPlcmnt")
 	public ReferredAgent1 getModifiedPlacement() {
 		return modifiedPlacement;
 	}
@@ -887,6 +1020,7 @@ public class AccountModificationInstructionV03 {
 		this.modifiedPlacement = modifiedPlacement;
 	}
 
+	@XmlElement(name = "ModfdIsseAllcn")
 	public ModificationScope9 getModifiedIssueAllocation() {
 		return modifiedIssueAllocation;
 	}
@@ -895,6 +1029,7 @@ public class AccountModificationInstructionV03 {
 		this.modifiedIssueAllocation = modifiedIssueAllocation;
 	}
 
+	@XmlElement(name = "ModfdSvgsInvstmtPlan")
 	public List<ModificationScope16> getModifiedSavingsInvestmentPlan() {
 		return modifiedSavingsInvestmentPlan;
 	}
@@ -903,6 +1038,7 @@ public class AccountModificationInstructionV03 {
 		this.modifiedSavingsInvestmentPlan = modifiedSavingsInvestmentPlan;
 	}
 
+	@XmlElement(name = "ModfdWdrwlInvstmtPlan")
 	public List<ModificationScope16> getModifiedWithdrawalInvestmentPlan() {
 		return modifiedWithdrawalInvestmentPlan;
 	}
@@ -911,6 +1047,7 @@ public class AccountModificationInstructionV03 {
 		this.modifiedWithdrawalInvestmentPlan = modifiedWithdrawalInvestmentPlan;
 	}
 
+	@XmlElement(name = "ModfdCshSttlm")
 	public List<InvestmentFundCashSettlementInformation6> getModifiedCashSettlement() {
 		return modifiedCashSettlement;
 	}
@@ -919,6 +1056,7 @@ public class AccountModificationInstructionV03 {
 		this.modifiedCashSettlement = modifiedCashSettlement;
 	}
 
+	@XmlElement(name = "ModfdSvcLvlAgrmt")
 	public List<ModificationScope10> getModifiedServiceLevelAgreement() {
 		return modifiedServiceLevelAgreement;
 	}
@@ -927,11 +1065,18 @@ public class AccountModificationInstructionV03 {
 		this.modifiedServiceLevelAgreement = modifiedServiceLevelAgreement;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.003.03.03")
+	static public class Document {
+		@XmlElement(name = "AcctModInstr", required = true)
+		public AccountModificationInstructionV03 messageBody;
 	}
 }

@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.PendingCancellationStatusReason3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a reason or no reason for the corporate action instruction
@@ -81,6 +85,8 @@ import java.util.List;
  * PendingCancellationStatus1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PendingCancellationStatus3Choice", propOrder = {"notSpecifiedReason", "reason"})
 public class PendingCancellationStatus3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -213,6 +219,7 @@ public class PendingCancellationStatus3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NotSpcfdRsn", required = true)
 	public NoReasonCode getNotSpecifiedReason() {
 		return notSpecifiedReason;
 	}
@@ -221,6 +228,7 @@ public class PendingCancellationStatus3Choice {
 		this.notSpecifiedReason = notSpecifiedReason;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public List<PendingCancellationStatusReason3> getReason() {
 		return reason;
 	}

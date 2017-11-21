@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional references linked to the list order.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Additional references linked to the list order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reference12", propOrder = {"bidIdentification", "clientBidIdentification", "IOIIdentification", "quoteIdentification", "referenceOrderIdentification"})
 public class Reference12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -292,6 +298,7 @@ public class Reference12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BidId")
 	public Max35Text getBidIdentification() {
 		return bidIdentification;
 	}
@@ -300,6 +307,7 @@ public class Reference12 {
 		this.bidIdentification = bidIdentification;
 	}
 
+	@XmlElement(name = "ClntBidId")
 	public Max35Text getClientBidIdentification() {
 		return clientBidIdentification;
 	}
@@ -308,6 +316,7 @@ public class Reference12 {
 		this.clientBidIdentification = clientBidIdentification;
 	}
 
+	@XmlElement(name = "IOIId", required = true)
 	public Max35Text getIOIIdentification() {
 		return iOIIdentification;
 	}
@@ -316,6 +325,7 @@ public class Reference12 {
 		this.iOIIdentification = iOIIdentification;
 	}
 
+	@XmlElement(name = "QtId", required = true)
 	public Max35Text getQuoteIdentification() {
 		return quoteIdentification;
 	}
@@ -324,6 +334,7 @@ public class Reference12 {
 		this.quoteIdentification = quoteIdentification;
 	}
 
+	@XmlElement(name = "RefOrdrId", required = true)
 	public Max35Text getReferenceOrderIdentification() {
 		return referenceOrderIdentification;
 	}

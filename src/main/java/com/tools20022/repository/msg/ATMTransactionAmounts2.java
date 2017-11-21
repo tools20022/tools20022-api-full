@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Limit of amounts for the customer.
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransactionAmounts2", propOrder = {"currency", "maximumAuthorisableAmount", "minimumAllowedAmount", "maximumAllowedAmount", "dailyBalance", "weeklyBalance", "monthlyBalance"})
 public class ATMTransactionAmounts2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -509,6 +515,7 @@ public class ATMTransactionAmounts2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -517,6 +524,7 @@ public class ATMTransactionAmounts2 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "MaxAuthsbAmt")
 	public ImpliedCurrencyAndAmount getMaximumAuthorisableAmount() {
 		return maximumAuthorisableAmount;
 	}
@@ -525,6 +533,7 @@ public class ATMTransactionAmounts2 {
 		this.maximumAuthorisableAmount = maximumAuthorisableAmount;
 	}
 
+	@XmlElement(name = "MinAllwdAmt")
 	public ImpliedCurrencyAndAmount getMinimumAllowedAmount() {
 		return minimumAllowedAmount;
 	}
@@ -533,6 +542,7 @@ public class ATMTransactionAmounts2 {
 		this.minimumAllowedAmount = minimumAllowedAmount;
 	}
 
+	@XmlElement(name = "MaxAllwdAmt")
 	public ImpliedCurrencyAndAmount getMaximumAllowedAmount() {
 		return maximumAllowedAmount;
 	}
@@ -541,6 +551,7 @@ public class ATMTransactionAmounts2 {
 		this.maximumAllowedAmount = maximumAllowedAmount;
 	}
 
+	@XmlElement(name = "DalyBal")
 	public DetailedAmount4 getDailyBalance() {
 		return dailyBalance;
 	}
@@ -549,6 +560,7 @@ public class ATMTransactionAmounts2 {
 		this.dailyBalance = dailyBalance;
 	}
 
+	@XmlElement(name = "WklyBal")
 	public DetailedAmount4 getWeeklyBalance() {
 		return weeklyBalance;
 	}
@@ -557,6 +569,7 @@ public class ATMTransactionAmounts2 {
 		this.weeklyBalance = weeklyBalance;
 	}
 
+	@XmlElement(name = "MnthlyBal")
 	public DetailedAmount4 getMonthlyBalance() {
 		return monthlyBalance;
 	}

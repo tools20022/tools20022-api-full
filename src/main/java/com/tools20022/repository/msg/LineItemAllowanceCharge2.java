@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Pricing component, such as a service, promotion, allowance or charge, for
@@ -85,6 +89,8 @@ import java.util.List;
  * LineItemAllowanceCharge1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LineItemAllowanceCharge2", propOrder = {"chargeIndicator", "actualAmount", "basisQuantity", "calculationPercent", "sequenceNumber", "reason"})
 public class LineItemAllowanceCharge2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -422,6 +428,7 @@ public class LineItemAllowanceCharge2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ChrgInd")
 	public YesNoIndicator getChargeIndicator() {
 		return chargeIndicator;
 	}
@@ -430,6 +437,7 @@ public class LineItemAllowanceCharge2 {
 		this.chargeIndicator = chargeIndicator;
 	}
 
+	@XmlElement(name = "ActlAmt")
 	public List<CurrencyAndAmount> getActualAmount() {
 		return actualAmount;
 	}
@@ -438,6 +446,7 @@ public class LineItemAllowanceCharge2 {
 		this.actualAmount = actualAmount;
 	}
 
+	@XmlElement(name = "BsisQty")
 	public Quantity10 getBasisQuantity() {
 		return basisQuantity;
 	}
@@ -446,6 +455,7 @@ public class LineItemAllowanceCharge2 {
 		this.basisQuantity = basisQuantity;
 	}
 
+	@XmlElement(name = "ClctnPct")
 	public PercentageRate getCalculationPercent() {
 		return calculationPercent;
 	}
@@ -454,6 +464,7 @@ public class LineItemAllowanceCharge2 {
 		this.calculationPercent = calculationPercent;
 	}
 
+	@XmlElement(name = "SeqNb")
 	public Number getSequenceNumber() {
 		return sequenceNumber;
 	}
@@ -462,6 +473,7 @@ public class LineItemAllowanceCharge2 {
 		this.sequenceNumber = sequenceNumber;
 	}
 
+	@XmlElement(name = "Rsn")
 	public DiscountOrChargeType1Choice getReason() {
 		return reason;
 	}

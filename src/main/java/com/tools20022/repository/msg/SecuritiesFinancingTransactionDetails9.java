@@ -38,6 +38,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the closing of the securities financing transaction.
@@ -110,6 +114,9 @@ import java.util.function.Supplier;
  * "Details of the closing of the securities financing transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesFinancingTransactionDetails9", propOrder = {"securitiesFinancingTradeIdentification", "closingLegIdentification", "terminationDate", "rateType", "legalFramework", "maturityDateModification", "interestPayment",
+		"variableRateSupport", "repurchaseRate", "transactionCallDelay", "accruedInterestAmount", "terminationTransactionAmount", "secondLegNarrative"})
 public class SecuritiesFinancingTransactionDetails9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -762,6 +769,7 @@ public class SecuritiesFinancingTransactionDetails9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesFincgTradId")
 	public RestrictedFINXMax16Text getSecuritiesFinancingTradeIdentification() {
 		return securitiesFinancingTradeIdentification;
 	}
@@ -770,6 +778,7 @@ public class SecuritiesFinancingTransactionDetails9 {
 		this.securitiesFinancingTradeIdentification = securitiesFinancingTradeIdentification;
 	}
 
+	@XmlElement(name = "ClsgLegId")
 	public RestrictedFINXMax16Text getClosingLegIdentification() {
 		return closingLegIdentification;
 	}
@@ -778,6 +787,7 @@ public class SecuritiesFinancingTransactionDetails9 {
 		this.closingLegIdentification = closingLegIdentification;
 	}
 
+	@XmlElement(name = "TermntnDt")
 	public TerminationDate3Choice getTerminationDate() {
 		return terminationDate;
 	}
@@ -786,6 +796,7 @@ public class SecuritiesFinancingTransactionDetails9 {
 		this.terminationDate = terminationDate;
 	}
 
+	@XmlElement(name = "RateTp")
 	public RateType8Choice getRateType() {
 		return rateType;
 	}
@@ -794,6 +805,7 @@ public class SecuritiesFinancingTransactionDetails9 {
 		this.rateType = rateType;
 	}
 
+	@XmlElement(name = "LglFrmwk")
 	public LegalFramework2Choice getLegalFramework() {
 		return legalFramework;
 	}
@@ -802,6 +814,7 @@ public class SecuritiesFinancingTransactionDetails9 {
 		this.legalFramework = legalFramework;
 	}
 
+	@XmlElement(name = "MtrtyDtMod")
 	public YesNoIndicator getMaturityDateModification() {
 		return maturityDateModification;
 	}
@@ -810,6 +823,7 @@ public class SecuritiesFinancingTransactionDetails9 {
 		this.maturityDateModification = maturityDateModification;
 	}
 
+	@XmlElement(name = "IntrstPmt")
 	public YesNoIndicator getInterestPayment() {
 		return interestPayment;
 	}
@@ -818,6 +832,7 @@ public class SecuritiesFinancingTransactionDetails9 {
 		this.interestPayment = interestPayment;
 	}
 
+	@XmlElement(name = "VarblRateSpprt")
 	public RateName2 getVariableRateSupport() {
 		return variableRateSupport;
 	}
@@ -826,6 +841,7 @@ public class SecuritiesFinancingTransactionDetails9 {
 		this.variableRateSupport = variableRateSupport;
 	}
 
+	@XmlElement(name = "RpRate")
 	public Rate2 getRepurchaseRate() {
 		return repurchaseRate;
 	}
@@ -834,6 +850,7 @@ public class SecuritiesFinancingTransactionDetails9 {
 		this.repurchaseRate = repurchaseRate;
 	}
 
+	@XmlElement(name = "TxCallDely")
 	public Exact3NumericText getTransactionCallDelay() {
 		return transactionCallDelay;
 	}
@@ -842,6 +859,7 @@ public class SecuritiesFinancingTransactionDetails9 {
 		this.transactionCallDelay = transactionCallDelay;
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt")
 	public AmountAndDirection13 getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -850,6 +868,7 @@ public class SecuritiesFinancingTransactionDetails9 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "TermntnTxAmt")
 	public AmountAndDirection13 getTerminationTransactionAmount() {
 		return terminationTransactionAmount;
 	}
@@ -858,6 +877,7 @@ public class SecuritiesFinancingTransactionDetails9 {
 		this.terminationTransactionAmount = terminationTransactionAmount;
 	}
 
+	@XmlElement(name = "ScndLegNrrtv")
 	public RestrictedFINXMax140Text getSecondLegNarrative() {
 		return secondLegNarrative;
 	}

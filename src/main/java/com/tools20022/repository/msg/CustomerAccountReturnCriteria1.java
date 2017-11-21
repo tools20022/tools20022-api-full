@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates which fields must be present in the response.
@@ -114,6 +118,9 @@ import java.util.List;
  * definition} = "Indicates which fields must be present in the response."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustomerAccountReturnCriteria1", propOrder = {"identification", "name", "status", "type", "currency", "monthlyPaymentValue", "monthlyReceivedValue", "monthlyTransactionNumber", "averageBalance", "accountPurpose",
+		"floorNotificationAmount", "ceilingNotificationAmount", "statementCycle", "closingDate", "restriction", "openingDate", "accountOwner", "referenceAccount", "proprietary"})
 public class CustomerAccountReturnCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -933,6 +940,7 @@ public class CustomerAccountReturnCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public YesNoIndicator getIdentification() {
 		return identification;
 	}
@@ -941,6 +949,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public YesNoIndicator getName() {
 		return name;
 	}
@@ -949,6 +958,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public YesNoIndicator getStatus() {
 		return status;
 	}
@@ -957,6 +967,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public YesNoIndicator getType() {
 		return type;
 	}
@@ -965,6 +976,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Ccy", required = true)
 	public YesNoIndicator getCurrency() {
 		return currency;
 	}
@@ -973,6 +985,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "MnthlyPmtVal", required = true)
 	public YesNoIndicator getMonthlyPaymentValue() {
 		return monthlyPaymentValue;
 	}
@@ -981,6 +994,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.monthlyPaymentValue = monthlyPaymentValue;
 	}
 
+	@XmlElement(name = "MnthlyRcvdVal", required = true)
 	public YesNoIndicator getMonthlyReceivedValue() {
 		return monthlyReceivedValue;
 	}
@@ -989,6 +1003,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.monthlyReceivedValue = monthlyReceivedValue;
 	}
 
+	@XmlElement(name = "MnthlyTxNb", required = true)
 	public YesNoIndicator getMonthlyTransactionNumber() {
 		return monthlyTransactionNumber;
 	}
@@ -997,6 +1012,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.monthlyTransactionNumber = monthlyTransactionNumber;
 	}
 
+	@XmlElement(name = "AvrgBal", required = true)
 	public YesNoIndicator getAverageBalance() {
 		return averageBalance;
 	}
@@ -1005,6 +1021,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.averageBalance = averageBalance;
 	}
 
+	@XmlElement(name = "AcctPurp", required = true)
 	public YesNoIndicator getAccountPurpose() {
 		return accountPurpose;
 	}
@@ -1013,6 +1030,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.accountPurpose = accountPurpose;
 	}
 
+	@XmlElement(name = "FlrNtfctnAmt", required = true)
 	public YesNoIndicator getFloorNotificationAmount() {
 		return floorNotificationAmount;
 	}
@@ -1021,6 +1039,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.floorNotificationAmount = floorNotificationAmount;
 	}
 
+	@XmlElement(name = "ClngNtfctnAmt", required = true)
 	public YesNoIndicator getCeilingNotificationAmount() {
 		return ceilingNotificationAmount;
 	}
@@ -1029,6 +1048,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.ceilingNotificationAmount = ceilingNotificationAmount;
 	}
 
+	@XmlElement(name = "StmtCycl", required = true)
 	public YesNoIndicator getStatementCycle() {
 		return statementCycle;
 	}
@@ -1037,6 +1057,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.statementCycle = statementCycle;
 	}
 
+	@XmlElement(name = "ClsgDt", required = true)
 	public YesNoIndicator getClosingDate() {
 		return closingDate;
 	}
@@ -1045,6 +1066,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.closingDate = closingDate;
 	}
 
+	@XmlElement(name = "Rstrctn", required = true)
 	public YesNoIndicator getRestriction() {
 		return restriction;
 	}
@@ -1053,6 +1075,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.restriction = restriction;
 	}
 
+	@XmlElement(name = "OpngDt", required = true)
 	public YesNoIndicator getOpeningDate() {
 		return openingDate;
 	}
@@ -1061,6 +1084,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.openingDate = openingDate;
 	}
 
+	@XmlElement(name = "AcctOwnr", required = true)
 	public YesNoIndicator getAccountOwner() {
 		return accountOwner;
 	}
@@ -1069,6 +1093,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "RefAcct", required = true)
 	public YesNoIndicator getReferenceAccount() {
 		return referenceAccount;
 	}
@@ -1077,6 +1102,7 @@ public class CustomerAccountReturnCriteria1 {
 		this.referenceAccount = referenceAccount;
 	}
 
+	@XmlElement(name = "Prtry")
 	public List<GenericIdentification42> getProprietary() {
 		return proprietary;
 	}

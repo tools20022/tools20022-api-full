@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money for which goods or services are offered, sold, or bought.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnitPrice16", propOrder = {"unitPriceType", "value", "taxableIncomePerShare", "taxableIncomePerShareCalculated"})
 public class UnitPrice16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -302,6 +308,7 @@ public class UnitPrice16 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitPricTp", required = true)
 	public UnitPriceType1Choice getUnitPriceType() {
 		return unitPriceType;
 	}
@@ -310,6 +317,7 @@ public class UnitPrice16 {
 		this.unitPriceType = unitPriceType;
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public PriceValue1 getValue() {
 		return value;
 	}
@@ -318,6 +326,7 @@ public class UnitPrice16 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "TaxblIncmPerShr")
 	public ActiveCurrencyAnd13DecimalAmount getTaxableIncomePerShare() {
 		return taxableIncomePerShare;
 	}
@@ -326,6 +335,7 @@ public class UnitPrice16 {
 		this.taxableIncomePerShare = taxableIncomePerShare;
 	}
 
+	@XmlElement(name = "TaxblIncmPerShrClctd")
 	public TaxableIncomePerShareCalculatedType1Choice getTaxableIncomePerShareCalculated() {
 		return taxableIncomePerShareCalculated;
 	}

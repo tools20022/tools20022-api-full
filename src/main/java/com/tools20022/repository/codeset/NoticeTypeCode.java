@@ -30,19 +30,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.NoticeType1Code
- * NoticeType1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.NoticeTypeCode#mmUniversal
  * NoticeTypeCode.mmUniversal}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.NoticeTypeCode#mmCedeAndCo
  * NoticeTypeCode.mmCedeAndCo}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.NoticeType1Code
+ * NoticeType1Code}</li>
  * </ul>
  * </li>
  * <li>

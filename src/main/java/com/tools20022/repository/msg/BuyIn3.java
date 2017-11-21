@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies elements related to the response sent by the clearing member to the
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BuyIn3", propOrder = {"buyInNotificationIdentification", "requestForDelayIndicator", "numberOfDays", "initialQuantity", "coveredQuantity", "uncoveredQuantity"})
 public class BuyIn3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -377,6 +383,7 @@ public class BuyIn3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BuyInNtfctnId", required = true)
 	public Max35Text getBuyInNotificationIdentification() {
 		return buyInNotificationIdentification;
 	}
@@ -385,6 +392,7 @@ public class BuyIn3 {
 		this.buyInNotificationIdentification = buyInNotificationIdentification;
 	}
 
+	@XmlElement(name = "ReqForDelyInd", required = true)
 	public YesNoIndicator getRequestForDelayIndicator() {
 		return requestForDelayIndicator;
 	}
@@ -393,6 +401,7 @@ public class BuyIn3 {
 		this.requestForDelayIndicator = requestForDelayIndicator;
 	}
 
+	@XmlElement(name = "NbOfDays", required = true)
 	public Number getNumberOfDays() {
 		return numberOfDays;
 	}
@@ -401,6 +410,7 @@ public class BuyIn3 {
 		this.numberOfDays = numberOfDays;
 	}
 
+	@XmlElement(name = "InitlQty", required = true)
 	public FinancialInstrumentQuantity1Choice getInitialQuantity() {
 		return initialQuantity;
 	}
@@ -409,6 +419,7 @@ public class BuyIn3 {
 		this.initialQuantity = initialQuantity;
 	}
 
+	@XmlElement(name = "CvrdQty", required = true)
 	public FinancialInstrumentQuantity1Choice getCoveredQuantity() {
 		return coveredQuantity;
 	}
@@ -417,6 +428,7 @@ public class BuyIn3 {
 		this.coveredQuantity = coveredQuantity;
 	}
 
+	@XmlElement(name = "UcvrdQty", required = true)
 	public FinancialInstrumentQuantity1Choice getUncoveredQuantity() {
 		return uncoveredQuantity;
 	}

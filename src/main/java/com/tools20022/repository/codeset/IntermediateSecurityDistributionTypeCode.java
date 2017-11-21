@@ -32,26 +32,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code
- * IntermediateSecurityDistributionType2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType4Code
- * IntermediateSecurityDistributionType4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType3Code
- * IntermediateSecurityDistributionType3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType5Code
- * IntermediateSecurityDistributionType5Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code
- * IntermediateSecurityDistributionType1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -99,6 +79,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionTypeCode#mmMerger
  * IntermediateSecurityDistributionTypeCode.mmMerger}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code
+ * IntermediateSecurityDistributionType2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType4Code
+ * IntermediateSecurityDistributionType4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType3Code
+ * IntermediateSecurityDistributionType3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType5Code
+ * IntermediateSecurityDistributionType5Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code
+ * IntermediateSecurityDistributionType1Code}</li>
  * </ul>
  * </li>
  * <li>

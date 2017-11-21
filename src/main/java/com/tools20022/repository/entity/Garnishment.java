@@ -38,6 +38,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PaymentObligation
+ * PaymentObligation}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -60,9 +63,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * StructuredRemittanceInformation13.mmGarnishmentRemittance}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PaymentObligation
- * PaymentObligation}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -94,6 +94,11 @@ public class Garnishment extends PaymentObligation {
 				derivationElement_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmGarnishmentRemittance, StructuredRemittanceInformation12.mmGarnishmentRemittance, StructuredRemittanceInformation13.mmGarnishmentRemittance);
 				superType_lazy = () -> PaymentObligation.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(Garnishment1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Garnishment.class;
 			}
 		});
 		return mmObject_lazy.get();

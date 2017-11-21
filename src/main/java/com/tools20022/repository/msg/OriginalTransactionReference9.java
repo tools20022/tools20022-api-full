@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of key elements of the original transaction being referred to.
@@ -119,6 +123,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Set of key elements of the original transaction being referred to."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalTransactionReference9", propOrder = {"interbankSettlementAmount", "amount", "interbankSettlementDate", "requestedCollectionDate", "creditorSchemeIdentification", "settlementInformation", "paymentTypeInformation",
+		"paymentMethod", "mandateRelatedInformation", "remittanceInformation", "ultimateDebtor", "debtor", "debtorAccount", "debtorAgent", "debtorAgentAccount", "creditorAgent", "creditorAgentAccount", "creditor", "creditorAccount",
+		"ultimateCreditor"})
 public class OriginalTransactionReference9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1136,6 +1144,7 @@ public class OriginalTransactionReference9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmt")
 	public EuroMax9Amount getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
@@ -1144,6 +1153,7 @@ public class OriginalTransactionReference9 {
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
 
+	@XmlElement(name = "Amt")
 	public AmountType2Choice getAmount() {
 		return amount;
 	}
@@ -1152,6 +1162,7 @@ public class OriginalTransactionReference9 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDt")
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}
@@ -1160,6 +1171,7 @@ public class OriginalTransactionReference9 {
 		this.interbankSettlementDate = interbankSettlementDate;
 	}
 
+	@XmlElement(name = "ReqdColltnDt")
 	public ISODate getRequestedCollectionDate() {
 		return requestedCollectionDate;
 	}
@@ -1168,6 +1180,7 @@ public class OriginalTransactionReference9 {
 		this.requestedCollectionDate = requestedCollectionDate;
 	}
 
+	@XmlElement(name = "CdtrSchmeId")
 	public PartyIdentification18 getCreditorSchemeIdentification() {
 		return creditorSchemeIdentification;
 	}
@@ -1176,6 +1189,7 @@ public class OriginalTransactionReference9 {
 		this.creditorSchemeIdentification = creditorSchemeIdentification;
 	}
 
+	@XmlElement(name = "SttlmInf")
 	public SettlementInformation6 getSettlementInformation() {
 		return settlementInformation;
 	}
@@ -1184,6 +1198,7 @@ public class OriginalTransactionReference9 {
 		this.settlementInformation = settlementInformation;
 	}
 
+	@XmlElement(name = "PmtTpInf")
 	public PaymentTypeInformation12 getPaymentTypeInformation() {
 		return paymentTypeInformation;
 	}
@@ -1192,6 +1207,7 @@ public class OriginalTransactionReference9 {
 		this.paymentTypeInformation = paymentTypeInformation;
 	}
 
+	@XmlElement(name = "PmtMtd")
 	public PaymentMethod4Code getPaymentMethod() {
 		return paymentMethod;
 	}
@@ -1200,6 +1216,7 @@ public class OriginalTransactionReference9 {
 		this.paymentMethod = paymentMethod;
 	}
 
+	@XmlElement(name = "MndtRltdInf")
 	public MandateRelatedInformation5 getMandateRelatedInformation() {
 		return mandateRelatedInformation;
 	}
@@ -1208,6 +1225,7 @@ public class OriginalTransactionReference9 {
 		this.mandateRelatedInformation = mandateRelatedInformation;
 	}
 
+	@XmlElement(name = "RmtInf")
 	public RemittanceInformation4 getRemittanceInformation() {
 		return remittanceInformation;
 	}
@@ -1216,6 +1234,7 @@ public class OriginalTransactionReference9 {
 		this.remittanceInformation = remittanceInformation;
 	}
 
+	@XmlElement(name = "UltmtDbtr")
 	public PartyIdentification20 getUltimateDebtor() {
 		return ultimateDebtor;
 	}
@@ -1224,6 +1243,7 @@ public class OriginalTransactionReference9 {
 		this.ultimateDebtor = ultimateDebtor;
 	}
 
+	@XmlElement(name = "Dbtr")
 	public PartyIdentification20 getDebtor() {
 		return debtor;
 	}
@@ -1232,6 +1252,7 @@ public class OriginalTransactionReference9 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAcct")
 	public CashAccount8 getDebtorAccount() {
 		return debtorAccount;
 	}
@@ -1240,6 +1261,7 @@ public class OriginalTransactionReference9 {
 		this.debtorAccount = debtorAccount;
 	}
 
+	@XmlElement(name = "DbtrAgt")
 	public FinancialInstitution2 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -1248,6 +1270,7 @@ public class OriginalTransactionReference9 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "DbtrAgtAcct")
 	public CashAccount7 getDebtorAgentAccount() {
 		return debtorAgentAccount;
 	}
@@ -1256,6 +1279,7 @@ public class OriginalTransactionReference9 {
 		this.debtorAgentAccount = debtorAgentAccount;
 	}
 
+	@XmlElement(name = "CdtrAgt")
 	public FinancialInstitution2 getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -1264,6 +1288,7 @@ public class OriginalTransactionReference9 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "CdtrAgtAcct")
 	public CashAccount7 getCreditorAgentAccount() {
 		return creditorAgentAccount;
 	}
@@ -1272,6 +1297,7 @@ public class OriginalTransactionReference9 {
 		this.creditorAgentAccount = creditorAgentAccount;
 	}
 
+	@XmlElement(name = "Cdtr")
 	public PartyIdentification20 getCreditor() {
 		return creditor;
 	}
@@ -1280,6 +1306,7 @@ public class OriginalTransactionReference9 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAcct")
 	public CashAccount8 getCreditorAccount() {
 		return creditorAccount;
 	}
@@ -1288,6 +1315,7 @@ public class OriginalTransactionReference9 {
 		this.creditorAccount = creditorAccount;
 	}
 
+	@XmlElement(name = "UltmtCdtr")
 	public PartyIdentification20 getUltimateCreditor() {
 		return ultimateCreditor;
 	}

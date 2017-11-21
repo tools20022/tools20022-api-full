@@ -42,6 +42,20 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AssignedProxyRole#mmProxyPerson
+ * AssignedProxyRole.mmProxyPerson}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AssignedProxyRole#mmPreAssignedProxyRole
+ * AssignedProxyRole.mmPreAssignedProxyRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.MeetingPartyRole
+ * MeetingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -60,20 +74,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation1#mmAuthorisedProxy
  * ProxyAppointmentInformation1.mmAuthorisedProxy}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.MeetingPartyRole
- * MeetingPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AssignedProxyRole#mmProxyPerson
- * AssignedProxyRole.mmProxyPerson}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AssignedProxyRole#mmPreAssignedProxyRole
- * AssignedProxyRole.mmPreAssignedProxyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -132,7 +132,7 @@ public class AssignedProxyRole extends MeetingPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmProxyPerson = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AssignedProxyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssignedProxyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProxyPerson";
@@ -180,7 +180,7 @@ public class AssignedProxyRole extends MeetingPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmPreAssignedProxyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AssignedProxyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssignedProxyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreAssignedProxyRole";
@@ -202,7 +202,12 @@ public class AssignedProxyRole extends MeetingPartyRole {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Person.mmRelatedRole, com.tools20022.repository.entity.Person.mmPreAssignedProxyPerson);
 				derivationElement_lazy = () -> Arrays.asList(ProxyAppointmentInformation1.mmAuthorisedProxy);
 				superType_lazy = () -> MeetingPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(AssignedProxyRole.mmProxyPerson, AssignedProxyRole.mmPreAssignedProxyRole);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AssignedProxyRole.mmProxyPerson, com.tools20022.repository.entity.AssignedProxyRole.mmPreAssignedProxyRole);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AssignedProxyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

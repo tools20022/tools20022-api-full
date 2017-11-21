@@ -22,6 +22,7 @@ import com.tools20022.repository.choice.PaymentCodeOrOther1Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -35,15 +36,17 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmOffset
- * Obligation.mmOffset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmDate
+ * ObligationFulfilment.mmDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Obligation#mmOriginalObligationProcess
- * Obligation.mmOriginalObligationProcess}</li>
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmObligationOffset
+ * ObligationFulfilment.mmObligationOffset}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmResultingObligation
+ * ObligationFulfilment.mmResultingObligation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -62,17 +65,15 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.repository.entity.Novation Novation}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmDate
- * ObligationFulfilment.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmOffset
+ * Obligation.mmOffset}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmObligationOffset
- * ObligationFulfilment.mmObligationOffset}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmResultingObligation
- * ObligationFulfilment.mmResultingObligation}</li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmOriginalObligationProcess
+ * Obligation.mmOriginalObligationProcess}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,11 +105,6 @@ public class ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
-	 * ObligationFulfilment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -229,6 +225,11 @@ public class ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
+	 * ObligationFulfilment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -248,7 +249,7 @@ public class ObligationFulfilment {
 					CardTransaction10.mmInitiatorTransactionDateTime, CardTransaction9.mmInitiatorTransactionDateTime, CardTransactionDetail2.mmValidityDate, CardTransactionDetail1.mmValidityDate, CardTransactionDetail4.mmValidityDate,
 					CardTransactionDetail3.mmValidityDate, TransactionCertificate2.mmTransactionDate, CertificateReference1.mmDate, Transfer31.mmEffectiveTransferDate, Transfer31.mmAverageDate, Transfer31.mmNewAverageDate,
 					Transfer33.mmEffectiveTransferDate, Transfer33.mmAverageDate, Transfer33.mmNewAverageDate, DetailedAmount14.mmDateTime, TradeDelivery2.mmDeliveryDateTime, MandateAuthentication1.mmDate);
-			elementContext_lazy = () -> ObligationFulfilment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Date";
@@ -256,6 +257,14 @@ public class ObligationFulfilment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ObligationFulfilment.class.getMethod("getDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Obligation> obligationOffset;
@@ -297,7 +306,7 @@ public class ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmObligationOffset = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ObligationFulfilment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ObligationOffset";
@@ -347,7 +356,7 @@ public class ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmResultingObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ObligationFulfilment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResultingObligation";
@@ -369,7 +378,13 @@ public class ObligationFulfilment {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Obligation.mmOffset, com.tools20022.repository.entity.Obligation.mmOriginalObligationProcess);
 				subType_lazy = () -> Arrays.asList(Payment.mmObject(), SecuritiesTransfer.mmObject(), Clearing.mmObject(), ProductDelivery.mmObject(), BuyIn.mmObject(), PairOff.mmObject(), Netting.mmObject(), Rollover.mmObject(),
 						Novation.mmObject());
-				element_lazy = () -> Arrays.asList(ObligationFulfilment.mmDate, ObligationFulfilment.mmObligationOffset, ObligationFulfilment.mmResultingObligation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ObligationFulfilment.mmDate, com.tools20022.repository.entity.ObligationFulfilment.mmObligationOffset,
+						com.tools20022.repository.entity.ObligationFulfilment.mmResultingObligation);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ObligationFulfilment.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of reason.
@@ -95,6 +99,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of reason."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reason2Choice", propOrder = {"repoCallAcknowledgementReason", "cancellationReason", "pendingCancellationReason", "generatedReason", "deniedReason", "acknowledgedAcceptedReason", "pendingReason", "failingReason",
+		"pendingProcessingReason", "rejectionReason", "repairReason", "pendingModificationReason", "unmatchedReason"})
 public class Reason2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -754,6 +761,7 @@ public class Reason2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RepoCallAckRsn")
 	public AcknowledgementReason7Choice getRepoCallAcknowledgementReason() {
 		return repoCallAcknowledgementReason;
 	}
@@ -762,6 +770,7 @@ public class Reason2Choice {
 		this.repoCallAcknowledgementReason = repoCallAcknowledgementReason;
 	}
 
+	@XmlElement(name = "CxlRsn")
 	public CancellationReason6Choice getCancellationReason() {
 		return cancellationReason;
 	}
@@ -770,6 +779,7 @@ public class Reason2Choice {
 		this.cancellationReason = cancellationReason;
 	}
 
+	@XmlElement(name = "PdgCxlRsn")
 	public PendingCancellationReasons3Choice getPendingCancellationReason() {
 		return pendingCancellationReason;
 	}
@@ -778,6 +788,7 @@ public class Reason2Choice {
 		this.pendingCancellationReason = pendingCancellationReason;
 	}
 
+	@XmlElement(name = "GnrtdRsn")
 	public GeneratedReasons2Choice getGeneratedReason() {
 		return generatedReason;
 	}
@@ -786,6 +797,7 @@ public class Reason2Choice {
 		this.generatedReason = generatedReason;
 	}
 
+	@XmlElement(name = "DndRsn")
 	public DeniedReason4Choice getDeniedReason() {
 		return deniedReason;
 	}
@@ -794,6 +806,7 @@ public class Reason2Choice {
 		this.deniedReason = deniedReason;
 	}
 
+	@XmlElement(name = "AckdAccptdRsn")
 	public AcknowledgementReason5Choice getAcknowledgedAcceptedReason() {
 		return acknowledgedAcceptedReason;
 	}
@@ -802,6 +815,7 @@ public class Reason2Choice {
 		this.acknowledgedAcceptedReason = acknowledgedAcceptedReason;
 	}
 
+	@XmlElement(name = "PdgRsn")
 	public PendingReason8Choice getPendingReason() {
 		return pendingReason;
 	}
@@ -810,6 +824,7 @@ public class Reason2Choice {
 		this.pendingReason = pendingReason;
 	}
 
+	@XmlElement(name = "FlngRsn")
 	public FailingReason2Choice getFailingReason() {
 		return failingReason;
 	}
@@ -818,6 +833,7 @@ public class Reason2Choice {
 		this.failingReason = failingReason;
 	}
 
+	@XmlElement(name = "PdgPrcgRsn")
 	public PendingProcessingReason2Choice getPendingProcessingReason() {
 		return pendingProcessingReason;
 	}
@@ -826,6 +842,7 @@ public class Reason2Choice {
 		this.pendingProcessingReason = pendingProcessingReason;
 	}
 
+	@XmlElement(name = "RjctnRsn")
 	public RejectionReason7Choice getRejectionReason() {
 		return rejectionReason;
 	}
@@ -834,6 +851,7 @@ public class Reason2Choice {
 		this.rejectionReason = rejectionReason;
 	}
 
+	@XmlElement(name = "RprRsn")
 	public RepairReason4Choice getRepairReason() {
 		return repairReason;
 	}
@@ -842,6 +860,7 @@ public class Reason2Choice {
 		this.repairReason = repairReason;
 	}
 
+	@XmlElement(name = "PdgModRsn")
 	public PendingReason9Choice getPendingModificationReason() {
 		return pendingModificationReason;
 	}
@@ -850,6 +869,7 @@ public class Reason2Choice {
 		this.pendingModificationReason = pendingModificationReason;
 	}
 
+	@XmlElement(name = "UmtchdRsn")
 	public UnmatchedReason4Choice getUnmatchedReason() {
 		return unmatchedReason;
 	}

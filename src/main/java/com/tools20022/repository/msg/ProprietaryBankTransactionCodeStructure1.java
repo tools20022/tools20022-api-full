@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.IdentificationIssuerRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements to fully identify a proprietary bank transaction code.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Set of elements to fully identify a proprietary bank transaction code."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProprietaryBankTransactionCodeStructure1", propOrder = {"code", "issuer"})
 public class ProprietaryBankTransactionCodeStructure1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class ProprietaryBankTransactionCodeStructure1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public Max35Text getCode() {
 		return code;
 	}
@@ -186,6 +193,7 @@ public class ProprietaryBankTransactionCodeStructure1 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Issr")
 	public Max35Text getIssuer() {
 		return issuer;
 	}

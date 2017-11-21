@@ -36,18 +36,13 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmPartyRole
- * Meeting.mmPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MeetingPartyRole#mmMeeting
+ * MeetingPartyRole.mmMeeting}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.CorporateActionPartyRole
- * CorporateActionPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -67,11 +62,16 @@ import java.util.List;
  * VotingPartyRole}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPartyRole
+ * CorporateActionPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.MeetingPartyRole#mmMeeting
- * MeetingPartyRole.mmMeeting}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmPartyRole
+ * Meeting.mmPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -127,7 +127,7 @@ public class MeetingPartyRole extends CorporateActionPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmMeeting = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> MeetingPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Meeting";
@@ -150,7 +150,12 @@ public class MeetingPartyRole extends CorporateActionPartyRole {
 				subType_lazy = () -> Arrays.asList(MeetingInitiatorRole.mmObject(), AssignedProxyRole.mmObject(), RegistrationBeneficiary.mmObject(), MeetingAttendeeRole.mmObject(), ProxyAgent.mmObject(), ProxyAssignerRole.mmObject(),
 						RightsHolder.mmObject(), VotingPartyRole.mmObject());
 				superType_lazy = () -> CorporateActionPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(MeetingPartyRole.mmMeeting);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingPartyRole.mmMeeting);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

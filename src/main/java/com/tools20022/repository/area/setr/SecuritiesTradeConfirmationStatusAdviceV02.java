@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesTradeLatestVersion;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.044.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
@@ -114,6 +113,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.044.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -129,6 +131,9 @@ import java.util.List;
  * SecuritiesTradeConfirmationStatusAdviceV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTradeConfirmationStatusAdviceV02", propOrder = {"identification", "references", "affirmationStatus", "processingStatus", "matchingStatus", "replacementProcessingStatus", "cancellationProcessingStatus",
+		"partyTradingDetails", "counterpartyTradingDetails", "confirmationParties", "deliveringSettlementParties", "receivingSettlementParties", "supplementaryData"})
 public class SecuritiesTradeConfirmationStatusAdviceV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +181,14 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TransactiontIdentification4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationStatusAdviceV02.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Linkages18> references;
 	/**
@@ -218,6 +231,14 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> Linkages18.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationStatusAdviceV02.class.getMethod("getReferences", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AffirmationStatus6Choice affirmationStatus;
 	/**
@@ -258,6 +279,14 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AffirmationStatus6Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationStatusAdviceV02.class.getMethod("getAffirmationStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ProcessingStatus17Choice processingStatus;
@@ -300,6 +329,14 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ProcessingStatus17Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationStatusAdviceV02.class.getMethod("getProcessingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MatchingStatus23Choice matchingStatus;
 	/**
@@ -340,6 +377,14 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MatchingStatus23Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationStatusAdviceV02.class.getMethod("getMatchingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ReplacementProcessingStatus7Choice replacementProcessingStatus;
@@ -383,6 +428,14 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationStatusAdviceV02.class.getMethod("getReplacementProcessingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CancellationProcessingStatus6Choice cancellationProcessingStatus;
 	/**
@@ -425,6 +478,14 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> CancellationProcessingStatus6Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationStatusAdviceV02.class.getMethod("getCancellationProcessingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Order18 partyTradingDetails;
 	/**
@@ -465,6 +526,14 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> Order18.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationStatusAdviceV02.class.getMethod("getPartyTradingDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Order18 counterpartyTradingDetails;
 	/**
@@ -504,6 +573,14 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Order18.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationStatusAdviceV02.class.getMethod("getCounterpartyTradingDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<ConfirmationParties4> confirmationParties;
@@ -548,6 +625,14 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ConfirmationParties4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationStatusAdviceV02.class.getMethod("getConfirmationParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SettlementParties23 deliveringSettlementParties;
 	/**
@@ -590,6 +675,14 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties23.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationStatusAdviceV02.class.getMethod("getDeliveringSettlementParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SettlementParties23 receivingSettlementParties;
 	/**
@@ -630,6 +723,14 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties23.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationStatusAdviceV02.class.getMethod("getReceivingSettlementParties", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -674,6 +775,14 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTradeConfirmationStatusAdviceV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -687,11 +796,14 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 				rootElement = "Document";
 				xmlTag = "SctiesTradConfStsAdvc";
 				businessArea_lazy = () -> SecuritiesTradeLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmIdentification, SecuritiesTradeConfirmationStatusAdviceV02.mmReferences,
-						SecuritiesTradeConfirmationStatusAdviceV02.mmAffirmationStatus, SecuritiesTradeConfirmationStatusAdviceV02.mmProcessingStatus, SecuritiesTradeConfirmationStatusAdviceV02.mmMatchingStatus,
-						SecuritiesTradeConfirmationStatusAdviceV02.mmReplacementProcessingStatus, SecuritiesTradeConfirmationStatusAdviceV02.mmCancellationProcessingStatus, SecuritiesTradeConfirmationStatusAdviceV02.mmPartyTradingDetails,
-						SecuritiesTradeConfirmationStatusAdviceV02.mmCounterpartyTradingDetails, SecuritiesTradeConfirmationStatusAdviceV02.mmConfirmationParties, SecuritiesTradeConfirmationStatusAdviceV02.mmDeliveringSettlementParties,
-						SecuritiesTradeConfirmationStatusAdviceV02.mmReceivingSettlementParties, SecuritiesTradeConfirmationStatusAdviceV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmIdentification,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmReferences, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmAffirmationStatus,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmProcessingStatus, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmMatchingStatus,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmReplacementProcessingStatus,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmCancellationProcessingStatus, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmPartyTradingDetails,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmCounterpartyTradingDetails, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmConfirmationParties,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmDeliveringSettlementParties,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmReceivingSettlementParties, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -701,10 +813,16 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesTradeConfirmationStatusAdviceV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public TransactiontIdentification4 getIdentification() {
 		return identification;
 	}
@@ -713,6 +831,7 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Refs", required = true)
 	public List<Linkages18> getReferences() {
 		return references;
 	}
@@ -721,6 +840,7 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 		this.references = references;
 	}
 
+	@XmlElement(name = "AffirmSts")
 	public AffirmationStatus6Choice getAffirmationStatus() {
 		return affirmationStatus;
 	}
@@ -729,6 +849,7 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 		this.affirmationStatus = affirmationStatus;
 	}
 
+	@XmlElement(name = "PrcgSts")
 	public ProcessingStatus17Choice getProcessingStatus() {
 		return processingStatus;
 	}
@@ -737,6 +858,7 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "MtchgSts")
 	public MatchingStatus23Choice getMatchingStatus() {
 		return matchingStatus;
 	}
@@ -745,6 +867,7 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 		this.matchingStatus = matchingStatus;
 	}
 
+	@XmlElement(name = "RplcmntPrcgSts")
 	public ReplacementProcessingStatus7Choice getReplacementProcessingStatus() {
 		return replacementProcessingStatus;
 	}
@@ -753,6 +876,7 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 		this.replacementProcessingStatus = replacementProcessingStatus;
 	}
 
+	@XmlElement(name = "CxlPrcgSts")
 	public CancellationProcessingStatus6Choice getCancellationProcessingStatus() {
 		return cancellationProcessingStatus;
 	}
@@ -761,6 +885,7 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 		this.cancellationProcessingStatus = cancellationProcessingStatus;
 	}
 
+	@XmlElement(name = "PtyTradgDtls")
 	public Order18 getPartyTradingDetails() {
 		return partyTradingDetails;
 	}
@@ -769,6 +894,7 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 		this.partyTradingDetails = partyTradingDetails;
 	}
 
+	@XmlElement(name = "CtrPtyTradgDtls")
 	public Order18 getCounterpartyTradingDetails() {
 		return counterpartyTradingDetails;
 	}
@@ -777,6 +903,7 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 		this.counterpartyTradingDetails = counterpartyTradingDetails;
 	}
 
+	@XmlElement(name = "ConfPties")
 	public List<ConfirmationParties4> getConfirmationParties() {
 		return confirmationParties;
 	}
@@ -785,6 +912,7 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 		this.confirmationParties = confirmationParties;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties23 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -793,6 +921,7 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties23 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -801,11 +930,18 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.044.02.02")
+	static public class Document {
+		@XmlElement(name = "SctiesTradConfStsAdvc", required = true)
+		public SecuritiesTradeConfirmationStatusAdviceV02 messageBody;
 	}
 }

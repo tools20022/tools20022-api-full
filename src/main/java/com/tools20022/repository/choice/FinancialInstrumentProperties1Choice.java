@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Alternative identification of a financial instrument other than an
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentProperties1Choice", propOrder = {"equity", "debt", "option", "warrant", "future"})
 public class FinancialInstrumentProperties1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -339,6 +345,7 @@ public class FinancialInstrumentProperties1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Eqty", required = true)
 	public Equity1 getEquity() {
 		return equity;
 	}
@@ -347,6 +354,7 @@ public class FinancialInstrumentProperties1Choice {
 		this.equity = equity;
 	}
 
+	@XmlElement(name = "Debt", required = true)
 	public Debt1 getDebt() {
 		return debt;
 	}
@@ -355,6 +363,7 @@ public class FinancialInstrumentProperties1Choice {
 		this.debt = debt;
 	}
 
+	@XmlElement(name = "Optn", required = true)
 	public Option1 getOption() {
 		return option;
 	}
@@ -363,6 +372,7 @@ public class FinancialInstrumentProperties1Choice {
 		this.option = option;
 	}
 
+	@XmlElement(name = "Warrt", required = true)
 	public Warrant1 getWarrant() {
 		return warrant;
 	}
@@ -371,6 +381,7 @@ public class FinancialInstrumentProperties1Choice {
 		this.warrant = warrant;
 	}
 
+	@XmlElement(name = "Futr", required = true)
 	public Future1 getFuture() {
 		return future;
 	}

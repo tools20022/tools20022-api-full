@@ -66,6 +66,11 @@ public class PortfolioManagerRole extends AssetPartyRole {
 				definition = "Party responsible for investing another party's assets and for managing the day-to-day operations.";
 				superType_lazy = () -> AssetPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PortfolioManagerRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

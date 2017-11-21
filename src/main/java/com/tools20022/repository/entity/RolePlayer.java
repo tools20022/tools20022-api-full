@@ -36,6 +36,22 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.RolePlayer#mmRole
+ * RolePlayer.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.RolePlayer#mmValidityPeriod
+ * RolePlayer.mmValidityPeriod}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Party Party}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System System}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -73,22 +89,6 @@ import java.util.List;
  * AccountParties16.mmRegisteredShareholderName}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Party Party}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System System}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.RolePlayer#mmRole
- * RolePlayer.mmRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RolePlayer#mmValidityPeriod
- * RolePlayer.mmValidityPeriod}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -124,10 +124,6 @@ public class RolePlayer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.RolePlayer RolePlayer}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -166,6 +162,10 @@ public class RolePlayer {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.RolePlayer RolePlayer}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -181,7 +181,7 @@ public class RolePlayer {
 			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation2.mmExtendedPartyRole, ExtendedParty2.mmExtendedPartyRole, InvestmentAccountOwnershipInformation3.mmExtendedPartyRole,
 					ExtendedParty1.mmExtendedPartyRole, ContactIdentification4.mmRole, ContactIdentification3.mmRole, Intermediary26.mmRole, Intermediary25.mmRole, SingleQualifiedPartyIdentification1.mmBaseParty,
 					QualifiedPartyIdentification1.mmRole, Intermediary34.mmRole, Intermediary35.mmRole);
-			elementContext_lazy = () -> RolePlayer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RolePlayer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Role";
@@ -227,7 +227,7 @@ public class RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RolePlayer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RolePlayer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
@@ -251,8 +251,13 @@ public class RolePlayer {
 				derivationElement_lazy = () -> Arrays.asList(AccountParties13.mmRegisteredShareholderName, AccountParties14.mmRegisteredShareholderName, AccountParties15.mmRegisteredShareholderName,
 						AccountParties16.mmRegisteredShareholderName);
 				subType_lazy = () -> Arrays.asList(Party.mmObject(), System.mmObject());
-				element_lazy = () -> Arrays.asList(RolePlayer.mmRole, RolePlayer.mmValidityPeriod);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RolePlayer.mmRole, com.tools20022.repository.entity.RolePlayer.mmValidityPeriod);
 				derivationComponent_lazy = () -> Arrays.asList(PartyIdentification79.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RolePlayer.class;
 			}
 		});
 		return mmObject_lazy.get();

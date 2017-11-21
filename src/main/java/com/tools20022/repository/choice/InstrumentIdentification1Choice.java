@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.FinancialInstrument1;
 import com.tools20022.repository.msg.FinancialInstrument13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the identification of an investment fund and another financial
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstrumentIdentification1Choice", propOrder = {"otherFinancialInstrument", "investmentFund"})
 public class InstrumentIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class InstrumentIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OthrFinInstrm", required = true)
 	public FinancialInstrument1 getOtherFinancialInstrument() {
 		return otherFinancialInstrument;
 	}
@@ -188,6 +195,7 @@ public class InstrumentIdentification1Choice {
 		this.otherFinancialInstrument = otherFinancialInstrument;
 	}
 
+	@XmlElement(name = "InvstmtFnd", required = true)
 	public FinancialInstrument13 getInvestmentFund() {
 		return investmentFund;
 	}

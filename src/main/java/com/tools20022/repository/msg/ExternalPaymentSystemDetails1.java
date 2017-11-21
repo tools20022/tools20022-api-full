@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about external payment system.
@@ -59,6 +63,8 @@ import java.util.List;
  * definition} = "Information about external payment system."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ExternalPaymentSystemDetails1", propOrder = {"clearingPositionsRegisterAllowedIndicator", "clearingCircuits"})
 public class ExternalPaymentSystemDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class ExternalPaymentSystemDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClrPossRegrAllwdInd", required = true)
 	public YesNoIndicator getClearingPositionsRegisterAllowedIndicator() {
 		return clearingPositionsRegisterAllowedIndicator;
 	}
@@ -169,6 +176,7 @@ public class ExternalPaymentSystemDetails1 {
 		this.clearingPositionsRegisterAllowedIndicator = clearingPositionsRegisterAllowedIndicator;
 	}
 
+	@XmlElement(name = "ClrCrcts", required = true)
 	public List<ClearingCircuits1> getClearingCircuits() {
 		return clearingCircuits;
 	}

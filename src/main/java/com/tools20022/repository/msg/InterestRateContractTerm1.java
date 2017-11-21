@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes how interest rates are reported.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestRateContractTerm1", propOrder = {"unit", "value"})
 public class InterestRateContractTerm1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -202,6 +208,7 @@ public class InterestRateContractTerm1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Unit", required = true)
 	public RateBasis1Code getUnit() {
 		return unit;
 	}
@@ -210,6 +217,7 @@ public class InterestRateContractTerm1 {
 		this.unit = unit;
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public Number getValue() {
 		return value;
 	}

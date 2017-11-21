@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.SecuritiesMarketReportHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TransparencyDataReport13;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The FinancialInstrumentReportingEquityTradingActivityReport message is sent
@@ -37,9 +39,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.040.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -75,6 +74,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.040.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -86,6 +88,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentReportingEquityTradingActivityReportV01", propOrder = {"reportHeader", "equityTransparencyData", "supplementaryData"})
 public class FinancialInstrumentReportingEquityTradingActivityReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -126,6 +130,14 @@ public class FinancialInstrumentReportingEquityTradingActivityReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesMarketReportHeader1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingEquityTradingActivityReportV01.class.getMethod("getReportHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<TransparencyDataReport13> equityTransparencyData;
 	/**
@@ -160,6 +172,14 @@ public class FinancialInstrumentReportingEquityTradingActivityReportV01 {
 			definition = "Details the transparency data reported by a trading venue.";
 			minOccurs = 1;
 			complexType_lazy = () -> TransparencyDataReport13.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingEquityTradingActivityReportV01.class.getMethod("getEquityTransparencyData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -198,6 +218,14 @@ public class FinancialInstrumentReportingEquityTradingActivityReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FinancialInstrumentReportingEquityTradingActivityReportV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -210,8 +238,9 @@ public class FinancialInstrumentReportingEquityTradingActivityReportV01 {
 				rootElement = "Document";
 				xmlTag = "FinInstrmRptgEqtyTradgActvtyRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingEquityTradingActivityReportV01.mmReportHeader, FinancialInstrumentReportingEquityTradingActivityReportV01.mmEquityTransparencyData,
-						FinancialInstrumentReportingEquityTradingActivityReportV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01.mmReportHeader,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01.mmEquityTransparencyData,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -221,10 +250,16 @@ public class FinancialInstrumentReportingEquityTradingActivityReportV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FinancialInstrumentReportingEquityTradingActivityReportV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptHdr", required = true)
 	public SecuritiesMarketReportHeader1 getReportHeader() {
 		return reportHeader;
 	}
@@ -233,6 +268,7 @@ public class FinancialInstrumentReportingEquityTradingActivityReportV01 {
 		this.reportHeader = reportHeader;
 	}
 
+	@XmlElement(name = "EqtyTrnsprncyData", required = true)
 	public List<TransparencyDataReport13> getEquityTransparencyData() {
 		return equityTransparencyData;
 	}
@@ -241,11 +277,18 @@ public class FinancialInstrumentReportingEquityTradingActivityReportV01 {
 		this.equityTransparencyData = equityTransparencyData;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.040.01.01")
+	static public class Document {
+		@XmlElement(name = "FinInstrmRptgEqtyTradgActvtyRpt", required = true)
+		public FinancialInstrumentReportingEquityTradingActivityReportV01 messageBody;
 	}
 }

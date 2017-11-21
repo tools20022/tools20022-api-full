@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.ATMCommand2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Maintenance command which has requested the device report.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMCommand2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCommand3", propOrder = {"type", "commandIdentification"})
 public class ATMCommand3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class ATMCommand3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ATMCommand2Code getType() {
 		return type;
 	}
@@ -204,6 +211,7 @@ public class ATMCommand3 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "CmdId")
 	public ATMCommandIdentification1 getCommandIdentification() {
 		return commandIdentification;
 	}

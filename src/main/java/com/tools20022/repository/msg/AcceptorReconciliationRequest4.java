@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.ReconciliationTransaction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reconciliation request from an acceptor.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorReconciliationRequest3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorReconciliationRequest4", propOrder = {"environment", "transaction"})
 public class AcceptorReconciliationRequest4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class AcceptorReconciliationRequest4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment37 getEnvironment() {
 		return environment;
 	}
@@ -238,6 +245,7 @@ public class AcceptorReconciliationRequest4 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public TransactionReconciliation3 getTransaction() {
 		return transaction;
 	}

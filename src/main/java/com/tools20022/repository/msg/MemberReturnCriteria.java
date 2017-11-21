@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to report on a member.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the criteria used to report on a member."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MemberReturnCriteria", propOrder = {"nameIndicator", "memberReturnAddressIndicator", "accountIndicator", "typeIndicator", "statusIndicator", "contactReferenceIndicator", "communicationAddressIndicator"})
 public class MemberReturnCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -386,6 +392,7 @@ public class MemberReturnCriteria {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NmInd")
 	public RequestedIndicator getNameIndicator() {
 		return nameIndicator;
 	}
@@ -394,6 +401,7 @@ public class MemberReturnCriteria {
 		this.nameIndicator = nameIndicator;
 	}
 
+	@XmlElement(name = "MmbRtrAdrInd")
 	public RequestedIndicator getMemberReturnAddressIndicator() {
 		return memberReturnAddressIndicator;
 	}
@@ -402,6 +410,7 @@ public class MemberReturnCriteria {
 		this.memberReturnAddressIndicator = memberReturnAddressIndicator;
 	}
 
+	@XmlElement(name = "AcctInd")
 	public RequestedIndicator getAccountIndicator() {
 		return accountIndicator;
 	}
@@ -410,6 +419,7 @@ public class MemberReturnCriteria {
 		this.accountIndicator = accountIndicator;
 	}
 
+	@XmlElement(name = "TpInd")
 	public RequestedIndicator getTypeIndicator() {
 		return typeIndicator;
 	}
@@ -418,6 +428,7 @@ public class MemberReturnCriteria {
 		this.typeIndicator = typeIndicator;
 	}
 
+	@XmlElement(name = "StsInd")
 	public RequestedIndicator getStatusIndicator() {
 		return statusIndicator;
 	}
@@ -426,6 +437,7 @@ public class MemberReturnCriteria {
 		this.statusIndicator = statusIndicator;
 	}
 
+	@XmlElement(name = "CtctRefInd")
 	public RequestedIndicator getContactReferenceIndicator() {
 		return contactReferenceIndicator;
 	}
@@ -434,6 +446,7 @@ public class MemberReturnCriteria {
 		this.contactReferenceIndicator = contactReferenceIndicator;
 	}
 
+	@XmlElement(name = "ComAdrInd")
 	public RequestedIndicator getCommunicationAddressIndicator() {
 		return communicationAddressIndicator;
 	}

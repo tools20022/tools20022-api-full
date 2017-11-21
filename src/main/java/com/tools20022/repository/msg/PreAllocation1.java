@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides pre-allocation details.
@@ -77,6 +81,8 @@ import java.util.function.Supplier;
  * definition} = "Provides pre-allocation details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PreAllocation1", propOrder = {"allocationIdentification", "individualAllocationIdentification", "allocatedQuantity", "allocatedSettlementCurrency", "allocationAccountDetails"})
 public class PreAllocation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -339,6 +345,7 @@ public class PreAllocation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AllcnId")
 	public Max35Text getAllocationIdentification() {
 		return allocationIdentification;
 	}
@@ -347,6 +354,7 @@ public class PreAllocation1 {
 		this.allocationIdentification = allocationIdentification;
 	}
 
+	@XmlElement(name = "IndvAllcnId")
 	public Max35Text getIndividualAllocationIdentification() {
 		return individualAllocationIdentification;
 	}
@@ -355,6 +363,7 @@ public class PreAllocation1 {
 		this.individualAllocationIdentification = individualAllocationIdentification;
 	}
 
+	@XmlElement(name = "AllctdQty")
 	public FinancialInstrumentQuantityChoice getAllocatedQuantity() {
 		return allocatedQuantity;
 	}
@@ -363,6 +372,7 @@ public class PreAllocation1 {
 		this.allocatedQuantity = allocatedQuantity;
 	}
 
+	@XmlElement(name = "AllctdSttlmCcy")
 	public CurrencyCode getAllocatedSettlementCurrency() {
 		return allocatedSettlementCurrency;
 	}
@@ -371,6 +381,7 @@ public class PreAllocation1 {
 		this.allocatedSettlementCurrency = allocatedSettlementCurrency;
 	}
 
+	@XmlElement(name = "AllcnAcctDtls")
 	public SecuritiesAccount2 getAllocationAccountDetails() {
 		return allocationAccountDetails;
 	}

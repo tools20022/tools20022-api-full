@@ -66,6 +66,11 @@ public class VotingPartyRole extends MeetingPartyRole {
 				definition = "Party that has indicated its voting decision on one agenda item or on the entirety of the agenda.";
 				superType_lazy = () -> MeetingPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return VotingPartyRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

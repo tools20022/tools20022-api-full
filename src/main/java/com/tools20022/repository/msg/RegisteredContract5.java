@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Document that a user must file with an authorized servicer for each contract
@@ -114,6 +118,9 @@ import java.util.List;
  * RegisteredContract4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegisteredContract5", propOrder = {"originalContractRegistrationRequest", "issuerFinancialInstitution", "contract", "contractBalance", "paymentScheduleType", "registeredContractIdentification",
+		"previousRegisteredContractIdentification", "registeredContractJournal", "amendment", "submission", "delivery", "loanPrincipalAmount", "estimatedDateIndicator", "interCompanyLoan", "additionalInformation"})
 public class RegisteredContract5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -957,6 +964,7 @@ public class RegisteredContract5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlCtrctRegnReq")
 	public Max35Text getOriginalContractRegistrationRequest() {
 		return originalContractRegistrationRequest;
 	}
@@ -965,6 +973,7 @@ public class RegisteredContract5 {
 		this.originalContractRegistrationRequest = originalContractRegistrationRequest;
 	}
 
+	@XmlElement(name = "IssrFI", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getIssuerFinancialInstitution() {
 		return issuerFinancialInstitution;
 	}
@@ -973,6 +982,7 @@ public class RegisteredContract5 {
 		this.issuerFinancialInstitution = issuerFinancialInstitution;
 	}
 
+	@XmlElement(name = "Ctrct", required = true)
 	public UnderlyingContract1Choice getContract() {
 		return contract;
 	}
@@ -981,6 +991,7 @@ public class RegisteredContract5 {
 		this.contract = contract;
 	}
 
+	@XmlElement(name = "CtrctBal")
 	public List<ContractBalance1> getContractBalance() {
 		return contractBalance;
 	}
@@ -989,6 +1000,7 @@ public class RegisteredContract5 {
 		this.contractBalance = contractBalance;
 	}
 
+	@XmlElement(name = "PmtSchdlTp")
 	public PaymentScheduleType1Choice getPaymentScheduleType() {
 		return paymentScheduleType;
 	}
@@ -997,6 +1009,7 @@ public class RegisteredContract5 {
 		this.paymentScheduleType = paymentScheduleType;
 	}
 
+	@XmlElement(name = "RegdCtrctId", required = true)
 	public DocumentIdentification29 getRegisteredContractIdentification() {
 		return registeredContractIdentification;
 	}
@@ -1005,6 +1018,7 @@ public class RegisteredContract5 {
 		this.registeredContractIdentification = registeredContractIdentification;
 	}
 
+	@XmlElement(name = "PrvsRegdCtrctId")
 	public DocumentIdentification22 getPreviousRegisteredContractIdentification() {
 		return previousRegisteredContractIdentification;
 	}
@@ -1013,6 +1027,7 @@ public class RegisteredContract5 {
 		this.previousRegisteredContractIdentification = previousRegisteredContractIdentification;
 	}
 
+	@XmlElement(name = "RegdCtrctJrnl")
 	public List<RegisteredContractJournal1> getRegisteredContractJournal() {
 		return registeredContractJournal;
 	}
@@ -1021,6 +1036,7 @@ public class RegisteredContract5 {
 		this.registeredContractJournal = registeredContractJournal;
 	}
 
+	@XmlElement(name = "Amdmnt")
 	public List<RegisteredContractAmendment1> getAmendment() {
 		return amendment;
 	}
@@ -1029,6 +1045,7 @@ public class RegisteredContract5 {
 		this.amendment = amendment;
 	}
 
+	@XmlElement(name = "Submissn", required = true)
 	public RegisteredContractCommunication1 getSubmission() {
 		return submission;
 	}
@@ -1037,6 +1054,7 @@ public class RegisteredContract5 {
 		this.submission = submission;
 	}
 
+	@XmlElement(name = "Dlvry", required = true)
 	public RegisteredContractCommunication1 getDelivery() {
 		return delivery;
 	}
@@ -1045,6 +1063,7 @@ public class RegisteredContract5 {
 		this.delivery = delivery;
 	}
 
+	@XmlElement(name = "LnPrncplAmt")
 	public ActiveCurrencyAndAmount getLoanPrincipalAmount() {
 		return loanPrincipalAmount;
 	}
@@ -1053,6 +1072,7 @@ public class RegisteredContract5 {
 		this.loanPrincipalAmount = loanPrincipalAmount;
 	}
 
+	@XmlElement(name = "EstmtdDtInd", required = true)
 	public TrueFalseIndicator getEstimatedDateIndicator() {
 		return estimatedDateIndicator;
 	}
@@ -1061,6 +1081,7 @@ public class RegisteredContract5 {
 		this.estimatedDateIndicator = estimatedDateIndicator;
 	}
 
+	@XmlElement(name = "IntrCpnyLn", required = true)
 	public TrueFalseIndicator getInterCompanyLoan() {
 		return interCompanyLoan;
 	}
@@ -1069,6 +1090,7 @@ public class RegisteredContract5 {
 		this.interCompanyLoan = interCompanyLoan;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max1025Text getAdditionalInformation() {
 		return additionalInformation;
 	}

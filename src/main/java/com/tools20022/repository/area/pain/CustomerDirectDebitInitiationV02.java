@@ -25,9 +25,11 @@ import com.tools20022.repository.area.PaymentsInitiationArchive;
 import com.tools20022.repository.msg.GroupHeader39;
 import com.tools20022.repository.msg.PaymentInstructionInformation4;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -60,9 +62,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.008.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
@@ -90,6 +89,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.008.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -113,6 +115,8 @@ import java.util.List;
  * CustomerDirectDebitInitiationV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustomerDirectDebitInitiationV02", propOrder = {"groupHeader", "paymentInformation"})
 public class CustomerDirectDebitInitiationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -152,6 +156,14 @@ public class CustomerDirectDebitInitiationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader39.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerDirectDebitInitiationV02.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PaymentInstructionInformation4> paymentInformation;
 	/**
@@ -189,6 +201,14 @@ public class CustomerDirectDebitInitiationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstructionInformation4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CustomerDirectDebitInitiationV02.class.getMethod("getPaymentInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -203,7 +223,7 @@ public class CustomerDirectDebitInitiationV02 {
 				rootElement = "Document";
 				xmlTag = "CstmrDrctDbtInitn";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerDirectDebitInitiationV02.mmGroupHeader, CustomerDirectDebitInitiationV02.mmPaymentInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV02.mmGroupHeader, com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV02.mmPaymentInformation);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";
@@ -213,10 +233,16 @@ public class CustomerDirectDebitInitiationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CustomerDirectDebitInitiationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader39 getGroupHeader() {
 		return groupHeader;
 	}
@@ -225,11 +251,18 @@ public class CustomerDirectDebitInitiationV02 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "PmtInf", required = true)
 	public List<PaymentInstructionInformation4> getPaymentInformation() {
 		return paymentInformation;
 	}
 
 	public void setPaymentInformation(List<PaymentInstructionInformation4> paymentInformation) {
 		this.paymentInformation = paymentInformation;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.02.02")
+	static public class Document {
+		@XmlElement(name = "CstmrDrctDbtInitn", required = true)
+		public CustomerDirectDebitInitiationV02 messageBody;
 	}
 }

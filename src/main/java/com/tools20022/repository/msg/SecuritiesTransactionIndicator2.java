@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional indicators on the transaction.
@@ -70,6 +74,8 @@ import java.util.List;
  * definition} = "Provides additional indicators on the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTransactionIndicator2", propOrder = {"waiverIndicator", "shortSellingIndicator", "OTCPostTradeIndicator", "riskReducingTransaction", "securitiesFinancingTransactionIndicator"})
 public class SecuritiesTransactionIndicator2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -310,6 +316,7 @@ public class SecuritiesTransactionIndicator2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "WvrInd")
 	public List<ReportingWaiverType1Code> getWaiverIndicator() {
 		return waiverIndicator;
 	}
@@ -318,6 +325,7 @@ public class SecuritiesTransactionIndicator2 {
 		this.waiverIndicator = waiverIndicator;
 	}
 
+	@XmlElement(name = "ShrtSellgInd")
 	public Side5Code getShortSellingIndicator() {
 		return shortSellingIndicator;
 	}
@@ -326,6 +334,7 @@ public class SecuritiesTransactionIndicator2 {
 		this.shortSellingIndicator = shortSellingIndicator;
 	}
 
+	@XmlElement(name = "OTCPstTradInd")
 	public List<ReportingWaiverType3Code> getOTCPostTradeIndicator() {
 		return oTCPostTradeIndicator;
 	}
@@ -334,6 +343,7 @@ public class SecuritiesTransactionIndicator2 {
 		this.oTCPostTradeIndicator = oTCPostTradeIndicator;
 	}
 
+	@XmlElement(name = "RskRdcgTx")
 	public TrueFalseIndicator getRiskReducingTransaction() {
 		return riskReducingTransaction;
 	}
@@ -342,6 +352,7 @@ public class SecuritiesTransactionIndicator2 {
 		this.riskReducingTransaction = riskReducingTransaction;
 	}
 
+	@XmlElement(name = "SctiesFincgTxInd", required = true)
 	public TrueFalseIndicator getSecuritiesFinancingTransactionIndicator() {
 		return securitiesFinancingTransactionIndicator;
 	}

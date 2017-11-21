@@ -25,8 +25,10 @@ import com.tools20022.repository.area.TerminalManagementArchive;
 import com.tools20022.repository.msg.AcceptorRejection1;
 import com.tools20022.repository.msg.Header6;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The TerminalManagementRejection message is sent by the terminal manager to
@@ -35,9 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catm.004.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TerminalManagementArchive
@@ -65,6 +64,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catm.004.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -84,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TerminalManagementRejectionV01", propOrder = {"header", "reject"})
 public class TerminalManagementRejectionV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -129,6 +133,14 @@ public class TerminalManagementRejectionV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header6.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TerminalManagementRejectionV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AcceptorRejection1 reject;
 	/**
@@ -173,6 +185,14 @@ public class TerminalManagementRejectionV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorRejection1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TerminalManagementRejectionV01.class.getMethod("getReject", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -186,7 +206,7 @@ public class TerminalManagementRejectionV01 {
 				rootElement = "Document";
 				xmlTag = "TermnlMgmtRjctn";
 				businessArea_lazy = () -> TerminalManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(TerminalManagementRejectionV01.mmHeader, TerminalManagementRejectionV01.mmReject);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.TerminalManagementRejectionV01.mmHeader, com.tools20022.repository.area.catm.TerminalManagementRejectionV01.mmReject);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catm";
@@ -196,10 +216,16 @@ public class TerminalManagementRejectionV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TerminalManagementRejectionV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header6 getHeader() {
 		return header;
 	}
@@ -208,11 +234,18 @@ public class TerminalManagementRejectionV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "Rjct", required = true)
 	public AcceptorRejection1 getReject() {
 		return reject;
 	}
 
 	public void setReject(AcceptorRejection1 reject) {
 		this.reject = reject;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catm.004.01.01")
+	static public class Document {
+		@XmlElement(name = "TermnlMgmtRjctn", required = true)
+		public TerminalManagementRejectionV01 messageBody;
 	}
 }

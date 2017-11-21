@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements to identify a proprietary party.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Set of elements to identify a proprietary party."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProprietaryAgent1", propOrder = {"type", "agent"})
 public class ProprietaryAgent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -168,6 +174,7 @@ public class ProprietaryAgent1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public Max35Text getType() {
 		return type;
 	}
@@ -176,6 +183,7 @@ public class ProprietaryAgent1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Agt", required = true)
 	public BranchAndFinancialInstitutionIdentification3 getAgent() {
 		return agent;
 	}

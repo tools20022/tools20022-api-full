@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the header information for a query response file, as part of the
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IsabelReportHeader4", propOrder = {"actualSenderIdentification", "payloadCreationDate", "fileFormat", "sendTimeStamp", "transportIdentification", "originalRequestIdentification", "emptyPayload", "bankReference"})
 public class IsabelReportHeader4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -432,6 +438,7 @@ public class IsabelReportHeader4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ActlSndrId", required = true)
 	public Max13AlphaNumericText getActualSenderIdentification() {
 		return actualSenderIdentification;
 	}
@@ -440,6 +447,7 @@ public class IsabelReportHeader4 {
 		this.actualSenderIdentification = actualSenderIdentification;
 	}
 
+	@XmlElement(name = "PyldCreDt", required = true)
 	public DateAndDateTimeChoice getPayloadCreationDate() {
 		return payloadCreationDate;
 	}
@@ -448,6 +456,7 @@ public class IsabelReportHeader4 {
 		this.payloadCreationDate = payloadCreationDate;
 	}
 
+	@XmlElement(name = "FileFrmt", required = true)
 	public Max16Text getFileFormat() {
 		return fileFormat;
 	}
@@ -456,6 +465,7 @@ public class IsabelReportHeader4 {
 		this.fileFormat = fileFormat;
 	}
 
+	@XmlElement(name = "SndTmStmp", required = true)
 	public ISODateTime getSendTimeStamp() {
 		return sendTimeStamp;
 	}
@@ -464,6 +474,7 @@ public class IsabelReportHeader4 {
 		this.sendTimeStamp = sendTimeStamp;
 	}
 
+	@XmlElement(name = "TrnsprtId", required = true)
 	public Max14AlphaNumericText getTransportIdentification() {
 		return transportIdentification;
 	}
@@ -472,6 +483,7 @@ public class IsabelReportHeader4 {
 		this.transportIdentification = transportIdentification;
 	}
 
+	@XmlElement(name = "OrgnlReqId", required = true)
 	public Max38AlphaNumericText getOriginalRequestIdentification() {
 		return originalRequestIdentification;
 	}
@@ -480,6 +492,7 @@ public class IsabelReportHeader4 {
 		this.originalRequestIdentification = originalRequestIdentification;
 	}
 
+	@XmlElement(name = "MptyPyld", required = true)
 	public TrueFalseIndicator getEmptyPayload() {
 		return emptyPayload;
 	}
@@ -488,6 +501,7 @@ public class IsabelReportHeader4 {
 		this.emptyPayload = emptyPayload;
 	}
 
+	@XmlElement(name = "BkRef", required = true)
 	public Max64Text getBankReference() {
 		return bankReference;
 	}

@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Currency specific Factors.
@@ -76,6 +80,8 @@ import java.util.function.Supplier;
  * definition} = "Currency specific Factors."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyFactors1", propOrder = {"currency", "shortPositionLimit", "minimumPayInAmount", "volatilityMargin", "rate"})
 public class CurrencyFactors1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -344,6 +350,7 @@ public class CurrencyFactors1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy", required = true)
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -352,6 +359,7 @@ public class CurrencyFactors1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "ShrtPosLmt", required = true)
 	public ImpliedCurrencyAndAmount getShortPositionLimit() {
 		return shortPositionLimit;
 	}
@@ -360,6 +368,7 @@ public class CurrencyFactors1 {
 		this.shortPositionLimit = shortPositionLimit;
 	}
 
+	@XmlElement(name = "MinPayInAmt", required = true)
 	public ImpliedCurrencyAndAmount getMinimumPayInAmount() {
 		return minimumPayInAmount;
 	}
@@ -368,6 +377,7 @@ public class CurrencyFactors1 {
 		this.minimumPayInAmount = minimumPayInAmount;
 	}
 
+	@XmlElement(name = "VoltlyMrgn", required = true)
 	public PercentageRate getVolatilityMargin() {
 		return volatilityMargin;
 	}
@@ -376,6 +386,7 @@ public class CurrencyFactors1 {
 		this.volatilityMargin = volatilityMargin;
 	}
 
+	@XmlElement(name = "Rate")
 	public AgreedRate2 getRate() {
 		return rate;
 	}

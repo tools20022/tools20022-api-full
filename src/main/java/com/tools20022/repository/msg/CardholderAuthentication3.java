@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Authentication;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data related to the authentication of the cardholder.
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardholderAuthentication1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardholderAuthentication3", propOrder = {"authenticationMethod", "authenticationEntity", "authenticationValue", "cardholderOnLinePIN", "authenticationCollectionIndicator"})
 public class CardholderAuthentication3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -387,6 +393,7 @@ public class CardholderAuthentication3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AuthntcnMtd", required = true)
 	public AuthenticationMethod2Code getAuthenticationMethod() {
 		return authenticationMethod;
 	}
@@ -395,6 +402,7 @@ public class CardholderAuthentication3 {
 		this.authenticationMethod = authenticationMethod;
 	}
 
+	@XmlElement(name = "AuthntcnNtty")
 	public AuthenticationEntity1Code getAuthenticationEntity() {
 		return authenticationEntity;
 	}
@@ -403,6 +411,7 @@ public class CardholderAuthentication3 {
 		this.authenticationEntity = authenticationEntity;
 	}
 
+	@XmlElement(name = "AuthntcnVal")
 	public Max40Text getAuthenticationValue() {
 		return authenticationValue;
 	}
@@ -411,6 +420,7 @@ public class CardholderAuthentication3 {
 		this.authenticationValue = authenticationValue;
 	}
 
+	@XmlElement(name = "CrdhldrOnLinePIN")
 	public OnLinePIN2 getCardholderOnLinePIN() {
 		return cardholderOnLinePIN;
 	}
@@ -419,6 +429,7 @@ public class CardholderAuthentication3 {
 		this.cardholderOnLinePIN = cardholderOnLinePIN;
 	}
 
+	@XmlElement(name = "AuthntcnColltnInd")
 	public Max35Text getAuthenticationCollectionIndicator() {
 		return authenticationCollectionIndicator;
 	}

@@ -29,35 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType3Code
- * FractionDispositionType3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType6Code
- * FractionDispositionType6Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType4Code
- * FractionDispositionType4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType1Code
- * FractionDispositionType1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType7Code
- * FractionDispositionType7Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType2Code
- * FractionDispositionType2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType5Code
- * FractionDispositionType5Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType12Code
- * FractionDispositionType12Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -105,6 +76,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeCode#mmUnknown
  * FractionDispositionTypeCode.mmUnknown}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType3Code
+ * FractionDispositionType3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType6Code
+ * FractionDispositionType6Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType4Code
+ * FractionDispositionType4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType1Code
+ * FractionDispositionType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType7Code
+ * FractionDispositionType7Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType2Code
+ * FractionDispositionType2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType5Code
+ * FractionDispositionType5Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType12Code
+ * FractionDispositionType12Code}</li>
  * </ul>
  * </li>
  * <li>

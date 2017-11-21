@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Conditionally accepted status reason.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Conditionally accepted status reason."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ConditionallyAcceptedStatusReason1Choice", propOrder = {"reason", "proprietary", "noSpecifiedReason"})
 public class ConditionallyAcceptedStatusReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class ConditionallyAcceptedStatusReason1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public ConditionallyAcceptedStatusReason3Code getReason() {
 		return reason;
 	}
@@ -237,6 +244,7 @@ public class ConditionallyAcceptedStatusReason1Choice {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification13 getProprietary() {
 		return proprietary;
 	}
@@ -245,6 +253,7 @@ public class ConditionallyAcceptedStatusReason1Choice {
 		this.proprietary = proprietary;
 	}
 
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}

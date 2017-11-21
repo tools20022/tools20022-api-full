@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SettlementTypeAndIdentification22;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of reference.
@@ -116,6 +120,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of reference."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References53Choice", propOrder = {"securitiesSettlementTransactionConfirmationIdentification", "intraPositionMovementConfirmationIdentification", "securitiesBalanceAccountingReportIdentification",
+		"securitiesBalanceCustodyReportIdentification", "intraPositionMovementPostingReportIdentification", "securitiesFinancingConfirmationIdentification", "securitiesTransactionPendingReportIdentification",
+		"securitiesTransactionPostingReportIdentification", "securitiesSettlementTransactionAllegementReportIdentification", "securitiesSettlementTransactionAllegementNotificationTransactionIdentification",
+		"portfolioTransferNotificationIdentification", "securitiesSettlementTransactionGenerationNotificationIdentification", "otherMessageIdentification", "totalPortfolioValuationReportIdentification"})
 public class References53Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -768,6 +777,7 @@ public class References53Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesSttlmTxConfId", required = true)
 	public SettlementTypeAndIdentification22 getSecuritiesSettlementTransactionConfirmationIdentification() {
 		return securitiesSettlementTransactionConfirmationIdentification;
 	}
@@ -776,6 +786,7 @@ public class References53Choice {
 		this.securitiesSettlementTransactionConfirmationIdentification = securitiesSettlementTransactionConfirmationIdentification;
 	}
 
+	@XmlElement(name = "IntraPosMvmntConfId", required = true)
 	public RestrictedFINXMax16Text getIntraPositionMovementConfirmationIdentification() {
 		return intraPositionMovementConfirmationIdentification;
 	}
@@ -784,6 +795,7 @@ public class References53Choice {
 		this.intraPositionMovementConfirmationIdentification = intraPositionMovementConfirmationIdentification;
 	}
 
+	@XmlElement(name = "SctiesBalAcctgRptId", required = true)
 	public RestrictedFINXMax16Text getSecuritiesBalanceAccountingReportIdentification() {
 		return securitiesBalanceAccountingReportIdentification;
 	}
@@ -792,6 +804,7 @@ public class References53Choice {
 		this.securitiesBalanceAccountingReportIdentification = securitiesBalanceAccountingReportIdentification;
 	}
 
+	@XmlElement(name = "SctiesBalCtdyRptId", required = true)
 	public RestrictedFINXMax16Text getSecuritiesBalanceCustodyReportIdentification() {
 		return securitiesBalanceCustodyReportIdentification;
 	}
@@ -800,6 +813,7 @@ public class References53Choice {
 		this.securitiesBalanceCustodyReportIdentification = securitiesBalanceCustodyReportIdentification;
 	}
 
+	@XmlElement(name = "IntraPosMvmntPstngRptId", required = true)
 	public RestrictedFINXMax16Text getIntraPositionMovementPostingReportIdentification() {
 		return intraPositionMovementPostingReportIdentification;
 	}
@@ -808,6 +822,7 @@ public class References53Choice {
 		this.intraPositionMovementPostingReportIdentification = intraPositionMovementPostingReportIdentification;
 	}
 
+	@XmlElement(name = "SctiesFincgConfId", required = true)
 	public SettlementTypeAndIdentification22 getSecuritiesFinancingConfirmationIdentification() {
 		return securitiesFinancingConfirmationIdentification;
 	}
@@ -816,6 +831,7 @@ public class References53Choice {
 		this.securitiesFinancingConfirmationIdentification = securitiesFinancingConfirmationIdentification;
 	}
 
+	@XmlElement(name = "SctiesTxPdgRptId", required = true)
 	public RestrictedFINXMax16Text getSecuritiesTransactionPendingReportIdentification() {
 		return securitiesTransactionPendingReportIdentification;
 	}
@@ -824,6 +840,7 @@ public class References53Choice {
 		this.securitiesTransactionPendingReportIdentification = securitiesTransactionPendingReportIdentification;
 	}
 
+	@XmlElement(name = "SctiesTxPstngRptId", required = true)
 	public RestrictedFINXMax16Text getSecuritiesTransactionPostingReportIdentification() {
 		return securitiesTransactionPostingReportIdentification;
 	}
@@ -832,6 +849,7 @@ public class References53Choice {
 		this.securitiesTransactionPostingReportIdentification = securitiesTransactionPostingReportIdentification;
 	}
 
+	@XmlElement(name = "SctiesSttlmTxAllgmtRptId", required = true)
 	public RestrictedFINXMax16Text getSecuritiesSettlementTransactionAllegementReportIdentification() {
 		return securitiesSettlementTransactionAllegementReportIdentification;
 	}
@@ -840,6 +858,7 @@ public class References53Choice {
 		this.securitiesSettlementTransactionAllegementReportIdentification = securitiesSettlementTransactionAllegementReportIdentification;
 	}
 
+	@XmlElement(name = "SctiesSttlmTxAllgmtNtfctnTxId", required = true)
 	public SettlementTypeAndIdentification22 getSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification() {
 		return securitiesSettlementTransactionAllegementNotificationTransactionIdentification;
 	}
@@ -848,6 +867,7 @@ public class References53Choice {
 		this.securitiesSettlementTransactionAllegementNotificationTransactionIdentification = securitiesSettlementTransactionAllegementNotificationTransactionIdentification;
 	}
 
+	@XmlElement(name = "PrtflTrfNtfctnId", required = true)
 	public RestrictedFINXMax16Text getPortfolioTransferNotificationIdentification() {
 		return portfolioTransferNotificationIdentification;
 	}
@@ -856,6 +876,7 @@ public class References53Choice {
 		this.portfolioTransferNotificationIdentification = portfolioTransferNotificationIdentification;
 	}
 
+	@XmlElement(name = "SctiesSttlmTxGnrtnNtfctnId", required = true)
 	public SettlementTypeAndIdentification22 getSecuritiesSettlementTransactionGenerationNotificationIdentification() {
 		return securitiesSettlementTransactionGenerationNotificationIdentification;
 	}
@@ -864,6 +885,7 @@ public class References53Choice {
 		this.securitiesSettlementTransactionGenerationNotificationIdentification = securitiesSettlementTransactionGenerationNotificationIdentification;
 	}
 
+	@XmlElement(name = "OthrMsgId", required = true)
 	public RestrictedFINXMax16Text getOtherMessageIdentification() {
 		return otherMessageIdentification;
 	}
@@ -872,6 +894,7 @@ public class References53Choice {
 		this.otherMessageIdentification = otherMessageIdentification;
 	}
 
+	@XmlElement(name = "TtlPrtflValtnRptId", required = true)
 	public RestrictedFINXMax16Text getTotalPortfolioValuationReportIdentification() {
 		return totalPortfolioValuationReportIdentification;
 	}

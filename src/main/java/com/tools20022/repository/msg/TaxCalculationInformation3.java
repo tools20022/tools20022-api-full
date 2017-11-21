@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information used to calculate the tax.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information used to calculate the tax."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxCalculationInformation3", propOrder = {"basis", "EUCapitalGain", "taxableAmount"})
 public class TaxCalculationInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -232,6 +238,7 @@ public class TaxCalculationInformation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Bsis")
 	public TaxationBasis1 getBasis() {
 		return basis;
 	}
@@ -240,6 +247,7 @@ public class TaxCalculationInformation3 {
 		this.basis = basis;
 	}
 
+	@XmlElement(name = "EUCptlGn")
 	public EUCapitalGain1 getEUCapitalGain() {
 		return eUCapitalGain;
 	}
@@ -248,6 +256,7 @@ public class TaxCalculationInformation3 {
 		this.eUCapitalGain = eUCapitalGain;
 	}
 
+	@XmlElement(name = "TaxblAmt")
 	public ActiveCurrencyAnd13DecimalAmount getTaxableAmount() {
 		return taxableAmount;
 	}

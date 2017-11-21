@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Mandate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the details for the adjustment of the mandate.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the details for the adjustment of the mandate."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MandateAdjustment1", propOrder = {"dateAdjustmentRuleIndicator", "category", "amount", "rate"})
 public class MandateAdjustment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -281,6 +287,7 @@ public class MandateAdjustment1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtAdjstmntRuleInd", required = true)
 	public TrueFalseIndicator getDateAdjustmentRuleIndicator() {
 		return dateAdjustmentRuleIndicator;
 	}
@@ -289,6 +296,7 @@ public class MandateAdjustment1 {
 		this.dateAdjustmentRuleIndicator = dateAdjustmentRuleIndicator;
 	}
 
+	@XmlElement(name = "Ctgy")
 	public Frequency37Choice getCategory() {
 		return category;
 	}
@@ -297,6 +305,7 @@ public class MandateAdjustment1 {
 		this.category = category;
 	}
 
+	@XmlElement(name = "Amt")
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -305,6 +314,7 @@ public class MandateAdjustment1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}

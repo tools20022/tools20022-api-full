@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money due to a party as compensation for a service.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Commission22}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Commission23", propOrder = {"type", "basis", "amount", "recipientIdentification", "commercialAgreementReference", "waivingDetails"})
 public class Commission23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -421,6 +427,7 @@ public class Commission23 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public CommissionType3Choice getType() {
 		return type;
 	}
@@ -429,6 +436,7 @@ public class Commission23 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Bsis")
 	public CommissionBasis1Choice getBasis() {
 		return basis;
 	}
@@ -437,6 +445,7 @@ public class Commission23 {
 		this.basis = basis;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -445,6 +454,7 @@ public class Commission23 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification70Choice getRecipientIdentification() {
 		return recipientIdentification;
 	}
@@ -453,6 +463,7 @@ public class Commission23 {
 		this.recipientIdentification = recipientIdentification;
 	}
 
+	@XmlElement(name = "ComrclAgrmtRef")
 	public Max35Text getCommercialAgreementReference() {
 		return commercialAgreementReference;
 	}
@@ -461,6 +472,7 @@ public class Commission23 {
 		this.commercialAgreementReference = commercialAgreementReference;
 	}
 
+	@XmlElement(name = "WvgDtls")
 	public CommissionWaiver4 getWaivingDetails() {
 		return waivingDetails;
 	}

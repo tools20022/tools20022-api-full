@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Balance related detailed for a cash account.
@@ -71,6 +75,8 @@ import java.util.List;
  * definition} = "Balance related detailed for a cash account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BalanceDetails3", propOrder = {"balanceType", "counterpartyType", "counterpartyIdentification", "balanceValueDate"})
 public class BalanceDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -282,6 +288,7 @@ public class BalanceDetails3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BalTp")
 	public List<BalanceType6Code> getBalanceType() {
 		return balanceType;
 	}
@@ -290,6 +297,7 @@ public class BalanceDetails3 {
 		this.balanceType = balanceType;
 	}
 
+	@XmlElement(name = "CtrPtyTp", required = true)
 	public BalanceCounterparty1Code getCounterpartyType() {
 		return counterpartyType;
 	}
@@ -298,6 +306,7 @@ public class BalanceDetails3 {
 		this.counterpartyType = counterpartyType;
 	}
 
+	@XmlElement(name = "CtrPtyId")
 	public List<MemberIdentificationChoice> getCounterpartyIdentification() {
 		return counterpartyIdentification;
 	}
@@ -306,6 +315,7 @@ public class BalanceDetails3 {
 		this.counterpartyIdentification = counterpartyIdentification;
 	}
 
+	@XmlElement(name = "BalValDt")
 	public List<DateAndDateTimeSearchChoice> getBalanceValueDate() {
 		return balanceValueDate;
 	}

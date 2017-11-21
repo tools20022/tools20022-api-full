@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the comparison between the currently established baseline elements
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyReferenceDataChange1", propOrder = {"partyIdentification", "fieldName", "oldFieldValue", "newFieldValue", "operationTimeStamp"})
 public class PartyReferenceDataChange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -301,6 +307,7 @@ public class PartyReferenceDataChange1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public SystemPartyIdentification3 getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -309,6 +316,7 @@ public class PartyReferenceDataChange1 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "FldNm", required = true)
 	public Max35Text getFieldName() {
 		return fieldName;
 	}
@@ -317,6 +325,7 @@ public class PartyReferenceDataChange1 {
 		this.fieldName = fieldName;
 	}
 
+	@XmlElement(name = "OdFldVal", required = true)
 	public Max350Text getOldFieldValue() {
 		return oldFieldValue;
 	}
@@ -325,6 +334,7 @@ public class PartyReferenceDataChange1 {
 		this.oldFieldValue = oldFieldValue;
 	}
 
+	@XmlElement(name = "NewFldVal", required = true)
 	public Max350Text getNewFieldValue() {
 		return newFieldValue;
 	}
@@ -333,6 +343,7 @@ public class PartyReferenceDataChange1 {
 		this.newFieldValue = newFieldValue;
 	}
 
+	@XmlElement(name = "OprTmStmp", required = true)
 	public ISODateTime getOperationTimeStamp() {
 		return operationTimeStamp;
 	}

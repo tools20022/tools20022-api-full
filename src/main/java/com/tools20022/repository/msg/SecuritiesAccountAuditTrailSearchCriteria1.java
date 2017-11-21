@@ -24,6 +24,10 @@ import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes search criteria for securities account audit trail query.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Describes search criteria for securities account audit trail query."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesAccountAuditTrailSearchCriteria1", propOrder = {"securitiesAccountIdentification", "datePeriod"})
 public class SecuritiesAccountAuditTrailSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class SecuritiesAccountAuditTrailSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesAcctId")
 	public SecuritiesAccount13 getSecuritiesAccountIdentification() {
 		return securitiesAccountIdentification;
 	}
@@ -168,6 +175,7 @@ public class SecuritiesAccountAuditTrailSearchCriteria1 {
 		this.securitiesAccountIdentification = securitiesAccountIdentification;
 	}
 
+	@XmlElement(name = "DtPrd")
 	public DateSearchChoice getDatePeriod() {
 		return datePeriod;
 	}

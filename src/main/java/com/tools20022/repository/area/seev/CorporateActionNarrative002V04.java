@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.SecurityIdentification20;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.UpdatedAdditionalInformation10;
 import com.tools20022.repository.msgset.CorporateActionsISO15022VariantsISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.038.002.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestversionsubsetvariant
@@ -90,6 +89,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.038.002.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -101,6 +103,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNarrative002V04", propOrder = {"accountDetails", "underlyingSecurity", "corporateActionGeneralInformation", "additionalInformation", "supplementaryData"})
 public class CorporateActionNarrative002V04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -140,6 +144,14 @@ public class CorporateActionNarrative002V04 {
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentification37Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionNarrative002V04.class.getMethod("getAccountDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecurityIdentification20 underlyingSecurity;
 	/**
@@ -176,6 +188,14 @@ public class CorporateActionNarrative002V04 {
 			minOccurs = 0;
 			complexType_lazy = () -> SecurityIdentification20.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionNarrative002V04.class.getMethod("getUnderlyingSecurity", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionGeneralInformation102 corporateActionGeneralInformation;
 	/**
@@ -211,6 +231,14 @@ public class CorporateActionNarrative002V04 {
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionGeneralInformation102.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionNarrative002V04.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected UpdatedAdditionalInformation10 additionalInformation;
 	/**
@@ -245,6 +273,14 @@ public class CorporateActionNarrative002V04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UpdatedAdditionalInformation10.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionNarrative002V04.class.getMethod("getAdditionalInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -283,6 +319,14 @@ public class CorporateActionNarrative002V04 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionNarrative002V04.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -295,8 +339,9 @@ public class CorporateActionNarrative002V04 {
 				rootElement = "Document";
 				xmlTag = "CorpActnNrrtv";
 				businessArea_lazy = () -> SecuritiesEventsLatestversionsubsetvariant.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionNarrative002V04.mmAccountDetails, CorporateActionNarrative002V04.mmUnderlyingSecurity, CorporateActionNarrative002V04.mmCorporateActionGeneralInformation,
-						CorporateActionNarrative002V04.mmAdditionalInformation, CorporateActionNarrative002V04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNarrative002V04.mmAccountDetails, com.tools20022.repository.area.seev.CorporateActionNarrative002V04.mmUnderlyingSecurity,
+						com.tools20022.repository.area.seev.CorporateActionNarrative002V04.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.CorporateActionNarrative002V04.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionNarrative002V04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -306,10 +351,16 @@ public class CorporateActionNarrative002V04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionNarrative002V04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctDtls")
 	public AccountIdentification37Choice getAccountDetails() {
 		return accountDetails;
 	}
@@ -318,6 +369,7 @@ public class CorporateActionNarrative002V04 {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "UndrlygScty")
 	public SecurityIdentification20 getUnderlyingSecurity() {
 		return underlyingSecurity;
 	}
@@ -326,6 +378,7 @@ public class CorporateActionNarrative002V04 {
 		this.underlyingSecurity = underlyingSecurity;
 	}
 
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionGeneralInformation102 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
@@ -334,6 +387,7 @@ public class CorporateActionNarrative002V04 {
 		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
 	}
 
+	@XmlElement(name = "AddtlInf", required = true)
 	public UpdatedAdditionalInformation10 getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -342,11 +396,18 @@ public class CorporateActionNarrative002V04 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.038.04.04")
+	static public class Document {
+		@XmlElement(name = "CorpActnNrrtv", required = true)
+		public CorporateActionNarrative002V04 messageBody;
 	}
 }

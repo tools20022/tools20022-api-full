@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a person, or a non-financial institution.
@@ -71,6 +75,8 @@ import java.util.function.Supplier;
  * definition} = "Identification of a person, or a non-financial institution."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification25", propOrder = {"name", "proprietaryIdentification", "BEI"})
 public class PartyIdentification25 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -244,6 +250,7 @@ public class PartyIdentification25 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max70Text getName() {
 		return name;
 	}
@@ -252,6 +259,7 @@ public class PartyIdentification25 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PrtryId")
 	public GenericIdentification4 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
@@ -260,6 +268,7 @@ public class PartyIdentification25 {
 		this.proprietaryIdentification = proprietaryIdentification;
 	}
 
+	@XmlElement(name = "BEI")
 	public BEIIdentifier getBEI() {
 		return bEI;
 	}

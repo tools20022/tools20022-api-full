@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the reconciliation request.
@@ -81,6 +85,8 @@ import java.util.List;
  * ATMTransaction3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransaction11", propOrder = {"typeOfOperation", "transactionIdentification", "reconciliationIdentification", "ATMTotals", "cassette", "transactionTotals", "retainedCard", "additionalTransactionInformation"})
 public class ATMTransaction11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -442,6 +448,7 @@ public class ATMTransaction11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TpOfOpr")
 	public ATMOperation1Code getTypeOfOperation() {
 		return typeOfOperation;
 	}
@@ -450,6 +457,7 @@ public class ATMTransaction11 {
 		this.typeOfOperation = typeOfOperation;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -458,6 +466,7 @@ public class ATMTransaction11 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "RcncltnId", required = true)
 	public Max35Text getReconciliationIdentification() {
 		return reconciliationIdentification;
 	}
@@ -466,6 +475,7 @@ public class ATMTransaction11 {
 		this.reconciliationIdentification = reconciliationIdentification;
 	}
 
+	@XmlElement(name = "ATMTtls")
 	public List<ATMTotals1> getATMTotals() {
 		return aTMTotals;
 	}
@@ -474,6 +484,7 @@ public class ATMTransaction11 {
 		this.aTMTotals = aTMTotals;
 	}
 
+	@XmlElement(name = "Csstt")
 	public List<ATMCassette1> getCassette() {
 		return cassette;
 	}
@@ -482,6 +493,7 @@ public class ATMTransaction11 {
 		this.cassette = cassette;
 	}
 
+	@XmlElement(name = "TxTtls")
 	public List<ATMTotals3> getTransactionTotals() {
 		return transactionTotals;
 	}
@@ -490,6 +502,7 @@ public class ATMTransaction11 {
 		this.transactionTotals = transactionTotals;
 	}
 
+	@XmlElement(name = "RtndCard")
 	public Number getRetainedCard() {
 		return retainedCard;
 	}
@@ -498,6 +511,7 @@ public class ATMTransaction11 {
 		this.retainedCard = retainedCard;
 	}
 
+	@XmlElement(name = "AddtlTxInf")
 	public Max140Text getAdditionalTransactionInformation() {
 		return additionalTransactionInformation;
 	}

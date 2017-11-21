@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details on the quantity, account and other related information involved in a
@@ -92,6 +96,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuantityAndAccount4", propOrder = {"settlementQuantity", "denominationChoice", "certificateNumber", "accountOwner", "safekeepingAccount", "cashAccount", "quantityBreakdown", "safekeepingPlace"})
 public class QuantityAndAccount4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -509,6 +515,7 @@ public class QuantityAndAccount4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmQty", required = true)
 	public FinancialInstrumentQuantity15Choice getSettlementQuantity() {
 		return settlementQuantity;
 	}
@@ -517,6 +524,7 @@ public class QuantityAndAccount4 {
 		this.settlementQuantity = settlementQuantity;
 	}
 
+	@XmlElement(name = "DnmtnChc")
 	public RestrictedFINXMax210Text getDenominationChoice() {
 		return denominationChoice;
 	}
@@ -525,6 +533,7 @@ public class QuantityAndAccount4 {
 		this.denominationChoice = denominationChoice;
 	}
 
+	@XmlElement(name = "CertNb")
 	public List<SecuritiesCertificate2> getCertificateNumber() {
 		return certificateNumber;
 	}
@@ -533,6 +542,7 @@ public class QuantityAndAccount4 {
 		this.certificateNumber = certificateNumber;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification18Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -541,6 +551,7 @@ public class QuantityAndAccount4 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount17 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -549,6 +560,7 @@ public class QuantityAndAccount4 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccountIdentification6Choice getCashAccount() {
 		return cashAccount;
 	}
@@ -557,6 +569,7 @@ public class QuantityAndAccount4 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "QtyBrkdwn")
 	public List<QuantityBreakdown7> getQuantityBreakdown() {
 		return quantityBreakdown;
 	}
@@ -565,6 +578,7 @@ public class QuantityAndAccount4 {
 		this.quantityBreakdown = quantityBreakdown;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat4Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}

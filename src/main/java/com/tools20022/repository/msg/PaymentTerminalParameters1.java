@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Manufacturer configuration parameters of the point of interaction (POI).
@@ -71,6 +75,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTerminalParameters1", propOrder = {"clockSynchronisation", "timeZoneLine", "otherParameters"})
 public class PaymentTerminalParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -248,6 +254,7 @@ public class PaymentTerminalParameters1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClckSynctn")
 	public ClockSynchronisation1 getClockSynchronisation() {
 		return clockSynchronisation;
 	}
@@ -256,6 +263,7 @@ public class PaymentTerminalParameters1 {
 		this.clockSynchronisation = clockSynchronisation;
 	}
 
+	@XmlElement(name = "TmZoneLine")
 	public List<Max70Text> getTimeZoneLine() {
 		return timeZoneLine;
 	}
@@ -264,6 +272,7 @@ public class PaymentTerminalParameters1 {
 		this.timeZoneLine = timeZoneLine;
 	}
 
+	@XmlElement(name = "OthrParams")
 	public Max10000Binary getOtherParameters() {
 		return otherParameters;
 	}

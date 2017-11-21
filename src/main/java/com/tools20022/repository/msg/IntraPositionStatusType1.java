@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of the intra-position movement status type.
@@ -68,6 +72,8 @@ import java.util.List;
  * definition} = "Choice of the intra-position movement status type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionStatusType1", propOrder = {"processingStatus", "settlementStatus", "settled"})
 public class IntraPositionStatusType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class IntraPositionStatusType1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcgSts")
 	public List<ProcessingStatus33Choice> getProcessingStatus() {
 		return processingStatus;
 	}
@@ -236,6 +243,7 @@ public class IntraPositionStatusType1 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "SttlmSts")
 	public List<SettlementStatus1Choice> getSettlementStatus() {
 		return settlementStatus;
 	}
@@ -244,6 +252,7 @@ public class IntraPositionStatusType1 {
 		this.settlementStatus = settlementStatus;
 	}
 
+	@XmlElement(name = "Sttld")
 	public ProprietaryReason1 getSettled() {
 		return settled;
 	}

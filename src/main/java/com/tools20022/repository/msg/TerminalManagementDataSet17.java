@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max5000Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of requested data set.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TerminalManagementDataSet12}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TerminalManagementDataSet17", propOrder = {"identification", "POIChallenge", "TMChallenge", "sessionKey", "delegationProof", "protectedDelegationProof"})
 public class TerminalManagementDataSet17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -377,6 +383,7 @@ public class TerminalManagementDataSet17 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DataSetIdentification6 getIdentification() {
 		return identification;
 	}
@@ -385,6 +392,7 @@ public class TerminalManagementDataSet17 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "POIChllng")
 	public Max140Binary getPOIChallenge() {
 		return pOIChallenge;
 	}
@@ -393,6 +401,7 @@ public class TerminalManagementDataSet17 {
 		this.pOIChallenge = pOIChallenge;
 	}
 
+	@XmlElement(name = "TMChllng")
 	public Max140Binary getTMChallenge() {
 		return tMChallenge;
 	}
@@ -401,6 +410,7 @@ public class TerminalManagementDataSet17 {
 		this.tMChallenge = tMChallenge;
 	}
 
+	@XmlElement(name = "SsnKey")
 	public CryptographicKey5 getSessionKey() {
 		return sessionKey;
 	}
@@ -409,6 +419,7 @@ public class TerminalManagementDataSet17 {
 		this.sessionKey = sessionKey;
 	}
 
+	@XmlElement(name = "DlgtnProof")
 	public Max5000Binary getDelegationProof() {
 		return delegationProof;
 	}
@@ -417,6 +428,7 @@ public class TerminalManagementDataSet17 {
 		this.delegationProof = delegationProof;
 	}
 
+	@XmlElement(name = "PrtctdDlgtnProof")
 	public ContentInformationType12 getProtectedDelegationProof() {
 		return protectedDelegationProof;
 	}

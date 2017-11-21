@@ -28,6 +28,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} = "ALL"
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -56,6 +58,7 @@ public class PreviousAll {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PreviousAll";
 				definition = "Indicates that the investment plan issued during  all the previous years have to be transferred.";
+				pattern = "ALL";
 			}
 		});
 		return mmObject_lazy.get();

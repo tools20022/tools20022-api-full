@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Allows the user to specify the algorithm parameters for the algo strategy.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Allows the user to specify the algorithm parameters for the algo strategy."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StrategyParameters1", propOrder = {"name", "type", "targetStrategy"})
 public class StrategyParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -203,6 +209,7 @@ public class StrategyParameters1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm")
 	public Max35Text getName() {
 		return name;
 	}
@@ -211,6 +218,7 @@ public class StrategyParameters1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Tp")
 	public Max35Text getType() {
 		return type;
 	}
@@ -219,6 +227,7 @@ public class StrategyParameters1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "TrgtStrtgy")
 	public Max70Text getTargetStrategy() {
 		return targetStrategy;
 	}

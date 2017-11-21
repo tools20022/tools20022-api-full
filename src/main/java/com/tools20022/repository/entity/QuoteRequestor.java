@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.Quote1;
 import com.tools20022.repository.msg.Quote2;
 import com.tools20022.repository.msg.Quote3;
 import com.tools20022.repository.msg.Quote4;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,10 +40,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InformationPartyRole
- * InformationPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -51,6 +48,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * QuoteRequestor.mmRequestorEligibility}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InformationPartyRole
+ * InformationPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -80,11 +81,6 @@ public class QuoteRequestor extends InformationPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.EligibilityCode
 	 * EligibilityCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.QuoteRequestor
-	 * QuoteRequestor}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -103,6 +99,11 @@ public class QuoteRequestor extends InformationPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.QuoteRequestor
+	 * QuoteRequestor}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -117,7 +118,7 @@ public class QuoteRequestor extends InformationPartyRole {
 	public static final MMBusinessAttribute mmRequestorEligibility = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Quote3.mmRequestorEligibility, Quote1.mmRequestorEligibility, Quote2.mmRequestorEligibility, Quote4.mmRequestorEligibility);
-			elementContext_lazy = () -> QuoteRequestor.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.QuoteRequestor.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestorEligibility";
@@ -125,6 +126,14 @@ public class QuoteRequestor extends InformationPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EligibilityCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return QuoteRequestor.class.getMethod("getRequestorEligibility", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -136,7 +145,12 @@ public class QuoteRequestor extends InformationPartyRole {
 				name = "QuoteRequestor";
 				definition = "Requestor of the quote";
 				superType_lazy = () -> InformationPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(QuoteRequestor.mmRequestorEligibility);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.QuoteRequestor.mmRequestorEligibility);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return QuoteRequestor.class;
 			}
 		});
 		return mmObject_lazy.get();

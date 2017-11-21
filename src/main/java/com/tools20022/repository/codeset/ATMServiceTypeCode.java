@@ -29,31 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType1Code
- * ATMServiceType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType4Code
- * ATMServiceType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType2Code
- * ATMServiceType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType3Code
- * ATMServiceType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType5Code
- * ATMServiceType5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType6Code
- * ATMServiceType6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType7Code
- * ATMServiceType7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType8Code
- * ATMServiceType8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType9Code
- * ATMServiceType9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType10Code
- * ATMServiceType10Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -125,6 +100,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmPayment
  * ATMServiceTypeCode.mmPayment}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType1Code
+ * ATMServiceType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType4Code
+ * ATMServiceType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType2Code
+ * ATMServiceType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType3Code
+ * ATMServiceType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType5Code
+ * ATMServiceType5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType6Code
+ * ATMServiceType6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType7Code
+ * ATMServiceType7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType8Code
+ * ATMServiceType8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType9Code
+ * ATMServiceType9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceType10Code
+ * ATMServiceType10Code}</li>
  * </ul>
  * </li>
  * <li>

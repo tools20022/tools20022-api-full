@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides identifications related to the order processing.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides identifications related to the order processing."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderIdentification3", propOrder = {"orderIdentification", "clientOrderIdentification", "secondaryClientOrderIdentification", "side", "clientOrderLinkIdentification"})
 public class OrderIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -335,6 +341,7 @@ public class OrderIdentification3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrId")
 	public Max35Text getOrderIdentification() {
 		return orderIdentification;
 	}
@@ -343,6 +350,7 @@ public class OrderIdentification3 {
 		this.orderIdentification = orderIdentification;
 	}
 
+	@XmlElement(name = "ClntOrdrId", required = true)
 	public Max35Text getClientOrderIdentification() {
 		return clientOrderIdentification;
 	}
@@ -351,6 +359,7 @@ public class OrderIdentification3 {
 		this.clientOrderIdentification = clientOrderIdentification;
 	}
 
+	@XmlElement(name = "ScndryClntOrdrId")
 	public Max35Text getSecondaryClientOrderIdentification() {
 		return secondaryClientOrderIdentification;
 	}
@@ -359,6 +368,7 @@ public class OrderIdentification3 {
 		this.secondaryClientOrderIdentification = secondaryClientOrderIdentification;
 	}
 
+	@XmlElement(name = "Sd")
 	public Side1Code getSide() {
 		return side;
 	}
@@ -367,6 +377,7 @@ public class OrderIdentification3 {
 		this.side = side;
 	}
 
+	@XmlElement(name = "ClntOrdrLkId")
 	public Max35Text getClientOrderLinkIdentification() {
 		return clientOrderLinkIdentification;
 	}

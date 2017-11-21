@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PhysicalDelivery;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters of a physical delivery.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Parameters of a physical delivery."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DeliveryParameters4", propOrder = {"registeredAddressIndicator", "nameAndAddress", "contactPerson"})
 public class DeliveryParameters4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -233,6 +239,7 @@ public class DeliveryParameters4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RegdAdrInd", required = true)
 	public YesNoIndicator getRegisteredAddressIndicator() {
 		return registeredAddressIndicator;
 	}
@@ -241,6 +248,7 @@ public class DeliveryParameters4 {
 		this.registeredAddressIndicator = registeredAddressIndicator;
 	}
 
+	@XmlElement(name = "NmAndAdr")
 	public NameAndAddress4 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -249,6 +257,7 @@ public class DeliveryParameters4 {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "CtctPrsn")
 	public ContactIdentification2 getContactPerson() {
 		return contactPerson;
 	}

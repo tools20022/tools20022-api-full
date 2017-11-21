@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.ISATransfer9;
 import com.tools20022.repository.msg.TransferReference3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between cancellation by transfer details or reference.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Cancellation3Choice", propOrder = {"cancellationByTransferInstructionDetails", "cancellationByReference"})
 public class Cancellation3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -215,6 +221,7 @@ public class Cancellation3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlByTrfInstrDtls", required = true)
 	public ISATransfer9 getCancellationByTransferInstructionDetails() {
 		return cancellationByTransferInstructionDetails;
 	}
@@ -223,6 +230,7 @@ public class Cancellation3Choice {
 		this.cancellationByTransferInstructionDetails = cancellationByTransferInstructionDetails;
 	}
 
+	@XmlElement(name = "CxlByRef", required = true)
 	public TransferReference3 getCancellationByReference() {
 		return cancellationByReference;
 	}

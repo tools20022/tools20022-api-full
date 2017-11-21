@@ -67,6 +67,11 @@ public class Auditor extends InvestmentFundPartyRole {
 				definition = "Party in charge of examining and verifying a fund's financial and accounting records as well as supporting documents.";
 				superType_lazy = () -> InvestmentFundPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Auditor.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the details relative to the submission of the certificate data set.
@@ -73,6 +77,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequiredSubmission5", propOrder = {"submitter", "certificateType"})
 public class RequiredSubmission5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -207,6 +213,7 @@ public class RequiredSubmission5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Submitr", required = true)
 	public List<BICIdentification1> getSubmitter() {
 		return submitter;
 	}
@@ -215,6 +222,7 @@ public class RequiredSubmission5 {
 		this.submitter = submitter;
 	}
 
+	@XmlElement(name = "CertTp", required = true)
 	public TradeCertificateType2Code getCertificateType() {
 		return certificateType;
 	}

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -42,6 +43,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmZeroSweepIndicator
+ * CashStandingOrder.mmZeroSweepIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmRelatedCashServices
+ * CashStandingOrder.mmRelatedCashServices}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmCreditDebitIndicator
+ * CashStandingOrder.mmCreditDebitIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmCreditTransfer
+ * CashStandingOrder.mmCreditTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmFloorAmount
+ * CashStandingOrder.mmFloorAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmCashAccount
+ * CashStandingOrder.mmCashAccount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.StandingOrder
+ * StandingOrder}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -105,32 +132,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * StandingOrderOrAll1Choice.mmAllStandingOrders}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.StandingOrder
- * StandingOrder}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmZeroSweepIndicator
- * CashStandingOrder.mmZeroSweepIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmRelatedCashServices
- * CashStandingOrder.mmRelatedCashServices}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmCreditDebitIndicator
- * CashStandingOrder.mmCreditDebitIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmCreditTransfer
- * CashStandingOrder.mmCreditTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmFloorAmount
- * CashStandingOrder.mmFloorAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmCashAccount
- * CashStandingOrder.mmCashAccount}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -165,11 +166,6 @@ public class CashStandingOrder extends StandingOrder {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashStandingOrder
-	 * CashStandingOrder}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -184,6 +180,11 @@ public class CashStandingOrder extends StandingOrder {
 	 * StandingOrder2.mmZeroSweepIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashStandingOrder
+	 * CashStandingOrder}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -200,7 +201,7 @@ public class CashStandingOrder extends StandingOrder {
 	public static final MMBusinessAttribute mmZeroSweepIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(StandingOrderSearchCriteria1.mmZeroSweepIndicator, StandingOrder1.mmZeroSweepIndicator, StandingOrder2.mmZeroSweepIndicator);
-			elementContext_lazy = () -> CashStandingOrder.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ZeroSweepIndicator";
@@ -208,6 +209,14 @@ public class CashStandingOrder extends StandingOrder {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashStandingOrder.class.getMethod("getZeroSweepIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CashManagementService relatedCashServices;
@@ -248,7 +257,7 @@ public class CashStandingOrder extends StandingOrder {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCashServices = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashStandingOrder.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCashServices";
@@ -271,11 +280,6 @@ public class CashStandingOrder extends StandingOrder {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DebitCreditCode
 	 * DebitCreditCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashStandingOrder
-	 * CashStandingOrder}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -287,6 +291,11 @@ public class CashStandingOrder extends StandingOrder {
 	 * StandingOrder2.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashStandingOrder
+	 * CashStandingOrder}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -302,7 +311,7 @@ public class CashStandingOrder extends StandingOrder {
 	public static final MMBusinessAttribute mmCreditDebitIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(StandingOrderDetails3.mmCreditDebitIndicator, StandingOrder2.mmCreditDebitIndicator);
-			elementContext_lazy = () -> CashStandingOrder.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
@@ -310,6 +319,14 @@ public class CashStandingOrder extends StandingOrder {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashStandingOrder.class.getMethod("getCreditDebitIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CreditTransfer creditTransfer;
@@ -351,7 +368,7 @@ public class CashStandingOrder extends StandingOrder {
 	 */
 	public static final MMBusinessAssociationEnd mmCreditTransfer = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashStandingOrder.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditTransfer";
@@ -395,7 +412,7 @@ public class CashStandingOrder extends StandingOrder {
 	 */
 	public static final MMBusinessAttribute mmFloorAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CashStandingOrder.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FloorAmount";
@@ -403,6 +420,14 @@ public class CashStandingOrder extends StandingOrder {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashStandingOrder.class.getMethod("getFloorAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CashAccount cashAccount;
@@ -423,11 +448,6 @@ public class CashStandingOrder extends StandingOrder {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashStandingOrder
-	 * CashStandingOrder}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -443,6 +463,11 @@ public class CashStandingOrder extends StandingOrder {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashStandingOrder
+	 * CashStandingOrder}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -456,7 +481,7 @@ public class CashStandingOrder extends StandingOrder {
 	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(StandingOrderSearchCriteria1.mmAccount, StandingOrderIdentification2.mmAccount, StandingOrderIdentification3.mmAccount);
-			elementContext_lazy = () -> CashStandingOrder.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
@@ -481,11 +506,17 @@ public class CashStandingOrder extends StandingOrder {
 				derivationElement_lazy = () -> Arrays.asList(StandingOrder1.mmCreditorAccount, StandingOrder1.mmDebtorAccount, StandingOrder2.mmCurrency, StandingOrder2.mmCreditorAccount, StandingOrderOrAll1Choice.mmStandingOrder,
 						StandingOrderOrAll1Choice.mmAllStandingOrders);
 				superType_lazy = () -> StandingOrder.mmObject();
-				element_lazy = () -> Arrays.asList(CashStandingOrder.mmZeroSweepIndicator, CashStandingOrder.mmRelatedCashServices, CashStandingOrder.mmCreditDebitIndicator, CashStandingOrder.mmCreditTransfer,
-						CashStandingOrder.mmFloorAmount, CashStandingOrder.mmCashAccount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashStandingOrder.mmZeroSweepIndicator, com.tools20022.repository.entity.CashStandingOrder.mmRelatedCashServices,
+						com.tools20022.repository.entity.CashStandingOrder.mmCreditDebitIndicator, com.tools20022.repository.entity.CashStandingOrder.mmCreditTransfer, com.tools20022.repository.entity.CashStandingOrder.mmFloorAmount,
+						com.tools20022.repository.entity.CashStandingOrder.mmCashAccount);
 				derivationComponent_lazy = () -> Arrays.asList(StandingOrderType1Choice.mmObject(), StandingOrderSearchCriteria1.mmObject(), StandingOrderIdentification1.mmObject(), StandingOrderDetails1.mmObject(),
 						StandingOrderIdentification2.mmObject(), StandingOrder1.mmObject(), StandingOrderDetails3.mmObject(), StandingOrder2.mmObject(), StandingOrder3.mmObject(), StandingOrderIdentification3.mmObject(),
 						StandingOrderOrAll1Choice.mmObject(), StandingOrder4.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CashStandingOrder.class;
 			}
 		});
 		return mmObject_lazy.get();

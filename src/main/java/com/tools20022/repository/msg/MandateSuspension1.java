@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the mandate, which is being suspended.
@@ -79,6 +83,8 @@ import java.util.List;
  * definition} = "Identifies the mandate, which is being suspended."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MandateSuspension1", propOrder = {"suspensionRequestIdentification", "originalMessageInformation", "suspensionReason", "originalMandate", "supplementaryData"})
 public class MandateSuspension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -311,6 +317,7 @@ public class MandateSuspension1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SspnsnReqId", required = true)
 	public Max35Text getSuspensionRequestIdentification() {
 		return suspensionRequestIdentification;
 	}
@@ -319,6 +326,7 @@ public class MandateSuspension1 {
 		this.suspensionRequestIdentification = suspensionRequestIdentification;
 	}
 
+	@XmlElement(name = "OrgnlMsgInf")
 	public OriginalMessageInformation1 getOriginalMessageInformation() {
 		return originalMessageInformation;
 	}
@@ -327,6 +335,7 @@ public class MandateSuspension1 {
 		this.originalMessageInformation = originalMessageInformation;
 	}
 
+	@XmlElement(name = "SspnsnRsn", required = true)
 	public MandateSuspensionReason1 getSuspensionReason() {
 		return suspensionReason;
 	}
@@ -335,6 +344,7 @@ public class MandateSuspension1 {
 		this.suspensionReason = suspensionReason;
 	}
 
+	@XmlElement(name = "OrgnlMndt", required = true)
 	public OriginalMandate4Choice getOriginalMandate() {
 		return originalMandate;
 	}
@@ -343,6 +353,7 @@ public class MandateSuspension1 {
 		this.originalMandate = originalMandate;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

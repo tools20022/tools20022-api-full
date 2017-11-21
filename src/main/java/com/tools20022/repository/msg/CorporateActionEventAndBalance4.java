@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Detailed account holdings information report for a corporate action event.
@@ -69,6 +73,8 @@ import java.util.List;
  * "Detailed account holdings information report for a corporate action event."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionEventAndBalance4", propOrder = {"generalInformation", "underlyingSecurity", "balance", "supplementaryData"})
 public class CorporateActionEventAndBalance4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -275,6 +281,7 @@ public class CorporateActionEventAndBalance4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GnlInf", required = true)
 	public EventInformation2 getGeneralInformation() {
 		return generalInformation;
 	}
@@ -283,6 +290,7 @@ public class CorporateActionEventAndBalance4 {
 		this.generalInformation = generalInformation;
 	}
 
+	@XmlElement(name = "UndrlygScty", required = true)
 	public UnderlyingSecurity3 getUnderlyingSecurity() {
 		return underlyingSecurity;
 	}
@@ -291,6 +299,7 @@ public class CorporateActionEventAndBalance4 {
 		this.underlyingSecurity = underlyingSecurity;
 	}
 
+	@XmlElement(name = "Bal")
 	public CorporateActionBalanceDetails8 getBalance() {
 		return balance;
 	}
@@ -299,6 +308,7 @@ public class CorporateActionEventAndBalance4 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

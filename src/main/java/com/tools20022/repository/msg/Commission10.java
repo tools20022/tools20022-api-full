@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money due to a party as compensation for a service.
@@ -102,6 +106,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Commission10", propOrder = {"type", "extendedType", "basis", "extendedBasis", "amount", "rate", "recipientIdentification", "commercialAgreementReference", "waivingDetails"})
 public class Commission10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -651,6 +657,7 @@ public class Commission10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public CommissionType6Code getType() {
 		return type;
 	}
@@ -659,6 +666,7 @@ public class Commission10 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XtndedTp")
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
@@ -667,6 +675,7 @@ public class Commission10 {
 		this.extendedType = extendedType;
 	}
 
+	@XmlElement(name = "Bsis")
 	public TaxationBasis4Code getBasis() {
 		return basis;
 	}
@@ -675,6 +684,7 @@ public class Commission10 {
 		this.basis = basis;
 	}
 
+	@XmlElement(name = "XtndedBsis")
 	public Extended350Code getExtendedBasis() {
 		return extendedBasis;
 	}
@@ -683,6 +693,7 @@ public class Commission10 {
 		this.extendedBasis = extendedBasis;
 	}
 
+	@XmlElement(name = "Amt")
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -691,6 +702,7 @@ public class Commission10 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -699,6 +711,7 @@ public class Commission10 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification2Choice getRecipientIdentification() {
 		return recipientIdentification;
 	}
@@ -707,6 +720,7 @@ public class Commission10 {
 		this.recipientIdentification = recipientIdentification;
 	}
 
+	@XmlElement(name = "ComrclAgrmtRef")
 	public Max35Text getCommercialAgreementReference() {
 		return commercialAgreementReference;
 	}
@@ -715,6 +729,7 @@ public class Commission10 {
 		this.commercialAgreementReference = commercialAgreementReference;
 	}
 
+	@XmlElement(name = "WvgDtls")
 	public CommissionWaiver3 getWaivingDetails() {
 		return waivingDetails;
 	}

@@ -67,6 +67,11 @@ public class VoteWithPremiumDeadline extends MeetingDeadline {
 				definition = "Specifies the different deadlines available for submitting vote instructions to take advantage of the premium.";
 				superType_lazy = () -> MeetingDeadline.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return VoteWithPremiumDeadline.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

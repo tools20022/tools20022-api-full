@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.CardholderRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information requested against money laundering for a transfer transaction.
@@ -95,6 +99,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information requested against money laundering for a transfer transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AntiMoneyLaundering1", propOrder = {"senderName", "senderAddress", "senderNationalIdentifier", "nationalIdentifierCountry", "senderPassportNumber", "passportIssuingCountry", "senderTaxIdentifier", "taxCountry",
+		"senderCustomerIdentifier", "senderDateAndPlaceOfBirth", "receiverName", "transactionReference"})
 public class AntiMoneyLaundering1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -613,6 +620,7 @@ public class AntiMoneyLaundering1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SndrNm")
 	public Max70Text getSenderName() {
 		return senderName;
 	}
@@ -621,6 +629,7 @@ public class AntiMoneyLaundering1 {
 		this.senderName = senderName;
 	}
 
+	@XmlElement(name = "SndrAdr")
 	public PostalAddress18 getSenderAddress() {
 		return senderAddress;
 	}
@@ -629,6 +638,7 @@ public class AntiMoneyLaundering1 {
 		this.senderAddress = senderAddress;
 	}
 
+	@XmlElement(name = "SndrNtlIdr")
 	public Max35Text getSenderNationalIdentifier() {
 		return senderNationalIdentifier;
 	}
@@ -637,6 +647,7 @@ public class AntiMoneyLaundering1 {
 		this.senderNationalIdentifier = senderNationalIdentifier;
 	}
 
+	@XmlElement(name = "NtlIdrCtry")
 	public Min2Max3AlphaText getNationalIdentifierCountry() {
 		return nationalIdentifierCountry;
 	}
@@ -645,6 +656,7 @@ public class AntiMoneyLaundering1 {
 		this.nationalIdentifierCountry = nationalIdentifierCountry;
 	}
 
+	@XmlElement(name = "SndrPsptNb")
 	public Max35Text getSenderPassportNumber() {
 		return senderPassportNumber;
 	}
@@ -653,6 +665,7 @@ public class AntiMoneyLaundering1 {
 		this.senderPassportNumber = senderPassportNumber;
 	}
 
+	@XmlElement(name = "PsptIssgCtry")
 	public Min2Max3AlphaText getPassportIssuingCountry() {
 		return passportIssuingCountry;
 	}
@@ -661,6 +674,7 @@ public class AntiMoneyLaundering1 {
 		this.passportIssuingCountry = passportIssuingCountry;
 	}
 
+	@XmlElement(name = "SndrTaxIdr")
 	public Max35Text getSenderTaxIdentifier() {
 		return senderTaxIdentifier;
 	}
@@ -669,6 +683,7 @@ public class AntiMoneyLaundering1 {
 		this.senderTaxIdentifier = senderTaxIdentifier;
 	}
 
+	@XmlElement(name = "TaxCtry")
 	public Min2Max3AlphaText getTaxCountry() {
 		return taxCountry;
 	}
@@ -677,6 +692,7 @@ public class AntiMoneyLaundering1 {
 		this.taxCountry = taxCountry;
 	}
 
+	@XmlElement(name = "SndrCstmrIdr")
 	public Max35Text getSenderCustomerIdentifier() {
 		return senderCustomerIdentifier;
 	}
@@ -685,6 +701,7 @@ public class AntiMoneyLaundering1 {
 		this.senderCustomerIdentifier = senderCustomerIdentifier;
 	}
 
+	@XmlElement(name = "SndrDtAndPlcOfBirth")
 	public DateAndPlaceOfBirth getSenderDateAndPlaceOfBirth() {
 		return senderDateAndPlaceOfBirth;
 	}
@@ -693,6 +710,7 @@ public class AntiMoneyLaundering1 {
 		this.senderDateAndPlaceOfBirth = senderDateAndPlaceOfBirth;
 	}
 
+	@XmlElement(name = "RcvrNm")
 	public Max70Text getReceiverName() {
 		return receiverName;
 	}
@@ -701,6 +719,7 @@ public class AntiMoneyLaundering1 {
 		this.receiverName = receiverName;
 	}
 
+	@XmlElement(name = "TxRef")
 	public Max35Text getTransactionReference() {
 		return transactionReference;
 	}

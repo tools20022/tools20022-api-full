@@ -23,6 +23,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Reinvestment1;
 import com.tools20022.repository.msg.Reinvestment2;
 import com.tools20022.repository.msg.Reinvestment3;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,6 +36,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Reinvestment#mmRelatedinvestmentAccountService
+ * Reinvestment.mmRelatedinvestmentAccountService}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Reinvestment#mmInvestmentFundClass
+ * Reinvestment.mmInvestmentFundClass}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Reinvestment#mmPercentage
+ * Reinvestment.mmPercentage}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -54,19 +68,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#mmReinvestment
  * InvestmentAccountService.mmReinvestment}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Reinvestment#mmRelatedinvestmentAccountService
- * Reinvestment.mmRelatedinvestmentAccountService}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Reinvestment#mmInvestmentFundClass
- * Reinvestment.mmInvestmentFundClass}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Reinvestment#mmPercentage
- * Reinvestment.mmPercentage}</li>
  * </ul>
  * </li>
  * <li>
@@ -124,7 +125,7 @@ public class Reinvestment {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedinvestmentAccountService = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Reinvestment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reinvestment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedinvestmentAccountService";
@@ -155,10 +156,6 @@ public class Reinvestment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentFundClass
 	 * InvestmentFundClass}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Reinvestment Reinvestment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -173,6 +170,10 @@ public class Reinvestment {
 	 * Reinvestment3.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Reinvestment Reinvestment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -189,7 +190,7 @@ public class Reinvestment {
 	public static final MMBusinessAssociationEnd mmInvestmentFundClass = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Reinvestment1.mmFundDetails, Reinvestment2.mmFinancialInstrumentDetails, Reinvestment3.mmFinancialInstrumentDetails);
-			elementContext_lazy = () -> Reinvestment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reinvestment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundClass";
@@ -212,10 +213,6 @@ public class Reinvestment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Reinvestment Reinvestment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -231,6 +228,10 @@ public class Reinvestment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Reinvestment Reinvestment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -244,7 +245,7 @@ public class Reinvestment {
 	public static final MMBusinessAttribute mmPercentage = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Reinvestment1.mmReinvestmentPercentage, Reinvestment2.mmReinvestmentPercentage, Reinvestment3.mmReinvestmentPercentage);
-			elementContext_lazy = () -> Reinvestment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reinvestment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Percentage";
@@ -252,6 +253,14 @@ public class Reinvestment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Reinvestment.class.getMethod("getPercentage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -263,8 +272,14 @@ public class Reinvestment {
 				name = "Reinvestment";
 				definition = "Parameters of the reinvestment of the income on the fund.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClass.mmReinvestment, com.tools20022.repository.entity.InvestmentAccountService.mmReinvestment);
-				element_lazy = () -> Arrays.asList(Reinvestment.mmRelatedinvestmentAccountService, Reinvestment.mmInvestmentFundClass, Reinvestment.mmPercentage);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Reinvestment.mmRelatedinvestmentAccountService, com.tools20022.repository.entity.Reinvestment.mmInvestmentFundClass,
+						com.tools20022.repository.entity.Reinvestment.mmPercentage);
 				derivationComponent_lazy = () -> Arrays.asList(Reinvestment1.mmObject(), Reinvestment2.mmObject(), Reinvestment3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Reinvestment.class;
 			}
 		});
 		return mmObject_lazy.get();

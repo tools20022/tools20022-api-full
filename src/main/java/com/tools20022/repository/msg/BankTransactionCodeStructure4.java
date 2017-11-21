@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.BankTransaction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to identify the type or operations code of a transaction
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BankTransactionCodeStructure4", propOrder = {"domain", "proprietary"})
 public class BankTransactionCodeStructure4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class BankTransactionCodeStructure4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Domn")
 	public BankTransactionCodeStructure5 getDomain() {
 		return domain;
 	}
@@ -193,6 +200,7 @@ public class BankTransactionCodeStructure4 {
 		this.domain = domain;
 	}
 
+	@XmlElement(name = "Prtry")
 	public ProprietaryBankTransactionCodeStructure1 getProprietary() {
 		return proprietary;
 	}

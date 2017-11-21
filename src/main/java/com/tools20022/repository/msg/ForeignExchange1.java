@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.ForeignExchangeTrade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of the foreign exchange.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the details of the foreign exchange."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ForeignExchange1", propOrder = {"foreignCurrency", "exchangeSpotRate", "exchangeForwardPoint"})
 public class ForeignExchange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -242,6 +248,7 @@ public class ForeignExchange1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrgnCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getForeignCurrency() {
 		return foreignCurrency;
 	}
@@ -250,6 +257,7 @@ public class ForeignExchange1 {
 		this.foreignCurrency = foreignCurrency;
 	}
 
+	@XmlElement(name = "XchgSpotRate", required = true)
 	public BaseOneRate getExchangeSpotRate() {
 		return exchangeSpotRate;
 	}
@@ -258,6 +266,7 @@ public class ForeignExchange1 {
 		this.exchangeSpotRate = exchangeSpotRate;
 	}
 
+	@XmlElement(name = "XchgFwdPt", required = true)
 	public DecimalNumber getExchangeForwardPoint() {
 		return exchangeForwardPoint;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Configuration of the cryptographic keys.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMSecurityConfiguration1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMSecurityConfiguration2", propOrder = {"maximumSymmetricKey", "maximumAsymmetricKey", "maximumRSAKeyLength", "maximumRootKeyLength"})
 public class ATMSecurityConfiguration2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -268,6 +274,7 @@ public class ATMSecurityConfiguration2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MaxSmmtrcKey")
 	public Number getMaximumSymmetricKey() {
 		return maximumSymmetricKey;
 	}
@@ -276,6 +283,7 @@ public class ATMSecurityConfiguration2 {
 		this.maximumSymmetricKey = maximumSymmetricKey;
 	}
 
+	@XmlElement(name = "MaxAsmmtrcKey")
 	public Number getMaximumAsymmetricKey() {
 		return maximumAsymmetricKey;
 	}
@@ -284,6 +292,7 @@ public class ATMSecurityConfiguration2 {
 		this.maximumAsymmetricKey = maximumAsymmetricKey;
 	}
 
+	@XmlElement(name = "MaxRSAKeyLngth")
 	public Number getMaximumRSAKeyLength() {
 		return maximumRSAKeyLength;
 	}
@@ -292,6 +301,7 @@ public class ATMSecurityConfiguration2 {
 		this.maximumRSAKeyLength = maximumRSAKeyLength;
 	}
 
+	@XmlElement(name = "MaxRootKeyLngth")
 	public Number getMaximumRootKeyLength() {
 		return maximumRootKeyLength;
 	}

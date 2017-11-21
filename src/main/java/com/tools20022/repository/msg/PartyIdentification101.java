@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the beneficial owner of the securities.
@@ -97,6 +101,8 @@ import java.util.List;
  * "Provides information about the beneficial owner of the securities."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification101", propOrder = {"ownerIdentification", "alternateIdentification", "domicileCountry", "nonDomicileCountry", "ownedSecuritiesQuantity", "certificationType", "certificationBreakdown"})
 public class PartyIdentification101 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -455,6 +461,7 @@ public class PartyIdentification101 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OwnrId", required = true)
 	public PartyIdentification104Choice getOwnerIdentification() {
 		return ownerIdentification;
 	}
@@ -463,6 +470,7 @@ public class PartyIdentification101 {
 		this.ownerIdentification = ownerIdentification;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public List<AlternatePartyIdentification9> getAlternateIdentification() {
 		return alternateIdentification;
 	}
@@ -471,6 +479,7 @@ public class PartyIdentification101 {
 		this.alternateIdentification = alternateIdentification;
 	}
 
+	@XmlElement(name = "DmclCtry")
 	public CountryCode getDomicileCountry() {
 		return domicileCountry;
 	}
@@ -479,6 +488,7 @@ public class PartyIdentification101 {
 		this.domicileCountry = domicileCountry;
 	}
 
+	@XmlElement(name = "NonDmclCtry")
 	public List<CountryCode> getNonDomicileCountry() {
 		return nonDomicileCountry;
 	}
@@ -487,6 +497,7 @@ public class PartyIdentification101 {
 		this.nonDomicileCountry = nonDomicileCountry;
 	}
 
+	@XmlElement(name = "OwndSctiesQty", required = true)
 	public FinancialInstrumentQuantity15Choice getOwnedSecuritiesQuantity() {
 		return ownedSecuritiesQuantity;
 	}
@@ -495,6 +506,7 @@ public class PartyIdentification101 {
 		this.ownedSecuritiesQuantity = ownedSecuritiesQuantity;
 	}
 
+	@XmlElement(name = "CertfctnTp")
 	public List<BeneficiaryCertificationType11Choice> getCertificationType() {
 		return certificationType;
 	}
@@ -503,6 +515,7 @@ public class PartyIdentification101 {
 		this.certificationType = certificationType;
 	}
 
+	@XmlElement(name = "CertfctnBrkdwn")
 	public RestrictedFINXMax350Text getCertificationBreakdown() {
 		return certificationBreakdown;
 	}

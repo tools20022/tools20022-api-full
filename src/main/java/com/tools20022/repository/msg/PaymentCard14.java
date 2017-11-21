@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment card performing the transaction.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentCard12}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentCard14", propOrder = {"protectedCardData", "plainCardData", "issuerBIN", "cardCountryCode", "cardCurrencyCode"})
 public class PaymentCard14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -387,6 +393,7 @@ public class PaymentCard14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrtctdCardData")
 	public ContentInformationType10 getProtectedCardData() {
 		return protectedCardData;
 	}
@@ -395,6 +402,7 @@ public class PaymentCard14 {
 		this.protectedCardData = protectedCardData;
 	}
 
+	@XmlElement(name = "PlainCardData")
 	public PlainCardData11 getPlainCardData() {
 		return plainCardData;
 	}
@@ -403,6 +411,7 @@ public class PaymentCard14 {
 		this.plainCardData = plainCardData;
 	}
 
+	@XmlElement(name = "IssrBIN")
 	public Max15NumericText getIssuerBIN() {
 		return issuerBIN;
 	}
@@ -411,6 +420,7 @@ public class PaymentCard14 {
 		this.issuerBIN = issuerBIN;
 	}
 
+	@XmlElement(name = "CardCtryCd")
 	public Max3Text getCardCountryCode() {
 		return cardCountryCode;
 	}
@@ -419,6 +429,7 @@ public class PaymentCard14 {
 		this.cardCountryCode = cardCountryCode;
 	}
 
+	@XmlElement(name = "CardCcyCd")
 	public Exact3AlphaNumericText getCardCurrencyCode() {
 		return cardCurrencyCode;
 	}

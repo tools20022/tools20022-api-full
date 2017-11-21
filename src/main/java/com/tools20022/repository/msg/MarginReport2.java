@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details on the margin report per margin account, and optionally
@@ -88,6 +92,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarginReport2", propOrder = {"marginProduct", "marginAccount", "collateralisedMarginAccountIndicator", "nonClearingMember", "marginCalculationSummary", "marginCalculation"})
 public class MarginReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -394,6 +400,7 @@ public class MarginReport2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MrgnPdct")
 	public List<MarginProductType1Choice> getMarginProduct() {
 		return marginProduct;
 	}
@@ -402,6 +409,7 @@ public class MarginReport2 {
 		this.marginProduct = marginProduct;
 	}
 
+	@XmlElement(name = "MrgnAcct", required = true)
 	public SecuritiesAccount18 getMarginAccount() {
 		return marginAccount;
 	}
@@ -410,6 +418,7 @@ public class MarginReport2 {
 		this.marginAccount = marginAccount;
 	}
 
+	@XmlElement(name = "CollsdMrgnAcctInd")
 	public YesNoIndicator getCollateralisedMarginAccountIndicator() {
 		return collateralisedMarginAccountIndicator;
 	}
@@ -418,6 +427,7 @@ public class MarginReport2 {
 		this.collateralisedMarginAccountIndicator = collateralisedMarginAccountIndicator;
 	}
 
+	@XmlElement(name = "NonClrMmb")
 	public List<PartyIdentificationAndAccount31> getNonClearingMember() {
 		return nonClearingMember;
 	}
@@ -426,6 +436,7 @@ public class MarginReport2 {
 		this.nonClearingMember = nonClearingMember;
 	}
 
+	@XmlElement(name = "MrgnClctnSummry")
 	public MarginCalculation1 getMarginCalculationSummary() {
 		return marginCalculationSummary;
 	}
@@ -434,6 +445,7 @@ public class MarginReport2 {
 		this.marginCalculationSummary = marginCalculationSummary;
 	}
 
+	@XmlElement(name = "MrgnClctn", required = true)
 	public List<MarginCalculation2> getMarginCalculation() {
 		return marginCalculation;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the number.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of format for the number."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Number1Choice", propOrder = {"numberIdentification", "proprietary"})
 public class Number1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class Number1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NbId", required = true)
 	public Max3NumericText getNumberIdentification() {
 		return numberIdentification;
 	}
@@ -166,6 +173,7 @@ public class Number1Choice {
 		this.numberIdentification = numberIdentification;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification7 getProprietary() {
 		return proprietary;
 	}

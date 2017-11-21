@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.CorporateActionNotificationAdvice1;
 import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msg.NotificationCancellation1;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -45,9 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.010.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -86,6 +85,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.010.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -97,6 +99,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgentCANotificationCancellationRequestV01", propOrder = {"identification", "notificationCancellationTypeAndLinkage", "corporateActionGeneralInformation", "corporateActionNotificationDetails"})
 public class AgentCANotificationCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -137,6 +141,14 @@ public class AgentCANotificationCancellationRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCANotificationCancellationRequestV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected NotificationCancellation1 notificationCancellationTypeAndLinkage;
 	/**
@@ -175,6 +187,14 @@ public class AgentCANotificationCancellationRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> NotificationCancellation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCANotificationCancellationRequestV01.class.getMethod("getNotificationCancellationTypeAndLinkage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionInformation2 corporateActionGeneralInformation;
 	/**
@@ -209,6 +229,14 @@ public class AgentCANotificationCancellationRequestV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCANotificationCancellationRequestV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionNotificationAdvice1 corporateActionNotificationDetails;
@@ -246,6 +274,14 @@ public class AgentCANotificationCancellationRequestV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionNotificationAdvice1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCANotificationCancellationRequestV01.class.getMethod("getCorporateActionNotificationDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -258,8 +294,10 @@ public class AgentCANotificationCancellationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCANtfctnCxlReq";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCANotificationCancellationRequestV01.mmIdentification, AgentCANotificationCancellationRequestV01.mmNotificationCancellationTypeAndLinkage,
-						AgentCANotificationCancellationRequestV01.mmCorporateActionGeneralInformation, AgentCANotificationCancellationRequestV01.mmCorporateActionNotificationDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.mmNotificationCancellationTypeAndLinkage,
+						com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.mmCorporateActionNotificationDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -269,10 +307,16 @@ public class AgentCANotificationCancellationRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AgentCANotificationCancellationRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
@@ -281,6 +325,7 @@ public class AgentCANotificationCancellationRequestV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "NtfctnCxlTpAndLkg", required = true)
 	public NotificationCancellation1 getNotificationCancellationTypeAndLinkage() {
 		return notificationCancellationTypeAndLinkage;
 	}
@@ -289,6 +334,7 @@ public class AgentCANotificationCancellationRequestV01 {
 		this.notificationCancellationTypeAndLinkage = notificationCancellationTypeAndLinkage;
 	}
 
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation2 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
@@ -297,11 +343,18 @@ public class AgentCANotificationCancellationRequestV01 {
 		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
 	}
 
+	@XmlElement(name = "CorpActnNtfctnDtls")
 	public CorporateActionNotificationAdvice1 getCorporateActionNotificationDetails() {
 		return corporateActionNotificationDetails;
 	}
 
 	public void setCorporateActionNotificationDetails(CorporateActionNotificationAdvice1 corporateActionNotificationDetails) {
 		this.corporateActionNotificationDetails = corporateActionNotificationDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.010.01.01")
+	static public class Document {
+		@XmlElement(name = "AgtCANtfctnCxlReq", required = true)
+		public AgentCANotificationCancellationRequestV01 messageBody;
 	}
 }

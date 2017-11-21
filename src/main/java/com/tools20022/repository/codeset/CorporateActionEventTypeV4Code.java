@@ -29,26 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code
- * CorporateActionEventType10Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType13Code
- * CorporateActionEventType13Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType12Code
- * CorporateActionEventType12Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType11Code
- * CorporateActionEventType11Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType14Code
- * CorporateActionEventType14Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -287,6 +267,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV4Code#mmNonOfficialOffer
  * CorporateActionEventTypeV4Code.mmNonOfficialOffer}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code
+ * CorporateActionEventType10Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType13Code
+ * CorporateActionEventType13Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType12Code
+ * CorporateActionEventType12Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType11Code
+ * CorporateActionEventType11Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType14Code
+ * CorporateActionEventType14Code}</li>
  * </ul>
  * </li>
  * <li>

@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status report of a bulk or multiple or switch order that was previously
@@ -101,6 +105,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderStatusAndReason3", propOrder = {"status", "cancelled", "conditionallyAccepted", "rejected", "suspended", "statusInitiator", "switchOrderLegIdentification"})
 public class OrderStatusAndReason3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -520,6 +526,7 @@ public class OrderStatusAndReason3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public OrderStatus2Code getStatus() {
 		return status;
 	}
@@ -528,6 +535,7 @@ public class OrderStatusAndReason3 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Canc", required = true)
 	public CancelledStatus1 getCancelled() {
 		return cancelled;
 	}
@@ -536,6 +544,7 @@ public class OrderStatusAndReason3 {
 		this.cancelled = cancelled;
 	}
 
+	@XmlElement(name = "CondlyAccptd", required = true)
 	public ConditionallyAcceptedStatus1 getConditionallyAccepted() {
 		return conditionallyAccepted;
 	}
@@ -544,6 +553,7 @@ public class OrderStatusAndReason3 {
 		this.conditionallyAccepted = conditionallyAccepted;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectedStatus3 getRejected() {
 		return rejected;
 	}
@@ -552,6 +562,7 @@ public class OrderStatusAndReason3 {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Sspd", required = true)
 	public SuspendedStatus1 getSuspended() {
 		return suspended;
 	}
@@ -560,6 +571,7 @@ public class OrderStatusAndReason3 {
 		this.suspended = suspended;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification2Choice getStatusInitiator() {
 		return statusInitiator;
 	}
@@ -568,6 +580,7 @@ public class OrderStatusAndReason3 {
 		this.statusInitiator = statusInitiator;
 	}
 
+	@XmlElement(name = "SwtchOrdrLegId")
 	public Max35Text getSwitchOrderLegIdentification() {
 		return switchOrderLegIdentification;
 	}

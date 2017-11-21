@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header32;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The ATMCompletionAdvice message is sent by an ATM to an acquirer or its agent
@@ -36,9 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catp.008.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
@@ -74,6 +73,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catp.008.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -89,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMCompletionAdviceV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCompletionAdviceV02", propOrder = {"header", "protectedATMCompletionAdvice", "ATMCompletionAdvice", "securityTrailer"})
 public class ATMCompletionAdviceV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -128,6 +132,14 @@ public class ATMCompletionAdviceV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header32.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMCompletionAdviceV02.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType10 protectedATMCompletionAdvice;
 	/**
@@ -162,6 +174,14 @@ public class ATMCompletionAdviceV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMCompletionAdviceV02.class.getMethod("getProtectedATMCompletionAdvice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ATMCompletionAdvice2 aTMCompletionAdvice;
@@ -199,6 +219,14 @@ public class ATMCompletionAdviceV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ATMCompletionAdvice2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMCompletionAdviceV02.class.getMethod("getATMCompletionAdvice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType15 securityTrailer;
 	/**
@@ -234,6 +262,14 @@ public class ATMCompletionAdviceV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMCompletionAdviceV02.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -247,7 +283,8 @@ public class ATMCompletionAdviceV02 {
 				rootElement = "Document";
 				xmlTag = "ATMCmpltnAdvc";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ATMCompletionAdviceV02.mmHeader, ATMCompletionAdviceV02.mmProtectedATMCompletionAdvice, ATMCompletionAdviceV02.mmATMCompletionAdvice, ATMCompletionAdviceV02.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMCompletionAdviceV02.mmHeader, com.tools20022.repository.area.catp.ATMCompletionAdviceV02.mmProtectedATMCompletionAdvice,
+						com.tools20022.repository.area.catp.ATMCompletionAdviceV02.mmATMCompletionAdvice, com.tools20022.repository.area.catp.ATMCompletionAdviceV02.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catp";
@@ -257,10 +294,16 @@ public class ATMCompletionAdviceV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ATMCompletionAdviceV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header32 getHeader() {
 		return header;
 	}
@@ -269,6 +312,7 @@ public class ATMCompletionAdviceV02 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "PrtctdATMCmpltnAdvc")
 	public ContentInformationType10 getProtectedATMCompletionAdvice() {
 		return protectedATMCompletionAdvice;
 	}
@@ -277,6 +321,7 @@ public class ATMCompletionAdviceV02 {
 		this.protectedATMCompletionAdvice = protectedATMCompletionAdvice;
 	}
 
+	@XmlElement(name = "ATMCmpltnAdvc")
 	public ATMCompletionAdvice2 getATMCompletionAdvice() {
 		return aTMCompletionAdvice;
 	}
@@ -285,11 +330,18 @@ public class ATMCompletionAdviceV02 {
 		this.aTMCompletionAdvice = aTMCompletionAdvice;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType15 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catp.008.02.02")
+	static public class Document {
+		@XmlElement(name = "ATMCmpltnAdvc", required = true)
+		public ATMCompletionAdviceV02 messageBody;
 	}
 }

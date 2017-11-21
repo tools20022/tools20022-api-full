@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,6 +38,23 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#mmReservation
+ * IntraPositionTransfer.mmReservation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#mmCollateralAmount
+ * IntraPositionTransfer.mmCollateralAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#mmSecuritiesBalance
+ * IntraPositionTransfer.mmSecuritiesBalance}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
+ * SecuritiesTransfer}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -262,23 +280,6 @@ import java.util.List;
  * IntraPositionDetails44.mmIntraPositionMovement}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
- * SecuritiesTransfer}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#mmReservation
- * IntraPositionTransfer.mmReservation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#mmCollateralAmount
- * IntraPositionTransfer.mmCollateralAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#mmSecuritiesBalance
- * IntraPositionTransfer.mmSecuritiesBalance}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -336,7 +337,7 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	 */
 	public static final MMBusinessAssociationEnd mmReservation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> IntraPositionTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IntraPositionTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reservation";
@@ -358,11 +359,6 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer
-	 * IntraPositionTransfer}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -435,6 +431,11 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer
+	 * IntraPositionTransfer}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -455,7 +456,7 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 					IntraPositionMovementDetails4.mmCollateralMonitorAmount, IntraPositionDetails34.mmCollateralMonitorAmount, IntraPositionMovementDetails11.mmCollateralMonitorAmount, IntraPositionDetails35.mmCollateralMonitorAmount,
 					IntraPositionMovementDetails12.mmCollateralMonitorAmount, IntraPositionDetails41.mmCollateralMonitorAmount, IntraPositionMovementDetails13.mmCollateralMonitorAmount, IntraPositionDetails43.mmCollateralMonitorAmount,
 					IntraPositionMovementDetails14.mmCollateralMonitorAmount);
-			elementContext_lazy = () -> IntraPositionTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IntraPositionTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollateralAmount";
@@ -463,6 +464,14 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionTransfer.class.getMethod("getCollateralAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesBalance securitiesBalance;
@@ -484,11 +493,6 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesBalance
 	 * SecuritiesBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer
-	 * IntraPositionTransfer}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -502,6 +506,11 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	 * IntraPosition4.mmBalanceTo}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer
+	 * IntraPositionTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -518,7 +527,7 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	public static final MMBusinessAssociationEnd mmSecuritiesBalance = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(IntraPositionQueryCriteria1.mmBalanceType, IntraPosition4.mmBalanceFrom, IntraPosition4.mmBalanceTo);
-			elementContext_lazy = () -> IntraPositionTransfer.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IntraPositionTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesBalance";
@@ -545,7 +554,8 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 						IntraPositionMovements1.mmMovement, IntraBalanceQueryDefinition1.mmSearchCriteria, IntraBalanceQueryDefinition3.mmSearchCriteria, IntraPositionModification1.mmModification, IntraPositionCancellation1.mmCancellation,
 						IntraPositionDetails32.mmIntraPositionMovement, IntraPositionDetails37.mmIntraPositionMovement, IntraPositionDetails40.mmIntraPositionMovement, IntraPositionDetails44.mmIntraPositionMovement);
 				superType_lazy = () -> SecuritiesTransfer.mmObject();
-				element_lazy = () -> Arrays.asList(IntraPositionTransfer.mmReservation, IntraPositionTransfer.mmCollateralAmount, IntraPositionTransfer.mmSecuritiesBalance);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IntraPositionTransfer.mmReservation, com.tools20022.repository.entity.IntraPositionTransfer.mmCollateralAmount,
+						com.tools20022.repository.entity.IntraPositionTransfer.mmSecuritiesBalance);
 				derivationComponent_lazy = () -> Arrays.asList(IntraPositionDetails2.mmObject(), IntraPositionDetails8.mmObject(), IntraPositionDetails12.mmObject(), IntraPositionDetails13.mmObject(), IntraPositionDetails22.mmObject(),
 						IntraPositionDetails26.mmObject(), IntraPositionDetails27.mmObject(), IntraPositionDetails29.mmObject(), IntraPositionMovementDetails1.mmObject(), IntraPositionDetails3.mmObject(),
 						IntraPositionMovementDetails2.mmObject(), IntraPositionDetails6.mmObject(), IntraPositionMovementDetails5.mmObject(), IntraPositionDetails17.mmObject(), IntraPositionMovementDetails6.mmObject(),
@@ -560,6 +570,11 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 						IntraPositionMovementDetails11.mmObject(), IntraPositionDetails35.mmObject(), IntraPositionDetails36.mmObject(), IntraPositionDetails38.mmObject(), IntraPositionMovementDetails12.mmObject(),
 						IntraPositionDetails37.mmObject(), IntraPositionDetails41.mmObject(), IntraPositionDetails39.mmObject(), IntraPositionDetails40.mmObject(), IntraPositionMovementDetails13.mmObject(),
 						IntraPositionDetails43.mmObject(), IntraPositionDetails42.mmObject(), IntraPositionDetails44.mmObject(), IntraPositionMovementDetails14.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IntraPositionTransfer.class;
 			}
 		});
 		return mmObject_lazy.get();

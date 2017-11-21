@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the transaction in the cancellation inside a batch transfer.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentTransactionDetails9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentTransactionDetails34", propOrder = {"currency", "totalAmount", "validityDate", "ICCRelatedData"})
 public class CardPaymentTransactionDetails34 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -314,6 +320,7 @@ public class CardPaymentTransactionDetails34 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -322,6 +329,7 @@ public class CardPaymentTransactionDetails34 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "TtlAmt", required = true)
 	public ImpliedCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -330,6 +338,7 @@ public class CardPaymentTransactionDetails34 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "VldtyDt")
 	public ISODate getValidityDate() {
 		return validityDate;
 	}
@@ -338,6 +347,7 @@ public class CardPaymentTransactionDetails34 {
 		this.validityDate = validityDate;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}

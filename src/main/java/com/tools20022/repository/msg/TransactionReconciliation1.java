@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reconciliation transaction between an acceptor and an acquirer.
@@ -83,6 +87,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionReconciliation1", propOrder = {"closePeriod", "reconciliationTransactionIdentification", "reconciliationIdentification", "transactionTotals", "additionalTransactionData"})
 public class TransactionReconciliation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -330,6 +336,7 @@ public class TransactionReconciliation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClsPrd")
 	public TrueFalseIndicator getClosePeriod() {
 		return closePeriod;
 	}
@@ -338,6 +345,7 @@ public class TransactionReconciliation1 {
 		this.closePeriod = closePeriod;
 	}
 
+	@XmlElement(name = "RcncltnTxId", required = true)
 	public TransactionIdentifier1 getReconciliationTransactionIdentification() {
 		return reconciliationTransactionIdentification;
 	}
@@ -346,6 +354,7 @@ public class TransactionReconciliation1 {
 		this.reconciliationTransactionIdentification = reconciliationTransactionIdentification;
 	}
 
+	@XmlElement(name = "RcncltnId", required = true)
 	public Max35Text getReconciliationIdentification() {
 		return reconciliationIdentification;
 	}
@@ -354,6 +363,7 @@ public class TransactionReconciliation1 {
 		this.reconciliationIdentification = reconciliationIdentification;
 	}
 
+	@XmlElement(name = "TxTtls", required = true)
 	public List<TransactionTotals1> getTransactionTotals() {
 		return transactionTotals;
 	}
@@ -362,6 +372,7 @@ public class TransactionReconciliation1 {
 		this.transactionTotals = transactionTotals;
 	}
 
+	@XmlElement(name = "AddtlTxData")
 	public Max70Text getAdditionalTransactionData() {
 		return additionalTransactionData;
 	}

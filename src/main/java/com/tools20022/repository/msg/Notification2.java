@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the type of notification required.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about the type of notification required."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Notification2", propOrder = {"notificationType", "required", "distributionType"})
 public class Notification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -201,6 +207,7 @@ public class Notification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NtfctnTp", required = true)
 	public Max35Text getNotificationType() {
 		return notificationType;
 	}
@@ -209,6 +216,7 @@ public class Notification2 {
 		this.notificationType = notificationType;
 	}
 
+	@XmlElement(name = "Reqrd", required = true)
 	public YesNoIndicator getRequired() {
 		return required;
 	}
@@ -217,6 +225,7 @@ public class Notification2 {
 		this.required = required;
 	}
 
+	@XmlElement(name = "DstrbtnTp")
 	public InformationDistribution1Choice getDistributionType() {
 		return distributionType;
 	}

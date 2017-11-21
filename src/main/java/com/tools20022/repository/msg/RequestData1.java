@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Contains the meta data for a netting cut off update request: message
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestData1", propOrder = {"messageIdentification", "requestType", "requestedActivationDate", "requestServicer", "netServiceParticipantIdentification", "netServiceType"})
 public class RequestData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -348,6 +354,7 @@ public class RequestData1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -356,6 +363,7 @@ public class RequestData1 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "ReqTp", required = true)
 	public Max4Text getRequestType() {
 		return requestType;
 	}
@@ -364,6 +372,7 @@ public class RequestData1 {
 		this.requestType = requestType;
 	}
 
+	@XmlElement(name = "ReqdActvtnDt", required = true)
 	public ISODate getRequestedActivationDate() {
 		return requestedActivationDate;
 	}
@@ -372,6 +381,7 @@ public class RequestData1 {
 		this.requestedActivationDate = requestedActivationDate;
 	}
 
+	@XmlElement(name = "ReqSvcr")
 	public PartyIdentification73Choice getRequestServicer() {
 		return requestServicer;
 	}
@@ -380,6 +390,7 @@ public class RequestData1 {
 		this.requestServicer = requestServicer;
 	}
 
+	@XmlElement(name = "NetSvcPtcptId", required = true)
 	public PartyIdentification73Choice getNetServiceParticipantIdentification() {
 		return netServiceParticipantIdentification;
 	}
@@ -388,6 +399,7 @@ public class RequestData1 {
 		this.netServiceParticipantIdentification = netServiceParticipantIdentification;
 	}
 
+	@XmlElement(name = "NetSvcTp")
 	public Max35Text getNetServiceType() {
 		return netServiceType;
 	}

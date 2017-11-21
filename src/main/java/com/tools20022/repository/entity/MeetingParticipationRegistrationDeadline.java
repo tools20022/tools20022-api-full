@@ -68,6 +68,11 @@ public class MeetingParticipationRegistrationDeadline extends MeetingDeadline {
 				definition = "Date and time by which the beneficial owner or agent must notify of their intention to participate in the meeting process in order to be allowed to participate in the meeting event.";
 				superType_lazy = () -> MeetingDeadline.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingParticipationRegistrationDeadline.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

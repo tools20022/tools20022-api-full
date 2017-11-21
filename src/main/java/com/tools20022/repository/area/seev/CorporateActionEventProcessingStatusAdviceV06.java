@@ -26,9 +26,11 @@ import com.tools20022.repository.choice.EventProcessingStatus3Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CorporateActionsISOLatestversion;
 import com.tools20022.repository.msgset.CorporateActionsMaintenance20162017;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.032.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -97,6 +96,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.032.001.06}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -112,6 +114,9 @@ import java.util.List;
  * CorporateActionEventProcessingStatusAdviceV05}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionEventProcessingStatusAdviceV06", propOrder = {"notificationIdentification", "otherDocumentIdentification", "corporateActionGeneralInformation", "eventProcessingStatus", "additionalInformation",
+		"supplementaryData"})
 public class CorporateActionEventProcessingStatusAdviceV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -157,6 +162,14 @@ public class CorporateActionEventProcessingStatusAdviceV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification9.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionEventProcessingStatusAdviceV06.class.getMethod("getNotificationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<DocumentIdentification33> otherDocumentIdentification;
 	/**
@@ -198,6 +211,14 @@ public class CorporateActionEventProcessingStatusAdviceV06 {
 			previousVersion_lazy = () -> CorporateActionEventProcessingStatusAdviceV05.mmOtherDocumentIdentification;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification33.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionEventProcessingStatusAdviceV06.class.getMethod("getOtherDocumentIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionGeneralInformation109 corporateActionGeneralInformation;
@@ -241,6 +262,14 @@ public class CorporateActionEventProcessingStatusAdviceV06 {
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionGeneralInformation109.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionEventProcessingStatusAdviceV06.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<EventProcessingStatus3Choice> eventProcessingStatus;
 	/**
@@ -280,6 +309,14 @@ public class CorporateActionEventProcessingStatusAdviceV06 {
 			previousVersion_lazy = () -> CorporateActionEventProcessingStatusAdviceV05.mmEventProcessingStatus;
 			minOccurs = 1;
 			complexType_lazy = () -> EventProcessingStatus3Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionEventProcessingStatusAdviceV06.class.getMethod("getEventProcessingStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionNarrative10 additionalInformation;
@@ -321,6 +358,14 @@ public class CorporateActionEventProcessingStatusAdviceV06 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionNarrative10.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionEventProcessingStatusAdviceV06.class.getMethod("getAdditionalInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -365,6 +410,14 @@ public class CorporateActionEventProcessingStatusAdviceV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionEventProcessingStatusAdviceV06.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -378,9 +431,11 @@ public class CorporateActionEventProcessingStatusAdviceV06 {
 				rootElement = "Document";
 				xmlTag = "CorpActnEvtPrcgStsAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionEventProcessingStatusAdviceV06.mmNotificationIdentification, CorporateActionEventProcessingStatusAdviceV06.mmOtherDocumentIdentification,
-						CorporateActionEventProcessingStatusAdviceV06.mmCorporateActionGeneralInformation, CorporateActionEventProcessingStatusAdviceV06.mmEventProcessingStatus,
-						CorporateActionEventProcessingStatusAdviceV06.mmAdditionalInformation, CorporateActionEventProcessingStatusAdviceV06.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmNotificationIdentification,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmEventProcessingStatus, com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -390,10 +445,16 @@ public class CorporateActionEventProcessingStatusAdviceV06 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionEventProcessingStatusAdviceV06.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NtfctnId")
 	public DocumentIdentification9 getNotificationIdentification() {
 		return notificationIdentification;
 	}
@@ -402,6 +463,7 @@ public class CorporateActionEventProcessingStatusAdviceV06 {
 		this.notificationIdentification = notificationIdentification;
 	}
 
+	@XmlElement(name = "OthrDocId")
 	public List<DocumentIdentification33> getOtherDocumentIdentification() {
 		return otherDocumentIdentification;
 	}
@@ -410,6 +472,7 @@ public class CorporateActionEventProcessingStatusAdviceV06 {
 		this.otherDocumentIdentification = otherDocumentIdentification;
 	}
 
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionGeneralInformation109 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
@@ -418,6 +481,7 @@ public class CorporateActionEventProcessingStatusAdviceV06 {
 		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
 	}
 
+	@XmlElement(name = "EvtPrcgSts", required = true)
 	public List<EventProcessingStatus3Choice> getEventProcessingStatus() {
 		return eventProcessingStatus;
 	}
@@ -426,6 +490,7 @@ public class CorporateActionEventProcessingStatusAdviceV06 {
 		this.eventProcessingStatus = eventProcessingStatus;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public CorporateActionNarrative10 getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -434,11 +499,18 @@ public class CorporateActionEventProcessingStatusAdviceV06 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.032.06.06")
+	static public class Document {
+		@XmlElement(name = "CorpActnEvtPrcgStsAdvc", required = true)
+		public CorporateActionEventProcessingStatusAdviceV06 messageBody;
 	}
 }

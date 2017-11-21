@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -43,46 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.NonEligibleProceedsIndicator1Choice
- * NonEligibleProceedsIndicator1Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.NonEligibleProceedsIndicator2Choice
- * NonEligibleProceedsIndicator2Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.NonEligibleProceedsIndicator3Choice
- * NonEligibleProceedsIndicator3Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.NonEligibleProceedsIndicator4Choice
- * NonEligibleProceedsIndicator4Choice}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmProceedsDefinition
- * CorporateActionEvent.mmProceedsDefinition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmProceedsDefinition
- * CorporateActionOption.mmProceedsDefinition}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
- * SecuritiesProceedsDefinition}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashProceedsDefinition
- * CashProceedsDefinition}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -117,6 +78,46 @@ import java.util.concurrent.atomic.AtomicReference;
  * ProceedsDefinition.mmCountryOfIncomeSource}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
+ * SecuritiesProceedsDefinition}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashProceedsDefinition
+ * CashProceedsDefinition}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NonEligibleProceedsIndicator1Choice
+ * NonEligibleProceedsIndicator1Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NonEligibleProceedsIndicator2Choice
+ * NonEligibleProceedsIndicator2Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NonEligibleProceedsIndicator3Choice
+ * NonEligibleProceedsIndicator3Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NonEligibleProceedsIndicator4Choice
+ * NonEligibleProceedsIndicator4Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmProceedsDefinition
+ * CorporateActionEvent.mmProceedsDefinition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmProceedsDefinition
+ * CorporateActionOption.mmProceedsDefinition}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -149,11 +150,6 @@ public class ProceedsDefinition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
-	 * ProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -229,6 +225,11 @@ public class ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
+	 * ProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -248,7 +249,7 @@ public class ProceedsDefinition {
 					OtherAmounts18.mmSpecialConcession, OtherAmounts24.mmSpecialConcession, OtherAmounts13.mmSpecialConcession, OtherAmounts1.mmSpecialConcession, OtherAmounts16.mmSpecialConcession,
 					CorporateActionAmounts1.mmSpecialConcessionAmount, OtherAmounts28.mmSpecialConcession, OtherAmounts30.mmSpecialConcession, OtherAmounts31.mmSpecialConcession, OtherAmounts35.mmSpecialConcession,
 					OtherAmounts34.mmSpecialConcession, OtherAmounts38.mmSpecialConcession);
-			elementContext_lazy = () -> ProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialConcessionAmount";
@@ -256,6 +257,14 @@ public class ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProceedsDefinition.class.getMethod("getSpecialConcessionAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DebitCreditCode creditDebitIndicator;
@@ -269,11 +278,6 @@ public class ProceedsDefinition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DebitCreditCode
 	 * DebitCreditCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
-	 * ProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -568,6 +572,11 @@ public class ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
+	 * ProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -600,7 +609,7 @@ public class ProceedsDefinition {
 					SecuritiesOption58.mmCreditDebitIndicator, CashOption48.mmCreditDebitIndicator, CashOption52.mmCreditDebitIndicator, SecuritiesOption60.mmCreditDebitIndicator, CashOption51.mmCreditDebitIndicator,
 					SecuritiesOption59.mmCreditDebitIndicator, CashOption50.mmCreditDebitIndicator, CashOption53.mmCreditDebitIndicator, SecuritiesOption61.mmCreditDebitIndicator, SecuritiesOption63.mmCreditDebitIndicator,
 					CashOption54.mmCreditDebitIndicator, CashOption55.mmCreditDebitIndicator);
-			elementContext_lazy = () -> ProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
@@ -608,6 +617,14 @@ public class ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProceedsDefinition.class.getMethod("getCreditDebitIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime earliestPaymentDate;
@@ -621,11 +638,6 @@ public class ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
-	 * ProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -713,6 +725,11 @@ public class ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
+	 * ProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -733,7 +750,7 @@ public class ProceedsDefinition {
 					CorporateActionDate23.mmEarliestPaymentDate, CorporateActionDate26.mmEarliestPaymentDate, SecurityDate9.mmEarliestPaymentDate, SecurityDate10.mmEarliestPaymentDate, CorporateActionDate4.mmEarliestPaymentDate,
 					CorporateActionDate3.mmEarliestPaymentDate, CorporateActionDate5.mmEarliestPaymentDate, SecurityDate12.mmEarliestPaymentDate, CorporateActionDate47.mmEarliestPaymentDate, SecurityDate11.mmEarliestPaymentDate,
 					CorporateActionDate56.mmEarliestPaymentDate, SecurityDate14.mmEarliestPaymentDate, SecurityDate13.mmEarliestPaymentDate);
-			elementContext_lazy = () -> ProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarliestPaymentDate";
@@ -741,6 +758,14 @@ public class ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProceedsDefinition.class.getMethod("getEarliestPaymentDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime valueDate;
@@ -755,11 +780,6 @@ public class ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
-	 * ProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -811,6 +831,11 @@ public class ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
+	 * ProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -828,7 +853,7 @@ public class ProceedsDefinition {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate7.mmValueDate, CorporateActionDate24.mmValueDate, CorporateActionDate9.mmValueDate, CorporateActionDate12.mmValueDate, CorporateActionDate17.mmValueDate,
 					CorporateActionDate20.mmValueDate, CorporateActionDate23.mmValueDate, CorporateActionDate26.mmValueDate, CashOption5.mmValueDate, CashOption7.mmValueDate, CashOption19.mmValueDate, CashOption23.mmValueDate,
 					CorporateActionDate5.mmValueDate, CorporateActionDate47.mmValueDate, CashOption45.mmValueDate, CorporateActionDate56.mmValueDate, CashOption48.mmValueDate);
-			elementContext_lazy = () -> ProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
@@ -836,6 +861,14 @@ public class ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProceedsDefinition.class.getMethod("getValueDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected NonEligibleProceedsIndicatorCode nonEligibleProceedsIndicator;
@@ -851,11 +884,6 @@ public class ProceedsDefinition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.NonEligibleProceedsIndicatorCode
 	 * NonEligibleProceedsIndicatorCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
-	 * ProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1036,6 +1064,11 @@ public class ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
+	 * ProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1065,7 +1098,7 @@ public class ProceedsDefinition {
 					NonEligibleProceedsIndicator4Choice.mmCode, NonEligibleProceedsIndicator4Choice.mmProprietary, CashOption47.mmNonEligibleProceedsIndicator, SecuritiesOption57.mmNonEligibleProceedsIndicator,
 					CashOption51.mmNonEligibleProceedsIndicator, SecuritiesOption59.mmNonEligibleProceedsIndicator, CashOption50.mmNonEligibleProceedsIndicator, CashOption53.mmNonEligibleProceedsIndicator,
 					SecuritiesOption61.mmNonEligibleProceedsIndicator, CashOption54.mmNonEligibleProceedsIndicator);
-			elementContext_lazy = () -> ProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonEligibleProceedsIndicator";
@@ -1073,6 +1106,14 @@ public class ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NonEligibleProceedsIndicatorCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProceedsDefinition.class.getMethod("getNonEligibleProceedsIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text issuerOfferorTaxabilityIndicator;
@@ -1086,11 +1127,6 @@ public class ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
-	 * ProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1223,6 +1259,11 @@ public class ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
+	 * ProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1248,7 +1289,7 @@ public class ProceedsDefinition {
 					SecuritiesOption57.mmIssuerOfferorTaxabilityIndicator, CashOption52.mmIssuerOfferorTaxabilityIndicator, SecuritiesOption60.mmIssuerOfferorTaxabilityIndicator, CashOption51.mmIssuerOfferorTaxabilityIndicator,
 					SecuritiesOption59.mmIssuerOfferorTaxabilityIndicator, CashOption50.mmIssuerOfferorTaxabilityIndicator, CashOption53.mmIssuerOfferorTaxabilityIndicator, SecuritiesOption61.mmIssuerOfferorTaxabilityIndicator,
 					SecuritiesOption63.mmIssuerOfferorTaxabilityIndicator, CashOption54.mmIssuerOfferorTaxabilityIndicator, CashOption55.mmIssuerOfferorTaxabilityIndicator);
-			elementContext_lazy = () -> ProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuerOfferorTaxabilityIndicator";
@@ -1256,6 +1297,14 @@ public class ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProceedsDefinition.class.getMethod("getIssuerOfferorTaxabilityIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime offerPriceFixingDate;
@@ -1269,11 +1318,6 @@ public class ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
-	 * ProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1298,6 +1342,11 @@ public class ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
+	 * ProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1314,7 +1363,7 @@ public class ProceedsDefinition {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate22.mmFixingDate, CorporateActionDate25.mmFixingDate, CorporateActionDate27.mmFixingDate, CorporateActionDate28.mmFixingDate, CorporateActionDate44.mmFixingDate,
 					CorporateActionDate58.mmFixingDate);
-			elementContext_lazy = () -> ProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfferPriceFixingDate";
@@ -1322,6 +1371,14 @@ public class ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProceedsDefinition.class.getMethod("getOfferPriceFixingDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionOption option;
@@ -1361,7 +1418,7 @@ public class ProceedsDefinition {
 	 */
 	public static final MMBusinessAssociationEnd mmOption = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Option";
@@ -1410,7 +1467,7 @@ public class ProceedsDefinition {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateAction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateAction";
@@ -1432,11 +1489,6 @@ public class ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CountryCode
 	 * CountryCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
-	 * ProceedsDefinition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1491,6 +1543,11 @@ public class ProceedsDefinition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition
+	 * ProceedsDefinition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1507,7 +1564,7 @@ public class ProceedsDefinition {
 					CashOption46.mmCountryOfIncomeSource, SecuritiesOption55.mmCountryOfIncomeSource, CashOption49.mmCountryOfIncomeSource, SecuritiesOption57.mmCountryOfIncomeSource, CashOption52.mmCountryOfIncomeSource,
 					SecuritiesOption60.mmCountryOfIncomeSource, SecuritiesOption59.mmCountryOfIncomeSource, CashOption50.mmCountryOfIncomeSource, CashOption53.mmCountryOfIncomeSource, SecuritiesOption61.mmCountryOfIncomeSource,
 					SecuritiesOption63.mmCountryOfIncomeSource, CashOption55.mmCountryOfIncomeSource);
-			elementContext_lazy = () -> ProceedsDefinition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CountryOfIncomeSource";
@@ -1515,6 +1572,14 @@ public class ProceedsDefinition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ProceedsDefinition.class.getMethod("getCountryOfIncomeSource", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1527,11 +1592,18 @@ public class ProceedsDefinition {
 				definition = "Definition of exchanges of cash and/or securities available in the processing of corporate actions.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionEvent.mmProceedsDefinition, com.tools20022.repository.entity.CorporateActionOption.mmProceedsDefinition);
 				subType_lazy = () -> Arrays.asList(SecuritiesProceedsDefinition.mmObject(), CashProceedsDefinition.mmObject());
-				element_lazy = () -> Arrays.asList(ProceedsDefinition.mmSpecialConcessionAmount, ProceedsDefinition.mmCreditDebitIndicator, ProceedsDefinition.mmEarliestPaymentDate, ProceedsDefinition.mmValueDate,
-						ProceedsDefinition.mmNonEligibleProceedsIndicator, ProceedsDefinition.mmIssuerOfferorTaxabilityIndicator, ProceedsDefinition.mmOfferPriceFixingDate, ProceedsDefinition.mmOption, ProceedsDefinition.mmCorporateAction,
-						ProceedsDefinition.mmCountryOfIncomeSource);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProceedsDefinition.mmSpecialConcessionAmount, com.tools20022.repository.entity.ProceedsDefinition.mmCreditDebitIndicator,
+						com.tools20022.repository.entity.ProceedsDefinition.mmEarliestPaymentDate, com.tools20022.repository.entity.ProceedsDefinition.mmValueDate,
+						com.tools20022.repository.entity.ProceedsDefinition.mmNonEligibleProceedsIndicator, com.tools20022.repository.entity.ProceedsDefinition.mmIssuerOfferorTaxabilityIndicator,
+						com.tools20022.repository.entity.ProceedsDefinition.mmOfferPriceFixingDate, com.tools20022.repository.entity.ProceedsDefinition.mmOption, com.tools20022.repository.entity.ProceedsDefinition.mmCorporateAction,
+						com.tools20022.repository.entity.ProceedsDefinition.mmCountryOfIncomeSource);
 				derivationComponent_lazy = () -> Arrays.asList(NonEligibleProceedsIndicator1Choice.mmObject(), NonEligibleProceedsIndicator2Choice.mmObject(), NonEligibleProceedsIndicator3Choice.mmObject(),
 						NonEligibleProceedsIndicator4Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ProceedsDefinition.class;
 			}
 		});
 		return mmObject_lazy.get();

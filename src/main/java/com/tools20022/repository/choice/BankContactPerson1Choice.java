@@ -30,6 +30,10 @@ import com.tools20022.repository.msg.ContactIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Contact person details in a bank.
@@ -84,6 +88,8 @@ import java.util.List;
  * definition} = "Contact person details in a bank."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BankContactPerson1Choice", propOrder = {"buyerBankContactPerson", "sellerBankContactPerson"})
 public class BankContactPerson1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -196,6 +202,7 @@ public class BankContactPerson1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BuyrBkCtctPrsn", required = true)
 	public List<ContactIdentification1> getBuyerBankContactPerson() {
 		return buyerBankContactPerson;
 	}
@@ -204,6 +211,7 @@ public class BankContactPerson1Choice {
 		this.buyerBankContactPerson = buyerBankContactPerson;
 	}
 
+	@XmlElement(name = "SellrBkCtctPrsn", required = true)
 	public List<ContactIdentification1> getSellerBankContactPerson() {
 		return sellerBankContactPerson;
 	}

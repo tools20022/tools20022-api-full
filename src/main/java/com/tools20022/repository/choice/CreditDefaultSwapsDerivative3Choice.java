@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.CreditDefaultSwapIndex2;
 import com.tools20022.repository.msg.CreditDefaultSwapSingleName2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice structure allowing a credit default swap derivative to be defined.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice structure allowing a credit default swap derivative to be defined."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CreditDefaultSwapsDerivative3Choice", propOrder = {"singleNameCreditDefaultSwap", "creditDefaultSwapIndex", "singleNameCreditDefaultSwapDerivative", "creditDefaultSwapIndexDerivative"})
 public class CreditDefaultSwapsDerivative3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -282,6 +288,7 @@ public class CreditDefaultSwapsDerivative3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SnglNmCdtDfltSwp", required = true)
 	public CreditDefaultSwapSingleName2 getSingleNameCreditDefaultSwap() {
 		return singleNameCreditDefaultSwap;
 	}
@@ -290,6 +297,7 @@ public class CreditDefaultSwapsDerivative3Choice {
 		this.singleNameCreditDefaultSwap = singleNameCreditDefaultSwap;
 	}
 
+	@XmlElement(name = "CdtDfltSwpIndx", required = true)
 	public CreditDefaultSwapIndex2 getCreditDefaultSwapIndex() {
 		return creditDefaultSwapIndex;
 	}
@@ -298,6 +306,7 @@ public class CreditDefaultSwapsDerivative3Choice {
 		this.creditDefaultSwapIndex = creditDefaultSwapIndex;
 	}
 
+	@XmlElement(name = "SnglNmCdtDfltSwpDeriv", required = true)
 	public CreditDefaultSwapDerivative4 getSingleNameCreditDefaultSwapDerivative() {
 		return singleNameCreditDefaultSwapDerivative;
 	}
@@ -306,6 +315,7 @@ public class CreditDefaultSwapsDerivative3Choice {
 		this.singleNameCreditDefaultSwapDerivative = singleNameCreditDefaultSwapDerivative;
 	}
 
+	@XmlElement(name = "CdtDfltSwpIndxDeriv", required = true)
 	public CreditDefaultSwapDerivative3 getCreditDefaultSwapIndexDerivative() {
 		return creditDefaultSwapIndexDerivative;
 	}

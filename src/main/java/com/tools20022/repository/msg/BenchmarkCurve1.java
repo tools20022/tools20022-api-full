@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the benchmark against which the financial instrument is measured.
@@ -83,6 +87,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BenchmarkCurve1", propOrder = {"spread", "benchmarkIdentification", "benchmarkPrice", "benchmarkCurveCurrency", "benchmarkCurveName", "benchmarkCurvePoint"})
 public class BenchmarkCurve1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -401,6 +407,7 @@ public class BenchmarkCurve1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sprd")
 	public DecimalNumber getSpread() {
 		return spread;
 	}
@@ -409,6 +416,7 @@ public class BenchmarkCurve1 {
 		this.spread = spread;
 	}
 
+	@XmlElement(name = "BchmkId")
 	public SecurityIdentification7 getBenchmarkIdentification() {
 		return benchmarkIdentification;
 	}
@@ -417,6 +425,7 @@ public class BenchmarkCurve1 {
 		this.benchmarkIdentification = benchmarkIdentification;
 	}
 
+	@XmlElement(name = "BchmkPric")
 	public Price1 getBenchmarkPrice() {
 		return benchmarkPrice;
 	}
@@ -425,6 +434,7 @@ public class BenchmarkCurve1 {
 		this.benchmarkPrice = benchmarkPrice;
 	}
 
+	@XmlElement(name = "BchmkCrvCcy")
 	public CurrencyCode getBenchmarkCurveCurrency() {
 		return benchmarkCurveCurrency;
 	}
@@ -433,6 +443,7 @@ public class BenchmarkCurve1 {
 		this.benchmarkCurveCurrency = benchmarkCurveCurrency;
 	}
 
+	@XmlElement(name = "BchmkCrvNm")
 	public BenchmarkCurveName1Code getBenchmarkCurveName() {
 		return benchmarkCurveName;
 	}
@@ -441,6 +452,7 @@ public class BenchmarkCurve1 {
 		this.benchmarkCurveName = benchmarkCurveName;
 	}
 
+	@XmlElement(name = "BchmkCrvPt")
 	public Max256Text getBenchmarkCurvePoint() {
 		return benchmarkCurvePoint;
 	}

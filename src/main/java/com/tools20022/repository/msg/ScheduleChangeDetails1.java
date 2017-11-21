@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Changes in the schedule.
@@ -59,6 +63,8 @@ import java.util.List;
  * definition} = "Changes in the schedule."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ScheduleChangeDetails1", propOrder = {"scheduleChangeEffectiveDate", "scheduleEntry"})
 public class ScheduleChangeDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -157,6 +163,7 @@ public class ScheduleChangeDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SchdlChngFctvDt", required = true)
 	public ISODate getScheduleChangeEffectiveDate() {
 		return scheduleChangeEffectiveDate;
 	}
@@ -165,6 +172,7 @@ public class ScheduleChangeDetails1 {
 		this.scheduleChangeEffectiveDate = scheduleChangeEffectiveDate;
 	}
 
+	@XmlElement(name = "SchdlNtry", required = true)
 	public List<ScheduleChangeEntry1> getScheduleEntry() {
 		return scheduleEntry;
 	}

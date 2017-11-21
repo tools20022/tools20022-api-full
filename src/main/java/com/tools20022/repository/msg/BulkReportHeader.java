@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of the report and information allowing a multi tranches report
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BulkReportHeader", propOrder = {"reportIdentification", "trancheNumber", "lastTrancheIndicator"})
 public class BulkReportHeader {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -208,6 +214,7 @@ public class BulkReportHeader {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptId", required = true)
 	public Max35Text getReportIdentification() {
 		return reportIdentification;
 	}
@@ -216,6 +223,7 @@ public class BulkReportHeader {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "TrchNb", required = true)
 	public Number getTrancheNumber() {
 		return trancheNumber;
 	}
@@ -224,6 +232,7 @@ public class BulkReportHeader {
 		this.trancheNumber = trancheNumber;
 	}
 
+	@XmlElement(name = "LastTrchInd", required = true)
 	public YesNoIndicator getLastTrancheIndicator() {
 		return lastTrancheIndicator;
 	}

@@ -67,6 +67,11 @@ public class AccountInformationRecipientRole extends AccountPartyRole {
 				definition = "Party that is entitled by the account owner to receive information about movements in the account.";
 				superType_lazy = () -> AccountPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountInformationRecipientRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

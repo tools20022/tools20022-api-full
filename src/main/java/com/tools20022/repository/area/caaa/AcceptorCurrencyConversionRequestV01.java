@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.ContentInformationType8;
 import com.tools20022.repository.msg.Header7;
 import com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20132014;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The AcceptorCurrencyConversionRequest message is sent by the card acceptor to
@@ -37,9 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.016.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion
@@ -73,6 +72,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.016.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -92,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorCurrencyConversionRequestV01", propOrder = {"header", "currencyConversionRequest", "securityTrailer"})
 public class AcceptorCurrencyConversionRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -138,6 +142,14 @@ public class AcceptorCurrencyConversionRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header7.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorCurrencyConversionRequestV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AcceptorCurrencyConversionRequest1 currencyConversionRequest;
 	/**
@@ -181,6 +193,14 @@ public class AcceptorCurrencyConversionRequestV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorCurrencyConversionRequest1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorCurrencyConversionRequestV01.class.getMethod("getCurrencyConversionRequest", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ContentInformationType8 securityTrailer;
@@ -226,6 +246,14 @@ public class AcceptorCurrencyConversionRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorCurrencyConversionRequestV01.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -239,7 +267,8 @@ public class AcceptorCurrencyConversionRequestV01 {
 				rootElement = "Document";
 				xmlTag = "AccptrCcyConvsReq";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorCurrencyConversionRequestV01.mmHeader, AcceptorCurrencyConversionRequestV01.mmCurrencyConversionRequest, AcceptorCurrencyConversionRequestV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV01.mmHeader,
+						com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV01.mmCurrencyConversionRequest, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";
@@ -249,10 +278,16 @@ public class AcceptorCurrencyConversionRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcceptorCurrencyConversionRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header7 getHeader() {
 		return header;
 	}
@@ -261,6 +296,7 @@ public class AcceptorCurrencyConversionRequestV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "CcyConvsReq", required = true)
 	public AcceptorCurrencyConversionRequest1 getCurrencyConversionRequest() {
 		return currencyConversionRequest;
 	}
@@ -269,11 +305,18 @@ public class AcceptorCurrencyConversionRequestV01 {
 		this.currencyConversionRequest = currencyConversionRequest;
 	}
 
+	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType8 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType8 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.016.01.01")
+	static public class Document {
+		@XmlElement(name = "AccptrCcyConvsReq", required = true)
+		public AcceptorCurrencyConversionRequestV01 messageBody;
 	}
 }

@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the advice for the issuance of an undertaking.
@@ -88,6 +92,8 @@ import java.util.List;
  * definition} = "Details of the advice for the issuance of an undertaking."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingAdvice2", propOrder = {"applicantReferenceNumber", "obligor", "undertakingIssuanceMessage", "originalIssuedMedium", "enclosedFile", "additionalInformation"})
 public class UndertakingAdvice2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -381,6 +387,7 @@ public class UndertakingAdvice2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ApplcntRefNb", required = true)
 	public Max35Text getApplicantReferenceNumber() {
 		return applicantReferenceNumber;
 	}
@@ -389,6 +396,7 @@ public class UndertakingAdvice2 {
 		this.applicantReferenceNumber = applicantReferenceNumber;
 	}
 
+	@XmlElement(name = "Oblgr")
 	public PartyIdentification43 getObligor() {
 		return obligor;
 	}
@@ -397,6 +405,7 @@ public class UndertakingAdvice2 {
 		this.obligor = obligor;
 	}
 
+	@XmlElement(name = "UdrtkgIssncMsg", required = true)
 	public UndertakingIssuanceMessage getUndertakingIssuanceMessage() {
 		return undertakingIssuanceMessage;
 	}
@@ -405,6 +414,7 @@ public class UndertakingAdvice2 {
 		this.undertakingIssuanceMessage = undertakingIssuanceMessage;
 	}
 
+	@XmlElement(name = "OrgnlIssdMdm")
 	public PresentationMedium1Code getOriginalIssuedMedium() {
 		return originalIssuedMedium;
 	}
@@ -413,6 +423,7 @@ public class UndertakingAdvice2 {
 		this.originalIssuedMedium = originalIssuedMedium;
 	}
 
+	@XmlElement(name = "NclsdFile")
 	public List<Document9> getEnclosedFile() {
 		return enclosedFile;
 	}
@@ -421,6 +432,7 @@ public class UndertakingAdvice2 {
 		this.enclosedFile = enclosedFile;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

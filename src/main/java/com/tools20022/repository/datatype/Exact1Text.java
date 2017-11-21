@@ -27,6 +27,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} = "1"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -54,6 +55,8 @@ public class Exact1Text {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Exact1Text";
 				definition = "Specifies a character string which contains only the character '1'.";
+				pattern = "1";
+				length = 1;
 			}
 		});
 		return mmObject_lazy.get();

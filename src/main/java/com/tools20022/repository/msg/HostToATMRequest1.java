@@ -26,6 +26,10 @@ import com.tools20022.repository.codeset.MessageFunction8Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the request to an ATM to contact the ATM manager.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Information related to the request to an ATM to contact the ATM manager."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "HostToATMRequest1", propOrder = {"environment", "commandIdentification", "expectedMessageFunction"})
 public class HostToATMRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -215,6 +221,7 @@ public class HostToATMRequest1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public ATMEnvironment9 getEnvironment() {
 		return environment;
 	}
@@ -223,6 +230,7 @@ public class HostToATMRequest1 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "CmdId")
 	public ATMCommandIdentification1 getCommandIdentification() {
 		return commandIdentification;
 	}
@@ -231,6 +239,7 @@ public class HostToATMRequest1 {
 		this.commandIdentification = commandIdentification;
 	}
 
+	@XmlElement(name = "XpctdMsgFctn", required = true)
 	public MessageFunction8Code getExpectedMessageFunction() {
 		return expectedMessageFunction;
 	}

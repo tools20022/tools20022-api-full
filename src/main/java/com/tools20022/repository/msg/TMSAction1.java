@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Single terminal management action to be performed by the point of
@@ -85,6 +89,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TMSAction1", propOrder = {"type", "address", "dataSetIdentification", "trigger", "additionalProcess", "timeCondition", "errorAction"})
 public class TMSAction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -426,6 +432,7 @@ public class TMSAction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TerminalManagementAction1Code getType() {
 		return type;
 	}
@@ -434,6 +441,7 @@ public class TMSAction1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Adr")
 	public NetworkParameters1 getAddress() {
 		return address;
 	}
@@ -442,6 +450,7 @@ public class TMSAction1 {
 		this.address = address;
 	}
 
+	@XmlElement(name = "DataSetId")
 	public DataSetIdentification2 getDataSetIdentification() {
 		return dataSetIdentification;
 	}
@@ -450,6 +459,7 @@ public class TMSAction1 {
 		this.dataSetIdentification = dataSetIdentification;
 	}
 
+	@XmlElement(name = "Trggr", required = true)
 	public TerminalManagementActionTrigger1Code getTrigger() {
 		return trigger;
 	}
@@ -458,6 +468,7 @@ public class TMSAction1 {
 		this.trigger = trigger;
 	}
 
+	@XmlElement(name = "AddtlPrc")
 	public TerminalManagementAdditionalProcess1Code getAdditionalProcess() {
 		return additionalProcess;
 	}
@@ -466,6 +477,7 @@ public class TMSAction1 {
 		this.additionalProcess = additionalProcess;
 	}
 
+	@XmlElement(name = "TmCond")
 	public ProcessTiming1 getTimeCondition() {
 		return timeCondition;
 	}
@@ -474,6 +486,7 @@ public class TMSAction1 {
 		this.timeCondition = timeCondition;
 	}
 
+	@XmlElement(name = "ErrActn")
 	public List<ErrorAction1> getErrorAction() {
 		return errorAction;
 	}

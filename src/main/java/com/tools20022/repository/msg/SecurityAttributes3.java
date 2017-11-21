@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Tangible items of value to a business.
@@ -60,6 +64,8 @@ import java.util.List;
  * definition} = "Tangible items of value to a business."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityAttributes3", propOrder = {"financialInstrumentIdentification", "financialInstrumentType", "financialInstrumentAttributes"})
 public class SecurityAttributes3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -204,6 +210,7 @@ public class SecurityAttributes3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public List<SecurityIdentification14> getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -212,6 +219,7 @@ public class SecurityAttributes3 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmTp")
 	public FinancialInstrument28 getFinancialInstrumentType() {
 		return financialInstrumentType;
 	}
@@ -220,6 +228,7 @@ public class SecurityAttributes3 {
 		this.financialInstrumentType = financialInstrumentType;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public List<CommonFinancialInstrumentAttributes3> getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}

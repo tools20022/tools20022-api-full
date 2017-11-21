@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.GroupHeader47;
 import com.tools20022.repository.msg.MandateAmendment2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -61,9 +63,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.010.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
@@ -94,6 +93,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.010.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -117,6 +119,8 @@ import java.util.List;
  * MandateAmendmentRequestV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MandateAmendmentRequestV02", propOrder = {"groupHeader", "underlyingAmendmentDetails", "supplementaryData"})
 public class MandateAmendmentRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -156,6 +160,14 @@ public class MandateAmendmentRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader47.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateAmendmentRequestV02.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MandateAmendment2 underlyingAmendmentDetails;
 	/**
@@ -191,6 +203,14 @@ public class MandateAmendmentRequestV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MandateAmendment2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateAmendmentRequestV02.class.getMethod("getUnderlyingAmendmentDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -229,6 +249,14 @@ public class MandateAmendmentRequestV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateAmendmentRequestV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -243,7 +271,8 @@ public class MandateAmendmentRequestV02 {
 				rootElement = "Document";
 				xmlTag = "MndtAmdmntReq";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MandateAmendmentRequestV02.mmGroupHeader, MandateAmendmentRequestV02.mmUnderlyingAmendmentDetails, MandateAmendmentRequestV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAmendmentRequestV02.mmGroupHeader, com.tools20022.repository.area.pain.MandateAmendmentRequestV02.mmUnderlyingAmendmentDetails,
+						com.tools20022.repository.area.pain.MandateAmendmentRequestV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";
@@ -253,10 +282,16 @@ public class MandateAmendmentRequestV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MandateAmendmentRequestV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader47 getGroupHeader() {
 		return groupHeader;
 	}
@@ -265,6 +300,7 @@ public class MandateAmendmentRequestV02 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "UndrlygAmdmntDtls", required = true)
 	public MandateAmendment2 getUnderlyingAmendmentDetails() {
 		return underlyingAmendmentDetails;
 	}
@@ -273,11 +309,18 @@ public class MandateAmendmentRequestV02 {
 		this.underlyingAmendmentDetails = underlyingAmendmentDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.010.02.02")
+	static public class Document {
+		@XmlElement(name = "MndtAmdmntReq", required = true)
+		public MandateAmendmentRequestV02 messageBody;
 	}
 }

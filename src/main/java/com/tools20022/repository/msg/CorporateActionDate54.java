@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Lottery;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies corporate action dates.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies corporate action dates."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionDate54", propOrder = {"recordDate", "exDividendDate", "lotteryDate"})
 public class CorporateActionDate54 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -236,6 +242,7 @@ public class CorporateActionDate54 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RcrdDt")
 	public DateFormat34Choice getRecordDate() {
 		return recordDate;
 	}
@@ -244,6 +251,7 @@ public class CorporateActionDate54 {
 		this.recordDate = recordDate;
 	}
 
+	@XmlElement(name = "ExDvddDt")
 	public DateFormat34Choice getExDividendDate() {
 		return exDividendDate;
 	}
@@ -252,6 +260,7 @@ public class CorporateActionDate54 {
 		this.exDividendDate = exDividendDate;
 	}
 
+	@XmlElement(name = "LtryDt")
 	public DateFormat34Choice getLotteryDate() {
 		return lotteryDate;
 	}

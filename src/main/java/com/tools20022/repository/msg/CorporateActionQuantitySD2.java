@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Lottery;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies corporate action quantities.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionQuantity8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionQuantitySD2", propOrder = {"placeAndName", "baseDenomination", "incrementalDenomination"})
 public class CorporateActionQuantitySD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -246,6 +252,7 @@ public class CorporateActionQuantitySD2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -254,6 +261,7 @@ public class CorporateActionQuantitySD2 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "BaseDnmtn")
 	public FinancialInstrumentQuantity22Choice getBaseDenomination() {
 		return baseDenomination;
 	}
@@ -262,6 +270,7 @@ public class CorporateActionQuantitySD2 {
 		this.baseDenomination = baseDenomination;
 	}
 
+	@XmlElement(name = "IncrmtlDnmtn")
 	public FinancialInstrumentQuantity22Choice getIncrementalDenomination() {
 		return incrementalDenomination;
 	}

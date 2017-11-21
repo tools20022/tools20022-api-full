@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on the status of a trade.
@@ -99,6 +103,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradeData10}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeData12", propOrder = {"messageIdentification", "statusOriginator", "currentStatus", "currentStatusSubType", "currentStatusDateTime", "previousStatus", "previousStatusSubType", "productType",
+		"settlementSessionIdentifier", "linkedReportIdentification"})
 public class TradeData12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -644,6 +651,7 @@ public class TradeData12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -652,6 +660,7 @@ public class TradeData12 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "StsOrgtr")
 	public Max35Text getStatusOriginator() {
 		return statusOriginator;
 	}
@@ -660,6 +669,7 @@ public class TradeData12 {
 		this.statusOriginator = statusOriginator;
 	}
 
+	@XmlElement(name = "CurSts", required = true)
 	public StatusAndSubStatus2 getCurrentStatus() {
 		return currentStatus;
 	}
@@ -668,6 +678,7 @@ public class TradeData12 {
 		this.currentStatus = currentStatus;
 	}
 
+	@XmlElement(name = "CurStsSubTp")
 	public StatusSubType2Code getCurrentStatusSubType() {
 		return currentStatusSubType;
 	}
@@ -676,6 +687,7 @@ public class TradeData12 {
 		this.currentStatusSubType = currentStatusSubType;
 	}
 
+	@XmlElement(name = "CurStsDtTm", required = true)
 	public ISODateTime getCurrentStatusDateTime() {
 		return currentStatusDateTime;
 	}
@@ -684,6 +696,7 @@ public class TradeData12 {
 		this.currentStatusDateTime = currentStatusDateTime;
 	}
 
+	@XmlElement(name = "PrvsSts")
 	public Status28Choice getPreviousStatus() {
 		return previousStatus;
 	}
@@ -692,6 +705,7 @@ public class TradeData12 {
 		this.previousStatus = previousStatus;
 	}
 
+	@XmlElement(name = "PrvsStsSubTp")
 	public StatusSubType2Code getPreviousStatusSubType() {
 		return previousStatusSubType;
 	}
@@ -700,6 +714,7 @@ public class TradeData12 {
 		this.previousStatusSubType = previousStatusSubType;
 	}
 
+	@XmlElement(name = "PdctTp")
 	public Max35Text getProductType() {
 		return productType;
 	}
@@ -708,6 +723,7 @@ public class TradeData12 {
 		this.productType = productType;
 	}
 
+	@XmlElement(name = "SttlmSsnIdr")
 	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
 		return settlementSessionIdentifier;
 	}
@@ -716,6 +732,7 @@ public class TradeData12 {
 		this.settlementSessionIdentifier = settlementSessionIdentifier;
 	}
 
+	@XmlElement(name = "LkdRptId")
 	public Max35Text getLinkedReportIdentification() {
 		return linkedReportIdentification;
 	}

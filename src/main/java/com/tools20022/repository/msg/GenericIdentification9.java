@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the identification of an individual person.
@@ -98,6 +102,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericIdentification9", propOrder = {"identification", "identificationType", "extendedIdentificationType", "issuer", "issueDate", "expiryDate"})
 public class GenericIdentification9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -456,6 +462,7 @@ public class GenericIdentification9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -464,6 +471,7 @@ public class GenericIdentification9 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "IdTp", required = true)
 	public PersonIdentificationType1Code getIdentificationType() {
 		return identificationType;
 	}
@@ -472,6 +480,7 @@ public class GenericIdentification9 {
 		this.identificationType = identificationType;
 	}
 
+	@XmlElement(name = "XtndedIdTp", required = true)
 	public Extended350Code getExtendedIdentificationType() {
 		return extendedIdentificationType;
 	}
@@ -480,6 +489,7 @@ public class GenericIdentification9 {
 		this.extendedIdentificationType = extendedIdentificationType;
 	}
 
+	@XmlElement(name = "Issr")
 	public Max35Text getIssuer() {
 		return issuer;
 	}
@@ -488,6 +498,7 @@ public class GenericIdentification9 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "IsseDt")
 	public ISODate getIssueDate() {
 		return issueDate;
 	}
@@ -496,6 +507,7 @@ public class GenericIdentification9 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "XpryDt")
 	public ISODate getExpiryDate() {
 		return expiryDate;
 	}

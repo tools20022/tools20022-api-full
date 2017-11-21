@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.MarketPracticeVersion1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.References20;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -52,9 +54,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.002.001.07}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
@@ -93,6 +92,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.002.001.07}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -108,6 +110,8 @@ import java.util.List;
  * TransferOutCancellationRequestV06}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferOutCancellationRequestV07", propOrder = {"messageIdentification", "references", "cancellation", "marketPracticeVersion", "copyDetails"})
 public class TransferOutCancellationRequestV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -154,6 +158,14 @@ public class TransferOutCancellationRequestV07 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutCancellationRequestV07.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<References20> references;
 	/**
@@ -197,6 +209,14 @@ public class TransferOutCancellationRequestV07 {
 			minOccurs = 0;
 			complexType_lazy = () -> References20.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutCancellationRequestV07.class.getMethod("getReferences", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Cancellation12Choice> cancellation;
 	/**
@@ -237,6 +257,14 @@ public class TransferOutCancellationRequestV07 {
 			previousVersion_lazy = () -> TransferOutCancellationRequestV06.mmCancellation;
 			minOccurs = 1;
 			complexType_lazy = () -> Cancellation12Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutCancellationRequestV07.class.getMethod("getCancellation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MarketPracticeVersion1 marketPracticeVersion;
@@ -280,6 +308,14 @@ public class TransferOutCancellationRequestV07 {
 			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutCancellationRequestV07.class.getMethod("getMarketPracticeVersion", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CopyInformation4 copyDetails;
 	/**
@@ -322,6 +358,14 @@ public class TransferOutCancellationRequestV07 {
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TransferOutCancellationRequestV07.class.getMethod("getCopyDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -335,8 +379,9 @@ public class TransferOutCancellationRequestV07 {
 				rootElement = "Document";
 				xmlTag = "TrfOutCxlReq";
 				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(TransferOutCancellationRequestV07.mmMessageIdentification, TransferOutCancellationRequestV07.mmReferences, TransferOutCancellationRequestV07.mmCancellation,
-						TransferOutCancellationRequestV07.mmMarketPracticeVersion, TransferOutCancellationRequestV07.mmCopyDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.mmReferences, com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.mmCancellation,
+						com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.mmCopyDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -346,10 +391,16 @@ public class TransferOutCancellationRequestV07 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TransferOutCancellationRequestV07.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -358,6 +409,7 @@ public class TransferOutCancellationRequestV07 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "Refs")
 	public List<References20> getReferences() {
 		return references;
 	}
@@ -366,6 +418,7 @@ public class TransferOutCancellationRequestV07 {
 		this.references = references;
 	}
 
+	@XmlElement(name = "Cxl", required = true)
 	public List<Cancellation12Choice> getCancellation() {
 		return cancellation;
 	}
@@ -374,6 +427,7 @@ public class TransferOutCancellationRequestV07 {
 		this.cancellation = cancellation;
 	}
 
+	@XmlElement(name = "MktPrctcVrsn")
 	public MarketPracticeVersion1 getMarketPracticeVersion() {
 		return marketPracticeVersion;
 	}
@@ -382,11 +436,18 @@ public class TransferOutCancellationRequestV07 {
 		this.marketPracticeVersion = marketPracticeVersion;
 	}
 
+	@XmlElement(name = "CpyDtls")
 	public CopyInformation4 getCopyDetails() {
 		return copyDetails;
 	}
 
 	public void setCopyDetails(CopyInformation4 copyDetails) {
 		this.copyDetails = copyDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.002.07.07")
+	static public class Document {
+		@XmlElement(name = "TrfOutCxlReq", required = true)
+		public TransferOutCancellationRequestV07 messageBody;
 	}
 }

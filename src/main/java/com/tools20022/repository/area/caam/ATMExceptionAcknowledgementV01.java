@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header32;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The ATMExceptionAcknowledgement message is sent by an acquirer or its agent
@@ -36,9 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caam.012.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
@@ -74,6 +73,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caam.012.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -85,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMExceptionAcknowledgementV01", propOrder = {"header", "protectedATMExceptionAcknowledgement", "ATMExceptionAcknowledgement", "securityTrailer"})
 public class ATMExceptionAcknowledgementV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -124,6 +128,14 @@ public class ATMExceptionAcknowledgementV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header32.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMExceptionAcknowledgementV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType10 protectedATMExceptionAcknowledgement;
 	/**
@@ -158,6 +170,14 @@ public class ATMExceptionAcknowledgementV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMExceptionAcknowledgementV01.class.getMethod("getProtectedATMExceptionAcknowledgement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ATMExceptionAcknowledgement1 aTMExceptionAcknowledgement;
@@ -195,6 +215,14 @@ public class ATMExceptionAcknowledgementV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ATMExceptionAcknowledgement1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMExceptionAcknowledgementV01.class.getMethod("getATMExceptionAcknowledgement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType15 securityTrailer;
 	/**
@@ -230,6 +258,14 @@ public class ATMExceptionAcknowledgementV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMExceptionAcknowledgementV01.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -242,8 +278,9 @@ public class ATMExceptionAcknowledgementV01 {
 				rootElement = "Document";
 				xmlTag = "ATMXcptnAck";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ATMExceptionAcknowledgementV01.mmHeader, ATMExceptionAcknowledgementV01.mmProtectedATMExceptionAcknowledgement, ATMExceptionAcknowledgementV01.mmATMExceptionAcknowledgement,
-						ATMExceptionAcknowledgementV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01.mmHeader,
+						com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01.mmProtectedATMExceptionAcknowledgement, com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01.mmATMExceptionAcknowledgement,
+						com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caam";
@@ -253,10 +290,16 @@ public class ATMExceptionAcknowledgementV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ATMExceptionAcknowledgementV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header32 getHeader() {
 		return header;
 	}
@@ -265,6 +308,7 @@ public class ATMExceptionAcknowledgementV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "PrtctdATMXcptnAck")
 	public ContentInformationType10 getProtectedATMExceptionAcknowledgement() {
 		return protectedATMExceptionAcknowledgement;
 	}
@@ -273,6 +317,7 @@ public class ATMExceptionAcknowledgementV01 {
 		this.protectedATMExceptionAcknowledgement = protectedATMExceptionAcknowledgement;
 	}
 
+	@XmlElement(name = "ATMXcptnAck")
 	public ATMExceptionAcknowledgement1 getATMExceptionAcknowledgement() {
 		return aTMExceptionAcknowledgement;
 	}
@@ -281,11 +326,18 @@ public class ATMExceptionAcknowledgementV01 {
 		this.aTMExceptionAcknowledgement = aTMExceptionAcknowledgement;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType15 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caam.012.01.01")
+	static public class Document {
+		@XmlElement(name = "ATMXcptnAck", required = true)
+		public ATMExceptionAcknowledgementV01 messageBody;
 	}
 }

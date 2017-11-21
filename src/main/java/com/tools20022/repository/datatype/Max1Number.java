@@ -53,6 +53,8 @@ public class Max1Number {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max1Number";
 				definition = "Number (max 9) of objects represented as an integer.";
+				totalDigits = 1;
+				fractionDigits = 0;
 			}
 		});
 		return mmObject_lazy.get();

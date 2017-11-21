@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the status of a transfer instruction and its reason.
@@ -99,6 +103,8 @@ import java.util.function.Supplier;
  * "Information about the status of a transfer instruction and its reason."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferStatusAndReason", propOrder = {"transferReference", "status", "pendingSettlement", "unmatched", "inRepair", "rejected", "statusInitiator"})
 public class TransferStatusAndReason {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -516,6 +522,7 @@ public class TransferStatusAndReason {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -524,6 +531,7 @@ public class TransferStatusAndReason {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public TransferInstructionStatus getStatus() {
 		return status;
 	}
@@ -532,6 +540,7 @@ public class TransferStatusAndReason {
 		this.status = status;
 	}
 
+	@XmlElement(name = "PdgSttlm", required = true)
 	public PendingSettlementStatusChoice getPendingSettlement() {
 		return pendingSettlement;
 	}
@@ -540,6 +549,7 @@ public class TransferStatusAndReason {
 		this.pendingSettlement = pendingSettlement;
 	}
 
+	@XmlElement(name = "Umtchd", required = true)
 	public TransferUnmatchedStatus getUnmatched() {
 		return unmatched;
 	}
@@ -548,6 +558,7 @@ public class TransferStatusAndReason {
 		this.unmatched = unmatched;
 	}
 
+	@XmlElement(name = "InRpr", required = true)
 	public InRepairStatus2Choice getInRepair() {
 		return inRepair;
 	}
@@ -556,6 +567,7 @@ public class TransferStatusAndReason {
 		this.inRepair = inRepair;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectedStatus3Choice getRejected() {
 		return rejected;
 	}
@@ -564,6 +576,7 @@ public class TransferStatusAndReason {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "StsInitr")
 	public PartyIdentification1Choice getStatusInitiator() {
 		return statusInitiator;
 	}

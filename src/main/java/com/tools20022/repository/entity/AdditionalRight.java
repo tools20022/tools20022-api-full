@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AdditionalRights1;
 import com.tools20022.repository.msg.AdditionalRights2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -41,6 +42,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.AdditionalRight#mmMeeting
+ * AdditionalRight.mmMeeting}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AdditionalRight#mmType
+ * AdditionalRight.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AdditionalRight#mmAdditionalRightThreshold
+ * AdditionalRight.mmAdditionalRightThreshold}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AdditionalRight#mmAdditionalRightThresholdPercentage
+ * AdditionalRight.mmAdditionalRightThresholdPercentage}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -62,21 +78,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmAdditionalRight
  * Meeting.mmAdditionalRight}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AdditionalRight#mmMeeting
- * AdditionalRight.mmMeeting}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AdditionalRight#mmType
- * AdditionalRight.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AdditionalRight#mmAdditionalRightThreshold
- * AdditionalRight.mmAdditionalRightThreshold}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AdditionalRight#mmAdditionalRightThresholdPercentage
- * AdditionalRight.mmAdditionalRightThresholdPercentage}</li>
  * </ul>
  * </li>
  * <li>
@@ -134,7 +135,7 @@ public class AdditionalRight {
 	 */
 	public static final MMBusinessAssociationEnd mmMeeting = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AdditionalRight.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AdditionalRight.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Meeting";
@@ -157,11 +158,6 @@ public class AdditionalRight {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AdditionalRightCode
 	 * AdditionalRightCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AdditionalRight
-	 * AdditionalRight}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -180,6 +176,11 @@ public class AdditionalRight {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AdditionalRight
+	 * AdditionalRight}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -193,7 +194,7 @@ public class AdditionalRight {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AdditionalRightCode1Choice.mmCode, AdditionalRightCode1Choice.mmProprietary, AdditionalRights1.mmAdditionalRight, AdditionalRights2.mmAdditionalRight);
-			elementContext_lazy = () -> AdditionalRight.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AdditionalRight.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -201,6 +202,14 @@ public class AdditionalRight {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AdditionalRightCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AdditionalRight.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max350Text additionalRightThreshold;
@@ -214,11 +223,6 @@ public class AdditionalRight {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AdditionalRight
-	 * AdditionalRight}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -233,6 +237,11 @@ public class AdditionalRight {
 	 * AdditionalRights2.mmAdditionalRightThreshold}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AdditionalRight
+	 * AdditionalRight}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -249,7 +258,7 @@ public class AdditionalRight {
 	public static final MMBusinessAttribute mmAdditionalRightThreshold = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AdditionalRightThreshold1Choice.mmAdditionalRightThreshold, AdditionalRights1.mmAdditionalRightThreshold, AdditionalRights2.mmAdditionalRightThreshold);
-			elementContext_lazy = () -> AdditionalRight.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AdditionalRight.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdditionalRightThreshold";
@@ -257,6 +266,14 @@ public class AdditionalRight {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AdditionalRight.class.getMethod("getAdditionalRightThreshold", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate additionalRightThresholdPercentage;
@@ -272,11 +289,6 @@ public class AdditionalRight {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.AdditionalRight
-	 * AdditionalRight}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -285,6 +297,11 @@ public class AdditionalRight {
 	 * AdditionalRightThreshold1Choice.mmAdditionalRightThresholdPercentage}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.AdditionalRight
+	 * AdditionalRight}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -301,7 +318,7 @@ public class AdditionalRight {
 	public static final MMBusinessAttribute mmAdditionalRightThresholdPercentage = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AdditionalRightThreshold1Choice.mmAdditionalRightThresholdPercentage);
-			elementContext_lazy = () -> AdditionalRight.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AdditionalRight.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdditionalRightThresholdPercentage";
@@ -309,6 +326,14 @@ public class AdditionalRight {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AdditionalRight.class.getMethod("getAdditionalRightThresholdPercentage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -320,8 +345,14 @@ public class AdditionalRight {
 				name = "AdditionalRight";
 				definition = "Specifies how the additional rights can be granted to the shareholder. These rights can be exercised at shareholders meetings (for example, the right to ask questions, the right to add items to the agenda or table draft resolutions).";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Meeting.mmAdditionalRight);
-				element_lazy = () -> Arrays.asList(AdditionalRight.mmMeeting, AdditionalRight.mmType, AdditionalRight.mmAdditionalRightThreshold, AdditionalRight.mmAdditionalRightThresholdPercentage);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AdditionalRight.mmMeeting, com.tools20022.repository.entity.AdditionalRight.mmType,
+						com.tools20022.repository.entity.AdditionalRight.mmAdditionalRightThreshold, com.tools20022.repository.entity.AdditionalRight.mmAdditionalRightThresholdPercentage);
 				derivationComponent_lazy = () -> Arrays.asList(AdditionalRightCode1Choice.mmObject(), AdditionalRightThreshold1Choice.mmObject(), AdditionalRights1.mmObject(), AdditionalRights2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AdditionalRight.class;
 			}
 		});
 		return mmObject_lazy.get();

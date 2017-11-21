@@ -26,9 +26,11 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CollateralManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -46,9 +48,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code colr.015.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CollateralManagementPreviousVersion
@@ -94,6 +93,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code colr.015.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -113,6 +115,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestPaymentStatementV03", propOrder = {"transactionIdentification", "agreement", "obligation", "statementParameters", "pagination", "interestStatement", "supplementaryData"})
 public class InterestPaymentStatementV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +165,14 @@ public class InterestPaymentStatementV03 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InterestPaymentStatementV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Agreement2 agreement;
 	/**
@@ -203,6 +215,14 @@ public class InterestPaymentStatementV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Agreement2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InterestPaymentStatementV03.class.getMethod("getAgreement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Obligation3 obligation;
@@ -251,6 +271,14 @@ public class InterestPaymentStatementV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Obligation3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InterestPaymentStatementV03.class.getMethod("getObligation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Statement32 statementParameters;
 	/**
@@ -296,6 +324,14 @@ public class InterestPaymentStatementV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Statement32.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InterestPaymentStatementV03.class.getMethod("getStatementParameters", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Pagination pagination;
@@ -344,6 +380,14 @@ public class InterestPaymentStatementV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InterestPaymentStatementV03.class.getMethod("getPagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected InterestStatement3 interestStatement;
 	/**
@@ -387,6 +431,14 @@ public class InterestPaymentStatementV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> InterestStatement3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InterestPaymentStatementV03.class.getMethod("getInterestStatement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -434,6 +486,14 @@ public class InterestPaymentStatementV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InterestPaymentStatementV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -447,8 +507,10 @@ public class InterestPaymentStatementV03 {
 				rootElement = "Document";
 				xmlTag = "IntrstPmtStmt";
 				businessArea_lazy = () -> CollateralManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(InterestPaymentStatementV03.mmTransactionIdentification, InterestPaymentStatementV03.mmAgreement, InterestPaymentStatementV03.mmObligation,
-						InterestPaymentStatementV03.mmStatementParameters, InterestPaymentStatementV03.mmPagination, InterestPaymentStatementV03.mmInterestStatement, InterestPaymentStatementV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentStatementV03.mmTransactionIdentification, com.tools20022.repository.area.colr.InterestPaymentStatementV03.mmAgreement,
+						com.tools20022.repository.area.colr.InterestPaymentStatementV03.mmObligation, com.tools20022.repository.area.colr.InterestPaymentStatementV03.mmStatementParameters,
+						com.tools20022.repository.area.colr.InterestPaymentStatementV03.mmPagination, com.tools20022.repository.area.colr.InterestPaymentStatementV03.mmInterestStatement,
+						com.tools20022.repository.area.colr.InterestPaymentStatementV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "colr";
@@ -458,10 +520,16 @@ public class InterestPaymentStatementV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InterestPaymentStatementV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -470,6 +538,7 @@ public class InterestPaymentStatementV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "Agrmt")
 	public Agreement2 getAgreement() {
 		return agreement;
 	}
@@ -478,6 +547,7 @@ public class InterestPaymentStatementV03 {
 		this.agreement = agreement;
 	}
 
+	@XmlElement(name = "Oblgtn", required = true)
 	public Obligation3 getObligation() {
 		return obligation;
 	}
@@ -486,6 +556,7 @@ public class InterestPaymentStatementV03 {
 		this.obligation = obligation;
 	}
 
+	@XmlElement(name = "StmtParams", required = true)
 	public Statement32 getStatementParameters() {
 		return statementParameters;
 	}
@@ -494,6 +565,7 @@ public class InterestPaymentStatementV03 {
 		this.statementParameters = statementParameters;
 	}
 
+	@XmlElement(name = "Pgntn")
 	public Pagination getPagination() {
 		return pagination;
 	}
@@ -502,6 +574,7 @@ public class InterestPaymentStatementV03 {
 		this.pagination = pagination;
 	}
 
+	@XmlElement(name = "IntrstStmt", required = true)
 	public InterestStatement3 getInterestStatement() {
 		return interestStatement;
 	}
@@ -510,11 +583,18 @@ public class InterestPaymentStatementV03 {
 		this.interestStatement = interestStatement;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:colr.015.03.03")
+	static public class Document {
+		@XmlElement(name = "IntrstPmtStmt", required = true)
+		public InterestPaymentStatementV03 messageBody;
 	}
 }

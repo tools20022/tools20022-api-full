@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.SecuritiesStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Financial instrument which represents a title of ownership in a company, ie,
@@ -83,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Equity1", propOrder = {"preferenceToIncome", "paymentStatus", "convertibleIndicator", "maturityDate", "nonPaidAmount", "parValue", "votingRightsPerShare"})
 public class Equity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -438,6 +444,7 @@ public class Equity1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrefToIncm", required = true)
 	public PreferenceToIncome1Code getPreferenceToIncome() {
 		return preferenceToIncome;
 	}
@@ -446,6 +453,7 @@ public class Equity1 {
 		this.preferenceToIncome = preferenceToIncome;
 	}
 
+	@XmlElement(name = "PmtSts")
 	public SecuritiesPaymentStatus1Code getPaymentStatus() {
 		return paymentStatus;
 	}
@@ -454,6 +462,7 @@ public class Equity1 {
 		this.paymentStatus = paymentStatus;
 	}
 
+	@XmlElement(name = "ConvtblInd")
 	public YesNoIndicator getConvertibleIndicator() {
 		return convertibleIndicator;
 	}
@@ -462,6 +471,7 @@ public class Equity1 {
 		this.convertibleIndicator = convertibleIndicator;
 	}
 
+	@XmlElement(name = "MtrtyDt")
 	public ISODateTime getMaturityDate() {
 		return maturityDate;
 	}
@@ -470,6 +480,7 @@ public class Equity1 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "NonPdAmt")
 	public ActiveCurrencyAndAmount getNonPaidAmount() {
 		return nonPaidAmount;
 	}
@@ -478,6 +489,7 @@ public class Equity1 {
 		this.nonPaidAmount = nonPaidAmount;
 	}
 
+	@XmlElement(name = "ParVal")
 	public ActiveCurrencyAndAmount getParValue() {
 		return parValue;
 	}
@@ -486,6 +498,7 @@ public class Equity1 {
 		this.parValue = parValue;
 	}
 
+	@XmlElement(name = "VtngRghtsPerShr")
 	public Number getVotingRightsPerShare() {
 		return votingRightsPerShare;
 	}

@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Intention to transfer an ownership of a financial instrument.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Order1", propOrder = {"type", "tradingCapacity", "customerCapacity", "side", "placeOfExecution", "expiryDateTime", "quantityDetails", "commissionDetails"})
 public class Order1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -480,6 +486,7 @@ public class Order1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public OrderType1Code getType() {
 		return type;
 	}
@@ -488,6 +495,7 @@ public class Order1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "TradgCpcty")
 	public TradingCapacity3Code getTradingCapacity() {
 		return tradingCapacity;
 	}
@@ -496,6 +504,7 @@ public class Order1 {
 		this.tradingCapacity = tradingCapacity;
 	}
 
+	@XmlElement(name = "CstmrCpcty")
 	public CustomerOrderCapacity1Code getCustomerCapacity() {
 		return customerCapacity;
 	}
@@ -504,6 +513,7 @@ public class Order1 {
 		this.customerCapacity = customerCapacity;
 	}
 
+	@XmlElement(name = "Sd")
 	public Side1Code getSide() {
 		return side;
 	}
@@ -512,6 +522,7 @@ public class Order1 {
 		this.side = side;
 	}
 
+	@XmlElement(name = "PlcOfExctn")
 	public MarketIdentification1 getPlaceOfExecution() {
 		return placeOfExecution;
 	}
@@ -520,6 +531,7 @@ public class Order1 {
 		this.placeOfExecution = placeOfExecution;
 	}
 
+	@XmlElement(name = "XpryDtTm")
 	public ISODateTime getExpiryDateTime() {
 		return expiryDateTime;
 	}
@@ -528,6 +540,7 @@ public class Order1 {
 		this.expiryDateTime = expiryDateTime;
 	}
 
+	@XmlElement(name = "QtyDtls")
 	public OrderQuantity1 getQuantityDetails() {
 		return quantityDetails;
 	}
@@ -536,6 +549,7 @@ public class Order1 {
 		this.quantityDetails = quantityDetails;
 	}
 
+	@XmlElement(name = "ComssnDtls")
 	public Commission2 getCommissionDetails() {
 		return commissionDetails;
 	}

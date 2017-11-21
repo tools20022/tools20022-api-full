@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the type of product and the assets to be transferred.
@@ -67,6 +71,8 @@ import java.util.List;
  * ISATransfer20}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ISATransfer25", propOrder = {"cancellationReference", "productTransfer"})
 public class ISATransfer25 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -187,6 +193,7 @@ public class ISATransfer25 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -195,6 +202,7 @@ public class ISATransfer25 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "PdctTrf", required = true)
 	public List<ISATransfer22> getProductTransfer() {
 		return productTransfer;
 	}

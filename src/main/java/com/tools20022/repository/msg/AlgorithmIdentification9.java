@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.Algorithm9Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cryptographic algorithm and parameters for the protection of the transported
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AlgorithmIdentification2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AlgorithmIdentification9", propOrder = {"algorithm", "parameter"})
 public class AlgorithmIdentification9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -203,6 +209,7 @@ public class AlgorithmIdentification9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Algo", required = true)
 	public Algorithm9Code getAlgorithm() {
 		return algorithm;
 	}
@@ -211,6 +218,7 @@ public class AlgorithmIdentification9 {
 		this.algorithm = algorithm;
 	}
 
+	@XmlElement(name = "Param")
 	public Parameter1 getParameter() {
 		return parameter;
 	}

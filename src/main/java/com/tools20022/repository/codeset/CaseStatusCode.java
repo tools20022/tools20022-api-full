@@ -29,13 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CaseStatus2Code
- * CaseStatus2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.CaseStatusCode#mmClosed
@@ -49,6 +42,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * CaseStatusCode.mmUnknown}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.CaseStatusCode#mmOverdue
  * CaseStatusCode.mmOverdue}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CaseStatus2Code
+ * CaseStatus2Code}</li>
  * </ul>
  * </li>
  * <li>

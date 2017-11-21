@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Further details on the contract collateral.
@@ -66,6 +70,8 @@ import java.util.List;
  * definition} = "Further details on the contract collateral. "</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContractCollateral1", propOrder = {"totalAmount", "collateralDescription", "additionalInformation"})
 public class ContractCollateral1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -219,6 +225,7 @@ public class ContractCollateral1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -227,6 +234,7 @@ public class ContractCollateral1 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "CollDesc")
 	public List<CashCollateral5> getCollateralDescription() {
 		return collateralDescription;
 	}
@@ -235,6 +243,7 @@ public class ContractCollateral1 {
 		this.collateralDescription = collateralDescription;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max1025Text getAdditionalInformation() {
 		return additionalInformation;
 	}

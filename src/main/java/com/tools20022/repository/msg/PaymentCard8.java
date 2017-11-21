@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment card performing the transaction.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentCard6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentCard8", propOrder = {"protectedCardData", "plainCardData", "cardCountryCode", "cardCurrencyCode", "cardProductProfile", "cardBrand", "additionalCardData"})
 public class PaymentCard8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -453,6 +459,7 @@ public class PaymentCard8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrtctdCardData")
 	public ContentInformationType7 getProtectedCardData() {
 		return protectedCardData;
 	}
@@ -461,6 +468,7 @@ public class PaymentCard8 {
 		this.protectedCardData = protectedCardData;
 	}
 
+	@XmlElement(name = "PlainCardData")
 	public PlainCardData6 getPlainCardData() {
 		return plainCardData;
 	}
@@ -469,6 +477,7 @@ public class PaymentCard8 {
 		this.plainCardData = plainCardData;
 	}
 
+	@XmlElement(name = "CardCtryCd")
 	public Max3Text getCardCountryCode() {
 		return cardCountryCode;
 	}
@@ -477,6 +486,7 @@ public class PaymentCard8 {
 		this.cardCountryCode = cardCountryCode;
 	}
 
+	@XmlElement(name = "CardCcyCd")
 	public Exact3NumericText getCardCurrencyCode() {
 		return cardCurrencyCode;
 	}
@@ -485,6 +495,7 @@ public class PaymentCard8 {
 		this.cardCurrencyCode = cardCurrencyCode;
 	}
 
+	@XmlElement(name = "CardPdctPrfl")
 	public Exact4NumericText getCardProductProfile() {
 		return cardProductProfile;
 	}
@@ -493,6 +504,7 @@ public class PaymentCard8 {
 		this.cardProductProfile = cardProductProfile;
 	}
 
+	@XmlElement(name = "CardBrnd")
 	public Max35Text getCardBrand() {
 		return cardBrand;
 	}
@@ -501,6 +513,7 @@ public class PaymentCard8 {
 		this.cardBrand = cardBrand;
 	}
 
+	@XmlElement(name = "AddtlCardData")
 	public Max70Text getAdditionalCardData() {
 		return additionalCardData;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the transportation of goods that are part of a commercial
@@ -91,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransportDataSet4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportDataSet5", propOrder = {"dataSetIdentification", "buyer", "seller", "consignor", "consignee", "shipTo", "transportInformation"})
 public class TransportDataSet5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -482,6 +488,7 @@ public class TransportDataSet5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DataSetId", required = true)
 	public DocumentIdentification1 getDataSetIdentification() {
 		return dataSetIdentification;
 	}
@@ -490,6 +497,7 @@ public class TransportDataSet5 {
 		this.dataSetIdentification = dataSetIdentification;
 	}
 
+	@XmlElement(name = "Buyr")
 	public PartyIdentification26 getBuyer() {
 		return buyer;
 	}
@@ -498,6 +506,7 @@ public class TransportDataSet5 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Sellr")
 	public PartyIdentification26 getSeller() {
 		return seller;
 	}
@@ -506,6 +515,7 @@ public class TransportDataSet5 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "Consgnr", required = true)
 	public PartyIdentification26 getConsignor() {
 		return consignor;
 	}
@@ -514,6 +524,7 @@ public class TransportDataSet5 {
 		this.consignor = consignor;
 	}
 
+	@XmlElement(name = "Consgn")
 	public PartyIdentification26 getConsignee() {
 		return consignee;
 	}
@@ -522,6 +533,7 @@ public class TransportDataSet5 {
 		this.consignee = consignee;
 	}
 
+	@XmlElement(name = "ShipTo")
 	public PartyIdentification26 getShipTo() {
 		return shipTo;
 	}
@@ -530,6 +542,7 @@ public class TransportDataSet5 {
 		this.shipTo = shipTo;
 	}
 
+	@XmlElement(name = "TrnsprtInf", required = true)
 	public TransportDetails4 getTransportInformation() {
 		return transportInformation;
 	}

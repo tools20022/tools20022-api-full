@@ -25,9 +25,11 @@ import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -46,9 +48,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.016.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -102,6 +101,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.016.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -113,6 +115,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ErrorReportV03", propOrder = {"reportIdentification", "transactionIdentification", "establishedBaselineIdentification", "transactionStatus", "userTransactionReference", "rejectedMessageReference", "numberOfErrors",
+		"errorDescription", "requestForAction"})
 public class ErrorReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -149,6 +154,14 @@ public class ErrorReportV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ErrorReportV03.class.getMethod("getReportIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -189,6 +202,14 @@ public class ErrorReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ErrorReportV03.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
@@ -227,6 +248,14 @@ public class ErrorReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ErrorReportV03.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TransactionStatus4 transactionStatus;
 	/**
@@ -262,6 +291,14 @@ public class ErrorReportV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ErrorReportV03.class.getMethod("getTransactionStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DocumentIdentification5 userTransactionReference;
@@ -301,6 +338,14 @@ public class ErrorReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ErrorReportV03.class.getMethod("getUserTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MessageIdentification1 rejectedMessageReference;
 	/**
@@ -337,6 +382,14 @@ public class ErrorReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ErrorReportV03.class.getMethod("getRejectedMessageReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Count1 numberOfErrors;
 	/**
@@ -372,6 +425,14 @@ public class ErrorReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Count1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ErrorReportV03.class.getMethod("getNumberOfErrors", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ValidationResult3> errorDescription;
 	/**
@@ -405,6 +466,14 @@ public class ErrorReportV03 {
 			definition = "Describes the error that is the cause of the rejection.";
 			minOccurs = 1;
 			complexType_lazy = () -> ValidationResult3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ErrorReportV03.class.getMethod("getErrorDescription", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PendingActivity2 requestForAction;
@@ -441,6 +510,14 @@ public class ErrorReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ErrorReportV03.class.getMethod("getRequestForAction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -453,8 +530,10 @@ public class ErrorReportV03 {
 				rootElement = "Document";
 				xmlTag = "ErrRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ErrorReportV03.mmReportIdentification, ErrorReportV03.mmTransactionIdentification, ErrorReportV03.mmEstablishedBaselineIdentification, ErrorReportV03.mmTransactionStatus,
-						ErrorReportV03.mmUserTransactionReference, ErrorReportV03.mmRejectedMessageReference, ErrorReportV03.mmNumberOfErrors, ErrorReportV03.mmErrorDescription, ErrorReportV03.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ErrorReportV03.mmReportIdentification, com.tools20022.repository.area.tsmt.ErrorReportV03.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.ErrorReportV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.ErrorReportV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.ErrorReportV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.ErrorReportV03.mmRejectedMessageReference,
+						com.tools20022.repository.area.tsmt.ErrorReportV03.mmNumberOfErrors, com.tools20022.repository.area.tsmt.ErrorReportV03.mmErrorDescription, com.tools20022.repository.area.tsmt.ErrorReportV03.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -464,10 +543,16 @@ public class ErrorReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ErrorReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptId", required = true)
 	public MessageIdentification1 getReportIdentification() {
 		return reportIdentification;
 	}
@@ -476,6 +561,7 @@ public class ErrorReportV03 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "TxId")
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -484,6 +570,7 @@ public class ErrorReportV03 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "EstblishdBaselnId")
 	public DocumentIdentification3 getEstablishedBaselineIdentification() {
 		return establishedBaselineIdentification;
 	}
@@ -492,6 +579,7 @@ public class ErrorReportV03 {
 		this.establishedBaselineIdentification = establishedBaselineIdentification;
 	}
 
+	@XmlElement(name = "TxSts")
 	public TransactionStatus4 getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -500,6 +588,7 @@ public class ErrorReportV03 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "UsrTxRef")
 	public DocumentIdentification5 getUserTransactionReference() {
 		return userTransactionReference;
 	}
@@ -508,6 +597,7 @@ public class ErrorReportV03 {
 		this.userTransactionReference = userTransactionReference;
 	}
 
+	@XmlElement(name = "RjctdMsgRef")
 	public MessageIdentification1 getRejectedMessageReference() {
 		return rejectedMessageReference;
 	}
@@ -516,6 +606,7 @@ public class ErrorReportV03 {
 		this.rejectedMessageReference = rejectedMessageReference;
 	}
 
+	@XmlElement(name = "NbOfErrs", required = true)
 	public Count1 getNumberOfErrors() {
 		return numberOfErrors;
 	}
@@ -524,6 +615,7 @@ public class ErrorReportV03 {
 		this.numberOfErrors = numberOfErrors;
 	}
 
+	@XmlElement(name = "ErrDesc", required = true)
 	public List<ValidationResult3> getErrorDescription() {
 		return errorDescription;
 	}
@@ -532,11 +624,18 @@ public class ErrorReportV03 {
 		this.errorDescription = errorDescription;
 	}
 
+	@XmlElement(name = "ReqForActn")
 	public PendingActivity2 getRequestForAction() {
 		return requestForAction;
 	}
 
 	public void setRequestForAction(PendingActivity2 requestForAction) {
 		this.requestForAction = requestForAction;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.016.03.03")
+	static public class Document {
+		@XmlElement(name = "ErrRpt", required = true)
+		public ErrorReportV03 messageBody;
 	}
 }

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,6 +35,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmType
+ * TerminalManagementAction.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmTrigger
+ * TerminalManagementAction.mmTrigger}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmAdditionalProcess
+ * TerminalManagementAction.mmAdditionalProcess}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmActionResult
+ * TerminalManagementAction.mmActionResult}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmActionToProcess
+ * TerminalManagementAction.mmActionToProcess}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmTerminalManagementSystem
+ * TerminalManagementAction.mmTerminalManagementSystem}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -129,29 +153,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ManagementPlan6.mmDataSet}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmType
- * TerminalManagementAction.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmTrigger
- * TerminalManagementAction.mmTrigger}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmAdditionalProcess
- * TerminalManagementAction.mmAdditionalProcess}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmActionResult
- * TerminalManagementAction.mmActionResult}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmActionToProcess
- * TerminalManagementAction.mmActionToProcess}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmTerminalManagementSystem
- * TerminalManagementAction.mmTerminalManagementSystem}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -183,11 +184,6 @@ public class TerminalManagementAction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode
 	 * TerminalManagementActionCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction
-	 * TerminalManagementAction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -218,6 +214,11 @@ public class TerminalManagementAction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction
+	 * TerminalManagementAction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -234,7 +235,7 @@ public class TerminalManagementAction {
 		{
 			derivation_lazy = () -> Arrays.asList(TMSAction1.mmType, TMSAction2.mmType, TMSActionIdentification1.mmActionType, TMSActionIdentification2.mmActionType, TMSAction3.mmType, TMSActionIdentification3.mmActionType,
 					TMSAction4.mmType, TMSActionIdentification4.mmActionType, TMSAction5.mmType, TMSAction6.mmType);
-			elementContext_lazy = () -> TerminalManagementAction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -242,6 +243,14 @@ public class TerminalManagementAction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TerminalManagementAction.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TerminalManagementActionTriggerCode trigger;
@@ -256,11 +265,6 @@ public class TerminalManagementAction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode
 	 * TerminalManagementActionTriggerCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction
-	 * TerminalManagementAction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -279,6 +283,11 @@ public class TerminalManagementAction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction
+	 * TerminalManagementAction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -294,7 +303,7 @@ public class TerminalManagementAction {
 	public static final MMBusinessAttribute mmTrigger = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TMSAction1.mmTrigger, TMSAction2.mmTrigger, TMSAction3.mmTrigger, TMSAction4.mmTrigger, TMSAction5.mmTrigger, TMSAction6.mmTrigger);
-			elementContext_lazy = () -> TerminalManagementAction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trigger";
@@ -302,6 +311,14 @@ public class TerminalManagementAction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionTriggerCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TerminalManagementAction.class.getMethod("getTrigger", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TerminalManagementAdditionalProcessCode additionalProcess;
@@ -316,11 +333,6 @@ public class TerminalManagementAction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementAdditionalProcessCode
 	 * TerminalManagementAdditionalProcessCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction
-	 * TerminalManagementAction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -345,6 +357,11 @@ public class TerminalManagementAction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction
+	 * TerminalManagementAction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -361,7 +378,7 @@ public class TerminalManagementAction {
 		{
 			derivation_lazy = () -> Arrays.asList(TMSAction1.mmAdditionalProcess, TMSAction2.mmAdditionalProcess, TMSAction3.mmAdditionalProcess, TMSAction4.mmAdditionalProcess, TMSAction5.mmAdditionalProcess,
 					TMSAction6.mmAdditionalProcess);
-			elementContext_lazy = () -> TerminalManagementAction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdditionalProcess";
@@ -369,6 +386,14 @@ public class TerminalManagementAction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAdditionalProcessCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TerminalManagementAction.class.getMethod("getAdditionalProcess", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TerminalManagementActionResultCode actionResult;
@@ -382,11 +407,6 @@ public class TerminalManagementAction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode
 	 * TerminalManagementActionResultCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction
-	 * TerminalManagementAction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -416,6 +436,11 @@ public class TerminalManagementAction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction
+	 * TerminalManagementAction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -430,7 +455,7 @@ public class TerminalManagementAction {
 		{
 			derivation_lazy = () -> Arrays.asList(ErrorAction1.mmActionResult, ErrorAction2.mmActionResult, TMSEvent1.mmResult, TMSEvent2.mmResult, TMSEvent3.mmResult, ATMCommand5.mmResult, TMSEvent4.mmResult, ATMCommand8.mmResult,
 					ErrorAction3.mmActionResult, TMSEvent5.mmResult);
-			elementContext_lazy = () -> TerminalManagementAction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ActionResult";
@@ -438,6 +463,14 @@ public class TerminalManagementAction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResultCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TerminalManagementAction.class.getMethod("getActionResult", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TerminalManagementErrorActionCode actionToProcess;
@@ -451,11 +484,6 @@ public class TerminalManagementAction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorActionCode
 	 * TerminalManagementErrorActionCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction
-	 * TerminalManagementAction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -471,6 +499,11 @@ public class TerminalManagementAction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction
+	 * TerminalManagementAction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -484,7 +517,7 @@ public class TerminalManagementAction {
 	public static final MMBusinessAttribute mmActionToProcess = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ErrorAction1.mmActionToProcess, ErrorAction2.mmActionToProcess, ErrorAction3.mmActionToProcess);
-			elementContext_lazy = () -> TerminalManagementAction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ActionToProcess";
@@ -492,6 +525,14 @@ public class TerminalManagementAction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementErrorActionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TerminalManagementAction.class.getMethod("getActionToProcess", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TerminalManagementSystem terminalManagementSystem;
@@ -532,7 +573,7 @@ public class TerminalManagementAction {
 	 */
 	public static final MMBusinessAssociationEnd mmTerminalManagementSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TerminalManagementAction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminalManagementSystem";
@@ -555,14 +596,20 @@ public class TerminalManagementAction {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TerminalManagementSystem.mmAction);
 				derivationElement_lazy = () -> Arrays.asList(TMSAction1.mmErrorAction, ManagementPlan1.mmDataSet, TMSAction2.mmErrorAction, ManagementPlan2.mmDataSet, ManagementPlan3.mmDataSet, TMSAction3.mmErrorAction,
 						ManagementPlan4.mmDataSet, ManagementPlan5.mmDataSet, ManagementPlan6.mmDataSet);
-				element_lazy = () -> Arrays.asList(TerminalManagementAction.mmType, TerminalManagementAction.mmTrigger, TerminalManagementAction.mmAdditionalProcess, TerminalManagementAction.mmActionResult,
-						TerminalManagementAction.mmActionToProcess, TerminalManagementAction.mmTerminalManagementSystem);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TerminalManagementAction.mmType, com.tools20022.repository.entity.TerminalManagementAction.mmTrigger,
+						com.tools20022.repository.entity.TerminalManagementAction.mmAdditionalProcess, com.tools20022.repository.entity.TerminalManagementAction.mmActionResult,
+						com.tools20022.repository.entity.TerminalManagementAction.mmActionToProcess, com.tools20022.repository.entity.TerminalManagementAction.mmTerminalManagementSystem);
 				derivationComponent_lazy = () -> Arrays.asList(ErrorAction1.mmObject(), TMSAction1.mmObject(), ManagementPlanContent1.mmObject(), ManagementPlan1.mmObject(), ErrorAction2.mmObject(), TMSAction2.mmObject(),
 						ManagementPlanContent2.mmObject(), TerminalManagementDataSet5.mmObject(), ManagementPlan2.mmObject(), TMSActionIdentification1.mmObject(), TMSEvent1.mmObject(), TMSActionIdentification2.mmObject(),
 						TMSEvent2.mmObject(), ManagementPlan3.mmObject(), TMSAction3.mmObject(), ManagementPlanContent3.mmObject(), TerminalManagementDataSet10.mmObject(), ManagementPlan4.mmObject(), TerminalManagementDataSet15.mmObject(),
 						ManagementPlanContent4.mmObject(), TMSEvent3.mmObject(), TMSActionIdentification3.mmObject(), TMSAction4.mmObject(), ManagementPlan5.mmObject(), TMSEvent4.mmObject(), TMSActionIdentification4.mmObject(),
 						TMSAction5.mmObject(), TerminalManagementDataSet18.mmObject(), ManagementPlanContent5.mmObject(), ManagementPlan6.mmObject(), ErrorAction3.mmObject(), ManagementPlanContent6.mmObject(), TMSAction6.mmObject(),
 						TMSEvent5.mmObject(), TerminalManagementDataSet22.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TerminalManagementAction.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -35,6 +35,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} =
  * "National Banking Association; Basic Bank Account Number"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[a-zA-Z0-9]{1,30}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -71,6 +73,7 @@ public class BBANIdentifier {
 				name = "BBANIdentifier";
 				definition = "Basic Bank Account Number (BBAN). Identifier used nationally by financial institutions, ie, in individual countries, generally as part of a National Account Numbering Scheme(s), which uniquely identifies the account of a customer.";
 				identificationScheme = "National Banking Association; Basic Bank Account Number";
+				pattern = "[a-zA-Z0-9]{1,30}";
 			}
 		});
 		return mmObject_lazy.get();

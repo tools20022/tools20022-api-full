@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics of the report.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Characteristics of the report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Statement36", propOrder = {"queryReference", "reportIdentification", "historicData", "activityIndicator", "subAccountIndicator"})
 public class Statement36 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -298,6 +304,7 @@ public class Statement36 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QryRef")
 	public Max35Text getQueryReference() {
 		return queryReference;
 	}
@@ -306,6 +313,7 @@ public class Statement36 {
 		this.queryReference = queryReference;
 	}
 
+	@XmlElement(name = "StmtId")
 	public Max35Text getReportIdentification() {
 		return reportIdentification;
 	}
@@ -314,6 +322,7 @@ public class Statement36 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "HistrcData", required = true)
 	public TrueFalseIndicator getHistoricData() {
 		return historicData;
 	}
@@ -322,6 +331,7 @@ public class Statement36 {
 		this.historicData = historicData;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
@@ -330,6 +340,7 @@ public class Statement36 {
 		this.activityIndicator = activityIndicator;
 	}
 
+	@XmlElement(name = "SubAcctInd", required = true)
 	public YesNoIndicator getSubAccountIndicator() {
 		return subAccountIndicator;
 	}

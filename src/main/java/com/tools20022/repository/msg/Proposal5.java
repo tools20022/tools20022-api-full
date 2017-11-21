@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.CollateralProposal;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates the type of proposal and if the proposal is for the variation
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Proposal4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Proposal5", propOrder = {"collateralProposalType", "collateralProposal"})
 public class Proposal5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -209,6 +215,7 @@ public class Proposal5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CollPrpslTp", required = true)
 	public ProposalType1Code getCollateralProposalType() {
 		return collateralProposalType;
 	}
@@ -217,6 +224,7 @@ public class Proposal5 {
 		this.collateralProposalType = collateralProposalType;
 	}
 
+	@XmlElement(name = "CollPrpsl", required = true)
 	public CollateralProposal5Choice getCollateralProposal() {
 		return collateralProposal;
 	}

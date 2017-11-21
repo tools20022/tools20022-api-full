@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Customer account information.
@@ -89,6 +93,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Customer account information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardAccount8", propOrder = {"selectionMethod", "selectedAccountType", "accountName", "accountOwner", "currency", "accountIdentifier", "creditReference", "servicer", "balance", "balanceDisplayFlag",
+		"defaultAccountIndicator"})
 public class CardAccount8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -616,6 +623,7 @@ public class CardAccount8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SelctnMtd")
 	public AccountChoiceMethod1Code getSelectionMethod() {
 		return selectionMethod;
 	}
@@ -624,6 +632,7 @@ public class CardAccount8 {
 		this.selectionMethod = selectionMethod;
 	}
 
+	@XmlElement(name = "SelctdAcctTp")
 	public CardAccountType3Code getSelectedAccountType() {
 		return selectedAccountType;
 	}
@@ -632,6 +641,7 @@ public class CardAccount8 {
 		this.selectedAccountType = selectedAccountType;
 	}
 
+	@XmlElement(name = "AcctNm")
 	public Max70Text getAccountName() {
 		return accountName;
 	}
@@ -640,6 +650,7 @@ public class CardAccount8 {
 		this.accountName = accountName;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public NameAndAddress3 getAccountOwner() {
 		return accountOwner;
 	}
@@ -648,6 +659,7 @@ public class CardAccount8 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -656,6 +668,7 @@ public class CardAccount8 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "AcctIdr")
 	public AccountIdentification31Choice getAccountIdentifier() {
 		return accountIdentifier;
 	}
@@ -664,6 +677,7 @@ public class CardAccount8 {
 		this.accountIdentifier = accountIdentifier;
 	}
 
+	@XmlElement(name = "CdtRef")
 	public Max35Text getCreditReference() {
 		return creditReference;
 	}
@@ -672,6 +686,7 @@ public class CardAccount8 {
 		this.creditReference = creditReference;
 	}
 
+	@XmlElement(name = "Svcr")
 	public PartyIdentification72Choice getServicer() {
 		return servicer;
 	}
@@ -680,6 +695,7 @@ public class CardAccount8 {
 		this.servicer = servicer;
 	}
 
+	@XmlElement(name = "Bal")
 	public AmountAndDirection43 getBalance() {
 		return balance;
 	}
@@ -688,6 +704,7 @@ public class CardAccount8 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "BalDispFlg")
 	public TrueFalseIndicator getBalanceDisplayFlag() {
 		return balanceDisplayFlag;
 	}
@@ -696,6 +713,7 @@ public class CardAccount8 {
 		this.balanceDisplayFlag = balanceDisplayFlag;
 	}
 
+	@XmlElement(name = "DfltAcctInd")
 	public TrueFalseIndicator getDefaultAccountIndicator() {
 		return defaultAccountIndicator;
 	}

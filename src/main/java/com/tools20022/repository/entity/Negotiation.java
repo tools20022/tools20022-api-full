@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.TradingMethodCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -35,24 +36,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmRelatedNegotiation
- * Trade.mmRelatedNegotiation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmNegotiation
- * System.mmNegotiation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmRelatedNegotiation
- * SecuritiesOrder.mmRelatedNegotiation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmRelatedNegotiation
- * Quote.mmRelatedNegotiation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#mmNegotiationDetails
- * BuyOrSellIndicationOfInterest.mmNegotiationDetails}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -74,6 +57,24 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Negotiation#mmSecuritiesOrder
  * Negotiation.mmSecuritiesOrder}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmRelatedNegotiation
+ * Trade.mmRelatedNegotiation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmNegotiation
+ * System.mmNegotiation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmRelatedNegotiation
+ * SecuritiesOrder.mmRelatedNegotiation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmRelatedNegotiation
+ * Quote.mmRelatedNegotiation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#mmNegotiationDetails
+ * BuyOrSellIndicationOfInterest.mmNegotiationDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -105,10 +106,6 @@ public class Negotiation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TradingMethodCode
 	 * TradingMethodCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Negotiation Negotiation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -127,6 +124,10 @@ public class Negotiation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Negotiation Negotiation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -141,7 +142,7 @@ public class Negotiation {
 	public static final MMBusinessAttribute mmTradingMethod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneralInformation1.mmDealingMethod, GeneralInformation4.mmDealingMethod, GeneralInformation2.mmDealingMethod, GeneralInformation5.mmDealingMethod);
-			elementContext_lazy = () -> Negotiation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Negotiation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingMethod";
@@ -149,6 +150,14 @@ public class Negotiation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradingMethodCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Negotiation.class.getMethod("getTradingMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Trade tradeExecution;
@@ -188,7 +197,7 @@ public class Negotiation {
 	 */
 	public static final MMBusinessAssociationEnd mmTradeExecution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Negotiation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Negotiation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeExecution";
@@ -235,7 +244,7 @@ public class Negotiation {
 	 */
 	public static final MMBusinessAssociationEnd mmTradingSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Negotiation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Negotiation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingSystem";
@@ -257,10 +266,6 @@ public class Negotiation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Negotiation Negotiation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -269,6 +274,10 @@ public class Negotiation {
 	 * ListExecution1.mmClientBidIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Negotiation Negotiation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -283,7 +292,7 @@ public class Negotiation {
 	public static final MMBusinessAttribute mmNegotiationIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ListExecution1.mmClientBidIdentification);
-			elementContext_lazy = () -> Negotiation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Negotiation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NegotiationIdentification";
@@ -291,6 +300,14 @@ public class Negotiation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Negotiation.class.getMethod("getNegotiationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Quote quote;
@@ -327,7 +344,7 @@ public class Negotiation {
 	 */
 	public static final MMBusinessAssociationEnd mmQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Negotiation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Negotiation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quote";
@@ -376,7 +393,7 @@ public class Negotiation {
 	 */
 	public static final MMBusinessAssociationEnd mmIndicationOfInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Negotiation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Negotiation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndicationOfInterest";
@@ -423,7 +440,7 @@ public class Negotiation {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Negotiation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Negotiation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesOrder";
@@ -445,8 +462,14 @@ public class Negotiation {
 				associationDomain_lazy = () -> Arrays
 						.asList(com.tools20022.repository.entity.Trade.mmRelatedNegotiation, com.tools20022.repository.entity.System.mmNegotiation, com.tools20022.repository.entity.SecuritiesOrder.mmRelatedNegotiation,
 								com.tools20022.repository.entity.Quote.mmRelatedNegotiation, com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmNegotiationDetails);
-				element_lazy = () -> Arrays.asList(Negotiation.mmTradingMethod, Negotiation.mmTradeExecution, Negotiation.mmTradingSystem, Negotiation.mmNegotiationIdentification, Negotiation.mmQuote, Negotiation.mmIndicationOfInterest,
-						Negotiation.mmSecuritiesOrder);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Negotiation.mmTradingMethod, com.tools20022.repository.entity.Negotiation.mmTradeExecution, com.tools20022.repository.entity.Negotiation.mmTradingSystem,
+						com.tools20022.repository.entity.Negotiation.mmNegotiationIdentification, com.tools20022.repository.entity.Negotiation.mmQuote, com.tools20022.repository.entity.Negotiation.mmIndicationOfInterest,
+						com.tools20022.repository.entity.Negotiation.mmSecuritiesOrder);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Negotiation.class;
 			}
 		});
 		return mmObject_lazy.get();

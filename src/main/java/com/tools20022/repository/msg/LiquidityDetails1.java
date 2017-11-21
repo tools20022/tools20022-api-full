@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information regarding liquidity valuation.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information regarding liquidity valuation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LiquidityDetails1", propOrder = {"balance", "netAvailableLiquidity", "nonCashReservedAmount", "cashReservedAmount"})
 public class LiquidityDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -250,6 +256,7 @@ public class LiquidityDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Bal", required = true)
 	public CashBalance6 getBalance() {
 		return balance;
 	}
@@ -258,6 +265,7 @@ public class LiquidityDetails1 {
 		this.balance = balance;
 	}
 
+	@XmlElement(name = "NetAvlblLqdty", required = true)
 	public ActiveCurrencyAndAmount getNetAvailableLiquidity() {
 		return netAvailableLiquidity;
 	}
@@ -266,6 +274,7 @@ public class LiquidityDetails1 {
 		this.netAvailableLiquidity = netAvailableLiquidity;
 	}
 
+	@XmlElement(name = "NonCshRsvdAmt", required = true)
 	public ActiveCurrencyAndAmount getNonCashReservedAmount() {
 		return nonCashReservedAmount;
 	}
@@ -274,6 +283,7 @@ public class LiquidityDetails1 {
 		this.nonCashReservedAmount = nonCashReservedAmount;
 	}
 
+	@XmlElement(name = "CshRsvdAmt", required = true)
 	public ActiveCurrencyAndAmount getCashReservedAmount() {
 		return cashReservedAmount;
 	}

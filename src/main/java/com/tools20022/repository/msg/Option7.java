@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Contracts which grant to the holder either the privilege to purchase or the
@@ -102,6 +106,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Option7", propOrder = {"optionSettlementStyle", "conversionDate", "strikePrice", "minimumExercisableQuantity", "conversionPeriod", "optionStyle", "optionType", "strikeValue", "strikeMultiplier",
+		"instrumentAssignmentMethod", "versionNumber", "expiryLocation", "standardisation", "tradingPartyRole", "contractSize", "additionalUnderlyingAttributes"})
 public class Option7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -869,6 +876,7 @@ public class Option7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OptnSttlmStyle")
 	public SettleStyle1Choice getOptionSettlementStyle() {
 		return optionSettlementStyle;
 	}
@@ -877,6 +885,7 @@ public class Option7 {
 		this.optionSettlementStyle = optionSettlementStyle;
 	}
 
+	@XmlElement(name = "ConvsDt")
 	public ISODateTime getConversionDate() {
 		return conversionDate;
 	}
@@ -885,6 +894,7 @@ public class Option7 {
 		this.conversionDate = conversionDate;
 	}
 
+	@XmlElement(name = "StrkPric")
 	public Price1 getStrikePrice() {
 		return strikePrice;
 	}
@@ -893,6 +903,7 @@ public class Option7 {
 		this.strikePrice = strikePrice;
 	}
 
+	@XmlElement(name = "MinExrcblQty")
 	public FinancialInstrumentQuantity1Choice getMinimumExercisableQuantity() {
 		return minimumExercisableQuantity;
 	}
@@ -901,6 +912,7 @@ public class Option7 {
 		this.minimumExercisableQuantity = minimumExercisableQuantity;
 	}
 
+	@XmlElement(name = "ConvsPrd")
 	public DateTimePeriodChoice getConversionPeriod() {
 		return conversionPeriod;
 	}
@@ -909,6 +921,7 @@ public class Option7 {
 		this.conversionPeriod = conversionPeriod;
 	}
 
+	@XmlElement(name = "OptnStyle")
 	public OptionStyle1Choice getOptionStyle() {
 		return optionStyle;
 	}
@@ -917,6 +930,7 @@ public class Option7 {
 		this.optionStyle = optionStyle;
 	}
 
+	@XmlElement(name = "OptnTp")
 	public OptionType5Choice getOptionType() {
 		return optionType;
 	}
@@ -925,6 +939,7 @@ public class Option7 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "StrkVal")
 	public Number getStrikeValue() {
 		return strikeValue;
 	}
@@ -933,6 +948,7 @@ public class Option7 {
 		this.strikeValue = strikeValue;
 	}
 
+	@XmlElement(name = "StrkMltplr")
 	public Number getStrikeMultiplier() {
 		return strikeMultiplier;
 	}
@@ -941,6 +957,7 @@ public class Option7 {
 		this.strikeMultiplier = strikeMultiplier;
 	}
 
+	@XmlElement(name = "InstrmAssgnmtMtd")
 	public AssignmentMethod1Choice getInstrumentAssignmentMethod() {
 		return instrumentAssignmentMethod;
 	}
@@ -949,6 +966,7 @@ public class Option7 {
 		this.instrumentAssignmentMethod = instrumentAssignmentMethod;
 	}
 
+	@XmlElement(name = "VrsnNb")
 	public Number getVersionNumber() {
 		return versionNumber;
 	}
@@ -957,6 +975,7 @@ public class Option7 {
 		this.versionNumber = versionNumber;
 	}
 
+	@XmlElement(name = "XpryLctn")
 	public Max4AlphaNumericText getExpiryLocation() {
 		return expiryLocation;
 	}
@@ -965,6 +984,7 @@ public class Option7 {
 		this.expiryLocation = expiryLocation;
 	}
 
+	@XmlElement(name = "Stdstn")
 	public Standardisation1Choice getStandardisation() {
 		return standardisation;
 	}
@@ -973,6 +993,7 @@ public class Option7 {
 		this.standardisation = standardisation;
 	}
 
+	@XmlElement(name = "TradgPtyRole")
 	public OptionParty1Choice getTradingPartyRole() {
 		return tradingPartyRole;
 	}
@@ -981,6 +1002,7 @@ public class Option7 {
 		this.tradingPartyRole = tradingPartyRole;
 	}
 
+	@XmlElement(name = "CtrctSz")
 	public BaseOneRate getContractSize() {
 		return contractSize;
 	}
@@ -989,6 +1011,7 @@ public class Option7 {
 		this.contractSize = contractSize;
 	}
 
+	@XmlElement(name = "AddtlUndrlygAttrbts")
 	public List<UnderlyingAttributes2> getAdditionalUnderlyingAttributes() {
 		return additionalUnderlyingAttributes;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transfer information for the transaction.
@@ -115,6 +119,9 @@ import java.util.List;
  * {@linkplain com.tools20022.repository.msg.ATMTransaction19 ATMTransaction19}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransaction23", propOrder = {"transactionIdentification", "reconciliationIdentification", "creditorLabel", "debtorLabel", "paymentReference", "accountFrom", "protectedAccountFrom", "accountTo", "protectedAccountTo",
+		"totalRequestedAmount", "detailedRequestedAmount", "requestedExecutionDate", "instantTransferProgram", "recurringTransfer", "requestedReceipt", "ICCRelatedData"})
 public class ATMTransaction23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1011,6 +1018,7 @@ public class ATMTransaction23 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -1019,6 +1027,7 @@ public class ATMTransaction23 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "RcncltnId")
 	public Max35Text getReconciliationIdentification() {
 		return reconciliationIdentification;
 	}
@@ -1027,6 +1036,7 @@ public class ATMTransaction23 {
 		this.reconciliationIdentification = reconciliationIdentification;
 	}
 
+	@XmlElement(name = "CdtrLabl")
 	public Max35Text getCreditorLabel() {
 		return creditorLabel;
 	}
@@ -1035,6 +1045,7 @@ public class ATMTransaction23 {
 		this.creditorLabel = creditorLabel;
 	}
 
+	@XmlElement(name = "DbtrLabl")
 	public Max35Text getDebtorLabel() {
 		return debtorLabel;
 	}
@@ -1043,6 +1054,7 @@ public class ATMTransaction23 {
 		this.debtorLabel = debtorLabel;
 	}
 
+	@XmlElement(name = "PmtRef")
 	public Max35Text getPaymentReference() {
 		return paymentReference;
 	}
@@ -1051,6 +1063,7 @@ public class ATMTransaction23 {
 		this.paymentReference = paymentReference;
 	}
 
+	@XmlElement(name = "AcctFr")
 	public CardAccount7 getAccountFrom() {
 		return accountFrom;
 	}
@@ -1059,6 +1072,7 @@ public class ATMTransaction23 {
 		this.accountFrom = accountFrom;
 	}
 
+	@XmlElement(name = "PrtctdAcctFr")
 	public ContentInformationType10 getProtectedAccountFrom() {
 		return protectedAccountFrom;
 	}
@@ -1067,6 +1081,7 @@ public class ATMTransaction23 {
 		this.protectedAccountFrom = protectedAccountFrom;
 	}
 
+	@XmlElement(name = "AcctTo")
 	public List<CardAccount7> getAccountTo() {
 		return accountTo;
 	}
@@ -1075,6 +1090,7 @@ public class ATMTransaction23 {
 		this.accountTo = accountTo;
 	}
 
+	@XmlElement(name = "PrtctdAcctTo")
 	public ContentInformationType10 getProtectedAccountTo() {
 		return protectedAccountTo;
 	}
@@ -1083,6 +1099,7 @@ public class ATMTransaction23 {
 		this.protectedAccountTo = protectedAccountTo;
 	}
 
+	@XmlElement(name = "TtlReqdAmt")
 	public ImpliedCurrencyAndAmount getTotalRequestedAmount() {
 		return totalRequestedAmount;
 	}
@@ -1091,6 +1108,7 @@ public class ATMTransaction23 {
 		this.totalRequestedAmount = totalRequestedAmount;
 	}
 
+	@XmlElement(name = "DtldReqdAmt")
 	public DetailedAmount17 getDetailedRequestedAmount() {
 		return detailedRequestedAmount;
 	}
@@ -1099,6 +1117,7 @@ public class ATMTransaction23 {
 		this.detailedRequestedAmount = detailedRequestedAmount;
 	}
 
+	@XmlElement(name = "ReqdExctnDt")
 	public ISODate getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -1107,6 +1126,7 @@ public class ATMTransaction23 {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "InstntTrfPrgm")
 	public Max35Text getInstantTransferProgram() {
 		return instantTransferProgram;
 	}
@@ -1115,6 +1135,7 @@ public class ATMTransaction23 {
 		this.instantTransferProgram = instantTransferProgram;
 	}
 
+	@XmlElement(name = "RcrngTrf")
 	public RecurringTransaction3 getRecurringTransfer() {
 		return recurringTransfer;
 	}
@@ -1123,6 +1144,7 @@ public class ATMTransaction23 {
 		this.recurringTransfer = recurringTransfer;
 	}
 
+	@XmlElement(name = "ReqdRct")
 	public TrueFalseIndicator getRequestedReceipt() {
 		return requestedReceipt;
 	}
@@ -1131,6 +1153,7 @@ public class ATMTransaction23 {
 		this.requestedReceipt = requestedReceipt;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}

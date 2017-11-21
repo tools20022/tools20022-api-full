@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action notification
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNotificationExtension3", propOrder = {"placeAndName", "customerInternalSecurityIdentification", "securityOfInterestMatchingSecurity"})
 public class CorporateActionNotificationExtension3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -213,6 +219,7 @@ public class CorporateActionNotificationExtension3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -221,6 +228,7 @@ public class CorporateActionNotificationExtension3 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "CstmrIntlSctyId")
 	public Max16Text getCustomerInternalSecurityIdentification() {
 		return customerInternalSecurityIdentification;
 	}
@@ -229,6 +237,7 @@ public class CorporateActionNotificationExtension3 {
 		this.customerInternalSecurityIdentification = customerInternalSecurityIdentification;
 	}
 
+	@XmlElement(name = "SctyOfIntrstMtchgScty")
 	public SecurityIdentification7 getSecurityOfInterestMatchingSecurity() {
 		return securityOfInterestMatchingSecurity;
 	}

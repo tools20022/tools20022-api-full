@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the cash-in and cash-out flows by country.
@@ -68,6 +72,8 @@ import java.util.List;
  * BreakdownByCountry1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BreakdownByCountry2", propOrder = {"country", "cashInForecast", "cashOutForecast", "netCashForecast"})
 public class BreakdownByCountry2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -280,6 +286,7 @@ public class BreakdownByCountry2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -288,6 +295,7 @@ public class BreakdownByCountry2 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "CshInFcst")
 	public List<CashInForecast5> getCashInForecast() {
 		return cashInForecast;
 	}
@@ -296,6 +304,7 @@ public class BreakdownByCountry2 {
 		this.cashInForecast = cashInForecast;
 	}
 
+	@XmlElement(name = "CshOutFcst")
 	public List<CashOutForecast5> getCashOutForecast() {
 		return cashOutForecast;
 	}
@@ -304,6 +313,7 @@ public class BreakdownByCountry2 {
 		this.cashOutForecast = cashOutForecast;
 	}
 
+	@XmlElement(name = "NetCshFcst")
 	public List<NetCashForecast4> getNetCashForecast() {
 		return netCashForecast;
 	}

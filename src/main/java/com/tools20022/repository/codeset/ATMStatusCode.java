@@ -29,17 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMStatus1Code
- * ATMStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMStatus2Code
- * ATMStatus2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMStatus3Code
- * ATMStatus3Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.ATMStatusCode#mmInService
@@ -55,6 +44,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ATMStatusCode#mmWaitingActivation
  * ATMStatusCode.mmWaitingActivation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMStatus1Code
+ * ATMStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMStatus2Code
+ * ATMStatus2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMStatus3Code
+ * ATMStatus3Code}</li>
  * </ul>
  * </li>
  * <li>

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the values used for every line item service in the statement.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * BillingService1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingService2", propOrder = {"serviceDetail", "price", "paymentMethod", "originalChargePrice", "originalChargeSettlementAmount", "balanceRequiredAccountAmount", "taxDesignation", "taxCalculation"})
 public class BillingService2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -541,6 +547,7 @@ public class BillingService2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SvcDtl", required = true)
 	public BillingServiceParameters3 getServiceDetail() {
 		return serviceDetail;
 	}
@@ -549,6 +556,7 @@ public class BillingService2 {
 		this.serviceDetail = serviceDetail;
 	}
 
+	@XmlElement(name = "Pric")
 	public BillingPrice1 getPrice() {
 		return price;
 	}
@@ -557,6 +565,7 @@ public class BillingService2 {
 		this.price = price;
 	}
 
+	@XmlElement(name = "PmtMtd", required = true)
 	public ServicePaymentMethod1Code getPaymentMethod() {
 		return paymentMethod;
 	}
@@ -565,6 +574,7 @@ public class BillingService2 {
 		this.paymentMethod = paymentMethod;
 	}
 
+	@XmlElement(name = "OrgnlChrgPric", required = true)
 	public AmountAndDirection34 getOriginalChargePrice() {
 		return originalChargePrice;
 	}
@@ -573,6 +583,7 @@ public class BillingService2 {
 		this.originalChargePrice = originalChargePrice;
 	}
 
+	@XmlElement(name = "OrgnlChrgSttlmAmt")
 	public AmountAndDirection34 getOriginalChargeSettlementAmount() {
 		return originalChargeSettlementAmount;
 	}
@@ -581,6 +592,7 @@ public class BillingService2 {
 		this.originalChargeSettlementAmount = originalChargeSettlementAmount;
 	}
 
+	@XmlElement(name = "BalReqrdAcctAmt")
 	public AmountAndDirection34 getBalanceRequiredAccountAmount() {
 		return balanceRequiredAccountAmount;
 	}
@@ -589,6 +601,7 @@ public class BillingService2 {
 		this.balanceRequiredAccountAmount = balanceRequiredAccountAmount;
 	}
 
+	@XmlElement(name = "TaxDsgnt", required = true)
 	public ServiceTaxDesignation1 getTaxDesignation() {
 		return taxDesignation;
 	}
@@ -597,6 +610,7 @@ public class BillingService2 {
 		this.taxDesignation = taxDesignation;
 	}
 
+	@XmlElement(name = "TaxClctn")
 	public BillingMethod1Choice getTaxCalculation() {
 		return taxCalculation;
 	}

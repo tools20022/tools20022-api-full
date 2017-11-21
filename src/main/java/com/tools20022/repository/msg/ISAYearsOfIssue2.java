@@ -28,6 +28,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Year in which the ISA plan is issued.
@@ -75,6 +79,8 @@ import java.util.function.Supplier;
  * definition} = "Year in which the ISA plan is issued."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ISAYearsOfIssue2", propOrder = {"currentYearType", "extendedCurrentYearType", "previousYears"})
 public class ISAYearsOfIssue2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -290,6 +296,7 @@ public class ISAYearsOfIssue2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CurYrTp")
 	public ISAType2Code getCurrentYearType() {
 		return currentYearType;
 	}
@@ -298,6 +305,7 @@ public class ISAYearsOfIssue2 {
 		this.currentYearType = currentYearType;
 	}
 
+	@XmlElement(name = "XtndedCurYrTp")
 	public Extended350Code getExtendedCurrentYearType() {
 		return extendedCurrentYearType;
 	}
@@ -306,6 +314,7 @@ public class ISAYearsOfIssue2 {
 		this.extendedCurrentYearType = extendedCurrentYearType;
 	}
 
+	@XmlElement(name = "PrvsYrs")
 	public PreviousYearChoice getPreviousYears() {
 		return previousYears;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the withdrawal reason code and optionally a withdrawal reason sub
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "WithdrawalReason1", propOrder = {"withdrawalReasonCode", "withdrawalReasonSubCode"})
 public class WithdrawalReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class WithdrawalReason1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "WdrwlRsnCd", required = true)
 	public WithdrawalReason1Code getWithdrawalReasonCode() {
 		return withdrawalReasonCode;
 	}
@@ -181,6 +188,7 @@ public class WithdrawalReason1 {
 		this.withdrawalReasonCode = withdrawalReasonCode;
 	}
 
+	@XmlElement(name = "WdrwlRsnSubCd")
 	public Max4Text getWithdrawalReasonSubCode() {
 		return withdrawalReasonSubCode;
 	}

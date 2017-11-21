@@ -26,6 +26,10 @@ import com.tools20022.repository.codeset.Operator1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates one of the constraints of a range of business values.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Indicates one of the constraints of a range of business values."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Term1", propOrder = {"operator", "value"})
 public class Term1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -157,6 +163,7 @@ public class Term1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Oprtr", required = true)
 	public Operator1Code getOperator() {
 		return operator;
 	}
@@ -165,6 +172,7 @@ public class Term1 {
 		this.operator = operator;
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public RateOrAbsoluteValue1Choice getValue() {
 		return value;
 	}

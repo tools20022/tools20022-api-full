@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information such as the taxation conditions.
@@ -97,6 +101,8 @@ import java.util.List;
  * CorporateActionNarrative4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNarrative31", propOrder = {"additionalText", "narrativeVersion", "partyContactNarrative", "taxationConditions"})
 public class CorporateActionNarrative31 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -331,6 +337,7 @@ public class CorporateActionNarrative31 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlTxt")
 	public List<Max350Text> getAdditionalText() {
 		return additionalText;
 	}
@@ -339,6 +346,7 @@ public class CorporateActionNarrative31 {
 		this.additionalText = additionalText;
 	}
 
+	@XmlElement(name = "NrrtvVrsn")
 	public List<Max350Text> getNarrativeVersion() {
 		return narrativeVersion;
 	}
@@ -347,6 +355,7 @@ public class CorporateActionNarrative31 {
 		this.narrativeVersion = narrativeVersion;
 	}
 
+	@XmlElement(name = "PtyCtctNrrtv")
 	public List<Max350Text> getPartyContactNarrative() {
 		return partyContactNarrative;
 	}
@@ -355,6 +364,7 @@ public class CorporateActionNarrative31 {
 		this.partyContactNarrative = partyContactNarrative;
 	}
 
+	@XmlElement(name = "TaxtnConds")
 	public List<Max350Text> getTaxationConditions() {
 		return taxationConditions;
 	}

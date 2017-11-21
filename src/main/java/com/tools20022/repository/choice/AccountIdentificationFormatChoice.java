@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.AccountIdentification3;
 import com.tools20022.repository.msg.AccountIdentificationAndPurpose;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for account identification.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between formats for account identification."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountIdentificationFormatChoice", propOrder = {"simpleIdentification", "identificationAndPurpose", "identificationAsDSS"})
 public class AccountIdentificationFormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -237,6 +243,7 @@ public class AccountIdentificationFormatChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SmplId", required = true)
 	public AccountIdentification1 getSimpleIdentification() {
 		return simpleIdentification;
 	}
@@ -245,6 +252,7 @@ public class AccountIdentificationFormatChoice {
 		this.simpleIdentification = simpleIdentification;
 	}
 
+	@XmlElement(name = "IdAndPurp", required = true)
 	public AccountIdentificationAndPurpose getIdentificationAndPurpose() {
 		return identificationAndPurpose;
 	}
@@ -253,6 +261,7 @@ public class AccountIdentificationFormatChoice {
 		this.identificationAndPurpose = identificationAndPurpose;
 	}
 
+	@XmlElement(name = "IdAsDSS", required = true)
 	public AccountIdentification3 getIdentificationAsDSS() {
 		return identificationAsDSS;
 	}

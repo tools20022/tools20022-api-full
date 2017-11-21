@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the intra-position movement.
@@ -94,6 +98,9 @@ import java.util.List;
  * definition} = "Details of the intra-position movement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionMovementDetails12", propOrder = {"identification", "settledQuantity", "previouslySettledQuantity", "remainingToBeSettledQuantity", "securitiesSubBalanceIdentification", "balanceTo", "settlementDate",
+		"availableDate", "corporateActionEventType", "collateralMonitorAmount", "instructionProcessingAdditionalDetails", "supplementaryData"})
 public class IntraPositionMovementDetails12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -689,6 +696,7 @@ public class IntraPositionMovementDetails12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public References51Choice getIdentification() {
 		return identification;
 	}
@@ -697,6 +705,7 @@ public class IntraPositionMovementDetails12 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SttldQty", required = true)
 	public FinancialInstrumentQuantity15Choice getSettledQuantity() {
 		return settledQuantity;
 	}
@@ -705,6 +714,7 @@ public class IntraPositionMovementDetails12 {
 		this.settledQuantity = settledQuantity;
 	}
 
+	@XmlElement(name = "PrevslySttldQty")
 	public FinancialInstrumentQuantity15Choice getPreviouslySettledQuantity() {
 		return previouslySettledQuantity;
 	}
@@ -713,6 +723,7 @@ public class IntraPositionMovementDetails12 {
 		this.previouslySettledQuantity = previouslySettledQuantity;
 	}
 
+	@XmlElement(name = "RmngToBeSttldQty")
 	public FinancialInstrumentQuantity15Choice getRemainingToBeSettledQuantity() {
 		return remainingToBeSettledQuantity;
 	}
@@ -721,6 +732,7 @@ public class IntraPositionMovementDetails12 {
 		this.remainingToBeSettledQuantity = remainingToBeSettledQuantity;
 	}
 
+	@XmlElement(name = "SctiesSubBalId")
 	public GenericIdentification39 getSecuritiesSubBalanceIdentification() {
 		return securitiesSubBalanceIdentification;
 	}
@@ -729,6 +741,7 @@ public class IntraPositionMovementDetails12 {
 		this.securitiesSubBalanceIdentification = securitiesSubBalanceIdentification;
 	}
 
+	@XmlElement(name = "BalTo", required = true)
 	public SecuritiesBalanceType8Choice getBalanceTo() {
 		return balanceTo;
 	}
@@ -737,6 +750,7 @@ public class IntraPositionMovementDetails12 {
 		this.balanceTo = balanceTo;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public DateAndDateTimeChoice getSettlementDate() {
 		return settlementDate;
 	}
@@ -745,6 +759,7 @@ public class IntraPositionMovementDetails12 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "AvlblDt")
 	public DateAndDateTimeChoice getAvailableDate() {
 		return availableDate;
 	}
@@ -753,6 +768,7 @@ public class IntraPositionMovementDetails12 {
 		this.availableDate = availableDate;
 	}
 
+	@XmlElement(name = "CorpActnEvtTp")
 	public CorporateActionEventType46Choice getCorporateActionEventType() {
 		return corporateActionEventType;
 	}
@@ -761,6 +777,7 @@ public class IntraPositionMovementDetails12 {
 		this.corporateActionEventType = corporateActionEventType;
 	}
 
+	@XmlElement(name = "CollMntrAmt")
 	public AmountAndDirection55 getCollateralMonitorAmount() {
 		return collateralMonitorAmount;
 	}
@@ -769,6 +786,7 @@ public class IntraPositionMovementDetails12 {
 		this.collateralMonitorAmount = collateralMonitorAmount;
 	}
 
+	@XmlElement(name = "InstrPrcgAddtlDtls")
 	public RestrictedFINXMax350Text getInstructionProcessingAdditionalDetails() {
 		return instructionProcessingAdditionalDetails;
 	}
@@ -777,6 +795,7 @@ public class IntraPositionMovementDetails12 {
 		this.instructionProcessingAdditionalDetails = instructionProcessingAdditionalDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a key encryption key (KEK), using previously distributed
@@ -77,6 +81,8 @@ import java.util.List;
  * KEKIdentifier2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "KEKIdentifier5", propOrder = {"keyIdentification", "keyVersion", "sequenceNumber", "derivationIdentification", "type", "function"})
 public class KEKIdentifier5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -365,6 +371,7 @@ public class KEKIdentifier5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "KeyId", required = true)
 	public Max140Text getKeyIdentification() {
 		return keyIdentification;
 	}
@@ -373,6 +380,7 @@ public class KEKIdentifier5 {
 		this.keyIdentification = keyIdentification;
 	}
 
+	@XmlElement(name = "KeyVrsn", required = true)
 	public Max140Text getKeyVersion() {
 		return keyVersion;
 	}
@@ -381,6 +389,7 @@ public class KEKIdentifier5 {
 		this.keyVersion = keyVersion;
 	}
 
+	@XmlElement(name = "SeqNb")
 	public Number getSequenceNumber() {
 		return sequenceNumber;
 	}
@@ -389,6 +398,7 @@ public class KEKIdentifier5 {
 		this.sequenceNumber = sequenceNumber;
 	}
 
+	@XmlElement(name = "DerivtnId")
 	public Min5Max16Binary getDerivationIdentification() {
 		return derivationIdentification;
 	}
@@ -397,6 +407,7 @@ public class KEKIdentifier5 {
 		this.derivationIdentification = derivationIdentification;
 	}
 
+	@XmlElement(name = "Tp")
 	public CryptographicKeyType3Code getType() {
 		return type;
 	}
@@ -405,6 +416,7 @@ public class KEKIdentifier5 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Fctn")
 	public List<KeyUsage1Code> getFunction() {
 		return function;
 	}

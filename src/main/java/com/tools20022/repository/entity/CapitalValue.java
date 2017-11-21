@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +86,7 @@ public class CapitalValue {
 	 */
 	public static final MMBusinessAttribute mmCapital = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CapitalValue.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CapitalValue.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capital";
@@ -93,6 +94,14 @@ public class CapitalValue {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.entity.Capital.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CapitalValue.class.getMethod("getCapital", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -103,7 +112,12 @@ public class CapitalValue {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CapitalValue";
 				definition = "Value of the capital.";
-				element_lazy = () -> Arrays.asList(CapitalValue.mmCapital);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CapitalValue.mmCapital);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CapitalValue.class;
 			}
 		});
 		return mmObject_lazy.get();

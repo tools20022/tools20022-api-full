@@ -34,6 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMAmount#getCurrencyIdentifierSet
  * currencyIdentifierSet} =
  * {@linkplain com.tools20022.repository.codeset.CurrencyCode CurrencyCode}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMDecimal#getMinInclusive
+ * minInclusive} = "0"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -70,6 +72,9 @@ public class CurrencyAnd30Amount {
 				name = "CurrencyAnd30Amount";
 				definition = "Number of monetary units specified in a currency, where the unit of currency is explicit and compliant with ISO 4217.  The decimal separator is a dot.\nNote: A zero amount is considered a positive amount.\n";
 				currencyIdentifierSet_lazy = () -> CurrencyCode.mmObject();
+				minInclusive = "0";
+				totalDigits = 30;
+				fractionDigits = 10;
 			}
 		});
 		return mmObject_lazy.get();

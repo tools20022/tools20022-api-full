@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a security by its symbol.
@@ -95,6 +99,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identification of a security by its symbol."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityIdentification3", propOrder = {"ISIN", "tickerSymbol", "CUSIP", "SEDOL", "QUICK", "otherIdentification"})
 public class SecurityIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -432,6 +438,7 @@ public class SecurityIdentification3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ISIN", required = true)
 	public ISINIdentifier getISIN() {
 		return iSIN;
 	}
@@ -440,6 +447,7 @@ public class SecurityIdentification3 {
 		this.iSIN = iSIN;
 	}
 
+	@XmlElement(name = "TckrSymb")
 	public TickerIdentifier getTickerSymbol() {
 		return tickerSymbol;
 	}
@@ -448,6 +456,7 @@ public class SecurityIdentification3 {
 		this.tickerSymbol = tickerSymbol;
 	}
 
+	@XmlElement(name = "CUSIP")
 	public CUSIPIdentifier getCUSIP() {
 		return cUSIP;
 	}
@@ -456,6 +465,7 @@ public class SecurityIdentification3 {
 		this.cUSIP = cUSIP;
 	}
 
+	@XmlElement(name = "SEDOL")
 	public SEDOLIdentifier getSEDOL() {
 		return sEDOL;
 	}
@@ -464,6 +474,7 @@ public class SecurityIdentification3 {
 		this.sEDOL = sEDOL;
 	}
 
+	@XmlElement(name = "QUICK")
 	public QUICKIdentifier getQUICK() {
 		return qUICK;
 	}
@@ -472,6 +483,7 @@ public class SecurityIdentification3 {
 		this.qUICK = qUICK;
 	}
 
+	@XmlElement(name = "OthrId")
 	public AlternateFinancialInstrumentIdentification1 getOtherIdentification() {
 		return otherIdentification;
 	}

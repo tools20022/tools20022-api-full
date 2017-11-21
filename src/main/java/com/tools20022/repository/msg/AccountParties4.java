@@ -28,6 +28,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Any party who is related to an investment account.
@@ -120,6 +124,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountParties4", propOrder = {"modificationScopeIndication", "primaryOwner", "trustee", "custodianForMinor", "nominee", "jointOwner", "secondaryOwner", "beneficiary", "powerOfAttorney", "legalGuardian",
+		"successorOnDeath", "administrator", "granter", "settler", "otherParty"})
 public class AccountParties4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -946,6 +953,7 @@ public class AccountParties4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ModScpIndctn", required = true)
 	public DataModification1Code getModificationScopeIndication() {
 		return modificationScopeIndication;
 	}
@@ -954,6 +962,7 @@ public class AccountParties4 {
 		this.modificationScopeIndication = modificationScopeIndication;
 	}
 
+	@XmlElement(name = "PmryOwnr")
 	public InvestmentAccountOwnershipInformation4 getPrimaryOwner() {
 		return primaryOwner;
 	}
@@ -962,6 +971,7 @@ public class AccountParties4 {
 		this.primaryOwner = primaryOwner;
 	}
 
+	@XmlElement(name = "Trstee")
 	public List<InvestmentAccountOwnershipInformation4> getTrustee() {
 		return trustee;
 	}
@@ -970,6 +980,7 @@ public class AccountParties4 {
 		this.trustee = trustee;
 	}
 
+	@XmlElement(name = "CtdnForMnr")
 	public InvestmentAccountOwnershipInformation4 getCustodianForMinor() {
 		return custodianForMinor;
 	}
@@ -978,6 +989,7 @@ public class AccountParties4 {
 		this.custodianForMinor = custodianForMinor;
 	}
 
+	@XmlElement(name = "Nmnee")
 	public InvestmentAccountOwnershipInformation4 getNominee() {
 		return nominee;
 	}
@@ -986,6 +998,7 @@ public class AccountParties4 {
 		this.nominee = nominee;
 	}
 
+	@XmlElement(name = "JntOwnr")
 	public List<InvestmentAccountOwnershipInformation4> getJointOwner() {
 		return jointOwner;
 	}
@@ -994,6 +1007,7 @@ public class AccountParties4 {
 		this.jointOwner = jointOwner;
 	}
 
+	@XmlElement(name = "ScndryOwnr")
 	public InvestmentAccountOwnershipInformation4 getSecondaryOwner() {
 		return secondaryOwner;
 	}
@@ -1002,6 +1016,7 @@ public class AccountParties4 {
 		this.secondaryOwner = secondaryOwner;
 	}
 
+	@XmlElement(name = "Bnfcry")
 	public InvestmentAccountOwnershipInformation4 getBeneficiary() {
 		return beneficiary;
 	}
@@ -1010,6 +1025,7 @@ public class AccountParties4 {
 		this.beneficiary = beneficiary;
 	}
 
+	@XmlElement(name = "PwrOfAttny")
 	public InvestmentAccountOwnershipInformation4 getPowerOfAttorney() {
 		return powerOfAttorney;
 	}
@@ -1018,6 +1034,7 @@ public class AccountParties4 {
 		this.powerOfAttorney = powerOfAttorney;
 	}
 
+	@XmlElement(name = "LglGuardn")
 	public InvestmentAccountOwnershipInformation4 getLegalGuardian() {
 		return legalGuardian;
 	}
@@ -1026,6 +1043,7 @@ public class AccountParties4 {
 		this.legalGuardian = legalGuardian;
 	}
 
+	@XmlElement(name = "SucssrOnDth")
 	public InvestmentAccountOwnershipInformation4 getSuccessorOnDeath() {
 		return successorOnDeath;
 	}
@@ -1034,6 +1052,7 @@ public class AccountParties4 {
 		this.successorOnDeath = successorOnDeath;
 	}
 
+	@XmlElement(name = "Admstr")
 	public InvestmentAccountOwnershipInformation4 getAdministrator() {
 		return administrator;
 	}
@@ -1042,6 +1061,7 @@ public class AccountParties4 {
 		this.administrator = administrator;
 	}
 
+	@XmlElement(name = "Grntr")
 	public List<InvestmentAccountOwnershipInformation4> getGranter() {
 		return granter;
 	}
@@ -1050,6 +1070,7 @@ public class AccountParties4 {
 		this.granter = granter;
 	}
 
+	@XmlElement(name = "Sttlr")
 	public List<InvestmentAccountOwnershipInformation4> getSettler() {
 		return settler;
 	}
@@ -1058,6 +1079,7 @@ public class AccountParties4 {
 		this.settler = settler;
 	}
 
+	@XmlElement(name = "OthrPty")
 	public List<ExtendedParty1> getOtherParty() {
 		return otherParty;
 	}

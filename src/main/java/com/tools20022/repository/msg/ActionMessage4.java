@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information to display, print or log.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ActionMessage3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ActionMessage4", propOrder = {"format", "message", "reference", "device", "messageContentSignature"})
 public class ActionMessage4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -314,6 +320,7 @@ public class ActionMessage4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Frmt")
 	public OutputFormat2Code getFormat() {
 		return format;
 	}
@@ -322,6 +329,7 @@ public class ActionMessage4 {
 		this.format = format;
 	}
 
+	@XmlElement(name = "Msg")
 	public Max20000Text getMessage() {
 		return message;
 	}
@@ -330,6 +338,7 @@ public class ActionMessage4 {
 		this.message = message;
 	}
 
+	@XmlElement(name = "Ref")
 	public Max35Text getReference() {
 		return reference;
 	}
@@ -338,6 +347,7 @@ public class ActionMessage4 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "Dvc")
 	public ATMDevice1Code getDevice() {
 		return device;
 	}
@@ -346,6 +356,7 @@ public class ActionMessage4 {
 		this.device = device;
 	}
 
+	@XmlElement(name = "MsgCnttSgntr")
 	public Max35Binary getMessageContentSignature() {
 		return messageContentSignature;
 	}

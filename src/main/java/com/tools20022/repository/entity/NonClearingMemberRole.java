@@ -36,6 +36,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.ThirdPartyRole
+ * ThirdPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -44,9 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Report1.mmNonClearingMember}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.ThirdPartyRole
- * ThirdPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -77,6 +77,11 @@ public class NonClearingMemberRole extends ThirdPartyRole {
 				definition = "Party that is involved in a trade but which must clear the trade through a member of an exchange's clearing corporation.";
 				derivationElement_lazy = () -> Arrays.asList(Report1.mmNonClearingMember);
 				superType_lazy = () -> ThirdPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return NonClearingMemberRole.class;
 			}
 		});
 		return mmObject_lazy.get();

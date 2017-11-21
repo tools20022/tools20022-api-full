@@ -40,6 +40,18 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CentralClearingCounterpartyRole#mmSystem
+ * CentralClearingCounterpartyRole.mmSystem}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SettlementPartyRole
+ * SettlementPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -47,18 +59,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.ClearingSystem#mmCentralClearingCounterparty
  * ClearingSystem.mmCentralClearingCounterparty}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SettlementPartyRole
- * SettlementPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CentralClearingCounterpartyRole#mmSystem
- * CentralClearingCounterpartyRole.mmSystem}</li>
  * </ul>
  * </li>
  * <li>
@@ -118,7 +118,7 @@ public class CentralClearingCounterpartyRole extends SettlementPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CentralClearingCounterpartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CentralClearingCounterpartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "System";
@@ -139,7 +139,12 @@ public class CentralClearingCounterpartyRole extends SettlementPartyRole {
 				definition = "Infrastructure that may be a component of a clearing house and which facilitates clearing and settlement for its members by standing between the buyer and the seller. It may net transactions and it substitutes itself as settlement counterparty for each position.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ClearingSystem.mmCentralClearingCounterparty);
 				superType_lazy = () -> SettlementPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(CentralClearingCounterpartyRole.mmSystem);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CentralClearingCounterpartyRole.mmSystem);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CentralClearingCounterpartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

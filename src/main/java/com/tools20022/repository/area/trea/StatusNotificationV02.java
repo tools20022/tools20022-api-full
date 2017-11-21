@@ -24,8 +24,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TreasuryArchive;
 import com.tools20022.repository.msg.TradeData1;
 import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -36,9 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code trea.008.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
  * TreasuryArchive}</li>
@@ -66,6 +65,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code trea.008.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -77,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "trea.008.001.02", propOrder = "tradeData")
 public class StatusNotificationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -114,6 +118,14 @@ public class StatusNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradeData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusNotificationV02.class.getMethod("getTradeData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -127,7 +139,7 @@ public class StatusNotificationV02 {
 				xmlTag = "trea.008.001.02";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
 				xmlName = "trea.008.001.02";
-				messageBuildingBlock_lazy = () -> Arrays.asList(StatusNotificationV02.mmTradeData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.StatusNotificationV02.mmTradeData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "trea";
@@ -137,15 +149,27 @@ public class StatusNotificationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StatusNotificationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradData", required = true)
 	public TradeData1 getTradeData() {
 		return tradeData;
 	}
 
 	public void setTradeData(TradeData1 tradeData) {
 		this.tradeData = tradeData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:trea.008.02.02")
+	static public class Document {
+		@XmlElement(name = "trea.008.001.02", required = true)
+		public StatusNotificationV02 messageBody;
 	}
 }

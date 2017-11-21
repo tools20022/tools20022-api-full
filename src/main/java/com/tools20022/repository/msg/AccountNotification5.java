@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details of the account notification.
@@ -121,6 +125,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountNotification5", propOrder = {"identification", "notificationPagination", "electronicSequenceNumber", "legalSequenceNumber", "creationDateTime", "fromToDate", "copyDuplicateIndicator", "reportingSource", "account",
+		"relatedAccount", "interest", "transactionsSummary", "entry", "additionalNotificationInformation"})
 public class AccountNotification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -782,6 +789,7 @@ public class AccountNotification5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -790,6 +798,7 @@ public class AccountNotification5 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "NtfctnPgntn")
 	public Pagination getNotificationPagination() {
 		return notificationPagination;
 	}
@@ -798,6 +807,7 @@ public class AccountNotification5 {
 		this.notificationPagination = notificationPagination;
 	}
 
+	@XmlElement(name = "ElctrncSeqNb")
 	public Number getElectronicSequenceNumber() {
 		return electronicSequenceNumber;
 	}
@@ -806,6 +816,7 @@ public class AccountNotification5 {
 		this.electronicSequenceNumber = electronicSequenceNumber;
 	}
 
+	@XmlElement(name = "LglSeqNb")
 	public Number getLegalSequenceNumber() {
 		return legalSequenceNumber;
 	}
@@ -814,6 +825,7 @@ public class AccountNotification5 {
 		this.legalSequenceNumber = legalSequenceNumber;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -822,6 +834,7 @@ public class AccountNotification5 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "FrToDt")
 	public DateTimePeriodDetails getFromToDate() {
 		return fromToDate;
 	}
@@ -830,6 +843,7 @@ public class AccountNotification5 {
 		this.fromToDate = fromToDate;
 	}
 
+	@XmlElement(name = "CpyDplctInd")
 	public CopyDuplicate1Code getCopyDuplicateIndicator() {
 		return copyDuplicateIndicator;
 	}
@@ -838,6 +852,7 @@ public class AccountNotification5 {
 		this.copyDuplicateIndicator = copyDuplicateIndicator;
 	}
 
+	@XmlElement(name = "RptgSrc")
 	public ReportingSource1Choice getReportingSource() {
 		return reportingSource;
 	}
@@ -846,6 +861,7 @@ public class AccountNotification5 {
 		this.reportingSource = reportingSource;
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CashAccount25 getAccount() {
 		return account;
 	}
@@ -854,6 +870,7 @@ public class AccountNotification5 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "RltdAcct")
 	public CashAccount24 getRelatedAccount() {
 		return relatedAccount;
 	}
@@ -862,6 +879,7 @@ public class AccountNotification5 {
 		this.relatedAccount = relatedAccount;
 	}
 
+	@XmlElement(name = "Intrst")
 	public List<AccountInterest2> getInterest() {
 		return interest;
 	}
@@ -870,6 +888,7 @@ public class AccountNotification5 {
 		this.interest = interest;
 	}
 
+	@XmlElement(name = "TxsSummry")
 	public TotalTransactions2 getTransactionsSummary() {
 		return transactionsSummary;
 	}
@@ -878,6 +897,7 @@ public class AccountNotification5 {
 		this.transactionsSummary = transactionsSummary;
 	}
 
+	@XmlElement(name = "Ntry")
 	public List<ReportEntry3> getEntry() {
 		return entry;
 	}
@@ -886,6 +906,7 @@ public class AccountNotification5 {
 		this.entry = entry;
 	}
 
+	@XmlElement(name = "AddtlNtfctnInf")
 	public Max500Text getAdditionalNotificationInformation() {
 		return additionalNotificationInformation;
 	}

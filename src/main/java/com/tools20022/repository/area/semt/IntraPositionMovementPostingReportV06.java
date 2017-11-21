@@ -29,9 +29,11 @@ import com.tools20022.repository.msg.SecuritiesAccount24;
 import com.tools20022.repository.msg.Statement43;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -59,9 +61,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.016.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
@@ -103,6 +102,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.016.001.06}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -118,6 +120,8 @@ import java.util.List;
  * IntraPositionMovementPostingReportV05}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionMovementPostingReportV06", propOrder = {"pagination", "statementGeneralDetails", "accountOwner", "safekeepingAccount", "financialInstrument"})
 public class IntraPositionMovementPostingReportV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -164,6 +168,14 @@ public class IntraPositionMovementPostingReportV06 {
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementPostingReportV06.class.getMethod("getPagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Statement43 statementGeneralDetails;
 	/**
@@ -203,6 +215,14 @@ public class IntraPositionMovementPostingReportV06 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Statement43.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementPostingReportV06.class.getMethod("getStatementGeneralDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification92Choice accountOwner;
@@ -245,6 +265,14 @@ public class IntraPositionMovementPostingReportV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification92Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementPostingReportV06.class.getMethod("getAccountOwner", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesAccount24 safekeepingAccount;
 	/**
@@ -286,6 +314,14 @@ public class IntraPositionMovementPostingReportV06 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount24.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementPostingReportV06.class.getMethod("getSafekeepingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<FinancialInstrumentDetails24> financialInstrument;
 	/**
@@ -326,6 +362,14 @@ public class IntraPositionMovementPostingReportV06 {
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentDetails24.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IntraPositionMovementPostingReportV06.class.getMethod("getFinancialInstrument", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -339,8 +383,9 @@ public class IntraPositionMovementPostingReportV06 {
 				rootElement = "Document";
 				xmlTag = "IntraPosMvmntPstngRpt";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementPostingReportV06.mmPagination, IntraPositionMovementPostingReportV06.mmStatementGeneralDetails, IntraPositionMovementPostingReportV06.mmAccountOwner,
-						IntraPositionMovementPostingReportV06.mmSafekeepingAccount, IntraPositionMovementPostingReportV06.mmFinancialInstrument);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.mmPagination,
+						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.mmStatementGeneralDetails, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.mmAccountOwner,
+						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.mmSafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.mmFinancialInstrument);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -350,10 +395,16 @@ public class IntraPositionMovementPostingReportV06 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IntraPositionMovementPostingReportV06.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
@@ -362,6 +413,7 @@ public class IntraPositionMovementPostingReportV06 {
 		this.pagination = pagination;
 	}
 
+	@XmlElement(name = "StmtGnlDtls", required = true)
 	public Statement43 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
@@ -370,6 +422,7 @@ public class IntraPositionMovementPostingReportV06 {
 		this.statementGeneralDetails = statementGeneralDetails;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification92Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -378,6 +431,7 @@ public class IntraPositionMovementPostingReportV06 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount24 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -386,11 +440,18 @@ public class IntraPositionMovementPostingReportV06 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "FinInstrm")
 	public List<FinancialInstrumentDetails24> getFinancialInstrument() {
 		return financialInstrument;
 	}
 
 	public void setFinancialInstrument(List<FinancialInstrumentDetails24> financialInstrument) {
 		this.financialInstrument = financialInstrument;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.016.06.06")
+	static public class Document {
+		@XmlElement(name = "IntraPosMvmntPstngRpt", required = true)
+		public IntraPositionMovementPostingReportV06 messageBody;
 	}
 }

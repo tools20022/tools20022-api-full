@@ -54,6 +54,7 @@ public class Exact42Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Exact42Text";
 				definition = "Specifies a character string with an exact length of 42 characters.";
+				length = 42;
 			}
 		});
 		return mmObject_lazy.get();

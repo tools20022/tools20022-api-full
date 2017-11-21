@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides account and balance information.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides account and balance information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountAndBalance38", propOrder = {"safekeepingAccount", "accountOwner", "safekeepingPlace", "balance"})
 public class AccountAndBalance38 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -294,6 +300,7 @@ public class AccountAndBalance38 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public RestrictedFINXMax35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -302,6 +309,7 @@ public class AccountAndBalance38 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification103Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -310,6 +318,7 @@ public class AccountAndBalance38 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat11Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -318,6 +327,7 @@ public class AccountAndBalance38 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "Bal", required = true)
 	public CorporateActionBalanceDetails35 getBalance() {
 		return balance;
 	}

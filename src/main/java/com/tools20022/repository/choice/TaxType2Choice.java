@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the type of tax as a code or free text.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of tax as a code or free text."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxType2Choice", propOrder = {"type", "otherTaxType"})
 public class TaxType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -170,6 +176,7 @@ public class TaxType2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TaxType9Code getType() {
 		return type;
 	}
@@ -178,6 +185,7 @@ public class TaxType2Choice {
 		this.type = type;
 	}
 
+	@XmlElement(name = "OthrTaxTp", required = true)
 	public Max35Text getOtherTaxType() {
 		return otherTaxType;
 	}

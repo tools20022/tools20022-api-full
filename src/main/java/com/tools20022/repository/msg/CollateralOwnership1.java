@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.CollateralPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates whether the collateral is proprietarily owned or client owned.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralOwnership1", propOrder = {"proprietary", "clientName"})
 public class CollateralOwnership1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -199,6 +205,7 @@ public class CollateralOwnership1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public YesNoIndicator getProprietary() {
 		return proprietary;
 	}
@@ -207,6 +214,7 @@ public class CollateralOwnership1 {
 		this.proprietary = proprietary;
 	}
 
+	@XmlElement(name = "ClntNm")
 	public PartyIdentification33Choice getClientName() {
 		return clientName;
 	}

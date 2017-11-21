@@ -29,15 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Validation1Code
- * Validation1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Validation2Code
- * Validation2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -49,6 +40,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ValidationCode#mmValidationFailed
  * ValidationCode.mmValidationFailed}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Validation1Code
+ * Validation1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Validation2Code
+ * Validation2Code}</li>
  * </ul>
  * </li>
  * <li>

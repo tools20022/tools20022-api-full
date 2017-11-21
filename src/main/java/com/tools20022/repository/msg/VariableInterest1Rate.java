@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.VariableInterest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the index used to define the rate and optionaly the basis point
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "VariableInterest1Rate", propOrder = {"index", "basisPointSpread"})
 public class VariableInterest1Rate {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -201,6 +207,7 @@ public class VariableInterest1Rate {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Indx", required = true)
 	public Max35Text getIndex() {
 		return index;
 	}
@@ -209,6 +216,7 @@ public class VariableInterest1Rate {
 		this.index = index;
 	}
 
+	@XmlElement(name = "BsisPtSprd")
 	public Number getBasisPointSpread() {
 		return basisPointSpread;
 	}

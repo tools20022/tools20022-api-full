@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Original and current value of an asset-back instrument.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Original and current value of an asset-back instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalAndCurrentQuantities4", propOrder = {"faceAmount", "amortisedValue"})
 public class OriginalAndCurrentQuantities4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -183,6 +189,7 @@ public class OriginalAndCurrentQuantities4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FaceAmt", required = true)
 	public RestrictedFINImpliedCurrencyAndAmount getFaceAmount() {
 		return faceAmount;
 	}
@@ -191,6 +198,7 @@ public class OriginalAndCurrentQuantities4 {
 		this.faceAmount = faceAmount;
 	}
 
+	@XmlElement(name = "AmtsdVal", required = true)
 	public RestrictedFINImpliedCurrencyAndAmount getAmortisedValue() {
 		return amortisedValue;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the CA security option.
@@ -102,6 +106,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information about the CA security option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityOption1", propOrder = {"securityIdentification", "creditDebitIndicator", "securitiesQuantity", "minimumExercisableSecuritiesQuantity", "minimumExercisableMultipleSecuritiesQuantity",
+		"newDenominationSecuritiesQuantity", "newBoardLotSecuritiesQuantity", "shareRanking", "additionalQuantityForSubscribedResultantSecurities", "dateDetails", "priceDetails", "tradingPeriod", "additionalQuantityForExistingSecurities",
+		"temporaryFinancialInstrumentIndicator", "fractionDisposition"})
 public class SecurityOption1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -863,6 +871,7 @@ public class SecurityOption1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public FinancialInstrumentDescription3 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -871,6 +880,7 @@ public class SecurityOption1 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -879,6 +889,7 @@ public class SecurityOption1 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "SctiesQty")
 	public UnitOrFaceAmount1Choice getSecuritiesQuantity() {
 		return securitiesQuantity;
 	}
@@ -887,6 +898,7 @@ public class SecurityOption1 {
 		this.securitiesQuantity = securitiesQuantity;
 	}
 
+	@XmlElement(name = "MinExrcblSctiesQty")
 	public UnitOrFaceAmount1Choice getMinimumExercisableSecuritiesQuantity() {
 		return minimumExercisableSecuritiesQuantity;
 	}
@@ -895,6 +907,7 @@ public class SecurityOption1 {
 		this.minimumExercisableSecuritiesQuantity = minimumExercisableSecuritiesQuantity;
 	}
 
+	@XmlElement(name = "MinExrcblMltplSctiesQty")
 	public UnitOrFaceAmount1Choice getMinimumExercisableMultipleSecuritiesQuantity() {
 		return minimumExercisableMultipleSecuritiesQuantity;
 	}
@@ -903,6 +916,7 @@ public class SecurityOption1 {
 		this.minimumExercisableMultipleSecuritiesQuantity = minimumExercisableMultipleSecuritiesQuantity;
 	}
 
+	@XmlElement(name = "NewDnmtnSctiesQty")
 	public UnitOrFaceAmount1Choice getNewDenominationSecuritiesQuantity() {
 		return newDenominationSecuritiesQuantity;
 	}
@@ -911,6 +925,7 @@ public class SecurityOption1 {
 		this.newDenominationSecuritiesQuantity = newDenominationSecuritiesQuantity;
 	}
 
+	@XmlElement(name = "NewBrdLotSctiesQty")
 	public UnitOrFaceAmount1Choice getNewBoardLotSecuritiesQuantity() {
 		return newBoardLotSecuritiesQuantity;
 	}
@@ -919,6 +934,7 @@ public class SecurityOption1 {
 		this.newBoardLotSecuritiesQuantity = newBoardLotSecuritiesQuantity;
 	}
 
+	@XmlElement(name = "ShrRnkg")
 	public ShareRanking1FormatChoice getShareRanking() {
 		return shareRanking;
 	}
@@ -927,6 +943,7 @@ public class SecurityOption1 {
 		this.shareRanking = shareRanking;
 	}
 
+	@XmlElement(name = "AddtlQtyForSbcbdRsltntScties")
 	public QuantityToQuantityRatio1 getAdditionalQuantityForSubscribedResultantSecurities() {
 		return additionalQuantityForSubscribedResultantSecurities;
 	}
@@ -935,6 +952,7 @@ public class SecurityOption1 {
 		this.additionalQuantityForSubscribedResultantSecurities = additionalQuantityForSubscribedResultantSecurities;
 	}
 
+	@XmlElement(name = "DtDtls")
 	public CorporateActionDate3 getDateDetails() {
 		return dateDetails;
 	}
@@ -943,6 +961,7 @@ public class SecurityOption1 {
 		this.dateDetails = dateDetails;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public CorporateActionPrice4 getPriceDetails() {
 		return priceDetails;
 	}
@@ -951,6 +970,7 @@ public class SecurityOption1 {
 		this.priceDetails = priceDetails;
 	}
 
+	@XmlElement(name = "TradgPrd")
 	public Period1 getTradingPeriod() {
 		return tradingPeriod;
 	}
@@ -959,6 +979,7 @@ public class SecurityOption1 {
 		this.tradingPeriod = tradingPeriod;
 	}
 
+	@XmlElement(name = "AddtlQtyForExstgScties")
 	public QuantityToQuantityRatio1 getAdditionalQuantityForExistingSecurities() {
 		return additionalQuantityForExistingSecurities;
 	}
@@ -967,6 +988,7 @@ public class SecurityOption1 {
 		this.additionalQuantityForExistingSecurities = additionalQuantityForExistingSecurities;
 	}
 
+	@XmlElement(name = "TempFinInstrmInd")
 	public YesNoIndicator getTemporaryFinancialInstrumentIndicator() {
 		return temporaryFinancialInstrumentIndicator;
 	}
@@ -975,6 +997,7 @@ public class SecurityOption1 {
 		this.temporaryFinancialInstrumentIndicator = temporaryFinancialInstrumentIndicator;
 	}
 
+	@XmlElement(name = "FrctnDspstn")
 	public FractionDispositionType1FormatChoice getFractionDisposition() {
 		return fractionDisposition;
 	}

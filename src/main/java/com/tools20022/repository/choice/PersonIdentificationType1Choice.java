@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of personal identification type.
@@ -81,6 +85,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of personal identification type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PersonIdentificationType1Choice", propOrder = {"passportNumber", "taxIdentificationNumber", "socialSecurityNumber", "employerIdentificationNumber", "driversLicenseNumber", "alienRegistrationNumber", "identityCardNumber",
+		"otherIdentification"})
 public class PersonIdentificationType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -485,6 +492,7 @@ public class PersonIdentificationType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PsptNb", required = true)
 	public Max35Text getPassportNumber() {
 		return passportNumber;
 	}
@@ -493,6 +501,7 @@ public class PersonIdentificationType1Choice {
 		this.passportNumber = passportNumber;
 	}
 
+	@XmlElement(name = "TaxIdNb", required = true)
 	public Max35Text getTaxIdentificationNumber() {
 		return taxIdentificationNumber;
 	}
@@ -501,6 +510,7 @@ public class PersonIdentificationType1Choice {
 		this.taxIdentificationNumber = taxIdentificationNumber;
 	}
 
+	@XmlElement(name = "SclSctyNb", required = true)
 	public Max35Text getSocialSecurityNumber() {
 		return socialSecurityNumber;
 	}
@@ -509,6 +519,7 @@ public class PersonIdentificationType1Choice {
 		this.socialSecurityNumber = socialSecurityNumber;
 	}
 
+	@XmlElement(name = "MplyrIdNb", required = true)
 	public Max35Text getEmployerIdentificationNumber() {
 		return employerIdentificationNumber;
 	}
@@ -517,6 +528,7 @@ public class PersonIdentificationType1Choice {
 		this.employerIdentificationNumber = employerIdentificationNumber;
 	}
 
+	@XmlElement(name = "DrvrsLicNb", required = true)
 	public Max35Text getDriversLicenseNumber() {
 		return driversLicenseNumber;
 	}
@@ -525,6 +537,7 @@ public class PersonIdentificationType1Choice {
 		this.driversLicenseNumber = driversLicenseNumber;
 	}
 
+	@XmlElement(name = "AlnRegnNb", required = true)
 	public Max35Text getAlienRegistrationNumber() {
 		return alienRegistrationNumber;
 	}
@@ -533,6 +546,7 @@ public class PersonIdentificationType1Choice {
 		this.alienRegistrationNumber = alienRegistrationNumber;
 	}
 
+	@XmlElement(name = "IdntyCardNb", required = true)
 	public Max35Text getIdentityCardNumber() {
 		return identityCardNumber;
 	}
@@ -541,6 +555,7 @@ public class PersonIdentificationType1Choice {
 		this.identityCardNumber = identityCardNumber;
 	}
 
+	@XmlElement(name = "OthrId", required = true)
 	public GenericIdentification4 getOtherIdentification() {
 		return otherIdentification;
 	}

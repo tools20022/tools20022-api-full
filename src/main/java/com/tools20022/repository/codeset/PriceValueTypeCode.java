@@ -29,35 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType1Code
- * PriceValueType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceRateType3Code
- * PriceRateType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType4Code
- * PriceValueType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType9Code
- * PriceValueType9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType5Code
- * PriceValueType5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType10Code
- * PriceValueType10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType8Code
- * PriceValueType8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType2Code
- * PriceValueType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType3Code
- * PriceValueType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CommissionValueType1Code
- * CommissionValueType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType7Code
- * PriceValueType7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType6Code
- * PriceValueType6Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -112,6 +83,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmNilPayment
  * PriceValueTypeCode.mmNilPayment}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType1Code
+ * PriceValueType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceRateType3Code
+ * PriceRateType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType4Code
+ * PriceValueType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType9Code
+ * PriceValueType9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType5Code
+ * PriceValueType5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType10Code
+ * PriceValueType10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType8Code
+ * PriceValueType8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType2Code
+ * PriceValueType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType3Code
+ * PriceValueType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionValueType1Code
+ * CommissionValueType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType7Code
+ * PriceValueType7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType6Code
+ * PriceValueType6Code}</li>
  * </ul>
  * </li>
  * <li>

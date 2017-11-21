@@ -24,6 +24,10 @@ import com.tools20022.repository.choice.DailyFundTransfer1Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details about successor account for automated default funds transfer.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Details about successor account for automated default funds transfer."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DefaultAccountDetails1", propOrder = {"accountOwner", "account", "dailyFundTransfer"})
 public class DefaultAccountDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -203,6 +209,7 @@ public class DefaultAccountDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnr", required = true)
 	public FinancialInstitutionIdentification9 getAccountOwner() {
 		return accountOwner;
 	}
@@ -211,6 +218,7 @@ public class DefaultAccountDetails1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "Acct", required = true)
 	public CashAccount24 getAccount() {
 		return account;
 	}
@@ -219,6 +227,7 @@ public class DefaultAccountDetails1 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "DalyFndTrf")
 	public DailyFundTransfer1Choice getDailyFundTransfer() {
 		return dailyFundTransfer;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details about the investment fund class.
@@ -78,6 +82,8 @@ import java.util.List;
  * definition} = "Details about the investment fund class."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentFund1", propOrder = {"financialInstrumentIdentification", "classType", "totalUnitsOutstanding", "transactionalUnits", "totalValue", "price", "supplementaryData"})
 public class InvestmentFund1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -437,6 +443,7 @@ public class InvestmentFund1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -445,6 +452,7 @@ public class InvestmentFund1 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "ClssTp")
 	public Max35Text getClassType() {
 		return classType;
 	}
@@ -453,6 +461,7 @@ public class InvestmentFund1 {
 		this.classType = classType;
 	}
 
+	@XmlElement(name = "TtlUnitsOutsdng")
 	public DecimalNumber getTotalUnitsOutstanding() {
 		return totalUnitsOutstanding;
 	}
@@ -461,6 +470,7 @@ public class InvestmentFund1 {
 		this.totalUnitsOutstanding = totalUnitsOutstanding;
 	}
 
+	@XmlElement(name = "TxnlUnits")
 	public DecimalNumber getTransactionalUnits() {
 		return transactionalUnits;
 	}
@@ -469,6 +479,7 @@ public class InvestmentFund1 {
 		this.transactionalUnits = transactionalUnits;
 	}
 
+	@XmlElement(name = "TtlVal")
 	public AmountAndDirection30 getTotalValue() {
 		return totalValue;
 	}
@@ -477,6 +488,7 @@ public class InvestmentFund1 {
 		this.totalValue = totalValue;
 	}
 
+	@XmlElement(name = "Pric")
 	public List<PriceInformation10> getPrice() {
 		return price;
 	}
@@ -485,6 +497,7 @@ public class InvestmentFund1 {
 		this.price = price;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

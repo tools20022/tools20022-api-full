@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment status details.
@@ -69,6 +73,8 @@ import java.util.List;
  * PaymentStatus1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentStatus2", propOrder = {"code", "dateTime", "reason"})
 public class PaymentStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -250,6 +256,7 @@ public class PaymentStatus2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd")
 	public PaymentStatusCode6Choice getCode() {
 		return code;
 	}
@@ -258,6 +265,7 @@ public class PaymentStatus2 {
 		this.code = code;
 	}
 
+	@XmlElement(name = "DtTm")
 	public DateAndDateTimeChoice getDateTime() {
 		return dateTime;
 	}
@@ -266,6 +274,7 @@ public class PaymentStatus2 {
 		this.dateTime = dateTime;
 	}
 
+	@XmlElement(name = "Rsn")
 	public List<PaymentStatusReasonCode6Choice> getReason() {
 		return reason;
 	}

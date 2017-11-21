@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies a payment instruction by a set of characteristics (as per EBA
@@ -84,6 +88,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentInstructionReferenceDetails3", propOrder = {"paymentInstructionReference", "interbankSettlementAmount", "interbankValueDate", "paymentMethod", "instructingAgentIdentification", "instructedAgentIdentification",
+		"relatedReference"})
 public class PaymentInstructionReferenceDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -447,6 +454,7 @@ public class PaymentInstructionReferenceDetails3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtInstrRef", required = true)
 	public Max35Text getPaymentInstructionReference() {
 		return paymentInstructionReference;
 	}
@@ -455,6 +463,7 @@ public class PaymentInstructionReferenceDetails3 {
 		this.paymentInstructionReference = paymentInstructionReference;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmt", required = true)
 	public ImpliedCurrencyAndAmount getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
@@ -463,6 +472,7 @@ public class PaymentInstructionReferenceDetails3 {
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
 
+	@XmlElement(name = "IntrBkValDt", required = true)
 	public ISODate getInterbankValueDate() {
 		return interbankValueDate;
 	}
@@ -471,6 +481,7 @@ public class PaymentInstructionReferenceDetails3 {
 		this.interbankValueDate = interbankValueDate;
 	}
 
+	@XmlElement(name = "PmtMtd")
 	public PaymentOrigin1Choice getPaymentMethod() {
 		return paymentMethod;
 	}
@@ -479,6 +490,7 @@ public class PaymentInstructionReferenceDetails3 {
 		this.paymentMethod = paymentMethod;
 	}
 
+	@XmlElement(name = "InstgAgtId", required = true)
 	public BICIdentifier getInstructingAgentIdentification() {
 		return instructingAgentIdentification;
 	}
@@ -487,6 +499,7 @@ public class PaymentInstructionReferenceDetails3 {
 		this.instructingAgentIdentification = instructingAgentIdentification;
 	}
 
+	@XmlElement(name = "InstdAgtId", required = true)
 	public BICIdentifier getInstructedAgentIdentification() {
 		return instructedAgentIdentification;
 	}
@@ -495,6 +508,7 @@ public class PaymentInstructionReferenceDetails3 {
 		this.instructedAgentIdentification = instructedAgentIdentification;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public Max35Text getRelatedReference() {
 		return relatedReference;
 	}

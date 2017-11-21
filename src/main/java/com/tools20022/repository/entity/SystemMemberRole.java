@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.MemberTypeCode;
 import com.tools20022.repository.entity.SystemPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -39,6 +40,32 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemMemberRole#mmCashBalance
+ * SystemMemberRole.mmCashBalance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole#mmType
+ * SystemMemberRole.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemMemberRole#mmMemberStatus
+ * SystemMemberRole.mmMemberStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole#mmLimit
+ * SystemMemberRole.mmLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole#mmAccount
+ * SystemMemberRole.mmAccount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.DirectMember DirectMember}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.SystemPartyRole
+ * SystemPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -116,32 +143,6 @@ import java.util.List;
  * MemberReportOrError1Choice.mmReport}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.SystemPartyRole
- * SystemPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.DirectMember DirectMember}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemMemberRole#mmCashBalance
- * SystemMemberRole.mmCashBalance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole#mmType
- * SystemMemberRole.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemMemberRole#mmMemberStatus
- * SystemMemberRole.mmMemberStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole#mmLimit
- * SystemMemberRole.mmLimit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole#mmAccount
- * SystemMemberRole.mmAccount}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -196,7 +197,7 @@ public class SystemMemberRole extends SystemPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmCashBalance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SystemMemberRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashBalance";
@@ -218,11 +219,6 @@ public class SystemMemberRole extends SystemPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.MemberTypeCode
 	 * MemberTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SystemMemberRole
-	 * SystemMemberRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -239,6 +235,11 @@ public class SystemMemberRole extends SystemPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SystemMemberRole
+	 * SystemMemberRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -252,7 +253,7 @@ public class SystemMemberRole extends SystemPartyRole {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(MemberSearchCriteria.mmType, MemberDetails.mmType, MemberSearchCriteria2.mmType, Member1.mmType);
-			elementContext_lazy = () -> SystemMemberRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -260,6 +261,14 @@ public class SystemMemberRole extends SystemPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MemberTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SystemMemberRole.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.SystemStatus> memberStatus;
@@ -280,11 +289,6 @@ public class SystemMemberRole extends SystemPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SystemStatus
 	 * SystemStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SystemMemberRole
-	 * SystemMemberRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -296,6 +300,11 @@ public class SystemMemberRole extends SystemPartyRole {
 	 * MemberSearchCriteria2.mmStatus}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SystemMemberRole
+	 * SystemMemberRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -310,7 +319,7 @@ public class SystemMemberRole extends SystemPartyRole {
 	public static final MMBusinessAssociationEnd mmMemberStatus = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(MemberSearchCriteria.mmStatus, MemberSearchCriteria2.mmStatus);
-			elementContext_lazy = () -> SystemMemberRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MemberStatus";
@@ -366,7 +375,7 @@ public class SystemMemberRole extends SystemPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmLimit = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SystemMemberRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
@@ -432,7 +441,7 @@ public class SystemMemberRole extends SystemPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SystemMemberRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
@@ -459,10 +468,16 @@ public class SystemMemberRole extends SystemPartyRole {
 						MemberReportOrError1Choice.mmReport);
 				subType_lazy = () -> Arrays.asList(DirectMember.mmObject());
 				superType_lazy = () -> SystemPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(SystemMemberRole.mmCashBalance, SystemMemberRole.mmType, SystemMemberRole.mmMemberStatus, SystemMemberRole.mmLimit, SystemMemberRole.mmAccount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemMemberRole.mmCashBalance, com.tools20022.repository.entity.SystemMemberRole.mmType, com.tools20022.repository.entity.SystemMemberRole.mmMemberStatus,
+						com.tools20022.repository.entity.SystemMemberRole.mmLimit, com.tools20022.repository.entity.SystemMemberRole.mmAccount);
 				derivationComponent_lazy = () -> Arrays.asList(MemberIdentificationChoice.mmObject(), MemberIdentification2Choice.mmObject(), SystemMember2.mmObject(), MemberSearchCriteria.mmObject(), MemberDetails.mmObject(),
 						MemberReport.mmObject(), MemberReport2.mmObject(), MemberDetails1.mmObject(), MemberSearchCriteria2.mmObject(), Member1.mmObject(), MemberReportOrError2Choice.mmObject(), MemberReport3.mmObject(),
 						MemberReportOrError1Choice.mmObject(), Member2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SystemMemberRole.class;
 			}
 		});
 		return mmObject_lazy.get();

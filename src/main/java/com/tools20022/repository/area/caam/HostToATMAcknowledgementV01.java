@@ -28,8 +28,10 @@ import com.tools20022.repository.msg.Header20;
 import com.tools20022.repository.msg.HostToATMAcknowledgement1;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The HostToATMAcknowledgement message is sent by an ATM to a host to
@@ -37,9 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caam.008.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
@@ -78,6 +77,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caam.008.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -89,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "HostToATMAcknowledgementV01", propOrder = {"header", "protectedHostToATMAcknowledgement", "hostToATMAcknowledgement", "securityTrailer"})
 public class HostToATMAcknowledgementV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -128,6 +132,14 @@ public class HostToATMAcknowledgementV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header20.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return HostToATMAcknowledgementV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType10 protectedHostToATMAcknowledgement;
 	/**
@@ -162,6 +174,14 @@ public class HostToATMAcknowledgementV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return HostToATMAcknowledgementV01.class.getMethod("getProtectedHostToATMAcknowledgement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected HostToATMAcknowledgement1 hostToATMAcknowledgement;
@@ -201,6 +221,14 @@ public class HostToATMAcknowledgementV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> HostToATMAcknowledgement1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return HostToATMAcknowledgementV01.class.getMethod("getHostToATMAcknowledgement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType15 securityTrailer;
 	/**
@@ -236,6 +264,14 @@ public class HostToATMAcknowledgementV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return HostToATMAcknowledgementV01.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -248,8 +284,8 @@ public class HostToATMAcknowledgementV01 {
 				rootElement = "Document";
 				xmlTag = "HstToATMAck";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(HostToATMAcknowledgementV01.mmHeader, HostToATMAcknowledgementV01.mmProtectedHostToATMAcknowledgement, HostToATMAcknowledgementV01.mmHostToATMAcknowledgement,
-						HostToATMAcknowledgementV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmHeader, com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmProtectedHostToATMAcknowledgement,
+						com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmHostToATMAcknowledgement, com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caam";
@@ -259,10 +295,16 @@ public class HostToATMAcknowledgementV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return HostToATMAcknowledgementV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header20 getHeader() {
 		return header;
 	}
@@ -271,6 +313,7 @@ public class HostToATMAcknowledgementV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "PrtctdHstToATMAck")
 	public ContentInformationType10 getProtectedHostToATMAcknowledgement() {
 		return protectedHostToATMAcknowledgement;
 	}
@@ -279,6 +322,7 @@ public class HostToATMAcknowledgementV01 {
 		this.protectedHostToATMAcknowledgement = protectedHostToATMAcknowledgement;
 	}
 
+	@XmlElement(name = "HstToATMAck")
 	public HostToATMAcknowledgement1 getHostToATMAcknowledgement() {
 		return hostToATMAcknowledgement;
 	}
@@ -287,11 +331,18 @@ public class HostToATMAcknowledgementV01 {
 		this.hostToATMAcknowledgement = hostToATMAcknowledgement;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType15 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caam.008.01.01")
+	static public class Document {
+		@XmlElement(name = "HstToATMAck", required = true)
+		public HostToATMAcknowledgementV01 messageBody;
 	}
 }

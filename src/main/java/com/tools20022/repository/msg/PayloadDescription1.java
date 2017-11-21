@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Contains information about the payload.
@@ -63,6 +67,8 @@ import java.util.List;
  * definition} = "Contains information about the payload."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PayloadDescription1", propOrder = {"payloadDetails", "applicationSpecificInformation", "payloadTypeDetails", "manifestDetails"})
 public class PayloadDescription1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -252,6 +258,7 @@ public class PayloadDescription1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PyldDtls", required = true)
 	public PayloadDetails1 getPayloadDetails() {
 		return payloadDetails;
 	}
@@ -260,6 +267,7 @@ public class PayloadDescription1 {
 		this.payloadDetails = payloadDetails;
 	}
 
+	@XmlElement(name = "ApplSpcfcInf")
 	public ApplicationSpecifics1 getApplicationSpecificInformation() {
 		return applicationSpecificInformation;
 	}
@@ -268,6 +276,7 @@ public class PayloadDescription1 {
 		this.applicationSpecificInformation = applicationSpecificInformation;
 	}
 
+	@XmlElement(name = "PyldTpDtls", required = true)
 	public PayloadTypeDetails1 getPayloadTypeDetails() {
 		return payloadTypeDetails;
 	}
@@ -276,6 +285,7 @@ public class PayloadDescription1 {
 		this.payloadTypeDetails = payloadTypeDetails;
 	}
 
+	@XmlElement(name = "MnfstDtls")
 	public List<ManifestDetails1> getManifestDetails() {
 		return manifestDetails;
 	}

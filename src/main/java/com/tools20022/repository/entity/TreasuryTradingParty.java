@@ -38,6 +38,25 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradingParty#mmInvestmentFund
+ * TreasuryTradingParty.mmInvestmentFund}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.TradingBranch TradingBranch}
+ * </li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradePartyRole
+ * TreasuryTradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -68,25 +87,6 @@ import java.util.List;
  * TradePartyIdentification4.mmTradeParty}</li>
  * <li>{@linkplain com.tools20022.repository.msg.TreasuryProfile1#mmTraderType
  * TreasuryProfile1.mmTraderType}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.TreasuryTradePartyRole
- * TreasuryTradePartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.TradingBranch TradingBranch}
- * </li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTradingParty#mmInvestmentFund
- * TreasuryTradingParty.mmInvestmentFund}</li>
  * </ul>
  * </li>
  * <li>
@@ -127,11 +127,6 @@ public class TreasuryTradingParty extends TreasuryTradePartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentFund
 	 * InvestmentFund}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradingParty
-	 * TreasuryTradingParty}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -162,6 +157,11 @@ public class TreasuryTradingParty extends TreasuryTradePartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradingParty
+	 * TreasuryTradingParty}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -177,7 +177,7 @@ public class TreasuryTradingParty extends TreasuryTradePartyRole {
 		{
 			derivation_lazy = () -> Arrays.asList(TradePartyIdentification2.mmFundInformation, TradePartyIdentification3.mmFundInformation, TradePartyIdentification5.mmFundIdentification, PartyIdentification60.mmFundIdentification,
 					TradePartyIdentification6.mmFundIdentification, TradePartyIdentification1.mmFundInformation, TradePartyIdentification4.mmFundInformation, TradePartyIdentification7.mmFundInformation);
-			elementContext_lazy = () -> TreasuryTradingParty.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TreasuryTradingParty.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFund";
@@ -201,7 +201,12 @@ public class TreasuryTradingParty extends TreasuryTradePartyRole {
 						TradePartyIdentification4.mmTradeParty, TreasuryProfile1.mmTraderType);
 				subType_lazy = () -> Arrays.asList(TradingBranch.mmObject());
 				superType_lazy = () -> TreasuryTradePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(TreasuryTradingParty.mmInvestmentFund);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasuryTradingParty.mmInvestmentFund);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TreasuryTradingParty.class;
 			}
 		});
 		return mmObject_lazy.get();

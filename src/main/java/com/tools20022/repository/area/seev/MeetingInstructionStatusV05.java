@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.MeetingReference7;
 import com.tools20022.repository.msg.SecurityIdentification14;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ProxyVotingISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -63,9 +65,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.006.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -103,6 +102,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.006.001.05}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -118,6 +120,8 @@ import java.util.List;
  * MeetingInstructionStatusV04}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingInstructionStatusV05", propOrder = {"instructionType", "meetingReference", "financialInstrumentIdentification", "instructionTypeStatus", "supplementaryData"})
 public class MeetingInstructionStatusV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +165,14 @@ public class MeetingInstructionStatusV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> InstructionType1Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionStatusV05.class.getMethod("getInstructionType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MeetingReference7 meetingReference;
 	/**
@@ -201,6 +213,14 @@ public class MeetingInstructionStatusV05 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference7.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionStatusV05.class.getMethod("getMeetingReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecurityIdentification14 financialInstrumentIdentification;
@@ -244,6 +264,14 @@ public class MeetingInstructionStatusV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification14.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionStatusV05.class.getMethod("getFinancialInstrumentIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected InstructionTypeStatus2Choice instructionTypeStatus;
 	/**
@@ -285,6 +313,14 @@ public class MeetingInstructionStatusV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> InstructionTypeStatus2Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionStatusV05.class.getMethod("getInstructionTypeStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -322,6 +358,14 @@ public class MeetingInstructionStatusV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingInstructionStatusV05.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -335,8 +379,9 @@ public class MeetingInstructionStatusV05 {
 				rootElement = "Document";
 				xmlTag = "MtgInstrSts";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionStatusV05.mmInstructionType, MeetingInstructionStatusV05.mmMeetingReference, MeetingInstructionStatusV05.mmFinancialInstrumentIdentification,
-						MeetingInstructionStatusV05.mmInstructionTypeStatus, MeetingInstructionStatusV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionStatusV05.mmInstructionType, com.tools20022.repository.area.seev.MeetingInstructionStatusV05.mmMeetingReference,
+						com.tools20022.repository.area.seev.MeetingInstructionStatusV05.mmFinancialInstrumentIdentification, com.tools20022.repository.area.seev.MeetingInstructionStatusV05.mmInstructionTypeStatus,
+						com.tools20022.repository.area.seev.MeetingInstructionStatusV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -346,10 +391,16 @@ public class MeetingInstructionStatusV05 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingInstructionStatusV05.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstrTp", required = true)
 	public InstructionType1Choice getInstructionType() {
 		return instructionType;
 	}
@@ -358,6 +409,7 @@ public class MeetingInstructionStatusV05 {
 		this.instructionType = instructionType;
 	}
 
+	@XmlElement(name = "MtgRef", required = true)
 	public MeetingReference7 getMeetingReference() {
 		return meetingReference;
 	}
@@ -366,6 +418,7 @@ public class MeetingInstructionStatusV05 {
 		this.meetingReference = meetingReference;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -374,6 +427,7 @@ public class MeetingInstructionStatusV05 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "InstrTpSts", required = true)
 	public InstructionTypeStatus2Choice getInstructionTypeStatus() {
 		return instructionTypeStatus;
 	}
@@ -382,11 +436,18 @@ public class MeetingInstructionStatusV05 {
 		this.instructionTypeStatus = instructionTypeStatus;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.006.05.05")
+	static public class Document {
+		@XmlElement(name = "MtgInstrSts", required = true)
+		public MeetingInstructionStatusV05 messageBody;
 	}
 }

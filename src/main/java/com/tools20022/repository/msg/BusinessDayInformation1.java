@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports on business day information.
@@ -54,6 +58,8 @@ import java.util.List;
  * definition} = "Reports on business day information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BusinessDayInformation1", propOrder = "businessDayInformationReport")
 public class BusinessDayInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -113,6 +119,7 @@ public class BusinessDayInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BizDayInfRpt", required = true)
 	public List<BusinessDayInformationReport1> getBusinessDayInformationReport() {
 		return businessDayInformationReport;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.MarginRequirement1;
 import com.tools20022.repository.msg.Requirement1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the margin requirements for the variation margin and the segregated
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarginRequirement1Choice", propOrder = {"marginRequirement", "segregatedIndependentAmountRequirement"})
 public class MarginRequirement1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -205,6 +211,7 @@ public class MarginRequirement1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MrgnRqrmnt", required = true)
 	public Requirement1 getMarginRequirement() {
 		return marginRequirement;
 	}
@@ -213,6 +220,7 @@ public class MarginRequirement1Choice {
 		this.marginRequirement = marginRequirement;
 	}
 
+	@XmlElement(name = "SgrtdIndpdntAmtRqrmnt", required = true)
 	public MarginRequirement1 getSegregatedIndependentAmountRequirement() {
 		return segregatedIndependentAmountRequirement;
 	}

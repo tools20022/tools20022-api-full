@@ -32,6 +32,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about identification of the party .
@@ -76,6 +80,8 @@ import java.util.List;
  * definition} = "Provides information about identification of the party ."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification37", propOrder = {"identification", "processingIdentification", "additionalInformation", "alternateIdentification"})
 public class PartyIdentification37 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -288,6 +294,7 @@ public class PartyIdentification37 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification17Choice getIdentification() {
 		return identification;
 	}
@@ -296,6 +303,7 @@ public class PartyIdentification37 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public RestrictedFINXMax16Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -304,6 +312,7 @@ public class PartyIdentification37 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public RestrictedFINXMax350Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -312,6 +321,7 @@ public class PartyIdentification37 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public List<AlternatePartyIdentification3> getAlternateIdentification() {
 		return alternateIdentification;
 	}

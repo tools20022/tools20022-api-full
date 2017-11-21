@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Summary of electronic message details.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Summary of electronic message details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ElectronicMessageDetails1", propOrder = {"electronicSystemInformationMessageIdentifier", "electronicSystemInformationMessagePacketIdentifier"})
 public class ElectronicMessageDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class ElectronicMessageDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ElctrncSysInfMsgIdr", required = true)
 	public Max35Text getElectronicSystemInformationMessageIdentifier() {
 		return electronicSystemInformationMessageIdentifier;
 	}
@@ -166,6 +173,7 @@ public class ElectronicMessageDetails1 {
 		this.electronicSystemInformationMessageIdentifier = electronicSystemInformationMessageIdentifier;
 	}
 
+	@XmlElement(name = "ElctrncSysInfMsgPacketIdr")
 	public Max35Text getElectronicSystemInformationMessagePacketIdentifier() {
 		return electronicSystemInformationMessagePacketIdentifier;
 	}

@@ -37,6 +37,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money for which goods or services are offered, sold, or bought.
@@ -99,6 +103,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnitPrice12", propOrder = {"type", "extendedType", "value", "priceMethod", "accruedInterestNAV", "numberOfDaysAccrued", "taxableIncomePerShare"})
 public class UnitPrice12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -553,6 +559,7 @@ public class UnitPrice12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TypeOfPrice12Code getType() {
 		return type;
 	}
@@ -561,6 +568,7 @@ public class UnitPrice12 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XtndedTp", required = true)
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
@@ -569,6 +577,7 @@ public class UnitPrice12 {
 		this.extendedType = extendedType;
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public PriceValue1 getValue() {
 		return value;
 	}
@@ -577,6 +586,7 @@ public class UnitPrice12 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "PricMtd")
 	public PriceMethod1Code getPriceMethod() {
 		return priceMethod;
 	}
@@ -585,6 +595,7 @@ public class UnitPrice12 {
 		this.priceMethod = priceMethod;
 	}
 
+	@XmlElement(name = "AcrdIntrstNAV")
 	public ActiveOrHistoricCurrencyAndAmount getAccruedInterestNAV() {
 		return accruedInterestNAV;
 	}
@@ -593,6 +604,7 @@ public class UnitPrice12 {
 		this.accruedInterestNAV = accruedInterestNAV;
 	}
 
+	@XmlElement(name = "NbOfDaysAcrd")
 	public Number getNumberOfDaysAccrued() {
 		return numberOfDaysAccrued;
 	}
@@ -601,6 +613,7 @@ public class UnitPrice12 {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
 	}
 
+	@XmlElement(name = "TaxblIncmPerShr")
 	public ActiveCurrencyAnd13DecimalAmount getTaxableIncomePerShare() {
 		return taxableIncomePerShare;
 	}

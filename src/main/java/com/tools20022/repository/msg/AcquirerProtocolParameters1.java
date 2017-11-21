@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Acceptor parameters dedicated to the acquirer protocol.
@@ -100,6 +104,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcquirerProtocolParameters1", propOrder = {"acquirerIdentification", "applicationIdentification", "host", "onLineTransaction", "offLineTransaction", "reconciliationExchange", "reconciliationByAcquirer",
+		"totalsPerCurrency", "batchTransferContent", "messageItem", "protectCardData"})
 public class AcquirerProtocolParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -648,6 +655,7 @@ public class AcquirerProtocolParameters1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcqrrId", required = true)
 	public List<GenericIdentification32> getAcquirerIdentification() {
 		return acquirerIdentification;
 	}
@@ -656,6 +664,7 @@ public class AcquirerProtocolParameters1 {
 		this.acquirerIdentification = acquirerIdentification;
 	}
 
+	@XmlElement(name = "ApplId")
 	public List<Max35Text> getApplicationIdentification() {
 		return applicationIdentification;
 	}
@@ -664,6 +673,7 @@ public class AcquirerProtocolParameters1 {
 		this.applicationIdentification = applicationIdentification;
 	}
 
+	@XmlElement(name = "Hst")
 	public List<AcquirerHostConfiguration1> getHost() {
 		return host;
 	}
@@ -672,6 +682,7 @@ public class AcquirerProtocolParameters1 {
 		this.host = host;
 	}
 
+	@XmlElement(name = "OnLineTx")
 	public AcquirerProtocolParameters2 getOnLineTransaction() {
 		return onLineTransaction;
 	}
@@ -680,6 +691,7 @@ public class AcquirerProtocolParameters1 {
 		this.onLineTransaction = onLineTransaction;
 	}
 
+	@XmlElement(name = "OffLineTx")
 	public AcquirerProtocolParameters2 getOffLineTransaction() {
 		return offLineTransaction;
 	}
@@ -688,6 +700,7 @@ public class AcquirerProtocolParameters1 {
 		this.offLineTransaction = offLineTransaction;
 	}
 
+	@XmlElement(name = "RcncltnXchg")
 	public ExchangeConfiguration1 getReconciliationExchange() {
 		return reconciliationExchange;
 	}
@@ -696,6 +709,7 @@ public class AcquirerProtocolParameters1 {
 		this.reconciliationExchange = reconciliationExchange;
 	}
 
+	@XmlElement(name = "RcncltnByAcqrr")
 	public TrueFalseIndicator getReconciliationByAcquirer() {
 		return reconciliationByAcquirer;
 	}
@@ -704,6 +718,7 @@ public class AcquirerProtocolParameters1 {
 		this.reconciliationByAcquirer = reconciliationByAcquirer;
 	}
 
+	@XmlElement(name = "TtlsPerCcy")
 	public TrueFalseIndicator getTotalsPerCurrency() {
 		return totalsPerCurrency;
 	}
@@ -712,6 +727,7 @@ public class AcquirerProtocolParameters1 {
 		this.totalsPerCurrency = totalsPerCurrency;
 	}
 
+	@XmlElement(name = "BtchTrfCntt")
 	public List<BatchTransactionType1Code> getBatchTransferContent() {
 		return batchTransferContent;
 	}
@@ -720,6 +736,7 @@ public class AcquirerProtocolParameters1 {
 		this.batchTransferContent = batchTransferContent;
 	}
 
+	@XmlElement(name = "MsgItm")
 	public List<MessageItemCondition1> getMessageItem() {
 		return messageItem;
 	}
@@ -728,6 +745,7 @@ public class AcquirerProtocolParameters1 {
 		this.messageItem = messageItem;
 	}
 
+	@XmlElement(name = "PrtctCardData", required = true)
 	public TrueFalseIndicator getProtectCardData() {
 		return protectCardData;
 	}

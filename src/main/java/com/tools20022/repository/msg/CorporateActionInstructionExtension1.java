@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action instruction.
@@ -110,6 +114,9 @@ import java.util.List;
  * "Provides additional information regarding corporate action instruction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionInstructionExtension1", propOrder = {"placeAndName", "instructionType", "eventType", "subEventType", "DTCCOptionType", "protectIdentification", "protectDate", "acknowledgementFlag",
+		"solicitationDealerFeeFlag", "conditionsAcceptance", "oddLotFlag", "exemptFromInterestPenaltyFlag", "declaredPayableDate", "recordDate", "serviceTypeIndicator", "customerCount", "payoutNumber"})
 public class CorporateActionInstructionExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -880,6 +887,7 @@ public class CorporateActionInstructionExtension1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -888,6 +896,7 @@ public class CorporateActionInstructionExtension1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "InstrTp")
 	public DTCCorporateActionInstructionType1Code getInstructionType() {
 		return instructionType;
 	}
@@ -896,6 +905,7 @@ public class CorporateActionInstructionExtension1 {
 		this.instructionType = instructionType;
 	}
 
+	@XmlElement(name = "EvtTp")
 	public ExtendedEventType1Code getEventType() {
 		return eventType;
 	}
@@ -904,6 +914,7 @@ public class CorporateActionInstructionExtension1 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "SubEvtTp")
 	public DTCCSubEventType1Code getSubEventType() {
 		return subEventType;
 	}
@@ -912,6 +923,7 @@ public class CorporateActionInstructionExtension1 {
 		this.subEventType = subEventType;
 	}
 
+	@XmlElement(name = "DTCCOptnTp")
 	public Max4AlphaNumericText getDTCCOptionType() {
 		return dTCCOptionType;
 	}
@@ -920,6 +932,7 @@ public class CorporateActionInstructionExtension1 {
 		this.dTCCOptionType = dTCCOptionType;
 	}
 
+	@XmlElement(name = "PrtctId")
 	public Max16Text getProtectIdentification() {
 		return protectIdentification;
 	}
@@ -928,6 +941,7 @@ public class CorporateActionInstructionExtension1 {
 		this.protectIdentification = protectIdentification;
 	}
 
+	@XmlElement(name = "PrtctDt")
 	public ISODate getProtectDate() {
 		return protectDate;
 	}
@@ -936,6 +950,7 @@ public class CorporateActionInstructionExtension1 {
 		this.protectDate = protectDate;
 	}
 
+	@XmlElement(name = "AckFlg")
 	public YesNoIndicator getAcknowledgementFlag() {
 		return acknowledgementFlag;
 	}
@@ -944,6 +959,7 @@ public class CorporateActionInstructionExtension1 {
 		this.acknowledgementFlag = acknowledgementFlag;
 	}
 
+	@XmlElement(name = "SlctnDealrFeeFlg")
 	public YesNoIndicator getSolicitationDealerFeeFlag() {
 		return solicitationDealerFeeFlag;
 	}
@@ -952,6 +968,7 @@ public class CorporateActionInstructionExtension1 {
 		this.solicitationDealerFeeFlag = solicitationDealerFeeFlag;
 	}
 
+	@XmlElement(name = "CondsAccptnc")
 	public List<ConditionAcceptance1> getConditionsAcceptance() {
 		return conditionsAcceptance;
 	}
@@ -960,6 +977,7 @@ public class CorporateActionInstructionExtension1 {
 		this.conditionsAcceptance = conditionsAcceptance;
 	}
 
+	@XmlElement(name = "OddLotFlg")
 	public YesNoIndicator getOddLotFlag() {
 		return oddLotFlag;
 	}
@@ -968,6 +986,7 @@ public class CorporateActionInstructionExtension1 {
 		this.oddLotFlag = oddLotFlag;
 	}
 
+	@XmlElement(name = "XmptFrIntrstPnltyFlg")
 	public YesNoIndicator getExemptFromInterestPenaltyFlag() {
 		return exemptFromInterestPenaltyFlag;
 	}
@@ -976,6 +995,7 @@ public class CorporateActionInstructionExtension1 {
 		this.exemptFromInterestPenaltyFlag = exemptFromInterestPenaltyFlag;
 	}
 
+	@XmlElement(name = "DclrdPyblDt")
 	public ISODate getDeclaredPayableDate() {
 		return declaredPayableDate;
 	}
@@ -984,6 +1004,7 @@ public class CorporateActionInstructionExtension1 {
 		this.declaredPayableDate = declaredPayableDate;
 	}
 
+	@XmlElement(name = "RcrdDt")
 	public ISODate getRecordDate() {
 		return recordDate;
 	}
@@ -992,6 +1013,7 @@ public class CorporateActionInstructionExtension1 {
 		this.recordDate = recordDate;
 	}
 
+	@XmlElement(name = "SvcTpInd")
 	public DTCServiceType1Code getServiceTypeIndicator() {
 		return serviceTypeIndicator;
 	}
@@ -1000,6 +1022,7 @@ public class CorporateActionInstructionExtension1 {
 		this.serviceTypeIndicator = serviceTypeIndicator;
 	}
 
+	@XmlElement(name = "CstmrCnt", required = true)
 	public Number getCustomerCount() {
 		return customerCount;
 	}
@@ -1008,6 +1031,7 @@ public class CorporateActionInstructionExtension1 {
 		this.customerCount = customerCount;
 	}
 
+	@XmlElement(name = "PyoutNb", required = true)
 	public Exact3NumericText getPayoutNumber() {
 		return payoutNumber;
 	}

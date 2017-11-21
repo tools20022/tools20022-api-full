@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to identify the underlying batches.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Set of elements used to identify the underlying batches."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BatchInformation2", propOrder = {"messageIdentification", "paymentInformationIdentification", "numberOfTransactions", "totalAmount", "creditDebitIndicator"})
 public class BatchInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -302,6 +308,7 @@ public class BatchInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId")
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -310,6 +317,7 @@ public class BatchInformation2 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "PmtInfId")
 	public Max35Text getPaymentInformationIdentification() {
 		return paymentInformationIdentification;
 	}
@@ -318,6 +326,7 @@ public class BatchInformation2 {
 		this.paymentInformationIdentification = paymentInformationIdentification;
 	}
 
+	@XmlElement(name = "NbOfTxs")
 	public Max15NumericText getNumberOfTransactions() {
 		return numberOfTransactions;
 	}
@@ -326,6 +335,7 @@ public class BatchInformation2 {
 		this.numberOfTransactions = numberOfTransactions;
 	}
 
+	@XmlElement(name = "TtlAmt")
 	public ActiveOrHistoricCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -334,6 +344,7 @@ public class BatchInformation2 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}

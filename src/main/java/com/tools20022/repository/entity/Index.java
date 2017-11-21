@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +41,37 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateBasis
+ * Index.mmIndexRateBasis}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexFactor
+ * Index.mmIndexFactor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexPoints
+ * Index.mmIndexPoints}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexFixingDate
+ * Index.mmIndexFixingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIdentification
+ * Index.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmReferenceSource
+ * Index.mmReferenceSource}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateCurrency
+ * Index.mmIndexRateCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateFrequency
+ * Index.mmIndexRateFrequency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateMultiplier
+ * Index.mmIndexRateMultiplier}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmSpread
+ * Index.mmSpread}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmPortfolioBenchmark
+ * Index.mmPortfolioBenchmark}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmVariableInterest
+ * Index.mmVariableInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmSecuritiesPricing
+ * Index.mmSecuritiesPricing}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -75,37 +107,6 @@ import java.util.List;
  * CreditDefaultSwapDerivative3.mmIndex}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateBasis
- * Index.mmIndexRateBasis}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexFactor
- * Index.mmIndexFactor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexPoints
- * Index.mmIndexPoints}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexFixingDate
- * Index.mmIndexFixingDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIdentification
- * Index.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmReferenceSource
- * Index.mmReferenceSource}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateCurrency
- * Index.mmIndexRateCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateFrequency
- * Index.mmIndexRateFrequency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateMultiplier
- * Index.mmIndexRateMultiplier}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmSpread
- * Index.mmSpread}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmPortfolioBenchmark
- * Index.mmPortfolioBenchmark}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmVariableInterest
- * Index.mmVariableInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmSecuritiesPricing
- * Index.mmSecuritiesPricing}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -135,10 +136,6 @@ public class Index {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
-	 * Index}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -217,6 +214,10 @@ public class Index {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
+	 * Index}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -236,7 +237,7 @@ public class Index {
 					FinancialInstrumentAttributes31.mmIndexRateBasis, FinancialInstrumentAttributes44.mmIndexRateBasis, FinancialInstrumentAttributes15.mmIndexRateBasis, FinancialInstrumentAttributes29.mmIndexRateBasis,
 					FinancialInstrumentAttributes2.mmIndexRateBasis, FinancialInstrumentAttributes63.mmIndexRateBasis, FinancialInstrumentAttributes64.mmIndexRateBasis, FinancialInstrumentAttributes75.mmIndexRateBasis,
 					FinancialInstrumentAttributes78.mmIndexRateBasis);
-			elementContext_lazy = () -> Index.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Index.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexRateBasis";
@@ -244,6 +245,14 @@ public class Index {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Index.class.getMethod("getIndexRateBasis", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RateAndAmount indexFactor;
@@ -265,10 +274,6 @@ public class Index {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.RateAndAmount
 	 * RateAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
-	 * Index}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -386,6 +391,10 @@ public class Index {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
+	 * Index}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -408,7 +417,7 @@ public class Index {
 					CorporateActionRate68.mmIndexFactor, CorporateActionRate70.mmIndexFactor, CorporateActionRate67.mmIndexFactor, CorporateActionRate74.mmIndexFactor, CorporateActionRate79.mmIndexFactor,
 					CorporateActionRate76.mmIndexFactor, CorporateActionRate82.mmIndexFactor, CorporateActionRate80.mmIndexFactor, CorporateActionRate81.mmIndexFactor, CorporateActionRate83.mmIndexFactor,
 					CorporateActionRate84.mmIndexFactor, CorporateActionRate85.mmIndexFactor);
-			elementContext_lazy = () -> Index.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Index.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexFactor";
@@ -431,10 +440,6 @@ public class Index {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.DecimalNumber
 	 * DecimalNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
-	 * Index}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -525,6 +530,10 @@ public class Index {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
+	 * Index}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -543,7 +552,7 @@ public class Index {
 					PriceFormat43Choice.mmIndexPoints, RateAndAmountFormat28Choice.mmIndexPoints, PriceFormat40Choice.mmIndexPoints, PriceFormat39Choice.mmIndexPoints, SecuritiesTransactionPrice2Choice.mmBasisPoints,
 					PriceFormat48Choice.mmIndexPoints, PriceFormat51Choice.mmIndexPoints, PriceFormat49Choice.mmIndexPoints, PriceFormat47Choice.mmIndexPoints, PriceFormat44Choice.mmIndexPoints, RateAndAmountFormat38Choice.mmIndexPoints,
 					RateAndAmountFormat50Choice.mmIndexPoints, PriceFormat56Choice.mmIndexPoints, PriceFormat59Choice.mmIndexPoints, PriceFormat55Choice.mmIndexPoints, PriceFormat53Choice.mmIndexPoints, PriceFormat60Choice.mmIndexPoints);
-			elementContext_lazy = () -> Index.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Index.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexPoints";
@@ -551,6 +560,14 @@ public class Index {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Index.class.getMethod("getIndexPoints", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime indexFixingDate;
@@ -563,10 +580,6 @@ public class Index {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
-	 * Index}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -588,6 +601,10 @@ public class Index {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
+	 * Index}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -602,7 +619,7 @@ public class Index {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmIndexFixingDate, CorporateActionDate13.mmIndexFixingDate, CorporateActionDate14.mmIndexFixingDate, CorporateActionDate21.mmIndexFixingDate,
 					CorporateActionDate2.mmIndexFixingDate);
-			elementContext_lazy = () -> Index.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Index.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexFixingDate";
@@ -610,6 +627,14 @@ public class Index {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Index.class.getMethod("getIndexFixingDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text identification;
@@ -622,10 +647,6 @@ public class Index {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
-	 * Index}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -692,6 +713,10 @@ public class Index {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
+	 * Index}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -709,7 +734,7 @@ public class Index {
 					Identification13.mmIndexIdentification, Identification9.mmIndexIdentification, Identification3.mmIndexIdentification, FloatingRateNote1.mmReferenceRateIndex, FloatingInterestRate4.mmReferenceRate,
 					Identification15.mmIndexIdentification, Identification24.mmIndexIdentification, FloatingRateNote2.mmReferenceRateIndex, FloatingInterestRate6.mmReferenceRate, FloatingInterestRate8.mmReferenceRate,
 					CreditDefaultSwapDerivative3.mmUnderlyingIndexIdentification);
-			elementContext_lazy = () -> Index.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Index.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -717,6 +742,14 @@ public class Index {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Index.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text referenceSource;
@@ -730,10 +763,6 @@ public class Index {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
-	 * Index}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -745,6 +774,10 @@ public class Index {
 	 * CreditDefaultSwapDerivative3.mmIndexName}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
+	 * Index}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -761,7 +794,7 @@ public class Index {
 	public static final MMBusinessAttribute mmReferenceSource = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InterestChange1.mmRateResetSource, CreditDefaultSwapDerivative3.mmIndexName);
-			elementContext_lazy = () -> Index.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Index.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReferenceSource";
@@ -769,6 +802,14 @@ public class Index {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Index.class.getMethod("getReferenceSource", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyCode indexRateCurrency;
@@ -783,10 +824,6 @@ public class Index {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
-	 * Index}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -795,6 +832,10 @@ public class Index {
 	 * InterestChange1.mmIndexRateCurrency}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
+	 * Index}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -811,7 +852,7 @@ public class Index {
 	public static final MMBusinessAttribute mmIndexRateCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InterestChange1.mmIndexRateCurrency);
-			elementContext_lazy = () -> Index.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Index.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexRateCurrency";
@@ -819,6 +860,14 @@ public class Index {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Index.class.getMethod("getIndexRateCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected FrequencyCode indexRateFrequency;
@@ -832,10 +881,6 @@ public class Index {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FrequencyCode
 	 * FrequencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
-	 * Index}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -844,6 +889,10 @@ public class Index {
 	 * InterestChange1.mmIndexRateFrequency}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
+	 * Index}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -858,7 +907,7 @@ public class Index {
 	public static final MMBusinessAttribute mmIndexRateFrequency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InterestChange1.mmIndexRateFrequency);
-			elementContext_lazy = () -> Index.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Index.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexRateFrequency";
@@ -866,6 +915,14 @@ public class Index {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FrequencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Index.class.getMethod("getIndexRateFrequency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DecimalNumber indexRateMultiplier;
@@ -879,10 +936,6 @@ public class Index {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.DecimalNumber
 	 * DecimalNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
-	 * Index}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -898,6 +951,10 @@ public class Index {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Index
+	 * Index}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -911,7 +968,7 @@ public class Index {
 	public static final MMBusinessAttribute mmIndexRateMultiplier = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InterestChange1.mmIndexRateMultiplier, InterestRateContractTerm1.mmValue, InterestRateContractTerm2.mmValue);
-			elementContext_lazy = () -> Index.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Index.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexRateMultiplier";
@@ -919,6 +976,14 @@ public class Index {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Index.class.getMethod("getIndexRateMultiplier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Spread spread;
@@ -957,7 +1022,7 @@ public class Index {
 	 */
 	public static final MMBusinessAssociationEnd mmSpread = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Index.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Index.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Spread";
@@ -1005,7 +1070,7 @@ public class Index {
 	 */
 	public static final MMBusinessAssociationEnd mmPortfolioBenchmark = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Index.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Index.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PortfolioBenchmark";
@@ -1051,7 +1116,7 @@ public class Index {
 	 */
 	public static final MMBusinessAssociationEnd mmVariableInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Index.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Index.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VariableInterest";
@@ -1098,7 +1163,7 @@ public class Index {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesPricing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Index.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Index.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesPricing";
@@ -1121,9 +1186,17 @@ public class Index {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmIndex, com.tools20022.repository.entity.VariableInterest.mmIndex, com.tools20022.repository.entity.RateAndAmount.mmIndex,
 						com.tools20022.repository.entity.Spread.mmIndex, com.tools20022.repository.entity.PortfolioBenchmark.mmIndex);
 				derivationElement_lazy = () -> Arrays.asList(FloatingInterestRate4.mmTerm, CreditDefaultSwapDerivative3.mmIndex);
-				element_lazy = () -> Arrays.asList(Index.mmIndexRateBasis, Index.mmIndexFactor, Index.mmIndexPoints, Index.mmIndexFixingDate, Index.mmIdentification, Index.mmReferenceSource, Index.mmIndexRateCurrency,
-						Index.mmIndexRateFrequency, Index.mmIndexRateMultiplier, Index.mmSpread, Index.mmPortfolioBenchmark, Index.mmVariableInterest, Index.mmSecuritiesPricing);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Index.mmIndexRateBasis, com.tools20022.repository.entity.Index.mmIndexFactor, com.tools20022.repository.entity.Index.mmIndexPoints,
+						com.tools20022.repository.entity.Index.mmIndexFixingDate, com.tools20022.repository.entity.Index.mmIdentification, com.tools20022.repository.entity.Index.mmReferenceSource,
+						com.tools20022.repository.entity.Index.mmIndexRateCurrency, com.tools20022.repository.entity.Index.mmIndexRateFrequency, com.tools20022.repository.entity.Index.mmIndexRateMultiplier,
+						com.tools20022.repository.entity.Index.mmSpread, com.tools20022.repository.entity.Index.mmPortfolioBenchmark, com.tools20022.repository.entity.Index.mmVariableInterest,
+						com.tools20022.repository.entity.Index.mmSecuritiesPricing);
 				derivationComponent_lazy = () -> Arrays.asList(CreditDefaultSwapDerivative3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Index.class;
 			}
 		});
 		return mmObject_lazy.get();

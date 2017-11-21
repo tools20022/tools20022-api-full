@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the CA event.
@@ -182,6 +186,12 @@ import java.util.List;
  * definition} = "Provides information about the CA event."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateAction2", propOrder = {"eventStage", "defaultOptionType", "defaultOptionNumber", "calculationMethod", "backEndOddLotSecuritiesQuantity", "frontEndOddLotSecuritiesQuantity", "minimumExercisableSecuritiesQuantity",
+		"minimumExercisableMultipleSecuritiesQuantity", "incrementalDenomination", "newDenominationSecuritiesQuantity", "newBoardLotSecuritiesQuantity", "securitiesQuantitySought", "baseDenomination", "changeType", "offerType",
+		"restrictionIndicator", "partialElectionIndicator", "electionType", "lotteryType", "incomeType", "dividendType", "intermediateSecuritiesDistributionType", "couponNumber", "interestAccruedNumberOfDays", "newDenominationCurrency",
+		"dateDetails", "priceDetails", "periodDetails", "rateAndAmountDetails", "corporateActionAdditionalInformation", "certificationRequiredIndicator", "certificationType", "capitalGain", "taxableIncomePerShareCalculated",
+		"newPlaceOfIncorporation", "renounceableEntitlementStatusType", "conversionType", "redemptionChargesAppliedIndicator", "distributionType"})
 public class CorporateAction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -2126,6 +2136,7 @@ public class CorporateAction2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EvtStag")
 	public List<CorporateActionEventStage1FormatChoice> getEventStage() {
 		return eventStage;
 	}
@@ -2134,6 +2145,7 @@ public class CorporateAction2 {
 		this.eventStage = eventStage;
 	}
 
+	@XmlElement(name = "DfltOptnTp")
 	public CorporateActionOption1FormatChoice getDefaultOptionType() {
 		return defaultOptionType;
 	}
@@ -2142,6 +2154,7 @@ public class CorporateAction2 {
 		this.defaultOptionType = defaultOptionType;
 	}
 
+	@XmlElement(name = "DfltOptnNb")
 	public Exact3NumericText getDefaultOptionNumber() {
 		return defaultOptionNumber;
 	}
@@ -2150,6 +2163,7 @@ public class CorporateAction2 {
 		this.defaultOptionNumber = defaultOptionNumber;
 	}
 
+	@XmlElement(name = "ClctnMtd")
 	public CorporateActionCalculationMethod1FormatChoice getCalculationMethod() {
 		return calculationMethod;
 	}
@@ -2158,6 +2172,7 @@ public class CorporateAction2 {
 		this.calculationMethod = calculationMethod;
 	}
 
+	@XmlElement(name = "BckEndOddLotSctiesQty")
 	public UnitOrFaceAmountOrCode1Choice getBackEndOddLotSecuritiesQuantity() {
 		return backEndOddLotSecuritiesQuantity;
 	}
@@ -2166,6 +2181,7 @@ public class CorporateAction2 {
 		this.backEndOddLotSecuritiesQuantity = backEndOddLotSecuritiesQuantity;
 	}
 
+	@XmlElement(name = "FrntEndOddLotSctiesQty")
 	public UnitOrFaceAmountOrCode1Choice getFrontEndOddLotSecuritiesQuantity() {
 		return frontEndOddLotSecuritiesQuantity;
 	}
@@ -2174,6 +2190,7 @@ public class CorporateAction2 {
 		this.frontEndOddLotSecuritiesQuantity = frontEndOddLotSecuritiesQuantity;
 	}
 
+	@XmlElement(name = "MinExrcblSctiesQty")
 	public UnitOrFaceAmount1Choice getMinimumExercisableSecuritiesQuantity() {
 		return minimumExercisableSecuritiesQuantity;
 	}
@@ -2182,6 +2199,7 @@ public class CorporateAction2 {
 		this.minimumExercisableSecuritiesQuantity = minimumExercisableSecuritiesQuantity;
 	}
 
+	@XmlElement(name = "MinExrcblMltplSctiesQty")
 	public UnitOrFaceAmount1Choice getMinimumExercisableMultipleSecuritiesQuantity() {
 		return minimumExercisableMultipleSecuritiesQuantity;
 	}
@@ -2190,6 +2208,7 @@ public class CorporateAction2 {
 		this.minimumExercisableMultipleSecuritiesQuantity = minimumExercisableMultipleSecuritiesQuantity;
 	}
 
+	@XmlElement(name = "IncrmtlDnmtn")
 	public UnitOrFaceAmount1Choice getIncrementalDenomination() {
 		return incrementalDenomination;
 	}
@@ -2198,6 +2217,7 @@ public class CorporateAction2 {
 		this.incrementalDenomination = incrementalDenomination;
 	}
 
+	@XmlElement(name = "NewDnmtnSctiesQty")
 	public UnitOrFaceAmount1Choice getNewDenominationSecuritiesQuantity() {
 		return newDenominationSecuritiesQuantity;
 	}
@@ -2206,6 +2226,7 @@ public class CorporateAction2 {
 		this.newDenominationSecuritiesQuantity = newDenominationSecuritiesQuantity;
 	}
 
+	@XmlElement(name = "NewBrdLotSctiesQty")
 	public UnitOrFaceAmount1Choice getNewBoardLotSecuritiesQuantity() {
 		return newBoardLotSecuritiesQuantity;
 	}
@@ -2214,6 +2235,7 @@ public class CorporateAction2 {
 		this.newBoardLotSecuritiesQuantity = newBoardLotSecuritiesQuantity;
 	}
 
+	@XmlElement(name = "SctiesQtySght")
 	public UnitOrFaceAmountOrCode1Choice getSecuritiesQuantitySought() {
 		return securitiesQuantitySought;
 	}
@@ -2222,6 +2244,7 @@ public class CorporateAction2 {
 		this.securitiesQuantitySought = securitiesQuantitySought;
 	}
 
+	@XmlElement(name = "BaseDnmtn")
 	public UnitOrFaceAmount1Choice getBaseDenomination() {
 		return baseDenomination;
 	}
@@ -2230,6 +2253,7 @@ public class CorporateAction2 {
 		this.baseDenomination = baseDenomination;
 	}
 
+	@XmlElement(name = "ChngTp")
 	public List<CorporateActionChangeType1FormatChoice> getChangeType() {
 		return changeType;
 	}
@@ -2238,6 +2262,7 @@ public class CorporateAction2 {
 		this.changeType = changeType;
 	}
 
+	@XmlElement(name = "OfferTp")
 	public List<OfferType1FormatChoice> getOfferType() {
 		return offerType;
 	}
@@ -2246,6 +2271,7 @@ public class CorporateAction2 {
 		this.offerType = offerType;
 	}
 
+	@XmlElement(name = "RstrctnInd")
 	public YesNoIndicator getRestrictionIndicator() {
 		return restrictionIndicator;
 	}
@@ -2254,6 +2280,7 @@ public class CorporateAction2 {
 		this.restrictionIndicator = restrictionIndicator;
 	}
 
+	@XmlElement(name = "PrtlElctnInd")
 	public YesNoIndicator getPartialElectionIndicator() {
 		return partialElectionIndicator;
 	}
@@ -2262,6 +2289,7 @@ public class CorporateAction2 {
 		this.partialElectionIndicator = partialElectionIndicator;
 	}
 
+	@XmlElement(name = "ElctnTp")
 	public ElectionMovementType1FormatChoice getElectionType() {
 		return electionType;
 	}
@@ -2270,6 +2298,7 @@ public class CorporateAction2 {
 		this.electionType = electionType;
 	}
 
+	@XmlElement(name = "LtryTp")
 	public LotteryType1FormatChoice getLotteryType() {
 		return lotteryType;
 	}
@@ -2278,6 +2307,7 @@ public class CorporateAction2 {
 		this.lotteryType = lotteryType;
 	}
 
+	@XmlElement(name = "IncmTp")
 	public GenericIdentification13 getIncomeType() {
 		return incomeType;
 	}
@@ -2286,6 +2316,7 @@ public class CorporateAction2 {
 		this.incomeType = incomeType;
 	}
 
+	@XmlElement(name = "DvddTp")
 	public CorporateActionFrequencyType1FormatChoice getDividendType() {
 		return dividendType;
 	}
@@ -2294,6 +2325,7 @@ public class CorporateAction2 {
 		this.dividendType = dividendType;
 	}
 
+	@XmlElement(name = "IntrmdtSctiesDstrbtnTp")
 	public IntermediateSecurityDistributionType1FormatChoice getIntermediateSecuritiesDistributionType() {
 		return intermediateSecuritiesDistributionType;
 	}
@@ -2302,6 +2334,7 @@ public class CorporateAction2 {
 		this.intermediateSecuritiesDistributionType = intermediateSecuritiesDistributionType;
 	}
 
+	@XmlElement(name = "CpnNb")
 	public List<Max3NumericText> getCouponNumber() {
 		return couponNumber;
 	}
@@ -2310,6 +2343,7 @@ public class CorporateAction2 {
 		this.couponNumber = couponNumber;
 	}
 
+	@XmlElement(name = "IntrstAcrdNbOfDays")
 	public Number getInterestAccruedNumberOfDays() {
 		return interestAccruedNumberOfDays;
 	}
@@ -2318,6 +2352,7 @@ public class CorporateAction2 {
 		this.interestAccruedNumberOfDays = interestAccruedNumberOfDays;
 	}
 
+	@XmlElement(name = "NewDnmtnCcy")
 	public ActiveCurrencyCode getNewDenominationCurrency() {
 		return newDenominationCurrency;
 	}
@@ -2326,6 +2361,7 @@ public class CorporateAction2 {
 		this.newDenominationCurrency = newDenominationCurrency;
 	}
 
+	@XmlElement(name = "DtDtls")
 	public CorporateActionDate2 getDateDetails() {
 		return dateDetails;
 	}
@@ -2334,6 +2370,7 @@ public class CorporateAction2 {
 		this.dateDetails = dateDetails;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public List<CorporateActionPrice2> getPriceDetails() {
 		return priceDetails;
 	}
@@ -2342,6 +2379,7 @@ public class CorporateAction2 {
 		this.priceDetails = priceDetails;
 	}
 
+	@XmlElement(name = "PrdDtls")
 	public CorporateActionPeriod1 getPeriodDetails() {
 		return periodDetails;
 	}
@@ -2350,6 +2388,7 @@ public class CorporateAction2 {
 		this.periodDetails = periodDetails;
 	}
 
+	@XmlElement(name = "RateAndAmtDtls")
 	public CorporateActionRate1 getRateAndAmountDetails() {
 		return rateAndAmountDetails;
 	}
@@ -2358,6 +2397,7 @@ public class CorporateAction2 {
 		this.rateAndAmountDetails = rateAndAmountDetails;
 	}
 
+	@XmlElement(name = "CorpActnAddtlInf")
 	public CorporateActionNarrative1 getCorporateActionAdditionalInformation() {
 		return corporateActionAdditionalInformation;
 	}
@@ -2366,6 +2406,7 @@ public class CorporateAction2 {
 		this.corporateActionAdditionalInformation = corporateActionAdditionalInformation;
 	}
 
+	@XmlElement(name = "CertfctnReqrdInd")
 	public YesNoIndicator getCertificationRequiredIndicator() {
 		return certificationRequiredIndicator;
 	}
@@ -2374,6 +2415,7 @@ public class CorporateAction2 {
 		this.certificationRequiredIndicator = certificationRequiredIndicator;
 	}
 
+	@XmlElement(name = "CertfctnTp")
 	public BeneficiaryCertificationType1FormatChoice getCertificationType() {
 		return certificationType;
 	}
@@ -2382,6 +2424,7 @@ public class CorporateAction2 {
 		this.certificationType = certificationType;
 	}
 
+	@XmlElement(name = "CptlGn")
 	public EUCapitalGain2Code getCapitalGain() {
 		return capitalGain;
 	}
@@ -2390,6 +2433,7 @@ public class CorporateAction2 {
 		this.capitalGain = capitalGain;
 	}
 
+	@XmlElement(name = "TaxblIncmPerShrClctd")
 	public TaxableIncomePerShareCalculated2Code getTaxableIncomePerShareCalculated() {
 		return taxableIncomePerShareCalculated;
 	}
@@ -2398,6 +2442,7 @@ public class CorporateAction2 {
 		this.taxableIncomePerShareCalculated = taxableIncomePerShareCalculated;
 	}
 
+	@XmlElement(name = "NewPlcOfIncorprtn")
 	public Max70Text getNewPlaceOfIncorporation() {
 		return newPlaceOfIncorporation;
 	}
@@ -2406,6 +2451,7 @@ public class CorporateAction2 {
 		this.newPlaceOfIncorporation = newPlaceOfIncorporation;
 	}
 
+	@XmlElement(name = "RnncblEntitlmntStsTp")
 	public RenounceableStatus1FormatChoice getRenounceableEntitlementStatusType() {
 		return renounceableEntitlementStatusType;
 	}
@@ -2414,6 +2460,7 @@ public class CorporateAction2 {
 		this.renounceableEntitlementStatusType = renounceableEntitlementStatusType;
 	}
 
+	@XmlElement(name = "ConvsTp")
 	public ConversionType1FormatChoice getConversionType() {
 		return conversionType;
 	}
@@ -2422,6 +2469,7 @@ public class CorporateAction2 {
 		this.conversionType = conversionType;
 	}
 
+	@XmlElement(name = "RedChrgsApldInd")
 	public YesNoIndicator getRedemptionChargesAppliedIndicator() {
 		return redemptionChargesAppliedIndicator;
 	}
@@ -2430,6 +2478,7 @@ public class CorporateAction2 {
 		this.redemptionChargesAppliedIndicator = redemptionChargesAppliedIndicator;
 	}
 
+	@XmlElement(name = "DstrbtnTp")
 	public DistributionType1FormatChoice getDistributionType() {
 		return distributionType;
 	}

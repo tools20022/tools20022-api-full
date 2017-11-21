@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the conditions for the NDF opening.
@@ -68,6 +72,8 @@ import java.util.List;
  * definition} = "Specifies the conditions for the NDF opening."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OpeningConditions1", propOrder = {"settlementCurrency", "valuationDate", "settlementRateSource"})
 public class OpeningConditions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -231,6 +237,7 @@ public class OpeningConditions1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -239,6 +246,7 @@ public class OpeningConditions1 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "ValtnDt", required = true)
 	public ISODate getValuationDate() {
 		return valuationDate;
 	}
@@ -247,6 +255,7 @@ public class OpeningConditions1 {
 		this.valuationDate = valuationDate;
 	}
 
+	@XmlElement(name = "SttlmRateSrc", required = true)
 	public List<SettlementRateSource1> getSettlementRateSource() {
 		return settlementRateSource;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.CorrectiveInterbankTransaction1;
 import com.tools20022.repository.msg.CorrectivePaymentInitiation2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the corrective transaction on which the investigation is processed.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorrectiveTransaction1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorrectiveTransaction2Choice", propOrder = {"initiation", "interbank"})
 public class CorrectiveTransaction2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -210,6 +216,7 @@ public class CorrectiveTransaction2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Initn", required = true)
 	public CorrectivePaymentInitiation2 getInitiation() {
 		return initiation;
 	}
@@ -218,6 +225,7 @@ public class CorrectiveTransaction2Choice {
 		this.initiation = initiation;
 	}
 
+	@XmlElement(name = "IntrBk", required = true)
 	public CorrectiveInterbankTransaction1 getInterbank() {
 		return interbank;
 	}

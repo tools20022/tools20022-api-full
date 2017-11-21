@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.IndustrialProductCommodityConstruction1;
 import com.tools20022.repository.msg.IndustrialProductCommodityManufacturing1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines commodity attributes of a derivative where the type is industrial
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AssetClassCommodityIndustrialProduct1Choice", propOrder = {"construction", "manufacturing"})
 public class AssetClassCommodityIndustrialProduct1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -180,6 +186,7 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cnstrctn", required = true)
 	public IndustrialProductCommodityConstruction1 getConstruction() {
 		return construction;
 	}
@@ -188,6 +195,7 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 		this.construction = construction;
 	}
 
+	@XmlElement(name = "Manfctg", required = true)
 	public IndustrialProductCommodityManufacturing1 getManufacturing() {
 		return manufacturing;
 	}

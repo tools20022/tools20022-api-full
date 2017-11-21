@@ -27,9 +27,11 @@ import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestvers
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion;
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20162017;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -65,9 +67,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.030.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
@@ -113,6 +112,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.030.001.04}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -128,6 +130,8 @@ import java.util.List;
  * NotificationOfCaseAssignmentV03}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NotificationOfCaseAssignmentV04", propOrder = {"header", "case", "assignment", "notification", "supplementaryData"})
 public class NotificationOfCaseAssignmentV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +171,14 @@ public class NotificationOfCaseAssignmentV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> ReportHeader4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationOfCaseAssignmentV04.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Case3 case_;
 	/**
@@ -199,6 +211,14 @@ public class NotificationOfCaseAssignmentV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Case3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationOfCaseAssignmentV04.class.getMethod("getCase", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CaseAssignment3 assignment;
@@ -238,6 +258,14 @@ public class NotificationOfCaseAssignmentV04 {
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationOfCaseAssignmentV04.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CaseForwardingNotification3 notification;
 	/**
@@ -272,6 +300,14 @@ public class NotificationOfCaseAssignmentV04 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CaseForwardingNotification3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationOfCaseAssignmentV04.class.getMethod("getNotification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -310,6 +346,14 @@ public class NotificationOfCaseAssignmentV04 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return NotificationOfCaseAssignmentV04.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -324,8 +368,9 @@ public class NotificationOfCaseAssignmentV04 {
 				rootElement = "Document";
 				xmlTag = "NtfctnOfCaseAssgnmt";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(NotificationOfCaseAssignmentV04.mmHeader, NotificationOfCaseAssignmentV04.mmCase, NotificationOfCaseAssignmentV04.mmAssignment, NotificationOfCaseAssignmentV04.mmNotification,
-						NotificationOfCaseAssignmentV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV04.mmHeader, com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV04.mmCase,
+						com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV04.mmAssignment, com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV04.mmNotification,
+						com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
@@ -335,10 +380,16 @@ public class NotificationOfCaseAssignmentV04 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return NotificationOfCaseAssignmentV04.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public ReportHeader4 getHeader() {
 		return header;
 	}
@@ -347,6 +398,7 @@ public class NotificationOfCaseAssignmentV04 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "Case", required = true)
 	public Case3 getCase() {
 		return case_;
 	}
@@ -355,6 +407,7 @@ public class NotificationOfCaseAssignmentV04 {
 		this.case_ = case_;
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment3 getAssignment() {
 		return assignment;
 	}
@@ -363,6 +416,7 @@ public class NotificationOfCaseAssignmentV04 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "Ntfctn", required = true)
 	public CaseForwardingNotification3 getNotification() {
 		return notification;
 	}
@@ -371,11 +425,18 @@ public class NotificationOfCaseAssignmentV04 {
 		this.notification = notification;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.030.04.04")
+	static public class Document {
+		@XmlElement(name = "NtfctnOfCaseAssgnmt", required = true)
+		public NotificationOfCaseAssignmentV04 messageBody;
 	}
 }

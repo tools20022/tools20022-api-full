@@ -67,6 +67,11 @@ public class LegalRepresentative extends Role {
 				definition = "Person that is officially and legally mandated to represent the organisation. Depending on legislation, the legal representative(s) might for instance be assigned by the Board, identified in the by-laws of the organisation, be publicly announced in the official journal of a country.";
 				superType_lazy = () -> Role.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return LegalRepresentative.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * New standing order values.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "New standing order values."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingOrderDetails1", propOrder = {"amount", "creditAccount", "debitAccount", "frequency", "validityPeriod"})
 public class StandingOrderDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -338,6 +344,7 @@ public class StandingOrderDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt")
 	public AmountChoice getAmount() {
 		return amount;
 	}
@@ -346,6 +353,7 @@ public class StandingOrderDetails1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtAcct")
 	public AccountIdentificationDetails getCreditAccount() {
 		return creditAccount;
 	}
@@ -354,6 +362,7 @@ public class StandingOrderDetails1 {
 		this.creditAccount = creditAccount;
 	}
 
+	@XmlElement(name = "DbtAcct")
 	public AccountIdentificationDetails getDebitAccount() {
 		return debitAccount;
 	}
@@ -362,6 +371,7 @@ public class StandingOrderDetails1 {
 		this.debitAccount = debitAccount;
 	}
 
+	@XmlElement(name = "Frqcy")
 	public Frequency2Code getFrequency() {
 		return frequency;
 	}
@@ -370,6 +380,7 @@ public class StandingOrderDetails1 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "VldtyPrd")
 	public DatePeriodDetails2Choice getValidityPeriod() {
 		return validityPeriod;
 	}

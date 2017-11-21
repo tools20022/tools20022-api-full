@@ -65,6 +65,11 @@ public class VoteRevocabilityDeadline extends MeetingDeadline {
 				definition = "Specifies the different deadlines available for revoking a casted vote.";
 				superType_lazy = () -> MeetingDeadline.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return VoteRevocabilityDeadline.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

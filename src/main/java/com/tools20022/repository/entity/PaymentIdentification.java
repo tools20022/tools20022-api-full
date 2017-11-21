@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,6 +41,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmExecutionIdentification
+ * PaymentIdentification.mmExecutionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmEndToEndIdentification
+ * PaymentIdentification.mmEndToEndIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmInstructionIdentification
+ * PaymentIdentification.mmInstructionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmTransactionIdentification
+ * PaymentIdentification.mmTransactionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmClearingSystemReference
+ * PaymentIdentification.mmClearingSystemReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmCreditorReference
+ * PaymentIdentification.mmCreditorReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmPayment
+ * PaymentIdentification.mmPayment}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.TradeIdentification
+ * TradeIdentification}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -82,36 +113,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Payment.mmPaymentRelatedIdentifications}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.TradeIdentification
- * TradeIdentification}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmExecutionIdentification
- * PaymentIdentification.mmExecutionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmEndToEndIdentification
- * PaymentIdentification.mmEndToEndIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmInstructionIdentification
- * PaymentIdentification.mmInstructionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmTransactionIdentification
- * PaymentIdentification.mmTransactionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmClearingSystemReference
- * PaymentIdentification.mmClearingSystemReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmCreditorReference
- * PaymentIdentification.mmCreditorReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmPayment
- * PaymentIdentification.mmPayment}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -143,11 +144,6 @@ public class PaymentIdentification extends TradeIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
-	 * PaymentIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -604,6 +600,11 @@ public class PaymentIdentification extends TradeIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
+	 * PaymentIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -657,7 +658,7 @@ public class PaymentIdentification extends TradeIdentification {
 					OriginalMessage2.mmOriginalMessageIdentification, OriginalMessage3.mmOriginalMessageIdentification, OriginalGroupInformation27.mmOriginalMessageIdentification, OriginalGroupHeader7.mmOriginalMessageIdentification,
 					RequestedModification6.mmInstructionIdentification, OriginalGroupInformation28.mmOriginalMessageIdentification, OriginalPaymentInstruction22.mmOriginalPaymentInformationCancellationIdentification,
 					OriginalPaymentInstruction20.mmPaymentCancellationIdentification, UnderlyingPaymentInstruction3.mmOriginalPaymentInformationIdentification, OriginalGroupHeader6.mmOriginalMessageIdentification);
-			elementContext_lazy = () -> PaymentIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExecutionIdentification";
@@ -665,6 +666,14 @@ public class PaymentIdentification extends TradeIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentIdentification.class.getMethod("getExecutionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text endToEndIdentification;
@@ -679,11 +688,6 @@ public class PaymentIdentification extends TradeIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
-	 * PaymentIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1116,6 +1120,11 @@ public class PaymentIdentification extends TradeIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
+	 * PaymentIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1171,7 +1180,7 @@ public class PaymentIdentification extends TradeIdentification {
 					PaymentTransaction83.mmOriginalEndToEndIdentification, PaymentTransaction77.mmOriginalEndToEndIdentification, CorrectivePaymentInitiation2.mmEndToEndIdentification,
 					UnderlyingPaymentInstruction3.mmOriginalEndToEndIdentification, PaymentTransaction75.mmOriginalEndToEndIdentification, PaymentTransaction82.mmOriginalEndToEndIdentification,
 					PaymentTransaction79.mmOriginalEndToEndIdentification, PaymentComplementaryInformation6.mmEndToEndIdentification);
-			elementContext_lazy = () -> PaymentIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EndToEndIdentification";
@@ -1179,6 +1188,14 @@ public class PaymentIdentification extends TradeIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentIdentification.class.getMethod("getEndToEndIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text instructionIdentification;
@@ -1192,11 +1209,6 @@ public class PaymentIdentification extends TradeIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
-	 * PaymentIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1527,6 +1539,11 @@ public class PaymentIdentification extends TradeIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
+	 * PaymentIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1577,7 +1594,7 @@ public class PaymentIdentification extends TradeIdentification {
 					PaymentTransaction74.mmOriginalInstructionIdentification, PaymentTransaction83.mmOriginalInstructionIdentification, PaymentTransaction77.mmOriginalInstructionIdentification,
 					CorrectivePaymentInitiation2.mmInstructionIdentification, UnderlyingPaymentInstruction3.mmOriginalInstructionIdentification, PaymentTransaction75.mmOriginalInstructionIdentification,
 					PaymentTransaction82.mmOriginalInstructionIdentification, PaymentTransaction79.mmOriginalInstructionIdentification, PaymentComplementaryInformation6.mmInstructionIdentification);
-			elementContext_lazy = () -> PaymentIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstructionIdentification";
@@ -1585,6 +1602,14 @@ public class PaymentIdentification extends TradeIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentIdentification.class.getMethod("getInstructionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text transactionIdentification;
@@ -1599,11 +1624,6 @@ public class PaymentIdentification extends TradeIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
-	 * PaymentIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1820,6 +1840,11 @@ public class PaymentIdentification extends TradeIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
+	 * PaymentIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1857,7 +1882,7 @@ public class PaymentIdentification extends TradeIdentification {
 					PaymentTransaction62.mmOriginalTransactionIdentification, PaymentTransaction73.mmOriginalTransactionIdentification, PaymentTransaction80.mmOriginalTransactionIdentification,
 					PaymentTransaction81.mmOriginalTransactionIdentification, PaymentTransaction76.mmOriginalTransactionIdentification, PaymentTransaction75.mmOriginalTransactionIdentification,
 					PaymentTransaction79.mmOriginalTransactionIdentification, PaymentComplementaryInformation6.mmTransactionIdentification);
-			elementContext_lazy = () -> PaymentIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionIdentification";
@@ -1865,6 +1890,14 @@ public class PaymentIdentification extends TradeIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentIdentification.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text clearingSystemReference;
@@ -1878,11 +1911,6 @@ public class PaymentIdentification extends TradeIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
-	 * PaymentIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2030,6 +2058,11 @@ public class PaymentIdentification extends TradeIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
+	 * PaymentIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2058,7 +2091,7 @@ public class PaymentIdentification extends TradeIdentification {
 					PaymentTransaction69.mmClearingSystemReference, PaymentTransaction73.mmClearingSystemReference, PaymentTransaction80.mmClearingSystemReference, PaymentTransaction81.mmOriginalClearingSystemReference,
 					PaymentTransaction76.mmOriginalClearingSystemReference, PaymentTransaction83.mmClearingSystemReference, PaymentTransaction75.mmOriginalClearingSystemReference, PaymentTransaction82.mmClearingSystemReference,
 					PaymentTransaction79.mmOriginalClearingSystemReference);
-			elementContext_lazy = () -> PaymentIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingSystemReference";
@@ -2066,6 +2099,14 @@ public class PaymentIdentification extends TradeIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentIdentification.class.getMethod("getClearingSystemReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text creditorReference;
@@ -2079,11 +2120,6 @@ public class PaymentIdentification extends TradeIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
-	 * PaymentIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2135,6 +2171,11 @@ public class PaymentIdentification extends TradeIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
+	 * PaymentIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2154,7 +2195,7 @@ public class PaymentIdentification extends TradeIdentification {
 					CreditTransfer3.mmReference, CreditTransfer4.mmReference, CreditTransfer6.mmReference, StructuredRemittanceInformation2.mmCreditorReference, TradeSettlement1.mmCreditorReference,
 					StructuredRemittanceInformation10.mmCreditorReferenceInformation, StructuredRemittanceInformation12.mmCreditorReferenceInformation, StructuredRemittanceInformation13.mmCreditorReferenceInformation,
 					CreditTransfer8.mmReference);
-			elementContext_lazy = () -> PaymentIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditorReference";
@@ -2162,6 +2203,14 @@ public class PaymentIdentification extends TradeIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentIdentification.class.getMethod("getCreditorReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Payment payment;
@@ -2199,7 +2248,7 @@ public class PaymentIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PaymentIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
@@ -2221,11 +2270,18 @@ public class PaymentIdentification extends TradeIdentification {
 				definition = "Specifies the different identifications associated with a payment transaction.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.mmPaymentRelatedIdentifications);
 				superType_lazy = () -> TradeIdentification.mmObject();
-				element_lazy = () -> Arrays.asList(PaymentIdentification.mmExecutionIdentification, PaymentIdentification.mmEndToEndIdentification, PaymentIdentification.mmInstructionIdentification,
-						PaymentIdentification.mmTransactionIdentification, PaymentIdentification.mmClearingSystemReference, PaymentIdentification.mmCreditorReference, PaymentIdentification.mmPayment);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification, com.tools20022.repository.entity.PaymentIdentification.mmEndToEndIdentification,
+						com.tools20022.repository.entity.PaymentIdentification.mmInstructionIdentification, com.tools20022.repository.entity.PaymentIdentification.mmTransactionIdentification,
+						com.tools20022.repository.entity.PaymentIdentification.mmClearingSystemReference, com.tools20022.repository.entity.PaymentIdentification.mmCreditorReference,
+						com.tools20022.repository.entity.PaymentIdentification.mmPayment);
 				derivationComponent_lazy = () -> Arrays.asList(PaymentIdentificationChoice.mmObject(), PaymentIdentification2Choice.mmObject(), PaymentIdentification3Choice.mmObject(), PaymentIdentification4Choice.mmObject(),
 						PaymentIdentification1.mmObject(), CreditorReferenceInformation1.mmObject(), CreditorReferenceInformation2.mmObject(), PaymentIdentification2.mmObject(), PaymentIdentification3.mmObject(),
 						PaymentIdentification4.mmObject(), TransactionReferences4.mmObject(), CertificateIdentification1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PaymentIdentification.class;
 			}
 		});
 		return mmObject_lazy.get();

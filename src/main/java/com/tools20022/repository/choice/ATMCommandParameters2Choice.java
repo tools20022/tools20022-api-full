@@ -30,6 +30,10 @@ import com.tools20022.repository.msg.ATMConfigurationParameter1;
 import com.tools20022.repository.msg.ATMConfigurationParameter2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specific parameters attached to an ATM command.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMCommandParameters1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCommandParameters2Choice", propOrder = {"ATMRequiredGlobalStatus", "expectedMessageFunction", "requiredConfigurationParameter", "requiredSecurityScheme", "securityDevice", "key"})
 public class ATMCommandParameters2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -374,6 +380,7 @@ public class ATMCommandParameters2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ATMReqrdGblSts", required = true)
 	public ATMStatus1Code getATMRequiredGlobalStatus() {
 		return aTMRequiredGlobalStatus;
 	}
@@ -382,6 +389,7 @@ public class ATMCommandParameters2Choice {
 		this.aTMRequiredGlobalStatus = aTMRequiredGlobalStatus;
 	}
 
+	@XmlElement(name = "XpctdMsgFctn", required = true)
 	public MessageFunction8Code getExpectedMessageFunction() {
 		return expectedMessageFunction;
 	}
@@ -390,6 +398,7 @@ public class ATMCommandParameters2Choice {
 		this.expectedMessageFunction = expectedMessageFunction;
 	}
 
+	@XmlElement(name = "ReqrdCfgtnParam", required = true)
 	public ATMConfigurationParameter1 getRequiredConfigurationParameter() {
 		return requiredConfigurationParameter;
 	}
@@ -398,6 +407,7 @@ public class ATMCommandParameters2Choice {
 		this.requiredConfigurationParameter = requiredConfigurationParameter;
 	}
 
+	@XmlElement(name = "ReqrdSctySchme", required = true)
 	public ATMSecurityScheme2Code getRequiredSecurityScheme() {
 		return requiredSecurityScheme;
 	}
@@ -406,6 +416,7 @@ public class ATMCommandParameters2Choice {
 		this.requiredSecurityScheme = requiredSecurityScheme;
 	}
 
+	@XmlElement(name = "SctyDvc", required = true)
 	public ATMCommandParameters1 getSecurityDevice() {
 		return securityDevice;
 	}
@@ -414,6 +425,7 @@ public class ATMCommandParameters2Choice {
 		this.securityDevice = securityDevice;
 	}
 
+	@XmlElement(name = "Key", required = true)
 	public ATMConfigurationParameter2 getKey() {
 		return key;
 	}

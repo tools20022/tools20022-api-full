@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reference of a transfer and of a transfer cancellation.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransferReference1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferReference8", propOrder = {"transferReference", "cancellationReference", "transferConfirmationReference"})
 public class TransferReference8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -238,6 +244,7 @@ public class TransferReference8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
@@ -246,6 +253,7 @@ public class TransferReference8 {
 		this.transferReference = transferReference;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -254,6 +262,7 @@ public class TransferReference8 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "TrfConfRef")
 	public Max35Text getTransferConfirmationReference() {
 		return transferConfirmationReference;
 	}

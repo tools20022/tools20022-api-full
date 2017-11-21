@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates how the amount of the investment plan is split amongst the funds.
@@ -79,6 +83,8 @@ import java.util.function.Supplier;
  * Repartition2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Repartition3", propOrder = {"quantity", "financialInstrument", "currencyOfPlan"})
 public class Repartition3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -286,6 +292,7 @@ public class Repartition3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public UnitsOrAmountOrPercentage1Choice getQuantity() {
 		return quantity;
 	}
@@ -294,6 +301,7 @@ public class Repartition3 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "FinInstrm", required = true)
 	public FinancialInstrument29 getFinancialInstrument() {
 		return financialInstrument;
 	}
@@ -302,6 +310,7 @@ public class Repartition3 {
 		this.financialInstrument = financialInstrument;
 	}
 
+	@XmlElement(name = "CcyOfPlan")
 	public CurrencyCode getCurrencyOfPlan() {
 		return currencyOfPlan;
 	}

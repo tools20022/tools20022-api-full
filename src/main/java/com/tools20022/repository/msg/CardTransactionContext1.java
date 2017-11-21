@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Context in which the card transaction is performed.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardTransactionContext1", propOrder = {"transactionContext", "saleContext"})
 public class CardTransactionContext1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -191,6 +197,7 @@ public class CardTransactionContext1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxCntxt", required = true)
 	public CardTransactionContext2 getTransactionContext() {
 		return transactionContext;
 	}
@@ -199,6 +206,7 @@ public class CardTransactionContext1 {
 		this.transactionContext = transactionContext;
 	}
 
+	@XmlElement(name = "SaleCntxt")
 	public SaleContext1 getSaleContext() {
 		return saleContext;
 	}

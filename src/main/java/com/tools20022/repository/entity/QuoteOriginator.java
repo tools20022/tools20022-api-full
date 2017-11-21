@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Quote1;
 import com.tools20022.repository.msg.Quote3;
 import com.tools20022.repository.msg.Quote4;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,24 +39,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Quote1#mmQuoteOriginator
- * Quote1.mmQuoteOriginator}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InformationPartyRole
- * InformationPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
  * <li>
  * {@linkplain com.tools20022.repository.entity.QuoteOriginator#mmQuoteOriginatorType
  * QuoteOriginator.mmQuoteOriginatorType}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InformationPartyRole
+ * InformationPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Quote1#mmQuoteOriginator
+ * Quote1.mmQuoteOriginator}</li>
  * </ul>
  * </li>
  * <li>
@@ -87,11 +88,6 @@ public class QuoteOriginator extends InformationPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OriginatorRoleCode
 	 * OriginatorRoleCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.QuoteOriginator
-	 * QuoteOriginator}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -106,6 +102,11 @@ public class QuoteOriginator extends InformationPartyRole {
 	 * Quote4.mmQuoteOriginatorRole}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.QuoteOriginator
+	 * QuoteOriginator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -122,7 +123,7 @@ public class QuoteOriginator extends InformationPartyRole {
 	public static final MMBusinessAttribute mmQuoteOriginatorType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Quote3.mmQuoteOriginatorRole, Quote1.mmQuoteOriginatorRole, Quote4.mmQuoteOriginatorRole);
-			elementContext_lazy = () -> QuoteOriginator.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.QuoteOriginator.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuoteOriginatorType";
@@ -130,6 +131,14 @@ public class QuoteOriginator extends InformationPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OriginatorRoleCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return QuoteOriginator.class.getMethod("getQuoteOriginatorType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -142,7 +151,12 @@ public class QuoteOriginator extends InformationPartyRole {
 				definition = "Originator of the quote.";
 				derivationElement_lazy = () -> Arrays.asList(Quote1.mmQuoteOriginator);
 				superType_lazy = () -> InformationPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(QuoteOriginator.mmQuoteOriginatorType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.QuoteOriginator.mmQuoteOriginatorType);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return QuoteOriginator.class;
 			}
 		});
 		return mmObject_lazy.get();

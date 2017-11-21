@@ -32,6 +32,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Net position of a segregated holding, in a single security, within the
@@ -127,6 +131,9 @@ import java.util.List;
  * AggregateBalancePerSafekeepingPlace20}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AggregateBalancePerSafekeepingPlace24", propOrder = {"safekeepingPlace", "placeOfListing", "pledgee", "aggregateBalance", "availableBalance", "notAvailableBalance", "priceDetails", "foreignExchangeDetails", "daysAccrued",
+		"accountBaseCurrencyAmounts", "instrumentCurrencyAmounts", "quantityBreakdown", "exposureType", "balanceBreakdown", "additionalBalanceBreakdown", "holdingAdditionalDetails"})
 public class AggregateBalancePerSafekeepingPlace24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1168,6 +1175,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SfkpgPlc", required = true)
 	public SafekeepingPlaceFormat3Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -1176,6 +1184,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "PlcOfListg")
 	public MarketIdentification3Choice getPlaceOfListing() {
 		return placeOfListing;
 	}
@@ -1184,6 +1193,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		this.placeOfListing = placeOfListing;
 	}
 
+	@XmlElement(name = "Pldgee")
 	public PledgeeFormat1Choice getPledgee() {
 		return pledgee;
 	}
@@ -1192,6 +1202,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		this.pledgee = pledgee;
 	}
 
+	@XmlElement(name = "AggtBal", required = true)
 	public Balance1 getAggregateBalance() {
 		return aggregateBalance;
 	}
@@ -1200,6 +1211,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		this.aggregateBalance = aggregateBalance;
 	}
 
+	@XmlElement(name = "AvlblBal")
 	public BalanceQuantity5Choice getAvailableBalance() {
 		return availableBalance;
 	}
@@ -1208,6 +1220,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		this.availableBalance = availableBalance;
 	}
 
+	@XmlElement(name = "NotAvlblBal")
 	public BalanceQuantity5Choice getNotAvailableBalance() {
 		return notAvailableBalance;
 	}
@@ -1216,6 +1229,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		this.notAvailableBalance = notAvailableBalance;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public List<PriceInformation5> getPriceDetails() {
 		return priceDetails;
 	}
@@ -1224,6 +1238,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		this.priceDetails = priceDetails;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public List<ForeignExchangeTerms14> getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -1232,6 +1247,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "DaysAcrd")
 	public Number getDaysAccrued() {
 		return daysAccrued;
 	}
@@ -1240,6 +1256,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		this.daysAccrued = daysAccrued;
 	}
 
+	@XmlElement(name = "AcctBaseCcyAmts")
 	public BalanceAmounts3 getAccountBaseCurrencyAmounts() {
 		return accountBaseCurrencyAmounts;
 	}
@@ -1248,6 +1265,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		this.accountBaseCurrencyAmounts = accountBaseCurrencyAmounts;
 	}
 
+	@XmlElement(name = "InstrmCcyAmts")
 	public BalanceAmounts3 getInstrumentCurrencyAmounts() {
 		return instrumentCurrencyAmounts;
 	}
@@ -1256,6 +1274,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		this.instrumentCurrencyAmounts = instrumentCurrencyAmounts;
 	}
 
+	@XmlElement(name = "QtyBrkdwn")
 	public List<QuantityBreakdown23> getQuantityBreakdown() {
 		return quantityBreakdown;
 	}
@@ -1264,6 +1283,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		this.quantityBreakdown = quantityBreakdown;
 	}
 
+	@XmlElement(name = "XpsrTp")
 	public ExposureType12Choice getExposureType() {
 		return exposureType;
 	}
@@ -1272,6 +1292,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		this.exposureType = exposureType;
 	}
 
+	@XmlElement(name = "BalBrkdwn")
 	public List<SubBalanceInformation11> getBalanceBreakdown() {
 		return balanceBreakdown;
 	}
@@ -1280,6 +1301,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		this.balanceBreakdown = balanceBreakdown;
 	}
 
+	@XmlElement(name = "AddtlBalBrkdwn")
 	public List<AdditionalBalanceInformation11> getAdditionalBalanceBreakdown() {
 		return additionalBalanceBreakdown;
 	}
@@ -1288,6 +1310,7 @@ public class AggregateBalancePerSafekeepingPlace24 {
 		this.additionalBalanceBreakdown = additionalBalanceBreakdown;
 	}
 
+	@XmlElement(name = "HldgAddtlDtls")
 	public Max350Text getHoldingAdditionalDetails() {
 		return holdingAdditionalDetails;
 	}

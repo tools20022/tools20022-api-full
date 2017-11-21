@@ -34,6 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} =
  * "US Federal Reserve Bank ; FedwireRoutingNumberIdentifier"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "FW[0-9]{9,9}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -70,6 +72,7 @@ public class FedwireRoutingNumberIdentifier {
 				name = "FedwireRoutingNumberIdentifier";
 				definition = "Fedwire Routing Number. Identifies financial institutions, in the US, on the FedWire system. The routing number is assigned by the American Bankers Association (ABA).";
 				identificationScheme = "US Federal Reserve Bank ; FedwireRoutingNumberIdentifier";
+				pattern = "FW[0-9]{9,9}";
 			}
 		});
 		return mmObject_lazy.get();

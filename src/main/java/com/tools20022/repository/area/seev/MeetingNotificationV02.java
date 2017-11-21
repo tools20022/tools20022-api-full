@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesEventsArchive;
 import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.001.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
@@ -112,6 +111,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.001.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -130,6 +132,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingNotificationV02", propOrder = {"meetingNotificationIdentification", "amendment", "notificationStatus", "meeting", "meetingDetails", "notifyingParty", "issuer", "issuerAgent", "security", "resolution", "vote",
+		"entitlementSpecification", "powerOfAttorneyRequirements"})
 public class MeetingNotificationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +172,14 @@ public class MeetingNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingNotificationV02.class.getMethod("getMeetingNotificationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AmendInformation1 amendment;
 	/**
@@ -201,6 +214,14 @@ public class MeetingNotificationV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AmendInformation1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingNotificationV02.class.getMethod("getAmendment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected NotificationStatus1 notificationStatus;
@@ -237,6 +258,14 @@ public class MeetingNotificationV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NotificationStatus1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingNotificationV02.class.getMethod("getNotificationStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MeetingNotice2 meeting;
@@ -277,6 +306,14 @@ public class MeetingNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MeetingNotice2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingNotificationV02.class.getMethod("getMeeting", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Meeting2> meetingDetails;
 	/**
@@ -310,6 +347,14 @@ public class MeetingNotificationV02 {
 			maxOccurs = 5;
 			minOccurs = 1;
 			complexType_lazy = () -> Meeting2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingNotificationV02.class.getMethod("getMeetingDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification9Choice notifyingParty;
@@ -345,6 +390,14 @@ public class MeetingNotificationV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingNotificationV02.class.getMethod("getNotifyingParty", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification9Choice issuer;
@@ -384,6 +437,14 @@ public class MeetingNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingNotificationV02.class.getMethod("getIssuer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<IssuerAgent1> issuerAgent;
 	/**
@@ -417,6 +478,14 @@ public class MeetingNotificationV02 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			complexType_lazy = () -> IssuerAgent1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingNotificationV02.class.getMethod("getIssuerAgent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SecurityPosition5> security;
@@ -456,6 +525,14 @@ public class MeetingNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityPosition5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingNotificationV02.class.getMethod("getSecurity", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Resolution2> resolution;
 	/**
@@ -490,6 +567,14 @@ public class MeetingNotificationV02 {
 			maxOccurs = 200;
 			minOccurs = 0;
 			complexType_lazy = () -> Resolution2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingNotificationV02.class.getMethod("getResolution", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected VoteParameters1 vote;
@@ -529,6 +614,14 @@ public class MeetingNotificationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> VoteParameters1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingNotificationV02.class.getMethod("getVote", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected EntitlementAssessment1 entitlementSpecification;
 	/**
@@ -567,6 +660,14 @@ public class MeetingNotificationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> EntitlementAssessment1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingNotificationV02.class.getMethod("getEntitlementSpecification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PowerOfAttorneyRequirements2 powerOfAttorneyRequirements;
 	/**
@@ -603,6 +704,14 @@ public class MeetingNotificationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> PowerOfAttorneyRequirements2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingNotificationV02.class.getMethod("getPowerOfAttorneyRequirements", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -616,9 +725,12 @@ public class MeetingNotificationV02 {
 				rootElement = "Document";
 				xmlTag = "MtgNtfctn";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV02.mmMeetingNotificationIdentification, MeetingNotificationV02.mmAmendment, MeetingNotificationV02.mmNotificationStatus, MeetingNotificationV02.mmMeeting,
-						MeetingNotificationV02.mmMeetingDetails, MeetingNotificationV02.mmNotifyingParty, MeetingNotificationV02.mmIssuer, MeetingNotificationV02.mmIssuerAgent, MeetingNotificationV02.mmSecurity,
-						MeetingNotificationV02.mmResolution, MeetingNotificationV02.mmVote, MeetingNotificationV02.mmEntitlementSpecification, MeetingNotificationV02.mmPowerOfAttorneyRequirements);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.mmMeetingNotificationIdentification, com.tools20022.repository.area.seev.MeetingNotificationV02.mmAmendment,
+						com.tools20022.repository.area.seev.MeetingNotificationV02.mmNotificationStatus, com.tools20022.repository.area.seev.MeetingNotificationV02.mmMeeting,
+						com.tools20022.repository.area.seev.MeetingNotificationV02.mmMeetingDetails, com.tools20022.repository.area.seev.MeetingNotificationV02.mmNotifyingParty,
+						com.tools20022.repository.area.seev.MeetingNotificationV02.mmIssuer, com.tools20022.repository.area.seev.MeetingNotificationV02.mmIssuerAgent, com.tools20022.repository.area.seev.MeetingNotificationV02.mmSecurity,
+						com.tools20022.repository.area.seev.MeetingNotificationV02.mmResolution, com.tools20022.repository.area.seev.MeetingNotificationV02.mmVote,
+						com.tools20022.repository.area.seev.MeetingNotificationV02.mmEntitlementSpecification, com.tools20022.repository.area.seev.MeetingNotificationV02.mmPowerOfAttorneyRequirements);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -628,10 +740,16 @@ public class MeetingNotificationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingNotificationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MtgNtfctnId", required = true)
 	public MessageIdentification1 getMeetingNotificationIdentification() {
 		return meetingNotificationIdentification;
 	}
@@ -640,6 +758,7 @@ public class MeetingNotificationV02 {
 		this.meetingNotificationIdentification = meetingNotificationIdentification;
 	}
 
+	@XmlElement(name = "Amdmnt")
 	public AmendInformation1 getAmendment() {
 		return amendment;
 	}
@@ -648,6 +767,7 @@ public class MeetingNotificationV02 {
 		this.amendment = amendment;
 	}
 
+	@XmlElement(name = "NtfctnSts", required = true)
 	public NotificationStatus1 getNotificationStatus() {
 		return notificationStatus;
 	}
@@ -656,6 +776,7 @@ public class MeetingNotificationV02 {
 		this.notificationStatus = notificationStatus;
 	}
 
+	@XmlElement(name = "Mtg", required = true)
 	public MeetingNotice2 getMeeting() {
 		return meeting;
 	}
@@ -664,6 +785,7 @@ public class MeetingNotificationV02 {
 		this.meeting = meeting;
 	}
 
+	@XmlElement(name = "MtgDtls", required = true)
 	public List<Meeting2> getMeetingDetails() {
 		return meetingDetails;
 	}
@@ -672,6 +794,7 @@ public class MeetingNotificationV02 {
 		this.meetingDetails = meetingDetails;
 	}
 
+	@XmlElement(name = "NtifngPty", required = true)
 	public PartyIdentification9Choice getNotifyingParty() {
 		return notifyingParty;
 	}
@@ -680,6 +803,7 @@ public class MeetingNotificationV02 {
 		this.notifyingParty = notifyingParty;
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public PartyIdentification9Choice getIssuer() {
 		return issuer;
 	}
@@ -688,6 +812,7 @@ public class MeetingNotificationV02 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "IssrAgt")
 	public List<IssuerAgent1> getIssuerAgent() {
 		return issuerAgent;
 	}
@@ -696,6 +821,7 @@ public class MeetingNotificationV02 {
 		this.issuerAgent = issuerAgent;
 	}
 
+	@XmlElement(name = "Scty", required = true)
 	public List<SecurityPosition5> getSecurity() {
 		return security;
 	}
@@ -704,6 +830,7 @@ public class MeetingNotificationV02 {
 		this.security = security;
 	}
 
+	@XmlElement(name = "Rsltn")
 	public List<Resolution2> getResolution() {
 		return resolution;
 	}
@@ -712,6 +839,7 @@ public class MeetingNotificationV02 {
 		this.resolution = resolution;
 	}
 
+	@XmlElement(name = "Vote")
 	public VoteParameters1 getVote() {
 		return vote;
 	}
@@ -720,6 +848,7 @@ public class MeetingNotificationV02 {
 		this.vote = vote;
 	}
 
+	@XmlElement(name = "EntitlmntSpcfctn", required = true)
 	public EntitlementAssessment1 getEntitlementSpecification() {
 		return entitlementSpecification;
 	}
@@ -728,11 +857,18 @@ public class MeetingNotificationV02 {
 		this.entitlementSpecification = entitlementSpecification;
 	}
 
+	@XmlElement(name = "PwrOfAttnyRqrmnts")
 	public PowerOfAttorneyRequirements2 getPowerOfAttorneyRequirements() {
 		return powerOfAttorneyRequirements;
 	}
 
 	public void setPowerOfAttorneyRequirements(PowerOfAttorneyRequirements2 powerOfAttorneyRequirements) {
 		this.powerOfAttorneyRequirements = powerOfAttorneyRequirements;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.001.02.02")
+	static public class Document {
+		@XmlElement(name = "MtgNtfctn", required = true)
+		public MeetingNotificationV02 messageBody;
 	}
 }

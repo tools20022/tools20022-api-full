@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a party by BIC or by name and address.
@@ -68,6 +72,8 @@ import java.util.function.Supplier;
  * definition} = "Identification of a party by BIC or by name and address."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification29Choice", propOrder = {"BIC", "nameAndAddress"})
 public class PartyIdentification29Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -195,6 +201,7 @@ public class PartyIdentification29Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BIC", required = true)
 	public BICIdentifier getBIC() {
 		return bIC;
 	}
@@ -203,6 +210,7 @@ public class PartyIdentification29Choice {
 		this.bIC = bIC;
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public PartyIdentification26 getNameAndAddress() {
 		return nameAndAddress;
 	}

@@ -34,12 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmEvidence
- * Document.mmEvidence}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Evidence#mmRelatedDocument
+ * Evidence.mmRelatedDocument}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -48,11 +47,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.entity.Signature Signature}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Evidence#mmRelatedDocument
- * Evidence.mmRelatedDocument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmEvidence
+ * Document.mmEvidence}</li>
  * </ul>
  * </li>
  * <li>
@@ -107,7 +107,7 @@ public class Evidence {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedDocument = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Evidence.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Evidence.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedDocument";
@@ -129,7 +129,12 @@ public class Evidence {
 				definition = "Element such as signature that can be used to prove a fact.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Document.mmEvidence);
 				subType_lazy = () -> Arrays.asList(Signature.mmObject());
-				element_lazy = () -> Arrays.asList(Evidence.mmRelatedDocument);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Evidence.mmRelatedDocument);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Evidence.class;
 			}
 		});
 		return mmObject_lazy.get();

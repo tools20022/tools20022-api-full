@@ -36,6 +36,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money associated with a service.
@@ -97,6 +101,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Charge18", propOrder = {"type", "extendedType", "chargeBasis", "extendedChargeBasis", "amount", "rate", "recipientIdentification"})
 public class Charge18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -532,6 +538,7 @@ public class Charge18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public ChargeType11Code getType() {
 		return type;
 	}
@@ -540,6 +547,7 @@ public class Charge18 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XtndedTp", required = true)
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
@@ -548,6 +556,7 @@ public class Charge18 {
 		this.extendedType = extendedType;
 	}
 
+	@XmlElement(name = "ChrgBsis")
 	public TaxationBasis2Code getChargeBasis() {
 		return chargeBasis;
 	}
@@ -556,6 +565,7 @@ public class Charge18 {
 		this.chargeBasis = chargeBasis;
 	}
 
+	@XmlElement(name = "XtndedChrgBsis")
 	public Extended350Code getExtendedChargeBasis() {
 		return extendedChargeBasis;
 	}
@@ -564,6 +574,7 @@ public class Charge18 {
 		this.extendedChargeBasis = extendedChargeBasis;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -572,6 +583,7 @@ public class Charge18 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -580,6 +592,7 @@ public class Charge18 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification2Choice getRecipientIdentification() {
 		return recipientIdentification;
 	}

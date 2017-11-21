@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesTransaction1;
 import com.tools20022.repository.msg.SecuritiesTransactionReport2;
 import com.tools20022.repository.msg.SecuritiesTransactionReport4;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,6 +41,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransaction#mmReplacedAmount
+ * SecuritiesTransaction.mmReplacedAmount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.SecuritiesTrade
+ * SecuritiesTrade}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -65,17 +77,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmTransaction
  * SecuritiesTransactionReport4.mmTransaction}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.SecuritiesTrade
- * SecuritiesTrade}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransaction#mmReplacedAmount
- * SecuritiesTransaction.mmReplacedAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -126,7 +127,7 @@ public class SecuritiesTransaction extends SecuritiesTrade {
 	 */
 	public static final MMBusinessAttribute mmReplacedAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> SecuritiesTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReplacedAmount";
@@ -134,6 +135,14 @@ public class SecuritiesTransaction extends SecuritiesTrade {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesTransaction.class.getMethod("getReplacedAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -146,8 +155,13 @@ public class SecuritiesTransaction extends SecuritiesTrade {
 				definition = "Exchange of securities.";
 				derivationElement_lazy = () -> Arrays.asList(ReportingTransactionType1Choice.mmNew, ReportingTransactionType1Choice.mmCancellation, SecuritiesTransactionReport4.mmTransaction);
 				superType_lazy = () -> SecuritiesTrade.mmObject();
-				element_lazy = () -> Arrays.asList(SecuritiesTransaction.mmReplacedAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTransaction.mmReplacedAmount);
 				derivationComponent_lazy = () -> Arrays.asList(SecuritiesTransaction1.mmObject(), SecuritiesTransactionReport2.mmObject(), SecuritiesTransactionReport4.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesTransaction.class;
 			}
 		});
 		return mmObject_lazy.get();

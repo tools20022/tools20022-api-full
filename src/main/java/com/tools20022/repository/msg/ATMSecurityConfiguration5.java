@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Configuration of the PIN online verification.
@@ -63,6 +67,8 @@ import java.util.List;
  * ATMSecurityConfiguration4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMSecurityConfiguration5", propOrder = {"PINFormat", "PINLengthCapabilities"})
 public class ATMSecurityConfiguration5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -169,6 +175,7 @@ public class ATMSecurityConfiguration5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PINFrmt")
 	public List<PINFormat4Code> getPINFormat() {
 		return pINFormat;
 	}
@@ -177,6 +184,7 @@ public class ATMSecurityConfiguration5 {
 		this.pINFormat = pINFormat;
 	}
 
+	@XmlElement(name = "PINLngthCpblties")
 	public Number getPINLengthCapabilities() {
 		return pINLengthCapabilities;
 	}

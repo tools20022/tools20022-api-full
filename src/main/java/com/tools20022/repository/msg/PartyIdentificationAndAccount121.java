@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about identification and account of the party .
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Provides information about identification and account of the party ."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount121", propOrder = {"identification", "cashAccount", "processingIdentification", "alternateIdentification"})
 public class PartyIdentificationAndAccount121 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -301,6 +307,7 @@ public class PartyIdentificationAndAccount121 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification94Choice getIdentification() {
 		return identification;
 	}
@@ -309,6 +316,7 @@ public class PartyIdentificationAndAccount121 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccountIdentification5Choice getCashAccount() {
 		return cashAccount;
 	}
@@ -317,6 +325,7 @@ public class PartyIdentificationAndAccount121 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public Max35Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -325,6 +334,7 @@ public class PartyIdentificationAndAccount121 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification7 getAlternateIdentification() {
 		return alternateIdentification;
 	}

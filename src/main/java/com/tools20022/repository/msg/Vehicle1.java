@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to a vehicle used during a transaction.
@@ -91,6 +95,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Vehicle1", propOrder = {"vehicleNumber", "trailerNumber", "vehicleTag", "vehicleTagEntryMode", "unitNumber", "replacementCar", "odometer", "hubometer", "trailerHours", "referHours", "maintenanceIdentification",
+		"driverOrVehicleCard", "additionalVehicleData"})
 public class Vehicle1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -657,6 +664,7 @@ public class Vehicle1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "VhclNb")
 	public Max35NumericText getVehicleNumber() {
 		return vehicleNumber;
 	}
@@ -665,6 +673,7 @@ public class Vehicle1 {
 		this.vehicleNumber = vehicleNumber;
 	}
 
+	@XmlElement(name = "TrlrNb")
 	public Max35NumericText getTrailerNumber() {
 		return trailerNumber;
 	}
@@ -673,6 +682,7 @@ public class Vehicle1 {
 		this.trailerNumber = trailerNumber;
 	}
 
+	@XmlElement(name = "VhclTag")
 	public Max35Text getVehicleTag() {
 		return vehicleTag;
 	}
@@ -681,6 +691,7 @@ public class Vehicle1 {
 		this.vehicleTag = vehicleTag;
 	}
 
+	@XmlElement(name = "VhclTagNtryMd")
 	public CardDataReading5Code getVehicleTagEntryMode() {
 		return vehicleTagEntryMode;
 	}
@@ -689,6 +700,7 @@ public class Vehicle1 {
 		this.vehicleTagEntryMode = vehicleTagEntryMode;
 	}
 
+	@XmlElement(name = "UnitNb")
 	public Max35NumericText getUnitNumber() {
 		return unitNumber;
 	}
@@ -697,6 +709,7 @@ public class Vehicle1 {
 		this.unitNumber = unitNumber;
 	}
 
+	@XmlElement(name = "RplcmntCar")
 	public TrueFalseIndicator getReplacementCar() {
 		return replacementCar;
 	}
@@ -705,6 +718,7 @@ public class Vehicle1 {
 		this.replacementCar = replacementCar;
 	}
 
+	@XmlElement(name = "Odmtr")
 	public DecimalNumber getOdometer() {
 		return odometer;
 	}
@@ -713,6 +727,7 @@ public class Vehicle1 {
 		this.odometer = odometer;
 	}
 
+	@XmlElement(name = "Hbmtr")
 	public DecimalNumber getHubometer() {
 		return hubometer;
 	}
@@ -721,6 +736,7 @@ public class Vehicle1 {
 		this.hubometer = hubometer;
 	}
 
+	@XmlElement(name = "TrlrHrs")
 	public Max35Text getTrailerHours() {
 		return trailerHours;
 	}
@@ -729,6 +745,7 @@ public class Vehicle1 {
 		this.trailerHours = trailerHours;
 	}
 
+	@XmlElement(name = "RefrHrs")
 	public Max35Text getReferHours() {
 		return referHours;
 	}
@@ -737,6 +754,7 @@ public class Vehicle1 {
 		this.referHours = referHours;
 	}
 
+	@XmlElement(name = "MntncId")
 	public Max35Text getMaintenanceIdentification() {
 		return maintenanceIdentification;
 	}
@@ -745,6 +763,7 @@ public class Vehicle1 {
 		this.maintenanceIdentification = maintenanceIdentification;
 	}
 
+	@XmlElement(name = "DrvrOrVhclCard")
 	public PlainCardData17 getDriverOrVehicleCard() {
 		return driverOrVehicleCard;
 	}
@@ -753,6 +772,7 @@ public class Vehicle1 {
 		this.driverOrVehicleCard = driverOrVehicleCard;
 	}
 
+	@XmlElement(name = "AddtlVhclData")
 	public List<Vehicle2> getAdditionalVehicleData() {
 		return additionalVehicleData;
 	}

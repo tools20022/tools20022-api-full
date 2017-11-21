@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Result of an individual terminal management action performed by the point of
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TMSEvent3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TMSEvent4", propOrder = {"timeStamp", "result", "actionIdentification", "additionalErrorInformation"})
 public class TMSEvent4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -334,6 +340,7 @@ public class TMSEvent4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TmStmp", required = true)
 	public ISODateTime getTimeStamp() {
 		return timeStamp;
 	}
@@ -342,6 +349,7 @@ public class TMSEvent4 {
 		this.timeStamp = timeStamp;
 	}
 
+	@XmlElement(name = "Rslt", required = true)
 	public TerminalManagementActionResult1Code getResult() {
 		return result;
 	}
@@ -350,6 +358,7 @@ public class TMSEvent4 {
 		this.result = result;
 	}
 
+	@XmlElement(name = "ActnId", required = true)
 	public TMSActionIdentification4 getActionIdentification() {
 		return actionIdentification;
 	}
@@ -358,6 +367,7 @@ public class TMSEvent4 {
 		this.actionIdentification = actionIdentification;
 	}
 
+	@XmlElement(name = "AddtlErrInf")
 	public Max70Text getAdditionalErrorInformation() {
 		return additionalErrorInformation;
 	}

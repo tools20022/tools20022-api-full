@@ -27,6 +27,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a status quantity or a quantity to receive for the quantity of
@@ -64,6 +68,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusOrQuantityToReceive1Choice", propOrder = {"statusQuantity", "quantityToReceive"})
 public class StatusOrQuantityToReceive1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -188,6 +194,7 @@ public class StatusOrQuantityToReceive1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsQty", required = true)
 	public Quantity6Choice getStatusQuantity() {
 		return statusQuantity;
 	}
@@ -196,6 +203,7 @@ public class StatusOrQuantityToReceive1Choice {
 		this.statusQuantity = statusQuantity;
 	}
 
+	@XmlElement(name = "QtyToRcv", required = true)
 	public Quantity6Choice getQuantityToReceive() {
 		return quantityToReceive;
 	}

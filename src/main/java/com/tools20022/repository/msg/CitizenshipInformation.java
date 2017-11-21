@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Human entity, as distinguished from a corporate entity (which is sometimes
@@ -75,6 +79,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CitizenshipInformation", propOrder = {"nationality", "minorIndicator"})
 public class CitizenshipInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -222,6 +228,7 @@ public class CitizenshipInformation {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ntlty", required = true)
 	public NationalityCode getNationality() {
 		return nationality;
 	}
@@ -230,6 +237,7 @@ public class CitizenshipInformation {
 		this.nationality = nationality;
 	}
 
+	@XmlElement(name = "MnrInd", required = true)
 	public YesNoIndicator getMinorIndicator() {
 		return minorIndicator;
 	}

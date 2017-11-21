@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Further information on the status reason of the transaction.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Further information on the status reason of the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusReasonInformation4", propOrder = {"statusOriginator", "statusReason"})
 public class StatusReasonInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -174,6 +180,7 @@ public class StatusReasonInformation4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsOrgtr", required = true)
 	public PartyIdentification14 getStatusOriginator() {
 		return statusOriginator;
 	}
@@ -182,6 +189,7 @@ public class StatusReasonInformation4 {
 		this.statusOriginator = statusOriginator;
 	}
 
+	@XmlElement(name = "StsRsn", required = true)
 	public StatusReason3Choice getStatusReason() {
 		return statusReason;
 	}

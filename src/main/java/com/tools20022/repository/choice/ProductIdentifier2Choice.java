@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.GenericIdentification4;
 import com.tools20022.repository.msg.ProductIdentifier2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies a product in coded form or free text.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies a product in coded form or free text."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProductIdentifier2Choice", propOrder = {"structuredProductIdentifier", "otherProductIdentifier"})
 public class ProductIdentifier2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class ProductIdentifier2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StrdPdctIdr", required = true)
 	public ProductIdentifier2 getStructuredProductIdentifier() {
 		return structuredProductIdentifier;
 	}
@@ -183,6 +190,7 @@ public class ProductIdentifier2Choice {
 		this.structuredProductIdentifier = structuredProductIdentifier;
 	}
 
+	@XmlElement(name = "OthrPdctIdr", required = true)
 	public GenericIdentification4 getOtherProductIdentifier() {
 		return otherProductIdentifier;
 	}

@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details on the margin calculation per financial instrument or
@@ -84,6 +88,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarginCalculation2", propOrder = {"financialInstrumentIdentification", "exposureAmount", "totalMarginAmount", "collateralOnDeposit", "minimumRequirementDeposit", "marginResult", "marginTypeAmount"})
 public class MarginCalculation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -442,6 +448,7 @@ public class MarginCalculation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -450,6 +457,7 @@ public class MarginCalculation2 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "XpsrAmt")
 	public Amount2 getExposureAmount() {
 		return exposureAmount;
 	}
@@ -458,6 +466,7 @@ public class MarginCalculation2 {
 		this.exposureAmount = exposureAmount;
 	}
 
+	@XmlElement(name = "TtlMrgnAmt", required = true)
 	public AmountAndDirection20 getTotalMarginAmount() {
 		return totalMarginAmount;
 	}
@@ -466,6 +475,7 @@ public class MarginCalculation2 {
 		this.totalMarginAmount = totalMarginAmount;
 	}
 
+	@XmlElement(name = "CollOnDpst")
 	public List<Collateral6> getCollateralOnDeposit() {
 		return collateralOnDeposit;
 	}
@@ -474,6 +484,7 @@ public class MarginCalculation2 {
 		this.collateralOnDeposit = collateralOnDeposit;
 	}
 
+	@XmlElement(name = "MinRqrmntDpst")
 	public ActiveCurrencyAndAmount getMinimumRequirementDeposit() {
 		return minimumRequirementDeposit;
 	}
@@ -482,6 +493,7 @@ public class MarginCalculation2 {
 		this.minimumRequirementDeposit = minimumRequirementDeposit;
 	}
 
+	@XmlElement(name = "MrgnRslt")
 	public MarginResult1Choice getMarginResult() {
 		return marginResult;
 	}
@@ -490,6 +502,7 @@ public class MarginCalculation2 {
 		this.marginResult = marginResult;
 	}
 
+	@XmlElement(name = "MrgnTpAmt")
 	public Margin3 getMarginTypeAmount() {
 		return marginTypeAmount;
 	}

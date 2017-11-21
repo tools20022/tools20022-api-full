@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information used for identifying an account.
@@ -77,6 +81,8 @@ import java.util.function.Supplier;
  * definition} = "Information used for identifying an account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccount13", propOrder = {"identification", "type", "currency", "name", "owner", "servicer"})
 public class CashAccount13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -398,6 +404,7 @@ public class CashAccount13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentification3Choice getIdentification() {
 		return identification;
 	}
@@ -406,6 +413,7 @@ public class CashAccount13 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp")
 	public CashAccountType2 getType() {
 		return type;
 	}
@@ -414,6 +422,7 @@ public class CashAccount13 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -422,6 +431,7 @@ public class CashAccount13 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max70Text getName() {
 		return name;
 	}
@@ -430,6 +440,7 @@ public class CashAccount13 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Ownr")
 	public PartyIdentification8 getOwner() {
 		return owner;
 	}
@@ -438,6 +449,7 @@ public class CashAccount13 {
 		this.owner = owner;
 	}
 
+	@XmlElement(name = "Svcr")
 	public BranchAndFinancialInstitutionIdentification3 getServicer() {
 		return servicer;
 	}

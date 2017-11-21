@@ -36,6 +36,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General characteristics related to a statement which reports information.
@@ -87,6 +91,8 @@ import java.util.function.Supplier;
  * "General characteristics related to a statement which reports information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Statement30", propOrder = {"statementType", "reportingType", "statementIdentification", "reportNumber", "statementDateTime", "frequency", "updateType", "activityIndicator", "notificationDeadlinePeriod"})
 public class Statement30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -491,6 +497,7 @@ public class Statement30 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtTp", required = true)
 	public CorporateActionStatementType1Code getStatementType() {
 		return statementType;
 	}
@@ -499,6 +506,7 @@ public class Statement30 {
 		this.statementType = statementType;
 	}
 
+	@XmlElement(name = "RptgTp", required = true)
 	public CorporateActionStatementReportingType1Code getReportingType() {
 		return reportingType;
 	}
@@ -507,6 +515,7 @@ public class Statement30 {
 		this.reportingType = reportingType;
 	}
 
+	@XmlElement(name = "StmtId", required = true)
 	public RestrictedFINXMax16Text getStatementIdentification() {
 		return statementIdentification;
 	}
@@ -515,6 +524,7 @@ public class Statement30 {
 		this.statementIdentification = statementIdentification;
 	}
 
+	@XmlElement(name = "RptNb")
 	public Max5NumericText getReportNumber() {
 		return reportNumber;
 	}
@@ -523,6 +533,7 @@ public class Statement30 {
 		this.reportNumber = reportNumber;
 	}
 
+	@XmlElement(name = "StmtDtTm", required = true)
 	public DateAndDateTimeChoice getStatementDateTime() {
 		return statementDateTime;
 	}
@@ -531,6 +542,7 @@ public class Statement30 {
 		this.statementDateTime = statementDateTime;
 	}
 
+	@XmlElement(name = "Frqcy", required = true)
 	public Frequency6Choice getFrequency() {
 		return frequency;
 	}
@@ -539,6 +551,7 @@ public class Statement30 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "UpdTp", required = true)
 	public UpdateType3Choice getUpdateType() {
 		return updateType;
 	}
@@ -547,6 +560,7 @@ public class Statement30 {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
@@ -555,6 +569,7 @@ public class Statement30 {
 		this.activityIndicator = activityIndicator;
 	}
 
+	@XmlElement(name = "NtfctnDdlnPrd")
 	public DateOrDateTimePeriodChoice getNotificationDeadlinePeriod() {
 		return notificationDeadlinePeriod;
 	}

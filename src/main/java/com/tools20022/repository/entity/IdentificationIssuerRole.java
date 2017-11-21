@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InformationPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,6 +40,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmCountry
+ * IdentificationIssuerRole.mmCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmEntityName
+ * IdentificationIssuerRole.mmEntityName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmOwnerCode
+ * IdentificationIssuerRole.mmOwnerCode}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InformationPartyRole
+ * InformationPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -299,24 +318,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * GenericIdentification164.mmIssuer}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InformationPartyRole
- * InformationPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmCountry
- * IdentificationIssuerRole.mmCountry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmEntityName
- * IdentificationIssuerRole.mmEntityName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmOwnerCode
- * IdentificationIssuerRole.mmOwnerCode}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -345,11 +346,6 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CountryCode
 	 * CountryCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole
-	 * IdentificationIssuerRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -375,6 +371,11 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole
+	 * IdentificationIssuerRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -389,7 +390,7 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 		{
 			derivation_lazy = () -> Arrays.asList(AlternateSecurityIdentification3.mmDomesticIdentificationSource, AlternateSecurityIdentification1.mmDomesticIdentificationSource, IdentificationSource1Choice.mmDomestic,
 					IdentificationSource2Choice.mmDomestic, AlternateFinancialInstrumentIdentification1.mmDomesticIdentificationSource, AlternateSecurityIdentification4.mmDomesticIdentificationSource);
-			elementContext_lazy = () -> IdentificationIssuerRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IdentificationIssuerRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Country";
@@ -397,6 +398,14 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationIssuerRole.class.getMethod("getCountry", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text entityName;
@@ -409,11 +418,6 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole
-	 * IdentificationIssuerRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -448,6 +452,11 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole
+	 * IdentificationIssuerRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -463,7 +472,7 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 			derivation_lazy = () -> Arrays.asList(AlternateSecurityIdentification3.mmProprietaryIdentificationSource, AlternateSecurityIdentification1.mmProprietaryIdentificationSource, SecuritiesCertificate1.mmIssuer,
 					SecuritiesCertificate2.mmIssuer, SecuritiesCertificate3.mmIssuer, AlternateFinancialInstrumentIdentification1.mmProprietaryIdentificationSource, AlternateSecurityIdentification4.mmProprietaryIdentificationSource,
 					SecuritiesCertificate4.mmIssuer, SecuritiesCertificate5.mmIssuer);
-			elementContext_lazy = () -> IdentificationIssuerRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IdentificationIssuerRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntityName";
@@ -471,6 +480,14 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationIssuerRole.class.getMethod("getEntityName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text ownerCode;
@@ -504,7 +521,7 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 */
 	public static final MMBusinessAttribute mmOwnerCode = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> IdentificationIssuerRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IdentificationIssuerRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OwnerCode";
@@ -512,6 +529,14 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationIssuerRole.class.getMethod("getOwnerCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -537,9 +562,15 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 						GenericIdentification82.mmIssuer, GenericIdentification84.mmIssuer, GenericIdentification86.mmIssuer, GenericIdentification144.mmIssuer, GenericIdentification163.mmIssuer, GenericIdentification79.mmIssuer,
 						GenericIdentification94.mmIssuer, GenericIdentification90.mmIssuer, GenericIdentification93.mmIssuer, GenericIdentification92.mmIssuer, GenericIdentification164.mmIssuer);
 				superType_lazy = () -> InformationPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(IdentificationIssuerRole.mmCountry, IdentificationIssuerRole.mmEntityName, IdentificationIssuerRole.mmOwnerCode);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IdentificationIssuerRole.mmCountry, com.tools20022.repository.entity.IdentificationIssuerRole.mmEntityName,
+						com.tools20022.repository.entity.IdentificationIssuerRole.mmOwnerCode);
 				derivationComponent_lazy = () -> Arrays.asList(IdentificationSource1Choice.mmObject(), IdentificationSource3Choice.mmObject(), IdentificationSource4Choice.mmObject(), IdentificationSource2Choice.mmObject(),
 						IdentificationSource5Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IdentificationIssuerRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Meeting;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,8 +40,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Meeting Meeting}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -73,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * IssuerMeeting.mmCapitalStock}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Meeting Meeting}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -104,11 +105,6 @@ public class IssuerMeeting extends Meeting {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting IssuerMeeting}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -148,6 +144,11 @@ public class IssuerMeeting extends Meeting {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting IssuerMeeting}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -165,7 +166,7 @@ public class IssuerMeeting extends Meeting {
 			derivation_lazy = () -> Arrays.asList(MeetingNotice1.mmIssuerMeetingIdentification, MeetingNotice2.mmIssuerMeetingIdentification, MeetingNotice3.mmIssuerMeetingIdentification, MeetingReference1.mmIssuerMeetingIdentification,
 					MeetingReference2.mmIssuerMeetingIdentification, MeetingReference5.mmIssuerMeetingIdentification, MeetingReference3.mmIssuerMeetingIdentification, MeetingReference4.mmIssuerMeetingIdentification,
 					MeetingReference7.mmIssuerMeetingIdentification, MeetingReference6.mmIssuerMeetingIdentification, MeetingNotice4.mmIssuerMeetingIdentification);
-			elementContext_lazy = () -> IssuerMeeting.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuerMeetingIdentification";
@@ -173,6 +174,14 @@ public class IssuerMeeting extends Meeting {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IssuerMeeting.class.getMethod("getIssuerMeetingIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator nomineePowerOfAttorneyIndicator;
@@ -208,7 +217,7 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmNomineePowerOfAttorneyIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> IssuerMeeting.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NomineePowerOfAttorneyIndicator";
@@ -216,6 +225,14 @@ public class IssuerMeeting extends Meeting {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IssuerMeeting.class.getMethod("getNomineePowerOfAttorneyIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator nomineeVotingIndicator;
@@ -249,7 +266,7 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmNomineeVotingIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> IssuerMeeting.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NomineeVotingIndicator";
@@ -257,6 +274,14 @@ public class IssuerMeeting extends Meeting {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IssuerMeeting.class.getMethod("getNomineeVotingIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator nomineeBeneficialOwnerIndicator;
@@ -291,7 +316,7 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmNomineeBeneficialOwnerIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> IssuerMeeting.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NomineeBeneficialOwnerIndicator";
@@ -299,6 +324,14 @@ public class IssuerMeeting extends Meeting {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IssuerMeeting.class.getMethod("getNomineeBeneficialOwnerIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator proxyVotingIndicator;
@@ -333,7 +366,7 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmProxyVotingIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> IssuerMeeting.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProxyVotingIndicator";
@@ -341,6 +374,14 @@ public class IssuerMeeting extends Meeting {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IssuerMeeting.class.getMethod("getProxyVotingIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator proxyBeneficialOwnerIndicator;
@@ -375,7 +416,7 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmProxyBeneficialOwnerIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> IssuerMeeting.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProxyBeneficialOwnerIndicator";
@@ -383,6 +424,14 @@ public class IssuerMeeting extends Meeting {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IssuerMeeting.class.getMethod("getProxyBeneficialOwnerIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator proxyPowerOfAttorneyIndicator;
@@ -418,7 +467,7 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmProxyPowerOfAttorneyIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> IssuerMeeting.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProxyPowerOfAttorneyIndicator";
@@ -426,6 +475,14 @@ public class IssuerMeeting extends Meeting {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IssuerMeeting.class.getMethod("getProxyPowerOfAttorneyIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator validCreditorIndicator;
@@ -460,7 +517,7 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmValidCreditorIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> IssuerMeeting.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidCreditorIndicator";
@@ -468,6 +525,14 @@ public class IssuerMeeting extends Meeting {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IssuerMeeting.class.getMethod("getValidCreditorIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount capitalStock;
@@ -502,7 +567,7 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmCapitalStock = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> IssuerMeeting.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CapitalStock";
@@ -510,6 +575,14 @@ public class IssuerMeeting extends Meeting {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IssuerMeeting.class.getMethod("getCapitalStock", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -521,8 +594,15 @@ public class IssuerMeeting extends Meeting {
 				name = "IssuerMeeting";
 				definition = "Information about the meeting, specifying the participation requirements and the voting procedures.";
 				superType_lazy = () -> Meeting.mmObject();
-				element_lazy = () -> Arrays.asList(IssuerMeeting.mmIssuerMeetingIdentification, IssuerMeeting.mmNomineePowerOfAttorneyIndicator, IssuerMeeting.mmNomineeVotingIndicator, IssuerMeeting.mmNomineeBeneficialOwnerIndicator,
-						IssuerMeeting.mmProxyVotingIndicator, IssuerMeeting.mmProxyBeneficialOwnerIndicator, IssuerMeeting.mmProxyPowerOfAttorneyIndicator, IssuerMeeting.mmValidCreditorIndicator, IssuerMeeting.mmCapitalStock);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IssuerMeeting.mmIssuerMeetingIdentification, com.tools20022.repository.entity.IssuerMeeting.mmNomineePowerOfAttorneyIndicator,
+						com.tools20022.repository.entity.IssuerMeeting.mmNomineeVotingIndicator, com.tools20022.repository.entity.IssuerMeeting.mmNomineeBeneficialOwnerIndicator,
+						com.tools20022.repository.entity.IssuerMeeting.mmProxyVotingIndicator, com.tools20022.repository.entity.IssuerMeeting.mmProxyBeneficialOwnerIndicator,
+						com.tools20022.repository.entity.IssuerMeeting.mmProxyPowerOfAttorneyIndicator, com.tools20022.repository.entity.IssuerMeeting.mmValidCreditorIndicator, com.tools20022.repository.entity.IssuerMeeting.mmCapitalStock);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IssuerMeeting.class;
 			}
 		});
 		return mmObject_lazy.get();

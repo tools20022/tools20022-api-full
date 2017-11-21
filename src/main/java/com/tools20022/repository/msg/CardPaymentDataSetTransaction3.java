@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Cancelled card payment transaction to be captured in a batch.
@@ -86,6 +90,8 @@ import java.util.List;
  * CardPaymentDataSetTransaction1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentDataSetTransaction3", propOrder = {"transactionSequenceCounter", "traceability", "environment", "context", "transaction"})
 public class CardPaymentDataSetTransaction3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -386,6 +392,7 @@ public class CardPaymentDataSetTransaction3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxSeqCntr", required = true)
 	public Max9NumericText getTransactionSequenceCounter() {
 		return transactionSequenceCounter;
 	}
@@ -394,6 +401,7 @@ public class CardPaymentDataSetTransaction3 {
 		this.transactionSequenceCounter = transactionSequenceCounter;
 	}
 
+	@XmlElement(name = "Tracblt")
 	public List<Traceability1> getTraceability() {
 		return traceability;
 	}
@@ -402,6 +410,7 @@ public class CardPaymentDataSetTransaction3 {
 		this.traceability = traceability;
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment14 getEnvironment() {
 		return environment;
 	}
@@ -410,6 +419,7 @@ public class CardPaymentDataSetTransaction3 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Cntxt")
 	public CardPaymentContext4 getContext() {
 		return context;
 	}
@@ -418,6 +428,7 @@ public class CardPaymentDataSetTransaction3 {
 		this.context = context;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransaction20 getTransaction() {
 		return transaction;
 	}

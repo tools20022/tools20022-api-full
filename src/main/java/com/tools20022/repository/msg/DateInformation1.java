@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Date parameters.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Date parameters."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DateInformation1", propOrder = {"startDate", "frequency", "number"})
 public class DateInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -200,6 +206,7 @@ public class DateInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StartDt", required = true)
 	public ISODate getStartDate() {
 		return startDate;
 	}
@@ -208,6 +215,7 @@ public class DateInformation1 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "Frqcy", required = true)
 	public ExternalDateFrequency1Code getFrequency() {
 		return frequency;
 	}
@@ -216,6 +224,7 @@ public class DateInformation1 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "Nb", required = true)
 	public Number getNumber() {
 		return number;
 	}

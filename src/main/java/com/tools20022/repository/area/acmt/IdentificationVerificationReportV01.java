@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.MessageIdentification4;
 import com.tools20022.repository.msg.VerificationReport1;
 import com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -48,9 +50,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.024.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementPreviousVersion
@@ -84,6 +83,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.024.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -103,6 +105,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IdentificationVerificationReportV01", propOrder = {"assignment", "originalAssignment", "report"})
 public class IdentificationVerificationReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -140,6 +144,14 @@ public class IdentificationVerificationReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> IdentificationAssignment1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationVerificationReportV01.class.getMethod("getAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MessageIdentification4 originalAssignment;
 	/**
@@ -175,6 +187,14 @@ public class IdentificationVerificationReportV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MessageIdentification4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationVerificationReportV01.class.getMethod("getOriginalAssignment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<VerificationReport1> report;
@@ -213,6 +233,14 @@ public class IdentificationVerificationReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> VerificationReport1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return IdentificationVerificationReportV01.class.getMethod("getReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -226,7 +254,8 @@ public class IdentificationVerificationReportV01 {
 				rootElement = "Document";
 				xmlTag = "IdVrfctnRpt";
 				businessArea_lazy = () -> AccountManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(IdentificationVerificationReportV01.mmAssignment, IdentificationVerificationReportV01.mmOriginalAssignment, IdentificationVerificationReportV01.mmReport);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationVerificationReportV01.mmAssignment,
+						com.tools20022.repository.area.acmt.IdentificationVerificationReportV01.mmOriginalAssignment, com.tools20022.repository.area.acmt.IdentificationVerificationReportV01.mmReport);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";
@@ -236,10 +265,16 @@ public class IdentificationVerificationReportV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IdentificationVerificationReportV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Assgnmt", required = true)
 	public IdentificationAssignment1 getAssignment() {
 		return assignment;
 	}
@@ -248,6 +283,7 @@ public class IdentificationVerificationReportV01 {
 		this.assignment = assignment;
 	}
 
+	@XmlElement(name = "OrgnlAssgnmt")
 	public MessageIdentification4 getOriginalAssignment() {
 		return originalAssignment;
 	}
@@ -256,11 +292,18 @@ public class IdentificationVerificationReportV01 {
 		this.originalAssignment = originalAssignment;
 	}
 
+	@XmlElement(name = "Rpt", required = true)
 	public List<VerificationReport1> getReport() {
 		return report;
 	}
 
 	public void setReport(List<VerificationReport1> report) {
 		this.report = report;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.024.01.01")
+	static public class Document {
+		@XmlElement(name = "IdVrfctnRpt", required = true)
+		public IdentificationVerificationReportV01 messageBody;
 	}
 }

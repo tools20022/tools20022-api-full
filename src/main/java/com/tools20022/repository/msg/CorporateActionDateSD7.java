@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action options date
@@ -76,6 +80,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionDateSD7", propOrder = {"placeAndName", "actualEarlyExpirationDate", "actualProtectExpirationDate", "actualEarlyProtectExpirationDate", "DTCEarlyProtectExpirationDate",
+		"actualEarlyCoverProtectExpirationDate", "DTCEarlyCoverProtectExpirationDate"})
 public class CorporateActionDateSD7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -394,6 +401,7 @@ public class CorporateActionDateSD7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -402,6 +410,7 @@ public class CorporateActionDateSD7 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "ActlEarlyXprtnDt")
 	public ISODateTime getActualEarlyExpirationDate() {
 		return actualEarlyExpirationDate;
 	}
@@ -410,6 +419,7 @@ public class CorporateActionDateSD7 {
 		this.actualEarlyExpirationDate = actualEarlyExpirationDate;
 	}
 
+	@XmlElement(name = "ActlPrtctXprtnDt")
 	public ISODateTime getActualProtectExpirationDate() {
 		return actualProtectExpirationDate;
 	}
@@ -418,6 +428,7 @@ public class CorporateActionDateSD7 {
 		this.actualProtectExpirationDate = actualProtectExpirationDate;
 	}
 
+	@XmlElement(name = "ActlEarlyPrtctXprtnDt")
 	public ISODateTime getActualEarlyProtectExpirationDate() {
 		return actualEarlyProtectExpirationDate;
 	}
@@ -426,6 +437,7 @@ public class CorporateActionDateSD7 {
 		this.actualEarlyProtectExpirationDate = actualEarlyProtectExpirationDate;
 	}
 
+	@XmlElement(name = "DTCEarlyPrtctXprtnDt")
 	public ISODateTime getDTCEarlyProtectExpirationDate() {
 		return dTCEarlyProtectExpirationDate;
 	}
@@ -434,6 +446,7 @@ public class CorporateActionDateSD7 {
 		this.dTCEarlyProtectExpirationDate = dTCEarlyProtectExpirationDate;
 	}
 
+	@XmlElement(name = "ActlEarlyCoverPrtctXprtnDt")
 	public ISODateTime getActualEarlyCoverProtectExpirationDate() {
 		return actualEarlyCoverProtectExpirationDate;
 	}
@@ -442,6 +455,7 @@ public class CorporateActionDateSD7 {
 		this.actualEarlyCoverProtectExpirationDate = actualEarlyCoverProtectExpirationDate;
 	}
 
+	@XmlElement(name = "DTCEarlyCoverPrtctXprtnDt")
 	public ISODateTime getDTCEarlyCoverProtectExpirationDate() {
 		return dTCEarlyCoverProtectExpirationDate;
 	}

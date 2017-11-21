@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.TradingMarket;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Context, or geographic environment, in which trading parties may meet in
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PlaceOfTradeIdentification3Choice", propOrder = {"country", "exchange", "overTheCounter"})
 public class PlaceOfTradeIdentification3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -227,6 +233,7 @@ public class PlaceOfTradeIdentification3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -235,6 +242,7 @@ public class PlaceOfTradeIdentification3Choice {
 		this.country = country;
 	}
 
+	@XmlElement(name = "Xchg", required = true)
 	public MICIdentifier getExchange() {
 		return exchange;
 	}
@@ -243,6 +251,7 @@ public class PlaceOfTradeIdentification3Choice {
 		this.exchange = exchange;
 	}
 
+	@XmlElement(name = "OverTheCntr", required = true)
 	public RestrictedFINMax30Text getOverTheCounter() {
 		return overTheCounter;
 	}

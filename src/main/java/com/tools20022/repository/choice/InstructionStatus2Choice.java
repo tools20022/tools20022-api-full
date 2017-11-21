@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.InstructionProcessingStatus1;
 import com.tools20022.repository.msg.InstructionRejectionStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status applying globally to the instruction received.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Status applying globally to the instruction received."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstructionStatus2Choice", propOrder = {"processingStatus", "rejectionStatus"})
 public class InstructionStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class InstructionStatus2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrcgSts", required = true)
 	public InstructionProcessingStatus1 getProcessingStatus() {
 		return processingStatus;
 	}
@@ -186,6 +193,7 @@ public class InstructionStatus2Choice {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "RjctnSts", required = true)
 	public InstructionRejectionStatus1 getRejectionStatus() {
 		return rejectionStatus;
 	}

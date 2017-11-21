@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.TreasuryTradingParty;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Entity involved in an activity.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Entity involved in an activity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradePartyIdentification7", propOrder = {"fundInformation", "buyerOrSellerIndicator", "initiatorIndicator", "tradePartyIdentification", "submittingParty"})
 public class TradePartyIdentification7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -316,6 +322,7 @@ public class TradePartyIdentification7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FndInf")
 	public FundIdentification3 getFundInformation() {
 		return fundInformation;
 	}
@@ -324,6 +331,7 @@ public class TradePartyIdentification7 {
 		this.fundInformation = fundInformation;
 	}
 
+	@XmlElement(name = "BuyrOrSellrInd", required = true)
 	public OptionParty1Code getBuyerOrSellerIndicator() {
 		return buyerOrSellerIndicator;
 	}
@@ -332,6 +340,7 @@ public class TradePartyIdentification7 {
 		this.buyerOrSellerIndicator = buyerOrSellerIndicator;
 	}
 
+	@XmlElement(name = "InitrInd", required = true)
 	public OptionParty3Code getInitiatorIndicator() {
 		return initiatorIndicator;
 	}
@@ -340,6 +349,7 @@ public class TradePartyIdentification7 {
 		this.initiatorIndicator = initiatorIndicator;
 	}
 
+	@XmlElement(name = "TradPtyId", required = true)
 	public PartyIdentification78 getTradePartyIdentification() {
 		return tradePartyIdentification;
 	}
@@ -348,6 +358,7 @@ public class TradePartyIdentification7 {
 		this.tradePartyIdentification = tradePartyIdentification;
 	}
 
+	@XmlElement(name = "SubmitgPty", required = true)
 	public PartyIdentificationAndAccount119 getSubmittingParty() {
 		return submittingParty;
 	}

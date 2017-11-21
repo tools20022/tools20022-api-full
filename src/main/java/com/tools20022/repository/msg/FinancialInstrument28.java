@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Tangible items of value to a business.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Tangible items of value to a business."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrument28", propOrder = {"equity", "warrant", "debt", "derivative"})
 public class FinancialInstrument28 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -277,6 +283,7 @@ public class FinancialInstrument28 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Eqty")
 	public Equity2 getEquity() {
 		return equity;
 	}
@@ -285,6 +292,7 @@ public class FinancialInstrument28 {
 		this.equity = equity;
 	}
 
+	@XmlElement(name = "Warrt")
 	public Warrant2 getWarrant() {
 		return warrant;
 	}
@@ -293,6 +301,7 @@ public class FinancialInstrument28 {
 		this.warrant = warrant;
 	}
 
+	@XmlElement(name = "Debt")
 	public Debt2 getDebt() {
 		return debt;
 	}
@@ -301,6 +310,7 @@ public class FinancialInstrument28 {
 		this.debt = debt;
 	}
 
+	@XmlElement(name = "Deriv")
 	public Derivative1 getDerivative() {
 		return derivative;
 	}

@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.RoundingMethodCode;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +37,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ExposureTerm#mmExposureType
+ * ExposureTerm.mmExposureType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmMinimumTransferAmount
+ * ExposureTerm.mmMinimumTransferAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmRoundingAmount
+ * ExposureTerm.mmRoundingAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmRoundingMethod
+ * ExposureTerm.mmRoundingMethod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmRelatedCollateralAgreement
+ * ExposureTerm.mmRelatedCollateralAgreement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmMinimumRequirementDeposit
+ * ExposureTerm.mmMinimumRequirementDeposit}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.IndependentAmountTerm
+ * IndependentAmountTerm}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.VariationMarginTerm
+ * VariationMarginTerm}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -95,37 +127,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * MarginTerms1Choice.mmMarginDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.IndependentAmountTerm
- * IndependentAmountTerm}</li>
- * <li>{@linkplain com.tools20022.repository.entity.VariationMarginTerm
- * VariationMarginTerm}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ExposureTerm#mmExposureType
- * ExposureTerm.mmExposureType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmMinimumTransferAmount
- * ExposureTerm.mmMinimumTransferAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmRoundingAmount
- * ExposureTerm.mmRoundingAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmRoundingMethod
- * ExposureTerm.mmRoundingMethod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmRelatedCollateralAgreement
- * ExposureTerm.mmRelatedCollateralAgreement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmMinimumRequirementDeposit
- * ExposureTerm.mmMinimumRequirementDeposit}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -157,10 +158,6 @@ public class ExposureTerm {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ExposureTypeCode
 	 * ExposureTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm ExposureTerm}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -425,6 +422,10 @@ public class ExposureTerm {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm ExposureTerm}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -454,7 +455,7 @@ public class ExposureTerm {
 					SettlementDetails115.mmExposureType, SettlementDetails113.mmExposureType, ExposureType17Choice.mmCode, ExposureType17Choice.mmProprietary, SettlementDetails128.mmExposureType, SettlementDetails120.mmExposureType,
 					SettlementDetails119.mmExposureType, SettlementDetails122.mmExposureType, SettlementDetails121.mmExposureType, SettlementDetails134.mmExposureType, SettlementDetails137.mmExposureType,
 					SettlementDetails132.mmExposureType, SettlementDetails138.mmExposureType, SettlementDetails133.mmExposureType, Obligation5.mmExposureType);
-			elementContext_lazy = () -> ExposureTerm.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExposureType";
@@ -462,6 +463,14 @@ public class ExposureTerm {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExposureTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ExposureTerm.class.getMethod("getExposureType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ActiveCurrencyAndAmount minimumTransferAmount;
@@ -477,10 +486,6 @@ public class ExposureTerm {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm ExposureTerm}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -495,6 +500,10 @@ public class ExposureTerm {
 	 * SummaryAmounts1.mmMinimumTransferAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm ExposureTerm}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -511,7 +520,7 @@ public class ExposureTerm {
 	public static final MMBusinessAttribute mmMinimumTransferAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(VariationMargin1.mmMinimumTransferAmount, SegregatedIndependentAmountMargin1.mmMinimumTransferAmount, SummaryAmounts1.mmMinimumTransferAmount);
-			elementContext_lazy = () -> ExposureTerm.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumTransferAmount";
@@ -519,6 +528,14 @@ public class ExposureTerm {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ExposureTerm.class.getMethod("getMinimumTransferAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ActiveCurrencyAndAmount roundingAmount;
@@ -533,10 +550,6 @@ public class ExposureTerm {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm ExposureTerm}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -551,6 +564,10 @@ public class ExposureTerm {
 	 * SummaryAmounts1.mmRoundingAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm ExposureTerm}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -567,7 +584,7 @@ public class ExposureTerm {
 	public static final MMBusinessAttribute mmRoundingAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(VariationMargin1.mmRoundingAmount, SegregatedIndependentAmountMargin1.mmRoundingAmount, SummaryAmounts1.mmRoundingAmount);
-			elementContext_lazy = () -> ExposureTerm.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingAmount";
@@ -575,6 +592,14 @@ public class ExposureTerm {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ExposureTerm.class.getMethod("getRoundingAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RoundingMethodCode roundingMethod;
@@ -591,10 +616,6 @@ public class ExposureTerm {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.RoundingMethodCode
 	 * RoundingMethodCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm ExposureTerm}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -606,6 +627,10 @@ public class ExposureTerm {
 	 * SegregatedIndependentAmountMargin1.mmRoundingMethod}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm ExposureTerm}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -622,7 +647,7 @@ public class ExposureTerm {
 	public static final MMBusinessAttribute mmRoundingMethod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(VariationMargin1.mmRoundingMethod, SegregatedIndependentAmountMargin1.mmRoundingMethod);
-			elementContext_lazy = () -> ExposureTerm.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingMethod";
@@ -630,6 +655,14 @@ public class ExposureTerm {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RoundingMethodCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ExposureTerm.class.getMethod("getRoundingMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CollateralAgreement relatedCollateralAgreement;
@@ -667,7 +700,7 @@ public class ExposureTerm {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCollateralAgreement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ExposureTerm.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedCollateralAgreement";
@@ -691,10 +724,6 @@ public class ExposureTerm {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm ExposureTerm}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -709,6 +738,10 @@ public class ExposureTerm {
 	 * MarginCalculation2.mmMinimumRequirementDeposit}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm ExposureTerm}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -725,7 +758,7 @@ public class ExposureTerm {
 	public static final MMBusinessAttribute mmMinimumRequirementDeposit = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Margin2.mmMinimumRequirementDeposit, MarginCalculation1.mmMinimumRequirementDeposit, MarginCalculation2.mmMinimumRequirementDeposit);
-			elementContext_lazy = () -> ExposureTerm.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumRequirementDeposit";
@@ -733,6 +766,14 @@ public class ExposureTerm {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ExposureTerm.class.getMethod("getMinimumRequirementDeposit", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -746,11 +787,17 @@ public class ExposureTerm {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralAgreement.mmExposureTerm);
 				derivationElement_lazy = () -> Arrays.asList(MarginTerms1Choice.mmMarginDetails);
 				subType_lazy = () -> Arrays.asList(IndependentAmountTerm.mmObject(), VariationMarginTerm.mmObject());
-				element_lazy = () -> Arrays.asList(ExposureTerm.mmExposureType, ExposureTerm.mmMinimumTransferAmount, ExposureTerm.mmRoundingAmount, ExposureTerm.mmRoundingMethod, ExposureTerm.mmRelatedCollateralAgreement,
-						ExposureTerm.mmMinimumRequirementDeposit);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExposureTerm.mmExposureType, com.tools20022.repository.entity.ExposureTerm.mmMinimumTransferAmount,
+						com.tools20022.repository.entity.ExposureTerm.mmRoundingAmount, com.tools20022.repository.entity.ExposureTerm.mmRoundingMethod, com.tools20022.repository.entity.ExposureTerm.mmRelatedCollateralAgreement,
+						com.tools20022.repository.entity.ExposureTerm.mmMinimumRequirementDeposit);
 				derivationComponent_lazy = () -> Arrays.asList(ExposureType1Choice.mmObject(), ExposureType3Choice.mmObject(), ExposureType7Choice.mmObject(), ExposureType2Choice.mmObject(), ExposureType4Choice.mmObject(),
 						ExposureType6Choice.mmObject(), ExposureType9Choice.mmObject(), ExposureType5Choice.mmObject(), Margin1.mmObject(), MarginTerms1Choice.mmObject(), ExposureType8Choice.mmObject(), ExposureType10Choice.mmObject(),
 						ExposureType11Choice.mmObject(), ExposureType12Choice.mmObject(), ExposureType13Choice.mmObject(), ExposureType14Choice.mmObject(), ExposureType16Choice.mmObject(), ExposureType17Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ExposureTerm.class;
 			}
 		});
 		return mmObject_lazy.get();

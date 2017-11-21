@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.CorporateActionNotification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the notification advice.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information about the notification advice."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNotification1", propOrder = {"announcementDate", "furtherDetailedAnnouncementDate", "officialAnnouncementPublicationDate", "processingStatus"})
 public class CorporateActionNotification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -302,6 +308,7 @@ public class CorporateActionNotification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AnncmntDt")
 	public DateFormat4Choice getAnnouncementDate() {
 		return announcementDate;
 	}
@@ -310,6 +317,7 @@ public class CorporateActionNotification1 {
 		this.announcementDate = announcementDate;
 	}
 
+	@XmlElement(name = "FrthrDtldAnncmntDt")
 	public DateFormat4Choice getFurtherDetailedAnnouncementDate() {
 		return furtherDetailedAnnouncementDate;
 	}
@@ -318,6 +326,7 @@ public class CorporateActionNotification1 {
 		this.furtherDetailedAnnouncementDate = furtherDetailedAnnouncementDate;
 	}
 
+	@XmlElement(name = "OffclAnncmntPblctnDt")
 	public DateFormat4Choice getOfficialAnnouncementPublicationDate() {
 		return officialAnnouncementPublicationDate;
 	}
@@ -326,6 +335,7 @@ public class CorporateActionNotification1 {
 		this.officialAnnouncementPublicationDate = officialAnnouncementPublicationDate;
 	}
 
+	@XmlElement(name = "PrcgSts", required = true)
 	public ProcessingStatus1FormatChoice getProcessingStatus() {
 		return processingStatus;
 	}

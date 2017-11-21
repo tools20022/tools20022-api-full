@@ -28,6 +28,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[a-zA-Z]{2,3}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -56,6 +58,7 @@ public class Min2Max3AlphaText {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Min2Max3AlphaText";
 				definition = "Specifies an alpha string with a minimum length of 2 characters and  a maximum length of 3 characters.";
+				pattern = "[a-zA-Z]{2,3}";
 			}
 		});
 		return mmObject_lazy.get();

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Further information on the cancellation reason of the transaction.
@@ -70,6 +74,8 @@ import java.util.List;
  * "Further information on the cancellation reason of the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancellationReasonInformation1", propOrder = {"cancellationOriginator", "cancellationReason", "additionalCancellationReasonInformation"})
 public class CancellationReasonInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -235,6 +241,7 @@ public class CancellationReasonInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlOrgtr")
 	public PartyIdentification8 getCancellationOriginator() {
 		return cancellationOriginator;
 	}
@@ -243,6 +250,7 @@ public class CancellationReasonInformation1 {
 		this.cancellationOriginator = cancellationOriginator;
 	}
 
+	@XmlElement(name = "CxlRsn")
 	public CancellationReason1Choice getCancellationReason() {
 		return cancellationReason;
 	}
@@ -251,6 +259,7 @@ public class CancellationReasonInformation1 {
 		this.cancellationReason = cancellationReason;
 	}
 
+	@XmlElement(name = "AddtlCxlRsnInf")
 	public List<Max105Text> getAdditionalCancellationReasonInformation() {
 		return additionalCancellationReasonInformation;
 	}

@@ -35,16 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmPartyRole
- * Undertaking.mmPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole#mmUndertaking
+ * UndertakingPartyRole.mmUndertaking}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -71,12 +69,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * UndertakingInstructingParty}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole#mmUndertaking
- * UndertakingPartyRole.mmUndertaking}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmPartyRole
+ * Undertaking.mmPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -134,7 +134,7 @@ public class UndertakingPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmUndertaking = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> UndertakingPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Undertaking";
@@ -158,7 +158,12 @@ public class UndertakingPartyRole extends Role {
 				subType_lazy = () -> Arrays.asList(UndertakingIssuer.mmObject(), UndertakingDeliveryToParty.mmObject(), UndertakingAdvisingParty.mmObject(), UndertakingBeneficiary.mmObject(), UndertakingUltimateObligor.mmObject(),
 						UndertakingApplicant.mmObject(), UndertakingConfirmer.mmObject(), UndertakingPresenter.mmObject(), UndertakingPlaceOfPresentation.mmObject(), UndertakingInstructingParty.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(UndertakingPartyRole.mmUndertaking);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UndertakingPartyRole.mmUndertaking);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UndertakingPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

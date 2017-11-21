@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesClearingLatestVersion;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -45,9 +47,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code secl.003.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
@@ -89,6 +88,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code secl.003.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -100,6 +102,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeLegStatementV03", propOrder = {"statementParameters", "pagination", "clearingMember", "clearingAccount", "statementDetails", "supplementaryData"})
 public class TradeLegStatementV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -139,6 +143,14 @@ public class TradeLegStatementV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Statement31.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeLegStatementV03.class.getMethod("getStatementParameters", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Pagination pagination;
 	/**
@@ -177,6 +189,14 @@ public class TradeLegStatementV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeLegStatementV03.class.getMethod("getPagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification35Choice clearingMember;
 	/**
@@ -214,6 +234,14 @@ public class TradeLegStatementV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeLegStatementV03.class.getMethod("getClearingMember", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesAccount18 clearingAccount;
@@ -254,6 +282,14 @@ public class TradeLegStatementV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesAccount18.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeLegStatementV03.class.getMethod("getClearingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<TradeLegStatement3> statementDetails;
 	/**
@@ -287,6 +323,14 @@ public class TradeLegStatementV03 {
 			definition = "Provides the statement details.";
 			minOccurs = 1;
 			complexType_lazy = () -> TradeLegStatement3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeLegStatementV03.class.getMethod("getStatementDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -325,6 +369,14 @@ public class TradeLegStatementV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeLegStatementV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -337,8 +389,9 @@ public class TradeLegStatementV03 {
 				rootElement = "Document";
 				xmlTag = "TradLegStmt";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(TradeLegStatementV03.mmStatementParameters, TradeLegStatementV03.mmPagination, TradeLegStatementV03.mmClearingMember, TradeLegStatementV03.mmClearingAccount,
-						TradeLegStatementV03.mmStatementDetails, TradeLegStatementV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.TradeLegStatementV03.mmStatementParameters, com.tools20022.repository.area.secl.TradeLegStatementV03.mmPagination,
+						com.tools20022.repository.area.secl.TradeLegStatementV03.mmClearingMember, com.tools20022.repository.area.secl.TradeLegStatementV03.mmClearingAccount,
+						com.tools20022.repository.area.secl.TradeLegStatementV03.mmStatementDetails, com.tools20022.repository.area.secl.TradeLegStatementV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "secl";
@@ -348,10 +401,16 @@ public class TradeLegStatementV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TradeLegStatementV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtParams", required = true)
 	public Statement31 getStatementParameters() {
 		return statementParameters;
 	}
@@ -360,6 +419,7 @@ public class TradeLegStatementV03 {
 		this.statementParameters = statementParameters;
 	}
 
+	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
@@ -368,6 +428,7 @@ public class TradeLegStatementV03 {
 		this.pagination = pagination;
 	}
 
+	@XmlElement(name = "ClrMmb", required = true)
 	public PartyIdentification35Choice getClearingMember() {
 		return clearingMember;
 	}
@@ -376,6 +437,7 @@ public class TradeLegStatementV03 {
 		this.clearingMember = clearingMember;
 	}
 
+	@XmlElement(name = "ClrAcct")
 	public SecuritiesAccount18 getClearingAccount() {
 		return clearingAccount;
 	}
@@ -384,6 +446,7 @@ public class TradeLegStatementV03 {
 		this.clearingAccount = clearingAccount;
 	}
 
+	@XmlElement(name = "StmtDtls", required = true)
 	public List<TradeLegStatement3> getStatementDetails() {
 		return statementDetails;
 	}
@@ -392,11 +455,18 @@ public class TradeLegStatementV03 {
 		this.statementDetails = statementDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:secl.003.03.03")
+	static public class Document {
+		@XmlElement(name = "TradLegStmt", required = true)
+		public TradeLegStatementV03 messageBody;
 	}
 }

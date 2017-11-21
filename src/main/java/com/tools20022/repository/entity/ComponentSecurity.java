@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.ChoiceCode;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,18 +36,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmComponentSecurity
- * Security.mmComponentSecurity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmComponentSecurity
- * DateTimePeriod.mmComponentSecurity}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -68,6 +57,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.ComponentSecurity#mmSeparationDate
  * ComponentSecurity.mmSeparationDate}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmComponentSecurity
+ * Security.mmComponentSecurity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmComponentSecurity
+ * DateTimePeriod.mmComponentSecurity}</li>
  * </ul>
  * </li>
  * <li>
@@ -129,7 +130,7 @@ public class ComponentSecurity {
 	 */
 	public static final MMBusinessAssociationEnd mmSeparationPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ComponentSecurity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ComponentSecurity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SeparationPeriod";
@@ -176,7 +177,7 @@ public class ComponentSecurity {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ComponentSecurity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ComponentSecurity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
@@ -217,7 +218,7 @@ public class ComponentSecurity {
 	 */
 	public static final MMBusinessAttribute mmSeparationChoice = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> ComponentSecurity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ComponentSecurity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SeparationChoice";
@@ -225,6 +226,14 @@ public class ComponentSecurity {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ChoiceCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ComponentSecurity.class.getMethod("getSeparationChoice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BaseOneRate quantityNumerator;
@@ -255,7 +264,7 @@ public class ComponentSecurity {
 	 */
 	public static final MMBusinessAttribute mmQuantityNumerator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> ComponentSecurity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ComponentSecurity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuantityNumerator";
@@ -263,6 +272,14 @@ public class ComponentSecurity {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ComponentSecurity.class.getMethod("getQuantityNumerator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BaseOneRate quantityDenominator;
@@ -293,7 +310,7 @@ public class ComponentSecurity {
 	 */
 	public static final MMBusinessAttribute mmQuantityDenominator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> ComponentSecurity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ComponentSecurity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuantityDenominator";
@@ -301,6 +318,14 @@ public class ComponentSecurity {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ComponentSecurity.class.getMethod("getQuantityDenominator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime separationDate;
@@ -334,7 +359,7 @@ public class ComponentSecurity {
 	 */
 	public static final MMBusinessAttribute mmSeparationDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> ComponentSecurity.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ComponentSecurity.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SeparationDate";
@@ -342,6 +367,14 @@ public class ComponentSecurity {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ComponentSecurity.class.getMethod("getSeparationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -353,8 +386,14 @@ public class ComponentSecurity {
 				name = "ComponentSecurity";
 				definition = "Security which forms a component of another security, for example, underlying.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmComponentSecurity, com.tools20022.repository.entity.DateTimePeriod.mmComponentSecurity);
-				element_lazy = () -> Arrays.asList(ComponentSecurity.mmSeparationPeriod, ComponentSecurity.mmSecurity, ComponentSecurity.mmSeparationChoice, ComponentSecurity.mmQuantityNumerator, ComponentSecurity.mmQuantityDenominator,
-						ComponentSecurity.mmSeparationDate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ComponentSecurity.mmSeparationPeriod, com.tools20022.repository.entity.ComponentSecurity.mmSecurity,
+						com.tools20022.repository.entity.ComponentSecurity.mmSeparationChoice, com.tools20022.repository.entity.ComponentSecurity.mmQuantityNumerator,
+						com.tools20022.repository.entity.ComponentSecurity.mmQuantityDenominator, com.tools20022.repository.entity.ComponentSecurity.mmSeparationDate);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ComponentSecurity.class;
 			}
 		});
 		return mmObject_lazy.get();

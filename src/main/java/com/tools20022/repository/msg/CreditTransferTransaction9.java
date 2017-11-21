@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details specific to the individual transaction(s) included
@@ -135,6 +139,10 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CreditTransferTransaction9", propOrder = {"creditIdentification", "batchBooking", "paymentTypeInformation", "totalInterbankSettlementAmount", "interbankSettlementDate", "instructingAgent", "instructedAgent",
+		"intermediaryAgent1", "intermediaryAgent1Account", "intermediaryAgent2", "intermediaryAgent2Account", "intermediaryAgent3", "intermediaryAgent3Account", "creditorAgent", "creditorAgentAccount", "creditor", "creditorAccount",
+		"ultimateCreditor", "instructionForCreditorAgent", "directDebitTransactionInformation", "supplementaryData"})
 public class CreditTransferTransaction9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1207,6 +1215,7 @@ public class CreditTransferTransaction9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CdtId", required = true)
 	public Max35Text getCreditIdentification() {
 		return creditIdentification;
 	}
@@ -1215,6 +1224,7 @@ public class CreditTransferTransaction9 {
 		this.creditIdentification = creditIdentification;
 	}
 
+	@XmlElement(name = "BtchBookg")
 	public BatchBookingIndicator getBatchBooking() {
 		return batchBooking;
 	}
@@ -1223,6 +1233,7 @@ public class CreditTransferTransaction9 {
 		this.batchBooking = batchBooking;
 	}
 
+	@XmlElement(name = "PmtTpInf")
 	public PaymentTypeInformation21 getPaymentTypeInformation() {
 		return paymentTypeInformation;
 	}
@@ -1231,6 +1242,7 @@ public class CreditTransferTransaction9 {
 		this.paymentTypeInformation = paymentTypeInformation;
 	}
 
+	@XmlElement(name = "TtlIntrBkSttlmAmt")
 	public ActiveCurrencyAndAmount getTotalInterbankSettlementAmount() {
 		return totalInterbankSettlementAmount;
 	}
@@ -1239,6 +1251,7 @@ public class CreditTransferTransaction9 {
 		this.totalInterbankSettlementAmount = totalInterbankSettlementAmount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDt")
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}
@@ -1247,6 +1260,7 @@ public class CreditTransferTransaction9 {
 		this.interbankSettlementDate = interbankSettlementDate;
 	}
 
+	@XmlElement(name = "InstgAgt")
 	public BranchAndFinancialInstitutionIdentification5 getInstructingAgent() {
 		return instructingAgent;
 	}
@@ -1255,6 +1269,7 @@ public class CreditTransferTransaction9 {
 		this.instructingAgent = instructingAgent;
 	}
 
+	@XmlElement(name = "InstdAgt")
 	public BranchAndFinancialInstitutionIdentification5 getInstructedAgent() {
 		return instructedAgent;
 	}
@@ -1263,6 +1278,7 @@ public class CreditTransferTransaction9 {
 		this.instructedAgent = instructedAgent;
 	}
 
+	@XmlElement(name = "IntrmyAgt1")
 	public BranchAndFinancialInstitutionIdentification5 getIntermediaryAgent1() {
 		return intermediaryAgent1;
 	}
@@ -1271,6 +1287,7 @@ public class CreditTransferTransaction9 {
 		this.intermediaryAgent1 = intermediaryAgent1;
 	}
 
+	@XmlElement(name = "IntrmyAgt1Acct")
 	public CashAccount24 getIntermediaryAgent1Account() {
 		return intermediaryAgent1Account;
 	}
@@ -1279,6 +1296,7 @@ public class CreditTransferTransaction9 {
 		this.intermediaryAgent1Account = intermediaryAgent1Account;
 	}
 
+	@XmlElement(name = "IntrmyAgt2")
 	public BranchAndFinancialInstitutionIdentification5 getIntermediaryAgent2() {
 		return intermediaryAgent2;
 	}
@@ -1287,6 +1305,7 @@ public class CreditTransferTransaction9 {
 		this.intermediaryAgent2 = intermediaryAgent2;
 	}
 
+	@XmlElement(name = "IntrmyAgt2Acct")
 	public CashAccount24 getIntermediaryAgent2Account() {
 		return intermediaryAgent2Account;
 	}
@@ -1295,6 +1314,7 @@ public class CreditTransferTransaction9 {
 		this.intermediaryAgent2Account = intermediaryAgent2Account;
 	}
 
+	@XmlElement(name = "IntrmyAgt3")
 	public BranchAndFinancialInstitutionIdentification5 getIntermediaryAgent3() {
 		return intermediaryAgent3;
 	}
@@ -1303,6 +1323,7 @@ public class CreditTransferTransaction9 {
 		this.intermediaryAgent3 = intermediaryAgent3;
 	}
 
+	@XmlElement(name = "IntrmyAgt3Acct")
 	public CashAccount24 getIntermediaryAgent3Account() {
 		return intermediaryAgent3Account;
 	}
@@ -1311,6 +1332,7 @@ public class CreditTransferTransaction9 {
 		this.intermediaryAgent3Account = intermediaryAgent3Account;
 	}
 
+	@XmlElement(name = "CdtrAgt")
 	public BranchAndFinancialInstitutionIdentification5 getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -1319,6 +1341,7 @@ public class CreditTransferTransaction9 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "CdtrAgtAcct")
 	public CashAccount24 getCreditorAgentAccount() {
 		return creditorAgentAccount;
 	}
@@ -1327,6 +1350,7 @@ public class CreditTransferTransaction9 {
 		this.creditorAgentAccount = creditorAgentAccount;
 	}
 
+	@XmlElement(name = "Cdtr", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getCreditor() {
 		return creditor;
 	}
@@ -1335,6 +1359,7 @@ public class CreditTransferTransaction9 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAcct")
 	public CashAccount24 getCreditorAccount() {
 		return creditorAccount;
 	}
@@ -1343,6 +1368,7 @@ public class CreditTransferTransaction9 {
 		this.creditorAccount = creditorAccount;
 	}
 
+	@XmlElement(name = "UltmtCdtr")
 	public BranchAndFinancialInstitutionIdentification5 getUltimateCreditor() {
 		return ultimateCreditor;
 	}
@@ -1351,6 +1377,7 @@ public class CreditTransferTransaction9 {
 		this.ultimateCreditor = ultimateCreditor;
 	}
 
+	@XmlElement(name = "InstrForCdtrAgt")
 	public List<InstructionForCreditorAgent2> getInstructionForCreditorAgent() {
 		return instructionForCreditorAgent;
 	}
@@ -1359,6 +1386,7 @@ public class CreditTransferTransaction9 {
 		this.instructionForCreditorAgent = instructionForCreditorAgent;
 	}
 
+	@XmlElement(name = "DrctDbtTxInf", required = true)
 	public List<DirectDebitTransactionInformation15> getDirectDebitTransactionInformation() {
 		return directDebitTransactionInformation;
 	}
@@ -1367,6 +1395,7 @@ public class CreditTransferTransaction9 {
 		this.directDebitTransactionInformation = directDebitTransactionInformation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

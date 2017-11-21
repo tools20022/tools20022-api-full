@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a transfer out transaction.
@@ -90,6 +94,8 @@ import java.util.List;
  * TransferOut5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferOut7", propOrder = {"requestedTransferDate", "transferDetails", "accountDetails", "settlementDetails", "extension"})
 public class TransferOut7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -343,6 +349,7 @@ public class TransferOut7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqdTrfDt")
 	public DateFormat1Choice getRequestedTransferDate() {
 		return requestedTransferDate;
 	}
@@ -351,6 +358,7 @@ public class TransferOut7 {
 		this.requestedTransferDate = requestedTransferDate;
 	}
 
+	@XmlElement(name = "TrfDtls", required = true)
 	public List<Transfer12> getTransferDetails() {
 		return transferDetails;
 	}
@@ -359,6 +367,7 @@ public class TransferOut7 {
 		this.transferDetails = transferDetails;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public InvestmentAccount22 getAccountDetails() {
 		return accountDetails;
 	}
@@ -367,6 +376,7 @@ public class TransferOut7 {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "SttlmDtls", required = true)
 	public ReceiveInformation7 getSettlementDetails() {
 		return settlementDetails;
 	}
@@ -375,6 +385,7 @@ public class TransferOut7 {
 		this.settlementDetails = settlementDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

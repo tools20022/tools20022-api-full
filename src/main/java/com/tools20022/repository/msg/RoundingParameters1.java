@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.RoundingParameters;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to a fractional number.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Parameters applied to a fractional number."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RoundingParameters1", propOrder = {"roundingModulus", "roundingDirection"})
 public class RoundingParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class RoundingParameters1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RndgMdlus")
 	public DecimalNumber getRoundingModulus() {
 		return roundingModulus;
 	}
@@ -189,6 +196,7 @@ public class RoundingParameters1 {
 		this.roundingModulus = roundingModulus;
 	}
 
+	@XmlElement(name = "RndgDrctn", required = true)
 	public RoundingDirection1Code getRoundingDirection() {
 		return roundingDirection;
 	}

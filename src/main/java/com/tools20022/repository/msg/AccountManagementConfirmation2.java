@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the type of request or instruction.
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountManagementConfirmation1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountManagementConfirmation2", propOrder = {"confirmationType", "accountApplicationIdentification", "clientReference", "counterpartyReference"})
 public class AccountManagementConfirmation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -344,6 +350,7 @@ public class AccountManagementConfirmation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ConfTp", required = true)
 	public AccountManagementType2Code getConfirmationType() {
 		return confirmationType;
 	}
@@ -352,6 +359,7 @@ public class AccountManagementConfirmation2 {
 		this.confirmationType = confirmationType;
 	}
 
+	@XmlElement(name = "AcctApplId")
 	public Max35Text getAccountApplicationIdentification() {
 		return accountApplicationIdentification;
 	}
@@ -360,6 +368,7 @@ public class AccountManagementConfirmation2 {
 		this.accountApplicationIdentification = accountApplicationIdentification;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -368,6 +377,7 @@ public class AccountManagementConfirmation2 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "CtrPtyRef")
 	public AdditionalReference2 getCounterpartyReference() {
 		return counterpartyReference;
 	}

@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.CommissionWaiver2;
 import com.tools20022.repository.msg.CommissionWaiver3;
 import com.tools20022.repository.msg.CommissionWaiver4;
 import com.tools20022.repository.msg.WaivingType1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,6 +41,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommissionWaiver#mmCommission
+ * CommissionWaiver.mmCommission}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommissionWaiver#mmInstructionBasis
+ * CommissionWaiver.mmInstructionBasis}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommissionWaiver#mmWaivedRate
+ * CommissionWaiver.mmWaivedRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommissionWaiver#mmNonWaivedRate
+ * CommissionWaiver.mmNonWaivedRate}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -64,23 +82,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionWaiving
  * Commission.mmCommissionWaiving}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommissionWaiver#mmCommission
- * CommissionWaiver.mmCommission}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommissionWaiver#mmInstructionBasis
- * CommissionWaiver.mmInstructionBasis}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommissionWaiver#mmWaivedRate
- * CommissionWaiver.mmWaivedRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommissionWaiver#mmNonWaivedRate
- * CommissionWaiver.mmNonWaivedRate}</li>
  * </ul>
  * </li>
  * <li>
@@ -139,7 +140,7 @@ public class CommissionWaiver {
 	 */
 	public static final MMBusinessAssociationEnd mmCommission = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CommissionWaiver.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CommissionWaiver.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Commission";
@@ -162,11 +163,6 @@ public class CommissionWaiver {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.WaivingInstructionCode
 	 * WaivingInstructionCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CommissionWaiver
-	 * CommissionWaiver}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -199,6 +195,11 @@ public class CommissionWaiver {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CommissionWaiver
+	 * CommissionWaiver}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -213,7 +214,7 @@ public class CommissionWaiver {
 		{
 			derivation_lazy = () -> Arrays.asList(WaivingType1.mmStructured, CommissionWaiver2.mmInstructionBasis, CommissionWaiver3.mmInstructionBasis, CommissionWaiver3.mmExtendedInstructionBasis, WaivingInstruction1Choice.mmCode,
 					WaivingInstruction1Choice.mmProprietary, CommissionWaiver4.mmInstructionBasis, WaivingInstruction2Choice.mmCode, WaivingInstruction2Choice.mmProprietary);
-			elementContext_lazy = () -> CommissionWaiver.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CommissionWaiver.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstructionBasis";
@@ -221,6 +222,14 @@ public class CommissionWaiver {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> WaivingInstructionCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CommissionWaiver.class.getMethod("getInstructionBasis", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate waivedRate;
@@ -235,11 +244,6 @@ public class CommissionWaiver {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CommissionWaiver
-	 * CommissionWaiver}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -254,6 +258,11 @@ public class CommissionWaiver {
 	 * CommissionWaiver4.mmWaivedRate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CommissionWaiver
+	 * CommissionWaiver}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -270,7 +279,7 @@ public class CommissionWaiver {
 	public static final MMBusinessAttribute mmWaivedRate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CommissionWaiver2.mmWaivedRate, CommissionWaiver3.mmWaivedRate, CommissionWaiver4.mmWaivedRate);
-			elementContext_lazy = () -> CommissionWaiver.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CommissionWaiver.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WaivedRate";
@@ -278,6 +287,14 @@ public class CommissionWaiver {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CommissionWaiver.class.getMethod("getWaivedRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate nonWaivedRate;
@@ -309,7 +326,7 @@ public class CommissionWaiver {
 	 */
 	public static final MMBusinessAttribute mmNonWaivedRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> CommissionWaiver.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CommissionWaiver.mmObject();
 			isDerived = true;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonWaivedRate";
@@ -317,6 +334,14 @@ public class CommissionWaiver {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CommissionWaiver.class.getMethod("getNonWaivedRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -328,9 +353,15 @@ public class CommissionWaiver {
 				name = "CommissionWaiver";
 				definition = "Non-enforcement of the right to all or part of a commission by the party entitled to the commission.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Commission.mmCommissionWaiving);
-				element_lazy = () -> Arrays.asList(CommissionWaiver.mmCommission, CommissionWaiver.mmInstructionBasis, CommissionWaiver.mmWaivedRate, CommissionWaiver.mmNonWaivedRate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CommissionWaiver.mmCommission, com.tools20022.repository.entity.CommissionWaiver.mmInstructionBasis,
+						com.tools20022.repository.entity.CommissionWaiver.mmWaivedRate, com.tools20022.repository.entity.CommissionWaiver.mmNonWaivedRate);
 				derivationComponent_lazy = () -> Arrays.asList(WaivingType1.mmObject(), CommissionWaiver2.mmObject(), CommissionWaiver3.mmObject(), WaivingInstruction1Choice.mmObject(), CommissionWaiver4.mmObject(),
 						WaivingInstruction2Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CommissionWaiver.class;
 			}
 		});
 		return mmObject_lazy.get();

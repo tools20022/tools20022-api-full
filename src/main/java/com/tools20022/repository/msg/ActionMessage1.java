@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Message to be displayed to the cardholder or the cashier.
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ActionMessage1", propOrder = {"messageDestination", "messageContent", "messageContentSignature"})
 public class ActionMessage1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -258,6 +264,7 @@ public class ActionMessage1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgDstn", required = true)
 	public UserInterface1Code getMessageDestination() {
 		return messageDestination;
 	}
@@ -266,6 +273,7 @@ public class ActionMessage1 {
 		this.messageDestination = messageDestination;
 	}
 
+	@XmlElement(name = "MsgCntt", required = true)
 	public Max256Text getMessageContent() {
 		return messageContent;
 	}
@@ -274,6 +282,7 @@ public class ActionMessage1 {
 		this.messageContent = messageContent;
 	}
 
+	@XmlElement(name = "MsgCnttSgntr")
 	public Max70Text getMessageContentSignature() {
 		return messageContentSignature;
 	}

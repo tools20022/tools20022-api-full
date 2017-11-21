@@ -65,6 +65,11 @@ public class CommissionRecipient extends CommissionPartyRole {
 				definition = "Party entitled to the amount of money resulting from a commission.";
 				superType_lazy = () -> CommissionPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CommissionRecipient.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

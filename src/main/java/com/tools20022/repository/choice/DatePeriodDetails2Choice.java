@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DatePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Range of time defined by a start date and an end date.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Range of time defined by a start date and an end date."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DatePeriodDetails2Choice", propOrder = {"fromDate", "toDate", "fromToDate"})
 public class DatePeriodDetails2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -225,6 +231,7 @@ public class DatePeriodDetails2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrDt", required = true)
 	public ISODate getFromDate() {
 		return fromDate;
 	}
@@ -233,6 +240,7 @@ public class DatePeriodDetails2Choice {
 		this.fromDate = fromDate;
 	}
 
+	@XmlElement(name = "ToDt", required = true)
 	public ISODate getToDate() {
 		return toDate;
 	}
@@ -241,6 +249,7 @@ public class DatePeriodDetails2Choice {
 		this.toDate = toDate;
 	}
 
+	@XmlElement(name = "FrToDt", required = true)
 	public DatePeriodDetails getFromToDate() {
 		return fromToDate;
 	}

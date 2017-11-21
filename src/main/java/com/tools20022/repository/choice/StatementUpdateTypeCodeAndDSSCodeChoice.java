@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for the update type.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between formats for the update type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatementUpdateTypeCodeAndDSSCodeChoice", propOrder = {"statementUpdateTypeAsCode", "statementUpdateTypeAsDSS"})
 public class StatementUpdateTypeCodeAndDSSCodeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +168,7 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtUpdTpAsCd", required = true)
 	public StatementUpdateTypeCode getStatementUpdateTypeAsCode() {
 		return statementUpdateTypeAsCode;
 	}
@@ -170,6 +177,7 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 		this.statementUpdateTypeAsCode = statementUpdateTypeAsCode;
 	}
 
+	@XmlElement(name = "StmtUpdTpAsDSS", required = true)
 	public GenericIdentification7 getStatementUpdateTypeAsDSS() {
 		return statementUpdateTypeAsDSS;
 	}

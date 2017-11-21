@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Tax related to an investment fund order.
@@ -82,6 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Tax related to an investment fund order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Tax18", propOrder = {"taxType", "amount", "rate", "country", "EUDividendStatusType", "EUCapitalGainType", "recipientIdentification", "exemptionReasonType", "exemptionIndicator", "taxCalculationDetails"})
 public class Tax18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -565,6 +571,7 @@ public class Tax18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TaxTp", required = true)
 	public TaxDetailsType1Choice getTaxType() {
 		return taxType;
 	}
@@ -573,6 +580,7 @@ public class Tax18 {
 		this.taxType = taxType;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -581,6 +589,7 @@ public class Tax18 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -589,6 +598,7 @@ public class Tax18 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "Ctry")
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -597,6 +607,7 @@ public class Tax18 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "EUDvddStsTp")
 	public EUDividendStatusType1Choice getEUDividendStatusType() {
 		return eUDividendStatusType;
 	}
@@ -605,6 +616,7 @@ public class Tax18 {
 		this.eUDividendStatusType = eUDividendStatusType;
 	}
 
+	@XmlElement(name = "EUCptlGnTp")
 	public EUCapitalGainType1Choice getEUCapitalGainType() {
 		return eUCapitalGainType;
 	}
@@ -613,6 +625,7 @@ public class Tax18 {
 		this.eUCapitalGainType = eUCapitalGainType;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification2Choice getRecipientIdentification() {
 		return recipientIdentification;
 	}
@@ -621,6 +634,7 @@ public class Tax18 {
 		this.recipientIdentification = recipientIdentification;
 	}
 
+	@XmlElement(name = "XmptnRsnTp")
 	public ExemptionReasonType1Choice getExemptionReasonType() {
 		return exemptionReasonType;
 	}
@@ -629,6 +643,7 @@ public class Tax18 {
 		this.exemptionReasonType = exemptionReasonType;
 	}
 
+	@XmlElement(name = "XmptnInd", required = true)
 	public YesNoIndicator getExemptionIndicator() {
 		return exemptionIndicator;
 	}
@@ -637,6 +652,7 @@ public class Tax18 {
 		this.exemptionIndicator = exemptionIndicator;
 	}
 
+	@XmlElement(name = "TaxClctnDtls")
 	public TaxCalculationInformation7 getTaxCalculationDetails() {
 		return taxCalculationDetails;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the settlement obligation.
@@ -84,6 +88,9 @@ import java.util.List;
  * definition} = "Provides details about the settlement obligation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementObligation2", propOrder = {"settlementObligationIdentification", "financialInstrumentIdentification", "intendedSettlementDate", "quantity", "settlementAmount", "additionalSettlementObligationDetails",
+		"placeOfTrade", "tradeDate"})
 public class SettlementObligation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -480,6 +487,7 @@ public class SettlementObligation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttlmOblgtnId", required = true)
 	public Max35Text getSettlementObligationIdentification() {
 		return settlementObligationIdentification;
 	}
@@ -488,6 +496,7 @@ public class SettlementObligation2 {
 		this.settlementObligationIdentification = settlementObligationIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -496,6 +505,7 @@ public class SettlementObligation2 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "IntnddSttlmDt", required = true)
 	public DateFormat11Choice getIntendedSettlementDate() {
 		return intendedSettlementDate;
 	}
@@ -504,6 +514,7 @@ public class SettlementObligation2 {
 		this.intendedSettlementDate = intendedSettlementDate;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity1Choice getQuantity() {
 		return quantity;
 	}
@@ -512,6 +523,7 @@ public class SettlementObligation2 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "SttlmAmt", required = true)
 	public AmountAndDirection20 getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -520,6 +532,7 @@ public class SettlementObligation2 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "AddtlSttlmOblgtnDtls")
 	public List<SettlementObligation3> getAdditionalSettlementObligationDetails() {
 		return additionalSettlementObligationDetails;
 	}
@@ -528,6 +541,7 @@ public class SettlementObligation2 {
 		this.additionalSettlementObligationDetails = additionalSettlementObligationDetails;
 	}
 
+	@XmlElement(name = "PlcOfTrad", required = true)
 	public MarketIdentification20 getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -536,6 +550,7 @@ public class SettlementObligation2 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}

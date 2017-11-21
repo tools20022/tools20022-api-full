@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding notification general information
@@ -89,6 +93,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NotificationGeneralInformationExtension1", propOrder = {"placeAndName", "eventStatus", "createDateAndTime", "updateDateAndTime", "approvedDate", "matchDate", "activeUntilDate", "serviceLevelAgreementPeriod",
+		"issuerStatus", "validationNotSupportedReason"})
 public class NotificationGeneralInformationExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -540,6 +547,7 @@ public class NotificationGeneralInformationExtension1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -548,6 +556,7 @@ public class NotificationGeneralInformationExtension1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "EvtSts", required = true)
 	public EventWorkflowStatus1Code getEventStatus() {
 		return eventStatus;
 	}
@@ -556,6 +565,7 @@ public class NotificationGeneralInformationExtension1 {
 		this.eventStatus = eventStatus;
 	}
 
+	@XmlElement(name = "CretDtAndTm", required = true)
 	public ISODateTime getCreateDateAndTime() {
 		return createDateAndTime;
 	}
@@ -564,6 +574,7 @@ public class NotificationGeneralInformationExtension1 {
 		this.createDateAndTime = createDateAndTime;
 	}
 
+	@XmlElement(name = "UpdDtAndTm")
 	public ISODateTime getUpdateDateAndTime() {
 		return updateDateAndTime;
 	}
@@ -572,6 +583,7 @@ public class NotificationGeneralInformationExtension1 {
 		this.updateDateAndTime = updateDateAndTime;
 	}
 
+	@XmlElement(name = "ApprvdDt")
 	public ISODate getApprovedDate() {
 		return approvedDate;
 	}
@@ -580,6 +592,7 @@ public class NotificationGeneralInformationExtension1 {
 		this.approvedDate = approvedDate;
 	}
 
+	@XmlElement(name = "MtchDt")
 	public ISODate getMatchDate() {
 		return matchDate;
 	}
@@ -588,6 +601,7 @@ public class NotificationGeneralInformationExtension1 {
 		this.matchDate = matchDate;
 	}
 
+	@XmlElement(name = "ActvUntilDt")
 	public ISODate getActiveUntilDate() {
 		return activeUntilDate;
 	}
@@ -596,6 +610,7 @@ public class NotificationGeneralInformationExtension1 {
 		this.activeUntilDate = activeUntilDate;
 	}
 
+	@XmlElement(name = "SvcLvlAgrmtPrd")
 	public Period3 getServiceLevelAgreementPeriod() {
 		return serviceLevelAgreementPeriod;
 	}
@@ -604,6 +619,7 @@ public class NotificationGeneralInformationExtension1 {
 		this.serviceLevelAgreementPeriod = serviceLevelAgreementPeriod;
 	}
 
+	@XmlElement(name = "IssrSts")
 	public IssuerStatus1Code getIssuerStatus() {
 		return issuerStatus;
 	}
@@ -612,6 +628,7 @@ public class NotificationGeneralInformationExtension1 {
 		this.issuerStatus = issuerStatus;
 	}
 
+	@XmlElement(name = "VldtnNotSpprtdRsn")
 	public Max4AlphaNumericText getValidationNotSupportedReason() {
 		return validationNotSupportedReason;
 	}

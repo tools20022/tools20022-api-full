@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.MarginRequirement1Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,6 +38,44 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTotalCollateralCurrentValue
+ * ExposureCalculation.mmTotalCollateralCurrentValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTotalExposedAmount
+ * ExposureCalculation.mmTotalExposedAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCurrentIndependentAmount
+ * ExposureCalculation.mmCurrentIndependentAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCurrentVariationMargin
+ * ExposureCalculation.mmCurrentVariationMargin}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCurrentSegregatedIndependentAmount
+ * ExposureCalculation.mmCurrentSegregatedIndependentAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmVariationMarginAmountRequirement
+ * ExposureCalculation.mmVariationMarginAmountRequirement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmSegregatedAmountRequirement
+ * ExposureCalculation.mmSegregatedAmountRequirement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCollateralManagement
+ * ExposureCalculation.mmCollateralManagement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCounterpartyRisk
+ * ExposureCalculation.mmCounterpartyRisk}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTransactionRisk
+ * ExposureCalculation.mmTransactionRisk}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTotalCollateralAfterHaircut
+ * ExposureCalculation.mmTotalCollateralAfterHaircut}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -90,44 +129,6 @@ import java.util.List;
  * CollateralBalance1Choice.mmCollateralDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTotalCollateralCurrentValue
- * ExposureCalculation.mmTotalCollateralCurrentValue}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTotalExposedAmount
- * ExposureCalculation.mmTotalExposedAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCurrentIndependentAmount
- * ExposureCalculation.mmCurrentIndependentAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCurrentVariationMargin
- * ExposureCalculation.mmCurrentVariationMargin}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCurrentSegregatedIndependentAmount
- * ExposureCalculation.mmCurrentSegregatedIndependentAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmVariationMarginAmountRequirement
- * ExposureCalculation.mmVariationMarginAmountRequirement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmSegregatedAmountRequirement
- * ExposureCalculation.mmSegregatedAmountRequirement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCollateralManagement
- * ExposureCalculation.mmCollateralManagement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCounterpartyRisk
- * ExposureCalculation.mmCounterpartyRisk}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTransactionRisk
- * ExposureCalculation.mmTransactionRisk}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTotalCollateralAfterHaircut
- * ExposureCalculation.mmTotalCollateralAfterHaircut}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -160,11 +161,6 @@ public class ExposureCalculation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation
-	 * ExposureCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -204,6 +200,11 @@ public class ExposureCalculation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation
+	 * ExposureCalculation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -221,7 +222,7 @@ public class ExposureCalculation {
 			derivation_lazy = () -> Arrays.asList(InterestCalculation1.mmEffectivePrincipalAmount, InterestCalculation2.mmEffectivePrincipalAmount, MarginCall1.mmCollateralBalance, SummaryAmounts1.mmPreHaircutCollateralValue,
 					SummaryAmounts1.mmPreviousCollateralValue, Summary1.mmTotalValueOfCollateral, Margin2.mmCollateralOnDeposit, MarginCalculation1.mmCollateralOnDeposit, MarginCalculation2.mmCollateralOnDeposit,
 					InterestCalculation3.mmEffectivePrincipalAmount, InterestCalculation4.mmEffectivePrincipalAmount);
-			elementContext_lazy = () -> ExposureCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCollateralCurrentValue";
@@ -229,6 +230,14 @@ public class ExposureCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ExposureCalculation.class.getMethod("getTotalCollateralCurrentValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ActiveCurrencyAndAmount totalExposedAmount;
@@ -244,11 +253,6 @@ public class ExposureCalculation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation
-	 * ExposureCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -278,6 +282,11 @@ public class ExposureCalculation {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation
+	 * ExposureCalculation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -294,7 +303,7 @@ public class ExposureCalculation {
 		{
 			derivation_lazy = () -> Arrays.asList(MarginCall1.mmExposedAmountPartyA, MarginCall1.mmExposedAmountPartyB, SummaryAmounts1.mmAdjustedExposure, SummaryAmounts1.mmPreviousExposureValue, Summary1.mmExposedAmountPartyA,
 					Summary1.mmExposedAmountPartyB, Margin2.mmExposureAmount, MarginCalculation2.mmExposureAmount);
-			elementContext_lazy = () -> ExposureCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalExposedAmount";
@@ -302,6 +311,14 @@ public class ExposureCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ExposureCalculation.class.getMethod("getTotalExposedAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.IndependentAmount> currentIndependentAmount;
@@ -323,11 +340,6 @@ public class ExposureCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.IndependentAmount
 	 * IndependentAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation
-	 * ExposureCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -339,6 +351,11 @@ public class ExposureCalculation {
 	 * MarginCall1.mmIndependentAmountPartyB}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation
+	 * ExposureCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -355,7 +372,7 @@ public class ExposureCalculation {
 	public static final MMBusinessAssociationEnd mmCurrentIndependentAmount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(MarginCall1.mmIndependentAmountPartyA, MarginCall1.mmIndependentAmountPartyB);
-			elementContext_lazy = () -> ExposureCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentIndependentAmount";
@@ -385,11 +402,6 @@ public class ExposureCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CollateralBalance
 	 * CollateralBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation
-	 * ExposureCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -398,6 +410,11 @@ public class ExposureCalculation {
 	 * Collateral1.mmVariationMargin}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation
+	 * ExposureCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -414,7 +431,7 @@ public class ExposureCalculation {
 	public static final MMBusinessAssociationEnd mmCurrentVariationMargin = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Collateral1.mmVariationMargin);
-			elementContext_lazy = () -> ExposureCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentVariationMargin";
@@ -446,11 +463,6 @@ public class ExposureCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CollateralBalance
 	 * CollateralBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation
-	 * ExposureCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -462,6 +474,11 @@ public class ExposureCalculation {
 	 * CollateralBalance1Choice.mmSegregatedIndependentAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation
+	 * ExposureCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -478,7 +495,7 @@ public class ExposureCalculation {
 	public static final MMBusinessAssociationEnd mmCurrentSegregatedIndependentAmount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Collateral1.mmSegregatedIndependentAmount, CollateralBalance1Choice.mmSegregatedIndependentAmount);
-			elementContext_lazy = () -> ExposureCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentSegregatedIndependentAmount";
@@ -510,11 +527,6 @@ public class ExposureCalculation {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement
 	 * MarginAmountRequirement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation
-	 * ExposureCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -526,6 +538,11 @@ public class ExposureCalculation {
 	 * MarginRequirement1Choice.mmMarginRequirement}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation
+	 * ExposureCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -542,7 +559,7 @@ public class ExposureCalculation {
 	public static final MMBusinessAssociationEnd mmVariationMarginAmountRequirement = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Requirement1.mmVariationMarginRequirement, MarginRequirement1Choice.mmMarginRequirement);
-			elementContext_lazy = () -> ExposureCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMarginAmountRequirement";
@@ -572,11 +589,6 @@ public class ExposureCalculation {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement
 	 * MarginAmountRequirement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation
-	 * ExposureCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -588,6 +600,11 @@ public class ExposureCalculation {
 	 * MarginRequirement1Choice.mmSegregatedIndependentAmountRequirement}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation
+	 * ExposureCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -603,7 +620,7 @@ public class ExposureCalculation {
 	public static final MMBusinessAssociationEnd mmSegregatedAmountRequirement = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Requirement1.mmSegregatedIndependentAmountRequirement, MarginRequirement1Choice.mmSegregatedIndependentAmountRequirement);
-			elementContext_lazy = () -> ExposureCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedAmountRequirement";
@@ -654,7 +671,7 @@ public class ExposureCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmCollateralManagement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ExposureCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralManagement";
@@ -704,7 +721,7 @@ public class ExposureCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmCounterpartyRisk = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ExposureCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CounterpartyRisk";
@@ -755,7 +772,7 @@ public class ExposureCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmTransactionRisk = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ExposureCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionRisk";
@@ -798,7 +815,7 @@ public class ExposureCalculation {
 	 */
 	public static final MMBusinessAttribute mmTotalCollateralAfterHaircut = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> ExposureCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCollateralAfterHaircut";
@@ -806,6 +823,14 @@ public class ExposureCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ExposureCalculation.class.getMethod("getTotalCollateralAfterHaircut", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -821,10 +846,18 @@ public class ExposureCalculation {
 						com.tools20022.repository.entity.MarginAmountRequirement.mmVariationMarginAmountRequirementCalculation, com.tools20022.repository.entity.MarginAmountRequirement.mmSegregatedAmountRequirementCalculation,
 						com.tools20022.repository.entity.CounterpartyRisk.mmExposureCalculation, com.tools20022.repository.entity.TransactionRisk.mmExposureCalculation);
 				derivationElement_lazy = () -> Arrays.asList(CollateralBalance1Choice.mmTotalCollateral, CollateralBalance1Choice.mmCollateralDetails);
-				element_lazy = () -> Arrays.asList(ExposureCalculation.mmTotalCollateralCurrentValue, ExposureCalculation.mmTotalExposedAmount, ExposureCalculation.mmCurrentIndependentAmount, ExposureCalculation.mmCurrentVariationMargin,
-						ExposureCalculation.mmCurrentSegregatedIndependentAmount, ExposureCalculation.mmVariationMarginAmountRequirement, ExposureCalculation.mmSegregatedAmountRequirement, ExposureCalculation.mmCollateralManagement,
-						ExposureCalculation.mmCounterpartyRisk, ExposureCalculation.mmTransactionRisk, ExposureCalculation.mmTotalCollateralAfterHaircut);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExposureCalculation.mmTotalCollateralCurrentValue, com.tools20022.repository.entity.ExposureCalculation.mmTotalExposedAmount,
+						com.tools20022.repository.entity.ExposureCalculation.mmCurrentIndependentAmount, com.tools20022.repository.entity.ExposureCalculation.mmCurrentVariationMargin,
+						com.tools20022.repository.entity.ExposureCalculation.mmCurrentSegregatedIndependentAmount, com.tools20022.repository.entity.ExposureCalculation.mmVariationMarginAmountRequirement,
+						com.tools20022.repository.entity.ExposureCalculation.mmSegregatedAmountRequirement, com.tools20022.repository.entity.ExposureCalculation.mmCollateralManagement,
+						com.tools20022.repository.entity.ExposureCalculation.mmCounterpartyRisk, com.tools20022.repository.entity.ExposureCalculation.mmTransactionRisk,
+						com.tools20022.repository.entity.ExposureCalculation.mmTotalCollateralAfterHaircut);
 				derivationComponent_lazy = () -> Arrays.asList(Collateral1.mmObject(), CollateralBalance1Choice.mmObject(), MarginRequirement1Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ExposureCalculation.class;
 			}
 		});
 		return mmObject_lazy.get();

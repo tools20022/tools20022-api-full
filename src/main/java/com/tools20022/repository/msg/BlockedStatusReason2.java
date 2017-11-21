@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason for a blocked status.
@@ -71,6 +75,8 @@ import java.util.List;
  * definition} = "Reason for a blocked status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BlockedStatusReason2", propOrder = {"transactionType", "blocked", "reason", "additionalInformation"})
 public class BlockedStatusReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -274,6 +280,7 @@ public class BlockedStatusReason2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxTp", required = true)
 	public TransactionType5Choice getTransactionType() {
 		return transactionType;
 	}
@@ -282,6 +289,7 @@ public class BlockedStatusReason2 {
 		this.transactionType = transactionType;
 	}
 
+	@XmlElement(name = "Blckd", required = true)
 	public YesNoIndicator getBlocked() {
 		return blocked;
 	}
@@ -290,6 +298,7 @@ public class BlockedStatusReason2 {
 		this.blocked = blocked;
 	}
 
+	@XmlElement(name = "Rsn")
 	public List<BlockedReason2Choice> getReason() {
 		return reason;
 	}
@@ -298,6 +307,7 @@ public class BlockedStatusReason2 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "AddtlInf", required = true)
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.TradingMarket;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Traded venue related fields.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Traded venue related fields."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradingVenueAttributes1", propOrder = {"identification", "issuerRequest", "admissionApprovalDateByIssuer", "requestForAdmissionDate", "firstTradeDate", "terminationDate"})
 public class TradingVenueAttributes1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -370,6 +376,7 @@ public class TradingVenueAttributes1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public MICIdentifier getIdentification() {
 		return identification;
 	}
@@ -378,6 +385,7 @@ public class TradingVenueAttributes1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "IssrReq", required = true)
 	public TrueFalseIndicator getIssuerRequest() {
 		return issuerRequest;
 	}
@@ -386,6 +394,7 @@ public class TradingVenueAttributes1 {
 		this.issuerRequest = issuerRequest;
 	}
 
+	@XmlElement(name = "AdmssnApprvlDtByIssr")
 	public ISODateTime getAdmissionApprovalDateByIssuer() {
 		return admissionApprovalDateByIssuer;
 	}
@@ -394,6 +403,7 @@ public class TradingVenueAttributes1 {
 		this.admissionApprovalDateByIssuer = admissionApprovalDateByIssuer;
 	}
 
+	@XmlElement(name = "ReqForAdmssnDt")
 	public ISODateTime getRequestForAdmissionDate() {
 		return requestForAdmissionDate;
 	}
@@ -402,6 +412,7 @@ public class TradingVenueAttributes1 {
 		this.requestForAdmissionDate = requestForAdmissionDate;
 	}
 
+	@XmlElement(name = "FrstTradDt")
 	public ISODateTime getFirstTradeDate() {
 		return firstTradeDate;
 	}
@@ -410,6 +421,7 @@ public class TradingVenueAttributes1 {
 		this.firstTradeDate = firstTradeDate;
 	}
 
+	@XmlElement(name = "TermntnDt")
 	public ISODateTime getTerminationDate() {
 		return terminationDate;
 	}

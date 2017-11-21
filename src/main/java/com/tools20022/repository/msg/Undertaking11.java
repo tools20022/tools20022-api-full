@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details related to the local undertaking.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Details related to the local undertaking."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Undertaking11", propOrder = {"newUndertakingAmount", "newExpiryDetails", "newBeneficiary", "newUndertakingTermsAndConditions", "deliveryChannel"})
 public class Undertaking11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -329,6 +335,7 @@ public class Undertaking11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NewUdrtkgAmt")
 	public UndertakingAmount2 getNewUndertakingAmount() {
 		return newUndertakingAmount;
 	}
@@ -337,6 +344,7 @@ public class Undertaking11 {
 		this.newUndertakingAmount = newUndertakingAmount;
 	}
 
+	@XmlElement(name = "NewXpryDtls")
 	public ExpiryDetails1 getNewExpiryDetails() {
 		return newExpiryDetails;
 	}
@@ -345,6 +353,7 @@ public class Undertaking11 {
 		this.newExpiryDetails = newExpiryDetails;
 	}
 
+	@XmlElement(name = "NewBnfcry")
 	public PartyIdentification43 getNewBeneficiary() {
 		return newBeneficiary;
 	}
@@ -353,6 +362,7 @@ public class Undertaking11 {
 		this.newBeneficiary = newBeneficiary;
 	}
 
+	@XmlElement(name = "NewUdrtkgTermsAndConds")
 	public Narrative1 getNewUndertakingTermsAndConditions() {
 		return newUndertakingTermsAndConditions;
 	}
@@ -361,6 +371,7 @@ public class Undertaking11 {
 		this.newUndertakingTermsAndConditions = newUndertakingTermsAndConditions;
 	}
 
+	@XmlElement(name = "DlvryChanl")
 	public CommunicationChannel1 getDeliveryChannel() {
 		return deliveryChannel;
 	}

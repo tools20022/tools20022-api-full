@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.Event1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The SystemEventAcknowledgement message is sent by a participant of a central
@@ -39,9 +41,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code admi.011.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AdministrationLatestVersion
@@ -83,6 +82,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code admi.011.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -94,6 +96,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemEventAcknowledgementV01", propOrder = {"messageIdentification", "originatorReference", "settlementSessionIdentifier", "acknowledgementDetails", "supplementaryData"})
 public class SystemEventAcknowledgementV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -133,6 +137,14 @@ public class SystemEventAcknowledgementV01 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SystemEventAcknowledgementV01.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max35Text originatorReference;
 	/**
@@ -169,6 +181,14 @@ public class SystemEventAcknowledgementV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SystemEventAcknowledgementV01.class.getMethod("getOriginatorReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Exact4AlphaNumericText settlementSessionIdentifier;
@@ -208,6 +228,14 @@ public class SystemEventAcknowledgementV01 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SystemEventAcknowledgementV01.class.getMethod("getSettlementSessionIdentifier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Event1 acknowledgementDetails;
 	/**
@@ -240,6 +268,14 @@ public class SystemEventAcknowledgementV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Event1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SystemEventAcknowledgementV01.class.getMethod("getAcknowledgementDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -278,6 +314,14 @@ public class SystemEventAcknowledgementV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SystemEventAcknowledgementV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -290,8 +334,9 @@ public class SystemEventAcknowledgementV01 {
 				rootElement = "Document";
 				xmlTag = "SysEvtAck";
 				businessArea_lazy = () -> AdministrationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SystemEventAcknowledgementV01.mmMessageIdentification, SystemEventAcknowledgementV01.mmOriginatorReference, SystemEventAcknowledgementV01.mmSettlementSessionIdentifier,
-						SystemEventAcknowledgementV01.mmAcknowledgementDetails, SystemEventAcknowledgementV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmMessageIdentification,
+						com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmOriginatorReference, com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmSettlementSessionIdentifier,
+						com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmAcknowledgementDetails, com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "admi";
@@ -301,10 +346,16 @@ public class SystemEventAcknowledgementV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SystemEventAcknowledgementV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -313,6 +364,7 @@ public class SystemEventAcknowledgementV01 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "OrgtrRef")
 	public Max35Text getOriginatorReference() {
 		return originatorReference;
 	}
@@ -321,6 +373,7 @@ public class SystemEventAcknowledgementV01 {
 		this.originatorReference = originatorReference;
 	}
 
+	@XmlElement(name = "SttlmSsnIdr")
 	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
 		return settlementSessionIdentifier;
 	}
@@ -329,6 +382,7 @@ public class SystemEventAcknowledgementV01 {
 		this.settlementSessionIdentifier = settlementSessionIdentifier;
 	}
 
+	@XmlElement(name = "AckDtls")
 	public Event1 getAcknowledgementDetails() {
 		return acknowledgementDetails;
 	}
@@ -337,11 +391,18 @@ public class SystemEventAcknowledgementV01 {
 		this.acknowledgementDetails = acknowledgementDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:admi.011.01.01")
+	static public class Document {
+		@XmlElement(name = "SysEvtAck", required = true)
+		public SystemEventAcknowledgementV01 messageBody;
 	}
 }

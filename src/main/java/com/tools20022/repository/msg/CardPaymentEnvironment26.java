@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.MerchantRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Environment common to a collection of transactions.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentEnvironment13}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentEnvironment26", propOrder = {"acquirer", "merchant", "POI"})
 public class CardPaymentEnvironment26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -285,6 +291,7 @@ public class CardPaymentEnvironment26 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acqrr")
 	public Acquirer3 getAcquirer() {
 		return acquirer;
 	}
@@ -293,6 +300,7 @@ public class CardPaymentEnvironment26 {
 		this.acquirer = acquirer;
 	}
 
+	@XmlElement(name = "Mrchnt")
 	public Organisation9 getMerchant() {
 		return merchant;
 	}
@@ -301,6 +309,7 @@ public class CardPaymentEnvironment26 {
 		this.merchant = merchant;
 	}
 
+	@XmlElement(name = "POI")
 	public PointOfInteraction3 getPOI() {
 		return pOI;
 	}

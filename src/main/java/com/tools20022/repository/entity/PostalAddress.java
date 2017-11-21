@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.ContactPoint;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -39,6 +40,83 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmAddressType
+ * PostalAddress.mmAddressType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmStreetName
+ * PostalAddress.mmStreetName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmStreetBuildingIdentification
+ * PostalAddress.mmStreetBuildingIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPostCodeIdentification
+ * PostalAddress.mmPostCodeIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmTownName
+ * PostalAddress.mmTownName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmState
+ * PostalAddress.mmState}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmBuildingName
+ * PostalAddress.mmBuildingName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmFloor
+ * PostalAddress.mmFloor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmDistrictName
+ * PostalAddress.mmDistrictName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmRegionIdentification
+ * PostalAddress.mmRegionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmCountyIdentification
+ * PostalAddress.mmCountyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPostOfficeBox
+ * PostalAddress.mmPostOfficeBox}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmProvince
+ * PostalAddress.mmProvince}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmDepartment
+ * PostalAddress.mmDepartment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmSubDepartment
+ * PostalAddress.mmSubDepartment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmLocation
+ * PostalAddress.mmLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmChequeIssue
+ * PostalAddress.mmChequeIssue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmCountry
+ * PostalAddress.mmCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmValidityPeriod
+ * PostalAddress.mmValidityPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmSuiteIdentification
+ * PostalAddress.mmSuiteIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmBuildingIdentification
+ * PostalAddress.mmBuildingIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmMailDeliverySubLocation
+ * PostalAddress.mmMailDeliverySubLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmBlock
+ * PostalAddress.mmBlock}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmLot
+ * PostalAddress.mmLot}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmDistrictSubDivisionIdentification
+ * PostalAddress.mmDistrictSubDivisionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmMailingInstructions
+ * PostalAddress.mmMailingInstructions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPhysicalDelivery
+ * PostalAddress.mmPhysicalDelivery}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.ContactPoint
+ * ContactPoint}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -454,83 +532,6 @@ import java.util.List;
  * IndividualPerson34.mmPostalAddress}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.ContactPoint
- * ContactPoint}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmAddressType
- * PostalAddress.mmAddressType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmStreetName
- * PostalAddress.mmStreetName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmStreetBuildingIdentification
- * PostalAddress.mmStreetBuildingIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPostCodeIdentification
- * PostalAddress.mmPostCodeIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmTownName
- * PostalAddress.mmTownName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmState
- * PostalAddress.mmState}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmBuildingName
- * PostalAddress.mmBuildingName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmFloor
- * PostalAddress.mmFloor}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmDistrictName
- * PostalAddress.mmDistrictName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmRegionIdentification
- * PostalAddress.mmRegionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmCountyIdentification
- * PostalAddress.mmCountyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPostOfficeBox
- * PostalAddress.mmPostOfficeBox}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmProvince
- * PostalAddress.mmProvince}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmDepartment
- * PostalAddress.mmDepartment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmSubDepartment
- * PostalAddress.mmSubDepartment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmLocation
- * PostalAddress.mmLocation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmChequeIssue
- * PostalAddress.mmChequeIssue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmCountry
- * PostalAddress.mmCountry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmValidityPeriod
- * PostalAddress.mmValidityPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmSuiteIdentification
- * PostalAddress.mmSuiteIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmBuildingIdentification
- * PostalAddress.mmBuildingIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmMailDeliverySubLocation
- * PostalAddress.mmMailDeliverySubLocation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmBlock
- * PostalAddress.mmBlock}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmLot
- * PostalAddress.mmLot}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmDistrictSubDivisionIdentification
- * PostalAddress.mmDistrictSubDivisionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmMailingInstructions
- * PostalAddress.mmMailingInstructions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPhysicalDelivery
- * PostalAddress.mmPhysicalDelivery}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -560,11 +561,6 @@ public class PostalAddress extends ContactPoint {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AddressTypeCode
 	 * AddressTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -595,6 +591,11 @@ public class PostalAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -609,7 +610,7 @@ public class PostalAddress extends ContactPoint {
 		{
 			derivation_lazy = () -> Arrays.asList(PostalAddress1.mmAddressType, PostalAddress3.mmAddressType, PostalAddress6.mmAddressType, PostalAddress8.mmAddressType, PostalAddress11.mmAddressType, PostalAddress19.mmAddressType,
 					PostalAddress21.mmAddressType, CommunicationAddress6.mmAddressType);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AddressType";
@@ -617,6 +618,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AddressTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getAddressType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text streetName;
@@ -629,11 +638,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -682,6 +686,11 @@ public class PostalAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -697,7 +706,7 @@ public class PostalAddress extends ContactPoint {
 			derivation_lazy = () -> Arrays.asList(PostalAddress1.mmStreetName, StructuredLongPostalAddress1.mmStreetName, PostalAddress6.mmStreetName, PostalAddress8.mmStreetName, PostalAddress2.mmStreetName, PostalAddress5.mmStreetName,
 					PostalAddress11.mmStreetName, PostalAddress10.mmStreetName, PostalAddress9.mmStreetName, PostalAddress13.mmStreetName, PostalAddress17.mmStreetName, PostalAddress19.mmStreetName, PostalAddress18.mmStreetName,
 					PostalAddress21.mmStreetName);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StreetName";
@@ -705,6 +714,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getStreetName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text streetBuildingIdentification;
@@ -717,11 +734,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -764,6 +776,11 @@ public class PostalAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -780,7 +797,7 @@ public class PostalAddress extends ContactPoint {
 			derivation_lazy = () -> Arrays.asList(PostalAddress1.mmBuildingNumber, StructuredLongPostalAddress1.mmStreetBuildingIdentification, PostalAddress6.mmBuildingNumber, PostalAddress8.mmBuildingNumber,
 					PostalAddress11.mmBuildingNumber, PostalAddress10.mmBuildingNumber, PostalAddress9.mmBuildingNumber, PostalAddress13.mmBuildingNumber, PostalAddress17.mmBuildingNumber, PostalAddress19.mmBuildingNumber,
 					PostalAddress18.mmBuildingNumber, PostalAddress21.mmBuildingNumber);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StreetBuildingIdentification";
@@ -788,6 +805,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getStreetBuildingIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max16Text postCodeIdentification;
@@ -801,11 +826,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max16Text
 	 * Max16Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -845,6 +865,11 @@ public class PostalAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -862,7 +887,7 @@ public class PostalAddress extends ContactPoint {
 			derivation_lazy = () -> Arrays.asList(PostalAddress1.mmPostCode, StructuredLongPostalAddress1.mmPostCodeIdentification, PostalAddress6.mmPostCode, PostalAddress8.mmPostCode, PostalAddress2.mmPostCodeIdentification,
 					PostalAddress5.mmPostCodeIdentification, PostalAddress11.mmPostCode, PostalAddress7.mmPostCode, PostalAddress10.mmPostCode, PostalAddress9.mmPostCode, PostalAddress13.mmPostCode, PostalAddress17.mmPostCode,
 					PostalAddress19.mmPostCode, PostalAddress18.mmPostCode, PostalAddress21.mmPostCode);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PostCodeIdentification";
@@ -870,6 +895,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getPostCodeIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text townName;
@@ -882,11 +915,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -942,6 +970,11 @@ public class PostalAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -960,7 +993,7 @@ public class PostalAddress extends ContactPoint {
 					DateAndPlaceOfBirth.mmCityOfBirth, PostalAddress8.mmTownName, PostalAddress12.mmTownName, PostalAddress2.mmTownName, AirportDescription1.mmTown, PostalAddress5.mmTownName, PostalAddress11.mmTownName,
 					PostalAddress7.mmTownName, PostalAddress10.mmTownName, PostalAddress9.mmTownName, PostalAddress13.mmTownName, PostalAddress17.mmTownName, PostalAddress19.mmTownName, PostalAddress18.mmTownName,
 					PostalAddress21.mmVillage, PostalAddress21.mmTownName, MarketIdentification92.mmCity);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TownName";
@@ -968,6 +1001,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getTownName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text state;
@@ -980,11 +1021,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1041,6 +1077,11 @@ public class PostalAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1058,7 +1099,7 @@ public class PostalAddress extends ContactPoint {
 					PostalAddress2.mmCountrySubDivision, PostalAddress5.mmCountrySubDivision, PostalAddress11.mmCountrySubDivision, PostalAddress10.mmCountrySubDivision, PostalAddress9.mmCountrySubDivision,
 					PostalAddress13.mmCountrySubDivision, PostalAddress17.mmCountrySubDivision, PostalAddress19.mmCountrySubDivision, PostalAddress18.mmCountrySubDivision, DerivativePartyIdentification1Choice.mmCountrySubDivision,
 					PostalAddress21.mmState, GenericIdentification82.mmState);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "State";
@@ -1066,6 +1107,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getState", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text buildingName;
@@ -1078,11 +1127,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1098,6 +1142,11 @@ public class PostalAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1111,7 +1160,7 @@ public class PostalAddress extends ContactPoint {
 	public static final MMBusinessAttribute mmBuildingName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(StructuredLongPostalAddress1.mmBuildingName, PostalAddress11.mmBuildingName, PostalAddress21.mmBuildingName);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuildingName";
@@ -1119,6 +1168,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getBuildingName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max16Text floor;
@@ -1131,11 +1188,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max16Text
 	 * Max16Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1147,6 +1199,11 @@ public class PostalAddress extends ContactPoint {
 	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#mmFloor
 	 * PostalAddress21.mmFloor}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1162,7 +1219,7 @@ public class PostalAddress extends ContactPoint {
 	public static final MMBusinessAttribute mmFloor = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(StructuredLongPostalAddress1.mmFloor, PostalAddress11.mmFloor, PostalAddress21.mmFloor);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Floor";
@@ -1170,6 +1227,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getFloor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text districtName;
@@ -1182,11 +1247,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1202,6 +1262,11 @@ public class PostalAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1215,7 +1280,7 @@ public class PostalAddress extends ContactPoint {
 	public static final MMBusinessAttribute mmDistrictName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(StructuredLongPostalAddress1.mmDistrictName, PostalAddress19.mmDistrictName, PostalAddress21.mmDistrictName);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DistrictName";
@@ -1223,6 +1288,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getDistrictName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text regionIdentification;
@@ -1236,11 +1309,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1251,6 +1319,11 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.repository.choice.ResidenceLocation1Choice#mmArea
 	 * ResidenceLocation1Choice.mmArea}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1268,7 +1341,7 @@ public class PostalAddress extends ContactPoint {
 	public static final MMBusinessAttribute mmRegionIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(StructuredLongPostalAddress1.mmRegionIdentification, ResidenceLocation1Choice.mmArea);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegionIdentification";
@@ -1276,6 +1349,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getRegionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text countyIdentification;
@@ -1288,11 +1369,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1317,6 +1393,11 @@ public class PostalAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1331,7 +1412,7 @@ public class PostalAddress extends ContactPoint {
 		{
 			derivation_lazy = () -> Arrays.asList(StructuredLongPostalAddress1.mmCountyIdentification, CountrySubdivision1Choice.mmCode, CountrySubdivision1Choice.mmProprietary, Location1.mmCountrySubDivision,
 					Location2.mmCountrySubDivision, PostalAddress19.mmTownLocationName);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CountyIdentification";
@@ -1339,6 +1420,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getCountyIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max16Text postOfficeBox;
@@ -1352,11 +1441,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max16Text
 	 * Max16Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1368,6 +1452,11 @@ public class PostalAddress extends ContactPoint {
 	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#mmPostBox
 	 * PostalAddress21.mmPostBox}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1385,7 +1474,7 @@ public class PostalAddress extends ContactPoint {
 	public static final MMBusinessAttribute mmPostOfficeBox = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(StructuredLongPostalAddress1.mmPostOfficeBox, PostalAddress11.mmPostBox, PostalAddress21.mmPostBox);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PostOfficeBox";
@@ -1393,6 +1482,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getPostOfficeBox", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text province;
@@ -1405,11 +1502,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1431,6 +1523,11 @@ public class PostalAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1446,7 +1543,7 @@ public class PostalAddress extends ContactPoint {
 	public static final MMBusinessAttribute mmProvince = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndividualPerson5.mmProvinceOfBirth, IndividualPerson10.mmProvinceOfBirth, IndividualPerson6.mmProvinceOfBirth, IndividualPerson11.mmProvinceOfBirth, DateAndPlaceOfBirth.mmProvinceOfBirth);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Province";
@@ -1454,6 +1551,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getProvince", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max70Text department;
@@ -1466,11 +1571,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1488,6 +1588,11 @@ public class PostalAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1502,7 +1607,7 @@ public class PostalAddress extends ContactPoint {
 	public static final MMBusinessAttribute mmDepartment = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PostalAddress6.mmDepartment, Contacts3.mmDepartment, PostalAddress11.mmDepartment, PostalAddress19.mmDepartment);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Department";
@@ -1510,6 +1615,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getDepartment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max70Text subDepartment;
@@ -1522,11 +1635,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1540,6 +1648,11 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmSubDepartment
 	 * PostalAddress19.mmSubDepartment}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1556,7 +1669,7 @@ public class PostalAddress extends ContactPoint {
 	public static final MMBusinessAttribute mmSubDepartment = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PostalAddress6.mmSubDepartment, PostalAddress11.mmSubDepartment, PostalAddress19.mmSubDepartment);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubDepartment";
@@ -1564,6 +1677,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getSubDepartment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Location location;
@@ -1601,7 +1722,7 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmLocation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Location";
@@ -1650,7 +1771,7 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmChequeIssue = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChequeIssue";
@@ -1679,11 +1800,6 @@ public class PostalAddress extends ContactPoint {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Country Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1803,6 +1919,11 @@ public class PostalAddress extends ContactPoint {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1825,7 +1946,7 @@ public class PostalAddress extends ContactPoint {
 					CorporateActionOption114.mmValidDomicileCountry, DerivativePartyIdentification1Choice.mmCountry, CorporateActionOption125.mmValidDomicileCountry, CorporateActionOption127.mmValidDomicileCountry,
 					ReportedPartyIdentification1.mmLocation, CorporateActionOption130.mmValidDomicileCountry, CorporateActionOption129.mmValidDomicileCountry, CorporateActionOption135.mmValidDomicileCountry,
 					CorporateActionOption133.mmValidDomicileCountry, NameAndLocation1.mmLocation);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Country";
@@ -1874,7 +1995,7 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityPeriod";
@@ -1895,11 +2016,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1907,6 +2023,11 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#mmSuiteIdentification
 	 * PostalAddress21.mmSuiteIdentification}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1922,7 +2043,7 @@ public class PostalAddress extends ContactPoint {
 	public static final MMBusinessAttribute mmSuiteIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PostalAddress21.mmSuiteIdentification);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SuiteIdentification";
@@ -1930,6 +2051,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getSuiteIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text buildingIdentification;
@@ -1943,11 +2072,6 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1955,6 +2079,11 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#mmSideInBuilding
 	 * PostalAddress21.mmSideInBuilding}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1972,7 +2101,7 @@ public class PostalAddress extends ContactPoint {
 	public static final MMBusinessAttribute mmBuildingIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PostalAddress21.mmSideInBuilding);
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuildingIdentification";
@@ -1980,6 +2109,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getBuildingIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text mailDeliverySubLocation;
@@ -2011,7 +2148,7 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmMailDeliverySubLocation = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MailDeliverySubLocation";
@@ -2019,6 +2156,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getMailDeliverySubLocation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text block;
@@ -2049,7 +2194,7 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmBlock = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Block";
@@ -2057,6 +2202,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getBlock", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text lot;
@@ -2087,7 +2240,7 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmLot = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Lot";
@@ -2095,6 +2248,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getLot", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text districtSubDivisionIdentification;
@@ -2125,7 +2286,7 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmDistrictSubDivisionIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DistrictSubDivisionIdentification";
@@ -2133,6 +2294,14 @@ public class PostalAddress extends ContactPoint {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PostalAddress.class.getMethod("getDistrictSubDivisionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.MailingInstructions> mailingInstructions;
@@ -2171,7 +2340,7 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmMailingInstructions = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MailingInstructions";
@@ -2218,7 +2387,7 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmPhysicalDelivery = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PostalAddress.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhysicalDelivery";
@@ -2267,15 +2436,25 @@ public class PostalAddress extends ContactPoint {
 						Organisation24.mmPostalAddress, IndividualPerson27.mmPostalAddress, ModificationScope34.mmPostalAddress, IndividualPerson29.mmPostalAddress, NameAndAddress15.mmPostalAddress, PartyIdentification112.mmPostalAddress,
 						TaxOrganisationIdentification1.mmPostalAddress, Organisation30.mmPostalAddress, Organisation29.mmModifiedPostalAddress, IndividualPerson34.mmPostalAddress);
 				superType_lazy = () -> ContactPoint.mmObject();
-				element_lazy = () -> Arrays.asList(PostalAddress.mmAddressType, PostalAddress.mmStreetName, PostalAddress.mmStreetBuildingIdentification, PostalAddress.mmPostCodeIdentification, PostalAddress.mmTownName,
-						PostalAddress.mmState, PostalAddress.mmBuildingName, PostalAddress.mmFloor, PostalAddress.mmDistrictName, PostalAddress.mmRegionIdentification, PostalAddress.mmCountyIdentification, PostalAddress.mmPostOfficeBox,
-						PostalAddress.mmProvince, PostalAddress.mmDepartment, PostalAddress.mmSubDepartment, PostalAddress.mmLocation, PostalAddress.mmChequeIssue, PostalAddress.mmCountry, PostalAddress.mmValidityPeriod,
-						PostalAddress.mmSuiteIdentification, PostalAddress.mmBuildingIdentification, PostalAddress.mmMailDeliverySubLocation, PostalAddress.mmBlock, PostalAddress.mmLot, PostalAddress.mmDistrictSubDivisionIdentification,
-						PostalAddress.mmMailingInstructions, PostalAddress.mmPhysicalDelivery);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PostalAddress.mmAddressType, com.tools20022.repository.entity.PostalAddress.mmStreetName,
+						com.tools20022.repository.entity.PostalAddress.mmStreetBuildingIdentification, com.tools20022.repository.entity.PostalAddress.mmPostCodeIdentification, com.tools20022.repository.entity.PostalAddress.mmTownName,
+						com.tools20022.repository.entity.PostalAddress.mmState, com.tools20022.repository.entity.PostalAddress.mmBuildingName, com.tools20022.repository.entity.PostalAddress.mmFloor,
+						com.tools20022.repository.entity.PostalAddress.mmDistrictName, com.tools20022.repository.entity.PostalAddress.mmRegionIdentification, com.tools20022.repository.entity.PostalAddress.mmCountyIdentification,
+						com.tools20022.repository.entity.PostalAddress.mmPostOfficeBox, com.tools20022.repository.entity.PostalAddress.mmProvince, com.tools20022.repository.entity.PostalAddress.mmDepartment,
+						com.tools20022.repository.entity.PostalAddress.mmSubDepartment, com.tools20022.repository.entity.PostalAddress.mmLocation, com.tools20022.repository.entity.PostalAddress.mmChequeIssue,
+						com.tools20022.repository.entity.PostalAddress.mmCountry, com.tools20022.repository.entity.PostalAddress.mmValidityPeriod, com.tools20022.repository.entity.PostalAddress.mmSuiteIdentification,
+						com.tools20022.repository.entity.PostalAddress.mmBuildingIdentification, com.tools20022.repository.entity.PostalAddress.mmMailDeliverySubLocation, com.tools20022.repository.entity.PostalAddress.mmBlock,
+						com.tools20022.repository.entity.PostalAddress.mmLot, com.tools20022.repository.entity.PostalAddress.mmDistrictSubDivisionIdentification, com.tools20022.repository.entity.PostalAddress.mmMailingInstructions,
+						com.tools20022.repository.entity.PostalAddress.mmPhysicalDelivery);
 				derivationComponent_lazy = () -> Arrays.asList(PostalAddress1.mmObject(), StructuredLongPostalAddress1.mmObject(), LongPostalAddress1Choice.mmObject(), PostalAddress3.mmObject(), PostalAddress6.mmObject(),
 						PostalAddress8.mmObject(), AddressModification1.mmObject(), CountrySubdivision1Choice.mmObject(), PostalAddress12.mmObject(), LongPostalAddress2Choice.mmObject(), PostalAddress2.mmObject(),
 						PostalAddress5.mmObject(), PostalAddress11.mmObject(), PostalAddress4.mmObject(), PostalAddress7.mmObject(), PostalAddress10.mmObject(), PostalAddress9.mmObject(), PostalAddress13.mmObject(),
 						PostalAddress17.mmObject(), PostalAddress19.mmObject(), PostalAddress18.mmObject(), PostalAddress21.mmObject(), ModificationScope34.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PostalAddress.class;
 			}
 		});
 		return mmObject_lazy.get();

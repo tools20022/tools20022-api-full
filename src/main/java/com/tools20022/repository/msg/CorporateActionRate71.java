@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies rates related to a corporate action option.
@@ -78,6 +82,8 @@ import java.util.List;
  * CorporateActionRate47}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionRate71", propOrder = {"proposedRate", "oversubscriptionRate", "requestedWithholdingTaxRate", "requestedSecondLevelTaxRate"})
 public class CorporateActionRate71 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -319,6 +325,7 @@ public class CorporateActionRate71 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PropsdRate")
 	public PercentageRate getProposedRate() {
 		return proposedRate;
 	}
@@ -327,6 +334,7 @@ public class CorporateActionRate71 {
 		this.proposedRate = proposedRate;
 	}
 
+	@XmlElement(name = "OvrsbcptRate")
 	public RateAndAmountFormat39Choice getOversubscriptionRate() {
 		return oversubscriptionRate;
 	}
@@ -335,6 +343,7 @@ public class CorporateActionRate71 {
 		this.oversubscriptionRate = oversubscriptionRate;
 	}
 
+	@XmlElement(name = "ReqdWhldgTaxRate")
 	public List<RateAndAmountFormat40Choice> getRequestedWithholdingTaxRate() {
 		return requestedWithholdingTaxRate;
 	}
@@ -343,6 +352,7 @@ public class CorporateActionRate71 {
 		this.requestedWithholdingTaxRate = requestedWithholdingTaxRate;
 	}
 
+	@XmlElement(name = "ReqdScndLvlTaxRate")
 	public List<RateAndAmountFormat40Choice> getRequestedSecondLevelTaxRate() {
 		return requestedSecondLevelTaxRate;
 	}

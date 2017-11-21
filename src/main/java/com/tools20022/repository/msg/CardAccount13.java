@@ -34,6 +34,10 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Customer account information.
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardAccount7}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardAccount13", propOrder = {"accountType", "accountName", "currency", "accountIdentifier", "creditReference", "servicer", "balanceBefore", "balanceAfter"})
 public class CardAccount13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -504,6 +510,7 @@ public class CardAccount13 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctTp")
 	public CardAccountType3Code getAccountType() {
 		return accountType;
 	}
@@ -512,6 +519,7 @@ public class CardAccount13 {
 		this.accountType = accountType;
 	}
 
+	@XmlElement(name = "AcctNm")
 	public Max70Text getAccountName() {
 		return accountName;
 	}
@@ -520,6 +528,7 @@ public class CardAccount13 {
 		this.accountName = accountName;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -528,6 +537,7 @@ public class CardAccount13 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "AcctIdr")
 	public AccountIdentification31Choice getAccountIdentifier() {
 		return accountIdentifier;
 	}
@@ -536,6 +546,7 @@ public class CardAccount13 {
 		this.accountIdentifier = accountIdentifier;
 	}
 
+	@XmlElement(name = "CdtRef")
 	public Max35Text getCreditReference() {
 		return creditReference;
 	}
@@ -544,6 +555,7 @@ public class CardAccount13 {
 		this.creditReference = creditReference;
 	}
 
+	@XmlElement(name = "Svcr")
 	public PartyIdentification72Choice getServicer() {
 		return servicer;
 	}
@@ -552,6 +564,7 @@ public class CardAccount13 {
 		this.servicer = servicer;
 	}
 
+	@XmlElement(name = "BalBfr")
 	public AmountAndDirection43 getBalanceBefore() {
 		return balanceBefore;
 	}
@@ -560,6 +573,7 @@ public class CardAccount13 {
 		this.balanceBefore = balanceBefore;
 	}
 
+	@XmlElement(name = "BalAftr")
 	public AmountAndDirection43 getBalanceAfter() {
 		return balanceAfter;
 	}

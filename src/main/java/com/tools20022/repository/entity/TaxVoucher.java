@@ -21,6 +21,7 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,35 +37,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher2 TaxVoucher2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher3 TaxVoucher3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher1 TaxVoucher1}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTaxVoucher
- * SecuritiesPricing.mmTaxVoucher}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxVoucher
- * SecuritiesTax.mmTaxVoucher}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmTaxVoucher
- * SecuritiesQuantity.mmTaxVoucher}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmCurrencyExchangeForTaxVoucher
- * ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmTaxVoucher
- * CorporateActionDistribution.mmTaxVoucher}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -116,6 +88,35 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher2 TaxVoucher2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher3 TaxVoucher3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher1 TaxVoucher1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTaxVoucher
+ * SecuritiesPricing.mmTaxVoucher}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxVoucher
+ * SecuritiesTax.mmTaxVoucher}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmTaxVoucher
+ * SecuritiesQuantity.mmTaxVoucher}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmCurrencyExchangeForTaxVoucher
+ * ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmTaxVoucher
+ * CorporateActionDistribution.mmTaxVoucher}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -147,10 +148,6 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -175,6 +172,10 @@ public class TaxVoucher {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -191,7 +192,7 @@ public class TaxVoucher {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate8.mmRequestedTaxationRate, CorporateActionRate9.mmRequestedTaxationRate, CorporateActionRate47.mmRequestedTaxationRate, CorporateActionRate59.mmRequestedTaxationRate,
 					CorporateActionRate71.mmRequestedWithholdingTaxRate, CorporateActionRate73.mmRequestedWithholdingTaxRate);
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedTaxationRate";
@@ -199,6 +200,14 @@ public class TaxVoucher {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TaxVoucher.class.getMethod("getRequestedTaxationRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate creditRate;
@@ -212,10 +221,6 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -336,6 +341,10 @@ public class TaxVoucher {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -355,7 +364,7 @@ public class TaxVoucher {
 					RateDetails18.mmTaxCreditRate, RateDetails21.mmTaxCreditRate, CorporateActionRate65.mmTaxCreditRate, RateDetails23.mmTaxCreditRate, CorporateActionRate69.mmTaxCreditRate, RateDetails22.mmTaxCreditRate,
 					CorporateActionRate72.mmTaxCreditRate, RateDetails24.mmTaxCreditRate, RateDetails25.mmTaxCreditRate, CorporateActionRate77.mmTaxCreditRate, CorporateActionRate75.mmTaxCreditRate, RateDetails26.mmTaxCreditRate,
 					RateDetails27.mmTaxCreditRate, RateDetails28.mmTaxCreditRate, RateDetails30.mmTaxCreditRate);
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditRate";
@@ -363,6 +372,14 @@ public class TaxVoucher {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TaxVoucher.class.getMethod("getCreditRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesTax> relatedSecurityTax;
@@ -384,10 +401,6 @@ public class TaxVoucher {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesTax
 	 * SecuritiesTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -475,6 +488,10 @@ public class TaxVoucher {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -496,7 +513,7 @@ public class TaxVoucher {
 					CorporateActionRate36.mmWithholdingOfForeignTax, CorporateActionRate42.mmWithholdingOfForeignTax, CorporateActionRate2.mmWithholdingOfForeignTax, CorporateActionRate2.mmWithholdingOfLocalTax,
 					CorporateActionRate2.mmRelatedTax, CorporateActionRate46.mmWithholdingOfForeignTax, CorporateActionRate45.mmWithholdingOfForeignTax, CorporateActionRate44.mmWithholdingOfForeignTax,
 					CorporateActionRate60.mmWithholdingOfForeignTax, CorporateActionRate64.mmWithholdingOfForeignTax, CorporateActionRate57.mmWithholdingOfForeignTax);
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecurityTax";
@@ -518,10 +535,6 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -639,6 +652,10 @@ public class TaxVoucher {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -662,7 +679,7 @@ public class TaxVoucher {
 					CorporateActionAmounts33.mmSundryOrOtherAmount, CorporateActionAmounts32.mmSundryOrOtherAmount, CorporateActionAmounts35.mmSundryOrOtherAmount, CorporateActionAmounts37.mmSundryOrOtherAmount,
 					CorporateActionAmounts36.mmSundryOrOtherAmount, CorporateActionAmounts38.mmSundryOrOtherAmount, CorporateActionAmounts39.mmSundryOrOtherAmount, CorporateActionAmounts41.mmSundryOrOtherAmount,
 					CorporateActionAmounts40.mmSundryOrOtherAmount);
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SundryOrOtherAmount";
@@ -670,6 +687,14 @@ public class TaxVoucher {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TaxVoucher.class.getMethod("getSundryOrOtherAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount creditAmount;
@@ -683,10 +708,6 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -804,6 +825,10 @@ public class TaxVoucher {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -825,7 +850,7 @@ public class TaxVoucher {
 					CorporateActionAmounts1.mmTaxCreditAmount, CorporateActionAmounts29.mmTaxCreditAmount, CorporateActionAmounts27.mmTaxCreditAmount, CorporateActionAmounts28.mmTaxCreditAmount, CorporateActionAmounts33.mmTaxCreditAmount,
 					CorporateActionAmounts32.mmTaxCreditAmount, CorporateActionAmounts35.mmTaxCreditAmount, CorporateActionAmounts37.mmTaxCreditAmount, CorporateActionAmounts36.mmTaxCreditAmount, CorporateActionAmounts38.mmTaxCreditAmount,
 					CorporateActionAmounts39.mmTaxCreditAmount, CorporateActionAmounts41.mmTaxCreditAmount, CorporateActionAmounts40.mmTaxCreditAmount);
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditAmount";
@@ -833,6 +858,14 @@ public class TaxVoucher {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TaxVoucher.class.getMethod("getCreditAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount cashAmountBroughtForward;
@@ -846,10 +879,6 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -895,6 +924,10 @@ public class TaxVoucher {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -912,7 +945,7 @@ public class TaxVoucher {
 					CorporateActionAmounts12.mmCashAmountBroughtForward, CorporateActionAmounts17.mmCashAmountBroughtForward, CorporateActionAmounts20.mmCashAmountBroughtForward, CorporateActionAmounts23.mmCashAmountBroughtForward,
 					CorporateActionAmounts24.mmCashAmountBroughtForward, TaxVoucher1.mmCashAmountBroughtForward, CorporateActionAmounts29.mmCashAmountBroughtForward, CorporateActionAmounts35.mmCashAmountBroughtForward,
 					CorporateActionAmounts37.mmCashAmountBroughtForward, CorporateActionAmounts39.mmCashAmountBroughtForward);
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAmountBroughtForward";
@@ -920,6 +953,14 @@ public class TaxVoucher {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TaxVoucher.class.getMethod("getCashAmountBroughtForward", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount cashAmountCarriedForward;
@@ -933,10 +974,6 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -982,6 +1019,10 @@ public class TaxVoucher {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -999,7 +1040,7 @@ public class TaxVoucher {
 					CorporateActionAmounts12.mmCashAmountCarriedForward, CorporateActionAmounts17.mmCashAmountCarriedForward, CorporateActionAmounts20.mmCashAmountCarriedForward, CorporateActionAmounts23.mmCashAmountCarriedForward,
 					CorporateActionAmounts24.mmCashAmountCarriedForward, TaxVoucher1.mmCashAmountCarriedForward, CorporateActionAmounts29.mmCashAmountCarriedForward, CorporateActionAmounts35.mmCashAmountCarriedForward,
 					CorporateActionAmounts37.mmCashAmountCarriedForward, CorporateActionAmounts39.mmCashAmountCarriedForward);
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAmountCarriedForward";
@@ -1007,6 +1048,14 @@ public class TaxVoucher {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TaxVoucher.class.getMethod("getCashAmountCarriedForward", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount notionalTaxAmount;
@@ -1021,10 +1070,6 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1067,6 +1112,10 @@ public class TaxVoucher {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1084,7 +1133,7 @@ public class TaxVoucher {
 			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmNotionalTaxAmount, CorporateActionAmounts5.mmNotionalTaxAmount, CorporateActionAmounts11.mmNotionalTaxAmount, CorporateActionAmounts12.mmNotionalTaxAmount,
 					CorporateActionAmounts17.mmNotionalTaxAmount, CorporateActionAmounts20.mmNotionalTaxAmount, CorporateActionAmounts23.mmNotionalTaxAmount, CorporateActionAmounts24.mmNotionalTaxAmount,
 					CorporateActionAmounts29.mmNotionalTaxAmount, CorporateActionAmounts35.mmNotionalTaxAmount, CorporateActionAmounts37.mmNotionalTaxAmount, CorporateActionAmounts39.mmNotionalTaxAmount);
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotionalTaxAmount";
@@ -1092,6 +1141,14 @@ public class TaxVoucher {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TaxVoucher.class.getMethod("getNotionalTaxAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionDistribution distribution;
@@ -1133,7 +1190,7 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAssociationEnd mmDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Distribution";
@@ -1155,10 +1212,6 @@ public class TaxVoucher {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1170,6 +1223,10 @@ public class TaxVoucher {
 	 * TaxVoucher3.mmIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1185,7 +1242,7 @@ public class TaxVoucher {
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxVoucher2.mmIdentification, TaxVoucher3.mmIdentification);
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -1193,6 +1250,14 @@ public class TaxVoucher {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TaxVoucher.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODate bargainDate;
@@ -1205,10 +1270,6 @@ public class TaxVoucher {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1220,6 +1281,10 @@ public class TaxVoucher {
 	 * TaxVoucher1.mmBargainDate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1234,7 +1299,7 @@ public class TaxVoucher {
 	public static final MMBusinessAttribute mmBargainDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxVoucher2.mmBargainDate, TaxVoucher3.mmBargainDate, TaxVoucher1.mmBargainDate);
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BargainDate";
@@ -1242,6 +1307,14 @@ public class TaxVoucher {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TaxVoucher.class.getMethod("getBargainDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODate bargainSettlementDate;
@@ -1254,10 +1327,6 @@ public class TaxVoucher {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1273,6 +1342,10 @@ public class TaxVoucher {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1286,7 +1359,7 @@ public class TaxVoucher {
 	public static final MMBusinessAttribute mmBargainSettlementDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxVoucher2.mmBargainSettlementDate, TaxVoucher3.mmBargainSettlementDate, TaxVoucher1.mmBargainSettlementDate);
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BargainSettlementDate";
@@ -1294,6 +1367,14 @@ public class TaxVoucher {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TaxVoucher.class.getMethod("getBargainSettlementDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BaseOneRate taxVoucherRate;
@@ -1306,10 +1387,6 @@ public class TaxVoucher {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.BaseOneRate
 	 * BaseOneRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1318,6 +1395,10 @@ public class TaxVoucher {
 	 * TaxVoucher1.mmTaxVoucherRate}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1332,7 +1413,7 @@ public class TaxVoucher {
 	public static final MMBusinessAttribute mmTaxVoucherRate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxVoucher1.mmTaxVoucherRate);
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxVoucherRate";
@@ -1340,6 +1421,14 @@ public class TaxVoucher {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TaxVoucher.class.getMethod("getTaxVoucherRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesQuantity recordDateHolding;
@@ -1360,10 +1449,6 @@ public class TaxVoucher {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1372,6 +1457,10 @@ public class TaxVoucher {
 	 * TaxVoucher1.mmRecordDateHolding}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1386,7 +1475,7 @@ public class TaxVoucher {
 	public static final MMBusinessAssociationEnd mmRecordDateHolding = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxVoucher1.mmRecordDateHolding);
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RecordDateHolding";
@@ -1416,10 +1505,6 @@ public class TaxVoucher {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1428,6 +1513,10 @@ public class TaxVoucher {
 	 * TaxVoucher1.mmScripDividendReinvestmentPricePerShare}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1442,7 +1531,7 @@ public class TaxVoucher {
 	public static final MMBusinessAssociationEnd mmScripDividendReinvestmentPricePerShare = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxVoucher1.mmScripDividendReinvestmentPricePerShare);
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ScripDividendReinvestmentPricePerShare";
@@ -1465,10 +1554,6 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1477,6 +1562,10 @@ public class TaxVoucher {
 	 * TaxVoucher1.mmAllotedSharesCost}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1491,7 +1580,7 @@ public class TaxVoucher {
 	public static final MMBusinessAttribute mmAllotedSharesCost = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxVoucher1.mmAllotedSharesCost);
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllotedSharesCost";
@@ -1499,6 +1588,14 @@ public class TaxVoucher {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TaxVoucher.class.getMethod("getAllotedSharesCost", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.ForeignExchangeTrade> foreignExchangeTransaction;
@@ -1538,7 +1635,7 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAssociationEnd mmForeignExchangeTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TaxVoucher.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForeignExchangeTransaction";
@@ -1560,11 +1657,19 @@ public class TaxVoucher {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmTaxVoucher, com.tools20022.repository.entity.SecuritiesTax.mmTaxVoucher,
 						com.tools20022.repository.entity.SecuritiesQuantity.mmTaxVoucher, com.tools20022.repository.entity.ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher,
 						com.tools20022.repository.entity.CorporateActionDistribution.mmTaxVoucher);
-				element_lazy = () -> Arrays.asList(TaxVoucher.mmRequestedTaxationRate, TaxVoucher.mmCreditRate, TaxVoucher.mmRelatedSecurityTax, TaxVoucher.mmSundryOrOtherAmount, TaxVoucher.mmCreditAmount,
-						TaxVoucher.mmCashAmountBroughtForward, TaxVoucher.mmCashAmountCarriedForward, TaxVoucher.mmNotionalTaxAmount, TaxVoucher.mmDistribution, TaxVoucher.mmIdentification, TaxVoucher.mmBargainDate,
-						TaxVoucher.mmBargainSettlementDate, TaxVoucher.mmTaxVoucherRate, TaxVoucher.mmRecordDateHolding, TaxVoucher.mmScripDividendReinvestmentPricePerShare, TaxVoucher.mmAllotedSharesCost,
-						TaxVoucher.mmForeignExchangeTransaction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TaxVoucher.mmRequestedTaxationRate, com.tools20022.repository.entity.TaxVoucher.mmCreditRate,
+						com.tools20022.repository.entity.TaxVoucher.mmRelatedSecurityTax, com.tools20022.repository.entity.TaxVoucher.mmSundryOrOtherAmount, com.tools20022.repository.entity.TaxVoucher.mmCreditAmount,
+						com.tools20022.repository.entity.TaxVoucher.mmCashAmountBroughtForward, com.tools20022.repository.entity.TaxVoucher.mmCashAmountCarriedForward, com.tools20022.repository.entity.TaxVoucher.mmNotionalTaxAmount,
+						com.tools20022.repository.entity.TaxVoucher.mmDistribution, com.tools20022.repository.entity.TaxVoucher.mmIdentification, com.tools20022.repository.entity.TaxVoucher.mmBargainDate,
+						com.tools20022.repository.entity.TaxVoucher.mmBargainSettlementDate, com.tools20022.repository.entity.TaxVoucher.mmTaxVoucherRate, com.tools20022.repository.entity.TaxVoucher.mmRecordDateHolding,
+						com.tools20022.repository.entity.TaxVoucher.mmScripDividendReinvestmentPricePerShare, com.tools20022.repository.entity.TaxVoucher.mmAllotedSharesCost,
+						com.tools20022.repository.entity.TaxVoucher.mmForeignExchangeTransaction);
 				derivationComponent_lazy = () -> Arrays.asList(TaxVoucher2.mmObject(), TaxVoucher3.mmObject(), TaxVoucher1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TaxVoucher.class;
 			}
 		});
 		return mmObject_lazy.get();

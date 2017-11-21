@@ -30,19 +30,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BlockTrade1Code
- * BlockTrade1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.BlockTradeCode#mmParent
  * BlockTradeCode.mmParent}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.BlockTradeCode#mmChild
  * BlockTradeCode.mmChild}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.BlockTrade1Code
+ * BlockTrade1Code}</li>
  * </ul>
  * </li>
  * <li>

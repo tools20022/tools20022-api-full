@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics, such as the identification or the creation date and
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MessageHeader3", propOrder = {"messageIdentification", "creationDateTime", "requestType", "originalBusinessQuery", "queryName"})
 public class MessageHeader3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -295,6 +301,7 @@ public class MessageHeader3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -303,6 +310,7 @@ public class MessageHeader3 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm")
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -311,6 +319,7 @@ public class MessageHeader3 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "ReqTp")
 	public RequestType2Choice getRequestType() {
 		return requestType;
 	}
@@ -319,6 +328,7 @@ public class MessageHeader3 {
 		this.requestType = requestType;
 	}
 
+	@XmlElement(name = "OrgnlBizQry")
 	public OriginalBusinessQuery1 getOriginalBusinessQuery() {
 		return originalBusinessQuery;
 	}
@@ -327,6 +337,7 @@ public class MessageHeader3 {
 		this.originalBusinessQuery = originalBusinessQuery;
 	}
 
+	@XmlElement(name = "QryNm")
 	public Max35Text getQueryName() {
 		return queryName;
 	}

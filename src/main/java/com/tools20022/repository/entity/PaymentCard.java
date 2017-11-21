@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -39,6 +40,58 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmPayment
+ * PaymentCard.mmPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmType
+ * PaymentCard.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmNumber
+ * PaymentCard.mmNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmStartDate
+ * PaymentCard.mmStartDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmExpiryDate
+ * PaymentCard.mmExpiryDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmSecurityCode
+ * PaymentCard.mmSecurityCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentCard#mmSequenceNumber
+ * PaymentCard.mmSequenceNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmServiceCode
+ * PaymentCard.mmServiceCode}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmTrackValue
+ * PaymentCard.mmTrackValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentCard#mmSecurityCodeManagement
+ * PaymentCard.mmSecurityCodeManagement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmCardBrand
+ * PaymentCard.mmCardBrand}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentCard#mmRelatedAccount
+ * PaymentCard.mmRelatedAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmProfileNumber
+ * PaymentCard.mmProfileNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentCard#mmRelatedAccountType
+ * PaymentCard.mmRelatedAccountType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentCard#mmCreditAvailableAmount
+ * PaymentCard.mmCreditAvailableAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmLimit
+ * PaymentCard.mmLimit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentCard#mmCardCurrencyCode
+ * PaymentCard.mmCardCurrencyCode}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmInterest
+ * PaymentCard.mmInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentCard#mmCardCountryCode
+ * PaymentCard.mmCardCountryCode}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmCardProgramme
+ * PaymentCard.mmCardProgramme}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -235,58 +288,6 @@ import java.util.List;
  * PaymentCard27.mmPlainCardData}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmPayment
- * PaymentCard.mmPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmType
- * PaymentCard.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmNumber
- * PaymentCard.mmNumber}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmStartDate
- * PaymentCard.mmStartDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmExpiryDate
- * PaymentCard.mmExpiryDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmSecurityCode
- * PaymentCard.mmSecurityCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentCard#mmSequenceNumber
- * PaymentCard.mmSequenceNumber}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmServiceCode
- * PaymentCard.mmServiceCode}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmTrackValue
- * PaymentCard.mmTrackValue}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentCard#mmSecurityCodeManagement
- * PaymentCard.mmSecurityCodeManagement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmCardBrand
- * PaymentCard.mmCardBrand}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentCard#mmRelatedAccount
- * PaymentCard.mmRelatedAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmProfileNumber
- * PaymentCard.mmProfileNumber}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentCard#mmRelatedAccountType
- * PaymentCard.mmRelatedAccountType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentCard#mmCreditAvailableAmount
- * PaymentCard.mmCreditAvailableAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmLimit
- * PaymentCard.mmLimit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentCard#mmCardCurrencyCode
- * PaymentCard.mmCardCurrencyCode}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmInterest
- * PaymentCard.mmInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentCard#mmCardCountryCode
- * PaymentCard.mmCardCountryCode}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmCardProgramme
- * PaymentCard.mmCardProgramme}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -342,7 +343,7 @@ public class PaymentCard {
 	 */
 	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
@@ -364,10 +365,6 @@ public class PaymentCard {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CardTypeCode
 	 * CardTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -379,6 +376,10 @@ public class PaymentCard {
 	 * PaymentCard25.mmType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -393,7 +394,7 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCard2.mmType, PaymentCard18.mmType, PaymentCard25.mmType);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -401,6 +402,14 @@ public class PaymentCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentCard.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text number;
@@ -414,10 +423,6 @@ public class PaymentCard {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -468,6 +473,10 @@ public class PaymentCard {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -485,7 +494,7 @@ public class PaymentCard {
 			derivation_lazy = () -> Arrays.asList(PaymentCard2.mmNumber, PlainCardData1.mmPAN, PlainCardData3.mmPAN, PlainCardData2.mmPAN, PlainCardData4.mmPAN, PlainCardData6.mmPAN, PlainCardData5.mmPAN, PlainCardData7.mmPAN,
 					PlainCardData9.mmPAN, PlainCardData11.mmPAN, PlainCardData10.mmPAN, PlainCardData12.mmPAN, PlainCardData8.mmPAN, PlainCardData14.mmPAN, PlainCardData13.mmPAN, PaymentCard18.mmNumber, PlainCardData16.mmPAN,
 					PlainCardData17.mmPAN, PlainCardData15.mmPAN, PlainCardData18.mmPAN, PlainCardData19.mmPAN, PaymentCard25.mmNumber);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Number";
@@ -493,6 +502,14 @@ public class PaymentCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentCard.class.getMethod("getNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISOYearMonth startDate;
@@ -506,10 +523,6 @@ public class PaymentCard {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ISOYearMonth ISOYearMonth}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -531,6 +544,10 @@ public class PaymentCard {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -544,7 +561,7 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmStartDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCard2.mmStartDate, PlainCardData1.mmEffectiveDate, PlainCardData3.mmEffectiveDate, PlainCardData2.mmEffectiveDate, PaymentCard18.mmStartDate, PaymentCard25.mmStartDate);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StartDate";
@@ -552,6 +569,14 @@ public class PaymentCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentCard.class.getMethod("getStartDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISOYearMonth expiryDate;
@@ -565,10 +590,6 @@ public class PaymentCard {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ISOYearMonth ISOYearMonth}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -590,6 +611,10 @@ public class PaymentCard {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -603,7 +628,7 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmExpiryDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCard2.mmExpiryDate, PlainCardData1.mmExpiryDate, PlainCardData3.mmExpiryDate, PlainCardData2.mmExpiryDate, PaymentCard18.mmExpiryDate, PaymentCard25.mmExpiryDate);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryDate";
@@ -611,6 +636,14 @@ public class PaymentCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentCard.class.getMethod("getExpiryDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text securityCode;
@@ -624,10 +657,6 @@ public class PaymentCard {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -646,6 +675,10 @@ public class PaymentCard {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -661,7 +694,7 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmSecurityCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCard2.mmSecurityCode, CardSecurityInformation1.mmCSCValue, PaymentCard18.mmSecurityCode, PaymentCard25.mmSecurityCode);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecurityCode";
@@ -669,6 +702,14 @@ public class PaymentCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentCard.class.getMethod("getSecurityCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text sequenceNumber;
@@ -681,10 +722,6 @@ public class PaymentCard {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -754,6 +791,10 @@ public class PaymentCard {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -771,7 +812,7 @@ public class PaymentCard {
 					PlainCardData6.mmCardSequenceNumber, PlainCardData5.mmCardSequenceNumber, PlainCardData7.mmCardSequenceNumber, PlainCardData9.mmCardSequenceNumber, PlainCardData11.mmCardSequenceNumber,
 					PlainCardData10.mmCardSequenceNumber, PlainCardData12.mmCardSequenceNumber, PlainCardData8.mmCardSequenceNumber, PlainCardData14.mmCardSequenceNumber, PlainCardData13.mmCardSequenceNumber,
 					PaymentCard18.mmSequenceNumber, PlainCardData16.mmCardSequenceNumber, PlainCardData15.mmCardSequenceNumber, PlainCardData18.mmCardSequenceNumber, PlainCardData19.mmCardSequenceNumber, PaymentCard25.mmSequenceNumber);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SequenceNumber";
@@ -779,6 +820,14 @@ public class PaymentCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentCard.class.getMethod("getSequenceNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Exact3NumericText serviceCode;
@@ -792,10 +841,6 @@ public class PaymentCard {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Exact3NumericText
 	 * Exact3NumericText}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -838,6 +883,10 @@ public class PaymentCard {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -852,7 +901,7 @@ public class PaymentCard {
 		{
 			derivation_lazy = () -> Arrays.asList(PlainCardData1.mmServiceCode, PlainCardData2.mmServiceCode, PlainCardData4.mmServiceCode, PlainCardData6.mmServiceCode, PlainCardData7.mmServiceCode, PlainCardData9.mmServiceCode,
 					PlainCardData11.mmServiceCode, PlainCardData10.mmServiceCode, PlainCardData13.mmServiceCode, PlainCardData16.mmServiceCode, PlainCardData15.mmServiceCode, PlainCardData18.mmServiceCode);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ServiceCode";
@@ -860,6 +909,14 @@ public class PaymentCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentCard.class.getMethod("getServiceCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max140Text trackValue;
@@ -872,10 +929,6 @@ public class PaymentCard {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max140Text
 	 * Max140Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -883,6 +936,10 @@ public class PaymentCard {
 	 * TrackData1.mmTrackValue}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -897,7 +954,7 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmTrackValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TrackData1.mmTrackValue);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TrackValue";
@@ -905,6 +962,14 @@ public class PaymentCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentCard.class.getMethod("getTrackValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CSCManagementCode securityCodeManagement;
@@ -918,10 +983,6 @@ public class PaymentCard {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CSCManagementCode
 	 * CSCManagementCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -930,6 +991,10 @@ public class PaymentCard {
 	 * CardSecurityInformation1.mmCSCManagement}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -945,7 +1010,7 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmSecurityCodeManagement = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardSecurityInformation1.mmCSCManagement);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecurityCodeManagement";
@@ -953,6 +1018,14 @@ public class PaymentCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CSCManagementCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentCard.class.getMethod("getSecurityCodeManagement", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text cardBrand;
@@ -965,10 +1038,6 @@ public class PaymentCard {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1002,6 +1071,10 @@ public class PaymentCard {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1016,7 +1089,7 @@ public class PaymentCard {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCard4.mmCardBrand, TransactionData1.mmCardBrand, PaymentCard3.mmCardBrand, PaymentCard6.mmCardBrand, PaymentCard1.mmCardBrand, PaymentCard5.mmCardBrand, PaymentCard7.mmCardBrand,
 					PaymentCard8.mmCardBrand, PaymentCard9.mmCardBrand, PaymentCard11.mmCardBrand, PaymentCard20.mmCardBrand, PaymentCard21.mmCardBrand, PaymentCard26.mmCardBrand);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardBrand";
@@ -1024,6 +1097,14 @@ public class PaymentCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentCard.class.getMethod("getCardBrand", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.CashAccount> relatedAccount;
@@ -1044,10 +1125,6 @@ public class PaymentCard {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1063,6 +1140,10 @@ public class PaymentCard {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1076,7 +1157,7 @@ public class PaymentCard {
 	public static final MMBusinessAssociationEnd mmRelatedAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionData1.mmPrePaidAccount, CardTransaction2.mmPrePaidAccount, CardEntry2.mmPrePaidAccount);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedAccount";
@@ -1099,10 +1180,6 @@ public class PaymentCard {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max5NumericText
 	 * Max5NumericText}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1124,6 +1201,10 @@ public class PaymentCard {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1139,7 +1220,7 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmProfileNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCard3.mmCardProductProfile, PaymentCard6.mmCardProductProfile, PaymentCard1.mmCardProductProfile, PaymentCard5.mmCardProductProfile, PaymentCard8.mmCardProductProfile);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProfileNumber";
@@ -1147,6 +1228,14 @@ public class PaymentCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentCard.class.getMethod("getProfileNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CardAccountTypeCode relatedAccountType;
@@ -1160,10 +1249,6 @@ public class PaymentCard {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CardAccountTypeCode
 	 * CardAccountTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1266,6 +1351,10 @@ public class PaymentCard {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1286,7 +1375,7 @@ public class PaymentCard {
 					CardPaymentTransactionDetails28.mmAccountType, CardPaymentTransactionDetails29.mmAccountType, CardPaymentTransactionDetails30.mmAccountType, CardPaymentTransactionDetails27.mmAccountType,
 					CardPaymentTransactionDetails31.mmAccountType, CardPaymentTransactionDetails39.mmAccountType, CardPaymentTransactionDetails38.mmAccountType, CardPaymentTransactionDetails41.mmAccountType,
 					CardPaymentTransactionDetails37.mmAccountType, CardPaymentTransactionDetails42.mmAccountType, CardPaymentTransactionDetails43.mmAccountType);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedAccountType";
@@ -1294,6 +1383,14 @@ public class PaymentCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardAccountTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentCard.class.getMethod("getRelatedAccountType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount creditAvailableAmount;
@@ -1307,10 +1404,6 @@ public class PaymentCard {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1319,6 +1412,10 @@ public class PaymentCard {
 	 * FinancialCard1.mmCreditAvailableAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1334,7 +1431,7 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmCreditAvailableAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialCard1.mmCreditAvailableAmount);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditAvailableAmount";
@@ -1342,6 +1439,14 @@ public class PaymentCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentCard.class.getMethod("getCreditAvailableAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Limit> limit;
@@ -1361,10 +1466,6 @@ public class PaymentCard {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Limit Limit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1379,6 +1480,10 @@ public class PaymentCard {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1392,7 +1497,7 @@ public class PaymentCard {
 	public static final MMBusinessAssociationEnd mmLimit = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ATMTransaction2.mmLimits, ATMTransaction3.mmLimits, ATMTransaction14.mmLimits, ATMTransaction17.mmLimits);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Limit";
@@ -1413,10 +1518,6 @@ public class PaymentCard {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1438,6 +1539,10 @@ public class PaymentCard {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1451,7 +1556,7 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmCardCurrencyCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCard7.mmCardCurrencyCode, PaymentCard8.mmCardCurrencyCode, PaymentCard14.mmCardCurrencyCode, PaymentCard17.mmCardCurrencyCode, PaymentCard23.mmCardCurrencyCode);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardCurrencyCode";
@@ -1459,6 +1564,14 @@ public class PaymentCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentCard.class.getMethod("getCardCurrencyCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Interest interest;
@@ -1496,7 +1609,7 @@ public class PaymentCard {
 	 */
 	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
@@ -1525,10 +1638,6 @@ public class PaymentCard {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Country Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1589,6 +1698,10 @@ public class PaymentCard {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1605,7 +1718,7 @@ public class PaymentCard {
 					PaymentCard7.mmCardCountryCode, PaymentCard8.mmCardCountryCode, PaymentCard9.mmCardCountryCode, PaymentCard11.mmCardCountryCode, PaymentCard12.mmCardCountryCode, PaymentCard14.mmCardCountryCode,
 					PaymentCard16.mmCardCountryCode, PaymentCard17.mmCardCountryCode, PaymentCard20.mmCardCountryCode, PaymentCard21.mmCardCountryCode, PaymentCard23.mmCardCountryCode, PaymentCard22.mmCardCountryCode,
 					PaymentCard26.mmCardCountryCode);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardCountryCode";
@@ -1628,10 +1741,6 @@ public class PaymentCard {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1680,6 +1789,10 @@ public class PaymentCard {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard PaymentCard}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1698,7 +1811,7 @@ public class PaymentCard {
 					CardPaymentTransaction75.mmCardProgrammeApplied, PaymentCard27.mmCardProductSubType, CardPaymentTransaction74.mmCardProgrammeProposed, CardPaymentTransaction74.mmCardProgrammeApplied,
 					CardPaymentTransaction70.mmCardProgrammeProposed, CardPaymentTransaction70.mmCardProgrammeApplied, CardPaymentTransaction76.mmCardProgrammeProposed, CardPaymentTransaction76.mmCardProgrammeApplied,
 					CardPaymentTransaction69.mmCardProgrammeProposed, CardPaymentTransaction69.mmCardProgrammeApplied);
-			elementContext_lazy = () -> PaymentCard.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardProgramme";
@@ -1706,6 +1819,14 @@ public class PaymentCard {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PaymentCard.class.getMethod("getCardProgramme", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1726,9 +1847,13 @@ public class PaymentCard {
 						PlainCardData14.mmEffectiveDate, PlainCardData14.mmExpiryDate, PlainCardData13.mmEffectiveDate, PlainCardData13.mmExpiryDate, PaymentCard19.mmPlainCardData, PlainCardData16.mmEffectiveDate,
 						PlainCardData16.mmExpiryDate, PlainCardData15.mmEffectiveDate, PlainCardData15.mmExpiryDate, PlainCardData18.mmEffectiveDate, PlainCardData18.mmExpiryDate, PlainCardData19.mmEffectiveDate,
 						PlainCardData19.mmExpiryDate, PaymentCard27.mmPlainCardData);
-				element_lazy = () -> Arrays.asList(PaymentCard.mmPayment, PaymentCard.mmType, PaymentCard.mmNumber, PaymentCard.mmStartDate, PaymentCard.mmExpiryDate, PaymentCard.mmSecurityCode, PaymentCard.mmSequenceNumber,
-						PaymentCard.mmServiceCode, PaymentCard.mmTrackValue, PaymentCard.mmSecurityCodeManagement, PaymentCard.mmCardBrand, PaymentCard.mmRelatedAccount, PaymentCard.mmProfileNumber, PaymentCard.mmRelatedAccountType,
-						PaymentCard.mmCreditAvailableAmount, PaymentCard.mmLimit, PaymentCard.mmCardCurrencyCode, PaymentCard.mmInterest, PaymentCard.mmCardCountryCode, PaymentCard.mmCardProgramme);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentCard.mmPayment, com.tools20022.repository.entity.PaymentCard.mmType, com.tools20022.repository.entity.PaymentCard.mmNumber,
+						com.tools20022.repository.entity.PaymentCard.mmStartDate, com.tools20022.repository.entity.PaymentCard.mmExpiryDate, com.tools20022.repository.entity.PaymentCard.mmSecurityCode,
+						com.tools20022.repository.entity.PaymentCard.mmSequenceNumber, com.tools20022.repository.entity.PaymentCard.mmServiceCode, com.tools20022.repository.entity.PaymentCard.mmTrackValue,
+						com.tools20022.repository.entity.PaymentCard.mmSecurityCodeManagement, com.tools20022.repository.entity.PaymentCard.mmCardBrand, com.tools20022.repository.entity.PaymentCard.mmRelatedAccount,
+						com.tools20022.repository.entity.PaymentCard.mmProfileNumber, com.tools20022.repository.entity.PaymentCard.mmRelatedAccountType, com.tools20022.repository.entity.PaymentCard.mmCreditAvailableAmount,
+						com.tools20022.repository.entity.PaymentCard.mmLimit, com.tools20022.repository.entity.PaymentCard.mmCardCurrencyCode, com.tools20022.repository.entity.PaymentCard.mmInterest,
+						com.tools20022.repository.entity.PaymentCard.mmCardCountryCode, com.tools20022.repository.entity.PaymentCard.mmCardProgramme);
 				derivationComponent_lazy = () -> Arrays.asList(PaymentCard2.mmObject(), TrackData1.mmObject(), CardSecurityInformation1.mmObject(), PlainCardData1.mmObject(), PaymentCard4.mmObject(), PlainCardData3.mmObject(),
 						TransactionData1.mmObject(), PlainCardData2.mmObject(), PaymentCard3.mmObject(), PaymentCard6.mmObject(), PaymentCard1.mmObject(), PaymentCard5.mmObject(), FinancialCard1.mmObject(), PaymentCard7.mmObject(),
 						PlainCardData4.mmObject(), PaymentCard8.mmObject(), PlainCardData6.mmObject(), PlainCardData5.mmObject(), PaymentCard10.mmObject(), PaymentCard9.mmObject(), PlainCardData7.mmObject(), PlainCardData9.mmObject(),
@@ -1736,6 +1861,11 @@ public class PaymentCard {
 						PlainCardData8.mmObject(), PaymentCard16.mmObject(), PlainCardData14.mmObject(), PlainCardData13.mmObject(), PaymentCard17.mmObject(), PaymentCard18.mmObject(), PaymentCard20.mmObject(), PaymentCard19.mmObject(),
 						PlainCardData16.mmObject(), PlainCardData17.mmObject(), PlainCardData15.mmObject(), PaymentCard21.mmObject(), PaymentCard23.mmObject(), PaymentCard22.mmObject(), PlainCardData18.mmObject(),
 						PlainCardData19.mmObject(), PaymentCard25.mmObject(), PaymentCard26.mmObject(), PaymentCard27.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PaymentCard.class;
 			}
 		});
 		return mmObject_lazy.get();

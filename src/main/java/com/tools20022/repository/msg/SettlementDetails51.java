@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of settlement of a transaction.
@@ -122,6 +126,10 @@ import java.util.List;
  * definition} = "Details of settlement of a transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementDetails51", propOrder = {"securitiesTransactionType", "settlementTransactionCondition", "beneficialOwnership", "CCPEligibility", "deliveryReturnReason", "cashClearingSystem", "exposureType",
+		"FXStandingInstruction", "marketClientSide", "nettingEligibility", "registration", "legalRestrictions", "settlingCapacity", "taxCapacity", "stampDutyTaxBasis", "tracking", "letterOfGuarantee", "returnLeg",
+		"modificationCancellationAllowed", "eligibleForCollateral", "securitiesSubBalanceType", "cashSubBalanceType"})
 public class SettlementDetails51 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1230,6 +1238,7 @@ public class SettlementDetails51 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesTxTp")
 	public SecuritiesTransactionType16Choice getSecuritiesTransactionType() {
 		return securitiesTransactionType;
 	}
@@ -1238,6 +1247,7 @@ public class SettlementDetails51 {
 		this.securitiesTransactionType = securitiesTransactionType;
 	}
 
+	@XmlElement(name = "SttlmTxCond")
 	public List<SettlementTransactionCondition14Choice> getSettlementTransactionCondition() {
 		return settlementTransactionCondition;
 	}
@@ -1246,6 +1256,7 @@ public class SettlementDetails51 {
 		this.settlementTransactionCondition = settlementTransactionCondition;
 	}
 
+	@XmlElement(name = "BnfclOwnrsh")
 	public BeneficialOwnership2Choice getBeneficialOwnership() {
 		return beneficialOwnership;
 	}
@@ -1254,6 +1265,7 @@ public class SettlementDetails51 {
 		this.beneficialOwnership = beneficialOwnership;
 	}
 
+	@XmlElement(name = "CCPElgblty")
 	public CentralCounterPartyEligibility2Choice getCCPEligibility() {
 		return cCPEligibility;
 	}
@@ -1262,6 +1274,7 @@ public class SettlementDetails51 {
 		this.cCPEligibility = cCPEligibility;
 	}
 
+	@XmlElement(name = "DlvryRtrRsn")
 	public DeliveryReturn2Choice getDeliveryReturnReason() {
 		return deliveryReturnReason;
 	}
@@ -1270,6 +1283,7 @@ public class SettlementDetails51 {
 		this.deliveryReturnReason = deliveryReturnReason;
 	}
 
+	@XmlElement(name = "CshClrSys")
 	public CashSettlementSystem2Choice getCashClearingSystem() {
 		return cashClearingSystem;
 	}
@@ -1278,6 +1292,7 @@ public class SettlementDetails51 {
 		this.cashClearingSystem = cashClearingSystem;
 	}
 
+	@XmlElement(name = "XpsrTp")
 	public ExposureType7Choice getExposureType() {
 		return exposureType;
 	}
@@ -1286,6 +1301,7 @@ public class SettlementDetails51 {
 		this.exposureType = exposureType;
 	}
 
+	@XmlElement(name = "FxStgInstr")
 	public FXStandingInstruction2Choice getFXStandingInstruction() {
 		return fXStandingInstruction;
 	}
@@ -1294,6 +1310,7 @@ public class SettlementDetails51 {
 		this.fXStandingInstruction = fXStandingInstruction;
 	}
 
+	@XmlElement(name = "MktClntSd")
 	public MarketClientSide2Choice getMarketClientSide() {
 		return marketClientSide;
 	}
@@ -1302,6 +1319,7 @@ public class SettlementDetails51 {
 		this.marketClientSide = marketClientSide;
 	}
 
+	@XmlElement(name = "NetgElgblty")
 	public NettingEligibility2Choice getNettingEligibility() {
 		return nettingEligibility;
 	}
@@ -1310,6 +1328,7 @@ public class SettlementDetails51 {
 		this.nettingEligibility = nettingEligibility;
 	}
 
+	@XmlElement(name = "Regn")
 	public Registration2Choice getRegistration() {
 		return registration;
 	}
@@ -1318,6 +1337,7 @@ public class SettlementDetails51 {
 		this.registration = registration;
 	}
 
+	@XmlElement(name = "LglRstrctns")
 	public Restriction2Choice getLegalRestrictions() {
 		return legalRestrictions;
 	}
@@ -1326,6 +1346,7 @@ public class SettlementDetails51 {
 		this.legalRestrictions = legalRestrictions;
 	}
 
+	@XmlElement(name = "SttlgCpcty")
 	public SettlingCapacity2Choice getSettlingCapacity() {
 		return settlingCapacity;
 	}
@@ -1334,6 +1355,7 @@ public class SettlementDetails51 {
 		this.settlingCapacity = settlingCapacity;
 	}
 
+	@XmlElement(name = "TaxCpcty")
 	public TaxCapacityParty2Choice getTaxCapacity() {
 		return taxCapacity;
 	}
@@ -1342,6 +1364,7 @@ public class SettlementDetails51 {
 		this.taxCapacity = taxCapacity;
 	}
 
+	@XmlElement(name = "StmpDtyTaxBsis")
 	public GenericIdentification25 getStampDutyTaxBasis() {
 		return stampDutyTaxBasis;
 	}
@@ -1350,6 +1373,7 @@ public class SettlementDetails51 {
 		this.stampDutyTaxBasis = stampDutyTaxBasis;
 	}
 
+	@XmlElement(name = "Trckg")
 	public Tracking2Choice getTracking() {
 		return tracking;
 	}
@@ -1358,6 +1382,7 @@ public class SettlementDetails51 {
 		this.tracking = tracking;
 	}
 
+	@XmlElement(name = "LttrOfGrnt")
 	public LetterOfGuarantee2Choice getLetterOfGuarantee() {
 		return letterOfGuarantee;
 	}
@@ -1366,6 +1391,7 @@ public class SettlementDetails51 {
 		this.letterOfGuarantee = letterOfGuarantee;
 	}
 
+	@XmlElement(name = "RtrLeg")
 	public YesNoIndicator getReturnLeg() {
 		return returnLeg;
 	}
@@ -1374,6 +1400,7 @@ public class SettlementDetails51 {
 		this.returnLeg = returnLeg;
 	}
 
+	@XmlElement(name = "ModCxlAllwd")
 	public ModificationCancellationAllowed2Choice getModificationCancellationAllowed() {
 		return modificationCancellationAllowed;
 	}
@@ -1382,6 +1409,7 @@ public class SettlementDetails51 {
 		this.modificationCancellationAllowed = modificationCancellationAllowed;
 	}
 
+	@XmlElement(name = "ElgblForColl")
 	public YesNoIndicator getEligibleForCollateral() {
 		return eligibleForCollateral;
 	}
@@ -1390,6 +1418,7 @@ public class SettlementDetails51 {
 		this.eligibleForCollateral = eligibleForCollateral;
 	}
 
+	@XmlElement(name = "SctiesSubBalTp")
 	public GenericIdentification25 getSecuritiesSubBalanceType() {
 		return securitiesSubBalanceType;
 	}
@@ -1398,6 +1427,7 @@ public class SettlementDetails51 {
 		this.securitiesSubBalanceType = securitiesSubBalanceType;
 	}
 
+	@XmlElement(name = "CshSubBalTp")
 	public GenericIdentification25 getCashSubBalanceType() {
 		return cashSubBalanceType;
 	}

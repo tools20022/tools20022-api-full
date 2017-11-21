@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.RejectionReasonV2Code;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CancellationType;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,6 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.QuoteStatus#mmStatus
+ * QuoteStatus.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.QuoteStatus#mmRejectionReason
+ * QuoteStatus.mmRejectionReason}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.QuoteStatus#mmRelatedQuote
+ * QuoteStatus.mmRelatedQuote}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -49,20 +64,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.entity.Quote#mmStatus
  * Quote.mmStatus}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.QuoteStatus#mmStatus
- * QuoteStatus.mmStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.QuoteStatus#mmRejectionReason
- * QuoteStatus.mmRejectionReason}</li>
- * <li>{@linkplain com.tools20022.repository.entity.QuoteStatus#mmRelatedQuote
- * QuoteStatus.mmRelatedQuote}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,10 +95,6 @@ public class QuoteStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode
 	 * QuoteStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.QuoteStatus QuoteStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -106,6 +103,10 @@ public class QuoteStatus extends Status {
 	 * CancellationType.mmCancellationType}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.QuoteStatus QuoteStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -120,7 +121,7 @@ public class QuoteStatus extends Status {
 	public static final MMBusinessAttribute mmStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CancellationType.mmCancellationType);
-			elementContext_lazy = () -> QuoteStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.QuoteStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
@@ -128,6 +129,14 @@ public class QuoteStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> QuoteStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return QuoteStatus.class.getMethod("getStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RejectionReasonV2Code rejectionReason;
@@ -158,7 +167,7 @@ public class QuoteStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmRejectionReason = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> QuoteStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.QuoteStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RejectionReason";
@@ -166,6 +175,14 @@ public class QuoteStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReasonV2Code.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return QuoteStatus.class.getMethod("getRejectionReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Quote relatedQuote;
@@ -201,7 +218,7 @@ public class QuoteStatus extends Status {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> QuoteStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.QuoteStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedQuote";
@@ -223,8 +240,13 @@ public class QuoteStatus extends Status {
 				definition = "Status of a quote and if required, the rejection reason.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Quote.mmStatus);
 				superType_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
-				element_lazy = () -> Arrays.asList(QuoteStatus.mmStatus, QuoteStatus.mmRejectionReason, QuoteStatus.mmRelatedQuote);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.QuoteStatus.mmStatus, com.tools20022.repository.entity.QuoteStatus.mmRejectionReason, com.tools20022.repository.entity.QuoteStatus.mmRelatedQuote);
 				derivationComponent_lazy = () -> Arrays.asList(CancellationType.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return QuoteStatus.class;
 			}
 		});
 		return mmObject_lazy.get();

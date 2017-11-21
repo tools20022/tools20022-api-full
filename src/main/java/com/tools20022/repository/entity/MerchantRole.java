@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Min3Max4Text;
 import com.tools20022.repository.entity.CardPaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,6 +38,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MerchantRole#mmMerchantCategoryCode
+ * MerchantRole.mmMerchantCategoryCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MerchantRole#mmMerchantIdentification
+ * MerchantRole.mmMerchantIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole
+ * CardPaymentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -142,21 +158,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentEnvironment57.mmMerchant}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole
- * CardPaymentPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MerchantRole#mmMerchantCategoryCode
- * MerchantRole.mmMerchantCategoryCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MerchantRole#mmMerchantIdentification
- * MerchantRole.mmMerchantIdentification}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -187,10 +188,6 @@ public class MerchantRole extends CardPaymentPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Min3Max4Text Min3Max4Text}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.MerchantRole MerchantRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -353,6 +350,10 @@ public class MerchantRole extends CardPaymentPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.MerchantRole MerchantRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -380,7 +381,7 @@ public class MerchantRole extends CardPaymentPartyRole {
 					CardPaymentTransaction51.mmMerchantCategoryCode, CommonData5.mmMerchantCategoryCode, CardPaymentTransaction55.mmMerchantCategoryCode, CardPaymentTransaction62.mmMerchantCategoryCode,
 					CardPaymentTransaction71.mmMerchantCategoryCode, CardPaymentTransaction75.mmMerchantCategoryCode, CardPaymentTransaction74.mmMerchantCategoryCode, CardPaymentTransaction70.mmMerchantCategoryCode,
 					CardPaymentTransaction72.mmMerchantCategoryCode, CardPaymentTransaction76.mmMerchantCategoryCode, CommonData6.mmMerchantCategoryCode, CardPaymentTransaction69.mmMerchantCategoryCode);
-			elementContext_lazy = () -> MerchantRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MerchantRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MerchantCategoryCode";
@@ -388,6 +389,14 @@ public class MerchantRole extends CardPaymentPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Min3Max4Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MerchantRole.class.getMethod("getMerchantCategoryCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text merchantIdentification;
@@ -417,7 +426,7 @@ public class MerchantRole extends CardPaymentPartyRole {
 	 */
 	public static final MMBusinessAttribute mmMerchantIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> MerchantRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MerchantRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MerchantIdentification";
@@ -425,6 +434,14 @@ public class MerchantRole extends CardPaymentPartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MerchantRole.class.getMethod("getMerchantIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -443,7 +460,12 @@ public class MerchantRole extends CardPaymentPartyRole {
 						CardPaymentEnvironment53.mmMerchant, CardPaymentEnvironment47.mmMerchant, CardPaymentEnvironment61.mmMerchant, CardPaymentEnvironment60.mmMerchant, CardPaymentEnvironment66.mmMerchantIdentification,
 						CardPaymentEnvironment62.mmMerchant, CardPaymentEnvironment58.mmMerchant, CardPaymentEnvironment59.mmMerchant, CardPaymentEnvironment57.mmMerchant);
 				superType_lazy = () -> CardPaymentPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(MerchantRole.mmMerchantCategoryCode, MerchantRole.mmMerchantIdentification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MerchantRole.mmMerchantCategoryCode, com.tools20022.repository.entity.MerchantRole.mmMerchantIdentification);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MerchantRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Product;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -39,6 +40,24 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Goods#mmTransport
+ * Goods.mmTransport}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Goods#mmAnalysis
+ * Goods.mmAnalysis}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Goods#mmHealthCheck
+ * Goods.mmHealthCheck}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Goods#mmPhytosanitaryInspection
+ * Goods.mmPhytosanitaryInspection}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Goods#mmPartyRole
+ * Goods.mmPartyRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Product Product}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -74,24 +93,6 @@ import java.util.List;
  * Baseline5.mmGoods}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet5#mmGoods
  * CommercialDataSet5.mmGoods}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Product Product}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Goods#mmTransport
- * Goods.mmTransport}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Goods#mmAnalysis
- * Goods.mmAnalysis}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Goods#mmHealthCheck
- * Goods.mmHealthCheck}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Goods#mmPhytosanitaryInspection
- * Goods.mmPhytosanitaryInspection}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Goods#mmPartyRole
- * Goods.mmPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -150,7 +151,7 @@ public class Goods extends Product {
 	 */
 	public static final MMBusinessAssociationEnd mmTransport = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Goods.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Transport";
@@ -172,10 +173,6 @@ public class Goods extends Product {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Goods
-	 * Goods}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -187,6 +184,10 @@ public class Goods extends Product {
 	 * CertifiedCharacteristics2Choice.mmAnalysis}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Goods
+	 * Goods}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -202,7 +203,7 @@ public class Goods extends Product {
 	public static final MMBusinessAttribute mmAnalysis = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmAnalysis, CertifiedCharacteristics2Choice.mmAnalysis);
-			elementContext_lazy = () -> Goods.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Analysis";
@@ -210,6 +211,14 @@ public class Goods extends Product {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Goods.class.getMethod("getAnalysis", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator healthCheck;
@@ -223,10 +232,6 @@ public class Goods extends Product {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Goods
-	 * Goods}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -238,6 +243,10 @@ public class Goods extends Product {
 	 * CertifiedCharacteristics2Choice.mmHealthIndication}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Goods
+	 * Goods}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -252,7 +261,7 @@ public class Goods extends Product {
 	public static final MMBusinessAttribute mmHealthCheck = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmHealthIndication, CertifiedCharacteristics2Choice.mmHealthIndication);
-			elementContext_lazy = () -> Goods.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HealthCheck";
@@ -260,6 +269,14 @@ public class Goods extends Product {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Goods.class.getMethod("getHealthCheck", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator phytosanitaryInspection;
@@ -273,10 +290,6 @@ public class Goods extends Product {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Goods
-	 * Goods}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -288,6 +301,10 @@ public class Goods extends Product {
 	 * CertifiedCharacteristics2Choice.mmPhytosanitaryIndication}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Goods
+	 * Goods}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -303,7 +320,7 @@ public class Goods extends Product {
 	public static final MMBusinessAttribute mmPhytosanitaryInspection = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmPhytosanitaryIndication, CertifiedCharacteristics2Choice.mmPhytosanitaryIndication);
-			elementContext_lazy = () -> Goods.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhytosanitaryInspection";
@@ -311,6 +328,14 @@ public class Goods extends Product {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Goods.class.getMethod("getPhytosanitaryInspection", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.GoodsPartyRole> partyRole;
@@ -349,7 +374,7 @@ public class Goods extends Product {
 	 */
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Goods.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
@@ -371,8 +396,14 @@ public class Goods extends Product {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Transport.mmTransportedGoods, com.tools20022.repository.entity.GoodsPartyRole.mmItem);
 				derivationElement_lazy = () -> Arrays.asList(CommercialDataSet2.mmGoods, CommercialDataSet3.mmGoods, Baseline4.mmGoods, CommercialDataSet4.mmGoods, Baseline5.mmGoods, CommercialDataSet5.mmGoods);
 				superType_lazy = () -> Product.mmObject();
-				element_lazy = () -> Arrays.asList(Goods.mmTransport, Goods.mmAnalysis, Goods.mmHealthCheck, Goods.mmPhytosanitaryInspection, Goods.mmPartyRole);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Goods.mmTransport, com.tools20022.repository.entity.Goods.mmAnalysis, com.tools20022.repository.entity.Goods.mmHealthCheck,
+						com.tools20022.repository.entity.Goods.mmPhytosanitaryInspection, com.tools20022.repository.entity.Goods.mmPartyRole);
 				derivationComponent_lazy = () -> Arrays.asList(TransportedGoods1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Goods.class;
 			}
 		});
 		return mmObject_lazy.get();

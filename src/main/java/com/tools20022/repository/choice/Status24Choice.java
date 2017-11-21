@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.SwitchOrderStatusAndReason2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of status.
@@ -73,6 +77,8 @@ import java.util.List;
  * definition} = "Choice of status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Status24Choice", propOrder = {"orderDetailsReport", "individualOrderDetailsReport", "switchOrderDetailsReport"})
 public class Status24Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class Status24Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrDtlsRpt", required = true)
 	public OrderStatusAndReason10 getOrderDetailsReport() {
 		return orderDetailsReport;
 	}
@@ -226,6 +233,7 @@ public class Status24Choice {
 		this.orderDetailsReport = orderDetailsReport;
 	}
 
+	@XmlElement(name = "IndvOrdrDtlsRpt", required = true)
 	public List<IndividualOrderStatusAndReason7> getIndividualOrderDetailsReport() {
 		return individualOrderDetailsReport;
 	}
@@ -234,6 +242,7 @@ public class Status24Choice {
 		this.individualOrderDetailsReport = individualOrderDetailsReport;
 	}
 
+	@XmlElement(name = "SwtchOrdrDtlsRpt", required = true)
 	public List<SwitchOrderStatusAndReason2> getSwitchOrderDetailsReport() {
 		return switchOrderDetailsReport;
 	}

@@ -29,19 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code
- * CommunicationMethod1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CommunicationMethod2Code
- * CommunicationMethod2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CommunicationMethod3Code
- * CommunicationMethod3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CommunicationMethod4Code
- * CommunicationMethod4Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -71,6 +58,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CommunicationMethodCode#mmFile
  * CommunicationMethodCode.mmFile}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code
+ * CommunicationMethod1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommunicationMethod2Code
+ * CommunicationMethod2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommunicationMethod3Code
+ * CommunicationMethod3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommunicationMethod4Code
+ * CommunicationMethod4Code}</li>
  * </ul>
  * </li>
  * <li>

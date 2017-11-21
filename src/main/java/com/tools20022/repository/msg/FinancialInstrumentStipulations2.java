@@ -37,6 +37,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional restrictions on the financial instrument, related to the
@@ -208,6 +212,11 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentStipulations2", propOrder = {"geographics", "yieldRange", "rating", "couponRange", "amortisableIndicator", "purpose", "alternativeMinimumTaxIndicator", "autoReinvestment", "transactionConditions",
+		"currency", "customDate", "haircut", "insuredIndicator", "lookBack", "maturityDate", "issueDate", "issuerIdentification", "issueSize", "minimumDenomination", "maximumSubstitution", "minimumIncrement", "paymentFrequency",
+		"minimumQuantity", "production", "restrictedIndicator", "priceFrequency", "sector", "substitutionFrequency", "substitutionLeft", "wholePoolIndicator", "priceSource", "expirationDate", "overAllotmentAmount", "overAllotmentRate",
+		"priceRange", "callableIndicator", "convertibleIndicator", "putableIndicator", "preFundedIndicator", "escrowedIndicator", "perpetualIndicator"})
 public class FinancialInstrumentStipulations2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -2277,6 +2286,7 @@ public class FinancialInstrumentStipulations2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Geogcs")
 	public Max35Text getGeographics() {
 		return geographics;
 	}
@@ -2285,6 +2295,7 @@ public class FinancialInstrumentStipulations2 {
 		this.geographics = geographics;
 	}
 
+	@XmlElement(name = "YldRg")
 	public AmountOrPercentageRange getYieldRange() {
 		return yieldRange;
 	}
@@ -2293,6 +2304,7 @@ public class FinancialInstrumentStipulations2 {
 		this.yieldRange = yieldRange;
 	}
 
+	@XmlElement(name = "Ratg")
 	public Rating1 getRating() {
 		return rating;
 	}
@@ -2301,6 +2313,7 @@ public class FinancialInstrumentStipulations2 {
 		this.rating = rating;
 	}
 
+	@XmlElement(name = "CpnRg")
 	public AmountOrPercentageRange getCouponRange() {
 		return couponRange;
 	}
@@ -2309,6 +2322,7 @@ public class FinancialInstrumentStipulations2 {
 		this.couponRange = couponRange;
 	}
 
+	@XmlElement(name = "AmtsblInd")
 	public YesNoIndicator getAmortisableIndicator() {
 		return amortisableIndicator;
 	}
@@ -2317,6 +2331,7 @@ public class FinancialInstrumentStipulations2 {
 		this.amortisableIndicator = amortisableIndicator;
 	}
 
+	@XmlElement(name = "Purp")
 	public Max256Text getPurpose() {
 		return purpose;
 	}
@@ -2325,6 +2340,7 @@ public class FinancialInstrumentStipulations2 {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "AltrntvMinTaxInd")
 	public YesNoIndicator getAlternativeMinimumTaxIndicator() {
 		return alternativeMinimumTaxIndicator;
 	}
@@ -2333,6 +2349,7 @@ public class FinancialInstrumentStipulations2 {
 		this.alternativeMinimumTaxIndicator = alternativeMinimumTaxIndicator;
 	}
 
+	@XmlElement(name = "AutoRinvstmt")
 	public PercentageRate getAutoReinvestment() {
 		return autoReinvestment;
 	}
@@ -2341,6 +2358,7 @@ public class FinancialInstrumentStipulations2 {
 		this.autoReinvestment = autoReinvestment;
 	}
 
+	@XmlElement(name = "TxConds")
 	public TradeTransactionCondition2Code getTransactionConditions() {
 		return transactionConditions;
 	}
@@ -2349,6 +2367,7 @@ public class FinancialInstrumentStipulations2 {
 		this.transactionConditions = transactionConditions;
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -2357,6 +2376,7 @@ public class FinancialInstrumentStipulations2 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "CstmDt")
 	public DateTimePeriodDetails1 getCustomDate() {
 		return customDate;
 	}
@@ -2365,6 +2385,7 @@ public class FinancialInstrumentStipulations2 {
 		this.customDate = customDate;
 	}
 
+	@XmlElement(name = "Hrcut")
 	public PercentageRate getHaircut() {
 		return haircut;
 	}
@@ -2373,6 +2394,7 @@ public class FinancialInstrumentStipulations2 {
 		this.haircut = haircut;
 	}
 
+	@XmlElement(name = "InsrdInd")
 	public YesNoIndicator getInsuredIndicator() {
 		return insuredIndicator;
 	}
@@ -2381,6 +2403,7 @@ public class FinancialInstrumentStipulations2 {
 		this.insuredIndicator = insuredIndicator;
 	}
 
+	@XmlElement(name = "LookBck")
 	public Number getLookBack() {
 		return lookBack;
 	}
@@ -2389,6 +2412,7 @@ public class FinancialInstrumentStipulations2 {
 		this.lookBack = lookBack;
 	}
 
+	@XmlElement(name = "MtrtyDt")
 	public ISOYearMonth getMaturityDate() {
 		return maturityDate;
 	}
@@ -2397,6 +2421,7 @@ public class FinancialInstrumentStipulations2 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "IsseDt")
 	public ISOYearMonth getIssueDate() {
 		return issueDate;
 	}
@@ -2405,6 +2430,7 @@ public class FinancialInstrumentStipulations2 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "IssrId")
 	public BICNonFIIdentifier getIssuerIdentification() {
 		return issuerIdentification;
 	}
@@ -2413,6 +2439,7 @@ public class FinancialInstrumentStipulations2 {
 		this.issuerIdentification = issuerIdentification;
 	}
 
+	@XmlElement(name = "IsseSz")
 	public Number getIssueSize() {
 		return issueSize;
 	}
@@ -2421,6 +2448,7 @@ public class FinancialInstrumentStipulations2 {
 		this.issueSize = issueSize;
 	}
 
+	@XmlElement(name = "MinDnmtn")
 	public FinancialInstrumentQuantityChoice getMinimumDenomination() {
 		return minimumDenomination;
 	}
@@ -2429,6 +2457,7 @@ public class FinancialInstrumentStipulations2 {
 		this.minimumDenomination = minimumDenomination;
 	}
 
+	@XmlElement(name = "MaxSbstitn")
 	public Number getMaximumSubstitution() {
 		return maximumSubstitution;
 	}
@@ -2437,6 +2466,7 @@ public class FinancialInstrumentStipulations2 {
 		this.maximumSubstitution = maximumSubstitution;
 	}
 
+	@XmlElement(name = "MinIncrmt")
 	public FinancialInstrumentQuantityChoice getMinimumIncrement() {
 		return minimumIncrement;
 	}
@@ -2445,6 +2475,7 @@ public class FinancialInstrumentStipulations2 {
 		this.minimumIncrement = minimumIncrement;
 	}
 
+	@XmlElement(name = "PmtFrqcy")
 	public Frequency1Code getPaymentFrequency() {
 		return paymentFrequency;
 	}
@@ -2453,6 +2484,7 @@ public class FinancialInstrumentStipulations2 {
 		this.paymentFrequency = paymentFrequency;
 	}
 
+	@XmlElement(name = "MinQty")
 	public FinancialInstrumentQuantityChoice getMinimumQuantity() {
 		return minimumQuantity;
 	}
@@ -2461,6 +2493,7 @@ public class FinancialInstrumentStipulations2 {
 		this.minimumQuantity = minimumQuantity;
 	}
 
+	@XmlElement(name = "Pdctn")
 	public Max35Text getProduction() {
 		return production;
 	}
@@ -2469,6 +2502,7 @@ public class FinancialInstrumentStipulations2 {
 		this.production = production;
 	}
 
+	@XmlElement(name = "RstrctdInd")
 	public YesNoIndicator getRestrictedIndicator() {
 		return restrictedIndicator;
 	}
@@ -2477,6 +2511,7 @@ public class FinancialInstrumentStipulations2 {
 		this.restrictedIndicator = restrictedIndicator;
 	}
 
+	@XmlElement(name = "PricFrqcy")
 	public Frequency1Code getPriceFrequency() {
 		return priceFrequency;
 	}
@@ -2485,6 +2520,7 @@ public class FinancialInstrumentStipulations2 {
 		this.priceFrequency = priceFrequency;
 	}
 
+	@XmlElement(name = "Sctr")
 	public Max35Text getSector() {
 		return sector;
 	}
@@ -2493,6 +2529,7 @@ public class FinancialInstrumentStipulations2 {
 		this.sector = sector;
 	}
 
+	@XmlElement(name = "SbstitnFrqcy")
 	public Frequency1Code getSubstitutionFrequency() {
 		return substitutionFrequency;
 	}
@@ -2501,6 +2538,7 @@ public class FinancialInstrumentStipulations2 {
 		this.substitutionFrequency = substitutionFrequency;
 	}
 
+	@XmlElement(name = "SbstitnLft")
 	public Number getSubstitutionLeft() {
 		return substitutionLeft;
 	}
@@ -2509,6 +2547,7 @@ public class FinancialInstrumentStipulations2 {
 		this.substitutionLeft = substitutionLeft;
 	}
 
+	@XmlElement(name = "WhlPoolInd")
 	public YesNoIndicator getWholePoolIndicator() {
 		return wholePoolIndicator;
 	}
@@ -2517,6 +2556,7 @@ public class FinancialInstrumentStipulations2 {
 		this.wholePoolIndicator = wholePoolIndicator;
 	}
 
+	@XmlElement(name = "PricSrc")
 	public Max35Text getPriceSource() {
 		return priceSource;
 	}
@@ -2525,6 +2565,7 @@ public class FinancialInstrumentStipulations2 {
 		this.priceSource = priceSource;
 	}
 
+	@XmlElement(name = "XprtnDt")
 	public ISODateTime getExpirationDate() {
 		return expirationDate;
 	}
@@ -2533,6 +2574,7 @@ public class FinancialInstrumentStipulations2 {
 		this.expirationDate = expirationDate;
 	}
 
+	@XmlElement(name = "OverAlltmtAmt")
 	public ActiveCurrencyAndAmount getOverAllotmentAmount() {
 		return overAllotmentAmount;
 	}
@@ -2541,6 +2583,7 @@ public class FinancialInstrumentStipulations2 {
 		this.overAllotmentAmount = overAllotmentAmount;
 	}
 
+	@XmlElement(name = "OverAlltmtRate")
 	public PercentageRate getOverAllotmentRate() {
 		return overAllotmentRate;
 	}
@@ -2549,6 +2592,7 @@ public class FinancialInstrumentStipulations2 {
 		this.overAllotmentRate = overAllotmentRate;
 	}
 
+	@XmlElement(name = "PricRg")
 	public AmountOrPercentageRange getPriceRange() {
 		return priceRange;
 	}
@@ -2557,6 +2601,7 @@ public class FinancialInstrumentStipulations2 {
 		this.priceRange = priceRange;
 	}
 
+	@XmlElement(name = "CllblInd")
 	public YesNoIndicator getCallableIndicator() {
 		return callableIndicator;
 	}
@@ -2565,6 +2610,7 @@ public class FinancialInstrumentStipulations2 {
 		this.callableIndicator = callableIndicator;
 	}
 
+	@XmlElement(name = "ConvtblInd")
 	public YesNoIndicator getConvertibleIndicator() {
 		return convertibleIndicator;
 	}
@@ -2573,6 +2619,7 @@ public class FinancialInstrumentStipulations2 {
 		this.convertibleIndicator = convertibleIndicator;
 	}
 
+	@XmlElement(name = "PutblInd")
 	public YesNoIndicator getPutableIndicator() {
 		return putableIndicator;
 	}
@@ -2581,6 +2628,7 @@ public class FinancialInstrumentStipulations2 {
 		this.putableIndicator = putableIndicator;
 	}
 
+	@XmlElement(name = "PreFnddInd")
 	public YesNoIndicator getPreFundedIndicator() {
 		return preFundedIndicator;
 	}
@@ -2589,6 +2637,7 @@ public class FinancialInstrumentStipulations2 {
 		this.preFundedIndicator = preFundedIndicator;
 	}
 
+	@XmlElement(name = "EscrwdInd")
 	public YesNoIndicator getEscrowedIndicator() {
 		return escrowedIndicator;
 	}
@@ -2597,6 +2646,7 @@ public class FinancialInstrumentStipulations2 {
 		this.escrowedIndicator = escrowedIndicator;
 	}
 
+	@XmlElement(name = "PerptlInd")
 	public YesNoIndicator getPerpetualIndicator() {
 		return perpetualIndicator;
 	}

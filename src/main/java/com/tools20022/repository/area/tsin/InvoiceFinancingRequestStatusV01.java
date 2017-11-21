@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.FinancingInformationAndStatus1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.OriginalRequestInformation1;
 import com.tools20022.repository.msgset.InvoiceFinancingRequestISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -67,9 +69,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsin.002.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
@@ -102,6 +101,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsin.002.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -113,6 +115,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvoiceFinancingRequestStatusV01", propOrder = {"statusIdentification", "originalRequestInformationAndStatus", "financingInformationAndStatus"})
 public class InvoiceFinancingRequestStatusV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -153,6 +157,14 @@ public class InvoiceFinancingRequestStatusV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceFinancingRequestStatusV01.class.getMethod("getStatusIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OriginalRequestInformation1 originalRequestInformationAndStatus;
 	/**
@@ -192,6 +204,14 @@ public class InvoiceFinancingRequestStatusV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> OriginalRequestInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceFinancingRequestStatusV01.class.getMethod("getOriginalRequestInformationAndStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected FinancingInformationAndStatus1 financingInformationAndStatus;
 	/**
@@ -228,6 +248,14 @@ public class InvoiceFinancingRequestStatusV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> FinancingInformationAndStatus1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceFinancingRequestStatusV01.class.getMethod("getFinancingInformationAndStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -240,8 +268,8 @@ public class InvoiceFinancingRequestStatusV01 {
 				rootElement = "Document";
 				xmlTag = "InvcFincgReqSts";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceFinancingRequestStatusV01.mmStatusIdentification, InvoiceFinancingRequestStatusV01.mmOriginalRequestInformationAndStatus,
-						InvoiceFinancingRequestStatusV01.mmFinancingInformationAndStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.mmStatusIdentification,
+						com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.mmOriginalRequestInformationAndStatus, com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.mmFinancingInformationAndStatus);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsin";
@@ -251,10 +279,16 @@ public class InvoiceFinancingRequestStatusV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvoiceFinancingRequestStatusV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsId", required = true)
 	public MessageIdentification1 getStatusIdentification() {
 		return statusIdentification;
 	}
@@ -263,6 +297,7 @@ public class InvoiceFinancingRequestStatusV01 {
 		this.statusIdentification = statusIdentification;
 	}
 
+	@XmlElement(name = "OrgnlReqInfAndSts", required = true)
 	public OriginalRequestInformation1 getOriginalRequestInformationAndStatus() {
 		return originalRequestInformationAndStatus;
 	}
@@ -271,11 +306,18 @@ public class InvoiceFinancingRequestStatusV01 {
 		this.originalRequestInformationAndStatus = originalRequestInformationAndStatus;
 	}
 
+	@XmlElement(name = "FincgInfAndSts")
 	public FinancingInformationAndStatus1 getFinancingInformationAndStatus() {
 		return financingInformationAndStatus;
 	}
 
 	public void setFinancingInformationAndStatus(FinancingInformationAndStatus1 financingInformationAndStatus) {
 		this.financingInformationAndStatus = financingInformationAndStatus;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.002.01.01")
+	static public class Document {
+		@XmlElement(name = "InvcFincgReqSts", required = true)
+		public InvoiceFinancingRequestStatusV01 messageBody;
 	}
 }

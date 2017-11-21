@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Physical and logical characteristics of a POI component (Point of
@@ -79,6 +83,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PointOfInteractionComponentCharacteristics1", propOrder = {"memory", "communication", "securityAccessModules", "subscriberIdentityModules", "keyCheckValue"})
 public class PointOfInteractionComponentCharacteristics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -352,6 +358,7 @@ public class PointOfInteractionComponentCharacteristics1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Mmry")
 	public List<MemoryCharacteristics1> getMemory() {
 		return memory;
 	}
@@ -360,6 +367,7 @@ public class PointOfInteractionComponentCharacteristics1 {
 		this.memory = memory;
 	}
 
+	@XmlElement(name = "Com")
 	public List<CommunicationCharacteristics1> getCommunication() {
 		return communication;
 	}
@@ -368,6 +376,7 @@ public class PointOfInteractionComponentCharacteristics1 {
 		this.communication = communication;
 	}
 
+	@XmlElement(name = "SctyAccsMdls")
 	public Number getSecurityAccessModules() {
 		return securityAccessModules;
 	}
@@ -376,6 +385,7 @@ public class PointOfInteractionComponentCharacteristics1 {
 		this.securityAccessModules = securityAccessModules;
 	}
 
+	@XmlElement(name = "SbcbrIdntyMdls")
 	public Number getSubscriberIdentityModules() {
 		return subscriberIdentityModules;
 	}
@@ -384,6 +394,7 @@ public class PointOfInteractionComponentCharacteristics1 {
 		this.subscriberIdentityModules = subscriberIdentityModules;
 	}
 
+	@XmlElement(name = "KeyChckVal")
 	public Max35Binary getKeyCheckValue() {
 		return keyCheckValue;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.msg.AmountPrice3;
 import com.tools20022.repository.msg.PercentagePrice1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a percentage price or an amount price or index points.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PriceFormat6Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceFormat51Choice", propOrder = {"percentagePrice", "amountPrice", "indexPoints"})
 public class PriceFormat51Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -253,6 +259,7 @@ public class PriceFormat51Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PctgPric", required = true)
 	public PercentagePrice1 getPercentagePrice() {
 		return percentagePrice;
 	}
@@ -261,6 +268,7 @@ public class PriceFormat51Choice {
 		this.percentagePrice = percentagePrice;
 	}
 
+	@XmlElement(name = "AmtPric", required = true)
 	public AmountPrice3 getAmountPrice() {
 		return amountPrice;
 	}
@@ -269,6 +277,7 @@ public class PriceFormat51Choice {
 		this.amountPrice = amountPrice;
 	}
 
+	@XmlElement(name = "IndxPts", required = true)
 	public DecimalNumber getIndexPoints() {
 		return indexPoints;
 	}

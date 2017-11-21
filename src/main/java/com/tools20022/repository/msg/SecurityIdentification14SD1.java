@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extension to identify a security by proprietary or domestic identification
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityIdentification14SD1", propOrder = {"placeAndName", "abbreviatedLocalLanguageSecurityName"})
 public class SecurityIdentification14SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class SecurityIdentification14SD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm")
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -184,6 +191,7 @@ public class SecurityIdentification14SD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "AbbrvtdLclLangSctyNm", required = true)
 	public Max240Text getAbbreviatedLocalLanguageSecurityName() {
 		return abbreviatedLocalLanguageSecurityName;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CashClearingSystemMember;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of identifiers for a clearing system member, as assigned by the
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClearingSystemMemberIdentification3Choice", propOrder = {"identification", "proprietary"})
 public class ClearingSystemMemberIdentification3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -186,6 +192,7 @@ public class ClearingSystemMemberIdentification3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public ExternalClearingSystemMemberCode getIdentification() {
 		return identification;
 	}
@@ -194,6 +201,7 @@ public class ClearingSystemMemberIdentification3Choice {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public Max35Text getProprietary() {
 		return proprietary;
 	}

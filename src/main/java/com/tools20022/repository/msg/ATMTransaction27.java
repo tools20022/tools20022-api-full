@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transaction for which the exception is sent.
@@ -73,6 +77,8 @@ import java.util.List;
  * {@linkplain com.tools20022.repository.msg.ATMTransaction25 ATMTransaction25}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransaction27", propOrder = {"transactionIdentification", "reconciliationIdentification", "exception", "exceptionDetail", "electronicPurseBalance"})
 public class ATMTransaction27 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -309,6 +315,7 @@ public class ATMTransaction27 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId")
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -317,6 +324,7 @@ public class ATMTransaction27 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "RcncltnId")
 	public Max35Text getReconciliationIdentification() {
 		return reconciliationIdentification;
 	}
@@ -325,6 +333,7 @@ public class ATMTransaction27 {
 		this.reconciliationIdentification = reconciliationIdentification;
 	}
 
+	@XmlElement(name = "Xcptn", required = true)
 	public List<FailureReason8Code> getException() {
 		return exception;
 	}
@@ -333,6 +342,7 @@ public class ATMTransaction27 {
 		this.exception = exception;
 	}
 
+	@XmlElement(name = "XcptnDtl")
 	public List<Max70Text> getExceptionDetail() {
 		return exceptionDetail;
 	}
@@ -341,6 +351,7 @@ public class ATMTransaction27 {
 		this.exceptionDetail = exceptionDetail;
 	}
 
+	@XmlElement(name = "ElctrncPrsBal")
 	public CurrencyAndAmount getElectronicPurseBalance() {
 		return electronicPurseBalance;
 	}

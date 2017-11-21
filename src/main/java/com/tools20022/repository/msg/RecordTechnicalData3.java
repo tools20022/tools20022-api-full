@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instrument specific technical data to support identification.
@@ -78,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * RecordTechnicalData2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RecordTechnicalData3", propOrder = {"inconsistencyIndicator", "lastUpdate", "submissionDateTime", "relevantCompetentAuthority", "publicationPeriod", "neverPublished"})
 public class RecordTechnicalData3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -355,6 +361,7 @@ public class RecordTechnicalData3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IncnsstncyInd")
 	public TrueFalseIndicator getInconsistencyIndicator() {
 		return inconsistencyIndicator;
 	}
@@ -363,6 +370,7 @@ public class RecordTechnicalData3 {
 		this.inconsistencyIndicator = inconsistencyIndicator;
 	}
 
+	@XmlElement(name = "LastUpd")
 	public ISODateTime getLastUpdate() {
 		return lastUpdate;
 	}
@@ -371,6 +379,7 @@ public class RecordTechnicalData3 {
 		this.lastUpdate = lastUpdate;
 	}
 
+	@XmlElement(name = "SubmissnDtTm")
 	public ISODateTime getSubmissionDateTime() {
 		return submissionDateTime;
 	}
@@ -379,6 +388,7 @@ public class RecordTechnicalData3 {
 		this.submissionDateTime = submissionDateTime;
 	}
 
+	@XmlElement(name = "RlvntCmptntAuthrty")
 	public CountryCode getRelevantCompetentAuthority() {
 		return relevantCompetentAuthority;
 	}
@@ -387,6 +397,7 @@ public class RecordTechnicalData3 {
 		this.relevantCompetentAuthority = relevantCompetentAuthority;
 	}
 
+	@XmlElement(name = "PblctnPrd")
 	public Period4Choice getPublicationPeriod() {
 		return publicationPeriod;
 	}
@@ -395,6 +406,7 @@ public class RecordTechnicalData3 {
 		this.publicationPeriod = publicationPeriod;
 	}
 
+	@XmlElement(name = "NvrPblshd")
 	public TrueFalseIndicator getNeverPublished() {
 		return neverPublished;
 	}

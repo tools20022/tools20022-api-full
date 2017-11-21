@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.DatePeriodDetails;
 import com.tools20022.repository.msg.DateTimePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a date or a date and time format for a period.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DateOrDateTimePeriodChoice", propOrder = {"date", "dateTime"})
 public class DateOrDateTimePeriodChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -169,6 +175,7 @@ public class DateOrDateTimePeriodChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public DatePeriodDetails getDate() {
 		return date;
 	}
@@ -177,6 +184,7 @@ public class DateOrDateTimePeriodChoice {
 		this.date = date;
 	}
 
+	@XmlElement(name = "DtTm", required = true)
 	public DateTimePeriodDetails getDateTime() {
 		return dateTime;
 	}

@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.BusinessLetter1;
 import com.tools20022.repository.msg.EncapsulatedBusinessMessage1;
 import com.tools20022.repository.msg.FinancingAgreementList1;
 import com.tools20022.repository.msgset.FactoringServicesISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The message PartyRegistrationAndGuaranteeRequest is sent by a factoring
@@ -51,9 +53,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsin.009.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
@@ -95,6 +94,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsin.009.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -106,6 +108,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyRegistrationAndGuaranteeRequestV01", propOrder = {"header", "agreementList", "agreementCount", "itemCount", "controlSum", "attachedMessage"})
 public class PartyRegistrationAndGuaranteeRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -145,6 +149,14 @@ public class PartyRegistrationAndGuaranteeRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> BusinessLetter1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PartyRegistrationAndGuaranteeRequestV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<FinancingAgreementList1> agreementList;
 	/**
@@ -178,6 +190,14 @@ public class PartyRegistrationAndGuaranteeRequestV01 {
 			definition = "List of agreements.";
 			minOccurs = 1;
 			complexType_lazy = () -> FinancingAgreementList1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PartyRegistrationAndGuaranteeRequestV01.class.getMethod("getAgreementList", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max15NumericText agreementCount;
@@ -214,6 +234,14 @@ public class PartyRegistrationAndGuaranteeRequestV01 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PartyRegistrationAndGuaranteeRequestV01.class.getMethod("getAgreementCount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max15NumericText itemCount;
 	/**
@@ -248,6 +276,14 @@ public class PartyRegistrationAndGuaranteeRequestV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PartyRegistrationAndGuaranteeRequestV01.class.getMethod("getItemCount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DecimalNumber controlSum;
@@ -287,6 +323,14 @@ public class PartyRegistrationAndGuaranteeRequestV01 {
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PartyRegistrationAndGuaranteeRequestV01.class.getMethod("getControlSum", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<EncapsulatedBusinessMessage1> attachedMessage;
 	/**
@@ -321,6 +365,14 @@ public class PartyRegistrationAndGuaranteeRequestV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PartyRegistrationAndGuaranteeRequestV01.class.getMethod("getAttachedMessage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -333,8 +385,10 @@ public class PartyRegistrationAndGuaranteeRequestV01 {
 				rootElement = "Document";
 				xmlTag = "PtyRegnAndGrntReq";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PartyRegistrationAndGuaranteeRequestV01.mmHeader, PartyRegistrationAndGuaranteeRequestV01.mmAgreementList, PartyRegistrationAndGuaranteeRequestV01.mmAgreementCount,
-						PartyRegistrationAndGuaranteeRequestV01.mmItemCount, PartyRegistrationAndGuaranteeRequestV01.mmControlSum, PartyRegistrationAndGuaranteeRequestV01.mmAttachedMessage);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01.mmHeader,
+						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01.mmAgreementList, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01.mmAgreementCount,
+						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01.mmItemCount, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01.mmControlSum,
+						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01.mmAttachedMessage);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsin";
@@ -344,10 +398,16 @@ public class PartyRegistrationAndGuaranteeRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PartyRegistrationAndGuaranteeRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public BusinessLetter1 getHeader() {
 		return header;
 	}
@@ -356,6 +416,7 @@ public class PartyRegistrationAndGuaranteeRequestV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "AgrmtList", required = true)
 	public List<FinancingAgreementList1> getAgreementList() {
 		return agreementList;
 	}
@@ -364,6 +425,7 @@ public class PartyRegistrationAndGuaranteeRequestV01 {
 		this.agreementList = agreementList;
 	}
 
+	@XmlElement(name = "AgrmtCnt")
 	public Max15NumericText getAgreementCount() {
 		return agreementCount;
 	}
@@ -372,6 +434,7 @@ public class PartyRegistrationAndGuaranteeRequestV01 {
 		this.agreementCount = agreementCount;
 	}
 
+	@XmlElement(name = "ItmCnt")
 	public Max15NumericText getItemCount() {
 		return itemCount;
 	}
@@ -380,6 +443,7 @@ public class PartyRegistrationAndGuaranteeRequestV01 {
 		this.itemCount = itemCount;
 	}
 
+	@XmlElement(name = "CtrlSum")
 	public DecimalNumber getControlSum() {
 		return controlSum;
 	}
@@ -388,11 +452,18 @@ public class PartyRegistrationAndGuaranteeRequestV01 {
 		this.controlSum = controlSum;
 	}
 
+	@XmlElement(name = "AttchdMsg")
 	public List<EncapsulatedBusinessMessage1> getAttachedMessage() {
 		return attachedMessage;
 	}
 
 	public void setAttachedMessage(List<EncapsulatedBusinessMessage1> attachedMessage) {
 		this.attachedMessage = attachedMessage;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.009.01.01")
+	static public class Document {
+		@XmlElement(name = "PtyRegnAndGrntReq", required = true)
+		public PartyRegistrationAndGuaranteeRequestV01 messageBody;
 	}
 }

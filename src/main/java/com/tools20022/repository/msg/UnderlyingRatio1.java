@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Related financial instrument into which the security can be converted.
@@ -66,6 +70,8 @@ import java.util.List;
  * "Related financial instrument into which the security can be converted."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnderlyingRatio1", propOrder = {"underlyingQuantityDenominator", "underlyingQuantityNumerator", "relatedFinancialInstrumentIdentification"})
 public class UnderlyingRatio1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class UnderlyingRatio1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UndrlygQtyDnmtr", required = true)
 	public FinancialInstrumentQuantity1Choice getUnderlyingQuantityDenominator() {
 		return underlyingQuantityDenominator;
 	}
@@ -236,6 +243,7 @@ public class UnderlyingRatio1 {
 		this.underlyingQuantityDenominator = underlyingQuantityDenominator;
 	}
 
+	@XmlElement(name = "UndrlygQtyNmrtr", required = true)
 	public FinancialInstrumentQuantity1Choice getUnderlyingQuantityNumerator() {
 		return underlyingQuantityNumerator;
 	}
@@ -244,6 +252,7 @@ public class UnderlyingRatio1 {
 		this.underlyingQuantityNumerator = underlyingQuantityNumerator;
 	}
 
+	@XmlElement(name = "RltdFinInstrmId")
 	public List<SecurityIdentification14> getRelatedFinancialInstrumentIdentification() {
 		return relatedFinancialInstrumentIdentification;
 	}

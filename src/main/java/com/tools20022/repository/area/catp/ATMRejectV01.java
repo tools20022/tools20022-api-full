@@ -25,17 +25,16 @@ import com.tools20022.repository.area.ATMCardTransactionLatestVersion;
 import com.tools20022.repository.msg.ATMReject1;
 import com.tools20022.repository.msg.Header22;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The ATMReject message is sent by any entity to reject a received message.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catp.005.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
@@ -63,6 +62,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catp.005.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -80,6 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMRejectV01", propOrder = {"header", "ATMReject"})
 public class ATMRejectV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -119,6 +123,14 @@ public class ATMRejectV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header22.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMRejectV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ATMReject1 aTMReject;
 	/**
@@ -156,6 +168,14 @@ public class ATMRejectV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> ATMReject1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMRejectV01.class.getMethod("getATMReject", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -169,7 +189,7 @@ public class ATMRejectV01 {
 				rootElement = "Document";
 				xmlTag = "ATMRjct";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ATMRejectV01.mmHeader, ATMRejectV01.mmATMReject);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMRejectV01.mmHeader, com.tools20022.repository.area.catp.ATMRejectV01.mmATMReject);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catp";
@@ -179,10 +199,16 @@ public class ATMRejectV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ATMRejectV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header22 getHeader() {
 		return header;
 	}
@@ -191,11 +217,18 @@ public class ATMRejectV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "ATMRjct", required = true)
 	public ATMReject1 getATMReject() {
 		return aTMReject;
 	}
 
 	public void setATMReject(ATMReject1 aTMReject) {
 		this.aTMReject = aTMReject;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catp.005.01.01")
+	static public class Document {
+		@XmlElement(name = "ATMRjct", required = true)
+		public ATMRejectV01 messageBody;
 	}
 }

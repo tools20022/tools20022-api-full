@@ -37,6 +37,18 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardholderRole#mmAuthentication
+ * CardholderRole.mmAuthentication}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole
+ * CardPaymentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -143,18 +155,6 @@ import java.util.List;
  * CardPaymentEnvironment57.mmCardholder}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole
- * CardPaymentPartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardholderRole#mmAuthentication
- * CardholderRole.mmAuthentication}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -191,11 +191,6 @@ public class CardholderRole extends CardPaymentPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Authentication
 	 * Authentication}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardholderRole
-	 * CardholderRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -241,6 +236,11 @@ public class CardholderRole extends CardPaymentPartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardholderRole
+	 * CardholderRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -255,7 +255,7 @@ public class CardholderRole extends CardPaymentPartyRole {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmAuthenticationMethod, Cardholder2.mmAuthentication, Cardholder4.mmAuthentication, Cardholder1.mmAuthentication, Cardholder3.mmAuthentication, Cardholder5.mmAuthentication,
 					Cardholder6.mmAuthentication, Cardholder7.mmAuthentication, ATMCustomer1.mmAuthentication, Cardholder9.mmAuthentication, Cardholder10.mmAuthentication, ATMCustomer4.mmAuthentication, Cardholder12.mmAuthentication);
-			elementContext_lazy = () -> CardholderRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardholderRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Authentication";
@@ -281,10 +281,15 @@ public class CardholderRole extends CardPaymentPartyRole {
 						CardPaymentEnvironment52.mmCardholder, CardPaymentEnvironment45.mmCardholder, CardPaymentEnvironment53.mmCardholder, CardPaymentEnvironment47.mmCardholder, PaymentCard25.mmHolderName,
 						CardPaymentEnvironment61.mmCardholder, CardPaymentEnvironment60.mmCardholder, CardPaymentEnvironment62.mmCardholder, CardPaymentEnvironment57.mmCardholder);
 				superType_lazy = () -> CardPaymentPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(CardholderRole.mmAuthentication);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardholderRole.mmAuthentication);
 				derivationComponent_lazy = () -> Arrays.asList(Cardholder2.mmObject(), Cardholder4.mmObject(), Cardholder1.mmObject(), Cardholder3.mmObject(), Cardholder5.mmObject(), Cardholder6.mmObject(), Cardholder8.mmObject(),
 						Cardholder7.mmObject(), ATMCustomer1.mmObject(), ATMCustomer2.mmObject(), ATMCustomer3.mmObject(), Cardholder9.mmObject(), AntiMoneyLaundering1.mmObject(), Cardholder11.mmObject(), Cardholder10.mmObject(),
 						ATMCustomer5.mmObject(), ATMCustomer6.mmObject(), ATMCustomer4.mmObject(), Cardholder12.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CardholderRole.class;
 			}
 		});
 		return mmObject_lazy.get();

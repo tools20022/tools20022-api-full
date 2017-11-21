@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.ResolutionStatusCode;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,6 +39,26 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmMeetingResolutionStatus
+ * MeetingStatus.mmMeetingResolutionStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmInstructionCancellationStatus
+ * MeetingStatus.mmInstructionCancellationStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MeetingStatus#mmReason
+ * MeetingStatus.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmNotificationStatus
+ * MeetingStatus.mmNotificationStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MeetingStatus#mmMeeting
+ * MeetingStatus.mmMeeting}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -146,26 +167,6 @@ import java.util.List;
  * MeetingInstructionDetailedStatus.mmSecuritiesRegistrationConfirmation}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmMeetingResolutionStatus
- * MeetingStatus.mmMeetingResolutionStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmInstructionCancellationStatus
- * MeetingStatus.mmInstructionCancellationStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MeetingStatus#mmReason
- * MeetingStatus.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmNotificationStatus
- * MeetingStatus.mmNotificationStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MeetingStatus#mmMeeting
- * MeetingStatus.mmMeeting}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -195,11 +196,6 @@ public class MeetingStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ResolutionStatusCode
 	 * ResolutionStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingStatus MeetingStatus}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -212,6 +208,11 @@ public class MeetingStatus extends Status {
 	 * <li>{@linkplain com.tools20022.repository.msg.Resolution3#mmStatus
 	 * Resolution3.mmStatus}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.MeetingStatus MeetingStatus}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -227,7 +228,7 @@ public class MeetingStatus extends Status {
 	public static final MMBusinessAttribute mmMeetingResolutionStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmStatus, Resolution2.mmStatus, Vote7.mmResolutionStatus, Resolution3.mmStatus);
-			elementContext_lazy = () -> MeetingStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MeetingResolutionStatus";
@@ -235,6 +236,14 @@ public class MeetingStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ResolutionStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingStatus.class.getMethod("getMeetingResolutionStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CancellationStatusCode instructionCancellationStatus;
@@ -248,11 +257,6 @@ public class MeetingStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CancellationStatusCode
 	 * CancellationStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingStatus MeetingStatus}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -274,6 +278,11 @@ public class MeetingStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.MeetingStatus MeetingStatus}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -289,7 +298,7 @@ public class MeetingStatus extends Status {
 		{
 			derivation_lazy = () -> Arrays.asList(CancellationProcessingStatus1.mmStatus, CancellationStatus1Choice.mmProcessingStatus, CancellationStatus2Choice.mmProcessingStatus, InstructionTypeStatus1Choice.mmCancellationStatus,
 					InstructionTypeStatus2Choice.mmCancellationStatus);
-			elementContext_lazy = () -> MeetingStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstructionCancellationStatus";
@@ -297,6 +306,14 @@ public class MeetingStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancellationStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingStatus.class.getMethod("getInstructionCancellationStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.MeetingStatusReason> reason;
@@ -318,11 +335,6 @@ public class MeetingStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.MeetingStatusReason
 	 * MeetingStatusReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingStatus MeetingStatus}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -333,6 +345,11 @@ public class MeetingStatus extends Status {
 	 * {@linkplain com.tools20022.repository.choice.CancellationStatus2Choice#mmRejectionStatus
 	 * CancellationStatus2Choice.mmRejectionStatus}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.MeetingStatus MeetingStatus}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -350,7 +367,7 @@ public class MeetingStatus extends Status {
 	public static final MMBusinessAssociationEnd mmReason = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CancellationStatus1Choice.mmRejectionStatus, CancellationStatus2Choice.mmRejectionStatus);
-			elementContext_lazy = () -> MeetingStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reason";
@@ -372,11 +389,6 @@ public class MeetingStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.NotificationStatusCode
 	 * NotificationStatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingStatus MeetingStatus}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -392,6 +404,11 @@ public class MeetingStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.MeetingStatus MeetingStatus}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -405,7 +422,7 @@ public class MeetingStatus extends Status {
 	public static final MMBusinessAttribute mmNotificationStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationStatus.mmStatus, NotificationStatus1.mmStatus, NotificationStatus2.mmStatus);
-			elementContext_lazy = () -> MeetingStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotificationStatus";
@@ -413,6 +430,14 @@ public class MeetingStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NotificationStatusCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingStatus.class.getMethod("getNotificationStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Meeting meeting;
@@ -450,7 +475,7 @@ public class MeetingStatus extends Status {
 	 */
 	public static final MMBusinessAssociationEnd mmMeeting = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> MeetingStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Meeting";
@@ -475,13 +500,19 @@ public class MeetingStatus extends Status {
 						MeetingInstructionDetailedStatus.mmParticipationRegistrationConfirmation, MeetingInstructionDetailedStatus.mmVotingInstructionConfirmation, MeetingInstructionDetailedStatus.mmProxyAssignmentConfirmation,
 						MeetingInstructionDetailedStatus.mmMeetingAttendanceConfirmation, MeetingInstructionDetailedStatus.mmSecuritiesRegistrationConfirmation);
 				superType_lazy = () -> Status.mmObject();
-				element_lazy = () -> Arrays.asList(MeetingStatus.mmMeetingResolutionStatus, MeetingStatus.mmInstructionCancellationStatus, MeetingStatus.mmReason, MeetingStatus.mmNotificationStatus, MeetingStatus.mmMeeting);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingStatus.mmMeetingResolutionStatus, com.tools20022.repository.entity.MeetingStatus.mmInstructionCancellationStatus,
+						com.tools20022.repository.entity.MeetingStatus.mmReason, com.tools20022.repository.entity.MeetingStatus.mmNotificationStatus, com.tools20022.repository.entity.MeetingStatus.mmMeeting);
 				derivationComponent_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationStatus.mmObject(), NotificationStatus1.mmObject(), MeetingInstructionGlobalStatus.mmObject(),
 						MeetingInstructionStatusDetails.mmObject(), DetailedInstructionConfirmation.mmObject(), MeetingInstructionDetailedStatus.mmObject(), InstructionProcessingStatus1.mmObject(), InstructionStatus2Choice.mmObject(),
 						DetailedInstructionStatus1.mmObject(), InstructionStatus1Choice.mmObject(), CancellationProcessingStatus1.mmObject(), CancellationStatus1Choice.mmObject(), AdditionalStatus1.mmObject(),
 						InstructionStatus4Choice.mmObject(), DetailedInstructionStatus8.mmObject(), InstructionStatus3Choice.mmObject(), AdditionalStatus2.mmObject(), CancellationStatus2Choice.mmObject(),
 						InstructionTypeStatus1Choice.mmObject(), DetailedInstructionStatus2.mmObject(), DetailedInstructionStatus9.mmObject(), DetailedInstructionStatus10.mmObject(), InstructionTypeStatus2Choice.mmObject(),
 						InstructionStatus5Choice.mmObject(), InstructionStatus6Choice.mmObject(), DetailedInstructionStatus11.mmObject(), InstructionProcessingStatus3.mmObject(), NotificationStatus2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingStatus.class;
 			}
 		});
 		return mmObject_lazy.get();

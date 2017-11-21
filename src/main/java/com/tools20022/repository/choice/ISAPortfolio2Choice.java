@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.ISAYearsOfIssue5;
 import com.tools20022.repository.msg.Portfolio1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice to provide additional portfolio information or individual savings
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ISAPortfolio2Choice", propOrder = {"ISA", "portfolio"})
 public class ISAPortfolio2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -187,6 +193,7 @@ public class ISAPortfolio2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ISA", required = true)
 	public ISAYearsOfIssue5 getISA() {
 		return iSA;
 	}
@@ -195,6 +202,7 @@ public class ISAPortfolio2Choice {
 		this.iSA = iSA;
 	}
 
+	@XmlElement(name = "Prtfl", required = true)
 	public Portfolio1 getPortfolio() {
 		return portfolio;
 	}

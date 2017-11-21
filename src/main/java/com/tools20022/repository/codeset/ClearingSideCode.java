@@ -29,13 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ClearingSide1Code
- * ClearingSide1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.ClearingSideCode#mmBuy
@@ -46,6 +39,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * ClearingSideCode.mmLend}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ClearingSideCode#mmBorrow
  * ClearingSideCode.mmBorrow}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ClearingSide1Code
+ * ClearingSide1Code}</li>
  * </ul>
  * </li>
  * <li>

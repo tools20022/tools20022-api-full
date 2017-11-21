@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a percentage price or an amount price or an unspecified price.
@@ -83,6 +87,8 @@ import java.util.function.Supplier;
  * PriceFormat19Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceFormat29Choice", propOrder = {"amountPrice", "notSpecifiedPrice"})
 public class PriceFormat29Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -217,6 +223,7 @@ public class PriceFormat29Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AmtPric", required = true)
 	public AmountPrice2 getAmountPrice() {
 		return amountPrice;
 	}
@@ -225,6 +232,7 @@ public class PriceFormat29Choice {
 		this.amountPrice = amountPrice;
 	}
 
+	@XmlElement(name = "NotSpcfdPric", required = true)
 	public PriceValueType10Code getNotSpecifiedPrice() {
 		return notSpecifiedPrice;
 	}

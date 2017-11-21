@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transport key or key encryption key (KEK) identification for the recipient.
@@ -55,6 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CertificateIdentifier1", propOrder = "issuerAndSerialNumber")
 public class CertificateIdentifier1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -113,6 +119,7 @@ public class CertificateIdentifier1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IssrAndSrlNb", required = true)
 	public IssuerAndSerialNumber1 getIssuerAndSerialNumber() {
 		return issuerAndSerialNumber;
 	}

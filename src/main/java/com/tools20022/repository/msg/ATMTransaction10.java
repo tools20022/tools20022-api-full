@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Response to the PIN management transaction. request.
@@ -84,6 +88,8 @@ import java.util.List;
  * ATMTransaction2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransaction10", propOrder = {"transactionIdentification", "reconciliationIdentification", "completionRequired", "transactionResponse", "action", "ICCRelatedData", "command"})
 public class ATMTransaction10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -457,6 +463,7 @@ public class ATMTransaction10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -465,6 +472,7 @@ public class ATMTransaction10 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "RcncltnId")
 	public Max35Text getReconciliationIdentification() {
 		return reconciliationIdentification;
 	}
@@ -473,6 +481,7 @@ public class ATMTransaction10 {
 		this.reconciliationIdentification = reconciliationIdentification;
 	}
 
+	@XmlElement(name = "CmpltnReqrd")
 	public TrueFalseIndicator getCompletionRequired() {
 		return completionRequired;
 	}
@@ -481,6 +490,7 @@ public class ATMTransaction10 {
 		this.completionRequired = completionRequired;
 	}
 
+	@XmlElement(name = "TxRspn", required = true)
 	public ResponseType3 getTransactionResponse() {
 		return transactionResponse;
 	}
@@ -489,6 +499,7 @@ public class ATMTransaction10 {
 		this.transactionResponse = transactionResponse;
 	}
 
+	@XmlElement(name = "Actn")
 	public List<Action5> getAction() {
 		return action;
 	}
@@ -497,6 +508,7 @@ public class ATMTransaction10 {
 		this.action = action;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}
@@ -505,6 +517,7 @@ public class ATMTransaction10 {
 		this.iCCRelatedData = iCCRelatedData;
 	}
 
+	@XmlElement(name = "Cmd")
 	public List<ATMCommand1> getCommand() {
 		return command;
 	}

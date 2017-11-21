@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Chain of parties involved in the settlement of a transaction, including
@@ -111,6 +115,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementParties14", propOrder = {"depository", "party1", "party2", "party3", "party4", "party5"})
 public class SettlementParties14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -437,6 +443,7 @@ public class SettlementParties14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dpstry")
 	public PartyIdentification48 getDepository() {
 		return depository;
 	}
@@ -445,6 +452,7 @@ public class SettlementParties14 {
 		this.depository = depository;
 	}
 
+	@XmlElement(name = "Pty1")
 	public PartyIdentificationAndAccount45 getParty1() {
 		return party1;
 	}
@@ -453,6 +461,7 @@ public class SettlementParties14 {
 		this.party1 = party1;
 	}
 
+	@XmlElement(name = "Pty2")
 	public PartyIdentificationAndAccount45 getParty2() {
 		return party2;
 	}
@@ -461,6 +470,7 @@ public class SettlementParties14 {
 		this.party2 = party2;
 	}
 
+	@XmlElement(name = "Pty3")
 	public PartyIdentificationAndAccount45 getParty3() {
 		return party3;
 	}
@@ -469,6 +479,7 @@ public class SettlementParties14 {
 		this.party3 = party3;
 	}
 
+	@XmlElement(name = "Pty4")
 	public PartyIdentificationAndAccount45 getParty4() {
 		return party4;
 	}
@@ -477,6 +488,7 @@ public class SettlementParties14 {
 		this.party4 = party4;
 	}
 
+	@XmlElement(name = "Pty5")
 	public PartyIdentificationAndAccount45 getParty5() {
 		return party5;
 	}

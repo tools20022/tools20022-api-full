@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between ways to express the quantity of the financial instrument to be
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentQuantity5Choice", propOrder = {"unitsNumber", "percentageOfTotalSubscriptionAmount", "netAmount", "grossAmount", "holdingsRedemptionRate"})
 public class FinancialInstrumentQuantity5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -403,6 +409,7 @@ public class FinancialInstrumentQuantity5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -411,6 +418,7 @@ public class FinancialInstrumentQuantity5Choice {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "PctgOfTtlSbcptAmt", required = true)
 	public PercentageRate getPercentageOfTotalSubscriptionAmount() {
 		return percentageOfTotalSubscriptionAmount;
 	}
@@ -419,6 +427,7 @@ public class FinancialInstrumentQuantity5Choice {
 		this.percentageOfTotalSubscriptionAmount = percentageOfTotalSubscriptionAmount;
 	}
 
+	@XmlElement(name = "NetAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
@@ -427,6 +436,7 @@ public class FinancialInstrumentQuantity5Choice {
 		this.netAmount = netAmount;
 	}
 
+	@XmlElement(name = "GrssAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getGrossAmount() {
 		return grossAmount;
 	}
@@ -435,6 +445,7 @@ public class FinancialInstrumentQuantity5Choice {
 		this.grossAmount = grossAmount;
 	}
 
+	@XmlElement(name = "HldgsRedRate", required = true)
 	public PercentageRate getHoldingsRedemptionRate() {
 		return holdingsRedemptionRate;
 	}

@@ -30,6 +30,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "B2B|CORE"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -58,6 +60,7 @@ public class RestrictedB2BCORECodeText {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RestrictedB2BCORECodeText";
 				definition = "EPC Technical validation subset restricted to B2B or CORE code:\n- CORE: Used to indicate that the SEPA Core Direct Debit Scheme rules apply.\n- B2B: Used to indicate that the SEPA Business-to-Business Direct Debit Scheme rules apply.";
+				pattern = "B2B|CORE";
 			}
 		});
 		return mmObject_lazy.get();

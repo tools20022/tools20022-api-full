@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesTransactionPrice1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice element capturing strike price related descriptive information.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice element capturing strike price related descriptive information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTransactionPrice4Choice", propOrder = {"price", "noPrice"})
 public class SecuritiesTransactionPrice4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class SecuritiesTransactionPrice4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pric", required = true)
 	public SecuritiesTransactionPrice2Choice getPrice() {
 		return price;
 	}
@@ -180,6 +187,7 @@ public class SecuritiesTransactionPrice4Choice {
 		this.price = price;
 	}
 
+	@XmlElement(name = "NoPric", required = true)
 	public SecuritiesTransactionPrice1 getNoPrice() {
 		return noPrice;
 	}

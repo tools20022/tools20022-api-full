@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Context, or geographic environment, in which trading parties may meet in
@@ -75,6 +79,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarketIdentification6", propOrder = {"identification", "type"})
 public class MarketIdentification6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -219,6 +225,7 @@ public class MarketIdentification6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public MarketIdentification1Choice getIdentification() {
 		return identification;
 	}
@@ -227,6 +234,7 @@ public class MarketIdentification6 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public MarketType4Choice getType() {
 		return type;
 	}

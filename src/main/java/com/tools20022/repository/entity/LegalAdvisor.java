@@ -64,6 +64,11 @@ public class LegalAdvisor extends SecuritiesPartyRole {
 				definition = "A party that provides legal advice for a fee.";
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return LegalAdvisor.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

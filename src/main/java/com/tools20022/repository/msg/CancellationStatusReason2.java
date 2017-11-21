@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details on the status of the cancellation request.
@@ -72,6 +76,8 @@ import java.util.List;
  * "Provides further details on the status of the cancellation request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CancellationStatusReason2", propOrder = {"originator", "reason", "additionalInformation"})
 public class CancellationStatusReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -231,6 +237,7 @@ public class CancellationStatusReason2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Orgtr")
 	public PartyIdentification43 getOriginator() {
 		return originator;
 	}
@@ -239,6 +246,7 @@ public class CancellationStatusReason2 {
 		this.originator = originator;
 	}
 
+	@XmlElement(name = "Rsn")
 	public CancellationStatusReason2Choice getReason() {
 		return reason;
 	}
@@ -247,6 +255,7 @@ public class CancellationStatusReason2 {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max105Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.VariableInterest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of a debt instrument in which the periodic interest
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * FloatingRateNote1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FloatingRateNote2", propOrder = {"referenceRateIndex", "basisPointSpread"})
 public class FloatingRateNote2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -210,6 +216,7 @@ public class FloatingRateNote2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RefRateIndx", required = true)
 	public ISINOct2015Identifier getReferenceRateIndex() {
 		return referenceRateIndex;
 	}
@@ -218,6 +225,7 @@ public class FloatingRateNote2 {
 		this.referenceRateIndex = referenceRateIndex;
 	}
 
+	@XmlElement(name = "BsisPtSprd", required = true)
 	public Number getBasisPointSpread() {
 		return basisPointSpread;
 	}

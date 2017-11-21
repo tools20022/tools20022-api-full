@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.ExposureCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the collateral against variation margin and optionally
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Collateral1", propOrder = {"variationMargin", "segregatedIndependentAmount"})
 public class Collateral1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class Collateral1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "VartnMrgn", required = true)
 	public MarginCollateral1 getVariationMargin() {
 		return variationMargin;
 	}
@@ -187,6 +194,7 @@ public class Collateral1 {
 		this.variationMargin = variationMargin;
 	}
 
+	@XmlElement(name = "SgrtdIndpdntAmt")
 	public MarginCollateral1 getSegregatedIndependentAmount() {
 		return segregatedIndependentAmount;
 	}

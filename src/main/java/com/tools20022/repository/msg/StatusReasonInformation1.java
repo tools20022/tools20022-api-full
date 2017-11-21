@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Further information on the status reason of the transaction.
@@ -69,6 +73,8 @@ import java.util.List;
  * definition} = "Further information on the status reason of the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusReasonInformation1", propOrder = {"statusOriginator", "statusReason", "additionalStatusReasonInformation"})
 public class StatusReasonInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -232,6 +238,7 @@ public class StatusReasonInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsOrgtr")
 	public PartyIdentification8 getStatusOriginator() {
 		return statusOriginator;
 	}
@@ -240,6 +247,7 @@ public class StatusReasonInformation1 {
 		this.statusOriginator = statusOriginator;
 	}
 
+	@XmlElement(name = "StsRsn")
 	public StatusReason1Choice getStatusReason() {
 		return statusReason;
 	}
@@ -248,6 +256,7 @@ public class StatusReasonInformation1 {
 		this.statusReason = statusReason;
 	}
 
+	@XmlElement(name = "AddtlStsRsnInf")
 	public List<Max105Text> getAdditionalStatusReasonInformation() {
 		return additionalStatusReasonInformation;
 	}

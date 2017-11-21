@@ -64,6 +64,11 @@ public class ClaimsAgent extends InsurancePartyRole {
 				definition = "Party where claims under the insurance policy have to be addressed.";
 				superType_lazy = () -> InsurancePartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ClaimsAgent.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

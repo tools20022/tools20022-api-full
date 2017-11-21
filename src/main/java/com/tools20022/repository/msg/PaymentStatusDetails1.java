@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the status of a transfer.
@@ -68,6 +72,8 @@ import java.util.List;
  * definition} = "Information about the status of a transfer.\n"</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentStatusDetails1", propOrder = {"paymentInstructionStatus", "paymentInstructionStatusDateTime", "paymentInstructionStatusReason"})
 public class PaymentStatusDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -227,6 +233,7 @@ public class PaymentStatusDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtInstrSts")
 	public PaymentStatusCode2Choice getPaymentInstructionStatus() {
 		return paymentInstructionStatus;
 	}
@@ -235,6 +242,7 @@ public class PaymentStatusDetails1 {
 		this.paymentInstructionStatus = paymentInstructionStatus;
 	}
 
+	@XmlElement(name = "PmtInstrStsDtTm")
 	public DateAndDateTimeChoice getPaymentInstructionStatusDateTime() {
 		return paymentInstructionStatusDateTime;
 	}
@@ -243,6 +251,7 @@ public class PaymentStatusDetails1 {
 		this.paymentInstructionStatusDateTime = paymentInstructionStatusDateTime;
 	}
 
+	@XmlElement(name = "PmtInstrStsRsn")
 	public List<PaymentStatusReasonCode3Choice> getPaymentInstructionStatusReason() {
 		return paymentInstructionStatusReason;
 	}

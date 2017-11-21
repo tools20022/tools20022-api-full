@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the security option of a corporate event.
@@ -95,6 +99,9 @@ import java.util.function.Supplier;
  * SecuritiesOption15}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesOption23", propOrder = {"maximumExercisableQuantity", "minimumExercisableQuantity", "minimumExercisableMultipleQuantity", "newBoardLotQuantity", "newDenominationQuantity", "frontEndOddLotQuantity",
+		"backEndOddLotQuantity"})
 public class SecuritiesOption23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -541,6 +548,7 @@ public class SecuritiesOption23 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MaxExrcblQty")
 	public FinancialInstrumentQuantity19Choice getMaximumExercisableQuantity() {
 		return maximumExercisableQuantity;
 	}
@@ -549,6 +557,7 @@ public class SecuritiesOption23 {
 		this.maximumExercisableQuantity = maximumExercisableQuantity;
 	}
 
+	@XmlElement(name = "MinExrcblQty")
 	public FinancialInstrumentQuantity19Choice getMinimumExercisableQuantity() {
 		return minimumExercisableQuantity;
 	}
@@ -557,6 +566,7 @@ public class SecuritiesOption23 {
 		this.minimumExercisableQuantity = minimumExercisableQuantity;
 	}
 
+	@XmlElement(name = "MinExrcblMltplQty")
 	public FinancialInstrumentQuantity20Choice getMinimumExercisableMultipleQuantity() {
 		return minimumExercisableMultipleQuantity;
 	}
@@ -565,6 +575,7 @@ public class SecuritiesOption23 {
 		this.minimumExercisableMultipleQuantity = minimumExercisableMultipleQuantity;
 	}
 
+	@XmlElement(name = "NewBrdLotQty")
 	public FinancialInstrumentQuantity20Choice getNewBoardLotQuantity() {
 		return newBoardLotQuantity;
 	}
@@ -573,6 +584,7 @@ public class SecuritiesOption23 {
 		this.newBoardLotQuantity = newBoardLotQuantity;
 	}
 
+	@XmlElement(name = "NewDnmtnQty")
 	public FinancialInstrumentQuantity20Choice getNewDenominationQuantity() {
 		return newDenominationQuantity;
 	}
@@ -581,6 +593,7 @@ public class SecuritiesOption23 {
 		this.newDenominationQuantity = newDenominationQuantity;
 	}
 
+	@XmlElement(name = "FrntEndOddLotQty")
 	public FinancialInstrumentQuantity20Choice getFrontEndOddLotQuantity() {
 		return frontEndOddLotQuantity;
 	}
@@ -589,6 +602,7 @@ public class SecuritiesOption23 {
 		this.frontEndOddLotQuantity = frontEndOddLotQuantity;
 	}
 
+	@XmlElement(name = "BckEndOddLotQty")
 	public FinancialInstrumentQuantity20Choice getBackEndOddLotQuantity() {
 		return backEndOddLotQuantity;
 	}

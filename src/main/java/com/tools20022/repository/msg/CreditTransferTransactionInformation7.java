@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements providing information specific to the individual
@@ -179,6 +183,12 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CreditTransferTransactionInformation7", propOrder = {"paymentIdentification", "paymentTypeInformation", "interbankSettlementAmount", "interbankSettlementDate", "settlementTimeIndication", "settlementTimeRequest",
+		"acceptanceDateTime", "poolingAdjustmentDate", "instructedAmount", "exchangeRate", "chargeBearer", "chargesInformation", "previousInstructingAgent", "previousInstructingAgentAccount", "instructingAgent", "instructedAgent",
+		"intermediaryAgent1", "intermediaryAgent1Account", "intermediaryAgent2", "intermediaryAgent2Account", "intermediaryAgent3", "intermediaryAgent3Account", "ultimateDebtor", "initiatingParty", "debtor", "debtorAccount", "debtorAgent",
+		"debtorAgentAccount", "creditorAgent", "creditorAgentAccount", "creditor", "creditorAccount", "ultimateCreditor", "instructionForCreditorAgent", "instructionForNextAgent", "purpose", "regulatoryReporting",
+		"relatedRemittanceInformation", "remittanceInformation"})
 public class CreditTransferTransactionInformation7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -2169,6 +2179,7 @@ public class CreditTransferTransactionInformation7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtId", required = true)
 	public PaymentIdentification2 getPaymentIdentification() {
 		return paymentIdentification;
 	}
@@ -2177,6 +2188,7 @@ public class CreditTransferTransactionInformation7 {
 		this.paymentIdentification = paymentIdentification;
 	}
 
+	@XmlElement(name = "PmtTpInf")
 	public PaymentTypeInformation10 getPaymentTypeInformation() {
 		return paymentTypeInformation;
 	}
@@ -2185,6 +2197,7 @@ public class CreditTransferTransactionInformation7 {
 		this.paymentTypeInformation = paymentTypeInformation;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmt", required = true)
 	public EuroMax9Amount getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
@@ -2193,6 +2206,7 @@ public class CreditTransferTransactionInformation7 {
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDt")
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}
@@ -2201,6 +2215,7 @@ public class CreditTransferTransactionInformation7 {
 		this.interbankSettlementDate = interbankSettlementDate;
 	}
 
+	@XmlElement(name = "SttlmTmIndctn")
 	public SettlementDateTimeIndication1 getSettlementTimeIndication() {
 		return settlementTimeIndication;
 	}
@@ -2209,6 +2224,7 @@ public class CreditTransferTransactionInformation7 {
 		this.settlementTimeIndication = settlementTimeIndication;
 	}
 
+	@XmlElement(name = "SttlmTmReq")
 	public SettlementTimeRequest1 getSettlementTimeRequest() {
 		return settlementTimeRequest;
 	}
@@ -2217,6 +2233,7 @@ public class CreditTransferTransactionInformation7 {
 		this.settlementTimeRequest = settlementTimeRequest;
 	}
 
+	@XmlElement(name = "AccptncDtTm")
 	public ISODateTime getAcceptanceDateTime() {
 		return acceptanceDateTime;
 	}
@@ -2225,6 +2242,7 @@ public class CreditTransferTransactionInformation7 {
 		this.acceptanceDateTime = acceptanceDateTime;
 	}
 
+	@XmlElement(name = "PoolgAdjstmntDt")
 	public ISODate getPoolingAdjustmentDate() {
 		return poolingAdjustmentDate;
 	}
@@ -2233,6 +2251,7 @@ public class CreditTransferTransactionInformation7 {
 		this.poolingAdjustmentDate = poolingAdjustmentDate;
 	}
 
+	@XmlElement(name = "InstdAmt")
 	public CurrencyAndAmount getInstructedAmount() {
 		return instructedAmount;
 	}
@@ -2241,6 +2260,7 @@ public class CreditTransferTransactionInformation7 {
 		this.instructedAmount = instructedAmount;
 	}
 
+	@XmlElement(name = "XchgRate")
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -2249,6 +2269,7 @@ public class CreditTransferTransactionInformation7 {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "ChrgBr", required = true)
 	public ChargeBearerType2Code getChargeBearer() {
 		return chargeBearer;
 	}
@@ -2257,6 +2278,7 @@ public class CreditTransferTransactionInformation7 {
 		this.chargeBearer = chargeBearer;
 	}
 
+	@XmlElement(name = "ChrgsInf")
 	public List<ChargesInformation2> getChargesInformation() {
 		return chargesInformation;
 	}
@@ -2265,6 +2287,7 @@ public class CreditTransferTransactionInformation7 {
 		this.chargesInformation = chargesInformation;
 	}
 
+	@XmlElement(name = "PrvsInstgAgt")
 	public FinancialInstitution2 getPreviousInstructingAgent() {
 		return previousInstructingAgent;
 	}
@@ -2273,6 +2296,7 @@ public class CreditTransferTransactionInformation7 {
 		this.previousInstructingAgent = previousInstructingAgent;
 	}
 
+	@XmlElement(name = "PrvsInstgAgtAcct")
 	public CashAccount7 getPreviousInstructingAgentAccount() {
 		return previousInstructingAgentAccount;
 	}
@@ -2281,6 +2305,7 @@ public class CreditTransferTransactionInformation7 {
 		this.previousInstructingAgentAccount = previousInstructingAgentAccount;
 	}
 
+	@XmlElement(name = "InstgAgt")
 	public FinancialInstitution2 getInstructingAgent() {
 		return instructingAgent;
 	}
@@ -2289,6 +2314,7 @@ public class CreditTransferTransactionInformation7 {
 		this.instructingAgent = instructingAgent;
 	}
 
+	@XmlElement(name = "InstdAgt")
 	public FinancialInstitution2 getInstructedAgent() {
 		return instructedAgent;
 	}
@@ -2297,6 +2323,7 @@ public class CreditTransferTransactionInformation7 {
 		this.instructedAgent = instructedAgent;
 	}
 
+	@XmlElement(name = "IntrmyAgt1")
 	public FinancialInstitution2 getIntermediaryAgent1() {
 		return intermediaryAgent1;
 	}
@@ -2305,6 +2332,7 @@ public class CreditTransferTransactionInformation7 {
 		this.intermediaryAgent1 = intermediaryAgent1;
 	}
 
+	@XmlElement(name = "IntrmyAgt1Acct")
 	public CashAccount7 getIntermediaryAgent1Account() {
 		return intermediaryAgent1Account;
 	}
@@ -2313,6 +2341,7 @@ public class CreditTransferTransactionInformation7 {
 		this.intermediaryAgent1Account = intermediaryAgent1Account;
 	}
 
+	@XmlElement(name = "IntrmyAgt2")
 	public FinancialInstitution2 getIntermediaryAgent2() {
 		return intermediaryAgent2;
 	}
@@ -2321,6 +2350,7 @@ public class CreditTransferTransactionInformation7 {
 		this.intermediaryAgent2 = intermediaryAgent2;
 	}
 
+	@XmlElement(name = "IntrmyAgt2Acct")
 	public CashAccount7 getIntermediaryAgent2Account() {
 		return intermediaryAgent2Account;
 	}
@@ -2329,6 +2359,7 @@ public class CreditTransferTransactionInformation7 {
 		this.intermediaryAgent2Account = intermediaryAgent2Account;
 	}
 
+	@XmlElement(name = "IntrmyAgt3")
 	public FinancialInstitution2 getIntermediaryAgent3() {
 		return intermediaryAgent3;
 	}
@@ -2337,6 +2368,7 @@ public class CreditTransferTransactionInformation7 {
 		this.intermediaryAgent3 = intermediaryAgent3;
 	}
 
+	@XmlElement(name = "IntrmyAgt3Acct")
 	public CashAccount7 getIntermediaryAgent3Account() {
 		return intermediaryAgent3Account;
 	}
@@ -2345,6 +2377,7 @@ public class CreditTransferTransactionInformation7 {
 		this.intermediaryAgent3Account = intermediaryAgent3Account;
 	}
 
+	@XmlElement(name = "UltmtDbtr")
 	public PartyIdentification20 getUltimateDebtor() {
 		return ultimateDebtor;
 	}
@@ -2353,6 +2386,7 @@ public class CreditTransferTransactionInformation7 {
 		this.ultimateDebtor = ultimateDebtor;
 	}
 
+	@XmlElement(name = "InitgPty")
 	public PartyIdentification20 getInitiatingParty() {
 		return initiatingParty;
 	}
@@ -2361,6 +2395,7 @@ public class CreditTransferTransactionInformation7 {
 		this.initiatingParty = initiatingParty;
 	}
 
+	@XmlElement(name = "Dbtr", required = true)
 	public PartyIdentification20 getDebtor() {
 		return debtor;
 	}
@@ -2369,6 +2404,7 @@ public class CreditTransferTransactionInformation7 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAcct", required = true)
 	public CashAccount8 getDebtorAccount() {
 		return debtorAccount;
 	}
@@ -2377,6 +2413,7 @@ public class CreditTransferTransactionInformation7 {
 		this.debtorAccount = debtorAccount;
 	}
 
+	@XmlElement(name = "DbtrAgt", required = true)
 	public FinancialInstitution2 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -2385,6 +2422,7 @@ public class CreditTransferTransactionInformation7 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "DbtrAgtAcct")
 	public CashAccount7 getDebtorAgentAccount() {
 		return debtorAgentAccount;
 	}
@@ -2393,6 +2431,7 @@ public class CreditTransferTransactionInformation7 {
 		this.debtorAgentAccount = debtorAgentAccount;
 	}
 
+	@XmlElement(name = "CdtrAgt", required = true)
 	public FinancialInstitution2 getCreditorAgent() {
 		return creditorAgent;
 	}
@@ -2401,6 +2440,7 @@ public class CreditTransferTransactionInformation7 {
 		this.creditorAgent = creditorAgent;
 	}
 
+	@XmlElement(name = "CdtrAgtAcct")
 	public CashAccount7 getCreditorAgentAccount() {
 		return creditorAgentAccount;
 	}
@@ -2409,6 +2449,7 @@ public class CreditTransferTransactionInformation7 {
 		this.creditorAgentAccount = creditorAgentAccount;
 	}
 
+	@XmlElement(name = "Cdtr", required = true)
 	public PartyIdentification20 getCreditor() {
 		return creditor;
 	}
@@ -2417,6 +2458,7 @@ public class CreditTransferTransactionInformation7 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAcct", required = true)
 	public CashAccount8 getCreditorAccount() {
 		return creditorAccount;
 	}
@@ -2425,6 +2467,7 @@ public class CreditTransferTransactionInformation7 {
 		this.creditorAccount = creditorAccount;
 	}
 
+	@XmlElement(name = "UltmtCdtr")
 	public PartyIdentification20 getUltimateCreditor() {
 		return ultimateCreditor;
 	}
@@ -2433,6 +2476,7 @@ public class CreditTransferTransactionInformation7 {
 		this.ultimateCreditor = ultimateCreditor;
 	}
 
+	@XmlElement(name = "InstrForCdtrAgt")
 	public List<InstructionForCreditorAgent1> getInstructionForCreditorAgent() {
 		return instructionForCreditorAgent;
 	}
@@ -2441,6 +2485,7 @@ public class CreditTransferTransactionInformation7 {
 		this.instructionForCreditorAgent = instructionForCreditorAgent;
 	}
 
+	@XmlElement(name = "InstrForNxtAgt")
 	public List<InstructionForNextAgent1> getInstructionForNextAgent() {
 		return instructionForNextAgent;
 	}
@@ -2449,6 +2494,7 @@ public class CreditTransferTransactionInformation7 {
 		this.instructionForNextAgent = instructionForNextAgent;
 	}
 
+	@XmlElement(name = "Purp")
 	public Purpose1Choice getPurpose() {
 		return purpose;
 	}
@@ -2457,6 +2503,7 @@ public class CreditTransferTransactionInformation7 {
 		this.purpose = purpose;
 	}
 
+	@XmlElement(name = "RgltryRptg")
 	public List<RegulatoryReporting2> getRegulatoryReporting() {
 		return regulatoryReporting;
 	}
@@ -2465,6 +2512,7 @@ public class CreditTransferTransactionInformation7 {
 		this.regulatoryReporting = regulatoryReporting;
 	}
 
+	@XmlElement(name = "RltdRmtInf")
 	public List<RemittanceLocation1> getRelatedRemittanceInformation() {
 		return relatedRemittanceInformation;
 	}
@@ -2473,6 +2521,7 @@ public class CreditTransferTransactionInformation7 {
 		this.relatedRemittanceInformation = relatedRemittanceInformation;
 	}
 
+	@XmlElement(name = "RmtInf")
 	public RemittanceInformation4 getRemittanceInformation() {
 		return remittanceInformation;
 	}

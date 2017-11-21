@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to identify the underlying transaction(s) and/or batched
@@ -62,6 +66,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "EntryDetails1", propOrder = {"batch", "transactionDetails"})
 public class EntryDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -168,6 +174,7 @@ public class EntryDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Btch")
 	public BatchInformation2 getBatch() {
 		return batch;
 	}
@@ -176,6 +183,7 @@ public class EntryDetails1 {
 		this.batch = batch;
 	}
 
+	@XmlElement(name = "TxDtls")
 	public List<EntryTransaction2> getTransactionDetails() {
 		return transactionDetails;
 	}

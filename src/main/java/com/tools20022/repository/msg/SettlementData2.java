@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on the settlement of a treasury trade.
@@ -119,6 +123,9 @@ import java.util.function.Supplier;
  * definition} = "Provides information on the settlement of a treasury trade."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementData2", propOrder = {"cashFlowUniqueReference", "settlementSystemUniqueReference", "settlementAmount", "settledAmount", "rejectedAmount", "payingParty", "receivingParty", "settlementDate", "settlementStatus",
+		"extendedSettlementStatus", "settlementStatusSubType", "suspended", "pending"})
 public class SettlementData2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -793,6 +800,7 @@ public class SettlementData2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CshFlowUnqRef")
 	public Max35Text getCashFlowUniqueReference() {
 		return cashFlowUniqueReference;
 	}
@@ -801,6 +809,7 @@ public class SettlementData2 {
 		this.cashFlowUniqueReference = cashFlowUniqueReference;
 	}
 
+	@XmlElement(name = "SttlmSysUnqRef")
 	public Max35Text getSettlementSystemUniqueReference() {
 		return settlementSystemUniqueReference;
 	}
@@ -809,6 +818,7 @@ public class SettlementData2 {
 		this.settlementSystemUniqueReference = settlementSystemUniqueReference;
 	}
 
+	@XmlElement(name = "SttlmAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -817,6 +827,7 @@ public class SettlementData2 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "SttldAmt")
 	public ActiveOrHistoricCurrencyAndAmount getSettledAmount() {
 		return settledAmount;
 	}
@@ -825,6 +836,7 @@ public class SettlementData2 {
 		this.settledAmount = settledAmount;
 	}
 
+	@XmlElement(name = "RjctdAmt")
 	public ActiveOrHistoricCurrencyAndAmount getRejectedAmount() {
 		return rejectedAmount;
 	}
@@ -833,6 +845,7 @@ public class SettlementData2 {
 		this.rejectedAmount = rejectedAmount;
 	}
 
+	@XmlElement(name = "PngPty", required = true)
 	public PartyIdentification8Choice getPayingParty() {
 		return payingParty;
 	}
@@ -841,6 +854,7 @@ public class SettlementData2 {
 		this.payingParty = payingParty;
 	}
 
+	@XmlElement(name = "RcvgPty", required = true)
 	public PartyIdentification8Choice getReceivingParty() {
 		return receivingParty;
 	}
@@ -849,6 +863,7 @@ public class SettlementData2 {
 		this.receivingParty = receivingParty;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
@@ -857,6 +872,7 @@ public class SettlementData2 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "SttlmSts", required = true)
 	public SettlementStatus1Code getSettlementStatus() {
 		return settlementStatus;
 	}
@@ -865,6 +881,7 @@ public class SettlementData2 {
 		this.settlementStatus = settlementStatus;
 	}
 
+	@XmlElement(name = "XtndedSttlmSts", required = true)
 	public Extended350Code getExtendedSettlementStatus() {
 		return extendedSettlementStatus;
 	}
@@ -873,6 +890,7 @@ public class SettlementData2 {
 		this.extendedSettlementStatus = extendedSettlementStatus;
 	}
 
+	@XmlElement(name = "SttlmStsSubTp")
 	public Max70Text getSettlementStatusSubType() {
 		return settlementStatusSubType;
 	}
@@ -881,6 +899,7 @@ public class SettlementData2 {
 		this.settlementStatusSubType = settlementStatusSubType;
 	}
 
+	@XmlElement(name = "Sspd", required = true)
 	public YesNoIndicator getSuspended() {
 		return suspended;
 	}
@@ -889,6 +908,7 @@ public class SettlementData2 {
 		this.suspended = suspended;
 	}
 
+	@XmlElement(name = "Pdg", required = true)
 	public YesNoIndicator getPending() {
 		return pending;
 	}

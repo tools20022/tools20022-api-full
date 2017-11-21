@@ -24,6 +24,10 @@ import com.tools20022.repository.codeset.ResponseLevel1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the level of response requested from the receiver of this message.
@@ -55,6 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ResponseLevel", propOrder = "responseLevel")
 public class ResponseLevel {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -116,6 +122,7 @@ public class ResponseLevel {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RspnLvl", required = true)
 	public ResponseLevel1Code getResponseLevel() {
 		return responseLevel;
 	}

@@ -65,6 +65,8 @@ public class PercentageRate {
 				name = "PercentageRate";
 				definition = "Rate expressed as a percentage, ie, in hundredths, eg, 0.7 is 7/10 of a percent, and 7.0 is 7%.";
 				baseValue = 100.0;
+				totalDigits = 11;
+				fractionDigits = 10;
 			}
 		});
 		return mmObject_lazy.get();

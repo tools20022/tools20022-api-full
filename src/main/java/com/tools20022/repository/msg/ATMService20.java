@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Context in which the transaction is performed.
@@ -63,6 +67,8 @@ import java.util.List;
  * definition} = "Context in which the transaction is performed."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMService20", propOrder = {"serviceReference", "ATMServiceCode", "serviceType", "serviceVariantIdentification"})
 public class ATMService20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -244,6 +250,7 @@ public class ATMService20 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SvcRef")
 	public Max35Text getServiceReference() {
 		return serviceReference;
 	}
@@ -252,6 +259,7 @@ public class ATMService20 {
 		this.serviceReference = serviceReference;
 	}
 
+	@XmlElement(name = "ATMSvcCd")
 	public Max35Text getATMServiceCode() {
 		return aTMServiceCode;
 	}
@@ -260,6 +268,7 @@ public class ATMService20 {
 		this.aTMServiceCode = aTMServiceCode;
 	}
 
+	@XmlElement(name = "SvcTp", required = true)
 	public ATMServiceType5Code getServiceType() {
 		return serviceType;
 	}
@@ -268,6 +277,7 @@ public class ATMService20 {
 		this.serviceType = serviceType;
 	}
 
+	@XmlElement(name = "SvcVarntId")
 	public List<Max35Text> getServiceVariantIdentification() {
 		return serviceVariantIdentification;
 	}

@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between an amount or an unspecified rate.
@@ -71,6 +75,8 @@ import java.util.function.Supplier;
  * definition} = "Choice between an amount or an unspecified rate."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GrossDividendRateFormat6Choice", propOrder = {"amount", "rateTypeAndAmountAndRateStatus", "notSpecifiedRate"})
 public class GrossDividendRateFormat6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class GrossDividendRateFormat6Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -236,6 +243,7 @@ public class GrossDividendRateFormat6Choice {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
 	public RateTypeAndAmountAndStatus2 getRateTypeAndAmountAndRateStatus() {
 		return rateTypeAndAmountAndRateStatus;
 	}
@@ -244,6 +252,7 @@ public class GrossDividendRateFormat6Choice {
 		this.rateTypeAndAmountAndRateStatus = rateTypeAndAmountAndRateStatus;
 	}
 
+	@XmlElement(name = "NotSpcfdRate", required = true)
 	public RateType13Code getNotSpecifiedRate() {
 		return notSpecifiedRate;
 	}

@@ -27,6 +27,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Vote instruction applying to resolutions added during the meeting.
@@ -72,6 +76,8 @@ import java.util.function.Supplier;
  * "Vote instruction applying to resolutions added during the meeting."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "VoteInstructionForMeetingResolution1", propOrder = {"voteIndication", "shareholder"})
 public class VoteInstructionForMeetingResolution1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -240,6 +246,7 @@ public class VoteInstructionForMeetingResolution1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "VoteIndctn", required = true)
 	public VoteInstructionAtMeeting1Code getVoteIndication() {
 		return voteIndication;
 	}
@@ -248,6 +255,7 @@ public class VoteInstructionForMeetingResolution1 {
 		this.voteIndication = voteIndication;
 	}
 
+	@XmlElement(name = "Shrhldr", required = true)
 	public NameAndAddress9 getShareholder() {
 		return shareholder;
 	}

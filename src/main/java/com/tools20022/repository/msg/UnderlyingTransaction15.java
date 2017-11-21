@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the underlying (group of) transaction(s) to which the
@@ -78,6 +82,8 @@ import java.util.List;
  * UnderlyingTransaction12}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnderlyingTransaction15", propOrder = {"originalGroupInformationAndCancellation", "originalPaymentInformationAndCancellation"})
 public class UnderlyingTransaction15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -210,6 +216,7 @@ public class UnderlyingTransaction15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlGrpInfAndCxl")
 	public OriginalGroupHeader6 getOriginalGroupInformationAndCancellation() {
 		return originalGroupInformationAndCancellation;
 	}
@@ -218,6 +225,7 @@ public class UnderlyingTransaction15 {
 		this.originalGroupInformationAndCancellation = originalGroupInformationAndCancellation;
 	}
 
+	@XmlElement(name = "OrgnlPmtInfAndCxl")
 	public List<OriginalPaymentInstruction20> getOriginalPaymentInformationAndCancellation() {
 		return originalPaymentInformationAndCancellation;
 	}

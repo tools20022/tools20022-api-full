@@ -24,8 +24,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TreasuryArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -39,9 +41,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code trea.002.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
  * TreasuryArchive}</li>
@@ -82,6 +81,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code trea.002.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -93,6 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmendNonDeliverableForwardOpeningV02", propOrder = {"tradeInformation", "tradingSideIdentification", "counterpartySideIdentification", "tradeAmounts", "agreedRate", "valuationConditions"})
 public class AmendNonDeliverableForwardOpeningV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -132,6 +136,14 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradeAgreement2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmendNonDeliverableForwardOpeningV02.class.getMethod("getTradeInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected TradePartyIdentification3 tradingSideIdentification;
 	/**
@@ -168,6 +180,14 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmendNonDeliverableForwardOpeningV02.class.getMethod("getTradingSideIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TradePartyIdentification3 counterpartySideIdentification;
@@ -206,6 +226,14 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmendNonDeliverableForwardOpeningV02.class.getMethod("getCounterpartySideIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AmountsAndValueDate1 tradeAmounts;
 	/**
@@ -242,6 +270,14 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> AmountsAndValueDate1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmendNonDeliverableForwardOpeningV02.class.getMethod("getTradeAmounts", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AgreedRate1 agreedRate;
 	/**
@@ -276,6 +312,14 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AgreedRate1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmendNonDeliverableForwardOpeningV02.class.getMethod("getAgreedRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected NonDeliverableForwardValuationConditions2 valuationConditions;
@@ -315,6 +359,14 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> NonDeliverableForwardValuationConditions2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AmendNonDeliverableForwardOpeningV02.class.getMethod("getValuationConditions", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -327,9 +379,10 @@ public class AmendNonDeliverableForwardOpeningV02 {
 				rootElement = "Document";
 				xmlTag = "AmdNDFOpngV02";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AmendNonDeliverableForwardOpeningV02.mmTradeInformation, AmendNonDeliverableForwardOpeningV02.mmTradingSideIdentification,
-						AmendNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification, AmendNonDeliverableForwardOpeningV02.mmTradeAmounts, AmendNonDeliverableForwardOpeningV02.mmAgreedRate,
-						AmendNonDeliverableForwardOpeningV02.mmValuationConditions);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.mmTradeInformation,
+						com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.mmTradingSideIdentification, com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification,
+						com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.mmTradeAmounts, com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.mmAgreedRate,
+						com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.mmValuationConditions);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "trea";
@@ -339,10 +392,16 @@ public class AmendNonDeliverableForwardOpeningV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AmendNonDeliverableForwardOpeningV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradInf", required = true)
 	public TradeAgreement2 getTradeInformation() {
 		return tradeInformation;
 	}
@@ -351,6 +410,7 @@ public class AmendNonDeliverableForwardOpeningV02 {
 		this.tradeInformation = tradeInformation;
 	}
 
+	@XmlElement(name = "TradgSdId", required = true)
 	public TradePartyIdentification3 getTradingSideIdentification() {
 		return tradingSideIdentification;
 	}
@@ -359,6 +419,7 @@ public class AmendNonDeliverableForwardOpeningV02 {
 		this.tradingSideIdentification = tradingSideIdentification;
 	}
 
+	@XmlElement(name = "CtrPtySdId", required = true)
 	public TradePartyIdentification3 getCounterpartySideIdentification() {
 		return counterpartySideIdentification;
 	}
@@ -367,6 +428,7 @@ public class AmendNonDeliverableForwardOpeningV02 {
 		this.counterpartySideIdentification = counterpartySideIdentification;
 	}
 
+	@XmlElement(name = "TradAmts", required = true)
 	public AmountsAndValueDate1 getTradeAmounts() {
 		return tradeAmounts;
 	}
@@ -375,6 +437,7 @@ public class AmendNonDeliverableForwardOpeningV02 {
 		this.tradeAmounts = tradeAmounts;
 	}
 
+	@XmlElement(name = "AgrdRate", required = true)
 	public AgreedRate1 getAgreedRate() {
 		return agreedRate;
 	}
@@ -383,11 +446,18 @@ public class AmendNonDeliverableForwardOpeningV02 {
 		this.agreedRate = agreedRate;
 	}
 
+	@XmlElement(name = "ValtnConds", required = true)
 	public NonDeliverableForwardValuationConditions2 getValuationConditions() {
 		return valuationConditions;
 	}
 
 	public void setValuationConditions(NonDeliverableForwardValuationConditions2 valuationConditions) {
 		this.valuationConditions = valuationConditions;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:trea.002.02.02")
+	static public class Document {
+		@XmlElement(name = "AmdNDFOpngV02", required = true)
+		public AmendNonDeliverableForwardOpeningV02 messageBody;
 	}
 }

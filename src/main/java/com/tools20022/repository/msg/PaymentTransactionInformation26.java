@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide information on the original transactions, to
@@ -110,6 +114,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentTransactionInformation26", propOrder = {"statusIdentification", "originalInstructionIdentification", "originalEndToEndIdentification", "originalTransactionIdentification", "transactionStatus",
+		"statusReasonInformation", "chargesInformation", "acceptanceDateTime", "accountServicerReference", "clearingSystemReference", "instructingAgent", "instructedAgent", "originalTransactionReference"})
 public class PaymentTransactionInformation26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -791,6 +798,7 @@ public class PaymentTransactionInformation26 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsId")
 	public Max35Text getStatusIdentification() {
 		return statusIdentification;
 	}
@@ -799,6 +807,7 @@ public class PaymentTransactionInformation26 {
 		this.statusIdentification = statusIdentification;
 	}
 
+	@XmlElement(name = "OrgnlInstrId")
 	public Max35Text getOriginalInstructionIdentification() {
 		return originalInstructionIdentification;
 	}
@@ -807,6 +816,7 @@ public class PaymentTransactionInformation26 {
 		this.originalInstructionIdentification = originalInstructionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlEndToEndId")
 	public Max35Text getOriginalEndToEndIdentification() {
 		return originalEndToEndIdentification;
 	}
@@ -815,6 +825,7 @@ public class PaymentTransactionInformation26 {
 		this.originalEndToEndIdentification = originalEndToEndIdentification;
 	}
 
+	@XmlElement(name = "OrgnlTxId")
 	public Max35Text getOriginalTransactionIdentification() {
 		return originalTransactionIdentification;
 	}
@@ -823,6 +834,7 @@ public class PaymentTransactionInformation26 {
 		this.originalTransactionIdentification = originalTransactionIdentification;
 	}
 
+	@XmlElement(name = "TxSts")
 	public TransactionIndividualStatus3Code getTransactionStatus() {
 		return transactionStatus;
 	}
@@ -831,6 +843,7 @@ public class PaymentTransactionInformation26 {
 		this.transactionStatus = transactionStatus;
 	}
 
+	@XmlElement(name = "StsRsnInf")
 	public List<StatusReasonInformation8> getStatusReasonInformation() {
 		return statusReasonInformation;
 	}
@@ -839,6 +852,7 @@ public class PaymentTransactionInformation26 {
 		this.statusReasonInformation = statusReasonInformation;
 	}
 
+	@XmlElement(name = "ChrgsInf")
 	public List<ChargesInformation5> getChargesInformation() {
 		return chargesInformation;
 	}
@@ -847,6 +861,7 @@ public class PaymentTransactionInformation26 {
 		this.chargesInformation = chargesInformation;
 	}
 
+	@XmlElement(name = "AccptncDtTm")
 	public ISODateTime getAcceptanceDateTime() {
 		return acceptanceDateTime;
 	}
@@ -855,6 +870,7 @@ public class PaymentTransactionInformation26 {
 		this.acceptanceDateTime = acceptanceDateTime;
 	}
 
+	@XmlElement(name = "AcctSvcrRef")
 	public Max35Text getAccountServicerReference() {
 		return accountServicerReference;
 	}
@@ -863,6 +879,7 @@ public class PaymentTransactionInformation26 {
 		this.accountServicerReference = accountServicerReference;
 	}
 
+	@XmlElement(name = "ClrSysRef")
 	public Max35Text getClearingSystemReference() {
 		return clearingSystemReference;
 	}
@@ -871,6 +888,7 @@ public class PaymentTransactionInformation26 {
 		this.clearingSystemReference = clearingSystemReference;
 	}
 
+	@XmlElement(name = "InstgAgt")
 	public BranchAndFinancialInstitutionIdentification4 getInstructingAgent() {
 		return instructingAgent;
 	}
@@ -879,6 +897,7 @@ public class PaymentTransactionInformation26 {
 		this.instructingAgent = instructingAgent;
 	}
 
+	@XmlElement(name = "InstdAgt")
 	public BranchAndFinancialInstitutionIdentification4 getInstructedAgent() {
 		return instructedAgent;
 	}
@@ -887,6 +906,7 @@ public class PaymentTransactionInformation26 {
 		this.instructedAgent = instructedAgent;
 	}
 
+	@XmlElement(name = "OrgnlTxRef")
 	public OriginalTransactionReference13 getOriginalTransactionReference() {
 		return originalTransactionReference;
 	}

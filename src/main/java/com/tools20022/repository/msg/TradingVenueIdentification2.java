@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Trading venue related fields.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Trading venue related fields."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradingVenueIdentification2", propOrder = {"identification", "type"})
 public class TradingVenueIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class TradingVenueIdentification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max50Text getIdentification() {
 		return identification;
 	}
@@ -186,6 +193,7 @@ public class TradingVenueIdentification2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TradingVenue2Code getType() {
 		return type;
 	}

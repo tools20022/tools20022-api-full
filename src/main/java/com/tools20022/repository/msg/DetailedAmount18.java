@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Withdrawal fees, accepted by the customer.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.msg.DetailedAmount13 DetailedAmount13}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DetailedAmount18", propOrder = {"amount", "currency", "chargeAccountTo", "label"})
 public class DetailedAmount18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -287,6 +293,7 @@ public class DetailedAmount18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -295,6 +302,7 @@ public class DetailedAmount18 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -303,6 +311,7 @@ public class DetailedAmount18 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "ChrgAcctTo")
 	public TrueFalseIndicator getChargeAccountTo() {
 		return chargeAccountTo;
 	}
@@ -311,6 +320,7 @@ public class DetailedAmount18 {
 		this.chargeAccountTo = chargeAccountTo;
 	}
 
+	@XmlElement(name = "Labl")
 	public Max70Text getLabel() {
 		return label;
 	}

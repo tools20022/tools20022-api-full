@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DateCodeAndTimeFormat3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between an ISODate or ISODateTime format or a date code or a date code
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * DateFormat20Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DateFormat32Choice", propOrder = {"date", "dateCodeAndTime", "dateCode"})
 public class DateFormat32Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -226,6 +232,7 @@ public class DateFormat32Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public DateAndDateTimeChoice getDate() {
 		return date;
 	}
@@ -234,6 +241,7 @@ public class DateFormat32Choice {
 		this.date = date;
 	}
 
+	@XmlElement(name = "DtCdAndTm", required = true)
 	public DateCodeAndTimeFormat3 getDateCodeAndTime() {
 		return dateCodeAndTime;
 	}
@@ -242,6 +250,7 @@ public class DateFormat32Choice {
 		this.dateCodeAndTime = dateCodeAndTime;
 	}
 
+	@XmlElement(name = "DtCd", required = true)
 	public DateCode19Choice getDateCode() {
 		return dateCode;
 	}

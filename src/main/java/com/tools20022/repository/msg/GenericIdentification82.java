@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the identification of a party.
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * GenericIdentification55}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericIdentification82", propOrder = {"identification", "type", "issuer", "issueDate", "expiryDate", "state", "issuerCountry"})
 public class GenericIdentification82 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -478,6 +484,7 @@ public class GenericIdentification82 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -486,6 +493,7 @@ public class GenericIdentification82 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public OtherIdentification3Choice getType() {
 		return type;
 	}
@@ -494,6 +502,7 @@ public class GenericIdentification82 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Issr")
 	public Max35Text getIssuer() {
 		return issuer;
 	}
@@ -502,6 +511,7 @@ public class GenericIdentification82 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "IsseDt")
 	public ISODate getIssueDate() {
 		return issueDate;
 	}
@@ -510,6 +520,7 @@ public class GenericIdentification82 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "XpryDt")
 	public ISODate getExpiryDate() {
 		return expiryDate;
 	}
@@ -518,6 +529,7 @@ public class GenericIdentification82 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "Stat")
 	public Max70Text getState() {
 		return state;
 	}
@@ -526,6 +538,7 @@ public class GenericIdentification82 {
 		this.state = state;
 	}
 
+	@XmlElement(name = "IssrCtry")
 	public CountryCode getIssuerCountry() {
 		return issuerCountry;
 	}

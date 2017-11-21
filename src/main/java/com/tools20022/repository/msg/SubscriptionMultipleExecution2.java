@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Execution of a subscription order.
@@ -89,6 +93,8 @@ import java.util.List;
  * definition} = "Execution of a subscription order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionMultipleExecution2", propOrder = {"placeOfTrade", "orderDateTime", "cancellationRight", "investmentAccountDetails", "beneficiaryDetails", "individualExecutionDetails", "bulkCashSettlementDetails"})
 public class SubscriptionMultipleExecution2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -444,6 +450,7 @@ public class SubscriptionMultipleExecution2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public CountryCode getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -452,6 +459,7 @@ public class SubscriptionMultipleExecution2 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "OrdrDtTm")
 	public ISODateTime getOrderDateTime() {
 		return orderDateTime;
 	}
@@ -460,6 +468,7 @@ public class SubscriptionMultipleExecution2 {
 		this.orderDateTime = orderDateTime;
 	}
 
+	@XmlElement(name = "CxlRght")
 	public CancellationRight1 getCancellationRight() {
 		return cancellationRight;
 	}
@@ -468,6 +477,7 @@ public class SubscriptionMultipleExecution2 {
 		this.cancellationRight = cancellationRight;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount13 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -476,6 +486,7 @@ public class SubscriptionMultipleExecution2 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "BnfcryDtls")
 	public IndividualPerson2 getBeneficiaryDetails() {
 		return beneficiaryDetails;
 	}
@@ -484,6 +495,7 @@ public class SubscriptionMultipleExecution2 {
 		this.beneficiaryDetails = beneficiaryDetails;
 	}
 
+	@XmlElement(name = "IndvExctnDtls", required = true)
 	public List<SubscriptionExecution4> getIndividualExecutionDetails() {
 		return individualExecutionDetails;
 	}
@@ -492,6 +504,7 @@ public class SubscriptionMultipleExecution2 {
 		this.individualExecutionDetails = individualExecutionDetails;
 	}
 
+	@XmlElement(name = "BlkCshSttlmDtls")
 	public PaymentTransaction13 getBulkCashSettlementDetails() {
 		return bulkCashSettlementDetails;
 	}

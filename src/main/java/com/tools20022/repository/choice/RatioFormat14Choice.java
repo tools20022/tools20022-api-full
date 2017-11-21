@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format to expressed a ratio.
@@ -77,6 +81,8 @@ import java.util.function.Supplier;
  * definition} = "Choice of format to expressed a ratio."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RatioFormat14Choice", propOrder = {"quantityToQuantity", "notSpecifiedRate", "amountToAmount", "amountToQuantity", "quantityToAmount"})
 public class RatioFormat14Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -334,6 +340,7 @@ public class RatioFormat14Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QtyToQty", required = true)
 	public QuantityToQuantityRatio2 getQuantityToQuantity() {
 		return quantityToQuantity;
 	}
@@ -342,6 +349,7 @@ public class RatioFormat14Choice {
 		this.quantityToQuantity = quantityToQuantity;
 	}
 
+	@XmlElement(name = "NotSpcfdRate", required = true)
 	public RateValueType7Code getNotSpecifiedRate() {
 		return notSpecifiedRate;
 	}
@@ -350,6 +358,7 @@ public class RatioFormat14Choice {
 		this.notSpecifiedRate = notSpecifiedRate;
 	}
 
+	@XmlElement(name = "AmtToAmt", required = true)
 	public AmountToAmountRatio3 getAmountToAmount() {
 		return amountToAmount;
 	}
@@ -358,6 +367,7 @@ public class RatioFormat14Choice {
 		this.amountToAmount = amountToAmount;
 	}
 
+	@XmlElement(name = "AmtToQty", required = true)
 	public AmountAndQuantityRatio3 getAmountToQuantity() {
 		return amountToQuantity;
 	}
@@ -366,6 +376,7 @@ public class RatioFormat14Choice {
 		this.amountToQuantity = amountToQuantity;
 	}
 
+	@XmlElement(name = "QtyToAmt", required = true)
 	public AmountAndQuantityRatio3 getQuantityToAmount() {
 		return quantityToAmount;
 	}

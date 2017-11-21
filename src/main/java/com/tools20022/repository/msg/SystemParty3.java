@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the definition of a party within a system. <br>
@@ -83,6 +87,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemParty3", propOrder = {"openingDate", "closingDate", "type", "technicalAddress", "marketSpecificAttribute", "identification", "name", "address", "restriction"})
 public class SystemParty3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -477,6 +483,7 @@ public class SystemParty3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OpngDt")
 	public ISODate getOpeningDate() {
 		return openingDate;
 	}
@@ -485,6 +492,7 @@ public class SystemParty3 {
 		this.openingDate = openingDate;
 	}
 
+	@XmlElement(name = "ClsgDt")
 	public ISODate getClosingDate() {
 		return closingDate;
 	}
@@ -493,6 +501,7 @@ public class SystemParty3 {
 		this.closingDate = closingDate;
 	}
 
+	@XmlElement(name = "Tp")
 	public SystemPartyType1Code getType() {
 		return type;
 	}
@@ -501,6 +510,7 @@ public class SystemParty3 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "TechAdr")
 	public List<TechnicalIdentification1Choice> getTechnicalAddress() {
 		return technicalAddress;
 	}
@@ -509,6 +519,7 @@ public class SystemParty3 {
 		this.technicalAddress = technicalAddress;
 	}
 
+	@XmlElement(name = "MktSpcfcAttr")
 	public List<MarketSpecificAttribute1> getMarketSpecificAttribute() {
 		return marketSpecificAttribute;
 	}
@@ -517,6 +528,7 @@ public class SystemParty3 {
 		this.marketSpecificAttribute = marketSpecificAttribute;
 	}
 
+	@XmlElement(name = "Id")
 	public SystemPartyIdentification1 getIdentification() {
 		return identification;
 	}
@@ -525,6 +537,7 @@ public class SystemParty3 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public PartyName3 getName() {
 		return name;
 	}
@@ -533,6 +546,7 @@ public class SystemParty3 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Adr")
 	public PostalAddress10 getAddress() {
 		return address;
 	}
@@ -541,6 +555,7 @@ public class SystemParty3 {
 		this.address = address;
 	}
 
+	@XmlElement(name = "Rstrctn")
 	public List<SystemRestriction1> getRestriction() {
 		return restriction;
 	}

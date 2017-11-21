@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of counterparty type.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of counterparty type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrencyToBuyOrSell1Choice", propOrder = {"currencyToBuy", "currencyToSell"})
 public class CurrencyToBuyOrSell1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class CurrencyToBuyOrSell1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CcyToBuy", required = true)
 	public ActiveCurrencyCode getCurrencyToBuy() {
 		return currencyToBuy;
 	}
@@ -189,6 +196,7 @@ public class CurrencyToBuyOrSell1Choice {
 		this.currencyToBuy = currencyToBuy;
 	}
 
+	@XmlElement(name = "CcyToSell", required = true)
 	public ActiveCurrencyCode getCurrencyToSell() {
 		return currencyToSell;
 	}

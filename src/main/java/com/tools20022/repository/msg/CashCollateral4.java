@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the cash posted as collateral.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CashCollateral1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashCollateral4", propOrder = {"assetNumber", "depositAmount", "depositType", "blockedAmount", "maturityDate", "valueDate", "exchangeRate", "collateralValue", "haircut"})
 public class CashCollateral4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -574,6 +580,7 @@ public class CashCollateral4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AsstNb")
 	public Max35Text getAssetNumber() {
 		return assetNumber;
 	}
@@ -582,6 +589,7 @@ public class CashCollateral4 {
 		this.assetNumber = assetNumber;
 	}
 
+	@XmlElement(name = "DpstAmt")
 	public ActiveCurrencyAndAmount getDepositAmount() {
 		return depositAmount;
 	}
@@ -590,6 +598,7 @@ public class CashCollateral4 {
 		this.depositAmount = depositAmount;
 	}
 
+	@XmlElement(name = "DpstTp")
 	public DepositType1Code getDepositType() {
 		return depositType;
 	}
@@ -598,6 +607,7 @@ public class CashCollateral4 {
 		this.depositType = depositType;
 	}
 
+	@XmlElement(name = "BlckdAmt")
 	public ActiveCurrencyAndAmount getBlockedAmount() {
 		return blockedAmount;
 	}
@@ -606,6 +616,7 @@ public class CashCollateral4 {
 		this.blockedAmount = blockedAmount;
 	}
 
+	@XmlElement(name = "MtrtyDt")
 	public ISODate getMaturityDate() {
 		return maturityDate;
 	}
@@ -614,6 +625,7 @@ public class CashCollateral4 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "ValDt")
 	public ISODate getValueDate() {
 		return valueDate;
 	}
@@ -622,6 +634,7 @@ public class CashCollateral4 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "XchgRate")
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
@@ -630,6 +643,7 @@ public class CashCollateral4 {
 		this.exchangeRate = exchangeRate;
 	}
 
+	@XmlElement(name = "CollVal", required = true)
 	public ActiveCurrencyAndAmount getCollateralValue() {
 		return collateralValue;
 	}
@@ -638,6 +652,7 @@ public class CashCollateral4 {
 		this.collateralValue = collateralValue;
 	}
 
+	@XmlElement(name = "Hrcut")
 	public PercentageRate getHaircut() {
 		return haircut;
 	}

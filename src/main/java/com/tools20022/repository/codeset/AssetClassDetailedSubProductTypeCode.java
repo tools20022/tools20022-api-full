@@ -29,55 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AssetFXSubProductType1Code
- * AssetFXSubProductType1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code
- * AssetClassDetailedSubProductType6Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code
- * AssetClassDetailedSubProductType8Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType1Code
- * EmissionAllowanceProductType1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType2Code
- * AssetClassDetailedSubProductType2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code
- * AssetClassDetailedSubProductType1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType11Code
- * AssetClassDetailedSubProductType11Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code
- * AssetClassDetailedSubProductType10Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType4Code
- * AssetClassDetailedSubProductType4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code
- * AssetClassDetailedSubProductType5Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code
- * AssetClassDetailedSubProductType7Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType14Code
- * AssetClassDetailedSubProductType14Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType15Code
- * AssetClassDetailedSubProductType15Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType12Code
- * AssetClassDetailedSubProductType12Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType2Code
- * EmissionAllowanceProductType2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -296,6 +247,55 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode#mmOffPeak
  * AssetClassDetailedSubProductTypeCode.mmOffPeak}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssetFXSubProductType1Code
+ * AssetFXSubProductType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code
+ * AssetClassDetailedSubProductType6Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code
+ * AssetClassDetailedSubProductType8Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType1Code
+ * EmissionAllowanceProductType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType2Code
+ * AssetClassDetailedSubProductType2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code
+ * AssetClassDetailedSubProductType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType11Code
+ * AssetClassDetailedSubProductType11Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code
+ * AssetClassDetailedSubProductType10Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType4Code
+ * AssetClassDetailedSubProductType4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code
+ * AssetClassDetailedSubProductType5Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code
+ * AssetClassDetailedSubProductType7Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType14Code
+ * AssetClassDetailedSubProductType14Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType15Code
+ * AssetClassDetailedSubProductType15Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType12Code
+ * AssetClassDetailedSubProductType12Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType2Code
+ * EmissionAllowanceProductType2Code}</li>
  * </ul>
  * </li>
  * <li>

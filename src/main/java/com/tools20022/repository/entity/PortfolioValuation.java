@@ -21,6 +21,7 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TotalPortfolioValuation1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -34,25 +35,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1
- * TotalPortfolioValuation1}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedPortfolioValuation
- * DateTimePeriod.mmRelatedPortfolioValuation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmValuation
- * Portfolio.mmValuation}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -80,6 +62,25 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.PortfolioValuation#mmValuationPeriod
  * PortfolioValuation.mmValuationPeriod}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1
+ * TotalPortfolioValuation1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedPortfolioValuation
+ * DateTimePeriod.mmRelatedPortfolioValuation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmValuation
+ * Portfolio.mmValuation}</li>
  * </ul>
  * </li>
  * <li>
@@ -112,11 +113,6 @@ public class PortfolioValuation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation
-	 * PortfolioValuation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -128,6 +124,11 @@ public class PortfolioValuation {
 	 * TotalPortfolioValuation1.mmPreviousTotalPortfolioValue}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation
+	 * PortfolioValuation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -144,7 +145,7 @@ public class PortfolioValuation {
 	public static final MMBusinessAttribute mmTotalPortfolioValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmTotalPortfolioValue, TotalPortfolioValuation1.mmPreviousTotalPortfolioValue);
-			elementContext_lazy = () -> PortfolioValuation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalPortfolioValue";
@@ -152,6 +153,14 @@ public class PortfolioValuation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioValuation.class.getMethod("getTotalPortfolioValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount totalBookValue;
@@ -166,11 +175,6 @@ public class PortfolioValuation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation
-	 * PortfolioValuation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -182,6 +186,11 @@ public class PortfolioValuation {
 	 * TotalPortfolioValuation1.mmPreviousTotalBookValue}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation
+	 * PortfolioValuation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -198,7 +207,7 @@ public class PortfolioValuation {
 	public static final MMBusinessAttribute mmTotalBookValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmTotalBookValue, TotalPortfolioValuation1.mmPreviousTotalBookValue);
-			elementContext_lazy = () -> PortfolioValuation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalBookValue";
@@ -206,6 +215,14 @@ public class PortfolioValuation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioValuation.class.getMethod("getTotalBookValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount totalReceipts;
@@ -219,11 +236,6 @@ public class PortfolioValuation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation
-	 * PortfolioValuation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -232,6 +244,11 @@ public class PortfolioValuation {
 	 * TotalPortfolioValuation1.mmTotalReceipts}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation
+	 * PortfolioValuation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -246,7 +263,7 @@ public class PortfolioValuation {
 	public static final MMBusinessAttribute mmTotalReceipts = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmTotalReceipts);
-			elementContext_lazy = () -> PortfolioValuation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalReceipts";
@@ -254,6 +271,14 @@ public class PortfolioValuation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioValuation.class.getMethod("getTotalReceipts", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount totalDisbursements;
@@ -267,11 +292,6 @@ public class PortfolioValuation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation
-	 * PortfolioValuation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -280,6 +300,11 @@ public class PortfolioValuation {
 	 * TotalPortfolioValuation1.mmTotalDisbursements}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation
+	 * PortfolioValuation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -294,7 +319,7 @@ public class PortfolioValuation {
 	public static final MMBusinessAttribute mmTotalDisbursements = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmTotalDisbursements);
-			elementContext_lazy = () -> PortfolioValuation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalDisbursements";
@@ -302,6 +327,14 @@ public class PortfolioValuation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioValuation.class.getMethod("getTotalDisbursements", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount incomeReceived;
@@ -315,11 +348,6 @@ public class PortfolioValuation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation
-	 * PortfolioValuation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -328,6 +356,11 @@ public class PortfolioValuation {
 	 * TotalPortfolioValuation1.mmIncomeReceived}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation
+	 * PortfolioValuation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -342,7 +375,7 @@ public class PortfolioValuation {
 	public static final MMBusinessAttribute mmIncomeReceived = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmIncomeReceived);
-			elementContext_lazy = () -> PortfolioValuation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncomeReceived";
@@ -350,6 +383,14 @@ public class PortfolioValuation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioValuation.class.getMethod("getIncomeReceived", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount expensesPaid;
@@ -363,11 +404,6 @@ public class PortfolioValuation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation
-	 * PortfolioValuation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -376,6 +412,11 @@ public class PortfolioValuation {
 	 * TotalPortfolioValuation1.mmExpensesPaid}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation
+	 * PortfolioValuation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -390,7 +431,7 @@ public class PortfolioValuation {
 	public static final MMBusinessAttribute mmExpensesPaid = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmExpensesPaid);
-			elementContext_lazy = () -> PortfolioValuation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpensesPaid";
@@ -398,6 +439,14 @@ public class PortfolioValuation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioValuation.class.getMethod("getExpensesPaid", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Portfolio portfolio;
@@ -437,7 +486,7 @@ public class PortfolioValuation {
 	 */
 	public static final MMBusinessAssociationEnd mmPortfolio = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PortfolioValuation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Portfolio";
@@ -485,7 +534,7 @@ public class PortfolioValuation {
 	 */
 	public static final MMBusinessAssociationEnd mmValuationPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PortfolioValuation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValuationPeriod";
@@ -505,9 +554,15 @@ public class PortfolioValuation {
 				name = "PortfolioValuation";
 				definition = "Valuation information of the portfolio.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmRelatedPortfolioValuation, com.tools20022.repository.entity.Portfolio.mmValuation);
-				element_lazy = () -> Arrays.asList(PortfolioValuation.mmTotalPortfolioValue, PortfolioValuation.mmTotalBookValue, PortfolioValuation.mmTotalReceipts, PortfolioValuation.mmTotalDisbursements,
-						PortfolioValuation.mmIncomeReceived, PortfolioValuation.mmExpensesPaid, PortfolioValuation.mmPortfolio, PortfolioValuation.mmValuationPeriod);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PortfolioValuation.mmTotalPortfolioValue, com.tools20022.repository.entity.PortfolioValuation.mmTotalBookValue,
+						com.tools20022.repository.entity.PortfolioValuation.mmTotalReceipts, com.tools20022.repository.entity.PortfolioValuation.mmTotalDisbursements, com.tools20022.repository.entity.PortfolioValuation.mmIncomeReceived,
+						com.tools20022.repository.entity.PortfolioValuation.mmExpensesPaid, com.tools20022.repository.entity.PortfolioValuation.mmPortfolio, com.tools20022.repository.entity.PortfolioValuation.mmValuationPeriod);
 				derivationComponent_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PortfolioValuation.class;
 			}
 		});
 		return mmObject_lazy.get();

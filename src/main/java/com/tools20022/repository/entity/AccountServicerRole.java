@@ -36,6 +36,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
+ * AccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -88,9 +91,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardAccount12.mmServicer}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
- * AccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -124,6 +124,11 @@ public class AccountServicerRole extends AccountPartyRole {
 						CardAccount5.mmServicer, CardAccount2.mmServicer, ParentCashAccount2.mmServicer, Account19.mmServicer, CardAccount10.mmServicer, CardAccount9.mmServicer, CardAccount8.mmServicer, CardAccount11.mmServicer,
 						CardAccount13.mmServicer, CardAccount7.mmServicer, CardAccount12.mmServicer);
 				superType_lazy = () -> AccountPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AccountServicerRole.class;
 			}
 		});
 		return mmObject_lazy.get();

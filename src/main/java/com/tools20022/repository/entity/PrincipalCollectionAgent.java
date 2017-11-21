@@ -68,6 +68,11 @@ public class PrincipalCollectionAgent extends SecuritiesPartyRole {
 				definition = "Main party appointed to collect payment or securities on behalf of the issuer.";
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PrincipalCollectionAgent.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

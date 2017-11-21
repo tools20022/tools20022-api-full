@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a payment instruction by its relative position in a queue
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QueueTransactionIdentificationDetails", propOrder = {"queueIdentification", "positionInQueue"})
 public class QueueTransactionIdentificationDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -163,6 +169,7 @@ public class QueueTransactionIdentificationDetails {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QId", required = true)
 	public Max16Text getQueueIdentification() {
 		return queueIdentification;
 	}
@@ -171,6 +178,7 @@ public class QueueTransactionIdentificationDetails {
 		this.queueIdentification = queueIdentification;
 	}
 
+	@XmlElement(name = "PosInQ", required = true)
 	public Max16Text getPositionInQueue() {
 		return positionInQueue;
 	}

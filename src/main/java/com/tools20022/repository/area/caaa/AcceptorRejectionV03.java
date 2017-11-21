@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.AcceptorRejection2;
 import com.tools20022.repository.msg.Header9;
 import com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20132014;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The AcceptorRejection message is sent by the acquirer (or its agent) to
@@ -36,9 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.015.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion
@@ -69,6 +68,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.015.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -91,6 +93,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorRejectionV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorRejectionV03", propOrder = {"header", "reject"})
 public class AcceptorRejectionV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -142,6 +146,14 @@ public class AcceptorRejectionV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header9.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorRejectionV03.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AcceptorRejection2 reject;
 	/**
@@ -192,6 +204,14 @@ public class AcceptorRejectionV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorRejection2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcceptorRejectionV03.class.getMethod("getReject", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -206,7 +226,7 @@ public class AcceptorRejectionV03 {
 				rootElement = "Document";
 				xmlTag = "AccptrRjctn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorRejectionV03.mmHeader, AcceptorRejectionV03.mmReject);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorRejectionV03.mmHeader, com.tools20022.repository.area.caaa.AcceptorRejectionV03.mmReject);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";
@@ -216,10 +236,16 @@ public class AcceptorRejectionV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcceptorRejectionV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header9 getHeader() {
 		return header;
 	}
@@ -228,11 +254,18 @@ public class AcceptorRejectionV03 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "Rjct", required = true)
 	public AcceptorRejection2 getReject() {
 		return reject;
 	}
 
 	public void setReject(AcceptorRejection2 reject) {
 		this.reject = reject;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.015.03.03")
+	static public class Document {
+		@XmlElement(name = "AccptrRjctn", required = true)
+		public AcceptorRejectionV03 messageBody;
 	}
 }

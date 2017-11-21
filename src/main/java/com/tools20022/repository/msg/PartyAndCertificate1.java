@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Entity involved in an activity.
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyAndCertificate1", propOrder = {"party", "certificate", "signatureOrder", "authorisation"})
 public class PartyAndCertificate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -284,6 +290,7 @@ public class PartyAndCertificate1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pty", required = true)
 	public PartyIdentification41 getParty() {
 		return party;
 	}
@@ -292,6 +299,7 @@ public class PartyAndCertificate1 {
 		this.party = party;
 	}
 
+	@XmlElement(name = "Cert")
 	public Max10KBinary getCertificate() {
 		return certificate;
 	}
@@ -300,6 +308,7 @@ public class PartyAndCertificate1 {
 		this.certificate = certificate;
 	}
 
+	@XmlElement(name = "SgntrOrdr")
 	public Max15PlusSignedNumericText getSignatureOrder() {
 		return signatureOrder;
 	}
@@ -308,6 +317,7 @@ public class PartyAndCertificate1 {
 		this.signatureOrder = signatureOrder;
 	}
 
+	@XmlElement(name = "Authstn", required = true)
 	public Authorisation1 getAuthorisation() {
 		return authorisation;
 	}

@@ -26,8 +26,10 @@ import com.tools20022.repository.msg.AcquirerAuthorisationInitiation1;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header17;
 import com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The AcquirerAuthorisationInitiation message is sent by an acquirer or an
@@ -36,9 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code cain.001.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcquirertoIssuerCardTransactionLatestVersion
@@ -71,6 +70,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code cain.001.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -82,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcquirerAuthorisationInitiation", propOrder = {"header", "authorisationInitiation", "securityTrailer"})
 public class AcquirerAuthorisationInitiation {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -118,6 +122,14 @@ public class AcquirerAuthorisationInitiation {
 			minOccurs = 1;
 			complexType_lazy = () -> Header17.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcquirerAuthorisationInitiation.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AcquirerAuthorisationInitiation1 authorisationInitiation;
 	/**
@@ -152,6 +164,14 @@ public class AcquirerAuthorisationInitiation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcquirerAuthorisationInitiation1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcquirerAuthorisationInitiation.class.getMethod("getAuthorisationInitiation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ContentInformationType15 securityTrailer;
@@ -192,6 +212,14 @@ public class AcquirerAuthorisationInitiation {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AcquirerAuthorisationInitiation.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -204,7 +232,8 @@ public class AcquirerAuthorisationInitiation {
 				rootElement = "Document";
 				xmlTag = "AcqrrAuthstnInitn";
 				businessArea_lazy = () -> AcquirertoIssuerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AcquirerAuthorisationInitiation.mmHeader, AcquirerAuthorisationInitiation.mmAuthorisationInitiation, AcquirerAuthorisationInitiation.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation.mmHeader, com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation.mmAuthorisationInitiation,
+						com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "cain";
@@ -214,10 +243,16 @@ public class AcquirerAuthorisationInitiation {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AcquirerAuthorisationInitiation.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header17 getHeader() {
 		return header;
 	}
@@ -226,6 +261,7 @@ public class AcquirerAuthorisationInitiation {
 		this.header = header;
 	}
 
+	@XmlElement(name = "AuthstnInitn", required = true)
 	public AcquirerAuthorisationInitiation1 getAuthorisationInitiation() {
 		return authorisationInitiation;
 	}
@@ -234,11 +270,18 @@ public class AcquirerAuthorisationInitiation {
 		this.authorisationInitiation = authorisationInitiation;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType15 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:cain.001.01.01")
+	static public class Document {
+		@XmlElement(name = "AcqrrAuthstnInitn", required = true)
+		public AcquirerAuthorisationInitiation messageBody;
 	}
 }

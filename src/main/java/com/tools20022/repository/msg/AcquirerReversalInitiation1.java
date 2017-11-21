@@ -24,6 +24,10 @@ import com.tools20022.repository.area.cain.AcquirerReversalInitiation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the reversal.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information related to the reversal."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcquirerReversalInitiation1", propOrder = {"environment", "transaction"})
 public class AcquirerReversalInitiation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -167,6 +173,7 @@ public class AcquirerReversalInitiation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardTransactionEnvironment3 getEnvironment() {
 		return environment;
 	}
@@ -175,6 +182,7 @@ public class AcquirerReversalInitiation1 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardTransaction7 getTransaction() {
 		return transaction;
 	}

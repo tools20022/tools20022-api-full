@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,47 +41,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.GlobalNote1Choice
- * GlobalNote1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Issuance1 Issuance1}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmIssuance
- * Asset.mmIssuance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmIssuance
- * SecuritiesPricing.mmIssuance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradingMarket#mmIssuance
- * TradingMarket.mmIssuance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DateTimePeriod#mmIssuance
- * DateTimePeriod.mmIssuance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedIssuance
- * SecuritiesQuantity.mmRelatedIssuance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmIssuance
- * SecuritiesQuantity.mmIssuance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmIssuance
- * CorporateActionEvent.mmIssuance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmInterestRelatedIssuance
- * RateAndAmount.mmInterestRelatedIssuance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmLossRelatedIssuance
- * RateAndAmount.mmLossRelatedIssuance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Capital#mmAssetIssuance
- * Capital.mmAssetIssuance}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -124,6 +84,47 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.GlobalNote1Choice
+ * GlobalNote1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Issuance1 Issuance1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmIssuance
+ * Asset.mmIssuance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmIssuance
+ * SecuritiesPricing.mmIssuance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradingMarket#mmIssuance
+ * TradingMarket.mmIssuance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DateTimePeriod#mmIssuance
+ * DateTimePeriod.mmIssuance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedIssuance
+ * SecuritiesQuantity.mmRelatedIssuance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmIssuance
+ * SecuritiesQuantity.mmIssuance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmIssuance
+ * CorporateActionEvent.mmIssuance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmInterestRelatedIssuance
+ * RateAndAmount.mmInterestRelatedIssuance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmLossRelatedIssuance
+ * RateAndAmount.mmLossRelatedIssuance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Capital#mmAssetIssuance
+ * Capital.mmAssetIssuance}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -153,10 +154,6 @@ public class Issuance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
-	 * Issuance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -383,6 +380,10 @@ public class Issuance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
+	 * Issuance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -413,7 +414,7 @@ public class Issuance {
 					FinancialInstrumentAttributes69.mmIssueDate, FinancialInstrumentAttributes71.mmIssueDate, FinancialInstrumentAttributes75.mmIssueDate, FinancialInstrumentAttributes78.mmIssueDate,
 					FinancialInstrumentAttributes79.mmIssueDate, FinancialInstrumentAttributes81.mmIssueDate, FinancialInstrumentAttributes80.mmIssueDate, FinancialInstrumentAttributes85.mmIssueDate,
 					FinancialInstrumentAttributes84.mmIssueDate, FinancialInstrumentAttributes83.mmIssueDate);
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssueDate";
@@ -421,6 +422,14 @@ public class Issuance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Issuance.class.getMethod("getIssueDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount issueDiscountAllowance;
@@ -434,10 +443,6 @@ public class Issuance {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
-	 * Issuance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -513,6 +518,10 @@ public class Issuance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
+	 * Issuance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -530,7 +539,7 @@ public class Issuance {
 					OtherAmounts9.mmIssueDiscountAllowance, OtherAmounts10.mmIssueDiscountAllowance, OtherAmounts18.mmIssueDiscountAllowance, OtherAmounts24.mmIssueDiscountAllowance, OtherAmounts13.mmIssueDiscountAllowance,
 					OtherAmounts1.mmIssueDiscountAllowance, OtherAmounts16.mmIssueDiscountAllowance, CorporateActionAmounts1.mmIssueDiscountAmount, OtherAmounts28.mmIssueDiscountAllowance, OtherAmounts30.mmIssueDiscountAllowance,
 					OtherAmounts31.mmIssueDiscountAllowance, OtherAmounts35.mmIssueDiscountAllowance, OtherAmounts34.mmIssueDiscountAllowance, OtherAmounts38.mmIssueDiscountAllowance);
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssueDiscountAllowance";
@@ -538,6 +547,14 @@ public class Issuance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Issuance.class.getMethod("getIssueDiscountAllowance", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RateAndAmount interestShortfall;
@@ -561,10 +578,6 @@ public class Issuance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.RateAndAmount
 	 * RateAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
-	 * Issuance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -595,6 +608,10 @@ public class Issuance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
+	 * Issuance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -611,7 +628,7 @@ public class Issuance {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate27.mmInterestShortfall, CorporateActionRate32.mmInterestShortfall, CorporateActionRate35.mmInterestShortfall, CorporateActionRate41.mmInterestShortfall,
 					CorporateActionRate43.mmInterestShortfall, CorporateActionRate56.mmInterestShortfall, CorporateActionRate66.mmInterestShortfall, CorporateActionRate78.mmInterestShortfall);
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestShortfall";
@@ -644,10 +661,6 @@ public class Issuance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.RateAndAmount
 	 * RateAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
-	 * Issuance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -678,6 +691,10 @@ public class Issuance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
+	 * Issuance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -694,7 +711,7 @@ public class Issuance {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate27.mmRealisedLoss, CorporateActionRate32.mmRealisedLoss, CorporateActionRate35.mmRealisedLoss, CorporateActionRate41.mmRealisedLoss, CorporateActionRate43.mmRealisedLoss,
 					CorporateActionRate56.mmRealisedLoss, CorporateActionRate66.mmRealisedLoss, CorporateActionRate78.mmRealisedLoss);
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RealisedLoss";
@@ -716,10 +733,6 @@ public class Issuance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max256Text
 	 * Max256Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
-	 * Issuance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -743,6 +756,10 @@ public class Issuance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
+	 * Issuance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -758,7 +775,7 @@ public class Issuance {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmPurpose, FinancialInstrumentStipulations.mmPurpose, FinancialInstrumentStipulations2.mmPurpose, FutureOrOptionDetails1.mmPurpose, Debt2.mmPurpose,
 					CommonFinancialInstrumentAttributes1.mmPurpose);
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Purpose";
@@ -766,6 +783,14 @@ public class Issuance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Issuance.class.getMethod("getPurpose", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number issueSize;
@@ -778,10 +803,6 @@ public class Issuance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
-	 * Issuance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -799,6 +820,10 @@ public class Issuance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
+	 * Issuance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -812,7 +837,7 @@ public class Issuance {
 	public static final MMBusinessAttribute mmIssueSize = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmIssueSize, FinancialInstrumentStipulations2.mmIssueSize, Issuance1.mmIssueSize, TransparencyDataReport11.mmHoldingsExceedingTotalVotingRightThreshold);
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssueSize";
@@ -820,6 +845,14 @@ public class Issuance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Issuance.class.getMethod("getIssueSize", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesQuantity issueNominalAmount;
@@ -840,10 +873,6 @@ public class Issuance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
-	 * Issuance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -855,6 +884,10 @@ public class Issuance {
 	 * Issuance1.mmFullIssuedAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
+	 * Issuance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -869,7 +902,7 @@ public class Issuance {
 	public static final MMBusinessAssociationEnd mmIssueNominalAmount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Issuance1.mmIssueNominalAmount, Issuance1.mmFullIssuedAmount);
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssueNominalAmount";
@@ -917,7 +950,7 @@ public class Issuance {
 	 */
 	public static final MMBusinessAssociationEnd mmEventInformation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EventInformation";
@@ -963,7 +996,7 @@ public class Issuance {
 	 */
 	public static final MMBusinessAssociationEnd mmIssuedAsset = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuedAsset";
@@ -1011,7 +1044,7 @@ public class Issuance {
 	 */
 	public static final MMBusinessAssociationEnd mmOriginalIssueDiscount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OriginalIssueDiscount";
@@ -1061,7 +1094,7 @@ public class Issuance {
 	 */
 	public static final MMBusinessAssociationEnd mmIssuePlace = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuePlace";
@@ -1091,10 +1124,6 @@ public class Issuance {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.GlobalNoteCode
 	 * GlobalNoteCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
-	 * Issuance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1106,6 +1135,10 @@ public class Issuance {
 	 * GlobalNote1Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
+	 * Issuance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1122,7 +1155,7 @@ public class Issuance {
 	public static final MMBusinessAttribute mmGlobalNoteType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(GlobalNote1Choice.mmCode, GlobalNote1Choice.mmProprietary);
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalNoteType";
@@ -1130,6 +1163,14 @@ public class Issuance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> GlobalNoteCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Issuance.class.getMethod("getGlobalNoteType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Capital> capitalRaised;
@@ -1166,7 +1207,7 @@ public class Issuance {
 	 */
 	public static final MMBusinessAssociationEnd mmCapitalRaised = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CapitalRaised";
@@ -1212,7 +1253,7 @@ public class Issuance {
 	 */
 	public static final MMBusinessAssociationEnd mmSubscriptionPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionPeriod";
@@ -1262,7 +1303,7 @@ public class Issuance {
 	 */
 	public static final MMBusinessAssociationEnd mmMinimum = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Minimum";
@@ -1285,10 +1326,6 @@ public class Issuance {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
-	 * Issuance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1336,6 +1373,10 @@ public class Issuance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Issuance
+	 * Issuance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1351,7 +1392,7 @@ public class Issuance {
 			derivation_lazy = () -> Arrays.asList(CorporateActionPrice8.mmIssuePrice, CorporateActionPrice11.mmIssuePrice, CorporateActionPrice19.mmIssuePrice, CorporateActionPrice20.mmIssuePrice, CorporateActionPrice29.mmIssuePrice,
 					CorporateActionPrice35.mmIssuePrice, FutureOrOptionDetails1.mmIssuePrice, CorporateActionPrice1.mmIssuePrice, Issuance1.mmIssuePrice, CorporateActionPrice44.mmIssuePrice, CorporateActionPrice52.mmIssuePrice,
 					CorporateActionPrice60.mmIssuePrice, CorporateActionPrice62.mmIssuePrice, TransparencyDataReport11.mmIssuanceSize);
-			elementContext_lazy = () -> Issuance.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuePrice";
@@ -1359,6 +1400,14 @@ public class Issuance {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Issuance.class.getMethod("getIssuePrice", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -1373,10 +1422,18 @@ public class Issuance {
 						com.tools20022.repository.entity.DateTimePeriod.mmIssuance, com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedIssuance, com.tools20022.repository.entity.SecuritiesQuantity.mmIssuance,
 						com.tools20022.repository.entity.CorporateActionEvent.mmIssuance, com.tools20022.repository.entity.RateAndAmount.mmInterestRelatedIssuance, com.tools20022.repository.entity.RateAndAmount.mmLossRelatedIssuance,
 						com.tools20022.repository.entity.Capital.mmAssetIssuance);
-				element_lazy = () -> Arrays.asList(Issuance.mmIssueDate, Issuance.mmIssueDiscountAllowance, Issuance.mmInterestShortfall, Issuance.mmRealisedLoss, Issuance.mmPurpose, Issuance.mmIssueSize, Issuance.mmIssueNominalAmount,
-						Issuance.mmEventInformation, Issuance.mmIssuedAsset, Issuance.mmOriginalIssueDiscount, Issuance.mmIssuePlace, Issuance.mmGlobalNoteType, Issuance.mmCapitalRaised, Issuance.mmSubscriptionPeriod, Issuance.mmMinimum,
-						Issuance.mmIssuePrice);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Issuance.mmIssueDate, com.tools20022.repository.entity.Issuance.mmIssueDiscountAllowance, com.tools20022.repository.entity.Issuance.mmInterestShortfall,
+						com.tools20022.repository.entity.Issuance.mmRealisedLoss, com.tools20022.repository.entity.Issuance.mmPurpose, com.tools20022.repository.entity.Issuance.mmIssueSize,
+						com.tools20022.repository.entity.Issuance.mmIssueNominalAmount, com.tools20022.repository.entity.Issuance.mmEventInformation, com.tools20022.repository.entity.Issuance.mmIssuedAsset,
+						com.tools20022.repository.entity.Issuance.mmOriginalIssueDiscount, com.tools20022.repository.entity.Issuance.mmIssuePlace, com.tools20022.repository.entity.Issuance.mmGlobalNoteType,
+						com.tools20022.repository.entity.Issuance.mmCapitalRaised, com.tools20022.repository.entity.Issuance.mmSubscriptionPeriod, com.tools20022.repository.entity.Issuance.mmMinimum,
+						com.tools20022.repository.entity.Issuance.mmIssuePrice);
 				derivationComponent_lazy = () -> Arrays.asList(GlobalNote1Choice.mmObject(), Issuance1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Issuance.class;
 			}
 		});
 		return mmObject_lazy.get();

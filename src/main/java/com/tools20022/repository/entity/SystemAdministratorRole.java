@@ -64,6 +64,11 @@ public class SystemAdministratorRole extends SystemPartyRole {
 				definition = "Party that administers a system.";
 				superType_lazy = () -> SystemPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SystemAdministratorRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

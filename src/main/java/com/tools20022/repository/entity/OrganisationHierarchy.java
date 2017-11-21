@@ -35,6 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationHierarchy#mmOrganisation
+ * OrganisationHierarchy.mmOrganisation}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -42,14 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationHierarchy
  * Organisation.mmOrganisationHierarchy}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationHierarchy#mmOrganisation
- * OrganisationHierarchy.mmOrganisation}</li>
  * </ul>
  * </li>
  * <li>
@@ -109,7 +109,7 @@ public class OrganisationHierarchy {
 	 */
 	public static final MMBusinessAssociationEnd mmOrganisation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> OrganisationHierarchy.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationHierarchy.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Organisation";
@@ -130,7 +130,12 @@ public class OrganisationHierarchy {
 				name = "OrganisationHierarchy";
 				definition = "Description of the structure of a company.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Organisation.mmOrganisationHierarchy);
-				element_lazy = () -> Arrays.asList(OrganisationHierarchy.mmOrganisation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.OrganisationHierarchy.mmOrganisation);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return OrganisationHierarchy.class;
 			}
 		});
 		return mmObject_lazy.get();

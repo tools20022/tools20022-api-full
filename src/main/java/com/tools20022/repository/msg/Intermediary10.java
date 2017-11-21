@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party that provides services to investors relating to financial products.
@@ -86,6 +90,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Intermediary10", propOrder = {"identification", "account", "role", "extendedRole", "contactPerson"})
 public class Intermediary10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -413,6 +419,7 @@ public class Intermediary10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification2Choice getIdentification() {
 		return identification;
 	}
@@ -421,6 +428,7 @@ public class Intermediary10 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Acct")
 	public Account7 getAccount() {
 		return account;
 	}
@@ -429,6 +437,7 @@ public class Intermediary10 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "Role")
 	public InvestmentFundRole2Code getRole() {
 		return role;
 	}
@@ -437,6 +446,7 @@ public class Intermediary10 {
 		this.role = role;
 	}
 
+	@XmlElement(name = "XtndedRole")
 	public Extended350Code getExtendedRole() {
 		return extendedRole;
 	}
@@ -445,6 +455,7 @@ public class Intermediary10 {
 		this.extendedRole = extendedRole;
 	}
 
+	@XmlElement(name = "CtctPrsn")
 	public ContactIdentification2 getContactPerson() {
 		return contactPerson;
 	}

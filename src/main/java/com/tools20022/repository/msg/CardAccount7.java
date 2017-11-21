@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Customer account information.
@@ -87,6 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardAccount3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardAccount7", propOrder = {"selectionMethod", "selectedAccountType", "accountName", "accountOwner", "currency", "accountIdentifier", "servicer"})
 public class CardAccount7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -562,6 +568,7 @@ public class CardAccount7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SelctnMtd")
 	public AccountChoiceMethod1Code getSelectionMethod() {
 		return selectionMethod;
 	}
@@ -570,6 +577,7 @@ public class CardAccount7 {
 		this.selectionMethod = selectionMethod;
 	}
 
+	@XmlElement(name = "SelctdAcctTp")
 	public CardAccountType3Code getSelectedAccountType() {
 		return selectedAccountType;
 	}
@@ -578,6 +586,7 @@ public class CardAccount7 {
 		this.selectedAccountType = selectedAccountType;
 	}
 
+	@XmlElement(name = "AcctNm")
 	public Max70Text getAccountName() {
 		return accountName;
 	}
@@ -586,6 +595,7 @@ public class CardAccount7 {
 		this.accountName = accountName;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public NameAndAddress3 getAccountOwner() {
 		return accountOwner;
 	}
@@ -594,6 +604,7 @@ public class CardAccount7 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -602,6 +613,7 @@ public class CardAccount7 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "AcctIdr")
 	public AccountIdentification31Choice getAccountIdentifier() {
 		return accountIdentifier;
 	}
@@ -610,6 +622,7 @@ public class CardAccount7 {
 		this.accountIdentifier = accountIdentifier;
 	}
 
+	@XmlElement(name = "Svcr")
 	public PartyIdentification72Choice getServicer() {
 		return servicer;
 	}

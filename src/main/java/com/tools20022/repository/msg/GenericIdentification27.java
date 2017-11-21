@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Scheme;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to an identification, eg, party identification or account
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GenericIdentification27", propOrder = {"identification", "schemeName", "issuer"})
 public class GenericIdentification27 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -231,6 +237,7 @@ public class GenericIdentification27 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max4AlphaNumericText getIdentification() {
 		return identification;
 	}
@@ -239,6 +246,7 @@ public class GenericIdentification27 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SchmeNm")
 	public Max4AlphaNumericText getSchemeName() {
 		return schemeName;
 	}
@@ -247,6 +255,7 @@ public class GenericIdentification27 {
 		this.schemeName = schemeName;
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public Max4AlphaNumericText getIssuer() {
 		return issuer;
 	}

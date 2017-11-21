@@ -36,6 +36,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account to or from which a cash entry is made.
@@ -86,6 +90,8 @@ import java.util.function.Supplier;
  * definition} = "Account to or from which a cash entry is made."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccount12", propOrder = {"identification", "name", "type", "extendedType", "currency", "status"})
 public class CashAccount12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -440,6 +446,7 @@ public class CashAccount12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public CashAccountIdentification1Choice getIdentification() {
 		return identification;
 	}
@@ -448,6 +455,7 @@ public class CashAccount12 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max35Text getName() {
 		return name;
 	}
@@ -456,6 +464,7 @@ public class CashAccount12 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Tp")
 	public CashAccountType1Code getType() {
 		return type;
 	}
@@ -464,6 +473,7 @@ public class CashAccount12 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XtndedTp")
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
@@ -472,6 +482,7 @@ public class CashAccount12 {
 		this.extendedType = extendedType;
 	}
 
+	@XmlElement(name = "Ccy", required = true)
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -480,6 +491,7 @@ public class CashAccount12 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public AccountStatus1Code getStatus() {
 		return status;
 	}

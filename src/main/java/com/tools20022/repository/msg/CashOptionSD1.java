@@ -29,6 +29,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action option cash
@@ -101,6 +105,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashOptionSD1", propOrder = {"placeAndName", "reinvestmentIncomeClassification", "DTCPayMethod", "DTCPayOrder", "entitlementCalculationMethod", "estimatedRateFlag", "NRATaxReportableFlag", "protectChargeFlag",
+		"declaredCashRate", "declaredGrossRate", "declaredNetRate", "declaredFeeRate", "DTCUSTaxInstructionPeriod"})
 public class CashOptionSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -791,6 +798,7 @@ public class CashOptionSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -799,6 +807,7 @@ public class CashOptionSD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "RinvstmtIncmClssfctn")
 	public ReinvestmentIncomeClassification1Code getReinvestmentIncomeClassification() {
 		return reinvestmentIncomeClassification;
 	}
@@ -807,6 +816,7 @@ public class CashOptionSD1 {
 		this.reinvestmentIncomeClassification = reinvestmentIncomeClassification;
 	}
 
+	@XmlElement(name = "DTCPayMtd")
 	public Max3Text getDTCPayMethod() {
 		return dTCPayMethod;
 	}
@@ -815,6 +825,7 @@ public class CashOptionSD1 {
 		this.dTCPayMethod = dTCPayMethod;
 	}
 
+	@XmlElement(name = "DTCPayOrdr")
 	public Max3Text getDTCPayOrder() {
 		return dTCPayOrder;
 	}
@@ -823,6 +834,7 @@ public class CashOptionSD1 {
 		this.dTCPayOrder = dTCPayOrder;
 	}
 
+	@XmlElement(name = "EntitlmntClctnMtd")
 	public DTCEntitlementCalculationMethod1Code getEntitlementCalculationMethod() {
 		return entitlementCalculationMethod;
 	}
@@ -831,6 +843,7 @@ public class CashOptionSD1 {
 		this.entitlementCalculationMethod = entitlementCalculationMethod;
 	}
 
+	@XmlElement(name = "EstmtdRateFlg")
 	public YesNoIndicator getEstimatedRateFlag() {
 		return estimatedRateFlag;
 	}
@@ -839,6 +852,7 @@ public class CashOptionSD1 {
 		this.estimatedRateFlag = estimatedRateFlag;
 	}
 
+	@XmlElement(name = "NRATaxRptblFlg")
 	public YesNoIndicator getNRATaxReportableFlag() {
 		return nRATaxReportableFlag;
 	}
@@ -847,6 +861,7 @@ public class CashOptionSD1 {
 		this.nRATaxReportableFlag = nRATaxReportableFlag;
 	}
 
+	@XmlElement(name = "PrtctChrgFlg")
 	public YesNoIndicator getProtectChargeFlag() {
 		return protectChargeFlag;
 	}
@@ -855,6 +870,7 @@ public class CashOptionSD1 {
 		this.protectChargeFlag = protectChargeFlag;
 	}
 
+	@XmlElement(name = "DclrdCshRate")
 	public PriceFormatSD1Choice getDeclaredCashRate() {
 		return declaredCashRate;
 	}
@@ -863,6 +879,7 @@ public class CashOptionSD1 {
 		this.declaredCashRate = declaredCashRate;
 	}
 
+	@XmlElement(name = "DclrdGrssRate")
 	public PriceFormatSD1Choice getDeclaredGrossRate() {
 		return declaredGrossRate;
 	}
@@ -871,6 +888,7 @@ public class CashOptionSD1 {
 		this.declaredGrossRate = declaredGrossRate;
 	}
 
+	@XmlElement(name = "DclrdNetRate")
 	public PriceFormatSD1Choice getDeclaredNetRate() {
 		return declaredNetRate;
 	}
@@ -879,6 +897,7 @@ public class CashOptionSD1 {
 		this.declaredNetRate = declaredNetRate;
 	}
 
+	@XmlElement(name = "DclrdFeeRate")
 	public PriceFormatSD1Choice getDeclaredFeeRate() {
 		return declaredFeeRate;
 	}
@@ -887,6 +906,7 @@ public class CashOptionSD1 {
 		this.declaredFeeRate = declaredFeeRate;
 	}
 
+	@XmlElement(name = "DTCUSTaxInstrPrd")
 	public Period3 getDTCUSTaxInstructionPeriod() {
 		return dTCUSTaxInstructionPeriod;
 	}

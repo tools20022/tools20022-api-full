@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.CashBalance1;
 import com.tools20022.repository.msg.CashBalance2;
 import com.tools20022.repository.msg.CashBalance3;
 import com.tools20022.repository.msg.CashBalance7;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,21 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Limit#mmRelatedDebitCreditFacility
- * Limit.mmRelatedDebitCreditFacility}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedDebitCreditFacility
- * Interest.mmRelatedDebitCreditFacility}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.CashAccountService
- * CashAccountService}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -65,6 +51,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.DebitCreditFacility#mmCreditDebitIndicator
  * DebitCreditFacility.mmCreditDebitIndicator}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.CashAccountService
+ * CashAccountService}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Limit#mmRelatedDebitCreditFacility
+ * Limit.mmRelatedDebitCreditFacility}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedDebitCreditFacility
+ * Interest.mmRelatedDebitCreditFacility}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,11 +105,6 @@ public class DebitCreditFacility extends CashAccountService {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Limit Limit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DebitCreditFacility
-	 * DebitCreditFacility}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -123,6 +119,11 @@ public class DebitCreditFacility extends CashAccountService {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DebitCreditFacility
+	 * DebitCreditFacility}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -136,7 +137,7 @@ public class DebitCreditFacility extends CashAccountService {
 	public static final MMBusinessAssociationEnd mmCreditLine = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashBalance1.mmCreditLine, CashBalance3.mmCreditLine, CashBalance2.mmCreditLine, CashBalance7.mmCreditLine);
-			elementContext_lazy = () -> DebitCreditFacility.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DebitCreditFacility.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditLine";
@@ -186,7 +187,7 @@ public class DebitCreditFacility extends CashAccountService {
 	 */
 	public static final MMBusinessAssociationEnd mmCashAccountInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> DebitCreditFacility.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DebitCreditFacility.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccountInterest";
@@ -228,7 +229,7 @@ public class DebitCreditFacility extends CashAccountService {
 	 */
 	public static final MMBusinessAttribute mmCreditDebitIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> DebitCreditFacility.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DebitCreditFacility.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
@@ -236,6 +237,14 @@ public class DebitCreditFacility extends CashAccountService {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DebitCreditFacility.class.getMethod("getCreditDebitIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -248,7 +257,13 @@ public class DebitCreditFacility extends CashAccountService {
 				definition = "Specifies the conditions for overdraft on the account or for positive amounts.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Limit.mmRelatedDebitCreditFacility, com.tools20022.repository.entity.Interest.mmRelatedDebitCreditFacility);
 				superType_lazy = () -> CashAccountService.mmObject();
-				element_lazy = () -> Arrays.asList(DebitCreditFacility.mmCreditLine, DebitCreditFacility.mmCashAccountInterest, DebitCreditFacility.mmCreditDebitIndicator);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DebitCreditFacility.mmCreditLine, com.tools20022.repository.entity.DebitCreditFacility.mmCashAccountInterest,
+						com.tools20022.repository.entity.DebitCreditFacility.mmCreditDebitIndicator);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DebitCreditFacility.class;
 			}
 		});
 		return mmObject_lazy.get();

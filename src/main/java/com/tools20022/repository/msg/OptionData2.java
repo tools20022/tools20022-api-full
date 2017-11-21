@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of data which contains the link to a previously notified option trade.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Set of data which contains the link to a previously notified option trade."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OptionData2", propOrder = {"tradeDate", "notificationIdentification", "commonReference", "relatedReference", "amendOrCancelReason", "option"})
 public class OptionData2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -369,6 +375,7 @@ public class OptionData2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
@@ -377,6 +384,7 @@ public class OptionData2 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "NtfctnId", required = true)
 	public Max35Text getNotificationIdentification() {
 		return notificationIdentification;
 	}
@@ -385,6 +393,7 @@ public class OptionData2 {
 		this.notificationIdentification = notificationIdentification;
 	}
 
+	@XmlElement(name = "CmonRef")
 	public Max35Text getCommonReference() {
 		return commonReference;
 	}
@@ -393,6 +402,7 @@ public class OptionData2 {
 		this.commonReference = commonReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public Max35Text getRelatedReference() {
 		return relatedReference;
 	}
@@ -401,6 +411,7 @@ public class OptionData2 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "AmdOrCclRsn")
 	public Max35Text getAmendOrCancelReason() {
 		return amendOrCancelReason;
 	}
@@ -409,6 +420,7 @@ public class OptionData2 {
 		this.amendOrCancelReason = amendOrCancelReason;
 	}
 
+	@XmlElement(name = "Optn", required = true)
 	public Option3 getOption() {
 		return option;
 	}

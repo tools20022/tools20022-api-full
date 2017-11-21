@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.PremiumCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Commercial agreement in which the buyer agrees to pay the seller an amount of
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PremiumAmount2", propOrder = {"premiumQuote", "amount", "settlementDate", "settlementParty"})
 public class PremiumAmount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -310,6 +316,7 @@ public class PremiumAmount2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrmQt")
 	public PremiumQuote1Choice getPremiumQuote() {
 		return premiumQuote;
 	}
@@ -318,6 +325,7 @@ public class PremiumAmount2 {
 		this.premiumQuote = premiumQuote;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -326,6 +334,7 @@ public class PremiumAmount2 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
@@ -334,6 +343,7 @@ public class PremiumAmount2 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "SttlmPty")
 	public PartyIdentification8Choice getSettlementParty() {
 		return settlementParty;
 	}

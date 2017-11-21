@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Presentation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Communication details related to the registered currency control contract.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Communication details related to the registered currency control contract."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegisteredContractCommunication1", propOrder = {"method", "date"})
 public class RegisteredContractCommunication1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class RegisteredContractCommunication1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Mtd", required = true)
 	public CommunicationMethod4Code getMethod() {
 		return method;
 	}
@@ -185,6 +192,7 @@ public class RegisteredContractCommunication1 {
 		this.method = method;
 	}
 
+	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}

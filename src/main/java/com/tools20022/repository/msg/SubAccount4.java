@@ -29,6 +29,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Business relationship between two entities; one entity is the account owner,
@@ -71,6 +75,8 @@ import java.util.function.Supplier;
  * SubAccount1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubAccount4", propOrder = {"identification", "name", "characteristic"})
 public class SubAccount4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -260,6 +266,7 @@ public class SubAccount4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentification26 getIdentification() {
 		return identification;
 	}
@@ -268,6 +275,7 @@ public class SubAccount4 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max35Text getName() {
 		return name;
 	}
@@ -276,6 +284,7 @@ public class SubAccount4 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Chrtc")
 	public Max35Text getCharacteristic() {
 		return characteristic;
 	}

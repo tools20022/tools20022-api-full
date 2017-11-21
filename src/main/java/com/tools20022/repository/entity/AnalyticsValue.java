@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,15 +35,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AnalyticsCalculation#mmValue
- * AnalyticsCalculation.mmValue}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -56,6 +48,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.AnalyticsValue#mmAnalyticsCalculation
  * AnalyticsValue.mmAnalyticsCalculation}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AnalyticsCalculation#mmValue
+ * AnalyticsCalculation.mmValue}</li>
  * </ul>
  * </li>
  * <li>
@@ -105,7 +106,7 @@ public class AnalyticsValue {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> AnalyticsValue.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AnalyticsValue.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -113,6 +114,14 @@ public class AnalyticsValue {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AnalyticsValue.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate rate;
@@ -144,7 +153,7 @@ public class AnalyticsValue {
 	 */
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> AnalyticsValue.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AnalyticsValue.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
@@ -152,6 +161,14 @@ public class AnalyticsValue {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AnalyticsValue.class.getMethod("getRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Number numberOfYears;
@@ -182,7 +199,7 @@ public class AnalyticsValue {
 	 */
 	public static final MMBusinessAttribute mmNumberOfYears = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> AnalyticsValue.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AnalyticsValue.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfYears";
@@ -190,6 +207,14 @@ public class AnalyticsValue {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AnalyticsValue.class.getMethod("getNumberOfYears", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AnalyticsCalculation analyticsCalculation;
@@ -230,7 +255,7 @@ public class AnalyticsValue {
 	 */
 	public static final MMBusinessAssociationEnd mmAnalyticsCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> AnalyticsValue.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.AnalyticsValue.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AnalyticsCalculation";
@@ -251,7 +276,13 @@ public class AnalyticsValue {
 				name = "AnalyticsValue";
 				definition = "Value given to a price analytic.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AnalyticsCalculation.mmValue);
-				element_lazy = () -> Arrays.asList(AnalyticsValue.mmAmount, AnalyticsValue.mmRate, AnalyticsValue.mmNumberOfYears, AnalyticsValue.mmAnalyticsCalculation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AnalyticsValue.mmAmount, com.tools20022.repository.entity.AnalyticsValue.mmRate, com.tools20022.repository.entity.AnalyticsValue.mmNumberOfYears,
+						com.tools20022.repository.entity.AnalyticsValue.mmAnalyticsCalculation);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AnalyticsValue.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment transaction with an aggregated amount.
@@ -76,6 +80,8 @@ import java.util.List;
  * AggregationTransaction1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AggregationTransaction2", propOrder = {"firstPaymentDateTime", "lastPaymentDateTime", "numberOfPayments", "individualPayment"})
 public class AggregationTransaction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -300,6 +306,7 @@ public class AggregationTransaction2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FrstPmtDtTm")
 	public ISODateTime getFirstPaymentDateTime() {
 		return firstPaymentDateTime;
 	}
@@ -308,6 +315,7 @@ public class AggregationTransaction2 {
 		this.firstPaymentDateTime = firstPaymentDateTime;
 	}
 
+	@XmlElement(name = "LastPmtDtTm")
 	public ISODateTime getLastPaymentDateTime() {
 		return lastPaymentDateTime;
 	}
@@ -316,6 +324,7 @@ public class AggregationTransaction2 {
 		this.lastPaymentDateTime = lastPaymentDateTime;
 	}
 
+	@XmlElement(name = "NbOfPmts")
 	public Number getNumberOfPayments() {
 		return numberOfPayments;
 	}
@@ -324,6 +333,7 @@ public class AggregationTransaction2 {
 		this.numberOfPayments = numberOfPayments;
 	}
 
+	@XmlElement(name = "IndvPmt")
 	public List<DetailedAmount14> getIndividualPayment() {
 		return individualPayment;
 	}

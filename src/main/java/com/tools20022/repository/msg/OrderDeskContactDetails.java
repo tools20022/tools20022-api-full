@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Communication device number or electronic address used for communication.
@@ -99,6 +103,9 @@ import java.util.List;
  * "Communication device number or electronic address used for communication."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderDeskContactDetails", propOrder = {"name", "postalAddress", "phoneNumber", "faxNumber", "emailAddress", "identification", "applicationForms", "signatureRequiredInitialSubscription",
+		"signatureRequiredSubsequentSubscription", "signatureRequiredRedemption", "subscriptionProcessingCharacteristics", "redemptionProcessingCharacteristics", "settlementDetails"})
 public class OrderDeskContactDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -759,6 +766,7 @@ public class OrderDeskContactDetails {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max350Text getName() {
 		return name;
 	}
@@ -767,6 +775,7 @@ public class OrderDeskContactDetails {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PstlAdr", required = true)
 	public PostalAddress1 getPostalAddress() {
 		return postalAddress;
 	}
@@ -775,6 +784,7 @@ public class OrderDeskContactDetails {
 		this.postalAddress = postalAddress;
 	}
 
+	@XmlElement(name = "PhneNb", required = true)
 	public PhoneNumber getPhoneNumber() {
 		return phoneNumber;
 	}
@@ -783,6 +793,7 @@ public class OrderDeskContactDetails {
 		this.phoneNumber = phoneNumber;
 	}
 
+	@XmlElement(name = "FaxNb", required = true)
 	public PhoneNumber getFaxNumber() {
 		return faxNumber;
 	}
@@ -791,6 +802,7 @@ public class OrderDeskContactDetails {
 		this.faxNumber = faxNumber;
 	}
 
+	@XmlElement(name = "EmailAdr")
 	public Max256Text getEmailAddress() {
 		return emailAddress;
 	}
@@ -799,6 +811,7 @@ public class OrderDeskContactDetails {
 		this.emailAddress = emailAddress;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public BICIdentifier getIdentification() {
 		return identification;
 	}
@@ -807,6 +820,7 @@ public class OrderDeskContactDetails {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "ApplFrms", required = true)
 	public Forms getApplicationForms() {
 		return applicationForms;
 	}
@@ -815,6 +829,7 @@ public class OrderDeskContactDetails {
 		this.applicationForms = applicationForms;
 	}
 
+	@XmlElement(name = "SgntrReqrdInitlSbcpt", required = true)
 	public Forms getSignatureRequiredInitialSubscription() {
 		return signatureRequiredInitialSubscription;
 	}
@@ -823,6 +838,7 @@ public class OrderDeskContactDetails {
 		this.signatureRequiredInitialSubscription = signatureRequiredInitialSubscription;
 	}
 
+	@XmlElement(name = "SgntrReqrdSbsqntSbcpt", required = true)
 	public Forms getSignatureRequiredSubsequentSubscription() {
 		return signatureRequiredSubsequentSubscription;
 	}
@@ -831,6 +847,7 @@ public class OrderDeskContactDetails {
 		this.signatureRequiredSubsequentSubscription = signatureRequiredSubsequentSubscription;
 	}
 
+	@XmlElement(name = "SgntrReqrdRed", required = true)
 	public Forms getSignatureRequiredRedemption() {
 		return signatureRequiredRedemption;
 	}
@@ -839,6 +856,7 @@ public class OrderDeskContactDetails {
 		this.signatureRequiredRedemption = signatureRequiredRedemption;
 	}
 
+	@XmlElement(name = "SbcptPrcgChrtcs", required = true)
 	public ProcessingCharacteristics1 getSubscriptionProcessingCharacteristics() {
 		return subscriptionProcessingCharacteristics;
 	}
@@ -847,6 +865,7 @@ public class OrderDeskContactDetails {
 		this.subscriptionProcessingCharacteristics = subscriptionProcessingCharacteristics;
 	}
 
+	@XmlElement(name = "RedPrcgChrtcs", required = true)
 	public ProcessingCharacteristics1 getRedemptionProcessingCharacteristics() {
 		return redemptionProcessingCharacteristics;
 	}
@@ -855,6 +874,7 @@ public class OrderDeskContactDetails {
 		this.redemptionProcessingCharacteristics = redemptionProcessingCharacteristics;
 	}
 
+	@XmlElement(name = "SttlmDtls", required = true)
 	public List<CashAccount14> getSettlementDetails() {
 		return settlementDetails;
 	}

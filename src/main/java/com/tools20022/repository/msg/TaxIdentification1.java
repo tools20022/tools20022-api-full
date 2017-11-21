@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about tax identification (description, taxation country).
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxIdentification1", propOrder = {"taxIdentificationNumber", "description", "taxationCountry"})
 public class TaxIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -238,6 +244,7 @@ public class TaxIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TaxIdNb", required = true)
 	public Max35Text getTaxIdentificationNumber() {
 		return taxIdentificationNumber;
 	}
@@ -246,6 +253,7 @@ public class TaxIdentification1 {
 		this.taxIdentificationNumber = taxIdentificationNumber;
 	}
 
+	@XmlElement(name = "Desc", required = true)
 	public Max35Text getDescription() {
 		return description;
 	}
@@ -254,6 +262,7 @@ public class TaxIdentification1 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "TaxtnCtry", required = true)
 	public CountryCode getTaxationCountry() {
 		return taxationCountry;
 	}

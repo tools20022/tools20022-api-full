@@ -32,6 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} = "Swiss Interbank Clearing Ltd; BC Identifier"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "SW[0-9]{3,5}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -68,6 +70,7 @@ public class SwissBCIdentifier {
 				name = "SwissBCIdentifier";
 				definition = "Swiss Bank Code. Identifies Swiss institutions on the Swiss national clearing system.";
 				identificationScheme = "Swiss Interbank Clearing Ltd; BC Identifier";
+				pattern = "SW[0-9]{3,5}";
 			}
 		});
 		return mmObject_lazy.get();

@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Independent amount could be defined at a trade level or portfolio level. It
@@ -71,6 +75,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AggregatedIndependentAmount1", propOrder = {"trade", "valueAtRisk", "netOpenPosition", "otherAmount"})
 public class AggregatedIndependentAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -296,6 +302,7 @@ public class AggregatedIndependentAmount1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Trad")
 	public IndependentAmount1 getTrade() {
 		return trade;
 	}
@@ -304,6 +311,7 @@ public class AggregatedIndependentAmount1 {
 		this.trade = trade;
 	}
 
+	@XmlElement(name = "ValAtRsk")
 	public IndependentAmount1 getValueAtRisk() {
 		return valueAtRisk;
 	}
@@ -312,6 +320,7 @@ public class AggregatedIndependentAmount1 {
 		this.valueAtRisk = valueAtRisk;
 	}
 
+	@XmlElement(name = "NetOpnPos")
 	public IndependentAmount1 getNetOpenPosition() {
 		return netOpenPosition;
 	}
@@ -320,6 +329,7 @@ public class AggregatedIndependentAmount1 {
 		this.netOpenPosition = netOpenPosition;
 	}
 
+	@XmlElement(name = "OthrAmt")
 	public List<IndependentAmount2> getOtherAmount() {
 		return otherAmount;
 	}

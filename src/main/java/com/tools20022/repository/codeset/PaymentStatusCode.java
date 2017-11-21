@@ -30,43 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code
- * TransactionGroupStatus1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionIndividualStatus1Code
- * TransactionIndividualStatus1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code
- * TransactionGroupStatus3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionIndividualStatus3Code
- * TransactionIndividualStatus3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.GroupCancellationStatus1Code
- * GroupCancellationStatus1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationIndividualStatus1Code
- * CancellationIndividualStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code
- * PartialGroupStatus2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartialGroupStatus1Code
- * PartialGroupStatus1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus2Code
- * TransactionGroupStatus2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionIndividualStatus2Code
- * TransactionIndividualStatus2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ValidationGroupStatus1Code
- * ValidationGroupStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ValidationGroupStatus2Code
- * ValidationGroupStatus2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -111,6 +74,43 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PaymentStatusCode#mmPendingCancellationRequest
  * PaymentStatusCode.mmPendingCancellationRequest}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code
+ * TransactionGroupStatus1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionIndividualStatus1Code
+ * TransactionIndividualStatus1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code
+ * TransactionGroupStatus3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionIndividualStatus3Code
+ * TransactionIndividualStatus3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.GroupCancellationStatus1Code
+ * GroupCancellationStatus1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationIndividualStatus1Code
+ * CancellationIndividualStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code
+ * PartialGroupStatus2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartialGroupStatus1Code
+ * PartialGroupStatus1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus2Code
+ * TransactionGroupStatus2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionIndividualStatus2Code
+ * TransactionIndividualStatus2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ValidationGroupStatus1Code
+ * ValidationGroupStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ValidationGroupStatus2Code
+ * ValidationGroupStatus2Code}</li>
  * </ul>
  * </li>
  * <li>

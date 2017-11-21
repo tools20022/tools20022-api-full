@@ -35,6 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
+ * UndertakingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -58,10 +62,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Undertaking3.mmBeneficiary}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
- * UndertakingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -92,6 +92,11 @@ public class UndertakingBeneficiary extends UndertakingPartyRole {
 				derivationElement_lazy = () -> Arrays.asList(Amendment3.mmNewBeneficiary, Undertaking2.mmBeneficiary, Undertaking1.mmBeneficiary, Undertaking4.mmBeneficiary, Undertaking3.mmBeneficiary);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(Beneficiary1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return UndertakingBeneficiary.class;
 			}
 		});
 		return mmObject_lazy.get();

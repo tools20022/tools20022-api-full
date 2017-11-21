@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CorporateActionEventStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the status of the details of the corporate action event.
@@ -98,6 +102,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionProcessingStatus1Choice", propOrder = {"eventStatus", "forInformationOnlyIndicator"})
 public class CorporateActionProcessingStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -213,6 +219,7 @@ public class CorporateActionProcessingStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EvtSts", required = true)
 	public CorporateActionEventStatus1 getEventStatus() {
 		return eventStatus;
 	}
@@ -221,6 +228,7 @@ public class CorporateActionProcessingStatus1Choice {
 		this.eventStatus = eventStatus;
 	}
 
+	@XmlElement(name = "ForInfOnlyInd", required = true)
 	public YesNoIndicator getForInformationOnlyIndicator() {
 		return forInformationOnlyIndicator;
 	}

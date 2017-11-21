@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.ProprietaryStatusAndReason3;
 import com.tools20022.repository.msg.Reason3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the status and the reason of the operation.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ProcessingStatus36Choice", propOrder = {"acknowledgedAccepted", "pendingProcessing", "rejected", "completed", "proprietary"})
 public class ProcessingStatus36Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -374,6 +380,7 @@ public class ProcessingStatus36Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AckdAccptd", required = true)
 	public Reason3 getAcknowledgedAccepted() {
 		return acknowledgedAccepted;
 	}
@@ -382,6 +389,7 @@ public class ProcessingStatus36Choice {
 		this.acknowledgedAccepted = acknowledgedAccepted;
 	}
 
+	@XmlElement(name = "PdgPrcg", required = true)
 	public Reason3Choice getPendingProcessing() {
 		return pendingProcessing;
 	}
@@ -390,6 +398,7 @@ public class ProcessingStatus36Choice {
 		this.pendingProcessing = pendingProcessing;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public Reason3Choice getRejected() {
 		return rejected;
 	}
@@ -398,6 +407,7 @@ public class ProcessingStatus36Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Cmpltd", required = true)
 	public Reason3 getCompleted() {
 		return completed;
 	}
@@ -406,6 +416,7 @@ public class ProcessingStatus36Choice {
 		this.completed = completed;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason3 getProprietary() {
 		return proprietary;
 	}

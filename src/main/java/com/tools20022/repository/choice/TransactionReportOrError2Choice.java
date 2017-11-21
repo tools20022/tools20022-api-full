@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.Transactions6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between transactions and booked entries held at the transaction
@@ -67,6 +71,8 @@ import java.util.List;
  * TransactionReportOrError1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionReportOrError2Choice", propOrder = {"businessReport", "operationalError"})
 public class TransactionReportOrError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class TransactionReportOrError2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BizRpt", required = true)
 	public Transactions6 getBusinessReport() {
 		return businessReport;
 	}
@@ -189,6 +196,7 @@ public class TransactionReportOrError2Choice {
 		this.businessReport = businessReport;
 	}
 
+	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling4> getOperationalError() {
 		return operationalError;
 	}

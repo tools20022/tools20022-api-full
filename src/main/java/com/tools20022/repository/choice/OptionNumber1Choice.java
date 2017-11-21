@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between an number and a option number in a code format.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Choice between an number and a option number in a code format."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OptionNumber1Choice", propOrder = {"number", "code"})
 public class OptionNumber1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class OptionNumber1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nb", required = true)
 	public Exact3NumericText getNumber() {
 		return number;
 	}
@@ -169,6 +176,7 @@ public class OptionNumber1Choice {
 		this.number = number;
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public OptionNumber1Code getCode() {
 		return code;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information such as the registration details.
@@ -76,6 +80,8 @@ import java.util.List;
  * "Provides additional information such as the registration details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNarrative12", propOrder = {"additionalText", "narrativeVersion", "registrationDetails", "partyContactNarrative", "disclaimer", "basketOrIndexInformation"})
 public class CorporateActionNarrative12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -379,6 +385,7 @@ public class CorporateActionNarrative12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlTxt")
 	public List<RestrictedFINXMax350Text> getAdditionalText() {
 		return additionalText;
 	}
@@ -387,6 +394,7 @@ public class CorporateActionNarrative12 {
 		this.additionalText = additionalText;
 	}
 
+	@XmlElement(name = "NrrtvVrsn")
 	public List<RestrictedFINXMax350Text> getNarrativeVersion() {
 		return narrativeVersion;
 	}
@@ -395,6 +403,7 @@ public class CorporateActionNarrative12 {
 		this.narrativeVersion = narrativeVersion;
 	}
 
+	@XmlElement(name = "RegnDtls")
 	public List<RestrictedFINXMax350Text> getRegistrationDetails() {
 		return registrationDetails;
 	}
@@ -403,6 +412,7 @@ public class CorporateActionNarrative12 {
 		this.registrationDetails = registrationDetails;
 	}
 
+	@XmlElement(name = "PtyCtctNrrtv")
 	public List<RestrictedFINXMax350Text> getPartyContactNarrative() {
 		return partyContactNarrative;
 	}
@@ -411,6 +421,7 @@ public class CorporateActionNarrative12 {
 		this.partyContactNarrative = partyContactNarrative;
 	}
 
+	@XmlElement(name = "Dsclmr")
 	public List<RestrictedFINXMax350Text> getDisclaimer() {
 		return disclaimer;
 	}
@@ -419,6 +430,7 @@ public class CorporateActionNarrative12 {
 		this.disclaimer = disclaimer;
 	}
 
+	@XmlElement(name = "BsktOrIndxInf")
 	public List<RestrictedFINXMax350Text> getBasketOrIndexInformation() {
 		return basketOrIndexInformation;
 	}

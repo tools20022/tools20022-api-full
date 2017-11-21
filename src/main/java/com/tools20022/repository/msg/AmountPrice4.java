@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Price expressed as an actual amount.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Price expressed as an actual amount."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountPrice4", propOrder = {"amountPriceType", "priceValue"})
 public class AmountPrice4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -172,6 +178,7 @@ public class AmountPrice4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AmtPricTp", required = true)
 	public AmountPriceType2Code getAmountPriceType() {
 		return amountPriceType;
 	}
@@ -180,6 +187,7 @@ public class AmountPrice4 {
 		this.amountPriceType = amountPriceType;
 	}
 
+	@XmlElement(name = "PricVal", required = true)
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getPriceValue() {
 		return priceValue;
 	}

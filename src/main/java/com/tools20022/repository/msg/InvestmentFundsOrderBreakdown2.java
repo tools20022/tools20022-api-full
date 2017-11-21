@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * An investor's instruction to either subscribe or redeem an amount of money or
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestmentFundsOrderBreakdown1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentFundsOrderBreakdown2", propOrder = {"orderBreakdownType", "amount"})
 public class InvestmentFundsOrderBreakdown2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -198,6 +204,7 @@ public class InvestmentFundsOrderBreakdown2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrdrBrkdwnTp", required = true)
 	public OrderBreakdownType1Choice getOrderBreakdownType() {
 		return orderBreakdownType;
 	}
@@ -206,6 +213,7 @@ public class InvestmentFundsOrderBreakdown2 {
 		this.orderBreakdownType = orderBreakdownType;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}

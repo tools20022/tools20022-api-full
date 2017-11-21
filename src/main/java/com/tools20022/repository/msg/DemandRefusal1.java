@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the refusal of a demand.
@@ -96,6 +100,9 @@ import java.util.List;
  * definition} = "Information about the refusal of a demand."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DemandRefusal1", propOrder = {"undertakingIdentification", "advisingPartyReferenceNumber", "secondAdvisingPartyReferenceNumber", "confirmerReferenceNumber", "demandDetails", "status", "discrepancy",
+		"dispositionOfDocuments", "additionalInformation"})
 public class DemandRefusal1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -515,6 +522,7 @@ public class DemandRefusal1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "UdrtkgId", required = true)
 	public Undertaking9 getUndertakingIdentification() {
 		return undertakingIdentification;
 	}
@@ -523,6 +531,7 @@ public class DemandRefusal1 {
 		this.undertakingIdentification = undertakingIdentification;
 	}
 
+	@XmlElement(name = "AdvsgPtyRefNb")
 	public Max35Text getAdvisingPartyReferenceNumber() {
 		return advisingPartyReferenceNumber;
 	}
@@ -531,6 +540,7 @@ public class DemandRefusal1 {
 		this.advisingPartyReferenceNumber = advisingPartyReferenceNumber;
 	}
 
+	@XmlElement(name = "ScndAdvsgPtyRefNb")
 	public Max35Text getSecondAdvisingPartyReferenceNumber() {
 		return secondAdvisingPartyReferenceNumber;
 	}
@@ -539,6 +549,7 @@ public class DemandRefusal1 {
 		this.secondAdvisingPartyReferenceNumber = secondAdvisingPartyReferenceNumber;
 	}
 
+	@XmlElement(name = "CnfrmrRefNb")
 	public Max35Text getConfirmerReferenceNumber() {
 		return confirmerReferenceNumber;
 	}
@@ -547,6 +558,7 @@ public class DemandRefusal1 {
 		this.confirmerReferenceNumber = confirmerReferenceNumber;
 	}
 
+	@XmlElement(name = "DmndDtls", required = true)
 	public Demand2 getDemandDetails() {
 		return demandDetails;
 	}
@@ -555,6 +567,7 @@ public class DemandRefusal1 {
 		this.demandDetails = demandDetails;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public Refused7Text getStatus() {
 		return status;
 	}
@@ -563,6 +576,7 @@ public class DemandRefusal1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Dscrpncy")
 	public List<Discrepancy1> getDiscrepancy() {
 		return discrepancy;
 	}
@@ -571,6 +585,7 @@ public class DemandRefusal1 {
 		this.discrepancy = discrepancy;
 	}
 
+	@XmlElement(name = "DspstnOfDocs")
 	public List<Max2000Text> getDispositionOfDocuments() {
 		return dispositionOfDocuments;
 	}
@@ -579,6 +594,7 @@ public class DemandRefusal1 {
 		this.dispositionOfDocuments = dispositionOfDocuments;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

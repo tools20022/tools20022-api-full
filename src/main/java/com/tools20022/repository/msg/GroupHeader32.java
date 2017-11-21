@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics shared by all individual transactions included in the
@@ -92,6 +96,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GroupHeader32", propOrder = {"messageIdentification", "creationDateTime", "authorisation", "numberOfTransactions", "controlSum", "initiatingParty", "forwardingAgent"})
 public class GroupHeader32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -448,6 +454,7 @@ public class GroupHeader32 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -456,6 +463,7 @@ public class GroupHeader32 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -464,6 +472,7 @@ public class GroupHeader32 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "Authstn")
 	public List<Authorisation1Choice> getAuthorisation() {
 		return authorisation;
 	}
@@ -472,6 +481,7 @@ public class GroupHeader32 {
 		this.authorisation = authorisation;
 	}
 
+	@XmlElement(name = "NbOfTxs", required = true)
 	public Max15NumericText getNumberOfTransactions() {
 		return numberOfTransactions;
 	}
@@ -480,6 +490,7 @@ public class GroupHeader32 {
 		this.numberOfTransactions = numberOfTransactions;
 	}
 
+	@XmlElement(name = "CtrlSum")
 	public DecimalNumber getControlSum() {
 		return controlSum;
 	}
@@ -488,6 +499,7 @@ public class GroupHeader32 {
 		this.controlSum = controlSum;
 	}
 
+	@XmlElement(name = "InitgPty", required = true)
 	public PartyIdentification32 getInitiatingParty() {
 		return initiatingParty;
 	}
@@ -496,6 +508,7 @@ public class GroupHeader32 {
 		this.initiatingParty = initiatingParty;
 	}
 
+	@XmlElement(name = "FwdgAgt")
 	public BranchAndFinancialInstitutionIdentification4 getForwardingAgent() {
 		return forwardingAgent;
 	}

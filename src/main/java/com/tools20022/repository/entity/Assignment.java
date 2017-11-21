@@ -35,6 +35,17 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Assignment#mmPaymentObligation
+ * Assignment.mmPaymentObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Assignment#mmFinancingAgreement
+ * Assignment.mmFinancingAgreement}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -45,17 +56,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmAssignment
  * InvoiceFinancingAgreement.mmAssignment}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Assignment#mmPaymentObligation
- * Assignment.mmPaymentObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Assignment#mmFinancingAgreement
- * Assignment.mmFinancingAgreement}</li>
  * </ul>
  * </li>
  * <li>
@@ -111,7 +111,7 @@ public class Assignment {
 	 */
 	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Assignment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Assignment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
@@ -159,7 +159,7 @@ public class Assignment {
 	 */
 	public static final MMBusinessAssociationEnd mmFinancingAgreement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Assignment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Assignment.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancingAgreement";
@@ -179,7 +179,12 @@ public class Assignment {
 				name = "Assignment";
 				definition = "Transfer by one party to a third party of its receivables.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.mmRelatedAssignment, com.tools20022.repository.entity.InvoiceFinancingAgreement.mmAssignment);
-				element_lazy = () -> Arrays.asList(Assignment.mmPaymentObligation, Assignment.mmFinancingAgreement);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Assignment.mmPaymentObligation, com.tools20022.repository.entity.Assignment.mmFinancingAgreement);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Assignment.class;
 			}
 		});
 		return mmObject_lazy.get();

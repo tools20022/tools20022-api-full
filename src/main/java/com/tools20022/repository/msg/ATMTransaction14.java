@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Response to the withdrawal transaction request.
@@ -106,6 +110,9 @@ import java.util.List;
  * definition} = "Response to the withdrawal transaction request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransaction14", propOrder = {"transactionIdentification", "reconciliationIdentification", "completionRequired", "accountData", "protectedAccountData", "totalAuthorisedAmount", "totalRequestedAmount",
+		"detailedRequestedAmount", "currencyConversionEligibility", "additionalCharge", "limits", "mixType", "mix", "authorisationResult", "ICCRelatedData", "command"})
 public class ATMTransaction14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -831,6 +838,7 @@ public class ATMTransaction14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -839,6 +847,7 @@ public class ATMTransaction14 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "RcncltnId")
 	public Max35Text getReconciliationIdentification() {
 		return reconciliationIdentification;
 	}
@@ -847,6 +856,7 @@ public class ATMTransaction14 {
 		this.reconciliationIdentification = reconciliationIdentification;
 	}
 
+	@XmlElement(name = "CmpltnReqrd")
 	public TrueFalseIndicator getCompletionRequired() {
 		return completionRequired;
 	}
@@ -855,6 +865,7 @@ public class ATMTransaction14 {
 		this.completionRequired = completionRequired;
 	}
 
+	@XmlElement(name = "AcctData")
 	public CardAccount8 getAccountData() {
 		return accountData;
 	}
@@ -863,6 +874,7 @@ public class ATMTransaction14 {
 		this.accountData = accountData;
 	}
 
+	@XmlElement(name = "PrtctdAcctData")
 	public ContentInformationType10 getProtectedAccountData() {
 		return protectedAccountData;
 	}
@@ -871,6 +883,7 @@ public class ATMTransaction14 {
 		this.protectedAccountData = protectedAccountData;
 	}
 
+	@XmlElement(name = "TtlAuthrsdAmt", required = true)
 	public AmountAndCurrency1 getTotalAuthorisedAmount() {
 		return totalAuthorisedAmount;
 	}
@@ -879,6 +892,7 @@ public class ATMTransaction14 {
 		this.totalAuthorisedAmount = totalAuthorisedAmount;
 	}
 
+	@XmlElement(name = "TtlReqdAmt")
 	public ImpliedCurrencyAndAmount getTotalRequestedAmount() {
 		return totalRequestedAmount;
 	}
@@ -887,6 +901,7 @@ public class ATMTransaction14 {
 		this.totalRequestedAmount = totalRequestedAmount;
 	}
 
+	@XmlElement(name = "DtldReqdAmt")
 	public DetailedAmount12 getDetailedRequestedAmount() {
 		return detailedRequestedAmount;
 	}
@@ -895,6 +910,7 @@ public class ATMTransaction14 {
 		this.detailedRequestedAmount = detailedRequestedAmount;
 	}
 
+	@XmlElement(name = "CcyConvsElgblty")
 	public CurrencyConversion9 getCurrencyConversionEligibility() {
 		return currencyConversionEligibility;
 	}
@@ -903,6 +919,7 @@ public class ATMTransaction14 {
 		this.currencyConversionEligibility = currencyConversionEligibility;
 	}
 
+	@XmlElement(name = "AddtlChrg")
 	public List<DetailedAmount13> getAdditionalCharge() {
 		return additionalCharge;
 	}
@@ -911,6 +928,7 @@ public class ATMTransaction14 {
 		this.additionalCharge = additionalCharge;
 	}
 
+	@XmlElement(name = "Lmts")
 	public ATMTransactionAmounts6 getLimits() {
 		return limits;
 	}
@@ -919,6 +937,7 @@ public class ATMTransaction14 {
 		this.limits = limits;
 	}
 
+	@XmlElement(name = "MixTp")
 	public Max35Text getMixType() {
 		return mixType;
 	}
@@ -927,6 +946,7 @@ public class ATMTransaction14 {
 		this.mixType = mixType;
 	}
 
+	@XmlElement(name = "Mix")
 	public List<ATMMediaMix1> getMix() {
 		return mix;
 	}
@@ -935,6 +955,7 @@ public class ATMTransaction14 {
 		this.mix = mix;
 	}
 
+	@XmlElement(name = "AuthstnRslt", required = true)
 	public AuthorisationResult13 getAuthorisationResult() {
 		return authorisationResult;
 	}
@@ -943,6 +964,7 @@ public class ATMTransaction14 {
 		this.authorisationResult = authorisationResult;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}
@@ -951,6 +973,7 @@ public class ATMTransaction14 {
 		this.iCCRelatedData = iCCRelatedData;
 	}
 
+	@XmlElement(name = "Cmd")
 	public List<ATMCommand7> getCommand() {
 		return command;
 	}

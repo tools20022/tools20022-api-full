@@ -30,21 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType2Code
- * DTCCPayoutType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code
- * DTCCPayoutType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType3Code
- * DTCCPayoutType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType4Code
- * DTCCPayoutType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType5Code
- * DTCCPayoutType5Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutTypeCode#mmCash
@@ -87,6 +72,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DTCCPayoutTypeCode#mmTaxCredit
  * DTCCPayoutTypeCode.mmTaxCredit}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType2Code
+ * DTCCPayoutType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code
+ * DTCCPayoutType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType3Code
+ * DTCCPayoutType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType4Code
+ * DTCCPayoutType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType5Code
+ * DTCCPayoutType5Code}</li>
  * </ul>
  * </li>
  * <li>

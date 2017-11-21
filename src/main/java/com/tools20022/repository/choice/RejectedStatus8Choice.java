@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reason for the rejected status.
@@ -68,6 +72,8 @@ import java.util.List;
  * definition} = "Reason for the rejected status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RejectedStatus8Choice", propOrder = {"reason", "extendedReason", "dataSourceScheme"})
 public class RejectedStatus8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -224,6 +230,7 @@ public class RejectedStatus8Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public TransferRejectedStatusReason2Code getReason() {
 		return reason;
 	}
@@ -232,6 +239,7 @@ public class RejectedStatus8Choice {
 		this.reason = reason;
 	}
 
+	@XmlElement(name = "XtndedRsn", required = true)
 	public Extended350Code getExtendedReason() {
 		return extendedReason;
 	}
@@ -240,6 +248,7 @@ public class RejectedStatus8Choice {
 		this.extendedReason = extendedReason;
 	}
 
+	@XmlElement(name = "DataSrcSchme", required = true)
 	public List<GenericIdentification1> getDataSourceScheme() {
 		return dataSourceScheme;
 	}

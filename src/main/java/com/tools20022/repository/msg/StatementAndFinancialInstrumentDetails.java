@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account, financial instrument and statement parameters for which a statement
@@ -109,6 +113,9 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatementAndFinancialInstrumentDetails", propOrder = {"accountIdentification", "subAccountIdentification", "financialInstrumentDetails", "accountOwner", "statementType", "extendedStatementType", "statementDate",
+		"statementPeriod", "frequency", "updateType", "statementBasis"})
 public class StatementAndFinancialInstrumentDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -723,6 +730,7 @@ public class StatementAndFinancialInstrumentDetails {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentificationFormatChoice getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -731,6 +739,7 @@ public class StatementAndFinancialInstrumentDetails {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "SubAcctId")
 	public AccountIdentificationFormatChoice getSubAccountIdentification() {
 		return subAccountIdentification;
 	}
@@ -739,6 +748,7 @@ public class StatementAndFinancialInstrumentDetails {
 		this.subAccountIdentification = subAccountIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument17 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -747,6 +757,7 @@ public class StatementAndFinancialInstrumentDetails {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification2Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -755,6 +766,7 @@ public class StatementAndFinancialInstrumentDetails {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "StmtTp", required = true)
 	public StatementType1Code getStatementType() {
 		return statementType;
 	}
@@ -763,6 +775,7 @@ public class StatementAndFinancialInstrumentDetails {
 		this.statementType = statementType;
 	}
 
+	@XmlElement(name = "XtndedStmtTp", required = true)
 	public Extended350Code getExtendedStatementType() {
 		return extendedStatementType;
 	}
@@ -771,6 +784,7 @@ public class StatementAndFinancialInstrumentDetails {
 		this.extendedStatementType = extendedStatementType;
 	}
 
+	@XmlElement(name = "StmtDt")
 	public ISODate getStatementDate() {
 		return statementDate;
 	}
@@ -779,6 +793,7 @@ public class StatementAndFinancialInstrumentDetails {
 		this.statementDate = statementDate;
 	}
 
+	@XmlElement(name = "StmtPrd")
 	public DatePeriodDetails getStatementPeriod() {
 		return statementPeriod;
 	}
@@ -787,6 +802,7 @@ public class StatementAndFinancialInstrumentDetails {
 		this.statementPeriod = statementPeriod;
 	}
 
+	@XmlElement(name = "Frqcy")
 	public FrequencyCodeAndDSSCode1Choice getFrequency() {
 		return frequency;
 	}
@@ -795,6 +811,7 @@ public class StatementAndFinancialInstrumentDetails {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "UpdTp")
 	public StatementUpdateTypeCodeAndDSSCodeChoice getUpdateType() {
 		return updateType;
 	}
@@ -803,6 +820,7 @@ public class StatementAndFinancialInstrumentDetails {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "StmtBsis")
 	public StatementBasisCodeAndDSSCodeChoice getStatementBasis() {
 		return statementBasis;
 	}

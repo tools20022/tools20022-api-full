@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Business relationship between two entities; one entity is the account owner,
@@ -81,6 +85,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubAccountIdentification4", propOrder = {"identification", "activityIndicator", "transactionOnSubAccount"})
 public class SubAccountIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -244,6 +250,7 @@ public class SubAccountIdentification4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public AccountIdentificationFormatChoice getIdentification() {
 		return identification;
 	}
@@ -252,6 +259,7 @@ public class SubAccountIdentification4 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
@@ -260,6 +268,7 @@ public class SubAccountIdentification4 {
 		this.activityIndicator = activityIndicator;
 	}
 
+	@XmlElement(name = "TxOnSubAcct")
 	public List<InvestmentFundTransactionsByFund1> getTransactionOnSubAccount() {
 		return transactionOnSubAccount;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the requested authority investigation information details.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the requested authority investigation information details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AuthorityInvestigation2", propOrder = {"type", "investigatedRoles", "additionalInvestigatedParties", "additionalInformation"})
 public class AuthorityInvestigation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -253,6 +259,7 @@ public class AuthorityInvestigation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public AuthorityRequestType1 getType() {
 		return type;
 	}
@@ -261,6 +268,7 @@ public class AuthorityInvestigation2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "InvstgtdRoles", required = true)
 	public InvestigatedParties1Choice getInvestigatedRoles() {
 		return investigatedRoles;
 	}
@@ -269,6 +277,7 @@ public class AuthorityInvestigation2 {
 		this.investigatedRoles = investigatedRoles;
 	}
 
+	@XmlElement(name = "AddtlInvstgtdPties")
 	public InvestigatedParties1Choice getAdditionalInvestigatedParties() {
 		return additionalInvestigatedParties;
 	}
@@ -277,6 +286,7 @@ public class AuthorityInvestigation2 {
 		this.additionalInvestigatedParties = additionalInvestigatedParties;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max500Text getAdditionalInformation() {
 		return additionalInformation;
 	}

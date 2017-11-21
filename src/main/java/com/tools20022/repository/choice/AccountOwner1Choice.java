@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PartyIdentification96;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between an organisation and an individual person.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountOwner1Choice", propOrder = {"individualOwnerIdentification", "organisationOwnerIdentification"})
 public class AccountOwner1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -204,6 +210,7 @@ public class AccountOwner1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IndvOwnrId", required = true)
 	public IndividualPersonIdentification1Choice getIndividualOwnerIdentification() {
 		return individualOwnerIdentification;
 	}
@@ -212,6 +219,7 @@ public class AccountOwner1Choice {
 		this.individualOwnerIdentification = individualOwnerIdentification;
 	}
 
+	@XmlElement(name = "OrgOwnrId", required = true)
 	public PartyIdentification96 getOrganisationOwnerIdentification() {
 		return organisationOwnerIdentification;
 	}

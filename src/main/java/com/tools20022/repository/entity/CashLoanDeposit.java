@@ -66,6 +66,11 @@ public class CashLoanDeposit extends Deposit {
 				definition = "Agreement for a temporary transfer of cash from its owner (the lender) to a borrower who promises to return it according to the terms of the agreement, usually with interest for its use.";
 				superType_lazy = () -> Deposit.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CashLoanDeposit.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

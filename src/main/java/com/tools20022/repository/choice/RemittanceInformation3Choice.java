@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.StructuredRemittanceInformation2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information supplied to enable the matching of an entry with the items that
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RemittanceInformation3Choice", propOrder = {"unstructured", "structured"})
 public class RemittanceInformation3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -187,6 +193,7 @@ public class RemittanceInformation3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ustrd", required = true)
 	public Max140Text getUnstructured() {
 		return unstructured;
 	}
@@ -195,6 +202,7 @@ public class RemittanceInformation3Choice {
 		this.unstructured = unstructured;
 	}
 
+	@XmlElement(name = "Strd", required = true)
 	public StructuredRemittanceInformation2 getStructured() {
 		return structured;
 	}

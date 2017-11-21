@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteris
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Security that is a sub-set of an investment fund, and is governed by the same
@@ -93,6 +97,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentRestrictions", propOrder = {"minimumInitialSubscriptionAmount", "minimumInitialSubscriptionUnits", "minimumSubsequentSubscriptionAmount", "minimumSubsequentSubscriptionUnits", "maximumRedemptionAmount",
+		"maximumRedemptionUnits", "otherRedemptionRestrictions", "minimumHoldingAmount", "minimumHoldingUnits", "minimumHoldingPeriod", "holdingTransferableIndicator"})
 public class InvestmentRestrictions {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -665,6 +672,7 @@ public class InvestmentRestrictions {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MinInitlSbcptAmt")
 	public ActiveCurrencyAndAmount getMinimumInitialSubscriptionAmount() {
 		return minimumInitialSubscriptionAmount;
 	}
@@ -673,6 +681,7 @@ public class InvestmentRestrictions {
 		this.minimumInitialSubscriptionAmount = minimumInitialSubscriptionAmount;
 	}
 
+	@XmlElement(name = "MinInitlSbcptUnits")
 	public Number getMinimumInitialSubscriptionUnits() {
 		return minimumInitialSubscriptionUnits;
 	}
@@ -681,6 +690,7 @@ public class InvestmentRestrictions {
 		this.minimumInitialSubscriptionUnits = minimumInitialSubscriptionUnits;
 	}
 
+	@XmlElement(name = "MinSbsqntSbcptAmt")
 	public ActiveCurrencyAndAmount getMinimumSubsequentSubscriptionAmount() {
 		return minimumSubsequentSubscriptionAmount;
 	}
@@ -689,6 +699,7 @@ public class InvestmentRestrictions {
 		this.minimumSubsequentSubscriptionAmount = minimumSubsequentSubscriptionAmount;
 	}
 
+	@XmlElement(name = "MinSbsqntSbcptUnits")
 	public Number getMinimumSubsequentSubscriptionUnits() {
 		return minimumSubsequentSubscriptionUnits;
 	}
@@ -697,6 +708,7 @@ public class InvestmentRestrictions {
 		this.minimumSubsequentSubscriptionUnits = minimumSubsequentSubscriptionUnits;
 	}
 
+	@XmlElement(name = "MaxRedAmt")
 	public ActiveCurrencyAndAmount getMaximumRedemptionAmount() {
 		return maximumRedemptionAmount;
 	}
@@ -705,6 +717,7 @@ public class InvestmentRestrictions {
 		this.maximumRedemptionAmount = maximumRedemptionAmount;
 	}
 
+	@XmlElement(name = "MaxRedUnits")
 	public Number getMaximumRedemptionUnits() {
 		return maximumRedemptionUnits;
 	}
@@ -713,6 +726,7 @@ public class InvestmentRestrictions {
 		this.maximumRedemptionUnits = maximumRedemptionUnits;
 	}
 
+	@XmlElement(name = "OthrRedRstrctns")
 	public Max350Text getOtherRedemptionRestrictions() {
 		return otherRedemptionRestrictions;
 	}
@@ -721,6 +735,7 @@ public class InvestmentRestrictions {
 		this.otherRedemptionRestrictions = otherRedemptionRestrictions;
 	}
 
+	@XmlElement(name = "MinHldgAmt")
 	public ActiveCurrencyAndAmount getMinimumHoldingAmount() {
 		return minimumHoldingAmount;
 	}
@@ -729,6 +744,7 @@ public class InvestmentRestrictions {
 		this.minimumHoldingAmount = minimumHoldingAmount;
 	}
 
+	@XmlElement(name = "MinHldgUnits")
 	public DecimalNumber getMinimumHoldingUnits() {
 		return minimumHoldingUnits;
 	}
@@ -737,6 +753,7 @@ public class InvestmentRestrictions {
 		this.minimumHoldingUnits = minimumHoldingUnits;
 	}
 
+	@XmlElement(name = "MinHldgPrd")
 	public Max70Text getMinimumHoldingPeriod() {
 		return minimumHoldingPeriod;
 	}
@@ -745,6 +762,7 @@ public class InvestmentRestrictions {
 		this.minimumHoldingPeriod = minimumHoldingPeriod;
 	}
 
+	@XmlElement(name = "HldgTrfblInd", required = true)
 	public YesNoIndicator getHoldingTransferableIndicator() {
 		return holdingTransferableIndicator;
 	}

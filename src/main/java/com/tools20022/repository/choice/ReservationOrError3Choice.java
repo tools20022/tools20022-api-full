@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.Reservation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reports either on the reservation or on a business error.
@@ -70,6 +74,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReservationOrError3Choice", propOrder = {"reservation", "businessError"})
 public class ReservationOrError3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -193,6 +199,7 @@ public class ReservationOrError3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rsvatn", required = true)
 	public Reservation1 getReservation() {
 		return reservation;
 	}
@@ -201,6 +208,7 @@ public class ReservationOrError3Choice {
 		this.reservation = reservation;
 	}
 
+	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling3> getBusinessError() {
 		return businessError;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment token information.
@@ -66,6 +70,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentToken1", propOrder = {"tokenCharacteristic", "tokenRequestor"})
 public class CardPaymentToken1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class CardPaymentToken1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TknChrtc")
 	public List<Max35Text> getTokenCharacteristic() {
 		return tokenCharacteristic;
 	}
@@ -174,6 +181,7 @@ public class CardPaymentToken1 {
 		this.tokenCharacteristic = tokenCharacteristic;
 	}
 
+	@XmlElement(name = "TknRqstr")
 	public PaymentTokenIdentifiers1 getTokenRequestor() {
 		return tokenRequestor;
 	}

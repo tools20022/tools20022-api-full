@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data related to the cardholder.
@@ -88,6 +92,8 @@ import java.util.List;
  * Cardholder7}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Cardholder9", propOrder = {"identification", "name", "language", "billingAddress", "shippingAddress", "authentication", "transactionVerificationResult", "personalData"})
 public class Cardholder9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -578,6 +584,7 @@ public class Cardholder9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public PersonIdentification7 getIdentification() {
 		return identification;
 	}
@@ -586,6 +593,7 @@ public class Cardholder9 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max45Text getName() {
 		return name;
 	}
@@ -594,6 +602,7 @@ public class Cardholder9 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Lang")
 	public LanguageCode getLanguage() {
 		return language;
 	}
@@ -602,6 +611,7 @@ public class Cardholder9 {
 		this.language = language;
 	}
 
+	@XmlElement(name = "BllgAdr")
 	public PostalAddress18 getBillingAddress() {
 		return billingAddress;
 	}
@@ -610,6 +620,7 @@ public class Cardholder9 {
 		this.billingAddress = billingAddress;
 	}
 
+	@XmlElement(name = "ShppgAdr")
 	public PostalAddress18 getShippingAddress() {
 		return shippingAddress;
 	}
@@ -618,6 +629,7 @@ public class Cardholder9 {
 		this.shippingAddress = shippingAddress;
 	}
 
+	@XmlElement(name = "Authntcn")
 	public List<CardholderAuthentication7> getAuthentication() {
 		return authentication;
 	}
@@ -626,6 +638,7 @@ public class Cardholder9 {
 		this.authentication = authentication;
 	}
 
+	@XmlElement(name = "TxVrfctnRslt")
 	public List<TransactionVerificationResult4> getTransactionVerificationResult() {
 		return transactionVerificationResult;
 	}
@@ -634,6 +647,7 @@ public class Cardholder9 {
 		this.transactionVerificationResult = transactionVerificationResult;
 	}
 
+	@XmlElement(name = "PrsnlData")
 	public Max70Text getPersonalData() {
 		return personalData;
 	}

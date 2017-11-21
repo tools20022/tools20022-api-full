@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesClearingLatestVersion;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -43,9 +45,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code secl.002.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
@@ -93,6 +92,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code secl.002.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -104,6 +106,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeLegNotificationCancellationV03", propOrder = {"clearingMember", "clearingAccount", "deliveryAccount", "nonClearingMember", "clearingDetails", "tradeLegDetails", "settlementDetails", "supplementaryData"})
 public class TradeLegNotificationCancellationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -144,6 +148,14 @@ public class TradeLegNotificationCancellationV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeLegNotificationCancellationV03.class.getMethod("getClearingMember", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesAccount18 clearingAccount;
 	/**
@@ -181,6 +193,14 @@ public class TradeLegNotificationCancellationV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount18.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeLegNotificationCancellationV03.class.getMethod("getClearingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesAccount19 deliveryAccount;
@@ -222,6 +242,14 @@ public class TradeLegNotificationCancellationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesAccount19.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeLegNotificationCancellationV03.class.getMethod("getDeliveryAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentificationAndAccount31 nonClearingMember;
 	/**
@@ -260,6 +288,14 @@ public class TradeLegNotificationCancellationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentificationAndAccount31.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeLegNotificationCancellationV03.class.getMethod("getNonClearingMember", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Clearing4 clearingDetails;
 	/**
@@ -296,6 +332,14 @@ public class TradeLegNotificationCancellationV03 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Clearing4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeLegNotificationCancellationV03.class.getMethod("getClearingDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TradeLeg8 tradeLegDetails;
@@ -334,6 +378,14 @@ public class TradeLegNotificationCancellationV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradeLeg8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeLegNotificationCancellationV03.class.getMethod("getTradeLegDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Settlement1 settlementDetails;
 	/**
@@ -370,6 +422,14 @@ public class TradeLegNotificationCancellationV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Settlement1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeLegNotificationCancellationV03.class.getMethod("getSettlementDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -408,6 +468,14 @@ public class TradeLegNotificationCancellationV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeLegNotificationCancellationV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -420,9 +488,11 @@ public class TradeLegNotificationCancellationV03 {
 				rootElement = "Document";
 				xmlTag = "TradLegNtfctnCxl";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(TradeLegNotificationCancellationV03.mmClearingMember, TradeLegNotificationCancellationV03.mmClearingAccount, TradeLegNotificationCancellationV03.mmDeliveryAccount,
-						TradeLegNotificationCancellationV03.mmNonClearingMember, TradeLegNotificationCancellationV03.mmClearingDetails, TradeLegNotificationCancellationV03.mmTradeLegDetails,
-						TradeLegNotificationCancellationV03.mmSettlementDetails, TradeLegNotificationCancellationV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03.mmClearingMember,
+						com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03.mmClearingAccount, com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03.mmDeliveryAccount,
+						com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03.mmNonClearingMember, com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03.mmClearingDetails,
+						com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03.mmTradeLegDetails, com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03.mmSettlementDetails,
+						com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "secl";
@@ -432,10 +502,16 @@ public class TradeLegNotificationCancellationV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TradeLegNotificationCancellationV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClrMmb", required = true)
 	public PartyIdentification35Choice getClearingMember() {
 		return clearingMember;
 	}
@@ -444,6 +520,7 @@ public class TradeLegNotificationCancellationV03 {
 		this.clearingMember = clearingMember;
 	}
 
+	@XmlElement(name = "ClrAcct", required = true)
 	public SecuritiesAccount18 getClearingAccount() {
 		return clearingAccount;
 	}
@@ -452,6 +529,7 @@ public class TradeLegNotificationCancellationV03 {
 		this.clearingAccount = clearingAccount;
 	}
 
+	@XmlElement(name = "DlvryAcct")
 	public SecuritiesAccount19 getDeliveryAccount() {
 		return deliveryAccount;
 	}
@@ -460,6 +538,7 @@ public class TradeLegNotificationCancellationV03 {
 		this.deliveryAccount = deliveryAccount;
 	}
 
+	@XmlElement(name = "NonClrMmb")
 	public PartyIdentificationAndAccount31 getNonClearingMember() {
 		return nonClearingMember;
 	}
@@ -468,6 +547,7 @@ public class TradeLegNotificationCancellationV03 {
 		this.nonClearingMember = nonClearingMember;
 	}
 
+	@XmlElement(name = "ClrDtls")
 	public Clearing4 getClearingDetails() {
 		return clearingDetails;
 	}
@@ -476,6 +556,7 @@ public class TradeLegNotificationCancellationV03 {
 		this.clearingDetails = clearingDetails;
 	}
 
+	@XmlElement(name = "TradLegDtls", required = true)
 	public TradeLeg8 getTradeLegDetails() {
 		return tradeLegDetails;
 	}
@@ -484,6 +565,7 @@ public class TradeLegNotificationCancellationV03 {
 		this.tradeLegDetails = tradeLegDetails;
 	}
 
+	@XmlElement(name = "SttlmDtls", required = true)
 	public Settlement1 getSettlementDetails() {
 		return settlementDetails;
 	}
@@ -492,11 +574,18 @@ public class TradeLegNotificationCancellationV03 {
 		this.settlementDetails = settlementDetails;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:secl.002.03.03")
+	static public class Document {
+		@XmlElement(name = "TradLegNtfctnCxl", required = true)
+		public TradeLegNotificationCancellationV03 messageBody;
 	}
 }

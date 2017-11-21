@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.TreasuryTradeSettlementStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the status and optionally the sub status.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusAndSubStatus1", propOrder = {"statusCode", "subStatusCode"})
 public class StatusAndSubStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -203,6 +209,7 @@ public class StatusAndSubStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StsCd", required = true)
 	public Status13Choice getStatusCode() {
 		return statusCode;
 	}
@@ -211,6 +218,7 @@ public class StatusAndSubStatus1 {
 		this.statusCode = statusCode;
 	}
 
+	@XmlElement(name = "SubStsCd")
 	public Exact4AlphaNumericText getSubStatusCode() {
 		return subStatusCode;
 	}

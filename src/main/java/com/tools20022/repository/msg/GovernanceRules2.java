@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies rules governing an undertaking such as a guarantee or standby
@@ -73,6 +77,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GovernanceRules2", propOrder = {"identification", "ruleIdentification", "applicableLaw", "jurisdiction"})
 public class GovernanceRules2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -274,6 +280,7 @@ public class GovernanceRules2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public ID getIdentification() {
 		return identification;
 	}
@@ -282,6 +289,7 @@ public class GovernanceRules2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "RuleId", required = true)
 	public GovernanceIdentification1Choice getRuleIdentification() {
 		return ruleIdentification;
 	}
@@ -290,6 +298,7 @@ public class GovernanceRules2 {
 		this.ruleIdentification = ruleIdentification;
 	}
 
+	@XmlElement(name = "AplblLaw")
 	public Location1 getApplicableLaw() {
 		return applicableLaw;
 	}
@@ -298,6 +307,7 @@ public class GovernanceRules2 {
 		this.applicableLaw = applicableLaw;
 	}
 
+	@XmlElement(name = "Jursdctn")
 	public List<Location1> getJurisdiction() {
 		return jurisdiction;
 	}

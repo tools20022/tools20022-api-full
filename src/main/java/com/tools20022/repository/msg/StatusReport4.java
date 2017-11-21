@@ -24,6 +24,10 @@ import com.tools20022.repository.area.catm.StatusReportV04;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status of the acceptor system containing the identification of the POI (Point
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * StatusReport3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusReport4", propOrder = {"POIIdentification", "terminalManagerIdentification", "dataSet"})
 public class StatusReport4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -272,6 +278,7 @@ public class StatusReport4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "POIId", required = true)
 	public GenericIdentification71 getPOIIdentification() {
 		return pOIIdentification;
 	}
@@ -280,6 +287,7 @@ public class StatusReport4 {
 		this.pOIIdentification = pOIIdentification;
 	}
 
+	@XmlElement(name = "TermnlMgrId")
 	public GenericIdentification71 getTerminalManagerIdentification() {
 		return terminalManagerIdentification;
 	}
@@ -288,6 +296,7 @@ public class StatusReport4 {
 		this.terminalManagerIdentification = terminalManagerIdentification;
 	}
 
+	@XmlElement(name = "DataSet", required = true)
 	public TerminalManagementDataSet13 getDataSet() {
 		return dataSet;
 	}

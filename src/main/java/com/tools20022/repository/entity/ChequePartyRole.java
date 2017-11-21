@@ -36,16 +36,13 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Cheque#mmChequePartyRole
- * Cheque.mmChequePartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequePartyRole#mmCheque
+ * ChequePartyRole.mmCheque}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -54,11 +51,14 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.repository.entity.Drawer Drawer}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ChequePartyRole#mmCheque
- * ChequePartyRole.mmCheque}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Cheque#mmChequePartyRole
+ * Cheque.mmChequePartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -115,7 +115,7 @@ public class ChequePartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmCheque = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ChequePartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ChequePartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cheque";
@@ -137,7 +137,12 @@ public class ChequePartyRole extends Role {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Cheque.mmChequePartyRole);
 				subType_lazy = () -> Arrays.asList(Payee.mmObject(), Drawee.mmObject(), Drawer.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(ChequePartyRole.mmCheque);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ChequePartyRole.mmCheque);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ChequePartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

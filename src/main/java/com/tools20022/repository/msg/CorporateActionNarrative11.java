@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information such as the taxation conditions.
@@ -114,6 +118,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionNarrative11", propOrder = {"additionalText", "narrativeVersion", "informationConditions", "informationToComplyWith", "taxationConditions", "disclaimer", "partyContactNarrative", "declarationDetails",
+		"registrationDetails", "basketOrIndexInformation"})
 public class CorporateActionNarrative11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -715,6 +722,7 @@ public class CorporateActionNarrative11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AddtlTxt")
 	public UpdatedAdditionalInformation2 getAdditionalText() {
 		return additionalText;
 	}
@@ -723,6 +731,7 @@ public class CorporateActionNarrative11 {
 		this.additionalText = additionalText;
 	}
 
+	@XmlElement(name = "NrrtvVrsn")
 	public UpdatedAdditionalInformation2 getNarrativeVersion() {
 		return narrativeVersion;
 	}
@@ -731,6 +740,7 @@ public class CorporateActionNarrative11 {
 		this.narrativeVersion = narrativeVersion;
 	}
 
+	@XmlElement(name = "InfConds")
 	public UpdatedAdditionalInformation2 getInformationConditions() {
 		return informationConditions;
 	}
@@ -739,6 +749,7 @@ public class CorporateActionNarrative11 {
 		this.informationConditions = informationConditions;
 	}
 
+	@XmlElement(name = "InfToCmplyWth")
 	public UpdatedAdditionalInformation2 getInformationToComplyWith() {
 		return informationToComplyWith;
 	}
@@ -747,6 +758,7 @@ public class CorporateActionNarrative11 {
 		this.informationToComplyWith = informationToComplyWith;
 	}
 
+	@XmlElement(name = "TaxtnConds")
 	public UpdatedAdditionalInformation2 getTaxationConditions() {
 		return taxationConditions;
 	}
@@ -755,6 +767,7 @@ public class CorporateActionNarrative11 {
 		this.taxationConditions = taxationConditions;
 	}
 
+	@XmlElement(name = "Dsclmr")
 	public UpdatedAdditionalInformation2 getDisclaimer() {
 		return disclaimer;
 	}
@@ -763,6 +776,7 @@ public class CorporateActionNarrative11 {
 		this.disclaimer = disclaimer;
 	}
 
+	@XmlElement(name = "PtyCtctNrrtv")
 	public UpdatedAdditionalInformation2 getPartyContactNarrative() {
 		return partyContactNarrative;
 	}
@@ -771,6 +785,7 @@ public class CorporateActionNarrative11 {
 		this.partyContactNarrative = partyContactNarrative;
 	}
 
+	@XmlElement(name = "DclrtnDtls")
 	public UpdatedAdditionalInformation2 getDeclarationDetails() {
 		return declarationDetails;
 	}
@@ -779,6 +794,7 @@ public class CorporateActionNarrative11 {
 		this.declarationDetails = declarationDetails;
 	}
 
+	@XmlElement(name = "RegnDtls")
 	public UpdatedAdditionalInformation2 getRegistrationDetails() {
 		return registrationDetails;
 	}
@@ -787,6 +803,7 @@ public class CorporateActionNarrative11 {
 		this.registrationDetails = registrationDetails;
 	}
 
+	@XmlElement(name = "BsktOrIndxInf")
 	public UpdatedAdditionalInformation2 getBasketOrIndexInformation() {
 		return basketOrIndexInformation;
 	}

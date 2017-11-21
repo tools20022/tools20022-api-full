@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.UndertakingDocument;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a document.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about a document."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Document10", propOrder = {"documentType", "presentationChannel", "documentFormat", "copyIndicator", "signedIndicator"})
 public class Document10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -319,6 +325,7 @@ public class Document10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DocTp", required = true)
 	public UndertakingDocumentType2Choice getDocumentType() {
 		return documentType;
 	}
@@ -327,6 +334,7 @@ public class Document10 {
 		this.documentType = documentType;
 	}
 
+	@XmlElement(name = "PresntnChanl")
 	public Channel1Choice getPresentationChannel() {
 		return presentationChannel;
 	}
@@ -335,6 +343,7 @@ public class Document10 {
 		this.presentationChannel = presentationChannel;
 	}
 
+	@XmlElement(name = "DocFrmt")
 	public DocumentFormat1Choice getDocumentFormat() {
 		return documentFormat;
 	}
@@ -343,6 +352,7 @@ public class Document10 {
 		this.documentFormat = documentFormat;
 	}
 
+	@XmlElement(name = "CpyInd")
 	public YesNoIndicator getCopyIndicator() {
 		return copyIndicator;
 	}
@@ -351,6 +361,7 @@ public class Document10 {
 		this.copyIndicator = copyIndicator;
 	}
 
+	@XmlElement(name = "SgndInd")
 	public YesNoIndicator getSignedIndicator() {
 		return signedIndicator;
 	}

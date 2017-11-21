@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for a reservation.
@@ -78,6 +82,8 @@ import java.util.List;
  * definition} = "Defines the criteria used to search for a reservation."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReservationSearchCriteria1", propOrder = {"systemIdentification", "defaultReservationType", "currentReservationType", "accountOwner", "accountIdentification"})
 public class ReservationSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -342,6 +348,7 @@ public class ReservationSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SysId")
 	public SystemIdentificationChoice getSystemIdentification() {
 		return systemIdentification;
 	}
@@ -350,6 +357,7 @@ public class ReservationSearchCriteria1 {
 		this.systemIdentification = systemIdentification;
 	}
 
+	@XmlElement(name = "DfltRsvatnTp")
 	public List<ReservationType1Code> getDefaultReservationType() {
 		return defaultReservationType;
 	}
@@ -358,6 +366,7 @@ public class ReservationSearchCriteria1 {
 		this.defaultReservationType = defaultReservationType;
 	}
 
+	@XmlElement(name = "CurRsvatnTp")
 	public List<ReservationType1Code> getCurrentReservationType() {
 		return currentReservationType;
 	}
@@ -366,6 +375,7 @@ public class ReservationSearchCriteria1 {
 		this.currentReservationType = currentReservationType;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public BICIdentifier getAccountOwner() {
 		return accountOwner;
 	}
@@ -374,6 +384,7 @@ public class ReservationSearchCriteria1 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctId")
 	public AccountIdentification1Choice getAccountIdentification() {
 		return accountIdentification;
 	}

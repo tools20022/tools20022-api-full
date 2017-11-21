@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Tax related to an investment fund order.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Tax related to an investment fund order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Tax8", propOrder = {"type", "amount", "rate", "country", "taxCalculationDetails"})
 public class Tax8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -310,6 +316,7 @@ public class Tax8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TaxType3 getType() {
 		return type;
 	}
@@ -318,6 +325,7 @@ public class Tax8 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Amt")
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -326,6 +334,7 @@ public class Tax8 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -334,6 +343,7 @@ public class Tax8 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -342,6 +352,7 @@ public class Tax8 {
 		this.country = country;
 	}
 
+	@XmlElement(name = "TaxClctnDtls")
 	public TaxCalculationInformation2 getTaxCalculationDetails() {
 		return taxCalculationDetails;
 	}

@@ -30,15 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType1Code
- * OrderType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code
- * OrderType2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.OrderTypeCode#mmAllOrNone
@@ -121,6 +112,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OrderTypeCode#mmCounterOrderSelection
  * OrderTypeCode.mmCounterOrderSelection}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType1Code
+ * OrderType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code
+ * OrderType2Code}</li>
  * </ul>
  * </li>
  * <li>

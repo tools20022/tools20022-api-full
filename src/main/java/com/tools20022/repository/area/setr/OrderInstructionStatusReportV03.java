@@ -21,9 +21,11 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.area.SecuritiesTradePreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -87,9 +89,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.016.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
@@ -145,6 +144,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.016.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -168,6 +170,8 @@ import java.util.List;
  * OrderInstructionStatusReportV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderInstructionStatusReportV03", propOrder = {"messageIdentification", "otherReference", "relatedReference", "orderDetailsReport", "individualOrderDetailsReport", "switchOrderDetailsReport", "extension"})
 public class OrderInstructionStatusReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +181,10 @@ public class OrderInstructionStatusReportV03 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV03
+	 * OrderInstructionStatusReportV03}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -189,10 +197,6 @@ public class OrderInstructionStatusReportV03 {
 	 * OrderInstructionStatusReportV03.mmRelatedReference}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV03
-	 * OrderInstructionStatusReportV03}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -211,8 +215,9 @@ public class OrderInstructionStatusReportV03 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
 			definition = "Occurrences of either RelatedReference or OtherReference may be present, but not occurrences of both.";
-			messageDefinition_lazy = () -> OrderInstructionStatusReportV03.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(OrderInstructionStatusReportV03.mmOtherReference, OrderInstructionStatusReportV03.mmRelatedReference);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmOtherReference,
+					com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmRelatedReference);
 		}
 	};
 	/**
@@ -221,6 +226,10 @@ public class OrderInstructionStatusReportV03 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV03
+	 * OrderInstructionStatusReportV03}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -236,10 +245,6 @@ public class OrderInstructionStatusReportV03 {
 	 * OrderInstructionStatusReportV03.mmSwitchOrderDetailsReport}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV03
-	 * OrderInstructionStatusReportV03}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -258,9 +263,9 @@ public class OrderInstructionStatusReportV03 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDetailsOrIndividualOrSwitchOrderDetailsRule";
 			definition = "Either OrderDetailsReport or occurrences of IndividualOrderDetailsReport or occurrences of SwitchOrderDetailsReport must be present.\n\n";
-			messageDefinition_lazy = () -> OrderInstructionStatusReportV03.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(OrderInstructionStatusReportV03.mmOrderDetailsReport, OrderInstructionStatusReportV03.mmIndividualOrderDetailsReport,
-					OrderInstructionStatusReportV03.mmSwitchOrderDetailsReport);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmOrderDetailsReport,
+					com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmIndividualOrderDetailsReport, com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmSwitchOrderDetailsReport);
 		}
 	};
 	protected MessageIdentification1 messageIdentification;
@@ -309,6 +314,14 @@ public class OrderInstructionStatusReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderInstructionStatusReportV03.class.getMethod("getMessageIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference3> otherReference;
 	/**
@@ -347,6 +360,14 @@ public class OrderInstructionStatusReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderInstructionStatusReportV03.class.getMethod("getOtherReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference3> relatedReference;
 	/**
@@ -382,6 +403,14 @@ public class OrderInstructionStatusReportV03 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderInstructionStatusReportV03.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OrderStatusAndReason7 orderDetailsReport;
@@ -422,6 +451,14 @@ public class OrderInstructionStatusReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> OrderStatusAndReason7.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderInstructionStatusReportV03.class.getMethod("getOrderDetailsReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<IndividualOrderStatusAndReason2> individualOrderDetailsReport;
 	/**
@@ -456,6 +493,14 @@ public class OrderInstructionStatusReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> IndividualOrderStatusAndReason2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderInstructionStatusReportV03.class.getMethod("getIndividualOrderDetailsReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SwitchOrderStatusAndReason1> switchOrderDetailsReport;
 	/**
@@ -489,6 +534,14 @@ public class OrderInstructionStatusReportV03 {
 			definition = "Status report details of a switch order.";
 			minOccurs = 1;
 			complexType_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderInstructionStatusReportV03.class.getMethod("getSwitchOrderDetailsReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -535,6 +588,14 @@ public class OrderInstructionStatusReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return OrderInstructionStatusReportV03.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -546,13 +607,15 @@ public class OrderInstructionStatusReportV03 {
 				nextVersions_lazy = () -> Arrays.asList(OrderInstructionStatusReportV04.mmObject());
 				previousVersion_lazy = () -> OrderInstructionStatusReportV02.mmObject();
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject());
-				xors_lazy = () -> Arrays.asList(OrderInstructionStatusReportV03.mmRelatedReferenceOrOtherReferenceRule, OrderInstructionStatusReportV03.mmOrderDetailsOrIndividualOrSwitchOrderDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmRelatedReferenceOrOtherReferenceRule,
+						com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmOrderDetailsOrIndividualOrSwitchOrderDetailsRule);
 				rootElement = "Document";
 				xmlTag = "OrdrInstrStsRptV03";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(OrderInstructionStatusReportV03.mmMessageIdentification, OrderInstructionStatusReportV03.mmOtherReference, OrderInstructionStatusReportV03.mmRelatedReference,
-						OrderInstructionStatusReportV03.mmOrderDetailsReport, OrderInstructionStatusReportV03.mmIndividualOrderDetailsReport, OrderInstructionStatusReportV03.mmSwitchOrderDetailsReport,
-						OrderInstructionStatusReportV03.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmMessageIdentification,
+						com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmOtherReference, com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmRelatedReference,
+						com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmOrderDetailsReport, com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmIndividualOrderDetailsReport,
+						com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmSwitchOrderDetailsReport, com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";
@@ -562,10 +625,16 @@ public class OrderInstructionStatusReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return OrderInstructionStatusReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -574,6 +643,7 @@ public class OrderInstructionStatusReportV03 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "OthrRef")
 	public List<AdditionalReference3> getOtherReference() {
 		return otherReference;
 	}
@@ -582,6 +652,7 @@ public class OrderInstructionStatusReportV03 {
 		this.otherReference = otherReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public List<AdditionalReference3> getRelatedReference() {
 		return relatedReference;
 	}
@@ -590,6 +661,7 @@ public class OrderInstructionStatusReportV03 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "OrdrDtlsRpt", required = true)
 	public OrderStatusAndReason7 getOrderDetailsReport() {
 		return orderDetailsReport;
 	}
@@ -598,6 +670,7 @@ public class OrderInstructionStatusReportV03 {
 		this.orderDetailsReport = orderDetailsReport;
 	}
 
+	@XmlElement(name = "IndvOrdrDtlsRpt", required = true)
 	public List<IndividualOrderStatusAndReason2> getIndividualOrderDetailsReport() {
 		return individualOrderDetailsReport;
 	}
@@ -606,6 +679,7 @@ public class OrderInstructionStatusReportV03 {
 		this.individualOrderDetailsReport = individualOrderDetailsReport;
 	}
 
+	@XmlElement(name = "SwtchOrdrDtlsRpt", required = true)
 	public List<SwitchOrderStatusAndReason1> getSwitchOrderDetailsReport() {
 		return switchOrderDetailsReport;
 	}
@@ -614,11 +688,18 @@ public class OrderInstructionStatusReportV03 {
 		this.switchOrderDetailsReport = switchOrderDetailsReport;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.016.03.03")
+	static public class Document {
+		@XmlElement(name = "OrdrInstrStsRptV03", required = true)
+		public OrderInstructionStatusReportV03 messageBody;
 	}
 }

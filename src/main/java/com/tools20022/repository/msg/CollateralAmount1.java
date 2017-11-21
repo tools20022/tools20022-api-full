@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the collateral valuation such as the collateral
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralAmount1", propOrder = {"collateralAmount", "reportedCurrencyAndAmount", "marketValueAmount", "accruedInterestAmount", "feesAndCommissions"})
 public class CollateralAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -348,6 +354,7 @@ public class CollateralAmount1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CollAmt", required = true)
 	public ActiveCurrencyAndAmount getCollateralAmount() {
 		return collateralAmount;
 	}
@@ -356,6 +363,7 @@ public class CollateralAmount1 {
 		this.collateralAmount = collateralAmount;
 	}
 
+	@XmlElement(name = "RptdCcyAndAmt", required = true)
 	public ActiveCurrencyAndAmount getReportedCurrencyAndAmount() {
 		return reportedCurrencyAndAmount;
 	}
@@ -364,6 +372,7 @@ public class CollateralAmount1 {
 		this.reportedCurrencyAndAmount = reportedCurrencyAndAmount;
 	}
 
+	@XmlElement(name = "MktValAmt", required = true)
 	public ActiveCurrencyAndAmount getMarketValueAmount() {
 		return marketValueAmount;
 	}
@@ -372,6 +381,7 @@ public class CollateralAmount1 {
 		this.marketValueAmount = marketValueAmount;
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt")
 	public ActiveCurrencyAndAmount getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -380,6 +390,7 @@ public class CollateralAmount1 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "FeesAndComssns")
 	public ActiveCurrencyAndAmount getFeesAndCommissions() {
 		return feesAndCommissions;
 	}

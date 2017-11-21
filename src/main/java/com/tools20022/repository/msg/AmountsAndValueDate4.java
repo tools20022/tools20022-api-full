@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Option;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the value date and the amounts traded in a foreign exchange option
@@ -73,6 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountsAndValueDate4", propOrder = {"callAmount", "putAmount", "optionSettlementCurrency", "finalSettlementDate"})
 public class AmountsAndValueDate4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -288,6 +294,7 @@ public class AmountsAndValueDate4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CallAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getCallAmount() {
 		return callAmount;
 	}
@@ -296,6 +303,7 @@ public class AmountsAndValueDate4 {
 		this.callAmount = callAmount;
 	}
 
+	@XmlElement(name = "PutAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getPutAmount() {
 		return putAmount;
 	}
@@ -304,6 +312,7 @@ public class AmountsAndValueDate4 {
 		this.putAmount = putAmount;
 	}
 
+	@XmlElement(name = "OptnSttlmCcy")
 	public ActiveOrHistoricCurrencyCode getOptionSettlementCurrency() {
 		return optionSettlementCurrency;
 	}
@@ -312,6 +321,7 @@ public class AmountsAndValueDate4 {
 		this.optionSettlementCurrency = optionSettlementCurrency;
 	}
 
+	@XmlElement(name = "FnlSttlmDt", required = true)
 	public ISODate getFinalSettlementDate() {
 		return finalSettlementDate;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Breakdown of cash movements into a fund as a result of investment funds
@@ -78,6 +82,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundCashInBreakdown1", propOrder = {"amount", "unitsNumber", "newAmountIndicator", "investmentFundTransactionInTypeDetails", "originalOrderQuantityDetails", "commissionDetails"})
 public class FundCashInBreakdown1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -391,6 +397,7 @@ public class FundCashInBreakdown1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt")
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -399,6 +406,7 @@ public class FundCashInBreakdown1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "UnitsNb")
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -407,6 +415,7 @@ public class FundCashInBreakdown1 {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "NewAmtInd")
 	public YesNoIndicator getNewAmountIndicator() {
 		return newAmountIndicator;
 	}
@@ -415,6 +424,7 @@ public class FundCashInBreakdown1 {
 		this.newAmountIndicator = newAmountIndicator;
 	}
 
+	@XmlElement(name = "InvstmtFndTxInTpDtls")
 	public InvestmentFundTransactionInType1 getInvestmentFundTransactionInTypeDetails() {
 		return investmentFundTransactionInTypeDetails;
 	}
@@ -423,6 +433,7 @@ public class FundCashInBreakdown1 {
 		this.investmentFundTransactionInTypeDetails = investmentFundTransactionInTypeDetails;
 	}
 
+	@XmlElement(name = "OrgnlOrdrQtyDtls")
 	public OriginalOrderQuantityType1 getOriginalOrderQuantityDetails() {
 		return originalOrderQuantityDetails;
 	}
@@ -431,6 +442,7 @@ public class FundCashInBreakdown1 {
 		this.originalOrderQuantityDetails = originalOrderQuantityDetails;
 	}
 
+	@XmlElement(name = "ComssnDtls")
 	public List<Commission4> getCommissionDetails() {
 		return commissionDetails;
 	}

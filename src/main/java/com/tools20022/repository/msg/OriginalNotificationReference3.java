@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the account notification.
@@ -96,6 +100,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalNotificationReference3", propOrder = {"account", "accountOwner", "accountServicer", "relatedAccount", "totalAmount", "expectedValueDate", "debtor", "debtorAgent", "intermediaryAgent", "originalItemAndStatus"})
 public class OriginalNotificationReference3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -692,6 +698,7 @@ public class OriginalNotificationReference3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acct")
 	public CashAccount24 getAccount() {
 		return account;
 	}
@@ -700,6 +707,7 @@ public class OriginalNotificationReference3 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public Party12Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -708,6 +716,7 @@ public class OriginalNotificationReference3 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
 		return accountServicer;
 	}
@@ -716,6 +725,7 @@ public class OriginalNotificationReference3 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "RltdAcct")
 	public CashAccount24 getRelatedAccount() {
 		return relatedAccount;
 	}
@@ -724,6 +734,7 @@ public class OriginalNotificationReference3 {
 		this.relatedAccount = relatedAccount;
 	}
 
+	@XmlElement(name = "TtlAmt")
 	public ActiveOrHistoricCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -732,6 +743,7 @@ public class OriginalNotificationReference3 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "XpctdValDt")
 	public ISODate getExpectedValueDate() {
 		return expectedValueDate;
 	}
@@ -740,6 +752,7 @@ public class OriginalNotificationReference3 {
 		this.expectedValueDate = expectedValueDate;
 	}
 
+	@XmlElement(name = "Dbtr")
 	public Party12Choice getDebtor() {
 		return debtor;
 	}
@@ -748,6 +761,7 @@ public class OriginalNotificationReference3 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAgt")
 	public BranchAndFinancialInstitutionIdentification5 getDebtorAgent() {
 		return debtorAgent;
 	}
@@ -756,6 +770,7 @@ public class OriginalNotificationReference3 {
 		this.debtorAgent = debtorAgent;
 	}
 
+	@XmlElement(name = "IntrmyAgt")
 	public BranchAndFinancialInstitutionIdentification5 getIntermediaryAgent() {
 		return intermediaryAgent;
 	}
@@ -764,6 +779,7 @@ public class OriginalNotificationReference3 {
 		this.intermediaryAgent = intermediaryAgent;
 	}
 
+	@XmlElement(name = "OrgnlItmAndSts", required = true)
 	public List<OriginalItemAndStatus3> getOriginalItemAndStatus() {
 		return originalItemAndStatus;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MissingOrIncorrectInformation3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the details of missing or incorrect information or the complete set
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * UnableToApplyJustification2Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnableToApplyJustification3Choice", propOrder = {"anyInformation", "missingOrIncorrectInformation", "possibleDuplicateInstruction"})
 public class UnableToApplyJustification3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -253,6 +259,7 @@ public class UnableToApplyJustification3Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AnyInf", required = true)
 	public YesNoIndicator getAnyInformation() {
 		return anyInformation;
 	}
@@ -261,6 +268,7 @@ public class UnableToApplyJustification3Choice {
 		this.anyInformation = anyInformation;
 	}
 
+	@XmlElement(name = "MssngOrIncrrctInf", required = true)
 	public MissingOrIncorrectInformation3 getMissingOrIncorrectInformation() {
 		return missingOrIncorrectInformation;
 	}
@@ -269,6 +277,7 @@ public class UnableToApplyJustification3Choice {
 		this.missingOrIncorrectInformation = missingOrIncorrectInformation;
 	}
 
+	@XmlElement(name = "PssblDplctInstr", required = true)
 	public TrueFalseIndicator getPossibleDuplicateInstruction() {
 		return possibleDuplicateInstruction;
 	}

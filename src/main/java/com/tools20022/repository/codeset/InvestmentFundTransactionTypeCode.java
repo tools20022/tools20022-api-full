@@ -29,30 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code
- * InvestmentFundTransactionInType3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code
- * InvestmentFundTransactionOutType4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code
- * InvestmentFundTransactionInType1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code
- * InvestmentFundTransactionOutType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TransactionType2Code
- * TransactionType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TransactionType1Code
- * TransactionType1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
- * InvestmentFundTransactionType1Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -127,6 +103,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionTypeCode#mmDividendPayment
  * InvestmentFundTransactionTypeCode.mmDividendPayment}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code
+ * InvestmentFundTransactionInType3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code
+ * InvestmentFundTransactionOutType4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code
+ * InvestmentFundTransactionInType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code
+ * InvestmentFundTransactionOutType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TransactionType2Code
+ * TransactionType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TransactionType1Code
+ * TransactionType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+ * InvestmentFundTransactionType1Code}</li>
  * </ul>
  * </li>
  * <li>

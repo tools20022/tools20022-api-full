@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide information on the tax amount(s) of tax
@@ -68,6 +72,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxAmount1", propOrder = {"rate", "taxableBaseAmount", "totalAmount", "details"})
 public class TaxAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -268,6 +274,7 @@ public class TaxAmount1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -276,6 +283,7 @@ public class TaxAmount1 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "TaxblBaseAmt")
 	public ActiveOrHistoricCurrencyAndAmount getTaxableBaseAmount() {
 		return taxableBaseAmount;
 	}
@@ -284,6 +292,7 @@ public class TaxAmount1 {
 		this.taxableBaseAmount = taxableBaseAmount;
 	}
 
+	@XmlElement(name = "TtlAmt")
 	public ActiveOrHistoricCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -292,6 +301,7 @@ public class TaxAmount1 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "Dtls")
 	public List<TaxRecordDetails1> getDetails() {
 		return details;
 	}

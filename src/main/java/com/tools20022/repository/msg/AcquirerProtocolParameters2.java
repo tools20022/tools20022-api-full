@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Acceptor parameters dedicated to the acquirer protocol.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcquirerProtocolParameters2", propOrder = {"financialCapture", "batchTransfer", "completionExchange"})
 public class AcquirerProtocolParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -234,6 +240,7 @@ public class AcquirerProtocolParameters2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinCaptr", required = true)
 	public FinancialCapture1Code getFinancialCapture() {
 		return financialCapture;
 	}
@@ -242,6 +249,7 @@ public class AcquirerProtocolParameters2 {
 		this.financialCapture = financialCapture;
 	}
 
+	@XmlElement(name = "BtchTrf")
 	public ExchangeConfiguration1 getBatchTransfer() {
 		return batchTransfer;
 	}
@@ -250,6 +258,7 @@ public class AcquirerProtocolParameters2 {
 		this.batchTransfer = batchTransfer;
 	}
 
+	@XmlElement(name = "CmpltnXchg")
 	public ExchangeConfiguration1 getCompletionExchange() {
 		return completionExchange;
 	}

@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money due to a party as compensation for a service.
@@ -86,6 +90,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Commission11", propOrder = {"amount", "rate", "type", "extendedType", "commercialAgreementReference", "newCommercialAgreementReferenceIndicator"})
 public class Commission11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -470,6 +476,7 @@ public class Commission11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt")
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -478,6 +485,7 @@ public class Commission11 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate")
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -486,6 +494,7 @@ public class Commission11 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "Tp")
 	public CommissionType6Code getType() {
 		return type;
 	}
@@ -494,6 +503,7 @@ public class Commission11 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "XtndedTp")
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
@@ -502,6 +512,7 @@ public class Commission11 {
 		this.extendedType = extendedType;
 	}
 
+	@XmlElement(name = "ComrclAgrmtRef")
 	public Max35Text getCommercialAgreementReference() {
 		return commercialAgreementReference;
 	}
@@ -510,6 +521,7 @@ public class Commission11 {
 		this.commercialAgreementReference = commercialAgreementReference;
 	}
 
+	@XmlElement(name = "NewComrclAgrmtRefInd")
 	public YesNoIndicator getNewCommercialAgreementReferenceIndicator() {
 		return newCommercialAgreementReferenceIndicator;
 	}

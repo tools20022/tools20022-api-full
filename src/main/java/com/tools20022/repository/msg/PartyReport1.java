@@ -25,6 +25,10 @@ import com.tools20022.repository.choice.PartyOrBusinessError1Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Report information about party reference data.
@@ -57,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Report information about party reference data."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyReport1", propOrder = {"partyIdentification", "partyOrError"})
 public class PartyReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class PartyReport1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public SystemPartyIdentification3 getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -168,6 +175,7 @@ public class PartyReport1 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "PtyOrErr", required = true)
 	public PartyOrBusinessError1Choice getPartyOrError() {
 		return partyOrError;
 	}

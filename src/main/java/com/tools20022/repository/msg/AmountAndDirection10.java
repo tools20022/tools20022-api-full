@@ -38,6 +38,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money debited or credited on the books of an account servicer.
@@ -106,6 +110,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountAndDirection10", propOrder = {"amount", "creditDebitIndicator", "originalCurrencyAndOrderedAmount", "foreignExchangeDetails"})
 public class AmountAndDirection10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -365,6 +371,7 @@ public class AmountAndDirection10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -373,6 +380,7 @@ public class AmountAndDirection10 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -381,6 +389,7 @@ public class AmountAndDirection10 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "OrgnlCcyAndOrdrdAmt")
 	public ActiveOrHistoricCurrencyAndAmount getOriginalCurrencyAndOrderedAmount() {
 		return originalCurrencyAndOrderedAmount;
 	}
@@ -389,6 +398,7 @@ public class AmountAndDirection10 {
 		this.originalCurrencyAndOrderedAmount = originalCurrencyAndOrderedAmount;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public ForeignExchangeTerms11 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}

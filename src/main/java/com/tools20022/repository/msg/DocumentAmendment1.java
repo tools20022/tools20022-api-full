@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.RegisteredContract;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates whether the supporting document is amending an original document or
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DocumentAmendment1", propOrder = {"correctionIdentification", "originalDocumentIdentification"})
 public class DocumentAmendment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -173,6 +179,7 @@ public class DocumentAmendment1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CrrctnId", required = true)
 	public Number getCorrectionIdentification() {
 		return correctionIdentification;
 	}
@@ -181,6 +188,7 @@ public class DocumentAmendment1 {
 		this.correctionIdentification = correctionIdentification;
 	}
 
+	@XmlElement(name = "OrgnlDocId")
 	public Max35Text getOriginalDocumentIdentification() {
 		return originalDocumentIdentification;
 	}

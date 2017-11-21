@@ -37,6 +37,29 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmCorporateActionDistribution
+ * FinancialTransaction.mmCorporateActionDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmInterestManagement
+ * FinancialTransaction.mmInterestManagement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmTrade
+ * FinancialTransaction.mmTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmCollateralMovement
+ * FinancialTransaction.mmCollateralMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmBankingTransaction
+ * FinancialTransaction.mmBankingTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmRegulatoryReport
+ * FinancialTransaction.mmRegulatoryReport}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -59,29 +82,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InterestManagement#mmFinancialTransaction
  * InterestManagement.mmFinancialTransaction}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmCorporateActionDistribution
- * FinancialTransaction.mmCorporateActionDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmInterestManagement
- * FinancialTransaction.mmInterestManagement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmTrade
- * FinancialTransaction.mmTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmCollateralMovement
- * FinancialTransaction.mmCollateralMovement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmBankingTransaction
- * FinancialTransaction.mmBankingTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmRegulatoryReport
- * FinancialTransaction.mmRegulatoryReport}</li>
  * </ul>
  * </li>
  * <li>
@@ -141,7 +141,7 @@ public class FinancialTransaction {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> FinancialTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionDistribution";
@@ -192,7 +192,7 @@ public class FinancialTransaction {
 	 */
 	public static final MMBusinessAssociationEnd mmInterestManagement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> FinancialTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestManagement";
@@ -239,7 +239,7 @@ public class FinancialTransaction {
 	 */
 	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> FinancialTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
@@ -288,7 +288,7 @@ public class FinancialTransaction {
 	 */
 	public static final MMBusinessAssociationEnd mmCollateralMovement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> FinancialTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralMovement";
@@ -339,7 +339,7 @@ public class FinancialTransaction {
 	 */
 	public static final MMBusinessAssociationEnd mmBankingTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> FinancialTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankingTransaction";
@@ -370,11 +370,6 @@ public class FinancialTransaction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.RegulatoryReport
 	 * RegulatoryReport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.FinancialTransaction
-	 * FinancialTransaction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -492,6 +487,11 @@ public class FinancialTransaction {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.FinancialTransaction
+	 * FinancialTransaction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -517,7 +517,7 @@ public class FinancialTransaction {
 					DirectDebitTransactionInformation18.mmRegulatoryReporting, CreditTransferTransaction20.mmRegulatoryReporting, CreditTransferTransaction21.mmRegulatoryReporting, CreditTransferTransaction25.mmRegulatoryReporting,
 					DirectDebitTransactionInformation20.mmRegulatoryReporting, CreditTransferTransaction26.mmRegulatoryReporting, DirectDebitTransactionInformation19.mmRegulatoryReporting, CreditTransferTransaction22.mmRegulatoryReporting,
 					DirectDebitTransactionInformation21.mmRegulatoryReporting, DirectDebitTransactionInformation22.mmRegulatoryReporting);
-			elementContext_lazy = () -> FinancialTransaction.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegulatoryReport";
@@ -539,8 +539,14 @@ public class FinancialTransaction {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.mmFinancialTransaction, com.tools20022.repository.entity.CorporateActionDistribution.mmFinancialTransaction,
 						com.tools20022.repository.entity.RegulatoryReport.mmReportedTransaction, com.tools20022.repository.entity.CollateralMovement.mmFinancialTransaction,
 						com.tools20022.repository.entity.BankingTransaction.mmFinancialTransaction, com.tools20022.repository.entity.InterestManagement.mmFinancialTransaction);
-				element_lazy = () -> Arrays.asList(FinancialTransaction.mmCorporateActionDistribution, FinancialTransaction.mmInterestManagement, FinancialTransaction.mmTrade, FinancialTransaction.mmCollateralMovement,
-						FinancialTransaction.mmBankingTransaction, FinancialTransaction.mmRegulatoryReport);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.FinancialTransaction.mmCorporateActionDistribution, com.tools20022.repository.entity.FinancialTransaction.mmInterestManagement,
+						com.tools20022.repository.entity.FinancialTransaction.mmTrade, com.tools20022.repository.entity.FinancialTransaction.mmCollateralMovement, com.tools20022.repository.entity.FinancialTransaction.mmBankingTransaction,
+						com.tools20022.repository.entity.FinancialTransaction.mmRegulatoryReport);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FinancialTransaction.class;
 			}
 		});
 		return mmObject_lazy.get();

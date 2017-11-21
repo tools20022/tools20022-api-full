@@ -69,6 +69,11 @@ public class LocalSettlementAgentRole extends SecuritiesSettlementPartyRole {
 				definition = "Party which holds securities and settles trades for non-resident customers. The customers' securities are held in one omnibus account or in sub accounts at the local central securities depository.";
 				superType_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return LocalSettlementAgentRole.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

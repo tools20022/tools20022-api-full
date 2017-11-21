@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Aggregated position of holdings held in a securities account for a specified
@@ -72,6 +76,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentAggregateBalance1", propOrder = {"itemDate", "holdings", "price"})
 public class FinancialInstrumentAggregateBalance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class FinancialInstrumentAggregateBalance1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ItmDt", required = true)
 	public ISODate getItemDate() {
 		return itemDate;
 	}
@@ -237,6 +244,7 @@ public class FinancialInstrumentAggregateBalance1 {
 		this.itemDate = itemDate;
 	}
 
+	@XmlElement(name = "Hldgs", required = true)
 	public FinancialInstrumentAggregateBalance1Choice getHoldings() {
 		return holdings;
 	}
@@ -245,6 +253,7 @@ public class FinancialInstrumentAggregateBalance1 {
 		this.holdings = holdings;
 	}
 
+	@XmlElement(name = "Pric")
 	public List<Price6> getPrice() {
 		return price;
 	}

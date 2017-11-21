@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Capabilities of the POI (Point Of Interaction) performing the transaction.
@@ -90,6 +94,9 @@ import java.util.List;
  * PointOfInteractionCapabilities3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PointOfInteractionCapabilities6", propOrder = {"cardReadingCapabilities", "cardholderVerificationCapabilities", "PINLengthCapabilities", "approvalCodeLength", "maxScriptLength", "cardCaptureCapable", "onLineCapabilities",
+		"messageCapabilities"})
 public class PointOfInteractionCapabilities6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -513,6 +520,7 @@ public class PointOfInteractionCapabilities6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CardRdngCpblties")
 	public List<CardDataReading5Code> getCardReadingCapabilities() {
 		return cardReadingCapabilities;
 	}
@@ -521,6 +529,7 @@ public class PointOfInteractionCapabilities6 {
 		this.cardReadingCapabilities = cardReadingCapabilities;
 	}
 
+	@XmlElement(name = "CrdhldrVrfctnCpblties")
 	public List<CardholderVerificationCapability4Code> getCardholderVerificationCapabilities() {
 		return cardholderVerificationCapabilities;
 	}
@@ -529,6 +538,7 @@ public class PointOfInteractionCapabilities6 {
 		this.cardholderVerificationCapabilities = cardholderVerificationCapabilities;
 	}
 
+	@XmlElement(name = "PINLngthCpblties")
 	public Number getPINLengthCapabilities() {
 		return pINLengthCapabilities;
 	}
@@ -537,6 +547,7 @@ public class PointOfInteractionCapabilities6 {
 		this.pINLengthCapabilities = pINLengthCapabilities;
 	}
 
+	@XmlElement(name = "ApprvlCdLngth")
 	public Number getApprovalCodeLength() {
 		return approvalCodeLength;
 	}
@@ -545,6 +556,7 @@ public class PointOfInteractionCapabilities6 {
 		this.approvalCodeLength = approvalCodeLength;
 	}
 
+	@XmlElement(name = "MxScrptLngth")
 	public Number getMaxScriptLength() {
 		return maxScriptLength;
 	}
@@ -553,6 +565,7 @@ public class PointOfInteractionCapabilities6 {
 		this.maxScriptLength = maxScriptLength;
 	}
 
+	@XmlElement(name = "CardCaptrCpbl")
 	public TrueFalseIndicator getCardCaptureCapable() {
 		return cardCaptureCapable;
 	}
@@ -561,6 +574,7 @@ public class PointOfInteractionCapabilities6 {
 		this.cardCaptureCapable = cardCaptureCapable;
 	}
 
+	@XmlElement(name = "OnLineCpblties")
 	public OnLineCapability1Code getOnLineCapabilities() {
 		return onLineCapabilities;
 	}
@@ -569,6 +583,7 @@ public class PointOfInteractionCapabilities6 {
 		this.onLineCapabilities = onLineCapabilities;
 	}
 
+	@XmlElement(name = "MsgCpblties")
 	public List<DisplayCapabilities4> getMessageCapabilities() {
 		return messageCapabilities;
 	}

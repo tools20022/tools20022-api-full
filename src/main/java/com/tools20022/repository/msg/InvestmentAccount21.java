@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account between an investor(s) and a fund manager or a fund. The account can
@@ -93,6 +97,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccount21", propOrder = {"accountIdentification", "accountName", "accountDesignation", "ownerIdentification", "accountServicer", "orderOriginatorEligibility", "subAccountDetails"})
 public class InvestmentAccount21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -540,6 +546,7 @@ public class InvestmentAccount21 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentification1 getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -548,6 +555,7 @@ public class InvestmentAccount21 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctNm")
 	public Max35Text getAccountName() {
 		return accountName;
 	}
@@ -556,6 +564,7 @@ public class InvestmentAccount21 {
 		this.accountName = accountName;
 	}
 
+	@XmlElement(name = "AcctDsgnt")
 	public Max35Text getAccountDesignation() {
 		return accountDesignation;
 	}
@@ -564,6 +573,7 @@ public class InvestmentAccount21 {
 		this.accountDesignation = accountDesignation;
 	}
 
+	@XmlElement(name = "OwnrId")
 	public List<PartyIdentification2Choice> getOwnerIdentification() {
 		return ownerIdentification;
 	}
@@ -572,6 +582,7 @@ public class InvestmentAccount21 {
 		this.ownerIdentification = ownerIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public PartyIdentification2Choice getAccountServicer() {
 		return accountServicer;
 	}
@@ -580,6 +591,7 @@ public class InvestmentAccount21 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "OrdrOrgtrElgblty")
 	public OrderOriginatorEligibility1Code getOrderOriginatorEligibility() {
 		return orderOriginatorEligibility;
 	}
@@ -588,6 +600,7 @@ public class InvestmentAccount21 {
 		this.orderOriginatorEligibility = orderOriginatorEligibility;
 	}
 
+	@XmlElement(name = "SubAcctDtls")
 	public SubAccount1 getSubAccountDetails() {
 		return subAccountDetails;
 	}

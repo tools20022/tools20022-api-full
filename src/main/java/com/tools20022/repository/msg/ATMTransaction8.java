@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Preferred withdrawal transaction chosen by the the customer.
@@ -77,6 +81,8 @@ import java.util.List;
  * ATMTransaction1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransaction8", propOrder = {"amount", "currency", "receiptFlag", "balancePrintFlag", "mixType", "mix"})
 public class ATMTransaction8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -381,6 +387,7 @@ public class ATMTransaction8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt")
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -389,6 +396,7 @@ public class ATMTransaction8 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -397,6 +405,7 @@ public class ATMTransaction8 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "RctFlg")
 	public TrueFalseIndicator getReceiptFlag() {
 		return receiptFlag;
 	}
@@ -405,6 +414,7 @@ public class ATMTransaction8 {
 		this.receiptFlag = receiptFlag;
 	}
 
+	@XmlElement(name = "BalPrtFlg")
 	public TrueFalseIndicator getBalancePrintFlag() {
 		return balancePrintFlag;
 	}
@@ -413,6 +423,7 @@ public class ATMTransaction8 {
 		this.balancePrintFlag = balancePrintFlag;
 	}
 
+	@XmlElement(name = "MixTp")
 	public Max35Text getMixType() {
 		return mixType;
 	}
@@ -421,6 +432,7 @@ public class ATMTransaction8 {
 		this.mixType = mixType;
 	}
 
+	@XmlElement(name = "Mix")
 	public List<ATMMediaMix2> getMix() {
 		return mix;
 	}

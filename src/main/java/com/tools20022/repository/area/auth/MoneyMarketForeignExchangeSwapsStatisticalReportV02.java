@@ -26,9 +26,11 @@ import com.tools20022.repository.choice.ForeignExchangeSwap3Choice;
 import com.tools20022.repository.msg.MoneyMarketReportHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The MoneyMarketSecuredMarketStatisticalReport message is sent by the
@@ -37,9 +39,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.014.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -73,6 +72,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.014.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -88,6 +90,8 @@ import java.util.List;
  * MoneyMarketForeignExchangeSwapsStatisticalReportV01}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MoneyMarketForeignExchangeSwapsStatisticalReportV02", propOrder = {"reportHeader", "foreignExchangeSwapsReport", "supplementaryData"})
 public class MoneyMarketForeignExchangeSwapsStatisticalReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -130,6 +134,14 @@ public class MoneyMarketForeignExchangeSwapsStatisticalReportV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MoneyMarketReportHeader1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MoneyMarketForeignExchangeSwapsStatisticalReportV02.class.getMethod("getReportHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ForeignExchangeSwap3Choice foreignExchangeSwapsReport;
@@ -176,6 +188,14 @@ public class MoneyMarketForeignExchangeSwapsStatisticalReportV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> ForeignExchangeSwap3Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MoneyMarketForeignExchangeSwapsStatisticalReportV02.class.getMethod("getForeignExchangeSwapsReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -219,6 +239,14 @@ public class MoneyMarketForeignExchangeSwapsStatisticalReportV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MoneyMarketForeignExchangeSwapsStatisticalReportV02.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -232,8 +260,9 @@ public class MoneyMarketForeignExchangeSwapsStatisticalReportV02 {
 				rootElement = "Document";
 				xmlTag = "MnyMktFXSwpsSttstclRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmReportHeader, MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmForeignExchangeSwapsReport,
-						MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmReportHeader,
+						com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmForeignExchangeSwapsReport,
+						com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -243,10 +272,16 @@ public class MoneyMarketForeignExchangeSwapsStatisticalReportV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MoneyMarketForeignExchangeSwapsStatisticalReportV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptHdr", required = true)
 	public MoneyMarketReportHeader1 getReportHeader() {
 		return reportHeader;
 	}
@@ -255,6 +290,7 @@ public class MoneyMarketForeignExchangeSwapsStatisticalReportV02 {
 		this.reportHeader = reportHeader;
 	}
 
+	@XmlElement(name = "FXSwpsRpt", required = true)
 	public ForeignExchangeSwap3Choice getForeignExchangeSwapsReport() {
 		return foreignExchangeSwapsReport;
 	}
@@ -263,11 +299,18 @@ public class MoneyMarketForeignExchangeSwapsStatisticalReportV02 {
 		this.foreignExchangeSwapsReport = foreignExchangeSwapsReport;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.014.02.02")
+	static public class Document {
+		@XmlElement(name = "MnyMktFXSwpsSttstclRpt", required = true)
+		public MoneyMarketForeignExchangeSwapsStatisticalReportV02 messageBody;
 	}
 }

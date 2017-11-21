@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Organised structure that is set up for a particular purpose, for example, a
@@ -73,6 +77,8 @@ import java.util.List;
  * Organisation24}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Organisation23", propOrder = {"name", "shortName", "postalAddress"})
 public class Organisation23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -254,6 +260,7 @@ public class Organisation23 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max350Text getName() {
 		return name;
 	}
@@ -262,6 +269,7 @@ public class Organisation23 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "ShrtNm")
 	public Max35Text getShortName() {
 		return shortName;
 	}
@@ -270,6 +278,7 @@ public class Organisation23 {
 		this.shortName = shortName;
 	}
 
+	@XmlElement(name = "PstlAdr", required = true)
 	public List<PostalAddress21> getPostalAddress() {
 		return postalAddress;
 	}

@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria based on which information is included.
@@ -77,6 +81,8 @@ import java.util.List;
  * definition} = "Defines the criteria based on which information is included."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraBalanceQueryCriteria2", propOrder = {"cancellationRequestIdentification", "processingStatus", "cashAccount", "cashAccountOwner", "messageOriginator", "creationDateTime"})
 public class IntraBalanceQueryCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -344,6 +350,7 @@ public class IntraBalanceQueryCriteria2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlReqId")
 	public List<Max35Text> getCancellationRequestIdentification() {
 		return cancellationRequestIdentification;
 	}
@@ -352,6 +359,7 @@ public class IntraBalanceQueryCriteria2 {
 		this.cancellationRequestIdentification = cancellationRequestIdentification;
 	}
 
+	@XmlElement(name = "PrcgSts")
 	public List<CancellationProcessingStatus3Choice> getProcessingStatus() {
 		return processingStatus;
 	}
@@ -360,6 +368,7 @@ public class IntraBalanceQueryCriteria2 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public List<AccountIdentificationSearchCriteria2Choice> getCashAccount() {
 		return cashAccount;
 	}
@@ -368,6 +377,7 @@ public class IntraBalanceQueryCriteria2 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "CshAcctOwnr")
 	public List<SystemPartyIdentification5> getCashAccountOwner() {
 		return cashAccountOwner;
 	}
@@ -376,6 +386,7 @@ public class IntraBalanceQueryCriteria2 {
 		this.cashAccountOwner = cashAccountOwner;
 	}
 
+	@XmlElement(name = "MsgOrgtr")
 	public List<SystemPartyIdentification5> getMessageOriginator() {
 		return messageOriginator;
 	}
@@ -384,6 +395,7 @@ public class IntraBalanceQueryCriteria2 {
 		this.messageOriginator = messageOriginator;
 	}
 
+	@XmlElement(name = "CreDtTm")
 	public DateAndDateTimeSearch2Choice getCreationDateTime() {
 		return creationDateTime;
 	}

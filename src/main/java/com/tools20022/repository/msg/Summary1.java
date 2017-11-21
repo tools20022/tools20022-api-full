@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.Obligation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information related to the collateral position, that is, the
@@ -87,6 +91,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Summary1", propOrder = {"exposedAmountPartyA", "exposedAmountPartyB", "exposureType", "totalValueOfCollateral", "netExcessDeficit", "netExcessDeficitIndicator", "valuationDateTime", "requestedSettlementDate",
+		"summaryDetails"})
 public class Summary1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -531,6 +538,7 @@ public class Summary1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "XpsdAmtPtyA")
 	public ActiveCurrencyAndAmount getExposedAmountPartyA() {
 		return exposedAmountPartyA;
 	}
@@ -539,6 +547,7 @@ public class Summary1 {
 		this.exposedAmountPartyA = exposedAmountPartyA;
 	}
 
+	@XmlElement(name = "XpsdAmtPtyB")
 	public ActiveCurrencyAndAmount getExposedAmountPartyB() {
 		return exposedAmountPartyB;
 	}
@@ -547,6 +556,7 @@ public class Summary1 {
 		this.exposedAmountPartyB = exposedAmountPartyB;
 	}
 
+	@XmlElement(name = "XpsrTp", required = true)
 	public ExposureType1Code getExposureType() {
 		return exposureType;
 	}
@@ -555,6 +565,7 @@ public class Summary1 {
 		this.exposureType = exposureType;
 	}
 
+	@XmlElement(name = "TtlValOfColl", required = true)
 	public ActiveCurrencyAndAmount getTotalValueOfCollateral() {
 		return totalValueOfCollateral;
 	}
@@ -563,6 +574,7 @@ public class Summary1 {
 		this.totalValueOfCollateral = totalValueOfCollateral;
 	}
 
+	@XmlElement(name = "NetXcssDfcit")
 	public ActiveCurrencyAndAmount getNetExcessDeficit() {
 		return netExcessDeficit;
 	}
@@ -571,6 +583,7 @@ public class Summary1 {
 		this.netExcessDeficit = netExcessDeficit;
 	}
 
+	@XmlElement(name = "NetXcssDfcitInd")
 	public ShortLong1Code getNetExcessDeficitIndicator() {
 		return netExcessDeficitIndicator;
 	}
@@ -579,6 +592,7 @@ public class Summary1 {
 		this.netExcessDeficitIndicator = netExcessDeficitIndicator;
 	}
 
+	@XmlElement(name = "ValtnDtTm", required = true)
 	public ISODateTime getValuationDateTime() {
 		return valuationDateTime;
 	}
@@ -587,6 +601,7 @@ public class Summary1 {
 		this.valuationDateTime = valuationDateTime;
 	}
 
+	@XmlElement(name = "ReqdSttlmDt")
 	public ISODate getRequestedSettlementDate() {
 		return requestedSettlementDate;
 	}
@@ -595,6 +610,7 @@ public class Summary1 {
 		this.requestedSettlementDate = requestedSettlementDate;
 	}
 
+	@XmlElement(name = "SummryDtls")
 	public SummaryAmounts1 getSummaryDetails() {
 		return summaryDetails;
 	}

@@ -18,6 +18,7 @@
 package com.tools20022.metamodel;
 
 import com.tools20022.core.metamodel.Derived;
+import com.tools20022.core.metamodel.RuntimePropertyAware;
 import com.tools20022.core.metamodel.Metamodel.MetamodelAttribute;
 import com.tools20022.core.metamodel.Metamodel.MetamodelConstraint;
 import com.tools20022.core.metamodel.Metamodel.MetamodelType;
@@ -38,7 +39,7 @@ import java.util.Optional;
  * Characteristic of a MessageDefinition, having a unique meaning within the
  * scope of that MessageDefinition.
  */
-public class MMMessageBuildingBlock implements MMMessageConstruct {
+public class MMMessageBuildingBlock implements RuntimePropertyAware, MMMessageConstruct {
 
 	/**
 	 * The simple content model of a MessageBuildingBlock when it is expressed

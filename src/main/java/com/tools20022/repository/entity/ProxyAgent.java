@@ -34,6 +34,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.MeetingPartyRole
+ * MeetingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -42,9 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecurityPosition2.mmProxy}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.MeetingPartyRole
- * MeetingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -75,6 +75,11 @@ public class ProxyAgent extends MeetingPartyRole {
 				definition = "Party appointed to organise the issuer meeting. Also called vote tabulator.";
 				derivationElement_lazy = () -> Arrays.asList(SecurityPosition2.mmProxy);
 				superType_lazy = () -> MeetingPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ProxyAgent.class;
 			}
 		});
 		return mmObject_lazy.get();

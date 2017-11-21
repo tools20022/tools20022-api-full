@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instruction from an investor to sell investment fund units back to the fund.
@@ -115,6 +119,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RedemptionOrder9", propOrder = {"masterReference", "orderReference", "clientReference", "requestedTradeDate", "hedgeFundOrderType", "investmentAccountDetails", "beneficiaryDetails", "financialInstrumentDetails",
+		"financialInstrumentQuantity", "sidePocketDetails", "lotDetails", "orderWaiverDetails", "chargeDetails", "taxDetails", "cashSettlementDate", "requestedSettlementCurrency", "paymentReference", "relatedPartyDetails"})
 public class RedemptionOrder9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1007,6 +1014,7 @@ public class RedemptionOrder9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -1015,6 +1023,7 @@ public class RedemptionOrder9 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
@@ -1023,6 +1032,7 @@ public class RedemptionOrder9 {
 		this.orderReference = orderReference;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public Max35Text getClientReference() {
 		return clientReference;
 	}
@@ -1031,6 +1041,7 @@ public class RedemptionOrder9 {
 		this.clientReference = clientReference;
 	}
 
+	@XmlElement(name = "ReqdTradDt")
 	public ISODate getRequestedTradeDate() {
 		return requestedTradeDate;
 	}
@@ -1039,6 +1050,7 @@ public class RedemptionOrder9 {
 		this.requestedTradeDate = requestedTradeDate;
 	}
 
+	@XmlElement(name = "HdgFndOrdrTp")
 	public List<HedgeFundOrderType1Code> getHedgeFundOrderType() {
 		return hedgeFundOrderType;
 	}
@@ -1047,6 +1059,7 @@ public class RedemptionOrder9 {
 		this.hedgeFundOrderType = hedgeFundOrderType;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount30 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -1055,6 +1068,7 @@ public class RedemptionOrder9 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "BnfcryDtls")
 	public IndividualPerson15 getBeneficiaryDetails() {
 		return beneficiaryDetails;
 	}
@@ -1063,6 +1077,7 @@ public class RedemptionOrder9 {
 		this.beneficiaryDetails = beneficiaryDetails;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument18 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -1071,6 +1086,7 @@ public class RedemptionOrder9 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "FinInstrmQty", required = true)
 	public FinancialInstrumentQuantity10Choice getFinancialInstrumentQuantity() {
 		return financialInstrumentQuantity;
 	}
@@ -1079,6 +1095,7 @@ public class RedemptionOrder9 {
 		this.financialInstrumentQuantity = financialInstrumentQuantity;
 	}
 
+	@XmlElement(name = "SdPcktDtls")
 	public SidePocketInformation1 getSidePocketDetails() {
 		return sidePocketDetails;
 	}
@@ -1087,6 +1104,7 @@ public class RedemptionOrder9 {
 		this.sidePocketDetails = sidePocketDetails;
 	}
 
+	@XmlElement(name = "LotDtls")
 	public List<LotDetails1> getLotDetails() {
 		return lotDetails;
 	}
@@ -1095,6 +1113,7 @@ public class RedemptionOrder9 {
 		this.lotDetails = lotDetails;
 	}
 
+	@XmlElement(name = "OrdrWvrDtls")
 	public AdditionalInformation2 getOrderWaiverDetails() {
 		return orderWaiverDetails;
 	}
@@ -1103,6 +1122,7 @@ public class RedemptionOrder9 {
 		this.orderWaiverDetails = orderWaiverDetails;
 	}
 
+	@XmlElement(name = "ChrgDtls")
 	public List<Charge21> getChargeDetails() {
 		return chargeDetails;
 	}
@@ -1111,6 +1131,7 @@ public class RedemptionOrder9 {
 		this.chargeDetails = chargeDetails;
 	}
 
+	@XmlElement(name = "TaxDtls")
 	public List<Tax19> getTaxDetails() {
 		return taxDetails;
 	}
@@ -1119,6 +1140,7 @@ public class RedemptionOrder9 {
 		this.taxDetails = taxDetails;
 	}
 
+	@XmlElement(name = "CshSttlmDt")
 	public ISODate getCashSettlementDate() {
 		return cashSettlementDate;
 	}
@@ -1127,6 +1149,7 @@ public class RedemptionOrder9 {
 		this.cashSettlementDate = cashSettlementDate;
 	}
 
+	@XmlElement(name = "ReqdSttlmCcy")
 	public ActiveCurrencyCode getRequestedSettlementCurrency() {
 		return requestedSettlementCurrency;
 	}
@@ -1135,6 +1158,7 @@ public class RedemptionOrder9 {
 		this.requestedSettlementCurrency = requestedSettlementCurrency;
 	}
 
+	@XmlElement(name = "PmtRef")
 	public Max35Text getPaymentReference() {
 		return paymentReference;
 	}
@@ -1143,6 +1167,7 @@ public class RedemptionOrder9 {
 		this.paymentReference = paymentReference;
 	}
 
+	@XmlElement(name = "RltdPtyDtls")
 	public List<Intermediary16> getRelatedPartyDetails() {
 		return relatedPartyDetails;
 	}

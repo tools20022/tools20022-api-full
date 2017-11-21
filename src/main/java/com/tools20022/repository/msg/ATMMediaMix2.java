@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Media mix selected.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMMediaMix1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMMediaMix2", propOrder = {"number", "unitValue"})
 public class ATMMediaMix2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -170,6 +176,7 @@ public class ATMMediaMix2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nb", required = true)
 	public Number getNumber() {
 		return number;
 	}
@@ -178,6 +185,7 @@ public class ATMMediaMix2 {
 		this.number = number;
 	}
 
+	@XmlElement(name = "UnitVal", required = true)
 	public ImpliedCurrencyAndAmount getUnitValue() {
 		return unitValue;
 	}

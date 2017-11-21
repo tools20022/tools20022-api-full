@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of start date and end date for the fiscal year.
@@ -56,6 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of start date and end date for the fiscal year."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FiscalYear1Choice", propOrder = {"startDate", "endDate"})
 public class FiscalYear1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -155,6 +161,7 @@ public class FiscalYear1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StartDt", required = true)
 	public ISODate getStartDate() {
 		return startDate;
 	}
@@ -163,6 +170,7 @@ public class FiscalYear1Choice {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "EndDt", required = true)
 	public ISODate getEndDate() {
 		return endDate;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment context in which the transaction is performed.
@@ -93,6 +97,8 @@ import java.util.List;
  * PaymentContext9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentContext15", propOrder = {"cardPresent", "cardholderPresent", "onLineContext", "attendanceContext", "transactionEnvironment", "transactionChannel", "cardDataEntryMode", "fallbackIndicator", "supportedOption"})
 public class PaymentContext15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -680,6 +686,7 @@ public class PaymentContext15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CardPres")
 	public TrueFalseIndicator getCardPresent() {
 		return cardPresent;
 	}
@@ -688,6 +695,7 @@ public class PaymentContext15 {
 		this.cardPresent = cardPresent;
 	}
 
+	@XmlElement(name = "CrdhldrPres")
 	public TrueFalseIndicator getCardholderPresent() {
 		return cardholderPresent;
 	}
@@ -696,6 +704,7 @@ public class PaymentContext15 {
 		this.cardholderPresent = cardholderPresent;
 	}
 
+	@XmlElement(name = "OnLineCntxt")
 	public TrueFalseIndicator getOnLineContext() {
 		return onLineContext;
 	}
@@ -704,6 +713,7 @@ public class PaymentContext15 {
 		this.onLineContext = onLineContext;
 	}
 
+	@XmlElement(name = "AttndncCntxt")
 	public AttendanceContext1Code getAttendanceContext() {
 		return attendanceContext;
 	}
@@ -712,6 +722,7 @@ public class PaymentContext15 {
 		this.attendanceContext = attendanceContext;
 	}
 
+	@XmlElement(name = "TxEnvt")
 	public TransactionEnvironment1Code getTransactionEnvironment() {
 		return transactionEnvironment;
 	}
@@ -720,6 +731,7 @@ public class PaymentContext15 {
 		this.transactionEnvironment = transactionEnvironment;
 	}
 
+	@XmlElement(name = "TxChanl")
 	public TransactionChannel3Code getTransactionChannel() {
 		return transactionChannel;
 	}
@@ -728,6 +740,7 @@ public class PaymentContext15 {
 		this.transactionChannel = transactionChannel;
 	}
 
+	@XmlElement(name = "CardDataNtryMd", required = true)
 	public CardDataReading5Code getCardDataEntryMode() {
 		return cardDataEntryMode;
 	}
@@ -736,6 +749,7 @@ public class PaymentContext15 {
 		this.cardDataEntryMode = cardDataEntryMode;
 	}
 
+	@XmlElement(name = "FllbckInd")
 	public CardFallback1Code getFallbackIndicator() {
 		return fallbackIndicator;
 	}
@@ -744,6 +758,7 @@ public class PaymentContext15 {
 		this.fallbackIndicator = fallbackIndicator;
 	}
 
+	@XmlElement(name = "SpprtdOptn")
 	public List<SupportedPaymentOption1Code> getSupportedOption() {
 		return supportedOption;
 	}

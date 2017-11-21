@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Description of the financial instrument.
@@ -96,6 +100,9 @@ import java.util.function.Supplier;
  * definition} = "Description of the financial instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentAttributes12", propOrder = {"securityIdentification", "quantity", "renounceableEntitlementStatusType", "fractionDisposition", "intermediateSecuritiesToUnderlyingRatio", "marketPrice", "expiryDate",
+		"postingDate", "tradingPeriod", "uninstructedBalance", "instructedBalance"})
 public class FinancialInstrumentAttributes12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -666,6 +673,7 @@ public class FinancialInstrumentAttributes12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification12 getSecurityIdentification() {
 		return securityIdentification;
 	}
@@ -674,6 +682,7 @@ public class FinancialInstrumentAttributes12 {
 		this.securityIdentification = securityIdentification;
 	}
 
+	@XmlElement(name = "Qty")
 	public RestrictedFINDecimalNumber getQuantity() {
 		return quantity;
 	}
@@ -682,6 +691,7 @@ public class FinancialInstrumentAttributes12 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "RnncblEntitlmntStsTp")
 	public RenounceableEntitlementStatusTypeFormat2Choice getRenounceableEntitlementStatusType() {
 		return renounceableEntitlementStatusType;
 	}
@@ -690,6 +700,7 @@ public class FinancialInstrumentAttributes12 {
 		this.renounceableEntitlementStatusType = renounceableEntitlementStatusType;
 	}
 
+	@XmlElement(name = "FrctnDspstn")
 	public FractionDispositionType5Choice getFractionDisposition() {
 		return fractionDisposition;
 	}
@@ -698,6 +709,7 @@ public class FinancialInstrumentAttributes12 {
 		this.fractionDisposition = fractionDisposition;
 	}
 
+	@XmlElement(name = "IntrmdtSctiesToUndrlygRatio")
 	public QuantityToQuantityRatio2 getIntermediateSecuritiesToUnderlyingRatio() {
 		return intermediateSecuritiesToUnderlyingRatio;
 	}
@@ -706,6 +718,7 @@ public class FinancialInstrumentAttributes12 {
 		this.intermediateSecuritiesToUnderlyingRatio = intermediateSecuritiesToUnderlyingRatio;
 	}
 
+	@XmlElement(name = "MktPric")
 	public AmountPrice4 getMarketPrice() {
 		return marketPrice;
 	}
@@ -714,6 +727,7 @@ public class FinancialInstrumentAttributes12 {
 		this.marketPrice = marketPrice;
 	}
 
+	@XmlElement(name = "XpryDt", required = true)
 	public DateFormat8Choice getExpiryDate() {
 		return expiryDate;
 	}
@@ -722,6 +736,7 @@ public class FinancialInstrumentAttributes12 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "PstngDt", required = true)
 	public DateFormat8Choice getPostingDate() {
 		return postingDate;
 	}
@@ -730,6 +745,7 @@ public class FinancialInstrumentAttributes12 {
 		this.postingDate = postingDate;
 	}
 
+	@XmlElement(name = "TradgPrd")
 	public Period3 getTradingPeriod() {
 		return tradingPeriod;
 	}
@@ -738,6 +754,7 @@ public class FinancialInstrumentAttributes12 {
 		this.tradingPeriod = tradingPeriod;
 	}
 
+	@XmlElement(name = "UinstdBal")
 	public BalanceFormat2Choice getUninstructedBalance() {
 		return uninstructedBalance;
 	}
@@ -746,6 +763,7 @@ public class FinancialInstrumentAttributes12 {
 		this.uninstructedBalance = uninstructedBalance;
 	}
 
+	@XmlElement(name = "InstdBal")
 	public BalanceFormat2Choice getInstructedBalance() {
 		return instructedBalance;
 	}

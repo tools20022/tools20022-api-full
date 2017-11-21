@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Aggregated position held in a securities account for a specified financial
@@ -69,6 +73,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentAggregateBalance2", propOrder = {"settledBalance", "tradedBalance", "balanceBreakdown"})
 public class FinancialInstrumentAggregateBalance2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class FinancialInstrumentAggregateBalance2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SttldBal")
 	public FinancialInstrumentQuantity1Choice getSettledBalance() {
 		return settledBalance;
 	}
@@ -238,6 +245,7 @@ public class FinancialInstrumentAggregateBalance2 {
 		this.settledBalance = settledBalance;
 	}
 
+	@XmlElement(name = "TraddBal")
 	public FinancialInstrumentQuantity1Choice getTradedBalance() {
 		return tradedBalance;
 	}
@@ -246,6 +254,7 @@ public class FinancialInstrumentAggregateBalance2 {
 		this.tradedBalance = tradedBalance;
 	}
 
+	@XmlElement(name = "BalBrkdwn")
 	public List<SubBalanceBreakdown1> getBalanceBreakdown() {
 		return balanceBreakdown;
 	}

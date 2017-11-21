@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.ExternalDiscrepancyCode;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Discrepancy1;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,6 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Discrepancy#mmUndertakingStatusReason
+ * Discrepancy.mmUndertakingStatusReason}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Discrepancy#mmType
+ * Discrepancy.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Discrepancy#mmDescription
+ * Discrepancy.mmDescription}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -48,18 +61,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.UndertakingStatusReason#mmDiscrepancy
  * UndertakingStatusReason.mmDiscrepancy}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Discrepancy#mmUndertakingStatusReason
- * Discrepancy.mmUndertakingStatusReason}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Discrepancy#mmType
- * Discrepancy.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Discrepancy#mmDescription
- * Discrepancy.mmDescription}</li>
  * </ul>
  * </li>
  * <li>
@@ -118,7 +119,7 @@ public class Discrepancy {
 	 */
 	public static final MMBusinessAssociationEnd mmUndertakingStatusReason = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Discrepancy.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Discrepancy.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UndertakingStatusReason";
@@ -158,7 +159,7 @@ public class Discrepancy {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Discrepancy.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Discrepancy.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
@@ -166,6 +167,14 @@ public class Discrepancy {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalDiscrepancyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Discrepancy.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max2000Text description;
@@ -195,7 +204,7 @@ public class Discrepancy {
 	 */
 	public static final MMBusinessAttribute mmDescription = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Discrepancy.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Discrepancy.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
@@ -203,6 +212,14 @@ public class Discrepancy {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Discrepancy.class.getMethod("getDescription", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -214,8 +231,13 @@ public class Discrepancy {
 				name = "Discrepancy";
 				definition = "Identification of a discrepancy.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UndertakingStatusReason.mmDiscrepancy);
-				element_lazy = () -> Arrays.asList(Discrepancy.mmUndertakingStatusReason, Discrepancy.mmType, Discrepancy.mmDescription);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Discrepancy.mmUndertakingStatusReason, com.tools20022.repository.entity.Discrepancy.mmType, com.tools20022.repository.entity.Discrepancy.mmDescription);
 				derivationComponent_lazy = () -> Arrays.asList(Discrepancy1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Discrepancy.class;
 			}
 		});
 		return mmObject_lazy.get();

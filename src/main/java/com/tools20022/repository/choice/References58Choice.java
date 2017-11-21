@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of reference.
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of reference."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References58Choice", propOrder = {"securitiesSettlementTransactionIdentification", "poolIdentification", "intraPositionMovementIdentification", "accountServicerTransactionIdentification", "otherTransactionIdentification"})
 public class References58Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -339,6 +345,7 @@ public class References58Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesSttlmTxId", required = true)
 	public RestrictedFINXMax16Text getSecuritiesSettlementTransactionIdentification() {
 		return securitiesSettlementTransactionIdentification;
 	}
@@ -347,6 +354,7 @@ public class References58Choice {
 		this.securitiesSettlementTransactionIdentification = securitiesSettlementTransactionIdentification;
 	}
 
+	@XmlElement(name = "PoolId", required = true)
 	public RestrictedFINXMax16Text getPoolIdentification() {
 		return poolIdentification;
 	}
@@ -355,6 +363,7 @@ public class References58Choice {
 		this.poolIdentification = poolIdentification;
 	}
 
+	@XmlElement(name = "IntraPosMvmntId", required = true)
 	public RestrictedFINXMax16Text getIntraPositionMovementIdentification() {
 		return intraPositionMovementIdentification;
 	}
@@ -363,6 +372,7 @@ public class References58Choice {
 		this.intraPositionMovementIdentification = intraPositionMovementIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrTxId", required = true)
 	public RestrictedFINXMax16Text getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
@@ -371,6 +381,7 @@ public class References58Choice {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
 	}
 
+	@XmlElement(name = "OthrTxId", required = true)
 	public RestrictedFINXMax16Text getOtherTransactionIdentification() {
 		return otherTransactionIdentification;
 	}

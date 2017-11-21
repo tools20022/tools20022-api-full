@@ -28,8 +28,10 @@ import com.tools20022.repository.msg.SimpleIdentificationInformation;
 import com.tools20022.repository.msg.TransactionStatus3;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -47,9 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.026.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -91,6 +90,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.026.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -102,6 +104,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusChangeRequestV02", propOrder = {"requestIdentification", "transactionIdentification", "submitterTransactionReference", "requestedStatus", "requestReason"})
 public class StatusChangeRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -138,6 +142,14 @@ public class StatusChangeRequestV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusChangeRequestV02.class.getMethod("getRequestIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SimpleIdentificationInformation transactionIdentification;
@@ -178,6 +190,14 @@ public class StatusChangeRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusChangeRequestV02.class.getMethod("getTransactionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
@@ -213,6 +233,14 @@ public class StatusChangeRequestV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusChangeRequestV02.class.getMethod("getSubmitterTransactionReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TransactionStatus3 requestedStatus;
@@ -252,6 +280,14 @@ public class StatusChangeRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusChangeRequestV02.class.getMethod("getRequestedStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Reason2 requestReason;
 	/**
@@ -286,6 +322,14 @@ public class StatusChangeRequestV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> Reason2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatusChangeRequestV02.class.getMethod("getRequestReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -298,8 +342,9 @@ public class StatusChangeRequestV02 {
 				rootElement = "Document";
 				xmlTag = "StsChngReq";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(StatusChangeRequestV02.mmRequestIdentification, StatusChangeRequestV02.mmTransactionIdentification, StatusChangeRequestV02.mmSubmitterTransactionReference,
-						StatusChangeRequestV02.mmRequestedStatus, StatusChangeRequestV02.mmRequestReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmRequestIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmRequestedStatus,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmRequestReason);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";
@@ -309,10 +354,16 @@ public class StatusChangeRequestV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StatusChangeRequestV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqId", required = true)
 	public MessageIdentification1 getRequestIdentification() {
 		return requestIdentification;
 	}
@@ -321,6 +372,7 @@ public class StatusChangeRequestV02 {
 		this.requestIdentification = requestIdentification;
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -329,6 +381,7 @@ public class StatusChangeRequestV02 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "SubmitrTxRef")
 	public SimpleIdentificationInformation getSubmitterTransactionReference() {
 		return submitterTransactionReference;
 	}
@@ -337,6 +390,7 @@ public class StatusChangeRequestV02 {
 		this.submitterTransactionReference = submitterTransactionReference;
 	}
 
+	@XmlElement(name = "ReqdSts", required = true)
 	public TransactionStatus3 getRequestedStatus() {
 		return requestedStatus;
 	}
@@ -345,11 +399,18 @@ public class StatusChangeRequestV02 {
 		this.requestedStatus = requestedStatus;
 	}
 
+	@XmlElement(name = "ReqRsn")
 	public Reason2 getRequestReason() {
 		return requestReason;
 	}
 
 	public void setRequestReason(Reason2 requestReason) {
 		this.requestReason = requestReason;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.026.02.02")
+	static public class Document {
+		@XmlElement(name = "StsChngReq", required = true)
+		public StatusChangeRequestV02 messageBody;
 	}
 }

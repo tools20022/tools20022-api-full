@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extract of trade data for an investment fund order.
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * FundOrderData1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FundOrderData5", propOrder = {"investmentAccountDetails", "financialInstrumentDetails", "unitsNumber", "netAmount", "grossAmount", "holdingsRedemptionRate", "settlementAmount", "unitCurrency", "quotedCurrency"})
 public class FundOrderData5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -615,6 +621,7 @@ public class FundOrderData5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls")
 	public InvestmentAccount58 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -623,6 +630,7 @@ public class FundOrderData5 {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "FinInstrmDtls")
 	public FinancialInstrument57 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -631,6 +639,7 @@ public class FundOrderData5 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "UnitsNb")
 	public DecimalNumber getUnitsNumber() {
 		return unitsNumber;
 	}
@@ -639,6 +648,7 @@ public class FundOrderData5 {
 		this.unitsNumber = unitsNumber;
 	}
 
+	@XmlElement(name = "NetAmt")
 	public ActiveOrHistoricCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
@@ -647,6 +657,7 @@ public class FundOrderData5 {
 		this.netAmount = netAmount;
 	}
 
+	@XmlElement(name = "GrssAmt")
 	public ActiveOrHistoricCurrencyAndAmount getGrossAmount() {
 		return grossAmount;
 	}
@@ -655,6 +666,7 @@ public class FundOrderData5 {
 		this.grossAmount = grossAmount;
 	}
 
+	@XmlElement(name = "HldgsRedRate")
 	public PercentageRate getHoldingsRedemptionRate() {
 		return holdingsRedemptionRate;
 	}
@@ -663,6 +675,7 @@ public class FundOrderData5 {
 		this.holdingsRedemptionRate = holdingsRedemptionRate;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public ActiveCurrencyAndAmount getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -671,6 +684,7 @@ public class FundOrderData5 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "UnitCcy")
 	public ActiveCurrencyCode getUnitCurrency() {
 		return unitCurrency;
 	}
@@ -679,6 +693,7 @@ public class FundOrderData5 {
 		this.unitCurrency = unitCurrency;
 	}
 
+	@XmlElement(name = "QtdCcy")
 	public ActiveCurrencyCode getQuotedCurrency() {
 		return quotedCurrency;
 	}

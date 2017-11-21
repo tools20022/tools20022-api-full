@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the intra-position movement.
@@ -68,6 +72,8 @@ import java.util.List;
  * definition} = "Details of the intra-position movement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionDetails44", propOrder = {"safekeepingPlace", "balanceFrom", "intraPositionMovement"})
 public class IntraPositionDetails44 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -234,6 +240,7 @@ public class IntraPositionDetails44 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat17Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -242,6 +249,7 @@ public class IntraPositionDetails44 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "BalFr", required = true)
 	public SecuritiesBalanceType8Choice getBalanceFrom() {
 		return balanceFrom;
 	}
@@ -250,6 +258,7 @@ public class IntraPositionDetails44 {
 		this.balanceFrom = balanceFrom;
 	}
 
+	@XmlElement(name = "IntraPosMvmnt", required = true)
 	public List<IntraPositionMovementDetails14> getIntraPositionMovement() {
 		return intraPositionMovement;
 	}

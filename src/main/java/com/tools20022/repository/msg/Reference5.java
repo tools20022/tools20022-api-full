@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional references linked to the quote response.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Additional references linked to the quote response."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reference5", propOrder = {"quoteIdentification", "quoteRequestIdentification", "IOIIdentification", "clientOrderIdentification"})
 public class Reference5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -242,6 +248,7 @@ public class Reference5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QtId")
 	public Max35Text getQuoteIdentification() {
 		return quoteIdentification;
 	}
@@ -250,6 +257,7 @@ public class Reference5 {
 		this.quoteIdentification = quoteIdentification;
 	}
 
+	@XmlElement(name = "QtReqId")
 	public Max35Text getQuoteRequestIdentification() {
 		return quoteRequestIdentification;
 	}
@@ -258,6 +266,7 @@ public class Reference5 {
 		this.quoteRequestIdentification = quoteRequestIdentification;
 	}
 
+	@XmlElement(name = "IOIId")
 	public Max35Text getIOIIdentification() {
 		return iOIIdentification;
 	}
@@ -266,6 +275,7 @@ public class Reference5 {
 		this.iOIIdentification = iOIIdentification;
 	}
 
+	@XmlElement(name = "ClntOrdrId")
 	public Max35Text getClientOrderIdentification() {
 		return clientOrderIdentification;
 	}

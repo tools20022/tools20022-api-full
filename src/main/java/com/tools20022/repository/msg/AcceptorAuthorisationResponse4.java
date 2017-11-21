@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Authorisation response from the acquirer.
@@ -88,6 +92,8 @@ import java.util.List;
  * AcceptorAuthorisationResponse3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorAuthorisationResponse4", propOrder = {"environment", "transaction", "transactionResponse", "supplementaryData"})
 public class AcceptorAuthorisationResponse4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -353,6 +359,7 @@ public class AcceptorAuthorisationResponse4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment33 getEnvironment() {
 		return environment;
 	}
@@ -361,6 +368,7 @@ public class AcceptorAuthorisationResponse4 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransaction38 getTransaction() {
 		return transaction;
 	}
@@ -369,6 +377,7 @@ public class AcceptorAuthorisationResponse4 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "TxRspn", required = true)
 	public CardPaymentTransaction39 getTransactionResponse() {
 		return transactionResponse;
 	}
@@ -377,6 +386,7 @@ public class AcceptorAuthorisationResponse4 {
 		this.transactionResponse = transactionResponse;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

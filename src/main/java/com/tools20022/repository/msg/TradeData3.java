@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.TreasuryTradeSettlementStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information on the status of a trade.
@@ -86,6 +90,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradeData3", propOrder = {"matchingSystemUniqueReference", "matchingSystemMatchingReference", "statusOriginator", "currentStatus", "currentStatusSubType", "currentStatusDateTime", "previousStatus", "allegedTrade",
+		"previousStatusSubType"})
 public class TradeData3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -498,6 +505,7 @@ public class TradeData3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MtchgSysUnqRef", required = true)
 	public Max35Text getMatchingSystemUniqueReference() {
 		return matchingSystemUniqueReference;
 	}
@@ -506,6 +514,7 @@ public class TradeData3 {
 		this.matchingSystemUniqueReference = matchingSystemUniqueReference;
 	}
 
+	@XmlElement(name = "MtchgSysMtchgRef")
 	public Max35Text getMatchingSystemMatchingReference() {
 		return matchingSystemMatchingReference;
 	}
@@ -514,6 +523,7 @@ public class TradeData3 {
 		this.matchingSystemMatchingReference = matchingSystemMatchingReference;
 	}
 
+	@XmlElement(name = "StsOrgtr")
 	public Max35Text getStatusOriginator() {
 		return statusOriginator;
 	}
@@ -522,6 +532,7 @@ public class TradeData3 {
 		this.statusOriginator = statusOriginator;
 	}
 
+	@XmlElement(name = "CurSts", required = true)
 	public Status5Choice getCurrentStatus() {
 		return currentStatus;
 	}
@@ -530,6 +541,7 @@ public class TradeData3 {
 		this.currentStatus = currentStatus;
 	}
 
+	@XmlElement(name = "CurStsSubTp")
 	public Max70Text getCurrentStatusSubType() {
 		return currentStatusSubType;
 	}
@@ -538,6 +550,7 @@ public class TradeData3 {
 		this.currentStatusSubType = currentStatusSubType;
 	}
 
+	@XmlElement(name = "CurStsDtTm")
 	public ISODateTime getCurrentStatusDateTime() {
 		return currentStatusDateTime;
 	}
@@ -546,6 +559,7 @@ public class TradeData3 {
 		this.currentStatusDateTime = currentStatusDateTime;
 	}
 
+	@XmlElement(name = "PrvsSts")
 	public Status5Choice getPreviousStatus() {
 		return previousStatus;
 	}
@@ -554,6 +568,7 @@ public class TradeData3 {
 		this.previousStatus = previousStatus;
 	}
 
+	@XmlElement(name = "AllgdTrad")
 	public YesNoIndicator getAllegedTrade() {
 		return allegedTrade;
 	}
@@ -562,6 +577,7 @@ public class TradeData3 {
 		this.allegedTrade = allegedTrade;
 	}
 
+	@XmlElement(name = "PrvsStsSubTp")
 	public Max70Text getPreviousStatusSubType() {
 		return previousStatusSubType;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.SecuritiesAuditTrailReport1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Used to report between the securities reference data or an operational error.
@@ -61,6 +65,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesAuditTrailOrOperationalError1Choice", propOrder = {"securitiesAuditTrailReport", "operationalError"})
 public class SecuritiesAuditTrailOrOperationalError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +165,7 @@ public class SecuritiesAuditTrailOrOperationalError1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesAudtTrlRpt", required = true)
 	public List<SecuritiesAuditTrailReport1> getSecuritiesAuditTrailReport() {
 		return securitiesAuditTrailReport;
 	}
@@ -167,6 +174,7 @@ public class SecuritiesAuditTrailOrOperationalError1Choice {
 		this.securitiesAuditTrailReport = securitiesAuditTrailReport;
 	}
 
+	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
 		return operationalError;
 	}

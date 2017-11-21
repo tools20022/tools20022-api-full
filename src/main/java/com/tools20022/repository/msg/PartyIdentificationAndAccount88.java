@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party and account details.
@@ -82,6 +86,8 @@ import java.util.function.Supplier;
  * definition} = "Party and account details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndAccount88", propOrder = {"identification", "alternateIdentification", "nationality", "safekeepingAccount", "processingIdentification", "additionalInformation"})
 public class PartyIdentificationAndAccount88 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -386,6 +392,7 @@ public class PartyIdentificationAndAccount88 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public PartyIdentification62Choice getIdentification() {
 		return identification;
 	}
@@ -394,6 +401,7 @@ public class PartyIdentificationAndAccount88 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification3 getAlternateIdentification() {
 		return alternateIdentification;
 	}
@@ -402,6 +410,7 @@ public class PartyIdentificationAndAccount88 {
 		this.alternateIdentification = alternateIdentification;
 	}
 
+	@XmlElement(name = "Ntlty")
 	public CountryCode getNationality() {
 		return nationality;
 	}
@@ -410,6 +419,7 @@ public class PartyIdentificationAndAccount88 {
 		this.nationality = nationality;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public RestrictedFINXMax35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -418,6 +428,7 @@ public class PartyIdentificationAndAccount88 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public RestrictedFINXMax16Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -426,6 +437,7 @@ public class PartyIdentificationAndAccount88 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public PartyTextInformation3 getAdditionalInformation() {
 		return additionalInformation;
 	}

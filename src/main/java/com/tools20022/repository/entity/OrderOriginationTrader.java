@@ -67,6 +67,11 @@ public class OrderOriginationTrader extends SecuritiesOrderPartyRole {
 				definition = "Identifies the trader at the order origination firm that submitted the order.";
 				superType_lazy = () -> SecuritiesOrderPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return OrderOriginationTrader.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

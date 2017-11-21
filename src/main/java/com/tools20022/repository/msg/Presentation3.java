@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.UndertakingDocument;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Electronic presentation information.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Electronic presentation information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Presentation3", propOrder = {"format", "channel", "address"})
 public class Presentation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class Presentation3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Frmt")
 	public DocumentFormat1Choice getFormat() {
 		return format;
 	}
@@ -237,6 +244,7 @@ public class Presentation3 {
 		this.format = format;
 	}
 
+	@XmlElement(name = "Chanl")
 	public Channel1Choice getChannel() {
 		return channel;
 	}
@@ -245,6 +253,7 @@ public class Presentation3 {
 		this.channel = channel;
 	}
 
+	@XmlElement(name = "Adr")
 	public Max256Text getAddress() {
 		return address;
 	}

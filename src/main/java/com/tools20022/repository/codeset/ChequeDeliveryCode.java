@@ -29,15 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code
- * ChequeDelivery1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChequeDelivery2Code
- * ChequeDelivery2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -76,6 +67,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ChequeDeliveryCode#mmRegisteredMailToFinalAgent
  * ChequeDeliveryCode.mmRegisteredMailToFinalAgent}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code
+ * ChequeDelivery1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChequeDelivery2Code
+ * ChequeDelivery2Code}</li>
  * </ul>
  * </li>
  * <li>

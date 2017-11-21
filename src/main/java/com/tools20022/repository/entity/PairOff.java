@@ -40,6 +40,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PairOff#mmPairedOffQuantity
+ * PairOff.mmPairedOffQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PairOff#mmRelatedSecuritiesSettlement
+ * PairOff.mmRelatedSecuritiesSettlement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
+ * ObligationFulfilment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -50,20 +64,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPairOff
  * SecuritiesSettlement.mmPairOff}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
- * ObligationFulfilment}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PairOff#mmPairedOffQuantity
- * PairOff.mmPairedOffQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PairOff#mmRelatedSecuritiesSettlement
- * PairOff.mmRelatedSecuritiesSettlement}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,10 +104,6 @@ public class PairOff extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.PairOff
-	 * PairOff}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -126,6 +122,10 @@ public class PairOff extends ObligationFulfilment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.PairOff
+	 * PairOff}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -140,7 +140,7 @@ public class PairOff extends ObligationFulfilment {
 		{
 			derivation_lazy = () -> Arrays.asList(PairedOrTurnedQuantity1Choice.mmPairedOffQuantity, PairedOrTurnedQuantity2Choice.mmPairedOffQuantity, PairedOrTurnedQuantity3Choice.mmPairedOffQuantity,
 					PairedOrTurnedQuantity4Choice.mmPairedOffQuantity);
-			elementContext_lazy = () -> PairOff.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PairOff.mmObject();
 			isDerived = true;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PairedOffQuantity";
@@ -189,7 +189,7 @@ public class PairOff extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSecuritiesSettlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PairOff.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PairOff.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesSettlement";
@@ -211,7 +211,12 @@ public class PairOff extends ObligationFulfilment {
 				definition = "Transaction is paired off and netted against one or more previous transactions.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesQuantity.mmPairoff, com.tools20022.repository.entity.SecuritiesSettlement.mmPairOff);
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(PairOff.mmPairedOffQuantity, PairOff.mmRelatedSecuritiesSettlement);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PairOff.mmPairedOffQuantity, com.tools20022.repository.entity.PairOff.mmRelatedSecuritiesSettlement);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PairOff.class;
 			}
 		});
 		return mmObject_lazy.get();

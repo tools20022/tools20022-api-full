@@ -31,6 +31,10 @@ import com.tools20022.repository.msg.SecurityIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between the type of quote to be cancelled. Not required when
@@ -82,6 +86,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuoteCancellation1Choice", propOrder = {"financialInstrumentDetails", "financialInstrumentAttributes", "stipulations", "underlyingFinancialInstrumentDetails", "underlyingFinancialInstrumentAttributes",
+		"underlyingStipulations", "instrumentLegGroupDetails"})
 public class QuoteCancellation1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -443,6 +450,7 @@ public class QuoteCancellation1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FinInstrmDtls")
 	public List<SecurityIdentification7> getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -451,6 +459,7 @@ public class QuoteCancellation1Choice {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public List<FinancialInstrumentAttributes1> getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -459,6 +468,7 @@ public class QuoteCancellation1Choice {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "Stiptns")
 	public List<FinancialInstrumentStipulations> getStipulations() {
 		return stipulations;
 	}
@@ -467,6 +477,7 @@ public class QuoteCancellation1Choice {
 		this.stipulations = stipulations;
 	}
 
+	@XmlElement(name = "UndrlygFinInstrmDtls")
 	public List<SecurityIdentification7> getUnderlyingFinancialInstrumentDetails() {
 		return underlyingFinancialInstrumentDetails;
 	}
@@ -475,6 +486,7 @@ public class QuoteCancellation1Choice {
 		this.underlyingFinancialInstrumentDetails = underlyingFinancialInstrumentDetails;
 	}
 
+	@XmlElement(name = "UndrlygFinInstrmAttrbts")
 	public List<FinancialInstrumentAttributes1> getUnderlyingFinancialInstrumentAttributes() {
 		return underlyingFinancialInstrumentAttributes;
 	}
@@ -483,6 +495,7 @@ public class QuoteCancellation1Choice {
 		this.underlyingFinancialInstrumentAttributes = underlyingFinancialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "UndrlygStiptns")
 	public List<FinancialInstrumentStipulations> getUnderlyingStipulations() {
 		return underlyingStipulations;
 	}
@@ -491,6 +504,7 @@ public class QuoteCancellation1Choice {
 		this.underlyingStipulations = underlyingStipulations;
 	}
 
+	@XmlElement(name = "InstrmLegGrpDtls")
 	public List<InstrumentLeg2> getInstrumentLegGroupDetails() {
 		return instrumentLegGroupDetails;
 	}

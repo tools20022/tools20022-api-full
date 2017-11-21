@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.Collateral1;
 import com.tools20022.repository.msg.MarginCollateral1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice to provide the collateral balance for the variation margin and the
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralBalance1Choice", propOrder = {"totalCollateral", "collateralDetails", "segregatedIndependentAmount"})
 public class CollateralBalance1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -241,6 +247,7 @@ public class CollateralBalance1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlColl", required = true)
 	public ActiveCurrencyAndAmount getTotalCollateral() {
 		return totalCollateral;
 	}
@@ -249,6 +256,7 @@ public class CollateralBalance1Choice {
 		this.totalCollateral = totalCollateral;
 	}
 
+	@XmlElement(name = "CollDtls", required = true)
 	public Collateral1 getCollateralDetails() {
 		return collateralDetails;
 	}
@@ -257,6 +265,7 @@ public class CollateralBalance1Choice {
 		this.collateralDetails = collateralDetails;
 	}
 
+	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
 	public MarginCollateral1 getSegregatedIndependentAmount() {
 		return segregatedIndependentAmount;
 	}

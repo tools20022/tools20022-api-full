@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,15 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMarketClaim
- * CorporateActionEvent.mmMarketClaim}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -57,6 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.MarketClaim#mmRelatedCorporateEvent
  * MarketClaim.mmRelatedCorporateEvent}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMarketClaim
+ * CorporateActionEvent.mmMarketClaim}</li>
  * </ul>
  * </li>
  * <li>
@@ -90,10 +91,6 @@ public class MarketClaim {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.MarketClaim MarketClaim}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -175,6 +172,10 @@ public class MarketClaim {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.MarketClaim MarketClaim}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -194,7 +195,7 @@ public class MarketClaim {
 					CorporateActionAmounts1.mmMarketClaimAmount, CorporateActionAmounts29.mmMarketClaimAmount, CorporateActionAmounts28.mmMarketClaimAmount, CorporateActionAmounts33.mmMarketClaimAmount,
 					CorporateActionAmounts35.mmMarketClaimAmount, CorporateActionAmounts37.mmMarketClaimAmount, CorporateActionAmounts38.mmMarketClaimAmount, CorporateActionAmounts39.mmMarketClaimAmount,
 					CorporateActionAmounts40.mmMarketClaimAmount);
-			elementContext_lazy = () -> MarketClaim.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MarketClaim.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketClaimAmount";
@@ -202,6 +203,14 @@ public class MarketClaim {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarketClaim.class.getMethod("getMarketClaimAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime marketClaimTrackingEndDate;
@@ -215,10 +224,6 @@ public class MarketClaim {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.MarketClaim MarketClaim}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -255,6 +260,10 @@ public class MarketClaim {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.MarketClaim MarketClaim}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -272,7 +281,7 @@ public class MarketClaim {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmMarketClaimTrackingEndDate, CorporateActionDate13.mmMarketClaimTrackingEndDate, CorporateActionDate14.mmMarketClaimTrackingEndDate,
 					CorporateActionDate21.mmMarketClaimTrackingEndDate, CorporateActionDate22.mmMarketClaimTrackingEndDate, CorporateActionDate25.mmMarketClaimTrackingEndDate, CorporateActionDate27.mmMarketClaimTrackingEndDate,
 					CorporateActionDate28.mmMarketClaimTrackingEndDate, CorporateActionDate44.mmMarketClaimTrackingEndDate, CorporateActionDate58.mmMarketClaimTrackingEndDate);
-			elementContext_lazy = () -> MarketClaim.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MarketClaim.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketClaimTrackingEndDate";
@@ -280,6 +289,14 @@ public class MarketClaim {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MarketClaim.class.getMethod("getMarketClaimTrackingEndDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionEvent relatedCorporateEvent;
@@ -319,7 +336,7 @@ public class MarketClaim {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCorporateEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> MarketClaim.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.MarketClaim.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCorporateEvent";
@@ -340,7 +357,13 @@ public class MarketClaim {
 				name = "MarketClaim";
 				definition = "Processes that reallocate corporate action proceeds to the entitled party and that compensate financial penalties or indirect costs due to late delivery or payment.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionEvent.mmMarketClaim);
-				element_lazy = () -> Arrays.asList(MarketClaim.mmMarketClaimAmount, MarketClaim.mmMarketClaimTrackingEndDate, MarketClaim.mmRelatedCorporateEvent);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MarketClaim.mmMarketClaimAmount, com.tools20022.repository.entity.MarketClaim.mmMarketClaimTrackingEndDate,
+						com.tools20022.repository.entity.MarketClaim.mmRelatedCorporateEvent);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MarketClaim.class;
 			}
 		});
 		return mmObject_lazy.get();

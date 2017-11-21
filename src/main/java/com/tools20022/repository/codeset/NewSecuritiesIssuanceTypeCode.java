@@ -30,29 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType1Code
- * NewSecuritiesIssuanceType1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType2Code
- * NewSecuritiesIssuanceType2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType3Code
- * NewSecuritiesIssuanceType3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType4Code
- * NewSecuritiesIssuanceType4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType5Code
- * NewSecuritiesIssuanceType5Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType6Code
- * NewSecuritiesIssuanceType6Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -76,6 +53,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#mmNonRefundedSecurityIndicator
  * NewSecuritiesIssuanceTypeCode.mmNonRefundedSecurityIndicator}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType1Code
+ * NewSecuritiesIssuanceType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType2Code
+ * NewSecuritiesIssuanceType2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType3Code
+ * NewSecuritiesIssuanceType3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType4Code
+ * NewSecuritiesIssuanceType4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType5Code
+ * NewSecuritiesIssuanceType5Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType6Code
+ * NewSecuritiesIssuanceType6Code}</li>
  * </ul>
  * </li>
  * <li>

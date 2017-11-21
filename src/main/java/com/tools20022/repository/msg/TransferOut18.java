@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a transfer out transaction.
@@ -66,6 +70,8 @@ import java.util.List;
  * TransferOut13}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferOut18", propOrder = {"cancellationReference", "transferDetails"})
 public class TransferOut18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class TransferOut18 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -193,6 +200,7 @@ public class TransferOut18 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "TrfDtls", required = true)
 	public List<Transfer30> getTransferDetails() {
 		return transferDetails;
 	}

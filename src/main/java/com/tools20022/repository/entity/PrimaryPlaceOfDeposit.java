@@ -65,6 +65,11 @@ public class PrimaryPlaceOfDeposit extends SecuritiesPartyRole {
 				definition = "Specifies the primary place of deposit for the securities.";
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PrimaryPlaceOfDeposit.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

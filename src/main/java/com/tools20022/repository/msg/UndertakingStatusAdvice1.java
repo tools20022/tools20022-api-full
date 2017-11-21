@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Undertaking status information.
@@ -109,6 +113,9 @@ import java.util.List;
  * definition} = "Undertaking status information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UndertakingStatusAdvice1", propOrder = {"initiatingParty", "undertakingIdentification", "amendmentSequenceNumber", "advisingPartyReferenceNumber", "confirmerReferenceNumber", "statusCategory", "status", "statusReason",
+		"reportedAmount", "originalMessageDetails", "enclosedFile", "additionalInformation"})
 public class UndertakingStatusAdvice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -674,6 +681,7 @@ public class UndertakingStatusAdvice1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InitgPty", required = true)
 	public PartyIdentification43 getInitiatingParty() {
 		return initiatingParty;
 	}
@@ -682,6 +690,7 @@ public class UndertakingStatusAdvice1 {
 		this.initiatingParty = initiatingParty;
 	}
 
+	@XmlElement(name = "UdrtkgId")
 	public Undertaking8 getUndertakingIdentification() {
 		return undertakingIdentification;
 	}
@@ -690,6 +699,7 @@ public class UndertakingStatusAdvice1 {
 		this.undertakingIdentification = undertakingIdentification;
 	}
 
+	@XmlElement(name = "AmdmntSeqNb")
 	public Number getAmendmentSequenceNumber() {
 		return amendmentSequenceNumber;
 	}
@@ -698,6 +708,7 @@ public class UndertakingStatusAdvice1 {
 		this.amendmentSequenceNumber = amendmentSequenceNumber;
 	}
 
+	@XmlElement(name = "AdvsgPtyRefNb")
 	public Max35Text getAdvisingPartyReferenceNumber() {
 		return advisingPartyReferenceNumber;
 	}
@@ -706,6 +717,7 @@ public class UndertakingStatusAdvice1 {
 		this.advisingPartyReferenceNumber = advisingPartyReferenceNumber;
 	}
 
+	@XmlElement(name = "CnfrmrRefNb")
 	public Max35Text getConfirmerReferenceNumber() {
 		return confirmerReferenceNumber;
 	}
@@ -714,6 +726,7 @@ public class UndertakingStatusAdvice1 {
 		this.confirmerReferenceNumber = confirmerReferenceNumber;
 	}
 
+	@XmlElement(name = "StsCtgy", required = true)
 	public ExternalUndertakingStatusCategory1Code getStatusCategory() {
 		return statusCategory;
 	}
@@ -722,6 +735,7 @@ public class UndertakingStatusAdvice1 {
 		this.statusCategory = statusCategory;
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public UndertakingStatus3Code getStatus() {
 		return status;
 	}
@@ -730,6 +744,7 @@ public class UndertakingStatusAdvice1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "StsRsn")
 	public List<StatusReasonInformation8> getStatusReason() {
 		return statusReason;
 	}
@@ -738,6 +753,7 @@ public class UndertakingStatusAdvice1 {
 		this.statusReason = statusReason;
 	}
 
+	@XmlElement(name = "RptdAmt")
 	public List<ReportedAmount1> getReportedAmount() {
 		return reportedAmount;
 	}
@@ -746,6 +762,7 @@ public class UndertakingStatusAdvice1 {
 		this.reportedAmount = reportedAmount;
 	}
 
+	@XmlElement(name = "OrgnlMsgDtls")
 	public OriginalMessage1 getOriginalMessageDetails() {
 		return originalMessageDetails;
 	}
@@ -754,6 +771,7 @@ public class UndertakingStatusAdvice1 {
 		this.originalMessageDetails = originalMessageDetails;
 	}
 
+	@XmlElement(name = "NclsdFile")
 	public List<Document9> getEnclosedFile() {
 		return enclosedFile;
 	}
@@ -762,6 +780,7 @@ public class UndertakingStatusAdvice1 {
 		this.enclosedFile = enclosedFile;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Changed the code list of Type.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Changed the code list of Type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashBalanceDetails2", propOrder = {"amount", "creditDebitIndicator", "type", "status", "valueDate", "numberOfPayments"})
 public class CashBalanceDetails2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -384,6 +390,7 @@ public class CashBalanceDetails2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -392,6 +399,7 @@ public class CashBalanceDetails2 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -400,6 +408,7 @@ public class CashBalanceDetails2 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Tp")
 	public BalanceType4Code getType() {
 		return type;
 	}
@@ -408,6 +417,7 @@ public class CashBalanceDetails2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Sts")
 	public BalanceStatus1Code getStatus() {
 		return status;
 	}
@@ -416,6 +426,7 @@ public class CashBalanceDetails2 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "ValDt")
 	public DateAndDateTimeChoice getValueDate() {
 		return valueDate;
 	}
@@ -424,6 +435,7 @@ public class CashBalanceDetails2 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "NbOfPmts")
 	public Number getNumberOfPayments() {
 		return numberOfPayments;
 	}

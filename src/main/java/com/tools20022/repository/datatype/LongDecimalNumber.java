@@ -54,6 +54,8 @@ public class LongDecimalNumber {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LongDecimalNumber";
 				definition = "Number of objects represented as a decimal number, eg, 0.75 or 45.6.";
+				totalDigits = 22;
+				fractionDigits = 11;
 			}
 		});
 		return mmObject_lazy.get();

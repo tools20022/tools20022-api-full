@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.PaperCommodityPulp1;
 import com.tools20022.repository.msg.PaperCommodityRecoveredPaper1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines commodity attributes of a derivative where the type is paper.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Defines commodity attributes of a derivative where the type is paper."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AssetClassCommodityPaper1Choice", propOrder = {"containerBoard", "newsprint", "pulp", "recoveredPaper"})
 public class AssetClassCommodityPaper1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -280,6 +286,7 @@ public class AssetClassCommodityPaper1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CntnrBrd", required = true)
 	public PaperCommodityContainerBoard1 getContainerBoard() {
 		return containerBoard;
 	}
@@ -288,6 +295,7 @@ public class AssetClassCommodityPaper1Choice {
 		this.containerBoard = containerBoard;
 	}
 
+	@XmlElement(name = "Nwsprnt", required = true)
 	public PaperCommodityNewsprint1 getNewsprint() {
 		return newsprint;
 	}
@@ -296,6 +304,7 @@ public class AssetClassCommodityPaper1Choice {
 		this.newsprint = newsprint;
 	}
 
+	@XmlElement(name = "Pulp", required = true)
 	public PaperCommodityPulp1 getPulp() {
 		return pulp;
 	}
@@ -304,6 +313,7 @@ public class AssetClassCommodityPaper1Choice {
 		this.pulp = pulp;
 	}
 
+	@XmlElement(name = "RcvrdPpr", required = true)
 	public PaperCommodityRecoveredPaper1 getRecoveredPaper() {
 		return recoveredPaper;
 	}

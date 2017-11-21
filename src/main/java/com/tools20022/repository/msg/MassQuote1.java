@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies elements related to a mass quote.
@@ -75,6 +79,8 @@ import java.util.List;
  * definition} = "Identifies elements related to a mass quote."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MassQuote1", propOrder = {"defaultBidSize", "defaultOfferSize", "quoteSetDetails", "tradingParties", "cashParties", "receivingSettlementParties", "deliveringSettlementParties", "otherBusinessParties"})
 public class MassQuote1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -482,6 +488,7 @@ public class MassQuote1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DfltBidSz")
 	public FinancialInstrumentQuantityChoice getDefaultBidSize() {
 		return defaultBidSize;
 	}
@@ -490,6 +497,7 @@ public class MassQuote1 {
 		this.defaultBidSize = defaultBidSize;
 	}
 
+	@XmlElement(name = "DfltOfferSz")
 	public FinancialInstrumentQuantityChoice getDefaultOfferSize() {
 		return defaultOfferSize;
 	}
@@ -498,6 +506,7 @@ public class MassQuote1 {
 		this.defaultOfferSize = defaultOfferSize;
 	}
 
+	@XmlElement(name = "QtSetDtls", required = true)
 	public List<QuoteSet1> getQuoteSetDetails() {
 		return quoteSetDetails;
 	}
@@ -506,6 +515,7 @@ public class MassQuote1 {
 		this.quoteSetDetails = quoteSetDetails;
 	}
 
+	@XmlElement(name = "TradgPties")
 	public List<Intermediary14> getTradingParties() {
 		return tradingParties;
 	}
@@ -514,6 +524,7 @@ public class MassQuote1 {
 		this.tradingParties = tradingParties;
 	}
 
+	@XmlElement(name = "CshPties")
 	public CashParties1 getCashParties() {
 		return cashParties;
 	}
@@ -522,6 +533,7 @@ public class MassQuote1 {
 		this.cashParties = cashParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties3 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -530,6 +542,7 @@ public class MassQuote1 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties3 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -538,6 +551,7 @@ public class MassQuote1 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "OthrBizPties")
 	public OtherParties1 getOtherBusinessParties() {
 		return otherBusinessParties;
 	}

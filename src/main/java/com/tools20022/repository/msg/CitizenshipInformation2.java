@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about an individual person.
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CitizenshipInformation}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CitizenshipInformation2", propOrder = {"nationality", "minorIndicator"})
 public class CitizenshipInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -199,6 +205,7 @@ public class CitizenshipInformation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Ntlty", required = true)
 	public NationalityCode getNationality() {
 		return nationality;
 	}
@@ -207,6 +214,7 @@ public class CitizenshipInformation2 {
 		this.nationality = nationality;
 	}
 
+	@XmlElement(name = "MnrInd", required = true)
 	public YesNoIndicator getMinorIndicator() {
 		return minorIndicator;
 	}

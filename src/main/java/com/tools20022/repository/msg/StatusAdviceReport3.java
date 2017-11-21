@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the report level status advice.
@@ -65,6 +69,8 @@ import java.util.List;
  * definition} = "Provides the report level status advice."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusAdviceReport3", propOrder = {"status", "validationRule", "messageDate", "statistics"})
 public class StatusAdviceReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -252,6 +258,7 @@ public class StatusAdviceReport3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public ReportingMessageStatus1Code getStatus() {
 		return status;
 	}
@@ -260,6 +267,7 @@ public class StatusAdviceReport3 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "VldtnRule")
 	public List<GenericValidationRuleIdentification1> getValidationRule() {
 		return validationRule;
 	}
@@ -268,6 +276,7 @@ public class StatusAdviceReport3 {
 		this.validationRule = validationRule;
 	}
 
+	@XmlElement(name = "MsgDt")
 	public ISODate getMessageDate() {
 		return messageDate;
 	}
@@ -276,6 +285,7 @@ public class StatusAdviceReport3 {
 		this.messageDate = messageDate;
 	}
 
+	@XmlElement(name = "Sttstcs")
 	public OriginalReportStatistics3 getStatistics() {
 		return statistics;
 	}

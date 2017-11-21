@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details for which one wishes to receive a quote.
@@ -104,6 +108,10 @@ import java.util.List;
  * definition} = "Details for which one wishes to receive a quote."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RequestForQuote", propOrder = {"quoteRequestType", "quoteType", "previousClosingPrice", "financialInstrumentDetails", "financialInstrumentAttributes", "stipulations", "underlyingFinancialInstrumentDetails",
+		"underlyingFinancialInstrumentAttributes", "underlyingStipulations", "instrumentLegGroupDetails", "tradingSession", "tradingParties", "cashParties", "receivingSettlementParties", "deliveringSettlementParties",
+		"otherBusinessParties"})
 public class RequestForQuote {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -877,6 +885,7 @@ public class RequestForQuote {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "QtReqTp")
 	public QuoteRequestType1Code getQuoteRequestType() {
 		return quoteRequestType;
 	}
@@ -885,6 +894,7 @@ public class RequestForQuote {
 		this.quoteRequestType = quoteRequestType;
 	}
 
+	@XmlElement(name = "QtTp")
 	public QuoteType1Code getQuoteType() {
 		return quoteType;
 	}
@@ -893,6 +903,7 @@ public class RequestForQuote {
 		this.quoteType = quoteType;
 	}
 
+	@XmlElement(name = "PrvsClsgPric")
 	public Price1 getPreviousClosingPrice() {
 		return previousClosingPrice;
 	}
@@ -901,6 +912,7 @@ public class RequestForQuote {
 		this.previousClosingPrice = previousClosingPrice;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public SecurityIdentification7 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -909,6 +921,7 @@ public class RequestForQuote {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public List<FinancialInstrumentAttributes1> getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -917,6 +930,7 @@ public class RequestForQuote {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "Stiptns")
 	public FinancialInstrumentStipulations getStipulations() {
 		return stipulations;
 	}
@@ -925,6 +939,7 @@ public class RequestForQuote {
 		this.stipulations = stipulations;
 	}
 
+	@XmlElement(name = "UndrlygFinInstrmDtls")
 	public List<SecurityIdentification7> getUnderlyingFinancialInstrumentDetails() {
 		return underlyingFinancialInstrumentDetails;
 	}
@@ -933,6 +948,7 @@ public class RequestForQuote {
 		this.underlyingFinancialInstrumentDetails = underlyingFinancialInstrumentDetails;
 	}
 
+	@XmlElement(name = "UndrlygFinInstrmAttrbts")
 	public List<FinancialInstrumentAttributes1> getUnderlyingFinancialInstrumentAttributes() {
 		return underlyingFinancialInstrumentAttributes;
 	}
@@ -941,6 +957,7 @@ public class RequestForQuote {
 		this.underlyingFinancialInstrumentAttributes = underlyingFinancialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "UndrlygStiptns")
 	public List<FinancialInstrumentStipulations> getUnderlyingStipulations() {
 		return underlyingStipulations;
 	}
@@ -949,6 +966,7 @@ public class RequestForQuote {
 		this.underlyingStipulations = underlyingStipulations;
 	}
 
+	@XmlElement(name = "InstrmLegGrpDtls")
 	public List<InstrumentLeg2> getInstrumentLegGroupDetails() {
 		return instrumentLegGroupDetails;
 	}
@@ -957,6 +975,7 @@ public class RequestForQuote {
 		this.instrumentLegGroupDetails = instrumentLegGroupDetails;
 	}
 
+	@XmlElement(name = "TradgSsn")
 	public TradingSession1 getTradingSession() {
 		return tradingSession;
 	}
@@ -965,6 +984,7 @@ public class RequestForQuote {
 		this.tradingSession = tradingSession;
 	}
 
+	@XmlElement(name = "TradgPties")
 	public List<Intermediary14> getTradingParties() {
 		return tradingParties;
 	}
@@ -973,6 +993,7 @@ public class RequestForQuote {
 		this.tradingParties = tradingParties;
 	}
 
+	@XmlElement(name = "CshPties")
 	public CashParties1 getCashParties() {
 		return cashParties;
 	}
@@ -981,6 +1002,7 @@ public class RequestForQuote {
 		this.cashParties = cashParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties3 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -989,6 +1011,7 @@ public class RequestForQuote {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties3 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -997,6 +1020,7 @@ public class RequestForQuote {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "OthrBizPties")
 	public OtherParties1 getOtherBusinessParties() {
 		return otherBusinessParties;
 	}

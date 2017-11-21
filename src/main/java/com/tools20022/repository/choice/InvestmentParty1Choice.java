@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PersonIdentification12;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of the investment party.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentParty1Choice", propOrder = {"person", "algorithm"})
 public class InvestmentParty1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -184,6 +190,7 @@ public class InvestmentParty1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Prsn", required = true)
 	public PersonIdentification12 getPerson() {
 		return person;
 	}
@@ -192,6 +199,7 @@ public class InvestmentParty1Choice {
 		this.person = person;
 	}
 
+	@XmlElement(name = "Algo", required = true)
 	public Max50Text getAlgorithm() {
 		return algorithm;
 	}

@@ -30,39 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason2Code
- * UnmatchedReason2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code
- * UnmatchedReason5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason4Code
- * UnmatchedReason4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code
- * UnmatchedReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason3Code
- * UnmatchedReason3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason7Code
- * UnmatchedReason7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code
- * UnmatchedReason6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code
- * UnmatchedReason8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code
- * UnmatchedReason9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason10Code
- * UnmatchedReason10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason12Code
- * UnmatchedReason12Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason11Code
- * UnmatchedReason11Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason13Code
- * UnmatchedReason13Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason14Code
- * UnmatchedReason14Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -311,6 +278,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.UnmatchedReasonCode#mmAutomaticGeneration
  * UnmatchedReasonCode.mmAutomaticGeneration}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason2Code
+ * UnmatchedReason2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code
+ * UnmatchedReason5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason4Code
+ * UnmatchedReason4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code
+ * UnmatchedReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason3Code
+ * UnmatchedReason3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason7Code
+ * UnmatchedReason7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code
+ * UnmatchedReason6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code
+ * UnmatchedReason8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code
+ * UnmatchedReason9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason10Code
+ * UnmatchedReason10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason12Code
+ * UnmatchedReason12Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason11Code
+ * UnmatchedReason11Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason13Code
+ * UnmatchedReason13Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason14Code
+ * UnmatchedReason14Code}</li>
  * </ul>
  * </li>
  * <li>

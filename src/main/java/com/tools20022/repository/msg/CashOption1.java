@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.ProceedsDefinition;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the cash option.
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides information about the cash option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashOption1", propOrder = {"creditDebitIndicator", "currency", "dateDetails", "amountDetails", "exchangeRate"})
 public class CashOption1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -324,6 +330,7 @@ public class CashOption1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -332,6 +339,7 @@ public class CashOption1 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -340,6 +348,7 @@ public class CashOption1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "DtDtls")
 	public CorporateActionDate5 getDateDetails() {
 		return dateDetails;
 	}
@@ -348,6 +357,7 @@ public class CashOption1 {
 		this.dateDetails = dateDetails;
 	}
 
+	@XmlElement(name = "AmtDtls")
 	public CorporateActionAmounts1 getAmountDetails() {
 		return amountDetails;
 	}
@@ -356,6 +366,7 @@ public class CashOption1 {
 		this.amountDetails = amountDetails;
 	}
 
+	@XmlElement(name = "XchgRate")
 	public ForeignExchangeTerms8 getExchangeRate() {
 		return exchangeRate;
 	}

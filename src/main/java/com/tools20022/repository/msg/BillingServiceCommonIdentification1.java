@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.IdentificationIssuerRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Common identification of a service to be billed.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Common identification of a service to be billed."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingServiceCommonIdentification1", propOrder = {"issuer", "identification"})
 public class BillingServiceCommonIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class BillingServiceCommonIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public Max6Text getIssuer() {
 		return issuer;
 	}
@@ -187,6 +194,7 @@ public class BillingServiceCommonIdentification1 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max8Text getIdentification() {
 		return identification;
 	}

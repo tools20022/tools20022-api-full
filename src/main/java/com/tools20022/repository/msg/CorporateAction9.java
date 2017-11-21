@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CorporateActionEventRegistration;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * An event determined by a corporation's board of directors, that changes the
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateAction9", propOrder = {"eventType", "eventIdentification"})
 public class CorporateAction9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class CorporateAction9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EvtTp", required = true)
 	public Max35Text getEventType() {
 		return eventType;
 	}
@@ -187,6 +194,7 @@ public class CorporateAction9 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "EvtId", required = true)
 	public Max35Text getEventIdentification() {
 		return eventIdentification;
 	}

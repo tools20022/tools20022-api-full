@@ -27,8 +27,10 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header31;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * The ATMTransferResponse message is sent by an acquirer or its agent to inform
@@ -36,9 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catp.017.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
@@ -74,6 +73,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catp.017.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -85,6 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransferResponseV01", propOrder = {"header", "protectedATMTransferResponse", "ATMTransferResponse", "securityTrailer"})
 public class ATMTransferResponseV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -124,6 +128,14 @@ public class ATMTransferResponseV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> Header31.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMTransferResponseV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType10 protectedATMTransferResponse;
 	/**
@@ -158,6 +170,14 @@ public class ATMTransferResponseV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMTransferResponseV01.class.getMethod("getProtectedATMTransferResponse", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ATMTransferResponse1 aTMTransferResponse;
@@ -197,6 +217,14 @@ public class ATMTransferResponseV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ATMTransferResponse1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMTransferResponseV01.class.getMethod("getATMTransferResponse", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ContentInformationType15 securityTrailer;
 	/**
@@ -232,6 +260,14 @@ public class ATMTransferResponseV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return ATMTransferResponseV01.class.getMethod("getSecurityTrailer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -244,7 +280,8 @@ public class ATMTransferResponseV01 {
 				rootElement = "Document";
 				xmlTag = "ATMTrfRspn";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(ATMTransferResponseV01.mmHeader, ATMTransferResponseV01.mmProtectedATMTransferResponse, ATMTransferResponseV01.mmATMTransferResponse, ATMTransferResponseV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMTransferResponseV01.mmHeader, com.tools20022.repository.area.catp.ATMTransferResponseV01.mmProtectedATMTransferResponse,
+						com.tools20022.repository.area.catp.ATMTransferResponseV01.mmATMTransferResponse, com.tools20022.repository.area.catp.ATMTransferResponseV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catp";
@@ -254,10 +291,16 @@ public class ATMTransferResponseV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ATMTransferResponseV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public Header31 getHeader() {
 		return header;
 	}
@@ -266,6 +309,7 @@ public class ATMTransferResponseV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "PrtctdATMTrfRspn")
 	public ContentInformationType10 getProtectedATMTransferResponse() {
 		return protectedATMTransferResponse;
 	}
@@ -274,6 +318,7 @@ public class ATMTransferResponseV01 {
 		this.protectedATMTransferResponse = protectedATMTransferResponse;
 	}
 
+	@XmlElement(name = "ATMTrfRspn")
 	public ATMTransferResponse1 getATMTransferResponse() {
 		return aTMTransferResponse;
 	}
@@ -282,11 +327,18 @@ public class ATMTransferResponseV01 {
 		this.aTMTransferResponse = aTMTransferResponse;
 	}
 
+	@XmlElement(name = "SctyTrlr")
 	public ContentInformationType15 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
 	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catp.017.01.01")
+	static public class Document {
+		@XmlElement(name = "ATMTrfRspn", required = true)
+		public ATMTransferResponseV01 messageBody;
 	}
 }

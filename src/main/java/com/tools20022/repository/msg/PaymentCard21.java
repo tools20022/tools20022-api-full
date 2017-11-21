@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment card performing the transaction.
@@ -91,6 +95,9 @@ import java.util.List;
  * PaymentCard9}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentCard21", propOrder = {"protectedCardData", "plainCardData", "paymentAccountReference", "issuerBIN", "cardCountryCode", "cardCurrencyCode", "cardProductProfile", "cardBrand", "internationalCard", "allowedProduct",
+		"serviceOption", "additionalCardData"})
 public class PaymentCard21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -668,6 +675,7 @@ public class PaymentCard21 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrtctdCardData")
 	public ContentInformationType10 getProtectedCardData() {
 		return protectedCardData;
 	}
@@ -676,6 +684,7 @@ public class PaymentCard21 {
 		this.protectedCardData = protectedCardData;
 	}
 
+	@XmlElement(name = "PlainCardData")
 	public PlainCardData15 getPlainCardData() {
 		return plainCardData;
 	}
@@ -684,6 +693,7 @@ public class PaymentCard21 {
 		this.plainCardData = plainCardData;
 	}
 
+	@XmlElement(name = "PmtAcctRef")
 	public Max70Text getPaymentAccountReference() {
 		return paymentAccountReference;
 	}
@@ -692,6 +702,7 @@ public class PaymentCard21 {
 		this.paymentAccountReference = paymentAccountReference;
 	}
 
+	@XmlElement(name = "IssrBIN")
 	public Max15NumericText getIssuerBIN() {
 		return issuerBIN;
 	}
@@ -700,6 +711,7 @@ public class PaymentCard21 {
 		this.issuerBIN = issuerBIN;
 	}
 
+	@XmlElement(name = "CardCtryCd")
 	public Max3Text getCardCountryCode() {
 		return cardCountryCode;
 	}
@@ -708,6 +720,7 @@ public class PaymentCard21 {
 		this.cardCountryCode = cardCountryCode;
 	}
 
+	@XmlElement(name = "CardCcyCd")
 	public Exact3AlphaNumericText getCardCurrencyCode() {
 		return cardCurrencyCode;
 	}
@@ -716,6 +729,7 @@ public class PaymentCard21 {
 		this.cardCurrencyCode = cardCurrencyCode;
 	}
 
+	@XmlElement(name = "CardPdctPrfl")
 	public Max35Text getCardProductProfile() {
 		return cardProductProfile;
 	}
@@ -724,6 +738,7 @@ public class PaymentCard21 {
 		this.cardProductProfile = cardProductProfile;
 	}
 
+	@XmlElement(name = "CardBrnd")
 	public Max35Text getCardBrand() {
 		return cardBrand;
 	}
@@ -732,6 +747,7 @@ public class PaymentCard21 {
 		this.cardBrand = cardBrand;
 	}
 
+	@XmlElement(name = "IntrnlCard")
 	public TrueFalseIndicator getInternationalCard() {
 		return internationalCard;
 	}
@@ -740,6 +756,7 @@ public class PaymentCard21 {
 		this.internationalCard = internationalCard;
 	}
 
+	@XmlElement(name = "AllwdPdct")
 	public List<Max70Text> getAllowedProduct() {
 		return allowedProduct;
 	}
@@ -748,6 +765,7 @@ public class PaymentCard21 {
 		this.allowedProduct = allowedProduct;
 	}
 
+	@XmlElement(name = "SvcOptn")
 	public Max35Text getServiceOption() {
 		return serviceOption;
 	}
@@ -756,6 +774,7 @@ public class PaymentCard21 {
 		this.serviceOption = serviceOption;
 	}
 
+	@XmlElement(name = "AddtlCardData")
 	public Max70Text getAdditionalCardData() {
 		return additionalCardData;
 	}

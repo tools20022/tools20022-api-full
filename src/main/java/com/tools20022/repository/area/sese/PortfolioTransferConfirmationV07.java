@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesSettlementLatestVersion;
 import com.tools20022.repository.choice.PartyIdentification70Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -48,9 +50,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.013.001.07}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
@@ -128,6 +127,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.013.001.07}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -143,6 +145,10 @@ import java.util.List;
  * PortfolioTransferConfirmationV06}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PortfolioTransferConfirmationV07", propOrder = {"messageReference", "poolReference", "previousReference", "relatedReference", "primaryIndividualInvestor", "secondaryIndividualInvestor", "otherIndividualInvestor",
+		"primaryCorporateInvestor", "secondaryCorporateInvestor", "otherCorporateInvestor", "transferorAccount", "nomineeAccount", "transferee", "intermediaryInformation", "cashAccount", "productTransfer", "marketPracticeVersion",
+		"extension"})
 public class PortfolioTransferConfirmationV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -186,6 +192,14 @@ public class PortfolioTransferConfirmationV07 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getMessageReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference6 poolReference;
 	/**
@@ -226,6 +240,14 @@ public class PortfolioTransferConfirmationV07 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference6 previousReference;
@@ -268,6 +290,14 @@ public class PortfolioTransferConfirmationV07 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference6 relatedReference;
 	/**
@@ -309,6 +339,14 @@ public class PortfolioTransferConfirmationV07 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected IndividualPerson8 primaryIndividualInvestor;
@@ -354,6 +392,14 @@ public class PortfolioTransferConfirmationV07 {
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getPrimaryIndividualInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected IndividualPerson8 secondaryIndividualInvestor;
 	/**
@@ -398,6 +444,14 @@ public class PortfolioTransferConfirmationV07 {
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getSecondaryIndividualInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<IndividualPerson8> otherIndividualInvestor;
 	/**
@@ -440,6 +494,14 @@ public class PortfolioTransferConfirmationV07 {
 			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmOtherIndividualInvestor;
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getOtherIndividualInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Organisation21 primaryCorporateInvestor;
@@ -484,6 +546,14 @@ public class PortfolioTransferConfirmationV07 {
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation21.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getPrimaryCorporateInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Organisation21 secondaryCorporateInvestor;
 	/**
@@ -527,6 +597,14 @@ public class PortfolioTransferConfirmationV07 {
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation21.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getSecondaryCorporateInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Organisation21> otherCorporateInvestor;
 	/**
@@ -568,6 +646,14 @@ public class PortfolioTransferConfirmationV07 {
 			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmOtherCorporateInvestor;
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation21.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getOtherCorporateInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Account19 transferorAccount;
@@ -612,6 +698,14 @@ public class PortfolioTransferConfirmationV07 {
 			minOccurs = 1;
 			complexType_lazy = () -> Account19.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getTransferorAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Account19 nomineeAccount;
 	/**
@@ -654,6 +748,14 @@ public class PortfolioTransferConfirmationV07 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Account19.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getNomineeAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification70Choice transferee;
@@ -699,6 +801,14 @@ public class PortfolioTransferConfirmationV07 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getTransferee", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Intermediary34> intermediaryInformation;
 	/**
@@ -731,6 +841,14 @@ public class PortfolioTransferConfirmationV07 {
 			definition = "Identification of a related party or intermediary.";
 			minOccurs = 0;
 			complexType_lazy = () -> Intermediary34.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getIntermediaryInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CashAccount34 cashAccount;
@@ -775,6 +893,14 @@ public class PortfolioTransferConfirmationV07 {
 			minOccurs = 0;
 			complexType_lazy = () -> CashAccount34.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getCashAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<ISATransfer26> productTransfer;
 	/**
@@ -814,6 +940,14 @@ public class PortfolioTransferConfirmationV07 {
 			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmProductTransfer;
 			minOccurs = 1;
 			complexType_lazy = () -> ISATransfer26.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getProductTransfer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MarketPracticeVersion1 marketPracticeVersion;
@@ -857,6 +991,14 @@ public class PortfolioTransferConfirmationV07 {
 			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getMarketPracticeVersion", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Extension1> extension;
 	/**
@@ -899,6 +1041,14 @@ public class PortfolioTransferConfirmationV07 {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PortfolioTransferConfirmationV07.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -912,12 +1062,15 @@ public class PortfolioTransferConfirmationV07 {
 				rootElement = "Document";
 				xmlTag = "PrtflTrfConf";
 				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PortfolioTransferConfirmationV07.mmMessageReference, PortfolioTransferConfirmationV07.mmPoolReference, PortfolioTransferConfirmationV07.mmPreviousReference,
-						PortfolioTransferConfirmationV07.mmRelatedReference, PortfolioTransferConfirmationV07.mmPrimaryIndividualInvestor, PortfolioTransferConfirmationV07.mmSecondaryIndividualInvestor,
-						PortfolioTransferConfirmationV07.mmOtherIndividualInvestor, PortfolioTransferConfirmationV07.mmPrimaryCorporateInvestor, PortfolioTransferConfirmationV07.mmSecondaryCorporateInvestor,
-						PortfolioTransferConfirmationV07.mmOtherCorporateInvestor, PortfolioTransferConfirmationV07.mmTransferorAccount, PortfolioTransferConfirmationV07.mmNomineeAccount, PortfolioTransferConfirmationV07.mmTransferee,
-						PortfolioTransferConfirmationV07.mmIntermediaryInformation, PortfolioTransferConfirmationV07.mmCashAccount, PortfolioTransferConfirmationV07.mmProductTransfer,
-						PortfolioTransferConfirmationV07.mmMarketPracticeVersion, PortfolioTransferConfirmationV07.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmMessageReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmPoolReference,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmPreviousReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmRelatedReference,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmPrimaryIndividualInvestor, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmSecondaryIndividualInvestor,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmOtherIndividualInvestor, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmPrimaryCorporateInvestor,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmSecondaryCorporateInvestor, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmOtherCorporateInvestor,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmTransferorAccount, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmNomineeAccount,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmTransferee, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmIntermediaryInformation,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmCashAccount, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmProductTransfer,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmMarketPracticeVersion, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -927,10 +1080,16 @@ public class PortfolioTransferConfirmationV07 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PortfolioTransferConfirmationV07.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgRef", required = true)
 	public MessageIdentification1 getMessageReference() {
 		return messageReference;
 	}
@@ -939,6 +1098,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.messageReference = messageReference;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference6 getPoolReference() {
 		return poolReference;
 	}
@@ -947,6 +1107,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference6 getPreviousReference() {
 		return previousReference;
 	}
@@ -955,6 +1116,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference6 getRelatedReference() {
 		return relatedReference;
 	}
@@ -963,6 +1125,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "PmryIndvInvstr")
 	public IndividualPerson8 getPrimaryIndividualInvestor() {
 		return primaryIndividualInvestor;
 	}
@@ -971,6 +1134,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.primaryIndividualInvestor = primaryIndividualInvestor;
 	}
 
+	@XmlElement(name = "ScndryIndvInvstr")
 	public IndividualPerson8 getSecondaryIndividualInvestor() {
 		return secondaryIndividualInvestor;
 	}
@@ -979,6 +1143,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.secondaryIndividualInvestor = secondaryIndividualInvestor;
 	}
 
+	@XmlElement(name = "OthrIndvInvstr")
 	public List<IndividualPerson8> getOtherIndividualInvestor() {
 		return otherIndividualInvestor;
 	}
@@ -987,6 +1152,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.otherIndividualInvestor = otherIndividualInvestor;
 	}
 
+	@XmlElement(name = "PmryCorpInvstr")
 	public Organisation21 getPrimaryCorporateInvestor() {
 		return primaryCorporateInvestor;
 	}
@@ -995,6 +1161,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.primaryCorporateInvestor = primaryCorporateInvestor;
 	}
 
+	@XmlElement(name = "ScndryCorpInvstr")
 	public Organisation21 getSecondaryCorporateInvestor() {
 		return secondaryCorporateInvestor;
 	}
@@ -1003,6 +1170,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.secondaryCorporateInvestor = secondaryCorporateInvestor;
 	}
 
+	@XmlElement(name = "OthrCorpInvstr")
 	public List<Organisation21> getOtherCorporateInvestor() {
 		return otherCorporateInvestor;
 	}
@@ -1011,6 +1179,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.otherCorporateInvestor = otherCorporateInvestor;
 	}
 
+	@XmlElement(name = "TrfrAcct", required = true)
 	public Account19 getTransferorAccount() {
 		return transferorAccount;
 	}
@@ -1019,6 +1188,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.transferorAccount = transferorAccount;
 	}
 
+	@XmlElement(name = "NmneeAcct")
 	public Account19 getNomineeAccount() {
 		return nomineeAccount;
 	}
@@ -1027,6 +1197,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.nomineeAccount = nomineeAccount;
 	}
 
+	@XmlElement(name = "Trfee", required = true)
 	public PartyIdentification70Choice getTransferee() {
 		return transferee;
 	}
@@ -1035,6 +1206,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.transferee = transferee;
 	}
 
+	@XmlElement(name = "IntrmyInf")
 	public List<Intermediary34> getIntermediaryInformation() {
 		return intermediaryInformation;
 	}
@@ -1043,6 +1215,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.intermediaryInformation = intermediaryInformation;
 	}
 
+	@XmlElement(name = "CshAcct")
 	public CashAccount34 getCashAccount() {
 		return cashAccount;
 	}
@@ -1051,6 +1224,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.cashAccount = cashAccount;
 	}
 
+	@XmlElement(name = "PdctTrf", required = true)
 	public List<ISATransfer26> getProductTransfer() {
 		return productTransfer;
 	}
@@ -1059,6 +1233,7 @@ public class PortfolioTransferConfirmationV07 {
 		this.productTransfer = productTransfer;
 	}
 
+	@XmlElement(name = "MktPrctcVrsn")
 	public MarketPracticeVersion1 getMarketPracticeVersion() {
 		return marketPracticeVersion;
 	}
@@ -1067,11 +1242,18 @@ public class PortfolioTransferConfirmationV07 {
 		this.marketPracticeVersion = marketPracticeVersion;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.013.07.07")
+	static public class Document {
+		@XmlElement(name = "PrtflTrfConf", required = true)
+		public PortfolioTransferConfirmationV07 messageBody;
 	}
 }

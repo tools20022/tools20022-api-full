@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of search criteria for querying securties account reference data.
@@ -85,6 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Set of search criteria for querying securties account reference data."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesAccountSearchCriteria", propOrder = {"accountIdentification", "accountServicer", "accountOwner", "partyType", "openingDate", "closingDate", "accountType", "endInvestorFlag", "pricingScheme"})
 public class SecuritiesAccountSearchCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -491,6 +497,7 @@ public class SecuritiesAccountSearchCriteria {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId")
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -499,6 +506,7 @@ public class SecuritiesAccountSearchCriteria {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public BICFIIdentifier getAccountServicer() {
 		return accountServicer;
 	}
@@ -507,6 +515,7 @@ public class SecuritiesAccountSearchCriteria {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public SystemPartyIdentification3 getAccountOwner() {
 		return accountOwner;
 	}
@@ -515,6 +524,7 @@ public class SecuritiesAccountSearchCriteria {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "PtyTp")
 	public SystemPartyType1Code getPartyType() {
 		return partyType;
 	}
@@ -523,6 +533,7 @@ public class SecuritiesAccountSearchCriteria {
 		this.partyType = partyType;
 	}
 
+	@XmlElement(name = "OpngDt")
 	public DateSearchChoice getOpeningDate() {
 		return openingDate;
 	}
@@ -531,6 +542,7 @@ public class SecuritiesAccountSearchCriteria {
 		this.openingDate = openingDate;
 	}
 
+	@XmlElement(name = "ClsgDt")
 	public DateSearchChoice getClosingDate() {
 		return closingDate;
 	}
@@ -539,6 +551,7 @@ public class SecuritiesAccountSearchCriteria {
 		this.closingDate = closingDate;
 	}
 
+	@XmlElement(name = "AcctTp")
 	public SystemSecuritiesAccountType1Code getAccountType() {
 		return accountType;
 	}
@@ -547,6 +560,7 @@ public class SecuritiesAccountSearchCriteria {
 		this.accountType = accountType;
 	}
 
+	@XmlElement(name = "EndInvstrFlg")
 	public Exact4AlphaNumericText getEndInvestorFlag() {
 		return endInvestorFlag;
 	}
@@ -555,6 +569,7 @@ public class SecuritiesAccountSearchCriteria {
 		this.endInvestorFlag = endInvestorFlag;
 	}
 
+	@XmlElement(name = "PricgSchme")
 	public Exact4AlphaNumericText getPricingScheme() {
 		return pricingScheme;
 	}

@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DocumentGeneralInformation3;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -35,23 +36,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ElectronicSignature#mmRelatedSecurityCertificate
- * ElectronicSignature.mmRelatedSecurityCertificate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecurityCertificatePartyRole#mmSecurityCertificate
- * SecurityCertificatePartyRole.mmSecurityCertificate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmClientCertificate
- * NetworkAccess.mmClientCertificate}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -67,6 +51,23 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecurityCertificate#mmCertificateType
  * SecurityCertificate.mmCertificateType}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ElectronicSignature#mmRelatedSecurityCertificate
+ * ElectronicSignature.mmRelatedSecurityCertificate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecurityCertificatePartyRole#mmSecurityCertificate
+ * SecurityCertificatePartyRole.mmSecurityCertificate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmClientCertificate
+ * NetworkAccess.mmClientCertificate}</li>
  * </ul>
  * </li>
  * <li>
@@ -105,11 +106,6 @@ public class SecurityCertificate extends Document {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.ElectronicSignature
 	 * ElectronicSignature}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecurityCertificate
-	 * SecurityCertificate}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -118,6 +114,11 @@ public class SecurityCertificate extends Document {
 	 * DocumentGeneralInformation3.mmLinkFileHash}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecurityCertificate
+	 * SecurityCertificate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -133,7 +134,7 @@ public class SecurityCertificate extends Document {
 	public static final MMBusinessAssociationEnd mmElectronicSignature = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentGeneralInformation3.mmLinkFileHash);
-			elementContext_lazy = () -> SecurityCertificate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecurityCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ElectronicSignature";
@@ -183,7 +184,7 @@ public class SecurityCertificate extends Document {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurityCertificatePartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecurityCertificate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecurityCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecurityCertificatePartyRole";
@@ -230,7 +231,7 @@ public class SecurityCertificate extends Document {
 	 */
 	public static final MMBusinessAssociationEnd mmNetworkAccess = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecurityCertificate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecurityCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetworkAccess";
@@ -270,7 +271,7 @@ public class SecurityCertificate extends Document {
 	 */
 	public static final MMBusinessAttribute mmCertificateType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> SecurityCertificate.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecurityCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificateType";
@@ -278,6 +279,14 @@ public class SecurityCertificate extends Document {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecurityCertificate.class.getMethod("getCertificateType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -291,7 +300,13 @@ public class SecurityCertificate extends Document {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ElectronicSignature.mmRelatedSecurityCertificate, com.tools20022.repository.entity.SecurityCertificatePartyRole.mmSecurityCertificate,
 						com.tools20022.repository.entity.NetworkAccess.mmClientCertificate);
 				superType_lazy = () -> Document.mmObject();
-				element_lazy = () -> Arrays.asList(SecurityCertificate.mmElectronicSignature, SecurityCertificate.mmSecurityCertificatePartyRole, SecurityCertificate.mmNetworkAccess, SecurityCertificate.mmCertificateType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecurityCertificate.mmElectronicSignature, com.tools20022.repository.entity.SecurityCertificate.mmSecurityCertificatePartyRole,
+						com.tools20022.repository.entity.SecurityCertificate.mmNetworkAccess, com.tools20022.repository.entity.SecurityCertificate.mmCertificateType);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecurityCertificate.class;
 			}
 		});
 		return mmObject_lazy.get();

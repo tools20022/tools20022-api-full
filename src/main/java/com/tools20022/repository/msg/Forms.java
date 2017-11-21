@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteris
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Processing characteristics linked to the instrument, ie, not to the market.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Forms", propOrder = {"applicationForm", "signatureType"})
 public class Forms {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class Forms {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ApplForm", required = true)
 	public YesNoIndicator getApplicationForm() {
 		return applicationForm;
 	}
@@ -183,6 +190,7 @@ public class Forms {
 		this.applicationForm = applicationForm;
 	}
 
+	@XmlElement(name = "SgntrTp", required = true)
 	public SignatureType1Code getSignatureType() {
 		return signatureType;
 	}

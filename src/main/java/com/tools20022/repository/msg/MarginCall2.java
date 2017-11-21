@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the calculation and the resulting margin and independent amount
@@ -94,6 +98,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarginCall2", propOrder = {"collateralAccountIdentification", "marginCallResult", "marginDetailDueToA", "marginDetailDueToB", "requirementDetailsDueToA", "requirementDetailsDueToB", "expectedCollateralDueToA",
+		"expectedCollateralDueToB"})
 public class MarginCall2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -509,6 +516,7 @@ public class MarginCall2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CollAcctId")
 	public CollateralAccount2 getCollateralAccountIdentification() {
 		return collateralAccountIdentification;
 	}
@@ -517,6 +525,7 @@ public class MarginCall2 {
 		this.collateralAccountIdentification = collateralAccountIdentification;
 	}
 
+	@XmlElement(name = "MrgnCallRslt", required = true)
 	public MarginCallResult3 getMarginCallResult() {
 		return marginCallResult;
 	}
@@ -525,6 +534,7 @@ public class MarginCall2 {
 		this.marginCallResult = marginCallResult;
 	}
 
+	@XmlElement(name = "MrgnDtlDueToA")
 	public MarginCall1 getMarginDetailDueToA() {
 		return marginDetailDueToA;
 	}
@@ -533,6 +543,7 @@ public class MarginCall2 {
 		this.marginDetailDueToA = marginDetailDueToA;
 	}
 
+	@XmlElement(name = "MrgnDtlDueToB")
 	public MarginCall1 getMarginDetailDueToB() {
 		return marginDetailDueToB;
 	}
@@ -541,6 +552,7 @@ public class MarginCall2 {
 		this.marginDetailDueToB = marginDetailDueToB;
 	}
 
+	@XmlElement(name = "RqrmntDtlsDueToA")
 	public MarginRequirement1Choice getRequirementDetailsDueToA() {
 		return requirementDetailsDueToA;
 	}
@@ -549,6 +561,7 @@ public class MarginCall2 {
 		this.requirementDetailsDueToA = requirementDetailsDueToA;
 	}
 
+	@XmlElement(name = "RqrmntDtlsDueToB")
 	public MarginRequirement1Choice getRequirementDetailsDueToB() {
 		return requirementDetailsDueToB;
 	}
@@ -557,6 +570,7 @@ public class MarginCall2 {
 		this.requirementDetailsDueToB = requirementDetailsDueToB;
 	}
 
+	@XmlElement(name = "XpctdCollDueToA")
 	public ExpectedCollateral2Choice getExpectedCollateralDueToA() {
 		return expectedCollateralDueToA;
 	}
@@ -565,6 +579,7 @@ public class MarginCall2 {
 		this.expectedCollateralDueToA = expectedCollateralDueToA;
 	}
 
+	@XmlElement(name = "XpctdCollDueToB")
 	public ExpectedCollateral2Choice getExpectedCollateralDueToB() {
 		return expectedCollateralDueToB;
 	}

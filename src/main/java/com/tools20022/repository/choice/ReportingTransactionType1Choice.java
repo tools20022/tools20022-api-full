@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a new or a cancellation transaction.
@@ -74,6 +78,8 @@ import java.util.List;
  * definition} = "Choice between a new or a cancellation transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportingTransactionType1Choice", propOrder = {"new", "cancellation", "supplementaryData"})
 public class ReportingTransactionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -231,6 +237,7 @@ public class ReportingTransactionType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "New", required = true)
 	public SecuritiesTransactionReport4 getNew() {
 		return new_;
 	}
@@ -239,6 +246,7 @@ public class ReportingTransactionType1Choice {
 		this.new_ = new_;
 	}
 
+	@XmlElement(name = "Cxl", required = true)
 	public SecuritiesTransactionReport2 getCancellation() {
 		return cancellation;
 	}
@@ -247,6 +255,7 @@ public class ReportingTransactionType1Choice {
 		this.cancellation = cancellation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

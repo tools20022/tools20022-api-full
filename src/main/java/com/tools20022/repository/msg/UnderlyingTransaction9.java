@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the underlying (group of) transaction(s) to which the resolution
@@ -89,6 +93,8 @@ import java.util.List;
  * UnderlyingTransaction4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnderlyingTransaction9", propOrder = {"originalGroupInformationAndStatus", "originalPaymentInformationAndStatus", "transactionInformationAndStatus"})
 public class UnderlyingTransaction9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -304,6 +310,7 @@ public class UnderlyingTransaction9 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlGrpInfAndSts")
 	public OriginalGroupHeader5 getOriginalGroupInformationAndStatus() {
 		return originalGroupInformationAndStatus;
 	}
@@ -312,6 +319,7 @@ public class UnderlyingTransaction9 {
 		this.originalGroupInformationAndStatus = originalGroupInformationAndStatus;
 	}
 
+	@XmlElement(name = "OrgnlPmtInfAndSts")
 	public List<OriginalPaymentInstruction10> getOriginalPaymentInformationAndStatus() {
 		return originalPaymentInformationAndStatus;
 	}
@@ -320,6 +328,7 @@ public class UnderlyingTransaction9 {
 		this.originalPaymentInformationAndStatus = originalPaymentInformationAndStatus;
 	}
 
+	@XmlElement(name = "TxInfAndSts")
 	public List<PaymentTransaction53> getTransactionInformationAndStatus() {
 		return transactionInformationAndStatus;
 	}

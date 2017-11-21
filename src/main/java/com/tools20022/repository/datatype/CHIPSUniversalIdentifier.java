@@ -34,6 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} = "American Banker's Association (ABA); CHIPS UID"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "CH[0-9]{6,6}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -70,6 +72,7 @@ public class CHIPSUniversalIdentifier {
 				name = "CHIPSUniversalIdentifier";
 				definition = "(United States) Clearing House Interbank Payments System (CHIPS) Universal Identification  (UID).  Identifies entities that own accounts at CHIPS participating financial institutions, through which CHIPS payments are effected.  The CHIPS UID is assigned by the New York Clearing House.";
 				identificationScheme = "American Banker's Association (ABA); CHIPS UID";
+				pattern = "CH[0-9]{6,6}";
 			}
 		});
 		return mmObject_lazy.get();

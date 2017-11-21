@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a code or a proprietary code as to the nature of the dispute
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DisputeResolutionType2Choice", propOrder = {"code", "proprietaryIdentification"})
 public class DisputeResolutionType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class DisputeResolutionType2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public DisputeResolutionType2Code getCode() {
 		return code;
 	}
@@ -193,6 +200,7 @@ public class DisputeResolutionType2Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "PrtryId", required = true)
 	public GenericIdentification30 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}

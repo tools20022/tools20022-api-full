@@ -32,6 +32,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information to identify the funds order confirmations.
@@ -92,6 +96,8 @@ import java.util.List;
  * definition} = "Information to identify the funds order confirmations."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MessageAndBusinessReference5", propOrder = {"otherReference", "previousReference", "relatedReference", "orderReference"})
 public class MessageAndBusinessReference5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -356,6 +362,7 @@ public class MessageAndBusinessReference5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OthrRef")
 	public AdditionalReference3 getOtherReference() {
 		return otherReference;
 	}
@@ -364,6 +371,7 @@ public class MessageAndBusinessReference5 {
 		this.otherReference = otherReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -372,6 +380,7 @@ public class MessageAndBusinessReference5 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
@@ -380,6 +389,7 @@ public class MessageAndBusinessReference5 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "OrdrRef")
 	public List<InvestmentFundOrder3> getOrderReference() {
 		return orderReference;
 	}

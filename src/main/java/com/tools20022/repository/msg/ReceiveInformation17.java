@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -124,6 +128,9 @@ import java.util.List;
  * ReceiveInformation14}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReceiveInformation17", propOrder = {"transferee", "transfereeRegisteredAccount", "intermediaryInformation", "requestedSettlementDate", "effectiveSettlementDate", "settlementAmount", "stampDuty", "netAmount",
+		"chargeDetails", "commissionDetails", "taxDetails", "foreignExchangeDetails", "settlementPartiesDetails", "physicalTransfer", "physicalTransferDetails", "clientReference"})
 public class ReceiveInformation17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -992,6 +999,7 @@ public class ReceiveInformation17 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Trfee")
 	public PartyIdentification70Choice getTransferee() {
 		return transferee;
 	}
@@ -1000,6 +1008,7 @@ public class ReceiveInformation17 {
 		this.transferee = transferee;
 	}
 
+	@XmlElement(name = "TrfeeRegdAcct")
 	public Account19 getTransfereeRegisteredAccount() {
 		return transfereeRegisteredAccount;
 	}
@@ -1008,6 +1017,7 @@ public class ReceiveInformation17 {
 		this.transfereeRegisteredAccount = transfereeRegisteredAccount;
 	}
 
+	@XmlElement(name = "IntrmyInf")
 	public List<Intermediary34> getIntermediaryInformation() {
 		return intermediaryInformation;
 	}
@@ -1016,6 +1026,7 @@ public class ReceiveInformation17 {
 		this.intermediaryInformation = intermediaryInformation;
 	}
 
+	@XmlElement(name = "ReqdSttlmDt")
 	public ISODate getRequestedSettlementDate() {
 		return requestedSettlementDate;
 	}
@@ -1024,6 +1035,7 @@ public class ReceiveInformation17 {
 		this.requestedSettlementDate = requestedSettlementDate;
 	}
 
+	@XmlElement(name = "FctvSttlmDt")
 	public DateAndDateTimeChoice getEffectiveSettlementDate() {
 		return effectiveSettlementDate;
 	}
@@ -1032,6 +1044,7 @@ public class ReceiveInformation17 {
 		this.effectiveSettlementDate = effectiveSettlementDate;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public ActiveCurrencyAndAmount getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -1040,6 +1053,7 @@ public class ReceiveInformation17 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "StmpDty")
 	public StampDutyType2Code getStampDuty() {
 		return stampDuty;
 	}
@@ -1048,6 +1062,7 @@ public class ReceiveInformation17 {
 		this.stampDuty = stampDuty;
 	}
 
+	@XmlElement(name = "NetAmt")
 	public ActiveCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
@@ -1056,6 +1071,7 @@ public class ReceiveInformation17 {
 		this.netAmount = netAmount;
 	}
 
+	@XmlElement(name = "ChrgDtls")
 	public List<Charge29> getChargeDetails() {
 		return chargeDetails;
 	}
@@ -1064,6 +1080,7 @@ public class ReceiveInformation17 {
 		this.chargeDetails = chargeDetails;
 	}
 
+	@XmlElement(name = "ComssnDtls")
 	public List<Commission23> getCommissionDetails() {
 		return commissionDetails;
 	}
@@ -1072,6 +1089,7 @@ public class ReceiveInformation17 {
 		this.commissionDetails = commissionDetails;
 	}
 
+	@XmlElement(name = "TaxDtls")
 	public List<Tax28> getTaxDetails() {
 		return taxDetails;
 	}
@@ -1080,6 +1098,7 @@ public class ReceiveInformation17 {
 		this.taxDetails = taxDetails;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public List<ForeignExchangeTerms26> getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -1088,6 +1107,7 @@ public class ReceiveInformation17 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "SttlmPtiesDtls")
 	public ReceivingPartiesAndAccount13 getSettlementPartiesDetails() {
 		return settlementPartiesDetails;
 	}
@@ -1096,6 +1116,7 @@ public class ReceiveInformation17 {
 		this.settlementPartiesDetails = settlementPartiesDetails;
 	}
 
+	@XmlElement(name = "PhysTrf")
 	public PhysicalTransferType1Code getPhysicalTransfer() {
 		return physicalTransfer;
 	}
@@ -1104,6 +1125,7 @@ public class ReceiveInformation17 {
 		this.physicalTransfer = physicalTransfer;
 	}
 
+	@XmlElement(name = "PhysTrfDtls")
 	public DeliveryParameters4 getPhysicalTransferDetails() {
 		return physicalTransferDetails;
 	}
@@ -1112,6 +1134,7 @@ public class ReceiveInformation17 {
 		this.physicalTransferDetails = physicalTransferDetails;
 	}
 
+	@XmlElement(name = "ClntRef")
 	public AdditionalReference7 getClientReference() {
 		return clientReference;
 	}

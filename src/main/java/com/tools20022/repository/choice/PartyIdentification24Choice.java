@@ -32,6 +32,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of identification of a party. The party can be identified by providing
@@ -85,6 +89,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification24Choice", propOrder = {"BICOrBEI", "MIC"})
 public class PartyIdentification24Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -216,6 +222,7 @@ public class PartyIdentification24Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BICOrBEI", required = true)
 	public AnyBICIdentifier getBICOrBEI() {
 		return bICOrBEI;
 	}
@@ -224,6 +231,7 @@ public class PartyIdentification24Choice {
 		this.bICOrBEI = bICOrBEI;
 	}
 
+	@XmlElement(name = "MIC", required = true)
 	public MICIdentifier getMIC() {
 		return mIC;
 	}

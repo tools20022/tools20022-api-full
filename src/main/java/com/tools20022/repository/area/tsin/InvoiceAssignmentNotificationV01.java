@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.BusinessLetter1;
 import com.tools20022.repository.msg.EncapsulatedBusinessMessage1;
 import com.tools20022.repository.msg.FinancingItemList1;
 import com.tools20022.repository.msgset.FactoringServicesISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * This message is sent from a factoring service provider or a factoring client
@@ -52,9 +54,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsin.008.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
@@ -96,6 +95,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsin.008.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -107,6 +109,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvoiceAssignmentNotificationV01", propOrder = {"header", "notificationList", "notificationCount", "itemCount", "controlSum", "attachedMessage"})
 public class InvoiceAssignmentNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -146,6 +150,14 @@ public class InvoiceAssignmentNotificationV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> BusinessLetter1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceAssignmentNotificationV01.class.getMethod("getHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<FinancingItemList1> notificationList;
 	/**
@@ -179,6 +191,14 @@ public class InvoiceAssignmentNotificationV01 {
 			definition = "List of assignment notifications.";
 			minOccurs = 1;
 			complexType_lazy = () -> FinancingItemList1.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceAssignmentNotificationV01.class.getMethod("getNotificationList", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max15NumericText notificationCount;
@@ -215,6 +235,14 @@ public class InvoiceAssignmentNotificationV01 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceAssignmentNotificationV01.class.getMethod("getNotificationCount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Max15NumericText itemCount;
 	/**
@@ -249,6 +277,14 @@ public class InvoiceAssignmentNotificationV01 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceAssignmentNotificationV01.class.getMethod("getItemCount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DecimalNumber controlSum;
@@ -288,6 +324,14 @@ public class InvoiceAssignmentNotificationV01 {
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceAssignmentNotificationV01.class.getMethod("getControlSum", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<EncapsulatedBusinessMessage1> attachedMessage;
 	/**
@@ -322,6 +366,14 @@ public class InvoiceAssignmentNotificationV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceAssignmentNotificationV01.class.getMethod("getAttachedMessage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -334,8 +386,9 @@ public class InvoiceAssignmentNotificationV01 {
 				rootElement = "Document";
 				xmlTag = "InvcAssgnmtNtfctn";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceAssignmentNotificationV01.mmHeader, InvoiceAssignmentNotificationV01.mmNotificationList, InvoiceAssignmentNotificationV01.mmNotificationCount,
-						InvoiceAssignmentNotificationV01.mmItemCount, InvoiceAssignmentNotificationV01.mmControlSum, InvoiceAssignmentNotificationV01.mmAttachedMessage);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01.mmHeader, com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01.mmNotificationList,
+						com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01.mmNotificationCount, com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01.mmItemCount,
+						com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01.mmControlSum, com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01.mmAttachedMessage);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsin";
@@ -345,10 +398,16 @@ public class InvoiceAssignmentNotificationV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvoiceAssignmentNotificationV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Hdr", required = true)
 	public BusinessLetter1 getHeader() {
 		return header;
 	}
@@ -357,6 +416,7 @@ public class InvoiceAssignmentNotificationV01 {
 		this.header = header;
 	}
 
+	@XmlElement(name = "NtfctnList", required = true)
 	public List<FinancingItemList1> getNotificationList() {
 		return notificationList;
 	}
@@ -365,6 +425,7 @@ public class InvoiceAssignmentNotificationV01 {
 		this.notificationList = notificationList;
 	}
 
+	@XmlElement(name = "NtfctnCnt")
 	public Max15NumericText getNotificationCount() {
 		return notificationCount;
 	}
@@ -373,6 +434,7 @@ public class InvoiceAssignmentNotificationV01 {
 		this.notificationCount = notificationCount;
 	}
 
+	@XmlElement(name = "ItmCnt")
 	public Max15NumericText getItemCount() {
 		return itemCount;
 	}
@@ -381,6 +443,7 @@ public class InvoiceAssignmentNotificationV01 {
 		this.itemCount = itemCount;
 	}
 
+	@XmlElement(name = "CtrlSum")
 	public DecimalNumber getControlSum() {
 		return controlSum;
 	}
@@ -389,11 +452,18 @@ public class InvoiceAssignmentNotificationV01 {
 		this.controlSum = controlSum;
 	}
 
+	@XmlElement(name = "AttchdMsg")
 	public List<EncapsulatedBusinessMessage1> getAttachedMessage() {
 		return attachedMessage;
 	}
 
 	public void setAttachedMessage(List<EncapsulatedBusinessMessage1> attachedMessage) {
 		this.attachedMessage = attachedMessage;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.008.01.01")
+	static public class Document {
+		@XmlElement(name = "InvcAssgnmtNtfctn", required = true)
+		public InvoiceAssignmentNotificationV01 messageBody;
 	}
 }

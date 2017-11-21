@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesEventsArchive;
 import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -44,9 +46,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.008.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
@@ -92,6 +91,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.008.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -111,6 +113,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MeetingResultDisseminationV02", propOrder = {"meetingResultDisseminationIdentification", "amendment", "meetingReference", "reportingParty", "security", "voteResult", "participation", "additionalInformation"})
 public class MeetingResultDisseminationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -149,6 +153,14 @@ public class MeetingResultDisseminationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingResultDisseminationV02.class.getMethod("getMeetingResultDisseminationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AmendInformation2 amendment;
 	/**
@@ -183,6 +195,14 @@ public class MeetingResultDisseminationV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AmendInformation2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingResultDisseminationV02.class.getMethod("getAmendment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected MeetingReference3 meetingReference;
@@ -219,6 +239,14 @@ public class MeetingResultDisseminationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingResultDisseminationV02.class.getMethod("getMeetingReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PartyIdentification9Choice reportingParty;
 	/**
@@ -253,6 +281,14 @@ public class MeetingResultDisseminationV02 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingResultDisseminationV02.class.getMethod("getReportingParty", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SecurityPosition5> security;
@@ -290,6 +326,14 @@ public class MeetingResultDisseminationV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityPosition5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingResultDisseminationV02.class.getMethod("getSecurity", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<Vote5> voteResult;
 	/**
@@ -322,6 +366,14 @@ public class MeetingResultDisseminationV02 {
 			maxOccurs = 200;
 			minOccurs = 1;
 			complexType_lazy = () -> Vote5.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingResultDisseminationV02.class.getMethod("getVoteResult", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Participation2 participation;
@@ -357,6 +409,14 @@ public class MeetingResultDisseminationV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Participation2.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingResultDisseminationV02.class.getMethod("getParticipation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CommunicationAddress4 additionalInformation;
@@ -394,6 +454,14 @@ public class MeetingResultDisseminationV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> CommunicationAddress4.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MeetingResultDisseminationV02.class.getMethod("getAdditionalInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -407,9 +475,11 @@ public class MeetingResultDisseminationV02 {
 				rootElement = "Document";
 				xmlTag = "MtgRsltDssmntn";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingResultDisseminationV02.mmMeetingResultDisseminationIdentification, MeetingResultDisseminationV02.mmAmendment, MeetingResultDisseminationV02.mmMeetingReference,
-						MeetingResultDisseminationV02.mmReportingParty, MeetingResultDisseminationV02.mmSecurity, MeetingResultDisseminationV02.mmVoteResult, MeetingResultDisseminationV02.mmParticipation,
-						MeetingResultDisseminationV02.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmMeetingResultDisseminationIdentification,
+						com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmAmendment, com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmMeetingReference,
+						com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmReportingParty, com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmSecurity,
+						com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmVoteResult, com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmParticipation,
+						com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmAdditionalInformation);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -419,10 +489,16 @@ public class MeetingResultDisseminationV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MeetingResultDisseminationV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MtgRsltDssmntnId", required = true)
 	public MessageIdentification1 getMeetingResultDisseminationIdentification() {
 		return meetingResultDisseminationIdentification;
 	}
@@ -431,6 +507,7 @@ public class MeetingResultDisseminationV02 {
 		this.meetingResultDisseminationIdentification = meetingResultDisseminationIdentification;
 	}
 
+	@XmlElement(name = "Amdmnt")
 	public AmendInformation2 getAmendment() {
 		return amendment;
 	}
@@ -439,6 +516,7 @@ public class MeetingResultDisseminationV02 {
 		this.amendment = amendment;
 	}
 
+	@XmlElement(name = "MtgRef", required = true)
 	public MeetingReference3 getMeetingReference() {
 		return meetingReference;
 	}
@@ -447,6 +525,7 @@ public class MeetingResultDisseminationV02 {
 		this.meetingReference = meetingReference;
 	}
 
+	@XmlElement(name = "RptgPty", required = true)
 	public PartyIdentification9Choice getReportingParty() {
 		return reportingParty;
 	}
@@ -455,6 +534,7 @@ public class MeetingResultDisseminationV02 {
 		this.reportingParty = reportingParty;
 	}
 
+	@XmlElement(name = "Scty", required = true)
 	public List<SecurityPosition5> getSecurity() {
 		return security;
 	}
@@ -463,6 +543,7 @@ public class MeetingResultDisseminationV02 {
 		this.security = security;
 	}
 
+	@XmlElement(name = "VoteRslt", required = true)
 	public List<Vote5> getVoteResult() {
 		return voteResult;
 	}
@@ -471,6 +552,7 @@ public class MeetingResultDisseminationV02 {
 		this.voteResult = voteResult;
 	}
 
+	@XmlElement(name = "Prtcptn")
 	public Participation2 getParticipation() {
 		return participation;
 	}
@@ -479,11 +561,18 @@ public class MeetingResultDisseminationV02 {
 		this.participation = participation;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public CommunicationAddress4 getAdditionalInformation() {
 		return additionalInformation;
 	}
 
 	public void setAdditionalInformation(CommunicationAddress4 additionalInformation) {
 		this.additionalInformation = additionalInformation;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.008.02.02")
+	static public class Document {
+		@XmlElement(name = "MtgRsltDssmntn", required = true)
+		public MeetingResultDisseminationV02 messageBody;
 	}
 }

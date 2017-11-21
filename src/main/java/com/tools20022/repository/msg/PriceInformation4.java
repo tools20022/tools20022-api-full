@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money for which goods or services are offered, sold, or bought.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Amount of money for which goods or services are offered, sold, or bought."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceInformation4", propOrder = {"type", "value", "valueType", "sourceOfPrice", "quotationDate", "yielded"})
 public class PriceInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -383,6 +389,7 @@ public class PriceInformation4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TypeOfPrice2Choice getType() {
 		return type;
 	}
@@ -391,6 +398,7 @@ public class PriceInformation4 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Val", required = true)
 	public PriceRateOrAmountOrUnknownChoice getValue() {
 		return value;
 	}
@@ -399,6 +407,7 @@ public class PriceInformation4 {
 		this.value = value;
 	}
 
+	@XmlElement(name = "ValTp")
 	public PriceValueType2Code getValueType() {
 		return valueType;
 	}
@@ -407,6 +416,7 @@ public class PriceInformation4 {
 		this.valueType = valueType;
 	}
 
+	@XmlElement(name = "SrcOfPric")
 	public PriceSourceFormatChoice getSourceOfPrice() {
 		return sourceOfPrice;
 	}
@@ -415,6 +425,7 @@ public class PriceInformation4 {
 		this.sourceOfPrice = sourceOfPrice;
 	}
 
+	@XmlElement(name = "QtnDt")
 	public DateAndDateTimeChoice getQuotationDate() {
 		return quotationDate;
 	}
@@ -423,6 +434,7 @@ public class PriceInformation4 {
 		this.quotationDate = quotationDate;
 	}
 
+	@XmlElement(name = "Yldd")
 	public YesNoIndicator getYielded() {
 		return yielded;
 	}

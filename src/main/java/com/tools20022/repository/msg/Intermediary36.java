@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a party and its role.
@@ -107,6 +111,8 @@ import java.util.List;
  * Intermediary24}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Intermediary36", propOrder = {"identification", "legalEntityIdentifier", "account", "waivedTrailerCommissionIndicator", "role", "primaryCommunicationAddress", "secondaryCommunicationAddress", "nameAndAddress"})
 public class Intermediary36 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -560,6 +566,7 @@ public class Intermediary36 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification72Choice getIdentification() {
 		return identification;
 	}
@@ -568,6 +575,7 @@ public class Intermediary36 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "LglNttyIdr")
 	public LEIIdentifier getLegalEntityIdentifier() {
 		return legalEntityIdentifier;
 	}
@@ -576,6 +584,7 @@ public class Intermediary36 {
 		this.legalEntityIdentifier = legalEntityIdentifier;
 	}
 
+	@XmlElement(name = "Acct")
 	public Account20 getAccount() {
 		return account;
 	}
@@ -584,6 +593,7 @@ public class Intermediary36 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "WvdTrlrComssnInd")
 	public YesNoIndicator getWaivedTrailerCommissionIndicator() {
 		return waivedTrailerCommissionIndicator;
 	}
@@ -592,6 +602,7 @@ public class Intermediary36 {
 		this.waivedTrailerCommissionIndicator = waivedTrailerCommissionIndicator;
 	}
 
+	@XmlElement(name = "Role")
 	public PartyRole2Choice getRole() {
 		return role;
 	}
@@ -600,6 +611,7 @@ public class Intermediary36 {
 		this.role = role;
 	}
 
+	@XmlElement(name = "PmryComAdr")
 	public List<CommunicationAddress6> getPrimaryCommunicationAddress() {
 		return primaryCommunicationAddress;
 	}
@@ -608,6 +620,7 @@ public class Intermediary36 {
 		this.primaryCommunicationAddress = primaryCommunicationAddress;
 	}
 
+	@XmlElement(name = "ScndryComAdr")
 	public List<CommunicationAddress6> getSecondaryCommunicationAddress() {
 		return secondaryCommunicationAddress;
 	}
@@ -616,6 +629,7 @@ public class Intermediary36 {
 		this.secondaryCommunicationAddress = secondaryCommunicationAddress;
 	}
 
+	@XmlElement(name = "NmAndAdr")
 	public NameAndAddress4 getNameAndAddress() {
 		return nameAndAddress;
 	}

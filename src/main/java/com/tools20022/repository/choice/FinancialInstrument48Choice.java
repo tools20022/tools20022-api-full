@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrument58;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice to specific an instrument of type ISIN, LEI or Index.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice to specific an instrument of type ISIN, LEI or Index."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrument48Choice", propOrder = {"ISIN", "LEI", "index"})
 public class FinancialInstrument48Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -233,6 +239,7 @@ public class FinancialInstrument48Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ISIN", required = true)
 	public ISINOct2015Identifier getISIN() {
 		return iSIN;
 	}
@@ -241,6 +248,7 @@ public class FinancialInstrument48Choice {
 		this.iSIN = iSIN;
 	}
 
+	@XmlElement(name = "LEI", required = true)
 	public LEIIdentifier getLEI() {
 		return lEI;
 	}
@@ -249,6 +257,7 @@ public class FinancialInstrument48Choice {
 		this.lEI = lEI;
 	}
 
+	@XmlElement(name = "Indx", required = true)
 	public FinancialInstrument58 getIndex() {
 		return index;
 	}

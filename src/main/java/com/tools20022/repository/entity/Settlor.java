@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole
+ * InvestmentFundPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -66,10 +70,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountParties16.mmSettlor}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole
- * InvestmentFundPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -100,6 +100,11 @@ public class Settlor extends InvestmentFundPartyRole {
 				derivationElement_lazy = () -> Arrays.asList(AccountParties5.mmSettler, AccountParties6.mmSettler, AccountParties4.mmSettler, AccountParties7.mmSettler, AccountParties9.mmSettler, AccountParties8.mmSettler,
 						AccountParties11.mmSettlor, AccountParties10.mmSettlor, AccountParties12.mmSettlor, AccountParties13.mmSettlor, AccountParties14.mmSettlor, AccountParties15.mmSettlor, AccountParties16.mmSettlor);
 				superType_lazy = () -> InvestmentFundPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Settlor.class;
 			}
 		});
 		return mmObject_lazy.get();

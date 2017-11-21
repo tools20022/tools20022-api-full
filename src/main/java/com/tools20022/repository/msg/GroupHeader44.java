@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide further details on the message.
@@ -79,6 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Set of elements used to provide further details on the message."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GroupHeader44", propOrder = {"messageIdentification", "creationDateTime", "messageRecipient"})
 public class GroupHeader44 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -241,6 +247,7 @@ public class GroupHeader44 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -249,6 +256,7 @@ public class GroupHeader44 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -257,6 +265,7 @@ public class GroupHeader44 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "MsgRcpt")
 	public Party7Choice getMessageRecipient() {
 		return messageRecipient;
 	}

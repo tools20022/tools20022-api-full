@@ -30,23 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability1Code
- * CardholderVerificationCapability1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability2Code
- * CardholderVerificationCapability2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability3Code
- * CardholderVerificationCapability3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability4Code
- * CardholderVerificationCapability4Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -100,6 +83,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapabilityCode#mmOther
  * CardholderVerificationCapabilityCode.mmOther}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability1Code
+ * CardholderVerificationCapability1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability2Code
+ * CardholderVerificationCapability2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability3Code
+ * CardholderVerificationCapability3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability4Code
+ * CardholderVerificationCapability4Code}</li>
  * </ul>
  * </li>
  * <li>

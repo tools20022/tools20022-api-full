@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amount of money associated with a service.
@@ -82,6 +86,8 @@ import java.util.List;
  * TotalCharges3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TotalFeesAndTaxes40", propOrder = {"totalOverheadApplied", "totalFees", "totalTaxes", "commercialAgreementReference", "individualFee", "individualTax"})
 public class TotalFeesAndTaxes40 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -410,6 +416,7 @@ public class TotalFeesAndTaxes40 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlOvrhdApld")
 	public ActiveCurrencyAndAmount getTotalOverheadApplied() {
 		return totalOverheadApplied;
 	}
@@ -418,6 +425,7 @@ public class TotalFeesAndTaxes40 {
 		this.totalOverheadApplied = totalOverheadApplied;
 	}
 
+	@XmlElement(name = "TtlFees")
 	public ActiveCurrencyAndAmount getTotalFees() {
 		return totalFees;
 	}
@@ -426,6 +434,7 @@ public class TotalFeesAndTaxes40 {
 		this.totalFees = totalFees;
 	}
 
+	@XmlElement(name = "TtlTaxs")
 	public ActiveCurrencyAndAmount getTotalTaxes() {
 		return totalTaxes;
 	}
@@ -434,6 +443,7 @@ public class TotalFeesAndTaxes40 {
 		this.totalTaxes = totalTaxes;
 	}
 
+	@XmlElement(name = "ComrclAgrmtRef")
 	public Max35Text getCommercialAgreementReference() {
 		return commercialAgreementReference;
 	}
@@ -442,6 +452,7 @@ public class TotalFeesAndTaxes40 {
 		this.commercialAgreementReference = commercialAgreementReference;
 	}
 
+	@XmlElement(name = "IndvFee")
 	public List<Fee2> getIndividualFee() {
 		return individualFee;
 	}
@@ -450,6 +461,7 @@ public class TotalFeesAndTaxes40 {
 		this.individualFee = individualFee;
 	}
 
+	@XmlElement(name = "IndvTax")
 	public List<Tax31> getIndividualTax() {
 		return individualTax;
 	}

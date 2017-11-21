@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Nature of the amount and currency on a document referred to in the remittance
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReferredDocumentAmount1Choice", propOrder = {"duePayableAmount", "discountAppliedAmount", "remittedAmount", "creditNoteAmount", "taxAmount"})
 public class ReferredDocumentAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -342,6 +348,7 @@ public class ReferredDocumentAmount1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DuePyblAmt", required = true)
 	public CurrencyAndAmount getDuePayableAmount() {
 		return duePayableAmount;
 	}
@@ -350,6 +357,7 @@ public class ReferredDocumentAmount1Choice {
 		this.duePayableAmount = duePayableAmount;
 	}
 
+	@XmlElement(name = "DscntApldAmt", required = true)
 	public CurrencyAndAmount getDiscountAppliedAmount() {
 		return discountAppliedAmount;
 	}
@@ -358,6 +366,7 @@ public class ReferredDocumentAmount1Choice {
 		this.discountAppliedAmount = discountAppliedAmount;
 	}
 
+	@XmlElement(name = "RmtdAmt", required = true)
 	public CurrencyAndAmount getRemittedAmount() {
 		return remittedAmount;
 	}
@@ -366,6 +375,7 @@ public class ReferredDocumentAmount1Choice {
 		this.remittedAmount = remittedAmount;
 	}
 
+	@XmlElement(name = "CdtNoteAmt", required = true)
 	public CurrencyAndAmount getCreditNoteAmount() {
 		return creditNoteAmount;
 	}
@@ -374,6 +384,7 @@ public class ReferredDocumentAmount1Choice {
 		this.creditNoteAmount = creditNoteAmount;
 	}
 
+	@XmlElement(name = "TaxAmt", required = true)
 	public CurrencyAndAmount getTaxAmount() {
 		return taxAmount;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique identifier of a document, message or transaction.
@@ -102,6 +106,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Unique identifier of a document, message or transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IdentificationReference11Choice", propOrder = {"instructingPartyTransactionIdentification", "executingPartyTransactionIdentification", "marketInfrastructureTransactionIdentification", "clientOrderLinkIdentification",
+		"poolIdentification", "blockIdentification", "allocationIdentification", "individualAllocationIdentification", "secondaryAllocationIdentification", "indexIdentification", "commonIdentification", "complianceIdentification",
+		"cancellationRequestIdentification", "collateralTransactionIdentification"})
 public class IdentificationReference11Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -823,6 +831,7 @@ public class IdentificationReference11Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstgPtyTxId", required = true)
 	public Max35Text getInstructingPartyTransactionIdentification() {
 		return instructingPartyTransactionIdentification;
 	}
@@ -831,6 +840,7 @@ public class IdentificationReference11Choice {
 		this.instructingPartyTransactionIdentification = instructingPartyTransactionIdentification;
 	}
 
+	@XmlElement(name = "ExctgPtyTxId", required = true)
 	public Max35Text getExecutingPartyTransactionIdentification() {
 		return executingPartyTransactionIdentification;
 	}
@@ -839,6 +849,7 @@ public class IdentificationReference11Choice {
 		this.executingPartyTransactionIdentification = executingPartyTransactionIdentification;
 	}
 
+	@XmlElement(name = "MktInfrstrctrTxId", required = true)
 	public Max35Text getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}
@@ -847,6 +858,7 @@ public class IdentificationReference11Choice {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
 	}
 
+	@XmlElement(name = "ClntOrdrLkId", required = true)
 	public Max35Text getClientOrderLinkIdentification() {
 		return clientOrderLinkIdentification;
 	}
@@ -855,6 +867,7 @@ public class IdentificationReference11Choice {
 		this.clientOrderLinkIdentification = clientOrderLinkIdentification;
 	}
 
+	@XmlElement(name = "PoolId", required = true)
 	public Max35Text getPoolIdentification() {
 		return poolIdentification;
 	}
@@ -863,6 +876,7 @@ public class IdentificationReference11Choice {
 		this.poolIdentification = poolIdentification;
 	}
 
+	@XmlElement(name = "BlckId", required = true)
 	public Max35Text getBlockIdentification() {
 		return blockIdentification;
 	}
@@ -871,6 +885,7 @@ public class IdentificationReference11Choice {
 		this.blockIdentification = blockIdentification;
 	}
 
+	@XmlElement(name = "AllcnId", required = true)
 	public Max35Text getAllocationIdentification() {
 		return allocationIdentification;
 	}
@@ -879,6 +894,7 @@ public class IdentificationReference11Choice {
 		this.allocationIdentification = allocationIdentification;
 	}
 
+	@XmlElement(name = "IndvAllcnId", required = true)
 	public Max35Text getIndividualAllocationIdentification() {
 		return individualAllocationIdentification;
 	}
@@ -887,6 +903,7 @@ public class IdentificationReference11Choice {
 		this.individualAllocationIdentification = individualAllocationIdentification;
 	}
 
+	@XmlElement(name = "ScndryAllcnId", required = true)
 	public Max35Text getSecondaryAllocationIdentification() {
 		return secondaryAllocationIdentification;
 	}
@@ -895,6 +912,7 @@ public class IdentificationReference11Choice {
 		this.secondaryAllocationIdentification = secondaryAllocationIdentification;
 	}
 
+	@XmlElement(name = "IndxId", required = true)
 	public Max35Text getIndexIdentification() {
 		return indexIdentification;
 	}
@@ -903,6 +921,7 @@ public class IdentificationReference11Choice {
 		this.indexIdentification = indexIdentification;
 	}
 
+	@XmlElement(name = "CmonId", required = true)
 	public Max35Text getCommonIdentification() {
 		return commonIdentification;
 	}
@@ -911,6 +930,7 @@ public class IdentificationReference11Choice {
 		this.commonIdentification = commonIdentification;
 	}
 
+	@XmlElement(name = "CmplcId", required = true)
 	public Max35Text getComplianceIdentification() {
 		return complianceIdentification;
 	}
@@ -919,6 +939,7 @@ public class IdentificationReference11Choice {
 		this.complianceIdentification = complianceIdentification;
 	}
 
+	@XmlElement(name = "CxlReqId", required = true)
 	public Max35Text getCancellationRequestIdentification() {
 		return cancellationRequestIdentification;
 	}
@@ -927,6 +948,7 @@ public class IdentificationReference11Choice {
 		this.cancellationRequestIdentification = cancellationRequestIdentification;
 	}
 
+	@XmlElement(name = "CollTxId", required = true)
 	public Max35Text getCollateralTransactionIdentification() {
 		return collateralTransactionIdentification;
 	}

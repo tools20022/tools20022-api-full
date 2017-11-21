@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action confirmation
@@ -101,6 +105,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionConfirmationDetailsExtension1", propOrder = {"placeAndName", "DTCCOptionType", "originalCurrency", "DTCGeneratedDepositReferenceIdentification", "participantDepositReferenceIdentification", "depositDate",
+		"custodyCustomerIdentification", "asOfDate", "participantCrossReferenceIdentification", "DTCWithholdingTaxRate", "DTCCashRate", "payoutNumber", "DTCSecurityRate", "allocatedCashValue"})
 public class CorporateActionConfirmationDetailsExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -731,6 +738,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -739,6 +747,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "DTCCOptnTp")
 	public Max4AlphaNumericText getDTCCOptionType() {
 		return dTCCOptionType;
 	}
@@ -747,6 +756,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 		this.dTCCOptionType = dTCCOptionType;
 	}
 
+	@XmlElement(name = "OrgnlCcy")
 	public ActiveCurrencyCode getOriginalCurrency() {
 		return originalCurrency;
 	}
@@ -755,6 +765,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 		this.originalCurrency = originalCurrency;
 	}
 
+	@XmlElement(name = "DTCGnrtdDpstRefId")
 	public Max16Text getDTCGeneratedDepositReferenceIdentification() {
 		return dTCGeneratedDepositReferenceIdentification;
 	}
@@ -763,6 +774,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 		this.dTCGeneratedDepositReferenceIdentification = dTCGeneratedDepositReferenceIdentification;
 	}
 
+	@XmlElement(name = "PtcptDpstRefId")
 	public Max16Text getParticipantDepositReferenceIdentification() {
 		return participantDepositReferenceIdentification;
 	}
@@ -771,6 +783,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 		this.participantDepositReferenceIdentification = participantDepositReferenceIdentification;
 	}
 
+	@XmlElement(name = "DpstDt")
 	public ISODate getDepositDate() {
 		return depositDate;
 	}
@@ -779,6 +792,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 		this.depositDate = depositDate;
 	}
 
+	@XmlElement(name = "CtdyCstmrId")
 	public Max35Text getCustodyCustomerIdentification() {
 		return custodyCustomerIdentification;
 	}
@@ -787,6 +801,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 		this.custodyCustomerIdentification = custodyCustomerIdentification;
 	}
 
+	@XmlElement(name = "AsOfDt")
 	public ISODate getAsOfDate() {
 		return asOfDate;
 	}
@@ -795,6 +810,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 		this.asOfDate = asOfDate;
 	}
 
+	@XmlElement(name = "PtcptCrossRefId")
 	public Max16Text getParticipantCrossReferenceIdentification() {
 		return participantCrossReferenceIdentification;
 	}
@@ -803,6 +819,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 		this.participantCrossReferenceIdentification = participantCrossReferenceIdentification;
 	}
 
+	@XmlElement(name = "DTCWhldgTaxRate")
 	public DecimalNumber getDTCWithholdingTaxRate() {
 		return dTCWithholdingTaxRate;
 	}
@@ -811,6 +828,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 		this.dTCWithholdingTaxRate = dTCWithholdingTaxRate;
 	}
 
+	@XmlElement(name = "DTCCshRate")
 	public DecimalNumber getDTCCashRate() {
 		return dTCCashRate;
 	}
@@ -819,6 +837,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 		this.dTCCashRate = dTCCashRate;
 	}
 
+	@XmlElement(name = "PyoutNb", required = true)
 	public Exact3NumericText getPayoutNumber() {
 		return payoutNumber;
 	}
@@ -827,6 +846,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 		this.payoutNumber = payoutNumber;
 	}
 
+	@XmlElement(name = "DTCSctyRate")
 	public DecimalNumber getDTCSecurityRate() {
 		return dTCSecurityRate;
 	}
@@ -835,6 +855,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 		this.dTCSecurityRate = dTCSecurityRate;
 	}
 
+	@XmlElement(name = "AllctdCshVal")
 	public DecimalNumber getAllocatedCashValue() {
 		return allocatedCashValue;
 	}

@@ -34,6 +34,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the settlement obligation.
@@ -134,6 +138,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * SettlementObligation6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementObligation7", propOrder = {"CSDTransactionIdentification", "centralCounterpartyTransactionIdentification", "previousBuyInIdentification", "deliveryAccount", "safekeepingPlace", "safekeepingAccount",
+		"clearingSegment", "nonClearingMember", "intendedSettlementDate", "financialInstrumentIdentification", "tradeDate", "dealPrice", "quantity", "depository", "remainingQuantityToBeSettled", "settlementAmount",
+		"remainingAmountToBeSettled"})
 public class SettlementObligation7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1068,6 +1076,7 @@ public class SettlementObligation7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CSDTxId")
 	public Max35Text getCSDTransactionIdentification() {
 		return cSDTransactionIdentification;
 	}
@@ -1076,6 +1085,7 @@ public class SettlementObligation7 {
 		this.cSDTransactionIdentification = cSDTransactionIdentification;
 	}
 
+	@XmlElement(name = "CntrlCtrPtyTxId")
 	public Max35Text getCentralCounterpartyTransactionIdentification() {
 		return centralCounterpartyTransactionIdentification;
 	}
@@ -1084,6 +1094,7 @@ public class SettlementObligation7 {
 		this.centralCounterpartyTransactionIdentification = centralCounterpartyTransactionIdentification;
 	}
 
+	@XmlElement(name = "PrvsBuyInId")
 	public Max35Text getPreviousBuyInIdentification() {
 		return previousBuyInIdentification;
 	}
@@ -1092,6 +1103,7 @@ public class SettlementObligation7 {
 		this.previousBuyInIdentification = previousBuyInIdentification;
 	}
 
+	@XmlElement(name = "DlvryAcct")
 	public SecuritiesAccount19 getDeliveryAccount() {
 		return deliveryAccount;
 	}
@@ -1100,6 +1112,7 @@ public class SettlementObligation7 {
 		this.deliveryAccount = deliveryAccount;
 	}
 
+	@XmlElement(name = "SfkpgPlc")
 	public SafekeepingPlaceFormat7Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
@@ -1108,6 +1121,7 @@ public class SettlementObligation7 {
 		this.safekeepingPlace = safekeepingPlace;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount19 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -1116,6 +1130,7 @@ public class SettlementObligation7 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "ClrSgmt")
 	public PartyIdentification35Choice getClearingSegment() {
 		return clearingSegment;
 	}
@@ -1124,6 +1139,7 @@ public class SettlementObligation7 {
 		this.clearingSegment = clearingSegment;
 	}
 
+	@XmlElement(name = "NonClrMmb")
 	public PartyIdentificationAndAccount31 getNonClearingMember() {
 		return nonClearingMember;
 	}
@@ -1132,6 +1148,7 @@ public class SettlementObligation7 {
 		this.nonClearingMember = nonClearingMember;
 	}
 
+	@XmlElement(name = "IntnddSttlmDt")
 	public ISODate getIntendedSettlementDate() {
 		return intendedSettlementDate;
 	}
@@ -1140,6 +1157,7 @@ public class SettlementObligation7 {
 		this.intendedSettlementDate = intendedSettlementDate;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -1148,6 +1166,7 @@ public class SettlementObligation7 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "TradDt")
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
@@ -1156,6 +1175,7 @@ public class SettlementObligation7 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "DealPric")
 	public Price4 getDealPrice() {
 		return dealPrice;
 	}
@@ -1164,6 +1184,7 @@ public class SettlementObligation7 {
 		this.dealPrice = dealPrice;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity1Choice getQuantity() {
 		return quantity;
 	}
@@ -1172,6 +1193,7 @@ public class SettlementObligation7 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "Dpstry")
 	public PartyIdentification34Choice getDepository() {
 		return depository;
 	}
@@ -1180,6 +1202,7 @@ public class SettlementObligation7 {
 		this.depository = depository;
 	}
 
+	@XmlElement(name = "RmngQtyToBeSttld")
 	public FinancialInstrumentQuantity1Choice getRemainingQuantityToBeSettled() {
 		return remainingQuantityToBeSettled;
 	}
@@ -1188,6 +1211,7 @@ public class SettlementObligation7 {
 		this.remainingQuantityToBeSettled = remainingQuantityToBeSettled;
 	}
 
+	@XmlElement(name = "SttlmAmt", required = true)
 	public AmountAndDirection27 getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -1196,6 +1220,7 @@ public class SettlementObligation7 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "RmngAmtToBeSttld")
 	public AmountAndDirection27 getRemainingAmountToBeSettled() {
 		return remainingAmountToBeSettled;
 	}

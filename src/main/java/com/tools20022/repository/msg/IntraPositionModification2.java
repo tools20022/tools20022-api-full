@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifies the details of the transaction.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the details of the transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraPositionModification2", propOrder = {"accountOwner", "safekeepingAccount", "processingStatus", "requestReference", "statusDate", "requestDetails", "underlying"})
 public class IntraPositionModification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -423,6 +429,7 @@ public class IntraPositionModification2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public SystemPartyIdentification5 getAccountOwner() {
 		return accountOwner;
 	}
@@ -431,6 +438,7 @@ public class IntraPositionModification2 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -439,6 +447,7 @@ public class IntraPositionModification2 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "PrcgSts")
 	public ProcessingStatus31Choice getProcessingStatus() {
 		return processingStatus;
 	}
@@ -447,6 +456,7 @@ public class IntraPositionModification2 {
 		this.processingStatus = processingStatus;
 	}
 
+	@XmlElement(name = "ReqRef", required = true)
 	public Max35Text getRequestReference() {
 		return requestReference;
 	}
@@ -455,6 +465,7 @@ public class IntraPositionModification2 {
 		this.requestReference = requestReference;
 	}
 
+	@XmlElement(name = "StsDt")
 	public ISODateTime getStatusDate() {
 		return statusDate;
 	}
@@ -463,6 +474,7 @@ public class IntraPositionModification2 {
 		this.statusDate = statusDate;
 	}
 
+	@XmlElement(name = "ReqDtls")
 	public RequestDetails6 getRequestDetails() {
 		return requestDetails;
 	}
@@ -471,6 +483,7 @@ public class IntraPositionModification2 {
 		this.requestDetails = requestDetails;
 	}
 
+	@XmlElement(name = "Undrlyg")
 	public SettlementOrIntraPosition1Choice getUnderlying() {
 		return underlying;
 	}

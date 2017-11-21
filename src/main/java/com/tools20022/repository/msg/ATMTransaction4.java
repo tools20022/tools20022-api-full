@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Acknowledgement of a completion advice.
@@ -77,6 +81,8 @@ import java.util.List;
  * ATMTransaction2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTransaction4", propOrder = {"transactionIdentification", "response", "responseReason", "ICCRelatedData", "command"})
 public class ATMTransaction4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -343,6 +349,7 @@ public class ATMTransaction4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -351,6 +358,7 @@ public class ATMTransaction4 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "Rspn", required = true)
 	public Response4Code getResponse() {
 		return response;
 	}
@@ -359,6 +367,7 @@ public class ATMTransaction4 {
 		this.response = response;
 	}
 
+	@XmlElement(name = "RspnRsn")
 	public ResultDetail2Code getResponseReason() {
 		return responseReason;
 	}
@@ -367,6 +376,7 @@ public class ATMTransaction4 {
 		this.responseReason = responseReason;
 	}
 
+	@XmlElement(name = "ICCRltdData")
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}
@@ -375,6 +385,7 @@ public class ATMTransaction4 {
 		this.iCCRelatedData = iCCRelatedData;
 	}
 
+	@XmlElement(name = "Cmd")
 	public List<ATMCommand1> getCommand() {
 		return command;
 	}

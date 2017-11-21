@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -42,6 +43,84 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmNetGainLoss
+ * SecuritiesBalance.mmNetGainLoss}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesAccount
+ * SecuritiesBalance.mmSecuritiesAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmEligibleBalanceRelatedEntitlement
+ * SecuritiesBalance.mmEligibleBalanceRelatedEntitlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmShortLong
+ * SecuritiesBalance.mmShortLong}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmAggregateQuantity
+ * SecuritiesBalance.mmAggregateQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmCorporateActionEntitlement
+ * SecuritiesBalance.mmCorporateActionEntitlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmInstructedBalanceRelatedEntitlement
+ * SecuritiesBalance.mmInstructedBalanceRelatedEntitlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmUninstructedBalanceRelatedEntitlement
+ * SecuritiesBalance.mmUninstructedBalanceRelatedEntitlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmMainSecuritiesBalance
+ * SecuritiesBalance.mmMainSecuritiesBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesSubBalance
+ * SecuritiesBalance.mmSecuritiesSubBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesBalanceType
+ * SecuritiesBalance.mmSecuritiesBalanceType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSubBalanceQuantity
+ * SecuritiesBalance.mmSubBalanceQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecurity
+ * SecuritiesBalance.mmSecurity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmExchangeRate
+ * SecuritiesBalance.mmExchangeRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmAvailabilityIndicator
+ * SecuritiesBalance.mmAvailabilityIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmAvailableQuantity
+ * SecuritiesBalance.mmAvailableQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmRelatedMeetingEntitlement
+ * SecuritiesBalance.mmRelatedMeetingEntitlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmUnavailableQuantity
+ * SecuritiesBalance.mmUnavailableQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSafekeepingPlace
+ * SecuritiesBalance.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesEntry
+ * SecuritiesBalance.mmSecuritiesEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmNotEligibleBalanceRelatedEntitlement
+ * SecuritiesBalance.mmNotEligibleBalanceRelatedEntitlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmRelatedIntraPositionTransfer
+ * SecuritiesBalance.mmRelatedIntraPositionTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmCostAdjustment
+ * SecuritiesBalance.mmCostAdjustment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmPledgee
+ * SecuritiesBalance.mmPledgee}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Balance Balance}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -1196,84 +1275,6 @@ import java.util.List;
  * AccountSubLevel14.mmAccountSubLevel5Difference}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Balance Balance}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmNetGainLoss
- * SecuritiesBalance.mmNetGainLoss}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesAccount
- * SecuritiesBalance.mmSecuritiesAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmEligibleBalanceRelatedEntitlement
- * SecuritiesBalance.mmEligibleBalanceRelatedEntitlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmShortLong
- * SecuritiesBalance.mmShortLong}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmAggregateQuantity
- * SecuritiesBalance.mmAggregateQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmCorporateActionEntitlement
- * SecuritiesBalance.mmCorporateActionEntitlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmInstructedBalanceRelatedEntitlement
- * SecuritiesBalance.mmInstructedBalanceRelatedEntitlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmUninstructedBalanceRelatedEntitlement
- * SecuritiesBalance.mmUninstructedBalanceRelatedEntitlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmMainSecuritiesBalance
- * SecuritiesBalance.mmMainSecuritiesBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesSubBalance
- * SecuritiesBalance.mmSecuritiesSubBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesBalanceType
- * SecuritiesBalance.mmSecuritiesBalanceType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSubBalanceQuantity
- * SecuritiesBalance.mmSubBalanceQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecurity
- * SecuritiesBalance.mmSecurity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmExchangeRate
- * SecuritiesBalance.mmExchangeRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmAvailabilityIndicator
- * SecuritiesBalance.mmAvailabilityIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmAvailableQuantity
- * SecuritiesBalance.mmAvailableQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmRelatedMeetingEntitlement
- * SecuritiesBalance.mmRelatedMeetingEntitlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmUnavailableQuantity
- * SecuritiesBalance.mmUnavailableQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSafekeepingPlace
- * SecuritiesBalance.mmSafekeepingPlace}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesEntry
- * SecuritiesBalance.mmSecuritiesEntry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmNotEligibleBalanceRelatedEntitlement
- * SecuritiesBalance.mmNotEligibleBalanceRelatedEntitlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmRelatedIntraPositionTransfer
- * SecuritiesBalance.mmRelatedIntraPositionTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmCostAdjustment
- * SecuritiesBalance.mmCostAdjustment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmPledgee
- * SecuritiesBalance.mmPledgee}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -1307,11 +1308,6 @@ public class SecuritiesBalance extends Balance {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
-	 * SecuritiesBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1384,6 +1380,11 @@ public class SecuritiesBalance extends Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
+	 * SecuritiesBalance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1411,6 +1412,14 @@ public class SecuritiesBalance extends Balance {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesBalance.class.getMethod("getNetGainLoss", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesAccount securitiesAccount;
 	/**
@@ -1431,11 +1440,6 @@ public class SecuritiesBalance extends Balance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesAccount
 	 * SecuritiesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
-	 * SecuritiesBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1459,6 +1463,11 @@ public class SecuritiesBalance extends Balance {
 	 * Balance3.mmSafekeepingAccount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
+	 * SecuritiesBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1550,11 +1559,6 @@ public class SecuritiesBalance extends Balance {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ShortLongCode
 	 * ShortLongCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
-	 * SecuritiesBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1660,6 +1664,11 @@ public class SecuritiesBalance extends Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
+	 * SecuritiesBalance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1688,6 +1697,14 @@ public class SecuritiesBalance extends Balance {
 			minOccurs = 1;
 			simpleType_lazy = () -> ShortLongCode.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesBalance.class.getMethod("getShortLong", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesQuantity aggregateQuantity;
 	/**
@@ -1707,11 +1724,6 @@ public class SecuritiesBalance extends Balance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
-	 * SecuritiesBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1896,6 +1908,11 @@ public class SecuritiesBalance extends Balance {
 	 * OpeningBalance4.mmOpeningBalance}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
+	 * SecuritiesBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2152,11 +2169,6 @@ public class SecuritiesBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesBalance
-	 * SecuritiesBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
 	 * SecuritiesBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
@@ -2751,6 +2763,11 @@ public class SecuritiesBalance extends Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
+	 * SecuritiesBalance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2851,11 +2868,6 @@ public class SecuritiesBalance extends Balance {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceTypeV2Code
 	 * SecuritiesBalanceTypeV2Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
-	 * SecuritiesBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3423,6 +3435,11 @@ public class SecuritiesBalance extends Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
+	 * SecuritiesBalance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3484,6 +3501,14 @@ public class SecuritiesBalance extends Balance {
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesBalanceTypeV2Code.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesBalance.class.getMethod("getSecuritiesBalanceType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesQuantity subBalanceQuantity;
 	/**
@@ -3505,11 +3530,6 @@ public class SecuritiesBalance extends Balance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
-	 * SecuritiesBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3657,6 +3677,11 @@ public class SecuritiesBalance extends Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
+	 * SecuritiesBalance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3710,11 +3735,6 @@ public class SecuritiesBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
-	 * SecuritiesBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3796,6 +3816,11 @@ public class SecuritiesBalance extends Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
+	 * SecuritiesBalance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3847,11 +3872,6 @@ public class SecuritiesBalance extends Balance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
 	 * CurrencyExchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
-	 * SecuritiesBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4047,6 +4067,11 @@ public class SecuritiesBalance extends Balance {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
+	 * SecuritiesBalance}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4104,11 +4129,6 @@ public class SecuritiesBalance extends Balance {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
-	 * SecuritiesBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4117,6 +4137,11 @@ public class SecuritiesBalance extends Balance {
 	 * QuantityAndAvailability.mmAvailabilityIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
+	 * SecuritiesBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4142,6 +4167,14 @@ public class SecuritiesBalance extends Balance {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesBalance.class.getMethod("getAvailabilityIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesQuantity availableQuantity;
 	/**
@@ -4161,11 +4194,6 @@ public class SecuritiesBalance extends Balance {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
-	 * SecuritiesBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4267,6 +4295,11 @@ public class SecuritiesBalance extends Balance {
 	 * AggregateBalancePerSafekeepingPlace31.mmAvailableBalance}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
+	 * SecuritiesBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4642,6 +4675,14 @@ public class SecuritiesBalance extends Balance {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesBalance.class.getMethod("getCostAdjustment", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<com.tools20022.repository.entity.Pledgee> pledgee;
 	/**
@@ -4660,11 +4701,6 @@ public class SecuritiesBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Pledgee Pledgee}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
-	 * SecuritiesBalance}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4694,6 +4730,11 @@ public class SecuritiesBalance extends Balance {
 	 * AggregateBalancePerSafekeepingPlace30.mmPledgee}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance
+	 * SecuritiesBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4846,6 +4887,11 @@ public class SecuritiesBalance extends Balance {
 						SubBalanceInformation17.mmObject(), ClosingBalance5Choice.mmObject(), SecuritiesBalanceType11Choice.mmObject(), OpeningBalance5Choice.mmObject(), SubBalanceInformation16.mmObject(),
 						SubBalanceType13Choice.mmObject(), ClosingBalance4.mmObject(), OpeningBalance4.mmObject(), Balance10.mmObject(), AggregateBalancePerSafekeepingPlace30.mmObject(), SecuritiesBalanceType8Choice.mmObject(),
 						Balance13.mmObject(), Balance12.mmObject(), AggregateHoldingBalance3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesBalance.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of reason.
@@ -98,6 +102,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.choice.Reason14Choice Reason14Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Reason16Choice", propOrder = {"repoCallAcknowledgementReason", "cancellationReason", "pendingCancellationReason", "generatedReason", "deniedReason", "acknowledgedAcceptedReason", "pendingReason", "failingReason",
+		"pendingProcessingReason", "rejectionReason", "repairReason", "pendingModificationReason", "unmatchedReason"})
 public class Reason16Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -838,6 +845,7 @@ public class Reason16Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RepoCallAckRsn")
 	public AcknowledgementReason13Choice getRepoCallAcknowledgementReason() {
 		return repoCallAcknowledgementReason;
 	}
@@ -846,6 +854,7 @@ public class Reason16Choice {
 		this.repoCallAcknowledgementReason = repoCallAcknowledgementReason;
 	}
 
+	@XmlElement(name = "CxlRsn")
 	public CancellationReason20Choice getCancellationReason() {
 		return cancellationReason;
 	}
@@ -854,6 +863,7 @@ public class Reason16Choice {
 		this.cancellationReason = cancellationReason;
 	}
 
+	@XmlElement(name = "PdgCxlRsn")
 	public PendingCancellationReasons4Choice getPendingCancellationReason() {
 		return pendingCancellationReason;
 	}
@@ -862,6 +872,7 @@ public class Reason16Choice {
 		this.pendingCancellationReason = pendingCancellationReason;
 	}
 
+	@XmlElement(name = "GnrtdRsn")
 	public GeneratedReasons5Choice getGeneratedReason() {
 		return generatedReason;
 	}
@@ -870,6 +881,7 @@ public class Reason16Choice {
 		this.generatedReason = generatedReason;
 	}
 
+	@XmlElement(name = "DndRsn")
 	public DeniedReason14Choice getDeniedReason() {
 		return deniedReason;
 	}
@@ -878,6 +890,7 @@ public class Reason16Choice {
 		this.deniedReason = deniedReason;
 	}
 
+	@XmlElement(name = "AckdAccptdRsn")
 	public AcknowledgementReason12Choice getAcknowledgedAcceptedReason() {
 		return acknowledgedAcceptedReason;
 	}
@@ -886,6 +899,7 @@ public class Reason16Choice {
 		this.acknowledgedAcceptedReason = acknowledgedAcceptedReason;
 	}
 
+	@XmlElement(name = "PdgRsn")
 	public PendingReason29Choice getPendingReason() {
 		return pendingReason;
 	}
@@ -894,6 +908,7 @@ public class Reason16Choice {
 		this.pendingReason = pendingReason;
 	}
 
+	@XmlElement(name = "FlngRsn")
 	public FailingReason9Choice getFailingReason() {
 		return failingReason;
 	}
@@ -902,6 +917,7 @@ public class Reason16Choice {
 		this.failingReason = failingReason;
 	}
 
+	@XmlElement(name = "PdgPrcgRsn")
 	public PendingProcessingReason11Choice getPendingProcessingReason() {
 		return pendingProcessingReason;
 	}
@@ -910,6 +926,7 @@ public class Reason16Choice {
 		this.pendingProcessingReason = pendingProcessingReason;
 	}
 
+	@XmlElement(name = "RjctnRsn")
 	public RejectionReason22Choice getRejectionReason() {
 		return rejectionReason;
 	}
@@ -918,6 +935,7 @@ public class Reason16Choice {
 		this.rejectionReason = rejectionReason;
 	}
 
+	@XmlElement(name = "RprRsn")
 	public RepairReason11Choice getRepairReason() {
 		return repairReason;
 	}
@@ -926,6 +944,7 @@ public class Reason16Choice {
 		this.repairReason = repairReason;
 	}
 
+	@XmlElement(name = "PdgModRsn")
 	public PendingReason28Choice getPendingModificationReason() {
 		return pendingModificationReason;
 	}
@@ -934,6 +953,7 @@ public class Reason16Choice {
 		this.pendingModificationReason = pendingModificationReason;
 	}
 
+	@XmlElement(name = "UmtchdRsn")
 	public UnmatchedReason22Choice getUnmatchedReason() {
 		return unmatchedReason;
 	}

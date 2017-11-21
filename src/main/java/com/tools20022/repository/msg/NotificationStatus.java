@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.MeetingStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the status of the information contained in the notification.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * " Specifies the status of the information contained in the notification."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NotificationStatus", propOrder = "status")
 public class NotificationStatus {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -127,6 +133,7 @@ public class NotificationStatus {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public NotificationStatus1Code getStatus() {
 		return status;
 	}

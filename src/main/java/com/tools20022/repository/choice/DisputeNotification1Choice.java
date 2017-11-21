@@ -29,6 +29,10 @@ import com.tools20022.repository.msg.DisputeNotification1;
 import com.tools20022.repository.msg.SegregatedIndependentAmountDispute1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the dispute notification details for the variation margin and the
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DisputeNotification1Choice", propOrder = {"disputeNotificationDetails", "segregatedIndependentAmountDisputeDetails"})
 public class DisputeNotification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -200,6 +206,7 @@ public class DisputeNotification1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DsptNtfctnDtls", required = true)
 	public DisputeNotification1 getDisputeNotificationDetails() {
 		return disputeNotificationDetails;
 	}
@@ -208,6 +215,7 @@ public class DisputeNotification1Choice {
 		this.disputeNotificationDetails = disputeNotificationDetails;
 	}
 
+	@XmlElement(name = "SgrtdIndpdntAmtDsptDtls", required = true)
 	public SegregatedIndependentAmountDispute1 getSegregatedIndependentAmountDisputeDetails() {
 		return segregatedIndependentAmountDisputeDetails;
 	}

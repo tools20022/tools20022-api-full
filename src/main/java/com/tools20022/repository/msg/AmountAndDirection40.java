@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Posting of an item to a cash account, in the context of a cash transaction,
@@ -90,6 +94,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountAndDirection40", propOrder = {"accruedInterestIndicator", "stampDutyIndicator", "brokerageAmountIndicator", "amount", "creditDebitIndicator", "originalCurrencyAndOrderedAmount", "foreignExchangeDetails", "valueDate"})
 public class AmountAndDirection40 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -506,6 +512,7 @@ public class AmountAndDirection40 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcrdIntrstInd")
 	public YesNoIndicator getAccruedInterestIndicator() {
 		return accruedInterestIndicator;
 	}
@@ -514,6 +521,7 @@ public class AmountAndDirection40 {
 		this.accruedInterestIndicator = accruedInterestIndicator;
 	}
 
+	@XmlElement(name = "StmpDtyInd")
 	public YesNoIndicator getStampDutyIndicator() {
 		return stampDutyIndicator;
 	}
@@ -522,6 +530,7 @@ public class AmountAndDirection40 {
 		this.stampDutyIndicator = stampDutyIndicator;
 	}
 
+	@XmlElement(name = "BrkrgAmtInd")
 	public YesNoIndicator getBrokerageAmountIndicator() {
 		return brokerageAmountIndicator;
 	}
@@ -530,6 +539,7 @@ public class AmountAndDirection40 {
 		this.brokerageAmountIndicator = brokerageAmountIndicator;
 	}
 
+	@XmlElement(name = "Amt")
 	public RestrictedFINActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -538,6 +548,7 @@ public class AmountAndDirection40 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -546,6 +557,7 @@ public class AmountAndDirection40 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "OrgnlCcyAndOrdrdAmt")
 	public RestrictedFINActiveOrHistoricCurrencyAndAmount getOriginalCurrencyAndOrderedAmount() {
 		return originalCurrencyAndOrderedAmount;
 	}
@@ -554,6 +566,7 @@ public class AmountAndDirection40 {
 		this.originalCurrencyAndOrderedAmount = originalCurrencyAndOrderedAmount;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public ForeignExchangeTerms12 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -562,6 +575,7 @@ public class AmountAndDirection40 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "ValDt")
 	public DateAndDateTimeChoice getValueDate() {
 		return valueDate;
 	}

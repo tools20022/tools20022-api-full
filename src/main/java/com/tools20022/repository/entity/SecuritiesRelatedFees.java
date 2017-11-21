@@ -22,6 +22,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,16 +37,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmFees
- * Security.mmFees}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Charges Charges}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -61,6 +52,16 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees#mmShippingFeesAmount
  * SecuritiesRelatedFees.mmShippingFeesAmount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Charges Charges}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmFees
+ * Security.mmFees}</li>
  * </ul>
  * </li>
  * <li>
@@ -115,7 +116,7 @@ public class SecuritiesRelatedFees extends Charges {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesRelatedFees.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
@@ -137,11 +138,6 @@ public class SecuritiesRelatedFees extends Charges {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees
-	 * SecuritiesRelatedFees}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -220,6 +216,11 @@ public class SecuritiesRelatedFees extends Charges {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees
+	 * SecuritiesRelatedFees}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -237,7 +238,7 @@ public class SecuritiesRelatedFees extends Charges {
 					CorporateActionAmounts13.mmPostageFeeAmount, CorporateActionAmounts4.mmPostageFeeAmount, CorporateActionAmounts7.mmPostageFeeAmount, CorporateActionAmounts10.mmPostageFeeAmount,
 					CorporateActionAmounts14.mmPostageFeeAmount, OtherAmounts4.mmPostageAmount, OtherAmounts5.mmPostageAmount, OtherAmounts3.mmPostageAmount, OtherAmounts7.mmPostageAmount, OtherAmounts9.mmPostageAmount,
 					OtherAmounts10.mmPostageAmount, OtherAmounts13.mmPostageAmount, OtherAmounts1.mmPostageAmount, CorporateActionAmounts1.mmPostageFeeAmount, OtherAmounts2.mmPostageAmount, OtherAmounts6.mmPostageAmount);
-			elementContext_lazy = () -> SecuritiesRelatedFees.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PostageFeeAmount";
@@ -245,6 +246,14 @@ public class SecuritiesRelatedFees extends Charges {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesRelatedFees.class.getMethod("getPostageFeeAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount regulatoryFeesAmount;
@@ -259,11 +268,6 @@ public class SecuritiesRelatedFees extends Charges {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees
-	 * SecuritiesRelatedFees}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -465,6 +469,11 @@ public class SecuritiesRelatedFees extends Charges {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees
+	 * SecuritiesRelatedFees}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -494,7 +503,7 @@ public class SecuritiesRelatedFees extends Charges {
 					OtherAmounts29.mmRegulatoryAmount, CorporateActionAmounts37.mmRegulatoryFeesAmount, CorporateActionAmounts36.mmRegulatoryFeesAmount, CorporateActionAmounts38.mmRegulatoryFeesAmount,
 					CorporateActionAmounts39.mmRegulatoryFeesAmount, CorporateActionAmounts41.mmRegulatoryFeesAmount, CorporateActionAmounts40.mmRegulatoryFeesAmount, OtherAmounts35.mmRegulatoryAmount, OtherAmounts34.mmRegulatoryAmount,
 					OtherAmounts38.mmRegulatoryAmount, OtherAmounts33.mmRegulatoryAmount);
-			elementContext_lazy = () -> SecuritiesRelatedFees.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegulatoryFeesAmount";
@@ -502,6 +511,14 @@ public class SecuritiesRelatedFees extends Charges {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesRelatedFees.class.getMethod("getRegulatoryFeesAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount shippingFeesAmount;
@@ -515,11 +532,6 @@ public class SecuritiesRelatedFees extends Charges {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees
-	 * SecuritiesRelatedFees}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -718,6 +730,11 @@ public class SecuritiesRelatedFees extends Charges {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees
+	 * SecuritiesRelatedFees}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -745,7 +762,7 @@ public class SecuritiesRelatedFees extends Charges {
 					OtherAmounts28.mmShippingAmount, OtherAmounts30.mmShippingAmount, OtherAmounts31.mmShippingAmount, OtherAmounts29.mmShippingAmount, CorporateActionAmounts37.mmShippingFeesAmount,
 					CorporateActionAmounts36.mmShippingFeesAmount, CorporateActionAmounts38.mmShippingFeesAmount, CorporateActionAmounts39.mmShippingFeesAmount, CorporateActionAmounts41.mmShippingFeesAmount,
 					CorporateActionAmounts40.mmShippingFeesAmount, OtherAmounts35.mmShippingAmount, OtherAmounts34.mmShippingAmount, OtherAmounts38.mmShippingAmount, OtherAmounts33.mmShippingAmount);
-			elementContext_lazy = () -> SecuritiesRelatedFees.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShippingFeesAmount";
@@ -753,6 +770,14 @@ public class SecuritiesRelatedFees extends Charges {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesRelatedFees.class.getMethod("getShippingFeesAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -765,7 +790,13 @@ public class SecuritiesRelatedFees extends Charges {
 				definition = "Fees related to securities trades.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmFees);
 				superType_lazy = () -> Charges.mmObject();
-				element_lazy = () -> Arrays.asList(SecuritiesRelatedFees.mmSecurity, SecuritiesRelatedFees.mmPostageFeeAmount, SecuritiesRelatedFees.mmRegulatoryFeesAmount, SecuritiesRelatedFees.mmShippingFeesAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesRelatedFees.mmSecurity, com.tools20022.repository.entity.SecuritiesRelatedFees.mmPostageFeeAmount,
+						com.tools20022.repository.entity.SecuritiesRelatedFees.mmRegulatoryFeesAmount, com.tools20022.repository.entity.SecuritiesRelatedFees.mmShippingFeesAmount);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesRelatedFees.class;
 			}
 		});
 		return mmObject_lazy.get();

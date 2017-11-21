@@ -29,20 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult1Code
- * TerminalManagementActionResult1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code
- * TerminalManagementActionResult2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult3Code
- * TerminalManagementActionResult3Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -103,6 +89,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmInvalidDelegationProof
  * TerminalManagementActionResultCode.mmInvalidDelegationProof}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult1Code
+ * TerminalManagementActionResult1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code
+ * TerminalManagementActionResult2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult3Code
+ * TerminalManagementActionResult3Code}</li>
  * </ul>
  * </li>
  * <li>

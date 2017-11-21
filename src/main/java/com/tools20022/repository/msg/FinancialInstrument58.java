@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Spread;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies underlying instruments or index a derivative has.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies underlying instruments or index a derivative has."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrument58", propOrder = {"ISIN", "name"})
 public class FinancialInstrument58 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class FinancialInstrument58 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ISIN")
 	public ISINOct2015Identifier getISIN() {
 		return iSIN;
 	}
@@ -185,6 +192,7 @@ public class FinancialInstrument58 {
 		this.iSIN = iSIN;
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public FloatingInterestRate8 getName() {
 		return name;
 	}

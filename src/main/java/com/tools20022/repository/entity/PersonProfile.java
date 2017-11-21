@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -39,16 +40,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Person#mmPersonProfile
- * Person.mmPersonProfile}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PrivateCertificate#mmPerson
- * PrivateCertificate.mmPerson}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -82,6 +73,16 @@ import java.util.List;
  * PersonProfile.mmSourceOfWealth}</li>
  * <li>{@linkplain com.tools20022.repository.entity.PersonProfile#mmSalaryRange
  * PersonProfile.mmSalaryRange}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Person#mmPersonProfile
+ * Person.mmPersonProfile}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PrivateCertificate#mmPerson
+ * PrivateCertificate.mmPerson}</li>
  * </ul>
  * </li>
  * <li>
@@ -133,7 +134,7 @@ public class PersonProfile {
 	 */
 	public static final MMBusinessAttribute mmForeignStatusCertification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PersonProfile.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignStatusCertification";
@@ -141,6 +142,14 @@ public class PersonProfile {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProvidedCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PersonProfile.class.getMethod("getForeignStatusCertification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator employeeTerminationIndicator;
@@ -154,11 +163,6 @@ public class PersonProfile {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PersonProfile PersonProfile}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -166,6 +170,11 @@ public class PersonProfile {
 	 * {@linkplain com.tools20022.repository.msg.Garnishment1#mmEmployeeTerminationIndicator
 	 * Garnishment1.mmEmployeeTerminationIndicator}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PersonProfile PersonProfile}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -182,7 +191,7 @@ public class PersonProfile {
 	public static final MMBusinessAttribute mmEmployeeTerminationIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Garnishment1.mmEmployeeTerminationIndicator);
-			elementContext_lazy = () -> PersonProfile.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EmployeeTerminationIndicator";
@@ -190,6 +199,14 @@ public class PersonProfile {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PersonProfile.class.getMethod("getEmployeeTerminationIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected KnowYourCustomerCheckTypeCode knowYourCustomerCheckType;
@@ -205,11 +222,6 @@ public class PersonProfile {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.KnowYourCustomerCheckTypeCode
 	 * KnowYourCustomerCheckTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PersonProfile PersonProfile}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -231,6 +243,11 @@ public class PersonProfile {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PersonProfile PersonProfile}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -247,7 +264,7 @@ public class PersonProfile {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyProfileInformation3.mmKnowYourCustomerCheckType, KYCCheckType1Choice.mmCode, KYCCheckType1Choice.mmProprietary, PartyProfileInformation4.mmKnowYourCustomerCheckType,
 					PartyProfileInformation5.mmKnowYourCustomerCheckType);
-			elementContext_lazy = () -> PersonProfile.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "KnowYourCustomerCheckType";
@@ -255,6 +272,14 @@ public class PersonProfile {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> KnowYourCustomerCheckTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PersonProfile.class.getMethod("getKnowYourCustomerCheckType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RiskLevelCode riskLevel;
@@ -286,7 +311,7 @@ public class PersonProfile {
 	 */
 	public static final MMBusinessAttribute mmRiskLevel = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PersonProfile.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RiskLevel";
@@ -294,6 +319,14 @@ public class PersonProfile {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RiskLevelCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PersonProfile.class.getMethod("getRiskLevel", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Person person;
@@ -331,7 +364,7 @@ public class PersonProfile {
 	 */
 	public static final MMBusinessAssociationEnd mmPerson = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PersonProfile.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Person";
@@ -358,11 +391,6 @@ public class PersonProfile {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PoliticalExposureTypeCode
 	 * PoliticalExposureTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PersonProfile PersonProfile}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -399,6 +427,11 @@ public class PersonProfile {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PersonProfile PersonProfile}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -416,7 +449,7 @@ public class PersonProfile {
 			derivation_lazy = () -> Arrays.asList(IndividualPerson21.mmPoliticallyExposedPersonType, PoliticalExposureType1Choice.mmCode, PoliticalExposureType1Choice.mmProprietary, IndividualPerson22.mmPoliticallyExposedPersonType,
 					IndividualPerson23.mmPoliticallyExposedPersonType, IndividualPerson24.mmPoliticallyExposedPersonType, IndividualPerson28.mmPoliticallyExposedPersonType, IndividualPerson27.mmPoliticallyExposedPersonType,
 					IndividualPerson33.mmPoliticallyExposedPersonType, IndividualPerson34.mmPoliticallyExposedPersonType);
-			elementContext_lazy = () -> PersonProfile.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoliticalExposureType";
@@ -424,6 +457,14 @@ public class PersonProfile {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PoliticalExposureTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PersonProfile.class.getMethod("getPoliticalExposureType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ConductClassificationCode customerConductClassification;
@@ -458,7 +499,7 @@ public class PersonProfile {
 	 */
 	public static final MMBusinessAttribute mmCustomerConductClassification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> PersonProfile.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CustomerConductClassification";
@@ -466,6 +507,14 @@ public class PersonProfile {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ConductClassificationCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PersonProfile.class.getMethod("getCustomerConductClassification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator familyMedicalInsuranceIndicator;
@@ -479,11 +528,6 @@ public class PersonProfile {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PersonProfile PersonProfile}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -491,6 +535,11 @@ public class PersonProfile {
 	 * {@linkplain com.tools20022.repository.msg.Garnishment1#mmFamilyMedicalInsuranceIndicator
 	 * Garnishment1.mmFamilyMedicalInsuranceIndicator}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PersonProfile PersonProfile}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -508,7 +557,7 @@ public class PersonProfile {
 	public static final MMBusinessAttribute mmFamilyMedicalInsuranceIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Garnishment1.mmFamilyMedicalInsuranceIndicator);
-			elementContext_lazy = () -> PersonProfile.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FamilyMedicalInsuranceIndicator";
@@ -516,6 +565,14 @@ public class PersonProfile {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PersonProfile.class.getMethod("getFamilyMedicalInsuranceIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.PrivateCertificate> profileCertification;
@@ -536,11 +593,6 @@ public class PersonProfile {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PrivateCertificate
 	 * PrivateCertificate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PersonProfile PersonProfile}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -582,6 +634,11 @@ public class PersonProfile {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PersonProfile PersonProfile}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -599,7 +656,7 @@ public class PersonProfile {
 					InvestmentAccountOwnershipInformation11.mmModifiedInvestorProfileValidation, InvestmentAccountOwnershipInformation12.mmInvestorProfileValidation,
 					InvestmentAccountOwnershipInformation13.mmModifiedInvestorProfileValidation, InvestmentAccountOwnershipInformation15.mmModifiedInvestorProfileValidation,
 					InvestmentAccountOwnershipInformation14.mmInvestorProfileValidation);
-			elementContext_lazy = () -> PersonProfile.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProfileCertification";
@@ -620,11 +677,6 @@ public class PersonProfile {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max140Text
 	 * Max140Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PersonProfile PersonProfile}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -646,6 +698,11 @@ public class PersonProfile {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PersonProfile PersonProfile}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -660,7 +717,7 @@ public class PersonProfile {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyProfileInformation1.mmSourceOfWealth, PartyProfileInformation2.mmSourceOfWealth, PartyProfileInformation3.mmSourceOfWealth, PartyProfileInformation4.mmSourceOfWealth,
 					PartyProfileInformation5.mmSourceOfWealth);
-			elementContext_lazy = () -> PersonProfile.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SourceOfWealth";
@@ -668,6 +725,14 @@ public class PersonProfile {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PersonProfile.class.getMethod("getSourceOfWealth", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text salaryRange;
@@ -680,11 +745,6 @@ public class PersonProfile {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PersonProfile PersonProfile}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -706,6 +766,11 @@ public class PersonProfile {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PersonProfile PersonProfile}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -720,7 +785,7 @@ public class PersonProfile {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyProfileInformation1.mmSalaryRange, PartyProfileInformation2.mmSalaryRange, PartyProfileInformation3.mmSalaryRange, PartyProfileInformation4.mmSalaryRange,
 					PartyProfileInformation5.mmSalaryRange);
-			elementContext_lazy = () -> PersonProfile.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SalaryRange";
@@ -728,6 +793,14 @@ public class PersonProfile {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PersonProfile.class.getMethod("getSalaryRange", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -739,9 +812,16 @@ public class PersonProfile {
 				name = "PersonProfile";
 				definition = "Information to support Know Your Customer (KYC) processes.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Person.mmPersonProfile, com.tools20022.repository.entity.PrivateCertificate.mmPerson);
-				element_lazy = () -> Arrays.asList(PersonProfile.mmForeignStatusCertification, PersonProfile.mmEmployeeTerminationIndicator, PersonProfile.mmKnowYourCustomerCheckType, PersonProfile.mmRiskLevel, PersonProfile.mmPerson,
-						PersonProfile.mmPoliticalExposureType, PersonProfile.mmCustomerConductClassification, PersonProfile.mmFamilyMedicalInsuranceIndicator, PersonProfile.mmProfileCertification, PersonProfile.mmSourceOfWealth,
-						PersonProfile.mmSalaryRange);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PersonProfile.mmForeignStatusCertification, com.tools20022.repository.entity.PersonProfile.mmEmployeeTerminationIndicator,
+						com.tools20022.repository.entity.PersonProfile.mmKnowYourCustomerCheckType, com.tools20022.repository.entity.PersonProfile.mmRiskLevel, com.tools20022.repository.entity.PersonProfile.mmPerson,
+						com.tools20022.repository.entity.PersonProfile.mmPoliticalExposureType, com.tools20022.repository.entity.PersonProfile.mmCustomerConductClassification,
+						com.tools20022.repository.entity.PersonProfile.mmFamilyMedicalInsuranceIndicator, com.tools20022.repository.entity.PersonProfile.mmProfileCertification,
+						com.tools20022.repository.entity.PersonProfile.mmSourceOfWealth, com.tools20022.repository.entity.PersonProfile.mmSalaryRange);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PersonProfile.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Represents the assignment of a case to a party. Assignment is a step in the
@@ -117,6 +121,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CaseAssignment", propOrder = {"identification", "assigner", "assignee", "creationDateTime"})
 public class CaseAssignment {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -330,6 +336,7 @@ public class CaseAssignment {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -338,6 +345,7 @@ public class CaseAssignment {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Assgnr", required = true)
 	public AnyBICIdentifier getAssigner() {
 		return assigner;
 	}
@@ -346,6 +354,7 @@ public class CaseAssignment {
 		this.assigner = assigner;
 	}
 
+	@XmlElement(name = "Assgne", required = true)
 	public AnyBICIdentifier getAssignee() {
 		return assignee;
 	}
@@ -354,6 +363,7 @@ public class CaseAssignment {
 		this.assignee = assignee;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}

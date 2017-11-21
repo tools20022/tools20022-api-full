@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies prices.
@@ -77,6 +81,8 @@ import java.util.List;
  * definition} = "Specifies prices."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionPrice5", propOrder = {"exercisePrice", "genericCashPriceReceivedPerProduct", "genericCashPricePaidPerProduct", "taxableIncomePerDividendShare", "cashInLieuOfSharePrice", "overSubscriptionDepositPrice"})
 public class CorporateActionPrice5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -404,6 +410,7 @@ public class CorporateActionPrice5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ExrcPric")
 	public PriceFormat6Choice getExercisePrice() {
 		return exercisePrice;
 	}
@@ -412,6 +419,7 @@ public class CorporateActionPrice5 {
 		this.exercisePrice = exercisePrice;
 	}
 
+	@XmlElement(name = "GncCshPricRcvdPerPdct")
 	public List<PriceFormat7Choice> getGenericCashPriceReceivedPerProduct() {
 		return genericCashPriceReceivedPerProduct;
 	}
@@ -420,6 +428,7 @@ public class CorporateActionPrice5 {
 		this.genericCashPriceReceivedPerProduct = genericCashPriceReceivedPerProduct;
 	}
 
+	@XmlElement(name = "GncCshPricPdPerPdct")
 	public PriceFormat5Choice getGenericCashPricePaidPerProduct() {
 		return genericCashPricePaidPerProduct;
 	}
@@ -428,6 +437,7 @@ public class CorporateActionPrice5 {
 		this.genericCashPricePaidPerProduct = genericCashPricePaidPerProduct;
 	}
 
+	@XmlElement(name = "TaxblIncmPerDvddShr")
 	public AmountPrice3 getTaxableIncomePerDividendShare() {
 		return taxableIncomePerDividendShare;
 	}
@@ -436,6 +446,7 @@ public class CorporateActionPrice5 {
 		this.taxableIncomePerDividendShare = taxableIncomePerDividendShare;
 	}
 
+	@XmlElement(name = "CshInLieuOfShrPric")
 	public PriceFormat5Choice getCashInLieuOfSharePrice() {
 		return cashInLieuOfSharePrice;
 	}
@@ -444,6 +455,7 @@ public class CorporateActionPrice5 {
 		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
 	}
 
+	@XmlElement(name = "OverSbcptDpstPric")
 	public PriceFormat5Choice getOverSubscriptionDepositPrice() {
 		return overSubscriptionDepositPrice;
 	}

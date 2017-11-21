@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PaymentPeriod4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a payment term in a coded or free format.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentCodeOrOther1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentCodeOrOther2Choice", propOrder = {"paymentCode", "paymentDueDate", "otherPaymentTerms"})
 public class PaymentCodeOrOther2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -244,6 +250,7 @@ public class PaymentCodeOrOther2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtCd", required = true)
 	public PaymentPeriod4 getPaymentCode() {
 		return paymentCode;
 	}
@@ -252,6 +259,7 @@ public class PaymentCodeOrOther2Choice {
 		this.paymentCode = paymentCode;
 	}
 
+	@XmlElement(name = "PmtDueDt", required = true)
 	public ISODate getPaymentDueDate() {
 		return paymentDueDate;
 	}
@@ -260,6 +268,7 @@ public class PaymentCodeOrOther2Choice {
 		this.paymentDueDate = paymentDueDate;
 	}
 
+	@XmlElement(name = "OthrPmtTerms", required = true)
 	public Max140Text getOtherPaymentTerms() {
 		return otherPaymentTerms;
 	}

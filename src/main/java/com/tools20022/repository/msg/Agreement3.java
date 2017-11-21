@@ -35,6 +35,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Contractual details related to the agreement between parties.
@@ -82,6 +86,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Agreement3", propOrder = {"description", "date", "currency", "closingType", "startDate", "deliveryType", "marginRatio"})
 public class Agreement3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -447,6 +453,7 @@ public class Agreement3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Desc")
 	public Max350Text getDescription() {
 		return description;
 	}
@@ -455,6 +462,7 @@ public class Agreement3 {
 		this.description = description;
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODateTime getDate() {
 		return date;
 	}
@@ -463,6 +471,7 @@ public class Agreement3 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -471,6 +480,7 @@ public class Agreement3 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "ClsgTp")
 	public ClosingType1Code getClosingType() {
 		return closingType;
 	}
@@ -479,6 +489,7 @@ public class Agreement3 {
 		this.closingType = closingType;
 	}
 
+	@XmlElement(name = "StartDt")
 	public ISODateTime getStartDate() {
 		return startDate;
 	}
@@ -487,6 +498,7 @@ public class Agreement3 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "DlvryTp")
 	public DeliveryType2Code getDeliveryType() {
 		return deliveryType;
 	}
@@ -495,6 +507,7 @@ public class Agreement3 {
 		this.deliveryType = deliveryType;
 	}
 
+	@XmlElement(name = "MrgnRatio")
 	public PercentageRate getMarginRatio() {
 		return marginRatio;
 	}

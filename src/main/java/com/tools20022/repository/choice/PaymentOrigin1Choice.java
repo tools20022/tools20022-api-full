@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the format under which the payment that generated the entry was
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentOrigin1Choice", propOrder = {"FINMessageType", "XMLMessageName", "proprietary", "instrument"})
 public class PaymentOrigin1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -270,6 +276,7 @@ public class PaymentOrigin1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "FINMT", required = true)
 	public Max3NumericText getFINMessageType() {
 		return fINMessageType;
 	}
@@ -278,6 +285,7 @@ public class PaymentOrigin1Choice {
 		this.fINMessageType = fINMessageType;
 	}
 
+	@XmlElement(name = "XMLMsgNm", required = true)
 	public Max35Text getXMLMessageName() {
 		return xMLMessageName;
 	}
@@ -286,6 +294,7 @@ public class PaymentOrigin1Choice {
 		this.xMLMessageName = xMLMessageName;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public Max35Text getProprietary() {
 		return proprietary;
 	}
@@ -294,6 +303,7 @@ public class PaymentOrigin1Choice {
 		this.proprietary = proprietary;
 	}
 
+	@XmlElement(name = "Instrm", required = true)
 	public PaymentInstrument1Code getInstrument() {
 		return instrument;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.CardPaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Reject of an exchange.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorRejection2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorRejection3", propOrder = {"rejectReason", "additionalInformation", "messageInError"})
 public class AcceptorRejection3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -255,6 +261,7 @@ public class AcceptorRejection3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RjctRsn", required = true)
 	public RejectReason2Code getRejectReason() {
 		return rejectReason;
 	}
@@ -263,6 +270,7 @@ public class AcceptorRejection3 {
 		this.rejectReason = rejectReason;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public Max500Text getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -271,6 +279,7 @@ public class AcceptorRejection3 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "MsgInErr")
 	public Max100KBinary getMessageInError() {
 		return messageInError;
 	}

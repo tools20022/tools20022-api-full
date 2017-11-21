@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.IndividualPayment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +39,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebit#mmRegistrationIdentification
+ * DirectDebit.mmRegistrationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebit#mmDirectDebitMandate
+ * DirectDebit.mmDirectDebitMandate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebit#mmPreNotificationIdentification
+ * DirectDebit.mmPreNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebit#mmPreNotificationDate
+ * DirectDebit.mmPreNotificationDate}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.IndividualPayment
+ * IndividualPayment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -248,26 +269,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * DirectDebitTransactionInformation22.mmDirectDebitTransaction}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.IndividualPayment
- * IndividualPayment}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebit#mmRegistrationIdentification
- * DirectDebit.mmRegistrationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebit#mmDirectDebitMandate
- * DirectDebit.mmDirectDebitMandate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebit#mmPreNotificationIdentification
- * DirectDebit.mmPreNotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebit#mmPreNotificationDate
- * DirectDebit.mmPreNotificationDate}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -300,10 +301,6 @@ public class DirectDebit extends IndividualPayment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebit DirectDebit}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -325,6 +322,10 @@ public class DirectDebit extends IndividualPayment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DirectDebit DirectDebit}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -341,7 +342,7 @@ public class DirectDebit extends IndividualPayment {
 		{
 			derivation_lazy = () -> Arrays.asList(DirectDebitMandate2.mmRegistrationIdentification, DirectDebitMandate3.mmRegistrationIdentification, DirectDebitMandate4.mmRegistrationIdentification,
 					DirectDebitMandate5.mmRegistrationIdentification, DirectDebitMandate6.mmRegistrationIdentification);
-			elementContext_lazy = () -> DirectDebit.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationIdentification";
@@ -349,6 +350,14 @@ public class DirectDebit extends IndividualPayment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DirectDebit.class.getMethod("getRegistrationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DirectDebitMandate directDebitMandate;
@@ -370,10 +379,6 @@ public class DirectDebit extends IndividualPayment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DirectDebitMandate
 	 * DirectDebitMandate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebit DirectDebit}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -404,6 +409,10 @@ public class DirectDebit extends IndividualPayment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DirectDebit DirectDebit}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -421,7 +430,7 @@ public class DirectDebit extends IndividualPayment {
 			derivation_lazy = () -> Arrays.asList(DirectDebitTransaction1.mmMandateRelatedInformation, DirectDebitTransaction6.mmMandateRelatedInformation, DirectDebitTransaction7.mmMandateRelatedInformation,
 					DirectDebitTransaction4.mmMandateRelatedInformation, DirectDebitTransaction5.mmMandateRelatedInformation, DirectDebitTransaction8.mmMandateRelatedInformation, PaymentTerms6.mmDirectDebitMandateIdentification,
 					DirectDebitTransaction9.mmMandateRelatedInformation);
-			elementContext_lazy = () -> DirectDebit.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DirectDebitMandate";
@@ -446,10 +455,6 @@ public class DirectDebit extends IndividualPayment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebit DirectDebit}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -474,6 +479,10 @@ public class DirectDebit extends IndividualPayment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DirectDebit DirectDebit}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -490,7 +499,7 @@ public class DirectDebit extends IndividualPayment {
 		{
 			derivation_lazy = () -> Arrays.asList(DirectDebitTransaction1.mmPreNotificationIdentification, DirectDebitTransaction6.mmPreNotificationIdentification, DirectDebitTransaction7.mmPreNotificationIdentification,
 					DirectDebitTransaction5.mmPreNotificationIdentification, DirectDebitTransaction8.mmPreNotificationIdentification, DirectDebitTransaction9.mmPreNotificationIdentification);
-			elementContext_lazy = () -> DirectDebit.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreNotificationIdentification";
@@ -498,6 +507,14 @@ public class DirectDebit extends IndividualPayment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DirectDebit.class.getMethod("getPreNotificationIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODate preNotificationDate;
@@ -512,10 +529,6 @@ public class DirectDebit extends IndividualPayment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebit DirectDebit}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -540,6 +553,10 @@ public class DirectDebit extends IndividualPayment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.DirectDebit DirectDebit}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -556,7 +573,7 @@ public class DirectDebit extends IndividualPayment {
 		{
 			derivation_lazy = () -> Arrays.asList(DirectDebitTransaction1.mmPreNotificationDate, DirectDebitTransaction6.mmPreNotificationDate, DirectDebitTransaction7.mmPreNotificationDate, DirectDebitTransaction5.mmPreNotificationDate,
 					DirectDebitTransaction8.mmPreNotificationDate, DirectDebitTransaction9.mmPreNotificationDate);
-			elementContext_lazy = () -> DirectDebit.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreNotificationDate";
@@ -564,6 +581,14 @@ public class DirectDebit extends IndividualPayment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return DirectDebit.class.getMethod("getPreNotificationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -588,7 +613,8 @@ public class DirectDebit extends IndividualPayment {
 						PaymentInstrument18Choice.mmDirectDebitDetails, PaymentInstrument20Choice.mmDirectDebitDetails, PaymentInstruction21.mmDirectDebitTransactionInformation, DirectDebitTransactionInformation21.mmDirectDebitTransaction,
 						DirectDebitTransactionInformation22.mmDirectDebitTransaction);
 				superType_lazy = () -> IndividualPayment.mmObject();
-				element_lazy = () -> Arrays.asList(DirectDebit.mmRegistrationIdentification, DirectDebit.mmDirectDebitMandate, DirectDebit.mmPreNotificationIdentification, DirectDebit.mmPreNotificationDate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DirectDebit.mmRegistrationIdentification, com.tools20022.repository.entity.DirectDebit.mmDirectDebitMandate,
+						com.tools20022.repository.entity.DirectDebit.mmPreNotificationIdentification, com.tools20022.repository.entity.DirectDebit.mmPreNotificationDate);
 				derivationComponent_lazy = () -> Arrays.asList(DirectDebitMandate2.mmObject(), DirectDebitMandate3.mmObject(), DirectDebitMandate4.mmObject(), DirectDebitTransaction1.mmObject(),
 						DirectDebitTransactionInformation1.mmObject(), DirectDebitTransaction6.mmObject(), DirectDebitTransactionInformation9.mmObject(), DirectDebitTransaction7.mmObject(), DirectDebitTransactionInformation11.mmObject(),
 						DirectDebitTransactionInformation13.mmObject(), DirectDebitTransactionInformation2.mmObject(), DirectDebitTransactionInformation10.mmObject(), DirectDebitTransactionInformation12.mmObject(),
@@ -597,6 +623,11 @@ public class DirectDebit extends IndividualPayment {
 						DirectDebitTransactionInformation17.mmObject(), DirectDebitTransaction8.mmObject(), DirectDebitTransactionInformation18.mmObject(), DirectDebitTransactionInformation20.mmObject(),
 						DirectDebitTransactionInformation19.mmObject(), DirectDebitMandate5.mmObject(), DirectDebitMandate6.mmObject(), DirectDebitTransactionInformation21.mmObject(), DirectDebitTransactionInformation22.mmObject(),
 						DirectDebitTransaction9.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return DirectDebit.class;
 			}
 		});
 		return mmObject_lazy.get();

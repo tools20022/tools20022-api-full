@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Unique and unambiguous identifier of a financial institution, as assigned
@@ -84,6 +88,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstitutionIdentification5Choice", propOrder = {"BIC", "clearingSystemMemberIdentification", "nameAndAddress", "proprietaryIdentification", "combinedIdentification"})
 public class FinancialInstitutionIdentification5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -364,6 +370,7 @@ public class FinancialInstitutionIdentification5Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BIC", required = true)
 	public BICIdentifier getBIC() {
 		return bIC;
 	}
@@ -372,6 +379,7 @@ public class FinancialInstitutionIdentification5Choice {
 		this.bIC = bIC;
 	}
 
+	@XmlElement(name = "ClrSysMmbId", required = true)
 	public ClearingSystemMemberIdentification3Choice getClearingSystemMemberIdentification() {
 		return clearingSystemMemberIdentification;
 	}
@@ -380,6 +388,7 @@ public class FinancialInstitutionIdentification5Choice {
 		this.clearingSystemMemberIdentification = clearingSystemMemberIdentification;
 	}
 
+	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress7 getNameAndAddress() {
 		return nameAndAddress;
 	}
@@ -388,6 +397,7 @@ public class FinancialInstitutionIdentification5Choice {
 		this.nameAndAddress = nameAndAddress;
 	}
 
+	@XmlElement(name = "PrtryId", required = true)
 	public GenericIdentification3 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
@@ -396,6 +406,7 @@ public class FinancialInstitutionIdentification5Choice {
 		this.proprietaryIdentification = proprietaryIdentification;
 	}
 
+	@XmlElement(name = "CmbndId", required = true)
 	public FinancialInstitutionIdentification3 getCombinedIdentification() {
 		return combinedIdentification;
 	}

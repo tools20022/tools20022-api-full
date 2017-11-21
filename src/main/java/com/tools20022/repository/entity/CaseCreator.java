@@ -64,6 +64,11 @@ public class CaseCreator extends InvestigationPartyRole {
 				definition = "Party who initiates the case.";
 				superType_lazy = () -> InvestigationPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CaseCreator.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

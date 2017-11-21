@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.TaxVoucher;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies tax vouchers in the framework of a corporate action event.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies tax vouchers in the framework of a corporate action event."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TaxVoucher3", propOrder = {"identification", "bargainDate", "bargainSettlementDate"})
 public class TaxVoucher3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -231,6 +237,7 @@ public class TaxVoucher3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public RestrictedFINXMax16Text getIdentification() {
 		return identification;
 	}
@@ -239,6 +246,7 @@ public class TaxVoucher3 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "BrgnDt")
 	public DateAndDateTimeChoice getBargainDate() {
 		return bargainDate;
 	}
@@ -247,6 +255,7 @@ public class TaxVoucher3 {
 		this.bargainDate = bargainDate;
 	}
 
+	@XmlElement(name = "BrgnSttlmDt")
 	public DateAndDateTimeChoice getBargainSettlementDate() {
 		return bargainSettlementDate;
 	}

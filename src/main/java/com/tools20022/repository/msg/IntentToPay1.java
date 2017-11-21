@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the details of an intention to pay based on purchase orders or
@@ -98,6 +102,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntentToPay1", propOrder = {"byPurchaseOrder", "byCommercialInvoice", "expectedPaymentDate", "settlementTerms"})
 public class IntentToPay1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -351,6 +357,7 @@ public class IntentToPay1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ByPurchsOrdr", required = true)
 	public ReportLine3 getByPurchaseOrder() {
 		return byPurchaseOrder;
 	}
@@ -359,6 +366,7 @@ public class IntentToPay1 {
 		this.byPurchaseOrder = byPurchaseOrder;
 	}
 
+	@XmlElement(name = "ByComrclInvc", required = true)
 	public ReportLine4 getByCommercialInvoice() {
 		return byCommercialInvoice;
 	}
@@ -367,6 +375,7 @@ public class IntentToPay1 {
 		this.byCommercialInvoice = byCommercialInvoice;
 	}
 
+	@XmlElement(name = "XpctdPmtDt", required = true)
 	public ISODate getExpectedPaymentDate() {
 		return expectedPaymentDate;
 	}
@@ -375,6 +384,7 @@ public class IntentToPay1 {
 		this.expectedPaymentDate = expectedPaymentDate;
 	}
 
+	@XmlElement(name = "SttlmTerms")
 	public SettlementTerms2 getSettlementTerms() {
 		return settlementTerms;
 	}

@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment obligation contracted between two financial institutions related to
@@ -110,6 +114,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentObligation1", propOrder = {"obligorBank", "recipientBank", "amount", "percentage", "chargesAmount", "chargesPercentage", "expiryDate", "applicableLaw", "paymentTerms", "settlementTerms"})
 public class PaymentObligation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -714,6 +720,7 @@ public class PaymentObligation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OblgrBk", required = true)
 	public BICIdentification1 getObligorBank() {
 		return obligorBank;
 	}
@@ -722,6 +729,7 @@ public class PaymentObligation1 {
 		this.obligorBank = obligorBank;
 	}
 
+	@XmlElement(name = "RcptBk", required = true)
 	public BICIdentification1 getRecipientBank() {
 		return recipientBank;
 	}
@@ -730,6 +738,7 @@ public class PaymentObligation1 {
 		this.recipientBank = recipientBank;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -738,6 +747,7 @@ public class PaymentObligation1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Pctg", required = true)
 	public PercentageRate getPercentage() {
 		return percentage;
 	}
@@ -746,6 +756,7 @@ public class PaymentObligation1 {
 		this.percentage = percentage;
 	}
 
+	@XmlElement(name = "ChrgsAmt")
 	public CurrencyAndAmount getChargesAmount() {
 		return chargesAmount;
 	}
@@ -754,6 +765,7 @@ public class PaymentObligation1 {
 		this.chargesAmount = chargesAmount;
 	}
 
+	@XmlElement(name = "ChrgsPctg")
 	public PercentageRate getChargesPercentage() {
 		return chargesPercentage;
 	}
@@ -762,6 +774,7 @@ public class PaymentObligation1 {
 		this.chargesPercentage = chargesPercentage;
 	}
 
+	@XmlElement(name = "XpryDt", required = true)
 	public ISODate getExpiryDate() {
 		return expiryDate;
 	}
@@ -770,6 +783,7 @@ public class PaymentObligation1 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "AplblLaw")
 	public CountryCode getApplicableLaw() {
 		return applicableLaw;
 	}
@@ -778,6 +792,7 @@ public class PaymentObligation1 {
 		this.applicableLaw = applicableLaw;
 	}
 
+	@XmlElement(name = "PmtTerms")
 	public List<PaymentTerms2> getPaymentTerms() {
 		return paymentTerms;
 	}
@@ -786,6 +801,7 @@ public class PaymentObligation1 {
 		this.paymentTerms = paymentTerms;
 	}
 
+	@XmlElement(name = "SttlmTerms")
 	public SettlementTerms2 getSettlementTerms() {
 		return settlementTerms;
 	}

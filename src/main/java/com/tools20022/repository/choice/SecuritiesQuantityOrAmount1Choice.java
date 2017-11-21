@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesOption54;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between securities quantities or an amount.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between securities quantities or an amount."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesQuantityOrAmount1Choice", propOrder = {"securitiesQuantity", "instructedAmount"})
 public class SecuritiesQuantityOrAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -162,6 +168,7 @@ public class SecuritiesQuantityOrAmount1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SctiesQty", required = true)
 	public SecuritiesOption54 getSecuritiesQuantity() {
 		return securitiesQuantity;
 	}
@@ -170,6 +177,7 @@ public class SecuritiesQuantityOrAmount1Choice {
 		this.securitiesQuantity = securitiesQuantity;
 	}
 
+	@XmlElement(name = "InstdAmt", required = true)
 	public RestrictedFINActiveCurrencyAndAmount getInstructedAmount() {
 		return instructedAmount;
 	}

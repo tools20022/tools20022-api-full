@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.InvestmentFundOrderExecution;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +39,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmEquityComponent
+ * SubscriptionExecution.mmEquityComponent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmCashComponent
+ * SubscriptionExecution.mmCashComponent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmInvestedNetAmount
+ * SubscriptionExecution.mmInvestedNetAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmRefund
+ * SubscriptionExecution.mmRefund}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmSubscriptionInterest
+ * SubscriptionExecution.mmSubscriptionInterest}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg
+ * SwitchExecutionSubscriptionLeg}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
+ * InvestmentFundOrderExecution}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -134,38 +167,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SubscriptionMultipleExecution5.mmIndividualExecutionDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
- * InvestmentFundOrderExecution}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg
- * SwitchExecutionSubscriptionLeg}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmEquityComponent
- * SubscriptionExecution.mmEquityComponent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmCashComponent
- * SubscriptionExecution.mmCashComponent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmInvestedNetAmount
- * SubscriptionExecution.mmInvestedNetAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmRefund
- * SubscriptionExecution.mmRefund}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmSubscriptionInterest
- * SubscriptionExecution.mmSubscriptionInterest}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -195,11 +196,6 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution
-	 * SubscriptionExecution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -211,6 +207,11 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * SubscriptionInformation1.mmEquityComponent}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution
+	 * SubscriptionExecution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -225,7 +226,7 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	public static final MMBusinessAttribute mmEquityComponent = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SubscriptionInformation.mmEquityComponent, SubscriptionInformation1.mmEquityComponent);
-			elementContext_lazy = () -> SubscriptionExecution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EquityComponent";
@@ -233,6 +234,14 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionExecution.class.getMethod("getEquityComponent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount cashComponent;
@@ -246,11 +255,6 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution
-	 * SubscriptionExecution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -262,6 +266,11 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * SubscriptionInformation1.mmCashComponent}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution
+	 * SubscriptionExecution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -276,7 +285,7 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	public static final MMBusinessAttribute mmCashComponent = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SubscriptionInformation.mmCashComponent, SubscriptionInformation1.mmCashComponent);
-			elementContext_lazy = () -> SubscriptionExecution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashComponent";
@@ -284,6 +293,14 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionExecution.class.getMethod("getCashComponent", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount investedNetAmount;
@@ -298,11 +315,6 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution
-	 * SubscriptionExecution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -339,6 +351,11 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution
+	 * SubscriptionExecution}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -355,7 +372,7 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 		{
 			derivation_lazy = () -> Arrays.asList(SubscriptionExecution3.mmNetAmount, SubscriptionExecution5.mmNetAmount, SubscriptionExecution4.mmNetAmount, SubscriptionExecution6.mmNetAmount, SwitchSubscriptionLegExecution2.mmNetAmount,
 					SwitchSubscriptionLegExecution3.mmNetAmount, SubscriptionExecution9.mmNetAmount, SubscriptionExecution13.mmNetAmount, SubscriptionExecution12.mmNetAmount, SwitchSubscriptionLegExecution4.mmNetAmount);
-			elementContext_lazy = () -> SubscriptionExecution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestedNetAmount";
@@ -363,6 +380,14 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionExecution.class.getMethod("getInvestedNetAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount refund;
@@ -376,11 +401,6 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution
-	 * SubscriptionExecution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -408,6 +428,11 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution
+	 * SubscriptionExecution}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -423,7 +448,7 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 		{
 			derivation_lazy = () -> Arrays.asList(SubscriptionExecution3.mmRefund, SubscriptionExecution5.mmRefund, SubscriptionExecution4.mmRefund, SubscriptionExecution6.mmRefund, SubscriptionExecution7.mmRefund,
 					SubscriptionExecution13.mmRefund, SubscriptionExecution12.mmRefund);
-			elementContext_lazy = () -> SubscriptionExecution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Refund";
@@ -431,6 +456,14 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionExecution.class.getMethod("getRefund", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount subscriptionInterest;
@@ -445,11 +478,6 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution
-	 * SubscriptionExecution}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -477,6 +505,11 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution
+	 * SubscriptionExecution}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -493,7 +526,7 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 		{
 			derivation_lazy = () -> Arrays.asList(SubscriptionExecution3.mmSubscriptionInterest, SubscriptionExecution5.mmSubscriptionInterest, SubscriptionExecution4.mmSubscriptionInterest, SubscriptionExecution6.mmSubscriptionInterest,
 					SubscriptionExecution7.mmSubscriptionInterest, SubscriptionExecution13.mmSubscriptionInterest, SubscriptionExecution12.mmSubscriptionInterest);
-			elementContext_lazy = () -> SubscriptionExecution.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionInterest";
@@ -501,6 +534,14 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SubscriptionExecution.class.getMethod("getSubscriptionInterest", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -518,13 +559,19 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 						SubscriptionBulkExecution4.mmIndividualExecutionDetails, SubscriptionMultipleExecution5.mmIndividualExecutionDetails);
 				subType_lazy = () -> Arrays.asList(SwitchExecutionSubscriptionLeg.mmObject());
 				superType_lazy = () -> InvestmentFundOrderExecution.mmObject();
-				element_lazy = () -> Arrays.asList(SubscriptionExecution.mmEquityComponent, SubscriptionExecution.mmCashComponent, SubscriptionExecution.mmInvestedNetAmount, SubscriptionExecution.mmRefund,
-						SubscriptionExecution.mmSubscriptionInterest);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SubscriptionExecution.mmEquityComponent, com.tools20022.repository.entity.SubscriptionExecution.mmCashComponent,
+						com.tools20022.repository.entity.SubscriptionExecution.mmInvestedNetAmount, com.tools20022.repository.entity.SubscriptionExecution.mmRefund,
+						com.tools20022.repository.entity.SubscriptionExecution.mmSubscriptionInterest);
 				derivationComponent_lazy = () -> Arrays.asList(SubscriptionInformation.mmObject(), SubscriptionInformation1.mmObject(), SubscriptionExecution3.mmObject(), SubscriptionBulkExecution2.mmObject(),
 						SubscriptionExecution5.mmObject(), SubscriptionBulkExecution3.mmObject(), SubscriptionBulkOrderConfirmation1.mmObject(), SubscriptionExecution4.mmObject(), SubscriptionMultipleExecution2.mmObject(),
 						SubscriptionExecution6.mmObject(), SubscriptionMultipleExecution3.mmObject(), SubscriptionOrderConfirmation1.mmObject(), SubscriptionExecution7.mmObject(), SubscriptionExecution8.mmObject(),
 						SubscriptionExecution9.mmObject(), SubscriptionMultipleExecution4.mmObject(), SubscriptionBulkExecution4.mmObject(), SubscriptionMultipleExecution5.mmObject(), SubscriptionExecution13.mmObject(),
 						SubscriptionExecution12.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SubscriptionExecution.class;
 			}
 		});
 		return mmObject_lazy.get();

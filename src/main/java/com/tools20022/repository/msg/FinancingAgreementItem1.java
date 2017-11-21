@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes a financing relation between two parties, for example invoice,
@@ -100,6 +104,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancingAgreementItem1", propOrder = {"itemContext", "itemAction", "paymentInstrument", "validationStatusInformation", "rating", "reopenIndication", "guarantee", "guaranteeStatus", "relatedGuaranteeLetter",
+		"associatedDocument", "additionalInformation"})
 public class FinancingAgreementItem1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -628,6 +635,7 @@ public class FinancingAgreementItem1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ItmCntxt", required = true)
 	public FinancialItemParameters1 getItemContext() {
 		return itemContext;
 	}
@@ -636,6 +644,7 @@ public class FinancingAgreementItem1 {
 		this.itemContext = itemContext;
 	}
 
+	@XmlElement(name = "ItmActn")
 	public AgreementItemAction1Code getItemAction() {
 		return itemAction;
 	}
@@ -644,6 +653,7 @@ public class FinancingAgreementItem1 {
 		this.itemAction = itemAction;
 	}
 
+	@XmlElement(name = "PmtInstrm")
 	public PaymentInstrumentCode getPaymentInstrument() {
 		return paymentInstrument;
 	}
@@ -652,6 +662,7 @@ public class FinancingAgreementItem1 {
 		this.paymentInstrument = paymentInstrument;
 	}
 
+	@XmlElement(name = "VldtnStsInf")
 	public ValidationStatusInformation1 getValidationStatusInformation() {
 		return validationStatusInformation;
 	}
@@ -660,6 +671,7 @@ public class FinancingAgreementItem1 {
 		this.validationStatusInformation = validationStatusInformation;
 	}
 
+	@XmlElement(name = "Ratg", required = true)
 	public YesNoIndicator getRating() {
 		return rating;
 	}
@@ -668,6 +680,7 @@ public class FinancingAgreementItem1 {
 		this.rating = rating;
 	}
 
+	@XmlElement(name = "ReopIndctn", required = true)
 	public YesNoIndicator getReopenIndication() {
 		return reopenIndication;
 	}
@@ -676,6 +689,7 @@ public class FinancingAgreementItem1 {
 		this.reopenIndication = reopenIndication;
 	}
 
+	@XmlElement(name = "Grnt")
 	public List<GuaranteeDetails1> getGuarantee() {
 		return guarantee;
 	}
@@ -684,6 +698,7 @@ public class FinancingAgreementItem1 {
 		this.guarantee = guarantee;
 	}
 
+	@XmlElement(name = "GrntSts")
 	public ValidationStatusInformation1 getGuaranteeStatus() {
 		return guaranteeStatus;
 	}
@@ -692,6 +707,7 @@ public class FinancingAgreementItem1 {
 		this.guaranteeStatus = guaranteeStatus;
 	}
 
+	@XmlElement(name = "RltdGrntLttr")
 	public QualifiedDocumentInformation1 getRelatedGuaranteeLetter() {
 		return relatedGuaranteeLetter;
 	}
@@ -700,6 +716,7 @@ public class FinancingAgreementItem1 {
 		this.relatedGuaranteeLetter = relatedGuaranteeLetter;
 	}
 
+	@XmlElement(name = "AssoctdDoc")
 	public List<QualifiedDocumentInformation1> getAssociatedDocument() {
 		return associatedDocument;
 	}
@@ -708,6 +725,7 @@ public class FinancingAgreementItem1 {
 		this.associatedDocument = associatedDocument;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
 		return additionalInformation;
 	}

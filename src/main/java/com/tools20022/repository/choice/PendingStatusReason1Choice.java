@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.PendingStatusReason14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for a pending status reason.
@@ -72,6 +76,8 @@ import java.util.List;
  * DisabledStatusReason1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PendingStatusReason1Choice", propOrder = {"noSpecifiedReason", "reason"})
 public class PendingStatusReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -204,6 +210,7 @@ public class PendingStatusReason1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
@@ -212,6 +219,7 @@ public class PendingStatusReason1Choice {
 		this.noSpecifiedReason = noSpecifiedReason;
 	}
 
+	@XmlElement(name = "Rsn", required = true)
 	public List<PendingStatusReason14> getReason() {
 		return reason;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action movement details.
@@ -95,6 +99,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionMovementDetailsExtension1", propOrder = {"placeAndName", "DTCCOptionType", "DTCPositionCaptureDate", "depositDate", "DTCGeneratedDepositReferenceIdentification", "participantDepositReferenceIdentification",
+		"participantCrossReferenceIdentification", "custodyCustomerIdentification", "contraParticipantNumber", "payoutNumber", "DTCSecurityRate", "projectedCashValue", "DTCCashRate"})
 public class CorporateActionMovementDetailsExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -681,6 +688,7 @@ public class CorporateActionMovementDetailsExtension1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -689,6 +697,7 @@ public class CorporateActionMovementDetailsExtension1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "DTCCOptnTp")
 	public Max4AlphaNumericText getDTCCOptionType() {
 		return dTCCOptionType;
 	}
@@ -697,6 +706,7 @@ public class CorporateActionMovementDetailsExtension1 {
 		this.dTCCOptionType = dTCCOptionType;
 	}
 
+	@XmlElement(name = "DTCPosCaptrDt")
 	public ISODate getDTCPositionCaptureDate() {
 		return dTCPositionCaptureDate;
 	}
@@ -705,6 +715,7 @@ public class CorporateActionMovementDetailsExtension1 {
 		this.dTCPositionCaptureDate = dTCPositionCaptureDate;
 	}
 
+	@XmlElement(name = "DpstDt")
 	public ISODate getDepositDate() {
 		return depositDate;
 	}
@@ -713,6 +724,7 @@ public class CorporateActionMovementDetailsExtension1 {
 		this.depositDate = depositDate;
 	}
 
+	@XmlElement(name = "DTCGnrtdDpstRefId")
 	public Max16Text getDTCGeneratedDepositReferenceIdentification() {
 		return dTCGeneratedDepositReferenceIdentification;
 	}
@@ -721,6 +733,7 @@ public class CorporateActionMovementDetailsExtension1 {
 		this.dTCGeneratedDepositReferenceIdentification = dTCGeneratedDepositReferenceIdentification;
 	}
 
+	@XmlElement(name = "PtcptDpstRefId")
 	public Max16Text getParticipantDepositReferenceIdentification() {
 		return participantDepositReferenceIdentification;
 	}
@@ -729,6 +742,7 @@ public class CorporateActionMovementDetailsExtension1 {
 		this.participantDepositReferenceIdentification = participantDepositReferenceIdentification;
 	}
 
+	@XmlElement(name = "PtcptCrossRefId")
 	public Max16Text getParticipantCrossReferenceIdentification() {
 		return participantCrossReferenceIdentification;
 	}
@@ -737,6 +751,7 @@ public class CorporateActionMovementDetailsExtension1 {
 		this.participantCrossReferenceIdentification = participantCrossReferenceIdentification;
 	}
 
+	@XmlElement(name = "CtdyCstmrId")
 	public Max35Text getCustodyCustomerIdentification() {
 		return custodyCustomerIdentification;
 	}
@@ -745,6 +760,7 @@ public class CorporateActionMovementDetailsExtension1 {
 		this.custodyCustomerIdentification = custodyCustomerIdentification;
 	}
 
+	@XmlElement(name = "ContraPtcptNb")
 	public Max8Text getContraParticipantNumber() {
 		return contraParticipantNumber;
 	}
@@ -753,6 +769,7 @@ public class CorporateActionMovementDetailsExtension1 {
 		this.contraParticipantNumber = contraParticipantNumber;
 	}
 
+	@XmlElement(name = "PyoutNb", required = true)
 	public Exact3NumericText getPayoutNumber() {
 		return payoutNumber;
 	}
@@ -761,6 +778,7 @@ public class CorporateActionMovementDetailsExtension1 {
 		this.payoutNumber = payoutNumber;
 	}
 
+	@XmlElement(name = "DTCSctyRate")
 	public DecimalNumber getDTCSecurityRate() {
 		return dTCSecurityRate;
 	}
@@ -769,6 +787,7 @@ public class CorporateActionMovementDetailsExtension1 {
 		this.dTCSecurityRate = dTCSecurityRate;
 	}
 
+	@XmlElement(name = "PrjctdCshVal")
 	public DecimalNumber getProjectedCashValue() {
 		return projectedCashValue;
 	}
@@ -777,6 +796,7 @@ public class CorporateActionMovementDetailsExtension1 {
 		this.projectedCashValue = projectedCashValue;
 	}
 
+	@XmlElement(name = "DTCCshRate")
 	public DecimalNumber getDTCCashRate() {
 		return dTCCashRate;
 	}

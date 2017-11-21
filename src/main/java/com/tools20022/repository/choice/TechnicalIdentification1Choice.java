@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Selection between a generic technical address or a BIC identifier when
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TechnicalIdentification1Choice", propOrder = {"BICFI", "technicalAddress"})
 public class TechnicalIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +191,7 @@ public class TechnicalIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BICFI", required = true)
 	public BICFIIdentifier getBICFI() {
 		return bICFI;
 	}
@@ -193,6 +200,7 @@ public class TechnicalIdentification1Choice {
 		this.bICFI = bICFI;
 	}
 
+	@XmlElement(name = "TechAdr", required = true)
 	public Max256Text getTechnicalAddress() {
 		return technicalAddress;
 	}

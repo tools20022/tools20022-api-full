@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.OriginalAndCurrentQuantities1;
 import com.tools20022.repository.msg.ProprietaryQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the quantities (such as securities) in the underlying transaction.
@@ -68,6 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionQuantities2Choice", propOrder = {"quantity", "originalAndCurrentFaceAmount", "proprietary"})
 public class TransactionQuantities2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -235,6 +241,7 @@ public class TransactionQuantities2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantityChoice getQuantity() {
 		return quantity;
 	}
@@ -243,6 +250,7 @@ public class TransactionQuantities2Choice {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "OrgnlAndCurFaceAmt", required = true)
 	public OriginalAndCurrentQuantities1 getOriginalAndCurrentFaceAmount() {
 		return originalAndCurrentFaceAmount;
 	}
@@ -251,6 +259,7 @@ public class TransactionQuantities2Choice {
 		this.originalAndCurrentFaceAmount = originalAndCurrentFaceAmount;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryQuantity1 getProprietary() {
 		return proprietary;
 	}

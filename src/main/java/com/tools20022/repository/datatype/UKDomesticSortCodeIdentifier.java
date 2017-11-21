@@ -34,6 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMIdentifierSet#getIdentificationScheme
  * identificationScheme} =
  * "Association for Payment Clearing Services (APACS); UK Sort Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "SC[0-9]{6,6}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -70,6 +72,7 @@ public class UKDomesticSortCodeIdentifier {
 				name = "UKDomesticSortCodeIdentifier";
 				definition = "United Kingdom (UK) Sort Code. Identifies British financial institutions on the British national clearing systems. The sort code is assigned by the Association for Payments and Clearing Services (APACS).";
 				identificationScheme = "Association for Payment Clearing Services (APACS); UK Sort Code";
+				pattern = "SC[0-9]{6,6}";
 			}
 		});
 		return mmObject_lazy.get();

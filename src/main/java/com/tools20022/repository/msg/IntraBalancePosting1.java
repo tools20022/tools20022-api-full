@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the transactions in the report.
@@ -60,6 +64,8 @@ import java.util.List;
  * definition} = "Provides the transactions in the report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "IntraBalancePosting1", propOrder = {"balanceFrom", "movement"})
 public class IntraBalancePosting1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -160,6 +166,7 @@ public class IntraBalancePosting1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BalFr", required = true)
 	public CashSubBalanceTypeAndQuantityBreakdown1 getBalanceFrom() {
 		return balanceFrom;
 	}
@@ -168,6 +175,7 @@ public class IntraBalancePosting1 {
 		this.balanceFrom = balanceFrom;
 	}
 
+	@XmlElement(name = "Mvmnt", required = true)
 	public List<IntraBalancePosting2> getMovement() {
 		return movement;
 	}

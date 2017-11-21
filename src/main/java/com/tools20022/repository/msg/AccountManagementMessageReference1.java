@@ -27,6 +27,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the message reference of the account management instruction
@@ -97,6 +101,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountManagementMessageReference1", propOrder = {"otherReference", "previousReference", "statusRequestType", "accountApplicationIdentification", "investmentAccount"})
 public class AccountManagementMessageReference1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -412,6 +418,7 @@ public class AccountManagementMessageReference1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OthrRef")
 	public AdditionalReference3 getOtherReference() {
 		return otherReference;
 	}
@@ -420,6 +427,7 @@ public class AccountManagementMessageReference1 {
 		this.otherReference = otherReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -428,6 +436,7 @@ public class AccountManagementMessageReference1 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "StsReqTp", required = true)
 	public AccountManagementType1Code getStatusRequestType() {
 		return statusRequestType;
 	}
@@ -436,6 +445,7 @@ public class AccountManagementMessageReference1 {
 		this.statusRequestType = statusRequestType;
 	}
 
+	@XmlElement(name = "AcctApplId")
 	public Max35Text getAccountApplicationIdentification() {
 		return accountApplicationIdentification;
 	}
@@ -444,6 +454,7 @@ public class AccountManagementMessageReference1 {
 		this.accountApplicationIdentification = accountApplicationIdentification;
 	}
 
+	@XmlElement(name = "InvstmtAcct")
 	public InvestmentAccount14 getInvestmentAccount() {
 		return investmentAccount;
 	}

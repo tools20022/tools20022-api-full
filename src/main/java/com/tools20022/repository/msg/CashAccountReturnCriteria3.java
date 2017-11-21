@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to report on an account.
@@ -82,6 +86,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the criteria used to report on an account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashAccountReturnCriteria3", propOrder = {"nameIndicator", "currencyIndicator", "typeIndicator", "multilateralLimitIndicator", "multilateralBalanceReturnCriteria", "bilateralLimitIndicator",
+		"bilateralBalanceReturnCriteria", "standingOrderIndicator", "accountOwnerIndicator", "accountServicerIndicator"})
 public class CashAccountReturnCriteria3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -527,6 +534,7 @@ public class CashAccountReturnCriteria3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NmInd")
 	public RequestedIndicator getNameIndicator() {
 		return nameIndicator;
 	}
@@ -535,6 +543,7 @@ public class CashAccountReturnCriteria3 {
 		this.nameIndicator = nameIndicator;
 	}
 
+	@XmlElement(name = "CcyInd")
 	public RequestedIndicator getCurrencyIndicator() {
 		return currencyIndicator;
 	}
@@ -543,6 +552,7 @@ public class CashAccountReturnCriteria3 {
 		this.currencyIndicator = currencyIndicator;
 	}
 
+	@XmlElement(name = "TpInd")
 	public RequestedIndicator getTypeIndicator() {
 		return typeIndicator;
 	}
@@ -551,6 +561,7 @@ public class CashAccountReturnCriteria3 {
 		this.typeIndicator = typeIndicator;
 	}
 
+	@XmlElement(name = "MulLmtInd")
 	public RequestedIndicator getMultilateralLimitIndicator() {
 		return multilateralLimitIndicator;
 	}
@@ -559,6 +570,7 @@ public class CashAccountReturnCriteria3 {
 		this.multilateralLimitIndicator = multilateralLimitIndicator;
 	}
 
+	@XmlElement(name = "MulBalRtrCrit")
 	public CashBalanceReturnCriteria getMultilateralBalanceReturnCriteria() {
 		return multilateralBalanceReturnCriteria;
 	}
@@ -567,6 +579,7 @@ public class CashAccountReturnCriteria3 {
 		this.multilateralBalanceReturnCriteria = multilateralBalanceReturnCriteria;
 	}
 
+	@XmlElement(name = "BilLmtInd")
 	public RequestedIndicator getBilateralLimitIndicator() {
 		return bilateralLimitIndicator;
 	}
@@ -575,6 +588,7 @@ public class CashAccountReturnCriteria3 {
 		this.bilateralLimitIndicator = bilateralLimitIndicator;
 	}
 
+	@XmlElement(name = "BilBalRtrCrit")
 	public CashBalanceReturnCriteria getBilateralBalanceReturnCriteria() {
 		return bilateralBalanceReturnCriteria;
 	}
@@ -583,6 +597,7 @@ public class CashAccountReturnCriteria3 {
 		this.bilateralBalanceReturnCriteria = bilateralBalanceReturnCriteria;
 	}
 
+	@XmlElement(name = "StgOrdrInd")
 	public RequestedIndicator getStandingOrderIndicator() {
 		return standingOrderIndicator;
 	}
@@ -591,6 +606,7 @@ public class CashAccountReturnCriteria3 {
 		this.standingOrderIndicator = standingOrderIndicator;
 	}
 
+	@XmlElement(name = "AcctOwnrInd")
 	public RequestedIndicator getAccountOwnerIndicator() {
 		return accountOwnerIndicator;
 	}
@@ -599,6 +615,7 @@ public class CashAccountReturnCriteria3 {
 		this.accountOwnerIndicator = accountOwnerIndicator;
 	}
 
+	@XmlElement(name = "AcctSvcrInd")
 	public RequestedIndicator getAccountServicerIndicator() {
 		return accountServicerIndicator;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between types of reporting parameter.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between types of reporting parameter."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportParameter2Choice", propOrder = {"party", "country", "currency", "userDefined"})
 public class ReportParameter2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -252,6 +258,7 @@ public class ReportParameter2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pty", required = true)
 	public PartyIdentification2Choice getParty() {
 		return party;
 	}
@@ -260,6 +267,7 @@ public class ReportParameter2Choice {
 		this.party = party;
 	}
 
+	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
@@ -268,6 +276,7 @@ public class ReportParameter2Choice {
 		this.country = country;
 	}
 
+	@XmlElement(name = "Ccy", required = true)
 	public ActiveOrHistoricCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -276,6 +285,7 @@ public class ReportParameter2Choice {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "UsrDfnd", required = true)
 	public DataFormat2Choice getUserDefined() {
 		return userDefined;
 	}

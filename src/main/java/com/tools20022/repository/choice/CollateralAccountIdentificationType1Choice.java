@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification29;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the identification of the collateral account.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CollateralAccountIdentificationType1Choice", propOrder = {"type", "proprietary"})
 public class CollateralAccountIdentificationType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -204,6 +210,7 @@ public class CollateralAccountIdentificationType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public CollateralAccountType1Code getType() {
 		return type;
 	}
@@ -212,6 +219,7 @@ public class CollateralAccountIdentificationType1Choice {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification29 getProprietary() {
 		return proprietary;
 	}

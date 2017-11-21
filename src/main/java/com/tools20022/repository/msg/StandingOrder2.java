@@ -38,6 +38,10 @@ import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the detailed attributes of a standing order.
@@ -114,6 +118,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the detailed attributes of a standing order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StandingOrder2", propOrder = {"amount", "creditDebitIndicator", "currency", "type", "associatedPoolAccount", "reference", "frequency", "validityPeriod", "systemMember", "responsibleParty", "linkSetIdentification",
+		"linkSetOrderIdentification", "linkSetOrderSequence", "executionType", "creditorAccount", "debtorAccount", "totalsPerStandingOrder", "zeroSweepIndicator"})
 public class StandingOrder2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1012,6 +1019,7 @@ public class StandingOrder2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public Amount2Choice getAmount() {
 		return amount;
 	}
@@ -1020,6 +1028,7 @@ public class StandingOrder2 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -1028,6 +1037,7 @@ public class StandingOrder2 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -1036,6 +1046,7 @@ public class StandingOrder2 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Tp")
 	public StandingOrderType1Choice getType() {
 		return type;
 	}
@@ -1044,6 +1055,7 @@ public class StandingOrder2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "AssoctdPoolAcct")
 	public AccountIdentification4Choice getAssociatedPoolAccount() {
 		return associatedPoolAccount;
 	}
@@ -1052,6 +1064,7 @@ public class StandingOrder2 {
 		this.associatedPoolAccount = associatedPoolAccount;
 	}
 
+	@XmlElement(name = "Ref")
 	public Max35Text getReference() {
 		return reference;
 	}
@@ -1060,6 +1073,7 @@ public class StandingOrder2 {
 		this.reference = reference;
 	}
 
+	@XmlElement(name = "Frqcy")
 	public Frequency2Code getFrequency() {
 		return frequency;
 	}
@@ -1068,6 +1082,7 @@ public class StandingOrder2 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "VldtyPrd")
 	public DatePeriodDetails1 getValidityPeriod() {
 		return validityPeriod;
 	}
@@ -1076,6 +1091,7 @@ public class StandingOrder2 {
 		this.validityPeriod = validityPeriod;
 	}
 
+	@XmlElement(name = "SysMmb")
 	public BranchAndFinancialInstitutionIdentification5 getSystemMember() {
 		return systemMember;
 	}
@@ -1084,6 +1100,7 @@ public class StandingOrder2 {
 		this.systemMember = systemMember;
 	}
 
+	@XmlElement(name = "RspnsblPty")
 	public BranchAndFinancialInstitutionIdentification5 getResponsibleParty() {
 		return responsibleParty;
 	}
@@ -1092,6 +1109,7 @@ public class StandingOrder2 {
 		this.responsibleParty = responsibleParty;
 	}
 
+	@XmlElement(name = "LkSetId")
 	public Max35Text getLinkSetIdentification() {
 		return linkSetIdentification;
 	}
@@ -1100,6 +1118,7 @@ public class StandingOrder2 {
 		this.linkSetIdentification = linkSetIdentification;
 	}
 
+	@XmlElement(name = "LkSetOrdrId")
 	public Max35Text getLinkSetOrderIdentification() {
 		return linkSetOrderIdentification;
 	}
@@ -1108,6 +1127,7 @@ public class StandingOrder2 {
 		this.linkSetOrderIdentification = linkSetOrderIdentification;
 	}
 
+	@XmlElement(name = "LkSetOrdrSeq")
 	public Number getLinkSetOrderSequence() {
 		return linkSetOrderSequence;
 	}
@@ -1116,6 +1136,7 @@ public class StandingOrder2 {
 		this.linkSetOrderSequence = linkSetOrderSequence;
 	}
 
+	@XmlElement(name = "ExctnTp")
 	public ExecutionType1Choice getExecutionType() {
 		return executionType;
 	}
@@ -1124,6 +1145,7 @@ public class StandingOrder2 {
 		this.executionType = executionType;
 	}
 
+	@XmlElement(name = "CdtrAcct")
 	public CashAccount24 getCreditorAccount() {
 		return creditorAccount;
 	}
@@ -1132,6 +1154,7 @@ public class StandingOrder2 {
 		this.creditorAccount = creditorAccount;
 	}
 
+	@XmlElement(name = "DbtrAcct")
 	public CashAccount24 getDebtorAccount() {
 		return debtorAccount;
 	}
@@ -1140,6 +1163,7 @@ public class StandingOrder2 {
 		this.debtorAccount = debtorAccount;
 	}
 
+	@XmlElement(name = "TtlsPerStgOrdr")
 	public StandingOrderTotalAmount1 getTotalsPerStandingOrder() {
 		return totalsPerStandingOrder;
 	}
@@ -1148,6 +1172,7 @@ public class StandingOrder2 {
 		this.totalsPerStandingOrder = totalsPerStandingOrder;
 	}
 
+	@XmlElement(name = "ZeroSweepInd")
 	public TrueFalseIndicator getZeroSweepIndicator() {
 		return zeroSweepIndicator;
 	}

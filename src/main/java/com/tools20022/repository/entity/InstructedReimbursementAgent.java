@@ -41,6 +41,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.CashSettlementInstructionPartyRole
+ * CashSettlementInstructionPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -53,10 +57,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SettlementInstruction3.mmInstructedReimbursementAgent}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.CashSettlementInstructionPartyRole
- * CashSettlementInstructionPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -87,6 +87,11 @@ public class InstructedReimbursementAgent extends CashSettlementInstructionParty
 				definition = "Agent at which the instructed agent will be reimbursed.\nUsage: If the instructing and instructed agents have the same reimbursement agent, then only InstructedReimbursementAgent is not allowed.\nUsage: If InstructedReimbursementAgent contains a branch of the instructed agent, then the instructed agent will claim reimbursement from that branch/will be paid by that branch.";
 				derivationElement_lazy = () -> Arrays.asList(SettlementInstruction4.mmInstructedReimbursementAgent, SettlementInstruction3.mmInstructedReimbursementAgent);
 				superType_lazy = () -> CashSettlementInstructionPartyRole.mmObject();
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InstructedReimbursementAgent.class;
 			}
 		});
 		return mmObject_lazy.get();

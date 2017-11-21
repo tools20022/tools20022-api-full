@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements used to provide information on the original group, to which
@@ -93,6 +97,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalGroupInformation24", propOrder = {"originalGroupCancellationIdentification", "resolvedCase", "originalMessageIdentification", "originalMessageNameIdentification", "originalCreationDateTime",
+		"originalNumberOfTransactions", "originalControlSum", "groupCancellationStatus", "cancellationStatusReasonInformation", "numberOfTransactionsPerCancellationStatus"})
 public class OriginalGroupInformation24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -581,6 +588,7 @@ public class OriginalGroupInformation24 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlGrpCxlId")
 	public Max35Text getOriginalGroupCancellationIdentification() {
 		return originalGroupCancellationIdentification;
 	}
@@ -589,6 +597,7 @@ public class OriginalGroupInformation24 {
 		this.originalGroupCancellationIdentification = originalGroupCancellationIdentification;
 	}
 
+	@XmlElement(name = "RslvdCase")
 	public Case2 getResolvedCase() {
 		return resolvedCase;
 	}
@@ -597,6 +606,7 @@ public class OriginalGroupInformation24 {
 		this.resolvedCase = resolvedCase;
 	}
 
+	@XmlElement(name = "OrgnlMsgId", required = true)
 	public Max35Text getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}
@@ -605,6 +615,7 @@ public class OriginalGroupInformation24 {
 		this.originalMessageIdentification = originalMessageIdentification;
 	}
 
+	@XmlElement(name = "OrgnlMsgNmId", required = true)
 	public Max35Text getOriginalMessageNameIdentification() {
 		return originalMessageNameIdentification;
 	}
@@ -613,6 +624,7 @@ public class OriginalGroupInformation24 {
 		this.originalMessageNameIdentification = originalMessageNameIdentification;
 	}
 
+	@XmlElement(name = "OrgnlCreDtTm")
 	public ISODateTime getOriginalCreationDateTime() {
 		return originalCreationDateTime;
 	}
@@ -621,6 +633,7 @@ public class OriginalGroupInformation24 {
 		this.originalCreationDateTime = originalCreationDateTime;
 	}
 
+	@XmlElement(name = "OrgnlNbOfTxs")
 	public Max15NumericText getOriginalNumberOfTransactions() {
 		return originalNumberOfTransactions;
 	}
@@ -629,6 +642,7 @@ public class OriginalGroupInformation24 {
 		this.originalNumberOfTransactions = originalNumberOfTransactions;
 	}
 
+	@XmlElement(name = "OrgnlCtrlSum")
 	public DecimalNumber getOriginalControlSum() {
 		return originalControlSum;
 	}
@@ -637,6 +651,7 @@ public class OriginalGroupInformation24 {
 		this.originalControlSum = originalControlSum;
 	}
 
+	@XmlElement(name = "GrpCxlSts")
 	public GroupCancellationStatus1Code getGroupCancellationStatus() {
 		return groupCancellationStatus;
 	}
@@ -645,6 +660,7 @@ public class OriginalGroupInformation24 {
 		this.groupCancellationStatus = groupCancellationStatus;
 	}
 
+	@XmlElement(name = "CxlStsRsnInf")
 	public List<CancellationStatusReasonInformation1> getCancellationStatusReasonInformation() {
 		return cancellationStatusReasonInformation;
 	}
@@ -653,6 +669,7 @@ public class OriginalGroupInformation24 {
 		this.cancellationStatusReasonInformation = cancellationStatusReasonInformation;
 	}
 
+	@XmlElement(name = "NbOfTxsPerCxlSts")
 	public List<NumberOfTransactionsPerStatus1> getNumberOfTransactionsPerCancellationStatus() {
 		return numberOfTransactionsPerCancellationStatus;
 	}

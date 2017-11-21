@@ -30,17 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SequenceType1Code
- * SequenceType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SequenceType3Code
- * SequenceType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SequenceType2Code
- * SequenceType2Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.SequenceTypeCode#mmFirst
@@ -55,6 +44,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SequenceTypeCode#mmRepresented
  * SequenceTypeCode.mmRepresented}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SequenceType1Code
+ * SequenceType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SequenceType3Code
+ * SequenceType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SequenceType2Code
+ * SequenceType2Code}</li>
  * </ul>
  * </li>
  * <li>

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics shared by all individual transactions included in the
@@ -84,6 +88,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "GroupHeader22", propOrder = {"messageIdentification", "creationDateTime", "numberOfTransactions", "groupReversal", "totalReversedInterbankSettlementAmount", "interbankSettlementDate", "settlementInformation",
+		"instructingAgent", "instructedAgent"})
 public class GroupHeader22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -539,6 +546,7 @@ public class GroupHeader22 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -547,6 +555,7 @@ public class GroupHeader22 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -555,6 +564,7 @@ public class GroupHeader22 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "NbOfTxs", required = true)
 	public Max15NumericText getNumberOfTransactions() {
 		return numberOfTransactions;
 	}
@@ -563,6 +573,7 @@ public class GroupHeader22 {
 		this.numberOfTransactions = numberOfTransactions;
 	}
 
+	@XmlElement(name = "GrpRvsl", required = true)
 	public TrueFalseIndicator getGroupReversal() {
 		return groupReversal;
 	}
@@ -571,6 +582,7 @@ public class GroupHeader22 {
 		this.groupReversal = groupReversal;
 	}
 
+	@XmlElement(name = "TtlRvsdIntrBkSttlmAmt", required = true)
 	public EuroMax15Amount getTotalReversedInterbankSettlementAmount() {
 		return totalReversedInterbankSettlementAmount;
 	}
@@ -579,6 +591,7 @@ public class GroupHeader22 {
 		this.totalReversedInterbankSettlementAmount = totalReversedInterbankSettlementAmount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDt", required = true)
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}
@@ -587,6 +600,7 @@ public class GroupHeader22 {
 		this.interbankSettlementDate = interbankSettlementDate;
 	}
 
+	@XmlElement(name = "SttlmInf", required = true)
 	public SettlementInformation11 getSettlementInformation() {
 		return settlementInformation;
 	}
@@ -595,6 +609,7 @@ public class GroupHeader22 {
 		this.settlementInformation = settlementInformation;
 	}
 
+	@XmlElement(name = "InstgAgt")
 	public FinancialInstitution2 getInstructingAgent() {
 		return instructingAgent;
 	}
@@ -603,6 +618,7 @@ public class GroupHeader22 {
 		this.instructingAgent = instructingAgent;
 	}
 
+	@XmlElement(name = "InstdAgt")
 	public FinancialInstitution2 getInstructedAgent() {
 		return instructedAgent;
 	}

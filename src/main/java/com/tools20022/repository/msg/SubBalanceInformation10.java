@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Net position of a segregated holding of a single security within the overall
@@ -82,6 +86,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubBalanceInformation10", propOrder = {"subBalanceType", "quantity", "subBalanceAdditionalDetails", "quantityBreakdown", "additionalBalanceBreakdownDetails"})
 public class SubBalanceInformation10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -345,6 +351,7 @@ public class SubBalanceInformation10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SubBalTp", required = true)
 	public SubBalanceType7Choice getSubBalanceType() {
 		return subBalanceType;
 	}
@@ -353,6 +360,7 @@ public class SubBalanceInformation10 {
 		this.subBalanceType = subBalanceType;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public SubBalanceQuantity4Choice getQuantity() {
 		return quantity;
 	}
@@ -361,6 +369,7 @@ public class SubBalanceInformation10 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "SubBalAddtlDtls")
 	public RestrictedFINXMax140Text getSubBalanceAdditionalDetails() {
 		return subBalanceAdditionalDetails;
 	}
@@ -369,6 +378,7 @@ public class SubBalanceInformation10 {
 		this.subBalanceAdditionalDetails = subBalanceAdditionalDetails;
 	}
 
+	@XmlElement(name = "QtyBrkdwn")
 	public List<QuantityBreakdown18> getQuantityBreakdown() {
 		return quantityBreakdown;
 	}
@@ -377,6 +387,7 @@ public class SubBalanceInformation10 {
 		this.quantityBreakdown = quantityBreakdown;
 	}
 
+	@XmlElement(name = "AddtlBalBrkdwnDtls")
 	public List<AdditionalBalanceInformation10> getAdditionalBalanceBreakdownDetails() {
 		return additionalBalanceBreakdownDetails;
 	}

@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Entity involved in an activity.
@@ -76,6 +80,8 @@ import java.util.function.Supplier;
  * definition} = "Entity involved in an activity."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentification5", propOrder = {"name", "BEI", "postalAddress"})
 public class PartyIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -292,6 +298,7 @@ public class PartyIdentification5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Nm", required = true)
 	public Max70Text getName() {
 		return name;
 	}
@@ -300,6 +307,7 @@ public class PartyIdentification5 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "BEI", required = true)
 	public BEIIdentifier getBEI() {
 		return bEI;
 	}
@@ -308,6 +316,7 @@ public class PartyIdentification5 {
 		this.bEI = bEI;
 	}
 
+	@XmlElement(name = "PstlAdr")
 	public PostalAddress2 getPostalAddress() {
 		return postalAddress;
 	}

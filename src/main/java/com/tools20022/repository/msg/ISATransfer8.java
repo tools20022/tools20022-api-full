@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the type of product and the assets to be transferred.
@@ -83,6 +87,8 @@ import java.util.List;
  * ISATransfer3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ISATransfer8", propOrder = {"masterReference", "transferIdentification", "cancellationReference", "residualCash", "portfolio", "allOtherCash", "financialInstrumentAssetForTransfer"})
 public class ISATransfer8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -422,6 +428,7 @@ public class ISATransfer8 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MstrRef")
 	public Max35Text getMasterReference() {
 		return masterReference;
 	}
@@ -430,6 +437,7 @@ public class ISATransfer8 {
 		this.masterReference = masterReference;
 	}
 
+	@XmlElement(name = "TrfId", required = true)
 	public Max35Text getTransferIdentification() {
 		return transferIdentification;
 	}
@@ -438,6 +446,7 @@ public class ISATransfer8 {
 		this.transferIdentification = transferIdentification;
 	}
 
+	@XmlElement(name = "CxlRef")
 	public Max35Text getCancellationReference() {
 		return cancellationReference;
 	}
@@ -446,6 +455,7 @@ public class ISATransfer8 {
 		this.cancellationReference = cancellationReference;
 	}
 
+	@XmlElement(name = "RsdlCsh")
 	public ResidualCash1Code getResidualCash() {
 		return residualCash;
 	}
@@ -454,6 +464,7 @@ public class ISATransfer8 {
 		this.residualCash = residualCash;
 	}
 
+	@XmlElement(name = "Prtfl", required = true)
 	public ISAPortfolio1Choice getPortfolio() {
 		return portfolio;
 	}
@@ -462,6 +473,7 @@ public class ISATransfer8 {
 		this.portfolio = portfolio;
 	}
 
+	@XmlElement(name = "AllOthrCsh", required = true)
 	public YesNoIndicator getAllOtherCash() {
 		return allOtherCash;
 	}
@@ -470,6 +482,7 @@ public class ISATransfer8 {
 		this.allOtherCash = allOtherCash;
 	}
 
+	@XmlElement(name = "FinInstrmAsstForTrf")
 	public List<FinancialInstrument32> getFinancialInstrumentAssetForTransfer() {
 		return financialInstrumentAssetForTransfer;
 	}

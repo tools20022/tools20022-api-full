@@ -24,6 +24,10 @@ import com.tools20022.repository.choice.DateAndDateTimeSearch2Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the settlement instruction status query criteria including the status
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementInstructionQueryStatus1", propOrder = {"type", "datePeriod"})
 public class SettlementInstructionQueryStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class SettlementInstructionQueryStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public SettlementTransactionStatusType1 getType() {
 		return type;
 	}
@@ -169,6 +176,7 @@ public class SettlementInstructionQueryStatus1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "DtPrd")
 	public DateAndDateTimeSearch2Choice getDatePeriod() {
 		return datePeriod;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about result of a single instalment (financed or not) within an
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InstalmentFinancingInformation1", propOrder = {"instalmentSequenceIdentification", "instalmentTotalAmount", "instalmentFinancingResult"})
 public class InstalmentFinancingInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class InstalmentFinancingInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstlmtSeqId", required = true)
 	public Max70Text getInstalmentSequenceIdentification() {
 		return instalmentSequenceIdentification;
 	}
@@ -238,6 +245,7 @@ public class InstalmentFinancingInformation1 {
 		this.instalmentSequenceIdentification = instalmentSequenceIdentification;
 	}
 
+	@XmlElement(name = "InstlmtTtlAmt", required = true)
 	public ActiveCurrencyAndAmount getInstalmentTotalAmount() {
 		return instalmentTotalAmount;
 	}
@@ -246,6 +254,7 @@ public class InstalmentFinancingInformation1 {
 		this.instalmentTotalAmount = instalmentTotalAmount;
 	}
 
+	@XmlElement(name = "InstlmtFincgRslt", required = true)
 	public FinancingResult1 getInstalmentFinancingResult() {
 		return instalmentFinancingResult;
 	}

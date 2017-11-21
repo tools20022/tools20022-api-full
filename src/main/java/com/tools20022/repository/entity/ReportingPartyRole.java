@@ -37,6 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ReportingPartyRole#mmRegulatoryReport
+ * ReportingPartyRole.mmRegulatoryReport}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -56,16 +66,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.RegulatoryReport#mmReportingPartyRole
  * RegulatoryReport.mmReportingPartyRole}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ReportingPartyRole#mmRegulatoryReport
- * ReportingPartyRole.mmRegulatoryReport}</li>
  * </ul>
  * </li>
  * <li>
@@ -122,7 +122,7 @@ public class ReportingPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmRegulatoryReport = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> ReportingPartyRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReportingPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegulatoryReport";
@@ -144,8 +144,13 @@ public class ReportingPartyRole extends Role {
 				definition = "Party responsible for providing regulatory reports.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RegulatoryReport.mmReportingPartyRole);
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(ReportingPartyRole.mmRegulatoryReport);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ReportingPartyRole.mmRegulatoryReport);
 				derivationComponent_lazy = () -> Arrays.asList(CounterpartySideTransactionReporting1.mmObject(), TradingSideTransactionReporting1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return ReportingPartyRole.class;
 			}
 		});
 		return mmObject_lazy.get();

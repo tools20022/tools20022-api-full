@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Address for electronic mail (e-mail).
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Address for electronic mail (e-mail)."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Contacts3", propOrder = {"namePrefix", "name", "phoneNumber", "mobileNumber", "faxNumber", "emailAddress", "other", "jobTitle", "responsibility", "department"})
 public class Contacts3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -556,6 +562,7 @@ public class Contacts3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NmPrfx")
 	public NamePrefix1Code getNamePrefix() {
 		return namePrefix;
 	}
@@ -564,6 +571,7 @@ public class Contacts3 {
 		this.namePrefix = namePrefix;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max140Text getName() {
 		return name;
 	}
@@ -572,6 +580,7 @@ public class Contacts3 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PhneNb")
 	public PhoneNumber getPhoneNumber() {
 		return phoneNumber;
 	}
@@ -580,6 +589,7 @@ public class Contacts3 {
 		this.phoneNumber = phoneNumber;
 	}
 
+	@XmlElement(name = "MobNb")
 	public PhoneNumber getMobileNumber() {
 		return mobileNumber;
 	}
@@ -588,6 +598,7 @@ public class Contacts3 {
 		this.mobileNumber = mobileNumber;
 	}
 
+	@XmlElement(name = "FaxNb")
 	public PhoneNumber getFaxNumber() {
 		return faxNumber;
 	}
@@ -596,6 +607,7 @@ public class Contacts3 {
 		this.faxNumber = faxNumber;
 	}
 
+	@XmlElement(name = "EmailAdr")
 	public Max2048Text getEmailAddress() {
 		return emailAddress;
 	}
@@ -604,6 +616,7 @@ public class Contacts3 {
 		this.emailAddress = emailAddress;
 	}
 
+	@XmlElement(name = "Othr")
 	public Max35Text getOther() {
 		return other;
 	}
@@ -612,6 +625,7 @@ public class Contacts3 {
 		this.other = other;
 	}
 
+	@XmlElement(name = "JobTitl")
 	public Max35Text getJobTitle() {
 		return jobTitle;
 	}
@@ -620,6 +634,7 @@ public class Contacts3 {
 		this.jobTitle = jobTitle;
 	}
 
+	@XmlElement(name = "Rspnsblty")
 	public Max35Text getResponsibility() {
 		return responsibility;
 	}
@@ -628,6 +643,7 @@ public class Contacts3 {
 		this.responsibility = responsibility;
 	}
 
+	@XmlElement(name = "Dept")
 	public Max70Text getDepartment() {
 		return department;
 	}

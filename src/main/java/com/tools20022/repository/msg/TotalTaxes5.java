@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information regarding the total amount of taxes.
@@ -66,6 +70,8 @@ import java.util.List;
  * definition} = "Information regarding the total amount of taxes."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TotalTaxes5", propOrder = {"EUCapitalGain", "percentageOfDebtClaim", "taxDetails"})
 public class TotalTaxes5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -233,6 +239,7 @@ public class TotalTaxes5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "EUCptlGn")
 	public EUCapitalGain2Code getEUCapitalGain() {
 		return eUCapitalGain;
 	}
@@ -241,6 +248,7 @@ public class TotalTaxes5 {
 		this.eUCapitalGain = eUCapitalGain;
 	}
 
+	@XmlElement(name = "PctgOfDebtClm")
 	public PercentageRate getPercentageOfDebtClaim() {
 		return percentageOfDebtClaim;
 	}
@@ -249,6 +257,7 @@ public class TotalTaxes5 {
 		this.percentageOfDebtClaim = percentageOfDebtClaim;
 	}
 
+	@XmlElement(name = "TaxDtls")
 	public List<Tax20> getTaxDetails() {
 		return taxDetails;
 	}

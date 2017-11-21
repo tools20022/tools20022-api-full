@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between report on billing data, billing cancellation request details
@@ -66,6 +70,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingReportOrError1Choice", propOrder = {"billingReport", "cancellationReport", "operationalError"})
 public class BillingReportOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -209,6 +215,7 @@ public class BillingReportOrError1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BllgRpt", required = true)
 	public BillingReport1 getBillingReport() {
 		return billingReport;
 	}
@@ -217,6 +224,7 @@ public class BillingReportOrError1Choice {
 		this.billingReport = billingReport;
 	}
 
+	@XmlElement(name = "CxlRpt", required = true)
 	public BillingCancellationReport1 getCancellationReport() {
 		return cancellationReport;
 	}
@@ -225,6 +233,7 @@ public class BillingReportOrError1Choice {
 		this.cancellationReport = cancellationReport;
 	}
 
+	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
 		return operationalError;
 	}

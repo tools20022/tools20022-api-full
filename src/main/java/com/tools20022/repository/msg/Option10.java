@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * List of elements which provide the parameters of an option trade.
@@ -98,6 +102,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Option10", propOrder = {"data", "exerciseStatus", "exerciseStyle", "optionType", "derivativeOptionIdentification", "optionPayoutType", "valuationRate", "strikePrice", "volatilityMargin", "riskAmount", "expiryDateAndTime",
+		"expiryLocation", "settlementType", "optionAmounts", "premium", "settlementAmountType", "additionalOptionInformation"})
 public class Option10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -914,6 +921,7 @@ public class Option10 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Data", required = true)
 	public DataType1Code getData() {
 		return data;
 	}
@@ -922,6 +930,7 @@ public class Option10 {
 		this.data = data;
 	}
 
+	@XmlElement(name = "ExrcSts", required = true)
 	public DerivativeExerciseStatus1Code getExerciseStatus() {
 		return exerciseStatus;
 	}
@@ -930,6 +939,7 @@ public class Option10 {
 		this.exerciseStatus = exerciseStatus;
 	}
 
+	@XmlElement(name = "ExrcStyle", required = true)
 	public OptionStyle2Code getExerciseStyle() {
 		return exerciseStyle;
 	}
@@ -938,6 +948,7 @@ public class Option10 {
 		this.exerciseStyle = exerciseStyle;
 	}
 
+	@XmlElement(name = "OptnTp", required = true)
 	public OptionType1Code getOptionType() {
 		return optionType;
 	}
@@ -946,6 +957,7 @@ public class Option10 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "DerivOptnId", required = true)
 	public Max35Text getDerivativeOptionIdentification() {
 		return derivativeOptionIdentification;
 	}
@@ -954,6 +966,7 @@ public class Option10 {
 		this.derivativeOptionIdentification = derivativeOptionIdentification;
 	}
 
+	@XmlElement(name = "OptnPyoutTp", required = true)
 	public OptionPayoutType1Code getOptionPayoutType() {
 		return optionPayoutType;
 	}
@@ -962,6 +975,7 @@ public class Option10 {
 		this.optionPayoutType = optionPayoutType;
 	}
 
+	@XmlElement(name = "ValtnRate", required = true)
 	public AgreedRate3 getValuationRate() {
 		return valuationRate;
 	}
@@ -970,6 +984,7 @@ public class Option10 {
 		this.valuationRate = valuationRate;
 	}
 
+	@XmlElement(name = "StrkPric", required = true)
 	public AgreedRate3 getStrikePrice() {
 		return strikePrice;
 	}
@@ -978,6 +993,7 @@ public class Option10 {
 		this.strikePrice = strikePrice;
 	}
 
+	@XmlElement(name = "VoltlyMrgn", required = true)
 	public PercentageRate getVolatilityMargin() {
 		return volatilityMargin;
 	}
@@ -986,6 +1002,7 @@ public class Option10 {
 		this.volatilityMargin = volatilityMargin;
 	}
 
+	@XmlElement(name = "RskAmt", required = true)
 	public ActiveCurrencyAndAmount getRiskAmount() {
 		return riskAmount;
 	}
@@ -994,6 +1011,7 @@ public class Option10 {
 		this.riskAmount = riskAmount;
 	}
 
+	@XmlElement(name = "XpryDtAndTm", required = true)
 	public ISODateTime getExpiryDateAndTime() {
 		return expiryDateAndTime;
 	}
@@ -1002,6 +1020,7 @@ public class Option10 {
 		this.expiryDateAndTime = expiryDateAndTime;
 	}
 
+	@XmlElement(name = "XpryLctn", required = true)
 	public Max4AlphaNumericText getExpiryLocation() {
 		return expiryLocation;
 	}
@@ -1010,6 +1029,7 @@ public class Option10 {
 		this.expiryLocation = expiryLocation;
 	}
 
+	@XmlElement(name = "SttlmTp", required = true)
 	public SettlementDateCode getSettlementType() {
 		return settlementType;
 	}
@@ -1018,6 +1038,7 @@ public class Option10 {
 		this.settlementType = settlementType;
 	}
 
+	@XmlElement(name = "OptnAmts", required = true)
 	public AmountsAndValueDate4 getOptionAmounts() {
 		return optionAmounts;
 	}
@@ -1026,6 +1047,7 @@ public class Option10 {
 		this.optionAmounts = optionAmounts;
 	}
 
+	@XmlElement(name = "Prm", required = true)
 	public PremiumAmount3 getPremium() {
 		return premium;
 	}
@@ -1034,6 +1056,7 @@ public class Option10 {
 		this.premium = premium;
 	}
 
+	@XmlElement(name = "SttlmAmtTp", required = true)
 	public SettlementType1Code getSettlementAmountType() {
 		return settlementAmountType;
 	}
@@ -1042,6 +1065,7 @@ public class Option10 {
 		this.settlementAmountType = settlementAmountType;
 	}
 
+	@XmlElement(name = "AddtlOptnInf", required = true)
 	public Max140Text getAdditionalOptionInformation() {
 		return additionalOptionInformation;
 	}

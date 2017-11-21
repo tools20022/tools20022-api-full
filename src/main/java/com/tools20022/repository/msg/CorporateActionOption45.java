@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the corporate action option.
@@ -137,6 +141,10 @@ import java.util.List;
  * definition} = "Provides information about the corporate action option."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionOption45", propOrder = {"optionNumber", "optionType", "fractionDisposition", "offerType", "optionFeatures", "optionAvailabilityStatus", "certificationBreakdownType", "nonDomicileCountry",
+		"validDomicileCountry", "currencyOption", "defaultProcessingOrStandingInstruction", "chargesAppliedIndicator", "certificationBreakdownIndicator", "withdrawalAllowedIndicator", "changeAllowedIndicator",
+		"financialInstrumentIdentification", "dateDetails", "periodDetails", "rateAndAmountDetails", "priceDetails", "securitiesQuantity", "securitiesMovementDetails", "cashMovementDetails", "additionalInformation"})
 public class CorporateActionOption45 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1341,6 +1349,7 @@ public class CorporateActionOption45 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OptnNb", required = true)
 	public Exact3NumericText getOptionNumber() {
 		return optionNumber;
 	}
@@ -1349,6 +1358,7 @@ public class CorporateActionOption45 {
 		this.optionNumber = optionNumber;
 	}
 
+	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption17Choice getOptionType() {
 		return optionType;
 	}
@@ -1357,6 +1367,7 @@ public class CorporateActionOption45 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "FrctnDspstn")
 	public FractionDispositionType6Choice getFractionDisposition() {
 		return fractionDisposition;
 	}
@@ -1365,6 +1376,7 @@ public class CorporateActionOption45 {
 		this.fractionDisposition = fractionDisposition;
 	}
 
+	@XmlElement(name = "OfferTp")
 	public List<OfferTypeFormat2Choice> getOfferType() {
 		return offerType;
 	}
@@ -1373,6 +1385,7 @@ public class CorporateActionOption45 {
 		this.offerType = offerType;
 	}
 
+	@XmlElement(name = "OptnFeatrs")
 	public List<OptionFeaturesFormat11Choice> getOptionFeatures() {
 		return optionFeatures;
 	}
@@ -1381,6 +1394,7 @@ public class CorporateActionOption45 {
 		this.optionFeatures = optionFeatures;
 	}
 
+	@XmlElement(name = "OptnAvlbtySts")
 	public OptionAvailabilityStatus2Choice getOptionAvailabilityStatus() {
 		return optionAvailabilityStatus;
 	}
@@ -1389,6 +1403,7 @@ public class CorporateActionOption45 {
 		this.optionAvailabilityStatus = optionAvailabilityStatus;
 	}
 
+	@XmlElement(name = "CertfctnBrkdwnTp")
 	public List<BeneficiaryCertificationType7Choice> getCertificationBreakdownType() {
 		return certificationBreakdownType;
 	}
@@ -1397,6 +1412,7 @@ public class CorporateActionOption45 {
 		this.certificationBreakdownType = certificationBreakdownType;
 	}
 
+	@XmlElement(name = "NonDmclCtry")
 	public List<CountryCode> getNonDomicileCountry() {
 		return nonDomicileCountry;
 	}
@@ -1405,6 +1421,7 @@ public class CorporateActionOption45 {
 		this.nonDomicileCountry = nonDomicileCountry;
 	}
 
+	@XmlElement(name = "VldDmclCtry")
 	public List<CountryCode> getValidDomicileCountry() {
 		return validDomicileCountry;
 	}
@@ -1413,6 +1430,7 @@ public class CorporateActionOption45 {
 		this.validDomicileCountry = validDomicileCountry;
 	}
 
+	@XmlElement(name = "CcyOptn")
 	public ActiveCurrencyCode getCurrencyOption() {
 		return currencyOption;
 	}
@@ -1421,6 +1439,7 @@ public class CorporateActionOption45 {
 		this.currencyOption = currencyOption;
 	}
 
+	@XmlElement(name = "DfltPrcgOrStgInstr", required = true)
 	public DefaultProcessingOrStandingInstruction1Choice getDefaultProcessingOrStandingInstruction() {
 		return defaultProcessingOrStandingInstruction;
 	}
@@ -1429,6 +1448,7 @@ public class CorporateActionOption45 {
 		this.defaultProcessingOrStandingInstruction = defaultProcessingOrStandingInstruction;
 	}
 
+	@XmlElement(name = "ChrgsApldInd")
 	public YesNoIndicator getChargesAppliedIndicator() {
 		return chargesAppliedIndicator;
 	}
@@ -1437,6 +1457,7 @@ public class CorporateActionOption45 {
 		this.chargesAppliedIndicator = chargesAppliedIndicator;
 	}
 
+	@XmlElement(name = "CertfctnBrkdwnInd")
 	public YesNoIndicator getCertificationBreakdownIndicator() {
 		return certificationBreakdownIndicator;
 	}
@@ -1445,6 +1466,7 @@ public class CorporateActionOption45 {
 		this.certificationBreakdownIndicator = certificationBreakdownIndicator;
 	}
 
+	@XmlElement(name = "WdrwlAllwdInd")
 	public YesNoIndicator getWithdrawalAllowedIndicator() {
 		return withdrawalAllowedIndicator;
 	}
@@ -1453,6 +1475,7 @@ public class CorporateActionOption45 {
 		this.withdrawalAllowedIndicator = withdrawalAllowedIndicator;
 	}
 
+	@XmlElement(name = "ChngAllwdInd")
 	public YesNoIndicator getChangeAllowedIndicator() {
 		return changeAllowedIndicator;
 	}
@@ -1461,6 +1484,7 @@ public class CorporateActionOption45 {
 		this.changeAllowedIndicator = changeAllowedIndicator;
 	}
 
+	@XmlElement(name = "FinInstrmId")
 	public SecurityIdentification15 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -1469,6 +1493,7 @@ public class CorporateActionOption45 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "DtDtls")
 	public CorporateActionDate16 getDateDetails() {
 		return dateDetails;
 	}
@@ -1477,6 +1502,7 @@ public class CorporateActionOption45 {
 		this.dateDetails = dateDetails;
 	}
 
+	@XmlElement(name = "PrdDtls")
 	public CorporateActionPeriod7 getPeriodDetails() {
 		return periodDetails;
 	}
@@ -1485,6 +1511,7 @@ public class CorporateActionOption45 {
 		this.periodDetails = periodDetails;
 	}
 
+	@XmlElement(name = "RateAndAmtDtls")
 	public CorporateActionRate30 getRateAndAmountDetails() {
 		return rateAndAmountDetails;
 	}
@@ -1493,6 +1520,7 @@ public class CorporateActionOption45 {
 		this.rateAndAmountDetails = rateAndAmountDetails;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public CorporateActionPrice34 getPriceDetails() {
 		return priceDetails;
 	}
@@ -1501,6 +1529,7 @@ public class CorporateActionOption45 {
 		this.priceDetails = priceDetails;
 	}
 
+	@XmlElement(name = "SctiesQty")
 	public SecuritiesOption28 getSecuritiesQuantity() {
 		return securitiesQuantity;
 	}
@@ -1509,6 +1538,7 @@ public class CorporateActionOption45 {
 		this.securitiesQuantity = securitiesQuantity;
 	}
 
+	@XmlElement(name = "SctiesMvmntDtls")
 	public List<SecuritiesOption30> getSecuritiesMovementDetails() {
 		return securitiesMovementDetails;
 	}
@@ -1517,6 +1547,7 @@ public class CorporateActionOption45 {
 		this.securitiesMovementDetails = securitiesMovementDetails;
 	}
 
+	@XmlElement(name = "CshMvmntDtls")
 	public List<CashOption21> getCashMovementDetails() {
 		return cashMovementDetails;
 	}
@@ -1525,6 +1556,7 @@ public class CorporateActionOption45 {
 		this.cashMovementDetails = cashMovementDetails;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public CorporateActionNarrative22 getAdditionalInformation() {
 		return additionalInformation;
 	}

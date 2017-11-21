@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the identification of a billing subservice.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the identification of a billing subservice."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BillingSubServiceIdentification1", propOrder = {"issuer", "identification"})
 public class BillingSubServiceIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class BillingSubServiceIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public BillingSubServiceQualifier1Choice getIssuer() {
 		return issuer;
 	}
@@ -187,6 +194,7 @@ public class BillingSubServiceIdentification1 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}

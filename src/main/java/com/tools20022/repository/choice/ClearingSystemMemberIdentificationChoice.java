@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CashClearingSystemMember;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of identifiers for a clearing system member, as assigned by the
@@ -126,6 +130,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClearingSystemMemberIdentificationChoice", propOrder = {"CHIPSUniversalIdentification", "newZealandNCCIdentification", "irishNSCIdentification", "UKDomesticSortCode", "CHIPSParticipantIdentification",
+		"swissBCIdentification", "fedwireRoutingNumberIdentification", "portugueseNCCIdentification", "russianCentralBankIdentificationCode", "italianDomesticIdentificationCode", "austrianBankleitzahlIdentification",
+		"canadianPaymentsAssociationRoutingNumberIdentification", "swissSICIdentification", "germanBankleitzahlIdentification", "spanishDomesticInterbankingIdentification", "southAfricanNCCIdentification", "hongKongBankCode",
+		"australianExtensiveBranchNetworkIdentification", "australianSmallNetworkIdentification"})
 public class ClearingSystemMemberIdentificationChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -1136,6 +1145,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "USCHU", required = true)
 	public CHIPSUniversalIdentifier getCHIPSUniversalIdentification() {
 		return cHIPSUniversalIdentification;
 	}
@@ -1144,6 +1154,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.cHIPSUniversalIdentification = cHIPSUniversalIdentification;
 	}
 
+	@XmlElement(name = "NZNCC", required = true)
 	public NewZealandNCCIdentifier getNewZealandNCCIdentification() {
 		return newZealandNCCIdentification;
 	}
@@ -1152,6 +1163,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.newZealandNCCIdentification = newZealandNCCIdentification;
 	}
 
+	@XmlElement(name = "IENSC", required = true)
 	public IrishNSCIdentifier getIrishNSCIdentification() {
 		return irishNSCIdentification;
 	}
@@ -1160,6 +1172,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.irishNSCIdentification = irishNSCIdentification;
 	}
 
+	@XmlElement(name = "GBSC", required = true)
 	public UKDomesticSortCodeIdentifier getUKDomesticSortCode() {
 		return uKDomesticSortCode;
 	}
@@ -1168,6 +1181,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.uKDomesticSortCode = uKDomesticSortCode;
 	}
 
+	@XmlElement(name = "USCH", required = true)
 	public CHIPSParticipantIdentifier getCHIPSParticipantIdentification() {
 		return cHIPSParticipantIdentification;
 	}
@@ -1176,6 +1190,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.cHIPSParticipantIdentification = cHIPSParticipantIdentification;
 	}
 
+	@XmlElement(name = "CHBC", required = true)
 	public SwissBCIdentifier getSwissBCIdentification() {
 		return swissBCIdentification;
 	}
@@ -1184,6 +1199,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.swissBCIdentification = swissBCIdentification;
 	}
 
+	@XmlElement(name = "USFW", required = true)
 	public FedwireRoutingNumberIdentifier getFedwireRoutingNumberIdentification() {
 		return fedwireRoutingNumberIdentification;
 	}
@@ -1192,6 +1208,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.fedwireRoutingNumberIdentification = fedwireRoutingNumberIdentification;
 	}
 
+	@XmlElement(name = "PTNCC", required = true)
 	public PortugueseNCCIdentifier getPortugueseNCCIdentification() {
 		return portugueseNCCIdentification;
 	}
@@ -1200,6 +1217,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.portugueseNCCIdentification = portugueseNCCIdentification;
 	}
 
+	@XmlElement(name = "RUCB", required = true)
 	public RussianCentralBankIdentificationCodeIdentifier getRussianCentralBankIdentificationCode() {
 		return russianCentralBankIdentificationCode;
 	}
@@ -1208,6 +1226,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.russianCentralBankIdentificationCode = russianCentralBankIdentificationCode;
 	}
 
+	@XmlElement(name = "ITNCC", required = true)
 	public ItalianDomesticIdentifier getItalianDomesticIdentificationCode() {
 		return italianDomesticIdentificationCode;
 	}
@@ -1216,6 +1235,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.italianDomesticIdentificationCode = italianDomesticIdentificationCode;
 	}
 
+	@XmlElement(name = "ATBLZ", required = true)
 	public AustrianBankleitzahlIdentifier getAustrianBankleitzahlIdentification() {
 		return austrianBankleitzahlIdentification;
 	}
@@ -1224,6 +1244,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.austrianBankleitzahlIdentification = austrianBankleitzahlIdentification;
 	}
 
+	@XmlElement(name = "CACPA", required = true)
 	public CanadianPaymentsARNIdentifier getCanadianPaymentsAssociationRoutingNumberIdentification() {
 		return canadianPaymentsAssociationRoutingNumberIdentification;
 	}
@@ -1232,6 +1253,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.canadianPaymentsAssociationRoutingNumberIdentification = canadianPaymentsAssociationRoutingNumberIdentification;
 	}
 
+	@XmlElement(name = "CHSIC", required = true)
 	public SwissSICIdentifier getSwissSICIdentification() {
 		return swissSICIdentification;
 	}
@@ -1240,6 +1262,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.swissSICIdentification = swissSICIdentification;
 	}
 
+	@XmlElement(name = "DEBLZ", required = true)
 	public GermanBankleitzahlIdentifier getGermanBankleitzahlIdentification() {
 		return germanBankleitzahlIdentification;
 	}
@@ -1248,6 +1271,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.germanBankleitzahlIdentification = germanBankleitzahlIdentification;
 	}
 
+	@XmlElement(name = "ESNCC", required = true)
 	public SpanishDomesticInterbankingIdentifier getSpanishDomesticInterbankingIdentification() {
 		return spanishDomesticInterbankingIdentification;
 	}
@@ -1256,6 +1280,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.spanishDomesticInterbankingIdentification = spanishDomesticInterbankingIdentification;
 	}
 
+	@XmlElement(name = "ZANCC", required = true)
 	public SouthAfricanNCCIdentifier getSouthAfricanNCCIdentification() {
 		return southAfricanNCCIdentification;
 	}
@@ -1264,6 +1289,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.southAfricanNCCIdentification = southAfricanNCCIdentification;
 	}
 
+	@XmlElement(name = "HKNCC", required = true)
 	public HongKongBankIdentifier getHongKongBankCode() {
 		return hongKongBankCode;
 	}
@@ -1272,6 +1298,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.hongKongBankCode = hongKongBankCode;
 	}
 
+	@XmlElement(name = "AUBSBx", required = true)
 	public ExtensiveBranchNetworkIdentifier getAustralianExtensiveBranchNetworkIdentification() {
 		return australianExtensiveBranchNetworkIdentification;
 	}
@@ -1280,6 +1307,7 @@ public class ClearingSystemMemberIdentificationChoice {
 		this.australianExtensiveBranchNetworkIdentification = australianExtensiveBranchNetworkIdentification;
 	}
 
+	@XmlElement(name = "AUBSBs", required = true)
 	public SmallNetworkIdentifier getAustralianSmallNetworkIdentification() {
 		return australianSmallNetworkIdentification;
 	}

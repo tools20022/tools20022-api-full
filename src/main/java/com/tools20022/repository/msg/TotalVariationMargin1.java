@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.ShortLong1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Margin required to cover the risk because of the price fluctuations occurred
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TotalVariationMargin1", propOrder = {"shortLongIndicator", "amountDetails"})
 public class TotalVariationMargin1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -166,6 +172,7 @@ public class TotalVariationMargin1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ShrtLngInd")
 	public ShortLong1Code getShortLongIndicator() {
 		return shortLongIndicator;
 	}
@@ -174,6 +181,7 @@ public class TotalVariationMargin1 {
 		this.shortLongIndicator = shortLongIndicator;
 	}
 
+	@XmlElement(name = "AmtDtls", required = true)
 	public Amount2 getAmountDetails() {
 		return amountDetails;
 	}

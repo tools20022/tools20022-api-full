@@ -24,8 +24,10 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.PEPISATransfer7;
 import com.tools20022.repository.msg.TransferReference3;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.014.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -100,6 +99,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.014.001.02}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -119,6 +121,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PEPOrISAOrPortfolioTransferCancellationRequestV02", propOrder = {"messageReference", "poolReference", "previousReference", "relatedReference", "cancellationByTransferInstructionDetails", "cancellationByReference"})
 public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -128,6 +132,10 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02
+	 * PEPOrISAOrPortfolioTransferCancellationRequestV02}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -142,10 +150,6 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 	 * mmCancellationByReference}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02
-	 * PEPOrISAOrPortfolioTransferCancellationRequestV02}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -164,8 +168,9 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReferenceOrByTransferInstructionDetailsRule";
 			definition = "Either CancellationByTransferInstructionDetails or CancellationByReference may be present, but not both.";
-			messageDefinition_lazy = () -> PEPOrISAOrPortfolioTransferCancellationRequestV02.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByTransferInstructionDetails, PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByReference);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByTransferInstructionDetails,
+					com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByReference);
 		}
 	};
 	protected MessageIdentification1 messageReference;
@@ -202,6 +207,14 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioTransferCancellationRequestV02.class.getMethod("getMessageReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 poolReference;
 	/**
@@ -237,6 +250,14 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioTransferCancellationRequestV02.class.getMethod("getPoolReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected AdditionalReference3 previousReference;
 	/**
@@ -271,6 +292,14 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioTransferCancellationRequestV02.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AdditionalReference3 relatedReference;
@@ -308,6 +337,14 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioTransferCancellationRequestV02.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected PEPISATransfer7 cancellationByTransferInstructionDetails;
 	/**
@@ -342,6 +379,14 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PEPISATransfer7.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioTransferCancellationRequestV02.class.getMethod("getCancellationByTransferInstructionDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TransferReference3 cancellationByReference;
@@ -378,6 +423,14 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 			minOccurs = 0;
 			complexType_lazy = () -> TransferReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return PEPOrISAOrPortfolioTransferCancellationRequestV02.class.getMethod("getCancellationByReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -388,13 +441,15 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 				definition = "Scope\r\nAn instructing party, eg, a (new) plan manager, sends the PEPOrISAOrPortfolioTransferCancellationRequest message to the executing party, eg, a (old) plan manager, to request the cancellation of a previously sent PEPOrISAOrPortfolioTransferInstruction.\r\nUsage\r\nThe PEPOrISAOrPortfolioTransferCancellationRequest message is used to request the cancellation of an entire PEPOrISAOrPortfolioTransferInstruction message, ie, all the product transfers that it contained. The cancellation request can be specified either by:\r\n- quoting the transfer references of all the product transfers listed in the PEPOrISAOrPortfolioTransferInstruction message, or,\r\n- quoting the details of all the product transfers (this includes TransferReference) listed in PEPOrISAOrPortfolioTransferInstruction message.\r\nThe message identification of the PEPOrISAOrPortfolioTransferInstruction may also be quoted in PreviousReference. It is also possible to request the cancellation of PEPOrISAOrPortfolioTransferInstruction by just quoting its message identification in PreviousReference.";
 				nextVersions_lazy = () -> Arrays.asList(PortfolioTransferCancellationRequestV03.mmObject());
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByReferenceOrByTransferInstructionDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByReferenceOrByTransferInstructionDetailsRule);
 				rootElement = "Document";
 				xmlTag = "PEPOrISAOrPrtflTrfCxlReqV02";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(PEPOrISAOrPortfolioTransferCancellationRequestV02.mmMessageReference, PEPOrISAOrPortfolioTransferCancellationRequestV02.mmPoolReference,
-						PEPOrISAOrPortfolioTransferCancellationRequestV02.mmPreviousReference, PEPOrISAOrPortfolioTransferCancellationRequestV02.mmRelatedReference,
-						PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByTransferInstructionDetails, PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmMessageReference,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmPoolReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmPreviousReference,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByTransferInstructionDetails,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByReference);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";
@@ -404,10 +459,16 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PEPOrISAOrPortfolioTransferCancellationRequestV02.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgRef", required = true)
 	public MessageIdentification1 getMessageReference() {
 		return messageReference;
 	}
@@ -416,6 +477,7 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 		this.messageReference = messageReference;
 	}
 
+	@XmlElement(name = "PoolRef")
 	public AdditionalReference3 getPoolReference() {
 		return poolReference;
 	}
@@ -424,6 +486,7 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 		this.poolReference = poolReference;
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
@@ -432,6 +495,7 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
@@ -440,6 +504,7 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "CxlByTrfInstrDtls")
 	public PEPISATransfer7 getCancellationByTransferInstructionDetails() {
 		return cancellationByTransferInstructionDetails;
 	}
@@ -448,11 +513,18 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 		this.cancellationByTransferInstructionDetails = cancellationByTransferInstructionDetails;
 	}
 
+	@XmlElement(name = "CxlByRef")
 	public TransferReference3 getCancellationByReference() {
 		return cancellationByReference;
 	}
 
 	public void setCancellationByReference(TransferReference3 cancellationByReference) {
 		this.cancellationByReference = cancellationByReference;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.014.02.02")
+	static public class Document {
+		@XmlElement(name = "PEPOrISAOrPrtflTrfCxlReqV02", required = true)
+		public PEPOrISAOrPortfolioTransferCancellationRequestV02 messageBody;
 	}
 }

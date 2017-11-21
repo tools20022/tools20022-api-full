@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Amounts of the withdrawal transaction.
@@ -78,6 +82,8 @@ import java.util.List;
  * {@linkplain com.tools20022.repository.msg.DetailedAmount11 DetailedAmount11}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DetailedAmount12", propOrder = {"amountToDispense", "currency", "fees", "donation"})
 public class DetailedAmount12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -331,6 +337,7 @@ public class DetailedAmount12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AmtToDspns", required = true)
 	public ImpliedCurrencyAndAmount getAmountToDispense() {
 		return amountToDispense;
 	}
@@ -339,6 +346,7 @@ public class DetailedAmount12 {
 		this.amountToDispense = amountToDispense;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -347,6 +355,7 @@ public class DetailedAmount12 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "Fees")
 	public List<DetailedAmount13> getFees() {
 		return fees;
 	}
@@ -355,6 +364,7 @@ public class DetailedAmount12 {
 		this.fees = fees;
 	}
 
+	@XmlElement(name = "Dontn")
 	public List<DetailedAmount13> getDonation() {
 		return donation;
 	}

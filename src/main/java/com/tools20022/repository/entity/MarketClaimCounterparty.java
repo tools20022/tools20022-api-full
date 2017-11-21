@@ -68,6 +68,11 @@ public class MarketClaimCounterparty extends CorporateActionPartyRole {
 				definition = "Party that has reimbursed the account owner with funds to which they were legally entitled.";
 				superType_lazy = () -> CorporateActionPartyRole.mmObject();
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MarketClaimCounterparty.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}

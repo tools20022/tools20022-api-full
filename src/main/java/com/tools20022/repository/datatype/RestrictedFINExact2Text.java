@@ -28,6 +28,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "XX|TS"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -56,6 +58,8 @@ public class RestrictedFINExact2Text {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RestrictedFINExact2Text";
 				definition = "Specifies a character string with an exact length of 2 characters that must has a pattern XX|TS.";
+				pattern = "XX|TS";
+				length = 2;
 			}
 		});
 		return mmObject_lazy.get();

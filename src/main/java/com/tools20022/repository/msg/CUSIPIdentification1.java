@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.CUSIPIdentifier;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the CUSIP identification of a security.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the CUSIP identification of a security."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CUSIPIdentification1", propOrder = {"CUSIPCountry", "CUSIPIdentification"})
 public class CUSIPIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -158,6 +164,7 @@ public class CUSIPIdentification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CUSIPCtry")
 	public CountryCode getCUSIPCountry() {
 		return cUSIPCountry;
 	}
@@ -166,6 +173,7 @@ public class CUSIPIdentification1 {
 		this.cUSIPCountry = cUSIPCountry;
 	}
 
+	@XmlElement(name = "CUSIPId", required = true)
 	public CUSIPIdentifier getCUSIPIdentification() {
 		return cUSIPIdentification;
 	}

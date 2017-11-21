@@ -29,6 +29,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Other parties information.
@@ -71,6 +75,8 @@ import java.util.List;
  * definition} = "Other parties information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OtherParties14", propOrder = {"investor", "qualifiedForeignIntermediary", "stockExchange", "tradeRegulator", "tripartyAgent"})
 public class OtherParties14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -343,6 +349,7 @@ public class OtherParties14 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Invstr")
 	public List<PartyIdentificationAndAccount61> getInvestor() {
 		return investor;
 	}
@@ -351,6 +358,7 @@ public class OtherParties14 {
 		this.investor = investor;
 	}
 
+	@XmlElement(name = "QlfdFrgnIntrmy")
 	public PartyIdentificationAndAccount62 getQualifiedForeignIntermediary() {
 		return qualifiedForeignIntermediary;
 	}
@@ -359,6 +367,7 @@ public class OtherParties14 {
 		this.qualifiedForeignIntermediary = qualifiedForeignIntermediary;
 	}
 
+	@XmlElement(name = "StockXchg")
 	public PartyIdentificationAndAccount62 getStockExchange() {
 		return stockExchange;
 	}
@@ -367,6 +376,7 @@ public class OtherParties14 {
 		this.stockExchange = stockExchange;
 	}
 
+	@XmlElement(name = "TradRgltr")
 	public PartyIdentificationAndAccount62 getTradeRegulator() {
 		return tradeRegulator;
 	}
@@ -375,6 +385,7 @@ public class OtherParties14 {
 		this.tradeRegulator = tradeRegulator;
 	}
 
+	@XmlElement(name = "TrptyAgt")
 	public PartyIdentificationAndAccount62 getTripartyAgent() {
 		return tripartyAgent;
 	}

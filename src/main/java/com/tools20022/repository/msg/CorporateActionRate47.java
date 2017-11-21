@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies rates related to a corporate action option.
@@ -88,6 +92,8 @@ import java.util.List;
  * CorporateActionRate8}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionRate47", propOrder = {"proposedRate", "oversubscriptionRate", "requestedTaxationRate", "requestedWithholdingOfForeignTax", "requestedWithholdingOfLocalTax"})
 public class CorporateActionRate47 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -409,6 +415,7 @@ public class CorporateActionRate47 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PropsdRate")
 	public PercentageRate getProposedRate() {
 		return proposedRate;
 	}
@@ -417,6 +424,7 @@ public class CorporateActionRate47 {
 		this.proposedRate = proposedRate;
 	}
 
+	@XmlElement(name = "OvrsbcptRate")
 	public RateAndAmountFormat5Choice getOversubscriptionRate() {
 		return oversubscriptionRate;
 	}
@@ -425,6 +433,7 @@ public class CorporateActionRate47 {
 		this.oversubscriptionRate = oversubscriptionRate;
 	}
 
+	@XmlElement(name = "ReqdTaxtnRate")
 	public List<RateAndAmountFormat21Choice> getRequestedTaxationRate() {
 		return requestedTaxationRate;
 	}
@@ -433,6 +442,7 @@ public class CorporateActionRate47 {
 		this.requestedTaxationRate = requestedTaxationRate;
 	}
 
+	@XmlElement(name = "ReqdWhldgOfFrgnTax")
 	public List<RateAndAmountFormat21Choice> getRequestedWithholdingOfForeignTax() {
 		return requestedWithholdingOfForeignTax;
 	}
@@ -441,6 +451,7 @@ public class CorporateActionRate47 {
 		this.requestedWithholdingOfForeignTax = requestedWithholdingOfForeignTax;
 	}
 
+	@XmlElement(name = "ReqdWhldgOfLclTax")
 	public List<RateAndAmountFormat21Choice> getRequestedWithholdingOfLocalTax() {
 		return requestedWithholdingOfLocalTax;
 	}

@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Indicates whether the quote details are indicated as an offer, a bid or a mid
@@ -74,6 +78,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QuoteSide1", propOrder = {"price", "marketPrice", "minimumQuantity", "quantity", "maximumQuantity", "sourceOfQuote"})
 public class QuoteSide1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -372,6 +378,7 @@ public class QuoteSide1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pric", required = true)
 	public Price1 getPrice() {
 		return price;
 	}
@@ -380,6 +387,7 @@ public class QuoteSide1 {
 		this.price = price;
 	}
 
+	@XmlElement(name = "MktPric")
 	public List<Price1> getMarketPrice() {
 		return marketPrice;
 	}
@@ -388,6 +396,7 @@ public class QuoteSide1 {
 		this.marketPrice = marketPrice;
 	}
 
+	@XmlElement(name = "MinQty")
 	public List<FinancialInstrumentQuantityChoice> getMinimumQuantity() {
 		return minimumQuantity;
 	}
@@ -396,6 +405,7 @@ public class QuoteSide1 {
 		this.minimumQuantity = minimumQuantity;
 	}
 
+	@XmlElement(name = "Qty")
 	public FinancialInstrumentQuantityChoice getQuantity() {
 		return quantity;
 	}
@@ -404,6 +414,7 @@ public class QuoteSide1 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "MaxQty")
 	public FinancialInstrumentQuantityChoice getMaximumQuantity() {
 		return maximumQuantity;
 	}
@@ -412,6 +423,7 @@ public class QuoteSide1 {
 		this.maximumQuantity = maximumQuantity;
 	}
 
+	@XmlElement(name = "SrcOfQt")
 	public PartyIdentification25Choice getSourceOfQuote() {
 		return sourceOfQuote;
 	}

@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Goods or services that are part of a commercial trade agreement.
@@ -108,6 +112,9 @@ import java.util.List;
  * "Goods or services that are part of a commercial trade agreement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "LineItemDetails4", propOrder = {"lineItemIdentification", "quantity", "quantityTolerance", "unitPrice", "priceTolerance", "productName", "productIdentifier", "productCharacteristics", "productCategory", "productOrigin",
+		"latestShipmentDate", "routingSummary", "incoterms", "adjustment", "freightCharges", "tax", "totalAmount"})
 public class LineItemDetails4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -932,6 +939,7 @@ public class LineItemDetails4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LineItmId", required = true)
 	public Max70Text getLineItemIdentification() {
 		return lineItemIdentification;
 	}
@@ -940,6 +948,7 @@ public class LineItemDetails4 {
 		this.lineItemIdentification = lineItemIdentification;
 	}
 
+	@XmlElement(name = "Qty", required = true)
 	public Quantity2 getQuantity() {
 		return quantity;
 	}
@@ -948,6 +957,7 @@ public class LineItemDetails4 {
 		this.quantity = quantity;
 	}
 
+	@XmlElement(name = "QtyTlrnce")
 	public PercentageTolerance1 getQuantityTolerance() {
 		return quantityTolerance;
 	}
@@ -956,6 +966,7 @@ public class LineItemDetails4 {
 		this.quantityTolerance = quantityTolerance;
 	}
 
+	@XmlElement(name = "UnitPric")
 	public UnitPrice8 getUnitPrice() {
 		return unitPrice;
 	}
@@ -964,6 +975,7 @@ public class LineItemDetails4 {
 		this.unitPrice = unitPrice;
 	}
 
+	@XmlElement(name = "PricTlrnce")
 	public PercentageTolerance1 getPriceTolerance() {
 		return priceTolerance;
 	}
@@ -972,6 +984,7 @@ public class LineItemDetails4 {
 		this.priceTolerance = priceTolerance;
 	}
 
+	@XmlElement(name = "PdctNm")
 	public Max70Text getProductName() {
 		return productName;
 	}
@@ -980,6 +993,7 @@ public class LineItemDetails4 {
 		this.productName = productName;
 	}
 
+	@XmlElement(name = "PdctIdr")
 	public List<ProductIdentifier2Choice> getProductIdentifier() {
 		return productIdentifier;
 	}
@@ -988,6 +1002,7 @@ public class LineItemDetails4 {
 		this.productIdentifier = productIdentifier;
 	}
 
+	@XmlElement(name = "PdctChrtcs")
 	public List<ProductCharacteristics1Choice> getProductCharacteristics() {
 		return productCharacteristics;
 	}
@@ -996,6 +1011,7 @@ public class LineItemDetails4 {
 		this.productCharacteristics = productCharacteristics;
 	}
 
+	@XmlElement(name = "PdctCtgy")
 	public List<ProductCategory1Choice> getProductCategory() {
 		return productCategory;
 	}
@@ -1004,6 +1020,7 @@ public class LineItemDetails4 {
 		this.productCategory = productCategory;
 	}
 
+	@XmlElement(name = "PdctOrgn")
 	public CountryCode getProductOrigin() {
 		return productOrigin;
 	}
@@ -1012,6 +1029,7 @@ public class LineItemDetails4 {
 		this.productOrigin = productOrigin;
 	}
 
+	@XmlElement(name = "LatstShipmntDt")
 	public ISODate getLatestShipmentDate() {
 		return latestShipmentDate;
 	}
@@ -1020,6 +1038,7 @@ public class LineItemDetails4 {
 		this.latestShipmentDate = latestShipmentDate;
 	}
 
+	@XmlElement(name = "RtgSummry")
 	public TransportMeans1Choice getRoutingSummary() {
 		return routingSummary;
 	}
@@ -1028,6 +1047,7 @@ public class LineItemDetails4 {
 		this.routingSummary = routingSummary;
 	}
 
+	@XmlElement(name = "Incotrms")
 	public List<Incoterms1> getIncoterms() {
 		return incoterms;
 	}
@@ -1036,6 +1056,7 @@ public class LineItemDetails4 {
 		this.incoterms = incoterms;
 	}
 
+	@XmlElement(name = "Adjstmnt")
 	public List<Adjustment3> getAdjustment() {
 		return adjustment;
 	}
@@ -1044,6 +1065,7 @@ public class LineItemDetails4 {
 		this.adjustment = adjustment;
 	}
 
+	@XmlElement(name = "FrghtChrgs")
 	public Charge12 getFreightCharges() {
 		return freightCharges;
 	}
@@ -1052,6 +1074,7 @@ public class LineItemDetails4 {
 		this.freightCharges = freightCharges;
 	}
 
+	@XmlElement(name = "Tax")
 	public List<Tax13> getTax() {
 		return tax;
 	}
@@ -1060,6 +1083,7 @@ public class LineItemDetails4 {
 		this.tax = tax;
 	}
 
+	@XmlElement(name = "TtlAmt", required = true)
 	public CurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}

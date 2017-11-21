@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,6 +39,83 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+ * GenericIdentification.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForContactPoint
+ * GenericIdentification.mmIdentificationForContactPoint}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForAccount
+ * GenericIdentification.mmIdentificationForAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedPartyIdentification
+ * GenericIdentification.mmRelatedPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIssueDate
+ * GenericIdentification.mmIssueDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmExpiryDate
+ * GenericIdentification.mmExpiryDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmScheme
+ * GenericIdentification.mmScheme}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForSecuritiesCertificate
+ * GenericIdentification.mmIdentificationForSecuritiesCertificate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForLot
+ * GenericIdentification.mmIdentificationForLot}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmPartyRole
+ * GenericIdentification.mmPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForCashProceedsIncome
+ * GenericIdentification.mmIdentificationForCashProceedsIncome}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedStatusReason
+ * GenericIdentification.mmRelatedStatusReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForBankTransaction
+ * GenericIdentification.mmIdentificationForBankTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForAccountCostReferencePattern
+ * GenericIdentification.mmIdentificationForAccountCostReferencePattern}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmAccount
+ * GenericIdentification.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedSystemIdentification
+ * GenericIdentification.mmRelatedSystemIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForInterestName
+ * GenericIdentification.mmIdentificationForInterestName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedCashAccountService
+ * GenericIdentification.mmRelatedCashAccountService}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForInvestmentFundClass
+ * GenericIdentification.mmIdentificationForInvestmentFundClass}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentifiedLocation
+ * GenericIdentification.mmIdentifiedLocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedSecuritiesIdentification
+ * GenericIdentification.mmRelatedSecuritiesIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentifiedDocument
+ * GenericIdentification.mmIdentifiedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedPurchaseOrder
+ * GenericIdentification.mmRelatedPurchaseOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedCertificate
+ * GenericIdentification.mmRelatedCertificate}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -433,83 +511,6 @@ import java.util.List;
  * GenericIdentification92.mmType}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
- * GenericIdentification.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForContactPoint
- * GenericIdentification.mmIdentificationForContactPoint}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForAccount
- * GenericIdentification.mmIdentificationForAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedPartyIdentification
- * GenericIdentification.mmRelatedPartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIssueDate
- * GenericIdentification.mmIssueDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmExpiryDate
- * GenericIdentification.mmExpiryDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmScheme
- * GenericIdentification.mmScheme}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForSecuritiesCertificate
- * GenericIdentification.mmIdentificationForSecuritiesCertificate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForLot
- * GenericIdentification.mmIdentificationForLot}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmPartyRole
- * GenericIdentification.mmPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForCashProceedsIncome
- * GenericIdentification.mmIdentificationForCashProceedsIncome}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedStatusReason
- * GenericIdentification.mmRelatedStatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForBankTransaction
- * GenericIdentification.mmIdentificationForBankTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForAccountCostReferencePattern
- * GenericIdentification.mmIdentificationForAccountCostReferencePattern}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmAccount
- * GenericIdentification.mmAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedSystemIdentification
- * GenericIdentification.mmRelatedSystemIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForInterestName
- * GenericIdentification.mmIdentificationForInterestName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedCashAccountService
- * GenericIdentification.mmRelatedCashAccountService}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForInvestmentFundClass
- * GenericIdentification.mmIdentificationForInvestmentFundClass}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentifiedLocation
- * GenericIdentification.mmIdentifiedLocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedSecuritiesIdentification
- * GenericIdentification.mmRelatedSecuritiesIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentifiedDocument
- * GenericIdentification.mmIdentifiedDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedPurchaseOrder
- * GenericIdentification.mmRelatedPurchaseOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedCertificate
- * GenericIdentification.mmRelatedCertificate}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -542,11 +543,6 @@ public class GenericIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
-	 * GenericIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1663,6 +1659,11 @@ public class GenericIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
+	 * GenericIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1764,7 +1765,7 @@ public class GenericIdentification {
 					RegulatoryReporting6.mmExecutionVenue, TradeData14.mmStatusOriginator, TradeData12.mmStatusOriginator, TradeData15.mmStatusOriginator, Mandate10.mmMandateIdentification,
 					RemittanceInformation13.mmRemittanceIdentification, Mandate9.mmMandateIdentification, Mandate11.mmMandateIdentification, ReferredMandateDocument1.mmNumber, Mandate8.mmMandateIdentification,
 					TradeData16.mmStatusOriginator);
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -1772,6 +1773,14 @@ public class GenericIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return GenericIdentification.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.ContactPoint> identificationForContactPoint;
@@ -1811,7 +1820,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentificationForContactPoint = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForContactPoint";
@@ -1862,7 +1871,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentificationForAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForAccount";
@@ -1911,7 +1920,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPartyIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPartyIdentification";
@@ -1933,11 +1942,6 @@ public class GenericIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
-	 * GenericIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1959,6 +1963,11 @@ public class GenericIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
+	 * GenericIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1972,7 +1981,7 @@ public class GenericIdentification {
 	public static final MMBusinessAttribute mmIssueDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(GenericIdentification9.mmIssueDate, GenericIdentification44.mmIssueDate, GenericIdentification55.mmIssueDate, AlternateIdentification4.mmIssueDate, GenericIdentification82.mmIssueDate);
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssueDate";
@@ -1980,6 +1989,14 @@ public class GenericIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return GenericIdentification.class.getMethod("getIssueDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODate expiryDate;
@@ -1992,11 +2009,6 @@ public class GenericIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
-	 * GenericIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2018,6 +2030,11 @@ public class GenericIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
+	 * GenericIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2031,7 +2048,7 @@ public class GenericIdentification {
 	public static final MMBusinessAttribute mmExpiryDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(GenericIdentification9.mmExpiryDate, GenericIdentification44.mmExpiryDate, GenericIdentification55.mmExpiryDate, AlternateIdentification4.mmExpiryDate, GenericIdentification82.mmExpiryDate);
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryDate";
@@ -2039,6 +2056,14 @@ public class GenericIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return GenericIdentification.class.getMethod("getExpiryDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Scheme scheme;
@@ -2058,11 +2083,6 @@ public class GenericIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Scheme Scheme}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
-	 * GenericIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2087,6 +2107,11 @@ public class GenericIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
+	 * GenericIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2102,7 +2127,7 @@ public class GenericIdentification {
 		{
 			derivation_lazy = () -> Arrays.asList(GenericFinancialIdentification1.mmSchemeName, GenericAccountIdentification1.mmSchemeName, GenericOrganisationIdentification1.mmSchemeName, GenericPersonIdentification1.mmSchemeName,
 					GenericOrganisationIdentification2.mmSchemeName, TradingVenueIdentification2.mmType);
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Scheme";
@@ -2154,7 +2179,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentificationForSecuritiesCertificate = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForSecuritiesCertificate";
@@ -2203,7 +2228,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentificationForLot = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForLot";
@@ -2234,11 +2259,6 @@ public class GenericIdentification {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.InformationPartyRole
 	 * InformationPartyRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
-	 * GenericIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2275,6 +2295,11 @@ public class GenericIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
+	 * GenericIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2289,7 +2314,7 @@ public class GenericIdentification {
 		{
 			derivation_lazy = () -> Arrays.asList(ProprietaryQuantity3.mmIssuer, ProprietaryQuantity2.mmIssuer, ProprietaryQuantity5.mmIssuer, ProprietaryQuantity4.mmIssuer, PersonIdentification6.mmIssuer, ProprietaryQuantity6.mmIssuer,
 					ProprietaryQuantity8.mmIssuer, ProprietaryQuantity7.mmIssuer, ProprietaryQuantity10.mmIssuer, ProprietaryQuantity9.mmIssuer);
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
@@ -2340,7 +2365,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentificationForCashProceedsIncome = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForCashProceedsIncome";
@@ -2390,7 +2415,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedStatusReason = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedStatusReason";
@@ -2441,7 +2466,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentificationForBankTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForBankTransaction";
@@ -2490,7 +2515,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentificationForAccountCostReferencePattern = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForAccountCostReferencePattern";
@@ -2536,7 +2561,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
@@ -2586,7 +2611,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSystemIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSystemIdentification";
@@ -2633,7 +2658,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentificationForInterestName = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForInterestName";
@@ -2681,7 +2706,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCashAccountService = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCashAccountService";
@@ -2732,7 +2757,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentificationForInvestmentFundClass = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForInvestmentFundClass";
@@ -2779,7 +2804,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentifiedLocation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentifiedLocation";
@@ -2831,7 +2856,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSecuritiesIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesIdentification";
@@ -2878,7 +2903,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentifiedDocument = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentifiedDocument";
@@ -2926,7 +2951,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPurchaseOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPurchaseOrder";
@@ -2977,7 +3002,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCertificate = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> GenericIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCertificate";
@@ -3014,13 +3039,18 @@ public class GenericIdentification {
 						GenericIdentification80.mmType, AlternateIdentification4.mmIssuerCountry, OtherIdentification4Choice.mmProprietary, GenericIdentification81.mmIdentificationType, ReversedStatus2Choice.mmDataSourceScheme,
 						PostalAddress21.mmCareOf, GenericIdentification82.mmIssuerCountry, OtherIdentification3Choice.mmProprietary, GenericIdentification85.mmType, GenericIdentification89.mmType, GenericIdentification94.mmType,
 						GenericIdentification90.mmType, GenericIdentification92.mmType);
-				element_lazy = () -> Arrays.asList(GenericIdentification.mmIdentification, GenericIdentification.mmIdentificationForContactPoint, GenericIdentification.mmIdentificationForAccount,
-						GenericIdentification.mmRelatedPartyIdentification, GenericIdentification.mmIssueDate, GenericIdentification.mmExpiryDate, GenericIdentification.mmScheme,
-						GenericIdentification.mmIdentificationForSecuritiesCertificate, GenericIdentification.mmIdentificationForLot, GenericIdentification.mmPartyRole, GenericIdentification.mmIdentificationForCashProceedsIncome,
-						GenericIdentification.mmRelatedStatusReason, GenericIdentification.mmIdentificationForBankTransaction, GenericIdentification.mmIdentificationForAccountCostReferencePattern, GenericIdentification.mmAccount,
-						GenericIdentification.mmRelatedSystemIdentification, GenericIdentification.mmIdentificationForInterestName, GenericIdentification.mmRelatedCashAccountService,
-						GenericIdentification.mmIdentificationForInvestmentFundClass, GenericIdentification.mmIdentifiedLocation, GenericIdentification.mmRelatedSecuritiesIdentification, GenericIdentification.mmIdentifiedDocument,
-						GenericIdentification.mmRelatedPurchaseOrder, GenericIdentification.mmRelatedCertificate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmIdentification, com.tools20022.repository.entity.GenericIdentification.mmIdentificationForContactPoint,
+						com.tools20022.repository.entity.GenericIdentification.mmIdentificationForAccount, com.tools20022.repository.entity.GenericIdentification.mmRelatedPartyIdentification,
+						com.tools20022.repository.entity.GenericIdentification.mmIssueDate, com.tools20022.repository.entity.GenericIdentification.mmExpiryDate, com.tools20022.repository.entity.GenericIdentification.mmScheme,
+						com.tools20022.repository.entity.GenericIdentification.mmIdentificationForSecuritiesCertificate, com.tools20022.repository.entity.GenericIdentification.mmIdentificationForLot,
+						com.tools20022.repository.entity.GenericIdentification.mmPartyRole, com.tools20022.repository.entity.GenericIdentification.mmIdentificationForCashProceedsIncome,
+						com.tools20022.repository.entity.GenericIdentification.mmRelatedStatusReason, com.tools20022.repository.entity.GenericIdentification.mmIdentificationForBankTransaction,
+						com.tools20022.repository.entity.GenericIdentification.mmIdentificationForAccountCostReferencePattern, com.tools20022.repository.entity.GenericIdentification.mmAccount,
+						com.tools20022.repository.entity.GenericIdentification.mmRelatedSystemIdentification, com.tools20022.repository.entity.GenericIdentification.mmIdentificationForInterestName,
+						com.tools20022.repository.entity.GenericIdentification.mmRelatedCashAccountService, com.tools20022.repository.entity.GenericIdentification.mmIdentificationForInvestmentFundClass,
+						com.tools20022.repository.entity.GenericIdentification.mmIdentifiedLocation, com.tools20022.repository.entity.GenericIdentification.mmRelatedSecuritiesIdentification,
+						com.tools20022.repository.entity.GenericIdentification.mmIdentifiedDocument, com.tools20022.repository.entity.GenericIdentification.mmRelatedPurchaseOrder,
+						com.tools20022.repository.entity.GenericIdentification.mmRelatedCertificate);
 				derivationComponent_lazy = () -> Arrays.asList(SimpleIdentificationInformation.mmObject(), GenericIdentification1.mmObject(), GenericIdentification7.mmObject(), AdditionalReference2.mmObject(),
 						AdditionalReference3.mmObject(), GenericIdentification8.mmObject(), GenericIdentification9.mmObject(), GenericIdentification13.mmObject(), GenericIdentification20.mmObject(), GenericIdentification25.mmObject(),
 						GenericIdentification47.mmObject(), OtherIdentification1Choice.mmObject(), GenericIdentification44.mmObject(), GenericIdentification41.mmObject(), GenericIdentification46.mmObject(),
@@ -3042,6 +3072,11 @@ public class GenericIdentification {
 						GenericIdentification86.mmObject(), GenericIdentification144.mmObject(), GenericIdentification163.mmObject(), GenericIdentification89.mmObject(), GenericIdentification79.mmObject(),
 						GenericIdentification94.mmObject(), GenericIdentification90.mmObject(), GenericIdentification93.mmObject(), GenericIdentification92.mmObject(), AdditionalReference8.mmObject(), GenericIdentification164.mmObject(),
 						AdditionalReference9.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return GenericIdentification.class;
 			}
 		});
 		return mmObject_lazy.get();

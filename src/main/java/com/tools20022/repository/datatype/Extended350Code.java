@@ -56,6 +56,8 @@ public class Extended350Code {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Extended350Code";
 				definition = "Code and / or description for values that are not yet part of the related code list.";
+				minLength = 1;
+				maxLength = 350;
 			}
 		});
 		return mmObject_lazy.get();

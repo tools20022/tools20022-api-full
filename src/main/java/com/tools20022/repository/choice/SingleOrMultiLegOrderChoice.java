@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.MultiLegOrder1;
 import com.tools20022.repository.msg.SingleOrder1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a single order or a multileg order.
@@ -59,6 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between a single order or a multileg order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SingleOrMultiLegOrderChoice", propOrder = {"singleOrderDetails", "multilegOrderDetails"})
 public class SingleOrMultiLegOrderChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -170,6 +176,7 @@ public class SingleOrMultiLegOrderChoice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SnglOrdrDtls", required = true)
 	public SingleOrder1 getSingleOrderDetails() {
 		return singleOrderDetails;
 	}
@@ -178,6 +185,7 @@ public class SingleOrMultiLegOrderChoice {
 		this.singleOrderDetails = singleOrderDetails;
 	}
 
+	@XmlElement(name = "MltlgOrdrDtls", required = true)
 	public MultiLegOrder1 getMultilegOrderDetails() {
 		return multilegOrderDetails;
 	}

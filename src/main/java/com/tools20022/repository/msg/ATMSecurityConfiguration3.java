@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Configuration of the encryption or digital envelope, if the security module
@@ -91,6 +95,9 @@ import java.util.List;
  * ATMSecurityConfiguration2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMSecurityConfiguration3", propOrder = {"asymmetricEncryption", "asymmetricKeyStandardIdentification", "asymmetricEncryptionAlgorithm", "symmetricTransportKey", "symmetricTransportKeyAlgorithm",
+		"symmetricEncryptionAlgorithm", "encryptionFormat"})
 public class ATMSecurityConfiguration3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -430,6 +437,7 @@ public class ATMSecurityConfiguration3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AsmmtrcNcrptn")
 	public TrueFalseIndicator getAsymmetricEncryption() {
 		return asymmetricEncryption;
 	}
@@ -438,6 +446,7 @@ public class ATMSecurityConfiguration3 {
 		this.asymmetricEncryption = asymmetricEncryption;
 	}
 
+	@XmlElement(name = "AsmmtrcKeyStdId")
 	public TrueFalseIndicator getAsymmetricKeyStandardIdentification() {
 		return asymmetricKeyStandardIdentification;
 	}
@@ -446,6 +455,7 @@ public class ATMSecurityConfiguration3 {
 		this.asymmetricKeyStandardIdentification = asymmetricKeyStandardIdentification;
 	}
 
+	@XmlElement(name = "AsmmtrcNcrptnAlgo")
 	public List<Algorithm7Code> getAsymmetricEncryptionAlgorithm() {
 		return asymmetricEncryptionAlgorithm;
 	}
@@ -454,6 +464,7 @@ public class ATMSecurityConfiguration3 {
 		this.asymmetricEncryptionAlgorithm = asymmetricEncryptionAlgorithm;
 	}
 
+	@XmlElement(name = "SmmtrcTrnsprtKey")
 	public TrueFalseIndicator getSymmetricTransportKey() {
 		return symmetricTransportKey;
 	}
@@ -462,6 +473,7 @@ public class ATMSecurityConfiguration3 {
 		this.symmetricTransportKey = symmetricTransportKey;
 	}
 
+	@XmlElement(name = "SmmtrcTrnsprtKeyAlgo")
 	public List<Algorithm13Code> getSymmetricTransportKeyAlgorithm() {
 		return symmetricTransportKeyAlgorithm;
 	}
@@ -470,6 +482,7 @@ public class ATMSecurityConfiguration3 {
 		this.symmetricTransportKeyAlgorithm = symmetricTransportKeyAlgorithm;
 	}
 
+	@XmlElement(name = "SmmtrcNcrptnAlgo")
 	public List<Algorithm15Code> getSymmetricEncryptionAlgorithm() {
 		return symmetricEncryptionAlgorithm;
 	}
@@ -478,6 +491,7 @@ public class ATMSecurityConfiguration3 {
 		this.symmetricEncryptionAlgorithm = symmetricEncryptionAlgorithm;
 	}
 
+	@XmlElement(name = "NcrptnFrmt")
 	public List<EncryptionFormat1Code> getEncryptionFormat() {
 		return encryptionFormat;
 	}

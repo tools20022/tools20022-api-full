@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for a payment.
@@ -117,6 +121,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentSearch4", propOrder = {"messageIdentification", "requestedExecutionDate", "paymentIdentification", "status", "instructedAmount", "instructedAmountCurrency", "creditDebitIndicator", "interbankSettlementAmount",
+		"interbankSettlementAmountCurrency", "paymentMethod", "paymentType", "priority", "processingValidityTime", "instruction", "transactionIdentification", "interbankSettlementDate", "endToEndIdentification", "parties"})
 public class PaymentSearch4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1160,6 +1167,7 @@ public class PaymentSearch4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgId")
 	public List<Max35Text> getMessageIdentification() {
 		return messageIdentification;
 	}
@@ -1168,6 +1176,7 @@ public class PaymentSearch4 {
 		this.messageIdentification = messageIdentification;
 	}
 
+	@XmlElement(name = "ReqdExctnDt")
 	public List<DateAndDateTimeSearchChoice> getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
@@ -1176,6 +1185,7 @@ public class PaymentSearch4 {
 		this.requestedExecutionDate = requestedExecutionDate;
 	}
 
+	@XmlElement(name = "PmtId")
 	public List<PaymentIdentification4Choice> getPaymentIdentification() {
 		return paymentIdentification;
 	}
@@ -1184,6 +1194,7 @@ public class PaymentSearch4 {
 		this.paymentIdentification = paymentIdentification;
 	}
 
+	@XmlElement(name = "Sts")
 	public List<InstructionStatusSearch3> getStatus() {
 		return status;
 	}
@@ -1192,6 +1203,7 @@ public class PaymentSearch4 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "InstdAmt")
 	public List<AmountRange2Choice> getInstructedAmount() {
 		return instructedAmount;
 	}
@@ -1200,6 +1212,7 @@ public class PaymentSearch4 {
 		this.instructedAmount = instructedAmount;
 	}
 
+	@XmlElement(name = "InstdAmtCcy")
 	public List<ActiveOrHistoricCurrencyCode> getInstructedAmountCurrency() {
 		return instructedAmountCurrency;
 	}
@@ -1208,6 +1221,7 @@ public class PaymentSearch4 {
 		this.instructedAmountCurrency = instructedAmountCurrency;
 	}
 
+	@XmlElement(name = "CdtDbtInd")
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -1216,6 +1230,7 @@ public class PaymentSearch4 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmt")
 	public List<ActiveAmountRange1Choice> getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
@@ -1224,6 +1239,7 @@ public class PaymentSearch4 {
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
 
+	@XmlElement(name = "IntrBkSttlmAmtCcy")
 	public List<ActiveCurrencyCode> getInterbankSettlementAmountCurrency() {
 		return interbankSettlementAmountCurrency;
 	}
@@ -1232,6 +1248,7 @@ public class PaymentSearch4 {
 		this.interbankSettlementAmountCurrency = interbankSettlementAmountCurrency;
 	}
 
+	@XmlElement(name = "PmtMtd")
 	public List<PaymentOrigin1Choice> getPaymentMethod() {
 		return paymentMethod;
 	}
@@ -1240,6 +1257,7 @@ public class PaymentSearch4 {
 		this.paymentMethod = paymentMethod;
 	}
 
+	@XmlElement(name = "PmtTp")
 	public List<PaymentType3Choice> getPaymentType() {
 		return paymentType;
 	}
@@ -1248,6 +1266,7 @@ public class PaymentSearch4 {
 		this.paymentType = paymentType;
 	}
 
+	@XmlElement(name = "Prty")
 	public List<PriorityCode2Choice> getPriority() {
 		return priority;
 	}
@@ -1256,6 +1275,7 @@ public class PaymentSearch4 {
 		this.priority = priority;
 	}
 
+	@XmlElement(name = "PrcgVldtyTm")
 	public List<DateTimePeriodChoice> getProcessingValidityTime() {
 		return processingValidityTime;
 	}
@@ -1264,6 +1284,7 @@ public class PaymentSearch4 {
 		this.processingValidityTime = processingValidityTime;
 	}
 
+	@XmlElement(name = "Instr")
 	public List<Instruction1Code> getInstruction() {
 		return instruction;
 	}
@@ -1272,6 +1293,7 @@ public class PaymentSearch4 {
 		this.instruction = instruction;
 	}
 
+	@XmlElement(name = "TxId")
 	public List<Max35Text> getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -1280,6 +1302,7 @@ public class PaymentSearch4 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "IntrBkSttlmDt")
 	public List<ISODate> getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}
@@ -1288,6 +1311,7 @@ public class PaymentSearch4 {
 		this.interbankSettlementDate = interbankSettlementDate;
 	}
 
+	@XmlElement(name = "EndToEndId")
 	public List<Max35Text> getEndToEndIdentification() {
 		return endToEndIdentification;
 	}
@@ -1296,6 +1320,7 @@ public class PaymentSearch4 {
 		this.endToEndIdentification = endToEndIdentification;
 	}
 
+	@XmlElement(name = "Pties")
 	public PaymentTransactionParty2 getParties() {
 		return parties;
 	}

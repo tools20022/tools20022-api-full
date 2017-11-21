@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Special conditions for the loan.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Special conditions for the loan."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SpecialCondition1", propOrder = {"incomingAmount", "outgoingAmount", "incomingAmountToOtherAccount", "paymentFromOtherAccount"})
 public class SpecialCondition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -277,6 +283,7 @@ public class SpecialCondition1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IncmgAmt", required = true)
 	public ActiveCurrencyAndAmount getIncomingAmount() {
 		return incomingAmount;
 	}
@@ -285,6 +292,7 @@ public class SpecialCondition1 {
 		this.incomingAmount = incomingAmount;
 	}
 
+	@XmlElement(name = "OutgngAmt", required = true)
 	public ActiveCurrencyAndAmount getOutgoingAmount() {
 		return outgoingAmount;
 	}
@@ -293,6 +301,7 @@ public class SpecialCondition1 {
 		this.outgoingAmount = outgoingAmount;
 	}
 
+	@XmlElement(name = "IncmgAmtToOthrAcct")
 	public ActiveCurrencyAndAmount getIncomingAmountToOtherAccount() {
 		return incomingAmountToOtherAccount;
 	}
@@ -301,6 +310,7 @@ public class SpecialCondition1 {
 		this.incomingAmountToOtherAccount = incomingAmountToOtherAccount;
 	}
 
+	@XmlElement(name = "PmtFrOthrAcct")
 	public ActiveCurrencyAndAmount getPaymentFromOtherAccount() {
 		return paymentFromOtherAccount;
 	}

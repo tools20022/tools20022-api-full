@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.TerminalManagementSystem;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters to be used to update the configuration or the status security
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCommandParameters1", propOrder = {"serialNumber", "requiredConfiguration", "requiredStatus"})
 public class ATMCommandParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -216,6 +222,7 @@ public class ATMCommandParameters1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SrlNb")
 	public Max35Text getSerialNumber() {
 		return serialNumber;
 	}
@@ -224,6 +231,7 @@ public class ATMCommandParameters1 {
 		this.serialNumber = serialNumber;
 	}
 
+	@XmlElement(name = "ReqrdCfgtn")
 	public ATMSecurityConfiguration1 getRequiredConfiguration() {
 		return requiredConfiguration;
 	}
@@ -232,6 +240,7 @@ public class ATMCommandParameters1 {
 		this.requiredConfiguration = requiredConfiguration;
 	}
 
+	@XmlElement(name = "ReqrdSts")
 	public ATMStatus2Code getRequiredStatus() {
 		return requiredStatus;
 	}

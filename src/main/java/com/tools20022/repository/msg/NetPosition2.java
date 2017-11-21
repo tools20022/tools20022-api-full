@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the net positions details.
@@ -106,6 +110,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NetPosition2", propOrder = {"clearingAccount", "nonClearingMember", "deliveryAccount", "financialInstrumentIdentification", "initialPositionAmount", "netPositionAmount", "accruedInterestAmount", "averageDealPrice",
+		"netQuantity", "securitiesMovementType", "depository", "tradingCapacity", "placeOfTrade", "tradeDate", "settlementDate", "tradeLegDetails"})
 public class NetPosition2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1027,6 +1034,7 @@ public class NetPosition2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClrAcct", required = true)
 	public SecuritiesAccount18 getClearingAccount() {
 		return clearingAccount;
 	}
@@ -1035,6 +1043,7 @@ public class NetPosition2 {
 		this.clearingAccount = clearingAccount;
 	}
 
+	@XmlElement(name = "NonClrMmb")
 	public PartyIdentificationAndAccount31 getNonClearingMember() {
 		return nonClearingMember;
 	}
@@ -1043,6 +1052,7 @@ public class NetPosition2 {
 		this.nonClearingMember = nonClearingMember;
 	}
 
+	@XmlElement(name = "DlvryAcct")
 	public SecuritiesAccount19 getDeliveryAccount() {
 		return deliveryAccount;
 	}
@@ -1051,6 +1061,7 @@ public class NetPosition2 {
 		this.deliveryAccount = deliveryAccount;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -1059,6 +1070,7 @@ public class NetPosition2 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "InitlPosAmt")
 	public AmountAndDirection21 getInitialPositionAmount() {
 		return initialPositionAmount;
 	}
@@ -1067,6 +1079,7 @@ public class NetPosition2 {
 		this.initialPositionAmount = initialPositionAmount;
 	}
 
+	@XmlElement(name = "NetPosAmt", required = true)
 	public AmountAndDirection21 getNetPositionAmount() {
 		return netPositionAmount;
 	}
@@ -1075,6 +1088,7 @@ public class NetPosition2 {
 		this.netPositionAmount = netPositionAmount;
 	}
 
+	@XmlElement(name = "AcrdIntrstAmt")
 	public AmountAndDirection21 getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
@@ -1083,6 +1097,7 @@ public class NetPosition2 {
 		this.accruedInterestAmount = accruedInterestAmount;
 	}
 
+	@XmlElement(name = "AvrgDealPric")
 	public Price4 getAverageDealPrice() {
 		return averageDealPrice;
 	}
@@ -1091,6 +1106,7 @@ public class NetPosition2 {
 		this.averageDealPrice = averageDealPrice;
 	}
 
+	@XmlElement(name = "NetQty", required = true)
 	public FinancialInstrumentQuantity1Choice getNetQuantity() {
 		return netQuantity;
 	}
@@ -1099,6 +1115,7 @@ public class NetPosition2 {
 		this.netQuantity = netQuantity;
 	}
 
+	@XmlElement(name = "SctiesMvmntTp", required = true)
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
@@ -1107,6 +1124,7 @@ public class NetPosition2 {
 		this.securitiesMovementType = securitiesMovementType;
 	}
 
+	@XmlElement(name = "Dpstry", required = true)
 	public PartyIdentification34Choice getDepository() {
 		return depository;
 	}
@@ -1115,6 +1133,7 @@ public class NetPosition2 {
 		this.depository = depository;
 	}
 
+	@XmlElement(name = "TradgCpcty")
 	public TradingCapacity5Code getTradingCapacity() {
 		return tradingCapacity;
 	}
@@ -1123,6 +1142,7 @@ public class NetPosition2 {
 		this.tradingCapacity = tradingCapacity;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public MarketIdentification20 getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -1131,6 +1151,7 @@ public class NetPosition2 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "TradDt")
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
@@ -1139,6 +1160,7 @@ public class NetPosition2 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "SttlmDt")
 	public DateFormat15Choice getSettlementDate() {
 		return settlementDate;
 	}
@@ -1147,6 +1169,7 @@ public class NetPosition2 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "TradLegDtls")
 	public List<TradeLeg7> getTradeLegDetails() {
 		return tradeLegDetails;
 	}

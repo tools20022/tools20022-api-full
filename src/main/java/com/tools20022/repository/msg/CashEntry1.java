@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Posting of an item to a cash account, in the context of a cash transaction,
@@ -82,6 +86,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashEntry1", propOrder = {"amount", "date", "status", "identification", "statementIdentification", "accountServicerReference", "additionalEntryInformation"})
 public class CashEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -420,6 +426,7 @@ public class CashEntry1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt")
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -428,6 +435,7 @@ public class CashEntry1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Dt")
 	public DateAndDateTimeChoice getDate() {
 		return date;
 	}
@@ -436,6 +444,7 @@ public class CashEntry1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Sts")
 	public EntryStatus1Code getStatus() {
 		return status;
 	}
@@ -444,6 +453,7 @@ public class CashEntry1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Id")
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -452,6 +462,7 @@ public class CashEntry1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "StmtId")
 	public Max35Text getStatementIdentification() {
 		return statementIdentification;
 	}
@@ -460,6 +471,7 @@ public class CashEntry1 {
 		this.statementIdentification = statementIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcrRef")
 	public Number getAccountServicerReference() {
 		return accountServicerReference;
 	}
@@ -468,6 +480,7 @@ public class CashEntry1 {
 		this.accountServicerReference = accountServicerReference;
 	}
 
+	@XmlElement(name = "AddtlNtryInf")
 	public List<Max140Text> getAdditionalEntryInformation() {
 		return additionalEntryInformation;
 	}

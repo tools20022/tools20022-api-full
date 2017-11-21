@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Means by which a payment will be or has been made for settlement purposes.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Means by which a payment will be or has been made for settlement purposes."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaymentMeans1", propOrder = {"paymentType", "paymentMethodCode", "payeeCreditorAccount", "payeeFinancialInstitution", "payerDebtorAccount", "payerFinancialInstitution"})
 public class PaymentMeans1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -379,6 +385,7 @@ public class PaymentMeans1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtTp", required = true)
 	public PaymentTypeInformation19 getPaymentType() {
 		return paymentType;
 	}
@@ -387,6 +394,7 @@ public class PaymentMeans1 {
 		this.paymentType = paymentType;
 	}
 
+	@XmlElement(name = "PmtMtdCd", required = true)
 	public PaymentMethod4Code getPaymentMethodCode() {
 		return paymentMethodCode;
 	}
@@ -395,6 +403,7 @@ public class PaymentMeans1 {
 		this.paymentMethodCode = paymentMethodCode;
 	}
 
+	@XmlElement(name = "PyeeCdtrAcct", required = true)
 	public CashAccount16 getPayeeCreditorAccount() {
 		return payeeCreditorAccount;
 	}
@@ -403,6 +412,7 @@ public class PaymentMeans1 {
 		this.payeeCreditorAccount = payeeCreditorAccount;
 	}
 
+	@XmlElement(name = "PyeeFI", required = true)
 	public BranchAndFinancialInstitutionIdentification4 getPayeeFinancialInstitution() {
 		return payeeFinancialInstitution;
 	}
@@ -411,6 +421,7 @@ public class PaymentMeans1 {
 		this.payeeFinancialInstitution = payeeFinancialInstitution;
 	}
 
+	@XmlElement(name = "PyerDbtrAcct")
 	public CashAccount16 getPayerDebtorAccount() {
 		return payerDebtorAccount;
 	}
@@ -419,6 +430,7 @@ public class PaymentMeans1 {
 		this.payerDebtorAccount = payerDebtorAccount;
 	}
 
+	@XmlElement(name = "PyerFI")
 	public BranchAndFinancialInstitutionIdentification4 getPayerFinancialInstitution() {
 		return payerFinancialInstitution;
 	}

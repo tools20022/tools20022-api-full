@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FloatingInterestRate8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a fixed rate and a variable rate.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between a fixed rate and a variable rate."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InterestRate8Choice", propOrder = {"fixed", "floating"})
 public class InterestRate8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class InterestRate8Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Fxd", required = true)
 	public PercentageRate getFixed() {
 		return fixed;
 	}
@@ -184,6 +191,7 @@ public class InterestRate8Choice {
 		this.fixed = fixed;
 	}
 
+	@XmlElement(name = "Fltg", required = true)
 	public FloatingInterestRate8 getFloating() {
 		return floating;
 	}

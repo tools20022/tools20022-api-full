@@ -29,41 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code
- * CardPaymentServiceType2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType1Code
- * CardPaymentServiceType1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code
- * CardPaymentServiceType3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType4Code
- * CardPaymentServiceType4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType5Code
- * CardPaymentServiceType5Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code
- * CardPaymentServiceType6Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType7Code
- * CardPaymentServiceType7Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code
- * CardPaymentServiceType8Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code
- * CardPaymentServiceType9Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType10Code
- * CardPaymentServiceType10Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -252,6 +217,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmRemoveWhiteList
  * CardPaymentServiceTypeCode.mmRemoveWhiteList}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code
+ * CardPaymentServiceType2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType1Code
+ * CardPaymentServiceType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code
+ * CardPaymentServiceType3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType4Code
+ * CardPaymentServiceType4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType5Code
+ * CardPaymentServiceType5Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code
+ * CardPaymentServiceType6Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType7Code
+ * CardPaymentServiceType7Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code
+ * CardPaymentServiceType8Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code
+ * CardPaymentServiceType9Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType10Code
+ * CardPaymentServiceType10Code}</li>
  * </ul>
  * </li>
  * <li>

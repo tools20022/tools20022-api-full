@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information related to the result of the certificate management request.
@@ -91,6 +95,8 @@ import java.util.List;
  * "Information related to the result of the certificate management request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CertificateManagementResponse1", propOrder = {"POIIdentification", "TMIdentification", "certificateService", "result", "securityProfile", "clientCertificate", "clientCertificatePath", "serverCertificatePath"})
 public class CertificateManagementResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -461,6 +467,7 @@ public class CertificateManagementResponse1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "POIId", required = true)
 	public GenericIdentification72 getPOIIdentification() {
 		return pOIIdentification;
 	}
@@ -469,6 +476,7 @@ public class CertificateManagementResponse1 {
 		this.pOIIdentification = pOIIdentification;
 	}
 
+	@XmlElement(name = "TMId")
 	public GenericIdentification72 getTMIdentification() {
 		return tMIdentification;
 	}
@@ -477,6 +485,7 @@ public class CertificateManagementResponse1 {
 		this.tMIdentification = tMIdentification;
 	}
 
+	@XmlElement(name = "CertSvc", required = true)
 	public CardPaymentServiceType10Code getCertificateService() {
 		return certificateService;
 	}
@@ -485,6 +494,7 @@ public class CertificateManagementResponse1 {
 		this.certificateService = certificateService;
 	}
 
+	@XmlElement(name = "Rslt", required = true)
 	public ResponseType6 getResult() {
 		return result;
 	}
@@ -493,6 +503,7 @@ public class CertificateManagementResponse1 {
 		this.result = result;
 	}
 
+	@XmlElement(name = "SctyPrfl")
 	public Max35Text getSecurityProfile() {
 		return securityProfile;
 	}
@@ -501,6 +512,7 @@ public class CertificateManagementResponse1 {
 		this.securityProfile = securityProfile;
 	}
 
+	@XmlElement(name = "ClntCert")
 	public Max3000Binary getClientCertificate() {
 		return clientCertificate;
 	}
@@ -509,6 +521,7 @@ public class CertificateManagementResponse1 {
 		this.clientCertificate = clientCertificate;
 	}
 
+	@XmlElement(name = "ClntCertPth")
 	public List<Max10KBinary> getClientCertificatePath() {
 		return clientCertificatePath;
 	}
@@ -517,6 +530,7 @@ public class CertificateManagementResponse1 {
 		this.clientCertificatePath = clientCertificatePath;
 	}
 
+	@XmlElement(name = "SvrCertPth")
 	public List<Max10KBinary> getServerCertificatePath() {
 		return serverCertificatePath;
 	}

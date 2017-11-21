@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Deceased beneficial owner exemption information.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Deceased beneficial owner exemption information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DeceasedExemptionStatus1", propOrder = {"beneficialOwnerDeathDate", "deathCertificateSerialNumber", "issuingJurisdiction", "documentationAcknowledgementOfExemption"})
 public class DeceasedExemptionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -254,6 +260,7 @@ public class DeceasedExemptionStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BnfclOwnrDthDt", required = true)
 	public ISODate getBeneficialOwnerDeathDate() {
 		return beneficialOwnerDeathDate;
 	}
@@ -262,6 +269,7 @@ public class DeceasedExemptionStatus1 {
 		this.beneficialOwnerDeathDate = beneficialOwnerDeathDate;
 	}
 
+	@XmlElement(name = "DthCertSrlNb", required = true)
 	public Max35Text getDeathCertificateSerialNumber() {
 		return deathCertificateSerialNumber;
 	}
@@ -270,6 +278,7 @@ public class DeceasedExemptionStatus1 {
 		this.deathCertificateSerialNumber = deathCertificateSerialNumber;
 	}
 
+	@XmlElement(name = "IssgJursdctn", required = true)
 	public Max35Text getIssuingJurisdiction() {
 		return issuingJurisdiction;
 	}
@@ -278,6 +287,7 @@ public class DeceasedExemptionStatus1 {
 		this.issuingJurisdiction = issuingJurisdiction;
 	}
 
+	@XmlElement(name = "DcmnttnAckOfXmptn", required = true)
 	public AcknowledgementOfExemption1Choice getDocumentationAcknowledgementOfExemption() {
 		return documentationAcknowledgementOfExemption;
 	}

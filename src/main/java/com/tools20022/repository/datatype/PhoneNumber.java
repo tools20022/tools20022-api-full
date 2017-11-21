@@ -30,6 +30,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "\\+[0-9]{1,3}-[0-9()+\\-]{1,30}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -58,6 +60,7 @@ public class PhoneNumber {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PhoneNumber";
 				definition = "The collection of information which identifies a specific phone or FAX number as defined by telecom services.\nIt consists of a \"+\" followed by the country code (from 1 to 3 characters) then a \"-\" and finally, any combination of numbers, \"(\", \")\", \"+\" and \"-\" (up to 30 characters).";
+				pattern = "\\+[0-9]{1,3}-[0-9()+\\-]{1,30}";
 			}
 		});
 		return mmObject_lazy.get();

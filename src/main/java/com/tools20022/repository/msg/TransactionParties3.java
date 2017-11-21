@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details on the parties specific to the individual
@@ -84,6 +88,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionParties3", propOrder = {"initiatingParty", "debtor", "debtorAccount", "ultimateDebtor", "creditor", "creditorAccount", "ultimateCreditor", "tradingParty", "proprietary"})
 public class TransactionParties3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -534,6 +540,7 @@ public class TransactionParties3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InitgPty")
 	public PartyIdentification43 getInitiatingParty() {
 		return initiatingParty;
 	}
@@ -542,6 +549,7 @@ public class TransactionParties3 {
 		this.initiatingParty = initiatingParty;
 	}
 
+	@XmlElement(name = "Dbtr")
 	public PartyIdentification43 getDebtor() {
 		return debtor;
 	}
@@ -550,6 +558,7 @@ public class TransactionParties3 {
 		this.debtor = debtor;
 	}
 
+	@XmlElement(name = "DbtrAcct")
 	public CashAccount24 getDebtorAccount() {
 		return debtorAccount;
 	}
@@ -558,6 +567,7 @@ public class TransactionParties3 {
 		this.debtorAccount = debtorAccount;
 	}
 
+	@XmlElement(name = "UltmtDbtr")
 	public PartyIdentification43 getUltimateDebtor() {
 		return ultimateDebtor;
 	}
@@ -566,6 +576,7 @@ public class TransactionParties3 {
 		this.ultimateDebtor = ultimateDebtor;
 	}
 
+	@XmlElement(name = "Cdtr")
 	public PartyIdentification43 getCreditor() {
 		return creditor;
 	}
@@ -574,6 +585,7 @@ public class TransactionParties3 {
 		this.creditor = creditor;
 	}
 
+	@XmlElement(name = "CdtrAcct")
 	public CashAccount24 getCreditorAccount() {
 		return creditorAccount;
 	}
@@ -582,6 +594,7 @@ public class TransactionParties3 {
 		this.creditorAccount = creditorAccount;
 	}
 
+	@XmlElement(name = "UltmtCdtr")
 	public PartyIdentification43 getUltimateCreditor() {
 		return ultimateCreditor;
 	}
@@ -590,6 +603,7 @@ public class TransactionParties3 {
 		this.ultimateCreditor = ultimateCreditor;
 	}
 
+	@XmlElement(name = "TradgPty")
 	public PartyIdentification43 getTradingParty() {
 		return tradingParty;
 	}
@@ -598,6 +612,7 @@ public class TransactionParties3 {
 		this.tradingParty = tradingParty;
 	}
 
+	@XmlElement(name = "Prtry")
 	public List<ProprietaryParty3> getProprietary() {
 		return proprietary;
 	}

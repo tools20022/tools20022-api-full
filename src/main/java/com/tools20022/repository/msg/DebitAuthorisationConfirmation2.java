@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.DebitAuthorisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies whether or not the debit authorisation is granted.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies whether or not the debit authorisation is granted."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DebitAuthorisationConfirmation2", propOrder = {"debitAuthorisation", "amountToDebit", "valueDateToDebit", "reason"})
 public class DebitAuthorisationConfirmation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -299,6 +305,7 @@ public class DebitAuthorisationConfirmation2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DbtAuthstn", required = true)
 	public YesNoIndicator getDebitAuthorisation() {
 		return debitAuthorisation;
 	}
@@ -307,6 +314,7 @@ public class DebitAuthorisationConfirmation2 {
 		this.debitAuthorisation = debitAuthorisation;
 	}
 
+	@XmlElement(name = "AmtToDbt")
 	public ActiveCurrencyAndAmount getAmountToDebit() {
 		return amountToDebit;
 	}
@@ -315,6 +323,7 @@ public class DebitAuthorisationConfirmation2 {
 		this.amountToDebit = amountToDebit;
 	}
 
+	@XmlElement(name = "ValDtToDbt")
 	public ISODate getValueDateToDebit() {
 		return valueDateToDebit;
 	}
@@ -323,6 +332,7 @@ public class DebitAuthorisationConfirmation2 {
 		this.valueDateToDebit = valueDateToDebit;
 	}
 
+	@XmlElement(name = "Rsn")
 	public Max140Text getReason() {
 		return reason;
 	}

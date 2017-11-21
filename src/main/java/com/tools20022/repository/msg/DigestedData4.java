@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Digest computed on the identified data.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * DigestedData3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DigestedData4", propOrder = {"version", "digestAlgorithm", "encapsulatedContent", "digest"})
 public class DigestedData4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -270,6 +276,7 @@ public class DigestedData4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Number getVersion() {
 		return version;
 	}
@@ -278,6 +285,7 @@ public class DigestedData4 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "DgstAlgo", required = true)
 	public AlgorithmIdentification16 getDigestAlgorithm() {
 		return digestAlgorithm;
 	}
@@ -286,6 +294,7 @@ public class DigestedData4 {
 		this.digestAlgorithm = digestAlgorithm;
 	}
 
+	@XmlElement(name = "NcpsltdCntt", required = true)
 	public EncapsulatedContent3 getEncapsulatedContent() {
 		return encapsulatedContent;
 	}
@@ -294,6 +303,7 @@ public class DigestedData4 {
 		this.encapsulatedContent = encapsulatedContent;
 	}
 
+	@XmlElement(name = "Dgst", required = true)
 	public Max140Binary getDigest() {
 		return digest;
 	}

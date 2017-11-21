@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parties used for acting parties that apply either to the whole message or to
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ConfirmationPartyDetails3", propOrder = {"identification", "safekeepingAccount", "cashDetails", "alternateIdentification", "processingIdentification", "additionalInformation", "partyCapacity"})
 public class ConfirmationPartyDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -446,6 +452,7 @@ public class ConfirmationPartyDetails3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification32Choice getIdentification() {
 		return identification;
 	}
@@ -454,6 +461,7 @@ public class ConfirmationPartyDetails3 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SfkpgAcct")
 	public SecuritiesAccount3 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -462,6 +470,7 @@ public class ConfirmationPartyDetails3 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "CshDtls")
 	public AccountIdentification3Choice getCashDetails() {
 		return cashDetails;
 	}
@@ -470,6 +479,7 @@ public class ConfirmationPartyDetails3 {
 		this.cashDetails = cashDetails;
 	}
 
+	@XmlElement(name = "AltrnId")
 	public AlternatePartyIdentification5 getAlternateIdentification() {
 		return alternateIdentification;
 	}
@@ -478,6 +488,7 @@ public class ConfirmationPartyDetails3 {
 		this.alternateIdentification = alternateIdentification;
 	}
 
+	@XmlElement(name = "PrcgId")
 	public Max35Text getProcessingIdentification() {
 		return processingIdentification;
 	}
@@ -486,6 +497,7 @@ public class ConfirmationPartyDetails3 {
 		this.processingIdentification = processingIdentification;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public PartyTextInformation5 getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -494,6 +506,7 @@ public class ConfirmationPartyDetails3 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "PtyCpcty")
 	public TradingPartyCapacity2Choice getPartyCapacity() {
 		return partyCapacity;
 	}

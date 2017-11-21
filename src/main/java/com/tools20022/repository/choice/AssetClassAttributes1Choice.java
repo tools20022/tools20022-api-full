@@ -28,6 +28,10 @@ import com.tools20022.repository.msg.DerivativeForeignExchange2;
 import com.tools20022.repository.msg.DerivativeInterest2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Asset class specific details of a derivative.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Asset class specific details of a derivative."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AssetClassAttributes1Choice", propOrder = {"interest", "foreignExchange", "both"})
 public class AssetClassAttributes1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -230,6 +236,7 @@ public class AssetClassAttributes1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Intrst", required = true)
 	public DerivativeInterest2 getInterest() {
 		return interest;
 	}
@@ -238,6 +245,7 @@ public class AssetClassAttributes1Choice {
 		this.interest = interest;
 	}
 
+	@XmlElement(name = "FX", required = true)
 	public DerivativeForeignExchange2 getForeignExchange() {
 		return foreignExchange;
 	}
@@ -246,6 +254,7 @@ public class AssetClassAttributes1Choice {
 		this.foreignExchange = foreignExchange;
 	}
 
+	@XmlElement(name = "Both", required = true)
 	public AssetClassAttributes1 getBoth() {
 		return both;
 	}

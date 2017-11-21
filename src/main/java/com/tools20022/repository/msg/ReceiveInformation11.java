@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Completion of a securities settlement instruction, wherein securities are
@@ -119,6 +123,9 @@ import java.util.List;
  * ReceiveInformation6}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReceiveInformation11", propOrder = {"requestedSettlementDate", "effectiveSettlementDate", "settlementAmount", "stampDuty", "netAmount", "chargeDetails", "commissionDetails", "taxDetails", "settlementPartiesDetails",
+		"physicalTransfer", "physicalTransferDetails"})
 public class ReceiveInformation11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -777,6 +784,7 @@ public class ReceiveInformation11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ReqdSttlmDt")
 	public ISODate getRequestedSettlementDate() {
 		return requestedSettlementDate;
 	}
@@ -785,6 +793,7 @@ public class ReceiveInformation11 {
 		this.requestedSettlementDate = requestedSettlementDate;
 	}
 
+	@XmlElement(name = "FctvSttlmDt")
 	public DateAndDateTimeChoice getEffectiveSettlementDate() {
 		return effectiveSettlementDate;
 	}
@@ -793,6 +802,7 @@ public class ReceiveInformation11 {
 		this.effectiveSettlementDate = effectiveSettlementDate;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public ActiveCurrencyAndAmount getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -801,6 +811,7 @@ public class ReceiveInformation11 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "StmpDty")
 	public StampDutyType2Code getStampDuty() {
 		return stampDuty;
 	}
@@ -809,6 +820,7 @@ public class ReceiveInformation11 {
 		this.stampDuty = stampDuty;
 	}
 
+	@XmlElement(name = "NetAmt")
 	public ActiveCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
@@ -817,6 +829,7 @@ public class ReceiveInformation11 {
 		this.netAmount = netAmount;
 	}
 
+	@XmlElement(name = "ChrgDtls")
 	public List<Charge20> getChargeDetails() {
 		return chargeDetails;
 	}
@@ -825,6 +838,7 @@ public class ReceiveInformation11 {
 		this.chargeDetails = chargeDetails;
 	}
 
+	@XmlElement(name = "ComssnDtls")
 	public List<Commission12> getCommissionDetails() {
 		return commissionDetails;
 	}
@@ -833,6 +847,7 @@ public class ReceiveInformation11 {
 		this.commissionDetails = commissionDetails;
 	}
 
+	@XmlElement(name = "TaxDtls")
 	public List<Tax15> getTaxDetails() {
 		return taxDetails;
 	}
@@ -841,6 +856,7 @@ public class ReceiveInformation11 {
 		this.taxDetails = taxDetails;
 	}
 
+	@XmlElement(name = "SttlmPtiesDtls")
 	public ReceivingPartiesAndAccount8 getSettlementPartiesDetails() {
 		return settlementPartiesDetails;
 	}
@@ -849,6 +865,7 @@ public class ReceiveInformation11 {
 		this.settlementPartiesDetails = settlementPartiesDetails;
 	}
 
+	@XmlElement(name = "PhysTrf")
 	public PhysicalTransferType1Code getPhysicalTransfer() {
 		return physicalTransfer;
 	}
@@ -857,6 +874,7 @@ public class ReceiveInformation11 {
 		this.physicalTransfer = physicalTransfer;
 	}
 
+	@XmlElement(name = "PhysTrfDtls")
 	public DeliveryParameters4 getPhysicalTransferDetails() {
 		return physicalTransferDetails;
 	}

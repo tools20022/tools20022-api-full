@@ -36,6 +36,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the original group, to which the message refers.
@@ -107,6 +111,9 @@ import java.util.List;
  * OriginalGroupHeader1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalGroupHeader7", propOrder = {"originalMessageIdentification", "originalMessageNameIdentification", "originalCreationDateTime", "originalNumberOfTransactions", "originalControlSum", "groupStatus",
+		"statusReasonInformation", "numberOfTransactionsPerStatus"})
 public class OriginalGroupHeader7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -545,6 +552,7 @@ public class OriginalGroupHeader7 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMsgId", required = true)
 	public Max35Text getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}
@@ -553,6 +561,7 @@ public class OriginalGroupHeader7 {
 		this.originalMessageIdentification = originalMessageIdentification;
 	}
 
+	@XmlElement(name = "OrgnlMsgNmId", required = true)
 	public Max35Text getOriginalMessageNameIdentification() {
 		return originalMessageNameIdentification;
 	}
@@ -561,6 +570,7 @@ public class OriginalGroupHeader7 {
 		this.originalMessageNameIdentification = originalMessageNameIdentification;
 	}
 
+	@XmlElement(name = "OrgnlCreDtTm")
 	public ISODateTime getOriginalCreationDateTime() {
 		return originalCreationDateTime;
 	}
@@ -569,6 +579,7 @@ public class OriginalGroupHeader7 {
 		this.originalCreationDateTime = originalCreationDateTime;
 	}
 
+	@XmlElement(name = "OrgnlNbOfTxs")
 	public Max15NumericText getOriginalNumberOfTransactions() {
 		return originalNumberOfTransactions;
 	}
@@ -577,6 +588,7 @@ public class OriginalGroupHeader7 {
 		this.originalNumberOfTransactions = originalNumberOfTransactions;
 	}
 
+	@XmlElement(name = "OrgnlCtrlSum")
 	public DecimalNumber getOriginalControlSum() {
 		return originalControlSum;
 	}
@@ -585,6 +597,7 @@ public class OriginalGroupHeader7 {
 		this.originalControlSum = originalControlSum;
 	}
 
+	@XmlElement(name = "GrpSts")
 	public ExternalPaymentGroupStatus1Code getGroupStatus() {
 		return groupStatus;
 	}
@@ -593,6 +606,7 @@ public class OriginalGroupHeader7 {
 		this.groupStatus = groupStatus;
 	}
 
+	@XmlElement(name = "StsRsnInf")
 	public List<StatusReasonInformation9> getStatusReasonInformation() {
 		return statusReasonInformation;
 	}
@@ -601,6 +615,7 @@ public class OriginalGroupHeader7 {
 		this.statusReasonInformation = statusReasonInformation;
 	}
 
+	@XmlElement(name = "NbOfTxsPerSts")
 	public List<NumberOfTransactionsPerStatus5> getNumberOfTransactionsPerStatus() {
 		return numberOfTransactionsPerStatus;
 	}

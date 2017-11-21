@@ -25,6 +25,10 @@ import com.tools20022.repository.choice.OpeningBalance3Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Balance of a financial instrument for a specific statement page.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaginationBalance1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PaginationBalance2", propOrder = {"openingBalance", "closingBalance"})
 public class PaginationBalance2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -171,6 +177,7 @@ public class PaginationBalance2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OpngBal")
 	public OpeningBalance3Choice getOpeningBalance() {
 		return openingBalance;
 	}
@@ -179,6 +186,7 @@ public class PaginationBalance2 {
 		this.openingBalance = openingBalance;
 	}
 
+	@XmlElement(name = "ClsgBal")
 	public ClosingBalance3Choice getClosingBalance() {
 		return closingBalance;
 	}

@@ -26,9 +26,11 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CorporateActionsISOLatestversion;
 import com.tools20022.repository.msgset.CorporateActionsMaintenance20162017;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -51,9 +53,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.033.001.07}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -114,6 +113,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.033.001.07}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -129,6 +131,9 @@ import java.util.List;
  * CorporateActionInstructionV06}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionInstructionV07", propOrder = {"changeInstructionIndicator", "cancelledInstructionIdentification", "instructionCancellationRequestIdentification", "otherDocumentIdentification", "eventsLinkage",
+		"corporateActionGeneralInformation", "accountDetails", "beneficialOwnerDetails", "corporateActionInstruction", "additionalInformation", "supplementaryData"})
 public class CorporateActionInstructionV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +183,14 @@ public class CorporateActionInstructionV07 {
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionInstructionV07.class.getMethod("getChangeInstructionIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification31 cancelledInstructionIdentification;
 	/**
@@ -219,6 +232,14 @@ public class CorporateActionInstructionV07 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification31.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionInstructionV07.class.getMethod("getCancelledInstructionIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DocumentIdentification31 instructionCancellationRequestIdentification;
@@ -265,6 +286,14 @@ public class CorporateActionInstructionV07 {
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification31.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionInstructionV07.class.getMethod("getInstructionCancellationRequestIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<DocumentIdentification32> otherDocumentIdentification;
 	/**
@@ -305,6 +334,14 @@ public class CorporateActionInstructionV07 {
 			previousVersion_lazy = () -> CorporateActionInstructionV06.mmOtherDocumentIdentification;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification32.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionInstructionV07.class.getMethod("getOtherDocumentIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<CorporateActionEventReference3> eventsLinkage;
@@ -349,6 +386,14 @@ public class CorporateActionInstructionV07 {
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionEventReference3.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionInstructionV07.class.getMethod("getEventsLinkage", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionGeneralInformation107 corporateActionGeneralInformation;
 	/**
@@ -389,6 +434,14 @@ public class CorporateActionInstructionV07 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionGeneralInformation107.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionInstructionV07.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AccountAndBalance35 accountDetails;
@@ -434,6 +487,14 @@ public class CorporateActionInstructionV07 {
 			minOccurs = 1;
 			complexType_lazy = () -> AccountAndBalance35.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionInstructionV07.class.getMethod("getAccountDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PartyIdentification93> beneficialOwnerDetails;
 	/**
@@ -474,6 +535,14 @@ public class CorporateActionInstructionV07 {
 			previousVersion_lazy = () -> CorporateActionInstructionV06.mmBeneficialOwnerDetails;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification93.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionInstructionV07.class.getMethod("getBeneficialOwnerDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionOption131 corporateActionInstruction;
@@ -516,6 +585,14 @@ public class CorporateActionInstructionV07 {
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionOption131.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionInstructionV07.class.getMethod("getCorporateActionInstruction", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionNarrative30 additionalInformation;
 	/**
@@ -556,6 +633,14 @@ public class CorporateActionInstructionV07 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionNarrative30.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionInstructionV07.class.getMethod("getAdditionalInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
@@ -600,6 +685,14 @@ public class CorporateActionInstructionV07 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionInstructionV07.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -613,10 +706,13 @@ public class CorporateActionInstructionV07 {
 				rootElement = "Document";
 				xmlTag = "CorpActnInstr";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV07.mmChangeInstructionIndicator, CorporateActionInstructionV07.mmCancelledInstructionIdentification,
-						CorporateActionInstructionV07.mmInstructionCancellationRequestIdentification, CorporateActionInstructionV07.mmOtherDocumentIdentification, CorporateActionInstructionV07.mmEventsLinkage,
-						CorporateActionInstructionV07.mmCorporateActionGeneralInformation, CorporateActionInstructionV07.mmAccountDetails, CorporateActionInstructionV07.mmBeneficialOwnerDetails,
-						CorporateActionInstructionV07.mmCorporateActionInstruction, CorporateActionInstructionV07.mmAdditionalInformation, CorporateActionInstructionV07.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmChangeInstructionIndicator,
+						com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmCancelledInstructionIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmInstructionCancellationRequestIdentification, com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmEventsLinkage, com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmAccountDetails, com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmBeneficialOwnerDetails,
+						com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmCorporateActionInstruction, com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -626,10 +722,16 @@ public class CorporateActionInstructionV07 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CorporateActionInstructionV07.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ChngInstrInd")
 	public YesNoIndicator getChangeInstructionIndicator() {
 		return changeInstructionIndicator;
 	}
@@ -638,6 +740,7 @@ public class CorporateActionInstructionV07 {
 		this.changeInstructionIndicator = changeInstructionIndicator;
 	}
 
+	@XmlElement(name = "CancInstrId")
 	public DocumentIdentification31 getCancelledInstructionIdentification() {
 		return cancelledInstructionIdentification;
 	}
@@ -646,6 +749,7 @@ public class CorporateActionInstructionV07 {
 		this.cancelledInstructionIdentification = cancelledInstructionIdentification;
 	}
 
+	@XmlElement(name = "InstrCxlReqId")
 	public DocumentIdentification31 getInstructionCancellationRequestIdentification() {
 		return instructionCancellationRequestIdentification;
 	}
@@ -654,6 +758,7 @@ public class CorporateActionInstructionV07 {
 		this.instructionCancellationRequestIdentification = instructionCancellationRequestIdentification;
 	}
 
+	@XmlElement(name = "OthrDocId")
 	public List<DocumentIdentification32> getOtherDocumentIdentification() {
 		return otherDocumentIdentification;
 	}
@@ -662,6 +767,7 @@ public class CorporateActionInstructionV07 {
 		this.otherDocumentIdentification = otherDocumentIdentification;
 	}
 
+	@XmlElement(name = "EvtsLkg")
 	public List<CorporateActionEventReference3> getEventsLinkage() {
 		return eventsLinkage;
 	}
@@ -670,6 +776,7 @@ public class CorporateActionInstructionV07 {
 		this.eventsLinkage = eventsLinkage;
 	}
 
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionGeneralInformation107 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
@@ -678,6 +785,7 @@ public class CorporateActionInstructionV07 {
 		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
 	}
 
+	@XmlElement(name = "AcctDtls", required = true)
 	public AccountAndBalance35 getAccountDetails() {
 		return accountDetails;
 	}
@@ -686,6 +794,7 @@ public class CorporateActionInstructionV07 {
 		this.accountDetails = accountDetails;
 	}
 
+	@XmlElement(name = "BnfclOwnrDtls")
 	public List<PartyIdentification93> getBeneficialOwnerDetails() {
 		return beneficialOwnerDetails;
 	}
@@ -694,6 +803,7 @@ public class CorporateActionInstructionV07 {
 		this.beneficialOwnerDetails = beneficialOwnerDetails;
 	}
 
+	@XmlElement(name = "CorpActnInstr", required = true)
 	public CorporateActionOption131 getCorporateActionInstruction() {
 		return corporateActionInstruction;
 	}
@@ -702,6 +812,7 @@ public class CorporateActionInstructionV07 {
 		this.corporateActionInstruction = corporateActionInstruction;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public CorporateActionNarrative30 getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -710,11 +821,18 @@ public class CorporateActionInstructionV07 {
 		this.additionalInformation = additionalInformation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.033.07.07")
+	static public class Document {
+		@XmlElement(name = "CorpActnInstr", required = true)
+		public CorporateActionInstructionV07 messageBody;
 	}
 }

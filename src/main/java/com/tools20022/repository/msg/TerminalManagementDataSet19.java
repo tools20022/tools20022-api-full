@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data set containing the acceptor parameters of a point of interaction (POI).
@@ -86,6 +90,8 @@ import java.util.List;
  * TerminalManagementDataSet14}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TerminalManagementDataSet19", propOrder = {"identification", "sequenceCounter", "POIIdentification", "configurationScope", "content"})
 public class TerminalManagementDataSet19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -382,6 +388,7 @@ public class TerminalManagementDataSet19 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DataSetIdentification6 getIdentification() {
 		return identification;
 	}
@@ -390,6 +397,7 @@ public class TerminalManagementDataSet19 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "SeqCntr")
 	public Max9NumericText getSequenceCounter() {
 		return sequenceCounter;
 	}
@@ -398,6 +406,7 @@ public class TerminalManagementDataSet19 {
 		this.sequenceCounter = sequenceCounter;
 	}
 
+	@XmlElement(name = "POIId")
 	public List<GenericIdentification71> getPOIIdentification() {
 		return pOIIdentification;
 	}
@@ -406,6 +415,7 @@ public class TerminalManagementDataSet19 {
 		this.pOIIdentification = pOIIdentification;
 	}
 
+	@XmlElement(name = "CfgtnScp")
 	public PartyType15Code getConfigurationScope() {
 		return configurationScope;
 	}
@@ -414,6 +424,7 @@ public class TerminalManagementDataSet19 {
 		this.configurationScope = configurationScope;
 	}
 
+	@XmlElement(name = "Cntt", required = true)
 	public AcceptorConfigurationContent5 getContent() {
 		return content;
 	}

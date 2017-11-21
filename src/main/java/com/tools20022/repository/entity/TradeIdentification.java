@@ -22,6 +22,7 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -35,6 +36,41 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCounterpartyReference
+ * TradeIdentification.mmCounterpartyReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmIdentification
+ * TradeIdentification.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCommonIdentification
+ * TradeIdentification.mmCommonIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmMatchingReference
+ * TradeIdentification.mmMatchingReference}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradeIdentification#mmTrade
+ * TradeIdentification.mmTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmUniqueTradeIdentifier
+ * TradeIdentification.mmUniqueTradeIdentifier}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmClearingBrokerIdentification
+ * TradeIdentification.mmClearingBrokerIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
+ * SecuritiesTradeIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentIdentification
+ * PaymentIdentification}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -66,41 +102,6 @@ import java.util.List;
  * ClearingBrokerIdentification.mmRelatedTradeIdentification}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
- * SecuritiesTradeIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentIdentification
- * PaymentIdentification}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCounterpartyReference
- * TradeIdentification.mmCounterpartyReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmIdentification
- * TradeIdentification.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCommonIdentification
- * TradeIdentification.mmCommonIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmMatchingReference
- * TradeIdentification.mmMatchingReference}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradeIdentification#mmTrade
- * TradeIdentification.mmTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmUniqueTradeIdentifier
- * TradeIdentification.mmUniqueTradeIdentifier}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmClearingBrokerIdentification
- * TradeIdentification.mmClearingBrokerIdentification}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -130,11 +131,6 @@ public class TradeIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification
-	 * TradeIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -281,6 +277,11 @@ public class TradeIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification
+	 * TradeIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -307,7 +308,7 @@ public class TradeIdentification {
 					InvestmentAccountModification3.mmCounterpartyReference, AccountManagementConfirmation4.mmCounterpartyReference, GeneralInformation5.mmCounterpartyReference,
 					SecuredMarketTransaction4.mmCounterpartyProprietaryTransactionIdentification, ForeignExchangeSwapTransaction3.mmCounterpartyProprietaryTransactionIdentification,
 					OvernightIndexSwapTransaction4.mmCounterpartyProprietaryTransactionIdentification, UnsecuredMarketTransaction4.mmCounterpartyProprietaryTransactionIdentification);
-			elementContext_lazy = () -> TradeIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CounterpartyReference";
@@ -315,6 +316,14 @@ public class TradeIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeIdentification.class.getMethod("getCounterpartyReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text identification;
@@ -329,11 +338,6 @@ public class TradeIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification
-	 * TradeIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1419,6 +1423,11 @@ public class TradeIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification
+	 * TradeIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1535,7 +1544,7 @@ public class TradeIdentification {
 							ForeignExchangeSwapTransaction3.mmRelatedProprietaryTransactionIdentification, OvernightIndexSwapTransaction4.mmProprietaryTransactionIdentification,
 							OvernightIndexSwapTransaction4.mmRelatedProprietaryTransactionIdentification, UnsecuredMarketTransaction4.mmProprietaryTransactionIdentification,
 							UnsecuredMarketTransaction4.mmRelatedProprietaryTransactionIdentification);
-			elementContext_lazy = () -> TradeIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
@@ -1543,6 +1552,14 @@ public class TradeIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeIdentification.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text commonIdentification;
@@ -1556,11 +1573,6 @@ public class TradeIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification
-	 * TradeIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2122,6 +2134,11 @@ public class TradeIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification
+	 * TradeIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2181,7 +2198,7 @@ public class TradeIdentification {
 					TransactionTypeAndAdditionalParameters16.mmCommonIdentification, Transaction54.mmCommonIdentification, Transaction52.mmCommonIdentification, TransactionTypeAndAdditionalParameters19.mmCommonIdentification,
 					SecuritiesTradeDetails69.mmCommonIdentification, TransactionTypeAndAdditionalParameters20.mmCommonIdentification, Transaction57.mmCommonIdentification, TransactionTypeAndAdditionalParameters18.mmCommonIdentification,
 					SettlementTypeAndAdditionalParameters20.mmCommonIdentification, Transaction56.mmCommonIdentification, Transaction55.mmCommonIdentification, FixingConditions1.mmCommonReference);
-			elementContext_lazy = () -> TradeIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommonIdentification";
@@ -2189,6 +2206,14 @@ public class TradeIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeIdentification.class.getMethod("getCommonIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text matchingReference;
@@ -2201,11 +2226,6 @@ public class TradeIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification
-	 * TradeIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2290,6 +2310,11 @@ public class TradeIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification
+	 * TradeIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2310,7 +2335,7 @@ public class TradeIdentification {
 					TradeData11.mmMatchingSystemMatchedSideReference, TradeData14.mmMatchingSystemUniqueReference, TradeData14.mmMatchingSystemMatchingReference, TradeData14.mmMatchingSystemMatchedSideReference,
 					TradeAgreement15.mmMatchingSystemReference, TradeData15.mmMatchingSystemUniqueReference, TradeData15.mmMatchingSystemMatchingReference, TradeData15.mmMatchingSystemMatchedSideReference,
 					TradeData16.mmMatchingSystemUniqueReference, TradeData16.mmMatchingSystemMatchingReference, TradeData16.mmMatchingSystemMatchedSideReference);
-			elementContext_lazy = () -> TradeIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MatchingReference";
@@ -2318,6 +2343,14 @@ public class TradeIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeIdentification.class.getMethod("getMatchingReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Trade trade;
@@ -2356,7 +2389,7 @@ public class TradeIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> TradeIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trade";
@@ -2382,11 +2415,6 @@ public class TradeIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification
-	 * TradeIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2453,6 +2481,11 @@ public class TradeIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification
+	 * TradeIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2474,7 +2507,7 @@ public class TradeIdentification {
 					SecuredMarketTransaction2.mmUniqueTransactionIdentifier, UnsecuredMarketTransaction3.mmUniqueTransactionIdentifier, OvernightIndexSwapTransaction3.mmUniqueTransactionIdentifier,
 					SecuredMarketTransaction3.mmUniqueTransactionIdentifier, SecuredMarketTransaction4.mmUniqueTransactionIdentifier, ForeignExchangeSwapTransaction3.mmUniqueTransactionIdentifier,
 					OvernightIndexSwapTransaction4.mmUniqueTransactionIdentifier, UnsecuredMarketTransaction4.mmUniqueTransactionIdentifier);
-			elementContext_lazy = () -> TradeIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UniqueTradeIdentifier";
@@ -2482,6 +2515,14 @@ public class TradeIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return TradeIdentification.class.getMethod("getUniqueTradeIdentifier", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.ClearingBrokerIdentification> clearingBrokerIdentification;
@@ -2503,11 +2544,6 @@ public class TradeIdentification {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.ClearingBrokerIdentification
 	 * ClearingBrokerIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification
-	 * TradeIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2526,6 +2562,11 @@ public class TradeIdentification {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification
+	 * TradeIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2540,7 +2581,7 @@ public class TradeIdentification {
 		{
 			derivation_lazy = () -> Arrays.asList(RegulatoryReporting1.mmClearingBrokerIdentification, RegulatoryReporting4.mmClearingBrokerIdentification, GeneralInformation5.mmBrokersReference,
 					RegulatoryReporting6.mmClearingBrokerIdentification);
-			elementContext_lazy = () -> TradeIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingBrokerIdentification";
@@ -2561,10 +2602,16 @@ public class TradeIdentification {
 				definition = "Specifies the different identifications associated with a trade.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.mmTradeRelatedIdentifications, com.tools20022.repository.entity.ClearingBrokerIdentification.mmRelatedTradeIdentification);
 				subType_lazy = () -> Arrays.asList(SecuritiesTradeIdentification.mmObject(), PaymentIdentification.mmObject());
-				element_lazy = () -> Arrays.asList(TradeIdentification.mmCounterpartyReference, TradeIdentification.mmIdentification, TradeIdentification.mmCommonIdentification, TradeIdentification.mmMatchingReference,
-						TradeIdentification.mmTrade, TradeIdentification.mmUniqueTradeIdentifier, TradeIdentification.mmClearingBrokerIdentification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradeIdentification.mmCounterpartyReference, com.tools20022.repository.entity.TradeIdentification.mmIdentification,
+						com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification, com.tools20022.repository.entity.TradeIdentification.mmMatchingReference, com.tools20022.repository.entity.TradeIdentification.mmTrade,
+						com.tools20022.repository.entity.TradeIdentification.mmUniqueTradeIdentifier, com.tools20022.repository.entity.TradeIdentification.mmClearingBrokerIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(TransactionReferences1.mmObject(), TransactionReferences2.mmObject(), TransactionReferences3.mmObject(), UniqueTransactionIdentifier1.mmObject(),
 						MatchingSystemReference1Choice.mmObject(), UniqueTransactionIdentifier2.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return TradeIdentification.class;
 			}
 		});
 		return mmObject_lazy.get();

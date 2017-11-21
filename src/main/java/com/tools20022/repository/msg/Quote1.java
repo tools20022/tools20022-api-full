@@ -33,6 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Proposition of price for a financial instrument.
@@ -106,6 +110,9 @@ import java.util.List;
  * definition} = "Proposition of price for a financial instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Quote1", propOrder = {"type", "qualifier", "validUntilDateTime", "quoteOriginator", "quoteOriginatorRole", "requestorEligibility", "currency", "spreadAndBenchmarkCurveDetails", "offerYield", "midYield", "bidYield",
+		"sourceOfQuote", "financialInstrumentDetails", "underlyingFinancialInstrumentDetails", "financialInstrumentAttributes", "stipulations", "underlyingFinancialAttributes", "underlyingStipulations"})
 public class Quote1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -978,6 +985,7 @@ public class Quote1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp")
 	public QuoteType1Code getType() {
 		return type;
 	}
@@ -986,6 +994,7 @@ public class Quote1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Qlfr")
 	public List<Qualifier1Code> getQualifier() {
 		return qualifier;
 	}
@@ -994,6 +1003,7 @@ public class Quote1 {
 		this.qualifier = qualifier;
 	}
 
+	@XmlElement(name = "VldUntilDtTm")
 	public ISODateTime getValidUntilDateTime() {
 		return validUntilDateTime;
 	}
@@ -1002,6 +1012,7 @@ public class Quote1 {
 		this.validUntilDateTime = validUntilDateTime;
 	}
 
+	@XmlElement(name = "QtOrgtr")
 	public PartyIdentification24Choice getQuoteOriginator() {
 		return quoteOriginator;
 	}
@@ -1010,6 +1021,7 @@ public class Quote1 {
 		this.quoteOriginator = quoteOriginator;
 	}
 
+	@XmlElement(name = "QtOrgtrRole")
 	public OriginatorRole1Code getQuoteOriginatorRole() {
 		return quoteOriginatorRole;
 	}
@@ -1018,6 +1030,7 @@ public class Quote1 {
 		this.quoteOriginatorRole = quoteOriginatorRole;
 	}
 
+	@XmlElement(name = "RqstrElgblty")
 	public Eligibility1Code getRequestorEligibility() {
 		return requestorEligibility;
 	}
@@ -1026,6 +1039,7 @@ public class Quote1 {
 		this.requestorEligibility = requestorEligibility;
 	}
 
+	@XmlElement(name = "Ccy")
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
@@ -1034,6 +1048,7 @@ public class Quote1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "SprdAndBchmkCrvDtls")
 	public BenchmarkCurve1 getSpreadAndBenchmarkCurveDetails() {
 		return spreadAndBenchmarkCurveDetails;
 	}
@@ -1042,6 +1057,7 @@ public class Quote1 {
 		this.spreadAndBenchmarkCurveDetails = spreadAndBenchmarkCurveDetails;
 	}
 
+	@XmlElement(name = "OfferYld")
 	public YieldCalculation1 getOfferYield() {
 		return offerYield;
 	}
@@ -1050,6 +1066,7 @@ public class Quote1 {
 		this.offerYield = offerYield;
 	}
 
+	@XmlElement(name = "MidYld")
 	public YieldCalculation1 getMidYield() {
 		return midYield;
 	}
@@ -1058,6 +1075,7 @@ public class Quote1 {
 		this.midYield = midYield;
 	}
 
+	@XmlElement(name = "BidYld")
 	public YieldCalculation1 getBidYield() {
 		return bidYield;
 	}
@@ -1066,6 +1084,7 @@ public class Quote1 {
 		this.bidYield = bidYield;
 	}
 
+	@XmlElement(name = "SrcOfQt")
 	public PartyIdentification25Choice getSourceOfQuote() {
 		return sourceOfQuote;
 	}
@@ -1074,6 +1093,7 @@ public class Quote1 {
 		this.sourceOfQuote = sourceOfQuote;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public SecurityIdentification7 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -1082,6 +1102,7 @@ public class Quote1 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "UndrlygFinInstrmDtls")
 	public List<SecurityIdentification7> getUnderlyingFinancialInstrumentDetails() {
 		return underlyingFinancialInstrumentDetails;
 	}
@@ -1090,6 +1111,7 @@ public class Quote1 {
 		this.underlyingFinancialInstrumentDetails = underlyingFinancialInstrumentDetails;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts", required = true)
 	public FinancialInstrumentAttributes1 getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -1098,6 +1120,7 @@ public class Quote1 {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "Stiptns")
 	public FinancialInstrumentStipulations getStipulations() {
 		return stipulations;
 	}
@@ -1106,6 +1129,7 @@ public class Quote1 {
 		this.stipulations = stipulations;
 	}
 
+	@XmlElement(name = "UndrlygFinAttrbts")
 	public List<FinancialInstrumentAttributes1> getUnderlyingFinancialAttributes() {
 		return underlyingFinancialAttributes;
 	}
@@ -1114,6 +1138,7 @@ public class Quote1 {
 		this.underlyingFinancialAttributes = underlyingFinancialAttributes;
 	}
 
+	@XmlElement(name = "UndrlygStiptns")
 	public List<FinancialInstrumentStipulations> getUnderlyingStipulations() {
 		return underlyingStipulations;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the securities order transmission attributes.<br>
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the securities order transmission attributes.\r\n"</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTransactionTransmission2", propOrder = {"transmissionIndicator", "transmittingBuyer", "transmittingSeller"})
 public class SecuritiesTransactionTransmission2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -239,6 +245,7 @@ public class SecuritiesTransactionTransmission2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrnsmssnInd", required = true)
 	public TrueFalseIndicator getTransmissionIndicator() {
 		return transmissionIndicator;
 	}
@@ -247,6 +254,7 @@ public class SecuritiesTransactionTransmission2 {
 		this.transmissionIndicator = transmissionIndicator;
 	}
 
+	@XmlElement(name = "TrnsmttgBuyr")
 	public LEIIdentifier getTransmittingBuyer() {
 		return transmittingBuyer;
 	}
@@ -255,6 +263,7 @@ public class SecuritiesTransactionTransmission2 {
 		this.transmittingBuyer = transmittingBuyer;
 	}
 
+	@XmlElement(name = "TrnsmttgSellr")
 	public LEIIdentifier getTransmittingSeller() {
 		return transmittingSeller;
 	}

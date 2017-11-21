@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.OrderStatusAndReason9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of status.
@@ -69,6 +73,8 @@ import java.util.List;
  * definition} = "Choice of status."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Status26Choice", propOrder = {"cancellationStatusReport", "individualCancellationStatusReport"})
 public class Status26Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -175,6 +181,7 @@ public class Status26Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CxlStsRpt", required = true)
 	public OrderStatusAndReason9 getCancellationStatusReport() {
 		return cancellationStatusReport;
 	}
@@ -183,6 +190,7 @@ public class Status26Choice {
 		this.cancellationStatusReport = cancellationStatusReport;
 	}
 
+	@XmlElement(name = "IndvCxlStsRpt", required = true)
 	public List<IndividualOrderStatusAndReason8> getIndividualCancellationStatusReport() {
 		return individualCancellationStatusReport;
 	}

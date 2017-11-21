@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to search for a member.
@@ -65,6 +69,8 @@ import java.util.List;
  * definition} = "Defines the criteria used to search for a member."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MemberSearchCriteria2", propOrder = {"identification", "type", "status"})
 public class MemberSearchCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -228,6 +234,7 @@ public class MemberSearchCriteria2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public List<MemberIdentification2Choice> getIdentification() {
 		return identification;
 	}
@@ -236,6 +243,7 @@ public class MemberSearchCriteria2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Tp")
 	public List<MemberType1Code> getType() {
 		return type;
 	}
@@ -244,6 +252,7 @@ public class MemberSearchCriteria2 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Sts")
 	public List<MemberStatus1Code> getStatus() {
 		return status;
 	}

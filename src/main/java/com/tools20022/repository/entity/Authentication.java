@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,6 +40,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmCardholder
+ * Authentication.mmCardholder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationMethod
+ * Authentication.mmAuthenticationMethod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationEntity
+ * Authentication.mmAuthenticationEntity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationValue
+ * Authentication.mmAuthenticationValue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmPINFormat
+ * Authentication.mmPINFormat}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmPIN
+ * Authentication.mmPIN}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationSupport
+ * Authentication.mmAuthenticationSupport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Authentication#mmCollectionIndicator
+ * Authentication.mmCollectionIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmMandate
+ * Authentication.mmMandate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationResult
+ * Authentication.mmAuthenticationResult}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -113,37 +145,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardholderAuthentication10.mmCardholderOnLinePIN}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmCardholder
- * Authentication.mmCardholder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationMethod
- * Authentication.mmAuthenticationMethod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationEntity
- * Authentication.mmAuthenticationEntity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationValue
- * Authentication.mmAuthenticationValue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmPINFormat
- * Authentication.mmPINFormat}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmPIN
- * Authentication.mmPIN}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationSupport
- * Authentication.mmAuthenticationSupport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Authentication#mmCollectionIndicator
- * Authentication.mmCollectionIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmMandate
- * Authentication.mmMandate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationResult
- * Authentication.mmAuthenticationResult}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -198,7 +199,7 @@ public class Authentication {
 	 */
 	public static final MMBusinessAssociationEnd mmCardholder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Authentication.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Authentication.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cardholder";
@@ -221,11 +222,6 @@ public class Authentication {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethodCode
 	 * AuthenticationMethodCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Authentication
-	 * Authentication}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -265,6 +261,11 @@ public class Authentication {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Authentication
+	 * Authentication}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -280,7 +281,7 @@ public class Authentication {
 			derivation_lazy = () -> Arrays.asList(CardholderAuthentication2.mmAuthenticationMethod, CardholderAuthentication4.mmAuthenticationMethod, CardholderAuthentication1.mmAuthenticationMethod,
 					CardholderAuthentication3.mmAuthenticationMethod, CardholderAuthentication5.mmAuthenticationMethod, CardholderAuthentication6.mmAuthenticationMethod, CardholderAuthentication7.mmAuthenticationMethod,
 					CardholderAuthentication8.mmAuthenticationMethod, CardholderAuthentication9.mmAuthenticationMethod, MandateAuthentication1.mmChannel, CardholderAuthentication10.mmAuthenticationMethod);
-			elementContext_lazy = () -> Authentication.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Authentication.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthenticationMethod";
@@ -288,6 +289,14 @@ public class Authentication {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AuthenticationMethodCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Authentication.class.getMethod("getAuthenticationMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AuthenticationEntityCode authenticationEntity;
@@ -301,11 +310,6 @@ public class Authentication {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode
 	 * AuthenticationEntityCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Authentication
-	 * Authentication}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -330,6 +334,11 @@ public class Authentication {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Authentication
+	 * Authentication}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -345,7 +354,7 @@ public class Authentication {
 		{
 			derivation_lazy = () -> Arrays.asList(CardholderAuthentication2.mmAuthenticationEntity, CardholderAuthentication4.mmAuthenticationEntity, CardholderAuthentication1.mmAuthenticationEntity,
 					CardholderAuthentication3.mmAuthenticationEntity, CardholderAuthentication5.mmAuthenticationEntity, MandateAuthentication1.mmMessageAuthenticationCode);
-			elementContext_lazy = () -> Authentication.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Authentication.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthenticationEntity";
@@ -353,6 +362,14 @@ public class Authentication {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AuthenticationEntityCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Authentication.class.getMethod("getAuthenticationEntity", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max70Text authenticationValue;
@@ -365,11 +382,6 @@ public class Authentication {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Authentication
-	 * Authentication}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -400,6 +412,11 @@ public class Authentication {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Authentication
+	 * Authentication}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -416,7 +433,7 @@ public class Authentication {
 			derivation_lazy = () -> Arrays.asList(CardholderAuthentication1.mmAuthenticationValue, CardholderAuthentication3.mmAuthenticationValue, CardholderAuthentication5.mmAuthenticationValue,
 					CardholderAuthentication6.mmAuthenticationValue, CardholderAuthentication7.mmAuthenticationValue, CardholderAuthentication8.mmAuthenticationValue, CardholderAuthentication9.mmAuthenticationValue,
 					CardholderAuthentication10.mmAuthenticationValue);
-			elementContext_lazy = () -> Authentication.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Authentication.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthenticationValue";
@@ -424,6 +441,14 @@ public class Authentication {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Authentication.class.getMethod("getAuthenticationValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PINFormatCode pINFormat;
@@ -437,11 +462,6 @@ public class Authentication {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PINFormatCode
 	 * PINFormatCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Authentication
-	 * Authentication}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -458,6 +478,11 @@ public class Authentication {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Authentication
+	 * Authentication}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -471,7 +496,7 @@ public class Authentication {
 	public static final MMBusinessAttribute mmPINFormat = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(OnLinePIN1.mmPINFormat, OnLinePIN2.mmPINFormat, OnLinePIN3.mmPINFormat, OnLinePIN4.mmPINFormat, OnLinePIN5.mmPINFormat);
-			elementContext_lazy = () -> Authentication.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Authentication.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PINFormat";
@@ -479,6 +504,14 @@ public class Authentication {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PINFormatCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Authentication.class.getMethod("getPINFormat", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max140Binary pIN;
@@ -510,7 +543,7 @@ public class Authentication {
 	 */
 	public static final MMBusinessAttribute mmPIN = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Authentication.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Authentication.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PIN";
@@ -518,6 +551,14 @@ public class Authentication {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Authentication.class.getMethod("getPIN", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text authenticationSupport;
@@ -551,7 +592,7 @@ public class Authentication {
 	 */
 	public static final MMBusinessAttribute mmAuthenticationSupport = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Authentication.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Authentication.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthenticationSupport";
@@ -559,6 +600,14 @@ public class Authentication {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Authentication.class.getMethod("getAuthenticationSupport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text collectionIndicator;
@@ -592,7 +641,7 @@ public class Authentication {
 	 */
 	public static final MMBusinessAttribute mmCollectionIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Authentication.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Authentication.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionIndicator";
@@ -600,6 +649,14 @@ public class Authentication {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Authentication.class.getMethod("getCollectionIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Mandate mandate;
@@ -640,7 +697,7 @@ public class Authentication {
 	 */
 	public static final MMBusinessAssociationEnd mmMandate = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Authentication.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Authentication.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Mandate";
@@ -681,7 +738,7 @@ public class Authentication {
 	 */
 	public static final MMBusinessAttribute mmAuthenticationResult = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Authentication.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Authentication.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthenticationResult";
@@ -689,6 +746,14 @@ public class Authentication {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AuthenticationResultCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Authentication.class.getMethod("getAuthenticationResult", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -703,11 +768,18 @@ public class Authentication {
 				derivationElement_lazy = () -> Arrays.asList(CardholderAuthentication1.mmCardholderOnLinePIN, CardholderAuthentication3.mmCardholderOnLinePIN, CardholderAuthentication5.mmCardholderOnLinePIN,
 						CardholderAuthentication6.mmCardholderOnLinePIN, CardholderAuthentication7.mmCardholderOnLinePIN, CardholderAuthentication8.mmCardholderOnLinePIN, CardholderAuthentication9.mmCardholderOnLinePIN,
 						CardholderAuthentication10.mmCardholderOnLinePIN);
-				element_lazy = () -> Arrays.asList(Authentication.mmCardholder, Authentication.mmAuthenticationMethod, Authentication.mmAuthenticationEntity, Authentication.mmAuthenticationValue, Authentication.mmPINFormat,
-						Authentication.mmPIN, Authentication.mmAuthenticationSupport, Authentication.mmCollectionIndicator, Authentication.mmMandate, Authentication.mmAuthenticationResult);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Authentication.mmCardholder, com.tools20022.repository.entity.Authentication.mmAuthenticationMethod,
+						com.tools20022.repository.entity.Authentication.mmAuthenticationEntity, com.tools20022.repository.entity.Authentication.mmAuthenticationValue, com.tools20022.repository.entity.Authentication.mmPINFormat,
+						com.tools20022.repository.entity.Authentication.mmPIN, com.tools20022.repository.entity.Authentication.mmAuthenticationSupport, com.tools20022.repository.entity.Authentication.mmCollectionIndicator,
+						com.tools20022.repository.entity.Authentication.mmMandate, com.tools20022.repository.entity.Authentication.mmAuthenticationResult);
 				derivationComponent_lazy = () -> Arrays.asList(CardholderAuthentication2.mmObject(), CardholderAuthentication4.mmObject(), OnLinePIN1.mmObject(), CardholderAuthentication1.mmObject(), OnLinePIN2.mmObject(),
 						CardholderAuthentication3.mmObject(), OnLinePIN3.mmObject(), CardholderAuthentication5.mmObject(), OnLinePIN4.mmObject(), CardholderAuthentication6.mmObject(), CardholderAuthentication7.mmObject(),
 						CardholderAuthentication8.mmObject(), OnLinePIN5.mmObject(), CardholderAuthentication9.mmObject(), MandateAuthentication1.mmObject(), CardholderAuthentication10.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Authentication.class;
 			}
 		});
 		return mmObject_lazy.get();

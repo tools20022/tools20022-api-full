@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Security that is a sub-set of an investment fund, and is governed by the same
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * FinancialInstrument36}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrument50", propOrder = {"identification", "name", "shortName", "transfereeAccount", "subAccountDetails"})
 public class FinancialInstrument50 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -371,6 +377,7 @@ public class FinancialInstrument50 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification23Choice getIdentification() {
 		return identification;
 	}
@@ -379,6 +386,7 @@ public class FinancialInstrument50 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max350Text getName() {
 		return name;
 	}
@@ -387,6 +395,7 @@ public class FinancialInstrument50 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "ShrtNm")
 	public Max35Text getShortName() {
 		return shortName;
 	}
@@ -395,6 +404,7 @@ public class FinancialInstrument50 {
 		this.shortName = shortName;
 	}
 
+	@XmlElement(name = "TrfeeAcct")
 	public Account19 getTransfereeAccount() {
 		return transfereeAccount;
 	}
@@ -403,6 +413,7 @@ public class FinancialInstrument50 {
 		this.transfereeAccount = transfereeAccount;
 	}
 
+	@XmlElement(name = "SubAcctDtls")
 	public SubAccount5 getSubAccountDetails() {
 		return subAccountDetails;
 	}

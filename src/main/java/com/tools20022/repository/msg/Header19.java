@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of characteristics related to the protocol.
@@ -90,6 +94,8 @@ import java.util.List;
  * Header18}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Header19", propOrder = {"messageFunction", "originalMessageFunction", "protocolVersion", "exchangeIdentification", "reTransmissionCounter", "creationDateTime", "initiatingParty", "recipientParty", "traceability"})
 public class Header19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -543,6 +549,7 @@ public class Header19 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MsgFctn", required = true)
 	public MessageFunction6Code getMessageFunction() {
 		return messageFunction;
 	}
@@ -551,6 +558,7 @@ public class Header19 {
 		this.messageFunction = messageFunction;
 	}
 
+	@XmlElement(name = "OrgnlMsgFctn")
 	public MessageFunction6Code getOriginalMessageFunction() {
 		return originalMessageFunction;
 	}
@@ -559,6 +567,7 @@ public class Header19 {
 		this.originalMessageFunction = originalMessageFunction;
 	}
 
+	@XmlElement(name = "PrtcolVrsn", required = true)
 	public Max6Text getProtocolVersion() {
 		return protocolVersion;
 	}
@@ -567,6 +576,7 @@ public class Header19 {
 		this.protocolVersion = protocolVersion;
 	}
 
+	@XmlElement(name = "XchgId", required = true)
 	public Max3NumericText getExchangeIdentification() {
 		return exchangeIdentification;
 	}
@@ -575,6 +585,7 @@ public class Header19 {
 		this.exchangeIdentification = exchangeIdentification;
 	}
 
+	@XmlElement(name = "ReTrnsmssnCntr")
 	public Max3NumericText getReTransmissionCounter() {
 		return reTransmissionCounter;
 	}
@@ -583,6 +594,7 @@ public class Header19 {
 		this.reTransmissionCounter = reTransmissionCounter;
 	}
 
+	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
@@ -591,6 +603,7 @@ public class Header19 {
 		this.creationDateTime = creationDateTime;
 	}
 
+	@XmlElement(name = "InitgPty")
 	public GenericIdentification73 getInitiatingParty() {
 		return initiatingParty;
 	}
@@ -599,6 +612,7 @@ public class Header19 {
 		this.initiatingParty = initiatingParty;
 	}
 
+	@XmlElement(name = "RcptPty")
 	public GenericIdentification73 getRecipientParty() {
 		return recipientParty;
 	}
@@ -607,6 +621,7 @@ public class Header19 {
 		this.recipientParty = recipientParty;
 	}
 
+	@XmlElement(name = "Tracblt")
 	public List<Traceability3> getTraceability() {
 		return traceability;
 	}

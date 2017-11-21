@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Detailed amounts associated with the total amount of transaction.
@@ -77,6 +81,8 @@ import java.util.List;
  * DetailedAmount7}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DetailedAmount15", propOrder = {"amountGoodsAndServices", "cashBack", "gratuity", "fees", "rebate", "valueAddedTax", "surcharge"})
 public class DetailedAmount15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -450,6 +456,7 @@ public class DetailedAmount15 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AmtGoodsAndSvcs")
 	public ImpliedCurrencyAndAmount getAmountGoodsAndServices() {
 		return amountGoodsAndServices;
 	}
@@ -458,6 +465,7 @@ public class DetailedAmount15 {
 		this.amountGoodsAndServices = amountGoodsAndServices;
 	}
 
+	@XmlElement(name = "CshBck")
 	public ImpliedCurrencyAndAmount getCashBack() {
 		return cashBack;
 	}
@@ -466,6 +474,7 @@ public class DetailedAmount15 {
 		this.cashBack = cashBack;
 	}
 
+	@XmlElement(name = "Grtty")
 	public ImpliedCurrencyAndAmount getGratuity() {
 		return gratuity;
 	}
@@ -474,6 +483,7 @@ public class DetailedAmount15 {
 		this.gratuity = gratuity;
 	}
 
+	@XmlElement(name = "Fees")
 	public List<DetailedAmount4> getFees() {
 		return fees;
 	}
@@ -482,6 +492,7 @@ public class DetailedAmount15 {
 		this.fees = fees;
 	}
 
+	@XmlElement(name = "Rbt")
 	public List<DetailedAmount4> getRebate() {
 		return rebate;
 	}
@@ -490,6 +501,7 @@ public class DetailedAmount15 {
 		this.rebate = rebate;
 	}
 
+	@XmlElement(name = "ValAddedTax")
 	public List<DetailedAmount4> getValueAddedTax() {
 		return valueAddedTax;
 	}
@@ -498,6 +510,7 @@ public class DetailedAmount15 {
 		this.valueAddedTax = valueAddedTax;
 	}
 
+	@XmlElement(name = "Srchrg")
 	public List<DetailedAmount4> getSurcharge() {
 		return surcharge;
 	}

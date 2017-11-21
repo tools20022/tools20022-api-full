@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the multimodal or the individual transport of goods.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransportMeans4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportMeans6", propOrder = {"individualTransport", "multimodalTransport"})
 public class TransportMeans6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -190,6 +196,7 @@ public class TransportMeans6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "IndvTrnsprt", required = true)
 	public SingleTransport8 getIndividualTransport() {
 		return individualTransport;
 	}
@@ -198,6 +205,7 @@ public class TransportMeans6 {
 		this.individualTransport = individualTransport;
 	}
 
+	@XmlElement(name = "MltmdlTrnsprt")
 	public MultimodalTransport3 getMultimodalTransport() {
 		return multimodalTransport;
 	}

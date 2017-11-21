@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.GroupHeader37;
 import com.tools20022.repository.msg.OriginalGroupInformation20;
 import com.tools20022.repository.msg.PaymentTransactionInformation26;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -53,9 +55,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pacs.002.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementArchive
@@ -86,6 +85,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pacs.002.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -109,6 +111,8 @@ import java.util.List;
  * PaymentStatusReportV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FIToFIPaymentStatusReportV03", propOrder = {"groupHeader", "originalGroupInformationAndStatus", "transactionInformationAndStatus"})
 public class FIToFIPaymentStatusReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -148,6 +152,14 @@ public class FIToFIPaymentStatusReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader37.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFIPaymentStatusReportV03.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected OriginalGroupInformation20 originalGroupInformationAndStatus;
 	/**
@@ -186,6 +198,14 @@ public class FIToFIPaymentStatusReportV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> OriginalGroupInformation20.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFIPaymentStatusReportV03.class.getMethod("getOriginalGroupInformationAndStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<PaymentTransactionInformation26> transactionInformationAndStatus;
 	/**
@@ -223,6 +243,14 @@ public class FIToFIPaymentStatusReportV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentTransactionInformation26.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return FIToFIPaymentStatusReportV03.class.getMethod("getTransactionInformationAndStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -237,7 +265,8 @@ public class FIToFIPaymentStatusReportV03 {
 				rootElement = "Document";
 				xmlTag = "FIToFIPmtStsRpt";
 				businessArea_lazy = () -> PaymentsClearingandSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(FIToFIPaymentStatusReportV03.mmGroupHeader, FIToFIPaymentStatusReportV03.mmOriginalGroupInformationAndStatus, FIToFIPaymentStatusReportV03.mmTransactionInformationAndStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV03.mmGroupHeader,
+						com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV03.mmOriginalGroupInformationAndStatus, com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV03.mmTransactionInformationAndStatus);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pacs";
@@ -247,10 +276,16 @@ public class FIToFIPaymentStatusReportV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return FIToFIPaymentStatusReportV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader37 getGroupHeader() {
 		return groupHeader;
 	}
@@ -259,6 +294,7 @@ public class FIToFIPaymentStatusReportV03 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
 	public OriginalGroupInformation20 getOriginalGroupInformationAndStatus() {
 		return originalGroupInformationAndStatus;
 	}
@@ -267,11 +303,18 @@ public class FIToFIPaymentStatusReportV03 {
 		this.originalGroupInformationAndStatus = originalGroupInformationAndStatus;
 	}
 
+	@XmlElement(name = "TxInfAndSts")
 	public List<PaymentTransactionInformation26> getTransactionInformationAndStatus() {
 		return transactionInformationAndStatus;
 	}
 
 	public void setTransactionInformationAndStatus(List<PaymentTransactionInformation26> transactionInformationAndStatus) {
 		this.transactionInformationAndStatus = transactionInformationAndStatus;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.002.03.03")
+	static public class Document {
+		@XmlElement(name = "FIToFIPmtStsRpt", required = true)
+		public FIToFIPaymentStatusReportV03 messageBody;
 	}
 }

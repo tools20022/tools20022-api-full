@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Communication device number or electronic address used for communication.
@@ -78,6 +82,8 @@ import java.util.List;
  * "Communication device number or electronic address used for communication."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ContactDetails3", propOrder = {"namePrefix", "name", "phoneNumber", "mobileNumber", "faxNumber", "emailAddress", "other", "preferredMethod"})
 public class ContactDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -486,6 +492,7 @@ public class ContactDetails3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NmPrfx")
 	public NamePrefix1Code getNamePrefix() {
 		return namePrefix;
 	}
@@ -494,6 +501,7 @@ public class ContactDetails3 {
 		this.namePrefix = namePrefix;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max140Text getName() {
 		return name;
 	}
@@ -502,6 +510,7 @@ public class ContactDetails3 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "PhneNb")
 	public PhoneNumber getPhoneNumber() {
 		return phoneNumber;
 	}
@@ -510,6 +519,7 @@ public class ContactDetails3 {
 		this.phoneNumber = phoneNumber;
 	}
 
+	@XmlElement(name = "MobNb")
 	public PhoneNumber getMobileNumber() {
 		return mobileNumber;
 	}
@@ -518,6 +528,7 @@ public class ContactDetails3 {
 		this.mobileNumber = mobileNumber;
 	}
 
+	@XmlElement(name = "FaxNb")
 	public PhoneNumber getFaxNumber() {
 		return faxNumber;
 	}
@@ -526,6 +537,7 @@ public class ContactDetails3 {
 		this.faxNumber = faxNumber;
 	}
 
+	@XmlElement(name = "EmailAdr")
 	public Max2048Text getEmailAddress() {
 		return emailAddress;
 	}
@@ -534,6 +546,7 @@ public class ContactDetails3 {
 		this.emailAddress = emailAddress;
 	}
 
+	@XmlElement(name = "Othr")
 	public List<OtherContact1> getOther() {
 		return other;
 	}
@@ -542,6 +555,7 @@ public class ContactDetails3 {
 		this.other = other;
 	}
 
+	@XmlElement(name = "PrefrdMtd")
 	public PreferredContactMethod1Code getPreferredMethod() {
 		return preferredMethod;
 	}

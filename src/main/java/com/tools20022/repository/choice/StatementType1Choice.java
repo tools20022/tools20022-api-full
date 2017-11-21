@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the type of statement.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of statement."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatementType1Choice", propOrder = {"statementType", "proprietary"})
 public class StatementType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +165,7 @@ public class StatementType1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StmtTp", required = true)
 	public StatementType1Code getStatementType() {
 		return statementType;
 	}
@@ -167,6 +174,7 @@ public class StatementType1Choice {
 		this.statementType = statementType;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public Extended350Code getProprietary() {
 		return proprietary;
 	}

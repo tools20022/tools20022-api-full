@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Structured information supplied to fully identify the documents referred to
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReferredDocumentInformation1", propOrder = {"referredDocumentType", "referredDocumentNumber"})
 public class ReferredDocumentInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -178,6 +184,7 @@ public class ReferredDocumentInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RfrdDocTp")
 	public ReferredDocumentType1 getReferredDocumentType() {
 		return referredDocumentType;
 	}
@@ -186,6 +193,7 @@ public class ReferredDocumentInformation1 {
 		this.referredDocumentType = referredDocumentType;
 	}
 
+	@XmlElement(name = "RfrdDocNb")
 	public Max35Text getReferredDocumentNumber() {
 		return referredDocumentNumber;
 	}

@@ -27,6 +27,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[0-9]{3}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -53,6 +55,7 @@ public class Exact3NumericText {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Exact3NumericText";
 				definition = "Specifies a numeric string with an exact length of 3 digits.";
+				pattern = "[0-9]{3}";
 			}
 		});
 		return mmObject_lazy.get();

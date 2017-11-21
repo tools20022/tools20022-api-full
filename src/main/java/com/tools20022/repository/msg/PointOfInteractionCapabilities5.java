@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Capabilities of the ATM terminal.
@@ -84,6 +88,8 @@ import java.util.List;
  * PointOfInteractionCapabilities3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PointOfInteractionCapabilities5", propOrder = {"cardReadData", "cardWriteData", "authentication", "PINLengthCapabilities", "approvalCodeLength", "maxScriptLength", "cardCaptureCapable"})
 public class PointOfInteractionCapabilities5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -452,6 +458,7 @@ public class PointOfInteractionCapabilities5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CardRdData")
 	public List<CardDataReading4Code> getCardReadData() {
 		return cardReadData;
 	}
@@ -460,6 +467,7 @@ public class PointOfInteractionCapabilities5 {
 		this.cardReadData = cardReadData;
 	}
 
+	@XmlElement(name = "CardWrtData")
 	public List<CardDataReading4Code> getCardWriteData() {
 		return cardWriteData;
 	}
@@ -468,6 +476,7 @@ public class PointOfInteractionCapabilities5 {
 		this.cardWriteData = cardWriteData;
 	}
 
+	@XmlElement(name = "Authntcn")
 	public List<CardholderVerificationCapability3Code> getAuthentication() {
 		return authentication;
 	}
@@ -476,6 +485,7 @@ public class PointOfInteractionCapabilities5 {
 		this.authentication = authentication;
 	}
 
+	@XmlElement(name = "PINLngthCpblties")
 	public Number getPINLengthCapabilities() {
 		return pINLengthCapabilities;
 	}
@@ -484,6 +494,7 @@ public class PointOfInteractionCapabilities5 {
 		this.pINLengthCapabilities = pINLengthCapabilities;
 	}
 
+	@XmlElement(name = "ApprvlCdLngth")
 	public Number getApprovalCodeLength() {
 		return approvalCodeLength;
 	}
@@ -492,6 +503,7 @@ public class PointOfInteractionCapabilities5 {
 		this.approvalCodeLength = approvalCodeLength;
 	}
 
+	@XmlElement(name = "MxScrptLngth")
 	public Number getMaxScriptLength() {
 		return maxScriptLength;
 	}
@@ -500,6 +512,7 @@ public class PointOfInteractionCapabilities5 {
 		this.maxScriptLength = maxScriptLength;
 	}
 
+	@XmlElement(name = "CardCaptrCpbl")
 	public TrueFalseIndicator getCardCaptureCapable() {
 		return cardCaptureCapable;
 	}

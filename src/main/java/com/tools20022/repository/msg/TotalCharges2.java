@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Total amount of charges.
@@ -62,6 +66,8 @@ import java.util.List;
  * definition} = "Total amount of charges."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TotalCharges2", propOrder = {"totalAmountOfCharges", "chargeDetails"})
 public class TotalCharges2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -170,6 +176,7 @@ public class TotalCharges2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TtlAmtOfChrgs")
 	public ActiveCurrencyAnd13DecimalAmount getTotalAmountOfCharges() {
 		return totalAmountOfCharges;
 	}
@@ -178,6 +185,7 @@ public class TotalCharges2 {
 		this.totalAmountOfCharges = totalAmountOfCharges;
 	}
 
+	@XmlElement(name = "ChrgDtls", required = true)
 	public List<Charge10> getChargeDetails() {
 		return chargeDetails;
 	}

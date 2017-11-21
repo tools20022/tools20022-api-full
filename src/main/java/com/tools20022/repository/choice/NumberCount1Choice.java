@@ -33,6 +33,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TotalNumber1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of number count type.
@@ -171,6 +175,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice of number count type."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NumberCount1Choice", propOrder = {"currentInstructionNumber", "totalNumber"})
 public class NumberCount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -288,6 +294,7 @@ public class NumberCount1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CurInstrNb", required = true)
 	public Exact3NumericText getCurrentInstructionNumber() {
 		return currentInstructionNumber;
 	}
@@ -296,6 +303,7 @@ public class NumberCount1Choice {
 		this.currentInstructionNumber = currentInstructionNumber;
 	}
 
+	@XmlElement(name = "TtlNb", required = true)
 	public TotalNumber1 getTotalNumber() {
 		return totalNumber;
 	}

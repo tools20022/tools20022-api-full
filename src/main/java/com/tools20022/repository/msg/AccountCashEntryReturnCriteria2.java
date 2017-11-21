@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria used to report on the cash entry.
@@ -75,6 +79,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the criteria used to report on the cash entry."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountCashEntryReturnCriteria2", propOrder = {"entryReferenceIndicator", "accountTypeIndicator", "entryAmountIndicator", "accountCurrencyIndicator", "entryStatusIndicator", "entryDateIndicator",
+		"accountServicerIndicator", "accountOwnerIndicator"})
 public class AccountCashEntryReturnCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -430,6 +437,7 @@ public class AccountCashEntryReturnCriteria2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NtryRefInd")
 	public RequestedIndicator getEntryReferenceIndicator() {
 		return entryReferenceIndicator;
 	}
@@ -438,6 +446,7 @@ public class AccountCashEntryReturnCriteria2 {
 		this.entryReferenceIndicator = entryReferenceIndicator;
 	}
 
+	@XmlElement(name = "AcctTpInd")
 	public RequestedIndicator getAccountTypeIndicator() {
 		return accountTypeIndicator;
 	}
@@ -446,6 +455,7 @@ public class AccountCashEntryReturnCriteria2 {
 		this.accountTypeIndicator = accountTypeIndicator;
 	}
 
+	@XmlElement(name = "NtryAmtInd")
 	public RequestedIndicator getEntryAmountIndicator() {
 		return entryAmountIndicator;
 	}
@@ -454,6 +464,7 @@ public class AccountCashEntryReturnCriteria2 {
 		this.entryAmountIndicator = entryAmountIndicator;
 	}
 
+	@XmlElement(name = "AcctCcyInd")
 	public RequestedIndicator getAccountCurrencyIndicator() {
 		return accountCurrencyIndicator;
 	}
@@ -462,6 +473,7 @@ public class AccountCashEntryReturnCriteria2 {
 		this.accountCurrencyIndicator = accountCurrencyIndicator;
 	}
 
+	@XmlElement(name = "NtryStsInd")
 	public RequestedIndicator getEntryStatusIndicator() {
 		return entryStatusIndicator;
 	}
@@ -470,6 +482,7 @@ public class AccountCashEntryReturnCriteria2 {
 		this.entryStatusIndicator = entryStatusIndicator;
 	}
 
+	@XmlElement(name = "NtryDtInd")
 	public RequestedIndicator getEntryDateIndicator() {
 		return entryDateIndicator;
 	}
@@ -478,6 +491,7 @@ public class AccountCashEntryReturnCriteria2 {
 		this.entryDateIndicator = entryDateIndicator;
 	}
 
+	@XmlElement(name = "AcctSrcrInd")
 	public RequestedIndicator getAccountServicerIndicator() {
 		return accountServicerIndicator;
 	}
@@ -486,6 +500,7 @@ public class AccountCashEntryReturnCriteria2 {
 		this.accountServicerIndicator = accountServicerIndicator;
 	}
 
+	@XmlElement(name = "AcctOwnrInd")
 	public RequestedIndicator getAccountOwnerIndicator() {
 		return accountOwnerIndicator;
 	}

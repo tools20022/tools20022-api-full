@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics and values set for a bilateral limit, including the
@@ -77,6 +81,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BilateralLimitDetails2", propOrder = {"counterpartyIdentification", "limitAmount", "creditDebitIndicator", "bilateralBalance"})
 public class BilateralLimitDetails2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -289,6 +295,7 @@ public class BilateralLimitDetails2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CtrPtyId", required = true)
 	public MemberIdentificationChoice getCounterpartyIdentification() {
 		return counterpartyIdentification;
 	}
@@ -297,6 +304,7 @@ public class BilateralLimitDetails2 {
 		this.counterpartyIdentification = counterpartyIdentification;
 	}
 
+	@XmlElement(name = "LmtAmt", required = true)
 	public AmountChoice getLimitAmount() {
 		return limitAmount;
 	}
@@ -305,6 +313,7 @@ public class BilateralLimitDetails2 {
 		this.limitAmount = limitAmount;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -313,6 +322,7 @@ public class BilateralLimitDetails2 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "BilBal")
 	public List<CashBalanceDetails5> getBilateralBalance() {
 		return bilateralBalance;
 	}

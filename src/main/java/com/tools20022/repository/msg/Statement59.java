@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General characteristics related to a statement which reports information for
@@ -97,6 +101,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * Statement37}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Statement59", propOrder = {"senderBusinessRole", "statementNumber", "queryReference", "statementIdentification", "statementDateTime", "statementPeriod", "frequency", "frequencyGranularity", "updateType",
+		"activityIndicator"})
 public class Statement59 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -588,6 +595,7 @@ public class Statement59 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SndrBizRole", required = true)
 	public SenderBusinessRole1Code getSenderBusinessRole() {
 		return senderBusinessRole;
 	}
@@ -596,6 +604,7 @@ public class Statement59 {
 		this.senderBusinessRole = senderBusinessRole;
 	}
 
+	@XmlElement(name = "StmtNb")
 	public Number3Choice getStatementNumber() {
 		return statementNumber;
 	}
@@ -604,6 +613,7 @@ public class Statement59 {
 		this.statementNumber = statementNumber;
 	}
 
+	@XmlElement(name = "QryRef")
 	public Max35Text getQueryReference() {
 		return queryReference;
 	}
@@ -612,6 +622,7 @@ public class Statement59 {
 		this.queryReference = queryReference;
 	}
 
+	@XmlElement(name = "StmtId", required = true)
 	public Max35Text getStatementIdentification() {
 		return statementIdentification;
 	}
@@ -620,6 +631,7 @@ public class Statement59 {
 		this.statementIdentification = statementIdentification;
 	}
 
+	@XmlElement(name = "StmtDtTm", required = true)
 	public DateAndDateTimeChoice getStatementDateTime() {
 		return statementDateTime;
 	}
@@ -628,6 +640,7 @@ public class Statement59 {
 		this.statementDateTime = statementDateTime;
 	}
 
+	@XmlElement(name = "StmtPrd", required = true)
 	public DatePeriod1Choice getStatementPeriod() {
 		return statementPeriod;
 	}
@@ -636,6 +649,7 @@ public class Statement59 {
 		this.statementPeriod = statementPeriod;
 	}
 
+	@XmlElement(name = "Frqcy")
 	public Frequency22Choice getFrequency() {
 		return frequency;
 	}
@@ -644,6 +658,7 @@ public class Statement59 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "FrqcyGrnlrty")
 	public FrequencyGranularityType1Code getFrequencyGranularity() {
 		return frequencyGranularity;
 	}
@@ -652,6 +667,7 @@ public class Statement59 {
 		this.frequencyGranularity = frequencyGranularity;
 	}
 
+	@XmlElement(name = "UpdTp")
 	public UpdateType4Choice getUpdateType() {
 		return updateType;
 	}
@@ -660,6 +676,7 @@ public class Statement59 {
 		this.updateType = updateType;
 	}
 
+	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}

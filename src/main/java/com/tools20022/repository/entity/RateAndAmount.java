@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +39,61 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmFinalDividendParameters
+ * RateAndAmount.mmFinalDividendParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmFullyFrankedRateAndAmountDividendParameters
+ * RateAndAmount.mmFullyFrankedRateAndAmountDividendParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmGrossDividendParameters
+ * RateAndAmount.mmGrossDividendParameters}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.RateAndAmount#mmAmount
+ * RateAndAmount.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.RateAndAmount#mmIndex
+ * RateAndAmount.mmIndex}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmNetDividendParameters
+ * RateAndAmount.mmNetDividendParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmMaximumAllowedBiddingConditions
+ * RateAndAmount.mmMaximumAllowedBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmProvisionalDividendParameters
+ * RateAndAmount.mmProvisionalDividendParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmSolicitationFeeCorporateActionParameters
+ * RateAndAmount.mmSolicitationFeeCorporateActionParameters}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.RateAndAmount#mmRate
+ * RateAndAmount.mmRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmRateBiddingConditions
+ * RateAndAmount.mmRateBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmSecuritiesTax
+ * RateAndAmount.mmSecuritiesTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmEarlySolicitationFeeCorporateActionParameters
+ * RateAndAmount.mmEarlySolicitationFeeCorporateActionParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmInterestRelatedIssuance
+ * RateAndAmount.mmInterestRelatedIssuance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmLossRelatedIssuance
+ * RateAndAmount.mmLossRelatedIssuance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmAbsoluteValue
+ * RateAndAmount.mmAbsoluteValue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.RateAndAmount#mmOperator
+ * RateAndAmount.mmOperator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmRelatedYieldCalculation
+ * RateAndAmount.mmRelatedYieldCalculation}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -252,61 +308,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AmountAndRateStatus2.mmRateStatus}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmFinalDividendParameters
- * RateAndAmount.mmFinalDividendParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmFullyFrankedRateAndAmountDividendParameters
- * RateAndAmount.mmFullyFrankedRateAndAmountDividendParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmGrossDividendParameters
- * RateAndAmount.mmGrossDividendParameters}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RateAndAmount#mmAmount
- * RateAndAmount.mmAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RateAndAmount#mmIndex
- * RateAndAmount.mmIndex}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmNetDividendParameters
- * RateAndAmount.mmNetDividendParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmMaximumAllowedBiddingConditions
- * RateAndAmount.mmMaximumAllowedBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmProvisionalDividendParameters
- * RateAndAmount.mmProvisionalDividendParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmSolicitationFeeCorporateActionParameters
- * RateAndAmount.mmSolicitationFeeCorporateActionParameters}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RateAndAmount#mmRate
- * RateAndAmount.mmRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmRateBiddingConditions
- * RateAndAmount.mmRateBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmSecuritiesTax
- * RateAndAmount.mmSecuritiesTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmEarlySolicitationFeeCorporateActionParameters
- * RateAndAmount.mmEarlySolicitationFeeCorporateActionParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmInterestRelatedIssuance
- * RateAndAmount.mmInterestRelatedIssuance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmLossRelatedIssuance
- * RateAndAmount.mmLossRelatedIssuance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmAbsoluteValue
- * RateAndAmount.mmAbsoluteValue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RateAndAmount#mmOperator
- * RateAndAmount.mmOperator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmRelatedYieldCalculation
- * RateAndAmount.mmRelatedYieldCalculation}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -363,7 +364,7 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmFinalDividendParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinalDividendParameters";
@@ -413,7 +414,7 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmFullyFrankedRateAndAmountDividendParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FullyFrankedRateAndAmountDividendParameters";
@@ -461,7 +462,7 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmGrossDividendParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossDividendParameters";
@@ -484,11 +485,6 @@ public class RateAndAmount {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount RateAndAmount}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -770,6 +766,11 @@ public class RateAndAmount {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount RateAndAmount}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -801,7 +802,7 @@ public class RateAndAmount {
 					CorporateActionAmounts41.mmFullyFrankedAmount, SolicitationFeeRateFormat10Choice.mmAmount, CorporateActionAmounts40.mmFullyFrankedAmount, TaxCreditRateFormat10Choice.mmAmount, RateAndAmountFormat43Choice.mmAmount,
 					GrossDividendRateFormat26Choice.mmAmount, GrossDividendRateFormat23Choice.mmAmount, GrossDividendRateFormat24Choice.mmAmount, TaxCreditRateFormat9Choice.mmAmount, SolicitationFeeRateFormat9Choice.mmAmount,
 					GrossDividendRateFormat25Choice.mmAmount, AmountAndRateStatus2.mmAmount, OriginalAmountDetails1.mmActualAmount, OriginalAmountDetails1.mmMinimumAmount, OriginalAmountDetails1.mmMaximumAmount);
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -809,6 +810,14 @@ public class RateAndAmount {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RateAndAmount.class.getMethod("getAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Index index;
@@ -846,7 +855,7 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmIndex = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Index";
@@ -894,7 +903,7 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmNetDividendParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetDividendParameters";
@@ -943,7 +952,7 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmMaximumAllowedBiddingConditions = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumAllowedBiddingConditions";
@@ -992,7 +1001,7 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmProvisionalDividendParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProvisionalDividendParameters";
@@ -1042,7 +1051,7 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmSolicitationFeeCorporateActionParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SolicitationFeeCorporateActionParameters";
@@ -1065,11 +1074,6 @@ public class RateAndAmount {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount RateAndAmount}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1199,6 +1203,11 @@ public class RateAndAmount {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount RateAndAmount}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1218,7 +1227,7 @@ public class RateAndAmount {
 					RateFormat12Choice.mmRate, RateFormat11Choice.mmRate, RateFormat14Choice.mmRate, RateFormat17Choice.mmRate, RateAndAmountFormat36Choice.mmRate, TaxCreditRateFormat7Choice.mmRate, RateAndAmountFormat39Choice.mmRate,
 					SolicitationFeeRateFormat7Choice.mmRate, TaxCreditRateFormat8Choice.mmRate, RateFormat20Choice.mmRate, SolicitationFeeRateFormat8Choice.mmRate, RateFormat21Choice.mmRate, SolicitationFeeRateFormat10Choice.mmRate,
 					TaxCreditRateFormat10Choice.mmRate, RateAndAmountFormat43Choice.mmRate, TaxCreditRateFormat9Choice.mmRate, SolicitationFeeRateFormat9Choice.mmRate);
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
@@ -1226,6 +1235,14 @@ public class RateAndAmount {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RateAndAmount.class.getMethod("getRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BiddingConditions rateBiddingConditions;
@@ -1264,7 +1281,7 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmRateBiddingConditions = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RateBiddingConditions";
@@ -1313,7 +1330,7 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTax = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTax";
@@ -1363,7 +1380,7 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmEarlySolicitationFeeCorporateActionParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarlySolicitationFeeCorporateActionParameters";
@@ -1411,7 +1428,7 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmInterestRelatedIssuance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestRelatedIssuance";
@@ -1458,7 +1475,7 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmLossRelatedIssuance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LossRelatedIssuance";
@@ -1480,11 +1497,6 @@ public class RateAndAmount {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount RateAndAmount}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1492,6 +1504,11 @@ public class RateAndAmount {
 	 * {@linkplain com.tools20022.repository.choice.RateOrAbsoluteValue1Choice#mmAbsoluteValue
 	 * RateOrAbsoluteValue1Choice.mmAbsoluteValue}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount RateAndAmount}
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1507,7 +1524,7 @@ public class RateAndAmount {
 	public static final MMBusinessAttribute mmAbsoluteValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RateOrAbsoluteValue1Choice.mmAbsoluteValue);
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AbsoluteValue";
@@ -1515,6 +1532,14 @@ public class RateAndAmount {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RateAndAmount.class.getMethod("getAbsoluteValue", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected OperatorCode operator;
@@ -1546,7 +1571,7 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAttribute mmOperator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Operator";
@@ -1554,6 +1579,14 @@ public class RateAndAmount {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OperatorCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RateAndAmount.class.getMethod("getOperator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YieldCalculation relatedYieldCalculation;
@@ -1592,7 +1625,7 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedYieldCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> RateAndAmount.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedYieldCalculation";
@@ -1623,10 +1656,14 @@ public class RateAndAmount {
 						NetDividendRateFormat24Choice.mmAmountAndRateStatus, GrossDividendRateFormat22Choice.mmAmountAndRateStatus, NetDividendRateFormat28Choice.mmAmountAndRateStatus, GrossDividendRateFormat26Choice.mmAmountAndRateStatus,
 						NetDividendRateFormat25Choice.mmAmountAndRateStatus, GrossDividendRateFormat23Choice.mmAmountAndRateStatus, GrossDividendRateFormat24Choice.mmAmountAndRateStatus, NetDividendRateFormat26Choice.mmAmountAndRateStatus,
 						NetDividendRateFormat27Choice.mmAmountAndRateStatus, GrossDividendRateFormat25Choice.mmAmountAndRateStatus, AmountAndRateStatus2.mmRateStatus);
-				element_lazy = () -> Arrays.asList(RateAndAmount.mmFinalDividendParameters, RateAndAmount.mmFullyFrankedRateAndAmountDividendParameters, RateAndAmount.mmGrossDividendParameters, RateAndAmount.mmAmount,
-						RateAndAmount.mmIndex, RateAndAmount.mmNetDividendParameters, RateAndAmount.mmMaximumAllowedBiddingConditions, RateAndAmount.mmProvisionalDividendParameters, RateAndAmount.mmSolicitationFeeCorporateActionParameters,
-						RateAndAmount.mmRate, RateAndAmount.mmRateBiddingConditions, RateAndAmount.mmSecuritiesTax, RateAndAmount.mmEarlySolicitationFeeCorporateActionParameters, RateAndAmount.mmInterestRelatedIssuance,
-						RateAndAmount.mmLossRelatedIssuance, RateAndAmount.mmAbsoluteValue, RateAndAmount.mmOperator, RateAndAmount.mmRelatedYieldCalculation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RateAndAmount.mmFinalDividendParameters, com.tools20022.repository.entity.RateAndAmount.mmFullyFrankedRateAndAmountDividendParameters,
+						com.tools20022.repository.entity.RateAndAmount.mmGrossDividendParameters, com.tools20022.repository.entity.RateAndAmount.mmAmount, com.tools20022.repository.entity.RateAndAmount.mmIndex,
+						com.tools20022.repository.entity.RateAndAmount.mmNetDividendParameters, com.tools20022.repository.entity.RateAndAmount.mmMaximumAllowedBiddingConditions,
+						com.tools20022.repository.entity.RateAndAmount.mmProvisionalDividendParameters, com.tools20022.repository.entity.RateAndAmount.mmSolicitationFeeCorporateActionParameters,
+						com.tools20022.repository.entity.RateAndAmount.mmRate, com.tools20022.repository.entity.RateAndAmount.mmRateBiddingConditions, com.tools20022.repository.entity.RateAndAmount.mmSecuritiesTax,
+						com.tools20022.repository.entity.RateAndAmount.mmEarlySolicitationFeeCorporateActionParameters, com.tools20022.repository.entity.RateAndAmount.mmInterestRelatedIssuance,
+						com.tools20022.repository.entity.RateAndAmount.mmLossRelatedIssuance, com.tools20022.repository.entity.RateAndAmount.mmAbsoluteValue, com.tools20022.repository.entity.RateAndAmount.mmOperator,
+						com.tools20022.repository.entity.RateAndAmount.mmRelatedYieldCalculation);
 				derivationComponent_lazy = () -> Arrays.asList(RateAndAmountFormat12Choice.mmObject(), RateAndAmountFormat13Choice.mmObject(), RateAndAmountFormat5Choice.mmObject(), TaxCreditRateFormat2Choice.mmObject(),
 						RateAndAmountFormat6Choice.mmObject(), TaxCreditRateFormat3Choice.mmObject(), RateAndAmountFormat18Choice.mmObject(), RateFormat3Choice.mmObject(), RateFormat2Choice.mmObject(),
 						TaxCreditRateFormat1Choice.mmObject(), SolicitationFeeRateFormat1Choice.mmObject(), TaxCreditRateFormat4Choice.mmObject(), SolicitationFeeRateFormat2Choice.mmObject(), RateFormat6Choice.mmObject(),
@@ -1637,6 +1674,11 @@ public class RateAndAmount {
 						RateFormat20Choice.mmObject(), AmountAndRateStatus1.mmObject(), SolicitationFeeRateFormat8Choice.mmObject(), RateFormat21Choice.mmObject(), SolicitationFeeRateFormat10Choice.mmObject(),
 						TaxCreditRateFormat10Choice.mmObject(), RateAndAmountFormat43Choice.mmObject(), TaxCreditRateFormat9Choice.mmObject(), SolicitationFeeRateFormat9Choice.mmObject(), AmountAndRateStatus2.mmObject(),
 						OriginalAmountDetails1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RateAndAmount.class;
 			}
 		});
 		return mmObject_lazy.get();

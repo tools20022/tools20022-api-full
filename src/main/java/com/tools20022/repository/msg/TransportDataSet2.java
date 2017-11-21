@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the transportation of goods that are part of a commercial
@@ -72,6 +76,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportDataSet2", propOrder = {"dataSetIdentification", "buyer", "seller", "shipTo", "consignee", "transportInformation"})
 public class TransportDataSet2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -371,6 +377,7 @@ public class TransportDataSet2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DataSetId", required = true)
 	public DocumentIdentification1 getDataSetIdentification() {
 		return dataSetIdentification;
 	}
@@ -379,6 +386,7 @@ public class TransportDataSet2 {
 		this.dataSetIdentification = dataSetIdentification;
 	}
 
+	@XmlElement(name = "Buyr", required = true)
 	public PartyIdentification9 getBuyer() {
 		return buyer;
 	}
@@ -387,6 +395,7 @@ public class TransportDataSet2 {
 		this.buyer = buyer;
 	}
 
+	@XmlElement(name = "Sellr", required = true)
 	public PartyIdentification9 getSeller() {
 		return seller;
 	}
@@ -395,6 +404,7 @@ public class TransportDataSet2 {
 		this.seller = seller;
 	}
 
+	@XmlElement(name = "ShipTo")
 	public PartyIdentification9 getShipTo() {
 		return shipTo;
 	}
@@ -403,6 +413,7 @@ public class TransportDataSet2 {
 		this.shipTo = shipTo;
 	}
 
+	@XmlElement(name = "Consgn")
 	public PartyIdentification9 getConsignee() {
 		return consignee;
 	}
@@ -411,6 +422,7 @@ public class TransportDataSet2 {
 		this.consignee = consignee;
 	}
 
+	@XmlElement(name = "TrnsprtInf", required = true)
 	public List<TransportDetails1> getTransportInformation() {
 		return transportInformation;
 	}

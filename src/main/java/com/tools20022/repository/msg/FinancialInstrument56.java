@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Security that is a sub-set of an investment fund, and is governed by the same
@@ -113,6 +117,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * FinancialInstrument51}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrument56", propOrder = {"identification", "name", "shortName", "supplementaryIdentification", "classType", "securitiesForm", "distributionPolicy", "productGroup", "blockedHoldingDetails", "pledging",
+		"collateral", "thirdPartyRights", "fundOwnership", "fundIntention", "operationalStatus"})
 public class FinancialInstrument56 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -921,6 +928,7 @@ public class FinancialInstrument56 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification25Choice getIdentification() {
 		return identification;
 	}
@@ -929,6 +937,7 @@ public class FinancialInstrument56 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public Max350Text getName() {
 		return name;
 	}
@@ -937,6 +946,7 @@ public class FinancialInstrument56 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "ShrtNm")
 	public Max35Text getShortName() {
 		return shortName;
 	}
@@ -945,6 +955,7 @@ public class FinancialInstrument56 {
 		this.shortName = shortName;
 	}
 
+	@XmlElement(name = "SplmtryId")
 	public Max35Text getSupplementaryIdentification() {
 		return supplementaryIdentification;
 	}
@@ -953,6 +964,7 @@ public class FinancialInstrument56 {
 		this.supplementaryIdentification = supplementaryIdentification;
 	}
 
+	@XmlElement(name = "ClssTp")
 	public Max35Text getClassType() {
 		return classType;
 	}
@@ -961,6 +973,7 @@ public class FinancialInstrument56 {
 		this.classType = classType;
 	}
 
+	@XmlElement(name = "SctiesForm")
 	public FormOfSecurity1Code getSecuritiesForm() {
 		return securitiesForm;
 	}
@@ -969,6 +982,7 @@ public class FinancialInstrument56 {
 		this.securitiesForm = securitiesForm;
 	}
 
+	@XmlElement(name = "DstrbtnPlcy")
 	public DistributionPolicy1Code getDistributionPolicy() {
 		return distributionPolicy;
 	}
@@ -977,6 +991,7 @@ public class FinancialInstrument56 {
 		this.distributionPolicy = distributionPolicy;
 	}
 
+	@XmlElement(name = "PdctGrp")
 	public Max140Text getProductGroup() {
 		return productGroup;
 	}
@@ -985,6 +1000,7 @@ public class FinancialInstrument56 {
 		this.productGroup = productGroup;
 	}
 
+	@XmlElement(name = "BlckdHldgDtls")
 	public BlockedHoldingDetails2 getBlockedHoldingDetails() {
 		return blockedHoldingDetails;
 	}
@@ -993,6 +1009,7 @@ public class FinancialInstrument56 {
 		this.blockedHoldingDetails = blockedHoldingDetails;
 	}
 
+	@XmlElement(name = "Pldgg")
 	public Eligible1Code getPledging() {
 		return pledging;
 	}
@@ -1001,6 +1018,7 @@ public class FinancialInstrument56 {
 		this.pledging = pledging;
 	}
 
+	@XmlElement(name = "Coll")
 	public Collateral1Code getCollateral() {
 		return collateral;
 	}
@@ -1009,6 +1027,7 @@ public class FinancialInstrument56 {
 		this.collateral = collateral;
 	}
 
+	@XmlElement(name = "ThrdPtyRghts")
 	public ThirdPartyRights1 getThirdPartyRights() {
 		return thirdPartyRights;
 	}
@@ -1017,6 +1036,7 @@ public class FinancialInstrument56 {
 		this.thirdPartyRights = thirdPartyRights;
 	}
 
+	@XmlElement(name = "FndOwnrsh")
 	public FundOwnership1Code getFundOwnership() {
 		return fundOwnership;
 	}
@@ -1025,6 +1045,7 @@ public class FinancialInstrument56 {
 		this.fundOwnership = fundOwnership;
 	}
 
+	@XmlElement(name = "FndIntntn")
 	public FundIntention1Code getFundIntention() {
 		return fundIntention;
 	}
@@ -1033,6 +1054,7 @@ public class FinancialInstrument56 {
 		this.fundIntention = fundIntention;
 	}
 
+	@XmlElement(name = "OprlSts")
 	public OperationalStatus1Code getOperationalStatus() {
 		return operationalStatus;
 	}

@@ -29,6 +29,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmUrgent
+ * PriorityCode.mmUrgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmHigh
+ * PriorityCode.mmHigh}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmNormal
+ * PriorityCode.mmNormal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmLow
+ * PriorityCode.mmLow}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
  * =
  * <ul>
@@ -40,18 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Priority3Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.Priority4Code
  * Priority4Code}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmUrgent
- * PriorityCode.mmUrgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmHigh
- * PriorityCode.mmHigh}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmNormal
- * PriorityCode.mmNormal}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmLow
- * PriorityCode.mmLow}</li>
  * </ul>
  * </li>
  * <li>

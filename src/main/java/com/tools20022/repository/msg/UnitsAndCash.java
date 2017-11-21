@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Completion of a securities settlement instruction, wherein securities are
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "UnitsAndCash", propOrder = {"instrument", "grandTotalAmount", "group1Number", "group2Number", "completeIndicator"})
 public class UnitsAndCash {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -331,6 +337,7 @@ public class UnitsAndCash {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Instrm", required = true)
 	public FinancialInstrument7 getInstrument() {
 		return instrument;
 	}
@@ -339,6 +346,7 @@ public class UnitsAndCash {
 		this.instrument = instrument;
 	}
 
+	@XmlElement(name = "GrdTtlAmt", required = true)
 	public ImpliedCurrencyAndAmount getGrandTotalAmount() {
 		return grandTotalAmount;
 	}
@@ -347,6 +355,7 @@ public class UnitsAndCash {
 		this.grandTotalAmount = grandTotalAmount;
 	}
 
+	@XmlElement(name = "Grp1Nb")
 	public DecimalNumber getGroup1Number() {
 		return group1Number;
 	}
@@ -355,6 +364,7 @@ public class UnitsAndCash {
 		this.group1Number = group1Number;
 	}
 
+	@XmlElement(name = "Grp2Nb")
 	public DecimalNumber getGroup2Number() {
 		return group2Number;
 	}
@@ -363,6 +373,7 @@ public class UnitsAndCash {
 		this.group2Number = group2Number;
 	}
 
+	@XmlElement(name = "CmpltInd")
 	public YesNoIndicator getCompleteIndicator() {
 		return completeIndicator;
 	}

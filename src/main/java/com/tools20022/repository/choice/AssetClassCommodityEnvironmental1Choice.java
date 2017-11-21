@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.EnvironmentalCommodityEmission1;
 import com.tools20022.repository.msg.EnvironmentalCommodityWeather1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines commodity attributes of a derivative where the type is environmental.
@@ -67,6 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AssetClassCommodityEnvironmental1Choice", propOrder = {"emissions", "weather", "carbonRelated"})
 public class AssetClassCommodityEnvironmental1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class AssetClassCommodityEnvironmental1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Emssns", required = true)
 	public EnvironmentalCommodityEmission1 getEmissions() {
 		return emissions;
 	}
@@ -237,6 +244,7 @@ public class AssetClassCommodityEnvironmental1Choice {
 		this.emissions = emissions;
 	}
 
+	@XmlElement(name = "Wthr", required = true)
 	public EnvironmentalCommodityWeather1 getWeather() {
 		return weather;
 	}
@@ -245,6 +253,7 @@ public class AssetClassCommodityEnvironmental1Choice {
 		this.weather = weather;
 	}
 
+	@XmlElement(name = "CrbnRltd", required = true)
 	public EnvironmentalCommodityCarbonRelated1 getCarbonRelated() {
 		return carbonRelated;
 	}

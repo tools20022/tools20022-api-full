@@ -33,6 +33,10 @@ import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Balance details for a cash account.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashBalance6", propOrder = {"amount", "creditDebitIndicator", "type", "status", "valueDate", "numberOfPayments"})
 public class CashBalance6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -409,6 +415,7 @@ public class CashBalance6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -417,6 +424,7 @@ public class CashBalance6 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -425,6 +433,7 @@ public class CashBalance6 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Tp")
 	public BalanceType9Choice getType() {
 		return type;
 	}
@@ -433,6 +442,7 @@ public class CashBalance6 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Sts")
 	public BalanceStatus1Code getStatus() {
 		return status;
 	}
@@ -441,6 +451,7 @@ public class CashBalance6 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "ValDt")
 	public DateAndDateTimeChoice getValueDate() {
 		return valueDate;
 	}
@@ -449,6 +460,7 @@ public class CashBalance6 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "NbOfPmts")
 	public Number getNumberOfPayments() {
 		return numberOfPayments;
 	}

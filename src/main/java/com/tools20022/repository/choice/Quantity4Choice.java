@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between different quantity of security formats.
@@ -74,6 +78,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Quantity4Choice", propOrder = {"originalAndCurrentFaceAmount", "signedQuantity"})
 public class Quantity4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -207,6 +213,7 @@ public class Quantity4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlAndCurFaceAmt", required = true)
 	public OriginalAndCurrentQuantities2 getOriginalAndCurrentFaceAmount() {
 		return originalAndCurrentFaceAmount;
 	}
@@ -215,6 +222,7 @@ public class Quantity4Choice {
 		this.originalAndCurrentFaceAmount = originalAndCurrentFaceAmount;
 	}
 
+	@XmlElement(name = "SgndQty", required = true)
 	public SignedQuantityFormat2 getSignedQuantity() {
 		return signedQuantity;
 	}

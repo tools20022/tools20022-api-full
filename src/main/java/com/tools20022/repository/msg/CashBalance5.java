@@ -34,6 +34,10 @@ import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Balance details for a cash account.
@@ -80,6 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Balance details for a cash account."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CashBalance5", propOrder = {"amount", "creditDebitIndicator", "type", "status", "valueDate", "numberOfPayments", "restrictionType"})
 public class CashBalance5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -428,6 +434,7 @@ public class CashBalance5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -436,6 +443,7 @@ public class CashBalance5 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
@@ -444,6 +452,7 @@ public class CashBalance5 {
 		this.creditDebitIndicator = creditDebitIndicator;
 	}
 
+	@XmlElement(name = "Tp")
 	public BalanceType8Choice getType() {
 		return type;
 	}
@@ -452,6 +461,7 @@ public class CashBalance5 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Sts")
 	public BalanceStatus1Code getStatus() {
 		return status;
 	}
@@ -460,6 +470,7 @@ public class CashBalance5 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "ValDt")
 	public DateAndDateTimeChoice getValueDate() {
 		return valueDate;
 	}
@@ -468,6 +479,7 @@ public class CashBalance5 {
 		this.valueDate = valueDate;
 	}
 
+	@XmlElement(name = "NbOfPmts")
 	public Number getNumberOfPayments() {
 		return numberOfPayments;
 	}
@@ -476,6 +488,7 @@ public class CashBalance5 {
 		this.numberOfPayments = numberOfPayments;
 	}
 
+	@XmlElement(name = "RstrctnTp")
 	public BalanceRestrictionType1 getRestrictionType() {
 		return restrictionType;
 	}

@@ -36,23 +36,23 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmStrategy
- * Organisation.mmStrategy}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PortfolioStrategy
- * PortfolioStrategy}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
  * <li>
  * {@linkplain com.tools20022.repository.entity.OrganisationStrategy#mmOrganisation
  * OrganisationStrategy.mmOrganisation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PortfolioStrategy
+ * PortfolioStrategy}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmStrategy
+ * Organisation.mmStrategy}</li>
  * </ul>
  * </li>
  * <li>
@@ -109,7 +109,7 @@ public class OrganisationStrategy extends PortfolioStrategy {
 	 */
 	public static final MMBusinessAssociationEnd mmOrganisation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> OrganisationStrategy.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationStrategy.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Organisation";
@@ -130,7 +130,12 @@ public class OrganisationStrategy extends PortfolioStrategy {
 				definition = "Strategy is organisation based.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Organisation.mmStrategy);
 				superType_lazy = () -> PortfolioStrategy.mmObject();
-				element_lazy = () -> Arrays.asList(OrganisationStrategy.mmOrganisation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.OrganisationStrategy.mmOrganisation);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return OrganisationStrategy.class;
 			}
 		});
 		return mmObject_lazy.get();

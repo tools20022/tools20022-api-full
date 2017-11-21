@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.MX_Payment_Maintenance_2016_2017;
 import com.tools20022.repository.msgset.StandAloneRemittanceAdviceISOLatestversion;
 import com.tools20022.repository.msgset.StandAloneRemittanceAdviceMaintenance20162017;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The RemittanceAdvice message allows the originator to provide remittance
@@ -38,9 +40,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code remt.001.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsRemittanceAdviceLatestVersion
@@ -79,6 +78,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code remt.001.001.03}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -94,6 +96,8 @@ import java.util.List;
  * RemittanceAdviceV02}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RemittanceAdviceV03", propOrder = {"groupHeader", "remittanceInformation", "supplementaryData"})
 public class RemittanceAdviceV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -138,6 +142,14 @@ public class RemittanceAdviceV03 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader62.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RemittanceAdviceV03.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<RemittanceInformation13> remittanceInformation;
@@ -184,6 +196,14 @@ public class RemittanceAdviceV03 {
 			minOccurs = 1;
 			complexType_lazy = () -> RemittanceInformation13.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RemittanceAdviceV03.class.getMethod("getRemittanceInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -227,6 +247,14 @@ public class RemittanceAdviceV03 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RemittanceAdviceV03.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -240,7 +268,8 @@ public class RemittanceAdviceV03 {
 				rootElement = "Document";
 				xmlTag = "RmtAdvc";
 				businessArea_lazy = () -> PaymentsRemittanceAdviceLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(RemittanceAdviceV03.mmGroupHeader, RemittanceAdviceV03.mmRemittanceInformation, RemittanceAdviceV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.remt.RemittanceAdviceV03.mmGroupHeader, com.tools20022.repository.area.remt.RemittanceAdviceV03.mmRemittanceInformation,
+						com.tools20022.repository.area.remt.RemittanceAdviceV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "remt";
@@ -250,10 +279,16 @@ public class RemittanceAdviceV03 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RemittanceAdviceV03.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader62 getGroupHeader() {
 		return groupHeader;
 	}
@@ -262,6 +297,7 @@ public class RemittanceAdviceV03 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "RmtInf", required = true)
 	public List<RemittanceInformation13> getRemittanceInformation() {
 		return remittanceInformation;
 	}
@@ -270,11 +306,18 @@ public class RemittanceAdviceV03 {
 		this.remittanceInformation = remittanceInformation;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:remt.001.03.03")
+	static public class Document {
+		@XmlElement(name = "RmtAdvc", required = true)
+		public RemittanceAdviceV03 messageBody;
 	}
 }

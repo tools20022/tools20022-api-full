@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides further details on the list of direct debit mandate elements that
@@ -103,6 +107,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * AmendmentInformationDetails10}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmendmentInformationDetails11", propOrder = {"originalMandateIdentification", "originalCreditorSchemeIdentification", "originalCreditorAgent", "originalCreditorAgentAccount", "originalDebtor", "originalDebtorAccount",
+		"originalDebtorAgent", "originalDebtorAgentAccount", "originalFinalCollectionDate", "originalFrequency", "originalReason", "originalTrackingDays"})
 public class AmendmentInformationDetails11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -767,6 +774,7 @@ public class AmendmentInformationDetails11 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OrgnlMndtId")
 	public Max35Text getOriginalMandateIdentification() {
 		return originalMandateIdentification;
 	}
@@ -775,6 +783,7 @@ public class AmendmentInformationDetails11 {
 		this.originalMandateIdentification = originalMandateIdentification;
 	}
 
+	@XmlElement(name = "OrgnlCdtrSchmeId")
 	public PartyIdentification43 getOriginalCreditorSchemeIdentification() {
 		return originalCreditorSchemeIdentification;
 	}
@@ -783,6 +792,7 @@ public class AmendmentInformationDetails11 {
 		this.originalCreditorSchemeIdentification = originalCreditorSchemeIdentification;
 	}
 
+	@XmlElement(name = "OrgnlCdtrAgt")
 	public BranchAndFinancialInstitutionIdentification5 getOriginalCreditorAgent() {
 		return originalCreditorAgent;
 	}
@@ -791,6 +801,7 @@ public class AmendmentInformationDetails11 {
 		this.originalCreditorAgent = originalCreditorAgent;
 	}
 
+	@XmlElement(name = "OrgnlCdtrAgtAcct")
 	public CashAccount24 getOriginalCreditorAgentAccount() {
 		return originalCreditorAgentAccount;
 	}
@@ -799,6 +810,7 @@ public class AmendmentInformationDetails11 {
 		this.originalCreditorAgentAccount = originalCreditorAgentAccount;
 	}
 
+	@XmlElement(name = "OrgnlDbtr")
 	public PartyIdentification43 getOriginalDebtor() {
 		return originalDebtor;
 	}
@@ -807,6 +819,7 @@ public class AmendmentInformationDetails11 {
 		this.originalDebtor = originalDebtor;
 	}
 
+	@XmlElement(name = "OrgnlDbtrAcct")
 	public CashAccount24 getOriginalDebtorAccount() {
 		return originalDebtorAccount;
 	}
@@ -815,6 +828,7 @@ public class AmendmentInformationDetails11 {
 		this.originalDebtorAccount = originalDebtorAccount;
 	}
 
+	@XmlElement(name = "OrgnlDbtrAgt")
 	public BranchAndFinancialInstitutionIdentification5 getOriginalDebtorAgent() {
 		return originalDebtorAgent;
 	}
@@ -823,6 +837,7 @@ public class AmendmentInformationDetails11 {
 		this.originalDebtorAgent = originalDebtorAgent;
 	}
 
+	@XmlElement(name = "OrgnlDbtrAgtAcct")
 	public CashAccount24 getOriginalDebtorAgentAccount() {
 		return originalDebtorAgentAccount;
 	}
@@ -831,6 +846,7 @@ public class AmendmentInformationDetails11 {
 		this.originalDebtorAgentAccount = originalDebtorAgentAccount;
 	}
 
+	@XmlElement(name = "OrgnlFnlColltnDt")
 	public ISODate getOriginalFinalCollectionDate() {
 		return originalFinalCollectionDate;
 	}
@@ -839,6 +855,7 @@ public class AmendmentInformationDetails11 {
 		this.originalFinalCollectionDate = originalFinalCollectionDate;
 	}
 
+	@XmlElement(name = "OrgnlFrqcy")
 	public Frequency36Choice getOriginalFrequency() {
 		return originalFrequency;
 	}
@@ -847,6 +864,7 @@ public class AmendmentInformationDetails11 {
 		this.originalFrequency = originalFrequency;
 	}
 
+	@XmlElement(name = "OrgnlRsn")
 	public MandateSetupReason1Choice getOriginalReason() {
 		return originalReason;
 	}
@@ -855,6 +873,7 @@ public class AmendmentInformationDetails11 {
 		this.originalReason = originalReason;
 	}
 
+	@XmlElement(name = "OrgnlTrckgDays")
 	public Exact2NumericText getOriginalTrackingDays() {
 		return originalTrackingDays;
 	}

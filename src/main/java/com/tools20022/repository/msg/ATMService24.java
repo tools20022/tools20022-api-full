@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Service provided by the ATM inside the session.
@@ -68,6 +72,8 @@ import java.util.List;
  * ATMService23}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMService24", propOrder = {"serviceReference", "ATMServiceCode", "hostServiceCode", "serviceType", "serviceVariantIdentification"})
 public class ATMService24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -319,6 +325,7 @@ public class ATMService24 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SvcRef")
 	public Max35Text getServiceReference() {
 		return serviceReference;
 	}
@@ -327,6 +334,7 @@ public class ATMService24 {
 		this.serviceReference = serviceReference;
 	}
 
+	@XmlElement(name = "ATMSvcCd")
 	public Max35Text getATMServiceCode() {
 		return aTMServiceCode;
 	}
@@ -335,6 +343,7 @@ public class ATMService24 {
 		this.aTMServiceCode = aTMServiceCode;
 	}
 
+	@XmlElement(name = "HstSvcCd")
 	public Max35Text getHostServiceCode() {
 		return hostServiceCode;
 	}
@@ -343,6 +352,7 @@ public class ATMService24 {
 		this.hostServiceCode = hostServiceCode;
 	}
 
+	@XmlElement(name = "SvcTp", required = true)
 	public ATMServiceType10Code getServiceType() {
 		return serviceType;
 	}
@@ -351,6 +361,7 @@ public class ATMService24 {
 		this.serviceType = serviceType;
 	}
 
+	@XmlElement(name = "SvcVarntId")
 	public List<Max35Text> getServiceVariantIdentification() {
 		return serviceVariantIdentification;
 	}

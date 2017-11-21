@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Parameters used to report cash movements,eg, country code, currency code, BIC
@@ -72,6 +76,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ForecastParameter1", propOrder = {"reportParameter", "estimatedCashInForecastDetails", "estimatedCashOutForecastDetails", "estimatedNetCashForecastDetails"})
 public class ForecastParameter1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -283,6 +289,7 @@ public class ForecastParameter1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptParam", required = true)
 	public ReportParameter2Choice getReportParameter() {
 		return reportParameter;
 	}
@@ -291,6 +298,7 @@ public class ForecastParameter1 {
 		this.reportParameter = reportParameter;
 	}
 
+	@XmlElement(name = "EstmtdCshInFcstDtls")
 	public List<CashInForecast1> getEstimatedCashInForecastDetails() {
 		return estimatedCashInForecastDetails;
 	}
@@ -299,6 +307,7 @@ public class ForecastParameter1 {
 		this.estimatedCashInForecastDetails = estimatedCashInForecastDetails;
 	}
 
+	@XmlElement(name = "EstmtdCshOutFcstDtls")
 	public List<CashOutForecast1> getEstimatedCashOutForecastDetails() {
 		return estimatedCashOutForecastDetails;
 	}
@@ -307,6 +316,7 @@ public class ForecastParameter1 {
 		this.estimatedCashOutForecastDetails = estimatedCashOutForecastDetails;
 	}
 
+	@XmlElement(name = "EstmtdNetCshFcstDtls")
 	public List<NetCashForecast1> getEstimatedNetCashForecastDetails() {
 		return estimatedNetCashForecastDetails;
 	}

@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TaxReport1;
 import com.tools20022.repository.msg.TaxReportHeader1;
 import com.tools20022.repository.msgset.InvoiceTaxReportISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * The InvoiceTaxReport message is sent by tax responsible to tax authority. Tax
@@ -38,9 +40,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.034.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -73,6 +72,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.034.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -84,6 +86,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvoiceTaxReportV01", propOrder = {"invoiceTaxReportHeader", "taxReport", "supplementaryData"})
 public class InvoiceTaxReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -124,6 +128,14 @@ public class InvoiceTaxReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> TaxReportHeader1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceTaxReportV01.class.getMethod("getInvoiceTaxReportHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<TaxReport1> taxReport;
 	/**
@@ -162,6 +174,14 @@ public class InvoiceTaxReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> TaxReport1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceTaxReportV01.class.getMethod("getTaxReport", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SupplementaryData1> supplementaryData;
 	/**
@@ -199,6 +219,14 @@ public class InvoiceTaxReportV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvoiceTaxReportV01.class.getMethod("getSupplementaryData", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -211,7 +239,8 @@ public class InvoiceTaxReportV01 {
 				rootElement = "Document";
 				xmlTag = "InvcTaxRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceTaxReportV01.mmInvoiceTaxReportHeader, InvoiceTaxReportV01.mmTaxReport, InvoiceTaxReportV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InvoiceTaxReportV01.mmInvoiceTaxReportHeader, com.tools20022.repository.area.auth.InvoiceTaxReportV01.mmTaxReport,
+						com.tools20022.repository.area.auth.InvoiceTaxReportV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -221,10 +250,16 @@ public class InvoiceTaxReportV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvoiceTaxReportV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InvcTaxRptHdr", required = true)
 	public TaxReportHeader1 getInvoiceTaxReportHeader() {
 		return invoiceTaxReportHeader;
 	}
@@ -233,6 +268,7 @@ public class InvoiceTaxReportV01 {
 		this.invoiceTaxReportHeader = invoiceTaxReportHeader;
 	}
 
+	@XmlElement(name = "TaxRpt", required = true)
 	public List<TaxReport1> getTaxReport() {
 		return taxReport;
 	}
@@ -241,11 +277,18 @@ public class InvoiceTaxReportV01 {
 		this.taxReport = taxReport;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
 
 	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = supplementaryData;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.034.01.01")
+	static public class Document {
+		@XmlElement(name = "InvcTaxRpt", required = true)
+		public InvoiceTaxReportV01 messageBody;
 	}
 }

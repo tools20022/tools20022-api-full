@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Calculation of the net asset value for an investment fund/fund class.
@@ -124,6 +128,9 @@ import java.util.List;
  * PriceValuation3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PriceValuation4", propOrder = {"identification", "valuationDateTime", "NAVDateTime", "financialInstrumentDetails", "fundManagementCompany", "totalNAV", "totalUnitsNumber", "nextValuationDateTime",
+		"previousValuationDateTime", "valuationType", "valuationFrequency", "officialValuationIndicator", "suspendedIndicator", "priceDetails", "valuationStatistics", "performanceDetails"})
 public class PriceValuation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -933,6 +940,7 @@ public class PriceValuation4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id")
 	public Max35Text getIdentification() {
 		return identification;
 	}
@@ -941,6 +949,7 @@ public class PriceValuation4 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "ValtnDtTm")
 	public DateAndDateTimeChoice getValuationDateTime() {
 		return valuationDateTime;
 	}
@@ -949,6 +958,7 @@ public class PriceValuation4 {
 		this.valuationDateTime = valuationDateTime;
 	}
 
+	@XmlElement(name = "NAVDtTm", required = true)
 	public DateAndDateTimeChoice getNAVDateTime() {
 		return nAVDateTime;
 	}
@@ -957,6 +967,7 @@ public class PriceValuation4 {
 		this.nAVDateTime = nAVDateTime;
 	}
 
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument8 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
@@ -965,6 +976,7 @@ public class PriceValuation4 {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 
+	@XmlElement(name = "FndMgmtCpny")
 	public PartyIdentification2Choice getFundManagementCompany() {
 		return fundManagementCompany;
 	}
@@ -973,6 +985,7 @@ public class PriceValuation4 {
 		this.fundManagementCompany = fundManagementCompany;
 	}
 
+	@XmlElement(name = "TtlNAV")
 	public List<ActiveOrHistoricCurrencyAndAmount> getTotalNAV() {
 		return totalNAV;
 	}
@@ -981,6 +994,7 @@ public class PriceValuation4 {
 		this.totalNAV = totalNAV;
 	}
 
+	@XmlElement(name = "TtlUnitsNb")
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
@@ -989,6 +1003,7 @@ public class PriceValuation4 {
 		this.totalUnitsNumber = totalUnitsNumber;
 	}
 
+	@XmlElement(name = "NxtValtnDtTm")
 	public DateAndDateTimeChoice getNextValuationDateTime() {
 		return nextValuationDateTime;
 	}
@@ -997,6 +1012,7 @@ public class PriceValuation4 {
 		this.nextValuationDateTime = nextValuationDateTime;
 	}
 
+	@XmlElement(name = "PrvsValtnDtTm")
 	public DateAndDateTimeChoice getPreviousValuationDateTime() {
 		return previousValuationDateTime;
 	}
@@ -1005,6 +1021,7 @@ public class PriceValuation4 {
 		this.previousValuationDateTime = previousValuationDateTime;
 	}
 
+	@XmlElement(name = "ValtnTp", required = true)
 	public ValuationTiming1Code getValuationType() {
 		return valuationType;
 	}
@@ -1013,6 +1030,7 @@ public class PriceValuation4 {
 		this.valuationType = valuationType;
 	}
 
+	@XmlElement(name = "ValtnFrqcy")
 	public EventFrequency1Code getValuationFrequency() {
 		return valuationFrequency;
 	}
@@ -1021,6 +1039,7 @@ public class PriceValuation4 {
 		this.valuationFrequency = valuationFrequency;
 	}
 
+	@XmlElement(name = "OffclValtnInd", required = true)
 	public YesNoIndicator getOfficialValuationIndicator() {
 		return officialValuationIndicator;
 	}
@@ -1029,6 +1048,7 @@ public class PriceValuation4 {
 		this.officialValuationIndicator = officialValuationIndicator;
 	}
 
+	@XmlElement(name = "SspdInd", required = true)
 	public YesNoIndicator getSuspendedIndicator() {
 		return suspendedIndicator;
 	}
@@ -1037,6 +1057,7 @@ public class PriceValuation4 {
 		this.suspendedIndicator = suspendedIndicator;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public List<UnitPrice15> getPriceDetails() {
 		return priceDetails;
 	}
@@ -1045,6 +1066,7 @@ public class PriceValuation4 {
 		this.priceDetails = priceDetails;
 	}
 
+	@XmlElement(name = "ValtnSttstcs")
 	public List<ValuationStatistics3> getValuationStatistics() {
 		return valuationStatistics;
 	}
@@ -1053,6 +1075,7 @@ public class PriceValuation4 {
 		this.valuationStatistics = valuationStatistics;
 	}
 
+	@XmlElement(name = "PrfrmncDtls")
 	public PerformanceFactors1 getPerformanceDetails() {
 		return performanceDetails;
 	}

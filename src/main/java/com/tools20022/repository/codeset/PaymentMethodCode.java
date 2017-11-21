@@ -29,23 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod3Code
- * PaymentMethod3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod2Code
- * PaymentMethod2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod4Code
- * PaymentMethod4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod7Code
- * PaymentMethod7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod6Code
- * PaymentMethod6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod5Code
- * PaymentMethod5Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethodCode#mmCheque
@@ -64,6 +47,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PaymentMethodCode#mmClassical
  * PaymentMethodCode.mmClassical}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod3Code
+ * PaymentMethod3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod2Code
+ * PaymentMethod2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod4Code
+ * PaymentMethod4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod7Code
+ * PaymentMethod7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod6Code
+ * PaymentMethod6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod5Code
+ * PaymentMethod5Code}</li>
  * </ul>
  * </li>
  * <li>

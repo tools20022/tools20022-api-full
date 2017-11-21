@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the arrangement of the transport of goods and services and the
@@ -68,6 +72,8 @@ import java.util.List;
  * Consignment2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Consignment4", propOrder = {"consignor", "consignee", "transportMeans"})
 public class Consignment4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -245,6 +251,7 @@ public class Consignment4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Consgnr")
 	public TradeParty3 getConsignor() {
 		return consignor;
 	}
@@ -253,6 +260,7 @@ public class Consignment4 {
 		this.consignor = consignor;
 	}
 
+	@XmlElement(name = "Consgn")
 	public TradeParty3 getConsignee() {
 		return consignee;
 	}
@@ -261,6 +269,7 @@ public class Consignment4 {
 		this.consignee = consignee;
 	}
 
+	@XmlElement(name = "TrnsprtMeans")
 	public List<TransportMeans3> getTransportMeans() {
 		return transportMeans;
 	}

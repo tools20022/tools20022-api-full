@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Detailed amounts associated with the total amount of transaction.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * DetailedAmount2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "DetailedAmount4", propOrder = {"amount", "label"})
 public class DetailedAmount4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -215,6 +221,7 @@ public class DetailedAmount4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -223,6 +230,7 @@ public class DetailedAmount4 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Labl")
 	public Max140Text getLabel() {
 		return label;
 	}

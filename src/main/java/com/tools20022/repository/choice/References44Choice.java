@@ -30,6 +30,10 @@ import com.tools20022.repository.msg.GenericDocumentIdentification4;
 import com.tools20022.repository.msg.SettlementTypeAndIdentification18;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of reference.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * References22Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "References44Choice", propOrder = {"otherTransactionIdentification", "securitiesFinancingTransactionIdentification", "securitiesSettlementTransactionIdentification", "intraPositionMovementIdentification"})
 public class References44Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -318,6 +324,7 @@ public class References44Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "OthrTxId", required = true)
 	public GenericDocumentIdentification4 getOtherTransactionIdentification() {
 		return otherTransactionIdentification;
 	}
@@ -326,6 +333,7 @@ public class References44Choice {
 		this.otherTransactionIdentification = otherTransactionIdentification;
 	}
 
+	@XmlElement(name = "SctiesFincgTxId", required = true)
 	public SettlementTypeAndIdentification18 getSecuritiesFinancingTransactionIdentification() {
 		return securitiesFinancingTransactionIdentification;
 	}
@@ -334,6 +342,7 @@ public class References44Choice {
 		this.securitiesFinancingTransactionIdentification = securitiesFinancingTransactionIdentification;
 	}
 
+	@XmlElement(name = "SctiesSttlmTxId", required = true)
 	public SettlementTypeAndIdentification18 getSecuritiesSettlementTransactionIdentification() {
 		return securitiesSettlementTransactionIdentification;
 	}
@@ -342,6 +351,7 @@ public class References44Choice {
 		this.securitiesSettlementTransactionIdentification = securitiesSettlementTransactionIdentification;
 	}
 
+	@XmlElement(name = "IntraPosMvmntId", required = true)
 	public Max35Text getIntraPositionMovementIdentification() {
 		return intraPositionMovementIdentification;
 	}

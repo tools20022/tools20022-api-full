@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,6 +37,46 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Country#mmDomiciledFunds
+ * Country.mmDomiciledFunds}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Country#mmCode
+ * Country.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Country#mmCitizen
+ * Country.mmCitizen}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Country#mmTax Country.mmTax}
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Country#mmCountryForSafekeepingPlace
+ * Country.mmCountryForSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Country#mmCountryForBeneficialOwner
+ * Country.mmCountryForBeneficialOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Country#mmProducedProducts
+ * Country.mmProducedProducts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Country#mmNationalRegulatoryAuthority
+ * Country.mmNationalRegulatoryAuthority}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Country#mmRelatedCardPayment
+ * Country.mmRelatedCardPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Country#mmName
+ * Country.mmName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Country#mmPostalAddressSpecification
+ * Country.mmPostalAddressSpecification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Country#mmCountryRelatedInvestmentFundProcessing
+ * Country.mmCountryRelatedInvestmentFundProcessing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Country#mmMarket
+ * Country.mmMarket}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Country#mmRelatedPaymentCard
+ * Country.mmRelatedPaymentCard}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -97,46 +138,6 @@ import java.util.List;
  * ReportSpecification2.mmCorrespondentCountry}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Country#mmDomiciledFunds
- * Country.mmDomiciledFunds}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Country#mmCode
- * Country.mmCode}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Country#mmCitizen
- * Country.mmCitizen}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Country#mmTax Country.mmTax}
- * </li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Country#mmCountryForSafekeepingPlace
- * Country.mmCountryForSafekeepingPlace}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Country#mmCountryForBeneficialOwner
- * Country.mmCountryForBeneficialOwner}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Country#mmProducedProducts
- * Country.mmProducedProducts}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Country#mmNationalRegulatoryAuthority
- * Country.mmNationalRegulatoryAuthority}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Country#mmRelatedCardPayment
- * Country.mmRelatedCardPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Country#mmName
- * Country.mmName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Country#mmPostalAddressSpecification
- * Country.mmPostalAddressSpecification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Country#mmCountryRelatedInvestmentFundProcessing
- * Country.mmCountryRelatedInvestmentFundProcessing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Country#mmMarket
- * Country.mmMarket}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Country#mmRelatedPaymentCard
- * Country.mmRelatedPaymentCard}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -191,7 +192,7 @@ public class Country {
 	 */
 	public static final MMBusinessAssociationEnd mmDomiciledFunds = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Country.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DomiciledFunds";
@@ -212,10 +213,6 @@ public class Country {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CountryCode
 	 * CountryCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Country
-	 * Country}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -740,6 +737,10 @@ public class Country {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Country
+	 * Country}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -787,7 +788,7 @@ public class Country {
 					PartyIdentification102Choice.mmCountry, AlternatePartyIdentification8.mmCountry, PartyIdentification101.mmDomicileCountry, PartyIdentification101.mmNonDomicileCountry, PartyIdentification111Choice.mmCountry,
 					AlternatePartyIdentification9.mmCountry, PartyIdentificationAndAccount135.mmNationality, PartyIdentification115Choice.mmCountry, PartyIdentification112.mmCountryOfResidence, CountryCodeAndName3.mmCode,
 					PersonIdentification12.mmCountryOfBranch, RedemptionBulkExecution5.mmPlaceOfTrade, Organisation30.mmRegistrationCountry, Organisation29.mmRegistrationCountry);
-			elementContext_lazy = () -> Country.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Code";
@@ -795,6 +796,14 @@ public class Country {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Country.class.getMethod("getCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Person citizen;
@@ -831,7 +840,7 @@ public class Country {
 	 */
 	public static final MMBusinessAssociationEnd mmCitizen = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Country.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Citizen";
@@ -876,7 +885,7 @@ public class Country {
 	 */
 	public static final MMBusinessAssociationEnd mmTax = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Country.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tax";
@@ -924,7 +933,7 @@ public class Country {
 	 */
 	public static final MMBusinessAssociationEnd mmCountryForSafekeepingPlace = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Country.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryForSafekeepingPlace";
@@ -973,7 +982,7 @@ public class Country {
 	 */
 	public static final MMBusinessAssociationEnd mmCountryForBeneficialOwner = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Country.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CountryForBeneficialOwner";
@@ -1019,7 +1028,7 @@ public class Country {
 	 */
 	public static final MMBusinessAssociationEnd mmProducedProducts = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Country.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProducedProducts";
@@ -1066,7 +1075,7 @@ public class Country {
 	 */
 	public static final MMBusinessAssociationEnd mmNationalRegulatoryAuthority = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Country.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NationalRegulatoryAuthority";
@@ -1113,7 +1122,7 @@ public class Country {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCardPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Country.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCardPayment";
@@ -1135,10 +1144,6 @@ public class Country {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} = {@linkplain com.tools20022.repository.entity.Country
-	 * Country}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1148,6 +1153,10 @@ public class Country {
 	 * CountryCodeAndName3.mmName}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Country
+	 * Country}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1164,7 +1173,7 @@ public class Country {
 	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CountryCodeAndName1.mmName, CountryCodeAndName3.mmName);
-			elementContext_lazy = () -> Country.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Name";
@@ -1172,6 +1181,14 @@ public class Country {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Country.class.getMethod("getName", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.PostalAddress> postalAddressSpecification;
@@ -1210,7 +1227,7 @@ public class Country {
 	 */
 	public static final MMBusinessAssociationEnd mmPostalAddressSpecification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Country.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PostalAddressSpecification";
@@ -1260,7 +1277,7 @@ public class Country {
 	 */
 	public static final MMBusinessAssociationEnd mmCountryRelatedInvestmentFundProcessing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Country.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CountryRelatedInvestmentFundProcessing";
@@ -1306,7 +1323,7 @@ public class Country {
 	 */
 	public static final MMBusinessAssociationEnd mmMarket = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Country.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Market";
@@ -1353,7 +1370,7 @@ public class Country {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPaymentCard = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Country.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPaymentCard";
@@ -1378,10 +1395,17 @@ public class Country {
 						com.tools20022.repository.entity.PaymentCard.mmCardCountryCode, com.tools20022.repository.entity.SafekeepingPlace.mmCountry, com.tools20022.repository.entity.BeneficialOwner.mmNonDomicileCountry,
 						com.tools20022.repository.entity.CardPaymentAcquiring.mmCountry, com.tools20022.repository.entity.RegulatoryAuthorityRole.mmCountry, com.tools20022.repository.entity.Market.mmCountry);
 				derivationElement_lazy = () -> Arrays.asList(ReportSpecification3.mmCorrespondentCountry, ReportSpecification4.mmCorrespondentCountry, ReportSpecification2.mmCorrespondentCountry);
-				element_lazy = () -> Arrays.asList(Country.mmDomiciledFunds, Country.mmCode, Country.mmCitizen, Country.mmTax, Country.mmCountryForSafekeepingPlace, Country.mmCountryForBeneficialOwner, Country.mmProducedProducts,
-						Country.mmNationalRegulatoryAuthority, Country.mmRelatedCardPayment, Country.mmName, Country.mmPostalAddressSpecification, Country.mmCountryRelatedInvestmentFundProcessing, Country.mmMarket,
-						Country.mmRelatedPaymentCard);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.mmDomiciledFunds, com.tools20022.repository.entity.Country.mmCode, com.tools20022.repository.entity.Country.mmCitizen,
+						com.tools20022.repository.entity.Country.mmTax, com.tools20022.repository.entity.Country.mmCountryForSafekeepingPlace, com.tools20022.repository.entity.Country.mmCountryForBeneficialOwner,
+						com.tools20022.repository.entity.Country.mmProducedProducts, com.tools20022.repository.entity.Country.mmNationalRegulatoryAuthority, com.tools20022.repository.entity.Country.mmRelatedCardPayment,
+						com.tools20022.repository.entity.Country.mmName, com.tools20022.repository.entity.Country.mmPostalAddressSpecification, com.tools20022.repository.entity.Country.mmCountryRelatedInvestmentFundProcessing,
+						com.tools20022.repository.entity.Country.mmMarket, com.tools20022.repository.entity.Country.mmRelatedPaymentCard);
 				derivationComponent_lazy = () -> Arrays.asList(CountryCodeAndName1.mmObject(), CountryCodeAndName3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Country.class;
 			}
 		});
 		return mmObject_lazy.get();

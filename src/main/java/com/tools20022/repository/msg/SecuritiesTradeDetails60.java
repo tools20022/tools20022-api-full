@@ -34,6 +34,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the securities trade.
@@ -112,6 +116,9 @@ import java.util.List;
  * definition} = "Details of the securities trade."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTradeDetails60", propOrder = {"tradeIdentification", "collateralTransactionIdentification", "accountOwnerTransactionIdentification", "processorTransactionIdentification", "placeOfTrade", "placeOfClearing",
+		"tradeDate", "settlementDate", "dealPrice", "numberOfDaysAccrued", "tradeTransactionCondition", "typeOfPrice"})
 public class SecuritiesTradeDetails60 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -734,6 +741,7 @@ public class SecuritiesTradeDetails60 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradId")
 	public List<RestrictedFINXMax16Text> getTradeIdentification() {
 		return tradeIdentification;
 	}
@@ -742,6 +750,7 @@ public class SecuritiesTradeDetails60 {
 		this.tradeIdentification = tradeIdentification;
 	}
 
+	@XmlElement(name = "CollTxId")
 	public List<RestrictedFINXMax16Text> getCollateralTransactionIdentification() {
 		return collateralTransactionIdentification;
 	}
@@ -750,6 +759,7 @@ public class SecuritiesTradeDetails60 {
 		this.collateralTransactionIdentification = collateralTransactionIdentification;
 	}
 
+	@XmlElement(name = "AcctOwnrTxId")
 	public List<RestrictedFINXMax16Text> getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
@@ -758,6 +768,7 @@ public class SecuritiesTradeDetails60 {
 		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
 	}
 
+	@XmlElement(name = "PrcrTxId")
 	public RestrictedFINXMax16Text getProcessorTransactionIdentification() {
 		return processorTransactionIdentification;
 	}
@@ -766,6 +777,7 @@ public class SecuritiesTradeDetails60 {
 		this.processorTransactionIdentification = processorTransactionIdentification;
 	}
 
+	@XmlElement(name = "PlcOfTrad")
 	public PlaceOfTradeIdentification2 getPlaceOfTrade() {
 		return placeOfTrade;
 	}
@@ -774,6 +786,7 @@ public class SecuritiesTradeDetails60 {
 		this.placeOfTrade = placeOfTrade;
 	}
 
+	@XmlElement(name = "PlcOfClr")
 	public PlaceOfClearingIdentification1 getPlaceOfClearing() {
 		return placeOfClearing;
 	}
@@ -782,6 +795,7 @@ public class SecuritiesTradeDetails60 {
 		this.placeOfClearing = placeOfClearing;
 	}
 
+	@XmlElement(name = "TradDt")
 	public TradeDate6Choice getTradeDate() {
 		return tradeDate;
 	}
@@ -790,6 +804,7 @@ public class SecuritiesTradeDetails60 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public SettlementDate12Choice getSettlementDate() {
 		return settlementDate;
 	}
@@ -798,6 +813,7 @@ public class SecuritiesTradeDetails60 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "DealPric")
 	public Price3 getDealPrice() {
 		return dealPrice;
 	}
@@ -806,6 +822,7 @@ public class SecuritiesTradeDetails60 {
 		this.dealPrice = dealPrice;
 	}
 
+	@XmlElement(name = "NbOfDaysAcrd")
 	public Max3Number getNumberOfDaysAccrued() {
 		return numberOfDaysAccrued;
 	}
@@ -814,6 +831,7 @@ public class SecuritiesTradeDetails60 {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
 	}
 
+	@XmlElement(name = "TradTxCond")
 	public List<TradeTransactionCondition6Choice> getTradeTransactionCondition() {
 		return tradeTransactionCondition;
 	}
@@ -822,6 +840,7 @@ public class SecuritiesTradeDetails60 {
 		this.tradeTransactionCondition = tradeTransactionCondition;
 	}
 
+	@XmlElement(name = "TpOfPric")
 	public TypeOfPrice32Choice getTypeOfPrice() {
 		return typeOfPrice;
 	}

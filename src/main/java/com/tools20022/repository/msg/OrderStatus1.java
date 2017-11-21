@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details related to the order.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides details related to the order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OrderStatus1", propOrder = {"workingIndicator", "side", "remainingQuantity", "cumulativeQuantity", "totalNumberReports", "lastReportRequested", "orderQuantityDetails"})
 public class OrderStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -423,6 +429,7 @@ public class OrderStatus1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "WorkgInd", required = true)
 	public YesNoIndicator getWorkingIndicator() {
 		return workingIndicator;
 	}
@@ -431,6 +438,7 @@ public class OrderStatus1 {
 		this.workingIndicator = workingIndicator;
 	}
 
+	@XmlElement(name = "Sd", required = true)
 	public Side1Code getSide() {
 		return side;
 	}
@@ -439,6 +447,7 @@ public class OrderStatus1 {
 		this.side = side;
 	}
 
+	@XmlElement(name = "RmngQty", required = true)
 	public FinancialInstrumentQuantityChoice getRemainingQuantity() {
 		return remainingQuantity;
 	}
@@ -447,6 +456,7 @@ public class OrderStatus1 {
 		this.remainingQuantity = remainingQuantity;
 	}
 
+	@XmlElement(name = "CmltvQty", required = true)
 	public FinancialInstrumentQuantityChoice getCumulativeQuantity() {
 		return cumulativeQuantity;
 	}
@@ -455,6 +465,7 @@ public class OrderStatus1 {
 		this.cumulativeQuantity = cumulativeQuantity;
 	}
 
+	@XmlElement(name = "TtlNbRpts", required = true)
 	public Number getTotalNumberReports() {
 		return totalNumberReports;
 	}
@@ -463,6 +474,7 @@ public class OrderStatus1 {
 		this.totalNumberReports = totalNumberReports;
 	}
 
+	@XmlElement(name = "LastRptReqd", required = true)
 	public YesNoIndicator getLastReportRequested() {
 		return lastReportRequested;
 	}
@@ -471,6 +483,7 @@ public class OrderStatus1 {
 		this.lastReportRequested = lastReportRequested;
 	}
 
+	@XmlElement(name = "OrdrQtyDtls")
 	public OrderQuantity1 getOrderQuantityDetails() {
 		return orderQuantityDetails;
 	}

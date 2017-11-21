@@ -29,134 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType1Code
- * AssetClassSubProductType1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType2Code
- * AssetClassSubProductType2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType3Code
- * AssetClassSubProductType3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType5Code
- * AssetClassSubProductType5Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType6Code
- * AssetClassSubProductType6Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType7Code
- * AssetClassSubProductType7Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType8Code
- * AssetClassSubProductType8Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType10Code
- * AssetClassSubProductType10Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType15Code
- * AssetClassSubProductType15Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType16Code
- * AssetClassSubProductType16Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType18Code
- * AssetClassSubProductType18Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType19Code
- * AssetClassSubProductType19Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType28Code
- * AssetClassSubProductType28Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType33Code
- * AssetClassSubProductType33Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType25Code
- * AssetClassSubProductType25Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType27Code
- * AssetClassSubProductType27Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType26Code
- * AssetClassSubProductType26Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType32Code
- * AssetClassSubProductType32Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType41Code
- * AssetClassSubProductType41Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType45Code
- * AssetClassSubProductType45Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType21Code
- * AssetClassSubProductType21Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType40Code
- * AssetClassSubProductType40Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType48Code
- * AssetClassSubProductType48Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType23Code
- * AssetClassSubProductType23Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType39Code
- * AssetClassSubProductType39Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType29Code
- * AssetClassSubProductType29Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType22Code
- * AssetClassSubProductType22Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType42Code
- * AssetClassSubProductType42Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType35Code
- * AssetClassSubProductType35Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType44Code
- * AssetClassSubProductType44Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType20Code
- * AssetClassSubProductType20Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType24Code
- * AssetClassSubProductType24Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType30Code
- * AssetClassSubProductType30Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType31Code
- * AssetClassSubProductType31Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType34Code
- * AssetClassSubProductType34Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType36Code
- * AssetClassSubProductType36Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType37Code
- * AssetClassSubProductType37Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType38Code
- * AssetClassSubProductType38Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType43Code
- * AssetClassSubProductType43Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType46Code
- * AssetClassSubProductType46Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType47Code
- * AssetClassSubProductType47Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -291,6 +163,134 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmContainerShip
  * AssetClassSubProductTypeCode.mmContainerShip}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType1Code
+ * AssetClassSubProductType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType2Code
+ * AssetClassSubProductType2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType3Code
+ * AssetClassSubProductType3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType5Code
+ * AssetClassSubProductType5Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType6Code
+ * AssetClassSubProductType6Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType7Code
+ * AssetClassSubProductType7Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType8Code
+ * AssetClassSubProductType8Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType10Code
+ * AssetClassSubProductType10Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType15Code
+ * AssetClassSubProductType15Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType16Code
+ * AssetClassSubProductType16Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType18Code
+ * AssetClassSubProductType18Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType19Code
+ * AssetClassSubProductType19Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType28Code
+ * AssetClassSubProductType28Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType33Code
+ * AssetClassSubProductType33Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType25Code
+ * AssetClassSubProductType25Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType27Code
+ * AssetClassSubProductType27Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType26Code
+ * AssetClassSubProductType26Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType32Code
+ * AssetClassSubProductType32Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType41Code
+ * AssetClassSubProductType41Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType45Code
+ * AssetClassSubProductType45Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType21Code
+ * AssetClassSubProductType21Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType40Code
+ * AssetClassSubProductType40Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType48Code
+ * AssetClassSubProductType48Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType23Code
+ * AssetClassSubProductType23Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType39Code
+ * AssetClassSubProductType39Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType29Code
+ * AssetClassSubProductType29Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType22Code
+ * AssetClassSubProductType22Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType42Code
+ * AssetClassSubProductType42Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType35Code
+ * AssetClassSubProductType35Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType44Code
+ * AssetClassSubProductType44Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType20Code
+ * AssetClassSubProductType20Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType24Code
+ * AssetClassSubProductType24Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType30Code
+ * AssetClassSubProductType30Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType31Code
+ * AssetClassSubProductType31Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType34Code
+ * AssetClassSubProductType34Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType36Code
+ * AssetClassSubProductType36Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType37Code
+ * AssetClassSubProductType37Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType38Code
+ * AssetClassSubProductType38Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType43Code
+ * AssetClassSubProductType43Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType46Code
+ * AssetClassSubProductType46Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType47Code
+ * AssetClassSubProductType47Code}</li>
  * </ul>
  * </li>
  * <li>

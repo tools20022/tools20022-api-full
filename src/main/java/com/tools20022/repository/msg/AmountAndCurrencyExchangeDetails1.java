@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Set of elements providing information on the original amount and currency
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountAndCurrencyExchangeDetails1", propOrder = {"amount", "currencyExchange"})
 public class AmountAndCurrencyExchangeDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class AmountAndCurrencyExchangeDetails1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -189,6 +196,7 @@ public class AmountAndCurrencyExchangeDetails1 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "CcyXchg")
 	public CurrencyExchange3 getCurrencyExchange() {
 		return currencyExchange;
 	}

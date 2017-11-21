@@ -29,31 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType2Code
- * FundOrderType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType6Code
- * FundOrderType6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType3Code
- * FundOrderType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType5Code
- * FundOrderType5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType4Code
- * FundOrderType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code
- * HedgeFundOrderType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.HedgeFundOrderType1Code
- * HedgeFundOrderType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType1Code
- * FundOrderType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType7Code
- * FundOrderType7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType8Code
- * FundOrderType8Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -139,6 +114,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmWithdrawal
  * FundOrderTypeCode.mmWithdrawal}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType2Code
+ * FundOrderType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType6Code
+ * FundOrderType6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType3Code
+ * FundOrderType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType5Code
+ * FundOrderType5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType4Code
+ * FundOrderType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code
+ * HedgeFundOrderType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.HedgeFundOrderType1Code
+ * HedgeFundOrderType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType1Code
+ * FundOrderType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType7Code
+ * FundOrderType7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType8Code
+ * FundOrderType8Code}</li>
  * </ul>
  * </li>
  * <li>

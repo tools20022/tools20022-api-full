@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies an identification of a document assigned by and relative to the
@@ -109,6 +113,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "QualifiedDocumentInformation1", propOrder = {"identification", "issuer", "itemListIdentifier", "itemIdentifier", "date", "version", "electronicOriginal", "digest", "documentType", "URL", "attachedFile"})
 public class QualifiedDocumentInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -637,6 +643,7 @@ public class QualifiedDocumentInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public ID getIdentification() {
 		return identification;
 	}
@@ -645,6 +652,7 @@ public class QualifiedDocumentInformation1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Issr")
 	public QualifiedPartyIdentification1 getIssuer() {
 		return issuer;
 	}
@@ -653,6 +661,7 @@ public class QualifiedDocumentInformation1 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "ItmListIdr")
 	public Max35Text getItemListIdentifier() {
 		return itemListIdentifier;
 	}
@@ -661,6 +670,7 @@ public class QualifiedDocumentInformation1 {
 		this.itemListIdentifier = itemListIdentifier;
 	}
 
+	@XmlElement(name = "ItmIdr")
 	public Max35Text getItemIdentifier() {
 		return itemIdentifier;
 	}
@@ -669,6 +679,7 @@ public class QualifiedDocumentInformation1 {
 		this.itemIdentifier = itemIdentifier;
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODate getDate() {
 		return date;
 	}
@@ -677,6 +688,7 @@ public class QualifiedDocumentInformation1 {
 		this.date = date;
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Max6Text getVersion() {
 		return version;
 	}
@@ -685,6 +697,7 @@ public class QualifiedDocumentInformation1 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "ElctrncOrgnl", required = true)
 	public YesNoIndicator getElectronicOriginal() {
 		return electronicOriginal;
 	}
@@ -693,6 +706,7 @@ public class QualifiedDocumentInformation1 {
 		this.electronicOriginal = electronicOriginal;
 	}
 
+	@XmlElement(name = "Dgst")
 	public List<AlgorithmAndDigest1> getDigest() {
 		return digest;
 	}
@@ -701,6 +715,7 @@ public class QualifiedDocumentInformation1 {
 		this.digest = digest;
 	}
 
+	@XmlElement(name = "DocTp")
 	public ExternalDocumentType1Code getDocumentType() {
 		return documentType;
 	}
@@ -709,6 +724,7 @@ public class QualifiedDocumentInformation1 {
 		this.documentType = documentType;
 	}
 
+	@XmlElement(name = "URL")
 	public Max2048Text getURL() {
 		return uRL;
 	}
@@ -717,6 +733,7 @@ public class QualifiedDocumentInformation1 {
 		this.uRL = uRL;
 	}
 
+	@XmlElement(name = "AttchdFile")
 	public List<BinaryFile1> getAttachedFile() {
 		return attachedFile;
 	}

@@ -35,6 +35,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
+ * AccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -206,9 +209,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestmentAccount64.mmIntermediary}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
- * AccountPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -252,6 +252,11 @@ public class IntermediaryRole extends AccountPartyRole {
 						Intermediary11.mmObject(), Intermediary2.mmObject(), Intermediary3.mmObject(), Intermediary21.mmObject(), Intermediary23.mmObject(), Intermediary22.mmObject(), Intermediary17.mmObject(), Intermediary18.mmObject(),
 						Intermediary24.mmObject(), Intermediary26.mmObject(), Intermediary25.mmObject(), Intermediary27.mmObject(), Intermediary28.mmObject(), Intermediary32.mmObject(), Intermediary36.mmObject(), Intermediary34.mmObject(),
 						Intermediary33.mmObject(), Intermediary35.mmObject(), Intermediary37.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return IntermediaryRole.class;
 			}
 		});
 		return mmObject_lazy.get();

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.IssuerRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Transparency calculation specific details on a bond derivative.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Transparency calculation specific details on a bond derivative."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BondDerivative2", propOrder = {"issuer", "maturityDate", "issuanceDate"})
 public class BondDerivative2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -223,6 +229,7 @@ public class BondDerivative2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public LEIIdentifier getIssuer() {
 		return issuer;
 	}
@@ -231,6 +238,7 @@ public class BondDerivative2 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "MtrtyDt")
 	public ISODate getMaturityDate() {
 		return maturityDate;
 	}
@@ -239,6 +247,7 @@ public class BondDerivative2 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "IssncDt")
 	public ISODate getIssuanceDate() {
 		return issuanceDate;
 	}

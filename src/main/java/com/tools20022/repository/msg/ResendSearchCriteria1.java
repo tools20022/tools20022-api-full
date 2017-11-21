@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria to extract the message(s) which should be resent.
@@ -70,6 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Defines the criteria to extract the message(s) which should be resent."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ResendSearchCriteria1", propOrder = {"businessDate", "sequenceNumber", "originalMessageNameIdentification", "fileReference", "recipient"})
 public class ResendSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -310,6 +316,7 @@ public class ResendSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BizDt")
 	public ISODate getBusinessDate() {
 		return businessDate;
 	}
@@ -318,6 +325,7 @@ public class ResendSearchCriteria1 {
 		this.businessDate = businessDate;
 	}
 
+	@XmlElement(name = "SeqNb")
 	public Max35Text getSequenceNumber() {
 		return sequenceNumber;
 	}
@@ -326,6 +334,7 @@ public class ResendSearchCriteria1 {
 		this.sequenceNumber = sequenceNumber;
 	}
 
+	@XmlElement(name = "OrgnlMsgNmId")
 	public Max35Text getOriginalMessageNameIdentification() {
 		return originalMessageNameIdentification;
 	}
@@ -334,6 +343,7 @@ public class ResendSearchCriteria1 {
 		this.originalMessageNameIdentification = originalMessageNameIdentification;
 	}
 
+	@XmlElement(name = "FileRef")
 	public Max35Text getFileReference() {
 		return fileReference;
 	}
@@ -342,6 +352,7 @@ public class ResendSearchCriteria1 {
 		this.fileReference = fileReference;
 	}
 
+	@XmlElement(name = "Rcpt", required = true)
 	public PartyIdentification71Choice getRecipient() {
 		return recipient;
 	}

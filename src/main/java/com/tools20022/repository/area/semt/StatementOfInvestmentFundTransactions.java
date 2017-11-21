@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -54,9 +56,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.006.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
@@ -104,6 +103,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.006.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -123,6 +125,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "semt.006.001.01", propOrder = {"previousReference", "relatedReference", "messagePagination", "statementGeneralDetails", "investmentAccountDetails", "transactionOnAccount", "subAccountDetails", "extension"})
 public class StatementOfInvestmentFundTransactions {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -159,6 +163,14 @@ public class StatementOfInvestmentFundTransactions {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatementOfInvestmentFundTransactions.class.getMethod("getPreviousReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AdditionalReference2> relatedReference;
 	/**
@@ -194,6 +206,14 @@ public class StatementOfInvestmentFundTransactions {
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatementOfInvestmentFundTransactions.class.getMethod("getRelatedReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Pagination messagePagination;
 	/**
@@ -227,6 +247,14 @@ public class StatementOfInvestmentFundTransactions {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatementOfInvestmentFundTransactions.class.getMethod("getMessagePagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Statement5 statementGeneralDetails;
@@ -265,6 +293,14 @@ public class StatementOfInvestmentFundTransactions {
 			minOccurs = 1;
 			complexType_lazy = () -> Statement5.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatementOfInvestmentFundTransactions.class.getMethod("getStatementGeneralDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected InvestmentAccount12 investmentAccountDetails;
 	/**
@@ -299,6 +335,14 @@ public class StatementOfInvestmentFundTransactions {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccount12.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatementOfInvestmentFundTransactions.class.getMethod("getInvestmentAccountDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<InvestmentFundTransactionsByFund1> transactionOnAccount;
@@ -337,6 +381,14 @@ public class StatementOfInvestmentFundTransactions {
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundTransactionsByFund1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatementOfInvestmentFundTransactions.class.getMethod("getTransactionOnAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SubAccountIdentification4> subAccountDetails;
 	/**
@@ -371,6 +423,14 @@ public class StatementOfInvestmentFundTransactions {
 			definition = "The sub-account of the safekeeping or investment account.";
 			minOccurs = 0;
 			complexType_lazy = () -> SubAccountIdentification4.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatementOfInvestmentFundTransactions.class.getMethod("getSubAccountDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Extension1> extension;
@@ -408,6 +468,14 @@ public class StatementOfInvestmentFundTransactions {
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return StatementOfInvestmentFundTransactions.class.getMethod("getExtension", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -422,9 +490,11 @@ public class StatementOfInvestmentFundTransactions {
 				xmlTag = "semt.006.001.01";
 				businessArea_lazy = () -> SecuritiesManagementArchive.mmObject();
 				xmlName = "semt.006.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(StatementOfInvestmentFundTransactions.mmPreviousReference, StatementOfInvestmentFundTransactions.mmRelatedReference, StatementOfInvestmentFundTransactions.mmMessagePagination,
-						StatementOfInvestmentFundTransactions.mmStatementGeneralDetails, StatementOfInvestmentFundTransactions.mmInvestmentAccountDetails, StatementOfInvestmentFundTransactions.mmTransactionOnAccount,
-						StatementOfInvestmentFundTransactions.mmSubAccountDetails, StatementOfInvestmentFundTransactions.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.mmPreviousReference,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.mmRelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.mmMessagePagination,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.mmStatementGeneralDetails, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.mmInvestmentAccountDetails,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.mmTransactionOnAccount, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.mmSubAccountDetails,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -434,10 +504,16 @@ public class StatementOfInvestmentFundTransactions {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return StatementOfInvestmentFundTransactions.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference2> getPreviousReference() {
 		return previousReference;
 	}
@@ -446,6 +522,7 @@ public class StatementOfInvestmentFundTransactions {
 		this.previousReference = previousReference;
 	}
 
+	@XmlElement(name = "RltdRef")
 	public List<AdditionalReference2> getRelatedReference() {
 		return relatedReference;
 	}
@@ -454,6 +531,7 @@ public class StatementOfInvestmentFundTransactions {
 		this.relatedReference = relatedReference;
 	}
 
+	@XmlElement(name = "MsgPgntn", required = true)
 	public Pagination getMessagePagination() {
 		return messagePagination;
 	}
@@ -462,6 +540,7 @@ public class StatementOfInvestmentFundTransactions {
 		this.messagePagination = messagePagination;
 	}
 
+	@XmlElement(name = "StmtGnlDtls", required = true)
 	public Statement5 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
@@ -470,6 +549,7 @@ public class StatementOfInvestmentFundTransactions {
 		this.statementGeneralDetails = statementGeneralDetails;
 	}
 
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount12 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
@@ -478,6 +558,7 @@ public class StatementOfInvestmentFundTransactions {
 		this.investmentAccountDetails = investmentAccountDetails;
 	}
 
+	@XmlElement(name = "TxOnAcct")
 	public List<InvestmentFundTransactionsByFund1> getTransactionOnAccount() {
 		return transactionOnAccount;
 	}
@@ -486,6 +567,7 @@ public class StatementOfInvestmentFundTransactions {
 		this.transactionOnAccount = transactionOnAccount;
 	}
 
+	@XmlElement(name = "SubAcctDtls")
 	public List<SubAccountIdentification4> getSubAccountDetails() {
 		return subAccountDetails;
 	}
@@ -494,11 +576,18 @@ public class StatementOfInvestmentFundTransactions {
 		this.subAccountDetails = subAccountDetails;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}
 
 	public void setExtension(List<Extension1> extension) {
 		this.extension = extension;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.006.01.01")
+	static public class Document {
+		@XmlElement(name = "semt.006.001.01", required = true)
+		public StatementOfInvestmentFundTransactions messageBody;
 	}
 }

@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies a percentage together with a period of time. For overlapping
@@ -65,6 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PercentageAndPeriod1", propOrder = {"percentage", "startDate", "endDate"})
 public class PercentageAndPeriod1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class PercentageAndPeriod1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pctg", required = true)
 	public PercentageBoundedRate getPercentage() {
 		return percentage;
 	}
@@ -226,6 +233,7 @@ public class PercentageAndPeriod1 {
 		this.percentage = percentage;
 	}
 
+	@XmlElement(name = "StartDt")
 	public ISODate getStartDate() {
 		return startDate;
 	}
@@ -234,6 +242,7 @@ public class PercentageAndPeriod1 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "EndDt")
 	public ISODate getEndDate() {
 		return endDate;
 	}

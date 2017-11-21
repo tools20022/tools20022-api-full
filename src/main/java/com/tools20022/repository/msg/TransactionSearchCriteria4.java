@@ -24,6 +24,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines the criteria which are used to search for a payment transaction.
@@ -71,6 +75,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionSearchCriteria4", propOrder = {"paymentTo", "paymentFrom", "paymentSearch", "accountEntrySearch"})
 public class TransactionSearchCriteria4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -296,6 +302,7 @@ public class TransactionSearchCriteria4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmtTo")
 	public List<SystemSearch3> getPaymentTo() {
 		return paymentTo;
 	}
@@ -304,6 +311,7 @@ public class TransactionSearchCriteria4 {
 		this.paymentTo = paymentTo;
 	}
 
+	@XmlElement(name = "PmtFr")
 	public List<SystemSearch3> getPaymentFrom() {
 		return paymentFrom;
 	}
@@ -312,6 +320,7 @@ public class TransactionSearchCriteria4 {
 		this.paymentFrom = paymentFrom;
 	}
 
+	@XmlElement(name = "PmtSch")
 	public PaymentSearch4 getPaymentSearch() {
 		return paymentSearch;
 	}
@@ -320,6 +329,7 @@ public class TransactionSearchCriteria4 {
 		this.paymentSearch = paymentSearch;
 	}
 
+	@XmlElement(name = "AcctNtrySch")
 	public CashAccountEntrySearch3 getAccountEntrySearch() {
 		return accountEntrySearch;
 	}

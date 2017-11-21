@@ -28,6 +28,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information on the shipment date, the charges, the routing and the goods
@@ -98,6 +102,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransportDetails2", propOrder = {"transportDocumentReference", "transportedGoods", "consignment", "routingSummary", "proposedShipmentDate", "actualShipmentDate", "incoterms", "freightCharges"})
 public class TransportDetails2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -592,6 +598,7 @@ public class TransportDetails2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TrnsprtDocRef", required = true)
 	public List<DocumentIdentification7> getTransportDocumentReference() {
 		return transportDocumentReference;
 	}
@@ -600,6 +607,7 @@ public class TransportDetails2 {
 		this.transportDocumentReference = transportDocumentReference;
 	}
 
+	@XmlElement(name = "TrnsprtdGoods", required = true)
 	public List<TransportedGoods1> getTransportedGoods() {
 		return transportedGoods;
 	}
@@ -608,6 +616,7 @@ public class TransportDetails2 {
 		this.transportedGoods = transportedGoods;
 	}
 
+	@XmlElement(name = "Consgnmt")
 	public Consignment1 getConsignment() {
 		return consignment;
 	}
@@ -616,6 +625,7 @@ public class TransportDetails2 {
 		this.consignment = consignment;
 	}
 
+	@XmlElement(name = "RtgSummry", required = true)
 	public TransportMeans2 getRoutingSummary() {
 		return routingSummary;
 	}
@@ -624,6 +634,7 @@ public class TransportDetails2 {
 		this.routingSummary = routingSummary;
 	}
 
+	@XmlElement(name = "PropsdShipmntDt", required = true)
 	public ISODate getProposedShipmentDate() {
 		return proposedShipmentDate;
 	}
@@ -632,6 +643,7 @@ public class TransportDetails2 {
 		this.proposedShipmentDate = proposedShipmentDate;
 	}
 
+	@XmlElement(name = "ActlShipmntDt", required = true)
 	public ISODate getActualShipmentDate() {
 		return actualShipmentDate;
 	}
@@ -640,6 +652,7 @@ public class TransportDetails2 {
 		this.actualShipmentDate = actualShipmentDate;
 	}
 
+	@XmlElement(name = "Incotrms")
 	public Incoterms2 getIncoterms() {
 		return incoterms;
 	}
@@ -648,6 +661,7 @@ public class TransportDetails2 {
 		this.incoterms = incoterms;
 	}
 
+	@XmlElement(name = "FrghtChrgs")
 	public Charge13 getFreightCharges() {
 		return freightCharges;
 	}

@@ -25,8 +25,10 @@ import com.tools20022.repository.area.PaymentsInitiationArchive;
 import com.tools20022.repository.msg.GroupHeader31;
 import com.tools20022.repository.msg.MandateInformation2;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.009.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
@@ -79,6 +78,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.009.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -98,6 +100,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MandateInitiationRequestV01", propOrder = {"groupHeader", "mandate"})
 public class MandateInitiationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -137,6 +141,14 @@ public class MandateInitiationRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader31.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateInitiationRequestV01.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MandateInformation2 mandate;
 	/**
@@ -175,6 +187,14 @@ public class MandateInitiationRequestV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> MandateInformation2.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateInitiationRequestV01.class.getMethod("getMandate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -188,7 +208,7 @@ public class MandateInitiationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "MndtInitnReq";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MandateInitiationRequestV01.mmGroupHeader, MandateInitiationRequestV01.mmMandate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateInitiationRequestV01.mmGroupHeader, com.tools20022.repository.area.pain.MandateInitiationRequestV01.mmMandate);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";
@@ -198,10 +218,16 @@ public class MandateInitiationRequestV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MandateInitiationRequestV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader31 getGroupHeader() {
 		return groupHeader;
 	}
@@ -210,11 +236,18 @@ public class MandateInitiationRequestV01 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "Mndt", required = true)
 	public MandateInformation2 getMandate() {
 		return mandate;
 	}
 
 	public void setMandate(MandateInformation2 mandate) {
 		this.mandate = mandate;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.009.01.01")
+	static public class Document {
+		@XmlElement(name = "MndtInitnReq", required = true)
+		public MandateInitiationRequestV01 messageBody;
 	}
 }

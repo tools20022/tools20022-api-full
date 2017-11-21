@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -42,6 +43,50 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionWaiving
+ * Commission.mmCommissionWaiving}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Commission#mmTrade
+ * Commission.mmTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Commission#mmCommissionType
+ * Commission.mmCommissionType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Commission#mmBasis
+ * Commission.mmBasis}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Commission#mmCommercialAgreementReference
+ * Commission.mmCommercialAgreementReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Commission#mmCalculationDate
+ * Commission.mmCalculationDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Commission#mmRate
+ * Commission.mmRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionAmount
+ * Commission.mmCommissionAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Commission#mmBroker
+ * Commission.mmBroker}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionPartyRole
+ * Commission.mmCommissionPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Commission#mmAccount
+ * Commission.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Commission#mmRelatedQuote
+ * Commission.mmRelatedQuote}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Commission#mmSplitRate
+ * Commission.mmSplitRate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Commission#mmCurrency
+ * Commission.mmCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Commission#mmCorporateActionFeesAndCharges
+ * Commission.mmCorporateActionFeesAndCharges}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Adjustment
+ * Adjustment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -172,50 +217,6 @@ import java.util.List;
  * CurrencyConversion12.mmMarkUpDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Adjustment
- * Adjustment}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionWaiving
- * Commission.mmCommissionWaiving}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Commission#mmTrade
- * Commission.mmTrade}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Commission#mmCommissionType
- * Commission.mmCommissionType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Commission#mmBasis
- * Commission.mmBasis}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Commission#mmCommercialAgreementReference
- * Commission.mmCommercialAgreementReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Commission#mmCalculationDate
- * Commission.mmCalculationDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Commission#mmRate
- * Commission.mmRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionAmount
- * Commission.mmCommissionAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Commission#mmBroker
- * Commission.mmBroker}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionPartyRole
- * Commission.mmCommissionPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Commission#mmAccount
- * Commission.mmAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Commission#mmRelatedQuote
- * Commission.mmRelatedQuote}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Commission#mmSplitRate
- * Commission.mmSplitRate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Commission#mmCurrency
- * Commission.mmCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Commission#mmCorporateActionFeesAndCharges
- * Commission.mmCorporateActionFeesAndCharges}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -253,10 +254,6 @@ public class Commission extends Adjustment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CommissionWaiver
 	 * CommissionWaiver}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Commission Commission}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -299,6 +296,10 @@ public class Commission extends Adjustment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Commission Commission}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -315,7 +316,7 @@ public class Commission extends Adjustment {
 			derivation_lazy = () -> Arrays.asList(Intermediary5.mmWaivedTrailerCommissionIndicator, Intermediary12.mmWaivedTrailerCommissionIndicator, Intermediary6.mmWaivedTrailerCommissionIndicator,
 					Intermediary13.mmWaivedTrailerCommissionIndicator, Commission6.mmWaivingDetails, Commission10.mmWaivingDetails, Intermediary24.mmWaivedTrailerCommissionIndicator, Commission17.mmWaivingDetails,
 					Commission22.mmWaivingDetails, Intermediary36.mmWaivedTrailerCommissionIndicator, Commission23.mmWaivingDetails, ChargeOrCommissionDiscount1.mmBasis);
-			elementContext_lazy = () -> Commission.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommissionWaiving";
@@ -361,7 +362,7 @@ public class Commission extends Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Commission.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
@@ -384,10 +385,6 @@ public class Commission extends Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code
 	 * CommissionTypeV2Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Commission Commission}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -458,6 +455,10 @@ public class Commission extends Adjustment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Commission Commission}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -474,7 +475,7 @@ public class Commission extends Adjustment {
 					CommissionType2Choice.mmProprietary, Commission16.mmType, CommissionType1.mmStructured, CommissionType1.mmAdditionalInformation, Commission4.mmType, Commission9.mmType, Commission9.mmExtendedType, Commission7.mmType,
 					Commission11.mmType, Commission11.mmExtendedType, Commission6.mmType, Commission10.mmType, Commission10.mmExtendedType, Commission14.mmType, CommissionType3Choice.mmCode, CommissionType3Choice.mmProprietary,
 					Commission17.mmType, Commission21.mmCommissionType, Commission22.mmType, Commission23.mmType);
-			elementContext_lazy = () -> Commission.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommissionType";
@@ -482,6 +483,14 @@ public class Commission extends Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CommissionTypeV2Code.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Commission.class.getMethod("getCommissionType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TaxationBasisCode basis;
@@ -495,10 +504,6 @@ public class Commission extends Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode
 	 * TaxationBasisCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Commission Commission}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -523,6 +528,10 @@ public class Commission extends Adjustment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Commission Commission}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -537,7 +546,7 @@ public class Commission extends Adjustment {
 		{
 			derivation_lazy = () -> Arrays
 					.asList(Commission12.mmBasis, Commission12.mmExtendedBasis, Commission6.mmBasis, Commission10.mmBasis, Commission10.mmExtendedBasis, Commission17.mmBasis, Commission22.mmBasis, Commission23.mmBasis);
-			elementContext_lazy = () -> Commission.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Basis";
@@ -545,6 +554,14 @@ public class Commission extends Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxationBasisCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Commission.class.getMethod("getBasis", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max35Text commercialAgreementReference;
@@ -559,10 +576,6 @@ public class Commission extends Adjustment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Commission Commission}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -602,6 +615,10 @@ public class Commission extends Adjustment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Commission Commission}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -619,7 +636,7 @@ public class Commission extends Adjustment {
 			derivation_lazy = () -> Arrays.asList(Commission12.mmCommercialAgreementReference, Commission11.mmCommercialAgreementReference, Commission6.mmCommercialAgreementReference, Commission10.mmCommercialAgreementReference,
 					Commission14.mmCommercialAgreementReference, Commission13.mmCommercialAgreementReference, Commission17.mmCommercialAgreementReference, Commission22.mmCommercialAgreementReference,
 					Commission23.mmCommercialAgreementReference, TotalFeesAndTaxes40.mmCommercialAgreementReference, Fee3.mmCommercialAgreementReference);
-			elementContext_lazy = () -> Commission.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommercialAgreementReference";
@@ -627,6 +644,14 @@ public class Commission extends Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Commission.class.getMethod("getCommercialAgreementReference", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime calculationDate;
@@ -639,10 +664,6 @@ public class Commission extends Adjustment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Commission Commission}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -676,6 +697,10 @@ public class Commission extends Adjustment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Commission Commission}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -691,7 +716,7 @@ public class Commission extends Adjustment {
 			derivation_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails11.mmCommissionCalculationDate, SecuritiesFinancingTransactionDetails14.mmCommissionCalculationDate, Commission16.mmCalculationDate,
 					SecuritiesFinancingTransactionDetails19.mmCommissionCalculationDate, SecuritiesFinancingTransactionDetails20.mmCommissionCalculationDate, SecuritiesFinancingTransactionDetails28.mmCommissionCalculationDate,
 					SecuritiesFinancingTransactionDetails27.mmCommissionCalculationDate, SecuritiesFinancingTransactionDetails32.mmCommissionCalculationDate, SecuritiesFinancingTransactionDetails30.mmCommissionCalculationDate);
-			elementContext_lazy = () -> Commission.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationDate";
@@ -699,6 +724,14 @@ public class Commission extends Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Commission.class.getMethod("getCalculationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate rate;
@@ -712,10 +745,6 @@ public class Commission extends Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Commission Commission}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -738,6 +767,10 @@ public class Commission extends Adjustment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Commission Commission}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -751,7 +784,7 @@ public class Commission extends Adjustment {
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Commission4.mmRate, Commission9.mmRate, Commission7.mmRate, Commission11.mmRate, Commission6.mmRate, Commission10.mmRate, Commission14.mmRate, Commission18.mmRate);
-			elementContext_lazy = () -> Commission.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
@@ -759,6 +792,14 @@ public class Commission extends Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Commission.class.getMethod("getRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount commissionAmount;
@@ -772,10 +813,6 @@ public class Commission extends Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.Commission Commission}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -797,6 +834,10 @@ public class Commission extends Adjustment {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.Commission Commission}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -811,7 +852,7 @@ public class Commission extends Adjustment {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneralInformation1.mmBrokersCommission, GeneralInformation4.mmBrokersCommission, GeneralInformation2.mmBrokersCommission, ChargeOrCommissionDiscount1.mmAmount,
 					GeneralInformation5.mmBrokersCommission);
-			elementContext_lazy = () -> Commission.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommissionAmount";
@@ -819,6 +860,14 @@ public class Commission extends Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Commission.class.getMethod("getCommissionAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Broker> broker;
@@ -855,7 +904,7 @@ public class Commission extends Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmBroker = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Commission.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Broker";
@@ -901,7 +950,7 @@ public class Commission extends Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmCommissionPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Commission.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommissionPartyRole";
@@ -947,7 +996,7 @@ public class Commission extends Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Commission.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
@@ -994,7 +1043,7 @@ public class Commission extends Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Commission.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedQuote";
@@ -1035,7 +1084,7 @@ public class Commission extends Adjustment {
 	 */
 	public static final MMBusinessAttribute mmSplitRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Commission.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SplitRate";
@@ -1043,6 +1092,14 @@ public class Commission extends Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Commission.class.getMethod("getSplitRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyCode currency;
@@ -1072,7 +1129,7 @@ public class Commission extends Adjustment {
 	 */
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Commission.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
@@ -1080,6 +1137,14 @@ public class Commission extends Adjustment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Commission.class.getMethod("getCurrency", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionFeesAndCharges corporateActionFeesAndCharges;
@@ -1119,7 +1184,7 @@ public class Commission extends Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionFeesAndCharges = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Commission.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionFeesAndCharges";
@@ -1147,13 +1212,20 @@ public class Commission extends Adjustment {
 						CurrencyConversion2.mmCommissionDetails, CurrencyConversion2.mmMarkUpDetails, CurrencyConversion4.mmCommissionDetails, CurrencyConversion4.mmMarkUpDetails, CurrencyConversion6.mmCommissionDetails,
 						CurrencyConversion6.mmMarkUpDetails, CurrencyConversion9.mmCommissionDetails, CurrencyConversion9.mmMarkUpDetails, CurrencyConversion12.mmCommissionDetails, CurrencyConversion12.mmMarkUpDetails);
 				superType_lazy = () -> Adjustment.mmObject();
-				element_lazy = () -> Arrays.asList(Commission.mmCommissionWaiving, Commission.mmTrade, Commission.mmCommissionType, Commission.mmBasis, Commission.mmCommercialAgreementReference, Commission.mmCalculationDate,
-						Commission.mmRate, Commission.mmCommissionAmount, Commission.mmBroker, Commission.mmCommissionPartyRole, Commission.mmAccount, Commission.mmRelatedQuote, Commission.mmSplitRate, Commission.mmCurrency,
-						Commission.mmCorporateActionFeesAndCharges);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Commission.mmCommissionWaiving, com.tools20022.repository.entity.Commission.mmTrade, com.tools20022.repository.entity.Commission.mmCommissionType,
+						com.tools20022.repository.entity.Commission.mmBasis, com.tools20022.repository.entity.Commission.mmCommercialAgreementReference, com.tools20022.repository.entity.Commission.mmCalculationDate,
+						com.tools20022.repository.entity.Commission.mmRate, com.tools20022.repository.entity.Commission.mmCommissionAmount, com.tools20022.repository.entity.Commission.mmBroker,
+						com.tools20022.repository.entity.Commission.mmCommissionPartyRole, com.tools20022.repository.entity.Commission.mmAccount, com.tools20022.repository.entity.Commission.mmRelatedQuote,
+						com.tools20022.repository.entity.Commission.mmSplitRate, com.tools20022.repository.entity.Commission.mmCurrency, com.tools20022.repository.entity.Commission.mmCorporateActionFeesAndCharges);
 				derivationComponent_lazy = () -> Arrays.asList(Commission12.mmObject(), CommissionType1Choice.mmObject(), Commission2.mmObject(), CommissionType2Choice.mmObject(), Commission16.mmObject(), CommissionType1.mmObject(),
 						Commission4.mmObject(), Commission9.mmObject(), Commission7.mmObject(), Commission11.mmObject(), Commission6.mmObject(), Commission10.mmObject(), TotalCommissions2.mmObject(), TotalCommissions3.mmObject(),
 						Commission14.mmObject(), Commission13.mmObject(), TotalCommissions4.mmObject(), CommissionType3Choice.mmObject(), Commission17.mmObject(), CommissionBasis1Choice.mmObject(), Commission18.mmObject(),
 						Commission19.mmObject(), Commission21.mmObject(), Commission22.mmObject(), CommissionType5Choice.mmObject(), Commission23.mmObject(), ChargeOrCommissionDiscount1.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return Commission.class;
 			}
 		});
 		return mmObject_lazy.get();

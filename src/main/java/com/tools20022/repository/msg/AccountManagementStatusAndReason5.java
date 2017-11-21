@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Status information.
@@ -102,6 +106,9 @@ import java.util.List;
  * AccountManagementStatusAndReason4}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AccountManagementStatusAndReason5", propOrder = {"status", "statusReason", "accountApplicationIdentification", "existingAccountIdentification", "accountIdentification", "accountStatus", "blockedStatus",
+		"FATCAReportingDate", "CRSReportingDate"})
 public class AccountManagementStatusAndReason5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -580,6 +587,7 @@ public class AccountManagementStatusAndReason5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Sts", required = true)
 	public Status25Choice getStatus() {
 		return status;
 	}
@@ -588,6 +596,7 @@ public class AccountManagementStatusAndReason5 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "StsRsn")
 	public List<AcceptedStatusReason1Choice> getStatusReason() {
 		return statusReason;
 	}
@@ -596,6 +605,7 @@ public class AccountManagementStatusAndReason5 {
 		this.statusReason = statusReason;
 	}
 
+	@XmlElement(name = "AcctApplId")
 	public Max35Text getAccountApplicationIdentification() {
 		return accountApplicationIdentification;
 	}
@@ -604,6 +614,7 @@ public class AccountManagementStatusAndReason5 {
 		this.accountApplicationIdentification = accountApplicationIdentification;
 	}
 
+	@XmlElement(name = "ExstgAcctId")
 	public List<Account23> getExistingAccountIdentification() {
 		return existingAccountIdentification;
 	}
@@ -612,6 +623,7 @@ public class AccountManagementStatusAndReason5 {
 		this.existingAccountIdentification = existingAccountIdentification;
 	}
 
+	@XmlElement(name = "AcctId")
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -620,6 +632,7 @@ public class AccountManagementStatusAndReason5 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctSts")
 	public AccountStatus2 getAccountStatus() {
 		return accountStatus;
 	}
@@ -628,6 +641,7 @@ public class AccountManagementStatusAndReason5 {
 		this.accountStatus = accountStatus;
 	}
 
+	@XmlElement(name = "BlckdSts")
 	public BlockedStatusReason2Choice getBlockedStatus() {
 		return blockedStatus;
 	}
@@ -636,6 +650,7 @@ public class AccountManagementStatusAndReason5 {
 		this.blockedStatus = blockedStatus;
 	}
 
+	@XmlElement(name = "FATCARptgDt")
 	public ISODate getFATCAReportingDate() {
 		return fATCAReportingDate;
 	}
@@ -644,6 +659,7 @@ public class AccountManagementStatusAndReason5 {
 		this.fATCAReportingDate = fATCAReportingDate;
 	}
 
+	@XmlElement(name = "CRSRptgDt")
 	public ISODate getCRSReportingDate() {
 		return cRSReportingDate;
 	}

@@ -31,6 +31,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides transaction type and identification information.
@@ -71,6 +75,8 @@ import java.util.function.Supplier;
  * definition} = "Provides transaction type and identification information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SettlementTypeAndIdentification4", propOrder = {"transactionIdentification", "securitiesMovementType", "payment"})
 public class SettlementTypeAndIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -246,6 +252,7 @@ public class SettlementTypeAndIdentification4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
@@ -254,6 +261,7 @@ public class SettlementTypeAndIdentification4 {
 		this.transactionIdentification = transactionIdentification;
 	}
 
+	@XmlElement(name = "SctiesMvmntTp")
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
@@ -262,6 +270,7 @@ public class SettlementTypeAndIdentification4 {
 		this.securitiesMovementType = securitiesMovementType;
 	}
 
+	@XmlElement(name = "Pmt")
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}

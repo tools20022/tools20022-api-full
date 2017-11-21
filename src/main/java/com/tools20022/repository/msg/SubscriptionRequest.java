@@ -24,6 +24,10 @@ import com.tools20022.repository.codeset.SubscriptionRequest1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Used to subscribe or unsubscribe for the receipt of a certain message.
@@ -55,6 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Used to subscribe or unsubscribe for the receipt of a certain message."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SubscriptionRequest", propOrder = "subscriptionRequest")
 public class SubscriptionRequest {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -115,6 +121,7 @@ public class SubscriptionRequest {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "SbcptReq", required = true)
 	public SubscriptionRequest1Code getSubscriptionRequest() {
 		return subscriptionRequest;
 	}

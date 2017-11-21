@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Credit default swap derivative specific for reporting derivatives on a credit
@@ -78,6 +82,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CreditDefaultSwapIndex2", propOrder = {"series", "version", "rollMonth", "nextRollDate", "notionalCurrency"})
 public class CreditDefaultSwapIndex2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -339,6 +345,7 @@ public class CreditDefaultSwapIndex2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Srs")
 	public Number getSeries() {
 		return series;
 	}
@@ -347,6 +354,7 @@ public class CreditDefaultSwapIndex2 {
 		this.series = series;
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Number getVersion() {
 		return version;
 	}
@@ -355,6 +363,7 @@ public class CreditDefaultSwapIndex2 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "RollMnth")
 	public List<RestrictedMonthExact2Number> getRollMonth() {
 		return rollMonth;
 	}
@@ -363,6 +372,7 @@ public class CreditDefaultSwapIndex2 {
 		this.rollMonth = rollMonth;
 	}
 
+	@XmlElement(name = "NxtRollDt")
 	public ISODate getNextRollDate() {
 		return nextRollDate;
 	}
@@ -371,6 +381,7 @@ public class CreditDefaultSwapIndex2 {
 		this.nextRollDate = nextRollDate;
 	}
 
+	@XmlElement(name = "NtnlCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getNotionalCurrency() {
 		return notionalCurrency;
 	}

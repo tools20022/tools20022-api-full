@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account owned by a customer.
@@ -120,6 +124,9 @@ import java.util.List;
  * {@linkplain com.tools20022.repository.msg.CustomerAccount5 CustomerAccount5}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CustomerAccountModification1", propOrder = {"identification", "name", "status", "type", "currency", "monthlyPaymentValue", "monthlyReceivedValue", "monthlyTransactionNumber", "averageBalance", "accountPurpose",
+		"floorNotificationAmount", "ceilingNotificationAmount", "statementFrequencyAndFormat", "closingDate", "restriction"})
 public class CustomerAccountModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -885,6 +892,7 @@ public class CustomerAccountModification1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public List<AccountIdentification4Choice> getIdentification() {
 		return identification;
 	}
@@ -893,6 +901,7 @@ public class CustomerAccountModification1 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Nm")
 	public NameModification1 getName() {
 		return name;
 	}
@@ -901,6 +910,7 @@ public class CustomerAccountModification1 {
 		this.name = name;
 	}
 
+	@XmlElement(name = "Sts")
 	public AccountStatusModification1 getStatus() {
 		return status;
 	}
@@ -909,6 +919,7 @@ public class CustomerAccountModification1 {
 		this.status = status;
 	}
 
+	@XmlElement(name = "Tp")
 	public TypeModification1 getType() {
 		return type;
 	}
@@ -917,6 +928,7 @@ public class CustomerAccountModification1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Ccy", required = true)
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -925,6 +937,7 @@ public class CustomerAccountModification1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "MnthlyPmtVal")
 	public AmountModification1 getMonthlyPaymentValue() {
 		return monthlyPaymentValue;
 	}
@@ -933,6 +946,7 @@ public class CustomerAccountModification1 {
 		this.monthlyPaymentValue = monthlyPaymentValue;
 	}
 
+	@XmlElement(name = "MnthlyRcvdVal")
 	public AmountModification1 getMonthlyReceivedValue() {
 		return monthlyReceivedValue;
 	}
@@ -941,6 +955,7 @@ public class CustomerAccountModification1 {
 		this.monthlyReceivedValue = monthlyReceivedValue;
 	}
 
+	@XmlElement(name = "MnthlyTxNb")
 	public NumberModification1 getMonthlyTransactionNumber() {
 		return monthlyTransactionNumber;
 	}
@@ -949,6 +964,7 @@ public class CustomerAccountModification1 {
 		this.monthlyTransactionNumber = monthlyTransactionNumber;
 	}
 
+	@XmlElement(name = "AvrgBal")
 	public AmountModification1 getAverageBalance() {
 		return averageBalance;
 	}
@@ -957,6 +973,7 @@ public class CustomerAccountModification1 {
 		this.averageBalance = averageBalance;
 	}
 
+	@XmlElement(name = "AcctPurp")
 	public PurposeModification1 getAccountPurpose() {
 		return accountPurpose;
 	}
@@ -965,6 +982,7 @@ public class CustomerAccountModification1 {
 		this.accountPurpose = accountPurpose;
 	}
 
+	@XmlElement(name = "FlrNtfctnAmt")
 	public AmountModification1 getFloorNotificationAmount() {
 		return floorNotificationAmount;
 	}
@@ -973,6 +991,7 @@ public class CustomerAccountModification1 {
 		this.floorNotificationAmount = floorNotificationAmount;
 	}
 
+	@XmlElement(name = "ClngNtfctnAmt")
 	public AmountModification1 getCeilingNotificationAmount() {
 		return ceilingNotificationAmount;
 	}
@@ -981,6 +1000,7 @@ public class CustomerAccountModification1 {
 		this.ceilingNotificationAmount = ceilingNotificationAmount;
 	}
 
+	@XmlElement(name = "StmtFrqcyAndFrmt")
 	public List<StatementFrequencyAndFormModification1> getStatementFrequencyAndFormat() {
 		return statementFrequencyAndFormat;
 	}
@@ -989,6 +1009,7 @@ public class CustomerAccountModification1 {
 		this.statementFrequencyAndFormat = statementFrequencyAndFormat;
 	}
 
+	@XmlElement(name = "ClsgDt")
 	public DateModification1 getClosingDate() {
 		return closingDate;
 	}
@@ -997,6 +1018,7 @@ public class CustomerAccountModification1 {
 		this.closingDate = closingDate;
 	}
 
+	@XmlElement(name = "Rstrctn")
 	public List<RestrictionModification1> getRestriction() {
 		return restriction;
 	}

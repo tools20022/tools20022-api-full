@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,17 +38,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Signature#mmConditions
- * Signature.mmConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Mandate#mmSignatureConditions
- * Mandate.mmSignatureConditions}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -69,6 +59,17 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SignatureCondition#mmSignature
  * SignatureCondition.mmSignature}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Signature#mmConditions
+ * Signature.mmConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Mandate#mmSignatureConditions
+ * Mandate.mmSignatureConditions}</li>
  * </ul>
  * </li>
  * <li>
@@ -101,11 +102,6 @@ public class SignatureCondition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SignatureCondition
-	 * SignatureCondition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -172,6 +168,11 @@ public class SignatureCondition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SignatureCondition
+	 * SignatureCondition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -192,7 +193,7 @@ public class SignatureCondition {
 					InvestmentAccount39.mmRequiredSignatoriesNumber, InvestmentAccount46.mmRequiredSignatoriesNumber, InvestmentAccount47.mmRequiredSignatoriesNumber, InvestmentAccount49.mmRequiredSignatoriesNumber,
 					InvestmentAccount51.mmRequiredSignatoriesNumber, InvestmentAccount50.mmRequiredSignatoriesNumber, InvestmentAccount61.mmRequiredSignatoriesNumber, InvestmentAccount63.mmRequiredSignatoriesNumber,
 					InvestmentAccount62.mmRequiredSignatoriesNumber);
-			elementContext_lazy = () -> SignatureCondition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequiredSignatureNumber";
@@ -200,6 +201,14 @@ public class SignatureCondition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SignatureCondition.class.getMethod("getRequiredSignatureNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator signatoryRightIndicator;
@@ -214,11 +223,6 @@ public class SignatureCondition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SignatureCondition
-	 * SignatureCondition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -267,6 +271,11 @@ public class SignatureCondition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SignatureCondition
+	 * SignatureCondition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -286,7 +295,7 @@ public class SignatureCondition {
 					InvestmentAccountOwnershipInformation7.mmSignatoryRightIndicator, InvestmentAccountOwnershipInformation8.mmSignatoryRightIndicator, InvestmentAccountOwnershipInformation9.mmSignatoryRightIndicator,
 					InvestmentAccountOwnershipInformation10.mmSignatoryRightIndicator, InvestmentAccountOwnershipInformation11.mmSignatoryRightIndicator, InvestmentAccountOwnershipInformation12.mmSignatoryRightIndicator,
 					InvestmentAccountOwnershipInformation13.mmSignatoryRightIndicator, InvestmentAccountOwnershipInformation15.mmSignatoryRightIndicator, InvestmentAccountOwnershipInformation14.mmSignatoryRightIndicator);
-			elementContext_lazy = () -> SignatureCondition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SignatoryRightIndicator";
@@ -294,6 +303,14 @@ public class SignatureCondition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SignatureCondition.class.getMethod("getSignatoryRightIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Mandate mandate;
@@ -331,7 +348,7 @@ public class SignatureCondition {
 	 */
 	public static final MMBusinessAssociationEnd mmMandate = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SignatureCondition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Mandate";
@@ -355,11 +372,6 @@ public class SignatureCondition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SignatureCondition
-	 * SignatureCondition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -374,6 +386,11 @@ public class SignatureCondition {
 	 * OperationMandate3.mmSignatureOrderIndicator}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SignatureCondition
+	 * SignatureCondition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -390,7 +407,7 @@ public class SignatureCondition {
 	public static final MMBusinessAttribute mmSignatureOrderIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(OperationMandate1.mmSignatureOrderIndicator, OperationMandate2.mmSignatureOrderIndicator, OperationMandate3.mmSignatureOrderIndicator);
-			elementContext_lazy = () -> SignatureCondition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SignatureOrderIndicator";
@@ -398,6 +415,14 @@ public class SignatureCondition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SignatureCondition.class.getMethod("getSignatureOrderIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max15PlusSignedNumericText signatureOrder;
@@ -411,11 +436,6 @@ public class SignatureCondition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max15PlusSignedNumericText
 	 * Max15PlusSignedNumericText}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.SignatureCondition
-	 * SignatureCondition}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -431,6 +451,11 @@ public class SignatureCondition {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SignatureCondition
+	 * SignatureCondition}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -445,7 +470,7 @@ public class SignatureCondition {
 	public static final MMBusinessAttribute mmSignatureOrder = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyAndCertificate1.mmSignatureOrder, PartyAndAuthorisation1.mmSignatureOrder, PartyAndAuthorisation3.mmSignatureOrder);
-			elementContext_lazy = () -> SignatureCondition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SignatureOrder";
@@ -453,6 +478,14 @@ public class SignatureCondition {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15PlusSignedNumericText.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SignatureCondition.class.getMethod("getSignatureOrder", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.Signature> signature;
@@ -494,7 +527,7 @@ public class SignatureCondition {
 	 */
 	public static final MMBusinessAssociationEnd mmSignature = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SignatureCondition.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Signature";
@@ -514,8 +547,14 @@ public class SignatureCondition {
 				name = "SignatureCondition";
 				definition = "Specifies the signature requirements for managing an account.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Signature.mmConditions, com.tools20022.repository.entity.Mandate.mmSignatureConditions);
-				element_lazy = () -> Arrays.asList(SignatureCondition.mmRequiredSignatureNumber, SignatureCondition.mmSignatoryRightIndicator, SignatureCondition.mmMandate, SignatureCondition.mmSignatureOrderIndicator,
-						SignatureCondition.mmSignatureOrder, SignatureCondition.mmSignature);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SignatureCondition.mmRequiredSignatureNumber, com.tools20022.repository.entity.SignatureCondition.mmSignatoryRightIndicator,
+						com.tools20022.repository.entity.SignatureCondition.mmMandate, com.tools20022.repository.entity.SignatureCondition.mmSignatureOrderIndicator, com.tools20022.repository.entity.SignatureCondition.mmSignatureOrder,
+						com.tools20022.repository.entity.SignatureCondition.mmSignature);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SignatureCondition.class;
 			}
 		});
 		return mmObject_lazy.get();

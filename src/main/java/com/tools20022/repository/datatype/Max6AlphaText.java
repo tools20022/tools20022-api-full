@@ -27,6 +27,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[a-zA-Z]{1,6}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -53,6 +55,7 @@ public class Max6AlphaText {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max6AlphaText";
 				definition = "Specifies an alpha string between 1 and 6 characters.";
+				pattern = "[a-zA-Z]{1,6}";
 			}
 		});
 		return mmObject_lazy.get();

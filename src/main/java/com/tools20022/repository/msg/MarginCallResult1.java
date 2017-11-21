@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the summation of the call amounts per margin type and optionaly the
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarginCallResult1", propOrder = {"defaultFundAmount", "marginCallResult"})
 public class MarginCallResult1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -186,6 +192,7 @@ public class MarginCallResult1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DfltFndAmt")
 	public ActiveCurrencyAndAmount getDefaultFundAmount() {
 		return defaultFundAmount;
 	}
@@ -194,6 +201,7 @@ public class MarginCallResult1 {
 		this.defaultFundAmount = defaultFundAmount;
 	}
 
+	@XmlElement(name = "MrgnCallRslt", required = true)
 	public MarginCallResult1Choice getMarginCallResult() {
 		return marginCallResult;
 	}

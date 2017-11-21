@@ -30,6 +30,10 @@ import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General information about the invoice contained in the original request.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "General information about the invoice contained in the original request."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "OriginalInvoiceInformation1", propOrder = {"documentNumber", "totalInvoiceAmount", "issueDate", "paymentDueDate"})
 public class OriginalInvoiceInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -284,6 +290,7 @@ public class OriginalInvoiceInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DocNb", required = true)
 	public Max35Text getDocumentNumber() {
 		return documentNumber;
 	}
@@ -292,6 +299,7 @@ public class OriginalInvoiceInformation1 {
 		this.documentNumber = documentNumber;
 	}
 
+	@XmlElement(name = "TtlInvcAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalInvoiceAmount() {
 		return totalInvoiceAmount;
 	}
@@ -300,6 +308,7 @@ public class OriginalInvoiceInformation1 {
 		this.totalInvoiceAmount = totalInvoiceAmount;
 	}
 
+	@XmlElement(name = "IsseDt", required = true)
 	public ISODate getIssueDate() {
 		return issueDate;
 	}
@@ -308,6 +317,7 @@ public class OriginalInvoiceInformation1 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "PmtDueDt", required = true)
 	public ISODate getPaymentDueDate() {
 		return paymentDueDate;
 	}

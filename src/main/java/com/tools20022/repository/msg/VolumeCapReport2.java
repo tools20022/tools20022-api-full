@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Double volume cap report.
@@ -72,6 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Double volume cap report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "VolumeCapReport2", propOrder = {"technicalRecordIdentification", "identification", "currency", "totalTradingVolume", "totalReferencePriceTradingVolume", "totalNegotiatedTransactionsTradingVolume"})
 public class VolumeCapReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -361,6 +367,7 @@ public class VolumeCapReport2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TechRcrdId")
 	public Max35Text getTechnicalRecordIdentification() {
 		return technicalRecordIdentification;
 	}
@@ -369,6 +376,7 @@ public class VolumeCapReport2 {
 		this.technicalRecordIdentification = technicalRecordIdentification;
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public ISINOct2015Identifier getIdentification() {
 		return identification;
 	}
@@ -377,6 +385,7 @@ public class VolumeCapReport2 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Ccy", required = true)
 	public ActiveOrHistoricCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -385,6 +394,7 @@ public class VolumeCapReport2 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "TtlTradgVol", required = true)
 	public ImpliedCurrencyAndAmount getTotalTradingVolume() {
 		return totalTradingVolume;
 	}
@@ -393,6 +403,7 @@ public class VolumeCapReport2 {
 		this.totalTradingVolume = totalTradingVolume;
 	}
 
+	@XmlElement(name = "TtlRefPricTradgVol", required = true)
 	public ImpliedCurrencyAndAmount getTotalReferencePriceTradingVolume() {
 		return totalReferencePriceTradingVolume;
 	}
@@ -401,6 +412,7 @@ public class VolumeCapReport2 {
 		this.totalReferencePriceTradingVolume = totalReferencePriceTradingVolume;
 	}
 
+	@XmlElement(name = "TtlNgtdTxsTradgVol", required = true)
 	public ImpliedCurrencyAndAmount getTotalNegotiatedTransactionsTradingVolume() {
 		return totalNegotiatedTransactionsTradingVolume;
 	}

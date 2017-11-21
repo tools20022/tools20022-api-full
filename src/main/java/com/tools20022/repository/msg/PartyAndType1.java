@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party type and party identification information.
@@ -58,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Party type and party identification information."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyAndType1", propOrder = {"type", "party"})
 public class PartyAndType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -168,6 +174,7 @@ public class PartyAndType1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public PartyType1Choice getType() {
 		return type;
 	}
@@ -176,6 +183,7 @@ public class PartyAndType1 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Pty")
 	public PartyIdentification43 getParty() {
 		return party;
 	}

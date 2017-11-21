@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RateTypeAndPercentageRate9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format between a rate or a rate type and rate or an amount or a
@@ -71,6 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RateAndAmountFormat45Choice", propOrder = {"rate", "amount", "rateTypeAndRate"})
 public class RateAndAmountFormat45Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -231,6 +237,7 @@ public class RateAndAmountFormat45Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -239,6 +246,7 @@ public class RateAndAmountFormat45Choice {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -247,6 +255,7 @@ public class RateAndAmountFormat45Choice {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "RateTpAndRate", required = true)
 	public RateTypeAndPercentageRate9 getRateTypeAndRate() {
 		return rateTypeAndRate;
 	}

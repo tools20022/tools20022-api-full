@@ -28,6 +28,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Time span defined by a start date and time, and an end date and time.
@@ -64,6 +68,8 @@ import java.util.function.Supplier;
  * "Time span defined by a start date and time, and an end date and time."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Period5", propOrder = {"startDate", "endDate"})
 public class Period5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -181,6 +187,7 @@ public class Period5 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "StartDt", required = true)
 	public DateFormat21Choice getStartDate() {
 		return startDate;
 	}
@@ -189,6 +196,7 @@ public class Period5 {
 		this.startDate = startDate;
 	}
 
+	@XmlElement(name = "EndDt", required = true)
 	public DateFormat21Choice getEndDate() {
 		return endDate;
 	}

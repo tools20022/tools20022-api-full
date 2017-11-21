@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Financial loan (instalment) or a recurring transaction.
@@ -93,6 +97,8 @@ import java.util.List;
  * RecurringTransaction1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RecurringTransaction2", propOrder = {"instalmentPlan", "planIdentification", "sequenceNumber", "periodUnit", "instalmentPeriod", "totalNumberOfPayments", "firstPaymentDate", "totalAmount", "firstAmount", "charges"})
 public class RecurringTransaction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -598,6 +604,7 @@ public class RecurringTransaction2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "InstlmtPlan")
 	public List<InstalmentPlan1Code> getInstalmentPlan() {
 		return instalmentPlan;
 	}
@@ -606,6 +613,7 @@ public class RecurringTransaction2 {
 		this.instalmentPlan = instalmentPlan;
 	}
 
+	@XmlElement(name = "PlanId")
 	public Max35Text getPlanIdentification() {
 		return planIdentification;
 	}
@@ -614,6 +622,7 @@ public class RecurringTransaction2 {
 		this.planIdentification = planIdentification;
 	}
 
+	@XmlElement(name = "SeqNb")
 	public Number getSequenceNumber() {
 		return sequenceNumber;
 	}
@@ -622,6 +631,7 @@ public class RecurringTransaction2 {
 		this.sequenceNumber = sequenceNumber;
 	}
 
+	@XmlElement(name = "PrdUnit")
 	public Frequency3Code getPeriodUnit() {
 		return periodUnit;
 	}
@@ -630,6 +640,7 @@ public class RecurringTransaction2 {
 		this.periodUnit = periodUnit;
 	}
 
+	@XmlElement(name = "InstlmtPrd")
 	public Number getInstalmentPeriod() {
 		return instalmentPeriod;
 	}
@@ -638,6 +649,7 @@ public class RecurringTransaction2 {
 		this.instalmentPeriod = instalmentPeriod;
 	}
 
+	@XmlElement(name = "TtlNbOfPmts")
 	public Number getTotalNumberOfPayments() {
 		return totalNumberOfPayments;
 	}
@@ -646,6 +658,7 @@ public class RecurringTransaction2 {
 		this.totalNumberOfPayments = totalNumberOfPayments;
 	}
 
+	@XmlElement(name = "FrstPmtDt")
 	public ISODate getFirstPaymentDate() {
 		return firstPaymentDate;
 	}
@@ -654,6 +667,7 @@ public class RecurringTransaction2 {
 		this.firstPaymentDate = firstPaymentDate;
 	}
 
+	@XmlElement(name = "TtlAmt")
 	public CurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
@@ -662,6 +676,7 @@ public class RecurringTransaction2 {
 		this.totalAmount = totalAmount;
 	}
 
+	@XmlElement(name = "FrstAmt")
 	public ImpliedCurrencyAndAmount getFirstAmount() {
 		return firstAmount;
 	}
@@ -670,6 +685,7 @@ public class RecurringTransaction2 {
 		this.firstAmount = firstAmount;
 	}
 
+	@XmlElement(name = "Chrgs")
 	public ImpliedCurrencyAndAmount getCharges() {
 		return charges;
 	}

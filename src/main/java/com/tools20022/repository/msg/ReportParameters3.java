@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the parameters of the report.
@@ -87,6 +91,8 @@ import java.util.function.Supplier;
  * definition} = "Provides the parameters of the report."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ReportParameters3", propOrder = {"reportIdentification", "reportDateAndTime", "reportCurrency", "calculationDateAndTime", "frequency", "reportNumber"})
 public class ReportParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -362,6 +368,7 @@ public class ReportParameters3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptId", required = true)
 	public Max35Text getReportIdentification() {
 		return reportIdentification;
 	}
@@ -370,6 +377,7 @@ public class ReportParameters3 {
 		this.reportIdentification = reportIdentification;
 	}
 
+	@XmlElement(name = "RptDtAndTm", required = true)
 	public DateAndDateTimeChoice getReportDateAndTime() {
 		return reportDateAndTime;
 	}
@@ -378,6 +386,7 @@ public class ReportParameters3 {
 		this.reportDateAndTime = reportDateAndTime;
 	}
 
+	@XmlElement(name = "RptCcy", required = true)
 	public CurrencyCode getReportCurrency() {
 		return reportCurrency;
 	}
@@ -386,6 +395,7 @@ public class ReportParameters3 {
 		this.reportCurrency = reportCurrency;
 	}
 
+	@XmlElement(name = "ClctnDtAndTm", required = true)
 	public ISODateTime getCalculationDateAndTime() {
 		return calculationDateAndTime;
 	}
@@ -394,6 +404,7 @@ public class ReportParameters3 {
 		this.calculationDateAndTime = calculationDateAndTime;
 	}
 
+	@XmlElement(name = "Frqcy", required = true)
 	public EventFrequency6Code getFrequency() {
 		return frequency;
 	}
@@ -402,6 +413,7 @@ public class ReportParameters3 {
 		this.frequency = frequency;
 	}
 
+	@XmlElement(name = "RptNb")
 	public Exact5NumericText getReportNumber() {
 		return reportNumber;
 	}

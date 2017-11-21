@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.NetworkAccess;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Configuration parameters to communicate with a host.
@@ -86,6 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "NetworkParameters1", propOrder = {"primaryAddress", "primaryPortNumber", "secondaryAddress", "secondaryPortNumber", "userName", "accessCode", "clientCertificate"})
 public class NetworkParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -454,6 +460,7 @@ public class NetworkParameters1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PmryAdr", required = true)
 	public Max35Text getPrimaryAddress() {
 		return primaryAddress;
 	}
@@ -462,6 +469,7 @@ public class NetworkParameters1 {
 		this.primaryAddress = primaryAddress;
 	}
 
+	@XmlElement(name = "PmryPortNb", required = true)
 	public Number getPrimaryPortNumber() {
 		return primaryPortNumber;
 	}
@@ -470,6 +478,7 @@ public class NetworkParameters1 {
 		this.primaryPortNumber = primaryPortNumber;
 	}
 
+	@XmlElement(name = "ScndryAdr")
 	public Max35Text getSecondaryAddress() {
 		return secondaryAddress;
 	}
@@ -478,6 +487,7 @@ public class NetworkParameters1 {
 		this.secondaryAddress = secondaryAddress;
 	}
 
+	@XmlElement(name = "ScndryPortNb")
 	public Number getSecondaryPortNumber() {
 		return secondaryPortNumber;
 	}
@@ -486,6 +496,7 @@ public class NetworkParameters1 {
 		this.secondaryPortNumber = secondaryPortNumber;
 	}
 
+	@XmlElement(name = "UsrNm")
 	public Max35Text getUserName() {
 		return userName;
 	}
@@ -494,6 +505,7 @@ public class NetworkParameters1 {
 		this.userName = userName;
 	}
 
+	@XmlElement(name = "AccsCd")
 	public Max35Text getAccessCode() {
 		return accessCode;
 	}
@@ -502,6 +514,7 @@ public class NetworkParameters1 {
 		this.accessCode = accessCode;
 	}
 
+	@XmlElement(name = "ClntCert")
 	public Max3000Binary getClientCertificate() {
 		return clientCertificate;
 	}

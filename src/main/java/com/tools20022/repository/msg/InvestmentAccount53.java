@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about a securities account and its characteristics.
@@ -81,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestmentAccount45}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InvestmentAccount53", propOrder = {"accountIdentification", "accountName", "accountDesignation", "ownerIdentification", "accountServicer"})
 public class InvestmentAccount53 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -380,6 +386,7 @@ public class InvestmentAccount53 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AcctId", required = true)
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
@@ -388,6 +395,7 @@ public class InvestmentAccount53 {
 		this.accountIdentification = accountIdentification;
 	}
 
+	@XmlElement(name = "AcctNm")
 	public Max35Text getAccountName() {
 		return accountName;
 	}
@@ -396,6 +404,7 @@ public class InvestmentAccount53 {
 		this.accountName = accountName;
 	}
 
+	@XmlElement(name = "AcctDsgnt")
 	public Max35Text getAccountDesignation() {
 		return accountDesignation;
 	}
@@ -404,6 +413,7 @@ public class InvestmentAccount53 {
 		this.accountDesignation = accountDesignation;
 	}
 
+	@XmlElement(name = "OwnrId")
 	public OwnerIdentification2Choice getOwnerIdentification() {
 		return ownerIdentification;
 	}
@@ -412,6 +422,7 @@ public class InvestmentAccount53 {
 		this.ownerIdentification = ownerIdentification;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public PartyIdentification70Choice getAccountServicer() {
 		return accountServicer;
 	}

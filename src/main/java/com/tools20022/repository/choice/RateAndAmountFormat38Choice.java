@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Index;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format between a rate, an amount, index points or a unspecified
@@ -74,6 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * RateAndAmountFormat19Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RateAndAmountFormat38Choice", propOrder = {"rate", "notSpecifiedRate", "amount", "indexPoints"})
 public class RateAndAmountFormat38Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -290,6 +296,7 @@ public class RateAndAmountFormat38Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -298,6 +305,7 @@ public class RateAndAmountFormat38Choice {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "NotSpcfdRate", required = true)
 	public RateValueType7Code getNotSpecifiedRate() {
 		return notSpecifiedRate;
 	}
@@ -306,6 +314,7 @@ public class RateAndAmountFormat38Choice {
 		this.notSpecifiedRate = notSpecifiedRate;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -314,6 +323,7 @@ public class RateAndAmountFormat38Choice {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "IndxPts", required = true)
 	public DecimalNumber getIndexPoints() {
 		return indexPoints;
 	}

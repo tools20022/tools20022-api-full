@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identification of a person, or a non-financial institution.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identification of a person, or a non-financial institution."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PartyIdentificationAndContactInformation1", propOrder = {"partyIdentification", "contactInformation"})
 public class PartyIdentificationAndContactInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -177,6 +183,7 @@ public class PartyIdentificationAndContactInformation1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification8 getPartyIdentification() {
 		return partyIdentification;
 	}
@@ -185,6 +192,7 @@ public class PartyIdentificationAndContactInformation1 {
 		this.partyIdentification = partyIdentification;
 	}
 
+	@XmlElement(name = "CtctInf")
 	public ContactIdentification1 getContactInformation() {
 		return contactInformation;
 	}

@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Data about participant migration to new payment system process.
@@ -66,6 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Data about participant migration to new payment system process."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemMigration1", propOrder = {"NPSParticipantIndicator", "plannedMigrationDate", "balanceReceivedIndicator", "migrated", "lastDate"})
 public class SystemMigration1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -293,6 +299,7 @@ public class SystemMigration1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NPSPtcptInd")
 	public YesNoIndicator getNPSParticipantIndicator() {
 		return nPSParticipantIndicator;
 	}
@@ -301,6 +308,7 @@ public class SystemMigration1 {
 		this.nPSParticipantIndicator = nPSParticipantIndicator;
 	}
 
+	@XmlElement(name = "PlandMgrtnDt")
 	public ISODateTime getPlannedMigrationDate() {
 		return plannedMigrationDate;
 	}
@@ -309,6 +317,7 @@ public class SystemMigration1 {
 		this.plannedMigrationDate = plannedMigrationDate;
 	}
 
+	@XmlElement(name = "BalRcvdInd")
 	public YesNoIndicator getBalanceReceivedIndicator() {
 		return balanceReceivedIndicator;
 	}
@@ -317,6 +326,7 @@ public class SystemMigration1 {
 		this.balanceReceivedIndicator = balanceReceivedIndicator;
 	}
 
+	@XmlElement(name = "Mgrtd")
 	public YesNoIndicator getMigrated() {
 		return migrated;
 	}
@@ -325,6 +335,7 @@ public class SystemMigration1 {
 		this.migrated = migrated;
 	}
 
+	@XmlElement(name = "LastDt")
 	public ISODateTime getLastDate() {
 		return lastDate;
 	}

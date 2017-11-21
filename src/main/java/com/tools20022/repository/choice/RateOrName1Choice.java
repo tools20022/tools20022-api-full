@@ -26,6 +26,10 @@ import com.tools20022.repository.msg.Rate2;
 import com.tools20022.repository.msg.RateName1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between a percentage rate or a rate name.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Choice between a percentage rate or a rate name."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RateOrName1Choice", propOrder = {"rate", "rateName"})
 public class RateOrName1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -164,6 +170,7 @@ public class RateOrName1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public Rate2 getRate() {
 		return rate;
 	}
@@ -172,6 +179,7 @@ public class RateOrName1Choice {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "RateNm", required = true)
 	public RateName1 getRateName() {
 		return rateName;
 	}

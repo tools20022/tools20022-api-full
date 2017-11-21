@@ -35,6 +35,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the details of each individual secured market transaction.
@@ -122,6 +126,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuredMarketTransaction1", propOrder = {"reportedTransactionStatus", "uniqueTransactionIdentifier", "proprietaryTransactionIdentification", "counterpartyProprietaryTransactionIdentification", "counterpartyIdentification",
+		"tripartyAgentIdentification", "tradeDate", "settlementDate", "maturityDate", "transactionType", "transactionNominalAmount", "rateType", "dealRate", "floatingRateRepurchaseAgreement", "collateral", "supplementaryData"})
 public class SecuredMarketTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1115,6 +1122,7 @@ public class SecuredMarketTransaction1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "RptdTxSts", required = true)
 	public TransactionOperationType1Code getReportedTransactionStatus() {
 		return reportedTransactionStatus;
 	}
@@ -1123,6 +1131,7 @@ public class SecuredMarketTransaction1 {
 		this.reportedTransactionStatus = reportedTransactionStatus;
 	}
 
+	@XmlElement(name = "UnqTxIdr")
 	public Max105Text getUniqueTransactionIdentifier() {
 		return uniqueTransactionIdentifier;
 	}
@@ -1131,6 +1140,7 @@ public class SecuredMarketTransaction1 {
 		this.uniqueTransactionIdentifier = uniqueTransactionIdentifier;
 	}
 
+	@XmlElement(name = "PrtryTxId", required = true)
 	public Max105Text getProprietaryTransactionIdentification() {
 		return proprietaryTransactionIdentification;
 	}
@@ -1139,6 +1149,7 @@ public class SecuredMarketTransaction1 {
 		this.proprietaryTransactionIdentification = proprietaryTransactionIdentification;
 	}
 
+	@XmlElement(name = "CtrPtyPrtryTxId")
 	public Max105Text getCounterpartyProprietaryTransactionIdentification() {
 		return counterpartyProprietaryTransactionIdentification;
 	}
@@ -1147,6 +1158,7 @@ public class SecuredMarketTransaction1 {
 		this.counterpartyProprietaryTransactionIdentification = counterpartyProprietaryTransactionIdentification;
 	}
 
+	@XmlElement(name = "CtrPtyId", required = true)
 	public CounterpartyIdentification1Choice getCounterpartyIdentification() {
 		return counterpartyIdentification;
 	}
@@ -1155,6 +1167,7 @@ public class SecuredMarketTransaction1 {
 		this.counterpartyIdentification = counterpartyIdentification;
 	}
 
+	@XmlElement(name = "TrptyAgtId")
 	public LEIIdentifier getTripartyAgentIdentification() {
 		return tripartyAgentIdentification;
 	}
@@ -1163,6 +1176,7 @@ public class SecuredMarketTransaction1 {
 		this.tripartyAgentIdentification = tripartyAgentIdentification;
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public DateAndDateTimeChoice getTradeDate() {
 		return tradeDate;
 	}
@@ -1171,6 +1185,7 @@ public class SecuredMarketTransaction1 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
@@ -1179,6 +1194,7 @@ public class SecuredMarketTransaction1 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "MtrtyDt", required = true)
 	public ISODate getMaturityDate() {
 		return maturityDate;
 	}
@@ -1187,6 +1203,7 @@ public class SecuredMarketTransaction1 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "TxTp", required = true)
 	public MoneyMarketTransactionType1Code getTransactionType() {
 		return transactionType;
 	}
@@ -1195,6 +1212,7 @@ public class SecuredMarketTransaction1 {
 		this.transactionType = transactionType;
 	}
 
+	@XmlElement(name = "TxNmnlAmt", required = true)
 	public ActiveCurrencyAndAmount getTransactionNominalAmount() {
 		return transactionNominalAmount;
 	}
@@ -1203,6 +1221,7 @@ public class SecuredMarketTransaction1 {
 		this.transactionNominalAmount = transactionNominalAmount;
 	}
 
+	@XmlElement(name = "RateTp", required = true)
 	public InterestRateType1Code getRateType() {
 		return rateType;
 	}
@@ -1211,6 +1230,7 @@ public class SecuredMarketTransaction1 {
 		this.rateType = rateType;
 	}
 
+	@XmlElement(name = "DealRate")
 	public Rate2 getDealRate() {
 		return dealRate;
 	}
@@ -1219,6 +1239,7 @@ public class SecuredMarketTransaction1 {
 		this.dealRate = dealRate;
 	}
 
+	@XmlElement(name = "FltgRateRpAgrmt")
 	public FloatingRateNote1 getFloatingRateRepurchaseAgreement() {
 		return floatingRateRepurchaseAgreement;
 	}
@@ -1227,6 +1248,7 @@ public class SecuredMarketTransaction1 {
 		this.floatingRateRepurchaseAgreement = floatingRateRepurchaseAgreement;
 	}
 
+	@XmlElement(name = "Coll", required = true)
 	public Collateral10 getCollateral() {
 		return collateral;
 	}
@@ -1235,6 +1257,7 @@ public class SecuredMarketTransaction1 {
 		this.collateral = collateral;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

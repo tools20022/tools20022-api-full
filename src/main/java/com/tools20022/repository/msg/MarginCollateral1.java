@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CollateralBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details about the collateral held, in transit or that still needs to
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MarginCollateral1", propOrder = {"heldByPartyA", "heldByPartyB", "priorAgreedToPartyA", "priorAgreedToPartyB", "inTransitToPartyA", "inTransitToPartyB"})
 public class MarginCollateral1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -397,6 +403,7 @@ public class MarginCollateral1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "HeldByPtyA")
 	public ActiveCurrencyAndAmount getHeldByPartyA() {
 		return heldByPartyA;
 	}
@@ -405,6 +412,7 @@ public class MarginCollateral1 {
 		this.heldByPartyA = heldByPartyA;
 	}
 
+	@XmlElement(name = "HeldByPtyB")
 	public ActiveCurrencyAndAmount getHeldByPartyB() {
 		return heldByPartyB;
 	}
@@ -413,6 +421,7 @@ public class MarginCollateral1 {
 		this.heldByPartyB = heldByPartyB;
 	}
 
+	@XmlElement(name = "PrrAgrdToPtyA")
 	public ActiveCurrencyAndAmount getPriorAgreedToPartyA() {
 		return priorAgreedToPartyA;
 	}
@@ -421,6 +430,7 @@ public class MarginCollateral1 {
 		this.priorAgreedToPartyA = priorAgreedToPartyA;
 	}
 
+	@XmlElement(name = "PrrAgrdToPtyB")
 	public ActiveCurrencyAndAmount getPriorAgreedToPartyB() {
 		return priorAgreedToPartyB;
 	}
@@ -429,6 +439,7 @@ public class MarginCollateral1 {
 		this.priorAgreedToPartyB = priorAgreedToPartyB;
 	}
 
+	@XmlElement(name = "InTrnstToPtyA")
 	public ActiveCurrencyAndAmount getInTransitToPartyA() {
 		return inTransitToPartyA;
 	}
@@ -437,6 +448,7 @@ public class MarginCollateral1 {
 		this.inTransitToPartyA = inTransitToPartyA;
 	}
 
+	@XmlElement(name = "InTrnstToPtyB")
 	public ActiveCurrencyAndAmount getInTransitToPartyB() {
 		return inTransitToPartyB;
 	}

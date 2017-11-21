@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the transfer to be cancelled.
@@ -73,6 +77,8 @@ import java.util.List;
  * definition} = "Information about the transfer to be cancelled."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransferOut3", propOrder = {"investor", "investorAddress", "clientAccount", "nomineeAccount", "newPlanManager", "productTransfer", "extension"})
 public class TransferOut3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -418,6 +424,7 @@ public class TransferOut3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Invstr", required = true)
 	public IndividualPerson3 getInvestor() {
 		return investor;
 	}
@@ -426,6 +433,7 @@ public class TransferOut3 {
 		this.investor = investor;
 	}
 
+	@XmlElement(name = "InvstrAdr", required = true)
 	public PostalAddress1 getInvestorAddress() {
 		return investorAddress;
 	}
@@ -434,6 +442,7 @@ public class TransferOut3 {
 		this.investorAddress = investorAddress;
 	}
 
+	@XmlElement(name = "ClntAcct", required = true)
 	public Account4 getClientAccount() {
 		return clientAccount;
 	}
@@ -442,6 +451,7 @@ public class TransferOut3 {
 		this.clientAccount = clientAccount;
 	}
 
+	@XmlElement(name = "NmneeAcct", required = true)
 	public Account3 getNomineeAccount() {
 		return nomineeAccount;
 	}
@@ -450,6 +460,7 @@ public class TransferOut3 {
 		this.nomineeAccount = nomineeAccount;
 	}
 
+	@XmlElement(name = "NewPlanMgr", required = true)
 	public PartyIdentification2Choice getNewPlanManager() {
 		return newPlanManager;
 	}
@@ -458,6 +469,7 @@ public class TransferOut3 {
 		this.newPlanManager = newPlanManager;
 	}
 
+	@XmlElement(name = "PdctTrf", required = true)
 	public List<PEPISATransfer1> getProductTransfer() {
 		return productTransfer;
 	}
@@ -466,6 +478,7 @@ public class TransferOut3 {
 		this.productTransfer = productTransfer;
 	}
 
+	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
 		return extension;
 	}

@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Profile of the customer with the allowed services and restrictions.
@@ -71,6 +75,8 @@ import java.util.List;
  * ATMCustomerProfile2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMCustomerProfile3", propOrder = {"profileReference", "customerIdentification", "profileDescription", "allowedServices"})
 public class ATMCustomerProfile3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -264,6 +270,7 @@ public class ATMCustomerProfile3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PrflRef")
 	public Max35Text getProfileReference() {
 		return profileReference;
 	}
@@ -272,6 +279,7 @@ public class ATMCustomerProfile3 {
 		this.profileReference = profileReference;
 	}
 
+	@XmlElement(name = "CstmrId")
 	public Max35Text getCustomerIdentification() {
 		return customerIdentification;
 	}
@@ -280,6 +288,7 @@ public class ATMCustomerProfile3 {
 		this.customerIdentification = customerIdentification;
 	}
 
+	@XmlElement(name = "PrflDesc")
 	public Max70Text getProfileDescription() {
 		return profileDescription;
 	}
@@ -288,6 +297,7 @@ public class ATMCustomerProfile3 {
 		this.profileDescription = profileDescription;
 	}
 
+	@XmlElement(name = "AllwdSvcs")
 	public List<ATMService7> getAllowedServices() {
 		return allowedServices;
 	}

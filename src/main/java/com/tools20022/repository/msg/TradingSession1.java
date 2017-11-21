@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.TradingSession;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * The details of a specific trading session.
@@ -61,6 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "The details of a specific trading session."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TradingSession1", propOrder = {"tradingSessionIdentification", "tradingSessionSubIdentification"})
 public class TradingSession1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -179,6 +185,7 @@ public class TradingSession1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradgSsnId")
 	public Max128Text getTradingSessionIdentification() {
 		return tradingSessionIdentification;
 	}
@@ -187,6 +194,7 @@ public class TradingSession1 {
 		this.tradingSessionIdentification = tradingSessionIdentification;
 	}
 
+	@XmlElement(name = "TradgSsnSubId")
 	public Max128Text getTradingSessionSubIdentification() {
 		return tradingSessionSubIdentification;
 	}

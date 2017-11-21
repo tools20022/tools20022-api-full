@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PremiumAmount1;
 import com.tools20022.repository.msg.PremiumAmount2;
 import com.tools20022.repository.msg.PremiumAmount3;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +39,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PremiumCalculation#mmOption
+ * PremiumCalculation.mmOption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PremiumCalculation#mmPercentageOfCallAmount
+ * PremiumCalculation.mmPercentageOfCallAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PremiumCalculation#mmPercentageOfPutAmount
+ * PremiumCalculation.mmPercentageOfPutAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PremiumCalculation#mmPointsOfCallAmount
+ * PremiumCalculation.mmPointsOfCallAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PremiumCalculation#mmPointsOfPutAmount
+ * PremiumCalculation.mmPointsOfPutAmount}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -66,25 +86,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * PremiumAmount1.mmPremiumQuote}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount2#mmPremiumQuote
  * PremiumAmount2.mmPremiumQuote}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PremiumCalculation#mmOption
- * PremiumCalculation.mmOption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PremiumCalculation#mmPercentageOfCallAmount
- * PremiumCalculation.mmPercentageOfCallAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PremiumCalculation#mmPercentageOfPutAmount
- * PremiumCalculation.mmPercentageOfPutAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PremiumCalculation#mmPointsOfCallAmount
- * PremiumCalculation.mmPointsOfCallAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PremiumCalculation#mmPointsOfPutAmount
- * PremiumCalculation.mmPointsOfPutAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -143,7 +144,7 @@ public class PremiumCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmOption = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> PremiumCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Option";
@@ -166,11 +167,6 @@ public class PremiumCalculation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation
-	 * PremiumCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -179,6 +175,11 @@ public class PremiumCalculation {
 	 * PremiumQuote1Choice.mmPercentageOfCallAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation
+	 * PremiumCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -194,7 +195,7 @@ public class PremiumCalculation {
 	public static final MMBusinessAttribute mmPercentageOfCallAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PremiumQuote1Choice.mmPercentageOfCallAmount);
-			elementContext_lazy = () -> PremiumCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfCallAmount";
@@ -202,6 +203,14 @@ public class PremiumCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PremiumCalculation.class.getMethod("getPercentageOfCallAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate percentageOfPutAmount;
@@ -215,11 +224,6 @@ public class PremiumCalculation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation
-	 * PremiumCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -228,6 +232,11 @@ public class PremiumCalculation {
 	 * PremiumQuote1Choice.mmPercentageOfPutAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation
+	 * PremiumCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -243,7 +252,7 @@ public class PremiumCalculation {
 	public static final MMBusinessAttribute mmPercentageOfPutAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PremiumQuote1Choice.mmPercentageOfPutAmount);
-			elementContext_lazy = () -> PremiumCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfPutAmount";
@@ -251,6 +260,14 @@ public class PremiumCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PremiumCalculation.class.getMethod("getPercentageOfPutAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BaseOneRate pointsOfCallAmount;
@@ -263,11 +280,6 @@ public class PremiumCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.BaseOneRate
 	 * BaseOneRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation
-	 * PremiumCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -276,6 +288,11 @@ public class PremiumCalculation {
 	 * PremiumQuote1Choice.mmPointsOfCallAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation
+	 * PremiumCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -291,7 +308,7 @@ public class PremiumCalculation {
 	public static final MMBusinessAttribute mmPointsOfCallAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PremiumQuote1Choice.mmPointsOfCallAmount);
-			elementContext_lazy = () -> PremiumCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PointsOfCallAmount";
@@ -299,6 +316,14 @@ public class PremiumCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PremiumCalculation.class.getMethod("getPointsOfCallAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected BaseOneRate pointsOfPutAmount;
@@ -311,11 +336,6 @@ public class PremiumCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.BaseOneRate
 	 * BaseOneRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation
-	 * PremiumCalculation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -324,6 +344,11 @@ public class PremiumCalculation {
 	 * PremiumQuote1Choice.mmPointsOfPutAmount}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation
+	 * PremiumCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -339,7 +364,7 @@ public class PremiumCalculation {
 	public static final MMBusinessAttribute mmPointsOfPutAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PremiumQuote1Choice.mmPointsOfPutAmount);
-			elementContext_lazy = () -> PremiumCalculation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PointsOfPutAmount";
@@ -347,6 +372,14 @@ public class PremiumCalculation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return PremiumCalculation.class.getMethod("getPointsOfPutAmount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -359,9 +392,15 @@ public class PremiumCalculation {
 				definition = "Specifies the amount of a premium on a currency option together with its calculation method.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CurrencyOption.mmPremiumCalculation);
 				derivationElement_lazy = () -> Arrays.asList(PremiumAmount1.mmPremiumQuote, PremiumAmount2.mmPremiumQuote);
-				element_lazy = () -> Arrays.asList(PremiumCalculation.mmOption, PremiumCalculation.mmPercentageOfCallAmount, PremiumCalculation.mmPercentageOfPutAmount, PremiumCalculation.mmPointsOfCallAmount,
-						PremiumCalculation.mmPointsOfPutAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PremiumCalculation.mmOption, com.tools20022.repository.entity.PremiumCalculation.mmPercentageOfCallAmount,
+						com.tools20022.repository.entity.PremiumCalculation.mmPercentageOfPutAmount, com.tools20022.repository.entity.PremiumCalculation.mmPointsOfCallAmount,
+						com.tools20022.repository.entity.PremiumCalculation.mmPointsOfPutAmount);
 				derivationComponent_lazy = () -> Arrays.asList(PremiumQuote1Choice.mmObject(), PremiumAmount1.mmObject(), PremiumAmount2.mmObject(), PremiumAmount3.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return PremiumCalculation.class;
 			}
 		});
 		return mmObject_lazy.get();

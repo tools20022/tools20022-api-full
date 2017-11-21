@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Certificate record in which all currency control transactions are registered.
@@ -74,6 +78,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "TransactionCertificateRecord1", propOrder = {"certificateRecordIdentification", "transaction", "contract", "attachment"})
 public class TransactionCertificateRecord1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -285,6 +291,7 @@ public class TransactionCertificateRecord1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CertRcrdId", required = true)
 	public Max35Text getCertificateRecordIdentification() {
 		return certificateRecordIdentification;
 	}
@@ -293,6 +300,7 @@ public class TransactionCertificateRecord1 {
 		this.certificateRecordIdentification = certificateRecordIdentification;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public TransactionCertificate2 getTransaction() {
 		return transaction;
 	}
@@ -301,6 +309,7 @@ public class TransactionCertificateRecord1 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "Ctrct")
 	public TransactionCertificateContract1 getContract() {
 		return contract;
 	}
@@ -309,6 +318,7 @@ public class TransactionCertificateRecord1 {
 		this.contract = contract;
 	}
 
+	@XmlElement(name = "Attchmnt")
 	public List<DocumentGeneralInformation3> getAttachment() {
 		return attachment;
 	}

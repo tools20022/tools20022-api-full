@@ -25,8 +25,10 @@ import com.tools20022.repository.area.PaymentsInitiationArchive;
 import com.tools20022.repository.msg.GroupHeader31;
 import com.tools20022.repository.msg.MandateAcceptance1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -49,9 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.012.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
@@ -79,6 +78,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.012.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -98,6 +100,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "MandateAcceptanceReportV01", propOrder = {"groupHeader", "underlyingAcceptanceDetails"})
 public class MandateAcceptanceReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -137,6 +141,14 @@ public class MandateAcceptanceReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader31.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateAcceptanceReportV01.class.getMethod("getGroupHeader", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected MandateAcceptance1 underlyingAcceptanceDetails;
 	/**
@@ -175,6 +187,14 @@ public class MandateAcceptanceReportV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> MandateAcceptance1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return MandateAcceptanceReportV01.class.getMethod("getUnderlyingAcceptanceDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -188,7 +208,7 @@ public class MandateAcceptanceReportV01 {
 				rootElement = "Document";
 				xmlTag = "MndtAccptncRpt";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(MandateAcceptanceReportV01.mmGroupHeader, MandateAcceptanceReportV01.mmUnderlyingAcceptanceDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAcceptanceReportV01.mmGroupHeader, com.tools20022.repository.area.pain.MandateAcceptanceReportV01.mmUnderlyingAcceptanceDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";
@@ -198,10 +218,16 @@ public class MandateAcceptanceReportV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return MandateAcceptanceReportV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader31 getGroupHeader() {
 		return groupHeader;
 	}
@@ -210,11 +236,18 @@ public class MandateAcceptanceReportV01 {
 		this.groupHeader = groupHeader;
 	}
 
+	@XmlElement(name = "UndrlygAccptncDtls", required = true)
 	public MandateAcceptance1 getUnderlyingAcceptanceDetails() {
 		return underlyingAcceptanceDetails;
 	}
 
 	public void setUnderlyingAcceptanceDetails(MandateAcceptance1 underlyingAcceptanceDetails) {
 		this.underlyingAcceptanceDetails = underlyingAcceptanceDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.012.01.01")
+	static public class Document {
+		@XmlElement(name = "MndtAccptncRpt", required = true)
+		public MandateAcceptanceReportV01 messageBody;
 	}
 }

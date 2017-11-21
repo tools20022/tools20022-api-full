@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,9 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
- * TradePartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -48,6 +46,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * QualifiedForeignIntermediary.mmCountry}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
+ * TradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -97,7 +98,7 @@ public class QualifiedForeignIntermediary extends TradePartyRole {
 	 */
 	public static final MMBusinessAttribute mmCountry = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> QualifiedForeignIntermediary.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.QualifiedForeignIntermediary.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Country";
@@ -105,6 +106,14 @@ public class QualifiedForeignIntermediary extends TradePartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return QualifiedForeignIntermediary.class.getMethod("getCountry", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -116,7 +125,12 @@ public class QualifiedForeignIntermediary extends TradePartyRole {
 				name = "QualifiedForeignIntermediary";
 				definition = "Foreign financial institution that has been authorised by local authorities to act as account management institution in the country.";
 				superType_lazy = () -> TradePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(QualifiedForeignIntermediary.mmCountry);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.QualifiedForeignIntermediary.mmCountry);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return QualifiedForeignIntermediary.class;
 			}
 		});
 		return mmObject_lazy.get();

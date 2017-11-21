@@ -25,6 +25,10 @@ import com.tools20022.repository.msg.FinancialInstitutionIdentification9;
 import com.tools20022.repository.msg.FinancialInstitutionIdentificationList1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Identifiers for the central and authorised branches.
@@ -60,6 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifiers for the central and authorised branches."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CentralisedAndAuthorisedBranchIdentification1Choice", propOrder = {"authorisedBranchIdentifier", "centralisedBranchIdentifiers"})
 public class CentralisedAndAuthorisedBranchIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -161,6 +167,7 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AuthrsdBrnchIdr", required = true)
 	public FinancialInstitutionIdentification9 getAuthorisedBranchIdentifier() {
 		return authorisedBranchIdentifier;
 	}
@@ -169,6 +176,7 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 		this.authorisedBranchIdentifier = authorisedBranchIdentifier;
 	}
 
+	@XmlElement(name = "CntrldBrnchIdrs", required = true)
 	public FinancialInstitutionIdentificationList1 getCentralisedBranchIdentifiers() {
 		return centralisedBranchIdentifiers;
 	}

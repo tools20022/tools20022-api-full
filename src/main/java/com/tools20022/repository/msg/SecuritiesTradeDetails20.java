@@ -36,6 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the securities trade.
@@ -124,6 +128,10 @@ import java.util.List;
  * definition} = "Details of the securities trade."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesTradeDetails20", propOrder = {"notificationSenderTransactionIdentification", "notificationReceiverTransactionIdentification", "commonIdentification", "securitiesMovementType", "payment", "tradeDate",
+		"settlementDate", "numberOfDaysAccrued", "financialInstrumentIdentification", "financialInstrumentAttributes", "reporting", "quantityDetails", "settlementParameters", "deliveringSettlementParties", "receivingSettlementParties",
+		"settlementAmount", "otherAmounts", "otherBusinessParties", "supplementaryData"})
 public class SecuritiesTradeDetails20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1059,6 +1067,7 @@ public class SecuritiesTradeDetails20 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "NtfctnSndrTxId")
 	public RestrictedFINXMax16Text getNotificationSenderTransactionIdentification() {
 		return notificationSenderTransactionIdentification;
 	}
@@ -1067,6 +1076,7 @@ public class SecuritiesTradeDetails20 {
 		this.notificationSenderTransactionIdentification = notificationSenderTransactionIdentification;
 	}
 
+	@XmlElement(name = "NtfctnRcvrTxId")
 	public RestrictedFINXMax16Text getNotificationReceiverTransactionIdentification() {
 		return notificationReceiverTransactionIdentification;
 	}
@@ -1075,6 +1085,7 @@ public class SecuritiesTradeDetails20 {
 		this.notificationReceiverTransactionIdentification = notificationReceiverTransactionIdentification;
 	}
 
+	@XmlElement(name = "CmonId")
 	public RestrictedFINXMax16Text getCommonIdentification() {
 		return commonIdentification;
 	}
@@ -1083,6 +1094,7 @@ public class SecuritiesTradeDetails20 {
 		this.commonIdentification = commonIdentification;
 	}
 
+	@XmlElement(name = "SctiesMvmntTp", required = true)
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
@@ -1091,6 +1103,7 @@ public class SecuritiesTradeDetails20 {
 		this.securitiesMovementType = securitiesMovementType;
 	}
 
+	@XmlElement(name = "Pmt", required = true)
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
@@ -1099,6 +1112,7 @@ public class SecuritiesTradeDetails20 {
 		this.payment = payment;
 	}
 
+	@XmlElement(name = "TradDt")
 	public TradeDate2Choice getTradeDate() {
 		return tradeDate;
 	}
@@ -1107,6 +1121,7 @@ public class SecuritiesTradeDetails20 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "SttlmDt", required = true)
 	public SettlementDate4Choice getSettlementDate() {
 		return settlementDate;
 	}
@@ -1115,6 +1130,7 @@ public class SecuritiesTradeDetails20 {
 		this.settlementDate = settlementDate;
 	}
 
+	@XmlElement(name = "NbOfDaysAcrd")
 	public Max3Number getNumberOfDaysAccrued() {
 		return numberOfDaysAccrued;
 	}
@@ -1123,6 +1139,7 @@ public class SecuritiesTradeDetails20 {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
 	}
 
+	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification15 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
@@ -1131,6 +1148,7 @@ public class SecuritiesTradeDetails20 {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 
+	@XmlElement(name = "FinInstrmAttrbts")
 	public FinancialInstrumentAttributes28 getFinancialInstrumentAttributes() {
 		return financialInstrumentAttributes;
 	}
@@ -1139,6 +1157,7 @@ public class SecuritiesTradeDetails20 {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 
+	@XmlElement(name = "Rptg")
 	public List<Reporting4Choice> getReporting() {
 		return reporting;
 	}
@@ -1147,6 +1166,7 @@ public class SecuritiesTradeDetails20 {
 		this.reporting = reporting;
 	}
 
+	@XmlElement(name = "QtyDtls", required = true)
 	public Quantity6 getQuantityDetails() {
 		return quantityDetails;
 	}
@@ -1155,6 +1175,7 @@ public class SecuritiesTradeDetails20 {
 		this.quantityDetails = quantityDetails;
 	}
 
+	@XmlElement(name = "SttlmParams")
 	public SettlementDetails18 getSettlementParameters() {
 		return settlementParameters;
 	}
@@ -1163,6 +1184,7 @@ public class SecuritiesTradeDetails20 {
 		this.settlementParameters = settlementParameters;
 	}
 
+	@XmlElement(name = "DlvrgSttlmPties")
 	public SettlementParties17 getDeliveringSettlementParties() {
 		return deliveringSettlementParties;
 	}
@@ -1171,6 +1193,7 @@ public class SecuritiesTradeDetails20 {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 
+	@XmlElement(name = "RcvgSttlmPties")
 	public SettlementParties17 getReceivingSettlementParties() {
 		return receivingSettlementParties;
 	}
@@ -1179,6 +1202,7 @@ public class SecuritiesTradeDetails20 {
 		this.receivingSettlementParties = receivingSettlementParties;
 	}
 
+	@XmlElement(name = "SttlmAmt")
 	public AmountAndDirection15 getSettlementAmount() {
 		return settlementAmount;
 	}
@@ -1187,6 +1211,7 @@ public class SecuritiesTradeDetails20 {
 		this.settlementAmount = settlementAmount;
 	}
 
+	@XmlElement(name = "OthrAmts")
 	public OtherAmounts6 getOtherAmounts() {
 		return otherAmounts;
 	}
@@ -1195,6 +1220,7 @@ public class SecuritiesTradeDetails20 {
 		this.otherAmounts = otherAmounts;
 	}
 
+	@XmlElement(name = "OthrBizPties")
 	public OtherParties13 getOtherBusinessParties() {
 		return otherBusinessParties;
 	}
@@ -1203,6 +1229,7 @@ public class SecuritiesTradeDetails20 {
 		this.otherBusinessParties = otherBusinessParties;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}

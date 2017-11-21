@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -41,6 +42,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestorRole#mmIndividualInvestor
+ * InvestorRole.mmIndividualInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestorRole#mmCorporateInvestor
+ * InvestorRole.mmCorporateInvestor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestorRole#mmCapacity
+ * InvestorRole.mmCapacity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestorRole#mmInvestorProtectionAssociationMembership
+ * InvestorRole.mmInvestorProtectionAssociationMembership}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestorRole#mmType
+ * InvestorRole.mmType}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
+ * TradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -59,27 +81,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountDesignation1Choice}</li>
  * <li>{@linkplain com.tools20022.repository.choice.InvestorCapacity5Choice
  * InvestorCapacity5Choice}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
- * TradePartyRole}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestorRole#mmIndividualInvestor
- * InvestorRole.mmIndividualInvestor}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestorRole#mmCorporateInvestor
- * InvestorRole.mmCorporateInvestor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestorRole#mmCapacity
- * InvestorRole.mmCapacity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestorRole#mmInvestorProtectionAssociationMembership
- * InvestorRole.mmInvestorProtectionAssociationMembership}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestorRole#mmType
- * InvestorRole.mmType}</li>
  * </ul>
  * </li>
  * <li>
@@ -132,7 +133,7 @@ public class InvestorRole extends TradePartyRole {
 	 */
 	public static final MMBusinessAttribute mmIndividualInvestor = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> InvestorRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndividualInvestor";
@@ -140,6 +141,14 @@ public class InvestorRole extends TradePartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RankCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestorRole.class.getMethod("getIndividualInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RankCode corporateInvestor;
@@ -153,10 +162,6 @@ public class InvestorRole extends TradePartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.RankCode
 	 * RankCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestorRole InvestorRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -168,6 +173,10 @@ public class InvestorRole extends TradePartyRole {
 	 * AccountDesignation1Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestorRole InvestorRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -184,7 +193,7 @@ public class InvestorRole extends TradePartyRole {
 	public static final MMBusinessAttribute mmCorporateInvestor = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashAccount33.mmCashAccountDesignation, AccountDesignation1Choice.mmCode);
-			elementContext_lazy = () -> InvestorRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateInvestor";
@@ -192,6 +201,14 @@ public class InvestorRole extends TradePartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RankCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestorRole.class.getMethod("getCorporateInvestor", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected EligibilityCode capacity;
@@ -206,10 +223,6 @@ public class InvestorRole extends TradePartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.EligibilityCode
 	 * EligibilityCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestorRole InvestorRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -378,6 +391,10 @@ public class InvestorRole extends TradePartyRole {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestorRole InvestorRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -405,7 +422,7 @@ public class InvestorRole extends TradePartyRole {
 					SecuritiesTradeDetails63.mmInvestorCapacity, SecuritiesTradeDetails62.mmInvestorCapacity, InvestorCapacity5Choice.mmCode, InvestorCapacity5Choice.mmProprietary, SecuritiesTradeDetails65.mmInvestorCapacity,
 					SecuritiesTradeDetails66.mmInvestorCapacity, Intermediary39.mmOrderOriginatorEligibility, Intermediary40.mmOrderOriginatorEligibility, SecuritiesTradeDetails67.mmInvestorCapacity,
 					SecuritiesTradeDetails70.mmInvestorCapacity);
-			elementContext_lazy = () -> InvestorRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Capacity";
@@ -413,6 +430,14 @@ public class InvestorRole extends TradePartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EligibilityCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestorRole.class.getMethod("getCapacity", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected YesNoIndicator investorProtectionAssociationMembership;
@@ -427,10 +452,6 @@ public class InvestorRole extends TradePartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestorRole InvestorRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -442,6 +463,10 @@ public class InvestorRole extends TradePartyRole {
 	 * ConfirmationPartyDetails5.mmInvestorProtectionAssociationMembership}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestorRole InvestorRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -458,7 +483,7 @@ public class InvestorRole extends TradePartyRole {
 	public static final MMBusinessAttribute mmInvestorProtectionAssociationMembership = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ConfirmationPartyDetails6.mmInvestorProtectionAssociationMembership, ConfirmationPartyDetails5.mmInvestorProtectionAssociationMembership);
-			elementContext_lazy = () -> InvestorRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestorProtectionAssociationMembership";
@@ -466,6 +491,14 @@ public class InvestorRole extends TradePartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestorRole.class.getMethod("getInvestorProtectionAssociationMembership", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected InvestorTypeCode type;
@@ -479,10 +512,6 @@ public class InvestorRole extends TradePartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestorTypeCode
 	 * InvestorTypeCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.InvestorRole InvestorRole}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -494,6 +523,10 @@ public class InvestorRole extends TradePartyRole {
 	 * InvestorType2Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.InvestorRole InvestorRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -509,7 +542,7 @@ public class InvestorRole extends TradePartyRole {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestorType2Choice.mmCode, InvestorType2Choice.mmProprietary);
-			elementContext_lazy = () -> InvestorRole.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
@@ -517,6 +550,14 @@ public class InvestorRole extends TradePartyRole {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestorTypeCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return InvestorRole.class.getMethod("getType", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 
@@ -528,9 +569,15 @@ public class InvestorRole extends TradePartyRole {
 				name = "InvestorRole";
 				definition = "Party that makes investment decisions. Identifies the beneficiary or its broker.";
 				superType_lazy = () -> TradePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(InvestorRole.mmIndividualInvestor, InvestorRole.mmCorporateInvestor, InvestorRole.mmCapacity, InvestorRole.mmInvestorProtectionAssociationMembership, InvestorRole.mmType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestorRole.mmIndividualInvestor, com.tools20022.repository.entity.InvestorRole.mmCorporateInvestor,
+						com.tools20022.repository.entity.InvestorRole.mmCapacity, com.tools20022.repository.entity.InvestorRole.mmInvestorProtectionAssociationMembership, com.tools20022.repository.entity.InvestorRole.mmType);
 				derivationComponent_lazy = () -> Arrays.asList(InvestorCapacity1Choice.mmObject(), InvestorCapacity2Choice.mmObject(), InvestorCapacity3Choice.mmObject(), InvestorType2Choice.mmObject(), InvestorCapacity4Choice.mmObject(),
 						AccountDesignation1Choice.mmObject(), InvestorCapacity5Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return InvestorRole.class;
 			}
 		});
 		return mmObject_lazy.get();

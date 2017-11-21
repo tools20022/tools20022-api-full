@@ -33,6 +33,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Party that provides services relating to financial products to investors, eg,
@@ -113,6 +117,8 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Intermediary12", propOrder = {"identification", "account", "waivedTrailerCommissionIndicator", "role", "extendedRole", "primaryCommunicationAddress", "secondaryCommunicationAddress", "nameAndAddress"})
 public class Intermediary12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -573,6 +579,7 @@ public class Intermediary12 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public PartyIdentification4Choice getIdentification() {
 		return identification;
 	}
@@ -581,6 +588,7 @@ public class Intermediary12 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "Acct")
 	public Account2 getAccount() {
 		return account;
 	}
@@ -589,6 +597,7 @@ public class Intermediary12 {
 		this.account = account;
 	}
 
+	@XmlElement(name = "WvdTrlrComssnInd")
 	public YesNoIndicator getWaivedTrailerCommissionIndicator() {
 		return waivedTrailerCommissionIndicator;
 	}
@@ -597,6 +606,7 @@ public class Intermediary12 {
 		this.waivedTrailerCommissionIndicator = waivedTrailerCommissionIndicator;
 	}
 
+	@XmlElement(name = "Role")
 	public InvestmentFundRole3Code getRole() {
 		return role;
 	}
@@ -605,6 +615,7 @@ public class Intermediary12 {
 		this.role = role;
 	}
 
+	@XmlElement(name = "XtndedRole")
 	public Extended350Code getExtendedRole() {
 		return extendedRole;
 	}
@@ -613,6 +624,7 @@ public class Intermediary12 {
 		this.extendedRole = extendedRole;
 	}
 
+	@XmlElement(name = "PmryComAdr")
 	public CommunicationAddress3 getPrimaryCommunicationAddress() {
 		return primaryCommunicationAddress;
 	}
@@ -621,6 +633,7 @@ public class Intermediary12 {
 		this.primaryCommunicationAddress = primaryCommunicationAddress;
 	}
 
+	@XmlElement(name = "ScndryComAdr")
 	public CommunicationAddress3 getSecondaryCommunicationAddress() {
 		return secondaryCommunicationAddress;
 	}
@@ -629,6 +642,7 @@ public class Intermediary12 {
 		this.secondaryCommunicationAddress = secondaryCommunicationAddress;
 	}
 
+	@XmlElement(name = "NmAndAdr")
 	public NameAndAddress4 getNameAndAddress() {
 		return nameAndAddress;
 	}

@@ -26,9 +26,11 @@ import com.tools20022.repository.choice.PartyIdentification36Choice;
 import com.tools20022.repository.choice.PartyIdentification49Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -71,9 +73,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.002.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
@@ -122,6 +121,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.002.001.05}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -145,6 +147,9 @@ import java.util.List;
  * SecuritiesBalanceCustodyReportV04}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecuritiesBalanceCustodyReportV05", propOrder = {"pagination", "statementGeneralDetails", "accountOwner", "accountServicer", "safekeepingAccount", "intermediaryInformation", "balanceForAccount", "subAccountDetails",
+		"accountBaseCurrencyTotalAmounts"})
 public class SecuritiesBalanceCustodyReportV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -185,6 +190,14 @@ public class SecuritiesBalanceCustodyReportV05 {
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesBalanceCustodyReportV05.class.getMethod("getPagination", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected Statement33 statementGeneralDetails;
 	/**
@@ -218,6 +231,14 @@ public class SecuritiesBalanceCustodyReportV05 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Statement33.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesBalanceCustodyReportV05.class.getMethod("getStatementGeneralDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification36Choice accountOwner;
@@ -253,6 +274,14 @@ public class SecuritiesBalanceCustodyReportV05 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification36Choice.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesBalanceCustodyReportV05.class.getMethod("getAccountOwner", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification49Choice accountServicer;
@@ -294,6 +323,14 @@ public class SecuritiesBalanceCustodyReportV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification49Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesBalanceCustodyReportV05.class.getMethod("getAccountServicer", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected SecuritiesAccount11 safekeepingAccount;
 	/**
@@ -328,6 +365,14 @@ public class SecuritiesBalanceCustodyReportV05 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount11.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesBalanceCustodyReportV05.class.getMethod("getSafekeepingAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<Intermediary21> intermediaryInformation;
@@ -367,6 +412,14 @@ public class SecuritiesBalanceCustodyReportV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> Intermediary21.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesBalanceCustodyReportV05.class.getMethod("getIntermediaryInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<AggregateBalanceInformation16> balanceForAccount;
 	/**
@@ -404,6 +457,14 @@ public class SecuritiesBalanceCustodyReportV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> AggregateBalanceInformation16.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesBalanceCustodyReportV05.class.getMethod("getBalanceForAccount", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<SubAccountIdentification22> subAccountDetails;
 	/**
@@ -437,6 +498,14 @@ public class SecuritiesBalanceCustodyReportV05 {
 			definition = "Sub-account of the safekeeping or investment account.";
 			minOccurs = 0;
 			complexType_lazy = () -> SubAccountIdentification22.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesBalanceCustodyReportV05.class.getMethod("getSubAccountDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected TotalValueInPageAndStatement1 accountBaseCurrencyTotalAmounts;
@@ -474,6 +543,14 @@ public class SecuritiesBalanceCustodyReportV05 {
 			minOccurs = 0;
 			complexType_lazy = () -> TotalValueInPageAndStatement1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesBalanceCustodyReportV05.class.getMethod("getAccountBaseCurrencyTotalAmounts", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -488,9 +565,11 @@ public class SecuritiesBalanceCustodyReportV05 {
 				rootElement = "Document";
 				xmlTag = "SctiesBalCtdyRpt";
 				businessArea_lazy = () -> SecuritiesManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceCustodyReportV05.mmPagination, SecuritiesBalanceCustodyReportV05.mmStatementGeneralDetails, SecuritiesBalanceCustodyReportV05.mmAccountOwner,
-						SecuritiesBalanceCustodyReportV05.mmAccountServicer, SecuritiesBalanceCustodyReportV05.mmSafekeepingAccount, SecuritiesBalanceCustodyReportV05.mmIntermediaryInformation,
-						SecuritiesBalanceCustodyReportV05.mmBalanceForAccount, SecuritiesBalanceCustodyReportV05.mmSubAccountDetails, SecuritiesBalanceCustodyReportV05.mmAccountBaseCurrencyTotalAmounts);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.mmStatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.mmAccountServicer, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.mmIntermediaryInformation, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.mmBalanceForAccount,
+						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.mmSubAccountDetails, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.mmAccountBaseCurrencyTotalAmounts);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";
@@ -500,10 +579,16 @@ public class SecuritiesBalanceCustodyReportV05 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return SecuritiesBalanceCustodyReportV05.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
@@ -512,6 +597,7 @@ public class SecuritiesBalanceCustodyReportV05 {
 		this.pagination = pagination;
 	}
 
+	@XmlElement(name = "StmtGnlDtls", required = true)
 	public Statement33 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
@@ -520,6 +606,7 @@ public class SecuritiesBalanceCustodyReportV05 {
 		this.statementGeneralDetails = statementGeneralDetails;
 	}
 
+	@XmlElement(name = "AcctOwnr")
 	public PartyIdentification36Choice getAccountOwner() {
 		return accountOwner;
 	}
@@ -528,6 +615,7 @@ public class SecuritiesBalanceCustodyReportV05 {
 		this.accountOwner = accountOwner;
 	}
 
+	@XmlElement(name = "AcctSvcr")
 	public PartyIdentification49Choice getAccountServicer() {
 		return accountServicer;
 	}
@@ -536,6 +624,7 @@ public class SecuritiesBalanceCustodyReportV05 {
 		this.accountServicer = accountServicer;
 	}
 
+	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount11 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
@@ -544,6 +633,7 @@ public class SecuritiesBalanceCustodyReportV05 {
 		this.safekeepingAccount = safekeepingAccount;
 	}
 
+	@XmlElement(name = "IntrmyInf")
 	public List<Intermediary21> getIntermediaryInformation() {
 		return intermediaryInformation;
 	}
@@ -552,6 +642,7 @@ public class SecuritiesBalanceCustodyReportV05 {
 		this.intermediaryInformation = intermediaryInformation;
 	}
 
+	@XmlElement(name = "BalForAcct")
 	public List<AggregateBalanceInformation16> getBalanceForAccount() {
 		return balanceForAccount;
 	}
@@ -560,6 +651,7 @@ public class SecuritiesBalanceCustodyReportV05 {
 		this.balanceForAccount = balanceForAccount;
 	}
 
+	@XmlElement(name = "SubAcctDtls")
 	public List<SubAccountIdentification22> getSubAccountDetails() {
 		return subAccountDetails;
 	}
@@ -568,11 +660,18 @@ public class SecuritiesBalanceCustodyReportV05 {
 		this.subAccountDetails = subAccountDetails;
 	}
 
+	@XmlElement(name = "AcctBaseCcyTtlAmts")
 	public TotalValueInPageAndStatement1 getAccountBaseCurrencyTotalAmounts() {
 		return accountBaseCurrencyTotalAmounts;
 	}
 
 	public void setAccountBaseCurrencyTotalAmounts(TotalValueInPageAndStatement1 accountBaseCurrencyTotalAmounts) {
 		this.accountBaseCurrencyTotalAmounts = accountBaseCurrencyTotalAmounts;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.002.05.05")
+	static public class Document {
+		@XmlElement(name = "SctiesBalCtdyRpt", required = true)
+		public SecuritiesBalanceCustodyReportV05 messageBody;
 	}
 }

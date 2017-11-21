@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Formal document used to record a fact and used as proof of the fact that
@@ -130,6 +134,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "InsuranceDataSet1", propOrder = {"dataSetIdentification", "issuer", "issueDate", "effectiveDate", "placeOfIssue", "insuranceDocumentIdentification", "transport", "insuredAmount", "insuredGoodsDescription",
+		"insuranceConditions", "insuranceClauses", "assured", "claimsPayableAt", "claimsPayableIn"})
 public class InsuranceDataSet1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -828,6 +835,7 @@ public class InsuranceDataSet1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DataSetId", required = true)
 	public DocumentIdentification1 getDataSetIdentification() {
 		return dataSetIdentification;
 	}
@@ -836,6 +844,7 @@ public class InsuranceDataSet1 {
 		this.dataSetIdentification = dataSetIdentification;
 	}
 
+	@XmlElement(name = "Issr", required = true)
 	public PartyIdentification26 getIssuer() {
 		return issuer;
 	}
@@ -844,6 +853,7 @@ public class InsuranceDataSet1 {
 		this.issuer = issuer;
 	}
 
+	@XmlElement(name = "IsseDt", required = true)
 	public ISODate getIssueDate() {
 		return issueDate;
 	}
@@ -852,6 +862,7 @@ public class InsuranceDataSet1 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "FctvDt")
 	public ISODate getEffectiveDate() {
 		return effectiveDate;
 	}
@@ -860,6 +871,7 @@ public class InsuranceDataSet1 {
 		this.effectiveDate = effectiveDate;
 	}
 
+	@XmlElement(name = "PlcOfIsse")
 	public PostalAddress5 getPlaceOfIssue() {
 		return placeOfIssue;
 	}
@@ -868,6 +880,7 @@ public class InsuranceDataSet1 {
 		this.placeOfIssue = placeOfIssue;
 	}
 
+	@XmlElement(name = "InsrncDocId", required = true)
 	public Max35Text getInsuranceDocumentIdentification() {
 		return insuranceDocumentIdentification;
 	}
@@ -876,6 +889,7 @@ public class InsuranceDataSet1 {
 		this.insuranceDocumentIdentification = insuranceDocumentIdentification;
 	}
 
+	@XmlElement(name = "Trnsprt")
 	public SingleTransport3 getTransport() {
 		return transport;
 	}
@@ -884,6 +898,7 @@ public class InsuranceDataSet1 {
 		this.transport = transport;
 	}
 
+	@XmlElement(name = "InsrdAmt", required = true)
 	public CurrencyAndAmount getInsuredAmount() {
 		return insuredAmount;
 	}
@@ -892,6 +907,7 @@ public class InsuranceDataSet1 {
 		this.insuredAmount = insuredAmount;
 	}
 
+	@XmlElement(name = "InsrdGoodsDesc")
 	public Max70Text getInsuredGoodsDescription() {
 		return insuredGoodsDescription;
 	}
@@ -900,6 +916,7 @@ public class InsuranceDataSet1 {
 		this.insuredGoodsDescription = insuredGoodsDescription;
 	}
 
+	@XmlElement(name = "InsrncConds")
 	public List<Max350Text> getInsuranceConditions() {
 		return insuranceConditions;
 	}
@@ -908,6 +925,7 @@ public class InsuranceDataSet1 {
 		this.insuranceConditions = insuranceConditions;
 	}
 
+	@XmlElement(name = "InsrncClauses")
 	public List<InsuranceClauses1Code> getInsuranceClauses() {
 		return insuranceClauses;
 	}
@@ -916,6 +934,7 @@ public class InsuranceDataSet1 {
 		this.insuranceClauses = insuranceClauses;
 	}
 
+	@XmlElement(name = "Assrd", required = true)
 	public PartyIdentification29Choice getAssured() {
 		return assured;
 	}
@@ -924,6 +943,7 @@ public class InsuranceDataSet1 {
 		this.assured = assured;
 	}
 
+	@XmlElement(name = "ClmsPyblAt", required = true)
 	public PostalAddress5 getClaimsPayableAt() {
 		return claimsPayableAt;
 	}
@@ -932,6 +952,7 @@ public class InsuranceDataSet1 {
 		this.claimsPayableAt = claimsPayableAt;
 	}
 
+	@XmlElement(name = "ClmsPyblIn")
 	public CurrencyCode getClaimsPayableIn() {
 		return claimsPayableIn;
 	}

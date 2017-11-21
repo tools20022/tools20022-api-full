@@ -34,6 +34,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * General information about the corporate action event.
@@ -84,6 +88,9 @@ import java.util.function.Supplier;
  * definition} = "General information about the corporate action event."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionGeneralInformation16", propOrder = {"corporateActionEventIdentification", "officialCorporateActionEventIdentification", "classActionNumber", "eventType", "underlyingSecurityIdentification",
+		"additionalBusinessProcessIndicator"})
 public class CorporateActionGeneralInformation16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -411,6 +418,7 @@ public class CorporateActionGeneralInformation16 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "CorpActnEvtId", required = true)
 	public RestrictedFINXMax16Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
@@ -419,6 +427,7 @@ public class CorporateActionGeneralInformation16 {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "OffclCorpActnEvtId")
 	public RestrictedFINXMax16Text getOfficialCorporateActionEventIdentification() {
 		return officialCorporateActionEventIdentification;
 	}
@@ -427,6 +436,7 @@ public class CorporateActionGeneralInformation16 {
 		this.officialCorporateActionEventIdentification = officialCorporateActionEventIdentification;
 	}
 
+	@XmlElement(name = "ClssActnNb")
 	public RestrictedFINXMax16Text getClassActionNumber() {
 		return classActionNumber;
 	}
@@ -435,6 +445,7 @@ public class CorporateActionGeneralInformation16 {
 		this.classActionNumber = classActionNumber;
 	}
 
+	@XmlElement(name = "EvtTp", required = true)
 	public CorporateActionEventType4Choice getEventType() {
 		return eventType;
 	}
@@ -443,6 +454,7 @@ public class CorporateActionGeneralInformation16 {
 		this.eventType = eventType;
 	}
 
+	@XmlElement(name = "UndrlygSctyId", required = true)
 	public SecurityIdentification12 getUnderlyingSecurityIdentification() {
 		return underlyingSecurityIdentification;
 	}
@@ -451,6 +463,7 @@ public class CorporateActionGeneralInformation16 {
 		this.underlyingSecurityIdentification = underlyingSecurityIdentification;
 	}
 
+	@XmlElement(name = "AddtlBizPrcInd")
 	public AdditionalBusinessProcessFormat5Choice getAdditionalBusinessProcessIndicator() {
 		return additionalBusinessProcessIndicator;
 	}

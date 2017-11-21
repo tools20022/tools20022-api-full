@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Security parameters of the ATM for the initiated key download.
@@ -81,6 +85,8 @@ import java.util.List;
  * SecurityParameters3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SecurityParameters4", propOrder = {"key", "digitalSignature", "certificate", "ATMChallenge", "requestedKey"})
 public class SecurityParameters4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -355,6 +361,7 @@ public class SecurityParameters4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Key")
 	public CryptographicKey8 getKey() {
 		return key;
 	}
@@ -363,6 +370,7 @@ public class SecurityParameters4 {
 		this.key = key;
 	}
 
+	@XmlElement(name = "DgtlSgntr")
 	public ContentInformationType14 getDigitalSignature() {
 		return digitalSignature;
 	}
@@ -371,6 +379,7 @@ public class SecurityParameters4 {
 		this.digitalSignature = digitalSignature;
 	}
 
+	@XmlElement(name = "Cert")
 	public List<Max5000Binary> getCertificate() {
 		return certificate;
 	}
@@ -379,6 +388,7 @@ public class SecurityParameters4 {
 		this.certificate = certificate;
 	}
 
+	@XmlElement(name = "ATMChllng")
 	public Max140Binary getATMChallenge() {
 		return aTMChallenge;
 	}
@@ -387,6 +397,7 @@ public class SecurityParameters4 {
 		this.aTMChallenge = aTMChallenge;
 	}
 
+	@XmlElement(name = "ReqdKey")
 	public Max35Text getRequestedKey() {
 		return requestedKey;
 	}

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CashAccount6;
 import com.tools20022.repository.msg.ClearingSystemMemberIdentification2;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -44,54 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice
- * ClearingSystemMemberIdentificationChoice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification3Choice
- * ClearingSystemMemberIdentification3Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ClearingSystemMemberIdentification2
- * ClearingSystemMemberIdentification2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice
- * ClearingSystemMemberIdentification2Choice}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmClearingSystemMemberIdentificationType
- * OrganisationIdentification.mmClearingSystemMemberIdentificationType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AustralianBSBIdentification#mmClearingSystemMemberIdentificationType
- * AustralianBSBIdentification.mmClearingSystemMemberIdentificationType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmClearingSystemMemberIdentification
- * ClearingMemberRole.mmClearingSystemMemberIdentification}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification3Choice#mmIdentification
- * ClearingSystemMemberIdentification3Choice.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification3Choice#mmProprietary
- * ClearingSystemMemberIdentification3Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmOtherClearingCodeIdentification
- * ClearingSystemMemberIdentification2Choice.mmOtherClearingCodeIdentification}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -167,6 +120,54 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice
+ * ClearingSystemMemberIdentificationChoice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification3Choice
+ * ClearingSystemMemberIdentification3Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ClearingSystemMemberIdentification2
+ * ClearingSystemMemberIdentification2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice
+ * ClearingSystemMemberIdentification2Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmClearingSystemMemberIdentificationType
+ * OrganisationIdentification.mmClearingSystemMemberIdentificationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AustralianBSBIdentification#mmClearingSystemMemberIdentificationType
+ * AustralianBSBIdentification.mmClearingSystemMemberIdentificationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmClearingSystemMemberIdentification
+ * ClearingMemberRole.mmClearingSystemMemberIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification3Choice#mmIdentification
+ * ClearingSystemMemberIdentification3Choice.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification3Choice#mmProprietary
+ * ClearingSystemMemberIdentification3Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmOtherClearingCodeIdentification
+ * ClearingSystemMemberIdentification2Choice.mmOtherClearingCodeIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -226,7 +227,7 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAssociationEnd mmOrganisationIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrganisationIdentification";
@@ -252,11 +253,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CHIPSUniversalIdentifier
 	 * CHIPSUniversalIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -269,6 +265,11 @@ public class CashClearingSystemMember {
 	 * </li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -285,7 +286,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmCHIPSUniversalIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmCHIPSUniversalIdentification, ClearingSystemMemberIdentification2Choice.mmCHIPSUniversalIdentification);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CHIPSUniversalIdentification";
@@ -293,6 +294,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CHIPSUniversalIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getCHIPSUniversalIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected NewZealandNCCIdentifier newZealandNCC;
@@ -308,11 +317,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.NewZealandNCCIdentifier
 	 * NewZealandNCCIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -324,6 +328,11 @@ public class CashClearingSystemMember {
 	 * ClearingSystemMemberIdentification2Choice.mmNewZealandNCCIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -340,7 +349,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmNewZealandNCC = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmNewZealandNCCIdentification, ClearingSystemMemberIdentification2Choice.mmNewZealandNCCIdentification);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewZealandNCC";
@@ -348,6 +357,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NewZealandNCCIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getNewZealandNCC", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected IrishNSCIdentifier irishNSC;
@@ -363,11 +380,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.IrishNSCIdentifier
 	 * IrishNSCIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -379,6 +391,11 @@ public class CashClearingSystemMember {
 	 * ClearingSystemMemberIdentification2Choice.mmIrishNSCIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -395,7 +412,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmIrishNSC = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmIrishNSCIdentification, ClearingSystemMemberIdentification2Choice.mmIrishNSCIdentification);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IrishNSC";
@@ -403,6 +420,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IrishNSCIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getIrishNSC", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected UKDomesticSortCodeIdentifier uKSortCode;
@@ -418,11 +443,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.UKDomesticSortCodeIdentifier
 	 * UKDomesticSortCodeIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -437,6 +457,11 @@ public class CashClearingSystemMember {
 	 * ClearingSystemMemberIdentification2Choice.mmUKDomesticSortCode}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -453,7 +478,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmUKSortCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmUKDomesticSortCode, CashAccount6.mmGBBankSortCode, ClearingSystemMemberIdentification2Choice.mmUKDomesticSortCode);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UKSortCode";
@@ -461,6 +486,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UKDomesticSortCodeIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getUKSortCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CHIPSParticipantIdentifier cHIPSParticipantIdentification;
@@ -477,11 +510,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CHIPSParticipantIdentifier
 	 * CHIPSParticipantIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -495,6 +523,11 @@ public class CashClearingSystemMember {
 	 * mmCHIPSParticipantIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -511,7 +544,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmCHIPSParticipantIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmCHIPSParticipantIdentification, ClearingSystemMemberIdentification2Choice.mmCHIPSParticipantIdentification);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CHIPSParticipantIdentification";
@@ -519,6 +552,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CHIPSParticipantIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getCHIPSParticipantIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SwissBCIdentifier swissBC;
@@ -533,11 +574,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.SwissBCIdentifier
 	 * SwissBCIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -549,6 +585,11 @@ public class CashClearingSystemMember {
 	 * ClearingSystemMemberIdentification2Choice.mmSwissBCIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -565,7 +606,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmSwissBC = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmSwissBCIdentification, ClearingSystemMemberIdentification2Choice.mmSwissBCIdentification);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SwissBC";
@@ -573,6 +614,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SwissBCIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getSwissBC", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected FedwireRoutingNumberIdentifier fedwireRoutingNumber;
@@ -588,11 +637,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.FedwireRoutingNumberIdentifier
 	 * FedwireRoutingNumberIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -606,6 +650,11 @@ public class CashClearingSystemMember {
 	 * mmFedwireRoutingNumberIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -622,7 +671,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmFedwireRoutingNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmFedwireRoutingNumberIdentification, ClearingSystemMemberIdentification2Choice.mmFedwireRoutingNumberIdentification);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FedwireRoutingNumber";
@@ -630,6 +679,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FedwireRoutingNumberIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getFedwireRoutingNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PortugueseNCCIdentifier portugueseNCC;
@@ -644,11 +701,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PortugueseNCCIdentifier
 	 * PortugueseNCCIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -660,6 +712,11 @@ public class CashClearingSystemMember {
 	 * ClearingSystemMemberIdentification2Choice.mmPortugueseNCCIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -676,7 +733,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmPortugueseNCC = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmPortugueseNCCIdentification, ClearingSystemMemberIdentification2Choice.mmPortugueseNCCIdentification);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PortugueseNCC";
@@ -684,6 +741,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PortugueseNCCIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getPortugueseNCC", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RussianCentralBankIdentificationCodeIdentifier russianCentralBankIdentificationCode;
@@ -698,11 +763,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.RussianCentralBankIdentificationCodeIdentifier
 	 * RussianCentralBankIdentificationCodeIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -716,6 +776,11 @@ public class CashClearingSystemMember {
 	 * mmRussianCentralBankIdentificationCode}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -732,7 +797,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmRussianCentralBankIdentificationCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmRussianCentralBankIdentificationCode, ClearingSystemMemberIdentification2Choice.mmRussianCentralBankIdentificationCode);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RussianCentralBankIdentificationCode";
@@ -740,6 +805,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RussianCentralBankIdentificationCodeIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getRussianCentralBankIdentificationCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ItalianDomesticIdentifier italianDomesticIdentificationCode;
@@ -755,11 +828,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ItalianDomesticIdentifier
 	 * ItalianDomesticIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -773,6 +841,11 @@ public class CashClearingSystemMember {
 	 * mmItalianDomesticIdentificationCode}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -789,7 +862,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmItalianDomesticIdentificationCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmItalianDomesticIdentificationCode, ClearingSystemMemberIdentification2Choice.mmItalianDomesticIdentificationCode);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ItalianDomesticIdentificationCode";
@@ -797,6 +870,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ItalianDomesticIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getItalianDomesticIdentificationCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AustrianBankleitzahlIdentifier austrianBankleitzahl;
@@ -811,11 +892,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.AustrianBankleitzahlIdentifier
 	 * AustrianBankleitzahlIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -829,6 +905,11 @@ public class CashClearingSystemMember {
 	 * mmAustrianBankleitzahlIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -845,7 +926,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmAustrianBankleitzahl = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmAustrianBankleitzahlIdentification, ClearingSystemMemberIdentification2Choice.mmAustrianBankleitzahlIdentification);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AustrianBankleitzahl";
@@ -853,6 +934,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AustrianBankleitzahlIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getAustrianBankleitzahl", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CanadianPaymentsARNIdentifier canadianPaymentsAssociationRoutingNumber;
@@ -867,11 +956,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CanadianPaymentsARNIdentifier
 	 * CanadianPaymentsARNIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -885,6 +969,11 @@ public class CashClearingSystemMember {
 	 * mmCanadianPaymentsAssociationRoutingNumberIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -902,7 +991,7 @@ public class CashClearingSystemMember {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmCanadianPaymentsAssociationRoutingNumberIdentification,
 					ClearingSystemMemberIdentification2Choice.mmCanadianPaymentsAssociationRoutingNumberIdentification);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CanadianPaymentsAssociationRoutingNumber";
@@ -910,6 +999,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CanadianPaymentsARNIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getCanadianPaymentsAssociationRoutingNumber", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SwissSICIdentifier swissSIC;
@@ -924,11 +1021,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.SwissSICIdentifier
 	 * SwissSICIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -940,6 +1032,11 @@ public class CashClearingSystemMember {
 	 * ClearingSystemMemberIdentification2Choice.mmSwissSICIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -956,7 +1053,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmSwissSIC = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmSwissSICIdentification, ClearingSystemMemberIdentification2Choice.mmSwissSICIdentification);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SwissSIC";
@@ -964,6 +1061,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SwissSICIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getSwissSIC", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected GermanBankleitzahlIdentifier germanBankleitzahl;
@@ -978,11 +1083,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.GermanBankleitzahlIdentifier
 	 * GermanBankleitzahlIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -996,6 +1096,11 @@ public class CashClearingSystemMember {
 	 * mmGermanBankleitzahlIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1012,7 +1117,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmGermanBankleitzahl = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmGermanBankleitzahlIdentification, ClearingSystemMemberIdentification2Choice.mmGermanBankleitzahlIdentification);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GermanBankleitzahl";
@@ -1020,6 +1125,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> GermanBankleitzahlIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getGermanBankleitzahl", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SpanishDomesticInterbankingIdentifier spanishDomesticInterbankingCode;
@@ -1035,11 +1148,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.SpanishDomesticInterbankingIdentifier
 	 * SpanishDomesticInterbankingIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1053,6 +1161,11 @@ public class CashClearingSystemMember {
 	 * mmSpanishDomesticInterbankingIdentification}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1069,7 +1182,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmSpanishDomesticInterbankingCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmSpanishDomesticInterbankingIdentification, ClearingSystemMemberIdentification2Choice.mmSpanishDomesticInterbankingIdentification);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpanishDomesticInterbankingCode";
@@ -1077,6 +1190,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SpanishDomesticInterbankingIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getSpanishDomesticInterbankingCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SouthAfricanNCCIdentifier southAfricanNCC;
@@ -1093,11 +1214,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.SouthAfricanNCCIdentifier
 	 * SouthAfricanNCCIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1111,6 +1227,11 @@ public class CashClearingSystemMember {
 	 * }</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1127,7 +1248,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmSouthAfricanNCC = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmSouthAfricanNCCIdentification, ClearingSystemMemberIdentification2Choice.mmSouthAfricanNCCIdentification);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SouthAfricanNCC";
@@ -1135,6 +1256,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SouthAfricanNCCIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getSouthAfricanNCC", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected HongKongBankIdentifier hongKongBankCode;
@@ -1149,11 +1278,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.HongKongBankIdentifier
 	 * HongKongBankIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1165,6 +1289,11 @@ public class CashClearingSystemMember {
 	 * ClearingSystemMemberIdentification2Choice.mmHongKongBankCode}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1181,7 +1310,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmHongKongBankCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmHongKongBankCode, ClearingSystemMemberIdentification2Choice.mmHongKongBankCode);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HongKongBankCode";
@@ -1189,6 +1318,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> HongKongBankIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getHongKongBankCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ClearingMemberRole clearingMember;
@@ -1230,7 +1367,7 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAssociationEnd mmClearingMember = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingMember";
@@ -1254,11 +1391,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.IndianFinancialSystemCodeIdentifier
 	 * IndianFinancialSystemCodeIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1267,6 +1399,11 @@ public class CashClearingSystemMember {
 	 * ClearingSystemMemberIdentification2Choice.mmIndianFinancialSystemCode}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1283,7 +1420,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmIndianFinancialSystemCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentification2Choice.mmIndianFinancialSystemCode);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndianFinancialSystemCode";
@@ -1291,6 +1428,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IndianFinancialSystemCodeIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getIndianFinancialSystemCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected HellenicBankIdentificationCodeIdentifier hellenicBankIdentificationCode;
@@ -1305,11 +1450,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.HellenicBankIdentificationCodeIdentifier
 	 * HellenicBankIdentificationCodeIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1319,6 +1459,11 @@ public class CashClearingSystemMember {
 	 * mmHellenicBankIdentificationCode}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1335,7 +1480,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmHellenicBankIdentificationCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentification2Choice.mmHellenicBankIdentificationCode);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HellenicBankIdentificationCode";
@@ -1343,6 +1488,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> HellenicBankIdentificationCodeIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getHellenicBankIdentificationCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PolishNationalClearingCodeIdentifier polishNationalClearingCode;
@@ -1357,11 +1510,6 @@ public class CashClearingSystemMember {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PolishNationalClearingCodeIdentifier
 	 * PolishNationalClearingCodeIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1370,6 +1518,11 @@ public class CashClearingSystemMember {
 	 * ClearingSystemMemberIdentification2Choice.mmPolishNationalClearingCode}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1386,7 +1539,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmPolishNationalClearingCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentification2Choice.mmPolishNationalClearingCode);
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PolishNationalClearingCode";
@@ -1394,6 +1547,14 @@ public class CashClearingSystemMember {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PolishNationalClearingCodeIdentifier.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CashClearingSystemMember.class.getMethod("getPolishNationalClearingCode", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected AustralianBSBIdentification australianBSBCode;
@@ -1437,7 +1598,7 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAssociationEnd mmAustralianBSBCode = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> CashClearingSystemMember.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AustralianBSBCode";
@@ -1461,15 +1622,25 @@ public class CashClearingSystemMember {
 						com.tools20022.repository.entity.AustralianBSBIdentification.mmClearingSystemMemberIdentificationType, com.tools20022.repository.entity.ClearingMemberRole.mmClearingSystemMemberIdentification);
 				derivationElement_lazy = () -> Arrays.asList(ClearingSystemMemberIdentification3Choice.mmIdentification, ClearingSystemMemberIdentification3Choice.mmProprietary,
 						ClearingSystemMemberIdentification2Choice.mmOtherClearingCodeIdentification);
-				element_lazy = () -> Arrays.asList(CashClearingSystemMember.mmOrganisationIdentification, CashClearingSystemMember.mmCHIPSUniversalIdentification, CashClearingSystemMember.mmNewZealandNCC,
-						CashClearingSystemMember.mmIrishNSC, CashClearingSystemMember.mmUKSortCode, CashClearingSystemMember.mmCHIPSParticipantIdentification, CashClearingSystemMember.mmSwissBC,
-						CashClearingSystemMember.mmFedwireRoutingNumber, CashClearingSystemMember.mmPortugueseNCC, CashClearingSystemMember.mmRussianCentralBankIdentificationCode,
-						CashClearingSystemMember.mmItalianDomesticIdentificationCode, CashClearingSystemMember.mmAustrianBankleitzahl, CashClearingSystemMember.mmCanadianPaymentsAssociationRoutingNumber,
-						CashClearingSystemMember.mmSwissSIC, CashClearingSystemMember.mmGermanBankleitzahl, CashClearingSystemMember.mmSpanishDomesticInterbankingCode, CashClearingSystemMember.mmSouthAfricanNCC,
-						CashClearingSystemMember.mmHongKongBankCode, CashClearingSystemMember.mmClearingMember, CashClearingSystemMember.mmIndianFinancialSystemCode, CashClearingSystemMember.mmHellenicBankIdentificationCode,
-						CashClearingSystemMember.mmPolishNationalClearingCode, CashClearingSystemMember.mmAustralianBSBCode);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashClearingSystemMember.mmOrganisationIdentification, com.tools20022.repository.entity.CashClearingSystemMember.mmCHIPSUniversalIdentification,
+						com.tools20022.repository.entity.CashClearingSystemMember.mmNewZealandNCC, com.tools20022.repository.entity.CashClearingSystemMember.mmIrishNSC,
+						com.tools20022.repository.entity.CashClearingSystemMember.mmUKSortCode, com.tools20022.repository.entity.CashClearingSystemMember.mmCHIPSParticipantIdentification,
+						com.tools20022.repository.entity.CashClearingSystemMember.mmSwissBC, com.tools20022.repository.entity.CashClearingSystemMember.mmFedwireRoutingNumber,
+						com.tools20022.repository.entity.CashClearingSystemMember.mmPortugueseNCC, com.tools20022.repository.entity.CashClearingSystemMember.mmRussianCentralBankIdentificationCode,
+						com.tools20022.repository.entity.CashClearingSystemMember.mmItalianDomesticIdentificationCode, com.tools20022.repository.entity.CashClearingSystemMember.mmAustrianBankleitzahl,
+						com.tools20022.repository.entity.CashClearingSystemMember.mmCanadianPaymentsAssociationRoutingNumber, com.tools20022.repository.entity.CashClearingSystemMember.mmSwissSIC,
+						com.tools20022.repository.entity.CashClearingSystemMember.mmGermanBankleitzahl, com.tools20022.repository.entity.CashClearingSystemMember.mmSpanishDomesticInterbankingCode,
+						com.tools20022.repository.entity.CashClearingSystemMember.mmSouthAfricanNCC, com.tools20022.repository.entity.CashClearingSystemMember.mmHongKongBankCode,
+						com.tools20022.repository.entity.CashClearingSystemMember.mmClearingMember, com.tools20022.repository.entity.CashClearingSystemMember.mmIndianFinancialSystemCode,
+						com.tools20022.repository.entity.CashClearingSystemMember.mmHellenicBankIdentificationCode, com.tools20022.repository.entity.CashClearingSystemMember.mmPolishNationalClearingCode,
+						com.tools20022.repository.entity.CashClearingSystemMember.mmAustralianBSBCode);
 				derivationComponent_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmObject(), ClearingSystemMemberIdentification3Choice.mmObject(), ClearingSystemMemberIdentification2.mmObject(),
 						ClearingSystemMemberIdentification2Choice.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CashClearingSystemMember.class;
 			}
 		});
 		return mmObject_lazy.get();

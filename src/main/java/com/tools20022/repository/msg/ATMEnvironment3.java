@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Environment of the withdrawal transaction.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMEnvironment1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMEnvironment3", propOrder = {"acquirer", "ATMManagerIdentification", "hostingEntity", "ATM", "customer", "card"})
 public class ATMEnvironment3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -414,6 +420,7 @@ public class ATMEnvironment3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Acqrr")
 	public Acquirer7 getAcquirer() {
 		return acquirer;
 	}
@@ -422,6 +429,7 @@ public class ATMEnvironment3 {
 		this.acquirer = acquirer;
 	}
 
+	@XmlElement(name = "ATMMgrId")
 	public Max35Text getATMManagerIdentification() {
 		return aTMManagerIdentification;
 	}
@@ -430,6 +438,7 @@ public class ATMEnvironment3 {
 		this.aTMManagerIdentification = aTMManagerIdentification;
 	}
 
+	@XmlElement(name = "HstgNtty")
 	public TerminalHosting1 getHostingEntity() {
 		return hostingEntity;
 	}
@@ -438,6 +447,7 @@ public class ATMEnvironment3 {
 		this.hostingEntity = hostingEntity;
 	}
 
+	@XmlElement(name = "ATM", required = true)
 	public AutomatedTellerMachine1 getATM() {
 		return aTM;
 	}
@@ -446,6 +456,7 @@ public class ATMEnvironment3 {
 		this.aTM = aTM;
 	}
 
+	@XmlElement(name = "Cstmr", required = true)
 	public ATMCustomer3 getCustomer() {
 		return customer;
 	}
@@ -454,6 +465,7 @@ public class ATMEnvironment3 {
 		this.customer = customer;
 	}
 
+	@XmlElement(name = "Card")
 	public PaymentCard17 getCard() {
 		return card;
 	}

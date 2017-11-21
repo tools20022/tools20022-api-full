@@ -28,6 +28,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Describes the constituents of the basket.
@@ -63,6 +67,8 @@ import java.util.List;
  * definition} = "Describes the constituents of the basket."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "BasketDescription3", propOrder = {"ISIN", "index"})
 public class BasketDescription3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -182,6 +188,7 @@ public class BasketDescription3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ISIN")
 	public List<ISINOct2015Identifier> getISIN() {
 		return iSIN;
 	}
@@ -190,6 +197,7 @@ public class BasketDescription3 {
 		this.iSIN = iSIN;
 	}
 
+	@XmlElement(name = "Indx")
 	public List<FinancialInstrument58> getIndex() {
 		return index;
 	}

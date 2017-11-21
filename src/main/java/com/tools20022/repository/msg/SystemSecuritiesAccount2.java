@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Account to or from which a securities entry is made. It holds information
@@ -75,6 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "SystemSecuritiesAccount2", propOrder = {"closingDate", "holdIndicator", "negativePosition", "endInvestorFlag", "pricingScheme"})
 public class SystemSecuritiesAccount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -312,6 +318,7 @@ public class SystemSecuritiesAccount2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ClsgDt")
 	public ISODate getClosingDate() {
 		return closingDate;
 	}
@@ -320,6 +327,7 @@ public class SystemSecuritiesAccount2 {
 		this.closingDate = closingDate;
 	}
 
+	@XmlElement(name = "HldInd")
 	public TrueFalseIndicator getHoldIndicator() {
 		return holdIndicator;
 	}
@@ -328,6 +336,7 @@ public class SystemSecuritiesAccount2 {
 		this.holdIndicator = holdIndicator;
 	}
 
+	@XmlElement(name = "NegPos")
 	public YesNoIndicator getNegativePosition() {
 		return negativePosition;
 	}
@@ -336,6 +345,7 @@ public class SystemSecuritiesAccount2 {
 		this.negativePosition = negativePosition;
 	}
 
+	@XmlElement(name = "EndInvstrFlg")
 	public Exact4AlphaNumericText getEndInvestorFlag() {
 		return endInvestorFlag;
 	}
@@ -344,6 +354,7 @@ public class SystemSecuritiesAccount2 {
 		this.endInvestorFlag = endInvestorFlag;
 	}
 
+	@XmlElement(name = "PricgSchme")
 	public Exact4AlphaNumericText getPricingScheme() {
 		return pricingScheme;
 	}

@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.ATMTotal;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Current totals of the ATM.
@@ -69,6 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Current totals of the ATM."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMTotals1", propOrder = {"mediaType", "currency", "ATMBalance", "ATMCurrent", "ATMBalanceNumber", "ATMCurrentNumber"})
 public class ATMTotals1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -366,6 +372,7 @@ public class ATMTotals1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MdiaTp")
 	public ATMMediaType1Code getMediaType() {
 		return mediaType;
 	}
@@ -374,6 +381,7 @@ public class ATMTotals1 {
 		this.mediaType = mediaType;
 	}
 
+	@XmlElement(name = "Ccy")
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
@@ -382,6 +390,7 @@ public class ATMTotals1 {
 		this.currency = currency;
 	}
 
+	@XmlElement(name = "ATMBal")
 	public ImpliedCurrencyAndAmount getATMBalance() {
 		return aTMBalance;
 	}
@@ -390,6 +399,7 @@ public class ATMTotals1 {
 		this.aTMBalance = aTMBalance;
 	}
 
+	@XmlElement(name = "ATMCur")
 	public ImpliedCurrencyAndAmount getATMCurrent() {
 		return aTMCurrent;
 	}
@@ -398,6 +408,7 @@ public class ATMTotals1 {
 		this.aTMCurrent = aTMCurrent;
 	}
 
+	@XmlElement(name = "ATMBalNb")
 	public Number getATMBalanceNumber() {
 		return aTMBalanceNumber;
 	}
@@ -406,6 +417,7 @@ public class ATMTotals1 {
 		this.aTMBalanceNumber = aTMBalanceNumber;
 	}
 
+	@XmlElement(name = "ATMCurNb")
 	public Number getATMCurrentNumber() {
 		return aTMCurrentNumber;
 	}

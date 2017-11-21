@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Sensible data associated with the payment card performing the transaction.
@@ -77,6 +81,8 @@ import java.util.List;
  * PlainCardData2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "PlainCardData6", propOrder = {"PAN", "cardSequenceNumber", "effectiveDate", "expiryDate", "serviceCode", "trackData"})
 public class PlainCardData6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -414,6 +420,7 @@ public class PlainCardData6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PAN", required = true)
 	public Min8Max28NumericText getPAN() {
 		return pAN;
 	}
@@ -422,6 +429,7 @@ public class PlainCardData6 {
 		this.pAN = pAN;
 	}
 
+	@XmlElement(name = "CardSeqNb")
 	public Min2Max3NumericText getCardSequenceNumber() {
 		return cardSequenceNumber;
 	}
@@ -430,6 +438,7 @@ public class PlainCardData6 {
 		this.cardSequenceNumber = cardSequenceNumber;
 	}
 
+	@XmlElement(name = "FctvDt")
 	public Max10Text getEffectiveDate() {
 		return effectiveDate;
 	}
@@ -438,6 +447,7 @@ public class PlainCardData6 {
 		this.effectiveDate = effectiveDate;
 	}
 
+	@XmlElement(name = "XpryDt", required = true)
 	public Max10Text getExpiryDate() {
 		return expiryDate;
 	}
@@ -446,6 +456,7 @@ public class PlainCardData6 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "SvcCd")
 	public Exact3NumericText getServiceCode() {
 		return serviceCode;
 	}
@@ -454,6 +465,7 @@ public class PlainCardData6 {
 		this.serviceCode = serviceCode;
 	}
 
+	@XmlElement(name = "TrckData")
 	public List<TrackData1> getTrackData() {
 		return trackData;
 	}

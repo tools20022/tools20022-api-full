@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.DisputeManagement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the dispute details.
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the dispute details."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Dispute1", propOrder = {"marginCallRequestIdentification", "disputedAmount", "disputeDate"})
 public class Dispute1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -215,6 +221,7 @@ public class Dispute1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "MrgnCallReqId", required = true)
 	public Max35Text getMarginCallRequestIdentification() {
 		return marginCallRequestIdentification;
 	}
@@ -223,6 +230,7 @@ public class Dispute1 {
 		this.marginCallRequestIdentification = marginCallRequestIdentification;
 	}
 
+	@XmlElement(name = "DsptdAmt", required = true)
 	public ActiveCurrencyAndAmount getDisputedAmount() {
 		return disputedAmount;
 	}
@@ -231,6 +239,7 @@ public class Dispute1 {
 		this.disputedAmount = disputedAmount;
 	}
 
+	@XmlElement(name = "DsptDt", required = true)
 	public ISODate getDisputeDate() {
 		return disputeDate;
 	}

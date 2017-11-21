@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Card payment transaction including an authorisation response.
@@ -85,6 +89,8 @@ import java.util.List;
  * CardPaymentDataSetTransaction13}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CardPaymentDataSetTransaction17", propOrder = {"transactionSequenceCounter", "traceability", "environment", "transaction", "transactionResponse"})
 public class CardPaymentDataSetTransaction17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -408,6 +414,7 @@ public class CardPaymentDataSetTransaction17 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TxSeqCntr", required = true)
 	public Max9NumericText getTransactionSequenceCounter() {
 		return transactionSequenceCounter;
 	}
@@ -416,6 +423,7 @@ public class CardPaymentDataSetTransaction17 {
 		this.transactionSequenceCounter = transactionSequenceCounter;
 	}
 
+	@XmlElement(name = "Tracblt")
 	public List<Traceability5> getTraceability() {
 		return traceability;
 	}
@@ -424,6 +432,7 @@ public class CardPaymentDataSetTransaction17 {
 		this.traceability = traceability;
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment54 getEnvironment() {
 		return environment;
 	}
@@ -432,6 +441,7 @@ public class CardPaymentDataSetTransaction17 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransaction63 getTransaction() {
 		return transaction;
 	}
@@ -440,6 +450,7 @@ public class CardPaymentDataSetTransaction17 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "TxRspn", required = true)
 	public CardPaymentTransaction54 getTransactionResponse() {
 		return transactionResponse;
 	}

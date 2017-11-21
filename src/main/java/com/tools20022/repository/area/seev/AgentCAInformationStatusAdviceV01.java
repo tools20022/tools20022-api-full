@@ -26,8 +26,10 @@ import com.tools20022.repository.choice.CorporateActionInformationStatus1Choice;
 import com.tools20022.repository.msg.CorporateActionAdditionalInformation1;
 import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -42,9 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.024.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -80,6 +79,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.024.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -91,6 +93,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AgentCAInformationStatusAdviceV01", propOrder = {"identification", "agentCAInformationAdviceIdentification", "corporateActionAdditionalInformation", "informationStatusDetails"})
 public class AgentCAInformationStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -131,6 +135,14 @@ public class AgentCAInformationStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAInformationStatusAdviceV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected DocumentIdentification8 agentCAInformationAdviceIdentification;
 	/**
@@ -168,6 +180,14 @@ public class AgentCAInformationStatusAdviceV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAInformationStatusAdviceV01.class.getMethod("getAgentCAInformationAdviceIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionAdditionalInformation1 corporateActionAdditionalInformation;
@@ -207,6 +227,14 @@ public class AgentCAInformationStatusAdviceV01 {
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAInformationStatusAdviceV01.class.getMethod("getCorporateActionAdditionalInformation", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected CorporateActionInformationStatus1Choice informationStatusDetails;
 	/**
@@ -242,6 +270,14 @@ public class AgentCAInformationStatusAdviceV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformationStatus1Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return AgentCAInformationStatusAdviceV01.class.getMethod("getInformationStatusDetails", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -254,8 +290,9 @@ public class AgentCAInformationStatusAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCAInfStsAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAInformationStatusAdviceV01.mmIdentification, AgentCAInformationStatusAdviceV01.mmAgentCAInformationAdviceIdentification,
-						AgentCAInformationStatusAdviceV01.mmCorporateActionAdditionalInformation, AgentCAInformationStatusAdviceV01.mmInformationStatusDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.mmAgentCAInformationAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.mmCorporateActionAdditionalInformation, com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.mmInformationStatusDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";
@@ -265,10 +302,16 @@ public class AgentCAInformationStatusAdviceV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return AgentCAInformationStatusAdviceV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
@@ -277,6 +320,7 @@ public class AgentCAInformationStatusAdviceV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "AgtCAInfAdvcId", required = true)
 	public DocumentIdentification8 getAgentCAInformationAdviceIdentification() {
 		return agentCAInformationAdviceIdentification;
 	}
@@ -285,6 +329,7 @@ public class AgentCAInformationStatusAdviceV01 {
 		this.agentCAInformationAdviceIdentification = agentCAInformationAdviceIdentification;
 	}
 
+	@XmlElement(name = "CorpActnAddtlInf")
 	public CorporateActionAdditionalInformation1 getCorporateActionAdditionalInformation() {
 		return corporateActionAdditionalInformation;
 	}
@@ -293,11 +338,18 @@ public class AgentCAInformationStatusAdviceV01 {
 		this.corporateActionAdditionalInformation = corporateActionAdditionalInformation;
 	}
 
+	@XmlElement(name = "InfStsDtls", required = true)
 	public CorporateActionInformationStatus1Choice getInformationStatusDetails() {
 		return informationStatusDetails;
 	}
 
 	public void setInformationStatusDetails(CorporateActionInformationStatus1Choice informationStatusDetails) {
 		this.informationStatusDetails = informationStatusDetails;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.024.01.01")
+	static public class Document {
+		@XmlElement(name = "AgtCAInfStsAdvc", required = true)
+		public AgentCAInformationStatusAdviceV01 messageBody;
 	}
 }

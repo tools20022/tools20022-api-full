@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.RejectReasonCode;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,6 +37,22 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentStatus#mmRejectionReason
+ * CardPaymentStatus.mmRejectionReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentStatus#mmFailureReason
+ * CardPaymentStatus.mmFailureReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentStatus#mmCardPayment
+ * CardPaymentStatus.mmCardPayment}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -71,22 +88,6 @@ import java.util.List;
  * CardPayment.mmCardPaymentStatus}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentStatus#mmRejectionReason
- * CardPaymentStatus.mmRejectionReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentStatus#mmFailureReason
- * CardPaymentStatus.mmFailureReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentStatus#mmCardPayment
- * CardPaymentStatus.mmCardPayment}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -116,11 +117,6 @@ public class CardPaymentStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectReasonCode
 	 * RejectReasonCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentStatus
-	 * CardPaymentStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -139,6 +135,11 @@ public class CardPaymentStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentStatus
+	 * CardPaymentStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -152,7 +153,7 @@ public class CardPaymentStatus extends Status {
 	public static final MMBusinessAttribute mmRejectionReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AcceptorRejection1.mmRejectReason, AcceptorRejection2.mmRejectReason, AcceptorRejection3.mmRejectReason, AcceptorRejection4.mmRejectReason);
-			elementContext_lazy = () -> CardPaymentStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RejectionReason";
@@ -160,6 +161,14 @@ public class CardPaymentStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentStatus.class.getMethod("getRejectionReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected FailureReasonCode failureReason;
@@ -173,11 +182,6 @@ public class CardPaymentStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FailureReasonCode
 	 * FailureReasonCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentStatus
-	 * CardPaymentStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -255,6 +259,11 @@ public class CardPaymentStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentStatus
+	 * CardPaymentStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -272,7 +281,7 @@ public class CardPaymentStatus extends Status {
 					CardPaymentTransaction25.mmFailureReason, CardPaymentTransaction30.mmFailureReason, CardPaymentTransaction44.mmFailureReason, CardPaymentTransaction45.mmFailureReason, CardPaymentTransaction46.mmFailureReason,
 					CardPaymentTransaction40.mmFailureReason, ATMTransaction5.mmIncident, CardPaymentTransaction60.mmFailureReason, CardPaymentTransaction61.mmFailureReason, CardPaymentTransaction59.mmFailureReason,
 					CardPaymentTransaction55.mmFailureReason, ATMTransaction20.mmIncident, CardPaymentTransaction75.mmFailureReason, CardPaymentTransaction70.mmFailureReason, CardPaymentTransaction69.mmFailureReason);
-			elementContext_lazy = () -> CardPaymentStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FailureReason";
@@ -280,6 +289,14 @@ public class CardPaymentStatus extends Status {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FailureReasonCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CardPaymentStatus.class.getMethod("getFailureReason", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected List<com.tools20022.repository.entity.CardPayment> cardPayment;
@@ -300,11 +317,6 @@ public class CardPaymentStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CardPayment
 	 * CardPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentStatus
-	 * CardPaymentStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -323,6 +335,11 @@ public class CardPaymentStatus extends Status {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentStatus
+	 * CardPaymentStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -336,7 +353,7 @@ public class CardPaymentStatus extends Status {
 	public static final MMBusinessAssociationEnd mmCardPayment = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(AcceptorReconciliationResponse1.mmEnvironment, AcceptorReconciliationResponse2.mmEnvironment, AcceptorReconciliationResponse3.mmEnvironment, AcceptorReconciliationResponse4.mmEnvironment);
-			elementContext_lazy = () -> CardPaymentStatus.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPayment";
@@ -357,9 +374,15 @@ public class CardPaymentStatus extends Status {
 				definition = "Status of a payment by card.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPayment.mmCardPaymentStatus);
 				superType_lazy = () -> Status.mmObject();
-				element_lazy = () -> Arrays.asList(CardPaymentStatus.mmRejectionReason, CardPaymentStatus.mmFailureReason, CardPaymentStatus.mmCardPayment);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPaymentStatus.mmRejectionReason, com.tools20022.repository.entity.CardPaymentStatus.mmFailureReason,
+						com.tools20022.repository.entity.CardPaymentStatus.mmCardPayment);
 				derivationComponent_lazy = () -> Arrays.asList(AcceptorRejection1.mmObject(), AcceptorReconciliationResponse1.mmObject(), AcceptorReconciliationResponse2.mmObject(), AcceptorRejection2.mmObject(),
 						AcceptorRejection3.mmObject(), AcceptorReconciliationResponse3.mmObject(), AcceptorRejection4.mmObject(), AcceptorReconciliationResponse4.mmObject());
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return CardPaymentStatus.class;
 			}
 		});
 		return mmObject_lazy.get();

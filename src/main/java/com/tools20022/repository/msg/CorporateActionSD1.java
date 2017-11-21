@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides additional information regarding corporate action details.
@@ -125,6 +129,10 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateActionSD1", propOrder = {"placeAndName", "noticeType", "eventCashValue", "numberOfSharesToBeIssued", "totalNumberOfSharesOffered", "cutOffDays", "DTCAutomatedOfferProgram", "DTCRecycleCutOffIndicator",
+		"longShortPaymentIndicator", "oversubscriptionType", "conditionalPaymentApplicableFlag", "solicitationDealerFeeFlag", "DTCCustodyEligibleFlag", "DTCReorganisationCustodyEligibleFlag", "DTCReorganisationDepositEligibleFlag",
+		"surrenderSharesToAgentFlag", "stepUpPrivilegeFlag", "rightsOversubscriptionFlag", "rightsRoundUpPrivilegeFlag", "rightsTransferableFlag", "certificateDetails"})
 public class CorporateActionSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1087,6 +1095,7 @@ public class CorporateActionSD1 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
@@ -1095,6 +1104,7 @@ public class CorporateActionSD1 {
 		this.placeAndName = placeAndName;
 	}
 
+	@XmlElement(name = "NtceTp")
 	public NoticeType1Code getNoticeType() {
 		return noticeType;
 	}
@@ -1103,6 +1113,7 @@ public class CorporateActionSD1 {
 		this.noticeType = noticeType;
 	}
 
+	@XmlElement(name = "EvtCshVal")
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getEventCashValue() {
 		return eventCashValue;
 	}
@@ -1111,6 +1122,7 @@ public class CorporateActionSD1 {
 		this.eventCashValue = eventCashValue;
 	}
 
+	@XmlElement(name = "NbOfShrsToBeIssd")
 	public DecimalNumber getNumberOfSharesToBeIssued() {
 		return numberOfSharesToBeIssued;
 	}
@@ -1119,6 +1131,7 @@ public class CorporateActionSD1 {
 		this.numberOfSharesToBeIssued = numberOfSharesToBeIssued;
 	}
 
+	@XmlElement(name = "TtlNbOfShrsOfferd")
 	public DecimalNumber getTotalNumberOfSharesOffered() {
 		return totalNumberOfSharesOffered;
 	}
@@ -1127,6 +1140,7 @@ public class CorporateActionSD1 {
 		this.totalNumberOfSharesOffered = totalNumberOfSharesOffered;
 	}
 
+	@XmlElement(name = "CutOffDays")
 	public Max3Number getCutOffDays() {
 		return cutOffDays;
 	}
@@ -1135,6 +1149,7 @@ public class CorporateActionSD1 {
 		this.cutOffDays = cutOffDays;
 	}
 
+	@XmlElement(name = "DTCAutomtdOfferPrgm")
 	public DTCAutoOfferProgram1Code getDTCAutomatedOfferProgram() {
 		return dTCAutomatedOfferProgram;
 	}
@@ -1143,6 +1158,7 @@ public class CorporateActionSD1 {
 		this.dTCAutomatedOfferProgram = dTCAutomatedOfferProgram;
 	}
 
+	@XmlElement(name = "DTCRcyclCutOffInd")
 	public CutOff1Code getDTCRecycleCutOffIndicator() {
 		return dTCRecycleCutOffIndicator;
 	}
@@ -1151,6 +1167,7 @@ public class CorporateActionSD1 {
 		this.dTCRecycleCutOffIndicator = dTCRecycleCutOffIndicator;
 	}
 
+	@XmlElement(name = "LngShrtPmtInd")
 	public AccrualPeriodType1Code getLongShortPaymentIndicator() {
 		return longShortPaymentIndicator;
 	}
@@ -1159,6 +1176,7 @@ public class CorporateActionSD1 {
 		this.longShortPaymentIndicator = longShortPaymentIndicator;
 	}
 
+	@XmlElement(name = "OvrsbcptTp")
 	public OversubscriptionType1Code getOversubscriptionType() {
 		return oversubscriptionType;
 	}
@@ -1167,6 +1185,7 @@ public class CorporateActionSD1 {
 		this.oversubscriptionType = oversubscriptionType;
 	}
 
+	@XmlElement(name = "CondlPmtAplblFlg")
 	public YesNoIndicator getConditionalPaymentApplicableFlag() {
 		return conditionalPaymentApplicableFlag;
 	}
@@ -1175,6 +1194,7 @@ public class CorporateActionSD1 {
 		this.conditionalPaymentApplicableFlag = conditionalPaymentApplicableFlag;
 	}
 
+	@XmlElement(name = "SlctnDealrFeeFlg")
 	public YesNoIndicator getSolicitationDealerFeeFlag() {
 		return solicitationDealerFeeFlag;
 	}
@@ -1183,6 +1203,7 @@ public class CorporateActionSD1 {
 		this.solicitationDealerFeeFlag = solicitationDealerFeeFlag;
 	}
 
+	@XmlElement(name = "DTCCtdyElgblFlg")
 	public YesNoIndicator getDTCCustodyEligibleFlag() {
 		return dTCCustodyEligibleFlag;
 	}
@@ -1191,6 +1212,7 @@ public class CorporateActionSD1 {
 		this.dTCCustodyEligibleFlag = dTCCustodyEligibleFlag;
 	}
 
+	@XmlElement(name = "DTCReorgCtdyElgblFlg")
 	public YesNoIndicator getDTCReorganisationCustodyEligibleFlag() {
 		return dTCReorganisationCustodyEligibleFlag;
 	}
@@ -1199,6 +1221,7 @@ public class CorporateActionSD1 {
 		this.dTCReorganisationCustodyEligibleFlag = dTCReorganisationCustodyEligibleFlag;
 	}
 
+	@XmlElement(name = "DTCReorgDpstElgblFlg")
 	public YesNoIndicator getDTCReorganisationDepositEligibleFlag() {
 		return dTCReorganisationDepositEligibleFlag;
 	}
@@ -1207,6 +1230,7 @@ public class CorporateActionSD1 {
 		this.dTCReorganisationDepositEligibleFlag = dTCReorganisationDepositEligibleFlag;
 	}
 
+	@XmlElement(name = "SrrndrShrsToAgtFlg")
 	public YesNoIndicator getSurrenderSharesToAgentFlag() {
 		return surrenderSharesToAgentFlag;
 	}
@@ -1215,6 +1239,7 @@ public class CorporateActionSD1 {
 		this.surrenderSharesToAgentFlag = surrenderSharesToAgentFlag;
 	}
 
+	@XmlElement(name = "StepUpPrvlgFlg")
 	public YesNoIndicator getStepUpPrivilegeFlag() {
 		return stepUpPrivilegeFlag;
 	}
@@ -1223,6 +1248,7 @@ public class CorporateActionSD1 {
 		this.stepUpPrivilegeFlag = stepUpPrivilegeFlag;
 	}
 
+	@XmlElement(name = "RghtsOvrsbcptFlg")
 	public YesNoIndicator getRightsOversubscriptionFlag() {
 		return rightsOversubscriptionFlag;
 	}
@@ -1231,6 +1257,7 @@ public class CorporateActionSD1 {
 		this.rightsOversubscriptionFlag = rightsOversubscriptionFlag;
 	}
 
+	@XmlElement(name = "RghtsRndUpPrvlgFlg")
 	public YesNoIndicator getRightsRoundUpPrivilegeFlag() {
 		return rightsRoundUpPrivilegeFlag;
 	}
@@ -1239,6 +1266,7 @@ public class CorporateActionSD1 {
 		this.rightsRoundUpPrivilegeFlag = rightsRoundUpPrivilegeFlag;
 	}
 
+	@XmlElement(name = "RghtsTrfblFlg")
 	public YesNoIndicator getRightsTransferableFlag() {
 		return rightsTransferableFlag;
 	}
@@ -1247,6 +1275,7 @@ public class CorporateActionSD1 {
 		this.rightsTransferableFlag = rightsTransferableFlag;
 	}
 
+	@XmlElement(name = "CertDtls")
 	public List<CorporateActionSD5> getCertificateDetails() {
 		return certificateDetails;
 	}

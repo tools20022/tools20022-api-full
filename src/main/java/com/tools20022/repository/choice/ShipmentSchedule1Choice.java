@@ -27,6 +27,10 @@ import com.tools20022.repository.msg.ShipmentDateRange2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between earliest/latest shipment date and a shipment schedule per sub
@@ -73,6 +77,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ShipmentSchedule1Choice", propOrder = {"shipmentDateRange", "shipmentSubSchedule"})
 public class ShipmentSchedule1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -208,6 +214,7 @@ public class ShipmentSchedule1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "ShipmntDtRg", required = true)
 	public ShipmentDateRange1 getShipmentDateRange() {
 		return shipmentDateRange;
 	}
@@ -216,6 +223,7 @@ public class ShipmentSchedule1Choice {
 		this.shipmentDateRange = shipmentDateRange;
 	}
 
+	@XmlElement(name = "ShipmntSubSchdl", required = true)
 	public List<ShipmentDateRange2> getShipmentSubSchedule() {
 		return shipmentSubSchedule;
 	}

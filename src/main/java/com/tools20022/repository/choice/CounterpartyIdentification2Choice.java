@@ -27,6 +27,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ReportedPartyIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides the identification of the reporting agent counterparty.
@@ -77,6 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CounterpartyIdentification1Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CounterpartyIdentification2Choice", propOrder = {"LEI", "other"})
 public class CounterpartyIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -229,6 +235,7 @@ public class CounterpartyIdentification2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "LEI", required = true)
 	public LEIIdentifier getLEI() {
 		return lEI;
 	}
@@ -237,6 +244,7 @@ public class CounterpartyIdentification2Choice {
 		this.lEI = lEI;
 	}
 
+	@XmlElement(name = "Othr", required = true)
 	public ReportedPartyIdentification1 getOther() {
 		return other;
 	}

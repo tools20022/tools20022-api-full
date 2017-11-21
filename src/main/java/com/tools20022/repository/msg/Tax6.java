@@ -30,6 +30,10 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Tax related to an investment fund order.
@@ -78,6 +82,8 @@ import java.util.function.Supplier;
  * definition} = "Tax related to an investment fund order."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Tax6", propOrder = {"type", "amount", "rate", "recipientIdentification", "exemptionIndicator", "exemptionReason", "taxCalculationDetails"})
 public class Tax6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -455,6 +461,7 @@ public class Tax6 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Tp", required = true)
 	public TaxType1 getType() {
 		return type;
 	}
@@ -463,6 +470,7 @@ public class Tax6 {
 		this.type = type;
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
@@ -471,6 +479,7 @@ public class Tax6 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
@@ -479,6 +488,7 @@ public class Tax6 {
 		this.rate = rate;
 	}
 
+	@XmlElement(name = "RcptId")
 	public PartyIdentification2Choice getRecipientIdentification() {
 		return recipientIdentification;
 	}
@@ -487,6 +497,7 @@ public class Tax6 {
 		this.recipientIdentification = recipientIdentification;
 	}
 
+	@XmlElement(name = "XmptnInd", required = true)
 	public YesNoIndicator getExemptionIndicator() {
 		return exemptionIndicator;
 	}
@@ -495,6 +506,7 @@ public class Tax6 {
 		this.exemptionIndicator = exemptionIndicator;
 	}
 
+	@XmlElement(name = "XmptnRsn")
 	public TaxExemptionReason1 getExemptionReason() {
 		return exemptionReason;
 	}
@@ -503,6 +515,7 @@ public class Tax6 {
 		this.exemptionReason = exemptionReason;
 	}
 
+	@XmlElement(name = "TaxClctnDtls")
 	public TaxCalculationInformation1 getTaxCalculationDetails() {
 		return taxCalculationDetails;
 	}

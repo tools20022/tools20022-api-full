@@ -30,6 +30,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Posting of an item to a cash account, in the context of a cash transaction,
@@ -67,6 +71,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Value", propOrder = {"baseCurrencyItem", "alternateCurrencyItem"})
 public class Value {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -186,6 +192,7 @@ public class Value {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "BaseCcyItm", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getBaseCurrencyItem() {
 		return baseCurrencyItem;
 	}
@@ -194,6 +201,7 @@ public class Value {
 		this.baseCurrencyItem = baseCurrencyItem;
 	}
 
+	@XmlElement(name = "AltrnCcyItm", required = true)
 	public List<ActiveOrHistoricCurrencyAndAmount> getAlternateCurrencyItem() {
 		return alternateCurrencyItem;
 	}

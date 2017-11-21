@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.SystemStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Closure reason expressed as a code or a bilaterally agreed code.
@@ -62,6 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Closure reason expressed as a code or a bilaterally agreed code."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ClosureReason2Choice", propOrder = {"code", "proprietary"})
 public class ClosureReason2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -165,6 +171,7 @@ public class ClosureReason2Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cd", required = true)
 	public SystemClosureReason1Code getCode() {
 		return code;
 	}
@@ -173,6 +180,7 @@ public class ClosureReason2Choice {
 		this.code = code;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public Max35Text getProprietary() {
 		return proprietary;
 	}

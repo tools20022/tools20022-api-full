@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies additional parameters to the message or transaction.
@@ -84,6 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies additional parameters to the message or transaction."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AdditionalParameters26", propOrder = {"preConfirmation", "partialSettlement", "previousPartialConfirmationIdentification"})
 public class AdditionalParameters26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -250,6 +256,7 @@ public class AdditionalParameters26 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PreConf")
 	public PreConfirmation1Code getPreConfirmation() {
 		return preConfirmation;
 	}
@@ -258,6 +265,7 @@ public class AdditionalParameters26 {
 		this.preConfirmation = preConfirmation;
 	}
 
+	@XmlElement(name = "PrtlSttlm")
 	public PartialSettlement2Code getPartialSettlement() {
 		return partialSettlement;
 	}
@@ -266,6 +274,7 @@ public class AdditionalParameters26 {
 		this.partialSettlement = partialSettlement;
 	}
 
+	@XmlElement(name = "PrvsPrtlConfId")
 	public RestrictedFINXMax16Text getPreviousPartialConfirmationIdentification() {
 		return previousPartialConfirmationIdentification;
 	}

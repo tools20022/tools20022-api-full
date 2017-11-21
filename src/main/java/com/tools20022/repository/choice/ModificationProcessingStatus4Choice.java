@@ -29,6 +29,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of format for the processing status.
@@ -101,6 +105,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ModificationProcessingStatus2Choice}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ModificationProcessingStatus4Choice", propOrder = {"acknowledgedAccepted", "pendingProcessing", "denied", "rejected", "repaired", "modified", "proprietary"})
 public class ModificationProcessingStatus4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -564,6 +570,7 @@ public class ModificationProcessingStatus4Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "AckdAccptd", required = true)
 	public AcknowledgedAcceptedStatus14Choice getAcknowledgedAccepted() {
 		return acknowledgedAccepted;
 	}
@@ -572,6 +579,7 @@ public class ModificationProcessingStatus4Choice {
 		this.acknowledgedAccepted = acknowledgedAccepted;
 	}
 
+	@XmlElement(name = "PdgPrcg", required = true)
 	public PendingProcessingStatus7Choice getPendingProcessing() {
 		return pendingProcessing;
 	}
@@ -580,6 +588,7 @@ public class ModificationProcessingStatus4Choice {
 		this.pendingProcessing = pendingProcessing;
 	}
 
+	@XmlElement(name = "Dnd", required = true)
 	public DeniedStatus10Choice getDenied() {
 		return denied;
 	}
@@ -588,6 +597,7 @@ public class ModificationProcessingStatus4Choice {
 		this.denied = denied;
 	}
 
+	@XmlElement(name = "Rjctd", required = true)
 	public RejectionStatus8Choice getRejected() {
 		return rejected;
 	}
@@ -596,6 +606,7 @@ public class ModificationProcessingStatus4Choice {
 		this.rejected = rejected;
 	}
 
+	@XmlElement(name = "Rprd", required = true)
 	public RepairStatus8Choice getRepaired() {
 		return repaired;
 	}
@@ -604,6 +615,7 @@ public class ModificationProcessingStatus4Choice {
 		this.repaired = repaired;
 	}
 
+	@XmlElement(name = "Modfd", required = true)
 	public ModificationStatus2Choice getModified() {
 		return modified;
 	}
@@ -612,6 +624,7 @@ public class ModificationProcessingStatus4Choice {
 		this.modified = modified;
 	}
 
+	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason1 getProprietary() {
 		return proprietary;
 	}

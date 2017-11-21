@@ -24,9 +24,11 @@ import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msg.ReportStatusAndReason1;
 import com.tools20022.repository.msg.TradeTransactionStatusAndReason1;
 import com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
@@ -44,9 +46,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.010.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -90,6 +89,9 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.010.001.01}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -101,6 +103,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "RegulatoryTransactionReportStatusV01", propOrder = {"identification", "reportingInstitution", "reportStatus", "individualTransactionStatus"})
 public class RegulatoryTransactionReportStatusV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
@@ -110,6 +114,10 @@ public class RegulatoryTransactionReportStatusV01 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
+	 * messageDefinition} =
+	 * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01
+	 * RegulatoryTransactionReportStatusV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMXor#getImpactedMessageBuildingBlocks
 	 * impactedMessageBuildingBlocks} =
@@ -122,10 +130,6 @@ public class RegulatoryTransactionReportStatusV01 {
 	 * RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
-	 * messageDefinition} =
-	 * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01
-	 * RegulatoryTransactionReportStatusV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -144,8 +148,9 @@ public class RegulatoryTransactionReportStatusV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportStatusOrIndividualTransactionStatusRule";
 			definition = "Either ReportStatus or IndividualTransactionStatus must be present, but not both.";
-			messageDefinition_lazy = () -> RegulatoryTransactionReportStatusV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(RegulatoryTransactionReportStatusV01.mmReportStatus, RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmObject();
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmReportStatus,
+					com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus);
 		}
 	};
 	protected DocumentIdentification8 identification;
@@ -182,6 +187,14 @@ public class RegulatoryTransactionReportStatusV01 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return RegulatoryTransactionReportStatusV01.class.getMethod("getIdentification", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PartyIdentification23Choice reportingInstitution;
@@ -221,6 +234,14 @@ public class RegulatoryTransactionReportStatusV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification23Choice.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RegulatoryTransactionReportStatusV01.class.getMethod("getReportingInstitution", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected ReportStatusAndReason1 reportStatus;
 	/**
@@ -259,6 +280,14 @@ public class RegulatoryTransactionReportStatusV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> ReportStatusAndReason1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RegulatoryTransactionReportStatusV01.class.getMethod("getReportStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 	protected List<TradeTransactionStatusAndReason1> individualTransactionStatus;
 	/**
@@ -296,6 +325,14 @@ public class RegulatoryTransactionReportStatusV01 {
 			minOccurs = 1;
 			complexType_lazy = () -> TradeTransactionStatusAndReason1.mmObject();
 		}
+
+		public Method getGetterMethod() {
+			try {
+				return RegulatoryTransactionReportStatusV01.class.getMethod("getIndividualTransactionStatus", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
@@ -305,12 +342,13 @@ public class RegulatoryTransactionReportStatusV01 {
 				name = "RegulatoryTransactionReportStatusV01";
 				definition = "Scope\r\nA regulator or an intermediary sends the RegulatoryTransactionReportStatus to a reporting institution to provide the status of a RegulatoryTransactionReport previously sent by the reporting institution.\r\nUsage\r\nThe message definition may be used to provide a status for the entire report or to provide a status at the level of individual transactions within the report. One of the following statuses can be reported:\r\n- Completed, or,\r\n- Pending, or,\r\n- Rejected.\r\nIf the status is rejected, then reason for the rejection must be specified.";
 				messageSet_lazy = () -> Arrays.asList(TransactionRegulatoryReportingISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(RegulatoryTransactionReportStatusV01.mmReportStatusOrIndividualTransactionStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmReportStatusOrIndividualTransactionStatusRule);
 				rootElement = "Document";
 				xmlTag = "RgltryTxRptStsV01";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(RegulatoryTransactionReportStatusV01.mmIdentification, RegulatoryTransactionReportStatusV01.mmReportingInstitution, RegulatoryTransactionReportStatusV01.mmReportStatus,
-						RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmIdentification,
+						com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmReportingInstitution, com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmReportStatus,
+						com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";
@@ -320,10 +358,16 @@ public class RegulatoryTransactionReportStatusV01 {
 					}
 				};
 			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return RegulatoryTransactionReportStatusV01.class;
+			}
 		});
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
@@ -332,6 +376,7 @@ public class RegulatoryTransactionReportStatusV01 {
 		this.identification = identification;
 	}
 
+	@XmlElement(name = "RptgInstn", required = true)
 	public PartyIdentification23Choice getReportingInstitution() {
 		return reportingInstitution;
 	}
@@ -340,6 +385,7 @@ public class RegulatoryTransactionReportStatusV01 {
 		this.reportingInstitution = reportingInstitution;
 	}
 
+	@XmlElement(name = "RptSts", required = true)
 	public ReportStatusAndReason1 getReportStatus() {
 		return reportStatus;
 	}
@@ -348,11 +394,18 @@ public class RegulatoryTransactionReportStatusV01 {
 		this.reportStatus = reportStatus;
 	}
 
+	@XmlElement(name = "IndvTxSts", required = true)
 	public List<TradeTransactionStatusAndReason1> getIndividualTransactionStatus() {
 		return individualTransactionStatus;
 	}
 
 	public void setIndividualTransactionStatus(List<TradeTransactionStatusAndReason1> individualTransactionStatus) {
 		this.individualTransactionStatus = individualTransactionStatus;
+	}
+
+	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.010.01.01")
+	static public class Document {
+		@XmlElement(name = "RgltryTxRptStsV01", required = true)
+		public RegulatoryTransactionReportStatusV01 messageBody;
 	}
 }

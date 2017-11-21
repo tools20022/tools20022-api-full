@@ -25,6 +25,10 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ReservationIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Current or default reservation set by the member and managed by the
@@ -64,6 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CurrentOrDefaultReservation1Choice", propOrder = {"current", "default"})
 public class CurrentOrDefaultReservation1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
@@ -176,6 +182,7 @@ public class CurrentOrDefaultReservation1Choice {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Cur", required = true)
 	public ReservationIdentification1 getCurrent() {
 		return current;
 	}
@@ -184,6 +191,7 @@ public class CurrentOrDefaultReservation1Choice {
 		this.current = current;
 	}
 
+	@XmlElement(name = "Dflt", required = true)
 	public ReservationIdentification1 getDefault() {
 		return default_;
 	}

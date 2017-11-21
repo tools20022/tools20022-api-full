@@ -32,6 +32,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the foreign exchange trade including spot\forward\NDF\swap that is
@@ -96,6 +100,9 @@ import java.util.List;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "Trade2", propOrder = {"tradeIdentification", "tradeDate", "foreignExchangeTradeProduct", "tradingCurrency", "settlementCurrency", "tradingMethod", "tradingMode", "clearingMethod", "symbol", "placeOfConfirmation",
+		"foreignExchangeDetails", "swapLeg", "productIdentification", "associatedTradeReference"})
 public class Trade2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -718,6 +725,7 @@ public class Trade2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "TradId", required = true)
 	public Max35Text getTradeIdentification() {
 		return tradeIdentification;
 	}
@@ -726,6 +734,7 @@ public class Trade2 {
 		this.tradeIdentification = tradeIdentification;
 	}
 
+	@XmlElement(name = "TradDt", required = true)
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
@@ -734,6 +743,7 @@ public class Trade2 {
 		this.tradeDate = tradeDate;
 	}
 
+	@XmlElement(name = "FXTradPdct", required = true)
 	public UnderlyingProductIdentifier1Code getForeignExchangeTradeProduct() {
 		return foreignExchangeTradeProduct;
 	}
@@ -742,6 +752,7 @@ public class Trade2 {
 		this.foreignExchangeTradeProduct = foreignExchangeTradeProduct;
 	}
 
+	@XmlElement(name = "TradgCcy")
 	public CurrencyCode getTradingCurrency() {
 		return tradingCurrency;
 	}
@@ -750,6 +761,7 @@ public class Trade2 {
 		this.tradingCurrency = tradingCurrency;
 	}
 
+	@XmlElement(name = "SttlmCcy")
 	public CurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
@@ -758,6 +770,7 @@ public class Trade2 {
 		this.settlementCurrency = settlementCurrency;
 	}
 
+	@XmlElement(name = "TradgMtd")
 	public TradingMethodType1Code getTradingMethod() {
 		return tradingMethod;
 	}
@@ -766,6 +779,7 @@ public class Trade2 {
 		this.tradingMethod = tradingMethod;
 	}
 
+	@XmlElement(name = "TradgMd", required = true)
 	public TradingModeType1Code getTradingMode() {
 		return tradingMode;
 	}
@@ -774,6 +788,7 @@ public class Trade2 {
 		this.tradingMode = tradingMode;
 	}
 
+	@XmlElement(name = "ClrMtd", required = true)
 	public ClearingMethod1Code getClearingMethod() {
 		return clearingMethod;
 	}
@@ -782,6 +797,7 @@ public class Trade2 {
 		this.clearingMethod = clearingMethod;
 	}
 
+	@XmlElement(name = "Symb")
 	public Max35Text getSymbol() {
 		return symbol;
 	}
@@ -790,6 +806,7 @@ public class Trade2 {
 		this.symbol = symbol;
 	}
 
+	@XmlElement(name = "PlcOfConf")
 	public AnyBICIdentifier getPlaceOfConfirmation() {
 		return placeOfConfirmation;
 	}
@@ -798,6 +815,7 @@ public class Trade2 {
 		this.placeOfConfirmation = placeOfConfirmation;
 	}
 
+	@XmlElement(name = "FXDtls")
 	public Trade3 getForeignExchangeDetails() {
 		return foreignExchangeDetails;
 	}
@@ -806,6 +824,7 @@ public class Trade2 {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 
+	@XmlElement(name = "SwpLeg")
 	public List<InstrumentLeg6> getSwapLeg() {
 		return swapLeg;
 	}
@@ -814,6 +833,7 @@ public class Trade2 {
 		this.swapLeg = swapLeg;
 	}
 
+	@XmlElement(name = "PdctId")
 	public SecurityIdentification22Choice getProductIdentification() {
 		return productIdentification;
 	}
@@ -822,6 +842,7 @@ public class Trade2 {
 		this.productIdentification = productIdentification;
 	}
 
+	@XmlElement(name = "AssoctdTradRef")
 	public List<Max70Text> getAssociatedTradeReference() {
 		return associatedTradeReference;
 	}

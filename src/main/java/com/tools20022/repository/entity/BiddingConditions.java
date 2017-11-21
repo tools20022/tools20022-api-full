@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,45 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMaximumPriceBiddingConditions
- * SecuritiesPricing.mmMaximumPriceBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMinimumPriceBiddingConditions
- * SecuritiesPricing.mmMinimumPriceBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmBiddingConditions
- * DateTimePeriod.mmBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmBackEndOddLotBiddingConditions
- * SecuritiesQuantity.mmBackEndOddLotBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmBiddingConditions
- * SecuritiesQuantity.mmBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumQuantityBiddingConditions
- * SecuritiesQuantity.mmMaximumQuantityBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmFrontEndOddLotBiddingConditions
- * SecuritiesQuantity.mmFrontEndOddLotBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityBiddingConditions
- * SecuritiesQuantity.mmMinimumQuantityBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmBiddingConditions
- * CorporateActionEvent.mmBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmMaximumAllowedBiddingConditions
- * RateAndAmount.mmMaximumAllowedBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmRateBiddingConditions
- * RateAndAmount.mmRateBiddingConditions}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -148,6 +110,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMaximumPriceBiddingConditions
+ * SecuritiesPricing.mmMaximumPriceBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMinimumPriceBiddingConditions
+ * SecuritiesPricing.mmMinimumPriceBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmBiddingConditions
+ * DateTimePeriod.mmBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmBackEndOddLotBiddingConditions
+ * SecuritiesQuantity.mmBackEndOddLotBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmBiddingConditions
+ * SecuritiesQuantity.mmBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumQuantityBiddingConditions
+ * SecuritiesQuantity.mmMaximumQuantityBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmFrontEndOddLotBiddingConditions
+ * SecuritiesQuantity.mmFrontEndOddLotBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityBiddingConditions
+ * SecuritiesQuantity.mmMinimumQuantityBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmBiddingConditions
+ * CorporateActionEvent.mmBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmMaximumAllowedBiddingConditions
+ * RateAndAmount.mmMaximumAllowedBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmRateBiddingConditions
+ * RateAndAmount.mmRateBiddingConditions}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -178,11 +179,6 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -210,6 +206,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -224,7 +225,7 @@ public class BiddingConditions {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate8.mmProposedRate, CorporateActionRate9.mmProposedRate, CorporateActionElection3.mmProposedRate, CorporateActionRate47.mmProposedRate,
 					CorporateActionRate59.mmProposedRate, CorporateActionRate71.mmProposedRate, CorporateActionRate73.mmProposedRate);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProposedRate";
@@ -232,6 +233,14 @@ public class BiddingConditions {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BiddingConditions.class.getMethod("getProposedRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected PercentageRate oversubscriptionRate;
@@ -245,11 +254,6 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -274,6 +278,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -288,7 +297,7 @@ public class BiddingConditions {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate8.mmOversubscriptionRate, CorporateActionRate9.mmOversubscriptionRate, CorporateActionRate47.mmOversubscriptionRate, CorporateActionRate59.mmOversubscriptionRate,
 					CorporateActionRate71.mmOversubscriptionRate, CorporateActionRate73.mmOversubscriptionRate);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OversubscriptionRate";
@@ -296,6 +305,14 @@ public class BiddingConditions {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BiddingConditions.class.getMethod("getOversubscriptionRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected Max350Text informationToComplyWith;
@@ -310,11 +327,6 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -390,6 +402,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -410,7 +427,7 @@ public class BiddingConditions {
 					CorporateActionNarrative17.mmInformationToComplyWith, CorporateActionNarrative1.mmInformationToComplyWith, CorporateActionNarrative2.mmInformationToComplyWith, CorporateActionNarrative9.mmInformationToComplyWith,
 					CorporateActionNarrative27.mmInformationToComplyWith, CorporateActionNarrative28.mmInformationToComplyWith, CorporateActionNarrative29.mmInformationToComplyWith, CorporateActionNarrative32.mmInformationToComplyWith,
 					CorporateActionNarrative37.mmInformationToComplyWith, CorporateActionNarrative41.mmInformationToComplyWith, CorporateActionNarrative33.mmInformationToComplyWith, CorporateActionNarrative36.mmInformationToComplyWith);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InformationToComplyWith";
@@ -418,6 +435,14 @@ public class BiddingConditions {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BiddingConditions.class.getMethod("getInformationToComplyWith", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime subscriptionCostDebitDate;
@@ -430,11 +455,6 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -486,6 +506,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -504,7 +529,7 @@ public class BiddingConditions {
 					CorporateActionDate19.mmSubscriptionCostDebitDate, CorporateActionDate8.mmSubscriptionCostDebitDate, CorporateActionDate11.mmSubscriptionCostDebitDate, CorporateActionDate15.mmSubscriptionCostDebitDate,
 					CorporateActionDate16.mmSubscriptionCostDebitDate, CorporateActionDate4.mmSubscriptionCostDebitDate, CorporateActionDate29.mmSubscriptionCostDebitDate, CorporateActionDate33.mmSubscriptionCostDebitDate,
 					CorporateActionDate46.mmSubscriptionCostDebitDate, CorporateActionDate48.mmSubscriptionCostDebitDate, CorporateActionDate52.mmSubscriptionCostDebitDate, CorporateActionDate55.mmSubscriptionCostDebitDate);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionCostDebitDate";
@@ -512,6 +537,14 @@ public class BiddingConditions {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BiddingConditions.class.getMethod("getSubscriptionCostDebitDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RateAndAmount maximumAllowedOverSubscription;
@@ -535,11 +568,6 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.RateAndAmount
 	 * RateAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -657,6 +685,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -684,7 +717,7 @@ public class BiddingConditions {
 					CorporateActionRate76.mmMaximumAllowedOversubscriptionRate, CorporateActionRate82.mmMaximumAllowedOversubscriptionRate, CorporateActionRate80.mmMaximumAllowedOversubscriptionRate,
 					CorporateActionRate81.mmMaximumAllowedOversubscriptionRate, CorporateActionRate83.mmMaximumAllowedOversubscriptionRate, CorporateActionRate84.mmMaximumAllowedOversubscriptionRate,
 					CorporateActionRate85.mmMaximumAllowedOversubscriptionRate);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumAllowedOverSubscription";
@@ -707,11 +740,6 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -829,6 +857,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -849,7 +882,7 @@ public class BiddingConditions {
 					CorporateActionRate57.mmProrationRate, CorporateActionRate68.mmProrationRate, CorporateActionRate70.mmProrationRate, CorporateActionRate67.mmProrationRate, CorporateActionRate74.mmProrationRate,
 					CorporateActionRate79.mmProrationRate, CorporateActionRate76.mmProrationRate, CorporateActionRate82.mmProrationRate, CorporateActionRate80.mmProrationRate, CorporateActionRate81.mmProrationRate,
 					CorporateActionRate83.mmProrationRate, CorporateActionRate84.mmProrationRate, CorporateActionRate85.mmProrationRate);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProrationRate";
@@ -857,6 +890,14 @@ public class BiddingConditions {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BiddingConditions.class.getMethod("getProrationRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected RateAndAmount applicableRate;
@@ -878,11 +919,6 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.RateAndAmount
 	 * RateAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1006,6 +1042,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1027,7 +1068,7 @@ public class BiddingConditions {
 					CorporateActionRate58.mmApplicableRate, RateDetails18.mmApplicableRate, RateDetails21.mmApplicableRate, CorporateActionRate65.mmApplicableRate, RateDetails23.mmApplicableRate, CorporateActionRate69.mmApplicableRate,
 					RateDetails22.mmApplicableRate, CorporateActionRate72.mmApplicableRate, RateDetails24.mmApplicableRate, RateDetails25.mmApplicableRate, CorporateActionRate77.mmApplicableRate, CorporateActionRate75.mmApplicableRate,
 					RateDetails26.mmApplicableRate, RateDetails27.mmApplicableRate, RateDetails28.mmApplicableRate, RateDetails30.mmApplicableRate);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApplicableRate";
@@ -1059,11 +1100,6 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1097,6 +1133,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1114,7 +1155,7 @@ public class BiddingConditions {
 			derivation_lazy = () -> Arrays.asList(SecuritiesOption1.mmFrontEndOddLotQuantity, SecuritiesOption9.mmFrontEndOddLotQuantity, SecuritiesOption15.mmFrontEndOddLotQuantity, SecuritiesOption16.mmFrontEndOddLotQuantity,
 					SecuritiesOption23.mmFrontEndOddLotQuantity, SecuritiesOption28.mmFrontEndOddLotQuantity, CorporateAction2.mmFrontEndOddLotSecuritiesQuantity, SecuritiesOption51.mmFrontEndOddLotQuantity,
 					SecuritiesOption56.mmFrontEndOddLotQuantity);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FrontEndOddLotQuantity";
@@ -1145,11 +1186,6 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1183,6 +1219,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1200,7 +1241,7 @@ public class BiddingConditions {
 			derivation_lazy = () -> Arrays.asList(SecuritiesOption1.mmBackEndOddLotQuantity, SecuritiesOption9.mmBackEndOddLotQuantity, SecuritiesOption15.mmBackEndOddLotQuantity, SecuritiesOption16.mmBackEndOddLotQuantity,
 					SecuritiesOption23.mmBackEndOddLotQuantity, SecuritiesOption28.mmBackEndOddLotQuantity, CorporateAction2.mmBackEndOddLotSecuritiesQuantity, SecuritiesOption51.mmBackEndOddLotQuantity,
 					SecuritiesOption56.mmBackEndOddLotQuantity);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BackEndOddLotQuantity";
@@ -1225,11 +1266,6 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1266,6 +1302,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1283,7 +1324,7 @@ public class BiddingConditions {
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate7.mmTransformationRate, CorporateActionRate13.mmTransformationRate, CorporateActionRate17.mmTransformationRate, CorporateActionRate19.mmTransformationRate,
 					CorporateActionRate28.mmTransformationRate, CorporateActionRate33.mmTransformationRate, CorporateActionRate48.mmTransformationRate, CorporateActionRate58.mmTransformationRate, CorporateActionRate69.mmTransformationRate,
 					CorporateActionRate77.mmTransformationRate);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransformationRate";
@@ -1291,6 +1332,14 @@ public class BiddingConditions {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BiddingConditions.class.getMethod("getTransformationRate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected ISODateTime prorationDate;
@@ -1304,11 +1353,6 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1348,6 +1392,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1365,7 +1414,7 @@ public class BiddingConditions {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmProrationDate, CorporateActionDate13.mmProrationDate, CorporateActionDate14.mmProrationDate, CorporateActionDate21.mmProrationDate,
 					CorporateActionDate22.mmProrationDate, CorporateActionDate25.mmProrationDate, CorporateActionDate27.mmProrationDate, CorporateActionDate28.mmProrationDate, CorporateActionDate2.mmProrationDate,
 					CorporateActionDate44.mmProrationDate, CorporateActionDate58.mmProrationDate);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProrationDate";
@@ -1373,6 +1422,14 @@ public class BiddingConditions {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BiddingConditions.class.getMethod("getProrationDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected DateTimePeriod compulsoryPurchasePeriod;
@@ -1394,11 +1451,6 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1420,6 +1472,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1436,7 +1493,7 @@ public class BiddingConditions {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmCompulsoryPurchasePeriod, CorporateActionPeriod6.mmCompulsoryPurchasePeriod, CorporateActionPeriod8.mmCompulsoryPurchasePeriod,
 					CorporateActionPeriod1.mmCompulsoryPurchasePeriod, CorporateActionPeriod10.mmCompulsoryPurchasePeriod);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CompulsoryPurchasePeriod";
@@ -1460,11 +1517,6 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1510,6 +1562,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1527,7 +1584,7 @@ public class BiddingConditions {
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate3.mmPercentageSought, CorporateActionRate14.mmPercentageSought, CorporateActionRate16.mmPercentageSought, CorporateActionRate24.mmPercentageSought,
 					CorporateActionRate27.mmPercentageSought, CorporateActionRate32.mmPercentageSought, CorporateActionRate35.mmPercentageSought, CorporateActionRate41.mmPercentageSought, CorporateActionRate1.mmPercentageSought,
 					CorporateActionRate43.mmPercentageSought, CorporateActionRate56.mmPercentageSought, CorporateActionRate66.mmPercentageSought, CorporateActionRate78.mmPercentageSought);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageSought";
@@ -1535,6 +1592,14 @@ public class BiddingConditions {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BiddingConditions.class.getMethod("getPercentageSought", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount bidInterval;
@@ -1548,11 +1613,6 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1598,6 +1658,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1613,7 +1678,7 @@ public class BiddingConditions {
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate3.mmBidInterval, CorporateActionRate14.mmBidInterval, CorporateActionRate16.mmBidInterval, CorporateActionRate24.mmBidInterval, CorporateActionRate27.mmBidInterval,
 					CorporateActionRate32.mmBidInterval, CorporateActionRate35.mmBidInterval, CorporateActionRate41.mmBidInterval, CorporateActionRate1.mmBidInterval, CorporateActionRate43.mmBidInterval,
 					CorporateActionRate56.mmBidInterval, CorporateActionRate66.mmBidInterval, CorporateActionRate78.mmBidInterval);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BidInterval";
@@ -1621,6 +1686,14 @@ public class BiddingConditions {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BiddingConditions.class.getMethod("getBidInterval", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected SecuritiesPricing maximumPrice;
@@ -1642,11 +1715,6 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1680,6 +1748,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1696,7 +1769,7 @@ public class BiddingConditions {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPrice3.mmMaximumPrice, CorporateActionPrice15.mmMaximumPrice, CorporateActionPrice17.mmMaximumPrice, CorporateActionPrice25.mmMaximumPrice,
 					CorporateActionPrice2.mmMaximumPrice, CorporateActionPrice42.mmMaximumPrice, CorporateActionPrice50.mmMaximumPrice, CorporateActionPrice57.mmMaximumPrice, CorporateActionPrice67.mmMaximumPrice);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumPrice";
@@ -1727,11 +1800,6 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1765,6 +1833,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1781,7 +1854,7 @@ public class BiddingConditions {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPrice3.mmMinimumPrice, CorporateActionPrice15.mmMinimumPrice, CorporateActionPrice17.mmMinimumPrice, CorporateActionPrice25.mmMinimumPrice,
 					CorporateActionPrice2.mmMinimumPrice, CorporateActionPrice42.mmMinimumPrice, CorporateActionPrice50.mmMinimumPrice, CorporateActionPrice57.mmMinimumPrice, CorporateActionPrice67.mmMinimumPrice);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumPrice";
@@ -1812,11 +1885,6 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1847,6 +1915,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1863,7 +1936,7 @@ public class BiddingConditions {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionQuantity1.mmMaximumQuantity, CorporateActionQuantity2.mmMaximumQuantity, CorporateActionQuantity3.mmMaximumQuantity, CorporateActionQuantity4.mmMaximumQuantity,
 					CorporateActionQuantity5.mmMaximumQuantity, CorporateActionQuantity6.mmMaximumQuantity, CorporateActionQuantity7.mmMaximumQuantity, CorporateActionQuantity8.mmMaximumQuantity);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumQuantity";
@@ -1895,11 +1968,6 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1930,6 +1998,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1947,7 +2020,7 @@ public class BiddingConditions {
 			derivation_lazy = () -> Arrays.asList(CorporateActionQuantity1.mmMinimumQuantitySought, CorporateActionQuantity2.mmMinimumQuantitySought, CorporateActionQuantity3.mmMinimumQuantitySought,
 					CorporateActionQuantity4.mmMinimumQuantitySought, CorporateActionQuantity5.mmMinimumQuantitySought, CorporateActionQuantity6.mmMinimumQuantitySought, CorporateActionQuantity7.mmMinimumQuantitySought,
 					CorporateActionQuantity8.mmMinimumQuantitySought);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumQuantitySought";
@@ -1978,11 +2051,6 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2019,6 +2087,11 @@ public class BiddingConditions {
 	 * </ul>
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2036,7 +2109,7 @@ public class BiddingConditions {
 			derivation_lazy = () -> Arrays.asList(CorporateActionQuantity1.mmBaseDenomination, CorporateActionQuantity2.mmBaseDenomination, CorporateActionQuantity3.mmBaseDenomination, CorporateActionQuantity4.mmBaseDenomination,
 					CorporateActionQuantity5.mmBaseDenomination, CorporateActionQuantity6.mmBaseDenomination, CorporateAction2.mmBaseDenomination, CorporateActionQuantity7.mmBaseDenomination, CorporateActionQuantity8.mmBaseDenomination,
 					CorporateActionQuantitySD2.mmBaseDenomination);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BaseDenomination";
@@ -2059,11 +2132,6 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethodCode
 	 * CorporateActionCalculationMethodCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2072,6 +2140,11 @@ public class BiddingConditions {
 	 * CorporateAction2.mmCalculationMethod}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2087,7 +2160,7 @@ public class BiddingConditions {
 	public static final MMBusinessAttribute mmCalculationMethod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateAction2.mmCalculationMethod);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationMethod";
@@ -2095,6 +2168,14 @@ public class BiddingConditions {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionCalculationMethodCode.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BiddingConditions.class.getMethod("getCalculationMethod", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CurrencyAndAmount additionalSubscriptionCost;
@@ -2109,11 +2190,6 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
-	 * elementContext} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
-	 * BiddingConditions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2122,6 +2198,11 @@ public class BiddingConditions {
 	 * CorporateActionAmounts1.mmAdditionalSubscriptionCost}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
+	 * BiddingConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2138,7 +2219,7 @@ public class BiddingConditions {
 	public static final MMBusinessAttribute mmAdditionalSubscriptionCost = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts1.mmAdditionalSubscriptionCost);
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdditionalSubscriptionCost";
@@ -2146,6 +2227,14 @@ public class BiddingConditions {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return BiddingConditions.class.getMethod("getAdditionalSubscriptionCost", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
 		}
 	};
 	protected CorporateActionEvent event;
@@ -2185,7 +2274,7 @@ public class BiddingConditions {
 	 */
 	public static final MMBusinessAssociationEnd mmEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> BiddingConditions.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Event";
@@ -2211,11 +2300,21 @@ public class BiddingConditions {
 						com.tools20022.repository.entity.SecuritiesQuantity.mmFrontEndOddLotBiddingConditions, com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumQuantityBiddingConditions,
 						com.tools20022.repository.entity.CorporateActionEvent.mmBiddingConditions, com.tools20022.repository.entity.RateAndAmount.mmMaximumAllowedBiddingConditions,
 						com.tools20022.repository.entity.RateAndAmount.mmRateBiddingConditions);
-				element_lazy = () -> Arrays.asList(BiddingConditions.mmProposedRate, BiddingConditions.mmOversubscriptionRate, BiddingConditions.mmInformationToComplyWith, BiddingConditions.mmSubscriptionCostDebitDate,
-						BiddingConditions.mmMaximumAllowedOverSubscription, BiddingConditions.mmProrationRate, BiddingConditions.mmApplicableRate, BiddingConditions.mmFrontEndOddLotQuantity, BiddingConditions.mmBackEndOddLotQuantity,
-						BiddingConditions.mmTransformationRate, BiddingConditions.mmProrationDate, BiddingConditions.mmCompulsoryPurchasePeriod, BiddingConditions.mmPercentageSought, BiddingConditions.mmBidInterval,
-						BiddingConditions.mmMaximumPrice, BiddingConditions.mmMinimumPrice, BiddingConditions.mmMaximumQuantity, BiddingConditions.mmMinimumQuantitySought, BiddingConditions.mmBaseDenomination,
-						BiddingConditions.mmCalculationMethod, BiddingConditions.mmAdditionalSubscriptionCost, BiddingConditions.mmEvent);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BiddingConditions.mmProposedRate, com.tools20022.repository.entity.BiddingConditions.mmOversubscriptionRate,
+						com.tools20022.repository.entity.BiddingConditions.mmInformationToComplyWith, com.tools20022.repository.entity.BiddingConditions.mmSubscriptionCostDebitDate,
+						com.tools20022.repository.entity.BiddingConditions.mmMaximumAllowedOverSubscription, com.tools20022.repository.entity.BiddingConditions.mmProrationRate,
+						com.tools20022.repository.entity.BiddingConditions.mmApplicableRate, com.tools20022.repository.entity.BiddingConditions.mmFrontEndOddLotQuantity,
+						com.tools20022.repository.entity.BiddingConditions.mmBackEndOddLotQuantity, com.tools20022.repository.entity.BiddingConditions.mmTransformationRate,
+						com.tools20022.repository.entity.BiddingConditions.mmProrationDate, com.tools20022.repository.entity.BiddingConditions.mmCompulsoryPurchasePeriod,
+						com.tools20022.repository.entity.BiddingConditions.mmPercentageSought, com.tools20022.repository.entity.BiddingConditions.mmBidInterval, com.tools20022.repository.entity.BiddingConditions.mmMaximumPrice,
+						com.tools20022.repository.entity.BiddingConditions.mmMinimumPrice, com.tools20022.repository.entity.BiddingConditions.mmMaximumQuantity, com.tools20022.repository.entity.BiddingConditions.mmMinimumQuantitySought,
+						com.tools20022.repository.entity.BiddingConditions.mmBaseDenomination, com.tools20022.repository.entity.BiddingConditions.mmCalculationMethod,
+						com.tools20022.repository.entity.BiddingConditions.mmAdditionalSubscriptionCost, com.tools20022.repository.entity.BiddingConditions.mmEvent);
+			}
+
+			@Override
+			public Class<?> getInstanceClass() {
+				return BiddingConditions.class;
 			}
 		});
 		return mmObject_lazy.get();

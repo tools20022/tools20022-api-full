@@ -31,6 +31,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides information about the corporate action event.
@@ -157,6 +161,11 @@ import java.util.List;
  * definition} = "Provides information about the corporate action event."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "CorporateAction40", propOrder = {"dateDetails", "periodDetails", "rateAndAmountDetails", "priceDetails", "securitiesQuantity", "interestAccruedNumberOfDays", "couponNumber", "certificationBreakdownIndicator",
+		"chargesAppliedIndicator", "restrictionIndicator", "accruedInterestIndicator", "letterOfGuaranteedDeliveryIndicator", "dividendType", "conversionType", "occurrenceType", "offerType", "renounceableEntitlementStatusType",
+		"eventStage", "additionalBusinessProcessIndicator", "changeType", "intermediateSecuritiesDistributionType", "capitalGainInOutIndicator", "taxableIncomePerShareCalculated", "electionType", "lotteryType", "certificationType",
+		"consentType", "informationType", "newPlaceOfIncorporation", "additionalInformation"})
 public class CorporateAction40 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -1650,6 +1659,7 @@ public class CorporateAction40 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "DtDtls")
 	public CorporateActionDate58 getDateDetails() {
 		return dateDetails;
 	}
@@ -1658,6 +1668,7 @@ public class CorporateAction40 {
 		this.dateDetails = dateDetails;
 	}
 
+	@XmlElement(name = "PrdDtls")
 	public CorporateActionPeriod10 getPeriodDetails() {
 		return periodDetails;
 	}
@@ -1666,6 +1677,7 @@ public class CorporateAction40 {
 		this.periodDetails = periodDetails;
 	}
 
+	@XmlElement(name = "RateAndAmtDtls")
 	public CorporateActionRate78 getRateAndAmountDetails() {
 		return rateAndAmountDetails;
 	}
@@ -1674,6 +1686,7 @@ public class CorporateAction40 {
 		this.rateAndAmountDetails = rateAndAmountDetails;
 	}
 
+	@XmlElement(name = "PricDtls")
 	public CorporateActionPrice67 getPriceDetails() {
 		return priceDetails;
 	}
@@ -1682,6 +1695,7 @@ public class CorporateAction40 {
 		this.priceDetails = priceDetails;
 	}
 
+	@XmlElement(name = "SctiesQty")
 	public CorporateActionQuantity8 getSecuritiesQuantity() {
 		return securitiesQuantity;
 	}
@@ -1690,6 +1704,7 @@ public class CorporateAction40 {
 		this.securitiesQuantity = securitiesQuantity;
 	}
 
+	@XmlElement(name = "IntrstAcrdNbOfDays")
 	public Max3Number getInterestAccruedNumberOfDays() {
 		return interestAccruedNumberOfDays;
 	}
@@ -1698,6 +1713,7 @@ public class CorporateAction40 {
 		this.interestAccruedNumberOfDays = interestAccruedNumberOfDays;
 	}
 
+	@XmlElement(name = "CpnNb")
 	public List<IdentificationFormat4Choice> getCouponNumber() {
 		return couponNumber;
 	}
@@ -1706,6 +1722,7 @@ public class CorporateAction40 {
 		this.couponNumber = couponNumber;
 	}
 
+	@XmlElement(name = "CertfctnBrkdwnInd")
 	public YesNoIndicator getCertificationBreakdownIndicator() {
 		return certificationBreakdownIndicator;
 	}
@@ -1714,6 +1731,7 @@ public class CorporateAction40 {
 		this.certificationBreakdownIndicator = certificationBreakdownIndicator;
 	}
 
+	@XmlElement(name = "ChrgsApldInd")
 	public YesNoIndicator getChargesAppliedIndicator() {
 		return chargesAppliedIndicator;
 	}
@@ -1722,6 +1740,7 @@ public class CorporateAction40 {
 		this.chargesAppliedIndicator = chargesAppliedIndicator;
 	}
 
+	@XmlElement(name = "RstrctnInd")
 	public YesNoIndicator getRestrictionIndicator() {
 		return restrictionIndicator;
 	}
@@ -1730,6 +1749,7 @@ public class CorporateAction40 {
 		this.restrictionIndicator = restrictionIndicator;
 	}
 
+	@XmlElement(name = "AcrdIntrstInd")
 	public YesNoIndicator getAccruedInterestIndicator() {
 		return accruedInterestIndicator;
 	}
@@ -1738,6 +1758,7 @@ public class CorporateAction40 {
 		this.accruedInterestIndicator = accruedInterestIndicator;
 	}
 
+	@XmlElement(name = "LttrOfGrntedDlvryInd")
 	public YesNoIndicator getLetterOfGuaranteedDeliveryIndicator() {
 		return letterOfGuaranteedDeliveryIndicator;
 	}
@@ -1746,6 +1767,7 @@ public class CorporateAction40 {
 		this.letterOfGuaranteedDeliveryIndicator = letterOfGuaranteedDeliveryIndicator;
 	}
 
+	@XmlElement(name = "DvddTp")
 	public DividendTypeFormat10Choice getDividendType() {
 		return dividendType;
 	}
@@ -1754,6 +1776,7 @@ public class CorporateAction40 {
 		this.dividendType = dividendType;
 	}
 
+	@XmlElement(name = "ConvsTp")
 	public ConversionTypeFormat4Choice getConversionType() {
 		return conversionType;
 	}
@@ -1762,6 +1785,7 @@ public class CorporateAction40 {
 		this.conversionType = conversionType;
 	}
 
+	@XmlElement(name = "OcrncTp")
 	public DistributionTypeFormat8Choice getOccurrenceType() {
 		return occurrenceType;
 	}
@@ -1770,6 +1794,7 @@ public class CorporateAction40 {
 		this.occurrenceType = occurrenceType;
 	}
 
+	@XmlElement(name = "OfferTp")
 	public List<OfferTypeFormat11Choice> getOfferType() {
 		return offerType;
 	}
@@ -1778,6 +1803,7 @@ public class CorporateAction40 {
 		this.offerType = offerType;
 	}
 
+	@XmlElement(name = "RnncblEntitlmntStsTp")
 	public RenounceableEntitlementStatusTypeFormat4Choice getRenounceableEntitlementStatusType() {
 		return renounceableEntitlementStatusType;
 	}
@@ -1786,6 +1812,7 @@ public class CorporateAction40 {
 		this.renounceableEntitlementStatusType = renounceableEntitlementStatusType;
 	}
 
+	@XmlElement(name = "EvtStag")
 	public List<CorporateActionEventStageFormat20Choice> getEventStage() {
 		return eventStage;
 	}
@@ -1794,6 +1821,7 @@ public class CorporateAction40 {
 		this.eventStage = eventStage;
 	}
 
+	@XmlElement(name = "AddtlBizPrcInd")
 	public List<AdditionalBusinessProcessFormat12Choice> getAdditionalBusinessProcessIndicator() {
 		return additionalBusinessProcessIndicator;
 	}
@@ -1802,6 +1830,7 @@ public class CorporateAction40 {
 		this.additionalBusinessProcessIndicator = additionalBusinessProcessIndicator;
 	}
 
+	@XmlElement(name = "ChngTp")
 	public List<CorporateActionChangeTypeFormat8Choice> getChangeType() {
 		return changeType;
 	}
@@ -1810,6 +1839,7 @@ public class CorporateAction40 {
 		this.changeType = changeType;
 	}
 
+	@XmlElement(name = "IntrmdtSctiesDstrbtnTp")
 	public IntermediateSecuritiesDistributionTypeFormat18Choice getIntermediateSecuritiesDistributionType() {
 		return intermediateSecuritiesDistributionType;
 	}
@@ -1818,6 +1848,7 @@ public class CorporateAction40 {
 		this.intermediateSecuritiesDistributionType = intermediateSecuritiesDistributionType;
 	}
 
+	@XmlElement(name = "CptlGnInOutInd")
 	public CapitalGainFormat4Choice getCapitalGainInOutIndicator() {
 		return capitalGainInOutIndicator;
 	}
@@ -1826,6 +1857,7 @@ public class CorporateAction40 {
 		this.capitalGainInOutIndicator = capitalGainInOutIndicator;
 	}
 
+	@XmlElement(name = "TaxblIncmPerShrClctd")
 	public TaxableIncomePerShareCalculatedFormat4Choice getTaxableIncomePerShareCalculated() {
 		return taxableIncomePerShareCalculated;
 	}
@@ -1834,6 +1866,7 @@ public class CorporateAction40 {
 		this.taxableIncomePerShareCalculated = taxableIncomePerShareCalculated;
 	}
 
+	@XmlElement(name = "ElctnTp")
 	public ElectionTypeFormat4Choice getElectionType() {
 		return electionType;
 	}
@@ -1842,6 +1875,7 @@ public class CorporateAction40 {
 		this.electionType = electionType;
 	}
 
+	@XmlElement(name = "LtryTp")
 	public LotteryTypeFormat5Choice getLotteryType() {
 		return lotteryType;
 	}
@@ -1850,6 +1884,7 @@ public class CorporateAction40 {
 		this.lotteryType = lotteryType;
 	}
 
+	@XmlElement(name = "CertfctnTp")
 	public CertificationTypeFormat4Choice getCertificationType() {
 		return certificationType;
 	}
@@ -1858,6 +1893,7 @@ public class CorporateAction40 {
 		this.certificationType = certificationType;
 	}
 
+	@XmlElement(name = "CnsntTp")
 	public ConsentTypeFormat5Choice getConsentType() {
 		return consentType;
 	}
@@ -1866,6 +1902,7 @@ public class CorporateAction40 {
 		this.consentType = consentType;
 	}
 
+	@XmlElement(name = "InfTp")
 	public InformationTypeFormat5Choice getInformationType() {
 		return informationType;
 	}
@@ -1874,6 +1911,7 @@ public class CorporateAction40 {
 		this.informationType = informationType;
 	}
 
+	@XmlElement(name = "NewPlcOfIncorprtn")
 	public RestrictedFINXMax350Text getNewPlaceOfIncorporation() {
 		return newPlaceOfIncorporation;
 	}
@@ -1882,6 +1920,7 @@ public class CorporateAction40 {
 		this.newPlaceOfIncorporation = newPlaceOfIncorporation;
 	}
 
+	@XmlElement(name = "AddtlInf")
 	public CorporateActionNarrative39 getAdditionalInformation() {
 		return additionalInformation;
 	}

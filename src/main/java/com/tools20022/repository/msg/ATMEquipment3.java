@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Hardware security module information, so called EPP for Encrypted PIN Pad.
@@ -76,6 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMEquipment2}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "ATMEquipment3", propOrder = {"manufacturer", "model", "version", "serialNumber", "signedSerialNumber", "firmwareProvider", "firmwareIdentification", "firmwareVersion"})
 public class ATMEquipment3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -461,6 +467,7 @@ public class ATMEquipment3 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Manfctr")
 	public Max35Text getManufacturer() {
 		return manufacturer;
 	}
@@ -469,6 +476,7 @@ public class ATMEquipment3 {
 		this.manufacturer = manufacturer;
 	}
 
+	@XmlElement(name = "Mdl")
 	public Max35Text getModel() {
 		return model;
 	}
@@ -477,6 +485,7 @@ public class ATMEquipment3 {
 		this.model = model;
 	}
 
+	@XmlElement(name = "Vrsn")
 	public Max35Text getVersion() {
 		return version;
 	}
@@ -485,6 +494,7 @@ public class ATMEquipment3 {
 		this.version = version;
 	}
 
+	@XmlElement(name = "SrlNb")
 	public Max35Text getSerialNumber() {
 		return serialNumber;
 	}
@@ -493,6 +503,7 @@ public class ATMEquipment3 {
 		this.serialNumber = serialNumber;
 	}
 
+	@XmlElement(name = "SgndSrlNb")
 	public ContentInformationType14 getSignedSerialNumber() {
 		return signedSerialNumber;
 	}
@@ -501,6 +512,7 @@ public class ATMEquipment3 {
 		this.signedSerialNumber = signedSerialNumber;
 	}
 
+	@XmlElement(name = "FrmwrPrvdr")
 	public Max35Text getFirmwareProvider() {
 		return firmwareProvider;
 	}
@@ -509,6 +521,7 @@ public class ATMEquipment3 {
 		this.firmwareProvider = firmwareProvider;
 	}
 
+	@XmlElement(name = "FrmwrId")
 	public Max35Text getFirmwareIdentification() {
 		return firmwareIdentification;
 	}
@@ -517,6 +530,7 @@ public class ATMEquipment3 {
 		this.firmwareIdentification = firmwareIdentification;
 	}
 
+	@XmlElement(name = "FrmwrVrsn")
 	public Max35Text getFirmwareVersion() {
 		return firmwareVersion;
 	}

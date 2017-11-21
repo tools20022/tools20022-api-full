@@ -30,6 +30,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Content of the status report.
@@ -87,6 +91,8 @@ import java.util.List;
  * StatusReportContent1}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "StatusReportContent2", propOrder = {"POICapabilities", "POIComponent", "attendanceContext", "POIDateTime", "dataSetRequired", "event", "errors"})
 public class StatusReportContent2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -488,6 +494,7 @@ public class StatusReportContent2 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "POICpblties")
 	public PointOfInteractionCapabilities1 getPOICapabilities() {
 		return pOICapabilities;
 	}
@@ -496,6 +503,7 @@ public class StatusReportContent2 {
 		this.pOICapabilities = pOICapabilities;
 	}
 
+	@XmlElement(name = "POICmpnt")
 	public List<PointOfInteractionComponent3> getPOIComponent() {
 		return pOIComponent;
 	}
@@ -504,6 +512,7 @@ public class StatusReportContent2 {
 		this.pOIComponent = pOIComponent;
 	}
 
+	@XmlElement(name = "AttndncCntxt")
 	public AttendanceContext1Code getAttendanceContext() {
 		return attendanceContext;
 	}
@@ -512,6 +521,7 @@ public class StatusReportContent2 {
 		this.attendanceContext = attendanceContext;
 	}
 
+	@XmlElement(name = "POIDtTm", required = true)
 	public ISODateTime getPOIDateTime() {
 		return pOIDateTime;
 	}
@@ -520,6 +530,7 @@ public class StatusReportContent2 {
 		this.pOIDateTime = pOIDateTime;
 	}
 
+	@XmlElement(name = "DataSetReqrd")
 	public TerminalManagementDataSet7 getDataSetRequired() {
 		return dataSetRequired;
 	}
@@ -528,6 +539,7 @@ public class StatusReportContent2 {
 		this.dataSetRequired = dataSetRequired;
 	}
 
+	@XmlElement(name = "Evt")
 	public List<TMSEvent2> getEvent() {
 		return event;
 	}
@@ -536,6 +548,7 @@ public class StatusReportContent2 {
 		this.event = event;
 	}
 
+	@XmlElement(name = "Errs")
 	public Max140Text getErrors() {
 		return errors;
 	}

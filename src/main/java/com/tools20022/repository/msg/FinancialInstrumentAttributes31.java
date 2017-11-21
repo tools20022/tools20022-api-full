@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Elements characterising a financial instrument.
@@ -224,6 +228,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Elements characterising a financial instrument."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "FinancialInstrumentAttributes31", propOrder = {"placeOfListing", "rating", "certificateNumber", "dayCountBasis", "registrationForm", "paymentFrequency", "variableRateChangeFrequency", "classificationType", "optionStyle",
+		"optionType", "denominationCurrency", "couponDate", "expiryDate", "floatingRateFixingDate", "maturityDate", "issueDate", "nextCallableDate", "conversionDate", "putableDate", "datedDate", "firstPaymentDate", "nextFactorDate",
+		"previousFactor", "currentFactor", "nextFactor", "endFactor", "interestRate", "nextInterestRate", "indexRateBasis", "percentageOfDebtClaims", "couponAttachedNumber", "poolNumber", "versionNumber", "convertibleIndicator",
+		"variableRateIndicator", "coveredIndicator", "callableIndicator", "putableIndicator", "warrantAttachedOnDelivery", "oddCouponIndicator", "redemptionYieldImpact", "yieldVariance", "exercisePrice", "subscriptionPrice",
+		"conversionPrice", "taxableIncomePerShare", "minimumNominalQuantity", "minimumExercisableQuantity", "minimumExercisableMultipleQuantity", "faceAmount", "contractSize", "financialInstrumentAttributeAdditionalDetails"})
 public class FinancialInstrumentAttributes31 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -2829,6 +2839,7 @@ public class FinancialInstrumentAttributes31 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "PlcOfListg")
 	public MarketIdentification3Choice getPlaceOfListing() {
 		return placeOfListing;
 	}
@@ -2837,6 +2848,7 @@ public class FinancialInstrumentAttributes31 {
 		this.placeOfListing = placeOfListing;
 	}
 
+	@XmlElement(name = "Ratg")
 	public Rating1 getRating() {
 		return rating;
 	}
@@ -2845,6 +2857,7 @@ public class FinancialInstrumentAttributes31 {
 		this.rating = rating;
 	}
 
+	@XmlElement(name = "CertNb")
 	public Max35Text getCertificateNumber() {
 		return certificateNumber;
 	}
@@ -2853,6 +2866,7 @@ public class FinancialInstrumentAttributes31 {
 		this.certificateNumber = certificateNumber;
 	}
 
+	@XmlElement(name = "DayCntBsis")
 	public InterestComputationMethodFormat3Choice getDayCountBasis() {
 		return dayCountBasis;
 	}
@@ -2861,6 +2875,7 @@ public class FinancialInstrumentAttributes31 {
 		this.dayCountBasis = dayCountBasis;
 	}
 
+	@XmlElement(name = "RegnForm")
 	public FormOfSecurity4Choice getRegistrationForm() {
 		return registrationForm;
 	}
@@ -2869,6 +2884,7 @@ public class FinancialInstrumentAttributes31 {
 		this.registrationForm = registrationForm;
 	}
 
+	@XmlElement(name = "PmtFrqcy")
 	public Frequency7Choice getPaymentFrequency() {
 		return paymentFrequency;
 	}
@@ -2877,6 +2893,7 @@ public class FinancialInstrumentAttributes31 {
 		this.paymentFrequency = paymentFrequency;
 	}
 
+	@XmlElement(name = "VarblRateChngFrqcy")
 	public Frequency7Choice getVariableRateChangeFrequency() {
 		return variableRateChangeFrequency;
 	}
@@ -2885,6 +2902,7 @@ public class FinancialInstrumentAttributes31 {
 		this.variableRateChangeFrequency = variableRateChangeFrequency;
 	}
 
+	@XmlElement(name = "ClssfctnTp")
 	public ClassificationType30Choice getClassificationType() {
 		return classificationType;
 	}
@@ -2893,6 +2911,7 @@ public class FinancialInstrumentAttributes31 {
 		this.classificationType = classificationType;
 	}
 
+	@XmlElement(name = "OptnStyle")
 	public OptionStyle6Choice getOptionStyle() {
 		return optionStyle;
 	}
@@ -2901,6 +2920,7 @@ public class FinancialInstrumentAttributes31 {
 		this.optionStyle = optionStyle;
 	}
 
+	@XmlElement(name = "OptnTp")
 	public OptionType4Choice getOptionType() {
 		return optionType;
 	}
@@ -2909,6 +2929,7 @@ public class FinancialInstrumentAttributes31 {
 		this.optionType = optionType;
 	}
 
+	@XmlElement(name = "DnmtnCcy")
 	public ActiveOrHistoricCurrencyCode getDenominationCurrency() {
 		return denominationCurrency;
 	}
@@ -2917,6 +2938,7 @@ public class FinancialInstrumentAttributes31 {
 		this.denominationCurrency = denominationCurrency;
 	}
 
+	@XmlElement(name = "CpnDt")
 	public ISODate getCouponDate() {
 		return couponDate;
 	}
@@ -2925,6 +2947,7 @@ public class FinancialInstrumentAttributes31 {
 		this.couponDate = couponDate;
 	}
 
+	@XmlElement(name = "XpryDt")
 	public ISODate getExpiryDate() {
 		return expiryDate;
 	}
@@ -2933,6 +2956,7 @@ public class FinancialInstrumentAttributes31 {
 		this.expiryDate = expiryDate;
 	}
 
+	@XmlElement(name = "FltgRateFxgDt")
 	public ISODate getFloatingRateFixingDate() {
 		return floatingRateFixingDate;
 	}
@@ -2941,6 +2965,7 @@ public class FinancialInstrumentAttributes31 {
 		this.floatingRateFixingDate = floatingRateFixingDate;
 	}
 
+	@XmlElement(name = "MtrtyDt")
 	public ISODate getMaturityDate() {
 		return maturityDate;
 	}
@@ -2949,6 +2974,7 @@ public class FinancialInstrumentAttributes31 {
 		this.maturityDate = maturityDate;
 	}
 
+	@XmlElement(name = "IsseDt")
 	public ISODate getIssueDate() {
 		return issueDate;
 	}
@@ -2957,6 +2983,7 @@ public class FinancialInstrumentAttributes31 {
 		this.issueDate = issueDate;
 	}
 
+	@XmlElement(name = "NxtCllblDt")
 	public ISODate getNextCallableDate() {
 		return nextCallableDate;
 	}
@@ -2965,6 +2992,7 @@ public class FinancialInstrumentAttributes31 {
 		this.nextCallableDate = nextCallableDate;
 	}
 
+	@XmlElement(name = "ConvsDt")
 	public ISODate getConversionDate() {
 		return conversionDate;
 	}
@@ -2973,6 +3001,7 @@ public class FinancialInstrumentAttributes31 {
 		this.conversionDate = conversionDate;
 	}
 
+	@XmlElement(name = "PutblDt")
 	public ISODate getPutableDate() {
 		return putableDate;
 	}
@@ -2981,6 +3010,7 @@ public class FinancialInstrumentAttributes31 {
 		this.putableDate = putableDate;
 	}
 
+	@XmlElement(name = "DtdDt")
 	public ISODate getDatedDate() {
 		return datedDate;
 	}
@@ -2989,6 +3019,7 @@ public class FinancialInstrumentAttributes31 {
 		this.datedDate = datedDate;
 	}
 
+	@XmlElement(name = "FrstPmtDt")
 	public ISODate getFirstPaymentDate() {
 		return firstPaymentDate;
 	}
@@ -2997,6 +3028,7 @@ public class FinancialInstrumentAttributes31 {
 		this.firstPaymentDate = firstPaymentDate;
 	}
 
+	@XmlElement(name = "NxtFctrDt")
 	public ISODate getNextFactorDate() {
 		return nextFactorDate;
 	}
@@ -3005,6 +3037,7 @@ public class FinancialInstrumentAttributes31 {
 		this.nextFactorDate = nextFactorDate;
 	}
 
+	@XmlElement(name = "PrvsFctr")
 	public BaseOneRate getPreviousFactor() {
 		return previousFactor;
 	}
@@ -3013,6 +3046,7 @@ public class FinancialInstrumentAttributes31 {
 		this.previousFactor = previousFactor;
 	}
 
+	@XmlElement(name = "CurFctr")
 	public BaseOneRate getCurrentFactor() {
 		return currentFactor;
 	}
@@ -3021,6 +3055,7 @@ public class FinancialInstrumentAttributes31 {
 		this.currentFactor = currentFactor;
 	}
 
+	@XmlElement(name = "NxtFctr")
 	public BaseOneRate getNextFactor() {
 		return nextFactor;
 	}
@@ -3029,6 +3064,7 @@ public class FinancialInstrumentAttributes31 {
 		this.nextFactor = nextFactor;
 	}
 
+	@XmlElement(name = "EndFctr")
 	public BaseOneRate getEndFactor() {
 		return endFactor;
 	}
@@ -3037,6 +3073,7 @@ public class FinancialInstrumentAttributes31 {
 		this.endFactor = endFactor;
 	}
 
+	@XmlElement(name = "IntrstRate")
 	public PercentageRate getInterestRate() {
 		return interestRate;
 	}
@@ -3045,6 +3082,7 @@ public class FinancialInstrumentAttributes31 {
 		this.interestRate = interestRate;
 	}
 
+	@XmlElement(name = "NxtIntrstRate")
 	public PercentageRate getNextInterestRate() {
 		return nextInterestRate;
 	}
@@ -3053,6 +3091,7 @@ public class FinancialInstrumentAttributes31 {
 		this.nextInterestRate = nextInterestRate;
 	}
 
+	@XmlElement(name = "IndxRateBsis")
 	public PercentageRate getIndexRateBasis() {
 		return indexRateBasis;
 	}
@@ -3061,6 +3100,7 @@ public class FinancialInstrumentAttributes31 {
 		this.indexRateBasis = indexRateBasis;
 	}
 
+	@XmlElement(name = "PctgOfDebtClms")
 	public PercentageRate getPercentageOfDebtClaims() {
 		return percentageOfDebtClaims;
 	}
@@ -3069,6 +3109,7 @@ public class FinancialInstrumentAttributes31 {
 		this.percentageOfDebtClaims = percentageOfDebtClaims;
 	}
 
+	@XmlElement(name = "CpnAttchdNb")
 	public Number1Choice getCouponAttachedNumber() {
 		return couponAttachedNumber;
 	}
@@ -3077,6 +3118,7 @@ public class FinancialInstrumentAttributes31 {
 		this.couponAttachedNumber = couponAttachedNumber;
 	}
 
+	@XmlElement(name = "PoolNb")
 	public GenericIdentification37 getPoolNumber() {
 		return poolNumber;
 	}
@@ -3085,6 +3127,7 @@ public class FinancialInstrumentAttributes31 {
 		this.poolNumber = poolNumber;
 	}
 
+	@XmlElement(name = "VrsnNb")
 	public Number1Choice getVersionNumber() {
 		return versionNumber;
 	}
@@ -3093,6 +3136,7 @@ public class FinancialInstrumentAttributes31 {
 		this.versionNumber = versionNumber;
 	}
 
+	@XmlElement(name = "ConvtblInd")
 	public YesNoIndicator getConvertibleIndicator() {
 		return convertibleIndicator;
 	}
@@ -3101,6 +3145,7 @@ public class FinancialInstrumentAttributes31 {
 		this.convertibleIndicator = convertibleIndicator;
 	}
 
+	@XmlElement(name = "VarblRateInd")
 	public YesNoIndicator getVariableRateIndicator() {
 		return variableRateIndicator;
 	}
@@ -3109,6 +3154,7 @@ public class FinancialInstrumentAttributes31 {
 		this.variableRateIndicator = variableRateIndicator;
 	}
 
+	@XmlElement(name = "CvrdInd")
 	public YesNoIndicator getCoveredIndicator() {
 		return coveredIndicator;
 	}
@@ -3117,6 +3163,7 @@ public class FinancialInstrumentAttributes31 {
 		this.coveredIndicator = coveredIndicator;
 	}
 
+	@XmlElement(name = "CllblInd")
 	public YesNoIndicator getCallableIndicator() {
 		return callableIndicator;
 	}
@@ -3125,6 +3172,7 @@ public class FinancialInstrumentAttributes31 {
 		this.callableIndicator = callableIndicator;
 	}
 
+	@XmlElement(name = "PutblInd")
 	public YesNoIndicator getPutableIndicator() {
 		return putableIndicator;
 	}
@@ -3133,6 +3181,7 @@ public class FinancialInstrumentAttributes31 {
 		this.putableIndicator = putableIndicator;
 	}
 
+	@XmlElement(name = "WarrtAttchdOnDlvry")
 	public YesNoIndicator getWarrantAttachedOnDelivery() {
 		return warrantAttachedOnDelivery;
 	}
@@ -3141,6 +3190,7 @@ public class FinancialInstrumentAttributes31 {
 		this.warrantAttachedOnDelivery = warrantAttachedOnDelivery;
 	}
 
+	@XmlElement(name = "OddCpnInd")
 	public YesNoIndicator getOddCouponIndicator() {
 		return oddCouponIndicator;
 	}
@@ -3149,6 +3199,7 @@ public class FinancialInstrumentAttributes31 {
 		this.oddCouponIndicator = oddCouponIndicator;
 	}
 
+	@XmlElement(name = "RedYldImpct")
 	public YesNoIndicator getRedemptionYieldImpact() {
 		return redemptionYieldImpact;
 	}
@@ -3157,6 +3208,7 @@ public class FinancialInstrumentAttributes31 {
 		this.redemptionYieldImpact = redemptionYieldImpact;
 	}
 
+	@XmlElement(name = "YldVar")
 	public YesNoIndicator getYieldVariance() {
 		return yieldVariance;
 	}
@@ -3165,6 +3217,7 @@ public class FinancialInstrumentAttributes31 {
 		this.yieldVariance = yieldVariance;
 	}
 
+	@XmlElement(name = "ExrcPric")
 	public Price4 getExercisePrice() {
 		return exercisePrice;
 	}
@@ -3173,6 +3226,7 @@ public class FinancialInstrumentAttributes31 {
 		this.exercisePrice = exercisePrice;
 	}
 
+	@XmlElement(name = "SbcptPric")
 	public Price4 getSubscriptionPrice() {
 		return subscriptionPrice;
 	}
@@ -3181,6 +3235,7 @@ public class FinancialInstrumentAttributes31 {
 		this.subscriptionPrice = subscriptionPrice;
 	}
 
+	@XmlElement(name = "ConvsPric")
 	public Price4 getConversionPrice() {
 		return conversionPrice;
 	}
@@ -3189,6 +3244,7 @@ public class FinancialInstrumentAttributes31 {
 		this.conversionPrice = conversionPrice;
 	}
 
+	@XmlElement(name = "TaxblIncmPerShr")
 	public Price4 getTaxableIncomePerShare() {
 		return taxableIncomePerShare;
 	}
@@ -3197,6 +3253,7 @@ public class FinancialInstrumentAttributes31 {
 		this.taxableIncomePerShare = taxableIncomePerShare;
 	}
 
+	@XmlElement(name = "MinNmnlQty")
 	public FinancialInstrumentQuantity1Choice getMinimumNominalQuantity() {
 		return minimumNominalQuantity;
 	}
@@ -3205,6 +3262,7 @@ public class FinancialInstrumentAttributes31 {
 		this.minimumNominalQuantity = minimumNominalQuantity;
 	}
 
+	@XmlElement(name = "MinExrcblQty")
 	public FinancialInstrumentQuantity1Choice getMinimumExercisableQuantity() {
 		return minimumExercisableQuantity;
 	}
@@ -3213,6 +3271,7 @@ public class FinancialInstrumentAttributes31 {
 		this.minimumExercisableQuantity = minimumExercisableQuantity;
 	}
 
+	@XmlElement(name = "MinExrcblMltplQty")
 	public FinancialInstrumentQuantity1Choice getMinimumExercisableMultipleQuantity() {
 		return minimumExercisableMultipleQuantity;
 	}
@@ -3221,6 +3280,7 @@ public class FinancialInstrumentAttributes31 {
 		this.minimumExercisableMultipleQuantity = minimumExercisableMultipleQuantity;
 	}
 
+	@XmlElement(name = "FaceAmt")
 	public ImpliedCurrencyAndAmount getFaceAmount() {
 		return faceAmount;
 	}
@@ -3229,6 +3289,7 @@ public class FinancialInstrumentAttributes31 {
 		this.faceAmount = faceAmount;
 	}
 
+	@XmlElement(name = "CtrctSz")
 	public FinancialInstrumentQuantity18Choice getContractSize() {
 		return contractSize;
 	}
@@ -3237,6 +3298,7 @@ public class FinancialInstrumentAttributes31 {
 		this.contractSize = contractSize;
 	}
 
+	@XmlElement(name = "FinInstrmAttrAddtlDtls")
 	public Max350Text getFinancialInstrumentAttributeAdditionalDetails() {
 		return financialInstrumentAttributeAdditionalDetails;
 	}

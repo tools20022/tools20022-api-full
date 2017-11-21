@@ -31,15 +31,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType2Code
- * QueryType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code
- * QueryType3Code}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.QueryTypeCode#mmAll
@@ -50,6 +41,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * QueryTypeCode.mmModified}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.QueryTypeCode#mmDeleted
  * QueryTypeCode.mmDeleted}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType2Code
+ * QueryType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code
+ * QueryType3Code}</li>
  * </ul>
  * </li>
  * <li>

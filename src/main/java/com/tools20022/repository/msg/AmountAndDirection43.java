@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.PlusOrMinusIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Signed amount.
@@ -63,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AmountAndDirection41}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AmountAndDirection43", propOrder = {"amount", "sign", "date"})
 public class AmountAndDirection43 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -218,6 +224,7 @@ public class AmountAndDirection43 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
@@ -226,6 +233,7 @@ public class AmountAndDirection43 {
 		this.amount = amount;
 	}
 
+	@XmlElement(name = "Sgn")
 	public PlusOrMinusIndicator getSign() {
 		return sign;
 	}
@@ -234,6 +242,7 @@ public class AmountAndDirection43 {
 		this.sign = sign;
 	}
 
+	@XmlElement(name = "Dt")
 	public ISODate getDate() {
 		return date;
 	}

@@ -26,6 +26,10 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Notification to the acquirer of the completion of the card payment at the
@@ -91,6 +95,8 @@ import java.util.List;
  * AcceptorCompletionAdvice3}</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlType(name = "AcceptorCompletionAdvice4", propOrder = {"environment", "context", "transaction", "supplementaryData"})
 public class AcceptorCompletionAdvice4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
@@ -350,6 +356,7 @@ public class AcceptorCompletionAdvice4 {
 		return mmObject_lazy.get();
 	}
 
+	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment34 getEnvironment() {
 		return environment;
 	}
@@ -358,6 +365,7 @@ public class AcceptorCompletionAdvice4 {
 		this.environment = environment;
 	}
 
+	@XmlElement(name = "Cntxt")
 	public CardPaymentContext9 getContext() {
 		return context;
 	}
@@ -366,6 +374,7 @@ public class AcceptorCompletionAdvice4 {
 		this.context = context;
 	}
 
+	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransaction40 getTransaction() {
 		return transaction;
 	}
@@ -374,6 +383,7 @@ public class AcceptorCompletionAdvice4 {
 		this.transaction = transaction;
 	}
 
+	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
 		return supplementaryData;
 	}
